@@ -1,0 +1,381 @@
+{
+  "id": "C8179",
+  "forms": [
+    {
+      "id": "CF18776",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18784",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 15.91,
+        "rank": 81,
+        "count": 2511
+      }
+    },
+    {
+      "id": "CF18777",
+      "orth": "ⲁⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6446,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF18779",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18780",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 13.72,
+        "rank": 95,
+        "count": 1164
+      }
+    },
+    {
+      "id": "CF18781",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18782",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18783",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18778",
+      "orth": "ⲁⲗⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18785",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF18786",
+      "orth": "ⲁⲗⲗⲁ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF18787",
+      "orth": "ⲁⲗⲗⲁⲁ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS9249",
+      "bibliography": "DDGLC",
+      "cu_ID": "58"
+    },
+    {
+      "id": "CS9250",
+      "bibliography": "DDGLC",
+      "cu_ID": "4256"
+    },
+    {
+      "id": "CS9251",
+      "bibliography": "DDGLC",
+      "cu_ID": "1934"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲗⲗⲁ** ⲉⲣⲉϩⲁⲛⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲧⲟⲓ ⲉⲣⲁⲧ ⲉⲛⲑⲏⲛⲟⲩ ⲟⲩⲟϩ ⲙⲡⲉⲣϯϣⲑⲏⲛ ⲥⲛⲟⲩϯ ϩⲓⲑⲏⲛⲟⲩ",
+      "english": "but to wear sandals, and not put on two tunics.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲗⲗⲁ** ⲧⲉⲧⲛ ⲟⲩⲱϩ ⲟⲛ ⲉϫⲛⲛⲉⲧⲛϫⲓⲛϭⲟⲛⲥ ·",
+      "english": "But rather you still add to your violence.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲁⲩⲉⲛⲡⲓⲣⲱⲙⲓ ⲅⲁⲣ ⲁⲛ ⲉⲃⲟⲗ ϧⲉⲛϯⲥϩⲓⲙⲓ **ⲁⲗⲗⲁ** ϯⲥϩⲓⲙⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲣⲱⲙⲓ .",
+      "english": "For man is not from woman, but woman from man;",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲗⲗⲁ** ⲛϩⲟⲩⲟ ⲛⲧⲟϥ ⲁⲙⲁϩⲧⲉ ϩⲓϫⲛ ⲙⲙⲉⲉⲩⲉ ⲙⲡⲟⲛⲏⲣⲟⲛ ·",
+      "english": "But rather master evil thoughts.'",
+      "source": "Apophthegmata Patrum Sahidic 059",
+      "urn": "urn:cts:copticLit:ap.59.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉ ⲅⲁⲣ ⲡⲓⲥⲱⲙⲁ ⲛⲟⲩⲙⲉⲗⲟⲥ ⲛⲟⲩⲱⲧ ⲁⲛ ⲡⲉ **ⲁⲗⲗⲁ** ⲟⲩⲙⲏϣ .",
+      "english": "For the body is not one member, but many.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲗⲗⲁ** ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ · ⲁⲩⲱ ⲛⲃⲣⲣⲉ ·",
+      "english": "Rather, I am a sinful and young human.'",
+      "source": "Apophthegmata Patrum Sahidic 070",
+      "urn": "urn:cts:copticLit:ap.70.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        572,
+        22.049
+      ],
+      [
+        "ⲁⲛ",
+        266,
+        21.996
+      ],
+      [
+        "ϥ",
+        534,
+        21.421
+      ],
+      [
+        "ⲉ",
+        451,
+        21.283
+      ],
+      [
+        "ϧⲉⲛ",
+        365,
+        21.113
+      ],
+      [
+        "ⲛ",
+        393,
+        20.261
+      ],
+      [
+        "ϯ",
+        248,
+        19.968
+      ],
+      [
+        "ⲡⲓ",
+        277,
+        19.927
+      ],
+      [
+        "ⲁ",
+        317,
+        19.73
+      ],
+      [
+        ".",
+        244,
+        19.224
+      ],
+      [
+        "ⲛⲁ",
+        224,
+        19.192
+      ],
+      [
+        "ⲛⲧⲉ",
+        214,
+        19.106
+      ],
+      [
+        "ⲧⲉⲛ",
+        129,
+        18.25
+      ],
+      [
+        "ⲩ",
+        168,
+        18.113
+      ],
+      [
+        "ⲙⲁⲗⲗⲟⲛ",
+        34,
+        17.915
+      ],
+      [
+        "ⲓ",
+        143,
+        17.87
+      ],
+      [
+        "ⲡⲉ",
+        120,
+        17.774
+      ],
+      [
+        "ⲛⲉⲙ",
+        150,
+        17.744
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        141,
+        17.537
+      ],
+      [
+        "ϩⲁⲛ",
+        111,
+        17.511
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        68,
+        27.566
+      ],
+      [
+        "ⲛ",
+        1879,
+        25.142
+      ],
+      [
+        "ⲉ",
+        1309,
+        24.586
+      ],
+      [
+        "ⲁ",
+        834,
+        22.862
+      ],
+      [
+        "ⲛⲁ",
+        711,
+        22.815
+      ],
+      [
+        "ⲁⲛ",
+        401,
+        22.776
+      ],
+      [
+        ".",
+        573,
+        22.75
+      ],
+      [
+        "ϥ",
+        783,
+        22.066
+      ],
+      [
+        "ⲡ",
+        779,
+        22.019
+      ],
+      [
+        "ⲩ",
+        543,
+        21.77
+      ],
+      [
+        "ⲡⲉ",
+        435,
+        21.509
+      ],
+      [
+        "ϩⲛ",
+        404,
+        21.16
+      ],
+      [
+        "ϯ",
+        295,
+        20.836
+      ],
+      [
+        "ⲟⲩ",
+        499,
+        20.815
+      ],
+      [
+        "ⲓ",
+        314,
+        20.44
+      ],
+      [
+        "ⲛⲉ",
+        277,
+        20.36
+      ],
+      [
+        "ⲙ",
+        410,
+        20.096
+      ],
+      [
+        "ⲥ",
+        314,
+        19.864
+      ],
+      [
+        "ⲧⲉ",
+        194,
+        19.309
+      ],
+      [
+        "ⲉⲧ",
+        268,
+        19.143
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲁ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 15.82,
+      "rank": 75,
+      "count": 2511
+    },
+    "B": {
+      "rate": 13.71,
+      "rank": 86,
+      "count": 1164
+    }
+  },
+  "etym": {
+    "grl_ID": "95",
+    "grl_lemma": "ἀλλά",
+    "grl_meaning": "but, yet, rather",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 67b"
+  }
+}

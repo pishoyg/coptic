@@ -1,0 +1,51 @@
+{
+  "id": "C5077",
+  "forms": [
+    {
+      "id": "CF12119",
+      "orth": "ϩⲛⲟⲩⲛⲁⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ϩⲛ-",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5708",
+      "bibliography": "CD 484a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5076",
+      "label": "ϩⲓⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, at the right"
+    },
+    {
+      "target": "C5074",
+      "label": "ⲉⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, to the right"
+    },
+    {
+      "target": "C5073",
+      "label": "ⲟⲩⲛⲁⲙ",
+      "pos": "N",
+      "gloss": "right hand"
+    },
+    {
+      "target": "C5075",
+      "label": "ⲥⲁⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, to the right"
+    }
+  ]
+}

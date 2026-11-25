@@ -1,0 +1,194 @@
+{
+  "id": "C2",
+  "forms": [
+    {
+      "id": "CF4",
+      "orth": "ⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 304.88,
+        "rank": 5,
+        "count": 48102
+      }
+    },
+    {
+      "id": "CF5",
+      "orth": "ⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 315.04,
+        "rank": 4,
+        "count": 26719
+      }
+    },
+    {
+      "id": "CF6",
+      "orth": "ⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF7",
+      "orth": "ⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF8",
+      "orth": "ⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF9",
+      "orth": "ⲁ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF10",
+      "orth": "ⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 304.88,
+        "rank": 5,
+        "count": 48102
+      }
+    },
+    {
+      "id": "CF11",
+      "orth": "ⲁ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 315.04,
+        "rank": 4,
+        "count": 26719
+      }
+    },
+    {
+      "id": "CF12",
+      "orth": "ⲁ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF13",
+      "orth": "ⲁ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF14",
+      "orth": "ⲁ⸗",
+      "dialect": "F"
+    },
+    {
+      "id": "CF15",
+      "orth": "ⲁ⸗",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Perfekt ⲁ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2",
+      "bibliography": "CD 1a; CED 1; KoptHWb 1; DELC 1-2"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲥⲓϯ **ⲁ**ϥⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ .",
+      "english": "The farmer sows the word.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁ**ϥⲙⲁϩϥ ⲉⲁϥϫⲟⲕϥ ⲉⲃⲟⲗ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ·",
+      "english": "and (the life) is full and made perfect in peace.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛϯⲟⲩⲛⲟⲩ **ⲁ**ⲡⲓⲥⲱⲧⲏⲣ ⲉⲣⲁⲛⲁⲭⲱⲣⲓⲛ ⲛⲁϥ .",
+      "english": "At once the Savior withdrew.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁ**ⲥⲟⲩⲱϣⲃ ϫⲉⲟⲩⲁⲅⲁⲑⲟⲛ ⲛϩⲟⲩⲟ ⲡⲉ ⲉϥϫⲏⲕ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲉⲙⲛϭⲟⲙ ⲙⲙⲟⲟⲩ .",
+      "english": "She answered, 'It is an exceedingly perfect good for those who are incapable of it.",
+      "source": "Apophthegmata Patrum Sahidic 029",
+      "urn": "urn:cts:copticLit:ap.29.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲩⲱⲙ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ **ⲁ**ⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲱⲟⲩⲛ ⲇⲉ **ⲁ**ϥⲃⲱⲕ ·",
+      "english": "So he stood up and left.",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C280",
+      "type": "syn",
+      "label": "verbal prefix perfect I"
+    },
+    {
+      "target": "C13001",
+      "type": "syn",
+      "label": "verbal prefix perfect I"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13001",
+      "label": "ϩⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C1",
+      "label": "ⲁ",
+      "pos": "NUM",
+      "gloss": "1"
+    },
+    {
+      "target": "C3",
+      "label": "ⲁ-",
+      "pos": "NEG",
+      "gloss": ""
+    },
+    {
+      "target": "C4",
+      "label": "ⲁ-",
+      "pos": "PTC",
+      "gloss": "about"
+    },
+    {
+      "target": "C5",
+      "label": "ⲁ-",
+      "pos": "N",
+      "gloss": "house, region, environment"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm3836",
+    "demo_lemma": "r",
+    "english": "[Perfect prefix with nominal subject, Coptic a-]",
+    "german": "[Perfektpräfix bei nominalem Subjekt, kopt. a-]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3836"
+  }
+}

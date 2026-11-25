@@ -1,0 +1,45 @@
+{
+  "id": "C7734",
+  "forms": [
+    {
+      "id": "CF17533",
+      "orth": "ⲙⲛⲧϭⲟⲟⲙⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8601",
+      "bibliography": "CD 818a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7732",
+      "label": "ϭⲱⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "be twisted, crooked; twist; pervert (justice)"
+    },
+    {
+      "target": "C7733",
+      "label": "ϭⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "perversion, corruption"
+    },
+    {
+      "target": "C7735",
+      "label": "ⲣⲉϥϭⲟⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "perverter"
+    }
+  ]
+}

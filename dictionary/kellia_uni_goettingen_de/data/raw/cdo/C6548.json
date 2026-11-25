@@ -1,0 +1,86 @@
+{
+  "id": "C6548",
+  "forms": [
+    {
+      "id": "CF15138",
+      "orth": "ϩⲗⲟⲉⲓⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF15139",
+      "orth": "ⲗⲱⲓⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8095,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲗⲟⲉⲓⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10301,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲣⲟⲉⲓⲣⲉ",
+      "dialect": "S",
+      "id": "2159.2"
+    },
+    {
+      "orth": "ϩⲗⲉⲉⲓⲗⲉ",
+      "dialect": "S",
+      "id": "2159.3"
+    },
+    {
+      "orth": "ϩⲉⲗⲉⲓⲗⲉ",
+      "dialect": "S",
+      "id": "2159.4"
+    },
+    {
+      "orth": "ϩⲗⲟⲓⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7584,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲗⲱⲓⲗⲓ",
+      "dialect": "B",
+      "id": "2159.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7260",
+      "bibliography": "CD 669a; CED 279; KoptHWb 365; DELC 297a; ChLCS 90a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6549",
+      "label": "ⲣⲉϥⲗⲱⲓⲗⲓ",
+      "pos": "N",
+      "gloss": "swimmer"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4247",
+    "demo_lemma": "ḥlꜥlꜥ",
+    "english": "[to be distant]",
+    "german": "treiben (auf dem Wasser)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4247"
+  }
+}

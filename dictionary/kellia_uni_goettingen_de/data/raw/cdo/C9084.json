@@ -1,0 +1,99 @@
+{
+  "id": "C9084",
+  "forms": [
+    {
+      "id": "CF22494",
+      "orth": "ⲉⲩⲗⲟⲅⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22495",
+      "orth": "ⲉⲩⲗⲟⲅⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19560,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS11196",
+      "bibliography": "DDGLC",
+      "cu_ID": "7184"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲡⲁⲩⲗⲟⲥ ⲇⲉ ⲉⲓ ⲉϥⲛⲁⲟⲩⲱⲛ ⲛⲣⲱϥ . ⲡⲉϫⲉⲅⲁⲗⲗⲓⲱⲛ ⲛⲛⲓⲟⲩⲇⲁⲓ ϫⲉⲉⲛⲉ ⲟⲩϫⲓ ⲛϭⲟⲛⲥ ⲏⲟⲩϩⲱⲃ ⲉϥϩⲟⲟⲩ ⲡⲉⲛⲧⲁϥϣⲱⲡⲉ ⲱ ⲛⲓⲟⲩⲇⲁⲓ . ⲛⲉⲓⲛⲁⲁⲛⲉⲭⲉ ⲡⲉ ⲙⲙⲱⲧⲛ **ⲉⲩⲗⲟⲅⲱⲥ** .",
+      "english": "But when Paul was about to open his mouth, Gallio said to the Jews, 'If indeed it were a matter of wrong or of wicked crime, you Jews, it would be reasonable that I should bear with you;",
+      "source": "44_Acts of the Apostles_18",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛⲉⲭⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        11.551
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        10.896
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        10.161
+      ],
+      [
+        "ϭⲉ",
+        1,
+        9.45
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19171,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2950",
+    "grl_lemma": "εὐλόγως",
+    "grl_meaning": "reasonably, sensibly, fairly, creditably, eloquently",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 721a"
+  }
+}

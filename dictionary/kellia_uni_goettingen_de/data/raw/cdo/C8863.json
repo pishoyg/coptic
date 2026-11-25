@@ -1,0 +1,104 @@
+{
+  "id": "C8863",
+  "forms": [
+    {
+      "id": "CF21459",
+      "orth": "ⲉⲅⲕⲗⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21460",
+      "orth": "ⲉⲅⲕⲗⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13512,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21461",
+      "orth": "ⲉⲅⲗⲏⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10705",
+      "bibliography": "DDGLC",
+      "cu_ID": "4369"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϭⲱϣⲧ ϭⲉ ⲱ ⲡⲥⲟⲛ ϫⲉⲛⲛⲉⲕⲉⲓⲛⲉ ⲉϫⲱⲕ ⲛⲟⲩ**ⲉⲅⲕⲗⲏⲙⲁ**",
+      "english": "Watch carefully, O brother, that thou dost not bring an accusation against thyself",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        10.504
+      ],
+      [
+        "ⲕ",
+        2,
+        9.853
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲅⲕⲗⲏⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13108,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "607",
+    "grl_lemma": "ἔγκλημα",
+    "grl_meaning": "accusation, charge",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 472a; Preisigke 1:413"
+  }
+}

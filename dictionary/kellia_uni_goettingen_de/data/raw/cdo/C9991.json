@@ -1,0 +1,269 @@
+{
+  "id": "C9991",
+  "forms": [
+    {
+      "id": "CF26098",
+      "orth": "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26099",
+      "orth": "ⲡⲁⲗⲁⲧⲁⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26105",
+      "orth": "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3394,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF26101",
+      "orth": "ⲡⲁⲗⲁⲧⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26106",
+      "orth": "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26102",
+      "orth": "ⲡⲁⲗⲗⲁϯⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26103",
+      "orth": "ⲡⲁⲗⲗⲁϯⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1504,
+        "count": 50
+      }
+    },
+    {
+      "id": "CF26100",
+      "orth": "ⲡⲁⲗⲁⲧⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4351,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF26104",
+      "orth": "ⲡⲁⲗⲗⲁⲇⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13477,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26107",
+      "orth": "ⲡⲣⲗⲁϯⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13062",
+      "bibliography": "DDGLC",
+      "cu_ID": "2277"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϣⲉ ⲉϧⲟⲩⲛ ⲉⲧⲡⲟⲗⲓⲥ ⲛⲧⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲁⲡⲉⲛⲓⲱⲧ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲓ ⲉϥⲙⲟϣⲓ ϧⲉⲛⲡⲓ**ⲡⲁⲗⲗⲁⲧⲓⲟⲛ** ⲛⲧⲉⲡⲟⲩⲣⲟ ⲁϥϫⲓⲙⲓ ⲛⲟⲩⲛⲁⲫⲣⲓ ⲛⲥⲟⲩⲟ ⲉⲥⲥⲏϯ ⲉⲃⲟⲗ",
+      "english": "After they arrived in the imperial capital, Apa Shenoute, our righteous father, was walking within the royal palace and noticed a discarded grain of wheat.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩⲥⲓⲕⲓ ⲙⲡⲓⲱⲓⲕ ⲛϫⲉⲛⲓⲥⲛⲏⲟⲩ ⲁϥⲱⲗⲓ ⲛϯⲛⲁⲫⲣⲓ ⲛⲥⲟⲩⲟ ⲉⲧⲁϥⲉⲛⲥ ⲉϥⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓ**ⲡⲁⲗⲗⲁⲧⲓⲟⲛ** ⲛⲧⲉⲡⲟⲩⲣⲟ",
+      "english": "As the brethren were milling wheat for bread, one of them cast under the stone the grain he had brought back from the royal court and placed it beneath the millstone.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲁⲓⲱⲧ ⲛⲁϥ ⲟⲛ ϫⲉⲟⲩⲟϩ ⲟⲩⲧⲉϯⲗⲱⲓϫⲓ ⲉⲧⲁⲕⲟⲩⲱⲣⲡ ⲛⲥⲱⲓ ⲉⲑⲃⲏⲧⲥ ; ⲡⲉϫⲉⲡⲟⲩⲣⲟ ⲛⲁϥ ϫⲉⲉⲧⲁⲓⲟⲩⲱⲣⲡ ⲛⲥⲁⲧⲉⲕⲁⲅⲓⲱⲥⲩⲛⲏ ⲉⲓⲟⲩⲱϣ ⲁⲛⲟⲕ ⲛⲉⲙⲡⲓ**ⲡⲁⲗⲗⲁⲧⲓⲟⲛ** ⲛⲉⲙϯⲡⲟⲗⲓⲥ ⲧⲏⲣⲥ ⲉⲑⲣⲉⲛⲉⲣⲁⲡⲟⲗⲁⲩⲓⲛ ⲙⲡⲉⲕⲥⲙⲟⲩ ⲉⲑⲟⲩⲁⲃ ⲛⲉⲙⲛⲉⲕϣⲗⲏⲗ ⲉⲧⲥⲙⲁⲣⲱⲟⲩⲧ . ⲡⲉϫⲉⲡⲁⲓⲱⲧ ⲛⲁϥ ϫⲉⲉⲣⲉⲡϭⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲥⲙⲟⲩ ⲉⲣⲟⲕ ⲱ ⲡⲟⲩⲣⲟ ⲙⲙⲁⲓⲛⲟⲩϯ ⲛⲉⲙⲧⲉⲕⲡⲟⲗⲓⲥ ⲧⲏⲣⲥ ⲟⲩⲟϩ ⲛⲧⲉϥⲧⲁϫⲣⲟⲡⲉⲕⲑⲣⲟⲛⲟⲥ ⲙⲫⲣⲏϯ ⲙⲫⲁⲛⲉⲕⲓⲟϯ ⲉⲑⲟⲩⲁⲃ ⲁⲣⲕⲁⲇⲓⲟⲥ ⲛⲉⲙⲟⲛⲛⲟⲩⲣⲓⲟⲥ ⲟⲩⲟϩ ⲛⲧⲉϥϫⲉⲕ ⲑⲏⲛⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲫⲛⲁϩϯ ⲛⲛⲉⲧⲉⲛⲓⲟϯ ⲉⲣⲉⲧⲉⲛⲧⲁϫⲣⲏⲟⲩⲧ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲁⲣⲉϩ ⲉⲛⲓⲛⲧⲟⲗⲏ ⲛⲉⲙⲫⲛⲁϩϯ ⲛⲛⲉⲛⲓⲟϯ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ .",
+      "english": "...",
+      "source": "Life of Shenoute - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:59-88",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲣⲟ",
+        4,
+        13.45
+      ],
+      [
+        "ⲛⲏⲟⲩ",
+        2,
+        11.053
+      ],
+      [
+        "ⲙⲟϣⲓ",
+        2,
+        10.708
+      ],
+      [
+        "ⲡⲓ",
+        5,
+        10.415
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        10.193
+      ],
+      [
+        "ⲛⲧⲉ",
+        4,
+        9.744
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        9.441
+      ],
+      [
+        "ⲡ",
+        4,
+        9.297
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        8.265
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.982
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        6.921
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.627
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        5.758
+      ],
+      [
+        "ⲁ",
+        2,
+        5.668
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.649
+      ],
+      [
+        "ϥ",
+        2,
+        5.102
+      ],
+      [
+        "ϯ",
+        1,
+        3.968
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ_0_node",
+          "ⲛⲧⲉ_1_post_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          "ⲡⲓ_1_pre_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲡⲁⲗⲗⲁⲧⲓⲟⲛ",
+          "ⲡⲁⲗⲗⲁⲧⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 2991,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2556",
+    "grl_lemma": "παλάτιον",
+    "grl_meaning": "palace, royal court",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke 2:225; Sophocles 832b"
+  }
+}

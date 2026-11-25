@@ -1,0 +1,64 @@
+{
+  "id": "C3448",
+  "forms": [
+    {
+      "id": "CF8796",
+      "orth": "ⲥⲟⲕⲥⲉⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲉⲕⲥⲉⲕ-",
+      "dialect": "S",
+      "id": "1396.1"
+    },
+    {
+      "orth": "ⲥⲉⲕⲥⲟⲕ⸗",
+      "dialect": "S",
+      "id": "1396.2"
+    },
+    {
+      "orth": "ⲥⲟⲕⲥⲉⲕ",
+      "dialect": "B",
+      "id": "1396.3"
+    },
+    {
+      "orth": "ⲥⲉⲕⲥⲉⲕ-",
+      "dialect": "B",
+      "id": "1396.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3926",
+      "bibliography": "CD 330a; CED 150; KoptHWb 182; ChLCS 47a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3450",
+      "label": "ⲣⲉϥⲥⲟⲕⲥⲉⲕ",
+      "pos": "N",
+      "gloss": "collector"
+    },
+    {
+      "target": "C3449",
+      "label": "ⲥⲟⲕⲥⲉⲕ",
+      "pos": "N",
+      "gloss": "yawn"
+    }
+  ]
+}

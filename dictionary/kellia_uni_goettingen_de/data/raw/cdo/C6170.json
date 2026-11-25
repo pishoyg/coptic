@@ -1,0 +1,552 @@
+{
+  "id": "C6170",
+  "forms": [
+    {
+      "id": "CF14348",
+      "orth": "ϣⲟϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3640,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ϣⲟϣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1054,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6857",
+      "bibliography": "CD 605a-b; CED 259; KoptHWb 336; DELC 275a; ChLCS 83b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲉⲓⲟⲩⲗ ⲛⲉⲙϭⲁϩⲥⲓ ⲛⲉⲙ**ϣⲟϣ** ⲛⲉⲙⲧⲣⲁⲅⲉⲗⲁⲫⲟⲥ ⲛⲉⲙⲡⲓⲅⲁⲣⲅⲟⲥ ⲟⲣⲩⲅⲁ ⲅⲁⲙⲏⲗⲟⲡⲁⲣⲇⲁⲗⲓⲥ",
+      "english": "the stag, and doe, and pygarg, and wild goat, and camelopard.",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲣⲁⲛⲁϥ ⲇⲉ ⲛⲁⲫⲟⲩ ⲉⲱⲛϩ ϩⲛⲟⲩⲃⲓⲟⲥ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲁϥⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲛⲛⲉϥϩⲟⲓⲧⲉ ⲁϥⲙⲟⲣϥ ⲛⲟⲩϣⲁⲁⲣ ⲉϫⲛⲧⲉϥϯⲡⲉ ⲁϥϭⲱ ⲉϥϣⲟⲟⲡ ⲙⲛⲛ**ϣⲟϣ** ϩⲛⲧⲉⲣⲏⲙⲟⲥ ⲉⲣⲉⲡⲉϩⲟⲟⲩ ⲙⲛⲧⲉⲩϣⲏ ϣⲟⲟⲡ ⲛⲁϥ ⲛⲥⲩⲛⲁⲝⲓⲥ",
+      "english": "Aphou liked to live a life in the following manner: he rid himself of his garments, he bound a skin upon his loins, he remained with the antelopes in the wilderness, day and night being the communion for him.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲉⲥⲓϯ ⲙⲙⲟⲥ ϧⲉⲛⲟⲩ**ϣⲱϣ** ⲥⲛⲁⲧⲱⲛⲥ ϧⲉⲛⲟⲩⲱⲟⲩ ⲥⲉⲥⲓϯ ⲙⲙⲟⲥ ϧⲉⲛⲟⲩϫⲱⲃ ⲥⲛⲁⲧⲱⲛⲥ ϧⲉⲛⲟⲩϫⲟⲙ .",
+      "english": "It is sown in dishonor; it is raised in glory. It is sown in weakness; it is raised in power.",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲉⲓⲟⲩⲗ ⲁⲩⲱ ⲟⲩϩϭⲟⲥ ⲙⲛⲟⲩ**ϣⲟϣ** ⲁⲩⲱ ⲟⲩⲧⲣⲁⲅⲉⲗⲁⲫⲟⲥ ⲙⲛⲟⲩⲡⲩⲅⲁⲣⲅⲟⲛ ⲙⲛⲟⲩⲟⲣⲩⲅⲁ ⲙⲛⲟⲩⲕⲁⲙⲏⲗⲟⲡⲁⲣⲇⲁⲗⲓⲥ",
+      "english": "the stag, and doe, and pygarg, and wild goat, and camelopard.",
+      "source": "Deuteronomy 14",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ϣⲱϣ** ⲁϥϫⲱϣ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲛⲟⲩⲁⲣⲭⲱⲛ ⲁϥⲥⲟⲣⲙⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲙⲁ ⲛⲁⲧⲙⲟϣⲓ ⲟⲩⲟϩ ϧⲉⲛⲟⲩⲙⲱⲓⲧ ⲁⲛ",
+      "english": "And they are glad, because they are quiet; and he guides them to their desire haven.",
+      "source": "19_Psalmi_106",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:106",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲇⲉ ⲛϭⲓⲡⲉⲧⲥⲟⲟⲩⲛ ⲙⲙⲟϥ ⲛϩⲏⲧⲟⲩ ϫⲉⲥⲉ ϯⲥⲟⲟⲩⲛ ⲙⲙⲟϥ ϩⲁⲧϩⲏ ⲙⲡϩⲟⲟⲩ ⲛⲉϣⲁⲓϭⲛⲧϥ ⲇⲉ ⲡⲉ ϩⲛⲧⲉⲣⲏⲙⲟⲥ ⲉϥϭⲉⲉⲧ ⲙⲛⲛ**ϣⲟϣ**",
+      "english": "The one who knew him answered: yes, I know him from the early days (lit. the beginning of the day), I used to find him in the wilderness where he dwells with the antelopes.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲧⲣⲁⲅⲉⲗⲁⲫⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ϩϭⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ϭⲉⲡ",
+        2,
+        16.341
+      ],
+      [
+        "ⲁⲅⲉⲗⲏ",
+        2,
+        15.843
+      ],
+      [
+        "ϭⲉⲉⲧ",
+        1,
+        12.258
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        2,
+        11.322
+      ],
+      [
+        "ⲙⲛ",
+        6,
+        11.229
+      ],
+      [
+        "ⲧⲃⲛⲏ",
+        1,
+        10.634
+      ],
+      [
+        "ⲉⲣⲏⲙⲟⲥ",
+        1,
+        9.936
+      ],
+      [
+        "ⲛ",
+        8,
+        9.639
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        8.92
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        8.238
+      ],
+      [
+        "ⲣⲱ",
+        1,
+        8.219
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.05
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        7.905
+      ],
+      [
+        "ⲁ",
+        4,
+        7.874
+      ],
+      [
+        "ⲉ",
+        4,
+        7.647
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        7.633
+      ],
+      [
+        "ⲩ",
+        3,
+        7.395
+      ],
+      [
+        "ϥ",
+        4,
+        7.352
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲟϣ",
+          12
+        ],
+        [
+          "ⲩ_1_pre_ϣⲟϣ",
+          12
+        ],
+        [
+          "ϣⲟϣ_0_node",
+          26
+        ],
+        [
+          "ϥ_1_post_ϣⲟϣ",
+          22
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϣⲟϣ",
+          8
+        ],
+        [
+          "ⲛⲏ_2_post_ⲛϫⲉ",
+          5
+        ],
+        [
+          "ⲙⲡⲉⲛⲑⲣⲉ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ϩⲗⲓ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲛ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          10
+        ],
+        [
+          "ⲛⲧ_1_pre_ϣⲟϣ",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϣ",
+          5
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲟϣ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ϣⲟϣ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ϩⲓⲧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲙⲉⲛ_1_post_ϣⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲟϣ",
+          "ⲩ_1_pre_ϣⲟϣ",
+          6
+        ],
+        [
+          "ⲩ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          7
+        ],
+        [
+          "ϣⲟϣ_0_node",
+          "ϥ_1_post_ϣⲟϣ",
+          13
+        ],
+        [
+          "ϥ_1_post_ϣⲟϣ",
+          "ⲛϫⲉ_1_post_ϣⲟϣ",
+          4
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϣⲟϣ",
+          "ⲛⲏ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲉⲛⲑⲣⲉ_1_pre_ϣⲟϣ",
+          "ϩⲗⲓ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_1_pre_ϣⲟϣ",
+          "ⲟⲩⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          "ⲛⲧ_1_pre_ϣⲟϣ",
+          3
+        ],
+        [
+          "ⲛⲧ_1_pre_ϣⲟϣ",
+          "ⲟⲩ_1_pre_ϣⲟϣ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          3
+        ],
+        [
+          "ϥ_1_post_ϣⲟϣ",
+          "ⲉⲃⲟⲗ_1_post_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          "ⲁ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ϣⲟϣ_0_node",
+          "ⲟⲩ_1_post_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          "ⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲟϣ",
+          "ⲥⲉ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          "ⲩ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲟϣ",
+          "ⲛ_1_post_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲟϣ",
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲟϣ",
+          "ⲥⲉ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϣⲟϣ",
+          "ⲛⲁ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϣⲟϣ",
+          "ⲁ_1_pre_ϣⲟϣ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϣⲟϣ",
+          "ϥ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲟϣ",
+          "ϩⲓⲧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϣⲟϣ_0_node",
+          "ⲙⲉⲛ_1_post_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_post_ϣⲟϣ",
+          "ⲉⲃⲟⲗ_1_post_ϣⲟϣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϣⲟϣ_0_node",
+          8
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲕ_1_post_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ϣⲁϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϣⲟϣ",
+          "ⲛ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲟϣ",
+          "ⲙⲡⲣ_1_pre_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϣⲟϣ",
+          "ϣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ϣⲟϣ_0_node",
+          "ⲕ_1_post_ϣⲟϣ",
+          1
+        ],
+        [
+          "ⲕ_1_post_ϣⲟϣ",
+          "ⲁⲩⲱ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲁϫⲉ",
+          "ⲙⲡⲣ_2_post_ϣⲁϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3266,
+      "count": 9
+    },
+    "B": {
+      "rate": 1.89,
+      "rank": 421,
+      "count": 160
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "157080",
+    "egy_lemma": "šsꜣ",
+    "demo_num": "dm498",
+    "demo_lemma": "šš",
+    "english": "bubalis antilope",
+    "german": "Kuhantilope",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/157080",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm498"
+  }
+}

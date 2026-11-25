@@ -1,0 +1,93 @@
+{
+  "id": "C570",
+  "forms": [
+    {
+      "id": "CF2171",
+      "orth": "ⲉⲣⲃⲱⲧⲥ (ⲛⲉⲙ-)",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS681",
+      "bibliography": "CD 46a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2207",
+      "type": "syn",
+      "label": "fight (S)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C568",
+      "label": "ⲁⲧⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "unconquerable, incontestable"
+    },
+    {
+      "target": "C572",
+      "label": "ⲃⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "combat, quarrel"
+    },
+    {
+      "target": "C571",
+      "label": "ⲃⲉⲧⲥ",
+      "pos": "N",
+      "gloss": "war"
+    },
+    {
+      "target": "C573",
+      "label": "ⲃⲏⲧⲥⲏ",
+      "pos": "N",
+      "gloss": "female warrior"
+    },
+    {
+      "target": "C567",
+      "label": "ⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "(battle) array, war"
+    },
+    {
+      "target": "C566",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "be drawn up (for battle), fight"
+    },
+    {
+      "target": "C564",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "draw up, set out, assess(?)"
+    },
+    {
+      "target": "C565",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "tax assessment"
+    },
+    {
+      "target": "C569",
+      "label": "ⲣⲉϥⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "warrior"
+    }
+  ]
+}

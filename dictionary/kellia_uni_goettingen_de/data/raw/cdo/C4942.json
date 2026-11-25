@@ -1,0 +1,188 @@
+{
+  "id": "C4942",
+  "forms": [
+    {
+      "id": "CF11849",
+      "orth": "ϯⲡⲟⲩⲟⲓ",
+      "dialect": "S",
+      "oRef": "ϯ ⲡ ⲟⲩⲟⲓ"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5567",
+      "bibliography": "CD 472ab; KoptHWb 268; ChLCS 66b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        13.995
+      ],
+      [
+        "ⲓⲱⲧ",
+        1,
+        9.767
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        1,
+        8.915
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.603
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ϯⲡⲟⲩⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_1_post_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲓⲱⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϯⲡⲟⲩⲟⲓ",
+          "ⲩ_1_pre_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯⲡⲟⲩⲟⲓ",
+          "ϯⲡⲟⲩⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ϯⲡⲟⲩⲟⲓ_0_node",
+          "ⲉϧⲟⲩⲛ_1_post_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_1_post_ϯⲡⲟⲩⲟⲓ",
+          "ⲉ_1_post_ϯⲡⲟⲩⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯⲡⲟⲩⲟⲓ",
+          "ⲡⲁ_3_post_ⲓⲱⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4946",
+      "label": "ϫⲓ ⲙⲡⲟⲩⲟⲉⲓ",
+      "pos": "V",
+      "gloss": "take way, go"
+    },
+    {
+      "target": "C4945",
+      "label": "ϫⲓⲛϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "onrush, attack"
+    },
+    {
+      "target": "C4947",
+      "label": "ϭⲓⲛϯⲡⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "act of going"
+    },
+    {
+      "target": "C4943",
+      "label": "ϯ ⲙⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4940",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "walk around, seek, proceed"
+    },
+    {
+      "target": "C4941",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "progress, impetuosity"
+    },
+    {
+      "target": "C4944",
+      "label": "ϯⲡⲉϥⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4939",
+      "label": "ⲛⲟⲩⲟⲉⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    },
+    {
+      "target": "C4938",
+      "label": "ⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "id": "C1504",
+  "forms": [
+    {
+      "id": "CF4439",
+      "orth": "ⲕⲟⲟϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1314,
+        "count": 63
+      }
+    },
+    {
+      "id": "CF4440",
+      "orth": "ⲕⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.31,
+        "rank": 601,
+        "count": 206
+      }
+    },
+    {
+      "orth": "ⲭⲟϩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.19,
+        "rank": 658,
+        "count": 101
+      }
+    },
+    {
+      "orth": "ⲕⲟϩ",
+      "dialect": "B",
+      "id": "904.1"
+    },
+    {
+      "orth": "ⲕⲟⲟϩ",
+      "dialect": "A",
+      "id": "904.2"
+    },
+    {
+      "orth": "ⲕⲟϩ",
+      "dialect": "A",
+      "id": "904.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1756",
+      "bibliography": "CD 132a; KoptHWb 73; ChLCS 20a"
+    },
+    {
+      "id": "CS1757",
+      "bibliography": "CD 132a; KoptHWb 73; ChLCS 20a"
+    },
+    {
+      "id": "CS1758",
+      "bibliography": "CD 132a; KoptHWb 73; ChLCS 20a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲛⲁⲁⲙⲟⲛⲓ ⲛⲧⲟⲧϥ ϩⲱϥ ⲥⲁⲃⲟⲗ ⲛⲛⲏ ⲉⲧⲉⲣⲃⲟⲛⲓ ⲛϯⲯⲩⲭⲏ ⲉⲧⲉⲡⲓϫⲱⲛⲧ ⲡⲉ ⲛⲉⲙⲡⲓⲫⲑⲟⲛⲟⲥ ⲛⲉⲙ ϯⲕⲁⲧⲁⲗⲁⲗⲓⲁ ⲛⲉⲙⲡⲓⲙⲟⲥϯ ⲛⲉⲙⲡⲓ**ⲭⲟϩ** ⲛⲉⲙϯⲙⲉⲧⲣⲉϥϯϣⲱϣ ⲛⲉⲙϯⲙⲉⲧϭⲁⲥⲓϩⲏⲧ ⲉⲃⲟⲗ ⲙⲫⲛⲟⲩϯ ⲛⲉⲙⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ",
+      "english": "However, they will abstain from those things that harm the soul, such as anger, envy, vanity, hatred, jealousy, insult, and pride in the sight of God and His angels.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲓⲅⲣⲁⲫⲏ ⲇⲉ ⲟⲛ ⲙⲡⲉⲧⲛⲟϣⲥ . ϫⲉⲡⲱⲛⲉ ⲛⲧⲁⲛⲉⲧⲕⲱⲧ ⲥⲧⲟϥ ⲉⲃⲟⲗ ⲁϥϣⲱⲡⲉ ⲉⲩⲁⲡⲉ ⲛ**ⲕⲟⲟϩ** .",
+      "english": "Haven&apos;t you even read this Scripture: &apos;The stone which the builders rejected, the same was made the head of the corner.",
+      "source": "41_Mark_12",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲓ ⲅⲁⲣ ⲛⲑⲱⲧⲉⲛ ϩⲁⲛⲥⲁⲣⲕⲓⲕⲟⲥ ϩⲱⲥ ⲅⲁⲣ ⲉⲟⲩⲟⲛⲟⲩ**ⲭⲟϩ** ⲛⲉⲙⲟⲩϣϭⲛⲏⲛ ϧⲉⲛⲑⲏⲛⲟⲩ ⲙⲏ ⲛⲑⲱⲧⲉⲛ ϩⲁⲛⲥⲁⲣⲕⲓⲕⲟⲥ ⲁⲛ ⲟⲩⲟϩ ⲁⲧⲉⲧⲉⲛⲙⲟϣⲓ ⲕⲁⲧⲁⲣⲱⲙⲓ .",
+      "english": "for you are still fleshly. For insofar as there is jealousy, strife, and factions among you, aren't you fleshly, and don't you walk in the ways of men?",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲇⲉ ⲉⲣⲟⲟⲩ ⲛϭⲓⲛⲣⲱⲙⲉ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲉⲧϩⲓϫⲙ ⲡ**ⲕⲟⲟϩ** ⲙⲡⲧⲟⲟⲩ ⲁⲩϫⲓ ⲛⲛⲉⲩϩⲟⲡⲗⲟⲛ ⲙⲙⲓϣⲉ ⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲡⲃⲟⲗ ⲛⲧⲡⲟⲗⲓⲥ ⲉϫⲙⲡⲕⲟⲟϩ ⲙⲡⲧⲟⲟⲩ ⲁⲩⲱ ⲣⲱⲙⲉ ⲛⲓⲙ ⲛⲛⲣⲉϥⲛⲉϫⲥⲫⲉⲛⲇⲟⲛⲏ ⲁⲩⲁⲙⲁϩⲧⲉ ⲙⲡⲉⲩⲙⲁ ⲛⲉⲓⲉϩⲣⲁⲓ ⲁⲩⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲉϫⲱⲟⲩ ⲛϩⲉⲛⲱⲛⲉ",
+      "english": "And when the men of the city saw them, they took up their weapons, and went out of the city to the top of the hill: and every man that used a sling kept them from coming up by casting of stones against them.",
+      "source": "Judith 6",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲭⲟϩ** ⲇⲉ ⲉⲛⲓϩⲙⲟⲧ ⲉⲧⲛⲁⲁⲩ ⲟⲩⲟϩ ⲉⲧⲓ ⲟⲛ ϯⲛⲁⲧⲁⲙⲱⲧⲉⲛ ⲉⲕⲉⲙⲱⲓⲧ ⲉⲛⲁⲁϥ ⲛϩⲟⲩⲟ .",
+      "english": "But earnestly desire the best gifts. Moreover, I show a most excellent way to you.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲧⲟϣ ⲥⲉⲃⲏⲕ ⲉϩⲣⲁⲓ ⲉⲡⲓⲁ ⲛⲟⲛⲱⲙ ⲉϫⲙⲡⲣⲏⲥ ⲙⲡⲓⲉⲃⲟⲩⲥ ϫⲓⲛⲡⲉϥⲉⲙⲛⲧ ⲧⲁⲓ ⲧⲉ ⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲁⲩⲱ ⲛⲧⲟϣ ⲥⲉⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲉϫⲙⲡ**ⲕⲟⲟϩ** ⲙⲡⲧⲟⲟⲩ ⲡⲁⲓ ⲉⲧⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲓⲁ ⲛⲟⲛⲱⲙ ϩⲁⲧⲛⲧⲑⲁⲗⲁⲥⲥⲁ ⲧⲁⲓ ⲉⲧⲥⲁⲟⲩⲥⲁ ⲙⲡⲕⲁϩ ⲛϩⲣⲁⲫⲁⲉⲓⲛ ⲉϫⲙⲡⲉⲙϩⲓⲧ",
+      "english": "And the borders go up to the valley of Ennom, behind Jebus southward; this is Jerusalem: and the borders terminate at the top of the mountain, which is before the valley of Ennom toward the sea, which is by the side of the land of Raphain northward.",
+      "source": "Joshua 15",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥⲧⲟⲟⲩ",
+        14,
+        18.814
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        23,
+        18.716
+      ],
+      [
+        "ⲛ",
+        109,
+        18.136
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        12,
+        16.481
+      ],
+      [
+        "ⲛⲉⲩ",
+        21,
+        16.016
+      ],
+      [
+        "ⲁⲩⲱ",
+        36,
+        15.28
+      ],
+      [
+        "ⲧⲟⲩⲉⲓⲏ",
+        4,
+        15.129
+      ],
+      [
+        "ⲙⲁⲧⲁⲙⲓⲟ",
+        1,
+        14.621
+      ],
+      [
+        "ⲛⲫⲁⲥⲅⲁ",
+        1,
+        14.621
+      ],
+      [
+        "ⲙⲙⲁⲱⲭ",
+        1,
+        14.621
+      ],
+      [
+        "ⲛϥⲏⲩ",
+        1,
+        14.621
+      ],
+      [
+        "ϫⲟⲥⲉ",
+        7,
+        14.458
+      ],
+      [
+        "ⲁⲡⲉ",
+        7,
+        14.026
+      ],
+      [
+        "ⲙⲛ",
+        21,
+        13.844
+      ],
+      [
+        "ⲡⲁⲓ",
+        13,
+        13.701
+      ],
+      [
+        "ⲉϫⲏ",
+        1,
+        13.621
+      ],
+      [
+        "ⲡ",
+        28,
+        12.942
+      ],
+      [
+        "ⲉ",
+        25,
+        12.771
+      ],
+      [
+        "ⲉϫⲙ",
+        7,
+        12.652
+      ],
+      [
+        "ⲛϩ",
+        1,
+        12.621
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲟϩ_0_node",
+          32
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲟϩ",
+          6
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϣⲟⲙⲛⲧ",
+          3
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ⲕⲟⲟϩ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲕⲟⲟϩ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          6
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲟⲩⲉⲓⲏ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ",
+          4
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          9
+        ],
+        [
+          "ⲙⲛ_3_post_ⲕⲟⲟϩ",
+          4
+        ],
+        [
+          "ⲛⲉⲩ_4_post_ϣⲟⲙⲛⲧ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲟϩ",
+          5
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲟⲟϩ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲕⲟⲟϩ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ϩⲃⲟⲩⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_pre_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϣⲟⲙⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_3_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_4_pre_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_4_post_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲫⲁⲥⲅⲁ_1_post_ⲕⲟⲟϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_2_pre_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϣⲟⲙⲛⲧ",
+          "ϣⲟⲙⲛⲧ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ⲕⲟⲟϩ",
+          "ⲕⲟⲟϩ_0_node",
+          4
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲙ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲟⲟϩ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲧⲟⲩⲉⲓⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          "ⲧⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ",
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          3
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          "ⲕⲟⲟϩ_0_node",
+          9
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲙⲛ_3_post_ⲕⲟⲟϩ",
+          4
+        ],
+        [
+          "ⲙⲛ_3_post_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_4_post_ϣⲟⲙⲛⲧ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_1_pre_ⲕⲟⲟϩ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲟⲟϩ",
+          "ϣⲟⲙⲛⲧ_1_pre_ⲕⲟⲟϩ",
+          2
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲁⲩⲱ_3_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲟⲟϩ",
+          "ⲙⲛ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲙⲛ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_3_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲟⲟϩ",
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          2
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲛⲁⲓ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲟⲟϩ",
+          "ⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧ_1_pre_ⲕⲟⲟϩ",
+          "ⲕⲟⲟϩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          "ϩⲃⲟⲩⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉ_2_pre_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_pre_ϥⲧⲟⲟⲩ",
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲁⲩⲱ_3_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϩⲟⲧ",
+          "ⲉ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲟϩ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          "ⲁⲩⲱ_3_post_ϣⲟⲙⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϣⲟⲙⲧ",
+          "ϩⲛ_1_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_4_post_ϣⲟⲙⲛⲧ",
+          "ϣⲟⲙⲛⲧ_3_post_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_4_pre_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_4_pre_ϥⲧⲟⲟⲩ",
+          "ϣⲟⲙⲛⲧ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_4_post_ϥⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ",
+          "ⲙⲛ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲟϩ",
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_pre_ϥⲧⲟⲟⲩ_b",
+          "ϥⲧⲟⲟⲩ_1_pre_ⲕⲟⲟϩ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲟϩ",
+          "ⲕⲟⲟϩ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲟϩ_0_node",
+          "ⲛⲫⲁⲥⲅⲁ_1_post_ⲕⲟⲟϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.4,
+      "rank": 1133,
+      "count": 63
+    }
+  },
+  "etym": {
+    "egy_num": "159840",
+    "egy_lemma": "qꜥḥ.w",
+    "demo_num": "d6443",
+    "demo_lemma": "qḥ",
+    "english": "corner; bend",
+    "german": "Winkel; Ecke; Seite",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/159840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6443"
+  }
+}

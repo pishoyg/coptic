@@ -1,0 +1,74 @@
+{
+  "id": "C210",
+  "forms": [
+    {
+      "id": "CF839",
+      "orth": "ϫⲓⲛⲉⲣⲁⲡⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF840",
+      "orth": "ϫⲓⲛⲉⲣⲁⲡⲁⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS235",
+      "bibliography": "CD 17a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C212",
+      "label": "ϯⲁⲥ",
+      "pos": "V",
+      "gloss": "give someone a blow"
+    },
+    {
+      "target": "C211",
+      "label": "ⲁⲁⲥ",
+      "pos": "N",
+      "gloss": "blow with hand, stroke"
+    },
+    {
+      "target": "C207",
+      "label": "ⲁⲥ",
+      "pos": "N",
+      "gloss": "old"
+    },
+    {
+      "target": "C208",
+      "label": "ⲙⲛⲧⲁⲥ",
+      "pos": "N",
+      "gloss": "oldness"
+    },
+    {
+      "target": "C209",
+      "label": "ⲣⲁⲥ",
+      "pos": "V",
+      "gloss": "become old"
+    }
+  ]
+}

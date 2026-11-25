@@ -1,0 +1,350 @@
+{
+  "id": "C10007",
+  "forms": [
+    {
+      "id": "CF26142",
+      "orth": "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26143",
+      "orth": "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26144",
+      "orth": "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3292,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF26145",
+      "orth": "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13080",
+      "bibliography": "DDGLC",
+      "cu_ID": "557"
+    },
+    {
+      "id": "CS13081",
+      "bibliography": "DDGLC",
+      "cu_ID": "7104"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲱⲧ ⲉⲃⲟⲗ ⲛⲙ**ⲡⲁⲛⲟⲩⲣⲅⲓⲁ** ⲙⲡⲉⲕⲣⲟϥ ·",
+      "english": "'Flee from the knavery of the Crafty One,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲣϩⲟⲧⲉ ϫⲉⲙⲏⲡⲟⲧⲉ ⲛⲧϩⲉ ⲉⲛⲧⲁⲡϩⲟϥ ⲉⲝⲁⲡⲁⲧⲁ ⲛⲉⲩϩⲁ ϩⲛⲧⲉϥ**ⲡⲁⲛⲟⲩⲣⲅⲓⲁ** ⲛⲥⲉⲧⲁⲕⲟ ⲛϭⲓⲛⲉⲧⲛϩⲏⲧ ⲉⲃⲟⲗ ϩⲛⲧⲙⲛⲧϩⲁⲡⲗⲟⲩⲥ ⲙⲛⲡⲧⲃⲃⲟ ⲉⲧϫⲓ ⲉϩⲟⲩⲛ ⲉⲡⲉⲭⲣⲓⲥⲧⲟⲥ :",
+      "english": "What I&apos;m afraid of is that, in the way that the serpent deceived Eve in his treachery, your hearts waste away from the simplicity and the purity which bring to Christ.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϫⲟ ⲛⲧⲛϩⲁϩ ⲛⲥⲟⲡ · ϩⲛϩⲉⲛϩⲃⲏⲩⲉ ⲛⲧⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ ϩⲙⲡⲟⲩⲛⲁⲙ · ⲁⲩⲱ ⲁϥϯⲡⲉϥⲟⲩⲟⲓ ϩⲁⲧⲁϩⲏ ⲁϥⲧⲟⲗⲙⲁ ⲟⲛ ⲉⲡⲉⲓⲣⲁⲍⲉ ⲙⲡϫⲟⲉⲓⲥ · ⲁⲗⲗⲁ ⲁϥⲟϫⲛϥ ⲙⲛⲛⲉϥ**ⲡⲁⲛⲟⲩⲣⲅⲓⲁ** ·",
+      "english": "And the works of the Devil on the right hand hurt me many times, and he went so far as to dare to tempt the Lord, but He destroyed him with all his works.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲛⲓⲥⲕⲓⲟⲛ",
+        1,
+        18.11
+      ],
+      [
+        "ⲃⲉⲛⲓ",
+        1,
+        14.888
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        9.104
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲩϩⲁ",
+        4,
+        17.929
+      ],
+      [
+        "ⲕⲣⲟϥ",
+        3,
+        14.2
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        4,
+        13.279
+      ],
+      [
+        "ⲣⲕⲣⲟϥ",
+        1,
+        12.891
+      ],
+      [
+        "ⲟϫⲛ",
+        1,
+        12.438
+      ],
+      [
+        "ϫⲱϩⲙ",
+        2,
+        12.287
+      ],
+      [
+        "ⲕⲟⲧⲥ",
+        1,
+        11.817
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        11.505
+      ],
+      [
+        "ⲛ",
+        13,
+        11.451
+      ],
+      [
+        "ϩⲓⲙⲉ",
+        1,
+        11.051
+      ],
+      [
+        "ϩⲛ",
+        6,
+        10.775
+      ],
+      [
+        "ⲥⲉ",
+        4,
+        10.623
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        10.359
+      ],
+      [
+        ".",
+        5,
+        10.064
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲛ",
+        1,
+        9.671
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        7.804
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        7.576
+      ],
+      [
+        "ⲧ",
+        3,
+        7.366
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        6.979
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        6.955
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲓ_4_post_ⲃⲉⲛⲓ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϧⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          "ⲉⲣⲉ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ⲛⲓ_4_post_ⲃⲉⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_4_post_ⲃⲉⲛⲓ",
+          "ⲃⲉⲛⲓ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓ_3_post_ϥ",
+          "ⲛϧⲏⲧ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ϥ_2_post_ⲛϧⲏⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          2
+        ],
+        [
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          6
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲣⲟϥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          "ⲙ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲕⲣⲟϥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲡⲁⲛⲟⲩⲣⲅⲓⲁ",
+          "ⲡⲁⲛⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2937,
+      "count": 11
+    }
+  },
+  "etym": {
+    "grl_ID": "2766",
+    "grl_lemma": "πανουργία",
+    "grl_meaning": "knavery",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1299a; Preisigke 2:228"
+  }
+}

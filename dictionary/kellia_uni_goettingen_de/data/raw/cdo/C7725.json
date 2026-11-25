@@ -1,0 +1,189 @@
+{
+  "id": "C7725",
+  "forms": [
+    {
+      "id": "CF17515",
+      "orth": "ϭⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7927,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8590",
+      "bibliography": "CD 817b-818a; CED 331; KoptHWb 456; DELC 341a; ChLCS 108a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲛⲁϩⲣⲙ ⲡⲉ **ϭⲙⲉ** ϫⲉⲉⲓⲥϣⲟⲙⲧⲉ ⲛⲣⲟⲙⲡⲉ ϯⲛⲏⲩ ϯϣⲓⲛⲉ ⲛⲥⲁⲕⲁⲣⲡⲟⲥ ϩⲛⲧⲉⲓⲃⲱ ⲛⲕⲛⲧⲉ · ⲁⲩⲱ ⲛϯϩⲏⲩ ⲁⲛ ⲉⲟⲩⲟⲛ ⲛϩⲏⲧⲥ · ϣⲁⲁⲧⲥ ϭⲉ ⲉⲧⲃⲉⲟⲩ ⲥⲟⲩⲱⲥϥ ⲙⲡ‐ⲕⲉ‐ⲕⲁϩ ·",
+      "english": "He said to the vine-dresser: Lo, three years do I come to look for fruit on this fig-tree, and I have not any produce at all from it. Cut it down then; why doth it make the ground also good for nothing?",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲏⲩ ⲛϭⲓϩⲉⲛϣⲙⲙⲟ ⲉⲩⲙⲟⲟⲛⲉ ⲛⲛⲟⲩⲉⲥⲟⲟⲩ ⲁⲩⲱ ⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲛⲣⲉϥⲥⲕⲁⲓ ⲁⲩⲱ ⲛ**ϭⲙⲉ**",
+      "english": "And strangers shall come and feed thy flocks, and aliens shall be thy ploughmen and vine-dressers.",
+      "source": "Isaiah 61",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲥⲕⲁⲓ",
+        1,
+        18.013
+      ],
+      [
+        "ϣⲟⲙⲧⲉ",
+        1,
+        12.587
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲙ",
+        1,
+        12.051
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        10.331
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        7.745
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙⲉ",
+          "ⲛ_1_pre_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙⲉ",
+          "ϭⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7476,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7726",
+      "label": "ϭⲙⲉ",
+      "pos": "N",
+      "gloss": "tilled, cultivated (soil, land)"
+    },
+    {
+      "target": "C7724",
+      "label": "ϭⲱⲙ",
+      "pos": "N",
+      "gloss": "garden; vineyard; property"
+    },
+    {
+      "target": "C7727",
+      "label": "ⲁⲧϭⲙⲉ",
+      "pos": "N",
+      "gloss": "untilled (soil, land)"
+    },
+    {
+      "target": "C7728",
+      "label": "ⲙⲛⲧϭⲙⲉ",
+      "pos": "N",
+      "gloss": "vinedressing, winegrowing, viniculture"
+    }
+  ],
+  "etym": {
+    "egy_num": "163600",
+    "egy_lemma": "kꜣn.w",
+    "demo_num": "d6522",
+    "demo_lemma": "kꜣm(j)",
+    "english": "gardener; vintner",
+    "german": "Gärtner; Winzer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163600",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6522"
+  }
+}

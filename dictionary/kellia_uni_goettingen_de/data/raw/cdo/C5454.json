@@ -1,0 +1,169 @@
+{
+  "id": "C5454",
+  "forms": [
+    {
+      "id": "CF12879",
+      "orth": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5536,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6112",
+      "bibliography": "CD 521b; KoptHWb 291; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲡⲉⲕⲟⲩⲟⲓ ⲉⲡⲛⲟⲩⲧⲉ ⲛⲧϩⲉ ⲙⲡⲉⲧϫⲟ ⲙⲛⲡⲉⲧⲱϩⲥ ⲁⲩⲱ **ⲕⲛⲁⲱⲗ **ⲉϩⲟⲩⲛ**** ⲉⲧⲉⲕⲁⲡⲟⲑⲩⲕⲏ ⲛⲛⲁⲅⲁⲑⲟⲛ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "Set out on thy way to God after the manner of one who soweth and reapeth, and thou shalt enter into thy treasure-house (or, granary) of the good things of God.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲁⲛϫⲟⲟⲥ ⲇⲉ ϫⲉⲟⲩ ⲡⲉⲧⲉⲧⲛⲁⲟⲩⲟⲙϥ ϩⲛⲧⲉⲓⲙⲉϩⲥⲁϣϥⲉ ⲛⲣⲟⲙⲡⲉ ⲉⲛⲧⲙϫⲟ ⲁⲩⲱ **ⲛⲧⲉⲧⲛⲧⲙⲱⲗ **ⲉϩⲟⲩⲛ**** ⲛⲛⲉⲧⲛⲅⲉⲛⲏⲙⲁ",
+      "english": "And if ye should say, What shall we eat in this seventh year, if we do not sow nor gather in our fruits?",
+      "source": "Leviticus 25",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲉⲉⲓⲣⲉ ⲙⲡϣⲁ ⲛⲛⲉⲥⲕⲏⲛⲏ ⲛⲅⲉⲓⲣⲉ ⲛⲁⲕ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ **ϩⲙⲡⲧⲣⲉⲕⲱⲗ **ⲉϩⲟⲩⲛ**** ⲛⲛⲉⲕϫⲛⲟⲟⲩ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲧⲉⲕϩⲣⲱⲧ",
+      "english": "Thou shalt keep for thyself the feast of tabernacles seven days, when thou gatherest in thy produce from thy corn-floor and thy wine-press.",
+      "source": "Deuteronomy 16",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5100,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5461",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5462",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5448",
+      "label": "ⲁⲗ-",
+      "pos": "N",
+      "gloss": "taker"
+    },
+    {
+      "target": "C5446",
+      "label": "ⲁⲗⲓ",
+      "pos": "VIMP",
+      "gloss": "Take!"
+    },
+    {
+      "target": "C5447",
+      "label": "ⲁⲗⲓⲟⲩⲓ",
+      "pos": "VIMP",
+      "gloss": "lift! Pick ... up!"
+    },
+    {
+      "target": "C5463",
+      "label": "ⲟⲗⲥ",
+      "pos": "N",
+      "gloss": "what is collected"
+    },
+    {
+      "target": "C5460",
+      "label": "ⲣⲉϥⲱⲗ",
+      "pos": "N",
+      "gloss": "gatherer"
+    },
+    {
+      "target": "C5445",
+      "label": "ⲱⲗ",
+      "pos": "V",
+      "gloss": "hold, contain, enclose; take, lay hold of, gather"
+    },
+    {
+      "target": "C5459",
+      "label": "ⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering, harvest"
+    },
+    {
+      "target": "C5449",
+      "label": "ⲱⲗ (ⲉ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5455",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "enclosure, siege"
+    },
+    {
+      "target": "C5456",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "take, lift up, withdraw"
+    },
+    {
+      "target": "C5457",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "withdrawal"
+    },
+    {
+      "target": "C5452",
+      "label": "ⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take away"
+    },
+    {
+      "target": "C5450",
+      "label": "ⲱⲗⲓ (ⲉϫⲉⲛ)-",
+      "pos": "V",
+      "gloss": "bring up(on)"
+    },
+    {
+      "target": "C5451",
+      "label": "ⲱⲗⲓ (ⲛ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5453",
+      "label": "ⲱⲗⲓ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "take upward"
+    },
+    {
+      "target": "C5458",
+      "label": "ⲱⲗⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "take/carry away"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "C7127",
+  "forms": [
+    {
+      "id": "CF16312",
+      "orth": "ϫⲟⲟⲕⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6182,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7863",
+      "bibliography": "CD 763a; KoptHWb 417; DELC 325a; ChLCS 101a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲅⲁⲣ ϫⲉⲛϣⲁϫⲉ ⲛⲛⲥⲟⲫⲟⲥ ⲉⲩⲟ ⲛⲧϩⲉ ⲛϩⲉⲛ**ϫⲟⲟⲕⲉϥ** ⲛⲉϩⲉ · ⲁⲩⲱ ⲛⲧϩⲉ ⲛϩⲉⲛⲉⲓϥⲧ ⲉⲩⲧⲣⲧⲱⲣ · ϫⲉⲕⲁⲥ ϩⲙⲡⲧⲣⲉⲛⲁⲓ ϭⲱ ⲉⲩⲧⲱⲃⲥ ⲙⲡⲉⲕϩⲏⲧ ⲉⲕⲉⲥⲁϩⲱⲕ ⲉⲃⲟⲗ ⲛⲛⲟⲃⲉ ⲛⲓⲙ ·",
+      "english": "for the Book saith, ' The words of the wise are as ox-goads, and as the nails which are sharp '—so that whilst these remain fixed in thy heart thou shalt abstain from every sin.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϣⲁϫⲉ ⲛⲛⲥⲟⲫⲟⲥ ⲟ ⲛⲧϩⲉ ⲛϩⲉⲛ**ϫⲟⲟⲕⲉϥ** ⲛⲉϩⲉ ⲁⲩⲱ ⲛⲧϩⲉ ⲛϩⲉⲛⲉⲓⲃⲧ ⲉⲩⲧⲣⲧⲱⲣ ⲛⲁⲓ ⲛⲧⲁⲩⲧⲁⲁⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲩϣⲃⲉⲉⲣ ⲉⲃⲟⲗ ϩⲛⲟⲩϣⲱⲥ ⲛⲟⲩⲱⲧ",
+      "english": "The words of the wise are as goads, and as nails firmly fastened, which have been given from one shepherd by agreement.",
+      "source": "Ecclesiastes 12",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲙⲁⲥⲧⲓⲅⲝ ⲛⲟⲩϩⲧⲟ ⲁⲩⲱ ⲟⲩ**ϫⲟⲟⲕⲉϥ** ⲛⲟⲩⲉⲓⲱ ⲟⲩϭⲉⲣⲱⲃ ⲇⲉ ⲛⲟⲩϩⲉⲑⲛⲟⲥ ⲛⲁⲧϩⲏⲧ",
+      "english": "As a whip for a horse, and a goad for an ass, so is a rod for a simple nation.",
+      "source": "Proverbs 26",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉϩⲉ",
+        2,
+        16.059
+      ],
+      [
+        "ϩⲧⲟ",
+        1,
+        13.082
+      ],
+      [
+        "ⲉⲓⲱ",
+        1,
+        12.969
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        11.128
+      ],
+      [
+        "ⲛ",
+        6,
+        9.979
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.635
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        9.489
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.142
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟⲟⲕⲉϥ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲟⲕⲉϥ",
+          3
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲟⲟⲕⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲟⲕⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲱ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟⲟⲕⲉϥ_0_node",
+          "ⲛ_1_post_ϫⲟⲟⲕⲉϥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲟⲕⲉϥ",
+          "ⲉϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲟⲟⲕⲉϥ",
+          "ⲟⲩ_1_pre_ϫⲟⲟⲕⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲟⲕⲉϥ",
+          "ϫⲟⲟⲕⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲟⲕⲉϥ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲉⲓⲱ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5740,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7124",
+      "label": "ϫⲱⲕⲉ",
+      "pos": "V",
+      "gloss": "prick, sting, goad; goad"
+    },
+    {
+      "target": "C7125",
+      "label": "ϫⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "prick, sting"
+    },
+    {
+      "target": "C7126",
+      "label": "ϫⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "hole"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "C7001",
+  "forms": [
+    {
+      "id": "CF16057",
+      "orth": "ϩⲁⲩϭⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6970,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲁⲩϫⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4615,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲁⲩϭⲏⲗ",
+      "dialect": "F",
+      "id": "2331.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7722",
+      "bibliography": "CD 740a; CED 306; KoptHWb 405; DELC 319a; ChLCS 99a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲣϩⲟⲧⲉ ϭⲉ ϫⲉⲙⲏⲡⲱⲥ ⲛⲧⲛⲧⲱⲙⲛⲧ ⲉϩⲟⲩⲛ ⲉⲩⲙⲁ ⲉϥⲛⲁϣⲧ . ⲁⲩⲛⲉϫ ϥⲧⲟⲟⲩ ⲛ**ϩⲁⲩϭⲁⲗ** ϩⲓⲡⲁϩⲟⲩ . ⲁⲩϣⲗⲏⲗ ⲉⲧⲣⲉϩⲧⲟⲟⲩⲉ ϣⲱⲡⲉ .",
+      "english": "Fearing that we would run aground on rocky ground, they let go four anchors from the stern, and wished for daylight.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲓ ⲉⲧϣⲟⲟⲡ ⲛⲁⲛ ⲛⲧϩⲉ ⲛⲟⲩ**ϩⲁⲩϭⲁⲗ** ⲛⲧⲉⲛⲯⲩⲭⲏ . ⲉⲥⲟⲣϫ ⲁⲩⲱ ⲉⲥⲧⲁϫⲣⲏⲩ . ⲉⲥⲃⲏⲕ ⲉϩⲟⲩⲛ ⲉⲡⲥⲁ ⲛϩⲟⲩⲛ ⲙⲡⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ .",
+      "english": "This hope we have as an anchor of the soul, a hope both sure and steadfast and entering into that which is within the veil;",
+      "source": "58_Hebrews_6",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲧⲉⲕⲙ ⲛ**ϩⲁⲩϭⲁⲗ** ⲁⲩⲕⲁⲁⲩ ⲉⲩⲁϣⲉ ϩⲛⲧϩⲁⲗⲁⲥⲥⲁ ϩⲁⲙⲁ ⲁⲩⲕⲁ ϫⲱⲟⲩ ⲉⲃⲟⲗ ⲛⲛϩⲓⲏⲩ ⲁⲩϥⲓ ⲉϩⲣⲁⲓ ⲛⲧϭⲓⲥⲗⲁⲩⲟ ⲁⲩⲣϩⲱⲧ ⲙⲡⲧⲏⲩ ⲉⲧⲛⲃⲟⲗ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲣⲟ .",
+      "english": "Casting off the anchors, they left them in the sea, at the same time untying the rudder ropes. Hoisting up the foresail to the wind, they made for the beach.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲕⲙ",
+        1,
+        15.554
+      ],
+      [
+        "ϥⲧⲟⲟⲩ",
+        1,
+        11.784
+      ],
+      [
+        "ⲛⲉϫ",
+        1,
+        11.458
+      ],
+      [
+        "ⲡⲁϩⲟⲩ",
+        1,
+        10.884
+      ],
+      [
+        "ⲁ",
+        5,
+        10.425
+      ],
+      [
+        "ⲩ",
+        4,
+        10.225
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        10.002
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        9.022
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        8.384
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.646
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6531,
+      "count": 3
+    }
+  }
+}

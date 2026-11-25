@@ -1,0 +1,198 @@
+{
+  "id": "C1697",
+  "forms": [
+    {
+      "id": "CF4910",
+      "orth": "ⲗⲱⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9184,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF4911",
+      "orth": "ⲗⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲉⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18997,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲁⲁⲥ",
+      "dialect": "S",
+      "id": "999.2"
+    },
+    {
+      "orth": "ⲗⲁⲁⲥⲉ†",
+      "dialect": "S",
+      "id": "999.3"
+    },
+    {
+      "orth": "ⲗⲁⲥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.5,
+        "rank": 546,
+        "count": 236
+      }
+    },
+    {
+      "orth": "ⲗⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4537,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲗⲁⲥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.97,
+        "rank": 472,
+        "count": 167
+      }
+    },
+    {
+      "orth": "ⲗⲁⲥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.97,
+        "rank": 472,
+        "count": 167
+      }
+    },
+    {
+      "orth": "ⲗⲟⲩⲥⲉ",
+      "dialect": "A",
+      "id": "999.8"
+    },
+    {
+      "orth": "ⲗⲱⲱⲥ",
+      "dialect": "F",
+      "id": "999.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1963",
+      "bibliography": "CD 145a"
+    },
+    {
+      "id": "CS1964",
+      "bibliography": "CD 145a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲛⲧⲁϥϩⲉ ⲉϫⲙⲡⲉⲓⲱⲛⲉ ⲉⲧⲙⲙⲁⲩ . ϥⲛⲁ**ⲗⲱⲱⲥ** . ⲡⲉⲧϥⲛⲁϩⲉ ⲇⲉ ⲉϫⲱϥ ϥⲛⲁϣⲁϣϥ ⲉⲃⲟⲗ .",
+      "english": "Everyone who falls on that stone will be broken to pieces, but it will crush whomever it falls on to dust.'",
+      "source": "42_Luke_20",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲁϩⲉ ⲇⲉ ⲉϫⲙⲡⲉⲓⲱⲛⲉ ϥⲛⲁ**ⲗⲱⲱⲥ** ⲁⲩⲱ ⲡⲉⲧⲉⲣⲉ ⲡⲱⲛⲉ ⲛⲁϩⲉ ⲉϫⲱϥ ϥⲛⲁϣⲁϣϥ ⲉⲃⲟⲗ .",
+      "english": "He who falls on this stone will be broken to pieces, but on whoever it will fall, it will scatter him as dust.'",
+      "source": "40_Matthew_21",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲱⲛⲉ",
+        1,
+        10.926
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        9.653
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        8.327
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8749,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12208",
+      "label": "ⲉⲗⲟⲩⲥⲉ",
+      "pos": "N",
+      "gloss": "bruise"
+    },
+    {
+      "target": "C1698",
+      "label": "ⲙⲛⲧⲁⲧⲗⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "not being crushed"
+    }
+  ],
+  "etym": {
+    "egy_num": "88350",
+    "egy_lemma": "nss",
+    "english": "to do damage to",
+    "german": "beschädigen (o. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/88350"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "C2258",
+  "forms": [
+    {
+      "id": "CF6237",
+      "orth": "ⲙϣⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5295,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF6238",
+      "orth": "ⲉⲙϣⲓⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6239",
+      "orth": "ⲙⲉϣⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10368,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲉⲭⲓⲣ",
+      "dialect": "S",
+      "id": "1138.1"
+    },
+    {
+      "orth": "ⲙⲡϣⲓⲣ",
+      "dialect": "S",
+      "id": "1138.2"
+    },
+    {
+      "orth": "ⲙϣⲓⲣ",
+      "dialect": "B",
+      "id": "1138.3"
+    },
+    {
+      "orth": "ⲉⲙϣⲓⲣ",
+      "dialect": "B",
+      "id": "1138.4"
+    },
+    {
+      "orth": "ⲙⲉⲭⲓⲣ",
+      "dialect": "B",
+      "id": "1138.5"
+    },
+    {
+      "orth": "ⲙⲓϣⲏⲣ",
+      "dialect": "F",
+      "id": "1138.6"
+    },
+    {
+      "orth": "ⲙⲉⲭⲓⲗ",
+      "dialect": "F",
+      "id": "1138.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Name einer Sache oder Institution",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2603",
+      "bibliography": "CD 206a; CED 96; KoptHWb 109; DELC 129a; ChLCS 30a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉϥⲃⲓⲟⲥ ⲉⲧⲛⲁⲛⲟⲩϥ ϩⲛⲟⲩⲙⲛⲧⲧⲉⲗⲓⲟⲥ ⲙⲛⲟⲩϩⲩⲡⲟⲙⲟⲛⲏ ⲉⲛⲁⲛⲟⲩⲥ · ⲛⲥⲟⲩϥⲧⲟⲟⲩ ⲙⲡⲉⲃⲟⲧ · **ⲙϣⲓⲣ** ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲥⲙⲟⲩ ⲉⲣⲟⲛ ⲧⲏⲣⲛ ϩⲁⲙⲏⲛ ⁛—",
+      "english": "AND WHO ENDED HIS LIFE, WITH THE MOST EXCELLENT PATIENT ENDURANCE, ON THE FOURTH DAY OF THE MONTH MEKHIR, IN THE PEACE OF GOD. PRAY FOR US ALL! AMEN.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲩϫⲱⲕ ⲇⲉ ⲉⲃⲟⲗ ⲙⲡⲉⲩⲃⲓⲟⲥ ⲉⲧⲧⲁⲓⲏⲩ ⲛⲥⲟⲩⲥⲛⲁⲩ ⲙⲡⲉⲃⲟⲧ **ⲙϣⲓⲣ** · ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ · ϩⲁⲙⲏⲛ ·",
+      "english": "Their dear lives concluded on the 2nd day of the month of Emshir, through God's peace. Amen.",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "_warn:empty_norm_ⲉϥ ⲛⲧⲉⲓϩⲉ ⲁϥⲁⲡⲟⲇⲏⲙⲉⲓ ϣⲁⲡϫⲟⲉⲓⲥ ⲡⲉⲧϥⲙⲉ ⲙⲙⲟϥ ⲛⲥⲟⲩⲥⲛⲁⲩ ⲛ**ⲙϣⲓⲣ** , ⲉⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ⲙⲛⲛⲉϥⲉⲓⲟⲧⲉ ⲧⲏⲣⲟⲩ ⲛⲁⲓ ⲛⲧⲁϥⲧⲛⲧⲱⲛϥ ⲉⲣⲟⲟⲩ ϩⲛⲛⲉϥⲕⲁⲧⲟⲣⲑⲱⲙⲁ ⲙⲛⲡⲉϥⲃⲓⲟⲥ , ⲉⲧⲉⲙⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ ⲛⲉ ⲙⲛⲛⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲙⲛⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲙⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ ⲛⲧⲁⲩⲣⲡⲟⲩⲱϣ ⲙⲡⲛⲟⲩⲧⲉ · ⲱ ϫⲉⲟⲩⲏⲣ ⲡⲉ ⲡϩⲏⲃ ⲉⲛⲧⲁϥϣⲱⲡⲉ ⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ⲛϩⲏⲧϥ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 5",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:30-39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲩⲥⲛⲁⲩ",
+        2,
+        20.598
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        3,
+        15.022
+      ],
+      [
+        "ⲉⲓⲣⲏⲛⲏ",
+        3,
+        14.461
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        10.372
+      ],
+      [
+        ",",
+        1,
+        9.867
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.234
+      ],
+      [
+        "·",
+        1,
+        8.178
+      ],
+      [
+        "ⲙ",
+        3,
+        8.106
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.975
+      ],
+      [
+        "ⲡ",
+        3,
+        7.252
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4876,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "74360",
+    "egy_lemma": "Mḫjr",
+    "english": "Mekhir (a month)",
+    "german": "[Fest]; [Monatsname]; Mechir (2. Monat der Peret-Jahreszeit)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/74360"
+  }
+}

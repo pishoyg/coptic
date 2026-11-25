@@ -1,0 +1,55 @@
+{
+  "id": "C6724",
+  "forms": [
+    {
+      "id": "CF32037",
+      "orth": "ⲙⲛⲧⲁⲧϩⲛⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32036",
+      "orth": "ⲙⲛⲧⲁⲧϩⲛⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7041,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7438",
+      "bibliography": "CD 693a; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6723",
+      "label": "ϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "vessel, pot, receptacle; thing"
+    },
+    {
+      "target": "C6726",
+      "label": "ϫⲓϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "bring offering, tribute(?)"
+    },
+    {
+      "target": "C6725",
+      "label": "ϯϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "pay fee"
+    }
+  ]
+}

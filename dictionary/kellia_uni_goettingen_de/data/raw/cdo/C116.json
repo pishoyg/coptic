@@ -1,0 +1,344 @@
+{
+  "id": "C116",
+  "forms": [
+    {
+      "id": "CF413",
+      "orth": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4980,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF414",
+      "orth": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF415",
+      "orth": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS136",
+      "bibliography": "CD 10ab; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ⲁⲧⲁⲙⲁϩⲧⲉ** ⲡⲉ ⲡⲏⲣⲡ ⲟⲩⲥⲱϣ ⲡⲉ ⲡϯϩⲉ · ⲡⲉⲧⲛⲁⲧⲁⲁϥ ⲉⲛⲁⲓ · ⲛϥⲛⲁϣⲱⲡⲉ ⲁⲛ ⲉϥⲟⲩⲁⲁⲃ ⲉⲛⲟⲃⲉ ·",
+      "english": "'Wine is insolent, drunkenness is a disgrace; whosoever shall devote himself to these shall not be innocent of sin'",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ**ⲁⲧⲁⲙⲁϩⲧⲉ** ⲡⲉ ⲡⲏⲣⲡ ⲁⲩⲱ ⲟⲩⲥⲱϣ ⲡⲉ ⲡϯϩⲉ ⲟⲩⲟⲛ ⲇⲉ ⲛⲓⲙ ⲉⲧⲧⲱⲗⲙ ϩⲛⲛⲁⲓ ⲛϥⲛⲁϣⲱⲡⲉ ⲁⲛ ⲛⲥⲁⲃⲉ",
+      "english": "Wine is an intemperate thing, and strong drink full of violence: but every fool is entangled with them.",
+      "source": "Proverbs 20",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲛ ⲟⲩⲕⲱϩⲧ ⲛⲁⲙⲟⲩϩ ϩⲛⲧⲥⲟⲟⲩϩⲥ ⲛⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲁⲩⲱ ⲁⲟⲩⲟⲣⲅⲏ ⲙⲟⲩϩ ϩⲛⲟⲩϩⲉⲑⲛⲟⲥ ⲛ**ⲁⲧⲁⲙⲁϩⲧⲉ**",
+      "english": "In the congregation of the ungodly shall a fire be kindled; and in a rebellious nation wrath is set on fire.",
+      "source": "Sirach 16",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲣⲡ",
+        3,
+        14.836
+      ],
+      [
+        "ⲟⲩⲁϩⲓⲏⲧ",
+        1,
+        14.576
+      ],
+      [
+        "ⲙⲁⲥⲧⲓⲅⲝ",
+        1,
+        13.067
+      ],
+      [
+        "ⲇⲓⲁⲃⲟⲗⲟⲥ",
+        1,
+        10.194
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.898
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        8.752
+      ],
+      [
+        "ϩⲉⲑⲛⲟⲥ",
+        1,
+        8.629
+      ],
+      [
+        "ⲛ",
+        5,
+        8.453
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        7.914
+      ],
+      [
+        "ⲟ",
+        1,
+        7.483
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.41
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.186
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.806
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.761
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.157
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.143
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.425
+      ],
+      [
+        "ϥ",
+        1,
+        2.2
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲁⲙⲁϩⲧⲉ_0_node",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲏⲣⲡ",
+          2
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_5_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲟⲕϩⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲟⲕϩⲥ",
+          1
+        ],
+        [
+          "ⲙⲟⲕϩⲥ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_3_post_ⲟⲩⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲡ_2_post_ⲏⲣⲡ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲏⲣⲡ",
+          "ⲏⲣⲡ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          "ⲡ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲡⲉ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ⲛⲁ_5_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲧⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲟⲕϩⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲟⲕϩⲥ",
+          "ϩⲉⲛ_2_post_ⲙⲟⲕϩⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲟⲕϩⲥ",
+          "ⲙⲟⲕϩⲥ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲁⲧⲁⲙⲁϩⲧⲉ",
+          "ⲟⲩⲟⲛ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_2_post_ϣⲱⲡⲉ",
+          "ⲇⲉ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϣⲱⲡⲉ",
+          "ⲛⲓⲙ_3_post_ⲟⲩⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4561,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C95",
+      "type": "syn",
+      "label": "unrestrained"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C119",
+      "label": "ϭⲓⲛⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "control, restraint"
+    },
+    {
+      "target": "C110",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "prevail, rule, be in possession, valid, lay hold on; grasp, embrace, possess, restrict, detain"
+    },
+    {
+      "target": "C115",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "power, possession"
+    },
+    {
+      "target": "C114",
+      "label": "ⲁⲙⲁϩⲧⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "possess, master"
+    },
+    {
+      "target": "C111",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule, have power over"
+    },
+    {
+      "target": "C112",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "hold with, support"
+    },
+    {
+      "target": "C113",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hold, abide by"
+    },
+    {
+      "target": "C117",
+      "label": "ⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "uncontrolledness, incontinence"
+    },
+    {
+      "target": "C118",
+      "label": "ⲣⲉϥⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "self-controlled person"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "C3183",
+  "forms": [
+    {
+      "id": "CF31675",
+      "orth": "ⲣⲙⲣⲁⲓⲧⲉ",
+      "dialect": "S",
+      "oRef": "ⲣⲙ ⲣⲁⲓⲧⲉ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19153,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31674",
+      "orth": "ⲣⲙⲛⲣⲁⲓⲧⲉ",
+      "dialect": "S",
+      "oRef": "ⲣⲙ ⲛ ⲣⲁⲓⲧⲉ"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3638",
+      "bibliography": "CD 304b; KoptHWb 162; ChLCS 41a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲣⲙⲣⲁⲩⲏ",
+        1,
+        17.276
+      ],
+      [
+        "ⲛⲉⲥ",
+        2,
+        14.384
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3184",
+      "label": "ϫⲓⲣⲁⲓⲧⲉ",
+      "pos": "V",
+      "gloss": "have kinship, be akin"
+    },
+    {
+      "target": "C3182",
+      "label": "ⲣⲁⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "kindred, kinship, tribe"
+    }
+  ]
+}

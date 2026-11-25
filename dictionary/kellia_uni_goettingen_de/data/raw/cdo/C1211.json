@@ -1,0 +1,58 @@
+{
+  "id": "C1211",
+  "forms": [
+    {
+      "id": "CF3810",
+      "orth": "ⲙⲉⲧⲕⲗϫⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1404",
+      "bibliography": "CD 108a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1209",
+      "label": "ⲕⲁⲗⲁϫⲧⲱⲣⲧ",
+      "pos": "N",
+      "gloss": "part of house"
+    },
+    {
+      "target": "C1210",
+      "label": "ⲕⲗϫⲉ",
+      "pos": "N",
+      "gloss": "angle, corner"
+    },
+    {
+      "target": "C1207",
+      "label": "ⲕⲱⲗϫ",
+      "pos": "V",
+      "gloss": "bend, be bent; bend, twist"
+    },
+    {
+      "target": "C1208",
+      "label": "ⲕⲱⲗϫ",
+      "pos": "N",
+      "gloss": "bent state, perversion, depression"
+    }
+  ]
+}

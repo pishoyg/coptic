@@ -1,0 +1,70 @@
+{
+  "id": "C3486",
+  "forms": [
+    {
+      "id": "CF8873",
+      "orth": "ϫⲓⲥⲟⲗⲥⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3968",
+      "bibliography": "CD 332b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3485",
+      "label": "ϣⲱⲡⲉ ⲛⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "become, be comforted"
+    },
+    {
+      "target": "C3487",
+      "label": "ⲣⲉϥⲥⲟⲗⲥⲗ",
+      "pos": "N",
+      "gloss": "comforter"
+    },
+    {
+      "target": "C3484",
+      "label": "ⲣⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "make, have comfort"
+    },
+    {
+      "target": "C3488",
+      "label": "ⲥⲉⲗⲥⲓⲗ",
+      "pos": "N",
+      "gloss": "comfort"
+    },
+    {
+      "target": "C3482",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "be comforted, encouraged; comfort, encourage"
+    },
+    {
+      "target": "C3483",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "N",
+      "gloss": "consolation, amusement"
+    }
+  ]
+}

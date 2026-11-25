@@ -1,0 +1,69 @@
+{
+  "id": "C1372",
+  "forms": [
+    {
+      "id": "CF4159",
+      "orth": "ϫⲓⲛⲕⲱⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1584",
+      "bibliography": "CD 121a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1373",
+      "label": "ⲕⲁⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "preparation for burial, embalming; grave-clothes, shroud; corpse"
+    },
+    {
+      "target": "C1368",
+      "label": "ⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial, funeral"
+    },
+    {
+      "target": "C1366",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "dress, prepare corpse for burial, bury"
+    },
+    {
+      "target": "C1367",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "corpse"
+    },
+    {
+      "target": "C1371",
+      "label": "ⲣⲉϥⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "embalmer"
+    },
+    {
+      "target": "C1369",
+      "label": "ⲣⲉϥⲛⲕⲱⲱⲥ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "invoker, producer of dead"
+    },
+    {
+      "target": "C1370",
+      "label": "ⲣⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "be corpse, be dead"
+    }
+  ]
+}

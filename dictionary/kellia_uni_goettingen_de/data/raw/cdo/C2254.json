@@ -1,0 +1,328 @@
+{
+  "id": "C2254",
+  "forms": [
+    {
+      "id": "CF6229",
+      "orth": "ⲣⲉϥⲙⲟⲟϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13420,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2599",
+      "bibliography": "CD 206a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲟⲩ**ⲣⲉϥⲙⲟⲟϣⲉ** ϩⲓⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲧⲙⲉ ⲡⲉ ⲧⲱⲃⲓⲇ · ⲁⲩⲱ ⲟⲩⲣⲉϥⲧⲙⲛⲧⲛⲁⲡⲉ ϩⲛⲟⲩⲛⲟϭ ⲛⲉⲩⲙⲉⲛⲓⲁ · ⲁⲩⲱ ⲛⲉⲟⲩⲣⲉϥϯⲁⲡⲁⲣⲭⲏ ⲡⲉ ϩⲓⲣⲉⲙⲏⲧ ⲉⲡⲏⲓ ⲙⲡⲛⲟⲩⲧⲉ · ⲡⲉ ⲡϣⲏⲣⲉ ⲛⲧⲱⲃⲓⲏⲗ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗⲏⲑⲱⲥ",
+        1,
+        14.189
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        12.172
+      ],
+      [
+        "ⲱⲛϩ",
+        1,
+        10.717
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲏⲑⲱⲥ_1_pre_ⲣⲉϥⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲟⲟϣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲏⲑⲱⲥ_1_pre_ⲣⲉϥⲙⲟⲟϣⲉ",
+          "ⲣⲉϥⲙⲟⲟϣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13015,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2253",
+      "label": "ϣⲫⲏⲣ ⲙⲙⲟϣⲓ",
+      "pos": "N",
+      "gloss": "fellow-traveller"
+    },
+    {
+      "target": "C2252",
+      "label": "ϩⲓⲏ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C2237",
+      "label": "ϫⲓⲛⲙⲟϣⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "going forth, departure"
+    },
+    {
+      "target": "C2255",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, gait, conduct"
+    },
+    {
+      "target": "C2244",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ascent"
+    },
+    {
+      "target": "C2249",
+      "label": "ⲁⲧⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "pathless"
+    },
+    {
+      "target": "C2250",
+      "label": "ⲙⲁ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "place of walking, path"
+    },
+    {
+      "target": "C2239",
+      "label": "ⲙⲟϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2225",
+      "label": "ⲙⲟϣⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2226",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲙⲉⲛϩⲏ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2227",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲫⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2251",
+      "label": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, journey"
+    },
+    {
+      "target": "C2219",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "V",
+      "gloss": "walk, go (on land or water)"
+    },
+    {
+      "target": "C2221",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, pace, journey"
+    },
+    {
+      "target": "C2229",
+      "label": "ⲙⲟⲟϣⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2233",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁϫⲛ-)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2245",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before; go toward, accommodate (in documents)"
+    },
+    {
+      "target": "C2248",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲏⲧ⸗)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2230",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "walk on, in"
+    },
+    {
+      "target": "C2247",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϩⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2234",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "go upon"
+    },
+    {
+      "target": "C2246",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2228",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2232",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit"
+    },
+    {
+      "target": "C2231",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "go, walk in"
+    },
+    {
+      "target": "C2220",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be about to, proceed to"
+    },
+    {
+      "target": "C2222",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2241",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "go in, approach"
+    },
+    {
+      "target": "C2242",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2243",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2223",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "walk upon, go toward"
+    },
+    {
+      "target": "C2236",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit; pass (by, through)"
+    },
+    {
+      "target": "C2235",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go forth"
+    },
+    {
+      "target": "C2240",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C2238",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2224",
+      "label": "ⲙⲟⲟϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go, agree with, match"
+    }
+  ]
+}

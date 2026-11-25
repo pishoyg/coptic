@@ -1,0 +1,147 @@
+{
+  "id": "C5665",
+  "forms": [
+    {
+      "id": "CF13306",
+      "orth": "ⲣⲉϥⲱϫⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9525,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6338",
+      "bibliography": "CD 540a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲛⲟⲩⲛⲟϭ ⲙⲡⲁϩⲣⲉ ⲉϥϭⲙϭⲟⲙ ⲙⲙⲁⲧⲉ ϩⲙⲡⲥⲱⲙⲁ ⲙⲡϣⲱⲛⲉ . ⲡϩⲓⲥⲉ ⲛ**ⲣⲉϥⲱϫⲛ** ⲙⲡⲛⲟⲃⲉ ⲕⲏ ⲉϩⲣⲁⲓ .",
+      "english": "For just as a strong medicine is very powerful in the body of illness, the labor of one who destroys sin exists.",
+      "source": "Apophthegmata Patrum Sahidic 040: Syncletica 8 (10)",
+      "urn": "urn:cts:copticLit:ap.40.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲏ",
+        1,
+        13.18
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        1,
+        11.554
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        10.287
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲱϫⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲱϫⲛ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲱϫⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9102,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5663",
+      "label": "ⲁⲧⲱϫⲛ",
+      "pos": "N",
+      "gloss": "unceasing, uninterrupted"
+    },
+    {
+      "target": "C5664",
+      "label": "ⲣⲱϫⲛ",
+      "pos": "V",
+      "gloss": "be slothful"
+    },
+    {
+      "target": "C5661",
+      "label": "ⲱϫⲛ",
+      "pos": "V",
+      "gloss": "cease, perish; make cease, destroy"
+    },
+    {
+      "target": "C5662",
+      "label": "ⲱϫⲛ",
+      "pos": "N",
+      "gloss": "ceasing, destruction"
+    }
+  ]
+}

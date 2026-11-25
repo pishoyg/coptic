@@ -1,0 +1,194 @@
+{
+  "id": "C3248",
+  "forms": [
+    {
+      "id": "CF8381",
+      "orth": "ϫⲓⲛⲣⲱϧⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11000,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3711",
+      "bibliography": "CD 312a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁ ⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲑⲱⲕⲉⲙ ⲛⲧⲟⲩⲥⲏϥⲓ: ⲁⲩϭⲱⲗⲕ ⲛⲧⲟⲩⲫⲓϯ ⲉⲡ**ϫⲓⲛⲣⲱϧⲧ** ⲛⲟⲩϩⲏⲕⲓ ⲛⲉⲙⲟⲩϫⲱⲃ: ⲟⲩⲟϩ ⲉϧⲟⲗϧⲉⲗ ⲛⲛⲏⲉⲧⲥⲟⲩⲧⲱⲛ ϧⲉⲛⲡⲟⲩϩⲏⲧ .",
+      "english": "But the Lord shall laugh at him: for he foresees that his day will come.",
+      "source": "19_Psalmi_36",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:36",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲓϯ",
+        1,
+        13.862
+      ],
+      [
+        "ϩⲏⲕⲓ",
+        1,
+        12.476
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        10.384
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲣⲱϧⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲓⲛⲣⲱϧⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_5_post_ϫⲱⲃ:",
+          1
+        ],
+        [
+          "ⲟⲩ_5_post_ϫⲱⲃ:",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲣⲱϧⲧ_0_node",
+          "ⲛ_1_post_ϫⲓⲛⲣⲱϧⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲓⲛⲣⲱϧⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϩⲏⲕⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲓ_3_post_ⲟⲩ",
+          "ⲛⲉⲙ_5_post_ϫⲱⲃ:",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_5_post_ϫⲱⲃ:",
+          "ⲟⲩ_5_post_ϫⲱⲃ:",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10451,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3253",
+      "label": "ϭⲓ ⲉⲣϧⲟⲧ",
+      "pos": "V",
+      "gloss": "inflict a wound, wound"
+    },
+    {
+      "target": "C3252",
+      "label": "ϯ ⲛⲟⲩⲉⲣϧⲟⲧ",
+      "pos": "V",
+      "gloss": "inflict a wound, wound"
+    },
+    {
+      "target": "C3250",
+      "label": "ⲉⲣϧⲟⲧ",
+      "pos": "N",
+      "gloss": "blow, wound"
+    },
+    {
+      "target": "C3251",
+      "label": "ⲉⲣⲉⲣϧⲟⲧ",
+      "pos": "V",
+      "gloss": "be, become wound"
+    },
+    {
+      "target": "C3249",
+      "label": "ⲣⲁϩⲧⲥ",
+      "pos": "N",
+      "gloss": "striking, slaughter"
+    },
+    {
+      "target": "C3247",
+      "label": "ⲣⲉϥⲣⲱϧⲧ",
+      "pos": "N",
+      "gloss": "epileptic"
+    },
+    {
+      "target": "C3245",
+      "label": "ⲣⲱϩⲧ",
+      "pos": "V",
+      "gloss": "strike, be struck, fall; strike, cast, throw"
+    },
+    {
+      "target": "C3246",
+      "label": "ⲣⲱϩⲧ",
+      "pos": "N",
+      "gloss": "stroke, blow; epilepsy"
+    }
+  ]
+}

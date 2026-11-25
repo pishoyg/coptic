@@ -1,0 +1,61 @@
+{
+  "id": "C11051",
+  "forms": [
+    {
+      "id": "CF30404",
+      "orth": "ϩⲁⲅⲓⲱⲥⲩⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF30407",
+      "orth": "ϩⲁⲅⲓⲱⲥⲩⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30405",
+      "orth": "ϩⲁⲅⲓⲟⲥⲩⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10965,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30406",
+      "orth": "ϩⲁⲅⲓⲱⲥⲏⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30408",
+      "orth": "ⲁⲅⲓⲟⲥⲩⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30409",
+      "orth": "ⲁⲅⲓⲱⲥⲩⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15429",
+      "bibliography": "DDGLC",
+      "cu_ID": "1943"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "16",
+    "grl_lemma": "ἁγιωσύνη",
+    "grl_meaning": "holiness",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 9b; Preisigke 1:7"
+  }
+}

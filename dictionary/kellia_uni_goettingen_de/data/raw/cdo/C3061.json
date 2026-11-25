@@ -1,0 +1,211 @@
+{
+  "id": "C3061",
+  "forms": [
+    {
+      "id": "CF7995",
+      "orth": "ⲣⲉϥⲣⲟⲉⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8638,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3509",
+      "bibliography": "CD 301b; KoptHWb 162; ChLCS 41a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲕⲱ ⲛϩⲉⲛ**ⲣⲉϥⲣⲟⲉⲓⲥ** ϩⲛⲧⲓⲇⲟⲩⲙⲁⲓⲁ ⲧⲏⲣⲥ ⲁⲩⲱ ⲛⲓⲇⲟⲩⲙⲁⲓⲟⲥ ⲧⲏⲣⲟⲩ ⲁⲩⲣϩⲙϩⲁⲗ ⲙⲡⲣⲣⲟ ⲁⲩⲱ ⲁⲡϫⲟⲉⲓⲥ ⲧⲟⲩϫⲉⲇⲁⲩⲉⲓⲇ ϩⲛⲛⲙⲁ ⲧⲏⲣⲟⲩ ⲛⲧⲁϥⲃⲱⲕ ⲉⲣⲟⲟⲩ",
+      "english": "And he set garrisons in Idumea, even in all Idumea: and all the Idumeans were servants to the king. And the Lord preserved David wherever he went.",
+      "source": "II Samuel 8",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛϭⲓⲟⲗⲟⲫⲉⲣⲛⲏⲥ ⲛⲉϥ**ⲣⲉϥⲣⲟⲉⲓⲥ** ⲉⲧⲙⲕⲱⲗⲩ ⲙⲙⲟⲥ ⲁⲩⲱ ⲁⲥϭⲱ ϩⲛⲧⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛϣⲟⲙⲛⲧ ⲛϩⲟⲟⲩ ⲉϣⲁⲥⲉⲓ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲟⲩϣⲏ ⲉⲡⲓⲁ ⲛⲃⲁⲓⲧⲩⲗⲟⲩⲁ ⲛⲥϫⲟⲕⲙⲉⲥ ϩⲛⲧⲡⲁⲣⲁⲉⲙⲃⲟⲗⲏ ϩⲓϫⲛⲧⲡⲏⲅⲏ ⲙⲡⲙⲟⲟⲩ",
+      "english": "Then Holofernes commanded his guard that they should not stay her: thus she abode in the camp three days, and went out in the night into the valley of Bethulia, and washed herself in a fountain of water by the camp.",
+      "source": "Judith 12",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲇⲟⲩⲙⲁⲓⲁ",
+        1,
+        14.791
+      ],
+      [
+        "ⲟⲗⲟⲫⲉⲣⲛⲏⲥ",
+        1,
+        14.313
+      ],
+      [
+        "ⲕⲱⲗⲩ",
+        1,
+        13.898
+      ],
+      [
+        "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+        1,
+        11.036
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        9.236
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲣⲟⲉⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲉϥⲣⲟⲉⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲉϥⲣⲟⲉⲓⲥ",
+          "ⲣⲉϥⲣⲟⲉⲓⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8191,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3063",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "V",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3064",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3065",
+      "label": "ⲉⲣϣⲣⲱⲓⲥ",
+      "pos": "V",
+      "gloss": "keep vigil"
+    },
+    {
+      "target": "C3062",
+      "label": "ⲙⲁ ⲛⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "place of watching"
+    },
+    {
+      "target": "C3058",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "V",
+      "gloss": "be awake, watch; keep, observe"
+    },
+    {
+      "target": "C3060",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3059",
+      "label": "ⲣⲟⲉⲓⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wake up"
+    }
+  ]
+}

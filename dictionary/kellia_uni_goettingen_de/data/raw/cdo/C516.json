@@ -1,0 +1,783 @@
+{
+  "id": "C516",
+  "forms": [
+    {
+      "id": "CF2038",
+      "orth": "ⲃⲣⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.41,
+        "rank": 574,
+        "count": 222
+      }
+    },
+    {
+      "id": "CF2039",
+      "orth": "ⲃⲣⲣⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2040",
+      "orth": "ⲃⲣⲣⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2041",
+      "orth": "ⲃⲣⲣⲉ",
+      "dialect": "M"
+    },
+    {
+      "orth": "ⲃⲉⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.73,
+        "rank": 516,
+        "count": 147
+      }
+    },
+    {
+      "orth": "ⲃⲏⲣⲉ",
+      "dialect": "S",
+      "id": "591.1"
+    },
+    {
+      "orth": "ⲃⲉⲣⲉⲓ",
+      "dialect": "B",
+      "id": "591.2"
+    },
+    {
+      "orth": "ⲃⲏⲣⲉ",
+      "dialect": "A",
+      "id": "591.3"
+    },
+    {
+      "orth": "ⲃⲉⲣⲓ",
+      "dialect": "F",
+      "id": "591.4"
+    },
+    {
+      "orth": "ⲃⲉⲣⲉⲓ",
+      "dialect": "F",
+      "id": "591.5"
+    },
+    {
+      "orth": "ⲃⲏⲣⲉ",
+      "dialect": "L",
+      "id": "591.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS624",
+      "bibliography": "CD 43a; CED 26; KoptHWb 27, 495; DELC 30; ChLCS 9a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ ⲧⲏⲣⲟⲩ ϩⲱⲥⲧⲉ ⲛⲧⲟⲩⲕⲱϯ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩ ⲡⲉ ⲫⲁⲓ ⲟⲩⲥⲃⲱ ⲙ**ⲃⲉⲣⲓ** ⲡⲉ ϫⲉϧⲉⲛⲟⲩⲉⲣϣⲓϣⲓ ϥⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛⲛⲓⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲥⲉⲥⲱⲧⲉⲙ ⲛⲁϥ",
+      "english": "They were all amazed, so that they questioned among themselves, saying, 'What is this? A new teaching? For with authority he commands even the unclean spirits, and they obey him!'",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲑⲁⲗⲁⲥⲥⲁ ⲛ**ⲃⲣⲣⲉ** ⲉⲥϩⲗⲟⲩⲗⲱⲟⲩ · ⲏ ⲉⲥϫⲟⲥⲉ ·",
+      "english": "The new sea, which is vast and deep",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲅⲁⲣ ⲙⲡⲁⲣⲉϩⲗⲓ ϩⲓⲟⲩⲧⲱⲓⲥ ⲙⲃⲉⲣⲓ ⲉⲟⲩϩⲃⲟⲥ ⲛⲁⲡⲁⲥ ⲙⲙⲟⲛ ϣⲁⲣⲉⲡⲓ**ⲃⲉⲣⲓ** ⲉⲗⲡⲓⲙⲟϩ ⲛⲧⲉⲡⲓⲁⲡⲁⲥ ⲟⲩⲟϩ ⲛⲧⲉⲟⲩⲫⲱϧ ϣⲱⲡⲓ ⲉϥϩⲱⲟⲩ ⲛϩⲟⲩⲟ .",
+      "english": "No one sews a piece of unshrunk cloth on an old garment, or else the patch shrinks and the new tears away from the old, and a worse hole is made.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ · ⲁⲩⲱ ⲛ**ⲃⲣⲣⲉ** ·",
+      "english": "Rather, I am a sinful and young human.'",
+      "source": "Apophthegmata Patrum Sahidic 070",
+      "urn": "urn:cts:copticLit:ap.70.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲧⲟⲩⲃⲉⲡⲓϣⲉⲙⲏⲣ ⲛⲁⲡⲁⲥ ⲉⲃⲟⲗ ϧⲉⲛⲑⲏⲛⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛϣⲱⲡⲓ ⲛⲟⲩⲱϣⲉⲙ ⲙ**ⲃⲉⲣⲓ** ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲉⲧⲉⲛⲟⲓ ⲛⲁⲧϣⲉⲙⲏⲣ ⲕⲉ ⲅⲁⲣ ⲡⲉⲛⲡⲁⲥⲭⲁ ⲁⲩϣⲁⲧϥ ⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Purge out the old yeast, that you may be a new lump, even as you are unleavened. For indeed Christ, our Passover, has been sacrificed in our place.",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉ ⲡⲓϩⲱⲃ ⲛ**ⲃⲣⲣⲉ** ⲁⲩⲱ ⲛϣⲡⲏⲣⲉ ·",
+      "english": "What is this new and wonderful matter?",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲥⲕⲟⲥ",
+        27,
+        29.053
+      ],
+      [
+        "ⲙ",
+        148,
+        27.211
+      ],
+      [
+        "ⲉ",
+        92,
+        24.588
+      ],
+      [
+        "ⲁⲡⲁⲥ",
+        10,
+        24.169
+      ],
+      [
+        "ⲃⲉⲣⲓ",
+        14,
+        23.917
+      ],
+      [
+        "ⲟⲩ",
+        76,
+        23.498
+      ],
+      [
+        "ⲏⲣⲡ",
+        12,
+        22.982
+      ],
+      [
+        "ⲧⲱⲓⲥ",
+        4,
+        22.373
+      ],
+      [
+        "ϧⲉⲛ",
+        44,
+        22.141
+      ],
+      [
+        "ⲛⲧⲉ",
+        41,
+        22.139
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        50,
+        22.012
+      ],
+      [
+        "ϩⲃⲟⲥ",
+        7,
+        21.76
+      ],
+      [
+        "ⲉⲗ",
+        7,
+        21.658
+      ],
+      [
+        ".",
+        39,
+        21.473
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        9,
+        21.437
+      ],
+      [
+        "ⲛ",
+        49,
+        21.435
+      ],
+      [
+        "ⲧⲱϫⲓ",
+        4,
+        21.373
+      ],
+      [
+        "ⲡⲓ",
+        36,
+        21.28
+      ],
+      [
+        "ϩⲓ",
+        13,
+        20.639
+      ],
+      [
+        "ⲟⲩⲱϣⲉⲙ",
+        3,
+        20.362
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        340,
+        21.243
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        19.769
+      ],
+      [
+        "ϩⲱⲧ",
+        22,
+        18.682
+      ],
+      [
+        "ⲁⲥ",
+        13,
+        18.177
+      ],
+      [
+        "ⲟⲩ",
+        95,
+        17.135
+      ],
+      [
+        "ⲁⲥⲕⲟⲥ",
+        6,
+        17.099
+      ],
+      [
+        "ⲏⲣⲡ",
+        15,
+        16.33
+      ],
+      [
+        "ⲡ",
+        90,
+        16.178
+      ],
+      [
+        "ⲁ",
+        72,
+        15.76
+      ],
+      [
+        "ⲁⲩⲱ",
+        61,
+        15.745
+      ],
+      [
+        "ⲉ",
+        69,
+        15.348
+      ],
+      [
+        "ⲛⲉϫ",
+        10,
+        15.215
+      ],
+      [
+        "ⲙⲛ",
+        40,
+        14.815
+      ],
+      [
+        "ⲛⲉϫⲧⲁⲡ",
+        2,
+        14.804
+      ],
+      [
+        "ⲣⲉϥⲇⲟⲅⲙⲁⲧⲓⲍⲉ",
+        2,
+        14.804
+      ],
+      [
+        "ⲧ",
+        45,
+        14.752
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        10,
+        14.615
+      ],
+      [
+        "ⲡⲁⲓ",
+        23,
+        14.354
+      ],
+      [
+        "ⲟⲩⲕⲉⲧⲓ",
+        2,
+        14.219
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        8,
+        14.009
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          153
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲣⲣⲉ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_1_post_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲃⲣⲣⲉⲛⲧ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲣⲣⲉ",
+          3
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          3
+        ],
+        [
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲁϩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲁϩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲛⲉϩⲥⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲛⲉϩⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϩⲥⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲇⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_4_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ϫⲁⲓⲉ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲣⲣⲉ",
+          "ⲃⲣⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲣⲣⲉ",
+          "ⲃⲣⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲡⲏⲣⲉ",
+          "ⲛ_2_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲣⲣⲉ",
+          "ⲃⲣⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲣⲣⲉ",
+          "ⲃⲣⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲯⲩⲭⲏ",
+          "ⲧⲉⲓ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_post_ⲃⲣⲣⲉ",
+          "ⲛⲃⲣⲣⲉⲛⲧ_2_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲙ_1_post_ⲃⲣⲣⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲃⲣⲣⲉ",
+          "ⲯⲩⲭⲏ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϣⲟⲩⲉⲓⲧ",
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ϫⲟⲉⲓⲥ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ϩⲓ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲛⲟϭ",
+          "ⲛⲟϭ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲃⲣⲣⲉ",
+          "ⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟϭ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲣⲣⲉ",
+          "ⲙⲁϩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁϩ_2_post_ⲙ",
+          "ⲙ_3_post_ⲙⲁϩ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲁϩ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲉ_1_post_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲃⲣⲣⲉ",
+          "ⲁ_3_post_ⲛⲉϩⲥⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲛⲉϩⲥⲉ",
+          "ⲩ_3_post_ⲛⲉϩⲥⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲛⲉϩⲥⲉ",
+          "ⲛⲉϩⲥⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲃⲣⲣⲉ",
+          "ⲡⲁⲓ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲓⲥ",
+          "ⲟⲩ_1_pre_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲣⲣⲉ",
+          "ⲇⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲣⲣⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲉⲣⲓⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_0_node",
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          "ⲛⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉⲧ",
+          "ϫⲓⲛ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ϣⲱⲡⲉ",
+          "ⲧⲉⲛⲟⲩ_4_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲣⲣⲉ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ϫⲁⲓⲉ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.4,
+      "rank": 507,
+      "count": 222
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C517",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "new thing; young person"
+    },
+    {
+      "target": "C518",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "uncultivated land"
+    },
+    {
+      "target": "C522",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "make new, renew"
+    },
+    {
+      "target": "C520",
+      "label": "ⲙⲉⲧⲉⲙⲃⲉⲣⲓ",
+      "pos": "N",
+      "gloss": "feast of renovation or consecration (of a church)"
+    },
+    {
+      "target": "C519",
+      "label": "ⲙⲛⲧⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "newness, youth"
+    },
+    {
+      "target": "C521",
+      "label": "ⲛⲃⲣⲣⲉ",
+      "pos": "ADV",
+      "gloss": "newly, recently; afresh"
+    },
+    {
+      "target": "C523",
+      "label": "ⲣⲃⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "become new"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1743",
+    "demo_lemma": "brj",
+    "english": "[new]",
+    "german": "jung, neu; [als Entsprechung von \"Neos\" bei Ptolemäerkönigen]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1743"
+  }
+}

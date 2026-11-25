@@ -1,0 +1,71 @@
+{
+  "id": "C9152",
+  "forms": [
+    {
+      "id": "CF22751",
+      "orth": "ⲑⲉⲟⲇⲟⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22752",
+      "orth": "ⲑⲉⲟⲇⲟⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22753",
+      "orth": "ⲑⲉⲟⲇⲟⲕⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF22754",
+      "orth": "ⲑⲉⲟⲇⲱⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22755",
+      "orth": "ⲑⲉⲟⲧⲟⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5389,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF22756",
+      "orth": "ⲑⲉⲱⲇⲟⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22757",
+      "orth": "ⲑⲉⲱⲇⲟⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22758",
+      "orth": "ⲑⲉⲱⲧⲱⲕⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11334",
+      "bibliography": "DDGLC",
+      "cu_ID": "2065"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "913",
+    "grl_lemma": "θεοτόκος",
+    "grl_meaning": "God-bearing, mother of God",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 792a; Preisigke 1:673"
+  }
+}

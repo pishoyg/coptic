@@ -1,0 +1,364 @@
+{
+  "id": "C2473",
+  "forms": [
+    {
+      "id": "CF6728",
+      "orth": "ⲛⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 32.21,
+        "rank": 41,
+        "count": 5082
+      }
+    },
+    {
+      "orth": "ⲛⲓⲙ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.05,
+        "rank": 203,
+        "count": 513
+      }
+    },
+    {
+      "orth": "ⲛⲓⲙ",
+      "dialect": "A",
+      "id": "1182.1"
+    },
+    {
+      "orth": "ⲛⲓⲙ",
+      "dialect": "F",
+      "id": "1182.2"
+    },
+    {
+      "orth": "ⲛⲓⲙ",
+      "dialect": "L",
+      "id": "1182.3"
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "tlapos": "Interr. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2849",
+      "bibliography": "CD 225a; CED 108; KoptHWb 122; DELC 142; ChLCS 32a"
+    },
+    {
+      "id": "CS2850",
+      "bibliography": "CD 225a; CED 108; KoptHWb 122; DELC 142"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁϧⲟⲕ ⲛⲉⲙⲁⲛ ⲓⲏⲥⲟⲩⲥ ⲡⲓⲣⲉⲙⲛⲁⲍⲁⲣⲉⲑ ⲉⲧⲁⲕⲓ ⲉⲧⲁⲕⲟⲛ ⲧⲉⲛⲥⲱⲟⲩⲛ ⲙⲙⲟⲕ ϫⲉⲛⲑⲟⲕ **ⲛⲓⲙ** ⲡⲓϩⲁⲅⲓⲟⲥ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "saying, 'Ha! What do we have to do with you, Jesus, you Nazarene? Have you come to destroy us? I know you who you are: the Holy One of God!'",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ⲇⲉ ⲛϭⲓϩⲟⲓⲛⲉ ϫⲉ**ⲛⲓⲙ** ⲡⲉ ⲡⲉⲓⲕⲉⲟⲩⲁ ·",
+      "english": "Some said, 'Who even is this person?'",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϣⲓⲛⲓ ⲙⲙⲟϥ ϫⲉ**ⲛⲓⲙ** ⲡⲉ ⲡⲉⲕⲣⲁⲛ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲗⲉⲅⲓⲱⲛ ⲡⲉ ⲡⲁⲣⲁⲛ ϫⲉⲧⲉⲛⲉⲣⲟⲩⲙⲏϣ",
+      "english": "He asked him, 'What is your name?' He said to him, 'My name is Legion, for we are many.'",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲓⲙ** ⲡⲉ ⲛⲧⲁϥϥⲓ ⲙⲡⲁϩⲏⲃⲥ ⲛϩⲏⲧ ·",
+      "english": "Who hath carried away the light of my body?",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛϩⲟϯ ⲟⲩⲟϩ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲛⲛⲟⲩⲉⲣⲏⲟⲩ ϫⲉ**ⲛⲓⲙ** ϩⲁⲣⲁ ⲡⲉ ⲡϩⲁⲓ ϫⲉⲛⲓⲑⲏⲟⲩ ⲛⲉⲙⲫⲓⲟⲙ ⲥⲉⲥⲱⲧⲉⲙ ⲛⲁϥ .",
+      "english": "They were greatly afraid, and said to one another, 'Who then is this, that even the wind and the sea obey him?'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲟⲩⲱⲛⲧ ϫⲉⲁⲛⲅ **ⲛⲓⲙ** ·",
+      "english": "Dost thou know Who I am?",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲧ",
+        1334,
+        28.393
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        633,
+        27.716
+      ],
+      [
+        "ϩⲱⲃ",
+        448,
+        27.474
+      ],
+      [
+        "ⲛ",
+        1025,
+        25.592
+      ],
+      [
+        "ⲉ",
+        838,
+        25.147
+      ],
+      [
+        "ⲛⲉⲙ",
+        604,
+        24.955
+      ],
+      [
+        "ⲛⲁ",
+        637,
+        24.897
+      ],
+      [
+        "ⲉⲑ",
+        332,
+        24.712
+      ],
+      [
+        "ⲉⲧⲉ",
+        364,
+        24.455
+      ],
+      [
+        "ⲁ",
+        670,
+        24.151
+      ],
+      [
+        "ϧⲉⲛ",
+        540,
+        23.991
+      ],
+      [
+        "ⲥⲏⲟⲩ",
+        168,
+        23.584
+      ],
+      [
+        "ⲟⲩ",
+        613,
+        23.53
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        548,
+        23.371
+      ],
+      [
+        "ⲉⲛⲭⲁⲓ",
+        81,
+        23.188
+      ],
+      [
+        "ϥ",
+        569,
+        22.878
+      ],
+      [
+        "ⲡ",
+        410,
+        22.655
+      ],
+      [
+        "ⲩ",
+        365,
+        22.653
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        200,
+        22.443
+      ],
+      [
+        "ⲛⲧⲉ",
+        330,
+        22.162
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        140,
+        29.675
+      ],
+      [
+        "ⲉⲧ",
+        2899,
+        28.431
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        890,
+        27.7
+      ],
+      [
+        "ⲛ",
+        3886,
+        27.27
+      ],
+      [
+        "ⲡ",
+        2691,
+        26.368
+      ],
+      [
+        "ⲛⲁ",
+        1875,
+        25.995
+      ],
+      [
+        "ϩⲱⲃ",
+        654,
+        25.836
+      ],
+      [
+        "ϥ",
+        2020,
+        25.151
+      ],
+      [
+        "ⲁ",
+        1455,
+        24.253
+      ],
+      [
+        "ⲁⲩⲱ",
+        1207,
+        24.148
+      ],
+      [
+        "ⲉ",
+        1325,
+        23.621
+      ],
+      [
+        "ⲟⲩ",
+        1053,
+        23.03
+      ],
+      [
+        "ⲉⲛⲧ",
+        519,
+        22.94
+      ],
+      [
+        "ⲡⲉ",
+        699,
+        22.544
+      ],
+      [
+        "ϩⲛ",
+        698,
+        22.509
+      ],
+      [
+        "ϩⲓ",
+        358,
+        22.371
+      ],
+      [
+        "ⲛⲓⲙ",
+        434,
+        22.26
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        426,
+        22.206
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        641,
+        22.127
+      ],
+      [
+        "ϫⲉ",
+        667,
+        21.98
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱ_1_pre_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱ_1_pre_ⲛⲓⲙ",
+          "ⲧ_1_pre_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲓⲙ",
+          "ⲛⲓⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 32.02,
+      "rank": 40,
+      "count": 5082
+    },
+    "B": {
+      "rate": 6.04,
+      "rank": 175,
+      "count": 513
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2474",
+      "label": "ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "a certain person or thing, so and so"
+    }
+  ],
+  "etym": {
+    "egy_num": "27410",
+    "egy_lemma": "jn-m",
+    "demo_num": "d3164",
+    "demo_lemma": "nm(e)",
+    "english": "who? (interrog. pron.)",
+    "german": "wer?",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3164"
+  }
+}

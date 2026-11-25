@@ -1,0 +1,410 @@
+{
+  "id": "C1313",
+  "forms": [
+    {
+      "id": "CF4032",
+      "orth": "ⲕⲣⲟⲙⲣⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4602,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲕⲣⲙⲣⲱⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4643,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲭⲣⲉⲙⲣⲱⲙ†",
+      "dialect": "B",
+      "id": "846.2"
+    },
+    {
+      "orth": "ⲕⲣⲁⲙⲣⲙ",
+      "dialect": "A",
+      "id": "846.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1519",
+      "bibliography": "CD 116b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϩⲓⲉⲣⲉⲩⲥ ⲇⲉ ⲛⲁⲩ ⲉⲣⲟⲥ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲙⲡⲉϥⲱ ⲉϥⲟⲩⲟⲃϣ ϣⲱⲡⲉ ⲛϩⲏⲧⲥ ⲁⲩⲱ ⲙⲡⲉϩⲣⲃ ⲉϥⲑⲃⲃⲓⲏⲩ ⲛⲉϩⲥⲉ ϩⲙⲡϣⲁⲁⲣ ⲙⲡⲉϥⲥⲱⲙⲁ ⲁⲩⲱ ⲛⲧⲟⲥ ⲧⲟⲩⲗⲏ ⲉⲥ**ⲕⲣⲙⲣⲱⲙ** ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲡⲟⲣϫϥ ⲉⲃⲟⲗ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ",
+      "english": "But if the priest look, and behold there is no white hair on it, and it be not below the skin of the flesh, and it be dark-coloured; then the priest shall separate him seven days.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϩⲓⲉⲣⲉⲩⲥ ⲇⲉ ⲛⲁⲩ ⲉⲣⲟϥ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲛϥϣⲟⲟⲡ ⲁⲛ ϩⲙⲡⲙⲁⲉⲓⲛ ⲉⲧⲡⲟⲣⲉ ⲛϭⲓⲟⲩϥⲱ ⲉϥⲟⲩⲟⲃϣ ⲁⲩⲱ ⲉⲙⲛⲙⲁⲉⲓⲛ ⲉϥⲑⲃⲃⲓⲏⲩ ⲉⲃⲟⲗ ϩⲙⲡϣⲁⲁⲣ ⲙⲡⲉϥⲥⲱⲙⲁ ⲛⲧⲟϥ ⲇⲉ ⲉϥ**ⲕⲣⲙⲣⲱⲙ** ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲡⲟⲣϫϥ ⲉⲃⲟⲗ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ",
+      "english": "But if the priest should look, and, behold, there is not in the bright spot any white hair, and it should not be lower than the skin, and it should be dark, then the priest shall separate him seven days.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲉⲣⲉⲡⲙⲁⲉⲓⲛ ⲟⲩⲟⲃϣ ⲉⲙⲁⲧⲉ ϩⲙⲡϣⲁⲁⲣ ⲙⲡⲉϥⲥⲱⲙⲁ ⲁⲩⲱ ⲉⲣⲉⲡⲉϥϩⲣⲃ ⲑⲃⲃⲓⲏⲩ ⲏ ⲉⲛⲉϭⲱⲃ ⲉⲃⲟⲗ ϩⲙⲡⲉϥϣⲁⲁⲣ ⲁⲩⲱ ⲉⲙⲡⲉⲡⲉϥϥⲱ ϣⲓⲃⲉ ⲉⲩϥⲱ ⲉϥⲟⲩⲟⲃϣ ⲡⲁⲓ ⲇⲉ ⲉϥ**ⲕⲣⲙⲣⲱⲙ** ⲏ ⲉϥⲧⲉϩⲧⲱϩ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ⲡⲱⲣϫ ⲉⲃⲟⲗ ⲙⲡⲉϥϩⲣⲃ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ",
+      "english": "But if the spot be clear and white in the skin of his flesh, yet the appearance of it be not deep below the skin, and its hair have not changed itself for white hair, but it is dark, then the priest shall separate him that has the spot seven days;",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϫⲁⲓⲃⲉⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ⲟⲛϣⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ϣⲁⲛⲛⲉⲩ",
+        1,
+        17.139
+      ],
+      [
+        "ⲁⲓⲥⲑⲁⲛⲉ",
+        1,
+        11.615
+      ],
+      [
+        "ⲕⲁⲡⲛⲟⲥ",
+        1,
+        11.466
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        11.184
+      ],
+      [
+        "ϩⲓⲕⲱⲛ",
+        1,
+        10.02
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.185
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        9.1
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.726
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        8.531
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        8.033
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.372
+      ],
+      [
+        "ⲛ",
+        5,
+        7.315
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        7.045
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        6.979
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.272
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        6.229
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.02
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        5.643
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲕⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϭⲱⲛⲧ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲁⲡⲉⲓⲗⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_pre_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲛⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲙⲡ_2_post_ⲥⲟⲩⲱⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲛⲉⲩ_2_pre_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲡⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          "ⲛ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          "ⲧⲉⲩ_3_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ϩⲓⲕⲱⲛ",
+          "ϩⲓⲕⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ",
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          "ϭⲱⲛⲧ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ϭⲱⲛⲧ_1_post_ⲕⲣⲟⲙⲣⲙ",
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲡⲉⲓⲗⲏ_b",
+          "ⲟⲩ_2_post_ⲁⲡⲉⲓⲗⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲟⲩ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ϥ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          2
+        ],
+        [
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          "ϥ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲛⲉ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲁ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          "ⲙⲡ_2_post_ⲥⲟⲩⲱⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲛⲉⲩ_2_pre_ϩⲟ",
+          "ϩⲟ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ⲕⲣⲟⲙⲣⲙ",
+          "ⲕⲣⲟⲙⲣⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3025,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1315",
+      "label": "ⲕⲣⲙⲧⲥ",
+      "pos": "N",
+      "gloss": "smoke, mist; obscurity, darkness; rust; fire"
+    },
+    {
+      "target": "C1314",
+      "label": "ⲕⲣⲟⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1316",
+      "label": "ⲣⲕⲣⲙⲧⲥ",
+      "pos": "V",
+      "gloss": "be smoky, dark"
+    },
+    {
+      "target": "C1317",
+      "label": "ⲭⲣⲉⲙⲥ",
+      "pos": "N",
+      "gloss": "darkness"
+    }
+  ]
+}

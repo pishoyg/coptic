@@ -1,0 +1,108 @@
+{
+  "id": "C2375",
+  "forms": [
+    {
+      "id": "CF6508",
+      "orth": "ⲛⲁ (ⲉϫⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2741",
+      "bibliography": "CD 218a; KoptHWb 116"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲕⲁⲧⲁⲡϫⲓⲥⲉ ⲛⲧⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲁⲡϫⲟⲉⲓⲥ **ⲧⲁϫⲣⲉⲡⲉϥⲛⲁ **ⲉϫⲛ**ⲛⲉⲧⲣϩⲟⲧⲉ** ϩⲏⲧϥ",
+      "english": "For as the heaven is high above the earth, the Lord has so increased his mercy toward them that fear him.",
+      "source": "Psalms 102",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:102",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲛⲟϭ ⲡⲉ **ⲡⲉⲕⲛⲁ **ⲉϫⲛ**ⲙⲡⲏⲩⲉ** ⲁⲩⲱ ⲧⲉⲕⲙⲉ ⲡⲏϩ ϣⲁⲛⲉⲕⲗⲟⲟⲗⲉ",
+      "english": "For thy mercy is great above the heavens, and thy truth reaches to the clouds.",
+      "source": "Psalms 107",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:107",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲧⲟⲕ ⲡϫⲟⲉⲓⲥ ⲛⲧⲕ ⲟⲩⲭⲣⲏⲥⲧⲟⲥ ⲁⲩⲱ ⲛⲧⲕ ⲟⲩϩⲁⲕ **ⲛⲁϣⲉⲡⲉⲕⲛⲁ **ⲉϫⲛ**ⲟⲩⲟⲛ** ⲛⲓⲙ ⲉⲧⲱϣ ⲉϩⲣⲁⲓ ⲟⲩⲃⲏⲕ",
+      "english": "For thou, O Lord, art kind, and gentle; and plenteous in mercy to all that call upon thee.",
+      "source": "Psalms 85",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2371",
+      "label": "ⲛⲁ",
+      "pos": "V",
+      "gloss": "go"
+    },
+    {
+      "target": "C2373",
+      "label": "ⲛⲁ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be in act of going to; befit, suit"
+    },
+    {
+      "target": "C2378",
+      "label": "ⲛⲁ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "go in, enter"
+    },
+    {
+      "target": "C2379",
+      "label": "ⲛⲁ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2380",
+      "label": "ⲛⲁ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2377",
+      "label": "ⲛⲁ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2376",
+      "label": "ⲛⲁ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2374",
+      "label": "ⲛⲁ (ⲉⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "go to (God)"
+    },
+    {
+      "target": "C2372",
+      "label": "ⲛⲁ . . . ⲛⲏⲩ",
+      "pos": "V",
+      "gloss": "go and come"
+    },
+    {
+      "target": "C2381",
+      "label": "ⲛⲁ-",
+      "pos": "A",
+      "gloss": "verbal prefix of Futur I and II"
+    }
+  ]
+}

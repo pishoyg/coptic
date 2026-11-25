@@ -1,0 +1,60 @@
+{
+  "id": "C7627",
+  "forms": [
+    {
+      "id": "CF32174",
+      "orth": "ϭⲟⲗⲉⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32173",
+      "orth": "ϭⲟⲟⲗⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5485,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8466",
+      "bibliography": "CD 809b; KoptHWb 451; ChLCS 107a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7626",
+      "label": "ϭⲗϭⲓϫ",
+      "pos": "N",
+      "gloss": "gloves(?)"
+    },
+    {
+      "target": "C7623",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "V",
+      "gloss": "swathe, clothe, cover"
+    },
+    {
+      "target": "C7624",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "covering, cloak"
+    },
+    {
+      "target": "C7625",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "covered"
+    }
+  ]
+}

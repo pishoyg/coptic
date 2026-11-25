@@ -1,0 +1,201 @@
+{
+  "id": "C3280",
+  "forms": [
+    {
+      "id": "CF8448",
+      "orth": "ⲣⲥⲁⲉⲓⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17984,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3747",
+      "bibliography": "CD 315b; KoptHWb 178; DELC 182; ChLCS 44b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲉ**ⲣⲥⲁⲉⲓⲏ** ϩⲙⲡⲛⲟⲩⲃ ⲙⲛⲡϩⲁⲧ ⲁⲩⲱ ⲛⲟⲩϩⲟⲉⲓⲧⲉ ⲛⲉ ϩⲉⲛϣⲛⲥ ⲛⲉ ⲙⲛϩⲉⲛϩⲓⲧϣⲱⲱⲙⲉ ⲙⲛϩⲉⲛⲁⲩⲉⲓⲛⲁⲩⲁⲛ ⲟⲩⲥⲁⲙⲓⲧ ⲙⲛⲟⲩⲛⲉϩ ⲙⲛⲟⲩⲉⲃⲓⲱ ⲁⲣⲟⲩⲟⲙⲟⲩ ⲁⲩⲱ ⲁⲣϣⲱⲡⲉ ⲉⲛⲉⲥⲱ ⲉⲙⲁⲧⲉ",
+      "english": "So thou wast adorned with gold and silver; and thy raiment was of fine linen, and silk, and variegated work: thou didst eat fine flour, and oil, and honey, and didst become extremely beautiful.",
+      "source": "Ezekiel 16",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲉ",
+        1,
+        16.511
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        12.017
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        11.991
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        11.581
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        9.425
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲉ_1_pre_ⲣⲥⲁⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲣⲥⲁⲉⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲛⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲉⲓⲧⲉ_3_post_ⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲉ_1_pre_ⲣⲥⲁⲉⲓⲏ",
+          "ⲣⲥⲁⲉⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ⲣⲥⲁⲉⲓⲏ_0_node",
+          "ⲁⲩⲱ_4_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲟⲉⲓⲧⲉ",
+          "ⲛ_2_post_ϣⲛⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲛⲥ",
+          "ⲟⲩ_4_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲟⲉⲓⲧⲉ",
+          "ϩⲟⲉⲓⲧⲉ_3_post_ⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17604,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3282",
+      "label": "ϯⲥⲁ",
+      "pos": "V",
+      "gloss": "beautify, become beautiful"
+    },
+    {
+      "target": "C3279",
+      "label": "ⲙⲛⲧⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3281",
+      "label": "ⲟ ⲛⲥⲁⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3274",
+      "label": "ⲥⲁ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3275",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3276",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful person"
+    },
+    {
+      "target": "C3277",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful person"
+    },
+    {
+      "target": "C3278",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful"
+    }
+  ]
+}

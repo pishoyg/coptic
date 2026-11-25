@@ -1,0 +1,294 @@
+{
+  "id": "C10034",
+  "forms": [
+    {
+      "id": "CF26252",
+      "orth": "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26253",
+      "orth": "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26254",
+      "orth": "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4524,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF26255",
+      "orth": "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26256",
+      "orth": "ⲡⲁⲣⲁⲛⲅⲉⲗⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26257",
+      "orth": "ⲡⲁⲣⲉⲛⲕⲉⲗⲓⲁ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13140",
+      "bibliography": "DDGLC",
+      "cu_ID": "971"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲃⲱⲕ ϭⲉ ⲁⲓⲧⲁⲁⲩ ⲛⲁϥ ⲛⲣⲟⲩϩⲉ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ · ⲁⲓⲕⲧⲟⲓ ⲉⲡⲁⲙⲁⲕⲁⲧⲁ ⲙ**ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ** ⲙⲡⲁⲉⲓⲱⲧ ⲉⲧⲟⲩⲁⲁⲃ ⁛—",
+      "english": "I departed therefore and I gave the cheeses to him on the evening of that same day, and I returned to my place according to the advice of my holy father.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲕⲥϥ ⲕⲁⲧⲁⲙ**ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ** ⲛⲧⲁϥⲧⲁⲁⲩ ⲉⲧⲟⲟⲧⲛ",
+      "english": "and we made it ready for burial according to the instructions which he had given us,",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲓ**ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ** ϯⲕⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ⲉϩⲣⲁⲓ ⲡⲁϣⲏⲣⲉ ⲧⲓⲙⲟⲑⲉⲟⲥ ⲕⲁⲧⲁⲛⲉⲡⲣⲟⲫⲏⲧⲉⲓⲁ ⲉⲧⲧⲁϩⲟ ⲙⲙⲟⲕ . ϫⲉⲉⲕⲉϩⲟⲕⲕ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲛⲧⲙⲛⲧⲙⲁⲧⲟⲓ ⲉⲧⲛⲁⲛⲟⲩⲥ .",
+      "english": "This instruction I commit to you, my child Timothy, according to the prophecies which led the way to you, that by them you may wage the good warfare;",
+      "source": "54_1 Timothy_1",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲕⲁⲧⲁ",
+        1,
+        18.013
+      ],
+      [
+        "ⲕⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲡⲁⲣⲁⲅⲅⲓⲗⲉ",
+        1,
+        14.206
+      ],
+      [
+        "ⲧⲉⲓ",
+        3,
+        12.314
+      ],
+      [
+        "ⲧⲁⲁ",
+        2,
+        10.59
+      ],
+      [
+        "ⲛ",
+        7,
+        9.646
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        9.554
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        9.152
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.791
+      ],
+      [
+        "ⲙ",
+        4,
+        8.766
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        8.519
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        1,
+        7.796
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        7.651
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        7.475
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.147
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        7.041
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        6.725
+      ],
+      [
+        "ϥ",
+        3,
+        6.692
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲧⲁⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ_0_node",
+          "ⲙ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲉⲓⲱⲧ",
+          "ⲟⲩⲁⲁⲃ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ_0_node",
+          "ⲛⲧ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲁⲣⲁⲅⲅⲉⲗⲓⲁ",
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          "ϥ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲁ",
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          "ⲩ_3_post_ⲧⲁⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4123,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2559",
+    "grl_lemma": "παραγγελία",
+    "grl_meaning": "orders, command; set of rules, orders",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1306a; Preisigke 2:235"
+  }
+}

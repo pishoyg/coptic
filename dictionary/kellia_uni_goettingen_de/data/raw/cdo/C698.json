@@ -1,0 +1,83 @@
+{
+  "id": "C698",
+  "forms": [
+    {
+      "id": "CF2646",
+      "orth": "ⲉⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.56,
+        "rank": 1046,
+        "count": 88
+      }
+    },
+    {
+      "id": "CF2647",
+      "orth": "ⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 12.39,
+        "rank": 107,
+        "count": 1051
+      }
+    },
+    {
+      "id": "CF2648",
+      "orth": "ⲉⲣ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2649",
+      "orth": "ⲉⲣ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF2650",
+      "orth": "ⲉⲣ-",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Relativkonverter",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS836",
+      "bibliography": "CD 57b; CED 37; KoptHWb 38, 499; DELC 45-46; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲉⲣ**ⲟⲩⲉϣ ⲟⲩ ·",
+      "english": "What dost thou wish?",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉⲛⲁⲛⲟⲩⲥ · **ⲉⲣ**ⲙⲛⲧⲛⲁ ⲛϩⲟⲩⲟ · ⲉⲥⲉⲩϩⲛⲟⲩⲃ ⲉϩⲟⲩⲛ ·",
+      "english": "And moreover, it is very much better to perform acts of charity than to gather in gold.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϩⲙ ⲛϭⲓⲡⲥⲱⲧⲏⲣ ⲡⲉϫⲁϥ ⲙⲙⲁⲣⲓⲁ · ϫⲉϩⲁⲙⲏⲛ ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲣⲱⲙⲉ ⲛⲓⲙ' **ⲉⲣ**ϫⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϩⲙⲡϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲁϥⲡⲁⲣⲁⲃⲁ ⲙⲡϣⲟⲣⲡ ⲛⲥⲟⲡ ⲙⲛⲡⲙⲉϩⲥⲛⲁⲩ ⲙⲛⲡⲙⲉϩϣⲟⲙⲛⲧ ⲁⲩⲱ ⲡⲁⲓ ⲛϥⲉⲓ ⲉⲃⲟⲗ ϩⲛⲥⲱⲙⲁ ⲉⲙⲡϥⲙⲉⲧⲁⲛⲟⲉⲓ · ⲧⲉϥⲕⲣⲓⲥⲓⲥ ⲟⲩⲟⲧⲃ ⲛϩⲟⲩⲟ ⲡⲁⲣⲁⲕⲣⲓⲥⲓⲥ ⲛⲓⲙ ·",
+      "english": "“The Saviour answered and said unto Mary: Amēn, amēn, I say unto you: Every man who hath received mysteries in the First Mystery, | having transgressed for the first and the second and the third time, and if he cometh out of the body before he hath repented, his judgment is far sorer than all the judgments;”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ]
+}

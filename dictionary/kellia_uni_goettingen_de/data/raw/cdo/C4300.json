@@ -1,0 +1,56 @@
+{
+  "id": "C4300",
+  "forms": [
+    {
+      "id": "CF10551",
+      "orth": "ⲧⲱⲙ ⲉϩⲣⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4871",
+      "bibliography": "CD 413a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4301",
+      "label": "ⲑⲱⲙ",
+      "pos": "N",
+      "gloss": "that which shuts, fence"
+    },
+    {
+      "target": "C4296",
+      "label": "ⲧⲱⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C4299",
+      "label": "ⲧⲱⲙ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bridle, curb"
+    },
+    {
+      "target": "C4297",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "shut the heart, become hardened"
+    },
+    {
+      "target": "C4298",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "shutting of the heart, hardening of the heart"
+    }
+  ]
+}

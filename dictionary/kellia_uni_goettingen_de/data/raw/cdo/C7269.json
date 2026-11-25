@@ -1,0 +1,39 @@
+{
+  "id": "C7269",
+  "forms": [
+    {
+      "id": "CF16597",
+      "orth": "ϩⲛ ⲟⲩϫⲱⲛϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ϩⲛ",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS8029",
+      "bibliography": "CD 777a; KoptHWb 427; ChLCS 103a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7267",
+      "label": "ϫⲱⲛϥ",
+      "pos": "V",
+      "gloss": "happen, befall, chance; meet with, fall upon, chance on; put sth in order, sort sth out"
+    },
+    {
+      "target": "C7268",
+      "label": "ϫⲱⲛϥ",
+      "pos": "N",
+      "gloss": "chance; measure, proportion, order, agreement"
+    }
+  ]
+}

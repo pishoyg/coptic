@@ -1,0 +1,93 @@
+{
+  "id": "C681",
+  "forms": [
+    {
+      "id": "CF2562",
+      "orth": "ⲉⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 34.38,
+        "rank": 39,
+        "count": 5424
+      }
+    },
+    {
+      "id": "CF2563",
+      "orth": "ⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 33.5,
+        "rank": 40,
+        "count": 5285
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Relativkonverter",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS818",
+      "bibliography": "KoptHWb 37, 125; DELC 144; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲇⲁⲙⲓⲁⲛⲟⲥ ⲡ**ⲉⲛⲧ**ⲁϥⲭⲉⲓⲣⲟⲇⲟⲛⲉⲓ ⲙⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲡⲉⲥⲩⲛⲑⲓⲟⲥ ⲛⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲧⲡⲟⲗⲓⲥ ⲕⲃⲧ",
+      "english": "Now it was the holy man Apa Damianus who had consecrated the holy man Apa Pisentius bishop of the city of Coptos.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉ**ⲉⲛⲧ**ⲁⲡⲉⲓⲧⲱϣ ϣⲱⲡⲉ ϩⲓⲧⲙⲡϫⲟⲉⲓⲥ ⲉⲥⲉϭⲡⲉⲩϩⲏⲧ ⲉⲧⲣⲉⲩⲉⲓ ⲉⲃⲟⲗ ⲉⲣⲡⲟⲗⲉⲙⲟⲥ ⲙⲛⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲉⲩⲉϥⲟⲧⲟⲩ ⲉⲃⲟⲗ ⲁⲩⲱ ⲛⲥⲉⲧⲙϯ ⲛⲁⲩ ⲛⲟⲩⲛⲁ ⲁⲗⲗⲁ ϫⲉⲕⲁⲥ ⲉⲩⲉϥⲟⲧⲟⲩ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲡϫⲟⲉⲓⲥ ϩⲱⲛ ⲉⲧⲟⲟⲧϥ ⲙⲙⲱⲟⲩⲥⲏⲥ",
+      "english": "For it was of the Lord to harden their hearts to go forth to war against Israel, that they might be utterly destroyed, that mercy should not be granted to them, but that they should be utterly destroyed, as the Lord said to Moses.",
+      "source": "Joshua 11",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥϫⲟⲟⲩⲥⲟⲩ ϩⲙⲡϭⲱⲛⲧ ⲛⲧⲉϥⲟⲣⲅⲏ ⲉϩⲣⲁⲓ ⲉⲁⲙⲛⲧⲉ · ⲉⲓⲧⲉ ⲛⲉⲃⲟⲗ ϩⲛⲛⲁⲅⲅⲉⲗⲟⲥ · **ⲉⲛⲧ**ⲁϥⲡⲗⲁⲛⲁ ⲙⲙⲟⲟⲩ · ⲉⲓⲧⲉ ⲛⲉⲃⲟⲗ ϩⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲛⲧⲁϥⲥⲟⲣⲙⲟⲩ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA 205-214",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:451-457",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C617",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C737",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C698",
+      "type": "cf",
+      "label": "archaic relative prefix with past tenses"
+    },
+    {
+      "target": "C2",
+      "type": "cf",
+      "label": "verbal prefix perfect I"
+    }
+  ],
+  "etym": {
+    "egy_num": "89850",
+    "egy_lemma": "n.tj",
+    "demo_num": "d3301",
+    "demo_lemma": "ntj",
+    "english": "the one who; which (relative pron.)",
+    "german": "der welcher (Relativpronomen)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89850",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3301"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "C7952",
+  "forms": [
+    {
+      "id": "CF17970",
+      "orth": "ϭⲁⲧϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8837",
+      "bibliography": "CD 834b; KoptHWb 469; DELC 348b; ChLCS 110a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7949",
+      "label": "ϭⲱⲧϩ",
+      "pos": "V",
+      "gloss": "wound, injure; pierce"
+    },
+    {
+      "target": "C7950",
+      "label": "ϭⲱⲧϩ",
+      "pos": "N",
+      "gloss": "hole, pierced place, wound"
+    },
+    {
+      "target": "C7951",
+      "label": "ⲁⲧϫⲱⲧϩ",
+      "pos": "N",
+      "gloss": "not to be taken, unassailable, unattainable, inviolable"
+    }
+  ]
+}

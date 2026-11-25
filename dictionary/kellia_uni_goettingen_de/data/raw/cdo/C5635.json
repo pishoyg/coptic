@@ -1,0 +1,245 @@
+{
+  "id": "C5635",
+  "forms": [
+    {
+      "id": "CF13246",
+      "orth": "ϯⲓϥⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5889,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6307",
+      "bibliography": "CD 536b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲃⲉⲣⲃⲱⲣⲧ ⲉⲃⲟⲗ ⲁⲛⲟⲕ ⲡⲓⲙⲉⲛⲣⲓⲧ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲉϥⲙⲱⲟⲩⲧ ⲉϥⲟⲣⲉⲃ ⲟⲩⲟϩ ⲁⲩ**ϯⲓϥⲧ** ⲉⲧⲁⲥⲁⲣⲝ",
+      "english": "Forsake me not, O Lord my God: depart not from me.",
+      "source": "19_Psalmi_37",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:37",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲁϥⲥⲱⲗϫ ⲙⲡⲓⲥϧⲓ ⲛϫⲓϫ ⲫⲁⲓ ⲉⲛⲁϥⲧⲟⲓ ϧⲁⲣⲟⲛ ϧⲉⲛⲛⲓⲇⲟⲅⲙⲁ ⲫⲏ ⲉⲛⲁϥϯⲟⲩⲃⲏⲛ ⲟⲩⲟϩ ⲛⲑⲟϥ ⲁϥⲟⲗϥ ⲉⲃⲟⲗ ϧⲉⲛⲧⲙⲏϯ ⲉⲁϥ**ϯⲓϥⲧ** ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲡⲓⲥⲧⲁⲩⲣⲟⲥ .",
+      "english": "wiping out the handwriting in ordinances which was against us; and he has taken it out of the way, nailing it to the cross;",
+      "source": "12_Colossians_02",
+      "urn": "urn:cts:copticLit:nt.col.bohairic:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲉⲣⲭⲁⲧ",
+        1,
+        16.11
+      ],
+      [
+        "ⲟⲣⲉⲃ",
+        1,
+        15.695
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        10.405
+      ],
+      [
+        "ⲙⲏϯ",
+        1,
+        9.927
+      ],
+      [
+        "ⲉ",
+        3,
+        8.772
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        8.271
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        1,
+        7.915
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϯⲓϥⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ϯⲓϥⲧ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲥⲁⲣⲝ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϯⲓϥⲧ",
+          "ϥ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲓϥⲧ",
+          "ϯⲓϥⲧ_0_node",
+          1
+        ],
+        [
+          "ϯⲓϥⲧ_0_node",
+          "ⲛⲁ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲓϥⲧ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ⲉϧⲟⲩⲛ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϯⲓϥⲧ",
+          "ⲁ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲓϥⲧ",
+          "ⲩ_1_pre_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯⲓϥⲧ",
+          "ϯⲓϥⲧ_0_node",
+          1
+        ],
+        [
+          "ϯⲓϥⲧ_0_node",
+          "ⲉ_1_post_ϯⲓϥⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯⲓϥⲧ",
+          "ⲧⲁ_3_post_ⲥⲁⲣⲝ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5394,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5634",
+      "label": "ϣⲥ ⲛⲓϥⲧ",
+      "pos": "N",
+      "gloss": "blow/wound of nail"
+    },
+    {
+      "target": "C5632",
+      "label": "ϭⲓⲛⲱϥⲧ",
+      "pos": "N",
+      "gloss": "nailing"
+    },
+    {
+      "target": "C5633",
+      "label": "ⲓϥⲧ",
+      "pos": "N",
+      "gloss": "nail, spike"
+    },
+    {
+      "target": "C5631",
+      "label": "ⲱϥⲧ",
+      "pos": "V",
+      "gloss": "nail, fix"
+    }
+  ]
+}

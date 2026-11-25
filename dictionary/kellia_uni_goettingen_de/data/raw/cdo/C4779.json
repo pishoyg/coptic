@@ -1,0 +1,58 @@
+{
+  "id": "C4779",
+  "forms": [
+    {
+      "id": "CF11523",
+      "orth": "ⲣⲑⲁⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5397",
+      "bibliography": "CD 457b; KoptHWb 258; ChLCS 64a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4780",
+      "label": "ϫⲓⲑⲁⲃ",
+      "pos": "V",
+      "gloss": "be leavened"
+    },
+    {
+      "target": "C4781",
+      "label": "ⲁⲧⲑⲁⲃ",
+      "pos": "N",
+      "gloss": "without leaven"
+    },
+    {
+      "target": "C4778",
+      "label": "ⲑⲁⲃ",
+      "pos": "N",
+      "gloss": "leaven"
+    },
+    {
+      "target": "C4777",
+      "label": "ⲧⲱϩⲃ",
+      "pos": "V",
+      "gloss": "moisten, soak"
+    }
+  ]
+}

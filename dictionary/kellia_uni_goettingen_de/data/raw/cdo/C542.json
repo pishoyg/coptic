@@ -1,0 +1,345 @@
+{
+  "id": "C542",
+  "forms": [
+    {
+      "id": "CF2105",
+      "orth": "ⲃⲉⲥⲛⲏⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2106",
+      "orth": "ⲃⲉⲥⲛⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3546,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲃⲉⲥⲛⲁⲧ",
+      "dialect": "S",
+      "id": "603.1"
+    },
+    {
+      "orth": "ⲃⲁⲥⲛⲏⲧ",
+      "dialect": "B",
+      "id": "603.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS652",
+      "bibliography": "CD 44b; CED 27; KoptHWb 28; DELC 32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲗⲗⲁ ⲇⲉ ϩⲱⲥ ⲁⲥⲙⲓⲥⲓ ⲛⲑⲱⲃⲉⲗ ⲟⲩⲟϩ ⲛⲉ ⲟⲩⲣⲉϥϩⲓⲟⲩⲓ ⲙⲡⲁⲑⲏⲣ ⲡⲉ ⲟⲩ**ⲃⲉⲥⲛⲏⲧ** ⲛⲧⲉⲟⲩϩⲟⲙⲧ ⲛⲉⲙⲟⲩⲃⲉⲛⲓⲡⲓ ⲧⲥⲱⲛⲓ ⲇⲉ ⲛⲑⲱⲃⲉⲗ ⲡⲉ ⲛⲟⲉⲙⲁ",
+      "english": "And Sella also bore Thobel; he was a smith, a manufacturer both of brass and iron; and the sister of Thobel was Noema.",
+      "source": "01_Genesis_04",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲁⲛⲉϫⲓ ⲇⲉ ⲁⲥⲉⲣ ⲙⲫⲣⲏϯ ⲛⲟⲩⲁⲥⲕⲟⲥ ⲉϥⲙⲉϩ ⲛⲉⲙⲃⲣⲓⲥ ⲉϥⲃⲉⲣⲃⲉⲣ ⲉⲣⲉⲣⲱϥ ⲙⲏⲣ ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩⲱϩⲓ ⲛⲛⲓϥⲓ ⲛⲧⲉⲟⲩ**ⲃⲉⲥⲛⲏⲧ** ⲉⲁϥⲫⲱϧ .",
+      "english": "And my belly is as a skin of sweet wine, bound up and ready to burst; or as a brazier's labouring bellows.",
+      "source": "18_Iob_32",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲁϥϣⲁⲛϫⲉⲙϫⲟⲙ ⲛϫⲉⲟⲩⲣⲱⲙⲓ ⲛϩⲁⲙϣⲉ ⲛⲉⲙⲟⲩ**ⲃⲉⲥⲛⲏⲧ** ⲉϥϩⲓⲟⲩⲓ ⲙⲡⲁⲑⲏⲣ ⲟⲩⲟϩ ⲉϥⲉⲕⲱⲗϩ ⲉⲩⲥⲟⲡ ϧⲉⲛⲟⲩⲥⲏⲟⲩ ⲙⲉⲛ ϣⲁϥϫⲟⲥ ϫⲉⲛⲁⲡⲁⲓϣⲁⲩ ⲁⲩⲧⲁϫⲣⲱⲟⲩ ϧⲉⲛϩⲁⲛⲓϥⲧ ⲉⲩⲉⲭⲁⲩ ⲟⲩⲟϩ ⲛⲛⲟⲩⲕⲓⲙ .",
+      "english": "The artificer has become strong, and the coppersmith that smites with the hammer, and forges also: sometimes he will say, It is a piece well joined: they have fastened them with nails; they will fix them, and they shall not be moved.",
+      "source": "23_Isaias_41",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓⲙⲉⲛⲃⲣⲁⲛⲁ",
+        1,
+        17.373
+      ],
+      [
+        "ⲁⲑⲏⲣ",
+        1,
+        15.373
+      ],
+      [
+        "ϩⲁⲙϣⲉ",
+        1,
+        15.373
+      ],
+      [
+        "ⲛⲓϥⲓ",
+        2,
+        14.645
+      ],
+      [
+        "ⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ",
+        1,
+        14.566
+      ],
+      [
+        "ⲫⲱϧ",
+        1,
+        12.088
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        11.432
+      ],
+      [
+        "ϩⲟⲙⲧ",
+        1,
+        10.632
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        9.249
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        8.676
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        8.499
+      ],
+      [
+        "ϥ",
+        4,
+        8.102
+      ],
+      [
+        "ⲉ",
+        3,
+        7.45
+      ],
+      [
+        "ⲉⲣ",
+        1,
+        7.336
+      ],
+      [
+        "ⲛ",
+        3,
+        7.024
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.693
+      ],
+      [
+        "ⲁ",
+        2,
+        5.668
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        5.556
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.916
+      ],
+      [
+        "ⲫ",
+        1,
+        4.242
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲓ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_5_post_ⲃⲉⲛⲓⲡⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲫⲱϧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲫⲱϧ",
+          1
+        ],
+        [
+          "ⲫⲱϧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲓϥⲓ",
+          1
+        ],
+        [
+          "ⲛⲓϥⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_3_post_ⲛⲓϥⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          2
+        ],
+        [
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          "ϩⲟⲙⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲧ_3_post_ⲟⲩ",
+          "ⲛⲉⲙ_5_post_ⲃⲉⲛⲓⲡⲓ",
+          1
+        ],
+        [
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          "ⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          "ⲁ_3_post_ⲫⲱϧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲫⲱϧ",
+          "ϥ_3_post_ⲫⲱϧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲫⲱϧ",
+          "ⲫⲱϧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          "ⲟⲩ_1_pre_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲃⲉⲥⲛⲏⲧ_0_node",
+          "ⲁⲛ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          "ⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲉⲥⲛⲏⲧ",
+          "ϥ_3_post_ⲛⲓϥⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲓϥⲓ",
+          "ⲛⲓϥⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲓϥⲓ_2_post_ⲉ",
+          "ⲛⲥⲁ_3_post_ⲛⲓϥⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 3130,
+      "count": 5
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C543",
+      "label": "ⲙⲛⲧⲃⲉⲥⲛⲏⲧ",
+      "pos": "N",
+      "gloss": "smith's craft"
+    }
+  ],
+  "etym": {
+    "egy_num": "884225",
+    "egy_lemma": "bsn.tj",
+    "demo_num": "d1795",
+    "demo_lemma": "bsnṱ",
+    "english": "[title of office of the Ptah temple]",
+    "german": "Erzarbeiter",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/884225",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1795"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C3136",
+  "forms": [
+    {
+      "id": "CF8151",
+      "orth": "ⲥⲁ ⲛⲣⲓⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3586",
+      "bibliography": "CD 299a; KoptHWb 166; ChLCS 42b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13000",
+      "type": "cf",
+      "label": "man (woman)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3135",
+      "label": "ⲙⲁⲛⲉⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swineherd"
+    },
+    {
+      "target": "C3137",
+      "label": "ⲣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "piglet"
+    },
+    {
+      "target": "C3132",
+      "label": "ⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swine, pig"
+    },
+    {
+      "target": "C3134",
+      "label": "ⲣⲓⲣ ⲛϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild boar"
+    },
+    {
+      "target": "C3133",
+      "label": "ⲣⲓⲣ ⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain, wild boar"
+    }
+  ]
+}

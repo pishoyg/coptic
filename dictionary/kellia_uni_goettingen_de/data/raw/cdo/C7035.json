@@ -1,0 +1,256 @@
+{
+  "id": "C7035",
+  "forms": [
+    {
+      "id": "CF16127",
+      "orth": "ϩϫⲟⲡϫⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8944,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF32071",
+      "orth": "ϫⲁⲡϫⲡ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF32072",
+      "orth": "ϫⲉⲡϫⲱⲡ⸗",
+      "dialect": "A"
+    },
+    {
+      "orth": "ϩⲡⲟϭⲡϭ",
+      "dialect": "S",
+      "id": "2350.1"
+    },
+    {
+      "orth": "ϩⲡⲟϫⲡϭ",
+      "dialect": "S",
+      "id": "2350.2"
+    },
+    {
+      "orth": "ϫⲟⲡϫⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7092,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲁⲡϫⲡ",
+      "dialect": "L",
+      "id": "2350.4"
+    },
+    {
+      "orth": "ϫⲉⲡϫⲱⲡ⸗",
+      "dialect": "L",
+      "id": "2350.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7756",
+      "bibliography": "CD 743a; CED 307, 318; KoptHWb 408; ChLCS 99b; DELC 330a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲛⲁϭⲟⲙϭⲙ ⲉⲧϫⲟ ⲛⲧϩⲉ ⲛⲟⲩⲃⲗⲗⲉ ⲁⲩⲱ ⲥⲉⲛⲁ**ϩϫⲟⲡϫⲡ** ⲛⲧϩⲉ ⲛⲛⲉⲧⲉⲙⲛⲃⲁⲗ ⲙⲙⲟⲟⲩ ⲁⲩⲱ ⲛⲥⲉϩⲉ ⲙⲙⲉⲉⲣⲉ ⲛⲧϩⲉ ⲛⲛⲉⲧϩⲛⲧⲡⲁϣⲉ ⲛⲧⲉⲩϣⲏ ⲛⲧϩⲉ ⲛⲛⲉⲧⲛⲁⲙⲟⲩ ⲥⲉⲛⲁⲁϣⲁϩⲟⲙ",
+      "english": "They shall feel for the wall as blind men, and shall feel for it as if they had no eyes: and they shall feel at noon-day as at midnight; they shall groan as dying men.",
+      "source": "Isaiah 59",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:59",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉϩⲟⲧⲁⲛ ⲉⲧⲉⲧⲛϣⲁⲕⲉⲕⲧⲏⲩⲧⲛ ⲁϩⲏⲩ ⲙⲡⲉⲧⲛϣⲓⲡⲉ ⲁⲩⲱ ⲛⲧⲉⲧⲛϥⲓ ⲛⲛⲉⲧⲛϣⲧⲏⲛ ⲛⲧⲉⲧⲛⲕⲁⲁⲩ ϩⲁⲡⲉⲥⲏⲧ · ⲛⲛⲉⲧⲛⲟⲩⲉⲣⲏⲧⲉ ⲛⲧϩⲉ ⲛⲛⲓⲕⲟⲩⲓ ⲛϣⲏⲣⲉ ϣⲏⲙ ⲛⲧⲉⲧⲛ**ϩϫⲟⲡϫⲡ** · ⲙⲙⲟⲟⲩ ⲧⲟⲧⲉ ⲧⲉⲧⲛⲛⲁⲛⲁⲩ ⲉⲡϣⲏⲣⲉ ⲙⲡⲉⲧⲟⲛϩ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲃⲗⲗⲏ ⲛⲁⲙⲉ ⲉⲧ**ϫⲟⲡϫⲡ** ⲙⲙⲉⲉⲣⲉ ⲛⲧϩⲉ ⲛⲛⲉⲧϩⲛⲧⲡⲁϣⲉ ⲛⲧⲉⲩϣⲏ · ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲛⲓⲃⲗⲗⲉ , ⲉⲧⲉⲙⲛⲃⲁⲗ ⲙⲙⲟⲟⲩ ·",
+      "english": "Oh you truly blind one who gropes in daylight like those who are in midnight and like those blind ones, who have no eyes.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲗⲗⲉ",
+        1,
+        11.791
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        9.954
+      ],
+      [
+        "ϣⲏⲙ",
+        1,
+        9.32
+      ],
+      [
+        "ⲛ",
+        5,
+        8.775
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.448
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        6.29
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.083
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ϩϫⲟⲡϫⲡ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩϫⲟⲡϫⲡ",
+          "ⲥⲉ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩϫⲟⲡϫⲡ",
+          "ⲛⲁ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩϫⲟⲡϫⲡ",
+          "ϩϫⲟⲡϫⲡ_0_node",
+          1
+        ],
+        [
+          "ϩϫⲟⲡϫⲡ_0_node",
+          "ⲛ_1_post_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩϫⲟⲡϫⲡ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩϫⲟⲡϫⲡ",
+          "ⲧⲉⲧⲛ_1_pre_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩϫⲟⲡϫⲡ",
+          "ϩϫⲟⲡϫⲡ_0_node",
+          1
+        ],
+        [
+          "ϩϫⲟⲡϫⲡ_0_node",
+          "ⲙⲙⲟ_1_post_ϩϫⲟⲡϫⲡ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩϫⲟⲡϫⲡ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4828,
+      "count": 4
+    }
+  }
+}

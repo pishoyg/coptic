@@ -1,0 +1,562 @@
+{
+  "id": "C2160",
+  "forms": [
+    {
+      "id": "CF6032",
+      "orth": "ⲙⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.26,
+        "rank": 318,
+        "count": 514
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.02,
+        "rank": 342,
+        "count": 256
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2751,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲙⲱ",
+      "dialect": "A",
+      "id": "220.2"
+    },
+    {
+      "orth": "ⲙⲉⲉⲩ",
+      "dialect": "F",
+      "id": "220.3"
+    },
+    {
+      "orth": "ⲙⲉⲟⲩ",
+      "dialect": "F",
+      "id": "220.4"
+    },
+    {
+      "orth": "ⲙⲏⲟⲩ",
+      "dialect": "F",
+      "id": "220.5"
+    },
+    {
+      "orth": "ⲙⲉⲉⲩ",
+      "dialect": "L",
+      "id": "220.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2499",
+      "bibliography": "CD 197a; KoptHWb 106; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲧⲉⲧⲉⲛϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲣⲉϣⲁⲛⲟⲩⲣⲱⲙⲓ ϫⲟⲥ ⲙⲡⲉϥⲓⲱⲧ ⲛⲉⲙⲧⲉϥ**ⲙⲁⲩ** ϫⲉⲕⲟⲣⲃⲁⲛ ⲉⲧⲉⲟⲩⲧⲁⲓⲟ ⲡⲉ ⲁⲕϣⲁⲛϫⲉⲙϩⲏⲟⲩ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲙⲙⲟⲓ",
+      "english": "But you say, 'If a man tells his father or his mother, 'Whatever profit you might have received from me is Corban, that is to say, given to God;''",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥϯⲙⲧⲟⲛ ⲇⲉ ⲟⲛ ⲛⲧ**ⲙⲁⲁⲩ** ⲛⲧⲁⲥϫⲡⲟϥ ·",
+      "english": "And thus he gives rest to the mother who bore him",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲟⲩⲟⲛ ϩⲁⲛⲕⲉϩⲓⲟⲙⲓ ⲇⲉ ⲡⲉ ⲉⲩⲛⲁⲩ ϩⲓⲫⲟⲩⲉⲓ ⲛⲉ ⲉⲛⲁⲣⲉⲙⲁⲣⲓⲁ ⲛϧⲏⲧⲟⲩ ⲡⲉ ϯⲙⲁⲅⲇⲁⲗⲓⲛⲏ ⲛⲉⲙⲙⲁⲣⲓⲁ ⲛⲧⲉⲓⲁⲕⲱⲃⲟⲥ ⲡⲓⲕⲟⲩϫⲓ ⲛⲉⲙⲧ**ⲙⲁⲩ** ⲛⲓⲱⲥⲏⲧⲟⲥ ⲛⲉⲙⲥⲁⲗⲱⲙⲏ .",
+      "english": "There were also women watching from afar, among whom were both Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉϥⲏⲓ ⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ϣⲁⲧⲉϥ**ⲙⲁⲁⲩ** ·",
+      "english": "Then John went into his house to his mother,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲁⲗⲟⲩ ⲇⲉ ⲓⲥⲁⲁⲕ ⲛⲁⲣⲉⲟⲩⲟⲛ ⲟⲩⲛⲓϣϯ ⲛϭⲓϣϣⲱⲟⲩ ϣⲟⲡ ⲛⲁϥ ⲡⲉ ⲉϧⲟⲩⲛ ⲉϯϫⲓⲛⲱⲛϧ ⲉⲧϩⲟⲗϫ ⲛⲧⲉϯⲙⲉⲧⲙⲟⲛⲁⲭⲟⲥ ⲉϥⲓⲣⲓ ⲙⲫⲙⲉⲩⲓ ⲙⲡϭⲟⲉⲓⲥ ⲛϫⲉⲡⲁⲓⲁⲗⲟⲩ ⲉⲑⲟⲩⲁⲃ ⲉϥⲱϣ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲉⲧⲙⲉⲓ ⲙⲡⲉϥⲓⲱⲧ ⲓⲉ ⲧⲉϥ**ⲙⲁⲩ** ⲉϩⲟⲧ ⲉⲣⲟⲓ ϥⲉⲙⲡϣⲁ ⲙⲙⲟⲓ ⲁⲛ",
+      "english": "But the young Isaac had within himself a great desire to lead the sweet regime of monastic life: this holy child remembered that the Lord had spoken out in his Gospel and had said: ‘He who loves his father and mother more than me is not worthy of me’;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϭⲓⲛⲉ ⲛⲧⲉϥ**ⲙⲁⲁⲩ** ⲙⲙⲁⲩ ⲙⲛⲛⲉⲧⲟⲩⲕⲣⲓⲛⲉ ⲙⲙⲟⲟⲩ .",
+      "english": "And there he found his mother and those who judge.",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉϥ",
+        97,
+        28.79
+      ],
+      [
+        "ⲛⲉⲙ",
+        163,
+        28.289
+      ],
+      [
+        "ⲛ",
+        165,
+        26.69
+      ],
+      [
+        "ⲥⲛⲏⲟⲩ",
+        39,
+        26.678
+      ],
+      [
+        "ⲗⲱⲏⲇⲏ",
+        5,
+        26.661
+      ],
+      [
+        "ⲓⲱⲧ",
+        49,
+        26.611
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        23,
+        26.347
+      ],
+      [
+        "ⲥⲱⲛⲓ",
+        20,
+        26.017
+      ],
+      [
+        "ⲧⲉⲕ",
+        36,
+        25.787
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        114,
+        25.579
+      ],
+      [
+        "ⲧ",
+        64,
+        25.525
+      ],
+      [
+        "ⲓⲉ",
+        38,
+        25.45
+      ],
+      [
+        "ⲧⲉ",
+        31,
+        24.849
+      ],
+      [
+        "ⲟⲩ",
+        99,
+        24.642
+      ],
+      [
+        "ϥ",
+        106,
+        24.608
+      ],
+      [
+        "ⲧⲉⲥ",
+        18,
+        24.065
+      ],
+      [
+        "ⲛⲉϫⲓ",
+        14,
+        24.062
+      ],
+      [
+        ".",
+        69,
+        23.942
+      ],
+      [
+        "ⲣⲉⲃⲉⲕⲕⲁ",
+        8,
+        23.837
+      ],
+      [
+        "ⲧⲁ",
+        28,
+        23.693
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        13,
+        22.694
+      ],
+      [
+        "ⲧⲉϥ",
+        180,
+        22.434
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        114,
+        21.119
+      ],
+      [
+        "ⲧⲁ",
+        108,
+        20.209
+      ],
+      [
+        "ⲛ",
+        326,
+        19.85
+      ],
+      [
+        "ⲙⲛ",
+        144,
+        19.148
+      ],
+      [
+        "ⲗⲱⲉⲓⲥ",
+        5,
+        18.558
+      ],
+      [
+        "ⲥ",
+        134,
+        18.467
+      ],
+      [
+        "ϫⲉ",
+        131,
+        18.241
+      ],
+      [
+        "ⲁ",
+        164,
+        18.111
+      ],
+      [
+        "ⲧⲉⲕ",
+        53,
+        18.048
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        41,
+        17.996
+      ],
+      [
+        "ⲧⲉⲥ",
+        33,
+        17.657
+      ],
+      [
+        "ⲉ",
+        153,
+        17.584
+      ],
+      [
+        "ⲧ",
+        112,
+        17.487
+      ],
+      [
+        "ⲛⲁ",
+        112,
+        17.105
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        59,
+        16.932
+      ],
+      [
+        "ⲙⲁⲣⲓⲁ",
+        23,
+        16.892
+      ],
+      [
+        ".",
+        87,
+        16.88
+      ],
+      [
+        "ⲏ",
+        44,
+        16.852
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲁⲩ",
+          113
+        ],
+        [
+          "ⲙⲁⲁⲩ_0_node",
+          290
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲁⲁⲩ",
+          71
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          52
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲁⲩ",
+          35
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲁⲁⲩ",
+          17
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲁⲁⲩ",
+          11
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲁⲁⲩ",
+          11
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲁⲩ",
+          17
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲙⲁⲁⲩ",
+          7
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲙⲁⲁⲩ",
+          5
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲁⲁⲩ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲁⲩ",
+          4
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲙⲁⲁⲩ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲛⲏⲩ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲩ",
+          3
+        ],
+        [
+          "ⲥⲛⲏⲩ_1_post_ⲙⲁⲁⲩ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲁⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲉϥ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲉϥ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲁ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲁ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲟⲩ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲁⲁⲩ_0_node",
+          "ⲛ_1_post_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲁⲩ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_0_node",
+          "ⲙⲛ_2_post_ⲥⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲛⲏⲩ",
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲩ",
+          "ⲥⲛⲏⲩ_1_post_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲁⲩ",
+          "ⲧⲁ_1_pre_ⲙⲁⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.24,
+      "rank": 265,
+      "count": 514
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2163",
+      "label": "ⲁⲧⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "without mother"
+    },
+    {
+      "target": "C2161",
+      "label": "ⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "mother"
+    },
+    {
+      "target": "C2164",
+      "label": "ⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "caul, afterbirth"
+    },
+    {
+      "target": "C2162",
+      "label": "ⲙⲁⲩ ⲙⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "nursing mother, nurse"
+    }
+  ],
+  "etym": {
+    "egy_num": "69040",
+    "egy_lemma": "mw.t",
+    "demo_num": "d2380",
+    "demo_lemma": "mw.t",
+    "english": "mother",
+    "german": "Mutter",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/69040",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2380"
+  }
+}

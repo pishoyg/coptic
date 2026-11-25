@@ -1,0 +1,221 @@
+{
+  "id": "C10333",
+  "forms": [
+    {
+      "id": "CF27505",
+      "orth": "ⲡⲣⲟⲥⲧⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27506",
+      "orth": "ⲡⲣⲟⲥⲧⲁⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4746,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13901",
+      "bibliography": "DDGLC",
+      "cu_ID": "2874"
+    },
+    {
+      "id": "CS13902",
+      "bibliography": "DDGLC",
+      "cu_ID": "10396"
+    },
+    {
+      "id": "CS13903",
+      "bibliography": "DDGLC",
+      "cu_ID": "6291"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉⲟⲩⲛⲧⲁⲩ ⲙⲙⲁⲩ ⲛⲟⲩⲛⲟϭ ⲙ**ⲡⲣⲟⲥⲧⲁⲥⲓⲁ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉⲟⲩⲛⲧⲁⲩ ⲙⲙⲁⲩ ⲛⲟⲩⲛⲟϭ ⲙ**ⲡⲣⲟⲥⲧⲁⲥⲓⲁ** ⲉϩⲟⲩⲛ ⲉⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲙⲓⲭⲁⲏⲗ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲣⲱ ϯ ⲙⲡⲁⲟⲩⲟⲓ ⲉⲣⲟⲕ · ⲉⲓⲥⲟⲟⲩⲛ · ϫⲉⲙⲛⲧⲁⲓ ⲙⲙⲁⲩ · ⲛⲕⲉⲗⲁⲁⲩ ⲙ**ⲡⲣⲟⲥⲧⲁⲥⲓⲁ** · ⲛⲛⲁϩⲣⲛⲡⲛⲟⲩⲧⲉ ⲛⲥⲁⲃⲗⲗⲁⲕ · ⲱ ⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲙⲓⲭⲁⲏⲗ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 5",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:62-70",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛⲥⲁⲃⲗⲗⲁ",
+        2,
+        16.554
+      ],
+      [
+        "ⲙⲙⲁ",
+        1,
+        14.206
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        4,
+        13.35
+      ],
+      [
+        "ⲛⲁϩⲣⲛ",
+        1,
+        11.784
+      ],
+      [
+        "ⲙⲛⲧⲁ",
+        1,
+        11.327
+      ],
+      [
+        "ⲙ",
+        6,
+        10.521
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲙ",
+        1,
+        10.466
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        9.941
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        9.713
+      ],
+      [
+        "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        9.545
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        9.093
+      ],
+      [
+        "ⲛ",
+        6,
+        8.979
+      ],
+      [
+        "ⲡ",
+        4,
+        7.912
+      ],
+      [
+        "ⲕ",
+        2,
+        7.268
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.388
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        5.194
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.561
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲥⲧⲁⲥⲓⲁ_0_node",
+          6
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲡⲣⲟⲥⲧⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲥⲧⲁⲥⲓⲁ_0_node",
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲡⲣⲟⲥⲧⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲡⲣⲟⲥⲧⲁⲥⲓⲁ",
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4331,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1868",
+    "grl_lemma": "προστασία",
+    "grl_meaning": "leadership, governorship",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1526a; Preisigke 2:413"
+  }
+}

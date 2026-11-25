@@ -1,0 +1,94 @@
+{
+  "id": "C8075",
+  "forms": [
+    {
+      "id": "CF18327",
+      "orth": "ⲁⲅⲟⲣⲁⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18328",
+      "orth": "ⲁⲅⲟⲣⲉⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8000,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18329",
+      "orth": "ⲁⲅⲱⲣⲁⲓⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9034",
+      "bibliography": "DDGLC",
+      "cu_ID": "2151"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲥϫⲉ ⲟⲩⲛ ⲇⲓⲙⲏⲧⲣⲓⲟⲥ ⲛⲉⲙⲛⲓⲕⲉⲧⲉⲭ ⲛⲓⲧⲏⲥ ⲉⲑⲛⲉⲙⲁϥ ⲟⲩⲟⲛ ⲛⲧⲱⲟⲩ ⲛⲟⲩⲥⲁϫⲓ ϧⲁⲟⲩⲁⲓ ⲥⲉⲛⲁⲓⲛⲓ ⲛⲛⲓ**ⲁⲅⲟⲣⲉⲟⲥ** ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲁⲛⲑⲩⲡⲁⲧⲟⲥ ϣⲟⲡ ⲙⲁⲣⲟⲩⲥⲉⲙⲓ ⲉⲛⲟⲩⲉⲣⲏⲩ .",
+      "english": "If therefore Demetrius and the craftsmen who are with him have a matter against anyone, the courts are open, and there are proconsuls. Let them press charges against one another.",
+      "source": "05_Acts_19",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲩⲛ",
+        1,
+        13.576
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        ".",
+        2,
+        9.557
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19187,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2443",
+    "grl_lemma": "ἀγοραῖος",
+    "grl_meaning": "belonging to the agora",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 13b; Preisigke 1:9"
+  }
+}

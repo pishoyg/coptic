@@ -1,0 +1,160 @@
+{
+  "id": "C6072",
+  "forms": [
+    {
+      "id": "CF14149",
+      "orth": "ϣⲱⲣϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18938,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6757",
+      "bibliography": "CD 589a; KoptHWb 327; DELC 270b; ChLCS 81b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲕⲱϩⲧ ϩⲟⲙⲟⲓⲱⲥ ⲉⲩϣⲁⲛⲧⲛⲛⲟⲟⲩϥ ⲉⲃⲟⲗ ϩⲛⲧⲡⲉ ⲉⲣⲱⲭϩ ⲛⲛⲧⲟⲟⲩ ⲙⲛⲙⲙⲁ ⲛϣⲏⲛ ϣⲁϥⲉⲓⲣⲉ ⲙⲡϩⲱⲃ ⲉⲛⲧⲁⲩⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲙⲟϥ ⲛⲁϥ ⲛⲁⲓ ⲇⲉ ⲙⲉⲩ**ϣⲱⲣϫ** ⲟⲩⲇⲉ ⲛⲥⲉⲧⲙⲧⲛⲧⲛⲛⲉⲩⲥⲙⲟⲧ ⲟⲩⲇⲉ ⲛⲉⲩⲛⲟⲙⲧⲉ",
+      "english": "And the fire sent from above to consume hills and woods doeth as it is commanded: but these are like unto them neither in shew nor power.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        10.276
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        9.941
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        9.938
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁⲓ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ϣⲱⲣϫ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲧⲛⲧⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁⲓ_1_pre_ϣⲱⲣϫ",
+          "ⲇⲉ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϣⲱⲣϫ",
+          "ⲙⲉ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ϣⲱⲣϫ",
+          "ⲩ_1_pre_ϣⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲣϫ",
+          "ϣⲱⲣϫ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲣϫ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲧⲛⲧⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18550,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6073",
+      "label": "ⲥⲟⲩⲟ ⲛϣⲱⲣϫ",
+      "pos": "N",
+      "gloss": "crush, chop(?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "883259",
+    "egy_lemma": "ḫrḏ",
+    "demo_num": "d4584",
+    "demo_lemma": "ḫrḏ",
+    "english": "[teeth grinding]",
+    "german": "Zähneknirschen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/883259",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4584"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "C3196",
+  "forms": [
+    {
+      "id": "CF8277",
+      "orth": "ⲣⲁⲩⲏ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲣⲁⲩⲉ",
+      "dialect": "S",
+      "id": "1345.1"
+    },
+    {
+      "orth": "ⲣⲁⲩⲉⲓ",
+      "dialect": "S",
+      "id": "1345.2"
+    },
+    {
+      "orth": "ⲣⲏⲩⲉ",
+      "dialect": "S",
+      "id": "1345.3"
+    },
+    {
+      "orth": "ⲣⲁⲟⲩⲏ",
+      "dialect": "B",
+      "id": "1345.4"
+    },
+    {
+      "orth": "ⲣⲁⲃⲏ",
+      "dialect": "B",
+      "id": "1345.5"
+    },
+    {
+      "orth": "ⲗⲁⲩⲏ",
+      "dialect": "F",
+      "id": "1345.6"
+    },
+    {
+      "orth": "ⲗⲁⲟⲩⲏ",
+      "dialect": "F",
+      "id": "1345.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3652",
+      "bibliography": "CD 306a; CED 141; KoptHWb 169; DELC 179; ChLCS 43a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲁⲩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲣⲁⲩⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁⲇⲏⲣ_4_post_ϣⲏⲣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲁⲩⲏ_0_node",
+          "ⲛⲧⲉ_1_post_ⲣⲁⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲣⲁⲩⲏ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ϣⲏⲣⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_3_post_ⲡ",
+          "ⲛⲁⲇⲏⲣ_4_post_ϣⲏⲣⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11701,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3197",
+      "label": "ⲣⲙⲣⲁⲩⲏ",
+      "pos": "N",
+      "gloss": "neighbour"
+    }
+  ],
+  "etym": {
+    "egy_num": "92830",
+    "egy_lemma": "rʾ-wꜣ.t",
+    "english": "opening of a road, way, path, neighbourhood",
+    "german": "Wegmündung; Weg; Nähe; Nachbarschaft",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/92830"
+  }
+}

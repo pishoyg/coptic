@@ -1,0 +1,56 @@
+{
+  "id": "C9518",
+  "forms": [
+    {
+      "id": "CF24223",
+      "orth": "ⲕⲟⲩⲕⲗⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24227",
+      "orth": "ⲕⲟⲩⲕⲗⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24224",
+      "orth": "ⲕⲟⲩⲕⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24225",
+      "orth": "ⲕⲟⲩⲕⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11335,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24226",
+      "orth": "ⲕⲟⲩⲕⲗⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12119",
+      "bibliography": "DDGLC",
+      "cu_ID": "2367"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1195",
+    "grl_lemma": "κούκλιον",
+    "grl_meaning": "hood, cowl",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke 1:830"
+  }
+}

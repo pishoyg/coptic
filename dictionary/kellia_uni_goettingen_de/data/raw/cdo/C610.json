@@ -1,0 +1,140 @@
+{
+  "id": "C610",
+  "forms": [
+    {
+      "id": "CF2276",
+      "orth": "ⲃⲏϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11817,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31608",
+      "orth": "ⲃⲉϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31609",
+      "orth": "ⲃϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2278",
+      "orth": "ⲃⲏϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6374,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2279",
+      "orth": "ⲃⲉϫⲓ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲃⲏϭ",
+      "dialect": "F",
+      "id": "622.1"
+    },
+    {
+      "orth": "ⲃⲓϭ",
+      "dialect": "F",
+      "id": "622.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS729",
+      "bibliography": "CD 48b; CED 31; KoptHWb 30; DELC 34; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲉⲡⲙⲁ ⲛⲛϩⲉⲗⲗⲏⲛ ⲙⲛⲛⲉⲩⲉⲓⲇⲱⲗⲟⲛ · ⲁϥϫⲓ ⲛⲟⲩ**ⲃⲏϭ** ⲁϥⲧⲁⲁϥ ⲙⲡϩⲩⲉⲣⲉⲩⲥ ⲁϥⲧⲁⲗⲟϥ ⲉϩⲣⲁⲓ ⲛⲑⲩⲥⲓⲁ ⲙⲡⲇⲁⲓⲙⲱⲛ · ⲁϥϥⲓ ⲙⲡϩⲩⲡⲁⲣ ⲁϥⲧⲁⲁϥ ⲛⲁϥ ⲁϥⲟⲩⲟⲙϥ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲁ",
+        1,
+        10.175
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ϫⲓ",
+        1,
+        9.164
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲏϭ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11388,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C611",
+      "label": "ϣⲗⲱⲙⲃⲏϫ",
+      "pos": "N",
+      "gloss": "a sea bird (cormorant?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "54680",
+    "egy_lemma": "bjk",
+    "demo_num": "d1807",
+    "demo_lemma": "bjk",
+    "english": "falcon",
+    "german": "Falke",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54680",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1807"
+  }
+}

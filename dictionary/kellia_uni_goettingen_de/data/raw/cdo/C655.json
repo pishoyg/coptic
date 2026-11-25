@@ -1,0 +1,332 @@
+{
+  "id": "C655",
+  "forms": [
+    {
+      "id": "CF2462",
+      "orth": "ⲉⲗⲉⲗϩⲙϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5806,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS791",
+      "bibliography": "CD 54b; KoptHWb 34; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲉϫⲟⲟⲗⲉϥ ⲇⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲉⲗⲉⲗϩⲙϫ** ϩⲁⲧϩⲏ ⲛⲧⲉϥⲟⲩⲛⲟⲩ ⲉϥⲉⲥⲣⲟϥⲣⲉϥ ⲇⲉ ⲛⲧϩⲉ ⲛⲟⲩϩⲣⲏⲣⲉ ⲛϫⲟⲉⲓⲧ",
+      "english": "And let him be gathered as the unripe grape before the time, and let him fall as the blossom of the olive.",
+      "source": "Job 15",
+      "urn": "urn:cts:copticLit:ot.job.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲟⲩ**ⲉⲗⲉⲗϩⲙϫ** ⲉϣⲁⲣⲃⲟⲟⲛⲉ ⲛⲛⲛⲁϫϩⲉ ⲁⲩⲱ ⲟⲩⲕⲁⲡⲛⲟⲥ ⲛⲛⲃⲁⲗ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲡⲁⲣⲁⲛⲟⲙⲓⲁ ⲛⲛⲉⲧⲉⲓⲣⲉ ⲙⲙⲟⲥ",
+      "english": "As a sour grape is hurtful to the teeth, and smoke to the eyes, so iniquity hurts those that practise it.",
+      "source": "Proverbs 10",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲉϥⲛⲁⲙⲟⲩ ϩⲁⲡⲉϥⲛⲟⲃⲉ ⲁⲩⲱ ⲡⲉⲧⲛⲁⲟⲩⲉⲙ **ⲉⲗⲉⲗϩⲙϫ** ⲉⲣⲉⲛⲉϥⲛⲁⲁϫⲉ ⲛⲁⲛⲟⲩϣⲥ",
+      "english": "But every one shall die in his own sin; and the teeth of him that eats the sour grape shall be set on edge.",
+      "source": "Jeremiah 38",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:38",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲁϫⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲟⲩⲉⲙ",
+        2,
+        15.189
+      ],
+      [
+        "ⲣⲃⲟⲟⲛⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲟⲃϩⲉ",
+        1,
+        12.106
+      ],
+      [
+        "ⲛ",
+        8,
+        10.487
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        1,
+        9.104
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.782
+      ],
+      [
+        "ⲧ",
+        3,
+        8.504
+      ],
+      [
+        "ϩⲉ",
+        2,
+        8.405
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.543
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.78
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.475
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.024
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ⲁ",
+        2,
+        5.722
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.366
+      ],
+      [
+        "ⲉ",
+        1,
+        2.495
+      ],
+      [
+        "ⲡ",
+        1,
+        2.175
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲗⲉⲗϩⲙϫ_0_node",
+          4
+        ],
+        [
+          "ϩⲁ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ϩⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_6_post_ⲟⲩⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲗⲉⲗϩⲙϫ_0_node",
+          "ϩⲁ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          "ⲧ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲁ",
+          "ϩⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϩⲏ_3_post_ⲧ",
+          "ⲛ_4_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲏ",
+          "ⲧⲉϥ_6_post_ⲟⲩⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲗϩⲙϫ_0_node",
+          "ⲉ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲗⲉⲗϩⲙϫ",
+          "ϣⲁ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_2_post_ⲉ",
+          "ⲛ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲛ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4753,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6664",
+      "type": "cf",
+      "label": "vinegar"
+    },
+    {
+      "target": "C5846",
+      "type": "syn",
+      "label": "unripe, sour grapes (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C661",
+      "label": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine-branch, vine-wood"
+    },
+    {
+      "target": "C652",
+      "label": "ⲁⲗⲟⲗⲓ",
+      "pos": "N",
+      "gloss": "vine, vineyard (elliptic)"
+    },
+    {
+      "target": "C657",
+      "label": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C660",
+      "label": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "bruise (dark coloured like grapes, \"grape of Egypt\")"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    },
+    {
+      "target": "C658",
+      "label": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    }
+  ]
+}

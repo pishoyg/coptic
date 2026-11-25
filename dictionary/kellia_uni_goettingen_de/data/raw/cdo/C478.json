@@ -1,0 +1,168 @@
+{
+  "id": "C478",
+  "forms": [
+    {
+      "id": "CF1943",
+      "orth": "ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18660,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS579",
+      "bibliography": "CD 39b; KoptHWb 25; ChLCS 8b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲃⲁⲗ ⲙⲡⲟⲛⲏⲣⲟⲥ ϣⲁϥ**ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ** ⲉϫⲛⲡⲟⲉⲓⲕ ⲁⲩⲱ ⲛϥⲣϭⲣⲱϩ ϩⲓⲧⲉϥⲧⲣⲁⲡⲉⲍⲁ",
+      "english": "A wicked eye envieth his bread, and he is a niggard at his table.",
+      "source": "Sirach 14",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲛⲏⲣⲟⲥ",
+        1,
+        13.469
+      ],
+      [
+        "ⲟⲉⲓⲕ",
+        1,
+        11.67
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        9.425
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18279,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C481",
+      "label": "ϫⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "take, receive evil eye; envy"
+    },
+    {
+      "target": "C471",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C472",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil, misfortune"
+    },
+    {
+      "target": "C470",
+      "label": "ⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C475",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil eye"
+    },
+    {
+      "target": "C476",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envious, wretched"
+    },
+    {
+      "target": "C477",
+      "label": "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envy, greed"
+    },
+    {
+      "target": "C480",
+      "label": "ⲙⲛⲧⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "greed, concupiscence"
+    },
+    {
+      "target": "C474",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil doing"
+    },
+    {
+      "target": "C473",
+      "label": "ⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be evil, hurtful"
+    },
+    {
+      "target": "C479",
+      "label": "ⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who casts an evil eye, enchanter"
+    }
+  ]
+}

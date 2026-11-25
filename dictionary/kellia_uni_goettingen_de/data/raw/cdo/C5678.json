@@ -1,0 +1,154 @@
+{
+  "id": "C5678",
+  "forms": [
+    {
+      "id": "CF13332",
+      "orth": "ϣⲁⲥⲱⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8008,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6355",
+      "bibliography": "CD 542b; KoptHWb 299; DELC 253a; ChLCS 74b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲛⲟⲃⲉ ⲇⲉ ⲡⲉ ⲛⲧⲁϥⲣⲛⲁⲓ ⲧⲏⲣⲟⲩ · ⲁⲩⲱ ⲉⲧⲃⲏⲏⲧϥ ⲉⲣⲉⲡⲉⲓϩⲟⲟⲩ ⲛⲧⲉⲓⲟⲩⲛⲟⲩ ⲛⲟⲩⲱⲧ ⲛⲁⲕⲁⲧⲁⲥⲧⲣⲉⲫⲉ · ⲁⲩⲱ ⲛⲥⲧⲁⲕⲟ ⲛⲧⲕⲟⲥⲙⲏⲥⲓⲥ ⲧⲏⲣⲥ ⲙⲡⲉⲓⲛⲟϭ ⲛⲟⲩⲟⲉⲓϣ ϫⲓⲛⲙⲡ**ϣⲁⲥⲱⲛⲧ** ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "Now it was Sin which did all these things, and because thereof the evil of this single hour shall overthrow and shall destroy at this awful time all the things which have been set in order since the beginning of the creation of the world.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲁⲥ ⲉϥⲉϫⲱⲕ ⲉⲃⲟⲗ ⲛϭⲓⲡⲉⲛⲧⲁⲩϫⲟⲟϥ ϩⲓⲧⲙⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϯⲛⲁⲟⲩⲱⲛ ⲉⲣⲱⲓ ϩⲛϩⲉⲛⲡⲁⲣⲁⲃⲟⲗⲏ ⲛⲧⲁϫⲱ ⲛⲛⲉⲧϩⲏⲡ ϫⲓⲛⲉⲡ**ϣⲁⲥⲱⲛⲧ** ⲙⲡⲕⲟⲥⲙⲟⲥ .",
+      "english": "that it might be fulfilled which was spoken through the prophet, saying,  'I will open my mouth in parables; I will utter things hidden from the foundation of the world.'",
+      "source": "40_Matthew_13",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        2,
+        12.853
+      ],
+      [
+        "ϫⲓⲛ",
+        2,
+        12.251
+      ],
+      [
+        "ϩⲏⲡ",
+        1,
+        12.114
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        9.532
+      ],
+      [
+        "ⲡ",
+        4,
+        9.497
+      ],
+      [
+        "ⲙ",
+        3,
+        9.106
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲥⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲁⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲥⲱⲛⲧ_0_node",
+          "ⲙ_1_post_ϣⲁⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲁⲥⲱⲛⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7564,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3606",
+      "type": "cf",
+      "label": "be created, found, create"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5676",
+      "label": "ϣⲁ",
+      "pos": "V",
+      "gloss": "begin"
+    },
+    {
+      "target": "C5677",
+      "label": "ϣⲁⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "first born"
+    }
+  ]
+}

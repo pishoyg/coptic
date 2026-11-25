@@ -1,0 +1,64 @@
+{
+  "id": "C3562",
+  "forms": [
+    {
+      "id": "CF9029",
+      "orth": "ϫⲓⲥⲙⲟⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4055",
+      "bibliography": "CD 342a; KoptHWb 187; ChLCS 48b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3561",
+      "label": "ϯⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "give form"
+    },
+    {
+      "target": "C3559",
+      "label": "ⲁⲧⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "without form"
+    },
+    {
+      "target": "C3560",
+      "label": "ⲉⲓⲣⲉ ⲛⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "have appearance, be like, be pattern"
+    },
+    {
+      "target": "C3557",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    },
+    {
+      "target": "C3558",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    }
+  ]
+}

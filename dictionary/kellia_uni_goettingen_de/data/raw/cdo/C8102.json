@@ -1,0 +1,153 @@
+{
+  "id": "C8102",
+  "forms": [
+    {
+      "id": "CF18420",
+      "orth": "ⲁⲑⲁⲛⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18421",
+      "orth": "ⲁⲑⲁⲛⲁⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6278,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9083",
+      "bibliography": "DDGLC",
+      "cu_ID": "4410"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲙⲡⲟⲉⲓⲕ · ⲛⲉⲡⲟⲩⲣⲁⲛⲓⲟⲛ ⲁⲩⲱ ⲁⲕⲉⲩⲫⲣⲁⲛⲉ ⲙⲙⲟⲕ ϩⲙⲡϣⲏⲛ ⲛⲧ**ⲁⲑⲁⲛⲁⲥⲓⲁ** ·",
+      "english": "Thou didst eat of heavenly bread, and thou didst rejoice thyself in the tree of immortality.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ϩⲙⲡⲉⲕⲛⲟⲩⲥ · ⲁⲕⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲙⲡϣⲏⲛ ⲛⲧ**ⲁⲑⲁⲛⲁⲥⲓⲁ** ⁛—",
+      "english": "Thou didst enter into Paradise in thy understanding, and didst eat of the tree of deathlessness.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲟⲩⲱⲛ ⲛⲛⲃⲁⲗ ⲛⲧⲉⲕⲯⲩⲭⲏ · ⲉⲁϥⲧⲥⲁⲃⲟⲕ ⲉⲙⲡⲩⲗⲏ ⲛⲧ**ⲁⲑⲁⲛⲁⲥⲓⲁ** · ⲛⲧϩⲉ ⲛⲧⲥⲁⲙⲁⲣⲓⲧⲏⲥ ⁛—",
+      "english": "God opened the eyes of thy soul, and He taught thee the gate of immortality like the Samaritan woman.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲛ",
+        2,
+        13.687
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        1,
+        11.521
+      ],
+      [
+        "⁛—",
+        1,
+        11.168
+      ],
+      [
+        "ⲛⲧⲕ",
+        1,
+        11.002
+      ],
+      [
+        "ⲡⲩⲗⲏ",
+        1,
+        10.926
+      ],
+      [
+        "ⲧ",
+        4,
+        10.486
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲑⲁⲛⲁⲥⲓⲁ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5839,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3749",
+    "grl_lemma": "ἀθανασία",
+    "grl_meaning": "immortality",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 30b; Preisigke 1:28"
+  }
+}

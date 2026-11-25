@@ -1,0 +1,49 @@
+{
+  "id": "C6455",
+  "forms": [
+    {
+      "id": "CF31993",
+      "orth": "ⲁⲧϩⲁⲓⲃⲉⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31992",
+      "orth": "ⲁⲧϩⲁⲉⲓⲃⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7163",
+      "bibliography": "CD 658a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6454",
+      "label": "ϩⲁⲓⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "shade, shadow"
+    },
+    {
+      "target": "C6457",
+      "label": "ϫⲓϩⲁⲓⲃⲉⲥ",
+      "pos": "V",
+      "gloss": "shaded; take shelter"
+    },
+    {
+      "target": "C6456",
+      "label": "ⲣϩⲁⲓⲃⲉⲥ",
+      "pos": "V",
+      "gloss": "make shadow, overshadow"
+    }
+  ]
+}

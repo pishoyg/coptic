@@ -1,0 +1,276 @@
+{
+  "id": "C6538",
+  "forms": [
+    {
+      "id": "CF15116",
+      "orth": "ϩⲁⲗⲁⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8779,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲁⲗⲏⲕ",
+      "dialect": "S",
+      "id": "2152.1"
+    },
+    {
+      "orth": "ⲁⲗⲁⲕ",
+      "dialect": "S",
+      "id": "2152.2"
+    },
+    {
+      "orth": "ϩⲁⲗⲁⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10718,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲁⲗⲁⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4344,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲁⲗⲉⲕ",
+      "dialect": "F",
+      "id": "2152.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7250",
+      "bibliography": "CD 668a-b; CED 278-279; KoptHWb 365; DELC 297a; ChLCS 90a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲛⲁⲟⲩⲱⲧϥ ⲇⲉ ⲙⲡⲉϥⲥⲡⲟⲧⲟⲩ ϩⲛⲟⲩ**ϩⲁⲗⲁⲕ**",
+      "english": "Or wilt thou fasten a ring in his nostril, and bore his lip with a clasp?",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓϯ ⲛⲟⲩϭⲁϫⲉ ⲉϣⲁⲁⲛⲧⲉ ⲁⲩⲱ ϩⲉⲛ**ϩⲁⲗⲁⲕ** ⲉⲛⲟⲩⲙⲁⲁϫⲉ ⲁⲩⲱ ⲟⲩⲕⲗⲟⲙ ⲛϣⲟⲩϣⲟⲩ ⲁⲓⲧⲁⲁϥ ⲉϫⲛⲧⲟⲩⲁⲡⲉ",
+      "english": "And I put a pendant on thy nostril, and rings in thine ears, and a crown of glory on thine head.",
+      "source": "Ezekiel 16",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲫⲟⲧⲟⲩ",
+        1,
+        11.125
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        1,
+        6.284
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.04
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.954
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        3.763
+      ],
+      [
+        ".",
+        1,
+        3.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.754
+      ],
+      [
+        "ϥ",
+        1,
+        2.424
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲁⲁⲛⲧⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲥⲡⲟⲧⲟⲩ",
+        1,
+        12.232
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        11.355
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        10.664
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ϫⲱ",
+        1,
+        7.405
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲗⲁⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲗⲁⲕ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲗⲁⲕ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲁⲗⲁⲕ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲗⲁⲕ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲗⲁⲕ",
+          "ϩⲉⲛ_1_pre_ϩⲁⲗⲁⲕ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲁⲗⲁⲕ",
+          "ϩⲁⲗⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲗⲁⲕ_0_node",
+          "ⲉ_1_post_ϩⲁⲗⲁⲕ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲗⲁⲕ",
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8332,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.05,
+      "rank": 3372,
+      "count": 4
+    }
+  },
+  "etym": {
+    "demo_num": "d3861",
+    "demo_lemma": "hlq",
+    "english": "ring",
+    "german": "Ring",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3861"
+  }
+}

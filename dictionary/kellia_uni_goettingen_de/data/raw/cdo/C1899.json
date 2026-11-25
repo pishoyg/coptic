@@ -1,0 +1,91 @@
+{
+  "id": "C1899",
+  "forms": [
+    {
+      "id": "CF5444",
+      "orth": "ⲙⲟⲩⲙϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11163,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2210",
+      "bibliography": "CD 169a; KoptHWb 93; CHLCS 25b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲙⲏ ⲧⲉⲛⲧⲟⲗⲏ ⲛⲛⲉⲥⲛⲏⲩ ⲧⲉ ⲧⲁⲓ ⲉⲧⲣⲉⲕϯⲡⲉⲕⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲁϫⲛ**ⲙⲟⲩⲙϣ** ·",
+      "english": "and he said unto him, 'Is not this the commandment of the brethren—(not) to enter into (the cell of a brother) without permission?",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲁ",
+        1,
+        13.331
+      ],
+      [
+        "ⲁϫⲛ",
+        1,
+        12.969
+      ],
+      [
+        "ⲟⲩⲟⲓ",
+        1,
+        11.82
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲩⲙϣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10750,
+      "count": 1
+    }
+  }
+}

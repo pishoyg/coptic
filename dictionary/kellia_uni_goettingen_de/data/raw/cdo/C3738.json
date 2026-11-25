@@ -1,0 +1,63 @@
+{
+  "id": "C3738",
+  "forms": [
+    {
+      "id": "CF9395",
+      "orth": "ϭⲓⲛⲥⲣϥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4246",
+      "bibliography": "CD 357b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3736",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "lack of leisure"
+    },
+    {
+      "target": "C3737",
+      "label": "ⲣⲉϥⲥⲣⲱϥⲧ",
+      "pos": "N",
+      "gloss": "idler"
+    },
+    {
+      "target": "C3732",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "V",
+      "gloss": "be at leisure, unoccupied"
+    },
+    {
+      "target": "C3735",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure, perseverance"
+    },
+    {
+      "target": "C3733",
+      "label": "ⲥⲣϥⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "have leisure for, be occupied with"
+    },
+    {
+      "target": "C3734",
+      "label": "ⲥⲣϥⲉ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "have leisure, let go of sth, desist from sth"
+    }
+  ]
+}

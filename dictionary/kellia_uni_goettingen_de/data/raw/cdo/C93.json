@@ -1,0 +1,85 @@
+{
+  "id": "C93",
+  "forms": [
+    {
+      "id": "CF332",
+      "orth": "ⲛⲧⲉⲛⲁⲙⲟⲛⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲧⲉⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS109",
+      "bibliography": "CD 8a"
+    },
+    {
+      "id": "CS110",
+      "bibliography": "CD 8a; KoptHWb 6"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C94",
+      "label": "ϩⲓϫⲉⲛⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "overcome"
+    },
+    {
+      "target": "C99",
+      "label": "ϫⲓⲛⲁⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "arrest; restraint"
+    },
+    {
+      "target": "C91",
+      "label": "ⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "seize, possess, detain; prevail, be in possession, be strong"
+    },
+    {
+      "target": "C12028",
+      "label": "ⲁⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "handle"
+    },
+    {
+      "target": "C97",
+      "label": "ⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "endurance, patience"
+    },
+    {
+      "target": "C95",
+      "label": "ⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "unrestrained, uncontrollable"
+    },
+    {
+      "target": "C96",
+      "label": "ⲙⲉⲧⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "uncontrolledness, intemperance"
+    },
+    {
+      "target": "C98",
+      "label": "ⲙⲉⲧⲣⲉϥⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "endurance"
+    },
+    {
+      "target": "C92",
+      "label": "ⲛⲉⲙⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "support, help"
+    }
+  ]
+}

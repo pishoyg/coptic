@@ -1,0 +1,51 @@
+{
+  "id": "C1726",
+  "forms": [
+    {
+      "id": "CF5000",
+      "orth": "ⲗⲱϣϫ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲗⲉϣϫ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7494,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2001",
+      "bibliography": "CD 148a"
+    },
+    {
+      "id": "CS2002",
+      "bibliography": "CD 148a; KoptHWb 81"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲩϣⲓⲛⲓ ⲇⲉ ⲙⲙⲟϥ ⲛϫⲉϩⲁⲛⲕⲉⲙⲁⲧⲟⲓ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩ ϩⲱⲛ ⲡⲉⲧⲉⲛⲛⲁⲁⲓϥ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲙⲡⲉⲣ**ⲗⲉϣϫ** ϩⲗⲓ ⲟⲩⲇⲉ ⲙⲡⲉⲣϭⲓ ϩⲗⲓ ⲛϫⲟⲛⲥ ⲟⲩⲟϩ ⲙⲁⲣⲟⲩⲣⲁϣ ⲑⲏⲛⲟⲩ ⲛϫⲉⲛⲉⲧⲉⲛⲟⲯⲱⲛⲓⲟⲛ .",
+      "english": "Soldiers also asked him, saying, 'What about us? What must we do?' He said to them, 'Extort from no one by violence, neither accuse anyone wrongfully. Be content with your wages.'",
+      "source": "03_Luke_03",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6965,
+      "count": 1
+    }
+  }
+}

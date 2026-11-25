@@ -1,0 +1,45 @@
+{
+  "id": "C990",
+  "forms": [
+    {
+      "id": "CF3333",
+      "orth": "ⲣⲉϥⲓⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1150",
+      "bibliography": "CD 86b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C988",
+      "label": "ⲓⲱⲥ",
+      "pos": "V",
+      "gloss": "hasten, be urgent"
+    },
+    {
+      "target": "C991",
+      "label": "ⲓⲱⲥ",
+      "pos": "N",
+      "gloss": "speed, diligence"
+    },
+    {
+      "target": "C989",
+      "label": "ⲓⲱⲥ (ⲛ-)",
+      "pos": "V",
+      "gloss": "hasten, be urgent (refl. meaning)"
+    }
+  ]
+}

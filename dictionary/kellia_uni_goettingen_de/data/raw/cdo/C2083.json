@@ -1,0 +1,162 @@
+{
+  "id": "C2083",
+  "forms": [
+    {
+      "id": "CF5864",
+      "orth": "ⲙⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5931,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2414",
+      "bibliography": "CD 189a; KoptHWb 104; DELC 124"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲡⲉⲕⲙⲁ ⲛϣⲱⲱⲡⲉ ⲙⲟⲩϩ ⲛⲃⲛⲧ ⲉⲣⲟⲕ ϣⲁⲛⲧⲟⲩⲡⲱϩ ⲉϩⲣⲁⲓ ⲉⲡⲉⲕ**ⲙⲟⲧⲉ**",
+      "english": "then while your cell is full of worms about you until they reach up to your neck",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲧⲉⲱⲥ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲉⲓϩⲛⲟⲩϫⲗⲁϩⲧⲥ · ⲉⲥϣⲟⲕϩ ϣⲁⲡⲁ**ⲙⲟⲧⲉ** · ⲁⲩⲱ ⲉⲓⲙⲉϩ ⲛⲉⲧⲡⲱ ⲉⲓϫⲓϣⲕⲁⲕ ⲉⲃⲟⲗ ϫⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲛⲁⲓ ⲻ",
+      "english": "He said to him, 'I am hitherto a man in a deep pit dug up to my neck. Being full of burden I cry out, 'God have mercy on me.'",
+      "source": "Apophthegmata Patrum Sahidic 107: Paul the Great 2",
+      "urn": "urn:cts:copticLit:ap.107.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲕϩ",
+        1,
+        15.313
+      ],
+      [
+        "ⲡⲱϩ",
+        2,
+        13.969
+      ],
+      [
+        "ϭⲱ",
+        2,
+        12.669
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        10.283
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        9.711
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.728
+      ],
+      [
+        "ⲕ",
+        2,
+        8.268
+      ],
+      [
+        "ⲉ",
+        3,
+        7.987
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.103
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.791
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.761
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲟⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲟⲧⲉ",
+          "ⲙⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲟⲧⲉ",
+          "ⲙⲟⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5490,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2082",
+      "label": "ⲙⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "sinew, nerve, joint; neck, throat, back"
+    }
+  ]
+}

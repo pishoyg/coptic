@@ -1,0 +1,50 @@
+{
+  "id": "C2812",
+  "forms": [
+    {
+      "id": "CF7470",
+      "orth": "ⲡⲁⲕϩⲏⲧ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3215",
+      "bibliography": "CD 261a; CED 125; KoptHWb 145; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2809",
+      "label": "ⲡⲁⲕⲉ",
+      "pos": "V",
+      "gloss": "be, become light, thin; grow small"
+    },
+    {
+      "target": "C2810",
+      "label": "ⲡⲁⲕⲉ",
+      "pos": "N",
+      "gloss": "lightness"
+    },
+    {
+      "target": "C2811",
+      "label": "ⲡⲁⲕⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be disheartened, faint-hearted"
+    },
+    {
+      "target": "C2813",
+      "label": "ⲡⲟⲕϥ",
+      "pos": "N",
+      "gloss": "thin sheet, plate"
+    }
+  ]
+}

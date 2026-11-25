@@ -1,0 +1,600 @@
+{
+  "id": "C11128",
+  "forms": [
+    {
+      "id": "CF30737",
+      "orth": "ϩⲓⲕⲁⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30738",
+      "orth": "ϣⲓⲕⲁⲛⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30741",
+      "orth": "ϩⲓⲕⲁⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2765,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF30740",
+      "orth": "ϩⲓⲕⲁⲛⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3113,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF30739",
+      "orth": "ϣⲓⲕⲁⲛⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15578",
+      "bibliography": "DDGLC",
+      "cu_ID": "10688"
+    },
+    {
+      "id": "CS15579",
+      "bibliography": "DDGLC",
+      "cu_ID": "2591"
+    },
+    {
+      "id": "CS15580",
+      "bibliography": "DDGLC",
+      "cu_ID": "10142"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲑⲟⲩⲁⲃ ⲡⲉϫⲁϥ ϫⲉⲡⲁϣⲏⲣⲓ ϯⲟⲓ ⲛ**ϩⲓⲕⲁⲛⲟⲥ** ⲁⲛ ⲡⲁⲓϩⲱⲃ ⲙⲡⲁⲓⲣⲏϯ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲉⲕⲙⲉⲩⲓ ⲉⲣⲟⲓ .",
+      "english": "The holy bishop replied, “My son, I am not capable of such a thing, as you think.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲧⲁϣⲉⲟⲉⲓϣ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲛⲏⲩ ⲙⲛⲛⲥⲱⲓ ⲛϭⲓⲡⲉⲧϫⲟⲟⲣ ⲉⲣⲟⲓ ⲉⲁⲛⲅⲟⲩ**ϩⲓⲕⲁⲛⲟⲥ** ⲁⲛ ⲉⲡⲁϩⲧ ⲉⲃⲱⲗ ⲉⲃⲟⲗ ⲙⲡⲙⲟⲩⲥ ⲙⲡⲉϥⲧⲟⲟⲩⲉ .",
+      "english": "He preached, saying, &apos;After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen.",
+      "source": "41_Mark_1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲭ ⲟⲧⲓ ϫⲉⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲉⲛ ⲙⲙⲁⲩⲁⲧⲉⲛ ⲧⲉⲧⲉⲛⲟⲓ ⲛ**ϩⲓⲕⲁⲛⲟⲥ** ⲉⲙⲉⲩⲓ ⲉⲩϩⲱⲃ ϩⲱⲥ ϫⲉⲉⲃⲟⲗ ⲙⲙⲟⲛ ⲁⲗⲗⲁ ⲧⲉⲛⲙⲉⲧϩⲓⲕⲁⲛⲟⲥ ⲟⲩⲉⲃⲟⲗ ϧⲉⲛⲫⲛⲟⲩϯ ⲧⲉ .",
+      "english": "not that we are sufficient of ourselves, to account anything as from ourselves; but our sufficiency is from God;",
+      "source": "08_II Corinthians_03",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲁⲓⲃⲱⲕ ⲉⲓⲙⲉϩ ⲡϫⲟⲉⲓⲥ ⲇⲉ ⲁϥⲕⲧⲟⲓ ⲉⲓϣⲟⲩⲉⲓⲧ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲉⲧⲉⲧⲛⲛⲁⲙⲟⲩⲧⲉ ⲉⲣⲟⲓ ϫⲉⲛⲟⲉⲙⲓⲛ ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲁϥⲑⲃⲃⲓⲟⲓ ⲁⲩⲱ ⲡ**ϩⲓⲕⲁⲛⲟⲥ** ⲁϥⲑⲙⲕⲟⲓ",
+      "english": "I went out full, and the Lord has brought me back empty: and why call ye me Noemin, whereas the Lord has humbled me and the Mighty One has afflicted me?",
+      "source": "Ruth Chapter 1",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲓⲥⲱⲧⲉⲙ ⲉⲧⲥⲙⲏ ⲛⲧⲉⲛⲟⲩⲧⲉⲛϩ ⲡⲉ ϧⲉⲛⲡⲟⲩϫⲓⲛⲙⲟϣⲓ ⲙⲫⲣⲏϯ ⲛⲧⲥⲙⲏ ⲛⲧⲉⲟⲩⲙⲱⲟⲩ ⲉϥⲟϣ ⲙⲫⲣⲏϯ ⲛⲧⲥⲙⲏ ⲙⲡⲓ**ϩⲓⲕⲁⲛⲟⲥ** ϧⲉⲛⲡⲟⲩϫⲓⲛⲙⲟϣⲓ ⲧⲥⲙⲏ ⲙⲡⲓⲥⲁϫⲓ ⲙⲫⲣⲏϯ ⲛⲧⲥⲙⲏ ⲛⲟⲩⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲑⲣⲟⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩϣⲁⲩⲙⲧⲟⲛ ⲙⲙⲱⲟⲩ ⲛϫⲉⲛⲟⲩⲧⲉⲛϩ .",
+      "english": "And I heard the sound of their wings when they went, as the sound of much water: and when they stood, their wings were let down.",
+      "source": "26_Ezechiel_01",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛⲣϣⲁ ⲛⲁϥ ⲙⲡϩⲟⲟⲩ ϩⲛⲟⲩⲧⲃⲃⲟ ⲛϩⲏⲧ ⲙⲛⲟⲩⲧⲃⲃⲟ ⲛⲥⲱⲙⲁ · ⲁⲩⲱ ⲟⲩ**ϩⲓⲕⲁⲛⲟⲥ** ⲡⲉ ⲉⲧⲱⲃϩ ⲉϫⲱⲛ ⲛⲛⲁϩⲣⲛⲡϫⲟⲉⲓⲥ · ⲛϥⲕⲱ ⲛⲁⲛ ⲉⲃⲟⲗ ⲛⲛⲉⲛⲛⲟⲃⲉ ·",
+      "english": "Let us celebrate his festival this day in purity of heart and in purity of body. And he is sufficiently strong to pray for us to the Lord, to forgive us our sins;",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓⲛⲙⲟϣⲓ",
+        1,
+        12.11
+      ],
+      [
+        "ⲟⲓ",
+        3,
+        11.753
+      ],
+      [
+        "ⲗⲓⲃⲁⲛⲟⲥ",
+        1,
+        11.556
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        10.185
+      ],
+      [
+        "ⲧⲉⲃⲛⲱⲟⲩⲓ",
+        1,
+        9.825
+      ],
+      [
+        "ⲟⲩⲃⲉ",
+        1,
+        9.518
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.795
+      ],
+      [
+        "ⲉ",
+        4,
+        8.432
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.107
+      ],
+      [
+        "ⲥⲙⲏ",
+        1,
+        7.95
+      ],
+      [
+        "ⲧ",
+        2,
+        7.94
+      ],
+      [
+        "ⲙⲉⲩⲓ",
+        1,
+        7.876
+      ],
+      [
+        "ⲙ",
+        3,
+        7.753
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        7.47
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        7.107
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        1,
+        6.995
+      ],
+      [
+        "ⲛ",
+        3,
+        6.761
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.048
+      ],
+      [
+        "ⲡ",
+        2,
+        6.034
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        5.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲅ",
+        1,
+        16.598
+      ],
+      [
+        "ⲑⲙⲕⲟ",
+        3,
+        15.376
+      ],
+      [
+        "ⲥⲓϣⲉ",
+        3,
+        15.376
+      ],
+      [
+        "ⲇⲩⲛⲁⲧⲟⲥ",
+        3,
+        15.183
+      ],
+      [
+        "ⲙⲛⲧⲉⲗⲁⲭⲓⲥⲧⲟⲥ",
+        1,
+        14.276
+      ],
+      [
+        "ⲁⲛ",
+        9,
+        13.638
+      ],
+      [
+        "ⲡⲁϩⲧ",
+        3,
+        13.298
+      ],
+      [
+        "ⲑⲃⲃⲓⲟ",
+        3,
+        13.086
+      ],
+      [
+        "ⲁⲛⲅ",
+        3,
+        12.991
+      ],
+      [
+        "ⲉ",
+        15,
+        12.538
+      ],
+      [
+        "ⲓ",
+        9,
+        12.36
+      ],
+      [
+        "ⲁ",
+        10,
+        11.01
+      ],
+      [
+        "ⲃⲱⲗ",
+        2,
+        10.867
+      ],
+      [
+        "ϫⲉ",
+        7,
+        10.568
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        10.22
+      ],
+      [
+        "ⲡ",
+        9,
+        10.007
+      ],
+      [
+        "ⲙⲙⲓⲛⲙⲙⲟ",
+        1,
+        9.543
+      ],
+      [
+        "ⲧⲱⲃϩ",
+        1,
+        9.521
+      ],
+      [
+        "ⲁⲩⲱ",
+        6,
+        9.502
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        2,
+        8.951
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          5
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲗⲓⲃⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_2_pre_ⲗⲓⲃⲁⲛⲟⲥ",
+          "ⲗⲓⲃⲁⲛⲟⲥ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲇⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲛⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          4
+        ],
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          12
+        ],
+        [
+          "ⲙ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲇⲩⲛⲁⲧⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          7
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          5
+        ],
+        [
+          "ⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲣ",
+          1
+        ],
+        [
+          "ⲃⲱⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲱ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲥⲕⲏⲧⲏⲥ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲱⲃϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_3_post_ⲧⲱⲃϩ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁϩⲧ_2_post_ⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          "ⲙ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲇⲩⲛⲁⲧⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲟⲩ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲣ_2_post_ⲉ",
+          "ⲁ_3_post_ⲧⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲃⲱⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲃⲱⲗ_2_post_ⲉ",
+          "ⲉⲃⲟⲗ_3_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲃⲱⲗ",
+          "ⲛ_3_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲕⲁⲛⲟⲥ_0_node",
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲱ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          "ⲡ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲥⲕⲏⲧⲏⲥ",
+          "ⲁⲥⲕⲏⲧⲏⲥ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲟⲩ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲧⲱⲃϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲱⲃϩ_2_post_ⲉ",
+          "ⲉϫⲱ_3_post_ⲧⲱⲃϩ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲟⲩ_1_pre_ϩⲓⲕⲁⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲕⲁⲛⲟⲥ",
+          "ⲡⲁϩⲧ_2_post_ⲉ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2447,
+      "count": 16
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2732,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "949",
+    "grl_lemma": "ἱκανός",
+    "grl_meaning": "sufficing, becoming, befitting",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 825a; Preisigke 1:693"
+  }
+}

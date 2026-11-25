@@ -1,0 +1,84 @@
+{
+  "id": "C1983",
+  "forms": [
+    {
+      "id": "CF5624",
+      "orth": "ⲙⲡϣⲁ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2302",
+      "bibliography": "CD 179a; KoptHWb 98"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲕⲁⲥ **ⲉϥⲉⲙⲡϣⲁ **ⲉ**ⲧⲣⲉⲛϣⲏⲣⲉ** ⲙⲡⲛⲟⲩⲧⲉ ⲟⲩⲱϩ ⲛϩⲏⲧϥ ⲛϭⲓⲡⲕⲁϩ ⲉⲧⲧⲁⲉⲓⲏⲩ ⲛⲧⲟⲟⲧⲕ ⲉϩⲟⲩⲟ ⲉⲕⲁϩ ⲛⲓⲙ",
+      "english": "That the land, which thou esteemedst above all other, might receive a worthy colony of God's children.",
+      "source": "Wisdom 12",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲃⲱⲕ ⲉⲃⲟⲗ ϩⲙⲡⲥⲩⲛϩⲉⲇⲣⲓⲟⲛ ⲉⲩⲣⲁϣⲉ **ϫⲉⲁⲩⲙⲡϣⲁ **ⲉ**ⲧⲣⲉⲩⲥⲟϣⲟⲩ** ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲣⲁⲛ .",
+      "english": "They therefore departed from the presence of the council, rejoicing that they were counted worthy to suffer dishonor for Jesus' name.",
+      "source": "44_Acts of the Apostles_5",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲡⲉⲓⲁⲅⲱⲛ ⲛⲧⲁϥϩⲩⲡⲟⲙⲓⲛⲉ ⲉⲣⲟϥ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲗⲟⲅⲅⲓⲛⲟⲥ ⲁϥⲣⲕⲉϫⲟⲩⲱⲧⲉ ⲛⲣⲟⲙⲡⲉ ⲉϥⲁⲣⲭⲉⲓ ⲉϫⲛⲙⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲗⲁⲩⲣⲁ **ⲁϥⲙⲡϣⲁ **ⲉ**ⲧⲣⲉϥⲕⲁⲛⲉϥϭⲓϫ** ⲉϫⲛⲛⲃⲁⲗ ⲙⲡⲉϥⲉⲓⲱⲧ ⲁⲡⲁ ⲗⲟⲩⲅⲓⲟⲥ ⲛⲧϩⲉ ⲛⲓⲱⲥⲏⲫ ⲛⲧⲁϥⲕⲱ ⲛⲛⲉϥϭⲓϫ ⲉϫⲛ ⲛⲃⲁⲗ ⲙⲡⲉϥⲉⲓⲱⲧ ⲓⲁⲕⲱⲃ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 5",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:30-39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1985",
+      "label": "ⲁⲧⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "worthless, unworthy"
+    },
+    {
+      "target": "C1986",
+      "label": "ⲙⲛⲧⲁⲧⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "unworthiness"
+    },
+    {
+      "target": "C1982",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "be worthy, worth; be entitled, obliged"
+    },
+    {
+      "target": "C1987",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "worth, desert, fate"
+    },
+    {
+      "target": "C1988",
+      "label": "ⲣⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "become, be worthy, deserve"
+    },
+    {
+      "target": "C1984",
+      "label": "ⲥⲙⲡϣⲁ (ⲛ-)",
+      "pos": "V",
+      "gloss": "it is right, needful"
+    }
+  ]
+}

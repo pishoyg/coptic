@@ -1,0 +1,261 @@
+{
+  "id": "C10211",
+  "forms": [
+    {
+      "id": "CF26973",
+      "orth": "ⲡⲗⲏⲥⲥⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF26974",
+      "orth": "ⲡⲗⲏⲥⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5331,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13596",
+      "bibliography": "DDGLC",
+      "cu_ID": "10552"
+    },
+    {
+      "id": "CS13597",
+      "bibliography": "DDGLC",
+      "cu_ID": "10564"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲧⲣⲉⲛ**ⲡⲗⲏⲥⲥⲉ** ⲛⲧⲟϥ ⲉϫⲛⲧⲉϥⲑⲉⲱⲣⲓⲁ ·",
+      "english": "but in order that we might not be struck dumb at the sight of Him.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϣ ⲟⲩⲛ ⲛⲉ ⲛⲉϣⲡⲏⲣⲉ ⲉⲧⲟ ⲛⲛⲟϭ ⲉⲧⲕⲛⲁ**ⲡⲗⲏⲥⲥⲉ** ⲉϫⲱⲟⲩ ⲧⲡⲉ ⲧⲉ · ⲉⲛⲧⲡⲉ ⲧⲉ ⲉⲛⲧⲁⲥϩⲱⲟⲩ ⲙⲡⲟⲉⲓⲕ · ϫⲉⲉⲛⲉ ⲡⲛⲟⲩⲧⲉ ⲡⲉ ⲛⲧⲁϥϫⲓ ⲥⲁⲣⲝ ·",
+      "english": "Which of these miracles is greater? Which of them make thee to wonder most concerning them? Which is the greater miracle? The heavens raining down bread, or God taking upon Himself flesh? Which is the greater miracle?",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲡⲁⲛⲑⲩⲡⲁⲧⲟⲥ ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲉⲡⲉⲛⲧⲁϥϣⲱⲡⲉ . ⲁϥⲡⲓⲥⲧⲉⲩⲉ ⲉϥ**ⲡⲗⲏⲥⲥⲉ** ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲉⲥⲃⲱ ⲙⲡϫⲟⲉⲓⲥ .",
+      "english": "Then the proconsul, when he saw what was done, believed, being astonished at the teaching of the Lord.",
+      "source": "44_Acts of the Apostles_13",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲉⲱⲣⲓⲁ",
+        2,
+        18.598
+      ],
+      [
+        "ⲉϫⲛ",
+        3,
+        12.18
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        2,
+        10.857
+      ],
+      [
+        "ⲥⲃⲱ",
+        1,
+        10.609
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        10.304
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        9.964
+      ],
+      [
+        "ⲧⲣⲉ",
+        2,
+        9.664
+      ],
+      [
+        "ⲡⲓⲥⲧⲉⲩⲉ",
+        1,
+        9.635
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        7.746
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        7.298
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        6.296
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲏⲥⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲟϥ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲑⲉⲱⲣⲓⲁ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲗⲏⲥⲥⲉ_0_node",
+          "ⲛⲧⲟϥ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          "ⲉϫⲛ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          "ⲧⲉϥ_3_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲑⲉⲱⲣⲓⲁ",
+          "ⲑⲉⲱⲣⲓⲁ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲗⲏⲥⲥⲉ",
+          "ⲛⲁ_1_pre_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲗⲏⲥⲥⲉ",
+          "ⲡⲗⲏⲥⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲥⲥⲉ_0_node",
+          "ⲉϫⲱ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲡⲗⲏⲥⲥⲉ",
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4912,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "3036",
+    "grl_lemma": "πλήσσω",
+    "grl_meaning": "strike, smite",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1421a; Preisigke 2:323"
+  }
+}

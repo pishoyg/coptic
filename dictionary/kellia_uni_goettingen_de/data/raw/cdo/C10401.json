@@ -1,0 +1,447 @@
+{
+  "id": "C10401",
+  "forms": [
+    {
+      "id": "CF27808",
+      "orth": "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27813",
+      "orth": "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3083,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF27810",
+      "orth": "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2615,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF27811",
+      "orth": "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27812",
+      "orth": "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27809",
+      "orth": "ⲥⲁⲙⲁⲣⲉⲓⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20854,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14041",
+      "bibliography": "DDGLC",
+      "cu_ID": "406"
+    },
+    {
+      "id": "CS14042",
+      "bibliography": "DDGLC",
+      "cu_ID": "11627"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲣⲡ ⲛϩⲁⲛⲣⲉⲙⲛϩⲱⲃ ⲉⲃⲟⲗ ϧⲁϫⲱϥ ⲟⲩⲟϩ ⲉⲧⲁⲩϣⲉ ⲁⲩⲓ ⲉϧⲟⲩⲛ ⲉⲟⲩϯⲙⲓ ⲛⲧⲉⲛⲓ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** ϩⲱⲥⲧⲉ ⲉⲥⲟⲃϯ ⲛⲁϥ",
+      "english": "and sent messengers before his face. They went, and entered into a village of the Samaritans, so as to prepare for him.",
+      "source": "03_Luke_09",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲟⲩⲱⲛ ⲛⲛⲃⲁⲗ ⲛⲧⲉⲕⲯⲩⲭⲏ · ⲉⲁϥⲧⲥⲁⲃⲟⲕ ⲉⲙⲡⲩⲗⲏ ⲛⲧⲁⲑⲁⲛⲁⲥⲓⲁ · ⲛⲧϩⲉ ⲛⲧ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** ⁛—",
+      "english": "God opened the eyes of thy soul, and He taught thee the gate of immortality like the Samaritan woman.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲣⲟⲩⲱ ⲛϫⲉⲛⲓⲓⲟⲩⲇⲁⲓ ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲕⲁⲗⲱⲥ ⲁⲛⲟⲛ ⲁⲛϫⲟⲥ ϫⲉⲛⲑⲟⲕ ⲟⲩ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲟⲩⲇⲁⲓⲙⲱⲛ ⲛⲉⲙⲁⲕ .",
+      "english": "Then the Jews answered him, 'Don't we say well that you are a Samaritan, and have a demon?'",
+      "source": "04_John_08",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ϭⲉ ⲛⲧⲉⲣⲟⲩⲣⲙⲛⲧⲣⲉ ⲙⲡⲙⲏⲏϣⲉ ⲁⲩⲱ ⲁⲩϫⲱ ⲉⲣⲟⲟⲩ ⲙⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲕⲟⲧⲟⲩ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲉⲩⲙⲟⲟϣⲉ ⲇⲉ ⲟⲩⲙⲏⲏϣⲉ ⲛϯⲙⲉ ⲛ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** ⲁⲩⲉⲩⲁⲅⲅⲉⲗⲓⲍⲉ ⲛⲁⲩ .",
+      "english": "They therefore, when they had testified and spoken the word of the Lord, returned to Jerusalem, and preached the Good News to many villages of the Samaritans.",
+      "source": "44_Acts of the Apostles_8",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲓⲃ ⲁϥⲟⲩⲟⲣⲡⲟⲩ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ⲉⲁϥϩⲟⲛϩⲉⲛ ⲛⲱⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲡⲉⲣϣⲉ ⲉⲫⲙⲱⲓⲧ ⲛⲛⲓⲉⲑⲛⲟⲥ ⲟⲩⲇⲉ ⲙⲡⲉⲣϣⲉ ⲉϧⲟⲩⲛ ⲉⲃⲁⲕⲓ ⲛⲧⲉⲛⲓ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** .",
+      "english": "Jesus sent these twelve out, and commanded them, saying, 'Don't go among the Gentiles, and don't enter into any city of the Samaritans.",
+      "source": "01_Matthew_10",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲩ ⲇⲉ ⲛϩⲉⲛϥⲁⲓϣⲓⲛⲉ ϩⲁⲧⲉϥϩⲏ . ⲉⲩⲙⲟⲟϣⲉ ⲇⲉ ⲁⲩⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲩϯⲙⲉ ⲛⲧⲉⲛ**ⲥⲁⲙⲁⲣⲓⲧⲏⲥ** ⲉⲥⲟⲃⲧⲉ ⲛⲁϥ",
+      "english": "and sent messengers before his face. They went, and entered into a village of the Samaritans, so as to prepare for him.",
+      "source": "42_Luke_9",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲁⲣⲉ",
+        1,
+        11.571
+      ],
+      [
+        "ⲛⲑⲟⲕ",
+        3,
+        11.542
+      ],
+      [
+        ".",
+        8,
+        11.446
+      ],
+      [
+        "ⲙⲟⲩϫⲧ",
+        1,
+        11.396
+      ],
+      [
+        "ⲥⲉⲛ",
+        1,
+        11.203
+      ],
+      [
+        "ⲟⲩ",
+        9,
+        11.094
+      ],
+      [
+        "ϯⲙⲓ",
+        1,
+        10.417
+      ],
+      [
+        "ⲛⲑⲟⲥ",
+        1,
+        10.24
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        2,
+        10.192
+      ],
+      [
+        "ⲥⲟⲃϯ",
+        1,
+        9.655
+      ],
+      [
+        "ⲙⲁϣⲉ",
+        1,
+        9.406
+      ],
+      [
+        "ⲇⲁⲓⲙⲱⲛ",
+        1,
+        9.396
+      ],
+      [
+        "ⲡⲱⲥ",
+        1,
+        9.066
+      ],
+      [
+        "ⲛⲓ",
+        4,
+        9.048
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        8.881
+      ],
+      [
+        "ⲙⲡⲁ",
+        1,
+        8.68
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        1,
+        8.673
+      ],
+      [
+        "ϥ",
+        5,
+        8.22
+      ],
+      [
+        "ϫⲉ",
+        3,
+        7.722
+      ],
+      [
+        "ⲉⲣⲟⲩⲱ",
+        1,
+        7.643
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲓⲧⲟⲟⲧⲉⲁⲛⲅ",
+        1,
+        16.898
+      ],
+      [
+        "ⲉⲛⲉⲣⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ⲛⲧⲕ",
+        3,
+        13.641
+      ],
+      [
+        "ⲉⲩⲁⲅⲅⲉⲗⲓⲍⲉ",
+        1,
+        11.313
+      ],
+      [
+        "ⲛ",
+        13,
+        11.21
+      ],
+      [
+        "ⲧⲱϩ",
+        1,
+        10.92
+      ],
+      [
+        "ϯⲙⲉ",
+        1,
+        10.853
+      ],
+      [
+        "ⲥⲉⲡⲥⲱⲡ",
+        1,
+        10.558
+      ],
+      [
+        "ⲇⲁⲓⲙⲱⲛⲓⲟⲛ",
+        1,
+        9.864
+      ],
+      [
+        ".",
+        5,
+        9.823
+      ],
+      [
+        "ⲅⲁⲣ",
+        3,
+        9.734
+      ],
+      [
+        "ⲥⲟⲃⲧⲉ",
+        1,
+        9.659
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        2,
+        9.554
+      ],
+      [
+        "ⲉ",
+        7,
+        9.539
+      ],
+      [
+        "ϫⲉ",
+        5,
+        9.412
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.274
+      ],
+      [
+        "ϥ",
+        7,
+        9.243
+      ],
+      [
+        "ⲁ",
+        6,
+        9.099
+      ],
+      [
+        "⁛—",
+        1,
+        9.052
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        8.815
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          9
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲫⲁⲓ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲑⲟⲕ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_1_post_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲫⲁⲓ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲫⲁⲓ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲛⲉ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲑⲟⲕ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          "ⲟⲩⲟϩ_2_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲟⲩⲟⲛ",
+          "ⲟⲩⲟⲛ_1_post_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_1_post_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲟⲩ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲙⲁⲣⲓⲧⲏⲥ",
+          "ⲥⲁⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2734,
+      "count": 13
+    },
+    "B": {
+      "rate": 0.11,
+      "rank": 2274,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "2580",
+    "grl_lemma": "Σαμαρίτης",
+    "grl_meaning": "Samaritan",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1582b"
+  }
+}

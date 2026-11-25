@@ -1,0 +1,228 @@
+{
+  "id": "C414",
+  "forms": [
+    {
+      "id": "CF1729",
+      "orth": "ϫⲓⲛⲃⲱⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1730",
+      "orth": "ϫⲓⲛⲃⲱⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11345,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS496",
+      "bibliography": "CD 33b"
+    },
+    {
+      "id": "CS497",
+      "bibliography": "CD 33b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡ**ϫⲓⲛⲃⲱⲗ** ⲉⲃⲟⲗ ⲛⲛⲓϣⲏⲣⲓ ⲛⲧⲉⲛⲏ ⲉⲧⲁⲩϧⲟⲑⲃⲟⲩ ⲉⲑⲣⲟⲩⲫⲓⲣⲓ ⲉⲫⲣⲁⲛ ⲙⲡϭⲟⲓⲥ ϧⲉⲛⲥⲓⲱⲛ ⲛⲉⲙⲡⲉϥⲥⲙⲟⲩ ϧⲉⲛⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "He has had regard to the prayer of the lowly, and has not despised their petition.",
+      "source": "19_Psalmi_101",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:101",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲉⲇⲏⲥ",
+        1,
+        15.608
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        8.297
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲃⲱⲗ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲓⲛⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲥⲙⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲃⲱⲗ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϫⲓⲛⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲓⲛⲃⲱⲗ",
+          "ⲛⲉ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲙⲟⲩ",
+          "ⲙ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲥⲙⲟⲩ",
+          "ⲡⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲙ",
+          "ϥ_2_post_ⲥⲙⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10790,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C411",
+      "label": "ⲁⲧⲃⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "indissoluble, unending"
+    },
+    {
+      "target": "C11275",
+      "label": "ⲃⲁⲗ-",
+      "pos": "N",
+      "gloss": "loosened, melting"
+    },
+    {
+      "target": "C404",
+      "label": "ⲃⲱⲗ",
+      "pos": "V",
+      "gloss": "loosen, untie (of chains, cords etc.); melt; unstring (sinews); interpret, explain (scriptures, dreams); be softened, persuaded; weaken, make faint; nullify (order, deed); dissolve, destroy"
+    },
+    {
+      "target": "C409",
+      "label": "ⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "solution, interpretation; loosening, weakness"
+    },
+    {
+      "target": "C408",
+      "label": "ⲃⲱⲗ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "become loose, detached (of man's hair)"
+    },
+    {
+      "target": "C407",
+      "label": "ⲃⲱⲗ (ⲉⲃⲟⲗ ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "be open, free with"
+    },
+    {
+      "target": "C406",
+      "label": "ⲃⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "loosen (chains, cords), break (seal); unclose (womb); unfold (book); be melted; release, terminate (fast); be dispersed, scattered (of dust); dissolve, nullify (drugs, magic); be loose (hair, sand); relax, annul (laws, legal deeds); absolve (sins); destroy; resolve (difficulties), come to terms; pay (penalty); go to pieces, perish; slacken, grow weak, faint; be wearied; be loosened, paralysed; be released, die; upset, unhinge (morally); be dissolute, loose (in conduct, doctrine)"
+    },
+    {
+      "target": "C405",
+      "label": "ⲃⲱⲗ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with"
+    },
+    {
+      "target": "C410",
+      "label": "ⲃⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "loosening, slackening, solution; release, pardon; annulling (of magic, demons); weakening, feebleness; laxity, dissoluteness, unrestraint; dissolution (= death); destruction (of the world)"
+    },
+    {
+      "target": "C412",
+      "label": "ⲙⲉⲧⲁⲧⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "indissolubility"
+    },
+    {
+      "target": "C413",
+      "label": "ⲣⲉϥⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "exegete, interpreter"
+    }
+  ]
+}

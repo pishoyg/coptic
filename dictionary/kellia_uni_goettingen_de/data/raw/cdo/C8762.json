@@ -1,0 +1,356 @@
+{
+  "id": "C8762",
+  "forms": [
+    {
+      "id": "CF20998",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20999",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲙⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF21000",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3065,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10480",
+      "bibliography": "DDGLC",
+      "cu_ID": "3167"
+    },
+    {
+      "id": "CS10481",
+      "bibliography": "DDGLC",
+      "cu_ID": "11100"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲣⲱⲙⲁⲛⲟⲥ ⲇⲉ ⲡⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ ⲁϥϫⲓ ⲙⲡ**ⲇⲓⲁⲧⲁⲅⲙⲁ** ⲛⲧⲟⲟⲧϥ ⲙⲡⲣⲣⲟ ·",
+      "english": "Then Romanus the general took the edict from the hand of the Emperor,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉϫⲓ ⲙⲡⲉⲓ**ⲇⲓⲁⲧⲁⲅⲙⲁ** · ⲙⲁⲣⲉⲛⲕⲉⲥⲉⲉⲡⲉ ⲙⲙⲏⲏϣⲉ ⲑⲩⲥⲓⲁⲍⲉ ⲙⲡⲁⲧⲕⲁⲛⲁⲭⲱⲣⲉⲓ ·",
+      "english": "'Take this edict, and make the rest of the multitude offer up sacrifice before thou dost leave them.'",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ϭⲉ ⲧⲏⲣⲧⲛ ⲛⲥⲩⲛⲕⲗⲓϯⲕⲟⲥ ⲙⲡⲡⲁⲗⲗⲁϯⲟⲛ · ⲉⲧⲉⲧⲛⲁⲉⲓⲣⲉ ⲕⲁⲧⲁⲡ**ⲇⲓⲁⲧⲁⲅⲙⲁ** · ϫⲉⲕⲁⲥ ⲉⲣⲉⲣⲱⲙⲉ ⲛⲓⲙ ⲛⲁϣⲙϣⲉ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "And as for you, O all ye noblemen of high senatorial rank, who hold office in connection with the Palace, ye shall give effect to | this decree in such a way that every man shall worship my gods ;",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲟⲩⲃⲉ",
+        1,
+        11.991
+      ],
+      [
+        "ϫⲓ",
+        4,
+        11.464
+      ],
+      [
+        "ⲙ",
+        9,
+        11.16
+      ],
+      [
+        "ⲛ",
+        12,
+        10.863
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        2,
+        10.426
+      ],
+      [
+        "ⲡⲉⲓ",
+        3,
+        10.381
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        2,
+        10.364
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        3,
+        10.364
+      ],
+      [
+        "ⲧⲟϭ",
+        1,
+        10.343
+      ],
+      [
+        "ϫⲓⲕⲃⲁ",
+        1,
+        10.283
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        2,
+        9.98
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        9.886
+      ],
+      [
+        "ⲡ",
+        8,
+        9.797
+      ],
+      [
+        "ϥ",
+        7,
+        9.243
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        2,
+        9.108
+      ],
+      [
+        "ⲛⲥⲁ",
+        2,
+        9.06
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        8.825
+      ],
+      [
+        "ϣⲟϫⲛⲉ",
+        1,
+        8.794
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        2,
+        8.569
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        8.402
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          9
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲟϭ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲧⲟϭ",
+          1
+        ],
+        [
+          "ⲧⲟϭ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲟϫⲛⲉ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲭⲱⲣⲁ_4_post_ⲕⲁⲧⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          "ⲉⲛⲧ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲁ_3_post_ⲧⲟϭ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲟϭ",
+          "ⲓ_3_post_ⲧⲟϭ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲧⲟϭ",
+          "ⲧⲟϭ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          "ⲙⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟϫⲛⲉ",
+          "ⲟⲩ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ϣⲟϫⲛⲉ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲟϫⲛⲉ",
+          "ⲟⲩⲱⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲧⲁⲅⲙⲁ_0_node",
+          "ⲕⲁⲧⲁ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲇⲓⲁⲧⲁⲅⲙⲁ",
+          "ⲡⲟⲗⲓⲥ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_2_post_ⲕⲁⲧⲁ",
+          "ⲁⲩⲱ_5_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲭⲱⲣⲁ",
+          "ⲕⲁⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          "ⲭⲱⲣⲁ_4_post_ⲕⲁⲧⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2717,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "2936",
+    "grl_lemma": "διάταγμα",
+    "grl_meaning": "ordinance, edict",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 414b; Preisigke 1:364"
+  }
+}

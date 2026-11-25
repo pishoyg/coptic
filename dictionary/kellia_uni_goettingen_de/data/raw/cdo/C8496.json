@@ -1,0 +1,351 @@
+{
+  "id": "C8496",
+  "forms": [
+    {
+      "id": "CF19960",
+      "orth": "ⲁⲥⲕⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF19961",
+      "orth": "ⲁⲥⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4045,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9934",
+      "bibliography": "DDGLC",
+      "cu_ID": "1624"
+    },
+    {
+      "id": "CS9935",
+      "bibliography": "DDGLC",
+      "cu_ID": "8883"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉϯ**ⲁⲥⲕⲉⲓ** ⲉϩⲟⲩⲉ ⲉⲣⲟϥ ·",
+      "english": "And again, 'I am more ascetic than he.'",
+      "source": "Apophthegmata Patrum Sahidic 129: N 331",
+      "urn": "urn:cts:copticLit:ap.129.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲛⲁⲓⲁⲧⲟⲩ ⲛⲛⲧⲉⲗⲉⲓⲟⲥ ⲙⲛⲛⲉⲛⲧⲁⲩ**ⲁⲥⲕⲉⲓ** ϩⲛⲟⲩⲧⲃⲃⲟ ϫⲉⲥⲉⲛⲁⲟⲩⲛⲟϥ ⲙⲙⲟⲟⲩ ⲉⲩⲛⲁⲩ ⲉⲡⲃⲉⲉⲕⲉ ⲙⲡⲉⲩϩⲓⲥⲉ",
+      "english": "O blessed shall be those who are perfect, and have lived in purity, for they shall be made happy by the sight of the wages of their labours,",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲓⲛⲉ ⲉⲩ**ⲁⲥⲕⲉⲓ** ϫⲓⲛⲧⲉⲩⲙⲛⲧⲕⲟⲩⲓ ϣⲁⲧⲉⲩⲙⲛⲧϩⲗⲗⲟ · ϩⲛⲟⲩϭⲓⲛⲛⲏⲥⲧⲉⲩⲉ ⲉⲥϫⲁϫⲱ ·",
+      "english": "There were some who lived the lives of ascetics from the earliest years of their childhood to the last days of their old age, and fasted most rigidly.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲙⲟⲛⲁⲭⲟⲥ",
+        1,
+        13.791
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        2,
+        12.752
+      ],
+      [
+        "ⲁⲅⲱⲛ",
+        1,
+        11.933
+      ],
+      [
+        "ⲙⲛⲧϫⲱⲱⲣⲉ",
+        1,
+        11.433
+      ],
+      [
+        "ⲙⲛⲧⲕⲟⲩⲓ",
+        1,
+        11.161
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲉⲓ",
+        1,
+        10.407
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        1,
+        9.73
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        9.431
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        9.419
+      ],
+      [
+        "ⲧⲃⲃⲟ",
+        1,
+        8.902
+      ],
+      [
+        "ϩⲱ",
+        1,
+        8.557
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.427
+      ],
+      [
+        "ϫⲉ",
+        3,
+        8.094
+      ],
+      [
+        "ⲩ",
+        3,
+        7.757
+      ],
+      [
+        "ϯ",
+        2,
+        7.709
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        7.677
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        7.631
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        7.444
+      ],
+      [
+        "ⲉ",
+        3,
+        6.765
+      ],
+      [
+        ".",
+        2,
+        6.75
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲥⲕⲉⲓ_0_node",
+          5
+        ],
+        [
+          "ⲉϩⲟⲩⲉ_1_post_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_2_post_ⲉϩⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲛⲉ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲥⲕⲉⲓ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲅⲱⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲁⲅⲱⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲧⲃⲃⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϫⲱⲱⲣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ_b",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ⲟⲛ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ϯ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ⲁⲥⲕⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥⲕⲉⲓ_0_node",
+          "ⲉϩⲟⲩⲉ_1_post_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲉ_1_post_ⲁⲥⲕⲉⲓ",
+          "ⲉⲣⲟ_2_post_ⲉϩⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲛⲉ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ⲩ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ⲁⲥⲕⲉⲓ_0_node",
+          3
+        ],
+        [
+          "ⲁⲥⲕⲉⲓ_0_node",
+          "ⲙ_1_post_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲥⲕⲉⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲅⲱⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲅⲱⲛ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲁⲅⲱⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲥⲕⲉⲓ",
+          "ⲩ_1_pre_ⲁⲥⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲥⲕⲉⲓ_0_node",
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲧⲃⲃⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲙⲛⲧϫⲱⲱⲣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϫⲱⲱⲣⲉ_3_post_ⲟⲩ",
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ_b",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲥⲕⲉⲓ_b",
+          "ⲟⲩ_2_post_ϩⲛ_b",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3649,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "313",
+    "grl_lemma": "ἀσκέω",
+    "grl_meaning": "to work raw materials",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 257a; Preisigke 1:225"
+  }
+}

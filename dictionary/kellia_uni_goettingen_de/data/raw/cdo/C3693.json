@@ -1,0 +1,131 @@
+{
+  "id": "C3693",
+  "forms": [
+    {
+      "id": "CF9300",
+      "orth": "ⲥⲉⲣⲟϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7306,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4198",
+      "bibliography": "CD 354b; KoptHWb 143, 194, 539; DELC 195"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲟⲩⲧⲁϩ ⲉⲣⲉⲧⲉⲛⲉⲥⲟⲩⲱⲛⲟⲩ ⲙⲏⲧⲓ ϣⲁⲩⲥⲉⲕ ⲁⲗⲟⲗⲓ ⲉⲃⲟⲗ ϩⲓϩⲁⲛϣⲟⲛϯ ⲓⲉ ϣⲁⲩⲥⲉⲕ ⲕⲉⲛⲧⲉ ⲉⲃⲟⲗ ϩⲓⲛⲓ**ⲥⲉⲣⲟϫⲓ** .",
+      "english": "By their fruits you will know them. Do you gather grapes from thorns, or figs from thistles?",
+      "source": "01_Matthew_07",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:07",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲉⲛⲧⲉ",
+        1,
+        14.14
+      ],
+      [
+        "ϣϣⲏⲛ",
+        1,
+        12.41
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.538
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲣⲟϫⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6777,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2780",
+      "type": "cf",
+      "label": "iniquitous person"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3692",
+      "label": "ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+      "pos": "N",
+      "gloss": "leucacanthus (\"thorn of camel\")"
+    },
+    {
+      "target": "C3690",
+      "label": "ⲥⲟⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "thorn, spike, dart; needle, awl"
+    },
+    {
+      "target": "C12141",
+      "label": "ⲥⲣⲁⲣⲟⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "briar, thorn, thistle"
+    },
+    {
+      "target": "C3691",
+      "label": "ⲥⲣⲃⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "thorn of datepalm"
+    }
+  ]
+}

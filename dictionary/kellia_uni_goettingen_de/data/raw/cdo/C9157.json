@@ -1,0 +1,177 @@
+{
+  "id": "C9157",
+  "forms": [
+    {
+      "id": "CF22770",
+      "orth": "ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22773",
+      "orth": "ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13304,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22771",
+      "orth": "ⲑⲉⲟⲫⲓⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22772",
+      "orth": "ⲑⲉⲟⲫⲓⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9193,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22774",
+      "orth": "ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22775",
+      "orth": "ⲑⲉⲱⲫⲓⲗⲉⲩⲥⲧⲁⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22776",
+      "orth": "ⲑⲉⲟⲫⲓⲗⲉⲥⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22777",
+      "orth": "ⲑⲉⲟⲫⲩⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11341",
+      "bibliography": "DDGLC",
+      "cu_ID": "5325"
+    },
+    {
+      "id": "CS11342",
+      "bibliography": "DDGLC",
+      "cu_ID": "3072"
+    },
+    {
+      "id": "CS11343",
+      "bibliography": "DDGLC",
+      "cu_ID": "9902"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲛ ⲇⲉ ⲥⲡⲟⲩⲇⲏ ⲙⲛⲧⲙⲛⲧϥⲁⲣⲟⲟⲩϣ ⲙⲡ**ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ** ⲛⲇⲓⲁⲕⲟⲛⲟⲥ · ⲡⲟⲩⲣⲟⲧ ·",
+      "english": "This book (was copied through) the zeal and care of the most God-loving deacon Pourot (?).",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϥⲁⲣⲟⲟⲩϣ",
+        1,
+        20.598
+      ],
+      [
+        "ⲡⲟⲩⲣⲟⲧ",
+        1,
+        19.598
+      ],
+      [
+        "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩⲣⲟⲧ_1_post_ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ_0_node",
+          "ⲛ_1_post_ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_2_post_ⲛ",
+          "ⲡⲟⲩⲣⲟⲧ_1_post_ⲑⲉⲟⲫⲓⲗⲉⲥⲧⲁⲧⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12894,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "915",
+    "grl_lemma": "θεοφιλέστατος",
+    "grl_meaning": "most God-loving",
+    "grl_pos": "adjective",
+    "grl_ref": "Sophocles 579a"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "C3823",
+  "forms": [
+    {
+      "id": "CF9571",
+      "orth": "ϭⲓⲛⲥⲱⲧⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7023,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4338",
+      "bibliography": "CD 364b; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛⲁϥ ⲛϭⲓⲡϩⲗⲗⲟ ϫⲉⲉⲃⲟⲗ ϫⲉⲥⲉϣⲱⲛⲉ ⲛϭⲓⲛⲉⲕⲉⲥⲑⲏⲧⲏⲣⲓⲟⲛ ⲉⲧϩⲓⲃⲟⲗ , ⲧϭⲓⲛⲛⲁⲩ , ⲧ**ϭⲓⲛⲥⲱⲧⲙ** , ⲧϭⲓⲛϣⲱⲗⲙ , ⲧϭⲓⲛϣⲁϫⲉ .",
+      "english": "The old man answered him: that&apos;s because those of your senses are sick which are exterior, your sight, your hearing, your scent, your speech.",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛϣⲱⲗⲙ",
+        2,
+        21.598
+      ],
+      [
+        "ϭⲓⲛⲛⲁⲩ",
+        2,
+        20.013
+      ],
+      [
+        ",",
+        6,
+        18.622
+      ],
+      [
+        "ⲧ",
+        6,
+        12.826
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲥⲱⲧⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲥⲱⲧⲙ",
+          "ϭⲓⲛⲥⲱⲧⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6574,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3825",
+      "label": "ⲁⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "disobedient"
+    },
+    {
+      "target": "C3816",
+      "label": "ⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "unhearing, disobedient"
+    },
+    {
+      "target": "C3819",
+      "label": "ⲙⲁⲓⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "loving to hear, to obey"
+    },
+    {
+      "target": "C3817",
+      "label": "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "disobedience"
+    },
+    {
+      "target": "C3822",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3826",
+      "label": "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3820",
+      "label": "ⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "place of hearing, music room"
+    },
+    {
+      "target": "C3818",
+      "label": "ⲣⲁⲧⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "be disobedient"
+    },
+    {
+      "target": "C3821",
+      "label": "ⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearer"
+    },
+    {
+      "target": "C3827",
+      "label": "ⲣⲥⲧⲙⲏⲧ",
+      "pos": "V",
+      "gloss": "be obedient"
+    },
+    {
+      "target": "C3824",
+      "label": "ⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedient"
+    },
+    {
+      "target": "C3812",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "hear"
+    },
+    {
+      "target": "C3815",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, obedience"
+    },
+    {
+      "target": "C3813",
+      "label": "ⲥⲱⲧⲙ (ⲛ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    },
+    {
+      "target": "C3814",
+      "label": "ⲥⲱⲧⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    }
+  ]
+}

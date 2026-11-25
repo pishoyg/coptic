@@ -1,0 +1,150 @@
+{
+  "id": "C6575",
+  "forms": [
+    {
+      "id": "CF32019",
+      "orth": "ϯϩⲗⲟⲥⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18847,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32018",
+      "orth": "ϯϩⲗⲟⲥⲧⲉⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7287",
+      "bibliography": "CD 671b; KoptHWb 367; ChLCS 90b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲱϩⲧ",
+        1,
+        14.765
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        11.036
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ϯϩⲗⲟⲥⲧⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          "ϣⲁ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          "ϥ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯϩⲗⲟⲥⲧⲛ",
+          "ϯϩⲗⲟⲥⲧⲛ_0_node",
+          1
+        ],
+        [
+          "ϯϩⲗⲟⲥⲧⲛ_0_node",
+          "ⲛ_1_post_ϯϩⲗⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϩⲗⲟⲥⲧⲛ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6573",
+      "label": "ϩⲗⲟⲥⲧⲛ",
+      "pos": "N",
+      "gloss": "mist"
+    },
+    {
+      "target": "C6574",
+      "label": "ⲣϩⲗⲟⲥⲧⲛ",
+      "pos": "V",
+      "gloss": "become misty, darkened"
+    }
+  ]
+}

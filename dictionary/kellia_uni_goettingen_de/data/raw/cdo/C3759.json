@@ -1,0 +1,109 @@
+{
+  "id": "C3759",
+  "forms": [
+    {
+      "id": "CF9438",
+      "orth": "ⲥⲧⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9740,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4270",
+      "bibliography": "CD 363a; KoptHWb 197, 540; DELC 197; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥⲥⲟⲧⲡⲛ ϩⲱⲱⲛ ⲛⲧⲛϣⲱⲡⲉ ⲛⲁϥ ⲙⲙⲁⲑⲏⲧⲏⲥ ⲛⲧⲟ ⲟⲛ ⲡⲉ ⲡϣⲟⲣⲡ · ⲛⲧⲁϥⲟⲛϩϥ ⲉⲣⲟ ⲉϥⲛⲁⲃⲱⲕ ϣⲁⲡⲉⲓⲱⲧ · ⲱ ⲛⲁⲓⲁⲧⲥ ⲛⲧⲁⲕⲁⲗⲁϩⲏ ⲛⲧⲁ**ⲥⲧⲱ** ⲟⲩⲛϩⲁⲣⲟ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲗⲁϩⲏ",
+        1,
+        16.074
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        12.094
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        11.446
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        8.95
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲧⲱ",
+          1
+        ],
+        [
+          "ⲥⲧⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲧⲱ",
+          "ⲥⲧⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9309,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "132440",
+    "egy_lemma": "sp.t",
+    "english": "lip; edge; bank; shore",
+    "german": "Lippe; Rand; Ufer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/132440"
+  }
+}

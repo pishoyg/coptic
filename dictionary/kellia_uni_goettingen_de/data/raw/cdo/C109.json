@@ -1,0 +1,43 @@
+{
+  "id": "C109",
+  "forms": [
+    {
+      "id": "CF383",
+      "orth": "ⲁⲙϩⲣⲏⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS128",
+      "bibliography": "CED 7; KoptHWb 7, 486; DELC 11; ChLCS 4a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2315",
+      "type": "cf",
+      "label": "scarab"
+    },
+    {
+      "target": "C6547",
+      "type": "cf",
+      "label": "beetle"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2665",
+    "demo_lemma": "mẖrr",
+    "english": "[under]",
+    "german": "Skarabäus",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2665"
+  }
+}

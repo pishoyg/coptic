@@ -1,0 +1,64 @@
+{
+  "id": "C4299",
+  "forms": [
+    {
+      "id": "CF10549",
+      "orth": "ⲧⲱⲙ (ⲉⲣⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉⲣⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4870",
+      "bibliography": "CD 413a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ⲉϥⲟ ⲛⲧϩⲉ **ⲙⲡⲉⲧⲛⲁⲧⲱⲙ **ⲉⲣⲛ**ⲟⲩⲡⲩⲅⲏ** ⲙⲙⲟⲟⲩ ·",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4301",
+      "label": "ⲑⲱⲙ",
+      "pos": "N",
+      "gloss": "that which shuts, fence"
+    },
+    {
+      "target": "C4296",
+      "label": "ⲧⲱⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C4300",
+      "label": "ⲧⲱⲙ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "close up?"
+    },
+    {
+      "target": "C4297",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "shut the heart, become hardened"
+    },
+    {
+      "target": "C4298",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "shutting of the heart, hardening of the heart"
+    }
+  ]
+}

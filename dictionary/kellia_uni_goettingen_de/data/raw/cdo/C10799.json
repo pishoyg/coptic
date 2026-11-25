@@ -1,0 +1,409 @@
+{
+  "id": "C10799",
+  "forms": [
+    {
+      "id": "CF29417",
+      "orth": "ⲧⲣⲟⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29418",
+      "orth": "ⲧⲣⲟⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5972,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF29419",
+      "orth": "ⲧⲣⲟⲡⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4296,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14867",
+      "bibliography": "DDGLC",
+      "cu_ID": "4595"
+    },
+    {
+      "id": "CS14868",
+      "bibliography": "DDGLC",
+      "cu_ID": "3583"
+    },
+    {
+      "id": "CS14869",
+      "bibliography": "DDGLC",
+      "cu_ID": "3627"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ⲅⲁⲣ ⲛⲓⲧⲟⲡⲟⲥ ⲁⲛ ⲡⲉ ⲧⲉⲛⲕⲱϯ ⲛⲥⲱⲟⲩ ⲛⲏ ⲉⲧⲁⲩϣⲱⲡⲓ ⲛϧⲏⲧⲟⲩ ⲁⲗⲗⲁ ⲉⲛⲕⲱϯ ⲛⲥⲁⲛⲟⲩ**ⲧⲣⲟⲡⲟⲥ** ⲛⲉⲙⲧⲟⲩⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ ⲉϧⲟⲩⲛ ⲉⲫϯ .",
+      "english": "For we do not seek the places or the people who dwell in them, but rather their character and their choice for God.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲁϩⲟⲟⲩ ⲉⲣⲁⲧⲟⲩ ⲉⲧⲉϥϩⲩⲡⲉⲣⲏⲥⲓⲁ · ⲉⲃⲟⲗ ϫⲉⲁϥⲥⲟⲩⲛⲧⲉⲩⲙⲛⲧⲉⲩⲅⲉⲛⲏⲥ ϩⲓⲧⲛⲛⲉ**ⲧⲣⲟⲡⲟⲥ** ⲉⲧⲛϧⲏⲧⲟⲩ(?) ·",
+      "english": "And he appointed them to serve him personally, because he knew that they were of noble birth by their manners and habits,",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲛ**ⲧⲣⲟⲡⲟⲥ** ⲛⲟⲩⲙⲉⲧⲙⲁⲓϩⲁⲧ ⲁⲛ ⲡⲉ ⲛⲏ ⲉⲧϣⲟⲡ ⲉⲩⲉⲣⲱϣⲓ ⲙⲙⲱⲧⲉⲛ ⲛⲑⲟϥ ⲅⲁⲣ ⲁϥϫⲟⲥ ϫⲉⲛⲛⲁⲥⲱϫⲡⲕ ⲟⲩⲇⲉ ⲛⲛⲁⲭⲁⲕ ⲛⲥⲱⲓ .",
+      "english": "Be free from the love of money, content with such things as you have, for he has said, 'I will in no way leave you, neither will I in any way forsake you.'",
+      "source": "19_Hebrews_13",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲟⲩⲱϣ ⲅⲁⲣ ⲉⲧⲥⲁⲃⲟⲕ ⲉⲣⲟⲥ ϩⲛⲟⲩⲁⲕⲣⲓⲃⲓⲁ ⲉⲥⲟ ⲛⲁⲧⲉⲥⲙⲟⲧ ⲁⲩⲱ ⲉⲛⲁϣⲉⲡⲉⲥ**ⲧⲣⲟⲡⲟⲥ** ·",
+      "english": "For He wisheth to make thee to know this with careful exactness, and the forms and ways in which He doeth this are various.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲥⲟⲩⲥⲁⲛⲛⲁ ⲧⲉⲥϩⲓⲙⲉ ⲛⲭⲟⲩⲥⲁⲡ ⲉⲡⲓ**ⲧⲣⲟⲡⲟⲥ** ⲛϩⲣⲱⲇⲏⲥ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲉⲧⲙⲁⲓϩⲁⲧ",
+        1,
+        16.525
+      ],
+      [
+        "ⲛⲥⲁ",
+        2,
+        11.718
+      ],
+      [
+        "ⲕⲱϯ",
+        2,
+        11.501
+      ],
+      [
+        "ⲛ",
+        4,
+        9.006
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        6.43
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.349
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲣⲱⲇⲏⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        19.013
+      ],
+      [
+        "ⲭⲟⲩⲥⲁⲡ",
+        1,
+        19.013
+      ],
+      [
+        "ⲙⲛⲧⲉⲩⲅⲉⲛⲏⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛⲁϣⲉ",
+        1,
+        13.489
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        9.285
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        9.146
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.012
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        8.853
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        8.667
+      ],
+      [
+        "ⲉ",
+        3,
+        7.987
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.728
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲙⲉⲧⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲙⲁⲓϩⲁⲧ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          "ⲧⲟⲩ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          "ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          "ⲉϧⲟⲩⲛ_2_post_ⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          "ⲟⲩ_3_post_ⲙⲉⲧⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲙⲉⲧⲙⲁⲓϩⲁⲧ",
+          "ⲙⲉⲧⲙⲁⲓϩⲁⲧ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲙⲁⲓϩⲁⲧ_2_post_ⲡⲉ",
+          "ⲁⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲣⲱⲇⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛϧⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          "ϩⲣⲱⲇⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲟⲡⲟⲥ",
+          "ⲛϧⲏⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_2_post_ⲉⲧ",
+          "ⲟⲩ_3_post_ⲛϧⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲧⲣⲟⲡⲟⲥ",
+          "ⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5533,
+      "count": 3
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 3834,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2222",
+    "grl_lemma": "τρόπος",
+    "grl_meaning": "turn, direction, way, manner, fashion",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1827a; Preisigke 2:620"
+  }
+}

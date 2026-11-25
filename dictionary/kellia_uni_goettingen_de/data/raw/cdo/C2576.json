@@ -1,0 +1,155 @@
+{
+  "id": "C2576",
+  "forms": [
+    {
+      "id": "CF6944",
+      "orth": "ⲣⲛⲧⲏϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17247,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2957",
+      "bibliography": "CD 233b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲕⲁⲁϥ ϥⲛⲁⲣϣⲛⲁ ⲁⲩⲱ ⲛⲉϥ**ⲣⲛⲧⲏϭ** ⲧⲏⲣϥ ⲛϥⲣϫϩⲓⲙ ⲛⲥⲉⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛⲛϫⲟⲗϫⲗ ⲛⲛⲉϥⲱⲛⲉ",
+      "english": "If thou let him alone, he will altogether remain barren and covered with weeds; and he becomes destitute, and his stone walls are broken down.",
+      "source": "Proverbs 24",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲛⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲣⲛⲧⲏϭ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲛⲧⲏϭ",
+          "ⲛⲉ_1_pre_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲛⲧⲏϭ",
+          "ϥ_1_pre_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲛⲧⲏϭ",
+          "ⲣⲛⲧⲏϭ_0_node",
+          1
+        ],
+        [
+          "ⲣⲛⲧⲏϭ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲛⲧⲏϭ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16855,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2577",
+      "label": "ϫⲓⲛⲧⲏϭ",
+      "pos": "V",
+      "gloss": "sow herbs"
+    },
+    {
+      "target": "C2575",
+      "label": "ⲛⲧⲏϭ",
+      "pos": "N",
+      "gloss": "plant, herb, weed"
+    }
+  ]
+}

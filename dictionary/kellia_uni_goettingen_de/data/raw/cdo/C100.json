@@ -1,0 +1,259 @@
+{
+  "id": "C100",
+  "forms": [
+    {
+      "id": "CF346",
+      "orth": "ⲁⲙⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5811,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF347",
+      "orth": "ⲁⲙⲟⲩⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS118",
+      "bibliography": "KoptHWb 6, 486; DELC 10-11"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲥⲉⲃⲏⲥ ⲛⲁⲧⲁⲕⲟ ϩⲙⲡⲙⲁ ⲉⲧϥⲛⲁⲕⲟⲧϥ ⲉⲣⲟϥ ⲛⲏⲓ ⲇⲉ ⲛⲛⲇⲓⲕⲁⲓⲟⲥ ⲛ**ⲁⲙⲟⲩⲛ** ⲉⲃⲟⲗ",
+      "english": "When the ungodly is overthrown, he vanishes away; but the houses of the just remain.",
+      "source": "Proverbs 12",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁϣ ⲇⲉ ⲛϩⲉ ⲉⲣⲉⲟⲩϩⲱⲃ ⲛ**ⲁⲙⲟⲩⲛ** ⲉⲃⲟⲗ ⲉⲙⲡⲉⲕⲟⲩⲁϣϥ ⲏ ⲉϥⲛⲁϭⲱ ϣⲁⲡⲧⲏⲣϥ ⲛⲓⲙ ⲡⲉⲧⲉⲙⲡⲕϯⲣⲁⲛ ⲉⲣⲟϥ",
+      "english": "But thou sparest all: for they are thine, O Lord, thou lover of souls.",
+      "source": "Wisdom 11",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲁⲣⲁⲛⲟⲙⲟⲥ ⲛ**ⲁⲙⲟⲩⲛ** ⲉⲃⲟⲗ ⲁⲛ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉⲕⲃⲁⲗ ⲁⲕⲙⲉⲥⲧⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲣϩⲱⲃ ⲉⲧⲁⲛⲟⲙⲓⲁ",
+      "english": "Neither shall the transgressors continue in thy sight: thou hatest, O Lord, all them that work iniquity.",
+      "source": "Psalms 5",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲙⲛϯⲙⲉ",
+        1,
+        14.511
+      ],
+      [
+        "ⲡⲁⲣⲁⲛⲟⲙⲟⲥ",
+        1,
+        12.74
+      ],
+      [
+        "ⲛⲟϭⲛⲉϭ",
+        1,
+        11.067
+      ],
+      [
+        "ⲥⲡⲉⲣⲙⲁ",
+        1,
+        10.691
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4,
+        10.465
+      ],
+      [
+        "ⲛ",
+        7,
+        10.231
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        1,
+        9.456
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        8.987
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        8.276
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        8.101
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        8.087
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        7.689
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.102
+      ],
+      [
+        "ⲙ",
+        2,
+        6.351
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        6.128
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲙⲟⲩⲛ_0_node",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲙⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲁⲛ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲡⲉⲣⲙⲁ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲙⲟⲩⲛ",
+          "ⲁⲙⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲟⲩⲛ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁⲙⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲙⲟⲩⲛ",
+          "ⲁⲛ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲁⲙⲟⲩⲛ",
+          "ⲙ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲙⲟⲩⲛ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲙⲟⲩⲛ",
+          "ⲙⲛ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          "ⲡⲉⲩ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_post_ⲥⲡⲉⲣⲙⲁ",
+          "ⲥⲡⲉⲣⲙⲁ_1_post_ⲁⲙⲟⲩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5370,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "26060",
+    "egy_lemma": "Jmn",
+    "demo_num": "d505",
+    "demo_lemma": "I ͗mn",
+    "english": "Amun",
+    "german": "Amun",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/26060",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d505"
+  }
+}

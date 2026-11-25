@@ -1,0 +1,61 @@
+{
+  "id": "C3078",
+  "forms": [
+    {
+      "id": "CF8030",
+      "orth": "ϯⲣⲉⲕⲣⲓⲕⲉ ⲛ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3526",
+      "bibliography": "CD 293a; ChLCS 41b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3074",
+      "type": "cf",
+      "label": "soften"
+    },
+    {
+      "target": "C1596",
+      "type": "cf",
+      "label": "be soft, fresh"
+    },
+    {
+      "target": "C1600",
+      "type": "cf",
+      "label": "become soft, soften, smooth"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3079",
+      "label": "ϫⲓⲣⲉⲕⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "take to nodding, doze"
+    },
+    {
+      "target": "C3077",
+      "label": "ⲣⲉⲕⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "bending, nodding (of head in sleep)"
+    }
+  ]
+}

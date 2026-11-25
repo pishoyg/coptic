@@ -1,0 +1,44 @@
+{
+  "id": "C4538",
+  "forms": [
+    {
+      "id": "CF11033",
+      "orth": "ϩⲛⲟⲩⲧⲱⲣϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5126",
+      "bibliography": "CD 433a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4539",
+      "label": "ⲧⲣⲁϩ",
+      "pos": "N",
+      "gloss": "suspicion, grief, entanglement?"
+    },
+    {
+      "target": "C4536",
+      "label": "ⲧⲱⲣϩ",
+      "pos": "V",
+      "gloss": "be keen, be alert, be sober, be upright"
+    },
+    {
+      "target": "C4537",
+      "label": "ⲧⲱⲣϩ",
+      "pos": "N",
+      "gloss": "vigilance, calmness, soberness"
+    }
+  ]
+}

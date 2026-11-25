@@ -1,0 +1,88 @@
+{
+  "id": "C4344",
+  "forms": [
+    {
+      "id": "CF10640",
+      "orth": "ϩⲛⲧⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4922",
+      "bibliography": "CD 418a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6668",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4343",
+      "label": "ϣⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where (to)?"
+    },
+    {
+      "target": "C4345",
+      "label": "ϫⲓⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where ... from?"
+    },
+    {
+      "target": "C4342",
+      "label": "ⲉⲃⲟⲗ ⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where ... from?"
+    },
+    {
+      "target": "C4340",
+      "label": "ⲉⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where (to)?; where ... from?"
+    },
+    {
+      "target": "C4341",
+      "label": "ⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    },
+    {
+      "target": "C4346",
+      "label": "ⲡⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4347",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4348",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4339",
+      "label": "ⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    }
+  ]
+}

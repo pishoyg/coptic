@@ -1,0 +1,114 @@
+{
+  "id": "C3687",
+  "forms": [
+    {
+      "id": "CF9288",
+      "orth": "ⲥⲓⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4191",
+      "bibliography": "CD 353b; CED 160; KoptHWb 194; DELC 195; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ⲥⲁⲓⲣⲉ** ⲛⲉϩⲉ ⲙⲛⲟⲩⲉⲣⲱⲧⲉ ⲛⲉⲥⲟⲟⲩ ⲙⲛⲡⲱⲧ ⲛⲛⲉϩⲉⲓⲉⲓⲃ ⲙⲛⲛⲟⲉⲓⲗⲉ ⲛⲛϣⲏⲣⲉ ⲛⲙⲙⲁⲥⲉ ⲙⲛⲛϭⲓⲉ ⲙⲛⲡⲱⲧ ⲙⲡⲕⲛⲛⲉ ⲙⲡⲉⲥⲟⲩⲟ ⲁⲩⲱ ⲡⲏⲣⲡ ⲡⲉⲥⲛⲟϥ ⲙⲡⲉⲗⲟⲟⲗⲉ ⲁϥⲥⲟⲟϥ",
+      "english": "Butter of cows, and milk of sheep, with the fat of lambs and rams, of calves and kids, with fat of kidneys of wheat; and he drank wine, the blood of the grape.",
+      "source": "Deuteronomy 32",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓ ⲇⲉ ⲛⲟⲩ**ⲥⲁⲓⲣⲉ** ⲙⲛⲟⲩⲉⲣⲱⲧⲉ ⲁⲩⲱ ⲡⲙⲁⲥⲉ ⲉⲛⲧⲁϥⲧⲁⲙⲓⲟϥ ⲁϥⲕⲁⲁⲩ ϩⲁⲣⲱⲟⲩ ⲁⲩⲟⲩⲱⲙ ⲛⲧⲟϥ ⲇⲉ ⲛⲉϥⲁϩⲉⲣⲁⲧϥ ⲉⲣⲟⲟⲩ ϩⲁⲡϣⲏⲛ",
+      "english": "And he took butter and milk, and the calf which he had dressed; and he set them before them, and they did eat, and he stood by them under the tree.",
+      "source": "Genesis 18",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁϥⲁⲓⲧⲉⲓ ⲛⲟⲩⲙⲟⲟⲩ ⲁⲥϯⲉⲣⲱⲧⲉ ⲛⲁϥ ϩⲛⲟⲩⲗⲁⲕⲁⲛⲏ ⲛⲛⲇⲩⲛⲁⲧⲟⲥ ⲉⲁⲥⲡⲣⲟⲥⲉⲅⲉⲅⲉ ⲛⲁϥ ⲛⲟⲩ**ⲥⲁⲓⲣⲉ**",
+      "english": "He asked for water, she gave him milk in a dish; she brought butter of princes.",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲓⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3189,
+      "count": 10
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "138980",
+    "egy_lemma": "sr",
+    "english": "hair (of a woman, of an animal)",
+    "german": "Haar; Perücke",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138980"
+  }
+}

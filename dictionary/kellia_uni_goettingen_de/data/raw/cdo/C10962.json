@@ -1,0 +1,225 @@
+{
+  "id": "C10962",
+  "forms": [
+    {
+      "id": "CF29993",
+      "orth": "ⲭⲓⲙⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29994",
+      "orth": "ⲭⲓⲙⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3740,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15190",
+      "bibliography": "DDGLC",
+      "cu_ID": "4182"
+    },
+    {
+      "id": "CS15191",
+      "bibliography": "DDGLC",
+      "cu_ID": "11564"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲁⲓϭⲛⲧⲟⲩ ⲉⲩⲱⲙⲥ ⲙⲙⲟⲓ ⲛϩⲟⲩⲉ ⲉⲩ**ⲭⲓⲙⲱⲛ** ⲉϥⲛⲁϣⲧ ·",
+      "english": "are those who would wreck me, and they are far more dangerous for me than a mighty storm.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲟⲩⲉ ⲇⲉ ⲉⲃⲟⲗ ⲛⲁϫⲟⲩⲱⲧ ⲛⲥⲧⲁⲇⲓⲟⲛ ⲁⲩⲛⲟϭ ⲛ**ⲭⲓⲙⲱⲛ** ⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡϫⲟⲉⲓ ϩⲱⲥⲧⲉ ⲛⲧⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲧⲁⲗⲏⲩ ⲉⲡϫⲟⲉⲓϣⲧⲟⲣⲧⲣ ·",
+      "english": "And when they had sailed away from the land a distance of about twenty stadia a mighty storm rose up against the ship, and it was so violent that every one who was sailing in the ship was terrified.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁϣⲉⲡⲉ**ⲭⲓⲙⲱⲛ** · ⲁⲗⲗⲁ ⲙⲡϥⲉϣⲕⲱⲗⲩ ⲙⲡⲟⲩⲣⲟⲧ ⲛⲛⲉⲛⲧⲁⲩⲉⲓ ·",
+      "english": "Great is the storm, but it hath not been able to hinder the readiness of those who have come.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲁⲥⲇⲓⲗⲉ",
+        1,
+        17.428
+      ],
+      [
+        "ⲛⲟϭ",
+        4,
+        12.128
+      ],
+      [
+        "ⲛⲁϣⲉ",
+        1,
+        11.905
+      ],
+      [
+        "ϩⲟⲩⲉ",
+        1,
+        11.647
+      ],
+      [
+        "ϥ",
+        9,
+        10.861
+      ],
+      [
+        "◈",
+        1,
+        9.784
+      ],
+      [
+        "ⲛⲁϣⲧ",
+        1,
+        9.7
+      ],
+      [
+        "ⲗⲁⲥ",
+        1,
+        9.545
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        9.338
+      ],
+      [
+        "—",
+        1,
+        9.209
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        9.157
+      ],
+      [
+        "ⲛ",
+        7,
+        9.061
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        8.756
+      ],
+      [
+        "ⲛⲉⲣⲉ",
+        1,
+        8.749
+      ],
+      [
+        "ⲩ",
+        4,
+        8.64
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        8.64
+      ],
+      [
+        "ⲉ",
+        5,
+        8.613
+      ],
+      [
+        "ⲡ",
+        5,
+        8.293
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        8.126
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        7.427
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲓⲙⲱⲛ_0_node",
+          7
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲭⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲭⲓⲙⲱⲛ",
+          "ⲭⲓⲙⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲭⲓⲙⲱⲛ_0_node",
+          "ⲉ_1_post_ⲭⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲓⲙⲱⲛ",
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3364,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "2359",
+    "grl_lemma": "χειμών",
+    "grl_meaning": "winter, winter-storm",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1983a; Preisigke 2:725"
+  }
+}

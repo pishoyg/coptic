@@ -1,0 +1,425 @@
+{
+  "id": "C631",
+  "forms": [
+    {
+      "id": "CF2397",
+      "orth": "ⲙⲛⲧⲉⲃⲓⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2880,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF2398",
+      "orth": "ⲙⲛⲧⲉⲃⲓⲏⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2399",
+      "orth": "ⲙⲉⲧⲉⲃⲓⲏⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2400",
+      "orth": "ⲙⲉⲧⲉⲃⲓⲏⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2401",
+      "orth": "ⲙⲛⲧⲃⲓⲏⲛ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS767",
+      "bibliography": "CD 53a; CDC 10a; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲕⲁⲁϥ ϩⲛⲟⲩ**ⲙⲛⲧⲉⲃⲓⲏⲛ** ⁛—",
+      "english": "and he is left in a state of misery.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲛⲁⲁⲅⲱⲛⲓⲍⲉ ⲉⲧⲣⲁⲥⲉⲓ ⲙⲙⲟϥ ϩⲓϫⲙⲡⲕⲁϩ ϩⲛⲟⲩϩⲱⲡ · ⲉⲛϩⲟⲥⲟⲛ ⲉⲛϥⲕⲱⲗⲩⲉ ⲛⲗⲁⲁⲩ ⲁⲛ ⲟⲩⲧⲉ ⲁⲛⲟⲕ ⲟⲩⲧⲉ ⲗⲁⲁⲩ ⲛⲣⲱⲙⲉ ⲉϥⲙⲉⲧⲁⲛⲟⲉⲓ · ⲏ ⲉϥⲛⲁⲙⲉⲧⲁⲛⲟⲉⲓ ⲁⲩⲱ ⲉⲓϣⲁⲛⲃⲱⲕ ϣⲁⲣⲟϥ ϥⲣⲱϣⲉ ϩⲛⲛⲉϥⲙⲛⲧϣⲁⲛϩⲧⲏϥ ⲉⲧⲣⲉϥⲣⲟⲩⲛⲁ ⲙⲛⲧⲁ**ⲙⲛⲧⲉⲃⲓⲏⲛ** ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲁϫⲉ ⲇⲉ ⲟⲛ ⲉⲧⲃⲉⲡⲉⲧⲥⲏϩ ϩⲙⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ϫⲉⲟⲩϩⲟⲧⲉ ⲛⲉ ϩⲉ ⲉϩⲣⲁⲓ ⲉⲛϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ · ⲁⲩⲱ ⲉⲧⲃⲉⲧⲛⲟϭ ⲙ**ⲙⲛⲧⲉⲃⲓⲏⲛ** ⲛⲡⲣⲱⲙⲉ · ⲙⲡⲛⲁⲩ ⲉⲧϥⲛⲁϯ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲉⲛϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "AND HE SPAKE ALSO CONCERNING THAT WHICH IS WRITTEN IN THE (BOOK OF THE) APOSTLE, 'IT IS A FEARFUL THING TO FALL INTO THE HANDS OF GOD.' ' AND (HE SPAKE ALSO) CONCERNING THE MISERABLE STATE OF A MAN AT THE MOMENT WHEN HE IS ABOUT TO YIELD UP HIS SPIRIT INTO THE HANDS OF GOD.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+        1,
+        16.691
+      ],
+      [
+        "·",
+        4,
+        12.271
+      ],
+      [
+        "ⲟⲩ",
+        11,
+        11.691
+      ],
+      [
+        "ⲙⲛⲧϩⲏⲕⲉ",
+        1,
+        10.583
+      ],
+      [
+        "ϭⲟⲧ",
+        1,
+        10.199
+      ],
+      [
+        "ⲛⲟϭ",
+        3,
+        10.146
+      ],
+      [
+        "ⲛ",
+        10,
+        9.868
+      ],
+      [
+        "ⲧⲁⲣⲉ",
+        1,
+        9.808
+      ],
+      [
+        "ⲧⲁ",
+        3,
+        9.798
+      ],
+      [
+        "ⲙⲟⲛⲟⲛ",
+        1,
+        9.491
+      ],
+      [
+        "ⲡ",
+        7,
+        9.012
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        8.747
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        8.737
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        8.651
+      ],
+      [
+        "ϩⲛ",
+        4,
+        8.572
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        8.232
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        8.191
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        1,
+        7.906
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        2,
+        7.873
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        7.577
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          15
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϩⲏⲕⲉ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲁ_5_post_ⲁⲙⲉⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲙⲉⲗⲉⲓ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          3
+        ],
+        [
+          "ⲁϣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          "ⲟⲩ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧϩⲏⲕⲉ",
+          "ⲙⲛⲧϩⲏⲕⲉ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲛⲁ_5_post_ⲁⲙⲉⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_5_post_ⲁⲙⲉⲗⲉⲓ",
+          "ⲁⲙⲉⲗⲉⲓ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          "ⲉⲧ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          "ⲥ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲁϣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁϣ_2_post_ⲛ",
+          "ⲛ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲉⲃⲓⲏⲛ_0_node",
+          "ⲁⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          "ⲛ_1_post_ⲙⲛⲧⲉⲃⲓⲏⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2552,
+      "count": 15
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C628",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "a poor, wretched person"
+    },
+    {
+      "target": "C629",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "a poor, wretched person"
+    },
+    {
+      "target": "C630",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "miserable, wretched"
+    },
+    {
+      "target": "C632",
+      "label": "ⲣⲉⲃⲓⲏⲛ",
+      "pos": "V",
+      "gloss": "be miserable, feeble"
+    }
+  ]
+}

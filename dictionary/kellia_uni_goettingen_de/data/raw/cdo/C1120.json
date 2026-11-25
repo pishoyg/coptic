@@ -1,0 +1,51 @@
+{
+  "id": "C1120",
+  "forms": [
+    {
+      "id": "CF3607",
+      "orth": "ⲕⲟⲩⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϭⲟⲩϭ",
+      "dialect": "S",
+      "id": "2807.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1304",
+      "bibliography": "CD 100b; KoptHWb 59; ChLCS 16a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲙⲉ ⲉⲓ ⲙⲛⲡϩⲟ ⲛϥⲇⲱⲕⲓⲙⲁⲍⲉ ⲛⲧⲉϥⲛⲁ ϫⲉⲟⲩ ⲁϣ ⲙⲙⲓⲛⲉⲧⲉ ⲙⲏⲡⲟⲥ ⲛϥϩⲉ ⲉⲣⲟⲥ ϫⲉⲙⲛⲛⲟⲉⲓⲧ ⲛϩⲟⲩⲛ ⲉⲣⲟⲥ ⲉⲧⲉⲛⲉⲡⲣⲁⲝⲓⲥ ⲛⲉ ⲉⲧⲙⲉϩ ⲛⲁⲣⲉⲧⲏ ⲛⲓⲙ ⲁⲗⲗⲁ ⲉⲩⲥⲙⲟⲧ ⲛ**ⲕⲟⲩⲕⲉ** ⲙⲙⲁⲧⲉ ⲧⲉⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧϩⲩⲡⲟⲕⲣⲓⲥⲓⲥ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4940,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "162320",
+    "egy_lemma": "qq",
+    "english": "[a bird]",
+    "german": "[ein Vogel (Kuckuck?)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162320"
+  }
+}

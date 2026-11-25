@@ -1,0 +1,183 @@
+{
+  "id": "C2730",
+  "forms": [
+    {
+      "id": "CF7268",
+      "orth": "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20155,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3124",
+      "bibliography": "CD 253b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩⲥⲟⲟϥ ϩⲛⲧⲉⲩⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ ⲉⲧⲣⲟⲕϩ ⲉⲣⲟⲟⲩ ϩⲙⲡϯⲧⲱⲛ ⲙⲛⲡⲙⲟⲥⲧⲉ ⲙⲛⲧⲙⲛⲧϫⲁϫⲉ ϩⲛϩⲉⲛⲙⲛⲧⲣⲉϥⲕⲱⲙϣ ⲙⲛϩⲉⲛ**ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ** ⲙⲡϣⲁϫⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲙⲛϩⲉⲛⲕⲣⲙⲣⲙ ⲙⲛϩⲉⲛⲙⲛⲧⲣⲉϥϭⲛⲁⲣⲓⲕⲉ ⲙⲛϩⲉⲛⲙⲛⲧϣⲟⲩϣⲟ ⲙⲛϩⲉⲛⲡⲟⲣⲛⲉⲓⲁ ⲙⲛϩⲉⲛⲕⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲉⲛⲁϣⲱⲟⲩ ⲙⲛϩⲱⲃ ⲛⲓⲙ ⲉϥϩⲟⲟⲩ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲣⲉϥⲕⲱⲙϣ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲁϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+          "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ_0_node",
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          "ⲙ_4_post_ϣⲁϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19765,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2729",
+      "label": "ϯⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "give, cause wrath"
+    },
+    {
+      "target": "C2731",
+      "label": "ⲛⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "wrath, bitterness"
+    },
+    {
+      "target": "C2726",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "be wroth; make wroth"
+    },
+    {
+      "target": "C2727",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "wrath"
+    },
+    {
+      "target": "C2728",
+      "label": "ⲣⲉϥⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "wrathful person"
+    }
+  ]
+}

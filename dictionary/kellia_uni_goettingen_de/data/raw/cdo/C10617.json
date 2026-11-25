@@ -1,0 +1,449 @@
+{
+  "id": "C10617",
+  "forms": [
+    {
+      "id": "CF28694",
+      "orth": "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28696",
+      "orth": "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1772,
+        "count": 38
+      }
+    },
+    {
+      "id": "CF28695",
+      "orth": "ⲥⲉⲛⲏⲇⲱⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28697",
+      "orth": "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF28698",
+      "orth": "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28699",
+      "orth": "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF28700",
+      "orth": "ⲥⲩⲛⲏⲇⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5404,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF28701",
+      "orth": "ⲥⲩⲛⲏⲇⲓⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28702",
+      "orth": "ⲥⲩⲛⲏⲇⲩⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17306,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28703",
+      "orth": "ⲥⲩⲛⲏⲧⲉⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28704",
+      "orth": "ⲥⲩⲛⲏⲧⲩⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28705",
+      "orth": "ⲥⲩⲛⲓⲇⲏⲥⲓⲥ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF28706",
+      "orth": "ⲥⲩⲛⲓⲇⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲩⲛⲏⲇⲉⲥⲓⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.42,
+        "rank": 1216,
+        "count": 36
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14468",
+      "bibliography": "DDGLC",
+      "cu_ID": "2723"
+    },
+    {
+      "id": "CS14469",
+      "bibliography": "DDGLC",
+      "cu_ID": "713"
+    },
+    {
+      "id": "CS14470",
+      "bibliography": "DDGLC",
+      "cu_ID": "6204"
+    },
+    {
+      "id": "CS14471",
+      "bibliography": "DDGLC",
+      "cu_ID": "930"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲭⲁⲓ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲩϯ ⲙⲙⲱⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲙⲁⲕⲉⲗⲗⲟⲥ ⲟⲩⲙⲟⲩ ⲛⲧⲉⲧⲉⲛϧⲟⲧϧⲉⲧ ⲁⲛ ⲛϩⲗⲓ ⲉⲑⲃⲉϯ**ⲥⲩⲛⲏⲇⲉⲥⲓⲥ** .",
+      "english": "Whatever is sold in the butcher shop, eat, asking no question for the sake of conscience,",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩⲥⲟⲟϥ ϩⲛⲧⲉⲩ**ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ** ⲉⲧⲣⲟⲕϩ ⲉⲣⲟⲟⲩ ϩⲙⲡϯⲧⲱⲛ ⲙⲛⲡⲙⲟⲥⲧⲉ ⲙⲛⲧⲙⲛⲧϫⲁϫⲉ ϩⲛϩⲉⲛⲙⲛⲧⲣⲉϥⲕⲱⲙϣ ⲙⲛϩⲉⲛⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ ⲙⲡϣⲁϫⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲙⲛϩⲉⲛⲕⲣⲙⲣⲙ ⲙⲛϩⲉⲛⲙⲛⲧⲣⲉϥϭⲛⲁⲣⲓⲕⲉ ⲙⲛϩⲉⲛⲙⲛⲧϣⲟⲩϣⲟ ⲙⲛϩⲉⲛⲡⲟⲣⲛⲉⲓⲁ ⲙⲛϩⲉⲛⲕⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲉⲛⲁϣⲱⲟⲩ ⲙⲛϩⲱⲃ ⲛⲓⲙ ⲉϥϩⲟⲟⲩ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲁⲛⲛⲁⲩ ⲉⲣⲟⲕ ⲛϫⲉⲟⲩⲁⲓ ϧⲁⲫⲏ ⲉⲧⲉⲡⲉⲙⲓ ⲛⲧⲟⲧϥ ⲉⲕⲣⲱⲧⲉⲃ ϧⲉⲛⲟⲩⲙⲁ ⲛⲓⲇⲱⲗⲟⲛ ⲟⲩⲭⲓ ⲧⲉϥ**ⲥⲩⲛⲏⲇⲉⲥⲓⲥ** ⲉⲥⲟⲓ ⲛⲣⲉϥϣⲱⲛⲓ ⲥⲛⲁⲕⲱⲧ ⲉⲡϫⲓⲛⲑⲣⲉϥⲟⲩⲉⲙϣⲱⲧ ⲛⲓⲇⲱⲗⲟⲛ .",
+      "english": "For if a man sees you who have knowledge sitting in an idol's temple, won't his conscience, if he is weak, be emboldened to eat things sacrificed to idols?",
+      "source": "Bohairic 1 Corinthians 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲕⲁ ⲛⲓⲙ ⲉⲧⲟⲩϯ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁⲕⲉⲗⲗⲟⲥ ⲟⲩⲟⲙⲟⲩ ⲉⲛⲧⲉⲧⲛⲁⲛⲁⲕⲣⲓⲛⲉⲗⲁⲁⲩ ⲁⲛ ⲉⲧⲃⲉⲧ**ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ** .",
+      "english": "Whatever is sold in the butcher shop, eat, asking no question for the sake of conscience,",
+      "source": "46_1 Corinthians_10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϣⲉⲡϩⲙⲟⲧ ⲛⲧⲉⲛⲫⲛⲟⲩϯ ⲉϯϣⲉⲙϣⲓ ⲙⲙⲟϥ ⲓⲥϫⲉⲛ ϩⲏ ⲛⲛⲁⲓⲟϯ ϧⲉⲛⲟⲩ**ⲥⲩⲛⲏⲇⲉⲥⲓⲥ** ⲉⲥⲟⲩⲁⲃ ϩⲱⲥ ⲉⲓⲓⲣⲓ ⲙⲡⲉⲕⲙⲉⲩⲓ ϧⲉⲛⲟⲩⲙⲉⲧⲁⲑⲙⲟⲩⲛⲕ ⲛϩⲣⲏⲓ ϧⲉⲛⲛⲁⲧⲱⲃϩ ⲛϫⲱⲣϩ ⲛⲉⲙⲙⲉⲣⲓ",
+      "english": "I thank God, whom I serve as my forefathers did, with a pure conscience. How unceasing is my memory of you in my petitions, night and day",
+      "source": "16_II Timothy_01",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲁ ⲅⲁⲣ ⲛⲁⲩ ⲉⲣⲟⲕ ⲡⲉⲧⲉⲟⲩⲛⲧⲁϥ ⲙⲙⲁⲩ ⲙⲡⲥⲟⲟⲩⲛ ⲉⲕⲛⲏϫ ϩⲛⲟⲩⲙⲁ ⲛⲉⲓⲇⲱⲗⲟⲛ ⲉⲩϭⲱⲃ ⲡⲉ . ⲙⲏ ⲛⲧⲉϥ**ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ** ⲛⲁⲕⲱⲧ ⲁⲛ ⲉⲟⲩⲱⲙ ⲛⲛϣⲱⲱⲧ ⲛⲛⲉⲓⲇⲱⲗⲟⲛ .",
+      "english": "For if a man sees you who have knowledge sitting in an idol&apos;s temple, won&apos;t his conscience, if he is weak, be emboldened to eat things sacrificed to idols?",
+      "source": "1 Corinthians 8",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        20.105
+      ],
+      [
+        "ϭⲟⲟⲃ",
+        4,
+        16.706
+      ],
+      [
+        "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+        4,
+        16.102
+      ],
+      [
+        "ⲧⲉⲩ",
+        10,
+        15.156
+      ],
+      [
+        ".",
+        19,
+        14.053
+      ],
+      [
+        "ⲉ",
+        27,
+        13.834
+      ],
+      [
+        "ⲙⲛⲧⲣⲙϩⲉ",
+        2,
+        13.443
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        7,
+        13.109
+      ],
+      [
+        "ⲛ",
+        26,
+        12.662
+      ],
+      [
+        "ⲉϣϫⲉ",
+        5,
+        12.614
+      ],
+      [
+        "ⲟⲩ",
+        18,
+        12.482
+      ],
+      [
+        "ϭⲉϣϭⲱϣ",
+        1,
+        12.35
+      ],
+      [
+        "ⲧ",
+        14,
+        12.245
+      ],
+      [
+        "ⲧⲃⲃⲏⲩ",
+        2,
+        11.993
+      ],
+      [
+        "ⲁⲛ",
+        8,
+        11.88
+      ],
+      [
+        "ⲣⲱϩⲧ",
+        2,
+        11.706
+      ],
+      [
+        "ⲣⲟⲕϩ",
+        2,
+        11.505
+      ],
+      [
+        "ⲉⲓⲇⲱⲗⲟⲛ",
+        2,
+        11.373
+      ],
+      [
+        "ⲥⲟⲟϥ",
+        1,
+        11.028
+      ],
+      [
+        "ⲥ",
+        10,
+        10.992
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          20
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          4
+        ],
+        [
+          "ⲥ_3_post_ϭⲟⲟⲃ",
+          4
+        ],
+        [
+          "ϭⲟⲟⲃ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲓ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ϫⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣⲟⲕϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_post_ⲣⲟⲕϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲧⲉⲩ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          4
+        ],
+        [
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          "ⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲥ_3_post_ϭⲟⲟⲃ",
+          3
+        ],
+        [
+          "ⲥ_3_post_ϭⲟⲟⲃ",
+          "ϭⲟⲟⲃ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲧ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          "ⲇⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲉⲧ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲓ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ϫⲱ",
+          "ϫⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ_0_node",
+          "ⲉⲧ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ",
+          "ⲣⲟⲕϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣⲟⲕϩ_2_post_ⲉⲧ",
+          "ⲉⲣⲟ_3_post_ⲣⲟⲕϩ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_post_ⲣⲟⲕϩ",
+          "ⲟⲩ_4_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.24,
+      "rank": 1546,
+      "count": 38
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4714,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2103",
+    "grl_lemma": "συνείδησις",
+    "grl_meaning": "communication, information",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1704b; Preisigke 2:531"
+  }
+}

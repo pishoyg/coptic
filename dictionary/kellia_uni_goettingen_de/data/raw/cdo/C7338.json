@@ -1,0 +1,190 @@
+{
+  "id": "C7338",
+  "forms": [
+    {
+      "id": "CF16735",
+      "orth": "ϭⲓⲛϫⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10086,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8116",
+      "bibliography": "CD 784a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϥⲓ ⲛⲧⲉϥⲁⲡⲉ ϩⲛⲧⲥⲏⲃⲉ ⲁⲗⲗⲁ ⲁϥⲃⲱⲕ ϣⲁⲧⲉϥⲁⲡⲉ ⲛⲁⲗⲏⲑⲓⲛⲟⲛ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲁϥⲁⲙⲡⲟⲧⲁⲥⲥⲉ ⲙⲡϩⲱⲕ ⲙⲡⲣⲣⲟⲁⲗⲗⲁ ⲁϥϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲇⲁⲩⲉⲓⲇ ⲛⲧⲁϥⲛⲟⲩϫⲉ ⲙⲡϩⲱⲕ ⲛⲥⲁⲟⲩⲗ ⲉⲃⲟⲗ ⲙⲙⲟϥ ϩⲛϩⲓⲟⲙⲉ ⲛⲉⲛⲧⲁⲩⲉⲓ ⲉⲃⲟⲗϩⲏⲧϥ ⲙⲡⲉⲧⲙⲙⲁⲩ ⲉⲩⲭⲟⲣⲉⲩⲉ ⲉϫⲉⲛⲧⲉϥ**ϭⲓⲛϫⲣⲟ** ⲉⲡⲁⲗⲗⲟⲫⲩⲗⲟⲥ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲉⲛⲧⲉϥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲭⲟⲣⲉⲩⲉ",
+        1,
+        17.428
+      ],
+      [
+        "ⲁⲗⲗⲟⲫⲩⲗⲟⲥ",
+        1,
+        12.884
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛϫⲣⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9662,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7343",
+      "label": "ϫⲉⲙϫⲱⲣⲓ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7339",
+      "label": "ϫⲟⲟⲣ",
+      "pos": "VSTAT",
+      "gloss": "be strong, hard, bold"
+    },
+    {
+      "target": "C7332",
+      "label": "ϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be or become strong, firm; be or become victorious; confirm, strengthen; goad; defeat"
+    },
+    {
+      "target": "C7333",
+      "label": "ϫⲣⲟ",
+      "pos": "N",
+      "gloss": "strength; victory; health"
+    },
+    {
+      "target": "C7340",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "power, strength"
+    },
+    {
+      "target": "C7341",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strong, powerful"
+    },
+    {
+      "target": "C7344",
+      "label": "ϭⲉⲡϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7348",
+      "label": "ϯϫⲣⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "encourage, console"
+    },
+    {
+      "target": "C7335",
+      "label": "ⲁⲧϫⲣⲟ",
+      "pos": "N",
+      "gloss": "unconquerable"
+    },
+    {
+      "target": "C7336",
+      "label": "ⲙⲁⲓϫⲣⲟ",
+      "pos": "N",
+      "gloss": "loving victory"
+    },
+    {
+      "target": "C7345",
+      "label": "ⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strength, prowess, feat"
+    },
+    {
+      "target": "C7334",
+      "label": "ⲣϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be victorious"
+    },
+    {
+      "target": "C7342",
+      "label": "ⲣϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "be strong"
+    },
+    {
+      "target": "C7347",
+      "label": "ⲣⲉϥϫⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "strong man"
+    },
+    {
+      "target": "C7337",
+      "label": "ⲣⲉϥϫⲣⲟ",
+      "pos": "N",
+      "gloss": "victor (epithet of emperors, martyrs)"
+    },
+    {
+      "target": "C7346",
+      "label": "ⲣⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "to gain strength"
+    }
+  ]
+}

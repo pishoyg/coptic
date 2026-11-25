@@ -1,0 +1,44 @@
+{
+  "id": "C7951",
+  "forms": [
+    {
+      "id": "CF17968",
+      "orth": "ⲁⲧϫⲱⲧϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8836",
+      "bibliography": "CD 834b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7952",
+      "label": "ϭⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "hole"
+    },
+    {
+      "target": "C7949",
+      "label": "ϭⲱⲧϩ",
+      "pos": "V",
+      "gloss": "wound, injure; pierce"
+    },
+    {
+      "target": "C7950",
+      "label": "ϭⲱⲧϩ",
+      "pos": "N",
+      "gloss": "hole, pierced place, wound"
+    }
+  ]
+}

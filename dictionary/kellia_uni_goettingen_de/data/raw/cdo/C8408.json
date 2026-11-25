@@ -1,0 +1,175 @@
+{
+  "id": "C8408",
+  "forms": [
+    {
+      "id": "CF19587",
+      "orth": "ⲁⲡⲟⲫⲁⲛⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19588",
+      "orth": "ⲁⲡⲟⲫⲁⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13634,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF19589",
+      "orth": "ⲁⲡⲟⲫⲁⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19590",
+      "orth": "ⲁⲡⲱⲫⲁⲛⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9719",
+      "bibliography": "DDGLC",
+      "cu_ID": "6921"
+    },
+    {
+      "id": "CS9720",
+      "bibliography": "DDGLC",
+      "cu_ID": "10881"
+    },
+    {
+      "id": "CS9721",
+      "bibliography": "DDGLC",
+      "cu_ID": "4016"
+    },
+    {
+      "id": "CS9722",
+      "bibliography": "DDGLC",
+      "cu_ID": "10059"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛ ⲧⲉⲓϩⲉ ⲁϥϣⲱⲡⲉ ⲉϥⲙⲟⲟϣⲉ ⲉϫⲛϩⲏⲧϥ · ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲡⲁⲉⲓⲱⲧ **ⲁⲡⲟⲫⲁⲛⲉ** ⲉϫⲱϥ ·",
+      "english": "It was in this way that the serpent came to walk upon his belly, according to what my Father decreed for him.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        9.626
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲁⲡⲟⲫⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲁⲡⲟⲫⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲫⲁⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲁⲡⲟⲫⲁⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲁⲡⲟⲫⲁⲛⲉ",
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_1_pre_ⲁⲡⲟⲫⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲁⲡⲟⲫⲁⲛⲉ",
+          "ⲁⲡⲟⲫⲁⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲫⲁⲛⲉ_0_node",
+          "ⲉϫⲱ_1_post_ⲁⲡⲟⲫⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲁⲡⲟⲫⲁⲛⲉ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13233,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "253",
+    "grl_lemma": "ἀποφαίνω",
+    "grl_meaning": "to show forth",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 225b; Preisigke 1:199"
+  }
+}

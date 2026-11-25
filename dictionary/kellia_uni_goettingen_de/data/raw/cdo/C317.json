@@ -1,0 +1,97 @@
+{
+  "id": "C317",
+  "forms": [
+    {
+      "id": "CF1360",
+      "orth": "ⲃ︦",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1361",
+      "orth": "ⲃ︦",
+      "dialect": "F"
+    },
+    {
+      "id": "CF1362",
+      "orth": "ⲃ︦",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.98,
+        "rank": 205,
+        "count": 507
+      }
+    },
+    {
+      "orth": "ⲃ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2319,
+        "count": 23
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "zweiter Buchstabe des Alphabeths ⲃⲏⲧⲁ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS350",
+      "bibliography": "CD 27a; KoptHWb 19; DELC 24; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲛϫⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲫⲙⲁϩⲥⲟⲡ ⲃ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲙⲡⲓⲥⲁϫⲓ ⲙⲫⲣⲏϯ ⲉⲧⲁϥϫⲟⲥ ⲛⲁϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲙⲡⲁⲧⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲟⲩϯ ⲛⲥⲟⲡ **ⲃ** ⲭⲛⲁϫⲟⲗⲧ ⲉⲃⲟⲗ ⲛⲅ ⲛⲥⲟⲡ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲓⲧⲟⲧϥ ⲁϥⲣⲓⲙⲓ .",
+      "english": "The rooster crowed the second time. Peter remembered the word, how that Jesus said to him, 'Before the rooster crows twice, you will deny me three times.' When he thought about that, he wept.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲗⲕⲁⲑⲁ ⲁⲩⲱ ⲥⲉ**ⲃ** ⲃⲉⲧⲟⲛ ⲁⲩⲱ ⲃⲁⲗⲁⲁⲛ",
+      "english": "and Alcatha, and Begethon, and Gebeelan,",
+      "source": "Joshua 19",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲯⲩⲭⲏ ⲅⲁⲣ ⲉⲧⲉⲣⲁⲥⲕⲓⲛ ⲉⲡⲭⲣⲓⲥⲧⲟⲥ ϩⲱϯ ⲉⲣⲟⲥ ⲡⲉ ⲛⲧⲉⲥϭⲓⲥⲃⲱ ϧⲉⲛⲟⲩⲕⲁϯ ⲉⲛⲏ ⲉⲧⲉⲥⲉⲙⲓ ⲉⲣⲱⲟⲩ ⲁⲛ ⲥⲉ ⲛⲧⲉⲥϭⲓⲥⲃⲱ ⲛⲑⲟϥ ⲉⲛⲏ ⲉⲧⲁⲥⲟⲩⲱ ⲉⲙⲓ ⲉⲣⲱⲟⲩ ϧⲉⲛⲟⲩⲧⲁϫⲣⲟ ⲉϣⲱⲡ ⲥⲟⲩⲱϣ ⲁⲛ ⲉⲉⲣⲟⲩⲁⲓ ϧⲉⲛⲡⲁⲓ**ⲃ** ⲁⲣⲓⲉⲙⲓ ϫⲉⲉⲥϣⲱⲛⲓ ϧⲉⲛⲟⲩⲗⲓⲃⲓ",
+      "english": "For the soul that practices asceticism in Christ and does not know how to be taught with understanding or to teach what it has firmly learned should be understood to be suffering from madness.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧϩⲟⲟⲩ ⲇⲉ ⲛϩⲏⲧⲟⲩ ⲉⲧⲉⲛϥⲣϣⲁⲩ ⲁⲛ ⲉⲗⲁⲁⲩ ⲡϣⲉ ⲉⲧϭⲟⲟⲙⲉ ⲉⲧⲣⲏⲧ ⲉⲃⲟⲗ ⲛⲉⲓ**ⲃ** ⲁϥϫⲓⲧϥ ⲁϥⲙⲟⲛⲅϥ ϩⲙⲡⲣⲟⲟⲩϣ ⲛⲧⲉϥⲉⲓⲟⲡⲉ ⲁϥⲧⲁⲙⲓⲟϥ ϩⲓⲧⲛⲧⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲛⲧⲉϥⲥⲃⲱ ⲁϥⲧⲛⲧⲱⲛϥ ⲉⲩϩⲓⲕⲱⲛ ⲛⲣⲱⲙⲉ",
+      "english": "And taking the very refuse among those which served to no use, being a crooked piece of wood, and full of knots, hath carved it diligently, when he had nothing else to do, and formed it by the skill of his understanding, and fashioned it to the image of a man;",
+      "source": "Wisdom 13",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲉⲡⲓⲓⲃ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛⲟⲩⲟⲣⲡⲟⲩ ⲛⲃ **ⲃ** ⲟⲩⲟϩ ⲁϥϯⲉⲣϣⲓϣⲓ ⲛⲱⲟⲩ ⲉϫⲉⲛⲛⲓⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ",
+      "english": "He called to himself the twelve, and began to send them out two by two; and he gave them authority over the unclean spirits.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲛϭⲓⲛϣⲏⲣⲉ ⲛⲁⲙⲙⲱⲛ ϫⲉⲁⲩϫⲓϣⲓⲡⲉ ⲛϭⲓⲛⲁⲡⲗⲁⲟⲥ ⲛⲇⲁⲩⲉⲓⲇ ⲁⲩϫⲟⲟⲩ ⲛϭⲓⲛϣⲏⲣⲉ ⲛⲁⲙⲙⲱⲛ ⲁⲩⲙⲓⲥⲑⲟⲩ ⲛⲧⲥⲩⲣⲓⲁ ⲙⲛϩⲣⲱⲟ**ⲃ** ⲉⲩⲛⲁⲣⲧⲃⲁ ⲥⲛⲁⲩ ⲛⲣⲙⲣⲁⲧⲟⲩ ⲁⲩⲱ ⲡⲣⲣⲟ ⲙⲙⲁⲁⲭⲁ ⲉⲩⲛⲁⲣⲙⲛⲧⲏ ⲛϣⲉ ⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲛⲁⲉⲓⲥⲧⲱϥ ⲉⲩⲛⲁⲣⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛϣⲉ ⲛⲣⲱⲙⲉ",
+      "english": "And the children of Ammon saw that the people of David were ashamed; and the children of Ammon sent, and hired the Syrians of Baethraam, and the Syrians of Suba, and Roob, twenty thousand footmen, and the king of Amalec with a thousand men, and Istob with twelve thousand men.",
+      "source": "II Samuel 10",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

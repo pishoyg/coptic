@@ -1,0 +1,579 @@
+{
+  "id": "C6216",
+  "forms": [
+    {
+      "id": "CF14442",
+      "orth": "ϣⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 28.34,
+        "rank": 50,
+        "count": 4472
+      }
+    },
+    {
+      "orth": "ⲥⲁϫⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 32.11,
+        "rank": 43,
+        "count": 2723
+      }
+    },
+    {
+      "orth": "ϣⲉϫⲉ",
+      "dialect": "A",
+      "id": "36.1"
+    },
+    {
+      "orth": "ϣⲉϫⲓ",
+      "dialect": "F",
+      "id": "36.2"
+    },
+    {
+      "orth": "ⲥⲉϫⲓ",
+      "dialect": "F",
+      "id": "36.3"
+    },
+    {
+      "orth": "ϣⲉϫⲉ",
+      "dialect": "L",
+      "id": "36.4"
+    },
+    {
+      "orth": "ⲥⲉϫⲉ",
+      "dialect": "L",
+      "id": "36.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6903",
+      "bibliography": "CD 612b-615a; CED 263; KoptHWb 341; DELC 278a; ChLCS 84a-b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲙⲡⲣⲧⲁϩⲛⲟ ⲙⲙⲟϥ ⲙⲙⲟⲛ ϩⲗⲓ ⲅⲁⲣ ⲫⲏ ⲉⲑⲛⲁⲓⲣⲓ ⲛⲟⲩϫⲟⲙ ⲉϫⲉⲛⲡⲁⲣⲁⲛ ⲟⲩⲟϩ ⲛⲧⲉϥϣϫⲉⲙϫⲟⲙ ⲛⲭⲱⲗⲉⲙ ⲉ**ⲥⲁϫⲓ** ⲉϥϩⲱⲟⲩ ϧⲁⲣⲟⲓ .",
+      "english": "But Jesus said, 'Don't forbid him, for there is no one who will do a mighty work in my name, and be able quickly to speak evil of me.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓ**ϣⲁϫⲉ** · ⲉⲧⲥⲩⲛⲁⲅⲱⲅⲏ ⲛⲛⲓⲟⲩⲇⲁⲓ",
+      "english": "I speak of the synagogue of the Jews,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲟⲩⲉⲛⲑⲏⲛⲟⲩ ⲉⲩϯ ⲙⲙⲱⲧⲉⲛ ⲙⲡⲣⲉⲣ=ϣⲟⲣⲡ ⲛϥⲓⲣⲱⲟⲩϣ ϫⲉⲟⲩ ⲡⲉⲧⲉⲧⲉⲛⲛⲁ**ⲥⲁϫⲓ** ⲙⲙⲟϥ ⲁⲗⲗⲁ ⲡⲉⲧⲟⲩⲛⲁⲧⲏⲓϥ ⲛⲱⲧⲉⲛ ϧⲉⲛϯⲟⲩⲛⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲫⲁⲓ ⲡⲉⲧⲉⲧⲉⲛⲛⲁⲥⲁϫⲓ ⲙⲙⲟϥ ⲛⲑⲱⲧⲉⲛ ⲅⲁⲣ ⲁⲛ ⲡⲉⲧⲛⲁⲥⲁϫⲓ ⲁⲗⲗⲁ ⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲃ ⲡⲉ .",
+      "english": "When they lead you away and deliver you up, don't be anxious beforehand, or premeditate what you will say, but say whatever will be given you in that hour. For it is not you who speak, but the Holy Spirit.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲁ ⲟⲩⲱϣ ⲉ**ϣⲁϫⲉ** ⲉⲣⲟϥ · ϥⲛⲁϫⲟⲟⲥ",
+      "english": "If one wants to speak about him, one would say",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲥⲟⲫⲓⲁ ⲇⲉ ⲡⲉⲧⲉⲛ**ⲥⲁϫⲓ** ⲙⲙⲟⲥ ϧⲉⲛⲛⲏ ⲉⲧϫⲏⲕ ⲉⲃⲟⲗ ⲟⲩⲥⲟⲫⲓⲁ ⲇⲉ ⲛⲑⲁⲡⲁⲓⲉⲛⲉϩ ⲁⲛ ⲧⲉ ⲟⲩⲇⲉ ⲛⲑⲁⲛⲓⲁⲣⲭⲱⲛ ⲁⲛ ⲛⲧⲉⲡⲁⲓⲉⲛⲉϩ ⲛⲁⲓ ⲉⲑⲛⲁⲕⲱⲣϥ .",
+      "english": "We speak wisdom, however, among those who are full grown; yet a wisdom not of this world, nor of the rulers of this world, who are coming to nothing.",
+      "source": "Bohairic 1 Corinthians 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲟⲛ ⲛⲥ**ϣⲁϫⲉ** ⲁⲛ ⲛⲧⲉϥϩⲉ",
+      "english": "nor does it speak like him.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡ",
+        1067,
+        35.797
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1109,
+        35.425
+      ],
+      [
+        "ⲛⲉⲙ",
+        773,
+        35.026
+      ],
+      [
+        "ⲁ",
+        967,
+        34.742
+      ],
+      [
+        "ϥ",
+        1083,
+        34.667
+      ],
+      [
+        "ⲛⲉⲙⲱ",
+        240,
+        34.644
+      ],
+      [
+        "ⲛⲧⲉ",
+        705,
+        34.451
+      ],
+      [
+        "ⲛⲉⲙⲁ",
+        269,
+        34.308
+      ],
+      [
+        "ⲉ",
+        857,
+        34.247
+      ],
+      [
+        ".",
+        675,
+        33.813
+      ],
+      [
+        "ⲛ",
+        854,
+        33.805
+      ],
+      [
+        "ⲟⲩ",
+        814,
+        33.761
+      ],
+      [
+        "ⲙ",
+        607,
+        33.32
+      ],
+      [
+        "ϭⲟⲉⲓⲥ",
+        255,
+        33.271
+      ],
+      [
+        "ⲡⲓ",
+        567,
+        33.212
+      ],
+      [
+        "ⲓ",
+        460,
+        33.112
+      ],
+      [
+        "ⲉⲧ",
+        444,
+        32.635
+      ],
+      [
+        "ϫⲉ",
+        429,
+        32.371
+      ],
+      [
+        "ⲫ",
+        379,
+        32.262
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        271,
+        32.144
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        681,
+        36.706
+      ],
+      [
+        "ⲛ",
+        2792,
+        26.023
+      ],
+      [
+        "ϥ",
+        2352,
+        25.994
+      ],
+      [
+        "ⲡ",
+        2290,
+        25.854
+      ],
+      [
+        "ⲙ",
+        1727,
+        25.487
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        661,
+        25.449
+      ],
+      [
+        "ⲉ",
+        1784,
+        25.093
+      ],
+      [
+        "ⲁ",
+        1436,
+        24.381
+      ],
+      [
+        "ⲟⲩ",
+        1309,
+        24.156
+      ],
+      [
+        "ϩⲛ",
+        791,
+        23.235
+      ],
+      [
+        "ⲛⲉⲓ",
+        302,
+        23.056
+      ],
+      [
+        "ⲓ",
+        668,
+        22.875
+      ],
+      [
+        ".",
+        679,
+        22.652
+      ],
+      [
+        "ⲛⲁ",
+        809,
+        22.542
+      ],
+      [
+        "ⲛⲙⲙⲏ",
+        161,
+        22.464
+      ],
+      [
+        "ⲉⲧ",
+        664,
+        22.237
+      ],
+      [
+        "ⲕ",
+        536,
+        21.924
+      ],
+      [
+        "ⲁⲩⲱ",
+        681,
+        21.855
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        301,
+        21.844
+      ],
+      [
+        "ⲧⲏⲣ",
+        413,
+        21.807
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁϫⲉ_0_node",
+          1213
+        ],
+        [
+          "ⲡ_1_pre_ϣⲁϫⲉ",
+          144
+        ],
+        [
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          138
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          138
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          114
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲁϫⲉ",
+          46
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          44
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          44
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          70
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          70
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          70
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          88
+        ],
+        [
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          62
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲁϫⲉ",
+          41
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲁϫⲉ",
+          38
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲁϫⲉ",
+          55
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲁϫⲉ",
+          28
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲁϫⲉ",
+          28
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲁϫⲉ",
+          25
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          24
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁϫⲉ",
+          16
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ϣⲁϫⲉ_0_node",
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 28.18,
+      "rank": 45,
+      "count": 4472
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6217",
+      "label": "ϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "saying, word, affair"
+    },
+    {
+      "target": "C6223",
+      "label": "ϭⲓⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speech, saying, tale"
+    },
+    {
+      "target": "C6220",
+      "label": "ⲁⲧϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speechless, unspeakable"
+    },
+    {
+      "target": "C6218",
+      "label": "ⲛⲉϫϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "cast in word, make mention"
+    },
+    {
+      "target": "C6219",
+      "label": "ⲣϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "make agreement"
+    },
+    {
+      "target": "C6221",
+      "label": "ⲣⲉϥϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speaker"
+    },
+    {
+      "target": "C6222",
+      "label": "ⲥⲁ ⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "man of words, babbler"
+    }
+  ],
+  "etym": {
+    "egy_num": "150940",
+    "egy_lemma": "sḏd",
+    "demo_num": "d5785",
+    "demo_lemma": "sḏj",
+    "english": "to recount; to talk",
+    "german": "erzählen; sprechen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/150940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5785"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "C7808",
+  "forms": [
+    {
+      "id": "CF17681",
+      "orth": "ϭⲁⲛⲟϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8678",
+      "bibliography": "DELC 343a; ChLCS 108b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7805",
+      "label": "ϭⲁⲛⲁϩ",
+      "pos": "N",
+      "gloss": "lame, frail person, cripple"
+    },
+    {
+      "target": "C7806",
+      "label": "ϭⲁⲛⲁϩ",
+      "pos": "N",
+      "gloss": "lame, crooked, crippled, weak; left"
+    },
+    {
+      "target": "C7807",
+      "label": "ⲣϭⲁⲛⲁϩ",
+      "pos": "V",
+      "gloss": "become lame"
+    }
+  ]
+}

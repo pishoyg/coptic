@@ -1,0 +1,66 @@
+{
+  "id": "C765",
+  "forms": [
+    {
+      "id": "CF2837",
+      "orth": "ⲉϣⲟ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2838",
+      "orth": "ϣⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.35,
+        "rank": 408,
+        "count": 199
+      }
+    },
+    {
+      "id": "CF2839",
+      "orth": "ϣⲁ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS907",
+      "bibliography": "CD 63a; CED 40; KoptHWb 43, 501; DELC 49"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C768",
+      "label": "ϣⲉ",
+      "pos": "N",
+      "gloss": "pig"
+    },
+    {
+      "target": "C766",
+      "label": "ⲉϣⲱ",
+      "pos": "N",
+      "gloss": "a skin disease"
+    },
+    {
+      "target": "C767",
+      "label": "ⲉϣⲱ",
+      "pos": "N",
+      "gloss": "sow"
+    }
+  ],
+  "etym": {
+    "egy_num": "142820",
+    "egy_lemma": "sḫr",
+    "english": "chaff (?)",
+    "german": "Abfall (von Feldfrüchten)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/142820"
+  }
+}

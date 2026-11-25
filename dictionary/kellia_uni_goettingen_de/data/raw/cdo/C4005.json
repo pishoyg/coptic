@@ -1,0 +1,75 @@
+{
+  "id": "C4005",
+  "forms": [
+    {
+      "id": "CF9953",
+      "orth": "ⲧⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 20.34,
+        "rank": 69,
+        "count": 3209
+      }
+    },
+    {
+      "orth": "ⲧⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 16.2,
+        "rank": 85,
+        "count": 1374
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS4549",
+      "bibliography": "CD 390a; CED 177; KoptHWb 216; DELC 208; ChLCS 55a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉϯⲥⲟⲡⲥⲡ ⲙⲙⲟ **ⲧⲁ**ϫⲟⲉⲓⲥ ϫⲉⲉϣⲱⲡⲉ ϣⲁⲣⲃⲁⲃⲱⲱⲧ ϫⲉⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲛϭⲱⲃ ⲁⲗⲗⲁ ⲁⲣⲓⲥ ⲛⲙⲙⲁⲓ ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ ⲛⲧⲉⲕⲁⲧⲁⲝⲓⲟⲩ ⲙⲙⲟ ⲛⲧⲉⲉⲓ ϣⲁⲣⲟⲓ ⲉⲡⲉⲓⲙⲁ · ϫⲉⲟⲩⲛⲧⲁⲓ ⲟⲩϣⲁϫⲉ ⲉϫⲟⲟϥ ⲉⲣⲟ ·",
+      "english": "saith : 'I beseech thee, my lady, even though thou dost loathe me because I am sick and diseased, yet grant unto me that for which I ask, for God's sake, and consider it worth thy while to come to me in the place where I am, for I have a matter to declare unto thee.'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ϩⲙⲡⲧⲣⲉⲡⲛⲩⲙⲫⲓⲟⲥ ⲑⲉⲱⲣⲉⲓ ⲙⲡⲥⲁ ⲛⲧⲉⲯⲩⲭⲏ ⲉϥⲉϫⲟⲟⲥ ϫⲉⲛⲁⲛⲟⲩ ⲧⲏⲣⲉ**ⲧⲁ**ϣⲃⲉⲉⲣⲉ ⲁⲩⲱ ⲙⲛⲗⲁⲁⲩ ⲛϫⲃⲓⲛ ⲛϩⲏⲧⲉ ·",
+      "english": "so that when the Bridesgroom looketh upon the beauty of the soul He shall say, 'Though art wholly beautiful , my love, and there is not blemesh in thee.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ . ϫⲉⲉⲓⲟⲩⲱϣ ⲉⲧⲟⲩϫⲉ**ⲧⲁ**ⲯⲩⲭⲏ .",
+      "english": "…he saying, “I desire to save my soul.”",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2353",
+      "type": "cf",
+      "label": "possessive article pl."
+    },
+    {
+      "target": "C2784",
+      "type": "cf",
+      "label": "possessive article sg. m."
+    }
+  ]
+}

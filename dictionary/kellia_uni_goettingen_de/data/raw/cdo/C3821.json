@@ -1,0 +1,373 @@
+{
+  "id": "C3821",
+  "forms": [
+    {
+      "id": "CF9567",
+      "orth": "ⲣⲉϥⲥⲱⲧⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3191,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4336",
+      "bibliography": "CD 364b; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲥⲏϩ ⲅⲁⲣ ϫⲉⲉϣⲱⲡⲉ ⲛⲣⲉϥⲉⲓⲣⲉ ⲙⲡϣⲁϫⲉ ⲁⲩⲱ ⲛ**ⲣⲉϥⲥⲱⲧⲙ** ⲙⲙⲁⲧⲉ ⲁⲛ ⲙⲙⲟⲛ ⲉⲕⲣϩⲁⲗ ⲙⲙⲟⲕ ⲡⲁϣⲏⲣⲉ · ϩⲙⲡϫⲟⲉⲓⲥ ⁛—",
+      "english": "For it is written, 'If [thou art] a doer of the word and not a hearer thereof thou deceivest thyself, my son, in the Lord.'",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁϥ ⲡⲣⲉϥϫⲓⲟⲩⲁ ⲡⲉ · ⲡϩⲟⲟⲩ ⲇⲉ ⲡ**ⲣⲉϥⲥⲱⲧⲙ** ⲡⲉ ·",
+      "english": "Yesterday it was the blasphemer, to-day it is the man of obedience.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲱⲡⲉ ⲇⲉ ⲛⲣⲉϥⲉⲓⲣⲉ ⲙⲡϣⲁϫⲉ ⲁⲩⲱ ⲛ**ⲣⲉϥⲥⲱⲧⲙ** ⲙⲙⲁⲧⲉ ⲁⲛ ⲉⲧⲉⲧⲛⲡⲗⲁⲛⲁ ⲙⲙⲱⲧⲛ",
+      "english": "But be doers of the word, and not only hearers, deluding your own selves.",
+      "source": "59_James_1",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲛⲁⲩ",
+        1,
+        17.013
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        4,
+        14.77
+      ],
+      [
+        "ⲙⲙⲁⲧⲉ",
+        3,
+        13.729
+      ],
+      [
+        "ⲕⲁⲧⲁⲗⲁⲗⲓⲁ",
+        1,
+        12.258
+      ],
+      [
+        "ⲡ",
+        13,
+        12.013
+      ],
+      [
+        "ⲧ",
+        9,
+        11.996
+      ],
+      [
+        "·",
+        3,
+        11.348
+      ],
+      [
+        "ⲛ",
+        13,
+        11.325
+      ],
+      [
+        "ⲥⲁϥ",
+        1,
+        11.18
+      ],
+      [
+        "ϩⲣϣⲓⲣⲉ",
+        1,
+        10.969
+      ],
+      [
+        "ϣⲁϫⲉ",
+        4,
+        10.886
+      ],
+      [
+        "ⲧⲁⲣ",
+        1,
+        10.327
+      ],
+      [
+        "ϩⲉ",
+        4,
+        10.142
+      ],
+      [
+        "ϩⲛⲁ",
+        1,
+        9.947
+      ],
+      [
+        "ⲥⲁⲃⲉ",
+        1,
+        9.718
+      ],
+      [
+        "ⲉ",
+        7,
+        9.654
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        9.298
+      ],
+      [
+        "ⲙ",
+        5,
+        8.732
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        7.541
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        7.482
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲱⲧⲙ_0_node",
+          9
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲗⲁⲗⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲧⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲥⲱⲧⲙ_0_node",
+          "ⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ⲕⲁⲧⲁⲗⲁⲗⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲣⲉϥⲥⲱⲧⲙ_0_node",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲇⲉ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲡ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲣⲉϥⲥⲱⲧⲙ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲱⲧⲙ_0_node",
+          "ⲙⲙⲁⲧⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲧⲉ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲁⲛ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲙⲙⲟ_1_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2837,
+      "count": 12
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3823",
+      "label": "ϭⲓⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, report"
+    },
+    {
+      "target": "C3825",
+      "label": "ⲁⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "disobedient"
+    },
+    {
+      "target": "C3816",
+      "label": "ⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "unhearing, disobedient"
+    },
+    {
+      "target": "C3819",
+      "label": "ⲙⲁⲓⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "loving to hear, to obey"
+    },
+    {
+      "target": "C3817",
+      "label": "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "disobedience"
+    },
+    {
+      "target": "C3822",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3826",
+      "label": "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3820",
+      "label": "ⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "place of hearing, music room"
+    },
+    {
+      "target": "C3818",
+      "label": "ⲣⲁⲧⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "be disobedient"
+    },
+    {
+      "target": "C3827",
+      "label": "ⲣⲥⲧⲙⲏⲧ",
+      "pos": "V",
+      "gloss": "be obedient"
+    },
+    {
+      "target": "C3824",
+      "label": "ⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedient"
+    },
+    {
+      "target": "C3812",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "hear"
+    },
+    {
+      "target": "C3815",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, obedience"
+    },
+    {
+      "target": "C3813",
+      "label": "ⲥⲱⲧⲙ (ⲛ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    },
+    {
+      "target": "C3814",
+      "label": "ⲥⲱⲧⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    }
+  ]
+}

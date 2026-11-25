@@ -1,0 +1,201 @@
+{
+  "id": "C9331",
+  "forms": [
+    {
+      "id": "CF23460",
+      "orth": "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23461",
+      "orth": "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7260,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11705",
+      "bibliography": "DDGLC",
+      "cu_ID": "2100"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲉϣϫⲉ ⲟⲩⲡⲉⲧⲉϣϣⲉ ⲁⲛ ⲡⲉⲛⲧⲁⲓⲁⲁϥ ϫⲉⲁⲓⲡⲁⲣⲁⲇⲓⲅⲙⲁⲧⲓⲍⲉ ⲛϩⲉⲛⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ . ⲉⲓⲉ ⲟⲩ**ⲕⲁⲧⲁⲕⲣⲓⲙⲁ** ⲛⲁⲕ ⲛⲟⲩⲏⲣ ⲡⲉ ϫⲉⲕⲡⲁⲣⲁⲃⲁ ϩⲙⲡⲉϩⲙⲉ ⲛϩⲟⲟⲩ ,",
+      "english": "if what I did is not right because I made an example of idol worshippers, then how much of a condemnation is it for you that you transgressed in the 40 Days,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲙⲟⲧ",
+        1,
+        11.629
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        9.071
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        7.049
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ",
+        2,
+        18.598
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        2,
+        15.418
+      ],
+      [
+        "ⲉⲓⲉ",
+        2,
+        13.576
+      ],
+      [
+        "ⲕ",
+        2,
+        8.853
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϩⲙⲟⲧ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲧ_1_post_ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_5_post_ⲙⲏϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ϩⲙⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+          "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ_0_node",
+          "ⲡⲓ_2_post_ϩⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϩⲙⲟⲧ",
+          "ϩⲙⲟⲧ_1_post_ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲧ_1_post_ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+          "ⲇⲉ_5_post_ⲙⲏϣ",
+          1
+        ],
+        [
+          "ⲇⲉ_5_post_ⲙⲏϣ",
+          "ⲉⲃⲟⲗ_2_post_ϩⲙⲟⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6809,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2973",
+    "grl_lemma": "κατάκριμα",
+    "grl_meaning": "condemnation, judgement",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 896a; Preisigke 1:752"
+  }
+}

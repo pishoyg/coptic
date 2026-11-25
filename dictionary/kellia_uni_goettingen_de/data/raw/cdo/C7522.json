@@ -1,0 +1,554 @@
+{
+  "id": "C7522",
+  "forms": [
+    {
+      "id": "CF17103",
+      "orth": "ϫⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.12,
+        "rank": 331,
+        "count": 493
+      }
+    },
+    {
+      "orth": "ϫⲁϫⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.11,
+        "rank": 331,
+        "count": 264
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8340",
+      "bibliography": "CD 799b; CED 323-324; KoptHWb 441; DELC 333-334; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲱⲫⲏ ⲉⲑⲙⲉϩ ⲛⲭⲣⲟϥ ⲛⲓⲃⲉⲛ ⲛⲉⲙⲡⲉⲧϩⲱⲟⲩ ⲛⲓⲃⲉⲛ ⲡϣⲏⲣⲓ ⲛⲧⲉⲡⲓⲇⲓⲁⲃⲟⲗⲟⲥ ⲡⲓ**ϫⲁϫⲓ** ⲛⲧⲉⲑⲙⲏⲓ ⲛⲓⲃⲉⲛ ⲛⲕⲭⲱ ⲛⲧⲟⲧⲕ ⲉⲃⲟⲗ ⲁⲛ ⲉⲕⲫⲱⲛϩ ⲛⲛⲓⲙⲱⲓⲧ ⲉⲧⲥⲟⲩⲧⲱⲛ ⲛⲧⲉⲡϭⲟⲓⲥ .",
+      "english": "and said, 'Full of all deceit and all cunning, you son of the devil, you enemy of all righteousness, will you not cease to pervert the right ways of the Lord?",
+      "source": "05_Acts_13",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ϫⲁϫⲉ** ⲡⲉ ⲛⲣⲱⲙⲉ ⲛⲓⲙ · ⲡⲉⲓⲑⲏⲣⲓⲟⲛ ⲉⲧϩⲟⲟⲩ ⲛⲣⲉϥⲙⲉⲩⲧⲯⲩⲭⲏ · ⲡⲉⲓϩⲁⲗⲏⲧ ⲛⲣⲉϥⲧⲱⲣⲡ · ⲡⲉⲓϩⲟϥ ⲛⲣⲉϥⲗⲱⲕⲥ · ⲡⲕⲱϩⲧ ⲛⲣⲉϥⲣⲱⲕϩ · ⲡⲉⲓⲥⲟⲟⲛⲉ ⲛⲣⲉϥⲥⲩⲗⲁ ⲛⲛⲉⲯⲩⲭⲏ · ⲧⲏⲣⲟⲩ · ⲡⲛⲟⲃⲉ ⲡⲉⲓⲃⲁⲣⲃⲁⲣⲟⲥ ⲛⲣⲉϥϩⲱⲧⲃ · ⲡⲉⲓⲗⲏⲙⲏⲛ ⲉⲧϣⲧⲣⲧⲱⲣ ·",
+      "english": "It is the Enemy of every man, this evil beast which slayeth the soul, this bird which snatcheth greedily at its prey, this serpent which biteth, this fire which blazeth fiercely, this thief who carrieth off all souls (into) sin, this murderous barbarian, this troubled pool,",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ⲛϫⲉⲉⲇⲱⲙ ⲉⲟⲩⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ⲛϫⲉϯⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛⲏⲥⲁⲩ ⲡⲉϥ**ϫⲁϫⲓ** ⲟⲩⲟϩ ⲡⲓⲥⲣⲁⲏⲗ ⲁϥⲓⲣⲓ ϧⲉⲛⲟⲩϫⲟⲙ",
+      "english": "And Edom shall be an inheritance, and Esau his enemy shall be an inheritance of Israel, and Israel wrought valiantly.",
+      "source": "04_Numeri_24",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲧⲏⲣⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ⲁⲩⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛⲛⲉⲩϭⲓϫ ϩⲓϫⲛⲧⲁⲡⲉ ⲛⲓⲱϩⲁⲛⲛⲏⲥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲉⲣⲉⲛⲉϣⲗⲏⲗ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲛⲁⲙⲟⲟϣⲉ ⲛⲙⲙⲁⲕ · ⲉⲧⲣⲉⲕϩⲱⲙ ⲉϫⲛⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡ**ϫⲁϫⲉ** ⁛—",
+      "english": "And they all together spread out their hands on the head of John, saying, The prayers of the saints shall go with thee, and shall make thee to tread upon all the power of the Enemy.'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲥⲉⲉⲣϫⲓⲛⲓⲟⲣ ⲙⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ ⲛϫⲉⲡⲟⲗⲓⲧⲏⲥ ⲛⲓⲃⲉⲛ ⲛⲧⲱⲧⲉⲛ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ ϣⲁⲧⲉϥϥⲱϯ ⲉⲃⲟⲗ ⲛϫⲉⲡⲉϥ**ϫⲁϫⲓ** ⲉⲃⲟⲗ ϩⲁⲡⲉϥϩⲟ",
+      "english": "and every one of you will pass over Jordan fully armed before the Lord, until his enemy be destroyed from before his face,",
+      "source": "04_Numeri_32",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲡ**ϫⲁϫⲉ** ⲙⲉⲛ ⲡⲱⲧ ⲉⲃⲟⲗ ⲙⲡⲉⲧⲛⲏⲫⲉ ⲛϥⲥⲩⲗⲁ ϩⲱⲱϥ ⲙⲡⲉⲧⲛⲕⲟⲧⲕ :",
+      "english": "Now the Enemy is in the habit of taking to flight before him that is prudent (or, cautious), but help undereth him that slumbereth.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲕ",
+        45,
+        26.091
+      ],
+      [
+        "ⲟⲩ",
+        134,
+        25.952
+      ],
+      [
+        "ⲛ",
+        131,
+        25.691
+      ],
+      [
+        "ⲁ",
+        119,
+        25.674
+      ],
+      [
+        ".",
+        99,
+        25.504
+      ],
+      [
+        "ⲡ",
+        88,
+        24.998
+      ],
+      [
+        "ϭⲟϫⲓ",
+        20,
+        24.655
+      ],
+      [
+        "ⲛⲁ",
+        75,
+        24.641
+      ],
+      [
+        "ϫⲓⲛϯⲟⲩⲱ",
+        3,
+        24.45
+      ],
+      [
+        "ⲧⲏⲣ",
+        44,
+        24.35
+      ],
+      [
+        "ⲛⲉⲛ",
+        28,
+        23.502
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        17,
+        23.411
+      ],
+      [
+        "ⲛϫⲉ",
+        46,
+        23.165
+      ],
+      [
+        "ⲛⲉϥ",
+        28,
+        23.089
+      ],
+      [
+        "ϫⲓϫ",
+        22,
+        22.891
+      ],
+      [
+        "ϣⲟⲩⲓⲧ:",
+        3,
+        22.865
+      ],
+      [
+        "ⲛⲟⲩ",
+        25,
+        22.835
+      ],
+      [
+        "ⲙ",
+        53,
+        22.767
+      ],
+      [
+        "ⲉⲧ",
+        43,
+        22.53
+      ],
+      [
+        "ⲛⲉⲙ",
+        42,
+        22.42
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        17,
+        23.741
+      ],
+      [
+        "ⲛ",
+        393,
+        20.545
+      ],
+      [
+        "ⲛⲁ",
+        181,
+        19.069
+      ],
+      [
+        "ⲉ",
+        207,
+        18.779
+      ],
+      [
+        "ⲡ",
+        216,
+        18.643
+      ],
+      [
+        "ϥ",
+        193,
+        18.18
+      ],
+      [
+        "ⲁⲩⲱ",
+        131,
+        17.728
+      ],
+      [
+        "ⲕ",
+        87,
+        17.062
+      ],
+      [
+        "ⲙ",
+        120,
+        16.953
+      ],
+      [
+        "ⲁ",
+        125,
+        16.823
+      ],
+      [
+        "ⲟⲩ",
+        120,
+        16.822
+      ],
+      [
+        "ⲓ",
+        72,
+        16.241
+      ],
+      [
+        "ⲉⲧ",
+        82,
+        16.192
+      ],
+      [
+        "ⲛⲉⲕ",
+        36,
+        16.177
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        70,
+        15.734
+      ],
+      [
+        "ⲛⲉⲩ",
+        40,
+        15.663
+      ],
+      [
+        "ⲙⲙⲟ",
+        61,
+        15.654
+      ],
+      [
+        "ⲛⲉϥ",
+        40,
+        15.644
+      ],
+      [
+        "ϩⲛ",
+        67,
+        15.558
+      ],
+      [
+        "ϩⲙ",
+        46,
+        14.865
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲁϫⲉ_0_node",
+          355
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲁϫⲉ",
+          55
+        ],
+        [
+          "ⲡ_1_pre_ϫⲁϫⲉ",
+          37
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϫⲁϫⲉ",
+          27
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁϫⲉ",
+          25
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          26
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲁϫⲉ",
+          16
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲁϫⲉ",
+          11
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϫⲁϫⲉ",
+          7
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          14
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          14
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϫⲁϫⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫⲉ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲛⲧⲓⲇⲓⲕⲟⲥ_1_post_ϫⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲁϫⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          "ⲁⲛⲧⲓⲇⲓⲕⲟⲥ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲁϫⲉ",
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.5,
+      "rank": 255,
+      "count": 556
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7521",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enemy"
+    },
+    {
+      "target": "C7523",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "hostile"
+    },
+    {
+      "target": "C7524",
+      "label": "ⲙⲁⲓϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "loving enmity, quarrelsome"
+    },
+    {
+      "target": "C7525",
+      "label": "ⲙⲛⲧϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enmity"
+    },
+    {
+      "target": "C7526",
+      "label": "ⲣϫⲁϫⲉ",
+      "pos": "V",
+      "gloss": "be at enmity, quarrel, argue"
+    }
+  ],
+  "etym": {
+    "egy_num": "650046",
+    "egy_lemma": "ḏrḏr",
+    "demo_num": "d7866",
+    "demo_lemma": "ḏḏ(j)",
+    "english": "stranger; foreigner",
+    "german": "Fremder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/650046",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7866"
+  }
+}

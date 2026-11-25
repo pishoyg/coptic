@@ -1,0 +1,97 @@
+{
+  "id": "C7095",
+  "forms": [
+    {
+      "id": "CF16248",
+      "orth": "ϫⲉⲣⲟ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.39,
+        "rank": 1336,
+        "count": 61
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocPrep": "ⲉ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7828",
+      "bibliography": "CD 755b; CED 310; KoptHWb 413, 431; ChLCS 100b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲛⲟϫⲟⲩ ⲉϩⲣⲁⲓ ⲉⲛϫⲃⲃⲉⲥ ⲉⲧ**ϫⲉⲣⲟ** .",
+      "english": "they were thrown on the burning embers!",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲥⲉ**ϫⲉⲣⲟ** ⲁⲛ ϫⲉⲛⲁⲛⲟⲩⲟⲩ ⲁⲛ",
+      "english": "They do not burn because they are not good...",
+      "source": "I See Your Eagerness: GL 29-30",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_29_30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩϩⲙⲟⲟⲥ ⲇⲉ ϩⲙⲡⲥⲩⲛϩⲉⲇⲣⲓⲟⲛ ⲁⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲟⲩⲉϩⲥⲁϩⲛⲉ ⲉⲧⲣⲉⲩⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲛⲟⲩⲙⲏⲏϣⲉ ⲛϣⲓ ⲁϥⲧⲣⲉⲩⲉⲓⲛⲉ ⲛⲟⲩⲕⲱϩⲧ ⲁϥ**ϫⲉⲣⲱ**ⲟⲩ ·",
+      "english": "And when they had all taken their seats in the council chamber the Archbishop commanded [his servant] to gather together a large quantity of wood, and he made them bring in fire and set light to the wood.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7096",
+      "label": "ϫⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech, claim"
+    },
+    {
+      "target": "C7089",
+      "label": "ϫⲱ",
+      "pos": "V",
+      "gloss": "say, speak, tell; sing"
+    },
+    {
+      "target": "C7091",
+      "label": "ϫⲱ",
+      "pos": "N",
+      "gloss": "singing, song"
+    },
+    {
+      "target": "C7094",
+      "label": "ϭⲓⲛϫⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech"
+    },
+    {
+      "target": "C7090",
+      "label": "ⲁⲧϫⲱ",
+      "pos": "N",
+      "gloss": "ineffable"
+    },
+    {
+      "target": "C7092",
+      "label": "ⲣⲉϥϫⲉ-",
+      "pos": "N",
+      "gloss": "sayer, speaker"
+    },
+    {
+      "target": "C7093",
+      "label": "ⲣⲉϥϫⲱ",
+      "pos": "N",
+      "gloss": "singer, minstrel"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C9048",
+  "forms": [
+    {
+      "id": "CF22363",
+      "orth": "ⲉⲣⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22364",
+      "orth": "ⲉⲣⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10808,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11133",
+      "bibliography": "DDGLC",
+      "cu_ID": "1511"
+    },
+    {
+      "id": "CS11134",
+      "bibliography": "DDGLC",
+      "cu_ID": "3075"
+    },
+    {
+      "id": "CS11135",
+      "bibliography": "DDGLC",
+      "cu_ID": "2157"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϣⲁⲥⲡⲁϩⲧⲥ ⲉϫⲙⲡⲕⲁϩⲁⲥⲣⲓⲙⲉ ....... ⲣ...... ⲛⲛⲉⲛⲉϣ ⲁⲥϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲧⲉⲥⲥⲱⲛⲉ ⲛⲥϯⲡⲉⲓ**ⲉⲣⲱⲥ** ϩⲁϩ",
+      "english": "...",
+      "source": "Life of Hilaria BN 132.1 ff. 19-20 (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1791:33-43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁϩ",
+        1,
+        11.381
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        10.81
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲣⲱⲥ",
+          1
+        ],
+        [
+          "ⲉⲣⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲣⲱⲥ",
+          "ⲉⲣⲱⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10398,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3532",
+    "grl_lemma": "ἔρως",
+    "grl_meaning": "love, desire",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 695b; Preisigke 1:602"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "C8638",
+  "forms": [
+    {
+      "id": "CF20424",
+      "orth": "ⲃⲟⲩⲛⲉⲩⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20425",
+      "orth": "ⲃⲟⲩⲛⲉⲩⲣⲟⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10206",
+      "bibliography": "DDGLC",
+      "cu_ID": "2831"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲟⲩⲛⲉⲩⲣⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "4760",
+    "grl_lemma": "βούνευρον",
+    "grl_meaning": "a strap of raw ox-hide (for beating offenders)",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 315b; Lampe 304a"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "C50",
+  "forms": [
+    {
+      "id": "CF182",
+      "orth": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF183",
+      "orth": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF184",
+      "orth": "ⲙⲉⲧⲁⲗⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1413,
+        "count": 28
+      }
+    },
+    {
+      "id": "CF185",
+      "orth": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF186",
+      "orth": "ⲙⲉⲧⲁⲗⲟⲩ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS59",
+      "bibliography": "CD 5a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C1057",
+      "type": "syn",
+      "label": "youth (S)"
+    },
+    {
+      "target": "C6036",
+      "type": "syn",
+      "label": "youthfulness (S)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C48",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, girl; servant"
+    },
+    {
+      "target": "C49",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, boy; servant"
+    },
+    {
+      "target": "C51",
+      "label": "ⲉⲣⲁⲗⲟⲩ",
+      "pos": "V",
+      "gloss": "be young"
+    }
+  ]
+}

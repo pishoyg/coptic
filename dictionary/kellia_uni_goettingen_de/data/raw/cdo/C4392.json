@@ -1,0 +1,403 @@
+{
+  "id": "C4392",
+  "forms": [
+    {
+      "id": "CF10736",
+      "orth": "ⲧⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2588,
+        "count": 18
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4975",
+      "bibliography": "CD 259ab; CED 192; KoptHWb 239; DELC 218b; ChLCS 59b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲁⲣⲉⲡⲉⲓϣⲏⲛ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲣⲁⲛⲁϥ ⲉⲛⲉϩ ⲙⲡⲟⲩⲟⲉⲓⲉ ⲉⲧⲏⲡ ⲉ**ⲧⲡⲉ** · ⲡⲁⲓ ⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲉⲓ ⲉⲓϣⲓⲛⲉ ⲛⲥⲁⲕⲁⲣⲡⲟⲥ ⲛⲧⲉⲓⲃⲱ ⲛⲕⲛⲧⲉ · ⲁⲩⲱ ⲙⲡⲉⲓϩⲉ ⲉⲟⲩⲟⲛ ·",
+      "english": "In this manner this tree will never give pleasure to the Husbandman Who appertaineth to heaven, Who spake saying, 'I came seeking for fruit on this fig-tree, and I have found none",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉⲧⲟⲩⲁⲁⲃ ϭⲉ ⲁϥⲣⲡⲉ**ⲧⲡⲉ** ⲙⲡⲉⲛⲧⲁⲛϫⲟⲟϥ",
+      "english": "Therefore this holy man Demetrius hath triumphed, according to what we said.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲉⲧⲃⲉⲧⲙⲁⲕⲁⲣⲓⲁ ⲥⲁⲣⲁ ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ϫⲉⲁⲥⲣⲥⲉ ⲛⲣⲟⲙⲡⲉ ⲉⲥⲟⲩⲏϩ ⲙⲡⲉ**ⲧⲡⲉ** ⲙⲡⲓⲉⲣⲟ .",
+      "english": "They said about the blessed Sarah the virgin that she spent sixty years living at the top of the river",
+      "source": "Apophthegmata Patrum Sahidic 042: Sarah",
+      "urn": "urn:cts:copticLit:ap.42.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲉⲓⲉ",
+        2,
+        15.728
+      ],
+      [
+        "ⲣⲉⲕ",
+        1,
+        14.843
+      ],
+      [
+        "ⲡⲉ",
+        11,
+        12.716
+      ],
+      [
+        "ⲏⲡ",
+        2,
+        11.821
+      ],
+      [
+        "ⲭⲁⲟⲥ",
+        2,
+        11.756
+      ],
+      [
+        "ⲙⲡⲉϥ",
+        1,
+        11.728
+      ],
+      [
+        "ⲣ",
+        4,
+        11.243
+      ],
+      [
+        "ⲃⲟⲩⲛⲟⲥ",
+        1,
+        11.18
+      ],
+      [
+        "ⲡ",
+        11,
+        10.705
+      ],
+      [
+        "ⲁ",
+        8,
+        9.874
+      ],
+      [
+        "ϩⲁⲓⲃⲉⲥ",
+        1,
+        9.828
+      ],
+      [
+        "ⲙ",
+        7,
+        9.603
+      ],
+      [
+        "ⲕⲁϩ",
+        3,
+        9.512
+      ],
+      [
+        "ϣⲧⲏⲛ",
+        1,
+        9.351
+      ],
+      [
+        "ⲓⲉⲣⲟ",
+        1,
+        9.33
+      ],
+      [
+        "ⲡⲁⲓ",
+        3,
+        9.162
+      ],
+      [
+        "ⲛ",
+        9,
+        9.149
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.034
+      ],
+      [
+        "ⲧ",
+        5,
+        8.867
+      ],
+      [
+        "ⲑⲣⲟⲛⲟⲥ",
+        1,
+        8.468
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲡⲉ_0_node",
+          11
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲧⲡⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲧⲡⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲡⲉ",
+          3
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲧⲏⲛ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲧⲏⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ϩⲁϩⲧⲙ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲟⲩⲛⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲧⲡⲉ",
+          "ⲧⲡⲉ_0_node",
+          3
+        ],
+        [
+          "ⲧⲡⲉ_0_node",
+          "ⲙ_1_post_ⲧⲡⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲧⲡⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲡⲉ_0_node",
+          "ⲛ_1_post_ⲧⲡⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲡⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ϣⲧⲏⲛ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲧⲏⲛ_3_post_ⲛⲉ",
+          "ⲛ_4_post_ϣⲧⲏⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲡⲉ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲡⲉ",
+          "ⲧⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲡⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          "ⲥⲛⲧⲉ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_4_post_ⲡⲩⲗⲏ",
+          "ϩⲁϩⲧⲙ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲡⲉ",
+          "ⲧⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲡⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲃⲟⲩⲛⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2297,
+      "count": 18
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4402",
+      "label": "ϩⲓⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4400",
+      "label": "ϩⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4396",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C4398",
+      "label": "ⲙⲁ ⲛⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "upper part of the house"
+    },
+    {
+      "target": "C4399",
+      "label": "ⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4397",
+      "label": "ⲡⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "the top"
+    },
+    {
+      "target": "C4395",
+      "label": "ⲣϩⲓⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4394",
+      "label": "ⲣⲥⲁⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4393",
+      "label": "ⲣⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4401",
+      "label": "ⲥⲁⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    }
+  ],
+  "etym": {
+    "egy_num": "171450",
+    "egy_lemma": "tp.j",
+    "english": "being upon; having authority over",
+    "german": "befindlich auf; an der Spitze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/171450"
+  }
+}

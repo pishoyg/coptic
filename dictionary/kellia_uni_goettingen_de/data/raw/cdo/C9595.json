@@ -1,0 +1,229 @@
+{
+  "id": "C9595",
+  "forms": [
+    {
+      "id": "CF24496",
+      "orth": "ⲗⲁⲙⲡⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24497",
+      "orth": "ⲗⲁⲙⲡⲣⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4351,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12269",
+      "bibliography": "DDGLC",
+      "cu_ID": "9788"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲉⲣⲉⲡⲉⲩⲭⲣⲱⲙⲁ ⲡⲣⲉⲓⲱⲟⲩ ⲉⲩⲟ ⲛ**ⲗⲁⲙⲡⲣⲟⲛ**",
+      "english": "nor with bright or shiny colors.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲁϥⲙⲟϩⲕ ⲉⲃⲟⲗ ϩⲙⲡ**ⲗⲁⲙⲡⲣⲟⲛ** ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ",
+      "english": "Therefore he filled thee with the splendour of the Holy Spirit.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲉⲩⲉ ⲇⲉ ⲉⲃⲟⲗ ⲗⲟⲓⲡⲟⲛ ⲉⲡⲉⲑⲉⲁⲇⲣⲟⲛ ⲛ**ⲗⲁⲙⲡⲣⲟⲛ** ⲉⲧⲙⲉϩ ⲛⲭⲁⲣⲓⲥ ⲟⲩ ⲣⲱⲙⲉ ⲛⲟⲩⲱⲧ ⲙⲡⲁⲧⲛϩⲁⲅⲓⲟⲥ ⲉϥⲁϩⲉⲣⲁⲧϥ ϩⲛⲧⲙⲏⲧⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲏ ⲛⲉⲣⲱⲙⲉ ϩⲛⲧⲙⲏⲧⲉ ⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲛⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲑⲉⲁⲇⲣⲟⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲡⲁⲟⲗⲟⲫⲟⲣⲟⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲕⲗⲟⲙ",
+        2,
+        13.813
+      ],
+      [
+        "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+        1,
+        12.554
+      ],
+      [
+        "ϩⲟⲙⲟⲓⲱⲥ",
+        1,
+        12.13
+      ],
+      [
+        "ⲗⲟⲓⲡⲟⲛ",
+        1,
+        11.341
+      ],
+      [
+        "ⲭⲁⲣⲓⲥ",
+        1,
+        10.174
+      ],
+      [
+        "ⲛ",
+        7,
+        9.646
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        9.517
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        9.513
+      ],
+      [
+        "ⲡⲏⲩⲉ",
+        1,
+        9.118
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        8.391
+      ],
+      [
+        "ⲉ",
+        4,
+        8.232
+      ],
+      [
+        "ⲱ",
+        1,
+        7.977
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.917
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        7.827
+      ],
+      [
+        "ⲙ",
+        3,
+        7.521
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        1,
+        7.28
+      ],
+      [
+        "ⲟ",
+        1,
+        7.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲙⲡⲣⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲗⲁⲙⲡⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_5_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲁⲙⲡⲣⲟⲛ_0_node",
+          "ⲙ_1_post_ⲗⲁⲙⲡⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲁⲙⲡⲣⲟⲛ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲉ",
+          "ⲉⲧ_4_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲡⲛⲉⲩⲙⲁ",
+          "ⲟⲩⲁⲁⲃ_5_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3955,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1265",
+    "grl_lemma": "λαμπρός",
+    "grl_meaning": "bright, radiant",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1028a; Preisigke 2:5"
+  }
+}

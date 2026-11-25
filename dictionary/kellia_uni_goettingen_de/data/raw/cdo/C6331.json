@@ -1,0 +1,77 @@
+{
+  "id": "C6331",
+  "forms": [
+    {
+      "id": "CF14674",
+      "orth": "ⲉϩⲣⲁⲓ ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2618,
+        "count": 18
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7026",
+      "bibliography": "CD 634a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲉϩⲛⲁⲓ ⲉϥⲓ **ⲉϩⲣⲁⲓ **ϩⲁ**ϩⲱⲃ** ⲛⲓⲙ ⲉⲧⲛⲏⲩ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ϩⲱⲥ ⲉϣϫⲉ ⲉⲓⲉⲓⲣⲉ ⲁⲛ ⲛⲟⲩϩⲱⲃ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲇⲁⲙ ⲛⲧⲉⲣⲉϥⲛⲉϩⲥⲉ · **ⲉϩⲣⲁⲓ **ϩⲁ**ⲡϩⲓⲛⲏⲃ** ⲁϥⲛⲁⲩ ⲉⲣⲟⲥ ⲡⲉϫⲁϥ ϫⲉⲧⲁⲓ ⲧⲉⲛⲟⲩ ⲟⲩⲕⲉⲉⲥ ⲧⲉ ⲉⲃⲟⲗ ϩⲛⲛⲁⲕⲉⲉⲥ ⲁⲩⲱ ⲟⲩⲥⲁⲣⲝ ⲧⲉ ⲧⲁⲓ ⲥⲉⲛⲁⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ϫⲉⲧⲉⲥϩⲓⲙⲉ ϫⲉⲛⲧⲁⲩϫⲓⲧⲥ ⲉⲃⲟⲗ ϩⲙⲡⲉⲥϩⲟⲟⲩⲧ ·",
+      "english": "And when Adam woke up out of his sleep he saw her, and he said, 'This now is bone of my bones, and flesh of [my flesh]; she shall be called 'woman,' because she was taken out of her male.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣϥⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲁϥⲁⲥⲡⲁⲍⲉ ⲛⲛⲉϥⲟⲩⲣⲏⲏⲧⲉ ⲉⲧⲟⲩⲁⲁⲃ · ⲁϥϯⲡⲉϥⲟⲩⲟⲓ ⲉⲛⲉϥϭⲓϫ ⲉⲧⲟⲩⲁⲁⲃ · ϫⲉⲉϥⲛⲁϫⲓⲥⲙⲟⲩ ⲁϥϭⲱϣⲧ **ⲉϩⲣⲁⲓ **ϩⲁ**ⲡⲉϥϩⲟ** · ⲁϥⲥⲉⲕⲧⲉϥϭⲓϫ ⲉⲣⲟϥ ·",
+      "english": "And when he was standing upright, having kissed his holy feet, he brought himself near his holy hands so that he might receive a blessing, and he gazed in his face, and he wished to draw his hands to him.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6328",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, in, at; from; by reason of; for, in respect of, on behalf of; for (of price); against"
+    },
+    {
+      "target": "C6332",
+      "label": "ϩⲁⲣⲓϩⲁⲣⲟ⸗",
+      "pos": "PREP",
+      "gloss": "of oneself, alone, apart"
+    },
+    {
+      "target": "C6330",
+      "label": "ⲉϩⲟⲩⲛ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "in beneath"
+    },
+    {
+      "target": "C6329",
+      "label": "ⲉⲃⲟⲗ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "away from"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C3123",
+  "forms": [
+    {
+      "id": "CF8122",
+      "orth": "ⲁⲧϯⲣⲁⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3573",
+      "bibliography": "CD 298a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3125",
+      "label": "ϫⲓⲣⲁⲛ",
+      "pos": "V",
+      "gloss": "take name, be named"
+    },
+    {
+      "target": "C3122",
+      "label": "ϯⲣⲉⲛ⸗",
+      "pos": "V",
+      "gloss": "give name, call"
+    },
+    {
+      "target": "C3121",
+      "label": "ⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "name"
+    },
+    {
+      "target": "C3126",
+      "label": "ⲣⲙⲛⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "office-bearer, dignitary"
+    },
+    {
+      "target": "C3124",
+      "label": "ⲧⲁⲩⲉⲣⲓⲛ⸗",
+      "pos": "V",
+      "gloss": "pronounce name"
+    }
+  ]
+}

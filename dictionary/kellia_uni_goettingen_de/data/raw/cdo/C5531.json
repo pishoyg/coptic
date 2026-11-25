@@ -1,0 +1,287 @@
+{
+  "id": "C5531",
+  "forms": [
+    {
+      "id": "CF13036",
+      "orth": "ⲁⲧϫⲓⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7286,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6193",
+      "bibliography": "CD 528a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲙⲱⲩⲥⲏⲥ ⲉϥⲡⲏⲧ ⲉⲃⲟⲗ ϩⲛⲕⲏⲙⲉ ⲁϥⲁⲁϥ ⲛϫⲁⲩⲙⲟⲉⲓⲧ ⲛⲟⲩⲗⲁⲟⲥ ⲛ**ⲁⲧϫⲓⲏⲡⲉ** ⲙⲙⲟϥ ·",
+      "english": "He saw Moses who had fled from Egypt, (Exod.3) and He made him (to be) the guide of a people that was without number.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲛⲟⲩ ⲡⲉⲥⲧⲁⲇⲓⲟⲛ ⲛⲧⲉⲕⲙⲁⲣⲧⲩⲣⲓⲁ ⲱ ⲛⲅⲉⲛⲛⲁⲓⲟⲥ ϩⲛⲟⲩⲙⲉ . ⲟⲩⲁⲧϩⲱϭⲃ ⲡⲉ ⲡⲉⲕⲕⲗⲟⲙ ϩⲛ**ⲁⲧϫⲓⲏⲡⲉ** ⲙⲙⲟⲟⲩ ⲛⲉ ⲛⲉⲕⲁⲣⲡⲟⲥ ⲛⲧⲉⲕⲇⲓⲕⲁⲓⲑⲟⲩⲛⲏ ⲉⲓⲛⲁⲧⲛⲧⲱ ⲛⲅ ⲉⲛⲓⲙ ϩⲛⲡⲉⲧⲟⲩⲁⲁⲃ ⲱ ⲡϩⲁⲅⲓⲟⲥ ϩⲏⲗⲓⲁⲥ ⲉⲓⲛⲁⲧⲛⲧⲱⲛⲅ ⲉⲡⲉⲧⲟ ⲛϩⲩⲙⲟⲛⲟⲙⲟⲥⲩⲕⲏ ⲛⲡⲁⲛⲓⲣⲁⲛ ⲛⲟⲩⲱⲧ ⲛⲙⲙⲁⲕ ϩⲏⲗⲓⲁⲥ ⲡⲉⲛⲧⲁⲩⲁⲛⲁⲗⲁⲙⲃⲁⲛⲉ ⲙⲙⲟϥ ϩⲓⲧⲛ ϩⲛϩⲧⲱⲱⲣ ⲙⲛϩⲛϩⲁⲣⲙⲁ ⲛⲕⲱϩⲧ ⲡⲉⲛⲧⲁϥϣⲧⲟⲙ ⲛⲧⲡⲉ ⲁϥⲟⲩⲱⲛ ⲙⲙⲟⲥ ⲟⲛ ϩⲓⲧⲙⲡϣⲁϫⲉ ⲛⲧⲉϥⲧⲁⲡⲣⲟ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲗⲟⲙ",
+        1,
+        12.398
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.981
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        8.925
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        7.868
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϫⲓⲏⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧϫⲓⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧϫⲓⲏⲡⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲧϫⲓⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧϫⲓⲏⲡⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧϫⲓⲏⲡⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6835,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5519",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "V",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5520",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "N",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5521",
+      "label": "ϥⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, calculate"
+    },
+    {
+      "target": "C5524",
+      "label": "ϩⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, cast a lot"
+    },
+    {
+      "target": "C5530",
+      "label": "ϫⲓⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "take number, count"
+    },
+    {
+      "target": "C5526",
+      "label": "ϭⲓⲛⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning, calculation"
+    },
+    {
+      "target": "C5529",
+      "label": "ϯⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "count"
+    },
+    {
+      "target": "C5518",
+      "label": "ϯⲱⲡ",
+      "pos": "V",
+      "gloss": "give account"
+    },
+    {
+      "target": "C5528",
+      "label": "ⲁⲧⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "numberless, innumerable"
+    },
+    {
+      "target": "C5515",
+      "label": "ⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncounted, unesteemed"
+    },
+    {
+      "target": "C5527",
+      "label": "ⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "number"
+    },
+    {
+      "target": "C5522",
+      "label": "ⲙⲉⲧϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5516",
+      "label": "ⲙⲛⲧⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncountability"
+    },
+    {
+      "target": "C5533",
+      "label": "ⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5523",
+      "label": "ⲣⲉϥϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5532",
+      "label": "ⲣⲉϥϫⲓⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5525",
+      "label": "ⲣⲉϥⲱⲡ",
+      "pos": "N",
+      "gloss": "counter"
+    },
+    {
+      "target": "C5517",
+      "label": "ⲣⲱⲡ",
+      "pos": "V",
+      "gloss": "make reckoning, esteem"
+    },
+    {
+      "target": "C5513",
+      "label": "ⲱⲡ",
+      "pos": "V",
+      "gloss": "count, esteem"
+    },
+    {
+      "target": "C5514",
+      "label": "ⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C12120",
+      "label": "ⲱⲡ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "be betrothed to"
+    }
+  ]
+}

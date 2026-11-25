@@ -1,0 +1,250 @@
+{
+  "id": "C2993",
+  "forms": [
+    {
+      "id": "CF7852",
+      "orth": "ϫⲓⲡⲁϩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8968,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3426",
+      "bibliography": "CD 283a; KoptHWb 157; ChLCS 39b"
+    },
+    {
+      "id": "CS3427",
+      "bibliography": "CD 283a; KoptHWb 157"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲣⲡⲁϩⲣⲉ ⲉⲧⲃⲁⲃⲩⲗⲱⲛ ⲁⲩⲱ ⲙⲡⲉⲥⲗⲟ ⲙⲁⲣⲛⲕⲁⲁⲥ ⲉⲃⲟⲗ ϫⲉⲙⲡⲉⲥ**ϫⲓⲡⲁϩⲣⲉ** ⲛⲧⲛⲃⲱⲕ ϫⲉⲁⲡⲉⲥϩⲁⲡ ⲡⲱϩ ϣⲁϩⲣⲁⲓ ⲉⲧⲡⲉ ⲁⲩⲱ ⲁϥϫⲓⲥⲉ ⲉϩⲣⲁⲓ ϣⲁⲛⲥⲓⲟⲩ",
+      "english": "We tried to heal Babylon, but she was not healed: let us forsake her, and depart every one to his own country: for her judgment has reached to the heaven, it has mounted up to the stars.",
+      "source": "Jeremiah 28",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁⲣⲭⲓⲥⲩⲛⲁⲅⲱⲅⲟⲥ ⲇⲉ ⲟⲩⲱϣⲃ ⲉϥⲁⲅⲁⲛⲁⲕⲧⲉⲓ ϫⲉⲁⲓⲏⲥⲟⲩⲥ ⲣⲡⲁϩⲣⲉ ϩⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ . ⲛⲉϥϫⲱ ⲇⲉ ⲙⲙⲟⲥ ⲛⲙⲙⲏⲏϣⲉ ϫⲉⲥⲟⲟⲩ ⲛϩⲟⲟⲩ ⲛⲉⲧⲉϣϣⲉ ⲉⲣϩⲱⲃ ⲛϩⲏⲧⲟⲩ . ⲁⲙϩⲓⲧⲛ ϭⲉ ⲛϩⲏⲧⲟⲩ ⲛⲧⲉⲧⲛ**ϫⲓⲡⲁϩⲣⲉ** ⲛⲧⲉⲧⲛⲧⲙⲉⲓ ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ .",
+      "english": "The ruler of the synagogue, being indignant because Jesus had healed on the Sabbath, said to the multitude, 'There are six days in which men ought to work. Therefore come on those days and be healed, and not on the Sabbath day!'",
+      "source": "42_Luke_13",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        10.448
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        9.101
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ϫⲉ",
+        2,
+        8.146
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        7.944
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        7.84
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        7.408
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲉ_1_pre_ϫⲓⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲓⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲡⲁϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ϫⲓⲡⲁϩⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲉ_1_pre_ϫⲓⲡⲁϩⲣⲉ",
+          "ⲥ_1_pre_ϫⲓⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲓⲡⲁϩⲣⲉ",
+          "ϫⲓⲡⲁϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲡⲁϩⲣⲉ_0_node",
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱⲕ",
+          "ⲧⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_1_post_ϫⲓⲡⲁϩⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8514,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2990",
+      "label": "ϯⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give drugs, heal"
+    },
+    {
+      "target": "C2994",
+      "label": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "place of healing, pharmacy"
+    },
+    {
+      "target": "C2992",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2983",
+      "label": "ⲡⲱϩⲣⲉ",
+      "pos": "V",
+      "gloss": "charm, bewitch"
+    },
+    {
+      "target": "C2991",
+      "label": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "drug-giver, magician"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ]
+}

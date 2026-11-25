@@ -1,0 +1,73 @@
+{
+  "id": "C1119",
+  "forms": [
+    {
+      "id": "CF3604",
+      "orth": "ⲕⲟⲩⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3605",
+      "orth": "ⲕⲟⲩⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4433,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1303",
+      "bibliography": "CD 100ab; KoptHWb 59; DELC 74; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲛⲟⲩⲥⲡⲟⲧⲟⲩ ⲟ ⲛⲧϩⲉ ⲛⲟⲩϩⲱⲥ ⲛⲕⲟⲕⲕⲟⲥ ⲧⲁϣⲉⲗⲉⲉⲧ ⲁⲩⲱ ⲧⲟⲩϭⲓⲛϣⲁϫⲉ ⲛⲉⲥⲱⲥ ⲛⲟⲩⲟϭⲉ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲟⲩⲕⲉ** ⲛϩⲉⲣⲙⲁⲛ ⲡⲃⲟⲗ ⲛⲧⲟⲩⲧⲁⲡⲣⲟ",
+      "english": "Thy lips are as a thread of scarlet, and thy speech is comely: like the rind of a pomegranate is thy cheek without thy veil.",
+      "source": "Song of Solomon 4",
+      "urn": "urn:cts:copticLit:ot.song.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲟⲩⲥⲡⲟⲧⲟⲩ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲟⲩϩⲱⲥ ⲛⲕⲟⲕⲕⲟⲥ ⲁⲩⲱ ⲧⲟⲩϭⲓⲛϣⲁϫⲉ ⲛⲉⲥⲱⲥ ⲧⲡⲉ ⲛⲛⲟⲩⲟϭⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲟⲩⲕⲉ** ⲛϩⲣⲙⲁⲛ ⲡⲃⲟⲗ ⲛⲧⲟⲩⲧⲁⲡⲣⲟ",
+      "english": "There are sixty queens, and eighty concubines, and maidens without number.",
+      "source": "Song of Solomon 6",
+      "urn": "urn:cts:copticLit:ot.song.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϩⲉⲛϣⲉ ⲅⲁⲣ ⲛⲣⲉϥϫⲱⲱⲣⲉ ⲙⲙⲙⲁ ⲛϣⲏⲛ ⲁϥϣⲉⲧⲟⲩϣⲏⲛ ⲉⲛⲁⲛⲟⲩϥ ⲁϥⲕⲉⲕⲧⲉϥ**ⲕⲟⲩⲕⲉ** ⲧⲏⲣⲥ ϩⲛⲧⲉϥⲥⲃⲱ ⲁϥⲣϩⲉⲛⲧⲉⲭⲛⲏ ⲉⲣⲟϥ ⲉⲛⲉⲥⲱⲟⲩ ⲁϥⲧⲁⲙⲓⲟϥ ⲛϩⲉⲛⲥⲕⲉⲩⲟⲥ ⲛϣⲁⲩ ⲛⲧϩⲩⲡⲏⲣⲉⲥⲓⲁ ⲙⲡⲉϥⲱⲛϩ",
+      "english": "Now a carpenter that felleth timber, after he hath sawn down a tree meet for the purpose, and taken off all the bark skilfully round about, and hath wrought it handsomely, and made a vessel thereof fit for the service of man's life;",
+      "source": "Wisdom 13",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4940,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "162360",
+    "egy_lemma": "qwq.t",
+    "demo_num": "d6284",
+    "demo_lemma": "qwqj.t",
+    "english": "bark (of a tree)",
+    "german": "Rinde",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162360",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6284"
+  }
+}

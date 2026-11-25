@@ -1,0 +1,61 @@
+{
+  "id": "C11131",
+  "forms": [
+    {
+      "id": "CF30763",
+      "orth": "ϩⲓⲗⲓⲕⲣⲓⲛⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30764",
+      "orth": "ϩⲓⲗⲓⲕⲣⲓⲛⲏⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF30765",
+      "orth": "ϩⲓⲗⲓⲕⲣⲓⲛⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2315,
+        "count": 23
+      }
+    },
+    {
+      "id": "CF30766",
+      "orth": "ⲁⲗⲓⲕⲣⲓⲛⲉⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30767",
+      "orth": "ⲫⲓⲗⲓⲕⲣⲓⲛⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15596",
+      "bibliography": "DDGLC",
+      "cu_ID": "4303"
+    },
+    {
+      "id": "CS15597",
+      "bibliography": "DDGLC",
+      "cu_ID": "10340"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3291",
+    "grl_lemma": "εἰλικρινής",
+    "grl_meaning": "unmixed, pure, simple",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 486a; Preisigke 1:423"
+  }
+}

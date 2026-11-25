@@ -1,0 +1,600 @@
+{
+  "id": "C4661",
+  "forms": [
+    {
+      "id": "CF11285",
+      "orth": "ⲧⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.51,
+        "rank": 249,
+        "count": 712
+      }
+    },
+    {
+      "orth": "ⲧⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.98,
+        "rank": 206,
+        "count": 507
+      }
+    },
+    {
+      "orth": "ⲧⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1502,
+        "count": 50
+      }
+    },
+    {
+      "orth": "ⲧⲁⲩ",
+      "dialect": "A",
+      "id": "183.2"
+    },
+    {
+      "orth": "ⲧⲁⲩ",
+      "dialect": "F",
+      "id": "183.3"
+    },
+    {
+      "orth": "ⲧⲁⲩ",
+      "dialect": "L",
+      "id": "183.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5262",
+      "bibliography": "CD 440b-441a; CDC 68b-69a; CED 199; KoptHWb 253; DELC 223b-224a; ChLCS\n                     62b"
+    },
+    {
+      "id": "CS5263",
+      "bibliography": "CD 441a; KoptHWb 253; DELC 223b-224a; ChLCS 62b"
+    },
+    {
+      "id": "CS5264",
+      "bibliography": "CD 441a; KoptHWb 253; DELC 223b-224a; ChLCS 62b"
+    },
+    {
+      "id": "CS5265",
+      "bibliography": "CDC 68b-69a; KoptHWb 253; DELC 223b-224a; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲥⲙⲟⲩ ⲁⲩⲓ ⲉⲃⲟⲗ ⲉⲡⲓ**ⲧⲱⲟⲩ** ⲛⲧⲉⲛⲓϫⲱⲓⲧ",
+      "english": "When they had sung a hymn, they went out to the Mount of Olives.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲉⲓ ⲉⲃⲟⲗ ϩⲓ**ⲧⲟⲟⲩ**ⲟⲩ ·",
+      "english": "and I came forth from their mountain.",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲣⲁⲡⲟⲧⲁⲍⲉⲥⲑⲉ ⲛⲱⲟⲩ ⲁϥϣⲉ ⲛⲁϥ ⲉⲡⲓ**ⲧⲱⲟⲩ** ⲉⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ .",
+      "english": "After he had taken leave of them, he went up the mountain to pray.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲓ ⲇⲉ ⲉⲡⲉⲥⲏⲧ ϩⲓⲡ**ⲧⲟⲟⲩ** ⲛϭⲓⲡⲗⲁⲕⲏⲧⲁⲥ ·",
+      "english": "And Plaketas came down from the mountain,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲩϣⲧ ⲟⲩⲟϩ ⲁⲩⲃⲱⲗ ⲉⲃⲟⲗ ⲛϫⲉϩⲁⲛⲉⲑⲛⲟⲥ ⲟⲩⲟϩ ⲁⲩϧⲟⲙϧⲉⲙ ⲛϫⲟⲛⲥ ⲛϫⲉⲛⲓ**ⲧⲱⲟⲩ** ⲟⲩⲟϩ ⲁⲩⲃⲱⲗ ⲉⲃⲟⲗ ⲛϫⲉⲛⲓⲕⲁⲗⲁⲙⲫⲟ ⲛⲉⲛⲉϩ .",
+      "english": "the earth stood at his feet and trembled: he beheld, and the nations melted away: the mountains were violently burst through, the everlasting hills melted at his everlasting going forth.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡ**ⲧⲟⲟⲩ** ⲛⲁⲥⲱϩⲙ ϩⲁⲣⲟⲛ ⁛—",
+      "english": "The mountain is crumbling away under us.'",
+      "source": "Life of Cyrus in Budge ed. part 2",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:10-17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟϩ",
+        299,
+        29.752
+      ],
+      [
+        "ⲡⲓ",
+        248,
+        29.633
+      ],
+      [
+        "ⲛⲓ",
+        174,
+        28.547
+      ],
+      [
+        "ⲉ",
+        228,
+        28.516
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        78,
+        28.327
+      ],
+      [
+        "ⲓⲛⲁ",
+        23,
+        28.136
+      ],
+      [
+        "ϭⲟⲥⲓ",
+        41,
+        28.013
+      ],
+      [
+        "ⲡ",
+        162,
+        27.639
+      ],
+      [
+        "ϥ",
+        204,
+        27.442
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        75,
+        27.101
+      ],
+      [
+        "ⲛⲉⲙ",
+        119,
+        26.927
+      ],
+      [
+        "ⲁ",
+        157,
+        26.873
+      ],
+      [
+        "ⲛ",
+        171,
+        26.844
+      ],
+      [
+        "ⲙ",
+        135,
+        26.813
+      ],
+      [
+        "ⲛⲧⲉ",
+        117,
+        26.677
+      ],
+      [
+        "ⲟⲩ",
+        146,
+        26.323
+      ],
+      [
+        "ϩⲓ",
+        48,
+        26.293
+      ],
+      [
+        "ⲱⲣ",
+        9,
+        26.035
+      ],
+      [
+        "ⲩ",
+        92,
+        25.692
+      ],
+      [
+        "ⲕⲉⲛⲓⲱⲟⲩⲧ:",
+        5,
+        25.661
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        28,
+        25.454
+      ],
+      [
+        "ⲡ",
+        642,
+        22.91
+      ],
+      [
+        "ⲛ",
+        614,
+        22.029
+      ],
+      [
+        "ⲁⲩⲱ",
+        300,
+        20.868
+      ],
+      [
+        "ⲉⲫⲣⲁⲓⲙ",
+        39,
+        20.273
+      ],
+      [
+        "ⲁ",
+        287,
+        19.973
+      ],
+      [
+        "ϩⲙ",
+        162,
+        19.866
+      ],
+      [
+        "ⲉⲧ",
+        188,
+        19.336
+      ],
+      [
+        "ϥ",
+        278,
+        19.312
+      ],
+      [
+        "ϫⲟⲉⲓⲧ",
+        26,
+        19.111
+      ],
+      [
+        "ϫⲟⲥⲉ",
+        45,
+        18.923
+      ],
+      [
+        "ⲉ",
+        229,
+        18.769
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        99,
+        18.618
+      ],
+      [
+        "ⲙ",
+        163,
+        17.831
+      ],
+      [
+        "ⲟⲩ",
+        156,
+        17.51
+      ],
+      [
+        "ⲥⲓⲛⲁ",
+        15,
+        17.467
+      ],
+      [
+        "ϯⲧⲕⲟⲟϩ",
+        7,
+        17.454
+      ],
+      [
+        "ⲥⲓⲱⲛ",
+        24,
+        17.386
+      ],
+      [
+        "ⲧ",
+        124,
+        17.367
+      ],
+      [
+        "ⲩ",
+        130,
+        17.311
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲟⲟⲩ_0_node",
+          365
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲟⲟⲩ",
+          25
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲟⲟⲩ",
+          27
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          58
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          17
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_3_post_ⲛ",
+          17
+        ],
+        [
+          "ⲥⲓⲛⲁ_2_post_ⲛ",
+          11
+        ],
+        [
+          "ⲉⲫⲣⲁⲓⲙ_2_post_ⲛ",
+          11
+        ],
+        [
+          "ⲥⲓⲱⲛ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲧⲟⲟⲩ",
+          9
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲟⲟⲩ",
+          15
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          12
+        ],
+        [
+          "ⲙ_1_post_ⲧⲟⲟⲩ",
+          10
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          10
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲧⲃⲱ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲟⲟⲩ",
+          6
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲟⲟⲩ",
+          3
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲑⲁⲃⲱⲣ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲟⲟⲩ",
+          3
+        ],
+        [
+          "ϫⲟⲥⲉ_2_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          4
+        ],
+        [
+          "ⲧⲟⲟⲩ_0_node",
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          8
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϫⲟⲉⲓⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲥⲓⲛⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲉⲫⲣⲁⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲥⲓⲱⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_0_node",
+          "ⲉⲧ_1_post_ⲧⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲟⲟⲩ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲧⲟⲟⲩ_0_node",
+          "ⲙ_1_post_ⲧⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲧⲟⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲧⲃⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_0_node",
+          "ⲧⲏⲣ_1_post_ⲧⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲟⲟⲩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲟⲟⲩ",
+          "ⲑⲁⲃⲱⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲟⲟⲩ",
+          "ϫⲟⲥⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲟⲟⲩ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.78,
+      "rank": 197,
+      "count": 758
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4666",
+      "label": "ϩⲁⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountainous country"
+    },
+    {
+      "target": "C4662",
+      "label": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain woman"
+    },
+    {
+      "target": "C4663",
+      "label": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    },
+    {
+      "target": "C4664",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain woman"
+    },
+    {
+      "target": "C4665",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    }
+  ],
+  "etym": {
+    "egy_num": "182830",
+    "egy_lemma": "ḏw",
+    "demo_num": "d7123",
+    "demo_lemma": "tw(e)",
+    "english": "mountain",
+    "german": "Berg",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/182830",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7123"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "id": "C8390",
+  "forms": [
+    {
+      "id": "CF19534",
+      "orth": "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19537",
+      "orth": "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4305,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF19536",
+      "orth": "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF19535",
+      "orth": "ⲁⲡⲟⲥⲧⲁⲧⲏⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19538",
+      "orth": "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4939,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9679",
+      "bibliography": "DDGLC",
+      "cu_ID": "11024"
+    },
+    {
+      "id": "CS9680",
+      "bibliography": "DDGLC",
+      "cu_ID": "1230"
+    },
+    {
+      "id": "CS9681",
+      "bibliography": "DDGLC",
+      "cu_ID": "7600"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲕⲧⲏⲓⲧⲉⲛ ⲉϧⲣⲏⲓ ⲉⲛⲉⲛϫⲓϫ ⲛϩⲁⲛϫⲁϫⲓ ⲛⲁⲛⲟⲙⲟⲥ ⲛϣⲟⲩⲙⲟⲥϯ ⲛ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** ⲛⲉⲙⲟⲩⲟⲩⲣⲟ ⲛⲣⲉϥϭⲓⲛϫⲟⲛⲥ ⲉϥϩⲱⲟⲩ ⲉⲃⲟⲗⲟⲩⲧⲉ ⲡⲕⲁϩⲓ ⲧⲏⲣϥ .",
+      "english": "The tree grew large and strong, and its height reached to the sky, and its extent to the extremity of the whole earth:",
+      "source": "27_Daniel_04",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϭⲓⲡ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** ⲉⲧⲙⲙⲁⲩ · ⲉⲡϫⲟⲉⲓⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲉⲣϣⲁⲛⲡⲣⲱⲙⲉ ϯϩⲏⲩ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ⲛϥϯⲟⲥⲉ ⲛⲧⲉϥⲯⲩⲭⲏ ·",
+      "english": "... that apostate to the Lord, saying: 'if man gains the whole world, he loses his soul'",
+      "source": "I See Your Eagerness: GL 29-30",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_29_30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲛⲓϣⲏⲣⲓ ⲛ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲟⲉⲓⲥ ⲁⲧⲉⲧⲉⲛⲓⲣⲓ ⲛⲟⲩⲥⲟϭⲛⲓ ⲉⲃⲟⲗϩⲓⲧⲟⲧ ⲁⲛ ⲛⲉⲙϩⲁⲛⲥⲩⲛⲑⲏⲕⲏ ⲉⲃⲟⲗϩⲓⲧⲉⲛ ⲡⲁⲡⲛⲁ ⲁⲛ ⲉⲩⲉⲟⲩⲁϩ ⲛⲟⲃⲓ ⲉϫⲉⲛⲛⲟⲃⲓ .",
+      "english": "Woe to the apostate children, saith the Lord: ye have framed counsel, not by me, and covenants not by my Spirit, to add sins to sins:",
+      "source": "23_Isaias_30",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:30",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲛϣⲏⲣⲉ ⲛ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** ⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ ⲁⲧⲉⲧⲛⲉⲓⲣⲉ ⲛⲟⲩϣⲟϫⲛⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲁⲛ ⲁⲩⲱ ϩⲉⲛⲁⲩⲱ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲁⲡⲛⲉⲩⲙⲁ ⲁⲛ ⲉⲟⲩⲉϩⲛⲟⲃⲉ ⲉϫⲛⲛⲉⲧⲛⲛⲟⲃⲉ",
+      "english": "Woe to the apostate children, saith the Lord: ye have framed counsel, not by me, and covenants not by my Spirit, to add sins to sins:",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲱⲧϩ ⲇⲉ ⲛⲧⲉⲧⲫⲉ ⲥⲉⲉⲣϩⲟϯ ϧⲁⲧⲉϥϩⲏ : ϧⲉⲛⲟⲩⲁϩⲥⲁϩⲛⲓ ⲇⲉ ⲁϥϧⲱⲧⲉⲃ ⲙⲡⲓⲇⲣⲁⲕⲱⲛ ⲛ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** .",
+      "english": "And the barriers of heaven fear him, and by a command he has slain the apostate dragon.",
+      "source": "18_Iob_26",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲕⲧⲁⲁⲛ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲟⲩ ⲛϩⲉⲛⲁⲛⲟⲙⲟⲥ ⲛϫⲁϫⲉ ⲛ**ⲁⲡⲟⲥⲧⲁⲧⲏⲥ** ⲁⲩⲱ ⲛⲟⲩⲣⲣⲟ ⲛⲣⲉϥϫⲓⲛϭⲟⲛⲥ ⲁⲩⲱ ⲙⲡⲟⲛⲏⲣⲟⲥ ⲡⲁⲣⲁⲡⲕⲁϩ ⲧⲏⲣϥ",
+      "english": "And thou didst deliver us into the hands of lawless enemies, most hateful forsakers of God, and to an unjust king, and the most wicked in all the world.",
+      "source": "Daniel 3",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛϣⲟⲩ",
+        1,
+        15.525
+      ],
+      [
+        "ⲇⲣⲁⲕⲱⲛ",
+        1,
+        12.718
+      ],
+      [
+        "ⲁⲛⲟⲙⲟⲥ",
+        1,
+        11.54
+      ],
+      [
+        "ⲙⲟⲥϯ",
+        1,
+        11.424
+      ],
+      [
+        "ⲛⲏⲉⲧⲉ",
+        1,
+        10.203
+      ],
+      [
+        "ⲛ",
+        5,
+        9.971
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.839
+      ],
+      [
+        "ⲓⲥ",
+        1,
+        9.312
+      ],
+      [
+        "ϩⲏⲡⲡⲉ",
+        1,
+        8.563
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        1,
+        8.187
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.795
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        6.712
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        4.658
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲙ",
+        1,
+        3.998
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ",
+        1,
+        17.791
+      ],
+      [
+        "----",
+        2,
+        15.746
+      ],
+      [
+        "ⲣⲉϥϫⲓⲟⲩⲉ",
+        2,
+        15.331
+      ],
+      [
+        "ⲛ",
+        13,
+        12.103
+      ],
+      [
+        "ⲁⲛⲟⲙⲟⲥ",
+        1,
+        10.97
+      ],
+      [
+        "ⲟⲩⲃⲏ",
+        1,
+        10.933
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        2,
+        10.001
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        9.431
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        2,
+        9.165
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.94
+      ],
+      [
+        "ϫⲁϫⲉ",
+        1,
+        8.845
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        8.011
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        7.845
+      ],
+      [
+        "ⲡ",
+        4,
+        7.69
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        7.652
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        6.649
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        5.482
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        5.423
+      ],
+      [
+        "ⲉ",
+        2,
+        5.01
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          7
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲛ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          "ⲉⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          "ⲉ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲁⲧⲏⲥ_0_node",
+          "ⲛⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲡⲟⲥⲧⲁⲧⲏⲥ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ⲙ_4_post_ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ",
+          "ⲙⲛⲧⲙⲁⲗⲁⲕⲟⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3906,
+      "count": 7
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4453,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "5310",
+    "grl_lemma": "ἀποστάτης",
+    "grl_meaning": "deserter, rebel, runaway slave, apostate",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 219a; Preisigke 1:194"
+  }
+}

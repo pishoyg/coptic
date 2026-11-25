@@ -1,0 +1,76 @@
+{
+  "id": "C4205",
+  "forms": [
+    {
+      "id": "CF10357",
+      "orth": "ⲧⲉⲕⲉⲓⲁⲗ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4769",
+      "bibliography": "CD 404a; KoptHWb 227; DELC 212b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C889",
+      "type": "cf",
+      "label": "mirror"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4208",
+      "label": "ϯⲕⲉ",
+      "pos": "V",
+      "gloss": "throw"
+    },
+    {
+      "target": "C4209",
+      "label": "ⲣⲉϥϯⲕⲥⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "archer"
+    },
+    {
+      "target": "C4210",
+      "label": "ⲣⲉϥϯⲕⲥⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "archer"
+    },
+    {
+      "target": "C4206",
+      "label": "ⲣⲉϥⲧⲕⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "archer"
+    },
+    {
+      "target": "C4207",
+      "label": "ⲣⲉϥⲧⲕⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "archer"
+    },
+    {
+      "target": "C4204",
+      "label": "ⲧⲱⲕ",
+      "pos": "V",
+      "gloss": "throw"
+    }
+  ]
+}

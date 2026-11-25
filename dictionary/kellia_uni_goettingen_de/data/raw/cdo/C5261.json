@@ -1,0 +1,64 @@
+{
+  "id": "C5261",
+  "forms": [
+    {
+      "id": "CF12491",
+      "orth": "ϭⲓⲛⲟⲩⲱϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5905",
+      "bibliography": "CD 501b; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5262",
+      "label": "ⲟⲩⲁϣϥ",
+      "pos": "N",
+      "gloss": "desire"
+    },
+    {
+      "target": "C5257",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5258",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5259",
+      "label": "ⲟⲩⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5260",
+      "label": "ⲟⲩⲱϣ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "heart's desire"
+    }
+  ]
+}

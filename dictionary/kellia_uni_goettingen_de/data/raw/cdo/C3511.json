@@ -1,0 +1,161 @@
+{
+  "id": "C3511",
+  "forms": [
+    {
+      "id": "CF8925",
+      "orth": "ϯⲥⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7269,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3995",
+      "bibliography": "CD 335a; KoptHWb 185; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲛⲣⲱⲙⲉ ⲉⲧⲉⲣⲉ**ϯⲥⲙⲏ** ⲁⲡⲉⲓⲗⲉⲓ ⲉⲣⲱⲧⲛ ϫⲉⲛⲉⲃⲟⲗ ϩⲛⲟⲩϯⲧⲱⲛ ⲉⲧⲟ ⲛⲁⲧⲥⲱⲧⲙ ⲛⲥⲁⲧⲙⲉ ⲉⲧⲡⲉⲓⲑⲉ ⲇⲉ ⲉⲡϫⲓⲛϭⲟⲛⲥ , ⲛⲟⲩⲟⲣⲅⲏ ⲙⲛⲟⲩϭⲱⲛⲧ ⲙⲛⲟⲩⲑⲗⲓⲯⲓⲥ , ⲙⲛⲟⲩⲗⲱϫϩ ⲉϫⲙⲯⲩⲭⲏ ⲛⲓⲙ ⲛⲣⲱⲙⲉ ⲉⲧⲣϩⲱⲃ ⲉⲡⲡⲉⲧϩⲟⲟⲩ .",
+      "english": "Oh you men whom a sound threatens, &apos;Those out of a quarrel who are disobedient of the truth, but obey violence; anger and rage and oppression, and the crushing of every human soul that does something evil.&apos;",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲉⲓⲗⲉⲓ",
+        2,
+        19.598
+      ],
+      [
+        "ⲉⲣⲱ",
+        2,
+        13.212
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        2,
+        12.653
+      ],
+      [
+        "ⲱ",
+        2,
+        12.562
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ϫⲉ",
+        2,
+        8.146
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯⲥⲙⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6818,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3513",
+      "label": "ϫⲓⲥⲙⲏ",
+      "pos": "V",
+      "gloss": "receive sound, listen"
+    },
+    {
+      "target": "C3516",
+      "label": "ⲁⲧⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "voice-, soundless"
+    },
+    {
+      "target": "C3517",
+      "label": "ⲉⲣⲥⲙⲏ",
+      "pos": "V",
+      "gloss": "be famous"
+    },
+    {
+      "target": "C3514",
+      "label": "ⲙⲁ ⲛϭⲓⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "place of hearing, of trial"
+    },
+    {
+      "target": "C3515",
+      "label": "ⲣⲉϥϫⲓⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "listener, obeyer"
+    },
+    {
+      "target": "C3512",
+      "label": "ⲣⲉϥϯⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "vocal, vowel"
+    },
+    {
+      "target": "C3518",
+      "label": "ⲣⲉⲙⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "famous person"
+    },
+    {
+      "target": "C3509",
+      "label": "ⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "voice (of men and animals), sound (of things)"
+    },
+    {
+      "target": "C3510",
+      "label": "ⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "famed"
+    }
+  ]
+}

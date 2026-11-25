@@ -1,0 +1,360 @@
+{
+  "id": "C8174",
+  "forms": [
+    {
+      "id": "CF18748",
+      "orth": "ⲁⲗⲏⲑⲓⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18751",
+      "orth": "ⲁⲗⲏⲑⲓⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5974,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF18750",
+      "orth": "ⲁⲗⲏⲑⲓⲛⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3758,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF18749",
+      "orth": "ⲁⲗⲏⲑⲉⲓⲛⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18752",
+      "orth": "ⲁⲗⲓⲑⲓⲛⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18753",
+      "orth": "ⲁⲗⲩⲑⲓⲛⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18754",
+      "orth": "ⲁⲗⲩⲑⲓⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10495,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9240",
+      "bibliography": "DDGLC",
+      "cu_ID": "1850"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ⲅⲁⲣ ⲡⲉⲑⲛⲁϣⲁϫⲓ ⲙⲡⲧⲁⲓⲟ ⲙⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲛ**ⲁⲗⲏⲑⲓⲛⲟⲛ** ⲟⲩⲟϩ ⲛⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲉⲧⲉⲛϩⲟⲧ ⲛⲧⲉϯⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲫⲏ ⲉⲧⲁϥⲙⲉⲛⲣⲉ ϯⲁⲣⲉⲧⲏ ⲓⲥϫⲉⲛⲧⲉϥⲙⲉⲧⲕⲟⲩϫⲓ ⲛⲉⲙⲡⲓϫⲓ ⲛⲱⲛϧ ⲛⲧⲉⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲁⲓ ⲉⲧⲁϥⲭⲟϩ ⲉⲛⲟⲩϫⲓ ⲛⲱⲛϧ ⲁϥⲧⲉⲛⲑⲱⲛϥ ⲉⲣⲱⲟⲩ .",
+      "english": "For who can tell the glory of the true shepherd, of the faithful archpriest of justice, who from his childhood loved virtue and the life of the holy angels, whom he has zealously imitated in their existence, and has made himself like them?",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛϫⲟⲟⲥ ϩⲱⲱⲛ ⲛⲁϩⲣⲙⲡⲥⲁⲉⲓⲛ ⲛ**ⲁⲗⲏⲑⲓⲛⲟⲛ** · ϫⲉⲧⲁⲗϭⲟⲓ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ϯⲛⲁⲗⲟ · ⲁⲩⲱ ϫⲉⲧⲁⲗϭⲉⲧⲁⲯⲩⲭⲏ ϫⲉⲁⲓⲣⲛⲟⲃⲉ ⲉⲣⲟⲕ ·",
+      "english": "Let us ourselves say unto the True Physician, 'Heal me, O God, and I shall become whole and Heal my soul, for I have sinned against Thee'",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϣⲓ ⲛ**ⲁⲗⲏⲑⲓⲛⲟⲛ** ⲛⲉⲙⲛⲫⲙⲏⲓ ⲉϥⲉϣⲱⲡⲓ ⲛⲁⲕ ϧⲉⲛⲡⲉⲕⲏⲓ ⲟⲩⲟϩ ⲟⲩⲙⲉⲛⲧ ⲛⲁⲗⲏⲑⲓⲛⲟⲛ ⲛⲉⲙⲛⲑⲙⲏⲓ ⲉϥⲉϣⲱⲡⲓ ⲛⲁⲕ ϩⲓⲛⲁ ⲛⲧⲉⲕⲉⲣ ⲟⲩⲙⲏϣ ⲛⲉϩⲟⲟⲩ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲫⲏ ⲉⲧⲉⲡϭⲟⲓⲥ ⲡⲉⲕⲛⲟⲩϯ ⲛⲁⲧⲏⲓϥ ⲛⲁⲕ ϧⲉⲛⲟⲩⲕⲗⲏⲣⲟⲥ",
+      "english": "Thou shalt have a true and just weight, and a true and just measure, that thou mayest live long upon the land which the Lord thy God gives thee for an inheritance.",
+      "source": "05_Deuteronomium_25",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩϥⲓ ⲛⲧⲉϥⲁⲡⲉ ϩⲛⲧⲥⲏⲃⲉ ⲁⲗⲗⲁ ⲁϥⲃⲱⲕ ϣⲁⲧⲉϥⲁⲡⲉ ⲛ**ⲁⲗⲏⲑⲓⲛⲟⲛ** ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲁϥⲁⲙⲡⲟⲧⲁⲥⲥⲉ ⲙⲡϩⲱⲕ ⲙⲡⲣⲣⲟⲁⲗⲗⲁ ⲁϥϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲇⲁⲩⲉⲓⲇ ⲛⲧⲁϥⲛⲟⲩϫⲉ ⲙⲡϩⲱⲕ ⲛⲥⲁⲟⲩⲗ ⲉⲃⲟⲗ ⲙⲙⲟϥ ϩⲛϩⲓⲟⲙⲉ ⲛⲉⲛⲧⲁⲩⲉⲓ ⲉⲃⲟⲗϩⲏⲧϥ ⲙⲡⲉⲧⲙⲙⲁⲩ ⲉⲩⲭⲟⲣⲉⲩⲉ ⲉϫⲉⲛⲧⲉϥϭⲓⲛϫⲣⲟ ⲉⲡⲁⲗⲗⲟⲫⲩⲗⲟⲥ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲕⲓⲃⲱⲧⲟⲥ ⲛⲛϣⲏⲣⲉ ⲛⲁⲇⲁⲙ · ⲛⲧⲁⲥⲧⲱⲟⲩⲛ ϩⲁⲡⲥⲱⲙⲁ ⲙⲡϣⲏⲣⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲙⲛⲡⲉϥⲥⲛⲟϥ ⲛ**ⲁⲗⲏⲑⲓⲛⲟⲛ** ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲫ",
+        1,
+        17.695
+      ],
+      [
+        "ⲙⲉⲛⲧ",
+        1,
+        14.373
+      ],
+      [
+        "ⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+        2,
+        13.825
+      ],
+      [
+        "ⲉⲥⲱⲟⲩ",
+        2,
+        12.244
+      ],
+      [
+        "ⲛ",
+        9,
+        12.1
+      ],
+      [
+        "ϣⲓ",
+        1,
+        10.11
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        10.064
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        5,
+        10.046
+      ],
+      [
+        "ⲑⲙⲏⲓ",
+        1,
+        9.995
+      ],
+      [
+        "ⲙⲏⲓ",
+        1,
+        9.881
+      ],
+      [
+        "ⲉϥⲉ",
+        2,
+        9.22
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.251
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.243
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        6.609
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲁϩⲣⲙ",
+        1,
+        13.082
+      ],
+      [
+        "ⲥⲁⲉⲓⲛ",
+        1,
+        13.059
+      ],
+      [
+        "ⲧⲁⲗϭⲟ",
+        1,
+        11.32
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        9.996
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        9.98
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        8.733
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.379
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.761
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        6.608
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲗⲏⲑⲓⲛⲟⲛ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲑⲙⲏⲓ_1_post_ⲁⲗⲏⲑⲓⲛⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲏⲑⲓⲛⲟⲛ_0_node",
+          "ⲛⲉⲙ_2_post_ⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲑⲙⲏⲓ",
+          "ⲛ_2_post_ⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲑⲙⲏⲓ",
+          "ⲑⲙⲏⲓ_1_post_ⲁⲗⲏⲑⲓⲛⲟⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲏⲑⲓⲛⲟⲛ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉ_2_post_ⲭⲣⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲭⲣⲓⲥⲧⲟⲥ_1_post_ⲁⲗⲏⲑⲓⲛⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲏⲑⲓⲛⲟⲛ_0_node",
+          "ⲡⲉ_2_post_ⲭⲣⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲭⲣⲓⲥⲧⲟⲥ",
+          "ⲭⲣⲓⲥⲧⲟⲥ_1_post_ⲁⲗⲏⲑⲓⲛⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5535,
+      "count": 3
+    },
+    "B": {
+      "rate": 0.05,
+      "rank": 3333,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "92",
+    "grl_lemma": "ἀληθινός",
+    "grl_meaning": "truthful, trusty, true",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 64a; Preisigke 1:55"
+  }
+}

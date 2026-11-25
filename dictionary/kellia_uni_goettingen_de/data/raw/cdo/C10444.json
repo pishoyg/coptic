@@ -1,0 +1,104 @@
+{
+  "id": "C10444",
+  "forms": [
+    {
+      "id": "CF27963",
+      "orth": "ⲥⲓⲅⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27964",
+      "orth": "ⲥⲓⲅⲛⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27965",
+      "orth": "ⲥⲓⲅⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13642,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14123",
+      "bibliography": "DDGLC",
+      "cu_ID": "4058"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡⲁⲥⲧⲁⲩⲣⲟⲥ ⲥⲱⲕ ϩⲓⲧϩⲏ ⲙⲙⲟⲓ ⲛⲧϩⲉ ⲛⲛ**ⲥⲓⲅⲛⲟⲛ** ϩⲓⲧϩⲏ ⲙⲡⲉⲩⲣⲣⲟ · ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲓϫⲟⲟⲥ ⲛⲏⲧⲛ ϫⲉⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲛⲉⲩϩⲙⲡⲉϥⲉⲟⲟⲩ ⲙⲛⲡⲁⲡⲉϥⲉⲓⲱⲧ ⲙⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲧⲏⲣⲟⲩ ⲛⲙⲙⲁϥ ·",
+      "english": "And my Cross shall advance before Me, like a symbol of sovereignty before a king, according to what I have said unto you, 'The Son of Man shall come in His glory, and with that which is of his Father, and all His angels with Him.'",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏ",
+        1,
+        11.104
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲓⲅⲛⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13241,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1959",
+    "grl_lemma": "σίγνον",
+    "grl_meaning": "standard, statue, store, prison",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1596b; Preisigke 2:458"
+  }
+}

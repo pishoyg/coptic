@@ -1,0 +1,149 @@
+{
+  "id": "C6328",
+  "forms": [
+    {
+      "id": "CF14667",
+      "orth": "ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.79,
+        "rank": 110,
+        "count": 1702
+      }
+    },
+    {
+      "id": "CF14668",
+      "orth": "ϩⲁⲣⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.61,
+        "rank": 293,
+        "count": 569
+      }
+    },
+    {
+      "orth": "ϧⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 10.82,
+        "rank": 123,
+        "count": 918
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7018",
+      "bibliography": "CD 632a; CED 269; KoptHWb 347; DELC 284a; ChLCS 86a"
+    },
+    {
+      "id": "CS7019",
+      "bibliography": "CD 633a; KoptHWb 347; DELC 284a; ChLCS 86a"
+    },
+    {
+      "id": "CS7020",
+      "bibliography": "CD 633a; KoptHWb 347; DELC 284a; ChLCS 86a"
+    },
+    {
+      "id": "CS7021",
+      "bibliography": "CD 633a-b; KoptHWb 347; DELC 284a; ChLCS 86a"
+    },
+    {
+      "id": "CS7022",
+      "bibliography": "CD 633b; KoptHWb 347; DELC 284a; ChLCS 86a"
+    },
+    {
+      "id": "CS7023",
+      "bibliography": "CD 633b; KoptHWb 347; ChLCS 86a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϣⲉⲡⲑⲏⲛⲟⲩ **ϧⲁ**ⲟⲩⲧⲓⲙⲏ ⲙⲡⲉⲣⲉⲣⲃⲱⲕ ⲛⲛⲓⲣⲱⲙⲓ .",
+      "english": "You were bought with a price. Don't become bondservants of men.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲉⲡⲧⲏⲩⲧⲛ ⲅⲁⲣ **ϩⲁ**ⲟⲩⲁⲥⲟⲩ . ϯⲉⲟⲟⲩ ϭⲉ ⲙⲡⲛⲟⲩⲧⲉ ϩⲙⲡⲉⲧⲛⲥⲱⲙⲁ .",
+      "english": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God&apos;s.",
+      "source": "46_1 Corinthians_6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲉⲡⲑⲏⲛⲟⲩ **ϧⲁ**ⲟⲩⲧⲓⲙⲏ ⲙⲁⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ϧⲉⲛⲛⲉⲧⲉⲛⲥⲱⲙⲁ .",
+      "english": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God's.",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲁϥⲕⲱϩ ⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲙⲙⲁⲩ · ⲉⲡⲃⲉⲉⲕⲉ ϯϫⲡⲟ ⲙⲙⲟϥ · ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ **ϩⲁ**ⲡⲉⲧⲉⲓⲣⲉ ⲙⲙⲟϥ ⲛⲛϣⲙⲙⲟ · ⲙⲛⲛⲕⲟⲟⲩⲉ · ⲉⲧⲣϭⲣⲱⲱϩ · ⲉϥⲛⲁⲩ ⲉⲧϩⲉ ⲉⲧⲓⲥⲡⲟⲩⲇⲁⲍⲉ ⲉⲡⲁϩⲱⲃ ⲛϭⲓϫ ·",
+      "english": "At that time the Devil became envious of me, because of the wages which I was earning before the Lord in respect of what I did for strangers and for other folk who were in want; for he saw how diligent I was in manual labour,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲓ ⲟⲩϣⲏⲣⲓ ⲙⲙⲉⲛⲣⲓⲧ ⲉⲛⲁϥⲛⲧⲁϥ ⲁϥⲟⲩⲟⲣⲡϥ ⲉⲡϧⲁⲉ ϩⲁⲣⲱⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲉⲛⲁϣⲫⲓⲧ **ϧⲁ**ⲧϩⲏ ⲙⲡⲁϣⲏⲣⲓ .",
+      "english": "Therefore still having one, his beloved son, he sent him last to them, saying, 'They will respect my son.'",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲥϭⲱϫⲃ ⲛϭⲓⲧⲙⲛⲧⲣⲉϥϫⲉ ⲛⲟϭ ⲛϣⲁϫⲉ ⲙⲡⲉⲛⲗⲁⲥ ⲛⲛⲁϩⲣⲛⲧⲉⲓϣⲡⲏⲣⲉ ⲙⲡϩⲟⲟⲩ · ⲉⲃⲟⲗ ϫⲉⲥⲛⲁϣⲡⲱϩ ⲁⲛ ⲉⲡϣⲓ ⲛⲛⲧⲁϣⲉⲟⲉⲓϣ ⲛⲧⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲙⲡⲉⲛⲧⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ **ϩⲁⲣⲟ**ⲛ · ⲕⲁⲧⲁⲡⲉⲥⲙⲡϣⲁ ·",
+      "english": "and may the utterance of words of great weight vanquish our tongue this day in respect of this miracle, for otherwise we shall not attain to the capacity for preaching, according to its true value, the goodness of Him Whom they crucified for our sakes.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6332",
+      "label": "ϩⲁⲣⲓϩⲁⲣⲟ⸗",
+      "pos": "PREP",
+      "gloss": "of oneself, alone, apart"
+    },
+    {
+      "target": "C6330",
+      "label": "ⲉϩⲟⲩⲛ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "in beneath"
+    },
+    {
+      "target": "C6331",
+      "label": "ⲉϩⲣⲁⲓ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, up to"
+    },
+    {
+      "target": "C6329",
+      "label": "ⲉⲃⲟⲗ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "away from"
+    }
+  ],
+  "etym": {
+    "egy_num": "850794",
+    "egy_lemma": "ẖr",
+    "demo_num": "d4797",
+    "demo_lemma": "ẖr",
+    "english": "under",
+    "german": "unter; infolge von",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850794",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4797"
+  }
+}

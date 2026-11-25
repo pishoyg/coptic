@@ -1,0 +1,67 @@
+{
+  "id": "C6479",
+  "forms": [
+    {
+      "id": "CF14986",
+      "orth": "ϩⲁⲕⲟ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲁⲅⲟ",
+      "dialect": "S",
+      "id": "2135.1"
+    },
+    {
+      "orth": "ⲁⲭⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2972,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲁⲭⲱⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3072,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϩⲁⲕⲟ",
+      "dialect": "L",
+      "id": "2135.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7189",
+      "bibliography": "CD 662b; KoptHWb 361; DELC 293b; ChLCS 89a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6473",
+      "type": "cf",
+      "label": "wizard, enchanter"
+    }
+  ],
+  "etym": {
+    "egy_num": "110700",
+    "egy_lemma": "ḥkꜣ.w",
+    "english": "magician",
+    "german": "Zauberer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/110700"
+  }
+}

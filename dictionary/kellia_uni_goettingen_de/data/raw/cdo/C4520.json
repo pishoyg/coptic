@@ -1,0 +1,41 @@
+{
+  "id": "C4520",
+  "forms": [
+    {
+      "id": "CF10996",
+      "orth": "ⲧⲣⲣⲉ ϩⲏⲧ (ⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocPrep": "ⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5108",
+      "bibliography": "CD 431b; KoptHWb 243; ChLCS 61a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4519",
+      "label": "ⲧⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "be afraid"
+    }
+  ]
+}

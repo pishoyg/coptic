@@ -1,0 +1,126 @@
+{
+  "id": "C275",
+  "forms": [
+    {
+      "id": "CF1160",
+      "orth": "ⲁϥϫⲓⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8535,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "note": "participium coniunctum von ⲱϥⲉ (\"auspressen\") + ϫⲓⲣ (\"Sazhering\")?",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS307",
+      "bibliography": "CD 23b; CED 17; KoptHWb 16, 491; DELC 21"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲛⲇⲓⲁⲕⲱⲛ ⲟⲛ ⲙⲡⲁⲓⲣⲏϯ ⲉⲩⲟⲓ ⲛⲥⲉⲙⲛⲟⲥ ⲉϩⲁⲛⲣⲉϥⲥⲁϫⲓ ⲃⲁⲛ ⲛⲉⲛⲥⲉϯ ⲛϩⲑⲏ ⲟⲩ ⲁⲛ ⲉⲟⲩⲙⲏϣ ⲛⲏⲣⲡ ⲉϩⲁⲛ**ⲁϥϫⲓⲣ** ⲁⲛ ⲛⲉⲉϩⲁⲛⲙⲁⲓϩⲏⲟⲩ ⲉϥϣⲏϣ ⲁⲛ ⲛⲉ .",
+      "english": "Servants, in the same way, must be reverent, not double-tongued, not addicted to much wine, not greedy for money;",
+      "source": "15_I Timothy_03",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲏⲣⲡ",
+        1,
+        12.227
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        10.313
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲛ_1_pre_ⲁϥϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲁϥϫⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲁϥϫⲓⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲛ_1_pre_ⲁϥϫⲓⲣ",
+          "ⲁϥϫⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁϥϫⲓⲣ_0_node",
+          "ⲁⲛ_1_post_ⲁϥϫⲓⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8005,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C276",
+      "label": "ⲙⲉⲧⲁϥϫⲓⲣ",
+      "pos": "N",
+      "gloss": "greed of shameful gain"
+    }
+  ],
+  "etym": {
+    "egy_num": "119",
+    "egy_lemma": "ꜣfi̯",
+    "demo_num": "d99",
+    "demo_lemma": "ꜣfꜥ",
+    "english": "to gorge oneself",
+    "german": "(gierig) essen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/119",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d99"
+  }
+}

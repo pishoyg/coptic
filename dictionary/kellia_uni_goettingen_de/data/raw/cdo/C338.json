@@ -1,0 +1,575 @@
+{
+  "id": "C338",
+  "forms": [
+    {
+      "id": "CF1468",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "Ak"
+    },
+    {
+      "orth": "ϥⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 488,
+        "count": 158
+      }
+    },
+    {
+      "orth": "ⲃⲁⲓ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3882,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS376",
+      "bibliography": "CD 28a; CED 20; KoptHWb 21; DELC 25"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲑⲣⲟⲩⲙⲟϣⲓ ⲛⲁⲩⲙⲟϣⲓ ⲡⲉ ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲑⲣⲟⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩϣⲁⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩϩⲱⲟⲩ ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲧⲟⲩϥⲁⲓ ⲛⲱⲟⲩ ⲉⲃⲟⲗϩⲁ ⲡⲕⲁϩⲓ ϣⲁⲩ**ϥⲁⲓ** ⲛⲱⲟⲩ ⲛⲉⲙⲱⲟⲩ ϫⲉⲟⲩⲡⲛⲁ ⲛⲱⲛϧ ⲉⲛⲁϥϧⲉⲛ ⲛⲓⲧⲣⲟⲭⲟⲥ .",
+      "english": "When those went, the wheels went; and when those stood, the wheels stood; and when those lifted themselves off the earth, they were lifted off with them: for the spirit of life was in the wheels.",
+      "source": "26_Ezechiel_01",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲁⲟⲩⲗ ⲁϥϫⲟⲟⲩ ⲛϩⲉⲛⲃⲁⲓϣⲓⲛⲉ ⲉϭⲱⲡⲉ ⲛⲇⲁⲩⲉⲓⲇ ⲁⲩⲱ ⲁⲩⲛⲁⲩ ⲉⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲛⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲁⲩⲱ ⲥⲁⲙⲟⲩⲏⲗ ⲛⲉϥⲁϩⲉⲣⲁⲧϥ ϩⲓϫⲱⲟⲩ ⲡⲉⲡⲛⲉⲩⲙⲁ ⲇⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲁϥⲉⲓ ⲉϫⲛⲛⲉ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲛⲥⲁⲟⲩⲗ ⲁⲩⲡⲣⲟⲫⲏⲧⲉⲩⲉ ϩⲱⲟⲩ",
+      "english": "And Saul sent messengers to take David, and they saw the assembly of the prophets, and Samuel stood as appointed over them; and the Spirit of God came upon the messengers of Saul, and they prophesy.",
+      "source": "I Samuel 19",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲛⲧⲁⲥⲁϫⲓ ⲛⲉⲙⲁⲕ ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲉⲓⲉⲱⲗⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲧⲭⲏ ϩⲓϫⲱⲕ ⲟⲩⲟϩ ⲉⲓⲉⲭⲱ ϩⲓϫⲱⲟⲩ ⲟⲩⲟϩ ⲉⲩⲉ**ϥⲁⲓ** ⲛⲉⲙⲁⲕ ⲙⲡⲉⲛⲟⲩⲟⲓ ⲙⲡⲁⲓⲗⲁⲟⲥ ⲟⲩⲟϩ ⲛⲛⲉⲕⲟⲗⲟⲩ ⲙⲙⲁⲩⲁⲧⲕ",
+      "english": "And I will go down, and speak there with thee; and I will take of the spirit that is upon thee, and will put it upon them; and they shall bear together with thee the burden of the people, and thou shalt not bear them alone.",
+      "source": "04_Numeri_11",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲛ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲛⲇⲁⲩⲉⲓⲇ ϫⲉⲛⲣⲱⲙⲉ ⲁⲩϩⲟⲕⲟⲩ ⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲉⲣⲟⲛ ⲉⲧⲥⲱϣⲉ ⲁⲛⲟⲛ ϩⲱⲱⲛ ⲁⲛⲧⲁⲁⲛ ⲉϩⲟⲩⲛ ⲛⲥⲱⲟⲩ ⲁⲛⲡⲱⲧ ⲛⲥⲱⲟⲩ ϣⲁⲉϩⲟⲩⲛ ⲉⲧⲡⲩⲗⲏ ⲛⲧⲉⲩⲡⲟⲗⲓⲥ",
+      "english": "And the messenger said to David, The men prevailed against us, and they came out against us into the field, and we came upon them even to the door of the gate.",
+      "source": "II Samuel 11",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ ⲃⲁⲗⲁⲁⲙ **ϥⲁⲓ** ⲛⲛⲉϥⲃⲁⲗ ⲉⲡϣⲱⲓ ⲁϥⲛⲁⲩ ⲉⲡⲓⲥⲣⲁⲏⲗ ⲉⲁϥⲑⲱⲟⲩϯ ⲕⲁⲧⲁⲫⲩⲗⲏ ⲟⲩⲟϩ ⲁ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲧⲉⲫⲛⲟⲩϯ ϣⲱⲡⲓ ϩⲓϫⲱϥ",
+      "english": "And Balaam lifted up his eyes, and sees Israel encamped by their tribes; and the Spirit of God came upon him.",
+      "source": "04_Numeri_24",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲍⲉⲕⲓⲁⲥ ϫⲓ ⲙⲡϫⲱⲱⲙⲉ ⲛⲧⲛⲛ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲁⲩⲱ ⲁϥⲟⲩⲱⲛ ⲙⲡϫⲱⲱⲙⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And Ezekias received the letter from the messengers, and read it, and went up to the house of the Lord, and opened it before the Lord.",
+      "source": "Isaiah 37",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:37",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲡⲁϯ",
+        2,
+        16.303
+      ],
+      [
+        "ⲑⲟⲕⲥ",
+        2,
+        14.718
+      ],
+      [
+        "ϩⲏⲙⲏ",
+        1,
+        14.303
+      ],
+      [
+        "ϭⲟϫⲓ",
+        5,
+        13.263
+      ],
+      [
+        "ⲙⲟⲩⲗⲁϫ",
+        1,
+        12.718
+      ],
+      [
+        "ⲥⲱⲟⲩⲧⲉⲛ",
+        2,
+        11.215
+      ],
+      [
+        "ϥ",
+        15,
+        10.753
+      ],
+      [
+        "ⲡⲉϥ",
+        6,
+        10.403
+      ],
+      [
+        "ⲙ",
+        10,
+        10.157
+      ],
+      [
+        "ϩⲁⲛ",
+        6,
+        9.676
+      ],
+      [
+        "ϩⲓϫⲱ",
+        2,
+        9.535
+      ],
+      [
+        "ⲃⲉⲛⲓ",
+        1,
+        9.495
+      ],
+      [
+        "ⲑⲱϩⲉⲙ",
+        1,
+        9.495
+      ],
+      [
+        "ⲡⲓ",
+        8,
+        9.378
+      ],
+      [
+        "ⲁⲙⲟⲛⲓ",
+        2,
+        8.954
+      ],
+      [
+        "ϭⲓ",
+        3,
+        8.629
+      ],
+      [
+        "ⲛ",
+        8,
+        8.198
+      ],
+      [
+        "ⲓ",
+        5,
+        8.149
+      ],
+      [
+        "ϣⲱⲓ",
+        2,
+        8.11
+      ],
+      [
+        "ⲭⲱ",
+        2,
+        7.992
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲓⲛⲉ",
+        7,
+        15.877
+      ],
+      [
+        "ⲥⲟⲃⲧ",
+        1,
+        10.983
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        2,
+        10.014
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        9.715
+      ],
+      [
+        "ϥ",
+        6,
+        9.277
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.068
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        9.021
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.234
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.104
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.065
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        7.767
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.126
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        6.975
+      ],
+      [
+        "ϩⲁ",
+        1,
+        6.865
+      ],
+      [
+        "ⲁ",
+        3,
+        6.799
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        6.735
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.425
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.146
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        6.116
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          3
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          11
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲓ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.49,
+      "rank": 980,
+      "count": 42
+    },
+    "S": {
+      "rate": 0.05,
+      "rank": 3492,
+      "count": 8
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C13008",
+      "label": "ϩⲣⲟⲩⲃⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder, voice of heaven"
+    },
+    {
+      "target": "C337",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "night raven; screech-owl"
+    },
+    {
+      "target": "C339",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "sky"
+    },
+    {
+      "target": "C340",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "sky"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1648",
+    "demo_lemma": "bj",
+    "english": "[Ba]",
+    "german": "Ba, Seele",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1648"
+  }
+}

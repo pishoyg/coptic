@@ -1,0 +1,337 @@
+{
+  "id": "C693",
+  "forms": [
+    {
+      "id": "CF2631",
+      "orth": "ⲉⲡⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3498,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF2632",
+      "orth": "ⲡⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14720,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2633",
+      "orth": "ⲉⲫⲗⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1251,
+        "count": 34
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS831",
+      "bibliography": "CD 57b, 63a; KoptHWB 38; DELC 45; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲙⲉⲛⲉⲛⲥⲁⲟⲩⲁⲃⲟⲧ ⲛⲉϩⲟⲟⲩ ⲓⲥϫⲉⲛ ⲉⲧⲁⲡⲉϥⲓⲱⲧ ⲙⲟⲩ ⲉϥϣⲟⲡ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛⲉⲙⲕⲁϩ ⲛϩⲏⲧ ⲉⲑⲃⲉⲡⲉϥϫⲓⲛⲫⲱⲣϫ ⲉⲃⲟⲗ ϧⲉⲛⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲛ**ⲉⲫⲗⲏⲟⲩ**",
+      "english": "It came a month days after his father's death that he was in great sorrow about his separation from this vain world.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁϩ ⲅⲁⲣ ⲛⲉⲧⲉⲛⲥⲉϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲁⲛ . ⲛⲣⲉϥϫⲉϣⲁϫⲉ ⲛ**ⲉⲡⲣⲁ** . ⲁⲩⲱ ⲛⲣⲉϥⲧⲁⲕⲉ ϩⲏⲧ ⲛϩⲟⲩⲟ ⲇⲉ ⲛⲉⲃⲟⲗ ϩⲙⲡⲥⲃⲃⲉ .",
+      "english": "For there are also many unruly men, vain talkers and deceivers, especially those of the circumcision,",
+      "source": "56_Titus_1",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥϫⲉ ⲇⲉ ⲙⲡⲉⲡⲭⲣⲓⲥⲧⲟⲥ ⲧⲱⲛϥ ⲟⲩ**ⲉⲫⲗⲏⲟⲩ** ⲡⲉ ⲡⲉⲧⲉⲛⲛⲁϩϯ ⲉⲧⲓ ⲟⲛ ⲧⲉⲧⲉⲛⲭⲏ ⲛϧⲣⲏⲓ ϧⲉⲛⲛⲉⲧⲉⲛⲛⲟⲃⲓ .",
+      "english": "If Christ has not been raised, your faith is vain; you are still in your sins.",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲁⲕⲱⲃ ⲙⲟⲩⲧⲉ ⲉⲡⲣⲁⲛ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ϫⲉⲡⲏⲓ ⲙⲡⲛⲟⲩⲧⲉ ⲛ**ⲉⲡⲣⲁ**ⲛ ⲇⲉ ⲛⲧⲡⲟⲗⲓⲥ ⲛϣⲟⲣⲡ ⲡⲉ ⲟⲩⲗⲁⲙⲟⲩⲥ",
+      "english": "And he called the name of that place, the House of God; and the name of the city before was Ulam-luz.",
+      "source": "Genesis 28",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲁⲡⲁ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉⲉⲛⲉⲙⲡⲉϥϭⲓⲕⲁϯ ⲛⲣⲱⲙⲓ ⲡⲉ ⲛⲁϥⲛⲁϭⲓⲥⲁⲣⲝ ⲛⲣⲱⲙⲓ ⲁⲛ ⲟⲛ ⲡⲉ ⲓⲉ ϫⲉⲟⲩⲛ ⲁϥϭⲓⲥⲁⲣⲝ ⲛⲣⲱⲙⲓ ⲉⲃⲟⲗ ϧⲉⲛⲙⲁⲣⲓⲁ ϯⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲑⲟⲩⲁⲃ ⲓⲉ ⲁϥⲉⲣⲣⲱⲙⲓ ⲟⲛ ⲛⲉⲙⲯⲩⲭⲏ ⲛⲉⲙⲟⲩⲕⲁϯ ⲉϥϫⲏⲕ ⲉⲃⲟⲗ ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛⲧⲉϯⲙⲉⲧⲣⲱⲙⲓ ϣⲁⲧⲉⲛⲫⲛⲟⲃⲓ ⲙⲙⲁⲩⲁⲧϥ ⲙⲙⲟⲛ ϣϫⲟⲙ ⲅⲁⲣ ⲛⲧⲉⲡⲥⲱⲙⲁ ϣⲱⲡⲓ ....... ⲉⲯⲩⲭⲏ ⲛⲉⲙⲕⲁϯ ⲓⲥϫⲉ ⲇⲉ ⲙⲡⲉϥϭⲓ ⲛⲛⲁⲓ ⲓⲉ ⲉⲩⲙⲟⲩϯ ⲉⲣⲟϥ ⲉ**ⲫⲗⲏⲟⲩ** ϫⲉⲛⲭⲣⲓⲥⲧⲟⲥ ⲡⲗⲟⲅⲟⲥ ⲟⲩⲛ ⲛⲁⲧϣⲓⲃϯ ⲡⲓⲙⲟⲛⲟⲅⲉⲛⲏⲥ ⲛϣⲏⲣⲓ ⲛⲧⲉⲫⲓⲱⲧ ⲁϥϭⲓⲥⲱⲙⲁ ⲛⲣⲱⲙⲓ ⲛⲉⲙⲯⲩⲭⲏ ⲛⲉⲙⲕⲁϯ ⲛⲉⲙϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛⲧⲉϯⲙⲉⲧⲣⲱⲙⲓ ⲭⲱⲣⲓⲥ ⲫⲛⲟⲃⲓ .",
+      "english": "Apa Evagrius said: ‘If He had not accepted the human spirit, He would not have taken on human flesh; for the Blessed Virgin Mary did not bear one without a human soul. In every human work, free from sin, this was fitting. For it is not possible that there be a body [….] soul and spirit. For unless He had received these, Christ would be called in vain. Therefore, the immutable Word, the Only-Begotten Son of the Father, assumed a human body, as well as a soul, spirit, and all things human, without sin.",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϭⲓⲡⲥⲉⲉⲡⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲥⲉⲧⲙⲣϩⲱⲃ ⲛϫⲓⲛϭⲟⲛⲥ ⲁⲩⲱ ⲛⲥⲉⲧⲙϣⲁϫⲉ **ⲉⲡⲣⲁ** ⲛⲥⲉⲧⲙϩⲉ ⲉⲗⲁⲥ ⲛⲕⲣⲟϥ ϩⲛⲧⲉⲩⲧⲁⲡⲣⲟ ⲉⲃⲟⲗ ϫⲉⲛⲧⲟⲟⲩ ⲥⲉⲛⲁⲙⲟⲟⲛⲉ ⲛⲥⲉⲙⲧⲟⲛ ⲙⲙⲟⲟⲩ ⲉⲙⲛⲧϩⲣϣⲟⲟⲩ",
+      "english": "and the remnant of Israel shall fear the name of the Lord, and shall do no iniquity, neither shall they speak vanity; neither shall a deceitful tongue be found in their mouth: for they shall feed, and lie down, and there shall be none to terrify them.",
+      "source": "Zephaniah 3",
+      "urn": "urn:cts:copticLit:ot.zeph.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲧⲁⲕⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲣⲉϥϫⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        2,
+        13.106
+      ],
+      [
+        "ϣⲁϫⲉ",
+        6,
+        12.904
+      ],
+      [
+        "ⲕⲁⲣⲙⲏⲗⲟⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲛ",
+        15,
+        12.208
+      ],
+      [
+        "ⲉⲛⲉ",
+        2,
+        11.643
+      ],
+      [
+        "ⲙⲟⲩϣⲧ",
+        1,
+        11.369
+      ],
+      [
+        "ϩⲁⲗⲁⲧⲉ",
+        1,
+        10.753
+      ],
+      [
+        "ⲛⲁϩⲧⲉ",
+        1,
+        10.019
+      ],
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        9.792
+      ],
+      [
+        "ϫⲉ",
+        5,
+        9.79
+      ],
+      [
+        "ⲁϫⲛ",
+        1,
+        9.647
+      ],
+      [
+        "ⲧⲙ",
+        2,
+        9.616
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        9.507
+      ],
+      [
+        "ⲛⲉⲕ",
+        2,
+        9.465
+      ],
+      [
+        "ⲩ",
+        5,
+        9.454
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        7.956
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.761
+      ],
+      [
+        "ⲉ",
+        4,
+        7.495
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          7
+        ],
+        [
+          "ⲡ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ⲏⲓ",
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          "ⲙ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲏⲓ",
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          "ⲉⲡⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲡⲣⲁ",
+          "ⲉⲡⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          "ⲛ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          "ⲇⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3131,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C692",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanities, senselessness"
+    },
+    {
+      "target": "C694",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "ADV",
+      "gloss": "in vain, vainly"
+    },
+    {
+      "target": "C696",
+      "label": "ⲉⲣⲉⲫⲗⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "act vainly, be vain, empty"
+    },
+    {
+      "target": "C695",
+      "label": "ⲙⲛⲧⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanity, emptiness"
+    }
+  ]
+}

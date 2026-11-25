@@ -1,0 +1,360 @@
+{
+  "id": "C10516",
+  "forms": [
+    {
+      "id": "CF28218",
+      "orth": "ⲥⲡⲓⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28219",
+      "orth": "ⲥⲡⲉⲓⲣⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28220",
+      "orth": "ⲥⲡⲓⲣⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3435,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF28221",
+      "orth": "ⲥⲡⲓⲣⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14261",
+      "bibliography": "DDGLC",
+      "cu_ID": "742"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙⲁⲧⲟⲓ ⲇⲉ ⲁⲩϭⲓⲧϥ ⲉϧⲟⲩⲛ ⲉϯⲁⲩⲗⲏ ⲛⲧⲉⲡⲓⲡⲣⲉⲧⲱⲣⲓⲟⲛ ⲟⲩⲟϩ ⲁⲩⲙⲟⲩϯ ⲉϯ**ⲥⲡⲓⲣⲁ** ⲧⲏⲣⲥ ⲉϩⲣⲏⲓ ⲉϫⲱϥ",
+      "english": "The soldiers led him away within the court, which is the Praetorium; and they called together the whole cohort.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲛⲓⲙⲁⲧⲟⲓ ⲛⲧⲉⲡⲓϩⲏⲅⲉⲙⲱⲛ ⲁⲩⲉⲗ ⲓⲏⲥⲟⲩⲥ ⲉϧⲟⲩⲛ ⲉⲡⲓⲡⲣⲉⲧⲱⲣⲓⲟⲛ ⲁⲩⲑⲱⲟⲩϯ ⲛϯ**ⲥⲡⲓⲣⲁ** ⲧⲏⲣⲥ ⲉϩⲣⲏⲓ ⲉϫⲱϥ .",
+      "english": "Then the governor's soldiers took Jesus into the Praetorium, and gathered the whole garrison together against him.",
+      "source": "01_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁⲩϯϩⲁⲡ ⲉⲑⲣⲉⲛⲉⲣϩⲱⲧ ⲉϯϩⲩⲧⲁⲗⲓⲁ ⲁϥϯ ⲙⲡⲁⲩⲗⲟⲥ ⲛⲉⲙϩⲁⲛⲕⲉⲭⲱⲟⲩⲛⲓ ⲉⲩⲥⲟⲛϩ ⲉⲧⲟⲧϥ ⲛⲟⲩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭ ⲟⲥ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲓⲟⲩⲗⲓⲟⲥ ⲉⲃⲟⲗ ϧⲉⲛϯ**ⲥⲡⲓⲣⲁ** ⲛⲧⲉⲥⲁⲃⲁⲥⲧⲏ .",
+      "english": "When it was determined that we should sail for Italy, they delivered Paul and certain other prisoners to a centurion named Julius, of the Augustan band.",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲁⲃⲁⲥⲧⲏ",
+        1,
+        17.373
+      ],
+      [
+        "ⲓⲟⲩⲗⲓⲟⲥ",
+        1,
+        16.373
+      ],
+      [
+        "ⲭⲓⲗⲓⲁⲣⲭⲟⲥ",
+        1,
+        12.618
+      ],
+      [
+        "ⲉϫⲱ",
+        3,
+        12.016
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        3,
+        11.643
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        2,
+        11.152
+      ],
+      [
+        "ϯ",
+        5,
+        10.934
+      ],
+      [
+        "ⲧⲏⲣ",
+        3,
+        10.404
+      ],
+      [
+        "ⲥ",
+        4,
+        10.106
+      ],
+      [
+        "ϣⲑⲟⲣⲧⲉⲣ",
+        1,
+        9.897
+      ],
+      [
+        "ⲑⲱⲟⲩϯ",
+        1,
+        9.34
+      ],
+      [
+        "ⲩ",
+        3,
+        8.554
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.744
+      ],
+      [
+        "ⲉ",
+        2,
+        5.695
+      ],
+      [
+        "ⲁ",
+        2,
+        5.668
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        3.982
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.815
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        3.449
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        3.441
+      ],
+      [
+        ".",
+        1,
+        3.294
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲁⲥⲧⲏ",
+        1,
+        17.791
+      ],
+      [
+        "ⲭⲓⲗⲓⲁⲣⲭⲟⲥ",
+        3,
+        17.298
+      ],
+      [
+        "ⲧϩⲓⲉⲣⲟⲥⲟⲗⲩⲙⲁ",
+        1,
+        16.791
+      ],
+      [
+        "ⲓⲟⲩⲗⲓⲟⲥ",
+        1,
+        16.206
+      ],
+      [
+        "ⲧⲉ",
+        7,
+        13.418
+      ],
+      [
+        "ϩⲩⲡⲏⲣⲉⲧⲏⲥ",
+        1,
+        12.836
+      ],
+      [
+        "ⲧⲏⲣ",
+        4,
+        11.057
+      ],
+      [
+        ".",
+        5,
+        10.716
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.94
+      ],
+      [
+        "ⲛ",
+        6,
+        8.756
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        8.413
+      ],
+      [
+        "ⲁ",
+        4,
+        8.237
+      ],
+      [
+        "ⲥ",
+        3,
+        8.222
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        7.677
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        6.939
+      ],
+      [
+        "ⲡ",
+        3,
+        6.445
+      ],
+      [
+        "ϫⲓ",
+        1,
+        6.357
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.321
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.275
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲡⲓⲣⲁ_0_node",
+          5
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          3
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲡⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲁⲥⲧⲏ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲡⲓⲣⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲥⲡⲓⲣⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲡⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲡⲓⲣⲁ",
+          "ⲥⲁⲃⲁⲥⲧⲏ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲡⲓⲣⲁ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲡⲓⲣⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲡⲓⲣⲁ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 3020,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2586",
+    "grl_lemma": "σπεῖρα",
+    "grl_meaning": "anything twisted or wound, rope, cord, a military unit (=\n    lat. manipulus)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1625a; Preisigke 2:475"
+  }
+}

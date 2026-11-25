@@ -1,0 +1,58 @@
+{
+  "id": "C7240",
+  "forms": [
+    {
+      "id": "CF16539",
+      "orth": "ϫⲛⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4880,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϫⲛⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4805,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϫⲁⲛ⸗",
+      "dialect": "F",
+      "id": "2422.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "note": "status pronominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7990",
+      "bibliography": "CD 773b; CED 315; KoptHWb 424; DELC 327b; ChLCS 102a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲓ ⲉⲧⲟⲟⲧⲟⲩ ⲛϩⲉⲛⲙⲁ ⲛⲥⲟⲟⲛⲉ · ⲉⲁⲩⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲁⲩ**ϫⲛⲁ**ϥ ϩⲉⲛⲥⲁϣ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA 205-214",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:451-457",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲧⲟϥ ⲇⲉ ⲛϭⲓⲙⲱⲩⲥⲏⲥ ϣⲁⲡϫⲟⲉⲓⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡϫⲟⲉⲓⲥ ⲉⲧⲃⲉⲟⲩ ⲁⲕⲧϩⲙⲕⲟ ⲙⲡⲉⲕⲗⲁⲟⲥ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲕ**ϫⲛⲁ**ⲉⲓ ϣⲁⲡⲉⲕⲗⲁⲟⲥ",
+      "english": "And Moses turned to the Lord, and said, I pray, Lord, why hast thou afflicted this people? and wherefore hast thou sent me?",
+      "source": "Exodus 5",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

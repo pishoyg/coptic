@@ -1,0 +1,393 @@
+{
+  "id": "C5355",
+  "forms": [
+    {
+      "id": "CF31919",
+      "orth": "ⲟⲩⲟϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2739,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF31918",
+      "orth": "ⲟⲩⲟⲟϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5167,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲓϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12140,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1588,
+        "count": 23
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁϭⲉ",
+      "dialect": "A",
+      "id": "1772.3"
+    },
+    {
+      "orth": "ⲟⲩⲁϫⲓ",
+      "dialect": "F",
+      "id": "1772.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6008",
+      "bibliography": "CD 512b; CDC 79b; CED 224; KoptHWb 287; DELC 242b; ChLCS 71b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲣⲱϩⲧ ⲛⲟⲩⲙⲟⲛⲁⲭⲟⲥ ⲉⲃⲟⲗ ϩⲛⲛϩⲗⲗⲟ ⲉϩⲟⲩⲛ ⲉⲧⲉϥ**ⲟⲩⲟϭⲉ** ·",
+      "english": "He struck a monk among the elders upon his cheek.",
+      "source": "Apophthegmata Patrum Sahidic 127: N 298",
+      "urn": "urn:cts:copticLit:ap.127.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲙⲟⲓ ⲟⲛ ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲧⲁⲁⲥ ⲛⲁⲛ ⲉⲧⲣⲉⲛⲕⲱⲧⲉ ⲛⲧⲉⲛ**ⲟⲩⲟϭⲉ** ⲉⲡⲉⲧⲛⲁⲣⲁϩⲧⲛ ⲉⲣⲟⲥ ⲁⲩⲱ ⲉⲥϣⲁⲛϣⲱⲡⲉ ⲉⲧⲣⲉⲩⲙⲟⲟⲩⲧⲛ ϩⲱⲱⲛ ⲉⲧⲃⲉⲡⲣⲁⲛ ⲙⲡⲉⲛⲛⲟⲩⲧⲉ ⲉⲧⲣⲉⲛϫⲟⲟⲥ ⲉϩⲛⲁⲛ ϫⲉⲡϫⲟⲉⲓⲥ ⲙⲡⲣⲱⲡ ⲉⲣⲟⲟⲩ ⲙⲡⲉⲓⲛⲟⲃⲉ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲛⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ ϣⲟⲩⲟ ⲉϫⲛⲛⲉⲛ**ⲟⲩⲟϭⲉ** · ⲙⲁⲣⲛϩⲓⲟⲩⲉ ⲉϩⲟⲩⲛ ϩⲛⲛⲉⲛⲙⲉⲥⲧϩⲏⲧ ·",
+      "english": "and let us make tears to flow down our cheeks in streams, and let us beat our breasts in sorrow,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲣ",
+        2,
+        17.276
+      ],
+      [
+        "ⲣⲙⲙⲓⲟⲟⲩⲉ",
+        1,
+        16.598
+      ],
+      [
+        "ⲩⲃⲟⲟⲣⲉ",
+        1,
+        15.598
+      ],
+      [
+        "ϣⲟⲩⲟ",
+        3,
+        15.376
+      ],
+      [
+        "ϩⲗⲗⲟ",
+        4,
+        14.303
+      ],
+      [
+        "ⲛ",
+        22,
+        13.187
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        2,
+        13.013
+      ],
+      [
+        "ⲛⲁⲗⲗⲟⲫⲩⲗⲗⲟⲥ",
+        1,
+        12.511
+      ],
+      [
+        "ⲙⲁⲥⲧⲓⲅⲝ",
+        1,
+        11.389
+      ],
+      [
+        "ⲁⲁⲥ",
+        1,
+        11.013
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        10.964
+      ],
+      [
+        "ⲣⲙⲉⲓⲟⲟⲩⲉ",
+        1,
+        10.448
+      ],
+      [
+        "ⲉ",
+        9,
+        10.327
+      ],
+      [
+        "ⲉϫⲛ",
+        3,
+        10.18
+      ],
+      [
+        "ⲕⲧⲟ",
+        2,
+        10.124
+      ],
+      [
+        "ⲣⲓⲕⲉ",
+        1,
+        9.884
+      ],
+      [
+        "ϩⲓⲟⲩⲉ",
+        1,
+        9.691
+      ],
+      [
+        "ⲉⲣⲟ",
+        4,
+        9.484
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        8.87
+      ],
+      [
+        "ⲟ",
+        2,
+        8.805
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϭⲉ_0_node",
+          13
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲩⲟϭⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲁⲥ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲫⲩⲗⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲫⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲟⲩⲟϭⲉ",
+          "ϥ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲛⲁ_1_pre_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϭⲉ_0_node",
+          "ⲉ_1_post_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲟϭⲉ",
+          "ϩⲉⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉ",
+          "ⲁⲁⲥ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϭⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟϭⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲫⲩⲗⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲫⲩⲗⲏ_3_post_ⲛⲉ",
+          "ⲙ_4_post_ⲫⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲫⲩⲗⲏ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟⲩⲟϭⲉ",
+          "ⲟⲩⲟϭⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2427,
+      "count": 16
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5358",
+      "label": "ⲙⲁⲣⲟⲩⲟϭⲉ",
+      "pos": "N",
+      "gloss": "jawbone"
+    },
+    {
+      "target": "C5357",
+      "label": "ⲟⲩⲉϭⲣⲟ",
+      "pos": "N",
+      "gloss": "doorpost"
+    },
+    {
+      "target": "C5356",
+      "label": "ⲟⲩⲱϭ",
+      "pos": "N",
+      "gloss": "entrance, entrance hall, colonnade"
+    }
+  ],
+  "etym": {
+    "egy_num": "50840",
+    "egy_lemma": "wg.wt",
+    "demo_num": "dm2563",
+    "demo_lemma": "wgj(.t)",
+    "english": "(lower) jaw",
+    "german": "Unterkiefer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/50840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm2563"
+  }
+}

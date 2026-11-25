@@ -1,0 +1,187 @@
+{
+  "id": "C3162",
+  "forms": [
+    {
+      "id": "CF8207",
+      "orth": "ⲣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.16,
+        "rank": 182,
+        "count": 972
+      }
+    },
+    {
+      "orth": "ⲣⲁⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.5,
+        "rank": 1110,
+        "count": 42
+      }
+    },
+    {
+      "orth": "ⲣⲉⲧ⸗",
+      "dialect": "A",
+      "id": "378.2"
+    },
+    {
+      "orth": "ⲣⲉⲉⲧ⸗",
+      "dialect": "A",
+      "id": "378.3"
+    },
+    {
+      "orth": "ⲣⲉⲧ⸗",
+      "dialect": "F",
+      "id": "378.4"
+    },
+    {
+      "orth": "ⲗⲉⲧ⸗",
+      "dialect": "F",
+      "id": "378.5"
+    },
+    {
+      "orth": "ⲣⲉⲧ⸗",
+      "dialect": "L",
+      "id": "378.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3612",
+      "bibliography": "CD 302b; CED 140; KoptHWb 167; DELC 178; ChLCS 42b"
+    },
+    {
+      "id": "CS3613",
+      "bibliography": "CD 302b; KoptHWb 167; DELC 178; ChLCS 42b"
+    },
+    {
+      "id": "CS3614",
+      "bibliography": "CD 302b; KoptHWb 167"
+    },
+    {
+      "id": "CS3615",
+      "bibliography": "KoptHWb 167; DELC 178; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲟⲩ ⲉϩⲟⲩⲛ ⲙⲡⲣⲁϩⲉ**ⲣⲁⲧ**ⲕ ϩⲓⲡⲥⲁ ⲛⲃⲟⲗ ·",
+      "english": "Come in, and stand not outside.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲁϩⲟ ⲉ**ⲣⲁⲧ**ⲟⲩ ⲙⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲁⲩⲱ ⲥⲓⲙⲱⲛ ⲁϥϯⲟⲩⲣⲁⲛ ⲉⲣⲟϥ ϫⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "Simon, to whom he gave the name Peter;",
+      "source": "41_Mark_3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲥⲕⲉ**ⲣⲁⲧ**ⲥ ⲉⲃⲟⲗ ⲉⲛⲉϩ ⲉⲛⲁⲩ ⲉⲡⲓⲉⲣⲟ .",
+      "english": "and she never set foot outside to see the river.",
+      "source": "Apophthegmata Patrum Sahidic 042: Sarah",
+      "urn": "urn:cts:copticLit:ap.42.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3174",
+      "label": "ϩⲁⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "under foot, beneath"
+    },
+    {
+      "target": "C3175",
+      "label": "ϩⲓⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "toward"
+    },
+    {
+      "target": "C3170",
+      "label": "ϫⲓⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "hold foot, impede"
+    },
+    {
+      "target": "C3171",
+      "label": "ϭⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "find foot, base, search"
+    },
+    {
+      "target": "C3169",
+      "label": "ϯ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "put on foot, shoe"
+    },
+    {
+      "target": "C3172",
+      "label": "ⲁⲧϭⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable, unattainable"
+    },
+    {
+      "target": "C3167",
+      "label": "ⲁⲧⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable"
+    },
+    {
+      "target": "C3173",
+      "label": "ⲉⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "to foot of, to (mostly of persons)"
+    },
+    {
+      "target": "C3164",
+      "label": "ⲕⲁⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "lay, set foot"
+    },
+    {
+      "target": "C3165",
+      "label": "ⲕⲁⲣⲁⲧ⸗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "step, set forth"
+    },
+    {
+      "target": "C3166",
+      "label": "ⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "bring, follow foot, trace"
+    },
+    {
+      "target": "C3163",
+      "label": "ⲣⲙⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "footman"
+    },
+    {
+      "target": "C3168",
+      "label": "ⲥⲣⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "spread feet (pee)"
+    }
+  ],
+  "etym": {
+    "egy_num": "96600",
+    "egy_lemma": "rd",
+    "demo_num": "d3606",
+    "demo_lemma": "rd.wj.ṱ",
+    "english": "foot; footprint",
+    "german": "Fuß; (unteres) Bein; Fußspur",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/96600",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3606"
+  }
+}

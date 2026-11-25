@@ -1,0 +1,141 @@
+{
+  "id": "C10581",
+  "forms": [
+    {
+      "id": "CF28573",
+      "orth": "ⲥⲩⲅⲕⲣⲓⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28574",
+      "orth": "ⲥⲩⲅⲕⲣⲓⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18785,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14399",
+      "bibliography": "DDGLC",
+      "cu_ID": "1711"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲑⲉ ⲛⲟⲩⲥⲫⲣⲁⲅⲓⲥ ⲛⲁⲛⲑⲣⲁⲝ ϩⲓⲟⲩⲕⲟⲥⲙⲟⲥ ⲛⲛⲟⲩⲃ ⲁⲩⲱ ⲟⲩ**ⲥⲩⲅⲕⲣⲓⲙⲁ** ⲙⲙⲟⲩⲥⲓⲕⲟⲛ ϩⲛⲟⲩⲥⲩⲙⲡⲟⲥⲓⲟⲛ ⲛⲏⲣⲡ",
+      "english": "For all these things are to be done because of the commandment.",
+      "source": "Sirach 35",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲩⲥⲓⲕⲟⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        11.991
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲩⲅⲕⲣⲓⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          "ⲟⲩ_1_pre_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          "ⲥⲩⲅⲕⲣⲓⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲅⲕⲣⲓⲙⲁ_0_node",
+          "ⲙ_1_post_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲅⲕⲣⲓⲙⲁ",
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18397,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6261",
+    "grl_lemma": "σύγκριμα",
+    "grl_meaning": "compound, combination; decree",
+    "grl_pos": "noun",
+    "grl_ref": "Muraoka 2009, 643b"
+  }
+}

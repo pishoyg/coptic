@@ -1,0 +1,701 @@
+{
+  "id": "C284",
+  "forms": [
+    {
+      "id": "CF1191",
+      "orth": "ⲁϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.27,
+        "rank": 180,
+        "count": 990
+      }
+    },
+    {
+      "id": "CF1192",
+      "orth": "ⲁϩⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1193",
+      "orth": "ⲁϩⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1194",
+      "orth": "ⲁϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3047,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF1195",
+      "orth": "ⲉϩⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF1196",
+      "orth": "ⲉϩⲓ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS316",
+      "bibliography": "CD 24a; CED 18; KoptHWb 17, 491; DELC 22; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲛⲟⲩⲙⲟⲩϯ ⲉⲣⲟⲑⲏⲉⲧⲥⲟϫⲡ ⲟⲩⲟϩ ⲡⲉⲕ**ⲁϩⲓ** ⲛⲛⲟⲩⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲡⲓϣⲁϥⲉ ⲛⲑⲟ ⲅⲁⲣ ⲉⲩⲉⲙⲟⲩϯ ⲉⲣⲟϫⲉⲡⲁⲟⲩⲱϣ ⲟⲩⲟϩ ⲡⲉⲕⲁϩⲓ ϫⲉϯⲟⲓⲕⲟⲩⲙⲉⲛⲏ .",
+      "english": "And thou shalt no more be called Forsaken; and thy land shall no more be called Desert: for thou shalt be called My Pleasure, and thy land Inhabited: for the Lord has taken pleasure in thee, and thy land shall be inhabited.",
+      "source": "23_Isaias_62",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:62",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉⲁⲛⲁ**ⲁϩⲉ**ⲱϫⲛ ϩⲛⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲏⲡⲡⲉ ⲓⲥ ⲡⲉⲗⲁⲟⲥ ⲙⲫⲣⲏϯ ⲛϩⲁⲛϩⲓⲟⲙⲓ ⲛϧⲣⲏⲓ ⲛϧⲏϯ ⲛⲓⲡⲩⲗⲏ ⲛⲧⲉⲡⲉⲕ**ⲁϩⲓ** ϧⲉⲛⲟⲩⲁⲟⲩⲱⲛ ⲉⲩⲉⲁⲟⲩⲱⲛ ⲙⲙⲱⲟⲩ ⲛⲛⲉⲥⲁϫⲓ ⲟⲩⲭⲣⲱⲙ ⲉϥⲉⲟⲩⲱⲙ ⲛⲛⲉⲙⲟⲭⲗⲟⲥ .",
+      "english": "Behold, thy people within thee are as women: the gates of thy land shall surely be opened to thine enemies: the fire shall devour thy bars.",
+      "source": "34_Nahum_03",
+      "urn": "urn:cts:copticLit:ot.nah.bohairic_ed:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲇⲉ ⲛϥⲣⲙⲟⲛⲁⲭⲟⲥ ⲁϥϣⲱⲡⲉ ϩⲛⲟⲩⲁⲙⲉⲗⲓⲁ . ⲁⲩⲱ ⲁϥϫⲉⲡⲉϥ**ⲁϩⲉ** ⲉⲃⲟⲗ ⲕⲁⲕⲱⲥ .",
+      "english": "When he had gone and become a monk, he became negligent, and he spent his life badly.",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲣⲱⲙⲓ ⲅⲁⲣ ⲙⲙⲓⲥⲓ ⲉⲃⲟⲗϧⲉⲛ ⲟⲩⲥϩⲓⲙⲓ ⲟⲩⲕⲟⲩϫⲓ ⲛ**ⲁϩⲓ** ⲡⲉ ⲟⲩⲟϩ ϥⲙⲉϩ ⲛϫⲱⲛⲧ .",
+      "english": "For a mortal born of a woman is short lived, and full of wrath.",
+      "source": "18_Iob_14",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲁⲛ ⲉⲕⲟⲩⲱⲙ ⲕⲁⲛ ⲉⲕⲥⲱ · ⲕⲁⲛ ⲉⲕⲛⲏⲥⲧⲉⲩⲉ · ⲕⲁⲛ ⲉⲕϩⲕⲁⲉⲓⲧ · ⲕⲁⲛ ⲉⲕⲟⲃⲉ · ϣⲁⲣⲉⲡⲣⲏ ϩⲱⲧⲡ ⲙⲙⲏⲛⲉ · ⲛⲥⲉϭⲱϫⲃ ϩⲙⲡⲉⲕ**ⲁϩⲉ** ⲙⲙⲏⲛⲉ ·",
+      "english": "And whether thou eatest, or whether thou drinkest, or whether thou fastest, or whether thou art hungry, or whether thou art thirsty, the sun wall set every day, and the period of thy life will become less day by day.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲁ",
+        1,
+        12.203
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        2,
+        11.705
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        2,
+        10.766
+      ],
+      [
+        "ⲉⲣⲫⲉⲓ",
+        1,
+        10.643
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.839
+      ],
+      [
+        "ϣϫⲟⲙ",
+        1,
+        9.748
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        9.421
+      ],
+      [
+        "ϩⲓⲧⲉⲛ",
+        1,
+        8.701
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.352
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        7.221
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        7.215
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        7.018
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        1,
+        6.93
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.455
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.169
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        5.816
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲁⲧ",
+        793,
+        32.852
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        28,
+        28.306
+      ],
+      [
+        "ϥ",
+        855,
+        27.027
+      ],
+      [
+        "ⲟⲩ",
+        402,
+        24.459
+      ],
+      [
+        "ⲉ",
+        407,
+        24.11
+      ],
+      [
+        "ⲁ",
+        351,
+        23.696
+      ],
+      [
+        "ⲙ",
+        316,
+        23.548
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        98,
+        23.076
+      ],
+      [
+        "ⲕ",
+        188,
+        22.802
+      ],
+      [
+        "ⲛ",
+        373,
+        22.724
+      ],
+      [
+        "ϩⲓϫⲱ",
+        58,
+        22.67
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        71,
+        22.547
+      ],
+      [
+        "ⲡ",
+        304,
+        22.527
+      ],
+      [
+        "ⲡⲉ",
+        191,
+        22.526
+      ],
+      [
+        "ⲉⲣⲟ",
+        141,
+        22.189
+      ],
+      [
+        "ⲓ",
+        140,
+        21.524
+      ],
+      [
+        "ⲥ",
+        154,
+        21.36
+      ],
+      [
+        "ϩⲛ",
+        135,
+        20.995
+      ],
+      [
+        "ⲧ",
+        145,
+        20.896
+      ],
+      [
+        "ⲩ",
+        154,
+        20.896
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲁⲃ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲉⲣⲫⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲫⲉⲓ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲁⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϩⲉ_0_node",
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ",
+          "ⲉⲣⲁ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁ_1_post_ⲁϩⲉ",
+          "ⲧⲉⲛ_2_post_ⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲉⲣⲁ",
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ_b",
+          1
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_1_post_ⲁϩⲉ_b",
+          "ⲟⲩ_2_post_ⲁⲃ",
+          1
+        ],
+        [
+          "ⲁϩⲉ_0_node",
+          "ⲡⲁ_2_post_ⲉⲣⲫⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲉⲣⲫⲉⲓ",
+          "ⲉⲣⲫⲉⲓ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲫⲉⲓ_1_post_ⲁϩⲉ",
+          "ⲉⲣⲁⲧ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_1_post_ⲁϩⲉ",
+          "ϥ_2_post_ⲉⲣⲁⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁϩⲉ_0_node",
+          99
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲁϩⲉ",
+          57
+        ],
+        [
+          "ⲟⲩ_2_post_ⲣⲁⲧ",
+          27
+        ],
+        [
+          "ⲁ_1_pre_ⲁϩⲉ",
+          19
+        ],
+        [
+          "ϥ_1_pre_ⲁϩⲉ",
+          22
+        ],
+        [
+          "ϥ_2_post_ⲣⲁⲧ",
+          24
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁϩⲉ",
+          16
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁϩⲉ",
+          6
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁϩⲉ",
+          5
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          5
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁϩⲉ",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲁϩⲉ",
+          8
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲁϩⲉ",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲁϩⲉ",
+          4
+        ],
+        [
+          "ⲕ_2_post_ⲣⲁⲧ",
+          6
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ϩⲓϫⲱ",
+          2
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_1_post_ⲁϩⲉ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ϩⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲁϩⲉ",
+          4
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲁϩⲉ",
+          4
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲁϩⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϩⲉ_0_node",
+          "ⲣⲁⲧ_1_post_ⲁϩⲉ",
+          12
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲁϩⲉ",
+          "ⲟⲩ_2_post_ⲣⲁⲧ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲁϩⲉ",
+          "ϥ_1_pre_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          3
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲁϩⲉ",
+          "ϥ_2_post_ⲣⲁⲧ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁϩⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁϩⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁϩⲉ",
+          "ⲩ_1_pre_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲁϩⲉ",
+          "ⲕ_2_post_ⲣⲁⲧ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲣⲁⲧ",
+          "ⲛϩⲏⲧ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲁϩⲉ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲣⲁⲧ",
+          "ϩⲓϫⲱ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ⲁϩⲉ",
+          "ϥ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲣⲁⲧ",
+          "ϩⲓ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲁϩⲉ",
+          "ⲡ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁϩⲉ",
+          "ⲥⲉ_1_pre_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲁϩⲉ",
+          "ⲁϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲣⲁⲧ",
+          "ϩⲓ_1_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲣⲁⲧ",
+          "ⲛϭⲓ_1_post_ⲁϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.66,
+      "rank": 811,
+      "count": 105
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4130,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5509",
+      "type": "syn",
+      "label": "life (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C288",
+      "label": "ϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short-lived, ephemeral"
+    },
+    {
+      "target": "C287",
+      "label": "ⲉⲣⲛⲉⲃⲁϩⲓ",
+      "pos": "V",
+      "gloss": "live a long life, be long-lived"
+    },
+    {
+      "target": "C286",
+      "label": "ⲙⲉⲧⲛⲉⲃⲁϩⲓ",
+      "pos": "N",
+      "gloss": "longevity"
+    },
+    {
+      "target": "C289",
+      "label": "ⲙⲛⲧϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short life"
+    },
+    {
+      "target": "C290",
+      "label": "ⲣϣⲁⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "be short-lived"
+    },
+    {
+      "target": "C285",
+      "label": "ⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "pass/spend one's life"
+    }
+  ],
+  "etym": {
+    "egy_num": "40480",
+    "egy_lemma": "ꜥḥꜥ.w",
+    "demo_num": "d1073",
+    "demo_lemma": "ꜥḥꜥ",
+    "english": "lifetime; duration",
+    "german": "Lebenszeit; Zeit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/40480",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1073"
+  }
+}

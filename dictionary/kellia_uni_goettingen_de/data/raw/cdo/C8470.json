@@ -1,0 +1,185 @@
+{
+  "id": "C8470",
+  "forms": [
+    {
+      "id": "CF19838",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19843",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12193,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF19839",
+      "orth": "ⲁⲣⲭⲏⲡⲡⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19840",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19841",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲉⲃ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19842",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲉⲥⲃ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19844",
+      "orth": "ⲁⲣⲭⲏⲡⲣⲟⲩⲃⲏⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19845",
+      "orth": "ⲁⲣⲭⲏⲡⲣ︦ⲥ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19846",
+      "orth": "ⲁⲣⲭⲓⲡⲣⲉⲥⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9859",
+      "bibliography": "DDGLC",
+      "cu_ID": "2225"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲁⲙⲉⲉⲩⲉ ϩⲱ ⲁⲛⲟⲕ ⲑⲉⲟⲡⲓⲥⲧⲟⲥ ⲡⲓⲉⲓⲓⲁⲭ ⲛⲇⲓⲁⲕⲟⲛⲟⲥ ⲡϣⲏⲣⲉ ⲛⲥⲉⲩⲏⲣⲟⲥ ⲡ**ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ** ⲙⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲛⲧⲡⲟⲗⲓⲥ ⲥⲛⲏ",
+      "english": "Remember, for my part, Theopistis, of the deacon, the son of Severus, the archpriest of the Holy Macarius of the City Esna.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲥⲉⲩⲏⲣⲟⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ",
+        1,
+        13.331
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        8.29
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ_4_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          "ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ_0_node",
+          "ⲙ_1_post_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲁⲅⲓⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_3_post_ⲡ",
+          "ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ_4_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11768,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "298",
+    "grl_lemma": "ἀρχιπρεσβύτερος",
+    "grl_meaning": "archpriest, chief presbyter",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 258b; Preisigke 1:221; Lampe 240b"
+  }
+}

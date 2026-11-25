@@ -1,0 +1,209 @@
+{
+  "id": "C4158",
+  "forms": [
+    {
+      "id": "CF10261",
+      "orth": "ϯⲧⲁⲉⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18753,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4720",
+      "bibliography": "CD 391ab; ChLCS 56b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁϥ**ϯⲧⲁⲉⲓⲟ** ⲁⲩⲱ ⲛϥⲧⲥⲉⲓⲟ ......ϣⲡϩⲙⲟⲧ ⲁⲩⲱ ⲙⲛⲛⲥⲁⲛⲁⲓ ϣⲁϥⲥⲱⲧⲙ ⲉϩⲉⲛϣⲁϫⲉ ⲉⲩⲛⲁϣⲧ",
+      "english": "Thou shalt entertain, and feast, and have no thanks: moreover thou shalt hear bitter words:",
+      "source": "Sirach 29",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲱⲩⲥⲏⲥ ⲅⲁⲣ ⲁϥϫⲟⲟⲥ ϫⲉ**ⲙⲁⲧⲁⲓⲉ**ⲡⲉⲕⲉⲓⲱⲧ ⲛⲙⲧⲉⲕⲙⲁⲁⲩ ⲁⲩⲱ ⲡⲉⲧⲛⲁϫⲓϣⲁϫⲉ ⲉϥϩⲟⲟⲩ ⲛⲥⲁⲡⲉϥⲉⲓⲱⲧ ⲏ ⲧⲉϥⲙⲁⲁⲩ ϩⲛⲟⲩⲙⲟⲩ ⲙⲁⲣⲉϥⲙⲟⲩ .",
+      "english": "For Moses said, &apos;Honor your father and your mother;&apos;",
+      "source": "41_Mark_7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲥⲉⲓⲟ",
+        1,
+        18.598
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.346
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.024
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ϯⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ϯⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲥⲉⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲥⲉⲓⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ϯⲧⲁⲉⲓⲟ",
+          "ϥ_1_pre_ϯⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲧⲁⲉⲓⲟ",
+          "ϯⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ϯⲧⲁⲉⲓⲟ_0_node",
+          "ⲁⲩⲱ_2_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲱⲧⲙ",
+          "ⲛ_2_post_ⲧⲥⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲥⲉⲓⲟ",
+          "ϥ_2_post_ⲧⲥⲉⲓⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4897,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C20",
+      "type": "cf",
+      "label": "be great, goodly, honoured"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4159",
+      "label": "ϣⲟⲩⲧⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "be worthy of honour"
+    },
+    {
+      "target": "C4160",
+      "label": "ϫⲓⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "receive an honour, receive a gift"
+    },
+    {
+      "target": "C4155",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "pay respect"
+    },
+    {
+      "target": "C4154",
+      "label": "ⲙⲁⲓⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour-loving"
+    },
+    {
+      "target": "C4156",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4157",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4152",
+      "label": "ⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "honor, pay respect to, adorn"
+    },
+    {
+      "target": "C4153",
+      "label": "ⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour, compliments (in the plural); complimentary gift"
+    },
+    {
+      "target": "C4161",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "V",
+      "gloss": "greet"
+    }
+  ]
+}

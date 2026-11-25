@@ -1,0 +1,40 @@
+{
+  "id": "C5380",
+  "forms": [
+    {
+      "id": "CF12729",
+      "orth": "ⲫⲁⲣⲫⲉⲣⲓϧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6034",
+      "bibliography": "CD 89b; KoptHWb 152; DELC 245a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1028",
+      "type": "cf",
+      "label": "demon"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5379",
+      "label": "ⲫⲟⲣⲡⲉⲣ",
+      "pos": "V",
+      "gloss": "open, loosen"
+    }
+  ]
+}

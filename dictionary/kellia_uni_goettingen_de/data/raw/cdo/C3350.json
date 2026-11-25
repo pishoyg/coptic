@@ -1,0 +1,63 @@
+{
+  "id": "C3350",
+  "forms": [
+    {
+      "id": "CF8591",
+      "orth": "ϭⲓⲛⲥⲱⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3821",
+      "bibliography": "CD 321b; DELC 184; ChLCS 46a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3349",
+      "label": "ϣϫⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "teasing, jesting talk"
+    },
+    {
+      "target": "C3346",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩⲥⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "laugh at, mock"
+    },
+    {
+      "target": "C3347",
+      "label": "ⲙⲁ ⲛⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "funfair"
+    },
+    {
+      "target": "C3348",
+      "label": "ⲣⲉϥⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "jester, clown"
+    },
+    {
+      "target": "C3344",
+      "label": "ⲥⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "laugh, play; deride, mock"
+    },
+    {
+      "target": "C3345",
+      "label": "ⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "laughter, derision"
+    }
+  ]
+}

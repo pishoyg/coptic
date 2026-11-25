@@ -1,0 +1,345 @@
+{
+  "id": "C9780",
+  "forms": [
+    {
+      "id": "CF25255",
+      "orth": "ⲙⲏⲡⲟⲧⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF25259",
+      "orth": "ⲙⲏⲡⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.04,
+        "rank": 701,
+        "count": 164
+      }
+    },
+    {
+      "id": "CF25256",
+      "orth": "ⲙⲏⲡⲱⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25257",
+      "orth": "ⲙⲏⲡⲟⲇⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25258",
+      "orth": "ⲙⲏⲡⲟⲇⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25260",
+      "orth": "ⲙⲏⲡⲟⲧⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF25261",
+      "orth": "ⲙⲏⲡⲟⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25262",
+      "orth": "ⲙⲏⲡⲟⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25263",
+      "orth": "ⲙⲏⲡⲟⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25264",
+      "orth": "ⲙⲏⲡⲟⲩⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25265",
+      "orth": "ⲙⲏⲡⲱⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25266",
+      "orth": "ⲙⲓⲡⲟⲧⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS12679",
+      "bibliography": "DDGLC",
+      "cu_ID": "90"
+    },
+    {
+      "id": "CS12680",
+      "bibliography": "DDGLC",
+      "cu_ID": "3974"
+    },
+    {
+      "id": "CS12681",
+      "bibliography": "DDGLC",
+      "cu_ID": "5240"
+    },
+    {
+      "id": "CS12682",
+      "bibliography": "DDGLC",
+      "cu_ID": "3773"
+    },
+    {
+      "id": "CS12683",
+      "bibliography": "DDGLC",
+      "cu_ID": "11364"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉ**ⲙⲏⲡⲟⲧⲉ** ⲧⲁⲉⲓⲃⲉ ⲟⲛ .",
+      "english": "“Lest I get thirsty again.”",
+      "source": "Apophthegmata Patrum Sahidic 216: Besarion",
+      "urn": "urn:cts:copticLit:ap.216.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲏⲡⲟⲧⲉ** ⲛⲅϫⲱⲣⲡ ⲉⲩⲱⲛⲉ ϩⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ ·",
+      "english": "lest thou strike a stone with thy feet.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲡⲁⲉⲓⲱⲧ ⲧϩⲏⲙⲉ ⲙⲡϫⲟⲉⲓ ⲟⲩⲛⲟϭ ⲧⲉ ⲁⲩⲱ ⲡⲉⲧϣϣⲉ ⲉⲣⲟⲕ ⲡⲉ ⲉⲧⲣⲉⲛⲃⲱⲕ ⲛⲁⲛ ⲧⲁⲭⲏ · **ⲙⲏⲡⲟⲧⲉ** ⲛⲥⲉⲉⲓ ⲉϫⲱⲛ ⲥⲉⲥⲟⲩⲛⲉⲛ ⲛⲥⲉϭⲟⲡⲛ ⲛⲧⲉⲟⲩϣⲓⲡⲉ ϣⲱⲡⲉ ⲛⲁⲛ · ϫⲉⲁⲛⲡⲱⲧ ⲛϫⲓⲟⲩⲉ ·",
+      "english": "and he said unto him, 'My father, the ship's fare is large, and it is meet for thee that we should depart quickly, lest some people meet us, and they recognize us, and they seize us, and we be put to shame. Therefore, let us flee secretly.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧ",
+        14,
+        16.11
+      ],
+      [
+        "ⲛⲧⲉ",
+        27,
+        14.523
+      ],
+      [
+        "ⲟⲩ",
+        32,
+        13.947
+      ],
+      [
+        "ϧⲟⲑⲃⲟⲩ:",
+        1,
+        13.888
+      ],
+      [
+        "ⲧⲉⲣⲁϭⲓⲥⲃⲱ",
+        1,
+        13.888
+      ],
+      [
+        "ϫⲉ",
+        22,
+        13.708
+      ],
+      [
+        "ⲕ",
+        17,
+        13.583
+      ],
+      [
+        "ϭⲓϭⲣⲟⲡ",
+        2,
+        13.566
+      ],
+      [
+        "ⲙⲟⲩ",
+        8,
+        13.129
+      ],
+      [
+        "ⲛ",
+        27,
+        13.048
+      ],
+      [
+        "ⲓⲑⲣⲉ",
+        1,
+        12.888
+      ],
+      [
+        "ⲥ",
+        15,
+        12.341
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        4,
+        12.03
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        6,
+        12.006
+      ],
+      [
+        "ⲉⲣⲡ",
+        1,
+        11.888
+      ],
+      [
+        "ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+        1,
+        11.566
+      ],
+      [
+        "ϫⲟ",
+        6,
+        11.55
+      ],
+      [
+        "ⲥⲟⲑⲙ",
+        2,
+        11.333
+      ],
+      [
+        "ⲉⲣⲁⲧϣⲏⲣⲓ",
+        1,
+        11.303
+      ],
+      [
+        "ϭⲛⲁⲩϩ",
+        1,
+        11.303
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        12,
+        23.995
+      ],
+      [
+        "ⲛ",
+        327,
+        21.511
+      ],
+      [
+        "ⲅ",
+        62,
+        19.744
+      ],
+      [
+        "ϫⲱⲣⲡ",
+        9,
+        18.502
+      ],
+      [
+        "ⲛⲧⲉ",
+        35,
+        17.402
+      ],
+      [
+        "ϥ",
+        77,
+        15.964
+      ],
+      [
+        "ⲙⲉⲥⲧⲱ",
+        7,
+        15.596
+      ],
+      [
+        "ⲥⲉ",
+        27,
+        14.99
+      ],
+      [
+        "ⲇⲓⲁⲧⲣⲉⲡⲉ",
+        2,
+        14.655
+      ],
+      [
+        "ⲉⲓ",
+        19,
+        13.794
+      ],
+      [
+        "ⲥ",
+        31,
+        13.779
+      ],
+      [
+        "ⲕ",
+        27,
+        13.76
+      ],
+      [
+        "ⲗⲟϫⲗϫ",
+        2,
+        13.655
+      ],
+      [
+        "ϫⲉ",
+        29,
+        13.363
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        9,
+        13.272
+      ],
+      [
+        "ϣⲓⲛⲟⲩⲃ",
+        1,
+        13.24
+      ],
+      [
+        "ϩⲏⲧⲣⲁⲕⲧⲕ",
+        1,
+        13.24
+      ],
+      [
+        "ⲧⲉϭⲟⲩⲧⲱⲗⲙ",
+        1,
+        13.24
+      ],
+      [
+        "ⲧⲁϭⲛⲉⲕ",
+        1,
+        13.24
+      ],
+      [
+        "ⲣⲁϭⲣⲏⲛ",
+        1,
+        13.24
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.03,
+      "rank": 609,
+      "count": 164
+    }
+  },
+  "etym": {
+    "grl_ID": "1413",
+    "grl_lemma": "μήποτε",
+    "grl_meaning": "in order that not, lest",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 1129a"
+  }
+}

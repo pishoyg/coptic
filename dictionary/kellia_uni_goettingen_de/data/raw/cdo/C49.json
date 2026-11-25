@@ -1,0 +1,654 @@
+{
+  "id": "C49",
+  "forms": [
+    {
+      "id": "CF175",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 4.69,
+        "rank": 239,
+        "count": 398
+      }
+    },
+    {
+      "id": "CF176",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF177",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3941,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF178",
+      "orth": "ⲁⲗⲁⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF179",
+      "orth": "ⲁⲗⲁⲩ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF180",
+      "orth": "ⲁⲗⲱⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.42,
+        "rank": 400,
+        "count": 205
+      }
+    },
+    {
+      "id": "CF181",
+      "orth": "ⲁⲗⲁⲩⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "(selten)",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS57",
+      "bibliography": "CD 5a; CED 4; KoptHWb 3; DELC 7; ChLCS 3b"
+    },
+    {
+      "id": "CS58",
+      "bibliography": "CD 5a; KoptHWb 3; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲡⲓ**ⲁⲗⲟⲩ** ⲁϥϩⲱⲗ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲓⲙⲱⲟⲩ ⲟⲩⲟϩ ⲁϥϣⲗⲏⲗ ⲉϩⲣⲏⲓ ϩⲁⲫⲛⲟⲩϯ ⲉⲣⲉⲛⲉϥϫⲓϫ ⲫⲟⲣϣ ⲉⲃⲟⲗ ⲉⲡϣⲱⲓ ⲉⲧⲫⲉ .",
+      "english": "Then the boy hurried down to the water and prayed up towards God with his hands spread up to the sky.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲟ ⲛⲣⲣⲟ ⲉϫⲙⲡ**ⲁⲗⲟⲩ** ⲙⲡⲁⲗⲟⲩ · ⲉⲧⲟ ⲛⲧⲟⲟⲩ ⲛⲉ ⲛϩⲁⲧⲣⲉⲉⲩ ⲛⲥⲱⲧⲏⲣ ·",
+      "english": "and being king over the Child of the Child, that is the Twin-saviours,",
+      "source": "Pistis Sophia Book 2 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:66-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲥϣⲉ ⲛⲁⲥ ⲉⲡⲉⲥⲏⲓ ⲁⲥϫⲓⲙⲓ ⲛϯ**ⲁⲗⲟⲩ** ϩⲓϫⲉⲛⲡⲓϭⲗⲟϫ ⲟⲩⲟϩ ⲡⲓⲇⲁⲓⲙⲱⲛ ⲁϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲓⲱⲧⲥ .",
+      "english": "She went away to her house, and found the child having been laid on the bed, with the demon gone out.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲛⲧⲟϥ ⲡⲉ ⲡ**ⲁⲗⲟⲩ** ⲙⲡⲁⲗⲟⲩ ·",
+      "english": "who is the Child of the Child;",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲙⲟⲩϯ ⲉⲡⲓ**ⲁⲗⲟⲩ** ⲓⲥⲁⲁⲕ ⲁϥϣⲉⲛϥ ϫⲉⲉⲣⲉⲡⲉⲕⲥⲁϧ ⲑⲱⲛ .",
+      "english": "He asked the boy Isaac, 'Where is your master?'",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        322,
+        20.181
+      ],
+      [
+        "ⲡⲓ",
+        185,
+        19.129
+      ],
+      [
+        "ⲛ",
+        197,
+        18.221
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        142,
+        17.293
+      ],
+      [
+        "ⲁ",
+        135,
+        16.984
+      ],
+      [
+        "ⲙ",
+        111,
+        16.73
+      ],
+      [
+        "ⲓ",
+        86,
+        16.618
+      ],
+      [
+        "ⲥ",
+        80,
+        16.158
+      ],
+      [
+        "ⲉ",
+        106,
+        15.965
+      ],
+      [
+        "ⲙⲁⲩ",
+        22,
+        15.837
+      ],
+      [
+        "ⲟⲩ",
+        107,
+        15.742
+      ],
+      [
+        "ⲛⲁ",
+        78,
+        15.575
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        33,
+        15.574
+      ],
+      [
+        "ⲓⲥⲁⲁⲕ",
+        19,
+        15.566
+      ],
+      [
+        "ⲧⲉⲥ",
+        21,
+        15.496
+      ],
+      [
+        "ϯ",
+        70,
+        15.442
+      ],
+      [
+        "ⲡⲉ",
+        56,
+        15.424
+      ],
+      [
+        "ⲡⲁ",
+        40,
+        15.333
+      ],
+      [
+        "ϣⲉⲛⲟⲩϯ",
+        16,
+        15.192
+      ],
+      [
+        "ⲧⲁⲙⲉ",
+        14,
+        15.074
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲗⲟⲩ",
+        8,
+        23.598
+      ],
+      [
+        "ⲡ",
+        17,
+        13.759
+      ],
+      [
+        "ⲙ",
+        12,
+        13.106
+      ],
+      [
+        "ⲛⲉ",
+        5,
+        11.279
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        2,
+        11.122
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        8.278
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.502
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.207
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲟ",
+        1,
+        6.805
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.732
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.508
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        6.457
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.284
+      ],
+      [
+        "ⲛ",
+        3,
+        5.564
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.238
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          268
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          39
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          23
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲗⲟⲩ",
+          12
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲗⲟⲩ",
+          11
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲩ",
+          9
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲟⲩ",
+          8
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲩ",
+          7
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          6
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          6
+        ],
+        [
+          "ⲓⲱⲃ_1_post_ⲁⲗⲟⲩ",
+          5
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲗⲟⲩ",
+          6
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲙⲁⲩ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲃⲱⲕⲓ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲁⲗⲟⲩ",
+          2
+        ],
+        [
+          "ϣⲉⲛⲟⲩϯ_1_post_ⲁⲗⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲓⲱⲃ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲗⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          "ⲙⲁⲩ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          "ⲃⲱⲕⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ϣⲉⲛⲟⲩϯ_1_post_ⲁⲗⲟⲩ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          "ⲙⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          "ⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 7.1,
+      "rank": 154,
+      "count": 603
+    },
+    "S": {
+      "rate": 0.05,
+      "rank": 3550,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C48",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, girl; servant"
+    },
+    {
+      "target": "C51",
+      "label": "ⲉⲣⲁⲗⲟⲩ",
+      "pos": "V",
+      "gloss": "be young"
+    },
+    {
+      "target": "C50",
+      "label": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "time of youth, youthfulness"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1059",
+    "demo_lemma": "ꜥlw",
+    "english": "child",
+    "german": "Kind",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1059"
+  }
+}

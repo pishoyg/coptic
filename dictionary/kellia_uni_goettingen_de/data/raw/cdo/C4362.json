@@ -1,0 +1,44 @@
+{
+  "id": "C4362",
+  "forms": [
+    {
+      "id": "CF10676",
+      "orth": "ϩⲛⲟⲩⲧⲛⲛⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4941",
+      "bibliography": "ChLCS 59a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4361",
+      "label": "ⲑⲛⲟ",
+      "pos": "V",
+      "gloss": "pound, crush"
+    },
+    {
+      "target": "C4359",
+      "label": "ⲧⲛⲛⲟ",
+      "pos": "V",
+      "gloss": "pound, tread down; be beaten, be trodden"
+    },
+    {
+      "target": "C4360",
+      "label": "ⲧⲛⲛⲟ",
+      "pos": "N",
+      "gloss": "breaking, contrition"
+    }
+  ]
+}

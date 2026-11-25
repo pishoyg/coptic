@@ -1,0 +1,144 @@
+{
+  "id": "C5308",
+  "forms": [
+    {
+      "id": "CF12585",
+      "orth": "ⲟⲩⲱϩ ⲉϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3798,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5957",
+      "bibliography": "CD 506ab, 507b; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲟⲩϩⲗⲗⲟ· ϫⲉϣⲁⲣⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ **ⲟⲩⲱϩ **ⲉϫⲛ**ⲛϣⲱⲱⲧ** ⲙⲡⲙⲟⲛⲁⲭⲟⲥ ⲉⲣϣⲁⲛⲟⲩⲧⲁⲁⲡⲥ ⲱⲥⲕ ⲛⲙⲙⲁϥ ·",
+      "english": "A monk said, 'The devil dwells in failings of the monk, if a habit endures within him.",
+      "source": "Apophthegmata Patrum Sahidic 020: Failings",
+      "urn": "urn:cts:copticLit:ap.20.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲣⲱⲙⲉ · **ⲁϥⲟⲩⲱϩ **ⲉϫⲛ**ⲛⲉϥⲁⲅⲁⲡⲏ** ⲙⲛⲛⲉϥⲡⲣⲟⲥⲫⲟⲣⲁ ⲉⲧⲉϥϯ ⲙⲙⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲣⲁⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ ⁛ · ·",
+      "english": "And the man increased his alms and oblations, which he used to give to God in the name of Saint Victor,",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϣ ϭⲉ ⲡⲉ ⲡⲕⲉⲥⲁϣ **ⲉⲧⲉⲧⲛⲟⲩⲱϩ **ⲉϫⲛ**ⲛⲉⲧⲛⲁⲛⲟⲙⲓⲁ** ⲁⲡⲉ ⲛⲓⲙ ⲉⲩⲧⲕⲁⲥ ϩⲏⲧ ⲛⲓⲙ ⲉⲩⲗⲩⲡⲏ",
+      "english": "Why should ye be smitten any more, transgressing more and more? the whole head is pained, and the whole heart sad.",
+      "source": "Isaiah 1",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5318",
+      "label": "ϭⲓⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "act of dwelling; manner of life"
+    },
+    {
+      "target": "C5317",
+      "label": "ⲙⲁ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "house, habitation, cell"
+    },
+    {
+      "target": "C5319",
+      "label": "ⲟⲩⲁϩϥ",
+      "pos": "N",
+      "gloss": "liturgical functionary (acolyte?)"
+    },
+    {
+      "target": "C5304",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "V",
+      "gloss": "put, place, add; be placed, stay, dwell"
+    },
+    {
+      "target": "C5305",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "standing-place, dwelling-place"
+    },
+    {
+      "target": "C5306",
+      "label": "ⲟⲩⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "set on, add to, attribute to, dwell by/with"
+    },
+    {
+      "target": "C5312",
+      "label": "ⲟⲩⲱϩ ϩⲁ-",
+      "pos": "V",
+      "gloss": "lie by, in return for; deposit (money)"
+    },
+    {
+      "target": "C5315",
+      "label": "ⲟⲩⲱϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "put in, bring in"
+    },
+    {
+      "target": "C5316",
+      "label": "ⲟⲩⲱϩ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "set down"
+    },
+    {
+      "target": "C5313",
+      "label": "ⲟⲩⲱϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "set down, pause; let, bring down"
+    },
+    {
+      "target": "C5314",
+      "label": "ⲟⲩⲱϩ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "descend, alight; set down"
+    },
+    {
+      "target": "C5307",
+      "label": "ⲟⲩⲱϩ ⲉⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "add, repeat"
+    },
+    {
+      "target": "C5309",
+      "label": "ⲟⲩⲱϩ ⲛⲁ⸗",
+      "pos": "V",
+      "gloss": "set down, make pause"
+    },
+    {
+      "target": "C5310",
+      "label": "ⲟⲩⲱϩ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "follow"
+    },
+    {
+      "target": "C5311",
+      "label": "ⲟⲩⲱϩ ⲛⲧⲛ-",
+      "pos": "V",
+      "gloss": "place with, pledge to, pawn, mortgage"
+    }
+  ]
+}

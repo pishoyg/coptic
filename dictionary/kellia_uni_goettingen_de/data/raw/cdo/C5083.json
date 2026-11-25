@@ -1,0 +1,64 @@
+{
+  "id": "C5083",
+  "forms": [
+    {
+      "id": "CF12131",
+      "orth": "ⲉⲣⲟⲩⲛⲟϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5714",
+      "bibliography": "CD 486a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5085",
+      "label": "ϫⲓⲟⲩⲛⲁϥ",
+      "pos": "V",
+      "gloss": "take joy, rejoice"
+    },
+    {
+      "target": "C5084",
+      "label": "ϯⲟⲩⲛⲟϥ",
+      "pos": "V",
+      "gloss": "make joy, rejoice"
+    },
+    {
+      "target": "C5082",
+      "label": "ⲙⲁⲓⲟⲩⲛⲟϥ",
+      "pos": "N",
+      "gloss": "pleasure-loving, joy-loving"
+    },
+    {
+      "target": "C5080",
+      "label": "ⲟⲩⲛⲟϥ",
+      "pos": "V",
+      "gloss": "rejoice"
+    },
+    {
+      "target": "C5081",
+      "label": "ⲟⲩⲛⲟϥ",
+      "pos": "N",
+      "gloss": "joy, gladness"
+    }
+  ]
+}

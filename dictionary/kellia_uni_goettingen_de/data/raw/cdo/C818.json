@@ -1,0 +1,101 @@
+{
+  "id": "C818",
+  "forms": [
+    {
+      "id": "CF2974",
+      "orth": "ⲑⲟⲩⲑⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9808,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS968",
+      "bibliography": "CD 69b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲃⲉⲗⲗⲉ ⲓⲉ ⲟⲩⲁⲓ ⲉϥϧⲉⲙϧⲱⲙ ⲓⲉ ⲉⲣⲉⲡⲉϥⲗⲁⲥ ϣⲁⲧ ⲓⲉ ⲉϥ**ⲑⲟⲩⲑⲟⲩ** ⲓⲉ ⲉϥⲟⲓ ⲛϫⲉⲣϫⲓ ⲛⲁⲅⲣⲓⲟⲛ ⲓⲉ ⲉⲟⲩⲟⲛ ϩⲁⲛⲙⲉϣⲫⲱⲛⲓ ϩⲓⲱⲧϥ ⲛⲁⲓ ⲙⲡⲁⲓⲣⲏϯ ⲛⲛⲟⲩⲉⲛⲟⲩ ⲉϩⲣⲏⲓ ⲙⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲛⲛⲉⲧⲉⲛϯ ⲉⲃⲟⲗ ⲙⲙⲱⲟⲩ ⲉϫⲉⲛⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ ⲉⲩⲟⲩⲧⲁϩ ⲉϥϣⲏⲡ ⲙⲡϭⲟⲓⲥ",
+      "english": "One that is blind, or broken, or has its tongue cut out, or is troubled with warts, or has a malignant ulcer, or tetters, they shall not offer these to the Lord; neither shall ye offer any of them for a burnt-offering on the altar of the Lord.",
+      "source": "03_Leviticus_22",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲁⲧ",
+        1,
+        13.066
+      ],
+      [
+        "ⲓⲉ",
+        2,
+        12.706
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲉ_1_pre_ⲑⲟⲩⲑⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲑⲟⲩⲑⲟⲩ",
+          1
+        ],
+        [
+          "ⲑⲟⲩⲑⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲉ_1_pre_ⲑⲟⲩⲑⲟⲩ",
+          "ϥ_1_pre_ⲑⲟⲩⲑⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲑⲟⲩⲑⲟⲩ",
+          "ⲑⲟⲩⲑⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9267,
+      "count": 1
+    }
+  }
+}

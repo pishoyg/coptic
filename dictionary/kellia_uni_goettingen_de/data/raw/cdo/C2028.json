@@ -1,0 +1,46 @@
+{
+  "id": "C2028",
+  "forms": [
+    {
+      "id": "CF5735",
+      "orth": "ⲙⲣⲱϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉⲙⲣⲱϩⲉ",
+      "dialect": "S",
+      "id": "1106.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2351",
+      "bibliography": "CD 184a; KoptHWb 101; DELC 121; ChLCS 27b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2020",
+      "type": "cf",
+      "label": "a vessel"
+    }
+  ],
+  "etym": {
+    "egy_num": "77800",
+    "egy_lemma": "mtrḫ.t",
+    "demo_num": "d2556",
+    "demo_lemma": "mrḫ(.t)",
+    "english": "strainer",
+    "german": "Sieb",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/77800",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2556"
+  }
+}

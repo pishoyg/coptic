@@ -1,0 +1,73 @@
+{
+  "id": "C2384",
+  "forms": [
+    {
+      "id": "CF6527",
+      "orth": "ⲛⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 63.26,
+        "rank": 24,
+        "count": 9981
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "pl.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS2750",
+      "bibliography": "CD 258b; KoptHWb 117; DELC 135"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲇⲉ **ⲛⲉ**ⲥⲛⲏⲩ ϩⲁⲣⲉϩ ⲁⲩⲱ ⲙⲟⲩⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉⲛⲧⲁⲛⲧⲥⲁⲃⲟ ⲉⲣⲟⲟⲩ ·",
+      "english": "But you, brethren, pay attention to yourselves and do not deviate from what we have learned.",
+      "source": "On Vigilance",
+      "urn": "urn:cts:copticLit:besa.vigilance.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁϩ ⲅⲁⲣ **ⲛⲉ** ⲙⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲛⲁⲧⲉⲓⲙⲓⲛⲉ ⲙⲁⲗⲓⲥⲧⲁ ⲉⲩϣⲟⲟⲡ ϩⲛⲧⲙⲏⲧⲉ ⲛⲛⲣⲱⲙⲉ .",
+      "english": "For there are many trials, mostly of this kind, that happen in the midst of men",
+      "source": "Apophthegmata Patrum Sahidic 124: Orsisius 1",
+      "urn": "urn:cts:copticLit:ap.124.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲉϩⲛ ϫⲟⲟ**ⲛⲉ** ⲛϭⲓϩⲉⲛⲁⲣⲭⲏⲅⲟⲥ ⲛⲃⲁⲓϣⲓⲛⲉ ⲉⲩϩⲟⲟⲩ",
+      "english": "For there are princes in Tanes, evil messengers.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2786",
+      "type": "cf",
+      "label": "possessive article sg. m."
+    },
+    {
+      "target": "C11280",
+      "type": "cf",
+      "label": "possessive article sg. f."
+    }
+  ],
+  "etym": {
+    "egy_num": "550008",
+    "egy_lemma": "nꜣy=",
+    "demo_num": "d3021",
+    "demo_lemma": "nꜣj=",
+    "english": "[poss. adj., pl.]",
+    "german": "[Poss.artikel pl.c.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550008",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3021"
+  }
+}

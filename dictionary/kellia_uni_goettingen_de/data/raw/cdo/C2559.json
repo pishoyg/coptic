@@ -1,0 +1,51 @@
+{
+  "id": "C2559",
+  "forms": [
+    {
+      "id": "CF6910",
+      "orth": "ⲛⲟⲩⲧⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2939",
+      "bibliography": "CD 231b; ChLCS 33a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19843,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2560",
+      "label": "ⲙⲛⲧⲛⲟⲩⲧⲙ",
+      "pos": "N",
+      "gloss": "sweetness"
+    },
+    {
+      "target": "C2558",
+      "label": "ⲛⲟⲩⲧⲉⲙ",
+      "pos": "N",
+      "gloss": "sweet"
+    },
+    {
+      "target": "C2557",
+      "label": "ⲛⲟⲩⲧⲙ",
+      "pos": "V",
+      "gloss": "be sweet, pleasant"
+    }
+  ]
+}

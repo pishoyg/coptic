@@ -1,0 +1,70 @@
+{
+  "id": "C3226",
+  "forms": [
+    {
+      "id": "CF8337",
+      "orth": "ⲣⲱϣⲉ (ⲙⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲙⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3686",
+      "bibliography": "CD 309b; KoptHWb 170; DELC 179; ChLCS 43b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϫⲛⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ ⲛⲉⲩⲛϣϭⲟⲙ ⲛⲣⲁϩⲧⲟⲩ ⲉϩⲣⲁⲓ ϩⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ ⲁⲡϫⲓⲕⲃⲁ ⲡⲱⲧ ⲛⲥⲱⲟⲩ ⲁⲩⲱ ⲛⲥⲉϣⲁϣⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲛⲧⲉⲕϭⲟⲙ ⲁⲗⲗⲁ ⲁⲕⲧⲉϣϩⲱⲃ ⲛⲓⲙ **ϩⲛⲟⲩⲣⲱϣⲉ **ⲙⲛ**ⲟⲩⲏⲡⲉ** ⲙⲛⲟⲩϣⲓ",
+      "english": "For thou canst shew thy great strength at all times when thou wilt; and who may withstand the power of thine arm?",
+      "source": "Wisdom 11",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3230",
+      "label": "ϩⲛⲟⲩⲣⲱϣⲉ",
+      "pos": "ADV",
+      "gloss": "moderately"
+    },
+    {
+      "target": "C3229",
+      "label": "ⲉⲡⲣⲱϣⲉ",
+      "pos": "ADV",
+      "gloss": "sufficiently"
+    },
+    {
+      "target": "C3228",
+      "label": "ⲣⲡⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "be, do enough"
+    },
+    {
+      "target": "C3224",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "suffice; be concerned, responsible; suffice, content"
+    },
+    {
+      "target": "C3227",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "N",
+      "gloss": "sufficiency, enough, plenty"
+    },
+    {
+      "target": "C3225",
+      "label": "ⲣⲱϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "suffice for, be fit to, responsible for"
+    }
+  ]
+}

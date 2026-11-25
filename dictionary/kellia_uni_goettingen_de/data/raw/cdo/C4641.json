@@ -1,0 +1,233 @@
+{
+  "id": "C4641",
+  "forms": [
+    {
+      "id": "CF11245",
+      "orth": "ⲥⲉⲕⲧⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17731,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5242",
+      "bibliography": "CD 440a; KoptHWb 252; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲉⲓⲁ ⲛⲧⲟⲟⲩ ⲁϩⲉⲣⲁⲧⲟⲩ ϩⲓϫⲛⲙⲙⲁ ⲛϣⲏⲛ ⲁⲩ**ⲥⲉⲕⲧⲏⲩ** ⲛⲁⲩ ⲁⲛⲉⲩⲃⲁⲗ ϫⲱⲧϩ ϫⲉⲙⲙⲛⲭⲟⲣⲧⲟⲥ ϣⲟⲟⲡ ⲛⲁⲩ",
+      "english": "The wild asses stood by the forests, and snuffed up the wind; their eyes failed, because there was no grass.",
+      "source": "Jeremiah 14",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲛ",
+        1,
+        12.272
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲉⲕⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲉⲕⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲥⲉⲕⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲥⲉⲕⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϫⲱⲧϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲉⲕⲧⲏⲩ",
+          "ⲩ_1_pre_ⲥⲉⲕⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲉⲕⲧⲏⲩ",
+          "ⲥⲉⲕⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲕⲧⲏⲩ_0_node",
+          "ⲛⲁ_1_post_ⲥⲉⲕⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲥⲉⲕⲧⲏⲩ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ⲁ_2_post_ϫⲱⲧϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17346,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4648",
+      "label": "ϩⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "whirlwind"
+    },
+    {
+      "target": "C4647",
+      "label": "ϩⲏ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "breeze"
+    },
+    {
+      "target": "C4639",
+      "label": "ϩⲓⲡⲑⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "gasp, expire"
+    },
+    {
+      "target": "C4649",
+      "label": "ϫⲓⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "burning breath, drought"
+    },
+    {
+      "target": "C4640",
+      "label": "ⲁⲛϣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "take a breath"
+    },
+    {
+      "target": "C4637",
+      "label": "ⲕⲁⲡⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "leave breath, expire"
+    },
+    {
+      "target": "C4636",
+      "label": "ⲙⲁ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "place of breath, life"
+    },
+    {
+      "target": "C4643",
+      "label": "ⲛⲉϣⲡⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "fan"
+    },
+    {
+      "target": "C4638",
+      "label": "ⲛⲉϫⲧⲏⲩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out breath, expire"
+    },
+    {
+      "target": "C4650",
+      "label": "ⲣϫⲛⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "(to) wither, singe"
+    },
+    {
+      "target": "C4644",
+      "label": "ⲣⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "open-air space (on roof)"
+    },
+    {
+      "target": "C4642",
+      "label": "ⲣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "make wind, be windy"
+    },
+    {
+      "target": "C4646",
+      "label": "ⲥⲁⲣⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "storm"
+    },
+    {
+      "target": "C4635",
+      "label": "ⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "wind, breath"
+    },
+    {
+      "target": "C4645",
+      "label": "ⲭⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "window"
+    }
+  ]
+}

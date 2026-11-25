@@ -1,0 +1,626 @@
+{
+  "id": "C562",
+  "forms": [
+    {
+      "id": "CF2153",
+      "orth": "ⲃⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.26,
+        "rank": 1676,
+        "count": 41
+      }
+    },
+    {
+      "id": "CF2154",
+      "orth": "ⲃⲱⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2155",
+      "orth": "ϥⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.83,
+        "rank": 830,
+        "count": 131
+      }
+    },
+    {
+      "orth": "ⲃⲟϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1261,
+        "count": 34
+      }
+    },
+    {
+      "orth": "ⲃⲉⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7727,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲟⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3567,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲃⲏⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2566,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS672",
+      "bibliography": "CD 45b; CED 28; KoptHWb 28; DELC 32; ChLCS 9b"
+    },
+    {
+      "id": "CS673",
+      "bibliography": "CD 45b; CED 28; KoptHWb 28; DELC 32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲛⲉⲧⲥⲧⲱⲧ ϩⲏⲧϥ ⲙⲡⲉϥϣⲁϫⲉ ⲁϫⲓⲥ ⲉⲛⲉⲧⲙⲟⲥⲧⲉ ⲙⲙⲱⲧⲛ ϫⲉⲛⲉⲛⲥⲛⲏⲩ ⲁⲩⲱ ⲛⲉⲧ**ⲃⲱⲧⲉ** ⲙⲙⲱⲧⲛ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ϫⲓⲉⲟⲟⲩ ⲁⲩⲱ ⲛϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲩⲟⲩⲛⲟϥ ⲛⲧⲉⲛⲏϫⲓϣⲓⲡⲉ ⲉⲣϣⲁⲛⲡϫⲟⲉⲓⲥ ⲉⲓ ϩⲙⲡⲉϥⲟⲩⲛⲟϥ ⲧⲟⲧⲉ ⲛⲁⲓ ⲛⲁϫⲓϣⲓⲡⲉ",
+      "english": "Hear the words of the Lord, ye that tremble at his word; speak ye, our brethren, to them that hate you and abominate you, that the name of the Lord may be glorified, and may appear their joy; but they shall be ashamed.",
+      "source": "Isaiah 66",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ ⲁϥⲃⲱⲕ ⲁϥⲣϩⲱⲃ ⲛⲓⲙ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲉⲥⲑⲏⲣ ϣⲁϫⲉ ⲉⲉⲓⲣⲉ ⲙⲙⲟⲥ ⲛⲧⲟϥ ⲇⲉ ⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ ⲁϥϣⲗⲏⲗ ⲉⲡϫⲟⲉⲓⲥ ⲉϥⲣ ⲡⲙⲉⲉⲩⲉ ⲉⲛⲉϩⲃⲏⲩⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲁϥⲧⲱⲃϩ ϩⲓⲛⲁⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡϫⲟⲉⲓⲥ ⲡⲣⲣⲟ ⲉϥⲁⲣⲭⲉⲓ ⲉϫⲛϩⲱⲃ ⲛⲓⲙ ⲡⲕⲟⲥⲙⲟⲥ ⲅⲁⲣ ⲉϥⲟ ⲛⲧⲟⲟⲧⲕ ⲙⲛⲗⲁⲁⲩ ⲉϥⲙⲓϣⲉ ⲛⲙⲙⲁⲕ ⲉⲕⲥⲱⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲧⲟⲕ ⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲉ ⲧⲡⲉ ⲙⲛⲡⲕⲁϩ ⲙⲛϣⲡⲏⲣⲉ ⲛⲓⲙ ⲉⲧϩⲁ ⲧⲉⲥϩⲁⲓⲃⲉⲥ ⲛⲧⲕⲡⲇⲉⲥⲡⲟⲧⲁ ⲛϩⲱⲃ ⲛⲓⲙ ⲉⲙⲛⲡⲉⲧϯ ⲟⲩⲃⲏⲕ ⲕⲥⲟⲟⲩⲛ ⲙⲡⲧⲏⲣϥ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲕⲥⲟⲟⲩⲛ ϫⲉⲙⲡⲓⲣⲡⲁⲓ ϩⲛⲟⲩϣⲟⲩϣⲟⲩ ⲟⲩⲧⲉ ϩⲛⲟⲩⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ⲟⲩⲧⲉ ⲟⲩⲫⲓⲗⲟⲇⲟⲝⲓⲁ ϫⲉⲙⲡⲓⲡⲁϩⲧ ⲉⲣⲁⲧϥ ⲛⲁⲙⲁⲛ ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲅⲁⲣ ⲧⲁⲥⲱⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲓⲛⲁϯⲡⲓ ⲉⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲁⲗⲗⲁ ⲉⲁⲓⲣⲡⲁⲓ ϫⲉⲛⲛⲁϯⲉⲟⲟⲩ ⲙⲙⲓⲛⲉ ⲙⲡⲉⲧⲡⲉ ⲙⲡⲉⲟⲟⲩ ⲙⲡⲁⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲛϯⲛⲁⲟⲩⲱϣⲧ ⲁⲛ ⲛⲗⲁⲁⲩ ⲛⲥⲁⲃⲗⲗⲁⲕ ⲡϫⲟⲉⲓⲥ ⲟⲩⲇⲉ ⲛϯⲛⲁⲣⲗⲁⲁⲩ ⲁⲛ ϩⲛⲟⲩⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ⲧⲉⲛⲟⲩ ϭⲉ ⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲛⲁⲃⲣⲁϩⲁⲙ ϯⲥⲟ ⲉⲡⲉⲕⲗⲁⲟⲥ ϫⲉⲥⲉϭⲱϣⲧ ⲉϫⲱⲛ ⲉⲩⲧⲁⲕⲟ ⲁⲩⲱ ⲁⲩⲉⲡⲓⲑⲩⲙⲉⲓ ⲉⲧⲁⲕⲉⲧⲉⲕⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ϫⲓⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ⲙⲡⲣⲕⲱ ⲛⲥⲱⲕ ⲛⲧⲉⲕⲙⲉⲣⲓⲥ ⲧⲁⲓ ⲉⲛⲧⲁⲕⲥⲟⲧⲥ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲛⲕⲏⲙⲉ ⲥⲱⲧⲙ ⲉⲡⲁⲧⲱⲃϩ ⲛⲅⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲡⲉⲕⲕⲗⲏⲣⲟⲥ ⲛⲅⲕⲧⲟ ⲙⲡⲉⲛϩⲏⲃⲉ ⲉⲩⲣⲁϣⲉ ϫⲉⲕⲁⲥ ⲉⲛⲉⲥⲙⲟⲩ ⲉⲣⲟⲕ ⲡϫⲟⲉⲓⲥ ⲉⲛⲟⲛϩ ⲙⲡⲣⲧⲁⲕⲟ ⲛⲧⲧⲁⲡⲣⲟ ⲛⲛⲉⲧⲥⲙⲟⲩ ⲉⲣⲟⲕ ⲁⲩⲱ ⲡⲓⲥⲣⲁⲏⲗ ⲧⲏⲣϥ ⲁϥⲁϣϣⲕⲁⲕ ⲉⲃⲟⲗ ϩⲛⲧⲉⲩϭⲟⲙ ϫⲉⲡⲉⲩⲙⲟⲩ ⲛⲉϥϩⲁⲛⲉⲩⲃⲁⲗ ⲉⲥⲑⲏⲣ ⲧⲣⲣⲱ ⲁⲥⲡⲱⲧ ⲉⲣⲁⲧϥ ⲙⲡϫⲟⲉⲓⲥ ϩⲛⲟⲩϩⲟⲧⲉ ⲙⲙⲟⲩ ⲁⲥⲕⲁⲁⲥ ⲕⲁϩⲏⲩ ⲛⲧϩⲃⲥⲱ ⲙⲡⲉⲥⲉⲟⲟⲩ ⲁⲩⲱ ⲁⲥϯ ϩⲓⲱⲱⲥ ⲛϩⲉⲛϩⲟⲓⲧⲉ ⲛϩⲏⲃⲉ ϩⲓϫⲱϫ ⲁⲩⲱ ⲉⲡⲙⲁ ⲛⲛⲉⲥϯⲛⲟⲩϥⲉ ⲙⲙⲛⲧϣⲟⲩϣⲟ ⲁⲥⲙⲉϩⲧⲉⲥⲁⲡⲉ ⲛⲕⲣⲙⲉⲥ ϩⲓⲉⲓⲧⲛ ⲁⲩⲱ ⲡⲉⲥⲥⲱⲙⲁ ⲁⲥⲑⲃⲃⲓⲟϥ ⲉⲙⲁⲧⲉ ⲁⲩⲱ ⲙⲁ ⲛⲓⲙ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲙⲡⲉⲥⲧⲉⲗⲏⲗ ⲁⲥⲙⲁϩⲟⲩ ⲙⲡⲉⲥϥⲱ ⲉⲧⲥⲉϩⲥⲱϩ ⲁⲥⲧⲃϩⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡϫⲟⲉⲓⲥ ⲛⲧⲟⲕ ⲙⲁⲩⲁⲁⲕ ⲡⲉ ⲡⲁⲃⲟⲏⲑⲟⲥ ⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲓ ⲧⲉⲥϩⲓⲙⲉ ⲛⲟⲩⲟⲟⲧⲥ ⲉⲙⲛⲧⲥⲃⲟⲏⲑⲟⲥ ⲙⲙⲁⲩ ⲛⲥⲁⲃⲗⲗⲁⲕ ϫⲉⲡⲁⲕⲓⲛⲇⲩⲛⲟⲥ ϩⲛⲧⲁϭⲓϫ ⲁⲛⲟⲕ ⲡϫⲟⲉⲓⲥ ϣⲁⲓⲥⲱⲧⲙ ⲛⲧⲟⲟⲧϥ ⲙⲡⲁⲉⲓⲱⲧ ϫⲉⲛⲧⲟⲕ ⲁⲕϫⲓⲡⲓⲥⲣⲁⲏⲗ ⲉⲃⲟⲗ ϩⲛⲛⲛϩⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲡⲉⲛⲉⲓⲱⲧ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩⲉⲓⲟⲧⲉ ⲉⲩⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ϣⲁⲉⲛⲉϩ ⲁⲩⲱ ⲁⲕⲉⲓⲣⲉ ⲛⲁⲩ ⲛⲛⲉⲛⲧⲁⲕϫⲟⲟⲩ ⲉⲣⲟⲟⲩ ⲁⲛⲣⲛⲟⲃⲉ ⲙⲡⲉⲕⲙⲧⲟ ⲉⲃⲟⲗ ⲁⲩⲱ ⲁⲕⲧⲁⲁⲛ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲛϫⲓϫⲓⲉⲉⲩ ⲉⲃⲟⲗ ϫⲉⲁⲛϯⲉⲟⲟⲩ ⲛⲛⲉⲩⲛⲟⲩⲧⲉ ⲛⲧⲕⲟⲩⲇⲓⲕⲁⲓⲟⲥ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲧⲉⲛⲟⲩ ⲙⲛⲟⲩⲣⲱϣⲉ ϩⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲧⲉⲛⲙⲛⲧϩⲙϩⲁⲗ ⲁⲗⲗⲁ ⲁⲩⲕⲁⲛⲉⲩϭⲓϫ ⲉϫⲛⲛϭⲓϫ ⲛⲛⲉⲩⲉⲓⲇⲱⲗⲟⲛ ⲉⲧⲣⲉⲩϥⲓ ⲙⲙⲁⲩ ⲛⲛⲧⲱϣ ⲛⲧⲉⲕⲧⲁⲡⲣⲟ ⲁⲩⲱ ⲉⲧⲁⲕⲟ ⲛⲧⲉⲕⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲉϣⲧⲁⲙ ⲛⲧⲧⲁⲡⲣⲟ ⲛⲛⲉⲧⲥⲙⲟⲩ ⲉⲣⲟⲕ ⲁⲩⲱ ⲉⲱϣⲙ ⲙⲡⲉⲟⲟⲩ ⲙⲡⲉⲕⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲁⲩⲱ ⲉⲧⲣⲉϥⲟⲩⲱⲛ ⲛⲧⲧⲁⲡⲣⲟ ⲛⲛϩⲉⲑⲛⲟⲥ ⲉϩⲉⲛⲁⲣⲉⲧⲏ ⲛⲉⲧϣⲟⲩⲓⲧ ⲛⲧⲉⲟⲩⲣⲣⲟ ⲛⲥⲁⲣⲝ ⲣ ϣⲡⲏⲣⲉ ϣⲁⲉⲛⲉϩ ⲡϫⲟⲉⲓⲥ ⲙⲡⲣⲏϯ ⲙⲡⲉⲕⲏⲡⲧⲱⲣ ⲛⲛⲉⲧⲉⲛⲥⲉϣⲟⲟⲡ ⲁⲛ ⲁⲩⲱ ⲙⲡⲣⲧⲣⲉⲩⲥⲱⲃⲉ ϩⲙⲡⲉⲛϩⲉ ⲁⲗⲗⲁ ⲕⲧⲉⲡⲉⲩϣⲟϫⲛⲉ ⲉϫⲱⲟⲩ ⲛⲅⲧⲁⲕⲉ ⲡⲉⲛⲧⲁϥⲧⲱⲟⲩⲛ ⲉϫⲱⲛ ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲡϫⲟⲉⲓⲥ ⲟⲩⲟⲛϩⲕ ⲉⲃⲟⲗ ⲙⲡⲟⲩⲟⲉⲓϣ ⲛⲧⲉⲛⲑⲗⲓⲯⲓⲥ ⲁⲩⲱ ⲁⲛⲟⲕ ⲛⲅϯⲧⲱⲕ ⲛⲁⲓ ⲛϩⲏⲧ ⲡⲁⲛⲟⲩⲧⲉ ⲡⲉⲧⲁⲙⲁϩⲧⲉ ⲉϫⲛⲁⲣⲭⲏ ⲛⲓⲙ ϯ ⲟⲩϣⲁϫⲉ ⲉϥⲧⲏϣ ⲉⲧⲁⲧⲁⲡⲣⲟ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲙⲟⲩⲓ ⲛⲅⲕⲧⲉ ⲡⲉϥϩⲏⲧ ⲉⲟⲩⲙⲟⲥⲧⲉ ⲉϫⲙⲡⲉⲧϯ ⲛⲙⲙⲁⲛ ⲉⲧⲉϥϩⲁⲏ ⲙⲛⲛⲉⲧϥⲓ ⲛⲙⲙⲁϥ ⲁⲛⲟⲛ ⲇⲉ ⲛⲁϩⲙⲛ ϩⲛⲧⲉⲕϭⲓϫ ⲛⲅⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲓ ⲧⲉⲥϩⲓⲙⲉ ⲛⲟⲩⲟⲟⲧⲥ ⲉⲙⲛⲧⲥⲗⲁⲁⲩ ⲛⲥⲁⲃⲗⲗⲁⲕ ⲙⲡϫⲟⲉⲓⲥ ⲟⲩⲛⲧⲁⲕ ⲙⲙⲁⲩ ⲙⲡⲥⲟⲟⲩⲛ ⲧⲏⲣϥ ⲁⲩⲱ ⲕⲥⲟⲟⲩⲛ ϫⲉⲁⲓⲙⲟⲥⲧⲉ ⲡⲉⲟⲟⲩ ⲛⲛⲁⲛⲟⲙⲟⲥ ⲁⲩⲱ ϯⲃⲱⲧⲉ ⲛⲙⲙⲁⲛⲛⲕⲟⲧⲕ ⲛⲁⲧⲥⲃⲃⲉ ⲛⲓⲙ ϩⲓϣⲙⲙⲟ ⲛⲓⲙ ⲛⲧⲟⲕ ⲉⲧⲥⲟⲟⲩⲛ ⲛⲧⲁⲁⲛⲁⲅⲕⲏ ⲉϯ ⲛϩⲏⲧⲥ ϫⲉϯⲃⲱⲧⲉ ⲙⲡⲙⲁⲉⲓⲛ ⲛⲧⲁⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ⲡⲁⲓ ⲉⲧϩⲓϫⲛ ⲧⲁⲁⲡⲉ ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡⲁⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϯ**ⲃⲱⲧⲉ** ⲙⲙⲟϥ ⲛⲧϩⲉ ⲛⲟⲩⲧⲟⲓⲥ ⲛϣⲣⲱ ⲁⲩⲱ ⲙⲉⲓⲧⲁⲁϥ ⲉϫⲱⲓ ϩⲛⲛⲉϩⲟⲟⲩ ⲉϯϣⲟⲟⲡ ⲙⲁⲩⲁⲁⲧ ⲧⲉⲕϩⲙϩⲁⲗ ⲙⲡⲓⲟⲩⲱⲙ ϩⲛⲧⲉⲧⲣⲁⲡⲉⲍⲁ ⲛⲁⲙⲁⲛ ⲁⲩⲱ ⲙⲡⲓϯ ⲉⲟⲟⲩ ⲙⲡⲙⲁ ⲛⲥⲱⲛⲣⲣⲱⲟⲩ ⲟⲩⲇⲉ ⲙⲡⲓⲥⲱ ⲛⲟⲩⲏⲣⲡ ⲛⲟⲩⲱⲧⲛ ⲉⲃⲟⲗ ⲁⲩⲱ ⲧⲉⲕϩⲙϩⲁⲗ ⲙⲡⲓⲉⲩⲫⲣⲁⲛⲉ ⲉϫⲙⲡⲉⲟⲟⲩ ⲙⲡⲁϣⲓⲡⲉ ϣⲁⲧⲉⲛⲟⲩ ⲛⲥⲁϩⲣⲁⲓ ⲛϩⲏⲧⲕ ⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲛⲁⲃⲣⲁϩⲁⲙ ⲡⲛⲟⲩⲧⲉ ⲉⲧϭⲙϭⲟⲙ ⲉϫⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲥⲱⲧⲙ ⲉⲡⲉϩⲣⲟⲟⲩ ⲛⲛⲉⲛⲧⲁⲧⲉⲩϩⲉⲗⲡⲓⲥ ⲱϫⲛ ⲛⲉⲧⲟⲩⲱϣ ⲉⲙⲟⲟⲩⲧⲟⲩ ⲁⲩⲱ ⲛⲅⲛⲁϩⲙⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲧⲡⲟⲛⲏⲣⲉⲩⲉ ⲉⲣⲟⲛ ⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲛⲧⲁϩⲟⲧⲉ",
+      "english": "So Mardochaeus went and did all that Esther commanded him. [And he besought the Lord, making mention of all the works of the Lord; and he said, Lord God, king ruling over all, for all things are in thy power, and there is no one that shall oppose thee, in thy purpose to save Israel. - For thou hast made the heaven and the earth and every wonderful thing in the world under heaven. And thou art Lord of all, and there is no one who shall resist thee Lord. Thou knowest all things: thou knowest, Lord, that it is not in insolence, nor haughtiness, nor love of glory, that I have done this, to refuse obeisance to the haughty Aman. For I would gladly have kissed the soles of his feet for the safety of Israel. But I have done this, that I might not set the glory of man above the glory of God: and I will not worship any one except thee, my Lord, and I will not do these things in haughtiness. And now, O Lord God, the King, the God of Abraam, spare thy people, for our enemies are looking upon us to our destruction, and they have desired to destroy thine ancient inheritance. Do not overlook thy peculiar people, whom thou hast redeemed for thyself out of the land of Egypt. Hearken to my prayer, and be propitious to thine inheritance, and turn our mourning into gladness, that we may live and sing praise to thy name, O Lord; and do not utterly destroy the mouth of them that praise thee, O Lord. And all Israel cried with all their might, for death was before their eyes. And queen Esther betook herself for refuge to the Lord, being taken as it were in the agony of death. And having taken off her glorious apparel, she put on garments of distress and mourning; and instead of grand perfumes she filled her head with ashes and dung, and she greatly brought down her body, and she filled every place of her glad adorning with the torn curls of her hair. And she besought the Lord God of Israel, and said, O my Lord, thou alone art our king: help me who am destitute, and have no helper but thee, for my danger is near at hand. I have heard from my birth, in the tribe of my kindred that thou, Lord, tookest Israel out of all the nations, and our fathers out of all their kindred for a perpetual inheritance, and hast wrought for them all that thou hast said. And now we have sinned before thee, and thou hast delivered us into the hands of our enemies, because we honoured their gods: thou art righteous, O Lord. But now they have not been contented with the bitterness of our slavery, but have laid their hands on the hands of their idols, in order to abolish the decree of thy mouth, and utterly to destroy thine inheritances, and to stop the mouth of them that praise thee, and to extinguish the glory of thine house and thine altar, and to open the mouth of the Gentiles to speak the praises of vanities, and in order that a mortal king should be admired for ever. O Lord, do not resign thy sceptre to them that are not, and let them not laugh at our fall, but turn their counsel against themselves, and make an example of him who has begun to injure us. Remember us, O Lord, manifest thyself in the time of our affliction, and encourage me, O King of gods, and ruler of all dominion. Put harmonious speech into my mouth before the lion, and turn his heart to hate him that fights against us, to the utter destruction of him that consent with him. But deliver us by thine hand, and help me who am destitute, and have none but the, O Lord. Thou knowest all things, and knowest that I hate the glory of transgressors, and that I abhor the couch of the uncircumcised, and of every stranger. Thou knowest my necessity, for I abhor the symbol of my proud station, which is upon my head in the days of my splendour: I abhor it as a menstruous cloth, and I wear it not in the days of my tranquility. And thy handmaid has not eaten at the table of Aman, and I have not honoured the banquet of the king, neither have I drunk wine of libations. Neither has thy handmaid rejoiced since the day of my promotion until now, except in thee, O Lord God of Abraam. O god, who has power over all, hearken to the voice of the desperate, and deliver us from the hand of them that devise mischief; and deliver me from my fear.]",
+      "source": "Esther 4",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕϫⲓⲃⲟⲧⲉ ϭⲉ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲏⲓ ϫⲉⲛⲛⲉⲕϣⲱⲡⲉ ϭⲉ ⲉⲕⲟ ⲛⲃⲟⲧⲉ ⲛⲧϩⲉ ⲙⲡⲁⲓ ϩⲛⲟⲩⲙⲟⲥⲧⲉ ⲉⲕⲉⲙⲉⲥⲧⲱϥ ⲁⲩⲱ ϩⲛⲟⲩⲃⲟⲧⲉ ⲉⲕⲉ**ⲃⲟⲧ**ϥ ϫⲉϥϫⲁϩⲙ",
+      "english": "And thou shalt not bring an abomination into thine house, so shouldest thou be an accursed thing like it; thou shalt utterly hate it, and altogether abominate it, because it is an accursed thing.",
+      "source": "Deuteronomy 7",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲃⲟⲗ",
+        49,
+        16.724
+      ],
+      [
+        "ⲛⲉⲓⲉⲡ",
+        1,
+        14.013
+      ],
+      [
+        "ⲛⲁⲧⲑⲁϥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲕⲁⲯⲁⲕⲏⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲕⲉⲅⲭⲣⲟⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲙ",
+        31,
+        13.629
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        9,
+        13.212
+      ],
+      [
+        "ⲁⲥⲧⲣⲓⲙⲓⲛⲑⲟⲥ",
+        1,
+        13.013
+      ],
+      [
+        "ⲛ",
+        36,
+        12.734
+      ],
+      [
+        "ⲕⲁⲧⲁⲕⲗⲏⲥⲙⲟⲥ",
+        1,
+        11.428
+      ],
+      [
+        "ϯ",
+        9,
+        10.441
+      ],
+      [
+        "ⲛⲉⲕ",
+        5,
+        10.167
+      ],
+      [
+        "ϩⲉⲃⲇⲟⲙⲁⲥ",
+        1,
+        9.926
+      ],
+      [
+        "ⲁⲩⲱ",
+        12,
+        9.917
+      ],
+      [
+        "ⲛⲁ",
+        12,
+        9.858
+      ],
+      [
+        "ⲱϭⲉ",
+        1,
+        9.843
+      ],
+      [
+        "ⲡ",
+        13,
+        9.013
+      ],
+      [
+        "ⲟⲩ",
+        11,
+        9.013
+      ],
+      [
+        "ⲛⲉⲛ",
+        3,
+        8.743
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          17
+        ],
+        [
+          "ⲙ_1_post_ⲃⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲧⲑⲁϥ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲃⲁⲛⲏ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲃⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲙⲉⲓⲟⲟⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲃⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲃⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲃⲱⲧⲉ",
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          "ⲙ_1_post_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲃⲱⲧⲉ",
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ⲡ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          "ⲛⲁⲧⲑⲁϥ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲱⲧⲉ_b",
+          "ⲟⲩ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲃⲁⲛⲏ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          9
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ⲛ_1_post_ⲃⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲃⲱⲧⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲛⲟⲃⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲛ",
+          "ⲙⲛ_5_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲱⲧⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲣⲙⲉⲓⲟⲟⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲃⲱⲧⲉ",
+          "ⲛⲁ_1_pre_ⲃⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲃⲱⲧⲉ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲃⲱⲧⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲱⲧⲉ",
+          "ⲡⲉⲛ_3_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲱⲧⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲧⲉ",
+          "ϯ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ⲛ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲧⲉ",
+          "ⲙⲡ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲃⲱⲧⲉ",
+          "ⲓ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ⲉ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ⲙ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲧⲉ",
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ϯ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲃⲱⲧⲉ_0_node",
+          "ⲁⲛ_1_post_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱⲧⲉ",
+          "ⲅ_1_pre_ⲃⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲃⲱⲧⲉ",
+          "ⲃⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲃⲱⲧⲉ",
+          "ⲛⲁ_1_pre_ⲃⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲃⲱⲧⲉ",
+          "ⲁⲛ_1_post_ⲃⲱⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.6,
+      "rank": 870,
+      "count": 96
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C6291",
+      "type": "cf",
+      "label": "pluck, seize, rob"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C563",
+      "label": "ⲃⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "emmer"
+    }
+  ],
+  "etym": {
+    "egy_num": "58140",
+    "egy_lemma": "btꜣ",
+    "demo_num": "d1833",
+    "demo_lemma": "btj",
+    "english": "to make (oneself) guilty",
+    "german": "(sich) schuldig machen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/58140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1833"
+  }
+}

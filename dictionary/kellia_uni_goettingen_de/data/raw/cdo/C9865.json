@@ -1,0 +1,155 @@
+{
+  "id": "C9865",
+  "forms": [
+    {
+      "id": "CF25603",
+      "orth": "ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25604",
+      "orth": "ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10039,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12825",
+      "bibliography": "DDGLC",
+      "cu_ID": "4624"
+    },
+    {
+      "id": "CS12826",
+      "bibliography": "DDGLC",
+      "cu_ID": "10764"
+    },
+    {
+      "id": "CS12827",
+      "bibliography": "DDGLC",
+      "cu_ID": "10797"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲱ ⲡ**ⲛⲓⲕⲟⲫⲟⲣⲟⲥ** ⲁⲩⲱ ⲡⲁⲑⲗⲟⲫⲟⲣⲟⲥ ⲁⲩⲱ ⲡⲑⲉⲟⲫⲟⲣⲟⲥ ⲁⲩⲱ ⲡⲉⲡⲛⲁⲧⲟⲫⲟⲣⲟⲥ ·",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+        1,
+        18.276
+      ],
+      [
+        "ⲱ",
+        1,
+        10.562
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        10.46
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        8.747
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱ_1_pre_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲕⲟⲫⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲑⲗⲟⲫⲟⲣⲟⲥ_1_post_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱ_1_pre_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          "ⲡ_1_pre_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          "ⲛⲓⲕⲟⲫⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓⲕⲟⲫⲟⲣⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          "ⲡ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+          "ⲁⲑⲗⲟⲫⲟⲣⲟⲥ_1_post_ⲛⲓⲕⲟⲫⲟⲣⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9615,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6454",
+    "grl_lemma": "νικοφόρος",
+    "grl_meaning": "bearing victory, victorious",
+    "grl_pos": "adjective",
+    "grl_ref": "Lampe 914b"
+  }
+}

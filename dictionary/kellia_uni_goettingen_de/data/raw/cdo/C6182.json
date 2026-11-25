@@ -1,0 +1,44 @@
+{
+  "id": "C6182",
+  "forms": [
+    {
+      "id": "CF14372",
+      "orth": "ⲣϣⲟϣⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6869",
+      "bibliography": "CD 608b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6180",
+      "label": "ϣⲟϣⲧ",
+      "pos": "N",
+      "gloss": "hindrance, impediment"
+    },
+    {
+      "target": "C6181",
+      "label": "ϯϣⲟϣⲧ",
+      "pos": "V",
+      "gloss": "impede, fasten with key"
+    }
+  ]
+}

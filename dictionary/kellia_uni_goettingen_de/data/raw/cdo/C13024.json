@@ -1,0 +1,57 @@
+{
+  "id": "C13024",
+  "forms": [
+    {
+      "id": "CF34101",
+      "orth": "ϣⲓϣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS18021",
+      "bibliography": "KoptHWb 336; DELC 275a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C719",
+      "type": "cf",
+      "label": "power, authority"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C721",
+      "label": "ϭⲓⲉⲣϣⲓϣⲓ",
+      "pos": "V",
+      "gloss": "receive authority"
+    },
+    {
+      "target": "C720",
+      "label": "ϯⲉⲣϣⲓϣⲓ",
+      "pos": "V",
+      "gloss": "give authority"
+    },
+    {
+      "target": "C718",
+      "label": "ⲉⲣϣⲓϣⲓ",
+      "pos": "V",
+      "gloss": "have power, authority"
+    },
+    {
+      "target": "C719",
+      "label": "ⲉⲣϣⲓϣⲓ",
+      "pos": "N",
+      "gloss": "power, authority"
+    }
+  ]
+}

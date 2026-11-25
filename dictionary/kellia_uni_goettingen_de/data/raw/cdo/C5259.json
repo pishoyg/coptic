@@ -1,0 +1,92 @@
+{
+  "id": "C5259",
+  "forms": [
+    {
+      "id": "CF12487",
+      "orth": "ⲟⲩⲱϣ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4365,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5903",
+      "bibliography": "CD 501b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲩⲝⲏⲥⲓⲥ ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ· · **ⲡⲟⲩⲱϣ **ⲉⲃⲟⲗ**** ⲛⲧⲙⲛⲧⲉⲩⲥⲉⲃⲏⲥ·",
+      "english": "the increase of the Church, and the growth and spreading abroad of piety.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓⲁⲧϥ ⲙⲡⲣⲱⲙⲉ **ⲉⲧⲛⲁϫⲉⲕⲡⲉϥⲟⲩⲱϣ **ⲉⲃⲟⲗ**** ⲛϩⲏⲧⲟⲩ ⲛⲥⲉⲛⲁϫⲓϣⲓⲡⲉ ⲁⲛ ⲉⲩϣⲁⲛϣⲁϫⲉ ⲙⲛⲛⲉⲩϫⲁϫⲉ ϩⲛⲙⲡⲩⲗⲏ",
+      "english": "Blessed is the man who shall satisfy his desire with them: they shall not be ashamed when they shall speak to their enemies in the gates.",
+      "source": "Psalms 126",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:126",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲁⲙⲟϥ ϫⲉⲕⲉϣⲟⲙⲛⲧ ⲛⲉ · ϣⲁⲛⲧⲉⲡⲉϥⲉⲓⲱⲧ ⲙⲧⲟⲛ ⲙⲙⲟϥ · ϫⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲛϭⲓⲡⲉϥⲁϩⲉ · ⲁⲩⲱ ⲙⲡⲉⲕⲁⲙⲉⲗⲉⲓ ⲉϫⲓ ⲛⲁϥ ⲛⲧⲉⲕϣⲉⲉⲣⲉ · ⲙⲛⲛⲥⲁⲡⲙⲟⲩ ⲙⲡⲉϥⲉⲓⲱⲧ · ⲁⲩⲱ ⲁϥⲧⲁⲙⲟϥ ⲉⲧϩⲉ ⲛⲧⲟϥⲙⲁⲅⲉⲩⲉ ⲛⲧⲉϥϣⲉⲉⲣⲉ · ϣⲁⲛⲧⲉⲥϣⲱⲛⲉ **ⲉⲧⲃⲉⲡⲉϥⲟⲩⲱϣ **ⲉⲃⲟⲗ**** ⲉϩⲟⲩⲛ ⲉⲣⲟⲥ · ⲁⲩⲱ ⲁϥⲧⲁⲙⲟϥ ⲟⲛ ⲉⲧⲧϩⲉ ⲛⲧⲟϥ ⲟⲩⲟⲛϩϥ ⲉⲃⲟⲗ ⲉⲡϣⲓⲣⲉ ⲛⲧϩⲉ ⲛⲧⲟϥ ⲁⲡⲉⲓⲗⲉ ⲉⲣⲟϥ ⲉⲧⲛⲧⲟⲟⲧϥ · ⲁⲩⲱ ⲉⲧⲃⲉϩⲱⲃ ⲛⲓⲙ ⲛⲧⲁⲩϣⲱⲡⲉ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ · ϣⲁⲛⲧⲉϥⲉⲓ ⲉⲡⲙⲁⲣⲧⲩⲣⲓⲟⲛ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3667,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5261",
+      "label": "ϭⲓⲛⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "desire, intention"
+    },
+    {
+      "target": "C5262",
+      "label": "ⲟⲩⲁϣϥ",
+      "pos": "N",
+      "gloss": "desire"
+    },
+    {
+      "target": "C5257",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5258",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5260",
+      "label": "ⲟⲩⲱϣ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "heart's desire"
+    }
+  ]
+}

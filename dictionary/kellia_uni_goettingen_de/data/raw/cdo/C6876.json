@@ -1,0 +1,290 @@
+{
+  "id": "C6876",
+  "forms": [
+    {
+      "id": "CF15801",
+      "orth": "ϣⲥⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4712,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7593",
+      "bibliography": "CD 715a; KoptHWb 394; DELC 315a; ChLCS 96a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϩⲧⲏⲕ ⲉⲣⲟⲓ ⲁⲩⲱ ⲛⲅⲥⲱⲧⲙ ⲉⲣⲟⲓ ⲁⲓⲗⲩⲡⲉⲓ ϩⲙⲡⲁ**ϣⲥⲛϩⲏⲧ** ⲁⲩⲱ ⲁⲓϣⲧⲟⲣⲧⲣ",
+      "english": "Attend to me, and hearken to me: I was grieved in my meditation, and troubled;",
+      "source": "Psalms 54",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉϥⲕⲱⲧⲉ ⲛⲧⲉϩⲉⲛ**ϣⲥⲛϩⲏⲧ** ⲧⲁⲕⲟϥ ⲉⲣⲉϩⲁϩ ⲇⲉ ⲕⲱⲧⲉ ⲉⲣⲁⲧϥ ϩⲛⲟⲩϩⲕⲟ ⲉϥϩⲉϫϩⲱϫ",
+      "english": "Let pains destroy him round about, and let many enemies come about him,",
+      "source": "Job 18",
+      "urn": "urn:cts:copticLit:ot.job.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲉⲑⲃⲃⲓⲏⲩ ⲉⲣⲟϥ ⲧⲁⲕⲉ ⲛⲉϥϣⲏⲣⲉ ⲁⲩⲱ ⲉⲣⲉⲛⲉϥϭⲓϫ ⲧⲙϩⲉ ϩⲉⲛ**ϣⲥⲛϩⲏⲧ**",
+      "english": "Let his inferiors destroy his children, and let his hands kindle the fire of sorrow.",
+      "source": "Job 20",
+      "urn": "urn:cts:copticLit:ot.job.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁϭⲥⲉ",
+        1,
+        13.843
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        11.505
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        11.489
+      ],
+      [
+        "ⲓ",
+        5,
+        11.231
+      ],
+      [
+        "ⲗⲩⲡⲉⲓ",
+        1,
+        10.905
+      ],
+      [
+        "ⲛⲛⲉ",
+        2,
+        10.829
+      ],
+      [
+        "ϥ",
+        7,
+        10.359
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        9.513
+      ],
+      [
+        "ϣⲧⲟⲣⲧⲣ",
+        1,
+        9.439
+      ],
+      [
+        "ϭⲙϭⲟⲙ",
+        1,
+        9.215
+      ],
+      [
+        "ϩⲁϩ",
+        1,
+        8.796
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        8.572
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        8.311
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        8.154
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.917
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        7.389
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        7.353
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        7.161
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.927
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.787
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲥⲛϩⲏⲧ_0_node",
+          5
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϣⲥⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲥⲛϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ϣⲥⲛϩⲏⲧ",
+          "ϣⲥⲛϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲥⲛϩⲏⲧ",
+          "ϣⲥⲛϩⲏⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4295,
+      "count": 6
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3903",
+      "type": "cf",
+      "label": "strike"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6881",
+      "label": "ϣⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "(have) pity"
+    },
+    {
+      "target": "C6882",
+      "label": "ϥⲓϩⲏⲧ",
+      "pos": "V",
+      "gloss": "take heart, delight"
+    },
+    {
+      "target": "C6883",
+      "label": "ϩⲁϩⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "with, beside"
+    },
+    {
+      "target": "C6869",
+      "label": "ϩⲏⲧ",
+      "pos": "N",
+      "gloss": "heart, mind"
+    },
+    {
+      "target": "C6872",
+      "label": "ϩⲏⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small heart, impatient"
+    },
+    {
+      "target": "C6870",
+      "label": "ϩⲏⲧ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single heart, one mind"
+    },
+    {
+      "target": "C6871",
+      "label": "ϩⲏⲧ ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two hearts, double-minded"
+    },
+    {
+      "target": "C6880",
+      "label": "ϯϩⲏⲧ",
+      "pos": "V",
+      "gloss": "pay heed, observe"
+    },
+    {
+      "target": "C6873",
+      "label": "ⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "without mind, senseless"
+    },
+    {
+      "target": "C6874",
+      "label": "ⲃⲁⲗϩⲏⲧ",
+      "pos": "N",
+      "gloss": "open, simple-minded"
+    },
+    {
+      "target": "C12198",
+      "label": "ⲕⲁϩⲧⲏϥ",
+      "pos": "N",
+      "gloss": "trust, confidence"
+    },
+    {
+      "target": "C6877",
+      "label": "ⲕⲱ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "trust"
+    },
+    {
+      "target": "C6878",
+      "label": "ⲣϩⲏⲧ",
+      "pos": "V",
+      "gloss": "reflect, regret"
+    },
+    {
+      "target": "C6875",
+      "label": "ⲣⲙⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "(man of heart), wise (man)"
+    },
+    {
+      "target": "C6879",
+      "label": "ⲥⲱⲕ ϩⲏⲧ",
+      "pos": "V",
+      "gloss": "persuade"
+    }
+  ]
+}

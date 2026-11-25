@@ -1,0 +1,149 @@
+{
+  "id": "C1461",
+  "forms": [
+    {
+      "id": "CF4344",
+      "orth": "ϭⲓⲛⲕⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13056,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1706",
+      "bibliography": "CD 129a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧ**ϭⲓⲛⲕⲧⲟ** ⲙⲡⲗⲏⲥⲧⲏⲥ ·",
+      "english": "the conversion of the thief",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲏⲥⲧⲏⲥ",
+        1,
+        15.898
+      ],
+      [
+        "ⲧⲁⲫⲟⲥ",
+        1,
+        13.969
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲕⲧⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12639,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1460",
+      "label": "ⲁⲧⲕⲧⲟ",
+      "pos": "N",
+      "gloss": "irrevocable"
+    },
+    {
+      "target": "C1451",
+      "label": "ⲕⲧⲟ",
+      "pos": "V",
+      "gloss": "turn, surround; make to turn, return, go round, surround"
+    },
+    {
+      "target": "C1459",
+      "label": "ⲕⲧⲟ",
+      "pos": "N",
+      "gloss": "turning, return, what surrounds"
+    },
+    {
+      "target": "C1456",
+      "label": "ⲕⲧⲟ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "turn, bring to"
+    },
+    {
+      "target": "C1454",
+      "label": "ⲕⲧⲟ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "surround; turn inward, toward"
+    },
+    {
+      "target": "C1457",
+      "label": "ⲕⲧⲟ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "return"
+    },
+    {
+      "target": "C1455",
+      "label": "ⲕⲧⲟ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "turn upon, toward"
+    },
+    {
+      "target": "C1452",
+      "label": "ⲕⲧⲟ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "turn away, turn toward(?)"
+    },
+    {
+      "target": "C1453",
+      "label": "ⲕⲧⲟ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "turn back, return"
+    },
+    {
+      "target": "C1458",
+      "label": "ⲕⲧⲟ (ⲛⲥⲁⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "turn away from"
+    }
+  ]
+}

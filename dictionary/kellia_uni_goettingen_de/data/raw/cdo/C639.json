@@ -1,0 +1,486 @@
+{
+  "id": "C639",
+  "forms": [
+    {
+      "id": "CF2425",
+      "orth": "ⲉⲃⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.04,
+        "rank": 446,
+        "count": 322
+      }
+    },
+    {
+      "orth": "ⲉⲃⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6795,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲉⲃⲉⲧⲉ",
+      "dialect": "S",
+      "id": "639.2"
+    },
+    {
+      "orth": "ⲁⲃⲟⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.24,
+        "rank": 425,
+        "count": 190
+      }
+    },
+    {
+      "orth": "ⲉⲃⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2834,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲁⲃⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4327,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲉⲃⲁⲧ",
+      "dialect": "A",
+      "id": "639.6"
+    },
+    {
+      "orth": "ⲉⲃⲁⲧ",
+      "dialect": "F",
+      "id": "639.7"
+    },
+    {
+      "orth": "ⲁⲃⲁⲧ",
+      "dialect": "F",
+      "id": "639.8"
+    },
+    {
+      "orth": "ⲁⲃⲁⲧⲓ",
+      "dialect": "F",
+      "id": "639.9"
+    },
+    {
+      "orth": "ⲉⲃⲁⲧ",
+      "dialect": "L",
+      "id": "639.10"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS775",
+      "bibliography": "CD 53b-54a; CED 33; KoptHWb 33, 497; DELC 39; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉϯ ϩⲛⲙⲛⲧⲏ ⲛⲣⲟⲙⲡⲉ · ⲙⲛϣⲙⲟⲩⲛ ⲛ**ⲉⲃⲟⲧ** ·",
+      "english": "I am fifteen years and eight months old.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϩⲟⲟⲩ ⲉϣⲁϥϫⲱⲕ ⲛϩⲏⲧϥ ⲙⲡ**ⲉⲃⲟⲧ** ⲛⲧⲱⲃⲉ :",
+      "english": "on the day on which it is full in the month Tybi.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲃⲓⲟⲥ ⲁⲩⲱ ⲧⲡⲟⲗⲓⲧⲉⲓⲁ ⲙⲡⲉⲛⲡⲉⲧⲟⲩⲁⲁⲃ ⲛⲉⲓⲱⲧ ⲉⲧⲧⲁⲓⲏⲩ ⲕⲁⲧⲁⲥⲙⲟⲧ ⲛⲓⲙ ⲁⲡⲁ ⲟⲛⲛⲟⲫⲣⲓⲟⲥ ⲡⲁⲛⲁⲭⲱⲣⲓⲧⲏⲥ ⲛⲧⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉϥⲃⲓⲟⲥ ⲛⲥⲟⲩⲙⲛⲧⲧⲁⲥⲉ ⲙⲡ**ⲉⲃⲟⲧ** ⲡⲁⲱⲛⲉ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ",
+      "english": "THE LIFE AND CONVERSATION OF OUR HOLY FATHER, WHO WAS GLORIOUS IN EVERY WAY, APA ONNOPHRIOS THE ANCHORITE, WHO ENDED HIS LIFE ON THE SIXTEENTH DAY OF THE MONTH PAONE IN THE PEACE OF GOD!",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲩⲟⲩⲁ",
+        29,
+        21.671
+      ],
+      [
+        "ⲥⲟⲩⲙⲏⲧ",
+        18,
+        21.607
+      ],
+      [
+        "ⲛ",
+        357,
+        20.917
+      ],
+      [
+        "ⲥⲟⲟⲩ",
+        36,
+        20.732
+      ],
+      [
+        "ⲥⲟⲩ",
+        36,
+        20.17
+      ],
+      [
+        "ⲡ",
+        220,
+        19.51
+      ],
+      [
+        "ⲙ",
+        170,
+        19.248
+      ],
+      [
+        "ⲥⲟⲩⲙⲛⲧⲁϥⲧⲉ",
+        11,
+        18.838
+      ],
+      [
+        "ⲉ",
+        151,
+        18.201
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        62,
+        18.048
+      ],
+      [
+        "ⲁ",
+        134,
+        17.912
+      ],
+      [
+        "ⲙⲛⲧϣⲟⲙⲧⲉ",
+        8,
+        17.36
+      ],
+      [
+        "ⲥⲟⲩⲯⲓⲧ",
+        4,
+        17.267
+      ],
+      [
+        "ϫⲟⲩⲧⲥⲁϣϥ",
+        3,
+        17.022
+      ],
+      [
+        "ϫⲟⲩⲧⲥⲁ",
+        3,
+        17.022
+      ],
+      [
+        "ⲡⲙⲩⲣⲣⲟⲛ",
+        3,
+        17.022
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        26,
+        16.787
+      ],
+      [
+        "ⲟⲩ",
+        98,
+        16.733
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        18,
+        16.446
+      ],
+      [
+        "ⲉⲡⲏⲡ",
+        6,
+        16.437
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          179
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲃⲟⲧ",
+          9
+        ],
+        [
+          "ⲥⲟⲟⲩ_1_pre_ⲉⲃⲟⲧ",
+          25
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          18
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          11
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ⲉⲃⲟⲧ",
+          8
+        ],
+        [
+          "ⲁⲑⲱⲣ_1_post_ⲉⲃⲟⲧ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲉⲃⲟⲧ",
+          9
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          5
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          5
+        ],
+        [
+          "ⲩ_3_post_ⲕⲏⲧ",
+          4
+        ],
+        [
+          "ⲕⲏⲧ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲉ_3_post_ⲕⲏⲧ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲃⲟⲧ",
+          4
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲉⲃⲟⲧ",
+          4
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲉⲃⲟⲧ",
+          4
+        ],
+        [
+          "ⲉⲡⲏⲡ_1_post_ⲉⲃⲟⲧ",
+          3
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲃⲟⲧ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟⲩ",
+          3
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_3_post_ϩⲟⲟⲩ",
+          3
+        ],
+        [
+          "ϫⲟⲩⲱⲧ_1_pre_ⲉⲃⲟⲧ",
+          3
+        ],
+        [
+          "ⲙⲉϩⲥⲁϣϥ_1_pre_ⲉⲃⲟⲧ",
+          3
+        ],
+        [
+          "ⲙϣⲓⲣ_1_post_ⲉⲃⲟⲧ",
+          2
+        ],
+        [
+          "ⲡⲁⲱⲛⲉ_1_post_ⲉⲃⲟⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲉⲃⲟⲧ",
+          "ⲥⲟⲟⲩ_1_pre_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲁⲑⲱⲣ_1_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲉ_1_post_ⲉⲃⲟⲧ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲃⲟⲧ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲃⲟⲧ",
+          "ⲩ_3_post_ⲕⲏⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲏⲧ",
+          "ⲕⲏⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲏⲧ_2_post_ⲉ",
+          "ⲉ_3_post_ⲕⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲃⲟⲧ",
+          "ⲥⲟⲟⲩ_1_pre_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲉⲡⲏⲡ_1_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟⲩ",
+          "ϣⲙⲟⲩⲛ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_3_post_ϩⲟⲟⲩ",
+          "ⲛ_1_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲩⲱⲧ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉϩⲥⲁϣϥ_1_pre_ⲉⲃⲟⲧ",
+          "ⲉⲃⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲙϣⲓⲣ_1_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_0_node",
+          "ⲡⲁⲱⲛⲉ_1_post_ⲉⲃⲟⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.03,
+      "rank": 381,
+      "count": 322
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C640",
+      "label": "ϩⲣⲉⲃⲟⲧ",
+      "pos": "ADV",
+      "gloss": "monthly"
+    }
+  ],
+  "etym": {
+    "egy_num": "93",
+    "egy_lemma": "ꜣbd",
+    "demo_num": "d446",
+    "demo_lemma": "ı ͗bd",
+    "english": "month",
+    "german": "Monat; Monatsdienst",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/93",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d446"
+  }
+}

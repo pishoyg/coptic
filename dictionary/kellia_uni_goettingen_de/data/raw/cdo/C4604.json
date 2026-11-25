@@ -1,0 +1,86 @@
+{
+  "id": "C4604",
+  "forms": [
+    {
+      "id": "CF11166",
+      "orth": "ⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5198",
+      "bibliography": "CD 438b-439a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4607",
+      "label": "ϫⲓⲛⲑⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "agreement, union"
+    },
+    {
+      "target": "C4605",
+      "label": "ⲉⲣ ⲛⲁⲧⲑⲱⲧ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "disagree"
+    },
+    {
+      "target": "C4606",
+      "label": "ⲙⲉⲧⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "refusal"
+    },
+    {
+      "target": "C4603",
+      "label": "ⲙⲉⲧⲑⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "confirmation"
+    },
+    {
+      "target": "C4599",
+      "label": "ⲧⲱⲧ",
+      "pos": "V",
+      "gloss": "be joined, be persuaded, be agreeable to; conjoin, mingle"
+    },
+    {
+      "target": "C4601",
+      "label": "ⲧⲱⲧ",
+      "pos": "N",
+      "gloss": "agreement, mingling"
+    },
+    {
+      "target": "C4600",
+      "label": "ⲧⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be even, be level"
+    },
+    {
+      "target": "C4602",
+      "label": "ⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "content heart, persuade, satisfy; have a contented heart, be persuaded, be satisfied; consent, agree"
+    }
+  ]
+}

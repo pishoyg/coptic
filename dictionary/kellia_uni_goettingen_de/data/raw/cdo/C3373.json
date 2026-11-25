@@ -1,0 +1,153 @@
+{
+  "id": "C3373",
+  "forms": [
+    {
+      "id": "CF8638",
+      "orth": "ⲥⲃϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16897,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥϣⲃⲉ",
+      "dialect": "S",
+      "id": "1384.1"
+    },
+    {
+      "orth": "ϣⲃϣⲉ",
+      "dialect": "S",
+      "id": "1384.2"
+    },
+    {
+      "orth": "ϣⲉⲃϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2985,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3844",
+      "bibliography": "CD 324a; CED 148; KoptHWb 178; DELC 185; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲉⲛ**ⲥⲃϣⲉ** ⲛϩⲟⲙⲛⲧ ⲛⲉ ⲛⲉⲧⲡⲉϥϩⲟⲩⲛ ⲉⲣⲉⲧⲉϥⲙⲣⲣⲉ ⲇⲉ ⲟ ⲛⲧϩⲉ ⲛⲟⲩⲱⲛⲉ ⲛⲥⲙⲏⲣⲓⲧⲏⲥ",
+      "english": "His inwards are as brazen plates, and the texture of his skin as a smyrite stone.",
+      "source": "Job 41",
+      "urn": "urn:cts:copticLit:ot.job.coptot:41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲃϩⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ϩⲟⲙⲛⲧ",
+        1,
+        13.408
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲃϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲃϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_4_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲛ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲃϣⲉ_0_node",
+          "ⲛ_1_post_ⲥⲃϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲃϣⲉ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ⲡⲉϥ_4_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_4_post_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16498,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "131980",
+    "egy_lemma": "sbḫ.t",
+    "demo_num": "d5209",
+    "demo_lemma": "sbšj(.t)",
+    "english": "[pylon-shaped pectoral amulet]",
+    "german": "Brusttafel (Amulett)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131980",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5209"
+  }
+}

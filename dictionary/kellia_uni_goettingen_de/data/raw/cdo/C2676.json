@@ -1,0 +1,647 @@
+{
+  "id": "C2676",
+  "forms": [
+    {
+      "id": "CF7158",
+      "orth": "ⲛⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.97,
+        "rank": 733,
+        "count": 153
+      }
+    },
+    {
+      "orth": "ⲛⲁϩϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.57,
+        "rank": 167,
+        "count": 642
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3068",
+      "bibliography": "CD 246a; CED 118; KoptHWb 136; DELC 152; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡϧⲁⲉ ⲇⲉ ⲉⲩⲣⲟⲧⲉⲃ ⲛϫⲉⲡⲓⲓⲁ ⲙⲙⲁⲑⲏⲧⲏⲥ ⲁϥⲟⲩⲟⲛϩϥ ⲉⲣⲱⲟⲩ ⲟⲩⲟϩ ⲛⲁϥϯϣⲱϣ ⲛⲧⲟⲩⲙⲉⲧⲁⲑⲛⲁϩϯ ⲛⲉⲙⲧⲟⲩⲙⲉⲑⲛⲁϣⲧϩⲏⲧ ϫⲉⲙⲡⲟⲩ**ⲛⲁϩϯ** ⲉⲛⲏ ⲉⲧⲁⲩⲛⲁⲩ ⲉⲣⲟϥ ⲉⲧⲁϥⲧⲱⲛϥ",
+      "english": "Afterward he was revealed to the eleven themselves as they sat at the table, and he rebuked them for their unbelief and hardness of heart, because they didn't believe those who had seen him after he had risen.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲃⲉⲕⲉ ϣⲱⲡⲉ ⲉϥϫⲏⲕ ⲉⲃⲟⲗ ⲛⲧⲟⲟⲧϥ ⲙⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲡⲉⲛⲧⲁϯⲡⲟⲩⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲉⲧⲣⲉ**ⲛⲁϩⲧⲉ** ϩⲁⲛⲉϥⲧⲛϩ",
+      "english": "may a full reward be given thee of the Lord God of Israel, to whom thou hast come to trust under his wings.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲉⲟⲩⲁⲓ ϫⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲓⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ϩⲁⲙⲛⲁⲓ ⲓⲉ ϩⲁⲙⲛⲏ ⲙⲡⲣ**ⲛⲁϩϯ**",
+      "english": "Then if anyone tells you, 'Look, here is the Christ!' or, 'Look, there!' don't believe it.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉⲁⲛⲟⲕ ϯⲛⲁϣⲱⲡⲉ ⲉⲓ**ⲛⲁϩⲧⲉ** ⲉⲣⲟϥ . ⲁⲩⲱ ⲟⲛ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ⲙⲛⲛϣⲏⲣⲉ ϣⲏⲙ ⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲧⲁⲁⲩ ⲛⲁⲓ .",
+      "english": "Again, 'I will put my trust in him.'",
+      "source": "58_Hebrews_2",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲛϫⲉⲡⲓⲥⲏⲟⲩ ⲟⲩⲟϩ ⲁⲥϧⲱⲛⲧ ⲛϫⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲁⲣⲓⲙⲉⲧⲁⲛⲟⲓⲛ ⲟⲩⲟϩ **ⲛⲁϩϯ** ⲉⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ .",
+      "english": "and saying, &apos;The time is fulfilled, and the Kingdom of God is at hand! Repent, and believe in the Good News.&apos;",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϯⲛⲁⲣϩⲟⲧⲉ ⲁⲛ ⲁⲛⲟⲕ ⲉⲓ**ⲛⲁϩⲧⲉ** ⲉⲣⲟⲕ",
+      "english": "They shall be afraid, but I will trust in thee.",
+      "source": "Psalms 55",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲟ",
+        165,
+        30.216
+      ],
+      [
+        ".",
+        294,
+        30.215
+      ],
+      [
+        "ϥ",
+        350,
+        29.778
+      ],
+      [
+        "ⲉⲧ",
+        170,
+        28.48
+      ],
+      [
+        "ⲫ",
+        147,
+        28.163
+      ],
+      [
+        "ⲡⲓ",
+        171,
+        28.024
+      ],
+      [
+        "ⲛ",
+        218,
+        27.895
+      ],
+      [
+        "ϧⲉⲛ",
+        156,
+        27.619
+      ],
+      [
+        "ⲉ",
+        182,
+        27.54
+      ],
+      [
+        "ⲁ",
+        177,
+        27.392
+      ],
+      [
+        "ⲟⲩ",
+        184,
+        27.325
+      ],
+      [
+        "ⲛⲧⲉ",
+        135,
+        27.297
+      ],
+      [
+        "ⲡ",
+        149,
+        27.277
+      ],
+      [
+        "ⲁⲛ",
+        75,
+        26.702
+      ],
+      [
+        "ⲫⲏ",
+        69,
+        26.684
+      ],
+      [
+        "ⲉⲑ",
+        61,
+        26.382
+      ],
+      [
+        "ⲡⲉⲧⲉⲛ",
+        33,
+        26.236
+      ],
+      [
+        "ϫⲉ",
+        102,
+        26.154
+      ],
+      [
+        "ⲧⲉⲛ",
+        75,
+        26.087
+      ],
+      [
+        "ⲛⲉⲙ",
+        96,
+        25.997
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        32,
+        28.098
+      ],
+      [
+        "ⲉⲣⲟ",
+        119,
+        20.669
+      ],
+      [
+        "ⲉ",
+        111,
+        17.701
+      ],
+      [
+        "ⲕ",
+        62,
+        17.215
+      ],
+      [
+        "ϥ",
+        92,
+        16.592
+      ],
+      [
+        "ⲓ",
+        45,
+        15.826
+      ],
+      [
+        "ⲁ",
+        58,
+        15.118
+      ],
+      [
+        "ⲁⲩⲱ",
+        49,
+        15.091
+      ],
+      [
+        "ϯ",
+        32,
+        15.017
+      ],
+      [
+        "ⲛⲁ",
+        44,
+        14.567
+      ],
+      [
+        "ⲧⲛϩ",
+        6,
+        14.444
+      ],
+      [
+        "ⲡ",
+        56,
+        14.419
+      ],
+      [
+        "ϫⲉ",
+        36,
+        14.156
+      ],
+      [
+        "ⲉⲧ",
+        34,
+        14.001
+      ],
+      [
+        "ⲛ",
+        52,
+        13.41
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        12,
+        13.12
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        17,
+        12.541
+      ],
+      [
+        "ⲟⲩ",
+        30,
+        12.441
+      ],
+      [
+        "ⲛⲉϥ",
+        13,
+        12.399
+      ],
+      [
+        "ⲙⲛⲧⲉⲡⲣⲁ",
+        1,
+        12.098
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁϩⲧⲉ_0_node",
+          41
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          25
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          14
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          8
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁϩⲧⲉ",
+          4
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲁϩⲧⲉ",
+          3
+        ],
+        [
+          "ⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          3
+        ],
+        [
+          "ϩⲁ_1_post_ⲛⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲧⲛϩ",
+          5
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          3
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲛϩ_2_post_ϩⲁ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲛⲁϩⲧⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_post_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁϩⲧⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          11
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          7
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          "ϥ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁϩⲧⲉ_0_node",
+          "ϩⲁ_1_post_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲛⲉϥ_3_post_ⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲇⲉ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲓ_1_pre_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲧⲛϩ",
+          "ⲧⲛϩ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲧⲉ_0_node",
+          "ⲉ_1_post_ⲛⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲁϩⲧⲉ",
+          "ⲡⲉⲩ_3_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲡ_2_post_ⲉ",
+          "ⲁ_1_post_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲛⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲕ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_pre_ⲛⲁϩⲧⲉ",
+          "ⲁ_1_pre_ⲛⲁϩⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.14,
+      "rank": 574,
+      "count": 181
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4389",
+      "type": "cf",
+      "label": "trust, believe"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2684",
+      "label": "ϣⲟⲩⲛⲁϩϯ",
+      "pos": "N",
+      "gloss": "worthy of belief, trustworthy"
+    },
+    {
+      "target": "C2680",
+      "label": "ⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unbelieving"
+    },
+    {
+      "target": "C2679",
+      "label": "ⲙⲉⲧⲛⲁϩϯ",
+      "pos": "N",
+      "gloss": "faith"
+    },
+    {
+      "target": "C2681",
+      "label": "ⲙⲛⲧⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unbelief"
+    },
+    {
+      "target": "C2677",
+      "label": "ⲛⲁϩⲧⲉ",
+      "pos": "VSTAT",
+      "gloss": "trustworthy, faithful"
+    },
+    {
+      "target": "C2678",
+      "label": "ⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "trust, faith"
+    },
+    {
+      "target": "C2682",
+      "label": "ⲣⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "be unbelieving, mistrustful"
+    },
+    {
+      "target": "C2683",
+      "label": "ⲣⲉϥⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "believer"
+    }
+  ],
+  "etym": {
+    "egy_num": "86680",
+    "egy_lemma": "nḥti̯",
+    "demo_num": "d3241",
+    "demo_lemma": "nḥṱ(j)",
+    "english": "believe; trust; be sincere",
+    "german": "glauben; vertrauen; aufrichtig sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/86680",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3241"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "id": "C5694",
+  "forms": [
+    {
+      "id": "CF13366",
+      "orth": "ϫⲁϫϣⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9798,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6372",
+      "bibliography": "CD 544a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲣⲱⲙⲓ ⲛⲓⲃⲉⲛ ⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲁϭⲛⲓ ⲛϧⲏⲧϥ ⲛⲛⲉϥϣⲓ ⲉϧⲟⲩⲛ ⲟⲩⲣⲱⲙⲓ ⲙⲃⲉⲗⲗⲉ ⲓⲉ ⲛϭⲁⲗⲉ ⲓⲉ ⲛ**ϫⲁϫϣⲁⲓ** ⲓⲉ ⲉⲣⲉⲡⲉϥⲙⲁϣϫ ϫⲏϫⲓ ⲉⲃⲟⲗ",
+      "english": "No man who has a blemish on him shall draw nigh; a man blind, lame, with his nose disfigured, or his ears cut,",
+      "source": "03_Leviticus_21",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲁⲗⲉ",
+        1,
+        16.11
+      ],
+      [
+        "ⲓⲉ",
+        2,
+        12.706
+      ],
+      [
+        "ⲙⲁϣϫ",
+        1,
+        12.164
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲉ_1_pre_ϫⲁϫϣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫϣⲁⲓ",
+          1
+        ],
+        [
+          "ϫⲁϫϣⲁⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲉ_1_pre_ϫⲁϫϣⲁⲓ",
+          "ⲛ_1_pre_ϫⲁϫϣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫϣⲁⲓ",
+          "ϫⲁϫϣⲁⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9257,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C8012",
+      "type": "cf",
+      "label": "cut"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5691",
+      "label": "ϣⲁ",
+      "pos": "N",
+      "gloss": "nose"
+    },
+    {
+      "target": "C5695",
+      "label": "ϣⲁⲓ",
+      "pos": "N",
+      "gloss": "fortune, fate"
+    },
+    {
+      "target": "C5693",
+      "label": "ϣⲁⲓⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "hook-nosed"
+    },
+    {
+      "target": "C5692",
+      "label": "ϭⲃϣⲁ",
+      "pos": "N",
+      "gloss": "nostrils (\"leaves of nose\")"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "C3642",
+  "forms": [
+    {
+      "id": "CF9189",
+      "orth": "ⲥⲛⲟⲩϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6361,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲛⲟⲩⲃ",
+      "dialect": "S",
+      "id": "1449.1"
+    },
+    {
+      "orth": "ⲥⲛⲟⲩϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5851,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4144",
+      "bibliography": "CD 348b; CED 157; KoptHWb 191; DELC 193; ChLCS 49a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛ**ⲥⲛⲟⲩϥ** · ⲧⲁⲓ ⲟⲛ ⲧⲉ ⲧϩⲉ ⲛⲧⲣⲟⲙⲡⲉ ·",
+      "english": "What it was last year, even so is it this year;",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϯ ⲇⲉ ⲛⲟⲩⲅⲛⲱⲙⲏ ⲛⲏⲧⲛ ⲙⲡⲁⲓ ⲡⲁⲓ ⲅⲁⲣ ⲡⲉⲧⲣⲛⲟϥⲣⲉ ⲛⲏⲧⲛ . ⲛⲁⲓ ⲙⲡⲓⲣⲉ ⲙⲙⲁⲧⲉ ⲁⲛ . ⲁⲗⲗⲁ ⲡⲕⲉⲟⲩⲱϣ ⲁⲧⲉⲧⲛⲁⲣⲭⲉⲓ ⲙⲙⲟϥ ϫⲓⲛ**ⲥⲛⲟⲩϥ** .",
+      "english": "I give a judgment in this: for this is expedient for you, who were the first to start a year ago, not only to do, but also to be willing.",
+      "source": "47_2 Corinthians_8",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲙⲡⲉⲧⲛⲟⲩⲣⲟⲧ ⲡⲁⲓ ⲉϯϣⲟⲩϣⲟⲩ ⲙⲙⲟⲓ ⲛϩⲏⲧϥ ϩⲁⲣⲱⲧⲛ ϩⲛⲙⲙⲁⲕⲉⲇⲱⲛ . ϫⲉⲁⲧⲁⲭⲁⲓⲁ ⲥⲃⲧⲱⲧⲥ ϫⲓⲛ**ⲥⲛⲟⲩϥ** . ⲁⲩⲱ ⲁⲡⲉⲧⲛⲕⲱϩ ⲧⲃⲥ ⲟⲩⲙⲏⲏϣⲉ .",
+      "english": "for I know your readiness, of which I boast on your behalf to them of Macedonia, that Achaia has been prepared for a year past. Your zeal has stirred up very many of them.",
+      "source": "47_2 Corinthians_9",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟϩ",
+        1,
+        17.695
+      ],
+      [
+        "ⲥⲉⲃ",
+        1,
+        16.11
+      ],
+      [
+        "ⲧⲟⲧ",
+        1,
+        12.718
+      ],
+      [
+        "ⲓⲥϫⲉⲛ",
+        2,
+        12.314
+      ],
+      [
+        "ⲡⲉⲧⲉⲛ",
+        1,
+        10.103
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        1,
+        9.788
+      ],
+      [
+        "ⲭ",
+        1,
+        9.629
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.51
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        1,
+        8.351
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.117
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.049
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲃⲧⲱⲧ",
+        1,
+        11.143
+      ],
+      [
+        "ϫⲓ",
+        2,
+        10.579
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        9.441
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        8.576
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        8.494
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        7.642
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲛⲟⲩϥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲛⲟⲩϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5928,
+      "count": 3
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5358,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12272",
+      "label": "ⲛⲥⲛⲟⲩϥ",
+      "pos": "ADV",
+      "gloss": "last year"
+    }
+  ],
+  "etym": {
+    "egy_num": "137300",
+    "egy_lemma": "snf",
+    "demo_num": "d5350",
+    "demo_lemma": "snfe",
+    "english": "previous year",
+    "german": "Vorjahr",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/137300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5350"
+  }
+}

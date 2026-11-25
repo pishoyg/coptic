@@ -1,0 +1,46 @@
+{
+  "id": "C5737",
+  "forms": [
+    {
+      "id": "CF13454",
+      "orth": "ⲕⲏ ⲉⲡϣⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6415",
+      "bibliography": "CD 549b; KoptHWb 302; ChLCS 75a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5735",
+      "label": "ϣⲱ",
+      "pos": "N",
+      "gloss": "sand (desert)"
+    },
+    {
+      "target": "C5736",
+      "label": "ⲡϣⲱ ⲛⲙⲏ",
+      "pos": "N",
+      "gloss": "gravel in urine"
+    }
+  ]
+}

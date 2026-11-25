@@ -1,0 +1,56 @@
+{
+  "id": "C7641",
+  "forms": [
+    {
+      "id": "CF17344",
+      "orth": "ⲙⲛⲧⲁⲡϭⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF17345",
+      "orth": "ⲙⲛⲧⲁⲡϭⲗⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF17346",
+      "orth": "ⲙⲛⲧⲁⲡϭⲗⲁ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8482",
+      "bibliography": "CD 810a; KoptHWb 449"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7638",
+      "label": "ϭⲗⲟ",
+      "pos": "N",
+      "gloss": "futility, vanity; delusion, illusion"
+    },
+    {
+      "target": "C7640",
+      "label": "ⲁⲡϭⲗⲁ",
+      "pos": "N",
+      "gloss": "vain"
+    },
+    {
+      "target": "C7639",
+      "label": "ⲉⲡⲉϭⲗⲟ",
+      "pos": "ADV",
+      "gloss": "in vain"
+    }
+  ]
+}

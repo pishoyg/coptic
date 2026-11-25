@@ -1,0 +1,39 @@
+{
+  "id": "C6897",
+  "forms": [
+    {
+      "id": "CF15843",
+      "orth": "ⲙⲁ ⲛϩⲁⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7614",
+      "bibliography": "CD 719b; KoptHWb 393; DELC 314b; ChLCS 95b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6895",
+      "label": "ϩⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "flow, pour"
+    },
+    {
+      "target": "C6896",
+      "label": "ϩⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "flow, rush of water"
+    }
+  ]
+}

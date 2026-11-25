@@ -1,0 +1,83 @@
+{
+  "id": "C6967",
+  "forms": [
+    {
+      "id": "CF15988",
+      "orth": "ϩⲟⲟⲩ ϩⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8558,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7687",
+      "bibliography": "CD 730b; KoptHWb 403; ChLCS 98b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲱⲙⲉ ⲇⲉ ⲉⲗⲕⲁⲛⲁ ⲉⲛⲉϣⲁϥⲉⲓ ⲉϩⲣⲁⲓ ϩⲛⲧⲉϥⲡⲟⲗⲓⲥ ⲁⲣⲙⲁⲑⲁⲉⲓⲙ **ⲕⲁⲧⲁϩⲟⲟⲩ **ϩⲟⲟⲩ**** ⲉⲟⲩⲱϣⲧ ⲁⲩⲱ ⲉⲧⲁⲗⲉⲑⲩⲥⲓⲁ ⲉϩⲣⲁⲓ ⲙⲙⲁϩ ⲙⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲥⲁⲃⲃⲁⲱⲑ ϩⲛⲥⲏⲗⲱ ⲁⲩⲱ ϩⲏⲗⲓ ⲡⲟⲩⲏⲏⲃ ⲛⲉϥϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲙⲛⲡⲉϥϣⲏⲣⲉ ⲥⲛⲁⲩ ⲟⲫⲛⲏ ⲙⲛⲫⲓⲛⲉⲉⲥ ⲉⲩⲟ ⲛⲟⲩⲏⲏⲃ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And the man went up from year to year from his city, from Armathaim, to worship and sacrifice to the Lord God of Sabaoth at Selom: and there were Heli and his two sons Ophni and Phinees, the priests of the Lord.",
+      "source": "I Samuel 1",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ ⲇⲉ ⲛⲧⲟϥ ϣⲁϥⲛⲁ **ϩⲟⲟⲩ **ϩⲟⲟⲩ**** ⲉϥⲛⲏⲩ ϩⲁⲣⲱⲥ ⲛⲧⲁⲩⲗⲏ ⲙⲡⲙⲁ ⲛⲛⲉϩⲓⲟⲙⲉ ⲉⲧⲣⲉϥϣⲓⲛⲉ ⲉⲡⲟⲩϫⲁⲓ ⲛⲉⲥⲑⲏⲣ ⲁⲩⲱ ⲉⲥⲱⲧⲙ ϫⲉⲟⲩ ⲡⲉⲧⲛⲁϣⲱⲡⲉ ⲛⲙⲙⲁⲥ",
+      "english": "But Mardochaeus used to walk every day by the women's court, to see what would become of Esther.",
+      "source": "Esther 2",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8115,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6965",
+      "label": "ϩⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "day"
+    },
+    {
+      "target": "C6970",
+      "label": "ϩⲟⲩⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birthday"
+    },
+    {
+      "target": "C6968",
+      "label": "ⲙⲡⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "today"
+    },
+    {
+      "target": "C6969",
+      "label": "ⲡⲟⲟⲩ ⲛϩⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "today, this day"
+    },
+    {
+      "target": "C6966",
+      "label": "ⲣϩⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "spend day"
+    }
+  ]
+}

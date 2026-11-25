@@ -1,0 +1,170 @@
+{
+  "id": "C10884",
+  "forms": [
+    {
+      "id": "CF29683",
+      "orth": "ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29684",
+      "orth": "ⲫⲣⲁⲅⲉⲗⲓⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29685",
+      "orth": "ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7710,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15029",
+      "bibliography": "DDGLC",
+      "cu_ID": "429"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲑⲁⲙⲓⲟ ⲛⲟⲩ**ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ** ⲉⲃⲟⲗ ϧⲉⲛϩⲁⲛⲛⲟϩ ⲁϥϩⲓⲧⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲉⲣⲫⲉⲓ ⲛⲓⲉⲥⲱⲟⲩ ⲛⲉⲙⲛⲓⲉϩⲱⲟⲩ ⲟⲩⲟϩ ⲛⲓⲕⲉⲣⲙⲁ ⲛⲧⲉⲛⲓϥⲁⲓⲕⲉⲣⲙⲁ ⲁϥⲫⲟⲛⲟⲩ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲟⲩⲧⲣⲁⲡⲉⲍⲁ ⲁϥⲫⲟⲛϫⲟⲩ .",
+      "english": "He made a whip of cords, and threw all out of the temple, both the sheep and the oxen; and he poured out the changers' money, and overthrew their tables.",
+      "source": "04_John_02",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟϩ",
+        1,
+        14.695
+      ],
+      [
+        "ⲑⲁⲙⲓⲟ",
+        1,
+        10.974
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲁⲣⲟ",
+        2,
+        13.418
+      ],
+      [
+        "ϯ",
+        2,
+        9.516
+      ],
+      [
+        "ⲕ",
+        2,
+        8.853
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ",
+          "ⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7176,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2632",
+    "grl_lemma": "φραγέλλιον",
+    "grl_meaning": "whip, scourge",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1952b"
+  }
+}

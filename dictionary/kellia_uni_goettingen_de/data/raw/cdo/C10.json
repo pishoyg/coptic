@@ -1,0 +1,294 @@
+{
+  "id": "C10",
+  "forms": [
+    {
+      "id": "CF57",
+      "orth": "ⲁⲃⲟⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5479,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF58",
+      "orth": "ⲁⲃⲟⲕⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF59",
+      "orth": "ⲁⲃⲟⲟⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5166,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10",
+      "bibliography": "CD 2b; KoptHWb 2; DELC 4; ChLCS 3a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲇⲉ ⲛⲁⲓ ϫⲉⲕⲁⲣⲱⲕ ⲡⲁϣⲏⲣⲉ · ⲡⲉⲧⲭⲱⲣⲏⲅⲉⲓ · ⲛⲧⲉⲧⲣⲟⲫⲏ ⲛⲛ**ⲁⲃⲟⲕⲉ** ⲉⲧⲉⲛⲥⲉϫⲟ ⲁⲛ · ⲟⲩⲇⲉ ⲛⲥⲉⲱⲥϣ ⲁⲛ · ⲟⲩⲇⲉ ⲛⲥⲉⲥⲱⲟⲩϩ ⲁⲛ ⲉϩⲟⲩⲛ ⲉⲁⲡⲟⲑⲩⲕⲏ · ⲛⲧⲟϥ ⲡⲉ ⲛⲧⲁϥⲭⲱⲣⲏⲅⲉⲓ ⲛⲁⲛ ⲛⲛⲉⲓⲙⲟⲟⲩ ⲉⲧⲉⲛⲭⲣⲉⲓⲁ ·",
+      "english": "And he answered and said unto me, 'He Who supplieth with food the hawks (?) which neither sow nor reap, nor gather grain into garners, He, I say, it is Who hath supplied us with these waters whereof we were in need.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲱϣⲧ ⲉⲛ**ⲁⲃⲟⲕⲉ** ϫⲉⲛⲥⲉϫⲟ ⲁⲛ ⲛⲥⲉⲱϩⲥ ⲁⲛ ⲉⲙⲙⲛⲧⲟⲩⲧⲁⲙⲉⲓⲟⲛ ⲙⲙⲁⲩ ⲟⲩⲇⲉ ⲁⲡⲟⲑⲏⲕⲏ ⲁⲩⲱ ⲡⲛⲟⲩⲧⲉ ⲥⲁⲁⲛϣ ⲙⲙⲟⲟⲩ . ⲛⲧⲱⲧⲛ ϭⲉ ⲧⲉⲧⲛϣⲟⲃⲉ ⲉⲛϩⲁⲗⲁⲧⲉ ⲉⲙⲁⲧⲉ .",
+      "english": "Consider the ravens: they don't sow, they don't reap, they have no warehouse or barn, and God feeds them. How much more valuable are you than birds!",
+      "source": "42_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲟ ⲅⲁⲣ ⲛⲧϩⲉ ⲛⲛⲓ**ⲁⲃⲟⲟⲕⲉ** ⲉⲩⲟⲩⲧⲉ ⲧⲡⲉ ⲙⲛⲡⲕⲁϩ ⲕⲁⲓ ⲅⲁⲣ ⲉⲣϣⲁⲛⲟⲩⲕⲱϩⲧ ⲛⲉϩⲥⲉ ϩⲙⲡⲏⲓ ⲛϩⲉⲛⲛⲟⲩⲧⲉ ⲛϣⲉ ⲙⲛϩⲉⲛⲛⲟⲩⲧⲉ ⲛⲛⲟⲩⲃ ⲙⲛϩⲉⲛϩⲁⲧ ⲛⲉⲩⲟⲩⲏⲏⲃ ⲙⲉⲛ ⲥⲉⲡⲱⲧ ⲉⲡⲥⲁ ⲉⲃⲟⲗ ⲛⲥⲉⲟⲩϫⲁⲓ ⲛⲧⲟⲟⲩ ⲇⲉ ⲛⲉⲩⲛⲟⲩⲧⲉ ⲥⲉⲛⲁϭⲱⲡⲉ ⲛⲥⲉⲣⲱⲭϩ ⲛⲧϩⲉ ⲛϩⲉⲛⲥⲟⲓ ⲉⲩϫⲡⲏⲟⲩ",
+      "english": "Whereupon when fire falleth upon the house of gods of wood, or laid over with gold or silver, their priests will flee away, and escape; but they themselves shall be burned asunder like beams.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲉⲉⲧ",
+        1,
+        12.258
+      ],
+      [
+        "ⲧⲣⲟⲫⲏ",
+        1,
+        12.071
+      ],
+      [
+        "ϫⲟ",
+        2,
+        11.956
+      ],
+      [
+        "ⲛⲟⲉⲓⲕ",
+        1,
+        11.595
+      ],
+      [
+        "ⲉⲣⲏⲙⲟⲥ",
+        1,
+        9.936
+      ],
+      [
+        "ⲛ",
+        7,
+        9.061
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        8.704
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.913
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        7.897
+      ],
+      [
+        "ⲉ",
+        3,
+        6.402
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.114
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        5.932
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        4.633
+      ],
+      [
+        "ϩⲉ",
+        1,
+        4.557
+      ],
+      [
+        ".",
+        1,
+        3.387
+      ],
+      [
+        "ⲥ",
+        1,
+        3.104
+      ],
+      [
+        "ϫⲉ",
+        1,
+        2.976
+      ],
+      [
+        "ⲧ",
+        1,
+        2.901
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        2.518
+      ],
+      [
+        "ⲙ",
+        1,
+        2.181
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲃⲟⲕⲉ",
+          1
+        ],
+        [
+          "ⲁⲃⲟⲕⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ϫⲟ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲙⲁⲩⲁⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲃⲟⲕⲉ",
+          "ⲁⲃⲟⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲃⲟⲕⲉ_0_node",
+          "ⲉⲧⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          "ⲛ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲟ",
+          "ⲥⲉ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_3_post_ϫⲟ",
+          "ϫⲟ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ϫⲟ_2_post_ⲉⲧⲉ",
+          "ⲁⲛ_3_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲁⲃⲟⲕⲉ_0_node",
+          "ⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲃⲟⲕⲉ",
+          "ⲥ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϭⲉⲉⲧ",
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          "ⲥ_4_post_ⲙⲁⲩⲁⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3321,
+      "count": 9
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C9",
+      "label": "ⲁⲃⲱⲕ",
+      "pos": "N",
+      "gloss": "raven, crow"
+    }
+  ]
+}

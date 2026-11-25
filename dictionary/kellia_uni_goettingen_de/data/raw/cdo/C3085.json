@@ -1,0 +1,56 @@
+{
+  "id": "C3085",
+  "forms": [
+    {
+      "id": "CF8044",
+      "orth": "ⲣⲟⲭⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3533",
+      "bibliography": "CD 294a; KoptHWb 163; ChLCS 41b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3082",
+      "label": "ⲣⲉϥⲣⲱⲕϩ",
+      "pos": "N",
+      "gloss": "who burns, burning"
+    },
+    {
+      "target": "C3083",
+      "label": "ⲣⲟⲕϩ",
+      "pos": "N",
+      "gloss": "fuel, firewood"
+    },
+    {
+      "target": "C3084",
+      "label": "ⲣⲟⲕϩⲉ",
+      "pos": "N",
+      "gloss": "fuel"
+    },
+    {
+      "target": "C3080",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "V",
+      "gloss": "burn"
+    },
+    {
+      "target": "C3081",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "N",
+      "gloss": "burning, fervour"
+    }
+  ]
+}

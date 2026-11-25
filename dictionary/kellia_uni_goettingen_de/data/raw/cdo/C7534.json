@@ -1,0 +1,141 @@
+{
+  "id": "C7534",
+  "forms": [
+    {
+      "id": "CF17127",
+      "orth": "ϫⲁϭⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7355,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲁϭⲉⲩ",
+      "dialect": "B",
+      "id": "2504.1"
+    },
+    {
+      "orth": "ϭⲁϭⲉⲩ",
+      "dialect": "B",
+      "id": "2504.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8352",
+      "bibliography": "CD 800b; CED 324"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲥϫⲉ ⲧⲉⲕϫⲓϫ ⲓⲉ ⲧⲉⲕϭⲁⲗⲟϫ ⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉⲥⲑⲉ ⲙⲙⲟⲕ ϫⲟϫⲟⲩ ϩⲓⲧⲟⲩ ⲉⲃⲟⲗ ϩⲁⲣⲟⲕ ⲛⲁⲛⲉⲥ ⲅⲁⲣ ⲛⲁⲕ ⲛⲧⲉⲕⲓ ⲉϧⲟⲩⲛ ⲉⲡⲓⲱⲛϧ ⲉⲕⲟⲓ ⲛϭⲁⲗⲉ ⲓⲉ ⲉⲕⲟⲓ ⲛ**ϫⲁϭⲉ** ⲉϩⲟⲧⲉ ⲉⲟⲩⲟⲛ ϫⲓϫ ⲥⲛⲟⲩϯ ⲉⲣⲟⲕ ⲓⲉ ϭⲁⲗⲟϫ ⲥⲛⲟⲩϯ ⲛⲥⲉϩⲓⲧⲕ ⲉⲡⲓⲭⲣⲱⲙ ⲛⲉⲛⲉϩ .",
+      "english": "If your hand or your foot causes you to stumble, cut it off, and cast it from you. It is better for you to enter into life maimed or crippled, rather than having two hands or two feet to be cast into the eternal fire.",
+      "source": "01_Matthew_18",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲟⲧⲉ",
+        1,
+        12.11
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ϫⲓϫ",
+        1,
+        9.513
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.8
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲕ",
+        1,
+        7.128
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲁϭⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6825,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7535",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted"
+    },
+    {
+      "target": "C7537",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left hand"
+    },
+    {
+      "target": "C7538",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left"
+    },
+    {
+      "target": "C7536",
+      "label": "ⲟⲓ ⲛϫⲁϭⲉ",
+      "pos": "VSTAT",
+      "gloss": "be lame"
+    },
+    {
+      "target": "C7539",
+      "label": "ⲣϭⲁϫⲏ",
+      "pos": "V",
+      "gloss": "be small, weak(?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "855234",
+    "egy_lemma": "gṯ",
+    "english": "cripple",
+    "german": "Krüppel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/855234"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "C5984",
+  "forms": [
+    {
+      "id": "CF13973",
+      "orth": "ϩⲛⲟⲩϣⲡⲉ ⲛϣⲱⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS6668",
+      "bibliography": "CD 576b; CED 248; KoptHWb 322; DELC 268b; ChLCS 80a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5982",
+      "label": "ϣⲱⲡ",
+      "pos": "N",
+      "gloss": "moment, instant"
+    },
+    {
+      "target": "C5983",
+      "label": "ϩⲛⲟⲩϣⲱⲡ",
+      "pos": "ADV",
+      "gloss": "suddenly"
+    }
+  ]
+}

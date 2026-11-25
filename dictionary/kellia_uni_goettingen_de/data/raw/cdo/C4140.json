@@ -1,0 +1,52 @@
+{
+  "id": "C4140",
+  "forms": [
+    {
+      "id": "CF10225",
+      "orth": "ⲙⲁⲓⲧⲁⲃⲧⲃ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4700",
+      "bibliography": "CD 402a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4141",
+      "label": "ⲧⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "mixed(?) food"
+    },
+    {
+      "target": "C4138",
+      "label": "ⲧⲟⲃⲧⲃ",
+      "pos": "V",
+      "gloss": "form, compound, invent"
+    },
+    {
+      "target": "C4139",
+      "label": "ⲧⲟⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "ornament"
+    }
+  ]
+}

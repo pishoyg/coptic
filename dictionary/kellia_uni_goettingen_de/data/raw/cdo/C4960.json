@@ -1,0 +1,170 @@
+{
+  "id": "C4960",
+  "forms": [
+    {
+      "id": "CF11885",
+      "orth": "ϯⲟⲩⲟⲉⲓⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5585",
+      "bibliography": "CD 481a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        10.087
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϯⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϯⲟⲩⲟⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁ_1_post_ϯⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲥⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲟⲩⲟⲉⲓⲛ",
+          "ⲧⲉ_1_pre_ϯⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϯⲟⲩⲟⲉⲓⲛ",
+          "ϯⲟⲩⲟⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ϯⲟⲩⲟⲉⲓⲛ_0_node",
+          "ⲥⲁ_1_post_ϯⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲥⲁ_1_post_ϯⲟⲩⲟⲉⲓⲛ",
+          "ϩⲱⲃ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲥⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4962",
+      "label": "ϫⲓⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "take/get light"
+    },
+    {
+      "target": "C4956",
+      "label": "ⲁⲧⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "without light"
+    },
+    {
+      "target": "C4955",
+      "label": "ⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "light"
+    },
+    {
+      "target": "C4959",
+      "label": "ⲣⲉϥⲣⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "one who lights, illuminator"
+    },
+    {
+      "target": "C4957",
+      "label": "ⲣⲙⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "man of light, dweller of light"
+    },
+    {
+      "target": "C4958",
+      "label": "ⲣⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "make/be light, shine"
+    },
+    {
+      "target": "C4961",
+      "label": "ⲧⲣⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "shine"
+    }
+  ]
+}

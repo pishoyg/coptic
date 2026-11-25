@@ -1,0 +1,170 @@
+{
+  "id": "C8371",
+  "forms": [
+    {
+      "id": "CF19464",
+      "orth": "ⲁⲡⲟⲕⲣⲓⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19465",
+      "orth": "ⲁⲡⲟⲕⲣⲓⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5325,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19466",
+      "orth": "ⲁⲡⲟⲧⲣⲓⲧⲏⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9622",
+      "bibliography": "DDGLC",
+      "cu_ID": "2593"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲁⲣⲉⲓⲱⲁⲛⲛⲏⲥ ⲛϧⲏⲧⲟⲩ ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲧⲉⲡϣⲁϯ ⲫⲁⲓ ⲉⲧⲉⲛⲁϥⲟⲓ ⲛ**ⲁⲡⲟⲕⲣⲓⲧⲏⲥ** ⲉϯⲉⲡⲓⲥⲕⲟⲡⲏ ⲛⲧⲉϯⲁⲛⲟⲩ ⲛⲭⲱⲣⲁ ⲉⲟⲩⲣⲱⲙⲓ ⲡⲉ ⲉϥϫⲏⲕ ⲉⲃⲟⲗ ϧⲉⲛϯⲥⲟⲫⲓⲁ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲉⲙⲛⲓⲣⲱⲙⲓ ⲛⲉⲙⲅⲣⲏⲅⲟⲣⲓⲟⲥ ⲛⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲕⲁⲓⲥ ⲫⲁⲓ ⲉⲛⲁϥⲟⲓ ⲛⲁⲡⲟⲕⲣⲓⲧⲏⲥ ϩⲱϥ ⲉⲛⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲧⲉϯⲕⲁⲧⲱ ⲛⲭⲱⲣⲁ ⲛⲉⲙⲛⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "among them were John, the bishop of Pschati, who was patrician over the episcopate of the high country, a man consummate in the wisdom of God and men, and Gregory, the bishop of Cais, who was also patrician over the bishops of the lower country, with all the bishops.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲏ",
+        1,
+        14.447
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        11.583
+      ],
+      [
+        "ϩⲱ",
+        1,
+        9.486
+      ],
+      [
+        "ϥ",
+        3,
+        8.179
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.954
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ϯ",
+        1,
+        5.29
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲡⲟⲕⲣⲓⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲟⲕⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ϯ_5_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲡⲟⲕⲣⲓⲧⲏⲥ_0_node",
+          "ⲉ_1_post_ⲁⲡⲟⲕⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲟⲕⲣⲓⲧⲏⲥ",
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_3_post_ϯ",
+          "ⲛⲧⲉ_4_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          "ϯ_5_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4824,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "6286",
+    "grl_lemma": "ἀποκριτής",
+    "grl_meaning": "messenger; legate (?)",
+    "grl_pos": "noun",
+    "grl_ref": "cf. LSJ 204a, s.v. ἁποκρισιάριος"
+  }
+}

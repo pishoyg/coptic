@@ -1,0 +1,86 @@
+{
+  "id": "C4214",
+  "forms": [
+    {
+      "id": "CF10375",
+      "orth": "ⲙⲁ ⲛⲧⲱⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4779",
+      "bibliography": "CD 404b; KoptHWb 227; ChLCS 57b"
+    },
+    {
+      "id": "CS4780",
+      "bibliography": "CD 404b; KoptHWb 227; ChLCS 57b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4219",
+      "label": "ϯⲕ",
+      "pos": "N",
+      "gloss": "sparkle"
+    },
+    {
+      "target": "C4212",
+      "label": "ⲑⲱⲕ",
+      "pos": "N",
+      "gloss": "fuel"
+    },
+    {
+      "target": "C4215",
+      "label": "ⲓⲛⲧⲱⲕ",
+      "pos": "N",
+      "gloss": "oven"
+    },
+    {
+      "target": "C4216",
+      "label": "ⲣⲉϥⲧⲱⲕ",
+      "pos": "N",
+      "gloss": "stoker"
+    },
+    {
+      "target": "C4217",
+      "label": "ⲣⲉϥⲧⲱⲕ",
+      "pos": "N",
+      "gloss": "stoker"
+    },
+    {
+      "target": "C4218",
+      "label": "ⲧⲁⲕⲉ",
+      "pos": "N",
+      "gloss": "unknown meaning (related to ⲧⲱⲕ, \"bake\")"
+    },
+    {
+      "target": "C4211",
+      "label": "ⲧⲱⲕ",
+      "pos": "V",
+      "gloss": "kindle, stoke, heat; bake"
+    },
+    {
+      "target": "C4213",
+      "label": "ⲧⲱⲕ",
+      "pos": "N",
+      "gloss": "baking"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "id": "C6327",
+  "forms": [
+    {
+      "id": "CF14665",
+      "orth": "ϧⲱϧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4669,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7017",
+      "bibliography": "CD 631b; KoptHWb 407"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲓϯ ⲉⲃⲟⲗ ⲛϫⲉⲡⲁⲕⲁⲥ ϩⲓⲧⲉⲛϩⲁⲛϥⲉⲛⲧ ⲉⲩϩⲱⲟⲩ ⲭ ⲟⲩⲟϩ ⲛⲁⲙⲟⲩⲃⲱⲛ ⲥⲉⲑⲣⲟ ⲙⲡⲓⲕⲁϩⲓ ⲗⲱⲕ ⲉⲓ**ϧⲱϧ** ⲉⲛⲁⲉⲣϧⲱⲧ .",
+      "english": "And my body is covered with loathsome worms; and I waste away, scraping off clods of dust from my eruption.",
+      "source": "18_Iob_07",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϭⲓ ⲛⲟⲩⲃⲉⲗϫ ⲁϥ**ϧⲱϧ** ⲙⲡⲓⲙⲱⲟⲩⲃⲱⲛ ⲟⲩⲟϩ ⲁϥϩⲉⲙⲥⲓ ϩⲓϫⲉⲛⲟⲩⲕⲟⲡⲣⲓⲁ ⲥⲁⲃⲟⲗ ⲛϯⲃⲁⲕⲓ .",
+      "english": "And he took a potsherd to scrape away the discharge, and sat upon a dung-heap outside the city.",
+      "source": "18_Iob_02",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉϧⲁϧ ⲥⲁϧⲟⲩⲛ ⲙⲡⲓⲏⲓ ⲉϥⲕⲱϯ ⲟⲩⲟϩ ⲉⲩⲉϫⲉϣ ⲡⲓⲣⲏⲓⲥⲓ ⲉⲃⲟⲗ ⲉⲧⲁⲩ**ϧⲁϧ**ϥ ⲥⲁⲃⲟⲗ ⲛϯⲃⲁⲕⲓ ⲉⲩⲙⲁ ⲉϥϭⲁϧⲉⲙ",
+      "english": "And they shall scrape the house within round about, and shall pour out the dust scraped off outside the city into an unclean place.",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲱⲟⲩⲃⲱⲛ",
+        1,
+        16.888
+      ],
+      [
+        "ⲗⲱⲕ",
+        1,
+        15.888
+      ],
+      [
+        "ⲉⲣϧⲱⲧ",
+        1,
+        13.566
+      ],
+      [
+        "ⲃⲉⲗϫ",
+        1,
+        12.187
+      ],
+      [
+        "ⲣⲉϥϯⲥⲃⲱ",
+        1,
+        10.244
+      ],
+      [
+        "ⲙⲁϣϫ",
+        1,
+        9.356
+      ],
+      [
+        "ⲉ",
+        3,
+        6.965
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        6.096
+      ],
+      [
+        ".",
+        2,
+        5.809
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        5.616
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        4.506
+      ],
+      [
+        "ⲓ",
+        1,
+        3.768
+      ],
+      [
+        "ⲩ",
+        1,
+        3.313
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.147
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        2.963
+      ],
+      [
+        "ⲙ",
+        1,
+        2.776
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        2.273
+      ],
+      [
+        "ⲁ",
+        1,
+        2.182
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        1.947
+      ],
+      [
+        "ⲛ",
+        1,
+        1.783
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϧⲱϧ",
+          1
+        ],
+        [
+          "ϧⲱϧ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁϣϫ",
+          1
+        ],
+        [
+          "ⲙⲁϣϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϧⲱϧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲱⲟⲩⲃⲱⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲉⲣϧⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲣϧⲱⲧ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϧⲱϧ",
+          "ϧⲱϧ_0_node",
+          1
+        ],
+        [
+          "ϧⲱϧ_0_node",
+          "ⲛ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϧⲱϧ",
+          "ⲛⲟⲩ_3_post_ⲙⲁϣϫ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁϣϫ",
+          "ⲙⲁϣϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϧⲱϧ",
+          "ϥ_1_pre_ϧⲱϧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϧⲱϧ",
+          "ϧⲱϧ_0_node",
+          1
+        ],
+        [
+          "ϧⲱϧ_0_node",
+          "ⲙ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϧⲱϧ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲙⲱⲟⲩⲃⲱⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϧⲱϧ",
+          "ϧⲱϧ_0_node",
+          1
+        ],
+        [
+          "ϧⲱϧ_0_node",
+          "ⲉ_1_post_ϧⲱϧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϧⲱϧ",
+          "ⲛⲁ_3_post_ⲉⲣϧⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲉⲣϧⲱⲧ",
+          "ⲉⲣϧⲱⲧ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.08,
+      "rank": 2625,
+      "count": 7
+    }
+  },
+  "etym": {
+    "egy_num": "114170",
+    "egy_lemma": "ḫꜣḫ",
+    "english": "to come in haste; to be fast",
+    "german": "schnell sein; schnell gehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/114170"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "C9485",
+  "forms": [
+    {
+      "id": "CF24101",
+      "orth": "ⲕⲟⲗⲗⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24105",
+      "orth": "ⲕⲟⲗⲗⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24102",
+      "orth": "ⲕⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2977,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF24103",
+      "orth": "ⲕⲟⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24104",
+      "orth": "ⲕ︤ⲟ︥ⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12052",
+      "bibliography": "DDGLC",
+      "cu_ID": "8710"
+    },
+    {
+      "id": "CS12053",
+      "bibliography": "DDGLC",
+      "cu_ID": "9125"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1164",
+    "grl_lemma": "κολλύριον",
+    "grl_meaning": "pessary, eye-drops, eye-salve",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 972b; Preisigke 1:819"
+  }
+}

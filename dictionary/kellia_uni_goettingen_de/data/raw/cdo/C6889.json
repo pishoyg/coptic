@@ -1,0 +1,652 @@
+{
+  "id": "C6889",
+  "forms": [
+    {
+      "id": "CF15827",
+      "orth": "ϩⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1637,
+        "count": 43
+      }
+    },
+    {
+      "orth": "ϩⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.15,
+        "rank": 657,
+        "count": 181
+      }
+    },
+    {
+      "orth": "ϩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.37,
+        "rank": 308,
+        "count": 531
+      }
+    },
+    {
+      "orth": "ϩⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5500,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϩⲁⲧⲉ",
+      "dialect": "F",
+      "id": "3288.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7606",
+      "bibliography": "CD 718b; KoptHWb 396; ChLCS 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ ⲁⲛⲉⲓ ⲉⲩⲧⲟⲟⲩ ⲛϫⲁⲓⲉ · ⲉϥⲙⲡ**ϩⲟⲧ** ⲉⲃⲟⲗ ⲛⲟⲩϯⲙⲉ ϫⲉⲧⲁϩⲣⲟⲩϫ · ⲁⲛϩⲉ ⲉϩⲉⲛϣⲕⲟⲗ ⲙⲡⲉⲧⲣⲁ · ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ · ⲁⲛⲧⲁⲙⲓⲟ ⲇⲉ · ⲛϩⲉⲛⲕⲟⲩⲓ ⲙⲙⲁⲛϣⲱⲡⲉ · ⲁⲛⲟⲩⲱϩ ⲛϩⲏⲧⲟⲩ ⲁⲩⲱ ⲛⲉⲛⲡⲟⲗⲩⲧⲉⲩⲉ · ϩⲛϩⲉⲛⲡⲟⲗⲓⲧⲉⲓⲁ · ⲉⲩⲟϣ",
+      "english": "After all these things, we arrived at a deserted mountain opposite a village called Tahruj, and found rocky ravines there. We made small habitations, and dwelled in them, and we had conducted ourselves with great conduct.",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲩϭⲓⲛⲕⲱⲧⲉ ⲇⲉ ⲏ ⲧⲉⲩϭⲓⲛϭⲱϣⲧ ⲁⲓⲡⲟⲟⲛⲉⲥ ⲉⲕⲉⲧⲁⲝⲓⲥ · ⲁⲩⲱ ⲁⲓⲧⲣⲉⲩⲣⲕⲉⲥⲟⲟⲩ ⲛⲉⲃⲟⲧ ⲉⲩϭⲱϣⲧ ⲉⲛⲉϩⲃⲏⲩⲉ ⲛⲛⲉⲩⲁⲡⲟⲧⲉⲗⲉⲥⲙⲁ ϩⲛⲛⲉϥⲧⲟⲟⲩ ⲛⲕⲟⲟϩ ⲛⲟⲩⲛⲁⲙ · ⲁⲩⲱ ϩⲛⲛⲉⲩϣⲟⲙⲧ ⲛⲕⲟⲟϩ · ⲁⲩⲱ ϩⲛⲛⲉⲧⲙⲡⲉⲩ**ϩⲟⲧ** ⲉⲃⲟⲗ · ⲁⲩⲱ ϩⲙⲡⲉⲩϣⲙⲟⲩⲛ ⲛⲥⲭⲏⲙⲁ · ⲁⲩⲱ ⲁⲓⲧⲣⲉⲩⲣϩⲃⲁ ϩⲛⲟⲩⲛⲟϭ ⲛϩⲃⲁ · ⲁⲩⲱ ⲁⲓⲧⲣⲉⲩ ⲡⲗⲁⲛⲁ ϩⲛⲟⲩ ⲡⲗⲁⲛⲏ ⲛϭⲓⲛⲁⲣⲭⲱⲛ ⲛⲁⲓⲱⲛ . ⲁⲩⲱ ⲛⲁⲣⲭⲱⲛ ⲧⲏⲣⲟⲩ ⲛⲧϩⲓⲙⲁⲣⲙⲉⲛⲏ ⲙⲛⲛⲁⲧⲉⲥⲫⲁⲓⲣⲁ · ⲁⲩⲱ ⲁⲓϣⲧⲣⲧⲱⲣⲟⲩ ⲉⲙⲁⲧⲉ . ⲁⲩⲱ ⲙⲡⲟⲩⲉϣϭⲙϭⲟⲙ · ϭⲉ ϫⲓⲛⲙⲡⲉⲓⲛⲁⲩ ⲉⲕⲟⲧⲟⲩ ⲉⲡⲥⲟⲣⲙ ⲛⲧⲉⲩϩⲩⲗⲏ · ⲉⲧⲣⲉⲩⲟⲙⲉⲕϥ · ϫⲉⲉⲣⲉⲛⲉⲩⲧⲟⲡⲟⲥ ⲱⲥⲕ ⲉⲩⲙⲏⲛ ⲉⲃⲟⲗ . ⲁⲩⲱ ϫⲉⲉⲩⲉⲣⲟⲩⲛⲟϭ ⲛⲟⲩⲟⲉⲓϣ ⲉⲩⲟ ⲛⲣⲣⲟ · ⲁⲗⲗⲁ ⲛⲧⲉⲣⲓϥⲓ ⲛⲟⲩ ⲟⲩⲱⲛ ⲛϣⲟⲙⲧ ⲛⲧⲉⲛⲉⲩϭⲟⲙ ⲁⲓⲡⲱⲱⲛⲉ ⲛⲛⲉⲩⲥⲫⲁⲓⲣⲁ ⲉⲧⲣⲉⲩⲣⲟⲩⲟⲩⲟⲉⲓϣ ⲉⲩϭⲱϣⲧ ⲉϩⲃⲟⲩⲣ · ⲁⲩⲱ ⲛⲥⲉⲣⲕⲉⲟⲩⲟⲉⲓϣ ⲉⲩϭⲱϣⲧ ⲉⲟⲩⲛⲁⲙ · ⲁⲓⲡⲱⲱⲛⲉ ⲛⲧⲉⲩϭⲓⲛⲙⲟⲟϣⲉ ⲧⲏⲣⲥ ⲙⲛⲡⲉⲩⲇⲣⲟⲙⲟⲥ ⲧⲏⲣϥ ·",
+      "english": "“But their manner of turning, or facing, I changed to another order, and made them other six months face towards the works of their influences in the squares on the right and in their triangles and in those in their aspect and in their octagons. And I made them to be confounded in great confusion and deluded in great delusion |--the rulers of the æons and all the rulers of the Fate and those of the sphere; and I set them in great agitation, and thence on they were no longer able to turn towards the refuse of their matter to devour it, in order that their regions may continue to delay and they [themselves] may spend a long time as rulers. But when I had taken away a third of their power, I changed their spheres, so that they spend a time facing to the left and another time facing to the right. I have changed their whole path and their whole course,”",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ · ⲁⲛⲧⲱⲟⲩⲛ ⲁⲛⲙⲟⲟϣⲉ ⲉⲃⲟⲗ · ⲉⲧⲣⲉⲛⲉⲓ ⲉⲡⲧⲟⲟⲩ ⲛϯⲧⲕⲟⲟϩ · ⲡⲧⲟⲟⲩ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ · ϩⲱⲛ ⲙⲙⲟϥ ⲛⲁⲛ · ⲡⲉⲛⲧⲁϥⲥⲃⲧⲱⲧϥ ⲙⲡⲁⲉⲓⲱⲧ ⲁⲡⲟⲗⲗⲱ ⲁⲩⲱ ⲁⲛⲉⲓ ⲉϩⲣⲁⲓ ⲉⲩⲧⲟⲟⲩ ⲉϥⲙⲡ**ϩⲟⲧ** ⲉⲃⲟⲗ · ⲛⲟⲩϯⲙⲉ · ϫⲉⲧⲁⲡⲁⲣⲟⲟⲩⲉ · ⲁⲛϭⲟⲓⲗⲉ · ⲉϩⲉⲛⲥⲛⲏⲩ ⲛⲣⲉϥϣⲙϣⲉⲛⲟⲩⲧⲉ · ⲁⲩⲉⲓⲣⲉ ⲛⲙⲙⲁⲛ ⲛϩⲉⲛⲛⲟϭ ⲙⲡⲉⲧⲛⲁⲛⲟⲩϥ · ⲁⲛⲛⲕⲟⲧⲕ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ϣⲁϩⲧⲟⲟⲩⲉ ·",
+      "english": "And after all these things, we arose and journeyed out to go to the monastery of Tetkooh, the monastery God appointed to us, which he prepared for my father Apollo. And we went up a mountain opposite a village called Taparowe, and lodged with brothers who serve God, and they did great acts of good with us, and we rested there until morning.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉ",
+        14,
+        13.854
+      ],
+      [
+        "ⲙⲉⲧ",
+        1,
+        12.41
+      ],
+      [
+        "ⲙⲉⲧⲕⲟⲩϫⲓ",
+        1,
+        12.355
+      ],
+      [
+        "ⲛ",
+        6,
+        9.761
+      ],
+      [
+        "ϭⲓⲛϫⲟⲛⲥ",
+        1,
+        9.735
+      ],
+      [
+        "ϥ",
+        6,
+        9.594
+      ],
+      [
+        "ⲉϥⲉ",
+        2,
+        8.635
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        8.594
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        8.495
+      ],
+      [
+        "ⲛⲧⲟⲧ",
+        1,
+        8.031
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        7.229
+      ],
+      [
+        "ϩⲁ",
+        1,
+        6.95
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.364
+      ],
+      [
+        "ⲫⲏ",
+        1,
+        5.773
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        1,
+        5.164
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        5.049
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        4.009
+      ],
+      [
+        "ⲫ",
+        1,
+        3.979
+      ],
+      [
+        "ⲥ",
+        1,
+        3.843
+      ],
+      [
+        ".",
+        1,
+        3.031
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        19.927
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        50,
+        17.971
+      ],
+      [
+        "ⲛ",
+        75,
+        17.069
+      ],
+      [
+        "ⲧⲁϫⲣⲟⲙⲡ",
+        1,
+        15.172
+      ],
+      [
+        "ϫⲟⲟⲩⲥⲉ",
+        1,
+        15.172
+      ],
+      [
+        "ⲙ",
+        32,
+        14.925
+      ],
+      [
+        "ϩⲓⲗⲁⲥⲧⲏⲣⲓⲟⲛ",
+        2,
+        14.471
+      ],
+      [
+        "ⲡ",
+        32,
+        14.071
+      ],
+      [
+        "ⲧ",
+        17,
+        12.907
+      ],
+      [
+        "(b)",
+        1,
+        12.587
+      ],
+      [
+        "ⲉ",
+        20,
+        12.357
+      ],
+      [
+        "ⲁⲩⲱ",
+        16,
+        12.321
+      ],
+      [
+        "ⲙⲛⲧⲥⲁⲃⲉ",
+        2,
+        12.022
+      ],
+      [
+        "ⲟⲩⲣⲱ",
+        1,
+        12.002
+      ],
+      [
+        "ⲟⲕⲙ",
+        1,
+        10.779
+      ],
+      [
+        "ⲁⲛⲁⲓ",
+        1,
+        10.648
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        10.549
+      ],
+      [
+        "ⲟ",
+        4,
+        10.379
+      ],
+      [
+        "ϥ",
+        13,
+        10.197
+      ],
+      [
+        "ⲕⲱⲧ",
+        2,
+        9.91
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϩⲟⲧ",
+          6
+        ],
+        [
+          "ϩⲟⲧ_0_node",
+          6
+        ],
+        [
+          "ϩⲁ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲧ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲧⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          3
+        ],
+        [
+          "ϩⲟⲧ_0_node",
+          "ϩⲁ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϩⲟⲧ",
+          "ⲫ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ϩⲁ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          "ⲉ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲧ_0_node",
+          "ⲛⲧⲟⲧ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲧ_1_post_ϩⲟⲧ",
+          "ⲥ_2_post_ⲛⲧⲟⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲧ_0_node",
+          31
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲟⲧ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲟⲧ",
+          17
+        ],
+        [
+          "ϥ_1_pre_ϩⲟⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧ",
+          9
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϯⲙⲉ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲧ",
+          4
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲟⲧ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϩⲓⲗⲁⲥⲧⲏⲣⲓⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲗⲗⲟⲫⲩⲗⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲗⲓⲃⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲥⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ϩⲟⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϩⲟⲧ",
+          16
+        ],
+        [
+          "ϥ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲟⲧ",
+          "ⲛ_1_post_ϩⲟⲧ",
+          9
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϯⲙⲉ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲧ",
+          "ⲛⲉ_1_pre_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲟⲧ",
+          "ⲧⲙ_1_pre_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲟⲧ",
+          "ⲡⲉⲩ_1_pre_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲟⲧ",
+          "ⲙ_1_post_ϩⲟⲧ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲓⲗⲁⲥⲧⲏⲣⲓⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧ",
+          "ⲛⲉϥ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲟⲧ",
+          "ⲡ_1_pre_ϩⲟⲧ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧ",
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲗⲗⲟⲫⲩⲗⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲑⲗⲓⲃⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲧ_0_node",
+          "ⲛⲁ_1_post_ϩⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϩⲟⲧ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲟⲧ",
+          "ϩⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲣⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.27,
+      "rank": 1429,
+      "count": 43
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "99620",
+    "egy_lemma": "hd",
+    "demo_num": "d3756",
+    "demo_lemma": "hjt",
+    "english": "assault",
+    "german": "Angriff",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/99620",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3756"
+  }
+}

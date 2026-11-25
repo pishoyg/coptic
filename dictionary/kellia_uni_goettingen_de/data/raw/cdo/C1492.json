@@ -1,0 +1,118 @@
+{
+  "id": "C1492",
+  "forms": [
+    {
+      "id": "CF4412",
+      "orth": "ⲕⲁϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16766,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲭⲁϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1586,
+        "count": 23
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1739",
+      "bibliography": "CD 131a; KoptHWb 73; ChLCS 20a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲡⲉϥ**ⲕⲁϥ** ϯⲟⲩⲱ ⲉⲃⲟⲗ ϩⲛⲟⲩⲁϭⲃⲉⲥ ⲁⲩⲱ ⲥⲉⲛⲁϣⲁⲁⲧϥ ⲛⲧϩⲉ ⲛⲟⲩϭⲱⲃⲉ ⲛⲃⲣⲣⲉ",
+      "english": "it will blossom from the scent of water, and will produce a crop, as one newly planted.",
+      "source": "Job 14",
+      "urn": "urn:cts:copticLit:ot.job.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲟⲩⲱ",
+        1,
+        13.576
+      ],
+      [
+        "ⲡⲉⲧⲣⲁ",
+        1,
+        13.369
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁϥ",
+          1
+        ],
+        [
+          "ⲕⲁϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁϥ",
+          "ⲕⲁϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16370,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "164120",
+    "egy_lemma": "kfꜣ",
+    "english": "[a part of a plant (med.)]",
+    "german": "Wurzel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164120"
+  }
+}

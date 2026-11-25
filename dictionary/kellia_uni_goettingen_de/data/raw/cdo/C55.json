@@ -1,0 +1,278 @@
+{
+  "id": "C55",
+  "forms": [
+    {
+      "id": "CF202",
+      "orth": "ⲁⲗⲟⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4378,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF203",
+      "orth": "ⲉⲗⲁⲕ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "VIMP",
+    "subc": "Imperativ",
+    "note": "m.sg.",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS64",
+      "bibliography": "KoptHWb 4; DELC 8"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉ**ⲁⲗⲟⲕ** ⲉⲕϫⲱ ⲛⲛⲉⲓϣⲁϫⲉ ⲙⲙⲛⲧⲥⲟϭ ·",
+      "english": "Cease thou to utter such words of folly as these,",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲁⲗⲟⲕ** ⲉⲕⲟ ⲛϩⲁϩ ⲛϣⲁϫⲉ ·",
+      "english": "Cease thy say; thou art always talking!",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉ**ⲁⲗⲟⲕ** ϩⲁⲣⲟϥ · ϣⲁⲛⲧⲉϥϫⲓ ⲉⲡⲉⲓⲧⲏⲙⲁ ⲕⲁⲗⲱⲥ · ⲙⲙⲟⲛ ⲟⲩⲁⲧⲥⲃⲱ ⲡⲉ ·",
+      "english": "And he said unto me, 'Keep away from him until he maketh the petition in a proper manner, for he is not a man without education.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯϩⲓⲥⲉ",
+        2,
+        16.74
+      ],
+      [
+        "ⲛⲁ",
+        7,
+        12.11
+      ],
+      [
+        "ϫⲉ",
+        6,
+        11.901
+      ],
+      [
+        "ⲕ",
+        4,
+        10.853
+      ],
+      [
+        "ⲃⲓⲕⲧⲱⲣ",
+        1,
+        10.527
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        10.094
+      ],
+      [
+        "ⲙⲟⲟⲩⲧ",
+        1,
+        9.513
+      ],
+      [
+        "ϥ",
+        5,
+        9.487
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        9.446
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        9.348
+      ],
+      [
+        "ⲉ",
+        4,
+        8.817
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.981
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.865
+      ],
+      [
+        "ⲟ",
+        1,
+        7.805
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ϫⲱ",
+        1,
+        6.405
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲕ_0_node",
+          4
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲟⲕ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϯϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϯϩⲓⲥⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϯϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲕ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲁⲗⲟⲕ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ϫⲓ_1_post_ⲁⲗⲟⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲟⲕ_0_node",
+          "ⲉ_1_post_ⲁⲗⲟⲕ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲟⲕ",
+          "ⲕ_3_post_ϯϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϯϩⲓⲥⲉ",
+          "ϯϩⲓⲥⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯϩⲓⲥⲉ_2_post_ⲉ",
+          "ⲛⲁ_3_post_ϯϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϯϩⲓⲥⲉ",
+          "ⲕ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲕ_0_node",
+          "ϩⲁⲣⲟ_1_post_ⲁⲗⲟⲕ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲁⲗⲟⲕ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲓ",
+          "ϥ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϫⲓ",
+          "ϫⲓ_1_post_ⲁⲗⲟⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5045,
+      "count": 4
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1547",
+      "type": "cf",
+      "label": "cease, stop"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C56",
+      "label": "ⲁⲗⲟⲕ",
+      "pos": "N",
+      "gloss": "corner, angle"
+    }
+  ]
+}

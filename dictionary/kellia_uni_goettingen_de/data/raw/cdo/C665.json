@@ -1,0 +1,80 @@
+{
+  "id": "C665",
+  "forms": [
+    {
+      "id": "CF2491",
+      "orth": "ⲉⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2492",
+      "orth": "ⲉⲙⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2493",
+      "orth": "ⲉⲙⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2494",
+      "orth": "ⲁⲙⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1825,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF2495",
+      "orth": "ⲁⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3934,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS801",
+      "bibliography": "CD 55b; CED 35; KoptHWb 35; DELC 42; ChLCS 11a"
+    },
+    {
+      "id": "CS802",
+      "bibliography": "CD 55b; KoptHWb 35; DELC 42; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙⲏⲓⲛⲓ ⲛⲉⲙⲛⲓϣⲫⲏⲣⲓ ⲉⲧⲁϥⲁⲓⲧⲟⲩ ⲛⲉⲙⲏⲓ ⲛϫⲉⲫⲛⲟⲩϯ ⲉⲧϭⲟⲥⲓ ⲁⲥⲣⲁⲛⲏⲓ ⲙⲡⲁⲙⲑⲟ ⲉⲧ**ⲁⲙⲉ** ⲑⲏⲛⲟⲩ ⲉⲣⲱⲟⲩ .",
+      "english": "And king Baltasar was troubled, and his countenance changed upon him, and his nobles were troubled with him.",
+      "source": "27_Daniel_05",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲥⲙⲏ ⲛⲧⲉⲛⲏⲉⲧⲫⲏⲧ ⲛⲉⲙⲛⲏⲉⲧⲁⲩⲛⲟϩⲉⲙ ⲉⲃⲟⲗϧⲉⲛ ⲡⲕⲁϩⲓ ⲛⲧⲉⲃⲁⲃⲩⲗⲱⲛ ⲉⲧ**ⲁⲙⲉ** ⲥⲓⲱⲛ ⲉⲡⲓϭⲓⲙⲡϣⲓϣ ⲉⲃⲟⲗϩⲓⲧⲉⲛ ⲡϭⲥ ⲡⲉⲛⲛⲟⲩϯ .",
+      "english": "A voice of men fleeing and escaping from the land of Babylon, to declare to Sion the vengeance that comes from the Lord our God.",
+      "source": "24_Ieremias_27",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲛⲁⲥ ϫⲉⲙⲁϣⲉ ⲛⲉⲙⲟⲩϯ ⲉⲡⲉϩⲁⲓ ⲟⲩⲟϩ **ⲁⲙⲏ** ⲉⲙⲛⲁⲓ .",
+      "english": "Jesus said to her, 'Go, call your husband, and come here.'",
+      "source": "04_John_04",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

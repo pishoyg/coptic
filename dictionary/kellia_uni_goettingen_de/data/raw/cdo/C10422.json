@@ -1,0 +1,346 @@
+{
+  "id": "C10422",
+  "forms": [
+    {
+      "id": "CF27887",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27894",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.83,
+        "rank": 827,
+        "count": 131
+      }
+    },
+    {
+      "id": "CF27888",
+      "orth": "ⲍⲁⲇⲁⲛⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27893",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27891",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 974,
+        "count": 52
+      }
+    },
+    {
+      "id": "CF27892",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27890",
+      "orth": "ⲥⲁⲣⲇⲁⲛⲁⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27889",
+      "orth": "ⲥⲁⲇⲁⲛⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27895",
+      "orth": "ⲥⲁⲧⲁⲛⲁⲥ",
+      "dialect": "W"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14078",
+      "bibliography": "DDGLC",
+      "cu_ID": "242"
+    },
+    {
+      "id": "CS14079",
+      "bibliography": "DDGLC",
+      "cu_ID": "15445"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲉⲣⲱⲟⲩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϧⲉⲛϩⲁⲛⲡⲁⲣⲁⲃⲟⲗⲏ ϫⲉⲡⲱⲥ ⲟⲩⲟⲛ ϣϫⲟⲙ ⲛⲧⲉⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ϩⲓⲡⲥⲁⲧⲁⲛⲁⲥ ⲉⲃⲟⲗ",
+      "english": "He summoned them, and said to them in parables, 'How can Satan cast out Satan?",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ·",
+      "english": "[continued from YA550] Satan.",
+      "source": "Abraham Our Father YA 551-54",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:42-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉ ⲛⲏ ⲉⲧϩⲓⲥⲕⲉⲛⲡⲓⲙⲱⲓⲧ ⲡⲓⲙⲁ ⲉⲧⲁⲩⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲟⲩⲥⲱⲧⲉⲙ ⲥⲁⲧⲟⲧϥ ⲇⲉ ϣⲁϥⲓ ⲛϫⲉⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ⲟⲩⲟϩ ⲛⲧⲉϥⲱⲗⲓ ⲙⲡⲓⲥⲁϫⲓ ⲉⲧⲁⲩⲥⲁⲧϥ ⲛϧⲏⲧⲟⲩ",
+      "english": "The ones by the road are the ones where the word is sown; and when they have heard, immediately Satan comes, and takes away the word which has been sown in them.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲟⲩϣⲡⲏⲣⲉ ⲁⲛ ⲧⲉ ⲉⲩϣⲁⲛϯⲁⲁⲥ ⲉϩⲟⲩⲛ ⲉϩⲣⲏⲧⲛ ⲏ ⲉⲩϣⲁⲛⲛⲉϫⲡⲁϭⲥⲉ ⲉϩⲟⲩⲛ ϩⲙⲡⲉⲧⲛϩⲟ ⲏ ⲉⲩϣⲁⲛϯⲕⲗⲯ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲉⲧⲛⲁⲡⲉ ⲛϭⲓⲛⲉⲧⲙⲙⲁⲩ ⲛⲧϩⲉ ⲙⲡⲁⲅⲅⲉⲗⲟⲥ ⲙⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ ϫⲉⲧⲛϩⲕⲁⲉⲓⲧ ⲧⲛⲟⲃⲉ ⲧⲛⲕⲏⲕⲁϩⲏⲩ ⲥⲉϯⲕⲗⲯ ⲉϫⲱⲛ ⲧⲛϣⲧⲣⲧⲱⲣ ⲧⲛϩⲟⲥⲉ · ⲉⲩⲡⲏⲧ ⲛⲥⲱⲛ ⲧⲛⲁⲛⲉⲭⲉ ⲙⲙⲟⲟⲩ · ⲉⲩϫⲓⲟⲩⲁ ⲉⲣⲟⲛ ⲧⲛⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲟⲩ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲉⲧⲁϥⲫⲟⲛϩϥ ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁϥⲉⲣⲉⲡⲓⲧⲓⲙⲁⲛ ⲙⲡⲉⲧⲣⲟⲥ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉⲙⲁϣⲉ ⲛⲁⲕ ⲥⲁⲫⲁϩⲟⲩ ⲙⲙⲟⲓ ⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ϫⲉⲭⲙⲉⲩⲓ ⲁⲛ ⲉⲛⲁⲫⲛⲟⲩϯ ⲁⲗⲗⲁ ⲉⲛⲁⲛⲓⲣⲱⲙⲓ .",
+      "english": "But he, turning around, and seeing his disciples, rebuked Peter, and said, 'Get behind me, Satan! For you have in mind not the things of God, but the things of men.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲛⲛⲉⲛϣⲱⲡⲉ ⲉⲛⲏⲡ ⲉⲡ**ⲥⲁⲧⲁⲛⲁⲥ** ·",
+      "english": "so that we do not belong to Satan,",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡ",
+        66,
+        18.052
+      ],
+      [
+        "ⲥⲁⲧⲁⲛⲁⲥ",
+        6,
+        16.049
+      ],
+      [
+        "ⲛⲧⲉ",
+        27,
+        14.63
+      ],
+      [
+        "ⲙⲡⲉⲣⲉϥ",
+        1,
+        13.995
+      ],
+      [
+        "ⲟⲩⲉⲛⲉⲣⲅⲓⲁ",
+        1,
+        13.995
+      ],
+      [
+        "ϥ",
+        31,
+        13.586
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        26,
+        13.481
+      ],
+      [
+        "ϩⲓ",
+        9,
+        13.347
+      ],
+      [
+        "ⲉ",
+        24,
+        13.072
+      ],
+      [
+        "ⲓⲏ",
+        1,
+        12.995
+      ],
+      [
+        "ⲉⲣⲡⲓⲣⲁⲍⲓⲛ",
+        3,
+        12.795
+      ],
+      [
+        "ⲉⲧ",
+        15,
+        12.272
+      ],
+      [
+        "ⲓⲥϫⲉ",
+        5,
+        12.118
+      ],
+      [
+        "ⲙⲙⲟ",
+        11,
+        12.046
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        7,
+        11.578
+      ],
+      [
+        "ⲁ",
+        17,
+        11.551
+      ],
+      [
+        "ⲫⲁϩⲟⲩ",
+        3,
+        11.446
+      ],
+      [
+        "ⲉⲧⲟⲧ",
+        3,
+        11.266
+      ],
+      [
+        "ϯⲕⲉϩ",
+        1,
+        10.995
+      ],
+      [
+        "ⲙ",
+        13,
+        10.984
+      ]
+    ],
+    "S": [
+      [
+        "ⲡ",
+        161,
+        19.456
+      ],
+      [
+        "ϥ",
+        101,
+        17.463
+      ],
+      [
+        "ⲁⲣⲭⲉⲟⲥ",
+        2,
+        15.565
+      ],
+      [
+        "ⲛⲉϫ",
+        9,
+        15.52
+      ],
+      [
+        "ⲙ",
+        52,
+        15.419
+      ],
+      [
+        "ⲡⲉⲓⲣⲁⲍⲉ",
+        6,
+        14.538
+      ],
+      [
+        "ⲕⲁⲙⲁ",
+        3,
+        14.413
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        10,
+        14.224
+      ],
+      [
+        "ⲙⲛ",
+        26,
+        13.712
+      ],
+      [
+        "ⲁ",
+        37,
+        13.639
+      ],
+      [
+        "ⲥⲱⲛϩ..........",
+        1,
+        13.565
+      ],
+      [
+        "ⲓⲥⲙⲛⲧϣⲙⲏⲛⲉ",
+        1,
+        13.565
+      ],
+      [
+        "ϯⲁⲏⲥ",
+        1,
+        13.565
+      ],
+      [
+        "ⲉϩⲣⲁⲓⲉ",
+        1,
+        13.565
+      ],
+      [
+        "ⲟⲩϣϥ",
+        1,
+        13.565
+      ],
+      [
+        "ϩⲟⲩⲣⲱⲱⲛ",
+        1,
+        13.565
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥⲣϩⲁⲗ",
+        1,
+        13.565
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        26,
+        13.533
+      ],
+      [
+        "ⲉ",
+        37,
+        13.412
+      ],
+      [
+        "ⲛ",
+        45,
+        13.251
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.83,
+      "rank": 714,
+      "count": 131
+    },
+    "B": {
+      "rate": 0.61,
+      "rank": 860,
+      "count": 52
+    }
+  },
+  "etym": {
+    "grl_ID": "1940",
+    "grl_lemma": "σατανᾶς",
+    "grl_meaning": "Satan",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1585b"
+  }
+}

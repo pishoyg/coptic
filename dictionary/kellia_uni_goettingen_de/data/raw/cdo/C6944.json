@@ -1,0 +1,287 @@
+{
+  "id": "C6944",
+  "forms": [
+    {
+      "id": "CF32065",
+      "orth": "ϩⲱⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5364,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF32064",
+      "orth": "ϩⲱⲧⲉⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7664",
+      "bibliography": "CD 726b; KoptHWb 400; DELC 316b; ChLCS 97b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲓⲛⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲛⲧⲁⲩ**ϩⲟⲧⲣ**ⲟⲩ ⲙⲛⲛⲉⲩⲉⲣⲏⲩ ⲉⲩⲟ ⲛⲕⲟⲩⲓ ⲙⲡⲉⲥⲛⲁⲩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲡⲉⲟⲩⲟⲉⲓϣ ⲛⲧⲁⲩ**ϩⲟⲧⲣ**ⲟⲩ ⲙⲛⲛⲉⲩⲉⲣⲏⲩ · ⲉⲩⲟ ⲛⲕⲟⲩⲓ ⲙⲡⲉⲥⲛⲁⲩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲡⲉ ϩⲣⲁⲫⲁⲏⲗ ⲡⲉⲛⲧⲁⲡⲁⲇⲉⲥⲡⲟⲧⲏⲥ **ϩⲟⲧⲣⲉ**ϥ ⲙⲛⲫⲓⲗⲟⲑⲉⲟⲥ ⲁⲓⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉ ⲙⲙⲟϥ ⲙⲡⲉϥⲉⲓⲱⲧ ⲙⲛⲧⲉϥⲙⲁⲁⲩ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲙⲃⲉⲕⲉ",
+        1,
+        17.598
+      ],
+      [
+        "ⲅⲁⲙⲙⲟⲥ",
+        1,
+        15.598
+      ],
+      [
+        "ϭⲓⲛ",
+        1,
+        14.013
+      ],
+      [
+        "ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+        1,
+        13.791
+      ],
+      [
+        "ⲧⲏϭ",
+        1,
+        13.691
+      ],
+      [
+        "ⲙⲣⲣⲉ",
+        1,
+        10.703
+      ],
+      [
+        "ⲙ",
+        5,
+        9.317
+      ],
+      [
+        "ⲡ",
+        5,
+        8.463
+      ],
+      [
+        "ⲉ",
+        4,
+        7.817
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        7.175
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        6.47
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        6.31
+      ],
+      [
+        "ⲧ",
+        2,
+        6.071
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        5.376
+      ],
+      [
+        "ϩⲉ",
+        1,
+        4.727
+      ],
+      [
+        "ϯ",
+        1,
+        4.516
+      ],
+      [
+        "ⲛ",
+        2,
+        3.809
+      ],
+      [
+        "ⲥ",
+        1,
+        3.274
+      ],
+      [
+        "ⲩ",
+        1,
+        2.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲱⲧⲣ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧⲣ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲙⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲙⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲱⲧⲣ_0_node",
+          "ⲙ_1_post_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲅⲁⲙⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲱⲧⲣ",
+          "ϩⲱⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱⲧⲣ",
+          "ϥ_1_pre_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲧⲣ",
+          "ϩⲱⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧⲣ_0_node",
+          "ⲛⲙⲙⲁ_1_post_ϩⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ϩⲱⲧⲣ",
+          "ⲩ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲙⲙⲁ",
+          "ⲙ_1_post_ϩⲱⲧⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3481,
+      "count": 8
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6945",
+      "label": "ϩⲁⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "a doubled thing, twin"
+    },
+    {
+      "target": "C6947",
+      "label": "ϩⲁⲧⲣⲉⲥ",
+      "pos": "N",
+      "gloss": "yoke, pair (of mules)"
+    },
+    {
+      "target": "C6946",
+      "label": "ϩⲉⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "navel(?)"
+    },
+    {
+      "target": "C6943",
+      "label": "ϩⲱⲧⲣ",
+      "pos": "V",
+      "gloss": "be joined, doubled"
+    },
+    {
+      "target": "C12176",
+      "label": "ϩⲱⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "(female) companion"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "C8434",
+  "forms": [
+    {
+      "id": "CF19671",
+      "orth": "ⲁⲣⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19674",
+      "orth": "ⲁⲣⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7616,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19673",
+      "orth": "ⲁⲣⲕⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19672",
+      "orth": "ⲁⲣⲁⲝ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9773",
+      "bibliography": "DDGLC",
+      "cu_ID": "1085"
+    },
+    {
+      "id": "CS9774",
+      "bibliography": "DDGLC",
+      "cu_ID": "7491"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲡⲁϣⲏⲣⲉ · ⲉϣⲡⲉ ⲁⲕⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ · ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲧ**ⲁⲣⲕⲟⲥ** · ⲛⲧⲉⲓⲕⲱⲗⲉⲓ ⲙⲙⲟⲛ ⲁⲛ ·",
+      "english": "And now, O my son, if thou art quite satisfied about the matter, (good and well); but if not, make her take the oath. I shall not attempt to prevent thee.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲕϣⲁⲛⲟⲩⲱϣ ⲉⲧ**ⲁⲣⲕⲟⲥ** ⲙⲡⲁⲛⲁϣ ⲛϯⲕⲱⲗⲩ ⲙⲙⲟⲕ ⲁⲛ · ⲛⲧⲁⲡⲛⲟⲙⲟⲥ ⲅⲁⲣ ⲙⲡⲛⲟⲩⲧⲉ ⲕⲉⲗⲉⲩⲉ ⲛϯϩⲉ",
+      "english": "And if thou wishest to make her swear an oath I shall not attempt to prevent thee, for the law of God giveth the following command:",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲱⲗⲉⲓ",
+        1,
+        18.598
+      ],
+      [
+        "ⲁⲛⲁϣ",
+        1,
+        13.428
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        11.823
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        1,
+        10.987
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        9.894
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲕⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲛⲁϣ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲣⲕⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲕⲟⲥ_0_node",
+          "ⲙ_1_post_ⲁⲣⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲕⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲛⲁϣ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲣⲕⲟⲥ",
+          "ⲁⲣⲕⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7161,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "4715",
+    "grl_lemma": "ἄρκος",
+    "grl_meaning": "bear",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 242a; Bauer 215"
+  }
+}

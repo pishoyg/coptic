@@ -1,0 +1,163 @@
+{
+  "id": "C5337",
+  "forms": [
+    {
+      "id": "CF12643",
+      "orth": "ⲟⲩⲁϩⲉⲙⲙⲓⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8641,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5990",
+      "bibliography": "DELC 242a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉⲛϩⲃⲏⲟⲩⲓ ⲁⲛ ⲉⲧⲁⲛⲁⲓⲧⲟⲩ ϧⲉⲛⲟⲩⲙⲉⲑⲙⲏⲓ ⲁⲗⲗⲁ ⲕⲁⲧⲁⲡⲉϥⲛⲁⲓ ⲁϥⲛⲁϩⲙⲉⲛ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲡⲓϫⲱⲕⲉⲙ ⲛⲧⲉⲡⲓ**ⲟⲩⲁϩⲉⲙⲙⲓⲥⲓ** ⲛⲉⲙⲡⲓⲟⲩⲁϩⲉⲙⲃⲉⲣⲓ .",
+      "english": "not by works of righteousness, which we did ourselves, but according to his mercy, he saved us, through the washing of regeneration and renewing by the Holy Spirit,",
+      "source": "17_Titus_03",
+      "urn": "urn:cts:copticLit:nt.titus.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲁϩⲉⲙⲃⲉⲣⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ϫⲱⲕⲉⲙ",
+        1,
+        14.608
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        10.526
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲁϩⲉⲙⲙⲓⲥⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8111,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2036",
+      "type": "cf",
+      "label": "offspring, generation"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5334",
+      "label": "ϭⲓⲛⲟⲩⲱϩⲙ",
+      "pos": "N",
+      "gloss": "opposition"
+    },
+    {
+      "target": "C5331",
+      "label": "ⲁⲧⲃⲱϩⲉⲙ",
+      "pos": "N",
+      "gloss": "without answer"
+    },
+    {
+      "target": "C5333",
+      "label": "ⲙⲛⲧⲣⲉϥⲟⲩⲱϩⲙ",
+      "pos": "N",
+      "gloss": "opposition, disobedience"
+    },
+    {
+      "target": "C5330",
+      "label": "ⲛⲟⲩⲱϩⲙ",
+      "pos": "ADV",
+      "gloss": "again"
+    },
+    {
+      "target": "C5335",
+      "label": "ⲟⲩⲁϩⲙⲉ",
+      "pos": "N",
+      "gloss": "what is added, storey (of house), layer (also as part of the eye: skin)"
+    },
+    {
+      "target": "C5336",
+      "label": "ⲟⲩⲁϩⲙⲉϥ",
+      "pos": "N",
+      "gloss": "answerer, interpreter"
+    },
+    {
+      "target": "C5328",
+      "label": "ⲟⲩⲱϩⲉⲙ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "interpret"
+    },
+    {
+      "target": "C5326",
+      "label": "ⲟⲩⲱϩⲙ",
+      "pos": "V",
+      "gloss": "repeat, answer; repeat, do again, add"
+    },
+    {
+      "target": "C5327",
+      "label": "ⲟⲩⲱϩⲙ",
+      "pos": "N",
+      "gloss": "answer, objection, interpretation"
+    },
+    {
+      "target": "C5329",
+      "label": "ⲟⲩⲱϩⲙ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "bring up again, reconstruct"
+    },
+    {
+      "target": "C5332",
+      "label": "ⲣⲉϥⲟⲩⲱϩⲙ",
+      "pos": "N",
+      "gloss": "answerer, contradictor"
+    }
+  ]
+}

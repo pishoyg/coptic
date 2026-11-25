@@ -1,0 +1,137 @@
+{
+  "id": "C9454",
+  "forms": [
+    {
+      "id": "CF23976",
+      "orth": "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23977",
+      "orth": "ⲕⲗⲏⲟⲛⲟⲙⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23978",
+      "orth": "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9967,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.8,
+        "rank": 499,
+        "count": 153
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11988",
+      "bibliography": "DDGLC",
+      "cu_ID": "15253"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲛⲓⲣⲉⲙⲁϯ ⲉⲧⲟⲩⲛⲁⲉⲛⲟⲩ ⲙⲡϭⲟⲓⲥ ⲛϫⲉⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲁⲛⲁⲫⲉⲣⲉⲙⲁ ⲁⲓⲧⲏⲓⲧⲟⲩ ⲛⲛⲓⲗⲉⲩⲓⲧⲏⲥ ϧⲉⲛⲟⲩⲕⲗⲏⲣⲟⲥ ⲉⲑⲃⲉⲫⲁⲓ ⲁⲓϫⲟⲥ ⲛⲱⲟⲩ ϫⲉϧⲉⲛⲧⲙⲏϯ ⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲛⲟⲩ**ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ** ⲛⲟⲩⲕⲗⲏⲣⲟⲥ",
+      "english": "Because I have given as a distinct portion to the Levites for an inheritance the tithes of the children of Israel, whatsoever they shall offer to the Lord; therefore I said to them, In the midst of the children of Israel they shall have no inheritance.",
+      "source": "04_Numeri_18",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲗⲏⲣⲟⲥ",
+        1,
+        13.219
+      ],
+      [
+        "ⲓⲥⲣⲁⲏⲗ",
+        1,
+        10.349
+      ],
+      [
+        "ⲛ",
+        3,
+        9.346
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲟⲥ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ_0_node",
+          "ⲛ_1_post_ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲕⲗⲏⲣⲟⲥ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9425,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1135",
+    "grl_lemma": "κληρονομέω",
+    "grl_meaning": "to inherit",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 959b; Preisigke 1:801"
+  }
+}

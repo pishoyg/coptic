@@ -1,0 +1,177 @@
+{
+  "id": "C4124",
+  "forms": [
+    {
+      "id": "CF10193",
+      "orth": "ϫⲓϯⲃⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13886,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4683",
+      "bibliography": "CD 401a; KoptHWb 223; ChLCS 56a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ϫⲉⲇⲓⲕⲁⲓⲟⲥ ⲁⲩⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲣⲁⲛ ϫⲉⲓⲁⲕⲱⲃ ⲁϥ**ϫⲓϯⲃⲥ** ⲅⲁⲣ ⲙⲙⲟⲓ ⲙⲡⲙⲉϩⲥⲡⲥⲛⲁⲩ ⲛⲁⲙⲛⲧϣⲟⲣⲡⲙⲓⲥⲉ ⲁϥϫⲓⲧⲟⲩ ⲧⲉⲛⲟⲩ ⲟⲛ ⲁϥϫⲓ ⲙⲡⲁⲧⲕⲉⲥⲙⲟⲩ ⲡⲁⲉⲓⲱⲧ",
+      "english": "And he said, Rightly was his name called Jacob, for lo! this second time has he supplanted me; he has both taken my birthright, and now he has taken my blessing; and Esau said to his father, Hast thou not left a blessing for me, father?",
+      "source": "Genesis 27",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲁⲕⲱⲃ",
+        1,
+        11.867
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ϫⲓϯⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲓϯⲃⲥ",
+          "ϥ_1_pre_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓϯⲃⲥ",
+          "ϫⲓϯⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲓϯⲃⲥ_0_node",
+          "ⲅⲁⲣ_1_post_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ϫⲓϯⲃⲥ",
+          "ⲙⲙⲟ_1_post_ϫⲓϯⲃⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϫⲓϯⲃⲥ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13483,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4123",
+      "label": "ϥⲓϯⲃⲥ",
+      "pos": "V",
+      "gloss": "step"
+    },
+    {
+      "target": "C4122",
+      "label": "ϯⲃⲥ",
+      "pos": "N",
+      "gloss": "heel"
+    },
+    {
+      "target": "C4126",
+      "label": "ⲙⲉⲧⲑⲓⲃⲥ",
+      "pos": "N",
+      "gloss": "currier's tool?"
+    },
+    {
+      "target": "C4125",
+      "label": "ⲙⲛⲧϫⲓϯⲃⲥ",
+      "pos": "N",
+      "gloss": "act of tripping up"
+    }
+  ]
+}

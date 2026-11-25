@@ -1,0 +1,69 @@
+{
+  "id": "C971",
+  "forms": [
+    {
+      "id": "CF3291",
+      "orth": "ⲉⲓⲁⲣⲙⲉⲥ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1131",
+      "bibliography": "KoptHWb 51; ChLCS 14b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C964",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "stare, be astonished, dumbfounded"
+    },
+    {
+      "target": "C970",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "look"
+    },
+    {
+      "target": "C965",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉ-)",
+      "pos": "V",
+      "gloss": "follow (with the eyes), look intently"
+    },
+    {
+      "target": "C968",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "look intently"
+    },
+    {
+      "target": "C969",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "look intently"
+    },
+    {
+      "target": "C967",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wonder, expect"
+    },
+    {
+      "target": "C966",
+      "label": "ⲉⲓⲱⲣⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "stare after"
+    }
+  ]
+}

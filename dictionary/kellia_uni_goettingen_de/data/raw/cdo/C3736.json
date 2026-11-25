@@ -1,0 +1,136 @@
+{
+  "id": "C3736",
+  "forms": [
+    {
+      "id": "CF9391",
+      "orth": "ⲙⲛⲧⲁⲧⲥⲣϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18820,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4244",
+      "bibliography": "CD 357b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲥⲛⲧⲟⲩⲛⲟϭ ⲙ**ⲙⲛⲧⲁⲧⲥⲣϥⲉ** ⲛⲣⲱⲙⲉ ⲛⲓⲙ ⲁⲩⲱ ⲟⲩⲛⲁϩⲃ ⲉϥϩⲟⲣϣ ⲉϫⲛⲛϣⲏⲣⲉ ⲛⲁⲇⲁⲙ ϫⲓⲛⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧⲥ ⲛⲧⲉⲩⲙⲁⲁⲩ ϣⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲧⲟⲙⲥⲟⲩ ⲉⲡⲙⲁ ⲛⲟⲩⲟⲛ ⲛⲓⲙ",
+      "english": "Great travail is created for every man, and an heavy yoke is upon the sons of Adam, from the day that they go out of their mother's womb, till the day that they return to the mother of all things.",
+      "source": "Sirach 40",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲛⲧ",
+        1,
+        15.791
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲁⲧⲥⲣϥⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18431,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3738",
+      "label": "ϭⲓⲛⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure"
+    },
+    {
+      "target": "C3737",
+      "label": "ⲣⲉϥⲥⲣⲱϥⲧ",
+      "pos": "N",
+      "gloss": "idler"
+    },
+    {
+      "target": "C3732",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "V",
+      "gloss": "be at leisure, unoccupied"
+    },
+    {
+      "target": "C3735",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure, perseverance"
+    },
+    {
+      "target": "C3733",
+      "label": "ⲥⲣϥⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "have leisure for, be occupied with"
+    },
+    {
+      "target": "C3734",
+      "label": "ⲥⲣϥⲉ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "have leisure, let go of sth, desist from sth"
+    }
+  ]
+}

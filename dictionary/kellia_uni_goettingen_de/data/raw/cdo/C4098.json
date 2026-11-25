@@ -1,0 +1,58 @@
+{
+  "id": "C4098",
+  "forms": [
+    {
+      "id": "CF10141",
+      "orth": "ⲡⲉⲧⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "subc": "Göttername",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4656",
+      "bibliography": "CD 399a; CED 182; KoptHWb 154, 222; ChLCS 56a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4096",
+      "label": "ⲣⲉϥⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requiter"
+    },
+    {
+      "target": "C4097",
+      "label": "ⲣⲉϥⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requiter"
+    },
+    {
+      "target": "C4095",
+      "label": "ⲧⲟⲡⲟⲩ",
+      "pos": "N",
+      "gloss": "requital"
+    },
+    {
+      "target": "C4093",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "repay, requite"
+    },
+    {
+      "target": "C4094",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requital"
+    }
+  ]
+}

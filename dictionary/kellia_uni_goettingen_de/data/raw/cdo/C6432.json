@@ -1,0 +1,102 @@
+{
+  "id": "C6432",
+  "forms": [
+    {
+      "id": "CF14892",
+      "orth": "ϩⲱⲃ ⲛⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.78,
+        "rank": 280,
+        "count": 597
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7139",
+      "bibliography": "KoptHWb 354; ChLCS 88a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲥⲱⲧⲙ ⲛⲥⲱⲟⲩ **ϩⲛϩⲱⲃ **ⲛⲓⲙ**** ·",
+      "english": "And that you obey them in every action.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲟⲕⲓⲙⲁⲍⲉ ⲟⲛ **ⲛϩⲱⲃ **ⲛⲓⲙ**** ·",
+      "english": "Test everything.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲅⲁⲣ **ϩⲱⲃ **ⲛⲓⲙ**** ⲉⲧⲉⲕⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ϯⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ϩⲱ ·",
+      "english": "For, everything that you do, I do it too.",
+      "source": "Apophthegmata Patrum Sahidic 102: Macarius 11",
+      "urn": "urn:cts:copticLit:ap.102.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.77,
+      "rank": 238,
+      "count": 598
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6426",
+      "label": "ϩⲱⲃ",
+      "pos": "N",
+      "gloss": "thing, work, matter, event"
+    },
+    {
+      "target": "C6429",
+      "label": "ϩⲱⲃ ⲛϭⲓϫ",
+      "pos": "N",
+      "gloss": "handcraft"
+    },
+    {
+      "target": "C6431",
+      "label": "ϯϩⲱⲃ",
+      "pos": "V",
+      "gloss": "give work"
+    },
+    {
+      "target": "C6433",
+      "label": "ⲛϩⲱⲃ",
+      "pos": "ADV",
+      "gloss": "actually"
+    },
+    {
+      "target": "C6428",
+      "label": "ⲟⲩⲛϩⲱⲃ ⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "there is a matter with"
+    },
+    {
+      "target": "C6427",
+      "label": "ⲟⲩⲡⲉ ⲡϩⲱⲃ",
+      "pos": "ADV",
+      "gloss": "What is the matter?"
+    },
+    {
+      "target": "C6430",
+      "label": "ⲣϩⲱⲃ",
+      "pos": "V",
+      "gloss": "do work"
+    }
+  ]
+}

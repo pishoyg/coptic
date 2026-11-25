@@ -1,0 +1,171 @@
+{
+  "id": "C6514",
+  "forms": [
+    {
+      "id": "CF15056",
+      "orth": "ⲣⲉϥϩⲱⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14869,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7225",
+      "bibliography": "CD 666b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲓⲛⲉ ⲛⲧⲃⲛⲏ ⲛⲓⲙ ⲛⲉⲧϣⲟⲟⲡ ϩⲓϫⲙⲡⲕⲁϩ ⲡⲉⲓⲛⲉ ⲛϩⲁⲗⲏⲧ ⲛⲓⲙ ⲛ**ⲣⲉϥϩⲱⲗ** ⲉϥϩⲏⲗ ϩⲁⲣⲟⲥ ⲛⲧⲡⲉ",
+      "english": "the likeness of any beast of those that are on the earth, the likeness of any winged bird which flies under heaven,",
+      "source": "Deuteronomy 4",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲗ",
+        1,
+        15.276
+      ],
+      [
+        "ϩⲁⲗⲏⲧ",
+        1,
+        15.139
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        11.446
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϩⲱⲗ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϩⲱⲗ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ϩⲁⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϩⲱⲗ_0_node",
+          "ⲉ_1_post_ⲣⲉϥϩⲱⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϩⲱⲗ",
+          "ϥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲗ",
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          "ϩⲁⲣⲟ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_3_post_ϩⲏⲗ",
+          "ⲥ_4_post_ϩⲁⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14467,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6516",
+      "label": "ϩⲁⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "fly (birds, insects)"
+    },
+    {
+      "target": "C6517",
+      "label": "ϩⲁⲗⲱⲟⲩⲗⲓ",
+      "pos": "N",
+      "gloss": "flight (birds)"
+    },
+    {
+      "target": "C6512",
+      "label": "ϩⲱⲗ",
+      "pos": "V",
+      "gloss": "fly, go, hurry"
+    },
+    {
+      "target": "C6515",
+      "label": "ϭⲓⲛϩⲱⲗ",
+      "pos": "N",
+      "gloss": "flight"
+    },
+    {
+      "target": "C6513",
+      "label": "ⲙⲁ ⲛϩⲱⲗ",
+      "pos": "N",
+      "gloss": "exit"
+    }
+  ]
+}

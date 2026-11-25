@@ -1,0 +1,56 @@
+{
+  "id": "C4673",
+  "forms": [
+    {
+      "id": "CF11309",
+      "orth": "ⲧⲟⲩⲛⲉⲓⲁⲧ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8602,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5277",
+      "bibliography": "CD 73b-74a, 446b; CED 45, 200; KoptHWb 236; DELC 217a; ChLCS 63a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5064",
+      "type": "cf",
+      "label": "open, be open"
+    },
+    {
+      "target": "C400",
+      "type": "cf",
+      "label": "eye"
+    },
+    {
+      "target": "C4366",
+      "type": "cf",
+      "label": "wake, put upright"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4672",
+      "label": "*ⲧⲟⲩⲛⲟ",
+      "pos": "V",
+      "gloss": "make to open"
+    }
+  ]
+}

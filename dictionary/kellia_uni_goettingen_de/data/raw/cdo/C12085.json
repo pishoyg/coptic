@@ -1,0 +1,118 @@
+{
+  "id": "C12085",
+  "forms": [
+    {
+      "id": "CF33092",
+      "orth": "ϣⲱϣⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6692,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17086",
+      "bibliography": "CD 608a; KoptHWB 338; CED 260; DELC"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛⲟϥ ⲙⲙⲟⲕ ⲡϣⲁϥⲉ ⲫⲏⲉⲧⲟⲃⲓ ⲙⲁⲣⲉϥⲑⲉⲗⲏⲗ ⲛϫⲉⲡϣⲁϥⲉ ⲟⲩⲟϩ ⲙⲁⲣⲉϥⲫⲓⲣⲓ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ϣⲱϣⲉⲛ** .",
+      "english": "Be glad, thou thirsty desert: let the wilderness exult, and flower as the lily.",
+      "source": "23_Isaias_35",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:35",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲁϣⲱⲡⲓ ⲙⲡⲓⲥⲗ ⲙⲫⲣⲏϯ ⲛⲟⲩⲓⲱϯ ϥⲛⲁⲫⲓⲣⲓ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ϣⲱϣⲉⲛ** ⲟⲩⲟϩ ϥⲛⲁϩⲓⲟⲩⲓ ⲛⲛⲉϥⲛⲟⲩⲛⲓ ⲙⲫⲣⲏϯ ⲙⲡⲓⲗⲓⲃⲁⲛⲟⲥ .",
+      "english": "I will be as dew to Israel: he shall bloom as the lily, and cast forth his roots as Libanus.",
+      "source": "28_Osee_14",
+      "urn": "urn:cts:copticLit:ot.hos.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲓⲣⲓ",
+        1,
+        12.303
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        10.571
+      ],
+      [
+        "ⲣⲏϯ",
+        2,
+        9.878
+      ],
+      [
+        "ⲫ",
+        2,
+        8.564
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        7.335
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲱϣⲉⲛ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 6168,
+      "count": 2
+    }
+  }
+}

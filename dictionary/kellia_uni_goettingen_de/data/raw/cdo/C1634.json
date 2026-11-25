@@ -1,0 +1,39 @@
+{
+  "id": "C1634",
+  "forms": [
+    {
+      "id": "CF4739",
+      "orth": "ⲙⲛⲧⲣⲉϥⲗⲉⲗⲉ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1898",
+      "bibliography": "CD 141a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1632",
+      "label": "ⲗⲉⲗⲉ",
+      "pos": "V",
+      "gloss": "wander about"
+    },
+    {
+      "target": "C1633",
+      "label": "ⲗⲉⲗⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "wander forth, about"
+    }
+  ]
+}

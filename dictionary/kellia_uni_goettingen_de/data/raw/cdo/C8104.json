@@ -1,0 +1,164 @@
+{
+  "id": "C8104",
+  "forms": [
+    {
+      "id": "CF18425",
+      "orth": "ⲁⲑⲁⲛⲁⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18426",
+      "orth": "ⲁⲑⲁⲛⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7118,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9085",
+      "bibliography": "DDGLC",
+      "cu_ID": "5097"
+    },
+    {
+      "id": "CS9086",
+      "bibliography": "DDGLC",
+      "cu_ID": "1646"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉ ⲡⲣⲁⲛ ⲙⲡ**ⲁⲑⲁⲛⲁⲧⲟⲥ** ⲁⲁⲁ ⲱⲱⲱ ⲁⲩⲱ ⲡⲁⲓ ⲡⲉ ⲡⲣⲁⲛ ⲛⲧⲉ ⲥⲙⲏ ⲧⲁⲓ ⲉⲛⲧⲁⲡⲣⲱⲙⲉ ⲛⲧⲉⲗⲓⲟⲥ ⲕⲓⲙ ⲉⲧⲃⲏⲧⲥ ⲓⲓⲓ ⲛⲁⲓ ⲇⲉ ⲛⲉ ⲛϩⲉⲣⲙⲏⲛⲉⲓⲁ ⲛⲛⲣⲁⲛ ⲛⲛⲣⲁⲛ ⲛⲛⲉⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲡⲓϣⲟⲣⲡ ⲉⲧⲉⲁⲁ ⲧⲉϥϩⲉⲣⲙⲏⲛⲉⲓⲁ ⲧⲉ ⲫⲫⲫ ·",
+      "english": "This is the name of the Immortal: aaa, ōōō; and this is the name of the Voice, for the sake of which the Perfect Man hath set himself in motion: iii. And these are the interpretations of the names of these mysteries: the first [name], which is aaa, its interpretation is fff;",
+      "source": "Pistis Sophia Book 1 Part 8",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:84-96",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲟⲟⲩ ⲛⲁⲕ ⲡ**ⲁⲑⲁⲛⲁⲧⲟⲥ** ϩⲁⲙⲏⲛ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 2 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:12-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲁⲁ",
+        1,
+        18.598
+      ],
+      [
+        "ⲱⲱⲱ",
+        1,
+        18.598
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        2,
+        12.725
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        10.737
+      ],
+      [
+        "ⲡ",
+        4,
+        9.497
+      ],
+      [
+        "ⲣⲁⲛ",
+        1,
+        8.993
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        7.577
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲑⲁⲛⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲑⲁⲛⲁⲧⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲁⲁ_2_post_ⲱⲱⲱ",
+          1
+        ],
+        [
+          "ⲱⲱⲱ_1_post_ⲁⲑⲁⲛⲁⲧⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲑⲁⲛⲁⲧⲟⲥ",
+          "ⲁⲑⲁⲛⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲑⲁⲛⲁⲧⲟⲥ_0_node",
+          "ⲁⲁⲁ_2_post_ⲱⲱⲱ",
+          1
+        ],
+        [
+          "ⲁⲁⲁ_2_post_ⲱⲱⲱ",
+          "ⲱⲱⲱ_1_post_ⲁⲑⲁⲛⲁⲧⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6666,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3267",
+    "grl_lemma": "ἀθάνατος",
+    "grl_meaning": "undying, immortal, everlasting, perpetual",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 30b; Preisigke 1:28"
+  }
+}

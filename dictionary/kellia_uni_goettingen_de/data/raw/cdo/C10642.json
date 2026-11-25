@@ -1,0 +1,360 @@
+{
+  "id": "C10642",
+  "forms": [
+    {
+      "id": "CF28785",
+      "orth": "ⲥⲩⲛⲭⲱⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28789",
+      "orth": "ⲥⲩⲛⲭⲱⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4903,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF28786",
+      "orth": "ⲥⲓⲛⲭⲱⲣⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28787",
+      "orth": "ⲥⲛⲭⲱⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28788",
+      "orth": "ⲥⲩⲅⲭⲱⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12284,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28790",
+      "orth": "ⲥⲩⲛⲭⲱⲣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14519",
+      "bibliography": "DDGLC",
+      "cu_ID": "5751"
+    },
+    {
+      "id": "CS14520",
+      "bibliography": "DDGLC",
+      "cu_ID": "2708"
+    },
+    {
+      "id": "CS14521",
+      "bibliography": "DDGLC",
+      "cu_ID": "15329"
+    },
+    {
+      "id": "CS14522",
+      "bibliography": "DDGLC",
+      "cu_ID": "5749"
+    },
+    {
+      "id": "CS14523",
+      "bibliography": "DDGLC",
+      "cu_ID": "10287"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲟⲩ**ⲥⲩⲛⲭⲱⲣⲉⲓ** ⲛⲁⲓ ⲙⲙⲁⲧⲉ ⲛⲧⲁⲥϩⲓⲙⲉ · ⲙⲛⲛⲁϣⲏⲣⲉ ·",
+      "english": "and neither my wife nor my children are permitted to be with me.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲛⲧⲁⲅⲓⲟⲛϥ**ⲥⲩⲛⲭⲱⲣⲉⲓ** ⲉⲧⲣⲉⲛⲁⲓ ϣⲱⲡⲉ · ϫⲉⲕⲁⲥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲙⲡⲉⲥⲛⲁⲩ ⲉⲣⲉⲧⲉⲡⲣⲁⲝⲓⲥ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲁⲩⲱⲛϩ ⲉⲃⲟⲗ ⲉⲥϫⲏⲕ ⲉⲃⲟⲗ · ⲧⲕⲁⲕⲓⲁ ⲙⲉⲛ ⲙⲛⲧⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ ⲙⲛⲧⲙⲛⲣⲉϥϩⲓⲗⲁ ⲛⲙⲡⲁⲣⲁⲛⲟⲙⲟⲥ · ⲡⲧⲱⲕ ⲇⲉ ⲉϩⲟⲩⲛ ⲛⲥⲟⲩⲥⲁⲛⲛⲁ ϣⲁϩⲣⲁⲓ ⲉⲡⲙⲟⲩ ·",
+      "english": "Who, however, allowed these things to take place, in order that through both sides the work of each might be made manifest and fulfil itself; on the one side wickedness, and incontinence, and calumny, and lawlessness, and on the other the perseverance of Susanna even unto death.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁϥ**ⲥⲩⲛⲭⲱⲣⲉⲓ** ⲛⲁⲩ ⲉⲧⲣⲉⲡⲁⲅⲱⲛ ⲥⲩⲛϩⲓⲥⲧⲁ · ϫⲉⲕⲁⲥ ⲉⲩⲛⲁϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛϭⲓⲛⲉⲩϣⲟϫⲛⲉ ⲉⲧϩⲏⲡ ·",
+      "english": "but He permitted them to engage in the contest, in order that the crafty designs which they had devised in secret might be revealed,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲛⲧⲁⲅⲓⲟⲛ",
+        1,
+        16.691
+      ],
+      [
+        "ϩⲁⲡⲗⲱⲥ",
+        1,
+        12.299
+      ],
+      [
+        "ⲛⲕⲁ",
+        1,
+        11.116
+      ],
+      [
+        "ⲙⲙⲁⲧⲉ",
+        1,
+        10.237
+      ],
+      [
+        "ⲧⲣⲉ",
+        2,
+        9.342
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        9.062
+      ],
+      [
+        "ϥ",
+        4,
+        8.2
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        8.121
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        7.954
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        7.619
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        7.613
+      ],
+      [
+        "ⲛ",
+        4,
+        7.487
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.41
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        6.982
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.588
+      ],
+      [
+        "ⲩ",
+        2,
+        6.488
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.475
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.255
+      ],
+      [
+        "ⲁ",
+        2,
+        5.722
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        5.702
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          5
+        ],
+        [
+          "ⲙⲙⲁⲧⲉ_1_post_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲡⲗⲱⲥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧⲁⲅⲓⲟⲛ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲙⲡ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲟⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          "ⲙⲙⲁⲧⲉ_1_post_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲡⲗⲱⲥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲛⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲙⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ϥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲥⲩⲛⲭⲱⲣⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ⲉⲛⲧⲁⲅⲓⲟⲛ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧⲁⲅⲓⲟⲛ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          "ϥ_1_pre_ⲥⲩⲛⲭⲱⲣⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4483,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2064",
+    "grl_lemma": "συγχωρέω",
+    "grl_meaning": "to come together, meet, get out of the way",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1669a; Preisigke 2:501"
+  }
+}

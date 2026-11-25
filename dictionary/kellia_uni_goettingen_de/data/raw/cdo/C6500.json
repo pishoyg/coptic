@@ -1,0 +1,63 @@
+{
+  "id": "C6500",
+  "forms": [
+    {
+      "id": "CF15028",
+      "orth": "ⲣⲉϥⲣϩⲁⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7211",
+      "bibliography": "CD 664b; ChLCS 89b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6498",
+      "label": "ϩⲁⲗ",
+      "pos": "N",
+      "gloss": "deception"
+    },
+    {
+      "target": "C6501",
+      "label": "ϩⲁⲗϩⲟ",
+      "pos": "N",
+      "gloss": "deceptive person, deceiving (face)"
+    },
+    {
+      "target": "C6502",
+      "label": "ϯϩⲁⲗϩⲟ",
+      "pos": "V",
+      "gloss": "deceive"
+    },
+    {
+      "target": "C6499",
+      "label": "ⲣϩⲁⲗ",
+      "pos": "V",
+      "gloss": "deceive"
+    }
+  ]
+}

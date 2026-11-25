@@ -1,0 +1,75 @@
+{
+  "id": "C7910",
+  "forms": [
+    {
+      "id": "CF32214",
+      "orth": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32213",
+      "orth": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟⲟϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8790",
+      "bibliography": "CD 832a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7912",
+      "label": "ϫⲓϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "become pregnant, conceive (child)"
+    },
+    {
+      "target": "C7907",
+      "label": "ϫⲣⲟϫ",
+      "pos": "N",
+      "gloss": "seed, semen (of a man)"
+    },
+    {
+      "target": "C7906",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seed (of plants)"
+    },
+    {
+      "target": "C7908",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "sown, fertilized"
+    },
+    {
+      "target": "C7911",
+      "label": "ϯϫⲣⲟϫ",
+      "pos": "V",
+      "gloss": "copulate"
+    },
+    {
+      "target": "C7909",
+      "label": "ⲁⲧϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seedless, infertile"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "C9962",
+  "forms": [
+    {
+      "id": "CF25990",
+      "orth": "ⲟⲩⲕⲉⲧⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF25992",
+      "orth": "ⲟⲩⲕⲉⲧⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6081,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF25991",
+      "orth": "ⲟⲩⲕⲉⲧⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS13011",
+      "bibliography": "DDGLC",
+      "cu_ID": "10093"
+    },
+    {
+      "id": "CS13012",
+      "bibliography": "DDGLC",
+      "cu_ID": "10366"
+    },
+    {
+      "id": "CS13013",
+      "bibliography": "DDGLC",
+      "cu_ID": "15497"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲧⲉϩⲓⲏ ⲅⲁⲣ ϫⲱⲕ ⲉⲃⲟⲗ · **ⲟⲩⲕⲉⲧⲓ** ⲕⲛⲁϩⲉ ⲁⲛ ⲉⲕⲉⲕⲉⲣⲟⲥ ⲙⲙⲉⲧⲁⲛⲟⲓⲁ ·",
+      "english": "for when the way hath come to an end, thou wilt no longer find another opportunity for repentance.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϣⲙϣⲉ ⲛⲃⲣⲣⲉ · **ⲟⲩⲕⲉⲧⲓ** ⲅⲁⲣ ⲙⲛⲥⲟⲩⲥⲟⲟⲩϣⲉ ⲅⲁⲣ ⲛⲕⲉⲥⲟⲡ ⲟⲩⲇⲉ ⲥⲃⲃⲉ · ⲁⲗⲗⲁ ⲉⲩϣⲙϣⲉ ϩⲛⲟⲩⲡⲓⲥⲧⲓⲥ ·",
+      "english": "The new worship : this is not the savour of sacrifice a second time, neither is it circumcision, but it is the worshipping by faith,",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲩⲥⲟⲟⲩϣⲉ",
+        2,
+        21.013
+      ],
+      [
+        "ⲅⲁⲣ",
+        9,
+        16.604
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        2,
+        14.219
+      ],
+      [
+        "ϣⲙϣⲉ",
+        2,
+        13.687
+      ],
+      [
+        "ϫⲱⲕ",
+        1,
+        9.344
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        6.543
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5634,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1596",
+    "grl_lemma": "οὐκέτι",
+    "grl_meaning": "no more, no longer",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1269b"
+  }
+}

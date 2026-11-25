@@ -1,0 +1,109 @@
+{
+  "id": "C9949",
+  "forms": [
+    {
+      "id": "CF25937",
+      "orth": "ⲟⲣⲑⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25939",
+      "orth": "ⲟⲣⲑⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11332,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25938",
+      "orth": "ⲟⲣⲑⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12995",
+      "bibliography": "DDGLC",
+      "cu_ID": "3040"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϩⲟⲗⲟⲕⲟⲧϯⲛⲟⲥ ⲛⲟⲩⲱⲧ ⲛ**ⲟⲣⲑⲟⲛ** ⲡⲉⲧϣⲟⲟⲡ ⲛⲁⲓ ϫⲓⲛⲡⲉϩⲟⲟⲩ ⲉⲓⲥϭⲣⲁϩⲧ ϩⲛⲧⲁⲣⲓ ⲉⲓⲟ ⲙⲙⲟⲛⲁⲭⲟⲥ ·",
+      "english": "Nevertheless, I had one good 'holokottinos' by me, which I had kept since the day when I lived a life of contemplation in my cell and when I was a monk.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲗⲟⲕⲟⲧϯⲛⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        9.791
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲣⲑⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10918,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1571",
+    "grl_lemma": "ὀρθός",
+    "grl_meaning": "straight, upright, right",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1249a; Preisigke 2:195"
+  }
+}

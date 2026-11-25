@@ -1,0 +1,96 @@
+{
+  "id": "C5871",
+  "forms": [
+    {
+      "id": "CF13740",
+      "orth": "ⲕⲟⲩⲓ ϣⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7382,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6553",
+      "bibliography": "CD 563b; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "... ⲁⲩⲱ **ⲟⲩⲕⲟⲩⲓ **ϣⲏⲙ**** ⲛⲛⲉϩ ϩⲙⲡ... ⲁⲩⲱ ⲉⲓⲥ......",
+      "english": "And the woman said, As the Lord thy God lives, I have not a cake, but only a handful of meal in the pitcher, and a little oil in a cruse, and, behold, I am going to gather two sticks, and I shall go in and dress it for myself and my children, and we shall eat it and die.",
+      "source": "I Kings 17",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲙⲏⲓⲧⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧⲛⲛⲟⲃⲉ ⲛⲧⲉⲧⲛⲉⲓ ϣⲁⲣⲟⲓ **ϩⲛϩⲉⲛⲕⲟⲩⲓ **ϣⲏⲙ**** ⲙⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲉⲁⲁⲩ · ⲛⲧⲁϣⲉⲡⲧⲏⲩⲧⲛ ⲉⲣⲟⲓ · ⲛⲧⲁϣⲱⲡⲉ ⲛⲏⲧⲛ ⲉⲩⲉⲓⲱⲧ · ⲛⲧⲉⲧⲛϣⲱⲡⲉ ⲛⲁⲓ ⲉϩⲉⲛϣⲏⲣⲉ ⲙⲛϩⲉⲛϣⲉⲉⲣⲉ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ· ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA65-80",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:97-122",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6928,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5867",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small person, thing, quantity"
+    },
+    {
+      "target": "C5869",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small, few, young, humble"
+    },
+    {
+      "target": "C5872",
+      "label": "ϣⲏⲙ ϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "little by little, gradually"
+    },
+    {
+      "target": "C5874",
+      "label": "ⲙⲛⲧⳉⲏⲙ",
+      "pos": "N",
+      "gloss": "smallness, childhood"
+    },
+    {
+      "target": "C5868",
+      "label": "ⲛⲟⲩϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "a little"
+    },
+    {
+      "target": "C5873",
+      "label": "ⲣϣⲏⲙ ϣⲏⲙ",
+      "pos": "V",
+      "gloss": "make little"
+    },
+    {
+      "target": "C5870",
+      "label": "ⲥⲁⲃⲃⲁⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "Saturday before Passion week"
+    }
+  ]
+}

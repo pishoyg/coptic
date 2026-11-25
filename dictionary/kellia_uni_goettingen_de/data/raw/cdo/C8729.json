@@ -1,0 +1,367 @@
+{
+  "id": "C8729",
+  "forms": [
+    {
+      "id": "CF20828",
+      "orth": "ⲇⲓⲁⲃⲁⲗⲗⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF20829",
+      "orth": "ⲇⲓⲁⲃⲁⲗⲗⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20832",
+      "orth": "ⲇⲓⲁⲃⲁⲗⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4470,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF20831",
+      "orth": "ⲇⲓⲁⲃⲁⲗⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20830",
+      "orth": "ⲇⲓⲁⲃⲁⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6394,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10394",
+      "bibliography": "DDGLC",
+      "cu_ID": "1124"
+    },
+    {
+      "id": "CS10395",
+      "bibliography": "DDGLC",
+      "cu_ID": "7408"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲉⲩϣⲁⲛ**ⲇⲓⲁⲃⲁⲗⲗⲉ** ⲙⲙⲟⲕ ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲛⲅⲫⲓⲗⲟⲥⲟⲫⲓ ·",
+      "english": "Whensoever men make false accusations against thee thou must continue to lead a well-ordered life.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲟⲩϫⲓϣⲓⲡⲉ ⲛⲥⲉⲱϫⲛ ⲛϭⲓⲛⲉⲧ**ⲇⲓⲁⲃⲁⲗⲗⲉ** ⲛⲧⲁⲯⲩⲭⲏ ⲙⲁⲣⲟⲩϭⲟⲟⲗⲟⲩ ⲛⲟⲩϣⲓⲡⲉ ⲙⲛⲟⲩⲱⲱⲗⲥ ⲛϭⲓⲛⲉⲧϣⲓⲛⲉ ⲛⲥⲁϩⲉⲛⲡⲉⲧϩⲟⲟⲩ ⲉⲣⲟⲓ",
+      "english": "Let those that plot against my soul be ashamed and utterly fail: let those that seek my hurt be clothed with shame and dishonour.",
+      "source": "Psalms 70",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:70",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉ ⲡϩⲱⲃ ⲛⲛⲉⲧ**ⲇⲓⲁⲃⲁⲗⲗⲉ** ⲙⲙⲟⲓ ϩⲁⲧⲙ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛⲉⲧϫⲱ ⲛϩⲉⲛⲡⲉⲧϩⲟⲟⲩ ⲛⲥⲁⲧⲁⲯⲩⲭⲏ",
+      "english": "This is the dealing of the Lord with those who falsely accuse me, and of them that speak evil against my soul.",
+      "source": "Psalms 108",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:108",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲱϫⲛ",
+        2,
+        12.974
+      ],
+      [
+        "ϩⲁⲧⲙ",
+        1,
+        12.013
+      ],
+      [
+        "ϩⲟⲧⲁⲛ",
+        1,
+        10.894
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲛ",
+        1,
+        10.545
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        10.396
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        2,
+        10.384
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        1,
+        9.478
+      ],
+      [
+        "ⲙⲉⲣⲓⲧ",
+        1,
+        9.478
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        9.365
+      ],
+      [
+        "ⲛ",
+        6,
+        8.979
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        8.647
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.408
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        8.234
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        7.875
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        1,
+        7.799
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        7.502
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.401
+      ],
+      [
+        "ⲓ",
+        2,
+        7.265
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.927
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        6.744
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          2
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          2
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲩϣⲁⲛ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲕ_3_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲙ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲧⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          "ⲛ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲩϣⲁⲛ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲛⲧⲟⲕ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲇⲉ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ϥ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲩ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲇⲓⲁⲃⲁⲗⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ⲁⲛⲟⲕ_3_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ϩⲁⲧⲙ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲙ_1_post_ⲇⲓⲁⲃⲁⲗⲗⲉ",
+          "ⲡ_2_post_ϩⲁⲧⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲧⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4071,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2680",
+    "grl_lemma": "διαβάλλω",
+    "grl_meaning": "to throw or carry over/across",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 389b; Preisigke 1:342"
+  }
+}

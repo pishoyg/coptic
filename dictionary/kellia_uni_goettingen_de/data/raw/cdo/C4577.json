@@ -1,0 +1,58 @@
+{
+  "id": "C4577",
+  "forms": [
+    {
+      "id": "CF11111",
+      "orth": "ⲙⲁⲓⲧⲥⲁⲛⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5166",
+      "bibliography": "CD 435b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4575",
+      "label": "ϩⲛⲟⲩⲧⲥⲁⲛⲟ",
+      "pos": "ADV",
+      "gloss": "properly"
+    },
+    {
+      "target": "C4576",
+      "label": "ⲡⲣⲟⲥⲟⲩⲧⲥⲁⲛⲟ",
+      "pos": "ADV",
+      "gloss": "properly"
+    },
+    {
+      "target": "C4573",
+      "label": "ⲧⲥⲁⲛⲟ",
+      "pos": "V",
+      "gloss": "adorn, set in order, provide"
+    },
+    {
+      "target": "C4574",
+      "label": "ⲧⲥⲁⲛⲟ",
+      "pos": "N",
+      "gloss": "propriety"
+    }
+  ]
+}

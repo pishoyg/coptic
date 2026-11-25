@@ -1,0 +1,293 @@
+{
+  "id": "C3534",
+  "forms": [
+    {
+      "id": "CF8971",
+      "orth": "ⲁⲛⲥⲙⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3816,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4022",
+      "bibliography": "CD 337a; CED 10; KoptHWb 186; DELC 13"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁⲧⲉⲧⲛⲕⲱ ⲛⲥⲱⲧⲛ ⲛⲛⲉϥⲥⲃⲟⲟⲩⲉ ⲛⲱⲛϩ ⲙⲛⲛ**ⲁⲛⲥⲙⲙⲉ** ⲛⲛⲉⲧⲛⲉⲓⲟⲧⲉ :",
+      "english": "As you have left behind his teachings of life and those of the petitions of your fathers.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁϣⲏⲣⲉ ⲙⲡⲣⲣⲡⲱⲃϣ ⲛⲛ**ⲁⲛⲥⲙⲙⲉ** ⲁⲩⲱ ⲙⲁⲣⲉⲡⲉⲕϩⲏⲧ ϩⲁⲣⲉϩ ⲉⲛⲁϣⲁϫⲉ",
+      "english": "My son, forget not my laws; but let thine heart keep my words:",
+      "source": "Proverbs 3",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲛⲁⲟⲩⲱⲛ ⲛⲣⲱⲥ ϩⲛⲟⲩⲙⲛⲧⲥⲁⲃⲉ ⲁⲩⲱ ϩⲙⲡⲛⲟⲙⲟⲥ ⲛ**ⲁⲛⲥⲙⲙⲉ** ⲙⲛⲙⲙⲛⲧⲛⲁ ϩⲓⲡⲉⲥⲗⲁⲥ",
+      "english": "And her kindness to them sets up her children for them, and they grow rich, and her husband praises her.",
+      "source": "Proverbs 31",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        5,
+        14.296
+      ],
+      [
+        "ⲛ",
+        20,
+        13.775
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        2,
+        11.592
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        2,
+        11.426
+      ],
+      [
+        ":",
+        2,
+        11.406
+      ],
+      [
+        "ⲙⲛⲧⲛⲁ",
+        1,
+        10.912
+      ],
+      [
+        "ⲙⲟⲣ",
+        1,
+        10.817
+      ],
+      [
+        "ⲱⲛϩ",
+        2,
+        10.717
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        2,
+        10.381
+      ],
+      [
+        "ⲅⲉⲛⲉⲁ",
+        1,
+        10.322
+      ],
+      [
+        "ⲛⲥⲱ",
+        2,
+        10.126
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        9.87
+      ],
+      [
+        "ⲱⲃϣ",
+        1,
+        9.667
+      ],
+      [
+        "ⲥⲁϣϥ",
+        1,
+        9.258
+      ],
+      [
+        "ⲛⲟⲙⲟⲥ",
+        1,
+        8.632
+      ],
+      [
+        "ⲕ",
+        3,
+        8.607
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.399
+      ],
+      [
+        "ϣⲁ",
+        2,
+        8.346
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        7.681
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲥⲙⲙⲉ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          5
+        ],
+        [
+          "ϣⲁ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲛⲉϩ_2_post_ϣⲁ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲁⲁⲩ",
+          2
+        ],
+        [
+          "ⲙⲁⲁⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲥⲙⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛⲥⲙⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲛⲥⲙⲙⲉ_0_node",
+          "ⲛ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          "ϣⲁ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          "ⲉⲛⲉϩ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          "ⲧⲉⲕ_3_post_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲥⲙⲙⲉ",
+          "ⲛ_1_pre_ⲁⲛⲥⲙⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛⲥⲙⲙⲉ",
+          "ⲁⲛⲥⲙⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲥⲙⲙⲉ",
+          "ⲛⲉⲧⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          "ⲉⲓⲟⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3437,
+      "count": 8
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3536",
+      "label": "ϭⲓⲛⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "accusation"
+    },
+    {
+      "target": "C3535",
+      "label": "ⲣⲉϥⲥⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "advocate, accuser"
+    },
+    {
+      "target": "C3531",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "V",
+      "gloss": "appeal, make application (ⲛ- of person, to whom)"
+    },
+    {
+      "target": "C3533",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "petition, accusation"
+    },
+    {
+      "target": "C3532",
+      "label": "ⲥⲙⲙⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "appeal against, accuse"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm7838",
+    "demo_lemma": "ꜥn-smj",
+    "english": "message, report; promise(?)",
+    "german": "Meldung, Bericht; Versprechen(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7838"
+  }
+}

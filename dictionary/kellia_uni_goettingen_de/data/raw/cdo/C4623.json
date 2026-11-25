@@ -1,0 +1,106 @@
+{
+  "id": "C4623",
+  "forms": [
+    {
+      "id": "CF11208",
+      "orth": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20270,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF11209",
+      "orth": "ϩⲓⲧⲟⲩⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.74,
+        "rank": 491,
+        "count": 274
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5219",
+      "bibliography": "CD 444b; CED 200; KoptHWb 251; DELC 223a; ChLCS 62a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲕⲧⲟ ⲙⲙⲟⲟⲩ ⲉϩⲟⲩⲛ ⲉⲩⲙⲛⲧⲣⲉϥϣⲙϣⲉⲛⲟⲩⲧⲉ · ϣⲁϥⲧⲥⲁⲃⲟⲟⲩ ⲟⲛ ⲉⲧⲣⲉⲩⲥⲁϩⲱⲟⲩ ⲉⲃⲟⲗ ⲛⲙⲡⲉⲧϩⲟⲟⲩ · ⲁⲩⲱ ⲉⲧⲣⲉⲩϥⲓ ⲡⲣⲟⲟⲩϣ ⲙⲡⲛⲉⲩⲙⲁ ⲉϩⲟⲩⲛ ⲉⲡⲉⲧϩⲓⲧ **ϩⲓⲧⲟⲩⲱ**ⲟⲩ ·",
+      "english": "These are they whom God converted to the worship of God, and He teacheth them also to depart from that which is evil, and to have merciful care for him that is his neighbour,",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲛⲟⲙⲟⲥ ⲅⲁⲣ ⲟⲩⲛⲧⲁϥ ϩⲉⲛⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲙⲁⲩ ⲉⲛⲁϣⲱⲟⲩ · ⲉⲧⲙⲡⲗⲁⲡⲧⲉⲓ ⲙⲡⲉⲧ**ϩⲓⲧⲟⲩⲱ**ⲛ · ⲟⲩⲛⲧⲁϥ ⲇⲉ ⲟⲛ ⲙⲙⲁⲩ ⲛϩⲉⲛⲉⲛⲧⲟⲗⲏ ⲉⲧⲃⲉⲧⲙⲛⲧⲙⲁⲓⲣⲱⲙⲉ · ⲁⲩⲱ ⲉⲛⲁ ⲛⲛⲉⲛⲉⲣⲏⲩ ·",
+      "english": "Now the Law containeth a very large number of precepts which do injury to him that is our neighbour, but there are also therein commandments concerning charity (or, the love of men), and the doing of deeds of mercy to each other.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲕⲟⲥⲙⲟⲥ ⲉⲧⲣⲡⲱⲃϣ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲉⲥⲛⲏⲩ · ⲥⲉⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ ϩⲙⲡϫⲓⲛϭⲟⲛⲥ ⲉⲧϫⲓ ⲉϩⲟⲩⲛ ⲉⲛⲉⲧ**ϩⲓⲧⲟⲩⲱ**ⲟⲩ · ⲙⲛⲧⲙⲛⲧⲁⲡⲁⲛⲑⲣⲟⲡⲟⲥ ⲉⲧϫⲓ ⲉϩⲟⲩⲛ ⲉⲛⲁⲧϭⲟⲙ ·",
+      "english": "The world which hath no remembrance of God, O my brethren, is governed by the injustice which appertaineth to cruelty, and by the inhumanity which appertaineth to weakness,",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6389",
+      "type": "cf",
+      "label": "on, at, in"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4622",
+      "label": "ϩⲁⲧⲟⲩⲱ⸗",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4620",
+      "label": "ϯⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "turn away, move out?"
+    },
+    {
+      "target": "C4621",
+      "label": "ⲉⲧⲟⲩⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4619",
+      "label": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "sit (to eat)"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    },
+    {
+      "target": "C4618",
+      "label": "ⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "bosom"
+    }
+  ]
+}

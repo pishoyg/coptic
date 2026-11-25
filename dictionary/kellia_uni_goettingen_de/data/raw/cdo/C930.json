@@ -1,0 +1,39 @@
+{
+  "id": "C930",
+  "forms": [
+    {
+      "id": "CF3204",
+      "orth": "ⲙⲛⲧⲣⲉϥⲉⲓⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1087",
+      "bibliography": "CD 81a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C929",
+      "label": "ⲉⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "likeness, aspect"
+    },
+    {
+      "target": "C928",
+      "label": "ⲉⲓⲛⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "resemble, be like"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "id": "C3397",
+  "forms": [
+    {
+      "id": "CF8689",
+      "orth": "ⲥⲓⲟⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2885,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ⲥⲓⲟⲟⲩⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4427,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲓⲁⲟⲩⲛ",
+      "dialect": "S",
+      "id": "1512.2"
+    },
+    {
+      "orth": "ⲥⲓⲱⲟⲩⲛⲓ",
+      "dialect": "B",
+      "id": "1512.3"
+    },
+    {
+      "orth": "ⲥⲉⲓⲱⲟⲩⲛⲓ",
+      "dialect": "B",
+      "id": "1512.4"
+    },
+    {
+      "orth": "ⲥⲉⲱⲟⲩⲛⲓ",
+      "dialect": "B",
+      "id": "1512.5"
+    },
+    {
+      "orth": "ⲥⲓⲟⲟⲛ",
+      "dialect": "S",
+      "id": "3098.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3869",
+      "bibliography": "CD 369b; CED 168; KoptHWb 179; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲙⲧⲱⲕ ⲛⲧ**ⲥⲓⲟⲟⲩⲛ** ·",
+      "english": "and went into the furnace of the bath",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲓϫⲱⲕⲙ ϩⲛⲟⲩ**ⲥⲓⲟⲟⲩⲛ** ·",
+      "english": "and that I have never once washed in a bath?",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲛⲟϫⲕ ⲉⲡⲓⲛⲧⲱⲕ ⲛⲧ**ⲥⲓⲟⲟⲩⲛ** ·",
+      "english": "He hath commanded me to cast thee into the furnace of the baths",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲧⲱⲕ",
+        5,
+        21.335
+      ],
+      [
+        "ϫⲱⲕⲙ",
+        4,
+        17.482
+      ],
+      [
+        "ⲓⲛⲧⲱⲕ",
+        1,
+        16.691
+      ],
+      [
+        "ⲡⲣⲟⲃⲁⲥⲧⲓⲟⲛ",
+        1,
+        16.691
+      ],
+      [
+        "ⲇⲏⲙⲟⲥⲓⲟⲛ",
+        1,
+        14.691
+      ],
+      [
+        "ⲕⲱⲛⲓⲁ",
+        1,
+        14.106
+      ],
+      [
+        "ⲧ",
+        10,
+        12.13
+      ],
+      [
+        "ⲛ",
+        15,
+        11.623
+      ],
+      [
+        "ⲡⲗⲁⲝ",
+        1,
+        11.521
+      ],
+      [
+        "ⲧⲱϩⲥ",
+        1,
+        11.106
+      ],
+      [
+        "ⲡⲱⲣϣ",
+        1,
+        9.897
+      ],
+      [
+        "ⲣⲟⲕϩ",
+        1,
+        9.846
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        9.68
+      ],
+      [
+        "ϭⲓⲛⲉ",
+        1,
+        9.593
+      ],
+      [
+        "ⲡ",
+        8,
+        9.59
+      ],
+      [
+        "ⲛⲉϫ",
+        1,
+        9.137
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        8.95
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        8.601
+      ],
+      [
+        "ϩⲛ",
+        4,
+        8.572
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        8.244
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲓⲟⲟⲩⲛ_0_node",
+          15
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_3_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲇⲏⲙⲟⲥⲓⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲇⲏⲙⲟⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲕⲟⲧⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲓⲟⲟⲩⲛ_0_node",
+          "ⲛ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          "ⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲛ",
+          "ⲥⲟⲡ_3_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲥⲓⲟⲟⲩⲛ_0_node",
+          "ⲙ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲓⲟⲟⲩⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲇⲏⲙⲟⲥⲓⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲇⲏⲙⲟⲥⲓⲟⲛ_3_post_ⲡ",
+          "ⲛ_4_post_ⲇⲏⲙⲟⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲇⲏⲙⲟⲥⲓⲟⲛ",
+          "ⲣⲁⲕⲟⲧⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          "ϩⲉⲛ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          "ⲥⲓⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲓⲟⲟⲩⲛ",
+          "ⲥⲓⲟⲟⲩⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2558,
+      "count": 15
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "ⲥⲉ",
+      "type": "cf",
+      "label": "Sitz, Stelle"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4951",
+    "demo_lemma": "s(.t)-ı ͗n",
+    "english": "bath; bath tax",
+    "german": "Bad; Badsteuer",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4951"
+  }
+}

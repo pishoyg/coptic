@@ -1,0 +1,98 @@
+{
+  "id": "C7902",
+  "forms": [
+    {
+      "id": "CF17870",
+      "orth": "ⲣⲉϥϭⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18662,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8782",
+      "bibliography": "CD 831b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲣⲕ",
+        1,
+        19.598
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϭⲱⲣϭ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18281,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7900",
+      "label": "ϭⲱⲣϭ",
+      "pos": "V",
+      "gloss": "provide, prepare"
+    },
+    {
+      "target": "C7901",
+      "label": "ϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "preparation, equipment"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "C6809",
+  "forms": [
+    {
+      "id": "CF15666",
+      "orth": "ⲣϩⲣⲏⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7524",
+      "bibliography": "CD 704a; CED 294; KoptHWb 388; ChLCS 94a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6808",
+      "label": "ϩⲣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "flower"
+    },
+    {
+      "target": "C6810",
+      "label": "ⲟⲩⲁⲙϩⲣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "flower-eater, a beetle"
+    }
+  ]
+}

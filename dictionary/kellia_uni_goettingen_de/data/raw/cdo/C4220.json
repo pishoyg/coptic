@@ -1,0 +1,154 @@
+{
+  "id": "C4220",
+  "forms": [
+    {
+      "id": "CF10387",
+      "orth": "ⲧⲕⲃⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12035,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF10388",
+      "orth": "ⲧⲕⲃⲟ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4786",
+      "bibliography": "CD 100a; CDC 63b; KoptHWb 227; DELC 212b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲛⲟⲩⲗⲁⲕⲕⲟⲥ ⲉϣⲁϥ**ⲧⲕⲃⲟ** ⲙⲡⲉϥⲙⲱⲟⲩ ⲡⲁⲓⲣⲏϯ ⲥⲕⲏⲃ ⲛϫⲉⲧⲉⲥⲕⲁⲕⲓⲁ ⲟⲩⲙⲉⲧⲁⲥⲉⲃⲏⲥ ⲛⲉⲙⲟⲩⲧⲁⲗⲉⲡⲱⲣⲓⲁ ⲉⲩⲉⲥⲱⲧⲉⲙ ⲉⲣⲱⲟⲩ ⲛϧⲏⲧⲥ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ ⲉⲩⲭⲏ ϩⲓϫⲉⲛⲡⲉⲥϩⲟ .",
+      "english": "As a cistern cools water, so her wickedness cools her, ungodliness and misery shall be heard in her, as continually before her.",
+      "source": "24_Ieremias_06",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲗⲁⲕⲕⲟⲥ",
+        1,
+        13.764
+      ],
+      [
+        "ⲙⲱⲟⲩ",
+        1,
+        10.54
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.666
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ⲧⲕⲃⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲧⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲱⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ⲧⲕⲃⲟ",
+          "ϥ_1_pre_ⲧⲕⲃⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲕⲃⲟ",
+          "ⲧⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲕⲃⲟ_0_node",
+          "ⲙ_1_post_ⲧⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲕⲃⲟ",
+          "ⲡⲉϥ_3_post_ⲙⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲱⲟⲩ",
+          "ⲙⲱⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11472,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1112",
+      "type": "cf",
+      "label": "be, become cool"
+    }
+  ]
+}

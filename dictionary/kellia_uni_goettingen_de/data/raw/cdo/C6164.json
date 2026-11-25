@@ -1,0 +1,176 @@
+{
+  "id": "C6164",
+  "forms": [
+    {
+      "id": "CF14336",
+      "orth": "ⲣϣⲟⲩϣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15791,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6851",
+      "bibliography": "CD 604b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉ**ⲣϣⲟⲩϣⲟ**ⲩ ⲙⲙⲱⲧⲛ ⲁⲩⲱ ⲙⲡⲉⲣⲧⲁⲩⲉⲛⲟϭ ⲛϣⲁϫⲉ ⲙⲡⲉⲣⲧⲣⲉⲙⲛⲧϩⲉⲣⲟⲩⲱ ⲉⲓ ⲉⲃⲟⲗ ϩⲛⲧⲉⲧⲛⲧⲁⲡⲣⲟ ϫⲉⲡⲛⲟⲩⲧⲉ ⲙⲡⲥⲟⲟⲩⲛ ⲡⲉ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛⲧⲟϥ ⲡⲉ ⲡⲛⲟⲩⲧⲉ ⲉⲧⲥⲟⲃⲧⲉ ⲛⲛⲉϥϩⲃⲏⲩⲉ",
+      "english": "Boast not, and utter not high things; let not high-sounding words come out of your mouth, for the Lord is a God of knowledge, and God prepares his own designs.",
+      "source": "I Samuel 2",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲃⲉⲗⲗⲁⲕ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        11.551
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.732
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡ_1_pre_ⲣϣⲟⲩϣⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲣϣⲟⲩϣⲟ",
+          1
+        ],
+        [
+          "ⲣϣⲟⲩϣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_post_ⲣϣⲟⲩϣⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲣⲧⲁⲩⲉⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡ_1_pre_ⲣϣⲟⲩϣⲟ",
+          "ⲉ_1_pre_ⲣϣⲟⲩϣⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲣϣⲟⲩϣⲟ",
+          "ⲣϣⲟⲩϣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣϣⲟⲩϣⲟ_0_node",
+          "ⲩ_1_post_ⲣϣⲟⲩϣⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_post_ⲣϣⲟⲩϣⲟ",
+          "ⲁⲩⲱ_5_post_ⲣⲧⲁⲩⲉⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲣⲧⲁⲩⲉⲛⲟϭ",
+          "ⲙ_2_post_ⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15390,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6161",
+      "label": "ϣⲟⲩϣⲟⲩ",
+      "pos": "V",
+      "gloss": "boast, pride oneself"
+    },
+    {
+      "target": "C6162",
+      "label": "ϣⲟⲩϣⲟⲩ",
+      "pos": "N",
+      "gloss": "boast, pride"
+    },
+    {
+      "target": "C6165",
+      "label": "ϯϣⲟⲩϣⲟ",
+      "pos": "V",
+      "gloss": "glorify"
+    },
+    {
+      "target": "C6163",
+      "label": "ⲙⲛⲧϣⲟⲩϣⲟ",
+      "pos": "N",
+      "gloss": "pride, impudence"
+    }
+  ]
+}

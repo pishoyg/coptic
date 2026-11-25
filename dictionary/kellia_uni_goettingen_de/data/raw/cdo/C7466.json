@@ -1,0 +1,205 @@
+{
+  "id": "C7466",
+  "forms": [
+    {
+      "id": "CF16991",
+      "orth": "ϫⲟϥϫϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7077,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲟⲃϫⲃ",
+      "dialect": "S",
+      "id": "719.1"
+    },
+    {
+      "orth": "ϫⲟϥϫⲉϥ",
+      "dialect": "S",
+      "id": "719.2"
+    },
+    {
+      "orth": "ϫⲉϥϫⲱϥ⸗",
+      "dialect": "S",
+      "id": "719.3"
+    },
+    {
+      "orth": "ϫⲉϥϫⲱϥ†",
+      "dialect": "S",
+      "id": "719.4"
+    },
+    {
+      "orth": "ϫⲟϥϫⲉϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4107,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲉϥϫⲱϥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3930,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲉϥϫⲱϥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3930,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲃϫⲱⲃ⸗",
+      "dialect": "F",
+      "id": "719.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8262",
+      "bibliography": "CD 796b; CED 322; KoptHWb 440; DELC 333a; ChLCS 105a"
+    },
+    {
+      "id": "CS8263",
+      "bibliography": "CD 796b; CED 322; KoptHWb 440; DELC 333a; ChLCS 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲇⲁⲓⲙⲱⲛ ⲇⲉ ⲙⲡⲉϥⲧⲱⲟⲩⲛ ϩⲁⲡ**ϫⲟϥϫϥ** ⲙⲡⲉⲑⲃⲃⲓⲟ",
+      "english": "And the demon could not bear the fire of his humility.",
+      "source": "Apophthegmata Patrum Sahidic 127: N 298",
+      "urn": "urn:cts:copticLit:ap.127.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲃⲃⲓⲟ",
+        2,
+        14.331
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        2,
+        12.272
+      ],
+      [
+        "ϩⲁ",
+        2,
+        11.865
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟϥϫϥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲟϥϫϥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲑⲃⲃⲓⲟ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟϥϫϥ_0_node",
+          "ⲙ_1_post_ϫⲟϥϫϥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲟϥϫϥ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲑⲃⲃⲓⲟ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6627,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C7455",
+      "type": "cf",
+      "label": "burn, scorch"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7467",
+      "label": "ϫⲟϥϫϥ",
+      "pos": "N",
+      "gloss": "burning"
+    }
+  ],
+  "etym": {
+    "egy_num": "182140",
+    "egy_lemma": "ḏꜣfḏꜣf",
+    "demo_num": "d7739",
+    "demo_lemma": "ḏfḏf",
+    "english": "to burn up",
+    "german": "(jmdn.) verbrennen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/182140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7739"
+  }
+}

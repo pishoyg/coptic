@@ -1,0 +1,84 @@
+{
+  "id": "C10416",
+  "forms": [
+    {
+      "id": "CF27856",
+      "orth": "ⲥⲁⲣⲕⲓⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27857",
+      "orth": "ⲥⲁⲣⲕⲓⲕⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14060",
+      "bibliography": "DDGLC",
+      "cu_ID": "5922"
+    },
+    {
+      "id": "CS14061",
+      "bibliography": "DDGLC",
+      "cu_ID": "2012"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲃⲱ",
+        1,
+        12.303
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.51
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲁⲣⲕⲓⲕⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "2582",
+    "grl_lemma": "σαρκικός",
+    "grl_meaning": "of or like flesh, fleshly",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1584b"
+  }
+}

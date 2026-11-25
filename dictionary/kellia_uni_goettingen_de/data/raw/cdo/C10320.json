@@ -1,0 +1,240 @@
+{
+  "id": "C10320",
+  "forms": [
+    {
+      "id": "CF27441",
+      "orth": "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF27442",
+      "orth": "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF27443",
+      "orth": "ⲡⲣⲟⲥⲉⲛⲉⲅⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8265,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13868",
+      "bibliography": "DDGLC",
+      "cu_ID": "8386"
+    },
+    {
+      "id": "CS13869",
+      "bibliography": "DDGLC",
+      "cu_ID": "10403"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲅ**ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ** ⲙⲙⲟⲛ · ⲛⲁϥ ⲛⲟⲩⲁⲁⲃ · ⲉⲛⲟ ⲛⲁⲧⲧⲱⲗⲙ · ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ · ϩⲛⲟⲩⲁⲅⲁⲡⲏ · ϫⲉⲛⲧⲟⲕ · ⲱ ⲡⲛⲟϭ · ⲛⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲙⲓⲭⲁⲏⲗ · ⲡⲉ ⲡⲛϥⲁⲓ‐ⲣⲟⲟⲩϣ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 5",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:62-70",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧϫⲓ ⲛⲛⲑⲩⲥⲓⲁ · ⲙⲛⲛⲥⲟⲡⲥⲡ ⲛⲛⲣⲱⲙⲉ · ⲉⲓ**ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ** ⲙⲙⲟⲟⲩ · ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI)",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:49-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲛⲟⲩϩⲙ ⲛⲛⲉⲧϩⲓϫⲙⲡⲕⲁϩ · ⲉϥ**ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ** ⲙⲙⲟⲟⲩ ⲙⲡⲉⲛⲛⲟⲩⲧⲉ ⲛⲇⲏⲙⲓⲟⲩⲣⲅⲟⲥ ϩⲛⲧⲉϥⲁⲅⲁⲡⲏ · ⲉⲧⲟϣ ⲉϩⲟⲩⲛ ⲉⲣⲟⲛ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧϩⲏ",
+        1,
+        14.843
+      ],
+      [
+        "ⲙⲙⲟ",
+        3,
+        10.15
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        8.496
+      ],
+      [
+        "ⲅ",
+        1,
+        7.654
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.342
+      ],
+      [
+        "ⲙ",
+        2,
+        6.766
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.728
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ_0_node",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲙ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲡⲉⲛ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲅ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ",
+          "ⲡⲣⲟⲥⲉⲛⲉⲅⲕⲉⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6554,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1871",
+    "grl_lemma": "προσφέρω",
+    "grl_meaning": "to bring to or upon, apply to",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1529b; Preisigke 2:417"
+  }
+}

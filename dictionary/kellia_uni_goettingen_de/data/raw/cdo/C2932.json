@@ -1,0 +1,343 @@
+{
+  "id": "C2932",
+  "forms": [
+    {
+      "id": "CF7728",
+      "orth": "ϭⲓⲛⲡⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5406,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3357",
+      "bibliography": "CD 276a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲧⲉⲕ**ϭⲓⲛⲡⲱⲧ** ϣⲱⲡⲉ ⲛⲁⲕ ⲉⲥⲟⲣϫ ·",
+      "english": "and let thy career be strenuous.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲙⲟⲥ ⲁⲩⲱ ⲧ**ϭⲓⲛⲡⲱⲧ** ⲛⲛⲥⲓⲟⲩ · ⲡϩⲩⲙⲛⲟⲥ ⲛⲛⲁⲅⲅⲉⲗⲟⲥ · ⲧϩⲟⲧⲉ ⲛⲛϣⲟⲟⲥ ·",
+      "english": "the course and the disappearance of the star; the hymns of the angles, the fear of the shepherds",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲥⲕⲟⲡⲟⲥ ⲇⲉ ⲡⲉϫⲁϥ ϫⲉϯⲛⲁⲩ ⲁⲛⲟⲕ ⲉⲧ**ϭⲓⲛⲡⲱⲧ** ⲙⲡϣⲟⲣⲡ ⲉⲥⲟ ⲛⲧϩⲉ ⲛⲧϭⲓⲛⲡⲱⲧ ⲛⲁⲭⲓⲙⲁⲁⲥ ⲡϣⲏⲣⲉ ⲛⲥⲁⲇⲱⲕ ⲡⲉϫⲉⲡⲣⲣⲟ ϫⲉⲟⲩⲣⲱⲙⲉ ⲉⲛⲁⲛⲟⲩϥ ⲡⲉ ⲡⲁⲓ ⲁⲩⲱ ϥⲛⲁⲉⲓ ⲙⲛⲟⲩⲱ ⲉⲛⲁⲛⲟⲩϥ",
+      "english": "And the watchman said, I see the running of the first as the running of Achimaas the son of Sadoc. And the king said, He is a good man, and will come to report glad tidings.",
+      "source": "II Samuel 18",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲭⲓⲙⲁⲁ",
+        1,
+        18.598
+      ],
+      [
+        "ⲧⲣⲟⲙⲟⲥ",
+        1,
+        16.598
+      ],
+      [
+        "ⲥⲓⲟⲩ",
+        1,
+        11.954
+      ],
+      [
+        "ⲧ",
+        4,
+        10.071
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        1,
+        9.682
+      ],
+      [
+        "ⲛ",
+        5,
+        8.775
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.681
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        8.442
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        7.87
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.512
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.817
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        6.29
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.024
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲓⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁⲭⲓⲙⲁⲁ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲁⲭⲓⲙⲁⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          "ⲧ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲡⲱⲧ",
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          "ⲛ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲡⲱⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲥⲓⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          "ⲙ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲡⲱⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲡⲱⲧ_0_node",
+          "ⲛⲁⲭⲓⲙⲁⲁ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲭⲓⲙⲁⲁ_1_post_ϭⲓⲛⲡⲱⲧ",
+          "ⲥ_2_post_ⲛⲁⲭⲓⲙⲁⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲁⲭⲓⲙⲁⲁ",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲛⲡⲱⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲛⲡⲱⲧ",
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4980,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2929",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "place of refuge; race-course"
+    },
+    {
+      "target": "C2930",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outgoing, exit"
+    },
+    {
+      "target": "C2925",
+      "label": "ⲡⲱⲧ",
+      "pos": "V",
+      "gloss": "run, flee, go"
+    },
+    {
+      "target": "C2928",
+      "label": "ⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "course, flight"
+    },
+    {
+      "target": "C2927",
+      "label": "ⲡⲱⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "run, go forth"
+    },
+    {
+      "target": "C2926",
+      "label": "ⲡⲱⲧ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "run after, pursue"
+    },
+    {
+      "target": "C2931",
+      "label": "ⲣⲉϥⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "runner"
+    }
+  ]
+}

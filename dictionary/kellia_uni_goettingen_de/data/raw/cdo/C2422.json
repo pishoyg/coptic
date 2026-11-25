@@ -1,0 +1,186 @@
+{
+  "id": "C2422",
+  "forms": [
+    {
+      "id": "CF6619",
+      "orth": "ⲛⲉⲃⲁϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6395,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2788",
+      "bibliography": "CD 221b; KoptHWb 119"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲥⲁϫⲓ ⲉϥϣⲟⲩⲓⲧ ⲛⲱⲧⲉⲛ ⲁⲛ ⲡⲉ ⲫⲁⲓ ϫⲉⲫⲁⲓ ⲡⲉ ⲡⲉⲧⲉⲛⲱⲛϧ ⲟⲩⲟϩ ⲉⲑⲃⲉⲡⲁⲓⲥⲁϫⲓ ⲉⲣⲉⲧⲉⲛⲉⲉⲣ **ⲛⲉⲃⲁϩⲓ** ⲛϧⲣⲏⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲫⲏ ⲛⲑⲱⲧⲉⲛ ⲉⲧⲉⲧⲉⲛⲛⲁⲉⲣϫⲓⲛⲓⲟⲣ ⲙⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ ⲙⲙⲁⲩ ⲉⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ ⲙⲙⲟϥ",
+      "english": "For this is no vain word to you; for it is your life, and because of this word ye shall live long upon the land, into which ye go over Jordan to inherit it.",
+      "source": "05_Deuteronomium_32",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲃⲏⲗ ⲉⲑⲃⲉⲡϫⲱⲛⲧ ⲛⲧⲉϩⲁⲛϫⲁϫⲓ ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲧⲉⲙⲉⲣ **ⲛⲉⲃⲁϩⲓ** ⲟⲩⲟϩ ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲧⲉⲙⲧⲱⲟⲩⲛ ⲉϫⲱⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧϯ ⲟⲩⲃⲏⲟⲩ ⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩϫⲟⲥ ϫⲉⲧⲉⲛϫⲓϫ ⲉⲧϭⲟⲥⲓ ⲟⲩⲟϩ ⲡϭⲟⲓⲥ ⲁⲛ ⲡⲉ ⲉⲧⲁϥⲉⲣⲛⲁⲓ ⲧⲏⲣⲟⲩ",
+      "english": "Were it not for the wrath of the enemy, lest they should live long, lest their enemies should combine against them; lest they should say, Our own high arm, and not the Lord, has done all these things.",
+      "source": "05_Deuteronomium_32",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧ",
+        2,
+        12.495
+      ],
+      [
+        "ⲉⲣ",
+        2,
+        11.658
+      ],
+      [
+        "ⲧⲉⲛⲉ",
+        1,
+        11.133
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        1,
+        9.747
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        1,
+        9.058
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        8.471
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        8.454
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.891
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        7.423
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        1,
+        7.284
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲃⲁϩⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5879,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C284",
+      "type": "cf",
+      "label": "length, limit of life"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2419",
+      "label": "ⲁⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordless"
+    },
+    {
+      "target": "C2421",
+      "label": "ⲉⲣⲛⲏⲃ",
+      "pos": "V",
+      "gloss": "be lord"
+    },
+    {
+      "target": "C2420",
+      "label": "ⲙⲉⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordship"
+    },
+    {
+      "target": "C2425",
+      "label": "ⲛⲉⲃϩⲏⲧ",
+      "pos": "N",
+      "gloss": "lord of mind, man of sense"
+    },
+    {
+      "target": "C2423",
+      "label": "ⲛⲉⲃⲏⲓ",
+      "pos": "N",
+      "gloss": "lord of house, householder"
+    },
+    {
+      "target": "C2424",
+      "label": "ⲛⲉⲃⲓⲟϩⲓ",
+      "pos": "N",
+      "gloss": "lord of the field, landowner"
+    },
+    {
+      "target": "C2417",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lord, master, owner"
+    },
+    {
+      "target": "C2418",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "mistress, lady"
+    }
+  ]
+}

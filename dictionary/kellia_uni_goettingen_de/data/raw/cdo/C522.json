@@ -1,0 +1,81 @@
+{
+  "id": "C522",
+  "forms": [
+    {
+      "id": "CF2058",
+      "orth": "ⲉⲓⲣⲉ ⲛⲃⲣⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2059",
+      "orth": "ⲓⲣⲓ ⲛⲃⲉⲣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS632",
+      "bibliography": "CD 43b; KoptHWb 27"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C516",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "new, young"
+    },
+    {
+      "target": "C517",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "new thing; young person"
+    },
+    {
+      "target": "C518",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "uncultivated land"
+    },
+    {
+      "target": "C520",
+      "label": "ⲙⲉⲧⲉⲙⲃⲉⲣⲓ",
+      "pos": "N",
+      "gloss": "feast of renovation or consecration (of a church)"
+    },
+    {
+      "target": "C519",
+      "label": "ⲙⲛⲧⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "newness, youth"
+    },
+    {
+      "target": "C521",
+      "label": "ⲛⲃⲣⲣⲉ",
+      "pos": "ADV",
+      "gloss": "newly, recently; afresh"
+    },
+    {
+      "target": "C523",
+      "label": "ⲣⲃⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "become new"
+    }
+  ]
+}

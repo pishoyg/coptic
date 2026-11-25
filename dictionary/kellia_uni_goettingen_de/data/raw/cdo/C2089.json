@@ -1,0 +1,179 @@
+{
+  "id": "C2089",
+  "forms": [
+    {
+      "id": "CF5879",
+      "orth": "ⲣⲉϥϯⲙⲁϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5922,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2422",
+      "bibliography": "CD 190a; KoptHWb 103"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓⲥⲣⲱϥⲧ ⲟⲩⲟϩ ⲛⲁⲓϧⲟⲧϧⲉⲧ ⲙⲡⲁⲡⲛⲉⲩⲙⲁ ⲙⲏ ϥⲛⲁⲭⲁⲧ ⲛⲥⲱϥ ⲛϫⲉⲡϭⲟⲓⲥ ϣⲁⲉⲛⲉϩ ⲟⲩⲟϩ ϥⲛⲁⲟⲩⲁϩⲧⲟⲧϥ ⲁⲛ ϫⲉⲉⲧ**ⲣⲉϥϯⲙⲁϯ**",
+      "english": "All mine enemies set a watch against me: I was troubled, and spoke not.",
+      "source": "19_Psalmi_76",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:76",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲫⲙⲉⲩⲓ ⲛⲱⲟⲩ ⲉⲑⲣⲟⲩϭⲛⲉϫⲱⲟⲩ ⲛⲛⲓⲁⲣⲭⲏ ⲛⲉⲙⲛⲓⲉⲝⲟⲩⲥⲓⲁ ⲉⲩⲟⲓ ⲛ**ⲣⲉϥϯⲙⲁϯ** ⲛⲥⲉϣⲱⲡⲓ ⲉⲩⲥⲉⲃⲧⲱⲧ ⲉϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉⲑⲛⲁⲛⲉⲩ .",
+      "english": "Remind them to be in subjection to rulers and to authorities, to be obedient, to be ready for every good work,",
+      "source": "17_Titus_03",
+      "urn": "urn:cts:copticLit:nt.titus.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲱⲧ",
+        1,
+        11.695
+      ],
+      [
+        "ⲉ",
+        3,
+        8.772
+      ],
+      [
+        "ⲓⲉ",
+        1,
+        8.706
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        8.583
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.736
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.015
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        6.634
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲧ",
+        1,
+        6.525
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥϯⲙⲁϯ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5427,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2085",
+      "label": "ϭⲓⲛⲙⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "obtaining"
+    },
+    {
+      "target": "C2088",
+      "label": "ϯⲙⲁϯ",
+      "pos": "N",
+      "gloss": "assent, good pleasure"
+    },
+    {
+      "target": "C2087",
+      "label": "ϯⲙⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "reach, obtain, enjoy; attain, consent, agree"
+    },
+    {
+      "target": "C2090",
+      "label": "ⲁⲧϯⲙⲁϯ",
+      "pos": "N",
+      "gloss": "not agreeing"
+    },
+    {
+      "target": "C2084",
+      "label": "ⲙⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "reach, obtain, enjoy; be successful, hit the mark"
+    },
+    {
+      "target": "C2086",
+      "label": "ⲙⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "attainment, success"
+    }
+  ]
+}

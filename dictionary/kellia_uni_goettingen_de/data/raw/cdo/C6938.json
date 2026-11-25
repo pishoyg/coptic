@@ -1,0 +1,51 @@
+{
+  "id": "C6938",
+  "forms": [
+    {
+      "id": "CF15927",
+      "orth": "ϭⲓⲛϩⲱⲧⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7658",
+      "bibliography": "CD 725b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12027",
+      "label": "ϩⲟⲧⲡ",
+      "pos": "N",
+      "gloss": "thing joined (?), chain, rim"
+    },
+    {
+      "target": "C6935",
+      "label": "ϩⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "join, attune, be reconciled, sink (of sun, stars)"
+    },
+    {
+      "target": "C6936",
+      "label": "ϩⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "joint, joining, reconciliation"
+    },
+    {
+      "target": "C6937",
+      "label": "ⲙⲁ ⲛϩⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "place of sinking (of sun), West"
+    }
+  ]
+}

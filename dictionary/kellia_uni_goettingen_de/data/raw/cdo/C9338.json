@@ -1,0 +1,96 @@
+{
+  "id": "C9338",
+  "forms": [
+    {
+      "id": "CF23486",
+      "orth": "ⲕⲁⲧⲁⲗⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF23492",
+      "orth": "ⲕⲁⲧⲁⲗⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23488",
+      "orth": "ⲕⲁⲧⲁⲗⲟⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23489",
+      "orth": "ⲕⲁⲧⲁⲗⲩ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23487",
+      "orth": "ⲕⲁⲧⲁⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23491",
+      "orth": "ⲕⲁⲧⲁⲗⲩⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23490",
+      "orth": "ⲕⲁⲧⲁⲗⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3900,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF23493",
+      "orth": "ⲕⲁⲧⲁⲗⲩⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11719",
+      "bibliography": "DDGLC",
+      "cu_ID": "4074"
+    },
+    {
+      "id": "CS11720",
+      "bibliography": "DDGLC",
+      "cu_ID": "1592"
+    },
+    {
+      "id": "CS11721",
+      "bibliography": "DDGLC",
+      "cu_ID": "5355"
+    },
+    {
+      "id": "CS11722",
+      "bibliography": "DDGLC",
+      "cu_ID": "322"
+    },
+    {
+      "id": "CS11723",
+      "bibliography": "DDGLC",
+      "cu_ID": "5356"
+    },
+    {
+      "id": "CS11724",
+      "bibliography": "DDGLC",
+      "cu_ID": "8384"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1066",
+    "grl_lemma": "καταλύω",
+    "grl_meaning": "to put down, destroy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 899b; Preisigke 1:758"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "C3941",
+  "forms": [
+    {
+      "id": "CF9819",
+      "orth": "ⲥⲓϥⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲏϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.58,
+        "rank": 372,
+        "count": 407
+      }
+    },
+    {
+      "orth": "ⲥⲓⲃⲉ",
+      "dialect": "S",
+      "id": "1530.2"
+    },
+    {
+      "orth": "ⲥⲏⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1981,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲥⲓϥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2677,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲥⲓϥⲓ",
+      "dialect": "F",
+      "id": "1530.5"
+    },
+    {
+      "orth": "ⲥⲓⲃⲓ",
+      "dialect": "F",
+      "id": "1530.6"
+    },
+    {
+      "orth": "ⲥⲓϥ",
+      "dialect": "F",
+      "id": "1530.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4472",
+      "bibliography": "CD 379a; CED 171; KoptHWb 209; DELC 204; ChLCS 53b"
+    },
+    {
+      "id": "CS4473",
+      "bibliography": "CD 379a; KoptHWb 209; ChLCS 53b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "133990",
+    "egy_lemma": "sfṯ",
+    "demo_num": "d5270",
+    "demo_lemma": "sf(j)",
+    "english": "[one of the seven sacred oils]",
+    "german": "[eines der sieben heiligen Öle]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/133990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5270"
+  }
+}

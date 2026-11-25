@@ -1,0 +1,843 @@
+{
+  "id": "C1416",
+  "forms": [
+    {
+      "id": "CF4253",
+      "orth": "ⲕⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.4,
+        "rank": 255,
+        "count": 695
+      }
+    },
+    {
+      "orth": "ⲕⲱϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.21,
+        "rank": 140,
+        "count": 781
+      }
+    },
+    {
+      "orth": "ⲕⲟⲧ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.96,
+        "rank": 348,
+        "count": 251
+      }
+    },
+    {
+      "orth": "ⲕⲟⲧ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 3.12,
+        "rank": 332,
+        "count": 492
+      }
+    },
+    {
+      "orth": "ⲕⲉⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1081,
+        "count": 83
+      }
+    },
+    {
+      "orth": "ⲕⲏⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1816,
+        "count": 36
+      }
+    },
+    {
+      "orth": "ⲕⲉⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.51,
+        "rank": 1100,
+        "count": 43
+      }
+    },
+    {
+      "orth": "ⲕⲱⲧⲉ",
+      "dialect": "A",
+      "id": "102.4"
+    },
+    {
+      "orth": "ⲕⲁⲧ⸗",
+      "dialect": "A",
+      "id": "102.5"
+    },
+    {
+      "orth": "ⲕⲱϯ",
+      "dialect": "F",
+      "id": "102.6"
+    },
+    {
+      "orth": "ⲕⲁⲧ-",
+      "dialect": "F",
+      "id": "102.7"
+    },
+    {
+      "orth": "ⲕⲁⲧ⸗",
+      "dialect": "F",
+      "id": "102.8"
+    },
+    {
+      "orth": "ⲕⲱⲧⲉ",
+      "dialect": "L",
+      "id": "102.9"
+    },
+    {
+      "orth": "ⲕⲁⲧ⸗",
+      "dialect": "L",
+      "id": "102.10"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1639",
+      "bibliography": "CD 124a; KoptHWb 71; ChLCS 19b"
+    },
+    {
+      "id": "CS1640",
+      "bibliography": "CD 124a; KoptHWb 71"
+    },
+    {
+      "id": "CS1641",
+      "bibliography": "CD 124a"
+    },
+    {
+      "id": "CS1642",
+      "bibliography": "CD 124a; ChLCS 19b"
+    },
+    {
+      "id": "CS1643",
+      "bibliography": "CD 124a"
+    },
+    {
+      "id": "CS1644",
+      "bibliography": "CD 124ab"
+    },
+    {
+      "id": "CS1645",
+      "bibliography": "CD 124b; KoptHWb 71; ChLCS 19a"
+    },
+    {
+      "id": "CS1646",
+      "bibliography": "CD 124b; KoptHWb 71; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲓⲇⲏ ⲛⲓⲓⲟⲩⲇⲁⲓ ⲥⲉⲉⲣⲉⲧⲓⲛ ⲛϩⲁⲛⲙⲏⲓⲛⲓ ⲟⲩⲟϩ ⲛⲓⲟⲩⲉⲓⲛⲓⲛ ⲥⲉ**ⲕⲱϯ** ⲛⲥⲁϯⲥⲟⲫⲓⲁ .",
+      "english": "For Jews ask for signs, Greeks seek after wisdom,",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ ⲅⲁⲣ ⲉ**ⲕⲱⲧⲉ** ⲛⲥⲁⲟⲩϣⲏⲙ ⲛⲧⲃⲧ ⲛⲁⲩ ·",
+      "english": "and I ought to seek for some small fish for them.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϥⲓⲁϩⲟⲙ ϧⲉⲛⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲡⲉϫⲁϥ ϫⲉⲁϧⲟ ⲡⲁⲓϫⲱⲟⲩ ϥ**ⲕⲱϯ** ⲛⲥⲁⲟⲩⲙⲏⲓⲛⲓ ⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲁⲛ ⲥⲉⲛⲁϯ ⲛⲟⲩⲙⲏⲓⲛⲓ ⲙⲡⲁⲓϫⲱⲟⲩ .",
+      "english": "He sighed deeply in his spirit, and said, 'Why does this generation seek a sign? Most certainly I tell you, no sign will be given to this generation.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩ**ⲕⲱⲧⲉ** ⲙⲡⲉⲩⲥⲟⲓ ⲉⲣⲟϥ ·",
+      "english": "which surround him with their bodies,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲓⲛⲁ ⲉⲩⲛⲁⲩ ⲛⲧⲟⲩⲛⲁⲩ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲧⲉⲙⲛⲁⲩ ⲟⲩⲟϩ ⲉⲩⲥⲱⲧⲉⲙ ⲛⲧⲟⲩⲥⲱⲧⲉⲙ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲧⲉⲙⲕⲁϯ ⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩ**ⲕⲟⲧ**ⲟⲩ ⲟⲩⲟϩ ⲛⲧⲟⲩⲭⲱ ⲛⲱⲟⲩ ⲉⲃⲟⲗ .",
+      "english": "that 'seeing they may see, and not perceive; and hearing they may hear, and not understand; lest perhaps they should turn again, and their sins should be forgiven them.''",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϩⲉⲛⲙⲟⲟⲩ ⲉⲓ ⲉϩⲟⲩⲛ ⲛⲁⲓ ϣⲁⲧⲁⲯⲩⲭⲏ : ⲁⲡⲛⲟⲩⲛ ⲛϩⲁⲉ **ⲕⲱⲧⲉ** ⲉⲣⲟⲓ : ⲟⲩϩⲩⲗⲟⲥ ⲁϥⲕⲱⲧⲉ ⲉⲧⲁⲁⲡⲉ :",
+      "english": "Water was poured around me to the soul: the lowest deep compassed me, my head went down",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲥⲁ",
+        430,
+        36.547
+      ],
+      [
+        "ⲛⲥⲱ",
+        222,
+        33.573
+      ],
+      [
+        "ⲉⲣⲟ",
+        195,
+        30.939
+      ],
+      [
+        "ⲟⲩ",
+        369,
+        30.336
+      ],
+      [
+        "ⲉ",
+        303,
+        29.747
+      ],
+      [
+        "ϥ",
+        340,
+        29.652
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        273,
+        29.358
+      ],
+      [
+        "ⲩ",
+        170,
+        28.349
+      ],
+      [
+        "ⲙ",
+        178,
+        28.01
+      ],
+      [
+        "ⲉⲧ",
+        148,
+        27.88
+      ],
+      [
+        "ⲓ",
+        131,
+        27.676
+      ],
+      [
+        "ⲛⲁ",
+        149,
+        27.612
+      ],
+      [
+        "ⲡⲓ",
+        151,
+        27.486
+      ],
+      [
+        "ⲛϫⲉ",
+        120,
+        27.315
+      ],
+      [
+        ".",
+        148,
+        27.245
+      ],
+      [
+        "ⲛ",
+        181,
+        27.09
+      ],
+      [
+        "ⲡ",
+        141,
+        27.038
+      ],
+      [
+        "ⲛⲓ",
+        120,
+        26.939
+      ],
+      [
+        "ⲕ",
+        97,
+        26.928
+      ],
+      [
+        "ⲛⲉⲙ",
+        115,
+        26.779
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        25,
+        25.076
+      ],
+      [
+        "ⲉⲣⲟ",
+        322,
+        23.024
+      ],
+      [
+        "ⲛⲥⲁ",
+        181,
+        22.807
+      ],
+      [
+        "ⲉ",
+        468,
+        21.975
+      ],
+      [
+        "ⲛ",
+        395,
+        20.233
+      ],
+      [
+        "ⲟⲩ",
+        256,
+        19.767
+      ],
+      [
+        "ⲧ",
+        200,
+        19.549
+      ],
+      [
+        "ⲙ",
+        229,
+        19.415
+      ],
+      [
+        "ⲛⲥⲱ",
+        71,
+        19.122
+      ],
+      [
+        "ϥ",
+        249,
+        18.948
+      ],
+      [
+        "ⲡ",
+        234,
+        18.655
+      ],
+      [
+        "ⲓ",
+        135,
+        18.628
+      ],
+      [
+        "ⲉⲧ",
+        147,
+        18.384
+      ],
+      [
+        "ⲁⲩⲱ",
+        164,
+        18.367
+      ],
+      [
+        "ⲧⲏⲣ",
+        97,
+        18.211
+      ],
+      [
+        "ⲥ",
+        139,
+        18.178
+      ],
+      [
+        "ⲁ",
+        178,
+        18.018
+      ],
+      [
+        "ⲩ",
+        148,
+        17.985
+      ],
+      [
+        "ϩⲙ",
+        89,
+        17.387
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        47,
+        17.341
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲱⲧⲉ",
+          30
+        ],
+        [
+          "ⲕⲱⲧⲉ_0_node",
+          172
+        ],
+        [
+          "ϥ_1_pre_ⲕⲱⲧⲉ",
+          22
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲱⲧⲉ",
+          17
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲱⲧⲉ",
+          16
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲱⲧⲉ",
+          10
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲱⲧⲉ",
+          10
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          21
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          8
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲕⲱⲧⲉ",
+          7
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          6
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲕⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲥⲫⲁⲓⲣⲁ",
+          5
+        ],
+        [
+          "ⲥⲫⲁⲓⲣⲁ_1_pre_ⲕⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲕⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲱⲧⲉ",
+          7
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          7
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ_3_post_ⲧ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲕⲱⲧⲉ",
+          "ⲧⲉ_2_pre_ⲥⲫⲁⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲥⲫⲁⲓⲣⲁ",
+          "ⲥⲫⲁⲓⲣⲁ_1_pre_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲫⲁⲓⲣⲁ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲕⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲱⲧⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_0_node",
+          "ⲛ_1_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲧⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲕⲱⲧⲉ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.42,
+      "rank": 219,
+      "count": 701
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1439",
+      "label": "ϩⲓⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "make a move, pay visit; encompass, encamp"
+    },
+    {
+      "target": "C1440",
+      "label": "ϩⲓⲕⲱⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pay visit"
+    },
+    {
+      "target": "C1447",
+      "label": "ϫⲓⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "take turn, be crooked"
+    },
+    {
+      "target": "C1441",
+      "label": "ϫⲓⲛϩⲓⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "visit"
+    },
+    {
+      "target": "C1422",
+      "label": "ϫⲓⲛⲕⲱϯ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "search after"
+    },
+    {
+      "target": "C1435",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1436",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1434",
+      "label": "ϭⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1446",
+      "label": "ϯⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, go about"
+    },
+    {
+      "target": "C1437",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "circular motion, turn, visit"
+    },
+    {
+      "target": "C1442",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "wheel"
+    },
+    {
+      "target": "C1443",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "basket"
+    },
+    {
+      "target": "C1444",
+      "label": "ⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "going round, turning, circuit; twist, knot; crookedness, guile"
+    },
+    {
+      "target": "C1449",
+      "label": "ⲕⲟⲧⲥⲓ",
+      "pos": "N",
+      "gloss": "circuit?"
+    },
+    {
+      "target": "C1423",
+      "label": "ⲕⲱϯ (ⲛⲧⲉⲛ-)",
+      "pos": "V",
+      "gloss": "seek, beg from sb"
+    },
+    {
+      "target": "C1424",
+      "label": "ⲕⲱϯ (ⲥⲁⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "turn about, circumvent"
+    },
+    {
+      "target": "C1450",
+      "label": "ⲕⲱⲧϥ",
+      "pos": "N",
+      "gloss": "circumference"
+    },
+    {
+      "target": "C1431",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, circuit, surroundings; turning (of water-wheel); seeking, enquiry"
+    },
+    {
+      "target": "C1433",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "PREP",
+      "gloss": "about, concerning"
+    },
+    {
+      "target": "C1430",
+      "label": "ⲕⲱⲧⲉ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go about outside"
+    },
+    {
+      "target": "C12171",
+      "label": "ⲕⲱⲧⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "surround"
+    },
+    {
+      "target": "C1427",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "turn, bend inwards; turn, bring round; return"
+    },
+    {
+      "target": "C1429",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "turn, go round; return"
+    },
+    {
+      "target": "C1418",
+      "label": "ⲕⲱⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "turn upon, go round, among"
+    },
+    {
+      "target": "C1425",
+      "label": "ⲕⲱⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wander out, round, return; turn away"
+    },
+    {
+      "target": "C1426",
+      "label": "ⲕⲱⲧⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "turn back"
+    },
+    {
+      "target": "C1419",
+      "label": "ⲕⲱⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go round with, turn hither and thither; inquire of, dispute with"
+    },
+    {
+      "target": "C1420",
+      "label": "ⲕⲱⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go round seeking, seek"
+    },
+    {
+      "target": "C1428",
+      "label": "ⲕⲱⲧⲉ ⲉϩⲟⲩⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "go in and out"
+    },
+    {
+      "target": "C1438",
+      "label": "ⲕⲱⲱⲃⲉ ⲛⲟⲩⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "compel a turn"
+    },
+    {
+      "target": "C1448",
+      "label": "ⲙⲛⲧⲙⲉⲧⲥⲁ ⲛⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "crookedness, dishonesty"
+    },
+    {
+      "target": "C1417",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "good conduct"
+    },
+    {
+      "target": "C1432",
+      "label": "ⲙⲡⲕⲱⲧⲉ",
+      "pos": "ADV",
+      "gloss": "round about"
+    },
+    {
+      "target": "C1421",
+      "label": "ⲣⲉϥⲕⲱⲧⲉ ⲛⲥⲁ-",
+      "pos": "N",
+      "gloss": "seeker"
+    },
+    {
+      "target": "C1445",
+      "label": "ⲣⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, plan, circumvent"
+    }
+  ],
+  "etym": {
+    "egy_num": "162530",
+    "egy_lemma": "qdi̯",
+    "demo_num": "d6485",
+    "demo_lemma": "qdj",
+    "english": "to go around; to surround; to return",
+    "german": "umhergehen; sich umkehren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162530",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6485"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "C3778",
+  "forms": [
+    {
+      "id": "CF31720",
+      "orth": "ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18201,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31719",
+      "orth": "ⲣⲉϥⲛⲉϫⲥⲟⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13533,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4289",
+      "bibliography": "CD 361b; ChLCS 51a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϣ",
+        1,
+        11.661
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ",
+          "ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C2691",
+      "type": "cf",
+      "label": "throw, cast"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3780",
+      "label": "ϩⲛⲁⲁⲩ ⲛⲕⲁⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3772",
+      "label": "ϫⲓⲛⲥⲓϯ",
+      "pos": "N",
+      "gloss": "sowing"
+    },
+    {
+      "target": "C3773",
+      "label": "ϫⲓⲛⲥⲓϯ",
+      "pos": "N",
+      "gloss": "sowing"
+    },
+    {
+      "target": "C3777",
+      "label": "ⲛⲉϫⲥⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "shoot arrow, throw dart"
+    },
+    {
+      "target": "C3779",
+      "label": "ⲣⲉϥⲧⲕⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "shooter of arrows, archer"
+    },
+    {
+      "target": "C3774",
+      "label": "ⲥⲉⲧⲉⲃⲣⲏϫ",
+      "pos": "N",
+      "gloss": "lightning"
+    },
+    {
+      "target": "C3771",
+      "label": "ⲥⲓϯ",
+      "pos": "N",
+      "gloss": "thing thrown, seed"
+    },
+    {
+      "target": "C3768",
+      "label": "ⲥⲓⲧⲉ",
+      "pos": "V",
+      "gloss": "throw, sow, put"
+    },
+    {
+      "target": "C3770",
+      "label": "ⲥⲓⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, vomit"
+    },
+    {
+      "target": "C3769",
+      "label": "ⲥⲓⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "throw, cast out"
+    },
+    {
+      "target": "C3775",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    },
+    {
+      "target": "C3776",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    }
+  ]
+}

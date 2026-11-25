@@ -1,0 +1,697 @@
+{
+  "id": "C10123",
+  "forms": [
+    {
+      "id": "CF26653",
+      "orth": "ⲡⲉⲗⲁⲅⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26654",
+      "orth": "ⲡⲉⲗⲁⲅⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2218,
+        "count": 25
+      }
+    },
+    {
+      "id": "CF26655",
+      "orth": "ⲡⲉⲗⲁⲅⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26656",
+      "orth": "ⲡⲉⲗⲁⲅⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3389,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF26657",
+      "orth": "ⲡⲉⲗⲁⲅⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26658",
+      "orth": "ⲡⲉⲗⲁⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26659",
+      "orth": "ⲡⲩⲗⲁⲅⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5370,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13388",
+      "bibliography": "DDGLC",
+      "cu_ID": "3649"
+    },
+    {
+      "id": "CS13389",
+      "bibliography": "DDGLC",
+      "cu_ID": "8309"
+    },
+    {
+      "id": "CS13390",
+      "bibliography": "DDGLC",
+      "cu_ID": "4328"
+    },
+    {
+      "id": "CS13391",
+      "bibliography": "DDGLC",
+      "cu_ID": "4509"
+    },
+    {
+      "id": "CS13392",
+      "bibliography": "DDGLC",
+      "cu_ID": "519"
+    },
+    {
+      "id": "CS13393",
+      "bibliography": "DDGLC",
+      "cu_ID": "7935"
+    },
+    {
+      "id": "CS13394",
+      "bibliography": "DDGLC",
+      "cu_ID": "2686"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲩⲫⲟϩ ⲇⲉ ⲉⲡⲓ**ⲡⲉⲗⲁⲅⲟⲥ** ⲛⲧⲉⲫⲓⲟⲙ ⲁϥϫⲟⲩϣⲧ ⲉⲡϣⲱⲓ ⲛϫⲉⲁⲃⲃⲁ ⲕⲩⲣⲓⲗⲗⲟⲥ ⲡⲓⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁϥⲛⲁⲩ ⲉⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲉϥϧⲉⲛⲑⲙⲏϯ ⲛϯϭⲏⲡⲓ ⲛⲉⲙⲡⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲙⲟⲩ ⲉⲣⲟⲛ ⲡⲉⲛⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ ⲏⲗⲓⲁⲥ ⲛⲃⲉⲣⲓ .",
+      "english": "As the bishops’ ship reached the open sea, Abba Cyril looked up and saw Apa Shenoute and his disciple being borne aloft in the midst of the cloud. He exclaimed, ‘Bless us, holy father, you are the new Elijah!’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲉⲓⲣϩⲟⲧⲉ ⲉϯⲡⲁⲟⲩⲟⲓ ⲉⲡ**ⲡⲉⲗⲁⲅⲟⲥ** ⲛⲛⲉⲕⲁⲣⲉⲧⲏ ·",
+      "english": "For this reason I am afraid to set out upon the sea of thy virtues;",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥ ⲟⲩⲙⲏϣ ⲅⲁⲣ ⲛⲉϩⲟⲟⲩ ϯϧⲟⲥⲓ ⲟⲩⲟϩ ϯϣⲧⲉⲣⲧⲱⲣ ⲉⲓⲉⲣϩⲟϯ ⲉϯ ⲙⲡⲁⲟⲩⲟⲓ ⲉϧⲟⲩⲛ ⲉⲛⲓϩⲃⲏⲟⲩⲓ ⲛϣⲫⲏⲣⲓ ⲛⲧⲉⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ϫⲉⲁⲛⲟⲕ ⲟⲩⲁⲥⲑⲉⲛⲏⲥ ⲟⲩⲟϩ ⲛϩⲓⲇⲓⲱⲧⲏⲥ ϧⲉⲛⲡⲥⲁϫⲓ ⲙⲏⲡⲱⲥ ⲛⲧⲁⲱⲙⲥ ϧⲉⲛⲡⲓ**ⲡⲉⲗⲁⲅⲟⲥ** ⲛⲧⲉⲛⲓⲙⲱⲟⲩ ⲉⲑⲃⲉϫⲉϯⲉⲙⲓ ⲛⲛⲏⲃⲓ ⲁⲛ .",
+      "english": "For many days I have been troubled and disturbed, fearing to go forward into the miraculous deeds of my father Apa Shenoute, as I am weak and unskilled in speaking, for fear that I should drown in a sea of water because I don't know how to swim.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϭⲉⲣⲱⲃ ⲡⲉ ⲉⲛⲧⲁϥⲧⲣⲉⲧⲡⲉⲧⲣⲁ ϣⲱⲡⲉ ⲙ**ⲡⲉⲗⲁⲅⲟⲥ** · ϫⲛⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲡⲉ ⲉⲧⲧⲃⲃⲟ ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "Which is the greater miracle? The rod which made the rock to become a lake of water, or the Cross which cleansed the world?'",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲛⲉⲣϩⲱⲧ ⲇⲉ ⲉⲃⲟⲗ ⲉⲡⲓ**ⲡⲉⲗⲁⲅⲟⲥ** ⲉⲧⲟⲩⲧⲱϥ ⲛⲕⲩⲡⲣⲟⲥ ⲛⲉⲙϯⲡⲁⲙⲫⲩⲗⲓⲁ ⲁⲛⲓ ⲉⲗⲩⲥⲧⲣⲁ ⲛⲧⲉϯⲕⲩⲗⲓⲕⲓⲁ .",
+      "english": "When we had sailed across the sea which is off Cilicia and Pamphylia, we came to Myra, a city of Lycia.",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁ ⲛⲁⲓ ⲉⲧⲃⲉⲧⲁⲥⲑⲉⲛⲉⲓⲁ ⲛⲧⲉⲫⲩⲥⲓⲥ · ⲁⲩⲱ ⲉⲧⲃⲉⲡ**ⲡⲉⲗⲁⲅⲟⲥ** ⲛⲧⲉⲕⲙⲛⲧⲁⲅⲁⲑⲟⲥ ·",
+      "english": "Have mercy upon me because of the weakness of nature, and because of the sea of Thy goodness.'",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲱⲙⲥ",
+        2,
+        14.265
+      ],
+      [
+        "ⲫⲟϩ",
+        2,
+        14.125
+      ],
+      [
+        "ⲓⲟⲙ",
+        2,
+        11.687
+      ],
+      [
+        "ⲙⲱⲟⲩ",
+        2,
+        11.218
+      ],
+      [
+        "ⲟⲩⲧⲱ",
+        1,
+        11.183
+      ],
+      [
+        "ⲡⲓ",
+        5,
+        10.415
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        9.949
+      ],
+      [
+        "ⲛⲧⲉ",
+        4,
+        9.744
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        2,
+        9.535
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        9.481
+      ],
+      [
+        "ⲉ",
+        3,
+        7.45
+      ],
+      [
+        "ⲫ",
+        2,
+        7.242
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        6.896
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.441
+      ],
+      [
+        "ⲁ",
+        2,
+        5.668
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        3.982
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.93
+      ],
+      [
+        "ⲛ",
+        1,
+        2.269
+      ],
+      [
+        "ϥ",
+        1,
+        2.102
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲁⲣⲏϫ",
+        2,
+        17.954
+      ],
+      [
+        "ⲧⲟⲣⲑⲱⲙⲁ",
+        1,
+        15.954
+      ],
+      [
+        "ⲛⲁⲧⲣⲏϫ",
+        1,
+        15.954
+      ],
+      [
+        "ⲕⲩⲃⲉⲣⲛⲓⲧⲏⲥ",
+        1,
+        15.954
+      ],
+      [
+        "ⲡⲗⲉⲁϩⲙ",
+        1,
+        15.954
+      ],
+      [
+        "ⲇⲓⲁⲡⲉⲣⲁ",
+        1,
+        14.954
+      ],
+      [
+        "ⲙⲛⲧϣⲁⲛⲁ",
+        1,
+        14.369
+      ],
+      [
+        "ⲡⲉⲥⲧⲁⲩⲣⲟⲥ",
+        1,
+        14.369
+      ],
+      [
+        "ⲡⲉⲣⲁ",
+        1,
+        14.369
+      ],
+      [
+        "ⲛ",
+        28,
+        13.587
+      ],
+      [
+        "ϩⲁϩⲟⲧⲉ",
+        1,
+        13.369
+      ],
+      [
+        "ⲕⲓⲗⲓⲕⲓⲁ",
+        1,
+        12.632
+      ],
+      [
+        "ⲙ",
+        15,
+        12.428
+      ],
+      [
+        "ⲕⲁⲧⲟⲣⲑⲱⲙⲁ",
+        1,
+        12.369
+      ],
+      [
+        "ⲙⲏⲏⲧⲉ",
+        2,
+        12.254
+      ],
+      [
+        "ⲡ",
+        17,
+        12.116
+      ],
+      [
+        "ⲉ",
+        15,
+        11.894
+      ],
+      [
+        "ⲟⲩⲏⲩ",
+        2,
+        11.846
+      ],
+      [
+        "ⲛⲟϭ",
+        5,
+        11.62
+      ],
+      [
+        "ⲣϩⲱⲧ",
+        1,
+        11.369
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲱⲟⲩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲓⲟⲙ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲱ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲟⲩⲧⲱ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲕⲩⲡⲣⲟⲥ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲙⲱⲟⲩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          "ⲓⲟⲙ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲟⲩⲧⲱ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲱ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ϥ_2_post_ⲟⲩⲧⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲟⲩⲧⲱ",
+          "ⲛ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϥ",
+          "ⲕⲩⲡⲣⲟⲥ_4_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          23
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          6
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲅⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲕⲁⲧⲟⲣⲑⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲟⲣⲑⲱⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲁⲣⲉⲧⲏ",
+          1
+        ],
+        [
+          "ⲁⲣⲉⲧⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ⲕⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲣⲑⲱⲙⲁ_3_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          3
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲛϩⲧⲏϥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲁϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲁϩⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_4_post_ⲉⲅⲕⲱⲙⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲉⲅⲕⲱⲙⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲅⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲅⲁⲑⲟⲥ",
+          "ⲙⲛⲧⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲛⲉⲕ_3_post_ⲕⲁⲧⲟⲣⲑⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲕⲁⲧⲟⲣⲑⲱⲙⲁ",
+          "ⲕⲁⲧⲟⲣⲑⲱⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲛⲉⲕ_3_post_ⲁⲣⲉⲧⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲁⲣⲉⲧⲏ",
+          "ⲁⲣⲉⲧⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲛⲉⲕ_3_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲕⲁ",
+          "ⲕⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁ_2_post_ⲛ",
+          "ⲧⲟⲣⲑⲱⲙⲁ_3_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧϣⲁⲛϩⲧⲏϥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          "ⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ϥ_3_post_ϩⲁϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲁϩⲟⲧⲉ",
+          "ϩⲁϩⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲗⲁⲅⲟⲥ_0_node",
+          "ⲉⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡⲉⲓ_4_post_ⲉⲅⲕⲱⲙⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲡⲉⲗⲁⲅⲟⲥ",
+          "ⲡ_4_post_ⲉⲅⲕⲱⲙⲓⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.16,
+      "rank": 1945,
+      "count": 25
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 2987,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2774",
+    "grl_lemma": "πέλαγος",
+    "grl_meaning": "sea, open sea, high sea",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1356a"
+  }
+}

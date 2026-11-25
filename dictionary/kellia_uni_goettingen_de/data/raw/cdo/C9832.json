@@ -1,0 +1,333 @@
+{
+  "id": "C9832",
+  "forms": [
+    {
+      "id": "CF25471",
+      "orth": "ⲙⲟⲩⲥⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25472",
+      "orth": "ⲙⲟⲩⲥⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3547,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12768",
+      "bibliography": "DDGLC",
+      "cu_ID": "9874"
+    },
+    {
+      "id": "CS12769",
+      "bibliography": "DDGLC",
+      "cu_ID": "1712"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲇⲣⲁⲕ ⲙⲓⲥⲁⲕ ⲁⲃⲇⲉⲛⲁⲅⲱ · ⲁⲩⲁⲑⲉⲧⲉⲓ ⲙⲡϫⲓϩⲣⲁϥ ⲛⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ · ⲉⲧⲃⲉⲡⲁⲓ ⲙⲡⲉϥⲉϣⲥⲟⲕⲟⲩ ϩⲛⲛⲉϥⲟⲩⲉⲗⲗⲉ ⲙ**ⲙⲟⲩⲥⲓⲕⲟⲛ** ⲟⲩⲇⲉ ⲙⲡⲉϥⲉϣⲁⲡⲁⲧⲁ ⲙⲙⲟⲟⲩ ϩⲛⲛϭⲓⲛⲟⲩⲱⲙ ⲛⲧⲉϥⲧⲣⲁⲡⲉⲍⲁ ·",
+      "english": "Shadrach, Meshach and Abednego disregarded the jeering of Nebuchadnezzar, and for this reason he was unable to compel them (to worship) by the songs and music of his instruments neither was he able to trick them by meals at his table.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲟⲩ**ⲙⲟⲩⲥⲓⲕⲟⲛ** ⲉⲙⲛⲥⲙⲏ ⲙⲙⲟϥ · ⲉϥⲟ ⲛⲁⲧϣⲁϫⲉ ·",
+      "english": "and it is like unto a musical instrument which hath no sound in it and is speechless.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩϣⲓⲛⲉ ⲛⲥⲁϩⲛⲟⲩⲗⲗⲉ ⲙ**ⲙⲟⲩⲥⲓⲕⲟⲛ** ⲉⲩϫⲱ ⲛϩⲉⲛϣⲁϫⲉ ϩⲛⲟⲩⲥϩⲁⲓ",
+      "english": "Such as found out musical tunes, and recited verses in writing:",
+      "source": "Sirach 44",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:44",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲩⲙⲡⲟⲥⲓⲟⲛ",
+        2,
+        18.276
+      ],
+      [
+        "ϩⲛⲕⲟⲩⲙⲕⲙ",
+        1,
+        17.276
+      ],
+      [
+        "ϩⲛⲅⲓⲑⲁⲣⲁ",
+        1,
+        17.276
+      ],
+      [
+        "ⲣⲉϥϫⲱ",
+        1,
+        17.276
+      ],
+      [
+        "ⲥⲩⲅⲕⲣⲓⲙⲁ",
+        1,
+        17.276
+      ],
+      [
+        "ⲑⲁⲣⲟⲧⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲟⲩⲗⲗⲉ",
+        2,
+        16.954
+      ],
+      [
+        "ⲟⲩⲉⲗⲗⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲡⲉϣⲁ",
+        1,
+        14.691
+      ],
+      [
+        "ⲏⲣⲡ",
+        3,
+        13.836
+      ],
+      [
+        "ϩⲓ",
+        4,
+        11.909
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        11.744
+      ],
+      [
+        "ϩⲛ",
+        7,
+        11.579
+      ],
+      [
+        "ⲥⲁⲗⲡⲓⲅⲝ",
+        1,
+        10.936
+      ],
+      [
+        "ⲙ",
+        6,
+        9.784
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        1,
+        9.59
+      ],
+      [
+        "ⲉϣ",
+        1,
+        9.437
+      ],
+      [
+        "ⲉⲩⲫⲣⲁⲛⲉ",
+        1,
+        9.221
+      ],
+      [
+        "ϩⲉ",
+        3,
+        9.16
+      ],
+      [
+        "ϫⲱⲱⲣⲉ",
+        1,
+        9.121
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_0_node",
+          9
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲙⲏ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_pre_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_4_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲡⲟⲥⲓⲟⲛ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲩⲙⲡⲟⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_0_node",
+          "ⲉ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ⲙⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉ",
+          "ⲥⲙⲏ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲥⲙⲏ_3_post_ⲙⲛ",
+          "ⲙⲙⲟ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲛ",
+          "ϥ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_pre_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_0_node",
+          "ϩⲛ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲏⲣⲡ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_3_post_ⲟⲩ",
+          "ⲉ_4_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲉ_4_post_ⲏⲣⲡ",
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          "ⲥⲩⲙⲡⲟⲥⲓⲟⲛ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲡⲟⲥⲓⲟⲛ_3_post_ϩⲉⲛ",
+          "ⲛ_4_post_ⲥⲩⲙⲡⲟⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲩⲙⲡⲟⲥⲓⲟⲛ",
+          "ⲏⲣⲡ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3170,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "3007",
+    "grl_lemma": "μουσικός",
+    "grl_meaning": "skilled in music, musical; elegant, fine",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1148b; Preisigke 2:120"
+  }
+}

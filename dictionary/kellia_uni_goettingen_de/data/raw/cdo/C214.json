@@ -1,0 +1,46 @@
+{
+  "id": "C214",
+  "forms": [
+    {
+      "id": "CF856",
+      "orth": "ϯⲁⲥⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS240",
+      "bibliography": "CD 18ab; ChLCS 5b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C213",
+      "label": "ⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "price, value; salary"
+    },
+    {
+      "target": "C215",
+      "label": "ⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "set value on"
+    }
+  ]
+}

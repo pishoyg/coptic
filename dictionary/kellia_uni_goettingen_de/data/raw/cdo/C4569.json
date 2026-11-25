@@ -1,0 +1,56 @@
+{
+  "id": "C4569",
+  "forms": [
+    {
+      "id": "CF31802",
+      "orth": "ϭⲓⲛⲧⲥⲓⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31801",
+      "orth": "ϭⲓⲛⲧⲥⲉⲓⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5158",
+      "bibliography": "CD 434a; ChLCS 61b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C3288",
+      "type": "cf",
+      "label": "be filled, satisfied, enjoy"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4568",
+      "label": "ⲣⲉϥⲧⲥⲓⲟ",
+      "pos": "N",
+      "gloss": "satisfier"
+    },
+    {
+      "target": "C4567",
+      "label": "ⲧⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "make satisfied, sate"
+    }
+  ]
+}

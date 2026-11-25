@@ -1,0 +1,58 @@
+{
+  "id": "C6014",
+  "forms": [
+    {
+      "id": "CF14033",
+      "orth": "ϣⲁⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3931,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6699",
+      "bibliography": "CD 582a; CED 250; KoptHWb 323; DELC 269a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛϥⲛⲉϩⲥⲉ ⲛϭⲓⲟⲩⲕⲁⲡⲛⲟⲥ ϩⲛⲧⲙⲏⲏⲧⲉ ⲙⲡⲉϥⲁⲛⲕⲉⲫⲁⲗⲟⲥ · ⲁⲩⲱ ⲁϥⲧⲣⲉⲩϩⲱⲧⲉ ⲛⲛⲥⲏⲃⲉ ⲛⲣⲁⲧϥ · ⲙⲛⲡ**ϣⲁⲣ** ⲛⲧⲉϥⲁⲡⲉ ·",
+      "english": "And he made them thrust these red-hot tools under the nails of his feet and the skin of his head,",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲛ ⲉⲕϣⲁⲛϥⲟϣⲧ ⲙⲡⲉⲓϣⲁⲣⲉⲧϩⲓⲃⲟⲗ ⲙⲙⲟⲓ · ⲟⲩⲛⲧⲁⲓ ⲟⲛ ⲙⲙⲁⲩ ⲛⲕⲉ**ϣⲁⲣ**ϩⲓϩⲟⲩⲛ ⲙⲙⲟⲓ · ⲡⲁⲓ ⲉⲧⲉⲙⲛϭⲟⲙ ⲙⲙⲟⲕ ⲉⲣⲟϥ ⲟⲩⲇⲉ ⲛⲉⲕⲃⲁⲥⲁⲛⲟⲥ ·",
+      "english": "Even though thou strippest off me my skin which is outside me, I have still another skin, which is inside me, and which neither thy power nor thy tortures can injure.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲉⲡⲏ ϭⲉ ⲛⲧⲉⲧⲛⲃⲱⲕ ⲉϩⲣⲁⲓ ϣⲁⲡⲁⲉⲓⲱⲧ ⲛⲧⲉⲧⲛϫⲟ ⲛⲁϥ ϫⲉⲛⲁⲓ ⲛϣⲏⲣⲉ ⲓⲱⲥⲏⲫ ϫⲱ ⲙⲙⲟⲟⲩ ϫⲉⲡⲛⲟⲩⲧⲉ ⲁϥⲁⲁⲧ ⲛϫⲟⲉⲓⲥ ⲉⲡⲕⲁϩ ⲧⲏⲣϥ ⲛⲕⲏⲙⲉ ⲁⲙⲟⲩ ϭⲉ ⲉⲡⲉ**ϣⲁⲣ** ϩⲛⲟⲩϭⲉⲡⲏ",
+      "english": "Hasten, therefore, and go up to my father, and say to him, These things saith thy son Joseph; God has made me lord of all the land of Egypt; come down therefore to me, and tarry not.",
+      "source": "Genesis 45",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "156570",
+    "egy_lemma": "šrr",
+    "english": "to be little; to be meagre",
+    "german": "klein sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/156570"
+  }
+}

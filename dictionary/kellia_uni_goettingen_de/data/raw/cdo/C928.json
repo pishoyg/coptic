@@ -1,0 +1,113 @@
+{
+  "id": "C928",
+  "forms": [
+    {
+      "id": "CF3200",
+      "orth": "ⲉⲓⲛⲉ (ⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31646",
+      "orth": "ⲉⲓⲛⲉ (ⲙⲙⲟ⸗)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.23,
+        "rank": 646,
+        "count": 104
+      }
+    },
+    {
+      "orth": "ⲉⲓⲛⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 6.93,
+        "rank": 168,
+        "count": 1093
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1085",
+      "bibliography": "CD 80b; KoptHWb 50; ChLCS 13b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓⲱⲧ ⲅⲁⲣ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲫⲁⲡⲓⲉⲣⲫⲙⲉⲩⲓ ⲉⲑⲛⲁⲛⲉϥ ⲫⲁⲓ ⲉⲧⲉⲛⲉⲣϣⲁⲓ ⲛⲁϥ ⲙⲫⲟⲟⲩ ⲟⲩϣⲟⲩⲥⲁϫⲓ ⲡⲉ ⲛⲛⲉϥϩⲃⲏⲟⲩⲓ ⲉⲑⲛⲁⲛⲉⲩ ⲛⲉϥⲁⲥⲕⲏⲥⲓⲥ ⲛⲉⲙⲛⲉϥⲡⲟⲗⲏⲧⲓⲁ ⲛⲉⲙⲛⲉϥⲁⲣⲉⲧⲏ ⲛϣⲟⲩⲉⲣϣⲫⲏⲣⲓ ⲙⲙⲱⲟⲩ ⲛⲉⲙⲛⲓⲛⲓϣϯ ⲙⲙⲏⲓⲛⲓ ⲙⲡⲁⲣⲁⲇⲟⲝⲟⲛ ⲉⲧⲁⲩϣⲱⲡⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧϥ ⲉⲟⲩ**ⲟⲛⲓ** ⲛⲛⲁⲛⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲉⲙⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲛⲧⲉⲡϭⲟⲉⲓⲥ .",
+      "english": "For my father Apa Shenoute, the one of good remembrance for whom we celebrate today is worthy of words for his good deeds, his asceticism, conduct and virtue to be marveled at, and the great incredible signs which were brought about by him which are like those of the holy prophets and the apostles of the Lord.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲡⲣⲉⲓⲛⲉ **ⲛ**ⲧϩⲉ** ⲙⲡⲁⲉⲓⲱⲧ ⲙⲙⲁⲥⲧϣⲏⲣⲉ · ⲁⲗⲗⲁ ϣⲱⲡⲉ ⲛⲧⲟ ⲛⲛⲁϩⲏⲧ · ⲛⲧⲉϯⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲡⲉϩⲟⲟⲩ ⲙⲛⲧⲉⲩϣⲏ · ϫⲉⲕⲁⲥ ⲉϥⲛⲁⲣⲟⲩⲛⲁ ⲛⲙⲙⲉ ⲙⲡⲉϩⲟⲟⲩ · ⲛⲧⲟⲩⲁⲛⲁⲅⲕⲏ ·",
+      "english": "Make not thyself like I unto my father who hateth (his) son, but be thou compassionate. And do thou ascribe glory unto God by day and by night, so that He may shew compassion unto thee in the days of necessity.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲛⲓ ⲙⲙⲟⲓ ⲕⲁⲧⲁⲫⲣⲏϯ ϩⲱ ⲉϯ**ⲟⲛⲓ** ⲙⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Be imitators of me, even as I also am of Christ.",
+      "source": "07_I Corinthians_11",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲓⲕⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ **ⲉⲧⲉⲓⲛⲉ **ⲙⲙⲟ**ϥ** ⲛⲧⲁⲩⲑⲙⲕⲟⲟⲩ ϩⲙⲡⲧⲣⲉⲕⲧⲁⲁⲩ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲟⲩ ϫⲉⲁⲕⲛⲟⲩϭⲥ ⲉⲣⲟⲟⲩ ,",
+      "english": "and those others which are like him, who afflicted them in making you deliver them to their hands, since you were angry with them?",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϯϩⲟ ⲟⲩⲛ ⲉⲣⲱⲧⲉⲛ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛ**ⲟⲛⲓ** ⲙⲙⲟⲓ .",
+      "english": "I beg you therefore, be imitators of me.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲛⲟⲩⲣⲉ ⲙⲛⲡⲉⲧⲣⲉ **ⲙⲛⲛⲉⲧⲉⲓⲛⲉ **ⲙⲙⲟ**ⲟⲩ**",
+      "english": "and the vulture, and the kite and the like to it,",
+      "source": "Deuteronomy 14",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C929",
+      "label": "ⲉⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "likeness, aspect"
+    },
+    {
+      "target": "C930",
+      "label": "ⲙⲛⲧⲣⲉϥⲉⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "resemblance"
+    }
+  ],
+  "etym": {
+    "demo_num": "d773",
+    "demo_lemma": "jn",
+    "english": "[to resemble; to be similar]",
+    "german": "gleichen, ähnlich sein",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d773"
+  }
+}

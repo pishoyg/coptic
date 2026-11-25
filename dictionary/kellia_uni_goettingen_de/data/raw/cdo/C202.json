@@ -1,0 +1,348 @@
+{
+  "id": "C202",
+  "forms": [
+    {
+      "id": "CF799",
+      "orth": "ⲁⲣϣⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4758,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF800",
+      "orth": "ⲁⲣϣⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6048,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF801",
+      "orth": "ⲁⲣϣⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF802",
+      "orth": "ⲁⲣϣⲓⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF803",
+      "orth": "ⲉⲣϣⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF804",
+      "orth": "ⲉⲣϣⲁⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.01,
+        "rank": 270,
+        "count": 633
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS227",
+      "bibliography": "CD 16b; CED 12; KoptHWb 12, 488; DELC 16; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟⲕ ϩⲱⲕ ϭⲓ ⲛⲁⲕ ⲛϩⲁⲛⲥⲟⲩⲟ ⲛⲉⲙϩⲁⲛⲓⲱⲧ ⲛⲉⲙϩⲁⲛⲉⲣⲉⲅⲙⲟⲥ ⲛⲉⲙⲟⲩ**ⲁⲣϣⲓⲛ** ⲛⲉⲙⲟⲩⲕⲉⲅⲭⲉⲃⲟⲥ ⲛⲉⲙⲟⲩⲃⲟϯ ⲉⲕⲉⲭⲱ ⲙⲙⲱⲟⲩ ϧⲉⲛⲟⲩⲥⲕⲉⲩⲟⲥ ⲙⲃⲉⲗϫ ⲉⲕⲉⲑⲁⲙⲓⲱⲟⲩ ⲛⲁⲕ ⲛϩⲁⲛⲱⲓⲕ ⲕⲁⲧⲁⲧⲏⲡⲓ ⲛⲛⲓⲉϩⲟⲟⲩ ⲛⲏⲉⲧⲉⲕⲛⲁⲛⲕⲟⲧ ⲛⲑⲟⲕ ⲉϫⲉⲛⲡⲉⲕⲥⲫⲓⲣ ⲣ ⲛⲉⲙϥ ⲛⲉϩⲟⲟⲩ ⲛⲉ ⲉⲕⲉⲟⲩⲟⲙⲟⲩ .",
+      "english": "Take thou also to thee wheat, and barley, and beans, and lentils, and millet, and bread-corn; and thou shalt cast them into one earthen vessel, and shalt make them into loaves for thyself; and thou shalt eat them a hundred and ninety days, according to the number of the days during which thou sleepest on thy side.",
+      "source": "26_Ezechiel_04",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲟⲩⲁ ⲛⲛϩⲗⲗⲟ ⲃⲱⲕ ϣⲁⲕⲉϩⲗⲗⲟ · ⲁⲩⲱ ⲡⲉϫⲁϥ ⲙⲡⲉϥⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲧⲁⲙⲓⲟ ⲛⲁⲛ ⲛⲟⲩⲕⲟⲩⲓ ⲛ**ⲁⲣϣⲓⲛ** ·",
+      "english": "One monk went to another monk, and he said to his disciple, 'Make a little bit of lentils for us.'",
+      "source": "Apophthegmata Patrum Sahidic 021: Lentils",
+      "urn": "urn:cts:copticLit:ap.21.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲁⲕⲱⲃ ⲇⲉ ⲁϥϯ ⲛⲟⲩⲱⲓⲕ ⲛⲏⲥⲁⲩ ⲛⲉⲙⲟⲩϫⲏ ⲛ**ⲁⲣϣⲓⲛ** ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲙ ⲟⲩⲟϩ ⲁϥⲥⲱ ⲟⲩⲟϩ ⲁϥⲧⲱⲛϥ ⲁϥϣⲉⲛⲁϥ ⲟⲩⲟϩ ⲁ ⲏⲥⲁⲩ ϣⲱϣϥ ⲛⲛⲓⲙⲉⲧϣⲟⲣⲡ ⲙⲙⲓⲥⲓ",
+      "english": "And Jacob gave bread to Esau, and pottage of lentiles; and he ate and drank, and he arose and departed; so Esau slighted his birthright.",
+      "source": "01_Genesis_25",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲙⲙⲏⲧⲉ ⲛⲕⲓⲧⲉ ⲙⲛϩⲉⲛⲁⲙⲫⲓⲧⲁⲡⲟⲥ ⲁⲩⲱ ⲙⲏⲧ ⲛⲭⲁⲗⲕⲓⲟⲛ ⲙⲛϩⲉⲛⲥⲕⲉⲩⲏ ⲛϣⲁϣⲟⲩ ⲛⲏⲣⲡ ⲁⲩⲱ ϩⲉⲛⲥⲟⲩⲟ ⲙⲛⲟⲩⲉⲓⲱⲧ ⲙⲛⲟⲩⲛⲟⲉⲓⲧ ⲙⲛⲟⲩϩⲛⲁⲁⲩ ⲛⲉⲗⲉⲗϣⲱⲟⲩⲉ ⲙⲛϩⲉⲛⲕⲉⲁⲙⲟⲥ ⲁⲩⲱ ⲟⲩ**ⲁⲣϣⲓⲛ**",
+      "english": "brought ten embroidered beds, (with double coverings,) and ten caldrons, and earthenware, and wheat, and barley, and flour, and meal, and beans, and pulse,",
+      "source": "II Samuel 17",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟⲕ ϩⲱⲱⲕ ϫⲓ ⲛⲁⲕ ⲛϩⲉⲛⲥⲟⲩⲟ ⲙⲛϩⲉⲛⲉⲓⲱⲧ ⲙⲛⲟⲩⲉⲣⲉⲅⲙⲟⲥ ⲙⲛⲟⲩ**ⲁⲣϣⲓⲛ** ⲙⲛⲟⲩⲕⲉⲅⲭⲣⲟⲥ ⲙⲛⲟⲩⲃⲱⲧⲉ ⲛⲅⲛⲟϫⲟⲩ ⲉⲩϩⲛⲁⲁⲩ ⲛⲃⲗϫⲉ ⲛⲅⲧⲁⲙⲓⲟⲟⲩ ⲛⲁⲕ ⲛϩⲉⲛⲟⲉⲓⲕ ⲕⲁⲧⲁⲧⲏⲡⲉ ⲛⲛⲉϩⲟⲟⲩ ⲉⲧⲕⲛⲕⲟⲧⲕ ⲛⲧⲟⲕ ⲛϩⲏⲧⲟⲩ ⲉϫⲙⲡⲉⲕⲥⲡⲓⲣ ϣⲉ ⲡⲥⲧⲁⲓⲟⲩ ⲛϩⲟⲟⲩ ⲉⲕⲉⲁⲁⲩ ⲉⲕⲟⲩⲱⲙ ⲛⲛⲁⲓ",
+      "english": "Take thou also to thee wheat, and barley, and beans, and lentils, and millet, and bread-corn; and thou shalt cast them into one earthen vessel, and shalt make them into loaves for thyself; and thou shalt eat them a hundred and ninety days, according to the number of the days during which thou sleepest on thy side.",
+      "source": "Ezekiel 4",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲉⲅⲭⲉⲃⲟⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲉⲣⲉⲅⲙⲟⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ϫⲏ",
+        1,
+        14.051
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        11.243
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        9.221
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.509
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        6.313
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲉⲅⲭⲣⲟⲥ",
+        1,
+        18.276
+      ],
+      [
+        "ⲕⲉⲁⲙⲟⲥ",
+        1,
+        18.276
+      ],
+      [
+        "ⲟⲩⲉⲣⲉⲅⲙⲟⲥ",
+        1,
+        18.276
+      ],
+      [
+        "ⲙⲛ",
+        8,
+        13.322
+      ],
+      [
+        "ⲉⲃⲓⲱ",
+        1,
+        11.901
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        11.847
+      ],
+      [
+        "ⲟⲩⲟⲙ",
+        1,
+        10.541
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        9.864
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        9.78
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        8.712
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        7.853
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        7.603
+      ],
+      [
+        "ⲛ",
+        4,
+        7.487
+      ],
+      [
+        "ⲩ",
+        2,
+        6.488
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.761
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ⲁ",
+        2,
+        5.722
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ϥ",
+        2,
+        5.2
+      ],
+      [
+        "ⲥ",
+        1,
+        3.952
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣϣⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣϣⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣϣⲓⲛ",
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          "ⲁⲣϣⲓⲛ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣϣⲓⲛ_0_node",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣϣⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣϣⲓⲛ",
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣϣⲓⲛ",
+          "ⲁⲣϣⲓⲛ_0_node",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4345,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5548,
+      "count": 2
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C203",
+      "label": "ⲁⲣϣⲁⲛ",
+      "pos": "N",
+      "gloss": "lentigo"
+    }
+  ],
+  "etym": {
+    "egy_num": "39590",
+    "egy_lemma": "ꜥršn",
+    "demo_num": "dm7537",
+    "demo_lemma": "ꜥršjn",
+    "english": "lentils (Sem. loan word)",
+    "german": "Linsen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39590",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7537"
+  }
+}

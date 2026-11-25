@@ -1,0 +1,129 @@
+{
+  "id": "C2914",
+  "forms": [
+    {
+      "id": "CF7690",
+      "orth": "ⲁⲧⲫⲓⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11559,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3336",
+      "bibliography": "CD 273a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏⲉⲧⲁⲩⲥⲱϫⲡ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲧⲁⲓⲏⲟⲩⲧ ⲙⲁⲗⲗⲟⲛ ⲉϩⲟⲧⲉ ⲡⲓⲛⲟⲩⲃ ⲛ**ⲁⲧⲫⲓⲥⲓ** ⲟⲩⲣⲱⲙⲓ ⲉϥⲉϣⲱⲡⲓ ⲉϥⲧⲁⲓⲏⲟⲩⲧ ⲙⲁⲗⲗⲟⲛ ⲉϩⲟⲧⲉ ⲡⲓⲱⲛⲓ ⲉⲩⲓⲛⲓ ⲙⲙⲟϥ ⲉⲃⲟⲗϧⲉⲛ ⲥⲱⲫⲓⲣ .",
+      "english": "And they that are left shall be more precious than gold tried in the fire; and a man shall be more precious than the stone that is in Suphir.",
+      "source": "23_Isaias_13",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲟⲧⲉ",
+        1,
+        12.11
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        11.405
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        1,
+        8.487
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.22
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        7.634
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲫⲓⲥⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11000,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2916",
+      "label": "ϭⲓⲛⲡⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "boiling, melting"
+    },
+    {
+      "target": "C2917",
+      "label": "ⲡⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "cooking, cooked food"
+    },
+    {
+      "target": "C2912",
+      "label": "ⲡⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "be cooked, melted; boil, bake, melt"
+    },
+    {
+      "target": "C2913",
+      "label": "ⲡⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "thing cooked"
+    },
+    {
+      "target": "C2915",
+      "label": "ⲣⲉϥⲫⲟⲥⲓ",
+      "pos": "N",
+      "gloss": "metal-founder"
+    }
+  ]
+}

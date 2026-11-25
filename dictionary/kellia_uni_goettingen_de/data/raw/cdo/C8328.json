@@ -1,0 +1,227 @@
+{
+  "id": "C8328",
+  "forms": [
+    {
+      "id": "CF19301",
+      "orth": "ⲁⲡⲁⲓⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF19303",
+      "orth": "ⲁⲡⲁⲓⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8073,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19302",
+      "orth": "ⲁⲡⲁⲓⲇⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19304",
+      "orth": "ⲁⲡⲁⲓⲧⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19305",
+      "orth": "ⲁⲡⲁⲧⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19306",
+      "orth": "ⲁⲡⲏⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19307",
+      "orth": "ⲁⲡⲏⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19308",
+      "orth": "ⲉⲡⲁⲓⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9540",
+      "bibliography": "DDGLC",
+      "cu_ID": "2511"
+    },
+    {
+      "id": "CS9541",
+      "bibliography": "DDGLC",
+      "cu_ID": "6552"
+    },
+    {
+      "id": "CS9542",
+      "bibliography": "DDGLC",
+      "cu_ID": "8914"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲣⲙⲙⲁⲟ ⲉⲓ ⲉϩⲟⲩⲛ ⲉⲛⲉⲥⲛⲏⲩ ϥ**ⲁⲡⲁⲓⲧⲉⲓ** ⲙⲙⲟⲛ ⲛⲟⲩϩⲟⲩⲉ ⲧⲁⲓⲟ ·",
+      "english": "If a wealthy man cometh in among the brethren he demandeth to be treated with great honour,",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓ ⲛⲅ**ⲁⲡⲁⲓⲧⲉⲓ** ⲛⲧⲉⲕⲯⲩⲭⲏ ϫⲉⲛⲉⲕϣⲓⲛⲉ ⲛⲥⲁⲧⲣⲩⲫⲏ ϩⲛⲁⲙⲛⲧⲉ",
+      "english": "Give, and take, and sanctify thy soul; for there is no seeking of dainties in the grave.",
+      "source": "Sirach 14",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        7,
+        11.231
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        10.278
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        9.929
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        8.969
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.87
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ϫⲓ",
+        1,
+        8.164
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲡⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲁⲡⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲓⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲡⲁⲓⲧⲉⲓ",
+          "ⲅ_1_pre_ⲁⲡⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲁⲡⲁⲓⲧⲉⲓ",
+          "ⲁⲡⲁⲓⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲓⲧⲉⲓ_0_node",
+          "ⲛ_1_post_ⲁⲡⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲁⲓⲧⲉⲓ",
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7629,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "196",
+    "grl_lemma": "ἀπαιτέω",
+    "grl_meaning": "to demand back, inquire, require",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 175a; Preisigke 1:150"
+  }
+}

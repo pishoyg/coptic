@@ -1,0 +1,213 @@
+{
+  "id": "C9252",
+  "forms": [
+    {
+      "id": "CF23167",
+      "orth": "ⲕⲁⲓⲡⲉⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF23168",
+      "orth": "ⲕⲁⲓⲡⲉⲣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23169",
+      "orth": "ⲕⲁⲓⲡⲉⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3089,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF23170",
+      "orth": "ⲕⲉⲡⲉⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10624,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23171",
+      "orth": "ⲕⲩⲡⲉⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23172",
+      "orth": "ⲛϗⲡⲉⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS11563",
+      "bibliography": "DDGLC",
+      "cu_ID": "146"
+    },
+    {
+      "id": "CS11564",
+      "bibliography": "DDGLC",
+      "cu_ID": "3827"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ⲇⲉ ⲁⲛⲥⲁⲉⲓⲛ ⲣⲥⲡⲟⲩⲇⲏ ⲛⲓⲙ ⲙⲡⲟⲩⲉϣⲑⲉⲣⲁⲡⲉⲩⲉ ⲙⲙⲟⲥ · **ⲕⲁⲓⲡⲉⲣ** ⲧⲥⲱⲛⲉ ⲧⲉ ⲙⲡⲣⲣⲟ ·",
+      "english": "And the physicians used their utmost endeavours to work a cure upon her, the more so because she was a king's sister (sic),",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲕⲁⲓⲡⲉⲣ** ⲟⲩⲟⲉⲓⲕ ⲡⲉⲧⲕⲟⲩⲱⲙ ⲙⲙⲟϥ ⲛⲧϩⲉ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ·",
+      "english": "and yet the bread which thou eatest is like that of every other man.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ϣⲁⲣⲉⲛⲁⲣⲭⲱⲛ ⲣⲥⲡⲟⲇⲏ ⲛⲓⲙ ⲉⲧⲣⲉⲩϯⲉⲟⲟⲩ ⲛⲁⲩ ⲛϭⲓⲡⲉⲧϩⲙⲟⲟⲥ ϩⲛⲛⲉⲑⲉⲁⲧⲣⲟⲛ · **ⲕⲁⲓⲡⲉⲣ** ⲡⲉϩⲟⲩⲟ ⲛⲛⲉⲧϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ϩⲉⲛⲣⲱⲙⲉ ⲛⲉ ⲛϩⲏⲕⲉ ⲛⲉ ⲉⲩⲥⲟϣϥ ϩⲓϩⲙϩⲁⲗ ϩⲓϣⲙⲙⲟ · ⲉⲓⲉ ⲉⲛⲙϣⲁ ϩⲱⲱⲛ ⲛⲥⲡⲟⲩⲇⲁⲍⲉ ⲛⲟⲩⲏⲣ ⲉⲧⲣⲉⲩⲉⲩⲫⲏⲙⲉⲓ ⲙⲙⲟⲛ ϩⲙⲡⲉⲑⲉⲁⲧⲣⲟⲛ ⲉⲧⲙⲙⲁⲩ · ⲡⲙⲁ ⲉⲧⲟⲩⲥⲟⲟⲩϩ ⲛϩⲏⲧϥ ⲛϭⲓⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲛⲛⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲙⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ ·",
+      "english": "If the governor (of a city) taketh the greatest pains in order to be praised by those who are sitting in the theatre, notwithstanding the fact that the greater number of those who are sitting in that place are poor men, and men of humble station, and servants, and strangers, how very much more pains ought we to take to cause ourselves to be well spoken of in that theatre of the Other World, wherein are congregated the angels, and the archangels, and all the saints?",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ",
+        1,
+        14.898
+      ],
+      [
+        "ⲉ",
+        20,
+        14.083
+      ],
+      [
+        "ⲟⲩⲁϣϥ",
+        1,
+        13.576
+      ],
+      [
+        "ⲑⲉⲁⲧⲣⲟⲛ",
+        1,
+        13.438
+      ],
+      [
+        "ϫⲟⲛⲧ",
+        1,
+        13.09
+      ],
+      [
+        "ⲡⲁⲛϩⲟⲡⲗⲓⲁ",
+        1,
+        12.898
+      ],
+      [
+        "ⲑⲉⲣⲁⲡⲉⲩⲉ",
+        1,
+        11.81
+      ],
+      [
+        "ⲛ",
+        13,
+        11.21
+      ],
+      [
+        "ⲕⲏⲕⲁϩⲏⲩ",
+        1,
+        10.943
+      ],
+      [
+        "ϭⲱⲃ",
+        1,
+        10.358
+      ],
+      [
+        ".",
+        5,
+        9.823
+      ],
+      [
+        "ⲟⲩⲏⲩ",
+        1,
+        9.789
+      ],
+      [
+        "ⲥⲱⲛⲉ",
+        1,
+        9.488
+      ],
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        9.414
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲓⲁ",
+        1,
+        9.176
+      ],
+      [
+        "ϯⲥⲃⲱ",
+        1,
+        8.892
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        8.857
+      ],
+      [
+        "ⲙ",
+        5,
+        8.617
+      ],
+      [
+        "ϥ",
+        6,
+        8.576
+      ],
+      [
+        "ⲩϣⲏ",
+        1,
+        8.576
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲓⲡⲉⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2738,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "993",
+    "grl_lemma": "καίπερ",
+    "grl_meaning": "(concessive) although",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 859a"
+  }
+}

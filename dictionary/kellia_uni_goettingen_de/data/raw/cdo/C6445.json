@@ -1,0 +1,104 @@
+{
+  "id": "C6445",
+  "forms": [
+    {
+      "id": "CF14918",
+      "orth": "ϯϩⲃⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13532,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7152",
+      "bibliography": "CD 656a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲁ ⲙⲡⲉⲡⲉⲥⲗⲟϭⲗϭ ⲙⲡⲉⲥⲥⲱⲙⲁ · ⲉⲧϭⲏⲛ **ϯϩⲃⲁ** ⲙⲡⲉⲕⲗⲟⲅⲓⲥⲙⲟⲥ · ⲉⲃⲟⲗ ϫⲉⲛⲧⲕⲟⲩϣⲏⲣⲉ ϣⲏⲙ · ⲙⲡⲛⲁⲩ ⲟⲛ ⲉⲕϣⲁϫⲉ ⲛⲙⲙⲁⲥ ⲉⲙⲛⲣⲱⲙⲉ ϩⲁϩⲧⲏⲕ ·",
+      "english": "Did not the tender softness of her body cause thine understanding to totter? For thou wast, after all, only a youth. When thou didst talk with her and there was none present with thee, did not he who shooteth arrows of evil shoot arrows into thee?",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲏⲛ",
+        1,
+        16.35
+      ],
+      [
+        "ⲗⲟⲅⲓⲥⲙⲟⲥ",
+        1,
+        15.598
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13132,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6443",
+      "label": "ϩⲃⲁ",
+      "pos": "N",
+      "gloss": "straits, embarrassment, misfortune"
+    },
+    {
+      "target": "C6444",
+      "label": "ⲣϩⲃⲁ",
+      "pos": "V",
+      "gloss": "be in dire straits, distress"
+    }
+  ]
+}

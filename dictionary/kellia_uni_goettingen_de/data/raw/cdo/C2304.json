@@ -1,0 +1,51 @@
+{
+  "id": "C2304",
+  "forms": [
+    {
+      "id": "CF6342",
+      "orth": "ⲣⲉϥϯⲙⲁϩⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2660",
+      "bibliography": "CD 211a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2303",
+      "label": "ⲉϥⲣⲁⲙⲁϩⲉ",
+      "pos": "N",
+      "gloss": "linseed"
+    },
+    {
+      "target": "C2302",
+      "label": "ⲙⲁϩⲉ",
+      "pos": "N",
+      "gloss": "flax"
+    }
+  ]
+}

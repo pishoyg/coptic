@@ -1,0 +1,89 @@
+{
+  "id": "C9767",
+  "forms": [
+    {
+      "id": "CF25206",
+      "orth": "ⲙⲉⲧⲁⲗⲗⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25207",
+      "orth": "ⲙⲉⲧⲁⲗⲗⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12656",
+      "bibliography": "DDGLC",
+      "cu_ID": "1584"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲫⲱϩ",
+        1,
+        19.695
+      ],
+      [
+        "ϣⲁⲧ",
+        1,
+        13.066
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        10.5
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        1,
+        10.473
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲧⲁⲗⲗⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "1396",
+    "grl_lemma": "μέταλλον",
+    "grl_meaning": "mine, quarry, mineral, metal",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1114a; Preisigke 2:87"
+  }
+}

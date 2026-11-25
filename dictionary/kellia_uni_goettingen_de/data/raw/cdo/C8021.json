@@ -1,0 +1,70 @@
+{
+  "id": "C8021",
+  "forms": [
+    {
+      "id": "CF18108",
+      "orth": "ϯϭⲱϫⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8921",
+      "bibliography": "CD 842b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C8024",
+      "label": "ϭⲓⲛϭⲱϫⲃ",
+      "pos": "N",
+      "gloss": "waning (of moon)"
+    },
+    {
+      "target": "C8018",
+      "label": "ϭⲱϫⲃ",
+      "pos": "V",
+      "gloss": "be small, less, humble; lessen, reduce, decrease, diminish"
+    },
+    {
+      "target": "C8019",
+      "label": "ϭⲱϫⲃ",
+      "pos": "N",
+      "gloss": "small, less, humble"
+    },
+    {
+      "target": "C8020",
+      "label": "ϭⲱϫⲃ",
+      "pos": "N",
+      "gloss": "inferiority, diminution"
+    },
+    {
+      "target": "C8022",
+      "label": "ⲁⲧϭⲱϫⲃ",
+      "pos": "N",
+      "gloss": "undiminished, unfailing"
+    },
+    {
+      "target": "C8023",
+      "label": "ⲟⲓ ⲛϫⲱϫⲉⲃ",
+      "pos": "VSTAT",
+      "gloss": "be weak, feeble, sickly"
+    }
+  ]
+}

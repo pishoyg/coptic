@@ -1,0 +1,63 @@
+{
+  "id": "C1617",
+  "forms": [
+    {
+      "id": "CF4701",
+      "orth": "ϣⲉ ⲛⲗⲟⲩⲝ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1880",
+      "bibliography": "CD 140a; KoptHWb 77"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5699",
+      "type": "cf",
+      "label": "wood"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1615",
+      "label": "ϣⲥⲛⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "piercing blow, stab"
+    },
+    {
+      "target": "C1612",
+      "label": "ⲗⲱⲕⲥ",
+      "pos": "V",
+      "gloss": "bite, pierce"
+    },
+    {
+      "target": "C1616",
+      "label": "ⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "bite"
+    },
+    {
+      "target": "C1613",
+      "label": "ⲗⲱⲕⲥ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "bite, snap at"
+    },
+    {
+      "target": "C1614",
+      "label": "ⲣⲉϥⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "biter"
+    }
+  ]
+}

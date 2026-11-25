@@ -1,0 +1,169 @@
+{
+  "id": "C5935",
+  "forms": [
+    {
+      "id": "CF13875",
+      "orth": "ϣⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7984,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6619",
+      "bibliography": "CD 570b; KoptHWb 317; ChLCS 79a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲧⲟϣϥ ⲛⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ ⲁϥ**ϣⲟⲟⲛⲉ**ϥ ⲙⲁⲩⲁⲁϥ ⲉⲧⲉⲕⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ·",
+      "english": "He was chosen to be an heir, and he himself abandoned Thine inheritance.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲧⲉⲣⲉⲡϣⲁϫⲉ ⲟϣ ⲛⲁⲛ ⲉϣⲁϫⲉ ⲉⲣⲟϥ . ⲁⲩⲱ ⲉϥⲙⲟⲕϩ ⲉⲃⲟⲗϥ . ⲉⲧⲃⲉϫⲉⲁⲧⲉⲧⲛϣⲱⲡⲉ ⲉⲧⲉⲧⲛ**ϣⲟⲟⲛⲉ** ϩⲛⲛⲉⲧⲛⲙⲁⲁϫⲉ .",
+      "english": "About him we have many words to say, and hard to interpret, seeing you have become dull of hearing.",
+      "source": "58_Hebrews_5",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ",
+        1,
+        14.898
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        11.355
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        10.873
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        10.448
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        9.33
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲟⲟⲛⲉ",
+          "ϥ_1_pre_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲟⲟⲛⲉ",
+          "ϣⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲟⲟⲛⲉ_0_node",
+          "ϥ_1_post_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲟⲟⲛⲉ",
+          "ⲙⲁⲩⲁⲁ_1_post_ϣⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ϣⲟⲟⲛⲉ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7537,
+      "count": 2
+    }
+  }
+}

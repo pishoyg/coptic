@@ -1,0 +1,248 @@
+{
+  "id": "C3023",
+  "forms": [
+    {
+      "id": "CF7912",
+      "orth": "ⲡⲱϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7571,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲡⲟϭ⸗",
+      "dialect": "S",
+      "id": "1312.1"
+    },
+    {
+      "orth": "ⲡⲟⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8237,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲡⲟⲅ⸗",
+      "dialect": "S",
+      "id": "1312.3"
+    },
+    {
+      "orth": "ⲡⲟⲅⲉ†",
+      "dialect": "S",
+      "id": "1312.4"
+    },
+    {
+      "orth": "ⲫⲱϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1348,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲫⲟϫⲓ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10325,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲟⲩⲟⲩϫⲉ",
+      "dialect": "A",
+      "id": "1312.7"
+    },
+    {
+      "orth": "ⲡⲏϭ†",
+      "dialect": "F",
+      "id": "1312.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3459",
+      "bibliography": "CD 285b-286a; CED 133; KoptHWb 159; DELC 168"
+    },
+    {
+      "id": "CS3460",
+      "bibliography": "CD 286a; CED 133; KoptHWb 159; DELC 168; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲉⲓⲱⲧ ⲇⲉ ⲁϥⲉⲣϩⲙⲏ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲏ ⲛⲟⲩϣⲏ ⲙⲡϥⲟⲩⲱⲙ ⲟⲩⲇⲉ ⲙⲡϥⲥⲱ ⲉϥϩⲙⲟⲟⲥ ϩⲓϫⲛⲟⲩⲧⲱⲃⲉ ⲛϩⲟⲩⲛ ⲉⲡⲙⲁ ⲛϣⲱⲡⲉ ⲉϥϭⲱϣⲧ ⲉⲩⲉⲓⲁⲗ ϩⲛⲟⲩϣⲟⲩϣⲧ ⲙⲡⲉϥϣⲧⲁⲙ ⲉⲛⲉϥⲃⲁⲗ ⲙⲡⲉⲓϩⲙⲏ ⲛϩⲟⲟⲩ ϣⲁⲛⲧⲟⲩ**ⲡⲱϭⲉ** ⲛⲥⲉⲧⲁⲟⲩⲟⲥ ⲛⲁϥ ⲉⲃⲟⲗ ⲉϫⲙⲡⲕⲁϩ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 2",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:11-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲛⲧⲟϥ ⲛⲧⲙⲛⲧϩⲁⲣⲉϣϩⲏⲧ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧⲙⲧⲣⲉϥⲧⲣⲉⲡⲗⲁⲥ ⲛⲛⲉⲛⲧⲁⲩⲥⲁϩⲟⲩ ⲙⲙⲟϥ **ⲡⲱϭⲉ** ϩⲛⲣⲱⲟⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 259-262",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:7-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲟⲩⲟ",
+        1,
+        13.667
+      ],
+      [
+        "ⲥⲁϩⲟⲩ",
+        1,
+        11.81
+      ],
+      [
+        "ϣⲁⲛⲧ",
+        1,
+        10.609
+      ],
+      [
+        "ⲣⲱ",
+        1,
+        10.389
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        7.516
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲡⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲡⲱϭⲉ_0_node",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲡⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲣⲱ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲣⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲡⲱϭⲉ",
+          "ⲟⲩ_1_pre_ⲡⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲱϭⲉ",
+          "ⲡⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱϭⲉ_0_node",
+          "ϩⲛ_1_post_ⲡⲱϭⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲡⲱϭⲉ",
+          "ⲣⲱ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲣⲱ_2_post_ϩⲛ",
+          "ⲟⲩ_3_post_ⲣⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7113,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3024",
+      "label": "ⲡⲟϭⲉ",
+      "pos": "N",
+      "gloss": "broken piece, fragment, pieces (of clothing), portions (of other things)"
+    }
+  ],
+  "etym": {
+    "egy_num": "62730",
+    "egy_lemma": "pgꜣ",
+    "demo_num": "d2166",
+    "demo_lemma": "pk(j)",
+    "english": "to unfold; to open up",
+    "german": "ausbreiten; öffnen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62730",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2166"
+  }
+}

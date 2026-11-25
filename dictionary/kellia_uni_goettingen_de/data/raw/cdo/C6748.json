@@ -1,0 +1,132 @@
+{
+  "id": "C6748",
+  "forms": [
+    {
+      "id": "CF15543",
+      "orth": "ϩⲡⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9287,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲡⲱⲧ",
+      "dialect": "S",
+      "id": "2233.1"
+    },
+    {
+      "orth": "ϩϥⲟⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8099,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩϥⲱⲧ",
+      "dialect": "B",
+      "id": "2233.3"
+    },
+    {
+      "orth": "ϩⲡⲁⲧ",
+      "dialect": "F",
+      "id": "2233.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7462",
+      "bibliography": "CD 696b; CED 290; KoptHWb 383; DELC 307a; ChLCS 93b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲛⲟⲩϫⲉ ⲛⲧⲃⲟⲗⲓⲥ ⲁⲩϩⲉ ⲉϫⲟⲩⲱⲧ ⲛ**ϩⲡⲟⲧ** ⲙⲙⲟⲟⲩ . ⲛⲧⲉⲣⲟⲩϭⲱ ⲟⲛ ⲛⲕⲉⲕⲟⲩⲓ . ⲁⲩⲛⲟⲩϫⲉ ⲟⲛ ⲛⲧⲃⲟⲗⲓⲥ ⲉⲡⲙⲟⲟⲩ ⲁⲩϩⲉ ⲉⲙⲛⲧⲏ ⲛϩⲡⲟⲧ .",
+      "english": "They took soundings, and found twenty fathoms.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲏ",
+        1,
+        13.926
+      ],
+      [
+        "ϫⲟⲩⲱⲧ",
+        1,
+        13.511
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        1,
+        10.12
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        9.835
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8855,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "104240",
+    "egy_lemma": "ḥpt",
+    "english": "reel (?) (of thread; of twine)",
+    "german": "[ein Maß für Faden]; Knäuel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/104240"
+  }
+}

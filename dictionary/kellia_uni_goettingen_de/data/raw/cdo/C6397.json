@@ -1,0 +1,254 @@
+{
+  "id": "C6397",
+  "forms": [
+    {
+      "id": "CF14819",
+      "orth": "ϯⲧⲉϩⲓⲏ",
+      "dialect": "S",
+      "oRef": "ϯ ⲧⲉ ϩⲓⲏ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9093,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7100",
+      "bibliography": "CD 646a-b; KoptHWb 356; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲉϥⲉⲓⲟⲧⲉ ⲁϥⲕⲱ ⲙⲛⲛⲥⲱϥ ⲉⲃⲟⲗ ϩⲙⲡⲉϥⲥⲡⲉⲣⲙⲁ ⲛⲟⲩⲁⲧϩⲏⲧ ⲙⲡⲗⲁⲟⲥ ⲉϥϣⲁⲁⲧ ⲙⲙⲛⲧⲥⲁⲃⲉ ϩⲣⲟⲃⲟⲁⲙ ⲡⲉⲛⲧⲁϥⲡⲉϣⲡⲗⲁⲟⲥ ϩⲙⲡⲉϥϣⲟϫⲛⲉ aⲩⲱ ϩⲓⲉⲣⲟⲃⲟⲁⲙ ⲡϣⲏⲣⲉ ⲛⲛⲁⲃⲁⲧ ⲡⲉⲛⲧⲁϥⲧⲣⲉⲡⲓⲥⲣⲁⲏⲗ ⲣⲛⲟⲃⲉ ⲁϥ**ϯⲧⲉϩⲓⲏ** ⲙⲡⲛⲟⲃⲉ ⲛⲉⲫⲣⲁⲓⲙ",
+      "english": "Thus rested Solomon with his fathers, and of his seed he left behind him Roboam, even the foolishness of the people, and one that had no understanding, who turned away the people through his counsel. There was also Jeroboam the son of Nebat, who caused Israel to sin, and shewed Ephraim the way of sin:",
+      "source": "Sirach 47",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣ**ϯⲧⲉϩⲓⲏ** ⲛⲟⲩⲙⲟⲟⲩ ⲉϥⲥⲱⲕ ⲙⲡⲣϯⲡⲁⲣϩⲏⲥⲓⲁ ⲛⲟⲩⲥϩⲓⲙⲉ ⲉⲥϩⲟⲟⲩ",
+      "english": "Give the water no passage; neither a wicked woman liberty to gad abroad.",
+      "source": "Sirach 25",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲓⲥⲣⲁⲏⲗ",
+        1,
+        14.554
+      ],
+      [
+        "ⲣⲛⲟⲃⲉ",
+        1,
+        10.804
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        10.074
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        9.287
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        9.036
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.743
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ϯⲧⲉϩⲓⲏ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ϯ",
+          1
+        ],
+        [
+          "ϯ_1_post_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ⲡⲁⲣϩⲏⲥⲓⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲡⲁⲣϩⲏⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ϯⲧⲉϩⲓⲏ",
+          "ϯⲧⲉϩⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ϯⲧⲉϩⲓⲏ_0_node",
+          "ⲙⲡⲣ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ϯ",
+          "ϯ_1_post_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ϯ_1_post_ϯⲧⲉϩⲓⲏ",
+          "ⲡⲁⲣϩⲏⲥⲓⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲡⲁⲣϩⲏⲥⲓⲁ_2_post_ϯ",
+          "ⲛ_3_post_ⲡⲁⲣϩⲏⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲧⲉϩⲓⲏ",
+          "ϥ_1_pre_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲧⲉϩⲓⲏ",
+          "ϯⲧⲉϩⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ϯⲧⲉϩⲓⲏ_0_node",
+          "ⲙ_1_post_ϯⲧⲉϩⲓⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲧⲉϩⲓⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8644,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6394",
+      "label": "ϩⲓⲏ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C6395",
+      "label": "ϩⲓⲧⲉϩⲓⲏ",
+      "pos": "ADV",
+      "gloss": "on road"
+    },
+    {
+      "target": "C6396",
+      "label": "ⲣⲙϩⲓⲏ",
+      "pos": "N",
+      "gloss": "man of the road, travelling companion"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "C5918",
+  "forms": [
+    {
+      "id": "CF13834",
+      "orth": "ⲉⲓⲁϩ ϣⲏⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6601",
+      "bibliography": "CD 568b; KoptHWb 317; DELC 265b; ChLCS 78b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5917",
+      "label": "ϣⲏⲛ",
+      "pos": "N",
+      "gloss": "tree"
+    },
+    {
+      "target": "C5919",
+      "label": "ⲙⲁ ⲛϣⲏⲛ",
+      "pos": "N",
+      "gloss": "forest, grove"
+    }
+  ]
+}

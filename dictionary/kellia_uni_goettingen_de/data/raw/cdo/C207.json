@@ -1,0 +1,814 @@
+{
+  "id": "C207",
+  "forms": [
+    {
+      "id": "CF31488",
+      "orth": "ⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31487",
+      "orth": "ⲁⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31490",
+      "orth": "ⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1456,
+        "count": 53
+      }
+    },
+    {
+      "id": "CF31489",
+      "orth": "ⲁⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1543,
+        "count": 48
+      }
+    },
+    {
+      "id": "CF823",
+      "orth": "ⲉⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF824",
+      "orth": "ⲉⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF825",
+      "orth": "ⲉⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF826",
+      "orth": "ⲉⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF827",
+      "orth": "ⲁⲡⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5344,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF828",
+      "orth": "ⲁⲡⲁⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1070,
+        "count": 45
+      }
+    },
+    {
+      "id": "CF829",
+      "orth": "ⲁⲡⲉⲥ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "nicht selten im status constructus",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS232",
+      "bibliography": "CD 17a; CED 12; KoptHWb 12, 488; DELC 16; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ ⲅⲁⲣ ⲙⲡⲁⲣⲉϩⲗⲓ ϩⲓⲟⲩⲧⲱⲓⲥ ⲙⲃⲉⲣⲓ ⲉⲟⲩϩⲃⲟⲥ ⲛ**ⲁⲡⲁⲥ** ⲙⲙⲟⲛ ϣⲁⲣⲉⲡⲓⲃⲉⲣⲓ ⲉⲗⲡⲓⲙⲟϩ ⲛⲧⲉⲡⲓⲁⲡⲁⲥ ⲟⲩⲟϩ ⲛⲧⲉⲟⲩⲫⲱϧ ϣⲱⲡⲓ ⲉϥϩⲱⲟⲩ ⲛϩⲟⲩⲟ .",
+      "english": "No one sews a piece of unshrunk cloth on an old garment, or else the patch shrinks and the new tears away from the old, and a worse hole is made.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲙⲁⲣⲛⲣϣⲁ ϩⲛⲟⲩⲑⲁⲃ ⲁⲛ ⲛ**ⲁⲥ** . ⲟⲩⲇⲉ ϩⲛⲟⲩⲑⲁⲃ ⲁⲛ ⲛⲕⲁⲕⲓⲁ ϩⲓⲡⲟⲛⲏⲣⲓⲁ . ⲁⲗⲗⲁ ϩⲛϩⲉⲛⲁⲧⲑⲁⲃ ⲛⲧⲃⲃⲟ ϩⲓⲙⲉ .",
+      "english": "Therefore let us keep the feast, not with old yeast, neither with the yeast of malice and wickedness, but with the unleavened bread of sincerity and truth.",
+      "source": "46_1 Corinthians_5",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲧⲟⲩⲃⲉⲡⲓϣⲉⲙⲏⲣ ⲛ**ⲁⲡⲁⲥ** ⲉⲃⲟⲗ ϧⲉⲛⲑⲏⲛⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛϣⲱⲡⲓ ⲛⲟⲩⲱϣⲉⲙ ⲙⲃⲉⲣⲓ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲉⲧⲉⲛⲟⲓ ⲛⲁⲧϣⲉⲙⲏⲣ ⲕⲉ ⲅⲁⲣ ⲡⲉⲛⲡⲁⲥⲭⲁ ⲁⲩϣⲁⲧϥ ⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Purge out the old yeast, that you may be a new lump, even as you are unleavened. For indeed Christ, our Passover, has been sacrificed in our place.",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲓ ⲙⲡⲓⲑⲁⲃ ⲛ**ⲁⲥ** ⲉⲃⲟⲗ ⲛϩⲏⲧⲧⲏⲩⲧⲛ ϫⲉⲉⲧⲉⲧⲛⲉϣⲱⲡⲉ ⲛⲟⲩⲟⲩⲱϣⲙ ⲛⲃⲣⲣⲉ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲉⲧⲛϩⲉⲛⲁⲧⲑⲁⲃ . ⲕⲁⲓ ⲅⲁⲣ ⲁⲩϣⲱⲱⲧ ⲙⲡⲉⲛⲡⲁⲥⲭⲁ ϩⲁⲣⲟⲛ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Purge out the old yeast, that you may be a new lump, even as you are unleavened. For indeed Christ, our Passover, has been sacrificed in our place.",
+      "source": "1 Corinthians 5",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲁⲩϩⲓⲏⲣⲡ ⲙⲃⲉⲣⲓ ⲉⲁⲥⲕⲟⲥ ⲛ**ⲁⲡⲁⲥ** ⲙⲙⲟⲛ ϣⲁⲣⲉⲡⲓⲏⲣⲡ ⲫⲉϧ ⲛⲓⲁⲥⲕⲟⲥ ⲟⲩⲟϩ ϣⲁⲣⲉⲡⲓⲏⲣⲡ ⲧⲁⲕⲟ ⲛⲉⲙⲛⲓⲁⲥⲕⲟⲥ ⲁⲗⲗⲁ ϣⲁⲩϩⲓⲏⲣⲡ ⲙⲃⲉⲣⲓ ⲉⲁⲥⲕⲟⲥ ⲙⲃⲉⲣⲓ .",
+      "english": "No one puts new wine into old wineskins, or else the new wine will burst the skins, and the wine pours out, and the skins will be destroyed; but they put new wine into fresh wineskins.'",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛ**ⲁⲥ** ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲡⲏⲣⲡ ⲛⲁⲡⲉϩⲛϩⲱⲧ ⲛⲧⲉⲡⲏⲣⲡ ⲡⲱⲛ ⲉⲃⲟⲗ ⲛⲧⲉⲛϩⲱⲧ ⲧⲁⲕⲟ . ⲁⲗⲗⲁ ⲉϣⲁⲩⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛⲃⲣⲣⲉ .",
+      "english": "No one puts new wine into old wineskins, or else the new wine will burst the skins, and the wine pours out, and the skins will be destroyed; but they put new wine into fresh wineskins.'",
+      "source": "Mark Chapter 2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲁⲣⲟⲕ",
+        1,
+        16.373
+      ],
+      [
+        "ⲟⲩⲛⲟϥ:",
+        1,
+        15.373
+      ],
+      [
+        "ϣⲁⲛ",
+        3,
+        14.66
+      ],
+      [
+        "ϣⲉⲛⲁⲥ",
+        1,
+        14.566
+      ],
+      [
+        "ⲉⲣⲃⲟⲕⲓ",
+        1,
+        14.203
+      ],
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲏ",
+        1,
+        13.125
+      ],
+      [
+        "ⲥⲏⲣ",
+        1,
+        12.85
+      ],
+      [
+        "ⲙⲟⲩⲙⲓ",
+        1,
+        11.819
+      ],
+      [
+        "ⲓⲧⲁ",
+        1,
+        11.758
+      ],
+      [
+        "ⲉⲡⲓⲑⲩⲙⲓⲁ",
+        1,
+        10.85
+      ],
+      [
+        "ⲇⲏⲙⲟⲥ",
+        1,
+        10.144
+      ],
+      [
+        "ⲉⲣⲛⲟⲃⲓ",
+        1,
+        10.06
+      ],
+      [
+        "ⲥ",
+        3,
+        8.861
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        8.254
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        8.063
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        7.52
+      ],
+      [
+        "ϯ",
+        2,
+        6.968
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.815
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.744
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.441
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲁⲧⲧⲟⲩ",
+        3,
+        19.625
+      ],
+      [
+        "ⲑⲁⲃ",
+        6,
+        16.648
+      ],
+      [
+        "ⲏⲣⲡ",
+        10,
+        16.641
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        7,
+        15.498
+      ],
+      [
+        "ⲛⲉⲡⲁ",
+        1,
+        14.87
+      ],
+      [
+        "ⲗⲉⲟⲛ",
+        1,
+        14.87
+      ],
+      [
+        "ϩⲣⲱⲇⲏⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲃⲁⲣⲁ",
+        1,
+        14.87
+      ],
+      [
+        "ϩⲟⲟⲱⲧ",
+        1,
+        14.87
+      ],
+      [
+        "ⲥⲉⲣⲡ",
+        1,
+        14.87
+      ],
+      [
+        "ⲛⲁⲛⲓ",
+        1,
+        14.87
+      ],
+      [
+        "ϫⲗϭ",
+        1,
+        14.87
+      ],
+      [
+        "ⲛ",
+        48,
+        14.836
+      ],
+      [
+        "ⲁⲥⲕⲟⲥ",
+        2,
+        14.411
+      ],
+      [
+        "ⲕⲱⲥ",
+        1,
+        13.87
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        7,
+        13.588
+      ],
+      [
+        "ⲭⲟⲃⲱⲣ",
+        1,
+        13.285
+      ],
+      [
+        "ⲧ",
+        17,
+        12.605
+      ],
+      [
+        "ⲉ",
+        22,
+        12.468
+      ],
+      [
+        "ⲁⲥ",
+        2,
+        12.142
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲥ_0_node",
+          2
+        ],
+        [
+          "ⲥⲏⲣ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟⲕ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_3_post_ϩⲁⲣⲟⲕ",
+          1
+        ],
+        [
+          "ϯ_4_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲙⲓ_5_post_ϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲥ_0_node",
+          "ⲥⲏⲣ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ϩⲁⲣⲟⲕ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟⲕ_2_post_ϫⲉ",
+          "ⲛϫⲉ_3_post_ϩⲁⲣⲟⲕ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_3_post_ϩⲁⲣⲟⲕ",
+          "ϯ_4_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ϯ_4_post_ⲛϫⲉ",
+          "ⲙⲟⲩⲙⲓ_5_post_ϯ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥ_0_node",
+          34
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲁⲥ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲁⲙⲟⲩⲗ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲧⲟⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲁⲥ_2_post_ⲕⲁⲧⲧⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_4_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_3_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_pre_ⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲥ_2_pre_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲡⲁ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲗⲉⲟⲛ_2_post_ⲛⲉⲡⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲧ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲃⲏⲣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_pre_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲉⲡⲓⲑⲩⲙⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲛ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϭⲁⲙⲟⲩⲗ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲁⲙⲟⲩⲗ_3_post_ⲛ",
+          "ⲧⲏⲣ_4_post_ϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲕⲁⲧⲧⲟⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲧⲟⲩ_1_post_ⲁⲥ",
+          "ⲁⲥ_2_post_ⲕⲁⲧⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲥ_2_post_ⲕⲁⲧⲧⲟⲩ",
+          "ϩⲓ_4_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_4_post_ϩⲣⲉ",
+          "ϩⲣⲉ_3_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_3_post_ⲁⲥ",
+          "ⲟⲩ_4_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_pre_ⲥ",
+          "ⲛⲁ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲥ",
+          "ⲥ_2_pre_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_pre_ⲛⲁ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲛⲉⲡⲁ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲡⲁ_1_post_ⲁⲥ",
+          "ⲗⲉⲟⲛ_2_post_ⲛⲉⲡⲁ",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲡⲉⲧ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲉ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲥ",
+          "ⲁ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲁⲣⲉϩ",
+          "ⲓ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_2_post_ⲉ",
+          "ⲉⲣⲟ_3_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲟⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲁⲥ",
+          "ⲛ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥ",
+          "ⲏⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_2_post_ⲛ",
+          "ⲙⲛ_4_post_ⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲁⲥ",
+          "ⲡⲉⲕ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲙⲙⲁⲩ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲁⲥ",
+          "ⲛ_1_post_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲙⲛⲧϣⲃⲏⲣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉ_1_pre_ⲁⲥ",
+          "ⲣⲱⲙⲉ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_pre_ⲁⲥ",
+          "ⲥⲉ_2_pre_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_pre_ⲏⲣⲡ",
+          "ⲏⲣⲡ_1_pre_ⲁⲥ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_pre_ⲁⲥ",
+          "ⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥ_0_node",
+          "ⲁⲩⲱ_3_post_ⲉⲡⲓⲑⲩⲙⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1257,
+      "count": 53
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3142,
+      "count": 5
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C210",
+      "label": "ϫⲓⲛⲉⲣⲁⲡⲁⲥ",
+      "pos": "N",
+      "gloss": "a growing old"
+    },
+    {
+      "target": "C212",
+      "label": "ϯⲁⲥ",
+      "pos": "V",
+      "gloss": "give someone a blow"
+    },
+    {
+      "target": "C211",
+      "label": "ⲁⲁⲥ",
+      "pos": "N",
+      "gloss": "blow with hand, stroke"
+    },
+    {
+      "target": "C208",
+      "label": "ⲙⲛⲧⲁⲥ",
+      "pos": "N",
+      "gloss": "oldness"
+    },
+    {
+      "target": "C209",
+      "label": "ⲣⲁⲥ",
+      "pos": "V",
+      "gloss": "become old"
+    }
+  ],
+  "etym": {
+    "egy_num": "31040",
+    "egy_lemma": "jz",
+    "demo_num": "d692",
+    "demo_lemma": "ı ͗s(j)",
+    "english": "(to be?) old; (to be?) used",
+    "german": "alt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/31040",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d692"
+  }
+}

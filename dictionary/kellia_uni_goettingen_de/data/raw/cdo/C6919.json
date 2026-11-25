@@ -1,0 +1,58 @@
+{
+  "id": "C6919",
+  "forms": [
+    {
+      "id": "CF15889",
+      "orth": "ⲙⲁⲥ ⲛϩⲧⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7639",
+      "bibliography": "CD 723a; KoptHWb 393; DELC 315a; ChLCS 95b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2045",
+      "type": "cf",
+      "label": "young (mostly of animal or bird), child"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6918",
+      "label": "ϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horse"
+    },
+    {
+      "target": "C6922",
+      "label": "ϭⲁⲥⲓϩⲑⲟ",
+      "pos": "N",
+      "gloss": "rider"
+    },
+    {
+      "target": "C6920",
+      "label": "ⲙⲁⲛⲉϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horsekeeper, groom"
+    },
+    {
+      "target": "C6921",
+      "label": "ⲣⲱⲙϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horseman, rider"
+    }
+  ]
+}

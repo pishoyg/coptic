@@ -1,0 +1,430 @@
+{
+  "id": "C201",
+  "forms": [
+    {
+      "id": "CF31485",
+      "orth": "ⲉⲣⲁϣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31486",
+      "orth": "ⲣⲁϣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF792",
+      "orth": "ⲁⲣⲟϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5022,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF793",
+      "orth": "ⲁⲣⲟϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5233,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF795",
+      "orth": "ⲁⲣⲁϣ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF796",
+      "orth": "ⲁⲣⲁϣ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF797",
+      "orth": "ϩⲣⲟϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.5,
+        "rank": 1105,
+        "count": 42
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS225",
+      "bibliography": "CD 16b; KoptHWb 12; ChLCS 5a"
+    },
+    {
+      "id": "CS226",
+      "bibliography": "CD 16b; KoptHWb 488"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲱⲣⲕ ⲛⲁϥ ⲙⲡⲁⲓⲣⲏϯ ⲉϫⲛⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ϫⲉⲉⲃⲏⲗ ⲉⲟⲩⲗⲁ ⲟⲩⲁⲓ ⲛⲉϩⲟⲟⲩ ⲉϯⲛⲁⲁⲓϥ ϣⲁϯⲁⲗⲟ ⲛⲛⲁϩⲃⲱⲥ ⲉⲡⲓϫⲟⲓ ϯⲛⲁϣⲉ ⲛⲏⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧⲥ . ⲥⲁⲧⲟⲧⲥ ⲇⲉ ⲉⲧⲁϥⲱⲣⲕ ⲁϥⲛⲉϩⲥⲓ ⲉⲡϣⲱⲓ ϧⲉⲛϯϫⲓ ⲛⲛⲁⲩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲟⲥ ϧⲉⲛⲡⲓⲉϫⲱⲣϩ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉⲕⲁⲛ ⲉϣⲱⲡ ⲉⲧⲁⲓⲱⲣⲕ ϧⲉⲛⲟⲩⲣⲁⲥⲟⲩⲓ ⲁⲗⲗⲁ ⲧⲉⲱⲥ ⲁⲓⲱⲣⲕ ⲙⲡⲓⲁⲛⲁϣ . ⲁϥⲧⲱⲛϥ ⲇⲉ ⲥⲁⲧⲟⲧϥ ⲁϥⲧⲁⲗⲟ ⲛⲛⲉϥⲥⲕⲉⲩⲟⲥ ⲛⲉⲙⲛⲉϥϩⲃⲱⲥ ⲉⲡⲓϫⲟⲓ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲱⲧ ⲉϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲟⲩⲟϩ ⲁⲥϣⲟⲡϥ ⲉⲣⲟⲥ ⲙⲙⲁⲩ ϧⲉⲛⲟⲩⲣⲁϣⲓ ⲛϫⲉϯⲙⲁⲕⲁⲣⲓⲁ ⲙⲉⲗⲁⲛⲏ ϯⲣⲱⲙⲉⲟⲥ . ⲡⲁⲗⲓⲛ ⲟⲛ ⲁⲡⲓⲇⲓⲁⲃⲟⲗⲟⲥ ϯⲛϣⲟⲧ ⲉⲡⲉϥϩⲏⲧ ⲙⲫⲣⲏϯ ⲙⲫⲁⲣⲁⲱ ⲙⲡⲓⲥⲏⲟⲩ ⲟⲩⲟϩ ⲁⲡⲉϥϩⲏⲧ ϭⲓⲥⲁⲛⲓⲥ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧ ⲃ ⲟⲩⲟϩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛϯⲙⲉⲧⲁⲗⲟⲩ ⲉⲥⲃⲉⲣⲃⲉⲣ ⲛⲉⲙⲡⲓϩⲟⲩⲟ ⲛⲥⲃⲱ ⲛⲧⲉⲛⲓⲥⲁϫⲓ ⲛⲉⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓϫⲓ ⲛϣⲓⲃϯ ⲛⲧⲉⲛⲓϩⲃⲱⲥ ⲉⲧⲥⲁⲓⲱⲟⲩ ⲛⲟⲩⲑⲟ ⲛⲣⲏϯ ⲉϥϣⲓⲃϯ ⲛⲥⲟⲡ ⲃ ⲙⲙⲏⲛⲓ ϣⲁⲧⲉϥϩⲉⲓ ⲉϧⲣⲏⲓ ⲉⲟⲩⲙⲉⲧϭⲁⲥⲓϩⲏⲧ ⲛⲉⲙⲟⲩϩⲩⲇⲟⲛⲏ ⲛⲧⲉⲡⲓⲥⲱⲙⲁ ⲁⲗⲗⲁ ⲫⲛⲟⲩϯ ⲫⲏ ⲉⲧϣⲱϣⲧ ⲙⲡⲓⲧⲁⲕⲟ ⲉⲃⲟⲗ ϩⲁⲛⲉϥⲣⲱⲙⲓ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ ⲁϥⲓⲛⲓ ⲛⲟⲩϫⲟⲥⲉ ⲛϧⲙⲟⲙ ⲛ**ⲁⲣⲟϣ** ⲉϩⲣⲏⲓ ⲉϫⲱϥ ϣⲁⲧⲉϥϭⲓⲟⲩⲛⲓϣϯ ⲛⲓⲁⲃⲓ ϣⲁⲧⲉⲧⲉϥⲥⲁⲣⲝ ϣⲙⲁ ⲙⲫⲣⲏϯ ⲛⲟⲩⲕⲁⲡ ⲑⲁⲓ ⲉⲧⲁⲥϯⲛⲁⲓϧⲓⲥⲓ ⲧⲏⲣⲟⲩ ⲛⲁϥ ϧⲉⲛⲡⲉⲧϩⲏⲡ ⲛⲧⲉⲡⲓⲡⲁⲑⲟⲥ ⲉⲧⲁⲛⲓⲥⲏⲓⲛⲓ ⲉⲣⲉⲛⲕⲁⲕⲓⲛ ⲙⲡⲟⲩϣϫⲉⲙϫⲟⲙ ⲛⲧⲁⲗϭⲟϥ .",
+      "english": "Then he swore upon the Gospel, saying: ‘After one day, when I have placed my belongings on a ship, I will leave this city.’ As soon as he swore, he awoke from the vision he had seen during the night and said: ‘Even though I swore in a dream, still I have sworn an oath.’ He immediately rose, loaded his belongings and clothing onto a ship, and sailed to Jerusalem. Blessed Melania the Roman received him with joy. Once again, the devil hardened his heart, just as he had once hardened Pharaoh’s. His heart became wavering and conflicted: his youth luxuriated, as did his pride in words and his delight in the changes of fine clothing. He would change them twice a day, succumbing to pride and the pleasures of the body. But God, who always protects his people from ruin, sent him a fever so severe that he endured a prolonged illness, and his flesh became thin as a thread; yet all these pains afflicted him so secretly that doctors, unaware of his illness, were unable to cure him.",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ⲛⲟⲩϩⲃⲁ ⲙⲛⲟⲩϩⲙⲟⲙ ⲛϣⲱⲛⲉ ⲙⲛⲟⲩ**ⲁⲣⲟϣ** ⲙⲛⲟⲩⲛⲟⲩϣⲥ ⲙⲛⲟⲩϩⲱⲧⲃ ⲙⲛⲟⲩϩⲱⲱⲙⲉ ⲉⲃⲟⲗ ⲙⲛⲟⲩⲟⲩⲟⲧⲟⲩⲉⲧ ⲁⲩⲱ ⲉⲣⲉⲛⲁⲓ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ϣⲁⲛⲧⲟⲩϥⲟⲧⲕ ⲉⲃⲟⲗ",
+      "english": "The Lord smite thee with distress, and fever, and cold, and inflammation, and blighting, and paleness, and they shall pursue thee until they have destroyed thee.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲉϣⲁⲣⲓ ⲉⲣⲟⲕ ⲛϫⲉⲡϭⲟⲓⲥ ϧⲉⲛⲟⲩⲙⲉⲧⲁⲧϫⲓⲙⲓ ⲛⲉⲙⲟⲩϧⲙⲟⲙ ⲛⲉⲙⲟⲩ**ⲁⲣⲟϣ** ⲛⲉⲙⲟⲩϭⲛⲏⲛ ⲛⲉⲙⲟⲩⲉⲙⲕⲁϩ ⲛⲉⲙⲟⲩϫⲓⲙⲫⲉϩ ⲛⲉⲙⲟⲩⲟⲧⲟⲩⲉⲧ ⲟⲩⲟϩ ⲉϥⲉϭⲟϫⲓ ⲛⲥⲱⲕ ϣⲁⲧⲉϥⲧⲁⲕⲟⲕ",
+      "english": "The Lord smite thee with distress, and fever, and cold, and inflammation, and blighting, and paleness, and they shall pursue thee until they have destroyed thee.",
+      "source": "05_Deuteronomium_28",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲁⲣⲟϣ** ⲙⲛⲡⲕⲁⲩⲙⲁ ⲥⲙⲟⲩ ⲉⲡϫⲟⲉⲓⲥ ⲥⲙⲟⲩ ⲉⲣⲟϥ ⲛⲧⲉⲧⲛϫⲓⲥⲉ ⲙⲙⲟϥ ϣⲁⲛⲓⲉⲛⲉϩ",
+      "english": "...",
+      "source": "Daniel 3",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲥⲉⲙ",
+        1,
+        18.695
+      ],
+      [
+        "ϭⲛⲏⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ϧⲙⲟⲙ",
+        2,
+        16.788
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        11.016
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        9.997
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        8.583
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.509
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        1,
+        8.21
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲟϣⲟⲉⲓϣ",
+        1,
+        18.276
+      ],
+      [
+        "ⲕⲁⲩⲙⲁ",
+        2,
+        16.576
+      ],
+      [
+        "ϣⲥ",
+        1,
+        14.189
+      ],
+      [
+        "ⲙⲛ",
+        6,
+        12.077
+      ],
+      [
+        "ⲁⲛⲟⲙⲓⲁ",
+        1,
+        9.91
+      ],
+      [
+        "ⲁⲅⲁⲡⲏ",
+        1,
+        9.884
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        9.776
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        9.342
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        9.319
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        8.965
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        8.4
+      ],
+      [
+        "ⲡ",
+        4,
+        8.175
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        1,
+        8.059
+      ],
+      [
+        "ⲧ",
+        2,
+        6.749
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.024
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        5.702
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.497
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.162
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣⲟϣ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣⲟϣ",
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          2
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲟϣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲩⲙⲁ_1_post_ⲁⲣⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲛⲓⲙ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          2
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          "ⲛⲉ_2_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲛⲟⲩ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          "ⲕⲁⲩⲙⲁ_1_post_ⲁⲣⲟϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4602,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4745,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C200",
+      "label": "ⲁⲣⲟϣ",
+      "pos": "VSTAT",
+      "gloss": "become cold"
+    }
+  ]
+}

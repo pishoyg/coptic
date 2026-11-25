@@ -1,0 +1,91 @@
+{
+  "id": "C4282",
+  "forms": [
+    {
+      "id": "CF10515",
+      "orth": "ⲧⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.26,
+        "rank": 116,
+        "count": 1618
+      }
+    },
+    {
+      "orth": "ϣⲧⲉⲙ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.39,
+        "rank": 136,
+        "count": 796
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS4853",
+      "bibliography": "CD 412ab; CED 187; KoptHWb 231; DELC 214b; ChLCS 58a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲡⲱⲥ ⲛⲧⲉ**ϣⲧⲉⲙ**ⲥⲁⲣⲝ ⲛⲓⲃⲉⲛ ϣⲟⲩϣⲟⲩ ⲙⲙⲱⲟⲩ ⲙⲡⲉⲙⲑⲟ ⲙⲫⲛⲟⲩϯ .",
+      "english": "that no flesh should boast before God.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲣⲉⲛⲉⲩⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲟⲧϩ ⲉⲣⲁⲧⲟⲩ . ⲟⲩⲇⲉ ⲛⲥⲉ**ⲧⲙ**ϯϣⲧⲏⲛ ⲥⲛⲧⲉ ϩⲓⲱⲟⲩ",
+      "english": "but to wear sandals, and not put on two tunics.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲇⲉ ϩⲓⲛⲁ ⲛⲧⲉϥ**ϣⲧⲉⲙ**ϣⲱⲡⲓ ϧⲉⲛⲧⲫⲣⲱ ⲛϫⲉⲡⲉⲧⲉⲛⲫⲱⲧ .",
+      "english": "Pray that your flight won't be in the winter.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲡ**ⲧⲙ**ⲕⲁⲗⲁⲁⲩ ⲛⲁⲛ",
+      "english": "and not abandoning anything for ourselves,",
+      "source": "Apophthegmata Patrum Sahidic 132: N 302",
+      "urn": "urn:cts:copticLit:ap.132.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛ ⲁⲛⲟⲕ ⲙⲙⲁⲩⲁⲧ ⲛⲉⲙⲃⲁⲣⲛⲁⲃⲁⲥ ⲉⲧⲉⲙⲙⲟⲛⲧⲉⲛ ⲉⲣϣⲓϣⲓ ⲙⲙⲁⲩ ⲉ**ϣⲧⲉⲙ**ⲉⲣϩⲱⲃ .",
+      "english": "Or have only Barnabas and I no right to not work?",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲛ ⲉⲕϣⲁⲛϫⲟⲟϥ ⲛⲧⲛ**ⲧⲙ**ⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ ⲉⲃⲟⲗ",
+      "english": "Even if you tell it and we don't understand,",
+      "source": "Apophthegmata Patrum Sahidic 138: Unidentified",
+      "urn": "urn:cts:copticLit:ap.138.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "854578",
+    "egy_lemma": "tm",
+    "demo_num": "d7271",
+    "demo_lemma": "tm",
+    "english": "be over",
+    "german": "zu Ende sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854578",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7271"
+  }
+}

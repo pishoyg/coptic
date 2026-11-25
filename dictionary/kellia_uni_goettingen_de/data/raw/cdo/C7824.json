@@ -1,0 +1,51 @@
+{
+  "id": "C7824",
+  "forms": [
+    {
+      "id": "CF17713",
+      "orth": "ϩⲛ ⲟⲩϭⲉⲡⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ϩⲛ",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS8695",
+      "bibliography": "CD 825b; KoptHWb 462; ChLCS 109a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7822",
+      "label": "ϭⲉⲡⲏ",
+      "pos": "V",
+      "gloss": "hasten; hurry, to make haste"
+    },
+    {
+      "target": "C7823",
+      "label": "ϭⲉⲡⲏ",
+      "pos": "ADV",
+      "gloss": "quickly"
+    },
+    {
+      "target": "C7826",
+      "label": "ⲙⲛⲧⲣⲉϥϭⲉⲡⲏ",
+      "pos": "N",
+      "gloss": "quickness"
+    },
+    {
+      "target": "C7825",
+      "label": "ⲣⲉϥϭⲉⲡⲏ",
+      "pos": "N",
+      "gloss": "one who is quick, hasty"
+    }
+  ]
+}

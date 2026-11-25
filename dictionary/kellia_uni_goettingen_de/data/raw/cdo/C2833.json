@@ -1,0 +1,183 @@
+{
+  "id": "C2833",
+  "forms": [
+    {
+      "id": "CF7514",
+      "orth": "ⲡⲁⲱⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5301,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲡⲁⲱⲛⲓ",
+      "dialect": "S",
+      "id": "1268.1"
+    },
+    {
+      "orth": "ⲡⲁⲟⲩⲛⲓ",
+      "dialect": "S",
+      "id": "1268.2"
+    },
+    {
+      "orth": "ⲡⲁⲏⲛⲉ",
+      "dialect": "S",
+      "id": "1268.3"
+    },
+    {
+      "orth": "ⲡⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1604,
+        "count": 45
+      }
+    },
+    {
+      "orth": "ⲡⲁⲱⲛⲓ",
+      "dialect": "B",
+      "id": "1268.5"
+    },
+    {
+      "orth": "ⲡⲁⲱⲛⲓ",
+      "dialect": "F",
+      "id": "1268.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Name einer Sache oder Institution",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3239",
+      "bibliography": "CD 263b; CED 126; KoptHWb 147; DELC 159-160; ChLCS 37a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲃⲓⲟⲥ ⲁⲩⲱ ⲧⲡⲟⲗⲓⲧⲉⲓⲁ ⲙⲡⲉⲛⲡⲉⲧⲟⲩⲁⲁⲃ ⲛⲉⲓⲱⲧ ⲉⲧⲧⲁⲓⲏⲩ ⲕⲁⲧⲁⲥⲙⲟⲧ ⲛⲓⲙ ⲁⲡⲁ ⲟⲛⲛⲟⲫⲣⲓⲟⲥ ⲡⲁⲛⲁⲭⲱⲣⲓⲧⲏⲥ ⲛⲧⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉϥⲃⲓⲟⲥ ⲛⲥⲟⲩⲙⲛⲧⲧⲁⲥⲉ ⲙⲡⲉⲃⲟⲧ **ⲡⲁⲱⲛⲉ** ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ",
+      "english": "THE LIFE AND CONVERSATION OF OUR HOLY FATHER, WHO WAS GLORIOUS IN EVERY WAY, APA ONNOPHRIOS THE ANCHORITE, WHO ENDED HIS LIFE ON THE SIXTEENTH DAY OF THE MONTH PAONE IN THE PEACE OF GOD!",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲥⲟⲩⲙⲛⲧⲁⲥⲉ ⲅⲁⲣ ⲙⲡⲉⲃⲟⲧ **ⲡⲁⲱⲛⲉ** ⲡⲉ ⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "Now that day was the sixteenth day of the month Paone [June 10].",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲛⲧⲉϥⲟⲓⲕⲟⲛⲟⲙⲓⲁ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ · ⲁⲩⲱ ⲁϥϯ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲛϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛⲥⲟⲩⲙⲛⲧⲁⲥⲉ ⲙⲡⲉⲃⲟⲧ **ⲡⲁⲱⲛⲉ** ·",
+      "english": "and he completed his stewardship in God, and yielded up his spirit into the hand of God on the sixteenth day of the month Paone.",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲩⲙⲛⲧⲧⲁⲥⲉ",
+        2,
+        20.598
+      ],
+      [
+        "ⲥⲟⲩⲙⲛⲧⲁⲥⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        4,
+        16.267
+      ],
+      [
+        "ⲉⲓⲣⲏⲛⲏ",
+        2,
+        12.706
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        10.372
+      ],
+      [
+        "ⲙ",
+        4,
+        9.351
+      ],
+      [
+        "ⲡ",
+        4,
+        8.497
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.512
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.508
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.679
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.516
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4881,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "863588",
+    "egy_lemma": "Pꜣ-n-jn.t",
+    "english": "The One of the Valley (festival); The One of the Valley (month name); Paone (2nd month of the Shemu season)",
+    "german": "Der des Tales (Fest); Der des Tales (Monatsname); Paone (2. Monat der Schemu-Jahreszeit)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/863588"
+  }
+}

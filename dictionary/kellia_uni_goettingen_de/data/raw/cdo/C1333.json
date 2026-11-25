@@ -1,0 +1,170 @@
+{
+  "id": "C1333",
+  "forms": [
+    {
+      "id": "CF4075",
+      "orth": "ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12510,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1542",
+      "bibliography": "CD 118a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁϥϣⲱⲡⲉ ⲛϭⲓⲡⲉⲥⲙⲟⲩ · ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲧⲙⲛⲧⲡⲟⲛⲟⲣⲟⲥ ϣⲱⲡⲉ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁϥϣⲱⲡⲉ ⲛϭⲓⲧ**ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ** · ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲧⲙⲛⲧⲣⲉϥϩⲱⲧϥ ϣⲱⲡⲉ ·",
+      "english": "“and why blessing hath arisen. And that mystery knoweth why knavery hath arisen and why deceit hath arisen. And that mystery | knoweth why the slaying hath arisen”",
+      "source": "Pistis Sophia Book 2 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:59-65",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        10.456
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ",
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲙⲙⲁⲩ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12083,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1334",
+      "label": "ϭⲓⲛⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "flattery, cajolery"
+    },
+    {
+      "target": "C1335",
+      "label": "ⲕⲟⲣϣϥ",
+      "pos": "N",
+      "gloss": "flatterer"
+    },
+    {
+      "target": "C1330",
+      "label": "ⲕⲱⲣϣ",
+      "pos": "V",
+      "gloss": "request, persuade, cajole"
+    },
+    {
+      "target": "C1331",
+      "label": "ⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "entreaty, persuasion"
+    },
+    {
+      "target": "C1332",
+      "label": "ⲣⲉϥⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "flatterer"
+    }
+  ]
+}

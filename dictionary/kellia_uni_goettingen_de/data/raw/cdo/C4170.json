@@ -1,0 +1,94 @@
+{
+  "id": "C4170",
+  "forms": [
+    {
+      "id": "CF31745",
+      "orth": "ⲧⲁⲓⲙ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31746",
+      "orth": "ⲧⲁⲉⲓⲙⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31747",
+      "orth": "ⲧⲁⲉⲓⲙ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31748",
+      "orth": "ⲧⲁⲓⲙⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31749",
+      "orth": "ⲧⲁⲓⲙ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31750",
+      "orth": "ⲧⲁⲉⲓⲙⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31751",
+      "orth": "ⲧⲁⲉⲓⲙ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31752",
+      "orth": "ⲧⲁⲓⲙⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31753",
+      "orth": "ⲧⲁⲓⲙ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31754",
+      "orth": "ⲧⲁⲉⲓⲙⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31755",
+      "orth": "ⲧⲁⲉⲓⲙ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31756",
+      "orth": "ⲧⲁⲓⲙⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4732",
+      "bibliography": "CD 412a; CDC 64b; CED 186; KoptHWb 225; DELC 212b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4171",
+      "label": "ⲧⲁⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "help"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm260",
+    "demo_lemma": "ṱm",
+    "english": "[to protect]",
+    "german": "schützen(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm260"
+  }
+}

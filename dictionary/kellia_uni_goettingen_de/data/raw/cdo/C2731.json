@@ -1,0 +1,108 @@
+{
+  "id": "C2731",
+  "forms": [
+    {
+      "id": "CF7270",
+      "orth": "ⲛⲁϭⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16746,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3125",
+      "bibliography": "CD 253b; KoptHWb 138; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥⲛⲁⲕⲱ ⲁⲛ ⲙⲙⲟⲓ ⲉⲁⲛϣⲧⲏⲩ ⲁϥⲙⲁϩⲧ ⲅⲁⲣ ⲛ**ⲛⲁϭⲥⲉ**",
+      "english": "For he suffers me not to take breath, but he has filled me with bitterness.",
+      "source": "Job 9",
+      "urn": "urn:cts:copticLit:ot.job.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁϩⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        11.679
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        11.559
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16349,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2729",
+      "label": "ϯⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "give, cause wrath"
+    },
+    {
+      "target": "C2730",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "incitement to wrath"
+    },
+    {
+      "target": "C2726",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "be wroth; make wroth"
+    },
+    {
+      "target": "C2727",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "wrath"
+    },
+    {
+      "target": "C2728",
+      "label": "ⲣⲉϥⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "wrathful person"
+    }
+  ]
+}

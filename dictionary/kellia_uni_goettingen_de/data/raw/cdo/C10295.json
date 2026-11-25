@@ -1,0 +1,343 @@
+{
+  "id": "C10295",
+  "forms": [
+    {
+      "id": "CF27365",
+      "orth": "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27366",
+      "orth": "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4779,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF27367",
+      "orth": "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8684,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27368",
+      "orth": "ⲡⲣⲟⲧⲣⲟⲙⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13817",
+      "bibliography": "DDGLC",
+      "cu_ID": "1819"
+    },
+    {
+      "id": "CS13818",
+      "bibliography": "DDGLC",
+      "cu_ID": "4349"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲙⲁ ⲉⲧⲁ ⲓⲏⲥⲟⲩⲥ ϣⲉ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ ⲉϥⲟⲓ ⲙ**ⲡⲣⲟⲇⲣⲟⲙⲟⲥ** ⲉϩⲣⲏⲓ ⲉϫⲱⲛ ⲉⲁϥϣⲱⲡⲓ ⲉϥⲟⲓ ⲛⲁⲣⲭⲏⲉⲣⲉⲩⲥ ϣⲁⲉⲛⲉϩ ⲕⲁⲧⲁⲧⲧⲁⲝⲓⲥ ⲙⲙⲉⲗⲭ ⲓⲥⲉⲇⲉⲕ .",
+      "english": "where as a forerunner Jesus entered for us, having become a high priest forever after the order of Melchizedek.",
+      "source": "19_Hebrews_06",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲇⲱⲣⲓⲍⲉ ⲙⲙⲟϥ ⲉϩⲟⲩⲛ ⲉⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲙⲡⲧⲟⲟⲩ ⲛⲧⲡⲟⲗⲓⲥ ⲧⲃⲱ ⲉⲧⲃⲉⲡⲟⲩϫⲁⲓ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉⲧⲣⲉⲩⲱϣ ⲛϩⲏⲧϥ ⲉⲡⲣⲁⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ⲙⲛⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲡⲁϩⲱⲙⲱ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲡⲉⲥⲧⲣⲁϯⲗⲁⲧⲏⲥ ⲁⲩⲱ ⲡⲙⲁⲣⲧⲩⲣⲟⲥ ⲛϫⲱⲱⲣⲉ ⲙⲛⲡϩⲁⲅⲓⲟⲥ ⲓⲱⲥ ⲡⲃⲁⲡⲧⲓⲥⲧⲏⲥ ⲁⲩⲱ ⲡⲉ**ⲡⲣⲟⲇⲣⲟⲙⲟⲥ** ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲡϩⲁⲅⲓⲟⲥ ⲁⲡⲁ ⲡⲁϩⲟⲙⲱ ⲡⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ ⲛⲁⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ⲉϩⲣⲁⲓ ⲉϫⲱϥ",
+      "english": "He presented it to the monastery of the Holy Macarius of the mountain of the city, Tbow, for the salvation of his soul in order for them to read in it the name of the Holy John, and the Holy Apa Pahmon so that the Holy Macarius, the soldier and courageous martyr and the Holy John the Baptist, the forerunner of Christ and the Holy Apa Pahmon, the Archimandrite will intercede to Christ for him.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁ ⲉⲛⲧⲁⲡⲉ**ⲡⲣⲟⲇⲣⲟⲙⲟⲥ** ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ϩⲁⲣⲟⲛ ⲓⲏⲥⲟⲩⲥ ⲕⲁⲧⲁⲧⲧⲁⲝⲓⲥ ⲙⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ . ⲉⲁϥϣⲱⲡⲉ ⲛⲟⲩⲏⲏⲃ ϣⲁⲉⲛⲉϩ .",
+      "english": "where as a forerunner Jesus entered for us, having become a high priest forever after the order of Melchizedek.",
+      "source": "58_Hebrews_6",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲡⲃⲓⲟⲥ ⲙⲡⲉⲧⲉⲙⲡⲉϥⲧⲱⲟⲩⲛ ϩⲙⲡⲉⲧϫⲡⲟ ⲛⲛⲉϩⲓⲟⲙⲉ ⲛϭⲓⲡⲉⲧⲟ ⲛⲛⲟϭ ⲉⲣⲟϥ · ⲡⲉ**ⲡⲣⲟⲇⲣⲟⲙⲟⲥ** ⲉⲧⲟⲩⲁⲁⲃ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϫⲱ",
+        1,
+        9.583
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        1,
+        9.21
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "..ⲁⲛ",
+        1,
+        18.276
+      ],
+      [
+        "ⲁⲙⲏⲙ",
+        1,
+        18.276
+      ],
+      [
+        "ⲃⲁⲡⲧⲓⲥⲧⲏⲥ",
+        1,
+        13.232
+      ],
+      [
+        "ϫⲓϣⲓⲡⲉ",
+        1,
+        11.21
+      ],
+      [
+        "ⲱϫⲛ",
+        1,
+        10.237
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        10.186
+      ],
+      [
+        "ⲉⲣⲟ",
+        3,
+        9.917
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.782
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        8.697
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        7.996
+      ],
+      [
+        "ⲙ",
+        3,
+        7.784
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        7.759
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.543
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        7.272
+      ],
+      [
+        "ϥ",
+        3,
+        6.955
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.622
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.356
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.265
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.871
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲭⲣⲓⲥⲧⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_5_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          "ⲡⲉ_1_pre_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲭⲣⲓⲥⲧⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲇⲣⲟⲙⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲇⲣⲟⲙⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲙ_3_post_ⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲁⲁⲃ",
+          "ⲡⲉⲛ_5_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4365,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 8153,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2782",
+    "grl_lemma": "πρόδρομος",
+    "grl_meaning": "ahead, in front; dashing forth",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1475b"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "C740",
+  "forms": [
+    {
+      "id": "CF2780",
+      "orth": "ⲉⲧⲃⲉ ϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.98,
+        "rank": 725,
+        "count": 155
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS882",
+      "bibliography": "CD 61b; KoptHWb 41; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲡϫⲟⲉⲓⲥ ⲉϥⲉⲕⲱ ⲛⲁⲩ ⲉⲃⲟⲗ ϫⲉⲛⲉⲛⲥⲛⲏⲩ ⲛⲉ ⲁⲩⲱ ⲛⲉⲛϣⲃⲏⲣ ⲙⲉⲗⲟⲥ ⲛⲉ ⲁⲩⲱ ϫⲉⲥⲉϩⲟⲥⲉ ϩⲱⲟⲩ ϩⲛⲧⲉⲩⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ⲁⲩⲱ ϫⲉⲁⲛⲟⲛ ϩⲱⲱⲛ ⲧⲛⲙⲟⲕϩ ⲛϩⲏⲧ ⲉⲧⲃⲏⲏⲧⲟⲩ **ⲉⲧⲃⲉϫⲉ**ⲙⲡⲟⲩⲣϩⲙϩⲁⲗ ⲛⲁⲛ ⲟⲛ ⲕⲁⲧⲁⲡⲉⲛⲙⲧⲟⲛ ⲛⲥⲁⲣⲕⲓⲕⲟⲛ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉⲡⲣⲏ ϣⲁ ⲁⲩϩⲱϭⲃ ⲁⲩⲱ **ⲉⲧⲃⲉ **ϫⲉ**ⲙⲡⲟⲩϫⲉⲛⲟⲩⲛⲉ** ⲉⲃⲟⲗ ⲁⲩϣⲟⲟⲩⲉ",
+      "english": "When the sun had risen, it was scorched; and because it had no root, it withered away.",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲙⲛϣⲏⲣⲉ ⲉⲙⲛⲉⲓⲱⲧ ⲉⲙⲛⲗⲁⲁⲩ ⲛϩⲏⲧⲟⲩ ϩⲟⲗⲱⲥ ⲙⲙⲁⲩ **ⲉⲧⲃⲉϫⲉ**ⲁⲩⲡⲱⲧ .",
+      "english": "while there is no son and no father and nothing at all inside because they ran.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.98,
+      "rank": 631,
+      "count": 155
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7055",
+      "type": "cf",
+      "label": "conjunction"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C741",
+      "label": "ⲉⲧⲃⲉ ⲡⲁⲓ",
+      "pos": "CONJ",
+      "gloss": "wherefore"
+    },
+    {
+      "target": "C739",
+      "label": "ⲉⲧⲃⲉ-",
+      "pos": "PREP",
+      "gloss": "because of, concerning"
+    }
+  ]
+}

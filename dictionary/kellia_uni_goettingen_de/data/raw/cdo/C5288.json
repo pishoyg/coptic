@@ -1,0 +1,58 @@
+{
+  "id": "C5288",
+  "forms": [
+    {
+      "id": "CF12545",
+      "orth": "ϫⲓⲛⲟⲩⲱϣⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5935",
+      "bibliography": "CD 504b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5289",
+      "label": "ⲟⲩⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "worship"
+    },
+    {
+      "target": "C5285",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "V",
+      "gloss": "worship, greet, kiss"
+    },
+    {
+      "target": "C5286",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "salutation, obeisance"
+    },
+    {
+      "target": "C5287",
+      "label": "ⲣⲉϥⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "worshipper"
+    }
+  ]
+}

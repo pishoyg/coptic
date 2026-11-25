@@ -1,0 +1,49 @@
+{
+  "id": "C446",
+  "forms": [
+    {
+      "id": "CF1854",
+      "orth": "ⲃⲗⲕⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1855",
+      "orth": "ⲃⲗⲕⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS541",
+      "bibliography": "CD 38a; CED 23; KoptHWb 23; DELC 27-28; ChLCS 8b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12130",
+      "label": "ⲃⲁⲗⲕϥ",
+      "pos": "N",
+      "gloss": "wrathful"
+    },
+    {
+      "target": "C444",
+      "label": "ⲃⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C445",
+      "label": "ⲃⲱⲗⲕ",
+      "pos": "N",
+      "gloss": "wrath"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "id": "C10518",
+  "forms": [
+    {
+      "id": "CF28228",
+      "orth": "ⲥⲡⲗⲏⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF28229",
+      "orth": "ⲥⲡⲗⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6263,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14266",
+      "bibliography": "DDGLC",
+      "cu_ID": "1498"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲡⲁ**ⲥⲡⲗⲏⲛ** ⲇⲉ ϭⲱ ⲉϥⲃⲁⲥⲁⲛⲓⲍⲉ ⲙⲙⲟⲓ ⲉⲙⲁⲧⲉ ⲁⲓⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲡϫⲟⲉⲓⲥ ⲛⲥⲁϥ ⲉⲧⲣⲉϥⲭⲁⲣⲓⲍⲉ ⲛⲁⲓ ⲙⲡⲧⲁⲗϭⲟ ·",
+      "english": "And my spleen having continned to torture me most severely, I cried out to the Lord yesterday, asking Him to be graciously pleased to heal me.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲱⲛⲉ ⲉⲡⲉϥ**ⲥⲡⲗⲏⲛ** · ⲛⲟⲩⲥⲟⲡ ϩⲙⲡϣⲟⲙⲛⲧ ⲙⲡϣⲁ ⲙⲡⲃⲱⲗ ⲉⲃⲟⲗ",
+      "english": "He was suffering from his spleen on one occasion on the third day of the festival at the end of Easter,",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁ**ⲥⲡⲗⲏⲛ** ⲟⲩⲛ ⲁϥⲛⲟϫⲧ · ⲉⲡϣⲱⲛⲉ ϫⲓⲛⲙⲡⲛⲁⲩ ⲛⲧⲁⲓⲁⲛⲁⲭⲱⲣⲉⲓ ⲛⲁⲓ ϩⲓⲧⲟⲟⲧⲧⲏⲩⲧⲛ ⲁⲩⲱ ⲙⲡⲓⲛⲁⲩ ⲉⲣⲱⲙⲉ ϣⲁⲛⲧⲉⲕⲉⲓ ϣⲁⲣⲟⲓ ·",
+      "english": "And my spleen threw me into a sickness from the moment when I went away from you, and I never saw a man until thou didst come to me (this day).",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        10.513
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        9.828
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        9.791
+      ],
+      [
+        "ϭⲱ",
+        1,
+        9.669
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        9.398
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        9.225
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        8.624
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        8.343
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_1_pre_ⲥⲡⲗⲏⲛ",
+          2
+        ],
+        [
+          "ⲥⲡⲗⲏⲛ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲡⲗⲏⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲥⲡⲗⲏⲛ",
+          "ⲥⲡⲗⲏⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲡⲗⲏⲛ",
+          "ⲥⲡⲗⲏⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5822,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "5417",
+    "grl_lemma": "σπλήν",
+    "grl_meaning": "milt, spleen",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1628b; Preisigke 2:476"
+  }
+}

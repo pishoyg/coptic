@@ -1,0 +1,141 @@
+{
+  "id": "C5588",
+  "forms": [
+    {
+      "id": "CF13151",
+      "orth": "ⲁⲑⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9575,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6254",
+      "bibliography": "CD 532b; KoptHWb 295; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁⲕϣⲁⲛⲛⲁⲩ ⲉⲫⲓⲱ ⲙⲡⲉⲕϫⲁϫⲓ ⲉⲁϥϩⲉⲓ ϧⲁⲡⲉϥ**ⲁⲑⲁϩ** ⲛⲛⲉⲕⲥⲉⲛϥ ⲁⲗⲗⲁ ⲉⲕⲉⲧⲟⲩⲛⲟⲥϥ ⲛⲉⲙⲁϥ",
+      "english": "And if thou see thine enemy's ass fallen under its burden, thou shalt not pass by it, but shalt help to raise it with him.",
+      "source": "02_Exodus_23",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲉⲛ",
+        1,
+        14.373
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        9.972
+      ],
+      [
+        "ϧⲁ",
+        1,
+        9.853
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲕ",
+        1,
+        7.128
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲑⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲑⲁϩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲑⲁϩ",
+          "ⲁⲑⲁϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9037,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5585",
+      "label": "ⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "woven garment?"
+    },
+    {
+      "target": "C5587",
+      "label": "ⲁⲧϩⲥ",
+      "pos": "N",
+      "gloss": "tissue, material"
+    },
+    {
+      "target": "C5586",
+      "label": "ⲟⲩⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "warp (on loom)"
+    },
+    {
+      "target": "C5583",
+      "label": "ⲱⲧϩ",
+      "pos": "V",
+      "gloss": "tie, sew, weave"
+    },
+    {
+      "target": "C5584",
+      "label": "ⲱⲧϩ",
+      "pos": "N",
+      "gloss": "fastened thing or place, lock"
+    }
+  ],
+  "etym": {
+    "demo_num": "d281",
+    "demo_lemma": "ꜣtḥ",
+    "english": "[to pull, drag]",
+    "german": "Last(?); Ladung, Bündel",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d281"
+  }
+}

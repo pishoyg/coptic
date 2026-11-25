@@ -1,0 +1,473 @@
+{
+  "id": "C9218",
+  "forms": [
+    {
+      "id": "CF23046",
+      "orth": "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23050",
+      "orth": "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23048",
+      "orth": "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2466,
+        "count": 20
+      }
+    },
+    {
+      "id": "CF23049",
+      "orth": "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2033,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF23047",
+      "orth": "ⲓⲥⲣⲁⲉⲓⲗⲉⲓⲧⲏⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11472",
+      "bibliography": "DDGLC",
+      "cu_ID": "1072"
+    },
+    {
+      "id": "CS11473",
+      "bibliography": "DDGLC",
+      "cu_ID": "7466"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲉⲧⲁϥⲛⲁⲩ ⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲓⲥⲁⲁⲕ ⲡⲉϫⲁϥ ⲛⲛⲓⲥⲛⲏⲟⲩ ⲉⲑⲙⲟϣⲓ ⲛⲉⲙⲁϥ ϫⲉⲓⲥ ⲟⲩ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ⲙⲙⲟⲛ ⲇⲟⲗⲟⲥ ⲛϧⲏⲧϥ ⲫⲁⲓ ⲛⲁϣⲱⲡⲓ ⲛⲟⲩⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛϯⲡⲟⲗⲓⲥ ⲣⲁⲕⲟϯ ⲟⲩⲟϩ ⲙⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+      "english": "It came to pass that after seeing the holy Isaac, he said to the brethren who were walking with him, ‘Here is an Israelite in whom there is no cunning: he will be archbishop of the city of Alexandria and patriarch;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ϭⲉ ⲟⲩⲛ ⲙⲡⲉⲣⲉⲉⲓⲙⲉ ⲉⲩϩⲓⲱⲛⲉ ⲉⲛⲁⲃⲟⲩⲑⲁⲓ ⲡ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ·",
+      "english": "If He was, why didst thou not understand (and do the same) when they stoned Naboth the Israelite?",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲧⲱⲛϥ ⲇⲉ ⲛϫⲉⲡⲁⲩⲗⲟⲥ ⲟⲩⲟϩ ⲉⲧⲁϥϭⲱⲣⲉⲙ ⲛⲧⲉϥϫⲓϫ ⲡⲉϫⲁϥ ⲛⲓⲣⲱⲙⲓ ⲛ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ⲛⲉⲙⲛⲏ ⲉⲧⲉⲣϩⲟϯ ϧⲉⲛⲑⲏⲛⲟⲩ ϧⲁⲧϩⲏ ⲙⲫⲛⲟⲩϯ ⲥⲱⲧⲉⲙ .",
+      "english": "Paul stood up, and beckoning with his hand said, 'Men of Israel, and you who fear God, listen.",
+      "source": "05_Acts_13",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲧⲛⲛⲟⲟⲩ ⲙⲡⲉϥⲁⲅⲅⲉⲗⲟⲥ · ⲁϥⲉⲛⲧ ⲉⲃⲟⲗ ϩⲙⲡⲏⲓ ⲙⲡⲁⲉⲓⲱⲧ ⲁϥϫⲓⲙⲟⲉⲓⲧ ϩⲏⲧ ϩⲓⲛⲉϩⲓⲟⲟⲩⲉ · ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ · ⲁϥⲉⲛⲧ ⲉⲣⲁⲧϥ ⲙⲡϣⲱⲥ ⲉⲧⲛⲁⲛⲟⲩϥ · ⲛⲣⲉϥⲧⲟⲩϫⲉⲯⲩⲭⲏ · ⲁⲓⲙⲟⲟⲛⲉ · ⲉⲡⲗⲩⲙⲏⲛ · ⲙⲡⲟⲩϫⲁⲓ ⲉⲧⲉⲙⲛⲥⲟⲟⲛⲉ ⲛϩⲏⲧϥ ⲉⲧⲉⲡⲉⲛⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ⲡⲉ · ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲡⲟⲗⲗⲱ · ⲡ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ⲛⲁⲙⲉ ⲉⲧⲉⲙⲛⲕⲣⲟϥ ⲛϩⲏⲧϥ",
+      "english": "God sent his messenger, and brought me out of the house of my father, and guided me on the ways of righteousness, and brought me to the good life-saving shepherd, and I moored at the harbor of salvation, in which there was no robber, which was truly our beloved father, Apa Apollo the Israelite, in whom there was no deception.",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲓⲣⲱⲙⲓ ⲛⲓ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ⲁⲣⲓⲃⲟⲏⲑⲓⲛ ⲫⲁⲓ ⲡⲉ ⲡⲓⲣⲱⲙⲓ ⲉⲧϯ ⲉϧⲟⲩⲛ ⲉϩⲣⲉⲛⲡⲓⲗⲁⲟⲥ ⲛⲉⲙⲡⲓⲛⲟⲙⲟⲥ ⲛⲉⲙⲡⲁⲓⲙⲁ ⲉϥϯⲥⲃⲱ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ϧⲉⲛⲙⲁⲓ ⲛⲓⲃⲉⲛ ⲉⲧⲓ ⲇⲉ ⲛⲉⲙϩⲁⲛⲕⲉⲟⲩⲉⲓⲛⲓⲛ ⲉⲁϥⲉⲛⲟⲩ ⲉϧⲟⲩⲛ ⲉⲡⲓⲉⲣⲫⲉⲓ ⲟⲩⲟϩ ⲁϥⲥⲱϥ ⲙⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ .",
+      "english": "crying out, 'Men of Israel, help! This is the man who teaches all men everywhere against the people, and the law, and this place. Moreover, he also brought Greeks into the temple, and has defiled this holy place!'",
+      "source": "05_Acts_21",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲏⲥⲟⲩⲥ ⲛⲁⲩ ⲉⲛⲁⲑⲁⲛⲁⲏⲗ ⲉϥⲛⲏⲩ ϣⲁⲣⲟϥ ⲁⲩⲱ ⲡⲉϫⲁϥ ⲉⲧⲃⲏⲏⲧϥ . ϫⲉⲉⲓⲥⲟⲩ**ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ** ⲛⲁⲙⲉ ⲉⲙⲙⲛⲕⲣⲟϥ ⲛϩⲏⲧϥ",
+      "english": "Jesus saw Nathanael coming to him, and said about him, 'Behold, an Israelite indeed, in whom is no deceit!'",
+      "source": "43_John_1",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲇⲟⲗⲟⲥ",
+        3,
+        19.058
+      ],
+      [
+        "ⲛⲁⲑⲁⲛ",
+        1,
+        13.888
+      ],
+      [
+        "ⲑⲱⲟⲩ",
+        1,
+        13.303
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        7,
+        13.102
+      ],
+      [
+        "ⲁⲣⲓⲃⲟⲏⲑⲓⲛ",
+        1,
+        11.981
+      ],
+      [
+        "ⲓⲥ",
+        3,
+        11.845
+      ],
+      [
+        "ⲛⲓ",
+        8,
+        11.411
+      ],
+      [
+        "ϩⲣⲱ",
+        1,
+        10.981
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        3,
+        10.761
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        3,
+        10.051
+      ],
+      [
+        "ϥ",
+        8,
+        9.617
+      ],
+      [
+        "ⲥⲁϩⲟⲩⲓ",
+        1,
+        9.495
+      ],
+      [
+        "ⲙⲁⲛ",
+        1,
+        9.38
+      ],
+      [
+        "ⲉⲣϣⲫⲏⲣⲓ",
+        1,
+        8.969
+      ],
+      [
+        "ⲡⲓ",
+        5,
+        8.929
+      ],
+      [
+        "ⲛ",
+        6,
+        8.538
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        8.435
+      ],
+      [
+        "ϫⲉ",
+        4,
+        8.329
+      ],
+      [
+        "ⲉ",
+        5,
+        8.176
+      ],
+      [
+        "ϩⲑⲏ",
+        1,
+        8.16
+      ]
+    ],
+    "S": [
+      [
+        "ⲡϣⲛ",
+        3,
+        20.031
+      ],
+      [
+        "ⲛⲁⲃⲟⲩⲑⲁⲓ",
+        3,
+        19.446
+      ],
+      [
+        "ⲁⲭⲓⲛⲁ",
+        3,
+        19.031
+      ],
+      [
+        "ⲁⲃ",
+        4,
+        18.276
+      ],
+      [
+        "ⲁⲃⲓⲕⲓⲁ",
+        3,
+        17.124
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.276
+      ],
+      [
+        "ⲛⲁⲭⲓⲛⲁ",
+        1,
+        16.276
+      ],
+      [
+        "ⲛⲛⲁⲓⲙⲁ",
+        1,
+        16.276
+      ],
+      [
+        "ⲛⲛⲁⲓⲑⲁⲛ",
+        1,
+        16.276
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        7,
+        14.355
+      ],
+      [
+        "ⲧⲱⲟⲩ",
+        1,
+        14.276
+      ],
+      [
+        "ϩⲓⲱⲛⲉ",
+        2,
+        14.028
+      ],
+      [
+        "ⲁⲩⲱ",
+        15,
+        13.146
+      ],
+      [
+        "ⲙⲛⲧⲣⲙⲛϩⲏⲧ",
+        2,
+        12.562
+      ],
+      [
+        "ⲧⲉ",
+        8,
+        12.481
+      ],
+      [
+        "ⲡ",
+        17,
+        12.438
+      ],
+      [
+        "ⲛⲁⲙⲉ",
+        2,
+        12.265
+      ],
+      [
+        "ⲉⲧⲉ",
+        5,
+        11.928
+      ],
+      [
+        "ⲃ",
+        1,
+        11.753
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        6,
+        11.746
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          13
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲑⲱⲟⲩ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          "ⲛⲏ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          "ⲑⲱⲟⲩ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲱⲟⲩ_3_post_ⲧⲉ",
+          "ⲧⲉ_2_post_ⲛⲏ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          16
+        ],
+        [
+          "ⲡ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          6
+        ],
+        [
+          "ⲧ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          4
+        ],
+        [
+          "ⲛⲁⲙⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲣⲟϥ_3_post_ⲙⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ_0_node",
+          "ⲛⲁⲙⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲙⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲉⲧⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          "ⲕⲣⲟϥ_3_post_ⲙⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2177,
+      "count": 20
+    },
+    "B": {
+      "rate": 0.16,
+      "rank": 1754,
+      "count": 14
+    }
+  },
+  "etym": {
+    "grl_ID": "2510",
+    "grl_lemma": "Ἰσραηλίτης",
+    "grl_meaning": "Israelite",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 606b"
+  }
+}

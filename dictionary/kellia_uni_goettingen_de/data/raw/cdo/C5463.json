@@ -1,0 +1,220 @@
+{
+  "id": "C5463",
+  "forms": [
+    {
+      "id": "CF12897",
+      "orth": "ⲟⲗⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17406,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6121",
+      "bibliography": "CD 522a; KoptHWb 140; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁϫⲟⲟⲩ ⲛⲧⲁⲟⲣⲅⲏ ⲉⲩϩⲉⲑⲛⲟⲥ ⲛⲁⲛⲟⲙⲟⲥ ⲁⲩⲱ ϯⲛⲁϩⲱⲛ ⲙⲡⲁⲗⲁⲟⲥ ⲉⲧⲣⲉϥϥⲓ ⲛϩⲉⲛϣⲟⲗⲥ ⲙⲛϩⲉⲛ**ⲟⲗⲥ** ⲁⲩⲱ ⲉϩⲱⲙ ⲛⲙⲡⲟⲗⲓⲥ ⲉⲕⲁⲁⲩ ⲛϣϩⲓϭ",
+      "english": "I will send my wrath against a sinful nation, and I will charge my people to take plunder and spoil, and to trample the cities, and to make them dust.",
+      "source": "Isaiah 10",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲗⲥ",
+        1,
+        16.074
+      ],
+      [
+        "ϩⲱⲙ",
+        1,
+        14.448
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲟⲗⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲗⲥ",
+          1
+        ],
+        [
+          "ⲟⲗⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲟⲗⲥ",
+          "ϩⲉⲛ_1_pre_ⲟⲗⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲗⲥ",
+          "ⲟⲗⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17017,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5461",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5462",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5448",
+      "label": "ⲁⲗ-",
+      "pos": "N",
+      "gloss": "taker"
+    },
+    {
+      "target": "C5446",
+      "label": "ⲁⲗⲓ",
+      "pos": "VIMP",
+      "gloss": "Take!"
+    },
+    {
+      "target": "C5447",
+      "label": "ⲁⲗⲓⲟⲩⲓ",
+      "pos": "VIMP",
+      "gloss": "lift! Pick ... up!"
+    },
+    {
+      "target": "C5460",
+      "label": "ⲣⲉϥⲱⲗ",
+      "pos": "N",
+      "gloss": "gatherer"
+    },
+    {
+      "target": "C5445",
+      "label": "ⲱⲗ",
+      "pos": "V",
+      "gloss": "hold, contain, enclose; take, lay hold of, gather"
+    },
+    {
+      "target": "C5459",
+      "label": "ⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering, harvest"
+    },
+    {
+      "target": "C5449",
+      "label": "ⲱⲗ (ⲉ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5454",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "bring in, enclose"
+    },
+    {
+      "target": "C5455",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "enclosure, siege"
+    },
+    {
+      "target": "C5456",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "take, lift up, withdraw"
+    },
+    {
+      "target": "C5457",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "withdrawal"
+    },
+    {
+      "target": "C5452",
+      "label": "ⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take away"
+    },
+    {
+      "target": "C5450",
+      "label": "ⲱⲗⲓ (ⲉϫⲉⲛ)-",
+      "pos": "V",
+      "gloss": "bring up(on)"
+    },
+    {
+      "target": "C5451",
+      "label": "ⲱⲗⲓ (ⲛ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5453",
+      "label": "ⲱⲗⲓ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "take upward"
+    },
+    {
+      "target": "C5458",
+      "label": "ⲱⲗⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "take/carry away"
+    }
+  ]
+}

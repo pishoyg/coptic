@@ -1,0 +1,167 @@
+{
+  "id": "C9836",
+  "forms": [
+    {
+      "id": "CF25482",
+      "orth": "ⲙⲡⲗⲁⲥⲧⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25486",
+      "orth": "ⲙⲡⲗⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10555,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25483",
+      "orth": "ⲉⲙⲡⲗⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25484",
+      "orth": "ⲉⲙⲡⲗⲁⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25485",
+      "orth": "ⲙⲡⲗⲁⲥⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25487",
+      "orth": "ⲙⲡⲣⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25488",
+      "orth": "ⲛⲡⲗⲁⲥⲧⲗⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25489",
+      "orth": "ⲛⲡⲗⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25490",
+      "orth": "ⲛⲡⲗⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25491",
+      "orth": "ⲛⲡⲣⲁⲥⲧⲗⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25492",
+      "orth": "ⲛⲡⲣⲁⲥⲧⲣⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12773",
+      "bibliography": "DDGLC",
+      "cu_ID": "8435"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁⲛϫⲓⲥⲉ ⲛⲛⲉⲓ**ⲙⲡⲗⲁⲥⲧⲣⲟⲛ** ⲙⲛⲛⲉⲓⲡⲁϩⲣⲉ ·",
+      "english": "Therefore will we exalt these salves and these medicines.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁϩⲣⲉ",
+        1,
+        15.206
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        13.467
+      ],
+      [
+        "ϫⲓⲥⲉ",
+        1,
+        11.219
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲗⲁⲥⲧⲣⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲣⲉ_1_post_ⲙⲡⲗⲁⲥⲧⲣⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲗⲁⲥⲧⲣⲟⲛ_0_node",
+          "ⲙⲛ_2_post_ⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁϩⲣⲉ",
+          "ⲛⲉⲓ_2_post_ⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲡⲁϩⲣⲉ",
+          "ⲡⲁϩⲣⲉ_1_post_ⲙⲡⲗⲁⲥⲧⲣⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10139,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "667",
+    "grl_lemma": "ἔμπλαστρον",
+    "grl_meaning": "salve, plaster",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 546a; Preisigke 1:475"
+  }
+}

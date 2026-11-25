@@ -1,0 +1,420 @@
+{
+  "id": "C8263",
+  "forms": [
+    {
+      "id": "CF19065",
+      "orth": "ⲁⲛⲁⲧⲟⲗⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF19066",
+      "orth": "ⲁⲛⲁⲧⲟⲗⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF19067",
+      "orth": "ⲁⲛⲁⲧⲟⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3070,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF19068",
+      "orth": "ⲁⲛⲁⲧⲟⲗⲏ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9392",
+      "bibliography": "DDGLC",
+      "cu_ID": "1922"
+    },
+    {
+      "id": "CS9393",
+      "bibliography": "DDGLC",
+      "cu_ID": "3596"
+    },
+    {
+      "id": "CS9394",
+      "bibliography": "DDGLC",
+      "cu_ID": "3589"
+    },
+    {
+      "id": "CS9395",
+      "bibliography": "DDGLC",
+      "cu_ID": "785"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁϥϣⲁϫⲉ ⲇⲉ ⲟⲛ ⲉⲧⲃⲉⲡⲧⲱⲃⲥ ⲛⲧⲉⲯⲩⲭⲏ ⲁⲩⲱ ⲉⲧⲃⲉⲡⲉϩⲣⲏⲧⲟⲛ ⲉⲧⲥⲏϩ ϩⲛⲓⲉⲣⲉⲙⲓⲁⲥ ⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ϫⲉϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ϯⲛⲁⲧⲁϩⲟ ⲉⲣⲁⲧⲥ ⲛⲟⲩ**ⲁⲛⲁⲧⲟⲗⲏ** ⲙⲙⲉ ϩⲙⲡⲏⲓ ⲛⲇⲁⲩⲉⲓⲇ",
+      "english": "AND HE SPAKE ALSO CONCERNING THE IMPULSE OF THE SOUL, AND CONCERNING THE PASSAGE WHICH IS WRITTEN IN [THE BOOK OF] JEREMIAH THE PROPHET, WHICH SAITH, 'IN THAT DAY I WILL ESTABLISH SUNRISE (OR, MORNING) IN THE HOUSE OF DAVID.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ϭⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲛⲟϭ ⲛⲟⲩⲏⲏⲃ ⲛⲧⲟⲕ ⲙⲛⲛⲉⲕϣⲃⲉⲉⲣ ⲉⲧϩⲙⲟⲟⲥ ⲙⲡⲉⲕⲙⲧⲟ ⲉⲃⲟⲗ ϫⲉϩⲉⲛⲣⲱⲙⲉ ⲛⲉ ⲛⲣⲉϥϫⲓⲙⲁⲉⲓⲛ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲉⲓⲛⲉ ⲉϫⲙⲡⲁϩⲙϩⲁⲗ ⲛⲟⲩ**ⲁⲛⲁⲧⲟⲗⲏ**",
+      "english": "Thus saith the Lord Almighty; If thou wilt walk in my ways, and take heed to my charges, then shalt thou judge my house: and if thou wilt diligently keep my court, then will I give thee men to walk in the midst of these that stand here.",
+      "source": "Zechariah 3",
+      "urn": "urn:cts:copticLit:ot.zech.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲉⲓⲙⲉ ⲇⲉ ϫⲉⲧ**ⲁⲛⲁⲧⲟⲗⲏ** ⲁⲛⲟⲛ ⲛⲉⲧϩⲙⲡⲕⲁⲕⲉ ⲙⲛⲧϩⲁⲓⲃⲉⲥ ⲙⲡⲙⲟⲩ ·",
+      "english": "Let us then, we who are in the darkness and shadow of death, know the east",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲏⲙⲓ",
+        3,
+        13.075
+      ],
+      [
+        "ⲁⲃⲱⲕ",
+        1,
+        12.981
+      ],
+      [
+        "ⲣⲉⲙϩⲉ",
+        1,
+        12.164
+      ],
+      [
+        "ⲕⲱⲧ",
+        1,
+        9.819
+      ],
+      [
+        "ⲅ",
+        1,
+        9.259
+      ],
+      [
+        "ⲱⲛⲓ",
+        1,
+        9.228
+      ],
+      [
+        "ϭⲓⲥⲓ",
+        1,
+        9.038
+      ],
+      [
+        "ⲃ",
+        1,
+        8.387
+      ],
+      [
+        "ϧⲉⲛ",
+        3,
+        8.196
+      ],
+      [
+        "ⲡ",
+        3,
+        8.052
+      ],
+      [
+        "ⲓⲛⲓ",
+        1,
+        7.775
+      ],
+      [
+        "ⲣⲁⲛ",
+        1,
+        7.55
+      ],
+      [
+        "ϯ",
+        2,
+        6.968
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        6.921
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.815
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        6.782
+      ],
+      [
+        ".",
+        2,
+        6.294
+      ],
+      [
+        "ⲙ",
+        2,
+        6.261
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        6.092
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        5.898
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲁ",
+        7,
+        15.98
+      ],
+      [
+        "ⲛ",
+        17,
+        12.371
+      ],
+      [
+        "ⲙⲉ",
+        4,
+        12.24
+      ],
+      [
+        "ⲡ",
+        13,
+        11.898
+      ],
+      [
+        "ⲧ",
+        9,
+        11.88
+      ],
+      [
+        "ⲥ",
+        6,
+        10.329
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        2,
+        10.111
+      ],
+      [
+        "ϯⲟⲩⲱ",
+        1,
+        9.875
+      ],
+      [
+        "ⲙ",
+        6,
+        9.406
+      ],
+      [
+        "ϩⲙ",
+        3,
+        8.467
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        8.225
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        7.802
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        7.792
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        7.745
+      ],
+      [
+        "ϣⲗⲏⲗ",
+        1,
+        7.542
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.52
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        7.366
+      ],
+      [
+        "ⲁ",
+        4,
+        7.344
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        7.066
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        6.831
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲁⲛⲁⲧⲟⲗⲏ",
+          2
+        ],
+        [
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲏⲙⲓ",
+          1
+        ],
+        [
+          "ⲭⲏⲙⲓ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲃ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲓ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲁⲛⲁⲧⲟⲗⲏ",
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          2
+        ],
+        [
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          "ⲛⲉⲙ_2_post_ⲭⲏⲙⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲏⲙⲓ",
+          "ⲭⲏⲙⲓ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          "ⲃ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲃ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          "ϥ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲱⲡⲓ",
+          "ⲛⲁ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ϣⲱⲡⲓ",
+          "ϣⲱⲡⲓ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          2
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲛⲁⲧⲟⲗⲏ_0_node",
+          "ⲙ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲧⲟⲗⲏ",
+          "ⲙⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          "ⲛ_3_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲉ",
+          "ⲇⲁⲩⲉⲓⲇ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2721,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "146",
+    "grl_lemma": "ἀνατολή",
+    "grl_meaning": "rising, growing; sunrise, East",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 123b; Preisigke 1:108"
+  }
+}

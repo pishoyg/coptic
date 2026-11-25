@@ -1,0 +1,434 @@
+{
+  "id": "C8015",
+  "forms": [
+    {
+      "id": "CF18096",
+      "orth": "ϭⲱϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2853,
+        "count": 15
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8914",
+      "bibliography": "CD 841b; KoptHWb 473; DELC 351a; ChLCS 110b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩ**ϭⲱϫⲉ** ⲇⲉ ⲉⲡⲉⲥⲏⲧ ⲛϭⲓⲛⲉⲧⲙⲙⲁⲩ ·",
+      "english": "and those who were there dug down deeper still.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲥⲟⲩⲉⲗⲟⲩⲱⲗⲥ ⲉⲣⲟϥ · ⲁⲓ**ϭⲱϫⲉ** ⲛⲛⲁϭⲓϫ ϩⲙⲡⲕⲁϩ · ⲁⲓⲧⲱⲙⲥϥ · ⲁⲩⲱ ⲁⲓⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "and wrapped the body up in it, and I dug a hole in the earth with my hands, and I buried him [in it]. And I came forth from that place,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉ**ϭⲱϫⲉ** ⲉⲡⲉⲥⲏⲧ ⲉⲡⲉϩⲟⲩⲟ ·",
+      "english": "And he was saying, 'Dig ye down much deeper '",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲃⲣⲁ",
+        1,
+        16.691
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        6,
+        14.964
+      ],
+      [
+        "ⲉ",
+        22,
+        14.289
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        4,
+        13.187
+      ],
+      [
+        "ⲁⲫⲟⲣⲙⲏ",
+        1,
+        12.784
+      ],
+      [
+        "ⲛ",
+        15,
+        11.623
+      ],
+      [
+        "ϣⲓⲕⲉ",
+        1,
+        11.521
+      ],
+      [
+        "ⲟⲩⲱ",
+        2,
+        11.179
+      ],
+      [
+        "ⲇⲉ",
+        6,
+        10.834
+      ],
+      [
+        "ϣⲏⲓ",
+        1,
+        10.604
+      ],
+      [
+        "ϥ",
+        10,
+        10.581
+      ],
+      [
+        "ⲩ",
+        7,
+        10.325
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        2,
+        10.207
+      ],
+      [
+        "ⲡ",
+        9,
+        10.1
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        9.074
+      ],
+      [
+        "ϭⲓϫ",
+        2,
+        9.067
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        8.916
+      ],
+      [
+        "ⲁ",
+        6,
+        8.892
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        8.747
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        8.32
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲱϫⲉ_0_node",
+          7
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϫⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϫⲉ_b",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϭⲱϫⲉ",
+          3
+        ],
+        [
+          "ⲇⲉ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲱϫⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲧⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϫⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱϫⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ϭⲓϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱϫⲉ_0_node",
+          "ⲉ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϫⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          "ⲉ_1_post_ϭⲱϫⲉ_b",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϫⲉ_b",
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϭⲱϫⲉ",
+          "ϭⲱϫⲉ_0_node",
+          3
+        ],
+        [
+          "ϭⲱϫⲉ_0_node",
+          "ⲇⲉ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ϭⲱϫⲉ_0_node",
+          "ⲙ_1_post_ϭⲱϫⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϭⲱϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲧⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϫⲉ",
+          "ⲩ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ϭⲱϫⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲱϫⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϫⲉ",
+          "ⲓ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϭⲱϫⲉ",
+          "ϭⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϭⲱϫⲉ_0_node",
+          "ⲛ_1_post_ϭⲱϫⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϭⲱϫⲉ",
+          "ⲛⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱϫⲉ",
+          "ϭⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          "ⲉ_1_post_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲱϫⲉ",
+          "ϥ_1_pre_ϭⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲱϫⲉ",
+          "ϭⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱϫⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϣⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2524,
+      "count": 15
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C8013",
+      "label": "ϫⲱϫⲓ",
+      "pos": "N",
+      "gloss": "cutting, cut, incision"
+    },
+    {
+      "target": "C8016",
+      "label": "ϭⲱϫⲉ",
+      "pos": "N",
+      "gloss": "what is dug, spadeful, excavation"
+    },
+    {
+      "target": "C8012",
+      "label": "ϭⲱⲱϫⲉ",
+      "pos": "V",
+      "gloss": "cut"
+    },
+    {
+      "target": "C8014",
+      "label": "ⲣϭⲱⲱϫⲉ",
+      "pos": "V",
+      "gloss": "be incisive"
+    },
+    {
+      "target": "C8017",
+      "label": "ⲣⲉϥϫⲱϫ",
+      "pos": "N",
+      "gloss": "digger(?)"
+    }
+  ]
+}

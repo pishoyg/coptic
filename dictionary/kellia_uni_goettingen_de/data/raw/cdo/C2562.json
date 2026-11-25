@@ -1,0 +1,324 @@
+{
+  "id": "C2562",
+  "forms": [
+    {
+      "id": "CF6916",
+      "orth": "ⲛⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.47,
+        "rank": 554,
+        "count": 232
+      }
+    },
+    {
+      "orth": "ⲛⲑⲟⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.92,
+        "rank": 758,
+        "count": 78
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "3. Pers.",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2942",
+      "bibliography": "(CD 11b); CED 112; KoptHWb 128; DELC 146; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲓⲇⲏ ⲥϣⲟⲡ ⲙⲁⲩⲁⲧ**ⲥ**",
+      "english": "for it alone exists,",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲧⲟⲥ** ⲇⲉ ⲁⲥⲥⲡⲥⲱⲡϥ",
+      "english": "But she entreated him",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲏⲧ**ⲥ** ⲛϯϩⲟ ⲉⲣⲟϥ ϫⲉⲛⲧⲉϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲑⲟϣ",
+      "english": "They began to beg him to depart from their region.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱ**ⲥ** ⲁⲥⲕⲁⲁϥ ⲉⲃⲟⲗ .",
+      "english": "Afterwards, she left him.",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲃⲁⲕⲓ ⲧⲏⲣⲥ ⲁ**ⲥ**ⲑⲱⲟⲩϯ ϩⲓⲣⲉⲛⲡⲓⲣⲟ .",
+      "english": "All the city was gathered together at the door.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲉ**ⲥ**ⲕⲉⲣⲁⲧⲥ ⲉⲃⲟⲗ ⲉⲛⲉϩ ⲉⲛⲁⲩ ⲉⲡⲓⲉⲣⲟ .",
+      "english": "and she never set foot outside to see the river.",
+      "source": "Apophthegmata Patrum Sahidic 042: Sarah",
+      "urn": "urn:cts:copticLit:ap.42.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥ",
+        96,
+        26.183
+      ],
+      [
+        "ⲇⲉ",
+        70,
+        25.436
+      ],
+      [
+        "ϣⲉⲣⲓ",
+        12,
+        21.876
+      ],
+      [
+        "ⲁ",
+        47,
+        21.653
+      ],
+      [
+        "ⲟⲩϩⲱⲣ",
+        4,
+        21.373
+      ],
+      [
+        "ⲧⲉ",
+        12,
+        20.741
+      ],
+      [
+        "ⲡⲉⲥ",
+        9,
+        20.378
+      ],
+      [
+        "ⲭⲁⲗⲕⲓⲟⲛ",
+        2,
+        20.373
+      ],
+      [
+        "ⲛⲉⲥⲕⲉ",
+        2,
+        20.373
+      ],
+      [
+        "ⲑⲁⲓ",
+        7,
+        20.362
+      ],
+      [
+        "ϫⲉ",
+        25,
+        20.068
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        12,
+        19.971
+      ],
+      [
+        "ⲁϭⲣⲏⲛ",
+        2,
+        19.695
+      ],
+      [
+        "ⲥⲕⲟⲩⲗⲟⲗⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁⲃⲁⲣⲓⲙ",
+        1,
+        19.695
+      ],
+      [
+        "ⲧⲉⲣⲁϣⲉⲛⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ϣⲗⲉⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲁⲙⲁⲣⲓⲁⲧⲏⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ϩⲱⲥ",
+        7,
+        19.578
+      ],
+      [
+        "ⲫⲩⲥⲓⲥ",
+        2,
+        19.236
+      ]
+    ],
+    "S": [
+      [
+        "ⲥ",
+        345,
+        31.566
+      ],
+      [
+        "ⲇⲉ",
+        211,
+        30.149
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        27.564
+      ],
+      [
+        "ⲁ",
+        145,
+        26.584
+      ],
+      [
+        "ⲧⲉⲥ",
+        24,
+        25.284
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        39,
+        24.601
+      ],
+      [
+        "ⲙⲛ",
+        61,
+        24.436
+      ],
+      [
+        "ⲛⲁ",
+        70,
+        24.076
+      ],
+      [
+        "ⲛⲉⲥ",
+        18,
+        23.893
+      ],
+      [
+        "ⲩϩⲟⲟⲣ",
+        4,
+        23.598
+      ],
+      [
+        "ⲉⲧ",
+        55,
+        23.582
+      ],
+      [
+        "ϩⲱⲱ",
+        18,
+        22.97
+      ],
+      [
+        "ⲧⲉ",
+        33,
+        22.936
+      ],
+      [
+        "ⲧ",
+        48,
+        22.826
+      ],
+      [
+        "ϣⲱⲙⲉ",
+        6,
+        22.709
+      ],
+      [
+        "ⲛⲉ",
+        35,
+        22.701
+      ],
+      [
+        "ⲉⲛⲉⲥ",
+        2,
+        22.598
+      ],
+      [
+        "ϩⲟⲣϭ",
+        3,
+        22.546
+      ],
+      [
+        "ⲡⲉⲥ",
+        15,
+        22.451
+      ],
+      [
+        "ⲛ",
+        73,
+        22.378
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9023,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2572",
+      "type": "cf",
+      "label": "Pers. Pron. 3. sg. m."
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2563",
+      "label": "ⲛⲧⲟⲥ",
+      "pos": "PTC",
+      "gloss": "rather, but, what is more"
+    },
+    {
+      "target": "C2564",
+      "label": "ⲛⲧⲟⲥ",
+      "pos": "PTC",
+      "gloss": "likewise, (or merely) again"
+    }
+  ],
+  "etym": {
+    "egy_num": "90080",
+    "egy_lemma": "jnts",
+    "english": "she [self.pron. sg.3.f.]",
+    "german": "sie [Selbst.Pron. sg.3.f.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/90080"
+  }
+}

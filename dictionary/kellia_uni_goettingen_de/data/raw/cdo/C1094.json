@@ -1,0 +1,699 @@
+{
+  "id": "C1094",
+  "forms": [
+    {
+      "id": "CF3548",
+      "orth": "ⲕⲱⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1365,
+        "count": 59
+      }
+    },
+    {
+      "orth": "ⲕⲃ-",
+      "dialect": "S",
+      "id": "479.1"
+    },
+    {
+      "orth": "ⲕⲉⲃ-",
+      "dialect": "S",
+      "id": "479.2"
+    },
+    {
+      "orth": "ⲕⲟⲃ⸗",
+      "dialect": "S",
+      "id": "479.3"
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2111,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ⲕⲱⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1865,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ⲕⲟⲃ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4533,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1365,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲕⲱⲃ",
+      "dialect": "A",
+      "id": "479.8"
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "A",
+      "id": "479.9"
+    },
+    {
+      "orth": "ⲕⲱⲃ",
+      "dialect": "F",
+      "id": "479.10"
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "F",
+      "id": "479.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1275",
+      "bibliography": "CD 98b-99a"
+    },
+    {
+      "id": "CS1276",
+      "bibliography": "CD 99a; KoptHWb 57; ChLCS 15b"
+    },
+    {
+      "id": "CS1277",
+      "bibliography": "CD 99a; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓ**ⲕⲱⲃ** ⲛⲁϥ ⲛⲛⲉϥⲭⲣⲏⲙⲁ ⲙⲛⲛⲉϥⲧⲃⲛⲟⲟⲩⲉ · ⲙⲛⲛⲉϥϩⲩⲡⲁⲣⲭⲱⲛⲧⲁ ⲧⲏⲣⲟⲩ · ⲉⲧⲃⲉⲙⲙⲛⲧⲛⲁ ⲉⲧϥⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ⲙⲛⲛϩⲏⲕⲉ · ⲙⲛⲛⲉⲡⲣⲟⲥⲫⲟⲣⲁ ⲉⲧϥϯ ⲙⲙⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ϩⲙⲡⲁⲣⲁⲛ ·",
+      "english": "I doubled for him his flocks and herds, and his possessions and his goods, because of the alms and oblations which he gave to the poor, and the offerings which he made unto God in my name.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲁϥⲥⲱⲧⲙ ⲛⲥⲁϩⲏⲗⲓⲁⲥ ⲁⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲣϩⲟⲩⲟ **ⲕⲱⲃ** ⲉϩⲣⲁⲓ ⲉϫⲱϥ ·",
+      "english": "because since Elisha obeyed Elijah the spirit of Elijah came in a double portion upon Elisha.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲱⲙⲉ ⲅⲁⲣ ⲛⲧⲁϥϫⲓⲥϩⲓⲙⲉ ⲁϥϫⲡⲉϣⲏⲣⲉ ⲙⲛⲧϥⲟⲩⲟⲩⲛⲟⲩ ⲛⲟⲩⲱⲧ ⲛⲙⲧⲟⲛ · ⲁⲗⲗⲁ ⲟⲩⲛϩⲉⲛⲣⲟⲟⲩϣ ϩⲓϫⲱϥ ⲙⲡⲉϥⲟⲩⲟⲉⲓϣ ⲧⲏⲣϥ · ⲙⲁⲗⲓⲥⲧⲁ ⲉϣⲱⲡⲉ ⲟⲩϩⲏⲕⲉ ⲡⲉ · ϣⲁⲣⲉⲛⲉϥϩⲓⲥⲉ **ⲕⲱⲃ** ⲉϫⲱϥ ·",
+      "english": "For the man wdio hath married a wife and hath begotten children hath never a moment's peace; on the contrary, his head is always burdened with cares, especially if he be a poor man, for then his tribulations are doubled.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        34,
+        14.153
+      ],
+      [
+        "ⲣ",
+        5,
+        14.03
+      ],
+      [
+        "ⲛⲉⲧⲉⲛϣⲉⲛⲱ",
+        1,
+        13.995
+      ],
+      [
+        "ⲉⲣϣⲟ",
+        1,
+        13.995
+      ],
+      [
+        "ⲥⲟⲡ",
+        5,
+        12.437
+      ],
+      [
+        "ϣⲁϣϥ",
+        1,
+        11.995
+      ],
+      [
+        "ⲍ",
+        3,
+        10.535
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        11,
+        9.758
+      ],
+      [
+        "ⲗⲓⲁ",
+        1,
+        8.709
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        2,
+        8.088
+      ],
+      [
+        "ⲉ",
+        7,
+        7.739
+      ],
+      [
+        "ⲉⲛⲭⲁⲓ",
+        1,
+        7.471
+      ],
+      [
+        "ⲉϥⲉ",
+        3,
+        7.275
+      ],
+      [
+        "ⲓⲁ",
+        1,
+        7.1
+      ],
+      [
+        "ϧⲉⲛ",
+        5,
+        7.028
+      ],
+      [
+        "ⲧⲟⲩⲃⲏⲟⲩⲧ",
+        1,
+        6.825
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        6.808
+      ],
+      [
+        "ⲛⲧⲱ",
+        1,
+        6.7
+      ],
+      [
+        "ⲇ",
+        1,
+        6.691
+      ],
+      [
+        "ϣⲉⲃⲓⲱ",
+        1,
+        6.535
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        101,
+        17.853
+      ],
+      [
+        "ⲥⲟⲡ",
+        16,
+        16.879
+      ],
+      [
+        "ⲥⲁϣϥ",
+        11,
+        16.706
+      ],
+      [
+        "ⲧⲃⲁ",
+        7,
+        15.786
+      ],
+      [
+        "ⲯⲓⲥ",
+        4,
+        15.623
+      ],
+      [
+        "ϥⲧⲟⲩ",
+        3,
+        15.615
+      ],
+      [
+        "ⲧⲉⲕⲧⲣⲁⲡⲓⲍⲁ",
+        1,
+        14.667
+      ],
+      [
+        "ⲃⲛⲏ",
+        1,
+        14.667
+      ],
+      [
+        "ⲧⲟⲟⲃⲟⲩⲛⲁ",
+        1,
+        14.667
+      ],
+      [
+        "ⲛⲁⲁⲣⲟⲟⲩ",
+        1,
+        13.667
+      ],
+      [
+        "ⲙⲏⲧ",
+        4,
+        13.438
+      ],
+      [
+        "ⲁⲩⲱ",
+        23,
+        13.387
+      ],
+      [
+        "ϣⲉ",
+        6,
+        13.006
+      ],
+      [
+        "ⲛⲥⲟⲡ'",
+        1,
+        12.667
+      ],
+      [
+        "ⲯⲓⲧ",
+        1,
+        12.667
+      ],
+      [
+        "ⲡⲉⲩ",
+        7,
+        12.18
+      ],
+      [
+        "ⲟⲩ",
+        19,
+        12.033
+      ],
+      [
+        "ϩⲙⲉⲯⲓⲧ",
+        1,
+        11.86
+      ],
+      [
+        "ϥ",
+        21,
+        11.768
+      ],
+      [
+        "ⲉϩⲟⲩⲉⲣⲟ",
+        1,
+        11.082
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲱⲃ_0_node",
+          17
+        ],
+        [
+          "ⲣ_1_pre_ⲕⲱⲃ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ",
+          4
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲍ_1_pre_ⲕⲱⲃ",
+          2
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲇ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲡϭⲥ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲉⲛⲭⲁⲓ_3_post_ⲛⲓⲃⲉⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲕⲱⲃ_0_node",
+          "ⲛ_1_post_ⲕⲱⲃ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ",
+          "ⲥⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲍ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲕⲱⲃ_0_node",
+          "ⲛⲁⲓ_1_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲇ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲱⲃ",
+          "ⲁ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲱⲃ",
+          "ⲡϭⲥ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲡϭⲥ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ",
+          "ⲉⲛⲭⲁⲓ_3_post_ⲛⲓⲃⲉⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲱⲃ_0_node",
+          42
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲕⲱⲃ",
+          7
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲕⲱⲃ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲱⲃ",
+          4
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲱⲃ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ",
+          12
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲯⲓⲥ_1_pre_ⲕⲱⲃ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲱⲃ",
+          2
+        ],
+        [
+          "ϣⲉ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲙⲉⲯⲓⲧ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲙⲉ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲯⲓⲧ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_1_pre_ⲕⲱⲃ",
+          2
+        ],
+        [
+          "ⲛⲥⲟⲡ'_1_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲟ_2_post_ⲛⲥⲟⲡ'",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲟ_3_post_ⲉⲙⲁϣⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ϣϥⲉ_1_pre_ⲕⲱⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁϣϥ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲱⲃ",
+          "ⲡⲉⲩ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲕⲱⲃ_0_node",
+          "ⲛ_1_post_ⲕⲱⲃ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ",
+          "ⲥⲟⲡ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲯⲓⲥ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲙⲉⲯⲓⲧ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲙⲉ_1_pre_ⲕⲱⲃ",
+          "ⲯⲓⲧ_1_pre_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲯⲓⲧ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲱⲃ",
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          "ⲛ_1_post_ⲕⲱⲃ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲱⲃ_b",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲕⲱⲃ_0_node",
+          "ⲛⲥⲟⲡ'_1_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲛⲥⲟⲡ'_1_post_ⲕⲱⲃ",
+          "ⲉⲙⲁϣⲟ_2_post_ⲛⲥⲟⲡ'",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲟ_2_post_ⲛⲥⲟⲡ'",
+          "ⲉⲙⲁϣⲟ_3_post_ⲉⲙⲁϣⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲕⲱⲃ",
+          "ⲯⲓⲥ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_2_pre_ⲙ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ϣϥⲉ_1_pre_ⲕⲱⲃ",
+          "ⲕⲱⲃ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.38,
+      "rank": 1150,
+      "count": 61
+    },
+    "B": {
+      "rate": 0.61,
+      "rank": 858,
+      "count": 52
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1096",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "fold, crease"
+    },
+    {
+      "target": "C1097",
+      "label": "ⲕⲟⲟⲃⲉϥ",
+      "pos": "N",
+      "gloss": "doubling"
+    },
+    {
+      "target": "C1095",
+      "label": "ⲕⲱⲃ",
+      "pos": "N",
+      "gloss": "double, return, repetition"
+    }
+  ],
+  "etym": {
+    "egy_num": "854562",
+    "egy_lemma": "qꜣb",
+    "demo_num": "d6287",
+    "demo_lemma": "qb",
+    "english": "fold; twist; double; multiply",
+    "german": "zusammenfalten; winden; verdoppeln; vermehren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854562",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6287"
+  }
+}

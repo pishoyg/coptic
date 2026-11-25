@@ -1,0 +1,96 @@
+{
+  "id": "C7811",
+  "forms": [
+    {
+      "id": "CF17687",
+      "orth": "ϭⲓⲛϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15916,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲓϭⲉ",
+      "dialect": "S",
+      "id": "2588.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8681",
+      "bibliography": "CD 824a; KoptHWb 461; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲟⲩⲡⲉⲣⲓⲕⲉⲫⲁⲗⲁⲓⲁ ϩⲓϫⲛⲧⲉϥⲁⲡⲉ ⲉⲣⲉⲟⲩϩⲱⲕ ⲛⲣⲉ ⲛ**ϭⲓⲛϭⲉ** ⲧⲟ ⲉϩⲓⲱⲱϥ ⲉⲣⲉⲡϣⲓ ⲙⲡⲉϥϩⲱⲕ ⲛⲁⲣⲟⲩϭⲓⲥ ⲧⲃⲁ ⲛⲥⲁⲧⲉⲉⲣⲉ ⲛϩⲟⲙⲛⲧ ϩⲓⲡⲉⲛⲓⲡⲉ",
+      "english": "And he had a helmet upon his head, and he wore a breastplate of chain armour; and the weight of his breastplate was five thousand shekels of brass and iron.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉ",
+        1,
+        15.24
+      ],
+      [
+        "ϩⲱⲕ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲟ",
+        1,
+        13.479
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        1,
+        12.139
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛϭⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15515,
+      "count": 1
+    }
+  }
+}

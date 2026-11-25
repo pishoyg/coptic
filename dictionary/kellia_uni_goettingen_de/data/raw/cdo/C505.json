@@ -1,0 +1,44 @@
+{
+  "id": "C505",
+  "forms": [
+    {
+      "id": "CF2009",
+      "orth": "ⲃⲱⲱⲣⲉ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS612",
+      "bibliography": "CD 42b; ChLCS 9a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C506",
+      "label": "ⲃⲉⲣⲱ",
+      "pos": "N",
+      "gloss": "whirlpool"
+    },
+    {
+      "target": "C503",
+      "label": "ⲃⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "be imposing, overbearing, arrogant; push, drive; repel, defend; prevail over, defeat, repress"
+    },
+    {
+      "target": "C504",
+      "label": "ⲃⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "protrude, be swollen; repel"
+    }
+  ]
+}

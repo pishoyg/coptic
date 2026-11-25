@@ -1,0 +1,276 @@
+{
+  "id": "C560",
+  "forms": [
+    {
+      "id": "CF2148",
+      "orth": "ϫⲓⲃⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8201,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2149",
+      "orth": "ϫⲓⲃⲟⲧⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS670",
+      "bibliography": "CD 45b; KoptHWb 28; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲧϩⲉ ⲇⲉ ⲉⲧⲟⲩⲑⲃⲃⲓⲟ ⲙⲙⲟⲟⲩ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲛⲉⲩⲁϣⲁⲓ ⲛϩⲟⲩⲟ ⲉⲩϭⲙϭⲟⲙ ⲉⲙⲁⲧⲉ ⲉⲙⲁⲧⲉ ⲛⲣⲙⲛⲕⲏⲙⲉ ⲇⲉ ⲛⲉⲩ**ϫⲓⲃⲟⲧⲉ** ⲡⲉ ⲉⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "But as they humbled them, by so much they multiplied, and grew exceedingly strong; and the Egyptians greatly abhorred the children of Israel.",
+      "source": "Exodus 1",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕ**ϫⲓⲃⲟⲧⲉ** ϭⲉ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲏⲓ ϫⲉⲛⲛⲉⲕϣⲱⲡⲉ ϭⲉ ⲉⲕⲟ ⲛⲃⲟⲧⲉ ⲛⲧϩⲉ ⲙⲡⲁⲓ ϩⲛⲟⲩⲙⲟⲥⲧⲉ ⲉⲕⲉⲙⲉⲥⲧⲱϥ ⲁⲩⲱ ϩⲛⲟⲩⲃⲟⲧⲉ ⲉⲕⲉⲃⲟⲧϥ ϫⲉϥϫⲁϩⲙ",
+      "english": "And thou shalt not bring an abomination into thine house, so shouldest thou be an accursed thing like it; thou shalt utterly hate it, and altogether abominate it, because it is an accursed thing.",
+      "source": "Deuteronomy 7",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲙⲛⲕⲏⲙⲉ",
+        1,
+        12.655
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        10.868
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        9.414
+      ],
+      [
+        "ϭⲉ",
+        1,
+        8.45
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        7.678
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        7.29
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.779
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ⲣⲙⲛⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲙⲛⲕⲏⲙⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲃⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϭⲉ_1_post_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_2_post_ⲙⲉⲥⲧⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ⲣⲙⲛⲕⲏⲙⲉ",
+          "ⲣⲙⲛⲕⲏⲙⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲙⲛⲕⲏⲙⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ⲇⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ⲛⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ⲩ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ϫⲓⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ⲕ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϫⲓⲃⲟⲧⲉ",
+          "ϫⲓⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲃⲟⲧⲉ_0_node",
+          "ϭⲉ_1_post_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϭⲉ_1_post_ϫⲓⲃⲟⲧⲉ",
+          "ⲉϩⲟⲩⲛ_1_post_ϫⲓⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ϫⲓⲃⲟⲧⲉ",
+          "ⲉⲕⲉ_2_post_ⲙⲉⲥⲧⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7759,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C555",
+      "label": "ⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "hateful thing, abomination, crime"
+    },
+    {
+      "target": "C556",
+      "label": "ⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "hateful thing, abomination, crime"
+    },
+    {
+      "target": "C557",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "make abominable, (also) anathematize"
+    },
+    {
+      "target": "C558",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "filth"
+    },
+    {
+      "target": "C561",
+      "label": "ⲗⲁⲃⲟϯ",
+      "pos": "N",
+      "gloss": "sodomite"
+    },
+    {
+      "target": "C559",
+      "label": "ⲟ ⲛⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "become, be hateful"
+    }
+  ]
+}

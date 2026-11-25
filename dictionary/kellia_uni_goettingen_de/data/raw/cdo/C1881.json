@@ -1,0 +1,39 @@
+{
+  "id": "C1881",
+  "forms": [
+    {
+      "id": "CF5403",
+      "orth": "ⲙⲉⲗϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2188",
+      "bibliography": "CD 166a; KoptHWb 91; ChLCS 25b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C1880",
+      "label": "ⲙⲗϩ",
+      "pos": "N",
+      "gloss": "salt"
+    },
+    {
+      "target": "C1879",
+      "label": "ⲙⲟⲩⲗϩ",
+      "pos": "V",
+      "gloss": "make salt"
+    }
+  ]
+}

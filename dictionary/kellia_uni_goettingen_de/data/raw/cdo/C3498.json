@@ -1,0 +1,100 @@
+{
+  "id": "C3498",
+  "forms": [
+    {
+      "id": "CF8897",
+      "orth": "ⲥⲗϩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20075,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲉⲗϩⲱ",
+      "dialect": "S",
+      "id": "1415.1"
+    },
+    {
+      "orth": "ⲥⲉⲗϩⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8917,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲁⲗϩⲟ",
+      "dialect": "B",
+      "id": "1415.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3980",
+      "bibliography": "CD 333b; KoptHWb 184; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲛⲧⲕ ⲟⲩⲙⲟⲩ ⲛ**ⲥⲗϩⲟ** ⲟⲩⲇⲉ ⲛⲅⲟⲣϣ ⲁⲛ ⲟⲩⲇⲉ ⲛⲅϩⲏⲙ ⲁⲛ ϯⲛⲁⲕⲁⲃⲟⲗ ⲙⲙⲟⲕ ⲉⲃⲟⲗ ϩⲛⲧⲁⲧⲁⲡⲣⲟ .",
+      "english": "So, because you are lukewarm, and neither hot nor cold, I will vomit you out of my mouth.",
+      "source": "66_Revelation_3",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲅⲟⲣϣ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        10.276
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        9.743
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19684,
+      "count": 1
+    }
+  }
+}

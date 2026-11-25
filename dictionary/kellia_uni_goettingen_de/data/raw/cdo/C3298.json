@@ -1,0 +1,68 @@
+{
+  "id": "C3298",
+  "forms": [
+    {
+      "id": "CF8484",
+      "orth": "ⲁⲧϯⲁⲥⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3765",
+      "bibliography": "CD 317b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3296",
+      "label": "ϯⲥⲟ",
+      "pos": "V",
+      "gloss": "spare oneself sth, refrain"
+    },
+    {
+      "target": "C3297",
+      "label": "ϯⲥⲟ",
+      "pos": "N",
+      "gloss": "forbearance, reserve"
+    },
+    {
+      "target": "C3299",
+      "label": "ⲙⲛⲧⲁⲧϯⲥⲟ",
+      "pos": "N",
+      "gloss": "unrestrainedness"
+    },
+    {
+      "target": "C3300",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲥⲟ",
+      "pos": "N",
+      "gloss": "sparingness, parsimony"
+    },
+    {
+      "target": "C3295",
+      "label": "ⲥⲟ",
+      "pos": "N",
+      "gloss": "protection"
+    }
+  ]
+}

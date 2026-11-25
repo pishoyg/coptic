@@ -1,0 +1,62 @@
+{
+  "id": "C3741",
+  "forms": [
+    {
+      "id": "CF31708",
+      "orth": "ⲙⲛⲧⲁⲧⲥⲣⲟϥⲣϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31707",
+      "orth": "ⲙⲛⲧⲁⲧⲥⲣⲟϥⲣⲉϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4251",
+      "bibliography": "CD 357b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C13026",
+      "label": "ⲣⲉϥⲣⲓϥ",
+      "pos": "N",
+      "gloss": "waste"
+    },
+    {
+      "target": "C13013",
+      "label": "ⲣⲟϥⲣⲉϥ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C3739",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "V",
+      "gloss": "fall, wither; make fall, dissipate; administer (medicine)"
+    },
+    {
+      "target": "C3740",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "falling, withering"
+    },
+    {
+      "target": "C3742",
+      "label": "ⲥⲣⲣⲓϥⲉ",
+      "pos": "N",
+      "gloss": "what falls, droppings"
+    }
+  ]
+}

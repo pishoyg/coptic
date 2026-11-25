@@ -1,0 +1,180 @@
+{
+  "id": "C343",
+  "forms": [
+    {
+      "id": "CF1485",
+      "orth": "ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1486",
+      "orth": "ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5881,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS381",
+      "bibliography": "CD 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲓⲥⲱⲧⲉⲙ ⲉⲟⲩⲥⲙⲏ ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩⲛⲓϣϯ ⲛϧⲁⲣⲁⲃⲁⲓ ⲟⲩⲟϩ ϯⲥⲙⲏ ⲉⲧⲁⲓⲥⲟⲑⲙⲉⲥ ⲙⲫⲣⲏϯ ⲛϩⲁⲛ**ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ** .",
+      "english": "I heard a sound from heaven, like the sound of many waters, and like the sound of a great thunder. The sound which I heard was like that of harpists playing on their harps.",
+      "source": "27_Revelation_14",
+      "urn": "urn:cts:copticLit:nt.rev.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛⲁⲧⲁⲣⲓⲕⲓ ⲟⲩⲟϩ ⲛⲁⲕⲉⲣⲉⲟⲥ ⲛϣⲏⲣⲓ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲣⲉⲧⲉⲛⲟⲩⲁⲃ ϧⲉⲛⲧⲙⲏϯ ⲛⲟⲩⲅⲉⲛⲉⲁ ⲉⲥⲕⲱⲗϫ ⲟⲩⲟϩ ⲉⲥⲫⲱⲛϩ ⲛⲏ ⲉⲧⲉⲧⲉⲛⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲛϧⲏ ⲧⲟⲩ ⲙⲫⲣⲏϯ ⲛϩⲁⲛ**ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ** ϧⲉⲛⲡⲓⲕⲟⲥⲙⲟⲥ .",
+      "english": "that you may become blameless and harmless, children of God without blemish in the midst of a crooked and perverse generation, among whom you are seen as lights in the world,",
+      "source": "11_Philippians_02",
+      "urn": "urn:cts:copticLit:nt.phil.bohairic:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        10.613
+      ],
+      [
+        "ϩⲱⲥ",
+        1,
+        10.156
+      ],
+      [
+        "ⲣⲏϯ",
+        2,
+        9.878
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        9.313
+      ],
+      [
+        "ⲫ",
+        2,
+        8.564
+      ],
+      [
+        ".",
+        2,
+        7.616
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ_0_node",
+          "ϧⲉⲛ_1_post_ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5386,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12215",
+      "label": "ϫⲁⲧⲃⲁⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "harpist"
+    },
+    {
+      "target": "C341",
+      "label": "ⲃⲟⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "harp"
+    },
+    {
+      "target": "C342",
+      "label": "ⲉⲣⲟⲩⲱⲓⲛⲓ",
+      "pos": "V",
+      "gloss": "play the harp"
+    }
+  ]
+}

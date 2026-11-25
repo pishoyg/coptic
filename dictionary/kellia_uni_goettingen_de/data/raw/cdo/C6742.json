@@ -1,0 +1,44 @@
+{
+  "id": "C6742",
+  "forms": [
+    {
+      "id": "CF15531",
+      "orth": "ϩⲛⲟⲩϩⲱⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7456",
+      "bibliography": "CD 696a; KoptHWb 382; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6743",
+      "label": "ϩⲏⲡⲓ",
+      "pos": "N",
+      "gloss": "crypt"
+    },
+    {
+      "target": "C6740",
+      "label": "ϩⲱⲡ",
+      "pos": "V",
+      "gloss": "be hidden, hide"
+    },
+    {
+      "target": "C6741",
+      "label": "ϩⲱⲡ",
+      "pos": "N",
+      "gloss": "secret, seclusion"
+    }
+  ]
+}

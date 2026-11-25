@@ -1,0 +1,371 @@
+{
+  "id": "C7792",
+  "forms": [
+    {
+      "id": "CF17649",
+      "orth": "ⲣⲉϥϭⲱⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 3000,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8661",
+      "bibliography": "CD 823b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲉⲙⲡϥϣⲱⲡⲉ ⲛϣⲁⲩ ⲁⲩⲱ ⲉϥⲟⲩⲁⲁⲃ · ⲛⲓⲙ ⲛ**ⲣⲉϥϭⲱⲛⲧ** ⲏ ⲛϩⲏⲧ ϣⲏⲙ ⲉϥⲛⲁⲁⲡⲁⲛⲧⲁ ⲉⲣⲟⲟⲩ · ⲉⲙⲉϥⲡⲱⲛⲉ ⲛⲧⲉⲩⲛⲟⲩ ⲉⲩⲙⲛⲧⲣⲙⲣⲁϣ ·",
+      "english": "will not become good and pure? What man of wrath is there, or what timid man, who, when he meeteth them, will not transfer (to himself) straightway their humility?",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲟⲩϩ ⲛⲣⲉϥϯⲧⲱⲛ ϩⲓ**ⲣⲉϥϭⲱⲛⲧ** ·",
+      "english": "The churches are filled with men who love fighting and with men of wrath.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲟⲩⲣⲱⲙⲉ ⲛ**ⲣⲉϥϭⲱⲛⲧ** ⲧⲟⲩⲛⲉⲥⲟⲩϯⲧⲱⲛ ϣⲁⲣⲉⲡⲣⲱⲙⲉ ⲇⲉ ⲛϩⲁⲕ ⲑⲙⲥⲉⲡⲛⲟⲃⲉ",
+      "english": "A furious man stirs up strife, and a passionate man digs up sin.",
+      "source": "Proverbs 29",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲛⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ",
+        1,
+        16.791
+      ],
+      [
+        "ⲉⲧⲉⲧⲡ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        5,
+        15.265
+      ],
+      [
+        "ⲣⲉϥϯⲧⲱⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        5,
+        14.145
+      ],
+      [
+        "ⲣⲉϥⲥⲁϩⲟⲩ",
+        1,
+        13.206
+      ],
+      [
+        "ⲙⲡⲣ",
+        5,
+        13.194
+      ],
+      [
+        "ⲛ",
+        17,
+        12.264
+      ],
+      [
+        "ϫⲃⲃⲉⲥ",
+        1,
+        12.09
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        5,
+        11.472
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        11.233
+      ],
+      [
+        "ⲣⲉϥⲙⲓϣⲉ",
+        1,
+        10.983
+      ],
+      [
+        "ⲟⲩ",
+        9,
+        10.922
+      ],
+      [
+        "ⲙⲛ",
+        6,
+        10.592
+      ],
+      [
+        "ⲧⲟⲩⲛⲉⲥ",
+        1,
+        10.487
+      ],
+      [
+        "ⲁϩⲟ",
+        1,
+        10.221
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        1,
+        10.161
+      ],
+      [
+        "ⲡⲟⲛⲏⲣⲓⲁ",
+        1,
+        10.076
+      ],
+      [
+        "ⲥⲟⲩⲟ",
+        1,
+        9.996
+      ],
+      [
+        "ⲥⲟⲟⲩϩ",
+        1,
+        9.714
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          14
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲁϩⲟⲩ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲛⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲡⲣⲧⲣⲉ_2_post_ⲥⲉⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲥⲉⲏⲣⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲛ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          "ⲙⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          "ⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          "ⲣⲉϥⲥⲁϩⲟⲩ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲁϩⲟⲩ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲙⲛⲛⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ_2_post_ⲣⲉϥⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲱⲛⲧ_0_node",
+          "ⲛⲉⲓ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛⲟϭ",
+          "ⲛⲟϭ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲙⲡⲣⲧⲣⲉ_2_post_ⲥⲉⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲙⲡⲣⲧⲣⲉ_2_post_ⲥⲉⲏⲣⲡ",
+          "ⲩ_2_post_ⲥⲉⲏⲣⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2664,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7801",
+      "label": "ϫⲓⲛϯ",
+      "pos": "N",
+      "gloss": "anger, wrath"
+    },
+    {
+      "target": "C7795",
+      "label": "ϭⲛⲁⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7796",
+      "label": "ϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "anger, wrath"
+    },
+    {
+      "target": "C7787",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7788",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "anger, rage, wrath"
+    },
+    {
+      "target": "C7789",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "angry, enraged"
+    },
+    {
+      "target": "C7798",
+      "label": "ϯϭⲛⲁⲧ",
+      "pos": "V",
+      "gloss": "embitter, provoke"
+    },
+    {
+      "target": "C7799",
+      "label": "ϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocation"
+    },
+    {
+      "target": "C7793",
+      "label": "ϯϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "cause anger, provoke"
+    },
+    {
+      "target": "C7790",
+      "label": "ⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "not angry"
+    },
+    {
+      "target": "C7791",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "lenience"
+    },
+    {
+      "target": "C7797",
+      "label": "ⲣⲉϥϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "choleric person"
+    },
+    {
+      "target": "C7800",
+      "label": "ⲣⲉϥϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    },
+    {
+      "target": "C7794",
+      "label": "ⲣⲉϥϯϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    }
+  ]
+}

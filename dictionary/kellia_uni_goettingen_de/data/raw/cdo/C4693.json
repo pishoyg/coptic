@@ -1,0 +1,388 @@
+{
+  "id": "C4693",
+  "forms": [
+    {
+      "id": "CF11349",
+      "orth": "ⲧⲟⲟⲩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17097,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲑⲱⲟⲩϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.09,
+        "rank": 333,
+        "count": 262
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩⲏⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5681,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩⲏⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5681,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲑⲟⲩⲉⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1391,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ⲑⲟⲩⲱⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.57,
+        "rank": 1013,
+        "count": 48
+      }
+    },
+    {
+      "orth": "ⲑⲟⲩⲏⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1332,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲧⲁⲩϯ",
+      "dialect": "F",
+      "id": "1671.6"
+    },
+    {
+      "orth": "ⲧⲟⲩⲉⲧ-",
+      "dialect": "F",
+      "id": "1671.7"
+    },
+    {
+      "orth": "ⲧⲟⲩⲏⲧ⸗",
+      "dialect": "F",
+      "id": "1671.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5301",
+      "bibliography": "CD 447b; KoptHWb 254; DELC 224a; ChLCS 63a"
+    },
+    {
+      "id": "CS5302",
+      "bibliography": "CD 447b; CDC 69b; CED 201; KoptHWb 254; DELC 224a; ChLCS 63a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲃⲁⲕⲓ ⲧⲏⲣⲥ ⲁⲥ**ⲑⲱⲟⲩϯ** ϩⲓⲣⲉⲛⲡⲓⲣⲟ .",
+      "english": "All the city was gathered together at the door.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲧⲟⲟⲩⲧⲉ** ⲙⲡⲉϥⲗⲁⲟⲥ ⲉϩⲟⲩⲛ ⲉⲧⲥⲏϥⲉ ⲁⲩⲱ ⲁϥⲟⲃϣϥ ⲉⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+      "english": "And he gave his people to the sword; and disdained his inheritance.",
+      "source": "Psalms 77",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:77",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱ ⲛⲟⲩϣⲱϣ ⲉϥⲟϣ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲙⲱⲟⲩ ⲟⲩⲟϩ ⲛⲑⲟⲕ ϩⲱⲕ ⲡⲓϩⲏⲧ ⲕⲓⲙ ⲟⲩⲟϩ ⲙⲟⲛⲙⲉⲛ ϫⲉⲁϥⲕⲱϯ ⲉⲣⲟⲕ ⲛϫⲉⲡⲓⲁⲫⲟⲧ ⲛⲧⲉⲑⲟⲩⲓⲛⲁⲙ ⲙⲡϭⲟⲉⲓⲥ ⲟⲩⲟϩ ⲁϥ**ⲑⲱⲟⲩϯ** ⲛϫⲉⲟⲩϣⲱϣ ⲉϫⲉⲛⲡⲉⲕⲱⲟⲩ .",
+      "english": "Drink thou also thy fill of disgrace instead of glory: shake, O heart, and quake, the cup of the right hand of the Lord has come round upon thee, and dishonour has gathered upon thy glory.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲥⲩⲛⲧⲉⲗⲓⲁ ⲁϥⲥⲟⲕⲥ ⲉⲡϣⲱⲓ ϧⲉⲛⲧⲉϥⲱⲓⲙⲓ ⲟⲩⲟϩ ⲁϥⲱϣϯ ⲙⲙⲟϥ ϧⲉⲛⲡⲉϥϣⲛⲉϩⲓⲟⲩⲓ ⲟⲩⲟϩ ⲁϥ**ⲑⲟⲩⲱⲧ**ϥ ϧⲉⲛⲧⲉϥⲁⲃⲱ ⲉⲑⲃⲉⲫⲁⲓ ⲉϥⲉⲟⲩⲛⲟϥ ⲟⲩⲟϩ ⲉϥⲉⲣⲁϣⲓ ⲛϫⲉⲡⲉϥϩⲏⲧ .",
+      "english": "He has brought up destruction with a hook, and drawn one with a casting net, and caught another in his drags: therefore shall his heart rejoice and be glad.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛϫⲉ",
+        130,
+        27.662
+      ],
+      [
+        "ⲛ",
+        194,
+        27.39
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        55,
+        26.259
+      ],
+      [
+        "ⲩ",
+        104,
+        26.222
+      ],
+      [
+        "ⲛⲓ",
+        100,
+        26.15
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        126,
+        26.012
+      ],
+      [
+        "ⲁ",
+        124,
+        25.852
+      ],
+      [
+        "ϥ",
+        111,
+        24.808
+      ],
+      [
+        "ⲧⲏⲣ",
+        46,
+        24.542
+      ],
+      [
+        "ⲥⲩⲛⲁⲅⲱⲅⲏ",
+        17,
+        24.125
+      ],
+      [
+        "ⲉ",
+        77,
+        23.817
+      ],
+      [
+        "ⲙⲁ",
+        29,
+        23.638
+      ],
+      [
+        "ⲟⲩ",
+        78,
+        23.61
+      ],
+      [
+        "ⲙ",
+        63,
+        23.515
+      ],
+      [
+        "ϩⲁⲛ",
+        42,
+        23.49
+      ],
+      [
+        "ⲡⲓ",
+        57,
+        23.269
+      ],
+      [
+        "ⲥⲱⲧⲡ",
+        11,
+        22.835
+      ],
+      [
+        "ⲉϫⲱ",
+        21,
+        22.76
+      ],
+      [
+        ".",
+        52,
+        22.718
+      ],
+      [
+        "ⲃⲉⲭⲏⲟⲩⲓ",
+        3,
+        22.45
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲁϫⲉ",
+        1,
+        11.653
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.925
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲟⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲟⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲧⲟⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲃϣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲟⲃϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲟⲟⲩⲧⲉ",
+          "ϥ_1_pre_ⲧⲟⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲟⲟⲩⲧⲉ",
+          "ⲧⲟⲟⲩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲧⲉ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲧⲟⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲧⲟⲟⲩⲧⲉ",
+          "ⲁⲩⲱ_2_post_ⲟⲃϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲃϣ",
+          "ⲁ_2_post_ⲟⲃϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16702,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4696",
+      "label": "ϣⲉ ⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "gong, bell"
+    },
+    {
+      "target": "C4698",
+      "label": "ϫⲓⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "assemblage"
+    },
+    {
+      "target": "C4695",
+      "label": "ⲑⲱⲟⲩϯ ⲙⲡⲓϣⲉ",
+      "pos": "V",
+      "gloss": "ring, sound the gong"
+    },
+    {
+      "target": "C4699",
+      "label": "ⲑⲱⲟⲩⲧⲥ",
+      "pos": "N",
+      "gloss": "collection, assembly"
+    },
+    {
+      "target": "C4697",
+      "label": "ⲙⲁ ⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "place of meeting"
+    },
+    {
+      "target": "C4694",
+      "label": "ⲧⲟⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "gathering, congregation"
+    }
+  ],
+  "etym": {
+    "egy_num": "170500",
+    "egy_lemma": "twti̯",
+    "demo_num": "d7156",
+    "demo_lemma": "twt(w)",
+    "english": "to collect; to assemble",
+    "german": "versammeln; versammelt sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/170500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7156"
+  }
+}

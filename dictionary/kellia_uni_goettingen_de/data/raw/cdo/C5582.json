@@ -1,0 +1,104 @@
+{
+  "id": "C5582",
+  "forms": [
+    {
+      "id": "CF13139",
+      "orth": "ϥⲁⲓⲉⲧⲡⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13177,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6248",
+      "bibliography": "CD 532b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲙⲟⲩⲛ ⲛⲧⲃⲁ ⲛ**ϥⲁⲓⲉⲧⲡⲱ** · ⲛ(?)ϣⲟⲙⲛⲧ ⲛⲧⲃⲁ ϩⲙⲡⲗⲓⲃⲁⲛⲟⲥ ⲉⲩⲕⲉⲣⲁⲓⲁϣⲉ · ⲙⲁⲃⲧⲁⲥⲉ ⲛϣⲉ ⲛⲥⲁϩ · ϣⲙⲟⲩⲛ ⲛⲧⲃⲁ ⲛⲗⲁⲧⲟⲙⲟⲥ ϩⲙⲡⲧⲟⲟⲩ ·",
+      "english": "the work of the eighty thousand men who bare burdens, and thirty thousand men who cut down trees in Lebanon, and thirty-six hundred scribes (i.e., overseers), and eighty thousand hewers of stone in the mountains.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ(?)",
+        1,
+        20.598
+      ],
+      [
+        "ϣⲙⲟⲩⲛ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲃⲁ",
+        1,
+        13.294
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        1,
+        11.703
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲁⲓⲉⲧⲡⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12763,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13017",
+      "type": "cf",
+      "label": "carrier"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5581",
+      "label": "ⲉⲧⲡⲱ",
+      "pos": "N",
+      "gloss": "burden"
+    },
+    {
+      "target": "C5580",
+      "label": "ⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "be laden; load"
+    }
+  ]
+}

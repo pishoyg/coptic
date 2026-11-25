@@ -1,0 +1,691 @@
+{
+  "id": "C734",
+  "forms": [
+    {
+      "id": "CF2746",
+      "orth": "ⲉⲥⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.57,
+        "rank": 373,
+        "count": 405
+      }
+    },
+    {
+      "orth": "ⲉⲥⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.13,
+        "rank": 262,
+        "count": 350
+      }
+    },
+    {
+      "orth": "ⲉⲥⲱ",
+      "dialect": "S",
+      "id": "2759.1"
+    },
+    {
+      "orth": "ⲉⲥⲁⲩ",
+      "dialect": "A",
+      "id": "2759.2"
+    },
+    {
+      "orth": "ⲉⲥⲁⲩ",
+      "dialect": "F",
+      "id": "2759.3"
+    },
+    {
+      "orth": "ⲉⲥⲁⲩ",
+      "dialect": "L",
+      "id": "2759.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS875",
+      "bibliography": "CD 61a; CED 38; KoptHWb 40, 500; DELC 47; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉⲡⲓⲙⲁ ⲛ**ⲉⲥⲱⲟⲩ** ⲛⲱⲟⲩ ϫⲉϯⲛⲁⲟⲩⲟⲣⲡϥ ⲛⲱⲧⲉⲛ ⲉϩⲣⲏⲓ ⲙⲙⲏⲛⲓ ⲙⲡⲁⲧⲉⲫⲣⲏ ϩⲱⲧⲡ .",
+      "english": "And the shepherd said to them: “I will send him up to you every day before the sun sets.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϯϫⲟⲟⲩ ⲙⲙⲱⲧⲛ ⲛⲧϩⲉ ⲛϩⲉⲛ**ⲉⲥⲟⲟⲩ** ⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲟⲩⲱⲛϣ :",
+      "english": "And I send you like sheep among wolves",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲧⲉⲧⲉⲛⲛⲁⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉⲥⲑⲉ ⲧⲏⲣⲟⲩ ϫⲉⲟⲩⲏⲓ ⲥⲥϧⲏⲟⲩⲧ ϫⲉϯⲛⲁϣⲁⲣⲓ ⲙⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲟⲩⲟϩ ⲛⲥⲉϫⲱⲣ ⲉⲃⲟⲗ ⲛϫⲉⲛⲓ**ⲉⲥⲱⲟⲩ** .",
+      "english": "Jesus said to them, 'All of you will be made to stumble because of me tonight, for it is written, 'I will strike the shepherd, and the sheep will be scattered.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲱⲧ ⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ · ⲁⲩⲱ ⲛⲉⲣⲉⲡ**ⲉⲥⲟⲟⲩ** ϣⲟⲟⲡ ⲁⲛ ⲡⲉ ·",
+      "english": "He built an altar, and there was no sheep there;",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲓ ⲉⲃⲟⲗ ⲁϥⲛⲁⲩ ⲉⲟⲩⲙⲏϣ ⲉϥⲟϣ ⲟⲩⲟϩ ⲁϥϣⲉⲛϩⲏⲧ ϧⲁⲣⲱⲟⲩ ϫⲉⲛⲁⲩⲟⲓ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲉⲥⲱⲟⲩ ⲙⲙⲟⲛⲧⲟⲩ ⲙⲁ ⲛ**ⲉⲥⲱⲟⲩ** ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϯⲥⲃⲱ ⲛⲱⲟⲩ ⲛϩⲁⲛⲙⲏϣ",
+      "english": "Jesus came out, saw a great multitude, and he had compassion on them, because they were like sheep without a shepherd, and he began to teach them many things.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲣⲕⲁⲡⲙⲁ ⲙⲡⲥⲁⲧⲁⲛⲁⲥ ⲉϩⲟⲩⲛ ⲉⲣⲟ ⲉⲧⲣⲉϥⲡⲱⲱⲛⲉ ⲙⲡⲟⲩϩⲏⲧ · ⲁⲩⲱ ⲛϥⲥⲣⲙⲣⲱⲙⲉ ⲛⲧϩⲉ ⲛⲛⲓ**ⲉⲥⲟⲟⲩ** ⲉⲧⲟ ⲛϩⲟⲟⲗⲉ ·",
+      "english": "For you have left room for Satan inside you to transform your heart, and daze you like those sheep that become (spoiled) by moths.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲱⲟⲩ",
+        37,
+        28.816
+      ],
+      [
+        "ⲛ",
+        252,
+        28.523
+      ],
+      [
+        "ⲛⲓ",
+        161,
+        28.211
+      ],
+      [
+        "ⲛⲧⲉ",
+        131,
+        27.166
+      ],
+      [
+        "ⲟⲩ",
+        171,
+        27.008
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        153,
+        26.852
+      ],
+      [
+        "ⲙⲙⲟⲛⲧ",
+        16,
+        26.695
+      ],
+      [
+        "ⲛⲉⲙ",
+        111,
+        26.626
+      ],
+      [
+        "ⲙⲁⲥⲓ",
+        22,
+        26.43
+      ],
+      [
+        "ϩⲁⲛ",
+        80,
+        26.279
+      ],
+      [
+        "ⲉ",
+        135,
+        26.248
+      ],
+      [
+        "ⲙⲁ",
+        45,
+        25.539
+      ],
+      [
+        "ϥ",
+        127,
+        25.39
+      ],
+      [
+        "ⲁ",
+        105,
+        25.132
+      ],
+      [
+        "ⲃⲁⲉⲙⲡⲓ",
+        14,
+        24.908
+      ],
+      [
+        "ⲛⲁ",
+        76,
+        24.698
+      ],
+      [
+        "ⲙⲟⲛⲓ",
+        13,
+        24.439
+      ],
+      [
+        "ⲟⲩⲙⲁⲥⲓ",
+        6,
+        24.128
+      ],
+      [
+        "ⲛⲉⲕ",
+        26,
+        23.717
+      ],
+      [
+        "ⲁⲙⲟⲛⲓ",
+        17,
+        23.609
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        12,
+        22.691
+      ],
+      [
+        "ⲛ",
+        517,
+        22.189
+      ],
+      [
+        "ⲟϩⲉ",
+        32,
+        20.727
+      ],
+      [
+        "ⲙⲛ",
+        173,
+        20.286
+      ],
+      [
+        "ⲟⲩ",
+        185,
+        19.152
+      ],
+      [
+        "ⲃⲁⲁⲙⲡⲉ",
+        23,
+        18.952
+      ],
+      [
+        "ⲙⲟⲟⲛⲉ",
+        26,
+        18.595
+      ],
+      [
+        "ⲁⲩⲱ",
+        124,
+        17.948
+      ],
+      [
+        "ϩⲉⲛⲁ",
+        5,
+        17.902
+      ],
+      [
+        "ⲙⲁⲥⲉ",
+        25,
+        17.885
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        18,
+        17.802
+      ],
+      [
+        "ⲉ",
+        142,
+        17.605
+      ],
+      [
+        "ⲁ",
+        132,
+        17.516
+      ],
+      [
+        "ⲥⲱⲣⲙ",
+        17,
+        17.444
+      ],
+      [
+        "ϣⲱⲥ",
+        16,
+        16.838
+      ],
+      [
+        "ϩⲉⲛ",
+        55,
+        16.757
+      ],
+      [
+        "ϥ",
+        117,
+        16.471
+      ],
+      [
+        "ϩⲛ",
+        71,
+        16.267
+      ],
+      [
+        "ⲡ",
+        108,
+        16.1
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        66,
+        15.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          217
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲥⲟⲟⲩ",
+          12
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          15
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲥⲟⲟⲩ",
+          7
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲥⲟⲟⲩ",
+          7
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲥⲟⲟⲩ",
+          14
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲥⲟⲟⲩ",
+          6
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲥⲟⲟⲩ",
+          5
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲥⲟⲟⲩ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          11
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲉⲓⲱⲧ",
+          4
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲃⲧ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲧⲉⲃⲧ",
+          4
+        ],
+        [
+          "ⲧⲉⲃⲧ_1_post_ⲉⲥⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          3
+        ],
+        [
+          "ⲃⲁⲁⲙⲡⲉ_1_post_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          6
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲁ_3_post_ⲥⲱⲣⲙ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲣⲙ",
+          3
+        ],
+        [
+          "ⲥⲱⲣⲙ_2_post_ⲉⲛⲧ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲥⲱⲣⲙ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲉⲓⲱⲧ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲉⲥⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲗⲁⲃⲁⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲥⲟⲛ_3_post_ⲗⲁⲃⲁⲛ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ⲥⲟⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲟⲩ_1_pre_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲡⲉⲥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲙⲛ_2_post_ⲧⲉⲃⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲃⲧ",
+          "ⲡ_2_post_ⲧⲉⲃⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲉⲃⲧ",
+          "ⲧⲉⲃⲧ_1_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲙⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          "ⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲁⲁⲙⲡⲉ",
+          "ⲃⲁⲁⲙⲡⲉ_1_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲉⲛⲧ_1_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲁ_3_post_ⲥⲱⲣⲙ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲥⲱⲣⲙ",
+          "ⲩ_3_post_ⲥⲱⲣⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲣⲙ",
+          "ⲥⲱⲣⲙ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲥⲱⲣⲙ_2_post_ⲉⲛⲧ",
+          "ⲛⲧⲉ_3_post_ⲥⲱⲣⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲧⲏⲣ_1_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ϩⲉⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲡⲉⲩ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_0_node",
+          "ⲛ_1_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲥⲟⲟⲩ",
+          "ⲗⲁⲃⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲗⲁⲃⲁⲛ_2_post_ⲛ",
+          "ⲡ_4_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲥⲟⲛ",
+          "ⲥⲟⲛ_3_post_ⲗⲁⲃⲁⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_3_post_ⲗⲁⲃⲁⲛ",
+          "ⲛ_4_post_ⲥⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.55,
+      "rank": 319,
+      "count": 405
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3684",
+      "type": "cf",
+      "label": "ram (Ak)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C735",
+      "label": "ⲉⲥⲱ",
+      "pos": "N",
+      "gloss": "sheep"
+    },
+    {
+      "target": "C736",
+      "label": "ⲙⲁⲛⲉⲥⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "shepherd"
+    }
+  ],
+  "etym": {
+    "egy_num": "138880",
+    "egy_lemma": "zr",
+    "demo_num": "d700",
+    "demo_lemma": "ı ͗sw",
+    "english": "ram",
+    "german": "Widder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138880",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d700"
+  }
+}

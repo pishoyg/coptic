@@ -1,0 +1,321 @@
+{
+  "id": "C5504",
+  "forms": [
+    {
+      "id": "CF12981",
+      "orth": "ⲱⲛϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3678,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6166",
+      "bibliography": "ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲇⲉ ⲛϭⲓϩⲉⲛⲣⲱⲙⲉ ⲛⲣⲉϥⲥⲕⲁⲓ ⲁⲩⲡⲱⲧ ⲁⲩϥⲓⲧϥ ⲛⲧⲟⲟⲧϥ ⲙⲡ**ⲱⲛϣ** ⲙⲡϥϫⲓⲧϥ ⲛϭⲟⲛⲥ ⲗⲁⲁⲩ ·",
+      "english": "For when certain men who were ploughing the land saw him (being carried off) they gave chase to the wolf, and took him from the beast; and the child had received no injury whatsoever.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲉⲛ**ⲱⲛϣ** ϯⲡⲉⲩⲟⲩⲟⲓ ⲉⲣⲟⲓ",
+      "english": "a number of wolves attacked me;",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲉⲛⲁϩⲙⲉⲧ ⲟⲛ · ⲧⲉⲛⲟⲩ ⲉⲧⲧⲁⲡⲣⲟ ⲛⲛⲉⲓⲟⲩⲱⲛϣ · ⲁⲩⲱ ⲙⲡⲁⲧⲉⲡϣⲁϫⲉ ⲥⲱⲗⲡ ϩⲛⲣⲱⲓ · ⲁⲟⲩⲁ ϩⲛⲛ**ⲱⲛϣ** ⲉⲧⲙⲙⲁⲩ ⲛⲉϫⲟⲩⲛⲟϭ ⲛϩⲣⲟⲟⲩ",
+      "english": "And before the words had escaped from my mouth one of the wolves let out a mighty cry,",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ϩⲁⲣⲡⲁⲍⲉ",
+        1,
+        12.969
+      ],
+      [
+        "ⲟⲩⲛⲟⲩ",
+        1,
+        10.497
+      ],
+      [
+        "ⲁ",
+        7,
+        10.296
+      ],
+      [
+        "ⲛⲉϫ",
+        1,
+        9.873
+      ],
+      [
+        "ϥ",
+        7,
+        9.774
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.543
+      ],
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        9.219
+      ],
+      [
+        "ⲟⲩⲟⲓ",
+        1,
+        8.65
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        8.05
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        7.895
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        7.64
+      ],
+      [
+        "ϫⲓⲧ",
+        1,
+        7.613
+      ],
+      [
+        "ⲛ",
+        5,
+        7.605
+      ],
+      [
+        "ⲡ",
+        4,
+        7.327
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        6.816
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        6.805
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.562
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        6.519
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        6.287
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲱⲛϣ_0_node",
+          8
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲱⲛϣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲛϣ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲱⲛϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲱⲛϣ",
+          "ⲱⲛϣ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲱⲛϣ",
+          "ⲱⲛϣ_0_node",
+          1
+        ],
+        [
+          "ⲱⲛϣ_0_node",
+          "ⲉⲧ_1_post_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲱⲛϣ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲱⲛϣ",
+          "ϥ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱⲛϣ",
+          "ⲱⲛϣ_0_node",
+          1
+        ],
+        [
+          "ⲱⲛϣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲱⲛϣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱⲛϣ",
+          "ⲁ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲛϣ",
+          "ⲡ_2_pre_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_pre_ⲱⲛϣ",
+          "ⲱⲛϣ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲛϣ",
+          "ⲥ_1_pre_ⲱⲛϣ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲱⲛϣ",
+          "ⲱⲛϣ_0_node",
+          1
+        ],
+        [
+          "ⲱⲛϣ_0_node",
+          "ⲇⲉ_1_post_ⲱⲛϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3304,
+      "count": 9
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5507",
+      "label": "ⲟⲛϣⲥ",
+      "pos": "N",
+      "gloss": "astonishment, derangement of mind"
+    },
+    {
+      "target": "C5503",
+      "label": "ⲱⲛϣ",
+      "pos": "V",
+      "gloss": "be astonished, be dazed; be dumb"
+    },
+    {
+      "target": "C5505",
+      "label": "ⲱⲛϣ (ⲛⲥⲁ)-",
+      "pos": "V",
+      "gloss": "gape after"
+    },
+    {
+      "target": "C5506",
+      "label": "ⲱⲛϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "gape, muse, be in trance"
+    }
+  ]
+}

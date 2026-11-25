@@ -1,0 +1,44 @@
+{
+  "id": "C1769",
+  "forms": [
+    {
+      "id": "CF5114",
+      "orth": "ⲙⲛⲧⲗⲟϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5115",
+      "orth": "ⲙⲛⲧⲗⲟϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2057",
+      "bibliography": "CD 151b; ChLCS 23a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1767",
+      "label": "ⲗⲟϭ",
+      "pos": "N",
+      "gloss": "impudent, persistent person"
+    },
+    {
+      "target": "C1768",
+      "label": "ⲣⲗⲟϭ",
+      "pos": "V",
+      "gloss": "importune"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "C2528",
+  "forms": [
+    {
+      "id": "CF6847",
+      "orth": "ⲣⲛⲟⲉⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7088,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2908",
+      "bibliography": "CD 229b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲡⲉⲛⲧⲁⲩϫⲟⲟϥ ϫⲉⲟⲩⲕⲛⲁⲁⲩ ⲉϥⲙⲉϩ ⲁⲛ ⲡⲉ , ⲉⲧⲣⲉϥ**ⲣⲛⲟⲉⲓⲧ** .",
+      "english": "As has been said: He is not a full sheaf that he could give flour.",
+      "source": "On Vigilance",
+      "urn": "urn:cts:copticLit:besa.vigilance.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        ",",
+        2,
+        13.867
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        11.227
+      ],
+      [
+        "ⲧⲣⲉ",
+        2,
+        10.664
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        10.577
+      ],
+      [
+        "ϩⲙ",
+        2,
+        9.413
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲛⲟⲉⲓⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6637,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2525",
+      "label": "ⲙⲁ ⲛⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "milling place, mill"
+    },
+    {
+      "target": "C2527",
+      "label": "ⲛⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "meal, flour (of any kind)"
+    },
+    {
+      "target": "C2523",
+      "label": "ⲛⲟⲩⲧ",
+      "pos": "V",
+      "gloss": "grind, pound (corn etc.)"
+    },
+    {
+      "target": "C2524",
+      "label": "ⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "grinding, mill(?)"
+    },
+    {
+      "target": "C2526",
+      "label": "ⲣⲉϥⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "miller"
+    }
+  ]
+}

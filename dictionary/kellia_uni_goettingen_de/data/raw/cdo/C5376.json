@@ -1,0 +1,452 @@
+{
+  "id": "C5376",
+  "forms": [
+    {
+      "id": "CF12721",
+      "orth": "ⲫⲱⲛϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2841,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲫⲉⲛϫ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6032,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲫⲟⲛϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5557,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲫⲟⲛϫ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5557,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6030",
+      "bibliography": "CD 515a; CED 225; KoptHWb 149"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲛⲁ**ⲫⲱⲛϫ** ⲛϩⲁⲛⲑⲣⲟⲛⲟⲥ ⲛⲧⲉϩⲁⲛⲟⲩⲣⲱⲟⲩ ⲟⲩⲟϩ ϯⲛⲁϥⲱϯ ⲉⲃⲟⲗ ⲛⲧϫⲟⲙ ⲛⲛⲓⲟⲩⲣⲱⲟⲩ ⲛⲧⲉⲛⲓⲉⲑⲛⲟⲥ ⲟⲩⲟϩ ϯⲛⲁⲟⲩⲱϫⲡ ⲛϩⲁⲛϩⲁⲣⲙⲁ ⲛⲉⲙⲛⲏⲉⲧϩⲉⲙϩⲉⲙ ϩⲓϫⲱⲟⲩ ⲟⲩⲟϩ ⲉⲩⲉⲓ ⲉⲡϣⲱⲓ ⲛϫⲉϩⲁⲛϩⲑⲱⲣ ⲛⲉⲙⲛⲏⲉⲧⲧⲁⲗⲏⲟⲩⲧ ⲉⲣⲱⲟⲩ ⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ϧⲉⲛⲟⲩⲥⲏϥⲓ ⲟⲩⲃⲉ ⲡⲉϥⲥⲟⲛ .",
+      "english": "and I will overthrow the thrones of kings, and I will destroy the power of the kings of the nations; and I will overthrow chariots and riders; and the horses and their riders shall come down, every one by the sword striving against his brother.",
+      "source": "37_Aggaeus_02",
+      "urn": "urn:cts:copticLit:ot.hag.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ϧⲉⲛⲡϫⲓⲛⲑⲣⲉ ⲡϭⲟⲓⲥ **ⲫⲉⲛϫ** ⲛⲓⲃⲁⲕⲓ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲛⲓⲙⲁⲛϣⲱⲡⲓ ⲟⲩⲟϩ ⲁ ⲫⲛⲟⲩϯ ⲉⲣⲫⲙⲉⲩⲓ ⲛⲁⲃⲣⲁⲁⲙ ⲟⲩⲟϩ ⲁϥⲉⲛ ⲗⲱⲧ ⲉⲃⲟⲗ ϧⲉⲛⲧⲙⲏϯ ⲙⲡⲓⲟⲩⲱϫⲡ ϫⲉⲛⲉ ⲁ ⲡϭⲟⲓⲥ ⲣⲉϧⲧ ⲛⲓⲃⲁⲕⲓ ⲡⲉ ⲛⲏ ⲉⲛⲁⲣⲉⲗⲱⲧ ϣⲱⲡⲓ ⲛϧⲏⲧⲟⲩ",
+      "english": "And it came to pass that when God destroyed all the cities of the region round about, God remembered Abraam, and sent Lot out of the midst of the overthrow, when the Lord overthrew those cities in which Lot dwelt.",
+      "source": "01_Genesis_19",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉ ⲛⲁϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ⲉϧⲟⲩⲛ ⲉⲡⲓⲉⲣⲫⲉⲓ ⲟⲩⲟϩ ⲁϥϩⲓⲟⲩⲓ ⲉⲃⲟⲗ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧϯ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲉⲣⲫⲉⲓ ⲛⲉⲙⲛⲏ ⲉⲧϣⲱⲡ ⲟⲩⲟϩ ⲛⲓⲧⲣⲁⲡⲉⲍⲁ ⲛⲧⲉⲛⲓⲣⲉϥⲉⲣⲕⲉⲣⲙⲁ ⲁϥ**ⲫⲟⲛϫ**ⲟⲩ ⲛⲉⲙⲛⲓⲕⲁⲑⲉⲇⲣⲁ ⲛⲧⲉⲛⲏ ⲉⲧϯ ϭⲣⲟⲙⲡⲓ ⲉⲃⲟⲗ .",
+      "english": "Jesus entered into the temple of God, and drove out all of those who sold and bought in the temple, and overthrew the money changers' tables and the seats of those who sold the doves.",
+      "source": "01_Matthew_21",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲟⲙⲟⲣⲣⲁ",
+        2,
+        15.023
+      ],
+      [
+        "ⲥⲟⲇⲟⲙⲁ",
+        2,
+        13.525
+      ],
+      [
+        "ⲑⲣⲟⲛⲟⲥ",
+        2,
+        12.168
+      ],
+      [
+        "ⲭⲛⲁⲩ",
+        1,
+        12.11
+      ],
+      [
+        "ⲥⲉⲛϯ",
+        1,
+        10.002
+      ],
+      [
+        "ϫⲟⲙ",
+        2,
+        9.889
+      ],
+      [
+        "ⲁ",
+        6,
+        9.159
+      ],
+      [
+        "ⲫⲁϩⲟⲩ",
+        1,
+        8.806
+      ],
+      [
+        "ⲛ",
+        6,
+        8.761
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        1,
+        8.342
+      ],
+      [
+        "ϭⲓⲧ",
+        1,
+        8.071
+      ],
+      [
+        "ⲧⲟⲩⲃⲟ",
+        1,
+        7.876
+      ],
+      [
+        "ⲓⲥⲗ",
+        1,
+        7.495
+      ],
+      [
+        "ϯ",
+        3,
+        7.46
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        7.421
+      ],
+      [
+        "ⲕ",
+        2,
+        6.543
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        6.514
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        6.229
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        6.107
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        5.886
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲟⲩ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          8
+        ],
+        [
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          6
+        ],
+        [
+          "ϥ_1_pre_ⲫⲱⲛϫ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          ":_3_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲫⲱⲛϫ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲥⲱϥ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲥⲱϥ",
+          1
+        ],
+        [
+          "ⲥⲱϥ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲫⲱⲛϫ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲛϫ",
+          3
+        ],
+        [
+          "ⲥⲟⲇⲟⲙⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲅⲟⲙⲟⲣⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲫ_2_pre_ⲛⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϥⲱϯ",
+          1
+        ],
+        [
+          "ϯ_2_post_ϥⲱϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲩ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          "ϥ_1_pre_ⲫⲱⲛϫ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          2
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          "ⲇⲉ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲫⲱⲛϫ",
+          ":_3_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          ":_3_post_ϩⲱⲃ",
+          "ϩⲱⲃ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          "ⲕ_1_pre_ⲫⲱⲛϫ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          2
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          "ⲁ_2_post_ⲥⲱϥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲱϥ",
+          "ⲕ_2_post_ⲥⲱϥ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲥⲱϥ",
+          "ⲥⲱϥ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲫⲱⲛϫ",
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          "ⲙ_1_post_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲫⲱⲛϫ",
+          "ⲡⲉϥ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          "ⲩ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          1
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          "ⲛ_1_post_ⲫⲱⲛϫ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲛϫ",
+          "ⲥⲟⲇⲟⲙⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲟⲇⲟⲙⲁ_2_post_ⲛ",
+          "ⲛⲉⲙ_4_post_ⲅⲟⲙⲟⲣⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲛϫ",
+          "ⲛⲉϥ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲁ",
+          "ⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲫⲱⲛϫ",
+          "ⲫ_2_pre_ⲛⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲫ_2_pre_ⲛⲟⲩϯ",
+          "ⲛⲟⲩϯ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲫⲱⲛϫ",
+          "ϯ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲫⲱⲛϫ",
+          "ⲛⲁ_1_pre_ⲫⲱⲛϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲫⲱⲛϫ",
+          "ⲫⲱⲛϫ_0_node",
+          1
+        ],
+        [
+          "ⲫⲱⲛϫ_0_node",
+          "ⲟⲩⲟϩ_2_post_ϥⲱϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϥⲱϯ",
+          "ϯ_2_post_ϥⲱϯ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.14,
+      "rank": 1938,
+      "count": 12
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5377",
+      "label": "ⲫⲱⲛϫ",
+      "pos": "N",
+      "gloss": "overthrowing, destruction"
+    }
+  ]
+}

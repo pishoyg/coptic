@@ -1,0 +1,90 @@
+{
+  "id": "C7358",
+  "forms": [
+    {
+      "id": "CF16775",
+      "orth": "ϫⲱⲣⲡ (ⲉ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8139",
+      "bibliography": "CD 786b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏⲡⲟⲧⲉ **ⲛⲅϫⲱⲣⲡ **ⲉ**ⲩⲱⲛⲉ** ϩⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ ·",
+      "english": "lest thou strike a stone with thy feet.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲥϣⲱⲡⲉ ⲇⲉ ⲉⲩϣⲁⲛⲟⲩⲱⲙ · ϣⲁⲣⲉⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲣⲟⲉⲓⲥ ⲉⲧⲙⲕⲁⲧⲉⲩϭⲓϫ **ⲉϫⲱⲣⲡ **ⲉ**ⲧⲁⲡⲥⲱⲧⲏⲣ** ϩⲛϫⲏ · ⲉⲩⲣϩⲟⲧⲉ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲟⲛ ⲛⲓⲙ · ϫⲉⲉⲛⲁⲟⲩⲱⲙ ⲙⲛⲡⲛⲟⲩⲧⲉ ·",
+      "english": "And when they were eating, the Apostles watched that they might not let their hands touch those of the Saviour in the bowl, for they were afraid, and said, Who are we that we should eat with God?",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲉϣϫⲉ ⲛⲧⲟⲕ ⲡⲉ ⲡϣⲏⲣⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲟϫⲕ ⲉⲡⲉⲥⲏⲧ ⲉϫⲙⲡⲉⲓⲙⲁ . ϥⲥⲏϩ ⲅⲁⲣ ϫⲉϥⲛⲁϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲃⲏⲏⲧⲕ . ⲛⲥⲉϥⲓ ⲙⲙⲟⲕ ⲉϩⲣⲁⲓ ⲉϫⲛⲛⲉⲩϭⲓϫ ⲙⲏⲡⲟⲧⲉ **ⲛⲅϫⲱⲣⲡ **ⲉ**ⲩⲱⲛⲉ** ⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ .",
+      "english": "and said to him, 'If you are the Son of God, throw yourself down, for it is written, 'He will put his angels in charge of you.' and, 'On their hands they will bear you up, so that you don't dash your foot against a stone.''",
+      "source": "40_Matthew_4",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7364",
+      "label": "ϫⲓϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "stumble, be impeded"
+    },
+    {
+      "target": "C7359",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "obstacle, impediment; mishap"
+    },
+    {
+      "target": "C7360",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "impedient"
+    },
+    {
+      "target": "C7357",
+      "label": "ϫⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "stumble, trip; insult, offend"
+    },
+    {
+      "target": "C7363",
+      "label": "ϯϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "give scandal, trip up"
+    },
+    {
+      "target": "C7361",
+      "label": "ⲁⲧϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "unimpeded"
+    },
+    {
+      "target": "C7362",
+      "label": "ⲣϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "be a stumbling block, be difficult"
+    }
+  ]
+}

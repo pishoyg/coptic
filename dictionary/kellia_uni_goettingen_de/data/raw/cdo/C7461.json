@@ -1,0 +1,70 @@
+{
+  "id": "C7461",
+  "forms": [
+    {
+      "id": "CF16981",
+      "orth": "ϫⲁϥϩⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8256",
+      "bibliography": "CD 796a; KoptHWb 439"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7458",
+      "label": "ϫⲓⲛϫⲟⲩϥ",
+      "pos": "N",
+      "gloss": "burning"
+    },
+    {
+      "target": "C7455",
+      "label": "ϫⲟⲩϥ",
+      "pos": "V",
+      "gloss": "burn, scorch; be sharp, bitter"
+    },
+    {
+      "target": "C7457",
+      "label": "ϫⲟⲩϥ",
+      "pos": "N",
+      "gloss": "burning, ardour, heat"
+    },
+    {
+      "target": "C7456",
+      "label": "ϫⲟⲩϥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "flare up"
+    },
+    {
+      "target": "C7459",
+      "label": "ϫⲟⲩϥ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be warm at heart, feel warmly"
+    },
+    {
+      "target": "C7460",
+      "label": "ϫⲟⲩϥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "desire, emotion, passion; care"
+    }
+  ]
+}

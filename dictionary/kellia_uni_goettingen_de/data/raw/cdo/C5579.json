@@ -1,0 +1,131 @@
+{
+  "id": "C5579",
+  "forms": [
+    {
+      "id": "CF13133",
+      "orth": "ⲉⲧⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12252,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6244",
+      "bibliography": "CDC 81b; KoptHWb 295; DELC 251a; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲥⲧⲱ",
+        1,
+        14.532
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲡⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲧⲡⲉ",
+          "ⲉⲧⲡⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11825,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5577",
+      "label": "ϭⲓⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "seclusion, imprisonment"
+    },
+    {
+      "target": "C5576",
+      "label": "ⲙⲁ ⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "place of confinement, prison"
+    },
+    {
+      "target": "C5574",
+      "label": "ⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "shut, enclose, imprison"
+    },
+    {
+      "target": "C5578",
+      "label": "ⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "seclusion, imprisonment"
+    },
+    {
+      "target": "C5575",
+      "label": "ⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "imprison"
+    }
+  ]
+}

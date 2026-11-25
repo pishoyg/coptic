@@ -1,0 +1,134 @@
+{
+  "id": "C1149",
+  "forms": [
+    {
+      "id": "CF3673",
+      "orth": "ⲕⲉⲗⲕⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6126,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1335",
+      "bibliography": "CD 102b; KoptHWb 61; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲁⲣⲉϥϣⲱⲡⲓ ⲛϫⲉⲟⲩϣⲱⲓϣ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ ⲛⲧⲉⲭⲏⲙⲓ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ϩⲓⲛⲓⲣⲱⲙⲓ ⲛⲉⲙϧⲉⲛⲛⲓϥⲧⲉⲫⲁⲧ ⲛϫⲉϩⲁⲛϣⲁϣ ⲛⲉⲙϩⲁⲛ**ⲕⲉⲗⲕⲁ** ⲁⲩϫⲏϥ ϧⲉⲛⲛⲓⲣⲱⲙⲓ ⲛⲉⲙϧⲉⲛⲛⲓϥⲧⲉⲫⲁⲧ ϧⲉⲛⲡⲕⲁϩⲓ ⲧⲏⲣϥ ⲛⲭⲏⲙⲓ",
+      "english": "And let it become dust over all the land of Egypt, and there shall be upon men and upon beasts sore blains breaking forth both on men and on beasts, in all the land of Egypt.",
+      "source": "02_Exodus_09",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϭⲓ ⲙⲡⲓⲕⲉⲣⲙⲓ ⲛϩⲣⲟ ⲙⲡⲉⲙⲑⲟ ⲙⲫⲁⲣⲁⲱ ⲟⲩⲟϩ ⲁ ⲙⲱⲩⲥⲏⲥ ⲃⲉⲣⲃⲱⲣϥ ⲉⲡϣⲱⲓ ⲉⲧⲫⲉ ⲟⲩⲟϩ ⲁⲩϣⲱⲡⲓ ⲛϫⲉϩⲁⲛϣⲁϣ ⲛ**ⲕⲉⲗⲕⲁ** ⲉⲩϫⲏϥ ϧⲉⲛⲛⲓⲣⲱⲙⲓ ⲛⲉⲙϧⲉⲛⲛⲓϥⲧⲉⲫⲁⲧ",
+      "english": "So he took of the ashes of the furnace before Pharao, and Moses scattered it toward heaven, and it became sore blains breaking forth both on men and on beasts.",
+      "source": "02_Exodus_09",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:09",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲏϥ",
+        2,
+        17.995
+      ],
+      [
+        "ϣⲁϣ",
+        2,
+        16.236
+      ],
+      [
+        "ϩⲁⲛ",
+        3,
+        11.068
+      ],
+      [
+        "ⲩ",
+        2,
+        8.121
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲉⲗⲕⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲉⲗⲕⲁ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲕⲁ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲉⲗⲕⲁ",
+          "ϩⲁⲛ_1_pre_ⲕⲉⲗⲕⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲉⲗⲕⲁ",
+          "ⲕⲉⲗⲕⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5620,
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "C4445",
+  "forms": [
+    {
+      "id": "CF10843",
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 43.18,
+        "rank": 32,
+        "count": 6812
+      }
+    },
+    {
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 39.88,
+        "rank": 37,
+        "count": 3382
+      }
+    },
+    {
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 43.18,
+        "rank": 32,
+        "count": 6812
+      }
+    },
+    {
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "A",
+      "id": "48.1"
+    },
+    {
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "F",
+      "id": "48.2"
+    },
+    {
+      "orth": "ⲧⲏⲗ⸗",
+      "dialect": "F",
+      "id": "48.3"
+    },
+    {
+      "orth": "ⲧⲏⲣ⸗",
+      "dialect": "L",
+      "id": "48.4"
+    }
+  ],
+  "grammar": {
+    "pos": "IMOD",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5033",
+      "bibliography": "CD 424a; CDC 66b; CED 192; KoptHWb 242; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁϥ ⲁⲩⲫⲱⲧ **ⲧⲏⲣ**ⲟⲩ",
+      "english": "They all left him, and fled.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲉⲩⲙⲛⲧⲁⲕⲁⲑⲁⲣⲧⲟⲥ **ⲧⲏⲣ**ⲟⲩ .",
+      "english": "And all their impurities.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲩⲱⲙ **ⲧⲏⲣ**ⲟⲩ ⲟⲩⲟϩ ⲁⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲛⲛⲉⲩⲁⲓⲧⲏⲙⲁ **ⲧⲏⲣ**ⲟⲩ ·",
+      "english": "filling all their requests,",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲋ ϣⲱⲡⲓ ⲁ ⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ **ⲧⲏⲣ**ϥ ϣⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲑ .",
+      "english": "When the sixth hour",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲟⲩⲱⲙ **ⲧⲏⲣ**ⲟⲩ ⲁⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4448",
+      "label": "ⲉⲡⲧⲏⲣϥ",
+      "pos": "ADV",
+      "gloss": "wholly, at all"
+    },
+    {
+      "target": "C4447",
+      "label": "ⲛⲓⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the wholeness"
+    },
+    {
+      "target": "C4449",
+      "label": "ⲡⲓⲉⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole"
+    },
+    {
+      "target": "C4446",
+      "label": "ⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole, the creation, the world"
+    }
+  ],
+  "etym": {
+    "egy_num": "92500",
+    "egy_lemma": "r-ḏr",
+    "demo_num": "d7343",
+    "demo_lemma": "ḏr=",
+    "english": "all; entire",
+    "german": "ganz; gesamt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/92500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7343"
+  }
+}

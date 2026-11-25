@@ -1,0 +1,94 @@
+{
+  "id": "C6819",
+  "forms": [
+    {
+      "id": "CF15687",
+      "orth": "ⲥⲉⲕϩⲣⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7534",
+      "bibliography": "CD 705a; KoptHWb 389; ChLCS 94b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6821",
+      "label": "ϥⲓϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "raise voice"
+    },
+    {
+      "target": "C6815",
+      "label": "ϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voice, sound"
+    },
+    {
+      "target": "C12091",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C12092",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C6822",
+      "label": "ϩⲣⲟⲩⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "voice of sky, thunder"
+    },
+    {
+      "target": "C6823",
+      "label": "ϩⲣⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "great voice, boastful talk"
+    },
+    {
+      "target": "C6820",
+      "label": "ϯϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give, utter voice"
+    },
+    {
+      "target": "C6816",
+      "label": "ⲁⲧϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voiceless"
+    },
+    {
+      "target": "C6817",
+      "label": "ⲛⲟⲩϫⲉϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "allow a cry (\"throw voice\")"
+    },
+    {
+      "target": "C6818",
+      "label": "ⲣϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "make noise"
+    }
+  ]
+}

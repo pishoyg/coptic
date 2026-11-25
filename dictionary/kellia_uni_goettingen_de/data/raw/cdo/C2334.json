@@ -1,0 +1,143 @@
+{
+  "id": "C2334",
+  "forms": [
+    {
+      "id": "CF6406",
+      "orth": "ⲙⲉϫⲏⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8223,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2692",
+      "bibliography": "CD 213b; CED 101; KoptHWb 113, 523; DELC 132; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛϭⲓⲡϫⲟⲉⲓⲥ ⲙⲙⲱⲩⲥⲏⲥ ⲙⲛⲁⲁⲣⲱⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϫⲓ ⲛⲧⲱⲧⲛ ⲛⲛⲉⲧⲛϭⲓϫ ⲉⲩⲙⲉϩⲙ**ⲙⲉϫⲏⲗ** ⲛϩⲣⲱ ⲛⲧⲉⲙⲱⲩⲥⲏⲥ ⲛⲟϫϥ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲫⲁⲣⲁⲱ ⲁⲩⲱ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉϥϩⲙϩⲁⲗ",
+      "english": "And the Lord spoke to Moses and Aaron, saying, Take you handfuls of ashes of the furnace, and let Moses scatter it toward heaven before Pharao, and before his servants.",
+      "source": "Exodus 9",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲙⲱⲩⲥⲏⲥ ϫⲓ ⲙⲡ**ⲙⲉϫⲏⲗ** ⲛϩⲣⲱ ⲁϥⲛⲟϫϥ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲫⲁⲣⲁⲱ ⲁⲩϣⲱⲡⲉ ⲛϭⲓⲛⲥⲁϣ ⲛⲕⲗⲕⲁ ⲛϫⲟⲩϥ ϩⲣⲁⲓ ϩⲙⲡⲣⲱⲙⲉ ⲁⲩⲱ ϩⲣⲁⲓ ϩⲛⲛⲧⲃⲛⲟⲟⲩⲉ",
+      "english": "So he took of the ashes of the furnace before Pharao, and Moses scattered it toward heaven, and it became sore blains breaking forth both on men and on beasts.",
+      "source": "Exodus 9",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲱ",
+        2,
+        16.791
+      ],
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        3,
+        14.661
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        11.102
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ϫⲓ",
+        1,
+        8.164
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉϫⲏⲗ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉϫⲏⲗ",
+          2
+        ],
+        [
+          "ϩⲣⲱ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉϫⲏⲗ_0_node",
+          "ⲛ_1_post_ⲙⲉϫⲏⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉϫⲏⲗ",
+          "ϩⲣⲱ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7781,
+      "count": 2
+    }
+  }
+}

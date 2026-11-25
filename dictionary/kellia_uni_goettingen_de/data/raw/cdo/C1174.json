@@ -1,0 +1,64 @@
+{
+  "id": "C1174",
+  "forms": [
+    {
+      "id": "CF3735",
+      "orth": "ⲉⲓⲣⲉ ⲛⲕⲗⲟⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1364",
+      "bibliography": "CD 105a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1177",
+      "label": "ϫⲓⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "receive, bear crown"
+    },
+    {
+      "target": "C1176",
+      "label": "ϫⲓⲛϯⲭⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crowning"
+    },
+    {
+      "target": "C1175",
+      "label": "ϯⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "crown, set a crown"
+    },
+    {
+      "target": "C1173",
+      "label": "ⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown, wreath"
+    },
+    {
+      "target": "C1178",
+      "label": "ⲣⲉϥϫⲓⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown bearer"
+    }
+  ]
+}

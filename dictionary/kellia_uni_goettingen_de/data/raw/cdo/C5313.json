@@ -1,0 +1,148 @@
+{
+  "id": "C5313",
+  "forms": [
+    {
+      "id": "CF12595",
+      "orth": "ⲟⲩⲱϩ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7406,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5962",
+      "bibliography": "CD 507a; KoptHWb 285"
+    },
+    {
+      "id": "CS5963",
+      "bibliography": "CD 507ab; KoptHWb 285; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ **ⲙⲁⲣⲛⲟⲩⲱϩ **ⲉⲃⲟⲗ**** ϩⲓϫⲱⲛ ⲛⲧⲉⲧⲡⲱ ⲛⲛⲉⲛⲛⲟⲃⲉ ϩⲁⲧϩⲏ ⲙⲡⲙⲁ ⲛϯϩⲁⲡ ·",
+      "english": "For this reason, moreover, let us set down the burden of our sins from our shoulders before the place of judgement (is made ready),",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲛϭⲓⲁⲁⲣⲱⲛ ⲙⲛⲛⲉϥϣⲏⲣⲉ ϩⲟⲧⲁⲛ ⲉⲥϣⲁⲛⲧⲱⲟⲩⲛ ⲉⲙⲟⲟϣⲉ ⲛϭⲓⲧⲡⲁⲣⲉⲙⲃⲟⲗⲏ **ⲛⲥⲉⲟⲩⲱϩ **ⲉⲃⲟⲗ**** ⲙⲡⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲉⲧⲟ ⲛϩⲁⲓⲃⲉⲥ ⲛⲥⲉϩⲱⲃⲥ ϩⲣⲁⲓ ⲛϩⲏⲧϥ ⲛⲧⲕⲓⲃⲱⲧⲟⲥ ⲙⲡⲙⲛⲧⲣⲉ",
+      "english": "And Aaron and his sons shall go in, when the camp is about to move, and shall take down the shadowing veil, and shall cover with it the ark of the testimony.",
+      "source": "Numbers 4",
+      "urn": "urn:cts:copticLit:ot.num.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5736,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5318",
+      "label": "ϭⲓⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "act of dwelling; manner of life"
+    },
+    {
+      "target": "C5317",
+      "label": "ⲙⲁ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "house, habitation, cell"
+    },
+    {
+      "target": "C5319",
+      "label": "ⲟⲩⲁϩϥ",
+      "pos": "N",
+      "gloss": "liturgical functionary (acolyte?)"
+    },
+    {
+      "target": "C5304",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "V",
+      "gloss": "put, place, add; be placed, stay, dwell"
+    },
+    {
+      "target": "C5305",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "standing-place, dwelling-place"
+    },
+    {
+      "target": "C5306",
+      "label": "ⲟⲩⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "set on, add to, attribute to, dwell by/with"
+    },
+    {
+      "target": "C5312",
+      "label": "ⲟⲩⲱϩ ϩⲁ-",
+      "pos": "V",
+      "gloss": "lie by, in return for; deposit (money)"
+    },
+    {
+      "target": "C5315",
+      "label": "ⲟⲩⲱϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "put in, bring in"
+    },
+    {
+      "target": "C5316",
+      "label": "ⲟⲩⲱϩ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "set down"
+    },
+    {
+      "target": "C5308",
+      "label": "ⲟⲩⲱϩ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "add to, increase"
+    },
+    {
+      "target": "C5314",
+      "label": "ⲟⲩⲱϩ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "descend, alight; set down"
+    },
+    {
+      "target": "C5307",
+      "label": "ⲟⲩⲱϩ ⲉⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "add, repeat"
+    },
+    {
+      "target": "C5309",
+      "label": "ⲟⲩⲱϩ ⲛⲁ⸗",
+      "pos": "V",
+      "gloss": "set down, make pause"
+    },
+    {
+      "target": "C5310",
+      "label": "ⲟⲩⲱϩ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "follow"
+    },
+    {
+      "target": "C5311",
+      "label": "ⲟⲩⲱϩ ⲛⲧⲛ-",
+      "pos": "V",
+      "gloss": "place with, pledge to, pawn, mortgage"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "C4829",
+  "forms": [
+    {
+      "id": "CF11623",
+      "orth": "ⲧⲁϩⲧϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11882,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5448",
+      "bibliography": "CD 462a; KoptHWb 260; DELC 226b; ChLCS 64b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲧⲛ ⲡⲛⲟⲩⲃ ⲙⲛⲡϩⲁⲧ ⲙⲛⲡϩⲟⲙⲛⲧ ⲙⲛⲡⲃⲉⲛⲓⲡⲉ ⲙⲛⲡⲃⲁⲣⲱⲧ ⲙⲛⲡ**ⲧⲁϩⲧ** ⲙⲛⲃⲁⲥⲏϭ",
+      "english": "Beside the gold, and the silver, and the brass, and the iron, and lead, and tin,",
+      "source": "Numbers 31",
+      "urn": "urn:cts:copticLit:ot.num.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉⲧϩⲟⲣϣ ⲉⲡ**ⲧⲁϩⲧ** ⲁⲩⲱ ⲟⲩ ⲡⲉ ⲡⲉϥⲣⲁⲛ ⲛⲥⲁⲥⲟϭ",
+      "english": "What is heavier than lead? and what is the name thereof, but a fool?",
+      "source": "Sirach 22",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲁⲧⲁⲧϩⲉ ⲉϣⲁⲩⲛⲟⲩϫⲉ ⲙⲡϩⲁⲧ ⲙⲛⲡϩⲟⲙⲛⲧ ⲙⲛⲡⲡⲉⲛⲓⲡⲉ ⲙⲛⲡⲃⲁⲥⲛϭ ⲙⲛⲡ**ⲧⲁϩⲧ** ⲉⲧⲙⲏⲧⲉ ⲛⲧⲉϩⲣⲱ ⲛⲥⲉⲛⲓϥⲉ ⲉⲧⲥⲁⲧⲉ ⲉⲟⲩⲟⲧϩⲟⲩ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉϯⲛⲁϫⲓⲧⲏⲩⲧⲛ ϩⲛⲧⲁⲟⲣⲅⲏ ⲁⲩⲱ ⲛⲧⲁⲥⲉⲩϩⲧⲏⲩⲧⲛ ⲛⲧⲁⲟⲩⲱⲧϩ ⲙⲙⲱⲧⲛ",
+      "english": "As silver, and brass, and iron, and tin, and lead, are gathered into the midst of the furnace, to blow fire into it, that they may be melted: so will I take you in my wrath, and I will gather and melt you.",
+      "source": "Ezekiel 22",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲓⲙ",
+        1,
+        8.48
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        1,
+        8.346
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        5.562
+      ],
+      [
+        "ϩⲉ",
+        1,
+        3.557
+      ],
+      [
+        "ⲧ",
+        1,
+        1.901
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        1.05
+      ],
+      [
+        "ⲛ",
+        1,
+        -0.361
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁϩⲧϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2319,
+      "count": 18
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C4768",
+      "type": "cf",
+      "label": "be mixed, be disturbed, mix, stir"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4830",
+      "label": "ⲙⲉⲧⲑⲟϧⲧⲉϧ",
+      "pos": "N",
+      "gloss": "intercourse, society"
+    },
+    {
+      "target": "C4832",
+      "label": "ⲙⲛⲧⲧⲉϩϯϩ",
+      "pos": "N",
+      "gloss": "confusion?"
+    },
+    {
+      "target": "C4831",
+      "label": "ⲧϩϯϩ",
+      "pos": "N",
+      "gloss": "confused"
+    },
+    {
+      "target": "C4828",
+      "label": "ⲧⲁϩⲧϩ",
+      "pos": "V",
+      "gloss": "mix, confuse"
+    }
+  ]
+}

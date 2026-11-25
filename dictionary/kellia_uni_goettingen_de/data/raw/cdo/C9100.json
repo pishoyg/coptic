@@ -1,0 +1,382 @@
+{
+  "id": "C9100",
+  "forms": [
+    {
+      "id": "CF22537",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF22540",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4944,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF22538",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7053,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22539",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22541",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF22542",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF22543",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22544",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9288,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22545",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4119,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF22546",
+      "orth": "ⲉⲩⲭⲁⲣⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11225",
+      "bibliography": "DDGLC",
+      "cu_ID": "15314"
+    },
+    {
+      "id": "CS11226",
+      "bibliography": "DDGLC",
+      "cu_ID": "53"
+    },
+    {
+      "id": "CS11227",
+      "bibliography": "DDGLC",
+      "cu_ID": "5163"
+    },
+    {
+      "id": "CS11228",
+      "bibliography": "DDGLC",
+      "cu_ID": "5162"
+    },
+    {
+      "id": "CS11229",
+      "bibliography": "DDGLC",
+      "cu_ID": "5165"
+    },
+    {
+      "id": "CS11230",
+      "bibliography": "DDGLC",
+      "cu_ID": "7805"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲛⲧⲉⲣⲓⲥⲱⲧⲙ ⲉⲛⲁⲓ ⲛⲧⲟⲟⲧϥ ⲙⲡϩⲗⲗⲟ ⲙⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲁⲓ**ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ** ⲙⲡⲛⲟⲩⲧⲉ ϫⲉⲙⲡⲉϥⲗⲩⲡⲏ ⲙⲙⲟⲓ ϩⲛⲗⲁⲁⲩ ⲛϩⲱⲃ ⲉⲧⲓϣⲓⲛⲉ ⲛⲥⲱⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ · ⲁⲩⲱ ⲛ ⲧⲉⲓϩⲉ ⲁϥⲉⲓⲛⲉ ⲙⲙⲟϥ ϣⲁⲣⲟⲓ ·",
+      "english": "And when I had heard these things from the old man, the presbyter, I gave thanks to God because He had never disappointed me in respect of any matter which I had asked from him; and thus the [old man] brought it (i.e. the book) to me.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲧⲉⲣϥϫⲟⲟⲩ ⲁⲡⲣⲱⲙⲉ ⲃⲱⲕ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ ⲉϥϯⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲉϥ**ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ** ⲛⲧⲟⲟⲧϥ ⲙⲡⲁⲉⲓⲱⲧ ⲙⲙⲁⲕⲁⲣⲓⲟⲥ ·",
+      "english": "And when Apa Pisentius had said these words, the man departed from his presence, and ascribed glory to God, and rendered abundant thanks to my blessed father.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩ**ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ** ⲙⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲙⲓⲭⲁⲏⲗ · ϩⲛⲟⲩⲛⲟϭ ⲛⲥⲡⲟⲩⲇⲏ · ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲧⲛⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ ⲛⲁⲕ ⲡⲁϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI)",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:49-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        21.276
+      ],
+      [
+        "ϣⲡϩⲙⲟⲧ",
+        1,
+        11.8
+      ],
+      [
+        "ⲙ",
+        7,
+        11.451
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        1,
+        10.431
+      ],
+      [
+        "ϫⲉ",
+        4,
+        9.824
+      ],
+      [
+        "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        9.808
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        9.054
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        8.842
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.743
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        8.457
+      ],
+      [
+        "ⲕ",
+        2,
+        7.531
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.425
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ϥ",
+        2,
+        5.2
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.659
+      ],
+      [
+        "ⲓ",
+        1,
+        4.529
+      ],
+      [
+        "ⲥ",
+        1,
+        3.952
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          4
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ϥ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          "ⲛⲧⲟⲟⲧ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ϥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲧⲟⲟⲧ",
+          "ⲙ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          "ⲛⲁ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ⲕ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ⲩ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲡⲁ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_post_ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4527,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "848",
+    "grl_lemma": "εὐχαριστέω",
+    "grl_meaning": "to bestow a favor on, be thankful",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 738a; Preisigke 1:626"
+  }
+}

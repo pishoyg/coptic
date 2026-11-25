@@ -1,0 +1,94 @@
+{
+  "id": "C13001",
+  "forms": [
+    {
+      "id": "CF34000",
+      "orth": "ϩⲁ-",
+      "dialect": null
+    },
+    {
+      "id": "CF34001",
+      "orth": "ϩⲁ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF34002",
+      "orth": "ϩⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF34003",
+      "orth": "ϩⲁ⸗",
+      "dialect": "M"
+    },
+    {
+      "id": "CF34004",
+      "orth": "ϩⲁ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF34005",
+      "orth": "ϩⲁ⸗",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Status nominalis",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18000",
+      "bibliography": "CD 635a; CED 268; KoptHWb 348; DELC 284a-b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2",
+      "type": "syn",
+      "label": "verbal prefix perfect I"
+    },
+    {
+      "target": "C280",
+      "type": "syn",
+      "label": "verbal prefix perfect I"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1",
+      "label": "ⲁ",
+      "pos": "NUM",
+      "gloss": "1"
+    },
+    {
+      "target": "C2",
+      "label": "ⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C3",
+      "label": "ⲁ-",
+      "pos": "NEG",
+      "gloss": ""
+    },
+    {
+      "target": "C4",
+      "label": "ⲁ-",
+      "pos": "PTC",
+      "gloss": "about"
+    },
+    {
+      "target": "C5",
+      "label": "ⲁ-",
+      "pos": "N",
+      "gloss": "house, region, environment"
+    }
+  ]
+}

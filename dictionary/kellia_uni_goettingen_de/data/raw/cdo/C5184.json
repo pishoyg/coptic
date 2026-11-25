@@ -1,0 +1,199 @@
+{
+  "id": "C5184",
+  "forms": [
+    {
+      "id": "CF31891",
+      "orth": "ⲟⲩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7357,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31890",
+      "orth": "ⲟⲩⲟⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3286,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5825",
+      "bibliography": "CD 493b; CED 217; KoptHWb 279; DELC 238b; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓϯ ⲙⲙⲟⲟⲩ ϩⲁⲛⲉⲧⲛϭⲓϫ ⲉⲩⲉϣⲱⲡⲉ ⲛⲏⲧⲛ ⲉⲩⲟⲩⲱⲙ ⲛⲧϩⲉ ⲛⲛⲓ**ⲟⲩⲟⲧⲉ** ⲛⲭⲟⲣⲧⲟⲥ ⲁⲓⲧⲁⲁⲩ ⲛⲏⲧⲛ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟϭⲗⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲭⲟⲣⲧⲟⲥ",
+        1,
+        14.576
+      ],
+      [
+        "ⲙⲁⲗⲓⲥⲧⲁ",
+        1,
+        13.87
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        1,
+        11.929
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        11.641
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲭⲟⲣⲧⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟⲧⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲧⲉ",
+          "ⲭⲟⲣⲧⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10016,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5186",
+      "label": "ⲙⲁ ⲛⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "herb-garden"
+    },
+    {
+      "target": "C5185",
+      "label": "ⲟⲩⲟⲧⲉ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "edible herbs"
+    },
+    {
+      "target": "C5188",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "V",
+      "gloss": "be/become green, be/become pallid"
+    },
+    {
+      "target": "C5189",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "N",
+      "gloss": "greenness, herbs, pallor"
+    },
+    {
+      "target": "C5183",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "V",
+      "gloss": "be raw, be fresh, be green; be/make soft"
+    },
+    {
+      "target": "C5187",
+      "label": "ⲥⲁ ⲛⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "herb-seller, gardener"
+    }
+  ],
+  "etym": {
+    "egy_num": "43700",
+    "egy_lemma": "wꜣḏ.t",
+    "demo_num": "d1557",
+    "demo_lemma": "wt",
+    "english": "greens; vegetables",
+    "german": "Gemüse; Grünzeug",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/43700",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1557"
+  }
+}

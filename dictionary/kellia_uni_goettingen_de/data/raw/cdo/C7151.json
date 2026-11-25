@@ -1,0 +1,236 @@
+{
+  "id": "C7151",
+  "forms": [
+    {
+      "id": "CF16361",
+      "orth": "ϩⲓϫⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6759,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7889",
+      "bibliography": "CD 765b; KoptHWb 418"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲉⲁⲙⲁϩⲓ ⲛⲟⲩⲫⲓϯ ⲛⲉⲙⲟⲩⲛⲁⲃⲓ ϥⲛⲁϣⲧ ⲟⲩⲟϩ ⲛⲛⲉϥⲛⲁⲓ ⲧⲉϥⲥⲙⲏ ⲙⲫⲣⲏϯ ⲙⲫⲓⲟⲙ ⲉϥ**ϩⲓϫⲟⲗ** ⲛϩⲣⲏⲓ ϩⲁⲛϩⲑⲱⲣ ⲛⲉⲙϩⲁⲛϩⲁⲣⲙⲁ ⲉϥⲉⲥⲟⲃϯ ⲉⲡⲓⲡⲟⲗⲉⲙⲟⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩⲭⲣⲱⲙ ⲟⲩⲃⲏⲧϣⲉⲣⲓ ⲛⲥⲓⲱⲛ .",
+      "english": "They shall lay hold on bow and spear; the people is fierce, and will have no mercy; their voice is as the roaring sea; they shall array themselves for war against thee as fire on horses and chariots, O daughter of Sion.",
+      "source": "24_Ieremias_06",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉ ⲫⲁⲓ ⲉⲑⲛⲁⲓ ⲉⲡϣⲱⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲓⲁⲣⲟ ⲟⲩⲟϩ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲓⲁⲣⲱⲟⲩ ⲉⲩ**ϩⲓϫⲟⲗ** ⲙⲡⲟⲩⲙⲱⲟⲩ .",
+      "english": "Who is this that shall come up as a river, and as rivers roll their waves?",
+      "source": "24_Ieremias_26",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:26",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲣⲱⲟⲩ",
+        1,
+        15.236
+      ],
+      [
+        "ϩⲑⲱⲣ",
+        1,
+        12.187
+      ],
+      [
+        "ⲛϩⲣⲏⲓ",
+        1,
+        10.735
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        10.009
+      ],
+      [
+        "ⲙⲱⲟⲩ",
+        1,
+        9.54
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        8.692
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        6.313
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲫ",
+        1,
+        5.564
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲓϫⲟⲗ_0_node",
+          2
+        ],
+        [
+          "ⲛϩⲣⲏⲓ_1_post_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲛϩⲣⲏⲓ",
+          1
+        ],
+        [
+          "ϩⲑⲱⲣ_3_post_ϩⲁⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_5_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲱⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϩⲓϫⲟⲗ",
+          "ϩⲓϫⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ϩⲓϫⲟⲗ_0_node",
+          "ⲛϩⲣⲏⲓ_1_post_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲛϩⲣⲏⲓ_1_post_ϩⲓϫⲟⲗ",
+          "ϩⲁⲛ_2_post_ⲛϩⲣⲏⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲛϩⲣⲏⲓ",
+          "ϩⲑⲱⲣ_3_post_ϩⲁⲛ",
+          1
+        ],
+        [
+          "ϩⲑⲱⲣ_3_post_ϩⲁⲛ",
+          "ⲛⲉⲙ_5_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲓϫⲟⲗ",
+          "ϩⲓϫⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ϩⲓϫⲟⲗ_0_node",
+          "ⲙ_1_post_ϩⲓϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲓϫⲟⲗ",
+          "ⲡⲟⲩ_3_post_ⲙⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲱⲟⲩ",
+          "ⲙⲱⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 6230,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7150",
+      "label": "ϫⲟⲗ",
+      "pos": "N",
+      "gloss": "wave"
+    }
+  ]
+}

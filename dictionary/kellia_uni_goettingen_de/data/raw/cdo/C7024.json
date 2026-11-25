@@ -1,0 +1,376 @@
+{
+  "id": "C7024",
+  "forms": [
+    {
+      "id": "CF16105",
+      "orth": "ϩⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3789,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ϩⲟϩ⸗",
+      "dialect": "S",
+      "id": "2341.1"
+    },
+    {
+      "orth": "ϧⲱϧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4669,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϧⲁϧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3290,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϧⲏϧ†",
+      "dialect": "B",
+      "id": "2341.4"
+    },
+    {
+      "orth": "ϩⲱϩ",
+      "dialect": "A",
+      "id": "2341.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7745",
+      "bibliography": "CD 742a; CED 306; KoptHWb 406; DELC 320a; ChLCS 99a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛ ⲟⲩⲟⲉⲓϣ ⲅⲁⲣ ⲛⲁϣⲱⲡⲉ ⲉⲛⲥⲉⲛⲁⲁⲛⲉⲭⲉ ⲁⲛ ⲛⲧⲉⲥⲃⲱ ⲉⲧⲟⲩⲟϫ ⲁⲗⲗⲁ ⲕⲁⲧⲁⲛⲉⲩⲟⲩⲱϣ ⲙⲙⲓⲛⲙⲙⲟⲟⲩ ⲥⲉⲛⲁϫⲡⲟ ⲛⲁⲩ ⲛϩⲉⲛⲥⲁϩ ⲉⲣⲉⲛⲉⲩⲙⲁⲁϫⲉ **ϩⲱϩ** .",
+      "english": "For the time will come when they will not listen to the sound doctrine, but, having itching ears, will heap up for themselves teachers after their own lusts;",
+      "source": "55_2 Timothy_4",
+      "urn": "urn:cts:copticLit:nt.2tim.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ϩⲱⲱϥ ⲡⲉⲧⲟⲩϫⲱ ⲙⲙⲟϥ ⲉⲧⲃⲉⲛⲉⲧϣⲟⲟϭⲉ ϩⲙⲡⲓϣⲱⲱϭⲉ ⲙⲡⲉⲩⲟⲩⲱϣ ⲁⲛ ⲡⲉ ⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲟⲩ ⲉⲡⲉϥϩⲱϩ ⲏ ⲉⲧⲙ**ϩⲱϩ** ⲙⲙⲟϥ ⲛϩⲏⲧⲟⲩ ϣⲁⲛⲧϥϭⲙϭⲟⲙ ϩⲙⲡⲉⲩⲥⲱⲙⲁ .",
+      "english": "...",
+      "source": "My Heart Is Crushed MONB.FL 125-132 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.crushed.amelineau:36-39",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁⲩ**ϩⲱϩ** ⲇⲉ ⲟⲛ ⲙⲙⲟϥ ⲛϩⲏⲧⲟⲩ ϩⲛϩⲁϩ ⲛⲥⲙⲟⲧ ⲛϩⲱϩ ⲉⲩϣⲟⲃⲉ ⲉⲁⲩϩⲱϩ ⲙⲙⲟⲟⲩ ⲛⲙⲙⲁϥ ϩⲛⲧⲉϥⲉⲛⲉⲣⲅⲉⲓⲁ ⲉⲧϭⲣⲏ ϩⲛⲟⲩϩⲱϩ ϣⲁⲛⲧⲉⲛⲉϥⲡⲗⲏⲅⲏ ⲁϣⲁⲓ",
+      "english": "...",
+      "source": "My Heart Is Crushed MONB.FL 133-140 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.crushed.amelineau:39-43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱϩ",
+        2,
+        17.258
+      ],
+      [
+        "ϣⲟⲃⲉ",
+        3,
+        15.993
+      ],
+      [
+        "ϭⲣⲏ",
+        1,
+        14.621
+      ],
+      [
+        "ⲉⲓⲃ",
+        1,
+        12.258
+      ],
+      [
+        "ⲧⲙ",
+        3,
+        11.523
+      ],
+      [
+        "ⲡⲗⲏⲅⲏ",
+        1,
+        11.497
+      ],
+      [
+        "ϩⲟⲗϭ",
+        1,
+        11.341
+      ],
+      [
+        "ϥ",
+        10,
+        11.317
+      ],
+      [
+        "ⲡⲣⲟⲥ",
+        1,
+        11.124
+      ],
+      [
+        "ⲏ",
+        3,
+        11.064
+      ],
+      [
+        "ⲙⲙⲟ",
+        5,
+        10.776
+      ],
+      [
+        "ⲉ",
+        8,
+        10.647
+      ],
+      [
+        "ⲛⲉϥ",
+        3,
+        10.382
+      ],
+      [
+        "ⲥⲁϩ",
+        1,
+        10.053
+      ],
+      [
+        "ⲁϣⲁⲓ",
+        1,
+        9.68
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        9.185
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        1,
+        9.093
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        1,
+        8.969
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        8.924
+      ],
+      [
+        "ϩⲁϩ",
+        1,
+        8.211
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲱϩ_0_node",
+          8
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ϩⲟⲗϭ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲱϩ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ϫⲉⲕⲁⲥ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱϩ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲱϩ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ϩⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϩⲱϩ",
+          "ϩⲱϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲱϩ_0_node",
+          "ⲉⲧ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲱϩ",
+          "ϩⲟⲗϭ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲱϩ",
+          "ⲧⲙ_1_pre_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲱϩ",
+          "ϩⲱϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲱϩ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲱϩ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲱϩ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲛϩⲏⲧ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϫⲉⲕⲁⲥ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ϫⲉⲕⲁⲥ_1_post_ϩⲱϩ",
+          "ⲉ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲱϩ",
+          "ⲩ_3_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱϩ",
+          "ⲩ_1_pre_ϩⲱϩ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲱϩ",
+          "ϩⲱϩ_0_node",
+          2
+        ],
+        [
+          "ϩⲱϩ_0_node",
+          "ⲇⲉ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲱϩ",
+          "ⲟⲛ_1_post_ϩⲱϩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲱϩ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛⲙⲙⲁ_1_post_ϩⲱϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3413,
+      "count": 9
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7025",
+      "label": "ϩⲱϩ",
+      "pos": "N",
+      "gloss": "scratching, itching"
+    }
+  ],
+  "etym": {
+    "egy_num": "120420",
+    "egy_lemma": "ḫrḫr",
+    "demo_num": "d4904",
+    "demo_lemma": "ẖẖ(e)",
+    "english": "to upset; to overturn",
+    "german": "zerstören; ausschütten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/120420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4904"
+  }
+}

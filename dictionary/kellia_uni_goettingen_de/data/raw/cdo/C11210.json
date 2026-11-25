@@ -1,0 +1,76 @@
+{
+  "id": "C11210",
+  "forms": [
+    {
+      "id": "CF31123",
+      "orth": "ϩⲩⲙⲛⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF31129",
+      "orth": "ϩⲩⲙⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31124",
+      "orth": "ϩⲉⲙⲛⲉⲥⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31126",
+      "orth": "ϩⲩⲙⲛⲉⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31125",
+      "orth": "ϩⲩⲙⲛⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31128",
+      "orth": "ϩⲩⲙⲛⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31127",
+      "orth": "ϩⲩⲙⲛⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1082,
+        "count": 83
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15784",
+      "bibliography": "DDGLC",
+      "cu_ID": "842"
+    },
+    {
+      "id": "CS15785",
+      "bibliography": "DDGLC",
+      "cu_ID": "5824"
+    },
+    {
+      "id": "CS15786",
+      "bibliography": "DDGLC",
+      "cu_ID": "8830"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2807",
+    "grl_lemma": "ὑμνέω",
+    "grl_meaning": "to sing of, celebrate in a hymn",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1849a; Preisigke 2:638"
+  }
+}

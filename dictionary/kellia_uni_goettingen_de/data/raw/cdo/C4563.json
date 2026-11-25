@@ -1,0 +1,57 @@
+{
+  "id": "C4563",
+  "forms": [
+    {
+      "id": "CF11083",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲥⲁⲃⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5152",
+      "bibliography": "CD 435a; ChLCS 61b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C12355",
+      "type": "cf",
+      "label": "weise person"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4564",
+      "label": "ϫⲓⲛⲧⲥⲁⲃⲟ",
+      "pos": "N",
+      "gloss": "teaching"
+    },
+    {
+      "target": "C4561",
+      "label": "ⲧⲥⲁⲃⲟ",
+      "pos": "V",
+      "gloss": "make wise, teach, show"
+    },
+    {
+      "target": "C4562",
+      "label": "ⲧⲥⲁⲃⲟ",
+      "pos": "N",
+      "gloss": "teaching, instruction"
+    }
+  ]
+}

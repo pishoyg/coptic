@@ -1,0 +1,151 @@
+{
+  "id": "C10064",
+  "forms": [
+    {
+      "id": "CF26383",
+      "orth": "ⲡⲁⲣⲁⲙⲩⲑⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26384",
+      "orth": "ⲡⲁⲣⲁⲙⲩⲑⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7402,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13228",
+      "bibliography": "DDGLC",
+      "cu_ID": "2883"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥϩⲉ ⲇⲉ ⲟⲛ ⲟⲩⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛⲟⲩ**ⲡⲁⲣⲁⲙⲩⲑⲓⲁ** ⲉⲧⲙⲧⲣⲉϥⲙⲟⲩⲛ ⲉⲃⲟⲗ ϩⲙⲡⲉϥϩⲧⲟⲡ · ⲡⲉϫⲁϥ ϫⲉⲙⲏ ⲡⲉϣⲁϥϩⲉ ⲙⲉϥⲧⲱⲟⲩⲛ ·",
+      "english": "He who hath fallen hath, in these ensamples, an encouragement not to allow himself to remain | in his fallen state, and he (i.e., the Book) saith, ' Shall not he that is in the habit of falling rise up again?",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲁϫⲓ ⲛⲧⲁⲡⲁⲣⲭⲏ ⲙⲡϣⲁϫⲉ ⲛⲣⲱⲓ ⲛⲧⲟⲟⲧϥ ⲙⲡⲉⲧⲛⲁϯ ⲛⲁⲓ ⲛⲟⲩⲥⲟⲗⲥⲗ ⲁⲩⲱ ⲙ**ⲡⲁⲣⲁⲙⲩⲑⲓⲁ** ϩⲛϩⲱⲃ ⲛⲓⲙ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲗⲥⲗ",
+        1,
+        13.389
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        9.087
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        7.664
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        7.287
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲙⲩⲑⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲣⲁⲙⲩⲑⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲣⲁⲙⲩⲑⲓⲁ",
+          "ⲡⲁⲣⲁⲙⲩⲑⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6949,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1660",
+    "grl_lemma": "παραμυθία",
+    "grl_meaning": "encouragement, exhortation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1318b; Preisigke 2:253"
+  }
+}

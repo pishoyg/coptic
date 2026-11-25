@@ -1,0 +1,64 @@
+{
+  "id": "C1041",
+  "forms": [
+    {
+      "id": "CF3440",
+      "orth": "ⲕⲉⲟⲩⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Indefinitpronomen",
+    "gen": "f.",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS1202",
+      "bibliography": "CD 91ab; KoptHWb 55"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1037",
+      "label": "ⲕⲉ",
+      "pos": "N",
+      "gloss": "another"
+    },
+    {
+      "target": "C1038",
+      "label": "ⲕⲉ",
+      "pos": "N",
+      "gloss": "another"
+    },
+    {
+      "target": "C1039",
+      "label": "ⲕⲉ-",
+      "pos": "N",
+      "gloss": "(the) other . . ., different, any other"
+    },
+    {
+      "target": "C1042",
+      "label": "ⲕⲉ-",
+      "pos": "N",
+      "gloss": "(with def. art.) also, even"
+    },
+    {
+      "target": "C1040",
+      "label": "ⲕⲉⲟⲩⲁ",
+      "pos": "PINT",
+      "gloss": "another, (with def. art.) the other"
+    },
+    {
+      "target": "C1043",
+      "label": "ⲣⲡⲕⲉ-",
+      "pos": "V",
+      "gloss": "be, do also"
+    }
+  ]
+}

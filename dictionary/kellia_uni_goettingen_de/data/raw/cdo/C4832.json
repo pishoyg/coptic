@@ -1,0 +1,63 @@
+{
+  "id": "C4832",
+  "forms": [
+    {
+      "id": "CF11629",
+      "orth": "ⲙⲛⲧⲧⲉϩϯϩ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5451",
+      "bibliography": "KoptHWb 260"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C4768",
+      "type": "cf",
+      "label": "be mixed, be disturbed, mix, stir"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4830",
+      "label": "ⲙⲉⲧⲑⲟϧⲧⲉϧ",
+      "pos": "N",
+      "gloss": "intercourse, society"
+    },
+    {
+      "target": "C4831",
+      "label": "ⲧϩϯϩ",
+      "pos": "N",
+      "gloss": "confused"
+    },
+    {
+      "target": "C4828",
+      "label": "ⲧⲁϩⲧϩ",
+      "pos": "V",
+      "gloss": "mix, confuse"
+    },
+    {
+      "target": "C4829",
+      "label": "ⲧⲁϩⲧϩ",
+      "pos": "N",
+      "gloss": "mixture, confusion"
+    }
+  ]
+}

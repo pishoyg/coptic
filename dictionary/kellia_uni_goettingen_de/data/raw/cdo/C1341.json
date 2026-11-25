@@ -1,0 +1,144 @@
+{
+  "id": "C1341",
+  "forms": [
+    {
+      "id": "CF4091",
+      "orth": "ⲁⲧⲕⲣⲟϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7144,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1552",
+      "bibliography": "CD 118b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲧⲣⲉⲡⲁⲅⲁⲑⲟⲥ ⲛⲛⲟⲩⲧⲉ ⲗⲩⲡⲉⲓ ⲉⲧⲃⲉⲧⲏⲩⲧⲛ · ⲡⲛⲁⲏⲧ ⲛϣⲁⲛϩⲧⲏϥ · ⲡⲁⲧⲧⲱⲗⲙ · ⲡⲁⲧϫⲃⲓⲛ · ⲡⲁⲧⲧⲁϩⲟϥ · ⲡⲟⲩⲁ ⲙⲁⲩⲁⲁϥ · ⲡⲁⲧⲡⲱⲱⲛⲉ · ⲡ**ⲁⲧⲕⲣⲟϥ** · ⲡⲁⲧϭⲱⲛⲧ · ⲡⲣⲁⲛ ⲉⲧϩⲓϫⲛⲣⲁⲛ ⲛⲓⲙ · ⲉϣⲁⲩⲛⲟⲉⲓ ⲙⲙⲟϥ ·",
+      "english": "Do not make to grieve through you the Good God, the Merciful, the Long-suffering, Him Who is without spot, Him Who is without blemish, the Ineffable, the God Who is One alone, the Unchanging One, Him Who is without guile, Him Who is without wrath, the Name which is above every name which men can comprehend.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲧϭⲱⲛⲧ",
+        2,
+        21.013
+      ],
+      [
+        "ⲁⲧⲡⲱⲱⲛⲉ",
+        2,
+        20.598
+      ],
+      [
+        "ⲡ",
+        6,
+        11.252
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲧⲕⲣⲟϥ",
+          1
+        ],
+        [
+          "ⲁⲧⲕⲣⲟϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲧⲕⲣⲟϥ",
+          "ⲁⲧⲕⲣⲟϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6691,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1347",
+      "label": "ϫⲓⲕⲣⲟϥ",
+      "pos": "V",
+      "gloss": "use guile, lie in wait"
+    },
+    {
+      "target": "C1349",
+      "label": "ϫⲓⲛⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "snare"
+    },
+    {
+      "target": "C1348",
+      "label": "ϭⲁⲩⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C1339",
+      "label": "ⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guile, ambush; guileful person"
+    },
+    {
+      "target": "C1340",
+      "label": "ⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guileful, false"
+    },
+    {
+      "target": "C1342",
+      "label": "ⲙⲉⲧⲁⲧⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guilelessness"
+    },
+    {
+      "target": "C1343",
+      "label": "ⲙⲛⲧⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guile"
+    },
+    {
+      "target": "C1345",
+      "label": "ⲣⲉϥⲣⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "deceiver, traitor"
+    },
+    {
+      "target": "C1344",
+      "label": "ⲣⲕⲣⲟϥ",
+      "pos": "V",
+      "gloss": "be guileful, lie in wait"
+    },
+    {
+      "target": "C1346",
+      "label": "ⲥⲁ ⲛⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "maker of guile, deceiver"
+    }
+  ]
+}

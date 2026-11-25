@@ -1,0 +1,132 @@
+{
+  "id": "C995",
+  "forms": [
+    {
+      "id": "CF3344",
+      "orth": "ⲣⲉⲓⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20653,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1155",
+      "bibliography": "CD 87a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉ ⲛⲧⲁϥⲣ**ⲣⲉⲓⲱⲧ** ⲛⲟⲩⲙⲏⲏϣⲉ ⲛⲛϩⲉⲑⲛⲟⲥ ⲡⲉⲛⲉⲓⲱⲧ ⲁⲃⲣⲁⲃⲁⲙ ⲡⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ · ϫⲉⲉϣϫⲉ ⲟⲩⲛⲧⲁⲓⲥ ⲙⲙⲁⲩ ⲉϣⲁϫⲉ ⲙⲛⲡⲁϫⲟⲉⲓⲥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        10.887
+      ],
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉⲓⲱⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20255,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C997",
+      "label": "ϣⲛⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "relative on father's side"
+    },
+    {
+      "target": "C994",
+      "label": "ⲁⲧⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "fatherless"
+    },
+    {
+      "target": "C992",
+      "label": "ⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "father"
+    },
+    {
+      "target": "C993",
+      "label": "ⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "father"
+    },
+    {
+      "target": "C996",
+      "label": "ⲙⲛⲧⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "family; fatherhood"
+    }
+  ]
+}

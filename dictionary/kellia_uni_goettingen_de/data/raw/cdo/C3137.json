@@ -1,0 +1,76 @@
+{
+  "id": "C3137",
+  "forms": [
+    {
+      "id": "CF8153",
+      "orth": "ⲣⲁⲁⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF8154",
+      "orth": "ⲣⲁⲁⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF8155",
+      "orth": "ⲣⲁⲓⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3587",
+      "bibliography": "CD 299a; CED 138; KoptHWb 166; DELC 177; ChLCS 42b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3135",
+      "label": "ⲙⲁⲛⲉⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swineherd"
+    },
+    {
+      "target": "C3132",
+      "label": "ⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swine, pig"
+    },
+    {
+      "target": "C3134",
+      "label": "ⲣⲓⲣ ⲛϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild boar"
+    },
+    {
+      "target": "C3133",
+      "label": "ⲣⲓⲣ ⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain, wild boar"
+    },
+    {
+      "target": "C3136",
+      "label": "ⲥⲁ ⲛⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "pig dealer"
+    }
+  ],
+  "etym": {
+    "egy_num": "95350",
+    "egy_lemma": "rr.j",
+    "demo_num": "dm162",
+    "demo_lemma": "rjr(.t)",
+    "english": "swine (gen.); boar",
+    "german": "Schwein (allg.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95350",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm162"
+  }
+}

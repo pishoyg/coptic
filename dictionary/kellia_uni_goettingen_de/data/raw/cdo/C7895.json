@@ -1,0 +1,130 @@
+{
+  "id": "C7895",
+  "forms": [
+    {
+      "id": "CF17856",
+      "orth": "ⲣⲉϥϭⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18662,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8775",
+      "bibliography": "CD 830b; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲁϩⲕ ⲛⲥⲱⲥ ⲛⲧϩⲉ ⲛⲟⲩ**ⲣⲉϥϭⲱⲣϭ** ⲛⲅϩⲱⲣⲕ ⲉⲣⲟⲥ ϩⲓⲛⲉⲥϩⲓⲟⲟⲩⲉ",
+      "english": "Go after her as one that traceth, and lie in wait in her ways.",
+      "source": "Sirach 14",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲣⲕ",
+        1,
+        19.598
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϭⲱⲣϭ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18281,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7898",
+      "label": "ϭⲉⲣⲏϭ",
+      "pos": "N",
+      "gloss": "hunter"
+    },
+    {
+      "target": "C7896",
+      "label": "ϭⲟⲣϭⲥ",
+      "pos": "N",
+      "gloss": "ambush, snare, pit"
+    },
+    {
+      "target": "C7893",
+      "label": "ϭⲱⲣϭ",
+      "pos": "V",
+      "gloss": "hunt, waylay"
+    },
+    {
+      "target": "C7894",
+      "label": "ϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "snare"
+    },
+    {
+      "target": "C7899",
+      "label": "ⲙⲉⲧϫⲉⲣⲏϫ",
+      "pos": "N",
+      "gloss": "hunt, chase"
+    },
+    {
+      "target": "C7897",
+      "label": "ⲣϭⲟⲣϭⲥ",
+      "pos": "V",
+      "gloss": "lie in wait, lay snares"
+    }
+  ]
+}

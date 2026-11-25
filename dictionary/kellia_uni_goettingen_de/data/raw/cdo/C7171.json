@@ -1,0 +1,101 @@
+{
+  "id": "C7171",
+  "forms": [
+    {
+      "id": "CF16401",
+      "orth": "ϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7912",
+      "bibliography": "CD 767b"
+    },
+    {
+      "id": "CS7913",
+      "bibliography": "CD 767b; KoptHWb 419; ChLCS 101b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ⲁⲩⲉⲓⲣⲉ ⲛⲟⲩⲛⲟϭ ⲛⲕⲁⲑⲟⲗⲓⲕⲏ ⲥⲩⲛⲁⲝⲓⲥ **ϩⲛⲟⲩϫⲱⲗⲕ **ⲉⲃⲟⲗ**** · ϣⲁⲡⲛⲁⲩ ⲛϫⲡⲙⲏⲧⲉ ⲙⲡⲉϩⲟⲟⲩ ·",
+      "english": "And then they celebrated the great 'Catholic Synaxis' with great fervour (?) until the tenth hour of the day.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲁϥϫⲱⲣⲙ ϩⲓϯϩⲓⲏ ϩⲛⲟⲩⲛⲟϭ **ⲛϫⲱⲗⲕ **ⲉⲃⲟⲗ**** · ⲉⲓ ⲉⲧⲡⲟⲗⲓⲥ ⲉⲧⲉⲣⲉⲡⲣⲱⲙⲉ ⲙⲙⲁⲅⲟⲥ ⲛϩⲏⲧⲥ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁⲡⲉϥϩⲏⲧ ⲟⲩⲛⲟϥ ⲉⲣⲟϥ ⲉⲙⲁⲧⲉ · ⲁⲩⲱ ⲛϥⲧⲱⲃϩ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲡⲉϩⲟⲟⲩ ⲙⲛⲧⲉⲩϣⲏ ϩⲛⲟⲩⲛⲟϭ **ⲛϫⲱⲗⲕ **ⲉⲃⲟⲗ**** ϩⲱⲥⲧⲉ ⲛⲉϥϣⲗⲏⲗ ⲙⲛⲛⲉϥⲡⲟⲗⲓⲧⲉⲓⲁ · ⲙⲛⲛⲉϥⲁⲥⲕⲏⲥⲓⲥ · ⲛⲥⲉⲣⲛⲟϭ ⲉⲙⲁⲧⲉ ⲡⲁⲣⲁϩⲁϩ ⲛⲛⲉⲧϩⲓⲧⲟⲩⲱϥ",
+      "english": "And the heart of John rejoiced within him exceedingly, and he prayed to God by day and by night with such exceedingly long prayers that his praying, and his daily contest, and his asceticism were far in excess of a very great many of those who were his neighbours.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7172",
+      "label": "ϩⲛ ⲟⲩϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "ADV",
+      "gloss": "continuously; strenuously"
+    },
+    {
+      "target": "C7173",
+      "label": "ϫⲓⲛϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "persistence"
+    },
+    {
+      "target": "C7176",
+      "label": "ϫⲗⲁⲕ",
+      "pos": "N",
+      "gloss": "stretching, strain, punishment"
+    },
+    {
+      "target": "C7178",
+      "label": "ϫⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "strain (cord), stringency (exercise)"
+    },
+    {
+      "target": "C7170",
+      "label": "ϫⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "stretch, extend; sew"
+    },
+    {
+      "target": "C7174",
+      "label": "ϭⲱⲗⲕ",
+      "pos": "N",
+      "gloss": "strain, tension"
+    },
+    {
+      "target": "C7177",
+      "label": "ϯϫⲗⲁⲕ",
+      "pos": "V",
+      "gloss": "stretch, bend, torture"
+    },
+    {
+      "target": "C7175",
+      "label": "ⲟ ⲛϫⲱⲗⲕ",
+      "pos": "VSTAT",
+      "gloss": "be in anxiety(?)"
+    }
+  ]
+}

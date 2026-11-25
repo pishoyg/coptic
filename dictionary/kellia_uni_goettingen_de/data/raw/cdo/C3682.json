@@ -1,0 +1,166 @@
+{
+  "id": "C3682",
+  "forms": [
+    {
+      "id": "CF9274",
+      "orth": "ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8603,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4186",
+      "bibliography": "CD 353a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲛⲣⲱⲙⲓ ⲇⲉ ⲉⲩϩⲱⲟⲩ ⲟⲩⲟϩ ⲛ**ⲣⲉϥⲥⲟⲡⲥⲉⲡ** ⲉⲩⲉⲓ ⲉⲧϩⲏ ϧⲉⲛⲡⲓⲡⲉⲧϩⲱⲟⲩ ⲛϩⲟⲩⲟ ⲉⲩⲥⲱⲣⲉⲙ ⲟⲩⲟϩ ⲉⲩⲥⲟⲣⲉⲙ .",
+      "english": "But evil men and impostors will grow worse and worse, deceiving and being deceived.",
+      "source": "16_II Timothy_03",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲓ",
+        1,
+        11.457
+      ],
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        11.298
+      ],
+      [
+        "ⲩ",
+        2,
+        9.121
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲡⲥⲉⲡ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+          "ⲣⲉϥⲥⲟⲡⲥⲉⲡ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲡⲥⲉⲡ_0_node",
+          "ⲉ_1_post_ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          "ⲉⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲉ",
+          "ⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8073,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3680",
+      "label": "ϫⲓⲥⲟⲡⲥ",
+      "pos": "V",
+      "gloss": "receive comfort"
+    },
+    {
+      "target": "C3681",
+      "label": "ⲣⲉϥⲥⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "intercessor, petitioner"
+    },
+    {
+      "target": "C3679",
+      "label": "ⲣⲥⲟⲡⲥ",
+      "pos": "V",
+      "gloss": "make prayer"
+    },
+    {
+      "target": "C3677",
+      "label": "ⲥⲟⲡⲥ",
+      "pos": "V",
+      "gloss": "pray, entreat, comfort"
+    },
+    {
+      "target": "C3678",
+      "label": "ⲥⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "prayer, entreaty, consolation"
+    }
+  ]
+}

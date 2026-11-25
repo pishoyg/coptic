@@ -1,0 +1,154 @@
+{
+  "id": "C276",
+  "forms": [
+    {
+      "id": "CF1161",
+      "orth": "ⲙⲉⲧⲁϥϫⲓⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1162",
+      "orth": "ⲙⲉⲧⲁϥϫⲓⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8821,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS308",
+      "bibliography": "CD 23b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲟⲛⲓ ⲙⲡⲓⲟϩⲓ ⲉⲧϧⲉⲛⲑⲏⲛⲟⲩ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲣⲉⲧⲉⲛϭⲓ ⲙⲡⲟⲩϣⲓⲛⲓ ϧⲉⲛⲟⲩϭⲓⲛϫⲟⲛⲥ ⲁⲛ ⲁⲗⲗⲁ ϧⲉⲛⲟⲩⲟⲩⲱϣ ⲛϩⲏⲧ ⲕⲁⲧⲁⲫⲛⲟⲩϯ ⲟⲩⲇⲉ ϧⲉⲛⲟⲩ**ⲙⲉⲧⲁϥϫⲓⲣ** ⲁⲛ ⲁⲗⲗⲁ ϧⲉⲛⲟⲩⲣⲱⲟⲩⲧϥ ⲛϩⲏⲧ",
+      "english": "Shepherd the flock of God which is among you, exercising the oversight, not under compulsion, but voluntarily, not for dishonest gain, but willingly;",
+      "source": "21_I Peter_05",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        9.76
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.51
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        1,
+        7.749
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲙⲉⲧⲁϥϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁϥϫⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ⲣⲱⲟⲩⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲁϥϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲟⲩⲧ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲙⲉⲧⲁϥϫⲓⲣ",
+          "ⲙⲉⲧⲁϥϫⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁϥϫⲓⲣ_0_node",
+          "ⲁⲗⲗⲁ_4_post_ⲣⲱⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ⲣⲱⲟⲩⲧ",
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲁϥϫⲓⲣ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲁϥϫⲓⲣ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          "ⲣⲱⲟⲩⲧ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8292,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C275",
+      "label": "ⲁϥϫⲓⲣ",
+      "pos": "N",
+      "gloss": "greedy of shameful gain"
+    }
+  ]
+}

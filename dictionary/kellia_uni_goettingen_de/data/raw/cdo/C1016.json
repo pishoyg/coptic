@@ -1,0 +1,564 @@
+{
+  "id": "C1016",
+  "forms": [
+    {
+      "id": "CF3386",
+      "orth": "ⲉⲓϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3663,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲁϣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.71,
+        "rank": 368,
+        "count": 230
+      }
+    },
+    {
+      "orth": "ⲁϣⲧ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1944,
+        "count": 32
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "note": "meist im Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1177",
+      "bibliography": "CD 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲓ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲡⲓⲥⲫⲓⲣ ⲛⲧⲉⲡⲉⲙϩⲓⲧ ⲉⲛϣⲉ ⲛⲕ**ⲁϣ** ϥⲕⲱϯ ϧⲉⲛⲡⲓⲕⲁϣ ⲉϣⲁⲩϣⲓ ⲙⲙⲟϥ .",
+      "english": "And he turned to the north and measured in front of the north side five hundred cubits with the measuring reed.",
+      "source": "26_Ezechiel_42",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:42",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ϫⲉⲁⲩ**ⲁϣⲧ**ϥ ⲉⲡϣⲉ · ⲉⲧⲣⲉϥⲥⲉⲕⲟⲩⲟⲛ ⲛⲓⲙ ϣⲁⲣⲟϥ · ⲏ ⲉϯⲱⲛϩ ⲛⲁⲩ ·",
+      "english": "Never before was there one who was hung upon the tree to draw every one to him, and to give life unto them.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ϫⲉⲡⲉ ⲡϩⲟⲩⲟ ⲙⲡⲓⲓⲟⲩⲇⲁⲓ ⲓⲉ **ⲁϣ** ⲡⲉ ⲡϩⲏⲟⲩ ⲙⲡⲓⲥⲉⲃⲓ .",
+      "english": "Then what advantage does the Jew have? Or what is the profit of circumcision?",
+      "source": "06_Romans_03",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲁⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ ⲛⲟⲩⲁ ⲛⲛⲁⲓⲕⲟⲩⲓ ⲉⲧⲡⲓⲥⲧⲉⲩⲉ ⲉⲣⲟⲓ ⲛⲁⲛⲟⲩⲥ ⲛⲁϥ ⲛϩⲟⲩⲟ ⲉⲛⲉⲟⲩⲛⲟⲩⲱⲛⲉ ⲛⲥⲓⲕⲉ **ⲁϣⲉ** ⲉⲡⲉϥⲙⲁⲕϩ ⲛⲥⲉⲛⲟϫϥ ⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ",
+      "english": "Whoever will cause one of these little ones who believe in me to stumble, it would be better for him if he was thrown into the sea with a millstone hung around his neck.",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲁϫⲟⲥ ⲛⲁⲛ ϫⲉⲁⲕⲓⲣⲓ ⲛⲛⲁⲓ ϧⲉⲛ**ⲁϣ** ⲛⲉⲣϣⲓϣⲓ ⲓⲉ ⲛⲓⲙ ⲡⲉⲧⲁϥϯ ⲙⲡⲁⲓⲉⲣϣⲓϣⲓ ⲛⲁⲕ .",
+      "english": "They asked him, 'Tell us: by what authority do you do these things? Or who is giving you this authority?'",
+      "source": "03_Luke_20",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲧⲱⲥ ⲁⲩⲣⲧϭⲟⲧ ⲛⲟⲩⲱⲛⲉ ⲉⲩ**ⲁϣⲉ** ⲛⲥⲱⲥ ·",
+      "english": "and at the same time they shrivelled up, and became as hard as stones, and they hung down on her body;",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        13.998
+      ],
+      [
+        "ⲙⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ",
+        1,
+        10.998
+      ],
+      [
+        "ⲉⲛⲧ",
+        5,
+        8.559
+      ],
+      [
+        "ⲛⲓϥⲉ",
+        1,
+        7.75
+      ],
+      [
+        "ⲁⲩ",
+        1,
+        7.606
+      ],
+      [
+        "ⲥⲧⲁⲩⲣⲟⲥ",
+        1,
+        6.75
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        3,
+        6.451
+      ],
+      [
+        "ⲡ",
+        7,
+        6.319
+      ],
+      [
+        "ⲁ",
+        6,
+        6.199
+      ],
+      [
+        "ⲩ",
+        5,
+        6.176
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        1,
+        5.703
+      ],
+      [
+        "ⲡⲉⲧϩⲟⲟⲩ",
+        1,
+        5.547
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        5.21
+      ],
+      [
+        "ⲛ",
+        6,
+        4.964
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        4.62
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        4.504
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        4.483
+      ],
+      [
+        "ⲁⲣⲭⲱⲛ",
+        1,
+        4.242
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        3.868
+      ],
+      [
+        "ⲙ",
+        3,
+        3.506
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲉⲓϣⲉ",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓϣⲉ",
+          4
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          9
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓϣⲉ",
+          3
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲙⲏ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲉⲓϣⲉ",
+          3
+        ],
+        [
+          "ⲙⲡⲉ_2_post_ⲛⲓϥⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲓϥⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉⲧϩⲟⲟⲩ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_1_pre_ⲉⲓϣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲉⲓϣⲉ",
+          "ⲩ_1_pre_ⲉⲓϣⲉ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓϣⲉ",
+          "ⲉⲓϣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓϣⲉ",
+          "ⲡⲉⲕ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓϣⲉ",
+          "ⲥⲉ_1_pre_ⲉⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓϣⲉ",
+          "ⲉⲓϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲙⲏ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲏ_2_post_ⲡ",
+          "ⲡ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲉⲓϣⲉ",
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓϣⲉ",
+          "ⲛ_1_pre_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲛ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓϣⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲉⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲉⲓϣⲉ",
+          "ⲙⲡⲉ_2_post_ⲛⲓϥⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_2_post_ⲛⲓϥⲉ",
+          "ⲩ_2_post_ⲛⲓϥⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓϣⲉ",
+          "ϥ_1_pre_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓϣⲉ",
+          "ⲉⲓϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓϣⲉ",
+          "ϥ_1_pre_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓϣⲉ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲉϩⲣⲁⲓ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲓϣⲉ_0_node",
+          "ⲙⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ_1_post_ⲉⲓϣⲉ",
+          "ⲛⲉⲓ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          "ⲡⲉⲧϩⲟⲟⲩ_1_post_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲧϩⲟⲟⲩ_1_post_ⲉⲓϣⲉ",
+          "ⲇⲉ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          "ⲉⲛⲧ_2_post_ⲡⲉⲧϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲣⲭⲱⲛ",
+          "ⲁⲣⲭⲱⲛ_1_pre_ⲉⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_1_pre_ⲉⲓϣⲉ",
+          "ⲁ_1_pre_ⲉⲓϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.61,
+      "rank": 866,
+      "count": 97
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1025",
+      "label": "ϫⲓⲛⲓϣⲓ",
+      "pos": "N",
+      "gloss": "hanging, crucifixion"
+    },
+    {
+      "target": "C1021",
+      "label": "ⲁϣⲉ (ϩⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "depend on"
+    },
+    {
+      "target": "C1017",
+      "label": "ⲁϣⲉ (ⲉ-)",
+      "pos": "VSTAT",
+      "gloss": "depend from/on, rely on"
+    },
+    {
+      "target": "C1024",
+      "label": "ⲁϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "be hung up"
+    },
+    {
+      "target": "C1022",
+      "label": "ⲁϣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "VSTAT",
+      "gloss": "hang out, overhang"
+    },
+    {
+      "target": "C1019",
+      "label": "ⲁϣⲉ (ⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "pendant from"
+    },
+    {
+      "target": "C1020",
+      "label": "ⲁϣⲉ (ⲛⲥⲁ-)",
+      "pos": "VSTAT",
+      "gloss": "be attached to"
+    },
+    {
+      "target": "C1018",
+      "label": "ⲁϣⲓ (ⲉϫⲉⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "hang over, threaten"
+    },
+    {
+      "target": "C1023",
+      "label": "ⲁϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "be hung up"
+    },
+    {
+      "target": "C1010",
+      "label": "ⲉⲓϣⲉ",
+      "pos": "V",
+      "gloss": "hang, suspend"
+    },
+    {
+      "target": "C1011",
+      "label": "ⲉⲓϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "hang upon, to"
+    },
+    {
+      "target": "C1015",
+      "label": "ⲉⲓϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "hang up"
+    },
+    {
+      "target": "C1012",
+      "label": "ⲉⲓϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "hang upon"
+    },
+    {
+      "target": "C1013",
+      "label": "ⲉⲓϣⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hang from"
+    },
+    {
+      "target": "C1014",
+      "label": "ⲓϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "hang up"
+    }
+  ],
+  "etym": {
+    "egy_num": "40570",
+    "egy_lemma": "ꜥḫi̯",
+    "demo_num": "d1084",
+    "demo_lemma": "ꜥḫj",
+    "english": "to raise up; to rise up",
+    "german": "hochheben; sich erheben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/40570",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1084"
+  }
+}

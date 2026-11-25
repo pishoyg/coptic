@@ -1,0 +1,197 @@
+{
+  "id": "C2043",
+  "forms": [
+    {
+      "id": "CF5770",
+      "orth": "ⲙⲉⲥⲓⲉ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31656",
+      "orth": "ⲉⲙⲉⲥⲓⲉ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31657",
+      "orth": "ⲉⲙⲉⲥⲓ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Obsolete Relativform",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2370",
+      "bibliography": "CD 185b; CED 90; KoptHWb 102"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓϩⲉⲃⲣⲉⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲟⲩⲓ",
+        1,
+        15.788
+      ],
+      [
+        "ⲧⲉⲛϣⲁⲛ",
+        1,
+        14.741
+      ],
+      [
+        "ⲁⲩϣⲁⲛ",
+        1,
+        12.505
+      ],
+      [
+        "ⲁⲣⲉ",
+        1,
+        10.223
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲥⲓⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2040",
+      "label": "ⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2037",
+      "label": "ⲙⲁⲥ-",
+      "pos": "V",
+      "gloss": "bearing, producing"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2052",
+      "label": "ⲙⲉⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "bring to birth, deliver sb (midwife)"
+    },
+    {
+      "target": "C2053",
+      "label": "ⲙⲉⲥⲓⲱ",
+      "pos": "N",
+      "gloss": "midwife, nurse"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2047",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring (of money), usury, interest"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ]
+}

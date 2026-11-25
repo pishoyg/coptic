@@ -1,0 +1,57 @@
+{
+  "id": "C5289",
+  "forms": [
+    {
+      "id": "CF12547",
+      "orth": "ⲟⲩⲁϣⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5936",
+      "bibliography": "CD 504b; CED 222; KoptHWb 283; DELC 240b; ChLCS 70b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5288",
+      "label": "ϫⲓⲛⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "worship"
+    },
+    {
+      "target": "C5285",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "V",
+      "gloss": "worship, greet, kiss"
+    },
+    {
+      "target": "C5286",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "salutation, obeisance"
+    },
+    {
+      "target": "C5287",
+      "label": "ⲣⲉϥⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "worshipper"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1539",
+    "demo_lemma": "wšd(e.t)",
+    "english": "[to talk to, address]",
+    "german": "Anbetung; [vom Graffito mit Proskynem]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1539"
+  }
+}

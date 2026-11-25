@@ -1,0 +1,249 @@
+{
+  "id": "C8887",
+  "forms": [
+    {
+      "id": "CF21601",
+      "orth": "ⲉⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF21602",
+      "orth": "ϩⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3554,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF21603",
+      "orth": "ⲉⲓⲣⲏⲛⲏⲕⲟⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF21604",
+      "orth": "ⲉⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2423,
+        "count": 21
+      }
+    },
+    {
+      "id": "CF21605",
+      "orth": "ⲉⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21606",
+      "orth": "ⲉⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21607",
+      "orth": "ⲉⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21608",
+      "orth": "ⲓⲣⲏⲛⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12150,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10755",
+      "bibliography": "DDGLC",
+      "cu_ID": "5245"
+    },
+    {
+      "id": "CS10756",
+      "bibliography": "DDGLC",
+      "cu_ID": "925"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲩⲛⲁⲩ ⲇⲉ ⲛϫⲉⲛⲉϥⲥⲛⲏⲟⲩ ϫⲉⲡⲉϥⲓⲱⲧ ⲙⲉⲓ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲟⲩⲧⲉ ⲛⲉϥϣⲏⲣⲓ ⲧⲏⲣⲟⲩ ⲁⲩⲙⲉⲥⲧⲱϥ ⲛϫⲉⲛⲉϥⲥⲛⲏⲟⲩ ⲟⲩⲟϩ ⲛⲁⲩϫⲟⲙϫⲉⲙ ⲁⲛ ⲡⲉ ⲉⲥⲁϫⲓ ⲛⲉⲙⲁϥ ⲛϩⲗⲓ ⲛ**ϩⲓⲣⲏⲛⲓⲕⲟⲛ**",
+      "english": "And his brethren having seen that his father loved him more than all his sons, hated him, and could not speak anything peaceable to him.",
+      "source": "01_Genesis_37",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:37",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲛ ⲉⲓϣⲁϫⲉ ⲛⲙⲙⲁⲩ ϩⲛϩⲉⲛϣⲁϫⲉ ⲛ**ⲉⲓⲣⲏⲛⲓⲕⲟⲛ** ⲕⲁⲛ ⲉⲓⲟ ⲛⲧϩⲉ ⲙⲡⲉⲧⲣⲁϣⲉ ⲛⲙⲙⲁⲩ ⲏ ⲉⲧⲥⲙⲟⲩ ⲉⲣⲟⲟⲩ ⲥⲉⲣϩⲟⲩⲟ ⲥϩⲟⲩⲟⲣⲧ ⲙⲛⲛⲉⲩϩⲃⲏⲩⲉ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲛⲉⲧⲥⲟⲟⲩⲛ ⲉⲛⲉⲩϩⲃⲏⲩⲉ ⲛⲥⲉϩⲱⲡ ⲉϫⲱⲟⲩ ⲥⲉⲣϩⲟⲩⲟ ⲥϩⲟⲩⲟⲣⲧ ⲛⲙⲙⲁⲩ ⲙⲛⲛⲉⲩϩⲃⲏⲩⲉ ⲧⲏⲣⲟⲩ .",
+      "english": "as long as I speak with them in peaceful words, as long as I act as one who rejoices with them and who blesses them, they are more cursed, and all their deeds, and those who know about their deeds and hide them, they are more cursed together with them, and all their deeds.",
+      "source": "In the Night: BV278-282",
+      "urn": "urn:cts:copticLit:shenoute.night.monbbv:1-7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲃⲱ ⲇⲉ ⲛⲓⲃⲉⲛ ⲡⲣⲟⲥ ϯⲟⲩⲛⲟⲩ ⲙⲉⲛ ⲙⲡⲁⲕϫⲉⲙⲟⲩ ⲉⲛⲁⲟⲩⲣⲁϣⲓ ⲛⲉⲁⲗⲗⲁ ⲛⲧⲉⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ ⲉⲡϧⲁⲉ ⲇⲉ ⲟⲩⲟⲩⲧⲁϩ ⲛ**ϩⲓⲣⲏⲛⲓⲕⲟⲛ** ⲛⲧⲉϯⲙⲉⲑⲙⲏⲓ ϣⲁⲥⲧⲏⲓϥ ⲛⲛⲏ ⲉⲧⲁⲩⲉⲣⲅⲩⲙⲛⲁⲍⲓⲛ ⲙⲙⲱⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲥ .",
+      "english": "All chastening seems for the present to be not joyous but grievous; yet afterward it yields the peaceful fruit of righteousness to those who have been exercised thereby.",
+      "source": "19_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲕⲓⲃⲱⲧⲟⲥ ⲇⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲛⲧⲥ ⲁⲇⲁⲩⲉⲓⲇ ⲧⲁϩⲟⲥ ⲉⲣⲁⲧⲕ ϩⲙⲡⲉⲥⲙⲁ ϩⲛⲧⲙⲏⲧⲉ ⲛⲧⲉⲥⲕⲏⲛⲏ ⲧⲁⲓ ⲛⲧⲁⲇⲁⲩⲉⲓⲇ ⲡⲏⲝⲉ ⲙⲙⲟⲥ ⲛⲁⲥ ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲁϥⲧⲁⲗⲟ ⲉϩⲣⲁⲓ ⲛϩⲉⲛϩⲟⲗⲟⲕⲁⲩⲧⲱⲙⲁ ϩⲓⲧϩⲏ ⲙⲡϫⲟⲉⲓⲥ ⲙⲛϩⲉⲛⲑⲩⲥⲓⲁ ⲛ**ⲉⲓⲣⲏⲛⲓⲕⲟⲛ**",
+      "english": "And they bring the ark of the Lord, and set it in its place in the midst of the tabernacle which David pitched for it: and David offered whole-burnt-offerings before the Lord, and peace-offerings.",
+      "source": "II Samuel 6",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲓ ⲛⲉ ⲛⲓⲥⲁϫⲓ ⲉⲧⲉⲧⲉⲛⲛⲁⲁⲓⲧⲟⲩ ⲥⲁϫⲓ ⲛⲧⲙⲏⲓ ⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲛⲉⲙⲡⲉϥϣⲫⲏⲣ ⲟⲩⲟϩ ⲟⲩϩⲁⲡ ⲛ**ϩⲓⲣⲏⲛⲓⲕⲟⲛ** ⲙⲁϩⲁⲡ ⲙⲙⲟϥ ϧⲉⲛⲛⲉⲧⲉⲛⲡⲩⲗⲏ .",
+      "english": "These are the things which ye shall do; speak truth every one with his neighbour; judge truth and peaceable judgment in your gates:",
+      "source": "38_Zacharias_08",
+      "urn": "urn:cts:copticLit:ot.zach.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲁϥⲕⲱⲧ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛⲟⲩⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϫⲟⲉⲓⲥ ⲁϥⲧⲁⲗⲟ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲟⲩϭⲗⲓⲗ ⲙⲛϩⲉⲛⲑⲩⲥⲓⲁ ⲛ**ⲉⲓⲣⲏⲛⲓⲕⲟⲛ** ⲁⲩⲱ ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲉⲧⲁⲗⲟ ⲉϩⲣⲁⲓ ⲛⲥⲟⲗⲟⲙⲱⲛ ⲉϫⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲡϩⲁⲉ ⲉⲃⲟⲗ ϫⲉⲛⲉⲣⲉⲡϩⲱⲃ ⲥⲟⲃⲕ ⲉⲧⲁⲗⲟϥ ⲉϩⲣⲁⲓ ⲛϣⲟⲣⲡ ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲁϥϯϩⲧⲏϥ ⲉϫⲙⲡⲕⲁϩ ⲁⲩⲱ ⲧⲟⲣⲅⲏ ⲙⲡⲙⲟⲩ ⲁⲥⲗⲟ ⲙⲙⲁⲩ ϩⲓϫⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "And David built there an altar to the Lord, and offered up whole-burnt-offerings and peace-offerings: and Solomon made an addition to the altar afterwards, for it was little at first. And the Lord hearkened to the land, and the plague was stayed from Israel.",
+      "source": "II Samuel 24",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϫⲁϫⲉ",
+        5,
+        17.417
+      ],
+      [
+        "ϩⲉⲛ",
+        15,
+        15.403
+      ],
+      [
+        "ⲑⲩⲥⲓⲁ",
+        6,
+        15.131
+      ],
+      [
+        "ϣⲁϫⲉ",
+        12,
+        14.834
+      ],
+      [
+        "ⲛ",
+        35,
+        14.804
+      ],
+      [
+        "ϩⲁⲕ",
+        1,
+        11.562
+      ],
+      [
+        "ϩⲛ",
+        8,
+        11.087
+      ],
+      [
+        "ⲉⲣⲉ",
+        4,
+        10.71
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        9.777
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        9.218
+      ],
+      [
+        "ⲇⲉ",
+        4,
+        8.593
+      ],
+      [
+        "ⲕⲁⲛ",
+        1,
+        8.405
+      ],
+      [
+        "ⲉ",
+        6,
+        8.18
+      ],
+      [
+        "ϫⲱⲱⲣⲉ",
+        1,
+        8.051
+      ],
+      [
+        "ⲕⲁⲣⲡⲟⲥ",
+        1,
+        8.041
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        1,
+        7.916
+      ],
+      [
+        "ⲙⲛⲛⲥⲱ",
+        1,
+        7.906
+      ],
+      [
+        "ⲥⲁϣϥ",
+        1,
+        7.866
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        7.628
+      ],
+      [
+        "ⲟⲩⲱⲛ",
+        1,
+        7.617
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲣⲏⲛⲓⲕⲟⲛ_0_node",
+          19
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2133,
+      "count": 21
+    }
+  },
+  "etym": {
+    "grl_ID": "626",
+    "grl_lemma": "εἰρηνικός",
+    "grl_meaning": "peaceful",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 490b; Preisigke 1:425"
+  }
+}

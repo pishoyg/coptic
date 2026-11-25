@@ -1,0 +1,454 @@
+{
+  "id": "C934",
+  "forms": [
+    {
+      "id": "CF3212",
+      "orth": "ⲉⲓⲟⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3053,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲓⲟⲡⲉ",
+      "dialect": "S",
+      "id": "730.1"
+    },
+    {
+      "orth": "ⲉⲓⲉⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15664,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲓⲟⲡⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3717,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲓⲟⲡⲓ",
+      "dialect": "B",
+      "id": "730.4"
+    },
+    {
+      "orth": "ⲓⲉⲃ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1240,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ⲓⲏⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4138,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲓⲉⲡ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9665,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲓⲉⲫ-",
+      "dialect": "B",
+      "id": "730.8"
+    },
+    {
+      "orth": "ⲓⲁⲡⲉ",
+      "dialect": "A",
+      "id": "730.9"
+    },
+    {
+      "orth": "ⲉⲓⲉⲡ-",
+      "dialect": "A",
+      "id": "730.10"
+    },
+    {
+      "orth": "ⲓⲉⲡ-",
+      "dialect": "F",
+      "id": "730.11"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1091",
+      "bibliography": "CD 81a; KoptHWb 50; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉⲧⲁⲙⲟⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲛϩⲱⲃ ⲧⲉⲓⲕⲁⲕⲓⲁ ϩⲓϫⲱⲛ : ⲟⲩ ⲧⲉ ⲧⲉⲕ**ⲉⲓⲟⲡⲉ** ⲁⲩⲱ ⲛⲧⲁⲕⲉⲓ ⲧⲱⲛ : ⲁⲩⲱ ⲉⲕⲛⲁⲃⲱⲕ ⲉⲧⲱⲛ : ⲛⲧⲕⲟⲩ ⲉⲃⲟⲗ ⲛⲧⲟⲕ : ⲛⲁϣ ⲛⲭⲱⲣⲁ : ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲛⲁϣ ⲛⲗⲁⲟⲥ :",
+      "english": "And they said to him, Tell us what is thine occupation, and whence comest thou, and of what country and what people art thou?",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ϭⲉ ⲁϥⲥⲉⲩϩ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲣϩⲱⲃ ⲉⲧ**ⲉⲓⲟⲡⲉ** . ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲛⲣⲱⲙⲉ ⲛϣⲃⲣⲧⲉⲭⲛⲓⲧⲏⲥ . ⲧⲉⲧⲛⲥⲟⲟⲩⲛ ϫⲉⲉⲣⲉⲡⲉⲛⲱⲛϩ ϣⲟⲟⲡ ⲛⲁⲛ ⲉⲃⲟⲗ ϩⲛⲧⲉⲓⲉⲣⲅⲁⲥⲓⲁ .",
+      "english": "whom he gathered together, with the workmen of like occupation, and said, 'Sirs, you know that by this business we have our wealth.",
+      "source": "44_Acts of the Apostles_19",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲅⲉⲛⲛⲁⲓⲟⲥ ⲇⲉ ⲁϥⲙⲉⲕⲙⲟⲩⲕϥ ϩⲣⲁⲓ ⲛϩⲏⲧϥ · ϫⲉⲉⲓⲛⲁⲣⲁϣ ⲛ**ⲉⲓⲟⲡⲉ** ⲛⲧⲁⲱⲛϩ ⲉⲣⲟⲥ ·",
+      "english": "And the noble man Victor meditated within himself and said, 'What kind of work can I do whereby I may live?'",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲓⲕⲓⲗⲧⲏⲥ",
+        1,
+        15.898
+      ],
+      [
+        "ⲣⲉϥⲣ",
+        1,
+        13.728
+      ],
+      [
+        "ⲉⲧⲉϥ",
+        1,
+        12.81
+      ],
+      [
+        "ⲁⲩⲉⲓⲛ",
+        1,
+        12.728
+      ],
+      [
+        "ⲥⲁϩⲧⲉ",
+        1,
+        12.505
+      ],
+      [
+        "ⲁⲩⲁⲛ",
+        1,
+        11.505
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        2,
+        11.438
+      ],
+      [
+        "ⲧⲱ",
+        1,
+        11.143
+      ],
+      [
+        "ⲧⲉⲕ",
+        3,
+        10.925
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        2,
+        10.753
+      ],
+      [
+        ":",
+        2,
+        10.705
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        10.469
+      ],
+      [
+        "ϣⲁⲁⲣ",
+        1,
+        10.254
+      ],
+      [
+        "ⲧⲉ",
+        4,
+        10.103
+      ],
+      [
+        "ⲛ",
+        10,
+        10.074
+      ],
+      [
+        "ⲧⲉϥ",
+        3,
+        10.019
+      ],
+      [
+        "ⲧⲁ",
+        3,
+        10.005
+      ],
+      [
+        "ⲣⲟⲟⲩϣ",
+        1,
+        9.351
+      ],
+      [
+        "ⲛⲧ",
+        3,
+        9.285
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲟⲡⲉ_0_node",
+          10
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲓⲟⲡⲉ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲉⲓⲟⲡⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          2
+        ],
+        [
+          "ⲙⲓⲛⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲁⲛ_1_pre_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲓⲕⲓⲗⲧⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲓⲟⲡⲉ",
+          "ⲉⲓⲟⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲉⲓⲟⲡⲉ",
+          "ⲉⲓⲟⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲟⲡⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          "ⲙⲓⲛⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_2_post_ⲙ",
+          "ⲙⲓⲛⲉ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲉⲓⲟⲡⲉ",
+          "ⲉⲓⲟⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲡⲉ_0_node",
+          "ⲛⲓⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          "ⲉ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲟⲡⲉ",
+          "ϣⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲁⲁ",
+          "ⲩ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲁⲛ_1_pre_ⲉⲓⲟⲡⲉ",
+          "ⲉⲓⲟⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲡⲉ",
+          "ⲡⲟⲓⲕⲓⲗⲧⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲓⲕⲓⲗⲧⲏⲥ_2_post_ⲙ",
+          "ⲛ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲟⲡⲉ",
+          "ϣⲱⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲟⲡⲉ",
+          "ⲧⲉϥ_1_pre_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲡⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲉⲓⲟⲡⲉ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2709,
+      "count": 13
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C935",
+      "label": "ⲉⲓⲉⲡ-",
+      "pos": "N",
+      "gloss": "(with or without ⲛ-) + name of craft, its material or product"
+    },
+    {
+      "target": "C936",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trade; merchandise"
+    },
+    {
+      "target": "C941",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art"
+    },
+    {
+      "target": "C939",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C940",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C937",
+      "label": "ⲣⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "V",
+      "gloss": "trade"
+    },
+    {
+      "target": "C938",
+      "label": "ⲣⲉⲓⲟⲡⲉ",
+      "pos": "V",
+      "gloss": "spin"
+    }
+  ],
+  "etym": {
+    "egy_num": "45750",
+    "egy_lemma": "wpw.t",
+    "demo_num": "d1323",
+    "demo_lemma": "wp(e.t)",
+    "english": "message; task",
+    "german": "Botschaft; Auftrag; Angelegenheit (allg.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/45750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1323"
+  }
+}

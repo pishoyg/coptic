@@ -1,0 +1,61 @@
+{
+  "id": "C679",
+  "forms": [
+    {
+      "id": "CF2554",
+      "orth": "ⲉⲛⲓⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2555",
+      "orth": "ⲉⲛⲓⲙ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2556",
+      "orth": "ⲉⲛⲉⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14532,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb (?)",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS816",
+      "bibliography": "CD 56b; CED 36; KoptHWb 37; DELC 44; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡϫⲟⲉⲓⲥ ⲛⲁⲟⲩⲉⲛϩⲡⲁⲓ ⲉⲃⲟⲗ ϩⲛⲟⲩⲭⲁⲥⲙⲁ ⲁⲩϥ ⲛⲧⲉⲡⲕⲁϩ ⲟⲩⲱⲛ ⲉⲣⲱϥ ⲛϥⲟⲩⲱⲙⲕ ⲙⲙⲟⲟⲩ ⲙⲛⲛⲉⲏⲓ ⲙⲛⲛⲉⲩⲥⲕⲏⲛⲏ ⲙⲛⲛⲉⲧϣⲟⲟⲡ ⲛⲁⲩ ⲧⲏⲣⲟⲩ ⲛⲥⲉⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲁⲙⲛⲧⲉ ⲉⲩⲟⲛϩ ⲛⲧⲉⲧ**ⲉⲛⲉⲓⲙⲉ** ϫⲉⲛⲉⲓⲣⲱⲙⲉ ⲛⲉⲛⲧⲁⲩϯⲛⲟⲩϭⲥ ⲉⲡϫⲟⲉⲓⲥ",
+      "english": "But if the Lord shall shew by a wonder, and the earth shall open her mouth and swallow them up, and their houses, and their tents, and all that belongs to them, and they shall go down alive into Hades, then ye shall know that these men have provoked the Lord.",
+      "source": "Numbers 16",
+      "urn": "urn:cts:copticLit:ot.num.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14132,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5524",
+      "type": "syn",
+      "label": "cast a lot (B)"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "C10981",
+  "forms": [
+    {
+      "id": "CF30061",
+      "orth": "ⲭⲣⲁⲥⲑⲁⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF30062",
+      "orth": "ⲭⲣⲁⲥⲑⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18566,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30063",
+      "orth": "ⲭⲣⲁⲥⲑⲁⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30064",
+      "orth": "ⲭⲣⲁⲥⲑⲁⲓ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15221",
+      "bibliography": "DDGLC",
+      "cu_ID": "11749"
+    },
+    {
+      "id": "CS15222",
+      "bibliography": "DDGLC",
+      "cu_ID": "1817"
+    },
+    {
+      "id": "CS15223",
+      "bibliography": "DDGLC",
+      "cu_ID": "11467"
+    },
+    {
+      "id": "CS15224",
+      "bibliography": "DDGLC",
+      "cu_ID": "10684"
+    },
+    {
+      "id": "CS15225",
+      "bibliography": "DDGLC",
+      "cu_ID": "2952"
+    },
+    {
+      "id": "CS15226",
+      "bibliography": "DDGLC",
+      "cu_ID": "1888"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲙⲙⲁⲧⲉ ⲁⲛ ⲁⲗⲗⲁ ⲛⲕⲉϭⲙⲡϣⲓⲛⲉ ⲉϥⲛⲁϣⲱⲡⲉ ⲛⲁⲩ ϫⲉⲁⲩ**ⲭⲣⲁⲥⲑⲁⲓ** ⲕⲁⲕⲱⲥ ⲛⲛϣⲙⲙⲟ",
+      "english": "For the Sodomites did not receive those, whom they knew not when they came: but these brought friends into bondage, that had well deserved of them.",
+      "source": "Wisdom 19",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲕⲱⲥ",
+        1,
+        15.511
+      ],
+      [
+        "ϣⲙⲙⲟ",
+        1,
+        12.433
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲭⲣⲁⲥⲑⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲱⲥ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲭⲣⲁⲥⲑⲁⲓ",
+          "ⲩ_1_pre_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲭⲣⲁⲥⲑⲁⲓ",
+          "ⲭⲣⲁⲥⲑⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲭⲣⲁⲥⲑⲁⲓ_0_node",
+          "ⲕⲁⲕⲱⲥ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲱⲥ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          "ⲛ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲣⲁⲥⲑⲁⲓ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18184,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2651",
+    "grl_lemma": "χράω",
+    "grl_meaning": "to proclaim, furnish with, to be in want of",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 2001a; Preisigke 2:744"
+  }
+}

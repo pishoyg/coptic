@@ -1,0 +1,783 @@
+{
+  "id": "C6887",
+  "forms": [
+    {
+      "id": "CF15822",
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 20.39,
+        "rank": 68,
+        "count": 3217
+      }
+    },
+    {
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 15.12,
+        "rank": 88,
+        "count": 1282
+      }
+    },
+    {
+      "orth": "ϩⲧⲏ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.48,
+        "rank": 379,
+        "count": 392
+      }
+    },
+    {
+      "orth": "ϩⲧⲉ⸗",
+      "dialect": "S",
+      "id": "2290.2"
+    },
+    {
+      "orth": "ϩⲉⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6318,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲧⲉⲉⲩ",
+      "dialect": "S",
+      "id": "2290.4"
+    },
+    {
+      "orth": "ϩⲑⲏ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.5,
+        "rank": 389,
+        "count": 212
+      }
+    },
+    {
+      "orth": "ϩⲧⲏ⸗",
+      "dialect": "F",
+      "id": "2290.6"
+    },
+    {
+      "orth": "ϩⲧⲏ⸗",
+      "dialect": "L",
+      "id": "2290.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7604",
+      "bibliography": "CD 718a; CED 298; KoptHWb 394; DELC 315a; ChLCS 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲡⲓⲟⲩⲏⲃ ⲱⲗⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲥⲛⲟϥ ⲛⲧⲉⲫⲏ ⲉⲧⲉⲉⲑⲃⲉϯⲙⲉⲧϣⲁϥⲧ ⲟⲩⲟϩ ⲉϥⲉⲧⲁⲗⲟ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲉϫⲉⲛⲡⲓⲗⲟⲃⲟⲥ ⲛⲧⲉⲫⲙⲁϣϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲧⲉⲫⲏ ⲉⲧⲧⲟⲩⲃⲟ ⲙⲙⲟϥ ⲛⲉⲙⲉϫⲉⲛ**ϩⲏⲧ**ⲥ ⲛⲧⲉϥϫⲓϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲉⲙⲉϫⲉⲛϩⲏⲧⲥ ⲛⲧⲉϥⲫⲁⲧ ⲛⲟⲩⲓⲛⲁⲙ",
+      "english": "And the priest shall take of the blood of the trespass-offering, and the priest shall put it on the tip of the right ear of the person under cleansing, and on the thumb of his right hand, and on the great toe of his right foot.",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϩⲉⲛⲕⲟⲟⲩⲉ ⲇⲉ ⲙⲕⲁϩ ⲛ**ϩⲏⲧ** ·",
+      "english": "But some others were troubled,",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉϧⲉⲗϧⲱⲗϥ ⲟⲩⲟϩ ⲉⲕⲉϭⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥⲥⲛⲟϥ ⲟⲩⲟϩ ⲉⲕⲉⲭⲱ ϩⲓϫⲉⲛⲡⲓⲗⲟⲃⲟⲥ ⲛⲧⲉⲫⲙⲁϣϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲁⲁⲣⲱⲛ ⲛⲉⲙϩⲓϫⲉⲛ**ϩⲏⲧ**ⲥ ⲛϯϫⲓϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲉⲙϩⲓϫⲉⲛϩⲏⲧⲥ ⲛϯⲫⲁⲧ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲉⲙϩⲓϫⲉⲛⲛⲓⲗⲟⲃⲟⲥ ⲛⲧⲉⲛⲉⲛⲙⲁϣϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲧⲉⲛⲉϥϣⲏⲣⲓ ⲛⲉⲙϩⲓϫⲉⲛϩⲏⲧⲟⲩ ⲛⲛⲟⲩϫⲓϫ ⲛⲟⲩⲓⲛⲁⲙ ⲛⲉⲙϩⲓϫⲉⲛϩⲏⲧⲟⲩ ⲛⲛⲟⲩⲫⲁⲧ ⲛⲟⲩⲓⲛⲁⲙ",
+      "english": "And thou shalt kill it, and take of the blood of it, and put it on the tip of Aaron's right ear, and on the thumb of his right hand, and on the great toe of his right foot, and on the tips of the right ears of his sons, and on the thumbs of their right hands, and on the great toes of their right feet.",
+      "source": "02_Exodus_29",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:29",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲡⲁⲉⲓⲱⲧ ⲁⲃⲣⲁϩⲁⲙ ⲙⲁⲧⲛⲛⲟⲟⲩ ⲗⲁⲍⲁⲣⲟⲥ ⲛϥⲥⲡ**ϩⲧⲏ**ϥ ⲙⲡⲉϥⲧⲏⲏⲃⲉ ⲙⲙⲟⲟⲩ ⲛϥⲕⲃⲉⲡⲁⲗⲁⲥ · ϫⲉϯⲙⲟⲕϩ ⲁⲛⲟⲕ ϩⲙⲡⲉⲓⲕⲱϩⲧ ⲟⲩⲇⲉ ϩⲱⲱϥ ⲛϫⲡⲓⲟ · ⲡⲉⲛⲧⲁϥⲥⲱⲧⲙ ⲉⲣⲟϥ ·",
+      "english": "'My father Abraham, let them send Lazarus, and let him dip the tip of his finger in water, and cool my tongue therewith, for I am tortured in this fire.' And what he heard was it not words of rebuke?",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟϥ ⲉⲧⲁϥⲙⲟⲩϯ ⲡⲉϫⲁϥ ϫⲉⲡⲁⲓⲱⲧ ⲁⲃⲣⲁⲁⲙ ⲛⲁⲓ ⲛⲏⲓ ⲟⲩⲟϩ ⲟⲩⲱⲣⲡ ⲛⲗⲁⲍⲁⲣⲟⲥ ϩⲓⲛⲁ ⲛⲧⲉϥⲥⲉⲡ **ϩⲑⲏ**ϥ ⲙⲡⲉϥⲧⲏⲃ ⲙⲙⲱⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϥϯⲭⲃⲟⲃ ⲙⲡⲁⲗⲁⲥ ϫⲉϯⲙⲟⲕϩ ⲛϧⲣⲏⲓ ϧⲉⲛⲡⲁⲓϣⲁϩ .",
+      "english": "He cried and said, 'Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue! For I am in anguish in this flame.'",
+      "source": "03_Luke_16",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲛⲁϣⲱⲡⲉ ⲛϭⲓⲡⲉϩⲣⲏⲣⲉ ⲉⲛⲧⲁϥϩⲉ ⲉⲃⲟⲗ ϩⲛⲧϩⲉⲗⲡⲓⲥ ⲙⲡⲉⲟⲟⲩ ϩⲓ**ϩⲧⲏ**ϥ ⲙⲡⲧⲟⲟⲩ ⲉⲧϫⲟⲥⲉ ⲛⲧϩⲉ ⲛⲟⲩⲥⲛⲧⲉ ⲛⲕⲛⲧⲏ ⲉⲁⲡⲉⲧⲛⲁⲩ ⲉⲣⲟϥ ⲉⲙⲡⲁⲧⲉϥϫⲓⲧϥ ⲉⲧⲉϥϭⲓϫ ⲟⲩⲉϣⲟⲙⲕϥ",
+      "english": "And the fading flower of the glorious hope on the top of the high mountain shall be as the early fig; he that sees it, before he takes it into his hand, will desire to swallow it down.",
+      "source": "Isaiah 28",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲁ",
+        368,
+        24.907
+      ],
+      [
+        "ⲛ",
+        783,
+        22.913
+      ],
+      [
+        "ⲉⲣϩⲟϯ",
+        167,
+        22.682
+      ],
+      [
+        "ⲧ",
+        362,
+        22.508
+      ],
+      [
+        "ⲙ",
+        538,
+        22.281
+      ],
+      [
+        "ϥ",
+        674,
+        22.097
+      ],
+      [
+        "ⲥ",
+        367,
+        21.47
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        494,
+        21.408
+      ],
+      [
+        "ϧⲉⲛ",
+        421,
+        21.399
+      ],
+      [
+        "ⲙⲕⲁϩ",
+        89,
+        21.257
+      ],
+      [
+        "ⲉ",
+        480,
+        21.221
+      ],
+      [
+        ".",
+        409,
+        21.128
+      ],
+      [
+        "ⲡⲟⲩ",
+        146,
+        20.745
+      ],
+      [
+        "ⲉⲣ",
+        143,
+        20.62
+      ],
+      [
+        "ⲟⲩ",
+        396,
+        20.125
+      ],
+      [
+        "ⲑⲱⲧ",
+        46,
+        20.077
+      ],
+      [
+        "ⲙ",
+        322,
+        20.059
+      ],
+      [
+        "ⲁ",
+        321,
+        19.452
+      ],
+      [
+        "ⲡⲁ",
+        137,
+        19.38
+      ],
+      [
+        "ⲛϣⲟⲧ",
+        30,
+        19.092
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        258,
+        32.826
+      ],
+      [
+        "ⲛ",
+        3461,
+        27.275
+      ],
+      [
+        "ϥ",
+        2232,
+        26.089
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        358,
+        24.766
+      ],
+      [
+        "ⲉ",
+        1528,
+        24.744
+      ],
+      [
+        "ⲟⲩ",
+        1116,
+        23.787
+      ],
+      [
+        "ⲙⲕⲁϩ",
+        183,
+        23.317
+      ],
+      [
+        "ⲙ",
+        871,
+        22.845
+      ],
+      [
+        "ⲡ",
+        1059,
+        22.837
+      ],
+      [
+        "ⲁ",
+        906,
+        22.709
+      ],
+      [
+        "ϩⲙ",
+        509,
+        22.582
+      ],
+      [
+        "ⲉⲧ",
+        602,
+        22.134
+      ],
+      [
+        "ⲡⲁ",
+        337,
+        21.76
+      ],
+      [
+        "ϫⲉ",
+        540,
+        21.572
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        460,
+        21.196
+      ],
+      [
+        ".",
+        445,
+        21.145
+      ],
+      [
+        "ϩⲛ",
+        443,
+        21.047
+      ],
+      [
+        "ⲡⲉⲕ",
+        253,
+        21.012
+      ],
+      [
+        "ⲡⲉⲩ",
+        208,
+        20.985
+      ],
+      [
+        "ⲁⲩⲱ",
+        514,
+        20.959
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲏⲧ_0_node",
+          966
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲏⲧ",
+          123
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲏⲧ",
+          103
+        ],
+        [
+          "ⲥ_1_post_ϩⲏⲧ",
+          100
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲏⲧ",
+          108
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲏⲧ",
+          55
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ϩⲏⲧ",
+          23
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ϩⲏⲧ",
+          19
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϩⲏⲧ",
+          18
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϩⲏⲧ",
+          17
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          14
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          9
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          9
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲏⲧ",
+          8
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϩⲏⲧ",
+          7
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲧ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          19
+        ],
+        [
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲡ_1_pre_ϩⲏⲧ",
+          9
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲧ",
+          4
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡⲁⲓ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲥ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲙ_1_post_ϩⲏⲧ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲛ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲧ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          "ⲡⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲏⲧ_0_node",
+          2084
+        ],
+        [
+          "ϥ_1_post_ϩⲏⲧ",
+          375
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲏⲧ",
+          190
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲏⲧ",
+          195
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲏⲧ",
+          150
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲏⲧ",
+          133
+        ],
+        [
+          "ⲟⲩ_1_post_ϩⲏⲧ",
+          113
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϩⲏⲧ",
+          54
+        ],
+        [
+          "ⲥ_1_post_ϩⲏⲧ",
+          48
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          35
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲏⲧ",
+          24
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          22
+        ],
+        [
+          "ⲕ_1_post_ϩⲏⲧ",
+          21
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲏⲧ",
+          19
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲏⲧ",
+          19
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲧ",
+          15
+        ],
+        [
+          "ⲡ_1_pre_ϩⲏⲧ",
+          13
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_1_post_ϩⲏⲧ",
+          11
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          11
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          11
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          10
+        ],
+        [
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          10
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲏⲧ_0_node",
+          "ϥ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲟⲩ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲥ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲕ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲧⲏⲩⲧⲛ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲏⲧ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_0_node",
+          "ⲙ_1_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲧ",
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 22.55,
+      "rank": 55,
+      "count": 3579
+    },
+    "B": {
+      "rate": 17.26,
+      "rank": 70,
+      "count": 1465
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "100310",
+    "egy_lemma": "ḥꜣ.t",
+    "demo_num": "dm1087",
+    "demo_lemma": "ḥꜣ.t",
+    "english": "forepart; beginning; foremost; best",
+    "german": "Vorderseite; Anfang; Bestes; Spitze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/100310",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1087"
+  }
+}

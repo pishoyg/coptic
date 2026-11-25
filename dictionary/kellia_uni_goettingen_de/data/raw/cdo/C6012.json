@@ -1,0 +1,45 @@
+{
+  "id": "C6012",
+  "forms": [
+    {
+      "id": "CF14029",
+      "orth": "*ϣⲟⲡϣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6697",
+      "bibliography": "CD 582a; CED 250; KoptHWb 323; DELC 269a; ChLCS 80a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲉⲧⲛϯⲙⲕⲁϩ ⲛϩⲏⲧ ⲇⲉ ⲟⲛ ⲛⲧⲉⲛⲧⲁⲥ**ϣⲉⲡϣⲡ**ⲧⲏⲩⲧⲛ ⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲉⲧⲉⲧⲥⲩⲛⲁⲅⲱⲅⲏ ⲧⲉ ·",
+      "english": "And you have also given suffering to her who has nursed you, Jerusalem, which is the congregation.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϣⲉⲡϣⲡ**ⲡⲉⲕϣⲏⲣⲉ ⲧⲁⲣⲉϥϣⲧⲣⲧⲱⲣⲕ ⲥⲱⲃⲉ ⲛⲙⲙⲁϥ ⲧⲁⲣⲉϥϯⲗⲩⲡⲏ ⲛⲁⲕ",
+      "english": "Cocker thy child, and he shall make thee afraid: play with him, and he will bring thee to heaviness.",
+      "source": "Sirach 30",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C5971",
+      "type": "cf",
+      "label": "receive, contain, take, suffer"
+    }
+  ]
+}

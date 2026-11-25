@@ -1,0 +1,99 @@
+{
+  "id": "C9121",
+  "forms": [
+    {
+      "id": "CF22628",
+      "orth": "ⲍⲱⲣⲁⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22629",
+      "orth": "ⲍⲱⲣⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19598,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11270",
+      "bibliography": "DDGLC",
+      "cu_ID": "9129"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛϩⲉ ⲅⲁⲣ ⲉⲡⲉⲓⲣⲱⲙⲉ ⲛⲗⲟⲓⲙⲟⲥ ⲉϥⲧⲟⲩⲛⲉⲥ ⲥⲧⲁⲥⲓⲥ ⲛⲛⲓⲟⲩⲇⲁⲓ ⲧⲏⲣⲟⲩ ⲉⲧϩⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ . ⲉⲡⲥⲁϩ ⲡⲉ ⲛⲧϩⲁⲓⲣⲉⲥⲓⲥ ⲛⲛⲁ**ⲍⲱⲣⲁⲓⲟⲥ** .",
+      "english": "For we have found this man to be a plague, an instigator of insurrections among all the Jews throughout the world, and a ringleader of the sect of the Nazarenes.",
+      "source": "44_Acts of the Apostles_24",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲓⲣⲉⲥⲓⲥ",
+        1,
+        16.791
+      ],
+      [
+        "ⲡⲉⲓⲣⲁⲍⲉ",
+        1,
+        13.817
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19210,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6680",
+    "grl_lemma": "σῶρυ",
+    "grl_meaning": "ferrous sulphate, melanterite, red vitriol",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1750b"
+  }
+}

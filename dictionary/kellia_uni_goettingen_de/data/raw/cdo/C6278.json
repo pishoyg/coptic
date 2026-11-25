@@ -1,0 +1,150 @@
+{
+  "id": "C6278",
+  "forms": [
+    {
+      "id": "CF14567",
+      "orth": "ⲣϥⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8038,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6966",
+      "bibliography": "CD 623b; KoptHWb 345; ChLCS 85b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϭⲛⲟⲛ · ⲁⲩ**ⲣϥⲛⲧ** :—",
+      "english": "and very thin in quality, and that it had bred worms,",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲇⲉ ⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲙⲙⲟϥ ⲛϭⲓⲟⲩⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲉⲡϫⲟⲉⲓⲥ ⲉⲃⲟⲗ ϫⲉⲙⲡϥϯ ⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ . ⲁⲩⲱ ⲁϥ**ⲣϥⲛⲧ** ⲁϥⲙⲟⲩ .",
+      "english": "Immediately an angel of the Lord struck him, because he didn't give God the glory, and he was eaten by worms and died.",
+      "source": "44_Acts of the Apostles_12",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲛⲟⲛ",
+        1,
+        17.598
+      ],
+      [
+        ":—",
+        1,
+        12.778
+      ],
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        11.728
+      ],
+      [
+        "ⲁ",
+        4,
+        10.044
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.743
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣϥⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣϥⲛⲧ",
+          1
+        ],
+        [
+          "ⲣϥⲛⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣϥⲛⲧ",
+          "ⲩ_1_pre_ⲣϥⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣϥⲛⲧ",
+          "ⲣϥⲛⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7593,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6276",
+      "label": "ϥⲛⲧ",
+      "pos": "N",
+      "gloss": "worm"
+    },
+    {
+      "target": "C6277",
+      "label": "ϥⲛⲧ",
+      "pos": "N",
+      "gloss": "worm"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "C3053",
+  "forms": [
+    {
+      "id": "CF7978",
+      "orth": "ϩⲓⲣⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1296,
+        "count": 64
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3495",
+      "bibliography": "CD 290a; CED 135; KoptHWb 387; DELC 171; ChLCS 41a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲡⲟⲗⲓⲥ ⲧⲏⲣⲥ ⲁⲥⲥⲱⲟⲩϩ **ϩⲓⲣⲙ**ⲡⲣⲟ ⲙⲡⲏⲓ .",
+      "english": "All the city was gathered together at the door.",
+      "source": "41_Mark_1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓⲕⲱⲗϩ ⲉⲡⲣⲟ ⲕⲁⲧⲁⲡⲕⲁⲛⲱⲛ ⲛⲛⲉⲥⲛⲏⲩ ⲙⲙⲟⲛⲁⲭⲟⲥ · ⲁⲩⲱ ⲛⲉⲓⲁϩⲉⲣⲁⲧ **ϩⲓⲣⲙ**ⲡⲣⲟ · ⲛⲟⲩⲛⲟϭ ⲛⲛⲁⲩ",
+      "english": "And I knocked at the door, according to the rule of the monkish brethren, and I stood still at the door for a long time.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲧⲉⲧⲛϣⲁⲛⲟⲩⲱ ⲉⲧⲉⲧⲛⲑⲩⲥⲓⲁⲍⲉ · ⲟⲩⲱⲙ ⲛⲧⲉⲧⲛⲥⲱ **ϩⲓⲣⲙ**ⲡⲣⲟ ⲙⲡⲁⲡⲟⲗⲗⲱⲛ ⲙⲛⲧⲁⲣⲧⲉⲙⲓⲥ ·",
+      "english": "'When ye shall have finished offering up your sacrifices, [ye shall] eat and ye shall drink at the door of [the temple of] Apollo and Artemis,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3052",
+      "label": "ϩⲁⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "beneath, before (\"under mouth of\")"
+    },
+    {
+      "target": "C3046",
+      "label": "ϫⲉⲕⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "fill mouth, satisfy"
+    },
+    {
+      "target": "C3045",
+      "label": "ϫⲓⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "deprive, prevent, anticipate (\"take the word\")"
+    },
+    {
+      "target": "C3044",
+      "label": "ϯⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "give sb one's word, promise"
+    },
+    {
+      "target": "C3043",
+      "label": "ⲁⲧⲕⲁⲣⲱ⸗",
+      "pos": "N",
+      "gloss": "without keeping one's mouth shut, never silent"
+    },
+    {
+      "target": "C3047",
+      "label": "ⲁⲧⲣⲟ",
+      "pos": "N",
+      "gloss": "doorless"
+    },
+    {
+      "target": "C3039",
+      "label": "ⲁⲧⲣⲱϥ",
+      "pos": "N",
+      "gloss": "mouthless (not speaking the language)"
+    },
+    {
+      "target": "C3050",
+      "label": "ⲉⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "to, upon, against (\"to mouth of\")"
+    },
+    {
+      "target": "C12191",
+      "label": "ⲕⲁⲣⲁⲓⲧϥ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C3042",
+      "label": "ⲕⲁⲣⲱϥ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C3040",
+      "label": "ⲕⲱ ⲛⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "keep one's mouth shut, be silent"
+    },
+    {
+      "target": "C3051",
+      "label": "ⲛⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "to, upon, against (\"to mouth of\")"
+    },
+    {
+      "target": "C3048",
+      "label": "ⲡⲁⲡⲣⲟ",
+      "pos": "N",
+      "gloss": "he of the door, doorkeeper"
+    },
+    {
+      "target": "C3049",
+      "label": "ⲣⲁ-",
+      "pos": "N",
+      "gloss": "part, fraction"
+    },
+    {
+      "target": "C3038",
+      "label": "ⲣⲟ",
+      "pos": "N",
+      "gloss": "mouth; edge of weapon; door, gate"
+    },
+    {
+      "target": "C3041",
+      "label": "ⲭⲁⲣⲱϥ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "open mouth upward, lift up voice"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4185",
+    "demo_lemma": "ḥr-rꜣ(-n)",
+    "english": "on; at; at the door of, at the entrance of; over",
+    "german": "auf; an; an der Tür von, am Eingang von; über",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4185"
+  }
+}

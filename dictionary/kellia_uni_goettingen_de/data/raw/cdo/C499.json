@@ -1,0 +1,597 @@
+{
+  "id": "C499",
+  "forms": [
+    {
+      "id": "CF1992",
+      "orth": "ⲃⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2394,
+        "count": 21
+      }
+    },
+    {
+      "id": "CF1993",
+      "orth": "ⲃⲓⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2921,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF1994",
+      "orth": "ⲃⲓⲣ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲃⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11251,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲁⲓⲣⲉ",
+      "dialect": "S",
+      "id": "585.2"
+    },
+    {
+      "orth": "ⲃⲣⲏⲟⲩⲉ",
+      "dialect": "S",
+      "id": "585.3"
+    },
+    {
+      "orth": "ⲃⲁⲓⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5223,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲓⲗ",
+      "dialect": "F",
+      "id": "585.5"
+    },
+    {
+      "orth": "ϥⲓⲗ",
+      "dialect": "F",
+      "id": "585.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS602",
+      "bibliography": "CD 41b-42a; CED 25; KoptHWb 26, 495; DELC 30; ChLCS 9a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲍ ⲉϩⲣⲉⲛⲡⲓⲇ ⲛϣⲟ ϫⲉⲁⲧⲉⲧⲉⲛⲉⲗⲟⲩⲏⲣ ⲙ**ⲃⲓⲣ** ⲉⲩⲙⲉϩ ⲛⲗⲁⲕϩ ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲍ .",
+      "english": "When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?' They told him, 'Seven.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲧⲉⲧⲛⲣⲟⲩ ⲛⲛⲉⲓ**ⲃⲓⲣ** ·",
+      "english": "What are you doing with these baskets?'",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲩⲱⲙ ⲟⲩⲟϩ ⲁⲩⲥⲓ ⲟⲩⲟϩ ⲁⲩⲱⲗⲓ ⲛⲛⲓϩⲟⲩⲟ ⲛⲧⲉⲛⲓⲗⲁⲕϩ ⲍ ⲙ**ⲃⲓⲣ** .",
+      "english": "They ate, and were filled. They took up seven baskets of broken pieces that were left over.",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲡⲉϫⲁϥ ⲛⲃⲓⲃⲣⲟⲥ ϫⲉϫⲓ ⲛⲙⲙⲁⲕ ⲛⲥⲟⲛ ⲥⲛⲁⲩ · ⲉⲩⲛϩⲉⲛ**ⲃⲓⲣ** ⲛⲧⲟⲟⲧⲟⲩ · ⲙⲛϩⲉⲛⲧⲱⲣⲉ · ⲛⲧⲉⲧⲛⲟⲩⲉϩⲧⲏⲩⲧⲛ ⲛⲥⲱⲓ ·",
+      "english": "Then he said to Birros, 'Take with thee two brethren, and let them have baskets in their hands, and digging tools, and follow ye me.'",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲍ ⲉϩⲣⲉⲛⲡⲓⲇ ⲛϣⲟ ϫⲉⲁⲧⲉⲧⲉⲛⲉⲗ ⲟⲩⲏⲣ ⲙ**ⲃⲓⲣ** ⲉⲩⲙⲉϩ ⲛⲗⲁⲕϩ ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲍ .",
+      "english": "'When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?' They told him, 'Seven.'",
+      "source": "02_Mark_08",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲣⲉⲛⲛⲁ ⲧⲡⲟⲗⲓⲥ ⲛⲛⲉⲥϩⲁⲓ ⲧⲁⲓ ⲧⲉ ⲧⲁ**ⲃⲓⲣ**",
+      "english": "and Renna and the city of Letters, this is Dabir;",
+      "source": "Joshua 15",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲏⲣ",
+        4,
+        17.364
+      ],
+      [
+        "ⲉⲗ",
+        3,
+        15.183
+      ],
+      [
+        "ⲙⲉϩ",
+        3,
+        14.414
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        5,
+        13.738
+      ],
+      [
+        "ⲗⲁⲕϩ",
+        2,
+        13.53
+      ],
+      [
+        "ⲍ",
+        2,
+        11.673
+      ],
+      [
+        "ⲙ",
+        6,
+        10.531
+      ],
+      [
+        "ⲥⲟⲃⲧ",
+        1,
+        10.428
+      ],
+      [
+        "ⲩ",
+        5,
+        10.279
+      ],
+      [
+        "ⲓⲣⲓ",
+        2,
+        9.878
+      ],
+      [
+        "ⲡⲱⲥ",
+        1,
+        9.428
+      ],
+      [
+        "ⲕⲁϯ",
+        1,
+        8.79
+      ],
+      [
+        ".",
+        3,
+        7.564
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        7.292
+      ],
+      [
+        "ⲉ",
+        3,
+        6.965
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        6.664
+      ],
+      [
+        "ⲛ",
+        3,
+        6.538
+      ],
+      [
+        "ϭⲓ",
+        1,
+        6.459
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        6.411
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.147
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲛⲱⲣ",
+        1,
+        16.206
+      ],
+      [
+        "ⲁⲥⲑⲁⲙⲁ",
+        1,
+        16.206
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        4,
+        15.026
+      ],
+      [
+        "ⲃⲓⲣ",
+        2,
+        14.813
+      ],
+      [
+        "ⲩ",
+        22,
+        14.796
+      ],
+      [
+        "ⲛⲏⲃⲧⲉ",
+        1,
+        14.621
+      ],
+      [
+        "ⲣ",
+        8,
+        14.021
+      ],
+      [
+        "ⲥⲁϣϥ",
+        4,
+        13.866
+      ],
+      [
+        "ⲙⲉϩ",
+        4,
+        13.71
+      ],
+      [
+        "ⲉ",
+        19,
+        13.169
+      ],
+      [
+        "ⲛ",
+        23,
+        12.987
+      ],
+      [
+        "ⲩⲛ",
+        2,
+        12.183
+      ],
+      [
+        "…",
+        1,
+        12.118
+      ],
+      [
+        "..........",
+        1,
+        11.958
+      ],
+      [
+        "ⲗⲁⲕⲙ",
+        1,
+        11.562
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        3,
+        11.283
+      ],
+      [
+        "ⲣⲓ",
+        1,
+        10.591
+      ],
+      [
+        "ϥⲓ",
+        3,
+        10.574
+      ],
+      [
+        "ⲧⲁⲓ",
+        3,
+        10.442
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        4,
+        10.352
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲓⲣ_0_node",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲃⲓⲣ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          2
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲉϩ",
+          2
+        ],
+        [
+          "ⲗⲁⲕϩ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲍ_1_pre_ⲃⲓⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲓⲣ_0_node",
+          "ⲉ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲓⲣ",
+          "ⲩ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          "ⲙⲉϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          "ⲛ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲉϩ",
+          "ⲗⲁⲕϩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲍ_1_pre_ⲃⲓⲣ",
+          "ⲃⲓⲣ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲓⲣ_0_node",
+          13
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲃⲓⲣ",
+          2
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲙⲉ_3_post_ⲛⲟⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          ".........._1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_..........",
+          1
+        ],
+        [
+          "............._3_post_ⲛ",
+          1
+        ],
+        [
+          ".............._1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_3_post_ⲡⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲓⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁϣϥ_1_pre_ⲃⲓⲣ",
+          "ⲃⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_0_node",
+          "ⲛ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲓⲣ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          "ⲉ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲓⲣ",
+          "ⲙⲉ_3_post_ⲛⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲉ_3_post_ⲛⲟⲉⲓ",
+          "ϥ_3_post_ⲛⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_0_node",
+          "ⲧⲁⲓ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲃⲓⲣ",
+          ".........._1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          ".........._1_post_ⲃⲓⲣ",
+          "ⲛ_2_post_..........",
+          1
+        ],
+        [
+          "ⲛ_2_post_..........",
+          "............._3_post_ⲛ",
+          1
+        ],
+        [
+          "............._3_post_ⲛ",
+          ".............._1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲓⲣ",
+          "ⲃⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲓⲣ",
+          "ⲃⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_0_node",
+          "ⲙ_1_post_ⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲓⲣ",
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          "ⲉⲓⲱⲧ_3_post_ⲡⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲓⲣ",
+          "ⲃⲓⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2110,
+      "count": 21
+    },
+    "B": {
+      "rate": 0.08,
+      "rank": 2562,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C500",
+      "label": "ⲃⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "basket (of palme leaf)"
+    }
+  ],
+  "etym": {
+    "egy_num": "56380",
+    "egy_lemma": "br",
+    "demo_num": "d1662",
+    "demo_lemma": "bjr",
+    "english": "basket",
+    "german": "Korb",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/56380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1662"
+  }
+}

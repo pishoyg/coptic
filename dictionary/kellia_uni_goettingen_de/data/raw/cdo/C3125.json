@@ -1,0 +1,65 @@
+{
+  "id": "C3125",
+  "forms": [
+    {
+      "id": "CF8126",
+      "orth": "ϫⲓⲣⲁⲛ",
+      "dialect": "S",
+      "oRef": "ϫⲓ ⲣⲁⲛ"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3575",
+      "bibliography": "CD 298a; ChLCS 42a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3122",
+      "label": "ϯⲣⲉⲛ⸗",
+      "pos": "V",
+      "gloss": "give name, call"
+    },
+    {
+      "target": "C3123",
+      "label": "ⲁⲧϯⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "unnamed"
+    },
+    {
+      "target": "C3121",
+      "label": "ⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "name"
+    },
+    {
+      "target": "C3126",
+      "label": "ⲣⲙⲛⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "office-bearer, dignitary"
+    },
+    {
+      "target": "C3124",
+      "label": "ⲧⲁⲩⲉⲣⲓⲛ⸗",
+      "pos": "V",
+      "gloss": "pronounce name"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "C10902",
+  "forms": [
+    {
+      "id": "CF29742",
+      "orth": "ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29744",
+      "orth": "ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7250,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF29743",
+      "orth": "ⲫⲓⲗⲱⲡⲟⲛⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15054",
+      "bibliography": "DDGLC",
+      "cu_ID": "3557"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲥⲁⲧⲣⲉⲕⲕⲱ ⲧⲥⲩⲛⲁⲝⲓⲥ ⲉⲃⲟⲗ · ⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲙⲡⲉⲕⲗⲏⲣⲟⲥ ⲧⲏⲣϥ ⲙⲛⲛⲉ**ⲫⲩⲗⲟⲡⲟⲛⲟⲥ** ⲛⲅⲧⲁⲙⲟⲟⲩ ⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧϩⲛⲧⲉⲕⲙⲏⲏⲧⲉ ⲙⲛⲧⲉⲕⲥϩⲓⲙⲉ ·",
+      "english": "and after thou hast administered the Sacrament gather together all the clergy, and all the business folk, and shew them the mystery which existeth between thee and thy wife.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲙⲟ",
+        2,
+        14.021
+      ],
+      [
+        "ⲅ",
+        2,
+        11.239
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.864
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲫⲩⲗⲟⲡⲟⲛⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+          "ⲛⲉ_1_pre_ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲫⲩⲗⲟⲡⲟⲛⲟⲥ",
+          "ⲫⲩⲗⲟⲡⲟⲛⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6797,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2308",
+    "grl_lemma": "φιλόπονος",
+    "grl_meaning": "member of a lay group with duties in church",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1938b"
+  }
+}

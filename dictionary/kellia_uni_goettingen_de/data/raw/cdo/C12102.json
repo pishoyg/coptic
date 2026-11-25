@@ -1,0 +1,40 @@
+{
+  "id": "C12102",
+  "forms": [
+    {
+      "id": "CF33110",
+      "orth": "ϩⲱⲣⲧ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ϩⲟⲣⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10444,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17103",
+      "bibliography": "CD 704b; KoptHWB 388; CED 294; DELC 311a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6812",
+      "label": "ϩⲣⲱⲧ",
+      "pos": "N",
+      "gloss": "wine-press"
+    }
+  ]
+}

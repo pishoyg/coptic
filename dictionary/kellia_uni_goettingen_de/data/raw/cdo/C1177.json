@@ -1,0 +1,361 @@
+{
+  "id": "C1177",
+  "forms": [
+    {
+      "id": "CF3741",
+      "orth": "ϫⲓⲕⲗⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4435,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1367",
+      "bibliography": "CD 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲙⲁⲣⲉϣⲟⲉⲓϫ **ϫⲓⲕⲗⲟⲙ** ⲉⲩϣⲁⲛⲕⲁⲡⲁⲅⲱⲛ ⲉⲃⲟⲗ · ⲉⲧⲃⲉⲡⲁⲓ ⲙⲁⲣⲛϩⲁⲣⲡⲁⲍⲉ ⲛⲁⲛⲟⲩ ⲙⲡⲉⲕⲗⲟⲙ · ⲛⲧⲛⲣⲃⲟⲗ ⲉⲡϣⲓⲡⲉ ⲙⲛⲡⲟⲥⲉ ·",
+      "english": "For he who striveth in the contest receiveth not the crown if he abandoneth the contest; therefore let us seize and carry off the crown, and we shall thus escape disgrace and loss.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲡⲟⲗⲗⲁⲕⲓⲥ ϣⲁⲣⲉⲡϣⲟⲉⲓϫ ϩⲉ ϩⲙⲡⲁⲅⲱⲛ ⲉⲡϩⲁⲉ ⲛϥⲧⲱⲟⲩⲛ ⲛϥ**ϫⲓⲕⲗⲟⲙ** ·",
+      "english": "For he who contendeth in the games is wont to fall down often, but in the end he riseth up, and receiveththe crown of victory.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲣⲉϣⲟⲉⲓϫ **ϫⲓⲕⲗⲟⲙ** ⲉⲓⲙⲏⲧⲓ ⲛϥⲙⲓϣⲉ ⲕⲁⲗⲟⲥ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲉⲓϫ",
+        3,
+        18.768
+      ],
+      [
+        ":·ⲻ",
+        1,
+        18.013
+      ],
+      [
+        "ⲻ·:ⲻ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉⲓⲙⲏⲧⲓ",
+        2,
+        13.521
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        2,
+        12.931
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        3,
+        12.851
+      ],
+      [
+        "ⲁⲅⲱⲛ",
+        1,
+        12.155
+      ],
+      [
+        "ϥ",
+        9,
+        11.446
+      ],
+      [
+        "ⲙⲁⲣⲧⲩⲣⲟⲥ",
+        1,
+        11.024
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        1,
+        10.947
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        2,
+        10.35
+      ],
+      [
+        "ⲕⲁⲓ",
+        1,
+        10.272
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        1,
+        9.521
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        1,
+        9.478
+      ],
+      [
+        "ⲛⲕⲟⲧⲕ",
+        1,
+        9.177
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        8.258
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        7.687
+      ],
+      [
+        "ϭⲟⲙ",
+        1,
+        7.254
+      ],
+      [
+        "ⲉ",
+        3,
+        6.987
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.094
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          6
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          2
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲉ_2_pre_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϥ_4_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_3_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲟⲉⲓϫ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          3
+        ],
+        [
+          "ⲉⲩϣⲁⲛ_2_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ⲉⲓⲙⲏⲧⲓ_1_post_ϫⲓⲕⲗⲟⲙ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲙⲓϣⲉ_2_post_ⲉⲓⲙⲏⲧⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲁⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ⲗⲁⲁⲩ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ⲉ_2_pre_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲉ_2_pre_ⲗⲁⲁⲩ",
+          "ϥ_4_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ϥ_4_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_3_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_3_pre_ⲉ",
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ϥ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ⲅⲁⲣ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ⲙⲁⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ϣⲟⲉⲓϫ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲟⲉⲓϫ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          "ⲉⲩϣⲁⲛ_2_post_ⲕⲁ",
+          1
+        ],
+        [
+          "ϫⲓⲕⲗⲟⲙ_0_node",
+          "ⲉⲓⲙⲏⲧⲓ_1_post_ϫⲓⲕⲗⲟⲙ",
+          2
+        ],
+        [
+          "ⲉⲓⲙⲏⲧⲓ_1_post_ϫⲓⲕⲗⲟⲙ",
+          "ⲛ_3_post_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲓϣⲉ",
+          "ϥ_3_post_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_2_post_ⲉⲓⲙⲏⲧⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          "ϣⲟⲉⲓϫ_1_pre_ϫⲓⲕⲗⲟⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4039,
+      "count": 6
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1176",
+      "label": "ϫⲓⲛϯⲭⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crowning"
+    },
+    {
+      "target": "C1175",
+      "label": "ϯⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "crown, set a crown"
+    },
+    {
+      "target": "C1174",
+      "label": "ⲉⲓⲣⲉ ⲛⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "make a crown, circle"
+    },
+    {
+      "target": "C1173",
+      "label": "ⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown, wreath"
+    },
+    {
+      "target": "C1178",
+      "label": "ⲣⲉϥϫⲓⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown bearer"
+    }
+  ]
+}

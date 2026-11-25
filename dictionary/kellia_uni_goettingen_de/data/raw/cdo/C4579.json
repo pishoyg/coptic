@@ -1,0 +1,44 @@
+{
+  "id": "C4579",
+  "forms": [
+    {
+      "id": "CF31808",
+      "orth": "ⲁⲧⲧⲥⲛⲕⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31807",
+      "orth": "ⲁⲧⲧⲥⲉⲛⲕⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5168",
+      "bibliography": "CD 436a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3594",
+      "type": "cf",
+      "label": "suck"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4578",
+      "label": "ⲧⲥⲛⲕⲟ",
+      "pos": "V",
+      "gloss": "give suck, breast-feed, suckle"
+    }
+  ]
+}

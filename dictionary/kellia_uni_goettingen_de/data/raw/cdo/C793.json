@@ -1,0 +1,336 @@
+{
+  "id": "C793",
+  "forms": [
+    {
+      "id": "CF2916",
+      "orth": "ⲏⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2616,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS943",
+      "bibliography": "CED 42; KoptHWb 46, 503"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲥⲉⲣⲃⲟⲕⲓ ⲁⲥⲙⲓⲥⲓ ⲛⲟⲩϣⲏⲣⲓ ⲟⲩⲟϩ ⲁⲥϯⲣⲉⲛ ⲡⲉϥⲣⲁⲛ ϫⲉ**ⲏⲣ**",
+      "english": "And she conceived and bore a son, and called his name, Er.",
+      "source": "01_Genesis_38",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲛϣⲏⲣⲓ ⲛⲓⲟⲩⲇⲁⲥ ⲏⲣ ⲛⲉⲙⲁⲩⲛⲁⲛ ⲥⲏⲗⲱⲙ ⲫⲁⲣⲣⲉⲥ ⲛⲉⲙⲍⲁⲣⲁ ⲟⲩⲟϩ ⲁϥⲙⲟⲩ ⲛϫⲉ**ⲏⲣ** ⲛⲉⲙⲁⲩⲛⲁⲛ ϧⲉⲛⲡⲕⲁϩⲓ ⲛⲭⲁⲛⲁⲁⲛ",
+      "english": "And the sons of Juda, Er and Aunan; and Er and Aunan died in the land of Chanaan.",
+      "source": "04_Numeri_26",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲛϣⲏⲣⲓ ⲇⲉ ⲛⲓⲟⲩⲇⲁⲥ ⲏⲣ ⲛⲉⲙⲁⲩⲛⲁⲛ ⲥⲏⲗⲱⲙ ⲛⲉⲙⲫⲁⲣⲉⲥ ⲛⲉⲙⲍⲁⲣⲁ ⲁϥⲙⲟⲩ ⲇⲉ ⲛϫⲉ**ⲏⲣ** ⲛⲉⲙⲁⲩⲛⲁⲛ ϧⲉⲛⲡⲕⲁϩⲓ ⲛⲭⲁⲛⲁⲁⲛ ⲁⲩϣⲱⲡⲓ ⲇⲉ ⲛϫⲉⲛⲉⲛϣⲏⲣⲓ ⲙⲫⲁⲣⲉⲥ ⲉⲥⲣⲱⲙ ⲛⲉⲙⲓⲉⲙⲟⲩⲏⲗ",
+      "english": "And the sons of Judas; Er, and Aunan, and Selom, and Phares, and Zara: and Er and Aunan died in the land of Chanaan.",
+      "source": "01_Genesis_46",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:46",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲩⲛⲁⲛ",
+        2,
+        18.525
+      ],
+      [
+        "ⲩⲛⲁⲛ",
+        2,
+        17.94
+      ],
+      [
+        "ⲉⲗⲉⲍⲉⲣ",
+        1,
+        16.525
+      ],
+      [
+        "ⲥⲏⲗⲱⲙ",
+        2,
+        16.525
+      ],
+      [
+        "ⲕⲱⲥⲁⲙ",
+        1,
+        16.525
+      ],
+      [
+        "ⲁⲗⲙⲁⲇⲁⲙ",
+        1,
+        16.525
+      ],
+      [
+        "ⲛⲉⲣⲡⲉⲑⲛⲁⲛⲉ",
+        1,
+        14.94
+      ],
+      [
+        "ⲁⲥⲟⲩⲁϩⲧⲟⲧⲥ",
+        1,
+        14.94
+      ],
+      [
+        "ⲫⲁⲣⲣⲉⲥ",
+        1,
+        14.525
+      ],
+      [
+        "ⲫⲁ",
+        4,
+        14.124
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲥ",
+        2,
+        12.797
+      ],
+      [
+        "ⲓⲏⲥⲟⲩ",
+        1,
+        11.033
+      ],
+      [
+        "ϯⲣⲉⲛ",
+        1,
+        10.718
+      ],
+      [
+        "ⲥϣⲉ",
+        1,
+        10.296
+      ],
+      [
+        "ⲁ",
+        7,
+        10.242
+      ],
+      [
+        "ⲛⲉⲙ",
+        5,
+        10.038
+      ],
+      [
+        "ⲙⲁⲛ",
+        1,
+        10.017
+      ],
+      [
+        "ⲙⲟⲩ",
+        2,
+        9.767
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        8.881
+      ],
+      [
+        "ⲙⲓⲥⲓ",
+        1,
+        8.68
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲙⲉϩϥⲧⲟ",
+        1,
+        18.598
+      ],
+      [
+        "ⲛⲁⲛ",
+        1,
+        14.791
+      ],
+      [
+        "ⲭⲉⲓⲙⲁⲣⲣⲟⲥ",
+        1,
+        13.206
+      ],
+      [
+        "ϣⲉ",
+        2,
+        12.182
+      ],
+      [
+        "ⲩϣⲏ",
+        1,
+        10.276
+      ],
+      [
+        "ⲟⲩⲱϩ",
+        1,
+        9.267
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲁϣ",
+        1,
+        9.051
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.313
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        7.743
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.84
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.664
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.819
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲏⲣ_0_node",
+          6
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲁⲣⲉⲥ",
+          1
+        ],
+        [
+          "ⲫⲁⲣⲉⲥ_1_post_ⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲍⲁⲣⲁ",
+          1
+        ],
+        [
+          "ⲍⲁⲣⲁ_1_post_ⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏⲣ_0_node",
+          "ⲛⲉⲙ_2_post_ⲫⲁⲣⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲁⲣⲉⲥ",
+          "ⲫⲁⲣⲉⲥ_1_post_ⲏⲣ",
+          1
+        ],
+        [
+          "ⲫⲁⲣⲉⲥ_1_post_ⲏⲣ",
+          "ⲛⲉⲙ_2_post_ⲍⲁⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲍⲁⲣⲁ",
+          "ⲍⲁⲣⲁ_1_post_ⲏⲣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲏⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.11,
+      "rank": 2275,
+      "count": 9
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C714",
+      "type": "cf",
+      "label": "fellow, companion"
+    }
+  ],
+  "etym": {
+    "egy_num": "28510",
+    "egy_lemma": "jr.j",
+    "demo_num": "d632",
+    "demo_lemma": "ı ͗rj",
+    "english": "fellow; companion",
+    "german": "Zugehöriger; Genosse",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/28510",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d632"
+  }
+}

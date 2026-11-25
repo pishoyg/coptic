@@ -1,0 +1,109 @@
+{
+  "id": "C6265",
+  "forms": [
+    {
+      "id": "CF14540",
+      "orth": "ϥⲓ ⲙⲙⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1457,
+        "count": 53
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6953",
+      "bibliography": "CD 622b; KoptHWb 344; ChLCS 85a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲉⲡⲙⲁ ⲛⲧⲡⲟⲛⲏⲣⲓⲁ ⲙⲡⲡⲟⲛⲏⲣⲟⲥ ⲛⲣⲱⲙⲉ ϣⲁⲣⲉⲧⲙⲛⲧⲁⲅⲁⲑⲟⲥ ⲙⲡⲁⲅⲁⲑⲟⲥ ⲛⲣⲱⲙⲉ **ϥⲓ **ⲙⲙⲁⲩ**** ⲛⲧⲡⲟⲛⲏⲣⲓⲁ ⲙⲡⲣⲱⲙⲉ ⲛϫⲁϫⲉ ·",
+      "english": "For, in place of the wickedness of the wicked person, the goodness of the good person removes the wickedness of the hostile person.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉⲥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲧⲟⲡⲟⲥ ⲁⲥⲱϣ ⲉⲃⲟⲗ · ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ · ϯⲥⲟⲡ ⲙⲙⲟⲕ ⲛⲁ ⲛⲁⲓ · **ⲛⲅϥⲓ **ⲙⲙⲁⲩ**** ϩⲓϫⲱⲓ ⲙⲡⲉⲓϩⲓⲥⲉ · ϫⲉⲛⲧⲕⲟⲩϩⲁⲅⲓⲟⲥ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "And when she had entered into the shrine she cried out, saying, 'O my Lord Saint Victor, I entreat thee to have compassion upon me, and to remove from me these pains which I suffer, for thou art a saint of God.'",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ **ϥⲓ **ⲙⲙⲁⲩ**** ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲉⲧⲧⲟ ϩⲓⲱⲱⲕ ⲁϥⲛⲟϫϥ ⲉⲃⲟⲗ ϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ϫⲉⲕⲁⲥ ⲉⲣⲉⲛⲉⲛⲧⲁϥϫⲟⲟⲩ ϫⲱⲕ ⲉⲃⲟⲗ ⲛϥϫⲟⲟⲩ ⲙⲡⲉϥϣⲏⲣⲉ ⲉⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "God removed the righteousness wherewith he was arrayed, and He cast him forth from Paradise, in order that the things which He spake might be fulfilled [when] He should send His Son into the world.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1258,
+      "count": 53
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C13017",
+      "label": "ϥⲁⲓ-",
+      "pos": "N",
+      "gloss": "carrier"
+    },
+    {
+      "target": "C6260",
+      "label": "ϥⲓ",
+      "pos": "V",
+      "gloss": "bear, carry, take"
+    },
+    {
+      "target": "C6263",
+      "label": "ϥⲓ ϩⲁ-",
+      "pos": "V",
+      "gloss": "support, tolerate; rise up/above"
+    },
+    {
+      "target": "C6264",
+      "label": "ϥⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take, take away"
+    },
+    {
+      "target": "C6262",
+      "label": "ϥⲓ ⲙⲛ",
+      "pos": "V",
+      "gloss": "agree with"
+    },
+    {
+      "target": "C6261",
+      "label": "ϥⲓⲧⲟⲟⲧ",
+      "pos": "V",
+      "gloss": "raise (hand), begin"
+    },
+    {
+      "target": "C6267",
+      "label": "ⲃⲁⲓⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "wine measure(?)"
+    },
+    {
+      "target": "C6266",
+      "label": "ⲙⲛⲧϥⲓ",
+      "pos": "N",
+      "gloss": "patience"
+    }
+  ]
+}

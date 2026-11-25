@@ -1,0 +1,245 @@
+{
+  "id": "C4187",
+  "forms": [
+    {
+      "id": "CF10321",
+      "orth": "ϫⲓⲛⲧⲁⲕⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6668,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4750",
+      "bibliography": "CD 406a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡ**ϫⲓⲛⲧⲁⲕⲟ** ⲛⲛⲓⲁⲥⲥⲩⲣⲓⲟⲥ ⲉⲃⲟⲗϩⲁ ⲡⲕⲁϩⲓ ⲛⲉⲙⲉⲃⲟⲗϩⲓϫⲉⲛ ⲛⲁⲧⲱⲟⲩ ⲟⲩⲟϩ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩϩⲱⲙⲓ ⲉϫⲱⲟⲩ ⲟⲩⲟϩ ⲉⲩⲉⲱⲗⲓ ⲙⲡⲟⲩⲛⲁϩⲃⲉϥ ⲉⲃⲟⲗϩⲓϫⲱⲟⲩ ⲟⲩⲟϩ ⲛⲟⲩϣⲏⲣⲓ ⲉⲩⲉⲟⲗⲟⲩ ⲉⲃⲟⲗϩⲓ ⲛⲟⲩⲙⲟϯ .",
+      "english": "even to destroy the Assyrians upon my land, and upon my mountains: and they shall be for trampling; and their yoke shall be taken away from them, and their glory shall be taken away from their shoulders.",
+      "source": "23_Isaias_14",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲙϩⲁⲛⲥⲙⲏ ⲉⲩⲓⲏⲥⲟⲩⲥ ⲉⲩϣⲧⲉⲣⲑⲱⲣ ⲉⲃⲟⲗϧⲉⲛ ⲛⲓⲙⲁⲛϣⲁⲓ ⲛⲉⲙⲉⲃⲟⲗ ⲥⲁⲡⲉⲙϩⲓⲧ ⲉϥⲉⲓ ⲉϧⲟⲩⲛ ϧⲉⲛⲟⲩⲙⲃⲟⲛ ⲉϥⲟϣ ⲉⲡ**ϫⲓⲛⲧⲁⲕⲟ** ⲟⲩⲟϩ ⲉⲡϫⲓⲛⲓⲣⲓ ⲛϩⲁⲛⲙⲏϣ ⲛⲁⲛⲁⲑⲉⲙⲁ .",
+      "english": "...",
+      "source": "27_Daniel_13",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓⲛⲓⲣⲓ",
+        1,
+        15.373
+      ],
+      [
+        "ⲁⲥⲥⲩⲣⲓⲟⲥ",
+        1,
+        12.587
+      ],
+      [
+        "ⲟϣ",
+        1,
+        10.812
+      ],
+      [
+        "ⲡ",
+        3,
+        9.374
+      ],
+      [
+        "ⲟϩⲓ",
+        1,
+        9.173
+      ],
+      [
+        "ⲉ",
+        3,
+        8.772
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲓ_1_post_ϫⲓⲛⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ϩⲱⲙⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲧⲁⲕⲟ_0_node",
+          "ⲟⲩⲟϩ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϣⲱⲡⲓ",
+          "ⲉⲩⲉ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_2_post_ϣⲱⲡⲓ",
+          "ϣⲱⲡⲓ_1_post_ϫⲓⲛⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲓ_1_post_ϫⲓⲛⲧⲁⲕⲟ",
+          "ⲉ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣⲱⲡⲓ",
+          "ⲩ_4_post_ϩⲱⲙⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 6146,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C29",
+      "type": "cf",
+      "label": "decay, loss, destruction"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4179",
+      "label": "ⲁⲧⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "imperishable"
+    },
+    {
+      "target": "C4180",
+      "label": "ⲙⲛⲧⲁⲧⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "incorruptibility"
+    },
+    {
+      "target": "C4186",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲕⲉ ϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deception"
+    },
+    {
+      "target": "C4184",
+      "label": "ⲣⲉϥⲧⲁⲕⲉϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C4185",
+      "label": "ⲣⲉϥⲧⲁⲕⲉϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C4181",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destroyer"
+    },
+    {
+      "target": "C4182",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destroyer"
+    },
+    {
+      "target": "C4183",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "perishable"
+    },
+    {
+      "target": "C4177",
+      "label": "ⲧⲁⲕⲟ",
+      "pos": "V",
+      "gloss": "destroy, lose; perish, be lost, be destroyed"
+    },
+    {
+      "target": "C4178",
+      "label": "ⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destruction, perdition"
+    }
+  ]
+}

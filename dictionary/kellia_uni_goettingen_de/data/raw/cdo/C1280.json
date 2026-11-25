@@ -1,0 +1,142 @@
+{
+  "id": "C1280",
+  "forms": [
+    {
+      "id": "CF3965",
+      "orth": "ⲛⲭⲱⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7369,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS1484",
+      "bibliography": "CD 114a; KoptHWb 66"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲥⲥϧⲏⲟⲩⲧ ϫⲉⲡⲁⲏⲓ ⲉⲩⲉⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲟⲩⲏⲓ ⲙⲡⲣⲟⲥⲉⲩⲭⲏ ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲧⲉⲧⲉⲛⲓⲣⲓ ⲙⲙⲟϥ ⲙⲙⲁ**ⲛⲭⲱⲡ** ⲛⲥⲟⲛⲓ .",
+      "english": "He said to them, 'It is written, 'My house shall be called a house of prayer,'",
+      "source": "01_Matthew_21",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲛⲓ",
+        1,
+        14.651
+      ],
+      [
+        "ⲙⲙⲁ",
+        1,
+        14.608
+      ],
+      [
+        "ⲓⲣⲓ",
+        1,
+        9.685
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        7.368
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲭⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲭⲱⲡ",
+          1
+        ],
+        [
+          "ⲥⲟⲛⲓ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲭⲱⲡ_0_node",
+          "ⲛ_1_post_ⲛⲭⲱⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲭⲱⲡ",
+          "ⲥⲟⲛⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6838,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1279",
+      "label": "ϧⲉⲛ ⲟⲩⲭⲱⲡ",
+      "pos": "ADV",
+      "gloss": "secretly"
+    },
+    {
+      "target": "C1276",
+      "label": "ⲕⲱⲡ",
+      "pos": "V",
+      "gloss": "hide, be hidden; hide"
+    },
+    {
+      "target": "C1277",
+      "label": "ⲕⲱⲡ",
+      "pos": "N",
+      "gloss": "hiding, concealment"
+    },
+    {
+      "target": "C1278",
+      "label": "ⲙⲁ ⲛⲭⲱⲡ",
+      "pos": "N",
+      "gloss": "hiding place"
+    }
+  ]
+}

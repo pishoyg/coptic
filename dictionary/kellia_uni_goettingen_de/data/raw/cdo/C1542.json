@@ -1,0 +1,198 @@
+{
+  "id": "C1542",
+  "forms": [
+    {
+      "id": "CF4520",
+      "orth": "ⲣⲉϥϩⲓⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8055,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1800",
+      "bibliography": "CD 135a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲛⲧⲁⲅⲓⲟⲛϥⲥⲩⲛⲭⲱⲣⲉⲓ ⲉⲧⲣⲉⲛⲁⲓ ϣⲱⲡⲉ · ϫⲉⲕⲁⲥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲙⲡⲉⲥⲛⲁⲩ ⲉⲣⲉⲧⲉⲡⲣⲁⲝⲓⲥ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲁⲩⲱⲛϩ ⲉⲃⲟⲗ ⲉⲥϫⲏⲕ ⲉⲃⲟⲗ · ⲧⲕⲁⲕⲓⲁ ⲙⲉⲛ ⲙⲛⲧⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ ⲙⲛⲧⲙⲛ**ⲣⲉϥϩⲓⲗⲁ** ⲛⲙⲡⲁⲣⲁⲛⲟⲙⲟⲥ · ⲡⲧⲱⲕ ⲇⲉ ⲉϩⲟⲩⲛ ⲛⲥⲟⲩⲥⲁⲛⲛⲁ ϣⲁϩⲣⲁⲓ ⲉⲡⲙⲟⲩ ·",
+      "english": "Who, however, allowed these things to take place, in order that through both sides the work of each might be made manifest and fulfil itself; on the one side wickedness, and incontinence, and calumny, and lawlessness, and on the other the perseverance of Susanna even unto death.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁⲕⲣⲓⲛⲉ ⲛⲛϩⲏⲕⲉ ⲙⲡⲗⲁⲟⲥ ⲛϥⲧⲟⲩϫⲟ ⲛⲛϣⲏⲣⲉ ⲛⲛⲉⲃⲓⲏⲛ ⲛϥⲑⲃⲃⲓⲟ ⲙⲡ**ⲣⲉϥϩⲓⲗⲁ**",
+      "english": "he shall judge the poor of the people in righteousness, and save the children of the needy; and shall bring low the false accuser.",
+      "source": "Psalms 71",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:71",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ",
+        1,
+        16.791
+      ],
+      [
+        "ⲡⲁⲣⲁⲛⲟⲙⲟⲥ",
+        1,
+        13.74
+      ],
+      [
+        "ⲙⲟⲩⲛ",
+        1,
+        13.644
+      ],
+      [
+        "ⲑⲃⲃⲓⲟ",
+        1,
+        11.331
+      ],
+      [
+        "ⲙ",
+        3,
+        9.106
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϩⲓⲗⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲛⲟⲙⲟⲥ_3_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϩⲓⲗⲁ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϩⲓⲗⲁ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲁⲣⲁⲛⲟⲙⲟⲥ_3_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7609,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1541",
+      "label": "ϩⲓⲁⲗⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1539",
+      "label": "ϩⲓⲗⲁ",
+      "pos": "V",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1540",
+      "label": "ϩⲓⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1537",
+      "label": "ⲗⲁ",
+      "pos": "N",
+      "gloss": "envy, slander"
+    },
+    {
+      "target": "C1544",
+      "label": "ⲗⲁⲃⲗⲁ",
+      "pos": "N",
+      "gloss": "eager for slander"
+    },
+    {
+      "target": "C1538",
+      "label": "ⲙⲛⲧⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1543",
+      "label": "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+      "pos": "N",
+      "gloss": "slander, calumny"
+    }
+  ]
+}

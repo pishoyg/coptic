@@ -1,0 +1,374 @@
+{
+  "id": "C10434",
+  "forms": [
+    {
+      "id": "CF27928",
+      "orth": "ⲥⲉⲙⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27929",
+      "orth": "ⲥⲉⲙⲛⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27930",
+      "orth": "ⲥⲉⲙⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5625,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF27931",
+      "orth": "ⲥⲙⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20573,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27932",
+      "orth": "ⲥⲩⲙⲛⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14095",
+      "bibliography": "DDGLC",
+      "cu_ID": "706"
+    },
+    {
+      "id": "CS14096",
+      "bibliography": "DDGLC",
+      "cu_ID": "10682"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲥⲟⲧⲡ ⲉϩⲟⲩⲛ ⲉⲡⲉⲥⲕⲟⲓⲧⲱⲛ ϫⲓⲛⲛⲧⲉⲥⲙⲛⲧⲕⲟⲩⲓ · ⲉⲁⲥⲁⲓⲁⲓ ϩⲛⲟⲩⲃⲓⲟⲥ ⲛ**ⲥⲉⲙⲛⲟⲥ** · ⲛⲧⲉⲣⲉϥϯϩⲧⲏϥ ⲇⲉ ⲛϭⲓⲡⲥⲁⲧⲁⲛⲁⲥ ⲉⲧⲉⲥⲙⲛⲧⲃⲣⲣⲉ ·",
+      "english": "She had been carefully secluded in her own chamber from her childhood, and having led a chaste life she had grown to woman's estate (now Satan had watched carefully her youthful beauty),",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲇⲓⲁⲕⲟⲛⲟⲥ ⲟⲛ ⲛⲧⲉⲓϩⲉ ⲛ**ⲥⲉⲙⲛⲟⲥ** ⲉⲙⲉⲩϫⲉ ϣⲁϫⲉ ⲥⲛⲁⲩ . ⲛⲥⲉⲟ ⲁⲛ ⲛⲣⲉϥⲥⲉ ϩⲁϩ ⲛⲏⲣⲡ . ⲉⲛϩⲉⲛⲙⲁⲓϩⲏⲩ ⲛϣⲗⲟϥ ⲁⲛ ⲛⲉ .",
+      "english": "Servants, in the same way, must be reverent, not double-tongued, not addicted to much wine, not greedy for money;",
+      "source": "54_1 Timothy_3",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲗⲗⲟ ⲛⲥⲉϣⲱⲡⲉ ⲉⲩⲧⲟⲣϩ ⲛ**ⲥⲉⲙⲛⲟⲥ** ⲛⲣⲙⲛϩⲏⲧ ⲉⲩⲟⲩⲟϫ ϩⲛⲧⲡⲓⲥⲧⲓⲥ ϩⲛⲧⲁⲅⲁⲡⲏ ϩⲛⲧϩⲩⲡⲟⲙⲟⲛⲏ .",
+      "english": "that older men should be temperate, sensible, sober minded, sound in faith, in love, and in patience:",
+      "source": "56_Titus_2",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥⲥⲁϫⲓ",
+        1,
+        16.373
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        2,
+        14.947
+      ],
+      [
+        "ⲙⲉⲧⲁⲧⲧⲁⲕⲟ",
+        1,
+        13.914
+      ],
+      [
+        "ⲱ",
+        2,
+        13.135
+      ],
+      [
+        "ⲃⲱⲕ",
+        2,
+        12.351
+      ],
+      [
+        "ⲥⲁⲃⲉ",
+        1,
+        11.54
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.261
+      ],
+      [
+        "ⲛ",
+        6,
+        10.024
+      ],
+      [
+        "ⲉ",
+        5,
+        9.661
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        2,
+        8.962
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        8.758
+      ],
+      [
+        "ⲩ",
+        3,
+        8.554
+      ],
+      [
+        "ⲃ",
+        1,
+        8.387
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.744
+      ],
+      [
+        "ⲙ",
+        2,
+        6.261
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.432
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        4.991
+      ],
+      [
+        ".",
+        1,
+        3.294
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲟⲣϩ",
+        1,
+        16.598
+      ],
+      [
+        "ⲣⲙⲛϩⲏⲧ",
+        1,
+        13.313
+      ],
+      [
+        "ϯϩⲧⲏ",
+        1,
+        12.059
+      ],
+      [
+        "ⲃⲓⲟⲥ",
+        1,
+        11.448
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        1,
+        11.428
+      ],
+      [
+        "ⲩ",
+        5,
+        10.775
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ⲛ",
+        6,
+        9.564
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        8.144
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        7.941
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        7.928
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.146
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲉⲙⲛⲟⲥ",
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          "ⲛ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          "ⲥⲁⲃⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲟⲥ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲉⲙⲛⲟⲥ",
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲙⲛⲟⲥ_0_node",
+          "ⲁⲩⲱ_3_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲡⲓⲥⲧⲟⲥ",
+          "ⲙ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲙⲛⲟⲥ",
+          "ⲡⲓⲥⲧⲟⲥ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5186,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "1949",
+    "grl_lemma": "σεμνός",
+    "grl_meaning": "revered, august, holy",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1591a; Preisigke 2:453"
+  }
+}

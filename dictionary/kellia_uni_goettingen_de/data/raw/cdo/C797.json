@@ -1,0 +1,111 @@
+{
+  "id": "C797",
+  "forms": [
+    {
+      "id": "CF2925",
+      "orth": "ⲣⲉϥⲥⲉⲏⲣⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9175,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS947",
+      "bibliography": "CD 67b; ChLCS 12b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲓ ⲛϭⲓⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲉϥⲟⲩⲱⲙ ⲁⲩⲱ ⲉϥⲥⲱ . ⲡⲉϫⲁⲩ ϫⲉⲉⲓⲥⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥⲟⲩⲱⲙ ⲁⲩⲱ ⲛ**ⲣⲉϥⲥⲉⲏⲣⲡ** ⲛϣⲃⲏⲣⲧⲉⲗⲱⲛⲏⲥ ϩⲓⲣⲉϥⲣⲛⲟⲃⲉ . ⲁⲩⲱ ⲁⲥⲧⲙⲁⲓⲟ ⲛϭⲓⲧⲥⲟⲫⲓⲁ ⲉⲃⲟⲗ ϩⲛⲛⲉⲥϩⲃⲏⲩⲉ .",
+      "english": "The Son of Man came eating and drinking, and they say, 'Behold, a gluttonous man and a drunkard, a friend of tax collectors and sinners!' But wisdom is justified by her children.'",
+      "source": "40_Matthew_11",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲉⲓ ⲉϥⲟⲩⲱⲙ ⲉϥⲥⲱ ⲡⲉϫⲏⲧⲛ ϫⲉⲓⲏⲥⲟⲩⲥⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥⲟⲩⲱⲙ ⲁⲩⲱ ⲛ**ⲣⲉϥⲥⲉⲏⲣⲡ** ⲛϣⲃⲏⲣ ⲛⲧⲉⲗⲱⲛⲏⲥ ϩⲓⲣⲉϥⲣⲛⲟⲃⲉ .",
+      "english": "The Son of Man has come eating and drinking, and you say, 'Behold, a gluttonous man, and a drunkard; a friend of tax collectors and sinners!'",
+      "source": "42_Luke_7",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲟⲩⲱⲙ",
+        2,
+        21.598
+      ],
+      [
+        "ⲧⲉⲗⲱⲛⲏⲥ",
+        2,
+        17.013
+      ],
+      [
+        "ϣⲃⲏⲣ",
+        2,
+        14.685
+      ],
+      [
+        "ⲛ",
+        7,
+        11.231
+      ],
+      [
+        "ϩⲓ",
+        1,
+        8.231
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8739,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C794",
+      "label": "ⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine"
+    },
+    {
+      "target": "C795",
+      "label": "ⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine"
+    },
+    {
+      "target": "C798",
+      "label": "ⲥⲁ ⲛⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine-dealer"
+    },
+    {
+      "target": "C796",
+      "label": "ⲥⲁⲩⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine-drinker"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "C2080",
+  "forms": [
+    {
+      "id": "CF5855",
+      "orth": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5856",
+      "orth": "ⲙⲟⲉⲓⲧ ⲙⲟϣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5857",
+      "orth": "ⲙⲱⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF5858",
+      "orth": "ⲙⲱⲓⲧ ⲙⲟϣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2410",
+      "bibliography": "CD 188b; ChLCS 25a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2079",
+      "label": "ϫⲁϫⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "making path rough, difficult(?)"
+    },
+    {
+      "target": "C2077",
+      "label": "ϫⲁⲩⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    },
+    {
+      "target": "C2074",
+      "label": "ϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "V",
+      "gloss": "take road, lead, guide"
+    },
+    {
+      "target": "C2073",
+      "label": "ϯ ⲙⲡⲓⲙⲱⲓⲧ",
+      "pos": "V",
+      "gloss": "give way, occasion"
+    },
+    {
+      "target": "C2076",
+      "label": "ⲙⲉⲧⲣⲉϥϭⲓⲙⲱⲓⲧ",
+      "pos": "N",
+      "gloss": "leading, guidance"
+    },
+    {
+      "target": "C2078",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲁⲩⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leadership"
+    },
+    {
+      "target": "C2072",
+      "label": "ⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "road, path; place"
+    },
+    {
+      "target": "C2081",
+      "label": "ⲙⲱⲓⲧ ⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passage"
+    },
+    {
+      "target": "C2075",
+      "label": "ⲣⲉϥϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    }
+  ]
+}

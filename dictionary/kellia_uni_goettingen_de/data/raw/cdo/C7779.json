@@ -1,0 +1,104 @@
+{
+  "id": "C7779",
+  "forms": [
+    {
+      "id": "CF17623",
+      "orth": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8647",
+      "bibliography": "CD 822ab; KoptHWb 459; ChLCS 108b"
+    },
+    {
+      "id": "CS8648",
+      "bibliography": "CD 822ab; KoptHWb 459; ChLCS 108b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7782",
+      "label": "ϩⲛ ⲟⲩϫⲓⲛϭⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "unjustly, unfairly"
+    },
+    {
+      "target": "C7780",
+      "label": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "violence, iniquity, force"
+    },
+    {
+      "target": "C7781",
+      "label": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "unrighteous, unjust"
+    },
+    {
+      "target": "C7775",
+      "label": "ϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "might, violence, injustice(?)"
+    },
+    {
+      "target": "C7776",
+      "label": "ϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "violent, forcible"
+    },
+    {
+      "target": "C7783",
+      "label": "ⲙⲛⲧϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "injustice"
+    },
+    {
+      "target": "C7786",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "injustice, oppression"
+    },
+    {
+      "target": "C7778",
+      "label": "ⲛϫⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "hardly"
+    },
+    {
+      "target": "C7777",
+      "label": "ⲛϭⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "by force, forcibly, violently"
+    },
+    {
+      "target": "C7784",
+      "label": "ⲣϫⲓⲛϭⲟⲛⲥ",
+      "pos": "V",
+      "gloss": "do wrong"
+    },
+    {
+      "target": "C7785",
+      "label": "ⲣⲉϥϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "oppressor"
+    }
+  ]
+}

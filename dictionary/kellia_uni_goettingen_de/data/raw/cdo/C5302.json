@@ -1,0 +1,217 @@
+{
+  "id": "C5302",
+  "forms": [
+    {
+      "id": "CF12573",
+      "orth": "ⲟⲩⲟⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4552,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5950",
+      "bibliography": "CD 509a; CED 223; KoptHWb 284; DELC 242a; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲓϯⲉⲝⲟⲩⲥⲓⲁ ⲛⲁⲕ ⲉϩⲱⲙ ⲉϫⲛⲛϩⲟϥ ⲙⲛⲛ**ⲟⲩⲟⲟϩⲉ** · ⲁⲩⲱ ⲉϫⲛⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡϫⲁϫⲉ ⁛—",
+      "english": "Did I not give unto thee the power to trample under thy feet vipers and scorpions, and all the might of the Enemy?",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲓϯ ⲛⲏⲧⲛ ⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲉϩⲱⲙ ⲉϫⲛⲛϩⲟϥ ⲛⲙ**ⲟⲩⲟⲟϩⲉ** ⲁⲩⲱ ⲉϫⲛⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡϫⲁϫⲉ ⲛⲧⲉⲧⲙⲗⲁⲁⲩ ϫⲓⲧⲏⲩⲧⲛ ⲛϭⲟⲛⲥ .",
+      "english": "Behold, I give you authority to tread on serpents and scorpions, and over all the power of the enemy. Nothing will in any way hurt you.",
+      "source": "42_Luke_10",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲧⲛⲁϩⲱⲙ ⲉϫⲛⲛϩⲟϥ ⲙⲛⲛ**ⲟⲩⲱϩⲉ** ·",
+      "english": "Ye shall tread upon serpents and scorpions.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟϥ",
+        3,
+        15.523
+      ],
+      [
+        "ϫⲁⲧϥⲉ",
+        1,
+        12.505
+      ],
+      [
+        "ⲧ",
+        7,
+        11.686
+      ],
+      [
+        "ⲑⲏⲣⲓⲟⲛ",
+        1,
+        10.339
+      ],
+      [
+        "ⲛ",
+        8,
+        10.002
+      ],
+      [
+        "ⲉϫⲛ",
+        2,
+        9.618
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.94
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.592
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        8.524
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        8.088
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        7.228
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.058
+      ],
+      [
+        "ϭⲟⲙ",
+        1,
+        7.032
+      ],
+      [
+        ".",
+        2,
+        6.75
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ϩⲓ",
+        1,
+        6.424
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        6.419
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        5.479
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.321
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲟϩⲉ_0_node",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          "ⲛ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          "ⲟⲩⲟⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲟⲟϩⲉ",
+          "ⲟⲩⲟⲟϩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3814,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5303",
+      "label": "ⲥⲓⲙ ⲛⲟⲩⲟⲟϩⲉ",
+      "pos": "N",
+      "gloss": "scorpion's grass (name of a plant)"
+    }
+  ],
+  "etym": {
+    "egy_num": "48880",
+    "egy_lemma": "wḥꜥ.t",
+    "demo_num": "d1479",
+    "demo_lemma": "wḥ(e)(.t)",
+    "english": "scorpion; scorpion venom",
+    "german": "Skorpion; Skorpiongift",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48880",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1479"
+  }
+}

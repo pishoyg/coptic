@@ -1,0 +1,105 @@
+{
+  "id": "C2354",
+  "forms": [
+    {
+      "id": "CF6450",
+      "orth": "ⲛⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    },
+    {
+      "orth": "ⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 161.39,
+        "rank": 12,
+        "count": 13688
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "pl.",
+    "tlapos": "Possessivpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2719",
+      "bibliography": "CD 259a; CED 104; KoptHWb 116; DELC 135"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲉⲣⲟⲩϩⲓ ϣⲱⲡⲓ **ⲛⲁ**ϥϩⲏⲗ ⲥⲁⲃⲟⲗ ⲛϯⲃⲁⲕⲓ",
+      "english": "When evening came, he went out of the city.",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲏⲩⲉ ⲙⲛⲡⲕⲁϩ **ⲛⲁ**ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲁⲛ ⲛⲉ ⲙⲛⲛⲉⲧⲛϩⲏⲧⲟⲩ ⲧⲏⲣⲟⲩ .",
+      "english": "Aren’t the heavens and the land Christ’s, and all that is in them?",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲟⲛ ϩⲗⲓ ⲥⲁⲃⲟⲗ ⲙⲡⲓⲣⲱⲙⲓ ⲉϥ**ⲛⲁ** ⲉϧⲟⲩⲛ ⲉⲣⲱϥ ⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲙⲙⲟϥ ⲉⲥⲟϥϥ ⲁⲗⲗⲁ ⲛⲏ ⲉⲑⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲣⲱϥ ⲙⲡⲓⲣⲱⲙⲓ .",
+      "english": "There is nothing from outside of the man, that going into him can defile him; but the things which proceed out of the man are those that defile the man.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁϩ ⲅⲁⲣ ⲛⲉ ⲙⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛ**ⲛⲁ**ⲧⲉⲓⲙⲓⲛⲉ ⲙⲁⲗⲓⲥⲧⲁ ⲉⲩϣⲟⲟⲡ ϩⲛⲧⲙⲏⲧⲉ ⲛⲛⲣⲱⲙⲉ .",
+      "english": "For there are many trials, mostly of this kind, that happen in the midst of men",
+      "source": "Apophthegmata Patrum Sahidic 124: Orsisius 1",
+      "urn": "urn:cts:copticLit:ap.124.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲱⲣⲕ ⲛⲁⲥ ϫⲉⲫⲏ ⲉⲧⲉ**ⲣⲁ**ⲉⲣⲉⲧⲓⲛ ⲙⲙⲟϥ ϯⲛⲁϯ ⲛⲉ ϣⲁⲧⲫⲁϣⲓ ⲛⲧⲁⲙⲉⲧⲟⲩⲣⲟ .",
+      "english": "He swore to her, 'Whatever you shall ask of me, I will give you, up to half of my kingdom.'",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲟⲩⲟⲓ **ⲛⲏ**ⲧⲛ ⲙⲡⲟⲛⲏⲣⲟⲥ ϫⲉⲙⲡⲉⲧⲛⲣⲡⲙⲉⲉⲩⲉ ⲙⲡϩⲓⲥⲉ ⲧⲏⲣϥ ⲉⲛⲧⲁⲡⲉⲛⲉⲓⲱⲧ ϣⲟⲡϥ ⲛⲙⲙⲏⲧⲛ ⲧⲏⲣⲧⲛ ·",
+      "english": "Because of this, woe to you evil ones that you did not think of all the toil that our father has endured with all of you.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2785",
+      "type": "cf",
+      "label": "possessive prefix sg. m."
+    },
+    {
+      "target": "C4006",
+      "type": "cf",
+      "label": "possessive prefix sg. f."
+    }
+  ],
+  "etym": {
+    "egy_num": "79580",
+    "egy_lemma": "nꜣ-n",
+    "demo_num": "dm73",
+    "demo_lemma": "nꜣj",
+    "english": "this from; the ones from (poss. pronoun prefix)",
+    "german": "die des [Possessivpräfix pl.c.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/79580",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm73"
+  }
+}

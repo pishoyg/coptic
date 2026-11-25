@@ -1,0 +1,88 @@
+{
+  "id": "C1369",
+  "forms": [
+    {
+      "id": "CF4153",
+      "orth": "ⲣⲉϥⲛⲕⲱⲱⲥ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14353,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1581",
+      "bibliography": "CD 120b; KoptHWb 70"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲯⲩⲭⲏ ⲉⲧⲛⲁⲟⲩⲁϩⲥ **ⲛⲥⲁϩⲉⲛⲣⲉϥⲛⲕⲱⲱⲥ **ⲉϩⲟⲩⲛ**** ⲏ ⲛⲥⲁϩⲉⲛⲣⲉϥⲙⲟⲩⲧⲉ ϩⲱⲥⲧⲉ ⲉⲧⲣⲉⲩⲡⲟⲣⲛⲉⲩⲉ ϩⲓⲡⲁϩⲟⲩ ⲙⲙⲟⲟⲩ ϯⲛⲁⲧⲁϫⲣⲉⲡⲁϩⲟ ⲉϫⲛⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ ⲧⲁⲧⲁⲕⲟⲥ ⲉⲃⲟⲗ ϩⲙⲡⲉⲥⲗⲁⲟⲥ",
+      "english": "And the soul that shall follow those who have in them divining spirits, or enchanters, so as to go a whoring after them; I will set my face against that soul, and will destroy it from among its people.",
+      "source": "Leviticus 20",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13952,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1372",
+      "label": "ϫⲓⲛⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial"
+    },
+    {
+      "target": "C1373",
+      "label": "ⲕⲁⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "preparation for burial, embalming; grave-clothes, shroud; corpse"
+    },
+    {
+      "target": "C1368",
+      "label": "ⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial, funeral"
+    },
+    {
+      "target": "C1366",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "dress, prepare corpse for burial, bury"
+    },
+    {
+      "target": "C1367",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "corpse"
+    },
+    {
+      "target": "C1371",
+      "label": "ⲣⲉϥⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "embalmer"
+    },
+    {
+      "target": "C1370",
+      "label": "ⲣⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "be corpse, be dead"
+    }
+  ]
+}

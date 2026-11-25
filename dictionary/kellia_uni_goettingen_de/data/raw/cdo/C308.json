@@ -1,0 +1,148 @@
+{
+  "id": "C308",
+  "forms": [
+    {
+      "id": "CF1332",
+      "orth": "ⲙⲉⲧⲁⲧⲁϭⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1333",
+      "orth": "ⲙⲉⲧⲁⲧⲁϭⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10804,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS341",
+      "bibliography": "CD 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲏⲗ ⲉⲡⲉⲑⲙⲟϣⲓ ϧⲉⲛⲟⲩ**ⲙⲉⲧⲁⲧⲁϭⲛⲓ** . ⲉϥⲉⲣϩⲱⲃ ⲛⲑⲙⲏⲓ: ⲉϥⲥⲁϫⲓ ⲛⲧⲙⲏⲓ ϧⲉⲛⲡⲉϥϩⲏⲧ .",
+      "english": "Who has not spoken craftily with is tongue, neither has done evil to his neighbour, nor taken up a reproach against them that dwelt nearest to him.",
+      "source": "19_Psalmi_14",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣϩⲱⲃ",
+        1,
+        12.103
+      ],
+      [
+        "ⲙⲟϣⲓ",
+        1,
+        10.03
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲧⲁⲧⲁϭⲛⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10256,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C311",
+      "label": "ϩⲓⲁϭⲛⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "stain sb"
+    },
+    {
+      "target": "C305",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C306",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C307",
+      "label": "ⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainless"
+    },
+    {
+      "target": "C310",
+      "label": "ⲉⲣⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stained"
+    },
+    {
+      "target": "C309",
+      "label": "ⲉⲣⲁⲧⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stainless"
+    }
+  ]
+}

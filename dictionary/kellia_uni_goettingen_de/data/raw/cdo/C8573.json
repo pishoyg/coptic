@@ -1,0 +1,179 @@
+{
+  "id": "C8573",
+  "forms": [
+    {
+      "id": "CF20186",
+      "orth": "ⲁⲯⲩⲭⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20187",
+      "orth": "ⲁⲯⲩⲭⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9128,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF20188",
+      "orth": "ⲁⲯⲩⲭⲟⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF20189",
+      "orth": "ⲁⲯⲩⲭⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10078",
+      "bibliography": "DDGLC",
+      "cu_ID": "2738"
+    },
+    {
+      "id": "CS10079",
+      "bibliography": "DDGLC",
+      "cu_ID": "5874"
+    },
+    {
+      "id": "CS10080",
+      "bibliography": "DDGLC",
+      "cu_ID": "9971"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲣⲱ ⲛ**ⲁⲯⲩⲭⲟⲛ** ⲉⲩϯ ⲛⲧⲉⲩⲥⲙⲏ ⲉⲓⲧⲉ ⲟⲩⲥⲏⲃⲉ ⲛϫⲱ ⲉⲓⲧⲉ ⲟⲩⲕⲓⲑⲁⲣⲁ ⲉⲩϣⲁⲛⲧⲙϯ ⲛⲟⲩⲡⲱⲣϫ ⲛⲛⲉⲩϩⲣⲟⲟⲩ ⲛⲁϣ ⲛϩⲉ ⲥⲉⲛⲁⲉⲓⲙⲉ ⲉⲡϫⲱ ⲉⲧⲟⲩϫⲱ ⲙⲙⲟϥ ⲏ ⲡⲉⲧⲟⲩⲕⲓⲑⲁⲣⲓⲍⲉ ⲙⲙⲟϥ .",
+      "english": "Even things without life, giving a voice, whether pipe or harp, if they didn&apos;t give a distinction in the sounds, how would it be known what is piped or harped?",
+      "source": "1 Corinthians 14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲱ",
+        2,
+        13.389
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        2,
+        12.894
+      ],
+      [
+        "ϯ",
+        2,
+        9.516
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲯⲩⲭⲟⲛ",
+          2
+        ],
+        [
+          "ⲁⲯⲩⲭⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲯⲩⲭⲟⲛ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ϯ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_pre_ⲁⲯⲩⲭⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲯⲩⲭⲟⲛ",
+          "ⲁⲯⲩⲭⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲁⲯⲩⲭⲟⲛ_0_node",
+          "ⲉ_1_post_ⲁⲯⲩⲭⲟⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲯⲩⲭⲟⲛ",
+          "ⲩ_3_post_ϯ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ϯ",
+          "ϯ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          "ⲛ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_pre_ⲁⲯⲩⲭⲟⲛ",
+          "ⲛ_1_pre_ⲁⲯⲩⲭⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8683,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2924",
+    "grl_lemma": "ἄψυχος",
+    "grl_meaning": "lifeless, inanimate, spiritless",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 299b"
+  }
+}

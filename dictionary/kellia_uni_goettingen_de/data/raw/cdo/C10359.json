@@ -1,0 +1,315 @@
+{
+  "id": "C10359",
+  "forms": [
+    {
+      "id": "CF27607",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27608",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3742,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF27609",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27610",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.0,
+        "rank": 718,
+        "count": 158
+      }
+    },
+    {
+      "id": "CF27611",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27612",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1462,
+        "count": 26
+      }
+    },
+    {
+      "id": "CF27613",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2558,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF27614",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲁ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF27615",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27616",
+      "orth": "ⲡⲣⲱⲫⲏⲧⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13956",
+      "bibliography": "DDGLC",
+      "cu_ID": "465"
+    },
+    {
+      "id": "CS13957",
+      "bibliography": "DDGLC",
+      "cu_ID": "2346"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓ**ⲡⲣⲟⲫⲏⲧⲓⲁ** ⲙⲡⲉⲣϣⲟϣϥⲟⲩ .",
+      "english": "Don't despise prophesies.",
+      "source": "13_I Thessalonians_05",
+      "urn": "urn:cts:copticLit:nt.1thess.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲁⲙⲉⲗⲉⲓ ⲉⲡⲉϩⲙⲟⲧ ⲧⲉⲧⲛϩⲏⲧⲕ ⲡⲁⲓ ⲉⲛⲧⲁⲩⲧⲁⲁϥ ⲛⲁⲕ ϩⲓⲧⲛⲟⲩ**ⲡⲣⲟⲫⲏⲧⲉⲓⲁ** . ⲁⲩⲱ ⲡⲧⲁⲗⲟ ⲛⲛϭⲓϫ ⲛⲛⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ .",
+      "english": "Don't neglect the gift that is in you, which was given to you by prophecy, with the laying on of the hands of the elders.",
+      "source": "54_1 Timothy_4",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯ**ⲡⲣⲟⲫⲏⲧⲓⲁ** ⲛⲧⲉⲁⲃⲃⲁⲕⲟⲩⲙ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ .",
+      "english": "The burden which the prophet Ambacum saw.",
+      "source": "35_Habacuc_01",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲣⲙⲛⲧⲣⲉ ⲁⲛⲅ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲥⲱⲧⲙ ⲉⲛϣⲁϫⲉ ⲛⲧⲉⲓ**ⲡⲣⲟⲫⲏⲧⲉⲓⲁ** ⲙⲡⲉⲓϫⲱⲱⲙⲉ ϫⲉⲡⲉⲧⲛⲁⲟⲩⲱϩ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲡⲛⲟⲩⲧⲉ ⲛⲁⲟⲩⲱϩ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲛⲉⲡⲗⲏⲅⲏ ⲉⲧⲥⲏϩ ⲉⲡⲉⲓϫⲱⲱⲙⲉ",
+      "english": "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book.",
+      "source": "66_Revelation_22",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛⲓⲗⲁⲥ ⲛⲁⲩⲭⲏ ⲉⲩⲙⲏⲓⲛⲓ ⲛⲛⲏ ⲉⲧⲛⲁϩϯ ⲁⲛ ⲁⲗⲗⲁ ⲛⲓⲁⲑⲛⲁϩϯ ϯ**ⲡⲣⲟⲫⲏⲧⲓⲁ** ⲇⲉ ⲛⲁⲥⲭⲏ ⲛⲛⲓⲁⲑⲛⲁϩϯ ⲁⲛ ⲁⲗⲗⲁ ⲛⲏ ⲉⲧⲛⲁϩϯ .",
+      "english": "Therefore other languages are for a sign, not to those who believe, but to the unbelieving; but prophesying is for a sign, not to the unbelieving, but to those who believe.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲟⲩⲛⲧⲁⲛ ⲇⲉ ⲙⲙⲁⲩ ⲛϩⲉⲛϩⲙⲟⲧ ⲉⲩϣⲟⲃⲉ . ⲕⲁⲧⲁⲧⲉⲭⲁⲣⲓⲥ ⲉⲛⲧⲁⲩⲧⲁⲁⲥ ⲛⲁⲛ . ⲉⲓⲧⲉ ⲟⲩ**ⲡⲣⲟⲫⲏⲧⲉⲓⲁ** ⲕⲁⲧⲁⲡϣⲓ ⲛⲧⲡⲓⲥⲧⲓⲥ .",
+      "english": "Having gifts differing according to the grace that was given to us, if prophecy, let us prophesy according to the proportion of our faith;",
+      "source": "45_Romans_12",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲱⲙⲉ",
+        3,
+        14.3
+      ],
+      [
+        "ⲧⲓⲙⲟⲑⲉⲟⲥ",
+        1,
+        12.621
+      ],
+      [
+        "ⲛ",
+        12,
+        11.394
+      ],
+      [
+        "ⲏⲥⲁⲓⲁⲥ",
+        1,
+        11.258
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        3,
+        10.895
+      ],
+      [
+        "ⲟⲩⲛⲧ",
+        1,
+        10.428
+      ],
+      [
+        ".",
+        5,
+        10.353
+      ],
+      [
+        "ⲧⲉⲓ",
+        2,
+        9.974
+      ],
+      [
+        "ⲡ",
+        7,
+        9.749
+      ],
+      [
+        "ⲡⲉⲓ",
+        2,
+        9.157
+      ],
+      [
+        "ϣⲓ",
+        1,
+        9.027
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        8.92
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        8.898
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        1,
+        8.759
+      ],
+      [
+        "ⲕ",
+        3,
+        8.438
+      ],
+      [
+        "ⲡⲣⲟⲫⲏⲧⲏⲥ",
+        1,
+        8.357
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        8.314
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.05
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        7.633
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        7.427
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲫⲏⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲫⲏⲧⲏⲥ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲟⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲫⲏⲧⲉⲓⲁ_0_node",
+          "ⲛ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲡⲣⲟⲫⲏⲧⲏⲥ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲫⲏⲧⲏⲥ_3_post_ⲛⲉ",
+          "ⲛⲧ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲓⲁ",
+          "ⲁ_3_post_ϫⲟⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3366,
+      "count": 9
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4631,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2575",
+    "grl_lemma": "προφητεία",
+    "grl_meaning": "prophecy, oracular reponse",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1539b; Preisigke 2:427"
+  }
+}

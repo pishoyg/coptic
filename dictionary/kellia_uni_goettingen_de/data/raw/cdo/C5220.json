@@ -1,0 +1,58 @@
+{
+  "id": "C5220",
+  "forms": [
+    {
+      "id": "CF12407",
+      "orth": "ϭⲓⲛⲟⲩⲱⲧⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5863",
+      "bibliography": "CD 497b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5218",
+      "label": "ⲟⲩⲱⲧⲛ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C5219",
+      "label": "ⲟⲩⲱⲧⲛ",
+      "pos": "N",
+      "gloss": "libation, offering"
+    },
+    {
+      "target": "C5221",
+      "label": "ⲟⲩⲱⲧⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pour forth"
+    },
+    {
+      "target": "C5222",
+      "label": "ⲟⲩⲱⲧⲛ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "libation"
+    }
+  ]
+}

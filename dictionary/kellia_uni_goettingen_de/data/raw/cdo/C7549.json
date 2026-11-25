@@ -1,0 +1,217 @@
+{
+  "id": "C7549",
+  "forms": [
+    {
+      "id": "CF17157",
+      "orth": "ϭⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7770,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8368",
+      "bibliography": "CD 802a; CED 324; KoptHWb 447; DELC 336b; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲁϥϣⲉⲡⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲉⲧⲃⲏⲏⲧⲛ ⲁⲛⲟⲛ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ϫⲉϫⲉⲕⲁⲥ ⲉϥⲉⲭⲁⲣⲓⲍⲉ ⲛⲁⲛ ⲙⲡⲉⲓⲛⲟϭ ⲛⲟⲩ**ϭⲁⲓ** ⲛⲧⲉⲧⲙⲉⲧⲁⲛⲟⲓⲁ ·",
+      "english": "...",
+      "source": "On Repentance and Continence (Budge ed.)",
+      "urn": "urn:cts:copticLit:pstheophilus.repentance.budge_ed:1-59",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲁⲛⲟⲃⲉ · ⲟ ⲛⲛⲟϭ ⲡⲁⲣⲁ ⲛⲁⲟⲩⲟⲛ ⲛⲓⲙ · ⲛϥⲧⲙⲕⲣⲓⲛⲉ ⲛⲗⲁⲁⲩ ⲁⲩⲱ ⲛϥⲧⲙ**ϭⲁⲓ** ⲉⲗⲁⲁⲩ ⲛⲧⲕ ⲛⲓⲙ ·",
+      "english": "My sins are greater than those of every other man' he judgeth no man in any way whatsoever, and he abuseth no man.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲧⲁⲛⲟⲓⲁ",
+        1,
+        11.877
+      ],
+      [
+        "ⲛⲧⲕ",
+        1,
+        11.587
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        8.935
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        8.327
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        8.298
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        7.287
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲁⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϭⲁⲓ",
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲁⲓ",
+          "ⲛ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲁⲓ",
+          "ϥ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲁⲓ",
+          "ⲧⲙ_1_pre_ϭⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϭⲁⲓ",
+          "ϭⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ϭⲁⲓ_0_node",
+          "ⲉ_1_post_ϭⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7313,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "166140",
+    "egy_lemma": "gꜣy",
+    "demo_num": "d6702",
+    "demo_lemma": "gy",
+    "english": "jar; bowl; flask",
+    "german": "Krug; Schale; Flasche",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6702"
+  }
+}

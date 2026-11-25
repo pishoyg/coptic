@@ -1,0 +1,104 @@
+{
+  "id": "C5432",
+  "forms": [
+    {
+      "id": "CF12835",
+      "orth": "ⲙⲛⲧⲣⲉϥⲣⲡⲱⲃϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6088",
+      "bibliography": "CD 519a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5434",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5435",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5433",
+      "label": "ⲁⲧⲱⲃϣ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C5436",
+      "label": "ⲃϣⲉ",
+      "pos": "N",
+      "gloss": "forgetfulness, carelessness, sleep"
+    },
+    {
+      "target": "C5437",
+      "label": "ⲟⲃϣⲉ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5431",
+      "label": "ⲣⲉϥⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetter"
+    },
+    {
+      "target": "C5429",
+      "label": "ⲣⲡⲱⲃϣ",
+      "pos": "V",
+      "gloss": "be forgetful/forgotten"
+    },
+    {
+      "target": "C5430",
+      "label": "ⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5427",
+      "label": "ⲱⲃϣ",
+      "pos": "V",
+      "gloss": "forget; sleep"
+    },
+    {
+      "target": "C5428",
+      "label": "ⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness; sleep"
+    }
+  ]
+}

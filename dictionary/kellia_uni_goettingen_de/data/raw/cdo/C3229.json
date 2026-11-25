@@ -1,0 +1,63 @@
+{
+  "id": "C3229",
+  "forms": [
+    {
+      "id": "CF8343",
+      "orth": "ⲉⲡⲣⲱϣⲉ",
+      "dialect": "S",
+      "oRef": "ⲉ ⲡ ⲣⲱϣⲉ"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3689",
+      "bibliography": "CD 310a; KoptHWb 170; ChLCS 43b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3230",
+      "label": "ϩⲛⲟⲩⲣⲱϣⲉ",
+      "pos": "ADV",
+      "gloss": "moderately"
+    },
+    {
+      "target": "C3228",
+      "label": "ⲣⲡⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "be, do enough"
+    },
+    {
+      "target": "C3224",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "suffice; be concerned, responsible; suffice, content"
+    },
+    {
+      "target": "C3227",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "N",
+      "gloss": "sufficiency, enough, plenty"
+    },
+    {
+      "target": "C3225",
+      "label": "ⲣⲱϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "suffice for, be fit to, responsible for"
+    },
+    {
+      "target": "C3226",
+      "label": "ⲣⲱϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "be concerned with, deal with"
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "id": "C11081",
+  "forms": [
+    {
+      "id": "CF30551",
+      "orth": "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30552",
+      "orth": "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30553",
+      "orth": "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1947,
+        "count": 32
+      }
+    },
+    {
+      "id": "CF30554",
+      "orth": "ϩⲩⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30555",
+      "orth": "ⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1656,
+        "count": 21
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15495",
+      "bibliography": "DDGLC",
+      "cu_ID": "382"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲗⲁⲧⲟⲥ ⲇⲉ ⲁϥⲉⲣϣⲫⲏⲣⲓ ϫⲉϩⲏⲇⲏ ⲁϥⲙⲟⲩ ⲟⲩⲟϩ ⲉⲧⲁϥⲙⲟⲩϯ ⲉⲡⲓ**ⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ⲁϥϣⲉⲛϥ ϫⲉⲁⲛ ⲁϥⲟⲩⲱ ⲁϥⲙⲟⲩ .",
+      "english": "Pilate marveled if he were already dead; and summoning the centurion, he asked him whether he had been dead long.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲛⲧⲟϥ ⲛⲧⲁⲡ**ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ⲉⲓ ⲛⲁⲕ ⲡⲉϫⲁⲕ ϫⲉϯⲛⲏⲩ ⲧⲁⲣⲡⲁϩⲣⲉ ⲉⲣⲟϥ ·",
+      "english": "Yet in that very hour wherein the centurion came to Thee Thou didst say, 'I am coming, I will heal him.'",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲇⲉ ⲛϫⲉⲡⲓ**ⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ⲫⲏ ⲉⲧⲟϩⲓ ⲉⲣⲁⲧϥ ⲙⲡⲉϥⲙⲑⲟ ϫⲉⲁϥϯ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲡⲉϫⲁϥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲡⲁⲓⲣⲱⲙⲓ ⲛⲉⲡϣⲏⲣⲓ ⲙⲫⲛⲟⲩϯ ⲡⲉ",
+      "english": "When the centurion, who stood by opposite him, saw that he cried out like this and breathed his last, he said, 'Truly this man was the Son of God!'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ⲇⲉ ⲙⲛⲛⲉⲧⲛⲙⲙⲁϥ ⲉⲧϩⲁⲣⲉϩ ⲉⲓⲏⲥⲟⲩⲥ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲉⲡⲕⲙⲧⲟ ⲙⲛⲛⲉⲛⲧⲁⲩϣⲱⲡⲉ ⲁⲩⲣϩⲟⲧⲉ ⲉⲙⲁⲧⲉ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲁⲙⲉ ⲛⲉ ⲡϣⲏⲣⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉ ⲡⲁⲓ .",
+      "english": "Now the centurion, and those who were with him watching Jesus, when they saw the earthquake, and the things that were done, feared exceedingly, saying, 'Truly this was the Son of God.'",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲙⲓ ⲛⲧⲟⲧϥ ⲙⲡⲓ**ⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ⲁϥϯ ⲙⲡⲓⲥⲱⲙⲁ ⲛⲧⲉⲓⲏⲥⲟⲩⲥ ⲛⲓⲱⲥⲏⲫ",
+      "english": "When he found out from the centurion, he granted the body to Joseph.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲙⲡ**ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ** ϫⲉⲃⲱⲕ ⲛⲧϩⲉ ⲛⲧⲁⲕⲡⲓⲥⲧⲉⲩⲉ ⲙⲁⲣⲉⲥϣⲱⲡⲉ ⲛⲁⲕ . ⲁⲩⲱ ⲁϥⲗⲟ ⲛϭⲓⲡⲉϥϣⲏⲣⲉ ϫⲓⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲙⲙⲁⲩ .",
+      "english": "Jesus said to the centurion, 'Go your way. Let it be done for you as you have believed.' His servant was healed in that hour.",
+      "source": "40_Matthew_8",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲓⲗⲓⲁⲣⲭⲟⲥ",
+        6,
+        18.105
+      ],
+      [
+        "ⲡⲉⲭⲟⲣⲣⲉⲓ",
+        1,
+        15.598
+      ],
+      [
+        "ⲡⲓⲣⲏ",
+        1,
+        15.598
+      ],
+      [
+        "ⲕⲟⲣⲛⲏⲗⲓⲟⲥ",
+        2,
+        15.013
+      ],
+      [
+        "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+        2,
+        13.598
+      ],
+      [
+        "ⲙⲛ",
+        14,
+        13.066
+      ],
+      [
+        "ϫⲉ",
+        13,
+        12.248
+      ],
+      [
+        "ⲛ",
+        22,
+        12.187
+      ],
+      [
+        "ϩⲉⲛ",
+        8,
+        12.074
+      ],
+      [
+        "ϥ",
+        17,
+        11.784
+      ],
+      [
+        "ⲡ",
+        17,
+        11.759
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        2,
+        11.532
+      ],
+      [
+        "ⲙⲏⲣ",
+        2,
+        11.303
+      ],
+      [
+        "ⲡⲉⲓⲗⲁⲟⲥ",
+        1,
+        11.276
+      ],
+      [
+        "ⲉ",
+        13,
+        10.918
+      ],
+      [
+        "ⲁ",
+        12,
+        10.799
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        5,
+        10.71
+      ],
+      [
+        "ϩⲣⲱⲙⲏ",
+        1,
+        10.644
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        2,
+        10.621
+      ],
+      [
+        "ⲇⲉ",
+        7,
+        10.408
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          6
+        ],
+        [
+          "ⲡ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          3
+        ],
+        [
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          12
+        ],
+        [
+          "ⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲏⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲛⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_6_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲧ_7_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϥⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲭⲟⲣⲣⲉⲓ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϥⲁⲓ_b",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϥⲁⲓ",
+          1
+        ],
+        [
+          "ϥⲁⲓ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ⲡ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ⲛⲏⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲏⲩ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ⲛⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ϩⲉⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          "ⲛ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ϣⲟⲟⲡ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_3_post_ⲉⲧ",
+          "ⲉϫⲛ_6_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_6_post_ϫⲱ",
+          "ⲧ_7_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ϥⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϥⲁⲓ",
+          "ⲡⲉⲭⲟⲣⲣⲉⲓ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲭⲟⲣⲣⲉⲓ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          "ⲙⲛ_2_post_ϥⲁⲓ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϥⲁⲓ_b",
+          "ⲛ_2_post_ϥⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϥⲁⲓ",
+          "ϥⲁⲓ_1_post_ϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1704,
+      "count": 32
+    }
+  },
+  "etym": {
+    "grl_ID": "632",
+    "grl_lemma": "ἑκατόνταρχος",
+    "grl_meaning": "leader of hundred",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 501a"
+  }
+}

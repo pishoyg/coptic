@@ -1,0 +1,358 @@
+{
+  "id": "C3504",
+  "forms": [
+    {
+      "id": "CF8909",
+      "orth": "ⲥⲗⲟϭⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4388,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3988",
+      "bibliography": "CD 334a; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲟⲛ ⲉϣⲁⲓⲣⲡⲙⲉⲉⲩⲉ ⲙⲡⲉ**ⲥⲗⲟϭⲗϭ** ⲙⲡⲉⲥⲥⲱⲙⲁ ·",
+      "english": "Whensoever I remembered the softness of her body,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ϯⲛⲁⲙⲟⲟϣⲉ ϩⲁⲧⲉϥϩⲏ ⲧⲁ**ⲥⲗⲟϭⲗϭ** ⲛⲛⲧⲟⲟⲩ ⲧⲁⲟⲩⲱϣϥ ⲛⲛⲣⲟ ⲛϩⲟⲙⲛⲧ ⲧⲁϩⲱⲣϥ ⲛⲛⲙⲟⲭⲗⲟⲥ ⲙⲡⲉⲛⲓⲡⲉ",
+      "english": "I will go before thee, and will level mountains: I will break to pieces brazen doors, and burst iron bars.",
+      "source": "Isaiah 45",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲁ ⲙⲡⲉⲡⲉ**ⲥⲗⲟϭⲗϭ** ⲙⲡⲉⲥⲥⲱⲙⲁ · ⲉⲧϭⲏⲛ ϯϩⲃⲁ ⲙⲡⲉⲕⲗⲟⲅⲓⲥⲙⲟⲥ · ⲉⲃⲟⲗ ϫⲉⲛⲧⲕⲟⲩϣⲏⲣⲉ ϣⲏⲙ · ⲙⲡⲛⲁⲩ ⲟⲛ ⲉⲕϣⲁϫⲉ ⲛⲙⲙⲁⲥ ⲉⲙⲛⲣⲱⲙⲉ ϩⲁϩⲧⲏⲕ ·",
+      "english": "Did not the tender softness of her body cause thine understanding to totter? For thou wast, after all, only a youth. When thou didst talk with her and there was none present with thee, did not he who shooteth arrows of evil shoot arrows into thee?",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲙⲁ",
+        4,
+        13.816
+      ],
+      [
+        "ⲧⲏⲏⲃⲉ",
+        1,
+        11.86
+      ],
+      [
+        "ⲡⲉⲥ",
+        2,
+        10.923
+      ],
+      [
+        "ⲁⲣⲁ",
+        1,
+        10.524
+      ],
+      [
+        "ⲉϫⲙ",
+        2,
+        10.399
+      ],
+      [
+        "ⲙ",
+        5,
+        9.51
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        9.143
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.568
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        8.315
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.297
+      ],
+      [
+        "ϥ",
+        4,
+        7.714
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.695
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        7.415
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.294
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.058
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.701
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.672
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.157
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        5.99
+      ],
+      [
+        "ⲁ",
+        2,
+        5.237
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲱϭⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          "ⲉ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          "ⲧⲁ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          2
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          "ϥ_2_post_ⲧⲱϭⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3691,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3501",
+      "label": "ⲁⲧⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "unobliterated"
+    },
+    {
+      "target": "C3507",
+      "label": "ⲉⲣⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "blunt"
+    },
+    {
+      "target": "C3502",
+      "label": "ⲣⲉϥⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "one who wipes out"
+    },
+    {
+      "target": "C3505",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "be blunt"
+    },
+    {
+      "target": "C3506",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "N",
+      "gloss": "bluntness"
+    },
+    {
+      "target": "C3503",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "V",
+      "gloss": "be, make smooth"
+    },
+    {
+      "target": "C3499",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "V",
+      "gloss": "smooth, smear, anoint; wipe (out), obliterate; cleave, adhere, make cleave, join"
+    },
+    {
+      "target": "C3500",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "N",
+      "gloss": "obliteration"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "id": "C7337",
+  "forms": [
+    {
+      "id": "CF16733",
+      "orth": "ⲣⲉϥϫⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3501,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8115",
+      "bibliography": "CD 784a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡϣⲟⲉⲓϫ · ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲡ**ⲣⲉϥϫⲣⲟ** ⲛⲥⲁⲟⲩⲛⲁⲙ ⲁⲩⲱ ⲛⲥⲁϩⲃⲟⲩⲣ ⲁⲡⲁ ⲁⲡⲟⲗⲗⲱ ·",
+      "english": "The gladiator of Christ, the victor to the right and left, Apa Apollo, answered,",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲅⲱⲛⲓⲥⲧⲏⲥ ⲛ**ⲣⲉϥϫⲣⲟ** ⲡϩⲁⲅⲓⲟⲥ ϩⲏⲗⲓⲁⲥ ⲁⲕⲁϩⲉⲣⲁⲧⲕ ϩⲓⲧϩⲏ ⲛⲛⲁⲡⲉⲓⲗⲏ ⲛⲛⲣⲣⲱⲟⲩ",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲣⲟ ⲇⲉ ⲁϥⲥϩⲁⲓ ⲛⲧⲙⲉϩ ⲥⲛⲧⲉ ⲛⲉⲡⲓⲥⲧⲟⲗⲏ ⲉϣⲓⲏⲧ ⲛⲧⲉⲓϩⲏ ⲛⲁⲩⲅⲟⲩⲥⲧⲟⲥ ⲛ**ⲣⲉϥϫⲣⲟ** ⲍⲏⲛⲱⲛ ⲡⲉⲧⲥϩⲁⲓ ⲉⲣⲁⲧⲟⲩ ⲛⲛⲉⲛⲉⲓⲟⲧⲉ ⲛⲉⲩⲥⲉⲃⲏⲥ ⲉⲧⲟⲩⲏϩ ϩⲛϣⲓⲏⲧ .",
+      "english": "...",
+      "source": "Life of Hilaria Leiden fragment (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1791:43-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲩⲅⲟⲩⲥⲧⲟⲥ",
+        4,
+        21.691
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ϫⲓⲛⲁⲕ",
+        1,
+        17.276
+      ],
+      [
+        "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+        1,
+        16.276
+      ],
+      [
+        "ϣⲟⲉⲓϫ",
+        2,
+        16.276
+      ],
+      [
+        "ⲡⲁⲙⲁϩⲧⲉ",
+        1,
+        15.691
+      ],
+      [
+        "ⲍⲏⲛⲱⲛ",
+        1,
+        14.469
+      ],
+      [
+        "ⲉⲩⲥⲉⲃⲏⲥ",
+        1,
+        12.817
+      ],
+      [
+        "ⲟⲩⲟⲛϩ",
+        2,
+        12.322
+      ],
+      [
+        "ⲛ",
+        12,
+        11.242
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        10.847
+      ],
+      [
+        "ⲡ",
+        8,
+        10.175
+      ],
+      [
+        "ϩⲏⲗⲓⲁⲥ",
+        1,
+        9.776
+      ],
+      [
+        "ⲛⲥⲁ",
+        2,
+        9.438
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        8.916
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        1,
+        8.875
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        8.453
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        8.237
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.054
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        7.941
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          10
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϫⲣⲟ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϫⲣⲟ",
+          2
+        ],
+        [
+          "ⲁⲩⲅⲟⲩⲥⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲍⲏⲛⲱⲛ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲍⲏⲛⲱⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_5_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ϩⲃⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_3_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲩⲥⲉⲃⲏⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲣⲟ",
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          "ⲉ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϫⲣⲟ",
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          "ϩⲟⲩⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟ_3_post_ⲡⲉ",
+          "ⲉ_1_post_ⲣⲉϥϫⲣⲟ_b",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϫⲣⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϫⲣⲟ",
+          "ⲁⲩⲅⲟⲩⲥⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          "ⲍⲏⲛⲱⲛ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲍⲏⲛⲱⲛ_2_post_ⲡ",
+          "ⲡ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣⲉϥϫⲣⲟ",
+          "ⲉⲧ_3_post_ⲍⲏⲛⲱⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲍⲏⲛⲱⲛ",
+          "ⲥϩⲁⲓ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_4_post_ⲉⲧ",
+          "ⲉⲣⲁⲧ_5_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲣⲟ",
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          "ⲛⲥⲁ_1_post_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ⲣⲉϥϫⲣⲟ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛⲥⲁ",
+          "ⲁⲩⲱ_5_post_ϩⲃⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ϩⲃⲟⲩⲣ",
+          "ⲛⲥⲁ_3_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϫⲣⲟ",
+          "ⲛ_1_pre_ⲣⲉϥϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲣⲟ",
+          "ⲣⲉϥϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϫⲣⲟ",
+          "ⲉⲩⲥⲉⲃⲏⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3133,
+      "count": 10
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7343",
+      "label": "ϫⲉⲙϫⲱⲣⲓ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7339",
+      "label": "ϫⲟⲟⲣ",
+      "pos": "VSTAT",
+      "gloss": "be strong, hard, bold"
+    },
+    {
+      "target": "C7332",
+      "label": "ϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be or become strong, firm; be or become victorious; confirm, strengthen; goad; defeat"
+    },
+    {
+      "target": "C7333",
+      "label": "ϫⲣⲟ",
+      "pos": "N",
+      "gloss": "strength; victory; health"
+    },
+    {
+      "target": "C7340",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "power, strength"
+    },
+    {
+      "target": "C7341",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strong, powerful"
+    },
+    {
+      "target": "C7344",
+      "label": "ϭⲉⲡϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7338",
+      "label": "ϭⲓⲛϫⲣⲟ",
+      "pos": "N",
+      "gloss": "victory"
+    },
+    {
+      "target": "C7348",
+      "label": "ϯϫⲣⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "encourage, console"
+    },
+    {
+      "target": "C7335",
+      "label": "ⲁⲧϫⲣⲟ",
+      "pos": "N",
+      "gloss": "unconquerable"
+    },
+    {
+      "target": "C7336",
+      "label": "ⲙⲁⲓϫⲣⲟ",
+      "pos": "N",
+      "gloss": "loving victory"
+    },
+    {
+      "target": "C7345",
+      "label": "ⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strength, prowess, feat"
+    },
+    {
+      "target": "C7334",
+      "label": "ⲣϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be victorious"
+    },
+    {
+      "target": "C7342",
+      "label": "ⲣϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "be strong"
+    },
+    {
+      "target": "C7347",
+      "label": "ⲣⲉϥϫⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "strong man"
+    },
+    {
+      "target": "C7346",
+      "label": "ⲣⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "to gain strength"
+    }
+  ]
+}

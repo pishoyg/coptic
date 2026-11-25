@@ -1,0 +1,100 @@
+{
+  "id": "C645",
+  "forms": [
+    {
+      "id": "CF2440",
+      "orth": "ϫⲓ ⲉⲕⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8785,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2441",
+      "orth": "ϫⲓ ⲉⲕⲓⲃⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS781",
+      "bibliography": "CD 54a; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲥⲟⲃⲧⲉ ⲛⲟⲩⲥⲙⲟⲩ ⲉⲃⲟⲗ ϩⲛⲣⲱⲟⲩ ⲛⲛϣⲏⲣⲉ ϣⲏⲙ ⲙⲛⲛⲉⲧ**ϫⲓⲉⲕⲓⲃⲉ** ⲉⲧⲃⲉⲛⲉⲕϫⲁϫⲉ ⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲟⲩϫⲁϫⲉ ⲙⲛⲟⲩⲣⲉϥϫⲓⲕⲃⲁ",
+      "english": "Out of the mouth of babes and sucklings hast thou perfected praise, because of thine enemies; that thou mightest put down the enemy and avenger.",
+      "source": "Psalms 8",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲉⲣⲱⲕ ϩⲛⲛⲁⲧⲟϣ ⲁⲩⲱ ⲉⲙⲟⲩⲟⲩⲧ ⲛⲛⲁϩⲣϣⲓⲣⲉ ϩⲛⲟⲩⲥⲏϥⲉ ⲁⲩⲱ ⲛⲉⲧ**ϫⲓⲉⲕⲓⲃⲉ** ⲛⲧⲟⲟⲧⲉⲕⲁⲁⲩ ⲉⲩⲕⲁϩ ⲁⲩⲱ ⲛⲁϣⲉⲉⲣⲉ ⲕⲟⲩⲓ ⲉⲧⲁⲁⲩ ⲉⲩϣⲱⲗ ⲁⲩⲱ ⲉϣⲱⲗ ⲛⲛⲁⲡⲁⲣⲑⲉⲛⲟⲥ",
+      "english": "Assur came out of the mountains from the north, he came with ten thousands of his army, the multitude whereof stopped the torrents, and their horsemen have covered the hills.",
+      "source": "Judith 16",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6373,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    },
+    {
+      "target": "ⲟⲩⲉⲙϭⲓ",
+      "type": "cf",
+      "label": "säugen (B)"
+    },
+    {
+      "target": "C1963",
+      "type": "cf",
+      "label": "suck the breast (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C644",
+      "label": "ϯ ⲉⲕⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "give breast, suckle"
+    },
+    {
+      "target": "C641",
+      "label": "ⲉⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast, nipple"
+    },
+    {
+      "target": "C642",
+      "label": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast"
+    },
+    {
+      "target": "C643",
+      "label": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast"
+    }
+  ]
+}

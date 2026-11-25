@@ -1,0 +1,249 @@
+{
+  "id": "C4807",
+  "forms": [
+    {
+      "id": "CF11578",
+      "orth": "ⲧϩⲛⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9363,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲑϩⲛⲟ⸗",
+      "dialect": "S",
+      "id": "1689.1"
+    },
+    {
+      "orth": "ⲧϩⲛⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17769,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲑϩⲛⲉ-",
+      "dialect": "S",
+      "id": "1689.3"
+    },
+    {
+      "orth": "ⲑⲛⲛⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14950,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲑⲛⲟ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3148,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲑⲛⲏⲩ†",
+      "dialect": "S",
+      "id": "1689.6"
+    },
+    {
+      "orth": "ⲧⳉⲛⲟ-",
+      "dialect": "A",
+      "id": "1689.7"
+    },
+    {
+      "orth": "ⲧϩⲛⲁ⸗",
+      "dialect": "L",
+      "id": "1689.8"
+    },
+    {
+      "orth": "ⲧϩⲛⲁⲓⲧ†",
+      "dialect": "L",
+      "id": "1689.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5426",
+      "bibliography": "CD 460b-461a; CDC 71b; CED 205; KoptHWb 259; DELC 226a; ChLCS 64b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ϣⲓⲛⲉ ⲛⲥⲁⲡⲉϥⲁϩⲟ ⲉⲙⲉϥⲱϫⲛ ⲉϥⲙⲏⲛ ⲉⲃⲟⲗ ⲡⲙⲁ ⲉⲙⲉⲣⲉϫⲟⲟⲗⲉⲥ **ⲧϩⲛⲟ** ⲉϩⲟⲩⲛ ⲙⲙⲁⲩ ⲉⲟⲩⲱⲙ ⲟⲩⲇⲉ ⲙⲉⲣⲉⲡϥⲛⲧ ⲧⲁⲕⲟ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲛⲁⲧⲱⲟⲩⲛ ⲇⲉ ⲟⲛ ϩⲛⲛⲉⲩⲙⲁ ⲛⲛⲉⲕⲟⲧⲕ ⲛⲥⲉ**ⲧϩⲛⲟ**ⲟⲩ ⲉϩⲟⲩⲛ ⲉⲙⲙⲁ ⲛⲛⲕⲟⲧⲕ ⲛⲛⲉⲧϩⲓⲧⲟⲩⲱⲟⲩ ⲉⲧⲣⲉⲩϭⲟⲙϭⲙ ϩⲛⲟⲩⲡⲁⲑⲟⲥ ⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲉⲛⲉⲧϩⲓⲧⲟⲩⲱⲟⲩ ⲉⲩⲛⲕⲧⲟⲕ ⲉⲛⲥⲉⲥⲟⲟⲩⲛ ⲁⲛ ⲏ ⲛⲧⲟϥ ⲉⲩⲥⲟⲟⲩⲛ ⲉⲩⲁⲛⲉⲭⲉ ⲛⲛⲉⲩⲉⲣⲏⲩ ⲉⲩϣⲁϫⲉ ϩⲛⲟⲩ",
+      "english": "...",
+      "source": "Acephalous Work 22: YA 311-316",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:953-967",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲙⲉ ⲙⲡⲛⲁ ⲙⲛⲡϩⲁⲡ · ⲉⲧⲣⲉϥ**ⲑⲛⲟ**ϥ ⲉϩⲟⲩⲛ ⲉⲡϫⲟⲉⲓⲥ ⲛϭⲓⲡⲉⲧϥⲓ ⲙⲡⲣⲟⲟⲩϣ ⲙⲡⲛⲁ ·",
+      "english": "For God loveth mercy and judgement, and let him draw nigh unto God Who careth (for the poor) in mercy.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲟⲗⲉⲥ",
+        1,
+        14.817
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        10.194
+      ],
+      [
+        "ⲉ",
+        5,
+        9.461
+      ],
+      [
+        "ⲛⲕⲟⲧⲕ",
+        1,
+        9.44
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        9.356
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        8.307
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.651
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.265
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.761
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ],
+      [
+        "ⲙ",
+        1,
+        3.029
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.898
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲣⲉ_1_pre_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ϫⲟⲟⲗⲉⲥ_1_pre_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ⲧϩⲛⲟ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧϩⲛⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲣⲉ_1_pre_ⲧϩⲛⲟ",
+          "ϫⲟⲟⲗⲉⲥ_1_pre_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ϫⲟⲟⲗⲉⲥ_1_pre_ⲧϩⲛⲟ",
+          "ⲧϩⲛⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧϩⲛⲟ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲧϩⲛⲟ",
+          "ⲙⲙⲁⲩ_1_post_ⲧϩⲛⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲧϩⲛⲟ",
+          "ⲉ_1_post_ⲧϩⲛⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4404,
+      "count": 5
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6686",
+      "type": "cf",
+      "label": "approach, be nigh, comply with"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4808",
+      "label": "ⲧϩⲛⲟ",
+      "pos": "N",
+      "gloss": "price agreed on in hiring, contract-price"
+    }
+  ]
+}

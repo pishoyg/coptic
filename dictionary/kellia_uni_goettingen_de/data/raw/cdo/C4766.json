@@ -1,0 +1,208 @@
+{
+  "id": "C4766",
+  "forms": [
+    {
+      "id": "CF11497",
+      "orth": "ⲣⲉϥⲧⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4107,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5383",
+      "bibliography": "CD 453b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲗⲏⲛ ϣⲁⲣⲉϩⲁϩ ⲛ**ⲣⲉϥⲧⲱϩ** ϫⲟⲟⲥ ϫⲉⲙⲏ ⲙⲛⲧⲏⲡⲁⲓ ⲧⲉϥⲥϩⲓⲙⲉ ⲙⲙⲁⲩ · ⲉϥϫⲱ ⲛⲛⲉⲓϣⲁϫⲉ ⲛϯϩⲉ ·",
+      "english": "Nevertheless, there be many a quarrelsome man who will say, 'Hath not this Demetrius his wife with him?' And he will also say these words",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲕⲁⲙⲛⲧϣⲃⲏⲣ ⲛⲁⲕ ⲙⲛⲣⲱⲙⲉ ⲛ**ⲣⲉϥⲧⲱϩ** ·",
+      "english": "Have no companionship with a restless and troublesome man,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲙⲁ ⲇⲉ ⲥⲉϫⲓⲥⲃⲱ ⲉⲣⲁⲣⲅⲟⲥ . ⲉⲩⲕⲱⲧⲉ ⲉⲛⲏⲓ . ⲟⲩ ⲙⲟⲛⲟⲛ ⲇⲉ ⲉⲩⲟ ⲛⲁⲣⲅⲟⲥ . ⲁⲗⲗⲁ ⲛⲕⲉϣⲟⲩϣⲟ . ⲁⲩⲱ ⲛ**ⲣⲉϥⲧⲱϩ** ⲉⲩϫⲱ ⲛⲛⲉⲧⲉⲙⲉϣϣⲉ .",
+      "english": "Besides, they also learn to be idle, going about from house to house. Not only idle, but also gossips and busybodies, saying things which they ought not.",
+      "source": "54_1 Timothy_5",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲩϣⲟ",
+        1,
+        16.206
+      ],
+      [
+        "ⲧⲁⲣ",
+        2,
+        14.104
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        2,
+        13.236
+      ],
+      [
+        "ϩⲁϩ",
+        2,
+        11.574
+      ],
+      [
+        "ϭⲱ",
+        2,
+        11.446
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        11.297
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        2,
+        11.18
+      ],
+      [
+        "ⲛ",
+        10,
+        10.967
+      ],
+      [
+        "ⲕ",
+        4,
+        10.045
+      ],
+      [
+        "ⲟ",
+        2,
+        9.998
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        9.309
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.103
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        8.506
+      ],
+      [
+        ".",
+        3,
+        8.505
+      ],
+      [
+        "ⲩ",
+        3,
+        7.757
+      ],
+      [
+        "·",
+        1,
+        7.371
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.837
+      ],
+      [
+        "ⲉ",
+        3,
+        6.765
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ⲥ",
+        2,
+        6.467
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3716,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4764",
+      "label": "ⲁⲙⲧⲱϩ",
+      "pos": "N",
+      "gloss": "clay mixed with chaff"
+    },
+    {
+      "target": "C4765",
+      "label": "ⲙⲱⲓⲧ ⲛⲧⲉⲡⲓⲧⲟϩ",
+      "pos": "N",
+      "gloss": "Milky Way"
+    },
+    {
+      "target": "C4767",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "chaff seller"
+    },
+    {
+      "target": "C4763",
+      "label": "ⲧⲱϩ",
+      "pos": "N",
+      "gloss": "chaff"
+    }
+  ]
+}

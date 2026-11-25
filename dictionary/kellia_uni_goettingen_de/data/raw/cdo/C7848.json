@@ -1,0 +1,45 @@
+{
+  "id": "C7848",
+  "forms": [
+    {
+      "id": "CF17761",
+      "orth": "ϭⲁⲡϭⲉⲡ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϭⲉⲡϭⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18575,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲁⲡϫⲉⲡ",
+      "dialect": "B",
+      "id": "194.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8723",
+      "bibliography": "CD 827b; KoptHWb 464; DELC 346a; ChLCS 109a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7849",
+      "label": "ϫⲁⲡϫⲉⲡ",
+      "pos": "N",
+      "gloss": "hurry, haste"
+    }
+  ]
+}

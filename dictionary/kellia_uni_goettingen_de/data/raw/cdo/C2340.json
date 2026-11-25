@@ -1,0 +1,133 @@
+{
+  "id": "C2340",
+  "forms": [
+    {
+      "id": "CF6418",
+      "orth": "ⲙϫⲁϩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14479,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙϫⲁⲧϩ",
+      "dialect": "S",
+      "id": "1167.1"
+    },
+    {
+      "orth": "ⲙϫⲁϩϫ",
+      "dialect": "S",
+      "id": "1167.2"
+    },
+    {
+      "orth": "ⲙϫⲁϩⲧ",
+      "dialect": "B",
+      "id": "1167.3"
+    },
+    {
+      "orth": "ⲙϫⲁⲧϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9924,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2698",
+      "bibliography": "CD 214a; CED 101; KoptHWb 114; DELC 133; ChLCS 31a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϣⲁⲣⲉⲡⲗⲁⲟⲥ ⲃⲱⲕ ⲉⲃⲟⲗ ⲁⲩⲱ ⲛⲥⲉⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲛⲁⲩ ⲁⲩⲱ ⲛⲉⲩⲛⲟⲩⲧⲉ ⲙⲙⲟϥ ϩⲛⲧⲙⲉⲭⲁⲛⲏ ⲁⲩⲱ ⲉⲩⲧⲛⲛⲟ ⲙⲙⲟϥ ϩⲛⲧⲉ**ⲙϫⲁϩⲧ** ⲁⲩⲱ ⲉⲩⲡⲓⲥⲉ ⲙⲙⲟϥ ϩⲛⲧϭⲁⲗⲁϩⲧ ⲁⲩⲱ ⲉⲩⲧⲁⲙⲓⲟ ⲙⲙⲟϥ ⲛϩⲉⲛⲉⲅⲕⲣⲩⲫⲓⲁⲥ ⲁⲩⲱ ⲛⲉⲣⲉⲧⲉϥϩⲏⲇⲟⲛⲏ ⲟ ⲛⲧϩⲉ ⲛⲧϯⲡⲉ ⲛⲟⲩⲁⲅⲕⲣⲓⲥ ⲉⲃⲟⲗ ϩⲛⲟⲩⲛⲉϩ",
+      "english": "And the people went through the field, and gathered, and ground it in the mill, or pounded it in a mortar, and baked it in a pan, and made cakes of it; and the sweetness of it was as the taste of wafer made with oil.",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲓⲥⲉ",
+        1,
+        16.511
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙϫⲁϩⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14078,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 9381,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "854642",
+    "egy_lemma": "mḏḥ.t",
+    "english": "mortar",
+    "german": "Mörser",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854642"
+  }
+}

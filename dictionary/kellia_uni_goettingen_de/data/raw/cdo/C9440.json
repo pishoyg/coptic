@@ -1,0 +1,128 @@
+{
+  "id": "C9440",
+  "forms": [
+    {
+      "id": "CF23923",
+      "orth": "ⲕⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23924",
+      "orth": "ⲕⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12003,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11957",
+      "bibliography": "DDGLC",
+      "cu_ID": "8686"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϩⲉⲛⲡⲉⲩ**ⲕⲓⲟⲛ** ⲁⲩⲥⲙⲛⲧⲟⲩ ⲙⲡⲟϭⲉ · ⲁⲩϣⲉⲧϣⲱⲧⲟⲩ ⲙⲡⲉⲧⲁⲗⲟⲛ ϩⲓⲗⲉⲫⲁⲛϯⲛⲟⲛ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲙⲛⲧ",
+        1,
+        14.206
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲕⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲓⲟⲛ",
+          "ⲡⲉⲩ_1_pre_ⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲓⲟⲛ",
+          "ⲕⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11577,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6626",
+    "grl_lemma": "κίων",
+    "grl_meaning": "pillar, post",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 955a"
+  }
+}

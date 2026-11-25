@@ -1,0 +1,174 @@
+{
+  "id": "C1728",
+  "forms": [
+    {
+      "id": "CF5004",
+      "orth": "ⲗⲱϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5501,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲟϥ†",
+      "dialect": "B",
+      "id": "1011.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2004",
+      "bibliography": "CD 148b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲛⲉ ⲡⲓϩⲙⲟⲩ ⲉϣⲱⲡ ⲇⲉ ⲛⲧⲉϥ**ⲗⲱϥ** ⲛϫⲉⲡⲓϩⲙⲟⲩ ⲁⲩⲛⲁⲙⲟⲗϩϥ ⲛⲟⲩ .",
+      "english": "Salt is good, but if the salt becomes flat and tasteless, with what do you season it?",
+      "source": "03_Luke_14",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲡϩⲙⲟⲩ ⲙⲡⲓⲕⲁϩⲓ ⲉϣⲱⲡ ⲇⲉ ⲛⲧⲉⲡⲓϩⲙⲟⲩ **ⲗⲱϥ** ⲁⲩⲛⲁⲙⲟⲗϩϥ ⲛⲟⲩ ⲙⲡⲁϥϣϫⲉⲙϫⲟⲙ ϫⲉⲉϩⲗⲓ ⲉⲃⲏⲗ ⲛⲥⲉϩⲓⲧϥ ⲉⲃⲟⲗ ⲛⲥⲉϩⲱⲙⲓ ⲉϫⲱϥ ⲛϫⲉⲛⲓⲣⲱⲙⲓ .",
+      "english": "'You are the salt of the earth, but if the salt has lost its flavor, with what will it be salted? It is then good for nothing, but to be cast out and trodden under the feet of men.",
+      "source": "01_Matthew_05",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲙⲟⲩ",
+        2,
+        16.651
+      ],
+      [
+        "ⲙⲟⲗϩ",
+        1,
+        14.525
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        9.049
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        8.842
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.066
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲧⲉ_1_pre_ⲗⲱϥ",
+          2
+        ],
+        [
+          "ⲗⲱϥ_0_node",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲗⲱϥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲗⲱϥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲩ_3_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲧⲉ_1_pre_ⲗⲱϥ",
+          "ⲗⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲗⲱϥ",
+          "ϥ_1_pre_ⲗⲱϥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲱϥ",
+          "ⲗⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲗⲱϥ_0_node",
+          "ⲛϫⲉ_1_post_ⲗⲱϥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲗⲱϥ",
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          "ϩⲙⲟⲩ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5016,
+      "count": 2
+    }
+  }
+}

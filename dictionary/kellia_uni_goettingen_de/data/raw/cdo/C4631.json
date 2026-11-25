@@ -1,0 +1,80 @@
+{
+  "id": "C4631",
+  "forms": [
+    {
+      "id": "CF31829",
+      "orth": "ⲁⲧⲧⲁⲩⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31828",
+      "orth": "ⲁⲧⲧⲁⲟⲩⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5232",
+      "bibliography": "CD 443b︤; CDC 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4632",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4633",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4626",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "V",
+      "gloss": "send; put forth, produce; utter, proclaim, recount, recite, repeat; give the name, say the name, call, name; overthrow"
+    },
+    {
+      "target": "C4627",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4630",
+      "label": "ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "send down, cast down; send up, bring up"
+    },
+    {
+      "target": "C4628",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C4629",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "product"
+    }
+  ]
+}

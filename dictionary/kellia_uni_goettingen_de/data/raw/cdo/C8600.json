@@ -1,0 +1,109 @@
+{
+  "id": "C8600",
+  "forms": [
+    {
+      "id": "CF20284",
+      "orth": "ⲃⲁⲥⲕⲁⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20285",
+      "orth": "ⲃⲁⲥⲕⲁⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7090,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10139",
+      "bibliography": "DDGLC",
+      "cu_ID": "1281"
+    },
+    {
+      "id": "CS10140",
+      "bibliography": "DDGLC",
+      "cu_ID": "4162"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲟ ⲛ**ⲃⲁⲥⲕⲁⲛⲟⲥ** ⲉⲣⲟ ⲙⲙⲓⲛⲙⲙⲟ · ⲉⲣⲟⲩⲱϣ ⲉⲧⲁⲕⲉⲧⲟⲩⲯⲩⲭⲏ ⲉⲧⲉⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ⲙⲡϣⲁ ⲙⲙⲟⲥ ⲁⲛ ·",
+      "english": "And you are a slanderer to you yourself, what you wish is to destroy your soul, which the whole world isn’t worthy of.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲣ",
+        2,
+        16.139
+      ],
+      [
+        "ⲙⲙⲓⲛⲙⲙⲟ",
+        2,
+        15.543
+      ],
+      [
+        "ⲟ",
+        2,
+        11.805
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        9.484
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲥⲕⲁⲛⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6639,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2925",
+    "grl_lemma": "βάσκανος",
+    "grl_meaning": "sorcerer, slanderer",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 310b"
+  }
+}

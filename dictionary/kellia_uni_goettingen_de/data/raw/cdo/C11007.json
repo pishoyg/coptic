@@ -1,0 +1,332 @@
+{
+  "id": "C11007",
+  "forms": [
+    {
+      "id": "CF30216",
+      "orth": "ⲭⲱⲣⲏⲅⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF30218",
+      "orth": "ⲭⲱⲣⲏⲅⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4186,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF30217",
+      "orth": "ⲭⲱⲣⲉⲓⲅⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30219",
+      "orth": "ⲭⲱⲣⲏⲅⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15321",
+      "bibliography": "DDGLC",
+      "cu_ID": "1555"
+    },
+    {
+      "id": "CS15322",
+      "bibliography": "DDGLC",
+      "cu_ID": "4408"
+    },
+    {
+      "id": "CS15323",
+      "bibliography": "DDGLC",
+      "cu_ID": "10206"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲁⲣⲛⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟϥ ⲛϥ**ⲭⲱⲣⲏⲅⲉⲓ** ⲛⲁⲛ · ⲙⲡϣⲱϫⲡ ⲉⲧϣϣⲉ ⲉⲧⲁⲩⲟⲟϥ ⲉⲡⲉⲓⲉⲅⲕⲱⲙⲓⲟⲛ · ⲕⲁⲧⲁⲡϣⲓ ⲛⲧⲙⲙⲛⲧⲉⲗⲁⲭⲓⲥⲧⲟⲥ ·",
+      "english": "But let us invoke him, so that he may minister unto us in respect of the remainder of the things which it is seemly for us to narrate in this encomium, according to the measure of our inability.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲙⲡⲁⲓ ⲟⲛ ⲁⲧⲉⲧⲛⲉⲓⲛⲉ ⲉϩⲟⲩⲛ ⲛⲥⲡⲟⲩⲇⲏ ⲛⲓⲙ ⲛⲧⲉⲧⲛ**ⲭⲱⲣⲏⲅⲉⲓ** ⲛⲧⲁⲣⲉⲧⲏ ⲉϩⲣⲁⲓ ⲏⲛ ⲧⲉⲧⲛⲡⲓⲥⲧⲓⲥ ⲁⲩⲱ ⲡⲥⲟⲟⲩⲛ ϩⲣⲁⲓ ⲏⲛ ⲧⲁⲣⲓⲧⲏ",
+      "english": "Yes, and for this very cause adding on your part all diligence, in your faith supply moral excellence; and in moral excellence, knowledge;",
+      "source": "61_2 Peter_1",
+      "urn": "urn:cts:copticLit:nt.2pet.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥ**ⲭⲱⲣⲏⲅⲉⲓ** ⲟⲩⲛ ⲛϩⲏⲗⲓⲁⲥ ⲛⲟⲩⲧⲣⲟⲫⲏ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ · ⲉⲧⲃⲉ ϫⲉⲁϥⲟⲩⲁϩϥ ⲛⲥⲱϥ ϩⲙⲡⲉϥϩⲏⲧ ⲧⲏⲣϥ ·",
+      "english": "Now God ministered unto Elijah with spiritual food because he followed God with his whole heart ;",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲣⲟⲫⲏ",
+        1,
+        12.433
+      ],
+      [
+        "ⲛⲁ",
+        9,
+        12.391
+      ],
+      [
+        "ⲥⲡⲟⲩⲇⲏ",
+        1,
+        12.236
+      ],
+      [
+        "ⲛ",
+        13,
+        12.103
+      ],
+      [
+        "ⲁⲣⲉⲧⲏ",
+        1,
+        11.299
+      ],
+      [
+        "ϩⲏⲗⲓⲁⲥ",
+        1,
+        10.291
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        9.497
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        8.779
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.66
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        7.402
+      ],
+      [
+        "ⲁ",
+        3,
+        6.992
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        5.641
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        5.488
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        5.482
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        5.479
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        5.423
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.386
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.267
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        4.996
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          4
+        ],
+        [
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          3
+        ],
+        [
+          "ⲟⲩⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          2
+        ],
+        [
+          "ϩⲏⲗⲓⲁⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          3
+        ],
+        [
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          "ⲛⲁ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲛ_2_post_ⲛⲁ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          "ⲙ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲛⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ϥ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          2
+        ],
+        [
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          "ⲟⲩⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ϩⲏⲗⲓⲁⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          "ⲛ_1_post_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲩ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲭⲱⲣⲏⲅⲉⲓ",
+          "ⲭⲱⲣⲏⲅⲉⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3791,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "5572",
+    "grl_lemma": "χωρηγέω",
+    "grl_meaning": "to lead, supply, furnish",
+    "grl_pos": "verb",
+    "grl_ref": "Preisigke 2:767"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "C5633",
+  "forms": [
+    {
+      "id": "CF31945",
+      "orth": "ⲓϥⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31944",
+      "orth": "ⲉⲓϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3804,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6305",
+      "bibliography": "CD 536b; CDC 82a; CED 232; KoptHWb 53, 297; DELC 252a; ChLCS\n                            73b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲩⲓ",
+        1,
+        18.11
+      ],
+      [
+        "ⲃⲉⲡ",
+        1,
+        18.11
+      ],
+      [
+        "ⲧⲩⲡⲟⲥ",
+        2,
+        16.41
+      ],
+      [
+        "ⲧⲁϫⲣⲱⲟⲩ",
+        1,
+        15.525
+      ],
+      [
+        "ϧⲉⲛ",
+        3,
+        8.933
+      ],
+      [
+        "ⲭⲁ",
+        1,
+        8.292
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        8.25
+      ],
+      [
+        "ϫⲓϫ",
+        1,
+        7.928
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.686
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        7.633
+      ],
+      [
+        "ⲩ",
+        2,
+        7.536
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        7.481
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.082
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.75
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        5.728
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓϥⲧ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5634",
+      "label": "ϣⲥ ⲛⲓϥⲧ",
+      "pos": "N",
+      "gloss": "blow/wound of nail"
+    },
+    {
+      "target": "C5632",
+      "label": "ϭⲓⲛⲱϥⲧ",
+      "pos": "N",
+      "gloss": "nailing"
+    },
+    {
+      "target": "C5635",
+      "label": "ϯⲓϥⲧ",
+      "pos": "V",
+      "gloss": "put/fix a nail"
+    },
+    {
+      "target": "C5631",
+      "label": "ⲱϥⲧ",
+      "pos": "V",
+      "gloss": "nail, fix"
+    }
+  ],
+  "etym": {
+    "egy_num": "37480",
+    "egy_lemma": "ꜥfd",
+    "english": "nail; peg",
+    "german": "Nagel; Stift",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37480"
+  }
+}

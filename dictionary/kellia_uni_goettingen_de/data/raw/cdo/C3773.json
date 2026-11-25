@@ -1,0 +1,210 @@
+{
+  "id": "C3773",
+  "forms": [
+    {
+      "id": "CF9467",
+      "orth": "ϫⲓⲛⲥⲓϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8800,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4284",
+      "bibliography": "CD 361b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲉⲥ",
+        1,
+        15.11
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        10.344
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        1,
+        9.351
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲥⲓϯ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϫⲓⲛⲥⲓϯ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ϫⲓⲛⲥⲓϯ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ⲙⲉⲧⲁⲧⲧⲁⲕⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲥⲓϯ_0_node",
+          "ⲁⲛ_1_post_ϫⲓⲛⲥⲓϯ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϫⲓⲛⲥⲓϯ",
+          "ⲉⲑ_1_post_ϫⲓⲛⲥⲓϯ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ϫⲓⲛⲥⲓϯ",
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_2_post_ⲉⲑ",
+          "ⲁⲗⲗⲁ_4_post_ⲙⲉⲧⲁⲧⲧⲁⲕⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8271,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3780",
+      "label": "ϩⲛⲁⲁⲩ ⲛⲕⲁⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3772",
+      "label": "ϫⲓⲛⲥⲓϯ",
+      "pos": "N",
+      "gloss": "sowing"
+    },
+    {
+      "target": "C3777",
+      "label": "ⲛⲉϫⲥⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "shoot arrow, throw dart"
+    },
+    {
+      "target": "C3778",
+      "label": "ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "shooter of arrows, archer"
+    },
+    {
+      "target": "C3779",
+      "label": "ⲣⲉϥⲧⲕⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "shooter of arrows, archer"
+    },
+    {
+      "target": "C3774",
+      "label": "ⲥⲉⲧⲉⲃⲣⲏϫ",
+      "pos": "N",
+      "gloss": "lightning"
+    },
+    {
+      "target": "C3771",
+      "label": "ⲥⲓϯ",
+      "pos": "N",
+      "gloss": "thing thrown, seed"
+    },
+    {
+      "target": "C3768",
+      "label": "ⲥⲓⲧⲉ",
+      "pos": "V",
+      "gloss": "throw, sow, put"
+    },
+    {
+      "target": "C3770",
+      "label": "ⲥⲓⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, vomit"
+    },
+    {
+      "target": "C3769",
+      "label": "ⲥⲓⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "throw, cast out"
+    },
+    {
+      "target": "C3775",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    },
+    {
+      "target": "C3776",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    }
+  ]
+}

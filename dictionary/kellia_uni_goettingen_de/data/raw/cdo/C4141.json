@@ -1,0 +1,43 @@
+{
+  "id": "C4141",
+  "forms": [
+    {
+      "id": "CF10227",
+      "orth": "ⲧⲃⲧⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4701",
+      "bibliography": "CD 402a; ChLCS 56b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4140",
+      "label": "ⲙⲁⲓⲧⲁⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "ornament-loving"
+    },
+    {
+      "target": "C4138",
+      "label": "ⲧⲟⲃⲧⲃ",
+      "pos": "V",
+      "gloss": "form, compound, invent"
+    },
+    {
+      "target": "C4139",
+      "label": "ⲧⲟⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "ornament"
+    }
+  ]
+}

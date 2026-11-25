@@ -1,0 +1,100 @@
+{
+  "id": "C5290",
+  "forms": [
+    {
+      "id": "CF12549",
+      "orth": "ⲟⲩⲟϣⲟⲩⲉϣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲉϣⲟⲩⲉϣ",
+      "dialect": "S",
+      "id": "1762.1"
+    },
+    {
+      "orth": "ⲟⲩⲉϣⲟⲩⲱϣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6095,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟϣⲟⲩⲉϣ",
+      "dialect": "B",
+      "id": "1762.3"
+    },
+    {
+      "orth": "ⲃⲟϣⲃⲉϣ",
+      "dialect": "B",
+      "id": "1762.4"
+    },
+    {
+      "orth": "ⲟⲩⲉϣⲟⲩⲱϣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8731,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲉϣⲟⲩⲱϣ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8731,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5937",
+      "bibliography": "CD 504b-505a; CDC 78a; CED 222; KoptHWb 283; DELC 241a; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϭⲱ ⲉⲥⲕⲱⲧϥ ϩⲛⲧⲥⲱϣⲉ ϣⲁⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ ⲁⲩⲱ ⲛⲉⲛⲧⲁⲥⲕⲟⲧϥⲟⲩ ⲁⲥ**ⲟⲩⲉϣⲟⲩⲱϣ**ⲟⲩ ⲁⲩⲣⲟⲩϣⲓ ⲛⲉⲓⲱⲧ",
+      "english": "So she gleaned in the field till evening, and beat out that she had gleaned, and it was about an ephah of barely.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6802,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 8201,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5291",
+      "label": "ⲙⲁ ⲛⲟⲩⲟϣⲟⲩⲉϣ",
+      "pos": "N",
+      "gloss": "threshing floor"
+    }
+  ],
+  "etym": {
+    "egy_num": "50310",
+    "egy_lemma": "wšwš",
+    "english": "to strike; to break into",
+    "german": "zerschlagen; aufbrechen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/50310"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "C4142",
+  "forms": [
+    {
+      "id": "CF10229",
+      "orth": "ⲧⲟⲟⲃⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7851,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4702",
+      "bibliography": "CD 402a; CED 183; KoptHWb 224; DELC 211b; ChLCS 56b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧϣⲉⲉⲣⲉ ⲛⲧⲃⲁⲃⲩⲗⲱⲛ ⲧⲧⲁⲗⲁⲓⲡⲱⲣⲟⲥ ⲛⲁⲓⲁⲧϥ ⲙⲡⲉⲧⲛⲁⲧⲱⲱⲃⲉ ⲛⲉ ⲙⲡⲟⲩⲧⲱⲱⲃⲉ ⲛⲧⲁ**ⲧⲟⲟⲃⲉϥ** ⲛⲁⲛ",
+      "english": "Wretched daughter of Babylon! blessed shall he be who shall reward thee as thou hast rewarded us.",
+      "source": "Psalms 136",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:136",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲛⲁⲛⲁⲩ ⲉⲡⲧⲱⲱⲃⲉ ⲛⲛⲣⲉϥⲣⲛⲟⲃⲉ · ⲟⲩⲙⲟⲛⲟⲛ ϫⲉⲁⲥⲙⲉϩⲉⲓⲁⲧⲥ ⲙⲙⲟⲟⲩ · ⲁⲩϩⲉ ⲉϫⲛⲛⲉⲩⲉⲣⲏⲩ ϩⲙⲡⲉⲭⲁⲟⲥ . ⲁⲗⲗⲁ ⲁⲥⲛⲁⲩ ⲟⲛ ⲉⲡⲉⲩⲕⲉⲧⲟⲩⲓⲟ ⲡⲁⲓ ⲉⲛⲧⲁⲩ**ⲧⲟⲟⲃⲉϥ** ⲛⲁⲩ · ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲛⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲙⲡⲁⲩⲑⲁⲇⲏⲥ ⲙⲉⲉⲩⲉ ⲉϥⲓ ⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲥⲟⲫⲓⲁ ⲛϩⲏⲧⲥ .",
+      "english": "and thou wilt see the requital of the sinners.' Not only hath she with her eyes beheld, how they fall one on another in the chaos, but she hath also seen the requital with which it was requited them. Just as the emanations of Self-willed have thought to take away the light of Sophia from her,",
+      "source": "Pistis Sophia Book 2 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:10-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲓⲁⲧ",
+        1,
+        12.223
+      ],
+      [
+        "ⲧⲱⲱⲃⲉ",
+        1,
+        12.139
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        10.629
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        8.31
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.95
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        7.577
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        7.193
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲃⲉϥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          2
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          "ⲩ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          "ⲧⲟⲟⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲃⲉϥ_0_node",
+          "ⲛⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ⲕⲁⲧⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          "ⲧⲁ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲟⲟⲃⲉϥ",
+          "ⲧⲟⲟⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲧⲟⲟⲃⲉϥ",
+          "ⲛ_2_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7401,
+      "count": 2
+    }
+  }
+}

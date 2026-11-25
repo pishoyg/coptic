@@ -1,0 +1,293 @@
+{
+  "id": "C10897",
+  "forms": [
+    {
+      "id": "CF29714",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29722",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6301,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF29716",
+      "orth": "ⲫⲑⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29717",
+      "orth": "ⲫⲓⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF29715",
+      "orth": "ⲫⲏⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29718",
+      "orth": "ⲫⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13826,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29719",
+      "orth": "ⲫⲩⲗⲁⲕⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29721",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29720",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲏⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29723",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲱⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29724",
+      "orth": "ⲫⲩⲗⲁⲕⲧⲩⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29725",
+      "orth": "ⲫⲩⲗⲁⲧⲩⲣⲓⲟⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29726",
+      "orth": "ⲫ︤ⲩ︦ⲣ︦ⲓ︦ⲱ︦ⲛ︥",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15045",
+      "bibliography": "DDGLC",
+      "cu_ID": "563"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲱⲣⲕ ⲉⲛⲉⲧⲛⲣⲁⲛ ⲙⲛⲛⲉⲧⲛ**ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ**",
+      "english": "I adjure your names and your amulets!",
+      "source": "Curse to undo sinews",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm100001.bku_1_5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲃ ⲇⲉ ⲛⲓⲙ ⲉⲧⲟⲩⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ϫⲉⲕⲁⲁⲥ ⲉⲣⲉⲛⲣⲱⲙⲉ ⲛⲁⲩ ⲉⲣⲟⲟⲩ . ⲥⲉⲟⲩⲱϣⲥ ⲅⲁⲣ ⲉⲃⲟⲗ ⲛⲛⲉⲩ**ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ** . ⲁⲩⲱ ⲥⲉⲕⲱ ⲛⲛⲉⲩⲧⲱⲧⲉ ⲉⲛⲁⲁⲩ .",
+      "english": "But all their works they do to be seen by men. They make their phylacteries of their garments,",
+      "source": "40_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲉⲓⲛⲉ ⲉⲃⲟⲗ ϩⲛⲛⲅⲁⲣⲡⲟⲥ · ⲛϩⲟⲓⲛⲉ ⲛⲥⲡⲟⲩⲇⲁⲟⲥ · ⲁⲩⲕⲁⲁⲩ ⲛⲧⲟⲟⲧⲟⲩ ϩⲛ ⲛⲉⲩⲏⲓ : ϩⲱⲥ **ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ** ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱϣⲥ",
+        1,
+        15.788
+      ],
+      [
+        "ⲑⲣⲟ",
+        1,
+        13.94
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        8.903
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.736
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.59
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲏⲣ",
+        1,
+        11.833
+      ],
+      [
+        "ϩⲱⲥ",
+        1,
+        10.299
+      ],
+      [
+        "ⲛⲉⲩ",
+        2,
+        10.231
+      ],
+      [
+        ":",
+        1,
+        9.821
+      ],
+      [
+        "ⲱ",
+        1,
+        8.977
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        8.651
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.15
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.094
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.498
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          "ⲛⲉⲧⲛ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ",
+          "ⲫⲩⲗⲁⲕⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5862,
+      "count": 3
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 6843,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2330",
+    "grl_lemma": "φυλακτήριον",
+    "grl_meaning": "safeguard, preservative, amulet",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1960b; Preisigke 2:708"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "C6272",
+  "forms": [
+    {
+      "id": "CF14555",
+      "orth": "ⲟⲩⲉϩϥⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20455,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6960",
+      "bibliography": "CD 623b; ChLCS 85b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲛⲧⲁⲛⲟⲙⲓⲁ ⲇⲉ ϩⲱⲱϥ ⲛⲛϩⲁⲓⲣⲉⲧⲓⲕⲟⲥ ⲁⲡⲥⲁⲧⲁⲛⲁⲥ ⲕⲁⲁⲩ ⲛⲁϥ ⲛϣⲃⲏⲣ ⲛⲧⲟⲟⲩ ⲙⲛⲛⲉⲩⲕⲉⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲧ**ⲟⲩⲉϩϥⲱ** ⲛⲧϩⲉ ⲛⲛⲉϩⲓⲟⲙⲉ .",
+      "english": "...",
+      "source": "The Lord Thundered GG 19-28 in Amélineau",
+      "urn": "urn:cts:copticLit:shenoute.thundered.amelineau:26-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲓⲗⲟⲥⲟⲫⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.526
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲉϩϥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲉϩϥⲱ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲉϩϥⲱ_0_node",
+          "ⲛ_1_post_ⲟⲩⲉϩϥⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲉϩϥⲱ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϩⲉ_3_post_ⲧ",
+          "ⲛ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲉ",
+          "ⲛⲉ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20063,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5304",
+      "type": "cf",
+      "label": "put, place, add, be placed, stay, dwell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6269",
+      "label": "ϥⲱ",
+      "pos": "N",
+      "gloss": "hair"
+    },
+    {
+      "target": "C6270",
+      "label": "ⲣⲁⲧϥⲱ",
+      "pos": "N",
+      "gloss": "hairy"
+    },
+    {
+      "target": "C6271",
+      "label": "ⲥⲕϥⲱⲟⲩ",
+      "pos": "V",
+      "gloss": "comb hair"
+    }
+  ]
+}

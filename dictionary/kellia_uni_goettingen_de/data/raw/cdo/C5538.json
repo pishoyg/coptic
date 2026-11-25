@@ -1,0 +1,112 @@
+{
+  "id": "C5538",
+  "forms": [
+    {
+      "id": "CF31937",
+      "orth": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4826,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF31936",
+      "orth": "ⲱⲣⲉⲃ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18224,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6201",
+      "bibliography": "CD 528b; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟⲕ ϫⲓ ⲛⲁⲕ ⲛⲟⲩⲗⲁⲕⲛⲧ ⲙⲡⲉⲛⲓⲡⲉ ⲛⲅⲕⲁⲁⲥ ⲛⲟⲩϫⲟⲉ ⲙⲡⲉⲛⲓⲡⲉ ⲟⲩⲧⲱⲕ ⲙⲛⲟⲩⲧⲉ ⲧⲡⲟⲗⲓⲥ ⲛⲅⲧⲁϫⲣⲟ ⲙⲡⲉⲕϩⲟ ⲉϩⲣⲁⲓ ⲉϫⲱⲥ ⲁⲩⲱ ⲉⲥⲉϣⲱⲡⲉ **ⲉⲩⲱⲣⲃ **ⲉϩⲟⲩⲛ**** ⲁⲩⲱ ⲛⲅⲟⲣⲃⲉⲥ ⲉϩⲟⲩⲛ ⲟⲩⲙⲁⲉⲓⲛ ⲡⲉ ⲡⲁⲓ ⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "And take thou to thyself an iron pan, and thou shalt set it for an iron wall between thee and the city: and thou shalt set thy face against it, and it shall be in a siege, and thou shalt besiege it. This is a sign to the children of Israel.",
+      "source": "Ezekiel 4",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3714,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5540",
+      "label": "ϧⲉⲛⲟⲩⲱⲣϥ",
+      "pos": "ADV",
+      "gloss": "quietly"
+    },
+    {
+      "target": "C5541",
+      "label": "ⲁⲧⲟⲣⲃ⸗",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5542",
+      "label": "ⲁⲧⲟⲣⲃ⸗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5543",
+      "label": "ⲟⲣⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "constraint"
+    },
+    {
+      "target": "C5544",
+      "label": "ⲣⲃⲉ",
+      "pos": "N",
+      "gloss": "enclosure, pen (for animals)"
+    },
+    {
+      "target": "C5539",
+      "label": "ⲱⲣϥ",
+      "pos": "N",
+      "gloss": "seclusion, quietude"
+    },
+    {
+      "target": "C5535",
+      "label": "ⲱⲣⲃ",
+      "pos": "V",
+      "gloss": "be enclosed, be apart, be quiet; restrict, surround"
+    },
+    {
+      "target": "C5537",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "shut in, lock up"
+    },
+    {
+      "target": "C5536",
+      "label": "ⲱⲣⲃ ⲉⲡⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "reject"
+    }
+  ]
+}

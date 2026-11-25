@@ -1,0 +1,132 @@
+{
+  "id": "C1647",
+  "forms": [
+    {
+      "id": "CF4770",
+      "orth": "ⲗⲗⲏⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9307,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲉⲗⲗⲏⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7773,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲗⲏϥ",
+      "dialect": "S",
+      "id": "968.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1911",
+      "bibliography": "CD 142a; ChLCS 21b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏⲟⲩϣⲗⲟϥ ⲏⲟⲩϣϫⲥⲟϭ ⲏⲟⲩ**ⲗⲗⲏⲃ** ⲛⲁⲓ ⲉⲧⲉⲙⲉϣϣⲉ ⲁⲗⲗⲁ ⲟⲩϣⲡϩⲙⲟⲧ ⲛⲧⲟϥ .",
+      "english": "nor filthiness, nor foolish talking, nor jesting, which are not appropriate; but rather giving of thanks.",
+      "source": "49_Ephesians_5",
+      "urn": "urn:cts:copticLit:nt.eph.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲣⲱ ⲁⲛⲟⲛ ⲧⲏⲣⲛ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉⲧⲙⲧⲣⲉⲩϩⲉ ⲉⲗⲁⲁⲩ ⲛϣⲗⲟϥ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲛϣϫⲥⲟϭ · ⲏ **ⲗⲗⲏⲃ** · ⲛⲁⲓ ⲉⲧⲉⲛⲉϣϣⲉ ·",
+      "english": "…",
+      "source": "Acephelous 22 YB 307-20",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:801-825",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣϫⲥⲟϭ",
+        2,
+        21.598
+      ],
+      [
+        "ⲙⲉϣϣⲉ",
+        1,
+        14.791
+      ],
+      [
+        "ⲏ",
+        2,
+        11.479
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        11.284
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        10.91
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲗⲗⲏⲃ",
+          1
+        ],
+        [
+          "ⲗⲗⲏⲃ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲗⲗⲏⲃ",
+          "ⲗⲗⲏⲃ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8876,
+      "count": 2
+    }
+  }
+}

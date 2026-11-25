@@ -1,0 +1,62 @@
+{
+  "id": "C5169",
+  "forms": [
+    {
+      "id": "CF12304",
+      "orth": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11989,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5805",
+      "bibliography": "CD 492b"
+    },
+    {
+      "id": "CS5806",
+      "bibliography": "KoptHWb 278; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4553,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5168",
+      "label": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be broad, be well provided; enlarge"
+    },
+    {
+      "target": "C5166",
+      "label": "ⲟⲩⲟⲥⲧⲛ",
+      "pos": "V",
+      "gloss": "become broad; make broad, broaden"
+    },
+    {
+      "target": "C5167",
+      "label": "ⲟⲩⲟⲥⲧⲛ",
+      "pos": "N",
+      "gloss": "breadth"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "C2783",
+  "forms": [
+    {
+      "id": "CF7398",
+      "orth": "ⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 445.48,
+        "rank": 2,
+        "count": 70286
+      }
+    },
+    {
+      "orth": "ⲡⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 183.31,
+        "rank": 11,
+        "count": 15547
+      }
+    },
+    {
+      "orth": "ⲙ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 246.44,
+        "rank": 7,
+        "count": 38883
+      }
+    },
+    {
+      "orth": "ⲡ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 203.59,
+        "rank": 9,
+        "count": 17267
+      }
+    },
+    {
+      "orth": "ⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 134.42,
+        "rank": 16,
+        "count": 11400
+      }
+    },
+    {
+      "orth": "ⲫ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 105.76,
+        "rank": 22,
+        "count": 8970
+      }
+    },
+    {
+      "orth": "ⲡⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 66.29,
+        "rank": 27,
+        "count": 5622
+      }
+    },
+    {
+      "orth": "ⲡⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 110.52,
+        "rank": 17,
+        "count": 17438
+      }
+    },
+    {
+      "orth": "ⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 54.34,
+        "rank": 31,
+        "count": 4609
+      }
+    },
+    {
+      "orth": "ⲧ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 149.64,
+        "rank": 11,
+        "count": 23610
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ART",
+    "number": "sg.",
+    "gen": "m.",
+    "tlapos": "bestimmter Artikel"
+  },
+  "senses": [
+    {
+      "id": "CS3183",
+      "bibliography": "CD 258b; CED 123; KoptHWb 143; DELC 157; ChLCS 36b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϫⲁⲓ ϧⲉⲛ**ⲡ**ϭⲟⲉⲓⲥ ⲁⲙⲏⲛ .",
+      "english": "Farewell in the Lord: amen.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲱⲟⲩⲛ ⲇⲉ ⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ⲙⲛ**ⲡ**ⲙⲟⲛⲁⲭⲟⲥ ·",
+      "english": "And John and the monk rose up,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲇⲉ ϩⲓⲛⲁ ⲛⲧⲉϥϣⲧⲉⲙϣⲱⲡⲓ ϧⲉⲛ**ⲧ**ⲫⲣⲱ ⲛϫⲉⲡⲉⲧⲉⲛⲫⲱⲧ .",
+      "english": "Pray that your flight won't be in the winter.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲉ**ⲡⲛⲉⲩⲙⲁ ⲇⲉ ⲡⲉ ⲧⲉⲥⲫⲣⲁⲅⲓⲥ ·",
+      "english": "The Spirit is the seal.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ **ⲫ**ⲛⲁⲩ ⲇⲉ ⲛⲁϫⲡⲅ ⲡⲉ ⲟⲩⲟϩ ⲁⲩⲁϣϥ",
+      "english": "It was the third hour, and they crucified him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉ ⲡϫⲱⲕ ⲛ**ⲧ**ⲙⲛⲧⲛⲟⲩⲧⲉ ·",
+      "english": "which is the complete Godhead.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2352",
+      "type": "cf",
+      "label": "pl. definite article"
+    },
+    {
+      "target": "C4003",
+      "type": "cf",
+      "label": "f. sg. definite article"
+    }
+  ],
+  "etym": {
+    "egy_num": "851446",
+    "egy_lemma": "pꜣ",
+    "demo_num": "d1839",
+    "demo_lemma": "pꜣ",
+    "english": "[Dem.Pron., Article]",
+    "german": "[Dem.Pron., Artikel]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851446",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1839"
+  }
+}

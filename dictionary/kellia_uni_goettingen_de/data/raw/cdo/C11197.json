@@ -1,0 +1,194 @@
+{
+  "id": "C11197",
+  "forms": [
+    {
+      "id": "CF31070",
+      "orth": "ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31071",
+      "orth": "ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6569,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15756",
+      "bibliography": "DDGLC",
+      "cu_ID": "2230"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕⲉⲧⲁⲙⲓⲟ ⲇⲉ ⲛⲟⲩϩⲟⲃⲥ ⲉⲃⲟⲗ ϩⲛⲟⲩ**ϩⲩⲁⲕⲓⲛⲑⲟⲥ** ...",
+      "english": "And thou shalt make a screen for the door of the tabernacle of blue, and purple, and spun scarlet and fine linen spun, the work of the embroiderer.",
+      "source": "Exodus 26",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲉⲓⲛⲉ ⲛⲧⲟⲩⲉⲡϣⲱⲧ ⲟⲩ**ϩⲩⲁⲕⲓⲛⲑⲟⲥ** ⲁⲩⲱ ϩⲉⲛⲁϩⲱⲱⲣ ⲉⲩⲥⲟⲧⲡ ⲉⲩⲙⲏⲣ ⲉϩⲉⲛⲛⲟⲩϩ",
+      "english": "bringing for merchandise blue, and choice stores bound with cords, and cypress wood.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲉⲧⲁⲙⲓⲟ ⲇⲉ ⲟⲛ ⲛⲟⲩⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲉⲃⲟⲗ ϩⲛⲟⲩ**ϩⲩⲁⲕⲓⲛⲑⲟⲥ** ⲙⲛⲟⲩϫⲏϭⲉ ⲙⲛⲟⲩⲕⲟⲕⲕⲟⲥ ⲉϥⲥⲏⲧ ⲉϥϩⲟⲥⲉ ⲙⲛⲟⲩϣⲛⲥ ⲉϥⲥⲏⲧ ⲛϩⲱⲃ ⲛⲥⲱϩⲉ ⲛⲅⲙⲟⲛⲕϥ ⲉϥⲟ ⲛϩⲁⲣⲉⲓⲟⲡⲉ",
+      "english": "And thou shalt make a veil of blue and purple and scarlet woven, and fine linen spun: thou shalt make it cherubs in woven work.",
+      "source": "Exodus 26",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲩⲉⲡϣⲱⲧ",
+        1,
+        19.013
+      ],
+      [
+        "ⲁϩⲱⲱⲣ",
+        1,
+        14.369
+      ],
+      [
+        "ϫⲏϭⲉ",
+        1,
+        13.926
+      ],
+      [
+        "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+        1,
+        13.036
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.919
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲩⲁⲕⲓⲛⲑⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ],
+        [
+          "ⲁϩⲱⲱⲣ_1_post_ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+          "ϩⲩⲁⲕⲓⲛⲑⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲩⲁⲕⲓⲛⲑⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁϩⲱⲱⲣ",
+          "ϩⲉⲛ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁϩⲱⲱⲣ",
+          "ⲁϩⲱⲱⲣ_1_post_ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲁϩⲱⲱⲣ_1_post_ϩⲩⲁⲕⲓⲛⲑⲟⲥ",
+          "ⲉ_2_post_ⲁϩⲱⲱⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6132,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "4734",
+    "grl_lemma": "ὑάκινθος",
+    "grl_meaning": "wild hyacinth, bluebell (Scilla bifolia), blue larkspur\n    (Delphinum Ajacis); a precious stone (hyacinth)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1840b"
+  }
+}

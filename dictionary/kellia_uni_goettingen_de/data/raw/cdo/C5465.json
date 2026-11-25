@@ -1,0 +1,154 @@
+{
+  "id": "C5465",
+  "forms": [
+    {
+      "id": "CF12901",
+      "orth": "ⲱⲗⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲕ-",
+      "dialect": "S",
+      "id": "1810.1"
+    },
+    {
+      "orth": "ⲉⲗⲕ-",
+      "dialect": "S",
+      "id": "1810.2"
+    },
+    {
+      "orth": "ⲟⲗⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7101,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲗⲕ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7101,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲱⲗⲕ",
+      "dialect": "B",
+      "id": "1810.5"
+    },
+    {
+      "orth": "ⲗⲕ-",
+      "dialect": "B",
+      "id": "1810.6"
+    },
+    {
+      "orth": "ⲉⲗⲕ-",
+      "dialect": "B",
+      "id": "1810.7"
+    },
+    {
+      "orth": "ⲟⲗⲕ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2328,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲟⲗⲕ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2328,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲱⲗⲕ",
+      "dialect": "A",
+      "id": "1810.10"
+    },
+    {
+      "orth": "ⲱⲗⲕ",
+      "dialect": "L",
+      "id": "1810.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6123",
+      "bibliography": "CD 522a; CDC 80a; CED 228; KoptHWb 291; ChLCS 72a"
+    },
+    {
+      "id": "CS6124",
+      "bibliography": "CD 522a; KoptHWb 291; DELC 249a; ChLCS 72a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.13,
+      "rank": 2017,
+      "count": 11
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C56",
+      "type": "cf",
+      "label": "corner, angle"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5469",
+      "label": "ⲗⲕⲉ",
+      "pos": "N",
+      "gloss": "bend, crease, corner"
+    },
+    {
+      "target": "C5470",
+      "label": "ⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "bend, corner"
+    },
+    {
+      "target": "C5466",
+      "label": "ⲱⲗⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "lean, bow down"
+    },
+    {
+      "target": "C5467",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "V",
+      "gloss": "turn up one's nose, sneer"
+    },
+    {
+      "target": "C5468",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "N",
+      "gloss": "jeer, mockery"
+    }
+  ],
+  "etym": {
+    "egy_num": "854499",
+    "egy_lemma": "ꜥrq",
+    "demo_num": "d1062",
+    "demo_lemma": "ꜥlq",
+    "english": "tie; bend",
+    "german": "umbinden; biegen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854499",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1062"
+  }
+}

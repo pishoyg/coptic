@@ -1,0 +1,304 @@
+{
+  "id": "C8198",
+  "forms": [
+    {
+      "id": "CF18840",
+      "orth": "ⲁⲙⲉⲗⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18841",
+      "orth": "ⲁⲙⲉⲗⲉⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3621,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF18842",
+      "orth": "ⲁⲙⲉⲗⲏⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18843",
+      "orth": "ⲁⲙⲉⲗⲓⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18844",
+      "orth": "ⲁⲙⲉⲗⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2501,
+        "count": 19
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9275",
+      "bibliography": "DDGLC",
+      "cu_ID": "1475"
+    },
+    {
+      "id": "CS9276",
+      "bibliography": "DDGLC",
+      "cu_ID": "11553"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϣ ⲡⲉ ⲣⲁⲧⲥ ⲛⲧⲉⲕ**ⲁⲙⲉⲗⲉⲓⲁ** ·",
+      "english": "What is the limit (?) of thy carelessness?",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲣⲡⲱⲃϣ ⲛⲛϭⲟⲙ ⲙⲛⲛⲉϣⲡⲏⲣⲉ ⲙⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ · ⲡⲁⲓ ⲉⲧⲛⲣϣⲁ ⲛⲁϥ ⲙⲡϩⲟⲟⲩ · ⲉⲁⲡⲉϩⲟⲩⲟ ⲛⲛⲉⲛ**ⲁⲙⲉⲗⲉⲓⲁ** ⲉⲛⲧⲛⲉϩⲣⲁⲓ ⲉⲡⲉⲓⲛⲟϭ ⲛⲙⲕⲁϩ ⲛϩⲏⲧ · ϩⲱⲥⲧⲉ ⲛⲧⲛⲣⲡⲱⲃϣ ⲙⲡⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ ⲉⲧⲧⲁⲓⲏⲩ ·",
+      "english": "and had forgotten the mighty deeds and miracles of Saint Victor, whose festival we are celebratingthis day; for the consideration of our own great carelessness carried away into such sorrow of heart that we forgot the glorious General Victor.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲕ**ⲁⲙⲉⲗⲉⲓⲁ** ⲙⲁⲩⲁⲁⲕ ⲧⲛⲧⲁⲥⲛⲟϫⲕ ⲉⲡϣⲓⲕ ⲛⲁⲙⲛⲧⲉ ·",
+      "english": "It is thy carelessness alone that driveth thee into the pit of Amente.'",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉϩϫⲟⲩⲧⲁⲥⲉ",
+        1,
+        17.428
+      ],
+      [
+        "ⲙⲉϩϫⲟⲩⲧⲥⲁϣϥⲉ",
+        1,
+        16.428
+      ],
+      [
+        "ϫⲉⲓⲥⲟⲟⲩⲉ",
+        1,
+        15.843
+      ],
+      [
+        "ⲡⲁⲣⲣⲏⲥⲓⲁⲍⲉ",
+        1,
+        13.621
+      ],
+      [
+        "ϭⲟⲗ",
+        2,
+        13.395
+      ],
+      [
+        "ⲧ",
+        7,
+        11.323
+      ],
+      [
+        "ϩⲣⲟϣ",
+        1,
+        11.199
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        10.44
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        3,
+        9.881
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        9.7
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        9.653
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        8.759
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        8.704
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        8.411
+      ],
+      [
+        "ⲛ",
+        6,
+        8.394
+      ],
+      [
+        "ϣⲉ",
+        1,
+        8.012
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        7.944
+      ],
+      [
+        "ⲣⲁⲧ",
+        1,
+        7.503
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        7.403
+      ],
+      [
+        "ⲡ",
+        4,
+        7.327
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          2
+        ],
+        [
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          9
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          3
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ϩⲣⲟϣ_1_post_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ_b",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          "ⲙⲛ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲣⲟϣ",
+          "ⲡⲉ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲣⲟϣ",
+          "ϩⲣⲟϣ_1_post_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲣⲟϣ_1_post_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲙ_2_post_ϩⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲧ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ",
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲉⲗⲉⲓⲁ_b",
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲉⲗⲉⲓⲁ_0_node",
+          "ⲛⲓⲙ_1_post_ⲁⲙⲉⲗⲉⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3249,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "109",
+    "grl_lemma": "ἀμέλεια",
+    "grl_meaning": "indifference, negligence",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 80b; Preisigke 1:66"
+  }
+}

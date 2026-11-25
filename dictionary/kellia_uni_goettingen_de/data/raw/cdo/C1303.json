@@ -1,0 +1,572 @@
+{
+  "id": "C1303",
+  "forms": [
+    {
+      "id": "CF4012",
+      "orth": "ⲕⲣⲱⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2277,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ⲭⲣⲱⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 5.25,
+        "rank": 223,
+        "count": 445
+      }
+    },
+    {
+      "orth": "ⲕⲗⲱⲙ",
+      "dialect": "F",
+      "id": "843.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1509",
+      "bibliography": "CD 116a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲡⲟⲗⲓⲥ ⲁⲩϣⲱϥⲉ ϩⲛⲟⲩ**ⲕⲣⲱⲙ** ⲙⲛⲛⲉⲧⲛϩⲏⲧⲥ ⲧⲏⲣⲟⲩ ϣⲁⲧⲛ ⲡϩⲁⲧ ⲙⲛⲡⲛⲟⲩⲃ ⲁⲩⲱ ϩⲟⲙⲛⲧ ⲛⲓⲙ ϩⲓⲃⲉⲛⲓⲡⲉ ⲛⲓⲙ ⲁⲩⲧⲁⲁⲩ ⲉⲧⲣⲉⲩⲉⲛⲧⲟⲩ ⲉϩⲟⲩⲛ ⲉⲡⲁϩⲟ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And the city was burnt with fire with all things that were in it; only of the silver, and gold, and brass, and iron, they gave to be brought into the treasury of the Lord.",
+      "source": "Joshua 6",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲩⲛⲁⲧⲓⲙⲱⲣⲉⲓ ⲇⲉ ⲙⲙⲟⲥ ⲁⲛ ⲛϩⲏⲧⲟⲩ ⲁⲗⲗⲁ ⲉⲩⲛⲁⲧⲥⲁⲃⲟⲥ ⲙⲙⲁⲧⲉ ⲉⲣⲟⲟⲩ · ⲁⲩⲱ ⲡⲉⲗϩⲱⲃ' ⲙⲡϣⲁϩ ⲛⲛⲕⲟⲗⲁⲥⲓⲥ ϣⲁϥϣⲱⲡⲉ ⲉϥⲧⲁϩⲟ ⲙⲙⲟⲥ ⲙⲙⲁⲧⲉ ⲛⲟⲩϣⲏⲙ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲛⲥⲉϥⲓⲧⲥ ⲉϩⲣⲁⲓ ϩⲓⲧⲉϩⲓⲏ ⲛⲧⲙⲏⲧⲉ ⲛⲥⲉⲧⲥⲁⲃⲟⲥ ⲉⲛⲕⲟⲗⲁⲥⲓⲥ ⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲧⲙⲏⲧⲉ ⲉⲣⲉⲡⲉⲗϩⲱⲃ ⲙⲡϣⲁϩ ⲧⲁϩⲟ ⲙⲙⲟⲥ ⲛⲟⲩϣⲏⲙ · ⲙⲛⲛⲥⲁⲛⲁⲓ ⲛⲥⲉϫⲓⲧⲥ ⲛⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲥⲕⲣⲓⲛⲉ ⲙⲙⲟⲥ ⲛⲥⲕⲁⲁⲥ ϩⲁⲧⲛⲡⲕⲟⲩⲓ ⲛⲥⲁⲃⲁⲱⲑ ⲡⲁⲅⲁⲑⲟⲥ ⲡⲁⲧⲙⲉⲥⲟⲥ ϣⲁⲛⲧⲉⲧⲉⲥⲫⲁⲓⲣⲁ ⲕⲱⲧⲉ ⲛⲧⲉⲍⲉⲩⲥ ⲙⲛⲧⲁⲫⲣⲟⲇⲓⲧⲏ ⲛⲥⲉⲉⲓ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ · ⲛⲧⲉⲕⲣⲟⲛⲟⲥ ⲙⲛⲁⲣⲏⲥ ⲉⲓ ⲛⲥⲁⲡⲁϩⲟⲩⲟ ⲙⲙⲟⲥ · ⲧⲟⲧⲉ ϣⲁⲥϥⲓ ⲛⲧⲉⲯⲩⲭⲏ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲉⲧⲙⲙⲁⲩ ⲛⲥⲉⲧⲁⲁⲥ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲥⲡⲁⲣⲁⲗⲏⲙⲡⲧⲏⲥ ⲛⲥⲉⲛⲟϫⲥ ⲉⲛⲁⲓⲱⲛ ⲛⲧⲉⲥⲫⲁⲓⲣⲁ ⲁⲩⲱ ⲛⲧⲉⲛⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ ⲛⲧⲉⲥⲫⲁⲓⲣⲁ ⲛⲥⲉϫⲓⲧⲥ ⲉⲃⲟⲗ' ⲉⲩⲙⲟⲟⲩ ⲉϥϩⲁⲡⲉⲥⲏⲧ ⲛⲧⲉⲥⲫⲁⲓⲣⲁ ⲛϥⲣⲟⲩ**ⲕⲣⲱⲙ** ⲉϥⲃⲣⲃⲣ ⲛϥⲟⲩⲱⲙ ⲉϩⲟⲩⲛ ⲛⲥⲱⲥ ϣⲁⲛⲧϥⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲙⲟⲥ ⲧⲟⲛⲱ ·",
+      "english": "“but they will not take vengeance on it therewith. But they will only instruct it concerning them, and the smoke of the flame of the chastisements catcheth it only a little. “Thereafter they carry it up unto the way of the midst and instruct it concerning the chastisements of the ways of the midst, the smoke from the flame catching it a little. Thereafter they lead it unto the Virgin of Light, and she judgeth it and depositeth it with the little Sabaōth, the Good, him of the Midst, until the sphere turneth itself, and Zeus and Aphrodite come in face of the Virgin of Light, while Kronos and Arēs come behind her. At that hour she taketh that righteous soul and handeth it over to her receivers, that they may cast it into the peons of the sphere. And the servitors of the sphere lead it forth into a water which is below the sphere; and a seething fire ariseth and eateth into it until it purifieth it utterly.”",
+      "source": "Pistis Sophia Book 4 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:140-144",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲓⲙⲛⲧⲙⲁⲓⲧⲟⲛ ϩⲟⲩⲟ ϫⲉⲉⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲛⲉⲓⲉⲣⲟ ⲛ**ⲕⲣⲱⲙ** ⲛⲧⲉⲡⲓϩⲁ ⲛⲟⲩϩⲟⲣ ·",
+      "english": "“Say unto them: Renounce avarice, that ye may be worthy of the mysteries of the Light and be saved from the fire-rivers of the dog-faced [one].”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        339,
+        29.969
+      ],
+      [
+        "ⲙⲟϩ",
+        66,
+        29.72
+      ],
+      [
+        "ⲣⲟⲕϩ",
+        41,
+        29.308
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        263,
+        29.197
+      ],
+      [
+        "ⲛ",
+        263,
+        28.707
+      ],
+      [
+        "ϥ",
+        246,
+        28.252
+      ],
+      [
+        "ⲉ",
+        199,
+        27.927
+      ],
+      [
+        ".",
+        168,
+        27.793
+      ],
+      [
+        "ⲡⲓ",
+        154,
+        27.571
+      ],
+      [
+        "ϧⲉⲛ",
+        154,
+        27.563
+      ],
+      [
+        "ⲣⲱⲕϩ",
+        25,
+        27.287
+      ],
+      [
+        "ϣⲁϩ",
+        20,
+        26.988
+      ],
+      [
+        "ϭⲉⲣⲟ",
+        13,
+        26.474
+      ],
+      [
+        "ⲛⲉⲙ",
+        97,
+        26.042
+      ],
+      [
+        "ϩⲣⲱ",
+        13,
+        25.89
+      ],
+      [
+        "ⲙ",
+        109,
+        25.888
+      ],
+      [
+        "ⲉϥⲉ",
+        59,
+        25.868
+      ],
+      [
+        "ϫⲉⲃⲥ",
+        12,
+        25.806
+      ],
+      [
+        "ⲁ",
+        122,
+        25.782
+      ],
+      [
+        "ⲡ",
+        103,
+        25.679
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲁⲕⲉ",
+        11,
+        17.394
+      ],
+      [
+        "ⲃⲣⲃⲣ",
+        4,
+        17.155
+      ],
+      [
+        "ⲉⲓⲉⲣⲟ",
+        2,
+        16.428
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        9,
+        16.185
+      ],
+      [
+        "ϣⲱϥⲉ",
+        1,
+        16.013
+      ],
+      [
+        "ⲛ",
+        40,
+        15.19
+      ],
+      [
+        "ⲡⲉⲥ",
+        6,
+        13.901
+      ],
+      [
+        "ⲙⲛ",
+        11,
+        12.437
+      ],
+      [
+        "ⲛⲉϣ",
+        1,
+        12.013
+      ],
+      [
+        "ⲁⲣⲓⲏⲗ",
+        1,
+        11.926
+      ],
+      [
+        "ⲙⲛⲧⲟⲩⲉ",
+        1,
+        11.554
+      ],
+      [
+        "ⲡⲉϥ",
+        6,
+        11.266
+      ],
+      [
+        "ⲁϫⲓ",
+        2,
+        11.088
+      ],
+      [
+        "ⲣ",
+        4,
+        10.828
+      ],
+      [
+        "ⲙⲁⲥⲧⲓⲅⲝ",
+        1,
+        10.804
+      ],
+      [
+        "ⲓⲉⲣⲱⲟⲩ",
+        1,
+        10.804
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        3,
+        10.767
+      ],
+      [
+        "ⲥⲃⲟⲕ",
+        1,
+        10.728
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        2,
+        10.355
+      ],
+      [
+        "ⲉⲣⲱⲟⲩ",
+        1,
+        10.313
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          23
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲣⲱⲙ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲱⲙ",
+          4
+        ],
+        [
+          "ϥ_3_post_ⲃⲣⲃⲣ",
+          4
+        ],
+        [
+          "ⲃⲣⲃⲣ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲣⲱⲙ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲱⲙ",
+          10
+        ],
+        [
+          "ⲕⲁⲕⲉ_2_post_ⲛ",
+          9
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          7
+        ],
+        [
+          "ⲡⲉⲥ_2_post_ⲕⲱϩⲧ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲏⲗ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲟⲗⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲕⲟⲗⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲣⲱⲙ",
+          3
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲕⲱϩⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲙ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_2_pre_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲣⲱⲙ",
+          "ⲕⲣⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          "ⲉ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲱⲙ",
+          "ϥ_3_post_ⲃⲣⲃⲣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲃⲣⲃⲣ",
+          "ⲃⲣⲃⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲣⲱⲙ",
+          "ⲕⲣⲱⲙ_0_node",
+          2
+        ],
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          "ⲛ_1_post_ⲕⲣⲱⲙ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲱⲙ",
+          "ⲕⲁⲕⲉ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ⲕⲁⲕⲉ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          "ⲡⲉⲥ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          "ⲛⲧⲉ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲣⲱⲙ",
+          "ⲁⲣⲓⲏⲗ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲣⲱⲙ",
+          "ⲕⲣⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲉ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲕⲟⲗⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲟⲗⲁⲥⲓⲥ",
+          "ⲛⲉⲩ_2_post_ⲕⲟⲗⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲣⲱⲙ",
+          "ⲕⲣⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          "ⲡⲉⲩ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲣⲱⲙ",
+          "ⲕⲣⲱⲙ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          "ⲡⲉϥ_2_post_ⲕⲱϩⲧ",
+          2
+        ],
+        [
+          "ⲕⲁⲕⲉ_2_post_ⲛ",
+          "ⲁⲩⲱ_3_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲱϩⲧ",
+          "ϩⲓⲧⲙ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_2_pre_ⲕⲱϩⲧ",
+          "ⲡⲉϥ_1_pre_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          "ⲙⲛ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲕⲱϩⲧ",
+          "ⲕⲱϩⲧ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲕⲣⲱⲙ",
+          "ⲙ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲕⲣⲱⲙ_0_node",
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          "ⲛ_1_post_ⲕⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲱⲙ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ⲛϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲛ",
+          "ⲥ_3_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.15,
+      "rank": 1993,
+      "count": 24
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1306",
+      "label": "ϩⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1307",
+      "label": "ϭⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "take fire"
+    },
+    {
+      "target": "C1305",
+      "label": "ϯⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1304",
+      "label": "ⲉⲣⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "be on fire, burn"
+    },
+    {
+      "target": "C1302",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "fire"
+    }
+  ]
+}

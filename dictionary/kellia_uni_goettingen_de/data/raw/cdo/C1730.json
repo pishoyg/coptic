@@ -1,0 +1,49 @@
+{
+  "id": "C1730",
+  "forms": [
+    {
+      "id": "CF5008",
+      "orth": "ⲗⲱⲱϥⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲟⲟϥⲉ†",
+      "dialect": "S",
+      "id": "2941.1"
+    },
+    {
+      "orth": "ⲗⲟⲟⲃⲉ†",
+      "dialect": "S",
+      "id": "2941.2"
+    },
+    {
+      "orth": "ⲗⲟⲃⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2892,
+        "count": 15
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2006",
+      "bibliography": "CD 148b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "d3480",
+    "demo_lemma": "rfꜥj",
+    "english": "[to wobble, stagger]",
+    "german": "Wanken, Schwanken(?), Dummheit(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3480"
+  }
+}

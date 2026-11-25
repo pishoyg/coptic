@@ -1,0 +1,133 @@
+{
+  "id": "C5050",
+  "forms": [
+    {
+      "id": "CF12065",
+      "orth": "ϣⲁ ⲧⲉⲛⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2205,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ϣⲁ",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5681",
+      "bibliography": "CD 485a; KoptHWb 272; ChLCS 68a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲕ ⲅⲁⲣ ⲡⲉ ⲛⲧⲁⲕϩⲁⲣⲉϩ ⲉⲣⲟⲓ **ϣⲁⲧⲉⲛⲟⲩ** ⲙⲡⲉⲓⲧⲱⲗⲙ ϩⲟⲗⲱⲥ ⲙⲛⲥϩⲓⲙⲉ ·",
+      "english": "For it is Thou Who hast kept me up to this hour, and I have never at any time polluted myself with women.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲁϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϩⲟⲩⲟ ⲉϯⲟⲩ ⲛϣⲉ ⲛⲥⲟⲛ ⲛⲟⲩⲥⲟⲡ ⲛⲟⲩⲱⲧ ⲛⲁⲓ ⲉⲣⲉⲡⲉⲩϩⲟⲩⲟ ϣⲟⲟⲡ **ϣⲁⲧⲉⲛⲟⲩ** . ϩⲟⲓⲛⲉ ⲇⲉ ⲙⲙⲟⲟⲩ ⲁⲩⲛⲕⲟⲧⲕ .",
+      "english": "Then he appeared to over five hundred brothers at once, most of whom remain until now, but some have also fallen asleep.",
+      "source": "46_1 Corinthians_15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲥⲟⲟⲩⲛ ϫⲉⲁⲕⲣⲟⲩⲏⲏⲣ ⲛⲣⲟⲙⲡⲉ **ϣⲁⲧⲉⲛⲟⲩ** · ⲁⲗⲗⲁ ⲛⲅⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲕⲛⲁⲣⲕⲉⲟⲩⲏⲣ ·",
+      "english": "Thou knowest how many years thou hast lived up to this present time, but thou hast no knowledge of how many thou hast yet to live.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.16,
+      "rank": 1932,
+      "count": 25
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5043",
+      "label": "ϩⲛ ⲧⲉⲟⲩⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "on the instant, immediately"
+    },
+    {
+      "target": "C5051",
+      "label": "ϫⲓⲛ ⲧⲉⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "from now"
+    },
+    {
+      "target": "C5052",
+      "label": "ϭⲓⲥⲟⲩⲛⲟⲩ",
+      "pos": "N",
+      "gloss": "half an hour"
+    },
+    {
+      "target": "C5048",
+      "label": "ⲉⲧⲉⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "now"
+    },
+    {
+      "target": "C5046",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲁⲟⲩⲛⲟⲩ",
+      "pos": "N",
+      "gloss": "diviner's art, astrology"
+    },
+    {
+      "target": "C5049",
+      "label": "ⲛⲧⲉⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "now"
+    },
+    {
+      "target": "C5041",
+      "label": "ⲛⲧⲉⲟⲩⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "at once, on the instant, forthwith"
+    },
+    {
+      "target": "C5042",
+      "label": "ⲛⲧⲟⲩⲛⲟⲩ ⲧⲟⲩⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "hourly"
+    },
+    {
+      "target": "C5040",
+      "label": "ⲟⲩⲛⲟⲩ",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C5044",
+      "label": "ⲡⲣⲟⲥ ⲧⲉⲟⲩⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "for an hour"
+    },
+    {
+      "target": "C5045",
+      "label": "ⲣⲉϥⲕⲁⲟⲩⲛⲟⲩ",
+      "pos": "N",
+      "gloss": "caster or horoscopes, astrologer"
+    },
+    {
+      "target": "C5047",
+      "label": "ⲧⲉⲛⲟⲩ",
+      "pos": "ADV",
+      "gloss": "now"
+    }
+  ]
+}

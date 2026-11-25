@@ -1,0 +1,63 @@
+{
+  "id": "C2059",
+  "forms": [
+    {
+      "id": "CF5810",
+      "orth": "ϣⲟⲩⲙⲟⲥⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2388",
+      "bibliography": "CD 187a; ChLCS 28a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6140",
+      "type": "cf",
+      "label": "worthy of, fit for"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2060",
+      "label": "ⲙⲉⲥⲧⲉ",
+      "pos": "N",
+      "gloss": "hated person"
+    },
+    {
+      "target": "C2062",
+      "label": "ⲙⲉⲥⲧⲉ",
+      "pos": "N",
+      "gloss": "hated"
+    },
+    {
+      "target": "C2061",
+      "label": "ⲙⲉⲥⲧⲏ",
+      "pos": "N",
+      "gloss": "hated person"
+    },
+    {
+      "target": "C2057",
+      "label": "ⲙⲟⲥⲧⲉ",
+      "pos": "V",
+      "gloss": "hate"
+    },
+    {
+      "target": "C2058",
+      "label": "ⲙⲟⲥⲧⲉ",
+      "pos": "N",
+      "gloss": "hatred, object of hate"
+    }
+  ]
+}

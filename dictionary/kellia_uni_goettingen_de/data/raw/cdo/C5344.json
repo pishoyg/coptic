@@ -1,0 +1,266 @@
+{
+  "id": "C5344",
+  "forms": [
+    {
+      "id": "CF31915",
+      "orth": "ⲟⲩⲱϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7418,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31914",
+      "orth": "ⲟⲩⲱⲱϫⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲉⲉϫⲉ-",
+      "dialect": "S",
+      "id": "1770.1"
+    },
+    {
+      "orth": "ⲟⲩⲉϫ-",
+      "dialect": "S",
+      "id": "1770.2"
+    },
+    {
+      "orth": "ⲟⲩⲟϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.55,
+        "rank": 1053,
+        "count": 87
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲟϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10955,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲱϫ",
+      "dialect": "B",
+      "id": "1770.5"
+    },
+    {
+      "orth": "ⲃⲱϫ",
+      "dialect": "B",
+      "id": "1770.6"
+    },
+    {
+      "orth": "ⲟⲩⲉϫ-",
+      "dialect": "B",
+      "id": "1770.7"
+    },
+    {
+      "orth": "ⲟⲩⲟϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1855,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5997",
+      "bibliography": "CD 511ab; CDC 79a; CED 224; KoptHWb 287, 554; DELC 242b; ChLCS 71ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲡⲉⲧⲉϣϣⲉ ⲉⲣⲟⲛ ⲡⲉ ⲉⲧⲣⲉⲛϣⲗⲏⲗ · ϫⲉⲕⲁⲥ ⲛⲉⲧ**ⲟⲩⲟϫ** ⲙⲉⲛ ⲉⲧⲉⲙⲡⲁⲣⲑⲉⲛⲟⲥ ⲛⲉ ⲉⲩⲉⲙⲟⲩⲛ ⲉⲃⲟⲗ ϩⲙⲡⲉⲩϫⲁⲓ ·",
+      "english": "Therefore what is seemly for us to do is to pray, so that those who are strong among the virgins may remain permanent in their healthy state,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲧⲉⲯⲩⲭⲏ ϭⲱ ϩⲁⲣⲓϩⲁⲣⲟⲥ ⲉⲥ**ⲟⲩⲟϫ** ⲉϯⲟⲥⲉ ·",
+      "english": "it remaineth alone, and suffereth no injury whatsoever.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ϭⲉ ⲉϥϣⲁⲛⲁⲓⲧⲉⲓ ⲛϩⲱⲃ ⲛⲓⲙ · ⲙⲛⲧϩⲏⲕⲉ ϩⲓⲙⲛⲧⲣⲙⲙⲁⲟ ⲙⲛⲧϭⲱⲃ ϩⲓⲙⲛⲧϫⲱⲱⲣⲉ · ⲥⲓⲛⲱⲥⲓⲥ ϩⲓⲥⲱⲙⲁ ⲉϥ**ⲟⲩⲟϫ** · ⲙⲛⲑⲉⲣⲁⲡⲓⲁ ⲛⲓⲙ ⲛⲧⲉⲡⲥⲱⲙⲁ · ⲁⲩⲱ ⲙⲛⲡⲧⲟⲩⲛⲉⲥⲣⲉϥⲙⲟⲟⲩⲧ · ⲁⲩⲱ ⲉⲑⲉⲣⲁⲡⲉⲩⲉ ⲛⲛϭⲁⲗⲉ ⲙⲛⲛⲃⲗⲉⲉⲩ ⲙⲛⲛⲕⲱⲫⲟⲥ ⲙⲛⲛⲉⲙⲡⲟ · ⲙⲛϣⲱⲛⲉ ⲛⲓⲙ ⲙⲛⲙⲟⲕϩⲥ ⲛⲓⲙ ·",
+      "english": "thereafter then, if he ask for all things, for poverty and riches, for weakness and strength, for . . . and healthy body, and for all healings of the body and for the raising of the dead and for healing the lame and the blind and the deaf and the dumb and all sicknesses and all pains,",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲉⲓⲛ",
+        1,
+        8.862
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        5.374
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        2.897
+      ],
+      [
+        "ⲛ",
+        3,
+        2.782
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        2.735
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        2.532
+      ],
+      [
+        "ⲉ",
+        2,
+        2.036
+      ],
+      [
+        "ϩⲙ",
+        1,
+        1.632
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        0.727
+      ],
+      [
+        "ⲥ",
+        1,
+        0.493
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        0.457
+      ],
+      [
+        "ⲩ",
+        1,
+        0.028
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲱϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲟⲩⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲁⲣⲭⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲟⲩⲱϫⲉ",
+          "ⲟⲩⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲱϫⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲱϫⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          "ⲁⲩⲱ_5_post_ⲁⲣⲭⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.35,
+      "rank": 1234,
+      "count": 55
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5347",
+      "label": "*ⲟⲩⲏϫⲉ",
+      "pos": "N",
+      "gloss": "hurtful word"
+    },
+    {
+      "target": "C5348",
+      "label": "ϭⲓⲛⲟⲩⲱϫⲉ",
+      "pos": "N",
+      "gloss": "cutting"
+    },
+    {
+      "target": "C5346",
+      "label": "ⲟⲩⲁϭⲉ",
+      "pos": "N",
+      "gloss": "blow"
+    },
+    {
+      "target": "C5345",
+      "label": "ⲟⲩⲉⲓϫⲉ",
+      "pos": "N",
+      "gloss": "slash, injury, wound"
+    }
+  ],
+  "etym": {
+    "egy_num": "52360",
+    "egy_lemma": "wḏꜥ",
+    "english": "to separate; to judge; to appoint",
+    "german": "(ab)trennen; richten; zuweisen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/52360"
+  }
+}

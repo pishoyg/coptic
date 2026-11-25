@@ -1,0 +1,690 @@
+{
+  "id": "C2371",
+  "forms": [
+    {
+      "id": "CF6500",
+      "orth": "ⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    },
+    {
+      "orth": "ⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 161.39,
+        "rank": 12,
+        "count": 13688
+      }
+    },
+    {
+      "orth": "ⲛⲁ",
+      "dialect": "A",
+      "id": "1148.1"
+    },
+    {
+      "orth": "ⲛⲛⲁ",
+      "dialect": "A",
+      "id": "1148.2"
+    },
+    {
+      "orth": "ⲛⲛⲁ",
+      "dialect": "L",
+      "id": "1148.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2736",
+      "bibliography": "CD 217b; CED 103; KoptHWb 116; DELC 136; ChLCS 31a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲥⲉ**ⲛⲁ** ⲉϧⲟⲩⲛ ⲉⲡⲉϥϩⲏⲧ ⲁⲛ ⲁⲗⲗⲁ ⲧⲉϥⲛⲉϫⲓ ⲟⲩⲟϩ ϣⲁⲩϣⲉ ⲛⲱⲟⲩ ⲉⲛⲓⲙⲁ ⲛϩⲉⲙⲥⲓ ⲉϥⲧⲟⲩⲃⲟ ⲛⲛⲓϧⲣⲏⲟⲩⲓ ⲧⲏⲣⲟⲩ .",
+      "english": "because it doesn't go into his heart, but into his stomach, then into the latrine, thus making all foods clean?'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲩⲛⲧϥ ⲛⲁⲉⲛⲧⲟⲗⲏ ⲁⲩⲱ ⲉⲧϩⲁⲣⲉϩ ⲉⲣⲟⲟⲩ ⲡⲉⲧⲙⲙⲁⲩ ⲡⲉⲧⲙⲉ ⲙⲙⲟⲓ . ⲡⲉⲧⲙⲉ ⲇⲉ ⲙⲙⲟⲓ ⲡⲁⲉⲓⲱⲧ ⲛⲁⲙⲉⲣⲓⲧϥ . ⲁⲩⲱ ⲁⲛⲟⲕ ϩⲱ ϯⲛⲁⲙⲉⲣⲓⲧϥ ⲁⲩⲱ ϯ**ⲛⲁ**ⲟⲩⲟⲛϩⲧ ⲛⲁϥ ⲉⲃⲟⲗ .",
+      "english": "One who has my commandments, and keeps them, that person is one who loves me. One who loves me will be loved by my Father, and I will love him, and will reveal myself to him.'",
+      "source": "43_John_14",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲑⲏⲣⲓⲟⲛ ⲉⲧⲁⲕⲛⲁⲩ ⲉⲣⲟϥ ⲉϥϣⲟⲡ ⲟⲩⲟϩ ϥϣⲟⲡ ⲁⲛ ⲉϥⲛⲏⲟⲩ ⲉϩⲣⲏⲓ ⲉⲃⲟⲗ ϧⲉⲛⲫⲛⲟⲩⲛ ⲟⲩⲟϩ ⲉϥ**ⲛⲁ** ⲉⲡⲧⲁⲕⲟ ⲟⲩⲟϩ ⲉⲩⲉⲉⲣϣⲫⲏ ⲣⲓ ⲧⲏⲣⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧϣⲟⲡ ϩⲓϫⲉⲛⲡⲕⲁϩⲓ ⲛⲏ ⲉⲧⲉⲡⲟⲩⲣⲁⲛ ⲥϧⲏⲟⲩⲧ ⲁⲛ ϩⲓⲡϫⲱⲙ ⲛⲧⲉⲡⲱⲛϧ ⲓⲥϫⲉⲛ ⲡϣⲁ ⲛⲥⲱⲛⲧ ⲙⲡⲓⲕⲟⲥⲙⲟⲥ ⲉⲩϫⲟⲩϣⲧ ⲉⲡⲓⲑⲏⲣⲓⲟⲛⲏ ϫⲉϥϣⲟⲡ ⲟⲩⲟϩ ϥϣⲟⲡ ⲁⲛ ⲟⲩⲟϩ ⲁϥϩⲉⲓ",
+      "english": "The beast that you saw was, and is not; and is about to come up out of the abyss and to go into destruction. Those who dwell on the earth and whose names have not been written in the book of life from the foundation of the world will marvel when they see that the beast was, and is not, and shall be present.",
+      "source": "27_Revelation_17",
+      "urn": "urn:cts:copticLit:nt.rev.bohairic:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲡⲉⲧⲡⲓⲥⲧⲉⲩⲉ ⲉⲣⲟⲓ ⲛⲉϩⲃⲏⲩⲉ ⲉϯⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ . ⲡⲏ ϩⲱⲱϥ ⲟⲛ **ⲛⲁ**ⲁⲁⲩ . ⲁⲩⲱ ϥⲛⲁⲣ ⲛⲉⲧⲛⲁⲁⲁⲩ ⲉⲣⲟⲟⲩ ϫⲉⲁⲛⲟⲕ ⲉⲉⲓⲛⲁⲃⲱⲕ ϣⲁⲡⲁⲉⲓⲱⲧ",
+      "english": "Most certainly I tell you, he who believes in me, the works that I do, he will do also; and he will do greater works than these, because I am going to my Father.",
+      "source": "43_John_14",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲉⲧⲁϥⲛⲁⲩ ⲉⲡⲉⲧⲣⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲉⲩ**ⲛⲁ** ⲉϧⲟⲩⲛ ⲉⲡⲓⲉⲣⲫⲉⲓ ⲛⲁϥⲧⲱⲃϩ ⲙⲙⲱⲟⲩ ⲉϥⲟⲩⲱϣ ⲉϭⲓ ⲛⲟⲩⲙⲉⲑⲛⲁⲏⲧ ⲛⲧⲟⲧⲟⲩ .",
+      "english": "Seeing Peter and John about to go into the temple, he asked to receive gifts for the needy.",
+      "source": "05_Acts_03",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϯⲕⲉⲕⲟⲩⲓ ⲡⲉ ⲁⲩⲱ ⲙⲡⲕⲟⲥⲙⲟⲥ ϭⲉ **ⲛⲁ**ⲛⲁⲩ ⲉⲣⲟⲓ ⲁⲛ . ⲛⲧⲱⲧⲛ ⲇⲉ ⲧⲉⲧⲛⲁⲛⲁⲩ ⲉⲣⲟⲓ ϫⲉⲁⲛⲟⲕ ϯⲟⲛϩ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ⲧⲉⲧⲛⲁⲱⲛϩ .",
+      "english": "Yet a little while, and the world will see me no more; but you will see me. Because I live, you will live also.",
+      "source": "43_John_14",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1448,
+        37.216
+      ],
+      [
+        "ϥ",
+        15378,
+        31.366
+      ],
+      [
+        "ϫⲉ",
+        10540,
+        31.355
+      ],
+      [
+        "ⲩ",
+        10038,
+        30.807
+      ],
+      [
+        "ⲕ",
+        7840,
+        30.781
+      ],
+      [
+        "ⲛ",
+        15810,
+        30.773
+      ],
+      [
+        "ⲡ",
+        13237,
+        30.692
+      ],
+      [
+        "ⲟⲩ",
+        10193,
+        30.284
+      ],
+      [
+        "ϯ",
+        5760,
+        30.11
+      ],
+      [
+        "ⲁⲩⲱ",
+        7011,
+        29.192
+      ],
+      [
+        "ⲉ",
+        8042,
+        28.855
+      ],
+      [
+        "ⲥ",
+        5738,
+        28.851
+      ],
+      [
+        "ⲁⲛ",
+        3606,
+        28.695
+      ],
+      [
+        "ⲓ",
+        4657,
+        28.524
+      ],
+      [
+        "ⲙ",
+        5944,
+        28.081
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4407,
+        27.9
+      ],
+      [
+        "ⲉⲧ",
+        4633,
+        27.89
+      ],
+      [
+        ".",
+        3890,
+        27.452
+      ],
+      [
+        "ⲥⲉ",
+        2515,
+        27.09
+      ],
+      [
+        "ⲧ",
+        3989,
+        27.075
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_0_node",
+          3423
+        ],
+        [
+          "ϥ_1_post_ⲛⲁ",
+          1857
+        ],
+        [
+          "ⲕ_1_post_ⲛⲁ",
+          824
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁ",
+          307
+        ],
+        [
+          "ⲥ_1_post_ⲛⲁ",
+          225
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          58
+        ],
+        [
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          28
+        ],
+        [
+          "ⲙⲱⲟⲩ_2_post_ⲧ",
+          11
+        ],
+        [
+          "ⲛⲟⲃⲓ_2_post_ⲧ",
+          9
+        ],
+        [
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          7
+        ],
+        [
+          "ⲁ_5_post_ⲉⲣ",
+          7
+        ],
+        [
+          "ⲩ_5_post_ⲉⲣ",
+          7
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          6
+        ],
+        [
+          "ⲟⲩⲣⲟ_1_post_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲟⲩ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲛⲁϩϯ_2_post_ⲧ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲥⲙⲏ_2_post_ⲧ",
+          3
+        ],
+        [
+          "ⲓ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲗⲱⲓϫⲓ_2_post_ⲧ",
+          3
+        ],
+        [
+          "ⲙⲱⲓⲧ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          3
+        ],
+        [
+          "ϭⲟⲓⲥ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲩ_1_post_ⲛⲁ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_0_node",
+          "ϥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲕ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲛ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲧ_1_post_ⲛⲁ",
+          7
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲙⲱⲟⲩ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲛⲟⲃⲓ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          "ⲁ_5_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲉⲣ",
+          "ⲩ_5_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          "ⲟⲩⲣⲟ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲟⲩ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲛⲁϩϯ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲥⲙⲏ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲓ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲗⲱⲓϫⲓ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲱⲓⲧ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          "ϭⲟⲓⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲩ_1_post_ⲛⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_0_node",
+          9556
+        ],
+        [
+          "ϥ_1_post_ⲛⲁ",
+          2970
+        ],
+        [
+          "ⲩ_1_post_ⲛⲁ",
+          1815
+        ],
+        [
+          "ⲓ_1_post_ⲛⲁ",
+          1793
+        ],
+        [
+          "ⲕ_1_post_ⲛⲁ",
+          1275
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁ",
+          664
+        ],
+        [
+          "ⲥ_1_post_ⲛⲁ",
+          445
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲁ",
+          64
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁ",
+          47
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲁ",
+          28
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          18
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          5
+        ],
+        [
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          5
+        ],
+        [
+          "ⲁⲅⲁⲡⲏ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲑⲁⲃ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉ",
+          4
+        ],
+        [
+          "ⲧ_2_post_ⲙⲉ",
+          4
+        ],
+        [
+          "ⲙⲉ_1_post_ⲛⲁ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_0_node",
+          "ϥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲩ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲓ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲕ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲛ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲁ",
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          "ⲁⲅⲁⲡⲏ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲑⲁⲃ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉ",
+          "ⲧ_2_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲉ",
+          "ⲙⲉ_1_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 190.22,
+      "rank": 9,
+      "count": 30191
+    },
+    "B": {
+      "rate": 149.45,
+      "rank": 14,
+      "count": 12685
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2395",
+      "type": "cf",
+      "label": "go"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2373",
+      "label": "ⲛⲁ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be in act of going to; befit, suit"
+    },
+    {
+      "target": "C2378",
+      "label": "ⲛⲁ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "go in, enter"
+    },
+    {
+      "target": "C2379",
+      "label": "ⲛⲁ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2380",
+      "label": "ⲛⲁ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2375",
+      "label": "ⲛⲁ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "go up to, approach"
+    },
+    {
+      "target": "C2377",
+      "label": "ⲛⲁ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2376",
+      "label": "ⲛⲁ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2374",
+      "label": "ⲛⲁ (ⲉⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "go to (God)"
+    },
+    {
+      "target": "C2372",
+      "label": "ⲛⲁ . . . ⲛⲏⲩ",
+      "pos": "V",
+      "gloss": "go and come"
+    },
+    {
+      "target": "C2381",
+      "label": "ⲛⲁ-",
+      "pos": "A",
+      "gloss": "verbal prefix of Futur I and II"
+    }
+  ],
+  "etym": {
+    "egy_num": "854518",
+    "egy_lemma": "nꜥi̯",
+    "demo_num": "d3070",
+    "demo_lemma": "nꜥ",
+    "english": "drive; travel; wind; wind oneself",
+    "german": "fahren; befahren; winden; sich winden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854518",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3070"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "C9188",
+  "forms": [
+    {
+      "id": "CF22887",
+      "orth": "ⲑⲣⲓⲥⲕⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22888",
+      "orth": "ⲑⲣⲓⲥⲕⲓⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF22889",
+      "orth": "ⲑⲣⲩⲥⲕⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22890",
+      "orth": "ⲧⲣⲓⲥⲕⲓⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11411",
+      "bibliography": "DDGLC",
+      "cu_ID": "2667"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲧⲁϩⲟⲥ ⲉⲣⲁⲧⲥ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ · ⲡⲉϫⲉ ⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲁⲥ ϫⲉⲁϫⲓⲥ ⲉⲣⲟⲓ ϫⲉⲟⲩ ⲡⲉⲛⲧⲁϥϣⲱⲡⲉ ⲙⲙⲟ · ⲏ ⲟⲩ ⲁⲣⲁ ⲡⲉⲛⲧⲁⲣⲁⲁϥ · ⲁⲩⲱ ϫⲉⲛⲧⲟⲟⲩ ⲉⲃⲟⲗ ⲧⲱⲛ ϩⲛⲧⲟⲩ**ⲑⲣⲓⲥⲕⲓⲁ** · ⲏ ⲣⲏ ⲡⲉ ⲁϣ ⲙⲡⲟⲗⲓⲥ ·",
+      "english": "And when she had been set in his presence the Archbishop said unto her, 'Tell me, What hath happened to thee? What, peradventure, hast thou done? Of what religion art thou a follower? What city dost thou come from?'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲟⲩϩⲗⲗⲏⲛ ⲡⲉ ϩⲛⲧⲉϥ**ⲑⲣⲓⲥⲕⲓⲁ** · ⲉϥⲕⲟⲥⲙⲉⲓ ⲇⲉ ϩⲛⲛⲉϩⲃⲏⲩⲉ ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ·",
+      "english": "and by race he was a Greek And he was adorned with all the works of righteousness.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲗⲗⲏⲛ",
+        1,
+        16.598
+      ],
+      [
+        "ⲕⲟⲥⲙⲉⲓ",
+        1,
+        14.24
+      ],
+      [
+        "ⲣⲏ",
+        1,
+        11.313
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        11.017
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        10.929
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ⲏ",
+        1,
+        8.479
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲑⲣⲓⲥⲕⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲣⲏ",
+          1
+        ],
+        [
+          "ⲣⲏ_2_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          "ⲑⲣⲓⲥⲕⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          "ⲛⲧⲟⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          "ⲧⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲑⲣⲓⲥⲕⲓⲁ",
+          "ⲑⲣⲓⲥⲕⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲑⲣⲓⲥⲕⲓⲁ_0_node",
+          "ⲏ_3_post_ⲣⲏ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲣⲏ",
+          "ⲣⲏ_2_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7000,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3456",
+    "grl_lemma": "θρησκεία",
+    "grl_meaning": "religious worship, cult, ritual",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 806a; Preisigke 1:679; Lampe 654a"
+  }
+}

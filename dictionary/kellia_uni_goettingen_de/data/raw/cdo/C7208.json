@@ -1,0 +1,145 @@
+{
+  "id": "C7208",
+  "forms": [
+    {
+      "id": "CF16475",
+      "orth": "ϫⲗⲁϩⲧⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9580,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7956",
+      "bibliography": "CD 770a; CED 314; KoptHWb 421, 572; DELC 326; ChLCS 102a"
+    },
+    {
+      "id": "CS7957",
+      "bibliography": "CD 770a; CED 314; KoptHWb 421, 572; DELC 326b; ChLCS 102a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲧⲉⲱⲥ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲉⲓϩⲛⲟⲩ**ϫⲗⲁϩⲧⲥ** · ⲉⲥϣⲟⲕϩ ϣⲁⲡⲁⲙⲟⲧⲉ · ⲁⲩⲱ ⲉⲓⲙⲉϩ ⲛⲉⲧⲡⲱ ⲉⲓϫⲓϣⲕⲁⲕ ⲉⲃⲟⲗ ϫⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲛⲁⲓ ⲻ",
+      "english": "He said to him, 'I am hitherto a man in a deep pit dug up to my neck. Being full of burden I cry out, 'God have mercy on me.'",
+      "source": "Apophthegmata Patrum Sahidic 107: Paul the Great 2",
+      "urn": "urn:cts:copticLit:ap.107.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲕϩ",
+        1,
+        16.898
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲓ_1_pre_ϫⲗⲁϩⲧⲥ",
+          1
+        ],
+        [
+          "ϫⲗⲁϩⲧⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲗⲁϩⲧⲥ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓ_1_pre_ϫⲗⲁϩⲧⲥ",
+          "ϫⲗⲁϩⲧⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲗⲁϩⲧⲥ_0_node",
+          "ⲁⲩⲱ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲉϩ",
+          "ⲉ_1_post_ϫⲗⲁϩⲧⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲗⲁϩⲧⲥ",
+          "ⲓ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲙⲉϩ",
+          "ⲙⲉϩ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9147,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "egy_num": "185310",
+    "egy_lemma": "ḏḥr.t",
+    "english": "[a vessel (Sem. loan word)]",
+    "german": "[ein Gefäß]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/185310"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "C8491",
+  "forms": [
+    {
+      "id": "CF19947",
+      "orth": "ⲁⲥⲏⲙⲁⲛⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19948",
+      "orth": "ⲁⲥⲏⲙⲁⲛⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12543,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9927",
+      "bibliography": "DDGLC",
+      "cu_ID": "6384"
+    },
+    {
+      "id": "CS9928",
+      "bibliography": "DDGLC",
+      "cu_ID": "6377"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲑⲃⲉⲟⲩ ⲁⲩⲡⲣⲟⲉⲗⲑⲉ ⲉⲃⲟⲗ ϩⲛⲛⲓⲁⲡⲁⲧⲱⲣ . ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩⲥⲕⲩⲗⲗⲉⲓ ⲙⲙⲟⲟⲩ ⲛϭⲓⲡⲓⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛ**ⲁⲥⲏⲙⲁⲛⲧⲟⲥ** ·",
+      "english": "“and wherefor they have come forth from the Fatherless. And that mystery knoweth wherefor the twelve Undesignatables have rent themselves asunder”",
+      "source": "Pistis Sophia Book 2 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:66-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+        1,
+        12.521
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        10.87
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥⲏⲙⲁⲛⲧⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12116,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3282",
+    "grl_lemma": "ἀσήμαντος",
+    "grl_meaning": "unsealed, unmarked, unseen, unintelligible",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 255b"
+  }
+}

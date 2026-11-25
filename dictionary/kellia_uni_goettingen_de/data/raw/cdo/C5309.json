@@ -1,0 +1,144 @@
+{
+  "id": "C5309",
+  "forms": [
+    {
+      "id": "CF12587",
+      "orth": "ⲟⲩⲱϩ ⲛⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5653,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲁ⸗",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5958",
+      "bibliography": "CD 506b (\"ethic dat\"); KoptHWb 285; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲇⲁⲩⲉⲓⲇ ⲇⲉ ⲉϩⲟⲩⲛ ϩⲛⲁⲭⲟⲩⲥ ϫⲉⲉϣⲱⲡⲉ ⲁⲛⲟⲕ ⲡⲉⲕϩⲙϩⲁⲗ ⲁⲓϭⲉⲛⲭⲁⲣⲓⲥ ⲛⲁϩⲣⲁⲕ ⲙⲁⲣⲟⲩϯⲟⲩⲙⲁ **ⲛⲟⲩⲱϩ **ⲛⲁ**ⲓ** ϩⲛⲙⲡⲟⲗⲓⲥ ⲉⲧϩⲏⲛ ⲉⲧⲥⲱϣⲉ ϫⲉⲉⲓⲉϭⲱ ⲙⲙⲁⲩ ⲛⲧⲉⲡⲉⲕϩⲙϩⲁⲗ ⲗⲟ ϩⲛⲟⲩⲡⲟⲗⲓⲥ ⲉⲕⲟ ⲛⲣⲣⲟ ⲛϩⲏⲧⲥ",
+      "english": "And David said to Anchus, If now thy servant has found grace in thine eyes, let them give me, I pray thee, a place in one of the cities in the country, and I will dwell there: for why does thy servant dwell with thee in a royal city?",
+      "source": "I Samuel 27",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲓⲥⲟⲩⲱϩ **ⲛⲁ**ⲓ** ⲉϩⲟⲩⲛ ⲛⲟⲩϩⲁⲧ ⲙⲛⲡⲟⲩⲛⲟⲩⲃ ⲁⲩⲱ ⲛϣⲟⲩϣⲟⲩ ⲛⲛⲉⲣⲣⲱⲟⲩ ⲙⲛⲛⲉⲭⲱⲣⲁ ⲁⲓⲕⲱ ⲛⲁⲓ ⲛϩⲉⲛϩⲟⲟⲩⲧ ⲙⲛϩⲉⲛϩⲓⲟⲟⲙⲉ ⲉⲩⲛⲁϫⲱ ⲉⲣⲟⲓ ϩⲛⲟⲩⲧⲣⲩⲫⲏ ⲙⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲁⲩⲱ ϩⲉⲛⲣⲉϥⲟⲩⲱⲧϩ ⲛϩⲟⲟⲩⲧ ⲙⲛϩⲉⲛⲣⲉϥⲟⲩⲱⲧϩ ⲛⲥϩⲓⲙⲉ",
+      "english": "Moreover I collected for myself both silver and gold also, and the peculiar treasures of kings and provinces: I procured me singing men and singing women, and delights of the sons of men, a butler and female cupbearers.",
+      "source": "Ecclesiastes 2",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲅⲱⲛϩ ⲉⲧⲉⲕⲥⲏⲃⲉ ⲛⲅⲣϩⲙϩⲁⲗ ⲙⲡⲉⲕⲥⲟⲛ ⲉⲥⲉϣⲱⲡⲉ **ⲉⲕϣⲁⲛⲟⲩⲱϩ **ⲛⲁ**ⲕ** ⲁⲩⲱ ⲛⲅⲃⲱⲗ ⲉⲃⲟⲗ ⲙⲡⲉϥⲛⲁϩⲃⲉϥ ϩⲓϫⲙⲡⲉⲕⲙⲁⲕϩ",
+      "english": "And thou shalt live by thy sword, and shalt serve thy brother; and there shall be when thou shalt break and loosen his yoke from off thy neck.",
+      "source": "Genesis 27",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5318",
+      "label": "ϭⲓⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "act of dwelling; manner of life"
+    },
+    {
+      "target": "C5317",
+      "label": "ⲙⲁ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "house, habitation, cell"
+    },
+    {
+      "target": "C5319",
+      "label": "ⲟⲩⲁϩϥ",
+      "pos": "N",
+      "gloss": "liturgical functionary (acolyte?)"
+    },
+    {
+      "target": "C5304",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "V",
+      "gloss": "put, place, add; be placed, stay, dwell"
+    },
+    {
+      "target": "C5305",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "standing-place, dwelling-place"
+    },
+    {
+      "target": "C5306",
+      "label": "ⲟⲩⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "set on, add to, attribute to, dwell by/with"
+    },
+    {
+      "target": "C5312",
+      "label": "ⲟⲩⲱϩ ϩⲁ-",
+      "pos": "V",
+      "gloss": "lie by, in return for; deposit (money)"
+    },
+    {
+      "target": "C5315",
+      "label": "ⲟⲩⲱϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "put in, bring in"
+    },
+    {
+      "target": "C5316",
+      "label": "ⲟⲩⲱϩ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "set down"
+    },
+    {
+      "target": "C5308",
+      "label": "ⲟⲩⲱϩ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "add to, increase"
+    },
+    {
+      "target": "C5313",
+      "label": "ⲟⲩⲱϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "set down, pause; let, bring down"
+    },
+    {
+      "target": "C5314",
+      "label": "ⲟⲩⲱϩ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "descend, alight; set down"
+    },
+    {
+      "target": "C5307",
+      "label": "ⲟⲩⲱϩ ⲉⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "add, repeat"
+    },
+    {
+      "target": "C5310",
+      "label": "ⲟⲩⲱϩ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "follow"
+    },
+    {
+      "target": "C5311",
+      "label": "ⲟⲩⲱϩ ⲛⲧⲛ-",
+      "pos": "V",
+      "gloss": "place with, pledge to, pawn, mortgage"
+    }
+  ]
+}

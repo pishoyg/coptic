@@ -1,0 +1,126 @@
+{
+  "id": "C9167",
+  "forms": [
+    {
+      "id": "CF22811",
+      "orth": "ⲑⲉⲥⲃⲓⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22812",
+      "orth": "ⲑⲉⲥⲃⲓⲧⲏⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF22813",
+      "orth": "ⲑⲉⲥⲃⲓⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22814",
+      "orth": "ⲑⲉⲥⲃⲓⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6021,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11365",
+      "bibliography": "DDGLC",
+      "cu_ID": "884"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲥⲱⲧⲙ ⲉⲩϣⲁϫⲉ ⲉⲧⲃⲉⲡⲉⲛⲉⲓⲱⲧ ϩⲏⲗⲓⲁⲥ ⲡⲉ**ⲑⲉⲥⲃⲓⲧⲏⲥ** · ϫⲉⲛⲧⲁϥϭⲙϭⲟⲙ ϩⲙⲡⲛⲟⲩⲧⲉ ⲛϯϩⲉ ⲧⲏⲣⲥ · ⲉϥϣⲟⲟⲡ ϩⲙⲡⲉⲓϫⲁⲓⲉ ·",
+      "english": "And I heard them speaking about our father Elijah, the Tishbite, and saying that he was wholly powerful in God while he lived in this desert .",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "... ⲟⲩⲙⲟϫϩ ⲛϣⲁⲁⲣ ⲙⲏⲣ ⲉⲧⲉϥϯⲡⲉ ⲡⲉϫⲉⲟⲭⲟⲓⲍⲉⲓⲁⲥ ϫⲉϩⲏⲗⲓⲁⲥ ⲡⲉ**ⲑⲉⲥⲃⲓⲧⲏⲥ** ⲡⲉ ⲡⲁⲓ",
+      "english": "And they said to him, He was a hairy man, and girt with a leathern girdle about his loins. And he said, This is Eliu the Thesbite.",
+      "source": "II Kings 1",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲭⲟⲓⲍⲉⲓⲁⲥ",
+        2,
+        21.013
+      ],
+      [
+        "ϩⲏⲗⲓⲁⲥ",
+        3,
+        16.268
+      ],
+      [
+        "ϫⲉ",
+        5,
+        11.527
+      ],
+      [
+        "ⲡⲉⲛ",
+        2,
+        11.496
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        2,
+        11.041
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        10.923
+      ],
+      [
+        "ⲛⲧ",
+        2,
+        9.645
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5584,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "4696",
+    "grl_lemma": "Θεσβίτης",
+    "grl_meaning": "Thesbite",
+    "grl_pos": "noun",
+    "grl_ref": null
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "id": "C10093",
+  "forms": [
+    {
+      "id": "CF26491",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF26492",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13635,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13281",
+      "bibliography": "DDGLC",
+      "cu_ID": "2646"
+    },
+    {
+      "id": "CS13282",
+      "bibliography": "DDGLC",
+      "cu_ID": "10670"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲙⲉϩϯⲟⲩ ⲟⲩϭⲁⲥ ⲛϣⲟ ⲛⲣⲟⲙⲡⲉ · ϯⲛⲁⲧⲛⲛⲟⲟⲩ ⲙⲡⲁϣⲏⲣⲉ ⲙⲙⲉⲣⲓⲧ ⲉⲡⲕⲟⲥⲙⲟⲥ · ⲛϥϣⲱⲡⲉ ϩⲛⲟⲩⲟⲟⲧⲉ ⲙ**ⲡⲁⲣⲑⲉⲛⲓⲕⲏ** ⲙⲯⲓⲥ ⲛⲉⲃⲟⲧ · ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲙⲁⲣⲓⲁ ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "And when five and a half thousand of years are fulfilled I will send My beloved Son into the world, and He shall abide in a virgin womb, that is to say, the holy Virgin Mary.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲯⲓⲥ",
+        1,
+        15.554
+      ],
+      [
+        "ⲟⲟⲧⲉ",
+        1,
+        15.511
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        1,
+        12.267
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲕⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲕⲏ_0_node",
+          "ⲙ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          "ⲯⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_2_post_ⲙ",
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲕⲏ",
+          "ⲉⲃⲟⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13234,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3471",
+    "grl_lemma": "παρθενικός",
+    "grl_meaning": "of the Virgin, virginal, virgin",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1339b"
+  }
+}

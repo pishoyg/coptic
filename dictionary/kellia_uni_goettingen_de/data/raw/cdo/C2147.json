@@ -1,0 +1,166 @@
+{
+  "id": "C2147",
+  "forms": [
+    {
+      "id": "CF6002",
+      "orth": "ϫⲉⲙⲧⲁⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10289,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2486",
+      "bibliography": "CD 196a; CED 94; KoptHWb 105; DELC 125"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲟⲩϫⲓⲙⲓ ⲛϧⲏⲧⲕ ⲉϥⲑⲣⲟ ⲙⲡⲉϥϣⲏⲣⲓ ⲓⲉ ⲧⲉϥϣⲉⲣⲓ ⲉⲥⲓⲛⲓ ϧⲉⲛⲟⲩⲭⲣⲱⲙ ⲓⲉ ⲉϥϣⲓⲛⲓ ϧⲉⲛⲛⲓϣⲉⲛϩⲓⲛ ⲉϥⲉⲣⲕⲗⲏⲇⲟⲛⲓⲍⲉⲥⲑⲉ ⲉϥ**ϫⲉⲙⲧⲁⲩ** ⲟⲩⲇⲉ ⲣⲉϥϯⲫⲁϧⲣⲓ ⲛϩⲓⲕ",
+      "english": "There shall not be found in thee one who purges his son or his daughter with fire, one who uses divination, who deals with omens, and augury,",
+      "source": "05_Deuteronomium_18",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲕⲗⲏⲇⲟⲛⲓⲍⲉⲥⲑⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ϩⲓⲕ",
+        1,
+        17.373
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        9.76
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϫⲉⲙⲧⲁⲩ",
+          1
+        ],
+        [
+          "ϫⲉⲙⲧⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_1_post_ϫⲉⲙⲧⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲕ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϫⲉⲙⲧⲁⲩ",
+          "ϫⲉⲙⲧⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϫⲉⲙⲧⲁⲩ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_1_post_ϫⲉⲙⲧⲁⲩ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_1_post_ϫⲉⲙⲧⲁⲩ",
+          "ⲛ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ϩⲓⲕ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9746,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "say, speak, tell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2149",
+      "label": "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magic"
+    },
+    {
+      "target": "C2146",
+      "label": "ⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "wizardry, magic (words)"
+    },
+    {
+      "target": "C2148",
+      "label": "ⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magician"
+    }
+  ]
+}

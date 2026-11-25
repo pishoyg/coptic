@@ -1,0 +1,114 @@
+{
+  "id": "C298",
+  "forms": [
+    {
+      "id": "CF1261",
+      "orth": "ⲁϩⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1262",
+      "orth": "ⲁϩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2306,
+        "count": 23
+      }
+    },
+    {
+      "id": "CF1263",
+      "orth": "ⲁϧⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11601,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1264",
+      "orth": "ⲁⲭⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4060,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS331",
+      "bibliography": "CD 25a; CED 17, 18; KoptHWb 17, 491; DELC 21, 23; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓ**ⲁϧⲓ** ⲧⲏⲣϥ ⲉⲧϩⲟⲩⲉⲧⲟⲩⲱⲧ ⲉⲧⲉⲙⲡⲕⲱϯ ⲙⲫⲓⲁⲣⲟ ⲉⲩⲉϣⲟⲩⲱⲟⲩ ⲟⲩⲟϩ ⲉⲩⲉⲉⲣϫⲓⲙⲫⲉ .",
+      "english": "And all the green herbage round about the river, and everything sown by the side of the river, shall be blasted with the wind and dried up.",
+      "source": "23_Isaias_19",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛϩⲟⲧϩⲧ ϭⲉ ⲛⲥⲁⲡ**ⲁϩⲣⲉ** ⲛⲧⲉⲡⲗⲩⲅⲏ ⲙⲡⲁⲧⲛⲙⲟⲩ ·",
+      "english": "Let us search out then a remedy for the disease before we die.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉⲛϣⲏⲣⲓ ⲛⲥⲩⲙⲉⲱⲛ ⲡⲇⲏⲙⲟⲥ ⲛⲧⲉⲛⲉⲛϣⲏⲣⲓ ⲛⲥⲩⲙⲉⲱⲛ ⲫⲁ ⲛⲁⲙⲟⲩⲏⲗ ⲡⲇⲏⲙⲟⲥ ⲛⲧⲉⲛⲁⲙⲟⲩⲏⲗ ⲫⲁ ⲓⲉⲙⲉⲛⲓ ⲡⲇⲏⲙⲟⲥ ⲛⲧⲉⲓⲉⲙⲉⲛⲓ ⲫⲁ ⲁⲭⲓⲛ ⲡⲇⲏⲙⲟⲥ ⲛⲧⲉ**ⲁⲭⲓ**ⲛ",
+      "english": "And the sons of Symeon:the family of the sons of Symeon: to Namuel, belonged the family of the Namuelites; to Jamin the family of the Jaminites; to Jachin the family of the Jachinites.",
+      "source": "04_Numeri_26",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣϫⲉ ⲛⲉⲩⲛⲏⲩ ⲉϩⲣⲁⲓ ϩⲙⲡⲓⲉⲣⲟ ⲛϭⲓⲥⲁϣϥⲉ ⲛⲉϩⲉ ⲉⲩⲥⲟⲧⲡ ϩⲛⲛⲉⲩⲥⲁⲣⲝ ⲁⲩⲱ ⲉⲛⲉⲥⲱⲟⲩ ϩⲙⲡⲉⲩⲉⲓⲛⲉ ⲉⲩⲙⲟⲟⲛⲉ ϩⲙⲡ**ⲁϩⲣⲉ**",
+      "english": "and there came up as it were out of the river, seven cows well-favoured and choice-fleshed, and they fed on the sedge.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲙⲫⲣⲏϯ ⲛⲉ ⲉⲃⲟⲗ ϧⲉⲛⲫⲓⲁⲣⲟ ⲛⲁⲩⲛⲏⲟⲩ ⲉⲡϣⲱⲓ ⲡⲉ ⲛϫⲉⲍ ⲛⲉϩⲉ ⲉⲑⲛⲁⲛⲉⲩ ϧⲉⲛⲡⲟⲩⲥⲙⲟⲧ ⲟⲩⲟϩ ⲉⲩⲥⲟⲧⲡ ϧⲉⲛⲛⲟⲩⲁϥⲟⲩⲓ ⲟⲩⲟϩ ⲛⲁⲩⲙⲟⲛⲓ ⲡⲉ ϧⲉⲛⲡⲓ**ⲁⲭⲓ**",
+      "english": "And lo, there came up as it were out of the river seven cows, fair in appearance, and choice of flesh, and they fed on the sedge.",
+      "source": "01_Genesis_41",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ⲛⲁⲩ . ϫⲉⲧ**ⲁϩⲣⲉ** ⲁⲛⲟⲕ ⲧⲉ ϫⲉⲕⲁⲁⲥ ⲉⲉⲓⲉⲉⲓⲣⲉ ⲙⲡⲟⲩⲱϣ ⲙⲡⲉⲛⲧⲁϥⲧⲁⲟⲩⲟⲉⲓ ⲁⲩⲱ ⲧⲁϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉϥϩⲱⲃ .",
+      "english": "Jesus said to them, 'My food is to do the will of him who sent me, and to accomplish his work.",
+      "source": "43_John_4",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2031,
+      "count": 23
+    }
+  },
+  "etym": {
+    "egy_num": "198",
+    "egy_lemma": "ꜣḫ",
+    "demo_num": "d204",
+    "demo_lemma": "ꜣẖj",
+    "english": "papyrus thicket",
+    "german": "Papyrusdickicht",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/198",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d204"
+  }
+}

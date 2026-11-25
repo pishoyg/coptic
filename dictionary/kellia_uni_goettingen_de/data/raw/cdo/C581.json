@@ -1,0 +1,114 @@
+{
+  "id": "C581",
+  "forms": [
+    {
+      "id": "CF2200",
+      "orth": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2201",
+      "orth": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2202",
+      "orth": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS697",
+      "bibliography": "CD 47a; KoptHWb 29"
+    },
+    {
+      "id": "CS698",
+      "bibliography": "CD 47a"
+    },
+    {
+      "id": "CS699",
+      "bibliography": "CD 47a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϭⲓ ⲛⲟⲩⲙⲏⲗⲟⲛ ⲟⲩⲟϩ ⲛⲟⲩⲧ ⲛⲟⲩⲛⲱⲓⲧ ϭⲱⲣⲡ ⲙⲡⲉϩⲱⲃⲥ ⲉⲃⲟⲗ ⲃⲱϣ ⲛⲛⲉⲥⲭⲓⲙ ⲉⲃⲟⲗ **ⲃⲱϣ **ⲉⲃⲟⲗ**** ⲛⲛⲓⲥⲏⲃⲓ ⲛⲧⲉⲣⲁϯ ⲁⲣⲓϫⲓⲛⲓⲟⲣ ⲛϩⲁⲛⲓⲁⲣⲱⲟⲩ .",
+      "english": "Take a millstone, grind meal: remove thy veil, uncover thy white hairs, make bare the leg, pass through the rivers.",
+      "source": "23_Isaias_47",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:47",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩⲣⲱⲙⲓ ⲁϥϣⲁⲛⲛⲕⲟⲧ ⲛⲉⲙⲟⲩⲥϩⲓⲙⲓ ⲉⲥⲟⲓ ⲛⲕⲉⲙⲁ ⲟⲩⲟϩ ⲛⲧⲉϥϭⲱⲣⲡ ⲙⲡⲉⲥϣⲓⲡⲓ ⲉⲃⲟⲗ ⲧⲉⲥⲙⲟⲩⲙⲓ ⲁϥϭⲟⲣⲡⲥ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲑⲟⲥ ϩⲱⲥ **ⲁⲥⲃⲱϣ **ⲉⲃⲟⲗ**** ⲙⲡⲧⲉⲗⲧⲉⲗ ⲛⲧⲉⲡⲉⲥⲥⲛⲟϥ ⲉⲩⲉϥⲱϯ ⲉⲃⲟⲗ ⲙⲡⲃ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩϫⲱⲟⲩ",
+      "english": "And whatever man shall lie with a woman that is set apart for a flux, and shall uncover her nakedness, he has uncovered her fountain, and she has uncovered the flux of her blood: they shall both be destroyed from among their generation.",
+      "source": "03_Leviticus_20",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲥⲱ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲏⲣⲡ ⲟⲩⲟϩ ⲁϥⲑⲓϧⲓ ⲟⲩⲟϩ **ⲁϥⲃⲱϣ **ⲉⲃⲟⲗ**** ϧⲉⲛⲡⲉϥⲏⲓ",
+      "english": "And he drank of the wine, and was drunk, and was naked in his house.",
+      "source": "01_Genesis_09",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:09",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C585",
+      "label": "ϫⲓⲛⲃⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "laying bare, display"
+    },
+    {
+      "target": "C587",
+      "label": "ⲃⲁϣⲁϩⲏⲩ",
+      "pos": "N",
+      "gloss": "naked"
+    },
+    {
+      "target": "C586",
+      "label": "ⲃⲁϣⲁⲡⲏ",
+      "pos": "N",
+      "gloss": "bareheaded"
+    },
+    {
+      "target": "C579",
+      "label": "ⲃⲱϣ",
+      "pos": "V",
+      "gloss": "be loosened, undone, naked; undress, uncover, divest; flay, lay bare, despoil; loosen, unfasten; release, give leave; forsake"
+    },
+    {
+      "target": "C580",
+      "label": "ⲃⲱϣ",
+      "pos": "N",
+      "gloss": "nakedness"
+    },
+    {
+      "target": "C582",
+      "label": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "nakedness"
+    },
+    {
+      "target": "C584",
+      "label": "ⲣⲉϥⲃⲏϣ",
+      "pos": "N",
+      "gloss": "naked person"
+    },
+    {
+      "target": "C583",
+      "label": "ⲣⲉϥⲃⲱϣ",
+      "pos": "N",
+      "gloss": "despoiler, robber"
+    }
+  ]
+}

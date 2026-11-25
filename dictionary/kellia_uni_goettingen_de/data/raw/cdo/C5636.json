@@ -1,0 +1,103 @@
+{
+  "id": "C5636",
+  "forms": [
+    {
+      "id": "CF13248",
+      "orth": "ⲱϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19809,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6308",
+      "bibliography": "CD 536b; CED 232; KoptHWb 297; ChLCS 74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲉⲛⲛⲁ ⲉϩⲣⲁⲓ ⲉⲧⲱⲛ ⲛⲉⲧⲛⲥⲛⲏⲩ ⲇⲉ ⲁⲩⲡⲉϣⲥⲡⲉⲧⲛϩⲏⲧ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲛⲁⲩ ⲉⲩⲛⲟϭ ⲛϩⲉⲑⲛⲟⲥ ⲉⲛⲁϣⲱϥ ⲁⲩⲱ ⲉϥϫⲟⲟⲣ ⲉⲣⲟⲛ ⲁⲩⲱ ϩⲉⲛⲛⲟϭ ⲙⲡⲟⲗⲓⲥ ⲉⲩⲕⲧⲏⲩ ⲛⲥ**ⲟⲃⲧ** ϣⲁϩⲣⲁⲓ ⲉⲧⲡⲉ ⲁⲗⲗⲁ ⲛⲕⲉϣⲏⲣⲉ ⲛⲛⲅⲓⲅⲁⲥ ⲁⲛⲛⲁⲩ ⲉⲣⲟⲟⲩ ⲙⲙⲁⲩ",
+      "english": "Whither do we go up? and your brethren drew away your heart, saying, It is a great nation and populous, and mightier than we; and there are cities great and walled up to heaven: moreover we saw there the sons of the giants.",
+      "source": "Deuteronomy 1",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲟⲗⲓⲥ ⲙⲡⲁⲧⲧⲩⲣⲟⲥ ϩⲉⲛⲡⲟⲗⲓⲥ ⲛⲉ ⲉⲩⲕⲧⲏⲩ ⲛⲥ**ⲟⲃⲧ** ⲧⲩⲣⲟⲥ ⲁⲩⲱ ⲱⲙⲁⲁⲑⲁ ⲁⲩⲱ ⲇⲉⲓⲛⲁ ... ⲁⲩⲱ ⲕⲉⲛⲉⲣⲉⲧ",
+      "english": "And the walled cities of the Tyrians, Tyre, and Omathadaketh, and Kenereth,",
+      "source": "Joshua 19",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲟϭ ⲧⲏⲣⲟⲩ ⲙⲡⲟⲗⲓⲥ ⲉⲧⲟⲣϫ ⲛⲥ**ⲟⲃⲧ** ⲉⲧϫⲟⲥⲉ ⲁⲩⲱ ϩⲉⲛⲡⲩⲗⲏ ⲙⲛϩⲉⲛⲙⲟⲭⲗⲟⲥ ϣⲁⲧⲛ ⲙⲡⲟⲗⲓⲥ ⲙⲡⲉⲫⲉⲣⲁⲓⲍⲁⲓⲟⲥ ⲛⲉⲧⲛⲁϣⲱⲟⲩ ⲉⲙⲁⲧⲉ",
+      "english": "all strong cities, lofty walls, gates and bars; besides the very many cities of the Pherezites.",
+      "source": "Deuteronomy 3",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        6.632
+      ],
+      [
+        "ϥ",
+        2,
+        3.434
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        2.893
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        2.421
+      ],
+      [
+        "ⲧ",
+        1,
+        1.983
+      ],
+      [
+        "ⲁ",
+        1,
+        0.957
+      ],
+      [
+        "ⲉ",
+        1,
+        0.73
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2388,
+      "count": 17
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "24610",
+    "egy_lemma": "jfd",
+    "english": "to flee; to move quickly",
+    "german": "davonrennen; (durch)eilen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/24610"
+  }
+}

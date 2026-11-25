@@ -1,0 +1,316 @@
+{
+  "id": "C11036",
+  "forms": [
+    {
+      "id": "CF30341",
+      "orth": "ⲯⲱⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30343",
+      "orth": "ⲯⲱⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5697,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF30342",
+      "orth": "ⲯ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11077,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15406",
+      "bibliography": "DDGLC",
+      "cu_ID": "7706"
+    },
+    {
+      "id": "CS15407",
+      "bibliography": "DDGLC",
+      "cu_ID": "8678"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏ ⲉϥⲟ ⲛⲕⲩⲣⲧⲟⲥ ⲏ ⲉϥⲟ ⲛⲗⲉⲯ ⲏ ⲉⲣⲉⲟⲩϩⲁⲧⲁⲓⲗⲉ ϩⲛⲛⲉϥⲃⲁⲗ ⲏ ⲟⲩⲣⲱⲙⲉ ⲉⲣⲉⲟⲩ**ⲯⲱⲣⲁ** ⲛⲁⲅⲣⲓⲟⲛ ϩⲓⲱⲱϥ ⲏ ⲟⲩⲙⲉϫⲡⲱⲛⲉ ⲏ ⲉϥⲟ ⲙⲙⲟⲛⲟⲣⲭⲓⲥ ⲉⲧⲉⲟⲩϫⲟⲉⲓⲧ ⲛⲟⲩⲱⲧ ⲡⲉ",
+      "english": "or hump-backed, or blear-eyed, or that has lost his eye-lashes, or a man who has a malignant ulcer, or tetter, or one that has lost a testicle.",
+      "source": "Leviticus 21",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ϩⲱ ϯⲛⲁⲉⲓⲣⲉ ⲛⲏⲧⲛ ϩⲓⲛⲁⲓ ⲧⲁⲉⲓⲛⲉ ⲉϫⲛⲧⲏⲩⲧⲛ ⲙⲡϣⲱⲱⲧ ⲁⲩⲱ ⲧⲉ**ⲯⲱⲣⲁ** ⲙⲛⲡϣⲱⲛⲉ ⲛⲓⲕⲧⲉⲣⲟⲥ ⲛϥϩⲓⲟⲩⲉ ⲛⲥⲁⲛⲉⲧⲛⲃⲁⲗ ⲛⲧⲉⲡϣⲱⲱⲧ ⲧⲁⲕⲉⲛⲉⲧⲙⲯⲩⲭⲏ ⲛⲧⲉⲧⲛϫⲟ ⲛⲛⲉⲧⲛϭⲣⲟϭ ⲉⲡϫⲓⲛϫⲏ ⲛⲧⲉⲛⲧⲉⲧⲛϫⲓⲛϫⲉⲉⲩⲉ ⲟⲩⲟⲙⲟⲩ",
+      "english": "then will I do thus to you: I will even bring upon you perplexity and the itch, and the fever that causes your eyes to waste away, and disease that consumes your life; and ye shall sow your seeds in vain, and your enemies shall eat them.",
+      "source": "Leviticus 26",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲑⲙⲥⲟⲕ ϩⲛⲡⲥⲁϣ ⲛⲕⲏⲙⲉ ⲁⲩⲱ ϩⲛⲟⲩ**ⲯⲱⲣⲁ** ⲉⲥⲛⲁϣⲧ ⲙⲛⲟⲩϩⲱϩ ϩⲱⲥⲧⲉ ⲛⲅⲧⲙⲉϣϭⲙϭⲟⲙ ⲙⲧⲟⲛ ⲛϩⲏⲧⲟⲩ",
+      "english": "The Lord smite thee with the botch of Egypt in the seat, and with a malignant scab, and itch, so that thou canst not be healed.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲅⲣⲓⲟⲛ",
+        2,
+        17.276
+      ],
+      [
+        "ϭⲁϫⲓϥ",
+        1,
+        17.013
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        2,
+        13.139
+      ],
+      [
+        "ⲛⲁϣⲧ",
+        1,
+        10.87
+      ],
+      [
+        "ϣⲱⲱⲧ",
+        1,
+        10.505
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        10.102
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        10.098
+      ],
+      [
+        "ⲕⲏⲙⲉ",
+        1,
+        9.615
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.644
+      ],
+      [
+        "ⲏ",
+        1,
+        7.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.747
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲯⲱⲣⲁ",
+          2
+        ],
+        [
+          "ⲯⲱⲣⲁ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲯⲱⲣⲁ",
+          2
+        ],
+        [
+          "ⲁⲅⲣⲓⲟⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_1_post_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁϣⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲛⲁϣⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲯⲱⲣⲁ",
+          "ⲯⲱⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲯⲱⲣⲁ_0_node",
+          "ⲛ_1_post_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲯⲱⲣⲁ",
+          "ⲁⲅⲣⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲯⲱⲣⲁ",
+          "ⲯⲱⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲯⲱⲣⲁ_0_node",
+          "ⲙⲛ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲱⲛⲉ",
+          "ⲡ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲛⲉ",
+          "ϣⲱⲛⲉ_1_post_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_1_post_ⲯⲱⲣⲁ",
+          "ⲛ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲯⲱⲣⲁ",
+          "ⲯⲱⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲯⲱⲣⲁ_0_node",
+          "ⲉ_1_post_ⲯⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲯⲱⲣⲁ",
+          "ⲥ_3_post_ⲛⲁϣⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁϣⲧ",
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          "ⲙⲛ_3_post_ⲛⲁϣⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5260,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2837",
+    "grl_lemma": "ψώρα",
+    "grl_meaning": "itch; scurvy",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2029a"
+  }
+}

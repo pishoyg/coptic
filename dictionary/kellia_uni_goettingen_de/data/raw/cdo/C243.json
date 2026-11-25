@@ -1,0 +1,64 @@
+{
+  "id": "C243",
+  "forms": [
+    {
+      "id": "CF991",
+      "orth": "ⲁⲩⲁⲛⲙⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS274",
+      "bibliography": "KoptHWb 490; DELC 19; ChLCS 6a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2790",
+      "type": "cf",
+      "label": "sky"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C244",
+      "label": "ⲁⲟⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "jaundice"
+    },
+    {
+      "target": "C241",
+      "label": "ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "colour; appearance"
+    },
+    {
+      "target": "C242",
+      "label": "ⲁⲩⲁⲛ ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "variety of colours"
+    },
+    {
+      "target": "C245",
+      "label": "ⲁⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "ship's cargo, load"
+    }
+  ],
+  "etym": {
+    "egy_num": "22720",
+    "egy_lemma": "jwn-n-p.t",
+    "english": "color-of-heaven (a plant)",
+    "german": "Farbe des Himmels (eine Blume)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/22720"
+  }
+}

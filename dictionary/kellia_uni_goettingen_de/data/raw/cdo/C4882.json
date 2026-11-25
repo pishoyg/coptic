@@ -1,0 +1,68 @@
+{
+  "id": "C4882",
+  "forms": [
+    {
+      "id": "CF11729",
+      "orth": "ⲉⲧⲃⲉ ⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.2,
+        "rank": 211,
+        "count": 821
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Fragepronomen",
+    "collocPrep": "ⲉⲧⲃⲉ",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS5507",
+      "bibliography": "CD 468ab; CDC 73a; KoptHWb 264; ChLCS 65b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉ**ⲉⲧⲃⲉⲟⲩ** ⲛⲇⲁⲓⲙⲱⲛ ⲙⲓϣⲉ ⲛⲙⲙⲁⲛ ⲛⲧⲉⲓϩⲉ ⲧⲏⲣⲥ ·",
+      "english": "'Why do demons attack us like all this?'",
+      "source": "Apophthegmata Patrum Sahidic 132: N 302",
+      "urn": "urn:cts:copticLit:ap.132.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲥⲟⲛ ⲛⲁϥ ϫⲉ**ⲉⲧⲃⲉⲟⲩ** ·",
+      "english": "The brother said to him, 'Why?'",
+      "source": "Apophthegmata Patrum Sahidic 133: N 303",
+      "urn": "urn:cts:copticLit:ap.133.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲉⲧⲃⲉⲟⲩ** ⲉⲓϩⲙⲟⲟⲥ ϩⲙⲡⲁⲙⲁⲛϣⲱⲱⲡⲉ",
+      "english": "why is it that when I sit in my dwelling",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.28,
+      "rank": 176,
+      "count": 838
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4881",
+      "label": "ⲟⲩ",
+      "pos": "PINT",
+      "gloss": "Who?, What?"
+    }
+  ]
+}

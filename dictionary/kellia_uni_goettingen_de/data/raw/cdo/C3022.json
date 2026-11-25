@@ -1,0 +1,133 @@
+{
+  "id": "C3022",
+  "forms": [
+    {
+      "id": "CF7910",
+      "orth": "ⲡⲟϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14963,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3458",
+      "bibliography": "CD 285b; CDC 47a; CED 132; KoptHWb 533; DELC 168; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲧϩⲓⲙⲉ ⲙⲡⲉϥⲥⲟⲛ ϯ ⲙⲡⲉⲥⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲛⲟϭ ⲁⲩⲱ ⲉⲥⲉⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲧ**ⲡⲟϭⲉ** ⲛⲧⲟⲟⲩⲉ ⲛⲧⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲁⲩⲱ ⲉⲥⲉⲛⲉϫⲧⲁϥ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ ⲁⲩⲱ ⲉⲥⲉϫⲟⲟⲥ ϫⲉⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲟⲩⲛⲁⲁⲁⲥ ⲙⲡⲣⲱⲙⲉ ⲉⲧⲉⲛϥⲛⲁⲕⲉⲧⲡⲏⲓ ⲁⲛ ⲙⲡⲉϥⲥⲟⲛ",
+      "english": "then his brother's wife shall come forward before the elders, and shall loose one shoe from off his foot, and shall spit in his face, and shall answer and say, Thus shall they do to the man who will not build his brother's house in Israel.",
+      "source": "Deuteronomy 25",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲟⲩⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        11.867
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲣⲏⲧⲉ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟϭⲉ_0_node",
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          "ⲟⲩⲉⲣⲏⲧⲉ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14561,
+      "count": 1
+    }
+  }
+}

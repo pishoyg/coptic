@@ -1,0 +1,112 @@
+{
+  "id": "C657",
+  "forms": [
+    {
+      "id": "CF2467",
+      "orth": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2468",
+      "orth": "ⲃⲱ ⲛⲁⲗⲟⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12290,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS793",
+      "bibliography": "CD 55a; CED 34; KoptHWb 34; DELC 41; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁⲣⲓⲙⲓ ⲉⲣⲟⲙⲫⲣⲏϯ ⲙⲫⲣⲓⲙⲓ ⲛϩⲁⲛⲓⲁⲍⲏⲣ ϯ**ⲃⲱⲛⲁⲗⲟⲗⲓ** ⲙⲫⲣⲏϯ ⲛϩⲁⲛϣⲁϥⲉ ⲛⲉ ⲛⲉⲕⲕⲗⲏⲙⲁ ⲁ ⲡⲓⲟⲙ ⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲡⲟⲗⲓⲥ ⲛⲧⲉⲓⲁⲍⲏⲣ ⲁⲩϭⲓⲛⲉⲙ ⲧⲉⲟⲡⲱⲣⲁ ⲟⲩⲧⲁⲕⲟ ⲁϥⲓ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲛⲓⲣⲉϥϭⲱⲗ .",
+      "english": "O vine of Aserema, as with the weeping of Jazer: thy branches are gone over the sea, they reached the cities of Jazer: destruction has come upon thy fruits, and upon thy grape-gatherers.",
+      "source": "24_Ieremias_31",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:31",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C323",
+      "type": "cf",
+      "label": "tree"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C661",
+      "label": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine-branch, vine-wood"
+    },
+    {
+      "target": "C652",
+      "label": "ⲁⲗⲟⲗⲓ",
+      "pos": "N",
+      "gloss": "vine, vineyard (elliptic)"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C655",
+      "label": "ⲉⲗⲉⲗϩⲙϫ",
+      "pos": "N",
+      "gloss": "unripe, sour grape"
+    },
+    {
+      "target": "C660",
+      "label": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "bruise (dark coloured like grapes, \"grape of Egypt\")"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    },
+    {
+      "target": "C658",
+      "label": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "C2000",
+  "forms": [
+    {
+      "id": "CF5662",
+      "orth": "ⲙⲁⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17316,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF5663",
+      "orth": "ⲙⲏⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5664",
+      "orth": "ⲙⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.72,
+        "rank": 496,
+        "count": 271
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2321",
+      "bibliography": "CD 182a; KoptHWb 99; ChLCS 27a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ⲙⲁⲓⲣⲉ** ⲛⲧⲉⲧⲉⲥⲧⲁⲕⲧⲏ ⲡⲉ ⲡⲁⲥⲟⲛ ⲛⲁⲓ ⲉϥⲛⲁϣⲱⲡⲉ ϩⲛⲧⲙⲏⲧⲉ ⲛⲛⲁⲉⲕⲓⲃⲉ",
+      "english": "My kinsman is to me a bundle of myrrh; he shall lie between my breasts.",
+      "source": "Song of Solomon 1",
+      "urn": "urn:cts:copticLit:ot.song.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲧⲁⲕⲧⲏ",
+        1,
+        18.013
+      ],
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        14.954
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        10.731
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_1_post_ⲙⲁⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_5_post_ϣⲱⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲁⲓⲣⲉ_0_node",
+          "ⲡⲁ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲟⲛ",
+          "ⲥⲟⲛ_1_post_ⲙⲁⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_1_post_ⲙⲁⲓⲣⲉ",
+          "ⲛⲁⲓ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲥⲟⲛ",
+          "ⲉ_3_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲛⲁⲓ",
+          "ϥ_5_post_ϣⲱⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16927,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1997",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1998",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1996",
+      "label": "ⲙⲁ ⲙⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C1999",
+      "label": "ⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C2001",
+      "label": "ⲙⲁⲣⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bandage(?)"
+    },
+    {
+      "target": "C2003",
+      "label": "ⲙⲟⲣⲥ",
+      "pos": "N",
+      "gloss": "binding, restriction (of fast); bundle, girdle (used as) purse"
+    },
+    {
+      "target": "C1991",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "bind, gird, tie; bind, oblige (by oath), adjure; bind"
+    },
+    {
+      "target": "C1992",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "band, girth, strap"
+    },
+    {
+      "target": "C1993",
+      "label": "ⲙⲟⲩⲣ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bind, join to, of fast which binds"
+    },
+    {
+      "target": "C1995",
+      "label": "ⲙⲟⲩⲣ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "to be spoiling for a fight, be at enmity with"
+    },
+    {
+      "target": "C1994",
+      "label": "ⲙⲟⲩⲣ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "obligation, fast"
+    },
+    {
+      "target": "C2002",
+      "label": "ⲙⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "chain, bond, joint"
+    }
+  ],
+  "etym": {
+    "egy_num": "72010",
+    "egy_lemma": "mr.t",
+    "demo_num": "dm47",
+    "demo_lemma": "mre.t",
+    "english": "Bundle of clothes (?)",
+    "german": "Kleiderbündel (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72010",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm47"
+  }
+}

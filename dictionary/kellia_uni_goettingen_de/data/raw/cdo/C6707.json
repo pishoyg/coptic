@@ -1,0 +1,88 @@
+{
+  "id": "C6707",
+  "forms": [
+    {
+      "id": "CF15459",
+      "orth": "ϩⲛⲉ-",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉϩⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7268,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲛⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 813,
+        "count": 134
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7421",
+      "bibliography": "CD 690a-b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ ⲡⲓⲟⲩⲁⲓ ⲉⲧⲉⲣϩⲱⲃ ⲛϧⲏⲧⲟⲩ ⲡⲁⲓⲡⲛⲉⲩⲙⲁ ⲣⲱ ⲡⲉ ⲉϥⲫⲱϣ ⲙⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧ**ⲉϩⲛⲁ**ϥ .",
+      "english": "But the one and the same Spirit works all of these, distributing to each one separately as he desires.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲩⲫⲣⲁⲛⲉ ϫⲉⲁⲩⲕⲁⲣⲱⲟⲩ ⲁϥϫⲓⲙⲟⲉⲓⲧ ϩⲏⲧⲟⲩ ϩⲛⲙⲙⲁ ⲙⲙⲟⲟⲛⲉ ⲉⲧⲉ**ϩⲛⲁ**ⲩ",
+      "english": "And they are glad, because they are quiet; and he guides them to their desire haven.",
+      "source": "Psalms 106",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:106",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲙⲟⲓ ⲟⲛ ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲧⲁⲁⲥ ⲛⲁⲛ ⲉⲧⲣⲉⲛⲕⲱⲧⲉ ⲛⲧⲉⲛⲟⲩⲟϭⲉ ⲉⲡⲉⲧⲛⲁⲣⲁϩⲧⲛ ⲉⲣⲟⲥ ⲁⲩⲱ ⲉⲥϣⲁⲛϣⲱⲡⲉ ⲉⲧⲣⲉⲩⲙⲟⲟⲩⲧⲛ ϩⲱⲱⲛ ⲉⲧⲃⲉⲡⲣⲁⲛ ⲙⲡⲉⲛⲛⲟⲩⲧⲉ ⲉⲧⲣⲉⲛϫⲟⲟⲥ ⲉ**ϩⲛⲁ**ⲛ ϫⲉⲡϫⲟⲉⲓⲥ ⲙⲡⲣⲱⲡ ⲉⲣⲟⲟⲩ ⲙⲡⲉⲓⲛⲟⲃⲉ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉⲉ**ϩⲛⲁ**ⲓ ⲇⲉ ⲉⲓⲉⲓⲣⲉ ⲙⲡⲁⲓ ⲟⲩⲛⲧⲁⲓ ⲙⲙⲁⲩ ⲛⲟⲩⲃⲉⲕⲉ . ⲉϣϫⲉⲛϩⲛⲁⲓ ⲇⲉ ⲁⲛ ⲉⲓⲉ ⲛⲧⲁⲩⲧⲁⲛϩⲟⲩⲧ ⲉⲩⲟⲓⲕⲟⲛⲟⲙⲓⲁ .",
+      "english": "For if I do this of my own will, I have a reward. But if not of my own will, I have a stewardship entrusted to me.",
+      "source": "1 Corinthians 9",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6708",
+      "label": "ϩⲛⲉ-",
+      "pos": "V",
+      "gloss": "will, desire, be willing"
+    },
+    {
+      "target": "C6709",
+      "label": "ⲣϩⲛⲁ⸗",
+      "pos": "V",
+      "gloss": "desire, be willing"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "C3455",
+  "forms": [
+    {
+      "id": "CF8810",
+      "orth": "ⲥⲱⲗ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲏⲗ†",
+      "dialect": "S",
+      "id": "1399.1"
+    },
+    {
+      "orth": "ⲥⲱⲗ",
+      "dialect": "B",
+      "id": "1399.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3934",
+      "bibliography": "CD 330a; CED 151; KoptHWb 183, 537; ChLCS 47a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3694",
+      "type": "cf",
+      "label": "scatter, spread"
+    }
+  ],
+  "etym": {
+    "egy_num": "126840",
+    "egy_lemma": "sꜣr",
+    "demo_num": "d5383",
+    "demo_lemma": "sr",
+    "english": "to sieve (?)",
+    "german": "(durch)sieben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/126840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5383"
+  }
+}

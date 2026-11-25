@@ -1,0 +1,126 @@
+{
+  "id": "C3843",
+  "forms": [
+    {
+      "id": "CF9612",
+      "orth": "ⲥⲁⲧⲏⲟⲩⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9776,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "note": "fehlerhaft für ⲧⲥⲁⲧⲏⲟⲩⲧ oder ⲧⲥⲁⲛⲏⲟⲩⲧ (?)",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4359",
+      "bibliography": "CD 366b; KoptHWb 202"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉϭⲓ ⲛϯϣⲟⲩⲣⲏ ⲉⲥⲙⲉϩ ⲛϫⲉⲃⲥ ⲛⲭⲣⲱⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ ⲉⲧⲭⲏ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲉϥⲉⲙⲟϩ ⲛⲧⲉϥϫⲓϫ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲥⲑⲩⲛⲟⲩϥⲓ ⲉⲧ**ⲥⲁⲧⲏⲟⲩⲧ** ⲉⲧϣⲟⲙ ⲟⲩⲟϩ ⲉϥⲉⲟⲗϥ ⲉϧⲟⲩⲛ ⲥⲁϧⲟⲩⲛ ⲙⲡⲓⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+      "english": "And he shall take his censer full of coals of fire off the altar, which is before the Lord; and he shall fill his hands with fine compound incense, and shall bring it within the veil.",
+      "source": "03_Leviticus_16",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:16",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲓⲥⲑⲩⲛⲟⲩϥⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ϣⲟⲙ",
+        1,
+        14.236
+      ],
+      [
+        "ⲧ",
+        1,
+        7.525
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲁⲧⲏⲟⲩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲁⲧⲏⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲙ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁⲧⲏⲟⲩⲧ_0_node",
+          "ⲉ_1_post_ⲥⲁⲧⲏⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲁⲧⲏⲟⲩⲧ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ϣⲟⲙ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9234,
+      "count": 1
+    }
+  }
+}

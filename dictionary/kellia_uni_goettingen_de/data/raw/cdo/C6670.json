@@ -1,0 +1,71 @@
+{
+  "id": "C6670",
+  "forms": [
+    {
+      "id": "CF15385",
+      "orth": "ϩⲣⲁⲓ ϩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.2,
+        "rank": 322,
+        "count": 505
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7384",
+      "bibliography": "CD 684b; KoptHWb 375"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲁⲧⲁⲧϩⲉ ⲛ̄ⲧⲁϩⲉⲛⲙⲏⲏϣⲉ ⲉⲛⲁϣⲱⲟⲩ ⲙⲟⲩ ϩⲣⲁⲓ ϩⲛⲧⲉⲩⲙⲛⲧϣⲁϥⲧⲉ · **ϩⲣⲁⲓϩⲛ**ⲁⲛⲟⲙⲓⲁ ⲛⲓⲙ ⲉⲧⲃⲉϩⲁϩ ⲙⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲛⲟⲩϫ ·",
+      "english": "and just as a great number [of people] died in their wickedness in every lawlessnes, on account of many false prophets",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲕⲟⲗⲁⲍⲉ ⲙⲙⲱⲧⲛ ϩⲓⲟⲩⲥⲟⲡ **ϩⲣⲁⲓ **ϩⲛ**ⲁⲙⲛⲧⲉ** ·",
+      "english": "You are punished together down in hell.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲡⲱⲣ ⲉⲧⲣⲉⲩⲁⲡⲁⲧⲁ ⲛϩⲟⲓⲛⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲧⲣⲉⲩⲣⲁϣⲉ ϩⲛⲟⲩⲙⲛⲧⲛⲟⲩϫ **ϩⲣⲁⲓ **ϩⲛ**ⲛⲉⲩⲙⲛⲧϣⲁϥⲧⲉ** · ⲉⲩⲥⲱⲧⲙ ⲉϩⲉⲛϣⲁϫⲉ ⲉⲩⲥⲏϩ ϩⲛϩⲉⲛⲙⲁ ⲉⲩⲏⲡ ⲉϩⲟⲩⲛⲁⲛ ⲉⲛⲉⲅⲣⲁⲫⲏ ⲛⲕⲁⲑⲟⲗⲓⲕⲟⲛ ⲛⲧⲕⲁⲑⲟⲗⲓⲕⲏ ⲉⲕⲕⲗⲏⲥⲓⲁ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6668",
+      "label": "ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, at, on; by, with (as agent)"
+    },
+    {
+      "target": "C6671",
+      "label": "ⲉϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, on"
+    },
+    {
+      "target": "C6669",
+      "label": "ⲉⲃⲟⲗ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "from in, from"
+    }
+  ]
+}

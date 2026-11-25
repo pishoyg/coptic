@@ -1,0 +1,75 @@
+{
+  "id": "C4868",
+  "forms": [
+    {
+      "id": "CF11701",
+      "orth": "ⲧⲱϭⲛ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲉϭⲛ-",
+      "dialect": "S",
+      "id": "1701.1"
+    },
+    {
+      "orth": "ⲧⲁϭⲛ-",
+      "dialect": "S",
+      "id": "1701.2"
+    },
+    {
+      "orth": "ⲧⲟϭⲛ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7759,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲧⲁϭⲛ⸗",
+      "dialect": "S",
+      "id": "1701.4"
+    },
+    {
+      "orth": "ⲧⲁϭⲛ⸗",
+      "dialect": "F",
+      "id": "1701.5"
+    },
+    {
+      "orth": "ⲧⲱϭⲛⲉ",
+      "dialect": "L",
+      "id": "1701.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5493",
+      "bibliography": "CD 466ab; CED 207; KoptHWb 263; DELC 227b; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4869",
+      "label": "ⲧⲱϭⲛⲉϥ",
+      "pos": "N",
+      "gloss": "urgency?"
+    }
+  ],
+  "etym": {
+    "egy_num": "173680",
+    "egy_lemma": "tkn",
+    "demo_num": "d7487",
+    "demo_lemma": "tkn",
+    "english": "to be near; to draw near",
+    "german": "nahe sein; (sich) nähern; zu Nahe treten (feindlich)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/173680",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7487"
+  }
+}

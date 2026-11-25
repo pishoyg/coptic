@@ -1,0 +1,54 @@
+{
+  "id": "C5860",
+  "forms": [
+    {
+      "id": "CF13717",
+      "orth": "ϣⲗϩϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13718",
+      "orth": "ϣⲗϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11250,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6541",
+      "bibliography": "CD 562b; DELC 262a; KoptHWb 312; ChLCS 77a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5859",
+      "label": "ϣⲗⲁϩ",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C5861",
+      "label": "ⲛⲉϩϣⲗϥ",
+      "pos": "V",
+      "gloss": "be terrified"
+    },
+    {
+      "target": "C5862",
+      "label": "ⲛⲉϩϣⲗϥ",
+      "pos": "N",
+      "gloss": "terror"
+    }
+  ]
+}

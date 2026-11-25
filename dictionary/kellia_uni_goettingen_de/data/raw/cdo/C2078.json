@@ -1,0 +1,98 @@
+{
+  "id": "C2078",
+  "forms": [
+    {
+      "id": "CF5851",
+      "orth": "ⲙⲛⲧⲣⲉϥϫⲁⲩⲙⲟⲉⲓⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2408",
+      "bibliography": "CD 188b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2079",
+      "label": "ϫⲁϫⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "making path rough, difficult(?)"
+    },
+    {
+      "target": "C2077",
+      "label": "ϫⲁⲩⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    },
+    {
+      "target": "C2074",
+      "label": "ϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "V",
+      "gloss": "take road, lead, guide"
+    },
+    {
+      "target": "C2073",
+      "label": "ϯ ⲙⲡⲓⲙⲱⲓⲧ",
+      "pos": "V",
+      "gloss": "give way, occasion"
+    },
+    {
+      "target": "C2076",
+      "label": "ⲙⲉⲧⲣⲉϥϭⲓⲙⲱⲓⲧ",
+      "pos": "N",
+      "gloss": "leading, guidance"
+    },
+    {
+      "target": "C2072",
+      "label": "ⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "road, path; place"
+    },
+    {
+      "target": "C2080",
+      "label": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "track"
+    },
+    {
+      "target": "C2081",
+      "label": "ⲙⲱⲓⲧ ⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passage"
+    },
+    {
+      "target": "C2075",
+      "label": "ⲣⲉϥϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    }
+  ]
+}

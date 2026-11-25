@@ -1,0 +1,59 @@
+{
+  "id": "C2530",
+  "forms": [
+    {
+      "id": "CF6851",
+      "orth": "ⲛⲧⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 611,
+        "count": 199
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Fokalisierungskonverter",
+    "note": "Verbalpräfix Perfekt II",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS2910",
+      "bibliography": "KoptHWb 126; DELC 144"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ **ⲛⲧⲁ**ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ϫⲟⲟⲥ ⲛⲁⲥ ϫⲉⲱ ⲧⲉⲥϩⲓⲙⲉ ⲟⲩⲛⲟϭ ⲧⲉ ⲧⲟⲩⲡⲓⲥⲧⲓⲥ ·",
+      "english": "In that very hour wherein Christ said unto her, 'O thou woman, great is thy faith.'",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲓⲛⲁⲛⲁⲩ ⲛⲁϣ ⲛϩⲉ · ⲉⲛⲃⲁⲗ ⲉⲛⲧⲁⲩⲥⲱⲧⲣ ϩⲁⲡⲉⲥⲧⲱⲧ · ⲙⲛⲛϭⲓϫ **ⲛⲧⲁ**ⲛⲉⲩⲕⲉⲉⲥ ⲃⲱⲗ ⲉⲃⲟⲗ · ⲙⲛⲡϥⲱ ⲉⲧⲡⲣⲉⲥⲣⲁⲥⲧ ϩⲁⲡϩⲓⲧⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧⲧⲁⲩⲉϩⲃⲏⲏⲧⲉ ⲉⲃⲟⲗ · ⲉⲣⲉⲡⲉⲧⲙⲓϣⲉ ⲛⲙⲙⲁⲥ ⲗⲏϭ ϩⲓϩⲟⲩⲛ ⲙⲙⲟⲥ ⲉⲛϥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲁⲛ ·",
+      "english": "In what condition shall I see (her on my return)? With her eyes starting from their sockets in terror, and her hands with the bones thereof protruding, and the hair torn out in frenzy, and the mouth dripping with foam, and meanwhile the devil which is contending with her is hidden inside her, and doth not appear.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲛⲧⲟϥ **ⲛⲧⲁ**ⲡϩⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ ⲉⲓ ⲛⲁⲕ ⲡⲉϫⲁⲕ ϫⲉϯⲛⲏⲩ ⲧⲁⲣⲡⲁϩⲣⲉ ⲉⲣⲟϥ ·",
+      "english": "Yet in that very hour wherein the centurion came to Thee Thou didst say, 'I am coming, I will heal him.'",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "dm358",
+    "demo_lemma": "ntj-ı ͗w",
+    "english": "[Prefix of perfect II, Copt. NTA=]",
+    "german": "[Präfix des Perfekt II, kopt. NTA=]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm358"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "id": "C200",
+  "forms": [
+    {
+      "id": "CF785",
+      "orth": "ⲁⲣⲟϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5022,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF786",
+      "orth": "ⲁⲣⲁϣ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF787",
+      "orth": "ϩⲣⲟϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.5,
+        "rank": 1105,
+        "count": 42
+      }
+    },
+    {
+      "id": "CF788",
+      "orth": "ⲟⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7227,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF789",
+      "orth": "ϩⲟⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1315,
+        "count": 63
+      }
+    },
+    {
+      "id": "CF790",
+      "orth": "ϩⲟⲣϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.45,
+        "rank": 1168,
+        "count": 38
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS224",
+      "bibliography": "CD 16ab; CED 12; KoptHWb 12, 488; DELC 16; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲓ ⲟⲛ ⲁϥϫⲉⲙⲟⲩ ⲉⲩⲛⲕⲟⲧ ⲛⲁⲣⲉⲛⲟⲩⲃⲁⲗ ⲅⲁⲣ **ϩⲟⲣϣ** ⲡⲉ ⲟⲩⲟϩ ⲛⲁⲩⲉⲙⲓ ⲁⲛ ⲡⲉ ϫⲉⲟⲩ ⲡⲉⲧⲟⲩⲛⲁⲉⲣⲟⲩⲱ ⲙⲙⲟϥ ⲛⲁϥ .",
+      "english": "Again he returned, and found them sleeping, for their eyes were very heavy, and they didn't know what to answer him.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲧⲣⲉⲥⲁϣⲁⲓ ⲛϭⲓⲧⲁⲛⲟⲙⲓⲁ ⲥⲛⲁ**ⲁⲣⲟϣ** ⲛϭⲓⲧⲁⲅⲁⲡⲏ ⲛϩⲁϩ .",
+      "english": "Because iniquity will be multiplied, the love of many will grow cold.",
+      "source": "40_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲓⲉⲛⲧⲟⲗⲏ ⲉϯϩⲟⲛϩⲉⲛ ⲙⲙⲟⲕ ⲉⲣⲟⲥ ⲙⲫⲟⲟⲩ ⲁⲛⲟⲕ ⲉ**ϩⲟⲣϣ** ⲛϩⲟⲩⲟ ⲁⲛ ⲟⲩⲇⲉ ⲥⲟⲩⲏⲟⲩ ⲉⲃⲟⲗ ⲙⲙⲟⲕ ⲁⲛ",
+      "english": "For this command which I give thee this day is not grievous, neither is it far from thee.",
+      "source": "05_Deuteronomium_30",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:30",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲕⲁ ⲅⲁⲣ ⲛⲓⲙ ϫⲓ ⲙⲡⲣⲱⲙⲉ ⲛϭⲟⲛⲥ ⲉⲧⲃⲉⲧⲉϥⲡⲁⲣⲁⲃⲁⲥⲓⲥ · ⲡϣⲱⲛⲉ ⲙⲛⲡⲟⲥⲉ ⲙⲛⲡⲗⲩⲡⲏ · ⲡϩⲏⲃⲉ ⲙⲛⲡϩⲓⲥⲉ ⲉⲧⲕⲱⲧⲉ ⲉⲣⲟϥ · ⲡ**ⲁⲣⲟϣ** ⲙⲛⲡⲕⲁⲩⲙⲁ · ⲁⲩⲱ ⲡⲕⲱϩⲧ ⲙⲛⲛⲉⲑⲏⲣⲓⲟⲛ ⲙⲛⲛϩⲁⲗⲁⲧⲉ ⲙⲛⲛϫⲁⲧϥⲉ · ⲛⲉⲟⲩⲟⲉⲓϣ ⲙⲛⲙⲙⲛⲧϩⲗⲗⲟ ·",
+      "english": "For man suffereth evil in every way because of his transgressions, (namely) by sickness, by punishment, by sorrow, by the grief and suffering which envelop him, by cold and heat, by burning, by wild beasts, and birds of prey, and reptiles, by the times in which he liveth, and by old age.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁϥϣⲱⲡⲓ ⲛϫⲉⲡⲓⲥⲣⲁⲏⲗ ϧⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲧⲉⲙⲙⲁⲩ ⲁϥϣⲉⲛⲁϥ ⲛϫⲉⲣⲟⲩⲃⲏⲛ ⲁϥⲛⲕⲟⲧ ⲛⲉⲙⲃⲁⲗⲗⲁ ⲧⲡⲁⲗⲗⲁⲕⲏ ⲙⲡⲉϥⲓⲱⲧ ⲟⲩⲟϩ ⲁϥⲥⲱⲧⲉⲙ ⲛϫⲉⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲟϩ ⲁ ⲡⲓϩⲱⲃ ϣⲱⲡⲓ ⲉϥ**ϩⲟⲣϣ** ⲙⲡⲉϥⲙⲑⲟ",
+      "english": "And the sons of Jacob were twelve.",
+      "source": "01_Genesis_35",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:35",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϣⲟⲣⲡ ⲇⲉ ⲛⲁⲣⲭⲱⲛ ⲉⲧϣⲟⲟⲡ ϩⲙⲡϣⲟⲣⲡ ⲛⲧⲁⲙⲉⲓⲟⲛ ⲟⲩ ϩⲟ ⲛⲙⲥⲁϩ ⲡⲉ ⲉⲣⲉⲡⲉϥⲥⲁⲧ ⲛϩⲟⲩⲛ ⲛⲣⲱϥ ⲉⲣⲉϫⲁϥ ⲛⲓⲙ ⲛⲏⲩ ⲉⲃⲟⲗ ϩⲛⲧⲧⲁⲡⲣⲟ ⲙⲡⲉⲇⲣⲁⲕⲱⲛ ⲙⲛⲛⲟϣⲟⲉⲓϣ ⲛⲓⲙ · ⲙⲛ**ⲁⲣⲟϣ** ⲛⲓⲙ · ⲙⲛϣⲱⲡⲉ ⲛⲓⲙ · ⲉⲧϣⲃⲃⲓⲁⲉⲓⲧ · ⲡⲁⲓ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲁⲩⲑⲉⲛⲧⲓⲕⲟⲛ ⲛⲣⲁⲛ ϩⲙⲡⲉϥⲧⲟⲡⲟⲥ ϫⲉⲉⲛⲭⲑⲟⲛⲓⲛ ·",
+      "english": "“And the first ruler, who is in the first dungeon, hath a crocodile's face, whose tail is in his mouth. And out of the jaws of the dragon cometh all ice and all dust and all cold and all different diseases. This [is] he who is called with his authentic name in his region 'Enchthonin.”",
+      "source": "Pistis Sophia Book 3 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:100-108",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲥⲉⲙ",
+        1,
+        18.695
+      ],
+      [
+        "ϭⲛⲏⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ϧⲙⲟⲙ",
+        2,
+        16.788
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        11.016
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        9.997
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        8.583
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.509
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        1,
+        8.21
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲟϣⲟⲉⲓϣ",
+        1,
+        18.276
+      ],
+      [
+        "ⲕⲁⲩⲙⲁ",
+        2,
+        16.576
+      ],
+      [
+        "ϣⲥ",
+        1,
+        14.189
+      ],
+      [
+        "ⲙⲛ",
+        6,
+        12.077
+      ],
+      [
+        "ⲁⲛⲟⲙⲓⲁ",
+        1,
+        9.91
+      ],
+      [
+        "ⲁⲅⲁⲡⲏ",
+        1,
+        9.884
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        9.776
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        9.342
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        9.319
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        8.965
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        8.4
+      ],
+      [
+        "ⲡ",
+        4,
+        8.175
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        1,
+        8.059
+      ],
+      [
+        "ⲧ",
+        2,
+        6.749
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.024
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        5.702
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.497
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.162
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣⲟϣ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲣⲟϣ",
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          2
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲟϣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲩⲙⲁ_1_post_ⲁⲣⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲛⲓⲙ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          2
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱϩⲧ",
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲱϩⲧ",
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_1_post_ⲁⲣⲟϣ",
+          "ⲛⲉ_2_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲟϣ",
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲟϣ",
+          "ⲁⲣⲟϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲛⲟⲩ_1_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲁⲣⲟϣ_0_node",
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲩⲙⲁ",
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲩⲙⲁ",
+          "ⲕⲁⲩⲙⲁ_1_post_ⲁⲣⲟϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4602,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4745,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5557",
+      "type": "cf",
+      "label": "be cold"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C201",
+      "label": "ⲁⲣⲟϣ",
+      "pos": "N",
+      "gloss": "cold, freezing; fever (ague)"
+    }
+  ],
+  "etym": {
+    "demo_num": "d650",
+    "demo_lemma": "ı ͗rš",
+    "english": "[to grill; to roast]",
+    "german": "kalt",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d650"
+  }
+}

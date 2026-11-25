@@ -1,0 +1,136 @@
+{
+  "id": "C9621",
+  "forms": [
+    {
+      "id": "CF24594",
+      "orth": "ⲗⲉⲩⲕⲱⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24596",
+      "orth": "ⲗⲉⲩⲕⲱⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8025,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF24595",
+      "orth": "ⲗⲉⲩⲕⲟⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12314",
+      "bibliography": "DDGLC",
+      "cu_ID": "7686"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲣϩⲟⲟⲩ ⲥⲛⲁⲩ ϩⲙⲡⲙⲁⲣⲧⲏⲣⲓⲟⲛ · ⲉⲓⲥ ⲟⲩⲣⲱⲙⲉ ⲉϥⲫⲗⲉⲅⲙⲁ ⲉⲛⲉϥⲃⲁⲗ · ⲁⲩⲱ ϩⲓⲧⲙⲡⲉϩⲟⲩⲟ ⲙⲡⲉⲧⲕⲁⲥ ⲉⲧϩⲓϫⲱϥ · ⲁⲛ**ⲗⲉⲩⲕⲱⲙⲁ** ϣⲱⲡⲉ ϩⲛⲛⲉϥⲃⲁⲗ ·",
+      "english": "And whilst he was passing these two days in the martyrium, behold (there came in) a man who had phlegm in his eyes, and through the great quantity of granulation which covered them a white film had appeared in his eyes;",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲃⲗⲗⲉ ϩⲱⲱϥ ⲁⲛ**ⲗⲉⲩⲕⲱⲙⲁ** ⲉⲧϩⲛⲛⲉϥⲃⲁⲗ ⲥⲱⲗⲡ",
+      "english": "And as for the blind man, the white film which was in his eyes burst,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲁⲗ",
+        2,
+        13.036
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        10.797
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        9.46
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲗⲉⲩⲕⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲗⲉⲩⲕⲱⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲗⲉⲩⲕⲱⲙⲁ",
+          "ⲗⲉⲩⲕⲱⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7581,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5747",
+    "grl_lemma": "λεύκωμα",
+    "grl_meaning": "white-board; white spot in eye",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1042b; Preisigke 2:17"
+  }
+}

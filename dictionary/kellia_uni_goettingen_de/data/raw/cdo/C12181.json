@@ -1,0 +1,160 @@
+{
+  "id": "C12181",
+  "forms": [
+    {
+      "id": "CF33195",
+      "orth": "ϩⲣⲏϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6031,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF33196",
+      "orth": "ϩⲣⲏϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17185",
+      "bibliography": "CD 703b; KoptHWB 386"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲏⲩ",
+        3,
+        16.446
+      ],
+      [
+        "ⲛⲟϭ",
+        3,
+        12.468
+      ],
+      [
+        "ⲁ",
+        6,
+        11.214
+      ],
+      [
+        "ⲩ",
+        3,
+        8.98
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        8.917
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲏϭ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲏϭ_b",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϩⲣⲏϭ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ⲧⲏⲩ_1_pre_ϩⲣⲏϭ",
+          2
+        ],
+        [
+          "ϩⲣⲏϭ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲏϭ",
+          "ⲁⲩⲱ_1_pre_ϩⲣⲏϭ_b",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲏϭ_b",
+          "ⲁ_1_pre_ϩⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲣⲏϭ",
+          "ⲡ_2_pre_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_1_pre_ϩⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_1_pre_ϩⲣⲏϭ",
+          "ϩⲣⲏϭ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5593,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6798",
+      "label": "ϩⲟⲣⲕϥ",
+      "pos": "N",
+      "gloss": "silent, quiet"
+    },
+    {
+      "target": "C12207",
+      "label": "ϩⲣⲕⲏⲧ",
+      "pos": "N",
+      "gloss": "calm, quiet, peaceful"
+    },
+    {
+      "target": "C6796",
+      "label": "ϩⲣⲟⲕ",
+      "pos": "V",
+      "gloss": "be still, cease, be quiet"
+    },
+    {
+      "target": "C6797",
+      "label": "ϩⲣⲟⲕ",
+      "pos": "N",
+      "gloss": "quietness"
+    }
+  ]
+}

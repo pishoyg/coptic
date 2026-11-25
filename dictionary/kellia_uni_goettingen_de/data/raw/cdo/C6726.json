@@ -1,0 +1,225 @@
+{
+  "id": "C6726",
+  "forms": [
+    {
+      "id": "CF15497",
+      "orth": "ϫⲓϩⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5350,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7440",
+      "bibliography": "CD 693a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏ ⲉⲣϣⲁⲛ ϩⲟⲩⲟ ⲉⲛⲙⲏⲏϣⲉ ⲛⲧⲁⲕϫⲟⲟⲥ ϫⲉⲥⲉ**ϫⲓϩⲛⲁⲩ** ⲛⲁϥ .",
+      "english": "If more than the many about whom you said, “They take things to him,”",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲟⲛ ⲛⲧⲁⲕϫⲟⲟⲥ ϫⲉⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲛⲁⲟⲓⲕⲟⲛⲟⲙⲟⲥ **ϫⲓϩⲛⲁⲩ** ⲛⲁϥ .",
+      "english": "Even as you said: “the people and my stewards take things to him,”",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+        2,
+        16.276
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        2,
+        13.063
+      ],
+      [
+        "ⲛⲁ",
+        6,
+        11.443
+      ],
+      [
+        ".",
+        4,
+        10.557
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        10.116
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        9.083
+      ],
+      [
+        "ϥ",
+        4,
+        8.522
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.146
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.747
+      ],
+      [
+        "ⲉ",
+        2,
+        5.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_pre_ϫⲓϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_2_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϫⲓϩⲛⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϫⲓϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϫⲓϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_1_pre_ϫⲓϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_pre_ϫⲓϩⲛⲁⲩ",
+          "ⲁⲩⲱ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ⲛⲁ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_pre_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_2_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_2_pre_ⲣⲱⲙⲉ",
+          "ϫⲓϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϫⲓϩⲛⲁⲩ",
+          "ϫⲓϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϫⲓϩⲛⲁⲩ_0_node",
+          "ⲛⲁ_1_post_ϫⲓϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϫⲓϩⲛⲁⲩ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4927,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6723",
+      "label": "ϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "vessel, pot, receptacle; thing"
+    },
+    {
+      "target": "C6725",
+      "label": "ϯϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "pay fee"
+    },
+    {
+      "target": "C6724",
+      "label": "ⲙⲛⲧⲁⲧϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "state of being without property, poverty"
+    }
+  ]
+}

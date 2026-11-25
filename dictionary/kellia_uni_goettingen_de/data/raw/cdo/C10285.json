@@ -1,0 +1,156 @@
+{
+  "id": "C10285",
+  "forms": [
+    {
+      "id": "CF27337",
+      "orth": "ⲡⲣⲟⲃⲁⲧⲓⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27338",
+      "orth": "ⲡⲣⲟⲃⲁⲧⲓⲕⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7728,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27339",
+      "orth": "ⲡⲣⲟⲃⲁⲧⲓⲕⲏ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13803",
+      "bibliography": "DDGLC",
+      "cu_ID": "447"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ ϩⲓϫⲉⲛϯ**ⲡⲣⲟⲃⲁⲧⲓⲕⲏ** ⲛⲉⲟⲩⲟⲛ ⲟⲩⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ ⲑⲏ ⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟⲥ ⲙⲙⲉⲧϩⲉⲃⲣⲉⲟⲥ ϫⲉⲃⲏⲑⲥⲁⲓⲇⲁ ⲉⲟⲩⲟⲛ ⲛⲧⲁⲥ ⲙⲙⲁⲩ ⲛⲉⲛⲥⲧⲟⲁ .",
+      "english": "Now in Jerusalem by the sheep gate, there is a pool, which is called in Hebrew, 'Bethesda,' having five porches.",
+      "source": "04_John_05",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ",
+        1,
+        16.888
+      ],
+      [
+        "ⲓⲉⲣⲟⲥⲁⲗⲏⲙ",
+        1,
+        12.495
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        9.471
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.8
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+        1,
+        11.746
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        11.413
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲃⲁⲧⲓⲕⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7194,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2573",
+    "grl_lemma": "προβατικός",
+    "grl_meaning": "of sheep or goats",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1471a; Preisigke 2:362"
+  }
+}

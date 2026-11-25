@@ -1,0 +1,58 @@
+{
+  "id": "C2157",
+  "forms": [
+    {
+      "id": "CF6025",
+      "orth": "ⲉⲧⲙⲙⲁⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2496",
+      "bibliography": "CD 196b-197a; KoptHWb 41; ChLCS 25b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2159",
+      "label": "ⲉⲙⲁⲩ",
+      "pos": "ADV",
+      "gloss": "thither"
+    },
+    {
+      "target": "C2155",
+      "label": "ⲙⲁⲩ",
+      "pos": "N",
+      "gloss": "the place there"
+    },
+    {
+      "target": "C2156",
+      "label": "ⲙⲙⲁⲩ",
+      "pos": "ADV",
+      "gloss": "there, therein"
+    },
+    {
+      "target": "C2158",
+      "label": "ⲣⲉⲙⲙⲙⲁⲩ",
+      "pos": "N",
+      "gloss": "\"man from here\", local, native"
+    }
+  ],
+  "etym": {
+    "egy_num": "89900",
+    "egy_lemma": "n.tj-jm",
+    "english": "those who are there (the dead)",
+    "german": "Einer der dort ist (Bez. des Toten)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89900"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "C6283",
+  "forms": [
+    {
+      "id": "CF14577",
+      "orth": "ϥⲱⲧⲉ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 994,
+        "count": 96
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6971",
+      "bibliography": "CD 624a-625a; KoptHWb 345-346; ChLCS 85b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲣⲟⲩⲑ ⲧⲙⲱⲁⲃⲓⲧⲏⲥ ⲧϩⲓⲙⲉ ⲙⲙⲁⲁⲗⲱⲛ ⲁⲓϫⲓⲧⲥ ⲉⲩⲥϩⲓⲙⲉ ⲛⲁⲓ ⲉⲧⲟⲩⲛⲉⲥ ⲡⲣⲁⲛ ⲙⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉϫⲛⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ **ⲛϥⲧⲙϥⲱⲧⲉ **ⲉⲃⲟⲗ**** ⲛϭⲓⲡⲣⲁⲛ ⲙⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉϥⲥⲛⲏⲩ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲧⲉⲫⲩⲗⲏ ⲙⲡⲉϥⲗⲁⲟⲥ ⲛⲧⲱⲧⲛ ⲧⲉⲧⲛⲟ ⲙⲙⲛⲧⲣⲉ ⲙⲡϩⲟⲟⲩ",
+      "english": "Moreover I have bought for myself for a wife Ruth the Moabitess, the wife of Maalon, to raise up the name of the dead upon his inheritance; so the name of the dead shall not be destroyed from among his brethren, and from the tribe of his people: ye are this day witnesses.",
+      "source": "Ruth Chapter 4",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲙⲡⲣⲧⲣⲉⲩϥⲱⲧⲉ **ⲉⲃⲟⲗ**** ⲛⲧⲁⲛⲟⲙⲓⲁ ⲛⲧⲉϥⲙⲁⲁⲩ ·",
+      "english": "and the sin of his mother be not blotted out.",
+      "source": "Pistis Sophia Book 1 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:75-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲉϣⲁⲣⲉⲡⲛⲟⲩⲧⲉ ϭⲱⲛⲧ ⲛϩⲁϩ ⲛⲥⲟⲡ ϩⲱⲥⲧⲉ **ⲉⲧⲣⲉϥϥⲱⲧⲉ **ⲉⲃⲟⲗ**** ⲛϩⲁϩ ⲛⲗⲁⲟⲥ ⲛⲁⲣⲭⲁⲓⲟⲥ ⲉⲧⲃⲉϩⲁϩ ⲛϣⲏⲣⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "and just as God often becomes angry so to destroy many ancient tribes on account of the many sinful children among them,",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.6,
+      "rank": 868,
+      "count": 96
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6282",
+      "label": "ϥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "wipe, wipe off, obliterate"
+    }
+  ]
+}

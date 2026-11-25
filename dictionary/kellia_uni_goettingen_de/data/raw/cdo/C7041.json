@@ -1,0 +1,451 @@
+{
+  "id": "C7041",
+  "forms": [
+    {
+      "id": "CF16139",
+      "orth": "ϩⲱϭⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2949,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϩⲱϭϥ",
+      "dialect": "S",
+      "id": "394.1"
+    },
+    {
+      "orth": "ϩⲱⲕⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12345,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲉϭⲃ-",
+      "dialect": "S",
+      "id": "394.3"
+    },
+    {
+      "orth": "ϩⲉϭⲙ-",
+      "dialect": "S",
+      "id": "394.4"
+    },
+    {
+      "orth": "ϩⲟϭⲃ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7536,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟϭⲃ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7536,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟϭϥ†",
+      "dialect": "S",
+      "id": "394.7"
+    },
+    {
+      "orth": "ϩⲁϭⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17496,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟϭⲡ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12807,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁϭⲃ-",
+      "dialect": "A",
+      "id": "394.10"
+    },
+    {
+      "orth": "ϩⲟϭⲉϥ",
+      "dialect": "F",
+      "id": "394.11"
+    },
+    {
+      "orth": "ϩⲁϭⲉⲃ-",
+      "dialect": "F",
+      "id": "394.12"
+    },
+    {
+      "orth": "ϩⲱϭⲙⲉ",
+      "dialect": "L",
+      "id": "394.13"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7762",
+      "bibliography": "CD 744b; CED 307; KoptHWb 409; DELC 321b; ChLCS 99b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲡⲉⲛⲧⲁϥⲥⲱⲛⲧ ⲙⲡⲉⲕⲗⲟⲙ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ · ⲙⲛⲛⲉⲓⲟⲩⲟⲧⲟⲩⲉⲧ ⲉⲧⲟϣ · ⲉⲁϥϣⲟⲃⲟⲩ ϩⲛⲛⲉⲣⲱⲙⲉ · ⲡⲉⲕϩⲣⲏⲣⲉ · ⲉⲧⲉⲙⲉϥ**ϩⲱϭⲃ** ϣⲁⲃⲟⲗ ·",
+      "english": "O Thou Who didst make the crown of all the saints, and these plants which are of many kinds, and hast changed men into Thy flowers which do not wither and fade!",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲁⲥ ⲉϥϣⲁⲛⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϭⲓⲡⲛⲟϭ ⲛϣⲱⲥ ⲉⲧⲉⲧⲛϫⲓ ⲙⲡⲉⲕⲗⲟⲙ ⲙⲡⲉⲟⲟⲩ ⲉⲧⲉⲙⲉϥ**ϩⲱϭⲃ** .",
+      "english": "When the chief Shepherd is revealed, you will receive the crown of glory that doesn't fade away.",
+      "source": "60_1 Peter_5",
+      "urn": "urn:cts:copticLit:nt.1pet.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛⲁⲧⲁⲕⲟ ⲁⲩⲱ ⲛⲁⲧⲱⲗⲙ ⲉⲙⲉⲥ**ϩⲱϭⲃ** ⲉⲩϩⲁⲣⲉϩ ⲉⲣⲟⲥ ⲛⲏⲧⲛ ϩⲛⲙⲡⲏⲩⲉ",
+      "english": "to an incorruptible and undefiled inheritance that doesn't fade away, reserved in Heaven for you,",
+      "source": "60_1 Peter_1",
+      "urn": "urn:cts:copticLit:nt.1pet.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲣⲧ",
+        1,
+        14.791
+      ],
+      [
+        "ⲁⲧⲱⲗⲙ",
+        1,
+        14.469
+      ],
+      [
+        "ⲙⲉ",
+        6,
+        13.888
+      ],
+      [
+        "ϣⲁⲃⲟⲗ",
+        2,
+        13.703
+      ],
+      [
+        "ⲣⲏ",
+        3,
+        13.26
+      ],
+      [
+        "ϣⲁ",
+        7,
+        12.96
+      ],
+      [
+        "ⲛⲉⲩⲙⲁ",
+        1,
+        11.791
+      ],
+      [
+        "ⲙⲛⲧϩⲗⲗⲟ",
+        1,
+        11.236
+      ],
+      [
+        "ⲙⲟⲩⲛ",
+        1,
+        10.836
+      ],
+      [
+        "ⲣⲟⲟⲩⲧ",
+        1,
+        10.703
+      ],
+      [
+        "ⲙⲡ",
+        3,
+        10.679
+      ],
+      [
+        "ⲉⲧⲉ",
+        3,
+        10.232
+      ],
+      [
+        "ⲧⲁⲕⲉ",
+        1,
+        10.191
+      ],
+      [
+        "ⲱ",
+        2,
+        9.754
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        3,
+        9.728
+      ],
+      [
+        "ϥ",
+        8,
+        9.714
+      ],
+      [
+        "ⲩ",
+        5,
+        8.968
+      ],
+      [
+        "ⲛⲧⲟⲥ",
+        1,
+        8.933
+      ],
+      [
+        "ⲉ",
+        6,
+        8.765
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        8.656
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉ_1_pre_ϩⲱϭⲃ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϩⲱϭⲃ",
+          4
+        ],
+        [
+          "ϩⲱϭⲃ_0_node",
+          7
+        ],
+        [
+          "ϣⲁⲃⲟⲗ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲛⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲥ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_3_pre_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_pre_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲡⲁⲧ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲱϭⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉ_1_pre_ϩⲱϭⲃ",
+          "ϥ_1_pre_ϩⲱϭⲃ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϩⲱϭⲃ",
+          "ϩⲱϭⲃ_0_node",
+          4
+        ],
+        [
+          "ϩⲱϭⲃ_0_node",
+          "ϣⲁⲃⲟⲗ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϩⲱϭⲃ",
+          "ϥ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ϩⲱϭⲃ_0_node",
+          "ⲏ_2_post_ⲛⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲛⲧⲟⲥ",
+          "ⲛⲧⲟⲥ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲥ_1_post_ϩⲱϭⲃ",
+          "ⲧ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱϭⲃ",
+          "ϥ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ϩⲱϭⲃ_0_node",
+          "ⲇⲉ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲱϭⲃ",
+          "ⲛ_1_post_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϭⲃ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϩⲱϭⲃ",
+          "ⲥⲁⲣⲝ_3_pre_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_3_pre_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_pre_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_pre_ⲛⲧⲉ",
+          "ϩⲱϭⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲱϭⲃ_0_node",
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          "ⲡ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲡⲁⲧ_1_pre_ϩⲱϭⲃ",
+          "ⲧⲟⲩ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲱϭⲃ",
+          "ϩⲱϭⲃ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ϩⲱϭⲃ",
+          "ⲥ_1_pre_ϩⲱϭⲃ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲱϭⲃ",
+          "ϩⲱϭⲃ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2619,
+      "count": 14
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7042",
+      "label": "ϩⲱϭⲃ",
+      "pos": "N",
+      "gloss": "feebleness"
+    }
+  ],
+  "etym": {
+    "egy_num": "98220",
+    "egy_lemma": "hbq",
+    "demo_num": "d3798",
+    "demo_lemma": "hbq",
+    "english": "to beat up; to triturate",
+    "german": "zerstoßen; zerstampfen (im Mörser)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/98220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3798"
+  }
+}

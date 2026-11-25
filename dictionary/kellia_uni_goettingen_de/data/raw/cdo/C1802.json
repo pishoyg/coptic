@@ -1,0 +1,77 @@
+{
+  "id": "C1802",
+  "forms": [
+    {
+      "id": "CF5197",
+      "orth": "ⲙⲏ ⲟⲉⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8912,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2103",
+      "bibliography": "CD 158a; KoptHWb 86; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉϩⲣⲁⲯⲁⲅⲏⲥ ⲛⲁⲩ ϫⲉⲙⲏ ⲛⲧⲁⲡⲁϫⲟⲉⲓⲥ ⲧⲛⲛⲟⲟⲩⲧ ⲙⲡⲉⲧⲛϫⲟⲉⲓⲥ ⲏ ⲛⲏⲧⲛ ⲙⲏ ⲛⲧⲁϥⲧⲛⲛⲟⲟⲩⲧ ⲁⲛ ⲛⲛⲣⲱⲙⲉ ⲉⲧϩⲓϫⲙ ⲡⲥⲟⲃⲧ ϫⲉⲕⲁⲥ ⲉⲩⲉⲟⲩⲱⲙ **ⲛⲧⲉⲩⲙⲏ **ⲟⲉⲓⲕ**** ⲛⲥⲉⲥⲉⲧⲉⲩⲙⲏ ⲙⲙⲟⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ⲛⲙⲙⲏⲧⲛ",
+      "english": "And Rabsaces said to them, Has my lord sent me to your lord or to you, to speak these words? has he not sent me to the men that sit on the wall, that they may eat dung, and drink their water together with you?",
+      "source": "Isaiah 36",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:36",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲛⲁⲥⲱϣϥ ⲛⲛⲉⲓⲇⲱⲗⲟⲛ ⲉⲧϭⲟⲟⲗⲉ ⲛϩⲁⲧ ⲁⲩⲱ ⲉⲧϭⲟⲟⲗⲉ ⲛⲛⲟⲩⲃ ⲧⲉⲛⲁⲁⲁⲩ ⲛϣⲏⲙ ϣⲏⲙ ⲁⲩⲱ ⲛⲧⲉϫⲟⲟⲣⲟⲩ ⲉⲃⲟⲗ ⲛⲧϩⲉ ⲛⲟⲩⲙⲟⲟⲩ ⲛⲥϩⲓⲙⲉ ⲉⲥⲛⲏϩ ⲉⲃⲟⲗ ⲁⲩⲱ ⲛⲧⲉⲥⲁϩⲣⲟⲩ ⲛⲧϩⲉ **ⲛⲟⲩⲙⲏ **ⲟⲉⲓⲕ****",
+      "english": "And thou shalt pollute the plated idols, and thou shalt grind to powder the gilt ones, and shalt scatter them as the water of a removed woman, and thou shalt thrust them forth as dung.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8461,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1804",
+      "label": "ϯⲙⲉ",
+      "pos": "N",
+      "gloss": "penis(?)"
+    },
+    {
+      "target": "C1805",
+      "label": "ⲙⲁ ⲛⲣⲙⲏ",
+      "pos": "N",
+      "gloss": "anus; place of evacuation, latrine"
+    },
+    {
+      "target": "C1801",
+      "label": "ⲙⲏ",
+      "pos": "N",
+      "gloss": "urine"
+    },
+    {
+      "target": "C1803",
+      "label": "ⲣⲙⲏ",
+      "pos": "V",
+      "gloss": "urinate, make water; evacuate excrements"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "C2561",
+  "forms": [
+    {
+      "id": "CF6914",
+      "orth": "ⲛⲧⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.32,
+        "rank": 114,
+        "count": 1629
+      }
+    },
+    {
+      "orth": "ⲉⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 131.36,
+        "rank": 18,
+        "count": 11141
+      }
+    },
+    {
+      "orth": "ⲉⲧ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 133.25,
+        "rank": 13,
+        "count": 21023
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Temporalis ⲛⲧⲉⲣⲉ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2941",
+      "bibliography": "CD 232a; CED 112; KoptHWb 128; DELC 147; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲉⲧ**ⲁⲩϣⲉ ⲉϧⲟⲩⲛ ⲁⲩϩⲉⲙⲥⲓ .",
+      "english": "And after they went inside they sat down.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ **ⲛⲧⲉⲣⲉ**ⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲱϩ ϩⲙⲡⲕⲁϩ ⲉⲧⲙⲙⲁⲩ ⲁϩⲣⲟⲩⲃⲏⲛ ⲃⲱⲕ ⲁϥⲛⲕⲟⲧⲕ ⲙⲛⲧⲡⲁⲗⲗⲁⲕⲏ ⲙⲡⲉϥⲉⲓⲱⲧ ⲁϥⲥⲱⲧⲙ ⲇⲉ ⲛϭⲓⲡⲓⲥⲣⲁⲏⲗ ⲁϥϣⲱⲡⲉ ⲛⲟⲩⲡⲟⲛⲏⲣⲟⲥ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲛϣⲏⲣⲉ ⲇⲉ ⲛⲓⲁⲕⲱⲃ ⲛⲉⲩⲙⲉϩⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+      "english": "And the sons of Jacob were twelve.",
+      "source": "Genesis 35",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲉⲧ**ⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲋ ϣⲱⲡⲓ ⲁ ⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ ϣⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲑ .",
+      "english": "When the sixth hour",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲧⲉⲣⲉ**ⲗⲱⲧ ⲇⲉ ⲉⲓ ⲉⲃⲟⲗ ⲁϥϣⲁϫⲉ ⲙⲛⲛⲉϥϣⲙⲟⲩⲓ ⲛⲁⲓ ⲛⲧⲁⲩϫⲓ ⲛⲛⲉϥϣⲉⲉⲣⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲧⲟⲩⲛⲧⲏⲩⲧⲛ ⲛⲧⲉⲧⲛⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲧⲁⲕⲉⲧⲡⲟⲗⲓⲥ ⲁϥⲣⲧϩⲉ ⲛⲛⲉⲧⲥⲱⲃⲉ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉϥϣⲙⲟⲩⲓ",
+      "english": "And Lot went out, and spoke to his sons-in-law who had married his daughters, and said, Rise up, and depart out of this place, for the Lord is about to destroy the city; but he seemed to be speaking absurdly before his sons-in-law.",
+      "source": "Genesis 19",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲧ**ⲁⲡⲓⲁⲗⲟⲩ ⲥⲱⲧⲉⲙ ⲉⲡⲓⲥⲁϫⲓ ⲛⲧⲟⲧϥ ⲁϥⲉⲣϩⲟϯ",
+      "english": "When the young man heard this, he was frightened.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲯⲁⲗⲙⲟⲥ ⲛⲇⲁⲩⲉⲓⲇ **ⲛⲧⲉⲣⲉ**ⲡⲉϥϣⲏⲣⲉ ⲡⲱⲧ ⲛⲥⲱϥ ⲡϫⲟⲉⲓⲥ ⲥⲱⲧⲙ ⲉⲡⲁϣⲗⲏⲗ ϫⲓⲥⲙⲏ ⲉⲡⲁⲥⲟⲡⲥ ϩⲛⲧⲉⲕⲙⲉ ⲥⲱⲧⲙ ⲉⲣⲟⲓ ϩⲛⲧⲉⲕⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "english": "O Lord, attend to my prayer: hearken to my supplication in thy truth; hear me in thy righteousness.",
+      "source": "Psalms 142",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:142",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "d2938",
+    "demo_lemma": "n-ḏr.t",
+    "english": "[Temporalis] as, after; because",
+    "german": "[Temporalis] als, nachdem; weil",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2938"
+  }
+}

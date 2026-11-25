@@ -1,0 +1,142 @@
+{
+  "id": "C6406",
+  "forms": [
+    {
+      "id": "CF14838",
+      "orth": "ϫⲓ ϩⲣⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4946,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7110",
+      "bibliography": "CD 648a-b; CED 272; KoptHWb 352; ChLCS 87b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲗⲗⲏⲃ **ⲛϫⲓ **ϩⲣⲁ**ϥⲉⲧϩⲟⲟⲩ** · ⲛⲕⲁⲧⲁⲗⲁⲗⲓⲁ · ⲛⲕⲱϩ · ⲙⲙⲟⲥⲧⲉ ⲛⲉⲗⲕϣⲁ · ⲛⲕⲱⲙϣ ⲛⲥⲁⲧϩⲉⲓⲕⲱⲛ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and the evil words of scurrility and indecency, and the gossipings which are inspired by envy and hatred, and the scoffings, and the derisive words about the image of God,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲩϣⲟⲩⲉⲓⲧ ⲛⲧⲉⲛϩⲉ · ⲉⲩⲛⲁⲑⲉⲱⲣⲉⲓ ⲁⲛ ⲛⲛⲁⲧⲡⲉ ϩⲛϩⲱⲃ ⲛⲓⲙ · ⲛⲥⲉⲉⲓⲣⲉ ⲟⲛ ⲛⲛⲁⲡⲕⲁϩ ⲛⲧⲛϩⲉ · ⲉⲩⲛⲁⲣϣⲃⲏⲣ ⲁⲛ ⲉϩⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲟⲩ ⲉⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ϫⲉⲛⲣⲱⲙⲉ ⲛϣⲟⲩⲁϣⲟⲩ · ⲁⲩⲱ ⲛⲥⲉⲉⲣϣⲃⲣ ⲉϩⲉⲛⲣⲱⲙⲉ ⲉⲩⲣⲑⲩⲥⲓⲁⲉⲛ ⲉⲛⲉⲛⲇⲁⲓⲙⲱⲛ · ⲛⲧϩⲉ ⲉⲧⲉⲣⲉϩⲟⲓⲛⲉ ⲛϩⲏⲧⲛ ϩⲙⲟⲟⲥ ⲉⲩⲥⲱⲃⲉ ⲛⲙⲙⲁⲩ · ⲉⲩⲥⲕⲟⲡⲧⲉⲓ · ⲉⲩ**ϫⲓϩⲣⲁ**ⲩ ·",
+      "english": "...",
+      "source": "Some Kinds of People Sift Dirt: GF 121-128",
+      "urn": "urn:cts:copticLit:shenoute.dirt.monbgf:51-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6402",
+      "label": "ϣⲡϩⲟ",
+      "pos": "V",
+      "gloss": "receive, accept"
+    },
+    {
+      "target": "C6403",
+      "label": "ϥⲓϩⲟ",
+      "pos": "V",
+      "gloss": "raise face"
+    },
+    {
+      "target": "C6411",
+      "label": "ϩⲓϩⲣⲁ⸗",
+      "pos": "ADV",
+      "gloss": "towards, \"on face of\""
+    },
+    {
+      "target": "C6398",
+      "label": "ϩⲟ",
+      "pos": "N",
+      "gloss": "face; side, edge"
+    },
+    {
+      "target": "C6399",
+      "label": "ϩⲟ ⲙⲛϩⲟ",
+      "pos": "ADV",
+      "gloss": "face to face"
+    },
+    {
+      "target": "C6407",
+      "label": "ϫⲉⲙϩⲟ",
+      "pos": "V",
+      "gloss": "be sufficient, able (\"find face\")"
+    },
+    {
+      "target": "C6404",
+      "label": "ϫⲓϩⲟ",
+      "pos": "V",
+      "gloss": "\"take face\", respect person, favour"
+    },
+    {
+      "target": "C6405",
+      "label": "ϫⲓϩⲟ",
+      "pos": "N",
+      "gloss": "favoritism"
+    },
+    {
+      "target": "C6400",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "turn face, look"
+    },
+    {
+      "target": "C6401",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "\"give face\", beg, encourage"
+    },
+    {
+      "target": "C6409",
+      "label": "ⲉϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "toward, to"
+    },
+    {
+      "target": "C6410",
+      "label": "ⲛⲁϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "in presence of, before"
+    },
+    {
+      "target": "C6408",
+      "label": "ⲣⲉⲙϩⲣⲁ⸗",
+      "pos": "N",
+      "gloss": "respected person"
+    }
+  ],
+  "etym": {
+    "egy_num": "150330",
+    "egy_lemma": "sḏꜣ-ḥr",
+    "demo_num": "d5787",
+    "demo_lemma": "sḏjḥ",
+    "english": "to amuse; to take recreation",
+    "german": "sich vergnügen; (jmdn.) ergötzen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/150330",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5787"
+  }
+}

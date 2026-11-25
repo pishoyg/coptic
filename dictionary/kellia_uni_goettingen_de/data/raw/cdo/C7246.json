@@ -1,0 +1,507 @@
+{
+  "id": "C7246",
+  "forms": [
+    {
+      "id": "CF16550",
+      "orth": "ϫⲛⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.63,
+        "rank": 520,
+        "count": 257
+      }
+    },
+    {
+      "id": "CF16551",
+      "orth": "ϫⲛⲟⲩ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.63,
+        "rank": 520,
+        "count": 257
+      }
+    },
+    {
+      "orth": "ϫⲓⲛⲟⲩ⸗",
+      "dialect": "S",
+      "id": "60.1"
+    },
+    {
+      "orth": "ϫⲛⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4805,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϫⲛⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.59,
+        "rank": 1016,
+        "count": 93
+      }
+    },
+    {
+      "orth": "ϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 1002,
+        "count": 95
+      }
+    },
+    {
+      "orth": "ϫⲉⲛⲟⲩⲟⲩ⸗",
+      "dialect": "S",
+      "id": "60.5"
+    },
+    {
+      "orth": "ϭⲛⲟⲩ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3753,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲛⲟⲩ⸗",
+      "dialect": "A",
+      "id": "60.7"
+    },
+    {
+      "orth": "ϫⲛⲟⲩ-",
+      "dialect": "F",
+      "id": "60.8"
+    },
+    {
+      "orth": "ϫⲉⲛⲁ",
+      "dialect": "F",
+      "id": "60.9"
+    },
+    {
+      "orth": "ϫⲉⲛⲟⲩ⸗",
+      "dialect": "F",
+      "id": "60.10"
+    },
+    {
+      "orth": "ϫⲓⲛⲟⲩⲟⲩ⸗",
+      "dialect": "F",
+      "id": "60.11"
+    },
+    {
+      "orth": "ϫⲛⲟⲩ⸗",
+      "dialect": "L",
+      "id": "60.12"
+    },
+    {
+      "orth": "ϫⲛⲉ-",
+      "dialect": "L",
+      "id": "60.13"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7997",
+      "bibliography": "CD 774b; CED 316; KoptHWb 425; DELC 327b-328a; ChLCS 102b"
+    },
+    {
+      "id": "CS7998",
+      "bibliography": "CD 774b-775a; KoptHWb 425; DELC 327b-328a; ChLCS 102b"
+    },
+    {
+      "id": "CS7999",
+      "bibliography": "CD 775a; KoptHWb 425; DELC 327b-328a; ChLCS 102b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲣⲱⲕ ϩⲱⲱⲕ ϣⲁⲛⲧⲟⲩ**ϫⲛⲟⲩ**ⲕ ·",
+      "english": "Hold thy peace until thou art asked a question.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛⲧⲓ**ϫⲛⲟⲩ**ⲕ ⲉⲡⲉⲓⲕⲉϩⲱⲃ ·",
+      "english": "when I ask thee this matter also;",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ⲡⲁⲓ ⲡⲉ ⲉⲧⲉⲧⲛ**ϫⲛⲟⲩ** ⲙⲙⲟⲓ ⲉⲣⲟϥ ·",
+      "english": "“Lo, this is it on which ye question me.”",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥ",
+        457,
+        22.608
+      ],
+      [
+        "ϫⲉ",
+        188,
+        20.388
+      ],
+      [
+        "ⲉ",
+        195,
+        19.217
+      ],
+      [
+        "ⲁ",
+        180,
+        19.098
+      ],
+      [
+        "ⲇⲉ",
+        97,
+        18.363
+      ],
+      [
+        "ⲟⲩ",
+        120,
+        17.519
+      ],
+      [
+        "ⲕ",
+        79,
+        17.342
+      ],
+      [
+        "ⲩ",
+        96,
+        17.143
+      ],
+      [
+        "ⲛϭⲓ",
+        59,
+        17.045
+      ],
+      [
+        "ⲙⲁⲑⲏⲧⲏⲥ",
+        23,
+        16.599
+      ],
+      [
+        ".",
+        57,
+        15.634
+      ],
+      [
+        "ⲭⲁⲗⲕⲓⲛ",
+        3,
+        15.346
+      ],
+      [
+        "ⲧⲛ",
+        31,
+        14.604
+      ],
+      [
+        "ⲛⲉϥ",
+        26,
+        14.476
+      ],
+      [
+        "ⲁⲣⲁ",
+        9,
+        14.419
+      ],
+      [
+        "ⲛⲓⲙ",
+        27,
+        14.129
+      ],
+      [
+        "ϫⲱ",
+        25,
+        13.914
+      ],
+      [
+        "ⲙⲙⲟ",
+        34,
+        13.821
+      ],
+      [
+        "ⲛ",
+        68,
+        13.649
+      ],
+      [
+        "ⲟⲛ",
+        19,
+        13.548
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲛⲟⲩ_0_node",
+          40
+        ],
+        [
+          "ϥ_1_post_ϫⲛⲟⲩ",
+          26
+        ],
+        [
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          30
+        ],
+        [
+          "ⲩ_1_pre_ϫⲛⲟⲩ",
+          9
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲛⲟⲩ",
+          9
+        ],
+        [
+          "ϥ_1_pre_ϫⲛⲟⲩ",
+          21
+        ],
+        [
+          "ⲥ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲛⲟⲩ",
+          8
+        ],
+        [
+          "ⲓ_1_pre_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲕ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉϫⲁ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲡⲉϫⲁ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_post_ϫⲛⲟⲩ",
+          6
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_2_post_ⲡⲉϫⲁ",
+          2
+        ],
+        [
+          "ⲇⲉ_2_post_ⲡⲉϫⲁ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲛⲟⲩ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϫⲛⲟⲩ",
+          4
+        ],
+        [
+          "ⲡⲓⲗⲁⲧⲟⲥ_1_pre_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲟⲛ_1_pre_ϫⲛⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲛⲟⲩ_0_node",
+          "ϥ_1_post_ϫⲛⲟⲩ",
+          9
+        ],
+        [
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          "ⲩ_1_pre_ϫⲛⲟⲩ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ϫⲛⲟⲩ",
+          "ϫⲛⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲛⲟⲩ",
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          "ϥ_1_pre_ϫⲛⲟⲩ",
+          9
+        ],
+        [
+          "ϥ_1_pre_ϫⲛⲟⲩ",
+          "ϫⲛⲟⲩ_0_node",
+          10
+        ],
+        [
+          "ϫⲛⲟⲩ_0_node",
+          "ⲥ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_1_post_ϫⲛⲟⲩ",
+          "ⲇⲉ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          "ⲓ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϫⲛⲟⲩ",
+          "ϫⲛⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϫⲛⲟⲩ_0_node",
+          "ⲕ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲛⲟⲩ",
+          "ⲛⲉ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϫⲛⲟⲩ",
+          "ϥ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϫⲛⲟⲩ_0_node",
+          "ⲡⲉϫⲁ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉϫⲁ_1_post_ϫⲛⲟⲩ",
+          "ϥ_2_post_ⲡⲉϫⲁ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϫⲛⲟⲩ",
+          "ⲇⲉ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ϫⲛⲟⲩ_0_node",
+          "ⲟⲩ_1_post_ϫⲛⲟⲩ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_post_ϫⲛⲟⲩ",
+          "ⲛⲧⲟⲟⲩ_2_post_ⲡⲉϫⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_2_post_ⲡⲉϫⲁ",
+          "ⲇⲉ_2_post_ⲡⲉϫⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲛⲟⲩ",
+          "ϫⲉ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ϫⲛⲟⲩ",
+          "ⲇⲉ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲛⲟⲩ",
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ϫⲛⲟⲩ",
+          "ⲇⲉ_1_post_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϫⲛⲟⲩ",
+          "ⲉ_1_post_ϫⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲓⲗⲁⲧⲟⲥ_1_pre_ϫⲛⲟⲩ",
+          "ⲇⲉ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲛⲟⲩ",
+          "ⲟⲛ_1_pre_ϫⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ϫⲛⲟⲩ",
+          "ⲁ_1_pre_ϫⲛⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.16,
+      "rank": 361,
+      "count": 343
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7247",
+      "label": "ϫⲛⲟⲩ",
+      "pos": "N",
+      "gloss": "questioning, enquiry"
+    }
+  ],
+  "etym": {
+    "egy_num": "854556",
+    "egy_lemma": "sṯni̯",
+    "demo_num": "d5794",
+    "demo_lemma": "sḏnj",
+    "english": "exalt; crown; be distinguished; distinguish; desist (from)",
+    "german": "erheben; krönen; hervorgehoben sein; sich unterscheiden; ablassen (von)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854556",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5794"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "C4784",
+  "forms": [
+    {
+      "id": "CF11533",
+      "orth": "ⲑⲉⲃⲓⲟ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4950,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5403",
+      "bibliography": "CD 458a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡϭⲥ ϥⲱϯ ⲉⲃⲟⲗ ⲙⲡⲓⲣⲱⲙⲓ ⲉⲧⲓⲣⲓ ⲛⲛⲁⲓ **ϣⲁⲧⲉϥⲑⲉⲃⲓⲟ **ⲉⲃⲟⲗ**ϧⲉⲛ** ⲛⲓⲙⲁⲛϣⲱⲡⲓ ⲛⲧⲉⲓⲁⲕⲱⲃ ⲛⲉⲙⲉϧⲟⲗϧⲉⲗ ⲛⲛⲏⲉⲧⲓⲛⲓ ⲛⲟⲩϣⲟⲩϣⲱⲟⲩϣⲓ ⲉϧⲟⲩⲛ ⲙⲡϭⲟⲉⲓⲥ ⲡⲓⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ .",
+      "english": "The Lord will utterly destroy the man that does these things, until he be even cast down from out of the tabernacles of Jacob, and from among them that offer sacrifice to the Lord Almighty.",
+      "source": "39_Malachias_02",
+      "urn": "urn:cts:copticLit:ot.mal.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϧⲉⲛⲣⲱϥ ⲛⲟⲩⲙⲟⲩⲓ: ⲟⲩⲟϩ **ⲡⲁⲑⲉⲃⲓⲟ **ⲉⲃⲟⲗ**** ϩⲁⲡⲓⲧⲁⲡ ⲛⲧⲉⲛⲁⲡⲓⲧⲁⲡ ⲛⲟⲩⲱⲧ .",
+      "english": "Deliver my soul from the sword; my only-begotten one from the power of the dog.",
+      "source": "19_Psalmi_21",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲏⲓ ⲡϭⲟⲓⲥ ⲟⲩⲟϩ ϫⲟⲩϣⲧ **ⲉⲡⲁⲑⲉⲃⲓⲟ **ⲉⲃⲟⲗ**** ϧⲉⲛⲛⲁϫⲁϫⲓ .",
+      "english": "The Lord also is become a refuge for the poor, a seasonable help, in affliction.",
+      "source": "19_Psalmi_09",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:09",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.07,
+      "rank": 2895,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4789",
+      "label": "ϫⲓⲛⲑⲉⲃⲓⲟ",
+      "pos": "N",
+      "gloss": "humiliation"
+    },
+    {
+      "target": "C4786",
+      "label": "ⲁⲧⲑⲃⲓⲟ",
+      "pos": "N",
+      "gloss": "undiminished"
+    },
+    {
+      "target": "C4782",
+      "label": "ⲑⲃⲃⲓⲟ",
+      "pos": "V",
+      "gloss": "humiliate; be humble, be humbled"
+    },
+    {
+      "target": "C4783",
+      "label": "ⲑⲃⲃⲓⲟ",
+      "pos": "N",
+      "gloss": "humility"
+    },
+    {
+      "target": "C4785",
+      "label": "ⲑⲉⲃⲓⲉ",
+      "pos": "N",
+      "gloss": "humble person"
+    },
+    {
+      "target": "C4787",
+      "label": "ⲣⲉϥⲑⲃⲓⲟ",
+      "pos": "N",
+      "gloss": "he who humbles"
+    },
+    {
+      "target": "C4788",
+      "label": "ⲣⲉϥⲑⲃⲓⲟ",
+      "pos": "N",
+      "gloss": "he who humbles"
+    }
+  ]
+}

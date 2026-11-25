@@ -1,0 +1,392 @@
+{
+  "id": "C1158",
+  "forms": [
+    {
+      "id": "CF3701",
+      "orth": "ⲕⲉⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1199,
+        "count": 37
+      }
+    },
+    {
+      "id": "CF3702",
+      "orth": "ⲕⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6206,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1346",
+      "bibliography": "CD 104a; KoptHWb 61"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉϣⲱϥ ⲛⲧⲉⲧⲉⲛⲥⲧⲩⲗⲏ ⲟⲩⲟϩ ⲉⲓⲉϥⲱϯ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲉⲛⲓⲉⲃⲛϣⲉ ⲛⲉⲙⲛⲉⲧⲉⲛⲙⲟⲩⲛⲕ ⲛϫⲓϫ ⲟⲩⲟϩ ⲉⲓⲉⲭⲱ ⲛⲛⲉⲧⲉⲛ**ⲕⲉⲗⲓ** ⲉϫⲉⲛⲛⲓⲕⲉⲗⲓ ⲛⲧⲉⲛⲉⲧⲉⲛⲓⲇⲱⲗⲟⲛ ⲟⲩⲟϩ ⲉⲣⲉⲧⲁⲯⲩⲭⲏ ⲙⲉⲥⲧⲉ ⲑⲏⲛⲟⲩ",
+      "english": "And I will render your pillars desolate, and will utterly destroy your wooden images made with hands; and I will lay your carcases on the carcases of your idols, and my soul shall loathe you.",
+      "source": "03_Leviticus_26",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϩⲓⲧϥ ⲉϫⲉⲛⲛⲉϥ**ⲕⲉⲗⲓ** ⲁϥⲱϣ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛⲥⲙⲏ ϫⲉⲡϭⲟⲓⲥ ⲛⲛⲉⲕⲉⲡ ⲡⲁⲓⲛⲟⲃⲓ ⲉⲣⲱⲟⲩ ⲫⲁⲓ ⲇⲉ ⲉⲧⲁϥϫⲟϥ ⲁϥⲉⲛⲕⲟⲧ .",
+      "english": "He kneeled down, and cried with a loud voice, 'Lord, don't hold this sin against them!' When he had said this, he fell asleep.",
+      "source": "05_Acts_07",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲥ ϫⲉϩⲏⲡⲡⲉ ⲁⲛⲟⲕ ϯⲛⲁⲣⲓⲕⲓ ⲉⲣⲱⲟⲩ ⲙⲫⲣⲏϯ ⲛⲟⲩⲓⲁⲣⲟ ⲛⲧⲉⲟⲩϩⲓⲣⲏⲛⲏ ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩⲙⲟⲩⲛⲥⲱⲣⲉⲙ ⲉϥϫⲱⲗⲕ ⲙⲡⲱⲟⲩ ⲛⲧⲉⲛⲓⲉⲑⲛⲟⲥ ⲛⲟⲩⲁⲗⲱⲟⲩⲓ ⲉⲩⲉϥⲓⲧⲟⲩ ϩⲓⲧⲟⲩⲛⲁϩⲃⲓ ⲟⲩⲟϩ ⲉⲩⲉϯϩⲟ ⲉⲣⲱⲟⲩ ϩⲓϫⲉⲛⲛⲟⲩ**ⲕⲉⲗⲓ** .",
+      "english": "For thus saith the Lord, Behold, I turn toward them as a river of peace, and as a torrent bringing upon them in a flood the glory of the Gentiles: their children shall be borne upon the shoulders, and comforted on the knees.",
+      "source": "23_Isaias_66",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:66",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲉⲗⲓ",
+          14
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          36
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲉⲗⲓ",
+          5
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲉⲗⲓ",
+          5
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲕⲉⲗⲓ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲕⲉⲗⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲉⲗⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲉⲗⲓ",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲉⲛⲓⲇⲱⲗⲟⲛ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲟⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲉⲗⲓ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ϣⲏⲗ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϣⲏⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_3_post_ⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          2
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          "ⲙ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉⲗⲓ",
+          "ⲡⲉϥ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲑⲟ",
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲉⲗⲓ",
+          "ⲟⲩ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲕⲉⲗⲓ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲉⲗⲓ",
+          "ⲛⲉⲧⲉⲛⲓⲇⲱⲗⲟⲛ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          "ⲧⲉⲧⲉⲛ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲏ_1_post_ⲕⲉⲗⲓ",
+          "ⲧⲏⲣ_2_post_ⲉⲡⲓⲥⲕⲟⲡⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          "ⲇⲉ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲕⲉⲗⲓ",
+          "ⲉ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲉⲗⲓ",
+          "ⲩ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲓ",
+          "ⲟⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲓ_2_post_ⲉ",
+          "ⲛ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲉⲗⲓ",
+          "ⲛⲓ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲉⲗⲓ",
+          "ⲕⲉⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲓ_0_node",
+          "ⲉⲧ_1_post_ⲕⲉⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲉⲗⲓ",
+          "ϣⲏⲗ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲗ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ϣⲏⲗ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲉⲗⲓ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲣⲱⲙⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲉⲗⲓ",
+          "ⲛⲉϥ_1_pre_ⲕⲉⲗⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.46,
+      "rank": 1025,
+      "count": 39
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1161",
+      "label": "ϩⲁⲙⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt-smith, smith"
+    },
+    {
+      "target": "C1159",
+      "label": "ⲕⲉⲗⲉⲛⲕⲉϩ",
+      "pos": "N",
+      "gloss": "elbow"
+    },
+    {
+      "target": "C1160",
+      "label": "ⲕⲉⲗⲟⲩⲛϫϥ",
+      "pos": "N",
+      "gloss": "jawbone"
+    },
+    {
+      "target": "C1156",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    },
+    {
+      "target": "C1157",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    }
+  ],
+  "etym": {
+    "egy_num": "159380",
+    "egy_lemma": "qꜣr.t",
+    "demo_num": "d6418",
+    "demo_lemma": "qlꜣ(.t)",
+    "english": "door bolt",
+    "german": "Riegel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/159380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6418"
+  }
+}

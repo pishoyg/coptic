@@ -1,0 +1,40 @@
+{
+  "id": "C60",
+  "forms": [
+    {
+      "id": "CF214",
+      "orth": "ϯⲁⲗⲏⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS69",
+      "bibliography": "KoptHWb 485; DELC 8; ChLCS 3b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C59",
+      "label": "ⲁⲗⲏⲗ",
+      "pos": "N",
+      "gloss": "brightness, joy, delight"
+    }
+  ]
+}

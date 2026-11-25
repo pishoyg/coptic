@@ -1,0 +1,367 @@
+{
+  "id": "C1035",
+  "forms": [
+    {
+      "id": "CF3428",
+      "orth": "ⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 87.05,
+        "rank": 21,
+        "count": 13734
+      }
+    },
+    {
+      "orth": "ⲕ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 71.56,
+        "rank": 26,
+        "count": 6069
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "2. Pers.",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Suffixpronomen"
+  },
+  "senses": [
+    {
+      "id": "CS1196",
+      "bibliography": "CED 50; DELC 70"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲕⲛⲁⲓ ⲡϭⲟⲓⲥ ϯⲛⲁϩⲱⲥ ⲙⲙⲱⲟⲩ ϣⲁⲉⲛⲉϩ ⲓⲥϫⲉⲛ ϫⲱⲟⲩ ϣⲁϫⲱⲟⲩ ϯⲛⲁϫⲱ ⲛⲧⲉ**ⲕ**ⲙⲉⲑⲙⲏⲓ ϧⲉⲛⲣⲱⲓ",
+      "english": "I will sing of thy mercies, O Lord, for ever: I will declare thy truth with my mouth to all generations.",
+      "source": "19_Psalmi_88",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:88",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲕⲉϣⲱⲡⲉ ⲉⲕⲙⲟⲟϣⲉ ⲉϫⲛϩⲏⲧ**ⲕ** ⁛— ⲛⲛⲉϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲙⲡⲉⲕⲱⲛϩ · ⲙⲛⲡⲉⲕⲥⲡⲣⲙⲁ ⲧⲏⲣϥ ϣⲁⲛⲅⲉⲛⲉⲁ ⲧⲏⲣⲟⲩ ⲙⲡⲕⲁϩ ·",
+      "english": "Thou shalt walk upon thy belly all the days of thy life, and all thy seed [shall be accursed] throughout all generations on the earth.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲟⲩⲡⲁⲓⲣⲏϯ ⲁⲛ ⲧⲉ ⲧⲧⲟⲓ ⲛⲓⲁⲕⲱⲃ ϫⲉⲟⲩⲏⲓ ⲫⲏⲉⲧⲁϥⲙⲉⲛ**ⲕ** ϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛⲑⲟϥ ⲡⲉ ⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲡϭⲥ ⲡⲉ ⲡⲉϥⲣⲁⲛ .",
+      "english": "Such is not the portion of Jacob; for he that formed all things, he is his inheritance; the Lord is his name.",
+      "source": "24_Ieremias_10",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲕⲟ ⲛⲁϩⲣⲁⲕ ⲙⲁⲩⲁⲁ**ⲕ** ⲛⲟⲩϩⲙϩⲁⲗ ⲛⲁⲧϣⲁⲩ ⲁⲩⲱ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲙⲡⲁⲣⲁⲟⲩⲟⲛ ⲛⲓⲙ",
+      "english": "whether you have become a worthless slave in your own eyes and a sinner beyond everyone else.",
+      "source": "Apophthegmata Patrum Sahidic 128: N 299",
+      "urn": "urn:cts:copticLit:ap.128.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲣⲱⲓ ⲥⲁϫⲓ ⲛⲧⲉ**ⲕ**ⲙⲉⲑⲙⲏⲓ ⲛⲉⲙⲡⲉⲕⲟⲩϫⲁⲓ ⲙⲡⲓⲉϩⲟⲟⲩ ⲧⲏⲣϥ: ϫⲉⲙⲡⲓⲉⲙⲓ ⲉϩⲁⲛⲙⲉⲧϣⲱⲧ .",
+      "english": "Let those that plot against my soul be ashamed and utterly fail: let those that seek my hurt be clothed with shame and dishonour.",
+      "source": "19_Psalmi_70",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:70",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲕ**ⲛⲁⲧⲱⲱⲃⲉ ⲛⲁⲩ ⲛⲟⲩϩⲓⲥⲉ ϩⲁⲧϭⲟⲙ ⲙⲡⲉⲩϩⲏⲧ",
+      "english": "...",
+      "source": "My Heart Is Crushed MONB.FL 125-132 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.crushed.amelineau:36-39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        3026,
+        35.373
+      ],
+      [
+        "ⲛⲁ",
+        1797,
+        34.482
+      ],
+      [
+        "ⲁ",
+        1898,
+        33.753
+      ],
+      [
+        "ⲕ",
+        1140,
+        33.685
+      ],
+      [
+        "ϥ",
+        2002,
+        33.419
+      ],
+      [
+        "ⲉ",
+        1696,
+        33.294
+      ],
+      [
+        "ⲓ",
+        1073,
+        32.871
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1429,
+        32.615
+      ],
+      [
+        "ⲉⲣⲟ",
+        697,
+        32.545
+      ],
+      [
+        "ⲟⲩ",
+        1506,
+        32.517
+      ],
+      [
+        "ϧⲉⲛ",
+        1153,
+        32.37
+      ],
+      [
+        "ϫⲉ",
+        1056,
+        32.363
+      ],
+      [
+        "ⲙⲙⲟ",
+        715,
+        31.907
+      ],
+      [
+        "ϯ",
+        905,
+        31.849
+      ],
+      [
+        "ⲛⲑⲟⲕ",
+        354,
+        31.453
+      ],
+      [
+        "ⲡⲓ",
+        862,
+        31.118
+      ],
+      [
+        ".",
+        887,
+        31.088
+      ],
+      [
+        "ⲛⲧⲉ",
+        793,
+        31.053
+      ],
+      [
+        "ⲛⲛⲉ",
+        315,
+        30.963
+      ],
+      [
+        "ⲡⲉⲕ",
+        408,
+        30.846
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        617,
+        44.405
+      ],
+      [
+        "ⲛ",
+        10470,
+        39.871
+      ],
+      [
+        "ⲛⲁ",
+        4874,
+        38.441
+      ],
+      [
+        "ⲡ",
+        5544,
+        37.807
+      ],
+      [
+        "ⲉ",
+        4880,
+        37.575
+      ],
+      [
+        "ⲕ",
+        2928,
+        37.4
+      ],
+      [
+        "ⲁ",
+        3977,
+        36.917
+      ],
+      [
+        "ⲟⲩ",
+        3720,
+        36.803
+      ],
+      [
+        "ⲙ",
+        3161,
+        36.23
+      ],
+      [
+        "ⲁⲩⲱ",
+        2852,
+        36.18
+      ],
+      [
+        "ⲉⲣⲟ",
+        1836,
+        36.011
+      ],
+      [
+        "ϫⲉ",
+        2429,
+        35.885
+      ],
+      [
+        "ⲙⲙⲟ",
+        1861,
+        35.566
+      ],
+      [
+        "ϯ",
+        1494,
+        35.151
+      ],
+      [
+        "ϥ",
+        2931,
+        35.073
+      ],
+      [
+        "ϩⲛ",
+        1733,
+        34.756
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        636,
+        34.322
+      ],
+      [
+        "ⲓ",
+        1425,
+        34.281
+      ],
+      [
+        "ⲙⲡⲣ",
+        561,
+        33.431
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        629,
+        33.361
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕ_0_node",
+          4
+        ],
+        [
+          "ⲓⲱⲣⲁⲙ_1_pre_ⲕ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_2_pre_ⲓⲱⲣⲁⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲱⲣⲁⲙ_1_pre_ⲕ",
+          "ⲡ_3_pre_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_2_pre_ⲓⲱⲣⲁⲙ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_2_pre_ⲓⲱⲣⲁⲙ",
+          "ⲁ_1_pre_ⲕ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕ",
+          "ϥ_1_pre_ⲕ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕ",
+          "ⲕ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2428,
+      "count": 16
+    },
+    "B": {
+      "rate": 0.18,
+      "rank": 1702,
+      "count": 15
+    }
+  },
+  "etym": {
+    "egy_num": "10110",
+    "egy_lemma": "=k",
+    "demo_num": "d6496",
+    "demo_lemma": "=k",
+    "english": "you; your; yours (suffix pron., 2nd per. masc. sing.)",
+    "german": "[Suffix Pron. sg.2.m.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/10110",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6496"
+  }
+}

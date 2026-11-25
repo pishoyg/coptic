@@ -1,0 +1,151 @@
+{
+  "id": "C8929",
+  "forms": [
+    {
+      "id": "CF21809",
+      "orth": "ⲉⲙⲡⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21810",
+      "orth": "ⲉⲙⲡⲟⲣⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21811",
+      "orth": "ⲉⲙⲡⲟⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9356,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10844",
+      "bibliography": "DDGLC",
+      "cu_ID": "3959"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛ**ⲉⲙⲡⲟⲣⲟⲥ** ⲛⲁⲓ ⲛⲧⲁⲩⲣⲣⲙⲙⲁⲟ ⲛϩⲏⲧⲥ ⲥⲉⲛⲁⲁϩⲉⲣⲁⲧⲟⲩ ⲙⲡⲟⲩⲉ ⲉⲧⲃⲉⲧϩⲟⲧⲉ ⲛⲧⲉⲥⲃⲁⲥⲁⲛⲟⲥ ⲉⲩⲣⲓⲙⲉ ⲁⲩⲱ ⲉⲩⲣϩⲃⲃⲉ",
+      "english": "The merchants of these things, who were made rich by her, will stand far away for the fear of her torment, weeping and mourning;",
+      "source": "66_Revelation_18",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉⲟⲩⲛⲧⲁⲓ ϩⲉⲛϩⲟⲙⲧ ⲉϩⲉⲛ**ⲉⲙⲡⲟⲣⲟⲥ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲙⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ϣⲁⲣⲟ",
+        1,
+        10.418
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        9.56
+      ],
+      [
+        "ⲓ",
+        2,
+        8.85
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲙⲡⲟⲣⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8925,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5642",
+    "grl_lemma": "ἔμπορος",
+    "grl_meaning": "merchant",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 548a; Preisigke 1:477"
+  }
+}

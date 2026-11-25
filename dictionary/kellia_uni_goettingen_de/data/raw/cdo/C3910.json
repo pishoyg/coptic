@@ -1,0 +1,696 @@
+{
+  "id": "C3910",
+  "forms": [
+    {
+      "id": "CF9751",
+      "orth": "ⲥⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.08,
+        "rank": 683,
+        "count": 171
+      }
+    },
+    {
+      "orth": "ϣⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.87,
+        "rank": 798,
+        "count": 137
+      }
+    },
+    {
+      "orth": "ⲥⲉϣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5126,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϣⲉⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10660,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲟϣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1687,
+        "count": 40
+      }
+    },
+    {
+      "orth": "ϣⲟⲥ⸗",
+      "dialect": "S",
+      "id": "346.5"
+    },
+    {
+      "orth": "ⲥⲏϣ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1566,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ϣⲏⲥ†",
+      "dialect": "S",
+      "id": "346.7"
+    },
+    {
+      "orth": "ϣⲱϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.61,
+        "rank": 376,
+        "count": 221
+      }
+    },
+    {
+      "orth": "ϣⲉϣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 1995,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ϣⲁϣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1083,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ϣⲟϣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1054,
+        "count": 46
+      }
+    },
+    {
+      "orth": "ϣⲏϣ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1237,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ϣⲱⲥ",
+      "dialect": "A",
+      "id": "346.13"
+    },
+    {
+      "orth": "ϣⲁⲥ⸗",
+      "dialect": "A",
+      "id": "346.14"
+    },
+    {
+      "orth": "ϣⲏⲥ†",
+      "dialect": "A",
+      "id": "346.15"
+    },
+    {
+      "orth": "ϣⲱϣ",
+      "dialect": "F",
+      "id": "346.16"
+    },
+    {
+      "orth": "ϣⲁϣ⸗",
+      "dialect": "F",
+      "id": "346.17"
+    },
+    {
+      "orth": "ϣⲏϣ†",
+      "dialect": "F",
+      "id": "346.18"
+    },
+    {
+      "orth": "ϣⲱⲥ-",
+      "dialect": "L",
+      "id": "346.19"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4437",
+      "bibliography": "CD 375ab"
+    },
+    {
+      "id": "CS4438",
+      "bibliography": "CD 375b; CED 170; KoptHWb 206; DELC 203; ChLCS 53a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉϩⲏⲗⲉⲓⲁⲥ ⲙⲉⲛ ⲉϥϣⲁⲛⲉⲓ ϥⲛⲁϫⲉⲕϩⲱⲃ ⲛⲓⲙ ⲉⲃⲟⲗ ⲁⲩⲱ ⲡⲱⲥ ⲛⲧⲁⲩⲥϩⲁⲓ ⲉϫⲙⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ϫⲉⲕⲁⲁⲥ ⲉϥⲉϣⲉⲡϩⲁϩ ⲛϩⲓⲥⲉ ⲛⲥⲉ**ⲥⲟϣ**ϥ .",
+      "english": "He said to them, &apos;Elijah indeed comes first, and restores all things. How is it written about the Son of Man, that he should suffer many things and be despised?",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲱ ⲛⲉⲥⲛⲏⲩ · ϥⲥⲟⲡⲥ ⲙⲙⲱⲧⲛ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ · ⲁⲩⲱ ϥⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲱⲧⲛ · ⲉϥⲟⲩⲱϣ · ⲉⲧⲣⲉⲧⲉⲧⲛϭⲱ ⲛⲟⲩⲉϣ ⲛⲗⲩⲡⲉⲓ ⲙⲙⲟϥ · ⲏ ⲉ**ⲥⲟϣ**ϥ · ⲏ ⲉⲉⲡⲓⲃⲟⲩⲗⲉⲩⲉ ⲉⲣⲟϥ ·",
+      "english": "And now, O brethren. He maketh supplication to you through Himself, and He appealeth unto you, wishing to make you to cease to grieve Him overmuch, or to despise Him, or to conspire against Him",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲧⲣⲉⲗⲁⲁⲩ ϭⲉ **ⲥⲟϣ**ϥ . ⲙⲁⲧϩⲡⲟϥ ⲇⲉ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ϫⲉⲉϥⲉⲉⲓ ϣⲁⲣⲟⲓ . ϯϭⲱϣⲧ ⲅⲁⲣ ⲉⲃⲟⲗ ϩⲏⲧϥ ⲙⲛⲛⲉⲥⲛⲏⲩ .",
+      "english": "Therefore let no one despise him. But set him forward on his journey in peace, that he may come to me; for I expect him with the brothers.",
+      "source": "1 Corinthians 16",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        208,
+        18.899
+      ],
+      [
+        "ⲟⲩ",
+        85,
+        16.437
+      ],
+      [
+        "ⲙⲛ",
+        51,
+        15.65
+      ],
+      [
+        "ⲡ",
+        74,
+        15.114
+      ],
+      [
+        "ⲙⲙⲟ",
+        39,
+        14.826
+      ],
+      [
+        "ϥ",
+        63,
+        14.442
+      ],
+      [
+        "ⲉ",
+        55,
+        14.15
+      ],
+      [
+        "ⲡⲉ",
+        37,
+        14.125
+      ],
+      [
+        "ϩⲉⲛ",
+        25,
+        13.995
+      ],
+      [
+        "ⲉⲧ",
+        35,
+        13.615
+      ],
+      [
+        "ⲙ",
+        41,
+        13.413
+      ],
+      [
+        "ϩⲛ",
+        30,
+        13.189
+      ],
+      [
+        "ⲛⲉⲣ",
+        4,
+        12.972
+      ],
+      [
+        "ⲇⲉ",
+        25,
+        12.906
+      ],
+      [
+        "ⲛⲟϭⲛⲉϭ",
+        6,
+        12.81
+      ],
+      [
+        "ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ",
+        1,
+        12.587
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        12.587
+      ],
+      [
+        "ⲡⲉⲥⲙⲡ",
+        1,
+        12.587
+      ],
+      [
+        "ⲛⲅⲧ",
+        1,
+        12.587
+      ],
+      [
+        "ⲉⲃⲟ",
+        1,
+        12.587
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲱϣ_0_node",
+          66
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲱϣ",
+          7
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲱϣ",
+          10
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲱϣ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲱϣ",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱϣ",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲱϣ",
+          5
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲙⲱⲁⲃ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱϣ",
+          4
+        ],
+        [
+          "ⲟⲩⲏⲣ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ⲑⲃⲃⲓⲟ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟϭⲛⲉϭ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲟϭⲛⲉϭ",
+          1
+        ],
+        [
+          "ⲛⲟϭⲛⲉϭ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_4_post_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲱϣ",
+          "ⲟⲩ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲱϣ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲱϣ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲱϣ",
+          "ϩⲉⲛ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲙ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱϣ",
+          "ⲙⲱⲁⲃ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲱϣ",
+          "ⲛⲁ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲛ_1_post_ⲥⲱϣ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱϣ",
+          "ⲟⲩⲏⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲙⲛ_2_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲑⲃⲃⲓⲟ",
+          "ⲡⲉ_2_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲑⲃⲃⲓⲟ",
+          "ⲑⲃⲃⲓⲟ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲑⲃⲃⲓⲟ_1_post_ⲥⲱϣ",
+          "ⲙⲛ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲙⲛ_2_post_ⲛⲟϭⲛⲉϭ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟϭⲛⲉϭ",
+          "ⲟⲩ_2_post_ⲛⲟϭⲛⲉϭ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲟϭⲛⲉϭ",
+          "ⲛⲟϭⲛⲉϭ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲱϣ",
+          "ⲥⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱϣ_0_node",
+          "ⲉⲧ_1_post_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲱϣ",
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϣⲟⲟⲡ",
+          "ϩⲓⲧⲛ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_4_post_ⲉⲃⲟⲗ",
+          "ⲧⲏⲩⲧⲛ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱϣ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲙⲏⲏϣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_3_post_ⲟⲩ",
+          "ⲉ_4_post_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲉ_4_post_ⲙⲏⲏϣⲉ",
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲱϣ",
+          "ⲡ_1_pre_ⲥⲱϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱϣ",
+          "ⲛⲉⲩ_3_post_ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ",
+          "ϣⲃⲣⲗⲓⲧⲟⲩⲣⲅⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.63,
+      "rank": 449,
+      "count": 258
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3917",
+      "label": "ϫⲓⲥⲱϣ",
+      "pos": "V",
+      "gloss": "be scorned"
+    },
+    {
+      "target": "C3915",
+      "label": "ϯⲥⲱϣ",
+      "pos": "V",
+      "gloss": "despise, scorn"
+    },
+    {
+      "target": "C3914",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲱϣ",
+      "pos": "N",
+      "gloss": "scorn"
+    },
+    {
+      "target": "C3916",
+      "label": "ⲣⲉϥϯϣⲱϣ",
+      "pos": "N",
+      "gloss": "scorner"
+    },
+    {
+      "target": "C3913",
+      "label": "ⲣⲉϥⲥⲱϣ",
+      "pos": "N",
+      "gloss": "scorner"
+    },
+    {
+      "target": "C3912",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "caricature"
+    },
+    {
+      "target": "C3911",
+      "label": "ⲥⲱϣ",
+      "pos": "N",
+      "gloss": "shame, contempt, scorn"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5593",
+    "demo_lemma": "sš(e)(j)",
+    "english": "[to strike, beat]",
+    "german": "verachten, spotten; verachtenswert sein; gewöhnlich sein, verbreitet sein",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5593"
+  }
+}

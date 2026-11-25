@@ -1,0 +1,680 @@
+{
+  "id": "C3669",
+  "forms": [
+    {
+      "id": "CF9247",
+      "orth": "ⲥⲱⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6576,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲱⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3020,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲥⲉⲡ-",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1977,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲥⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4174,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲥⲟⲡ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.6,
+        "rank": 196,
+        "count": 884
+      }
+    },
+    {
+      "orth": "ⲥⲟⲡ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.34,
+        "rank": 255,
+        "count": 368
+      }
+    },
+    {
+      "orth": "ⲥⲱⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9182,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲉⲡ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2231,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲥⲉⲃ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3231,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲡ-",
+      "dialect": "F",
+      "id": "1453.7"
+    },
+    {
+      "orth": "ⲥⲁⲡ-",
+      "dialect": "L",
+      "id": "1453.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4173",
+      "bibliography": "CD 351a; CED 158; KoptHWb 192; DELC 194; ChLCS 49b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲡⲓⲟⲩⲏⲃ ⲉϥⲉⲥⲱⲡ ⲙⲡⲉϥⲧⲏⲃ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲥⲛⲟϥ ⲛⲧⲉⲡⲓⲙⲁⲥⲓ ⲟⲩⲟϩ ⲉϥⲉⲛⲟⲩϫϧ ⲛⲍ ⲛ**ⲥⲟⲡ** ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ ⲛⲉⲙⲡⲉⲙⲑⲟ ⲙⲡⲓⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲉⲑⲟⲩⲁⲃ",
+      "english": "And the priest shall dip his finger into some of the blood of the calf, and shall sprinkle it seven times before the Lord, in front of the veil of the sanctuary.",
+      "source": "03_Leviticus_04",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲁϥⲟⲩⲱϣⲃ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲉⲛⲧⲁϥ**ⲥⲱⲡ** ⲛⲧⲉϥϭⲓϫ ⲛⲙⲙⲁⲓ ϩⲛⲧϫⲏ ⲡⲁⲓ ⲡⲉⲧⲛⲁⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟⲓ .",
+      "english": "He answered, 'He who dipped his hand with me in the dish, the same will betray me.",
+      "source": "40_Matthew_26",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲡⲓⲟⲩⲏⲃ ⲉϥⲉⲥⲉⲡ ⲡⲉϥⲧⲏⲃ ⲛⲟⲩⲓⲛⲁⲙ ϧⲉⲛⲡⲓⲛⲉϩ ⲉⲧϧⲉⲛⲧⲉϥϫⲓϫ ⲛϫⲁϭⲏ ⲟⲩⲟϩ ⲉϥⲉⲛⲟⲩϫϧ ⲙⲡⲉϥⲧⲏⲃ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲛⲉϩ ⲛⲍ ⲛ**ⲥⲟⲡ** ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ",
+      "english": "And he shall dip with the finger of his right hand into some of the oil that is in his left hand, and he shall sprinkle with his finger seven times before the Lord.",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲃⲟⲉⲥ ⲛⲁⲥ ϫⲉⲏⲇⲏ ⲁⲡⲛⲁⲩ ⲛⲟⲩⲱⲙ ϣⲱⲡⲉ ϯⲡⲟⲩⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲡⲉⲓⲙⲁ ⲛⲧⲉⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲉⲛⲟⲉⲓⲕ ⲁⲩⲱ ⲛⲧⲉ**ⲥⲉⲡ**ⲧⲟⲩⲗⲁⲕⲙ ϩⲙⲡϩⲙϫ ⲁⲩⲱ ϩⲣⲟⲩⲑ ⲁⲥϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲛⲥⲁⲥⲡⲓⲣ ⲛⲛⲉⲧⲱϩⲥ ⲁⲃⲟⲉⲥ ⲧⲁⲙⲓⲟ ⲛⲁⲥ ⲙⲡⲉⲧⲥⲛⲁⲟⲩⲟⲙϥ ⲁⲥⲟⲩⲱⲙ ⲁⲥⲥⲉⲓ ⲁⲥⲕⲱ ⲉⲡⲁϩⲟⲩ ⲙⲡⲥⲉⲉⲡⲉ",
+      "english": "And Booz said to her, Now it is time to eat; come hither, and thou shalt eat of the bread, and thou shalt dip thy morsel in the vinegar: and Ruth sat by the side of the reapers: and Booz handed her meal, and she ate, and was satisfied, and left.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲡⲓⲟⲩⲏⲃ ⲉϥⲉⲥⲱⲡ ⲙⲡⲉϥⲧⲏⲃ ϧⲉⲛⲡⲓⲥⲛⲟϥ ⲟⲩⲟϩ ⲉϥⲉⲛⲟⲩϫϧ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲥⲛⲟϥ ⲛⲍ ⲛ**ⲥⲟⲡ** ϧⲉⲛⲡⲉϥⲧⲏⲃ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ ⲙⲡⲓⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲉⲑⲟⲩⲁⲃ",
+      "english": "And the priest shall dip his finger into the blood, and sprinkle of the blood seven times before the Lord, over against the holy veil.",
+      "source": "03_Leviticus_04",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲕⲁⲛ ⲉⲛϣⲁⲛϭⲟϩϭϩ ⲛⲛⲉⲛⲟⲃϩⲉ · ⲁⲩⲱ ⲛⲧⲉⲡⲉⲛⲗⲁⲥ ⲣⲱⲕϩ · ⲙⲛⲡⲉⲧⲛⲁ**ⲥⲉⲡ**ⲡⲉϥⲧⲏⲏⲃⲉ ⲙⲙⲟⲟⲩ ⲛⲁⲛ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "For although we shall gnash with our teeth, and our tongue shall be on fire, there shall be in that place none who shall dip his finger in water for us;",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲃ",
+        3,
+        14.357
+      ],
+      [
+        "ϩⲩⲥⲱⲡⲟⲥ",
+        1,
+        12.673
+      ],
+      [
+        "ⲡⲕⲁϩⲓ:",
+        1,
+        11.825
+      ],
+      [
+        "ⲙⲉⲧⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        10.41
+      ],
+      [
+        "ϭⲁⲗⲟϫ",
+        1,
+        10.187
+      ],
+      [
+        "ⲟⲩⲏⲃ",
+        2,
+        9.174
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        8.945
+      ],
+      [
+        "ⲉϥⲉ",
+        3,
+        8.275
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        8.094
+      ],
+      [
+        "ϧⲉⲛ",
+        5,
+        8.028
+      ],
+      [
+        "ⲧⲉⲛⲉ",
+        1,
+        7.432
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        7.07
+      ],
+      [
+        "ϫⲣⲟϫ",
+        1,
+        6.983
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        6.417
+      ],
+      [
+        "ⲥⲛⲏⲟⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲙ",
+        3,
+        5.637
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        5.272
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        5.134
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        5.059
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        4.886
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲏⲏⲃⲉ",
+        2,
+        13.144
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        7.041
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        6.573
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        5.764
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        5.451
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        4.946
+      ],
+      [
+        "ϥ",
+        3,
+        4.753
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        4.441
+      ],
+      [
+        "ⲛ",
+        3,
+        4.04
+      ],
+      [
+        "ⲙ",
+        2,
+        3.828
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        3.669
+      ],
+      [
+        "ⲁ",
+        2,
+        3.521
+      ],
+      [
+        "ⲡ",
+        2,
+        2.973
+      ],
+      [
+        "ϩⲙ",
+        1,
+        2.889
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        1.985
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡ",
+          4
+        ],
+        [
+          "ⲧⲉⲛⲉ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          7
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲟⲩⲏⲃ",
+          2
+        ],
+        [
+          "ⲟⲩⲏⲃ_1_pre_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲥⲱⲡ",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲛⲟⲩϫϧ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲧⲏⲃ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ϫⲣⲟϫ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϭⲁⲗⲟϫ",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲡⲕⲁϩⲓ:_2_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲁⲙⲟⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡ",
+          "ⲧⲉⲛⲉ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲉ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲱⲡ",
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲡⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡ",
+          "ⲡⲓ_2_pre_ⲟⲩⲏⲃ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲟⲩⲏⲃ",
+          "ⲟⲩⲏⲃ_1_pre_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲟⲩⲏⲃ_1_pre_ⲥⲱⲡ",
+          "ⲉϥⲉ_1_pre_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          3
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲟⲩⲟϩ_2_post_ⲛⲟⲩϫϧ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡ",
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          "ϥ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲙ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲡ",
+          "ⲡⲉϥ_3_post_ⲧⲏⲃ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲥⲱⲡ",
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          "ⲧ_2_pre_ϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϫⲣⲟϫ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲓ_1_post_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲡ",
+          "ⲧⲉϥ_3_post_ϭⲁⲗⲟϫ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϭⲁⲗⲟϫ",
+          "ϭⲁⲗⲟϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟϫ_2_post_ⲛ",
+          "ϧⲉⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲥⲱⲡ",
+          "ϩⲓϫⲉⲛ_1_post_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲥⲱⲡ",
+          "ⲡⲕⲁϩⲓ:_2_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲡⲕⲁϩⲓ:_2_post_ϩⲓϫⲉⲛ",
+          "ⲟⲩⲟϩ_2_post_ⲁⲙⲟⲛⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲧⲏⲏⲃⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲏⲃⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲱⲡ",
+          "ϥ_1_pre_ⲥⲱⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱⲡ",
+          "ⲥⲱⲡ_0_node",
+          2
+        ],
+        [
+          "ⲥⲱⲡ_0_node",
+          "ⲙ_1_post_ⲥⲱⲡ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲡ",
+          "ⲡⲉϥ_3_post_ⲧⲏⲏⲃⲉ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲧⲏⲏⲃⲉ",
+          "ⲧⲏⲏⲃⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱⲡ",
+          "ϥ_1_pre_ⲥⲱⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2028,
+      "count": 23
+    },
+    "B": {
+      "rate": 0.31,
+      "rank": 1281,
+      "count": 26
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3670",
+      "label": "ⲥⲱⲡ",
+      "pos": "N",
+      "gloss": "dipped, moistened food"
+    }
+  ],
+  "etym": {
+    "egy_num": "132400",
+    "egy_lemma": "sp",
+    "demo_num": "d5232",
+    "demo_lemma": "sp(j)",
+    "english": "to dip; to soak",
+    "german": "tunken, einweichen, untertauchen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/132400",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5232"
+  }
+}

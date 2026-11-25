@@ -1,0 +1,357 @@
+{
+  "id": "C7660",
+  "forms": [
+    {
+      "id": "CF32180",
+      "orth": "ϭⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4021,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF32179",
+      "orth": "ϭⲉⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17594,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲗⲗⲙ",
+      "dialect": "S",
+      "id": "2542.1"
+    },
+    {
+      "orth": "ⲕⲉⲗⲙ",
+      "dialect": "S",
+      "id": "2542.2"
+    },
+    {
+      "orth": "ϭⲗⲃⲉ",
+      "dialect": "A",
+      "id": "2542.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8503",
+      "bibliography": "CD 811a; CED 328; KoptHWb 452; DELC 338b; ChLCS 107a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉⲩϫⲟ ⲅⲁⲣ ⲟⲩⲇⲉ ⲛⲛⲉⲩⲧⲱϭⲉ ⲟⲩⲇⲉ ⲛⲛⲉⲧⲉⲩⲛⲟⲩⲛⲉ ϫⲓⲛⲟⲩⲛⲉ ⲉϩⲣⲁⲓ ⲉⲡⲕⲁϩ ⲁⲩⲧⲏⲩⲛⲓϥⲉ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲁⲩϣⲟⲟⲩⲉ ⲁⲩⲱ ⲧϩⲁⲧⲏⲩ ⲛⲁϥⲓⲧⲟⲩ ⲛⲧϩⲉ ⲛϩⲉⲛ**ϭⲗⲙ**",
+      "english": "For they shall not plant, neither shall they sow, neither shall their root be fixed in the ground: he has blown upon them, and they are withered, and a storm shall carry them away like sticks.",
+      "source": "Isaiah 40",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉⲛⲧⲁϥⲧⲟⲩⲛⲉⲥⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲉⲃⲟⲗ ϩⲛⲙⲙⲁ ⲛϣⲁ ⲁϥⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ⲁⲩⲱ ⲁⲥⲟⲩⲁϩⲥ ⲛⲥⲱϥ ϥⲛⲁⲧⲁⲁⲥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛϩⲉⲑⲛⲟⲥ ⲛϥⲧⲣⲉⲛⲉⲣⲣⲱⲟⲩ ⲣϣⲡⲏⲣⲉ ⲛϥⲕⲁⲛⲉⲩⲥⲏϥⲉ ϩⲓϫⲙⲡⲕⲁϩ ⲁⲩⲱ ⲛⲉⲩⲡⲓⲧⲉ ⲛⲧϩⲉ ⲛϩⲉⲛ**ϭⲗⲙ** ⲉⲩϩⲏⲗ ⲉⲃⲟⲗ",
+      "english": "Who raised up righteousness from the east, and called it to his feet, so that it should go? shall appoint it an adversary of Gentiles, and shall dismay kings, and bury their swords in the earth, and cast forth their bows and arrows as sticks?",
+      "source": "Isaiah 41",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲡⲁⲩⲗⲟⲥ ⲇⲉ ϭⲗⲟⲩⲁϣⲏ ⲛ**ϭⲗⲙ** ⲁϥⲛⲟϫⲟⲩ ⲉⲡⲕⲱϩⲧ . ⲁⲩϩⲃⲱ ⲉⲓ ⲉⲃⲟⲗ ϩⲛⲧϩⲙⲙⲉ ⲁⲥⲙⲁϩⲣⲱⲥ ⲛⲧⲉϥϭⲓϫ .",
+      "english": "But when Paul had gathered a bundle of sticks and laid them on the fire, a viper came out because of the heat, and fastened on his hand.",
+      "source": "44_Acts of the Apostles_28",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲗⲟⲩ",
+        1,
+        17.598
+      ],
+      [
+        "ⲧⲏⲩ",
+        2,
+        13.276
+      ],
+      [
+        "ϩⲉ",
+        6,
+        12.482
+      ],
+      [
+        "ϩⲏⲗ",
+        1,
+        12.276
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        12.04
+      ],
+      [
+        "ⲧ",
+        7,
+        11.493
+      ],
+      [
+        "ϩⲣⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ⲁϣⲏ",
+        1,
+        11.074
+      ],
+      [
+        "ⲛ",
+        9,
+        10.319
+      ],
+      [
+        "ⲕⲏ",
+        1,
+        10.18
+      ],
+      [
+        "ϩⲩⲗⲏ",
+        1,
+        9.877
+      ],
+      [
+        "ⲉⲧⲓ",
+        1,
+        9.791
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        9.102
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        8.413
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        8.413
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.22
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        8.034
+      ],
+      [
+        "ⲉ",
+        4,
+        7.817
+      ],
+      [
+        "ϥⲓ",
+        1,
+        7.211
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        7.161
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲗⲙ_0_node",
+          7
+        ],
+        [
+          "ⲉ_1_post_ϭⲗⲙ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲣⲁ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϭⲗⲙ",
+          1
+        ],
+        [
+          "ϩⲣⲁ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲣⲁ_b",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲛ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_5_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲧⲓ_1_post_ϭⲗⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_3_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲕⲉ_3_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ϭⲗⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲗⲙ_0_node",
+          "ⲉ_1_post_ϭⲗⲙ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϭⲗⲙ",
+          "ⲩ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲏⲗ",
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          "ⲉⲃⲟⲗ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲗⲙ",
+          "ϥ_3_post_ϩⲣⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲣⲁ",
+          "ϩⲓ_1_post_ϭⲗⲙ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϭⲗⲙ",
+          "ϩⲣⲁ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ϩⲣⲁ_2_post_ϩⲓ",
+          "ϥ_3_post_ϩⲣⲁ_b",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲗⲙ",
+          "ⲥ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲕⲏ",
+          "ⲕⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉ",
+          "ϩⲓϫⲛ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ϩⲓϫⲛ_3_post_ⲕⲏ",
+          "ⲛⲉⲥ_5_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϭⲗⲙ_0_node",
+          "ⲉⲧⲓ_1_post_ϭⲗⲙ",
+          1
+        ],
+        [
+          "ⲉⲧⲓ_1_post_ϭⲗⲙ",
+          "ⲅⲁⲣ_3_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_3_post_ⲕⲟⲩⲓ",
+          "ⲕⲉ_3_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲕⲉ_3_post_ⲕⲟⲩⲓ",
+          "ⲕⲟⲩⲓ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ϭⲗⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3625,
+      "count": 8
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d6899",
+    "demo_lemma": "glm(e)",
+    "english": "stem",
+    "german": "Stengel",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6899"
+  }
+}

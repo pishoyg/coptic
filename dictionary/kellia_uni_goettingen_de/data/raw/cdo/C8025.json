@@ -1,0 +1,61 @@
+{
+  "id": "C8025",
+  "forms": [
+    {
+      "id": "CF18116",
+      "orth": "ϭⲁϫⲙⲏ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϭⲁϫⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17550,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲁⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3472,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8925",
+      "bibliography": "CD 842b; CED 340-341; KoptHWb 474, 575; DELC 351a; ChLCS 111a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C8026",
+      "label": "ϭⲁϫⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "handful"
+    }
+  ],
+  "etym": {
+    "egy_num": "600590",
+    "egy_lemma": "qḏm",
+    "demo_num": "d6970",
+    "demo_lemma": "gḏm",
+    "english": "handful (as a measure)",
+    "german": "Handvoll (als Maß)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600590",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6970"
+  }
+}

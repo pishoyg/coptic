@@ -1,0 +1,476 @@
+{
+  "id": "C8423",
+  "forms": [
+    {
+      "id": "CF19633",
+      "orth": "ⲁⲣⲉⲥⲕⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19634",
+      "orth": "ⲁⲣⲉⲥⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2248,
+        "count": 24
+      }
+    },
+    {
+      "id": "CF19635",
+      "orth": "ⲁⲣⲉⲥⲕⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19636",
+      "orth": "ⲁⲣⲉⲥⲭⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19637",
+      "orth": "ⲁⲣⲓⲥⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5378,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9749",
+      "bibliography": "DDGLC",
+      "cu_ID": "5055"
+    },
+    {
+      "id": "CS9750",
+      "bibliography": "DDGLC",
+      "cu_ID": "1166"
+    },
+    {
+      "id": "CS9751",
+      "bibliography": "DDGLC",
+      "cu_ID": "3872"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥϫⲓ ⲇⲉ ϥϥⲓⲣⲟⲟⲩϣ ⲉⲛⲁⲡⲕⲟⲥⲙⲟⲥ ϫⲉⲉϥⲛⲁ**ⲁⲣⲉⲥⲕⲉ** ⲛⲧⲉϥⲥϩⲓⲙⲉ ⲛⲁϣ ⲛϩⲉ .",
+      "english": "but he who is married is concerned about the things of the world, how he may please his wife.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ⲡⲉⲓϩⲱⲃ ϭⲉ **ⲁⲣⲉⲥⲕⲉ** ⲁⲛ ⲙⲡⲣⲱⲙⲉ ⲛϣⲟⲩϣⲟⲩ ⲙⲁⲣⲉϥⲣⲡⲙⲉⲉⲩⲉ ϫⲉⲟⲩⲛⲟⲩⲕⲁⲓⲣⲟⲥ ⲛⲏⲩ ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲡⲉϥⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲉⲧϩⲓϫⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲣⲉⲙⲡⲏⲩⲉ ⲙⲛⲡⲕⲁϩ ⲙⲛⲛⲉⲧⲛϩⲏⲧⲟⲩ ⲧⲏⲣⲟⲩ ϩⲛⲛⲉϥϭⲓϫ ⲛⲧϩⲉ ⲛⲛⲉⲓⲗⲁⲁⲩ ⲛⲁⲟⲩⲉϩⲥⲁϩⲛⲉ ⲁⲩⲱ ⲛϥⲧⲁⲁⲥ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲉⲧⲣⲉⲩⲕⲣⲓⲛⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ",
+      "english": "If this matter does not please the proud person, then let him remember that there is a time coming when God and his Christ Jesus who is over everything so that the heavens and earth and all the things in them are in his hands, in the way of these things, (they) will rule, and he will have the saints judge all of the world.",
+      "source": "God Who Alone Is True BV 119-122",
+      "urn": "urn:cts:copticLit:shenoute.true.amelineau:201-207",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲡⲏϣ ⲁⲩⲱ ⲧⲉⲥϩⲓⲙⲉ ⲉⲧⲉⲙⲛⲧⲥϩⲁⲓ ⲙⲛⲧⲡⲁⲣⲑⲉⲛⲟⲥ ϥⲓⲣⲟⲟⲩϣ ⲉⲛⲁⲡϫⲟⲉⲓⲥ ϫⲉⲕⲁⲁⲥ ⲉⲥⲉϣⲱⲡⲉ ⲉⲥⲟⲩⲁⲁⲃ ϩⲙⲡⲉⲥⲥⲱⲙⲁ ⲙⲛⲡⲉⲥⲡⲛⲉⲩⲙⲁ ⲧⲉⲛⲧⲁⲥϫⲓϩⲁⲓ ⲇⲉ ϥⲓⲣⲟⲟⲩϣ ⲉⲛⲁⲡⲕⲟⲥⲙⲟⲥ ϫⲉⲛⲁϣ ⲛϩⲉ ⲉⲥⲛⲁ**ⲁⲣⲉⲥⲕⲉ** ⲙⲡⲉⲥϩⲁⲓ .",
+      "english": "There is also a difference between a wife and a virgin. The unmarried woman cares about the things of the Lord, that she may be holy both in body and in spirit. But she who is married cares about the things of the world--how she may please her husband.",
+      "source": "46_1 Corinthians_7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        20.768
+      ],
+      [
+        "ϩⲛⲁ...",
+        1,
+        16.013
+      ],
+      [
+        "ⲛ",
+        47,
+        15.888
+      ],
+      [
+        "ⲑⲓⲧⲟⲩⲱ",
+        1,
+        14.013
+      ],
+      [
+        "ⲉⲉⲓ",
+        1,
+        13.691
+      ],
+      [
+        "ϩⲁⲓ",
+        3,
+        13.006
+      ],
+      [
+        "ⲡ",
+        20,
+        12.878
+      ],
+      [
+        "ⲉ",
+        17,
+        12.495
+      ],
+      [
+        ".",
+        11,
+        12.351
+      ],
+      [
+        "ⲛ...",
+        1,
+        12.313
+      ],
+      [
+        "ⲙ",
+        12,
+        11.521
+      ],
+      [
+        ".........",
+        1,
+        11.206
+      ],
+      [
+        "ⲛⲁ",
+        10,
+        11.069
+      ],
+      [
+        "ⲡⲉⲥ",
+        3,
+        10.901
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        3,
+        10.425
+      ],
+      [
+        "ϩⲟⲩⲉ",
+        1,
+        10.232
+      ],
+      [
+        "ϩⲉ",
+        5,
+        10.108
+      ],
+      [
+        "ⲟⲩⲁⲁ",
+        1,
+        10.106
+      ],
+      [
+        "ⲉⲧ",
+        7,
+        10.075
+      ],
+      [
+        "ϫⲉ",
+        7,
+        9.984
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          5
+        ],
+        [
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          11
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          6
+        ],
+        [
+          "ϩⲛⲁ..._2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲣ...",
+          1
+        ],
+        [
+          "ⲛⲁⲣ..._2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉϥ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲓ_3_post_ⲡⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲡ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_pre_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          "ⲛⲁ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          4
+        ],
+        [
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          "ⲙ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ϩⲛⲁ..._2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛⲁ..._2_post_ⲛ",
+          "ⲉ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ϥ_3_post_ⲛⲁⲣ...",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲣ...",
+          "ⲛⲁⲣ..._2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲧⲉϥ_3_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          "ϩⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲧⲉϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲛ",
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉϥ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          "ⲛⲁ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲡⲉⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_2_post_ⲙ",
+          "ϩⲁⲓ_3_post_ⲡⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲏⲡ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲏⲡ_4_post_ⲉⲧ",
+          "ⲉ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_pre_ϩⲱⲃ",
+          "ϩⲱⲃ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_pre_ⲁⲣⲉⲥⲕⲉ",
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲉⲥⲕⲉ_0_node",
+          "ⲁⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          "ⲙ_1_post_ⲁⲣⲉⲥⲕⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.15,
+      "rank": 1970,
+      "count": 24
+    }
+  },
+  "etym": {
+    "grl_ID": "266",
+    "grl_lemma": "ἀρέσκω",
+    "grl_meaning": "to make good, please",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 238a; Preisigke 1:208"
+  }
+}

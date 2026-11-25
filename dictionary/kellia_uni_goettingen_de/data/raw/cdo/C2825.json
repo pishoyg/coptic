@@ -1,0 +1,173 @@
+{
+  "id": "C2825",
+  "forms": [
+    {
+      "id": "CF7497",
+      "orth": "ⲡⲟⲗϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16726,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3231",
+      "bibliography": "CD 262b; KoptHWb 147; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲥⲱⲙⲁ ⲇⲉ ⲟⲩⲱϣⲙ ϩⲛϩⲉⲛⲃⲛⲧ ⲉⲩϩⲟⲟⲩ ϯⲃⲱⲗ ⲇⲉ ⲉⲃⲟⲗ ⲛϩⲉⲛ**ⲡⲟⲗϭⲥ** ⲛⲕⲁϩ ⲉⲓϩⲱⲱⲕⲉ ⲛⲧⲁⲉⲓⲁⲁⲃⲉ",
+      "english": "And my body is covered with loathsome worms; and I waste away, scraping off clods of dust from my eruption.",
+      "source": "Job 7",
+      "urn": "urn:cts:copticLit:ot.job.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁϩ",
+        1,
+        8.927
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟⲗϭⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲗϭⲥ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲗϭⲥ_0_node",
+          "ⲛ_1_post_ⲡⲟⲗϭⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲗϭⲥ",
+          "ⲕⲁϩ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16330,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2826",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2820",
+      "label": "ⲡⲱⲗϭ",
+      "pos": "V",
+      "gloss": "agree with sb, decide, reach satisfaction; deliver, decide, settle (an affair)"
+    },
+    {
+      "target": "C2822",
+      "label": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "reach conclusion, make an end, be freed (from), be transferred, relieved; settle, make an end of, take off/out, bring to terms with, relieve from,\n              satisfy"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2829",
+      "label": "ⲣⲡⲉⲗϭⲉ",
+      "pos": "V",
+      "gloss": "become, be ragged, old"
+    },
+    {
+      "target": "C2823",
+      "label": "ⲫⲱⲗϫ",
+      "pos": "N",
+      "gloss": "ease, liberty"
+    }
+  ]
+}

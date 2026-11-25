@@ -1,0 +1,177 @@
+{
+  "id": "C642",
+  "forms": [
+    {
+      "id": "CF2433",
+      "orth": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14445,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS778",
+      "bibliography": "CD 54a; KoptHWb 151; DELC 163; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲟⲩⲏⲏⲃ ⲉϥⲉϫⲓⲧⲟⲩ ⲛϥⲕⲁⲁⲩ ⲉϩⲣⲁⲓ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲛⲥⲉϣⲱⲡⲉ ⲉⲩⲟⲩⲁⲁⲃ ⲙⲡⲟⲩⲏⲏⲃ ϩⲣⲁⲓ ϩⲓϫⲙⲡ**ⲡⲉⲣⲕⲓⲃⲉ** ⲛⲧⲉⲡⲧⲁⲗⲟ ⲁⲩⲱ ⲉϩⲣⲁⲓ ⲉϫⲙⲡϣⲱⲡϣ ⲛⲧⲉⲡϥⲓ ⲉⲃⲟⲗ ⲁⲩⲱ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲡⲉⲛⲧⲁϥⲉⲣⲏⲧ ⲛϥⲥⲉ ⲏⲣⲡ",
+      "english": "And the priest shall present them as an offering before the Lord; it shall be the holy portion for the priest beside the breast of the heave-offering and beside the shoulder of the wave-offering: and afterwards the votary shall drink wine.",
+      "source": "Numbers 6",
+      "urn": "urn:cts:copticLit:ot.num.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        12.09
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        1,
+        11.734
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        11.004
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        10.022
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲣⲕⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲗⲟ_1_post_ⲡⲉⲣⲕⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϣⲱⲡϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲣⲕⲓⲃⲉ_0_node",
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          "ⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_3_post_ⲛ",
+          "ⲡ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲁⲗⲟ",
+          "ⲧⲁⲗⲟ_1_post_ⲡⲉⲣⲕⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲗⲟ_1_post_ⲡⲉⲣⲕⲓⲃⲉ",
+          "ⲁⲩⲱ_4_post_ϣⲱⲡϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14044,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2064",
+      "type": "syn",
+      "label": "breast (B)"
+    },
+    {
+      "target": "C2863",
+      "type": "cf",
+      "label": "house"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C645",
+      "label": "ϫⲓ ⲉⲕⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "take breast, be suckled"
+    },
+    {
+      "target": "C644",
+      "label": "ϯ ⲉⲕⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "give breast, suckle"
+    },
+    {
+      "target": "C641",
+      "label": "ⲉⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast, nipple"
+    },
+    {
+      "target": "C643",
+      "label": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast"
+    }
+  ]
+}

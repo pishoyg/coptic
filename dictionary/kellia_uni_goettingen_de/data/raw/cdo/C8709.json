@@ -1,0 +1,562 @@
+{
+  "id": "C8709",
+  "forms": [
+    {
+      "id": "CF20723",
+      "orth": "ⲇⲉⲓⲡⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20724",
+      "orth": "ⲇⲉⲓⲡⲛⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20725",
+      "orth": "ⲇⲉⲓⲡⲛⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20726",
+      "orth": "ⲇⲉⲓⲡⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1799,
+        "count": 37
+      }
+    },
+    {
+      "id": "CF20727",
+      "orth": "ⲇⲓⲡⲛⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1483,
+        "count": 26
+      }
+    },
+    {
+      "id": "CF20728",
+      "orth": "ⲇⲓⲡⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4397,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF20729",
+      "orth": "ⲇⲓⲡⲛⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20730",
+      "orth": "ⲇⲓⲡⲛⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20731",
+      "orth": "ⲇⲓⲡⲛⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20732",
+      "orth": "ⲧⲓⲡⲛⲟⲛ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10357",
+      "bibliography": "DDGLC",
+      "cu_ID": "553"
+    },
+    {
+      "id": "CS10358",
+      "bibliography": "DDGLC",
+      "cu_ID": "5367"
+    },
+    {
+      "id": "CS10359",
+      "bibliography": "DDGLC",
+      "cu_ID": "5369"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲟⲩⲉϩⲟⲟⲩ ⲇⲉ ϣⲱⲡⲓ ⲛⲉⲩⲕⲉⲣⲓⲁ ϩⲟⲧⲉ ⲉⲧⲁⲏⲣⲱⲇⲏⲥ ϧⲉⲛⲡⲉϥⲉϩⲟⲟⲩ ⲙⲙⲓⲥⲓ ⲑⲁⲙⲓⲉⲟⲩ**ⲇⲓⲡⲛⲟⲛ** ⲛⲛⲉϥⲛⲓϣϯ ⲛⲉⲙⲛⲓⲭⲓⲗⲓⲁⲣⲭⲟⲥ ⲛⲉⲙⲛⲓϩⲟⲩⲁϯ ⲛⲧⲉϯⲅⲁⲗⲓⲗⲉⲁ .",
+      "english": "Then a convenient day came, that Herod on his birthday made a supper for his nobles, the high officers, and the chief men of Galilee.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲕⲑⲉⲱⲣⲉⲓ ⲙⲡⲁⲣⲓⲥⲧⲟⲛ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ · ⲉⲧⲃⲉⲡⲁⲓ ⲁⲕⲙⲧⲟⲛ ⲙⲙⲟⲕ ϩⲙⲡ**ⲇⲉⲓⲡⲛⲟⲛ** ⲉⲧⲟⲩⲁⲁⲃ ⁛",
+      "english": "Thou didst see beforehand the Banquet of the Spirit, and because of this thou dost rest (or, recline) at the holy feast.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲙϩⲁⲛϣⲟⲣⲡ ⲙⲙⲁ ⲛϩⲉⲙⲥⲓ ϧⲉⲛⲛⲓⲕⲁⲑⲉⲇⲣⲁ ϧⲉⲛⲛⲓⲥⲩⲛⲁⲅⲱⲅⲏ ⲛⲉⲙϩⲁⲛϣⲟⲣⲡ ⲛⲣⲱⲧⲉⲃ ϧⲉⲛⲛⲓ**ⲇⲓⲡⲛⲟⲛ**",
+      "english": "and the best seats in the synagogues, and the best places at feasts:",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲙⲁ ⲛϩⲙⲟⲟⲥ ⲉⲧϫⲟⲥⲉ ϩⲛⲛⲥⲩⲛⲁⲅⲱⲅⲏ . ⲁⲩⲱ ⲙⲙⲁ ⲛⲛⲟϫⲟⲩ ⲉⲧϫⲟⲥⲉ ϩⲛⲛ**ⲇⲉⲓⲡⲛⲟⲛ**",
+      "english": "and the best seats in the synagogues, and the best places at feasts:",
+      "source": "41_Mark_12",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧⲉⲛⲛⲁⲑⲱⲟⲩϯ ⲟⲩⲛ ϩⲓⲟⲩⲙⲁ ⲛⲟⲩⲕⲩⲣⲓⲁⲕⲟⲛ ⲛ**ⲇⲓⲡⲛⲟⲛ** ⲁⲛ ⲡⲉ ⲉⲟⲩⲟⲙϥ .",
+      "english": "When therefore you assemble yourselves together, it is not the Lord's supper that you eat.",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲟⲩⲁ ⲅⲁⲣ ⲡⲟⲩⲁ ⲣϣⲟⲣⲡ ⲉⲟⲩⲱⲙ ⲙⲡⲉϥ**ⲇⲉⲓⲡⲛⲟⲛ** . ⲁⲩⲱ ⲟⲩⲛⲟⲩⲁ ⲙⲉⲛ ϩⲕⲁⲉⲓⲧ ⲟⲩⲛⲟⲩⲁ ⲇⲉ ⲧⲁϩⲉ .",
+      "english": "For in your eating each one takes his own supper first. One is hungry, and another is drunken.",
+      "source": "46_1 Corinthians_11",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲩⲣⲓⲁⲕⲟⲛ",
+        2,
+        17.35
+      ],
+      [
+        "ⲣⲡⲁⲣⲁⲓⲧⲉⲓ",
+        2,
+        16.765
+      ],
+      [
+        "ⲧⲉϩⲙ",
+        3,
+        14.82
+      ],
+      [
+        "ⲙⲉⲥⲧ",
+        1,
+        14.35
+      ],
+      [
+        "ⲛ",
+        38,
+        14.305
+      ],
+      [
+        "ⲙ",
+        24,
+        13.858
+      ],
+      [
+        "ⲉ",
+        22,
+        12.948
+      ],
+      [
+        "ⲡ",
+        22,
+        12.627
+      ],
+      [
+        "ⲁ",
+        19,
+        12.54
+      ],
+      [
+        ".",
+        13,
+        12.411
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        5,
+        12.347
+      ],
+      [
+        "ⲧⲁϩⲙ",
+        2,
+        12.028
+      ],
+      [
+        "ϥ",
+        18,
+        11.783
+      ],
+      [
+        "ⲉⲧ",
+        12,
+        11.745
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        4,
+        11.194
+      ],
+      [
+        "ⲡⲁⲣⲁⲓⲧⲉⲓ",
+        1,
+        11.102
+      ],
+      [
+        "ⲛⲧⲉⲧⲛ",
+        2,
+        10.891
+      ],
+      [
+        "ⲟⲩⲟⲙ",
+        2,
+        10.615
+      ],
+      [
+        "ⲟⲩ",
+        11,
+        10.35
+      ],
+      [
+        "ⲁⲙⲁⲛ",
+        1,
+        10.306
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          25
+        ],
+        [
+          "ⲛ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_4_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          "ⲛ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          "ⲛ_4_post_ϣⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲟⲣⲡ",
+          "ⲟⲩⲛⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲛⲉϥ_3_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲁⲣⲭⲱⲛ",
+          "ⲁⲣⲭⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_2_post_ⲛ",
+          "ⲙⲛ_4_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲙϩⲁⲗ",
+          "ⲛⲉϥ_4_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          "ⲙ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          "ⲧⲏⲣ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲗⲁⲟⲥ",
+          "ϥ_5_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲥϩⲓⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲛ",
+          "ⲛⲧⲉ_4_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          "ⲡ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲏⲣⲡ",
+          "ⲏⲣⲡ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲙ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          "ⲉ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          "ϥ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲇⲉⲓⲡⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲉⲓⲡⲛⲟⲛ",
+          "ⲡⲉⲕ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.24,
+      "rank": 1548,
+      "count": 38
+    }
+  },
+  "etym": {
+    "grl_ID": "460",
+    "grl_lemma": "δεῖπνον",
+    "grl_meaning": "meal, midday meal",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 375a; Preisigke 1:322"
+  }
+}

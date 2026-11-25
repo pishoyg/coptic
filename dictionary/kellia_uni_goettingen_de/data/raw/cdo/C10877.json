@@ -1,0 +1,160 @@
+{
+  "id": "C10877",
+  "forms": [
+    {
+      "id": "CF29659",
+      "orth": "ⲫⲟⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29660",
+      "orth": "ⲫⲟⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5352,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15009",
+      "bibliography": "DDGLC",
+      "cu_ID": "1937"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲉⲛⲉ ⲟⲩⲙⲟⲛⲁⲭⲟⲥ ⲛⲁⲙⲉⲡⲉ ⲛⲉϥⲛⲁⲣϣⲟⲙⲧ ⲙ**ⲫⲟⲛⲟⲥ** ϩⲙⲡⲉϩⲙⲉ ⲛϩⲟⲟⲩ .",
+      "english": "“If he were truly a monk then he wouldn’t have committed 3 murders in the 40 Days [=Lent],”",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϫⲱ ⲙⲙⲟⲥ ⲉⲛⲣⲓⲣ ⲙⲛⲧⲉϩⲉ ⲛⲧⲁⲓⲕⲟⲛⲥⲟⲩ ϩⲛⲛⲏⲓ ⲛⲛϩⲉⲗⲗⲏⲛ ϫⲉⲙ**ⲫⲟⲛⲟⲥ**",
+      "english": "as you called the pigs and the cow that I slew in the houses of the pagans “murders”.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲙⲧ",
+        2,
+        15.954
+      ],
+      [
+        "ϩⲉⲗⲗⲏⲛ",
+        2,
+        15.715
+      ],
+      [
+        "ϩⲙⲉ",
+        2,
+        14.521
+      ],
+      [
+        "ⲣ",
+        2,
+        10.413
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        10.116
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        9.688
+      ],
+      [
+        "ⲛ",
+        6,
+        9.564
+      ],
+      [
+        "ⲙ",
+        4,
+        9.351
+      ],
+      [
+        "ϯ",
+        2,
+        8.516
+      ],
+      [
+        "ϩⲙ",
+        2,
+        8.413
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.508
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.146
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲟⲙⲧ_1_pre_ⲫⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲫⲟⲛⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_pre_ⲫⲟⲛⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲟⲙⲧ_1_pre_ⲫⲟⲛⲟⲥ",
+          "ⲫⲟⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲫⲟⲛⲟⲥ",
+          "ⲫⲟⲛⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4930,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2319",
+    "grl_lemma": "φόνος",
+    "grl_meaning": "murder, slaugther",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1949b; Preisigke 2:700"
+  }
+}

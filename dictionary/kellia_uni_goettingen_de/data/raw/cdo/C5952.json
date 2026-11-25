@@ -1,0 +1,45 @@
+{
+  "id": "C5952",
+  "forms": [
+    {
+      "id": "CF13909",
+      "orth": "ⲉⲓⲉⲡϣⲟⲛⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6636",
+      "bibliography": "CD 572b; KoptHWb 319; ChLCS 79a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C935",
+      "type": "cf",
+      "label": "name of craft, its material or product"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5951",
+      "label": "ϣⲟⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "plaited work"
+    },
+    {
+      "target": "C5950",
+      "label": "ϣⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "plait"
+    }
+  ]
+}

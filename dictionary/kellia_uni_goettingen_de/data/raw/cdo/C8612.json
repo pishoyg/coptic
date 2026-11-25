@@ -1,0 +1,132 @@
+{
+  "id": "C8612",
+  "forms": [
+    {
+      "id": "CF20325",
+      "orth": "ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF20326",
+      "orth": "ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13644,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20327",
+      "orth": "ⲃⲓⲃⲗⲓⲱⲑⲏⲕⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10156",
+      "bibliography": "DDGLC",
+      "cu_ID": "3879"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥ ⲛⲁⲓ ⲙⲉⲛ ⲁⲛϫⲟⲟⲩ ⲉⲣⲱⲧⲛ ⲱ ⲛⲁⲙⲉⲣⲁⲧⲉ ⲡⲣⲟⲥ ⲛⲉⲛⲧⲁⲛϩⲉ ⲉⲣⲟⲟⲩ ϩⲛⲧ**ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ** · ⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲁⲓ ⲛⲧⲁⲛⲉⲛⲉⲓⲟⲟⲧⲉ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲥⲩⲛϩⲓⲥⲧⲁ ⲙⲙⲟⲟⲩ ⲁⲩⲕⲁⲁⲩ ⲛϩⲏⲧⲥ · ⲉⲧⲃⲉⲙⲡⲓⲥⲧⲟⲥ ⲙⲛⲡⲟⲩϫⲁⲓ ⲛⲛⲣⲱⲙⲉ ⲛⲁⲡⲓⲥⲧⲟⲥ ·",
+      "english": "Now behold, we have declared these things to you, O my beloved, according to what we found in [the books of] the Library of Jerusalem, which our holy Fathers the Apostles brought and placed therein, for the benefit of the believers and for the salvation of the men who are unbelievers.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+        1,
+        11.746
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ_0_node",
+          "ⲛ_1_post_ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲓⲃⲗⲓⲟⲑⲩⲕⲏ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13243,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "384",
+    "grl_lemma": "βιβλιοθήκη",
+    "grl_meaning": "book-case, library",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 315a; Preisigke 1:267"
+  }
+}

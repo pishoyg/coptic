@@ -1,0 +1,688 @@
+{
+  "id": "C3651",
+  "forms": [
+    {
+      "id": "CF9211",
+      "orth": "ⲥⲉⲉⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.37,
+        "rank": 580,
+        "count": 216
+      }
+    },
+    {
+      "orth": "ⲥⲉⲡⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.8,
+        "rank": 829,
+        "count": 68
+      }
+    },
+    {
+      "orth": "ⲥⲉⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7456,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲓⲡⲉ",
+      "dialect": "S",
+      "id": "1456.2"
+    },
+    {
+      "orth": "ⲥⲉⲉⲡⲉ",
+      "dialect": "A",
+      "id": "1456.3"
+    },
+    {
+      "orth": "ⲥⲉⲡⲉ",
+      "dialect": "A",
+      "id": "1456.4"
+    },
+    {
+      "orth": "ⲥⲉⲉⲡⲉ",
+      "dialect": "F",
+      "id": "1456.5"
+    },
+    {
+      "orth": "ⲥⲏⲏⲡⲓ",
+      "dialect": "F",
+      "id": "1456.6"
+    },
+    {
+      "orth": "ⲥⲉⲉⲡⲉ",
+      "dialect": "L",
+      "id": "1456.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4154",
+      "bibliography": "CD 351a; CED 158; KoptHWb 192; DELC 194; ChLCS 49b"
+    },
+    {
+      "id": "CS4155",
+      "bibliography": "CD 351b; KoptHWb 192; DELC 194; ChLCS 49b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ⲛⲑⲟⲕ ⲁⲕϣⲉⲗⲟⲩⲙⲏϣ ⲛⲉⲑⲛⲟⲥ ⲉⲩⲉϣⲟⲗⲕ ⲛϫⲉⲛⲓⲗⲁⲟⲥ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲩ**ⲥⲉⲡⲓ** ⲉⲑⲃⲉϩⲁⲛⲥⲛⲟϥ ⲛⲧⲉϩⲁⲛⲣⲱⲙⲓ ⲛⲉⲙϯⲙⲉⲧⲁⲥⲉⲃⲏⲥ ⲛⲧⲉⲡⲕⲁϩⲓ ⲛⲧⲉϯⲃⲁⲕⲓ ⲛⲉⲙⲛⲏ ⲧⲏⲣⲟⲩ ⲉⲧϣⲟⲡ ⲛϧⲏⲧϥ .",
+      "english": "Because thou hast spoiled many nations, all the nations that are left shall spoil thee, because of the blood of men, and the sins of the land and city, and of all that dwell in it.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲛⲉϩ ⲇⲉ ⲉⲛⲧⲁϥ**ⲥⲉⲉⲡⲉ** ϩⲛⲧⲉϥϭⲓϫ ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲕⲁⲁϥ ⲉϫⲛϩⲧⲏϥ ⲙⲡⲙⲁⲁϫⲉ ⲛⲟⲩⲛⲁⲙ ⲙⲡⲉⲧⲟⲩⲛⲁⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲙⲟϥ ⲁⲩⲱ ⲉϫⲛϩⲧⲏⲥ ⲛⲧⲉϥϭⲓϫ ⲛⲟⲩⲛⲁⲙ ⲁⲩⲱ ⲉϫⲛϩⲧⲏⲥ ⲛⲧⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲛⲟⲩⲛⲁⲙ ⲉϫⲙⲡⲉⲥⲛⲟϥ ⲙⲡⲉⲧⲟⲩⲛⲁⲧⲁⲁϥ ϩⲁⲛⲟⲃⲉ",
+      "english": "And the remaining oil that is in his hand, the priest shall put on the tip of the right ear of him that is under cleansing, and on the thumb of his right hand, and on the great toe of his right foot, on the place of the blood of the trespass-offering.",
+      "source": "Leviticus 14",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲁϥ**ⲥⲉⲡⲓ** ⲙⲡⲓϩⲩⲁⲕⲓⲛⲑⲓⲛⲟⲛ ⲛⲉⲙⲡⲓϭⲏϫⲓ ⲛⲉⲙⲡⲓⲕⲟⲕⲕⲟⲥ ⲁⲩⲑⲁⲙⲓⲱⲟⲩ ⲛϩⲁⲛⲥⲧⲟⲗⲏ ⲛϣⲉⲙϣⲓ ⲛⲁⲁⲣⲱⲛ ϩⲱⲥⲧⲉ ⲛⲧⲉϥϣⲉⲙϣⲓ ⲛϧⲏⲧⲟⲩ ϧⲉⲛⲡⲉⲑⲟⲩⲁⲃ",
+      "english": "And the blue that was left, and the purple, and the scarlet they made into garments of ministry for Aaron, so that he should minister with them in the sanctuary;",
+      "source": "02_Exodus_39",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:39",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲛⲧⲙⲉϩⲥⲁϣϥⲉ ⲇⲉ ⲛⲣⲟⲙⲡⲉ ⲉⲕⲉⲕⲁⲁⲥ ⲉⲃⲟⲗ ⲛⲅⲗⲟ ϩⲁⲣⲟⲥ ⲛⲥⲉⲟⲩⲱⲙ ⲙⲙⲟⲥ ⲛϭⲓⲛϩⲏⲕⲉ ⲙⲡⲉⲕϩⲉⲑⲛⲟⲥ ⲛⲉⲧⲛⲁ**ⲥⲉⲉⲡⲉ** ⲇⲉ ⲉⲣⲟⲟⲩ ⲉⲩⲉⲟⲩⲟⲙⲟⲩ ⲛϭⲓⲛⲉⲑⲏⲣⲓⲟⲛ ⲛⲁⲅⲣⲓⲟⲛ ⲉⲕⲉⲉⲓⲣⲉ ⲛⲧⲉⲓϩⲉ ⲙⲡⲉⲕⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲙⲛⲡⲉⲕⲙⲁ ⲛϫⲟⲉⲓⲧ",
+      "english": "But in the seventh year thou shalt let it rest, and leave it, and the poor of thy nation shall feed; and the wild beasts of the field shall eat that which remains: thus shalt thou do to thy vineyard and to thine oliveyard.",
+      "source": "Exodus 23",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲫⲣⲏϯ ⲛⲛⲁⲓⲕⲉⲛⲧⲉ ⲉⲧϩⲱⲟⲩ ⲛⲏⲉⲧⲉ ⲙⲡⲁⲩϣⲟⲩⲟⲙⲟⲩ ⲉⲃⲟⲗϧⲉⲛ ⲡⲟⲩⲧϩⲟ ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉ ⲡϭⲥ ϫⲱ ⲙⲙⲱⲟⲩ ⲡⲁⲓⲣⲏϯ ϯⲛⲁϯ ⲛⲥⲉⲇⲉⲕⲓⲁⲥ ⲡⲟⲩⲣⲟ ⲛⲓⲟⲩⲇⲁ ⲛⲉⲙⲛⲉϥⲉϩⲣⲏⲓ ⲛⲉⲙⲡⲥⲏⲡⲓ ⲛⲓⲗⲏⲙ ⲛⲏⲉⲑⲛⲁ**ⲥⲉⲡⲓ** ⲉⲡⲁⲓⲕⲁϩⲓ ⲛⲉⲙⲛⲏⲉⲧϣⲟⲡ ϧⲉⲛⲭⲏⲙⲓ .",
+      "english": "And as the bad figs, which cannot be eaten, for their badness; thus saith the Lord, So will I deliver Sedekias king of Juda, and his nobles, and the remnant of Jerusalem, them that are left in this land, and the dwellers in Egypt.",
+      "source": "24_Ieremias_24",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲧⲡⲁⲧⲣⲓⲁ ⲧⲏⲣⲥ ⲏ ⲛⲛⲟϭ ⲛⲧⲡⲟⲗⲓⲥ ⲁⲩⲧⲱⲟⲩⲛ ⲉϫⲛⲧⲉⲕϩⲙϩⲁⲗ ⲉⲩϫⲱ ⲙⲙⲟⲥ ⲛⲁⲥ ϫⲉⲁⲩⲉⲓⲥ ⲁⲩⲉⲡⲉⲛⲧⲁϥⲙⲉⲟⲩⲧ ⲡⲉϥⲥⲟⲛ ⲛⲧⲁⲣⲉⲛⲧⲁⲕⲟϥ ⲉⲡⲙⲁ ⲛⲧⲉⲯⲩⲭⲏ ⲙⲡⲏ ⲡⲁⲓ ⲛⲧⲁϥⲙⲟⲟⲩⲧϥ ⲛⲧⲉⲛϥⲓ ⲛⲧⲙⲏⲧⲉ ⲙⲡⲉⲧⲛⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ ⲛⲥⲉϫⲉⲛⲁ ⲛⲧⲁϫⲏⲃⲥ ⲏ ⲡⲁⲕⲉⲟⲩⲟⲉⲓⲛ ⲛⲧⲁϥ**ⲥⲉⲉⲡⲉ** ⲛⲁⲓ ϩⲱⲥⲧⲉ ⲉⲧⲙϣⲱϫⲡ ⲉⲡⲁϩⲟⲩ ⲙⲡⲣⲡⲙⲉⲉⲩⲉ ⲙⲡⲁϩⲁⲓ ⲛⲟⲩϣⲃⲃⲓⲱ ⲁⲩⲱ ⲟⲩⲣⲁⲛ ϩⲓϫⲙⲡϩⲟ ⲙⲡⲕⲁϩ",
+      "english": "And behold the whole family rose up against thine handmaid, and they said, Give up the one that smote his brother, and we will put him to death for the life of his brother, whom he slew, and we will take away even your heir: so they will quench my coal that is left, so as not to leave my husband remnant or name on the face of the earth.",
+      "source": "II Samuel 14",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲕⲉ",
+        5,
+        22.661
+      ],
+      [
+        "ⲡ",
+        46,
+        22.19
+      ],
+      [
+        "ⲛ",
+        47,
+        21.254
+      ],
+      [
+        "ⲛⲓ",
+        26,
+        20.32
+      ],
+      [
+        "ⲥⲟⲩⲃⲏⲧ",
+        3,
+        20.128
+      ],
+      [
+        "ⲥⲣⲓⲧ",
+        2,
+        20.11
+      ],
+      [
+        "ⲡⲓ",
+        27,
+        20.035
+      ],
+      [
+        "ⲁⲫⲣⲓⲕⲏ",
+        1,
+        19.695
+      ],
+      [
+        "ⲧϭⲓⲏⲡⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲓϥⲣⲟⲩⲭⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙ",
+        21,
+        18.76
+      ],
+      [
+        "ϥⲣⲟⲩⲭⲟⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲫⲏⲉⲑⲛⲁ",
+        3,
+        18.617
+      ],
+      [
+        ".",
+        20,
+        18.582
+      ],
+      [
+        "ⲇⲉ",
+        14,
+        18.471
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        22,
+        18.458
+      ],
+      [
+        "ⲛⲏⲉⲑⲛⲁ",
+        2,
+        18.373
+      ],
+      [
+        "ⲛⲉⲙ",
+        16,
+        18.243
+      ],
+      [
+        "ϣϫⲉ",
+        2,
+        18.236
+      ],
+      [
+        "ⲛⲧⲉ",
+        16,
+        18.066
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        12,
+        23.585
+      ],
+      [
+        "ⲕⲉ",
+        110,
+        22.102
+      ],
+      [
+        "ⲛ",
+        318,
+        20.979
+      ],
+      [
+        "ⲡ",
+        177,
+        19.132
+      ],
+      [
+        "ⲁ",
+        82,
+        16.349
+      ],
+      [
+        "ⲙ",
+        68,
+        15.845
+      ],
+      [
+        "ⲇⲉ",
+        41,
+        15.29
+      ],
+      [
+        "ϩⲛ",
+        45,
+        15.187
+      ],
+      [
+        "ⲩ",
+        52,
+        15.143
+      ],
+      [
+        "ⲉⲧ",
+        45,
+        14.946
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        39,
+        14.553
+      ],
+      [
+        "ⲙⲛ",
+        36,
+        14.386
+      ],
+      [
+        "ⲁⲩⲱ",
+        44,
+        14.357
+      ],
+      [
+        "ⲉⲛⲧ",
+        24,
+        14.18
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        18,
+        13.581
+      ],
+      [
+        "ⲛⲁ",
+        36,
+        13.43
+      ],
+      [
+        "ϥ",
+        46,
+        13.324
+      ],
+      [
+        "ⲧ",
+        30,
+        13.023
+      ],
+      [
+        "ⲉ",
+        40,
+        13.015
+      ],
+      [
+        "ⲕⲟⲗⲁⲥϯⲏⲣⲓⲟⲛ",
+        1,
+        12.83
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          55
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲉⲉⲡⲉ",
+          22
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          18
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲉⲉⲡⲉ",
+          7
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲉⲉⲡⲉ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲉⲡⲉ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          7
+        ],
+        [
+          "ϭⲣⲟϭ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲉⲉⲡⲉ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲉⲉⲡⲉ",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_2_post_ⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϩⲗⲗⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲕⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          6
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲡ_1_pre_ⲥⲉⲉⲡⲉ",
+          5
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲉⲉⲡⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲙ_1_post_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          "ϭⲣⲟϭ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲩ_1_pre_ⲥⲉⲉⲡⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲧⲏⲩⲧⲛ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          "ϩⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_0_node",
+          "ⲉⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲟⲩⲱⲙ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉⲧ",
+          "ⲛⲙⲙⲁ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲡⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ϣⲁ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ϥ_1_pre_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϩⲗⲗⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ϩⲃⲏⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲉⲉⲡⲉ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.37,
+      "rank": 512,
+      "count": 218
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3652",
+      "label": "ⲥⲉⲉⲡⲉ",
+      "pos": "N",
+      "gloss": "remainder"
+    },
+    {
+      "target": "C3653",
+      "label": "ⲥⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "remainder"
+    },
+    {
+      "target": "C3654",
+      "label": "ⲥⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "remainder"
+    }
+  ],
+  "etym": {
+    "egy_num": "132710",
+    "egy_lemma": "zpi̯",
+    "demo_num": "d5247",
+    "demo_lemma": "sp(j)",
+    "english": "to remain over; to be left (abandoned); to be left out (excluded)",
+    "german": "übrig bleiben; übrig lassen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/132710",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5247"
+  }
+}

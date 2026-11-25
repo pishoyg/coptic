@@ -1,0 +1,413 @@
+{
+  "id": "C660",
+  "forms": [
+    {
+      "id": "CF2476",
+      "orth": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4242,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF2477",
+      "orth": "ⲗⲉⲗⲉⲭⲏⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4022,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF2478",
+      "orth": "ⲗⲉⲕⲏⲙⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS796",
+      "bibliography": "CD 55a; KoptHWb 34; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϫⲱϥ ϧⲁⲟⲩϫⲱϥ ⲟⲩⲫⲱϧ ϧⲁⲟⲩⲫⲱϧ ⲟⲩⲗⲉⲗⲉⲭⲏⲙⲓ ϧⲁⲟⲩ**ⲗⲉⲗⲉⲭⲏⲙⲓ**",
+      "english": "burning for burning, wound for wound, stripe for stripe.",
+      "source": "02_Exodus_21",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧϯⲥⲃⲱ ⲛⲛⲉⲧϩⲟⲟⲩ ⲉϥⲛⲁϫⲓ ⲛⲁϥ ⲛϩⲉⲛⲥⲱϣ ⲉⲣⲉⲟⲩⲥⲱϣ ⲇⲉ ⲛⲏⲩ ⲉϫⲛⲛⲉⲧϩⲟⲟⲩ ϩⲙⲡⲉⲧⲟⲩϭⲱϣⲧ ⲉⲃⲟⲗ ϩⲏⲧϥ ϩⲉⲛ**ⲉⲗⲉⲗⲕⲏⲙⲉ** ⲛⲉ ⲛⲉϫⲡⲓⲟ ⲉⲧϣⲟⲟⲡ ⲙⲡⲁⲥⲉⲃⲏⲥ",
+      "english": "He that reproves evil men shall get dishonour to himself; and he that rebukes an ungodly man shall disgrace himself.",
+      "source": "Proverbs 9",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲭⲱⲛⲥ ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟⲗⲓ ⲛϫⲉⲛⲁ**ⲗⲉⲗⲉⲭⲏⲙⲓ** ⲉⲃⲟⲗ ϩⲁⲡϩⲟ ⲛⲧⲉⲧⲁⲙⲉⲧⲁⲧⲉⲙⲓ .",
+      "english": "My bruises have become noisome and corrupt, because of my foolishness.",
+      "source": "19_Psalmi_37",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:37",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ⲛϭⲓⲗⲁⲙⲉⲭ ⲛⲛⲉϥϩⲓⲟⲙⲉ ϫⲉⲁⲧⲇⲁ ⲙⲛⲥⲗⲗⲁ ⲥⲱⲧⲙ ⲉⲡⲁϩⲣⲟⲟⲩ ⲛⲉϩⲓⲟⲙⲉ ⲛⲗⲁⲙⲉⲭ ϫⲓⲥⲙⲏ ⲉⲛⲁϣⲁϫⲉ ϫⲉⲁⲓⲙⲟⲩⲟⲩⲧ ⲛⲟⲩⲣⲱⲙⲉ ⲉⲩⲥⲁϣ ⲛⲁⲓ ⲁⲩⲱ ⲟⲩϩⲉⲣϣⲓⲣⲉ ⲉⲩ**ⲉⲗⲉⲗⲕⲏⲙⲉ** ⲛⲁⲓ",
+      "english": "And Lamech said to his wives, Ada and Sella, Hear my voice, ye wives of Lamech, consider my words, because I have slain a man to my sorrow and a youth to my grief.",
+      "source": "Genesis 4",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁϥϭⲓⲉⲣϧⲟⲧ ⲉⲑⲃⲉⲛⲉⲛⲛⲟⲃⲓ ⲟⲩⲟϩ ⲁϥϣⲱⲛⲓ ⲉⲑⲃⲉⲛⲉⲛⲁⲛⲟⲙⲓⲁ : ⲧⲥⲃⲱ ⲛⲧⲉⲧⲉⲛϩⲓⲣⲏⲛⲏ ⲉϩⲣⲏⲓ ⲉϫⲱϥ ϧⲉⲛⲛⲉϥ**ⲗⲉⲗⲉⲭⲏⲙⲓ** ⲁⲛⲟⲛ ⲁⲛⲟⲩϫⲁⲓ .",
+      "english": "But he was wounded on account of our sins, and was bruised because of our iniquities: the chastisement of our peace was upon him; and by his bruises we were healed.",
+      "source": "23_Isaias_53",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:53",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲉⲛ**ⲉⲗⲉⲗⲕⲏⲙⲉ** ⲙⲛϩⲛⲟⲩⲱϣϥ ⲛⲉⲧⲛⲁⲧⲱⲙⲛⲧ ⲉⲛⲉⲑⲟⲟⲩ ϩⲉⲛⲡⲗⲏⲅⲏ ⲇⲉ ⲛⲉ ⲛⲧⲁⲙⲉⲓⲟⲛ ⲛϩⲏⲧⲟⲩ",
+      "english": "Bruises and contusions befall bad men; and plagues shall come in the inward parts of their belly.",
+      "source": "Proverbs 20",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲣϣⲓⲣⲉ",
+        1,
+        13.983
+      ],
+      [
+        "ⲥⲁϣ",
+        1,
+        12.398
+      ],
+      [
+        "ⲱⲥⲕ",
+        1,
+        11.191
+      ],
+      [
+        "ⲟⲩⲱϣϥ",
+        1,
+        10.757
+      ],
+      [
+        "ⲙⲁ",
+        3,
+        10.534
+      ],
+      [
+        "ⲛ",
+        9,
+        10.511
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        10.398
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        10.168
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        8.485
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        8.456
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.321
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        8.267
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        8.228
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        8.087
+      ],
+      [
+        "ⲡ",
+        4,
+        7.69
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.144
+      ],
+      [
+        "ⲟ",
+        1,
+        6.998
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        6.522
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.431
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          6
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲱϣϥ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲡⲗⲩⲅⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          "ⲛⲁ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          "ⲉ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          "ⲛ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          "ⲙⲛ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲱϣϥ",
+          "ϩⲛ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲟⲩⲱϣϥ",
+          "ⲟⲩⲱϣϥ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲟⲩ_1_pre_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲗⲕⲏⲙⲉ_0_node",
+          "ⲁⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲗⲉⲗⲕⲏⲙⲉ",
+          "ⲟⲩ_3_post_ⲡⲗⲩⲅⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3845,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1232",
+      "type": "cf",
+      "label": "the black (land), Egypt"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C661",
+      "label": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine-branch, vine-wood"
+    },
+    {
+      "target": "C652",
+      "label": "ⲁⲗⲟⲗⲓ",
+      "pos": "N",
+      "gloss": "vine, vineyard (elliptic)"
+    },
+    {
+      "target": "C657",
+      "label": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C655",
+      "label": "ⲉⲗⲉⲗϩⲙϫ",
+      "pos": "N",
+      "gloss": "unripe, sour grape"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    },
+    {
+      "target": "C658",
+      "label": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    }
+  ]
+}

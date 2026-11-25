@@ -1,0 +1,83 @@
+{
+  "id": "C282",
+  "forms": [
+    {
+      "id": "CF1180",
+      "orth": "ⲁϩ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1181",
+      "orth": "ⲁϩ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1182",
+      "orth": "ⲁϩⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1183",
+      "orth": "ⲁϣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.74,
+        "rank": 233,
+        "count": 748
+      }
+    },
+    {
+      "id": "CF1184",
+      "orth": "ⲁϣ-",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "note": "formreduziertes perfektives Partizip, immer mit Relativkonverter verwendet",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS314",
+      "bibliography": "CD 24a; CED 17; KoptHWb 17, 491; DELC 22; ChLCS 6b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C698",
+      "type": "cf",
+      "label": "archaic relative prefix with past tenses"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C280",
+      "label": "ⲁϩ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C283",
+      "label": "ⲁϩⲁ",
+      "pos": "CONJ",
+      "gloss": "and"
+    },
+    {
+      "target": "C281",
+      "label": "ⲁϩⲁ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C13007",
+      "label": "ⲉϩⲁ-",
+      "pos": "C",
+      "gloss": ""
+    }
+  ]
+}

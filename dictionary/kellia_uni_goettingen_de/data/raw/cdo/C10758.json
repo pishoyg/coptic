@@ -1,0 +1,156 @@
+{
+  "id": "C10758",
+  "forms": [
+    {
+      "id": "CF29247",
+      "orth": "ⲧⲟⲗⲙⲏⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29248",
+      "orth": "ⲧⲟⲗⲙⲏⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9079,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14800",
+      "bibliography": "DDGLC",
+      "cu_ID": "1660"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲙⲟⲟϣⲉ ϩⲓϩⲓⲏ ⲙⲛ**ⲧⲟⲗⲙⲏⲣⲟⲥ** ϫⲉⲕⲁⲥ ⲛⲛⲉϥⲧⲱⲟⲩⲛ ⲉϫⲱⲕ ⲛⲧⲟϥ ⲅⲁⲣ ⲉϥⲙⲟⲟϣⲉ ⲕⲁⲧⲁⲡⲉϥⲟⲩⲱϣ ⲁⲩⲱ ⲕⲛⲁⲧⲁⲕⲟ ⲡⲉ ϩⲛⲧⲉⲕⲙⲛⲧⲁⲧϩⲏⲧ",
+      "english": "Travel not by the way with a bold fellow, lest he become grievous unto thee: for he will do according to his own will, and thou shalt perish with him through his folly.",
+      "source": "Sirach 8",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲗⲟϥⲗⲉϥ ⲙⲛϩⲉⲛϥⲛⲧ ⲛⲉⲧⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲙⲙⲟϥ ⲧⲉⲯⲩⲭⲏ ⲛⲛ**ⲧⲟⲗⲙⲏⲣⲟⲥ** ⲛⲁⲧⲁⲕⲟ",
+      "english": "Moths and worms shall have him to heritage, and a bold man shall be taken away.",
+      "source": "Sirach 19",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉϣⲁ",
+        1,
+        17.013
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        10.126
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        9.983
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        9.738
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        9.272
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        9.236
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        8.969
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ϩⲓ",
+        1,
+        8.231
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲧⲟⲗⲙⲏⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲟⲗⲙⲏⲣⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲧⲟⲗⲙⲏⲣⲟⲥ",
+          "ⲧⲟⲗⲙⲏⲣⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8629,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2606",
+    "grl_lemma": "τολμηρός",
+    "grl_meaning": "daring, bold",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1803b; Preisigke 2:607"
+  }
+}

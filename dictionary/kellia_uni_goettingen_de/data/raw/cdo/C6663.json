@@ -1,0 +1,46 @@
+{
+  "id": "C6663",
+  "forms": [
+    {
+      "id": "CF15370",
+      "orth": "ϩⲙⲟϫ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲟⲙϫ†",
+      "dialect": "S",
+      "id": "2202.1"
+    },
+    {
+      "orth": "ϩⲟⲙⲏϫ†",
+      "dialect": "S",
+      "id": "2202.2"
+    },
+    {
+      "orth": "ϩⲟⲙϫ†",
+      "dialect": "B",
+      "id": "2202.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7376",
+      "bibliography": "CD 682b-683a; CED 285; KoptHWb 375; DELC 303a; ChLCS 92a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6664",
+      "label": "ϩⲙϫ",
+      "pos": "N",
+      "gloss": "vinegar"
+    }
+  ]
+}

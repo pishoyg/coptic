@@ -1,0 +1,72 @@
+{
+  "id": "C13004",
+  "forms": [
+    {
+      "id": "CF34016",
+      "orth": "ⲉϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1803,
+        "count": 37
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Satzkonverter + Aorist ⲉϣⲁ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18003",
+      "bibliography": "CD 583a; KoptHWb 43"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉⲉⲣⲉⲡⲁⲥⲉⲃⲏⲥ ⲟ ⲛⲧϩⲉ ⲙⲡϣⲟⲉⲓϣ **ⲉϣⲁⲣⲉ**ⲡⲧⲏⲩ ⲑⲗⲟϥ ⲉⲃⲟⲗ ϩⲓϫⲙⲡϩⲟ ⲙⲡⲕⲁϩ ·",
+      "english": "And again, 'The wicked man shall be like unto the dust which the wind driveth along before it on the face of the ground.'",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲙⲉⲛ ϩⲛⲟⲩⲡⲁⲣⲣⲏⲥⲓⲁ ⲁⲛⲉⲓⲙⲉ ⲉⲡⲧⲩⲡⲟⲥ **ⲉϣⲁⲣⲉ**ⲛⲃⲁⲡⲧⲓⲥⲙⲁ ⲕⲁⲛⲟⲃⲉ ⲉⲃⲟⲗ ·",
+      "english": "Lo, in openness have we known the type in which the baptisms forgive sins.",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϩⲱⲱϥ ⲙⲡⲃⲁⲡⲧⲓⲥⲙⲁ ϣⲁϥϭⲱ ϩⲛⲧⲉⲩⲙⲏⲧⲉ ⲙⲡⲉⲥⲛⲁⲩ · ⲛϥϭⲱ ⲉϥⲡⲱⲣϫ ⲙⲙⲟⲟⲩ ⲉⲛⲉⲩⲉⲣⲏⲩ · ϫⲉⲕⲁⲥ ⲉϥⲉⲧⲃⲃⲟⲟⲩ ⲛϥⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲙⲟⲟⲩ ϫⲉⲛⲛⲉⲩϫⲱϩⲙ ⲉⲃⲟⲗ ϩⲛⲧϩⲩⲗⲏ · ⲧⲉⲛⲟⲩ ϭⲉ ⲟⲩⲛ ⲙⲁⲣⲓⲁ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ **ⲉϣⲁⲣⲉ**ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲛⲃⲁⲡⲧⲓⲥⲙⲁ ⲕⲁⲛⲟⲃⲉ ⲉⲃⲟⲗ · ⲁⲩⲱ ⲙⲛⲁⲛⲟⲙⲓⲁ ⲛⲓⲙ ·",
+      "english": "“The mystery of baptism on the contrary remaineth in the midst of the two, continually separating them from one another, so that it maketh them clean and purifieth them, in order that they may not be stained by matter. Now, therefore, Mary, this is the way in which the mysteries of the baptisms forgive sins and all iniquities.”",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "lemma",
+  "superEntryReferences": [
+    {
+      "target": "C6025",
+      "label": "ϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "(habit, continuance)"
+    },
+    {
+      "target": "C13005",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "circumstantial converter + aorist"
+    },
+    {
+      "target": "C13006",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "focalising converter (\"2nd tense\") + aorist"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "C3880",
+  "forms": [
+    {
+      "id": "CF9691",
+      "orth": "ϭⲓⲛⲥⲟⲩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10784,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4400",
+      "bibliography": "CD 370b-371a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲗⲗⲟⲛ ⲇⲉ ⲉϫⲙⲡⲉϫⲣⲟ ⲛⲛⲃⲁⲣⲃⲁⲣⲟⲥ · ⲁⲩⲉⲓⲣⲉ ⲇⲉ ⲛⲟⲩⲛⲟϭ ⲛϣⲁ ⲉϫⲛⲧ**ϭⲓⲛⲥⲟⲩⲛ**ⲛⲉⲩⲉⲣⲏⲩ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "especially for the victory over the Barbarians. And they made a great feast that day because they had met together (again),",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3879",
+      "label": "ϫⲓⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "get knowledge"
+    },
+    {
+      "target": "C3874",
+      "label": "ⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "without knowledge"
+    },
+    {
+      "target": "C3875",
+      "label": "ⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C3878",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲟⲩⲉⲛ-",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3877",
+      "label": "ⲣⲉϥⲥⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one who knows"
+    },
+    {
+      "target": "C3876",
+      "label": "ⲣⲙⲛⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one known, acquaintance"
+    },
+    {
+      "target": "C3871",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "know; know, recognize, distinguish"
+    },
+    {
+      "target": "C3872",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3873",
+      "label": "ⲥⲟⲩⲏⲛ",
+      "pos": "N",
+      "gloss": "well known, famous person"
+    }
+  ]
+}

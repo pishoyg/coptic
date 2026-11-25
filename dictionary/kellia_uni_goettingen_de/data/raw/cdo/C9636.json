@@ -1,0 +1,331 @@
+{
+  "id": "C9636",
+  "forms": [
+    {
+      "id": "CF24650",
+      "orth": "ⲗⲓⲙⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24653",
+      "orth": "ⲗⲓⲙⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2901,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF24652",
+      "orth": "ⲗⲓⲙⲛⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24651",
+      "orth": "ⲗⲏⲙⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24654",
+      "orth": "ⲗⲩⲙⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9357,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12333",
+      "bibliography": "DDGLC",
+      "cu_ID": "1046"
+    },
+    {
+      "id": "CS12334",
+      "bibliography": "DDGLC",
+      "cu_ID": "11494"
+    },
+    {
+      "id": "CS12335",
+      "bibliography": "DDGLC",
+      "cu_ID": "11661"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧϭⲓⲛⲙⲟⲟϣⲉ ϩⲛⲧ**ⲗⲓⲙⲛⲏ** · ⲧϫⲁⲙⲏ ⲛⲛϩⲟⲉⲓⲙ ·",
+      "english": "the walking on the lake, the stilling of the waves",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡⲉϩⲣⲟⲟⲩ ⲛϣⲁⲛⲧⲕ ⲛⲁϣⲱⲡⲉ ⲛⲧϩⲉ ⲙⲡⲉϩⲣⲟⲟⲩ ⲛⲧ**ⲗⲓⲙⲛⲏ** ⲛⲥⲁⲧⲉ ⲉⲧϫⲉⲣⲟ ϩⲛ ⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩⲑⲏⲛ ·",
+      "english": "The sound of thy nostrils shall be like unto the sound of a lake of fire wherein burn fire and sulphur (or, naphtha).",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲉⲙⲡⲟⲩϩⲉ ⲉⲣⲟϥ ⲉϥⲥⲏϩ ⲙⲡϫⲱⲱⲙⲉ ⲙⲡⲱⲛϩ ⲁⲩⲛⲟϫⲟⲩ ⲉⲧ**ⲗⲓⲙⲛⲏ** ⲛⲥⲁⲧⲉ .",
+      "english": "If anyone was not found written in the book of life, he was cast into the lake of fire.",
+      "source": "66_Revelation_20",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲉ",
+        6,
+        16.978
+      ],
+      [
+        "ⲅⲉⲛⲛⲏⲍⲁⲣⲉⲧ",
+        1,
+        15.691
+      ],
+      [
+        "ϫⲉⲣⲟ",
+        3,
+        15.515
+      ],
+      [
+        "ⲙⲟⲟⲛ",
+        1,
+        15.106
+      ],
+      [
+        "ⲧ",
+        15,
+        13.885
+      ],
+      [
+        "ϫⲁⲙⲏ",
+        1,
+        13.369
+      ],
+      [
+        "ⲛ",
+        22,
+        13.28
+      ],
+      [
+        "ϩⲁⲧⲛ",
+        2,
+        12.424
+      ],
+      [
+        "ϭⲓⲛⲙⲟⲟϣⲉ",
+        1,
+        11.991
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        3,
+        11.942
+      ],
+      [
+        "ⲟⲩⲱϩⲉ",
+        1,
+        11.833
+      ],
+      [
+        "ⲱϩⲧ",
+        1,
+        10.858
+      ],
+      [
+        "ⲛⲟϫ",
+        2,
+        10.506
+      ],
+      [
+        "ⲉ",
+        8,
+        9.91
+      ],
+      [
+        "ⲙⲉϩⲥⲛⲁⲩ",
+        1,
+        9.636
+      ],
+      [
+        "ⲕⲣⲟ",
+        1,
+        9.541
+      ],
+      [
+        ".",
+        4,
+        8.65
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        8.601
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        8.392
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        1,
+        8.137
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲓⲙⲛⲏ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲗⲓⲙⲛⲏ",
+          4
+        ],
+        [
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲙⲛⲏ",
+          3
+        ],
+        [
+          "ϫⲉⲣⲟ_2_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ϩⲛ_3_post_ϫⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲛ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲓⲙⲛⲏ_0_node",
+          "ⲛ_1_post_ⲗⲓⲙⲛⲏ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲗⲓⲙⲛⲏ",
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          "ⲉⲧ_1_post_ⲗⲓⲙⲛⲏ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲙⲛⲏ",
+          "ϫⲉⲣⲟ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϫⲉⲣⲟ_2_post_ⲉⲧ",
+          "ϩⲛ_3_post_ϫⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲗⲓⲙⲛⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲓⲙⲛⲏ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲁⲩⲱ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲁϩ",
+          "ⲟⲩ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲕⲁϩ",
+          "ⲕⲁϩ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲛⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲩⲛ",
+          "ⲡ_2_post_ⲛⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲛ",
+          "ⲛⲟⲩⲛ_1_post_ⲗⲓⲙⲛⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2572,
+      "count": 15
+    }
+  },
+  "etym": {
+    "grl_ID": "1298",
+    "grl_lemma": "λίμνη",
+    "grl_meaning": "pool of standing water, marshy lake, mere",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1050b; Preisigke 2:23"
+  }
+}

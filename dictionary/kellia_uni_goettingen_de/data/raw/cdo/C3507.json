@@ -1,0 +1,216 @@
+{
+  "id": "C3507",
+  "forms": [
+    {
+      "id": "CF8917",
+      "orth": "ⲉⲣⲥⲗⲓϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6793,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3991",
+      "bibliography": "CD 333b; KoptHWb 185"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲉϥⲉⲙⲟⲩ ϧⲉⲛⲡⲉϥⲛⲟⲃⲓ ⲟⲩⲟϩ ⲫⲏⲉⲧⲛⲁⲟⲩⲱⲙ ⲡⲓϣⲉⲗϣⲏⲓⲗⲓ ⲉⲣⲉⲛⲉϥⲛⲁϫϩⲓ **ⲉⲣⲥⲗⲓϫ** .",
+      "english": "But every one shall die in his own sin; and the teeth of him that eats the sour grape shall be set on edge.",
+      "source": "24_Ieremias_38",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϩⲣⲏⲓ ϧⲉⲛⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛⲛⲟⲩϫⲟⲥ ϫⲉⲛⲓⲓⲟϯ ⲁⲩⲟⲩⲉⲙ ϣⲉⲗϣⲏⲓⲗⲓ ⲟⲩⲟϩ ⲛⲉⲛⲛⲁϫϩⲓ ⲛⲛⲓϣⲏⲣⲓ ⲁⲩ**ⲉⲣⲥⲗⲓϫ** .",
+      "english": "In those days they shall certainly not say, The fathers ate a sour grape, and the children's teeth were set on edge.",
+      "source": "24_Ieremias_38",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:38",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲉⲗϣⲏⲓⲗⲓ",
+        1,
+        16.373
+      ],
+      [
+        "ⲛⲁϫϩⲓ",
+        1,
+        13.11
+      ],
+      [
+        "ϩⲏⲡⲡⲉ",
+        1,
+        9.148
+      ],
+      [
+        "ϩⲁ",
+        1,
+        8.535
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.51
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        8.071
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.891
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        7.8
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.666
+      ],
+      [
+        ".",
+        2,
+        7.616
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        7.297
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_2_pre_ⲛⲁϫϩⲓ",
+          1
+        ],
+        [
+          "ⲛⲁϫϩⲓ_1_pre_ⲉⲣⲥⲗⲓϫ",
+          1
+        ],
+        [
+          "ⲉⲣⲥⲗⲓϫ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_2_pre_ⲛⲁϫϩⲓ",
+          "ⲛⲁϫϩⲓ_1_pre_ⲉⲣⲥⲗⲓϫ",
+          1
+        ],
+        [
+          "ⲛⲁϫϩⲓ_1_pre_ⲉⲣⲥⲗⲓϫ",
+          "ⲉⲣⲥⲗⲓϫ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 6260,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3501",
+      "label": "ⲁⲧⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "unobliterated"
+    },
+    {
+      "target": "C3502",
+      "label": "ⲣⲉϥⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "one who wipes out"
+    },
+    {
+      "target": "C3505",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "be blunt"
+    },
+    {
+      "target": "C3506",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "N",
+      "gloss": "bluntness"
+    },
+    {
+      "target": "C3503",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "V",
+      "gloss": "be, make smooth"
+    },
+    {
+      "target": "C3504",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "N",
+      "gloss": "smoothness"
+    },
+    {
+      "target": "C3499",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "V",
+      "gloss": "smooth, smear, anoint; wipe (out), obliterate; cleave, adhere, make cleave, join"
+    },
+    {
+      "target": "C3500",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "N",
+      "gloss": "obliteration"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "C559",
+  "forms": [
+    {
+      "id": "CF2146",
+      "orth": "ⲟ ⲛⲃⲟⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS669",
+      "bibliography": "CD 45b; KoptHWb 28"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5545",
+      "type": "syn",
+      "label": "detest, abominate, defile (B)"
+    },
+    {
+      "target": "C3943",
+      "type": "syn",
+      "label": "defile, pollute (B)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C560",
+      "label": "ϫⲓⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "loathe, abominate"
+    },
+    {
+      "target": "C555",
+      "label": "ⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "hateful thing, abomination, crime"
+    },
+    {
+      "target": "C556",
+      "label": "ⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "hateful thing, abomination, crime"
+    },
+    {
+      "target": "C557",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "make abominable, (also) anathematize"
+    },
+    {
+      "target": "C558",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "filth"
+    },
+    {
+      "target": "C561",
+      "label": "ⲗⲁⲃⲟϯ",
+      "pos": "N",
+      "gloss": "sodomite"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "id": "C8562",
+  "forms": [
+    {
+      "id": "CF20160",
+      "orth": "ⲁⲫⲟⲣⲙⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF20161",
+      "orth": "ⲁⲫⲟⲣⲙⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20162",
+      "orth": "ⲁⲫⲟⲣⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2862,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF20163",
+      "orth": "ⲁⲫⲟⲣⲙⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20164",
+      "orth": "ⲁⲫⲟⲣⲙⲏ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10058",
+      "bibliography": "DDGLC",
+      "cu_ID": "205"
+    },
+    {
+      "id": "CS10059",
+      "bibliography": "DDGLC",
+      "cu_ID": "9073"
+    },
+    {
+      "id": "CS10060",
+      "bibliography": "DDGLC",
+      "cu_ID": "10883"
+    },
+    {
+      "id": "CS10061",
+      "bibliography": "DDGLC",
+      "cu_ID": "2884"
+    },
+    {
+      "id": "CS10062",
+      "bibliography": "DDGLC",
+      "cu_ID": "1702"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲛⲧ**ⲁⲫⲟⲣⲙⲏ** ⲛϫⲱⲕⲙ ϩⲛϩⲉⲛⲥⲓⲟⲟⲩⲛⲉ ·",
+      "english": "through the pretext of washing in baths",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲡⲟⲗⲓⲥ ⲇⲉ ⲧⲏⲣⲥ ⲁⲥⲛⲟⲉⲓⲛ ϩⲓⲧⲛⲧ**ⲁⲫⲟⲣⲙⲏ** ⲙⲡⲙⲏⲏϣⲉ ·",
+      "english": "And the whole city was greatly shaken by the thronging of the multitude,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲛⲛⲁϩⲁⲣⲉϩ ⲉⲣⲟⲛ ⲉⲧⲙⲧⲣⲉⲛϩⲓⲟⲩⲉ ⲉⲣⲟϥ ⲉⲧⲃⲉⲟⲩ**ⲁⲫⲟⲣⲙⲏ** ⲙⲙⲟⲩ",
+      "english": "But we will take care to not have us strike him because of an incitement from him.",
+      "source": "Acephalous Work 22: YA 309-10",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:941-952",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲧⲁⲃ",
+        2,
+        18.691
+      ],
+      [
+        "ⲟⲩⲉϣⲁⲫⲟⲣⲙⲏ",
+        1,
+        16.691
+      ],
+      [
+        "ϫⲱⲕⲙ",
+        2,
+        14.482
+      ],
+      [
+        "ⲛⲟⲉⲓⲛ",
+        2,
+        14.299
+      ],
+      [
+        "ⲛ",
+        27,
+        14.167
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        5,
+        13.655
+      ],
+      [
+        "ϭⲱϫⲉ",
+        1,
+        12.784
+      ],
+      [
+        "ⲧⲏϣ",
+        1,
+        10.784
+      ],
+      [
+        "ⲧ",
+        7,
+        10.586
+      ],
+      [
+        "ⲕⲣⲙⲣⲙ",
+        1,
+        10.351
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        2,
+        9.98
+      ],
+      [
+        "ϫⲓϣⲓⲡⲉ",
+        1,
+        9.625
+      ],
+      [
+        "ϩⲛ",
+        5,
+        9.538
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        9.524
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        1,
+        9.521
+      ],
+      [
+        "ϣⲟⲩϣⲟⲩ",
+        1,
+        8.784
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        1,
+        8.63
+      ],
+      [
+        "ⲥⲟⲧⲡ",
+        1,
+        8.396
+      ],
+      [
+        "ⲥ",
+        4,
+        8.367
+      ],
+      [
+        "ⲉⲛⲧⲟⲗⲏ",
+        1,
+        8.269
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          8
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          "ⲙ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲏⲏϣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          "ⲙⲛ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          "ⲡⲉⲕ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲟⲩⲟⲉⲓⲛ",
+          "ⲟⲩⲟⲉⲓⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          "ⲛⲧ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲁⲫⲟⲣⲙⲏ",
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          "ⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲁⲫⲟⲣⲙⲏ_0_node",
+          "ⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲫⲟⲣⲙⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲟⲩⲱⲧ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2533,
+      "count": 15
+    }
+  },
+  "etym": {
+    "grl_ID": "347",
+    "grl_lemma": "ἀφορμή",
+    "grl_meaning": "starting-point, origin, occasion. pretext",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 292b; Preisigke 1:249"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "id": "C4815",
+  "forms": [
+    {
+      "id": "CF11594",
+      "orth": "ⲧϩⲡⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5338,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲑϩⲡⲟ⸗",
+      "dialect": "S",
+      "id": "449.1"
+    },
+    {
+      "orth": "ⲧϩⲫⲟ",
+      "dialect": "B",
+      "id": "449.2"
+    },
+    {
+      "orth": "ⲧⲫⲟ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2229,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲧⲫⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2922,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲡϩⲉ-",
+      "dialect": "F",
+      "id": "449.5"
+    },
+    {
+      "orth": "ⲧϩⲡⲟ",
+      "dialect": "L",
+      "id": "449.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5434",
+      "bibliography": "CD 461a; CDC 71b; CED 205; KoptHWb 260; DELC 226a; ChLCS 64b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧϩⲡⲟ**ϥ · ⲉⲃⲟⲗ ⲉⲕⲣⲁϣⲉ ⲛⲙⲙⲁϥ ⲁⲩⲱ ⲉⲕⲣⲟⲟⲩⲧ ·",
+      "english": "Lead him forth, rejoicing with him and being glad.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲉⲩ**ⲑⲡⲟ** ⲙⲙⲟⲓ ⲉⲃⲟⲗ ⲉⲛⲁⲥⲟⲟⲩ ⲙⲙⲏⲗⲓⲟⲛ ·",
+      "english": "and I came forth from them, and they accompanied me on my way for a distance of six miles.",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉϣⲁⲕ ⲇⲉ ϯⲛⲁϭⲱ ϩⲁⲧⲉⲧⲏⲩⲧⲛ . ⲏ ⲛⲧⲁⲣⲧⲉⲡⲣⲱ . ϫⲉⲕⲁⲁⲥ ⲛⲧⲱⲧⲛ ⲉⲧⲉⲧⲛⲉ**ⲑⲡⲟ**ⲓ ⲉⲡⲙⲁ ⲉϯⲛⲁⲃⲱⲕ ⲉⲣⲟϥ .",
+      "english": "But with you it may be that I will stay, or even winter, that you may send me on my journey wherever I go.",
+      "source": "46_1 Corinthians_16",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟϣ",
+        2,
+        13.954
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        2,
+        10.427
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        10.342
+      ],
+      [
+        "ϥ",
+        10,
+        10.165
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        2,
+        8.914
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        7.265
+      ],
+      [
+        "ⲉ",
+        4,
+        6.495
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        5.664
+      ],
+      [
+        ".",
+        2,
+        5.235
+      ],
+      [
+        "ϩⲛ",
+        2,
+        5.157
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        5.143
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        3.898
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧϩⲡⲟ_0_node",
+          3
+        ],
+        [
+          "ϥ_1_post_ⲧϩⲡⲟ",
+          3
+        ],
+        [
+          "ϩⲛ_1_post_ⲧϩⲡⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲉⲓⲣⲏⲛⲏ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ⲧϩⲡⲟ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧϩⲡⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧϩⲡⲟ_0_node",
+          "ϥ_1_post_ⲧϩⲡⲟ",
+          3
+        ],
+        [
+          "ϥ_1_post_ⲧϩⲡⲟ",
+          "ϩⲛ_1_post_ⲧϩⲡⲟ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲧϩⲡⲟ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲉⲓⲣⲏⲛⲏ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲉⲓⲣⲏⲛⲏ_3_post_ⲟⲩ",
+          "ϫⲉ_1_post_ⲧϩⲡⲟ",
+          2
+        ],
+        [
+          "ϥ_1_post_ⲧϩⲡⲟ",
+          "ⲉⲃⲟⲗ_1_post_ⲧϩⲡⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2178,
+      "count": 20
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2979",
+      "type": "cf",
+      "label": "reach, reach maturity, attain, arrive"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4816",
+      "label": "ⲧϩⲡⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "lead forth"
+    }
+  ]
+}

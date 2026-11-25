@@ -1,0 +1,212 @@
+{
+  "id": "C10379",
+  "forms": [
+    {
+      "id": "CF27706",
+      "orth": "ⲡⲧⲱⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27707",
+      "orth": "ⲡⲧⲱⲙⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27708",
+      "orth": "ⲡⲧⲱⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5143,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14004",
+      "bibliography": "DDGLC",
+      "cu_ID": "3910"
+    },
+    {
+      "id": "CS14005",
+      "bibliography": "DDGLC",
+      "cu_ID": "7345"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲩ ϩⲱⲥ ⲉϥⲟⲛϩ ϥⲛⲁⲟⲩⲟⲙϥ ⲁⲛ ⲁⲗⲗⲁ ⲉϥϣⲁⲙⲟⲟⲩⲧϥ ⲛϥϣⲱⲡⲉ ⲛⲟⲩ**ⲡⲧⲱⲙⲁ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲧⲟϥ ⲇⲉ ⲙⲛⲛⲥⲁϩⲉⲛϩⲟⲟⲩ ⲉϫⲓⲧⲥ ⲁⲩⲱ ⲁϥⲣⲁⲕⲧϥ ⲉⲛⲁⲩ ⲉⲡⲉ**ⲡⲧⲱⲙⲁ** ⲏ ⲉⲡⲥⲱⲙⲁ ⲙⲡⲙⲟⲩⲓ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲛⲉⲣⲉⲟⲩⲥⲟⲟⲩϩⲥ ⲛⲁϥ ⲛⲉⲃⲓⲱ ϩⲛⲣⲱϥ ⲙⲡⲙⲟⲩⲓ ⲙⲛⲟⲩⲉⲃⲓⲱ",
+      "english": "And after some time he returned to take her, and he turned aside to see the carcase of the lion; and behold, a swarm of bees, and honey were in the mouth of the lion.",
+      "source": "Judges 14",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲡⲉⲧⲁϥⲥⲟⲩⲱⲛⲡⲕⲟⲥⲙⲟⲥ ⲁϥϩⲉ ⲉⲩ**ⲡⲧⲱⲙⲁ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲙ",
+        1,
+        10.541
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        9.829
+      ],
+      [
+        "ⲉ",
+        5,
+        9.461
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        8.702
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        8.531
+      ],
+      [
+        "ϩⲉ",
+        2,
+        8.405
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        8.302
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        8.092
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        1,
+        7.624
+      ],
+      [
+        "ⲁ",
+        3,
+        7.477
+      ],
+      [
+        "ⲏ",
+        1,
+        7.157
+      ],
+      [
+        "ϥ",
+        3,
+        6.955
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.495
+      ],
+      [
+        "ⲩ",
+        2,
+        6.488
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.423
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.871
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        5.842
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.761
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲧⲱⲙⲁ_0_node",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲕⲟⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_1_post_ⲡⲧⲱⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲧⲱⲙⲁ_0_node",
+          "ⲡ_2_post_ⲕⲟⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲟⲥⲙⲟⲥ",
+          "ⲕⲟⲥⲙⲟⲥ_1_post_ⲡⲧⲱⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4719,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "3659",
+    "grl_lemma": "πτῶμα",
+    "grl_meaning": "calamity, corpse, ruin",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1549b; Preisigke 2:434"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C7090",
+  "forms": [
+    {
+      "id": "CF16238",
+      "orth": "ⲁⲧϫⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7823",
+      "bibliography": "CD 755b; ChLCS 100b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7095",
+      "label": "ϫⲉⲣⲟ-",
+      "pos": "V",
+      "gloss": "mean"
+    },
+    {
+      "target": "C7096",
+      "label": "ϫⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech, claim"
+    },
+    {
+      "target": "C7089",
+      "label": "ϫⲱ",
+      "pos": "V",
+      "gloss": "say, speak, tell; sing"
+    },
+    {
+      "target": "C7091",
+      "label": "ϫⲱ",
+      "pos": "N",
+      "gloss": "singing, song"
+    },
+    {
+      "target": "C7094",
+      "label": "ϭⲓⲛϫⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech"
+    },
+    {
+      "target": "C7092",
+      "label": "ⲣⲉϥϫⲉ-",
+      "pos": "N",
+      "gloss": "sayer, speaker"
+    },
+    {
+      "target": "C7093",
+      "label": "ⲣⲉϥϫⲱ",
+      "pos": "N",
+      "gloss": "singer, minstrel"
+    }
+  ]
+}

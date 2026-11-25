@@ -1,0 +1,361 @@
+{
+  "id": "C9111",
+  "forms": [
+    {
+      "id": "CF22584",
+      "orth": "ⲍⲏⲧⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22587",
+      "orth": "ⲍⲏⲧⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6943,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF22586",
+      "orth": "ⲍⲏⲧⲏⲥⲓⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22585",
+      "orth": "ⲍⲏⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3926,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11251",
+      "bibliography": "DDGLC",
+      "cu_ID": "1082"
+    },
+    {
+      "id": "CS11252",
+      "bibliography": "DDGLC",
+      "cu_ID": "10308"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲟⲩⲛⲟϭ ⲇⲉ ⲛ**ⲍⲏⲧⲏⲥⲓⲥ** ϣⲱⲡⲉ ⲁⲡⲉⲧⲣⲟⲥ ⲧⲱⲟⲩⲛ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲛⲣⲱⲙⲉ ⲛⲁⲥⲛⲏⲩ ⲛⲧⲱⲧⲛ ⲧⲉⲧⲛⲥⲟⲟⲩⲛ ϫⲉϫⲓⲛⲛⲉϩⲟⲟⲩ ⲛϣⲟⲣⲡ ⲁⲡⲛⲟⲩⲧⲉ ⲥⲱⲧⲡ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲁⲧⲁⲡⲣⲟ ⲉⲧⲣⲉⲛϩⲉⲑⲛⲟⲥ ⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲙⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲥⲉⲡⲓⲥⲧⲉⲩⲉ .",
+      "english": "When there had been much discussion, Peter rose up and said to them, 'Brothers, you know that a good while ago God made a choice among you, that by my mouth the nations should hear the word of the Good News, and believe.",
+      "source": "44_Acts of the Apostles_15",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩ**ⲍⲏⲧⲏⲥⲓⲥ** ϭⲉ ϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛⲙⲙⲁⲑⲏⲧⲏⲥ ⲛⲓⲱϩⲁⲛⲛⲏⲥ ⲛⲙⲟⲩⲓⲟⲩⲇⲁⲓ ⲉⲧⲃⲉⲡⲧⲃⲃⲟ",
+      "english": "There arose therefore a questioning on the part of John's disciples with some Jews about purification.",
+      "source": "43_John_3",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲟⲩⲥⲧⲁⲥⲓⲥ ⲇⲉ ϣⲱⲡⲉ ⲙⲛⲟⲩⲛⲟϭ ⲛ**ⲍⲏⲧⲏⲥⲓⲥ** ⲙⲡⲁⲩⲗⲟⲥ ⲙⲛⲃⲁⲣⲛⲁⲃⲁⲥ ⲛⲙⲙⲁⲩ . ⲁⲩⲧⲉϣ ⲡⲁⲩⲗⲟⲥ ⲙⲛⲃⲁⲣⲛⲁⲃⲁⲥ ⲁⲩⲱ ϩⲉⲛⲕⲉⲥⲛⲏⲩ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ . ⲉⲧⲣⲉⲩⲃⲱⲕ ϣⲁⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲙⲛⲛⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲉⲧϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲉⲧⲃⲉⲡⲉⲓⲍⲏⲧⲏⲙⲁ .",
+      "english": "Therefore when Paul and Barnabas had no small discord and discussion with them, they appointed Paul and Barnabas, and some others of them, to go up to Jerusalem to the apostles and elders about this question.",
+      "source": "44_Acts of the Apostles_15",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲙⲗⲁϩ",
+        1,
+        18.695
+      ],
+      [
+        "ⲙⲁⲑⲏⲧⲏⲥ",
+        1,
+        10.324
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        9.459
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        9.313
+      ],
+      [
+        "ⲕⲱϯ",
+        1,
+        9.086
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        1,
+        7.284
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        6.634
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲁⲣⲛⲁⲃⲁⲥ",
+        1,
+        14.059
+      ],
+      [
+        "ϣⲧⲉⲕⲟ",
+        1,
+        12.245
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        1,
+        11.082
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        1,
+        11.036
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        10.713
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        9.439
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        8.687
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ϭⲉ",
+        1,
+        7.865
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲍⲏⲧⲏⲥⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲏⲥ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲙⲁⲑⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲁϫⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲁϫⲓ",
+          1
+        ],
+        [
+          "ⲥⲁϫⲓ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲙⲗⲁϩ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲍⲏⲧⲏⲥⲓⲥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          "ⲙⲁⲑⲏⲧⲏⲥ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲏⲥ_3_post_ⲛⲓ",
+          "ⲛⲧⲉ_4_post_ⲙⲁⲑⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲍⲏⲧⲏⲥⲓⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲁϫⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲁϫⲓ",
+          "ϩⲁⲛ_2_post_ⲥⲁϫⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲁϫⲓ",
+          "ⲥⲁϫⲓ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲥⲁϫⲓ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          "ⲛⲙⲗⲁϩ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲙⲗⲁϩ_2_post_ⲛⲏ",
+          "ⲛⲏ_1_post_ⲍⲏⲧⲏⲥⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6504,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "865",
+    "grl_lemma": "ζήτησις",
+    "grl_meaning": "seeking, search for",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 756a; Preisigke 1:647"
+  }
+}

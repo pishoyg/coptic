@@ -1,0 +1,190 @@
+{
+  "id": "C7512",
+  "forms": [
+    {
+      "id": "CF17083",
+      "orth": "ϩⲓϫⲱⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8329",
+      "bibliography": "CD 759b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲁϩⲃⲉ",
+        1,
+        15.236
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        10.72
+      ],
+      [
+        "ϩⲙⲟⲧ",
+        1,
+        10.629
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        7.297
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.971
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.238
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲓϫⲱⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7498",
+      "label": "ϣⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "headache"
+    },
+    {
+      "target": "C7506",
+      "label": "ϩⲁϫⲛ-",
+      "pos": "PREP",
+      "gloss": "before (local); before (temporal)"
+    },
+    {
+      "target": "C7508",
+      "label": "ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; upon, in; on, at, beside; for; through; from upon"
+    },
+    {
+      "target": "C7500",
+      "label": "ϫⲁϫⲃⲱⲛ",
+      "pos": "N",
+      "gloss": "wrongdoer"
+    },
+    {
+      "target": "C7497",
+      "label": "ϫⲱϫ",
+      "pos": "N",
+      "gloss": "head, capital; leader"
+    },
+    {
+      "target": "C7501",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "cornerstone"
+    },
+    {
+      "target": "C7499",
+      "label": "ⲁⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "leader, commander"
+    },
+    {
+      "target": "C7504",
+      "label": "ⲉϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; for, on account of; against; to; in addition to, after"
+    },
+    {
+      "target": "C7510",
+      "label": "ⲉⲃⲟⲗ ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "from upon"
+    },
+    {
+      "target": "C7503",
+      "label": "ⲛⲥⲁϫⲱ⸗",
+      "pos": "ADV",
+      "gloss": "behind head, backward, head down"
+    },
+    {
+      "target": "C7509",
+      "label": "ⲡⲉⲧϩⲓϫⲛ-",
+      "pos": "N",
+      "gloss": "who is in command, commander"
+    },
+    {
+      "target": "C7507",
+      "label": "ⲣ ϩⲁϫⲱ⸗",
+      "pos": "V",
+      "gloss": "go toward"
+    },
+    {
+      "target": "C7511",
+      "label": "ⲣ ϩⲓϫⲛ-",
+      "pos": "V",
+      "gloss": "be over"
+    },
+    {
+      "target": "C7505",
+      "label": "ⲣ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "be over(?)"
+    },
+    {
+      "target": "C7502",
+      "label": "ⲣϫⲱϫ",
+      "pos": "V",
+      "gloss": "head, lead, make head"
+    }
+  ]
+}

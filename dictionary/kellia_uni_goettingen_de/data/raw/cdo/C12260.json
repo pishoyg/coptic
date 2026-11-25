@@ -1,0 +1,50 @@
+{
+  "id": "C12260",
+  "forms": [
+    {
+      "id": "CF33277",
+      "orth": "ⲕⲱ ⲛⲥϭⲣⲁϩⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17264",
+      "bibliography": "KoptHWB 216"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12259",
+      "label": "ϩⲛⲟⲩⲥϭⲣⲁϩⲧ",
+      "pos": "ADV",
+      "gloss": "quietly, at rest"
+    },
+    {
+      "target": "C12261",
+      "label": "ϫⲓⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "be quieted, silenced"
+    },
+    {
+      "target": "C12161",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "rest, pause, be quiet; rest oneself (refl.)"
+    },
+    {
+      "target": "C12258",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "N",
+      "gloss": "quiet, rest"
+    }
+  ]
+}

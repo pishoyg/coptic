@@ -1,0 +1,264 @@
+{
+  "id": "C2223",
+  "forms": [
+    {
+      "id": "CF6166",
+      "orth": "ⲙⲟⲟϣⲉ (ⲉϫⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2566",
+      "bibliography": "CD 204a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛ ⲧⲉⲓϩⲉ ⲁϥϣⲱⲡⲉ **ⲉϥⲙⲟⲟϣⲉ **ⲉϫⲛ**ϩⲏⲧϥ** · ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲡⲁⲉⲓⲱⲧ ⲁⲡⲟⲫⲁⲛⲉ ⲉϫⲱϥ ·",
+      "english": "It was in this way that the serpent came to walk upon his belly, according to what my Father decreed for him.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲟϥ ⲇⲉ ϩⲱⲱϥ · ⲁϥⲉⲓ ⲙⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ · ⲉϫⲓ ⲛⲧⲉϥⲧⲣⲟⲫⲏ ⲕⲁⲧⲁⲧⲉϥⲥⲩⲛⲏⲑⲉⲓⲁ · ⲉⲡⲉⲓⲇⲏ ⲉⲣⲉⲡϩⲟϥ ⲟ ⲛⲧϩⲉ ⲛⲛⲉⲑⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ · **ⲉϥⲙⲟⲟϣⲉ **ⲉϫⲛ**ⲛⲉϥⲟⲩⲣⲏⲏⲧⲉ** · ⲛⲧⲉⲩϩⲉ ·",
+      "english": "And the serpent himself came at the hour of evening to receive his food according to his wont, for the serpent was like unto all the [other] beasts, and he walked upon his feet just as did they.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲛⲧⲁⲩϩⲙⲟⲟⲥ ⲉϫⲛⲟⲩⲉⲓⲁ ⲛⲥϩⲓⲙⲉ ⲁⲩⲱ ⲉⲩϩⲙⲟⲟⲥ ⲉϫⲛϩⲉⲛⲕⲁⲣⲟⲩⲭⲓⲟⲛ ⲁⲩⲱ ⲙⲡⲛⲁⲩ ⲙⲙⲉⲉⲣⲉ ⲉⲩϩⲙⲟⲟⲥ ⲉϫⲙⲡⲙⲁ ⲛϯϩⲁⲡ ⲁⲩⲱ **ⲉⲩⲙⲟⲟϣⲉ **ⲉϫⲛ**ϩⲉⲛϩⲓⲟⲟⲩⲉ** ⲉⲩⲟ ⲛϣⲏⲛ ⲉⲧⲣⲉⲩϣⲁϫⲉ ϩⲓⲧⲉϩⲓⲏ",
+      "english": "Ye that mount a she-ass at noon-day, ye that sit on the judgment-seat, and walk by the roads of them that sit in judgment by the way; declare",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2253",
+      "label": "ϣⲫⲏⲣ ⲙⲙⲟϣⲓ",
+      "pos": "N",
+      "gloss": "fellow-traveller"
+    },
+    {
+      "target": "C2252",
+      "label": "ϩⲓⲏ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C2237",
+      "label": "ϫⲓⲛⲙⲟϣⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "going forth, departure"
+    },
+    {
+      "target": "C2255",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, gait, conduct"
+    },
+    {
+      "target": "C2244",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ascent"
+    },
+    {
+      "target": "C2249",
+      "label": "ⲁⲧⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "pathless"
+    },
+    {
+      "target": "C2250",
+      "label": "ⲙⲁ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "place of walking, path"
+    },
+    {
+      "target": "C2239",
+      "label": "ⲙⲟϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2225",
+      "label": "ⲙⲟϣⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2226",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲙⲉⲛϩⲏ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2227",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲫⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2251",
+      "label": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, journey"
+    },
+    {
+      "target": "C2219",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "V",
+      "gloss": "walk, go (on land or water)"
+    },
+    {
+      "target": "C2221",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, pace, journey"
+    },
+    {
+      "target": "C2229",
+      "label": "ⲙⲟⲟϣⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2233",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁϫⲛ-)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2245",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before; go toward, accommodate (in documents)"
+    },
+    {
+      "target": "C2248",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲏⲧ⸗)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2230",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "walk on, in"
+    },
+    {
+      "target": "C2247",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϩⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2234",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "go upon"
+    },
+    {
+      "target": "C2246",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2228",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2232",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit"
+    },
+    {
+      "target": "C2231",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "go, walk in"
+    },
+    {
+      "target": "C2220",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be about to, proceed to"
+    },
+    {
+      "target": "C2222",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2241",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "go in, approach"
+    },
+    {
+      "target": "C2242",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2243",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2236",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit; pass (by, through)"
+    },
+    {
+      "target": "C2235",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go forth"
+    },
+    {
+      "target": "C2240",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C2238",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2224",
+      "label": "ⲙⲟⲟϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go, agree with, match"
+    },
+    {
+      "target": "C2254",
+      "label": "ⲣⲉϥⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "goer, walker"
+    }
+  ]
+}

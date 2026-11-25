@@ -1,0 +1,245 @@
+{
+  "id": "C7798",
+  "forms": [
+    {
+      "id": "CF17661",
+      "orth": "ϯϭⲛⲁⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5819,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8667",
+      "bibliography": "CD 823b; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲓⲛⲉ ⲅⲁⲣ ⲁⲩⲥⲱⲧⲙ ⲁⲩ**ϯϭⲛⲁⲧ** . ⲁⲗⲗⲁ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲁⲛ ⲛⲉⲛⲧⲁⲩⲉⲓ ⲉⲃⲟⲗ ϩⲛⲕⲏⲙⲉ ϩⲓⲧⲛⲙⲱⲩⲥⲏⲥ .",
+      "english": "For who, when they heard, rebelled? No, didn't all those who came out of Egypt by Moses?",
+      "source": "58_Hebrews_3",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϯⲛϣⲟⲧ ⲛⲛⲉⲧⲛϩⲏⲧ ⲛⲧϩⲉ ⲛⲛⲉϩⲟⲟⲩ ⲙⲡ**ϯϭⲛⲁⲧ** ⲕⲁⲧⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ϩⲛⲧⲉⲣⲏⲙⲟⲥ",
+      "english": "To-day, if ye will hear his voice, harden not your hearts, as in the provocation, according to the day of irritation in the wilderness:",
+      "source": "Psalms 94",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:94",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϯⲛϣⲟⲧ ⲛⲛⲉⲧⲛϩⲏⲧ ⲛⲧϩⲉ ϩⲙⲡⲙⲁ ⲙⲡ**ϯϭⲛⲁⲧ** ⲕⲁⲧⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ϩⲛⲧⲉⲣⲏⲙⲟⲥ",
+      "english": "don't harden your hearts, as in the provocation, like as in the day of the trial in the wilderness,",
+      "source": "58_Hebrews_3",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲟⲩ",
+        3,
+        11.271
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        1,
+        10.537
+      ],
+      [
+        "ⲙ",
+        5,
+        10.317
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        2,
+        10.31
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        9.587
+      ],
+      [
+        "ⲡ",
+        5,
+        9.463
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.618
+      ],
+      [
+        "ⲁ",
+        3,
+        7.799
+      ],
+      [
+        ".",
+        2,
+        7.557
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.508
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.304
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        7.27
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.679
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲛ",
+        1,
+        1.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯϭⲛⲁⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5378,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7801",
+      "label": "ϫⲓⲛϯ",
+      "pos": "N",
+      "gloss": "anger, wrath"
+    },
+    {
+      "target": "C7795",
+      "label": "ϭⲛⲁⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7796",
+      "label": "ϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "anger, wrath"
+    },
+    {
+      "target": "C7787",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7788",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "anger, rage, wrath"
+    },
+    {
+      "target": "C7789",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "angry, enraged"
+    },
+    {
+      "target": "C7799",
+      "label": "ϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocation"
+    },
+    {
+      "target": "C7793",
+      "label": "ϯϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "cause anger, provoke"
+    },
+    {
+      "target": "C7790",
+      "label": "ⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "not angry"
+    },
+    {
+      "target": "C7791",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "lenience"
+    },
+    {
+      "target": "C7797",
+      "label": "ⲣⲉϥϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "choleric person"
+    },
+    {
+      "target": "C7792",
+      "label": "ⲣⲉϥϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "angry, furious person"
+    },
+    {
+      "target": "C7800",
+      "label": "ⲣⲉϥϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    },
+    {
+      "target": "C7794",
+      "label": "ⲣⲉϥϯϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    }
+  ]
+}

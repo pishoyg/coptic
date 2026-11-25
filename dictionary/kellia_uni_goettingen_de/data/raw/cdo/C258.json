@@ -1,0 +1,75 @@
+{
+  "id": "C258",
+  "forms": [
+    {
+      "id": "CF1086",
+      "orth": "ⲙⲉⲧⲁϣⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1087",
+      "orth": "ⲙⲉⲧⲁϣⲁⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS290",
+      "bibliography": "CD 22b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C255",
+      "label": "ⲁϣⲁⲓ",
+      "pos": "V",
+      "gloss": "become many, multiply"
+    },
+    {
+      "target": "C257",
+      "label": "ⲁϣⲁⲓ",
+      "pos": "N",
+      "gloss": "multitude, amount"
+    },
+    {
+      "target": "C261",
+      "label": "ⲁϣⲏ",
+      "pos": "N",
+      "gloss": "multitude"
+    },
+    {
+      "target": "C260",
+      "label": "ⲉⲣⲁϣⲁⲓ",
+      "pos": "V",
+      "gloss": "multiply"
+    },
+    {
+      "target": "C256",
+      "label": "ⲟϣ",
+      "pos": "VSTAT",
+      "gloss": "be many, numerous"
+    },
+    {
+      "target": "C259",
+      "label": "ⲣⲉϥⲁϣⲁⲓ",
+      "pos": "N",
+      "gloss": "multiplier"
+    }
+  ]
+}

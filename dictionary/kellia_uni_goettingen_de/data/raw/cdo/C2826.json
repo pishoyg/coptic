@@ -1,0 +1,284 @@
+{
+  "id": "C2826",
+  "forms": [
+    {
+      "id": "CF34026",
+      "orth": "ⲡⲗϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3316,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF7499",
+      "orth": "ⲡⲉⲗϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3153,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF34027",
+      "orth": "ⲡⲣϭⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34028",
+      "orth": "ⲡⲉⲗϫⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34029",
+      "orth": "ⲫⲉⲗϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4451,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3232",
+      "bibliography": "CD 262b; CED 125; KoptHWb 147, 530; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲁⲣⲉ ϩⲗⲓ ⲉⲗ ⲟⲩⲧⲱⲓⲥ ⲙⲃⲉⲣⲓ ⲛⲧⲉϥϩⲓⲧⲥ ⲉⲟⲩ**ⲫⲉⲗϫⲓ** ⲛϩⲃⲟⲥ ϣⲁⲥⲱⲗⲓ ⲅⲁⲣ ⲙⲡⲉⲥⲙⲟϩ ⲉⲃⲟⲗ ϩⲓⲡⲓϩⲃⲟⲥ ⲟⲩⲟϩ ϣⲁⲣⲉ ⲟⲩⲫⲱϧ ϣⲱⲡⲓ ⲛϩⲟⲩⲟ .",
+      "english": "No one puts a piece of unshrunk cloth on an old garment; for the patch would tear away from the garment, and a worse hole is made.",
+      "source": "01_Matthew_09",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲧⲟⲉⲓⲥ ⲛϣⲁⲉⲓ ⲉⲣⲛϣⲧⲏⲛ ⲙ**ⲡⲗϭⲉ** ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲧⲧⲟⲉⲓⲥ ⲛϣⲁⲓ ⲛⲁϥⲓⲡⲕⲱⲧⲉ ⲙⲙⲁⲩ ⲛⲧⲉϣⲧⲏⲛ ⲙⲡⲗϭⲉ ⲛⲥⲡⲱϩ ⲛϩⲟⲩⲟ .",
+      "english": "No one sews a piece of unshrunk cloth on an old garment, or else the patch shrinks and the new tears away from the old, and a worse hole is made.",
+      "source": "41_Mark_2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϭⲓ ⲛⲛⲓⲣⲱⲙⲓ ⲛϫⲉⲁⲃⲇⲉⲙⲉⲗⲉⲭ ⲁϥϣⲉⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡⲟⲩⲣⲟ ⲫⲏⲉⲧⲥⲁⲡⲉⲥⲏⲧ ⲙⲡⲕⲁϩⲓ ⲟⲩⲟϩ ⲁϥϭⲓ ⲉⲃⲟⲗ ⲙⲙⲁⲩ ⲛϩⲁⲛ**ⲫⲉⲗϫⲓ** ⲛⲧⲱⲓⲥ ⲛⲉⲙϩⲁⲛⲛⲟϩ ⲛⲁⲡⲁⲥ ⲁϥⲃⲉⲣⲃⲱⲣⲟⲩ ⲉϧⲣⲏⲓ ⲉⲡⲓⲗⲁⲕⲕⲟⲥ ϩⲁⲓⲉⲣⲉⲙⲓⲁⲥ .",
+      "english": "And they shall bring forth thy wives and thy children to the Chaldeans: and thou shalt by no means escape, for thou shalt be taken by the hand of the king of Babylon, and this city shall be burnt.",
+      "source": "24_Ieremias_45",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:45",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁϥ ⲛϭⲓⲡⲉⲧϩⲩⲡⲟⲅⲟⲣⲉⲩⲉ ϫⲉⲛⲧⲁⲓ ⲁⲛ ⲧⲉ ⲧϩⲓⲕⲱⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲧⲁⲓ ⲁⲛⲟⲛ ⲉⲧⲛⲫⲟⲣⲉⲓ ⲙⲙⲟⲥ ⲁⲛⲟⲛ ⲛⲣⲱⲙⲉ ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ⲇⲉ ⲉⲛⲁⲓ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲫⲟⲩ ⲁϥⲙⲟⲩϩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲁⲩⲱ ⲁϥⲁⲡⲟⲇⲏⲙⲉⲓ ⲉⲧⲡⲟⲗⲓⲥ ⲣⲁⲕⲟⲧⲉ ⲉϥⲫⲟⲣⲉⲓ ⲛⲟⲩϣⲧⲏⲛ ⲙ**ⲡⲗϭⲉ**",
+      "english": "And the one who dictated it said that it was not the image of God that we carry, us humans. When the blessed Aphou had heard this, he was filled with the holy Spirit and he departed to the city of Alexandria dressed in a worn garment.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲛⲉⲣ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲟⲩⲟⲛ ⲉⲩϭⲁϧⲉⲙ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲧⲉⲛⲙⲉⲑⲙⲏⲓ ⲧⲏⲣⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲫⲉⲗϫⲓ** ⲛⲧⲉⲟⲩⲓ ⲉⲥⲟⲓ ⲛⲕⲉⲙⲁ ⲟⲩⲟϩ ⲁⲛϥⲟⲣϥⲉⲣ ⲙⲫⲣⲏϯ ⲛϩⲁⲛϫⲱⲃⲓ ⲉⲑⲃⲉⲛⲉⲛⲁⲛⲟⲙⲓⲁ ⲡⲁⲓⲣⲏϯ ⲡⲑⲏⲟⲩ ⲉϥⲉⲟⲗⲉⲛ .",
+      "english": "and we are all become as unclean, and all our righteousness as a filthy rag: and we have fallen as leaves because of our iniquities; thus the wind shall carry us away.",
+      "source": "23_Isaias_64",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:64",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲱ ⲇⲉ ⲛⲁⲩ ⲛⲕⲉⲡⲁⲣⲁⲃⲟⲗⲏ . ϫⲉⲙⲉⲣⲉⲗⲁⲁⲩ ⲥⲗⲡⲟⲩⲧⲟⲓⲥ ϩⲓⲟⲩϣⲧⲏⲛ ⲛϣⲁⲓ ⲛϥⲧⲟⲣⲡⲥ ⲉⲩϣⲧⲏⲛ ⲙⲡⲗϭⲉ . ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ϥⲛⲁⲡⲁϩⲧⲕⲉϣⲧⲏⲛ ⲛϣⲁⲓ ⲛⲧⲉⲧⲙⲧⲧⲟⲓⲥ ⲛϣⲁⲓ ⲣϣⲁⲩ ⲉⲧ**ⲡⲗϭⲉ** .",
+      "english": "He also told a parable to them. 'No one puts a piece from a new garment on an old garment, or else he will tear the new, and also the piece from the new will not match the old.",
+      "source": "42_Luke_5",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲧⲏⲛ",
+        9,
+        19.572
+      ],
+      [
+        "ⲧⲟⲉⲓⲥ",
+        3,
+        17.434
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        4,
+        15.364
+      ],
+      [
+        "ⲡⲱϩ",
+        3,
+        13.849
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        4,
+        13.435
+      ],
+      [
+        "ⲣ",
+        4,
+        11.954
+      ],
+      [
+        "ⲛ",
+        13,
+        11.451
+      ],
+      [
+        "ⲙ",
+        9,
+        11.402
+      ],
+      [
+        "ⲧ",
+        7,
+        11.034
+      ],
+      [
+        "ⲣϣⲁ",
+        1,
+        10.524
+      ],
+      [
+        "ϩⲟⲓⲧⲉ",
+        1,
+        9.281
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        9.195
+      ],
+      [
+        ".",
+        4,
+        9.098
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        9.098
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        9.056
+      ],
+      [
+        "ⲥ",
+        4,
+        8.815
+      ],
+      [
+        "ⲁϩⲉ",
+        1,
+        7.187
+      ],
+      [
+        "ⲩ",
+        3,
+        7.105
+      ],
+      [
+        "ϥⲓ",
+        1,
+        6.752
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        6.476
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗϭⲉ_0_node",
+          5
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2955,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2825",
+      "label": "ⲡⲟⲗϭⲥ",
+      "pos": "N",
+      "gloss": "clod, lump (of earth)"
+    },
+    {
+      "target": "C2820",
+      "label": "ⲡⲱⲗϭ",
+      "pos": "V",
+      "gloss": "agree with sb, decide, reach satisfaction; deliver, decide, settle (an affair)"
+    },
+    {
+      "target": "C2822",
+      "label": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "reach conclusion, make an end, be freed (from), be transferred, relieved; settle, make an end of, take off/out, bring to terms with, relieve from,\n              satisfy"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2829",
+      "label": "ⲣⲡⲉⲗϭⲉ",
+      "pos": "V",
+      "gloss": "become, be ragged, old"
+    },
+    {
+      "target": "C2823",
+      "label": "ⲫⲱⲗϫ",
+      "pos": "N",
+      "gloss": "ease, liberty"
+    }
+  ]
+}

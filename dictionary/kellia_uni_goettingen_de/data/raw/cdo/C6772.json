@@ -1,0 +1,213 @@
+{
+  "id": "C6772",
+  "forms": [
+    {
+      "id": "CF15591",
+      "orth": "ϣⲁϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.48,
+        "rank": 378,
+        "count": 392
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7486",
+      "bibliography": "CD 699b; CED 292; KoptHWb 386; DELC 308b; ChLCS 94a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲓⲛϫⲟⲩⲧⲏ ⲛⲣⲟⲙⲡⲉ **ϣⲁϩⲣⲁⲓ** ⲉⲧⲁⲉⲓⲟⲩ ⲛⲣⲟⲙⲡⲉ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲃⲏⲕ ⲉϩⲟⲩⲛ ⲉⲡⲱϣⲛ ⲁⲩⲱ ⲉⲉⲓⲣⲉ ⲛⲛⲉϩⲃⲏⲩⲉ ϩⲣⲁⲓ ϩⲛⲧⲉⲥⲕⲏⲛⲏ ⲙⲡⲙⲛⲧⲣⲉ",
+      "english": "from five and twenty years old and upward till fifty years old, every one that goes in to minister and to do the services in the tabernacle of witness.",
+      "source": "Numbers 4",
+      "urn": "urn:cts:copticLit:ot.num.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲛϣⲟⲣⲡ **ϣⲁϩⲣⲁⲓ** ⲉⲡⲟⲟⲩ ⲛϩⲟⲟⲩ ⲁⲩⲱ ϣⲁⲉⲛⲉϩ ·",
+      "english": "from the beginning until today and forever.",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲯⲩⲭⲏ ⲗⲩⲡⲉⲓ **ϣⲁϩⲣⲁⲓ** ⲉⲡⲙⲟⲩ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉ",
+        797,
+        25.118
+      ],
+      [
+        "ⲛ",
+        432,
+        21.459
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        116,
+        20.475
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        6,
+        19.738
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        65,
+        19.614
+      ],
+      [
+        "ϫⲓⲛ",
+        57,
+        19.135
+      ],
+      [
+        "ⲡ",
+        201,
+        18.836
+      ],
+      [
+        "ⲕⲁⲇⲉⲥⲃⲁⲣⲛⲏ",
+        6,
+        18.738
+      ],
+      [
+        "ⲉⲓⲁⲃⲟⲕ",
+        7,
+        18.405
+      ],
+      [
+        "ⲙⲟⲩ",
+        51,
+        18.146
+      ],
+      [
+        "ⲧ",
+        115,
+        17.993
+      ],
+      [
+        "ⲁⲍⲏⲕⲁ",
+        5,
+        16.949
+      ],
+      [
+        "ⲟⲩⲛⲟⲩ",
+        15,
+        16.773
+      ],
+      [
+        "ⲙⲁⲣⲥⲉⲙⲱⲙⲁⲛ",
+        3,
+        16.738
+      ],
+      [
+        "ⲉⲃⲁⲗⲁⲅⲁⲇ",
+        3,
+        16.738
+      ],
+      [
+        "ⲉⲃⲏⲑⲉⲉⲧ",
+        3,
+        16.738
+      ],
+      [
+        "ⲧⲁⲥⲁⲣⲁⲑⲁ",
+        3,
+        16.738
+      ],
+      [
+        "ⲉⲃⲉⲗⲙⲁⲱⲗⲁ",
+        3,
+        16.738
+      ],
+      [
+        "ⲁⲩⲱ",
+        92,
+        16.703
+      ],
+      [
+        "ⲡⲉ",
+        76,
+        16.637
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁϩⲣⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲁϩⲣⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁϩⲣⲁⲓ_0_node",
+          "ⲉ_1_post_ϣⲁϩⲣⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.47,
+      "rank": 325,
+      "count": 392
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6773",
+      "label": "ϩⲓϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C6768",
+      "label": "ϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "upper part"
+    },
+    {
+      "target": "C6769",
+      "label": "ⲉϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "to above, upward"
+    },
+    {
+      "target": "C6770",
+      "label": "ⲛϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "above, upward"
+    },
+    {
+      "target": "C6771",
+      "label": "ⲥⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "on upper side, above"
+    }
+  ]
+}

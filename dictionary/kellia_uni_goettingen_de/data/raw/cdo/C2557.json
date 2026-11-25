@@ -1,0 +1,106 @@
+{
+  "id": "C2557",
+  "forms": [
+    {
+      "id": "CF6906",
+      "orth": "ⲛⲟⲩⲧⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛⲟⲧⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2261,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲧⲉⲙ",
+      "dialect": "B",
+      "id": "1205.2"
+    },
+    {
+      "orth": "ⲛⲟⲧⲉⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6813,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲧⲙⲉ",
+      "dialect": "A",
+      "id": "1205.4"
+    },
+    {
+      "orth": "ⲛⲟⲩⲧⲙ",
+      "dialect": "F",
+      "id": "1205.5"
+    },
+    {
+      "orth": "ⲛⲁⲧⲙ†",
+      "dialect": "F",
+      "id": "1205.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2937",
+      "bibliography": "CD 231b; CED 112; KoptHWb 128; DELC 147; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉⲙⲛⲡⲉⲧⲛⲁⲛⲟⲩϥ · ⲁⲩⲱ ⲙⲛⲡⲉⲧ**ⲛⲟⲧⲙ** ⲛⲥⲁⲧⲣⲉϩⲉⲛⲥⲛⲏⲩ ⲟⲩⲱϩ ϩⲛⲟⲩⲙⲁ ⲉⲛⲟⲩⲱⲧ · ⲉⲩϣⲟⲟⲡ ⲣⲱ ϩⲓϫⲙⲡⲕⲁϩ ·",
+      "english": "...",
+      "source": "Some Kinds of People Sift Dirt: GF 113-120",
+      "urn": "urn:cts:copticLit:shenoute.dirt.monbgf:41-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19843,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2560",
+      "label": "ⲙⲛⲧⲛⲟⲩⲧⲙ",
+      "pos": "N",
+      "gloss": "sweetness"
+    },
+    {
+      "target": "C2558",
+      "label": "ⲛⲟⲩⲧⲉⲙ",
+      "pos": "N",
+      "gloss": "sweet"
+    },
+    {
+      "target": "C2559",
+      "label": "ⲛⲟⲩⲧⲙ",
+      "pos": "N",
+      "gloss": "sweetness"
+    }
+  ],
+  "etym": {
+    "egy_num": "500020",
+    "egy_lemma": "nḏm",
+    "demo_num": "d3314",
+    "demo_lemma": "nḏm",
+    "english": "to be sweet; to be pleasant",
+    "german": "süß sein; angenehm sein; froh sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/500020",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3314"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "id": "C4488",
+  "forms": [
+    {
+      "id": "CF10931",
+      "orth": "ϩⲓⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.5,
+        "rank": 174,
+        "count": 1025
+      }
+    },
+    {
+      "id": "CF10932",
+      "orth": "ϩⲓⲧⲟⲟⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.68,
+        "rank": 290,
+        "count": 581
+      }
+    },
+    {
+      "orth": "ϩⲓⲧⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.02,
+        "rank": 159,
+        "count": 680
+      }
+    },
+    {
+      "orth": "ϩⲓⲧⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.9,
+        "rank": 273,
+        "count": 331
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5076",
+      "bibliography": "CD 428b-429b; KoptHWb 249; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲣⲏϯ ⲁϥⲓ ⲉⲃⲟⲗ **ϩⲓⲧⲉⲛ**ⲛⲉϥⲓⲟϯ ⲁϥϩⲱⲗ ⲉⲡϣⲁϥⲉ .",
+      "english": "Thus he left his parents and went into the desert.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "☧ **ϩⲓⲧⲛ**ⲡⲁϩⲱⲙⲱ υἱό ⲑⲉⲟⲇⲱⲣ ⲉⲩⲭⲁⲣⲓⲥⲧⲟⲩ ⲛⲏⲧⲛ",
+      "english": "By Pachomo, son of Theodore, I thank you.",
+      "source": "Letter about wheat",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_31_14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲟⲩ ⲡⲉⲧⲁϥϩⲟⲛϩⲉⲛ ⲙⲙⲟϥ **ϩⲓⲧⲉⲛ**ⲑⲏⲛⲟⲩ ⲛϫⲉⲙⲱⲩⲥⲏⲥ .",
+      "english": "He answered, 'What did Moses command you?'",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩϣⲟⲟⲡ ⲁⲛ ⲉⲧⲃⲉⲡⲧⲁⲉⲓⲟ ⲡⲉ ⲉⲃⲟⲗ **ϩⲓⲧⲙ**ⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and not for the approbation which is from God.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉ ⲉⲃⲟⲗ **ϩⲓⲧⲟⲧ**ϥ .",
+      "english": "He then departed from him.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϩⲉⲛⲕⲟⲟⲩⲉ ⲃⲱⲕ ϣⲁⲣⲟϥ ⲉⲧⲣⲉⲩⲥⲱⲧⲙ ⲉⲩϣⲁϫⲉ ⲉⲃⲟⲗ **ϩⲓⲧⲟⲟⲧ**ϥ ·",
+      "english": "Some others went to him to hear a story from him.",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4480",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "grasp hand, greet, promise, engage"
+    },
+    {
+      "target": "C4481",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "engagement gift"
+    },
+    {
+      "target": "C4455",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4456",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4463",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4464",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4487",
+      "label": "ϩⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "under the hand of, beside, with"
+    },
+    {
+      "target": "C4459",
+      "label": "ϫⲓϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4467",
+      "label": "ϫⲓϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4482",
+      "label": "ϫⲓⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "receive a promise"
+    },
+    {
+      "target": "C4475",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "give a hand, help"
+    },
+    {
+      "target": "C4476",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "hand, assistance, help"
+    },
+    {
+      "target": "C4458",
+      "label": "ϯϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4466",
+      "label": "ϯϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4474",
+      "label": "ⲁⲧⲕⲁ ⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "continuous, incessant"
+    },
+    {
+      "target": "C4465",
+      "label": "ⲃⲱⲗϣⲧⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "dissolve a guarantee"
+    },
+    {
+      "target": "C4489",
+      "label": "ⲉⲃⲟⲗ ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4486",
+      "label": "ⲉⲃⲟⲗ ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "from"
+    },
+    {
+      "target": "C4472",
+      "label": "ⲉⲓⲛⲉ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "put a hand on"
+    },
+    {
+      "target": "C4471",
+      "label": "ⲉⲓⲣⲉ ⲛⲁⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "endeavour"
+    },
+    {
+      "target": "C4457",
+      "label": "ⲉⲣⲡϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee"
+    },
+    {
+      "target": "C4484",
+      "label": "ⲉⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "to hand of, to"
+    },
+    {
+      "target": "C4473",
+      "label": "ⲕⲱ ⲛⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "\"loosen hand\", cease, despair, renounce"
+    },
+    {
+      "target": "C4468",
+      "label": "ⲙⲉⲧϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4479",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "help"
+    },
+    {
+      "target": "C4462",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4483",
+      "label": "ⲛⲥⲁⲧⲟⲟⲧ⸗",
+      "pos": "ADV",
+      "gloss": "immediately"
+    },
+    {
+      "target": "C4485",
+      "label": "ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "in, by the hand of, by, with, beside, from"
+    },
+    {
+      "target": "C4460",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4461",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4477",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4478",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4469",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4470",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4454",
+      "label": "ⲣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "clap hands, beat time, stamp, make music"
+    },
+    {
+      "target": "C4453",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "hand"
+    },
+    {
+      "target": "C12173",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "strike (instrument), clap (hands)"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "C4443",
+  "forms": [
+    {
+      "id": "CF10839",
+      "orth": "ⲧⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.75,
+        "rank": 878,
+        "count": 118
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS5031",
+      "bibliography": "CD 424b; CED 192; KoptHWb 241; DELC 219b; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧⲁⲣⲉ**ⲡⲛⲟⲩⲧⲉ ⲕⲁⲁⲩ ⲛⲁⲓ ⲉⲃⲟⲗ",
+      "english": "May God forgive me these!'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲧⲁⲣⲉ**ⲡⲉⲛϩⲏⲧ ⲙⲧⲟⲛ ·",
+      "english": "And our heart shall be at ease.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲟⲩⲉ ⲟⲩϣⲁϫⲉ ⲛⲟⲩⲱⲧ ⲉⲡⲡⲁⲡⲁⲥ **ⲧⲁⲣⲉ**ϥϯϩⲏⲩ ·",
+      "english": "'Tell the Father one word that he may benefit.'",
+      "source": "Apophthegmata Patrum Sahidic 114: Theophilus Beta",
+      "urn": "urn:cts:copticLit:ap.114.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "dm1326",
+    "demo_lemma": "dj=j-ı ͗r",
+    "english": "thereby (Copt. tare-) (Finalis)",
+    "german": "damit (kopt. tare-) (Finalis)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1326"
+  }
+}

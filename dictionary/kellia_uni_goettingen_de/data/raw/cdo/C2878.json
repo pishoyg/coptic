@@ -1,0 +1,393 @@
+{
+  "id": "C2878",
+  "forms": [
+    {
+      "id": "CF7614",
+      "orth": "ⲙⲁⲥⲡⲟⲣⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3483,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3292",
+      "bibliography": "CD 268b; KoptHWb 151; DELC 163; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲃⲏⲥⲁⲗⲱⲙ ⲁϥⲉⲓ ⲉϩⲟⲩⲛ ⲉϩⲣⲁⲩ ⲛⲛⲉϩⲙϩⲁⲗ ⲛⲇⲁⲩⲉⲓⲇ ⲁⲃⲏⲥⲁⲗⲱⲙ ⲇⲉ ⲛⲉϥⲧⲁⲗⲏⲩ ⲉⲩⲙⲁⲥⲡⲟⲣⲕ ⲁⲩⲱ ⲧⲉϥ**ⲙⲁⲥⲡⲟⲣⲕ** ⲁⲥⲡⲱⲧ ⲉϩⲟⲩⲛ ϩⲁⲟⲩⲕⲗⲁⲧⲟⲥ ⲛⲧⲉⲧⲛⲟϭ ⲛⲥⲉⲓ ⲉⲧⲣⲏⲧ ⲁⲩⲱ ⲧⲉϥⲁⲡⲉ ⲁⲥϭⲱⲗϫ ⲉϩⲟⲩⲛ ⲉⲧⲥⲉⲓ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲁϥϭⲱ ⲉϥⲁϣⲉ ⲟⲩⲇⲉ ⲧⲡⲉ ⲙⲛⲡⲕⲁϩ ⲁⲩⲱ ⲡⲙⲁⲥⲡⲟⲣⲕ ⲉⲧϩⲁⲣⲟϥ ⲁϥⲃⲱⲕ ⲁϥⲕⲁⲁϥ",
+      "english": "And Abessalom went to meet the servants of David: and Abessalom was mounted on his mule, and the mule came under the thick boughs of a great oak; and his head was entangled in the oak, and he was suspended between heaven and earth; and the mule passed on from under him.",
+      "source": "II Samuel 18",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲣⲧϩⲉ ⲛⲛⲓϩⲧⲟ ⲙⲛⲛⲓ**ⲙⲁⲥⲡⲟⲣⲕ** ⲉⲧⲉⲙⲛⲧⲟⲩⲙⲛⲧⲥⲁⲃⲉ ⲥⲱⲕ ⲛⲛⲟⲩⲟⲟϭⲉ ⲛⲛⲉⲧⲉⲛⲥⲉϩⲱⲛ ⲉⲣⲟⲕ ⲁⲛ ϩⲛⲟⲩⲭⲁⲗⲓⲛⲟⲥ ⲙⲛⲟⲩϣⲧⲟϥ",
+      "english": "Be ye not as horse and mule, which have no understanding; but thou must constrain their jaws with bit and curb, lest they should come nigh to thee.",
+      "source": "Psalms 31",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲙⲏⲧ ⲛϩⲙϩⲁⲗ ⲛϩⲟⲟⲩⲧ · ⲙⲛⲙⲏⲧ ⲛϣⲉ ⲛϩⲙϩⲁⲗ ⲛⲥϩⲓⲙⲉ · ⲉⲩϫⲓ ⲙⲁⲛⲓⲁⲕⲏⲥ ⲛⲛⲟⲩⲃ · ⲙⲛϥⲧⲟⲟⲩ ⲛϣⲉ ⲛϩⲧⲟ · ⲁⲩⲱ ⲙⲏⲧ ⲛϣⲉ ⲙ**ⲙⲁⲥⲡⲟⲣⲕ** · ⲙⲛⲙⲏⲧ ⲛϣⲉ ⲛϭⲁⲙⲟⲩⲗ · ⲙⲛⲙⲏⲧ ⲛϣⲉ ⲛⲥⲧⲉⲓⲱϩⲉ ⲛϭⲱⲙ ·",
+      "english": "and ten menservants, and ten hundred maidservants wearing golden bracelets, and four hundred horses, and ten hundred mules, and ten hundred camels, and ten hundred farms which were under tillage,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲣϭⲟⲟⲩⲧ",
+        2,
+        19.276
+      ],
+      [
+        "ⲙⲁⲥⲡⲟⲣⲕ",
+        2,
+        16.954
+      ],
+      [
+        "ⲙⲏⲧ",
+        4,
+        16.047
+      ],
+      [
+        "ⲕⲁⲣⲟⲩⲭⲓⲟⲛ",
+        1,
+        15.691
+      ],
+      [
+        "ϩⲧⲟ",
+        2,
+        14.345
+      ],
+      [
+        "ϭⲁⲙⲟⲩⲗ",
+        2,
+        14.322
+      ],
+      [
+        "ⲙⲛ",
+        11,
+        13.7
+      ],
+      [
+        "ϩⲓ",
+        4,
+        11.909
+      ],
+      [
+        "ⲧⲁⲗⲏⲩ",
+        1,
+        11.661
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        11.319
+      ],
+      [
+        "ⲙⲛⲧⲥⲁⲃⲉ",
+        1,
+        11.126
+      ],
+      [
+        "ϣⲉ",
+        2,
+        10.86
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        10.752
+      ],
+      [
+        "ⲧⲉϥ",
+        3,
+        10.397
+      ],
+      [
+        "ⲙⲛⲧ",
+        1,
+        9.776
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        8.699
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        1,
+        8.614
+      ],
+      [
+        "ⲉ",
+        5,
+        8.461
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.425
+      ],
+      [
+        "ⲛ",
+        6,
+        8.242
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          2
+        ],
+        [
+          "ⲙⲏⲧ_3_pre_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          8
+        ],
+        [
+          "ⲙⲛ_3_post_ϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲥⲁⲟⲩⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          2
+        ],
+        [
+          "ⲥⲉⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ_b",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲙⲛⲧ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲙⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲏⲧ_3_pre_ϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_3_pre_ϣⲉ",
+          "ⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ϣⲉ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          "ⲙⲛ_3_post_ϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ϩⲉⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          "ⲛ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲥⲁⲟⲩⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲥⲉⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲉⲓ_2_post_ⲉⲧ",
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ_b",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲡ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ϩⲁⲣⲟ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲛⲓ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲡⲟⲣⲕ_0_node",
+          "ⲉⲧⲉ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲙⲁⲥⲡⲟⲣⲕ",
+          "ⲙⲛⲧ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧ_2_post_ⲉⲧⲉ",
+          "ⲟⲩ_3_post_ⲙⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3115,
+      "count": 10
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2045",
+      "type": "cf",
+      "label": "young (mostly of animal or bird), child"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2879",
+      "label": "ⲙⲁⲥⲡⲟⲣⲕ",
+      "pos": "N",
+      "gloss": "mule"
+    },
+    {
+      "target": "C2877",
+      "label": "ⲡⲟⲣⲕ",
+      "pos": "N",
+      "gloss": "foal, calf"
+    }
+  ]
+}

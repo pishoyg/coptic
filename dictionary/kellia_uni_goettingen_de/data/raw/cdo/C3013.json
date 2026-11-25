@@ -1,0 +1,200 @@
+{
+  "id": "C3013",
+  "forms": [
+    {
+      "id": "CF7892",
+      "orth": "ϩⲓⲡⲁϩⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13550,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3448",
+      "bibliography": "CD 285a; KoptHWb 156; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲣⲟ ⲇⲉ ⲁϥϭⲱⲛⲧ ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩⲥⲱⲛϩ ⲙⲙⲟⲥ ⲉⲛⲉⲥϭⲓϫ ⲙⲛⲛⲉϥⲟⲩⲣⲏⲏⲧⲉ **ϩⲓⲡⲁϩⲟⲩ** ⲙⲙⲟⲥ · ⲛⲥⲉⲧⲁⲗⲟ ⲙⲡⲉⲥϣⲏⲣⲉ ⲥⲛⲁⲩ ⲉϫⲛϩⲏⲧⲥ ⲛⲥⲉⲣⲟⲕϩⲟⲩ ⲉⲩⲟⲛϩ ⲙⲛⲛⲉⲩⲉⲣⲏⲩ ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": "And the Emperor was furious, and he commanded [his soldiers] to tie her hands and her feet behind her, and then to lift up her two children on her body, and to burn them together.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲣⲏⲏⲧⲉ",
+        1,
+        14.983
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        9.974
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲡⲁϩⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲓⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲗⲟ_1_post_ϩⲓⲡⲁϩⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓⲡⲁϩⲟⲩ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲓⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲓⲡⲁϩⲟⲩ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲗⲟ",
+          "ⲥⲉ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲧⲁⲗⲟ",
+          "ⲧⲁⲗⲟ_1_post_ϩⲓⲡⲁϩⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13149,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3012",
+      "label": "ϩⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "at back, formerly"
+    },
+    {
+      "target": "C3014",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3007",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "to back, backward"
+    },
+    {
+      "target": "C3008",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, backward"
+    },
+    {
+      "target": "C3015",
+      "label": "ⲉⲣϩⲓⲫⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "be behind, follow after"
+    },
+    {
+      "target": "C3011",
+      "label": "ⲛⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, from behind"
+    },
+    {
+      "target": "C3005",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "buttocks, hinder part, back"
+    },
+    {
+      "target": "C3006",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "hinder, past"
+    },
+    {
+      "target": "C3009",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3010",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    }
+  ]
+}

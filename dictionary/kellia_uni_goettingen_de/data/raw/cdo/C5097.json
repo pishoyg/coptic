@@ -1,0 +1,682 @@
+{
+  "id": "C5097",
+  "forms": [
+    {
+      "id": "CF12159",
+      "orth": "ⲟⲩⲟⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1968,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲃ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 12.23,
+        "rank": 109,
+        "count": 1037
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲁⲃ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 13.02,
+        "rank": 95,
+        "count": 2054
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5728",
+      "bibliography": "CD 487b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧϯ ⲛⲟⲩⲑⲱⲗⲉⲃ ⲛⲥⲁϯⲛⲁⲓⲁⲧⲥ ⲉⲑ**ⲟⲩⲁⲃ** ⲛⲕⲁⲑⲟⲗⲓⲕⲏ ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲑⲏ ⲉⲧⲟⲓ ⲛⲁⲧⲁϭⲛⲓ ϧⲉⲛⲡⲉⲥϫⲓⲛⲱⲛϧ ⲧⲏⲣϥ ⲉⲩⲥⲓϯ ⲛϩⲁⲛⲥⲁϫⲓ ⲉⲩϩⲱⲟⲩ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲡϩⲏⲧ ⲛⲛⲓⲣⲱⲙⲓ ⲛⲁⲧⲕⲁϯ ϫⲉϩⲓⲛⲁ ⲛⲧⲟⲩⲧⲁⲕⲟ ⲙⲡⲟⲩϫⲓⲛⲱⲛϧ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲥⲉⲙⲛⲟⲥ .",
+      "english": "All those who have stained the happy and catholic Church, which remains free from blemish throughout its entire life, by injecting evil words of philosophy into the hearts of men without understanding, so that their lives might be destroyed far from purity.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲛⲁⲩ ⲉⲡⲙⲁ ⲉⲧⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁϩⲉⲣⲁⲧϥ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲡⲙⲁ ⲉⲧϩⲁⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϩⲱⲃ ⲛⲧⲱⲃⲉ ⲛⲥⲁⲡⲡⲓⲣⲟⲛ ⲁⲩⲱ ⲛⲧϩⲉ ⲙⲡⲉⲓⲛⲉ ⲙⲡⲉⲥⲧⲉⲣⲉⲱⲙⲁ ⲛⲧⲡⲉ ϩⲙⲡⲉϥ**ⲟⲩⲟⲡ**",
+      "english": "And they saw the place where the God of Israel stood; and under his feet was as it were a work of sapphire slabs, and as it were the appearance of the firmament of heaven in its purity.",
+      "source": "Exodus 24",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲏⲓ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲟⲩⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲡⲁⲓⲱⲧ ⲉⲑ**ⲟⲩⲁⲃ** .",
+      "english": "I said, ‘I am a sinner, my holy father.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁ ⲛⲁⲓ ⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲉⲧⲣⲁⲙⲟⲟϣⲉ · ⲁⲩⲱ ⲛⲧⲁϫⲉⲕⲧⲁϩⲓⲏ ⲉⲃⲟⲗ ⲁϫⲛϩⲓⲥⲉ ϩⲓϣⲧⲟⲣⲧⲣ · ⲉⲓⲛⲏⲩ ϣⲁⲣⲟⲕ ⲡⲁϫⲟⲉⲓⲥ ϫⲉⲕⲁⲥ ⲉⲓⲉϫⲓ ⲛⲛⲁⲅⲁⲑⲟⲛ ⲛⲛⲉⲛⲧⲁⲩⲱⲛϩ · ϩⲛ**ⲟⲩⲟⲡ** ·",
+      "english": "Grant Thou unto me the power to walk, and strengthen me so that I may complete my course without suffering and without trouble. I come unto Thee, my Lord, that I may receive the good things of those who I live in holiness.'",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲡⲓⲥⲏⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲉⲩⲉϫⲟⲥ ⲙⲡⲁⲓⲗⲁⲟⲥ ⲛⲉⲙϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ϫⲉⲟⲩⲡⲛⲁ ⲛⲥⲟⲣⲙⲉⲥ ϩⲓⲡϣⲁϥⲉ ⲁϥϣⲉⲛⲁϥ ϣⲁⲫⲙⲱⲓⲧ ⲛⲧⲉⲧϣⲉⲣⲓ ⲙⲡⲁⲗⲁⲟⲥ ϫⲉⲟⲩⲏⲓ ⲛⲥⲉ**ⲟⲩⲁⲃ** ⲁⲛ .",
+      "english": "At that time they shall say to this people and to Jerusalem, There is a spirit of error in the wilderness: the way of the daughter of my people is not to purity, nor to holiness.",
+      "source": "24_Ieremias_04",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉϥⲣⲁϣⲉ ⲛⲙⲙⲏⲧⲛ · ⲉⲧⲉⲧⲛⲟⲛϩ · ϩⲛⲟⲩⲟⲩⲣⲟⲧ · ⲙⲛ**ⲟⲩⲟⲡ** ·",
+      "english": "Let Him but have gladness with you, and ye live in happiness and innocency.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲑ",
+        723,
+        37.083
+      ],
+      [
+        "ⲛⲧⲉ",
+        406,
+        32.062
+      ],
+      [
+        "ⲛⲏ",
+        248,
+        31.92
+      ],
+      [
+        "ⲉ",
+        487,
+        31.8
+      ],
+      [
+        "ⲡⲓ",
+        310,
+        30.599
+      ],
+      [
+        "ⲙ",
+        310,
+        30.411
+      ],
+      [
+        "ⲛ",
+        381,
+        30.312
+      ],
+      [
+        "ⲟⲩ",
+        340,
+        29.982
+      ],
+      [
+        "ⲡⲉⲑ",
+        46,
+        29.944
+      ],
+      [
+        "ϥ",
+        356,
+        29.851
+      ],
+      [
+        "ⲥⲗ",
+        45,
+        29.429
+      ],
+      [
+        "ⲁ",
+        268,
+        29.188
+      ],
+      [
+        "ϧⲉⲛ",
+        210,
+        28.906
+      ],
+      [
+        "ⲛⲉⲙ",
+        181,
+        28.742
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲉϥ",
+        23,
+        28.742
+      ],
+      [
+        "ⲉⲧ",
+        177,
+        28.654
+      ],
+      [
+        "ⲡ",
+        191,
+        28.352
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        74,
+        28.305
+      ],
+      [
+        "ϫⲉ",
+        164,
+        28.209
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        208,
+        28.181
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧⲙⲉ",
+        5,
+        11.371
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        14,
+        11.08
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        9.575
+      ],
+      [
+        "ⲝⲉⲛⲉⲓⲟⲥ",
+        1,
+        9.575
+      ],
+      [
+        "ⲟⲩ",
+        17,
+        6.459
+      ],
+      [
+        "ⲟⲩⲣⲟⲧ",
+        2,
+        5.96
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        3,
+        5.414
+      ],
+      [
+        "ⲛⲁϩⲧⲉ",
+        2,
+        5.318
+      ],
+      [
+        "ⲙⲛⲧⲣⲣⲟ",
+        3,
+        4.893
+      ],
+      [
+        "ⲡⲉϥ",
+        6,
+        4.828
+      ],
+      [
+        "ⲡⲉⲕ",
+        5,
+        4.811
+      ],
+      [
+        "ⲡⲣⲉⲡⲉⲓ",
+        1,
+        4.668
+      ],
+      [
+        "ϩⲛ",
+        8,
+        4.456
+      ],
+      [
+        "ⲇⲉ",
+        7,
+        4.385
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        2,
+        4.262
+      ],
+      [
+        "ⲧⲙⲁⲓⲟ",
+        1,
+        4.253
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        4.043
+      ],
+      [
+        ".",
+        7,
+        3.956
+      ],
+      [
+        "ⲣⲁⲛ",
+        3,
+        3.724
+      ],
+      [
+        "ⲧⲃⲃⲟ",
+        2,
+        3.686
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲩⲟⲡ",
+          4
+        ],
+        [
+          "ⲟⲩⲟⲡ_0_node",
+          20
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲟⲩⲟⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲟⲩⲟⲡ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲟⲩⲟⲡ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲟⲡ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲣⲁⲧⲛⲟⲃⲉ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟϭ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_pre_ⲍⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲍⲉⲩⲥ_2_pre_ϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_pre_ⲍⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲝⲉⲛⲉⲓⲟⲥ_4_pre_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲟⲩⲟⲡ",
+          "ⲡⲉⲕ_2_pre_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ⲣⲁⲛ",
+          "ⲣⲁⲛ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_1_pre_ⲟⲩⲟⲡ",
+          "ⲙⲁⲣⲉ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲟⲩⲟⲡ",
+          "ϥ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ϩⲟ",
+          "ϩⲟ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ⲟⲩⲟⲡ",
+          "ⲛⲁ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲟⲡ_0_node",
+          "ⲛ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲡ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲟⲩⲟⲡ",
+          "ⲡⲁ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲟⲩⲟⲡ",
+          "ⲛⲁ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲡ_0_node",
+          "ⲁⲩⲱ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          "ⲕ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁⲣⲁⲧⲛⲟⲃⲉ",
+          "ⲛⲁⲣⲁⲧⲛⲟⲃⲉ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲟⲡ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲡ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟϭ",
+          "ⲙⲛⲧⲛⲟϭ_1_post_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲟⲩⲟⲡ",
+          "ⲛⲁ_1_pre_ⲟⲩⲟⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲡ_0_node",
+          "ⲡ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲛⲁ",
+          "ⲛⲁ_3_post_ϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϥ",
+          "ⲅⲁⲣ_4_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲟⲩⲟⲡ",
+          "ⲡⲁ_3_pre_ⲍⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_pre_ⲍⲉⲩⲥ",
+          "ⲍⲉⲩⲥ_2_pre_ϫⲉ",
+          1
+        ],
+        [
+          "ⲍⲉⲩⲥ_2_pre_ϫⲉ",
+          "ⲛ_3_pre_ⲍⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_pre_ⲍⲉⲩⲥ",
+          "ⲝⲉⲛⲉⲓⲟⲥ_4_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲝⲉⲛⲉⲓⲟⲥ_4_pre_ⲛ",
+          "ⲟⲩⲟⲡ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 13.11,
+      "rank": 83,
+      "count": 2081
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5101",
+      "label": "ⲙⲛⲧⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "purity, holiness"
+    },
+    {
+      "target": "C5104",
+      "label": "ⲙⲛⲧⲟⲩⲏⲏⲃ",
+      "pos": "N",
+      "gloss": "priesthood"
+    },
+    {
+      "target": "C5098",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "VSTAT",
+      "gloss": "be pure, holy"
+    },
+    {
+      "target": "C5099",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "holy one, saint"
+    },
+    {
+      "target": "C5102",
+      "label": "ⲟⲩⲏⲏⲃ",
+      "pos": "N",
+      "gloss": "priest"
+    },
+    {
+      "target": "C5096",
+      "label": "ⲟⲩⲟⲡ",
+      "pos": "V",
+      "gloss": "be pure, be innocent"
+    },
+    {
+      "target": "C5100",
+      "label": "ⲡⲉⲧⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "pure, saint"
+    },
+    {
+      "target": "C5103",
+      "label": "ⲣⲟⲩⲏⲏⲃ",
+      "pos": "V",
+      "gloss": "be priest"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "C6263",
+  "forms": [
+    {
+      "id": "CF14536",
+      "orth": "ϥⲓ ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.48,
+        "rank": 1163,
+        "count": 75
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6951",
+      "bibliography": "CD 621a-b; KoptHWb 344; DELC 280a; ChLCS 85b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉⲁⲙⲛⲧⲉ ⲅⲁⲣ **ⲉϣϥⲓ **ϩⲁ**ⲡⲉϥⲡⲛⲉⲩⲙⲁ** ·",
+      "english": "and Amente could not endure His Spirit.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉⲥⲛⲏⲩ ⲉⲓϫⲱ ⲙⲙⲟⲟⲩ ϫⲉⲕⲁⲥ ⲛⲛⲉⲗⲁⲁⲩ ⲉⲅⲕⲁⲕⲉⲓ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ϩⲁⲧⲏⲛ ⲏ ϩⲁⲧⲛⲧⲏⲩⲧⲛ ⲛⲧⲱⲧⲛ **ⲉⲩϥⲓ **ϩⲁ**ⲛⲉⲧϩⲓⲧⲟⲩⲱⲟⲩ**",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲡⲣⲧⲣⲉⲛⲁⲡⲟⲧⲁⲥⲥⲉ **ⲉⲧⲙϥⲓ **ϩⲁ**ⲛⲉⲛⲉⲣⲏⲩ** ϫⲉⲛⲛⲉⲡⲛⲟⲩⲧⲉ ϭⲱⲛⲧ ⲉⲣⲟⲛ ϫⲉⲙⲡⲁⲧⲛⲱⲥⲕ ⲅⲁⲣ ⲉⲛϥⲓ ϩⲁⲛⲉⲛⲉⲣⲏⲩ ⲛⲧϩⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲡⲉϥⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲧϥⲓ ϩⲁⲣⲟⲛ ϫⲓⲛⲧⲁⲣⲭⲏ ⲙⲡⲥⲱⲛⲧ ϣⲁϩⲣⲁⲓ ⲉⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ⲁⲩⲱ ⲟⲛ ϣⲁⲉⲛⲉϩ ·",
+      "english": "For this reason, let us not give up to not support each other that God may not be mad at us that we have indeed not yet continued to support each other like the Lord and his Christ and His angels that are holy, which support us since the beginning of creation and up until the day of days and also forever.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C13017",
+      "label": "ϥⲁⲓ-",
+      "pos": "N",
+      "gloss": "carrier"
+    },
+    {
+      "target": "C6260",
+      "label": "ϥⲓ",
+      "pos": "V",
+      "gloss": "bear, carry, take"
+    },
+    {
+      "target": "C6264",
+      "label": "ϥⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take, take away"
+    },
+    {
+      "target": "C6265",
+      "label": "ϥⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "be carried off, disappear"
+    },
+    {
+      "target": "C6262",
+      "label": "ϥⲓ ⲙⲛ",
+      "pos": "V",
+      "gloss": "agree with"
+    },
+    {
+      "target": "C6261",
+      "label": "ϥⲓⲧⲟⲟⲧ",
+      "pos": "V",
+      "gloss": "raise (hand), begin"
+    },
+    {
+      "target": "C6267",
+      "label": "ⲃⲁⲓⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "wine measure(?)"
+    },
+    {
+      "target": "C6266",
+      "label": "ⲙⲛⲧϥⲓ",
+      "pos": "N",
+      "gloss": "patience"
+    }
+  ]
+}

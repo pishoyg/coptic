@@ -1,0 +1,143 @@
+{
+  "id": "C315",
+  "forms": [
+    {
+      "id": "CF1355",
+      "orth": "ⲣⲁϭⲣⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18838,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1356",
+      "orth": "ⲣⲁϭⲣⲏⲛ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS348",
+      "bibliography": "CD 27a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏⲡⲟⲧⲉ ⲛⲥϫⲱϩⲙ ⲛⲧⲉⲥⲙⲛⲧⲣⲟⲟⲩⲛⲉ ... ... ϩⲙⲡⲏⲓ ⲛⲛⲉⲥⲉⲓⲟⲧⲉ ⲁⲩⲱ ⲉⲁⲥϫⲓϩⲁⲓ ⲙⲏⲡⲟⲧⲉ ⲛⲥⲡⲁⲣⲁⲃⲁ ⲁⲩⲱ ⲉⲥϩⲙⲟⲟⲥ ⲛⲙⲙⲁϥ ⲙⲏⲡⲟⲧⲉ ⲛⲥ**ⲣⲁϭⲣⲏⲛ**",
+      "english": "In her virginity, lest she should be defiled and gotten with child in her father's house; and having an husband, lest she should misbehave herself; and when she is married, lest she should be barren.",
+      "source": "Sirach 42",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϩ",
+        1,
+        17.598
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        1,
+        13.24
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        10.965
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲁϭⲣⲏⲛ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲁϭⲣⲏⲛ",
+          1
+        ],
+        [
+          "ⲣⲁϭⲣⲏⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲁϭⲣⲏⲛ",
+          "ⲥ_1_pre_ⲣⲁϭⲣⲏⲛ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲁϭⲣⲏⲛ",
+          "ⲣⲁϭⲣⲏⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18449,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C313",
+      "label": "ⲁϭⲣⲏⲛ",
+      "pos": "N",
+      "gloss": "barren female"
+    },
+    {
+      "target": "C314",
+      "label": "ⲙⲛⲧⲁϭⲣⲏⲛ",
+      "pos": "N",
+      "gloss": "barrenness"
+    }
+  ]
+}

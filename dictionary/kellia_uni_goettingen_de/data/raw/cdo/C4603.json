@@ -1,0 +1,187 @@
+{
+  "id": "C4603",
+  "forms": [
+    {
+      "id": "CF11162",
+      "orth": "ⲙⲉⲧⲑⲁⲧϩⲏⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF11163",
+      "orth": "ⲙⲉⲧⲑⲁⲧϩⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5766,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF11164",
+      "orth": "ⲙⲉⲧⲑⲁⲧϩⲏⲧ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5197",
+      "bibliography": "CD 438b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲧⲉ ⲡⲉⲧϯⲛⲟⲙϯ ϧⲉⲛϯ**ⲙⲉⲧⲑⲁⲧϩⲏⲧ** ⲫⲏ ⲉⲧϯ ϧⲉⲛⲟⲩⲙⲉⲧϩⲁⲡⲗⲟⲩⲥ ⲫⲏ ⲉⲧⲭⲏ ϧⲁϫⲱⲟⲩ ϧⲉⲛⲟⲩⲥⲡⲟⲩⲇⲏ ⲫⲏ ⲉⲑⲛⲁⲓ ϧⲉⲛⲟⲩⲣⲁϣⲓ .",
+      "english": "or he who exhorts, to his exhorting: he who gives, let him do it with liberality; he who rules, with diligence; he who shows mercy, with cheerfulness.",
+      "source": "06_Romans_12",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲓⲛⲓ ⲇⲉ ⲙⲡⲓⲁⲗⲟⲩ ⲉϥⲱⲛϧ ⲟⲩⲟϩ ⲁⲩϭⲓ ⲛⲟⲩ**ⲙⲉⲧⲑⲁⲧϩⲏⲧ** ⲛⲟⲩⲕⲟⲩϫⲓ ⲁⲛ .",
+      "english": "They brought the boy in alive, and were greatly comforted.",
+      "source": "05_Acts_20",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:20",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϯⲛⲟⲙϯ",
+        1,
+        12.837
+      ],
+      [
+        "ⲕⲟⲩϫⲓ",
+        1,
+        9.891
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ϭⲓ",
+        1,
+        8.267
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.251
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲫⲏ",
+        1,
+        7.358
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.015
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲧⲑⲁⲧϩⲏⲧ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5271,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4607",
+      "label": "ϫⲓⲛⲑⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "agreement, union"
+    },
+    {
+      "target": "C4604",
+      "label": "ⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "unconvinced, disagreeing"
+    },
+    {
+      "target": "C4605",
+      "label": "ⲉⲣ ⲛⲁⲧⲑⲱⲧ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "disagree"
+    },
+    {
+      "target": "C4606",
+      "label": "ⲙⲉⲧⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "refusal"
+    },
+    {
+      "target": "C4599",
+      "label": "ⲧⲱⲧ",
+      "pos": "V",
+      "gloss": "be joined, be persuaded, be agreeable to; conjoin, mingle"
+    },
+    {
+      "target": "C4601",
+      "label": "ⲧⲱⲧ",
+      "pos": "N",
+      "gloss": "agreement, mingling"
+    },
+    {
+      "target": "C4600",
+      "label": "ⲧⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be even, be level"
+    },
+    {
+      "target": "C4602",
+      "label": "ⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "content heart, persuade, satisfy; have a contented heart, be persuaded, be satisfied; consent, agree"
+    }
+  ]
+}

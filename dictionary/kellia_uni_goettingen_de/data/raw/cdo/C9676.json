@@ -1,0 +1,94 @@
+{
+  "id": "C9676",
+  "forms": [
+    {
+      "id": "CF24818",
+      "orth": "ⲙⲁⲅⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24819",
+      "orth": "ⲙⲁⲅⲉⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24820",
+      "orth": "ⲙⲁⲅⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13315,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24821",
+      "orth": "ⲙⲁⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2263,
+        "count": 24
+      }
+    },
+    {
+      "id": "CF24822",
+      "orth": "ⲙⲁⲅⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24823",
+      "orth": "ⲙⲁⲅⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13315,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12445",
+      "bibliography": "DDGLC",
+      "cu_ID": "2312"
+    },
+    {
+      "id": "CS12446",
+      "bibliography": "DDGLC",
+      "cu_ID": "7206"
+    },
+    {
+      "id": "CS12447",
+      "bibliography": "DDGLC",
+      "cu_ID": "2680"
+    },
+    {
+      "id": "CS12448",
+      "bibliography": "DDGLC",
+      "cu_ID": "9141"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲛⲁϧⲱⲧⲉⲃ ⲛⲟⲩⲙⲏϣ ⲉⲩⲟⲩⲱⲙ ⲛⲉⲙⲁϥ ϩⲓϫⲉⲛϯⲧⲣⲁⲡⲉⲍⲁ ϧⲉⲛϩⲁⲛⲧⲥⲟ ⲛⲧⲉϩⲁⲛⲫⲁϧⲣⲓ ⲙ**ⲙⲁⲅⲓⲁ** ⲟⲩⲟⲛ ϩⲁⲛⲛⲓϣϯ ⲛϣⲱϣ ⲛⲁϣⲱⲡⲓ ϧⲉⲛⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "...",
+      "source": "27_Daniel_19",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2744",
+    "grl_lemma": "μαγεία",
+    "grl_meaning": "magic",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1071a"
+  }
+}

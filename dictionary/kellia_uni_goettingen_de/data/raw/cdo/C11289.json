@@ -1,0 +1,299 @@
+{
+  "id": "C11289",
+  "forms": [
+    {
+      "id": "CF32251",
+      "orth": "ⲗⲱϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15044,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲉϭ-",
+      "dialect": "S",
+      "id": "1027.1"
+    },
+    {
+      "orth": "ⲗⲟϭ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4326,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲗⲏϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4595,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲗⲏϫ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16004,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲟϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1360,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲗⲱⲕⲉ",
+      "dialect": "S",
+      "id": "2792.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2064",
+      "bibliography": "CD 152b; KoptHWb 84; CED 77; DELC 102b; ChLCS 23a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲣⲛⲟⲃⲉ ϩⲛⲟⲩⲛⲟϭ ⲛⲛⲟⲃⲉ ⲉⲁⲩϥⲓ ⲁⲩ**ⲗⲱϭⲉ** ⲉⲃⲟⲗ ϩⲙⲡⲁⲛⲁⲑⲉⲙⲁ ⲁⲩⲱ ⲁϥϫⲓ ⲛϭⲓⲁⲭⲁⲣ ⲡϣⲏⲣⲉ ⲛⲭⲁⲣⲙⲓ ⲡϣⲏⲣⲉ ⲛⲍⲁⲙⲃⲣⲓ ⲡϣⲏⲣⲉ ⲛⲍⲁⲣⲁ ⲉⲃⲟⲗ ϩⲛⲧⲉⲫⲩⲗⲏ ⲛⲓⲟⲩⲇⲁ ⲁϥⲕⲱ ⲉⲡⲁϩⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲁⲛⲁⲑⲉⲙⲁ ⲡϫⲟⲉⲓⲥ ⲇⲉ ⲁϥϭⲱⲛⲧ ϩⲛⲟⲩⲟⲣⲅⲏ ⲉⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "But the children of Israel committed a great trespass, and purloined part of the accursed thing; and Achar the son of Charmi, the son of Zambri, the son of Zara, of the tribe of Juda, took of the accursed thing; and the Lord was very angry with the children of Israel.",
+      "source": "Joshua 7",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁⲙⲟⲩⲏⲗ ⲇⲉ ⲁϥⲕⲟⲧϥ ⲁϥϫⲛⲉⲡϫⲟⲉⲓⲥ ϫⲉⲉⲛⲉⲣⲉⲡⲣⲱⲙⲉ ⲛⲁⲉⲓ ⲉⲡⲉⲓⲙⲁ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁϥ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ϥ**ⲗⲏϭ** ϩⲛⲛⲉⲥⲕⲉⲩⲏ",
+      "english": "And Samuel asked yet again of the Lord, Will the man come hither? and the Lord said, Behold, he is hid among the stuff.",
+      "source": "I Samuel 10",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲥⲁⲙⲯⲱⲛ ⲛⲁⲥ ϫⲉⲉⲩϣⲁⲛⲙⲟⲣⲧ ⲛⲥⲁϣϥ ⲛⲕⲱⲃϩ ⲉⲩ**ⲗⲏϭ** ⲉⲙⲡⲟⲩⲃⲟⲕⲟⲩ ϯⲛⲁⲣϭⲱⲃ ⲛⲧⲁⲣⲧϩⲉ ⲛⲟⲩⲁ ⲛⲛⲣⲱⲙⲉ",
+      "english": "And Sampson said to her, If they bind me with seven moist cords that have not been spoiled, then shall I be weak and be as one of ordinary men.",
+      "source": "Judges 16",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        47,
+        21.088
+      ],
+      [
+        "ⲛⲧⲉⲕϭ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲡⲉϥϭ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲡⲉⲕϭ",
+        1,
+        19.695
+      ],
+      [
+        "ϥⲉⲣϩⲉⲗⲡⲓⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲟⲩ",
+        25,
+        18.686
+      ],
+      [
+        "ⲭⲓⲗⲓⲁⲣⲭ",
+        1,
+        18.11
+      ],
+      [
+        "ⲥⲙⲏ",
+        5,
+        17.501
+      ],
+      [
+        "ⲁ",
+        16,
+        16.989
+      ],
+      [
+        "ⲛϫⲉ",
+        11,
+        16.973
+      ],
+      [
+        "ⲟⲥ",
+        1,
+        16.525
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        14,
+        16.502
+      ],
+      [
+        "ⲁⲕⲁⲑⲁⲣⲥⲓⲁ",
+        1,
+        16.236
+      ],
+      [
+        "ⲫⲓⲁⲣⲟ",
+        1,
+        15.888
+      ],
+      [
+        "ⲓⲧⲉ",
+        2,
+        15.4
+      ],
+      [
+        "ⲗⲁⲥ",
+        2,
+        15.311
+      ],
+      [
+        "ⲁⲗⲓⲟⲩⲓ",
+        1,
+        15.303
+      ],
+      [
+        "ⲡⲓ",
+        9,
+        15.28
+      ],
+      [
+        "ⲛⲓ",
+        8,
+        15.218
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        3,
+        15.202
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲛⲁⲑⲉⲙⲁ",
+        1,
+        14.276
+      ],
+      [
+        "ϥⲓ",
+        1,
+        8.211
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ϩⲙ",
+        1,
+        5.413
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲗⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲗⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲗⲱϭⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲗⲱϭⲉ",
+          "ⲩ_1_pre_ⲗⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲱϭⲉ",
+          "ⲗⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲗⲱϭⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲗⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲗⲱϭⲉ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5306,
+      "count": 4
+    }
+  }
+}

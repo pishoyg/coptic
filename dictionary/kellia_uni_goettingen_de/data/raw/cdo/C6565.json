@@ -1,0 +1,44 @@
+{
+  "id": "C6565",
+  "forms": [
+    {
+      "id": "CF15173",
+      "orth": "ϩⲗⲟⲙⲗⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲗⲁⲙⲗⲙ",
+      "dialect": "L",
+      "id": "2167.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7277",
+      "bibliography": "CD 671a; CED 280; KoptHWb 367; DELC 298a; ChLCS 90a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6566",
+      "label": "ϩⲗⲟⲙⲗⲙ",
+      "pos": "N",
+      "gloss": "complication, entanglement"
+    }
+  ],
+  "etym": {
+    "egy_num": "106760",
+    "egy_lemma": "ḥnmnm",
+    "english": "to creep",
+    "german": "schleichen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/106760"
+  }
+}

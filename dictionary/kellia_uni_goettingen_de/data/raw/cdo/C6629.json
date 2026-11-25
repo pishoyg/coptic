@@ -1,0 +1,46 @@
+{
+  "id": "C6629",
+  "forms": [
+    {
+      "id": "CF15302",
+      "orth": "ⲥⲁ ⲛϩⲙⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7342",
+      "bibliography": "CD 677a; ChLCS 90b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3273",
+      "type": "cf",
+      "label": "man of, maker of, dealer in"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6627",
+      "label": "ϩⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "salt"
+    },
+    {
+      "target": "C6628",
+      "label": "ⲙⲁ ⲛⲉϩⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "saline, saltworks"
+    }
+  ]
+}

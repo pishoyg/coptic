@@ -1,0 +1,138 @@
+{
+  "id": "C10861",
+  "forms": [
+    {
+      "id": "CF29620",
+      "orth": "ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF29622",
+      "orth": "ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13494,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29621",
+      "orth": "ⲫⲉⲗⲟⲕⲁⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29623",
+      "orth": "ⲫⲟⲗⲟⲕⲁⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14987",
+      "bibliography": "DDGLC",
+      "cu_ID": "9587"
+    },
+    {
+      "id": "CS14988",
+      "bibliography": "DDGLC",
+      "cu_ID": "11206"
+    },
+    {
+      "id": "CS14989",
+      "bibliography": "DDGLC",
+      "cu_ID": "2167"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲟⲩⲉⲣⲅⲁⲧⲏⲥ ⲡⲉ ϩⲙⲡⲕⲟⲥⲙⲟⲥ · ϣⲁϥ**ⲫⲓⲗⲟⲕⲁⲗⲉⲓ** ⲙⲡⲉϥⲥⲱⲙⲁ · ⲉⲧⲣⲉϥϣⲱⲡⲉ ⲉϥⲥⲗⲟϭⲗϭ ⲁⲩⲱ ⲛⲉϥⲧⲏⲏⲃⲉ ⲉⲧⲣⲉⲩϣⲱⲡⲉ ⲉⲩⲕⲓⲱⲟⲩ ·",
+      "english": "If he hath been a workman in the world he will minister to his body most carefully and diligently so that it may become refined ; and he will make his hands to become soft.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        10.853
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲫⲓⲗⲟⲕⲁⲗⲉⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+          "ϥ_1_pre_ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲫⲓⲗⲟⲕⲁⲗⲉⲓ",
+          "ⲫⲓⲗⲟⲕⲁⲗⲉⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13090,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2303",
+    "grl_lemma": "φιλοκαλέω",
+    "grl_meaning": "to be enthusiastic, beautify, elaborate",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1936a; Preisigke 2:694"
+  }
+}

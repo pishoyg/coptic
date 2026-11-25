@@ -1,0 +1,158 @@
+{
+  "id": "C6208",
+  "forms": [
+    {
+      "id": "CF14426",
+      "orth": "ϯϣⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14225,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6895",
+      "bibliography": "CD 612a; KoptHWb 340; ChLCS 84a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲓⲛⲉ ⲇⲉ ⲙⲡⲉⲟⲟⲩ ⲙⲡϫⲟⲉⲓⲥ ⲛⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩⲕⲱϩⲧ ⲉϥ**ϯϣⲁϩ** ϩⲣⲁⲓ ϩⲓϫⲙⲧⲁⲡⲉ ⲙⲡⲧⲟⲟⲩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "And the appearance of the glory of the Lord was as burning fire on the top of the mountain, before the children of Israel.",
+      "source": "Exodus 24",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲱϩⲧ",
+        1,
+        11.641
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        11.581
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        11.004
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        10.022
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϯϣⲁϩ",
+          1
+        ],
+        [
+          "ϯϣⲁϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϯϣⲁϩ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ϯϣⲁϩ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϯϣⲁϩ",
+          "ϯϣⲁϩ_0_node",
+          1
+        ],
+        [
+          "ϯϣⲁϩ_0_node",
+          "ϩⲣⲁⲓ_1_post_ϯϣⲁϩ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϯϣⲁϩ",
+          "ϩⲓϫⲙ_1_post_ϯϣⲁϩ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ϯϣⲁϩ",
+          "ⲧ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲓϫⲙ",
+          "ⲁⲡⲉ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13822,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6207",
+      "label": "ϣⲁϩ",
+      "pos": "N",
+      "gloss": "flame, fire"
+    }
+  ]
+}

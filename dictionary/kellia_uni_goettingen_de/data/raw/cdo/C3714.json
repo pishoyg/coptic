@@ -1,0 +1,131 @@
+{
+  "id": "C3714",
+  "forms": [
+    {
+      "id": "CF9342",
+      "orth": "ⲥⲣⲟⲙⲣⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲣⲙⲣⲱⲙ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5963,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲣⲉⲙⲣⲱⲙ⸗",
+      "dialect": "S",
+      "id": "530.2"
+    },
+    {
+      "orth": "ⲥⲣⲙⲣⲱⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5963,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲣⲙⲣⲟⲙⲧ†",
+      "dialect": "S",
+      "id": "530.4"
+    },
+    {
+      "orth": "ⲥⲣⲉⲙⲣⲱⲙ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4383,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲣⲉⲙⲣⲱⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4383,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲣⲁⲙⲣⲙ",
+      "dialect": "A",
+      "id": "530.7"
+    },
+    {
+      "orth": "ⲥⲣⲙⲣⲱⲙ⸗",
+      "dialect": "A",
+      "id": "530.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4220",
+      "bibliography": "CD 356a; KoptHWb 195; ChLCS 50a"
+    },
+    {
+      "id": "CS4221",
+      "bibliography": "CD 356a"
+    },
+    {
+      "id": "CS4222",
+      "bibliography": "CD 356a; KoptHWb 195; DELC 196; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲣⲕⲁⲡⲙⲁ ⲙⲡⲥⲁⲧⲁⲛⲁⲥ ⲉϩⲟⲩⲛ ⲉⲣⲟ ⲉⲧⲣⲉϥⲡⲱⲱⲛⲉ ⲙⲡⲟⲩϩⲏⲧ · ⲁⲩⲱ ⲛϥ**ⲥⲣⲙⲣⲱⲙ**ⲉ ⲛⲧϩⲉ ⲛⲛⲓⲉⲥⲟⲟⲩ ⲉⲧⲟ ⲛϩⲟⲟⲗⲉ ·",
+      "english": "For you have left room for Satan inside you to transform your heart, and daze you like those sheep that become (spoiled) by moths.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲛⲟⲩϭⲟⲥⲙ ⲙⲛⲟⲩⲕⲁⲕⲉ ⲉⲩϩⲧⲙⲧⲱⲙ ⲛⲁ**ⲥⲣⲙⲣⲱⲙ**ⲟⲩ ⲉⲙⲛⲧϩⲉ ⲙⲡⲱⲧ ⲉⲗⲁⲁⲩ ⲛⲥⲁ ·",
+      "english": "There shall be darkness and the blackness of night of the densest kind which shall terrify them utterly, and there shall be no place whereunto they may flee.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5523,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3704",
+      "type": "cf",
+      "label": "go astray, lead astray"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3715",
+      "label": "ⲥⲣⲟⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "stupefaction, error, straying"
+    }
+  ],
+  "etym": {
+    "egy_num": "131840",
+    "egy_lemma": "zbnbn",
+    "english": "to wander",
+    "german": "sich ergehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131840"
+  }
+}

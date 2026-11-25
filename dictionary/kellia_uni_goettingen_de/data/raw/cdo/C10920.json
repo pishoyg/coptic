@@ -1,0 +1,176 @@
+{
+  "id": "C10920",
+  "forms": [
+    {
+      "id": "CF29808",
+      "orth": "ⲭⲁⲗⲃⲁⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29810",
+      "orth": "ⲭⲁⲗⲃⲁⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7640,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF29809",
+      "orth": "ⲭⲁⲗⲃⲁⲛⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29811",
+      "orth": "ⲭⲁⲣⲃⲁⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15106",
+      "bibliography": "DDGLC",
+      "cu_ID": "1686"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲭⲁⲗⲃⲁⲛⲏ** ⸗ ⲃⲱⲧⲉ ⲛⲁϥ ⲛⲉⲃⲓⲱ ⸗ ⲕⲉⲛⲧⲁⲩⲣⲓⲟⲛ",
+      "english": "Galbanum, sweat of a honey-bee, centaury (?).",
+      "source": "PCM 1.5: Procedure for the healing of internal organs",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩϭⲓⲛⲁⲙⲱⲙⲟⲛ ⲁⲩⲱ ⲟⲩϣⲉ ⲛⲥⲱⲧϥ ⲙⲛⲟⲩⲁⲥⲡⲁⲗⲁⲑⲟⲥ ⲛⲁⲣⲱⲙⲁⲧⲁ ⲁⲓϯ ⲙⲡⲁⲥⲧⲟⲓ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩ**ⲭⲁⲗⲃⲁⲛⲏ** ⲙⲛⲟⲩⲉⲓⲃ ⲙⲛⲟⲩⲥⲧⲁⲕⲧⲏ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲗϩⲱⲃ ⲛⲗⲓⲃⲁⲛⲟⲥ ϩⲛⲟⲩⲥⲕⲏⲛⲏ",
+      "english": "I gave a sweet smell like cinnamon and aspalathus, and I yielded a pleasant odour like the best myrrh, as galbanum, and onyx, and sweet storax, and as the fume of frankincense in the tabernacle.",
+      "source": "Sirach 24",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟⲛⲩⲝ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲑⲟⲓⲛⲟⲩϥⲓ",
+        1,
+        14.051
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        10.997
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.509
+      ]
+    ],
+    "S": [
+      [
+        "ⲇⲉⲓⲛⲁ",
+        1,
+        15.428
+      ],
+      [
+        "ⲉⲓⲃ",
+        1,
+        14.428
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲭⲁⲗⲃⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲃⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲃⲁⲛⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲭⲁⲗⲃⲁⲛⲏ",
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲃⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲃⲁⲛⲏ",
+          "ⲭⲁⲗⲃⲁⲛⲏ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲁⲗⲃⲁⲛⲏ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7185,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2341",
+    "grl_lemma": "χαλβάνη",
+    "grl_meaning": "the resinous juice of all-heal (Ferula galbaniflua)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1971a; Preisigke 2:715; Muraoka 2009, 272b"
+  }
+}

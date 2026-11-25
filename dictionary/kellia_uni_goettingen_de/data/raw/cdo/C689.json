@@ -1,0 +1,64 @@
+{
+  "id": "C689",
+  "forms": [
+    {
+      "id": "CF2620",
+      "orth": "ⲙⲛⲧϣⲁⲉⲛⲉϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS827",
+      "bibliography": "CD 57b; ChLCS 11b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C687",
+      "label": "ϣⲁⲉⲛⲉϩ",
+      "pos": "N",
+      "gloss": "eternal"
+    },
+    {
+      "target": "C688",
+      "label": "ϣⲁⲉⲛⲉϩ",
+      "pos": "ADV",
+      "gloss": "forever"
+    },
+    {
+      "target": "C684",
+      "label": "ⲉⲛⲉϩ",
+      "pos": "N",
+      "gloss": "eternity; age, period of time"
+    },
+    {
+      "target": "C685",
+      "label": "ⲉⲛⲉϩ",
+      "pos": "N",
+      "gloss": "eternal"
+    },
+    {
+      "target": "C686",
+      "label": "ⲉⲛⲉϩ",
+      "pos": "ADV",
+      "gloss": "forever, eternally, ever"
+    }
+  ]
+}

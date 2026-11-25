@@ -1,0 +1,104 @@
+{
+  "id": "C8487",
+  "forms": [
+    {
+      "id": "CF19928",
+      "orth": "ⲁⲣⲱⲙⲁⲧⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19929",
+      "orth": "ⲁⲣⲱⲙⲁⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18710,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF19930",
+      "orth": "ⲁⲣⲱⲙⲁⲧⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9917",
+      "bibliography": "DDGLC",
+      "cu_ID": "1683"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩϭⲓⲛⲁⲙⲱⲙⲟⲛ ⲁⲩⲱ ⲟⲩϣⲉ ⲛⲥⲱⲧϥ ⲙⲛⲟⲩⲁⲥⲡⲁⲗⲁⲑⲟⲥ ⲛ**ⲁⲣⲱⲙⲁⲧⲁ** ⲁⲓϯ ⲙⲡⲁⲥⲧⲟⲓ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲭⲁⲗⲃⲁⲛⲏ ⲙⲛⲟⲩⲉⲓⲃ ⲙⲛⲟⲩⲥⲧⲁⲕⲧⲏ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲗϩⲱⲃ ⲛⲗⲓⲃⲁⲛⲟⲥ ϩⲛⲟⲩⲥⲕⲏⲛⲏ",
+      "english": "I gave a sweet smell like cinnamon and aspalathus, and I yielded a pleasant odour like the best myrrh, as galbanum, and onyx, and sweet storax, and as the fume of frankincense in the tabernacle.",
+      "source": "Sirach 24",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18328,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3093",
+    "grl_lemma": "ἄρωμα",
+    "grl_meaning": "aromatic herb or spice",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 254b"
+  }
+}

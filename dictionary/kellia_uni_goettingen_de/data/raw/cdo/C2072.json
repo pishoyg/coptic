@@ -1,0 +1,746 @@
+{
+  "id": "C2072",
+  "forms": [
+    {
+      "id": "CF5839",
+      "orth": "ⲙⲟⲉⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2081,
+        "count": 28
+      }
+    },
+    {
+      "orth": "ⲙⲱⲓⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.83,
+        "rank": 148,
+        "count": 749
+      }
+    },
+    {
+      "orth": "ⲙⲓⲧⲱⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3666,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲙⲁⲉⲓⲧ",
+      "dialect": "A",
+      "id": "316.2"
+    },
+    {
+      "orth": "ⲙⲁⲓⲧ",
+      "dialect": "F",
+      "id": "316.3"
+    },
+    {
+      "orth": "ⲙⲁⲉⲓⲧ",
+      "dialect": "L",
+      "id": "316.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2401",
+      "bibliography": "CD 188a; KoptHWb 89; ChLCS 24b"
+    },
+    {
+      "id": "CS2402",
+      "bibliography": "CD 188b-189a; KoptHWb 89"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲓ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲫⲣⲉϥϯⲥⲃⲱ ⲧⲉⲛⲓ ϫⲉⲛⲑⲟⲕ ⲟⲩⲑⲙⲏⲓ ⲟⲩⲟϩ ⲥⲉⲣⲙⲉⲗⲓⲛ ⲛⲁⲕ ⲁⲛ ϧⲁϩⲗⲓ ⲟⲩ ⲅⲁⲣ ⲕϫⲟⲩϣⲧ ⲉϩⲟ ⲛⲣⲱⲙⲓ ⲁⲛ ⲁⲗⲗⲁ ⲕϯⲥⲃⲱ ⲙⲡⲓ**ⲙⲱⲓⲧ** ⲛⲧⲉⲫⲛⲟⲩϯ ϧⲉⲛⲟⲩⲙⲉⲑⲙⲏⲓ ⲥϣⲉ ⲛϯϩⲱϯ ⲙⲡⲟⲩⲣⲟ ϣⲁⲛ ⲙⲙⲟⲛ ⲛⲧⲉⲛϯ ϣⲁⲛ ⲛⲧⲉⲛϣⲧⲉⲙϯ .",
+      "english": "When they had come, they asked him, 'Teacher, we know that you are honest, and don't defer to anyone; for you aren't partial to anyone, but truly teach the way of God. Is it lawful to pay taxes to Caesar, or not?",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϩⲣⲟⲟⲩ ⲙⲡⲉⲧⲱϣ ⲉⲃⲟⲗ ϩⲛⲧⲉⲣⲏⲙⲟⲥ ϫⲉⲥⲟⲩⲧⲛ ⲧⲉϩⲓⲏ ⲙⲡϫⲟⲉⲓⲥ ⲛⲧⲉⲧⲛⲥⲟⲩⲧⲛ ⲛⲉϥ**ⲙⲟⲉⲓⲧ** .",
+      "english": "The voice of one crying in the wilderness, &apos;Make ready the way of the Lord! Make his paths straight!&apos;&apos;",
+      "source": "41_Mark_1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲓ ⲇⲉ ⲉⲩϩⲓⲡⲓ**ⲙⲱⲓⲧ** ⲉⲧⲁϥϧⲱⲛⲧ ⲉⲡⲓⲧⲟⲡⲟⲥ ⲛⲧⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ⲡϫⲱⲗ ϣⲁⲧⲉⲛⲟⲩⲙⲓⲗⲓⲟⲛ ⲕⲁⲧⲁⲟⲩϯⲙⲁϯ ⲇⲉ ⲛⲁⲣⲉⲟⲩⲟⲛ ϩⲁⲛⲙⲏϣ ⲛⲁⲣⲭⲱⲛ ⲛⲧⲉϯⲡⲟⲗⲓⲥ ϣⲙⲓⲛ ϧⲁⲧⲟⲧϥ ⲉϥϯⲥⲃⲱ ⲛⲱⲟⲩ ⲉⲛⲏ ⲉⲧⲉⲣⲛⲟϥⲣⲓ ⲉⲛⲟⲩⲯⲩⲭⲏ",
+      "english": "But while they were still on the way, they approached the place of the holy Apa Pjol, with about a mile to reach it, there was a crowd of nobles of the city of Shmin with him, while he was teaching them the things that were good for their soul.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲡⲟⲟⲛⲉϥ ⲇⲉ ⲉⲃⲟⲗ ϩⲙⲡ**ⲙⲟⲉⲓⲧ** ⲛⲣⲱⲙⲉ ⲇⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲡⲁⲣⲁⲅⲉ ⲉⲩⲟⲩⲏϩ ⲛⲥⲁⲓⲱⲁⲃ ⲉⲡⲱⲧ ⲛⲥⲁⲥⲁⲃⲉⲉ ⲡϣⲏⲣⲉ ⲛⲃⲟⲭⲟⲣⲓ",
+      "english": "And when he was quickly removed from the road, every man of Israel passed after Joab to pursue after Sabee the son of Bochori.",
+      "source": "II Samuel 20",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ϧⲉⲛⲡϫⲓⲛⲑⲣⲉϥⲥⲓϯ ⲟⲩⲟϩ ⲟⲩⲁⲓ ⲙⲉⲛ ⲁϥϩⲉⲓ ⲉⲥⲕⲉⲛⲡⲓ**ⲙⲱⲓⲧ** ⲟⲩⲟϩ ⲁⲩⲓ ⲛϫⲉⲛⲓϩⲁⲗⲁϯ ⲁⲩⲟⲩⲟⲙϥ",
+      "english": "and it happened, as he sowed, some seed fell by the road, and the birds came and devoured it.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲛⲛⲉϩⲟⲟⲩ ⲛⲥⲁⲙⲉ ⲅⲁⲣ ⲡϣⲏⲣⲉ ⲛⲁⲛⲁⲧⲉ ϩⲛⲛⲉϩⲟⲟⲩ ⲛⲓⲁⲏⲗ ⲁⲩⲱϫⲛ ⲛϭⲓⲛⲉⲣⲣⲱⲟⲩ ⲁⲩⲕⲁⲛⲉϩⲓⲟⲟⲩⲉ ⲉⲃⲟⲗ ⲁⲩⲱ ⲁⲩⲙⲟⲟϣⲉ ϩⲛⲙ**ⲙⲟⲉⲓⲧ** ⲉⲧϭⲟⲟⲩϭ ⲉⲧϭⲟⲟⲙⲉ",
+      "english": "In the days of Samegar son of Anath, in the days of Jael, they deserted the ways, and went in by-ways; they went in crooked paths.",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲓ",
+        176,
+        31.916
+      ],
+      [
+        "ⲙⲟϣⲓ",
+        113,
+        30.49
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        334,
+        30.231
+      ],
+      [
+        "ⲡⲓ",
+        276,
+        30.096
+      ],
+      [
+        "ⲫ",
+        207,
+        29.645
+      ],
+      [
+        "ⲥⲟⲩⲧⲱⲛ",
+        49,
+        29.585
+      ],
+      [
+        "ⲙ",
+        238,
+        29.267
+      ],
+      [
+        ".",
+        218,
+        28.921
+      ],
+      [
+        "ⲁ",
+        240,
+        28.71
+      ],
+      [
+        "ⲉⲧ",
+        178,
+        28.679
+      ],
+      [
+        "ⲉ",
+        227,
+        28.497
+      ],
+      [
+        "ⲛⲧⲉ",
+        162,
+        28.086
+      ],
+      [
+        "ⲡ",
+        169,
+        27.822
+      ],
+      [
+        "ⲛ",
+        201,
+        27.544
+      ],
+      [
+        "ϧⲉⲛ",
+        147,
+        27.362
+      ],
+      [
+        "ⲟⲩ",
+        184,
+        27.325
+      ],
+      [
+        "ϩⲱⲟⲩ",
+        37,
+        26.927
+      ],
+      [
+        "ϯ",
+        114,
+        26.789
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        113,
+        26.764
+      ],
+      [
+        "ϥ",
+        166,
+        26.549
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.791
+      ],
+      [
+        "ⲭⲉⲗⲑⲓ",
+        1,
+        15.791
+      ],
+      [
+        "ⲁⲥⲏⲗ",
+        1,
+        15.791
+      ],
+      [
+        "ϫⲓ",
+        11,
+        14.735
+      ],
+      [
+        "ⲥⲟⲩⲧⲛ",
+        3,
+        14.437
+      ],
+      [
+        "ϩⲏⲧ",
+        9,
+        13.649
+      ],
+      [
+        "ϭⲟⲟⲩϭ",
+        1,
+        13.469
+      ],
+      [
+        "ⲁⲙⲉⲥⲥⲁⲉⲓ",
+        1,
+        12.791
+      ],
+      [
+        "ϥ",
+        19,
+        12.458
+      ],
+      [
+        ".",
+        11,
+        12.128
+      ],
+      [
+        "ⲙ",
+        14,
+        11.966
+      ],
+      [
+        "ⲛ",
+        18,
+        11.511
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        4,
+        11.429
+      ],
+      [
+        "ⲁ",
+        13,
+        11.338
+      ],
+      [
+        "ⲣϩⲱⲧ",
+        1,
+        11.206
+      ],
+      [
+        "ⲧⲥⲁⲃⲟ",
+        2,
+        11.083
+      ],
+      [
+        "ⲁⲩⲱ",
+        10,
+        10.906
+      ],
+      [
+        "ⲧ",
+        9,
+        10.773
+      ],
+      [
+        "ⲣϭⲱⲃ",
+        1,
+        10.469
+      ],
+      [
+        "ⲟⲩ",
+        10,
+        10.378
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          25
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲉⲓⲧ",
+          3
+        ],
+        [
+          "ϩⲏⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϭⲟⲟⲩϭ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ_b",
+          1
+        ],
+        [
+          "ϭⲟⲟⲙⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲁⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲉⲣⲛ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓⲧ",
+          5
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲙⲟⲟϣⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ⲉⲓ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲣϩⲱⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲙⲣⲁϣ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ϩⲏⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          "ϭⲟⲟⲩϭ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϭⲟⲟⲩϭ_2_post_ⲉⲧ",
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲟⲉⲓⲧ_b",
+          "ϭⲟⲟⲙⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲉ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲥ_4_post_ⲁⲁⲥ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲁⲁⲥ",
+          "ⲛⲁ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲧ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲛ_2_post_ⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲱⲧ",
+          "ⲟⲩⲱⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲉⲣⲛ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲛ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲛⲉ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲛ_1_post_ⲙⲟⲉⲓⲧ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲙ_1_post_ⲙⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲟϣⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲛⲉⲕ_1_pre_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲟⲉⲓⲧ",
+          "ⲙⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙⲛ_2_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲉⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛ",
+          "ⲉϩⲟⲩⲛ_3_post_ⲉⲓ",
+          2
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ⲉⲓ",
+          "ⲁⲩⲱ_4_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲃⲱⲕ",
+          "ⲛ_4_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓⲧ_0_node",
+          "ⲛ_2_post_ⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣϩⲱⲧ",
+          "ⲣϩⲱⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ⲉⲓ",
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲙⲣⲁϣ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ⲙⲟⲉⲓⲧ",
+          "ⲛ_2_post_ϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1835,
+      "count": 28
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2079",
+      "label": "ϫⲁϫⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "making path rough, difficult(?)"
+    },
+    {
+      "target": "C2077",
+      "label": "ϫⲁⲩⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    },
+    {
+      "target": "C2074",
+      "label": "ϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "V",
+      "gloss": "take road, lead, guide"
+    },
+    {
+      "target": "C2073",
+      "label": "ϯ ⲙⲡⲓⲙⲱⲓⲧ",
+      "pos": "V",
+      "gloss": "give way, occasion"
+    },
+    {
+      "target": "C2076",
+      "label": "ⲙⲉⲧⲣⲉϥϭⲓⲙⲱⲓⲧ",
+      "pos": "N",
+      "gloss": "leading, guidance"
+    },
+    {
+      "target": "C2078",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲁⲩⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leadership"
+    },
+    {
+      "target": "C2080",
+      "label": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "track"
+    },
+    {
+      "target": "C2081",
+      "label": "ⲙⲱⲓⲧ ⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passage"
+    },
+    {
+      "target": "C2075",
+      "label": "ⲣⲉϥϫⲓⲙⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "leader, guide"
+    }
+  ],
+  "etym": {
+    "egy_num": "77960",
+    "egy_lemma": "mṯn",
+    "demo_num": "d2354",
+    "demo_lemma": "mjt",
+    "english": "road; path; (correct) path (through life) (metaph.)",
+    "german": "Weg; rechte Lebensweise (bildl.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/77960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2354"
+  }
+}

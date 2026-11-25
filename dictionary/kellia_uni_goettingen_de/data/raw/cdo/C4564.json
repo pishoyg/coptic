@@ -1,0 +1,57 @@
+{
+  "id": "C4564",
+  "forms": [
+    {
+      "id": "CF11085",
+      "orth": "ϫⲓⲛⲧⲥⲁⲃⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5153",
+      "bibliography": "CD 435a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C12355",
+      "type": "cf",
+      "label": "weise person"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4563",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲥⲁⲃⲟ",
+      "pos": "N",
+      "gloss": "teaching"
+    },
+    {
+      "target": "C4561",
+      "label": "ⲧⲥⲁⲃⲟ",
+      "pos": "V",
+      "gloss": "make wise, teach, show"
+    },
+    {
+      "target": "C4562",
+      "label": "ⲧⲥⲁⲃⲟ",
+      "pos": "N",
+      "gloss": "teaching, instruction"
+    }
+  ]
+}

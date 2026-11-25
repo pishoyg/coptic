@@ -1,0 +1,75 @@
+{
+  "id": "C290",
+  "forms": [
+    {
+      "id": "CF1212",
+      "orth": "ⲣϣⲁⲣⲁϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1213",
+      "orth": "ⲉⲣϣⲁⲣⲁϩⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS322",
+      "bibliography": "CD 24b; ChLCS 6b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C288",
+      "label": "ϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short-lived, ephemeral"
+    },
+    {
+      "target": "C284",
+      "label": "ⲁϩⲉ",
+      "pos": "N",
+      "gloss": "length, limit of life"
+    },
+    {
+      "target": "C287",
+      "label": "ⲉⲣⲛⲉⲃⲁϩⲓ",
+      "pos": "V",
+      "gloss": "live a long life, be long-lived"
+    },
+    {
+      "target": "C286",
+      "label": "ⲙⲉⲧⲛⲉⲃⲁϩⲓ",
+      "pos": "N",
+      "gloss": "longevity"
+    },
+    {
+      "target": "C289",
+      "label": "ⲙⲛⲧϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short life"
+    },
+    {
+      "target": "C285",
+      "label": "ⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "pass/spend one's life"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "id": "C430",
+  "forms": [
+    {
+      "id": "CF1807",
+      "orth": "ϩⲁⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5933,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF1808",
+      "orth": "ϩⲁⲃⲁⲗ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "collocPrep": "ⲛ-",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS518",
+      "bibliography": "CD 36ab; KoptHWb 23; ChLCS 8a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲛⲧⲉⲣⲟⲩⲥⲱⲧⲙ ⲁⲩⲧⲁϫⲣⲟ ⲉⲧⲃⲉⲡϣⲁϫⲉ , ϫⲉⲉⲩⲉϩⲁⲣⲉϩ ⲉⲣⲟⲟⲩ **ϩⲁⲃⲟⲗ** ϩⲁⲡϫⲓϩⲣⲁϥ ⲛⲛⲃⲁⲗ .",
+      "english": "After hearing him they became strengthened thanks to his story, that they should guard themselves against raising their eyes.",
+      "source": "Apophthegmata Patrum Sahidic 019: Presbyter",
+      "urn": "urn:cts:copticLit:ap.19.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡϩⲙϩⲁⲗ ⲛⲁⲧϣⲁⲩ ⲛⲧⲉⲧⲛⲛⲟⲩϫⲉ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲉⲡⲕⲁⲕⲉ ⲉⲧ**ϩⲁⲃⲟⲗ** ⲉϥⲛⲁϣⲱⲡⲉ ⲙⲙⲁⲩ ⲛϭⲓⲡⲣⲓⲙⲉ ⲁⲩⲱ ⲡϭⲁϩϭϩ ⲛⲛⲟⲃϩⲉ .",
+      "english": "Throw out the unprofitable servant into the outer darkness, where there will be weeping and gnashing of teeth.'",
+      "source": "40_Matthew_25",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲣⲉϩ",
+        2,
+        12.525
+      ],
+      [
+        "ⲉⲩⲉ",
+        2,
+        12.438
+      ],
+      [
+        "ⲕⲁⲕⲉ",
+        1,
+        10.016
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.439
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5492,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C415",
+      "type": "cf",
+      "label": "the outside"
+    },
+    {
+      "target": "C6333",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

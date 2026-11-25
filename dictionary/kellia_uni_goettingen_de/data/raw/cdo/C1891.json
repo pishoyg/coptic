@@ -1,0 +1,128 @@
+{
+  "id": "C1891",
+  "forms": [
+    {
+      "id": "CF5428",
+      "orth": "ⲙⲛⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12388,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲙⲟⲛⲧⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 990,
+        "count": 51
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "EXIST",
+    "note": "Ausdruck des Nicht-Habens",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2201",
+      "bibliography": "CD 167b; KoptHWb 93"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲛ ⲁⲛⲟⲕ ⲙⲙⲁⲩⲁⲧ ⲛⲉⲙⲃⲁⲣⲛⲁⲃⲁⲥ ⲉⲧⲉ**ⲙⲙⲟⲛⲧⲉ**ⲛ ⲉⲣϣⲓϣⲓ ⲙⲙⲁⲩ ⲉϣⲧⲉⲙⲉⲣϩⲱⲃ .",
+      "english": "Or have only Barnabas and I no right to not work?",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉ**ⲙⲛⲧ**ϥ ⲟⲉⲓⲕ ϩⲛⲧⲉϥⲣⲓ ·",
+      "english": "and he didn’t have bread in his cell.",
+      "source": "Apophthegmata Patrum Sahidic 045",
+      "urn": "urn:cts:copticLit:ap.45.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲧⲉ ⲟⲩⲟⲛⲛⲧⲁϥ ⲉⲩⲉϯ ⲛⲁϥ ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲉ **ⲙⲙⲟⲛⲛⲧⲁ**ϥ ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲉ ⲛⲧⲟⲧϥ ϣⲁⲩⲟⲗϥ ⲛⲧⲟⲧϥ .",
+      "english": "For whoever has, to him will more be given, and he who doesn't have, even that which he has will be taken away from him.'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲫⲩⲥⲓⲥ ⲇⲉ ⲙⲡⲛⲟⲩⲧⲉ **ⲙⲛⲧ**ⲥ ⲁⲣⲭⲏ ·",
+      "english": "The nature of God is without beginning.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲓ ⲉⲃⲟⲗ ⲁϥⲛⲁⲩ ⲉⲟⲩⲙⲏϣ ⲉϥⲟϣ ⲟⲩⲟϩ ⲁϥϣⲉⲛϩⲏⲧ ϧⲁⲣⲱⲟⲩ ϫⲉⲛⲁⲩⲟⲓ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲉⲥⲱⲟⲩ **ⲙⲙⲟⲛⲧ**ⲟⲩ ⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϯⲥⲃⲱ ⲛⲱⲟⲩ ⲛϩⲁⲛⲙⲏϣ",
+      "english": "Jesus came out, saw a great multitude, and he had compassion on them, because they were like sheep without a shepherd, and he began to teach them many things.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲙⲛⲧⲁ**ⲓϩⲱⲃ ·",
+      "english": "I have nothing.'",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2532",
+      "type": "cf",
+      "label": "prep. indicating possession, ownership"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1895",
+      "label": "ϫⲛ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "or not, or else, rather"
+    },
+    {
+      "target": "C1894",
+      "label": "ⲉϣϫⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1893",
+      "label": "ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1890",
+      "label": "ⲙⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "not to be, there is not"
+    },
+    {
+      "target": "C1892",
+      "label": "ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "no; if not, else"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2436",
+    "demo_lemma": "mn-mtw",
+    "english": "not have (see also under bn); [without specifying the \"possession",
+    "german": "nicht haben (vgl. auch unter bn); [ohne Angabe des \"Besitzes",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2436"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "C1000",
+  "forms": [
+    {
+      "id": "CF3354",
+      "orth": "ⲙⲉⲧϣⲁⲣⲓⲱϯ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1161",
+      "bibliography": "CD 87b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6014",
+      "type": "cf",
+      "label": "being small, short"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C999",
+      "label": "ⲉⲓⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "dew"
+    }
+  ]
+}

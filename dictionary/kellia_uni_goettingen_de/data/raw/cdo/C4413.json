@@ -1,0 +1,143 @@
+{
+  "id": "C4413",
+  "forms": [
+    {
+      "id": "CF10778",
+      "orth": "ⲧⲁⲡⲟⲩⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18736,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4998",
+      "bibliography": "KoptHWb 239; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲩⲟⲩⲉϣⲧⲱⲕⲥ ⲛⲟⲩϣⲙⲟⲩ ⲉⲟⲩ**ⲧⲁⲡⲟⲩⲱϣ** ⲛⲟⲩⲱⲛⲉ ϣⲁⲣⲉⲡⲛⲟⲃⲉ ϩⲱⲱϥ ⲉⲓ ϩⲛⲧⲙⲏⲧⲉ ⲛϯⲉⲃⲟⲗ ϩⲓϣⲱⲡ",
+      "english": "As a nail sticketh fast between the joinings of the stones; so doth sin stick close between buying and selling.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲙⲟⲩ",
+        1,
+        16.691
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        11.926
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲡⲟⲩⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁⲡⲟⲩⲱϣ_0_node",
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲱⲛⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18354,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5263",
+      "type": "cf",
+      "label": "cleft, gap"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4412",
+      "label": "ϩⲁⲙⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "needle, peg"
+    },
+    {
+      "target": "C4411",
+      "label": "ⲙⲉϩⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "needle, peg"
+    },
+    {
+      "target": "C4410",
+      "label": "ⲧⲱⲡ",
+      "pos": "V",
+      "gloss": "stitch, stop, caulk"
+    }
+  ]
+}

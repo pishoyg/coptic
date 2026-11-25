@@ -1,0 +1,165 @@
+{
+  "id": "C1814",
+  "forms": [
+    {
+      "id": "CF5223",
+      "orth": "ϭⲓⲛⲙⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10025,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2117",
+      "bibliography": "CD 160a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲑⲗⲟⲫⲟⲣⲟⲥ ⲇⲉ ⲙⲙⲁⲣⲧⲩⲣⲟⲥ ϣⲁⲩϩⲱⲧⲡ ⲙⲉⲛ ϩⲙⲡⲥⲱⲙⲁ ϩⲓⲧⲛⲧⲉⲩ**ϭⲓⲛⲙⲟⲩ** ·",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        10.56
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        10.438
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲓⲛⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲙⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲓⲛⲙⲟⲩ",
+          "ϭⲓⲛⲙⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9600,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1817",
+      "label": "ⲁⲧⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "immortal"
+    },
+    {
+      "target": "C1818",
+      "label": "ⲙⲛⲧⲁⲧⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deathlessness, immortality"
+    },
+    {
+      "target": "C1809",
+      "label": "ⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "die"
+    },
+    {
+      "target": "C1810",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "death"
+    },
+    {
+      "target": "C1811",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1816",
+      "label": "ⲡⲁϣⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "half-dead"
+    },
+    {
+      "target": "C1815",
+      "label": "ⲣⲉϥⲓⲣⲓ ⲙⲫⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1813",
+      "label": "ⲣⲉϥⲙⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "dead person, thing"
+    },
+    {
+      "target": "C1812",
+      "label": "ⲣⲉϥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "dead, mortal"
+    }
+  ]
+}

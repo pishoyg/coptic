@@ -1,0 +1,45 @@
+{
+  "id": "C4390",
+  "forms": [
+    {
+      "id": "CF10732",
+      "orth": "ϭⲓⲛⲧⲁⲛϩⲟⲩⲧ⸗",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4973",
+      "bibliography": "CD 422a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C2676",
+      "type": "cf",
+      "label": "trust, believe"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4389",
+      "label": "ⲧⲁⲛϩⲟⲩⲧ",
+      "pos": "V",
+      "gloss": "trust, believe"
+    }
+  ]
+}

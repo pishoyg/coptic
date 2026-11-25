@@ -1,0 +1,460 @@
+{
+  "id": "C417",
+  "forms": [
+    {
+      "id": "CF1736",
+      "orth": "ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 113.85,
+        "rank": 15,
+        "count": 17963
+      }
+    },
+    {
+      "orth": "ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 126.69,
+        "rank": 20,
+        "count": 10745
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS503",
+      "bibliography": "CD 34ab; KoptHwb 23; ChLCS 8a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉ **ⲉⲃⲟⲗ** ϩⲓⲧⲟⲧϥ .",
+      "english": "He then departed from him.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲕⲱ ⲛⲁⲓ **ⲉⲃⲟⲗ** ⲻ",
+      "english": "But he said, 'Forgive me.'",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲣⲏϯ ⲁϥⲓ **ⲉⲃⲟⲗ** ϩⲓⲧⲉⲛⲛⲉϥⲓⲟϯ ⲁϥϩⲱⲗ ⲉⲡϣⲁϥⲉ .",
+      "english": "Thus he left his parents and went into the desert.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲁϥϫⲱⲕ **ⲉⲃⲟⲗ** ⲛⲛⲉⲩⲁⲓⲧⲏⲙⲁ ⲧⲏⲣⲟⲩ ·",
+      "english": "filling all their requests,",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥⲁⲙⲁϩⲓ ⲛϫⲉϯⲥⲟⲫⲓⲁ **ⲉⲃⲟⲗ** ϧⲉⲛⲛⲉⲥϩⲃⲏⲟⲩⲓ .",
+      "english": "Thus, Wisdom was fulfilled by its deeds.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲁⲣⲉⲡⲛⲟⲩⲧⲉ ⲕⲁⲁⲩ ⲛⲁⲓ **ⲉⲃⲟⲗ**",
+      "english": "May God forgive me these!'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲉⲛ",
+        4374,
+        28.656
+      ],
+      [
+        "ⲛ",
+        4915,
+        27.988
+      ],
+      [
+        "ϩⲓⲧⲉⲛ",
+        1277,
+        27.85
+      ],
+      [
+        "ⲟⲩ",
+        4468,
+        27.739
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3994,
+        27.579
+      ],
+      [
+        "ϥ",
+        3931,
+        26.855
+      ],
+      [
+        "ϩⲁ",
+        1172,
+        26.728
+      ],
+      [
+        "ⲉ",
+        3321,
+        26.718
+      ],
+      [
+        "ⲡⲓ",
+        2584,
+        26.386
+      ],
+      [
+        "ⲙ",
+        2653,
+        26.312
+      ],
+      [
+        "ⲛⲓ",
+        2280,
+        26.291
+      ],
+      [
+        "ⲛⲧⲉ",
+        2298,
+        26.173
+      ],
+      [
+        "ⲁ",
+        2906,
+        26.113
+      ],
+      [
+        ".",
+        2501,
+        26.09
+      ],
+      [
+        "ϩⲓⲧⲟⲧ",
+        629,
+        25.824
+      ],
+      [
+        "ⲛϫⲉ",
+        1571,
+        25.055
+      ],
+      [
+        "ⲧ",
+        1231,
+        24.93
+      ],
+      [
+        "ⲡ",
+        1802,
+        24.674
+      ],
+      [
+        "ⲉⲧ",
+        1457,
+        24.386
+      ],
+      [
+        "ⲩ",
+        1382,
+        24.027
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1503,
+        38.126
+      ],
+      [
+        "ⲛ",
+        16992,
+        31.834
+      ],
+      [
+        "ϩⲛ",
+        8329,
+        31.418
+      ],
+      [
+        "ⲡ",
+        10454,
+        30.419
+      ],
+      [
+        "ϩⲙ",
+        4137,
+        29.323
+      ],
+      [
+        "ⲙ",
+        5382,
+        28.4
+      ],
+      [
+        "ϥ",
+        6427,
+        28.338
+      ],
+      [
+        "ⲁ",
+        5233,
+        27.971
+      ],
+      [
+        "ⲁⲩⲱ",
+        4330,
+        27.854
+      ],
+      [
+        "ⲙⲧⲟ",
+        1525,
+        27.609
+      ],
+      [
+        "ϩⲓⲧⲟⲟⲧ",
+        1060,
+        27.432
+      ],
+      [
+        "ⲧ",
+        3634,
+        27.42
+      ],
+      [
+        "ϫⲉ",
+        3360,
+        27.156
+      ],
+      [
+        "ⲟⲩ",
+        4131,
+        27.124
+      ],
+      [
+        "ⲉ",
+        4299,
+        26.893
+      ],
+      [
+        ".",
+        2378,
+        26.071
+      ],
+      [
+        "ⲩ",
+        2730,
+        25.921
+      ],
+      [
+        "ⲡⲉ",
+        2241,
+        25.765
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        719,
+        25.597
+      ],
+      [
+        "ⲉⲓ",
+        1329,
+        25.403
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 113.21,
+      "rank": 15,
+      "count": 17968
+    },
+    "B": {
+      "rate": 126.59,
+      "rank": 19,
+      "count": 10745
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C415",
+      "type": "cf",
+      "label": "the outside"
+    },
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    },
+    {
+      "target": "C6679",
+      "type": "ant",
+      "label": "Adv."
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ],
+  "etym": {
+    "egy_num": "91970",
+    "egy_lemma": "r-bnr",
+    "demo_num": "d3369",
+    "demo_lemma": "r-bnr",
+    "english": "beyond",
+    "german": "hinaus",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/91970",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3369"
+  }
+}

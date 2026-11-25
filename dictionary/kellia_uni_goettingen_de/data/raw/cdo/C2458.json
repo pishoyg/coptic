@@ -1,0 +1,790 @@
+{
+  "id": "C2458",
+  "forms": [
+    {
+      "id": "CF6698",
+      "orth": "ⲛⲕⲟⲧⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.9,
+        "rank": 347,
+        "count": 457
+      }
+    },
+    {
+      "orth": "ⲛⲕⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.44,
+        "rank": 584,
+        "count": 122
+      }
+    },
+    {
+      "orth": "ⲉⲛⲕⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 636,
+        "count": 107
+      }
+    },
+    {
+      "orth": "ⲉⲛⲕⲟⲧⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2884,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ⲛⲕⲟⲧⲉ",
+      "dialect": "S",
+      "id": "388.2"
+    },
+    {
+      "orth": "ⲛⲕⲁⲧⲉ",
+      "dialect": "S",
+      "id": "388.3"
+    },
+    {
+      "orth": "ⲛⲕⲟⲧ",
+      "dialect": "S",
+      "id": "388.4"
+    },
+    {
+      "orth": "ⲛⲕⲟⲧⲕⲉ",
+      "dialect": "S",
+      "id": "388.5"
+    },
+    {
+      "orth": "ⲛⲕⲟⲕⲧⲉ",
+      "dialect": "S",
+      "id": "388.6"
+    },
+    {
+      "orth": "ⲛⲕⲁⲧⲉ",
+      "dialect": "A",
+      "id": "388.7"
+    },
+    {
+      "orth": "ⲉⲛⲕⲁⲧ",
+      "dialect": "F",
+      "id": "388.8"
+    },
+    {
+      "orth": "ⲉⲛⲕⲁⲧⲕ",
+      "dialect": "F",
+      "id": "388.9"
+    },
+    {
+      "orth": "ⲛⲕⲁⲧ",
+      "dialect": "F",
+      "id": "388.10"
+    },
+    {
+      "orth": "ⲛⲕⲁⲧⲕⲉ",
+      "dialect": "L",
+      "id": "388.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2828",
+      "bibliography": "CD 224a; KoptHWb 122; DELC 142; ChLCS 32a"
+    },
+    {
+      "id": "CS2829",
+      "bibliography": "CD 224a; KoptHWb 122; DELC 142; ChLCS 32a"
+    },
+    {
+      "id": "CS2830",
+      "bibliography": "CD 224a; KoptHWb 122; DELC 142; ChLCS 32a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲉⲙⲡⲟⲩϣϫⲉⲙϫⲟⲙ ⲛⲉⲛϥ ⲉϧⲟⲩⲛ ⲉⲑⲃⲉⲡⲓⲙⲏϣ ⲁⲩϣⲉ ⲛⲱⲟⲩ ⲉϫⲉⲛⲡϫⲉⲛⲉⲫⲱⲣ ⲁⲩϭⲱⲣⲡ ⲛϯⲟⲩⲁϩⲥⲟⲓ ⲉⲃⲟⲗ ⲛⲧⲉⲡⲓⲏⲓ ⲉⲛⲁⲩⲭⲏ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲉⲧⲁⲩϣⲱⲕⲓ ⲁⲩⲭⲱ ⲙⲡⲓϭⲗⲟϫ ⲉⲡⲉⲥⲏⲧ ⲉⲧⲉⲫⲏ ⲉⲧϣⲏⲗ ⲉⲃⲟⲗ **ⲛⲕⲟⲧ** ϩⲓⲱⲧϥ .",
+      "english": "When they could not come near to him for the crowd, they removed the roof where he was. When they had broken it up, they let down the mat that the paralytic was lying on.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲙⲉⲓ**ⲛⲕⲟⲧⲕ** ⲉⲛⲉϩ ·",
+      "english": "I never go to sleep.",
+      "source": "Apophthegmata Patrum Sahidic 102: Macarius 11",
+      "urn": "urn:cts:copticLit:ap.102.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧϣⲱⲙⲓ ⲇⲉ ⲛⲥⲓⲙⲱⲛ ⲛⲁⲥ**ⲛⲕⲟⲧ** ⲡⲉ ⲉⲥϧⲏⲙ ⲟⲩⲟϩ ⲥⲁⲧⲟⲧⲟⲩ ⲁⲩϫⲟⲥ ⲛⲁϥ ⲉⲑⲃⲏⲧⲥ .",
+      "english": "Now Simon’s wife’s mother lay sick with a fever, and immediately they told him about her.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲟⲉⲥ ⲁϥⲟⲩⲱⲙ ⲁⲩⲱ ⲁϥⲥⲱ ⲁⲡⲉϥϩⲏⲧ ⲟⲩⲛⲟϥ ⲁϥⲉⲓ ⲉⲧⲣⲉϥⲛⲕⲟⲧⲕ ϩⲛⲧⲙⲉⲣⲓⲥ ⲉⲧϩⲟⲣϭ ⲛⲧⲟⲥ ⲇⲉ ϩⲣⲟⲩⲑ ⲁⲥⲉⲓ ⲛϩⲱⲡ ⲁⲥϭⲱⲗⲡ ϩⲁⲣⲁⲧϥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲁⲥ**ⲛⲕⲟⲧⲕ**",
+      "english": "And Booz ate and drank, and his heart was glad, and he came to lie down by the side of the heap of corn; and she came secretly, and lifted up the covering of his feet.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟϥ ⲛⲁϥ**ⲛⲕⲟⲧ** ϩⲓⲫⲁϩⲟⲩ ϩⲓϫⲉⲛⲡⲓϣϣⲟⲧ ⲟⲩⲟϩ ⲁⲩⲛⲉϩⲥⲓ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲫⲣⲉϥϯⲥⲃⲱ ⲥⲉⲣⲙⲉⲗⲓⲛ ⲛⲁⲕ ⲁⲛ ϫⲉⲧⲉⲛⲛⲁⲧⲁⲕⲟ",
+      "english": "He himself was in the stern, asleep on the cushion, and they woke him up, and told him, 'Teacher, don't you care that we are dying?'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲧⲉⲧⲛϩⲱⲣⲡ ⲙⲙⲉⲉⲣⲉ ⲛⲧϩⲉ ⲛⲛⲉⲧ**ⲛⲕⲟⲧⲕ** ⲛⲧⲉⲩϣⲏ ·",
+      "english": "And you have slept in daylight like those who sleep in the night.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟϩ",
+        85,
+        24.308
+      ],
+      [
+        "ϥ",
+        69,
+        22.75
+      ],
+      [
+        "ⲥ",
+        42,
+        22.605
+      ],
+      [
+        "ϧⲉⲛ",
+        48,
+        22.518
+      ],
+      [
+        ".",
+        48,
+        22.371
+      ],
+      [
+        "ⲁ",
+        51,
+        22.007
+      ],
+      [
+        "ⲉϫⲱⲣϩ",
+        10,
+        21.847
+      ],
+      [
+        "ⲁ",
+        49,
+        21.834
+      ],
+      [
+        "ϫⲟⲩⲓ",
+        2,
+        21.695
+      ],
+      [
+        "ⲕⲉⲭⲱⲟⲩⲛⲓ",
+        2,
+        21.695
+      ],
+      [
+        "ⲉ",
+        44,
+        21.395
+      ],
+      [
+        "ϥ",
+        50,
+        21.356
+      ],
+      [
+        "ϧⲏⲙ",
+        3,
+        21.128
+      ],
+      [
+        "ⲟⲩ",
+        42,
+        20.931
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        38,
+        20.824
+      ],
+      [
+        "ϧⲉⲣϧⲉⲣ",
+        2,
+        20.695
+      ],
+      [
+        "ϫⲉⲙ",
+        9,
+        20.65
+      ],
+      [
+        "ⲛϫⲉ",
+        25,
+        20.526
+      ],
+      [
+        "ⲇⲉ",
+        21,
+        20.225
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        5,
+        20.031
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        8,
+        20.762
+      ],
+      [
+        "ϥ",
+        328,
+        20.758
+      ],
+      [
+        "ⲁ",
+        248,
+        20.071
+      ],
+      [
+        "ⲉ",
+        242,
+        19.738
+      ],
+      [
+        "ⲛ",
+        302,
+        19.688
+      ],
+      [
+        "ⲙⲁ",
+        100,
+        19.682
+      ],
+      [
+        "ⲁⲩⲱ",
+        144,
+        18.421
+      ],
+      [
+        "ⲟⲩ",
+        140,
+        17.772
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        25,
+        17.682
+      ],
+      [
+        "ϩⲛ",
+        101,
+        17.618
+      ],
+      [
+        "ⲩ",
+        109,
+        17.278
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        45,
+        17.11
+      ],
+      [
+        "ⲉⲧ",
+        91,
+        16.926
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        21,
+        16.754
+      ],
+      [
+        "ⲩϣⲏ",
+        21,
+        16.617
+      ],
+      [
+        "ⲡ",
+        117,
+        16.272
+      ],
+      [
+        "ⲙⲛ",
+        70,
+        16.196
+      ],
+      [
+        ".",
+        70,
+        16.109
+      ],
+      [
+        "ⲥ",
+        70,
+        15.826
+      ],
+      [
+        "ⲧⲉ",
+        49,
+        15.811
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          124
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          17
+        ],
+        [
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          27
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲕⲟⲧⲕ",
+          6
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲛⲕⲟⲧⲕ",
+          7
+        ],
+        [
+          "ⲥ_2_post_ⲛⲙⲙⲁ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          3
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          5
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲕⲟⲧⲕ",
+          8
+        ],
+        [
+          "ⲅ_1_pre_ⲛⲕⲟⲧⲕ",
+          3
+        ],
+        [
+          "ⲛⲙⲙ_1_post_ⲛⲕⲟⲧⲕ",
+          3
+        ],
+        [
+          "ⲉ_2_post_ⲛⲙⲙ",
+          3
+        ],
+        [
+          "ϩⲓ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲓ",
+          2
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ϩⲣϩⲣ",
+          2
+        ],
+        [
+          "ϥ_2_post_ϩⲣϩⲣ",
+          2
+        ],
+        [
+          "ϩⲣϩⲣ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲧⲃⲛⲏ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲙⲛ",
+          2
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲙⲉⲣⲓⲥ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲉⲧ_4_post_ⲙⲉⲣⲓⲥ",
+          2
+        ],
+        [
+          "ϩⲟⲣϭ_5_post_ⲉⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          6
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲩ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          2
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲛⲙⲙⲁ_1_post_ⲛⲕⲟⲧⲕ",
+          2
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲛⲕⲟⲧⲕ",
+          "ⲥ_2_post_ⲛⲙⲙⲁ",
+          2
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          "ϩⲟⲟⲩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲅ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲛⲙⲙ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛⲙⲙ_1_post_ⲛⲕⲟⲧⲕ",
+          "ⲉ_2_post_ⲛⲙⲙ",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ϩⲓ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲛⲕⲟⲧⲕ",
+          "ⲡ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓ",
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲩ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲁ_2_post_ϩⲣϩⲣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϩⲣϩⲣ",
+          "ϥ_2_post_ϩⲣϩⲣ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲣϩⲣ",
+          "ϩⲣϩⲣ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          2
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲙⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          "ⲧⲃⲛⲏ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲧⲃⲛⲏ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲁ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ⲛϩⲏⲧ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲛⲕⲟⲧⲕ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲧⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲛⲕⲟⲧⲕ",
+          "ⲛⲕⲟⲧⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲕⲟⲧⲕ_0_node",
+          "ϩⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲛⲕⲟⲧⲕ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲙⲉⲣⲓⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲓⲥ_3_post_ⲧ",
+          "ⲉⲧ_4_post_ⲙⲉⲣⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲙⲉⲣⲓⲥ",
+          "ϩⲟⲣϭ_5_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.88,
+      "rank": 291,
+      "count": 457
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2472",
+      "label": "ϭⲓⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "act of lying, sleeping"
+    },
+    {
+      "target": "C2469",
+      "label": "ⲁⲧⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C2470",
+      "label": "ⲙⲁ ⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "place of lying, couch; (sexual) cohabitation, intercourse; sleeping room"
+    },
+    {
+      "target": "C2459",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleep; sexual intercourse; death"
+    },
+    {
+      "target": "C2465",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "lie below"
+    },
+    {
+      "target": "C2466",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "lie, stay by, with"
+    },
+    {
+      "target": "C2463",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2464",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "lie in, on"
+    },
+    {
+      "target": "C2460",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉ-)",
+      "pos": "V",
+      "gloss": "sleep, lie upon"
+    },
+    {
+      "target": "C2461",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2462",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉⲃⲟⲗ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2468",
+      "label": "ⲛⲕⲟⲧⲕ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "lie with"
+    },
+    {
+      "target": "C2467",
+      "label": "ⲛⲕⲟⲧⲕ (ⲛ-)",
+      "pos": "V",
+      "gloss": "lie in"
+    },
+    {
+      "target": "C2471",
+      "label": "ⲣⲉϥⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "one who lies"
+    }
+  ],
+  "etym": {
+    "egy_num": "89190",
+    "egy_lemma": "nqdd",
+    "demo_num": "d558",
+    "demo_lemma": "ı ͗n-qdj(.ṱ.k)",
+    "english": "to sleep",
+    "german": "schlafen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89190",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d558"
+  }
+}

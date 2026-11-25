@@ -1,0 +1,519 @@
+{
+  "id": "C3099",
+  "forms": [
+    {
+      "id": "CF8072",
+      "orth": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 1007,
+        "count": 94
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3549",
+      "bibliography": "CD 295a; KoptHWb 164; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲁ ⲭⲱⲣⲓⲥⲧ**ⲙⲛⲧⲣⲱⲙⲉ** ·",
+      "english": "Will it be without (His) manhood?",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲉⲧ**ⲙⲛⲧⲣⲱⲙⲉ** ⲧⲏⲣⲥ ⲛⲁⲩ ⲉⲛⲁⲓϩⲓⲟⲩ[ⲥⲟ]ⲡ",
+      "english": "to cause all of mankind to see these together.",
+      "source": "Apophthegmata Patrum Sahidic 002: Anonymous Nau 136",
+      "urn": "urn:cts:copticLit:ap.2.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥⲙⲉϩ ⲅⲁⲣ ⲛⲟⲣⲅⲏ ⲉϩⲟⲩⲛ ⲉⲧ**ⲙⲛⲧⲣⲱⲙⲉ** ⲧⲏⲣⲥ ·",
+      "english": "For he was filled with wrath against all mankind,",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲏⲣ",
+        69,
+        19.635
+      ],
+      [
+        "ⲅⲉⲛⲟⲥ",
+        20,
+        19.373
+      ],
+      [
+        "ⲧ",
+        98,
+        19.36
+      ],
+      [
+        "ⲥ",
+        68,
+        17.982
+      ],
+      [
+        "ⲛⲧⲉ",
+        27,
+        17.082
+      ],
+      [
+        "ⲛ",
+        92,
+        16.825
+      ],
+      [
+        "ⲡ",
+        70,
+        16.33
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        12,
+        15.053
+      ],
+      [
+        "ⲕ.................",
+        1,
+        14.043
+      ],
+      [
+        "ⲥⲁⲥⲁⲁⲩ",
+        1,
+        14.043
+      ],
+      [
+        "ⲛⲁⲣϭⲟⲧ",
+        1,
+        14.043
+      ],
+      [
+        "ϥϫⲏϥ",
+        1,
+        14.043
+      ],
+      [
+        "ⲁⲗⲗⲁ......ⲁ",
+        1,
+        14.043
+      ],
+      [
+        "ⲡⲃⲁⲓⲣⲟⲟⲩϣ",
+        1,
+        14.043
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        4,
+        13.873
+      ],
+      [
+        "ⲁ",
+        31,
+        13.352
+      ],
+      [
+        "ⲩϣⲟⲟⲡ",
+        1,
+        13.043
+      ],
+      [
+        "ϥ",
+        32,
+        12.967
+      ],
+      [
+        "ⲁⲣⲁ",
+        4,
+        12.777
+      ],
+      [
+        "ⲡⲉⲓⲱⲧ",
+        1,
+        12.458
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          91
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          29
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          27
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          12
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          4
+        ],
+        [
+          "ϥϫⲏϥ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          3
+        ],
+        [
+          "ⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_3_post_ⲛⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϫⲟⲕⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϫⲟⲕⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲕⲙ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲣⲁ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲧ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          7
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          6
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          6
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          4
+        ],
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          "ϥϫⲏϥ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          "ⲙ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲕⲱⲃ",
+          "ⲯⲓⲥ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲯⲓⲥ_4_post_ⲙ",
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲱⲃ_2_post_ⲛ",
+          "ⲛ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲛⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛ",
+          "ⲣⲁⲛ_3_post_ⲛⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          "ⲧⲁⲓ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲉⲛⲧ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲧⲁⲓ",
+          "ⲁ_4_post_ϫⲟⲕⲙ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϫⲟⲕⲙ",
+          "ϥ_4_post_ϫⲟⲕⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϫⲟⲕⲙ",
+          "ϫⲟⲕⲙ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲣⲁ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲙⲛⲧⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ⲙⲛ_2_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲱⲛⲧ",
+          "ⲡ_2_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲱⲛⲧ",
+          "ⲥⲱⲛⲧ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ϫⲉ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          "ⲡ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲉ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.59,
+      "rank": 879,
+      "count": 94
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ]
+}

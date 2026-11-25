@@ -1,0 +1,239 @@
+{
+  "id": "C10318",
+  "forms": [
+    {
+      "id": "CF27432",
+      "orth": "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27435",
+      "orth": "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7998,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF27434",
+      "orth": "ⲡⲣⲟⲥⲇⲟϭⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27433",
+      "orth": "ⲡⲣⲟⲥⲇⲟϭⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13862",
+      "bibliography": "DDGLC",
+      "cu_ID": "1065"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧϩⲁⲏ ⲛⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲧⲉ **ⲡⲣⲟⲥⲇⲟⲕⲓⲁ** ⲙⲡⲙⲟⲩ ⲧⲉ ϣⲁⲥⲟⲩⲱⲙ ⲥⲁⲧⲉⲯⲩⲭⲏ ⲛⲧϩⲉ ⲛⲟⲩⲕⲱϩⲧ ·",
+      "english": "And at the end of all these (troubles) is the expectation of death, which consumeth the soul like a fire.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲥ ⲇⲉ ⲛⲧⲉⲣⲉⲡⲉϥϩⲏⲧ ϣⲱⲡⲉ ⲙⲙⲟϥ . ⲡⲉϫⲁϥ ϫⲉⲧⲉⲛⲟⲩ ⲁⲓⲉⲓⲙⲉ ⲛⲁⲙⲉ ϫⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲛⲧⲁϥⲧⲛⲛⲟⲟⲩ ⲙⲡⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲁⲩⲱ ⲁϥⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲛⲧϭⲓϫ ⲛⲁⲅⲣⲓⲡⲡⲁⲥ . ⲁⲩⲱ ⲧⲉ**ⲡⲣⲟⲥⲇⲟⲕⲓⲁ** ⲧⲏⲣⲥ ⲙⲡⲗⲁⲟⲥ ⲛⲛⲓⲟⲩⲇⲁⲓ .",
+      "english": "When Peter had come to himself, he said, 'Now I truly know that the Lord has sent out his angel and delivered me out of the hand of Herod, and from everything the Jewish people were expecting.'",
+      "source": "44_Acts of the Apostles_12",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲡⲁⲙⲉⲩⲓ",
+        1,
+        18.11
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        9.942
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        9.445
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        9.271
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲅⲣⲓⲡⲡⲁⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        11.558
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.864
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.743
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲁ_1_pre_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲇⲟⲕⲓⲁ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲇⲟⲕⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7552,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1855",
+    "grl_lemma": "προσδοκία",
+    "grl_meaning": "expectation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1507a; Preisigke 2:394"
+  }
+}

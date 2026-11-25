@@ -1,0 +1,45 @@
+{
+  "id": "C6018",
+  "forms": [
+    {
+      "id": "CF14041",
+      "orth": "ⲟⲩⲁⲙϣⲁⲁⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6703",
+      "bibliography": "CD 582b; KoptHWb 324; ChLCS 80b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6015",
+      "label": "ϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "skin, leather; parchment(?)"
+    },
+    {
+      "target": "C6017",
+      "label": "ⲃⲁⲕϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "tanner"
+    },
+    {
+      "target": "C6016",
+      "label": "ⲣⲙⲛϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "\"man of skin\"(?)"
+    }
+  ]
+}

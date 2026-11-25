@@ -1,0 +1,204 @@
+{
+  "id": "C6492",
+  "forms": [
+    {
+      "id": "CF15012",
+      "orth": "ϩⲁⲕⲗϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8278,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲁⲕⲏⲗϥ",
+      "dialect": "S",
+      "id": "2138.1"
+    },
+    {
+      "orth": "ϩⲁⲕⲉⲗϥ",
+      "dialect": "S",
+      "id": "2138.2"
+    },
+    {
+      "orth": "ϩⲁⲛⲕⲗϥ",
+      "dialect": "S",
+      "id": "2138.3"
+    },
+    {
+      "orth": "ϩⲁⲕⲗϥ",
+      "dialect": "A",
+      "id": "2138.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7203",
+      "bibliography": "CD 664a; KoptHWb 362; DELC 294b; ChLCS 89b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲙⲩⲅⲁⲗⲏ ⲙⲛⲡⲉⲭⲁⲙⲁⲓⲗⲉⲱⲛ ⲁⲩⲱ ⲡ**ϩⲁⲕⲗϥ** ⲙⲛⲧϩⲁϥⲗⲉⲉⲗⲉ ⲙⲛⲡⲉⲥⲡⲁⲗⲁⲝ",
+      "english": "the ferret, and the chameleon, and the evet, and the newt, and the mole.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡ**ϩⲁⲕⲗϥ** ⲉϥⲧⲁϫⲣⲏⲩ ⲉϫⲛⲛⲉϥϭⲓϫ ⲁⲩⲱ ⲉϥⲙⲟⲧⲛ ⲛⲧⲁⲕⲟϥ ϥⲟⲩⲏϩ ϩⲛⲛⲏⲓ ⲛⲛⲣⲣⲱⲟⲩ",
+      "english": "And the eft, which supports itself by its hands, and is easily taken, dwells in the fortresses of kings.",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁϥⲗⲉⲉⲗⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲭⲁⲙⲁⲓⲗⲉⲱⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲏϣ",
+        1,
+        13.691
+      ],
+      [
+        "ⲧⲁϫⲣⲏⲩ",
+        1,
+        12.609
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        8.425
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲕⲗϥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲕⲗϥ",
+          2
+        ],
+        [
+          "ϩⲁⲕⲗϥ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲕⲗϥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁϫⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲁϫⲣⲏⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_3_post_ⲧⲁϫⲣⲏⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲕⲗϥ",
+          "ⲡ_1_pre_ϩⲁⲕⲗϥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲕⲗϥ",
+          "ϩⲁⲕⲗϥ_0_node",
+          2
+        ],
+        [
+          "ϩⲁⲕⲗϥ_0_node",
+          "ⲉ_1_post_ϩⲁⲕⲗϥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲕⲗϥ",
+          "ϥ_3_post_ⲧⲁϫⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁϫⲣⲏⲩ",
+          "ⲧⲁϫⲣⲏⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲁϫⲣⲏⲩ_2_post_ⲉ",
+          "ⲉϫⲛ_3_post_ⲧⲁϫⲣⲏⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7834,
+      "count": 2
+    }
+  }
+}

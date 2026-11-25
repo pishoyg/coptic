@@ -1,0 +1,70 @@
+{
+  "id": "C4329",
+  "forms": [
+    {
+      "id": "CF10609",
+      "orth": "ⲧⲙⲧⲙ-",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲉⲙⲧⲱⲙ†",
+      "dialect": "S",
+      "id": "1602.1"
+    },
+    {
+      "orth": "ⲑⲟⲙⲧⲉⲙ",
+      "dialect": "B",
+      "id": "1602.2"
+    },
+    {
+      "orth": "ⲧⲟⲙⲧⲉⲙ",
+      "dialect": "B",
+      "id": "1602.3"
+    },
+    {
+      "orth": "ⲧⲉⲙⲑⲱⲙ†",
+      "dialect": "B",
+      "id": "1602.4"
+    },
+    {
+      "orth": "ⲧⲙⲧⲙ",
+      "dialect": "L",
+      "id": "1602.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4903",
+      "bibliography": "CD 417a; CED 189; KoptHWb 234; DELC 216a; ChLCS 59a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4330",
+      "label": "ⲧⲙⲧⲙ",
+      "pos": "V",
+      "gloss": "strike upon, resound"
+    },
+    {
+      "target": "C4331",
+      "label": "ⲧⲙⲧⲙ",
+      "pos": "V",
+      "gloss": "fog, smoke, darkness"
+    }
+  ],
+  "etym": {
+    "egy_num": "172340",
+    "egy_lemma": "tmtm",
+    "english": "to pulverize (med.)",
+    "german": "(Medikamente) zerquetschen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/172340"
+  }
+}

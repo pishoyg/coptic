@@ -1,0 +1,433 @@
+{
+  "id": "C6506",
+  "forms": [
+    {
+      "id": "CF15040",
+      "orth": "ϩⲙϩⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 7.94,
+        "rank": 153,
+        "count": 1253
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7217",
+      "bibliography": "CD 665a; CED 278; KoptHWb 363; DELC 296a; ChLCS 89b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲇⲉ ⲛϭⲓⲡ**ϩⲙϩⲁⲗ** ·",
+      "english": "and the servant departed.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧϩⲉ ⲙⲡⲁⲩⲗⲟⲥ ⲡ**ϩⲙϩⲁⲗ** ⲛⲓⲏⲥⲟⲩⲥ ·",
+      "english": "And like Paul, the servant of Jesus.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲉⲓⲣⲉ ⲙⲙⲟϥ ⲛ**ϩⲙϩⲁⲗ** ·",
+      "english": "and make it to be a servant,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        143,
+        31.786
+      ],
+      [
+        "ⲛ",
+        996,
+        23.398
+      ],
+      [
+        "ⲙⲛ",
+        350,
+        21.707
+      ],
+      [
+        "ⲁⲩⲱ",
+        381,
+        21.177
+      ],
+      [
+        "ⲡⲉⲕ",
+        177,
+        20.98
+      ],
+      [
+        "ⲡ",
+        474,
+        20.872
+      ],
+      [
+        "ⲛⲉϥ",
+        169,
+        20.709
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        62,
+        19.985
+      ],
+      [
+        "ϥ",
+        362,
+        19.73
+      ],
+      [
+        "ⲙ",
+        296,
+        19.688
+      ],
+      [
+        "ⲛⲉⲕ",
+        100,
+        19.427
+      ],
+      [
+        "ⲉ",
+        293,
+        19.11
+      ],
+      [
+        "ⲁ",
+        269,
+        18.967
+      ],
+      [
+        "ⲟⲩ",
+        247,
+        18.774
+      ],
+      [
+        "ϫⲉ",
+        195,
+        18.677
+      ],
+      [
+        "ⲡⲉϥ",
+        124,
+        18.668
+      ],
+      [
+        "ⲛⲉ",
+        140,
+        18.41
+      ],
+      [
+        "ⲛⲁ",
+        198,
+        18.285
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        68,
+        18.226
+      ],
+      [
+        "ⲧⲉⲕ",
+        71,
+        18.028
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲙϩⲁⲗ_0_node",
+          571
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          100
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϩⲙϩⲁⲗ",
+          101
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          54
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          47
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲙϩⲁⲗ",
+          39
+        ],
+        [
+          "ⲡ_1_pre_ϩⲙϩⲁⲗ",
+          31
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲙϩⲁⲗ",
+          25
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲙϩⲁⲗ",
+          26
+        ],
+        [
+          "ⲛ_1_pre_ϩⲙϩⲁⲗ",
+          13
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϩⲙϩⲁⲗ",
+          11
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲙϩⲁⲗ",
+          10
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ϩⲙϩⲁⲗ",
+          10
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          10
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ϩⲙϩⲁⲗ",
+          10
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲙϩⲁⲗ",
+          9
+        ],
+        [
+          "ⲓⲱⲃ_1_post_ϩⲙϩⲁⲗ",
+          8
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲙϩⲁⲗ",
+          8
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲙϩⲁⲗ",
+          7
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϩⲙϩⲁⲗ",
+          6
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲙϩⲁⲗ",
+          "ⲛⲉϥ_1_pre_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲙϩⲁⲗ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_0_node",
+          "ⲙ_1_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲙϩⲁⲗ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_0_node",
+          "ⲛ_1_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲙϩⲁⲗ",
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_0_node",
+          "ⲓⲱⲃ_1_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲙϩⲁⲗ",
+          "ⲧⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϩⲙϩⲁⲗ",
+          "ⲛⲉⲕ_1_pre_ϩⲙϩⲁⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 7.89,
+      "rank": 132,
+      "count": 1253
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6044",
+      "type": "cf",
+      "label": "little, young servant"
+    },
+    {
+      "target": "C6043",
+      "type": "cf",
+      "label": "small"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6503",
+      "label": "ϩⲁⲗ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C6504",
+      "label": "ϩⲁⲗ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C6507",
+      "label": "ϩⲙϩⲁⲗ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C6505",
+      "label": "ⲙⲛⲧϩⲙϩⲁⲗ",
+      "pos": "N",
+      "gloss": "servitude"
+    },
+    {
+      "target": "C6508",
+      "label": "ⲣϩⲙϩⲁⲗ",
+      "pos": "V",
+      "gloss": "serve"
+    },
+    {
+      "target": "C6509",
+      "label": "ⲣϩⲙϩⲁⲗ",
+      "pos": "N",
+      "gloss": "serve"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4506",
+    "demo_lemma": "ḫm-ẖl",
+    "english": "boy, young person; child; [of the son]",
+    "german": "Knabe, junger Mensch; Kind; [vom Sohn]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4506"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "C2176",
+  "forms": [
+    {
+      "id": "CF6064",
+      "orth": "ⲙⲁⲩⲁⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.68,
+        "rank": 362,
+        "count": 423
+      }
+    },
+    {
+      "orth": "ⲙⲙⲁⲩⲁⲧ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.14,
+        "rank": 329,
+        "count": 266
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩⲁⲁ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.68,
+        "rank": 362,
+        "count": 423
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4997,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩⲁⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4277,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩⲉⲉⲧ⸗",
+      "dialect": "F",
+      "id": "1128.3"
+    }
+  ],
+  "grammar": {
+    "pos": "IMOD",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2516",
+      "bibliography": "CD 198b-199a; KoptHWb 106; ChLCS 29a"
+    },
+    {
+      "id": "CS2517",
+      "bibliography": "CD 199a; KoptHWb 106"
+    },
+    {
+      "id": "CS2518",
+      "bibliography": "CD 199a; KoptHWb 106"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲣⲟⲩϩⲓ ϣⲱⲡⲓ ⲛⲁⲣⲉⲡⲓϫⲟⲉⲓ ϧⲉⲛⲑⲙⲏϯ ⲙⲫⲓⲟⲙ ⲟⲩⲟϩ ⲛⲑⲟϥ **ⲙⲙⲁⲩⲁⲧ**ϥ ⲛⲁϥⲭⲏ ϩⲓⲡⲓⲭⲣⲟ .",
+      "english": "When evening had come, the boat was in the midst of the sea, and he was alone on the land.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲛⲟϭ ⲇⲉ ⲛⲧⲟϥ ⲡⲉ ⲉⲧⲣⲉⲕⲛⲁⲩ ⲉⲣⲟⲕ **ⲙⲁⲩⲁⲁ**ⲕ",
+      "english": "But it is a great thing to see yourself",
+      "source": "Apophthegmata Patrum Sahidic 120: Sisoes 13",
+      "urn": "urn:cts:copticLit:ap.120.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲛⲑⲣⲉϩⲗⲓ ⲉⲣϩⲁⲗ ⲙⲙⲟϥ **ⲙⲙⲁⲩⲁⲧ**ϥ ⲫⲏ ⲉⲑⲙⲉⲩⲓ ϧⲉⲛⲑⲏⲛⲟⲩ ϫⲉⲟⲩⲥⲁⲃⲉ ⲡⲉ ϧⲉⲛⲡⲁⲓⲉⲛⲉϩ ⲙⲁⲣⲉϥⲉⲣⲥⲟϫ ϩⲓⲛⲁ ⲛⲧⲉϥⲉⲣⲥⲁⲃⲉ .",
+      "english": "Let no one deceive himself. If anyone thinks that he is wise among you in this world, let him become a fool, that he may become wise.",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱ ⲡⲉⲛⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲛⲁⲛ **ⲙⲁⲩⲁⲁ**ϥ ·",
+      "english": "O Thou Who alone dost do good unto us!",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟⲕ ⲇⲉ ϯⲛⲟⲩ ⲉⲕⲕⲱϯ ϫⲉⲛⲧⲟⲩϯⲥⲃⲱ ⲛⲁⲕ ϧⲉⲛⲛⲓⲥⲁϫⲓ ⲉⲑⲟⲩⲁⲃ ⲛⲧⲉⲡⲉⲕⲓⲱⲧ ⲛⲧⲁⲫⲙⲏⲓ ϫⲉⲟⲩⲏⲓ ⲙⲙⲟⲛ ϩⲗⲓ ⲉϥⲟⲓ ⲛⲁⲧϭⲓⲥⲃⲱ ⲉⲃⲏⲗ ⲉⲡⲓⲟⲩⲁⲓ **ⲙⲙⲁⲩⲁⲧ**ϥ ⲫⲛⲟⲩϯ ⲛⲧⲉⲡⲓⲉⲡⲧⲏⲣϥ ⲉⲧⲉϯⲧⲣⲓⲁⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲟⲙⲟⲟⲩⲥⲓⲟⲥ ⲧⲉ",
+      "english": "But you now desire to be taught the truly just words of your holy father. For no one is untaught, except for the one who is the God of all things, that is, the holy and consubstantial Trinity;",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲛⲙⲙⲟⲛ ⲁⲛⲟⲕ **ⲙⲁⲩⲁⲁ**ⲧ ⲙⲛⲃⲁⲣⲛⲁⲃⲁⲥ ⲙⲛⲧⲁⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲙⲙⲁⲩ ⲉⲧⲙⲣϩⲱⲃ .",
+      "english": "Or have only Barnabas and I no right to not work?",
+      "source": "46_1 Corinthians_9",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "d1258",
+    "demo_lemma": "wꜥ",
+    "english": "[to be unique]",
+    "german": "einzig, allein, nur (= wꜥṱ) [mit Suffix]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1258"
+  }
+}

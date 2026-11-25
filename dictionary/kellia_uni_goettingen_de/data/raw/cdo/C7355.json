@@ -1,0 +1,44 @@
+{
+  "id": "C7355",
+  "forms": [
+    {
+      "id": "CF16769",
+      "orth": "ⲣⲉϥϫⲱⲣⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8135",
+      "bibliography": "CD 786a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7352",
+      "label": "ϫⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "make sign, beckon, nod, blink; urge; drive, ride, hasten"
+    },
+    {
+      "target": "C7353",
+      "label": "ϫⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "sign"
+    },
+    {
+      "target": "C7354",
+      "label": "ϭⲓⲛϫⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "beckoning"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "C4961",
+  "forms": [
+    {
+      "id": "CF11887",
+      "orth": "ⲧⲣⲟⲩⲟⲉⲓⲛ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5586",
+      "bibliography": "CD 481a; KoptHWb 268"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4962",
+      "label": "ϫⲓⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "take/get light"
+    },
+    {
+      "target": "C4960",
+      "label": "ϯⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "give light"
+    },
+    {
+      "target": "C4956",
+      "label": "ⲁⲧⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "without light"
+    },
+    {
+      "target": "C4955",
+      "label": "ⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "light"
+    },
+    {
+      "target": "C4959",
+      "label": "ⲣⲉϥⲣⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "one who lights, illuminator"
+    },
+    {
+      "target": "C4957",
+      "label": "ⲣⲙⲟⲩⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "man of light, dweller of light"
+    },
+    {
+      "target": "C4958",
+      "label": "ⲣⲟⲩⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "make/be light, shine"
+    }
+  ]
+}

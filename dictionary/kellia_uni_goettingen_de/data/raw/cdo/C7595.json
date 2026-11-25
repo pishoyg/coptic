@@ -1,0 +1,339 @@
+{
+  "id": "C7595",
+  "forms": [
+    {
+      "id": "CF17249",
+      "orth": "ⲣⲉϥϫⲓϭⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2441,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8425",
+      "bibliography": "CD 806b; ChLCS 106b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩ**ⲣⲉϥϫⲓϭⲟⲗ** ⲡⲉ ·",
+      "english": "because he is a liar",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲥⲟϭ ⲙⲡⲟⲩⲙⲟⲟϣⲉ ϩⲛⲧⲙⲉ ⲉⲛⲉϩ · ⲁⲗⲗⲁ ⲉⲣⲉⲡⲉⲩϩⲏⲧ ⲧⲏⲙ ⲉⲣⲟⲟⲩ · ⲉⲩⲟ ⲛ**ⲣⲉϥϫⲓϭⲟⲗ** ⲛⲧϩⲉ ⲙⲡⲉⲩⲉⲓⲱⲧ ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ·",
+      "english": "Fools can never walk in the truth, because their hearts make them blind, and they become liars, like their father the Devil.'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϣⲱⲡⲉ ⲛ**ⲣⲉϥϫⲓϭⲟⲗ** · ϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲧⲁⲕⲟ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧϫⲱ ⲙⲡϭⲟⲗ ·",
+      "english": "Be not a liar, for God shall destroy every man who uttereth lies.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        21.031
+      ],
+      [
+        "ⲣⲉϥⲱⲣⲕ",
+        1,
+        16.276
+      ],
+      [
+        "ⲧⲉⲩⲧⲟⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲛⲉⲕⲣⲓⲧⲏⲥ",
+        1,
+        16.276
+      ],
+      [
+        "ⲕⲣⲏⲧⲏ",
+        1,
+        13.954
+      ],
+      [
+        "ⲛ",
+        27,
+        13.752
+      ],
+      [
+        "ⲣⲙⲙⲁⲟ",
+        3,
+        13.665
+      ],
+      [
+        "ⲧϩⲟⲧⲉ",
+        1,
+        13.469
+      ],
+      [
+        "ⲣⲉϥⲧⲁⲕⲟ",
+        1,
+        13.469
+      ],
+      [
+        "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+        1,
+        12.469
+      ],
+      [
+        "ⲣⲉϥϣⲙϣⲉ",
+        1,
+        12.276
+      ],
+      [
+        "ⲧϭⲁⲉⲓⲟ",
+        1,
+        11.576
+      ],
+      [
+        "ⲛⲉ",
+        7,
+        11.413
+      ],
+      [
+        "ⲙⲏⲧⲓ",
+        1,
+        10.817
+      ],
+      [
+        "ⲡ",
+        11,
+        10.553
+      ],
+      [
+        "ϩⲟⲩⲉ",
+        1,
+        10.495
+      ],
+      [
+        "ⲛⲟⲩϥ",
+        1,
+        10.254
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        9.898
+      ],
+      [
+        "ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+        1,
+        9.647
+      ],
+      [
+        "ϫⲉ",
+        6,
+        9.579
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          14
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓϣ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_3_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ϣⲗⲏⲗ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲟⲩⲟⲉⲓϣ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓϣ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          "ϩⲉⲛ_3_post_ⲑⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          "ϩⲙ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲡⲉⲛ_3_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϣⲗⲏⲗ",
+          "ϣⲗⲏⲗ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2155,
+      "count": 20
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "say, speak, tell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7591",
+      "label": "ϫⲓϭⲟⲗ",
+      "pos": "V",
+      "gloss": "tell lie, lie"
+    },
+    {
+      "target": "C7592",
+      "label": "ϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie, falsehood"
+    },
+    {
+      "target": "C7587",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie; liar"
+    },
+    {
+      "target": "C7588",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie; liar"
+    },
+    {
+      "target": "C7589",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lying, untrue, false"
+    },
+    {
+      "target": "C7593",
+      "label": "ⲁⲧϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "unlying, honest"
+    },
+    {
+      "target": "C7594",
+      "label": "ⲙⲛⲧⲁⲧϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "truthfulness, sincerity"
+    },
+    {
+      "target": "C7590",
+      "label": "ⲣϭⲟⲗ",
+      "pos": "V",
+      "gloss": "be lie, false; make liar, stultify"
+    },
+    {
+      "target": "C7596",
+      "label": "ⲣⲣⲉϥϫⲓϭⲟⲗ",
+      "pos": "V",
+      "gloss": "become a liar"
+    }
+  ]
+}

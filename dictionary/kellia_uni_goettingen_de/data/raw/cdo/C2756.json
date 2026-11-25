@@ -1,0 +1,298 @@
+{
+  "id": "C2756",
+  "forms": [
+    {
+      "id": "CF7339",
+      "orth": "ⲟⲉⲓⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6652,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲓⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4769,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲱⲓⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6207,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲁⲉⲓⲡⲉ",
+      "dialect": "A",
+      "id": "1242.3"
+    },
+    {
+      "orth": "ⲁⲓⲡⲉ",
+      "dialect": "F",
+      "id": "1242.4"
+    },
+    {
+      "orth": "ⲁⲓⲡⲓ",
+      "dialect": "F",
+      "id": "1242.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3153",
+      "bibliography": "CD 256ab; CED 121; KoptHWb 140; DELC 155; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛⲟϭ ⲛϣⲓ ⲙⲛⲟⲩⲕⲟⲩⲓ ⲁⲩⲱ **ⲟⲉⲓⲡⲉ** ⲥⲛⲧⲉ ϩⲉⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ϩⲓⲟⲩⲥⲟⲡ",
+      "english": "A large and small weight, and divers measures, are even both of them unclean before the Lord; and so is he that makes them.",
+      "source": "Proverbs 20",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϣⲓ ⲙⲙⲉ ⲁⲩⲱ ⲛⲇⲓⲕⲁⲓⲟⲛ ⲉϥⲉϣⲱⲡⲉ ⲛⲁⲕ ⲁⲩⲱ ⲟⲩ**ⲟⲉⲓⲡⲉ** ⲙⲙⲉ ⲁⲩⲱ ⲛⲇⲓⲕⲁⲓⲟⲛ ⲉⲥⲉϣⲱⲡⲉ ⲛⲁⲕ ϫⲉⲕⲁⲥ ⲉⲕⲉⲉⲓⲣⲉ ⲛⲟⲩⲁϣⲏ ⲛϩⲟⲟⲩ ϩⲓϫⲙⲡⲕⲁϩ ⲡⲁⲓ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁϥ ⲛⲁⲕ ϩⲛⲟⲩⲕⲗⲏⲣⲟⲥ",
+      "english": "Thou shalt have a true and just weight, and a true and just measure, that thou mayest live long upon the land which the Lord thy God gives thee for an inheritance.",
+      "source": "Deuteronomy 25",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲛⲉ**ⲟⲉⲓⲡⲉ** ⲉϥϣⲟⲃⲉ ϣⲱⲡⲉ ϩⲙⲡⲉⲕⲏⲓ ⲛⲟϭ ϩⲓⲕⲟⲩⲓ",
+      "english": "Thou shalt not have in thine house divers measures, a great and a small.",
+      "source": "Deuteronomy 25",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲱⲱⲙⲉ",
+        1,
+        15.554
+      ],
+      [
+        "ϣⲟⲃⲉ",
+        1,
+        12.823
+      ],
+      [
+        "ⲁⲕⲁⲑⲁⲣⲧⲟⲛ",
+        1,
+        12.458
+      ],
+      [
+        "ⲥⲛⲧⲉ",
+        1,
+        10.737
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        10.162
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        9.449
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.728
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.356
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.439
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲉⲓⲡⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲃⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲇⲓⲕⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲉⲓⲡⲉ_0_node",
+          "ⲉ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲉⲓⲡⲉ",
+          "ϥ_3_post_ϣⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲃⲉ",
+          "ϣⲟⲃⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲉⲓⲡⲉ",
+          "ⲟⲩ_1_pre_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲉⲓⲡⲉ",
+          "ⲟⲉⲓⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲉⲓⲡⲉ_0_node",
+          "ⲙ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲉⲓⲡⲉ",
+          "ⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          "ⲁⲩⲱ_4_post_ⲇⲓⲕⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲉⲓⲡⲉ_0_node",
+          "ⲥⲛⲧⲉ_1_post_ⲟⲉⲓⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6213,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3195",
+      "type": "cf",
+      "label": "artabe"
+    },
+    {
+      "target": "C5513",
+      "type": "cf",
+      "label": "count, esteem"
+    }
+  ],
+  "etym": {
+    "egy_num": "24120",
+    "egy_lemma": "jp.t",
+    "demo_num": "d465",
+    "demo_lemma": "ı ͗pj(.t)",
+    "english": "oipe (a dry measure); [a measuring vessel]",
+    "german": "Oipe (Hohlmaß); [ein Messgefäß]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/24120",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d465"
+  }
+}

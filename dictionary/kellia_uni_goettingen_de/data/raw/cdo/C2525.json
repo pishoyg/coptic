@@ -1,0 +1,57 @@
+{
+  "id": "C2525",
+  "forms": [
+    {
+      "id": "CF6841",
+      "orth": "ⲙⲁ ⲛⲛⲟⲩⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2905",
+      "bibliography": "CD 229b; KoptHWb 127; ChLCS 33a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2527",
+      "label": "ⲛⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "meal, flour (of any kind)"
+    },
+    {
+      "target": "C2523",
+      "label": "ⲛⲟⲩⲧ",
+      "pos": "V",
+      "gloss": "grind, pound (corn etc.)"
+    },
+    {
+      "target": "C2524",
+      "label": "ⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "grinding, mill(?)"
+    },
+    {
+      "target": "C2526",
+      "label": "ⲣⲉϥⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "miller"
+    },
+    {
+      "target": "C2528",
+      "label": "ⲣⲛⲟⲉⲓⲧ",
+      "pos": "V",
+      "gloss": "become, produce meal (flour)"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C3374",
+  "forms": [
+    {
+      "id": "CF8640",
+      "orth": "ⲥⲃⲱϩ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF8641",
+      "orth": "ⲥⲃⲟϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3845",
+      "bibliography": "CED 148; KoptHWb 178; DELC 185"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3375",
+      "label": "ⲥⲉⲥⲃⲟϩ",
+      "pos": "N",
+      "gloss": "place of atonement"
+    },
+    {
+      "target": "C3376",
+      "label": "ⲥⲉⲥⲃⲟϩ",
+      "pos": "V",
+      "gloss": "make atonement"
+    },
+    {
+      "target": "C3377",
+      "label": "ⲥⲉⲥⲃⲟϩ",
+      "pos": "N",
+      "gloss": "atonement"
+    }
+  ],
+  "etym": {
+    "egy_num": "131900",
+    "egy_lemma": "sbḥ",
+    "demo_num": "d5205",
+    "demo_lemma": "sbḥ(ꜣ)",
+    "english": "to cry out",
+    "german": "schreien",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5205"
+  }
+}

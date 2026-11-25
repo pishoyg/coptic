@@ -1,0 +1,173 @@
+{
+  "id": "C4866",
+  "forms": [
+    {
+      "id": "CF31860",
+      "orth": "ⲣϭⲁⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7649,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31859",
+      "orth": "ⲣϭⲁⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5491",
+      "bibliography": "CD 466a; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲫⲟⲥ",
+        2,
+        16.969
+      ],
+      [
+        "ⲛ",
+        5,
+        10.775
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        9.743
+      ],
+      [
+        "ϩⲛ",
+        2,
+        9.479
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        8.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣϭⲁⲓⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϭⲁⲓⲉ",
+          1
+        ],
+        [
+          "ⲣϭⲁⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣϭⲁⲓⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲫⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣϭⲁⲓⲉ",
+          "ϥ_1_pre_ⲣϭⲁⲓⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϭⲁⲓⲉ",
+          "ⲣϭⲁⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣϭⲁⲓⲉ_0_node",
+          "ϩⲛ_1_post_ⲣϭⲁⲓⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣϭⲁⲓⲉ",
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          "ⲧⲁⲫⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C13015",
+      "type": "cf",
+      "label": "ugly, disgraced, condemned"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4864",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly one, ugliness, disgrace"
+    },
+    {
+      "target": "C13015",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly, disgraced, condemned"
+    },
+    {
+      "target": "C4865",
+      "label": "ⲙⲛⲧϭⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "ugliness, disgrace"
+    },
+    {
+      "target": "C4862",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "make ugly, disgrace, condemn; be disgraced, be condemned"
+    },
+    {
+      "target": "C4863",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "N",
+      "gloss": "disgrace, condemnation"
+    }
+  ]
+}

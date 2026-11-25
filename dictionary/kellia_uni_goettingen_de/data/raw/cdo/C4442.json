@@ -1,0 +1,47 @@
+{
+  "id": "C4442",
+  "forms": [
+    {
+      "id": "CF10837",
+      "orth": "ⲣⲁⲧⲧⲁⲣ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5030",
+      "bibliography": "CD 424a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3178",
+      "type": "cf",
+      "label": "grow, sprout, be covered with a growth (as vegetation, hair)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4441",
+      "label": "ⲟ ⲛⲧⲁⲣ",
+      "pos": "V",
+      "gloss": "have points"
+    },
+    {
+      "target": "C4440",
+      "label": "ⲧⲁⲣ",
+      "pos": "N",
+      "gloss": "branch, point; hook (of boat)"
+    }
+  ]
+}

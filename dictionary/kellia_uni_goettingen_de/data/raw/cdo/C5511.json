@@ -1,0 +1,153 @@
+{
+  "id": "C5511",
+  "forms": [
+    {
+      "id": "CF12995",
+      "orth": "ⲣⲉϥϯⲱⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8088,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6173",
+      "bibliography": "CD 525b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲛⲕⲧⲟⲛ ϭⲉ ⲉϫⲙⲡⲉⲡⲣⲟⲕⲉⲓⲙⲉⲛⲟⲛ ⲉⲧⲃⲉⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ . ⲙⲛⲡⲗⲏⲥⲧⲏⲥ . ⲟⲩϣⲉ ⲅⲁⲣ ⲛ**ⲣⲉϥϯⲱⲛϩ** ⲡⲉ ⲡϣⲉ ⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 287-290",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:4.14-9.3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϣⲉ ⲛ**ⲣⲉϥϯⲱⲛϩ** .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲉ",
+        4,
+        16.182
+      ],
+      [
+        "ⲡ",
+        5,
+        10.463
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϯⲱⲛϩ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲱⲛϩ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϯⲱⲛϩ",
+          "ⲣⲉϥϯⲱⲛϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7643,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5512",
+      "label": "ϣⲫⲏⲣ ⲛⲱⲛϧ",
+      "pos": "N",
+      "gloss": "cohabitant"
+    },
+    {
+      "target": "C5510",
+      "label": "ϭⲓⲛⲱⲛϩ",
+      "pos": "N",
+      "gloss": "way of life, means of life"
+    },
+    {
+      "target": "C5508",
+      "label": "ⲱⲛϩ",
+      "pos": "V",
+      "gloss": "live"
+    },
+    {
+      "target": "C5509",
+      "label": "ⲱⲛϩ",
+      "pos": "N",
+      "gloss": "life"
+    }
+  ]
+}

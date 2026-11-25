@@ -1,0 +1,109 @@
+{
+  "id": "C9039",
+  "forms": [
+    {
+      "id": "CF22330",
+      "orth": "ⲉⲣⲅⲟⲗⲁⲃⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22331",
+      "orth": "ⲉⲣⲅⲟⲗⲁⲃⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18752,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11117",
+      "bibliography": "DDGLC",
+      "cu_ID": "1701"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲉϥⲣⲛⲟⲃⲉ ⲉϥⲉϩⲉ ⲉⲩⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ ⲁⲩⲱ ⲡⲉⲧⲡⲏⲧ ⲛⲥⲁϩⲉⲛ**ⲉⲣⲅⲟⲗⲁⲃⲓⲁ** ⲙⲁⲣⲉϥϩⲉ ⲉⲩϫⲓϩⲁⲡ",
+      "english": "A wicked man transgressing the commandments of the Lord shall fall into suretiship: and he that undertaketh and followeth other men's business for gain shall fall into suits.",
+      "source": "Sirach 29",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲏⲧ",
+        1,
+        12.771
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        10.681
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        9.76
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲣⲅⲟⲗⲁⲃⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18369,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6260",
+    "grl_lemma": "ἐργολαβία",
+    "grl_meaning": "contract for work; profit, gain,",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 682b"
+  }
+}

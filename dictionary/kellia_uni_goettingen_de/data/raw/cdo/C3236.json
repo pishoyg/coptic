@@ -1,0 +1,52 @@
+{
+  "id": "C3236",
+  "forms": [
+    {
+      "id": "CF8357",
+      "orth": "ϩⲁⲣⲟⲩϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3696",
+      "bibliography": "CD 310b; KoptHWb 171; ChLCS 44a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6328",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3237",
+      "label": "ϩⲓⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "time of evening"
+    },
+    {
+      "target": "C3238",
+      "label": "ϫⲓⲣⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "spend evening"
+    },
+    {
+      "target": "C3235",
+      "label": "ⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "evening"
+    }
+  ]
+}

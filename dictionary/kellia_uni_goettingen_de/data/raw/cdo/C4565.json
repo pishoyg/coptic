@@ -1,0 +1,556 @@
+{
+  "id": "C4565",
+  "forms": [
+    {
+      "id": "CF11086",
+      "orth": "ⲧⲥⲃⲕⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3234,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲧⲥⲃⲕⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4988,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲧⲥⲃⲕⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12841,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲥⲃⲕⲟ",
+      "dialect": "A",
+      "id": "1651.3"
+    },
+    {
+      "orth": "ⲥⲏⲡⲕⲁ⸗",
+      "dialect": "F",
+      "id": "1651.4"
+    },
+    {
+      "orth": "ⲧⲥⲏⲡⲕⲁ⸗",
+      "dialect": "F",
+      "id": "1651.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5154",
+      "bibliography": "CD 435b; CDC 68a; CED 197; KoptHWb 246; DELC 222a; ChLCS 61b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ϫⲓⲥⲉ ⲛⲟⲩϩⲉⲑⲛⲟⲥ ϣⲁⲣⲉⲛⲛⲟⲃⲉ ⲇⲉ **ⲧⲥⲃⲕⲟ** ⲛϩⲉⲛⲫⲩⲗⲏ",
+      "english": "Righteousness exalts a nation: but sins diminish tribes.",
+      "source": "Proverbs 14",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲣⲁⲛⲕⲉⲁⲣⲭⲏ ⲧⲏⲣⲟⲩ ⲛⲥⲧⲙϫⲓⲥⲉ ϭⲉ ⲉϫⲛⲛϩⲉⲑⲛⲟⲥ ⲁⲩⲱ ϯⲛⲁ**ⲧⲥⲃⲕⲟ**ⲟⲩ ⲉⲧⲙⲧⲣⲉⲩⲁϣⲁⲓ ϩⲛⲛϩⲉⲑⲛⲟⲥ",
+      "english": "and it shall be a base kingdom beyond all other kingdoms; it shall not any more be exalted over the nations; and I will make them few in number, that they may not be great among the nations.",
+      "source": "Ezekiel 29",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲥⲁⲃⲏⲗ ϫⲉⲁⲓ**ⲧⲥⲃⲕⲟ** ⲛⲛⲉⲩⲭⲣⲟⲛⲟⲥ ⲛⲉⲩⲛⲁⲕⲁⲗⲁⲁⲩ ⲁⲛ ⲡⲉ ⲙⲯⲩⲭⲏ ⲉⲉⲓ ⲉⲡⲕⲟⲥⲙⲟⲥ ⲉⲧⲃⲉⲧϩⲩⲗⲏ ⲙⲡⲉⲩⲥⲟⲣⲙ ⲉⲧⲟⲩⲟⲩⲱⲙⲕ ⲙⲙⲟϥ ⲁⲩⲱ ⲛⲉⲩⲛⲁⲧⲁⲕⲉⲟⲩⲙⲏⲏϣⲉ ⲙⲯⲩⲭⲏ ⲡⲉ · ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲁⲓϫⲟⲟⲥ ⲛⲏⲧⲛ ⲙⲡⲓⲟⲩⲟⲉⲓϣ ϫⲉⲁⲓⲧⲥⲃⲕⲉ ⲛⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲃⲉⲛⲁⲥⲱⲧⲡ ⲉⲙⲙⲟⲛ ⲛⲉ ⲙⲛⲗⲁⲁⲩ ⲙⲯⲩⲭⲏ ⲉϣⲟⲩϫⲁⲓ ⲡⲉ ⲛⲧⲁⲓⲧⲥⲃⲕⲉ ⲛⲉⲟⲩⲟⲉⲓϣ ⲇⲉ ⲙⲛⲛⲉⲭⲣⲟⲛⲟⲥ ⲉⲧⲃⲉⲡⲁⲣⲓⲑⲙⲟⲥ ⲛⲧⲉⲗⲉⲓⲟⲛ ⲛⲛⲉⲯⲩⲭⲟⲟⲩⲉ ⲉⲧⲛⲁϫⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲛⲥⲱⲧⲡ ⲁⲩⲱ ⲉⲛⲉⲙⲡⲓⲧⲥⲃⲕⲉ ⲛⲉⲩⲭⲣⲟⲛⲟⲥ . ⲛⲉⲙⲛⲗⲁⲁⲩ ⲙⲯⲩⲭⲏ ⲛϩⲩⲗⲓⲕⲏ ⲛⲁⲟⲩϫⲁⲓ · ⲁⲗⲗⲁ ⲛⲉⲩⲛⲁⲁⲛϩⲁⲗⲓⲥⲕⲉ ⲡⲉ ϩⲙⲡⲕⲱϩⲧ · ⲡⲁⲓ ⲉⲧϣⲟⲟⲡ ϩⲛⲧⲥⲁⲣⲝ ⲛⲛⲁⲣⲭⲱⲛ ·",
+      "english": "and had I not shortened their periods, they would not have let any soul come into the world, because of the matter of their refuse | which they devoured, and they would have destroyed many souls. For this cause I said unto you aforetime: 'I have shortened the times because of my elect; otherwise no soul would have been able to be saved.' And I have shortened the times and the periods because of the perfect number of the souls who shall receive the mysteries, that is to say, the 'elect'; and had I not shortened their periods, no material soul would have been saved, but they would have perished in the fire which is in the flesh of the rulers.",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        24,
+        13.979
+      ],
+      [
+        "ϩⲧⲟⲡ",
+        1,
+        12.765
+      ],
+      [
+        "ⲭⲣⲟⲛⲟⲥ",
+        1,
+        12.621
+      ],
+      [
+        "ⲕⲧⲏⲥⲓⲥ",
+        1,
+        12.369
+      ],
+      [
+        "ⲕⲩⲕⲗⲟⲥ",
+        1,
+        11.969
+      ],
+      [
+        "ⲛⲥⲁⲃⲏⲗ",
+        1,
+        11.521
+      ],
+      [
+        "ⲛⲉⲩ",
+        4,
+        11.231
+      ],
+      [
+        "ⲁⲡⲁⲣⲭⲏ",
+        1,
+        11.206
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        10.635
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        10.584
+      ],
+      [
+        "ⲁ",
+        7,
+        9.881
+      ],
+      [
+        "ⲉ",
+        7,
+        9.654
+      ],
+      [
+        "ⲁⲅⲁⲑⲟⲥ",
+        1,
+        9.629
+      ],
+      [
+        "ϥ",
+        7,
+        9.359
+      ],
+      [
+        "ⲕⲱϩ",
+        1,
+        9.327
+      ],
+      [
+        "ⲧⲃⲛⲟⲟⲩⲉ",
+        1,
+        9.193
+      ],
+      [
+        "ⲫⲩⲗⲏ",
+        1,
+        9.143
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        7.511
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        7.449
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          6
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ⲧⲥⲃⲕⲟ_0_node",
+          11
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          7
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲕⲩⲕⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲩⲕⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲥⲃⲕⲟ",
+          5
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲭⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲭⲣⲟⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_pre_ϩⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ϩⲉ_3_pre_ⲧ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ϥ_1_post_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲥⲃⲕⲟ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲣⲭⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲓ_1_pre_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲧⲥⲃⲕⲟ_0_node",
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲛⲉⲩ_3_post_ⲕⲩⲕⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲕⲩⲕⲗⲟⲥ",
+          "ⲕⲩⲕⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲟⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲩ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲛⲉⲩ_3_post_ⲭⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲭⲣⲟⲛⲟⲥ",
+          "ⲭⲣⲟⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_pre_ϩⲉ",
+          "ⲕⲁⲧⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧ_2_pre_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲕⲁⲧⲁ",
+          "ϩⲉ_3_pre_ⲧ",
+          1
+        ],
+        [
+          "ϩⲉ_3_pre_ⲧ",
+          "ⲉϥϣⲁⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲕ_1_pre_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲧⲥⲃⲕⲟ_0_node",
+          "ϥ_1_post_ⲧⲥⲃⲕⲟ",
+          2
+        ],
+        [
+          "ϥ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲁ_2_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲁⲁ",
+          "ⲕ_2_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲙⲡ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ϥ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲛⲉⲩ_3_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲛ_2_pre_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲇⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲙⲡⲣ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ⲧⲥⲃⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲡⲁⲣⲭⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϭⲟⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_3_post_ⲧ",
+          "ⲉ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲥⲃⲕⲟ",
+          "ϥ_1_pre_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲥⲃⲕⲟ_0_node",
+          "ⲟⲩ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲥⲃⲕⲟ",
+          "ϩⲛ_1_post_ⲧⲥⲃⲕⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2879,
+      "count": 12
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3357",
+      "type": "cf",
+      "label": "become, be small, few"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4566",
+      "label": "ⲧⲥⲃⲕⲟ",
+      "pos": "N",
+      "gloss": "smallness, poor quality"
+    }
+  ]
+}

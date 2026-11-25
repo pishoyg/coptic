@@ -1,0 +1,92 @@
+{
+  "id": "C1409",
+  "forms": [
+    {
+      "id": "CF4239",
+      "orth": "ⲕⲁⲧⲟ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲕⲁⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19629,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲁⲧⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7116,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲁⲧⲟⲁ",
+      "dialect": "B",
+      "id": "873.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1632",
+      "bibliography": "CD 123b; KoptHWb 71; ChLCS 19a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲁⲗⲁ",
+        1,
+        16.691
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        11.94
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19241,
+      "count": 1
+    }
+  }
+}

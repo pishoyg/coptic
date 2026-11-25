@@ -1,0 +1,111 @@
+{
+  "id": "C6359",
+  "forms": [
+    {
+      "id": "CF14733",
+      "orth": "ⲁⲧϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20097,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7055",
+      "bibliography": "CD 638b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.817
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19707,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6354",
+      "label": "ϩⲉ",
+      "pos": "V",
+      "gloss": "fall; light upon, find"
+    },
+    {
+      "target": "C6358",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "fall, destruction"
+    },
+    {
+      "target": "C6355",
+      "label": "ϩⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "fall upon, into"
+    },
+    {
+      "target": "C6357",
+      "label": "ϩⲉ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "fall down"
+    },
+    {
+      "target": "C6356",
+      "label": "ϩⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "fall out, away, perish"
+    }
+  ]
+}

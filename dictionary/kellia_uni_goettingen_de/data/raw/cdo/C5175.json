@@ -1,0 +1,68 @@
+{
+  "id": "C5175",
+  "forms": [
+    {
+      "id": "CF12317",
+      "orth": "ⲟⲩⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.41,
+        "rank": 573,
+        "count": 223
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5813",
+      "bibliography": "CD 494b; CDC 77a; CED 218; KoptHWb 278; DELC 238b; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲧϥ ⲇⲉ ⲉⲃⲟⲗ **ⲟⲩⲧⲉ** ⲡⲙⲏⲏϣⲉ . ⲁϥϫⲓⲧϥ ⲉⲩⲥⲁ ⲁϥⲛⲉϫⲛⲉϥⲧⲏⲏⲃⲉ ⲉϩⲟⲩⲛ ⲉⲛⲉϥⲙⲁⲁϫⲉ . ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲛⲉϫⲧⲁϥ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ ⲁϥϫⲱϩ ⲉⲡⲉϥⲗⲁⲥ",
+      "english": "He took him aside from the multitude, privately, and put his fingers into his ears, and he spat, and touched his tongue.",
+      "source": "41_Mark_7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲱ ⲛⲁⲙⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲁⲓ ⲛⲧⲁⲓⲥⲟⲧⲡⲟⲩ **ⲟⲩⲧⲉ** ⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ⲛϯⲛⲁϩⲉⲡ ⲗⲁⲁⲩ ⲁⲛ ⲉⲣⲱⲧⲛ ·",
+      "english": "And now, O my holy members, whom I have chosen from out of the whole world, I will hide nothing from you.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲡⲁⲣⲁⲕⲁⲗⲉⲓ ϭⲉ ⲛⲧⲉⲕⲙⲛⲧⲡⲉⲧⲟⲩⲁⲁⲃ · ⲥⲩⲛⲧⲉⲭⲉⲓ ⲛⲙⲙⲁϥ ⲛⲟⲩϩⲟⲟⲩ ⲛⲅϫⲛⲟⲩϥ ⲟⲩⲧⲱⲕ **ⲟⲩⲧⲱ**ϥ ϫⲉⲛⲓⲙ ⲡⲉⲛⲧⲁϥⲧⲛⲛⲟⲟⲩⲕ ·",
+      "english": "We now therefore make appeal unto thine holiness to abide with him for a number of days, and do thou question him when thou art alone with him, saying. Who is he that hath sent thee?",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5176",
+      "label": "ⲉⲃⲟⲗ ⲟⲩⲧⲉ-",
+      "pos": "PREP",
+      "gloss": "from among (a selection)"
+    }
+  ],
+  "etym": {
+    "egy_num": "91940",
+    "egy_lemma": "r-jwd",
+    "demo_num": "d433",
+    "demo_lemma": "ı ͗wṱ",
+    "english": "between",
+    "german": "zwischen; bei",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/91940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d433"
+  }
+}

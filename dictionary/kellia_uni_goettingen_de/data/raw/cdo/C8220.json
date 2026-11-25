@@ -1,0 +1,192 @@
+{
+  "id": "C8220",
+  "forms": [
+    {
+      "id": "CF18918",
+      "orth": "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18919",
+      "orth": "ⲁⲙⲫⲓⲧⲁⲡⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18920",
+      "orth": "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9313",
+      "bibliography": "DDGLC",
+      "cu_ID": "179"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲥⲱⲙⲛⲧ ⲙⲡⲁϭⲗⲟϭ ϩⲛϩⲉⲛⲕⲉⲣⲉⲁ ⲁⲓⲡⲟⲣϣϥ ⲇⲉ ⲛ**ⲁⲙⲫⲓⲧⲁⲡⲟⲥ** ⲛⲧⲉⲕⲏⲙⲉ",
+      "english": "I have spread my bed with sheets, and I have covered it with double tapestry from Egypt.",
+      "source": "Proverbs 7",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲙⲙⲏⲧⲉ ⲛⲕⲓⲧⲉ ⲙⲛϩⲉⲛ**ⲁⲙⲫⲓⲧⲁⲡⲟⲥ** ⲁⲩⲱ ⲙⲏⲧ ⲛⲭⲁⲗⲕⲓⲟⲛ ⲙⲛϩⲉⲛⲥⲕⲉⲩⲏ ⲛϣⲁϣⲟⲩ ⲛⲏⲣⲡ ⲁⲩⲱ ϩⲉⲛⲥⲟⲩⲟ ⲙⲛⲟⲩⲉⲓⲱⲧ ⲙⲛⲟⲩⲛⲟⲉⲓⲧ ⲙⲛⲟⲩϩⲛⲁⲁⲩ ⲛⲉⲗⲉⲗϣⲱⲟⲩⲉ ⲙⲛϩⲉⲛⲕⲉⲁⲙⲟⲥ ⲁⲩⲱ ⲟⲩⲁⲣϣⲓⲛ",
+      "english": "brought ten embroidered beds, (with double coverings,) and ten caldrons, and earthenware, and wheat, and barley, and flour, and meal, and beans, and pulse,",
+      "source": "II Samuel 17",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲓⲧⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ⲭⲁⲗⲕⲓⲟⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ⲡⲟⲣϣ",
+        1,
+        13.644
+      ],
+      [
+        "ⲙⲏⲧ",
+        1,
+        12.369
+      ],
+      [
+        "ⲕⲏⲙⲉ",
+        1,
+        10.615
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ϩⲉⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ⲕⲏⲙⲉ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8219,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2452",
+    "grl_lemma": "ἀμφίταπος",
+    "grl_meaning": "doube-sided rug",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 94b; Preisigke 1:73"
+  }
+}

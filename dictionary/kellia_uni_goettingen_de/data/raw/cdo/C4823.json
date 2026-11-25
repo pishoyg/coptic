@@ -1,0 +1,70 @@
+{
+  "id": "C4823",
+  "forms": [
+    {
+      "id": "CF11611",
+      "orth": "ϫⲓⲧⲱϩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5442",
+      "bibliography": "CD 461b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4826",
+      "label": "ϫⲓⲛⲑⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointing"
+    },
+    {
+      "target": "C4824",
+      "label": "ⲣⲉϥⲧⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointer"
+    },
+    {
+      "target": "C4825",
+      "label": "ⲣⲉϥⲧⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointer"
+    },
+    {
+      "target": "C4822",
+      "label": "ⲧⲁϩⲥ",
+      "pos": "N",
+      "gloss": "anointing, ointment"
+    },
+    {
+      "target": "C4820",
+      "label": "ⲧⲱϩⲥ",
+      "pos": "V",
+      "gloss": "anoint"
+    },
+    {
+      "target": "C4821",
+      "label": "ⲧⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointing"
+    }
+  ]
+}

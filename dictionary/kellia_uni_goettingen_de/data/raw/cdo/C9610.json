@@ -1,0 +1,686 @@
+{
+  "id": "C9610",
+  "forms": [
+    {
+      "id": "CF24559",
+      "orth": "ⲗⲉⲝⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24564",
+      "orth": "ⲗⲉⲝⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3351,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF24560",
+      "orth": "ⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24562",
+      "orth": "ⲗⲉⲝⲓⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2192,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF24563",
+      "orth": "ⲗⲉⲝⲓⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF24561",
+      "orth": "ⲗⲉⲝ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24565",
+      "orth": "ⲗⲝ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12299",
+      "bibliography": "DDGLC",
+      "cu_ID": "2580"
+    },
+    {
+      "id": "CS12300",
+      "bibliography": "DDGLC",
+      "cu_ID": "4326"
+    },
+    {
+      "id": "CS12301",
+      "bibliography": "DDGLC",
+      "cu_ID": "7371"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁϩⲑⲏⲕ ⲟⲛ ϧⲉⲛⲟⲩⲕⲁϯ ⲉϥⲣⲏⲥ ⲛⲏ ⲉⲧⲓⲥϧⲁⲓ ⲙⲙⲱⲟⲩ ⲛⲁⲓ ϫⲉⲟⲩⲏⲓ ⲛⲓ**ⲗⲉⲝⲓⲥ** ⲁⲛ ⲛⲉ ⲛⲓⲥⲃⲱⲟⲩⲓ ⲟⲩⲇⲉ ⲛⲓⲥⲩⲗⲁⲃⲏ ⲛⲁⲓ ⲅⲁⲣ ⲕϫⲓⲙⲓ ⲙⲙⲱⲟⲩ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓⲕⲉⲥⲁ ⲙⲡⲉⲧϩⲱⲟⲩ ⲛⲣⲱⲙⲓ",
+      "english": "Be attentive, with a vigilant mind, to what I write; for these are not mere words or syllables of knowledge, as even the wicked among men possess those.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉⲡⲱⲥ ⲛⲧⲟⲕ ⲙⲁⲩⲁⲁⲕ ⲁⲕϣⲁϫⲉ ⲉⲧⲃⲉⲧⲉⲓ**ⲗⲉⲝⲓⲥ** ⲁⲩⲱ ⲙⲡⲉⲕⲉⲗⲁⲁⲩ ϣⲁϫⲉ ⲉϥϯ ⲛⲧⲟⲟⲧϥ ⲛⲙⲙⲁⲕ",
+      "english": "The archbishop answered him: Why have you alone spoken about this passage and nobody else has supported you?",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓϧⲉⲗⲗⲟ ⲉⲣϩⲏⲧⲥ ⲛϯ ⲉⲧⲟⲧϥ ϧⲉⲛⲡⲁⲓⲯⲁⲗⲙⲟⲥ ϫⲉⲁⲓϫⲟⲥ ϫⲉϯⲛⲁⲁⲣⲉϩ ⲉⲛⲁⲙⲱⲓⲧ ϩⲓⲛⲁ ⲛⲧⲁϣⲧⲉⲙⲉⲣⲛⲟⲃⲓ ϧⲉⲛⲡⲁⲗⲁⲥ . ⲟⲩⲟϩ ⲉⲧⲁ ⲡⲓϧⲉⲗⲗⲟ ϫⲉϯϩⲟⲩⲓϯ ⲛⲗⲉⲝⲓⲥ ⲛⲁϥ ⲛⲁϥⲧⲁϩⲛⲟ ⲙⲙⲟϥ ⲡⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲁⲓⲱⲧ ⲉⲃⲏⲗ ⲛⲧⲁϭⲓⲥⲃⲱ ⲉϯϩⲟⲩⲓϯ ⲛ**ⲗⲉⲝⲓⲥ** ϯⲛⲁϭⲓ ⲛϯⲙⲁϩⲥⲛⲟⲩϯ ⲁⲛ .",
+      "english": "The elder began to teach him this psalm: “I said: I will guard my ways, so that I may not sin with my tongue;” And when the elder had recited the earlier words, he restrained him, saying: “My father, unless I learn the first verse, I will not study the second.”",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁϥⲥϩⲁⲓ ⲉⲃⲟⲗ ϩⲛⲧⲉⲭⲱⲣⲁ ⲧⲏⲣⲥ ⲉϥⲁⲡⲟⲕⲩⲣⲏⲥⲥⲉ ⲛⲧ**ⲗⲉⲝⲓⲥ** ⲉⲧⲙⲙⲁⲩ ϫⲉⲉⲥϣⲟϥⲧ ⲁⲩⲱ ϩⲛⲟⲩⲙⲛⲧⲁⲛⲟⲏⲧⲟⲥ ⲛⲧⲁⲛⲙⲉⲉⲩⲉ ⲉⲣⲟⲥ",
+      "english": "And immediately he wrote to all the lands and repudiated the previous statement that it was faulty and that it was without understanding that we had thought it up.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁⲱⲃϣ ⲅⲁⲣ ⲁⲛ ⲉⲛⲓϩⲟⲛϩⲉⲛ ⲛⲉⲙⲛⲓⲉⲛⲧⲟⲗⲏ ⲛⲧⲉⲫⲛⲟⲩϯ ⲟⲩⲇⲉ ϥⲛⲁⲉⲣⲕⲁⲧⲁⲫⲣⲟⲛⲓⲛ ⲁⲛ ⲛϯⲙⲉⲧⲕⲟⲩϫⲓ ⲛⲧⲉⲡⲉⲛϫⲓⲛⲥⲁϫⲓ ⲛⲧⲉⲛⲓ**ⲗⲉⲝⲓⲥ** ⲛⲏ ⲉⲧⲉⲛⲥⲉϭⲟⲣⲡ ⲉⲃⲟⲗ ⲁⲛ ⲛϩⲟⲩⲟ ⲟⲩⲇⲉ ⲥⲉⲥⲉⲗⲥⲱⲗ ⲁⲛ ϧⲉⲛⲟⲩⲥⲃⲱ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲛⲧⲉⲡⲁⲓⲕⲟⲥⲙⲟⲥ .",
+      "english": "For they will not forget the commandments and precepts of God, nor will they disdain our humble prayer, which is neither clear enough nor adorned with the wisdom of this world.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϭⲱϣⲧ ⲉⲧⲉⲓ**ⲗⲉⲝⲓⲥ** ⲉⲥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲡϣⲏⲣⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲧϩⲉ ⲙⲡⲉϥⲉⲓⲱⲧ ⲉϥⲧⲟⲛⲧⲛ ⲙⲙⲟϥ ⲉⲣⲟϥ ·",
+      "english": "Consider the following speech which maketh manifest that the Son is like unto the Father, and that He is equal with Him.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲧⲙⲉⲧϭⲁⲥⲓϩⲏⲧ",
+        2,
+        18.11
+      ],
+      [
+        "ⲙⲉⲧϣⲁⲙϣⲉⲛⲟⲩϯ",
+        2,
+        16.525
+      ],
+      [
+        "ⲥⲃⲱⲟⲩⲓ",
+        2,
+        16.11
+      ],
+      [
+        "ϫⲓⲛⲥⲁϫⲓ",
+        2,
+        15.203
+      ],
+      [
+        "ϩⲟⲩⲓϯ",
+        2,
+        14.066
+      ],
+      [
+        "ⲛⲓϥⲓ",
+        2,
+        13.382
+      ],
+      [
+        "ϯ",
+        10,
+        12.671
+      ],
+      [
+        "ⲁⲕϣⲁⲛ",
+        2,
+        12.277
+      ],
+      [
+        "ⲥⲟⲩⲧⲱⲛ",
+        2,
+        12.156
+      ],
+      [
+        "ⲙⲉϩ",
+        2,
+        11.881
+      ],
+      [
+        "ⲛⲓ",
+        8,
+        11.633
+      ],
+      [
+        "ⲛⲧⲉ",
+        8,
+        11.481
+      ],
+      [
+        "ⲛ",
+        10,
+        10.971
+      ],
+      [
+        "ⲟⲩⲏⲓ",
+        2,
+        10.77
+      ],
+      [
+        "ⲙⲉⲑⲙⲏⲓ",
+        2,
+        9.994
+      ],
+      [
+        "ⲡⲉⲛ",
+        2,
+        9.709
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        8.667
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        8.318
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        8.151
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        8.127
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲡⲟⲕⲩⲣⲏⲥⲥⲉ",
+        1,
+        17.139
+      ],
+      [
+        "ⲥⲩⲙⲫⲱⲛⲉⲓ",
+        1,
+        13.817
+      ],
+      [
+        "ϣⲱϥⲧ",
+        1,
+        13.817
+      ],
+      [
+        "ⲧⲉⲓ",
+        4,
+        12.684
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        4,
+        11.85
+      ],
+      [
+        "ⲥⲙⲟⲛⲧ",
+        1,
+        11.746
+      ],
+      [
+        "ⲧⲉⲩ",
+        3,
+        11.734
+      ],
+      [
+        "ⲡⲟⲟⲛⲉ",
+        1,
+        11.647
+      ],
+      [
+        "ⲥ",
+        7,
+        11.237
+      ],
+      [
+        "ⲯⲁⲗⲗⲉⲓ",
+        1,
+        11.072
+      ],
+      [
+        "ⲛ",
+        11,
+        10.728
+      ],
+      [
+        "ⲟⲩⲉϩ",
+        1,
+        10.679
+      ],
+      [
+        "ⲁⲥⲡⲉ",
+        1,
+        10.584
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.745
+      ],
+      [
+        "ⲭⲱⲣⲁ",
+        1,
+        9.546
+      ],
+      [
+        "ϥ",
+        7,
+        9.484
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        1,
+        9.161
+      ],
+      [
+        "ⲉ",
+        6,
+        9.113
+      ],
+      [
+        "ⲡⲱϩ",
+        1,
+        9.094
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        2,
+        8.81
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          6
+        ],
+        [
+          "ⲛⲏ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϭⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ϭⲟⲣⲡ",
+          1
+        ],
+        [
+          "ϭⲟⲣⲡ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲑⲙⲏⲓ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲙⲉⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲧⲱⲛ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲉϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲛⲏ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          "ⲛ_4_post_ϭⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϭⲟⲣⲡ",
+          "ⲥⲉ_4_post_ϭⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ϭⲟⲣⲡ",
+          "ϭⲟⲣⲡ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲙⲉⲑⲙⲏⲓ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲙⲉⲑⲙⲏⲓ_3_post_ϯ",
+          "ⲛⲧⲉ_4_post_ⲙⲉⲑⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲙⲉⲑⲙⲏⲓ",
+          "ⲡ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲫⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫⲏ_2_post_ⲛⲧⲉ",
+          "ⲉⲧ_3_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲫⲏ",
+          "ⲥⲟⲩⲧⲱⲛ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲉⲝⲓⲥ",
+          "ⲛⲟⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          "ⲗⲉⲝⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲉⲑ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲙⲉϩ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉⲑ",
+          "ⲙ_3_post_ⲙⲉϩ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          11
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲟϥⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲁⲥⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲁⲥⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲥⲡⲉ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲉⲧ_1_post_ⲗⲉⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          "ϫⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲥ_3_post_ϣⲟϥⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          "ⲗⲉⲝⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲗⲉⲝⲓⲥ",
+          "ⲗⲉⲝⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲉⲝⲓⲥ",
+          "ⲗⲉⲝⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲙⲛ_2_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲗⲁⲟⲥ",
+          "ⲗⲁⲟⲥ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲛⲓⲙ_2_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲁⲩⲱ_3_post_ⲁⲥⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲁⲥⲡⲉ",
+          "ⲕⲁⲧⲁ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲧⲉⲩ_3_post_ⲁⲥⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲁⲥⲡⲉ",
+          "ⲁⲥⲡⲉ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲗⲉⲝⲓⲥ_0_node",
+          "ⲛ_1_post_ⲗⲉⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲉⲝⲓⲥ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2985,
+      "count": 11
+    },
+    "B": {
+      "rate": 0.14,
+      "rank": 1897,
+      "count": 12
+    }
+  },
+  "etym": {
+    "grl_ID": "1285",
+    "grl_lemma": "λέξις",
+    "grl_meaning": "speech, diction, phrase",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1038a; Preisigke 2:14"
+  }
+}

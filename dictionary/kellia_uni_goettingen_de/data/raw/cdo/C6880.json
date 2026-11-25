@@ -1,0 +1,139 @@
+{
+  "id": "C6880",
+  "forms": [
+    {
+      "id": "CF15809",
+      "orth": "ϯϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7597",
+      "bibliography": "CD 716a-b; KoptHWb 394; ChLCS 96a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲉⲡⲉⲓϣⲁϫⲉ ⲛⲧⲛ**ϯϩⲧⲏ**ⲛ ⲉⲣⲟϥ",
+      "english": "...",
+      "source": "My Heart Is Crushed MONB.FL 83-86 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.crushed.amelineau:8-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19836,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6881",
+      "label": "ϣⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "(have) pity"
+    },
+    {
+      "target": "C6876",
+      "label": "ϣⲥⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "grief"
+    },
+    {
+      "target": "C6882",
+      "label": "ϥⲓϩⲏⲧ",
+      "pos": "V",
+      "gloss": "take heart, delight"
+    },
+    {
+      "target": "C6883",
+      "label": "ϩⲁϩⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "with, beside"
+    },
+    {
+      "target": "C6869",
+      "label": "ϩⲏⲧ",
+      "pos": "N",
+      "gloss": "heart, mind"
+    },
+    {
+      "target": "C6872",
+      "label": "ϩⲏⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small heart, impatient"
+    },
+    {
+      "target": "C6870",
+      "label": "ϩⲏⲧ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single heart, one mind"
+    },
+    {
+      "target": "C6871",
+      "label": "ϩⲏⲧ ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two hearts, double-minded"
+    },
+    {
+      "target": "C6873",
+      "label": "ⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "without mind, senseless"
+    },
+    {
+      "target": "C6874",
+      "label": "ⲃⲁⲗϩⲏⲧ",
+      "pos": "N",
+      "gloss": "open, simple-minded"
+    },
+    {
+      "target": "C12198",
+      "label": "ⲕⲁϩⲧⲏϥ",
+      "pos": "N",
+      "gloss": "trust, confidence"
+    },
+    {
+      "target": "C6877",
+      "label": "ⲕⲱ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "trust"
+    },
+    {
+      "target": "C6878",
+      "label": "ⲣϩⲏⲧ",
+      "pos": "V",
+      "gloss": "reflect, regret"
+    },
+    {
+      "target": "C6875",
+      "label": "ⲣⲙⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "(man of heart), wise (man)"
+    },
+    {
+      "target": "C6879",
+      "label": "ⲥⲱⲕ ϩⲏⲧ",
+      "pos": "V",
+      "gloss": "persuade"
+    }
+  ]
+}

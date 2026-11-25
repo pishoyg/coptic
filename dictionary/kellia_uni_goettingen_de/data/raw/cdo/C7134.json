@@ -1,0 +1,64 @@
+{
+  "id": "C7134",
+  "forms": [
+    {
+      "id": "CF16326",
+      "orth": "ϫⲓϫⲱⲕⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7870",
+      "bibliography": "CD 763b; KoptHWb 417; ChLCS 101a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7136",
+      "label": "ϫⲓⲛϫⲱⲕⲙ",
+      "pos": "N",
+      "gloss": "washing"
+    },
+    {
+      "target": "C7131",
+      "label": "ϫⲱⲕⲙ",
+      "pos": "V",
+      "gloss": "wash, wet, bathe"
+    },
+    {
+      "target": "C7132",
+      "label": "ϫⲱⲕⲙ",
+      "pos": "N",
+      "gloss": "washing, cleansing, purification"
+    },
+    {
+      "target": "C7133",
+      "label": "ϯϫⲱⲕⲙ",
+      "pos": "V",
+      "gloss": "baptise"
+    },
+    {
+      "target": "C7135",
+      "label": "ⲁⲧϫⲱⲕⲙ",
+      "pos": "N",
+      "gloss": "without washing"
+    }
+  ]
+}

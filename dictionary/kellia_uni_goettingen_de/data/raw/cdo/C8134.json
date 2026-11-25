@@ -1,0 +1,438 @@
+{
+  "id": "C8134",
+  "forms": [
+    {
+      "id": "CF18583",
+      "orth": "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18584",
+      "orth": "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18585",
+      "orth": "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18586",
+      "orth": "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2064,
+        "count": 28
+      }
+    },
+    {
+      "id": "CF18587",
+      "orth": "ⲉⲭⲙⲁⲗⲟⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18588",
+      "orth": "ⲉⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18589",
+      "orth": "ⲉⲭⲙⲁⲗⲱⲧⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3472,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9166",
+      "bibliography": "DDGLC",
+      "cu_ID": "799"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉ ⲗⲁⲃⲁⲛ ⲇⲉ ⲛⲓⲁⲕⲱⲃ ϫⲉⲟⲩⲡⲉ ⲉⲧⲁⲕⲁⲓϥ ⲉⲑⲃⲉⲟⲩ ⲁⲕⲫⲱⲧ ⲛⲭⲱⲡ ⲉⲣⲟⲓ ⲟⲩⲟϩ ⲁⲕⲕⲟⲗⲡⲧ ⲁⲕⲉⲗ ⲛⲁϣⲉⲣⲓ ⲙⲫⲣⲏϯ ⲛϩⲁⲛ**ⲉⲭⲙⲁⲗⲱⲧⲟⲥ** ⲛⲧⲥⲏϥⲓ",
+      "english": "And Laban said to Jacob, What hast thou done? wherefore didst thou run away secretly, and pillage me, and lead away my daughters as captives taken with the sword?",
+      "source": "01_Genesis_31",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:31",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁⲓϫⲓⲧϥ ⲅⲁⲣ ϩⲱⲥ **ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ** · ⲁⲓϩⲉ ⲉⲣⲟϥ ⲉⲡⲉⲧⲉⲩⲛϣϭⲟⲙ ⲙⲙⲟϥ ⲡⲉ ⲉϩⲱⲃ ⲛⲓⲙ ·",
+      "english": "He Whom I took in as a captive I found to be one Who was stronger than everything else (i. e., the Almighty)",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲡⲛⲉⲩⲙⲁⲛⲧⲉⲡϭⲟⲓⲥ ⲡⲉⲧⲭⲏ ϩⲓϫⲱⲓ ⲉⲑⲃⲉⲫⲁⲓ ⲁϥⲑⲁϩⲥⲧ ⲁϥⲟⲩⲱⲣⲡ ⲙⲙⲟⲓ ⲉϩⲓϣⲉⲛⲛⲟⲩϥⲓ ⲛⲛⲓϩⲏⲕⲓ ⲉϩⲓⲱⲓϣ ⲛⲛⲓ**ⲉⲭⲙⲁⲗⲱⲧⲟⲥ** ⲛⲟⲩⲭⲱ ⲉⲃⲟⲗ ⲛⲉⲙⲟⲩⲛⲁⲩ ⲙⲃⲟⲗ ⲛⲛⲓⲃⲉⲗⲗⲉⲩ ⲉⲟⲩⲱⲣⲡ ⲛⲛⲏ ⲉⲧⲥⲟⲛϩ ϧⲉⲛⲟⲩⲭⲱ ⲉⲃⲟⲗ .",
+      "english": "'The Spirit of the Lord is on me, because he has anointed me to preach good news to the poor. He has sent me to heal the brokenhearted, to proclaim release to the captives, recovering of sight to the blind, to deliver those who are crushed,",
+      "source": "03_Luke_04",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲡⲟⲗⲉⲙⲉⲓ ⲅⲁⲣ ⲙⲛⲡⲣⲱⲙⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲛϭⲓⲡⲇⲓⲁⲃⲟⲗⲟⲥ · ⲁⲩⲱ ⲁϥϥⲓⲧϥ ⲛ**ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ** · ϩⲛⲧⲕⲁⲕⲓⲁ ⲙⲡⲙⲟⲩ · ⲙⲛⲙⲡⲩⲗⲏ ⲛⲁⲙⲛⲧⲉ ·",
+      "english": "Now the Devil fighteth against man at all times, and he carrieth him away captive through the evil of death into the gate of Amente.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲡⲛⲁ ⲛⲧⲉⲡϭⲥ ⲡⲉⲧⲭⲏ ϩⲓϫⲱⲓ : ⲉⲑⲃⲉⲫⲁⲓ ⲁϥⲑⲁϩⲥⲧ ⲁϥⲟⲩⲱⲣⲡⲧ ⲉϩⲓϣⲉⲛⲛⲟⲩϥⲓ ⲛⲛⲓϩⲏⲕⲓ ⲉⲧⲁⲗϭⲟ ⲛⲛⲏⲉⲧϧⲉⲙϧⲱⲙ ϧⲉⲛⲡⲟⲩϩⲏⲧ ⲉϩⲓⲱⲓϣ ⲛⲛⲓ**ⲉⲭⲙⲁⲗⲱⲧⲟⲥ** ⲛⲟⲩⲭⲱ ⲉⲃⲟⲗ ⲛⲉⲙⲛⲓⲃⲉⲗⲗⲉⲩ ⲛⲟⲩⲛⲁⲩ ⲙⲃⲟⲗ .",
+      "english": "The Spirit of the Lord is upon me, because he has anointed me; he has sent me to preach glad tidings to the poor, to heal the broken in heart, to proclaim liberty to the captives, and recovery of sight to the blind;",
+      "source": "23_Isaias_61",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:61",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲕⲛⲁϣⲗⲏⲗ ⲁⲛ ⲡⲉ · ϫⲉϥⲓⲧⲟⲩ ϩⲓϫⲱⲓ · ⲉⲃⲟⲗ ϫⲉⲛⲁⲛⲟⲩⲥ ⲛⲁⲕ ⲉⲕϣⲗⲏⲗ ⲉⲕⲣⲓⲙⲉ · ⲉⲕⲁϣⲁϩⲟⲙ ϣⲁⲛⲧⲉⲕⲟⲩϫⲁⲓ ⲛϩⲟⲩⲟ ⲉⲣⲟⲥ ⲉⲧⲣⲉⲕⲕⲁ ⲡⲉⲕϩⲏⲧ ⲉⲃⲟⲗ ⲛⲥⲉϥⲓⲧⲕ ⲛ**ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ** ·",
+      "english": "Thou shalt not pray, 'Remove the temptation from me'; because it is better for thee that thou shouldst pray, and weep, and heave sighs until thou art saved, than for thee to abandon thy heart, and to allow it to carry thee away captive.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲉⲓ",
+        1,
+        15.791
+      ],
+      [
+        "ϣⲟⲩⲁ",
+        1,
+        15.791
+      ],
+      [
+        "ⲁⲣⲓⲥⲧⲁⲣⲭⲟⲥ",
+        1,
+        14.791
+      ],
+      [
+        "ⲛ",
+        28,
+        13.424
+      ],
+      [
+        "ϥⲓⲧ",
+        4,
+        13.416
+      ],
+      [
+        "ⲃⲟⲩⲗⲉⲩⲧⲏⲥ",
+        1,
+        13.206
+      ],
+      [
+        "ⲙⲁⲣⲕⲟⲥ",
+        1,
+        12.206
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        11,
+        12.036
+      ],
+      [
+        "ⲟⲩ",
+        14,
+        11.835
+      ],
+      [
+        "ϣⲃⲣ",
+        1,
+        11.703
+      ],
+      [
+        "ϩⲉ",
+        7,
+        11.342
+      ],
+      [
+        "ⲁ",
+        13,
+        11.338
+      ],
+      [
+        "ϣⲟϫⲧ",
+        1,
+        11.206
+      ],
+      [
+        "ⲧ",
+        8,
+        10.264
+      ],
+      [
+        "ϩⲱⲥ",
+        2,
+        10.076
+      ],
+      [
+        "ϣⲣⲡⲙⲙⲓⲥⲉ",
+        1,
+        9.933
+      ],
+      [
+        "ϣⲟⲣϣⲣ",
+        1,
+        9.884
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        9.836
+      ],
+      [
+        "ⲙⲡ",
+        3,
+        9.679
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        2,
+        9.257
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          25
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          2
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲉⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲉⲉⲣⲉ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲓⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲃⲩⲗⲱⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲟⲧ_4_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          "ϩⲛ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ϩⲙ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ϣⲏⲉⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          "ⲧ_2_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϣⲉⲉⲣⲉ",
+          "ϣⲉⲉⲣⲉ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲉⲉⲣⲉ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲛ_2_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲉⲉⲣⲉ",
+          "ⲥⲓⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ_0_node",
+          "ⲉϩⲣⲁⲓ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          "ⲉⲧ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲓⲭⲙⲁⲗⲱⲧⲟⲥ",
+          "ⲃⲁⲃⲩⲗⲱⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲃⲁⲃⲩⲗⲱⲛ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲃⲁⲃⲩⲗⲱⲛ",
+          "ϩⲓⲧⲟⲟⲧ_4_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1826,
+      "count": 28
+    }
+  },
+  "etym": {
+    "grl_ID": "60",
+    "grl_lemma": "αἰχμάλωτος",
+    "grl_meaning": "captive",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 45a; Preisigke 1:39"
+  }
+}

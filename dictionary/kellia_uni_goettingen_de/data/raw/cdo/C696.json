@@ -1,0 +1,58 @@
+{
+  "id": "C696",
+  "forms": [
+    {
+      "id": "CF2642",
+      "orth": "ⲉⲣⲉⲫⲗⲏⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS834",
+      "bibliography": "CD 63a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C692",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanities, senselessness"
+    },
+    {
+      "target": "C693",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vain, empty"
+    },
+    {
+      "target": "C694",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "ADV",
+      "gloss": "in vain, vainly"
+    },
+    {
+      "target": "C695",
+      "label": "ⲙⲛⲧⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanity, emptiness"
+    }
+  ]
+}

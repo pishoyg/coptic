@@ -1,0 +1,178 @@
+{
+  "id": "C7093",
+  "forms": [
+    {
+      "id": "CF16244",
+      "orth": "ⲣⲉϥϫⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20127,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7826",
+      "bibliography": "CD 755b; CED 310; KoptHWb 413; DELC 324a; ChLCS 100b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϭⲓⲑⲁⲣⲟⲧⲟⲥ ϩⲓⲙⲟⲩⲥⲓⲕⲟⲛ ϩⲓ**ⲣⲉϥϫⲱ** ϩⲓⲥⲁⲗⲡⲓⲅⲝ ⲛⲛⲉⲩⲥⲱⲧⲙ ⲉⲣⲟⲟⲩ ⲛϩⲏⲧⲉ ϫⲓⲛⲛⲧⲉⲛⲟⲩ ⲁⲩⲱ ⲧⲉⲭⲛⲓⲧⲏⲥ ⲛⲓⲙ ⲛⲧⲉⲭⲛⲏ ⲛⲓⲙ ⲛⲛⲉⲩϭⲛⲧⲟⲩ ⲛϩⲏⲧⲉ ϫⲓⲛⲛⲧⲉⲛⲟⲩ ⲁⲩⲱ ⲛⲛⲉⲩⲥⲉⲧⲙ ϩⲣⲟⲟⲩ ⲙⲙⲁⲭⲁⲛⲏ ⲛϩⲏⲧⲉ ϫⲓⲛⲛⲧⲉⲛⲟⲩ ⲟⲩⲇⲉ ⲥⲙⲏ ⲙⲡⲁⲧϣⲉⲗⲉⲉⲧ ϩⲓϣⲉⲗⲉⲉⲧ",
+      "english": "The voice of harpists, minstrels, flute players, and trumpeters will be heard no more at all in you. No craftsman, of whatever craft, will be found any more at all in you. The sound of a mill will be heard no more at all in you.",
+      "source": "66_Revelation_18",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲛⲟ",
+        1,
+        16.236
+      ],
+      [
+        "ⲥⲁⲗⲡⲓⲅⲝ",
+        1,
+        14.94
+      ],
+      [
+        "ⲟⲩⲱⲓⲛⲓ",
+        1,
+        11.629
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.509
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        9.243
+      ]
+    ],
+    "S": [
+      [
+        "ⲑⲁⲣⲟⲧⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲟⲩⲥⲓⲕⲟⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲥⲁⲗⲡⲓⲅⲝ",
+        1,
+        14.258
+      ],
+      [
+        "ϩⲓ",
+        3,
+        13.986
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϫⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲱ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϫⲱ",
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲱ",
+          "ⲣⲉϥϫⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19737,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7095",
+      "label": "ϫⲉⲣⲟ-",
+      "pos": "V",
+      "gloss": "mean"
+    },
+    {
+      "target": "C7096",
+      "label": "ϫⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech, claim"
+    },
+    {
+      "target": "C7089",
+      "label": "ϫⲱ",
+      "pos": "V",
+      "gloss": "say, speak, tell; sing"
+    },
+    {
+      "target": "C7091",
+      "label": "ϫⲱ",
+      "pos": "N",
+      "gloss": "singing, song"
+    },
+    {
+      "target": "C7094",
+      "label": "ϭⲓⲛϫⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech"
+    },
+    {
+      "target": "C7090",
+      "label": "ⲁⲧϫⲱ",
+      "pos": "N",
+      "gloss": "ineffable"
+    },
+    {
+      "target": "C7092",
+      "label": "ⲣⲉϥϫⲉ-",
+      "pos": "N",
+      "gloss": "sayer, speaker"
+    }
+  ]
+}

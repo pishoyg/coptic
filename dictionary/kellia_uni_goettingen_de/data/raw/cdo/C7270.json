@@ -1,0 +1,151 @@
+{
+  "id": "C7270",
+  "forms": [
+    {
+      "id": "CF16599",
+      "orth": "ϫⲛⲟϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20525,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲉⲛⲟϥ",
+      "dialect": "S",
+      "id": "2427.1"
+    },
+    {
+      "orth": "ϫⲉⲛⲟⲃ",
+      "dialect": "S",
+      "id": "2427.2"
+    },
+    {
+      "orth": "ϭⲛⲟϥ",
+      "dialect": "B",
+      "id": "2427.3"
+    },
+    {
+      "orth": "ϣⲛⲟϥ",
+      "dialect": "B",
+      "id": "2427.4"
+    },
+    {
+      "orth": "ϣⲛⲟⲩϥ",
+      "dialect": "B",
+      "id": "2427.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8030",
+      "bibliography": "CD 777a; CED 317; KoptHWb 427; DELC 329a; ChLCS 103a"
+    },
+    {
+      "id": "CS8031",
+      "bibliography": "KoptHWb 427; DELC 329a; ChLCS 103a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁ**ϫⲛⲟϥ** ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲛⲉⲓⲱⲧ ⲙⲏ ⲛⲧⲟⲕ ⲁⲛ ⲛⲡⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲡⲗⲁⲥⲥⲉ ⲙⲙⲟϥ · ϩⲛⲛⲉϥϭⲓϫ ⲙⲙⲓⲛ ⲉⲙⲙⲟϥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ϫⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲛⲟϥ",
+          1
+        ],
+        [
+          "ϫⲛⲟϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ϫⲛⲟϥ",
+          "ⲛⲁ_1_pre_ϫⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲛⲟϥ",
+          "ϫⲛⲟϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20125,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "egy_num": "175900",
+    "egy_lemma": "ṯnf",
+    "demo_num": "dm7716",
+    "demo_lemma": "ḏnf",
+    "english": "[substance for making kyphi?]",
+    "german": "[ein Gewicht (in Rezepten, für Getreide)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/175900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7716"
+  }
+}

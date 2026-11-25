@@ -1,0 +1,627 @@
+{
+  "id": "C5764",
+  "forms": [
+    {
+      "id": "CF13517",
+      "orth": "ϣⲃⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.53,
+        "rank": 540,
+        "count": 241
+      }
+    },
+    {
+      "orth": "ϣⲫⲏⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.29,
+        "rank": 314,
+        "count": 279
+      }
+    },
+    {
+      "orth": "ϣⲃⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2700,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ϣⲃⲉⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3072,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϣⲃⲉⲉⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.48,
+        "rank": 1152,
+        "count": 76
+      }
+    },
+    {
+      "orth": "ϣⲫⲉⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3557,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⳉⲃⲏⲣ",
+      "dialect": "A",
+      "id": "133.5"
+    },
+    {
+      "orth": "ⳉⲃⲉⲉⲣⲉ",
+      "dialect": "A",
+      "id": "133.6"
+    },
+    {
+      "orth": "ϣⲃⲏⲗ",
+      "dialect": "F",
+      "id": "133.7"
+    },
+    {
+      "orth": "ϣⲃⲏⲏⲗⲓ",
+      "dialect": "F",
+      "id": "133.8"
+    },
+    {
+      "orth": "ϣⲃⲏⲣ",
+      "dialect": "L",
+      "id": "133.9"
+    },
+    {
+      "orth": "ϣⲃⲣ-",
+      "dialect": "L",
+      "id": "133.10"
+    },
+    {
+      "orth": "ϣⲃⲉⲉⲣ",
+      "dialect": "L",
+      "id": "133.11"
+    },
+    {
+      "orth": "ϣⲃⲉⲣⲉ",
+      "dialect": "L",
+      "id": "133.12"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6442",
+      "bibliography": "CD 553a-b; CED 237; KoptHWb 304; DELC 257a-b; ChLCS 75b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲙⲫⲏ ⲉⲧⲧⲥⲟ ⲙⲡⲉϥ**ϣⲫⲏⲣ** ϧⲉⲛⲟⲩϩⲉⲓ ⲛϣⲑⲟⲣⲧⲉⲣ ⲟⲩⲟϩ ⲉϥⲑⲣⲟ ⲙⲙⲟϥ ⲉⲑⲓϧⲓ ϩⲟⲡⲱⲥ ⲛⲧⲉϥϫⲟⲩϣⲧ ⲉϫⲉⲛⲟⲩⲥⲡⲉⲗⲉⲟⲛ .",
+      "english": "Woe to him that gives his neighbour to drink the thick lees of wine, and intoxicates him, that he may look upon their secret parts.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲁ**ϣⲃⲏⲣ** ·",
+      "english": "Who called him My Companion'.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲟⲩⲟⲩⲟⲛϩϥ ⲉⲣⲱⲟⲩ ⲛϫⲉⲛⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲉⲡⲉⲓⲇⲏ ⲧⲟⲩⲥⲩⲛⲏⲑⲉⲓⲁ ⲧⲉ ⲑⲁⲓ ⲉⲩϣⲉⲡϧⲓⲥⲓ ⲉϫⲉⲛⲛⲟⲩⲉⲣⲏⲟⲩ ⲉⲑⲣⲟⲩⲛⲁϩⲙⲟⲩ ⲉⲃⲟⲗ ϩⲗⲓ ⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲧⲉⲡⲓⲕⲟⲥⲙⲟⲥ ⲉⲩⲓⲣⲓ ⲛⲧⲟⲩⲥⲡⲟⲩⲇⲏ ⲧⲏⲣⲥ ⲉⲑⲣⲟⲩϫⲱⲕ ⲙⲡⲥⲁϫⲓ ⲙⲡⲓⲥⲱⲧⲏⲣ ⲉⲃⲟⲗ ϫⲉⲙⲙⲟⲛ ⲡⲉⲑⲛⲁⲁⲥ ⲉⲧⲁⲓⲁⲅⲁⲡⲏ ⲛⲧⲉⲟⲩⲁⲓ ⲭⲱ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉϫⲉⲛⲡⲉϥ**ϣⲫⲏⲣ** .",
+      "english": "And the holy elders did not reveal it, for it is their custom to suffer for one another, to deliver themselves from all the desires of the world, to put all their cares into fulfilling the word of the Lord who said: ‘There is no greater charity than for one to give their soul for a companion.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲡϫⲟⲉⲓⲥ ⲉϥⲉⲕⲱ ⲛⲁⲩ ⲉⲃⲟⲗ ϫⲉⲛⲉⲛⲥⲛⲏⲩ ⲛⲉ ⲁⲩⲱ ⲛⲉⲛ**ϣⲃⲏⲣ** ⲙⲉⲗⲟⲥ ⲛⲉ ⲁⲩⲱ ϫⲉⲥⲉϩⲟⲥⲉ ϩⲱⲟⲩ ϩⲛⲧⲉⲩⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ⲁⲩⲱ ϫⲉⲁⲛⲟⲛ ϩⲱⲱⲛ ⲧⲛⲙⲟⲕϩ ⲛϩⲏⲧ ⲉⲧⲃⲏⲏⲧⲟⲩ ⲉⲧⲃⲉϫⲉⲙⲡⲟⲩⲣϩⲙϩⲁⲗ ⲛⲁⲛ ⲟⲛ ⲕⲁⲧⲁⲡⲉⲛⲙⲧⲟⲛ ⲛⲥⲁⲣⲕⲓⲕⲟⲛ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲡϭⲟⲉⲓⲥ ⲥⲟϩⲓ ⲛⲧⲟⲩⲙⲉⲧⲁⲧϩⲏⲧ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲙⲟⲛ ϣϫⲟⲙ ⲛⲧⲉⲛⲓ**ϣⲫⲏⲣⲓ** ⲛⲧⲉⲡⲓⲡⲁⲧϣⲉⲗⲉⲧ ⲉⲣⲛⲏⲥⲧⲉⲩⲓⲛ ϩⲟⲥⲟⲛ ⲉⲣⲉⲡⲓⲡⲁⲧϣⲉⲗⲉⲧ ⲛⲉⲙⲱⲟⲩ ⲉⲧⲉⲁⲛⲟⲕ ⲡⲉ ⲉⲧϣⲟⲡ ϧⲉⲛⲟⲩⲕⲁϯ ⲛⲉⲙⲡⲟⲩⲥⲟϭⲛⲓ ⲉⲑⲛⲁⲛⲉϥ .",
+      "english": "But the Lord rebuked their foolishness, saying: “The sons of the bridegroom cannot fast while the bridegroom is with them,” meaning that He Himself, who dwelt in their minds and good counsel, was present with them.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲙⲡⲕⲉ**ϣⲃⲏⲣ** ϫⲉϫⲓⲧ ϣⲁⲡⲣⲣⲟ .",
+      "english": "He said to another friend, “Take me to the king.”",
+      "source": "Apophthegmata Patrum Sahidic 097: Poemen 109",
+      "urn": "urn:cts:copticLit:ap.97.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥⲉⲣϩⲱⲃ",
+        27,
+        29.96
+      ],
+      [
+        "ⲛ",
+        234,
+        28.202
+      ],
+      [
+        "ⲡⲉϥ",
+        100,
+        27.972
+      ],
+      [
+        "ⲡⲉⲕ",
+        55,
+        26.08
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        126,
+        26.012
+      ],
+      [
+        "ⲙ",
+        100,
+        25.515
+      ],
+      [
+        "ⲟⲩ",
+        113,
+        25.215
+      ],
+      [
+        ".",
+        85,
+        24.845
+      ],
+      [
+        "ⲟⲓ",
+        34,
+        24.845
+      ],
+      [
+        "ⲛⲧⲉ",
+        69,
+        24.392
+      ],
+      [
+        "ⲛⲉⲙ",
+        63,
+        24.174
+      ],
+      [
+        "ⲉ",
+        77,
+        23.817
+      ],
+      [
+        "ϥ",
+        79,
+        23.336
+      ],
+      [
+        "ϫⲉ",
+        52,
+        23.238
+      ],
+      [
+        "ⲁ",
+        62,
+        22.852
+      ],
+      [
+        "ϧⲉⲛ",
+        51,
+        22.78
+      ],
+      [
+        "ⲛⲧⲁ",
+        13,
+        22.677
+      ],
+      [
+        "ⲡ",
+        49,
+        22.463
+      ],
+      [
+        "ⲛⲓ",
+        42,
+        22.395
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        21,
+        22.248
+      ]
+    ],
+    "S": [
+      [
+        "ⲕ",
+        71,
+        17.003
+      ],
+      [
+        "ⲡⲉϥ",
+        52,
+        16.898
+      ],
+      [
+        "ⲛ",
+        139,
+        16.867
+      ],
+      [
+        "ⲡⲉⲕ",
+        42,
+        16.746
+      ],
+      [
+        "ⲙ",
+        85,
+        16.28
+      ],
+      [
+        "ϫⲉ",
+        68,
+        16.11
+      ],
+      [
+        "ⲁⲩⲱ",
+        70,
+        15.836
+      ],
+      [
+        "ⲡ",
+        90,
+        15.673
+      ],
+      [
+        "ⲙⲛ",
+        54,
+        15.61
+      ],
+      [
+        "ⲡⲉ",
+        53,
+        15.393
+      ],
+      [
+        "ⲟⲩ",
+        67,
+        15.119
+      ],
+      [
+        "ϩⲏⲇⲟⲛⲉ",
+        3,
+        15.054
+      ],
+      [
+        "ⲛⲁ",
+        59,
+        15.037
+      ],
+      [
+        "ϥ",
+        69,
+        14.548
+      ],
+      [
+        "ⲉ",
+        63,
+        14.45
+      ],
+      [
+        "ⲣⲉϥⲥⲉⲏⲣⲡ",
+        2,
+        14.299
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        24,
+        14.236
+      ],
+      [
+        "ⲥⲟⲛ",
+        15,
+        14.154
+      ],
+      [
+        "ϫⲡⲓⲉ",
+        4,
+        13.714
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        7,
+        13.551
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲃⲏⲣ_0_node",
+          128
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲃⲏⲣ",
+          22
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲃⲏⲣ",
+          25
+        ],
+        [
+          "ⲡⲉ_1_pre_ϣⲃⲏⲣ",
+          18
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲃⲏⲣ",
+          5
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲃⲏⲣ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϣⲃⲏⲣ",
+          4
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ϣⲃⲏⲣ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲃⲏⲣ",
+          3
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ϣⲃⲏⲣ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲃⲏⲣ",
+          3
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϣⲃⲏⲣ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ϣⲃⲏⲣ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩ_1_pre_ϣⲃⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          5
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲟⲙⲛⲧ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ϣⲃⲏⲣ_0_node",
+          "ⲛ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲃⲏⲣ",
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲃⲏⲣ_0_node",
+          "ⲛⲓⲙ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ϣⲃⲏⲣ_0_node",
+          "ⲙ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲃⲏⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲃⲏⲣ",
+          "ⲡⲉϥ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ϣⲃⲏⲣ",
+          "ⲡⲉ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲃⲏⲣ",
+          "ⲧⲉⲕ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϣⲃⲏⲣ",
+          "ⲡⲉ_1_pre_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ϣⲃⲏⲣ_0_node",
+          "ⲁⲛ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϣⲃⲏⲣ",
+          "ⲙ_1_post_ϣⲃⲏⲣ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩ_1_pre_ϣⲃⲏⲣ",
+          "ϣⲃⲏⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.98,
+      "rank": 386,
+      "count": 315
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5765",
+      "label": "ⲙⲛⲧϣⲃⲏⲣ",
+      "pos": "N",
+      "gloss": "friendship, community"
+    },
+    {
+      "target": "C5766",
+      "label": "ⲣϣⲃⲏⲣ",
+      "pos": "V",
+      "gloss": "be friend, partner"
+    }
+  ],
+  "etym": {
+    "egy_num": "115700",
+    "egy_lemma": "ḫbr",
+    "demo_num": "d4458",
+    "demo_lemma": "ḫb(e)r",
+    "english": "business, trading partner",
+    "german": "Geschäftpartnerschaft; Handelskontakt; Partner",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/115700",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4458"
+  }
+}

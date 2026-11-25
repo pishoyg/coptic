@@ -1,0 +1,66 @@
+{
+  "id": "C12247",
+  "forms": [
+    {
+      "id": "CF33264",
+      "orth": "ⲥⲱϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17251",
+      "bibliography": "CD 388b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲏⲥⲟⲩⲥ ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲉⲧⲉⲩⲡⲓⲥⲧⲓⲥ ⲡⲉϫⲁϥ ⲙⲡⲉⲧ**ⲥⲏϭ** ϫⲉⲡⲁϣⲏⲣⲉ ⲥⲉⲛⲁⲕⲁⲛⲉⲕⲛⲟⲃⲉ ⲛⲁⲕ ⲉⲃⲟⲗ .",
+      "english": "Jesus, seeing their faith, said to the paralytic, 'Son, your sins are forgiven you.'",
+      "source": "41_Mark_2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲙϭⲟⲙ ⲛϭⲓϫ ⲉⲧ**ⲥⲏϭ** ⲙⲛⲙⲡⲁⲧ ⲉⲧⲃⲏⲗ ⲉⲃⲟⲗ",
+      "english": "Be strong, ye relaxed hands and palsied knees.",
+      "source": "Isaiah 35",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁⲉⲓⲣⲉ ⲛⲟⲩⲙⲏⲏϣⲉ ⲛϭⲟⲙ ϩⲓϣⲡⲏⲣⲉ ⲉⲙⲛⲏⲡⲉ ⲉⲣⲟⲟⲩ · ϥⲛⲁⲧⲟⲩⲛⲟⲥ ⲛⲛⲉⲧⲙⲟⲟⲩⲧ ⲛϥⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲛⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ · ϥⲛⲁⲧⲁⲗϭⲉ ⲛⲉⲧ**ⲥⲏϭ** ⲛϥⲧⲣⲉⲛϭⲁⲗⲉ ⲙⲟⲟϣⲉ ⲛⲁⲗ · ϥⲛⲁⲧⲣⲉⲥⲱⲧⲙ ⲛⲙⲡⲟ ϥⲛⲁⲧⲣⲉⲩϣⲁϫⲉ · ϥⲛⲁⲧⲃⲃⲟ ⲛⲛⲉⲧⲥⲟⲃϩ ⲙⲛⲛϭⲓϫ ⲉⲧϣⲟⲩⲱⲟⲩ · ϥⲛⲁⲟⲩⲱⲛ ⲛⲛⲃⲁⲗ ⲛⲛⲃⲗⲗⲉ ϩⲙⲡϣⲁϫⲉ ⲛⲧⲉϥϭⲟⲙ ·",
+      "english": "He shall perform innumberable mighty deeds and wonders, He shall raise the dead, He shall drive out the devils, He shall heal those who are sick of the palsy, He shall make the lame to walk, the deaf He shall make to hear, and the dumb He shall make to speak, He shall cleanse the lepers, and [restore] the arms that are withered, and He shall open the eyes of the blind by the word of His power.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1734,
+      "count": 31
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12248",
+      "label": "ⲥⲓϭⲉ",
+      "pos": "V",
+      "gloss": "become, be rigid, paralysed"
+    },
+    {
+      "target": "C12128",
+      "label": "ⲥⲱϭ",
+      "pos": "V",
+      "gloss": "become, be rigid, paralysed; stiffen, paralyse"
+    }
+  ]
+}

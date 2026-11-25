@@ -1,0 +1,217 @@
+{
+  "id": "C3591",
+  "forms": [
+    {
+      "id": "CF9087",
+      "orth": "ⲥⲛⲁⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8796,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲛⲏⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5239,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4089",
+      "bibliography": "CD 345a; CED 155; KoptHWb 189; DELC 191; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲧⲟⲟⲩ **ⲥⲛⲁⲉⲓⲛ** ⲛⲧϩⲉ ⲛⲛⲟⲉⲓⲗⲉ ⲁⲩⲱ ⲛⲥⲓⲃⲧ ⲛⲧϩⲉ ⲛϩⲉⲛϩⲓⲉⲓⲃ ⲛⲉⲥⲟⲟⲩ",
+      "english": "The mountains skipped like rams, and the hills like lambs.",
+      "source": "Psalms 113",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:113",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲙⲟⲟⲛⲉ ⲅⲁⲣ ⲙⲙⲟⲟⲩ ⲛⲧϩⲉ ⲛϩⲉⲛϩⲧⲱⲣ ⲁⲩⲱ ⲛⲉⲩ**ⲥⲛⲁⲉⲓⲛ** ⲛⲧϩⲉ ⲛϩⲉⲛⲟⲉⲓⲗⲉ ⲉⲩⲥⲙⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲣⲟⲕ ⲡϫⲟⲉⲓⲥ ⲡⲉⲧⲛⲟⲩϩⲙ ⲙⲙⲟⲟⲩ",
+      "english": "For they went at large like horses, and leaped like lambs, praising thee, O Lord, who hadst delivered them.",
+      "source": "Wisdom 19",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲧⲱⲣ",
+        1,
+        16.598
+      ],
+      [
+        "ⲡⲁϩⲟⲩ",
+        1,
+        11.469
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        10.122
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲉⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          "ⲛ_2_pre_ⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          "ⲥⲛⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          "ⲛⲉ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          "ⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲛⲁⲉⲓⲛ",
+          "ⲥⲛⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲉⲓⲛ_0_node",
+          "ⲛ_1_post_ⲥⲛⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲁⲉⲓⲛ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8349,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3575",
+      "type": "cf",
+      "label": "pass by"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3592",
+      "label": "ⲥⲛⲏⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "swaying gait"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5339",
+    "demo_lemma": "snjn",
+    "english": "[to cutt off, sever]",
+    "german": "auf- und abgehen; eilen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5339"
+  }
+}

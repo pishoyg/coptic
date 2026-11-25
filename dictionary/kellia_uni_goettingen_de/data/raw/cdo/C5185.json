@@ -1,0 +1,75 @@
+{
+  "id": "C5185",
+  "forms": [
+    {
+      "id": "CF31893",
+      "orth": "ⲟⲩⲟⲧⲉ ⲛⲟⲩⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31892",
+      "orth": "ⲟⲩⲟⲟⲧⲉ ⲛⲟⲩⲱⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5826",
+      "bibliography": "CD 493b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5004",
+      "type": "cf",
+      "label": "eating, food"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5186",
+      "label": "ⲙⲁ ⲛⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "herb-garden"
+    },
+    {
+      "target": "C5184",
+      "label": "ⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "greens, vegetables, herbs"
+    },
+    {
+      "target": "C5188",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "V",
+      "gloss": "be/become green, be/become pallid"
+    },
+    {
+      "target": "C5189",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "N",
+      "gloss": "greenness, herbs, pallor"
+    },
+    {
+      "target": "C5183",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "V",
+      "gloss": "be raw, be fresh, be green; be/make soft"
+    },
+    {
+      "target": "C5187",
+      "label": "ⲥⲁ ⲛⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "herb-seller, gardener"
+    }
+  ]
+}

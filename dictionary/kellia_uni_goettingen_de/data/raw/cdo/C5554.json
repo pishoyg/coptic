@@ -1,0 +1,82 @@
+{
+  "id": "C5554",
+  "forms": [
+    {
+      "id": "CF13083",
+      "orth": "ⲃⲁⲓⲱⲣⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6217",
+      "bibliography": "CD 530a; DELC 250b; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13017",
+      "type": "cf",
+      "label": "carrier"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5556",
+      "label": "ϭⲓⲛⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5552",
+      "label": "ⲙⲛⲧⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    },
+    {
+      "target": "C5555",
+      "label": "ⲣⲉϥⲧⲁϣⲉⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "much-swearer"
+    },
+    {
+      "target": "C5551",
+      "label": "ⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearer"
+    },
+    {
+      "target": "C5548",
+      "label": "ⲱⲣⲕ",
+      "pos": "V",
+      "gloss": "swear (oath), invoke (person etc.)"
+    },
+    {
+      "target": "C5553",
+      "label": "ⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5549",
+      "label": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "V",
+      "gloss": "swear falsely"
+    },
+    {
+      "target": "C5550",
+      "label": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    }
+  ]
+}

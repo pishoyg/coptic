@@ -1,0 +1,52 @@
+{
+  "id": "C3148",
+  "forms": [
+    {
+      "id": "CF8177",
+      "orth": "ⲉⲣⲣⲁⲥⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3598",
+      "bibliography": "CD 302b; KoptHWb 166"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3147",
+      "label": "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "dream a dream"
+    },
+    {
+      "target": "C3146",
+      "label": "ⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "dream"
+    },
+    {
+      "target": "C3149",
+      "label": "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "interpreter of dreams"
+    }
+  ]
+}

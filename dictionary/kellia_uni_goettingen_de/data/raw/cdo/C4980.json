@@ -1,0 +1,140 @@
+{
+  "id": "C4980",
+  "forms": [
+    {
+      "id": "CF11925",
+      "orth": "ⲟⲩⲟⲩⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18208,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5605",
+      "bibliography": "CD 477a; KoptHWb 269; DELC 232a; ChLCS 67a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁⲛⲅ ⲟⲩⲙⲁⲛⲉⲃⲁⲁⲙⲡⲉ ⲉⲓ**ⲟⲩⲟⲩⲕⲉ** ⲛϩⲉⲛⲕⲛⲧⲉ",
+      "english": "And Amos answered, and said to Amasias, I was not a prophet, nor the son of a prophet; but I was a herdman, and a gatherer of sycamore fruits.",
+      "source": "Amos 7",
+      "urn": "urn:cts:copticLit:ot.amos.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲛⲉⲃⲁⲁⲙⲡⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲛⲧⲉ",
+        1,
+        14.644
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲓ_1_pre_ⲟⲩⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲩⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲛⲧⲉ_3_post_ϩⲉⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓ_1_pre_ⲟⲩⲟⲩⲕⲉ",
+          "ⲟⲩⲟⲩⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲩⲕⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲩⲕⲉ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲕⲛⲧⲉ_3_post_ϩⲉⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17828,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "50790",
+    "egy_lemma": "wgi̯",
+    "english": "to chew",
+    "german": "kauen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/50790"
+  }
+}

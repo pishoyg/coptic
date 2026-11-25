@@ -1,0 +1,74 @@
+{
+  "id": "C13010",
+  "forms": [
+    {
+      "id": "CF34045",
+      "orth": "ϣⲁⲥⲃⲁⲙⲡⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS18009",
+      "bibliography": "CD 39a, 589b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6074",
+      "type": "cf",
+      "label": "herd, sheperd"
+    },
+    {
+      "target": "C461",
+      "type": "cf",
+      "label": "goat"
+    },
+    {
+      "target": "C465",
+      "type": "syn",
+      "label": "goatherd"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C463",
+      "label": "ⲃⲁⲁⲙⲡϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "he-goat"
+    },
+    {
+      "target": "C461",
+      "label": "ⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "she-goat"
+    },
+    {
+      "target": "C462",
+      "label": "ⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "he-goat"
+    },
+    {
+      "target": "C464",
+      "label": "ⲃⲁⲁⲙⲡⲉⲛⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "she-goat"
+    },
+    {
+      "target": "C465",
+      "label": "ⲙⲁⲛⲉⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "goatherd"
+    }
+  ]
+}

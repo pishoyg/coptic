@@ -1,0 +1,106 @@
+{
+  "id": "C6763",
+  "forms": [
+    {
+      "id": "CF15573",
+      "orth": "ϩⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13829,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7477",
+      "bibliography": "CD 697b; KoptHWb 384"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϩⲉⲣⲉⲃⲉⲕⲕⲁ ⲇⲉ ⲧⲱⲟⲩⲛ ⲙⲛⲛⲉⲥϩⲙϩⲁⲗ ⲁⲩⲁⲗⲉ ⲉⲛϭⲁⲙⲟⲩⲗ ⲁⲩⲃⲱⲕ ⲙⲛⲡⲣⲱⲙⲉ ⲁⲡϩⲙϩⲁⲗ ϫⲓ ⲛ**ϩⲉⲣⲉ**ⲃⲉⲕⲕⲁ ⲁϥⲃⲱⲕ",
+      "english": "And Rebecca rose up and her maidens, and they mounted the camels and went with the man; and the servant having taken up Rebecca, departed.",
+      "source": "Genesis 24",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲉⲕⲕⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        1,
+        10.307
+      ],
+      [
+        "ϫⲓ",
+        1,
+        9.164
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        8.944
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϩⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲉⲣⲉ",
+          "ϩⲉⲣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13426,
+      "count": 1
+    }
+  }
+}

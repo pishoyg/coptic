@@ -1,0 +1,116 @@
+{
+  "id": "C6563",
+  "forms": [
+    {
+      "id": "CF15169",
+      "orth": "ϩⲁⲗⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12575,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7275",
+      "bibliography": "CD 670b; KoptHWb 367; DELC 298a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉⲟⲩⲱⲙ ⲛⲟⲩⲅⲣⲏⲫⲟⲓⲟⲛ ⲛⲟⲩⲱⲧ ⲛⲓⲱⲧ ⲟⲩⲟϩ ⲉⲕⲉⲫⲁϥⲧⲟⲩ ϩⲓϫⲉⲛϩⲁⲛ**ϩⲁⲗⲙⲓ** ⲛⲣⲱⲙⲓ ⲙⲡⲟⲩⲙⲑⲟ ⲉⲃⲟⲗ .",
+      "english": "And thou shalt eat them as a barley cake: thou shalt bake them before their eyes in man's dung.",
+      "source": "26_Ezechiel_04",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲁϥⲧⲟⲩ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        9.692
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        9.587
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        9.471
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        1,
+        8.487
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲗⲙⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲗⲙⲓ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲗⲙⲓ_0_node",
+          "ⲛ_1_post_ϩⲁⲗⲙⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲗⲙⲓ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12014,
+      "count": 1
+    }
+  }
+}

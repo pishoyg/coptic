@@ -1,0 +1,170 @@
+{
+  "id": "C2091",
+  "forms": [
+    {
+      "id": "CF5883",
+      "orth": "ⲉⲙⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.03,
+        "rank": 218,
+        "count": 794
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2424",
+      "bibliography": "CD 190ab; KoptHWb 103"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲓⲛⲁⲩ ⲉⲣⲟϥ ⲁⲓⲣϣⲡⲏⲏⲣⲉ **ⲉⲙⲁⲧⲉ** ·",
+      "english": "and when I saw this I marvelled exceedingly.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲕⲉⲟⲩⲁ ⲟⲩⲥⲧⲙⲏⲧ ⲡⲉ **ⲉⲙⲁⲧⲉ** ·",
+      "english": "The other was very obedient.",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲏ ⲇⲉ ⲛⲉⲟⲩⲣⲙⲙⲁⲟ ⲧⲉ **ⲉⲙⲁⲧⲉ** ·",
+      "english": "and she was exceedingly rich.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        45,
+        27.441
+      ],
+      [
+        "ⲁ",
+        669,
+        23.569
+      ],
+      [
+        "ⲁⲩⲱ",
+        363,
+        21.626
+      ],
+      [
+        "ϥ",
+        447,
+        21.301
+      ],
+      [
+        "ⲛ",
+        456,
+        20.675
+      ],
+      [
+        "ⲉ",
+        275,
+        19.494
+      ],
+      [
+        "ⲡ",
+        283,
+        19.298
+      ],
+      [
+        "ⲩ",
+        189,
+        18.863
+      ],
+      [
+        "ⲇⲉ",
+        144,
+        18.862
+      ],
+      [
+        "ⲓ",
+        135,
+        18.448
+      ],
+      [
+        "ⲛⲁ",
+        165,
+        18.154
+      ],
+      [
+        "ⲟⲩ",
+        169,
+        17.79
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        42,
+        17.509
+      ],
+      [
+        "ϩⲛ",
+        118,
+        17.494
+      ],
+      [
+        "ⲥ",
+        121,
+        17.398
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        39,
+        17.294
+      ],
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        25,
+        17.026
+      ],
+      [
+        "ⲙ",
+        126,
+        16.65
+      ],
+      [
+        ".",
+        90,
+        16.4
+      ],
+      [
+        "ⲗⲩⲡⲉⲓ",
+        18,
+        16.366
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲙⲁⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.0,
+      "rank": 187,
+      "count": 794
+    }
+  }
+}

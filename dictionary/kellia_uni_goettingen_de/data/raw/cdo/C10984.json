@@ -1,0 +1,230 @@
+{
+  "id": "C10984",
+  "forms": [
+    {
+      "id": "CF30080",
+      "orth": "ⲭⲣⲉⲱⲥⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF30084",
+      "orth": "ⲭⲣⲉⲱⲥⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10843,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30081",
+      "orth": "ⲭⲣⲉⲓⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30082",
+      "orth": "ⲭⲣⲉⲟⲥⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30083",
+      "orth": "ⲭⲣⲉⲱⲥⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30085",
+      "orth": "ⲭⲣⲓⲱⲥⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30086",
+      "orth": "ⲭⲣⲓⲱⲥⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30087",
+      "orth": "ⲭⲣⲓⲱⲥⲧⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30088",
+      "orth": "ⲭⲣⲱⲥⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30089",
+      "orth": "ⲭⲣⲱⲥⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15241",
+      "bibliography": "DDGLC",
+      "cu_ID": "9528"
+    },
+    {
+      "id": "CS15242",
+      "bibliography": "DDGLC",
+      "cu_ID": "9203"
+    },
+    {
+      "id": "CS15243",
+      "bibliography": "DDGLC",
+      "cu_ID": "9529"
+    },
+    {
+      "id": "CS15244",
+      "bibliography": "DDGLC",
+      "cu_ID": "9539"
+    },
+    {
+      "id": "CS15245",
+      "bibliography": "DDGLC",
+      "cu_ID": "11789"
+    },
+    {
+      "id": "CS15246",
+      "bibliography": "DDGLC",
+      "cu_ID": "2142"
+    },
+    {
+      "id": "CS15247",
+      "bibliography": "DDGLC",
+      "cu_ID": "5930"
+    },
+    {
+      "id": "CS15248",
+      "bibliography": "DDGLC",
+      "cu_ID": "8792"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯ**ⲭⲣⲉⲱⲥⲧⲉⲓ** ⲛⲛⲉⲧⲛϣⲗⲏⲗ ⲁⲩⲱ ⲙⲛϭⲟⲙ ⲙⲙⲟⲓ ⲧⲉⲛⲟⲩ ⲉⲧⲙⲡⲱϩ ⲉⲡϣⲓ ⲙⲡⲉⲧⲛⲧⲁⲉⲓⲟ",
+      "english": "...",
+      "source": "Life of Hilaria Leiden fragment (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1791:43-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓⲏⲧ",
+        1,
+        15.043
+      ],
+      [
+        "ϣⲗⲏⲗ",
+        1,
+        11.243
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        10.33
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲭⲣⲉⲱⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲭⲣⲉⲱⲥⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲭⲣⲉⲱⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_2_post_ⲙⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲭⲣⲉⲱⲥⲧⲉⲓ",
+          "ⲭⲣⲉⲱⲥⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲭⲣⲉⲱⲥⲧⲉⲓ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛ",
+          "ⲙⲛ_1_post_ⲭⲣⲉⲱⲥⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲭⲣⲉⲱⲥⲧⲉⲓ",
+          "ϭⲟⲙ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_2_post_ⲙⲛ",
+          "ⲙⲙⲟ_2_post_ⲙⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10433,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2395",
+    "grl_lemma": "χρεωστέω",
+    "grl_meaning": "to be in debt",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 2004a; Preisigke 2:749"
+  }
+}

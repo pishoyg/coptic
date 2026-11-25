@@ -1,0 +1,258 @@
+{
+  "id": "C10206",
+  "forms": [
+    {
+      "id": "CF26959",
+      "orth": "ⲡⲗⲏⲣⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF26962",
+      "orth": "ⲡⲗⲏⲣⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7908,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF26961",
+      "orth": "ⲡⲗⲏⲣⲟⲩ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26960",
+      "orth": "ⲡⲗⲏⲣⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26963",
+      "orth": "ⲡⲣⲉⲣⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13574",
+      "bibliography": "DDGLC",
+      "cu_ID": "723"
+    },
+    {
+      "id": "CS13575",
+      "bibliography": "DDGLC",
+      "cu_ID": "8784"
+    },
+    {
+      "id": "CS13576",
+      "bibliography": "DDGLC",
+      "cu_ID": "11209"
+    },
+    {
+      "id": "CS13577",
+      "bibliography": "DDGLC",
+      "cu_ID": "6981"
+    },
+    {
+      "id": "CS13578",
+      "bibliography": "DDGLC",
+      "cu_ID": "2544"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲟⲩⲱϩⲙ ⲇⲉ ⲛϭⲓⲙⲁⲣⲓⲁⲙ ⲡⲉϫⲁⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲉⲓⲉ ϣⲱⲡⲉ ⲟⲩⲥⲟⲛ ⲛⲁⲅⲁⲑⲟⲥ ⲁⲩⲱ ⲉⲁⲛⲟⲩϥ · ⲉⲁⲛ**ⲡⲗⲏⲣⲟⲩ** ⲙⲙⲟϥ ϩⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“And Mary answered and said: My Lord, suppose a good and excellent brother whom we have filled with all the mysteries of the Light,”",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲕⲉⲫⲁⲗⲓⲟⲛ · ⲛⲧⲁⲧⲛⲛⲟⲟⲩ ⲛⲥⲱⲧⲛ ⲛⲧⲁ**ⲡⲗⲏⲣⲟⲩ** ⲙⲙⲱⲧⲛ ⲛⲧⲁϯ ⲛⲏⲧⲛ ⲛϩⲉⲛⲕⲉⲧⲁⲉⲓⲟ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:49-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲙⲱ",
+        1,
+        10.551
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        9.126
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.95
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲗⲏⲣⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          "ⲛ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          "ⲡⲗⲏⲣⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲣⲟⲩ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          "ⲧⲁ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲗⲏⲣⲟⲩ",
+          "ⲡⲗⲏⲣⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲣⲟⲩ_0_node",
+          "ⲙⲙⲱ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          "ⲛⲧ_1_post_ⲡⲗⲏⲣⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7457,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1769",
+    "grl_lemma": "πληρόω",
+    "grl_meaning": "to make full",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1419b; Preisigke 2:320"
+  }
+}

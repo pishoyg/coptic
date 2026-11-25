@@ -1,0 +1,149 @@
+{
+  "id": "C640",
+  "forms": [
+    {
+      "id": "CF2427",
+      "orth": "ϩⲣⲉⲃⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18960,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2428",
+      "orth": "ϧⲁⲣⲁⲁⲃⲟⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS776",
+      "bibliography": "CD 54a; KoptHWb 33, 160, 383; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲩⲉⲓⲛⲉ ⲙⲙⲟⲟⲩ ϩⲛⲟⲩⲁⲛⲁⲅⲕⲏ ⲉⲥⲥⲁϣ ⲉ**ϩⲣⲉⲃⲟⲧ** ⲇⲉ ⲙⲡⲉϩⲟⲟⲩ ⲙⲫⲟⲩⲙⲓⲥⲉ ⲙⲡⲣⲣⲟⲉⲣⲑⲩⲥⲓⲁ ⲁⲩⲱ ⲛⲧⲁⲣⲉϥⲓ ⲛϭⲓⲡϣⲁⲉ ⲙⲡⲇⲓⲟⲛⲩⲥⲟⲥ ⲁⲩϯϩⲧⲟⲣ ⲉⲣⲟⲟⲩ ⲉⲙⲟⲟϣⲉ ϩⲁⲧⲉϥϩⲏ ⲉⲣⲉϩⲉⲛⲕⲗⲟⲟⲙ ϩⲓϫⲱⲟⲩ",
+      "english": "And in the day of the king's birth every month they were brought by bitter constraint to eat of the sacrifices; and when the fast of Bacchus was kept, the Jews were compelled to go in procession to Bacchus, carrying ivy.",
+      "source": "II Maccabees 6",
+      "urn": "urn:cts:copticLit:ot.2macc.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁϣ",
+        1,
+        15.206
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲣⲉⲃⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲣⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲣⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲣⲉⲃⲟⲧ_0_node",
+          "ⲇⲉ_1_post_ϩⲣⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϩⲣⲉⲃⲟⲧ",
+          "ⲙ_1_post_ϩⲣⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲣⲉⲃⲟⲧ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18572,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C639",
+      "label": "ⲉⲃⲟⲧ",
+      "pos": "N",
+      "gloss": "month"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm5446",
+    "demo_lemma": "ẖr-ı ͗bd",
+    "english": "monthly requirement; monthly",
+    "german": "monatlicher Bedarf; allmonatlich",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm5446"
+  }
+}

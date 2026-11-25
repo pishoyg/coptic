@@ -1,0 +1,234 @@
+{
+  "id": "C10939",
+  "forms": [
+    {
+      "id": "CF29886",
+      "orth": "ⲭⲁⲣⲁⲕⲧⲏⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF29888",
+      "orth": "ⲭⲁⲣⲁⲕⲧⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5977,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF29887",
+      "orth": "ⲭⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3993,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15131",
+      "bibliography": "DDGLC",
+      "cu_ID": "3172"
+    },
+    {
+      "id": "CS15132",
+      "bibliography": "DDGLC",
+      "cu_ID": "3590"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲡⲉⲥ**ⲭⲁⲣⲁⲕⲧⲏⲣ** · ⲁϥⲥⲟⲩⲱⲛⲥ ⲁⲩⲛⲟϭ ⲛⲣⲁϣⲉ ⲧⲁϩⲟϥ",
+      "english": "And when he had looked into her face, and recognized her, a mighty joy came upon him.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲙⲉ ⲡⲉ ⲉⲃⲟⲗ ϫⲉⲡⲉ**ⲭⲁⲣⲁⲕⲧⲏⲣ** ⲡⲉ ⲙⲡⲉⲓⲱⲧ ·",
+      "english": "He is the Truth, therefore is He the distinguishing Mark of the Father.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉ.....ⲕ.....ⲉ ⲉⲃⲟⲗ ⲛϩⲛⲃⲁⲗ ⲛⲁⲇⲁⲙⲁⲥ ⲛⲧϩⲉ ⲙ...... ⲛⲧⲁⲓⲛⲁⲩ ⲉⲣⲟϥ ϩⲛⲧⲉⲥⲕⲏⲛⲏ ⲙⲡⲉⲓⲱⲧ ⲛⲉⲣⲉϩⲛ**ⲭⲁⲣⲁⲕⲧⲏⲣ** ⲛⲥⲓⲙⲓⲟⲛ .. ⲥϩⲁⲓ ⲛ........ⲧⲉϩⲛⲉ ⲉⲙⲛϣϭⲟⲙ ⲛⲥⲁⲣⲝ ϩⲓⲥⲛⲟϥ ...... ⲉⲣⲉⲡⲣⲁⲛ ⲙⲡⲉⲓⲱⲧ ⲙⲛⲡϣⲏⲣⲉ ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲥⲏϩ ⲉⲡⲉϥⲥⲱⲙⲁ ϩⲛⲥⲁϣϥ ⲙ.... ⲟⲛ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 2 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:12-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲥⲓⲙⲓⲟⲛ",
+        1,
+        19.013
+      ],
+      [
+        "ⲛ........ⲧⲉϩⲛⲉ",
+        1,
+        19.013
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        19.013
+      ],
+      [
+        "..",
+        1,
+        12.355
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        2,
+        11.041
+      ],
+      [
+        "ⲛⲉⲣⲉ",
+        1,
+        10.334
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        10.19
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        9.678
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        9.146
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        7.232
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲁⲣⲁⲕⲧⲏⲣ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲥ_1_pre_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          "ⲭⲁⲣⲁⲕⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          "ⲭⲁⲣⲁⲕⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲭⲁⲣⲁⲕⲧⲏⲣ_0_node",
+          "ⲙ_1_post_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲭⲁⲣⲁⲕⲧⲏⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5539,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3500",
+    "grl_lemma": "χαρακτήρ",
+    "grl_meaning": "engraver, graving tool, die, stamp, mark engraved",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1977a; Preisigke 2:719"
+  }
+}

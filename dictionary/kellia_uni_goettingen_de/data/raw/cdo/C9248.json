@@ -1,0 +1,402 @@
+{
+  "id": "C9248",
+  "forms": [
+    {
+      "id": "CF23141",
+      "orth": "ⲕⲁⲑⲟⲗⲓⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF23144",
+      "orth": "ⲕⲁⲑⲟⲗⲓⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3488,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF23142",
+      "orth": "ⲕⲁⲑⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23143",
+      "orth": "ⲕⲁⲑⲟⲗⲉⲕⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23145",
+      "orth": "ⲕⲁⲑⲟⲗⲓⲕⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4281,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF23146",
+      "orth": "ⲕⲁⲑⲟⲩⲗⲟⲕⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23147",
+      "orth": "ⲕⲁⲑⲱⲗⲏⲕⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11543",
+      "bibliography": "DDGLC",
+      "cu_ID": "4339"
+    },
+    {
+      "id": "CS11544",
+      "bibliography": "DDGLC",
+      "cu_ID": "2542"
+    },
+    {
+      "id": "CS11545",
+      "bibliography": "DDGLC",
+      "cu_ID": "1904"
+    },
+    {
+      "id": "CS11546",
+      "bibliography": "DDGLC",
+      "cu_ID": "5328"
+    },
+    {
+      "id": "CS11547",
+      "bibliography": "DDGLC",
+      "cu_ID": "4471"
+    },
+    {
+      "id": "CS11548",
+      "bibliography": "DDGLC",
+      "cu_ID": "9378"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧϯ ⲛⲟⲩⲑⲱⲗⲉⲃ ⲛⲥⲁϯⲛⲁⲓⲁⲧⲥ ⲉⲑⲟⲩⲁⲃ ⲛ**ⲕⲁⲑⲟⲗⲓⲕⲏ** ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲑⲏ ⲉⲧⲟⲓ ⲛⲁⲧⲁϭⲛⲓ ϧⲉⲛⲡⲉⲥϫⲓⲛⲱⲛϧ ⲧⲏⲣϥ ⲉⲩⲥⲓϯ ⲛϩⲁⲛⲥⲁϫⲓ ⲉⲩϩⲱⲟⲩ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲡϩⲏⲧ ⲛⲛⲓⲣⲱⲙⲓ ⲛⲁⲧⲕⲁϯ ϫⲉϩⲓⲛⲁ ⲛⲧⲟⲩⲧⲁⲕⲟ ⲙⲡⲟⲩϫⲓⲛⲱⲛϧ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲥⲉⲙⲛⲟⲥ .",
+      "english": "All those who have stained the happy and catholic Church, which remains free from blemish throughout its entire life, by injecting evil words of philosophy into the hearts of men without understanding, so that their lives might be destroyed far from purity.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲡⲱⲣ ⲉⲧⲣⲉⲩⲁⲡⲁⲧⲁ ⲛϩⲟⲓⲛⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲧⲣⲉⲩⲣⲁϣⲉ ϩⲛⲟⲩⲙⲛⲧⲛⲟⲩϫ ϩⲣⲁⲓ ϩⲛⲛⲉⲩⲙⲛⲧϣⲁϥⲧⲉ · ⲉⲩⲥⲱⲧⲙ ⲉϩⲉⲛϣⲁϫⲉ ⲉⲩⲥⲏϩ ϩⲛϩⲉⲛⲙⲁ ⲉⲩⲏⲡ ⲉϩⲟⲩⲛⲁⲛ ⲉⲛⲉⲅⲣⲁⲫⲏ ⲛⲕⲁⲑⲟⲗⲓⲕⲟⲛ ⲛⲧ**ⲕⲁⲑⲟⲗⲓⲕⲏ** ⲉⲕⲕⲗⲏⲥⲓⲁ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓϩⲛⲓⲙ ⲇⲉ ⲛⲁϥⲑⲏϣ ⲛⲁϥ ⲡⲉ ϧⲉⲛⲟⲩϣⲓ ⲉϥⲉⲛⲕⲟⲧ ⲇⲉ ⲡⲓⲣⲉⲅ ⲛⲧⲉⲡⲓⲉϫⲱⲣϩ ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲇⲉ ⲛⲉⲙⲡⲁϥⲛⲕⲟⲧ ⲉⲡⲧⲏⲣϥ ⲡⲉ ⲛⲉⲟⲩⲟⲛ ⲟⲩⲟⲛϩ ⲛⲧⲁϥ ⲡⲉ ⲉϥⲓⲣⲓ ⲛϯⲁⲛⲁⲙⲉⲣⲓ ⲧⲏⲣⲥ ⲉϥⲥⲛⲏⲓⲛⲓ ⲛϧⲏⲧϥ ⲉϥⲃⲟⲣⲃⲉⲣ ⲙⲡⲓϩⲛⲓⲙ ⲉⲃⲟⲗ ϩⲁⲣⲟϥ ⲉϥⲑⲣⲟ ⲙⲡⲉϥⲕⲁϯ ⲉⲙⲟⲩϣⲧ ϧⲉⲛⲛⲓϫⲓⲛⲛⲁⲩ ⲉⲧⲥⲙⲟⲛⲧ ϧⲉⲛⲡⲓⲉϫⲱⲣϧ ⲇⲉ ⲁϥϣⲁⲛⲕⲏⲛ ⲉϥⲉⲛⲕⲟⲧ ⲙⲡⲓⲣⲉⲅ ϣⲁϥϭⲉⲡⲥⲱϫⲛ ⲉⲃⲟⲗ ⲉϥⲙⲟϣⲓ ϧⲉⲛⲡⲓⲟⲛϩ ⲉϥⲉⲣⲙⲉⲗⲉⲧⲏ ⲟⲩⲟϩ ⲉϥϣⲗⲏⲗ ⲉϥⲥⲱⲣ ⲙⲡⲓϩⲛⲓⲙ ⲉⲃⲟⲗ ϩⲁⲣⲟϥ ⲉϥⲑⲣⲟ ⲙⲡⲉϥⲕⲁϯ ⲉⲙⲟⲩϣⲧ ⲛⲛⲓϫⲓⲛⲛⲁⲩ ⲛⲧⲉⲛⲓⲅⲣⲁⲫⲏ ⲁϥϣⲱⲡⲓ ⲉⲣⲉⲡⲉϥⲕⲁϯ ⲧⲟⲩⲃⲏⲟⲩⲧ ⲉⲙⲁϣⲱ ⲟⲩⲟϩ ⲁϥⲉⲣⲡⲉⲙⲡϣⲁ ⲛⲟⲩϩⲙⲟⲧ ⲛⲧⲉⲟⲩⲥⲟⲫⲓⲁ ⲛⲉⲙⲟⲩⲉⲓ ⲛⲉⲙⲟⲩⲇⲓⲁⲕⲣⲏⲥⲓⲥ ⲉϥⲫⲱⲣϫ ⲉⲃⲟⲗ ⲛⲛⲓϩⲃⲏⲟⲩⲓ ⲛⲧⲉⲛⲓⲇⲁⲓⲙⲱⲛ . ⲟⲩⲟϩ ⲛⲁϥⲟⲓ ⲛⲁⲕⲣⲓⲃⲏⲥ ⲡⲉ ϧⲉⲛⲛⲓⲅⲣⲁⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲉⲙⲁϣⲱ ⲛⲉⲙⲛⲓⲡⲁⲣⲁⲇⲟⲥⲓⲥ ⲉⲧⲥⲟⲩⲧⲱⲛ ⲛⲧⲉϯ**ⲕⲁⲑⲟⲗⲓⲕⲏ** ⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲕⲉ ⲅⲁⲣ ⲥⲉⲉⲣⲙⲉⲑⲣⲉ ϧⲁⲧⲉϥⲥⲃⲱ ⲛⲉⲙⲡⲉϥⲉⲙⲓ ⲛⲉⲙⲡⲉϥⲕⲁϯ ⲛⲥⲟⲧⲡ ⲛϫⲉⲛⲓϫⲱⲙ ⲉⲧⲁϥⲥϧⲏⲧⲟⲩ . ⲁϥⲥϧⲉⲅ ⲅⲁⲣ ⲛϫⲱⲙ ⲛⲥⲃⲱ ⲟⲩⲁⲓ ⲉⲑⲃⲉⲛⲓⲙⲟⲛⲁⲭⲟⲥ ⲛⲁⲟⲩⲃⲏⲧ ⲛⲉⲙⲕⲉⲟⲩⲁⲓ ⲉⲑⲃⲉⲛⲓⲙⲟⲛⲁⲭⲟⲥ ⲉⲧϣⲟⲡ ϧⲉⲛⲛⲓⲣⲓ ϧⲉⲛⲡⲉϥϣⲁϥⲉ ⲛⲉⲙⲕⲉⲟⲩⲁⲓ ⲉⲑⲃⲉⲛⲓⲟⲩⲏⲃ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲑⲣⲟⲩⲣⲱⲓⲥ ⲉⲣⲱⲟⲩ ϧⲉⲛⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ . ⲉⲣⲉⲡⲓⲅ ϯⲥⲃⲱ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉϯϫⲓ ⲛⲱⲛϧ ⲉⲧⲉⲣⲛⲟϥⲣⲓ ⲛⲉⲙϯϫⲓ ⲛⲕⲁϯ ⲉⲧⲥⲙⲟⲛⲧ ⲛⲉⲙⲡⲓϫⲓⲛ ⲛⲁⲩ ⲉⲧⲥⲟⲩⲧⲱⲛ ⲕⲁⲧⲁⲛⲓⲡⲁⲣⲁⲇⲟⲥⲓⲥ ⲛⲧⲉϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲉ ⲑⲁⲓ ⲅⲁⲣ ⲧⲉ ⲧⲉϥⲥⲩⲛⲏⲑⲓⲁ .",
+      "english": "His sleep, however, was measured and divided: he slept for a third of the night, but never during the day. He had a corridor where, throughout the entire half of the day, he walked, weighed down with drowsiness, forcing his mind to contemplate visions that were revealed to him. At night, when he had already slept for a third of the night, he would spend the remaining part of the night walking through the corridor, meditating and praying, driving sleep away from himself, and compelling his mind to focus on the visions of the Scriptures. Thus, he became a man of the purest mind and of wisdom, knowledge, and discernment, and he was regarded as worthy of the grace of discretion, distinguishing the works of demons. In the holy Scriptures and the orthodoxy of the Catholic Church, he was eloquent and learned, for his knowledge and his chosen mind are attested to by the books he wrote. He wrote three books: one about the monks of monasteries, another about the monks who dwelled in the cells of his desert, and another about the presbyters of God, to make them vigilant in their holy place. These three books all taught a good life, ordered understanding, and visions in accordance with the orthodox traditions of the Church. For this was his custom.",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲧⲡⲓⲥⲧⲓⲥ ϩⲱⲱⲥ ⲛⲧ**ⲕⲁⲑⲟⲗⲓⲕⲏ** ⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲡⲣⲕⲁⲁⲩ ⲉⲛⲧⲕ ⲉⲡⲁϩⲟⲩ ⲛϩⲏⲧⲥ ⲟⲩⲇⲉ ⲉⲃⲟⲗⲕ ⲉⲃⲟⲗ ·",
+      "english": "And as regards the Faith itself of the Catholic Church, do not let thyself backslide therein, neither do thou put thyself outside it.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲧⲟⲟⲩⲉ ⲇⲉ ⲛⲧⲉⲣⲉϥϣⲱⲡⲉ ⲛⲉⲡⲉϩⲟⲟⲩ ⲡⲉ ⲛⲧⲡⲉⲛⲧⲏⲕⲟⲥⲧⲏ ⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲓⲣⲉ ⲛⲟⲩ**ⲕⲁⲑⲟⲗⲓⲕⲏ** ⲥⲩⲛⲁⲝⲓⲥ ·",
+      "english": "And when the morning had come, now it was the Day of Pentecost, the Archbishop made ready to celebrate the Catholic Synaxis.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲁⲓⲁⲧⲥ",
+        2,
+        20.11
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        3,
+        15.357
+      ],
+      [
+        "ⲑⲏ",
+        2,
+        12.82
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        11.632
+      ],
+      [
+        "ⲥⲟⲩⲧⲱⲛ",
+        1,
+        11.156
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        2,
+        11.092
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        10.005
+      ],
+      [
+        "ⲛ",
+        5,
+        9.971
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.875
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.005
+      ],
+      [
+        "ϯ",
+        1,
+        4.705
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲁⲑⲟⲗⲓⲕⲟⲛ",
+        2,
+        17.954
+      ],
+      [
+        "ⲥⲩⲛⲁⲍⲓⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲉⲕⲕⲗⲉⲥⲓⲁ",
+        1,
+        17.276
+      ],
+      [
+        "ⲁⲣⲭⲇⲓⲁⲕⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲥⲩⲛⲁⲝⲓⲥ",
+        3,
+        17.173
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        5,
+        15.961
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        2,
+        13.919
+      ],
+      [
+        "ϫⲱⲗⲕ",
+        1,
+        13.276
+      ],
+      [
+        "ⲛ",
+        13,
+        11.588
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        3,
+        11.241
+      ],
+      [
+        "ϭⲱⲣϭ",
+        1,
+        11.189
+      ],
+      [
+        "ⲧ",
+        7,
+        11.171
+      ],
+      [
+        "ⲕⲁⲁ",
+        2,
+        10.285
+      ],
+      [
+        "ϩⲱⲱ",
+        2,
+        10.138
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        9.714
+      ],
+      [
+        "ⲩ",
+        5,
+        9.454
+      ],
+      [
+        "ⲉⲛⲉ",
+        1,
+        8.643
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        7.941
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.898
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        7.804
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          2
+        ],
+        [
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_0_node",
+          "ⲛ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_0_node",
+          8
+        ],
+        [
+          "ⲥⲩⲛⲁⲍⲓⲥ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲉⲕⲕⲗⲉⲥⲓⲁ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲉⲕⲕⲗⲉⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_5_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_0_node",
+          "ⲥⲩⲛⲁⲍⲓⲥ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_0_node",
+          "ⲉⲕⲕⲗⲉⲥⲓⲁ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          1
+        ],
+        [
+          "ⲉⲕⲕⲗⲉⲥⲓⲁ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲏ",
+          "ⲙ_2_post_ⲉⲕⲕⲗⲉⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲉⲕⲕⲗⲉⲥⲓⲁ",
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          "ϩⲁⲅⲓⲟⲥ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_4_post_ⲡ",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_5_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3121,
+      "count": 10
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 3816,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "990",
+    "grl_lemma": "καθολικός",
+    "grl_meaning": "general, universal, catholic",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 855b; Preisigke 1:718"
+  }
+}

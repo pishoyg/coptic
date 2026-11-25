@@ -1,0 +1,38 @@
+{
+  "id": "C12056",
+  "forms": [
+    {
+      "id": "CF33063",
+      "orth": "ⲥⲟⲩⲣⲟⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17057",
+      "bibliography": "CD 368b; KoptHWB 203; DELC 200a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3860",
+      "label": "ⲥⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "star; spot, blot (of disease on eye)"
+    },
+    {
+      "target": "C3861",
+      "label": "ⲥⲓⲟⲩ ⲥⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "star-spangled, speckled"
+    }
+  ]
+}

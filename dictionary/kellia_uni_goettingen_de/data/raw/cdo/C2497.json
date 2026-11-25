@@ -1,0 +1,236 @@
+{
+  "id": "C2497",
+  "forms": [
+    {
+      "id": "CF6778",
+      "orth": "ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5321,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2876",
+      "bibliography": "CD 227b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲡⲛⲁ ϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛϫⲓⲛϭⲟⲛⲥ · ⲟⲩⲇⲉ ⲙⲁⲣⲉⲥⲙⲟⲩ ϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛⲥⲁϩⲟⲩ · ⲟⲩⲇⲉ ⲙⲁⲣⲉ**ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ** ϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛϩⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ ·",
+      "english": "Mercy hath no existence in injustice, neither hath blessing any existence in cursing, nor doth the doing of acts of kindness spring from the tears of those who weep.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲥϭⲱϫⲃ ⲛϭⲓⲧⲙⲛⲧⲣⲉϥϫⲉ ⲛⲟϭ ⲛϣⲁϫⲉ ⲙⲡⲉⲛⲗⲁⲥ ⲛⲛⲁϩⲣⲛⲧⲉⲓϣⲡⲏⲣⲉ ⲙⲡϩⲟⲟⲩ · ⲉⲃⲟⲗ ϫⲉⲥⲛⲁϣⲡⲱϩ ⲁⲛ ⲉⲡϣⲓ ⲛⲛⲧⲁϣⲉⲟⲉⲓϣ ⲛⲧ**ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ** ⲙⲡⲉⲛⲧⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ ϩⲁⲣⲟⲛ · ⲕⲁⲧⲁⲡⲉⲥⲙⲡϣⲁ ·",
+      "english": "and may the utterance of words of great weight vanquish our tongue this day in respect of this miracle, for otherwise we shall not attain to the capacity for preaching, according to its true value, the goodness of Him Whom they crucified for our sakes.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϣⲉⲟⲉⲓϣ",
+        2,
+        14.051
+      ],
+      [
+        "ⲥⲁϩⲟⲩ",
+        2,
+        13.81
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        2,
+        11.681
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        11.276
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        9.193
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        9.074
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        9.024
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        7.465
+      ],
+      [
+        "ⲧ",
+        2,
+        7.071
+      ],
+      [
+        "ⲙ",
+        2,
+        6.351
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲥⲧⲁⲩⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲩ_5_post_ⲥⲧⲁⲩⲣⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ_0_node",
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲡ",
+          "ⲁ_5_post_ⲥⲧⲁⲩⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲥⲧⲁⲩⲣⲟⲩ",
+          "ⲩ_5_post_ⲥⲧⲁⲩⲣⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4906,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2493",
+      "label": "ⲉⲛⲁⲛⲟⲩⲥ",
+      "pos": "ADV",
+      "gloss": "well"
+    },
+    {
+      "target": "C2492",
+      "label": "ⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "good, fair"
+    },
+    {
+      "target": "C2491",
+      "label": "ⲛⲁⲛⲟⲩ-",
+      "pos": "VBD",
+      "gloss": "be good, fair"
+    },
+    {
+      "target": "C2494",
+      "label": "ⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "that which is good"
+    },
+    {
+      "target": "C2496",
+      "label": "ⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "doer of good, benefactor"
+    },
+    {
+      "target": "C2495",
+      "label": "ⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "V",
+      "gloss": "do good"
+    }
+  ]
+}

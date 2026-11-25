@@ -1,0 +1,80 @@
+{
+  "id": "C2425",
+  "forms": [
+    {
+      "id": "CF6626",
+      "orth": "ⲛⲉⲃϩⲏⲧ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF6627",
+      "orth": "ⲛⲉⲃⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2791",
+      "bibliography": "CD 221b; KoptHWb 119"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2419",
+      "label": "ⲁⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordless"
+    },
+    {
+      "target": "C2421",
+      "label": "ⲉⲣⲛⲏⲃ",
+      "pos": "V",
+      "gloss": "be lord"
+    },
+    {
+      "target": "C2420",
+      "label": "ⲙⲉⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordship"
+    },
+    {
+      "target": "C2422",
+      "label": "ⲛⲉⲃⲁϩⲓ",
+      "pos": "N",
+      "gloss": "longlived"
+    },
+    {
+      "target": "C2423",
+      "label": "ⲛⲉⲃⲏⲓ",
+      "pos": "N",
+      "gloss": "lord of house, householder"
+    },
+    {
+      "target": "C2424",
+      "label": "ⲛⲉⲃⲓⲟϩⲓ",
+      "pos": "N",
+      "gloss": "lord of the field, landowner"
+    },
+    {
+      "target": "C2417",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lord, master, owner"
+    },
+    {
+      "target": "C2418",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "mistress, lady"
+    }
+  ]
+}

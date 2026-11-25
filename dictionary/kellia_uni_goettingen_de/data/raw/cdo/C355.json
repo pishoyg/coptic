@@ -1,0 +1,92 @@
+{
+  "id": "C355",
+  "forms": [
+    {
+      "id": "CF1535",
+      "orth": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1536",
+      "orth": "ϭⲓ ⲉⲃⲉⲭⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS393",
+      "bibliography": "CD 30b; KoptHWb 21"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7059",
+      "type": "cf",
+      "label": "lead, relate to, attain to"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

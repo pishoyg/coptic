@@ -1,0 +1,90 @@
+{
+  "id": "C1893",
+  "forms": [
+    {
+      "id": "CF5432",
+      "orth": "ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1959,
+        "count": 31
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2204",
+      "bibliography": "CD 168a; ChLCS 25b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲧⲟⲉⲓⲥ ⲛϣⲁⲉⲓ ⲉⲣⲛϣⲧⲏⲛ ⲙⲡⲗϭⲉ **ⲉϣⲱⲡⲉ **ⲙⲙⲟⲛ**** ⲧⲧⲟⲉⲓⲥ ⲛϣⲁⲓ ⲛⲁϥⲓⲡⲕⲱⲧⲉ ⲙⲙⲁⲩ ⲛⲧⲉϣⲧⲏⲛ ⲙⲡⲗϭⲉ ⲛⲥⲡⲱϩ ⲛϩⲟⲩⲟ .",
+      "english": "No one sews a piece of unshrunk cloth on an old garment, or else the patch shrinks and the new tears away from the old, and a worse hole is made.",
+      "source": "Mark Chapter 2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛⲁⲥ **ⲉϣⲱⲡⲉ **ⲙⲙⲟⲛ**** ⲡⲏⲣⲡ ⲛⲁⲡⲉϩⲛϩⲱⲧ ⲛⲧⲉⲡⲏⲣⲡ ⲡⲱⲛ ⲉⲃⲟⲗ ⲛⲧⲉⲛϩⲱⲧ ⲧⲁⲕⲟ . ⲁⲗⲗⲁ ⲉϣⲁⲩⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛⲃⲣⲣⲉ .",
+      "english": "No one puts new wine into old wineskins, or else the new wine will burst the skins, and the wine pours out, and the skins will be destroyed; but they put new wine into fresh wineskins.'",
+      "source": "41_Mark_2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲥⲙⲟⲕϩ ⲛϩⲏⲧ ⲡⲉ ⲉⲥϭⲛⲁⲣⲓⲕⲉ ⲉⲓⲁⲕⲱⲃ ϩⲛⲧⲉⲥⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ϩⲙⲡⲁϣⲁⲓ ⲙⲡⲉⲙⲕⲁϩ ⲛϩⲏⲧ ϫⲉⲙⲁ ⲛⲁⲓ ⲛϩⲉⲛϣⲏⲣⲉ **ⲉϣⲱⲡⲉ **ⲙⲙⲟⲛ**** ϯⲛⲁⲙⲟⲩ ·",
+      "english": "And she grieved, and found fault with Jacob in her ignorance, in the abundance of [her] grief, ‘Give me children, or I will die.’",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1716,
+      "count": 31
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1895",
+      "label": "ϫⲛ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "or not, or else, rather"
+    },
+    {
+      "target": "C1894",
+      "label": "ⲉϣϫⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1890",
+      "label": "ⲙⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "not to be, there is not"
+    },
+    {
+      "target": "C1892",
+      "label": "ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "no; if not, else"
+    },
+    {
+      "target": "C1891",
+      "label": "ⲙⲛⲧⲉ-",
+      "pos": "EXIST",
+      "gloss": "not to have"
+    }
+  ]
+}

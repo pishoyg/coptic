@@ -1,0 +1,94 @@
+{
+  "id": "C7876",
+  "forms": [
+    {
+      "id": "CF17817",
+      "orth": "ϭⲁⲣⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19311,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8755",
+      "bibliography": "CD 829a; CED 336; KoptHWb 466; DELC 346b; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲉⲡⲓⲑⲩⲙⲉⲓ ⲉⲥⲓ ⲉⲃⲟⲗ ϩⲛⲛ**ϭⲁⲣⲁⲧⲉ** ⲉⲧⲉⲣⲉⲛⲣⲓⲣ ⲟⲩⲱⲙ ⲙⲙⲟⲟⲩ ⲉⲙⲙⲛⲗⲁⲁⲩ ϯⲛⲁϥ .",
+      "english": "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any.",
+      "source": "42_Luke_15",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲣⲓⲣ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        10.629
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18924,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "egy_num": "863678",
+    "egy_lemma": "grt",
+    "english": "Sleeve (?)",
+    "german": "Hülse (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/863678"
+  }
+}

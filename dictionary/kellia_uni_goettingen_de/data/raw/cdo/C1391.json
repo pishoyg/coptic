@@ -1,0 +1,330 @@
+{
+  "id": "C1391",
+  "forms": [
+    {
+      "id": "CF4203",
+      "orth": "ⲉⲕⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1613",
+      "bibliography": "CD 122b-123a; ChLCS 19b"
+    },
+    {
+      "id": "CS1614",
+      "bibliography": "CD 123a; ChLCS 19b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲣⲁⲅⲙⲟⲥ",
+        1,
+        16.11
+      ],
+      [
+        "ⲧⲁⲥⲑⲱⲟⲩ",
+        1,
+        13.862
+      ],
+      [
+        "ϫⲉ",
+        4,
+        10.552
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        1,
+        8.473
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        8.25
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        7.631
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.364
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.532
+      ],
+      [
+        "ϥ",
+        2,
+        5.839
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.783
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.653
+      ],
+      [
+        "ⲕ",
+        1,
+        5.543
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.369
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲓ_1_pre_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲕⲱⲧ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫⲣⲁⲅⲙⲟⲥ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲡϭⲥ_3_post_ⲁⲛⲟⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲉⲕⲱⲧ",
+          "ⲉⲕⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲕⲱⲧ_0_node",
+          "ⲛⲧⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲕⲱⲧ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲫⲣⲁⲅⲙⲟⲥ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲉⲕⲱⲧ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲕⲱⲧ",
+          "ϫⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲕⲱⲧ",
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲕⲱⲧ",
+          "ⲡϭⲥ_3_post_ⲁⲛⲟⲕ",
+          1
+        ],
+        [
+          "ⲉⲕⲱⲧ_0_node",
+          "ⲛⲁ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲕⲱⲧ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ⲛ_1_post_ⲉⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲕⲱⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1389",
+      "label": "ϫⲓⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "receive edification"
+    },
+    {
+      "target": "C1390",
+      "label": "ϭⲓⲛⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building (process, act of)"
+    },
+    {
+      "target": "C1388",
+      "label": "ϯⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "edify"
+    },
+    {
+      "target": "C1383",
+      "label": "ⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "build, form; edify, encourage; be edified"
+    },
+    {
+      "target": "C1385",
+      "label": "ⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "act of building; thing built; edification; rule (for edification)"
+    },
+    {
+      "target": "C1384",
+      "label": "ⲕⲱⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "build"
+    },
+    {
+      "target": "C1386",
+      "label": "ⲙⲉⲧⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building"
+    },
+    {
+      "target": "C1387",
+      "label": "ⲣⲉϥⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "builder"
+    },
+    {
+      "target": "C1392",
+      "label": "ⲥⲉⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "potter's place, workshop"
+    }
+  ],
+  "etym": {
+    "egy_num": "162500",
+    "egy_lemma": "qd.w",
+    "demo_num": "d6477",
+    "demo_lemma": "qd",
+    "english": "potter; builder; sculptor",
+    "german": "Töpfer; Maurer; Bildner",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6477"
+  }
+}

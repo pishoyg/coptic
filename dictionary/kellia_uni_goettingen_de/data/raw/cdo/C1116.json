@@ -1,0 +1,108 @@
+{
+  "id": "C1116",
+  "forms": [
+    {
+      "id": "CF3597",
+      "orth": "ⲕⲃⲱⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1300",
+      "bibliography": "CD 100a; KoptHWb 57"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉϣⲡ",
+        1,
+        19.695
+      ],
+      [
+        "ⲕⲏⲧ",
+        1,
+        16.888
+      ],
+      [
+        "ϭⲟⲥⲓ",
+        1,
+        11.94
+      ],
+      [
+        "ⲩ",
+        2,
+        9.121
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲃⲱⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1115",
+      "label": "ϫⲓⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "get cooling, refreshment"
+    },
+    {
+      "target": "C1114",
+      "label": "ϯⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "make cool"
+    },
+    {
+      "target": "C12192",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "cold"
+    },
+    {
+      "target": "C1112",
+      "label": "ⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "be, become cool; make cool"
+    },
+    {
+      "target": "C1113",
+      "label": "ⲕⲃⲟ",
+      "pos": "N",
+      "gloss": "coolness"
+    }
+  ],
+  "etym": {
+    "egy_num": "160190",
+    "egy_lemma": "qbb",
+    "demo_num": "d6301",
+    "demo_lemma": "qbb",
+    "english": "cool wind",
+    "german": "kühler Wind",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160190",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6301"
+  }
+}

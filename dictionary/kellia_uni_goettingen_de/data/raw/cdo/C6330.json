@@ -1,0 +1,77 @@
+{
+  "id": "C6330",
+  "forms": [
+    {
+      "id": "CF14672",
+      "orth": "ⲉϩⲟⲩⲛ ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2620,
+        "count": 18
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7025",
+      "bibliography": "CD 634a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϯ ⲙⲡⲓⲗⲓⲃⲉⲗⲗⲟⲥ **ⲉϩⲟⲩⲛ **ϩⲁ**ⲡϫⲟⲣ** ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ ⲉⲓⲡⲱϩⲧ ⲙⲙⲟⲓ ⲛⲧⲉⲧⲛⲙⲛⲧⲁⲅⲁⲑⲟⲥ ϫⲉⲕⲁⲁⲥ ⲁⲧⲉⲧⲛⲁⲣⲡⲁϩⲉⲡ ⲙⲛⲡϫⲟⲣ ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ",
+      "english": "I am making this petition concerning Pjor and his wife, prostrating myself before your goodness, so that you will pass a judgment for me against Pjor and his wife,",
+      "source": "Applied curse with judicial features for Theodora against Pjor and his wife",
+      "urn": "urn:cts:copticMag:kyprianos.tm99995.kyp_t_53",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ⲛϭⲓⲡⲇⲟⲩⲝ ϫⲉⲙⲡⲉϥϣⲁϫⲉ · ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩϫⲡⲟ ⲥⲟ ⲛⲗⲁⲙⲡⲁⲥ ⲛⲕⲱϩⲧ **ⲉϩⲟⲩⲛ **ϩⲁ**ⲛⲉϥⲥⲡⲓⲣⲟⲟⲩⲉ** · ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲣⲡⲁⲓ · ⲁϥⲧⲣⲉⲩⲉⲓⲛⲉ ⲛϩⲉⲛϣⲗⲓϭ ⲙⲡⲉⲛⲓⲡⲉ ⲉⲩⲗⲟⲃϣ ⲛⲕⲱϩⲧ :—",
+      "english": "And when the Duke saw that he would not speak, he commanded his men to bring six lighted torches, and to fasten them to his sides (or, ribs). And when they had done this he made them bring a number of red-hot pointed irons,",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲡⲉⲧⲛⲙⲁⲕϩ **ⲉϩⲟⲩⲛ **ϩⲁ**ⲡⲁⲛⲁϩⲃϥ** ⲁⲩⲱ ⲙⲁⲣⲉⲧⲉⲧⲛⲯⲩⲭⲏ ϫⲓⲧⲉⲥⲃⲱ ⲥϩⲏⲛ ⲅⲁⲣ ⲉϩⲟⲩⲛ ⲉⲣⲟⲥ",
+      "english": "Put your neck under the yoke, and let your soul receive instruction: she is hard at hand to find.",
+      "source": "Sirach 51",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6328",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, in, at; from; by reason of; for, in respect of, on behalf of; for (of price); against"
+    },
+    {
+      "target": "C6332",
+      "label": "ϩⲁⲣⲓϩⲁⲣⲟ⸗",
+      "pos": "PREP",
+      "gloss": "of oneself, alone, apart"
+    },
+    {
+      "target": "C6331",
+      "label": "ⲉϩⲣⲁⲓ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, up to"
+    },
+    {
+      "target": "C6329",
+      "label": "ⲉⲃⲟⲗ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "away from"
+    }
+  ]
+}

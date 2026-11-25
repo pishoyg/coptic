@@ -1,0 +1,187 @@
+{
+  "id": "C1799",
+  "forms": [
+    {
+      "id": "CF5188",
+      "orth": "ⲧⲁⲫⲙⲏⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3720,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2100",
+      "bibliography": "CD 158a; KoptHWb 86"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓⲛⲕⲁϯ",
+        2,
+        17.695
+      ],
+      [
+        "ⲥⲃⲱ",
+        2,
+        13.303
+      ],
+      [
+        "ⲟⲩⲏⲓ",
+        2,
+        12.355
+      ],
+      [
+        "ϩⲗⲓ",
+        2,
+        11.24
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        10.986
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        2,
+        10.814
+      ],
+      [
+        "ⲓⲱⲧ",
+        2,
+        10.767
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        9.771
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        9.736
+      ],
+      [
+        "ⲛ",
+        4,
+        8.591
+      ],
+      [
+        "ϯ",
+        2,
+        7.29
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.243
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.137
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        7.066
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲁⲫⲙⲏⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3295,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1793",
+      "label": "ϩⲛⲟⲩⲙⲉ",
+      "pos": "ADV",
+      "gloss": "truly"
+    },
+    {
+      "target": "C1795",
+      "label": "ⲑⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "true, honest person"
+    },
+    {
+      "target": "C1796",
+      "label": "ⲑⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "true"
+    },
+    {
+      "target": "C1789",
+      "label": "ⲙⲉ",
+      "pos": "N",
+      "gloss": "truth, justice, true person"
+    },
+    {
+      "target": "C1790",
+      "label": "ⲙⲉ",
+      "pos": "N",
+      "gloss": "truthful, righteous; real, genuine"
+    },
+    {
+      "target": "C1800",
+      "label": "ⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "true, real"
+    },
+    {
+      "target": "C1791",
+      "label": "ⲙⲛⲧⲙⲉ",
+      "pos": "N",
+      "gloss": "truth, righteousness"
+    },
+    {
+      "target": "C1792",
+      "label": "ⲛⲁⲙⲉ",
+      "pos": "ADV",
+      "gloss": "truly"
+    },
+    {
+      "target": "C1794",
+      "label": "ⲣⲙⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "true, honest person"
+    },
+    {
+      "target": "C1798",
+      "label": "ⲧⲁⲫⲙⲏ",
+      "pos": "N",
+      "gloss": "true"
+    },
+    {
+      "target": "C1797",
+      "label": "ⲧⲁⲫⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "truth"
+    }
+  ]
+}

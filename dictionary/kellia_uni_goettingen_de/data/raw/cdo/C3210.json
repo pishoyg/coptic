@@ -1,0 +1,407 @@
+{
+  "id": "C3210",
+  "forms": [
+    {
+      "id": "CF8305",
+      "orth": "ⲣⲣⲟⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3830,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3667",
+      "bibliography": "CD 307ab; KoptHWb 170; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲡⲉⲓϩⲱⲃ **ⲣⲣⲟⲟⲩϣ** ⲛⲁⲩ ·",
+      "english": "Then this matter caused them anxiety,",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲧⲁϩⲙⲉⲕ ⲉⲕⲟ ⲛϩⲙϩⲁⲗ ⲙⲡⲣⲧⲣⲉϥ**ⲣⲣⲟⲟⲩϣ** ⲛⲁⲕ . ⲁⲗⲗⲁ ⲕⲁⲛ ⲉϣⲱⲡⲉ ⲟⲩⲛϭⲟⲙ ⲙⲙⲟⲕ ⲉⲣⲣⲙϩⲉ ⲭⲣⲱ ⲛϩⲟⲩⲟ .",
+      "english": "Were you called being a bondservant? Don&apos;t let that bother you, but if you get an opportunity to become free, use it.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲛⲉϥϩⲓⲡⲁϩⲟⲩ ⲙⲡϫⲟⲉⲓ ⲉϥⲛⲕⲟⲧⲕ ϩⲓϫⲛⲟⲩϣⲟⲧ ⲁⲩⲱ ⲁⲩⲛⲉϩⲥⲉ ⲙⲙⲟϥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ . ϫⲉⲡⲥⲁϩ ⲛⲅⲟ ⲁⲛ ⲡⲉ **ⲣⲣⲟⲟⲩϣ** ϫⲉⲧⲛⲛⲁⲙⲟⲩ",
+      "english": "He himself was in the stern, asleep on the cushion, and they woke him up, and told him, 'Teacher, don't you care that we are dying?'",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        3,
+        13.931
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        3,
+        12.062
+      ],
+      [
+        "ⲟ",
+        3,
+        11.56
+      ],
+      [
+        "ⲙⲟⲩ",
+        3,
+        11.498
+      ],
+      [
+        "ⲛⲁ",
+        7,
+        11.11
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        3,
+        11.059
+      ],
+      [
+        "ⲅ",
+        3,
+        10.994
+      ],
+      [
+        "ⲁⲡⲟⲧⲁⲥⲥⲉ",
+        1,
+        10.857
+      ],
+      [
+        "ⲧⲛ",
+        3,
+        9.919
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        9.883
+      ],
+      [
+        "ⲡⲉⲓ",
+        2,
+        9.327
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        8.954
+      ],
+      [
+        "ⲕ",
+        3,
+        8.607
+      ],
+      [
+        ".",
+        3,
+        8.312
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        8.263
+      ],
+      [
+        "ϫⲉ",
+        3,
+        7.901
+      ],
+      [
+        "ⲛ",
+        5,
+        7.775
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        7.087
+      ],
+      [
+        "ϥ",
+        3,
+        6.277
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.083
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          6
+        ],
+        [
+          "ϫⲉ_1_post_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲧⲛ_3_post_ⲙⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ⲙⲟⲩ",
+          2
+        ],
+        [
+          "ⲙⲟⲩ_2_post_ϫⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲓⲱⲛ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲟⲧⲉ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_pre_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲙⲡⲣⲧⲣⲉ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ⲭⲣⲱ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_3_post_ⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          "ϫⲉ_1_post_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲣⲣⲟⲟⲩϣ",
+          "ⲧⲛ_3_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲛ_3_post_ⲙⲟⲩ",
+          "ⲛⲁ_3_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲙⲟⲩ",
+          "ⲙⲟⲩ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲣⲟⲟⲩϣ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲣⲟⲟⲩϣ",
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          "ⲁⲓⲱⲛ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲟⲧⲉ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          "ⲁ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          "ⲡⲉⲓ_2_pre_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_pre_ϩⲱⲃ",
+          "ϩⲱⲃ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡⲣⲧⲣⲉ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          "ϥ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣⲣⲟⲟⲩϣ",
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ⲣⲣⲟⲟⲩϣ_0_node",
+          "ⲛⲁ_1_post_ⲣⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲣⲟⲟⲩϣ",
+          "ⲕ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲁⲗⲗⲁ_2_post_ⲭⲣⲱ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲁⲗⲗⲁ_3_post_ⲟⲩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3447,
+      "count": 8
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3213",
+      "label": "ϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-taker, guardian"
+    },
+    {
+      "target": "C3211",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "take care, thought"
+    },
+    {
+      "target": "C3212",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, anxiety"
+    },
+    {
+      "target": "C3215",
+      "label": "ⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-free, not liable"
+    },
+    {
+      "target": "C3209",
+      "label": "ⲕⲁⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "set as a care, be careful, intent"
+    },
+    {
+      "target": "C3214",
+      "label": "ⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, providence"
+    },
+    {
+      "target": "C3216",
+      "label": "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "freedom from care"
+    },
+    {
+      "target": "C3207",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "have care for, be intent on"
+    },
+    {
+      "target": "C3208",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, concern; cause of anxiety"
+    }
+  ]
+}

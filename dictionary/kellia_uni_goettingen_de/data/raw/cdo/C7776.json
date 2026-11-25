@@ -1,0 +1,765 @@
+{
+  "id": "C7776",
+  "forms": [
+    {
+      "id": "CF17617",
+      "orth": "ϭⲟⲛⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.72,
+        "rank": 494,
+        "count": 272
+      }
+    },
+    {
+      "orth": "ϫⲟⲛⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.64,
+        "rank": 538,
+        "count": 139
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8644",
+      "bibliography": "CD 822a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉⲑⲣⲟⲩⲥⲱⲧⲉⲙ ⲛϫⲉⲫⲛⲟⲩϯ ⲉⲡϧⲣⲱⲟⲩ ⲛⲧⲉⲧⲉϥⲥⲙⲏ ⲟⲩⲟϩ ⲡⲉⲙⲃⲟⲛ ⲛⲧⲉⲡⲉϥϫⲫⲟⲓ ⲉϥⲉⲟⲩⲟⲛϩϥ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲙⲃⲟⲛ ⲛⲉⲙⲟⲩϫⲱⲛⲧ ⲛⲉⲙⲟⲩϣⲁϩ ⲉϥⲟⲩⲱⲙ ⲉϥⲓⲛⲓ ⲛⲟⲩⲕⲉⲣⲁⲩⲛⲟⲥ ⲉϫⲱⲟⲩ ⲛϫⲟⲛⲥ ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩⲙⲱⲟⲩ ⲛⲉⲙⲟⲩⲁⲗ ⲉϥⲛⲏⲟⲩ ⲉⲡⲉⲥⲏⲧ ⲛ**ϫⲟⲛⲥ** .",
+      "english": "And the Lord shall make his glorious voice to be heard, and the wrath of his arm, to make a display with wrath and anger and devouring flame: he shall lighten terribly, and his wrath shall be as water and violent hail.",
+      "source": "23_Isaias_30",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:30",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲙⲛⲧⲣⲉϥϣⲡϩⲓⲥⲉ ⲅⲁⲣ · ⲙⲛⲟⲩⲙⲛⲧⲣⲉϥϫⲓⲧ ⲛⲛ**ϭⲟⲛⲥ** · ⲁⲩⲧⲁⲁⲩ ⲛⲁⲛ · ϫⲉⲛⲛⲉⲥⲧⲁⲩⲟ ⲟⲛ ⲉϩⲣⲁⲓ ⲛϭⲓⲧⲙⲛⲧⲣⲉϥϫⲛⲁⲁⲩ ·",
+      "english": "For the power to suffer patiently, and the power to bear violent assaults have been given unto us, in order that slothfulness may not cast us down headlong.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥϫⲉⲛ ⲛⲓⲉϩⲟⲟⲩ ⲇⲉ ⲛⲧⲉⲓⲱⲁⲛⲛⲏⲥ ⲡⲓⲣⲉϥϯ ⲱⲙⲥ ϣⲁⲉϧⲟⲩⲛ ⲉϯⲛⲟⲩ ϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲛⲓⲫⲏⲟⲩⲓ ⲥⲉϭⲓ ⲙⲙⲟⲥ ⲛϫⲟⲛⲥ ⲟⲩⲟϩ ϩⲁⲛⲣⲉϥϭⲓ ⲛ**ϫⲟⲛⲥ** ⲡⲉⲧϩⲱⲗⲉⲙ ⲙⲙⲟⲥ .",
+      "english": "From the days of John the Baptizer until now, the Kingdom of Heaven suffers violence, and the violent take it by force.",
+      "source": "01_Matthew_11",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲛⲟⲩⲧⲉ ⲛⲁⲧⲣⲉⲩⲥⲱⲧⲙ ⲉⲡⲉⲟⲟⲩ ⲛⲧⲉϥⲥⲙⲏ ⲁⲩⲱ ϥⲛⲁⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲡϭⲱⲛⲧ ⲙⲡⲉϥϭⲃⲟⲓ ⲛϥⲛⲟⲩⲏⲧⲉ ⲉϫⲱⲟⲩ ⲛϭⲟⲛⲥ ⲙⲛⲟⲩϭⲱⲛⲧ ⲛⲟⲣⲅⲏ ⲙⲛⲟⲩϣⲁϩ ⲛⲟⲣⲅⲏ ⲉⲥⲟⲩⲱⲙ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲙⲟⲟⲩ ⲙⲛⲟⲩⲭⲁⲗⲁⲍⲁ ⲉⲩⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ϩⲓⲟⲩⲥⲟⲡ ⲛ**ϭⲟⲛⲥ**",
+      "english": "And the Lord shall make his glorious voice to be heard, and the wrath of his arm, to make a display with wrath and anger and devouring flame: he shall lighten terribly, and his wrath shall be as water and violent hail.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲫⲏ ⲉⲧϭⲓ ⲛ**ϫⲟⲛⲥ** ⲛⲟⲩϭⲓⲛϫⲟⲛⲥ ⲉϥϩⲱⲟⲩ ⲙⲡⲉϥⲏⲓ ⲉⲑⲣⲉϥⲑⲱϣ ⲙⲡⲉϥⲙⲟϩ ϧⲉⲛⲡϭⲓⲥⲓ ⲛⲡϫⲓⲛⲥⲁϧⲙⲉϥ ⲉⲃⲟⲗ ϧⲉⲛⲧϫⲓϫ ⲛϩⲁⲛⲡⲉⲧϩⲱⲟⲩ .",
+      "english": "Woe to him that covets an evil covetousness to his house, that he may set his nest on high, that he may be delivered from the power of evils.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲛⲉϩⲟⲟⲩ ⲇⲉ ⲛⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲃⲁⲡⲧⲓⲥⲧⲏⲥ ϣⲁⲉϩⲣⲁⲓ ⲉⲧⲉⲛⲟⲩ ⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ ⲥⲉϫⲓ ⲙⲙⲟⲥ ⲛ**ϭⲟⲛⲥ** . ⲁⲩⲱ ⲛⲣⲉϥϫⲓⲛϭⲟⲛⲥ ⲧⲱⲣⲡ ⲙⲙⲟⲥ .",
+      "english": "From the days of John the Baptizer until now, the Kingdom of Heaven suffers violence, and the violent take it by force.",
+      "source": "40_Matthew_11",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲓ",
+        63,
+        27.199
+      ],
+      [
+        "ⲛ",
+        167,
+        26.742
+      ],
+      [
+        "ϭⲏⲟⲩ",
+        9,
+        25.883
+      ],
+      [
+        "ⲣⲉϥϭⲓ",
+        6,
+        24.643
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        79,
+        23.991
+      ],
+      [
+        "ϭⲓⲧ",
+        17,
+        23.919
+      ],
+      [
+        "ⲟⲩ",
+        73,
+        23.323
+      ],
+      [
+        "ⲙⲉⲧϭⲓ",
+        3,
+        22.865
+      ],
+      [
+        "ϥ",
+        59,
+        22.072
+      ],
+      [
+        "ϭⲓⲛ",
+        2,
+        21.695
+      ],
+      [
+        "ⲓⲉ",
+        12,
+        20.461
+      ],
+      [
+        "ⲉ",
+        35,
+        20.405
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        11,
+        20.138
+      ],
+      [
+        "ⲁ",
+        33,
+        20.123
+      ],
+      [
+        "ⲙⲙⲱ",
+        13,
+        19.907
+      ],
+      [
+        "ⲣⲉϥⲑⲓϧⲓ",
+        2,
+        19.888
+      ],
+      [
+        "ⲣⲉϥϯϣⲱϣ",
+        2,
+        19.888
+      ],
+      [
+        "ⲙⲙⲟ",
+        18,
+        19.878
+      ],
+      [
+        "ϩⲗⲓ",
+        9,
+        19.75
+      ],
+      [
+        "ϭⲟⲧⲡ",
+        1,
+        19.695
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲓ",
+        171,
+        23.325
+      ],
+      [
+        "ⲛ",
+        440,
+        22.06
+      ],
+      [
+        "ⲣⲉϥϫⲓ",
+        15,
+        19.368
+      ],
+      [
+        "ϫⲏⲩ",
+        10,
+        18.384
+      ],
+      [
+        "ϫⲓⲧ",
+        32,
+        17.69
+      ],
+      [
+        "ⲟⲩ",
+        109,
+        17.432
+      ],
+      [
+        "ⲁⲩⲱ",
+        92,
+        17.225
+      ],
+      [
+        "ⲉⲧ",
+        70,
+        16.533
+      ],
+      [
+        "ⲛⲁ",
+        71,
+        16.045
+      ],
+      [
+        "ϫⲓⲧⲉ",
+        4,
+        15.698
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        15.505
+      ],
+      [
+        "ϥ",
+        74,
+        15.057
+      ],
+      [
+        "ⲁ",
+        63,
+        14.883
+      ],
+      [
+        "ϩⲛ",
+        45,
+        14.862
+      ],
+      [
+        "ⲙⲙⲟ",
+        39,
+        14.744
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        18,
+        14.352
+      ],
+      [
+        ".",
+        39,
+        14.321
+      ],
+      [
+        "ⲉ",
+        57,
+        14.223
+      ],
+      [
+        "ⲡ",
+        61,
+        14.197
+      ],
+      [
+        "ⲙ",
+        49,
+        14.103
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲟⲛⲥ_0_node",
+          204
+        ],
+        [
+          "ⲛ_1_pre_ϭⲟⲛⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲛⲥ",
+          3
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ϫⲟⲟ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲟ_b",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲩⲱ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕ_4_post_ϩⲓⲧⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_3_post_ϣⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϣⲏⲩⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲩⲉ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϭⲱⲛⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϭⲉ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϭⲟⲛⲥ",
+          "ϭⲟⲛⲥ_0_node",
+          2
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲛ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲛⲥ",
+          "ϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲗⲁⲁⲩ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲉⲛⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ϭⲟⲛⲥ",
+          "ⲁ_3_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲟⲟ",
+          "ϥ_3_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲟ",
+          "ϫⲟⲟ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲟ_2_post_ⲉⲛⲧ",
+          "ϥ_3_post_ϫⲟⲟ_b",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲟⲛⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙⲛ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ϭⲟⲛⲥ",
+          "ⲛⲉⲩ_3_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲙ_1_post_ϭⲟⲛⲥ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϭⲟⲛⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲓⲧⲟⲩⲱ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲩⲱ_3_post_ⲡ",
+          "ⲕ_4_post_ϩⲓⲧⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲛⲥ",
+          "ⲗⲁⲁⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_2_post_ⲛ",
+          "ⲁⲩⲱ_5_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲡⲉ",
+          "ⲙ_3_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲗⲁⲁⲩ",
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲟⲩⲇⲉ_3_post_ϣⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_3_post_ϣⲏⲩⲉ",
+          "ⲉϫⲛ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϭⲟⲛⲥ",
+          "ⲛⲉⲩ_3_post_ϣⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϣⲏⲩⲉ",
+          "ϣⲏⲩⲉ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲩⲉ_2_post_ⲉϫⲛ",
+          "ⲟⲩⲇⲉ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲛⲧ",
+          "ϭⲱⲛⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ϭⲱⲛⲧ_1_post_ϭⲟⲛⲥ",
+          "ⲛ_2_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲱⲛⲧ",
+          "ⲟⲣⲅⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲏ_3_post_ⲛ",
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          "ⲛⲉⲩ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲏ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲗⲁⲁⲩ",
+          "ϭⲉ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϭⲉ_2_post_ⲗⲁⲁⲩ",
+          "ⲗⲁⲁⲩ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_post_ϭⲟⲛⲥ",
+          "ⲛ_2_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_0_node",
+          "ⲉⲧ_1_post_ϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲟⲛⲥ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲟⲛⲥ",
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.72,
+      "rank": 428,
+      "count": 273
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7782",
+      "label": "ϩⲛ ⲟⲩϫⲓⲛϭⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "unjustly, unfairly"
+    },
+    {
+      "target": "C7779",
+      "label": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "pos": "V",
+      "gloss": "use violence, do evil; hurt, ill-treat, constrain"
+    },
+    {
+      "target": "C7780",
+      "label": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "violence, iniquity, force"
+    },
+    {
+      "target": "C7781",
+      "label": "ϫⲓ ⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "unrighteous, unjust"
+    },
+    {
+      "target": "C7775",
+      "label": "ϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "might, violence, injustice(?)"
+    },
+    {
+      "target": "C7783",
+      "label": "ⲙⲛⲧϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "injustice"
+    },
+    {
+      "target": "C7786",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "injustice, oppression"
+    },
+    {
+      "target": "C7778",
+      "label": "ⲛϫⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "hardly"
+    },
+    {
+      "target": "C7777",
+      "label": "ⲛϭⲟⲛⲥ",
+      "pos": "ADV",
+      "gloss": "by force, forcibly, violently"
+    },
+    {
+      "target": "C7784",
+      "label": "ⲣϫⲓⲛϭⲟⲛⲥ",
+      "pos": "V",
+      "gloss": "do wrong"
+    },
+    {
+      "target": "C7785",
+      "label": "ⲣⲉϥϫⲓⲛϭⲟⲛⲥ",
+      "pos": "N",
+      "gloss": "oppressor"
+    }
+  ]
+}

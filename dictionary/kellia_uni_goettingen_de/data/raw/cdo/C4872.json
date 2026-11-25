@@ -1,0 +1,147 @@
+{
+  "id": "C4872",
+  "forms": [
+    {
+      "id": "CF11709",
+      "orth": "ⲧⲱϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6058,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲱⲧⲥ",
+      "dialect": "S",
+      "id": "1703.1"
+    },
+    {
+      "orth": "ⲧⲟϭⲥ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3358,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲧⲁϭⲥ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6720,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲟϭⲥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3358,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5497",
+      "bibliography": "CD 466b; CDC 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉϥϩⲟⲓⲧⲉ ⲁⲩⲙⲟⲩϩ ⲉⲁⲩⲟⲩⲃⲁϣ ⲉⲙⲁⲧⲉ . ⲉⲛⲛⲉϣⲟⲩⲣⲁϩⲧ ⲛ**ⲧⲱϭⲥ** ⲧⲣⲉⲩⲡⲓⲣⲉ ϩⲓⲛⲁⲓ ϩⲓϫⲙⲡⲕⲁϩ .",
+      "english": "His clothing became glistening, exceedingly white, like snow, such as no launderer on earth can whiten them.",
+      "source": "Mark Chapter 9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲓⲣⲉ",
+        3,
+        20.067
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        3,
+        17.183
+      ],
+      [
+        "ϣ",
+        3,
+        14.831
+      ],
+      [
+        "ϩⲓ",
+        3,
+        12.401
+      ],
+      [
+        "ⲧⲣⲉ",
+        3,
+        11.834
+      ],
+      [
+        "ⲩ",
+        3,
+        8.98
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱϭⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5616,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4227",
+      "type": "cf",
+      "label": "a thing firmly fixed, seat"
+    },
+    {
+      "target": "C4225",
+      "type": "cf",
+      "label": "be pierced, be studded, be fixed, be settled"
+    }
+  ],
+  "etym": {
+    "egy_num": "181250",
+    "egy_lemma": "dgs",
+    "english": "to tread; to enter",
+    "german": "treten; betreten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/181250"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "id": "C6366",
+  "forms": [
+    {
+      "id": "CF14747",
+      "orth": "ϯⲑⲉ",
+      "dialect": "S",
+      "oRef": "ϯ ⲧ ϩⲉ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9122,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7062",
+      "bibliography": "CD 640a; KoptHWb 349; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲧⲁϩⲱⲧⲛ ⲛⲥⲁⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲣⲱⲙⲉ . ⲟⲩⲡⲓⲥⲧⲟⲥ ⲇⲉ ⲡⲉ ⲡⲛⲟⲩⲧⲉ ⲡⲁⲓ ⲉⲧⲉⲛϥⲛⲁⲕⲁⲁⲩ ⲁⲛ ⲉⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲱⲧⲛ ⲛϩⲟⲩⲟ ⲉⲧⲉⲧⲛϭⲟⲙ . ⲁⲗⲗⲁ ϩⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ϥⲛⲁ**ϯⲑⲉ** ⲛⲏⲧⲛ ⲉⲉⲓ ⲉⲃⲟⲗ ϩⲁⲣⲟϥ ⲉⲡⲧⲣⲉⲧⲛⲉϣϭⲙϭⲟⲙ ⲉϥⲓ .",
+      "english": "No temptation has taken you except what is common to man. God is faithful, who will not allow you to be tempted above what you are able, but will with the temptation also make the way of escape, that you may be able to endure it.",
+      "source": "46_1 Corinthians_10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+        2,
+        16.258
+      ],
+      [
+        "ⲛⲏ",
+        2,
+        12.06
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        10.408
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϯⲑⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲑⲉ",
+          1
+        ],
+        [
+          "ϯⲑⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ϯⲑⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯⲑⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϯⲑⲉ",
+          "ⲛⲁ_1_pre_ϯⲑⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲑⲉ",
+          "ϯⲑⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲑⲉ_0_node",
+          "ⲛⲏ_1_post_ϯⲑⲉ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ϯⲑⲉ",
+          "ⲧⲛ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          "ⲉ_1_post_ϯⲑⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8677,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6360",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "manner"
+    },
+    {
+      "target": "C6368",
+      "label": "ϫⲓ ⲛⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "from when, since"
+    },
+    {
+      "target": "C6367",
+      "label": "ϭⲛⲑⲉ",
+      "pos": "V",
+      "gloss": "find means"
+    },
+    {
+      "target": "C6363",
+      "label": "ⲁϣ ⲛϩⲉ",
+      "pos": "ADV",
+      "gloss": "of what sort"
+    },
+    {
+      "target": "C6364",
+      "label": "ⲕⲁⲧⲁ ⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "even as, like"
+    },
+    {
+      "target": "C6361",
+      "label": "ⲛⲑⲉ (ⲛ-)",
+      "pos": "ADV",
+      "gloss": "in manner of, even as"
+    },
+    {
+      "target": "C6362",
+      "label": "ⲛⲧⲉⲓϩⲉ",
+      "pos": "ADV",
+      "gloss": "in this way, thus"
+    },
+    {
+      "target": "C6365",
+      "label": "ⲣⲑⲉ",
+      "pos": "V",
+      "gloss": "make, be like"
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "id": "C8890",
+  "forms": [
+    {
+      "id": "CF21616",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21617",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21618",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1424,
+        "count": 55
+      }
+    },
+    {
+      "id": "CF21619",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21620",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.58,
+        "rank": 370,
+        "count": 407
+      }
+    },
+    {
+      "id": "CF21621",
+      "orth": "ⲏⲧⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21622",
+      "orth": "ⲓⲧⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21623",
+      "orth": "ⲓⲧⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.58,
+        "rank": 1007,
+        "count": 49
+      }
+    },
+    {
+      "id": "CF21624",
+      "orth": "ⲓⲧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.85,
+        "rank": 492,
+        "count": 157
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS10762",
+      "bibliography": "DDGLC",
+      "cu_ID": "5548"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲙⲟⲛⲛⲟⲩⲛⲓ ⲛϧⲏⲧⲟⲩ ⲁⲗⲗⲁ ϩⲁⲛⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ ⲛⲉ **ⲓⲧⲁ** ⲁⲣⲉϣⲁⲛⲟⲩϩⲟϫϩⲉϫ ϣⲱⲡⲓ ⲓⲉ ⲟⲩⲇⲓⲱⲅⲙⲟⲥ ⲉⲑⲃⲉⲡⲓⲥⲁϫⲓ ⲥⲁⲧⲟⲧⲟⲩ ϣⲁⲩⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉⲥⲑⲉ .",
+      "english": "They have no root in themselves, but are short-lived. When oppression or persecution arises because of the word, immediately they stumble.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ϫⲉⲛⲛⲉⲛϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ⲙⲡϣⲁϫⲉ ⁛—",
+      "english": "let us then not be troubled at the words.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲇⲁⲙ ⲅⲁⲣ ⲁⲩⲉⲣⲡⲗⲁⲍⲓⲛ ⲙⲙⲟϥ ⲛϣⲟⲣⲡ **ⲓⲧⲁ** ⲉⲩⲁ .",
+      "english": "For Adam was first formed, then Eve.",
+      "source": "15_I Timothy_02",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ⲡⲉϫⲉⲡⲁⲡⲁⲥ ϫⲉⲧⲱⲟⲩⲛ ⲛⲧⲛϣⲗⲏⲗ",
+      "english": "Then the Papa said, 'Rise up, let us pray'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲧⲁ ⲁϥⲟⲩⲟⲛϩϥ ⲉⲓⲁⲕⲱⲃⲟⲥ **ⲓⲧⲁ** ⲁϥⲟⲩⲟⲛϩϥ ⲉⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "Then he appeared to James, then to all the apostles,",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲉⲧⲣⲉⲩⲉⲓⲛⲉ ⲉϩⲟⲩⲛ ⲛⲁϥ ⲛⲛϣⲏⲣⲉ ⲛⲧⲉⲥϩⲓⲙⲉ ⲛⲣⲙⲧⲁⲛⲧⲓⲟⲭⲓⲁ ⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛⲥⲟⲡ · ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲡⲙⲟⲟⲩ ⲛⲧⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ ϫⲱⲥ ⲁϥⲣⲧϩⲉ ⲛⲟⲩⲱⲛⲉ ·",
+      "english": "Then the Archbishop commanded [him] to bring in to him the children of the wife of the man of Antioch a third time, and straightway the water in the font congealed and became like stone.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲧ",
+        1,
+        12.741
+      ],
+      [
+        "ϣⲉⲛ",
+        1,
+        12.244
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        1,
+        9.772
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        19.572
+      ],
+      [
+        "ⲁⲡⲁⲥ",
+        2,
+        15.817
+      ],
+      [
+        "ⲡⲁⲣϩⲟⲩⲥⲓⲁ",
+        2,
+        15.009
+      ],
+      [
+        "ⲛ",
+        49,
+        14.872
+      ],
+      [
+        "ϫ[ⲉ]",
+        1,
+        14.817
+      ],
+      [
+        "ⲡⲁⲣⲣⲏⲍⲓⲁⲍⲉ",
+        1,
+        14.817
+      ],
+      [
+        "ⲫⲓⲗⲟⲛⲓⲟⲛ",
+        2,
+        14.817
+      ],
+      [
+        "ⲟⲛ",
+        13,
+        14.547
+      ],
+      [
+        "ϫⲉ",
+        25,
+        14.297
+      ],
+      [
+        "ⲁ",
+        31,
+        14.125
+      ],
+      [
+        "ⲧⲙⲛⲧⲁⲛⲟⲓⲁ",
+        1,
+        13.817
+      ],
+      [
+        "ⲕⲏⲫⲁⲥ",
+        2,
+        13.817
+      ],
+      [
+        "ⲯⲁⲗⲙⲱⲇⲟⲥ",
+        1,
+        13.232
+      ],
+      [
+        "ϩⲏⲇⲟⲛⲏ",
+        2,
+        12.687
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        3,
+        12.402
+      ],
+      [
+        "ϥ",
+        23,
+        12.311
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        5,
+        12.311
+      ],
+      [
+        "ⲟⲑⲉ",
+        1,
+        11.817
+      ],
+      [
+        "ⲡ",
+        20,
+        11.681
+      ],
+      [
+        "ⲇⲱⲣⲟⲑⲉⲟⲥ",
+        2,
+        11.647
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.35,
+      "rank": 1232,
+      "count": 55
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 6645,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2485",
+    "grl_lemma": "εἶτα",
+    "grl_meaning": "then, next",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 498a"
+  }
+}

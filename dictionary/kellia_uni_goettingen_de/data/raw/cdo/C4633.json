@@ -1,0 +1,267 @@
+{
+  "id": "C4633",
+  "forms": [
+    {
+      "id": "CF31833",
+      "orth": "ϭⲓⲛⲧⲁⲩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7370,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31832",
+      "orth": "ϭⲓⲛⲧⲁⲟⲩⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5234",
+      "bibliography": "CD 443b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲇⲱⲗⲟⲛ",
+        1,
+        13.621
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        2,
+        13.33
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲧⲁⲩⲟ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛⲧⲁⲩⲟ_0_node",
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲡ",
+          "ⲁ_5_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲧⲱⲟⲩⲛ",
+          "ϥ_5_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲓⲛⲧⲁⲩⲟ",
+          "ⲧ_1_pre_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲧⲁⲩⲟ",
+          "ϭⲓⲛⲧⲁⲩⲟ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲛⲧⲁⲩⲟ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          "ⲛ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲧⲁⲩⲟ",
+          "ⲛⲉⲧⲛ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10054,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4632",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4631",
+      "label": "ⲁⲧⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "indescribable, inexplicable"
+    },
+    {
+      "target": "C4626",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "V",
+      "gloss": "send; put forth, produce; utter, proclaim, recount, recite, repeat; give the name, say the name, call, name; overthrow"
+    },
+    {
+      "target": "C4627",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4630",
+      "label": "ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "send down, cast down; send up, bring up"
+    },
+    {
+      "target": "C4628",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C4629",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "product"
+    }
+  ]
+}

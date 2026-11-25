@@ -1,0 +1,629 @@
+{
+  "id": "C2316",
+  "forms": [
+    {
+      "id": "CF6369",
+      "orth": "ⲙⲁϩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3192,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲙⲉϩⲧ",
+      "dialect": "S",
+      "id": "303.1"
+    },
+    {
+      "orth": "ⲙⲁϧⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2648,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲙⲉϩⲧ",
+      "dialect": "F",
+      "id": "303.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2673",
+      "bibliography": "CD 211b-212a; KoptHWb 112; DELC 132; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "〈 ⲙⲡⲣ ⲙⲟⲩⲧⲉ ⲉϩⲟⲩⲛ ⲉⲣⲱⲙⲉ ⲉⲧⲃⲉⲧⲉⲕⲙⲟⲧⲛⲉⲥ · ⲙⲛⲡⲟⲩⲱϣ ⲛⲛⲉⲕ**ⲙⲁϩⲧ** 〉",
+      "english": "Do not cry into [the abode of] a man because of thy belief, nor because of the desire of thy bowels.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲱⲣⲕ ⲉⲣⲱⲧⲛ ⲛⲉⲧⲛⲛⲟϭ ⲛⲣⲁⲛ ⲙⲛⲛⲉⲧⲛⲙⲁ ⲛϣⲱⲡⲉ ⲉⲧⲉⲧⲛⲟⲩⲏϩ ⲛϩⲏⲧⲟⲩ ⲻ ϫⲉⲕⲁⲥ ⲉⲧⲉⲧⲛⲱⲗ ⲙⲡ**ⲙⲁϩⲧ** ⲇⲉⲓⲛⲁ ⲇⲉⲓⲛⲁ ⲙⲛⲛⲉϥϭⲗⲟⲧⲉ",
+      "english": "I adjure you ⟨by⟩ your great names and your dwelling places in which you dwell, that you contain the bowels ⟨of⟩ NN, child of NN, and his innards!",
+      "source": "PCM 1.5: Procedure for the healing of internal organs",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲣⲟⲉⲓⲥ ⲉⲣⲟⲕ ⲉⲡⲟⲩⲱⲥϣ ⲛⲙ**ⲙⲁϩⲧ** ⲡⲁⲓ ⲉϣⲁϥⲁⲁⲕ ⲛϣⲙⲙⲟ ⲉⲛⲁⲅⲁⲑⲟⲛ ⲙⲡⲡⲁⲣⲁⲇⲉⲓⲥⲟⲥ ·",
+      "english": "Keep thou watch against the relaxation of the viscera, which shall make thee a stranger unto the good things of Paradise.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲛⲟϥ",
+        2,
+        13.227
+      ],
+      [
+        "ϣⲁϣⲓ",
+        1,
+        13.066
+      ],
+      [
+        "ⲛⲓϥⲓ",
+        1,
+        12.382
+      ],
+      [
+        "ⲉⲕⲉ",
+        2,
+        11.002
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        10.151
+      ],
+      [
+        "ⲭ",
+        1,
+        9.044
+      ],
+      [
+        "ⲛ",
+        4,
+        9.006
+      ],
+      [
+        ".",
+        3,
+        8.786
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        7.81
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        7.024
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.005
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.719
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "〉",
+        2,
+        19.013
+      ],
+      [
+        "ⲕⲁⲙⲛⲧϣⲃⲏⲣ",
+        2,
+        19.013
+      ],
+      [
+        "ⲉⲣⲏⲑⲓⲍⲉ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛⲁϭⲥⲉ",
+        1,
+        17.013
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲁⲛϣⲧⲏⲩ",
+        1,
+        17.013
+      ],
+      [
+        "ⲇⲉⲓⲛⲁ",
+        2,
+        15.843
+      ],
+      [
+        "ⲟⲩⲱⲥϣ",
+        1,
+        15.013
+      ],
+      [
+        "ⲛⲉϥ",
+        5,
+        12.178
+      ],
+      [
+        "ϥ",
+        13,
+        12.038
+      ],
+      [
+        "ⲱⲗ",
+        1,
+        11.691
+      ],
+      [
+        "ⲉ",
+        9,
+        10.742
+      ],
+      [
+        "ⲧⲉϥ",
+        3,
+        10.134
+      ],
+      [
+        "ⲁ",
+        7,
+        9.881
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        2,
+        9.828
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        9.451
+      ],
+      [
+        "ϭⲟⲙ",
+        2,
+        9.254
+      ],
+      [
+        "ⲛⲉⲕ",
+        2,
+        9.202
+      ],
+      [
+        "ⲛ",
+        7,
+        8.646
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        8.482
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲕⲉ_1_pre_ⲙⲁϩⲧ",
+          2
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          3
+        ],
+        [
+          "ⲟⲩⲛⲟϥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϩⲟ:",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_4_post_ϩⲟ:",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲭ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲕⲉ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          "ⲟⲩⲛⲟϥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲛⲟϥ_2_post_ⲛ",
+          "ⲛⲉⲙ_4_post_ϩⲟ:",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϩⲟ:",
+          "ⲡⲉⲕ_4_post_ϩⲟ:",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲟϥ_2_post_ⲛ",
+          "ⲛⲉⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϩⲟ",
+          "ⲡⲉⲕ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲭ_1_pre_ⲙⲁϩⲧ",
+          "ⲁ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲁϩⲧ",
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁϩⲧ",
+          4
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          11
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲗⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲗⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϭⲗⲟⲧⲉ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲁ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲁϩⲧ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          3
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϭⲥⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ⲙⲁϩⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ",
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ_b",
+          1
+        ],
+        [
+          "ⲇⲉⲓⲛⲁ_1_post_ⲙⲁϩⲧ_b",
+          "ⲙⲛ_2_post_ϭⲗⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲗⲟⲧⲉ",
+          "ⲛⲉϥ_2_post_ϭⲗⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲗⲟⲧⲉ",
+          "ϭⲗⲟⲧⲉ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲡⲁⲓ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲙⲁϩⲧ",
+          "ⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲡⲁⲓ",
+          "ϣⲁ_4_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ⲁⲁ",
+          "ϥ_4_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲁⲁ",
+          "ⲁⲁ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲁϩⲧ",
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁϩⲧ",
+          "ⲙⲁϩⲧ_0_node",
+          3
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲙⲁϩⲧ",
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁϩⲧ",
+          "ⲛⲁϭⲥⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲧ_0_node",
+          "ⲁ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲕ",
+          "ⲓ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_1_post_ⲙⲁϩⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2838,
+      "count": 12
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4098,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2321",
+      "label": "ϣⲁⲛⲑⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "compassionate (person)"
+    },
+    {
+      "target": "C2320",
+      "label": "ϣⲁⲛⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "dysentery"
+    },
+    {
+      "target": "C2319",
+      "label": "ⲁⲧⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "without bowles (of compassion)"
+    },
+    {
+      "target": "C2318",
+      "label": "ⲙⲁϩⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small intestine"
+    },
+    {
+      "target": "C2317",
+      "label": "ⲙⲉϩⲧⲟ",
+      "pos": "N",
+      "gloss": "colon, large bowel"
+    },
+    {
+      "target": "C2322",
+      "label": "ⲙⲉⲧϣⲁⲛⲑⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "compassion"
+    }
+  ],
+  "etym": {
+    "egy_num": "74690",
+    "egy_lemma": "mẖt.w",
+    "demo_num": "d2671",
+    "demo_lemma": "mẖṱ(e)",
+    "english": "entrails",
+    "german": "Gedärme; Eingeweide",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/74690",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2671"
+  }
+}

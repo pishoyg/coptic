@@ -1,0 +1,52 @@
+{
+  "id": "C2305",
+  "forms": [
+    {
+      "id": "CF6344",
+      "orth": "ⲙⲏϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6345",
+      "orth": "ⲙⲉϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲙⲉϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9703,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2661",
+      "bibliography": "CD 211a; KoptHWb 110; ChLCS 30a"
+    },
+    {
+      "id": "CS2662",
+      "bibliography": "CD 211a; KoptHWb 110"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "73500",
+    "egy_lemma": "mḥ.t",
+    "demo_num": "d2626",
+    "demo_lemma": "mḥj(.t)",
+    "english": "feather",
+    "german": "Feder; Wedel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/73500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2626"
+  }
+}

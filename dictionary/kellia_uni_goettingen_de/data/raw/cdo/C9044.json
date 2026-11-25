@@ -1,0 +1,155 @@
+{
+  "id": "C9044",
+  "forms": [
+    {
+      "id": "CF22349",
+      "orth": "ⲉⲣⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF22351",
+      "orth": "ⲉⲣⲓⲍⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22350",
+      "orth": "ⲉⲣⲉⲥⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22352",
+      "orth": "ⲉⲣⲓⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11129",
+      "bibliography": "DDGLC",
+      "cu_ID": "439"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲟⲩϩⲓⲟⲩⲉ ϭⲉ ⲁⲕⲡⲁⲧⲁⲥⲥⲉⲓ ⲛⲧⲓⲇⲟⲩⲙⲁⲓⲁ ⲁⲩⲱ ⲁⲡⲉⲕϩⲏⲧ ϫⲓⲥⲉ ⲉⲣⲟⲕ ϫⲓⲉⲟⲟⲩ ⲉⲕϩⲙⲟⲟⲥ ϩⲙⲡⲉⲕⲏⲓ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲕ**ⲉⲣⲓⲍⲉ** ϩⲛⲧⲉⲕⲕⲁⲕⲓⲁ ⲕⲛⲁϩⲉ ϭⲉ ⲡⲉ ⲛⲅⲑⲃⲃⲓⲟ ⲁⲩⲱ ⲡⲕⲉⲓⲟⲩⲇⲁⲥ ⲛⲁϩⲉ ⲛⲙⲙⲁⲕ",
+      "english": "Thou hast smitten and wounded Edom, and thy heart has lifted thee up: stay at home and glorify thyself; for wherefore art thou quarrelsome to thy hurt? So both thou wilt fall and Juda with thee.",
+      "source": "II Kings 14",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲕⲓⲁ",
+        1,
+        13.18
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲕ",
+        2,
+        9.853
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲉⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲉⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲉⲣⲓⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲣⲓⲍⲉ",
+          "ⲉⲧⲃⲉ_1_pre_ⲉⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲉⲣⲓⲍⲉ",
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          "ⲕ_1_pre_ⲉⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲉⲣⲓⲍⲉ",
+          "ⲉⲣⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲓⲍⲉ_0_node",
+          "ϩⲛ_1_post_ⲉⲣⲓⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16114,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2700",
+    "grl_lemma": "ἐρίζω",
+    "grl_meaning": "to strive, wrangle, quarrel",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 687b; Preisigke 1:598"
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "id": "C9698",
+  "forms": [
+    {
+      "id": "CF24927",
+      "orth": "ⲙⲁⲗⲓⲥⲧⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24931",
+      "orth": "ⲙⲁⲗⲓⲥⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.67,
+        "rank": 933,
+        "count": 106
+      }
+    },
+    {
+      "id": "CF24928",
+      "orth": "ⲙⲁⲗⲉⲓⲥⲧⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24930",
+      "orth": "ⲙⲁⲗⲓⲥⲧⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1903,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF24929",
+      "orth": "ⲙⲁⲗⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS12500",
+      "bibliography": "DDGLC",
+      "cu_ID": "1217"
+    },
+    {
+      "id": "CS12501",
+      "bibliography": "DDGLC",
+      "cu_ID": "5612"
+    },
+    {
+      "id": "CS12502",
+      "bibliography": "DDGLC",
+      "cu_ID": "15434"
+    },
+    {
+      "id": "CS12503",
+      "bibliography": "DDGLC",
+      "cu_ID": "5611"
+    },
+    {
+      "id": "CS12504",
+      "bibliography": "DDGLC",
+      "cu_ID": "10417"
+    },
+    {
+      "id": "CS12505",
+      "bibliography": "DDGLC",
+      "cu_ID": "15436"
+    },
+    {
+      "id": "CS12506",
+      "bibliography": "DDGLC",
+      "cu_ID": "15435"
+    },
+    {
+      "id": "CS12507",
+      "bibliography": "DDGLC",
+      "cu_ID": "15437"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲩϣⲱⲡⲓ ⲇⲉ ϧⲉⲛⲟⲩⲧⲱⲙⲧ ⲛⲁⲩⲉⲙⲓ ⲁⲛ ⲡⲉ ϫⲉⲟⲩ ⲡⲉ ⲉⲧⲟⲩⲛⲁϫⲟϥ **ⲙⲁⲗⲓⲥⲧⲁ** ⲛⲁⲩϣⲉⲣϩⲗⲓ ⲛϩⲱⲃ ⲁⲛ ⲡⲉ ⲉⲑⲃⲉⲡⲓⲁⲛⲁϣ ⲉⲧⲁⲩⲱⲣⲕ ⲙⲙⲟϥ ⲙⲡⲓⲇⲓⲁⲕⲱⲛ",
+      "english": "They were amazed, they did not know what to say, but they did nothing because of the oath they had sworn to the deacon.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲁⲗⲓⲥⲧⲁ** ⲉⲣϫⲓϭⲟⲗ ·",
+      "english": "All the more so as you lie.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲑⲣⲟⲩϧⲟⲧϧⲉⲧ ⲛⲥⲁⲫⲃⲓⲟⲥ ⲛⲅⲉⲱⲣⲅⲓⲟⲥ ⲁⲩϫⲉⲙⲟⲩⲙⲏϣ ⲛⲁⲓⲧⲓⲁ ϭⲓ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ **ⲙⲁⲗⲓⲥⲧⲁ** ϫⲉⲛⲉⲟⲩⲣⲱⲙⲓ ⲡⲉ ⲉⲧⲁϥϭⲓⲅⲁⲙⲟⲥ ⲟⲩⲟϩ ⲟⲛ ϫⲉⲟⲩⲟⲛ ϩⲁⲛϣⲏⲣⲓ ⲛⲧⲁϥ ⲉⲩϩⲱⲟⲩ ⲉⲙⲁϣⲱ .",
+      "english": "And as they scrutinized the life of Georgios, they found a host of causes against him, especially that he was a married man with very wicked children.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲁⲗⲓⲥⲧⲁ** ⲇⲉ ϫⲉⲉⲩⲉⲛⲁⲩ ⲉⲣⲟϥ ⲛϩⲟ ϩⲓϩⲟ ϩⲣⲁⲓ ϩⲛⲙⲡⲏⲩⲉ ϩⲙⲡⲙⲁ ⲉⲧⲟⲩⲛⲁⲃⲱⲕ ⲉⲣⲟϥ ⲁⲩⲱ ⲛⲁⲓ ⲛⲁⲙⲉ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲛⲉⲧϥⲛⲁⲣⲟⲕϩⲟⲩ ϩⲛⲟⲩⲕⲱϩⲧ ⲉⲙⲉϥⲱϣⲙ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥϯ ⲇⲉ ⲙⲡⲉϥϩⲏⲧ ⲉⲛⲓⲅⲣⲁⲫⲏ ⲙⲡⲉϩⲗⲓ ⲛⲍⲏⲧⲏⲙⲁ ⲉⲣⲁⲧϫⲟⲙ ⲛⲧⲟⲧϥ **ⲙⲁⲗⲓⲥⲧⲁ** ⲛⲓⲗⲟⲅⲟⲥ ⲛⲧⲉⲛⲓⲥⲁϧ ⲛⲧⲉϯⲉⲕⲕⲗⲏⲥⲓⲁ .",
+      "english": "And when he had given his heart to the Scriptures, no search was impossible for him, especially in the discourses of the scribes of the Church.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲁⲗⲓⲥⲧⲁ** ⲇⲉ ⲉⲣⲉⲛϣⲁϫⲉ ⲉⲧⲥⲏϩ ϩⲛⲛⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲧⲁⲙⲟ ⲙⲙⲟⲛ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓⲙⲉⲛⲃⲣⲁⲛⲁ",
+        1,
+        15.695
+      ],
+      [
+        "ⲍⲏⲧⲏⲙⲁ",
+        2,
+        15.695
+      ],
+      [
+        "ⲉⲣⲁⲧϫⲟⲙ",
+        2,
+        15.695
+      ],
+      [
+        "ϥⲓⲫ",
+        1,
+        15.695
+      ],
+      [
+        "ⲗⲟⲅⲟⲥ",
+        2,
+        15.373
+      ],
+      [
+        "ϣⲉⲣ",
+        2,
+        14.995
+      ],
+      [
+        "ⲣⲉϥⲉⲣϩⲁⲗ",
+        1,
+        14.695
+      ],
+      [
+        "ⲛⲓ",
+        16,
+        14.218
+      ],
+      [
+        "ⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ",
+        1,
+        12.888
+      ],
+      [
+        "ⲩⲏⲣ",
+        1,
+        12.525
+      ],
+      [
+        "ⲟⲩⲟⲧ",
+        1,
+        11.172
+      ],
+      [
+        "ϧⲟⲥⲓ",
+        1,
+        10.94
+      ],
+      [
+        "ⲕⲏⲃ",
+        1,
+        10.788
+      ],
+      [
+        "ⲣⲱⲟⲩϣ",
+        1,
+        10.338
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        1,
+        10.269
+      ],
+      [
+        "ⲙⲙⲓⲛ",
+        1,
+        10.11
+      ],
+      [
+        "ⲛ",
+        9,
+        10.1
+      ],
+      [
+        "ⲕ",
+        5,
+        10.094
+      ],
+      [
+        "ⲛⲁϩⲣⲁ",
+        1,
+        9.862
+      ],
+      [
+        "ⲥⲱⲧⲏⲣ",
+        1,
+        9.764
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲧ",
+        42,
+        15.687
+      ],
+      [
+        "ⲛ",
+        71,
+        15.53
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        20,
+        14.551
+      ],
+      [
+        "ⲕⲁⲓ",
+        7,
+        14.551
+      ],
+      [
+        "ⲙⲟⲩⲥ",
+        3,
+        14.166
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        13.87
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        13.87
+      ],
+      [
+        "ⲟⲩⲏⲏⲩ",
+        1,
+        13.87
+      ],
+      [
+        "..ⲧ....ⲏ",
+        1,
+        13.87
+      ],
+      [
+        "ⲟⲩⲉⲙⲛϣⲁ",
+        1,
+        13.87
+      ],
+      [
+        "ⲣϩⲙⲉⲧⲏ",
+        1,
+        13.87
+      ],
+      [
+        "ⲡⲟϭⲗⲉ",
+        1,
+        13.87
+      ],
+      [
+        "ⲧⲣⲟⲡ",
+        1,
+        13.87
+      ],
+      [
+        "·",
+        11,
+        13.828
+      ],
+      [
+        "ϩⲉⲛ",
+        17,
+        13.609
+      ],
+      [
+        "ⲙ",
+        30,
+        13.344
+      ],
+      [
+        "ⲁⲡⲟⲗⲗⲟⲛ",
+        1,
+        12.87
+      ],
+      [
+        "ⲃⲓⲕⲧⲱⲣⲓⲁ",
+        1,
+        12.87
+      ],
+      [
+        "ⲉⲍⲩⲭⲁⲍⲉ",
+        1,
+        12.87
+      ],
+      [
+        "ⲟⲩⲟⲧⲉ",
+        1,
+        12.87
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.67,
+      "rank": 806,
+      "count": 106
+    },
+    "B": {
+      "rate": 0.19,
+      "rank": 1646,
+      "count": 16
+    }
+  },
+  "etym": {
+    "grl_ID": "1344",
+    "grl_lemma": "μάλιστα",
+    "grl_meaning": "very, especially",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1078a; Preisigke 2:48"
+  }
+}

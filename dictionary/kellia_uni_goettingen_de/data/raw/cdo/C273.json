@@ -1,0 +1,63 @@
+{
+  "id": "C273",
+  "forms": [
+    {
+      "id": "CF1155",
+      "orth": "ⲁϥ ⲛⲟⲩϩⲟⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1156",
+      "orth": "ⲁϥ ⲛⲟⲩϩⲟⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS305",
+      "bibliography": "CD 23b; KoptHWb 16; DELC 21; ChLCS 6a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5338",
+      "type": "cf",
+      "label": "(male) dog"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C270",
+      "label": "ⲁϥ",
+      "pos": "N",
+      "gloss": "fly, insect(?)"
+    },
+    {
+      "target": "C271",
+      "label": "ⲁϥ",
+      "pos": "N",
+      "gloss": "fly, insect(?)"
+    },
+    {
+      "target": "C274",
+      "label": "ⲁϥ ⲛϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "\"wild fly\" (bee)"
+    },
+    {
+      "target": "C272",
+      "label": "ⲁϥ ⲛⲉⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "bee (\"honey fly\")"
+    }
+  ]
+}

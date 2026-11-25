@@ -1,0 +1,233 @@
+{
+  "id": "C2104",
+  "forms": [
+    {
+      "id": "CF5911",
+      "orth": "ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17593,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2439",
+      "bibliography": "CD 192a; ChLCS 28b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϩⲉⲣⲁⲧⲉ ⲧⲉⲛⲟⲩ ϩⲛⲛⲟⲩ**ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ** ⲙⲛⲧⲟⲩⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ ⲛⲧⲁϫⲓⲥⲃⲱ ⲉⲣⲟⲟⲩ ϫⲓⲛⲧⲟⲩⲙⲛⲧⲕⲟⲩⲓ ϫⲉⲉⲛⲉⲧⲉⲛⲁϣϭⲙϭⲟⲙ ⲉϯϩⲏⲩ",
+      "english": "Stand now with thine enchantments, and with the abundance of thy sorcery, which thou hast learned from thy youth; if thou canst be profited.",
+      "source": "Isaiah 47",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁϩⲉⲣⲁⲧⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        12.017
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        11.664
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        10.161
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ_1_post_ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+          "ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          "ⲧⲟⲩ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ_1_post_ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17205,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2113",
+      "label": "ϭⲓⲛⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "calling, naming"
+    },
+    {
+      "target": "C2107",
+      "label": "ⲙⲟⲩϯ (ϧⲁϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "call ahead, forward"
+    },
+    {
+      "target": "C2108",
+      "label": "ⲙⲟⲩϯ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "call to"
+    },
+    {
+      "target": "C2112",
+      "label": "ⲙⲟⲩϯ (ⲉϧⲣⲏⲓ)",
+      "pos": "V",
+      "gloss": "call down (from above)"
+    },
+    {
+      "target": "C2101",
+      "label": "ⲙⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "speak, call; enchant, charm; call, pronounce (mostly of name)"
+    },
+    {
+      "target": "C2102",
+      "label": "ⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "(magical) call, incantation"
+    },
+    {
+      "target": "C2111",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "call (to), cry (upon), call in (from with out), announce (one's\n                            presence), invite in, summon"
+    },
+    {
+      "target": "C2105",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "call upon, cry to"
+    },
+    {
+      "target": "C2109",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "call out (from within), call (to come) out, call out to, accost,\n                            resound, echo"
+    },
+    {
+      "target": "C2110",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "call down (from above)"
+    },
+    {
+      "target": "C2106",
+      "label": "ⲙⲟⲩⲧⲉ (ⲟⲩⲃⲉ-)",
+      "pos": "V",
+      "gloss": "call upon, cry to"
+    },
+    {
+      "target": "C2103",
+      "label": "ⲣⲉϥⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "enchanter"
+    },
+    {
+      "target": "C2114",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "V",
+      "gloss": "address word to, greet (deferentially)"
+    },
+    {
+      "target": "C2115",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "N",
+      "gloss": "greeting"
+    }
+  ]
+}

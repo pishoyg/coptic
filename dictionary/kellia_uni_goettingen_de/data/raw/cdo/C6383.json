@@ -1,0 +1,761 @@
+{
+  "id": "C6383",
+  "forms": [
+    {
+      "id": "CF14781",
+      "orth": "ϩⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.57,
+        "rank": 244,
+        "count": 721
+      }
+    },
+    {
+      "orth": "ϩⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.73,
+        "rank": 190,
+        "count": 571
+      }
+    },
+    {
+      "orth": "ϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 47.48,
+        "rank": 28,
+        "count": 7491
+      }
+    },
+    {
+      "orth": "ϧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1329,
+        "count": 31
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7079",
+      "bibliography": "CD 643a; CED 271; KoptHWb 350; DELC 285b; ChLCS 87a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϩⲓⲥⲁϯ ⲉⲡⲏⲓ ⲙⲡϭⲟⲉⲓⲥ ⲛⲉⲙⲡⲏⲓ ⲙⲡⲟⲩⲣⲟ ⲛⲉⲙⲛⲓⲏⲓ ⲧⲏⲣⲟⲩ ⲛⲧⲉϯⲃⲁⲕⲓ ⲛⲉⲙ**ϩⲏ**ⲓ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲓ ⲛⲛⲓϣϯ ⲁϥϩⲓⲥⲁϯ ⲉⲣⲱⲟⲩ ϧⲉⲛⲡⲓⲭⲣⲱⲙ .",
+      "english": "and he burnt the house of the Lord, and the king's house; and all the houses of the city, and every great house he burnt with fire.",
+      "source": "24_Ieremias_52",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:52",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲣⲣⲟ ⲛⲁϥ ϫⲉⲉϣⲱⲡⲉ ⲟⲩⲛ ⲁⲣⲱⲙⲉ ⲥⲉⲉⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲏⲓ ⲛⲥⲁⲟⲩⲗ ϯⲛⲁⲉⲓⲣⲉ ⲛⲁϥ ⲛⲟⲩⲛⲁ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉϫⲉⲥⲓⲃⲁ ϩⲓⲧ**ϩⲏ** ⲙⲡⲣⲣⲟ ϫⲉⲟⲩⲛⲟⲩϣⲏⲣⲉ ⲉⲡⲁⲓⲱⲛⲁⲑⲁⲛ ⲡⲉ ⲉⲣⲉⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ϣⲟⲟϭⲉ",
+      "english": "And the king said, Is there yet a man left of the house of Saul, that I may act towards him with the mercy of God? and Siba said to the king, There is yet a son of Jonathan, lame of his feet.",
+      "source": "II Samuel 9",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲁⲧ**ϩⲏ** ⲛⲛⲟⲩⲓⲇⲱⲗⲟⲛ ⲟⲩⲟϩ ⲫⲁⲓ ⲁϥϣⲱⲡⲓ ⲛⲟⲩϭⲣⲟⲡ ⲙⲡⲓⲥⲗ ⲟⲩⲟϩ ⲟⲩⲁⲛⲟⲙⲓⲁ ⲛⲱⲟⲩ ⲉⲑⲃⲉⲫⲁⲓ ⲁⲓⲥⲟⲩⲧⲉⲛ ⲧⲁϫⲓϫ ⲉⲃⲟⲗ ϩⲓϫⲱⲟⲩ ⲡⲉϫⲉ ⲁⲇⲱⲛⲁⲓ ⲡϭⲥ ⲟⲩⲟϩ ⲉⲩⲉϭⲓ ⲙⲫⲏⲉⲧⲟⲩⲟⲩⲁϣϥ .",
+      "english": "Because they ministered to them before their idols, and it became to the house of Israel a punishment of iniquity; therefore have I lifted up my hand against them, saith the Lord God.",
+      "source": "26_Ezechiel_44",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:44",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲓ ⲉⲧ**ϩⲏ** ⲛϭⲓⲙⲁⲑⲁⲓⲟⲥ ⲡⲉϫⲁϥ ϫⲉⲡⲁϫⲟⲉⲓⲥ . ⲁⲡⲉⲕⲡⲛⲉⲩⲙⲁ ⲕⲓⲙ ⲉⲣⲟⲓ · ⲁⲩⲱ ϥⲛⲏⲫⲉ ⲙⲙⲟⲓ ⲛϭⲓⲡⲉⲕⲟⲩⲟⲉⲓⲛ ⲉⲧⲣⲁⲧⲁⲩⲉⲧⲙⲉϩϣⲙⲟⲩⲛⲉ ⲙⲙⲉⲧⲁⲛⲟⲓⲁ ⲛⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ · ⲁⲧⲉⲕϭⲟⲙ ⲅⲁⲣ ⲡⲣⲟⲫⲏⲧⲉⲩⲉ ϩⲁⲣⲟⲥ ⲙⲡⲓⲟⲩⲟⲉⲓϣ ϩⲓⲧⲛ ⲇⲁⲩⲉⲓⲇ ϩⲙⲡⲙⲉϩⲙⲁⲁⲃ ⲙⲯⲁⲗⲙⲟⲥ ⲉⲥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲁⲓⲕⲁϩⲧⲏⲓ ⲉⲣⲟⲕ ⲡϫⲟⲉⲓⲥ · ⲙⲡⲣⲧⲣⲁϫⲓϣⲓⲡⲉ ⲛϣⲁⲉⲛⲉϩ · ⲙⲁⲧⲟⲩϫⲟⲓ ϩⲛⲧⲉⲕⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲣⲓⲕⲉ ⲙⲡⲉⲕⲙⲁⲁϫⲉ ⲉⲣⲟⲓ · ϭⲉⲡⲏ ⲛⲅⲧⲟⲩϫⲟⲓ · ϣⲱⲡⲉ ⲛⲁⲓ ⲉⲩⲛⲟⲩⲧⲉ ⲛⲛⲁϣⲧⲉ . ⲁⲩⲱ ⲟⲩⲏⲓ ⲙⲙⲁ ⲙⲡⲱⲧ ⲉⲧⲟⲩϫⲟⲉⲓ ϫⲉⲛⲧⲟⲕ ⲡⲉ ⲡⲁⲧⲁϫⲣⲟ · ⲁⲩⲱ ⲡⲁⲙⲁ ⲙⲡⲱⲧ · ⲉⲧⲃⲉⲡⲉⲕⲣⲁⲛ ⲕⲛⲁϫⲓⲙⲟⲉⲓⲧ ϩⲏⲧ · ⲁⲩⲱ ⲛⲅⲥⲁⲛⲟⲩϣⲧ ⲁⲩⲱ ⲕⲛⲁⲛⲧ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲡⲁϣ · ⲡⲁⲓ ⲉⲛⲧⲁⲩϩⲟⲡϥ ⲉⲣⲟⲓ · ϫⲉⲛⲧⲟⲕ ⲡⲉ ⲧⲁⲛⲁϣⲧⲉ · ϯⲛⲁϭⲟⲓⲗⲉ ⲉⲡⲁⲡⲛⲉⲩⲙⲁ ⲉⲛⲉⲕϭⲓϫ · ⲁⲕⲥⲟⲧⲧ ⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲛⲧⲙⲉ · ⲁⲕⲙⲉⲥⲧⲉⲛⲉⲧϩⲁⲣⲉϩ ⲉⲙⲡⲉⲧϣⲟⲩⲓⲧ ⲉⲡϫⲓⲛϫⲏ · ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲛⲁϩⲧⲉ · ⲁⲩⲱ ϯⲛⲁⲧⲉⲗⲏⲗ ⲉϫⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ϯⲛⲁⲉⲩⲫⲣⲁⲛⲉ ⲉϫⲙⲡⲉⲕⲛⲁ · ϫⲉⲁⲕϭⲱϣⲧ ⲉϫⲙⲡⲁⲑⲃⲃⲓⲟ ⲁⲩⲱ ⲁⲕⲧⲟⲩϫⲉ ⲧⲁⲯⲩⲭⲏ ⲉⲃⲟⲗ ϩⲛⲛⲁⲁⲛⲁⲅⲕⲏ · ⲁⲩⲱ ⲙⲡⲕϣⲧⲁⲙ ⲉⲣⲱⲓ ϩⲛⲛϭⲓϫ ⲙⲡϫⲁϫⲉ · ⲁⲕⲧⲁϩⲉ ⲛⲁⲟⲩⲉⲣⲏⲧⲉ ⲉⲣⲁⲧⲟⲩ ϩⲛⲟⲩⲟⲩⲟⲥⲧⲛ · ⲛⲁ ⲛⲁⲓ ⲡϫⲟⲉⲓⲥ ϫⲉϯⲑⲗⲓⲃⲉ · ⲁⲡⲁⲃⲁⲗ ϣⲧⲟⲣⲧⲣ ϩⲙⲡϭⲱⲛⲧ · ⲁⲩⲱ ⲧⲁⲯⲩⲭⲏ ⲙⲛϩⲏⲧ · ϫⲉⲁⲛⲁⲣⲙⲡⲟⲟⲩⲉ ⲱϫⲛ ϩⲛⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ · ⲁⲩⲱ ⲁⲡⲁⲱⲛϩ ⲱϫⲛ ϩⲛϩⲉⲛⲁϣⲁϩⲟⲙ · ⲁⲧⲁϭⲟⲙ ϭⲃⲃⲉ ϩⲛⲟⲩⲙⲛⲧϩⲏⲕⲉ · ⲁⲩⲱ ⲁⲩϣⲧⲟⲣⲧⲣ ⲛϭⲓⲛⲁⲕⲉⲉⲥ · ⲁⲓϣⲱⲡⲉ ⲛⲛⲟϭⲛⲉϭ ⲛⲛⲁϫⲁϫⲉ ⲧⲏⲣⲟⲩ · ⲁⲩⲱ ⲛⲛⲉⲧϩⲏⲛ ⲉⲣⲟⲓ · ⲁⲓϣⲱⲡⲉ ⲛϩⲟⲧⲉ ⲛⲛⲉⲧⲥⲟⲟⲩⲛ ⲙⲙⲟⲓ · ⲁⲩⲱ ⲛⲉⲧⲛⲁⲩ ⲉⲣⲟⲓ ⲁⲩⲡⲱⲧ ⲛⲥⲁ‐ⲃⲟⲗ ⲙⲙⲟⲓ · ⲁⲩⲣⲡⲁⲱⲃϣ ⲛⲧϩⲉ ⲛⲟⲩⲕⲱⲱⲥ ϩⲙⲡⲉⲩϩⲏⲧ · ⲁⲩⲱ ⲁⲓⲣⲧϩⲉ ⲛⲟⲩⲥⲕⲉⲩⲟⲥ ⲉⲁϥⲥⲱⲣⲙ · ϫⲉⲁⲓⲥⲱⲧⲙ ⲉⲡⲥⲱϣ ⲛϩⲉⲛⲙⲏⲏϣⲉ ⲉⲩⲕⲱⲧⲉ ⲉⲣⲟⲓ ⲙⲡⲁⲕⲱⲧⲉ · ϩⲙⲡⲧⲣⲉⲩ ⲥⲱⲟⲩϩ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ϩⲓⲟⲩⲥⲟⲡ · ⲁⲩϣⲟϫⲛⲉ ⲉϥⲓ ⲧⲁⲯⲩⲭⲏ ⲛⲧⲟⲟⲧ ·",
+      "english": "“Matthew came forward and said: “My Lord, thy spirit hath stirred me and thy light hath made me sober to proclaim this eighth repentance of Pistis Sophia. For thy power hath prophesied thereof aforetime through David in the thirtieth Psalm, saying: “1. On thee, O Lord, have I hoped. Let me never be put to shame; save me according to thy righteousness. “2. Incline thine ear unto me, save me quickly. Be thou unto me a protecting God and a house of refuge to save me. “3. For thou art my support and my refuge; for thy name's sake thou wilt guide me and feed me. “4. And thou wilt draw me out of this snare, which they have laid privily for me; for thou art my protection. “5. Into thy hands I will render my spirit; thou hast redeemed me, O Lord, God of Truth. “6. Thou hast hated them who hold to vain emptiness; but I have trusted. “7. And I shall rejoice because of my Lord and make merry over thy grace. For thou hast looked down upon my humbleness and saved my soul out of my necessities. “8. And thou hast not shut me up in the hands of my foes; thou hast set my feet on a broad space. “9. Be gracious unto me, O Lord, for I am afflicted; my eye is distracted in the wrath and my soul and my body. “10. For my years have wasted away in sadness and my life is wasted in sighing. My power is enfeebled in misery and my bones are distracted. “11. I am become a mockery for all my foes and my neighbours. | I am become a fright for my acquaintances, and they who saw me, are fled away from me. 12. I am forgotten in their heart as a corpse, and I have become as a ruined vessel. 13. For I have heard the scorn of many who encompass me round about. Massing themselves together against me, they took counsel to take away my soul from me.”",
+      "source": "Pistis Sophia Book 1 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:66-75",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁⲣⲉϣⲁⲛ ⲟⲩⲁⲓ ϭⲓ ⲟⲩⲥϩⲓⲙⲓ ⲛ**ϩⲏ** ⲙⲙⲟϥ ⲛⲛⲉϥϣⲉ ⲉⲃⲟⲗ ⲉⲡⲡⲟⲗⲉⲙⲟⲥ ⲛⲛⲟⲩϩⲓ ϩⲗⲓ ⲛϩⲱⲃ ⲛⲥⲱϥ ⲉϥⲉϣⲱⲡⲓ ⲉϥⲟⲓ ⲛⲁⲧⲣⲱⲟⲩϣ ⲛⲟⲩⲣⲟⲙⲡⲓ ⲛⲟⲩⲱⲧ ϧⲉⲛⲡⲉϥⲏⲓ ⲉϥⲉⲧⲣⲉ ⲧⲉϥⲥϩⲓⲙⲓ ⲟⲩⲛⲟϥ ⲉⲧⲁϥϭⲓⲥ",
+      "english": "and the last husband should hate her, and write for her a bill of divorcement; and should give it into her hands, and send her away out of his house, and the last husband should die, who took her to himself for a wife;",
+      "source": "05_Deuteronomium_24",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲡⲏⲓ ⲛⲓⲁⲕⲱⲃ ⲁⲩⲱ ⲡⲥⲉⲉⲡⲉ ⲧⲏⲣϥ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲉⲧⲟⲩϥⲓ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲛⲧ**ϩⲏ** ⲁⲩⲱ ⲉⲩϯⲥⲃⲱ ⲛⲁⲩ ϫⲓⲛⲧⲉⲩⲙⲛⲧⲕⲟⲩⲓ",
+      "english": "Hear me, O house of Jacob, and all the remnant of Israel, who are borne by me from the womb, and taught by me from infancy, even to old age:",
+      "source": "Isaiah 46",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        74,
+        29.689
+      ],
+      [
+        "ϩⲁ",
+        330,
+        25.427
+      ],
+      [
+        "ⲧ",
+        566,
+        23.968
+      ],
+      [
+        "ϩⲓ",
+        180,
+        22.169
+      ],
+      [
+        "ⲙ",
+        429,
+        22.048
+      ],
+      [
+        "ⲡ",
+        394,
+        20.826
+      ],
+      [
+        "ⲛ",
+        400,
+        20.203
+      ],
+      [
+        "ⲉ",
+        301,
+        19.981
+      ],
+      [
+        "ϥ",
+        260,
+        19.052
+      ],
+      [
+        "ⲛϭⲓ",
+        111,
+        18.665
+      ],
+      [
+        "ⲉⲓ",
+        90,
+        18.347
+      ],
+      [
+        "ⲁⲩⲱ",
+        163,
+        18.256
+      ],
+      [
+        "ⲟⲩ",
+        179,
+        18.134
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        33,
+        18.06
+      ],
+      [
+        "ⲁ",
+        183,
+        18.054
+      ],
+      [
+        "ⲙⲙⲟ",
+        116,
+        18.017
+      ],
+      [
+        "ⲣⲣⲟ",
+        65,
+        17.986
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        76,
+        17.951
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        50,
+        17.63
+      ],
+      [
+        "ⲧⲉϥ",
+        55,
+        16.771
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          288
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          39
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          90
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          24
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          35
+        ],
+        [
+          "ⲟⲩ_1_post_ϩⲏ",
+          20
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          13
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          13
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          12
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          11
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          32
+        ],
+        [
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          11
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          7
+        ],
+        [
+          "ⲧ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          6
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          6
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          5
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          5
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          3
+        ],
+        [
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲧ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          "ⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          375
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          34
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          29
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          55
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          55
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          21
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          19
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          19
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          17
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          31
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          10
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          5
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          3
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛ_1_post_ϩⲏ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.68,
+      "rank": 201,
+      "count": 743
+    },
+    "B": {
+      "rate": 7.06,
+      "rank": 157,
+      "count": 599
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "122080",
+    "egy_lemma": "ẖ.t",
+    "demo_num": "d4683",
+    "demo_lemma": "ẖ(e.t)",
+    "english": "body; belly; womb",
+    "german": "Leib; Bauch; Art; Weise",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/122080",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4683"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "id": "C6562",
+  "forms": [
+    {
+      "id": "CF15167",
+      "orth": "ϩⲁⲗⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12124,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7274",
+      "bibliography": "CD 670b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲉⲉⲣ ⲙⲫⲣⲏϯ ⲛϯⲁⲅⲣⲓⲟ ⲁⲩϣⲁⲛⲓ ⲛϫⲉⲛⲓⲁⲅⲁⲑⲟⲛ ⲟⲩⲟϩ ⲉϥⲉⲟⲩⲱϩ ϧⲉⲛϩⲁⲛ**ϩⲁⲗⲙⲏ** ⲛⲉⲙϧⲉⲛⲟⲩϣⲁϥⲉ ⲛⲕⲁϩⲓ ⲉϥⲙⲟⲗϩ ⲫⲏⲉⲧⲉ ⲙⲡⲁⲩϣⲱⲡⲓ ⲛϧⲏⲧϥ .",
+      "english": "And he shall be as the wild tamarisk in the desert: he shall not see when good comes; but he shall dwell in barren places, and in the wilderness, in a salt land which is not inhabited.",
+      "source": "24_Ieremias_17",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:17",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱϩ",
+        1,
+        17.695
+      ],
+      [
+        "ϣⲁϥⲉ",
+        1,
+        11.369
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.22
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲗⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϣⲁϥⲉ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲁⲗⲙⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ϣⲁϥⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲁϥⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲗⲙⲏ_0_node",
+          "ⲛⲉⲙ_4_post_ϣⲁϥⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϣⲁϥⲉ",
+          "ϧⲉⲛ_1_post_ϩⲁⲗⲙⲏ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲁⲗⲙⲏ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          "ϣⲁϥⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲁϥⲉ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ϣⲁϥⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11561,
+      "count": 1
+    }
+  }
+}

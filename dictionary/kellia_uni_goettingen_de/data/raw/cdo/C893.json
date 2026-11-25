@@ -1,0 +1,49 @@
+{
+  "id": "C893",
+  "forms": [
+    {
+      "id": "CF3128",
+      "orth": "ⲉⲓⲉⲗⲉⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1049",
+      "bibliography": "CD 77a; KoptHWb 49; ChLCS 13b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C892",
+      "label": "ⲉⲓⲉⲗⲉⲗ",
+      "pos": "V",
+      "gloss": "shine, glitter"
+    },
+    {
+      "target": "C894",
+      "label": "ⲓⲉⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "brightness, light"
+    }
+  ],
+  "etym": {
+    "egy_num": "29850",
+    "egy_lemma": "jrr",
+    "demo_num": "d759",
+    "demo_lemma": "jꜥl",
+    "english": "sheen; shine",
+    "german": "Schein; Glanz",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/29850",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d759"
+  }
+}

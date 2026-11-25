@@ -1,0 +1,75 @@
+{
+  "id": "C4877",
+  "forms": [
+    {
+      "id": "CF11719",
+      "orth": "ⲙⲛⲧⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocPrep": "ⲛⲥⲁ-",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5502",
+      "bibliography": "CD 467b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4874",
+      "label": "ϣⲥⲛⲧⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "sole of foot, footprint"
+    },
+    {
+      "target": "C4875",
+      "label": "ϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "track, follow sb"
+    },
+    {
+      "target": "C4878",
+      "label": "ϯⲧⲉϭⲥⲉ",
+      "pos": "V",
+      "gloss": "run"
+    },
+    {
+      "target": "C4876",
+      "label": "ⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "N",
+      "gloss": "not to be tracked"
+    },
+    {
+      "target": "C4873",
+      "label": "ⲧⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "sole of foot, footprint"
+    }
+  ]
+}

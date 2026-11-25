@@ -1,0 +1,76 @@
+{
+  "id": "C42",
+  "forms": [
+    {
+      "id": "CF153",
+      "orth": "ⲁⲗⲉ (ϣⲟⲩϩⲏⲛⲉ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocNoun": "ϣⲟⲩϩⲏⲛⲉ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS49",
+      "bibliography": "Jer 7,9"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6698",
+      "type": "cf",
+      "label": "incense"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C44",
+      "label": "ϭⲓⲛⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "ascent, mounting up"
+    },
+    {
+      "target": "C37",
+      "label": "ⲁⲗⲉ",
+      "pos": "V",
+      "gloss": "mount, go up; go on board; mount a horse"
+    },
+    {
+      "target": "C41",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "mount up upon"
+    },
+    {
+      "target": "C39",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉ-)",
+      "pos": "V",
+      "gloss": "mount, climb up"
+    },
+    {
+      "target": "C40",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "ascend, go up"
+    },
+    {
+      "target": "C38",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "mount up; ascend (in years)"
+    },
+    {
+      "target": "C43",
+      "label": "ⲣⲉϥⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "mounted man, rider"
+    }
+  ]
+}

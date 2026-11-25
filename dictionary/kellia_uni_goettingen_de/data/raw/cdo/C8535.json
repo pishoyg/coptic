@@ -1,0 +1,119 @@
+{
+  "id": "C8535",
+  "forms": [
+    {
+      "id": "CF20074",
+      "orth": "ⲁⲩⲑⲉⲛⲧⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20075",
+      "orth": "ⲁⲩⲑⲉⲛⲧⲉⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11413,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20076",
+      "orth": "ⲁⲩⲑⲉⲛⲧⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10003",
+      "bibliography": "DDGLC",
+      "cu_ID": "1552"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ϩⲙⲡⲧⲣⲁⲱϣ ⲛⲛⲉⲥϩⲁⲓ ⲛⲧⲉⲕ**ⲁⲩⲑⲉⲛⲧⲉⲓⲁ** ⲉⲓⲟ ⲛⲧϩⲉ ϩⲱⲥ ⲉⲓⲑⲉⲱⲣⲉⲓ ⲙⲡⲣⲣⲟ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲇⲁⲩⲉⲓⲇ ⲉϥϣⲁϫⲉ ⲛⲙⲙⲁⲓ ϩⲛⲧⲕⲓⲑⲁⲣⲁ ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ .",
+      "english": "...",
+      "source": "History of the Emperor's Daughter Fragment 4 (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.empdaughter.giron_ed:210-211",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        11.775
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲟ",
+        1,
+        9.805
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲩⲑⲉⲛⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲉⲛⲧⲉⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲩⲑⲉⲛⲧⲉⲓⲁ",
+          "ⲁⲩⲑⲉⲛⲧⲉⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10999,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5597",
+    "grl_lemma": "αὐθεντία",
+    "grl_meaning": "absolute sway, authority, restriction",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 275b; Preisigke 1:236"
+  }
+}

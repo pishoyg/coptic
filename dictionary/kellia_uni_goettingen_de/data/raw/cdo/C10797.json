@@ -1,0 +1,124 @@
+{
+  "id": "C10797",
+  "forms": [
+    {
+      "id": "CF29412",
+      "orth": "ⲧⲣⲓⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29414",
+      "orth": "ⲧⲣⲓⲧⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9995,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29413",
+      "orth": "ⲧⲣⲓⲧⲉⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14865",
+      "bibliography": "DDGLC",
+      "cu_ID": "7828"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲉⲛⲟⲩ ⲟⲩⲛ ϯϩⲟⲙⲟⲗⲟⲅⲉⲓ ⲁⲩⲱ ϯⲉⲅⲅⲩⲏ ⲛⲏⲧⲛ ⲙⲡⲉ**ⲧⲣⲓⲧⲟⲛ** ⲙⲉⲣⲟⲥ ϩⲛⲛⲉⲃⲓⲟⲟⲩⲉ",
+      "english": "I therefore agree now and I pledge for the third part of the honey",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲃⲓⲟⲟⲩⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲉⲣⲟⲥ",
+        1,
+        13.565
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        10.06
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲓⲧⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲟⲥ_1_post_ⲧⲣⲓⲧⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲣⲓⲧⲟⲛ_0_node",
+          "ⲙⲉⲣⲟⲥ_1_post_ⲧⲣⲓⲧⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9570,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2220",
+    "grl_lemma": "τρίτος",
+    "grl_meaning": "third",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1824a; Preisigke 2:618"
+  }
+}

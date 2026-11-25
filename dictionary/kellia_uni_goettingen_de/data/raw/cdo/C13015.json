@@ -1,0 +1,87 @@
+{
+  "id": "C13015",
+  "forms": [
+    {
+      "id": "CF34076",
+      "orth": "ϭⲁⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34077",
+      "orth": "ϭⲁⲉⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17117,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF34078",
+      "orth": "ϭⲁⲓⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34079",
+      "orth": "ϭⲁⲉⲓⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34080",
+      "orth": "ϭⲁⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS18013",
+      "bibliography": "CD 466a; KoptHWb 447"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4862",
+      "type": "cf",
+      "label": "make ugly, disgrace, condemn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4864",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly one, ugliness, disgrace"
+    },
+    {
+      "target": "C4865",
+      "label": "ⲙⲛⲧϭⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "ugliness, disgrace"
+    },
+    {
+      "target": "C4866",
+      "label": "ⲣϭⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be ugly, be disgraceful"
+    },
+    {
+      "target": "C4862",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "make ugly, disgrace, condemn; be disgraced, be condemned"
+    },
+    {
+      "target": "C4863",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "N",
+      "gloss": "disgrace, condemnation"
+    }
+  ]
+}

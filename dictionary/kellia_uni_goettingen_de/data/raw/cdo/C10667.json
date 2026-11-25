@@ -1,0 +1,104 @@
+{
+  "id": "C10667",
+  "forms": [
+    {
+      "id": "CF28887",
+      "orth": "ⲥⲭⲟⲗⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF28888",
+      "orth": "ⲥⲭⲟⲗⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10734,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14598",
+      "bibliography": "DDGLC",
+      "cu_ID": "1620"
+    },
+    {
+      "id": "CS14599",
+      "bibliography": "DDGLC",
+      "cu_ID": "10369"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡⲙⲏⲏϣⲉ ⲧⲏⲣϥ ⲛⲙⲙⲁⲧⲟⲓ **ⲥⲭⲟⲗⲁⲍⲉ** ⲉϭⲱⲡⲉ ⲛⲍⲱⲟⲛ ·",
+      "english": "and all the soldiers gave all their energies to catching the beasts.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱⲡⲉ",
+        1,
+        15.276
+      ],
+      [
+        "ⲍⲱⲟⲛ",
+        1,
+        14.576
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        1,
+        13.532
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10326,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2131",
+    "grl_lemma": "σχολάζω",
+    "grl_meaning": "to have leisure,M4158 nothing to do",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1747a; Preisigke 2:564"
+  }
+}

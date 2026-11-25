@@ -1,0 +1,685 @@
+{
+  "id": "C2663",
+  "forms": [
+    {
+      "id": "CF7132",
+      "orth": "ⲛⲟⲩϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.54,
+        "rank": 539,
+        "count": 243
+      }
+    },
+    {
+      "orth": "ⲛⲁϩⲙⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 485,
+        "count": 158
+      }
+    },
+    {
+      "orth": "ⲛⲉϩⲙ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1833,
+        "count": 36
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3053",
+      "bibliography": "CD 244b; KoptHWb 135; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉⲧⲏⲓⲧⲕ ⲙⲡⲁⲓⲗⲁⲟⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩⲥⲟⲃϯ ⲛϩⲟⲙⲧ ⲉⲩⲉⲃⲱⲧⲥ ⲉⲣⲟⲕ ⲛⲛⲟⲩϣϫⲉⲙϫⲟⲙ ⲟⲩⲃⲏⲕ ϫⲉⲟⲩⲏⲓ ϯⲭⲏ ⲛⲉⲙⲁⲕ ⲉⲫ**ⲛⲁϩⲙⲉ**ⲕ .",
+      "english": "And I will make thee to this people as a strong brazen wall; and they shall fight against thee, but they shall by no means prevail against thee;",
+      "source": "24_Ieremias_15",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϩⲛⲟⲩ**ⲛⲟⲩϩⲙ** ϯⲛⲁⲛⲁϩⲙⲉⲕ ⲁⲩⲱ ⲛⲅⲛⲁϩⲉ ⲁⲛ ϩⲛⲧⲥⲏϥⲉ ⲧⲉⲕⲯⲩⲭⲏ ⲛⲁϣⲱⲡⲉ ⲉⲩϩⲏⲩ ϫⲉⲉⲣⲉϩⲧⲏⲕ ⲕⲏ ⲉⲣⲟⲓ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ",
+      "english": "For I will surely save thee, and thou shalt by no means fall by the sword; and thou shalt find thy life, because thou didst trust in me, saith the Lord.",
+      "source": "Jeremiah 46",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:46",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲣⲉⲣϩⲟϯ ⲉⲃⲟⲗϩⲁ ⲡⲟⲩϩⲟ ϫⲉϯϣⲟⲡ ⲛⲉⲙⲁⲕ ⲁⲛⲟⲕ ⲉⲫ**ⲛⲁϩⲙⲉ**ⲕ ⲡⲉϫⲉ ⲡϭⲥ .",
+      "english": "Be not afraid before them: for I am with thee to deliver thee, saith the Lord.",
+      "source": "24_Ieremias_01",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲛⲁ ⲙⲛⲡⲁⲙⲁ ⲛⲡⲱⲧ ⲡⲁⲣⲉϥϣⲟⲡⲧ ⲉⲣⲟϥ ⲁⲩⲱ ⲡⲁ**ⲛⲟⲩϩⲙ** ⲧⲁⲛⲁϣⲧⲉ ⲡⲉ ⲛⲧⲁⲓⲕⲁϩⲧⲏⲓ ⲉⲣⲟϥ ⲡⲉⲧϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲙⲡⲗⲁⲟⲥ ϩⲁⲣⲁⲧⲧ",
+      "english": "My mercy, and my refuge; my helper, and my deliverer; my protector, in whom I have trusted; who subdues my people under me.",
+      "source": "Psalms 143",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:143",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟⲕ ⲙⲟⲩⲣ ⲛⲧⲉⲕϯⲡⲓ ⲟⲩⲟϩ ⲧⲱⲛⲕ ⲁϫⲉ ϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉϯⲛⲁϩⲉⲛϩⲱⲛⲕ ⲉⲣⲱⲟⲩ ⲙⲡⲉⲣⲉⲣϩⲟϯ ⲉⲃⲟⲗϩⲁ ⲡⲟⲩϩⲟ ⲟⲩⲇⲉ ⲙⲡⲉⲣⲛⲟⲩϣⲡ ⲙⲡⲟⲩⲙⲑⲟ ϫⲉⲟⲩⲏⲓ ϯⲭⲏ ⲛⲉⲙⲁⲕ ⲉⲫ**ⲛⲁϩⲙⲉ**ⲕ ⲡⲉϫⲉ ⲡϭⲥ .",
+      "english": "And do thou gird up thy loins, and stand up, and speak all the words that I shall command thee: be not afraid of their face, neither be thou alarmed before them; for I am with thee to deliver thee, saith the Lord.",
+      "source": "24_Ieremias_01",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯϩⲧⲏⲕ ⲉⲧⲣⲉⲕⲛⲟⲩϩⲙ ⲙⲙⲟⲓ ⲡⲟⲩⲟⲉⲓⲛ ϫⲉⲧⲉⲕⲙⲛⲧⲛⲁⲏⲧ ϣⲟⲟⲡ ⲛϣⲁⲉⲛⲉϩ ⲉⲧⲃⲉⲧⲁⲡⲁⲣⲁⲃⲁⲥⲓⲥ ⲉⲛⲧⲁⲓⲁⲁⲥ ϫⲓⲛⲛϣⲟⲣⲡ ϩⲛⲧⲁⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ · ⲙⲡⲣⲟⲡⲥ ⲉⲣⲟⲓ ⲡⲟⲩⲟⲉⲓⲛ · ⲁⲗⲗⲁ ⲛⲁϩⲙⲉⲧ ⲛⲧⲟϥ ϩⲙⲡⲉⲕⲛⲟϭ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲣⲉϥⲕⲁ ⲛⲟⲃⲉ ⲉⲃⲟⲗ · ⲉⲧⲃⲉⲧⲉⲕⲙⲛⲧⲁⲅⲁⲑⲟⲥ ⲡⲟⲩⲟⲉⲓⲛ ϫⲉⲟⲩⲁⲅⲁⲑⲟⲥ ⲁⲩⲱ ⲉϥⲥⲟⲩⲧⲱⲛ ⲡⲉ ⲡⲟⲩⲟⲉⲓⲛ · ⲉⲧⲃⲉⲡⲁⲓ ϥⲛⲁϯⲧⲁϩⲓⲏ ⲛⲁⲓ ⲉⲧⲣⲁⲛⲟⲩϩⲙ ϩⲛⲧⲁⲡⲁⲣⲁⲃⲁⲥⲓⲥ · ⲁⲩⲱ ⲛⲁϭⲟⲙ ⲉⲛⲧⲁⲩⲥⲃⲟⲕ ϩⲓⲧⲛⲧϩⲟⲧⲉ ⲛⲛⲉⲡⲣⲟⲃⲟⲗⲟⲩⲉ ⲛϩⲩⲗⲓⲕⲟⲛ ⲙⲡⲁⲩⲑⲁⲇⲏⲥ ϥⲛⲁⲥⲱⲕ ϩⲏⲧⲟⲩ ϩⲙⲡⲉϥⲧⲱϣ · ⲁⲩⲱ ⲛⲁϭⲟⲙ ⲉⲛⲧⲁⲩⲥⲃⲟⲕ ϩⲓⲧⲛⲛⲓⲁⲧⲛⲁ ϥⲛⲁⲧⲥⲁⲃⲟⲟⲩ ⲉⲡⲉϥⲥⲟⲟⲩⲛ · ϫⲉⲛⲥⲟⲟⲩⲛ ⲧⲏⲣⲟⲩ ⲙⲡⲟⲩⲟⲉⲓⲛ ϩⲉⲛ**ⲛⲟⲩϩⲙ** ⲛⲉ · ⲁⲩⲱ ϩⲉⲛⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲉ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧϣⲓⲛⲉ ⲛⲥⲁⲛⲧⲟⲡⲟⲥ ⲛⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲙⲛⲛⲉϥⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲃⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲉⲕⲣⲁⲛ ⲡⲟⲩⲟⲉⲓⲛ ⲕⲱ ⲉⲃⲟⲗ ⲛⲧⲁⲡⲁⲣⲁⲃⲁⲥⲓⲥ ϫⲉⲟⲩⲛⲟϭ ⲧⲉ · ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁϩⲧⲉ ⲉⲡⲟⲩⲟⲉⲓⲛ . ϥⲛⲁϯ ⲛⲁϥ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲉϩⲛⲁϥ · ⲁⲩⲱ ⲧⲉϥⲯⲩⲭⲏ ⲛⲁϣⲱⲡⲉ ϩⲛⲛⲧⲟⲡⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ · ⲁⲩⲱ ⲧⲉϥϭⲟⲙ ⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲙⲡⲉⲑⲏⲥⲁⲩⲣⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“6. Give heed that thou save me, O Light, for thy mercy endureth for ever. “7. As to my transgression, which I have committed from the beginning in my ignorance, put it not to my account, O Light, but rather save me through thy great mystery of the forgiveness of sins because of thy goodness, O Light. “8. For good and sincere is the Light. For this cause will it grant me my way, to be saved out of my transgression; “9. And for my powers, which are diminished through the fear of the material emanations of Self-willed, will it draw near after its commandment, and will teach my powers, which are diminished because of the merciless, its gnosis. “10. For all gnoses of the Light are saving means and are mysteries for all who seek the regions of its Inheritance and its mysteries. “11. For the sake of the mystery of thy name, O Light, forgive my transgression, for it is great. 12. To every one who trusteth in the Light it will give the mystery which suiteth him; 13. And his soul will abide in the regions of the Light and his power will inherit | the Treasury of the Light.”",
+      "source": "Pistis Sophia Book 1 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:50-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        268,
+        28.789
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        53,
+        27.76
+      ],
+      [
+        ".",
+        155,
+        27.445
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        129,
+        27.337
+      ],
+      [
+        "ⲙ",
+        126,
+        26.515
+      ],
+      [
+        "ϣⲟⲩϣⲱⲟⲩϣⲓ",
+        31,
+        26.263
+      ],
+      [
+        "ϥ",
+        140,
+        25.812
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        119,
+        25.764
+      ],
+      [
+        "ⲃⲁϩⲥⲓ",
+        13,
+        25.752
+      ],
+      [
+        "ⲛⲁ",
+        96,
+        25.709
+      ],
+      [
+        "ϧⲉⲛ",
+        99,
+        25.651
+      ],
+      [
+        "ⲛⲧⲉ",
+        69,
+        24.392
+      ],
+      [
+        "ⲉⲑ",
+        35,
+        23.978
+      ],
+      [
+        "ⲉ",
+        79,
+        23.928
+      ],
+      [
+        "ⲁ",
+        77,
+        23.79
+      ],
+      [
+        "ⲟⲩ",
+        77,
+        23.554
+      ],
+      [
+        "ⲧⲉϥ",
+        28,
+        23.412
+      ],
+      [
+        "ⲛⲉ",
+        31,
+        23.243
+      ],
+      [
+        "ⲉϥⲉ",
+        31,
+        23.083
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        10,
+        23.003
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        11,
+        21.837
+      ],
+      [
+        "ⲙⲙⲟ",
+        137,
+        19.135
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        44,
+        17.104
+      ],
+      [
+        "ⲉ",
+        141,
+        17.096
+      ],
+      [
+        "ⲛ",
+        176,
+        17.048
+      ],
+      [
+        "ⲉⲧ",
+        89,
+        16.526
+      ],
+      [
+        "ⲡ",
+        128,
+        16.358
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        64,
+        15.326
+      ],
+      [
+        "ⲓ",
+        53,
+        14.895
+      ],
+      [
+        "ⲉⲓⲉⲣⲟ",
+        4,
+        14.873
+      ],
+      [
+        "ⲙ",
+        71,
+        14.661
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        34,
+        14.571
+      ],
+      [
+        "ⲁⲩⲱ",
+        61,
+        14.4
+      ],
+      [
+        "ϥ",
+        80,
+        14.348
+      ],
+      [
+        "ϩⲓⲧⲟⲟⲧ",
+        16,
+        14.276
+      ],
+      [
+        "ⲕ",
+        45,
+        14.189
+      ],
+      [
+        "ϩⲛ",
+        48,
+        14.094
+      ],
+      [
+        "ⲛⲁ",
+        55,
+        13.893
+      ],
+      [
+        "ⲡⲉ",
+        40,
+        13.334
+      ],
+      [
+        "ⲟⲩ",
+        49,
+        12.925
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          46
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩϩⲙ",
+          6
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          6
+        ],
+        [
+          "ⲅ_1_pre_ⲛⲟⲩϩⲙ",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲛⲟⲩϩⲙ",
+          19
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          12
+        ],
+        [
+          "ⲕ_1_pre_ⲛⲟⲩϩⲙ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲛⲟⲩϩⲙ",
+          7
+        ],
+        [
+          "ⲥ_1_pre_ⲛⲟⲩϩⲙ",
+          4
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲛⲟⲩϩⲙ",
+          4
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲙ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲛⲟⲩϩⲙ",
+          4
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲭⲁⲣⲓⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ϩⲙ_1_post_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲉⲓⲉ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲙⲏⲏⲧⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲁⲙⲓⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲅ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ⲙⲙⲟ_1_post_ⲛⲟⲩϩⲙ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲕ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          "ϥ_1_pre_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          5
+        ],
+        [
+          "ⲥ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲓ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲛⲟⲩϩⲙ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲛⲟⲩϩⲙ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲧⲉⲕ_3_post_ⲭⲁⲣⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲥ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ϩⲙ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲡⲉ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉⲓⲉ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲛⲟⲩϩⲙ",
+          "ϩⲛ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲙⲏⲏⲧⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲡ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲛⲟⲩϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ⲛ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲡⲟⲗⲓⲥ",
+          "ⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲡⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲩϩⲙ",
+          "ϥ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ⲙ_1_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲩϩⲙ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲱⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩϩⲙ",
+          "ⲁ_1_pre_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_0_node",
+          "ⲁ_2_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲁⲙⲓⲟ",
+          "ϥ_2_post_ⲧⲁⲙⲓⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.55,
+      "rank": 252,
+      "count": 564
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2665",
+      "label": "ϫⲓⲛⲛⲟϩⲉⲙ",
+      "pos": "N",
+      "gloss": "salvation, safety"
+    },
+    {
+      "target": "C2662",
+      "label": "ⲛⲟⲩϩⲙ",
+      "pos": "V",
+      "gloss": "be saved, safe; escape; save, preserve"
+    },
+    {
+      "target": "C2664",
+      "label": "ⲣⲉϥⲛⲟⲩϩⲙ",
+      "pos": "N",
+      "gloss": "saviour"
+    }
+  ]
+}

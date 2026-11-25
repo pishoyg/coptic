@@ -1,0 +1,137 @@
+{
+  "id": "C1114",
+  "forms": [
+    {
+      "id": "CF3593",
+      "orth": "ϯⲕⲃⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15592,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1298",
+      "bibliography": "CD 100a; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲱⲑ ⲁϥⲃⲱⲕ ⲛⲁϥ ⲉϩⲟⲩⲛ ⲛⲧⲟϥ ⲇⲉ ⲡⲣⲣⲟ ⲛⲉϥϩⲙⲟⲟⲥ ⲡⲉ ⲙⲁⲩⲁⲁϥ ϩⲙⲡⲉϥⲙⲁ ⲉⲧϩⲓ ⲧⲡⲉ ⲉⲧ**ϯⲕⲃⲟ** ⲁⲩⲱ ⲁⲱⲑ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲟⲩⲛⲟⲩϣⲁϫⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲛⲧⲟⲟⲧⲉⲧⲁⲩⲟϥ ⲉⲣⲟⲕ ⲡⲣⲣⲟ ⲁⲩⲱ ⲉⲅⲗⲱⲙ ⲁϥⲧⲱⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓϫⲙⲡⲉϥⲑⲣⲟⲛⲟⲥ ⲁϥϩⲱⲛ ⲉⲣⲟϥ",
+      "english": "And Aod went in to him; and he sat in his own upper summer chamber quite alone; and Aod said, I have a message from God to thee, O king: and Eglom rose up from his throne near him.",
+      "source": "Judges 3",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲱⲑ",
+        1,
+        19.598
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯⲕⲃⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15191,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1115",
+      "label": "ϫⲓⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "get cooling, refreshment"
+    },
+    {
+      "target": "C12192",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "cold"
+    },
+    {
+      "target": "C1112",
+      "label": "ⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "be, become cool; make cool"
+    },
+    {
+      "target": "C1113",
+      "label": "ⲕⲃⲟ",
+      "pos": "N",
+      "gloss": "coolness"
+    },
+    {
+      "target": "C1116",
+      "label": "ⲕⲃⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "cool wind, coolness"
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "id": "C10387",
+  "forms": [
+    {
+      "id": "CF27742",
+      "orth": "ⲡⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27743",
+      "orth": "ⲡⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2256,
+        "count": 24
+      }
+    },
+    {
+      "id": "CF27744",
+      "orth": "ⲡⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27745",
+      "orth": "ⲡⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.08,
+        "rank": 456,
+        "count": 176
+      }
+    },
+    {
+      "id": "CF27746",
+      "orth": "ⲡⲱⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27747",
+      "orth": "ⲡⲱⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS14015",
+      "bibliography": "DDGLC",
+      "cu_ID": "468"
+    },
+    {
+      "id": "CS14016",
+      "bibliography": "DDGLC",
+      "cu_ID": "11639"
+    },
+    {
+      "id": "CS14017",
+      "bibliography": "DDGLC",
+      "cu_ID": "6198"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉ**ⲡⲱⲥ** ⲧⲉⲧⲉⲛⲕⲁϯ ⲁⲛ .",
+      "english": "He asked them, 'Don't you understand, yet?'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ⲛⲧⲉⲓⲡⲁⲣⲁⲃⲟⲗⲏ . ⲁⲩⲱ **ⲡⲱⲥ** ⲛⲕⲉⲡⲁⲣⲁⲃⲟⲗⲏ ⲧⲏⲣⲟⲩ ⲧⲉⲧⲛⲁⲥⲟⲩⲱⲛⲟⲩ",
+      "english": "He said to them, 'Don't you understand this parable? How will you understand all of the parables?",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϩⲉⲙⲥⲓ ⲙⲡⲉⲙⲑⲟ ⲙⲡⲓⲅⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ ⲛⲁϥⲛⲁⲩ ϫⲉ**ⲡⲱⲥ** ⲛⲓⲙⲏϣ ϩⲓϩⲟⲙⲧ ⲉⲡⲓⲅⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ ⲟⲩⲟϩ ⲟⲩⲙⲏϣ ⲛⲣⲁⲙⲁⲟ ⲛⲁⲩϩⲓⲟⲩⲓ ⲛϩⲁⲛⲙⲏϣ .",
+      "english": "Jesus sat down opposite the treasury, and saw how the multitude cast money into the treasury. Many who were rich cast in much.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉϩⲏⲗⲉⲓⲁⲥ ⲙⲉⲛ ⲉϥϣⲁⲛⲉⲓ ϥⲛⲁϫⲉⲕϩⲱⲃ ⲛⲓⲙ ⲉⲃⲟⲗ ⲁⲩⲱ **ⲡⲱⲥ** ⲛⲧⲁⲩⲥϩⲁⲓ ⲉϫⲙⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ϫⲉⲕⲁⲁⲥ ⲉϥⲉϣⲉⲡϩⲁϩ ⲛϩⲓⲥⲉ ⲛⲥⲉⲥⲟϣϥ .",
+      "english": "He said to them, &apos;Elijah indeed comes first, and restores all things. How is it written about the Son of Man, that he should suffer many things and be despised?",
+      "source": "Mark Chapter 9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉ ⲧⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ ⲉⲧⲁⲓⲡⲁⲣⲁⲃⲟⲗⲏ ⲟⲩⲟϩ **ⲡⲱⲥ** ⲛⲓⲕⲉⲡⲁⲣⲁⲃⲟⲗⲏ ⲧⲏⲣⲟⲩ ⲧⲉⲧⲉⲛⲛⲁⲥⲟⲩⲱⲛⲟⲩ",
+      "english": "He said to them, 'Don't you understand this parable? How will you understand all of the parables?",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲓ ⲙⲡⲉⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ ϫⲉ**ⲡⲱⲥ** ⲁⲁⲇⲁⲙ ⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛⲧⲉϥⲥⲧⲟⲗⲏ ⲁϥϯ ⲉⲣⲟⲥ ⲛⲛϭⲱⲱⲃⲉ ⲉⲧϣⲟⲟⲩⲉ ⲉⲧⲛⲏϫ ⲉⲃⲟⲗ ϩⲁⲡϣⲏⲛ ⲁϥϣⲓⲕⲉ ⲉⲡⲕⲁϩ ⲁϥⲧⲟⲙⲥⲟⲩ ·",
+      "english": "And I said unto the Cherubim, 'Why is Adam spreading out his garment, and putting in it the dried leaves which have been blown off the tree, and digging a hole in the ground and burying them therein?'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲁ",
+        150,
+        20.181
+      ],
+      [
+        "ϥ",
+        133,
+        18.131
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        43,
+        17.62
+      ],
+      [
+        "ϫⲉ",
+        72,
+        17.187
+      ],
+      [
+        "ⲥ",
+        64,
+        16.968
+      ],
+      [
+        "ⲁⲛⲁ",
+        9,
+        16.938
+      ],
+      [
+        "ⲁ",
+        80,
+        16.496
+      ],
+      [
+        "ⲥⲉ",
+        31,
+        16.139
+      ],
+      [
+        "ⲉⲙⲓ",
+        23,
+        15.877
+      ],
+      [
+        "ϣϫⲟⲙ",
+        14,
+        15.296
+      ],
+      [
+        "ⲡⲁⲣⲁⲃⲟⲗⲏ",
+        9,
+        15.16
+      ],
+      [
+        "ϫⲱ",
+        26,
+        15.011
+      ],
+      [
+        "ⲁⲗⲫ",
+        3,
+        14.991
+      ],
+      [
+        "ⲣ",
+        9,
+        14.815
+      ],
+      [
+        "ⲉ",
+        53,
+        14.741
+      ],
+      [
+        ".",
+        44,
+        14.535
+      ],
+      [
+        "ⲟⲩⲛ",
+        14,
+        14.422
+      ],
+      [
+        "ⲙⲙⲟ",
+        28,
+        14.331
+      ],
+      [
+        "ϩⲓϩⲟⲙⲧ",
+        2,
+        14.236
+      ],
+      [
+        "ⲧⲫⲉ",
+        3,
+        14.183
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        22.706
+      ],
+      [
+        "ⲡⲁⲣⲁⲃⲟⲗⲏ",
+        6,
+        16.407
+      ],
+      [
+        "ⲁϣⲧⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ",
+        1,
+        15.74
+      ],
+      [
+        "ⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ",
+        2,
+        13.155
+      ],
+      [
+        "ϭⲉ",
+        7,
+        13.014
+      ],
+      [
+        "ⲛⲟⲉⲓ",
+        3,
+        12.933
+      ],
+      [
+        "ⲇⲁⲗⲓⲗⲁ",
+        1,
+        12.57
+      ],
+      [
+        "ⲧⲉⲓ",
+        5,
+        12.252
+      ],
+      [
+        "ϫⲉ",
+        12,
+        12.043
+      ],
+      [
+        "ⲛ",
+        19,
+        11.695
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        3,
+        11.672
+      ],
+      [
+        "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        11.492
+      ],
+      [
+        "ⲡⲣⲟⲃⲟⲗⲏ",
+        1,
+        10.933
+      ],
+      [
+        "ⲙ",
+        10,
+        10.459
+      ],
+      [
+        "ⲥⲁⲙⲯⲱⲛ",
+        1,
+        10.348
+      ],
+      [
+        "ϩⲱⲃ",
+        3,
+        9.984
+      ],
+      [
+        "ⲁ",
+        9,
+        9.696
+      ],
+      [
+        "ⲕⲉ",
+        3,
+        9.423
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        9.311
+      ],
+      [
+        "ⲡⲱⲣϣ",
+        1,
+        8.946
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1803,
+      "count": 29
+    },
+    "B": {
+      "rate": 2.07,
+      "rank": 388,
+      "count": 176
+    }
+  },
+  "etym": {
+    "grl_ID": "1902",
+    "grl_lemma": "πῶς",
+    "grl_meaning": "how?",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 1561b"
+  }
+}

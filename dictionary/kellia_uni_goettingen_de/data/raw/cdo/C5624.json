@@ -1,0 +1,61 @@
+{
+  "id": "C5624",
+  "forms": [
+    {
+      "id": "CF31943",
+      "orth": "ⲟϣⲙϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31942",
+      "orth": "ⲟϣⲙⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6738,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6295",
+      "bibliography": "CD 535b; KoptHWb 296; DELC 251b; ChLCS 73b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5623",
+      "label": "ⲁϣⲙⲓ",
+      "pos": "N",
+      "gloss": "soot; wick"
+    },
+    {
+      "target": "C5621",
+      "label": "ⲁⲧⲱϣⲙ",
+      "pos": "N",
+      "gloss": "unquenched, unquenchable, unslaked"
+    },
+    {
+      "target": "C5622",
+      "label": "ⲣⲉϥⲱϣⲙ",
+      "pos": "N",
+      "gloss": "quencher"
+    },
+    {
+      "target": "C5620",
+      "label": "ⲱϣⲙ",
+      "pos": "V",
+      "gloss": "be quenched, be dried up; quench, slake (one's thirst)"
+    }
+  ]
+}

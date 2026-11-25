@@ -1,0 +1,138 @@
+{
+  "id": "C1282",
+  "forms": [
+    {
+      "id": "CF3969",
+      "orth": "ⲕⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17557,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7880,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲉⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 472,
+        "count": 294
+      }
+    },
+    {
+      "orth": "ⲭⲏⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9077,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1486",
+      "bibliography": "CD 114a; KoptHWb 66; ChLCS 18a"
+    },
+    {
+      "id": "CS1487",
+      "bibliography": "CD 114a; KoptHWb 66"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲁⲙⲁϩⲧⲉ ⲙⲡⲕⲱⲧⲉ ⲙⲡⲕⲁϩ ⲁⲩⲱ ⲉⲣⲉⲛⲉⲧⲟⲩⲏϩ ⲛϩⲏⲧϥ ⲟ ⲛⲧϩⲉ ⲛϩⲉⲛϣϫⲏ ⲡⲉⲛⲧⲁϥⲧⲁϩⲉⲧⲡⲉ ⲉⲣⲁⲧⲥ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲏⲡⲉ** ⲁⲩⲱ ⲁϥⲡⲟⲣϣⲥ ⲉⲃⲟⲗ ⲛⲧϩⲉ ⲛⲟⲩϩⲃⲱ ⲉⲟⲩⲱϩ ⲛϩⲏⲧⲥ",
+      "english": "It is he that comprehends the circle of the earth, and the inhabitants in it are as grasshoppers; he that set up the heaven as a chamber, and stretched it out as a tent to dwell in:",
+      "source": "Isaiah 40",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲣϣ",
+        1,
+        14.644
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲏⲡⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17169,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "163420",
+    "egy_lemma": "kꜣp.t",
+    "demo_num": "d6318",
+    "demo_lemma": "qp(e)",
+    "english": "covers (of the sky)",
+    "german": "Gewölbe (des Himmels)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6318"
+  }
+}

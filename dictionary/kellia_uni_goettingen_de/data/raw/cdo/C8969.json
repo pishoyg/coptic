@@ -1,0 +1,46 @@
+{
+  "id": "C8969",
+  "forms": [
+    {
+      "id": "CF21999",
+      "orth": "ⲉⲝⲏⲕⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22001",
+      "orth": "ⲉⲝⲏⲕⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22000",
+      "orth": "ⲉⲝⲏⲅⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7376,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10936",
+      "bibliography": "DDGLC",
+      "cu_ID": "4564"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "714",
+    "grl_lemma": "ἐξήγησις",
+    "grl_meaning": "statement, explanation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 593a; Preisigke 1:515"
+  }
+}

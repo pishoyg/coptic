@@ -1,0 +1,49 @@
+{
+  "id": "C1845",
+  "forms": [
+    {
+      "id": "CF5316",
+      "orth": "ϭⲓⲛⲙⲟⲕⲙⲉⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5317",
+      "orth": "ϭⲓⲛⲙⲁⲕⲙⲉⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2151",
+      "bibliography": "CD 162b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1844",
+      "label": "ⲁⲧⲙⲟⲕⲙⲉⲕ",
+      "pos": "N",
+      "gloss": "unthinkable, inconceivable"
+    },
+    {
+      "target": "C1842",
+      "label": "ⲙⲟⲕⲙⲉⲕ",
+      "pos": "V",
+      "gloss": "think, ponder; meditate, intend; consider"
+    },
+    {
+      "target": "C1843",
+      "label": "ⲙⲟⲕⲙⲉⲕ",
+      "pos": "N",
+      "gloss": "thought"
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "id": "C9215",
+  "forms": [
+    {
+      "id": "CF23029",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23037",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2840,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF23036",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23032",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲟⲩⲇⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23033",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23034",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2216,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF23035",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23031",
+      "orth": "ⲉⲥⲭⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23030",
+      "orth": "ⲉⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23038",
+      "orth": "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+      "dialect": "W"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11468",
+      "bibliography": "DDGLC",
+      "cu_ID": "404"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲓⲟⲩⲇⲁⲥ ⲡⲓ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ** ⲫⲏ ⲉⲧⲁϥⲧⲏⲓϥ",
+      "english": "and Judas Iscariot, who also betrayed him.",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲓⲟⲩⲇⲁⲥ ⲡ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ** ⲡⲉⲛⲧⲁϥⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟϥ",
+      "english": "and Judas Iscariot, who also betrayed him.",
+      "source": "Mark Chapter 3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲟⲩⲇⲁⲥ ⲡ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ** ⲡⲓⲟⲩⲁⲓ ⲛⲧⲉⲡⲓⲓ ⲁϥϣⲉ ⲛⲁϥ ϩⲁⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ϩⲓⲛⲁ ⲛⲧⲉϥⲧⲏⲓϥ ⲛⲱⲟⲩ .",
+      "english": "Judas Iscariot, who was one of the twelve, went away to the chief priests, that he might deliver him to them.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲟⲩⲇⲁⲥ ⲡ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ** ⲟⲩⲁ ϩⲙⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲁϥⲃⲱⲕ ⲉⲣⲁⲧⲟⲩ ⲛⲛⲁⲣⲭⲓⲉⲣⲉⲩⲥ ϫⲉⲉϥⲉⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟϥ ⲛⲁⲩ .",
+      "english": "Judas Iscariot, who was one of the twelve, went away to the chief priests, that he might deliver him to them.",
+      "source": "41_Mark_14",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϣⲱⲡⲓ ⲛϫⲉⲟⲩⲇⲓⲡⲛⲟⲛ ⲡⲓⲇⲓⲁⲃⲟⲗⲟⲥ ϩⲏⲇⲏ ⲛⲉⲁϥⲟⲩⲱ ⲉϥϩⲓⲟⲩⲓ ⲉⲡϩⲏ ⲧⲙⲫⲏ ⲉⲛⲁϥⲛⲁⲧⲏⲓϥ ⲉⲧⲉⲓⲟⲩⲇⲁⲥ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ**",
+      "english": "After supper, the devil having already put into the heart of Judas Iscariot, Simon's son, to betray him,",
+      "source": "04_John_13",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲟⲩⲇⲁⲥ ⲡ**ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ** ⲟⲩⲁ ⲉⲃⲟⲗ ϩⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲡⲉⲧⲛⲁⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟϥ .",
+      "english": "Then Judas Iscariot, Simon's son, one of his disciples, who would betray him, said,",
+      "source": "43_John_12",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲟⲩⲇⲁⲥ",
+        12,
+        20.137
+      ],
+      [
+        "ⲕⲁⲛⲁⲛⲉⲟⲥ",
+        3,
+        19.28
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        3,
+        14.236
+      ],
+      [
+        "ⲡ",
+        10,
+        12.0
+      ],
+      [
+        "ϥ",
+        10,
+        10.805
+      ],
+      [
+        "ⲫⲏ",
+        4,
+        10.773
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        1,
+        10.002
+      ],
+      [
+        "ⲡⲓ",
+        6,
+        9.941
+      ],
+      [
+        "ⲉ",
+        7,
+        9.854
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.401
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        9.335
+      ],
+      [
+        "ⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+        1,
+        9.24
+      ],
+      [
+        "ⲁϥ",
+        1,
+        9.156
+      ],
+      [
+        ".",
+        5,
+        8.997
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        8.667
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        8.658
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        2,
+        8.486
+      ],
+      [
+        "ⲛ",
+        5,
+        7.971
+      ],
+      [
+        "ⲙⲉⲛⲉⲛⲥⲁ",
+        1,
+        7.714
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        7.495
+      ]
+    ],
+    "S": [
+      [
+        "ⲓⲟⲩⲇⲁⲥ",
+        11,
+        19.91
+      ],
+      [
+        "ⲕⲁⲛⲁⲛⲁⲓⲟⲥ",
+        3,
+        19.446
+      ],
+      [
+        "ⲧ.....ⲟⲩⲱⲙ",
+        1,
+        16.691
+      ],
+      [
+        "ⲕⲁⲛⲁⲛⲓⲧⲏⲥ",
+        1,
+        15.106
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        3,
+        14.76
+      ],
+      [
+        "ⲡ",
+        23,
+        14.161
+      ],
+      [
+        "ⲩⲁ",
+        1,
+        12.991
+      ],
+      [
+        "ϥ",
+        16,
+        12.615
+      ],
+      [
+        "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+        2,
+        11.614
+      ],
+      [
+        "ⲉⲛⲧ",
+        5,
+        11.252
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        1,
+        10.424
+      ],
+      [
+        ".",
+        6,
+        10.405
+      ],
+      [
+        "ⲟⲩⲁ",
+        3,
+        10.177
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        9.703
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲓⲇⲟⲩ",
+        1,
+        9.521
+      ],
+      [
+        "ⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+        1,
+        9.369
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        3,
+        9.138
+      ],
+      [
+        "ⲁ",
+        5,
+        8.103
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        7.67
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        7.434
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ",
+          "ⲓⲥⲕⲁⲣⲓⲱⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2515,
+      "count": 15
+    },
+    "B": {
+      "rate": 0.14,
+      "rank": 1920,
+      "count": 12
+    }
+  },
+  "etym": {
+    "grl_ID": "2832",
+    "grl_lemma": "Ἰσκαριώτης",
+    "grl_meaning": "Iskariot (surname of Judas)",
+    "grl_pos": "noun",
+    "grl_ref": "Bauer 771"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C10201",
+  "forms": [
+    {
+      "id": "CF26930",
+      "orth": "ⲡⲗⲉⲣⲟⲫⲟⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26931",
+      "orth": "ⲡⲗⲉⲣⲟⲫⲟⲣⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26932",
+      "orth": "ⲡⲗⲏⲣⲟⲫⲟⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10980,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13563",
+      "bibliography": "DDGLC",
+      "cu_ID": "2606"
+    },
+    {
+      "id": "CS13564",
+      "bibliography": "DDGLC",
+      "cu_ID": "6272"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1768",
+    "grl_lemma": "πληροφορία",
+    "grl_meaning": "fullness of assurance, certainty",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1419b; Preisigke 2:320"
+  }
+}

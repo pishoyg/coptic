@@ -1,0 +1,471 @@
+{
+  "id": "C5754",
+  "forms": [
+    {
+      "id": "CF13493",
+      "orth": "ϣⲟⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1508,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6432",
+      "bibliography": "CD 552a; KoptHWb 303; DELC 256b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲕⲁⲗⲱⲥ ⲁϥⲉⲣⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ ⲉⲑⲃⲉⲑⲏⲛⲟⲩ ⲛϫⲉⲏⲥⲁⲓⲁⲥ ϧⲁⲛⲓ**ϣⲟⲃⲓ** ⲙⲫⲣⲏϯ ⲉⲧⲥϧⲏⲟⲩⲧ ϫⲉⲡⲁⲓⲗⲁⲟⲥ ⲉⲣⲧⲓⲙⲁⲛ ⲙⲙⲟⲓ ϧⲉⲛⲛⲟⲩⲥⲫⲟⲧⲟⲩ ⲡⲟⲩϩⲏⲧ ⲇⲉ ϥⲟⲩⲏⲟⲩ ⲥⲁⲃⲟⲗ ⲙⲙⲟⲓ",
+      "english": "He answered them, 'Well did Isaiah prophesy of you hypocrites, as it is written, 'This people honors me with their lips, but their heart is far from me.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓ**ϣⲟⲃⲓ** ⲕⲁⲗⲱⲥ ⲁϥⲉⲣⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ ϧⲁⲣⲱⲧⲉⲛ ⲛϫⲉⲏⲥⲁⲓⲁⲥ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ .",
+      "english": "You hypocrites! Well did Isaiah prophesy of you, saying,",
+      "source": "01_Matthew_15",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲱⲧⲉⲛ ⲛⲓⲥⲁϧ ⲛⲉⲛⲛⲓⲫⲁⲣⲓⲥⲉⲟⲥ ⲛⲓ**ϣⲟⲃⲓ** ϫⲉⲧⲉⲧⲉⲛⲧⲟⲩⲃⲟ ⲥⲁⲃⲟⲗ ⲙⲡⲓⲁⲫⲟⲧ ⲛⲉⲙϯⲡⲁⲣⲟⲯⲓⲥ ⲥⲁϧⲟⲩⲛ ⲇⲉ ⲙⲙⲱⲟⲩ ⲙⲉϩ ⲛϩⲱⲗⲉⲙ ⲛⲉⲙϭⲱϧⲉⲙ .",
+      "english": "'Woe to you, scribes and Pharisees, hypocrites! For you clean the outside of the cup and of the platter, but within they are full of extortion and unrighteousness.",
+      "source": "01_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲁⲣⲓⲥⲉⲟⲥ",
+        7,
+        17.133
+      ],
+      [
+        "ⲛⲓ",
+        28,
+        15.997
+      ],
+      [
+        "ⲏⲥⲁⲓⲁⲥ",
+        3,
+        15.719
+      ],
+      [
+        "ⲥⲟⲓ",
+        2,
+        14.466
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        8,
+        13.936
+      ],
+      [
+        "ϫⲉ",
+        17,
+        13.755
+      ],
+      [
+        "ⲫ",
+        14,
+        13.342
+      ],
+      [
+        "ⲛⲉⲛ",
+        7,
+        12.858
+      ],
+      [
+        "ⲣⲏϯ",
+        8,
+        12.234
+      ],
+      [
+        "ⲱⲕⲉⲙ",
+        1,
+        11.729
+      ],
+      [
+        "ⲙ",
+        11,
+        11.317
+      ],
+      [
+        "ϣⲑⲁⲙ",
+        1,
+        10.729
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        10.729
+      ],
+      [
+        "ⲛⲣⲉϥ",
+        1,
+        10.592
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲟⲥⲓⲥ",
+        1,
+        10.351
+      ],
+      [
+        "ⲅⲛⲟⲫⲟⲥ",
+        1,
+        10.351
+      ],
+      [
+        "ⲙⲉⲧ",
+        1,
+        10.351
+      ],
+      [
+        "ⲁⲧⲥⲱⲧⲉⲙ",
+        1,
+        10.144
+      ],
+      [
+        "ϧⲁ",
+        3,
+        9.964
+      ],
+      [
+        "ⲛ",
+        9,
+        9.457
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲓ_1_pre_ϣⲟⲃⲓ",
+          13
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          24
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲧⲉ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲫ_5_post_ⲣⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲓ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲟⲩⲁⲓ_b",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ϣⲟⲃⲓ_b",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲙⲓⲁ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲛⲓⲃⲉⲛ_2_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ϣⲟⲃⲓ",
+          "ϣⲟⲃⲓ_0_node",
+          4
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ⲟⲩⲟϩ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲛⲁⲩ",
+          "ⲧⲟⲧⲉ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲧⲉ_2_post_ⲛⲁⲩ",
+          "ⲉⲕⲉ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_2_post_ⲛⲁⲩ",
+          "ⲛⲁⲩ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_1_post_ϣⲟⲃⲓ",
+          "ⲙ_2_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ⲡⲓ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙⲁ",
+          "ⲙⲁ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲙⲁ_1_post_ϣⲟⲃⲓ",
+          "ⲉⲧⲉ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲙⲁ",
+          "ⲫ_5_post_ⲣⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲫ_5_post_ⲣⲓⲙⲓ",
+          "ⲣⲓⲙⲓ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϣⲟⲃⲓ",
+          "ϣⲟⲃⲓ_0_node",
+          1
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ⲡ_2_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲟ",
+          "ϩⲟ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ϩⲟ_1_post_ϣⲟⲃⲓ",
+          "ⲛ_2_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲟ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ⲫ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲟⲩⲁⲓ",
+          "ⲟⲩⲁⲓ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ϣⲟⲃⲓ",
+          "ⲫ_2_post_ⲟⲩⲁⲓ_b",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲟⲩⲁⲓ_b",
+          "ⲟⲩⲁⲓ_1_post_ϣⲟⲃⲓ_b",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϣⲟⲃⲓ",
+          "ϣⲟⲃⲓ_0_node",
+          1
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϣⲟⲃⲓ",
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲃⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲛⲟⲙⲓⲁ",
+          "ⲁⲛⲟⲙⲓⲁ_1_post_ϣⲟⲃⲓ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲙⲓⲁ_1_post_ϣⲟⲃⲓ",
+          "ⲛⲓⲃⲉⲛ_2_post_ⲁⲛⲟⲙⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.29,
+      "rank": 1300,
+      "count": 25
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5756",
+      "label": "ϣⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "change, exchange, requital"
+    },
+    {
+      "target": "C5755",
+      "label": "ϣⲃⲧⲥ",
+      "pos": "N",
+      "gloss": "change"
+    },
+    {
+      "target": "C12101",
+      "label": "ϣⲉⲃⲓⲟ",
+      "pos": "V",
+      "gloss": "change"
+    },
+    {
+      "target": "C5751",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "change, be changed, separate"
+    },
+    {
+      "target": "C5752",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "change, difference"
+    },
+    {
+      "target": "C5758",
+      "label": "ϯϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "reward, requite"
+    },
+    {
+      "target": "C5753",
+      "label": "ⲁⲧϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "unchanging, unaltered"
+    },
+    {
+      "target": "C5759",
+      "label": "ⲇⲓϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "take requital, be repaid"
+    },
+    {
+      "target": "C5757",
+      "label": "ⲣϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "be instead, replace"
+    }
+  ]
+}

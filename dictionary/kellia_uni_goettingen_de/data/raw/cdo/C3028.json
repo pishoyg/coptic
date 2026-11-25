@@ -1,0 +1,97 @@
+{
+  "id": "C3028",
+  "forms": [
+    {
+      "id": "CF7922",
+      "orth": "ⲣ︦",
+      "dialect": "B"
+    },
+    {
+      "id": "CF7923",
+      "orth": "ⲣ︦",
+      "dialect": "F"
+    },
+    {
+      "id": "CF7924",
+      "orth": "ⲣ︦",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.44,
+        "rank": 582,
+        "count": 122
+      }
+    },
+    {
+      "orth": "ⲣ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 14.76,
+        "rank": 86,
+        "count": 2328
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "17. Buchstabe des Alphabeths ⲣⲱ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS3465",
+      "bibliography": "CD 287a; KoptHWb 159; DELC 169; ChLCS 40b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏ ϩⲱⲟⲩ ⲉⲧⲁⲩⲥⲁⲧⲟⲩ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲑⲛⲁⲛⲉϥ ⲛⲏ ⲉⲧⲁⲩϣⲁⲛⲥⲱⲧⲉⲙ ⲉⲡⲓⲥⲁϫⲓ ϣⲁⲩϣⲟⲡϥ ⲉⲣⲱⲟⲩ ⲟⲩⲟϩ ϣⲁⲩϯⲟⲩⲧⲁϩ ⲟⲩⲁⲓ ⲛⲗ ⲟⲩⲁⲓ ⲛⲝ ⲟⲩⲁⲓ ⲛ**ⲣ** .",
+      "english": "Those which were sown on the good ground are those who hear the word, and accept it, and bear fruit, some thirty times, some sixty times, and some one hundred times.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁⲡⲥ ⲉⲧ**ⲣ**ⲉⲡ ⲉⲧⲙⲙⲁⲩ ϫⲓⲥⲉ . ⲁⲛⲟⲕ ⲇⲉ ⲉⲧⲣⲁⲑⲃⲃⲓⲟ .",
+      "english": "He must increase, but I must decrease.",
+      "source": "43_John_3",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲣⲱⲧⲉⲃ ⲧⲏⲣⲟⲩ ⲙⲙⲁ ⲙⲁ ⲕⲁⲧⲁ**ⲣ** ⲣ ⲛⲉⲙⲕⲁⲧⲁⲛ ⲛ .",
+      "english": "They sat down in ranks, by hundreds and by fifties.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲓⲥⲟⲩⲏⲣ ⲛⲣⲟⲙⲡⲉ ϫⲓⲛⲁ**ⲣ**ϫⲓϩⲁⲓ ·",
+      "english": "How many years is it since thou didst marry (thy) husband?",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲗⲓⲛ ϫⲉⲫⲏ ⲉⲧⲁϥⲭⲁⲓⲱⲧ ⲛⲥⲱϥ ⲓⲉ ⲙⲁⲩ ⲓⲉ ⲥϩⲓⲙⲓ ⲓⲉ ⲥⲱⲛⲓ ⲓⲉ ⲥⲟⲛ ⲓⲉ ⲏⲓ ⲓⲉ ⲟϩⲓ ⲓⲉ ϣⲏⲣⲓ ⲉⲑⲃⲉⲧⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ϥⲛⲁϭⲓⲧⲟⲩ ⲛ**ⲣ** ⲛⲕⲱⲡ ⲛⲥⲟⲡ ϧⲉⲛⲡⲁⲓⲉⲛⲉϩ ⲟⲩⲟϩ ϧⲉⲛⲡⲉⲑⲛⲏⲟⲩ ⲟⲩⲱⲛϧ ⲛⲉⲛⲉϩ .",
+      "english": "and also: ‘He who leaves his father, or his mother, or his wife, or his sister, or his brother, or his house, or his flock, or his children for the kingdom of God, shall receive them a hundredfold in this world, and eternal life in the world to come’;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲛⲁⲭⲁⲣⲓⲍⲉ ⲛⲁⲕ ⲙⲡⲛⲉⲩⲙⲁ ⲛϭⲓⲡⲉⲓⲱⲧ ⲙⲡⲛⲉⲩⲙⲁ ⲡⲉⲛⲧⲁϥϫⲟⲟⲥ ϫⲉⲉⲣϣⲁⲛⲡⲁⲛⲟⲙⲟⲥ ⲕⲧⲟϥ ⲉⲃⲟⲗ ⲛⲧⲉϥϩⲓⲏ ⲉⲧϩⲟⲟⲩ · ϯⲛⲁ**ⲣ**ⲡⲙⲉⲉⲩⲉ ⲁⲛ ⲛⲛⲉϥⲁⲛⲟⲙⲓⲁ ⲧⲏⲣⲟⲩ ⲉⲛⲧⲁϥⲁⲁⲩ ·",
+      "english": "and He will graciously bestow upon thee the mercy of the Father, and the mercy which He spake saying, ' If the unrighteous man will turn from his evil way, I will no longer keep in remembrance all the iniquities which he hath committed.'",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

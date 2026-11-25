@@ -1,0 +1,160 @@
+{
+  "id": "C6388",
+  "forms": [
+    {
+      "id": "CF14800",
+      "orth": "ⲣⲉϥϩⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17214,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7084",
+      "bibliography": "CD 643b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡ**ⲣⲉϥϩⲓ** ⲛⲛⲁⲥⲉⲃⲏⲥ ⲡⲉ ⲟⲩⲣⲣⲟ ⲛⲥⲟⲫⲟⲥ ⲁⲩⲱ ϣⲁϥⲉⲓⲛⲉ ⲉϫⲱⲟⲩ ⲛⲟⲩⲕⲟⲧ ⲙⲡⲉⲧϩⲟⲟⲩ ⲙⲙⲛⲧⲛⲁ ⲙⲛⲧⲡⲓⲥⲧⲓⲥ ⲡⲉ ⲡϩⲁⲣⲉϩ ⲛⲟⲩⲣⲣⲟ ⲁⲩⲱ ϩⲉⲛⲇⲓⲕⲁⲓⲟⲥ ⲛⲉⲧⲛⲁⲕⲱⲧⲉ ⲉⲡⲉϥⲑⲣⲟⲛⲟⲥ",
+      "english": "A wise king utterly crushes the ungodly, and will bring a wheel upon them.",
+      "source": "Proverbs 20",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲥⲉⲃⲏⲥ",
+        1,
+        12.469
+      ],
+      [
+        "ϩⲧⲏ",
+        1,
+        11.983
+      ],
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϩⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_post_ⲣⲉϥϩⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲉⲓⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϩⲓ_0_node",
+          "ⲟⲩ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲣⲣⲟ",
+          "ⲣⲣⲟ_1_post_ⲣⲉϥϩⲓ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_post_ⲣⲉϥϩⲓ",
+          "ⲛ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲣⲟ",
+          "ⲥⲟⲫⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲟⲥ_3_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲉⲓⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16818,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6386",
+      "label": "ϩⲓ",
+      "pos": "V",
+      "gloss": "thresh, beat"
+    },
+    {
+      "target": "C6387",
+      "label": "ϩⲓ",
+      "pos": "N",
+      "gloss": "threshing"
+    }
+  ]
+}

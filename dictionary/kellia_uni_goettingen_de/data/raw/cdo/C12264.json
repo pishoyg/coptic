@@ -1,0 +1,44 @@
+{
+  "id": "C12264",
+  "forms": [
+    {
+      "id": "CF33281",
+      "orth": "ϩⲁⲛⲁ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "zur Bildung von Zeitangaben, f.",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS17268",
+      "bibliography": "KoptHWB 376; cf. CD 683a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12266",
+      "label": "ϩⲁⲛⲁⲙⲉⲣⲓ",
+      "pos": "N",
+      "gloss": "midday"
+    },
+    {
+      "target": "C12265",
+      "label": "ϩⲁⲛⲁⲣⲟⲩϩⲓ",
+      "pos": "N",
+      "gloss": "evening"
+    },
+    {
+      "target": "C12267",
+      "label": "ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "morning"
+    }
+  ]
+}

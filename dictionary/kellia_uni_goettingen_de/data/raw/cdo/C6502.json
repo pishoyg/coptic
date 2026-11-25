@@ -1,0 +1,58 @@
+{
+  "id": "C6502",
+  "forms": [
+    {
+      "id": "CF15032",
+      "orth": "ϯϩⲁⲗϩⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7213",
+      "bibliography": "CD 664b; KoptHWb 363; ChLCS 89b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6498",
+      "label": "ϩⲁⲗ",
+      "pos": "N",
+      "gloss": "deception"
+    },
+    {
+      "target": "C6501",
+      "label": "ϩⲁⲗϩⲟ",
+      "pos": "N",
+      "gloss": "deceptive person, deceiving (face)"
+    },
+    {
+      "target": "C6499",
+      "label": "ⲣϩⲁⲗ",
+      "pos": "V",
+      "gloss": "deceive"
+    },
+    {
+      "target": "C6500",
+      "label": "ⲣⲉϥⲣϩⲁⲗ",
+      "pos": "N",
+      "gloss": "mocker, deceiver"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C4441",
+  "forms": [
+    {
+      "id": "CF10834",
+      "orth": "ⲟ ⲛⲧⲁⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF10835",
+      "orth": "ⲟⲓ ⲛⲧⲁⲣⲧⲁⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5029",
+      "bibliography": "CD 423b-424a; KoptHWb 241; DELC 219ab"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4442",
+      "label": "ⲣⲁⲧⲧⲁⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "put forth branches"
+    },
+    {
+      "target": "C4440",
+      "label": "ⲧⲁⲣ",
+      "pos": "N",
+      "gloss": "branch, point; hook (of boat)"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "C5997",
+  "forms": [
+    {
+      "id": "CF13999",
+      "orth": "ⲁⲧϣⲱⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20295,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6681",
+      "bibliography": "CD 580a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲉⲣϣⲁⲛⲣⲱⲙⲉ ⲛⲓⲙ ⲡⲗⲁⲛⲁ ⲁⲩⲱ ⲛⲧⲉⲧⲁⲡⲣⲟ ⲛⲓⲙ ϣⲁϫⲉ ϩⲙⲡϭⲟⲗ ϩⲁⲡⲥ ⲁⲛ ⲉⲧⲣⲉⲡⲛⲟⲩⲧⲉ ϣⲱⲡⲉ ⲙⲙⲉ ⲙⲏ ⲟⲩⲁⲧϭⲟⲙ ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲟⲩ**ⲁⲧϣⲱⲡⲉ** ⲡⲉ ⲉⲧⲣⲉϥϫⲓϭⲟⲗ .",
+      "english": "...",
+      "source": "If Everyone Errs MONB.XG 336-343 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.errs.amelineau:1-20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲱⲡⲉ",
+          "ⲟⲩ_1_pre_ⲁⲧϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϣⲱⲡⲉ",
+          "ⲁⲧϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧϣⲱⲡⲉ_0_node",
+          "ⲉ_1_post_ⲁⲧϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧϣⲱⲡⲉ",
+          "ⲧⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_2_post_ⲉ",
+          "ϥ_3_post_ⲧⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19909,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5995",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "V",
+      "gloss": "become, befall, be, exist"
+    },
+    {
+      "target": "C5996",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "being"
+    },
+    {
+      "target": "C6000",
+      "label": "ϭⲓⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "act, state of being"
+    },
+    {
+      "target": "C6001",
+      "label": "ⲉϣⲱⲡⲉ",
+      "pos": "CONJ",
+      "gloss": "if it happens that, if, when"
+    },
+    {
+      "target": "C5999",
+      "label": "ⲙⲁ ⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "dwelling place, monk's cell, monastery"
+    },
+    {
+      "target": "C5998",
+      "label": "ⲙⲛⲧⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "nothingness"
+    }
+  ]
+}

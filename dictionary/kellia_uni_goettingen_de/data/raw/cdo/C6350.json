@@ -1,0 +1,45 @@
+{
+  "id": "C6350",
+  "forms": [
+    {
+      "id": "CF14715",
+      "orth": "ⲁⲧϩⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7045",
+      "bibliography": "CD 636b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6349",
+      "label": "ϩⲁⲓ",
+      "pos": "N",
+      "gloss": "husband"
+    },
+    {
+      "target": "C6352",
+      "label": "ϫⲓϩⲁⲓ",
+      "pos": "V",
+      "gloss": "take husband"
+    },
+    {
+      "target": "C6351",
+      "label": "ⲣϩⲁⲓ",
+      "pos": "V",
+      "gloss": "be husband"
+    }
+  ]
+}

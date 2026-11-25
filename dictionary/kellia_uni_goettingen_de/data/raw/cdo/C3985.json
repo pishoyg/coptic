@@ -1,0 +1,272 @@
+{
+  "id": "C3985",
+  "forms": [
+    {
+      "id": "CF9910",
+      "orth": "ⲣⲥⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6909,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4525",
+      "bibliography": "CD 384a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲉⲩⲛⲁⲣⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁⲣⲡⲣⲟⲫⲏⲧⲏⲥ ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁ**ⲣⲥⲁϩ** ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁⲣϭⲟⲙ ⲧⲏⲣⲟⲩ .",
+      "english": "Are all apostles? Are all prophets? Are all teachers? Are all miracle workers?",
+      "source": "46_1 Corinthians_12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲓⲅⲁⲣ ⲉϣϣⲉ ⲉⲣⲱⲧⲛ ⲉ**ⲣⲥⲁϩ** ⲉⲧⲃⲉⲡⲉⲟⲩⲟⲉⲓϣ ⲧⲉⲧⲛⲣⲭⲣⲉⲓⲁ ⲟⲛ ⲛϯⲥⲃⲱ ⲛⲏⲧⲛ ϫⲉⲟⲩ ⲛⲉ ⲛⲉⲥⲧⲟⲓⲭⲓⲟⲛ ⲛⲧⲁⲣⲭⲏ ⲛⲛϣⲁϫⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲁⲧⲉⲧⲛϣⲱⲡⲉ ⲉⲧⲉⲧⲛⲣⲭⲣⲉⲓⲁ ⲛⲟⲩⲉⲣⲱⲧⲉ ⲛⲟⲩϩⲣⲉ ⲁⲛ ⲉⲥϫⲟⲟⲣ .",
+      "english": "For when by reason of the time you ought to be teachers, you again need to have someone teach you the rudiments of the first principles of the oracles of God. You have come to need milk, and not solid food.",
+      "source": "58_Hebrews_5",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏ",
+        4,
+        15.519
+      ],
+      [
+        "ϣϣⲉ",
+        1,
+        11.629
+      ],
+      [
+        "ⲉ",
+        5,
+        10.198
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        9.627
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.279
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        8.947
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.195
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.103
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.579
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲣⲥⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲥⲁϩ",
+          2
+        ],
+        [
+          "ⲣⲥⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁϩ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙⲏ_3_post_ⲣϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲏ_1_pre_ⲣⲥⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲣⲥⲁϩ",
+          "ⲛⲁ_1_pre_ⲣⲥⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲥⲁϩ",
+          "ⲣⲥⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲣⲥⲁϩ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁϩ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁϩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙⲏ_3_post_ⲣϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲏ_1_pre_ⲣⲥⲁϩ",
+          "ⲩ_1_pre_ⲣⲥⲁϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6471,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3980",
+      "label": "ϭⲓⲛⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "act, form of writing"
+    },
+    {
+      "target": "C3978",
+      "label": "ⲁⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "without letters, illiterate"
+    },
+    {
+      "target": "C3977",
+      "label": "ⲙⲛⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writing"
+    },
+    {
+      "target": "C3984",
+      "label": "ⲙⲛⲧⲥⲁϩ",
+      "pos": "N",
+      "gloss": "skill"
+    },
+    {
+      "target": "C3979",
+      "label": "ⲣⲉϥⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writer, scribe"
+    },
+    {
+      "target": "C3983",
+      "label": "ⲥϧⲓ",
+      "pos": "N",
+      "gloss": "written copy, diploma"
+    },
+    {
+      "target": "C3972",
+      "label": "ⲥϩⲁⲓ",
+      "pos": "V",
+      "gloss": "write; register; draw, paint"
+    },
+    {
+      "target": "C3976",
+      "label": "ⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writing, letter (epistle or alphabetical)"
+    },
+    {
+      "target": "C3975",
+      "label": "ⲥϩⲁⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "write in (to palace), inscribe, register"
+    },
+    {
+      "target": "C3974",
+      "label": "ⲥϩⲁⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "write outward, publish"
+    },
+    {
+      "target": "C3973",
+      "label": "ⲥϩⲁⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "ascribe to, inscribe, write down"
+    },
+    {
+      "target": "C3981",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    },
+    {
+      "target": "C3982",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    }
+  ]
+}

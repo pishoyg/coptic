@@ -1,0 +1,373 @@
+{
+  "id": "C7499",
+  "forms": [
+    {
+      "id": "CF17057",
+      "orth": "ⲁⲛϫⲱϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4047,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8306",
+      "bibliography": "CD 799a; KoptHWb 442; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡ**ⲁⲛϫⲱϫ** ⲇⲉ ⲛⲗⲏⲥⲧⲏⲥ ⲁϥⲙⲉⲧⲁⲛⲟⲉⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ",
+      "english": "But the head of the bandits, he repented saying:",
+      "source": "Apophthegmata Patrum Sahidic 157: Papnoute",
+      "urn": "urn:cts:copticLit:ap.157.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲉⲡ**ⲁⲛϫⲱϫ** ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲡⲉⲧⲣⲟⲥ",
+      "english": "Hearken unto the Prince of the Apostles, Peter,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲥⲟⲩⲱⲛϥ ⲇⲉ ⲛϭⲓⲡⲉⲧⲟ ⲛ**ⲁⲛϫⲱϫ**",
+      "english": "And he knew him, that is the one who is head,",
+      "source": "Apophthegmata Patrum Sahidic 157: Papnoute",
+      "urn": "urn:cts:copticLit:ap.157.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥϫⲓⲟⲩⲁ",
+        1,
+        15.469
+      ],
+      [
+        "ⲗⲏⲥⲧⲏⲥ",
+        1,
+        13.09
+      ],
+      [
+        "ⲥⲟⲟ",
+        1,
+        11.601
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        1,
+        9.945
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        1,
+        9.86
+      ],
+      [
+        "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+        1,
+        9.487
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        1,
+        9.228
+      ],
+      [
+        "ⲉ",
+        5,
+        8.976
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        8.834
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        8.603
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        8.471
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        8.228
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        7.789
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        7.753
+      ],
+      [
+        "ⲡ",
+        4,
+        7.69
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        7.239
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.178
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.144
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛϫⲱϫ_0_node",
+          7
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲏⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲗⲏⲥⲧⲏⲥ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲣⲟⲥ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲛϫⲱϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲛϫⲱϫ",
+          "ⲁⲛϫⲱϫ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛϫⲱϫ_0_node",
+          "ⲛ_2_post_ⲗⲏⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲏⲥⲧⲏⲥ",
+          "ⲗⲏⲥⲧⲏⲥ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲁⲛϫⲱϫ",
+          "ⲁⲛϫⲱϫ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛϫⲱϫ_0_node",
+          "ⲛ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛϫⲱϫ",
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_2_post_ⲛ",
+          "ⲡⲉⲧⲣⲟⲥ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛϫⲱϫ",
+          "ⲁⲛϫⲱϫ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛϫⲱϫ_0_node",
+          "ⲙ_1_post_ⲁⲛϫⲱϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛϫⲱϫ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲛϫⲱϫ",
+          "ⲁⲛϫⲱϫ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3651,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7498",
+      "label": "ϣⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "headache"
+    },
+    {
+      "target": "C7506",
+      "label": "ϩⲁϫⲛ-",
+      "pos": "PREP",
+      "gloss": "before (local); before (temporal)"
+    },
+    {
+      "target": "C7508",
+      "label": "ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; upon, in; on, at, beside; for; through; from upon"
+    },
+    {
+      "target": "C7512",
+      "label": "ϩⲓϫⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "meaning obscure"
+    },
+    {
+      "target": "C7500",
+      "label": "ϫⲁϫⲃⲱⲛ",
+      "pos": "N",
+      "gloss": "wrongdoer"
+    },
+    {
+      "target": "C7497",
+      "label": "ϫⲱϫ",
+      "pos": "N",
+      "gloss": "head, capital; leader"
+    },
+    {
+      "target": "C7501",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "cornerstone"
+    },
+    {
+      "target": "C7504",
+      "label": "ⲉϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; for, on account of; against; to; in addition to, after"
+    },
+    {
+      "target": "C7510",
+      "label": "ⲉⲃⲟⲗ ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "from upon"
+    },
+    {
+      "target": "C7503",
+      "label": "ⲛⲥⲁϫⲱ⸗",
+      "pos": "ADV",
+      "gloss": "behind head, backward, head down"
+    },
+    {
+      "target": "C7509",
+      "label": "ⲡⲉⲧϩⲓϫⲛ-",
+      "pos": "N",
+      "gloss": "who is in command, commander"
+    },
+    {
+      "target": "C7507",
+      "label": "ⲣ ϩⲁϫⲱ⸗",
+      "pos": "V",
+      "gloss": "go toward"
+    },
+    {
+      "target": "C7511",
+      "label": "ⲣ ϩⲓϫⲛ-",
+      "pos": "V",
+      "gloss": "be over"
+    },
+    {
+      "target": "C7505",
+      "label": "ⲣ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "be over(?)"
+    },
+    {
+      "target": "C7502",
+      "label": "ⲣϫⲱϫ",
+      "pos": "V",
+      "gloss": "head, lead, make head"
+    }
+  ]
+}

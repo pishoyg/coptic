@@ -1,0 +1,185 @@
+{
+  "id": "C6108",
+  "forms": [
+    {
+      "id": "CF14221",
+      "orth": "ϣⲧⲟⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8778,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6795",
+      "bibliography": "CD 595b; CED 255; KoptHWb 331; DELC 272a; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲉⲓⲟ ⲙⲛⲛⲇⲱⲣⲟⲛ ϣⲁⲩⲧⲟⲙⲛⲃⲁⲗ ⲛⲛⲥⲟⲫⲟⲥ ⲁⲩⲱ ϣⲁⲩⲕⲧⲟ ⲉⲃⲟⲗ ⲛⲟⲩϫⲡⲓⲟ ⲛⲧϩⲉ ⲛⲟⲩ**ϣⲧⲟⲃ** ⲉϥϩⲛ ⲟⲩⲧⲁⲡⲣⲟ",
+      "english": "Presents and gifts blind the eyes of the wise, and stop up his mouth that he cannot reprove.",
+      "source": "Sirach 20",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲛⲁⲉⲓⲛⲉ ⲇⲉ ⲙⲡⲉⲇⲣⲁⲕⲱⲛ ϩⲛⲟⲩⲟⲉⲓⲙⲉ ⲕⲛⲁϯ ⲇⲉ ⲛⲟⲩ**ϣⲧⲟⲃ** ⲉⲣⲛ ϣⲁⲁⲛⲧϥ",
+      "english": "But wilt thou catch the serpent with a hook, and put a halter about his nose?",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲁⲛⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ⲉⲣⲛ",
+        1,
+        13.843
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲧⲟⲃ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϣⲧⲟⲃ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲧⲁⲡⲣⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲧⲟⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲡⲣⲟ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲧⲟⲃ_0_node",
+          "ⲉ_1_post_ϣⲧⲟⲃ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲧⲟⲃ",
+          "ϥ_4_post_ⲧⲁⲡⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲧⲁⲡⲣⲟ",
+          "ϩⲛ_1_post_ϣⲧⲟⲃ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲧⲟⲃ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲧⲁⲡⲣⲟ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8331,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6107",
+      "label": "ϣⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "muzzle"
+    }
+  ],
+  "etym": {
+    "egy_num": "158300",
+    "egy_lemma": "štb",
+    "english": "crate (?) (for fowl)",
+    "german": "Käfig (für Geflügel)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/158300"
+  }
+}

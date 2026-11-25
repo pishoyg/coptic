@@ -1,0 +1,574 @@
+{
+  "id": "C2330",
+  "forms": [
+    {
+      "id": "CF6398",
+      "orth": "ⲙⲁⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.92,
+        "rank": 465,
+        "count": 303
+      }
+    },
+    {
+      "orth": "ⲙⲁϣϫ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.18,
+        "rank": 437,
+        "count": 185
+      }
+    },
+    {
+      "orth": "ⲙⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20857,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁⲁⲧⲥⲉ",
+      "dialect": "S",
+      "id": "1162.2"
+    },
+    {
+      "orth": "ⲙⲁⲧⲓ",
+      "dialect": "S",
+      "id": "1162.3"
+    },
+    {
+      "orth": "ⲙⲁϫ-",
+      "dialect": "S",
+      "id": "1162.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2688",
+      "bibliography": "CD 213a; KoptHWb 113; DELC 132"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲟⲩ**ⲙⲁϣϫ** ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲉⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲉⲟϣ ⲛⲣⲱⲙⲉ ϩⲉⲛⲕⲟⲟⲩⲉ ⲛϫⲟⲩⲧⲏ ⲙ**ⲙⲁⲁϫⲉ** , ϩⲉⲛⲕⲟⲟⲩⲉ ⲛⲟⲩⲣⲧⲁⲃ ·",
+      "english": "because they are numerous—some twenty five dry measures, others one measure of grain.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲉ ⲟⲩⲟⲛ **ⲙⲁϣϫ** ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲉⲙ",
+      "english": "If anyone has ears to hear, let him hear!'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲩⲛⲧϥ**ⲙⲁⲁϫⲉ** ⲙⲙⲁⲩ ⲉⲥⲱⲧⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲙ",
+      "english": "If any man has ears to hear, let him hear.'",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲕⲉⲟⲩⲁⲓ ⲁϥϩⲉⲓ ⲉϫⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲑⲛⲁⲛⲉϥ ⲟⲩⲟϩ ⲉⲧⲁϥⲣⲱⲧ ⲁϥⲉⲛ ⲟⲩⲧⲁϩ ⲉⲃⲟⲗ ⲛⲣ ⲛⲕⲱⲃ ⲛⲁⲓ ⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛⲁϥⲙⲟⲩϯ ⲡⲉ ϫⲉⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲟⲩ**ⲙⲁϣϫ** ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲉⲙ .",
+      "english": "Other fell into the good ground, and grew, and brought forth fruit one hundred times.' As he said these things, he called out, 'He who has ears to hear, let him hear!'",
+      "source": "03_Luke_08",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉϥϫⲱ ⲇⲉ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲡⲉⲧⲉⲩⲛⲧϥ**ⲙⲁⲁϫⲉ** ⲙⲙⲁⲩ ⲉⲥⲱⲧⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲱⲧⲉⲙ",
+        55,
+        26.543
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        109,
+        25.385
+      ],
+      [
+        "ⲣⲉⲕ",
+        10,
+        25.269
+      ],
+      [
+        "ϥ",
+        103,
+        24.484
+      ],
+      [
+        "ⲛ",
+        98,
+        24.435
+      ],
+      [
+        "ⲉ",
+        85,
+        24.245
+      ],
+      [
+        "ⲙⲙⲟ",
+        48,
+        24.123
+      ],
+      [
+        "ⲛⲉⲛ",
+        30,
+        23.8
+      ],
+      [
+        ".",
+        63,
+        23.548
+      ],
+      [
+        "ⲁ",
+        68,
+        23.252
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        27,
+        23.065
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        21,
+        22.756
+      ],
+      [
+        "ⲙ",
+        52,
+        22.684
+      ],
+      [
+        "ϧⲉⲛ",
+        47,
+        22.427
+      ],
+      [
+        "ⲟⲩ",
+        56,
+        22.176
+      ],
+      [
+        "ⲟⲩⲓⲛⲁⲙ",
+        10,
+        22.046
+      ],
+      [
+        "ⲫⲏ",
+        23,
+        21.929
+      ],
+      [
+        "ⲥⲟⲑⲙ",
+        6,
+        21.895
+      ],
+      [
+        "ⲛⲟⲩ",
+        20,
+        21.869
+      ],
+      [
+        "ⲉⲧⲉ",
+        25,
+        21.866
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        13,
+        23.456
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        157,
+        22.911
+      ],
+      [
+        "ⲉ",
+        260,
+        20.641
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        49,
+        19.282
+      ],
+      [
+        "ⲣⲓⲕⲉ",
+        22,
+        19.019
+      ],
+      [
+        "ⲡ",
+        188,
+        18.918
+      ],
+      [
+        "ⲁⲩⲱ",
+        116,
+        18.078
+      ],
+      [
+        "ⲥⲟⲧⲙ",
+        14,
+        17.996
+      ],
+      [
+        "ⲙ",
+        118,
+        17.756
+      ],
+      [
+        "ⲛ",
+        160,
+        17.532
+      ],
+      [
+        "ⲉⲧⲉ",
+        43,
+        17.32
+      ],
+      [
+        "ⲙⲙⲟ",
+        64,
+        16.737
+      ],
+      [
+        "ϥ",
+        110,
+        16.623
+      ],
+      [
+        "ⲟⲩⲛ",
+        28,
+        16.388
+      ],
+      [
+        "ⲩⲛⲧ",
+        7,
+        16.022
+      ],
+      [
+        "ⲁ",
+        81,
+        15.821
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        31,
+        15.592
+      ],
+      [
+        "ⲛⲉϥ",
+        30,
+        15.275
+      ],
+      [
+        "ⲣⲉⲕⲧ",
+        4,
+        15.033
+      ],
+      [
+        "ⲥⲗⲡ",
+        4,
+        15.033
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲁϫⲉ_0_node",
+          181
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲁⲁϫⲉ",
+          19
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁⲁϫⲉ",
+          18
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲁⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲁⲁϫⲉ",
+          8
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲁⲁϫⲉ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲙⲁⲁϫⲉ",
+          11
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          7
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲁϫⲉ",
+          7
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          5
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲁϫⲉ",
+          5
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲛⲁⲙ",
+          4
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          4
+        ],
+        [
+          "ⲉⲧ_5_post_ⲡ",
+          4
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲣⲉϥⲥⲱⲧⲙ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲙⲁⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲥⲁⲃⲁⲱⲑ_4_post_ϫⲟⲉⲓⲥ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_0_node",
+          "ⲙ_1_post_ⲙⲁⲁϫⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲙⲁⲁϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_0_node",
+          "ⲛ_1_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲁϫⲉ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          "ⲙ_3_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲛⲁⲙ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ⲉⲧ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲉϥⲥⲱⲧⲙ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲛⲉⲕ_1_pre_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲥⲁⲃⲁⲱⲑ_4_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.91,
+      "rank": 396,
+      "count": 303
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "78430",
+    "egy_lemma": "mḏꜣ",
+    "demo_num": "d2842",
+    "demo_lemma": "mḏ(ꜣ.t)",
+    "english": "block (of pressed dates as a unit of measure)",
+    "german": "Block (gepresster Datteln)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/78430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2842"
+  }
+}

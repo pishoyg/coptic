@@ -1,0 +1,94 @@
+{
+  "id": "C2609",
+  "forms": [
+    {
+      "id": "CF7018",
+      "orth": "ⲛⲟϣⲥϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9315,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2992",
+      "bibliography": "CD 237a; KoptHWb 132; ChLCS 34a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲟⲩⲣⲉϥϯϩⲉ ⲁⲛ ⲡⲉ ⲉⲛⲟⲩ**ⲛⲟϣⲥϥ** ⲁⲛ ⲡⲉ ⲁⲗⲗⲁ ⲉⲩϩⲁⲕ ⲡⲉ ⲉⲛⲟⲩⲣⲉϥⲙⲓϣⲉ ⲁⲛ ⲡⲉ ⲉⲛⲟⲩⲙⲁⲓϩⲟⲙⲛⲧ ⲁⲛ ⲡⲉ .",
+      "english": "not a drinker, not violent, not greedy for money, but gentle, not quarrelsome, not covetous;",
+      "source": "54_1 Timothy_3",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣϣⲉ ⲅⲁⲣ ⲉⲡⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲧⲙⲧⲣⲉⲩϭⲛϩⲱⲃ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ϩⲱⲥ ⲟⲓⲕⲟⲛⲟⲙⲟⲥ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲉⲛⲟⲩϫⲁⲥⲓϩⲏⲧ ⲁⲛ ⲡⲉ ⲉⲛⲟⲩⲣⲉϥϭⲛⲁⲧ ⲁⲛ ⲡⲉ ⲉⲛⲟⲩⲣⲉϥϯϩⲉ ⲁⲛ ⲡⲉ ⲉⲛⲟⲩ**ⲛⲟϣⲥϥ** ⲁⲛ ⲡⲉ ⲉⲛⲟⲩⲙⲁⲓϩⲏⲩ ⲛϣⲗⲟϥ ⲁⲛ ⲡⲉ .",
+      "english": "For the overseer must be blameless, as God's steward; not self-pleasing, not easily angered, not given to wine, not violent, not greedy for dishonest gain;",
+      "source": "56_Titus_1",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩ",
+        3,
+        15.419
+      ],
+      [
+        "ⲁⲛ",
+        4,
+        13.128
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        11.508
+      ],
+      [
+        "ⲉ",
+        4,
+        9.817
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8884,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2607",
+      "label": "ⲛⲟⲩϣⲥ",
+      "pos": "V",
+      "gloss": "grow numb; benumb, rebuke"
+    },
+    {
+      "target": "C2608",
+      "label": "ⲛⲟⲩϣⲥ",
+      "pos": "N",
+      "gloss": "numbness"
+    }
+  ]
+}

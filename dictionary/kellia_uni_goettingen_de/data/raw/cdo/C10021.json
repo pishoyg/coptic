@@ -1,0 +1,407 @@
+{
+  "id": "C10021",
+  "forms": [
+    {
+      "id": "CF26196",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26201",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26199",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1881,
+        "count": 34
+      }
+    },
+    {
+      "id": "CF26198",
+      "orth": "ⲡⲁⲛⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26200",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2126,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF26197",
+      "orth": "ⲡⲁⲛⲧⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26202",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26203",
+      "orth": "ⲡⲁⲛⲧⲱⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26204",
+      "orth": "ⲡⲁⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS13110",
+      "bibliography": "DDGLC",
+      "cu_ID": "1066"
+    },
+    {
+      "id": "CS13111",
+      "bibliography": "DDGLC",
+      "cu_ID": "4340"
+    },
+    {
+      "id": "CS13112",
+      "bibliography": "DDGLC",
+      "cu_ID": "8078"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲣⲓⲙⲓ ϫⲉ**ⲡⲁⲛⲧⲱⲥ** ϯⲙⲡϣⲁ ⲁⲛ ⲛⲛⲁⲩ ⲉⲡϭⲟⲉⲓⲥ ϧⲉⲛϯⲥⲁⲣⲝ .",
+      "english": "I wept and said, ‘I am not worthy to behold the Lord in his body.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲡⲉⲓⲣⲱⲙⲉ ⲛϭⲱⲃ · ϭⲛⲡⲁⲓ ⲧⲱⲛ ⲟ **ⲡⲁⲛⲧⲱⲥ** ·",
+      "english": "Where did this sick man find it?",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓϣⲱⲡⲓ ⲛⲛⲏ ⲉⲧϣⲱⲛⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲉϥϣⲱⲛⲓ ϩⲓⲛⲁ ⲛⲧⲁϫⲉⲙϩⲏⲟⲩ ⲛⲛⲏ ⲉⲧϣⲱⲛⲓ ⲁⲓϣⲱⲡⲓ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲛⲣⲏϯ ⲛⲓⲃⲉⲛ ϩⲓⲛⲁ **ⲡⲁⲛⲧⲱⲥ** ⲛⲧⲁⲛⲟϩⲉⲙ ⲛϩⲁⲛⲟⲩⲟⲛ .",
+      "english": "To the weak I became as weak, that I might gain the weak. I have become all things to all men, that I may by all means save some.",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ **ⲡⲁⲛⲧⲱⲥ** ⲉⲓϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲡⲟⲣⲛⲟⲥ ⲙⲡⲉⲓⲕⲟⲥⲙⲟⲥ ⲏ ⲙⲙⲁⲓⲧⲟⲉ ⲛϩⲟⲩⲟ ⲏ ⲛⲣⲉϥⲧⲱⲣⲡ ⲏ ⲛⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ ⲉϣϫⲉⲉϩⲉ ⲉⲓⲉ ϣϣⲉ ⲉⲣⲱⲧⲛ ⲉⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲕⲟⲥⲙⲟⲥ .",
+      "english": "yet not at all meaning with the sexual sinners of this world, or with the covetous and extortioners, or with idolaters; for then you would have to leave the world",
+      "source": "1 Corinthians 5",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲁⲡⲟⲗⲗⲱ ⲇⲉ ⲡⲓⲥⲟⲛ ⲁⲓϯϩⲟ ⲉⲣⲟϥ ⲉⲙⲁϣⲱ ϩⲓⲛⲁ ⲛⲧⲉϥⲓ ϩⲁⲣⲱⲧⲉⲛ ⲛⲉⲙⲛⲓⲥⲛⲏⲩ ⲟⲩⲟϩ **ⲡⲁⲛⲧⲱⲥ** ⲡⲉ ⲫⲟⲩⲱϣ ⲁⲛ ⲡⲉ ϩⲓⲛⲁ ⲛⲧⲉϥⲓ ϯⲛⲟⲩ ⲉϥⲉⲓ ⲇⲉ ϩⲁⲣⲱⲧⲉⲛ ⲁϥϣⲁⲛϫⲉⲙⲧⲉⲩⲕⲉⲣⲓⲁ .",
+      "english": "Now concerning Apollos, the brother, I strongly urged him to come to you with the brothers; and it was not at all his desire to come now; but he will come when he has an opportunity.",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲡⲁⲛⲧⲱⲥ** ⲕⲛⲁϫⲟⲟⲥ ϫⲉⲟⲩⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲡⲉ · ⲛⲉϣϣⲉ ⲁⲛ ⲉⲣⲟϥ ⲉϫⲓⲥϩⲓⲙⲉ ·",
+      "english": "But, notwithstanding my answer, thou wouldst say unto me in any case, 'He was a bishop, and it was not seemly for him to take a wife.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣϣⲟⲣⲡ",
+        1,
+        13.673
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        2,
+        12.728
+      ],
+      [
+        "ⲛ",
+        15,
+        12.611
+      ],
+      [
+        "ⲉϩⲱⲟⲩ",
+        2,
+        12.487
+      ],
+      [
+        "ⲛⲧⲟⲧⲉⲛ",
+        1,
+        12.294
+      ],
+      [
+        "ⲣⲓⲙⲓ",
+        2,
+        11.628
+      ],
+      [
+        "ϣⲁⲛ",
+        2,
+        11.527
+      ],
+      [
+        "ⲁⲛ",
+        5,
+        11.28
+      ],
+      [
+        "ⲣⲉϥϧⲱⲧⲉⲃ",
+        1,
+        11.24
+      ],
+      [
+        "ϫⲉ",
+        7,
+        10.858
+      ],
+      [
+        "ⲛⲟϩⲉⲙ",
+        2,
+        10.585
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        1,
+        10.44
+      ],
+      [
+        "ⲥⲛⲏⲟⲩ",
+        2,
+        10.121
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        2,
+        9.886
+      ],
+      [
+        "ϧⲁ",
+        2,
+        9.152
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        8.808
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        2,
+        8.754
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        8.57
+      ],
+      [
+        "ⲛⲓ",
+        4,
+        8.518
+      ],
+      [
+        "ⲉⲣⲏⲟⲩ",
+        1,
+        8.253
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲁ",
+        32,
+        15.601
+      ],
+      [
+        "ⲕⲁⲕⲉⲓ",
+        1,
+        15.511
+      ],
+      [
+        "ⲡⲟⲣⲛⲟⲥ",
+        3,
+        14.908
+      ],
+      [
+        "ϫⲱ",
+        9,
+        12.827
+      ],
+      [
+        "ⲧⲟⲩϫⲉ",
+        2,
+        12.756
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        13,
+        12.479
+      ],
+      [
+        "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ",
+        2,
+        12.381
+      ],
+      [
+        "ϫⲉ",
+        12,
+        11.814
+      ],
+      [
+        "ϫⲡⲓ",
+        1,
+        11.703
+      ],
+      [
+        "ϥ",
+        17,
+        11.697
+      ],
+      [
+        "ⲥ",
+        11,
+        11.565
+      ],
+      [
+        "ⲛ",
+        19,
+        11.465
+      ],
+      [
+        "ⲁⲓⲧⲓⲁ",
+        1,
+        11.341
+      ],
+      [
+        "ⲉⲧⲣⲉ",
+        1,
+        11.189
+      ],
+      [
+        "ⲉ",
+        14,
+        11.152
+      ],
+      [
+        "ϫⲟⲟ",
+        5,
+        10.995
+      ],
+      [
+        "ⲥⲡⲥⲱⲡ",
+        1,
+        10.926
+      ],
+      [
+        "ⲣⲉϥϩⲱⲧⲃ",
+        1,
+        10.653
+      ],
+      [
+        "ⲧⲣⲓⲁⲥ",
+        1,
+        10.653
+      ],
+      [
+        "ⲉⲝⲟⲙⲟⲗⲟⲅⲉⲓ",
+        1,
+        10.466
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲡⲁⲛⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲛⲧⲱⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲁⲛⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲣϣⲟⲣⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_4_post_ⲣⲓⲕⲓ",
+          1
+        ],
+        [
+          "ⲙ_5_post_ⲛϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲡⲁⲛⲧⲱⲥ",
+          "ⲡⲁⲛⲧⲱⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲛⲧⲱⲥ_0_node",
+          "ⲉ_1_post_ⲡⲁⲛⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲁⲛⲧⲱⲥ",
+          "ⲣϣⲟⲣⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣϣⲟⲣⲡ_2_post_ⲉ",
+          "ⲛϫⲉ_4_post_ⲣⲓⲕⲓ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_4_post_ⲣⲓⲕⲓ",
+          "ⲙ_5_post_ⲛϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1642,
+      "count": 34
+    },
+    "B": {
+      "rate": 0.15,
+      "rank": 1834,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "1629",
+    "grl_lemma": "πάντως",
+    "grl_meaning": "in all ways, at all events, by all means",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1301a; Preisigke 2:230"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "id": "C6527",
+  "forms": [
+    {
+      "id": "CF15082",
+      "orth": "ϩⲟⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3441,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ϩⲟⲗⲉ",
+      "dialect": "S",
+      "id": "2146.1"
+    },
+    {
+      "orth": "ϩⲁⲗⲉ",
+      "dialect": "S",
+      "id": "2146.2"
+    },
+    {
+      "orth": "ϩⲟⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2138,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϩⲁⲗⲉ",
+      "dialect": "A",
+      "id": "2146.4"
+    },
+    {
+      "orth": "ϩⲁⲁⲗⲓ",
+      "dialect": "F",
+      "id": "2146.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7238",
+      "bibliography": "CD 667a; KoptHWb 364; DELC 296a; ChLCS 89b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲟⲩ**ϩⲟⲟⲗⲉ** ⲉⲥⲟⲩⲱⲙ ⲁⲩⲱ ⲉⲥⲙⲟⲟϣⲉ ϩⲓϫⲛⲟⲩⲕⲁⲛⲱⲛ ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡϭⲱϣⲧ ⲉⲃⲟⲗ ⲟⲩⲟⲓ ⲟⲩⲟⲓ ⲛⲕⲃⲁ ⲁⲩⲉⲓ ⲧⲉⲛⲟⲩ ⲥⲉⲛⲁϣⲱⲡⲉ ⲛϭⲓⲛⲉⲩⲣⲓⲙⲉ",
+      "english": "therefore I will take away their goods as a devouring moth, and as one who acts by a rigid rule in a day of visitation. Woe, woe, thy times of vengeance are come; now shall be their lamentations.",
+      "source": "Micah 7",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲛⲟⲩϣⲧⲏⲛ ⲉⲥⲛⲁⲣⲡⲗϭⲉ ϩⲛⲟⲩⲟⲩⲟⲉⲓϣ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲥⲟⲣⲧ ⲥⲉⲛⲁⲟⲩⲟⲙⲟⲩ ϩⲓⲧⲛⲟⲩ**ϩⲟⲟⲗⲉ** ⲧⲁⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲇⲉ ⲛⲁϣⲱⲡⲉ ϣⲁⲉⲛⲉϩ ⲁⲩⲱ ⲡⲁⲟⲩϫⲁⲓ ϣⲁϩⲉⲛϫⲱⲙ ⲛϫⲱⲙ",
+      "english": "For as a garment will be devoured by time, and as wool will be devoured by a moth, so shall they be consumed; but my righteousness shall be for ever, and my salvation for all generations.",
+      "source": "Isaiah 51",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲥⲱⲟⲩϩ ⲛⲏⲧⲛ ⲉϩⲟⲩⲛ ⲛϩⲛⲁϩⲟ ϩⲓϫⲙⲡⲕⲁϩ . ⲡⲙⲁ ⲛϣⲁⲣⲉ ⲧϫⲟⲟⲗⲉⲥ ⲙⲛⲧ**ϩⲟⲟⲗⲉ** ⲧⲁⲕⲟ ⲛϩⲏⲧϥ . ⲁⲩⲱ ⲡⲙⲁ ⲛϣⲁⲣⲉ ⲛⲣⲉϥϫⲓⲟⲩⲉ ϣⲟϫⲧ ⲉⲣⲟϥ ⲛⲥⲉϫⲓⲟⲩⲉ .",
+      "english": "'Don't lay up treasures for yourselves on the earth, where moth and rust consume, and where thieves break through and steal;",
+      "source": "40_Matthew_6",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲑⲏⲧ",
+        2,
+        18.691
+      ],
+      [
+        "ϫⲟⲟⲗⲉⲥ",
+        2,
+        16.817
+      ],
+      [
+        "ϣⲧⲏⲛ",
+        2,
+        13.199
+      ],
+      [
+        "ⲧ",
+        9,
+        12.259
+      ],
+      [
+        "ⲁⲩⲱ",
+        9,
+        11.935
+      ],
+      [
+        "ⲟⲩ",
+        10,
+        11.864
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        2,
+        11.614
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        2,
+        10.417
+      ],
+      [
+        "ϩⲃⲥⲱ",
+        1,
+        10.178
+      ],
+      [
+        "ⲧⲁⲓ",
+        2,
+        9.757
+      ],
+      [
+        "ⲟⲩⲟⲙ",
+        1,
+        9.541
+      ],
+      [
+        "ⲟ",
+        2,
+        9.483
+      ],
+      [
+        "ϩⲟⲓⲧⲉ",
+        1,
+        9.418
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        9.194
+      ],
+      [
+        "ϩⲉ",
+        3,
+        9.16
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        8.962
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        8.669
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        2,
+        8.518
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        1,
+        8.36
+      ],
+      [
+        "ⲛ",
+        6,
+        8.242
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲟⲗⲉ_0_node",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ϣⲧⲏⲛ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ϩⲟⲓⲧⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϥⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϥⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲟⲩⲱⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲟⲗⲉ",
+          "ⲟⲩ_1_pre_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲟⲗⲉ",
+          "ϩⲟⲟⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲟⲗⲉ_0_node",
+          "ϩⲛ_1_post_ϩⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲟⲟⲗⲉ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ϣⲧⲏⲛ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ϩⲟⲓⲧⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲧⲉ_3_post_ⲟⲩ",
+          "ⲁⲩⲱ_2_post_ϥⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϥⲛⲧ",
+          "ⲟⲩ_2_post_ϥⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲗⲉ_0_node",
+          "ϩⲓ_1_post_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϩⲟⲟⲗⲉ",
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          "ϣⲧⲏⲛ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲗⲉ_0_node",
+          "ⲉ_1_post_ϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲟⲟⲗⲉ",
+          "ⲥ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟⲩⲱⲙ",
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          "ⲁⲩⲱ_5_post_ⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲙⲟⲟϣⲉ",
+          "ⲉ_3_post_ⲟⲩⲱⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3073,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6528",
+      "label": "ϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "moth"
+    },
+    {
+      "target": "C6530",
+      "label": "ⲁⲧⲣϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "incorruptible, indestructible"
+    },
+    {
+      "target": "C6529",
+      "label": "ⲣϩⲟⲟⲗⲉ",
+      "pos": "V",
+      "gloss": "be moth-eaten, perished"
+    }
+  ]
+}

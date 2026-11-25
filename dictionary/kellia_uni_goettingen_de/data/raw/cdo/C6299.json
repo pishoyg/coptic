@@ -1,0 +1,47 @@
+{
+  "id": "C6299",
+  "forms": [
+    {
+      "id": "CF31981",
+      "orth": "ⳉⲓⲧ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31980",
+      "orth": "ⳉⲓⲉⲓⲧ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6988",
+      "bibliography": "CD 629a; CED 267; KoptHWb 395; DELC 321b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6300",
+      "label": "ⳉⲃⲉⳉⲓⲧ",
+      "pos": "N",
+      "gloss": "threshing-floor"
+    }
+  ],
+  "etym": {
+    "egy_num": "121610",
+    "egy_lemma": "ḫt.w",
+    "demo_num": "d4622",
+    "demo_lemma": "ḫtꜣ.t",
+    "english": "threshing floor",
+    "german": "Tenne",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/121610",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4622"
+  }
+}

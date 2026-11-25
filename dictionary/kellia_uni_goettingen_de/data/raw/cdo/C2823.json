@@ -1,0 +1,206 @@
+{
+  "id": "C2823",
+  "forms": [
+    {
+      "id": "CF7493",
+      "orth": "ⲫⲱⲗϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13152,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3229",
+      "bibliography": "CD 262b; KoptHWb 147; DELC 159"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲙⲟⲩϯ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛϫⲟⲙ ⲟⲩⲟϩ ⲁϥϫⲟⲥ ⲙⲡⲁⲓⲣⲏϯ ϫⲉⲕⲱⲣϫ ⲙⲡⲓϣϣⲏⲛ ⲟⲩⲟϩ **ⲫⲱⲗϫ** ⲛⲛⲉϥϫⲁⲗ ⲉⲃⲟⲗ ⲥⲱϩⲓ ⲛⲛⲉϥϫⲱⲃⲓ ⲉⲡⲉⲥⲏⲧ ϫⲱⲣ ⲙⲡⲉϥⲟⲩⲧⲁϩ ⲉⲃⲟⲗ ⲙⲁⲣⲟⲩⲕⲓⲙ ⲛϫⲉⲛⲓⲑⲏⲣⲓⲟⲛ ⲉⲃⲟⲗ ϧⲁⲣⲁⲧϥ ⲛⲉⲙⲛⲓϩⲁⲗⲁϯ ⲉⲃⲟⲗϩⲁ ⲛⲉϥϫⲁⲗ .",
+      "english": "Then these men watched, and found Daniel praying and supplicating to his God.",
+      "source": "27_Daniel_06",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲁⲗ",
+        1,
+        14.303
+      ],
+      [
+        "ϣϣⲏⲛ",
+        1,
+        12.41
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.666
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲫⲱⲗϫ",
+          1
+        ],
+        [
+          "ⲫⲱⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲗϫ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϫⲁⲗ",
+          1
+        ],
+        [
+          "ϫⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲫⲱⲗϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲫⲱⲗϫ",
+          "ⲫⲱⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲫⲱⲗϫ_0_node",
+          "ⲛ_1_post_ⲫⲱⲗϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲗϫ",
+          "ⲛⲉϥ_3_post_ϫⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϫⲁⲗ",
+          "ϫⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲁⲗ_2_post_ⲛ",
+          "ⲉⲃⲟⲗ_1_post_ⲫⲱⲗϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12590,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2826",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2825",
+      "label": "ⲡⲟⲗϭⲥ",
+      "pos": "N",
+      "gloss": "clod, lump (of earth)"
+    },
+    {
+      "target": "C2820",
+      "label": "ⲡⲱⲗϭ",
+      "pos": "V",
+      "gloss": "agree with sb, decide, reach satisfaction; deliver, decide, settle (an affair)"
+    },
+    {
+      "target": "C2822",
+      "label": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "reach conclusion, make an end, be freed (from), be transferred, relieved; settle, make an end of, take off/out, bring to terms with, relieve from,\n              satisfy"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2829",
+      "label": "ⲣⲡⲉⲗϭⲉ",
+      "pos": "V",
+      "gloss": "become, be ragged, old"
+    }
+  ]
+}

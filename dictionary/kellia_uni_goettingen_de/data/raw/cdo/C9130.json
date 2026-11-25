@@ -1,0 +1,134 @@
+{
+  "id": "C9130",
+  "forms": [
+    {
+      "id": "CF22662",
+      "orth": "ⲏⲣⲉⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22666",
+      "orth": "ⲏⲣⲉⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10144,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22663",
+      "orth": "ⲉⲣⲏⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.14,
+        "rank": 661,
+        "count": 180
+      }
+    },
+    {
+      "id": "CF22664",
+      "orth": "ⲏⲣⲉⲙⲓⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22665",
+      "orth": "ⲏⲣⲉⲙⲓⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11284",
+      "bibliography": "DDGLC",
+      "cu_ID": "4297"
+    },
+    {
+      "id": "CS11285",
+      "bibliography": "DDGLC",
+      "cu_ID": "5970"
+    },
+    {
+      "id": "CS11286",
+      "bibliography": "DDGLC",
+      "cu_ID": "5971"
+    },
+    {
+      "id": "CS11287",
+      "bibliography": "DDGLC",
+      "cu_ID": "4296"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲣⲟ ⲅⲁⲣ ⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ ϩⲙⲡⲧⲣⲉϥⲁⲛⲁⲭⲱⲣⲉⲓ ⲉϩⲣⲁⲓ ⲉⲧ**ⲏⲣⲉⲙⲟⲥ** .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛⲁⲭⲱⲣⲉⲓ",
+        1,
+        14.469
+      ],
+      [
+        "ⲡⲁⲗⲓⲛ",
+        1,
+        14.331
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9721,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3765",
+    "grl_lemma": "ἤρεμος",
+    "grl_meaning": "quiet, tranquil",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 778a"
+  }
+}

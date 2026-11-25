@@ -1,0 +1,132 @@
+{
+  "id": "C265",
+  "forms": [
+    {
+      "id": "CF1108",
+      "orth": "ⲁϣⲉⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11849,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS297",
+      "bibliography": "CD 23a; CED 16; KoptHWb 16, 491; DELC 20"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲉϧⲓⲥⲓ ϧⲉⲛⲧⲉϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ ⲙⲁⲣⲟⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩⲛⲧⲟⲩⲛⲁϩⲉⲙϯ ⲛϫⲉⲛⲓ**ⲁϣⲉⲩ** ⲛⲧⲉⲧⲫⲉ ⲛⲏⲉⲑⲛⲁⲩ ⲉⲛⲓⲥⲓⲟⲩ ⲙⲁⲣⲟⲩⲧⲁⲙⲟ ϫⲉⲟⲩ ⲉⲑⲛⲏⲟⲩ ⲉϩⲣⲏⲓ ⲉϫⲱ .",
+      "english": "Thou art wearied in thy counsels. Let now the astrologers of the heaven stand and deliver thee, let them that see the stars tell thee what is about to come upon thee.",
+      "source": "23_Isaias_47",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:47",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧⲟⲩⲛⲁϩⲉⲙϯ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲏⲉⲑ",
+        1,
+        14.172
+      ],
+      [
+        "ⲫⲉ",
+        1,
+        10.466
+      ],
+      [
+        "ⲧ",
+        1,
+        7.525
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁϣⲉⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁϣⲉⲩ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫⲉ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϣⲉⲩ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁϣⲉⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁϣⲉⲩ",
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          "ⲫⲉ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11288,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C254",
+      "type": "cf",
+      "label": "enchanter"
+    }
+  ]
+}

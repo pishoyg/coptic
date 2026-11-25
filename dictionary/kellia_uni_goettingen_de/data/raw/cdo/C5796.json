@@ -1,0 +1,125 @@
+{
+  "id": "C5796",
+  "forms": [
+    {
+      "id": "CF13589",
+      "orth": "ϣⲕⲱϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11148,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6475",
+      "bibliography": "CD 557a; KoptHWb 309"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϥⲛⲁϣⲱⲡⲓ ϣⲁⲉⲛⲉϩ ⲙⲡⲉⲙⲑⲟ ⲙⲫⲛⲟⲩϯ: ⲡⲉϥⲛⲁⲓ ⲛⲉⲙⲧⲉϥⲙⲉⲑⲙⲏⲓ ⲛⲓⲙ ⲉⲑⲛⲁ**ϣⲕⲱϯ** ⲛⲥⲱⲟⲩ .",
+      "english": "Thou shalt add days to the days of the king; thou shalt lengthen his years to all generations.",
+      "source": "19_Psalmi_60",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:60",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓⲙ",
+        1,
+        10.692
+      ],
+      [
+        "ⲙⲉⲑⲙⲏⲓ",
+        1,
+        10.579
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        10.189
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ϣⲕⲱϯ",
+          1
+        ],
+        [
+          "ϣⲕⲱϯ_0_node",
+          1
+        ],
+        [
+          "ⲛⲥⲱ_1_post_ϣⲕⲱϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲥⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϣⲕⲱϯ",
+          "ϣⲕⲱϯ_0_node",
+          1
+        ],
+        [
+          "ϣⲕⲱϯ_0_node",
+          "ⲛⲥⲱ_1_post_ϣⲕⲱϯ",
+          1
+        ],
+        [
+          "ⲛⲥⲱ_1_post_ϣⲕⲱϯ",
+          "ⲟⲩ_2_post_ⲛⲥⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10598,
+      "count": 1
+    }
+  }
+}

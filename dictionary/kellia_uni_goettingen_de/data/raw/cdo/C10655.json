@@ -1,0 +1,119 @@
+{
+  "id": "C10655",
+  "forms": [
+    {
+      "id": "CF28828",
+      "orth": "ⲥⲫⲟⲛⲇⲩⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28829",
+      "orth": "ⲥⲫⲟⲛⲇⲩⲗⲟⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF28830",
+      "orth": "ⲥⲫⲟⲛⲧⲩⲗⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14552",
+      "bibliography": "DDGLC",
+      "cu_ID": "1492"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥⲉⲛⲧⲟⲩ ⲉⲣⲁⲧϥ ⲙⲡⲟⲩⲏⲏⲃ ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ϫⲓ ⲛϣⲟⲣⲡ ⲙⲡⲉⲧⲟⲩⲛⲁⲧⲁⲁϥ ϩⲁⲛⲟⲃⲉ ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ϭⲱⲛϭ ⲛⲧⲉϥⲁⲡⲉ ⲉϫⲙⲡⲉϥ**ⲥⲫⲟⲛⲇⲩⲗⲟⲥ** ⲛϥⲧⲙⲡⲟϣϥ",
+      "english": "And he shall bring them to the priest, and the priest shall bring the sin-offering first; and the priest shall pinch off the head from the neck, and shall not divide the body.",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟϣ",
+        1,
+        15.074
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        11.581
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        10.207
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        9.938
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲫⲟⲛⲇⲩⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲫⲟⲛⲇⲩⲗⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲫⲟⲛⲇⲩⲗⲟⲥ",
+          "ⲥⲫⲟⲛⲇⲩⲗⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13860,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6247",
+    "grl_lemma": "σφόνδυλος",
+    "grl_meaning": "vertebra; spine (pl)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1741b-142a"
+  }
+}

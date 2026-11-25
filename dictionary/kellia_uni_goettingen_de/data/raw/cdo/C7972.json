@@ -1,0 +1,53 @@
+{
+  "id": "C7972",
+  "forms": [
+    {
+      "id": "CF18010",
+      "orth": "ⲥⲁϩⲧϭⲟⲟⲩⲛⲉ",
+      "dialect": "S",
+      "oRef": "ⲥⲁϩ ⲧ ϭⲟⲟⲩⲛⲉ"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8859",
+      "bibliography": "CD 836a; ChLCS 110a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3965",
+      "type": "cf",
+      "label": "weave"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7969",
+      "label": "ϭⲟⲟⲩⲛⲉ",
+      "pos": "N",
+      "gloss": "sack, sacking; sackful (measure)"
+    },
+    {
+      "target": "C7970",
+      "label": "ϭⲟⲟⲩⲛⲉ",
+      "pos": "N",
+      "gloss": "made of sacking, hessian"
+    },
+    {
+      "target": "C7971",
+      "label": "ⲥⲁ ⲛϭⲟⲟⲩⲛⲉ",
+      "pos": "N",
+      "gloss": "sack seller"
+    }
+  ]
+}

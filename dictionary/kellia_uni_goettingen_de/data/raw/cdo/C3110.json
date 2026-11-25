@@ -1,0 +1,49 @@
+{
+  "id": "C3110",
+  "forms": [
+    {
+      "id": "CF8095",
+      "orth": "ⲧⲣⲟⲙⲡⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31668",
+      "orth": "ⲛⲧⲣⲟⲙⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3560",
+      "bibliography": "CD 296b; CED 137"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3109",
+      "label": "ⲣⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "year"
+    },
+    {
+      "target": "C3112",
+      "label": "ⲣⲣⲟⲙⲡⲉ",
+      "pos": "V",
+      "gloss": "reach year (of age), spend year"
+    },
+    {
+      "target": "C3111",
+      "label": "ⲧⲛⲣⲟⲙⲡⲉ",
+      "pos": "ADV",
+      "gloss": "each year, annually"
+    }
+  ]
+}

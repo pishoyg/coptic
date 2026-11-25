@@ -1,0 +1,79 @@
+{
+  "id": "C741",
+  "forms": [
+    {
+      "id": "CF2782",
+      "orth": "ⲉⲧⲃⲉ ⲡⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.52,
+        "rank": 199,
+        "count": 871
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS883",
+      "bibliography": "CD 61b; KoptHWb 41; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲛⲉⲓ ⲅⲁⲣ ⲉⲡⲉⲓⲙⲁ **ⲉⲧⲃⲉ **ⲡⲁⲓ**** ·",
+      "english": "That is what we came to this place to do.",
+      "source": "Apophthegmata Patrum Sahidic 066",
+      "urn": "urn:cts:copticLit:ap.66.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲧⲃⲉⲡⲁⲓ** ⲙⲡⲣⲧⲣⲉⲛϣⲱⲡⲉ ⲉⲛϫⲱ ⲙⲡϭⲟⲗ ·",
+      "english": "Therefore let us not lie",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲧⲃⲉⲡⲁⲓ** ⲙⲡⲱⲣ ⲉⲧⲣⲉⲩⲁⲡⲁⲧⲁ ⲛϩⲟⲓⲛⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲧⲣⲉⲩⲣⲁϣⲉ ϩⲛⲟⲩⲙⲛⲧⲛⲟⲩϫ ϩⲣⲁⲓ ϩⲛⲛⲉⲩⲛⲟⲃⲉ · ⲉⲩⲥⲱⲧⲙ ⲉϩⲉⲛϣⲁϫⲉ ⲉⲩⲥⲏϩ ϩⲛϩⲉⲛⲙⲁ ⲉⲩϫⲱ ⲙⲙⲟⲥ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.66,
+      "rank": 164,
+      "count": 898
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2800",
+      "type": "cf",
+      "label": "demonstrative pronoun"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C740",
+      "label": "ⲉⲧⲃⲉ ϫⲉ",
+      "pos": "CONJ",
+      "gloss": "because"
+    },
+    {
+      "target": "C739",
+      "label": "ⲉⲧⲃⲉ-",
+      "pos": "PREP",
+      "gloss": "because of, concerning"
+    }
+  ]
+}

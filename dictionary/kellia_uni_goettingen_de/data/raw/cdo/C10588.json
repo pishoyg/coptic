@@ -1,0 +1,179 @@
+{
+  "id": "C10588",
+  "forms": [
+    {
+      "id": "CF28587",
+      "orth": "ⲥⲩⲙⲃⲟⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28588",
+      "orth": "ⲥⲩⲙⲃⲟⲗⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF28589",
+      "orth": "ⲥⲩⲙⲃⲟⲩⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16609,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14407",
+      "bibliography": "DDGLC",
+      "cu_ID": "3055"
+    },
+    {
+      "id": "CS14408",
+      "bibliography": "DDGLC",
+      "cu_ID": "11762"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲃⲏⲥⲁⲗⲱⲙ ⲁϥϫⲟⲟⲩ ⲛⲁⲭⲓⲧⲟⲫⲉⲗ ⲡⲑⲉⲅⲱⲛⲓⲧⲏⲥ ⲡ**ⲥⲩⲙⲃⲟⲗⲟⲥ** ⲛⲇⲁⲩⲉⲓⲇ ⲉϩⲣⲁⲓ ⲉⲧⲉϥⲡⲟⲗⲓⲥ ⲉⲕⲱⲗⲁ ϩⲙⲡⲧⲣⲉϥⲑⲩⲥⲓⲁⲍⲉ ⲛⲛⲉϥⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲁⲩⲛⲟϭ ⲛⲥⲟⲟⲩϩⲥ ϣⲱⲡⲉ ⲁⲩⲱ ⲡⲙⲏⲏϣⲉ ⲉⲧⲙⲟⲟϣⲉ ⲙⲛⲁⲃⲏⲥⲁⲗⲱⲙ ⲛⲉⲛⲁϣⲱϥ",
+      "english": "And Abessalom sent to Achitophel the Theconite, the counsellor of David, from his city, from Gola, where he was sacrificing: and there was a strong conspiracy; and the people with Abessalom were increasingly numerous.",
+      "source": "II Samuel 15",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲁⲛⲉⲁⲥ ⲡϣⲏⲣⲉ ⲛⲓⲱⲇⲁⲉ ⲛⲧⲟϥ ⲡⲉⲧⲟ ⲛ**ⲥⲩⲙⲃⲟⲗⲟⲥ** ⲡⲉⲭⲉⲣⲉⲑⲑⲓ ⲇⲉ ⲙⲛⲡⲟⲫⲉⲗⲉⲑⲓ ⲛϣⲏⲣⲉ ⲛⲇⲁⲩⲉⲓⲇ ⲛⲧⲟⲟⲩ ⲛⲉ ⲛⲁⲣⲭⲱⲛ ⲛⲧⲁⲩⲗⲏ ⲙⲡⲣⲣⲟ",
+      "english": "and Banaeas son of Jodae was councillor, and the Chelethite and the Phelethite, and the sons of David, were princes of the court.",
+      "source": "II Samuel 8",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲑⲉⲅⲱⲛⲓⲧⲏⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲡⲉⲭⲉⲣⲉⲑⲑⲓ",
+        1,
+        18.013
+      ],
+      [
+        "ⲡⲟⲫⲉⲗⲉⲑⲓ",
+        1,
+        18.013
+      ],
+      [
+        "ⲁⲭⲓⲧⲟⲫⲉⲗ",
+        1,
+        17.276
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        9.767
+      ],
+      [
+        "ⲟ",
+        1,
+        8.805
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        7.296
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲙⲃⲟⲗⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲩⲙⲃⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲙⲃⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲥⲩⲙⲃⲟⲗⲟⲥ",
+          "ⲥⲩⲙⲃⲟⲗⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲃⲟⲗⲟⲥ_0_node",
+          "ⲛ_1_post_ⲥⲩⲙⲃⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲙⲃⲟⲗⲟⲥ",
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8193,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2078",
+    "grl_lemma": "σύμβουλος",
+    "grl_meaning": "adviser, counselor+M4050",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1677b; Preisigke 2:510"
+  }
+}

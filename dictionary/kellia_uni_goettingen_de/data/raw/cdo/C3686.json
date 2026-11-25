@@ -1,0 +1,119 @@
+{
+  "id": "C3686",
+  "forms": [
+    {
+      "id": "CF9284",
+      "orth": "ⲥⲓⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9285",
+      "orth": "ⲥⲉⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4042,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF9286",
+      "orth": "ⲥⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4663,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4190",
+      "bibliography": "CD 353a; CED 160; KoptHWb 193, 539; DELC 195; ChLCS 46b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲓⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3189,
+      "count": 10
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C12138",
+      "label": "ϭⲃⲥⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "pat of butter"
+    },
+    {
+      "target": "C3685",
+      "label": "ⲥⲓⲣ",
+      "pos": "N",
+      "gloss": "first milk (colostrum), butter"
+    }
+  ]
+}

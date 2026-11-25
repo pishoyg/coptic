@@ -1,0 +1,51 @@
+{
+  "id": "C11265",
+  "forms": [
+    {
+      "id": "CF31394",
+      "orth": "ϫⲓⲟⲉⲝⲟⲩⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF31395",
+      "orth": "ϫⲓⲟⲉⲝⲟⲩⲥⲓⲁ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF31396",
+      "orth": "ⲉⲝⲟⲩⲥⲓⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31397",
+      "orth": "ⲉⲝⲟⲩⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.7,
+        "rank": 501,
+        "count": 269
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15916",
+      "bibliography": "DDGLC",
+      "cu_ID": "5859"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "721",
+    "grl_lemma": "ἐξουσία",
+    "grl_meaning": "power, authority, body of magistrates",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 599a; Preisigke 1:520"
+  }
+}

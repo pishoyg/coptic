@@ -1,0 +1,583 @@
+{
+  "id": "C6237",
+  "forms": [
+    {
+      "id": "CF14484",
+      "orth": "ϣⲟϫⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.74,
+        "rank": 490,
+        "count": 275
+      }
+    },
+    {
+      "orth": "ⲥⲟϭⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.57,
+        "rank": 378,
+        "count": 218
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6924",
+      "bibliography": "CD 616a; KoptHWb 342; DELC 278b; ChLCS 84b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲛⲁⲩ**ⲥⲟϭⲛⲓ** ϧⲁⲣⲟϥ ⲉⲩϩⲱⲟⲩϣ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲉⲩⲙⲃⲟⲛ ⲉⲣⲟϥ ⲛϫⲉϩⲁⲛϭⲟⲓⲥ ⲛⲧⲉϩⲁⲛⲫⲓϯ",
+      "english": "Against whom men taking evil counsel reproached , and the archers pressed hard upon him.",
+      "source": "01_Genesis_49",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:49",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯϫⲓ **ϣⲟϫⲛⲉ** ⲛⲁⲕ ⲉϣⲉⲡ ⲟⲩⲛⲟⲩⲃ ⲛⲧⲟⲟⲧⲉϥⲡⲟⲥⲉ ϩⲛⲟⲩⲕⲱϩⲧ ϫⲉⲕⲁⲁⲥ ⲉⲕⲉⲣⲣⲙⲙⲁⲟ ⲁⲩⲱ ϩⲉⲛϩⲟⲓⲧⲉ ⲛⲟⲩⲟⲃϣ ϫⲉⲉⲕⲉⲧⲁⲁⲩ ϩⲓⲱⲕ ⲛⲉϥⲧⲙⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϭⲓⲡϣⲓⲡⲉ ⲙⲡⲉⲕⲕⲱ ⲕⲁϩⲏⲩ ⲁⲩⲱ ⲟⲩⲡⲁϩⲣⲉ ⲉϯ ⲉⲛⲉⲕⲃⲁⲗ ϫⲉⲉⲕⲉⲛⲁⲩ ⲉⲃⲟⲗ .",
+      "english": "I counsel you to buy from me gold refined by fire, that you may become rich; and white garments, that you may clothe yourself, and that the shame of your nakedness may not be revealed; and eye salve to anoint your eyes, that you may see.",
+      "source": "66_Revelation_3",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲥⲉϣⲱⲡⲓ ⲛϫⲉⲧⲭⲱⲣⲁ ⲛⲛⲓⲓⲟⲩⲇⲁⲓ ⲛⲟⲩϩⲟϯ ⲛⲛⲓⲣⲉⲙⲛⲭⲏⲙⲓ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲑⲛⲁϫⲉ ⲡⲉⲥⲣⲁⲛ ⲛⲱⲟⲩ ⲉⲩⲉⲉⲣϩⲟϯ ⲉⲑⲃⲉⲡⲓⲥⲟϭⲛⲓ ⲉⲧⲁ ⲡϭⲥ **ⲥⲟϭⲛⲓ** ⲙⲙⲟϥ ⲉϫⲱⲟⲩ .",
+      "english": "And the land of the Jews shall be for a terror to the Egyptians: whosoever shall name it to them, they shall fear, because of the counsel which the Lord of hosts has purposed concerning it.",
+      "source": "23_Isaias_19",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡϣⲏⲣⲉ ⲛⲁⲣⲁⲙ ⲙⲛⲡϣⲏⲣⲉ ⲛϩⲣⲟⲙⲉⲗⲓⲁⲥ ϫⲉⲁⲩ**ϣⲟϫⲛⲉ** ⲛⲟⲩϣⲟϫⲛⲉ ⲉϥϩⲟⲟⲩ ⲉⲣⲟⲕ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉ",
+      "english": "And as for the son of Aram, and the son of Romelias, forasmuch as they have devised an evil counsel, saying,",
+      "source": "Isaiah 7",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲅⲁⲣ ⲁⲣⲉⲧⲉⲛⲥⲟϭⲛⲓ ϧⲁⲣⲟⲓ ⲛϩⲁⲛⲡⲉⲧϩⲱⲟⲩ ⲫⲛⲟⲩϯ ⲇⲉ ⲁϥ**ⲥⲟϭⲛⲓ** ⲉⲑⲃⲏⲧⲛϩⲁⲛⲡⲉⲑⲛⲁⲛⲉⲩ ϣⲁⲧⲉⲧⲉⲛϣⲱⲡⲓ ϣⲁⲉϧⲟⲩⲛ ⲉⲫⲟⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉϥϣⲁⲛϣ ⲛϫⲉⲟⲩⲙⲏϣ ⲉϥⲟϣ ⲛⲱⲧⲉⲛ",
+      "english": "Ye took counsel against me for evil, but God took counsel for me for good, that the matter might be as it is to-day, and much people might be fed.",
+      "source": "01_Genesis_50",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:50",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲭⲟⲩⲥⲉⲓ ⲛⲁⲃⲏⲥⲁⲗⲱⲙ ϫⲉⲛⲁⲛⲟⲩ ⲡⲉⲓϣⲁϫⲛⲉ ⲁⲛ ⲛⲧⲁⲁⲭⲓⲇⲟⲫⲉⲗ **ϣⲟϫⲛⲉ** ⲙⲙⲟϥ ⲙⲡⲉⲓⲥⲟⲡ",
+      "english": "And Chusi said to Abessalom, This counsel which Achitophel has counselled this one time is not good.",
+      "source": "II Samuel 17",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        146,
+        26.16
+      ],
+      [
+        "ⲉ",
+        126,
+        25.949
+      ],
+      [
+        "ϥ",
+        134,
+        25.623
+      ],
+      [
+        "ⲩ",
+        85,
+        25.349
+      ],
+      [
+        "ⲥⲟϭⲛⲓ",
+        20,
+        24.893
+      ],
+      [
+        "ⲟⲩ",
+        100,
+        24.686
+      ],
+      [
+        "ⲛⲧⲉ",
+        60,
+        23.787
+      ],
+      [
+        "ⲁ",
+        76,
+        23.733
+      ],
+      [
+        "ⲥⲉⲏⲣⲡ",
+        6,
+        23.643
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        17,
+        23.009
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        58,
+        22.654
+      ],
+      [
+        "ϧⲁⲣⲟ",
+        10,
+        22.491
+      ],
+      [
+        "ⲛⲓ",
+        41,
+        22.291
+      ],
+      [
+        "ⲇⲉ",
+        33,
+        22.182
+      ],
+      [
+        "ⲙ",
+        46,
+        22.154
+      ],
+      [
+        "ⲉⲣⲱ",
+        18,
+        21.904
+      ],
+      [
+        "ⲉⲧ",
+        37,
+        21.88
+      ],
+      [
+        "ⲏⲣⲱⲇⲓⲁⲛⲟⲥ",
+        3,
+        21.865
+      ],
+      [
+        "ⲛϫⲉ",
+        34,
+        21.857
+      ],
+      [
+        "ⲛϧⲏⲧⲓ",
+        2,
+        21.695
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        14,
+        23.917
+      ],
+      [
+        "ⲛ",
+        274,
+        20.0
+      ],
+      [
+        "ⲁⲭⲓⲧⲟⲫⲉⲗ",
+        7,
+        18.595
+      ],
+      [
+        "ⲉ",
+        142,
+        18.163
+      ],
+      [
+        "ⲡ",
+        142,
+        17.843
+      ],
+      [
+        "ⲙ",
+        110,
+        17.592
+      ],
+      [
+        "ⲙⲛ",
+        73,
+        17.11
+      ],
+      [
+        "ⲟⲩ",
+        95,
+        16.826
+      ],
+      [
+        "ⲁ",
+        94,
+        16.605
+      ],
+      [
+        "ⲩ",
+        74,
+        16.335
+      ],
+      [
+        "ⲛⲁⲭⲓⲇⲟⲫⲉⲗ",
+        4,
+        15.91
+      ],
+      [
+        "ⲉⲣⲟ",
+        41,
+        15.454
+      ],
+      [
+        "ϥ",
+        79,
+        15.33
+      ],
+      [
+        "ϣⲟϫⲛⲉ",
+        12,
+        15.146
+      ],
+      [
+        "ϩⲉⲛ",
+        32,
+        14.971
+      ],
+      [
+        "ⲁⲭⲓⲇⲟⲫⲉⲗ",
+        3,
+        14.665
+      ],
+      [
+        "ⲡⲉⲩ",
+        20,
+        14.551
+      ],
+      [
+        "ⲇⲉ",
+        34,
+        14.145
+      ],
+      [
+        "ⲁⲩⲱ",
+        44,
+        14.022
+      ],
+      [
+        "ϩⲙ",
+        28,
+        13.732
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲟϫⲛⲉ_0_node",
+          107
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲟϫⲛⲉ",
+          11
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲟϫⲛⲉ",
+          9
+        ],
+        [
+          "ⲡ_1_pre_ϣⲟϫⲛⲉ",
+          7
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲟϫⲛⲉ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϣⲟϫⲛⲉ",
+          9
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲟϫⲛⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲟϫⲛⲉ",
+          4
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϣⲟϫⲛⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϣⲟϫⲛⲉ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲟϫⲛⲉ",
+          3
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲟϫⲛⲉ",
+          3
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϫⲟⲥⲉ_4_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲉⲟⲟⲩ_1_post_ϣⲟϫⲛⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲟϫⲛⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϫⲛⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲟϫⲛⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲟϫⲛⲉ_0_node",
+          "ⲛ_1_post_ϣⲟϫⲛⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲟϫⲛⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ϣⲟϫⲛⲉ_0_node",
+          "ⲙ_1_post_ϣⲟϫⲛⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϣⲟϫⲛⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲟϫⲛⲉ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϩⲏⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϫⲟⲥⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟϫⲛⲉ_0_node",
+          "ⲙⲛ_2_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲟⲟⲩ",
+          "ⲟⲩ_2_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_1_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲟϫⲛⲉ",
+          "ⲟⲩ_1_pre_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲟϫⲛⲉ",
+          "ϣⲟϫⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲟϫⲛⲉ",
+          "ⲛⲉⲧⲛ_1_pre_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲟϫⲛⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲟϫⲛⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲟϫⲛⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.73,
+      "rank": 424,
+      "count": 275
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6236",
+      "label": "ϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "take counsel, consider"
+    },
+    {
+      "target": "C6240",
+      "label": "ϫⲓϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "take counsel, reflect, advice"
+    },
+    {
+      "target": "C6238",
+      "label": "ⲁⲧϣⲟϫⲛⲉ",
+      "pos": "N",
+      "gloss": "imprudent, ill-considered"
+    },
+    {
+      "target": "C6239",
+      "label": "ⲣϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "take counsel, make decision"
+    }
+  ]
+}

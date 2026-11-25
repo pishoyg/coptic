@@ -1,0 +1,477 @@
+{
+  "id": "C10911",
+  "forms": [
+    {
+      "id": "CF29766",
+      "orth": "ⲫⲱⲥⲧⲏⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF29770",
+      "orth": "ⲫⲱⲥⲧⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3367,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF29767",
+      "orth": "ⲡⲫⲱⲥⲧⲏⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29768",
+      "orth": "ⲫⲟⲩⲥⲧⲏⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29769",
+      "orth": "ⲫⲟⲩⲥⲧⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29771",
+      "orth": "ⲫⲱⲥⲧⲏⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9032,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29772",
+      "orth": "ⲫⲱⲥⲧⲏⲣ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15081",
+      "bibliography": "DDGLC",
+      "cu_ID": "771"
+    },
+    {
+      "id": "CS15082",
+      "bibliography": "DDGLC",
+      "cu_ID": "1841"
+    },
+    {
+      "id": "CS15083",
+      "bibliography": "DDGLC",
+      "cu_ID": "3070"
+    },
+    {
+      "id": "CS15084",
+      "bibliography": "DDGLC",
+      "cu_ID": "7953"
+    },
+    {
+      "id": "CS15085",
+      "bibliography": "DDGLC",
+      "cu_ID": "3437"
+    },
+    {
+      "id": "CS15086",
+      "bibliography": "DDGLC",
+      "cu_ID": "7942"
+    },
+    {
+      "id": "CS15087",
+      "bibliography": "DDGLC",
+      "cu_ID": "1520"
+    },
+    {
+      "id": "CS15088",
+      "bibliography": "DDGLC",
+      "cu_ID": "8345"
+    },
+    {
+      "id": "CS15089",
+      "bibliography": "DDGLC",
+      "cu_ID": "1424"
+    },
+    {
+      "id": "CS15090",
+      "bibliography": "DDGLC",
+      "cu_ID": "7961"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲫⲛⲟⲩϯ ϫⲉⲙⲁⲣⲟⲩϣⲱⲡⲓ ⲛϫⲉϩⲁⲛ**ⲫⲱⲥⲧⲏⲣ** ϧⲉⲛⲡⲓⲧⲁϫⲣⲟ ⲛⲧⲉⲧⲫⲉ ⲉⲑⲣⲟⲩⲉⲣⲟⲩⲱⲓⲛⲓ ⲙⲡⲓⲕⲁϩⲓ ⲉⲟⲩⲱϯ ⲟⲩⲧⲉ ⲡⲓⲉϩⲟⲟⲩ ⲛⲉⲙⲡⲓⲉϫⲱⲣϩ .",
+      "english": "And God said, Let there be lights in the firmament of the heaven to give light upon the earth, to divide between day and night, and let them be for signs and for seasons and for days and for years.",
+      "source": "01_Genesis_01",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱ ⲡⲉⲓⲛⲟϭ ⲛⲙⲕⲁϩ ⲛϩⲏⲧ ϫⲉⲛϩⲓⲥⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲉⲓⲛⲟϭ ⲛⲟⲩⲟⲉⲓϣ ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧⲇⲓⲏⲕⲏⲥⲓⲥ ⲁⲩⲱ ⲧⲇⲓⲁⲕⲟⲛⲓⲁ ⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲧⲗⲓⲧⲟⲩⲣⲅⲓⲁ ⲛⲛⲉ**ⲫⲱⲥⲧⲏⲣ** · ⲁⲩⲱ ⲡⲉϣⲟⲩⲟ ⲉⲡⲉⲥⲏⲧ ⲛⲧⲉⲓⲱⲧⲉ ⲉϫⲙⲡⲕⲁϩ · ⲡⲛⲓϥⲉ ⲛⲛⲧⲏⲩ ·",
+      "english": "O how great shall be the sorrow of heart, and all the sufferings, at that awful time, that is to say, when the administration and management of the service of the luminaries by the angels, and the sending down of the dew upon the earth, and the blowing of the winds,",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲉⲩⲅⲉⲛⲛⲏⲧⲟⲥ ⲁⲩⲱ ⲙⲛⲛⲉⲩ**ⲫⲱⲥⲧⲏⲣ** ⲁⲩⲱ ⲙⲛⲛⲉⲩⲭⲱⲣⲓⲥⲥⲩⲛⲍⲩⲅⲟⲥ",
+      "english": "and their generated and their light-givers and their unpaired",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲡⲁⲉⲓⲱⲧ ⲇⲉ ⲣⲟⲩⲛⲟϭ ⲛⲕⲱⲟⲩ ⲙⲡⲟⲩⲉ ⲙⲙⲟⲓ ⲉⲙⲁⲧⲉ · ⲁϥⲕⲧⲟϥ ϣⲁⲣⲟⲓ ⲉⲣⲉⲛⲉϥⲃⲁⲗ ⲙⲏϩ ⲛⲟⲩⲟⲉⲓⲛ ⲛⲧϩⲉ ⲛⲛⲉⲓ**ⲫⲱⲥⲧⲏⲣ** · ⲛⲧⲡⲉ ·",
+      "english": "And when my father had remained away from me for a very long time, he came back to me, and his eyes were full of light, like unto that of the luminaries in the heavens.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲁϫⲣⲟ",
+        1,
+        12.329
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        7.634
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲭⲱⲣⲓⲥⲥⲩⲛⲍⲩⲅⲟⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ⲛⲇⲓⲥⲕⲟⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ⲁⲥⲧⲏⲣ",
+        1,
+        17.139
+      ],
+      [
+        "ⲅⲉⲛⲛⲏⲧⲟⲥ",
+        1,
+        16.139
+      ],
+      [
+        "ⲥⲡⲓⲛⲑⲏⲣ",
+        1,
+        15.554
+      ],
+      [
+        "ⲧⲣⲟⲙⲟⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲗⲓⲧⲟⲩⲣⲅⲓⲁ",
+        1,
+        13.051
+      ],
+      [
+        "ⲙⲛ",
+        9,
+        12.694
+      ],
+      [
+        "ⲛⲉⲩ",
+        5,
+        12.322
+      ],
+      [
+        "ⲛⲉ",
+        7,
+        12.276
+      ],
+      [
+        "ⲡⲉ",
+        7,
+        11.471
+      ],
+      [
+        "ϣⲟⲩⲟ",
+        1,
+        11.161
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        1,
+        10.969
+      ],
+      [
+        "ⲟⲩⲟⲧⲃ",
+        1,
+        10.969
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        10.71
+      ],
+      [
+        "ⲕⲁϩ",
+        3,
+        10.222
+      ],
+      [
+        "ⲥⲱⲕ",
+        1,
+        10.009
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.745
+      ],
+      [
+        "ⲛ",
+        7,
+        8.772
+      ],
+      [
+        "ⲧ",
+        4,
+        8.611
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          11
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_1",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_2",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          "ⲛ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          "ⲧⲏⲣ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲫⲱⲥⲧⲏⲣ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b",
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_1",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_1",
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_2",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ_b_2",
+          "ⲙ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲛⲉ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲫⲱⲥⲧⲏⲣ_0_node",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          "ⲛⲉ_1_pre_ⲫⲱⲥⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3000,
+      "count": 11
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 8499,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2338",
+    "grl_lemma": "φωστήρ",
+    "grl_meaning": "lamp, luminary, radiance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1968b"
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "id": "C7",
+  "forms": [
+    {
+      "id": "CF41",
+      "orth": "ⲁⲃⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3823,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF42",
+      "orth": "ⲁⲃⲟⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF43",
+      "orth": "ⲁⲃⲟⲟⲩⲉ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ⲁⲃⲁⲧⲉ",
+      "dialect": "S",
+      "id": "625.1"
+    },
+    {
+      "orth": "ⲁⲃⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": "86.1"
+    },
+    {
+      "orth": "ⲁⲃⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2557,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲁⲃⲱ",
+      "dialect": "F",
+      "id": "86.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7",
+      "bibliography": "CD 2a; CED 2; KoptHWb 1, 482; DELC 3; ChLCS 3a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ ⲉⲥⲧⲛⲧⲱⲛ ⲉⲩ**ⲁⲃⲱ** ⲉⲁⲩⲛⲟϫⲥ ⲉⲑⲁⲗⲁⲥⲥⲁ . ⲉⲁⲥⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲛⲅⲉⲛⲟⲥ ⲛⲓⲙ ⲛⲧⲏⲃⲧ .",
+      "english": "'Again, the Kingdom of Heaven is like a dragnet, that was cast into the sea, and gathered some fish of every kind,",
+      "source": "40_Matthew_13",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛϯⲉⲟⲟⲩ ⲛⲁⲕ ⲡⲉϭⲣⲟⲟϭ · ⲡⲗⲟⲅⲟⲥ · ⲡⲉϩⲙⲟⲩ · ⲡⲱⲛⲉ ⲙⲙⲉ · ⲡⲁϩⲟ ⲉⲧⲟⲩⲁⲁⲃ · ⲡϩⲃⲃⲉ · ⲧ**ⲁⲃⲱ** · ⲧⲙⲛⲧⲛⲟϭ · ⲡⲉⲛⲧⲁⲩϫⲟⲟⲥ ⲉⲣⲟϥ · ϫⲉϣⲏⲣⲉ ⲛⲣⲱⲙⲉ ⲉⲧⲃⲏⲏⲧⲛ · ϫⲉⲕⲁⲥ ⲉϥⲉⲧⲟⲩϫⲟ ⲙⲡⲅⲉⲛⲟⲥ ⲛⲛⲣⲱⲙⲉ ·",
+      "english": "We ascribe glory unto Thee, the Seed, the Word, the Salt, the True Gem, the Holy Storehouse, the Plough, the Net, the Majesty, Who was sent for the sake of us, the children of men, that He might deliver the race of man.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲟⲕ ⲁⲓϩⲉ ⲉⲣⲟⲥ ⲁⲩⲱ ⲁⲛⲟⲕ ⲁⲓϫⲟⲟⲥ ϫⲉⲥⲥⲁϣⲉ ⲉϩⲟⲩⲉ ⲉⲡⲙⲟⲩ ⲛϭⲓⲧⲉⲥϩⲓⲙⲉ ⲧⲁⲓ ⲉⲥⲟ ⲛϭⲟⲣϭⲥ ⲁⲩⲱ ⲡⲉⲥϩⲏⲧ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲛⲉⲓ**ⲁⲃⲱ** ⲉⲣⲉⲟⲩϩⲁϭⲉ ϩⲛⲛⲉⲥϭⲓϫ ⲡⲁⲅⲁⲑⲟⲥ ⲉⲧⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ⲥⲉⲛⲁⲛⲁϩⲙⲉϥ ⲉⲣⲟⲥ ⲡⲉⲧⲣⲛⲟⲃⲉ ϩⲱⲱϥ ⲥⲉⲛⲁϭⲟⲡϥ ⲛϩⲏⲧⲥ",
+      "english": "And I find her to be, and I will pronounce to be more bitter than death the woman which is a snare, and her heart nets, who has a band in her hands: he that is good in the sight of God shall be delivered from her; but the sinner shall be caught by her.",
+      "source": "Ecclesiastes 7",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲛⲥⲑⲟⲓⲛⲟⲩϥⲓ",
+        2,
+        18.525
+      ],
+      [
+        "ϩⲓϫⲉⲗⲓ",
+        1,
+        16.525
+      ],
+      [
+        "ⲑⲟⲩⲱⲧ",
+        3,
+        15.695
+      ],
+      [
+        "ⲛⲓⲣⲉϥ",
+        1,
+        14.94
+      ],
+      [
+        "ⲉⲧϩⲓ",
+        1,
+        14.94
+      ],
+      [
+        "ⲧⲉϥ",
+        6,
+        13.575
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        3,
+        13.397
+      ],
+      [
+        "ⲕⲉⲛⲧⲉ",
+        1,
+        10.971
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        3,
+        10.795
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        3,
+        10.689
+      ],
+      [
+        "ⲁⲗⲟⲗⲓ",
+        1,
+        10.643
+      ],
+      [
+        "ϧⲣⲏⲓ",
+        1,
+        10.594
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        2,
+        10.577
+      ],
+      [
+        "ϥⲓ",
+        1,
+        10.459
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        3,
+        10.442
+      ],
+      [
+        "ⲫⲁⲓ",
+        3,
+        10.242
+      ],
+      [
+        "ⲓⲁⲣⲟ",
+        1,
+        9.94
+      ],
+      [
+        "ⲛ",
+        7,
+        9.843
+      ],
+      [
+        "ⲉϥⲉ",
+        3,
+        9.805
+      ],
+      [
+        "ϫⲉ",
+        3,
+        7.722
+      ]
+    ],
+    "S": [
+      [
+        "ⲙ....",
+        1,
+        17.598
+      ],
+      [
+        "ϩϣⲗϥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲃⲟϭⲧ",
+        1,
+        17.598
+      ],
+      [
+        "ϣⲛⲏⲉⲧ",
+        1,
+        17.598
+      ],
+      [
+        "ϩⲃⲃⲉ",
+        2,
+        16.791
+      ],
+      [
+        "ϩⲁϭⲉ",
+        1,
+        15.013
+      ],
+      [
+        "ⲛⲛⲁ",
+        1,
+        13.791
+      ],
+      [
+        "ⲙⲛⲧⲛⲟϭ",
+        2,
+        13.703
+      ],
+      [
+        "ⲥⲟⲕ",
+        1,
+        12.469
+      ],
+      [
+        "ⲁϩⲟ",
+        1,
+        11.028
+      ],
+      [
+        "ⲧ",
+        6,
+        10.826
+      ],
+      [
+        "ⲧⲛⲧⲱⲛ",
+        1,
+        9.998
+      ],
+      [
+        "ⲡ",
+        6,
+        9.252
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        9.067
+      ],
+      [
+        "ⲁ",
+        5,
+        9.01
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        8.94
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        8.559
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        8.413
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.467
+      ],
+      [
+        "ⲉ",
+        3,
+        6.572
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲃⲱ",
+          4
+        ],
+        [
+          "ⲁⲃⲱ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲁⲃⲱ",
+          2
+        ],
+        [
+          "ⲁⲗⲟⲗⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲕⲉⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲱϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲃⲱ",
+          "ⲁⲃⲱ_0_node",
+          1
+        ],
+        [
+          "ⲁⲃⲱ_0_node",
+          "ⲛ_1_post_ⲁⲃⲱ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲃⲱ",
+          "ⲁⲗⲟⲗⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲃⲱ",
+          "ⲁⲃⲱ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲃⲱ",
+          "ⲕⲉⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉⲛⲧⲉ_2_post_ⲛ",
+          "ⲉ_1_post_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲃⲱ",
+          "ⲩ_3_post_ⲕⲱϣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲃⲱ_0_node",
+          5
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲁ_2_pre_ϩϣⲗϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϩϣⲗϥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩϣⲗϥ",
+          1
+        ],
+        [
+          "ϩϣⲗϥ_1_post_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲃⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲁⲃⲱ",
+          "ⲁⲃⲱ_0_node",
+          1
+        ],
+        [
+          "ⲁ_2_pre_ϩϣⲗϥ",
+          "ⲛ_1_pre_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲃⲱ",
+          "ⲁⲃⲱ_0_node",
+          1
+        ],
+        [
+          "ⲁⲃⲱ_0_node",
+          "ⲇⲉ_2_post_ϩϣⲗϥ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϩϣⲗϥ",
+          "ⲛⲉ_2_post_ϩϣⲗϥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩϣⲗϥ",
+          "ϩϣⲗϥ_1_post_ⲁⲃⲱ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲃⲱ",
+          "ⲁⲃⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3442,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.11,
+      "rank": 2219,
+      "count": 9
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C8",
+      "label": "ⲁⲃⲱ",
+      "pos": "N",
+      "gloss": "fortress(?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "54110",
+    "egy_lemma": "bj.t",
+    "english": "clapnet",
+    "german": "Schlagnetz",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54110"
+  }
+}

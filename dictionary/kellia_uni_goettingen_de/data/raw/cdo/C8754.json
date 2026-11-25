@@ -1,0 +1,202 @@
+{
+  "id": "C8754",
+  "forms": [
+    {
+      "id": "CF20976",
+      "orth": "ⲇⲓⲁⲡⲉⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20977",
+      "orth": "ⲇⲓⲁⲡⲉⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7453,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10468",
+      "bibliography": "DDGLC",
+      "cu_ID": "5555"
+    },
+    {
+      "id": "CS10469",
+      "bibliography": "DDGLC",
+      "cu_ID": "2036"
+    },
+    {
+      "id": "CS10470",
+      "bibliography": "DDGLC",
+      "cu_ID": "5554"
+    },
+    {
+      "id": "CS10471",
+      "bibliography": "DDGLC",
+      "cu_ID": "4263"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕ**ⲇⲓⲁⲡⲉⲣⲁ** ⲙⲡⲡⲉⲗⲁⲅⲟⲥ ⲛⲧⲑⲁⲗⲁⲥⲥⲁ · ⲁⲕⲉⲓ ⲉⲡⲉⲓⲙⲁ ·",
+      "english": "Why didst thou bring upon thy head the vexatious trouble of journeying over a sea of ocean to come to this place?",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲓⲉⲣⲟ ⲉⲧⲙⲙⲁⲩ ϣⲁⲣⲉⲟⲩⲟⲛ ⲛⲓⲙ **ⲇⲓⲁⲡⲉⲣⲁ** ⲙⲙⲟϥ · ⲉⲓⲧⲉ ⲇⲓⲕⲁⲓⲟⲥ · ⲉⲓⲧⲉ ⲣⲉϥⲣⲛⲟⲃⲉ · ⲡⲉⲧⲉϣϣⲉ ⲡⲉ ⲉⲧⲣⲉⲕϣⲗⲏⲗ ϩⲁⲣⲟⲓ ϣⲁⲛⲧⲓⲡⲁⲣⲁⲅⲉ ⲛⲧⲉϩⲓⲏ ⲉⲧϩⲁϩⲟⲧⲉ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "And as for that river, every one is bound to pass over it, whether he be a righteous man or whether he be a sinner, and it is right that thou shouldst pray on my behalf until I journey over that terrible road.'",
+      "source": "Life of Cyrus in Budge ed. part 2",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:10-17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲗⲁⲅⲟⲥ",
+        1,
+        14.954
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        1,
+        10.929
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        9.987
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        9.618
+      ],
+      [
+        "ⲕ",
+        2,
+        8.853
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        7.287
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲇⲓⲁⲡⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲇⲓⲁⲡⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲡⲉⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_1_post_ⲇⲓⲁⲡⲉⲣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲇⲓⲁⲡⲉⲣⲁ",
+          "ⲕ_1_pre_ⲇⲓⲁⲡⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲇⲓⲁⲡⲉⲣⲁ",
+          "ⲇⲓⲁⲡⲉⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲡⲉⲣⲁ_0_node",
+          "ⲁ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲉⲓ",
+          "ⲕ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲓ",
+          "ⲉⲓ_1_post_ⲇⲓⲁⲡⲉⲣⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6997,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3525",
+    "grl_lemma": "διαπεράω",
+    "grl_meaning": "to go over or across, pass through",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 406b"
+  }
+}

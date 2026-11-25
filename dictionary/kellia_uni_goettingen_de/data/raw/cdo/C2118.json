@@ -1,0 +1,202 @@
+{
+  "id": "C2118",
+  "forms": [
+    {
+      "id": "CF5941",
+      "orth": "ⲙⲧⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5477,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF5942",
+      "orth": "ⲉⲙⲧⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5943",
+      "orth": "ⲙⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.7,
+        "rank": 124,
+        "count": 1530
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2453",
+      "bibliography": "CD 193a; KoptHWb 103; ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁⲥⲡⲱϣⲥ ⲉⲃⲟⲗ ⲛⲧⲙⲛⲧϩⲁⲕ · ⲛⲥⲃⲱⲕ ⲛⲧ**ⲙⲧⲱ** ϩⲙⲡⲛⲟⲃⲉ · ⲁⲩⲱ ϣⲁⲥⲃⲱⲕ ϩⲙⲡϩⲁⲥⲓⲉ ⲉⲛⲧⲁⲇⲁⲩⲉⲓⲇ ⲃⲱⲕ ⲛϩⲏⲧϥ ·",
+      "english": "and it wandereth away from chastity, and goeth into the gulf (?) of sin, and is swallowed up in the vortex whei-ein David himself was engulfed.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲗⲗⲁⲥⲁ",
+        1,
+        14.074
+      ],
+      [
+        "ⲃⲱⲕ",
+        3,
+        11.699
+      ],
+      [
+        "ϫⲟⲉⲓ",
+        1,
+        10.721
+      ],
+      [
+        "ⲧ",
+        4,
+        10.071
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        9.413
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        8.46
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        8.287
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        8.079
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.512
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        7.372
+      ],
+      [
+        "ϥ",
+        3,
+        7.277
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.664
+      ],
+      [
+        "ϩⲙ",
+        1,
+        5.413
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲧⲱ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5041,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2120",
+      "label": "ϭⲓⲛⲃⲱⲕ ⲛⲙⲧⲱ",
+      "pos": "N",
+      "gloss": "shipwreck"
+    },
+    {
+      "target": "C2119",
+      "label": "ⲃⲱⲕ ⲛⲙⲧⲱ",
+      "pos": "V",
+      "gloss": "go to the depths, founder"
+    },
+    {
+      "target": "C2117",
+      "label": "ⲙⲧⲱ",
+      "pos": "N",
+      "gloss": "depth (of sea)"
+    }
+  ],
+  "etym": {
+    "egy_num": "77690",
+    "egy_lemma": "mtr",
+    "demo_num": "d2801",
+    "demo_lemma": "mtr(j)",
+    "english": "flood",
+    "german": "Flut; Überschwemmungswasser",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/77690",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2801"
+  }
+}

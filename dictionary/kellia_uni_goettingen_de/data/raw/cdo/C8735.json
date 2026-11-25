@@ -1,0 +1,119 @@
+{
+  "id": "C8735",
+  "forms": [
+    {
+      "id": "CF20858",
+      "orth": "ⲇⲓⲁⲇⲟⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF20859",
+      "orth": "ⲇⲓⲁⲇⲟⲭⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17065,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20860",
+      "orth": "ⲇⲓⲁⲧⲟⲭⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10404",
+      "bibliography": "DDGLC",
+      "cu_ID": "7050"
+    },
+    {
+      "id": "CS10405",
+      "bibliography": "DDGLC",
+      "cu_ID": "6515"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡϫⲱⲕ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲛⲁϣⲓⲃⲉ ⲛⲕⲉⲥⲟⲡ ⲉⲧⲉⲥⲧⲏⲗⲟⲅⲣⲁⲫⲓⲁ ⲛⲇⲁⲩⲉⲓⲇ ⲉⲧ**ⲇⲓⲁⲇⲟⲭⲏ**",
+      "english": "...",
+      "source": "Psalms 59",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:59",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲱⲕϩ",
+        1,
+        13.753
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        10.767
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        9.928
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲇⲟⲭⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16669,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "492",
+    "grl_lemma": "διαδοχή",
+    "grl_meaning": "succession",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 393b; Preisigke 1:347"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "C5489",
+  "forms": [
+    {
+      "id": "CF12951",
+      "orth": "ϫⲓⲛϭⲓⲱⲙⲥ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ϭⲓⲱⲙⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1053,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6149",
+      "bibliography": "CD 524a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5492",
+      "label": "ϫⲓⲙⲥⲉ ⲙⲙⲟ⸗",
+      "pos": "V",
+      "gloss": "immerse someone (as a punishment)"
+    },
+    {
+      "target": "C5490",
+      "label": "ϫⲓⲛⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5479",
+      "label": "ϫⲓⲛⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "immersion"
+    },
+    {
+      "target": "C5487",
+      "label": "ϭⲓⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "get baptism, be baptized"
+    },
+    {
+      "target": "C5488",
+      "label": "ϭⲓⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5485",
+      "label": "ϯⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "give baptism, baptize"
+    },
+    {
+      "target": "C5491",
+      "label": "ⲙⲥⲉ",
+      "pos": "N",
+      "gloss": "diving, immersion"
+    },
+    {
+      "target": "C5486",
+      "label": "ⲣⲉϥϯⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptist"
+    },
+    {
+      "target": "C5484",
+      "label": "ⲣⲉϥⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "diver"
+    },
+    {
+      "target": "C5476",
+      "label": "ⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "be sunk, be submerged; sink, dip"
+    },
+    {
+      "target": "C5483",
+      "label": "ⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "sinking, dipping, baptism"
+    },
+    {
+      "target": "C5482",
+      "label": "ⲱⲙⲥ ⲉϧⲣⲏⲓ",
+      "pos": "N",
+      "gloss": "sinking"
+    },
+    {
+      "target": "C5481",
+      "label": "ⲱⲙⲥ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "sink down"
+    },
+    {
+      "target": "C5477",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "sink, dip"
+    },
+    {
+      "target": "C5478",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "weakness of sight"
+    },
+    {
+      "target": "C5480",
+      "label": "ⲱⲙⲥ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "sink down"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C9573",
+  "forms": [
+    {
+      "id": "CF24415",
+      "orth": "ⲕⲩⲣⲓⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24417",
+      "orth": "ⲕⲩⲣⲓⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24416",
+      "orth": "ⲕⲩⲣⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3463,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS12227",
+      "bibliography": "DDGLC",
+      "cu_ID": "4634"
+    },
+    {
+      "id": "CS12228",
+      "bibliography": "DDGLC",
+      "cu_ID": "10458"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1247",
+    "grl_lemma": "κυρίως",
+    "grl_meaning": "lordly, authoritatively",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1013b; Preisigke 1:854"
+  }
+}

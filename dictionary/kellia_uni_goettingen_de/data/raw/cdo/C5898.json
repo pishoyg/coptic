@@ -1,0 +1,358 @@
+{
+  "id": "C5898",
+  "forms": [
+    {
+      "id": "CF13794",
+      "orth": "ⲙⲛⲧϣⲙⲙⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2923,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6581",
+      "bibliography": "CD 566a; ChLCS 78a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧ**ⲙⲛⲧϣⲙⲙⲟ** · ⲻ",
+      "english": "This is being a stranger.'",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩ ⲡⲉ ⲡϩⲱⲃ ⲛⲧ**ⲙⲛⲧϣⲙⲙⲟ** ....",
+      "english": "'[what] is [it] .. to be a stranger...?'",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩ ⲧⲉ ⲧ**ⲙⲛⲧϣⲙⲙⲟ** ⲡⲁⲉⲓⲱⲧ ·",
+      "english": "'What is it to be a stranger, my father?'",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        ".....ⲟ...",
+        2,
+        18.791
+      ],
+      [
+        "ϫⲡⲓⲱⲧⲛ",
+        1,
+        16.791
+      ],
+      [
+        "....",
+        2,
+        13.487
+      ],
+      [
+        "ϫⲱϩⲙ",
+        2,
+        11.939
+      ],
+      [
+        "ⲩ",
+        8,
+        11.002
+      ],
+      [
+        "ⲉ",
+        10,
+        10.976
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        4,
+        10.937
+      ],
+      [
+        "ϩⲏⲧ",
+        3,
+        9.894
+      ],
+      [
+        "ⲡⲟⲣⲛⲉⲓⲁ",
+        1,
+        9.693
+      ],
+      [
+        "ⲥⲱϣ",
+        1,
+        9.373
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        9.28
+      ],
+      [
+        "ⲧ",
+        5,
+        9.229
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.168
+      ],
+      [
+        "ϥ",
+        7,
+        9.136
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        8.906
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        2,
+        8.818
+      ],
+      [
+        "ϩⲛ",
+        4,
+        8.672
+      ],
+      [
+        "ϣⲙⲙⲟ",
+        1,
+        8.626
+      ],
+      [
+        "ⲣϩⲱⲃ",
+        1,
+        8.562
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        8.209
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          10
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲏϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_3_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲉⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          "ⲉ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          "ϥ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲏϩ",
+          "ⲟⲩⲏϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲏϩ_2_post_ⲉ",
+          "ϩⲛ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲟⲩⲏϩ",
+          "ϩⲉⲛ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          "ⲛϩⲏⲧ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          "ⲧⲏⲩⲧⲛ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧϣⲙⲙⲟ",
+          "ⲧⲟⲩ_3_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_3_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          "ⲡⲟⲣⲛⲉⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲉⲓⲁ_2_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          "ⲧⲟⲩ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲛⲧϣⲙⲙⲟ",
+          "ⲙⲛⲧϣⲙⲙⲟ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2596,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5893",
+      "label": "ϣⲙⲙⲟ",
+      "pos": "N",
+      "gloss": "stranger"
+    },
+    {
+      "target": "C5895",
+      "label": "ϣⲙⲙⲟ",
+      "pos": "N",
+      "gloss": "strange"
+    },
+    {
+      "target": "C5894",
+      "label": "ϣⲙⲙⲱ",
+      "pos": "N",
+      "gloss": "stranger"
+    },
+    {
+      "target": "C5897",
+      "label": "ϩⲓⲡϣⲙⲙⲟ",
+      "pos": "ADV",
+      "gloss": "in strange parts, abroad"
+    },
+    {
+      "target": "C5896",
+      "label": "ⲉⲡϣⲙⲙⲟ",
+      "pos": "ADV",
+      "gloss": "to strange parts, abroad"
+    },
+    {
+      "target": "C5899",
+      "label": "ⲙⲁⲓϣⲙⲙⲟ",
+      "pos": "N",
+      "gloss": "loving strangers, hospitable"
+    },
+    {
+      "target": "C5900",
+      "label": "ⲙⲛⲧⲙⲁⲓϣⲙⲙⲟ",
+      "pos": "N",
+      "gloss": "hospitality"
+    },
+    {
+      "target": "C5901",
+      "label": "ⲣϣⲙⲙⲟ",
+      "pos": "V",
+      "gloss": "become, be stranger"
+    }
+  ]
+}

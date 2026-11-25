@@ -1,0 +1,188 @@
+{
+  "id": "C5659",
+  "forms": [
+    {
+      "id": "CF13294",
+      "orth": "ⲱϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9190,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲱϫ",
+      "dialect": "F",
+      "id": "1840.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6331",
+      "bibliography": "CD 539a; CDC 82b; CED 232-233; KoptHWb 298; DELC 252b; ChLCS\n                            74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲡⲉϫⲁϥ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲛⲙⲙⲏⲏϣⲉ . ϫⲉⲛⲧⲁⲧⲉⲧⲛⲉⲓ ⲉⲃⲟⲗ ⲉϭⲟⲡⲧ ⲛⲧϩⲉ ⲛⲟⲩ**ⲱϫ** ⲙⲛⲛⲉⲧⲛⲥⲏϥⲉ ⲙⲛⲛⲉⲧⲛϭⲉⲣⲟⲟⲃ . ⲛⲉⲓϩⲙⲟⲟⲥ ⲙⲙⲏⲛⲉ ⲡⲉ ϩⲙⲡⲣⲡⲉ ⲉⲓϯⲥⲃⲱ ⲁⲩⲱ ⲙⲡⲉⲧⲛⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲓ .",
+      "english": "In that hour Jesus said to the multitudes, 'Have you come out as against a robber with swords and clubs to seize me? I sat daily in the temple teaching, and you didn't arrest me.",
+      "source": "40_Matthew_26",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲁ ϩⲛⲟⲩⲙⲛⲧϫⲁϫⲉ ⲉⲩⲡⲏⲧ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ϩⲙⲡⲉⲩϭⲱⲛⲧ ⲧⲏⲣϥ ⲙⲛⲛⲉⲩⲥⲏϥⲉ ⲙⲛⲛⲉⲩϭⲉⲣⲱⲃ ⲛⲧϩⲉ ⲛⲟⲩ**ⲱϫ** ⲉⲩⲥⲱⲕ ⲙⲙⲟϥ ⲉⲣⲁⲧϥ ⲛⲟⲩϩⲏⲅⲉⲙⲱⲛ",
+      "english": "...",
+      "source": "Whoever Seeks God Will Find CZ 129-137",
+      "urn": "urn:cts:copticLit:shenoute.seeks.monbcz:26-36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲕ",
+        1,
+        12.469
+      ],
+      [
+        "ⲥⲏϥⲉ",
+        1,
+        10.929
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        9.33
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱϫ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱϫ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲥⲱⲕ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲥⲱⲕ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱϫ_0_node",
+          "ⲉ_1_post_ⲱϫ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱϫ",
+          "ⲩ_3_post_ⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲕ",
+          "ⲥⲱⲕ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲱⲕ_2_post_ⲉ",
+          "ⲙⲙⲟ_3_post_ⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲥⲱⲕ",
+          "ϥ_4_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8755,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5660",
+      "label": "ⲙⲛⲧⲱϫ",
+      "pos": "N",
+      "gloss": "idleness (cf. ⲱϫⲛ?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "33540",
+    "egy_lemma": "jṯꜣ",
+    "demo_num": "d287",
+    "demo_lemma": "ꜣḏ",
+    "english": "thief",
+    "german": "Dieb",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/33540",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d287"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "C10639",
+  "forms": [
+    {
+      "id": "CF28779",
+      "orth": "ⲥⲩⲛⲧⲉⲭⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28780",
+      "orth": "ⲥⲩⲛⲧⲉⲭⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10680,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14513",
+      "bibliography": "DDGLC",
+      "cu_ID": "10607"
+    },
+    {
+      "id": "CS14514",
+      "bibliography": "DDGLC",
+      "cu_ID": "10617"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲁⲡⲁ ⲁⲫⲟⲩ ϫⲉⲁⲛⲅ ⲛⲓⲙ ⲁⲛⲟⲕ ⲡϫⲟⲉⲓⲥ ⲡⲁϫⲟⲉⲓⲥ ϫⲉⲉⲕⲉϫⲉⲛⲉⲓϣⲁϫⲉ ⲛⲁⲓ ⲛⲧⲉⲓϩⲉ ⲁⲛⲟⲕ ⲅⲁⲣ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲛⲁⲥⲑⲉⲛⲏⲥ ⲁⲩⲱ ⲉⲧⲃⲉⲧⲁⲙⲛⲧϭⲱⲃ ⲛⲧⲁⲓⲡⲱⲧ ⲉⲃⲟⲗ ⲛ**ⲥⲩⲛⲧⲉⲭⲓⲁ** ⲛⲛⲣⲱⲙⲉ ϫⲉⲛⲛⲉⲓⲃⲱⲕ ϩⲙⲡⲧⲱϩ ⲛⲛϩⲟⲉⲓⲙ ⲙⲙⲡⲓⲃⲓⲟⲥ ⲧⲉⲛⲟⲩ ϯⲧⲁⲣⲕⲟ ⲙⲙⲟⲕ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧⲙⲧⲣⲉⲕϫⲓⲧ ⲛϭⲟⲛⲥ ⲡⲉⲓϩⲱⲃ ⲅⲁⲣ ⲟ ⲛⲁⲓ ⲛⲁⲧϭⲟⲙ",
+      "english": "Apa Aphou answered: Who am I, I, (oh) lord, my lord, that you will say these words to me like this? I am a weak man and it is because of my feebleness that I fled from the company of men that I should not enter into the mix of the waves of this life! Now I entreat you in the name of the Lord, to not receive me by force. For this task is impossible for me.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲧⲉⲭⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲛⲧⲉⲭⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲩⲛⲧⲉⲭⲓⲁ_0_node",
+          "ⲛ_1_post_ⲥⲩⲛⲧⲉⲭⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲛⲧⲉⲭⲓⲁ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10270,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3490",
+    "grl_lemma": "συντυχία",
+    "grl_meaning": "occurrence, happening, incident",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1729b; Preisigke 2:555"
+  }
+}

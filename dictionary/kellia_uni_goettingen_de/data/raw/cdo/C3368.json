@@ -1,0 +1,174 @@
+{
+  "id": "C3368",
+  "forms": [
+    {
+      "id": "CF8628",
+      "orth": "ⲣⲥⲟⲃⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13238,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3839",
+      "bibliography": "CD 324a; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲡⲁϩⲧⲟⲩ ⲉϫⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲩϫⲱ ⲙⲙⲟⲥ · ϫⲉⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ ⲡⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲡⲁⲣⲁⲕⲁⲗⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲉϫⲱⲛ · ⲛϥ**ⲣⲥⲟⲃⲧⲉ** ⲉⲧⲉⲛⲭⲱⲣⲁ · ϫⲉⲛⲛⲉⲛⲃⲁⲣⲃⲁⲣⲟⲥ ⲛⲁⲧⲛⲟⲩⲧⲉ ϭⲙϭⲟⲙ ⲉⲣⲟⲥ ·",
+      "english": "and they cast themselves down before the altar of sacrifice, saying, 'O Saint Victor the general, make supplication to God on our behalf, so that He may protect our country, and so that the godless barbarians may not have dominion over it.'",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲱⲣⲁ",
+        1,
+        13.006
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        11.587
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲥⲟⲃⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲟⲃⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲥⲟⲃⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲥⲟⲃⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲭⲱⲣⲁ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲥⲟⲃⲧⲉ",
+          "ϥ_1_pre_ⲣⲥⲟⲃⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲟⲃⲧⲉ",
+          "ⲣⲥⲟⲃⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲥⲟⲃⲧⲉ_0_node",
+          "ⲉ_1_post_ⲣⲥⲟⲃⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲥⲟⲃⲧⲉ",
+          "ⲧⲉⲛ_3_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ⲭⲱⲣⲁ",
+          "ⲭⲱⲣⲁ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12828,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3372",
+      "label": "ϫⲓⲛⲥⲟⲃϯ",
+      "pos": "N",
+      "gloss": "preparation"
+    },
+    {
+      "target": "C3369",
+      "label": "ⲁⲧⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "unprovided"
+    },
+    {
+      "target": "C3370",
+      "label": "ⲙⲁ ⲛⲥⲟⲃϯ",
+      "pos": "N",
+      "gloss": "place of preparing or storing"
+    },
+    {
+      "target": "C3371",
+      "label": "ⲣⲉϥⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "preparer"
+    },
+    {
+      "target": "C3366",
+      "label": "ⲥⲟⲃⲧⲉ",
+      "pos": "V",
+      "gloss": "become, be ready, prepare, set in order"
+    },
+    {
+      "target": "C3367",
+      "label": "ⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "preparation, things prepared, furniture"
+    }
+  ]
+}

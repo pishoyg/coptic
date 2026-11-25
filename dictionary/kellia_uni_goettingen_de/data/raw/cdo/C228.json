@@ -1,0 +1,97 @@
+{
+  "id": "C228",
+  "forms": [
+    {
+      "id": "CF914",
+      "orth": "ⲁⲥⲫⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13115,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS256",
+      "bibliography": "CD 18b; CED 13; KoptHWb 13, 489; DELC 17"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲛϫⲉⲇⲁⲛⲓⲏⲗ ϣⲁ**ⲁⲥⲫⲟⲩⲓ** ⲛⲧⲉⲕⲩⲣⲟⲥ ⲡⲟⲩⲣⲟ .",
+      "english": "And Daniel continued till the first year of king Cyrus.",
+      "source": "27_Daniel_01",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲥⲫⲟⲩⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲥⲫⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲕⲩⲣⲟⲥ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲟⲩⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲣⲟ_3_post_ⲕⲩⲣⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲥⲫⲟⲩⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲥⲫⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲥⲫⲟⲩⲓ",
+          "ⲕⲩⲣⲟⲥ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲩⲣⲟⲥ_2_post_ⲛⲧⲉ",
+          "ⲡ_4_post_ⲟⲩⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲟⲩⲣⲟ",
+          "ⲟⲩⲣⲟ_3_post_ⲕⲩⲣⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12552,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3649",
+      "type": "cf",
+      "label": "year"
+    }
+  ]
+}

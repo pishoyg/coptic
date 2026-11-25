@@ -1,0 +1,64 @@
+{
+  "id": "C3126",
+  "forms": [
+    {
+      "id": "CF8128",
+      "orth": "ⲣⲙⲛⲣⲁⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3576",
+      "bibliography": "CD 298ab; KoptHWb 165; DELC 176; ChLCS 42a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12347",
+      "type": "cf",
+      "label": "human being"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3125",
+      "label": "ϫⲓⲣⲁⲛ",
+      "pos": "V",
+      "gloss": "take name, be named"
+    },
+    {
+      "target": "C3122",
+      "label": "ϯⲣⲉⲛ⸗",
+      "pos": "V",
+      "gloss": "give name, call"
+    },
+    {
+      "target": "C3123",
+      "label": "ⲁⲧϯⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "unnamed"
+    },
+    {
+      "target": "C3121",
+      "label": "ⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "name"
+    },
+    {
+      "target": "C3124",
+      "label": "ⲧⲁⲩⲉⲣⲓⲛ⸗",
+      "pos": "V",
+      "gloss": "pronounce name"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "C1239",
+  "forms": [
+    {
+      "id": "CF3878",
+      "orth": "ⲛⲥⲁⲕⲱⲙϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1435",
+      "bibliography": "CD 110b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1238",
+      "label": "ⲕⲱⲙϣ",
+      "pos": "V",
+      "gloss": "sneer; mock"
+    },
+    {
+      "target": "C1240",
+      "label": "ⲕⲱⲙϣ",
+      "pos": "N",
+      "gloss": "mockery, contempt"
+    },
+    {
+      "target": "C1241",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲱⲙϣ",
+      "pos": "N",
+      "gloss": "mockery, contempt"
+    }
+  ]
+}

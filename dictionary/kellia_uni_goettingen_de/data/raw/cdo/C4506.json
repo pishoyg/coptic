@@ -1,0 +1,252 @@
+{
+  "id": "C4506",
+  "forms": [
+    {
+      "id": "CF10968",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6160,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5094",
+      "bibliography": "CD 431a; ChLCS 61a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲓ**ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ** ϫⲉⲉⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲛⲉⲓⲉⲣⲟ ⲛⲕⲣⲱⲙ ⲛⲧⲉⲁⲣⲓⲏⲗ ·",
+      "english": "“Say unto them: Renounce pillage, that ye may be worthy of the mysteries of the Light and be saved from the fire-rivers of Ariēl.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ ⲇⲉ ⲉⲛⲉⲛϭⲓϫ ⲉϥⲥⲱⲕ ⲙⲙⲟⲛ ⲉⲩ**ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ** · ⲙⲛⲟⲩⲙⲛⲧⲙⲁⲓⲧⲟⲉ ⲛϩⲟⲩⲟ ·",
+      "english": "And another shooteth an arrow into our hands, which leadeth us on to deeds of rapine, and greed of the most excessive character.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲙⲛⲧⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ . ⲧ**ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ** . ⲧⲙⲛⲧⲁⲧϣⲁⲩ . ⲧⲙⲛⲧⲣⲉϥϫⲓⲟⲩⲉ . ⲧⲙⲛⲧⲣⲉϥϩⲱⲧⲃ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 283-286",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:1.1-4.14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+        1,
+        19.013
+      ],
+      [
+        "ⲙⲛⲧⲁⲧϣⲁⲩ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ",
+        1,
+        15.691
+      ],
+      [
+        "ⲁⲡⲟⲧⲁⲥⲥⲉ",
+        1,
+        12.272
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        10.566
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        10.056
+      ],
+      [
+        ".",
+        3,
+        9.727
+      ],
+      [
+        "ⲧ",
+        3,
+        9.241
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.561
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲓⲧⲟⲉ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          "ⲟⲩ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          "ⲙⲛⲧⲙⲁⲓⲧⲟⲉ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲓⲧⲟⲉ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+          "ⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟⲉ",
+          "ϩⲟⲩⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+          "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5720,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4507",
+      "label": "ϭⲓⲛⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "seizing"
+    },
+    {
+      "target": "C4503",
+      "label": "ⲙⲁⲓⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunder-loving"
+    },
+    {
+      "target": "C4504",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4505",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4501",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "seize, rob"
+    },
+    {
+      "target": "C4502",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunder"
+    }
+  ]
+}

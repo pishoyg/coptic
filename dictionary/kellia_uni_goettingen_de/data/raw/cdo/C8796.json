@@ -1,0 +1,86 @@
+{
+  "id": "C8796",
+  "forms": [
+    {
+      "id": "CF21145",
+      "orth": "ⲇⲓⲟⲓⲕⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21150",
+      "orth": "ⲇⲓⲟⲓⲕⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21146",
+      "orth": "ⲇⲓⲏⲕⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13160,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21147",
+      "orth": "ⲇⲓⲟⲓⲏⲕⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21148",
+      "orth": "ⲇⲓⲟⲓⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21149",
+      "orth": "ⲇⲓⲟⲓⲕⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21151",
+      "orth": "ⲇⲓⲟⲓⲕⲏⲥⲓⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21152",
+      "orth": "ⲇⲓⲟⲕⲏⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10545",
+      "bibliography": "DDGLC",
+      "cu_ID": "3859"
+    },
+    {
+      "id": "CS10546",
+      "bibliography": "DDGLC",
+      "cu_ID": "2055"
+    },
+    {
+      "id": "CS10547",
+      "bibliography": "DDGLC",
+      "cu_ID": "4086"
+    },
+    {
+      "id": "CS10548",
+      "bibliography": "DDGLC",
+      "cu_ID": "10673"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "548",
+    "grl_lemma": "διοίκησις",
+    "grl_meaning": "housekeeping, internal administration",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 432b; Preisigke 1:387"
+  }
+}

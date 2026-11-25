@@ -1,0 +1,46 @@
+{
+  "id": "C6646",
+  "forms": [
+    {
+      "id": "CF15336",
+      "orth": "ϯϩⲁⲙⲏⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7359",
+      "bibliography": "CD 679a; KoptHWb 373; DELC 301b; ChLCS 91b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6644",
+      "label": "ϩⲁⲙⲏⲣ",
+      "pos": "N",
+      "gloss": "arms, embrace"
+    },
+    {
+      "target": "C6645",
+      "label": "ⲣϩⲁⲙⲏⲣ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ]
+}

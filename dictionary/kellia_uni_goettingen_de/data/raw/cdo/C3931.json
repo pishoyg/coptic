@@ -1,0 +1,286 @@
+{
+  "id": "C3931",
+  "forms": [
+    {
+      "id": "CF9799",
+      "orth": "ⲥⲁϣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.05,
+        "rank": 443,
+        "count": 324
+      }
+    },
+    {
+      "orth": "ⲥⲉϣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2787,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲥⲁϣϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 818,
+        "count": 134
+      }
+    },
+    {
+      "orth": "ϣⲁϣϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4025,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲥⲁⳉϥ",
+      "dialect": "A",
+      "id": "65.4"
+    },
+    {
+      "orth": "ⲥⲁⳉϥⲉ",
+      "dialect": "A",
+      "id": "65.5"
+    },
+    {
+      "orth": "ϣⲉϣⲃ",
+      "dialect": "F",
+      "id": "65.6"
+    },
+    {
+      "orth": "ⲥⲁϣϥ",
+      "dialect": "L",
+      "id": "65.7"
+    },
+    {
+      "orth": "ⲥⲁϣϥⲉ",
+      "dialect": "L",
+      "id": "65.8"
+    },
+    {
+      "orth": "ⲥⲁϩϥⲉ",
+      "dialect": "L",
+      "id": "65.9"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "m.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS4461",
+      "bibliography": "CD 378a; CED 171; KoptHWb 208; DELC 203; ChLCS 53a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓϭⲓⲛⲉ ⲛ**ⲥⲁϣϥ** ⲙⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲩϩⲙⲟⲟⲥ ϩⲓϫⲛⲟⲩⲡⲩⲅⲏ ⲙⲙⲟⲟⲩ",
+      "english": "I found seven maidens sitting by a well of water.",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲉⲡⲟⲩϫⲁⲓ ⲙⲡⲁⲕⲣⲁⲧⲟⲥ · ⲙⲛⲡⲟⲩϫⲁⲓ ⲙⲡⲉ**ⲥϣϥⲉ** ⲛⲛⲟⲩⲧⲉ ⲙⲛⲡⲛⲟϭ ⲛⲛⲟⲩⲧⲉ ⲡⲁⲡⲟⲗⲗⲱⲛ · ϯⲛⲁⲧⲣⲉⲡⲕⲟⲥⲙⲟⲥ ⲟⲩⲱϣⲧ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "I swear by the salvation of my strength, and by the salvation of the seventy gods, and by the strength of the great god Apollo, that I will make the whole world worship my gods,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱⲑ ⲉ**ⲥⲁϣϥⲉ** ⲛⲟⲩⲥⲉ",
+      "english": "I am melting for seven women(?).",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        824,
+        24.087
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        167,
+        21.886
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        9,
+        21.326
+      ],
+      [
+        "ⲥⲟⲡ",
+        79,
+        20.94
+      ],
+      [
+        "ϩⲓⲉⲓⲃ",
+        26,
+        18.605
+      ],
+      [
+        "ⲙ",
+        138,
+        17.895
+      ],
+      [
+        "ⲁⲩⲱ",
+        118,
+        17.614
+      ],
+      [
+        "ⲡ",
+        143,
+        17.195
+      ],
+      [
+        "ⲥⲓⲟⲩ",
+        15,
+        16.893
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        21,
+        16.663
+      ],
+      [
+        "ⲕⲱⲃ",
+        11,
+        16.312
+      ],
+      [
+        "ϩⲏⲙⲥ",
+        4,
+        15.817
+      ],
+      [
+        "ⲟⲉⲓⲗⲉ",
+        12,
+        15.617
+      ],
+      [
+        "ⲥⲁϣϥⲉ",
+        12,
+        15.505
+      ],
+      [
+        "ⲥⲁϣϥ",
+        16,
+        15.477
+      ],
+      [
+        "ϣⲟ",
+        15,
+        15.403
+      ],
+      [
+        "ϣⲉ",
+        20,
+        15.367
+      ],
+      [
+        "ϩⲙ",
+        42,
+        14.809
+      ],
+      [
+        "ⲛⲥⲟⲡ'",
+        3,
+        14.572
+      ],
+      [
+        "ⲉ",
+        69,
+        14.361
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁϣϥ_0_node",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲁϣϥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁϣϥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱⲛⲏ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲥⲁϣϥ",
+          "ⲥⲁϣϥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_0_node",
+          "ⲛ_1_post_ⲥⲁϣϥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁϣϥ",
+          "ⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛ",
+          "ⲱⲛⲏ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.77,
+      "rank": 299,
+      "count": 440
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3933",
+      "label": "ϣϥⲉ",
+      "pos": "NUM",
+      "gloss": "seventy"
+    },
+    {
+      "target": "C3932",
+      "label": "ⲥⲁϣϥⲉ",
+      "pos": "NUM",
+      "gloss": "seven"
+    }
+  ],
+  "etym": {
+    "egy_num": "133760",
+    "egy_lemma": "sfḫ",
+    "english": "seven",
+    "german": "sieben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/133760"
+  }
+}

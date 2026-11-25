@@ -1,0 +1,366 @@
+{
+  "id": "C1226",
+  "forms": [
+    {
+      "id": "CF3840",
+      "orth": "ⲕⲙⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5407,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1421",
+      "bibliography": "CD 109b; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲉⲛϣⲁⲁⲣ **ⲕⲙⲟⲙ** ⲛⲧϩⲉ ⲛⲟⲩⲧⲣⲓⲣ ⲁⲩⲥⲟⲕⲟⲩ ⲉⲡⲉⲥⲏⲧ ϩⲓⲟⲩⲥⲟⲡ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛϩⲁⲧⲏⲩ ⲙⲫⲉⲃⲱⲱⲛ",
+      "english": "Our skin is blackened like an oven; they are convulsed, because of the storms of famine.",
+      "source": "Lamentations 5",
+      "urn": "urn:cts:copticLit:ot.lam.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲣⲱⲣⲕ ⲛⲧⲉⲕⲁⲡⲉ ϫⲉⲙⲛϣϭⲟⲙ ⲙⲙⲟⲕ ⲉⲧⲣⲉⲟⲩⲃⲱ ⲛⲟⲩⲱⲧ ⲟⲩⲃⲁϣ ⲏⲛϥ**ⲕⲙⲟⲙ** .",
+      "english": "Neither shall you swear by your head, for you can't make one hair white or black.",
+      "source": "40_Matthew_5",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁϣⲁⲣ ⲇⲉ **ⲕⲙⲟⲙ** ⲉⲙⲁⲧⲉ ⲁⲩⲱ ⲛⲁⲕⲉⲉⲥ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁⲩⲙⲁ",
+      "english": "And my skin has been greatly blackened, and my bones are burned with heat.",
+      "source": "Job 30",
+      "urn": "urn:cts:copticLit:ot.job.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲥⲧⲣⲉⲟⲩⲑⲟⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ϣⲁⲣ",
+        1,
+        15.013
+      ],
+      [
+        "ⲭⲣⲟⲛⲟⲥ",
+        1,
+        13.621
+      ],
+      [
+        "ⲟⲩⲃⲁϣ",
+        1,
+        13.013
+      ],
+      [
+        "ϣⲁⲁⲣ",
+        1,
+        11.369
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        1,
+        11.258
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        9.714
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        9.47
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        8.763
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        1,
+        8.675
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        8.441
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.096
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        7.496
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.401
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲏ",
+        1,
+        6.894
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        5.886
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.142
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ⲁⲡⲁ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲟⲕ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲥⲟⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          "ⲁⲩⲱ_2_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          "ⲁ_2_post_ⲥⲟⲕ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲟⲕ",
+          "ⲩ_2_post_ⲥⲟⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4067,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1227",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black"
+    },
+    {
+      "target": "C1228",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, female; black thing"
+    },
+    {
+      "target": "C1229",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, male; black thing"
+    },
+    {
+      "target": "C1232",
+      "label": "ⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "the black (land), Egypt"
+    },
+    {
+      "target": "C1231",
+      "label": "ⲕⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1236",
+      "label": "ⲕⲙⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1225",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "V",
+      "gloss": "be, become black"
+    },
+    {
+      "target": "C1234",
+      "label": "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian nationality, speech"
+    },
+    {
+      "target": "C1230",
+      "label": "ⲣⲕⲁⲙⲉ",
+      "pos": "V",
+      "gloss": "be black"
+    },
+    {
+      "target": "C1233",
+      "label": "ⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian"
+    },
+    {
+      "target": "C1235",
+      "label": "ⲭⲏⲙⲓ",
+      "pos": "N",
+      "gloss": "brazier, hearth"
+    }
+  ]
+}

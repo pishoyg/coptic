@@ -1,0 +1,75 @@
+{
+  "id": "C4006",
+  "forms": [
+    {
+      "id": "CF9955",
+      "orth": "ⲧⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 20.34,
+        "rank": 69,
+        "count": 3209
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Possessivpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS4550",
+      "bibliography": "CD 390a; CED 176-177; KoptHWb 217; DELC 208; ChLCS 55a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲉⲥⲧⲙⲣϩⲟⲩⲟ ⲛϭⲓⲧⲉⲧⲛⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲛϩⲟⲩⲉ ⲉ**ⲧⲁ**ⲛⲉⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲙⲛⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ · ⲛⲧⲉⲧⲛⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ ·",
+      "english": "These are the (words) which the Lord spake saying, 'Except your righteousness exceed that of the scribes and the Pharisees, ye shall not enter into the kingdom which is in the heavens.'",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲟⲉⲥ ⲡⲉϫⲁϥ ⲙⲡϩⲙϩⲁⲗ ⲡⲉⲧϩⲓϫⲛⲛⲉⲧⲱϩⲥ ϫⲉ**ⲧⲁ**ⲛⲓⲙ ⲧⲉ ⲧⲉⲓϣⲉⲉⲣⲉ ϣⲏⲙ",
+      "english": "And Booz said to his servant who was set over the reapers, Whose is this damsel?",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛϣⲁϫⲉ ⲇⲉ ⲛⲟⲩⲥⲟⲫⲓⲁ ϩⲛⲛⲧⲉⲗⲉⲓⲟⲥ ⲟⲩⲥⲟⲫⲓⲁ ⲇⲉ ⲉⲛ**ⲧⲁ**ⲡⲉⲓⲁⲓⲱⲛ ⲁⲛ ⲧⲉ ⲟⲩⲇⲉ ⲛⲧⲁⲛⲁⲣⲭⲱⲛ ⲁⲛ ⲧⲉ ⲙⲡⲉⲓⲁⲓⲱⲛ ⲛⲁⲓ ⲉⲧⲛⲁⲟⲩⲱⲥϥ .",
+      "english": "We speak wisdom, however, among those who are full grown; yet a wisdom not of this world, nor of the rulers of this world, who are coming to nothing.",
+      "source": "1 Corinthians 2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2354",
+      "type": "cf",
+      "label": "possessive prefix pl."
+    },
+    {
+      "target": "C2785",
+      "type": "cf",
+      "label": "possessive prefix sg. m."
+    }
+  ],
+  "etym": {
+    "egy_num": "550052",
+    "egy_lemma": "tꜣ-n.t",
+    "demo_num": "d7051",
+    "demo_lemma": "ta",
+    "english": "she of",
+    "german": "die des [Possessivpräfix sg.f.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550052",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7051"
+  }
+}

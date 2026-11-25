@@ -1,0 +1,58 @@
+{
+  "id": "C4802",
+  "forms": [
+    {
+      "id": "CF11569",
+      "orth": "ϫⲓⲛⲑⲱϩⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5421",
+      "bibliography": "CD 459a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4800",
+      "label": "ⲣⲉϥⲧⲱϩⲙ",
+      "pos": "N",
+      "gloss": "summoner, inviter"
+    },
+    {
+      "target": "C4801",
+      "label": "ⲣⲉϥⲧⲱϩⲙ",
+      "pos": "N",
+      "gloss": "summoner, inviter"
+    },
+    {
+      "target": "C4798",
+      "label": "ⲧⲱϩⲙ",
+      "pos": "V",
+      "gloss": "knock on the door, summon, invite, chase, urge, pursue"
+    },
+    {
+      "target": "C4799",
+      "label": "ⲧⲱϩⲙ",
+      "pos": "N",
+      "gloss": "calling, convocation"
+    }
+  ]
+}

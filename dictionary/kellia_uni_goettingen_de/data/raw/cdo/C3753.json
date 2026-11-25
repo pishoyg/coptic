@@ -1,0 +1,223 @@
+{
+  "id": "C3753",
+  "forms": [
+    {
+      "id": "CF9426",
+      "orth": "ⲥⲟⲩⲥⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17475,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲥⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5459,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4263",
+      "bibliography": "CD 371a; CED 169; KoptHWb 197, 540; DELC 197; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲧⲙⲛⲧⲣⲙⲙⲁⲟ ⲛⲛⲁⲥⲉⲃⲏⲥ ⲣⲧϩⲉ ⲛⲟⲩϣⲟⲉⲓϣ ⲉⲃⲟⲗ ϩⲛⲟⲩⲕⲟⲧ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩϣϩⲓϭ ⲉⲩⲑⲗⲟ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲥⲛⲁϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲥⲟⲩⲥⲟⲩ** ⲛⲧⲉⲩⲛⲟⲩ",
+      "english": "But the wealth of the ungodly shall be as dust from a wheel, and the multitude of them that oppress thee as flying chaff, and it shall be suddenly as a moment,",
+      "source": "Isaiah 29",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲓⲕⲓ",
+        2,
+        14.729
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        11.509
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        10.763
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.971
+      ],
+      [
+        "ⲙ",
+        2,
+        7.583
+      ]
+    ],
+    "S": [
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        11.492
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲟⲩⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          2
+        ],
+        [
+          "ⲣⲓⲕⲓ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲙ_4_post_ⲣⲓⲕⲓ",
+          2
+        ],
+        [
+          "ⲃⲁⲗ_5_post_ⲙ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲟⲩⲥⲟⲩ_0_node",
+          "ϧⲉⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          "ⲣⲓⲕⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲓⲕⲓ_3_post_ⲟⲩ",
+          "ⲙ_4_post_ⲣⲓⲕⲓ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲣⲓⲕⲓ",
+          "ⲃⲁⲗ_5_post_ⲙ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲩⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲩⲛⲟⲩ_3_post_ⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲟⲩⲥⲟⲩ_0_node",
+          "ⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲩⲥⲟⲩ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲩⲛⲟⲩ_3_post_ⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17087,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4972,
+      "count": 2
+    }
+  },
+  "etym": {
+    "demo_num": "d5586",
+    "demo_lemma": "ssw",
+    "english": "[time]",
+    "german": "Termin, Zeit, Tag",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5586"
+  }
+}

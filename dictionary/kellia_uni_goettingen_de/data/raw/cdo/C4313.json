@@ -1,0 +1,172 @@
+{
+  "id": "C4313",
+  "forms": [
+    {
+      "id": "CF10577",
+      "orth": "ⲣⲉϥⲧⲁⲙⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10056,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4887",
+      "bibliography": "CD 413b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϩⲁⲅⲓⲟⲥ ⲇⲉ ϩⲏⲗⲓⲁⲥ ⲛⲉϥⲟⲩⲱϣⲧ ⲙⲡ**ⲣⲉϥⲧⲁⲙⲓⲟ** ⲙⲁⲩⲁⲁϥ ⲉⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱϣⲧ",
+        1,
+        12.139
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        11.873
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲧⲁⲙⲓⲟ_0_node",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲧⲁⲙⲓⲟ",
+          "ⲡ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_2_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9632,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4316",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4317",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4315",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "act of making, act of creating"
+    },
+    {
+      "target": "C4314",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4311",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "V",
+      "gloss": "make, create"
+    },
+    {
+      "target": "C4312",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "thing made, creation"
+    }
+  ]
+}

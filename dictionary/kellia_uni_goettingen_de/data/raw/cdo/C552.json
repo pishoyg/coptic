@@ -1,0 +1,270 @@
+{
+  "id": "C552",
+  "forms": [
+    {
+      "id": "CF2131",
+      "orth": "ⲃⲏⲧⲥⲡⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5530,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS662",
+      "bibliography": "CD 45a; KoptHWb 28, 496; DELC 32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲁⲙⲓⲟⲥ ⲉⲩⲥϩⲓⲙⲉ ⲁϥⲙⲉϩⲧ**ⲃⲏⲧⲥⲡⲓⲣ** ⲛⲥⲁⲣⲝ ⲉⲡⲉⲥⲙⲁ ·",
+      "english": "and made it into a woman, and that He filled up the place where the rib was in his side with flesh.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲇⲉ ⲛⲟⲩϫⲉ ⲛⲟⲩϩⲓⲛⲏⲃ ⲉϫⲛⲁⲇⲁⲙ ⲁϥⲱⲃϣ ⲁϥϫⲓ ⲛⲟⲩⲉⲓ ⲛⲛⲉϥ**ⲃⲏⲧⲥⲡⲓⲣ** ⲁϥⲙⲁϩⲥ ⲛⲥⲁⲣⲝ ⲉⲡⲉⲥⲙⲁ",
+      "english": "And God brought a trance upon Adam, and he slept, and he took one of his ribs, and filled up the flesh instead thereof.",
+      "source": "Genesis 2",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "▢ ⲡⲁⲗⲓⲛ ⲟⲛ ϯⲥⲱⲧⲙ ϫⲉⲁⲡⲛⲟⲩⲧⲉ ⲉⲓⲛⲉ ⲛⲟⲩϩⲓⲛⲏⲃ ⲉϫⲛⲁⲇⲁⲙ ⲁϥⲱⲃϣ ⲁϥϫⲓ ⲛⲟⲩⲉⲓⲛⲉ ⲛⲛⲉϥ**ⲃⲏⲧⲥⲡⲓⲣ** ·",
+      "english": "and, again, I have heard that God brought a deep sleep upon Adam, and that when he was unconscious, He took one of the ribs from his side,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁϩ",
+        1,
+        12.408
+      ],
+      [
+        "ⲁ",
+        7,
+        11.466
+      ],
+      [
+        "ⲟⲩⲉⲓ",
+        1,
+        11.36
+      ],
+      [
+        "ϥ",
+        7,
+        10.944
+      ],
+      [
+        "ⲕⲱⲧ",
+        1,
+        10.336
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        10.102
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        9.797
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        9.644
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        9.453
+      ],
+      [
+        "ϫⲓⲧ",
+        1,
+        8.783
+      ],
+      [
+        "ⲛ",
+        5,
+        8.775
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        8.731
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.504
+      ],
+      [
+        "ⲧ",
+        2,
+        7.071
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        6.23
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        5.779
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲏⲧⲥⲡⲓⲣ",
+          2
+        ],
+        [
+          "ⲃⲏⲧⲥⲡⲓⲣ_0_node",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲏⲧⲥⲡⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲏⲧⲥⲡⲓⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ϫⲓⲧ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϫⲓⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲏⲧⲥⲡⲓⲣ",
+          "ⲃⲏⲧⲥⲡⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲏⲧⲥⲡⲓⲣ",
+          "ⲃⲏⲧⲥⲡⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲃⲏⲧⲥⲡⲓⲣ_0_node",
+          "ⲛⲧ_1_post_ⲃⲏⲧⲥⲡⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲏⲧⲥⲡⲓⲣ",
+          "ⲁ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲧ",
+          "ϥ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲓⲧ",
+          "ϫⲓⲧ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϫⲓⲧ_2_post_ⲛⲧ",
+          "ⲥ_3_post_ϫⲓⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5095,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3675",
+      "type": "cf",
+      "label": "rib, side"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C551",
+      "label": "ϣⲉⲛⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-fibres"
+    },
+    {
+      "target": "C549",
+      "label": "ⲃⲁⲓⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "branch of (date-)palm"
+    },
+    {
+      "target": "C547",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C548",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C550",
+      "label": "ⲃⲏⲧϩⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "palm frond"
+    }
+  ]
+}

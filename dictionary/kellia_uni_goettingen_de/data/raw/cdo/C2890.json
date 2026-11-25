@@ -1,0 +1,146 @@
+{
+  "id": "C2890",
+  "forms": [
+    {
+      "id": "CF7639",
+      "orth": "ⲡⲉⲣⲓⲡⲉⲣⲟⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8726,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF7640",
+      "orth": "ⲡⲣⲉⲡⲣⲣⲟ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3306",
+      "bibliography": "CD 269b; CED 128; KoptHWb 152, 531; DELC 164; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲣⲟ ⲇⲉ ⲁϥⲕⲧⲟϥ ⲉⲃⲟⲗ ϩⲙⲡⲕⲏⲡⲟⲥ ⲁⲙⲁⲛ ⲇⲉ ⲁϥⲡⲁϩⲧϥ ⲉϫⲙⲡⲉϭⲗⲟϭ ⲁϥⲁⲝⲓⲟⲩ ⲙⲙⲟⲥ ⲡⲉϫⲉⲡⲣⲣⲟ ϫⲉϩⲱⲥⲧⲉ ⲧⲁⲕⲉⲥϩⲓⲙⲉ ⲉⲣⲉⲁⲙⲁⲛ ⲛⲁϫⲓⲧⲥ ⲛϭⲟⲛⲥ ϩⲙⲡⲉ**ⲡⲉⲣⲓⲡⲉⲣⲟⲓ** ⲁⲙⲁⲛ ⲇⲉ ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ⲉⲣⲟϥ ⲁⲡⲉϥϩⲟ ϣⲓⲃⲉ",
+      "english": "And the king returned from the garden; and Aman had fallen upon the bed, intreating the queen. And the king said, Wilt thou even force my wife in my house? And when Aman heard it, he changed countenance.",
+      "source": "Esther 7",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲥⲑⲏⲣ ⲇⲉ ⲁⲥⲙⲟⲩⲧⲉ ⲉⲁⲭⲣⲁⲑⲁⲓⲟⲥ ⲡⲉⲥⲥⲓⲟⲩⲣ ⲡⲉⲧⲁϩⲉⲣⲣⲁⲧϥ ⲙⲡⲉⲥⲃⲟⲗ ⲁⲥϫⲟⲟⲩϥ ⲉⲉⲓⲙⲉ ⲛⲧⲟⲟⲧϥ ⲙⲙⲁⲣⲇⲟⲩⲕⲁⲓⲟⲥ ϩⲛⲧⲉⲡⲗⲁϯⲁ ϩⲁⲧⲉ ⲙ**ⲡⲉⲣⲓⲡⲉⲣⲟⲓ**",
+      "english": "So Esther called for her chamberlain Achrathaeus, who waited upon her; and she sent to learn the truth from Mardochaeus.",
+      "source": "Esther 4",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲣⲇⲟⲭⲁⲓⲟⲥ",
+        1,
+        16.139
+      ],
+      [
+        "ⲁⲙⲁⲛ",
+        1,
+        14.554
+      ],
+      [
+        "ⲡⲗⲁϯⲁ",
+        1,
+        14.35
+      ],
+      [
+        "ϩⲁⲧⲉ",
+        1,
+        13.313
+      ],
+      [
+        "ϭⲟⲛⲥ",
+        1,
+        11.511
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        8.986
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        8.928
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲣⲓⲡⲉⲣⲟⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8278,
+      "count": 2
+    }
+  },
+  "etym": {
+    "demo_num": "d2028",
+    "demo_lemma": "pr-pr-ꜥꜣ",
+    "english": "Royal Palace",
+    "german": "Königspalast",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2028"
+  }
+}

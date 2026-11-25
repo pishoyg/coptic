@@ -1,0 +1,815 @@
+{
+  "id": "C3583",
+  "forms": [
+    {
+      "id": "CF9071",
+      "orth": "ⲥⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.91,
+        "rank": 189,
+        "count": 933
+      }
+    },
+    {
+      "orth": "ⲥⲟⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.01,
+        "rank": 232,
+        "count": 425
+      }
+    },
+    {
+      "orth": "ⲥⲛⲏⲩ",
+      "dialect": "B",
+      "id": null
+    },
+    {
+      "orth": "ⲥⲛⲏⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 5.16,
+        "rank": 214,
+        "count": 814
+      }
+    },
+    {
+      "orth": "ⲥⲛⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.53,
+        "rank": 217,
+        "count": 469
+      }
+    },
+    {
+      "orth": "ⲥⲛⲏⲟⲩ",
+      "dialect": "S",
+      "id": null
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4081",
+      "bibliography": "CD 342b; CED 154; KoptHWb 188; DELC 190; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲟⲩ**ⲥⲟⲛ** ϯⲛⲟⲩⲥⲟⲛ ⲉⲫⲙⲟⲩ ⲟⲩⲟϩ ⲉⲣⲉⲟⲩⲉⲓⲱⲧ ⲉϥⲉϯ ⲛⲟⲩϣⲏⲣⲓ ⲟⲩⲟϩ ⲥⲉⲛⲁⲧⲱⲟⲩⲛⲟⲩ ⲛϫⲉϩⲁⲛϣⲏⲣⲓ ⲉϫⲉⲛϩⲁⲛⲓⲟϯ ⲟⲩⲟϩ ⲥⲉⲛⲁϧⲟⲑⲃⲟⲩ",
+      "english": "Brother will deliver up brother to death, and the father his child. Children will rise up against parents, and cause them to be put to death.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡϥⲥⲟⲩⲱⲛϥ ⲛⲉⲣⲉⲛⲉϥϭⲓϫ ⲅⲁⲣ ⲛⲧϩⲉ ⲛ ⲛⲏⲥⲁⲩ ⲡⲉϥ**ⲥⲟⲛ** ⲉⲧⲣⲏⲧ ⲛⲃⲱ ⲁⲩⲱ ⲁϥⲥⲙⲟⲩ ⲉⲣⲟϥ",
+      "english": "And he knew him not, for his hands were as the hands of his brother Esau, hairy; and he blessed him,",
+      "source": "Genesis 27",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲁⲕⲱⲃⲟⲥ ⲡϣⲏⲣⲓ ⲛⲍⲉⲃⲉⲇⲉⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲡ**ⲥⲟⲛ** ⲛⲓⲁⲕⲱⲃⲟⲥ ⲟⲩⲟϩ ⲁϥϯ ⲛϩⲁⲛⲣⲁⲛ ⲉⲣⲱⲟⲩ ϫⲉⲃⲟⲁⲛⲏⲣⲅⲉⲥ ⲉⲧⲉⲫⲁⲓ ⲡⲉ ϫⲉⲛⲓϣⲏⲣⲓ ⲛⲧⲉϯϧⲁⲣⲁⲃⲁⲓ .",
+      "english": "James the son of Zebedee; John, the brother of James, and he surnamed them Boanerges, which means, Sons of Thunder;",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥⲙⲟⲟϣⲉ ϩⲁⲧⲛⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲧⲅⲁⲗⲓⲗⲁⲓⲁ ⲁϥⲛⲁⲩ ⲉⲥⲓⲙⲱⲛ ⲛⲙⲁⲛⲇⲣⲉⲁⲥ ⲡ**ⲥⲟⲛ** ⲛⲥⲓⲙⲱⲛ ⲉⲩⲛⲟⲩϫϣⲛⲉ ⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲉϩⲉⲛⲟⲩⲱϩⲉ ⲅⲁⲣ ⲛⲉ .",
+      "english": "Passing along by the sea of Galilee, he saw Simon and Andrew the brother of Simon casting a net into the sea, for they were fishermen.",
+      "source": "Mark Chapter 1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛⲁⲩ ϫⲉⲫⲏ ⲉⲧⲉⲛⲓ**ⲥⲛⲏⲟⲩ** ⲟⲩⲱⲙ ⲙⲙⲟϥ .",
+      "english": "He answered, “What the brothers eat.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩ**ⲥⲟⲛ** ϫⲛⲉⲁⲡⲁ ϫⲓϫⲱⲓ",
+      "english": "A brother asked Apa Sisoes,",
+      "source": "Apophthegmata Patrum Sahidic 120: Sisoes 13",
+      "urn": "urn:cts:copticLit:ap.120.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲉϥ",
+        141,
+        19.655
+      ],
+      [
+        "ⲛ",
+        258,
+        18.82
+      ],
+      [
+        "ⲡⲉⲕ",
+        96,
+        18.687
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        28,
+        18.204
+      ],
+      [
+        "ⲙ",
+        173,
+        18.083
+      ],
+      [
+        "ⲉ",
+        176,
+        17.591
+      ],
+      [
+        "ⲛⲉⲙ",
+        82,
+        15.511
+      ],
+      [
+        "ⲁ",
+        108,
+        15.45
+      ],
+      [
+        "ⲡ",
+        91,
+        15.339
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        101,
+        15.251
+      ],
+      [
+        "ⲟⲩ",
+        107,
+        15.174
+      ],
+      [
+        ".",
+        85,
+        15.04
+      ],
+      [
+        "ⲛⲉⲙⲁ",
+        29,
+        14.863
+      ],
+      [
+        "ϥ",
+        104,
+        14.721
+      ],
+      [
+        "ⲡⲁ",
+        39,
+        14.655
+      ],
+      [
+        "ⲛⲉⲥⲭⲱⲗ",
+        3,
+        14.646
+      ],
+      [
+        "ⲡⲓ",
+        74,
+        14.595
+      ],
+      [
+        "ⲍⲉⲃⲉⲇⲉⲟⲥ",
+        8,
+        14.569
+      ],
+      [
+        "ⲥⲟⲛ",
+        22,
+        14.538
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        25,
+        14.489
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        26,
+        23.931
+      ],
+      [
+        "ⲡⲁ",
+        193,
+        20.385
+      ],
+      [
+        "ⲡⲉϥ",
+        201,
+        20.281
+      ],
+      [
+        "ϫⲉ",
+        297,
+        20.021
+      ],
+      [
+        "ⲡⲉⲕ",
+        151,
+        19.815
+      ],
+      [
+        "ⲡ",
+        390,
+        19.551
+      ],
+      [
+        "ⲙ",
+        309,
+        19.397
+      ],
+      [
+        "ⲛ",
+        400,
+        18.972
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        31,
+        18.426
+      ],
+      [
+        "ϥ",
+        265,
+        17.903
+      ],
+      [
+        "ⲛⲁ",
+        198,
+        17.808
+      ],
+      [
+        "ⲁⲩⲱ",
+        191,
+        17.711
+      ],
+      [
+        "ⲥⲱⲛⲉ",
+        34,
+        17.683
+      ],
+      [
+        "ⲉ",
+        234,
+        17.66
+      ],
+      [
+        "ⲟⲩ",
+        209,
+        17.574
+      ],
+      [
+        ".",
+        142,
+        17.238
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        28,
+        17.082
+      ],
+      [
+        "ⲁ",
+        190,
+        16.986
+      ],
+      [
+        "ⲇⲉ",
+        121,
+        16.974
+      ],
+      [
+        "ⲕ",
+        124,
+        16.947
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲛ",
+          105
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          292
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲥⲟⲛ",
+          65
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲥⲟⲛ",
+          28
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲟⲛ",
+          11
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲥⲟⲛ",
+          8
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲟⲛ",
+          7
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲛ",
+          14
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          11
+        ],
+        [
+          "ⲥⲓⲙⲱⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          8
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲱⲛⲓ",
+          3
+        ],
+        [
+          "ⲧⲁ_2_post_ⲥⲱⲛⲓ",
+          3
+        ],
+        [
+          "ⲥⲱⲛⲓ_1_post_ⲥⲟⲛ",
+          5
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲟⲩⲁⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲃ_1_post_ⲥⲟⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲥⲟⲛ",
+          3
+        ],
+        [
+          "ⲓⲉ_1_pre_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲥⲟⲛ_1_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲓⲉ_2_post_ⲥⲱⲛⲓ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲥⲱⲛⲓ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲟⲛ",
+          "ⲡⲉϥ_1_pre_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          4
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲛ_1_post_ⲥⲟⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          "ⲥⲓⲙⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          3
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲱⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲱⲛⲓ",
+          "ⲧⲁ_2_post_ⲥⲱⲛⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲥⲱⲛⲓ",
+          "ⲥⲱⲛⲓ_1_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲓ_1_post_ⲥⲟⲛ",
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          "ⲟⲩⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲃ_1_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲓⲉ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲟⲛ",
+          "ⲟⲩ_2_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲟⲛ",
+          "ⲥⲟⲛ_1_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲟⲛ",
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲓⲉ_2_post_ⲥⲱⲛⲓ",
+          1
+        ],
+        [
+          "ⲓⲉ_2_post_ⲥⲱⲛⲓ",
+          "ϯ_2_post_ⲥⲱⲛⲓ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲥⲱⲛⲓ",
+          "ⲥⲱⲛⲓ_1_post_ⲥⲟⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲛ_0_node",
+          501
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲥⲟⲛ",
+          106
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲛ",
+          85
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲥⲟⲛ",
+          72
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲛ",
+          52
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          30
+        ],
+        [
+          "ⲱ_1_pre_ⲥⲟⲛ",
+          17
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲟⲛ",
+          11
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲟⲛ",
+          14
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          14
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲥⲟⲛ",
+          8
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲛ",
+          7
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲥⲟⲛ",
+          7
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲛ",
+          9
+        ],
+        [
+          "ⲙⲟⲛⲁⲭⲟⲥ_2_post_ⲙ",
+          9
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲥⲟⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲛ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          4
+        ],
+        [
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲛ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲥⲟⲛ",
+          "ⲡⲁ_1_pre_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲟⲛ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲥⲟⲛ",
+          "ⲡ_1_pre_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲙ_1_post_ⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲛ",
+          "ⲙⲟⲛⲁⲭⲟⲥ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲛ",
+          "ⲟⲩ_1_pre_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_0_node",
+          "ⲛ_1_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲛ",
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲛ",
+          "ⲥⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 10.99,
+      "rank": 94,
+      "count": 1744
+    },
+    "B": {
+      "rate": 10.53,
+      "rank": 115,
+      "count": 894
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3586",
+      "label": "ϣⲛⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "nephew"
+    },
+    {
+      "target": "C3590",
+      "label": "ⲙⲛⲧⲙⲁⲓⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherly love"
+    },
+    {
+      "target": "C3589",
+      "label": "ⲙⲛⲧⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherhood, brotherliness"
+    },
+    {
+      "target": "C3584",
+      "label": "ⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brother (monk)"
+    },
+    {
+      "target": "C3585",
+      "label": "ⲥⲟⲛ ⲛⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "uncle"
+    },
+    {
+      "target": "C3587",
+      "label": "ⲥⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "sister"
+    },
+    {
+      "target": "C3588",
+      "label": "ⲥⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "sister (nun)"
+    }
+  ],
+  "etym": {
+    "egy_num": "136230",
+    "egy_lemma": "sn",
+    "demo_num": "d5324",
+    "demo_lemma": "sn",
+    "english": "brother",
+    "german": "Bruder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/136230",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5324"
+  }
+}

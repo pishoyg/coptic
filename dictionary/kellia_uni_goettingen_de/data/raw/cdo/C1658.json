@@ -1,0 +1,127 @@
+{
+  "id": "C1658",
+  "forms": [
+    {
+      "id": "CF4809",
+      "orth": "ⲗⲱⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20372,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4810",
+      "orth": "ⲗⲱⲱⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1923",
+      "bibliography": "CD 142b; ChLCS 21b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲅⲓⲥ",
+        1,
+        14.691
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        9.467
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲱⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲱⲱⲙⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8960,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1657",
+      "label": "ⲁⲧⲗⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "unfading"
+    },
+    {
+      "target": "C1656",
+      "label": "ⲗⲱⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "wither, fade; be filthy"
+    }
+  ]
+}

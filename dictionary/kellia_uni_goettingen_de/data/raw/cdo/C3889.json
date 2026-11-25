@@ -1,0 +1,383 @@
+{
+  "id": "C3889",
+  "forms": [
+    {
+      "id": "CF9709",
+      "orth": "ⲥⲟⲟⲩϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3409,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲥⲁⲩϩⲉ",
+      "dialect": "S",
+      "id": "1517.1"
+    },
+    {
+      "orth": "ⲥⲱⲟⲩϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2154,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲥⲁⲩϩ",
+      "dialect": "A",
+      "id": "1517.3"
+    },
+    {
+      "orth": "ⲥⲁⲩϩⲉ",
+      "dialect": "A",
+      "id": "1517.4"
+    },
+    {
+      "orth": "ⲥⲁⲩϩ",
+      "dialect": "L",
+      "id": "1517.5"
+    },
+    {
+      "orth": "ⲥⲁⲩϩⲉ",
+      "dialect": "L",
+      "id": "1517.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4411",
+      "bibliography": "CD 374a; CED 169; KoptHWb 205; DELC 202; ChLCS 52b"
+    },
+    {
+      "id": "CS4412",
+      "bibliography": "CD 374a; KoptHWb 205; ChLCS 52b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲩⲱϭⲡ ⲛϩⲉⲛⲥⲟⲟⲩϩⲉ ⲛϩⲟϥ ⲁⲩⲱ ⲉⲩⲧⲁⲗⲟ ⲛⲟⲩⲛⲁⲧ ⲛϩⲁⲗⲟⲩⲥ ⲁⲩⲱ ⲡⲉⲧⲛⲁⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩ**ⲥⲟⲟⲩϩⲉ** ⲁϥⲟⲩⲟϭⲡⲟⲩ ⲁϥϩⲉ ⲉⲩⲟⲩⲣⲓⲟⲛ ⲁⲩⲱ ⲟⲩⲥⲓⲧ ⲛϩⲣⲁⲓ ⲛϩⲏⲧϥ",
+      "english": "They have hatched asps' eggs, and weave a spider's web: and he that is going to eat of their eggs, having crushed an addled egg, has found also in it a basilisk.",
+      "source": "Isaiah 59",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:59",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ⲛⲟⲩⲥⲁϣ ⲉϥϩⲟⲟⲩ ⲉϫⲛⲛⲉⲕⲡⲁⲧ ⲁⲩⲱ ⲉϫⲛⲛⲥⲏⲃⲉ ⲛⲣⲁⲧⲕ ⲛⲅⲧⲙⲉϣϭⲙϭⲟⲙ ⲉⲗⲟ ϫⲓⲛⲉⲓⲉⲃⲏ ⲛⲣⲁⲧⲕ ϣⲁⲧ**ⲥⲟⲟⲩϩⲉ** ⲛϫⲱⲕ",
+      "english": "The Lord smite thee with an evil sore, on the knees and the legs, so that thou shalt not be able to be healed from the sole of thy foot to the crown of thy head.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥⲥⲟⲟⲩⲧⲛ ⲛϭⲓⲡⲛⲁϩⲃⲉϥ ⲙⲡⲉϥⲕⲗⲁⲗ ⲉⲟⲩⲛ ⲟⲩⲕⲣⲟϥ ϩⲛⲧⲉϥϭⲓϫ ⲛϥϫⲓⲥⲉ ⲛϭⲓⲡⲉϥϩⲏⲧ ⲛϥⲧⲁⲕⲟ ⲛϩⲁϩ ϩⲛⲟⲩⲕⲣⲟϥ ⲛϥⲁϩⲉⲣⲁⲧϥ ⲉϫⲙⲡⲧⲁⲕⲟ ⲛϩⲁϩ ⲛⲉϥⲟⲩⲱϣϥ ⲙⲙⲟⲟⲩ ϩⲛⲛⲉϥϭⲓϫ ⲛⲧϩⲉ ⲛϩⲛ**ⲥⲟⲟⲩϩⲉ**",
+      "english": "And the yoke of his chain shall prosper: there is craft in his hand; and he shall magnify himself in his heart, and by craft shall destroy many, and he shall stand up for the destruction of many, and shall crush them as eggs in his hand.",
+      "source": "Daniel 8",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲣⲓⲭⲓⲟⲛ",
+        1,
+        17.139
+      ],
+      [
+        "ⲙⲟⲗϩ",
+        2,
+        16.969
+      ],
+      [
+        "ⲥⲙⲁⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲛⲣⲁⲧ",
+        1,
+        14.331
+      ],
+      [
+        "ϩⲁⲗⲱⲙ",
+        1,
+        13.817
+      ],
+      [
+        "ⲟⲩⲟϭⲡ",
+        1,
+        13.331
+      ],
+      [
+        "ⲟⲩⲱϭⲡ",
+        1,
+        12.495
+      ],
+      [
+        "ⲧ",
+        9,
+        12.121
+      ],
+      [
+        "ⲙⲁⲥ",
+        1,
+        12.094
+      ],
+      [
+        "ⲏ",
+        4,
+        12.02
+      ],
+      [
+        "ϩⲟⲣⲁⲥⲓⲥ",
+        1,
+        11.331
+      ],
+      [
+        "ϩⲓϫⲛ",
+        2,
+        10.954
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        10.761
+      ],
+      [
+        "ⲛ",
+        11,
+        10.728
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        10.71
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        10.615
+      ],
+      [
+        "ϩⲟϥ",
+        1,
+        10.116
+      ],
+      [
+        "ϥ",
+        6,
+        8.817
+      ],
+      [
+        "ⲗⲟ",
+        1,
+        8.808
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        8.643
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲟⲩϩⲉ",
+          3
+        ],
+        [
+          "ϫⲱⲕ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲗⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ϩⲟϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϫⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ϩⲉⲛ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          "ⲛ_1_post_ⲥⲟⲟⲩϩⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲟⲩϩⲉ",
+          "ϫⲱⲕ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          "ⲉ_1_post_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲟⲟⲩϩⲉ",
+          "ⲁ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲗⲟ",
+          "ⲩ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲟ",
+          "ⲗⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲟ_2_post_ⲉ",
+          "ϩⲁⲣⲟ_3_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲟⲩϩⲉ",
+          "ϩⲟϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲟⲩ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲧ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲥⲟⲟⲩϩⲉ",
+          "ⲥⲟⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲟⲩϩⲉ",
+          "ϫⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲱ_2_post_ⲛ",
+          "ⲟⲩ_3_post_ϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3044,
+      "count": 11
+    }
+  },
+  "etym": {
+    "egy_num": "130630",
+    "egy_lemma": "swḥ.t",
+    "demo_num": "d5143",
+    "demo_lemma": "swḥ(j.t)",
+    "english": "egg",
+    "german": "Ei",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/130630",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5143"
+  }
+}

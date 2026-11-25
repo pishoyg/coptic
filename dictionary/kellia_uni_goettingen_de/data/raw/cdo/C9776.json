@@ -1,0 +1,160 @@
+{
+  "id": "C9776",
+  "forms": [
+    {
+      "id": "CF25245",
+      "orth": "ⲙⲉⲧⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25246",
+      "orth": "ⲙⲉⲧⲣⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9430,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12675",
+      "bibliography": "DDGLC",
+      "cu_ID": "2349"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣϩⲓⲧⲟⲟⲧⲕ ⲉⲣⲟⲩϩⲱⲃ · ⲉϥⲛⲧⲡⲉ ⲡⲁⲣⲁⲡⲉⲕ**ⲙⲉⲧⲣⲟⲛ** ⁖ⲻ",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲧⲟ ⲉⲣⲟⲛ · ⲛϩⲉⲛϣⲁϫⲉ ⲉⲩⲛⲧⲡⲉ ⲛⲛⲉⲛ**ⲙⲉⲧⲣⲟⲛ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI)",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:49-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "⁖ⲻ",
+        1,
+        13.926
+      ],
+      [
+        "ⲡⲁⲣⲁ",
+        1,
+        11.638
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        9.887
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        9.573
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        8.787
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.102
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        7.868
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲉⲧⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲉⲧⲣⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲉⲧⲣⲟⲛ",
+          "ⲙⲉⲧⲣⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲙⲉⲧⲣⲟⲛ",
+          "ⲙⲉⲧⲣⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9005,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1406",
+    "grl_lemma": "μέτρον",
+    "grl_meaning": "that by which anything is measured, measure, rule",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1123a; Preisigke 2:97"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "C13006",
+  "forms": [
+    {
+      "id": "CF34020",
+      "orth": "ⲉϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1803,
+        "count": 37
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Satzkonverter + Aorist ⲉϣⲁ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18005",
+      "bibliography": "CD 583a; KoptHWb 43"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲥⲕⲣⲕⲣⲧⲏⲩⲧⲛ ⲙⲡⲉⲥⲙⲟⲧ **ⲉϣⲁⲣⲉ**ⲟⲩⲁϭⲟⲗⲧⲉ ⲥⲕⲟⲣⲕⲣ ⲉⲥⲙⲉϩ ⲛⲣⲟⲟⲩⲉ",
+      "english": "Therefore, behold, I roll under you, as a waggon full of straw is rolled.",
+      "source": "Amos 2",
+      "urn": "urn:cts:copticLit:ot.amos.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ⲛϭⲓⲙⲱⲩⲥⲏⲥ ⲙⲡⲉϥϣⲟⲙ ϫⲉ**ⲉϣⲁⲣⲉ**ⲡⲗⲁⲟⲥ ⲉⲓ ⲉⲣⲁⲧⲉϣⲓⲛⲉ ⲛⲥⲁⲡϩⲁⲡ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ",
+      "english": "And Moses says to his father-in-law, Because the people come to me to seek judgment from God.",
+      "source": "Exodus 18",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁⲡϫⲟⲉⲓⲥ ϫⲟⲟⲥ ⲛⲁⲓ ϫⲉⲛⲧϩⲉ **ⲉϣⲁⲣⲉ**ⲡⲙⲟⲩⲓ ⲱϣ ⲉⲃⲟⲗ ⲏ ⲡⲙⲁⲥ ⲙⲙⲟⲩⲓ ⲉϫⲛⲧⲡⲁϩⲥ ⲉⲧϥⲛⲁⲧⲁϩⲟⲥ ⲁⲩⲱ ⲛⲉϥⲱϣ ⲉⲃⲟⲗ ⲉϫⲱⲥ ϣⲁⲛⲧⲉⲛⲧⲟⲟⲩ ⲙⲟⲩϩ ⲉⲃⲟⲗ ϩⲛⲧⲉⲥⲙⲏ ⲙⲡⲉϥϭⲱⲛⲧ ⲁⲩⲱ ⲛⲥⲉϣⲧⲟⲣⲧⲣ ⲉⲧⲃⲉⲡⲁϣⲁⲓ ⲙⲡⲉϥϭⲱⲛⲧ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲥⲁⲃⲁⲱⲑ ⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ⲉⲥⲱⲣ ⲉⲃⲟⲗ ⲉϫⲙⲡⲧⲟⲟⲩ ⲛⲥⲓⲱⲛ ⲉϫⲛⲛⲉⲥⲧⲟⲟⲩ",
+      "english": "For thus said the Lord to me, As a lion would roar, or a lion's whelp over prey which he has taken, and cry over it, until the mountains are filled with his voice, and the animals are awe-struck and tremble at the fierceness of his wrath: so the Lord of hosts shall descend to fight upon the mount Sion, even upon her mountains.",
+      "source": "Isaiah 31",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "lemma",
+  "superEntryReferences": [
+    {
+      "target": "C6025",
+      "label": "ϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "(habit, continuance)"
+    },
+    {
+      "target": "C13004",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "relative converter + aorist"
+    },
+    {
+      "target": "C13005",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "circumstantial converter + aorist"
+    }
+  ]
+}

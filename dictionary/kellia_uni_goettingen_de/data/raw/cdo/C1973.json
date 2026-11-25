@@ -1,0 +1,307 @@
+{
+  "id": "C1973",
+  "forms": [
+    {
+      "id": "CF5602",
+      "orth": "ⲙⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.16,
+        "rank": 134,
+        "count": 1445
+      }
+    },
+    {
+      "orth": "ⲙⲡⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 10.18,
+        "rank": 129,
+        "count": 863
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2291",
+      "bibliography": "CD 178a; KoptHWb 97; ChLCS 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁϥⲥⲱⲟⲩⲧⲉⲛ ⲉⲃⲟⲗ ⲛⲧⲉϥϫⲓϫ ⲁϥⲧⲁϩⲉⲡⲓⲛⲟϩ ⲟⲩⲟϩ **ⲙⲡⲉ**ϥϣϫⲉⲙϫⲟⲙ ⲙⲙⲟⲣϥ .",
+      "english": "He extended his hand and received the rope, but found no anchor point.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲃⲃⲟ ⲅⲁⲣ ⲛϭⲓⲡϩⲁⲓ ⲛⲁⲡⲓⲥⲧⲟⲥ ϩⲛⲧⲉⲥϩⲓⲙⲉ ⲁⲩⲱ ⲁⲥⲧⲃⲃⲟ ⲛϭⲓⲧⲉⲥϩⲓⲙⲉ ⲛⲁⲡⲓⲥⲧⲟⲥ ϩⲙⲡⲥⲟⲛ ⲉϣϫⲉ **ⲙⲡⲉ** ⲉⲓⲉ ⲛⲉⲧⲛϣⲏⲣⲉ ϩⲉⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲉ ⲧⲉⲛⲟⲩ ⲇⲉ ⲥⲉⲟⲩⲁⲁⲃ .",
+      "english": "For the unbelieving husband is sanctified in the wife, and the unbelieving wife is sanctified in the husband. Otherwise your children would be unclean, but now they are holy.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲙⲡⲉ**ϥⲭⲁϩⲗⲓ ⲛⲉⲙⲁϥ ⲉϥⲙⲟϣⲓ ⲛⲥⲱϥ ⲉⲃⲏⲗ ⲉⲡⲉⲧⲣⲟⲥ ⲛⲉⲙⲓⲁⲕⲱⲃⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲡⲥⲟⲛ ⲛⲓⲁⲕⲱⲃⲟⲥ",
+      "english": "He allowed no one to follow him, except Peter, James, and John the brother of James.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲡⲉ**ⲗⲁⲁⲩ ⲙⲙⲟⲧⲛⲉⲥ ⲧⲁϥⲟϥ ·",
+      "english": "but gained no relief thereby.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲟⲩⲟⲛ ⲍ ⲇⲉ ⲛⲥⲟⲛ ϧⲁⲧⲟⲧⲉⲛ ⲡⲉ ⲟⲩⲟϩ ⲡⲓϩⲟⲩⲓⲧ ϭⲓⲥϩⲓⲙⲓ ⲛⲁϥⲙⲟⲩ **ⲙⲡⲉ**ϥⲭⲁϫⲣⲟϫ .",
+      "english": "There were seven brothers. The first took a wife, and dying left no offspring.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ **ⲙⲡⲉ**ⲥⲟⲩⲱϣⲃ ⲛⲁϥ ⲉⲡⲧⲏⲣϥ ⁛—",
+      "english": "but the woman made no answer to him whatsoever.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        1207,
+        24.422
+      ],
+      [
+        "ⲧⲉⲛ",
+        301,
+        21.388
+      ],
+      [
+        "ϩⲗⲓ",
+        136,
+        20.788
+      ],
+      [
+        "ⲕ",
+        209,
+        19.536
+      ],
+      [
+        "ⲥ",
+        230,
+        19.25
+      ],
+      [
+        "ⲟⲩ",
+        335,
+        19.204
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        305,
+        19.124
+      ],
+      [
+        "ⲛ",
+        320,
+        18.842
+      ],
+      [
+        "ϣ",
+        67,
+        18.835
+      ],
+      [
+        "ⲥⲱⲧⲉⲙ",
+        101,
+        18.46
+      ],
+      [
+        "ⲓ",
+        146,
+        17.431
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        33,
+        17.373
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        69,
+        17.371
+      ],
+      [
+        "ⲑⲣ",
+        49,
+        17.333
+      ],
+      [
+        "ϫⲉ",
+        155,
+        17.251
+      ],
+      [
+        ".",
+        167,
+        17.053
+      ],
+      [
+        "ⲉⲧⲉ",
+        93,
+        16.837
+      ],
+      [
+        "ⲭⲁ",
+        55,
+        16.506
+      ],
+      [
+        "ⲉⲣⲟ",
+        82,
+        16.475
+      ],
+      [
+        "ⲉⲙⲓ",
+        56,
+        16.474
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        102,
+        28.932
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        41,
+        24.988
+      ],
+      [
+        "ϥ",
+        1368,
+        24.092
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        356,
+        23.68
+      ],
+      [
+        "ⲧⲛ",
+        312,
+        21.337
+      ],
+      [
+        "ⲛ",
+        845,
+        21.294
+      ],
+      [
+        "ⲉ",
+        637,
+        21.08
+      ],
+      [
+        "ⲕ",
+        325,
+        20.202
+      ],
+      [
+        "ⲡ",
+        510,
+        19.797
+      ],
+      [
+        "ⲉⲣⲟ",
+        231,
+        19.357
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        138,
+        18.912
+      ],
+      [
+        "ⲁⲩⲱ",
+        296,
+        18.693
+      ],
+      [
+        "ϫⲉ",
+        257,
+        18.48
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        86,
+        18.036
+      ],
+      [
+        "ⲟⲩ",
+        281,
+        17.94
+      ],
+      [
+        "ⲣ",
+        103,
+        17.79
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        80,
+        17.696
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        80,
+        17.559
+      ],
+      [
+        "ⲥ",
+        175,
+        16.945
+      ],
+      [
+        "ⲙ",
+        187,
+        16.309
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 20.72,
+      "rank": 58,
+      "count": 3288
+    },
+    "B": {
+      "rate": 19.79,
+      "rank": 63,
+      "count": 1680
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C1972",
+      "label": "ⲙⲡⲉ-",
+      "pos": "A",
+      "gloss": ""
+    }
+  ]
+}

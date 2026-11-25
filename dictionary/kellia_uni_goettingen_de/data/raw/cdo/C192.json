@@ -1,0 +1,167 @@
+{
+  "id": "C192",
+  "forms": [
+    {
+      "id": "CF731",
+      "orth": "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20428,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS215",
+      "bibliography": "CD 15b; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲡⲉⲓⲙⲟⲕⲙⲉⲕ ⲛⲧⲉⲓⲙⲓⲛⲉ · ⲡⲁϩⲉⲛⲣⲱⲙⲉ ⲛⲣⲉϥⲕⲣⲙⲣⲙ ⲛⲉ · ⲛ**ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ** ⲉⲡⲛⲟⲩⲧⲉ ⲛϫⲓⲛϫⲏ · ⲡⲁⲓ ⲉⲧⲉⲛⲁⲛⲟⲩ ⲉⲛⲕⲁ ⲛⲓⲙ ⲛⲧⲁϥⲧⲁⲙⲓⲟⲟⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 311-14",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:60-64",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲕⲣⲙⲣⲙ",
+        1,
+        19.013
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲟⲩⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+          "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ_0_node",
+          "ⲉ_1_post_ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          "ⲛ_4_post_ⲛⲟⲩⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20040,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C191",
+      "label": "ϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "blame, find fault"
+    },
+    {
+      "target": "C189",
+      "label": "ⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "blame, fault"
+    },
+    {
+      "target": "C190",
+      "label": "ⲁⲧⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "blameless"
+    },
+    {
+      "target": "C193",
+      "label": "ⲙⲛⲧⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "fault-finding, criticism"
+    }
+  ]
+}

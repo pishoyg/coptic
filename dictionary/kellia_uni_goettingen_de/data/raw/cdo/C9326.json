@@ -1,0 +1,51 @@
+{
+  "id": "C9326",
+  "forms": [
+    {
+      "id": "CF23442",
+      "orth": "ⲕⲁⲧⲁⲇⲓⲕⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23443",
+      "orth": "ⲕⲁⲇⲁⲇⲓⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23444",
+      "orth": "ⲕⲁⲧⲁⲇⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13020,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23445",
+      "orth": "ⲕⲁⲧⲁⲇⲓⲕⲱⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11699",
+      "bibliography": "DDGLC",
+      "cu_ID": "2701"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3460",
+    "grl_lemma": "κατάδικος",
+    "grl_meaning": "having judgment given against one, found guilty,\n    condemned",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 889b"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "C1750",
+  "forms": [
+    {
+      "id": "CF5067",
+      "orth": "ⲗⲁϩⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5068",
+      "orth": "ⲗⲁϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15065,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2029",
+      "bibliography": "CD 150a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϭⲟⲡ ⲛⲛⲉⲩⲧⲟⲟⲩⲉ ⲉⲧⲟⲧϩ ⲉⲣⲁⲧⲟⲩ ⲙⲛⲛⲉⲩⲕⲉⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲉⲁⲩⲣⲡⲗϭⲉ ⲉⲁϩⲓⲗⲁⲧⲃⲥ ⲉⲣⲟⲟⲩ ϩⲛⲛⲉⲩⲟⲩⲉⲣⲏⲧⲉ ⲁⲩⲱ ⲛⲉⲩϩⲟⲓⲧⲉ ⲉⲧϩⲓⲟⲟⲩ ⲉⲩ**ⲗⲁϩⲙ** ⲁⲩⲱ ⲉⲩⲟ ⲙⲡⲉⲗϭⲉ ⲁⲩⲱ ⲛⲉⲩⲟⲉⲓⲕ ⲉⲛⲧⲁⲩⲧⲁⲙⲓⲟⲟⲩ ⲉⲩϣⲟⲩⲱⲟⲩ ⲁⲩⲱ ⲉⲁⲩⲣϫⲟⲟⲗⲉⲥ",
+      "english": "And our elders and all that inhabit our land when they heard spoke to us, saying, Take to yourselves provision for the way, and go to meet them; and ye shall say to them, We are thy servants, and now make a covenant with us.",
+      "source": "Joshua 9",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14664,
+      "count": 1
+    }
+  }
+}

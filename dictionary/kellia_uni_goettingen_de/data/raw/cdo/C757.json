@@ -1,0 +1,64 @@
+{
+  "id": "C757",
+  "forms": [
+    {
+      "id": "CF2818",
+      "orth": "ⲟⲩⲱϩ ⲛⲉⲩⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS899",
+      "bibliography": "CD 62b; KoptHWb 42; ChLCS 12a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5304",
+      "type": "cf",
+      "label": "put, place, add, be placed, stay, dwell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C760",
+      "label": "ϫⲓ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "take as pledge"
+    },
+    {
+      "target": "C756",
+      "label": "ϯ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "give as pledge"
+    },
+    {
+      "target": "C755",
+      "label": "ⲉⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "pledge, surety"
+    },
+    {
+      "target": "C759",
+      "label": "ⲕⲁⲉⲟⲩⲱ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "curse"
+    },
+    {
+      "target": "C758",
+      "label": "ⲕⲱ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    }
+  ]
+}

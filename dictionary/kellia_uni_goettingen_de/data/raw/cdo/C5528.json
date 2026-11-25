@@ -1,0 +1,478 @@
+{
+  "id": "C5528",
+  "forms": [
+    {
+      "id": "CF13030",
+      "orth": "ⲁⲧⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4239,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6190",
+      "bibliography": "CD 527b; CDC 81a; ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϣⲟⲣⲡ ⲛⲣⲱⲙⲉ ⲁⲇⲁⲙ ϥⲛⲁⲣϣⲡⲏⲣⲉ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲛϥϫⲟⲟⲥ ϫⲉⲛⲁϣ ⲛϩⲉ · ⲁⲛⲉⲓⲙⲏⲏϣⲉ ⲉⲧⲟϣ ⲙⲛⲛⲉⲓϩⲉⲑⲛⲟⲥ ⲛ**ⲁⲧⲏⲡⲉ** ϣⲱⲡⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧ ·",
+      "english": "And Adam, the first man, shall marvel in that day, and shall say, ' How is it possible that all this great multitude, and these countless nations, can have come forth from my body?'",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲛⲧⲉⲕⲕⲁⲕⲓⲁ ⲟϣ ⲁⲛ ϩⲉⲛ**ⲁⲧⲏⲡⲉ** ⲇⲉ ⲛⲉ ⲛⲉⲕⲛⲟⲃⲉ",
+      "english": "Is not thy wickedness abundant, and thy sins innumerable?",
+      "source": "Job 22",
+      "urn": "urn:cts:copticLit:ot.job.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁϩⲉ ⲙⲡⲣⲱⲙⲉ ⲉϥϩⲛ ⲟⲩⲏⲡⲉ ⲛϩⲟⲟⲩ ⲁⲩⲱ ϩⲛ**ⲁⲧⲏⲡⲉ** ⲛⲉ ⲛⲉϩⲟⲟⲩ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "The days of the life of man may be numbered: but the days of Israel are innumerable.",
+      "source": "Sirach 37",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:37",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲣϫ",
+        1,
+        12.331
+      ],
+      [
+        "ⲛⲉ",
+        6,
+        12.261
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        11.267
+      ],
+      [
+        "ⲙⲛⲧⲛⲁ",
+        1,
+        11.104
+      ],
+      [
+        "ⲕⲁⲕⲓⲁ",
+        1,
+        10.373
+      ],
+      [
+        "ⲟϣ",
+        1,
+        10.118
+      ],
+      [
+        "ⲕⲁⲣⲡⲟⲥ",
+        1,
+        9.626
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        8.872
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        2,
+        8.709
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        8.386
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        8.169
+      ],
+      [
+        "ϩⲉⲑⲛⲟⲥ",
+        1,
+        8.143
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        7.971
+      ],
+      [
+        "ⲛ",
+        5,
+        7.967
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.66
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        7.48
+      ],
+      [
+        "ⲙ",
+        3,
+        7.299
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        6.979
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.032
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        5.94
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲏⲡⲉ_0_node",
+          7
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲧⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲟⲧⲃ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲟⲧⲃ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲧⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁ_4_post_ⲁⲁ",
+          2
+        ],
+        [
+          "ϥ_4_post_ⲁⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲧⲏⲡⲉ",
+          "ⲁⲧⲏⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲧⲏⲡⲉ_0_node",
+          "ⲇⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲛⲉⲕ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲏⲡⲉ",
+          "ϩⲉⲛ_1_pre_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲧⲏⲡⲉ_0_node",
+          "ⲛⲧ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲁ_3_post_ϩⲟⲧⲃ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲟⲧⲃ",
+          "ⲥ_3_post_ϩⲟⲧⲃ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲏⲡⲉ",
+          "ⲁⲧⲏⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧⲏⲡⲉ_0_node",
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲙ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲟⲟⲩ",
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲧⲏⲡⲉ_0_node",
+          "ⲅⲁⲣ_1_post_ⲁⲧⲏⲡⲉ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲛⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲛ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲉⲛⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲛ",
+          "ⲁ_4_post_ⲁⲁ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲧⲏⲡⲉ",
+          "ⲛ_1_post_ⲁⲧⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲁⲁ",
+          "ϥ_4_post_ⲁⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3841,
+      "count": 7
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5519",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "V",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5520",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "N",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5521",
+      "label": "ϥⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, calculate"
+    },
+    {
+      "target": "C5524",
+      "label": "ϩⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, cast a lot"
+    },
+    {
+      "target": "C5530",
+      "label": "ϫⲓⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "take number, count"
+    },
+    {
+      "target": "C5526",
+      "label": "ϭⲓⲛⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning, calculation"
+    },
+    {
+      "target": "C5529",
+      "label": "ϯⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "count"
+    },
+    {
+      "target": "C5518",
+      "label": "ϯⲱⲡ",
+      "pos": "V",
+      "gloss": "give account"
+    },
+    {
+      "target": "C5531",
+      "label": "ⲁⲧϫⲓⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "countless"
+    },
+    {
+      "target": "C5515",
+      "label": "ⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncounted, unesteemed"
+    },
+    {
+      "target": "C5527",
+      "label": "ⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "number"
+    },
+    {
+      "target": "C5522",
+      "label": "ⲙⲉⲧϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5516",
+      "label": "ⲙⲛⲧⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncountability"
+    },
+    {
+      "target": "C5533",
+      "label": "ⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5523",
+      "label": "ⲣⲉϥϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5532",
+      "label": "ⲣⲉϥϫⲓⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5525",
+      "label": "ⲣⲉϥⲱⲡ",
+      "pos": "N",
+      "gloss": "counter"
+    },
+    {
+      "target": "C5517",
+      "label": "ⲣⲱⲡ",
+      "pos": "V",
+      "gloss": "make reckoning, esteem"
+    },
+    {
+      "target": "C5513",
+      "label": "ⲱⲡ",
+      "pos": "V",
+      "gloss": "count, esteem"
+    },
+    {
+      "target": "C5514",
+      "label": "ⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C12120",
+      "label": "ⲱⲡ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "be betrothed to"
+    }
+  ]
+}

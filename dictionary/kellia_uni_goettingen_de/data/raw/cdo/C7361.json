@@ -1,0 +1,141 @@
+{
+  "id": "C7361",
+  "forms": [
+    {
+      "id": "CF16781",
+      "orth": "ⲁⲧϫⲣⲟⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18786,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8143",
+      "bibliography": "CD 786b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲧⲁⲛϩⲟⲩⲧⲕ ϩⲓⲟⲩϩⲓⲏ ⲛ**ⲁⲧϫⲣⲟⲡ**",
+      "english": "...",
+      "source": "Sirach 35",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲣⲉϩ",
+        1,
+        11.11
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        10.983
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϫⲣⲟⲡ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18398,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7364",
+      "label": "ϫⲓϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "stumble, be impeded"
+    },
+    {
+      "target": "C7359",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "obstacle, impediment; mishap"
+    },
+    {
+      "target": "C7360",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "impedient"
+    },
+    {
+      "target": "C7357",
+      "label": "ϫⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "stumble, trip; insult, offend"
+    },
+    {
+      "target": "C7358",
+      "label": "ϫⲱⲣⲡ (ⲉ)",
+      "pos": "V",
+      "gloss": "stumble against, touch"
+    },
+    {
+      "target": "C7363",
+      "label": "ϯϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "give scandal, trip up"
+    },
+    {
+      "target": "C7362",
+      "label": "ⲣϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "be a stumbling block, be difficult"
+    }
+  ]
+}

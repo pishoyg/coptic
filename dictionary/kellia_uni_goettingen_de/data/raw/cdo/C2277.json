@@ -1,0 +1,64 @@
+{
+  "id": "C2277",
+  "forms": [
+    {
+      "id": "CF6284",
+      "orth": "ϯ ⲛⲟⲩϭⲓⲙϣⲓϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2625",
+      "bibliography": "CD 207b; KoptHWb 109"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2275",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "take vengeance, be avenged"
+    },
+    {
+      "target": "C2276",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taking vengeance, retribution"
+    },
+    {
+      "target": "C2274",
+      "label": "ⲓⲣⲓ ⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "do vengeance for, requite"
+    },
+    {
+      "target": "C2273",
+      "label": "ⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "vengeance"
+    },
+    {
+      "target": "C2278",
+      "label": "ⲣⲉϥϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taker of vengeance, avenger"
+    }
+  ]
+}

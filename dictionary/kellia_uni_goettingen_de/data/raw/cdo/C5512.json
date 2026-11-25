@@ -1,0 +1,63 @@
+{
+  "id": "C5512",
+  "forms": [
+    {
+      "id": "CF12996",
+      "orth": "ϣⲫⲏⲣ ⲛⲱⲛϧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF12997",
+      "orth": "ϣⲫⲏⲣ ⲛⲱⲛϧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6174",
+      "bibliography": "CD 525b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5764",
+      "type": "cf",
+      "label": "friend, comrade"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5510",
+      "label": "ϭⲓⲛⲱⲛϩ",
+      "pos": "N",
+      "gloss": "way of life, means of life"
+    },
+    {
+      "target": "C5511",
+      "label": "ⲣⲉϥϯⲱⲛϩ",
+      "pos": "N",
+      "gloss": "life giver"
+    },
+    {
+      "target": "C5508",
+      "label": "ⲱⲛϩ",
+      "pos": "V",
+      "gloss": "live"
+    },
+    {
+      "target": "C5509",
+      "label": "ⲱⲛϩ",
+      "pos": "N",
+      "gloss": "life"
+    }
+  ]
+}

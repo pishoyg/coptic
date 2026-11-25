@@ -1,0 +1,538 @@
+{
+  "id": "C6009",
+  "forms": [
+    {
+      "id": "CF14023",
+      "orth": "ⲣϣⲡⲏⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.48,
+        "rank": 549,
+        "count": 234
+      }
+    },
+    {
+      "orth": "ⲉⲣϣⲫⲏⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.43,
+        "rank": 587,
+        "count": 121
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6693",
+      "bibliography": "CD 581b; KoptHWb 323; DELC 268b; ChLCS 80a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲩ**ⲉⲣϣⲫⲏⲣⲓ** ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲕⲁⲗⲱⲥ ⲁϥⲁⲓⲧⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲧⲁϥⲑⲣⲉⲛⲓⲕⲟⲩⲣ ⲥⲱⲧⲉⲙ ⲟⲩⲟϩ ⲛⲓⲁⲧⲥⲁϫⲓ ⲛⲧⲟⲩⲥⲁϫⲓ .",
+      "english": "They were astonished beyond measure, saying, 'He has done all things well. He makes even the deaf hear, and the mute speak!'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲛⲧⲉⲧⲛ**ⲣϣⲡⲏⲣⲉ** ⲛⲙⲙⲁⲓ ⲱ ⲛⲁⲙⲉⲣⲁⲧⲉ ·",
+      "english": "Hearken ye now unto me.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲥⲱⲧⲉⲙ ⲇⲉ ⲉⲛⲁⲓ ⲛϫⲉⲛⲓⲥⲛⲏⲟⲩ ⲛⲧⲟⲧϥ ⲙⲡⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲁⲩ**ⲉⲣϣⲫⲏⲣⲓ** ⲟⲩⲟϩ ⲁⲩϯⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ⲫⲁⲓ ⲉⲧϭⲱⲣⲡ ⲛⲛⲉϥⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲃⲟⲗ ⲛⲛⲏ ⲉⲧⲉⲙⲡϣⲁ ⲙⲙⲱⲟⲩ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲥϧⲏⲟⲩⲧ ϫⲉⲉⲩⲉⲛⲁⲩ ⲛϫⲉⲛⲏ ⲉⲧⲉⲙⲡⲟⲩⲛⲁⲩ ⲟⲩⲟϩ ⲛⲏ ⲉⲧⲥⲱⲧⲉⲙ ⲙⲡⲟⲩⲕⲁϯ .",
+      "english": "When the brethren heard these words of the holy old man, they were filled with admiration and gave glory to God, who has made his mysteries manifest to those who are worthy, for it is written, ‘They that see not shall see, and those that hear shall not understand.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩ**ⲣϣⲡⲏⲣⲉ** ⲉⲙⲁⲧⲉ ·",
+      "english": "and they marvelled exceedingly.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲛⲓⲕⲁⲧⲁⲫⲣⲟⲛⲓⲧⲏⲥ ⲟⲩⲟϩ ϫⲟⲩϣⲧ ⲟⲩⲟϩ **ⲁⲣⲓϣⲫⲏⲣⲓ** ϧⲉⲛϩⲁⲛϣⲫⲏⲣⲓ ⲟⲩⲟϩ ⲛⲧⲉⲧⲉⲛⲧⲁⲕⲟ ϫⲉⲟⲩⲏⲓ ϯⲛⲁⲓⲣⲓ ⲛⲟⲩϩⲱⲃ ϧⲉⲛⲛⲉⲧⲉⲛⲉϩⲟⲟⲩ ⲫⲁⲓ ⲉⲧⲉⲧⲉⲛⲛⲁⲛⲁϩϯ ⲉⲣⲟϥ ⲁⲛ ⲁⲣⲉϣⲁⲛⲟⲩⲁⲓ ⲥⲁϫⲓ ⲙⲙⲟϥ .",
+      "english": "Behold, ye despisers, and look, and wonder marvelously, and vanish: for I work a work in your days, which ye will in no wise believe, though a man declare it to you.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ **ⲣϣⲡⲏⲣⲉ** ·",
+      "english": "The Evangelist is stricken with wonder,",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲙⲁⲧⲉ",
+        49,
+        19.945
+      ],
+      [
+        "ⲁ",
+        160,
+        19.146
+      ],
+      [
+        "ⲛ",
+        206,
+        19.004
+      ],
+      [
+        "ⲩ",
+        127,
+        18.912
+      ],
+      [
+        "ⲁⲩⲱ",
+        98,
+        17.727
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        17.489
+      ],
+      [
+        "ϥ",
+        117,
+        17.269
+      ],
+      [
+        "ⲧⲏⲣ",
+        44,
+        16.378
+      ],
+      [
+        "ⲛϭⲓ",
+        43,
+        16.233
+      ],
+      [
+        "ⲙⲙⲟ",
+        50,
+        16.048
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        36,
+        15.941
+      ],
+      [
+        "ⲙ",
+        70,
+        15.875
+      ],
+      [
+        "ⲇⲉ",
+        41,
+        15.194
+      ],
+      [
+        ".",
+        45,
+        15.169
+      ],
+      [
+        "ⲉ",
+        61,
+        14.745
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        14,
+        14.445
+      ],
+      [
+        "ⲛⲉ",
+        31,
+        14.311
+      ],
+      [
+        "ⲧⲉϥ",
+        21,
+        14.277
+      ],
+      [
+        "ⲓ",
+        34,
+        14.249
+      ],
+      [
+        "ϫⲉ",
+        40,
+        14.248
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲓ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          34
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          15
+        ],
+        [
+          "ⲁ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          16
+        ],
+        [
+          "ⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          19
+        ],
+        [
+          "ϥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ⲛ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ϯⲉⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ_b",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ⲇⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲡⲓⲗⲁⲧⲟⲥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲡ_2_post_ϫⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϫⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲉⲟⲟⲩ_3_post_ⲩ",
+          2
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϩⲙ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϯⲡⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϯⲡⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϯⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲁ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          9
+        ],
+        [
+          "ⲁ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ϥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲥⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣϣⲡⲏⲣⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛ_2_post_ϯⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ_b",
+          "ⲁ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲛ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲛⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲇⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲣϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣϣⲡⲏⲣⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲡⲓⲗⲁⲧⲟⲥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲓⲗⲁⲧⲟⲥ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲙⲡ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_2_post_ϫⲉ",
+          "ⲟⲩ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣϣⲡⲏⲣⲉ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          "ⲉⲟⲟⲩ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲟⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣϣⲡⲏⲣⲉ",
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲡ_1_post_ⲣϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣϣⲡⲏⲣⲉ",
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          "ⲛⲟⲩϩⲙ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣϣⲡⲏⲣⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ϯⲡⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϯⲡⲓ",
+          "ⲁ_2_post_ϯⲡⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϯⲡⲓ",
+          "ϥ_2_post_ϯⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.47,
+      "rank": 485,
+      "count": 233
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6006",
+      "label": "ϣⲡⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "wonder, amazement"
+    },
+    {
+      "target": "C6007",
+      "label": "ϣⲡⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "wonder, amazement"
+    },
+    {
+      "target": "C6008",
+      "label": "ϩⲛⲟⲩϣⲡⲏⲣⲉ",
+      "pos": "ADV",
+      "gloss": "marvellously"
+    }
+  ]
+}

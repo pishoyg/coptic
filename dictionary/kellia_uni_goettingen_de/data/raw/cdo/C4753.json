@@ -1,0 +1,137 @@
+{
+  "id": "C4753",
+  "forms": [
+    {
+      "id": "CF11471",
+      "orth": "ϭⲓⲛⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20458,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocPrep": "ⲉⲣⲁⲧ⸗",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5370",
+      "bibliography": "CD 456b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧϭⲓⲛⲧⲁϩⲟ **ⲉⲣⲁⲧ**ⲟⲩ** ⲛⲛⲉⲧⲛⲛⲟⲩⲧⲉ ϫⲓⲛⲛϣⲟⲣⲡ ⲁⲥϣⲱⲡⲉ ⲉⲩϣⲱϥ ⲛⲛⲉⲧⲛⲯⲩⲭⲏ ⲁⲩⲱ ⲧϭⲓⲛⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛⲛⲉⲧⲛⲉⲓⲇⲱⲗⲟⲛ ϩⲛⲛⲉⲓⲟⲩⲟⲉⲓϣ ⲧⲉⲛⲟⲩ ⲁⲥⲣⲧⲏⲩⲧⲛ ⲛⲧⲁⲗⲁⲓⲡⲱⲣⲟⲥ ⲉⲃⲟⲗ ϫⲉ ⲛⲉⲛⲧⲁⲧⲉⲧⲛⲧⲁϩⲟⲟⲩ ⲉⲣⲁⲧⲟⲩ ⲛⲏⲧⲛ ⲛⲛⲟⲩⲧⲉ ⲁⲩⲟⲩⲱϣϥ ⲏ ⲁⲩⲟⲩⲱϭⲡ ϩⲙⲡⲧⲣⲉⲩⲥⲟⲕⲟⲩ ⲉϫⲙⲡⲉⲩϩⲟ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲕⲁϩ ⲛϭⲓⲛⲉⲭⲣⲓⲥⲧⲓⲁⲛⲟⲥ ⲉⲩⲥⲱⲃⲉ ⲁⲩⲱ ⲉⲩⲛⲟϭⲛⲉϭ ⲛⲧⲉⲧⲛⲙⲛⲧⲁⲧϩⲏⲧ ⲉⲩϫⲓ ⲛϩⲣⲁⲩ ⲉⲩⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲛϩⲉⲛⲟⲩⲉⲗⲗⲉ",
+      "english": "...",
+      "source": "The Lord Thundered GG 19-28 in Amélineau",
+      "urn": "urn:cts:copticLit:shenoute.thundered.amelineau:26-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C5640",
+      "type": "cf",
+      "label": "stand, stay, wait"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4754",
+      "label": "ϭⲓⲛⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "establishment"
+    },
+    {
+      "target": "C4745",
+      "label": "ⲁⲧϣⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "unattainable, incomprehensible"
+    },
+    {
+      "target": "C4744",
+      "label": "ⲁⲧⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "unattainable, incomprehensible"
+    },
+    {
+      "target": "C4747",
+      "label": "ⲙⲉⲧⲁⲧϣⲧⲁϩⲟⲥ",
+      "pos": "N",
+      "gloss": "incomprehensibility"
+    },
+    {
+      "target": "C4746",
+      "label": "ⲙⲛⲧⲁⲧⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "incomprehensibility"
+    },
+    {
+      "target": "C4750",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "tangibility"
+    },
+    {
+      "target": "C4748",
+      "label": "ⲣⲉϥⲧⲁϩⲉ-",
+      "pos": "N",
+      "gloss": "catcher, fisherwoman"
+    },
+    {
+      "target": "C4749",
+      "label": "ⲣⲉϥⲧⲁϩⲉ-",
+      "pos": "N",
+      "gloss": "catcher, fisherman"
+    },
+    {
+      "target": "C4740",
+      "label": "ⲧⲁϩⲟ",
+      "pos": "V",
+      "gloss": "make to stand, set up; attain, be able"
+    },
+    {
+      "target": "C4741",
+      "label": "ⲧⲁϩⲟ",
+      "pos": "N",
+      "gloss": "setting up, laying hold"
+    },
+    {
+      "target": "C4742",
+      "label": "ⲧⲁϩⲟ (ⲉ-)",
+      "pos": "V",
+      "gloss": "assign to, decide for; attain to, befall"
+    },
+    {
+      "target": "C4743",
+      "label": "ⲧⲁϩⲟ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "meet with"
+    },
+    {
+      "target": "C4751",
+      "label": "ⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "set on feet, make to stand, establish"
+    },
+    {
+      "target": "C4752",
+      "label": "ⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "establishment, right order"
+    }
+  ]
+}

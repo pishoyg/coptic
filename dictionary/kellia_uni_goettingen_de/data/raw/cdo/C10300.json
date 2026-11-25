@@ -1,0 +1,393 @@
+{
+  "id": "C10300",
+  "forms": [
+    {
+      "id": "CF27385",
+      "orth": "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27387",
+      "orth": "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3348,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF27386",
+      "orth": "ⲡⲣⲟⲑⲉⲥⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27388",
+      "orth": "ⲡⲣⲟⲑⲩⲥⲙⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13827",
+      "bibliography": "DDGLC",
+      "cu_ID": "4044"
+    },
+    {
+      "id": "CS13828",
+      "bibliography": "DDGLC",
+      "cu_ID": "2350"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϩⲟⲥⲱⲛ ⲉⲕⲉⲓⲣⲉ ϩⲓⲛⲁⲓ · ϣⲁⲣⲉⲧⲉ**ⲡⲣⲟⲑⲉⲥⲙⲓⲁ** ⲙⲡⲉⲕⲁϩⲉ ϫⲱⲕ ⲉⲃⲟⲗ · ⲛⲥⲉϫⲟⲗϩⲕ ⲛⲧϩⲉ ⲛⲟⲩⲉⲗⲗϩⲙϫ ⲛⲥⲉϥⲓⲧϥ ·",
+      "english": "And whilst thou art occupied in doing these things the period of thy life which is appointed unto thee cometh to an end, and thou art rejected, like a sour grape, and they bear thee away.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲉϭⲱ ⲛⲧⲉⲓϩⲉ ⲉⲕⲟ ⲛⲣⲣⲟ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ϣⲁⲛⲧⲉⲧ**ⲡⲣⲟⲑⲉⲥⲙⲓⲁ** · ⲛⲧⲁⲓⲧⲁⲁⲥ ⲙⲡⲕⲟⲥⲙⲟⲥ ϫⲱⲕ ⲉⲃⲟⲗ ·",
+      "english": "Thus thou shalt continue to be king over them until the period for which I have ordained the world [to last] shall be ended.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡϥⲟⲩⲱϣ ⲉϭⲱ ϣⲁⲧⲉ**ⲡⲣⲟⲑⲉⲥⲙⲓⲁ** ⲙⲡⲉϥⲁϩⲉ · ⲁⲗⲗⲁ ⲛⲉϥⲣⲟⲕϩ ⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ⲛϥⲛⲁⲩ ⲉⲡⲉⲧϥⲙⲉ ⲙⲙⲟϥ ·",
+      "english": "He did not wish to wait until the appointed time in his life, but he burned with desire to come forth from this place (or, world), and to see Him Whom he loved.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲕ",
+        5,
+        14.435
+      ],
+      [
+        "ⲧⲉ",
+        8,
+        13.344
+      ],
+      [
+        "ⲁϩⲉ",
+        4,
+        13.187
+      ],
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+        1,
+        11.817
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        2,
+        11.635
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        9.972
+      ],
+      [
+        "ⲙ",
+        6,
+        9.647
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        2,
+        9.469
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        3,
+        9.32
+      ],
+      [
+        "ⲉⲩⲫⲣⲁⲛⲉ",
+        1,
+        9.083
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        9.066
+      ],
+      [
+        "ⲟⲩⲁ",
+        2,
+        8.869
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        2,
+        8.85
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        8.409
+      ],
+      [
+        "ϣⲁ",
+        2,
+        7.886
+      ],
+      [
+        "ϭⲱ",
+        1,
+        7.794
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        7.637
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        1,
+        7.557
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        7.528
+      ],
+      [
+        "ⲥⲟⲛ",
+        1,
+        7.273
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          10
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          5
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲁϩⲉ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲥⲉⲧⲧⲉϣⲧⲏⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_6_post_ⲙⲁⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡⲉϥ_3_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲁϩⲉ",
+          "ⲁϩⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡⲉⲕ_3_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲁϩⲉ",
+          "ⲁϩⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲧ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          "ⲛⲧ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          "ⲓ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲑⲉⲥⲙⲓⲁ_0_node",
+          "ⲁⲩⲱ_4_post_ⲥⲉⲧⲧⲉϣⲧⲏⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲥⲉⲧⲧⲉϣⲧⲏⲛ",
+          "ⲡ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲁ",
+          "ⲕⲉ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲛ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲑⲉⲥⲙⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_3_post_ⲡ",
+          "ⲛ_4_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲟⲛ",
+          "ⲧⲉϥ_6_post_ⲙⲁⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2982,
+      "count": 11
+    }
+  },
+  "etym": {
+    "grl_ID": "1834",
+    "grl_lemma": "προθεσμία",
+    "grl_meaning": "fixed or appointed time, day",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1481a; Preisigke 2:370"
+  }
+}

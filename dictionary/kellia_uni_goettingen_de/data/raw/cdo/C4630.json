@@ -1,0 +1,87 @@
+{
+  "id": "C4630",
+  "forms": [
+    {
+      "id": "CF31827",
+      "orth": "ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2546,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF31826",
+      "orth": "ⲧⲁⲟⲩⲟ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5875,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5230",
+      "bibliography": "CD 443a; ChLCS 62b"
+    },
+    {
+      "id": "CS5231",
+      "bibliography": "CD 443b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4632",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4633",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4631",
+      "label": "ⲁⲧⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "indescribable, inexplicable"
+    },
+    {
+      "target": "C4626",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "V",
+      "gloss": "send; put forth, produce; utter, proclaim, recount, recite, repeat; give the name, say the name, call, name; overthrow"
+    },
+    {
+      "target": "C4627",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4628",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C4629",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "product"
+    }
+  ]
+}

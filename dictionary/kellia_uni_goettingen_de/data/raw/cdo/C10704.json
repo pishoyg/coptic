@@ -1,0 +1,285 @@
+{
+  "id": "C10704",
+  "forms": [
+    {
+      "id": "CF29051",
+      "orth": "ⲧⲁⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29052",
+      "orth": "ⲧⲁⲭⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29053",
+      "orth": "ⲧⲁⲭⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 2009,
+        "count": 30
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14701",
+      "bibliography": "DDGLC",
+      "cu_ID": "3308"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧⲁⲭⲏ**",
+      "english": "Quickly!",
+      "source": "Curse to bring suffering, pain, and disease",
+      "urn": "urn:cts:copticMag:kyprianos.tm99993.kypt483",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲡⲁⲉⲓⲱⲧ ⲧϩⲏⲙⲉ ⲙⲡϫⲟⲉⲓ ⲟⲩⲛⲟϭ ⲧⲉ ⲁⲩⲱ ⲡⲉⲧϣϣⲉ ⲉⲣⲟⲕ ⲡⲉ ⲉⲧⲣⲉⲛⲃⲱⲕ ⲛⲁⲛ **ⲧⲁⲭⲏ** · ⲙⲏⲡⲟⲧⲉ ⲛⲥⲉⲉⲓ ⲉϫⲱⲛ ⲥⲉⲥⲟⲩⲛⲉⲛ ⲛⲥⲉϭⲟⲡⲛ ⲛⲧⲉⲟⲩϣⲓⲡⲉ ϣⲱⲡⲉ ⲛⲁⲛ · ϫⲉⲁⲛⲡⲱⲧ ⲛϫⲓⲟⲩⲉ ·",
+      "english": "and he said unto him, 'My father, the ship's fare is large, and it is meet for thee that we should depart quickly, lest some people meet us, and they recognize us, and they seize us, and we be put to shame. Therefore, let us flee secretly.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲛⲁⲩ ⲟⲛ ϫⲉⲛⲧⲁⲥⲣⲟⲩ ⲙⲡⲓϫⲱⲱⲣⲉ ⲛϯϭⲟⲧ ⲇⲁⲩⲉⲓⲇ ⲛⲥⲁⲃⲏⲗ ϫⲉⲁϥⲙⲉⲧⲁⲛⲟⲉⲓ **ⲧⲁⲭⲏ** · ⲉⲧⲃⲉⲧⲉⲥϩⲓⲙⲉ ⲛⲟⲩⲣⲓⲁⲥ ·",
+      "english": "And thou seest also how Bathsheba persuaded this mighty man David, and how she would have crushed him, had it not been that he repented quickly about the wife of Uriah.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲱⲧ",
+        1,
+        12.187
+      ],
+      [
+        "ⲛⲉⲙⲁ",
+        1,
+        10.093
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        8.057
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲟⲛⲉⲣⲟ",
+        1,
+        15.691
+      ],
+      [
+        "ⲁⲥⲙⲟⲧⲉⲟⲥ",
+        1,
+        15.691
+      ],
+      [
+        "ⲡⲟⲗϭⲧ",
+        1,
+        15.691
+      ],
+      [
+        "ⲉⲧⲱⲟⲩⲛ",
+        1,
+        15.691
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        3,
+        13.088
+      ],
+      [
+        "ⲣⲁⲕⲧⲟⲩ",
+        1,
+        12.691
+      ],
+      [
+        "ⲧⲁⲙⲉⲇⲁⲇ",
+        1,
+        12.521
+      ],
+      [
+        "ϣⲛⲏⲩ",
+        1,
+        12.106
+      ],
+      [
+        "ⲛ",
+        21,
+        12.079
+      ],
+      [
+        "ⲉⲣⲁ",
+        1,
+        11.369
+      ],
+      [
+        "ⲅ",
+        5,
+        11.298
+      ],
+      [
+        "ⲁⲙⲟⲩ",
+        2,
+        11.256
+      ],
+      [
+        "ⲛⲁⲃⲏⲥⲁⲗⲱⲙ",
+        1,
+        10.936
+      ],
+      [
+        "ⲡⲱⲧ",
+        3,
+        10.884
+      ],
+      [
+        "ⲥⲙⲟⲛⲧ",
+        1,
+        10.299
+      ],
+      [
+        "ϫⲉ",
+        8,
+        10.24
+      ],
+      [
+        "ⲥⲟⲇⲟⲙⲁ",
+        1,
+        10.076
+      ],
+      [
+        "ⲁⲛⲓ",
+        1,
+        10.047
+      ],
+      [
+        "ⲃⲱⲕ",
+        4,
+        10.037
+      ],
+      [
+        "ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+        1,
+        10.019
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲁⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲧⲁⲭⲏ",
+          1
+        ],
+        [
+          "ⲉⲑ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙⲁ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲉⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁⲭⲏ_0_node",
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          "ⲛⲏ_1_post_ⲧⲁⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲧⲁⲭⲏ",
+          "ⲉⲑ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲑ_2_post_ⲛⲏ",
+          "ⲛⲉⲙⲁ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙⲁ_2_post_ⲛⲏ",
+          "ϥ_3_post_ⲛⲉⲙⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲭⲏ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.19,
+      "rank": 1771,
+      "count": 30
+    }
+  },
+  "etym": {
+    "grl_ID": "2162",
+    "grl_lemma": "ταχύνω",
+    "grl_meaning": "to make quickly, to be quick, hurry",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1762b"
+  }
+}

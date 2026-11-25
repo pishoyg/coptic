@@ -1,0 +1,330 @@
+{
+  "id": "C4243",
+  "forms": [
+    {
+      "id": "CF10437",
+      "orth": "ⲧⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6216,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲟⲗ",
+      "dialect": "S",
+      "id": "1583.1"
+    },
+    {
+      "orth": "ⲑⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2149,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4811",
+      "bibliography": "CD 408a; CED 185; KoptHWb 229; DELC 213b; ChLCS 57b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲗⲁⲃⲁⲛ ⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡ**ⲧⲁⲗ** ⲛⲧⲙⲛⲧⲙⲛⲧⲣⲉ ⲓⲁⲕⲱⲃ ⲇⲉ ⲁϥⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲧⲁⲗ ⲙⲡⲙⲛⲧⲣⲉ",
+      "english": "And Laban called it, the Heap of Testimony; and Jacob called it, the Witness Heap.",
+      "source": "Genesis 31",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁⲗⲁⲟⲥ ϣⲱⲡⲉ ⲛⲧϩⲉ ⲛϩⲉⲛⲉⲥⲟⲟⲩ ⲉⲩⲥⲟⲣⲙ ⲁⲛⲉⲩϣⲟⲟⲥ ϫⲟⲟⲣⲟⲩ ⲉⲃⲟⲗ ⲁⲩⲡⲗⲁⲛⲁ ⲙⲙⲟⲟⲩ ϩⲓϫⲛⲛⲧⲟⲩⲉⲓⲏ ⲁⲩⲃⲱⲕ ⲉⲃⲟⲗ ϩⲙⲡⲧⲟⲟⲩ ⲉϫⲛϩⲉⲛ**ⲧⲁⲗ** ⲁⲩⲣⲡⲱⲃϣ ⲛⲧⲉⲩϣⲁⲓⲣⲉ ⲛⲛⲕⲟⲧⲕ",
+      "english": "My people have been lost sheep: their shepherds thrust them out, they caused them to wander on the mountains: they went from mountain to hill, they forgot their resting-place.",
+      "source": "Jeremiah 27",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "......ϫⲱⲥⲉ......ϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲁⲣⲉⲛⲥⲟⲡⲥ ⲙⲡϫⲟⲉⲓⲥ . ⲛϥⲕⲁⲣⲓⲍⲉ ⲙⲡ**ⲧⲁⲗ**ϭⲱ ⲛⲧϣⲉⲉⲣⲉ ⲙⲡⲣⲣⲟ .",
+      "english": "...",
+      "source": "Life of Hilaria BN 132.1 ff. 19-20 (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1791:33-43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲏⲥⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ⲥⲓ",
+        1,
+        12.118
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        10.706
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        8.414
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲁⲣⲓⲍⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲛⲧⲙⲛⲧⲣⲉ",
+        1,
+        11.947
+      ],
+      [
+        "ⲓⲁⲕⲱⲃ",
+        1,
+        10.282
+      ],
+      [
+        "ϭⲱ",
+        1,
+        9.669
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        9.537
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        1,
+        9.48
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        8.147
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.84
+      ],
+      [
+        "ⲣ",
+        1,
+        7.828
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.899
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲧⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏ_2_post_ⲥⲓ",
+          1
+        ],
+        [
+          "ⲥⲓ_1_post_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_2_post_ⲥⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲁⲗ",
+          "ⲩ_1_pre_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲗ",
+          "ⲧⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲗ_0_node",
+          "ⲙⲏ_2_post_ⲥⲓ",
+          1
+        ],
+        [
+          "ⲙⲏ_2_post_ⲥⲓ",
+          "ⲥⲓ_1_post_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲥⲓ_1_post_ⲧⲁⲗ",
+          "ⲉϫⲉⲛ_2_post_ⲥⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲗ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲛⲧⲣⲉ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲧⲁⲗ",
+          "ⲧⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲗ_0_node",
+          "ⲛ_1_post_ⲧⲁⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲗ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧⲙⲛⲧⲣⲉ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5777,
+      "count": 3
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 11505,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C4244",
+      "label": "ⲧⲁⲗⲁⲧⲏⲗ",
+      "pos": "N",
+      "gloss": "heap, hillock"
+    }
+  ],
+  "etym": {
+    "egy_num": "176080",
+    "egy_lemma": "ṯnr",
+    "english": "mound; hill",
+    "german": "Hügel; Tell",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/176080"
+  }
+}

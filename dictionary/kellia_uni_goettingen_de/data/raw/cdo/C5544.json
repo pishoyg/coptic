@@ -1,0 +1,242 @@
+{
+  "id": "C5544",
+  "forms": [
+    {
+      "id": "CF31939",
+      "orth": "ⲣⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8379,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31938",
+      "orth": "ⲉⲣⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6207",
+      "bibliography": "CD 529a; CED 229; KoptHWb 294; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϯ ⲙⲡⲉⲩⲟⲩⲟⲓ ⲉⲣⲟϥ ϫⲉϩⲉⲛ**ⲣⲃⲉ** ⲛⲉⲥⲟⲟⲩ ⲧⲛⲛⲁⲕⲟⲧⲟⲩ ⲙⲡⲉⲓⲙⲁ ⲛⲛⲧⲃⲛⲟⲟⲩⲉ ⲁⲩⲱ ϩⲉⲛⲡⲟⲗⲓⲥ ⲛⲛⲉⲛⲁⲡⲟⲥⲕⲉⲩⲏ",
+      "english": "And they came to him, and said, We will build here folds for our cattle, and cities for our possessions;",
+      "source": "Numbers 32",
+      "urn": "urn:cts:copticLit:ot.num.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲁⲃⲣⲁⲛ ⲙⲛⲃⲁⲓⲑⲁⲣⲁⲛ ϩⲉⲛⲡⲟⲗⲓⲥ ⲉⲩϫⲟⲥⲉ ⲁⲩⲱ ϩⲉⲛ**ⲣⲃⲉ** ⲛⲛⲉⲥⲟⲟⲩ",
+      "english": "and Namram, and Baetharan, strong cities, and folds for sheep.",
+      "source": "Numbers 32",
+      "urn": "urn:cts:copticLit:ot.num.coptot:32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲥⲟⲟⲩ",
+        2,
+        13.936
+      ],
+      [
+        "ϫⲟⲥⲉ",
+        1,
+        11.013
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲃⲉ",
+          2
+        ],
+        [
+          "ⲣⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲉ",
+          2
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲃⲉ",
+          "ⲣⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣⲃⲉ_0_node",
+          "ⲛ_1_post_ⲣⲃⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲉ",
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲃⲉ",
+          "ϩⲉⲛ_1_pre_ⲣⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲥⲟⲟⲩ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7935,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5540",
+      "label": "ϧⲉⲛⲟⲩⲱⲣϥ",
+      "pos": "ADV",
+      "gloss": "quietly"
+    },
+    {
+      "target": "C5541",
+      "label": "ⲁⲧⲟⲣⲃ⸗",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5542",
+      "label": "ⲁⲧⲟⲣⲃ⸗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5543",
+      "label": "ⲟⲣⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "constraint"
+    },
+    {
+      "target": "C5539",
+      "label": "ⲱⲣϥ",
+      "pos": "N",
+      "gloss": "seclusion, quietude"
+    },
+    {
+      "target": "C5535",
+      "label": "ⲱⲣⲃ",
+      "pos": "V",
+      "gloss": "be enclosed, be apart, be quiet; restrict, surround"
+    },
+    {
+      "target": "C5537",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "shut in, lock up"
+    },
+    {
+      "target": "C5538",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "surrounding, frame, siege"
+    },
+    {
+      "target": "C5536",
+      "label": "ⲱⲣⲃ ⲉⲡⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "reject"
+    }
+  ],
+  "etym": {
+    "demo_num": "d3466",
+    "demo_lemma": "rb.t",
+    "english": "camp",
+    "german": "Lager",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3466"
+  }
+}

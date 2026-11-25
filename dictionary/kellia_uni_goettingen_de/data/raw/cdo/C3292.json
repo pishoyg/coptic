@@ -1,0 +1,241 @@
+{
+  "id": "C3292",
+  "forms": [
+    {
+      "id": "CF8472",
+      "orth": "ⲣⲁⲧⲥⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9104,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3759",
+      "bibliography": "CD 317a; ChLCS 45b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲧⲉⲥⲃⲱ ⲕⲁⲧⲟⲟⲧⲕ ⲉⲃⲟⲗ ⲛϣⲟⲣⲡ ⲁⲩⲱ ⲙⲡⲣ**ⲣⲁⲧⲥⲉⲓ** ⲙⲏⲡⲟⲧⲉ ⲛⲅϫⲱⲣⲡ",
+      "english": "He raiseth up the soul, and lighteneth the eyes: he giveth health, life, and blessing.",
+      "source": "Sirach 34",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣ**ⲣⲁⲧⲥⲉⲓ** ϩⲛⲟⲩⲙⲏⲏϣⲉ ⲛⲧⲣⲩⲫⲏ ⲁⲩⲱ ⲙⲡⲣⲡⲟⲣϣⲕ ⲉⲃⲟⲗ ⲉϫⲛϩⲛϭⲓⲛⲟⲩⲱⲙ",
+      "english": "Be not unsatiable in any dainty thing, nor too greedy upon meats:",
+      "source": "Sirach 37",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:37",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲣⲡ",
+        1,
+        15.35
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        1,
+        12.24
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        12.036
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        9.887
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        9.442
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲣⲁⲧⲥⲉⲓ",
+          2
+        ],
+        [
+          "ⲣⲁⲧⲥⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲡⲟⲣϣ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲏⲡⲟⲧⲉ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲅ_3_post_ϫⲱⲣⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲣⲁⲧⲥⲉⲓ",
+          "ⲣⲁⲧⲥⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲣⲁⲧⲥⲉⲓ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲣϣ",
+          "ⲙⲡⲣ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲡⲟⲣϣ",
+          "ⲡⲟⲣϣ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲣϣ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          "ⲕ_2_post_ⲡⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲧⲥⲉⲓ",
+          "ⲙⲡⲣ_1_pre_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲣⲁⲧⲥⲉⲓ_0_node",
+          "ⲙⲏⲡⲟⲧⲉ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲏⲡⲟⲧⲉ_1_post_ⲣⲁⲧⲥⲉⲓ",
+          "ⲛ_3_post_ϫⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲱⲣⲡ",
+          "ⲅ_3_post_ϫⲱⲣⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8657,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3290",
+      "label": "ⲁⲧⲥⲉⲓ",
+      "pos": "N",
+      "gloss": "insatiate"
+    },
+    {
+      "target": "C3291",
+      "label": "ⲙⲛⲧⲁⲧⲥⲉⲓ",
+      "pos": "N",
+      "gloss": "unsatedness, greed"
+    },
+    {
+      "target": "C3293",
+      "label": "ⲥⲁⲓ",
+      "pos": "N",
+      "gloss": "repletion, saturation"
+    },
+    {
+      "target": "C3288",
+      "label": "ⲥⲉⲓ",
+      "pos": "V",
+      "gloss": "be filled, satisfied, enjoy"
+    },
+    {
+      "target": "C3289",
+      "label": "ⲥⲉⲓ",
+      "pos": "N",
+      "gloss": "fullness, surfeit"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "C6843",
+  "forms": [
+    {
+      "id": "CF15735",
+      "orth": "ϧⲣⲓϫ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7559",
+      "bibliography": "CD 709a; CED 296; KoptHWb 390"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6841",
+      "label": "ϩⲣⲟϫⲣϫ",
+      "pos": "V",
+      "gloss": "grind (teeth), rub"
+    },
+    {
+      "target": "C6842",
+      "label": "ϩⲣⲟϫⲣϫ",
+      "pos": "N",
+      "gloss": "gnashing (of teeth)"
+    }
+  ],
+  "etym": {
+    "egy_num": "883259",
+    "egy_lemma": "ḫrḏ",
+    "demo_num": "d4584",
+    "demo_lemma": "ḫrḏ",
+    "english": "[teeth grinding]",
+    "german": "Zähneknirschen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/883259",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4584"
+  }
+}

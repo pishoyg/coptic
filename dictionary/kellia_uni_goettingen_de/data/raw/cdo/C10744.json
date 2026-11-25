@@ -1,0 +1,341 @@
+{
+  "id": "C10744",
+  "forms": [
+    {
+      "id": "CF29202",
+      "orth": "ⲧⲓⲙⲱⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29208",
+      "orth": "ⲧⲓⲙⲱⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3162,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF29207",
+      "orth": "ⲧⲓⲙⲱⲣⲓⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF29203",
+      "orth": "ⲇⲓⲙⲱⲣⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29206",
+      "orth": "ⲧⲓⲙⲱⲣⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29204",
+      "orth": "ⲇⲓⲙⲱⲣⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7013,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29205",
+      "orth": "ⲇⲩⲙⲱⲣⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14773",
+      "bibliography": "DDGLC",
+      "cu_ID": "1576"
+    },
+    {
+      "id": "CS14774",
+      "bibliography": "DDGLC",
+      "cu_ID": "8293"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧⲉⲣⲉ**ⲧⲓⲙⲱⲣⲓⲁ** ⲛⲓⲙ ϣⲟⲟⲡ ⲛⲛⲉⲧⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ·",
+      "english": "Those things which every vengence will happen to those that commit them.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ ⲉⲩϩⲟⲣⲓⲍⲉ ⲛϩⲉⲛ**ⲧⲓⲙⲱⲣⲓⲁ** ⲉϫⲱϥ ⲉⲧⲃⲉϩⲉⲛϣⲁϫⲉ ⲛⲁⲣⲅⲟⲛ ⲉⲁϥϫⲟⲟⲩ ·",
+      "english": "To another they assign retribution because of the idle words which he spake.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲅⲁⲣ ⲁϥϣⲣⲡ ϫⲱ ⲉⲣⲟⲕ ⲛⲧ**ⲧⲓⲙⲱⲣⲓⲁ** ⲧⲁⲣⲉⲕⲣⲃⲟⲗ ⲉⲡⲕⲓⲛⲇⲩⲛⲟⲥ ·",
+      "english": "For behold, he (i. e., the Book) spake unto thee aforetime concerning the punishment so that thou mightest make thy escape from the danger.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ϩⲟⲣⲓⲍⲉ",
+        1,
+        16.013
+      ],
+      [
+        "ⲕⲉⲥⲉ",
+        1,
+        14.206
+      ],
+      [
+        "ϣⲁⲣⲁϩⲉ",
+        1,
+        13.843
+      ],
+      [
+        "ⲛ",
+        20,
+        13.19
+      ],
+      [
+        "ϩⲉⲛ",
+        6,
+        12.244
+      ],
+      [
+        "ϩⲣⲱ",
+        1,
+        11.206
+      ],
+      [
+        "ⲛⲓⲙ",
+        4,
+        10.702
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        10.505
+      ],
+      [
+        "ⲧⲁⲣⲉ",
+        1,
+        10.13
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        2,
+        10.068
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        1,
+        9.833
+      ],
+      [
+        "ⲟϣ",
+        1,
+        9.341
+      ],
+      [
+        "ⲟⲩⲧⲉ",
+        1,
+        9.212
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        2,
+        9.206
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.059
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        8.879
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        1,
+        8.828
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        8.713
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        8.432
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          10
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲉ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          "ⲛⲓⲙ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ϩⲉⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲕⲉ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          "ⲉ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲩ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲉ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲧⲉϥ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲱⲣⲓⲁ_0_node",
+          "ⲙ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲓⲙⲱⲣⲓⲁ",
+          "ⲡⲉⲕ_3_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2808,
+      "count": 12
+    }
+  },
+  "etym": {
+    "grl_ID": "2190",
+    "grl_lemma": "τιμωρία",
+    "grl_meaning": "retribution, vengeance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1795a; Preisigke 2:603"
+  }
+}

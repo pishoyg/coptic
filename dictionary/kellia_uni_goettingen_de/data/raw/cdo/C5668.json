@@ -1,0 +1,46 @@
+{
+  "id": "C5668",
+  "forms": [
+    {
+      "id": "CF13312",
+      "orth": "ⲟϭⲃⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6342",
+      "bibliography": "CD 540a; KoptHWb 298; DELC 252b; ChLCS 74a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C303",
+      "type": "cf",
+      "label": "moisture"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5666",
+      "label": "ⲱϭⲃ",
+      "pos": "V",
+      "gloss": "be, become cold/frozen; make cold"
+    },
+    {
+      "target": "C5667",
+      "label": "ⲱϭⲃ",
+      "pos": "N",
+      "gloss": "cold, frost"
+    }
+  ]
+}

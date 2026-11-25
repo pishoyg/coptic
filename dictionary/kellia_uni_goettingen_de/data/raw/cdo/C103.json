@@ -1,0 +1,443 @@
+{
+  "id": "C103",
+  "forms": [
+    {
+      "id": "CF359",
+      "orth": "ⲁⲙⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4626,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF31434",
+      "orth": "ⲁⲙⲣⲏⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31435",
+      "orth": "ⲁⲙⲣⲏⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF360",
+      "orth": "ⲁⲙⲣⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2827,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF361",
+      "orth": "ⲁⲙⲣⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9414,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF362",
+      "orth": "ⲁⲙⲗⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF364",
+      "orth": "ⲁⲙⲣⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7185,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS122",
+      "bibliography": "CD 8b; CED 6; KoptHWb 6, 486; DELC 11; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓ**ⲁⲙⲣⲉ** ⲇⲉ ⲁϥⲁϣϥ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁϥⲃⲱⲗ ⲛϫⲉⲓⲱⲥⲏⲫ",
+      "english": "And he hanged the chief baker, as Joseph, interpreted to them.",
+      "source": "01_Genesis_40",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:40",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲙⲛⲛⲥⲁⲛⲓϣⲁϫⲉ ⲁϥⲣⲛⲟⲃⲉ ⲛϭⲓⲡⲣⲉϥⲟⲩⲱⲧϩ ⲙⲡⲣⲣⲟ ⲛⲕⲏⲙⲉ ⲙⲛⲡ**ⲁⲙⲣⲉ** ⲉⲡⲉⲩϫⲟⲉⲓⲥ ⲡⲣⲣⲟ ⲛⲕⲏⲙⲉ",
+      "english": "And it came to pass after these things, that the chief cupbearer of the king of Egypt and the chief baker trespassed against their lord the king of Egypt.",
+      "source": "Genesis 40",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲣⲁⲱ ⲁϥϫⲱⲛⲧ ⲉⲛⲉϥⲁⲗⲱⲟⲩⲓ ⲟⲩⲟϩ ⲁϥⲭⲁⲛ ϧⲉⲛⲡⲓϣⲧⲉⲕⲟ ϧⲉⲛⲡⲓⲏⲓ ⲙⲡⲓⲁⲣⲭⲓⲙⲁⲅⲓⲣⲟⲥ ⲁⲛⲟⲕ ⲛⲉⲙⲡⲓ**ⲁⲙⲣⲉ**",
+      "english": "Pharao was angry with his servants, and put us in prison in the house of the captain of the guard, both me and the chief baker.",
+      "source": "01_Genesis_41",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲫⲁⲣⲁⲱ ⲁϥⲛⲟⲩϭⲥ ⲉⲛⲉϥϩⲙϩⲁⲗ ⲁϥⲛⲟϫⲛ ⲉⲡⲉϣⲧⲉⲕⲟ ϩⲙⲡⲏⲓ ⲙⲡⲉⲧϩⲓϫⲛ ⲡⲉϣⲧⲉⲕⲟ ⲁⲛⲟⲕ ⲙⲛⲡ**ⲁⲙⲣⲉ**",
+      "english": "Pharao was angry with his servants, and put us in prison in the house of the captain of the guard, both me and the chief baker.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲙⲙⲁϩⲅ ⲛⲉ ⲡⲉϩⲟⲟⲩ ⲙⲙⲓⲥⲓ ⲙⲫⲁⲣⲁⲱ ⲡⲉ ⲟⲩⲟϩ ⲁϥⲓⲣⲓ ⲛⲟⲩⲥⲱ ⲉⲛⲉϥⲁⲗⲱⲟⲩⲓ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϯⲁⲣⲭⲏ ⲛⲧⲉⲡⲓⲣⲉϥⲟⲩⲱⲧϩ ⲛⲉⲙϯⲁⲣⲭⲏ ⲛⲧⲉⲡⲓ**ⲁⲙⲣⲉ** ϧⲉⲛⲧⲙⲏϯ ⲛⲛⲉϥⲁⲗⲱⲟⲩⲓ",
+      "english": "And it came to pass on the third day that it was Pharao's birth-day, and he made a banquet for all his servants, and he remembered the office of the cupbearer and the office of the baker in the midst of his servants.",
+      "source": "01_Genesis_40",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:40",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲁⲁϥ ⲙⲡ**ⲁⲙⲣⲏ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:49-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥⲟⲩⲱⲧϩ",
+        2,
+        16.355
+      ],
+      [
+        "ⲁⲣⲭⲓⲙⲁⲅⲓⲣⲟⲥ",
+        1,
+        14.525
+      ],
+      [
+        "ⲡⲓ",
+        9,
+        12.111
+      ],
+      [
+        "ϩⲁⲗⲁϯ",
+        1,
+        9.853
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        9.692
+      ],
+      [
+        "ϥ",
+        7,
+        9.676
+      ],
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        9.559
+      ],
+      [
+        "ⲛ",
+        6,
+        9.176
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        9.073
+      ],
+      [
+        "ⲁϣ",
+        1,
+        8.68
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        8.542
+      ],
+      [
+        "ⲫⲁⲣⲁⲱ",
+        1,
+        8.536
+      ],
+      [
+        "ⲛⲁⲣⲉ",
+        1,
+        8.15
+      ],
+      [
+        "ⲁ",
+        4,
+        7.82
+      ],
+      [
+        "ⲙⲏϯ",
+        1,
+        7.757
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        7.651
+      ],
+      [
+        "ⲭⲏⲙⲓ",
+        1,
+        7.473
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        6.885
+      ],
+      [
+        "ⲭⲁ",
+        1,
+        6.707
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        6.665
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲣⲉϥⲟⲩⲱⲧϩ",
+        2,
+        17.139
+      ],
+      [
+        "ⲡ",
+        9,
+        11.007
+      ],
+      [
+        "ϣⲧⲉⲕⲟ",
+        1,
+        10.83
+      ],
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        9.797
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.644
+      ],
+      [
+        "ϣⲟ",
+        1,
+        9.464
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        9.067
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        8.817
+      ],
+      [
+        "ⲕⲏⲙⲉ",
+        1,
+        8.615
+      ],
+      [
+        "ⲃⲟⲗ",
+        1,
+        8.535
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        7.72
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        6.986
+      ],
+      [
+        "ⲁ",
+        3,
+        6.799
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        6.689
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.512
+      ],
+      [
+        "ⲧ",
+        2,
+        6.071
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        5.91
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        5.816
+      ],
+      [
+        "ⲛ",
+        3,
+        5.564
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲙⲣⲉ",
+          4
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲙⲣⲉ",
+          5
+        ],
+        [
+          "ⲁⲙⲣⲉ_0_node",
+          8
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲙⲣⲉ",
+          "ⲡⲓ_1_pre_ⲁⲙⲣⲉ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲙⲣⲉ",
+          "ⲁⲙⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲁⲙⲣⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲙⲣⲉ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲣⲉ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲙⲣⲉ",
+          4
+        ],
+        [
+          "ⲁⲙⲣⲉ_0_node",
+          6
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲣⲉ",
+          "ⲡ_1_pre_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲙⲣⲉ",
+          "ⲁⲙⲣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3588,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.11,
+      "rank": 2243,
+      "count": 9
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C105",
+      "label": "ⲁⲙⲣⲉ",
+      "pos": "N",
+      "gloss": "cleansed, winnowed corn(?)"
+    },
+    {
+      "target": "C104",
+      "label": "ⲙⲛⲧⲁⲙⲣⲉ",
+      "pos": "N",
+      "gloss": "art, process of baking"
+    }
+  ],
+  "etym": {
+    "egy_num": "37910",
+    "egy_lemma": "ꜥmr",
+    "demo_num": "d970",
+    "demo_lemma": "ꜥmr",
+    "english": "baker",
+    "german": "Bäcker",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37910",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d970"
+  }
+}

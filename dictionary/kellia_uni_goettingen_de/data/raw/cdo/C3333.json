@@ -1,0 +1,551 @@
+{
+  "id": "C3333",
+  "forms": [
+    {
+      "id": "CF8556",
+      "orth": "ⲣⲥⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3209,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3801",
+      "bibliography": "CD 319a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁϣⲏⲣⲉ ⲥⲱⲧⲙ ⲛⲅ**ⲣⲥⲁⲃⲉ** ⲛⲅϣⲱⲡ ⲉⲣⲟⲕ ⲛⲧⲉⲥⲃⲱ ⲙⲙⲉ",
+      "english": "My son, listen. Make thyself wise, and receive the instruction of truth (?).",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲉⲕϣⲁⲛⲟⲩⲱϣ ⲡⲁϣⲏⲣⲉ ⲕⲛⲁϫⲓⲥⲃⲱ ⲉⲕϣⲁⲛϯⲡⲉⲕϩⲏⲧ ⲕⲛⲁ**ⲣⲥⲁⲃⲉ**",
+      "english": "My son, if thou wilt, thou shalt be taught: and if thou wilt apply thy mind, thou shalt be prudent.",
+      "source": "Sirach 6",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲁⲣⲓⲥⲁⲃⲉ** ⲛⲅⲑⲩⲥⲓⲁⲍⲉ ·",
+      "english": "Be wise, and offer up sacrifice.'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉⲕⲧⲡⲉⲕ",
+        3,
+        20.546
+      ],
+      [
+        "ⲃⲉⲉⲃⲉ",
+        1,
+        13.983
+      ],
+      [
+        "ⲕⲁⲓⲣⲟⲥ",
+        2,
+        13.791
+      ],
+      [
+        "ⲉϩⲟⲩⲉⲣⲟ",
+        1,
+        13.206
+      ],
+      [
+        "ⲥⲱⲃⲉ",
+        2,
+        12.147
+      ],
+      [
+        "ϯⲟⲩⲃⲉ",
+        1,
+        11.884
+      ],
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        2,
+        11.369
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        2,
+        11.18
+      ],
+      [
+        "ⲙⲛⲧⲏ",
+        1,
+        11.118
+      ],
+      [
+        "ⲅ",
+        3,
+        10.187
+      ],
+      [
+        "ⲙⲛⲧⲕⲟⲩⲓ",
+        1,
+        10.161
+      ],
+      [
+        "ϩⲓⲟⲩⲉ",
+        1,
+        9.884
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        9.183
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        2,
+        9.128
+      ],
+      [
+        "ⲕ",
+        4,
+        9.045
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        8.847
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        8.547
+      ],
+      [
+        "ϥ",
+        6,
+        8.469
+      ],
+      [
+        "ⲉⲣⲟ",
+        3,
+        8.432
+      ],
+      [
+        "ϩⲙ",
+        3,
+        8.361
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣⲥⲁⲃⲉ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲥⲁⲃⲉ",
+          2
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          9
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲣⲥⲁⲃⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϣⲱⲡ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ϣⲱⲡ",
+          1
+        ],
+        [
+          "ϣⲱⲡ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲉⲣⲟ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϩⲟⲩⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲕⲟⲩⲓ_2_post_ϩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲩ_1_pre_ⲣⲥⲁⲃⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲉⲉⲃⲉ",
+          "ϣⲁ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_2_post_ⲃⲉⲉⲃⲉ",
+          "ⲩ_2_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲥⲁⲃⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ϩⲓⲧⲛ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲧⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ϥ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲅ_1_pre_ⲣⲥⲁⲃⲉ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          "ⲛ_2_post_ϣⲱⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲱⲡ",
+          "ⲅ_2_post_ϣⲱⲡ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ϣⲱⲡ",
+          "ϣⲱⲡ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          "ⲉϩⲟⲩⲉⲣⲟ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲉⲣⲟ_1_post_ⲣⲥⲁⲃⲉ",
+          "ϥ_2_post_ⲉϩⲟⲩⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲕ_1_pre_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲥⲁⲃⲉ",
+          "ⲣⲥⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲥⲁⲃⲉ_0_node",
+          "ϩⲛ_1_post_ⲣⲥⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲥⲁⲃⲉ",
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          "ⲙⲛⲧⲕⲟⲩⲓ_2_post_ϩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2642,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3326",
+      "label": "ϫⲉⲙⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "outwit (by sophisms or fallacies), falsify"
+    },
+    {
+      "target": "C3334",
+      "label": "ϫⲓⲛⲉⲣⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "becoming wise, instruction"
+    },
+    {
+      "target": "C3323",
+      "label": "ϫⲓⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "get teaching, be taught"
+    },
+    {
+      "target": "C3319",
+      "label": "ϯⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "teach, chastise"
+    },
+    {
+      "target": "C3315",
+      "label": "ⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "without teaching, ignorant"
+    },
+    {
+      "target": "C3325",
+      "label": "ⲙⲁ ⲛϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "learning place, school"
+    },
+    {
+      "target": "C3320",
+      "label": "ⲙⲁ ⲛϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching place, school"
+    },
+    {
+      "target": "C3317",
+      "label": "ⲙⲁⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "loving instruction, docile"
+    },
+    {
+      "target": "C3336",
+      "label": "ⲙⲉⲧⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "craftiness, guile"
+    },
+    {
+      "target": "C3316",
+      "label": "ⲙⲛⲧⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "want of education, stupidity"
+    },
+    {
+      "target": "C3322",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching"
+    },
+    {
+      "target": "C3332",
+      "label": "ⲙⲛⲧⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wisdom"
+    },
+    {
+      "target": "C3338",
+      "label": "ⲙⲛⲧⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "state of pupilage"
+    },
+    {
+      "target": "C3324",
+      "label": "ⲣⲉϥϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "one taught, instructed"
+    },
+    {
+      "target": "C3321",
+      "label": "ⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teacher"
+    },
+    {
+      "target": "C3318",
+      "label": "ⲣⲙⲛⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "instructed, knowledgeable person"
+    },
+    {
+      "target": "C3327",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3330",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3328",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3329",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3331",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C12125",
+      "label": "ⲥⲃⲁ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3313",
+      "label": "ⲥⲃⲟ",
+      "pos": "V",
+      "gloss": "learn; teach"
+    },
+    {
+      "target": "C3337",
+      "label": "ⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "disciple, apprentice"
+    },
+    {
+      "target": "C3314",
+      "label": "ⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "doctrine, teaching"
+    },
+    {
+      "target": "C3335",
+      "label": "ⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "knowing, cunning person"
+    }
+  ]
+}

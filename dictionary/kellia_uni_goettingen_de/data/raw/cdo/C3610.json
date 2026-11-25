@@ -1,0 +1,76 @@
+{
+  "id": "C3610",
+  "forms": [
+    {
+      "id": "CF9125",
+      "orth": "ⲟⲩⲁϩⲙⲥⲱⲛⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4110",
+      "bibliography": "CD 345b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5326",
+      "type": "cf",
+      "label": "repeat, do again"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3612",
+      "label": "ϭⲓⲛⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C3608",
+      "label": "ⲁⲧⲥⲟⲛⲧ⸗",
+      "pos": "N",
+      "gloss": "uncreated"
+    },
+    {
+      "target": "C3611",
+      "label": "ⲟⲩⲁϩⲙⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "first creation"
+    },
+    {
+      "target": "C3609",
+      "label": "ⲣⲉϥⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creator"
+    },
+    {
+      "target": "C3613",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "foundation; model, example"
+    },
+    {
+      "target": "C3606",
+      "label": "ⲥⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "be created; found, create"
+    },
+    {
+      "target": "C3607",
+      "label": "ⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creature, creation; custom"
+    }
+  ]
+}

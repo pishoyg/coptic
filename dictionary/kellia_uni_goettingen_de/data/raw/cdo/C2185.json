@@ -1,0 +1,327 @@
+{
+  "id": "C2185",
+  "forms": [
+    {
+      "id": "CF6084",
+      "orth": "ϯⲙⲉⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4814,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF6085",
+      "orth": "ϯⲡⲙⲉⲉⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6086",
+      "orth": "ϯ ⲙⲡⲙⲉⲉⲩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2527",
+      "bibliography": "CD 200b; KoptHWb 106; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲛⲁϫⲟⲟⲥ ⲛϩⲏⲧⲟⲩ ϫⲉⲁⲛⲅ ⲟⲩⲭⲣⲓⲥϯⲁⲛⲟⲥ · ⲉⲩⲉ**ϯⲙⲉⲉⲩⲉ** ⲙⲙⲟϥ ⲛϥⲙⲟⲩ ϩⲛⲧⲥⲏϥⲉ ·",
+      "english": "And any one among these who shall say, 'I am a Christian,' shall be remembered, and he shall die by the sword.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣϥϫⲉⲛⲁⲓ ⲡⲉϫⲁϥ ϫⲉ**ϯⲙⲉⲉⲩⲉ** ϫⲉⲟⲩⲛⲙⲟⲟⲩ ϩⲛⲛⲟⲣⲅⲁⲛⲟⲛ ⲛⲧⲁⲕⲣⲡⲱⲃϣ ⲙⲙⲟⲛ ⲉⲓⲥ ⲟⲩⲟⲛ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "And when he had spoken these words he said unto me, 'I think there is water in the water-vessels, in one of them which we have forgotten.'",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ϭⲉ ⲉⲁⲓⲟⲩⲁϣϥ ⲙⲏⲧⲓ ⲁⲓⲭⲣⲱ ϩⲛⲟⲩⲁⲥⲁⲓ ⲏⲛⲉ**ϯⲙⲉⲉⲩⲉ** ⲉⲣⲟⲟⲩ ⲙⲏ ⲉⲉⲓⲙⲉⲉⲩⲉ ⲉⲣⲟⲟⲩ ⲕⲁⲧⲁⲥⲁⲣⲝ ϫⲉⲕⲁⲁⲥ ⲉϥⲉϣⲱⲡⲉ ⲛⲧⲟⲟⲧⲛϭⲓⲡⲥⲉ ⲛⲥⲉⲁⲩⲱ ⲡⲙⲙⲟⲛ ⲛⲙⲙⲟⲛ .",
+      "english": "When I therefore was thus determined, did I show fickleness? Or the things that I purpose, do I purpose according to the flesh, that with me there should be the 'Yes, yes' and the 'No, no?'",
+      "source": "47_2 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲣⲓⲥϯⲁⲛⲟⲥ",
+        2,
+        17.691
+      ],
+      [
+        "ⲁⲥⲁⲓ",
+        1,
+        14.954
+      ],
+      [
+        "ⲥⲩⲛⲏⲑⲓⲁ",
+        1,
+        13.276
+      ],
+      [
+        "ϥ",
+        10,
+        12.165
+      ],
+      [
+        "ⲉⲩⲉ",
+        2,
+        11.701
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.746
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.898
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        8.782
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        8.753
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        8.607
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        7.887
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.659
+      ],
+      [
+        "ⲏ",
+        1,
+        7.157
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.824
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.588
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.423
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.162
+      ],
+      [
+        ".",
+        1,
+        4.235
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.157
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϯⲙⲉⲉⲩⲉ_0_node",
+          2
+        ],
+        [
+          "ϫⲉ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          "ϥ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          "ϯⲙⲉⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ϯⲙⲉⲉⲩⲉ",
+          "ϯⲙⲉⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲉⲉⲩⲉ_0_node",
+          "ϫⲉ_1_post_ϯⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ϯⲙⲉⲉⲩⲉ",
+          "ⲟⲩⲛ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_2_post_ϫⲉ",
+          "ⲙⲟⲟⲩ_3_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲟⲩⲛ",
+          "ϩⲛ_3_post_ⲟⲩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4397,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2189",
+      "label": "ϣⲉⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "pos": "N",
+      "gloss": "remembrance"
+    },
+    {
+      "target": "C2190",
+      "label": "ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "pos": "N",
+      "gloss": "remembrance"
+    },
+    {
+      "target": "C2178",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think"
+    },
+    {
+      "target": "C2181",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2179",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉϩⲟⲩⲛ ⲉ-)",
+      "pos": "V",
+      "gloss": "think, design against"
+    },
+    {
+      "target": "C2180",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "think upon, consider"
+    },
+    {
+      "target": "C2182",
+      "label": "ⲙⲉⲉⲩⲉ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2183",
+      "label": "ⲙⲛⲧⲁⲧⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "absence of thought"
+    },
+    {
+      "target": "C2184",
+      "label": "ⲣⲉϥⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "one who thinks"
+    },
+    {
+      "target": "C2186",
+      "label": "ⲣⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think, esteem"
+    },
+    {
+      "target": "C2187",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "have mind of, remember"
+    },
+    {
+      "target": "C2188",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "remembrance, commemoration"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "C11274",
+  "forms": [
+    {
+      "id": "CF1645",
+      "orth": "ⲃⲁⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18400,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1646",
+      "orth": "ⲃⲁⲕ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3446,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF1647",
+      "orth": "ⲃⲁⲕ-",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS443",
+      "bibliography": "CD 31a; CED 22; KoptHWB 22; DELC 27"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲇⲉ ⲉⲛⲟⲩⲙⲟⲕⲙⲉⲕ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲙⲉⲧⲟⲩⲣⲟ ⲛⲓⲃⲉⲛ ⲁⲥϣⲁⲛⲫⲱϣ ⲉϩⲣⲁⲥ ⲙⲙⲁⲩⲁⲧⲥ ϣⲁⲥϣⲱϥ ⲟⲩⲟϩ **ⲃⲁⲕ**ⲓ ⲛⲓⲃⲉⲛ ⲓⲉ ⲏⲓ ⲛⲓⲃⲉⲛ ⲁⲩϣⲁⲛⲫⲱϣ ⲉϩⲣⲁⲩ ⲙⲙⲁⲩⲧⲟⲩ ⲙⲡⲁⲩϣⲟϩⲓ ⲉⲣⲁⲧⲟⲩ .",
+      "english": "Knowing their thoughts, Jesus said to them, 'Every kingdom divided against itself is brought to desolation, and every city or house divided against itself will not stand.",
+      "source": "01_Matthew_12",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛϥⲟⲧⲟⲩ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲉⲧⲁⲛⲁⲓⲥ ⲛⲥⲏⲱⲛ ⲡⲟⲩⲣⲟ ⲛⲉⲥⲉⲃⲱⲛ ⲁⲛϥⲉⲧ **ⲃⲁⲕ**ⲓ ⲛⲓⲃⲉⲛ ⲉⲃⲟⲗ ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ ⲛⲉⲙⲛⲟⲩϩⲓⲟⲙⲓ ⲛⲉⲙⲛⲟⲩⲁⲗⲱⲟⲩⲓ",
+      "english": "We utterly destroyed them as we dealt with Seon the king of Esebon, so we utterly destroyed every city in order, and the women and the children,",
+      "source": "05_Deuteronomium_03",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ϩⲏⲡⲡⲉ ⲁⲛⲟⲕ ϯⲛⲁⲟⲩⲱⲣⲡ ϩⲁⲣⲱⲧⲉⲛ ⲛϩⲁⲛⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲉⲙϩⲁⲛⲥⲁⲃⲉⲩ ⲛⲥⲁϧ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉϧⲱⲧⲉⲃ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉⲓϣⲓ ⲉⲣⲉⲧⲉⲛⲉⲣⲙⲁⲥⲧⲓⲅⲅⲟⲓⲛ ⲙⲙⲱⲟⲩ ϧⲉⲛⲛⲉⲧⲉⲛⲥⲩⲛⲁⲅⲱⲅⲏ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉϭ ⲟϫⲓ ⲛⲥⲱⲟⲩ ⲓⲥϫⲉⲛ **ⲃⲁⲕ**ⲓ ⲉⲃⲁⲕⲓ .",
+      "english": "Therefore, behold, I send to you prophets, wise men, and scribes. Some of them you will kill and crucify; and some of them you will scourge in your synagogues, and persecute from city to city;",
+      "source": "01_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C396",
+      "label": "ⲃⲁⲕϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "tanner"
+    },
+    {
+      "target": "C395",
+      "label": "ⲃⲱⲕⲉ",
+      "pos": "V",
+      "gloss": "tan"
+    }
+  ]
+}

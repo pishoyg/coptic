@@ -1,0 +1,87 @@
+{
+  "id": "C5541",
+  "forms": [
+    {
+      "id": "CF13056",
+      "orth": "ⲁⲧⲟⲣⲃ⸗",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6204",
+      "bibliography": "CD 529a; KoptHWb 294; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5540",
+      "label": "ϧⲉⲛⲟⲩⲱⲣϥ",
+      "pos": "ADV",
+      "gloss": "quietly"
+    },
+    {
+      "target": "C5542",
+      "label": "ⲁⲧⲟⲣⲃ⸗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5543",
+      "label": "ⲟⲣⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "constraint"
+    },
+    {
+      "target": "C5544",
+      "label": "ⲣⲃⲉ",
+      "pos": "N",
+      "gloss": "enclosure, pen (for animals)"
+    },
+    {
+      "target": "C5539",
+      "label": "ⲱⲣϥ",
+      "pos": "N",
+      "gloss": "seclusion, quietude"
+    },
+    {
+      "target": "C5535",
+      "label": "ⲱⲣⲃ",
+      "pos": "V",
+      "gloss": "be enclosed, be apart, be quiet; restrict, surround"
+    },
+    {
+      "target": "C5537",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "shut in, lock up"
+    },
+    {
+      "target": "C5538",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "surrounding, frame, siege"
+    },
+    {
+      "target": "C5536",
+      "label": "ⲱⲣⲃ ⲉⲡⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "reject"
+    }
+  ]
+}

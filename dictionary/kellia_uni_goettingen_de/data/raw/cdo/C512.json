@@ -1,0 +1,143 @@
+{
+  "id": "C512",
+  "forms": [
+    {
+      "id": "CF2026",
+      "orth": "ⲃⲉⲣⲃⲓⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12213,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS620",
+      "bibliography": "CD 42b; CED 26; KoptHWb 26, 495; DELC 30"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲏⲡⲡⲉ ⲁⲛⲟⲕ ⲉⲓⲉⲧⲟⲩⲛⲉⲥ ϩⲁⲛⲥⲩⲛⲁⲅⲱⲅⲏ ⲛⲧⲉϩⲁⲛⲉⲑⲛⲟⲥ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲃⲁⲃⲩⲗⲱⲛ ⲉⲃⲟⲗϧⲉⲛ ⲡⲕⲁϩⲓ ⲙⲡⲉⲙϩⲓⲧ ⲟⲩⲟϩ ⲉⲩⲉϯ ⲟⲩⲃⲏⲥ ⲉⲩⲉⲧⲁⲕⲟ ⲉⲃⲟⲗ ⲙⲙⲁⲩ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲃⲉⲣⲃⲓⲣ** ⲛⲧⲉⲟⲩⲕⲁⲧϩⲏⲧ ⲛⲣⲉϥϯ ⲙⲡⲁϥⲧⲁⲥⲑⲟ ⲉϥϣⲟⲩⲓⲧ .",
+      "english": "For, behold, I stir up against Babylon the gatherings of nations out of the land of the north; and they shall set themselves in array against her: thence shall she be taken, as the dart of an expert warrior shall not return empty.",
+      "source": "24_Ieremias_27",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲧϩⲏⲧ",
+        1,
+        15.303
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲉⲣⲃⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲉⲣⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧϩⲏⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲕⲁⲧϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲉⲣⲃⲓⲣ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲉⲣⲃⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲉⲣⲃⲓⲣ",
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          "ⲕⲁⲧϩⲏⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲁⲧϩⲏⲧ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ⲕⲁⲧϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲕⲁⲧϩⲏⲧ",
+          "ⲣⲉϥϯ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11647,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "55720",
+    "egy_lemma": "bnbn",
+    "demo_num": "d1729",
+    "demo_lemma": "bnbn",
+    "english": "Benben (sacred stone); obelisk",
+    "german": "Benben (heiliger Stein); Obelisk",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/55720",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1729"
+  }
+}

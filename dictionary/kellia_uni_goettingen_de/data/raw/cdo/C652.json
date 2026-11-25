@@ -1,0 +1,347 @@
+{
+  "id": "C652",
+  "forms": [
+    {
+      "id": "CF2456",
+      "orth": "ⲁⲗⲟⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.7,
+        "rank": 900,
+        "count": 59
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS788",
+      "bibliography": "CD 55a; CED 34; DELC 41; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲛⲛⲁⲥⲱ ⲉⲃⲟⲗ ϧⲉⲛⲡⲟⲩⲧⲁϩ ⲛⲧⲉⲧⲁⲓⲃⲱ ⲛ**ⲁⲗⲟⲗⲓ** ϣⲁⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲧⲏ ϩⲟⲧⲁⲛ ⲁⲓϣⲁⲛⲥⲟϥ ⲙⲃⲉⲣⲓ ϧⲉⲛϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "Most certainly I tell you, I will no more drink of the fruit of the vine, until that day when I drink it anew in the Kingdom of God.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ϯⲃⲱ ⲛⲕⲉⲛⲧⲉ ⲥⲛⲁϯⲟⲩⲧⲁϩ ⲁⲛ ⲟⲩⲟϩ ⲛⲛⲉⲟⲩⲧⲁϩ ϣⲱⲡⲓ ϧⲉⲛϯⲃⲱ ⲛ**ⲁⲗⲟⲗⲓ** ⲉϥⲉϫⲉⲙⲉⲑⲛⲟⲩϫ ⲛϫⲉⲡϩⲱⲃ ⲛϯⲃⲱ ⲛϫⲱⲓⲧ ⲟⲩⲟϩ ⲛⲓⲙⲉϣϣⲟϯ ⲛⲛⲟⲩⲉⲣϧⲣⲉ ⲁⲩⲙⲟⲩⲛⲕ ⲛϫⲉⲛⲓⲉⲥⲱⲟⲩ ϫⲉⲙⲙⲟⲛϧⲣⲉ ⲛⲧⲱⲟⲩ ⲟⲩⲟϩ ⲙⲙⲟⲛⲉϩⲉ ϣⲟⲡ ϧⲉⲛⲡⲓⲟⲩⲛϩϥ ⲛⲧⲉⲡⲟⲩⲭⲱ ⲉⲃⲟⲗ .",
+      "english": "For though the fig-tree shall bear no fruit, and there shall be no produce on the vines; the labour of the olive shall fail, and the fields shall produce no food: the sheep have failed from the pasture, and there are no oxen at the cribs;",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲡⲉ ϯⲃⲱ ⲛ**ⲁⲗⲟⲗⲓ** ⲛⲧⲁⲫⲙⲏⲓ ⲟⲩⲟϩ ⲡⲁⲓⲱⲧ ⲡⲉ ⲡⲓⲟⲩⲱⲓ .",
+      "english": "'I am the true vine, and my Father is the farmer.",
+      "source": "04_John_15",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲗⲓ_0_node",
+          58
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲗⲟⲗⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲗⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          3
+        ],
+        [
+          "ϩⲏⲛⲗⲱⲕ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲟⲩⲁⲗϣⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲗϣⲱⲟⲩ_3_post_ϩⲏⲛⲗⲱⲕ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲉⲣⲙⲁⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲙⲁⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲙⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲥⲟⲇⲟⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲭⲗⲟⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲥⲙⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲟⲗⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲗⲟⲗⲓ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲗⲟⲗⲓ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          2
+        ],
+        [
+          "ⲁⲗⲟⲗⲓ_0_node",
+          "ⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          "ϩⲏⲛⲗⲱⲕ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲛⲗⲱⲕ_2_post_ⲛ",
+          "ⲛⲉⲙ_4_post_ⲟⲩⲁⲗϣⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲟⲩⲁⲗϣⲱⲟⲩ",
+          "ⲟⲩⲁⲗϣⲱⲟⲩ_3_post_ϩⲏⲛⲗⲱⲕ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲗⲓ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲉⲣⲙⲁⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲉⲣⲙⲁⲛ",
+          "ⲉⲣⲙⲁⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲙⲁⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          "ⲟⲩⲇⲉ_2_post_ⲙⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲙⲙⲟⲛ",
+          "ⲙⲙⲟⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          "ⲥⲟⲇⲟⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲗⲓ",
+          "ⲭⲗⲟⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲗⲟⲏ_2_post_ⲛ",
+          "ⲟⲩⲟϩ_2_post_ⲥⲙⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲗⲓ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲗⲟⲗⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲗⲟⲗⲓ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲗⲟⲗⲓ",
+          "ⲁⲗⲟⲗⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.79,
+      "rank": 738,
+      "count": 67
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C661",
+      "label": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine-branch, vine-wood"
+    },
+    {
+      "target": "C657",
+      "label": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C655",
+      "label": "ⲉⲗⲉⲗϩⲙϫ",
+      "pos": "N",
+      "gloss": "unripe, sour grape"
+    },
+    {
+      "target": "C660",
+      "label": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "bruise (dark coloured like grapes, \"grape of Egypt\")"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    },
+    {
+      "target": "C658",
+      "label": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    }
+  ]
+}

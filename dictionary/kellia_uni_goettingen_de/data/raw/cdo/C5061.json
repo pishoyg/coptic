@@ -1,0 +1,97 @@
+{
+  "id": "C5061",
+  "forms": [
+    {
+      "id": "CF12087",
+      "orth": "ⲟⲩⲛ ⲟⲩⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2929,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5692",
+      "bibliography": "CD 482ab; KoptHWb 273; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉ**ⲟⲩⲛⲟⲩⲟⲛ**",
+      "english": "And Apa Hierax said, 'There are some;",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲟⲩⲟ ⲇⲉ ϥⲛⲁⲁⲡⲟⲣⲉⲓ · ϫⲉⲛⲁϣ ⲛϩⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲥⲱⲛⲧ ⲛⲟⲩⲱⲧ ⲛⲧⲉⲧⲙⲛⲧⲣⲱⲙⲉ ⲧⲏⲣⲥ · ⲟⲩⲛⲟⲩⲟⲛ ϩⲛⲧⲙⲛⲧⲣⲣⲟ **ⲟⲩⲛⲟⲩⲟⲛ** ϩⲛⲁⲙⲛⲧⲉ ·",
+      "english": "But he will be far more puzzled to know why it is that of this one creation of all mankind, one is in the kingdom [of heaven] and the other in Amente.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲟⲩϩⲗⲗⲟ ϫⲉ**ⲟⲩⲛⲟⲩⲟⲛ** ⲉϥⲉⲓⲣⲉ ⲛϩⲁϩ ⲙⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲁⲩⲱ ϣⲁⲣⲉⲡⲡⲟⲛⲏⲣⲟⲥ",
+      "english": "An elder said, “There was a certain person who did many good things, and the evil one",
+      "source": "Apophthegmata Patrum Sahidic 095: Anonymous Nau 282",
+      "urn": "urn:cts:copticLit:ap.95.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2696,
+      "count": 13
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5058",
+      "label": "ⲕⲉⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone else, something else"
+    },
+    {
+      "target": "C5059",
+      "label": "ⲗⲁⲁⲩ ⲛⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "any one"
+    },
+    {
+      "target": "C5062",
+      "label": "ⲙⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is not one, any"
+    },
+    {
+      "target": "C5057",
+      "label": "ⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone, something"
+    },
+    {
+      "target": "C5060",
+      "label": "ⲟⲩⲟⲛ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "every one"
+    },
+    {
+      "target": "C5063",
+      "label": "ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ",
+      "pos": "EXIST",
+      "gloss": "one after another"
+    }
+  ]
+}

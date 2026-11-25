@@ -1,0 +1,240 @@
+{
+  "id": "C5799",
+  "forms": [
+    {
+      "id": "CF13595",
+      "orth": "ϣⲱⲕϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10802,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉⲕϩ-",
+      "dialect": "S",
+      "id": "1883.1"
+    },
+    {
+      "orth": "ϣⲟⲕϩ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3040,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϣⲟⲕϩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3040,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϣⲁⲕϩ†",
+      "dialect": "S",
+      "id": "1883.4"
+    },
+    {
+      "orth": "ϣⲱⲕϩ",
+      "dialect": "B",
+      "id": "1883.5"
+    },
+    {
+      "orth": "ϣⲟⲕϩ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5409,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲁⲕϩ†",
+      "dialect": "A",
+      "id": "1883.7"
+    },
+    {
+      "orth": "ϣⲁⲭϩ†",
+      "dialect": "A",
+      "id": "1883.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6478",
+      "bibliography": "CD 557a-b; CED 239; KoptHWb 309; DELC 259b; ChLCS 76b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲡⲏⲧ ⲉϩⲟⲩⲛ ⲏ ⲉϩⲣⲁⲓ ⲉⲡⲕⲁⲕⲉ ⲛϩⲱⲃ ⲛⲓⲙ ⲉϥϩⲟⲟⲩ ⲛⲧϩⲉ ⲛⲛⲛⲩⲕⲧⲉⲣⲓⲥ ⲉⲧⲡⲏⲧ ⲉϩⲟⲩⲛ ⲏ ⲉϩⲣⲁⲓ ⲉϩⲉⲛⲙⲁ ⲛⲕⲁⲕⲉ ⲉⲩ**ϣⲟⲕϩ** ⲉⲙⲁⲧⲉ ·",
+      "english": "They rush in and up to darkness in every iniquity, like the bats which rush in and up to a very deep place of darkness.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲧⲉⲱⲥ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲉⲓϩⲛⲟⲩϫⲗⲁϩⲧⲥ · ⲉⲥ**ϣⲟⲕϩ** ϣⲁⲡⲁⲙⲟⲧⲉ · ⲁⲩⲱ ⲉⲓⲙⲉϩ ⲛⲉⲧⲡⲱ ⲉⲓϫⲓϣⲕⲁⲕ ⲉⲃⲟⲗ ϫⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲛⲁⲓ ⲻ",
+      "english": "He said to him, 'I am hitherto a man in a deep pit dug up to my neck. Being full of burden I cry out, 'God have mercy on me.'",
+      "source": "Apophthegmata Patrum Sahidic 107: Paul the Great 2",
+      "urn": "urn:cts:copticLit:ap.107.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲟ ⲛⲁⲧⲕⲁⲣⲡⲟⲥ ⲉϥⲣⲏⲧ ⲛⲥⲟⲩⲣⲉ ⲉⲣⲉⲡϣⲏⲛ **ϣⲟⲕϩ** ⲉⲡⲉⲥⲏⲧ ⲉⲙⲁⲧⲉ ·",
+      "english": "now it had no fruit upon it, and thorns grew all over it, and the trunk went down into the ground a very long way.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲥ",
+        1,
+        7.683
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        1,
+        7.394
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        7.335
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        6.923
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        2.047
+      ],
+      [
+        "ⲁ",
+        1,
+        1.344
+      ],
+      [
+        "ⲉ",
+        1,
+        1.117
+      ],
+      [
+        "ⲡ",
+        1,
+        0.797
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲱⲕϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_2_pre_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲃⲁⲗ_1_pre_ϣⲱⲕϩ",
+          1
+        ],
+        [
+          "ϣⲱⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲱⲕϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲱⲕϩ",
+          "ⲛⲉⲥ_2_pre_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_2_pre_ⲃⲁⲗ",
+          "ⲃⲁⲗ_1_pre_ϣⲱⲕϩ",
+          1
+        ],
+        [
+          "ⲃⲁⲗ_1_pre_ϣⲱⲕϩ",
+          "ϣⲱⲕϩ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲕϩ_0_node",
+          "ⲉ_1_post_ϣⲱⲕϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲱⲕϩ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2697,
+      "count": 13
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4902,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C5782",
+      "type": "cf",
+      "label": "dig"
+    },
+    {
+      "target": "C5780",
+      "type": "cf",
+      "label": "dig, be deep"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5801",
+      "label": "ϣⲓⲕϩ",
+      "pos": "N",
+      "gloss": "depth"
+    },
+    {
+      "target": "C5800",
+      "label": "ϣⲱⲕϩ",
+      "pos": "V",
+      "gloss": "smite, beat"
+    }
+  ]
+}

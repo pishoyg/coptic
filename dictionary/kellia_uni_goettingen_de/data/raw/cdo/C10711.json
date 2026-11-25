@@ -1,0 +1,150 @@
+{
+  "id": "C10711",
+  "forms": [
+    {
+      "id": "CF29081",
+      "orth": "ⲧⲉⲗⲓⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF29082",
+      "orth": "ⲧⲉⲗⲓⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13239,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14719",
+      "bibliography": "DDGLC",
+      "cu_ID": "9501"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩ**ⲧⲉⲗⲓⲟⲩ** ⲇⲉ ⲛⲧⲉⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϯ ⲛⲧⲉⲓⲣⲏⲛⲏ ⲙⲡⲗⲁⲟⲥ · ⲛⲥⲉⲁⲛⲁⲭⲱⲣⲉⲓ ⲉⲛⲉⲩⲏⲓ :—",
+      "english": "And when the service was ended, and the Archbishop had pronounced the benediction of peace over the people, and they were about to depart to their homes,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        16.35
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        10.835
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲧⲉⲗⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲉⲗⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲓⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲧⲉⲗⲓⲟⲩ",
+          "ⲟⲩ_1_pre_ⲧⲉⲗⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲉⲗⲓⲟⲩ",
+          "ⲧⲉⲗⲓⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲓⲟⲩ_0_node",
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲓⲟⲩ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12829,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2167",
+    "grl_lemma": "τελειόω",
+    "grl_meaning": "to make perfect, complete",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1770a; Preisigke 2:587"
+  }
+}

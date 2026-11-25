@@ -1,0 +1,113 @@
+{
+  "id": "C4628",
+  "forms": [
+    {
+      "id": "CF31823",
+      "orth": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2076,
+        "count": 28
+      }
+    },
+    {
+      "id": "CF31822",
+      "orth": "ⲧⲁⲟⲩⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5613,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5228",
+      "bibliography": "CD 443a; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩϣⲁⲛϫⲟⲥ ϣⲁⲥⲉⲓ ⲉϩⲣⲁⲓ ⲛⲥϫⲓⲥⲉ ⲉⲛⲟⲩⲟⲟⲧⲉ ⲧⲏⲣⲟⲩ **ⲛⲥⲧⲁⲩⲟ **ⲉⲃⲟⲗ**** ⲛϩⲉⲛⲛⲟϭ ⲛⲕⲗⲁⲇⲟⲥ ϩⲱⲥⲧⲉ ⲛⲥⲉϣⲟⲩⲱϩ ϩⲁⲧⲉⲥϩⲁⲉⲓⲃⲉⲥ ⲛϭⲓⲛϩⲁⲗⲁⲧⲉ ⲛⲧⲡⲉ",
+      "english": "yet when it is sown, grows up, and becomes greater than all the herbs, and puts out great branches, so that the birds of the sky can lodge under its shadow.'",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲛⲟⲩⲃⲛⲛⲉ · ⲇⲉ ⲣⲏⲧ · ⲛⲥⲁⲃⲟⲗ ⲙⲡⲉϥⲙⲁ ⲛϣⲱⲡⲉ · **ⲉⲥⲧⲁⲩⲟ **ⲉⲃⲟⲗ**** ⲙⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲗⲟⲟⲩ ⲟⲩⲗⲟⲟⲩ ⲕⲁⲧⲁⲉⲃⲟⲧ ·",
+      "english": "Now there was a palm-tree growing outside that cell, and it produced twelve clusters, one cluster each month,",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲣⲉϯⲃⲛⲛⲉ · **ⲧⲁⲩⲟ **ⲉⲃⲟⲗ**** · ⲛⲁⲓ ⲙⲙⲛⲧⲥⲛⲟⲟⲩⲥ · ⲛⲗⲟⲟⲩ ⲧⲉⲣⲟⲙⲡⲉ ⲕⲁⲧⲁⲉⲃⲟⲧ ⲇⲉ ⲛⲉⲓⲟⲩⲱⲙ ⲛⲟⲩⲗⲟⲟⲩ ·",
+      "english": "And the palm-tree yielded unto me each year twelve bunches of dates, and I ate one bunch every month.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3976,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4632",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4633",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4631",
+      "label": "ⲁⲧⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "indescribable, inexplicable"
+    },
+    {
+      "target": "C4626",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "V",
+      "gloss": "send; put forth, produce; utter, proclaim, recount, recite, repeat; give the name, say the name, call, name; overthrow"
+    },
+    {
+      "target": "C4627",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4630",
+      "label": "ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "send down, cast down; send up, bring up"
+    },
+    {
+      "target": "C4629",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "product"
+    }
+  ]
+}

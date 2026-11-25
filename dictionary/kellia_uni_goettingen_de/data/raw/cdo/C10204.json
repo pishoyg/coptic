@@ -1,0 +1,366 @@
+{
+  "id": "C10204",
+  "forms": [
+    {
+      "id": "CF26946",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26949",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.19,
+        "rank": 637,
+        "count": 188
+      }
+    },
+    {
+      "id": "CF26947",
+      "orth": "ⲡⲗⲉⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26948",
+      "orth": "ⲡⲗⲏⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26950",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26951",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.13,
+        "rank": 679,
+        "count": 96
+      }
+    },
+    {
+      "id": "CF26952",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF26953",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26954",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26955",
+      "orth": "ⲡⲗⲏⲛ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS13570",
+      "bibliography": "DDGLC",
+      "cu_ID": "428"
+    },
+    {
+      "id": "CS13571",
+      "bibliography": "DDGLC",
+      "cu_ID": "4503"
+    },
+    {
+      "id": "CS13572",
+      "bibliography": "DDGLC",
+      "cu_ID": "4225"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲡⲗⲏⲛ** ⲁⲛⲉϥⲓⲟϯ ϭⲓⲧϥ ⲛϫⲟⲛⲥ ⲡⲁⲣⲁⲡⲉϥⲟⲩⲱϣ ⲁⲩⲱⲡ ⲛⲥⲁϯⲥϩⲓⲙⲓ ⲛⲁϥ ⲟⲩⲟϩ ⲁⲩⲟϩⲓ ϣⲁⲡⲓⲥⲏⲟⲩ ⲙⲡⲓϩⲟⲡ .",
+      "english": "However, against his wishes, his parents took him and betrothed him to a young woman: they waited until the day of marriage came.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲗⲏⲛ** ϯϩⲁⲡ ⲉⲣⲟⲕ ⲙⲙⲏⲛⲉ ·",
+      "english": "thou shall pass judgement on thyself daily.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲗⲏⲛ** ⲟⲩⲁϥ ϧⲉⲛⲟⲩⲥⲛⲟϥ ⲙⲯⲩⲭⲏ ⲛⲛⲉⲧⲉⲛⲟⲩⲟⲙϥ",
+      "english": "But flesh with blood of life ye shall not eat.",
+      "source": "01_Genesis_09",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲗⲏⲛ** ϯⲥⲟⲟⲩⲛ ϩⲱⲱⲧ ϫⲉϣϣⲉ ⲉⲣⲁϣⲉ ϩⲙⲡϫⲟⲉⲓⲥ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲉⲙⲓ ⲛϫⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉⲉⲧⲁϥⲥϧⲉ ⲙⲡⲉϥⲟⲩⲱϣ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲛⲁⲛⲉⲑⲁⲓ ⲙⲁϣⲉ ⲛⲁⲕ ⲥϧⲁⲓ ⲙⲡⲁⲓⲣⲏϯ **ⲡⲗⲏⲛ** ⲁⲣⲓⲉⲙⲓ ⲛⲁⲕ ϫⲉⲭⲛⲁⲥⲉⲛⲡⲁⲓⲙⲁ ⲉⲃⲟⲗ ⲁⲛ .",
+      "english": "When the patriarch knew that he had written of his own free will, he said to him, “It is well, go, write thus, but know that you will not leave this place.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲗⲏⲛ** ⲕⲟⲧⲕ ⲛⲅⲣⲓⲙⲉ ϩⲁⲛⲉⲕⲛⲟⲃⲉ ·",
+      "english": "Moreover, turn thyself, weep for thy sins.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        56,
+        15.428
+      ],
+      [
+        "ϯ",
+        33,
+        14.839
+      ],
+      [
+        ".",
+        35,
+        14.419
+      ],
+      [
+        "ⲛⲁ",
+        31,
+        14.232
+      ],
+      [
+        "ⲫⲓⲏ",
+        2,
+        14.11
+      ],
+      [
+        "ⲉⲧⲉ",
+        18,
+        13.859
+      ],
+      [
+        "ⲟⲩ",
+        36,
+        13.679
+      ],
+      [
+        "ⲁ",
+        33,
+        13.538
+      ],
+      [
+        "ϭⲁϩⲥⲓ",
+        2,
+        13.525
+      ],
+      [
+        "ⲧⲉⲛ",
+        18,
+        13.326
+      ],
+      [
+        "ⲛⲓⲁⲧⲕ",
+        1,
+        13.11
+      ],
+      [
+        "ⲙⲁⲣⲓϩⲟϯ",
+        1,
+        13.11
+      ],
+      [
+        "ⲡⲁⲛⲟϩⲉⲙ",
+        1,
+        13.11
+      ],
+      [
+        "ϧⲁⲉⲩ:",
+        1,
+        13.11
+      ],
+      [
+        "ⲓⲟϯ",
+        7,
+        13.077
+      ],
+      [
+        "ⲥ",
+        20,
+        12.809
+      ],
+      [
+        "ϧⲉⲛ",
+        23,
+        12.749
+      ],
+      [
+        "ⲉⲓⲟⲩⲗ",
+        2,
+        12.651
+      ],
+      [
+        "ⲁⲣⲓⲉⲙⲓ",
+        3,
+        12.28
+      ],
+      [
+        "ⲛⲓϣⲁⲙⲓⲥⲓ",
+        1,
+        12.11
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        21.465
+      ],
+      [
+        "ⲡ",
+        115,
+        17.479
+      ],
+      [
+        "ⲛⲁ",
+        85,
+        17.362
+      ],
+      [
+        "ϯ",
+        41,
+        16.034
+      ],
+      [
+        "ⲛ",
+        93,
+        15.872
+      ],
+      [
+        "ⲓ",
+        41,
+        15.369
+      ],
+      [
+        "ⲁ",
+        62,
+        15.352
+      ],
+      [
+        "ⲙ",
+        54,
+        15.061
+      ],
+      [
+        "ⲉ",
+        59,
+        14.911
+      ],
+      [
+        "ϥ",
+        55,
+        14.311
+      ],
+      [
+        "ⲥ",
+        35,
+        14.108
+      ],
+      [
+        "ⲣϣⲡⲏⲏⲣⲉ",
+        2,
+        14.043
+      ],
+      [
+        "ⲕ",
+        30,
+        14.019
+      ],
+      [
+        "ⲉⲧ",
+        34,
+        13.946
+      ],
+      [
+        ".",
+        29,
+        13.577
+      ],
+      [
+        "ⲟⲩ",
+        38,
+        13.409
+      ],
+      [
+        "ⲣⲉϥⲧⲱϩ",
+        2,
+        13.236
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        10,
+        13.092
+      ],
+      [
+        "ⲁϥⲉϥ",
+        1,
+        13.043
+      ],
+      [
+        "ⲥⲱⲧⲙⲉ",
+        1,
+        13.043
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲗⲏⲛ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.18,
+      "rank": 561,
+      "count": 188
+    },
+    "B": {
+      "rate": 1.13,
+      "rank": 591,
+      "count": 96
+    }
+  },
+  "etym": {
+    "grl_ID": "1764",
+    "grl_lemma": "πλήν",
+    "grl_meaning": "except",
+    "grl_pos": "preposition",
+    "grl_ref": "LSJ 1419a; Preisigke 2:318"
+  }
+}

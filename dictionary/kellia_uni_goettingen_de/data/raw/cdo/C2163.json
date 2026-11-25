@@ -1,0 +1,207 @@
+{
+  "id": "C2163",
+  "forms": [
+    {
+      "id": "CF6038",
+      "orth": "ⲁⲧⲙⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4900,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2502",
+      "bibliography": "CD 197b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲟⲃϣⲉ ⲉⲛⲉⲭⲏⲣⲁ ⲙⲛⲛⲟⲣⲫⲁⲛⲟⲥ · ϫⲉϫⲓⲛⲙⲡϩⲟⲟⲩ ⲉⲧϩⲏ · ⲉⲓⲛⲁϣⲱⲡⲉ ⲛⲟⲣⲫⲁⲛⲟⲥ · ⲛⲁⲧⲉⲓⲱⲧ ⲛ**ⲁⲧⲙⲁⲁⲩ** · ϫⲉⲕⲁⲥ ⲧⲙⲛⲧⲛⲁ ⲉⲧⲣⲉⲛⲁⲁⲥ ⲙⲡⲉⲓⲙⲁ · ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁⲥ ⲉⲡϩⲏⲧ ⲛⲟⲩⲁ ·",
+      "english": "Neglect neither the widows nor the orphans, for from this day forward I myself shall be an orphan, without father and without mother, so that the lovingkindness which thou shewest in this world will God also shew to some one else.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲱ ⲧⲁⲙⲁⲁⲩ · ⲁⲓⲣⲧϩⲉ ⲛⲟⲩⲟⲣⲫⲁⲛⲟⲥ ⲛⲁⲧⲉⲓⲱⲧ ⲛ**ⲁⲧⲙⲁⲁⲩ** ·",
+      "english": "Verily, O my mother I am become an orphan, fatherless and motherless.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ⲁⲧⲙⲁⲁⲩ** ⲫⲱⲃⲉⲧ ⲛⲧⲡⲉ ⲛⲧⲉⲛⲫⲩⲥⲓⲥ ·",
+      "english": "In that He was without mother, He was superior to our nature;",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲧⲉⲓⲱⲧ",
+        3,
+        20.224
+      ],
+      [
+        "ⲫⲱⲃⲉⲧ",
+        1,
+        18.276
+      ],
+      [
+        "ⲟⲣⲫⲁⲛⲟⲥ",
+        1,
+        11.919
+      ],
+      [
+        "ⲙⲛⲧⲛⲁ",
+        1,
+        11.59
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        11.152
+      ],
+      [
+        "ⲛ",
+        7,
+        9.909
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        1,
+        9.784
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        8.804
+      ],
+      [
+        "ⲧ",
+        3,
+        8.504
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        7.469
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.41
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        7.148
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.495
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.991
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ⲕ",
+        1,
+        4.531
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.824
+      ],
+      [
+        "ⲩ",
+        1,
+        3.488
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲙⲁⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧⲙⲁⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲧⲙⲁⲁⲩ",
+          "ⲁⲧⲙⲁⲁⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4480,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2160",
+      "label": "ⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "mother"
+    },
+    {
+      "target": "C2161",
+      "label": "ⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "mother"
+    },
+    {
+      "target": "C2164",
+      "label": "ⲙⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "caul, afterbirth"
+    },
+    {
+      "target": "C2162",
+      "label": "ⲙⲁⲩ ⲙⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "nursing mother, nurse"
+    }
+  ]
+}

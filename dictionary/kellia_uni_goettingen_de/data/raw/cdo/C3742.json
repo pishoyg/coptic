@@ -1,0 +1,73 @@
+{
+  "id": "C3742",
+  "forms": [
+    {
+      "id": "CF31710",
+      "orth": "ⲥⲣⲣⲓϥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31709",
+      "orth": "ⲥⲣⲉⲣⲓϥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4252",
+      "bibliography": "CD 357b; KoptHWb 196; DELC 197; ChLCS 50b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C1734",
+      "type": "cf",
+      "label": "what drops off, crumb"
+    },
+    {
+      "target": "C13026",
+      "type": "cf",
+      "label": "waste"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3741",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "unwithered state"
+    },
+    {
+      "target": "C13026",
+      "label": "ⲣⲉϥⲣⲓϥ",
+      "pos": "N",
+      "gloss": "waste"
+    },
+    {
+      "target": "C13013",
+      "label": "ⲣⲟϥⲣⲉϥ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C3739",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "V",
+      "gloss": "fall, wither; make fall, dissipate; administer (medicine)"
+    },
+    {
+      "target": "C3740",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "falling, withering"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "C1638",
+  "forms": [
+    {
+      "id": "CF4748",
+      "orth": "ⲗⲉⲗⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7095,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1902",
+      "bibliography": "CD 141b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲥⲟⲩⲁⲫⲓ",
+        2,
+        21.598
+      ],
+      [
+        "ϩⲙ",
+        2,
+        9.413
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲉⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲗⲟⲩ_0_node",
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          "ⲥ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲏⲓ",
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6644,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1637",
+      "label": "ⲗⲉⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "youth, young woman"
+    },
+    {
+      "target": "C1639",
+      "label": "ⲙⲛⲧⲗⲉⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "youth, childhood"
+    }
+  ],
+  "etym": {
+    "egy_num": "84560",
+    "egy_lemma": "nn.w",
+    "demo_num": "d3190",
+    "demo_lemma": "nn",
+    "english": "child",
+    "german": "Kind (u. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/84560",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3190"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "C3674",
+  "forms": [
+    {
+      "id": "CF9257",
+      "orth": "ⲥⲡⲗⲏⲗⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9258",
+      "orth": "ⲥⲡⲉⲗⲉⲗⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4178",
+      "bibliography": "CD 351b; CED 159; KoptHWb 193; DELC 194"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3473",
+      "type": "cf",
+      "label": "spleen or organs around it"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5255",
+    "demo_lemma": "spleljn",
+    "english": "compress, bandage",
+    "german": "Kompresse, Verband",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5255"
+  }
+}

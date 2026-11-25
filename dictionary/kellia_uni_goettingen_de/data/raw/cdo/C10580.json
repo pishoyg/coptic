@@ -1,0 +1,56 @@
+{
+  "id": "C10580",
+  "forms": [
+    {
+      "id": "CF28568",
+      "orth": "ⲥⲩⲅⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF28572",
+      "orth": "ⲥⲩⲅⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28569",
+      "orth": "ⲥⲉⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28570",
+      "orth": "ⲥⲉⲕⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28571",
+      "orth": "ⲥⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3186,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14398",
+      "bibliography": "DDGLC",
+      "cu_ID": "2250"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "866",
+    "grl_lemma": "ζυγή",
+    "grl_meaning": "pair",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 757a; Preisigke 1:647"
+  }
+}

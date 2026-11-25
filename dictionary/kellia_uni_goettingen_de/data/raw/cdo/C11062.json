@@ -1,0 +1,129 @@
+{
+  "id": "C11062",
+  "forms": [
+    {
+      "id": "CF30458",
+      "orth": "ϩⲁⲡⲗⲟⲩⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30461",
+      "orth": "ϩⲁⲡⲗⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10524,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30459",
+      "orth": "ϩⲁⲡⲗⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30460",
+      "orth": "ϩⲁⲡⲗⲟⲩ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30462",
+      "orth": "ϩⲁⲡⲗⲟⲩⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30463",
+      "orth": "ϩⲉⲡⲗⲟⲩⲛ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15446",
+      "bibliography": "DDGLC",
+      "cu_ID": "5144"
+    },
+    {
+      "id": "CS15447",
+      "bibliography": "DDGLC",
+      "cu_ID": "4378"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲉϣϣⲉ ⲟⲩⲛ ⲉⲣⲟⲛ ⲡⲉ ⲱ ⲛⲁⲙⲉⲣⲁⲧⲉ ⲉⲧⲣⲉⲩϩⲉ ⲉⲣⲟⲛ ⲉⲛⲥⲃⲧⲱⲧ ⲛⲛⲁⲩ ⲛⲓⲙ ⲉⲡⲓⲥϭⲏⲣ ⲛ**ϩⲁⲡⲗⲟⲩⲛ** ⲉⲧⲉⲟⲩⲁ ⲛⲟⲩⲱⲧ ⲡⲉ ·",
+      "english": "Therefore, O my beloved, what is meet for us to do is this: We must act in such a way that we may find ourselves prepared at any hour, and we must sail a straightforward course, and always in the same direction;",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϭⲏⲣ",
+        1,
+        15.043
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        10.87
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        9.329
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲡⲗⲟⲩⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10110,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "213",
+    "grl_lemma": "ἁπλοῦς",
+    "grl_meaning": "single, simple",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 190b; Preisigke 1:164"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "id": "C5225",
+  "forms": [
+    {
+      "id": "CF12417",
+      "orth": "ⲟⲩⲱⲧϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8411,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5869",
+      "bibliography": "CD 497b; CED 219; KoptHWb 280; DELC 239a; ChLCS 69b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲛⲁ**ⲟⲩⲱⲧϥ** ⲇⲉ ⲙⲡⲉϥⲥⲡⲟⲧⲟⲩ ϩⲛⲟⲩϩⲁⲗⲁⲕ",
+      "english": "Or wilt thou fasten a ring in his nostril, and bore his lip with a clasp?",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲉϫⲓ ⲙⲡⲉⲛⲕⲁ ⲛⲟⲩⲱⲧϥ ⲛⲅ**ⲟⲩⲱⲧϥ** ⲙⲡⲉϥⲙⲁⲁϫⲉ ϩⲓⲣⲙⲡⲣⲟ ⲛϥⲣϩⲙϩⲁⲗ ⲛⲁⲕ ϣⲁⲉⲛⲉϩ ⲁⲩⲱ ⲧⲉⲕϩⲙϩⲁⲗ ⲉⲕⲉⲉⲓⲣⲉ ⲛⲁⲥ ⲕⲁⲧⲁⲡⲉⲓⲥⲙⲟⲧ",
+      "english": "then thou shalt take an awl, and bore his ear through to the door, and he shall be thy servant for ever; and in like manner shalt thou do to thy maid-servant.",
+      "source": "Deuteronomy 15",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲁⲛⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ϩⲓⲣⲙ",
+        1,
+        13.598
+      ],
+      [
+        "ⲥⲡⲟⲧⲟⲩ",
+        1,
+        12.232
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        11.355
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        10.096
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        10.036
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧϥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲟⲩⲱⲧϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲟⲩⲱⲧϥ",
+          "ⲅ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲟⲩⲱⲧϥ",
+          "ⲟⲩⲱⲧϥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧϥ_0_node",
+          "ⲙ_1_post_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲱⲧϥ",
+          "ⲡⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲟⲩⲱⲧϥ",
+          "ⲛⲁ_1_pre_ⲟⲩⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲱⲧϥ",
+          "ⲟⲩⲱⲧϥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧϥ_0_node",
+          "ⲇⲉ_1_post_ⲟⲩⲱⲧϥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7969,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5203",
+      "type": "cf",
+      "label": "change/be changed, remove, pass through, transfer"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5226",
+      "label": "ⲟⲩⲁⲧϥⲉ",
+      "pos": "N",
+      "gloss": "pierced place, hole"
+    },
+    {
+      "target": "C5227",
+      "label": "ⲟⲩⲁⲧⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "pierced place, hole?"
+    }
+  ],
+  "etym": {
+    "egy_num": "45900",
+    "egy_lemma": "wft",
+    "demo_num": "d1577",
+    "demo_lemma": "wtf",
+    "english": "to bore through (med.)",
+    "german": "durchbohren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/45900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1577"
+  }
+}

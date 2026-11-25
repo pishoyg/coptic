@@ -1,0 +1,190 @@
+{
+  "id": "C7933",
+  "forms": [
+    {
+      "id": "CF17932",
+      "orth": "ϭⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8157,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲱⲧ",
+      "dialect": "B",
+      "id": "2631.1"
+    },
+    {
+      "orth": "ϭⲱⲧ",
+      "dialect": "A",
+      "id": "2631.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8815",
+      "bibliography": "CD 833a; CED 338; KoptHWb 469; DELC 348ab; ChLCS 110a"
+    },
+    {
+      "id": "CS8816",
+      "bibliography": "CD 833a; DELC 348ab; ChLCS 110a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲟⲩϫⲓⲟⲩⲱ ⲛϩⲏⲧϥ ⲛϭⲓⲛⲉⲥⲟⲟⲩ ⲁⲩⲱ ⲛⲉϣⲁⲣⲉⲓⲁⲕⲱⲃ ⲕⲱ ⲛⲛϭⲉⲣⲟⲟⲃ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉⲥⲟⲟⲩ ϩⲛⲛ**ϭⲱⲧ** ⲉⲧⲣⲉⲩϫⲓⲟⲩⲱ ⲕⲁⲧⲁⲛϭⲉⲣⲟⲟⲃ",
+      "english": "And it came to pass in the time wherein the cattle became pregnant, conceiving in the belly, Jacob put the rods before the cattle in the troughs, that they might conceive by the rods.",
+      "source": "Genesis 30",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲱ ⲇⲉ ⲛⲛϭⲉⲣⲱⲃ ⲉⲛⲧⲁϥⲕⲟⲕⲟⲩ ϩⲛⲛ**ϭⲱⲧ** ⲙⲙⲟⲟⲩ ⲛⲙⲙⲁⲛⲧⲥⲟ ϫⲉⲕⲁⲥ ⲉⲩϣⲁⲛⲉⲓ ⲛϭⲓⲛⲉⲥⲟⲟⲩ ⲉⲥⲱ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛϭⲉⲣⲱⲃ ⲛⲥⲉϫⲓⲟⲩⲱ ⲛϭⲓⲛⲉⲥⲟⲟⲩ ⲉⲛϭⲉⲣⲱⲃ",
+      "english": "And he laid the rods which he had peeled, in the hollows of the watering-troughs, that whensoever the cattle should come to drink, as they should have come to drink before the rods, the cattle might conceive at the rods.",
+      "source": "Genesis 30",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲛⲧⲥⲟ",
+        1,
+        19.598
+      ],
+      [
+        "ⲕⲟⲕⲟⲩ",
+        1,
+        19.598
+      ],
+      [
+        "ϫⲓⲟⲩⲱ",
+        1,
+        15.598
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        1,
+        10.936
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        10.898
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        7.664
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲙⲁⲛⲧⲥⲟ",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲧⲥⲟ_1_post_ϭⲱⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱⲧ_0_node",
+          "ⲙⲙⲟ_1_post_ϭⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲱⲧ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛⲙ_2_post_ⲙⲁⲛⲧⲥⲟ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲙⲁⲛⲧⲥⲟ",
+          "ⲙⲁⲛⲧⲥⲟ_1_post_ϭⲱⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7713,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "863681",
+    "egy_lemma": "gt.t",
+    "demo_num": "d6950",
+    "demo_lemma": "gt.t",
+    "english": "watering place",
+    "german": "Zisterne",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/863681",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6950"
+  }
+}

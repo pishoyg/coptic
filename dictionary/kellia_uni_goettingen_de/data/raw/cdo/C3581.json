@@ -1,0 +1,174 @@
+{
+  "id": "C3581",
+  "forms": [
+    {
+      "id": "CF9067",
+      "orth": "ϫⲓⲛⲥⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9309,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4078",
+      "bibliography": "CD 344b"
+    },
+    {
+      "id": "CS4079",
+      "bibliography": "CD 344b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲱⲛϥ ⲇⲉ ϧⲉⲛⲡⲓⲉϫⲱⲣϩ ⲉⲧⲉⲙⲙⲁⲩ ⲁϥϭⲓ ⲛϯⲥϩⲓⲙⲓ ⲃϯ ⲛⲉⲙϯⲃⲱⲕⲓ ⲃϯ ⲛⲉⲙⲡⲉϥ ⲓⲁ ⲛϣⲏⲣⲓ ⲟⲩⲟϩ ⲁϥⲥⲓⲛⲓ ⲙⲡⲓ**ϫⲓⲛⲥⲓⲛⲓ** ⲛⲧⲉⲓⲁⲃⲟⲕ",
+      "english": "And he rose up in that night, and took his two wives and his two servant-maids, and his eleven children, and crossed over the ford of Jaboch.",
+      "source": "01_Genesis_32",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲃⲟⲕ",
+        1,
+        18.695
+      ],
+      [
+        "ⲥⲓⲛⲓ",
+        1,
+        11.819
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲥⲓⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲁⲃⲟⲕ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲁⲃⲟⲕ",
+          1
+        ],
+        [
+          "ⲁⲃⲟⲕ_1_post_ϫⲓⲛⲥⲓⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲥⲓⲛⲓ_0_node",
+          "ⲛⲧⲉ_2_post_ⲁⲃⲟⲕ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲁⲃⲟⲕ",
+          "ⲓ_2_post_ⲁⲃⲟⲕ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲁⲃⲟⲕ",
+          "ⲁⲃⲟⲕ_1_post_ϫⲓⲛⲥⲓⲛⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8777,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3578",
+      "label": "ⲁⲧⲥⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "impassable, not passing"
+    },
+    {
+      "target": "C3580",
+      "label": "ⲙⲁ ⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passage, path crossing"
+    },
+    {
+      "target": "C3579",
+      "label": "ⲣⲉϥⲥⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "one that passes"
+    },
+    {
+      "target": "C3575",
+      "label": "ⲥⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "pass by, through, beyond, across; pass over, omit"
+    },
+    {
+      "target": "C3576",
+      "label": "ⲥⲓⲛⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "pass out, away, die"
+    },
+    {
+      "target": "C3577",
+      "label": "ⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passing, decline (of day), afternoon"
+    },
+    {
+      "target": "C3582",
+      "label": "ⲥⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "robber (originally perhaps \"vagrant\")"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "id": "C6353",
+  "forms": [
+    {
+      "id": "CF31987",
+      "orth": "ϩⲁⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4196,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF31986",
+      "orth": "ϩⲁⲉⲓⲟ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲁⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3928,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲁⲉⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1862,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ϩⲁⲓⲱ",
+      "dialect": "S",
+      "id": "1127.3"
+    },
+    {
+      "orth": "ⲁⲓⲱ",
+      "dialect": "S",
+      "id": "1127.4"
+    },
+    {
+      "orth": "ϩⲁⲓⲉ",
+      "dialect": "A",
+      "id": "1127.5"
+    },
+    {
+      "orth": "ⲁⲓⲟ",
+      "dialect": "F",
+      "id": "1127.6"
+    },
+    {
+      "orth": "ⲁⲓⲁ",
+      "dialect": "F",
+      "id": "1127.7"
+    },
+    {
+      "orth": "ⲁⲓⲉ",
+      "dialect": "L",
+      "id": "1127.8"
+    },
+    {
+      "orth": "ⲁⲉⲓⲉ",
+      "dialect": "L",
+      "id": "1127.9"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS7048",
+      "bibliography": "CD 636b-637a; CED 270; KoptHWb 357; DELC 290b; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲓⲟ **ϩⲁⲓⲟ**",
+      "english": "Yea! Yea!",
+      "source": "Curse to undo sinews",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm100001.bku_1_5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϩⲁⲓⲟ**",
+      "english": "Yea!",
+      "source": "Curse to undo sinews",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm100001.bku_1_5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲟⲩⲁ ⲛϩⲏⲧⲟⲩ ϫⲉ**ϩⲁⲓⲟ** ⲁⲙⲟⲩ ⲙⲛⲛⲉⲕϩⲙϩⲁⲗ ⲡⲉϫⲉⲉⲗⲓⲥⲁⲓⲟⲥ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ϩⲱ ϯⲛⲏⲩ",
+      "english": "And he said, Go. And one of them said gently, Come with thy servants. And he said, I will go.",
+      "source": "II Kings 6",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲓⲟ",
+        2,
+        17.983
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.791
+      ],
+      [
+        "ϩⲉⲗⲡⲓⲥ",
+        2,
+        13.198
+      ],
+      [
+        "ⲙⲛⲧⲁ",
+        1,
+        11.104
+      ],
+      [
+        "ⲁⲙⲟⲩ",
+        1,
+        10.356
+      ],
+      [
+        "ⲱⲣⲕ",
+        1,
+        10.348
+      ],
+      [
+        "ϭⲱⲗⲡ",
+        1,
+        10.228
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        2,
+        9.165
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.568
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        8.405
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        7.971
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        7.725
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        1,
+        7.574
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        1,
+        7.499
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        6.979
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        6.522
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.339
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.032
+      ],
+      [
+        "ⲩ",
+        2,
+        6.002
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        5.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲓⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3800,
+      "count": 7
+    }
+  },
+  "etym": {
+    "egy_num": "97760",
+    "egy_lemma": "hy",
+    "demo_num": "d3730",
+    "demo_lemma": "h(j)",
+    "english": "[interjection]",
+    "german": "[Interjektion]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/97760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3730"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "C4009",
+  "forms": [
+    {
+      "id": "CF9961",
+      "orth": "ⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 45.04,
+        "rank": 30,
+        "count": 7107
+      }
+    },
+    {
+      "orth": "ⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 309.07,
+        "rank": 5,
+        "count": 26213
+      }
+    },
+    {
+      "orth": "ⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 356.84,
+        "rank": 4,
+        "count": 56300
+      }
+    },
+    {
+      "orth": "ⲧⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.87,
+        "rank": 132,
+        "count": 837
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "2. Pers.",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Präfixpronomen (Präsens I)"
+  },
+  "senses": [
+    {
+      "id": "CS4555",
+      "bibliography": "CED 178; KoptHWb 217"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲁⲓⲥϧⲁⲓ ⲛⲱⲧⲉⲛ ⲉϣⲧⲉⲙⲙⲟⲩϫⲧ ⲛⲉⲙⲱⲟⲩ ⲉϣⲱⲡ ⲉⲟⲩⲟⲛ ⲟⲩⲁⲓ ⲉⲩϯⲣⲁⲛ ⲉⲣⲟϥ ϫⲉⲥⲟⲛ **ⲉ**ⲟⲩⲡⲟⲣⲛⲟⲥ ⲓⲉ ⲟⲩⲣⲉϥϭⲓⲛϫⲟⲛⲥ ⲓⲉ ⲟⲩⲣⲉϥϣⲁⲙϣⲉⲓⲇⲱⲗⲟⲛ ⲓⲉ ⲟⲩⲣⲉϥϩⲱⲟⲩϣ ⲓⲉ ⲟⲩⲣⲉϥⲑⲓϧⲓ ⲓⲉ ⲟⲩⲣⲉϥϩⲱⲗⲉⲙ ⲫⲁⲓ ⲙⲡⲁⲓⲣⲏϯ ⲟⲩⲇⲉ ⲙⲡⲉⲣⲉⲣϣⲫⲏⲣ ⲛⲟⲩⲱⲙ ⲛⲉⲙⲁϥ .",
+      "english": "But as it is, I wrote to you not to associate with anyone who is called a brother who is a sexual sinner, or covetous, or an idolater, or a slanderer, or a drunkard, or an extortioner. Don't even eat with such a person.",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϩⲙ ⲇⲉ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲡⲉϫⲁϥ ⲙⲙⲁⲣⲓⲁ ϫⲉⲕⲁⲗⲱⲥ ⲙⲉⲛⲧⲟⲓⲅⲉ **ⲧⲉ**ϣⲓⲛⲉ ⲛⲥⲁϩⲱⲃ ⲛⲓⲙ ϩⲛⲟⲩⲱⲣϫ ⲙⲛⲟⲩⲁⲥⲫⲁⲗⲓⲁ ·",
+      "english": "“And Jesus answered and said unto Mary: Finely indeed dost thou question concerning all with precision and certainty.”",
+      "source": "Pistis Sophia Book 2 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:49-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓⲕⲉϩⲱⲃ ⲟⲛ ⲛⲁϥⲓⲣⲓ ⲙⲙⲟϥ ⲡⲉ ⲙⲡⲁϥϯϩⲗⲓ ϧⲉⲛϯⲇⲓⲁⲕⲟⲛⲓⲁ ⲛⲛⲓⲁⲗⲱⲟⲩⲓ ⲛⲣⲱⲙⲓ ⲉⲃⲏⲗ ⲉⲟⲩϧⲉⲗⲗⲟ ⲛϩⲏⲕⲓ ⲛϫⲱⲃ ⲉⲧⲉⲙⲙⲟⲛ ϣϫⲟⲙ ⲙⲙⲟϥ ⲉϫⲫⲟ ⲙⲡⲉϥⲱⲓⲕ ⲛⲓⲣⲉⲙ ⲛⲧⲟⲡⲟⲥ ⲇⲉ ⲟⲛ ⲛⲉⲙⲡⲁϥϯ ⲛⲱⲟⲩ ⲡⲉ ⲉⲡⲧⲏⲣϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲭⲣⲓⲁ ⲉⲧⲭⲏ ⲛⲧⲟⲧϥ ⲁⲗⲗⲁ ⲁϥⲥⲱⲧⲡ ⲛⲁϥ ⲛⲓ ⲛⲥⲟⲛ ⲉⲩⲉⲛϩⲟⲧ ⲉϥⲟⲩⲱⲣⲡ ⲙⲙⲱⲟⲩ ⲉⲛⲓⲛⲏⲥⲟⲥ ⲛⲉⲙⲛⲓⲫⲁⲓⲁⲧ ⲕⲁⲧⲁⲣⲟⲙⲡⲓ ⲛⲉⲙⲡⲓⲙⲁ ⲛⲧⲉⲛⲓⲕⲉⲗⲁⲫⲟⲥ ⲛⲧⲉⲣⲁⲕⲟϯ ⲉⲩⲱⲡⲧ ⲛⲛⲓϫⲟⲉⲓ ⲛϣⲃⲓⲛ ⲛⲉⲙⲱⲓⲕ ⲉⲩⲥⲱⲣ ⲙⲙⲱⲟⲩ ⲉϫⲉⲛⲛⲏ ⲉⲧⲉⲣⲛⲭⲣⲓⲁ ⲛⲉⲙⲛⲓⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲧⲉⲛⲓϯⲙⲓ ⲟⲛ ⲉⲧⲉⲣⲛⲭⲣⲓⲁ ⲛⲉⲙⲛⲓⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲧⲉⲛⲓϣⲁϥⲉⲩ ⲛⲏ ⲉⲧⲥⲁϧⲟⲩⲛ ϧⲉⲛⲡⲓⲃⲁⲣⲃⲁⲣⲓⲕⲟⲛ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲉⲙⲓ ϫⲉϥϯϩⲗⲓ ⲛⲛⲓⲣⲉⲙ ⲛⲧⲟⲡⲟⲥ ⲁⲛ . ϣⲓⲛⲓ ⲇⲉ ⲟⲩⲟϩ ⲭⲛⲁⲉⲙⲓ ϫⲉⲁϥⲓⲛⲓ ⲛⲟⲩⲕⲁϩⲥ ⲉϫⲉⲛⲛⲓⲥⲛⲏⲟⲩ ⲉⲧϣⲟⲡ ϧⲉⲛⲛⲓⲙⲁ ⲛⲧⲉⲭⲏⲙⲓ ⲛⲉⲙⲡⲉⲣⲛⲟⲩϫ ϫⲉϩⲓⲛⲁ ⲛⲥⲉϯ ⲛⲟⲩⲉⲣⲧⲟⲃ ⲛⲥⲟⲩⲟ ⲉⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ⲕⲁⲧⲁⲣⲱⲙⲓ ⲛⲧⲉⲙ ⲣⲟⲙⲡⲓ ⲉⲩϯ ⲙⲙⲱⲟⲩ ⲉϯⲇⲓⲁⲕⲟⲛⲓⲁ ⲉⲑⲃⲉⲛⲏ ⲉⲧⲉⲣⲛⲭⲣⲓⲁ ⲉⲩⲟⲩⲱⲣⲡ ⲙⲙⲱⲟⲩ ⲉⲛⲓⲝⲉⲛⲱⲛ ⲛⲧⲉⲛⲓⲕⲉⲗⲁⲫⲟⲥ ⲛⲉⲙⲛⲓⲭⲏⲣⲁ ⲛⲉⲙⲛⲓⲟⲣⲫⲁⲛⲟⲥ ⲟⲩⲟϩ ⲛⲁⲣⲉⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲛⲧⲉⲛⲓⲙⲟⲛⲁⲭⲟⲥ ϥⲓⲣⲱⲟⲩϣ ⲛⲧⲉⲣⲟⲙⲡⲓ ⲉϥϯ ⲙⲡⲓⲉⲣⲧⲟⲃ ⲛⲥⲟⲩⲟ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥϧⲓⲥⲓ ⲛⲁⲅⲁⲡⲏ ⲟⲩⲟϩ ⲁ ⲫⲁⲓ ⲉⲣⲕⲁϩⲥ ⲛⲱⲟⲩ ϣⲁⲉϧⲟⲩⲛ **ⲉ**ϯⲛⲟⲩ .",
+      "english": "He also acted in this way: he gave nothing from the distributions to younger men, but only to elderly poor and infirm men who could not procure bread for themselves. As for the men of his monastery, he gave them nothing from the wealth in his possession; instead, he chose ten faithful men whom he sent annually to the islands and Libya, and to the places of the κελάφων of Alexandria, where ships were loaded with grain and bread, so that they might distribute it to those in need. He also ensured that the churches of the region, which were in want, and the churches of the interior desert, in the land of the barbarians, received support, so that he would not give anything from his monastery to those living nearby. You will understand, therefore, that he introduced this custom to the brothers who inhabit the regions of Egypt and Mount Pernoudj: Namely, he arranged that every year a certain artaba of wheat would be given to each person, which would be distributed to those in need at the κελάφων and also to widows and orphans. Thus, each monk throughout the year strove to give an artaba of wheat in alms from what was necessary for himself. This custom persists among them to this very day.",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲉⲥⲛⲏⲩ ⲉⲃⲟⲗ ⲁϥϫⲓϣⲟϫⲛⲉ ⲛⲙⲙⲁⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲧⲉⲓ ⲙⲡⲟⲩⲉⲓⲱⲧ ⲛⲟⲩⲥⲱϣⲉ ⲁⲩⲱ ⲁⲥⲱϣ ⲉⲃⲟⲗ ϩⲓϫⲙⲡⲓⲱ ⲡⲉϫⲁϥ ⲇⲉ ⲛⲁⲥ ⲛϭⲓⲭⲁⲗⲉⲃ ϫⲉⲁϩⲣⲟ **ⲧⲉ**ⲱϣ ⲉⲃⲟⲗ",
+      "english": "And it came to pass as she went out that she counselled him, saying, I will ask of my father a field; and she cried from off her ass; and Chaleb said to her, What is it?",
+      "source": "Joshua 15",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲓ ⲉⲣⲁⲕⲟϯ ⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲁⲩⲭⲱ ⲙⲡⲉϥⲥⲱⲙⲁ ϧⲉⲛⲡⲓⲧⲟⲡⲟⲥ ⲛⲧⲉⲡⲓϩⲁⲅⲓⲟⲥ ⲙⲁⲣⲕⲟⲥ ⲫⲏ ⲉⲧⲁϥⲕⲟⲧϥ ⲟⲩⲟϩ ⲁϥϫⲟⲥ **ⲉ**ⲑⲣⲟⲩⲓⲛⲓ ⲉⲡⲉϥⲙⲁ ⲛⲓⲥⲁⲁⲕ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁⲩⲧⲁⲙⲟϥ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲡϭⲟⲉⲓⲥ .",
+      "english": "When the archbishop arrived in Alexandria, he fell asleep, and his body was placed in the church of St. Mark, which he had built, and he told them to bring Isaac in his place, as he had been told to do by the Lord.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲥ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϫⲉⲧⲉⲥϩⲓⲙⲉ ⲁϩⲣⲟ **ⲧⲉ**ⲣⲓⲙⲉ ⲉⲣⲉϣⲓⲛⲉ ⲛⲥⲁⲛⲓⲙ ⲧⲏ ⲇⲉ ⲛⲉⲥⲙⲉⲉⲩⲉ ϫⲉⲡⲁⲧⲉϣⲛⲏ ⲡⲉ ⲡⲉϫⲁⲥ ⲛⲁϥ ϫⲉⲡϫⲟⲉⲓⲥ ⲉϣϫⲉ ⲛⲧⲟⲕ ⲁⲕϥⲓⲧϥ ⲁϫⲓⲥ ⲉⲣⲟⲓ ϫⲉⲛⲧⲁⲕⲕⲁⲁϥ ⲧⲱⲛ ⲁⲩⲱ ⲁⲛⲟⲕ ϯⲛⲁϥⲓⲧϥ .",
+      "english": "Jesus said to her, 'Woman, why are you weeping? Who are you looking for?' She, supposing him to be the gardener, said to him, 'Sir, if you have carried him away, tell me where you have laid him, and I will take him away.'",
+      "source": "43_John_20",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

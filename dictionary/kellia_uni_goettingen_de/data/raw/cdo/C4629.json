@@ -1,0 +1,91 @@
+{
+  "id": "C4629",
+  "forms": [
+    {
+      "id": "CF31825",
+      "orth": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2076,
+        "count": 28
+      }
+    },
+    {
+      "id": "CF31824",
+      "orth": "ⲧⲁⲟⲩⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5613,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5229",
+      "bibliography": "CD 443a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3976,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4632",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4633",
+      "label": "ϭⲓⲛⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "explanation, recital"
+    },
+    {
+      "target": "C4631",
+      "label": "ⲁⲧⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "indescribable, inexplicable"
+    },
+    {
+      "target": "C4626",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "V",
+      "gloss": "send; put forth, produce; utter, proclaim, recount, recite, repeat; give the name, say the name, call, name; overthrow"
+    },
+    {
+      "target": "C4627",
+      "label": "ⲧⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4630",
+      "label": "ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "send down, cast down; send up, bring up"
+    },
+    {
+      "target": "C4628",
+      "label": "ⲧⲁⲩⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    }
+  ]
+}

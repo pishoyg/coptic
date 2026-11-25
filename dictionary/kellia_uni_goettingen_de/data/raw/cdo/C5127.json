@@ -1,0 +1,95 @@
+{
+  "id": "C5127",
+  "forms": [
+    {
+      "id": "CF12219",
+      "orth": "ⲟⲩⲱⲣⲡ ⲉϧⲟⲩⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5369,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϧⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5758",
+      "bibliography": "CD 489b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲁⲓ ⲟⲩⲛ ⲁϥⲓ ⲉϥϧⲉⲛⲟⲩⲛⲓϣϯ ⲛⲉⲙⲕⲁϩ ⲛϩⲏⲧ ⲉϥⲟϣ ⲟⲩⲟϩ **ⲁϥⲟⲩⲱⲣⲡ **ⲉϧⲟⲩⲛ**** ⲙⲡⲁⲓⲱⲧ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲉⲓⲟⲩⲱϣ ⲉϭⲓⲥⲙⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲕ ⲱ ⲡⲁⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ ⲁⲣⲏⲟⲩ ⲛⲧⲉⲫⲛⲁⲓ ⲙⲫⲛⲟⲩϯ ⲧⲁϩⲟⲓ ⲛⲉⲙⲛⲉⲕϣⲗⲏⲗ ⲉⲑⲟⲩⲁⲃ ϩⲓⲛⲁ ⲛⲧⲉⲫⲛⲟⲩϯ ⲭⲁⲛⲁⲛⲟⲃⲓ ⲛⲏⲓ ⲉⲃⲟⲗ ϫⲉⲥⲉⲟϣ ⲛϩⲟⲩⲟ .",
+      "english": "Burdened with deep sorrow, the man sent a message to my father, pleading: ‘O holy father, I seek your blessing. Perhaps through your intercession, God in his mercy will grant me forgiveness, for I carry many sins.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4866,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5130",
+      "label": "ϭⲓⲛⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5122",
+      "label": "ⲟⲩⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "send"
+    },
+    {
+      "target": "C5123",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C5124",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5126",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "send up"
+    },
+    {
+      "target": "C5125",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "send down"
+    },
+    {
+      "target": "C5129",
+      "label": "ⲣⲉϥⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "man sent, messenger"
+    },
+    {
+      "target": "C5128",
+      "label": "ⲣⲉⲙⲛⲃⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "messenger"
+    }
+  ]
+}

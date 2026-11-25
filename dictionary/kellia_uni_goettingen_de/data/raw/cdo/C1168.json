@@ -1,0 +1,81 @@
+{
+  "id": "C1168",
+  "forms": [
+    {
+      "id": "CF3723",
+      "orth": "ⲕⲱⲗⲉⲙ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲭⲱⲗⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.19,
+        "rank": 660,
+        "count": 101
+      }
+    },
+    {
+      "orth": "ⲭⲟⲗⲉⲙ†",
+      "dialect": "B",
+      "id": "2841.2"
+    },
+    {
+      "orth": "ⲕⲗⲁⲙ",
+      "dialect": "A",
+      "id": "2841.3"
+    },
+    {
+      "orth": "ϭⲗⲁⲙ",
+      "dialect": "A",
+      "id": "2841.4"
+    },
+    {
+      "orth": "ⲕⲗⲁⲙ",
+      "dialect": "L",
+      "id": "2841.5"
+    },
+    {
+      "orth": "ϭⲗⲁⲙ",
+      "dialect": "L",
+      "id": "2841.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1357",
+      "bibliography": "CD 104b; KoptHWb 62"
+    },
+    {
+      "id": "CS1358",
+      "bibliography": "CD 104b; KoptHWb 62"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1169",
+      "label": "ⲕⲱⲗⲉⲙ",
+      "pos": "N",
+      "gloss": "haste"
+    },
+    {
+      "target": "C1171",
+      "label": "ⲛⲕⲱⲗⲉⲙ",
+      "pos": "ADV",
+      "gloss": "in haste, quickly, soon"
+    },
+    {
+      "target": "C1170",
+      "label": "ⲣⲉϥⲭⲱⲗⲉⲙ",
+      "pos": "N",
+      "gloss": "hasty man"
+    }
+  ]
+}

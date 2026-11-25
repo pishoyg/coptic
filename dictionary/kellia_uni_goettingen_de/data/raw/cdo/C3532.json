@@ -1,0 +1,71 @@
+{
+  "id": "C3532",
+  "forms": [
+    {
+      "id": "CF8967",
+      "orth": "ⲥⲙⲙⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4020",
+      "bibliography": "CD 336b; KoptHWb 186; DELC 189; ChLCS 48a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲁϯⲟⲩ ⲇⲉ ⲛϩⲟⲟⲩ ⲁϥⲉⲓ ⲉϩⲣⲁⲓ ⲛϭⲓⲁⲛⲁⲛⲓⲁⲥ ⲡⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲙⲛϩⲉⲛⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲁⲩⲱ ⲟⲩϩⲣⲏⲧⲱⲣ ϫⲉⲧⲉⲣⲧⲩⲗⲗⲟⲥ ⲁⲩⲱ **ⲁⲩⲥⲙⲙⲉ **ⲉ**ⲡⲁⲩⲗⲟⲥ** ⲙⲡϩⲏⲅⲉⲙⲱⲛ .",
+      "english": "After five days, the high priest, Ananias, came down with certain elders and an orator, one Tertullus. They informed the governor against Paul.",
+      "source": "44_Acts of the Apostles_24",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲇⲉ ⲁⲩⲱ ⲛⲛⲟϭ ⲛⲛⲓⲟⲩⲇⲁⲓ **ⲁⲩⲥⲙⲙⲉ **ⲉ**ⲡⲁⲩⲗⲟⲥ** ⲛⲁϥ .",
+      "english": "Then the high priest and the principal men of the Jews informed him against Paul, and they begged him,",
+      "source": "44_Acts of the Apostles_25",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3536",
+      "label": "ϭⲓⲛⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "accusation"
+    },
+    {
+      "target": "C3534",
+      "label": "ⲁⲛⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "ordinance"
+    },
+    {
+      "target": "C3535",
+      "label": "ⲣⲉϥⲥⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "advocate, accuser"
+    },
+    {
+      "target": "C3531",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "V",
+      "gloss": "appeal, make application (ⲛ- of person, to whom)"
+    },
+    {
+      "target": "C3533",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "petition, accusation"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C8014",
+  "forms": [
+    {
+      "id": "CF18094",
+      "orth": "ⲣϭⲱⲱϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8913",
+      "bibliography": "CD 841b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C8013",
+      "label": "ϫⲱϫⲓ",
+      "pos": "N",
+      "gloss": "cutting, cut, incision"
+    },
+    {
+      "target": "C8015",
+      "label": "ϭⲱϫⲉ",
+      "pos": "V",
+      "gloss": "dig"
+    },
+    {
+      "target": "C8016",
+      "label": "ϭⲱϫⲉ",
+      "pos": "N",
+      "gloss": "what is dug, spadeful, excavation"
+    },
+    {
+      "target": "C8012",
+      "label": "ϭⲱⲱϫⲉ",
+      "pos": "V",
+      "gloss": "cut"
+    },
+    {
+      "target": "C8017",
+      "label": "ⲣⲉϥϫⲱϫ",
+      "pos": "N",
+      "gloss": "digger(?)"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C3944",
+  "forms": [
+    {
+      "id": "CF9825",
+      "orth": "ⲥⲁϥϩⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4477",
+      "bibliography": "CD 378b; KoptHWb 209"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3946",
+      "label": "ⲁⲧⲥⲱϥ",
+      "pos": "N",
+      "gloss": "undefiled"
+    },
+    {
+      "target": "C3947",
+      "label": "ⲣⲉϥⲥⲉϥ-",
+      "pos": "N",
+      "gloss": "defiler"
+    },
+    {
+      "target": "C3943",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "V",
+      "gloss": "be defiled, polluted; defile, pollute"
+    },
+    {
+      "target": "C3945",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "N",
+      "gloss": "pollution, abomination"
+    }
+  ]
+}

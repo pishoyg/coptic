@@ -1,0 +1,123 @@
+{
+  "id": "C8970",
+  "forms": [
+    {
+      "id": "CF22002",
+      "orth": "ⲉⲝⲟⲇⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22003",
+      "orth": "ⲉⲝⲟⲇⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13151,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10937",
+      "bibliography": "DDGLC",
+      "cu_ID": "4168"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲥⲱⲧⲙ ⲉⲣⲟϥ ⲉϥⲥⲏϩ ϩⲛⲧ**ⲉⲝⲟⲇⲟⲥ** ⲙⲙⲱⲩⲥⲏⲥ ⲛⲧⲉⲣⲉⲙⲱⲩⲥⲏⲥ ⲧⲁⲙⲓⲟ ⲛⲧⲉⲥⲕⲏⲛⲏ ⲙⲛⲧϭⲓⲃⲱⲧⲟⲥ ⲛⲧⲇⲓⲁⲑⲏⲕⲏ · ϭⲱϣⲧ ⲡⲉϫⲁϥ ⲉⲕⲉⲧⲁⲙⲓⲟ ⲛⲛⲕⲁ ⲛⲓⲙ ⲕⲁⲧⲁⲡⲧⲩⲡⲟⲥ ⲉⲛⲧⲁⲩⲧⲥⲁⲃⲟⲕ ⲉⲣⲟϥ ϩⲓⲡⲧⲟⲟⲩ ·",
+      "english": "For this reason hearken unto that which is written in the Exodus of Moses, for when Moses had made I the tabernacle, and the ark of the covenant, God said (unto him) ' Take heed that thou makest everything according to the pattern which hath been shewn unto thee on the mountain.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        2,
+        13.906
+      ],
+      [
+        "ⲥⲏϩ",
+        1,
+        11.621
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        9.928
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲝⲟⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲝⲟⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲱⲩⲥⲏⲥ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲝⲟⲇⲟⲥ_0_node",
+          "ⲙ_1_post_ⲉⲝⲟⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲝⲟⲇⲟⲥ",
+          "ⲙⲱⲩⲥⲏⲥ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12737,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "718",
+    "grl_lemma": "ἔξοδος",
+    "grl_meaning": "exodus, departure",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 596a; Preisigke 1:518"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "C680",
+  "forms": [
+    {
+      "id": "CF2558",
+      "orth": "ⲉⲛⲟⲩⲛⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17624,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2559",
+      "orth": "ⲉⲛⲅ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2560",
+      "orth": "ⲉⲛⲟⲩⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7537,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS817",
+      "bibliography": "CD 56b; CED 36; KoptHWb 37, 499; DELC 44; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲛ ⲇⲉ ⲛⲓⲃⲉⲛ ⲉⲑⲛⲁⲉⲣⲉⲧⲓⲛ ⲙⲙⲟⲕ ⲙⲟⲓ ⲛⲁϥ ⲟⲩⲟϩ ⲫⲏ ⲉⲑⲛⲁⲉⲗ ⲛⲉⲧ**ⲉⲛⲟⲩⲕ** ⲙⲡⲉⲣϣⲁⲧϥ ⲙⲙⲱⲟⲩ .",
+      "english": "Give to everyone who asks you, and don't ask him who takes away your goods to give them back again.",
+      "source": "03_Luke_06",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲡⲙⲁ ⲛⲧⲉⲥⲧⲟⲓⲃⲏ ⲟⲩⲛⲟⲩⲕⲩⲡⲁⲣⲓⲥⲥⲟⲥ ⲛⲁⲣⲱⲧ ⲁⲩⲱ ⲟⲩⲙⲩⲣⲥⲓⲛⲏ ⲉⲡⲙⲁ ⲛⲟⲩ**ⲉⲛⲟⲩⲛⲅ** ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲛⲁϣⲱⲡⲉ ⲉⲩⲣⲁⲛ ⲁⲩⲱ ⲉⲩⲙⲁⲉⲓⲛ ⲛϣⲁ ⲉⲛⲉϩ ⲁⲩⲱ ⲛϥⲛⲁⲱⲥⲕ ⲁⲛ",
+      "english": "And instead of the bramble shall come up the cypress, and instead of the nettle shall come up the myrtle: and the Lord shall be for a name, and for an everlasting sign, and shall not fail.",
+      "source": "Isaiah 55",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        8.587
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲛⲟⲩⲛⲅ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17236,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "27520",
+    "egy_lemma": "jnnk",
+    "demo_num": "d128",
+    "demo_lemma": "ꜣnq",
+    "english": "[a plant (thyme?)]",
+    "german": "Konyza (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27520",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d128"
+  }
+}

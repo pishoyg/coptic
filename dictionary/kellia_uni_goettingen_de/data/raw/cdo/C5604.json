@@ -1,0 +1,671 @@
+{
+  "id": "C5604",
+  "forms": [
+    {
+      "id": "CF13183",
+      "orth": "ⲁϣⲁϩⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.79,
+        "rank": 856,
+        "count": 124
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6273",
+      "bibliography": "CD 24b-25a; KoptHWb 296; DELC 251b; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣϣⲟⲟⲡ ϩⲛⲁⲙⲛⲧⲉ ⲉⲥⲣⲓⲙⲉ ⲁⲩⲱ ⲥ**ⲁϣⲁϩⲟⲙ** ⲉϫⲙⲡⲉⲥⲥⲱⲙⲁ ⲉⲧⲛⲁⲛⲟⲩϥ · ⲉⲥϫⲱ ⲙⲙⲟⲥ",
+      "english": "and when it is in Amente it is wont to weep and sigh after its good body, saying,",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲗⲩⲡⲉⲓ ⲉⲩϣⲁⲛⲥⲟϣⲕ ϩⲓⲧⲛϩⲉⲛⲣⲱⲙⲉ ⲁⲗⲗⲁ ⲗⲩⲡⲏ ⲛⲅ**ⲁϣⲁϩⲟⲙ** · ⲉⲕϣⲁⲛⲣⲛⲟⲃⲉ ·",
+      "english": "Grieve not if any man insult thee before men, but grieve and sigh when thou committest a sin,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕ**ⲁϣⲁϩⲟⲙ** ⲉϫⲛⲧϩⲁⲏ ⲙⲡⲉⲕⲱⲛϩ · ϫⲉⲁⲥⲉⲓ ϩⲛⲟⲩϭⲉⲡⲏ ·",
+      "english": "and thou wilt sigh over the end of thy life, because it hath drawn nigh so speedily.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲓⲙⲉ",
+        21,
+        18.036
+      ],
+      [
+        "ⲉ",
+        88,
+        17.241
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.644
+      ],
+      [
+        "ⲗⲩⲡⲏ",
+        9,
+        16.346
+      ],
+      [
+        "ⲓ",
+        36,
+        15.406
+      ],
+      [
+        "ⲛ",
+        69,
+        15.18
+      ],
+      [
+        "ⲙⲛ",
+        34,
+        14.952
+      ],
+      [
+        "ⲁⲩⲱ",
+        40,
+        14.759
+      ],
+      [
+        "ϩⲉⲛ",
+        23,
+        14.691
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        10,
+        14.565
+      ],
+      [
+        "ⲛⲁ",
+        33,
+        13.867
+      ],
+      [
+        "ϩⲣⲁⲅⲟⲩⲏⲗⲡⲱⲧⲉⲡⲟⲩⲉ",
+        1,
+        13.644
+      ],
+      [
+        "ⲛⲧⲉⲟⲩⲱϣ",
+        1,
+        13.644
+      ],
+      [
+        "ⲧⲗⲩⲡ",
+        1,
+        13.644
+      ],
+      [
+        "ϩϫⲱⲓ",
+        1,
+        13.644
+      ],
+      [
+        "ϥ",
+        39,
+        13.424
+      ],
+      [
+        "ⲧⲁ",
+        14,
+        13.418
+      ],
+      [
+        "ⲁ",
+        34,
+        13.352
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        21,
+        12.688
+      ],
+      [
+        "ⲟⲩⲁⲥϥⲉ",
+        1,
+        12.644
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          42
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          14
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          6
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁϣⲁϩⲟⲙ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁϣⲁϩⲟⲙ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲁϩⲟⲙ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲏⲣ_4_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲁϣⲁϩⲟⲙ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϣⲧⲟⲣⲧⲣ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲕⲁϩ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲣⲙⲉⲓⲟⲟⲩⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ_b",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲛ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲅⲟⲩⲏⲗⲡⲱⲧⲉⲡⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲥⲁϣⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ϩⲉⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲟⲩ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          "ⲛ_1_post_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲙⲏⲣ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲡ_1_pre_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          "ⲙⲛ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲧⲟⲣⲧⲣ",
+          "ⲡⲉ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϣⲧⲟⲣⲧⲣ",
+          "ϣⲧⲟⲣⲧⲣ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          "ⲙⲛ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲕⲁϩ",
+          "ⲟⲩ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲕⲁϩ",
+          "ⲕⲉ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲕⲁϩ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ⲛ_2_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          "ⲙⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          "ϩⲉⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          "ⲣⲙⲉⲓⲟⲟⲩⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲣⲙⲉⲓⲟⲟⲩⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ⲉ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲣⲙⲉⲓⲟⲟⲩⲉ",
+          "ⲩ_4_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁϣⲁϩⲟⲙ_b",
+          "ⲡ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁϣⲁϩⲟⲙ",
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁϣⲁϩⲟⲙ_0_node",
+          "ⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ⲛ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲃⲱⲕ",
+          "ⲛⲁ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_2_post_ⲉ",
+          "ⲟⲛ_3_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ϩⲣⲁⲅⲟⲩⲏⲗⲡⲱⲧⲉⲡⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁϣⲁϩⲟⲙ",
+          "ⲩ_3_post_ⲥⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲁϣⲉ",
+          "ⲥⲁϣⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.78,
+      "rank": 738,
+      "count": 124
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C295",
+      "type": "cf",
+      "label": "sigh, groan"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "id": "C7569",
+  "forms": [
+    {
+      "id": "CF17197",
+      "orth": "ⲣϭⲁⲃϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7772,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8396",
+      "bibliography": "CD 805b; KoptHWb 446 Anm. 5; ChLCS 106a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲛⲏⲗⲓⲁⲥ ϩⲛⲧⲉⲣⲏⲙⲟⲥ · ⲙⲛⲧⲉⲭⲏⲣⲁ ⲉⲧϩⲛⲥⲉⲣⲉⲡⲧⲁ · ⲧⲁⲓ ⲉⲧⲉⲣⲉⲧⲙⲁⲥϯⲅⲝ ⲙⲡϩⲉⲃⲱⲱⲛ ⲙⲛⲧⲁⲛⲁⲅⲕⲏ ⲙⲡⲉϩⲕⲟ · ϩⲟⲣϣ ⲉϫⲱⲥ ⲁⲩⲱ ⲉⲥϩⲙⲡⲉϭⲣⲱⲱϩ ⲛϯϭⲟⲧ ⲙⲡⲉⲥ**ⲣϭⲁⲃϩⲏⲧ** ·",
+      "english": "Remember Elijah in the desert, and the widow in Zarephath, who notwithstanding the scourge of famine and the pressure of hunger which weighed heavily upon her, and the helplessness of her old age, never lost heart,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛ**ⲣϭⲁⲃϩⲏⲧ** ϣⲁⲕⲣϣⲙⲙⲟ ⲉⲡⲛⲟⲙⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "If thou become timid of heart thou makest thyself a stranger to the law of God.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲙⲙⲟ",
+        1,
+        15.139
+      ],
+      [
+        "ϭⲟⲧ",
+        1,
+        13.106
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        1,
+        10.987
+      ],
+      [
+        "ⲉⲧⲟⲟⲧ",
+        1,
+        9.768
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        9.101
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲕϣⲁⲛ_1_pre_ⲣϭⲁⲃϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲣϭⲁⲃϩⲏⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲕϣⲁⲛ_1_pre_ⲣϭⲁⲃϩⲏⲧ",
+          "ⲣϭⲁⲃϩⲏⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7315,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7572",
+      "label": "ϫⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "weak person"
+    },
+    {
+      "target": "C7574",
+      "label": "ϫⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "weak"
+    },
+    {
+      "target": "C7567",
+      "label": "ϭⲁⲃϩⲏⲧ",
+      "pos": "N",
+      "gloss": "craven, fearful"
+    },
+    {
+      "target": "C7566",
+      "label": "ϭⲃⲃⲉ",
+      "pos": "V",
+      "gloss": "become, be feeble, timid"
+    },
+    {
+      "target": "C7570",
+      "label": "ϭⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "weakness"
+    },
+    {
+      "target": "C7571",
+      "label": "ϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weak person"
+    },
+    {
+      "target": "C7573",
+      "label": "ϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weak"
+    },
+    {
+      "target": "C7568",
+      "label": "ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+      "pos": "N",
+      "gloss": "fear, cowardice"
+    },
+    {
+      "target": "C7575",
+      "label": "ⲙⲛⲧϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weakness, feebleness"
+    },
+    {
+      "target": "C7576",
+      "label": "ⲣϭⲱⲃ",
+      "pos": "V",
+      "gloss": "be weak, feeble"
+    }
+  ]
+}

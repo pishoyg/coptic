@@ -1,0 +1,45 @@
+{
+  "id": "C7930",
+  "forms": [
+    {
+      "id": "CF17926",
+      "orth": "ⲛⲧⲉⲓϭⲟⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "Genitivverbindung",
+    "tlapos": "Kompositum"
+  },
+  "senses": [
+    {
+      "id": "CS8812",
+      "bibliography": "CD 833a; KoptHWb 469; ChLCS 110a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7929",
+      "label": "ϭⲟⲧ",
+      "pos": "N",
+      "gloss": "sort, form; size, age"
+    },
+    {
+      "target": "C7931",
+      "label": "ⲁϣ ⲛϭⲟⲧ",
+      "pos": "N",
+      "gloss": "of which sort"
+    },
+    {
+      "target": "C7932",
+      "label": "ⲣⲧϭⲟⲧ",
+      "pos": "V",
+      "gloss": "be like"
+    }
+  ]
+}

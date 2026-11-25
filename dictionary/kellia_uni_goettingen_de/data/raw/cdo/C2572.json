@@ -1,0 +1,382 @@
+{
+  "id": "C2572",
+  "forms": [
+    {
+      "id": "CF6936",
+      "orth": "ⲛⲧⲟϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.85,
+        "rank": 109,
+        "count": 1712
+      }
+    },
+    {
+      "orth": "ⲛⲑⲟϥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.23,
+        "rank": 139,
+        "count": 783
+      }
+    },
+    {
+      "orth": "ⲛⲧⲁϥ",
+      "dialect": "A",
+      "id": "1209.1"
+    },
+    {
+      "orth": "ⲛⲧⲁϥ",
+      "dialect": "F",
+      "id": "1209.2"
+    },
+    {
+      "orth": "ⲛⲧⲁϥ",
+      "dialect": "L",
+      "id": "1209.3"
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "3. Pers.",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2953",
+      "bibliography": "(CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲑⲟϥ** ⲇⲉ ⲁϥⲉⲣϩⲏⲧⲥ ⲛⲉⲣⲁⲛⲁⲑⲉⲙⲁⲧⲓⲍⲓⲛ ⲛⲉⲙⲱⲣⲕ ϫⲉϯⲥⲱⲟⲩⲛ ⲙⲡⲁⲓⲣⲱⲙⲓ ⲁⲛ ⲉⲧⲉⲧⲉⲛϫⲱ ⲙⲙⲟϥ .",
+      "english": "But he began to curse, and to swear, 'I don't know this man of whom you speak!'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲧⲟϥ** ⲡⲉ ⲡⲁⲣⲭⲱⲛ ⲛⲧⲡⲟⲗⲓⲥ ·",
+      "english": "he was the Archon of the city.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲙⲡⲉ**ϥ**ⲧⲁⲙⲟϥ ϫⲉⲛⲛⲉϥϭⲓⲥⲓ ⲛϩⲏⲧ .",
+      "english": "As for him, he did not let him know it, lest he should become proud of heart.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉⲟⲛⲛⲟⲫⲣⲓⲟⲥ ⲡⲉ ⲡⲁⲣⲁⲛ · ⲁⲩⲱ ⲉⲓⲥ ⲥⲉ ⲛⲣⲟⲙⲡⲉ ϯϣⲟⲟⲡ ϩⲛϯⲉⲣⲏⲙⲓⲁ · ⲉⲓⲙⲟⲟϣⲉ ϩⲛⲛⲧⲟⲟⲩ ⲛⲧϩⲉ ⲛⲛⲉⲑⲏⲣⲓⲟⲛ · ⲁⲩⲱ ⲙⲡⲓⲛⲁⲩ ⲉⲣⲱⲙⲉ ⲉⲓⲥⲟⲟⲩⲛ ⲙⲙⲟ**ϥ** ·",
+      "english": "And he said unto me, 'Onnophrios is my name. And behold, I have lived in this desert for sixty years. I wander about in the mountains like the wild animals, and I never see any man who recognizeth me.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲉⲡⲉϥϩⲱⲃ ⲛⲁⲣⲱⲕϩ ϥⲛⲁϯⲟⲥⲓ ⲛⲑⲟϥ ⲇⲉ **ϥ**ⲛⲁⲛⲟϩⲉⲙ ⲡⲁⲓⲣⲏϯ ⲇⲉ ϩⲱⲥ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲟⲩⲭⲣⲱⲙ .",
+      "english": "If any man's work is burned, he will suffer loss, but he himself will be saved, but as through fire.",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲙⲉⲛ ⲙⲡⲟⲩϩⲉ ⲉⲣⲟϥ · ⲁⲗⲗⲁ ⲁⲩϩⲉ ⲉⲡⲉϥⲥⲁⲛⲇⲁⲗⲓⲟⲛ · ⲙⲛⲟⲩⲕⲁϩ ⲛⲃⲣⲣⲉ ϩⲣⲁⲓ ϩⲙⲡⲙⲁ ⲛⲧⲁ**ϥ**ⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲣⲟϥ ·",
+      "english": "and they could not find him, but they found his sandal, and the newly-dug ground in the place where he had gone down into the earth.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        1226,
+        32.882
+      ],
+      [
+        "ⲇⲉ",
+        642,
+        32.706
+      ],
+      [
+        "ⲁ",
+        423,
+        28.841
+      ],
+      [
+        "ⲛⲁ",
+        319,
+        28.585
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        134,
+        28.093
+      ],
+      [
+        "ⲡⲉ",
+        202,
+        27.891
+      ],
+      [
+        ".",
+        251,
+        27.209
+      ],
+      [
+        "ⲉⲧ",
+        213,
+        27.134
+      ],
+      [
+        "ⲛⲱ",
+        107,
+        26.239
+      ],
+      [
+        "ⲉϥⲉ",
+        106,
+        26.082
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        184,
+        25.329
+      ],
+      [
+        "ϫⲉ",
+        137,
+        25.109
+      ],
+      [
+        "ϧⲉⲧϧⲉⲧ",
+        9,
+        24.561
+      ],
+      [
+        "ⲛ",
+        169,
+        24.471
+      ],
+      [
+        "ⲙⲙⲁⲩⲁⲧ",
+        33,
+        24.451
+      ],
+      [
+        "ⲙ",
+        124,
+        24.124
+      ],
+      [
+        "ⲛⲉⲙ",
+        106,
+        24.104
+      ],
+      [
+        "ⲉ",
+        138,
+        24.021
+      ],
+      [
+        "ⲡ",
+        112,
+        23.719
+      ],
+      [
+        "ⲉⲑ",
+        56,
+        23.69
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        108,
+        24.751
+      ],
+      [
+        "ϥ",
+        1948,
+        21.194
+      ],
+      [
+        "ⲡⲉ",
+        733,
+        18.95
+      ],
+      [
+        "ⲉⲧ",
+        751,
+        18.785
+      ],
+      [
+        "ⲡ",
+        973,
+        18.165
+      ],
+      [
+        "ⲇⲉ",
+        547,
+        18.161
+      ],
+      [
+        "ⲁ",
+        757,
+        17.625
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        312,
+        17.49
+      ],
+      [
+        "ⲛⲁ",
+        590,
+        17.191
+      ],
+      [
+        "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+        143,
+        15.824
+      ],
+      [
+        "ⲉ",
+        520,
+        15.773
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        155,
+        15.668
+      ],
+      [
+        "ⲉⲛⲧ",
+        231,
+        15.637
+      ],
+      [
+        ".",
+        314,
+        15.33
+      ],
+      [
+        "ϫⲉ",
+        333,
+        15.173
+      ],
+      [
+        "ϩⲱⲱ",
+        121,
+        15.105
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        157,
+        14.745
+      ],
+      [
+        "ⲛ",
+        513,
+        14.706
+      ],
+      [
+        "ⲟⲛ",
+        120,
+        13.836
+      ],
+      [
+        "ⲟⲩ",
+        301,
+        13.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟⲛ_2_pre_ⲙⲁⲑⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲙⲁⲑⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲏⲥ_1_pre_ⲛⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟⲛ_2_pre_ⲙⲁⲑⲏⲧⲏⲥ",
+          "ⲟⲩ_2_pre_ⲙⲁⲑⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲙⲁⲑⲏⲧⲏⲥ",
+          "ⲙⲁⲑⲏⲧⲏⲥ_1_pre_ⲛⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲏⲥ_1_pre_ⲛⲧⲟϥ",
+          "ⲛⲧⲟϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 446.06,
+      "rank": 3,
+      "count": 70796
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 2979,
+      "count": 5
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2562",
+      "type": "cf",
+      "label": "Pers. Pron. 3. sg. f."
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2573",
+      "label": "ⲛⲧⲟϥ",
+      "pos": "PTC",
+      "gloss": "rather, but, what is more"
+    },
+    {
+      "target": "C2574",
+      "label": "ⲛⲧⲟϥ",
+      "pos": "PTC",
+      "gloss": "likewise, (or merely) again"
+    }
+  ],
+  "etym": {
+    "egy_num": "90020",
+    "egy_lemma": "jntf",
+    "english": "he (indepen. pron., 3rd per. masc. sing.)",
+    "german": "er [Selbst.Pron. sg.3.m.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/90020"
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "id": "C7917",
+  "forms": [
+    {
+      "id": "CF17900",
+      "orth": "ϭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3246,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲕⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2115,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ϭⲓⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2460,
+        "count": 20
+      }
+    },
+    {
+      "orth": "ϭⲉⲥ-",
+      "dialect": "S",
+      "id": "2623.3"
+    },
+    {
+      "orth": "ϫⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 638,
+        "count": 107
+      }
+    },
+    {
+      "orth": "ϫⲉⲥ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7627,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲥ",
+      "dialect": "F",
+      "id": "2623.6"
+    },
+    {
+      "orth": "ϭⲓⲥ-",
+      "dialect": "F",
+      "id": "2623.7"
+    },
+    {
+      "orth": "ⲕⲥ-",
+      "dialect": "L",
+      "id": "2623.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8797",
+      "bibliography": "CD 832ab; CED 337; KoptHWb 468; DELC 347b-348a; ChLCS 110a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ⲁⲡⲛⲟⲩⲧⲉ ⲕⲁϩⲉⲛⲙⲁⲉⲓⲛ ⲙⲛϩⲉⲛϣⲡⲏⲣⲉ ⲉⲩⲙⲏⲛ ⲉⲃⲟⲗ ϩⲙⲡⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ ϩⲙⲙⲁ ⲛⲓⲙ · ⲁⲩⲱ ϩⲉⲛⲙⲁⲉⲓⲛ ⲛⲑⲉⲣⲁⲛⲓⲁ ⲉⲩϣⲟⲟⲡ ⲛⲛⲉⲧⲛⲁⲡⲓⲥⲧⲉⲩⲉ ⲉⲡⲉⲕⲣⲁⲛ · ⲁⲩⲱ ⲧⲉⲓⲇⲱⲣⲉⲁ ⲛⲟⲩⲱⲧ ⲉⲧⲙⲏⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ · ϫⲓⲛϭⲟⲥ ⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ϣⲁ**ϭⲟⲥ** ·",
+      "english": "the more so because God hath made the (fame of the) wonders and miracles to go forth from thy martyrium into every place. And the wonders of healing exist for those who shall believe on thy name, and this selfsame gift cometh forth from thy martyrium and goeth from one end of the inhabited world to the other.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲩⲗⲏ ⲛⲧⲉⲩ**ϭⲟⲥ** ⲁⲩϫⲓ ⲛⲉⲩⲕⲗⲏⲣⲟⲥ ϩⲓⲡⲉⲕⲣⲟ ⲙⲡⲓⲟⲣⲇⲁⲛⲏⲥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛϩⲓⲉⲣⲓⲭⲱ ⲙⲡⲥⲁ ⲙⲡⲣⲏⲥ ⲛⲛⲙⲙⲁ ⲛϣⲁ",
+      "english": "Two tribes and half a tribe have received their inheritance beyond Jordan by Jericho from the south eastwards.",
+      "source": "Numbers 34",
+      "urn": "urn:cts:copticLit:ot.num.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡⲁⲅⲅⲉⲗⲟⲥ ⲙⲡϫⲟⲉⲓⲥ ⲉⲓ ⲉⲃⲟⲗ ⲁϥⲙⲟⲟⲩⲧ ⲉⲃⲟⲗ ϩⲛⲧⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛⲛⲁⲥⲥⲩⲣⲓⲟⲥ ⲙⲙⲛⲧϣⲙⲏⲛ ⲧⲃⲁ ⲟⲩ**ϭⲟⲥ** ⲁⲩⲧⲱⲟⲩⲛ ⲇⲉ ⲉϩⲧⲟⲟⲩ ⲉⲁⲩϩⲉ ⲉⲛⲥⲱⲙⲁ ⲧⲏⲣⲟⲩ ⲉⲩⲙⲟⲟⲩⲧ",
+      "english": "And the angel of the Lord went forth, and slew out of the camp of the Assyrians a hundred and eighty-five thousand: and they arose in the morning and found all these bodies dead.",
+      "source": "Isaiah 37",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:37",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲉ",
+        149,
+        27.794
+      ],
+      [
+        "ⲛ",
+        70,
+        22.979
+      ],
+      [
+        "ⲛⲁ",
+        46,
+        22.525
+      ],
+      [
+        "ⲛⲁⲕ:",
+        2,
+        21.695
+      ],
+      [
+        "ⲙ",
+        38,
+        21.327
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        40,
+        21.046
+      ],
+      [
+        "ⲟⲩ",
+        43,
+        21.033
+      ],
+      [
+        "ⲙⲁϩⲓ",
+        7,
+        20.466
+      ],
+      [
+        "ⲉ",
+        33,
+        20.15
+      ],
+      [
+        "ⲕ",
+        20,
+        20.094
+      ],
+      [
+        "ⲁϥϣⲁⲛ",
+        7,
+        20.056
+      ],
+      [
+        "ⲧⲁⲓ",
+        8,
+        20.012
+      ],
+      [
+        "ϥ",
+        36,
+        19.934
+      ],
+      [
+        "ⲧⲟⲩ",
+        9,
+        19.894
+      ],
+      [
+        "ⲛⲓ",
+        23,
+        19.789
+      ],
+      [
+        "ⲡⲓⲟⲥⲑⲉⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲗⲁⲧⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉⲛⲓⲅⲙⲁⲧⲓⲥⲧⲏⲥ",
+        1,
+        19.695
+      ],
+      [
+        ":ϫⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ϯⲑ",
+        1,
+        19.695
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧϣⲙⲏⲛ",
+        2,
+        16.691
+      ],
+      [
+        "ⲧⲃⲁ",
+        5,
+        16.675
+      ],
+      [
+        "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+        3,
+        15.198
+      ],
+      [
+        "ⲣⲟⲩⲧⲃⲁ",
+        1,
+        14.691
+      ],
+      [
+        "ⲛ",
+        26,
+        14.325
+      ],
+      [
+        "ⲛⲁⲇⲁⲣ",
+        1,
+        14.206
+      ],
+      [
+        "ⲙⲛⲧϣⲟⲙⲧⲉ",
+        1,
+        13.106
+      ],
+      [
+        "ⲟⲩ",
+        14,
+        13.057
+      ],
+      [
+        "ⲙⲁϩⲉ",
+        2,
+        12.873
+      ],
+      [
+        "ⲣⲟⲩ",
+        1,
+        11.843
+      ],
+      [
+        "ϣⲓⲏ",
+        1,
+        11.313
+      ],
+      [
+        "ⲙⲁⲣⲧⲏⲣⲓⲟⲛ",
+        1,
+        11.155
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        4,
+        10.728
+      ],
+      [
+        "ⲩ",
+        7,
+        10.647
+      ],
+      [
+        "ⲟⲩⲱϣⲥ",
+        1,
+        10.443
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        2,
+        10.335
+      ],
+      [
+        "ϣⲁ",
+        3,
+        9.516
+      ],
+      [
+        "ⲥⲟⲩ",
+        1,
+        9.406
+      ],
+      [
+        "ϩⲩⲗⲏ",
+        1,
+        9.292
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        9.238
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ϭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ϭⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϭⲟⲥ",
+          "ϭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϭⲟⲥ_0_node",
+          "ϥ_1_post_ϭⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϭⲟⲥ_0_node",
+          11
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          7
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲟⲥ",
+          8
+        ],
+        [
+          "ⲣⲱⲙⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲛ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲟⲙⲧⲉ_3_post_ⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲇⲁⲣ_4_post_ⲙⲛⲧϣⲟⲙⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲉ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲓⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱϣⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲙⲏⲛ_3_pre_ⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲟⲥ_0_node",
+          "ⲛ_1_post_ϭⲟⲥ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲟⲥ",
+          "ϭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲟⲥ",
+          "ϭⲟⲥ_0_node",
+          8
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          "ⲣⲱⲙⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϭⲟⲥ_0_node",
+          "ⲙⲛ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲣⲱⲙⲉ",
+          "ϣⲉ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_3_post_ⲣⲱⲙⲉ",
+          "ⲛ_1_post_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲥⲛⲁⲩ",
+          "ⲥⲛⲁⲩ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_pre_ϭⲟⲥ",
+          "ⲟⲩ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          "ⲥⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲩ_2_post_ⲛ",
+          "ⲙⲛⲧϣⲟⲙⲧⲉ_3_post_ⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲟⲙⲧⲉ_3_post_ⲥⲟⲩ",
+          "ⲛⲁⲇⲁⲣ_4_post_ⲙⲛⲧϣⲟⲙⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲉ_1_pre_ϭⲟⲥ",
+          "ⲟⲩ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          "ϣⲓⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲓⲏ_2_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲙⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲥ",
+          "ⲟⲩⲱϣⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ϭⲟⲥ",
+          "ⲙⲛⲧϣⲙⲏⲛ_3_pre_ⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲙⲏⲛ_3_pre_ⲧⲃⲁ",
+          "ⲛ_1_pre_ϭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲟⲥ",
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲁ_2_pre_ⲛ",
+          "ⲟⲩ_1_pre_ϭⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2887,
+      "count": 12
+    }
+  },
+  "etym": {
+    "egy_num": "854572",
+    "egy_lemma": "gs",
+    "demo_num": "d6922",
+    "demo_lemma": "gs",
+    "english": "page; half",
+    "german": "Seite; Hälfte",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854572",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6922"
+  }
+}

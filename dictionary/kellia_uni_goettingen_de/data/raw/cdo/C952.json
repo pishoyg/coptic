@@ -1,0 +1,155 @@
+{
+  "id": "C952",
+  "forms": [
+    {
+      "id": "CF3248",
+      "orth": "ⲉⲓⲣⲉ (ⲉ-)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲓⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 12.16,
+        "rank": 110,
+        "count": 1031
+      }
+    },
+    {
+      "orth": "ⲉⲓⲣⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 11.22,
+        "rank": 107,
+        "count": 1770
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1112",
+      "bibliography": "CD 83b; KoptHWb 51"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲧⲉⲛⲛⲁⲩ ⲱ ⲛⲁⲙⲉⲛⲣⲁϯ ϫⲉⲁⲡⲁⲓϩⲁⲅⲓⲟⲥ ⲛⲁⲗⲟⲩ ϣⲱⲡⲓ ⲉϥⲧⲉⲛⲑⲱⲛⲧ ⲉⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲉϥⲟⲛⲓ ⲙⲙⲱⲟⲩ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁⲡϭⲟⲉⲓⲥ ϫⲟⲥ ⲛⲛⲉϥⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲉϥⲟⲛⲓ ⲙⲙⲱⲟⲩ ϫⲉⲫⲏ ⲉⲧⲁⲣⲉϩ ⲉⲛⲁⲉⲛⲧⲟⲗⲏ ⲛⲓⲙⲏⲓⲛⲓ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲓⲁⲓⲧⲟⲩ ⲉϥⲉ**ⲁⲓⲧ**ⲟⲩ ϩⲱⲟⲩ .",
+      "english": "You see, my dearly beloved, a holy young man imitated the apostles and became like them, according to what the Lord said to his apostles, whom he resembled, ‘He who keeps my commandments will make all the signs that I have made.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲁ · ⲥⲟϣⲕ · ϥⲓ ϩⲁⲣⲟϥ ⲉⲕⲣⲟⲟⲩⲓ · ⲛⲅϩⲉⲗⲡⲓⲍⲉ ⲉⲡⲛⲟⲩⲧⲉ · **ϫⲉⲉϥⲉⲓⲣⲉ **ⲉ**ⲧⲉⲕⲛⲟϥⲣⲉ** ·",
+      "english": "If a man hath struck thee a blow, bear it at his hands, and rejoice ; set thy hope in God, and He will do what is good for thee.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩ**ⲉⲣ**ϩⲏⲧⲥ ⲛϯϩⲟ ⲉⲣⲟϥ ϫⲉⲛⲧⲉϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲑⲟϣ",
+      "english": "They began to beg him to depart from their region.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓϣⲁϫⲉ ⲙⲛⲡⲗⲁⲟⲥ ⲛϩⲧⲟⲟⲩⲉ ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁϥϩⲱⲛ ⲉⲧⲟⲟⲧⲙⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ ⲁⲩⲱ **ⲁⲓⲉⲓⲣⲉ **ⲉ**ϩⲧⲟⲟⲩⲉ** ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁϥϩⲱⲛ ⲉⲧⲟⲟⲧ",
+      "english": "And I spoke to the people in the morning, as he commanded me in the evening, and I did in the morning as it was commanded me.",
+      "source": "Ezekiel 24",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏ ⲉⲛⲁⲩⲟⲩⲱⲙ ⲛⲛⲓⲱⲓⲕ ⲛⲁⲩ**ⲉⲣ**ⲛϣⲟ ⲛⲣⲱⲙⲓ .",
+      "english": "Those who ate the loaves were five thousand men.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁϥⲉⲓⲣⲉ **ⲉ**** ⲛⲛⲟⲩϣⲟⲡⲥ ⲁ ⲁⲩⲥⲱ",
+      "english": "And he made a feast for them, and they ate and drank.",
+      "source": "Genesis 26",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C961",
+      "label": "ϫⲓⲛⲓⲣⲓ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C951",
+      "label": "ⲉⲓⲣⲉ",
+      "pos": "V",
+      "gloss": "act; become, befall; do; make, do; make, bear fruit; pass (time); make (total), amount to; make (price),\n              value at"
+    },
+    {
+      "target": "C960",
+      "label": "ⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C955",
+      "label": "ⲉⲓⲣⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "oblige"
+    },
+    {
+      "target": "C954",
+      "label": "ⲉⲓⲣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "be at work upon"
+    },
+    {
+      "target": "C953",
+      "label": "ⲉⲓⲣⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "do on behalf of, make into"
+    },
+    {
+      "target": "C957",
+      "label": "ⲉⲣ-",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C956",
+      "label": "ⲣⲁ",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C958",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "maker, doer"
+    },
+    {
+      "target": "C959",
+      "label": "ⲣⲙⲛⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "worker"
+    },
+    {
+      "target": "C962",
+      "label": "ⲧⲁϣⲉⲉⲓⲣⲉ",
+      "pos": "V",
+      "gloss": "do more, increase doing"
+    }
+  ]
+}

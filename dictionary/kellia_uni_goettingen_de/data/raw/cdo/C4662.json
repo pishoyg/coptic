@@ -1,0 +1,158 @@
+{
+  "id": "C4662",
+  "forms": [
+    {
+      "id": "CF31837",
+      "orth": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7193,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31836",
+      "orth": "ⲣⲉⲙⲛⲧⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5266",
+      "bibliography": "CD 441a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ϩⲱ ⲁⲛⲅⲟⲩ**ⲣⲙⲛⲧⲟⲟⲩ** ⲛⲧⲉⲕϩⲉ · ⲉⲓϣⲟⲟⲡ ϩⲙⲡⲉⲓϫⲁⲓⲉ · ⲉⲧⲃⲉⲛⲁⲛⲟⲃⲉ ·",
+      "english": "I also am a man of the mountain like unto thyself, and I am living in the desert because of my sins.'",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛⲅ",
+        2,
+        14.236
+      ],
+      [
+        "ϩⲱ",
+        2,
+        13.364
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        11.87
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        8.986
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲙⲛⲧⲟⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          "ⲇⲉ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          "ⲁⲛⲅ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲣⲙⲛⲧⲟⲟⲩ",
+          "ⲣⲙⲛⲧⲟⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6742,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4666",
+      "label": "ϩⲁⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountainous country"
+    },
+    {
+      "target": "C4663",
+      "label": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    },
+    {
+      "target": "C4664",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain woman"
+    },
+    {
+      "target": "C4665",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    },
+    {
+      "target": "C4661",
+      "label": "ⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain; monastic community, monastery; cemetery, necropolis; desert"
+    }
+  ]
+}

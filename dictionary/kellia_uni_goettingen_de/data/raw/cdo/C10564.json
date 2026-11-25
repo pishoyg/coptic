@@ -1,0 +1,205 @@
+{
+  "id": "C10564",
+  "forms": [
+    {
+      "id": "CF28475",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28479",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16418,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28477",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF28478",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲓⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28476",
+      "orth": "ⲥⲧⲣⲁϯⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12153,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28480",
+      "orth": "ⲥⲧⲣⲁⲧⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2842,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF28481",
+      "orth": "ⲥⲧⲣⲁⲧⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF28482",
+      "orth": "ⲥⲧⲣⲁⲧⲓⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14367",
+      "bibliography": "DDGLC",
+      "cu_ID": "7436"
+    },
+    {
+      "id": "CS14368",
+      "bibliography": "DDGLC",
+      "cu_ID": "1002"
+    },
+    {
+      "id": "CS14369",
+      "bibliography": "DDGLC",
+      "cu_ID": "7437"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲙⲓⲭⲁⲓⲁⲥ ⲛⲁϥ ϫⲉⲛⲧⲉⲓϩⲉ ⲁⲛ ϫⲉⲁⲛⲟⲕ ⲁⲛ ⲡⲉⲧϫⲱ ⲙⲙⲟⲟⲩ ⲁⲗⲗⲁ ⲡϫⲟⲉⲓⲥ ⲡⲉ ⲥⲱⲧⲙ ϭⲉ ⲉⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲓⲛⲁⲩ ⲉⲡϫⲟⲉⲓⲥ ⲉϥϩⲙⲟⲟⲥ ϩⲓϫⲙⲡⲉϥⲑⲣⲟⲛⲟⲥ ⲉⲣⲉⲧⲉ**ⲥⲧⲣⲁⲧⲉⲓⲁ** ⲧⲏⲣⲥ ⲛⲧⲡⲉ ⲁϩⲉⲣⲁⲧⲥ ϩⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ϩⲓⲥⲁ ⲡⲉⲓⲉ ⲁⲩⲱ ϩⲓⲥⲁ ⲡⲉⲙⲛⲧ ⲛⲁϩⲣⲙ ⲡⲛⲟⲩⲧⲉ",
+      "english": "And Michaias said, Not so, it is not I: hear the word of the Lord; it is not so. I saw the God of Israel sitting on his throne, and all the host of heaven stood about him on his right hand and on his left.",
+      "source": "I Kings 22",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲣⲟⲛⲟⲥ",
+        1,
+        12.638
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉ_1_pre_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲥⲧⲣⲁⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          "ⲥⲧⲣⲁⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲣⲁⲧⲉⲓⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲣⲁⲧⲉⲓⲁ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16024,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2797",
+    "grl_lemma": "στρατιά",
+    "grl_meaning": "army",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1652b"
+  }
+}

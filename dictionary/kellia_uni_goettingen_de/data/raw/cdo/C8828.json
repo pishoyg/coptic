@@ -1,0 +1,84 @@
+{
+  "id": "C8828",
+  "forms": [
+    {
+      "id": "CF21281",
+      "orth": "ⲇⲟⲣⲕⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21282",
+      "orth": "ⲇⲟⲣⲕⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21283",
+      "orth": "ⲇⲟⲣⲕⲁⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10621",
+      "bibliography": "DDGLC",
+      "cu_ID": "797"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲙⲙⲁⲩ",
+        1,
+        19.013
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        1,
+        12.667
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        9.928
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "etym": {
+    "grl_ID": "2480",
+    "grl_lemma": "δορκάς",
+    "grl_meaning": "roe (Cervus capreolus), gazelle (Antilope dorkas)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 445b"
+  }
+}

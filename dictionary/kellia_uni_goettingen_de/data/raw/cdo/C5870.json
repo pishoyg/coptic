@@ -1,0 +1,72 @@
+{
+  "id": "C5870",
+  "forms": [
+    {
+      "id": "CF31963",
+      "orth": "ⲥⲁⲃⲃⲁⲧ ϣⲏⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31962",
+      "orth": "ⲥⲁⲃⲃⲁⲧⲟⲛ ϣⲏⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6552",
+      "bibliography": "CD 563b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5867",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small person, thing, quantity"
+    },
+    {
+      "target": "C5869",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small, few, young, humble"
+    },
+    {
+      "target": "C5872",
+      "label": "ϣⲏⲙ ϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "little by little, gradually"
+    },
+    {
+      "target": "C5871",
+      "label": "ⲕⲟⲩⲓ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "little child"
+    },
+    {
+      "target": "C5874",
+      "label": "ⲙⲛⲧⳉⲏⲙ",
+      "pos": "N",
+      "gloss": "smallness, childhood"
+    },
+    {
+      "target": "C5868",
+      "label": "ⲛⲟⲩϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "a little"
+    },
+    {
+      "target": "C5873",
+      "label": "ⲣϣⲏⲙ ϣⲏⲙ",
+      "pos": "V",
+      "gloss": "make little"
+    }
+  ]
+}

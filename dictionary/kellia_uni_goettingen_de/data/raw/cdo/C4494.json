@@ -1,0 +1,114 @@
+{
+  "id": "C4494",
+  "forms": [
+    {
+      "id": "CF10944",
+      "orth": "ⲧⲣⲱⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9210,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5082",
+      "bibliography": "CD 430b; KoptHWb 243; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲟⲩⲕⲟⲩⲓ ⲇⲉ ⲁⲩⲧⲏⲩ ⲛ**ⲧⲣⲱⲙ** ϩⲓⲟⲩⲉ ⲉϩⲟⲩⲛ ⲉϩⲣⲁⲛ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲉⲩⲣⲁⲕⲩⲗⲱⲛ .",
+      "english": "But before long, a stormy wind beat down from shore, which is called Euroclydon.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲣϩⲱⲧ ⲇⲉ ⲁϥⲱⲃϣ . ⲁⲩ**ⲧⲣⲱⲙ** ⲛⲧⲏⲩ ⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲧⲗⲓⲙⲛⲏ ⲁⲩϣⲧⲟⲣⲧⲣ ⲇⲉ ⲁⲩⲱ ⲁⲩϭⲓⲛⲇⲩⲛⲉⲩⲉ .",
+      "english": "But as they sailed, he fell asleep. A wind storm came down on the lake, and they were taking on dangerous amounts of water.",
+      "source": "42_Luke_8",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲏⲩ",
+        3,
+        17.031
+      ],
+      [
+        "ⲉϩⲣⲁ",
+        1,
+        13.155
+      ],
+      [
+        "ⲱⲃϣ",
+        1,
+        11.667
+      ],
+      [
+        "ⲟⲩⲉ",
+        1,
+        11.626
+      ],
+      [
+        "ϩⲓ",
+        1,
+        8.231
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        7.678
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        7.408
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8775,
+      "count": 2
+    }
+  }
+}

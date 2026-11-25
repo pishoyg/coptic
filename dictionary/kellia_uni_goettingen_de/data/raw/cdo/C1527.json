@@ -1,0 +1,63 @@
+{
+  "id": "C1527",
+  "forms": [
+    {
+      "id": "CF4487",
+      "orth": "ϯⲕⲱϩⲧ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4488",
+      "orth": "ϯ ⲡⲕⲱϩⲧ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1785",
+      "bibliography": "CD 133b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1528",
+      "label": "ϫⲓⲕⲱϩⲧ-",
+      "pos": "V",
+      "gloss": "take, undergo fire"
+    },
+    {
+      "target": "C1524",
+      "label": "ⲕⲱϩⲧ",
+      "pos": "N",
+      "gloss": "fire"
+    },
+    {
+      "target": "C1525",
+      "label": "ⲕⲱϩⲧ",
+      "pos": "N",
+      "gloss": "fiery"
+    },
+    {
+      "target": "C1526",
+      "label": "ⲣⲕⲱϩⲧ-",
+      "pos": "V",
+      "gloss": "be on fire"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "C12046",
+  "forms": [
+    {
+      "id": "CF33053",
+      "orth": "ϩⲉⲧⲃⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17046",
+      "bibliography": "CD 724a; KoptHWB 397"
+    },
+    {
+      "id": "CS17047",
+      "bibliography": "CD 724a; KoptHWB 397"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6927",
+      "label": "ϩⲁⲧⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "slaughter"
+    },
+    {
+      "target": "C6924",
+      "label": "ϩⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "kill"
+    },
+    {
+      "target": "C6925",
+      "label": "ϩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "slaughter, murder"
+    },
+    {
+      "target": "C6926",
+      "label": "ⲣⲉϥϩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "slayer, murderer"
+    }
+  ]
+}

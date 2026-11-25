@@ -1,0 +1,304 @@
+{
+  "id": "C7103",
+  "forms": [
+    {
+      "id": "CF16264",
+      "orth": "ϫⲉⲃⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1511,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7837",
+      "bibliography": "CD 760a; KoptHWb 414; DELC 324a; ChLCS 100b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲧⲉⲙⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧⲥ ⲛϫⲉⲡⲉⲥ**ϫⲉⲃⲥ** .",
+      "english": "and her abundant scum may not come forth of her.",
+      "source": "26_Ezechiel_24",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲓⲥϫⲉⲅⲁⲣ ⲙⲙⲟⲛ ⲟⲩⲥϩⲓⲙⲓ ⲛⲁϩⲉⲃⲥϫⲱⲥ ⲓⲉ ⲙⲁⲣⲉⲥϧⲟⲕϩϥ ⲓⲥϫⲉⲟⲩϣⲱϣ ⲡⲉ ⲉⲟⲩⲥϩⲓⲙⲓ ⲉ**ϫⲉⲃⲥ**ϫⲱⲥ ⲓⲉ ⲉϧⲟⲕϩϥ ⲓⲉ ⲙⲁⲣⲉⲥϩⲉⲃⲥϫⲱⲥ .",
+      "english": "For if a woman is not covered, let her also be shorn. But if it is shameful for a woman to be shorn or shaved, let her be covered.",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲏⲡⲡⲉ ⲥⲉⲛⲁⲣⲱⲕϩ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲗⲉⲃϣ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲟⲩⲭⲣⲱⲙ ⲟⲩⲟϩ ⲛⲛⲟⲩϣⲛⲟϩⲉⲙ ⲛⲧⲟⲩⲯⲩⲭⲏ ⲉⲃⲟⲗϧⲉⲛ ⲟⲩϣⲁϩ ϫⲉⲥⲉⲛⲧⲉ ⲛϫⲉϩⲁⲛ**ϫⲉⲃⲥ** ⲛⲭⲣⲱⲙ ϩⲉⲙⲥⲓ ϩⲓϫⲱⲟⲩ .",
+      "english": "Behold, they all shall be burnt up as sticks in the fire; neither shall they at all deliver their life from the flame. Because thou hast coals of fire, sit thou upon them;",
+      "source": "23_Isaias_47",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:47",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲉⲃⲥ_0_node",
+          25
+        ],
+        [
+          "ⲛ_1_post_ϫⲉⲃⲥ",
+          12
+        ],
+        [
+          "ⲭⲣⲱⲙ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ϫⲱ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲓⲉ_3_post_ϧⲟⲕϩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϫⲉⲃⲥ",
+          2
+        ],
+        [
+          "ϧⲟⲕϩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_pre_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          ":_2_post_ϣⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲁϩ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϫⲉⲃⲥ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲉⲃⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲁϥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲭⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ϫⲱⲥ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϧⲟⲕϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲉⲃⲥ_0_node",
+          "ⲛ_1_post_ϫⲉⲃⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϫⲉⲃⲥ",
+          "ⲭⲣⲱⲙ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϫⲉⲃⲥ_0_node",
+          "ϫⲱ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ϫⲱ_1_post_ϫⲉⲃⲥ",
+          "ⲥ_2_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϫⲱ",
+          "ⲓⲉ_3_post_ϧⲟⲕϩ",
+          1
+        ],
+        [
+          "ⲓⲉ_3_post_ϧⲟⲕϩ",
+          "ⲉ_1_post_ϫⲉⲃⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϫⲉⲃⲥ",
+          "ϧⲟⲕϩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_pre_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ϫⲉⲃⲥ",
+          "ⲇⲉ_1_pre_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲉⲃⲥ_0_node",
+          ":_2_post_ϣⲁϩ",
+          1
+        ],
+        [
+          ":_2_post_ϣⲁϩ",
+          "ⲟⲩ_2_post_ϣⲁϩ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲉⲃⲥ",
+          "ϩⲁⲛ_1_pre_ϫⲉⲃⲥ",
+          2
+        ],
+        [
+          "ϫⲉⲃⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲉⲃⲥ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ϣⲁϥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ⲭⲣⲱⲙ_2_post_ⲛ",
+          "ⲛ_3_post_ⲭⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲉⲃⲥ_0_node",
+          "ϫⲱⲥ_1_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ϫⲱⲥ_1_post_ϫⲉⲃⲥ",
+          "ⲓⲉ_3_post_ϧⲟⲕϩ",
+          1
+        ],
+        [
+          "ϧⲟⲕϩ_2_post_ⲉ",
+          "ϥ_3_post_ϧⲟⲕϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.28,
+      "rank": 1331,
+      "count": 24
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7102",
+      "label": "ϫⲃⲃⲥ",
+      "pos": "N",
+      "gloss": "coal"
+    },
+    {
+      "target": "C7104",
+      "label": "ⲣϫⲃⲃⲥ",
+      "pos": "V",
+      "gloss": "become charcoal"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "C1993",
+  "forms": [
+    {
+      "id": "CF5645",
+      "orth": "ⲙⲟⲩⲣ (ⲉϩⲟⲩⲛ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2314",
+      "bibliography": "CD 181b; KoptHWb 99; ChLCS 27a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϩⲟⲙⲓⲗⲓⲁ ⲉⲁϥⲧⲁⲩⲟϥ ⲛϭⲓⲡⲣⲟⲕⲗⲟⲥ ⲡⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲕⲩⲍⲓⲕⲟⲥ ϩⲛⲧⲛⲟϭ ⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲕⲱⲛⲥⲧⲁⲛⲧⲓⲛⲟⲩⲡⲟⲗⲓⲥ ⲉϥⲙⲙⲁⲩ ⲛϭⲓⲛⲉⲥⲧⲟⲣⲓⲟⲥ · ⲡϩⲁⲓⲣⲉⲧⲓⲕⲟⲥ ⲉⲧⲃⲉⲡⲉⲇⲟⲅⲙⲁ ⲉⲧⲥⲏϣ **ⲉⲛⲁⲙⲟⲩⲣ **ⲉϩⲟⲩⲛ**** ⲉⲡⲉϩⲙⲉ ⲛϩⲟⲟⲩ ⲉⲧⲟⲩⲁⲁⲃ · ◈ — ◈ — ◈ — ◈",
+      "english": "THE HOMILY WHICH PROKLOS, BISHOP OF CYZICUS, PRONOUNCED IN THE GREAT CHURCH OF CONSTANTINOPLE, WHEN NESTORIUS THE HERETIC WAS PRESENT, CONCERNING HIS CONTEMPTIBLE DOGMA, ON THE SUNDAY WHICH PRECEDED THE HOLY FORTY DAYS.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1997",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1998",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1996",
+      "label": "ⲙⲁ ⲙⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C2000",
+      "label": "ⲙⲁⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C1999",
+      "label": "ⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C2001",
+      "label": "ⲙⲁⲣⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bandage(?)"
+    },
+    {
+      "target": "C2003",
+      "label": "ⲙⲟⲣⲥ",
+      "pos": "N",
+      "gloss": "binding, restriction (of fast); bundle, girdle (used as) purse"
+    },
+    {
+      "target": "C1991",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "bind, gird, tie; bind, oblige (by oath), adjure; bind"
+    },
+    {
+      "target": "C1992",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "band, girth, strap"
+    },
+    {
+      "target": "C1995",
+      "label": "ⲙⲟⲩⲣ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "to be spoiling for a fight, be at enmity with"
+    },
+    {
+      "target": "C1994",
+      "label": "ⲙⲟⲩⲣ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "obligation, fast"
+    },
+    {
+      "target": "C2002",
+      "label": "ⲙⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "chain, bond, joint"
+    }
+  ]
+}

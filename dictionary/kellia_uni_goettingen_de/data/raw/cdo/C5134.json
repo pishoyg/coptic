@@ -1,0 +1,178 @@
+{
+  "id": "C5134",
+  "forms": [
+    {
+      "id": "CF12233",
+      "orth": "ⲟⲩⲣⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5264,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5765",
+      "bibliography": "CD 490a; CDC 76a; CED 215; KoptHWb 276; DELC 236b-237a; ChLCS 68b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲉⲩⲫⲣⲁⲛⲉ ⲧⲏⲣϥ ⲉϥⲧⲣⲉϣⲣⲱϣ ⲛⲧϩⲉ ⲛⲛⲉⲓ**ⲟⲩⲣⲧ** ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 3 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:20-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱϭⲃ",
+        1,
+        14.791
+      ],
+      [
+        "ϩⲣⲏⲣⲉ",
+        1,
+        13.74
+      ],
+      [
+        "ϩⲓⲉⲣⲓⲭⲱ",
+        1,
+        12.765
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        12.641
+      ],
+      [
+        "ϩⲁⲡⲥ",
+        1,
+        12.448
+      ],
+      [
+        "ⲕⲗⲟⲙ",
+        1,
+        11.398
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        10.464
+      ],
+      [
+        "ⲛ",
+        7,
+        10.231
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        10.017
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.234
+      ],
+      [
+        "ϣⲉ",
+        1,
+        9.182
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        8.467
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.516
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.074
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.146
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲣⲧ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4846,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5135",
+      "label": "ⲙⲟⲩⲃⲉⲣⲧ",
+      "pos": "N",
+      "gloss": "rose water"
+    },
+    {
+      "target": "C5133",
+      "label": "ⲟⲩⲣⲧ",
+      "pos": "N",
+      "gloss": "rose"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1451",
+    "demo_lemma": "wrṱ",
+    "english": "Rose [as a mask]; Rose [as Fem.] (Altiran. *vrda-)",
+    "german": "Rose [als Mask.]; Rose [als Fem.] (altiran. *vrda-)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1451"
+  }
+}

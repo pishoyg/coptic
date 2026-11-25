@@ -1,0 +1,241 @@
+{
+  "id": "C7568",
+  "forms": [
+    {
+      "id": "CF17195",
+      "orth": "ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5232,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8395",
+      "bibliography": "CD 805ab; ChLCS 106a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲧ**ⲙⲛⲧϭⲁⲃϩⲏⲧ** · ⲙⲟϩⲕ ⲛⲗⲟⲓϭⲉ · ⲙⲙⲛⲧⲣϥϫⲛⲁⲁⲩ · ϩⲓⲙⲛⲧⲁⲧⲛⲁϩⲧⲉ ϩⲓⲙⲛⲧⲁⲙⲉⲗⲏⲥ · ϣⲁⲛⲧⲉⲕⲱϫⲛ ·",
+      "english": "Timidity of heart filleth thee with excuses for sloth, and unbelief, and carelessness, until thou art destroyed.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲁϥⲧⲱⲃⲁϩ ⲅⲁⲣ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧⲣⲉϥϥⲓ ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲛⲧ**ⲙⲛⲧϭⲁⲃϩⲏⲧ** .",
+      "english": "For he had entreated the Lord to take fear away from him.",
+      "source": "Apophthegmata Patrum Sahidic 035",
+      "urn": "urn:cts:copticLit:ap.35.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲱⲕ ⲟⲩⲛ ⲙⲙⲟⲕ ⲛⲅⲣϫⲱⲱⲣⲉ ⲁϩⲣⲟⲕ ⲙⲛⲧ**ⲙⲛⲧϭⲁⲃϩⲏⲧ** ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ ·",
+      "english": "Be thou of good cheer then, play the man; what hast thou, to do with the sluggishness of the Devil?",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟϩ",
+        1,
+        16.013
+      ],
+      [
+        "ⲁϩⲣⲟ",
+        1,
+        11.728
+      ],
+      [
+        "ⲇⲓⲁⲃⲟⲗⲟⲥ",
+        1,
+        10.516
+      ],
+      [
+        "ⲧ",
+        4,
+        10.071
+      ],
+      [
+        "ⲕ",
+        3,
+        9.607
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.399
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        8.987
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        8.412
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.376
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        5.779
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧϭⲁⲃϩⲏⲧ_0_node",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+          "ⲙⲛⲧϭⲁⲃϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧϭⲁⲃϩⲏⲧ_0_node",
+          "ⲙ_1_post_ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧϭⲁⲃϩⲏⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4813,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7572",
+      "label": "ϫⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "weak person"
+    },
+    {
+      "target": "C7574",
+      "label": "ϫⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "weak"
+    },
+    {
+      "target": "C7567",
+      "label": "ϭⲁⲃϩⲏⲧ",
+      "pos": "N",
+      "gloss": "craven, fearful"
+    },
+    {
+      "target": "C7566",
+      "label": "ϭⲃⲃⲉ",
+      "pos": "V",
+      "gloss": "become, be feeble, timid"
+    },
+    {
+      "target": "C7570",
+      "label": "ϭⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "weakness"
+    },
+    {
+      "target": "C7571",
+      "label": "ϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weak person"
+    },
+    {
+      "target": "C7573",
+      "label": "ϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weak"
+    },
+    {
+      "target": "C7575",
+      "label": "ⲙⲛⲧϭⲱⲃ",
+      "pos": "N",
+      "gloss": "weakness, feebleness"
+    },
+    {
+      "target": "C7569",
+      "label": "ⲣϭⲁⲃϩⲏⲧ",
+      "pos": "V",
+      "gloss": "to lose heart"
+    },
+    {
+      "target": "C7576",
+      "label": "ⲣϭⲱⲃ",
+      "pos": "V",
+      "gloss": "be weak, feeble"
+    }
+  ]
+}

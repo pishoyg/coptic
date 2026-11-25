@@ -1,0 +1,327 @@
+{
+  "id": "C1817",
+  "forms": [
+    {
+      "id": "CF5230",
+      "orth": "ⲁⲧⲙⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2847,
+        "count": 15
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2120",
+      "bibliography": "CD 160a; KoptHWb 87; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲡⲉ ⲡⲣⲣⲟ ⲛ**ⲁⲧⲙⲟⲩ** ·",
+      "english": "for I am the Immortal King.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲅⲁⲣ ⲟⲩ**ⲁⲧⲙⲟⲩ** ⲧⲉ",
+      "english": "(For righteousness is immortal:)",
+      "source": "Wisdom 1",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲓ ⲙⲡⲉⲓⲁⲧϣⲓⲧϥ · ⲡⲁⲧϣⲡϩⲓⲥⲉ ⲁϥϣⲡϩⲓⲥⲉ · ⲡ**ⲁⲧⲙⲟⲩ** ⲁϥⲙⲟⲩ · ⲡⲁⲙⲡⲏⲩⲉ ⲁⲩⲧⲟⲙⲥϥ ·",
+      "english": "and He Who was infinite had been measured, and He Who was impassible had endured sufferings, and He Who was immortal had died, and He Who was in the heavens had been buried.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲓⲛⲧ",
+        1,
+        16.691
+      ],
+      [
+        "ⲡⲃⲛ",
+        1,
+        16.691
+      ],
+      [
+        "ⲙⲉⲛⲧⲟⲓⲅⲉ",
+        1,
+        14.106
+      ],
+      [
+        "ⲛⲟϭⲥ",
+        1,
+        13.691
+      ],
+      [
+        "ϫⲓⲥⲁⲣⲝ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛⲩⲙⲫⲓⲟⲥ",
+        1,
+        13.106
+      ],
+      [
+        "ϥ",
+        17,
+        12.877
+      ],
+      [
+        "ⲡⲉ",
+        10,
+        12.567
+      ],
+      [
+        "ⲅⲁⲣ",
+        5,
+        11.738
+      ],
+      [
+        "ϫⲓϯⲡⲉ",
+        1,
+        11.406
+      ],
+      [
+        "ⲛ",
+        14,
+        11.324
+      ],
+      [
+        "ⲗⲟⲅⲟⲥ",
+        1,
+        10.714
+      ],
+      [
+        "ⲡ",
+        10,
+        10.556
+      ],
+      [
+        "ϩⲁⲡⲥ",
+        1,
+        10.541
+      ],
+      [
+        "ϣⲡϩⲓⲥⲉ",
+        1,
+        10.334
+      ],
+      [
+        "ⲣⲣⲟ",
+        3,
+        10.305
+      ],
+      [
+        "ⲁ",
+        7,
+        9.559
+      ],
+      [
+        "ⲧ",
+        5,
+        9.13
+      ],
+      [
+        "ϭⲱⲗⲡ",
+        1,
+        9.129
+      ],
+      [
+        "ⲙⲟⲩ",
+        2,
+        8.836
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲙⲟⲩ_0_node",
+          15
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲧⲙⲟⲩ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "..._1_post_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉⲛⲧⲟⲓⲅⲉ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲁⲧⲙⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲁⲧⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧⲙⲟⲩ_0_node",
+          "..._1_post_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉⲛⲧⲟⲓⲅⲉ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲟⲩ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲁⲧⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧⲙⲟⲩ_0_node",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲧⲙⲟⲩ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲁⲧⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲙⲟⲩ",
+          "ⲁⲧⲙⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2521,
+      "count": 15
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1814",
+      "label": "ϭⲓⲛⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "manner of dying, death"
+    },
+    {
+      "target": "C1818",
+      "label": "ⲙⲛⲧⲁⲧⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deathlessness, immortality"
+    },
+    {
+      "target": "C1809",
+      "label": "ⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "die"
+    },
+    {
+      "target": "C1810",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "death"
+    },
+    {
+      "target": "C1811",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1816",
+      "label": "ⲡⲁϣⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "half-dead"
+    },
+    {
+      "target": "C1815",
+      "label": "ⲣⲉϥⲓⲣⲓ ⲙⲫⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1813",
+      "label": "ⲣⲉϥⲙⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "dead person, thing"
+    },
+    {
+      "target": "C1812",
+      "label": "ⲣⲉϥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "dead, mortal"
+    }
+  ]
+}

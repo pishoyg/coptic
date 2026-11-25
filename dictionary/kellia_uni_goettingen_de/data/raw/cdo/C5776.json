@@ -1,0 +1,164 @@
+{
+  "id": "C5776",
+  "forms": [
+    {
+      "id": "CF13544",
+      "orth": "ϣⲱⲃϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9351,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲱⲟⲩϩ",
+      "dialect": "S",
+      "id": "1870.1"
+    },
+    {
+      "orth": "ϣⲟⲃϩ⸗",
+      "dialect": "S",
+      "id": "1870.2"
+    },
+    {
+      "orth": "ϣⲟⲃϩ†",
+      "dialect": "S",
+      "id": "1870.3"
+    },
+    {
+      "orth": "ϣⲱⲃϩ",
+      "dialect": "B",
+      "id": "1870.4"
+    },
+    {
+      "orth": "ϣⲱⲡϩ",
+      "dialect": "B",
+      "id": "1870.5"
+    },
+    {
+      "orth": "ϣⲱϩⲉⲃ",
+      "dialect": "B",
+      "id": "1870.6"
+    },
+    {
+      "orth": "ϣⲱϩⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13144,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲱⲃⳉ",
+      "dialect": "A",
+      "id": "1870.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6454",
+      "bibliography": "CD 554b-555a; CED 238; KoptHWb 305; DELC 258a; ChLCS 75b-76a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩ**ϣⲱⲃϩ** ⲛϭⲓⲛⲣⲱⲙⲉ ϩⲛⲟⲩⲛⲟϭ ⲛⲕⲁⲩⲙⲁ ⲁⲩϫⲓⲟⲩⲁ ⲉⲡⲣⲁⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉⲧⲉⲟⲩⲛⲧϥ ⲧⲉⲝⲟⲩⲥⲓⲁ ⲛⲛⲉⲡⲗⲩⲅⲏ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲙⲡⲟⲩⲙⲉⲧⲁⲛⲟⲉⲓ ⲉⲧⲣⲉⲩϯⲉⲟⲟⲩ ⲛⲁϥ .",
+      "english": "People were scorched with great heat, and people blasphemed the name of God who has the power over these plagues. They didn't repent and give him glory.",
+      "source": "66_Revelation_16",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲙⲉϩϥⲧⲟⲟⲩ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲡⲱϩⲧ ⲛⲧⲉϥⲫⲓⲁⲗⲏ ⲉϫⲙⲡⲣⲏ ⲁⲩⲱ ⲁⲩϯ ⲛⲁϥ ⲉⲧⲣⲉϥ**ϣⲱⲃϩ** ⲛⲛⲣⲱⲙⲉ ϩⲛⲟⲩⲕⲱϩⲧ .",
+      "english": "The fourth poured out his bowl on the sun, and it was given to him to scorch men with fire.",
+      "source": "66_Revelation_16",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        7.664
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8920,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 12582,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d5906",
+    "demo_lemma": "šwḥ",
+    "english": "[hot wind]",
+    "german": "austrocknen, verdorren",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5906"
+  }
+}

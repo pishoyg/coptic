@@ -1,0 +1,906 @@
+{
+  "id": "C1857",
+  "forms": [
+    {
+      "id": "CF5349",
+      "orth": "ⲙⲕⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.65,
+        "rank": 516,
+        "count": 260
+      }
+    },
+    {
+      "orth": "ⲙⲕⲁϩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.92,
+        "rank": 479,
+        "count": 163
+      }
+    },
+    {
+      "orth": "ⲙⲟⲕϩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.06,
+        "rank": 688,
+        "count": 168
+      }
+    },
+    {
+      "orth": "ⲙⲟⲭϩ†",
+      "dialect": "S",
+      "id": "704.2"
+    },
+    {
+      "orth": "ⲉⲙⲕⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1639,
+        "count": 21
+      }
+    },
+    {
+      "orth": "ⲙⲟⲕϩ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.66,
+        "rank": 941,
+        "count": 56
+      }
+    },
+    {
+      "orth": "ⲙⲕⲁϩ",
+      "dialect": "A",
+      "id": "704.5"
+    },
+    {
+      "orth": "ⲙⲁⲕϩ†",
+      "dialect": "A",
+      "id": "704.6"
+    },
+    {
+      "orth": "ⲙⲁⲭϩ†",
+      "dialect": "A",
+      "id": "704.7"
+    },
+    {
+      "orth": "ⲙⲁⲭ†",
+      "dialect": "A",
+      "id": "704.8"
+    },
+    {
+      "orth": "ⲙⲕⲉϩ",
+      "dialect": "F",
+      "id": "704.9"
+    },
+    {
+      "orth": "ⲉⲙⲕⲉϩ",
+      "dialect": "F",
+      "id": "704.10"
+    },
+    {
+      "orth": "ⲙⲁⲕϩ†",
+      "dialect": "F",
+      "id": "704.11"
+    },
+    {
+      "orth": "ⲙⲁⲭ†",
+      "dialect": "L",
+      "id": "704.12"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2164",
+      "bibliography": "CD 163ab; KoptHWb 90; ChLCS 25a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲱⲗⲓ ⲛⲉⲙⲁϥ ⲙⲡⲉⲧⲣⲟⲥ ⲛⲉⲙⲓⲁⲕⲱⲃⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϣⲑⲟⲣⲧⲉⲣ ⲟⲩⲟϩ ⲛⲉⲣ**ⲙⲕⲁϩ** ⲛϩⲏⲧ .",
+      "english": "He took with him Peter, James, and John, and began to be greatly troubled and distressed.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲓⲱⲛⲁ ϫⲉⲉⲛⲉⲁⲕ**ⲙⲕⲁϩ** ⲛϩⲏⲧ ⲛⲧⲟⲕ ⲉⲙⲁⲧⲉ :",
+      "english": "And the Lord said to Jonas, Art thou very much grieved?",
+      "source": "Jonah Chapter 4 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲡϩⲏⲧ ⲙⲡⲟⲩⲣⲟ **ⲙⲕⲁϩ** ⲉⲑⲃⲉⲛⲓⲁⲛⲁⲩϣ ⲛⲉⲙⲛⲏ ⲉⲑⲣⲟⲧⲉⲃ ⲛⲉⲙⲁϥ ⲙⲡⲉϥⲟⲩⲱϣ ⲉϥⲟϫⲥ .",
+      "english": "The king was exceedingly sorry, but for the sake of his oaths, and of his dinner guests, he didn't wish to refuse her.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϭⲱϣⲧ ⲉϩⲟⲩⲛ ⲉϩⲣⲁⲩ ϩⲛⲟⲩⲟⲣⲅⲏ ⲉϥ**ⲙⲟⲕϩ** ⲛϩⲏⲧ ⲉϫⲙⲡⲧⲱⲙ ⲛϩⲏⲧ ⲙⲡⲉⲩϩⲏⲧ ⲡⲉϫⲁϥ ⲙⲡⲣⲱⲙⲉ ϫⲉⲥⲟⲩⲧⲛⲧⲉⲕϭⲓϫ ⲉⲃⲟⲗ ⲁϥⲥⲟⲩⲧⲱⲛⲥ ⲁⲩⲱ ⲁⲥⲗⲟ ⲛϭⲓⲧⲉϥϭⲓϫ .",
+      "english": "When he had looked around at them with anger, being grieved at the hardening of their hearts, he said to the man, 'Stretch out your hand.' He stretched it out, and his hand was restored as healthy as the other.",
+      "source": "Mark Chapter 3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϫⲟⲩϣⲧ ⲉⲣⲱⲟⲩ ϧⲉⲛⲟⲩⲙⲃⲟⲛ ⲉϥ**ⲙⲟⲕϩ** ⲛϩⲏⲧ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲓⲑⲱⲙ ⲛⲧⲉⲡⲟⲩϩⲏⲧ ⲡⲉϫⲁϥ ⲙⲡⲓⲣⲱⲙⲓ ϫⲉ ⲥⲟⲩⲧⲉⲛⲧⲉⲕϫⲓϫ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲉⲧⲁϥⲥⲟⲩⲧⲱⲛⲥ ⲁⲥⲟⲩϫⲁⲓ ⲛϫⲉⲧⲉϥϫⲓϫ .",
+      "english": "When he had looked around at them with anger, being grieved at the hardening of their hearts, he said to the man, 'Stretch out your hand.' He stretched it out, and his hand was restored as healthy as the other.",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲥ**ⲙⲟⲕϩ** ⲛϩⲏⲧ ⲡⲉ ⲉⲥϭⲛⲁⲣⲓⲕⲉ ⲉⲓⲁⲕⲱⲃ ϩⲛⲧⲉⲥⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ϩⲙⲡⲁϣⲁⲓ ⲙⲡⲉⲙⲕⲁϩ ⲛϩⲏⲧ ϫⲉⲙⲁ ⲛⲁⲓ ⲛϩⲉⲛϣⲏⲣⲉ ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ϯⲛⲁⲙⲟⲩ ·",
+      "english": "And she grieved, and found fault with Jacob in her ignorance, in the abundance of [her] grief, ‘Give me children, or I will die.’",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲏⲧ",
+        158,
+        23.369
+      ],
+      [
+        "ⲛ",
+        206,
+        19.737
+      ],
+      [
+        "ϣⲉⲡ",
+        15,
+        16.526
+      ],
+      [
+        "ϩⲏⲧ",
+        31,
+        16.321
+      ],
+      [
+        "ⲟⲩ",
+        76,
+        15.585
+      ],
+      [
+        "ⲁⲛⲁⲩϣ",
+        4,
+        15.46
+      ],
+      [
+        "ⲛⲁ",
+        44,
+        14.42
+      ],
+      [
+        "ⲁ",
+        53,
+        14.26
+      ],
+      [
+        "ϧⲉⲛ",
+        42,
+        14.027
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        48,
+        13.922
+      ],
+      [
+        "ⲉ",
+        48,
+        13.859
+      ],
+      [
+        "ϥ",
+        54,
+        13.776
+      ],
+      [
+        "ⲉⲣ",
+        16,
+        13.745
+      ],
+      [
+        "ⲛⲱ",
+        21,
+        13.6
+      ],
+      [
+        "ⲛⲉⲙ",
+        33,
+        13.463
+      ],
+      [
+        "ϯ",
+        31,
+        13.24
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        17,
+        13.206
+      ],
+      [
+        "ⲡⲁ",
+        18,
+        13.2
+      ],
+      [
+        "ϧⲓⲥⲓ",
+        7,
+        12.873
+      ],
+      [
+        "ⲙⲉⲧϭⲉⲛⲛⲉ",
+        2,
+        12.782
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲏⲧ",
+        358,
+        26.295
+      ],
+      [
+        "ⲛ",
+        505,
+        22.646
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        18.495
+      ],
+      [
+        "ⲁ",
+        120,
+        17.662
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        30,
+        17.582
+      ],
+      [
+        "ⲁⲩⲱ",
+        95,
+        17.353
+      ],
+      [
+        "[.....]ⲩⲟ",
+        3,
+        17.25
+      ],
+      [
+        "ⲟⲩ",
+        98,
+        16.961
+      ],
+      [
+        "ϫⲉ",
+        67,
+        16.241
+      ],
+      [
+        "ϥ",
+        79,
+        15.33
+      ],
+      [
+        "ⲉ",
+        67,
+        14.912
+      ],
+      [
+        "ⲗⲩⲡⲏ",
+        8,
+        14.687
+      ],
+      [
+        "ϩⲛ",
+        43,
+        14.655
+      ],
+      [
+        "ⲙⲛ",
+        39,
+        14.397
+      ],
+      [
+        "ⲡⲉ",
+        39,
+        14.261
+      ],
+      [
+        "ⲉϫⲛ",
+        19,
+        14.065
+      ],
+      [
+        "[.....]",
+        3,
+        13.549
+      ],
+      [
+        "ⲛⲟϭ",
+        17,
+        13.457
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        19,
+        13.421
+      ],
+      [
+        "ϯ",
+        24,
+        13.168
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲕⲁϩ_0_node",
+          97
+        ],
+        [
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          46
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          44
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲕⲁϩ",
+          9
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          6
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲕⲁϩ",
+          6
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲫⲏⲧⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲏ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_3_post_ⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲕⲁϩ_0_node",
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          14
+        ],
+        [
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          "ϩⲏⲧ_2_post_ⲛ",
+          13
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲕⲁϩ",
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲕⲁϩ",
+          "ϩⲁⲛ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲕⲁϩ",
+          "ⲡⲓ_1_pre_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲛⲧⲉ_1_post_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲕⲁϩ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ϣⲱⲛⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲉⲧ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          "ⲡⲣⲟⲫⲏⲧⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲕⲁϩ_0_node",
+          "ϫⲉ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲕⲁϩ",
+          "ⲟⲩⲟⲛ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_2_post_ϫⲉ",
+          "ⲛⲧⲏ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲏ_3_post_ⲟⲩⲟⲛ",
+          "ⲓ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲟⲩⲟⲛ",
+          "ⲛ_3_post_ⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲕⲁϩ",
+          "ⲛⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲛⲧⲉ",
+          "ⲉⲧⲉ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲛⲧⲉ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ϩⲏⲧ",
+          "ⲡⲓ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲉⲧ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲕⲁϩ",
+          "ⲁⲣⲉ_3_post_ⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲕⲁϩ_0_node",
+          97
+        ],
+        [
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          70
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          70
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲕⲁϩ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          5
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲕⲁϩ",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲕⲁϩ",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲕⲁϩ",
+          3
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲕⲁϩ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲙⲕⲁϩ",
+          4
+        ],
+        [
+          "ⲕ_1_pre_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_post_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲙⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲕⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲕⲁϩ_0_node",
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          13
+        ],
+        [
+          "ⲛ_1_post_ⲙⲕⲁϩ",
+          "ϩⲏⲧ_2_post_ⲛ",
+          13
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲕⲁϩ",
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲕⲁϩ",
+          "ⲡⲟⲩ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲕⲁϩ_0_node",
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲕⲁϩ",
+          "ⲡⲉⲧⲛ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲕⲁϩ",
+          "ⲁ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲕⲁϩ",
+          "ϥ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲕⲁϩ",
+          "ⲕ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲛⲧⲟⲕ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲙⲕⲁϩ",
+          "ϥ_1_pre_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲛϭⲓ_1_post_ⲙⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲕⲁϩ",
+          "ⲙⲕⲁϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.73,
+      "rank": 425,
+      "count": 275
+    },
+    "B": {
+      "rate": 2.84,
+      "rank": 306,
+      "count": 241
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1860",
+      "label": "ϣⲡⲙⲕⲁϩ",
+      "pos": "V",
+      "gloss": "receive pain, suffer"
+    },
+    {
+      "target": "C1861",
+      "label": "ϭⲓⲙⲕⲁϩ",
+      "pos": "V",
+      "gloss": "receive pain, suffer"
+    },
+    {
+      "target": "C1862",
+      "label": "ϭⲓⲙⲕⲁϩ",
+      "pos": "N",
+      "gloss": "pain, suffering"
+    },
+    {
+      "target": "C1859",
+      "label": "ⲁⲧⲙⲕⲁϩ",
+      "pos": "N",
+      "gloss": "without pain"
+    },
+    {
+      "target": "C1858",
+      "label": "ⲙⲕⲁϩ",
+      "pos": "N",
+      "gloss": "pain, difficulty, grief"
+    },
+    {
+      "target": "C1864",
+      "label": "ⲙⲕⲁϩ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be pained, troubled at heart"
+    },
+    {
+      "target": "C1865",
+      "label": "ⲙⲕⲁϩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "pain, grief"
+    },
+    {
+      "target": "C1866",
+      "label": "ⲙⲟⲕϩⲥ",
+      "pos": "N",
+      "gloss": "pain, grief"
+    },
+    {
+      "target": "C1863",
+      "label": "ⲣⲉϥϭⲓⲙⲕⲁϩ",
+      "pos": "N",
+      "gloss": "sufferer"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2720",
+    "demo_lemma": "mqḥ",
+    "english": "[to be sad]",
+    "german": "betrübt sein",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2720"
+  }
+}

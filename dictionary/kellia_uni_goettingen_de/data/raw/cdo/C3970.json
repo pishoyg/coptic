@@ -1,0 +1,258 @@
+{
+  "id": "C3970",
+  "forms": [
+    {
+      "id": "CF9879",
+      "orth": "ⲥⲁϩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7665,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF9880",
+      "orth": "ⲥⲁϣⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6120,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4506",
+      "bibliography": "CD 381b; KoptHWb 211; DELC 204"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲣⲉⲩⲧⲁⲗⲟϥ ⲉⲩϭⲗⲟϭ ⲙⲡⲉⲛⲓⲡⲉ · ⲛⲥⲉ**ⲥⲁϩⲧ** ϩⲁⲣⲟϥ ·",
+      "english": "and to lay him upon the bed of iron and to kindle a fire beneath it.",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩϫⲱⲱⲣⲉⲙⲟⲩⲧⲉ ⲟⲩⲃⲏⲕ **ⲥⲁϩⲧ**ⲕ ⲙⲙⲟϥ ⲁⲩⲱ ϥⲛⲁⲙⲟⲩⲧⲉ ⲉⲣⲟⲕ ⲛϩⲟⲩⲟ",
+      "english": "If thou be invited of a mighty man, withdraw thyself, and so much the more will he invite thee.",
+      "source": "Sirach 13",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϫⲱⲱⲣⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        1,
+        13.294
+      ],
+      [
+        "ⲟⲩⲃⲏ",
+        1,
+        12.74
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        10.446
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        1,
+        9.598
+      ],
+      [
+        "ⲕ",
+        2,
+        8.853
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲥⲁϩⲧ_0_node",
+          2
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_2_pre_ⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩϫⲱⲱⲣⲉ_2_pre_ⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲧⲉ_1_pre_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_2_pre_ⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_3_pre_ⲟⲩⲃⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲁϩⲧ",
+          "ⲥⲉ_1_pre_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲁϩⲧ",
+          "ⲥⲁϩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁϩⲧ_0_node",
+          "ϩⲁⲣⲟ_1_post_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲥⲁϩⲧ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_2_pre_ⲙⲟⲩⲧⲉ",
+          "ⲟⲩϫⲱⲱⲣⲉ_2_pre_ⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩϫⲱⲱⲣⲉ_2_pre_ⲙⲟⲩⲧⲉ",
+          "ⲙⲟⲩⲧⲉ_1_pre_ⲥⲁϩⲧ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲧⲉ_1_pre_ⲥⲁϩⲧ",
+          "ⲟⲩⲃⲏ_2_pre_ⲙⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_2_pre_ⲙⲟⲩⲧⲉ",
+          "ⲕ_3_pre_ⲟⲩⲃⲏ",
+          1
+        ],
+        [
+          "ⲕ_3_pre_ⲟⲩⲃⲏ",
+          "ⲥⲁϩⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7206,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3969",
+      "label": "ϭⲓⲛⲥⲱϩⲉ",
+      "pos": "N",
+      "gloss": "weaving"
+    },
+    {
+      "target": "C3968",
+      "label": "ⲙⲉⲧⲣⲉϥⲥⲱϧⲓ",
+      "pos": "N",
+      "gloss": "weaving"
+    },
+    {
+      "target": "C3967",
+      "label": "ⲣⲉϥⲥⲟⲟϩⲉ",
+      "pos": "N",
+      "gloss": "weaver"
+    },
+    {
+      "target": "C3965",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "V",
+      "gloss": "weave"
+    },
+    {
+      "target": "C3966",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "N",
+      "gloss": "weaving, weaver's craft, weaver"
+    }
+  ],
+  "etym": {
+    "egy_num": "143190",
+    "egy_lemma": "sḫt.j",
+    "demo_num": "d5539",
+    "demo_lemma": "sḫt(.ṱ)",
+    "english": "weaver",
+    "german": "Weber",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/143190",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5539"
+  }
+}

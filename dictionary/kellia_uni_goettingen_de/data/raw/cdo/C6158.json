@@ -1,0 +1,49 @@
+{
+  "id": "C6158",
+  "forms": [
+    {
+      "id": "CF14323",
+      "orth": "ⲓⲣⲓϣⲱⲟⲩϣⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF14324",
+      "orth": "ⲉⲣϣⲱⲟⲩϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2038,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6845",
+      "bibliography": "CD 603b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6157",
+      "label": "ϣⲟⲩⲥⲟⲟⲩϣⲉ",
+      "pos": "N",
+      "gloss": "sacrifice, offering"
+    }
+  ]
+}

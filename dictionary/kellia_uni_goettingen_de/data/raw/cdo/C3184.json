@@ -1,0 +1,46 @@
+{
+  "id": "C3184",
+  "forms": [
+    {
+      "id": "CF8252",
+      "orth": "ϫⲓⲣⲁⲓⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3639",
+      "bibliography": "CD 304b; ChLCS 41a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3182",
+      "label": "ⲣⲁⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "kindred, kinship, tribe"
+    },
+    {
+      "target": "C3183",
+      "label": "ⲣⲙⲣⲁⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "kinsman"
+    }
+  ]
+}

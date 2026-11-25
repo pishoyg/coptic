@@ -1,0 +1,124 @@
+{
+  "id": "C3493",
+  "forms": [
+    {
+      "id": "CF8887",
+      "orth": "ⲁⲧⲥⲗⲁϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8895,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3975",
+      "bibliography": "CD 333a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲇⲉ ⲉⲧⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲙⲙⲟϥ ⲉⲁⲣⲉϩ ⲉⲣⲱⲧⲉⲛ ⲛ**ⲁⲧⲥⲗⲁϯ** ⲟⲩⲟϩ ⲉⲧⲁϩⲟⲧⲉⲛ ⲑⲏⲛⲟⲩ ⲙⲡⲉⲙⲑⲟ ⲙⲡⲉϥⲱⲟⲩ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛⲁⲧⲁϭ ⲛⲓ ϧⲉⲛⲟⲩⲑⲉⲗⲏⲗ .",
+      "english": "Now to him who is able to keep them from stumbling, and to present you faultless before the presence of his glory in great joy,",
+      "source": "26_Jude_01",
+      "urn": "urn:cts:copticLit:nt.jude.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        11.837
+      ],
+      [
+        "ⲁⲣⲉϩ",
+        1,
+        10.907
+      ],
+      [
+        "ⲧⲉⲛ",
+        2,
+        10.401
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        9.395
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲥⲗⲁϯ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8364,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3491",
+      "label": "ϯⲥⲗⲁⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "cause to stumble"
+    },
+    {
+      "target": "C3492",
+      "label": "ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "one that stumbles"
+    },
+    {
+      "target": "C3489",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "stumble, slip"
+    },
+    {
+      "target": "C3490",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "stumbling, falling"
+    },
+    {
+      "target": "C3494",
+      "label": "ⲥⲗⲁⲧⲗⲉⲧ",
+      "pos": "N",
+      "gloss": "slip, stumbling"
+    }
+  ]
+}

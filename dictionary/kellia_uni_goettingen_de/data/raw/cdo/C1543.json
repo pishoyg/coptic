@@ -1,0 +1,289 @@
+{
+  "id": "C1543",
+  "forms": [
+    {
+      "id": "CF4522",
+      "orth": "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5276,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1801",
+      "bibliography": "CD 135a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ** · ⲟⲩϩⲱⲃ ⲉϥⲥⲟⲟϥ ·",
+      "english": "There were the disgrace of an act of unchastity,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲥϩⲟⲩⲟⲣⲧ ⲛϭⲓⲡⲉⲧⲛⲁⲧⲱϣ ⲛⲟⲩϩⲱⲃ ⲉϥⲟ ⲛⲛⲟⲃⲉ ⲉⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ϩⲛⲟⲩ**ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ**",
+      "english": "The one who ordains a sinful deed against his neighbour in deceitfulness is accursed.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲇⲁⲩⲉⲓⲇ ϭⲉ ⲑⲉⲱⲣⲉⲓ ⲛⲛⲁⲓ · ⲙⲛⲛⲉⲧⲟ ⲛϩⲟⲩⲟ ⲉⲛⲁⲓ ⲉⲧⲉⲙ**ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ** ⲛⲉ · ⲙⲛⲙⲙⲛⲧⲭⲏⲣⲁ · ⲙⲛⲙⲙⲟⲩ ⲛϣⲁⲣⲁϩⲉ · ⲙⲛⲛⲧⲓⲙⲱⲣⲓⲁ · ⲙⲛⲡⲕⲉⲥⲉ ⲉⲡⲉⲧⲏⲣϥ ⲛⲑⲗⲓⲯⲓⲥ · ⲉⲧⲡⲟⲗⲓⲧⲉⲩⲉ ϩⲙⲡⲉⲓⲃⲓⲟⲥ ·",
+      "english": "Now David saw these things, and more than these, that is to say, calumny (or, injustice), and widowhood, and sudden death, and retribution for sin, and the fallings into tribulations of all kinds which are incidental to citizenship in this life,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲧⲟⲩⲱ",
+        2,
+        13.5
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        2,
+        11.441
+      ],
+      [
+        "ⲉ",
+        7,
+        11.239
+      ],
+      [
+        "ⲙⲉ",
+        2,
+        10.941
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        9.873
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ϥ",
+        4,
+        8.522
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        8.087
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.284
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.91
+      ],
+      [
+        "ⲙ",
+        2,
+        6.351
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙ_1_pre_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲭⲏⲣⲁ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲥⲟⲟϥ",
+          1
+        ],
+        [
+          "ⲥⲟⲟϥ_3_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙ_1_pre_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          "ⲙ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲙⲛⲧⲭⲏⲣⲁ",
+          "ⲙⲛⲧⲭⲏⲣⲁ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲭⲏⲣⲁ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          "ⲙⲛ_2_post_ⲙⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ_0_node",
+          "ⲟⲩ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲱⲃ",
+          "ϩⲱⲃ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲙⲛⲧⲣⲉϥϩⲓⲗⲁ",
+          "ⲉ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϩⲱⲃ",
+          "ϥ_4_post_ⲥⲟⲟϥ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲥⲟⲟϥ",
+          "ⲥⲟⲟϥ_3_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4856,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1541",
+      "label": "ϩⲓⲁⲗⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1539",
+      "label": "ϩⲓⲗⲁ",
+      "pos": "V",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1540",
+      "label": "ϩⲓⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1537",
+      "label": "ⲗⲁ",
+      "pos": "N",
+      "gloss": "envy, slander"
+    },
+    {
+      "target": "C1544",
+      "label": "ⲗⲁⲃⲗⲁ",
+      "pos": "N",
+      "gloss": "eager for slander"
+    },
+    {
+      "target": "C1538",
+      "label": "ⲙⲛⲧⲗⲁ",
+      "pos": "N",
+      "gloss": "slander"
+    },
+    {
+      "target": "C1542",
+      "label": "ⲣⲉϥϩⲓⲗⲁ",
+      "pos": "N",
+      "gloss": "slanderer"
+    }
+  ]
+}

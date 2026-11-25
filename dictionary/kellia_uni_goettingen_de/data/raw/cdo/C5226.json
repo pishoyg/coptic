@@ -1,0 +1,198 @@
+{
+  "id": "C5226",
+  "forms": [
+    {
+      "id": "CF12419",
+      "orth": "ⲟⲩⲁⲧϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5884,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5870",
+      "bibliography": "CD 497b; CED 219; KoptHWb 280; DELC 239a; ChLCS 69b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲙⲟⲧⲛ ⲉⲧⲣⲉⲟⲩϭⲁⲙⲟⲩⲗ ⲃⲱⲕ ⲉⲃⲟⲗ ϩⲛⲧ**ⲟⲩⲁⲧϥⲉ** ⲛⲟⲩϩⲁⲙ ⲛⲧⲱⲡ ⲉϩⲟⲩⲉⲟⲩⲣⲙⲙⲁⲟ ⲉⲧⲣⲉϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "It is easier for a camel to go through a needle&apos;s eye than for a rich man to enter into the Kingdom of God.&apos;",
+      "source": "Mark Chapter 10",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲟⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ . ϫⲉⲥⲙⲟⲧⲛ ⲉⲧⲣⲉⲟⲩϭⲁⲙⲟⲩⲗ ⲉⲓ ⲉϩⲟⲩⲛ ϩⲓⲧⲛⲧ**ⲟⲩⲁⲧϥⲉ** ⲛⲟⲩϩⲁⲙⲛⲧⲱⲡ ⲉϩⲟⲩⲉⲉⲧⲣⲉⲟⲩⲣⲙⲙⲁⲟ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ .",
+      "english": "Again I tell you, it is easier for a camel to go through a needle's eye, than for a rich man to enter into the Kingdom of God.'",
+      "source": "40_Matthew_19",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲙⲟⲧⲛ ⲅⲁⲣ ⲉⲧⲣⲉⲟⲩϭⲁⲙⲟⲩⲗ ⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧ**ⲟⲩⲁⲧϥⲉ** ⲛⲟⲩϩⲁⲙ ⲛⲧⲱⲡ ⲉϩⲟⲩⲉ ⲟⲩⲣⲙⲙⲁⲟ ⲛϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "For it is easier for a camel to enter in through a needle's eye, than for a rich man to enter into the Kingdom of God.'",
+      "source": "42_Luke_18",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲙ",
+        3,
+        20.546
+      ],
+      [
+        "ϩⲁⲙⲛ",
+        1,
+        18.598
+      ],
+      [
+        "ⲧⲱⲡ",
+        1,
+        16.013
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        2,
+        11.597
+      ],
+      [
+        "ⲛ",
+        7,
+        10.231
+      ],
+      [
+        "ⲧ",
+        4,
+        10.071
+      ],
+      [
+        "ⲃⲱⲕ",
+        2,
+        9.944
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        9.408
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        9.22
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.678
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲁⲧϥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲁⲧϥⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲁⲙ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ϩⲁⲙ",
+          2
+        ],
+        [
+          "ⲧⲱⲡ_5_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲁⲧϥⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲁⲧϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲁⲧϥⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϩⲁⲙ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲁⲙ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ϩⲁⲙ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲁⲙ",
+          "ⲧⲱⲡ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5441,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5227",
+      "label": "ⲟⲩⲁⲧⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "pierced place, hole?"
+    },
+    {
+      "target": "C5225",
+      "label": "ⲟⲩⲱⲧϥ",
+      "pos": "V",
+      "gloss": "traverse, pierce"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1576",
+    "demo_lemma": "wtf",
+    "english": "Hole",
+    "german": "Loch",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1576"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "C9438",
+  "forms": [
+    {
+      "id": "CF23915",
+      "orth": "ⲕⲓⲛⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23916",
+      "orth": "ⲕⲓⲛⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12515,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23917",
+      "orth": "ⲕⲟⲓⲛⲏⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11952",
+      "bibliography": "DDGLC",
+      "cu_ID": "1968"
+    },
+    {
+      "id": "CS11953",
+      "bibliography": "DDGLC",
+      "cu_ID": "9627"
+    },
+    {
+      "id": "CS11954",
+      "bibliography": "DDGLC",
+      "cu_ID": "4653"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲥϣⲱⲡⲉ ⲛϭⲓⲧⲙⲛⲧϭⲱⲃ · ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲥϣⲱⲡⲉ ⲛϭⲓⲧ**ⲕⲓⲛⲏⲥⲓⲥ** ⲙⲡⲥⲱⲙⲁ ·",
+      "english": "“and why weakness hath arisen. And that mystery knoweth why | motion of body hath arisen”",
+      "source": "Pistis Sophia Book 2 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:59-65",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲓⲛⲏⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲓⲛⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲓⲛⲏⲥⲓⲥ_0_node",
+          "ⲙ_1_post_ⲕⲓⲛⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲓⲛⲏⲥⲓⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12089,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1127",
+    "grl_lemma": "κίνησις",
+    "grl_meaning": "motion, movement",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 952b; Preisigke 1:798"
+  }
+}

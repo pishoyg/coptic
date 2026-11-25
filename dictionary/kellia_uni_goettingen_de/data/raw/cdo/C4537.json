@@ -1,0 +1,118 @@
+{
+  "id": "C4537",
+  "forms": [
+    {
+      "id": "CF11031",
+      "orth": "ⲧⲱⲣϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16611,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5125",
+      "bibliography": "CD 433a; KoptHWb 245; ChLCS 61a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲣⲓⲥⲧⲟⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲁⲙⲁⲛ",
+        1,
+        13.969
+      ],
+      [
+        "ⲥⲟⲧⲡ",
+        1,
+        10.718
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲱⲣϩ",
+          1
+        ],
+        [
+          "ⲧⲱⲣϩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲱⲣϩ",
+          "ⲧⲱⲣϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6348,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4538",
+      "label": "ϩⲛⲟⲩⲧⲱⲣϣ",
+      "pos": "ADV",
+      "gloss": "with vigilance, with calmness, with soberness"
+    },
+    {
+      "target": "C4539",
+      "label": "ⲧⲣⲁϩ",
+      "pos": "N",
+      "gloss": "suspicion, grief, entanglement?"
+    },
+    {
+      "target": "C4536",
+      "label": "ⲧⲱⲣϩ",
+      "pos": "V",
+      "gloss": "be keen, be alert, be sober, be upright"
+    }
+  ]
+}

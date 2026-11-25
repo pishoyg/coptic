@@ -1,0 +1,125 @@
+{
+  "id": "C4069",
+  "forms": [
+    {
+      "id": "CF10081",
+      "orth": "ⲙⲛⲧⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17765,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4623",
+      "bibliography": "CD 396b; KoptHWb 219; ChLCS 55b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲛⲉⲕⲃⲁⲗ ⲛⲥⲉϭⲱϣⲧ ⲁⲛ ⲉⲡⲥⲟⲟⲩⲧⲛ ⲁⲩⲱ ⲡⲉⲕϩⲏⲧ ⲛⲛⲁⲛⲟⲩϥ ⲁⲛ ⲁⲗⲗⲁ ⲉϭⲱϣⲧ ⲉϫⲛⲟⲩ**ⲙⲛⲧⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ** ⲁⲩⲱ ⲉⲡⲱⲱⲛ ⲉⲃⲟⲗ ⲛⲟⲩⲥⲛⲟϥ ⲛⲁⲧⲛⲟⲃⲉ ⲙⲛⲟⲩⲃⲱϭⲉ ⲁⲩⲱ ⲉⲉⲓⲣⲉ ⲛⲟⲩϩⲱⲧⲃ",
+      "english": "Behold, thine eyes are not good, nor thine heart, but they go after thy covetousness, and after the innocent blood to shed it, and after acts of injustice and slaughter, to commit them.",
+      "source": "Jeremiah 22",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲱⲱⲛ",
+        1,
+        19.013
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        11.067
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        9.425
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17381,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4067",
+      "label": "ϫⲓⲧⲟⲉ",
+      "pos": "V",
+      "gloss": "receive share, be partaker, participate"
+    },
+    {
+      "target": "C4068",
+      "label": "ⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "avaricious, covetus"
+    },
+    {
+      "target": "C4066",
+      "label": "ⲧⲟⲉ",
+      "pos": "N",
+      "gloss": "part, share"
+    }
+  ]
+}

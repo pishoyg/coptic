@@ -1,0 +1,68 @@
+{
+  "id": "C4104",
+  "forms": [
+    {
+      "id": "CF10153",
+      "orth": "ϭⲓⲛⲧⲃⲃⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4663",
+      "bibliography": "CD 400a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C5096",
+      "type": "cf",
+      "label": "be pure, be innocent"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4101",
+      "label": "ϩⲛⲟⲩⲧⲃⲃⲟ",
+      "pos": "ADV",
+      "gloss": "purely"
+    },
+    {
+      "target": "C4102",
+      "label": "ⲁⲧⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "impure"
+    },
+    {
+      "target": "C4103",
+      "label": "ⲙⲉⲧⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purity"
+    },
+    {
+      "target": "C4099",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "V",
+      "gloss": "become pure, be pure; make pure, purify"
+    },
+    {
+      "target": "C4100",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purity, purification"
+    }
+  ]
+}

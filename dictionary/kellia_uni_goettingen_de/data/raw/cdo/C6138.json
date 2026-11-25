@@ -1,0 +1,312 @@
+{
+  "id": "C6138",
+  "forms": [
+    {
+      "id": "CF14281",
+      "orth": "ⲙⲛⲧϣⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4237,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6825",
+      "bibliography": "CD 600a; ChLCS 82b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧϣⲟⲟⲡ ⲇⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ϩⲛⲟⲩⲑⲃⲃⲓⲟ ⲙⲛⲟⲩⲙⲛⲧⲣⲙⲣⲁϣ · ⲙⲛⲟⲩⲙⲛⲧϩⲁⲣϣϩⲏⲧ ⲙⲛⲟⲩⲁⲅⲁⲡⲏ ⲙⲛⲟⲩⲙⲛⲧⲣⲉϥϫⲓⲥⲃⲱ ϩⲣⲁⲓ ϩⲛϩⲩⲡⲟⲧⲁⲅⲏ ⲛⲓⲙ · ϩⲓⲙⲛⲧⲥⲧⲙⲏⲧ ⲛⲓⲙ ϩⲓ**ⲙⲛⲧϣⲁⲩ** ⲛⲓⲙ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲣⲁⲓ ϩⲙⲡⲛⲁⲩ ⲛⲛⲃⲁⲗ · ⲧ**ⲙⲛⲧϣⲁⲩ** ·",
+      "english": "In the case of the sight of the eyes there is temperance.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϥⲓⲧϥ · ⲧ**ⲙⲛⲧϣⲁⲩ** · ⲏ ⲡϣⲓⲡⲉ ⲉⲧⲛⲁⲛⲟⲩϥ ⲉⲧϩⲛⲛⲟⲩⲃⲁⲗ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL61-63",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_61_63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲡⲁⲣⲑⲉⲛⲟⲥ",
+        3,
+        19.224
+      ],
+      [
+        "ⲧⲉⲩ",
+        4,
+        13.631
+      ],
+      [
+        "ⲡⲣⲟϩⲁⲓⲣⲉⲥⲓⲥ",
+        1,
+        12.933
+      ],
+      [
+        "ϣⲓⲡⲉ",
+        2,
+        12.677
+      ],
+      [
+        "ϥⲓⲧ",
+        2,
+        12.416
+      ],
+      [
+        "ⲏ",
+        3,
+        11.427
+      ],
+      [
+        "ⲧ",
+        5,
+        10.229
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        1,
+        8.875
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.592
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        8.228
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        7.931
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        7.214
+      ],
+      [
+        "ϥ",
+        3,
+        6.469
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.032
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        5.94
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.872
+      ],
+      [
+        "ⲛ",
+        3,
+        5.756
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.275
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        4.996
+      ],
+      [
+        "ⲡ",
+        2,
+        4.69
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          4
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          7
+        ],
+        [
+          "ⲏ_2_post_ϣⲓⲡⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϣⲓⲡⲉ",
+          2
+        ],
+        [
+          "ϣⲓⲡⲉ_1_post_ⲙⲛⲧϣⲁⲩ",
+          2
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲓⲡⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          "ⲏ_2_post_ϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϣⲓⲡⲉ",
+          "ⲡ_2_post_ϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲓⲡⲉ",
+          "ϣⲓⲡⲉ_1_post_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ϣⲓⲡⲉ_1_post_ⲙⲛⲧϣⲁⲩ",
+          "ⲉⲧ_2_post_ϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          "ⲛⲓⲙ_1_post_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲧ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲙⲛⲧϣⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧϣⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3840,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6133",
+      "label": "ϣⲁⲩ",
+      "pos": "N",
+      "gloss": "use, value"
+    },
+    {
+      "target": "C6134",
+      "label": "ϣⲁⲩ",
+      "pos": "N",
+      "gloss": "useful, fitting; virtuous"
+    },
+    {
+      "target": "C6139",
+      "label": "ϣⲁⲩ",
+      "pos": "V",
+      "gloss": "be useful, valuable"
+    },
+    {
+      "target": "C6140",
+      "label": "ϣⲟⲩ-",
+      "pos": "N",
+      "gloss": "worthy of, fit for"
+    },
+    {
+      "target": "C6135",
+      "label": "ⲁⲧϣⲁⲩ",
+      "pos": "N",
+      "gloss": "useless, worthless, obscene"
+    },
+    {
+      "target": "C6136",
+      "label": "ⲣϣⲁⲩ",
+      "pos": "V",
+      "gloss": "be useful, prosperous, virtuous"
+    },
+    {
+      "target": "C6137",
+      "label": "ⲣⲁⲧϣⲁⲩ",
+      "pos": "V",
+      "gloss": "be, make useless, vain"
+    }
+  ]
+}

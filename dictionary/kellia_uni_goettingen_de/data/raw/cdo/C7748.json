@@ -1,0 +1,134 @@
+{
+  "id": "C7748",
+  "forms": [
+    {
+      "id": "CF17561",
+      "orth": "ϭⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11675,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8615",
+      "bibliography": "CD 819b; KoptHWb 458; DELC 342; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛϩⲉ ⲉⲣⲟϥ ⲛϩⲟⲩⲛ ⲙⲡⲉϥⲏⲓ · ⲉϥϩⲙⲟⲟⲥ ϩⲛⲟⲩ**ϭⲟⲟⲛⲉ** ⲙⲛⲟⲩⲕⲣⲙⲥ · ⲉϥϣⲗⲏⲗ ⲉϩⲣⲁⲓ ⲉⲡϫⲟⲉⲓⲥ ⲡⲉϥⲛⲟⲩⲧⲉ · ϩⲛϩⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲛⲟⲩ",
+        1,
+        18.013
+      ],
+      [
+        "ⲕⲣⲙⲥ",
+        1,
+        17.791
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        11.002
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲣⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲕⲣⲙⲥ",
+          1
+        ],
+        [
+          "ⲕⲣⲙⲥ_1_post_ϭⲟⲟⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲟⲟⲛⲉ_0_node",
+          "ⲙⲛ_2_post_ⲕⲣⲙⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲣⲙⲥ",
+          "ⲟⲩ_2_post_ⲕⲣⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲕⲣⲙⲥ",
+          "ⲕⲣⲙⲥ_1_post_ϭⲟⲟⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11248,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7747",
+      "label": "ϭⲟⲛ",
+      "pos": "N",
+      "gloss": "valley, gorge, cave"
+    },
+    {
+      "target": "C7749",
+      "label": "ϭⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "valley, gorge, cave"
+    }
+  ]
+}

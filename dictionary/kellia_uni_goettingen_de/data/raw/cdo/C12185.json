@@ -1,0 +1,44 @@
+{
+  "id": "C12185",
+  "forms": [
+    {
+      "id": "CF33200",
+      "orth": "ⲁϫⲡⲓⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17189",
+      "bibliography": "CD 778a; 329b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7285",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C7286",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C7287",
+      "label": "ⲙⲡⲛⲁⲩ ⲛ-",
+      "pos": "PREP",
+      "gloss": "at time of, about the ... hour"
+    }
+  ]
+}

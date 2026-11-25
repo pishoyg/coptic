@@ -1,0 +1,65 @@
+{
+  "id": "C1600",
+  "forms": [
+    {
+      "id": "CF4656",
+      "orth": "ⲗⲟⲕⲗⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1862",
+      "bibliography": "CD 138b; KoptHWb 77; ChLCS 21a"
+    },
+    {
+      "id": "CS1863",
+      "bibliography": "CD 138b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1599",
+      "label": "ⲉⲣⲗⲱⲕ",
+      "pos": "N",
+      "gloss": "making soft, softening"
+    },
+    {
+      "target": "C1602",
+      "label": "ⲗⲁⲕⲗⲁⲕ",
+      "pos": "N",
+      "gloss": "kind of sweet paste or jelly"
+    },
+    {
+      "target": "C1601",
+      "label": "ⲗⲟⲕⲗⲕ",
+      "pos": "N",
+      "gloss": "softness"
+    },
+    {
+      "target": "C1596",
+      "label": "ⲗⲱⲕ",
+      "pos": "V",
+      "gloss": "be soft, fresh"
+    },
+    {
+      "target": "C1597",
+      "label": "ⲗⲱⲕ",
+      "pos": "N",
+      "gloss": "softness, freshness"
+    },
+    {
+      "target": "C1598",
+      "label": "ⲙⲉⲧⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "softness, freshness"
+    }
+  ]
+}

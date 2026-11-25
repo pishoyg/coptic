@@ -1,0 +1,51 @@
+{
+  "id": "C2789",
+  "forms": [
+    {
+      "id": "CF7414",
+      "orth": "ⲡⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 110.52,
+        "rank": 17,
+        "count": 17438
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS3190",
+      "bibliography": "CD 260a; KoptHWb 144; DELC 157; ChLCS 36b; LCG § 285"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲡⲉ** ⲟⲩⲛⲧⲏⲧⲛ ϣⲁϫⲉ ⲙⲙⲁⲩ ⲏ ⲗⲁⲁⲩ ⲛϩⲱⲃ · ϩⲙⲡⲉⲧⲛⲙⲁ ·",
+      "english": "So you have words there, or any deed in your place.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲉⲧⲥⲏϩ ϫⲉⲡⲉⲧⲙⲓϣⲉ ⲉϫⲱⲕ ⲡⲉ ⲡⲉⲕⲃⲟⲏⲑⲟⲥ , ⲁⲩⲱ ⲧⲥⲏϥⲉ **ⲡⲉ** ⲙⲡⲉⲕϣⲟⲩϣⲟⲩ ⲁⲩⲱ ⲡⲉⲟⲟⲩ ⲙⲡⲉⲥⲧⲉⲣⲉⲱⲙⲁ ·",
+      "english": "As it is written: &apos;the one who fights on your behalf is your aid, and the sword of your pride and the glory of your foundation&apos;",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲟⲩ **ⲡⲉ** ⲡⲃⲁⲣⲟⲥ ⲉⲛⲧⲁⲩⲟⲩⲁϩϥ ⲉϫⲱ ·",
+      "english": "Or what is the weight that they put on you,",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom"
+}

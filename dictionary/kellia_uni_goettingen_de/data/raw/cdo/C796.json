@@ -1,0 +1,56 @@
+{
+  "id": "C796",
+  "forms": [
+    {
+      "id": "CF2922",
+      "orth": "ⲥⲁⲩⲏⲣⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2923",
+      "orth": "ⲥⲁⲩⲏⲣⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS946",
+      "bibliography": "CD 67b; ChLCS 12b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C794",
+      "label": "ⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine"
+    },
+    {
+      "target": "C795",
+      "label": "ⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine"
+    },
+    {
+      "target": "C797",
+      "label": "ⲣⲉϥⲥⲉⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine-drinker"
+    },
+    {
+      "target": "C798",
+      "label": "ⲥⲁ ⲛⲏⲣⲡ",
+      "pos": "N",
+      "gloss": "wine-dealer"
+    }
+  ]
+}

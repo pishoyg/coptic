@@ -1,0 +1,45 @@
+{
+  "id": "C2390",
+  "forms": [
+    {
+      "id": "CF6546",
+      "orth": "ⲉⲣⲛⲉⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2756",
+      "bibliography": "CD 219a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2391",
+      "label": "ϯⲛⲉⲓ",
+      "pos": "V",
+      "gloss": "give, appoint time, appoint"
+    },
+    {
+      "target": "C2389",
+      "label": "ⲛⲉⲓ",
+      "pos": "N",
+      "gloss": "time"
+    }
+  ]
+}

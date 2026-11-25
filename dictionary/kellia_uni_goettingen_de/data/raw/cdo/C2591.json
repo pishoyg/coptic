@@ -1,0 +1,44 @@
+{
+  "id": "C2591",
+  "forms": [
+    {
+      "id": "CF6974",
+      "orth": "ⲙⲡⲉⲓⲛⲁⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2972",
+      "bibliography": "CD 235a; KoptHWb 130; ChLCS 33b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2589",
+      "label": "ⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "hour, time"
+    },
+    {
+      "target": "C2590",
+      "label": "ⲛⲛⲁⲩ ⲛⲓⲙ",
+      "pos": "ADV",
+      "gloss": "every hour, always"
+    },
+    {
+      "target": "C2592",
+      "label": "ⲛⲧⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "When?"
+    }
+  ]
+}

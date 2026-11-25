@@ -1,0 +1,217 @@
+{
+  "id": "C6124",
+  "forms": [
+    {
+      "id": "CF14253",
+      "orth": "ⲣϣⲧⲟⲣⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5729,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6811",
+      "bibliography": "CD 598b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓϫⲟⲟⲥ ⲇⲉ ⲛⲏⲧⲛ ϫⲉⲙⲡ**ⲣϣⲧⲟⲣⲧⲣ** ⲟⲩⲇⲉ ⲙⲡⲣⲣϩⲟⲧⲉ ϩⲁⲧⲉⲩϩⲏ",
+      "english": "And I said to you, Fear not, neither be ye afraid of them;",
+      "source": "Deuteronomy 1",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲧⲛⲛⲁⲥⲱⲧⲙ ⲇⲉ ⲉϩⲉⲛⲡⲟⲗⲉⲙⲟⲥ ⲙⲛϩⲉⲛϩⲣⲟⲟⲩ ⲙⲡⲟⲗⲉⲙⲟⲥ ϭⲱϣⲧ ⲙⲡ**ⲣϣⲧⲟⲣⲧⲣ** ϩⲁⲡⲥ ⲅⲁⲣ ⲉⲧⲣⲉⲩϣⲱⲡⲉ ⲁⲗⲗⲁ ⲙⲡⲁⲧⲉⲧϩⲁⲏ ⲉⲓ .",
+      "english": "You will hear of wars and rumors of wars. See that you aren't troubled, for all this must happen, but the end is not yet.",
+      "source": "40_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁⲩⲗⲟⲥ ⲇⲉ ⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲁϥⲡⲁϩⲧϥ ⲉϩⲣⲁⲓ ⲉϫⲱϥ . ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϩⲱⲗϭ ⲉⲣⲟϥ . ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲙⲡ**ⲣϣⲧⲟⲣⲧⲣ** ⲧⲉϥⲯⲩⲭⲏ ⲅⲁⲣ ϣⲟⲟⲡ ⲛϩⲏⲧϥ .",
+      "english": "Paul went down, and fell upon him, and embracing him said, 'Don't be troubled, for his life is in him.'",
+      "source": "44_Acts of the Apostles_20",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        3,
+        13.031
+      ],
+      [
+        "ϩⲁⲡⲥ",
+        1,
+        12.448
+      ],
+      [
+        "ⲡⲟⲗⲉⲙⲟⲥ",
+        1,
+        10.516
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        9.679
+      ],
+      [
+        "ⲡ",
+        5,
+        9.463
+      ],
+      [
+        "ⲙ",
+        4,
+        9.351
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        1,
+        9.12
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        9.067
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        8.036
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.969
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.865
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        7.791
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.146
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.964
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.664
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.164
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        ".",
+        1,
+        4.557
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣϣⲧⲟⲣⲧⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5293,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6120",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "V",
+      "gloss": "be disturbed, in haste, disturb"
+    },
+    {
+      "target": "C6121",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "disturbance, trouble, haste"
+    },
+    {
+      "target": "C6126",
+      "label": "ϣⲧⲣⲧⲓⲣ",
+      "pos": "N",
+      "gloss": "hasty, rash person"
+    },
+    {
+      "target": "C6125",
+      "label": "ϯϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "make disturbance"
+    },
+    {
+      "target": "C6122",
+      "label": "ⲁⲧϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "unperturbed"
+    },
+    {
+      "target": "C6123",
+      "label": "ⲙⲛⲧϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "tranquillity"
+    }
+  ]
+}

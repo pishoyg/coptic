@@ -1,0 +1,255 @@
+{
+  "id": "C8653",
+  "forms": [
+    {
+      "id": "CF20463",
+      "orth": "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20464",
+      "orth": "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20465",
+      "orth": "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20466",
+      "orth": "ⲅⲁⲗⲓⲗⲉⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2233,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10225",
+      "bibliography": "DDGLC",
+      "cu_ID": "598"
+    },
+    {
+      "id": "CS10226",
+      "bibliography": "DDGLC",
+      "cu_ID": "5876"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲟⲛ ⲁϥϫⲱⲗ ⲉⲃⲟⲗ ⲙⲉⲛⲉⲛⲥⲁⲟⲩⲕⲟⲩϫⲓ ⲡⲁⲗⲓⲛ ⲛⲏ ⲉⲧⲟϩⲓ ⲉⲣⲁⲧⲟⲩ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲙⲡⲉⲧⲣⲟⲥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲛⲑⲟⲕ ⲟⲩⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ . ⲕⲉ ⲅⲁⲣ ⲛⲑⲟⲕ ⲟⲩ**ⲅⲁⲗⲓⲗⲉⲟⲥ** .",
+      "english": "But he again denied it. After a little while again those who stood by said to Peter, 'You truly are one of them, for you are a Galilean, and your speech shows it.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲥ ⲇⲉ ⲛⲁϥϩⲉⲙⲥⲓ ⲥⲁⲃⲟⲗ ⲡⲉ ϧⲉⲛϯⲁⲩⲗⲏ ⲟⲩⲟϩ ⲁⲥⲓ ϩⲁⲣⲟϥ ⲛϫⲉⲟⲩⲃⲱⲕⲓ ⲉⲥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲑⲟⲕ ϩⲱⲕ ⲛⲁⲕⲭⲏ ⲛⲉⲛⲓⲏⲥⲟⲩⲥ ⲡⲓ**ⲅⲁⲗⲓⲗⲉⲟⲥ** .",
+      "english": "Now Peter was sitting outside in the court, and a maid came to him, saying, 'You were also with Jesus, the Galilean!'",
+      "source": "01_Matthew_26",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲁⲩⲓ ϩⲁⲣⲟϥ ⲡⲉ ⲙⲡⲓⲥⲏⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛϫⲉϩⲁⲛⲟⲩⲟⲛ ⲉⲩⲧⲁⲙⲟ ⲙⲙⲟϥ ⲉⲑⲃⲉⲛⲓ**ⲅⲁⲗⲓⲗⲉⲟⲥ** ⲛⲏ ⲉⲧⲁ ⲡⲓⲗⲁⲧⲟⲥ ⲙⲟⲩϫⲧ ⲙⲡⲟⲩⲥⲛⲟϥ ⲛⲉⲙⲛⲟⲩϣⲟⲩϣⲱⲟⲩϣⲓ .",
+      "english": "Now there were some present at the same time who told him about the Galileans, whose blood Pilate had mixed with their sacrifices.",
+      "source": "03_Luke_13",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        ".",
+        11,
+        13.128
+      ],
+      [
+        "ⲣⲛⲟⲃⲉ",
+        3,
+        12.751
+      ],
+      [
+        "ⲣⲉϥϫⲓϭⲟⲗ",
+        1,
+        12.469
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        4,
+        12.049
+      ],
+      [
+        "ⲁϩⲣⲱ",
+        1,
+        11.581
+      ],
+      [
+        "ⲁ",
+        9,
+        10.747
+      ],
+      [
+        "ⲡⲓⲗⲁⲧⲟⲥ",
+        1,
+        10.487
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        10.063
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲥ",
+        1,
+        9.631
+      ],
+      [
+        "ⲅⲁⲣ",
+        3,
+        9.627
+      ],
+      [
+        "ⲛ",
+        9,
+        9.511
+      ],
+      [
+        "ϫⲉ",
+        5,
+        9.305
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        3,
+        9.261
+      ],
+      [
+        "ⲛⲧ",
+        3,
+        9.178
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.168
+      ],
+      [
+        "ⲕⲁⲓ",
+        1,
+        9.049
+      ],
+      [
+        "ⲩ",
+        5,
+        8.968
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        1,
+        8.86
+      ],
+      [
+        "ⲡⲁⲣⲁ",
+        1,
+        8.831
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        8.103
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲡⲓ_2_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲓϭⲟⲗ_1_post_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲗⲏⲑⲱⲥ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ_0_node",
+          "ⲡⲓ_2_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲉϥϫⲓϭⲟⲗ_1_post_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          "ⲅⲁⲣ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          "ⲕ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          "ⲟⲩ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          "ⲅⲁⲗⲓⲗⲁⲓⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲗⲏⲑⲱⲥ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          "ⲕⲁⲓ_1_pre_ⲅⲁⲗⲓⲗⲁⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "grl_ID": "2662",
+    "grl_lemma": "Γαλιλαῖος",
+    "grl_meaning": "Galilean",
+    "grl_pos": "adjective",
+    "grl_ref": "Sophocles 323b; Bauer 302"
+  }
+}

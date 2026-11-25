@@ -1,0 +1,62 @@
+{
+  "id": "C3437",
+  "forms": [
+    {
+      "id": "CF8773",
+      "orth": "ⲥⲕⲉⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11599,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF8774",
+      "orth": "ⲥⲕⲉⲛⲧ⸗",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3915",
+      "bibliography": "CD 329a; CED 150; KoptHWb 182; DELC 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲉⲩⲉⲥⲱ ⲛϫⲉⲛⲓⲣⲉⲙⲛⲭⲏⲙⲓ ⲙⲡⲓⲙⲱⲟⲩ ⲉⲧϩⲓ **ⲥⲕⲉⲛ** ⲡⲓⲟⲙ ⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ ⲉϥⲉⲙⲟⲩⲛⲕ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲟⲩⲓ .",
+      "english": "And the Egyptians shall drink the water that is by the sea, but the river shall fail, and be dried up.",
+      "source": "23_Isaias_19",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲟⲩⲱⲣⲡ ⲟⲩⲛ ⲛⲟⲩⲁⲓ ⲛⲧⲱⲟⲩ ⲁϥⲙⲟⲩϯ ⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ . ⲉⲧⲁϥⲓ ⲇⲉ ϣⲁⲣⲟϥ ⲁϥϣⲉⲛϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲡⲓⲛⲁⲩ ⲉⲧⲉⲕⲟϩⲓ ⲉⲣⲁⲧⲕ ϩⲓϫⲉⲛⲡⲓⲙⲁ ⲛⲉⲣϣⲱⲟⲩϣⲓ ⲁⲕⲥⲁϫⲓ ⲛⲉⲙⲛⲓⲙ ⲙⲡⲓⲛⲁⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲓⲉ ⲛⲓⲙ ⲡⲉ ⲫⲏ ⲉⲧⲁⲓⲛⲁⲩ ⲉⲣⲟϥ ⲉϥⲟϩⲓ ⲉⲣⲁⲧϥ **ⲉⲥⲕⲏⲧ**ⲕ ⲉϥⲟⲓ ⲛⲟⲩⲱⲓⲛⲓ ⲛⲭⲣⲱⲙ .",
+      "english": "Having sent one of them, the king sent for the archbishop, and when he arrived, he questioned him, saying: “At the time when you stood at the altar, with whom were you then speaking? And who was he who stood (all) luminous (and as if) on fire?”",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3439",
+      "label": "ϩⲓⲥⲕⲉⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at the side of"
+    },
+    {
+      "target": "C3438",
+      "label": "ⲉⲥⲕⲉⲛ-",
+      "pos": "PREP",
+      "gloss": "beside"
+    }
+  ]
+}

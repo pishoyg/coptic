@@ -1,0 +1,61 @@
+{
+  "id": "C3160",
+  "forms": [
+    {
+      "id": "CF31671",
+      "orth": "ⲥⲁⲣⲁⲥⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31670",
+      "orth": "ⲛⲥⲁⲣⲁⲥⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3610",
+      "bibliography": "CD 302a; KoptHWb 166; ChLCS 42b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3158",
+      "label": "ⲉⲡⲉϥⲣⲁⲥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "on the morrow, tomorrow"
+    },
+    {
+      "target": "C3156",
+      "label": "ⲉⲣⲁⲥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "on the morrow, tomorrow"
+    },
+    {
+      "target": "C3159",
+      "label": "ⲙⲡⲉϥⲣⲁⲥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "on the morrow, tomorrow"
+    },
+    {
+      "target": "C3157",
+      "label": "ⲛⲣⲁⲥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "on the morrow, tomorrow"
+    },
+    {
+      "target": "C3155",
+      "label": "ⲣⲁⲥⲧⲉ",
+      "pos": "N",
+      "gloss": "morrow"
+    }
+  ]
+}

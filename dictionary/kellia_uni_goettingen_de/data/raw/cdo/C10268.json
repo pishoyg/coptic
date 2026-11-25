@@ -1,0 +1,448 @@
+{
+  "id": "C10268",
+  "forms": [
+    {
+      "id": "CF27231",
+      "orth": "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27236",
+      "orth": "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3222,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF27232",
+      "orth": "ⲡⲣⲁⲓⲧⲟⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11759,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27234",
+      "orth": "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27235",
+      "orth": "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27233",
+      "orth": "ⲡⲣⲁⲓⲧⲱⲣⲓⲟ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27237",
+      "orth": "ⲡⲣⲉⲧⲱⲣⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2601,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF27238",
+      "orth": "ⲡⲣⲉⲧⲱⲣⲓⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27239",
+      "orth": "ⲡⲗⲏⲧⲱⲣⲓⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13753",
+      "bibliography": "DDGLC",
+      "cu_ID": "609"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙⲁⲧⲟⲓ ⲇⲉ ⲁⲩϭⲓⲧϥ ⲉϧⲟⲩⲛ ⲉϯⲁⲩⲗⲏ ⲛⲧⲉⲡⲓ**ⲡⲣⲉⲧⲱⲣⲓⲟⲛ** ⲟⲩⲟϩ ⲁⲩⲙⲟⲩϯ ⲉϯⲥⲡⲓⲣⲁ ⲧⲏⲣⲥ ⲉϩⲣⲏⲓ ⲉϫⲱϥ",
+      "english": "The soldiers led him away within the court, which is the Praetorium; and they called together the whole cohort.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲙⲁⲧⲟⲓ ⲇⲉ ⲁⲩϫⲓⲧϥ ⲉϩⲟⲩⲛ ⲉⲧⲁⲩⲗⲏ ⲉⲧⲉⲡⲉ**ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ** ⲡⲉ ⲁⲩⲱ ⲁⲩⲥⲱⲟⲩϩ ⲉⲣⲟϥ ⲛⲧⲉⲥⲡⲓⲣⲁ ⲧⲏⲣⲥ",
+      "english": "The soldiers led him away within the court, which is the Praetorium; and they called together the whole cohort.",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛⲁⲥⲛⲁⲩϩ ⲛⲧⲟⲩϣⲱⲡⲓ ⲉⲩⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓ**ⲡⲣⲉⲧⲱⲣⲓⲟⲛ** ⲧⲏⲣϥ ⲛⲉⲙⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲥⲱϫⲡ .",
+      "english": "so that it became evident to the whole praetorian guard, and to all the rest, that my bonds are in Christ;",
+      "source": "11_Philippians_01",
+      "urn": "urn:cts:copticLit:nt.phil.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲇⲟⲩⲝ ⲇⲉ ⲛⲉϥⲛϩⲟⲩⲛ ⲙⲡⲉ**ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ** ⲉϥⲕⲣⲓⲛⲉ ⲛϩⲉⲛⲙⲁⲧⲟⲓ ⲉⲧⲃⲉⲡⲣⲁⲛ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "And the Duke was in the praetorium passing sentences of judgement upon the soldiers for the sake of the Name of the Christ",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲛⲓⲙⲁⲧⲟⲓ ⲛⲧⲉⲡⲓϩⲏⲅⲉⲙⲱⲛ ⲁⲩⲉⲗ ⲓⲏⲥⲟⲩⲥ ⲉϧⲟⲩⲛ ⲉⲡⲓ**ⲡⲣⲉⲧⲱⲣⲓⲟⲛ** ⲁⲩⲑⲱⲟⲩϯ ⲛϯⲥⲡⲓⲣⲁ ⲧⲏⲣⲥ ⲉϩⲣⲏⲓ ⲉϫⲱϥ .",
+      "english": "Then the governor's soldiers took Jesus into the Praetorium, and gathered the whole garrison together against him.",
+      "source": "01_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛⲁⲙⲣⲣⲉ ⲛⲥⲉⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ . ϩⲙⲡⲉ**ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ** ⲧⲏⲣϥ ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲧⲏⲣϥ .",
+      "english": "so that it became evident to the whole praetorian guard, and to all the rest, that my bonds are in Christ;",
+      "source": "50_Philippians_1",
+      "urn": "urn:cts:copticLit:nt.phil.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲓ",
+        6,
+        10.941
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        2,
+        10.889
+      ],
+      [
+        "ⲫⲟϩ",
+        1,
+        10.862
+      ],
+      [
+        "ⲧⲁⲙⲉ",
+        1,
+        10.303
+      ],
+      [
+        "ϣⲉ",
+        2,
+        10.272
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        9.881
+      ],
+      [
+        "ⲉ",
+        5,
+        9.398
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        9.178
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        2,
+        8.93
+      ],
+      [
+        "ⲛⲁⲣⲉ",
+        1,
+        8.735
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        8.532
+      ],
+      [
+        "ⲩ",
+        3,
+        8.291
+      ],
+      [
+        "ⲁ",
+        3,
+        7.159
+      ],
+      [
+        "ⲓ",
+        2,
+        6.991
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.719
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.667
+      ],
+      [
+        "ϥ",
+        3,
+        6.594
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.369
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        5.712
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.386
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲉ",
+        13,
+        14.024
+      ],
+      [
+        "ⲕⲁⲓⲫⲁⲥ",
+        1,
+        13.843
+      ],
+      [
+        "ⲁⲩⲗⲏ",
+        2,
+        13.013
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        4,
+        11.093
+      ],
+      [
+        "ⲡⲓⲗⲁⲧⲟⲥ",
+        1,
+        10.709
+      ],
+      [
+        "ⲇⲟⲩⲝ",
+        1,
+        10.604
+      ],
+      [
+        "ⲥⲱⲱϥ",
+        1,
+        10.521
+      ],
+      [
+        "ⲛϩⲟⲩⲛ",
+        1,
+        10.413
+      ],
+      [
+        "ⲉ",
+        8,
+        10.232
+      ],
+      [
+        "ⲩ",
+        5,
+        9.191
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        1,
+        9.002
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        2,
+        8.959
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        8.699
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        8.642
+      ],
+      [
+        "ⲕⲣⲓⲛⲉ",
+        1,
+        8.578
+      ],
+      [
+        "ⲁ",
+        5,
+        8.425
+      ],
+      [
+        "ⲥⲱⲟⲩϩ",
+        1,
+        8.306
+      ],
+      [
+        ",",
+        1,
+        8.282
+      ],
+      [
+        "ϥ",
+        5,
+        7.902
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        7.756
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          4
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          "ⲧⲏⲣ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲕⲣⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲕⲣⲓⲛⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ϥ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ_0_node",
+          "ⲉ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ",
+          "ϥ_3_post_ⲕⲣⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲕⲣⲓⲛⲉ",
+          "ⲕⲣⲓⲛⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2867,
+      "count": 12
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2727,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1812",
+    "grl_lemma": "πραιτώριον",
+    "grl_meaning": "praetorium, official residence of a governor",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1458b; Preisigke 2:351"
+  }
+}

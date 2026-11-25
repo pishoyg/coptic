@@ -1,0 +1,253 @@
+{
+  "id": "C7436",
+  "forms": [
+    {
+      "id": "CF16931",
+      "orth": "ϫⲟⲩⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1702,
+        "count": 40
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "f.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS8229",
+      "bibliography": "CD 794b-795a; CED 322; KoptHWb 438; DELC 333a; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲥⲧⲉⲩⲉ ⲛⲁⲓ ⲱ ⲡⲁⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ϫⲉⲉⲓⲥ**ϫⲟⲩⲱⲧⲉ** ⲛⲣⲟⲙⲡⲉ · ϫⲓⲛⲛⲧⲁⲓⲉⲓ ⲉⲡⲉⲓⲙⲁ ⲧⲉⲓϩⲃⲥⲱ ⲛⲟⲩⲱⲧ ⲧⲉⲧⲓϭⲓⲛⲉ ⲛⲧⲁϩⲙⲙⲉ ⲛϩⲏⲧⲥ · ⲛⲧⲉⲡⲣⲱ · ⲁⲩⲱ ⲧⲕⲉⲕⲣⲁⲥⲓⲥ ⲙⲡⲁⲏⲣ ⲙⲡϣⲱⲙ ·",
+      "english": "Believe me, O my beloved father, behold, it is twenty years ago since I came to this place, and with this single garment I have found means to keep myself warm during the winter, and to moderate the heat of the atmosphere in summer time.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲛⲅⲟⲩϣⲏⲣⲉ ϣⲏⲙ ⲉⲓϩⲛ**ϫⲟⲩⲱⲧⲉ** ⲛⲣⲟⲙⲡⲉ ·",
+      "english": "I am a young man twenty years of age.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲟⲩⲱ ⲇⲉ ⲉϥⲕⲱⲧ ⲙⲡⲏⲓ ⲙⲛⲛⲥⲁ**ϫⲟⲩⲱⲧⲉ** ⲛⲣⲟⲙⲡⲉ · ⲁϥⲉⲓⲣⲉ ⲙⲡϫⲓⲁⲉⲓⲕ ⲙⲡⲏⲓ ⲙⲡϫⲟⲉⲓⲥ ·",
+      "english": "Now according to what is reported, he (finished) building the house after twenty years, and (then) he dedicated the house to God.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲙⲡⲉ",
+        73,
+        24.264
+      ],
+      [
+        "ϫⲓⲛ",
+        22,
+        18.308
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        13,
+        18.193
+      ],
+      [
+        "ⲁⲡⲉ",
+        13,
+        17.361
+      ],
+      [
+        "ⲉ",
+        49,
+        16.339
+      ],
+      [
+        "ⲛ",
+        54,
+        15.752
+      ],
+      [
+        "ⲣⲟⲙⲧⲉ",
+        1,
+        15.276
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.276
+      ],
+      [
+        "ⲛⲓⲙ",
+        13,
+        14.066
+      ],
+      [
+        "ϩⲛϣⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ⲧ",
+        19,
+        13.493
+      ],
+      [
+        "ⲥϭⲣⲉϩⲧ",
+        1,
+        12.691
+      ],
+      [
+        "ⲉⲓⲥ",
+        6,
+        12.479
+      ],
+      [
+        "ⲁⲱⲑ",
+        1,
+        12.469
+      ],
+      [
+        "ⲧⲓⲙⲏ",
+        2,
+        12.345
+      ],
+      [
+        "ⲭⲣⲩⲥⲟⲥ",
+        1,
+        12.106
+      ],
+      [
+        "ⲉⲣⲅⲁⲥⲓⲁ",
+        1,
+        11.954
+      ],
+      [
+        "ⲇⲉⲃⲃⲱⲣⲁ",
+        1,
+        11.576
+      ],
+      [
+        "ϫⲏⲏⲥ",
+        1,
+        11.369
+      ],
+      [
+        "ⲡ",
+        16,
+        11.175
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟⲩⲱⲧⲉ_0_node",
+          38
+        ],
+        [
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_1_post_ϫⲟⲩⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ϫⲟⲩⲱⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟⲩⲱⲧⲉ_0_node",
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          "ⲧⲓⲙⲏ_1_post_ϫⲟⲩⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_1_post_ϫⲟⲩⲱⲧⲉ",
+          "ⲙ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲧⲓⲙⲏ",
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          "ϩⲟⲟⲩⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ϫⲟⲩⲱⲧⲉ",
+          "ϫⲟⲩⲱⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.25,
+      "rank": 1480,
+      "count": 40
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7437",
+      "label": "ϫⲟⲩⲱⲧ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    },
+    {
+      "target": "C7438",
+      "label": "ϫⲟⲩⲱⲧ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    },
+    {
+      "target": "C7439",
+      "label": "ϫⲟⲩⲱⲧⲉ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    }
+  ],
+  "etym": {
+    "egy_num": "183070",
+    "egy_lemma": "ḏwt",
+    "english": "twenty",
+    "german": "Zwanzig; zwanzig",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/183070"
+  }
+}

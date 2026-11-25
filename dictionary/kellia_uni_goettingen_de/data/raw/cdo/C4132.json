@@ -1,0 +1,76 @@
+{
+  "id": "C4132",
+  "forms": [
+    {
+      "id": "CF10209",
+      "orth": "ϭⲉⲡⲧⲃⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4692",
+      "bibliography": "CD 401b; ChLCS 56b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7830",
+      "type": "cf",
+      "label": "seize, take, begin"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4134",
+      "label": "ⲣⲉϥϭⲡⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4135",
+      "label": "ⲣⲉϥϭⲡⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4136",
+      "label": "ⲣⲉϥⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4137",
+      "label": "ⲣⲉϥⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4131",
+      "label": "ⲥⲁ ⲛⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish seller"
+    },
+    {
+      "target": "C4133",
+      "label": "ⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "V",
+      "gloss": "catch fish"
+    },
+    {
+      "target": "C4130",
+      "label": "ⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish"
+    }
+  ]
+}

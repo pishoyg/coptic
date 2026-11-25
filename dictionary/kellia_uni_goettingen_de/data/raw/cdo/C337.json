@@ -1,0 +1,610 @@
+{
+  "id": "C337",
+  "forms": [
+    {
+      "id": "CF1462",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3882,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF1463",
+      "orth": "ϥⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3770,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF1464",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 1982,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF1465",
+      "orth": "ϥⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 488,
+        "count": 158
+      }
+    },
+    {
+      "id": "CF1466",
+      "orth": "ⲃⲁⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3039,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS374",
+      "bibliography": "CD 28a; CED 20; KoptHWb 21; DELC 25; ChLCS 7a"
+    },
+    {
+      "id": "CS375",
+      "bibliography": "CD 28a; CED 20; KoptHWb 21; DELC 25-26; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲕⲁⲧⲁⲣⲁⲕⲓⲛ ⲛⲉⲙⲃⲏϫ ⲛⲉⲙⲛⲉⲧⲟⲛⲓ ⲙⲙⲟϥ ⲛⲉⲙ**ⲃⲁⲓ** ⲛⲉⲙⲙⲟⲩⲗⲁϫ",
+      "english": "and the cormorant, and the hawk, and its like, and the hoopoe, and the raven,",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲣⲉⲕⲧⲡⲉⲕⲙⲁⲁϫⲉ ⲉⲣⲟⲓ ⲙⲡⲉϩⲟⲟⲩ ⲉϯⲛⲁⲑⲗⲓⲃⲉ · ϭⲉⲡⲏ ⲥⲱⲧⲙ ⲉⲣⲟⲓ ϩⲙⲡⲉϩⲟⲟⲩ ⲉϯⲛⲁⲱϣ ⲉϩⲣⲁⲓ ⲉⲣⲟⲕ · ϫⲉⲁⲛⲁϩⲟⲟⲩ ⲱϫⲛ ⲛⲧϩⲉ ⲛⲟⲩⲕⲁⲡⲛⲟⲥ ⲁⲩⲱ ⲁⲛⲁⲕⲉⲉⲥ ϭⲱϭ ⲛⲧϩⲉ ⲛⲟⲩⲱⲛⲉ · ⲁⲉⲓⲱϭⲉ ⲛⲧϩⲉ ⲛⲟⲩⲭⲟⲣⲧⲟⲥ · ⲁⲩⲱ ⲁⲡⲁϩⲏⲧ ϣⲟⲟⲩⲉ . ϫⲉⲁⲓⲣⲡⲱⲃϣ ⲉⲟⲩⲱⲙ ⲙⲡⲁⲟⲉⲓⲕ · ⲉⲃⲟⲗ ϩⲙⲡⲉϩⲣⲟⲟⲩ ⲙⲡⲁⲁϣⲁϩⲟⲙ · ⲁⲡⲁⲕⲁⲥ ⲧⲱϭⲉ ⲉⲧⲁⲥⲁⲣⲝ · ⲁⲓⲣⲧϩⲉ ⲛⲟⲩϩⲣⲓⲙ ϩⲓⲡϫⲁⲓⲉ · ⲁⲓϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲃⲁⲓ** ϩⲛⲟⲩⲏⲓ · ⲁⲓⲣⲟⲩϣⲏ ⲛⲣⲟⲉⲓⲥ ·",
+      "english": "“incline thine ear unto me in the day when I am oppressed; quickly give ear to me on the day when I shall cry unto thee. “3. For | my days are vanished as smoke and my bones are parched as stone. “4. I am scorched as the grass, and my heart is dried up; for I have forgotten to eat my bread. “5. From the voice of my groaning my bones cleaved to my flesh. 6. I am become as a pelican in the desert; I am become as a screech-owl in the house. 7. I have passed the night watching;”",
+      "source": "Pistis Sophia Book 1 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:50-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ ϫⲉⲛⲏ ⲉⲧϭⲟϫⲓ ϧⲉⲛⲡⲓⲥⲧⲁⲇⲓⲟⲛ ⲥⲉϭⲟϫⲓ ⲙⲉⲛ ⲧⲏⲣⲟⲩ ⲟⲩⲁⲓ ⲇⲉ ⲉϣⲁϥϭⲓ ⲙⲡⲓ**ⲃⲁⲓ** ⲡⲁⲓⲣⲏϯ ⲇⲉ ϭⲟϫⲓ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲧⲁϩⲟ .",
+      "english": "Don't you know that those who run in a race all run, but one receives the prize? Run like that, that you may win.",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲁⲕⲱⲃ ⲇⲉ ϫⲟⲟⲩ ⲛϩⲛ**ⲃⲁⲓ**ϣⲓⲛⲉ ϩⲁⲧⲉϥϩⲏ ⲉⲣⲁⲧϥ ⲛⲏⲥⲁⲩ ⲡⲉϥⲥⲟⲛ ⲉϩⲣⲁⲓ ⲉⲡⲕⲁϩ ⲛⲥⲏⲉⲓⲣ ⲉⲧⲉⲭⲱⲣⲁ ⲛⲉⲇⲟⲙ",
+      "english": "And Jacob sent messengers before him to Esau his brother to the land of Seir, to the country of Edom.",
+      "source": "Genesis 32",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲉϣⲁⲛⲫⲁⲓ ϣⲱⲡⲓ ⲱ ⲡⲟⲩⲣⲟ ⲥⲉⲛⲁⲉⲣⲟⲩϩⲏⲧ ⲛⲟⲩⲱⲧ ⲛⲥⲉⲧⲱⲟⲩⲛⲟⲩ ⲉϩⲣⲏⲓ ⲉϫⲱⲛ ⲛⲧⲟⲩⲉⲣⲡⲟⲗⲉⲙⲉⲓⲛ ⲛⲉⲙⲁⲛ . ⲉⲧⲁⲡⲟⲩⲣⲟ ⲥⲱⲧⲉⲙ ⲉⲛⲁⲓ ⲁϥϫⲱⲛⲧ ⲉⲙⲁϣⲱ ⲟⲩⲟϩ ϧⲉⲛϯⲟⲩⲛⲟⲩ ⲁϥⲟⲩⲱⲣⲡ ⲛϩⲁⲛⲣⲉⲙ ⲉⲣⲁⲕⲟϯ ⲛⲉⲙϩⲁⲛⲥϧⲁⲓ ⲛⲧⲁϥ ϣⲁⲡⲓⲁⲩⲅⲟⲩⲥⲧⲁⲗⲓⲟⲥ ⲉⲁϥⲥϧⲁⲓ ⲛⲁϥ ⲙⲡⲁⲓⲣⲏϯ ϫⲉϧⲉⲛϯⲟⲩⲛⲟⲩ ⲉⲧⲟⲩⲛⲁⲫⲟϩ ⲉⲣⲟⲕ ⲛϫⲉⲛⲁⲓ**ϥⲁⲓ** ϣⲓⲛⲓ ⲛⲧⲏⲓ ⲛⲉⲙⲛⲁⲓⲥϧⲁⲓ ⲧⲁϩⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲟⲩⲟⲣⲡϥ ⲛⲏⲓ ⲛⲭⲱⲗⲉⲙ .",
+      "english": "If it happens thus, O king, they will become one heart, they will rise up against us to make war on us. “When the king heard these words, he became very angry, and immediately he sent servants to Alexandria with letters from him for the Augustal, having written to him thus: “As soon as my messengers have arrived near you with these letters, seize the patriarch, send him to me quickly.”",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϫⲓ ⲛⲉϩⲉ ⲥⲛⲧⲉ ⲁϥⲁⲁⲩ ⲛϣⲁⲩ ϣⲁⲩⲁⲩϫⲟⲟⲩⲥⲟⲩ ⲉⲃⲟⲗ ⲉⲛⲧⲟϣ ⲧⲏⲣⲟⲩ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲧⲟⲟⲧⲟⲩ ⲛⲛⲉ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲧⲉⲧⲛϥⲛⲁⲉⲓ ⲁⲛ ⲉⲃⲟⲗ ⲉⲟⲩⲁϩϥ ⲛⲥⲁⲥⲁⲟⲩⲗ ⲁⲩⲱ ⲛⲥⲁⲥⲁⲙⲟⲩⲏⲗ ⲉⲩⲉⲉⲓⲣⲉ ⲛⲧⲉⲓϩⲉ ϩⲱⲱϥ ⲛⲛⲉϥⲉⲟⲟⲩ ⲁⲩⲱ ⲧϩⲟⲧⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲥⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲗⲁⲟⲥ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲁⲩⲱϣ ⲉⲃⲟⲗ ϩⲓⲟⲩⲥⲟⲡ ⲧⲏⲣⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩⲣⲱⲙⲉ ⲛⲟⲩⲱⲧ",
+      "english": "And he took two cows, and cut them in pieces, and sent them into all the coasts of Israel by the hand of messengers, saying, Whoso comes not forth after Saul and after Samuel, so shall they do to his oxen: and a transport from the Lord came upon the people of Israel, and they came out to battle as one man.",
+      "source": "I Samuel 11",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲡⲁϯ",
+        2,
+        16.303
+      ],
+      [
+        "ⲑⲟⲕⲥ",
+        2,
+        14.718
+      ],
+      [
+        "ϩⲏⲙⲏ",
+        1,
+        14.303
+      ],
+      [
+        "ϭⲟϫⲓ",
+        5,
+        13.263
+      ],
+      [
+        "ⲙⲟⲩⲗⲁϫ",
+        1,
+        12.718
+      ],
+      [
+        "ⲥⲱⲟⲩⲧⲉⲛ",
+        2,
+        11.215
+      ],
+      [
+        "ϥ",
+        15,
+        10.753
+      ],
+      [
+        "ⲡⲉϥ",
+        6,
+        10.403
+      ],
+      [
+        "ⲙ",
+        10,
+        10.157
+      ],
+      [
+        "ϩⲁⲛ",
+        6,
+        9.676
+      ],
+      [
+        "ϩⲓϫⲱ",
+        2,
+        9.535
+      ],
+      [
+        "ⲃⲉⲛⲓ",
+        1,
+        9.495
+      ],
+      [
+        "ⲑⲱϩⲉⲙ",
+        1,
+        9.495
+      ],
+      [
+        "ⲡⲓ",
+        8,
+        9.378
+      ],
+      [
+        "ⲁⲙⲟⲛⲓ",
+        2,
+        8.954
+      ],
+      [
+        "ϭⲓ",
+        3,
+        8.629
+      ],
+      [
+        "ⲛ",
+        8,
+        8.198
+      ],
+      [
+        "ⲓ",
+        5,
+        8.149
+      ],
+      [
+        "ϣⲱⲓ",
+        2,
+        8.11
+      ],
+      [
+        "ⲭⲱ",
+        2,
+        7.992
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲓⲛⲉ",
+        7,
+        15.877
+      ],
+      [
+        "ⲥⲟⲃⲧ",
+        1,
+        10.983
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        2,
+        10.014
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        9.715
+      ],
+      [
+        "ϥ",
+        6,
+        9.277
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.068
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        9.021
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.234
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.104
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.065
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        7.767
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.126
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        6.975
+      ],
+      [
+        "ϩⲁ",
+        1,
+        6.865
+      ],
+      [
+        "ⲁ",
+        3,
+        6.799
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        6.735
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.425
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.146
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        6.116
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          3
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          11
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲓ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3492,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.49,
+      "rank": 980,
+      "count": 42
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1886",
+      "type": "syn",
+      "label": "night raven, owl (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13008",
+      "label": "ϩⲣⲟⲩⲃⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder, voice of heaven"
+    },
+    {
+      "target": "C338",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "spirit"
+    },
+    {
+      "target": "C339",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "sky"
+    },
+    {
+      "target": "C340",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "sky"
+    }
+  ],
+  "etym": {
+    "egy_num": "52810",
+    "egy_lemma": "bꜣ",
+    "english": "[a stork]",
+    "german": "[ein Vogel (ein Storch)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/52810"
+  }
+}

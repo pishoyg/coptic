@@ -1,0 +1,52 @@
+{
+  "id": "C7872",
+  "forms": [
+    {
+      "id": "CF17809",
+      "orth": "ϫⲓϭⲣⲏⲡⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8751",
+      "bibliography": "CD 829a; KoptHWb 465; ChLCS 109b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7873",
+      "label": "ϫⲁⲓϭⲣⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "crown-bearing"
+    },
+    {
+      "target": "C7870",
+      "label": "ϭⲣⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "diadem, crown; sceptre"
+    },
+    {
+      "target": "C7871",
+      "label": "ⲣϭⲣⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "form, be a crown"
+    }
+  ]
+}

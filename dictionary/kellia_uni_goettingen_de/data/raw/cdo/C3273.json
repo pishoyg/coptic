@@ -1,0 +1,72 @@
+{
+  "id": "C3273",
+  "forms": [
+    {
+      "id": "CF8434",
+      "orth": "ⲥⲁ ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.17,
+        "rank": 650,
+        "count": 185
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "zur Bildung von Tätigkeitsbezeichnungen",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3740",
+      "bibliography": "CD 316a; CED 144; KoptHWb 173; DELC 181; ChLCS 44b-45a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲟⲩ ⲉϩⲟⲩⲛ ⲙⲡⲣⲁϩⲉⲣⲁⲧⲕ **ϩⲓⲡⲥⲁ **ⲛ**ⲃⲟⲗ** ·",
+      "english": "come inside, and do not stand outside.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉ...... ⲙⲙⲟ..... ⲕⲁⲥⲕ.. **ⲥⲁⲟⲩⲥⲁ **ⲛ**ϫⲓⲟⲩⲉ** ⲉⲛⲉⲧⲛⲉⲣⲏⲩ",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩⲕⲱ ⲛⲛϣⲏⲣⲉ ⲕⲟⲩⲓ **ⲛⲥⲁⲟⲩⲥⲁ **ⲛ**ⲕⲉⲥⲟⲡ** ·",
+      "english": "And he commanded [him] to put the little children aside once more.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3271",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "woman"
+    },
+    {
+      "target": "C3272",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "man"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4941",
+    "demo_lemma": "s-n-",
+    "english": "man of, -dealer",
+    "german": "Mann des, -händler",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4941"
+  }
+}

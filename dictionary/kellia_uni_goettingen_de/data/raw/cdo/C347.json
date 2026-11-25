@@ -1,0 +1,382 @@
+{
+  "id": "C347",
+  "forms": [
+    {
+      "id": "CF1498",
+      "orth": "ⲃⲁⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 8.34,
+        "rank": 154,
+        "count": 707
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS385",
+      "bibliography": "CD 30b; CED 21; KoptHWb 21; DELC 26; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϯ**ⲃⲁⲕⲓ** ⲧⲏⲣⲥ ⲁⲥⲑⲱⲟⲩϯ ϩⲓⲣⲉⲛⲡⲓⲣⲟ .",
+      "english": "All the city was gathered together at the door.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲉⲣⲟⲩϩⲓ ϣⲱⲡⲓ ⲛⲁϥϩⲏⲗ ⲥⲁⲃⲟⲗ ⲛϯ**ⲃⲁⲕⲓ**",
+      "english": "When evening came, he went out of the city.",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲓ ⲟⲛ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲑⲟϣ ⲛⲧⲉⲧⲩⲣⲟⲥ ⲛⲁϥⲥⲓⲛⲓ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲧⲥⲓⲇⲱⲛ ⲉⲫⲓⲟⲙ ⲛⲧⲉϯⲅⲁⲗⲓⲗⲉⲁ ⲟⲩⲧⲉ ⲛⲓⲑⲟϣ ⲛⲧⲉϯⲙⲏϯ ⲙ**ⲃⲁⲕⲓ**",
+      "english": "Again he departed from the borders of Tyre and Sidon, and came to the sea of Galilee, through the midst of the region of Decapolis.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϯ",
+        321,
+        21.804
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        347,
+        20.931
+      ],
+      [
+        "ϧⲉⲛ",
+        271,
+        20.544
+      ],
+      [
+        "ⲛⲉⲙ",
+        233,
+        20.37
+      ],
+      [
+        "ⲟⲩ",
+        299,
+        19.96
+      ],
+      [
+        "ⲛⲓ",
+        208,
+        19.854
+      ],
+      [
+        "ⲁ",
+        265,
+        19.673
+      ],
+      [
+        "ⲉ",
+        247,
+        19.397
+      ],
+      [
+        "ⲛⲧⲉ",
+        188,
+        19.264
+      ],
+      [
+        "ⲛ",
+        262,
+        19.225
+      ],
+      [
+        "ⲧⲁⲓ",
+        56,
+        18.969
+      ],
+      [
+        "ⲓⲟⲩⲇⲁ",
+        46,
+        18.864
+      ],
+      [
+        "ⲉⲩⲉ",
+        95,
+        18.579
+      ],
+      [
+        "ⲥ",
+        144,
+        18.472
+      ],
+      [
+        "ⲧⲏⲣ",
+        98,
+        18.35
+      ],
+      [
+        ".",
+        145,
+        17.691
+      ],
+      [
+        "ϩⲁⲛ",
+        88,
+        17.226
+      ],
+      [
+        "ⲉⲧ",
+        109,
+        17.09
+      ],
+      [
+        "ⲩ",
+        108,
+        16.92
+      ],
+      [
+        "ⲛⲏ",
+        66,
+        16.725
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲁⲕⲓ_0_node",
+          390
+        ],
+        [
+          "ϯ_1_pre_ⲃⲁⲕⲓ",
+          31
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲁⲕⲓ",
+          21
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲃⲁⲕⲓ",
+          15
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          11
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧⲉ",
+          11
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          10
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          8
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲃⲁⲕⲓ",
+          13
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          9
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲃⲁⲕⲓ",
+          6
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲃⲁⲕⲓ",
+          6
+        ],
+        [
+          "ⲧⲁⲓ_1_pre_ⲃⲁⲕⲓ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲁⲕⲓ",
+          8
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲁⲕⲓ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          3
+        ],
+        [
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲃⲁⲕⲓ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲁⲕⲓ",
+          3
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲃⲁⲕⲓ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_0_node",
+          "ⲉⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_0_node",
+          "ⲧⲏⲣ_1_post_ⲃⲁⲕⲓ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲃⲁⲕⲓ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲃⲁⲕⲓ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲕⲓ",
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲁⲕⲓ",
+          "ⲛⲉϥ_1_pre_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 8.33,
+      "rank": 134,
+      "count": 707
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C349",
+      "label": "ⲙⲉⲧⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "citizenship"
+    },
+    {
+      "target": "C348",
+      "label": "ⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "citizen"
+    }
+  ],
+  "etym": {
+    "egy_num": "53920",
+    "egy_lemma": "bꜣkꜣ.t",
+    "english": "plot; precinct; town",
+    "german": "Grundstück; Bezirk; Stadt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/53920"
+  }
+}

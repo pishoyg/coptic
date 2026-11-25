@@ -1,0 +1,124 @@
+{
+  "id": "C3451",
+  "forms": [
+    {
+      "id": "CF8802",
+      "orth": "ⲥⲉⲕⲉϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9768,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3929",
+      "bibliography": "CD 330a; CED 150; KoptHWb 183; DELC 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲛϣⲟⲣⲡ ⲉ**ⲥⲉⲕⲉϩ** ⲙⲡⲓⲏⲓ ⲙⲡⲁⲧϥⲓ ⲉϧⲟⲩⲛ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲉⲛⲁⲩ ⲉⲡⲓϭⲟϩ ⲟⲩⲟϩ ⲛⲛⲟⲩϣⲱⲡⲓ ⲉⲩϭⲁϧⲉⲙ ⲛϫⲉⲛⲏ ⲧⲏⲣⲟⲩ ⲉⲧϧⲉⲛⲡⲓⲏⲓ ⲟⲩⲟϩ ⲙⲉⲛⲉⲛⲥⲁⲛⲁⲓ ⲉϥⲉⲓ ⲉϧⲟⲩⲛ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲉϯⲛⲓⲁⲧϥ ⲙⲡⲓⲏⲓ",
+      "english": "And the priest shall give orders to remove the furniture of the house, before the priest comes in to see the plague, and thus none of the things in the house shall become unclean; and afterwards the priest shall go in to examine the house.",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        13.219
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        11.062
+      ],
+      [
+        "ⲟⲩⲏⲃ",
+        1,
+        10.875
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.609
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲕⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲕⲉϩ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉⲕⲉϩ_0_node",
+          "ⲙ_1_post_ⲥⲉⲕⲉϩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲕⲉϩ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9226,
+      "count": 1
+    }
+  }
+}

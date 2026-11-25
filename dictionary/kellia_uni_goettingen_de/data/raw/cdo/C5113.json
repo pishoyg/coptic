@@ -1,0 +1,485 @@
+{
+  "id": "C5113",
+  "forms": [
+    {
+      "id": "CF12191",
+      "orth": "ⲟⲩⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.92,
+        "rank": 750,
+        "count": 145
+      }
+    },
+    {
+      "orth": "ⲟⲩⲏⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1046,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5744",
+      "bibliography": "CD 488b; CDC 76a; CED 215; KoptHWb 275; DELC 236ab; ChLCS 68b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉⲛ ⲡⲉϥⲉⲓⲱⲧ ϫⲉⲓⲥ **ⲟⲩⲏⲣ** ⲛⲭⲣⲟⲛⲟⲥ ⲓⲥϫⲉⲛⲉⲧⲁⲫⲁⲓ ϣⲱⲡⲓ ⲙⲙⲟϥ ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ϫⲉⲓⲥϫⲉⲛⲧⲉϥⲙⲉⲧⲁⲗⲟⲩ .",
+      "english": "He asked his father, 'How long has it been since this has come to him?' He said, 'From childhood.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲩⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲟϥ ϩⲛ**ⲟⲩⲏⲣ** ⲙⲡⲉⲓⲣⲁⲥⲙⲟⲥ ·",
+      "english": "For, he was tempted by how many temptations,",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲗⲁⲧⲟⲥ ⲇⲉ ⲟⲛ ⲛⲁϥϣⲉⲛϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲇⲉ ⲛⲕⲉⲣⲟⲩⲱ ⲛϩⲗⲓ ⲁⲛ ⲁⲛⲁⲩ ϫⲉⲥⲉⲉⲣⲕⲁⲧⲏⲅⲟⲣⲓⲛ ⲉⲣⲟⲕ ⲛ**ⲟⲩⲏⲣ** .",
+      "english": "Pilate again asked him, 'Have you no answer? See how many things they testify against you!'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲧⲉⲛⲟⲩ ϫⲉⲁⲥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛ**ⲟⲩⲏⲣ** ⲛϭⲓⲧⲙⲛⲧⲁⲧⲥⲃⲱ ⲛⲛⲉⲧⲟ ⲛⲥⲁⲃⲉ ⲛⲁⲩ ⲟⲩⲁⲁⲩ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲓⲧⲉ ϩⲟⲟⲩⲧ ⲉⲓⲧⲉ ⲥϩⲓⲙⲉ ⲉⲓⲧⲉ ⲛⲟϭ ⲉⲓⲧⲉ ⲕⲟⲩⲓ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲓⲉ ⲛⲱⲓⲕ ⲉⲧⲁⲓⲫⲁϣⲟⲩ ⲉϩⲣⲉⲛⲡⲓⲉ ⲛϣⲟ ϫⲉⲁⲧⲉⲧⲉⲛⲉⲗ**ⲟⲩⲏⲣ** ⲛⲕⲟⲧ ⲛⲗⲁⲕϩ ⲉⲩⲙⲉϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲓⲃ .",
+      "english": "When I broke the five loaves among the five thousand, how many baskets full of broken pieces did you take up?' They told him, 'Twelve.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲛⲧⲏⲧⲛ **ⲟⲩⲏⲣ** ⲛⲟⲉⲓⲕ ⲃⲱⲕ ⲛⲧⲉⲧⲛⲛⲁⲩ . ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲉⲓⲙⲉ ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉϯⲟⲩ ⲙⲛⲧⲃⲧ ⲥⲛⲁⲩ .",
+      "english": "He said to them, 'How many loaves do you have? Go see.' When they knew, they said, 'Five, and two fish.'",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲓⲣ",
+        4,
+        17.364
+      ],
+      [
+        "ⲛ",
+        59,
+        16.715
+      ],
+      [
+        "ϫⲉ",
+        32,
+        15.613
+      ],
+      [
+        "ⲉⲗ",
+        6,
+        15.467
+      ],
+      [
+        "ⲛⲧⲉⲛ",
+        6,
+        14.297
+      ],
+      [
+        "ϧⲛⲧ",
+        1,
+        14.172
+      ],
+      [
+        "ⲛⲣⲉⲙⲃⲉⲭⲉ",
+        1,
+        14.172
+      ],
+      [
+        "ⲥⲉⲣⲙⲉⲑⲣⲉ",
+        1,
+        14.172
+      ],
+      [
+        "ⲱⲓⲕ",
+        7,
+        14.102
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        12,
+        14.032
+      ],
+      [
+        "ⲁⲅⲓⲟⲛ",
+        2,
+        14.002
+      ],
+      [
+        "ⲭⲣⲟⲛⲟⲥ",
+        3,
+        13.435
+      ],
+      [
+        "ϭⲣⲱⲡ",
+        1,
+        13.172
+      ],
+      [
+        "ⲍⲛⲥⲟⲡ",
+        1,
+        13.172
+      ],
+      [
+        "ⲓⲥ",
+        6,
+        13.129
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        8,
+        13.056
+      ],
+      [
+        "ⲉⲣⲕⲁⲧⲏⲅⲟⲣⲓⲛ",
+        2,
+        12.779
+      ],
+      [
+        "ⲕ",
+        13,
+        12.706
+      ],
+      [
+        "ⲗⲁⲕϩ",
+        3,
+        12.569
+      ],
+      [
+        ".",
+        17,
+        12.355
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        152,
+        18.373
+      ],
+      [
+        "ⲙⲛⲧⲡⲉⲣⲓⲟⲩⲣⲅⲟⲥ",
+        3,
+        18.173
+      ],
+      [
+        "ϫⲉ",
+        77,
+        17.767
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.418
+      ],
+      [
+        "ⲉⲓⲉ",
+        14,
+        15.818
+      ],
+      [
+        "ⲕⲁⲧⲁⲕⲣⲓⲙⲁ",
+        2,
+        15.418
+      ],
+      [
+        "ⲟⲩⲛⲧⲏ",
+        6,
+        15.315
+      ],
+      [
+        "ⲃⲓⲣ",
+        4,
+        15.026
+      ],
+      [
+        "ⲛⲁ",
+        45,
+        14.984
+      ],
+      [
+        "ⲡⲉ",
+        37,
+        14.957
+      ],
+      [
+        ".",
+        34,
+        14.64
+      ],
+      [
+        "ⲉⲩⲫⲣⲟⲥⲩⲛⲏ",
+        4,
+        14.511
+      ],
+      [
+        "ⲣⲟⲉⲓⲥ",
+        7,
+        13.976
+      ],
+      [
+        "ⲧⲉ",
+        21,
+        13.8
+      ],
+      [
+        "·",
+        12,
+        13.753
+      ],
+      [
+        "ⲏ",
+        14,
+        13.721
+      ],
+      [
+        "ⲡ",
+        44,
+        13.695
+      ],
+      [
+        "ⲉⲓⲥ",
+        12,
+        13.621
+      ],
+      [
+        "ϣⲉ",
+        9,
+        13.512
+      ],
+      [
+        "ⲟⲉⲓⲕ",
+        8,
+        13.49
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲏⲣ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲏⲣ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲣ",
+          2
+        ],
+        [
+          "ϭⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲟⲩⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲟⲩⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲏⲣ",
+          "ⲟⲩⲏⲣ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲏⲣ_0_node",
+          "ⲛ_1_post_ⲟⲩⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲣ",
+          "ϭⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲣ",
+          "ⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲱⲃ_2_post_ⲛ",
+          "ⲛ_3_post_ⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲱⲃ",
+          "ⲥⲟⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲟⲩⲏⲣ",
+          "ⲟⲩⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲣ_0_node",
+          "ϩⲙ_1_post_ⲟⲩⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲟⲩⲏⲣ",
+          "ⲡⲉ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          "ⲛ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲟⲟⲩ",
+          "ⲧⲉⲩ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.91,
+      "rank": 658,
+      "count": 145
+    },
+    "B": {
+      "rate": 0.54,
+      "rank": 921,
+      "count": 46
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5112",
+      "label": "*ⲑⲟⲩⲏⲣⲓ",
+      "pos": "N",
+      "gloss": "the Great one (Thoeris)"
+    },
+    {
+      "target": "C5115",
+      "label": "ⲁⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "About how great? About how many? About how much?"
+    },
+    {
+      "target": "C5116",
+      "label": "ⲉⲡⲁⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "To what extent?; in vain"
+    },
+    {
+      "target": "C5111",
+      "label": "ⲉⲥⲟⲩⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "Isis the Great"
+    },
+    {
+      "target": "C5117",
+      "label": "ⲙⲉϩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "how many ...?"
+    },
+    {
+      "target": "C5114",
+      "label": "ⲛⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "By how much?"
+    },
+    {
+      "target": "C5110",
+      "label": "ⲟⲩⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "great"
+    },
+    {
+      "target": "C5118",
+      "label": "ⲥⲟⲩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "day such-and-such"
+    }
+  ],
+  "etym": {
+    "egy_num": "47310",
+    "egy_lemma": "wr",
+    "english": "how much? how many? (math.)",
+    "german": "wie viel? (Interrogativpartikel)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/47310"
+  }
+}

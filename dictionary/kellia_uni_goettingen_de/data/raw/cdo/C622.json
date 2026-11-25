@@ -1,0 +1,139 @@
+{
+  "id": "C622",
+  "forms": [
+    {
+      "id": "CF2367",
+      "orth": "ⲙⲉⲧⲉⲃⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7843,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS758",
+      "bibliography": "CD 52b; CED 32; KoptHWb 32"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲩⲥⲱⲟⲩⲛ ⲇⲉ ⲙⲙⲟϥ ⲡⲉ ϫⲉⲫⲁⲓ ⲡⲉ ⲫⲏ ⲉⲛⲁϥϩⲉⲙⲥⲓ ⲉϥϣⲁⲧ ⲙⲉⲑⲛⲁⲓ ϧⲁⲧⲉⲛϯⲥⲁⲓⲏ ⲙⲡⲩⲗⲏ ⲛⲧⲉⲡⲓⲉⲣⲫⲉⲓ ⲁⲩⲙⲟϩ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩϩⲟϯ ⲛⲉⲙⲟⲩ**ⲙⲉⲧⲉⲃⲏ** ⲛϧⲣⲏⲓ ⲉϫⲉⲛⲫⲁⲓ ⲉⲧⲁϥϣⲱⲡⲓ .",
+      "english": "They recognized him, that it was he who used to sit begging for gifts for the needy at the Beautiful Gate of the temple. They were filled with wonder and amazement at what had happened to him.",
+      "source": "05_Acts_03",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟϯ",
+        1,
+        11.535
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        1,
+        10.747
+      ],
+      [
+        "ⲫⲁⲓ",
+        1,
+        8.658
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        8.414
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲉⲃⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲉⲃⲏ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲉⲃⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲉⲃⲏ",
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲉⲃⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲉⲃⲏ",
+          "ⲙⲉⲧⲉⲃⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7307,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C620",
+      "label": "ⲉⲃⲏ",
+      "pos": "N",
+      "gloss": "darkening, rapture, confusion; darkness"
+    },
+    {
+      "target": "C623",
+      "label": "ⲙⲛⲧⲉⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "darkening, blindness"
+    },
+    {
+      "target": "C621",
+      "label": "ⲣⲉⲃⲏ",
+      "pos": "V",
+      "gloss": "to darken, be dark"
+    }
+  ]
+}

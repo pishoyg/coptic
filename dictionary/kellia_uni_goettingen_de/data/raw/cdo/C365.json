@@ -1,0 +1,445 @@
+{
+  "id": "C365",
+  "forms": [
+    {
+      "id": "CF1563",
+      "orth": "ⲉⲣⲃⲟⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2607,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF1564",
+      "orth": "ⲉⲣⲃⲁⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1565",
+      "orth": "ⲣⲃⲁⲕⲏ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS404",
+      "bibliography": "CD 31a; CED 21; KoptHWb 22, 493"
+    },
+    {
+      "id": "CS405",
+      "bibliography": "CD 31a; DELC 26"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩ**ⲉⲣⲃⲟⲕⲓ** ⲛϫⲉϯϣⲉⲣⲓ ⲥⲛⲟⲩϯ ⲛⲧⲉⲗⲱⲧ ⲉⲃⲟⲗ ⲡⲟⲩⲓⲱⲧ",
+      "english": "And the two daughters of Lot conceived by their father.",
+      "source": "01_Genesis_19",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ϧⲉⲛⲡⲓⲥⲏⲟⲩ ⲉϣⲁⲩϭⲓϣϣⲱⲟⲩ ⲛϫⲉⲛⲓⲉⲥⲱⲟⲩ ⲟⲩⲟϩ ⲛⲥⲉ**ⲉⲣⲃⲟⲕⲓ** ⲁ ⲓⲁⲕⲱⲃ ⲭⲁ ϣⲃⲟϯ ⲙⲡⲉⲙⲑⲟ ⲛⲛⲓⲉⲥⲱⲟⲩ ⲛϧⲣⲏⲓ ϧⲉⲛⲛⲓⲙⲁⲛⲧⲥⲟ ⲉⲑⲣⲟⲩϭⲓϣϣⲱⲟⲩ ⲛϫⲉⲛⲓⲉⲥⲱⲟⲩ ⲕⲁⲧⲁⲛⲓϣⲃⲟϯ",
+      "english": "And it came to pass in the time wherein the cattle became pregnant, conceiving in the belly, Jacob put the rods before the cattle in the troughs, that they might conceive by the rods.",
+      "source": "01_Genesis_30",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:30",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲓⲧⲁ ϯⲉⲡⲓⲑⲩⲙⲓⲁ ⲁⲥϣⲁⲛ**ⲉⲣⲃⲟⲕⲓ** ϣⲁⲥⲙⲉⲥ ⲫⲛⲟⲃⲓ ⲫⲛⲟⲃⲓ ⲇⲉ ⲁϥϣⲁⲛϫⲱⲕ ⲉⲃⲟⲗ ϣⲁϥϫⲫⲟ ⲙⲫⲙⲟⲩ .",
+      "english": "Then the lust, when it has conceived, bears sin; and the sin, when it is full grown, brings forth death.",
+      "source": "20_James_01",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲁⲧⲟⲩ",
+        1,
+        15.525
+      ],
+      [
+        "ⲁⲥ",
+        1,
+        14.203
+      ],
+      [
+        "ⲉⲥⲉ",
+        4,
+        13.33
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        2,
+        13.316
+      ],
+      [
+        "ϣⲃⲟϯ",
+        1,
+        12.825
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        11,
+        12.288
+      ],
+      [
+        "ⲙⲉⲥ",
+        1,
+        11.94
+      ],
+      [
+        "ⲙⲓⲥⲓ",
+        2,
+        11.68
+      ],
+      [
+        "ⲉⲥⲱⲟⲩ",
+        2,
+        11.074
+      ],
+      [
+        "ⲓⲥ",
+        2,
+        10.727
+      ],
+      [
+        "ϣⲗⲟⲗ",
+        1,
+        10.643
+      ],
+      [
+        "ⲛ",
+        8,
+        10.421
+      ],
+      [
+        "ⲉⲡⲓⲑⲩⲙⲓⲁ",
+        1,
+        10.002
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        1,
+        9.867
+      ],
+      [
+        "ⲥⲱϥ",
+        1,
+        9.427
+      ],
+      [
+        "ϯ",
+        4,
+        9.12
+      ],
+      [
+        "ϣⲁⲛ",
+        1,
+        9.058
+      ],
+      [
+        "ⲑⲁⲓ",
+        1,
+        8.77
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        8.566
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        8.335
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          9
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲡⲡⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ϯ_2_pre_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲉⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲙⲡⲁⲧⲟⲩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_2_post_ⲫⲱⲣϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲛ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲡⲡⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲓⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ϯ_2_pre_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          2
+        ],
+        [
+          "ϯ_2_pre_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲉⲥⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡⲁⲧⲟⲩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϧⲉⲛ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          "ⲧ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲁ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_pre_ⲉⲣⲃⲟⲕⲓ",
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲃⲟⲕⲓ_0_node",
+          "ⲙⲙⲱ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲉⲣⲃⲟⲕⲓ",
+          "ⲟⲩ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲱ",
+          "ⲟⲩⲟϩ_2_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲫⲱⲣϫ",
+          "ⲗⲁⲟⲥ_2_post_ⲫⲱⲣϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.11,
+      "rank": 2267,
+      "count": 9
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5420",
+      "type": "syn",
+      "label": "become pregnant, conceive (S)"
+    },
+    {
+      "target": "C364",
+      "type": "syn",
+      "label": "conceive (B)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C368",
+      "label": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C369",
+      "label": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C363",
+      "label": "ⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "pregnant"
+    },
+    {
+      "target": "C364",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "V",
+      "gloss": "conceive; conceive (a child)"
+    },
+    {
+      "target": "C366",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C367",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "pregnant (woman)"
+    }
+  ]
+}

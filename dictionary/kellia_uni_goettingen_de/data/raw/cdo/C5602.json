@@ -1,0 +1,423 @@
+{
+  "id": "C5602",
+  "forms": [
+    {
+      "id": "CF31941",
+      "orth": "ϣⲗⲟⲩⲗⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5637,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF31940",
+      "orth": "ⲉϣⲗⲟⲩⲗⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7263,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6271",
+      "bibliography": "CD 141b; CED 72-73; KoptHWb 296; DELC 251b; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉ**ϣⲗⲟⲩⲗⲁⲓ** ⲉⲃⲟⲗ ⲛϣⲟⲟⲥ ⲁϣϣⲕⲁⲕ ⲉⲃⲟⲗ ⲛⲧⲉⲧⲛⲛⲉϩⲡⲉ ⲛⲟⲉⲓⲗⲉ ⲛⲉⲥⲟⲟⲩ ϫⲉⲁⲩϫⲱⲕ ⲉⲃⲟⲗ ⲛϭⲓⲛⲉⲧⲛϩⲟⲟⲩ ⲉⲧⲣⲉⲩⲕⲛⲥ ⲧⲏⲩⲧⲛ ⲁⲩⲱ ⲧⲉⲧⲛⲛⲁϩⲉ ⲛⲧϩⲉ ⲛⲛⲥⲱⲧⲡ ⲛⲟⲉⲓⲗⲉ",
+      "english": "Howl, ye shepherds, and cry; and lament, ye rams of the flock: for your days have been completed for slaughter, and ye shall fall as the choice rams.",
+      "source": "Jeremiah 32",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϯ**ϣⲗⲟⲩⲗⲁⲓ** ⲉⲃⲟⲗ ⲉϫⲛⲙⲱⲁⲃ ⲱϣ ⲉⲃⲟⲗ ⲉϫⲛⲙⲱⲁⲃ ⲛ...",
+      "english": "Therefore howl ye for Moab on all sides; cry out against the shorn men in a gloomy place. I will weep for thee,",
+      "source": "Jeremiah 31",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲏⲣ ⲧⲏⲣϥ ⲭⲟⲣⲉⲩⲉ ⲡⲕⲁϩ ⲧⲏⲣϥ ⲉ**ϣⲗⲟⲩⲗⲁⲓ** ⲉⲃⲟⲗ ϫⲉⲁⲡⲉϥⲣⲣⲟ ⲡⲱϩⲧ ⲙⲡⲉϥⲥⲛⲟϥ ⲉⲃⲟⲗ ϩⲓϫⲱϥ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲟⲥ",
+        1,
+        13.35
+      ],
+      [
+        "ⲁϣϣⲕⲁⲕ",
+        1,
+        12.24
+      ],
+      [
+        "ⲙⲱⲁⲃ",
+        1,
+        11.598
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        11.258
+      ],
+      [
+        "ⲃⲱ",
+        1,
+        11.036
+      ],
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        10.797
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4,
+        10.465
+      ],
+      [
+        "ⲕⲁϩ",
+        2,
+        9.927
+      ],
+      [
+        "ⲱϣ",
+        1,
+        9.411
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.425
+      ],
+      [
+        "ϫⲓ",
+        1,
+        7.164
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.964
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        6.78
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.096
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.864
+      ],
+      [
+        "ⲉ",
+        2,
+        5.817
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ϯ",
+        1,
+        5.516
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲗⲟⲩⲗⲁⲓ_0_node",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          3
+        ],
+        [
+          "ⲉⲥⲉ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ⲃⲱ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ϫⲉ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲱⲁⲃ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲱϣ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲗⲟⲩⲗⲁⲓ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲉⲥⲉ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ⲉⲥⲉ_2_post_ⲃⲱ",
+          "ⲃⲱ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲃⲱ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲛ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱ",
+          "ϫⲉ_2_post_ⲃⲱ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϣⲗⲟⲩⲗⲁⲓ",
+          "ϣⲗⲟⲩⲗⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲙⲱⲁⲃ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲱⲁⲃ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲱϣ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲱϣ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲉⲃⲟⲗ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ⲛ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲗⲟⲩⲗⲁⲓ",
+          "ϣⲟⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5199,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1640",
+      "type": "cf",
+      "label": "Schrei"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

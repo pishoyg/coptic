@@ -1,0 +1,82 @@
+{
+  "id": "C6355",
+  "forms": [
+    {
+      "id": "CF14725",
+      "orth": "ϩⲉ ⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.45,
+        "rank": 253,
+        "count": 702
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7051",
+      "bibliography": "CD 637a; KoptHWb 349"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁϥϩⲉ **ⲉ**ⲡⲉⲥⲏⲧ** ·",
+      "english": "and he fell to the ground.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲏⲩ ⲇⲉ **ⲉϥϣⲁⲛϩⲉ **ⲉ**ⲡⲉⲟⲩⲟⲉⲓϣ**",
+      "english": "but he is coming if he finds the time.”",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲧⲁϥϩⲉ **ⲉ**ⲟⲩⲟⲛ** ⲧⲱⲛ ⲁϥⲟⲩⲱⲙ ·",
+      "english": "where did he find the fruit which he ate?'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6354",
+      "label": "ϩⲉ",
+      "pos": "V",
+      "gloss": "fall; light upon, find"
+    },
+    {
+      "target": "C6358",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "fall, destruction"
+    },
+    {
+      "target": "C6357",
+      "label": "ϩⲉ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "fall down"
+    },
+    {
+      "target": "C6356",
+      "label": "ϩⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "fall out, away, perish"
+    },
+    {
+      "target": "C6359",
+      "label": "ⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "indestructible"
+    }
+  ]
+}

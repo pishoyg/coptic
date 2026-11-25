@@ -1,0 +1,79 @@
+{
+  "id": "C788",
+  "forms": [
+    {
+      "id": "CF2904",
+      "orth": "ϫⲙⲡⲏⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2905",
+      "orth": "ϫⲙⲡⲏⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2906",
+      "orth": "ϫⲙⲡⲏⲓ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS938",
+      "bibliography": "CD 66b; KoptHWb 423; DELC 53"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7097",
+      "type": "cf",
+      "label": "head"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C783",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "house; household, family"
+    },
+    {
+      "target": "C789",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "pair, couple"
+    },
+    {
+      "target": "C784",
+      "label": "ⲙⲉⲥϩⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "born in the house"
+    },
+    {
+      "target": "C786",
+      "label": "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "kinship"
+    },
+    {
+      "target": "C785",
+      "label": "ⲣⲙⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "member of household, domestic, kinsman; monastic superintendent, warden"
+    },
+    {
+      "target": "C787",
+      "label": "ⲣⲣⲙⲛⲏⲓ",
+      "pos": "V",
+      "gloss": "be akin"
+    }
+  ]
+}

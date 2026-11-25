@@ -1,0 +1,204 @@
+{
+  "id": "C2295",
+  "forms": [
+    {
+      "id": "CF6323",
+      "orth": "ϭⲓⲛⲙⲟⲩϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12239,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2651",
+      "bibliography": "CD 210a; KoptHWb 111; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ⲉⲩⲛⲁⲣϩⲃⲁ ϩⲛⲟⲩϩⲃⲁ ϩⲛⲧⲉⲩ**ϭⲓⲛⲙⲟⲩϩ** ⲉⲃⲟⲗ ⲧⲏⲣⲥ ·",
+      "english": "in order that they may be confounded in confusion in their whole range. |",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲃⲁ",
+        1,
+        15.898
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        10.438
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲓⲛⲙⲟⲩϩ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲙⲟⲩϩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲩ_1_pre_ϭⲓⲛⲙⲟⲩϩ",
+          "ϭⲓⲛⲙⲟⲩϩ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲛⲙⲟⲩϩ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          "ⲧⲏⲣ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲓⲛⲙⲟⲩϩ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11812,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2292",
+      "label": "ϫⲓⲛⲙⲟϩ ⲉϧⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "completion"
+    },
+    {
+      "target": "C12209",
+      "label": "ⲙⲁϩⲓⲁⲧϥ",
+      "pos": "N",
+      "gloss": "watcher"
+    },
+    {
+      "target": "C2296",
+      "label": "ⲙⲉϩ-",
+      "pos": "NUM",
+      "gloss": "pref. to ordinal numbers"
+    },
+    {
+      "target": "C2288",
+      "label": "ⲙⲉϩϩⲏⲧ⸗",
+      "pos": "V",
+      "gloss": "fill belly"
+    },
+    {
+      "target": "C2286",
+      "label": "ⲙⲉϩⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "fill mouth; seize, bite"
+    },
+    {
+      "target": "C2287",
+      "label": "ⲙⲉϩⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "fill hands, lay hold on"
+    },
+    {
+      "target": "C2285",
+      "label": "ⲙⲟⲩϩ",
+      "pos": "V",
+      "gloss": "fill; fulfil, complete; amount to, reach; pay; be full; be paid"
+    },
+    {
+      "target": "C2294",
+      "label": "ⲙⲟⲩϩ",
+      "pos": "N",
+      "gloss": "fullness, contents"
+    },
+    {
+      "target": "C2291",
+      "label": "ⲙⲟⲩϩ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "fill up, supplement"
+    },
+    {
+      "target": "C2293",
+      "label": "ⲙⲟⲩϩ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "fill up"
+    },
+    {
+      "target": "C2289",
+      "label": "ⲙⲟⲩϩ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "fill; pay; be full, filled, paid"
+    },
+    {
+      "target": "C2290",
+      "label": "ⲙⲟⲩϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "fulfilment, limit"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "C8994",
+  "forms": [
+    {
+      "id": "CF22119",
+      "orth": "ⲉⲡⲓⲃⲟⲗⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF22120",
+      "orth": "ⲉⲡⲓⲃⲟⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13173,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22121",
+      "orth": "ⲉⲡⲓⲃⲟⲩⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3298,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10995",
+      "bibliography": "DDGLC",
+      "cu_ID": "1209"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲡⲛⲟⲩⲧⲉ ϯ ⲛⲁϥ ⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲉⲙⲛⲗⲁⲁⲩ ⲙⲡⲟⲗⲉⲙⲟⲥ ⲙⲡⲉϥⲕⲱⲧⲉ · ⲟⲩⲇⲉ ⲗⲁⲁⲩ ⲛ**ⲉⲡⲓⲃⲟⲗⲏ** ⲛⲥⲁⲗⲁⲁⲩ ⲛⲥⲁ · ⲉⲧⲃⲉⲡⲁⲓ ⲉⲛⲉⲙⲛⲧϥⲗⲁⲁⲩ ⲛⲣⲟⲟⲩϣ ⲛⲥⲁⲡⲣⲟⲟⲩϣ ⲛⲧⲙⲛⲧⲉⲣⲟ ⲙⲙⲁⲧⲉ ·",
+      "english": "Now therefore God gave unto him peace, and there was no war made upon him whilst he was building, and no hostile attack was made upon him either on this side or on that ; and because of this peace he was not burdened with any serious anxiety concerning the care of the kingdom.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲁⲁⲩ",
+        2,
+        12.935
+      ],
+      [
+        "ⲥⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        10.276
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        9.76
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲓⲃⲟⲗⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12759,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "743",
+    "grl_lemma": "ἐπιβολή",
+    "grl_meaning": "throwing on, laying on, plot",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 625b; Preisigke 1:544"
+  }
+}

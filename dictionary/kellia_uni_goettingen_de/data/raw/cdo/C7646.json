@@ -1,0 +1,133 @@
+{
+  "id": "C7646",
+  "forms": [
+    {
+      "id": "CF17357",
+      "orth": "ϭⲗⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18139,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲗⲱ",
+      "dialect": "S",
+      "id": "2532.1"
+    },
+    {
+      "orth": "ϭⲗⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19635,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8489",
+      "bibliography": "CD 810b; KoptHWb 449; ChLCS 106b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϩⲏⲡⲉⲣⲏⲧⲏⲥ ⲇⲉ ⲙⲡⲣⲣⲟ ⲛⲧⲁⲩⲛⲁϫⲟⲩ ⲙⲡⲟⲩⲕⲁ ⲧⲟⲟⲧⲟⲩ ⲉⲃⲟⲗ ⲉⲩⲧⲱⲕ ⲉⲧⲉϩⲣⲱ ⲛⲟⲩⲙⲁϩⲉ ⲙⲛⲟⲩⲗⲁⲙϫⲁⲧⲡ ⲟⲩⲥⲁⲁⲥⲉ ⲙⲛⲟⲩ**ϭⲗⲱ**",
+      "english": "And the king's servants, that put them in, ceased not to make the oven hot with rosin, pitch, tow, and small wood;",
+      "source": "Daniel 3",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲁⲥⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ϣⲁϩ",
+        1,
+        14.223
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϭⲗⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲗⲱ",
+          1
+        ],
+        [
+          "ϭⲗⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϭⲗⲱ",
+          "ⲟⲩ_1_pre_ϭⲗⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲗⲱ",
+          "ϭⲗⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17761,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7647",
+      "label": "ϩⲓϭⲗⲱ",
+      "pos": "N",
+      "gloss": "tendril, vine"
+    }
+  ]
+}

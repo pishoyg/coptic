@@ -1,0 +1,414 @@
+{
+  "id": "C10053",
+  "forms": [
+    {
+      "id": "CF26351",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26355",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4353,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF26353",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5696,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF26354",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26352",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13212",
+      "bibliography": "DDGLC",
+      "cu_ID": "673"
+    },
+    {
+      "id": "CS13213",
+      "bibliography": "DDGLC",
+      "cu_ID": "11827"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲁϥϣⲁⲛⲓ ⲛϫⲉⲡⲓ**ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ** ⲫⲏ ⲁⲛⲟⲕ ⲉϯⲛⲁⲟⲩⲟⲣⲡϥ ⲛⲱⲧⲉⲛ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧϥ ⲙⲡⲁⲓⲱⲧ ⲡⲓⲡⲛⲉⲩⲙⲁⲛⲧⲉϯⲙⲉⲑⲙⲏⲓ ⲫⲏ ⲉⲑⲛⲏⲟⲩ ⲉⲃⲟⲗ ϩⲁⲫⲓⲱⲧ ⲛⲑⲟϥ ⲉⲑⲛⲁⲉⲣⲙⲉⲑⲣⲉ ⲉⲑⲃⲏⲧ .",
+      "english": "'When the Counselor has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.",
+      "source": "04_John_15",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲟⲕ ϩⲱ ϯⲛⲁⲥⲉⲡⲥ ⲡⲉⲓⲱⲧ ⲁⲩⲱ ϥⲛⲁϯ ⲛⲏⲧⲛ ⲛⲕⲉ**ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ** ϫⲉⲕⲁⲁⲥ ⲉϥⲉϣⲱⲡⲉ ⲛⲙⲙⲏⲧⲛ ϣⲁⲉⲛⲉϩ",
+      "english": "I will pray to the Father, and he will give you another Counselor, that he may be with you forever,--",
+      "source": "43_John_14",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲛⲟⲕ ⲉⲑⲛⲁϯϩⲟ ⲉⲫⲓⲱⲧ ⲟⲩⲟϩ ⲉϥⲉϯ ⲛⲱⲧⲉⲛ ⲙ**ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ** ϩⲓⲛⲁ ⲛⲧⲉϥϣⲱⲡⲓ ⲛⲉⲙⲱⲧⲉⲛ ϣⲁⲉⲛⲉϩ",
+      "english": "I will pray to the Father, and he will give you another Counselor, that he may be with you forever,--",
+      "source": "04_John_14",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁⲛⲟⲕ ⲉⲓϫⲱ ⲛⲏⲧⲛ ⲛⲧⲙⲉ ⲥⲣⲛⲟϥⲣⲉ ⲛⲏⲧⲛ ϫⲉⲕⲁⲁⲥ ⲁⲛⲟⲕ ⲉⲉⲓⲉⲃⲱⲕ ⲉⲉⲓⲧⲙⲃⲱⲕ ⲅⲁⲣ ⲡ**ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ** ⲛⲏⲩ ⲁⲛ ϣⲁⲣⲱⲧⲛ ⲉⲉⲓϣⲁⲛⲃⲱⲕ ⲇⲉ ϯⲛⲁⲧⲛⲛⲟⲟⲩϥ ϣⲁⲣⲱⲧⲛ .",
+      "english": "Nevertheless I tell you the truth: It is to your advantage that I go away, for if I don't go away, the Counselor won't come to you. But if I go, I will send him to you.",
+      "source": "43_John_16",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲉϥϣⲁⲛⲉⲓ ⲛϭⲓⲡ**ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ** ⲡⲉⲧⲓⲛⲁⲧⲛⲛⲟⲟⲩϥ ⲛⲏⲧⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲓⲱⲧ ⲡⲉⲡⲛⲉⲩⲙⲁ ⲛⲧⲙⲉ ⲉⲧⲛⲏⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲓⲱⲧ ⲡⲉⲧⲙⲙⲁⲩ ⲛⲁⲣⲙⲛⲧⲣⲉ ⲉⲧⲃⲏⲏⲧ .",
+      "english": "'When the Counselor has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.",
+      "source": "43_John_15",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁϥϣⲁⲛ",
+        1,
+        10.634
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        8.454
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.949
+      ],
+      [
+        "ⲫⲏ",
+        1,
+        7.358
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        7.336
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        6.634
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        6.401
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ϥⲑ.............ⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉⲓⲧⲙ",
+        1,
+        18.013
+      ],
+      [
+        "ⲛⲉⲩⲙⲁ",
+        1,
+        13.013
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        2,
+        12.164
+      ],
+      [
+        "....",
+        1,
+        11.709
+      ],
+      [
+        "ϣⲁⲣⲱ",
+        1,
+        11.071
+      ],
+      [
+        "ⲙⲉⲣⲁⲧⲉ",
+        1,
+        11.036
+      ],
+      [
+        "ⲛⲙⲙⲏ",
+        1,
+        10.013
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        2,
+        10.009
+      ],
+      [
+        "ⲡ",
+        6,
+        9.667
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        8.823
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        8.756
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        8.579
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        8.482
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.408
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        8.234
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.204
+      ],
+      [
+        "ⲱ",
+        1,
+        7.977
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        7.976
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        7.827
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲫⲏ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ϯ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          "ⲫⲏ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲫⲏ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          "ⲁⲛⲟⲕ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_4_post_ⲟⲩⲟⲣⲡ",
+          "ⲉ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲫⲏ",
+          "ϯ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ϯ_4_post_ⲟⲩⲟⲣⲡ",
+          "ⲛⲁ_4_post_ⲟⲩⲟⲣⲡ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲩⲙⲁ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲩⲙⲁ",
+          "ⲡ_2_post_ⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲉⲩⲙⲁ",
+          "ⲛⲉⲩⲙⲁ_1_post_ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3958,
+      "count": 6
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5199,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1653",
+    "grl_lemma": "παράκλητος",
+    "grl_meaning": "advocate, intercessor, Paraclete",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1313a"
+  }
+}

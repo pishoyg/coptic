@@ -1,0 +1,69 @@
+{
+  "id": "C1643",
+  "forms": [
+    {
+      "id": "CF4762",
+      "orth": "ⲉϣⲗⲟⲩⲗⲁⲓ ⲛⲥⲁ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1907",
+      "bibliography": "CD 141b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5595",
+      "type": "cf",
+      "label": "cry, announce, sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1646",
+      "label": "ϯⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "give shout"
+    },
+    {
+      "target": "C1645",
+      "label": "ϯⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "utter shout"
+    },
+    {
+      "target": "C1640",
+      "label": "ⲗⲟⲩⲗⲁⲓ",
+      "pos": "N",
+      "gloss": "shout"
+    },
+    {
+      "target": "C1644",
+      "label": "ⲛⲉϫⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "utter shout"
+    },
+    {
+      "target": "C1641",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    },
+    {
+      "target": "C1642",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    }
+  ]
+}

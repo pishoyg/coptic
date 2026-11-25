@@ -1,0 +1,153 @@
+{
+  "id": "C573",
+  "forms": [
+    {
+      "id": "CF2178",
+      "orth": "ⲃⲏⲧⲥⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11660,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS684",
+      "bibliography": "CD 46a; CED 28; KoptHWb 29"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥϣⲟⲡ ⲁⲛ ⲛϫⲉⲫⲏⲉⲑⲛⲁϩⲓⲧⲟⲧϥ ⲉⲣⲟⲥ ⲛⲓⲙ ⲉⲑⲛⲁⲭⲁⲧ ⲉⲁⲣⲉϩ ⲉⲟⲩⲣⲱⲟⲩⲓ ϧⲉⲛⲧⲕⲟⲓ ⲉⲑⲃⲉⲧⲁⲓ**ⲃⲏⲧⲥⲏ** ⲁⲓⲉⲣⲁⲑⲉⲧⲓⲛ ⲙⲙⲟⲥ ϯⲛⲟⲩ ⲉⲑⲃⲉⲫⲁⲓ ⲁ ⲡϭⲥ ⲫⲛⲟⲩϯ ⲓⲣⲓ ⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉⲧⲁϥⲟⲩⲁϩⲥϩⲛⲓ ⲙⲙⲱⲟⲩ .",
+      "english": "There is no woman that has not taken hold of it; who will set me to watch stubble in the field? because of this enemy I have set her aside; therefore on this account the Lord has done all that he appointed.",
+      "source": "23_Isaias_27",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲁⲑⲉⲧⲓⲛ",
+        1,
+        16.11
+      ],
+      [
+        "ⲕⲟⲓ",
+        1,
+        12.355
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        11.012
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        8.857
+      ],
+      [
+        "ⲧ",
+        1,
+        7.525
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        7.368
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲏⲧⲥⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11101,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C568",
+      "label": "ⲁⲧⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "unconquerable, incontestable"
+    },
+    {
+      "target": "C572",
+      "label": "ⲃⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "combat, quarrel"
+    },
+    {
+      "target": "C571",
+      "label": "ⲃⲉⲧⲥ",
+      "pos": "N",
+      "gloss": "war"
+    },
+    {
+      "target": "C567",
+      "label": "ⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "(battle) array, war"
+    },
+    {
+      "target": "C566",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "be drawn up (for battle), fight"
+    },
+    {
+      "target": "C564",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "draw up, set out, assess(?)"
+    },
+    {
+      "target": "C565",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "tax assessment"
+    },
+    {
+      "target": "C570",
+      "label": "ⲉⲣⲃⲱⲧⲥ (ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "array against, make war with"
+    },
+    {
+      "target": "C569",
+      "label": "ⲣⲉϥⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "warrior"
+    }
+  ]
+}

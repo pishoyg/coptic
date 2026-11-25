@@ -1,0 +1,51 @@
+{
+  "id": "C6980",
+  "forms": [
+    {
+      "id": "CF16014",
+      "orth": "ϩⲓ ⲉϩⲣⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7700",
+      "bibliography": "CD 734a-b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6979",
+      "label": "ϩⲓ ⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "lay hand, undertake, begin, attempt"
+    },
+    {
+      "target": "C6977",
+      "label": "ϩⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "strike, cast, lay"
+    },
+    {
+      "target": "C6978",
+      "label": "ϩⲓⲟⲩⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out, put forth"
+    },
+    {
+      "target": "C6981",
+      "label": "ⲣⲉϥϩⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "smiter, thrower"
+    }
+  ]
+}

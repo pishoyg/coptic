@@ -1,0 +1,46 @@
+{
+  "id": "C6021",
+  "forms": [
+    {
+      "id": "CF14047",
+      "orth": "ϯϣⲁⲁⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6706",
+      "bibliography": "CD 583a; KoptHWb 324; ChLCS 80b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6019",
+      "label": "ϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "price"
+    },
+    {
+      "target": "C6020",
+      "label": "ⲣϣⲁⲁⲣ",
+      "pos": "V",
+      "gloss": "make, fix price"
+    }
+  ]
+}

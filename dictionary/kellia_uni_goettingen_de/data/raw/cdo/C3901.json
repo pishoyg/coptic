@@ -1,0 +1,196 @@
+{
+  "id": "C3901",
+  "forms": [
+    {
+      "id": "CF9733",
+      "orth": "ⲉⲣⲉⲛϣⲁϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5971,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4428",
+      "bibliography": "CD 376b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲫⲣⲁⲛ ⲙⲡⲓⲥⲓⲟⲩ ϫⲉⲁⲯⲓⲛⲑⲓⲟⲛ ⲉⲣⲉⲛϥ ⲟⲩⲟϩ ⲫⲣⲉⲅ ⲛⲛⲓⲙⲱⲟⲩ ⲁⲩⲉⲣⲉⲛϣⲁϣⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲁⲗⲗⲟⲏ ⲟⲩⲟϩ ⲟⲩⲙⲏϣ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲣⲱⲙⲓ ⲁⲩⲙⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲙⲱⲟⲩ ϫⲉⲁⲩ**ⲉⲣⲉⲛϣⲁϣⲓ** .",
+      "english": "The name of the star is called 'Wormwood.' One third of the waters became wormwood. Many people died from the waters, because they were made bitter.",
+      "source": "27_Revelation_08",
+      "urn": "urn:cts:copticLit:nt.rev.bohairic:08",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲱⲟⲩ",
+        2,
+        12.54
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        10.244
+      ],
+      [
+        "ⲩ",
+        2,
+        8.121
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        6.878
+      ],
+      [
+        "ⲫ",
+        1,
+        5.564
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲉⲣⲉⲛϣⲁϣⲓ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲉⲛϣⲁϣⲓ",
+          2
+        ],
+        [
+          "ⲉⲣⲉⲛϣⲁϣⲓ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲉⲛϣⲁϣⲓ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲏϯ_3_post_ⲫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲉⲣⲉⲛϣⲁϣⲓ",
+          "ⲩ_1_pre_ⲉⲣⲉⲛϣⲁϣⲓ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲉⲛϣⲁϣⲓ",
+          "ⲉⲣⲉⲛϣⲁϣⲓ_0_node",
+          2
+        ],
+        [
+          "ⲉⲣⲉⲛϣⲁϣⲓ_0_node",
+          "ⲙ_1_post_ⲉⲣⲉⲛϣⲁϣⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲉⲛϣⲁϣⲓ",
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲣⲏϯ_3_post_ⲫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5472,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3902",
+      "label": "ϯⲥⲓϣⲉ",
+      "pos": "V",
+      "gloss": "make bitter"
+    },
+    {
+      "target": "C3899",
+      "label": "ⲥⲓϣⲉ",
+      "pos": "V",
+      "gloss": "be like gall, bitter"
+    },
+    {
+      "target": "C3900",
+      "label": "ⲥⲓϣⲉ",
+      "pos": "N",
+      "gloss": "bitterness; gall"
+    }
+  ]
+}

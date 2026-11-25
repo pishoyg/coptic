@@ -1,0 +1,53 @@
+{
+  "id": "C2146",
+  "forms": [
+    {
+      "id": "CF6000",
+      "orth": "ⲙⲧⲁⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2485",
+      "bibliography": "CD 196a; CED 94; KoptHWb 105; DELC 125"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2147",
+      "label": "ϫⲉⲙⲧⲁⲩ",
+      "pos": "V",
+      "gloss": "say magic"
+    },
+    {
+      "target": "C2149",
+      "label": "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magic"
+    },
+    {
+      "target": "C2148",
+      "label": "ⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magician"
+    }
+  ],
+  "etym": {
+    "egy_num": "78150",
+    "egy_lemma": "mdw",
+    "demo_num": "d2753",
+    "demo_lemma": "md(.t)",
+    "english": "word; speech",
+    "german": "Wort; Rede; Angelegenheit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/78150",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2753"
+  }
+}

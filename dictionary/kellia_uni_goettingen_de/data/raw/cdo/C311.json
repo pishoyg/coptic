@@ -1,0 +1,83 @@
+{
+  "id": "C311",
+  "forms": [
+    {
+      "id": "CF1339",
+      "orth": "ϩⲓⲁϭⲛⲓ (ⲛⲥⲁ-)",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS344",
+      "bibliography": "CD 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲗⲁⲥ ϩⲱϥ ⲟⲩⲭⲣⲱⲙ ⲡⲉ ⲡⲥⲟⲗⲥⲉⲗ ⲛⲧⲉⲧⲁⲇⲓⲕⲓⲁ ⲡⲓⲗⲁⲥ ⲭⲏ ⲉϧⲣⲏⲓ ϧⲉⲛⲛⲓⲙⲉⲗⲟⲥ ⲟⲩⲟϩ **ϥϩⲓⲁϭⲛⲓ **ⲛⲥⲁ**ⲡⲓⲥⲱⲙⲁ** ⲧⲏⲣϥ ϥⲣⲱⲕϩ ⲙⲡⲓⲧⲣⲟⲭⲟⲥ ⲛⲧⲉⲡⲓϫⲓⲛⲙⲓⲥⲓ ⲟⲩⲟϩ ϥⲣⲱⲕϩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛϯⲅⲉⲉⲛⲛⲁ",
+      "english": "And the tongue is a fire. The world of iniquity among our members is the tongue, which defiles the whole body, and sets on fire the course of nature, and is set on fire by Gehenna.",
+      "source": "20_James_03",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7482",
+      "type": "syn",
+      "label": "defile, pollute (S)"
+    },
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C305",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C306",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C307",
+      "label": "ⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainless"
+    },
+    {
+      "target": "C310",
+      "label": "ⲉⲣⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stained"
+    },
+    {
+      "target": "C309",
+      "label": "ⲉⲣⲁⲧⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stainless"
+    },
+    {
+      "target": "C308",
+      "label": "ⲙⲉⲧⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainlessness"
+    }
+  ]
+}

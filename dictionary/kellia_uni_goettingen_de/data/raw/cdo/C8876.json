@@ -1,0 +1,519 @@
+{
+  "id": "C8876",
+  "forms": [
+    {
+      "id": "CF21502",
+      "orth": "ⲉⲓⲇⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21504",
+      "orth": "ⲉⲓⲇⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2926,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF21503",
+      "orth": "ⲉⲓⲇⲉⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21505",
+      "orth": "ⲉⲓⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21506",
+      "orth": "ⲓⲇⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21507",
+      "orth": "ⲓⲇⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3393,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF21508",
+      "orth": "ⲓⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19763,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21509",
+      "orth": "ⲛⲟⲏⲧⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10725",
+      "bibliography": "DDGLC",
+      "cu_ID": "1274"
+    },
+    {
+      "id": "CS10726",
+      "bibliography": "DDGLC",
+      "cu_ID": "10957"
+    },
+    {
+      "id": "CS10727",
+      "bibliography": "DDGLC",
+      "cu_ID": "1307"
+    },
+    {
+      "id": "CS10728",
+      "bibliography": "DDGLC",
+      "cu_ID": "3326"
+    },
+    {
+      "id": "CS10729",
+      "bibliography": "DDGLC",
+      "cu_ID": "2478"
+    },
+    {
+      "id": "CS10730",
+      "bibliography": "DDGLC",
+      "cu_ID": "6971"
+    },
+    {
+      "id": "CS10731",
+      "bibliography": "DDGLC",
+      "cu_ID": "8041"
+    },
+    {
+      "id": "CS10732",
+      "bibliography": "DDGLC",
+      "cu_ID": "8725"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲱⲗⲓ ⲛⲧⲁⲥⲏϥⲓ ⲁⲓϭⲟϫⲓ ⲥⲁⲫⲁϩⲟⲩ ⲙⲙⲟϥ ⲁⲓϧⲟⲑⲃϥ ⲟⲩⲟϩ ⲛϯⲟⲩⲛⲟⲩ ⲁⲓⲕⲱϯ ϧⲉⲛϯⲁⲥⲟⲩⲓ ⲉⲧϧⲉⲛⲡⲉϥⲙⲟⲩⲧ ⲉⲓⲙⲉⲩⲓ ϫⲉϯⲛⲁϫⲓⲙⲓ ⲛⲟⲩⲛⲓϣϯ ⲛ**ⲓⲇⲟⲥ** ⲛⲛⲟⲩⲃ ⲛϧⲏⲧⲥ ⲛⲧⲁⲟⲗⲟⲩ ⲛⲧⲁⲟⲩⲛⲟϥ ⲙⲙⲟⲓ ⲛϧⲏⲧⲟⲩ ⲛⲟⲩⲙⲏϣ ⲛⲉϩⲟⲟⲩ .",
+      "english": "I noticed it and, driven by greed, I grabbed my sword, pursued him, and struck him down. I searched the pouch, expecting to discover a large sum in gold that would allow me to live in ease for years.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲛⲟⲩ ⲇⲉ ⲉϯ ⲁϫⲓⲧϯⲙⲏ ⲛⲟⲩⲥⲟⲡ ⲛⲟⲩⲱⲧ ⲛⲧⲉⲡ**ⲉⲓⲇⲟⲥ**",
+      "english": "But if you sell, say the price of the item only once.",
+      "source": "Apophthegmata Patrum Sahidic 027: Pistamon 1",
+      "urn": "urn:cts:copticLit:ap.27.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲛⲁϥ ϫⲉⲡⲁϣⲏⲣⲓ ⲓⲥ ϩⲏⲡⲡⲉ ⲭⲟⲩⲱϣ ⲉϩⲱⲗ ⲉϯⲡⲟⲗⲓⲥ ⲣⲁⲕⲟϯ ⲁⲣⲓϯⲁⲅⲁⲡⲏ ⲁⲕϣⲁⲛϣⲉⲡⲓϣⲟⲣⲡ ⲛ**ⲓⲇⲟⲥ** ⲉⲕⲛⲁⲉⲣⲁⲡⲁⲛⲧⲁⲛ ⲉⲣⲟϥ ⲉⲩϯ ⲙⲙⲟϥ ⲉⲃⲟⲗ ϣⲟⲡϥ ⲛⲧⲉⲕⲉⲛϥ ⲛⲏⲓ ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲉⲕⲛⲁⲧⲏⲓϥ ϧⲁⲣⲟϥ ϯⲛⲁⲧⲏⲓϥ ⲛⲁⲕ ⲁⲕϣⲁⲛⲧⲁⲥⲑⲟⲕ ϣⲁⲣⲟⲓ ϧⲉⲛⲫⲟⲩⲱϣ ⲙⲫⲛⲟⲩϯ .",
+      "english": "...",
+      "source": "Life of Shenoute - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:27-58",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲟⲛϩ ⲛϭⲓⲡϫⲟⲉⲓⲥ · ϫⲉⲙⲛⲟⲉⲓⲕ ⲟⲩⲇⲉ ⲙⲟⲟⲩ ϣⲟⲟⲡ ⲛⲁⲓ ϩⲛⲧⲉⲓⲉⲣⲏⲙⲓⲁ · ⲟⲩⲇⲉ ⲗⲁⲁⲩ ⲛ**ⲉⲓⲇⲟⲥ** ⲛⲟⲩⲱⲙ ·",
+      "english": "And as the Lord liveth I have neither bread nor water in this wilderness, nor anything whatsoever which hath the appearance of food.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲣⲱⲙⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲁⲥϣⲱⲡⲓ ⲙⲙⲟⲓ ⲙⲡⲓⲉϫⲱⲣϩ ⲉⲧⲁϥⲥⲓⲛⲓ ⲙⲫⲛⲁⲩ ⲙⲡⲓⲟⲩⲱⲓⲛⲓ ⲛⲁⲓⲛⲁⲩ ⲉⲣⲟⲓ ⲉⲧⲁⲡⲁⲥⲱⲙⲁ ⲥⲑⲉⲣⲧⲉⲣ ⲉⲣⲟⲓ ⲛⲕⲁⲕⲱⲥ ϩⲟⲡⲱⲥ ⲛⲧⲁϫⲟⲥ ϫⲉⲁⲩⲓⲛⲓ ⲉⲃⲟⲗ ⲛⲛⲁⲙⲟⲩⲧ ⲧⲏⲣⲟⲩ ϧⲉⲛⲡⲁⲥⲱⲙⲁ ⲟⲩⲟϩ ⲛⲁⲓϣⲑⲉⲣⲑⲱⲣ ⲡⲉ ⲉⲓⲙⲉⲩⲓ ϫⲉⲉⲓⲛⲁⲙⲟⲩ ⲛⲭⲱⲗⲉⲙ ⲟⲩⲟϩ ⲙⲉⲛⲉⲛⲥⲱⲥ ⲓⲥ ⲟⲩ**ⲓⲇⲟⲥ** ⲁϥⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲁⲥⲱⲙⲁ ⲉϥⲭⲟⲛⲥ ⲉⲙⲁϣⲱ ⲙⲫⲣⲏϯ ⲛⲟⲩⲓⲁⲃⲓ ⲛⲣⲉϥⲙⲱⲟⲩⲧ ⲟⲩⲟϩ",
+      "english": "...",
+      "source": "Life of Shenoute - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:27-58",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲧⲏⲣⲟⲩ ϯⲛⲁϫⲟⲟⲩ ⲉⲣⲱⲧⲛ ⲙⲛⲧⲙⲓⲛⲉ ⲛⲧⲉⲯⲩⲭⲏ ⲧⲉⲯⲩⲭⲏ · ⲙⲛⲡⲧⲩⲡⲟⲥ ⲉⲧⲉϣⲁⲩⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲛⲥⲱⲙⲁ ⲉⲓⲧⲉ ⲣⲱⲙⲉ ⲉⲓⲧⲉ ϩⲁⲗⲏⲧ ⲉⲓⲧⲉ ⲧⲃⲛⲟⲟⲩⲉ ⲉⲓⲧⲉ ⲑⲏⲣⲓⲟⲛ ⲉⲓⲧⲉ ϫⲁⲧϥⲉ · ⲉⲓⲧⲉ **ⲉⲓⲇⲟⲥ** ⲛⲓⲙ ⲉⲧϩⲙⲡⲕⲟⲥⲙⲟⲥ ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛ ⲙⲡⲉⲩⲧⲩⲡⲟⲥ ϫⲉⲉϣⲁⲩⲃⲱⲕ ⲛⲁϣ ⲛⲧⲩⲡⲟⲥ ⲉϩⲟⲩⲛ ⲉⲛⲣⲱⲙⲉ ϯⲛⲁϫⲟⲟⲩ ⲉⲣⲱⲧⲛ ϩⲙⲡⲥⲱⲣ ⲉⲃⲟⲗ ⲙⲡⲧⲏⲣϥ ·",
+      "english": "“All this I will tell unto you and the species of every soul and the type, how they enter into the bodies, whether of men or of birds or of cattle or of wild beasts or of reptiles or of all the other species in the world. I will tell you their type, in what type they enter into men; I will tell it you at the expansion of the universe.”",
+      "source": "Pistis Sophia Book 3 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:109-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲗⲁⲥⲧⲓⲣⲓⲟⲛ",
+        1,
+        16.791
+      ],
+      [
+        "ⲣϩⲟⲩⲟⲛ",
+        1,
+        16.791
+      ],
+      [
+        "ϭⲉϭⲟⲩ",
+        1,
+        16.791
+      ],
+      [
+        "ⲉⲉⲕⲉ",
+        1,
+        16.791
+      ],
+      [
+        "ⲉϣⲧ",
+        1,
+        13.983
+      ],
+      [
+        "ⲉ",
+        15,
+        12.73
+      ],
+      [
+        "ϫⲁⲧϥⲉ",
+        1,
+        11.505
+      ],
+      [
+        "ϩⲱⲗ",
+        1,
+        11.364
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        2,
+        11.18
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        2,
+        11.122
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        3,
+        10.883
+      ],
+      [
+        "ⲛ",
+        12,
+        10.756
+      ],
+      [
+        "ⲥⲟⲟ",
+        1,
+        10.601
+      ],
+      [
+        "ⲧⲛϩ",
+        1,
+        10.381
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        2,
+        10.309
+      ],
+      [
+        "ⲡⲉⲓ",
+        3,
+        10.274
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        2,
+        10.228
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        2,
+        9.606
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        9.469
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        9.451
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲇⲟⲥ_0_node",
+          12
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲇⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲗⲁⲥⲧⲓⲣⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ϯϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϯϩⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲥⲟⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲟ",
+          1
+        ],
+        [
+          "ⲥⲟⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲣϩⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲣϩⲟⲩⲟⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲉϭⲟⲩ_3_post_ⲣϩⲟⲩⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲇⲟⲥ_0_node",
+          "ⲛ_1_post_ⲉⲓⲇⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲟⲩⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲕⲟⲗⲁⲥⲧⲓⲣⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲗⲁⲥⲧⲓⲣⲓⲟⲛ_2_post_ⲛ",
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲩ_3_post_ϯϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϯϩⲟⲧⲉ",
+          "ϯϩⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲇⲟⲥ_0_node",
+          "ⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲉⲓⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲇⲟⲥ_0_node",
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          "ϣⲁ_3_post_ⲥⲟⲟ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲥⲟⲟ",
+          "ⲩ_3_post_ⲥⲟⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲟ",
+          "ⲥⲟⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲉⲓⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲇⲟⲥ_0_node",
+          "ⲛⲓⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲉⲧ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲇⲟⲥ",
+          "ϩⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲛⲉⲓ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲕⲉ_1_pre_ⲉⲓⲇⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲉⲓⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲉⲓⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲓⲇⲟⲥ",
+          "ⲉⲓⲇⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲇⲟⲥ",
+          "ⲩ_3_post_ⲣϩⲟⲩⲟⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲣϩⲟⲩⲟⲛ",
+          "ⲣϩⲟⲩⲟⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣϩⲟⲩⲟⲛ_2_post_ⲉ",
+          "ϭⲉϭⲟⲩ_3_post_ⲣϩⲟⲩⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2598,
+      "count": 14
+    }
+  },
+  "etym": {
+    "grl_ID": "616",
+    "grl_lemma": "εἶδος",
+    "grl_meaning": "form, shape, matter",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 482b; Preisigke 1:419"
+  }
+}

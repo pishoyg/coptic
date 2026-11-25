@@ -1,0 +1,342 @@
+{
+  "id": "C9534",
+  "forms": [
+    {
+      "id": "CF24264",
+      "orth": "ⲕⲣⲁⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24265",
+      "orth": "ⲕⲣⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3067,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF24266",
+      "orth": "ⲕⲣⲁⲧⲟⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12139",
+      "bibliography": "DDGLC",
+      "cu_ID": "3560"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲡⲁⲑⲟⲥ ⲙⲉⲛ ⲡⲁⲧⲥⲁⲣⲝ ⲡⲉ · ⲡⲉ**ⲕⲣⲁⲧⲟⲥ** ⲇⲉ ⲡⲁⲧⲙⲛⲧⲛⲟⲩⲧⲉ ⲡⲉ ·",
+      "english": "Passion belongeth to my flesh, but power belongeth to divinity.'",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲉⲡⲟⲩϫⲁⲓ ⲙⲡⲁ**ⲕⲣⲁⲧⲟⲥ** · ⲙⲛⲡⲟⲩϫⲁⲓ ⲙⲡⲉⲥϣϥⲉ ⲛⲛⲟⲩⲧⲉ ⲙⲛⲡⲛⲟϭ ⲛⲛⲟⲩⲧⲉ ⲡⲁⲡⲟⲗⲗⲱⲛ · ϯⲛⲁⲧⲣⲉⲡⲕⲟⲥⲙⲟⲥ ⲟⲩⲱϣⲧ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "I swear by the salvation of my strength, and by the salvation of the seventy gods, and by the strength of the great god Apollo, that I will make the whole world worship my gods,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥⲧⲉⲩⲁⲡⲟⲥⲕⲉⲩⲏ ⲧⲏⲣⲥ ⲙⲛⲛⲉⲩϩⲧⲱⲱⲣ · ⲁⲛⲧⲛⲛⲟⲟⲩ ϣⲁⲡⲉⲕ**ⲕⲣⲁⲧⲟⲥ** ·",
+      "english": "Behold, all their harness and trappings and their horses we have sent to thy majesty.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲉⲛⲉ",
+        1,
+        14.09
+      ],
+      [
+        "ⲙⲛⲧⲛⲟⲩⲧⲉ",
+        2,
+        13.898
+      ],
+      [
+        "ⲟⲩϫⲁⲓ",
+        4,
+        13.514
+      ],
+      [
+        "ⲡⲉⲣⲥⲟⲥ",
+        1,
+        12.81
+      ],
+      [
+        "ⲣⲣⲟ",
+        5,
+        12.722
+      ],
+      [
+        "ⲕⲉⲗⲉⲩⲉ",
+        2,
+        12.594
+      ],
+      [
+        "ϣⲉ",
+        3,
+        12.237
+      ],
+      [
+        "ⲡⲉ",
+        7,
+        11.23
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        2,
+        10.943
+      ],
+      [
+        "ⲡⲁ",
+        4,
+        10.675
+      ],
+      [
+        "ⲁⲛⲁ",
+        1,
+        10.631
+      ],
+      [
+        "ⲡⲉⲕ",
+        3,
+        9.923
+      ],
+      [
+        "ⲱ",
+        2,
+        9.861
+      ],
+      [
+        "ⲡ",
+        8,
+        9.797
+      ],
+      [
+        "ⲉ",
+        7,
+        9.539
+      ],
+      [
+        "ⲙ",
+        6,
+        9.406
+      ],
+      [
+        "ⲡⲉⲛ",
+        2,
+        9.381
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        9.29
+      ],
+      [
+        "ⲛ",
+        8,
+        9.109
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        1,
+        8.335
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          3
+        ],
+        [
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          11
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_post_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ϫⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          3
+        ],
+        [
+          "ⲱ_4_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_4_pre_ⲡⲉⲣⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_6_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲡ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          "ⲱ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲣⲣⲟ",
+          "ⲡ_2_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲣⲣⲟ",
+          "ⲣⲣⲟ_1_post_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ϣⲉ_2_pre_ϫⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ϫⲉ",
+          "ⲡⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          "ⲱ_4_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲱ_4_post_ⲣⲣⲟ",
+          "ⲡ_4_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_4_pre_ⲡⲉⲣⲥⲟⲥ",
+          "ⲛ_5_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ⲛ",
+          "ⲉⲣⲟ_6_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_6_pre_ⲛ",
+          "ⲡⲉ_1_pre_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲣⲁⲧⲟⲥ_0_node",
+          "ⲛ_1_post_ⲕⲣⲁⲧⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2719,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "1214",
+    "grl_lemma": "κράτος",
+    "grl_meaning": "strength, might",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 992a; Preisigke 1:836"
+  }
+}

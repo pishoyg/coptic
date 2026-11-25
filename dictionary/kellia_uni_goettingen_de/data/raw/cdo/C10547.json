@@ -1,0 +1,124 @@
+{
+  "id": "C10547",
+  "forms": [
+    {
+      "id": "CF28373",
+      "orth": "ⲥⲧⲏⲗⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28374",
+      "orth": "ⲥⲧⲏⲗⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16740,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28375",
+      "orth": "ⲥⲧⲩⲗⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1974,
+        "count": 31
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14331",
+      "bibliography": "DDGLC",
+      "cu_ID": "9198"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲛⲟⲉⲓⲛ ⲙⲡⲕⲁϩ ϣⲁⲛⲉϥⲥⲛⲧⲉ ϣⲁⲣⲉⲛⲉϥ**ⲥⲧⲏⲗⲗⲟⲥ** ⲕⲓⲙ",
+      "english": "Who shakes the earth under heaven from its foundations, and its pillars totter.",
+      "source": "Job 9",
+      "urn": "urn:cts:copticLit:ot.job.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲓⲙ",
+        1,
+        12.65
+      ],
+      [
+        "ⲥⲛⲧⲉ",
+        1,
+        12.322
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        11.797
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ϫⲱ",
+        1,
+        8.405
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲧⲏⲗⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲧⲏⲗⲗⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲧⲏⲗⲗⲟⲥ",
+          "ⲥⲧⲏⲗⲗⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16343,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2052",
+    "grl_lemma": "στῦλος",
+    "grl_meaning": "pillar",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1657b; Preisigke 2:493"
+  }
+}

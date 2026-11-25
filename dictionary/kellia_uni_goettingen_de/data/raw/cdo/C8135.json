@@ -1,0 +1,109 @@
+{
+  "id": "C8135",
+  "forms": [
+    {
+      "id": "CF18590",
+      "orth": "ⲁⲓⲱⲛⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18591",
+      "orth": "ⲁⲓⲱⲛⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18592",
+      "orth": "ⲁⲓⲱⲛⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11232,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9167",
+      "bibliography": "DDGLC",
+      "cu_ID": "2188"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲕⲕⲱⲧ ⲅⲁⲣ ⲛⲛⲉⲕϣⲏⲣⲉ ϩⲓϫⲛⲧⲡⲉⲧⲣⲁ ⲛⲁⲧⲕⲓⲙ · ⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲁⲩⲱ ⲛⲉⲕⲕⲱⲧ ⲛϩⲏⲧⲟⲩ ⲛⲟⲩⲡⲓⲥⲧⲓⲥ ⲛ**ⲁⲓⲱⲛⲓⲟⲛ** ⁛—",
+      "english": "Thou didst build thy children on the Rock which cannot be moved, that is the Christ, and thou didst build in them the faith (or, belief) which is everlasting.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "⁛—",
+        1,
+        12.753
+      ],
+      [
+        "ⲡⲓⲥⲧⲓⲥ",
+        1,
+        11.278
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲓⲱⲛⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10818,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "62",
+    "grl_lemma": "αἰώνιος",
+    "grl_meaning": "perpetual, eternal",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 45b; Preisigke 1:39"
+  }
+}

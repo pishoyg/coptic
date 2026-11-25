@@ -1,0 +1,245 @@
+{
+  "id": "C5811",
+  "forms": [
+    {
+      "id": "CF13619",
+      "orth": "ⲣⲉϥϣⲱⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7223,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6490",
+      "bibliography": "CD 558a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲉⲧⲁⲫⲟⲥ ⲛⲧⲁϥ ϣⲱⲡ ⲉⲣⲟϥ ⲉⲛⲉϩ ⲛⲟⲩⲕⲱⲱⲛⲥ ⲛ**ⲣⲉϥϣⲱⲗ** ⲙⲡⲙⲟⲩ ·",
+      "english": "Never before did the tomb receive into it a dead body which had plundered death.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲉ",
+        1,
+        8.736
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        8.057
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.934
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲱⲱⲛⲥ",
+        2,
+        19.139
+      ],
+      [
+        "ⲙⲟⲩ",
+        2,
+        11.743
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥϣⲱⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲣⲉϥϣⲱⲗ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ⲥⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_4_post_ⲥⲱϫⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϣⲱⲗ_0_node",
+          "ⲛⲏ_1_post_ⲣⲉϥϣⲱⲗ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲣⲉϥϣⲱⲗ",
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲏ",
+          "ⲛ_4_post_ⲥⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲱϫⲡ",
+          "ⲥⲉ_4_post_ⲥⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ⲥⲱϫⲡ",
+          "ⲛⲁ_4_post_ⲥⲱϫⲡ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϣⲱⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥϣⲱⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϣⲱⲗ_0_node",
+          "ⲙ_1_post_ⲣⲉϥϣⲱⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥϣⲱⲗ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6772,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5813",
+      "label": "ϣⲟⲗⲥ",
+      "pos": "N",
+      "gloss": "booty"
+    },
+    {
+      "target": "C5808",
+      "label": "ϣⲱⲗ",
+      "pos": "V",
+      "gloss": "despoil, rob"
+    },
+    {
+      "target": "C5810",
+      "label": "ϣⲱⲗ",
+      "pos": "N",
+      "gloss": "booty, spoils"
+    },
+    {
+      "target": "C5812",
+      "label": "ϣⲱⲗ",
+      "pos": "N",
+      "gloss": "robbery"
+    },
+    {
+      "target": "C5809",
+      "label": "ⲁⲧϣⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "indestructible (or similar)"
+    }
+  ]
+}

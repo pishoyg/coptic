@@ -1,0 +1,238 @@
+{
+  "id": "C4355",
+  "forms": [
+    {
+      "id": "CF10662",
+      "orth": "ⲣⲉϥϯⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6368,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4933",
+      "bibliography": "CD 418ab; ChLCS 59a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲟⲩϩ ⲛ**ⲣⲉϥϯⲧⲱⲛ** ϩⲓⲣⲉϥϭⲱⲛⲧ ·",
+      "english": "The churches are filled with men who love fighting and with men of wrath.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϣⲱⲡⲉ ⲛ**ⲣⲉϥϯⲧⲱⲛ** · ϫⲉⲁⲩϫⲟⲟⲥ ϫⲉϯ ⲧⲱⲛ ⲛⲓⲙ ⲙⲛϩⲏⲩ ⲛϩⲏⲧϥ ·",
+      "english": "Be not a man of strife, for it is said that there is no profit in any man of strife.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲏⲓ ⲇⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲥⲉⲛⲁⲟⲩⲱϣ ⲁⲛ ⲉⲥⲱ ⲛⲥⲱⲕ ⲉⲃⲟⲗ ϫⲉⲛⲥⲉⲟⲩⲱϣ ⲁⲛ ⲉⲥⲱⲧⲙ ⲛⲥⲱⲓ ϫⲉⲡⲏⲓ ⲧⲏⲣⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲉⲛ**ⲣⲉϥϯⲧⲱⲛ** ⲛⲉ ⲁⲩⲱ ϩⲉⲛⲛⲁϣⲧϩⲏⲧ ⲛⲉ",
+      "english": "But the house of Israel will not be willing to hearken to thee; for they will not hearken to me: for all the house of Israel are stubborn and hard-hearted.",
+      "source": "Ezekiel 3",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁϣⲧϩⲏⲧ",
+        1,
+        16.206
+      ],
+      [
+        "ⲣⲉϥϭⲱⲛⲧ",
+        1,
+        15.206
+      ],
+      [
+        "ⲡⲓⲥⲣⲁⲏⲗ",
+        1,
+        13.969
+      ],
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        10.804
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        10.732
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        9.489
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        8.451
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.646
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.439
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.279
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.728
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϯⲧⲱⲛ_0_node",
+          2
+        ],
+        [
+          "ϩⲓ_2_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲱⲛⲧ_1_post_ⲣⲉϥϯⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϯⲧⲱⲛ_0_node",
+          "ϩⲓ_2_post_ⲣⲉϥϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲣⲉϥϭⲱⲛⲧ",
+          "ⲣⲉϥϭⲱⲛⲧ_1_post_ⲣⲉϥϯⲧⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5932,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4350",
+      "label": "ϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, strife"
+    },
+    {
+      "target": "C4352",
+      "label": "ⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "without strife"
+    },
+    {
+      "target": "C4351",
+      "label": "ⲙⲁⲓϯⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "strife-loving"
+    },
+    {
+      "target": "C4354",
+      "label": "ⲙⲛⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarrelling"
+    },
+    {
+      "target": "C4353",
+      "label": "ⲙⲛⲧⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "lack of strife"
+    },
+    {
+      "target": "C4357",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "discrepancy"
+    },
+    {
+      "target": "C4356",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4349",
+      "label": "ⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, quarrel (in ϯⲧⲱⲛ, \"to dispute\", \"to quarrel\")"
+    }
+  ]
+}

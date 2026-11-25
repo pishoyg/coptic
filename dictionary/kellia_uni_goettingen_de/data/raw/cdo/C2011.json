@@ -1,0 +1,143 @@
+{
+  "id": "C2011",
+  "forms": [
+    {
+      "id": "CF5688",
+      "orth": "ⲙⲉⲣⲁⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9483,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF5689",
+      "orth": "ⲙⲏⲣⲁⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2334",
+      "bibliography": "CD 183a; CED 88; KoptHWb 100; DELC 120"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲟⲩⲏⲃ ⲇⲉ ⲛⲧⲉⲙⲁⲇⲓⲁⲙ ⲛⲉ ⲟⲩⲟⲛⲧⲁϥ ⲛⲍ ⲛϣⲉⲣⲓ ⲙⲙⲁⲩ ⲉⲩⲙⲟⲛⲓ ⲛⲛⲓⲉⲥⲱⲟⲩ ⲛⲧⲉⲓⲟⲑⲟⲣ ⲡⲟⲩⲓⲱⲧ ⲉⲧⲁⲩⲓ ⲇⲉ ⲁⲩϯⲙⲱⲟⲩ ϣⲁⲧⲟⲩⲙⲁϩ ⲛⲓ**ⲙⲉⲣⲁⲛ** ⲉⲧⲥⲟ ⲛⲛⲓⲉⲥⲱⲟⲩ ⲛⲧⲉⲡⲟⲩⲓⲱⲧ",
+      "english": "And the priest of Madiam had seven daughters, feeding the flock of their father Jothor; and they came and drew water until they filled their pitchers, to water the flock of their father Jothor.",
+      "source": "02_Exodus_02",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟ",
+        1,
+        14.41
+      ],
+      [
+        "ϣⲁⲧ",
+        1,
+        13.066
+      ],
+      [
+        "ⲙⲁϩ",
+        1,
+        11.618
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        9.218
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲓ_1_pre_ⲙⲉⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲁⲛ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲉⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲥⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟ",
+          1
+        ],
+        [
+          "ⲛⲓ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ⲙⲉⲣⲁⲛ",
+          "ⲙⲉⲣⲁⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲁⲛ_0_node",
+          "ⲉⲧ_1_post_ⲙⲉⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲉⲣⲁⲛ",
+          "ⲥⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲥⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟ",
+          "ⲛⲓ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8948,
+      "count": 1
+    }
+  }
+}

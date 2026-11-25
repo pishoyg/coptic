@@ -1,0 +1,72 @@
+{
+  "id": "C13013",
+  "forms": [
+    {
+      "id": "CF34071",
+      "orth": "ⲣⲟϥⲣⲉϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS18012",
+      "bibliography": "CD 310a; KoptHWb 171; ChLCS 44a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C1731",
+      "type": "cf",
+      "label": "mortify, become rotten, perish"
+    },
+    {
+      "target": "C3739",
+      "type": "cf",
+      "label": "fall, wither, make fall, dissipate"
+    },
+    {
+      "target": "C6280",
+      "type": "cf",
+      "label": "fall, rush down (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3741",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "unwithered state"
+    },
+    {
+      "target": "C13026",
+      "label": "ⲣⲉϥⲣⲓϥ",
+      "pos": "N",
+      "gloss": "waste"
+    },
+    {
+      "target": "C3739",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "V",
+      "gloss": "fall, wither; make fall, dissipate; administer (medicine)"
+    },
+    {
+      "target": "C3740",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "falling, withering"
+    },
+    {
+      "target": "C3742",
+      "label": "ⲥⲣⲣⲓϥⲉ",
+      "pos": "N",
+      "gloss": "what falls, droppings"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "C4281",
+  "forms": [
+    {
+      "id": "CF10513",
+      "orth": "ϭⲓⲛⲧⲁⲗϭⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4852",
+      "bibliography": "CD 412a; ChLCS 58a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C11283",
+      "type": "cf",
+      "label": "cease, cause to cease, remove; recover from sickness, cure"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4280",
+      "label": "ϭⲓⲛⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healing"
+    },
+    {
+      "target": "C4274",
+      "label": "ⲁⲧⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "not to be healed"
+    },
+    {
+      "target": "C4279",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healing power"
+    },
+    {
+      "target": "C4277",
+      "label": "ⲣⲉϥϯⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healer"
+    },
+    {
+      "target": "C4278",
+      "label": "ⲣⲉϥϯⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healer"
+    },
+    {
+      "target": "C4275",
+      "label": "ⲣⲉϥⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healer"
+    },
+    {
+      "target": "C4276",
+      "label": "ⲣⲉϥⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healer"
+    },
+    {
+      "target": "C4272",
+      "label": "ⲧⲁⲗϭⲟ",
+      "pos": "V",
+      "gloss": "make cease, heal"
+    },
+    {
+      "target": "C4273",
+      "label": "ⲧⲁⲗϭⲟ",
+      "pos": "N",
+      "gloss": "healing"
+    }
+  ]
+}

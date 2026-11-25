@@ -1,0 +1,40 @@
+{
+  "id": "C8028",
+  "forms": [
+    {
+      "id": "CF18122",
+      "orth": "ⲣϭⲁϫⲓϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8928",
+      "bibliography": "CD 842b; KoptHWb 474; DELC 351a; ChLCS 111a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C8027",
+      "label": "ϭⲁϫⲓϥ",
+      "pos": "N",
+      "gloss": "ant"
+    }
+  ]
+}

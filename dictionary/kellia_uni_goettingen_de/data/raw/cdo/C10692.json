@@ -1,0 +1,230 @@
+{
+  "id": "C10692",
+  "forms": [
+    {
+      "id": "CF29013",
+      "orth": "ⲧⲁⲣⲁⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29014",
+      "orth": "ⲧⲁⲣⲁⲭⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4913,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14681",
+      "bibliography": "DDGLC",
+      "cu_ID": "1321"
+    },
+    {
+      "id": "CS14682",
+      "bibliography": "DDGLC",
+      "cu_ID": "11317"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲟⲩⲟⲉⲓϣ ⲉϥⲡⲟⲗⲓⲧⲉⲩⲉ ϩⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ϩⲛⲛⲁⲣⲉⲧⲏ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ˽ ⲉⲧⲉⲡⲉⲑⲃⲃⲓⲟ ⲡⲉ ⲙⲛⲧⲙⲛⲧⲣⲙⲣϣ ⲙⲛⲧⲙⲛⲧⲁⲡⲟⲧⲁⲕⲧⲓⲕⲟⲥ ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲛⲛⲁⲣⲉⲧⲏ – ⲉⲧⲉⲓⲛⲉ ⲛⲛⲁⲓ – ⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ⲛϭⲓⲡⲉⲡⲣⲟⲉⲥⲧⲟⲥ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ , ⲉⲩⲣⲱⲙⲉ ⲡⲉ ⲛⲛⲉⲥⲩⲭⲟⲥ ⲁⲩⲱ ⲛⲉⲓⲣⲏⲛⲓⲕⲟⲥ , ⲉⲁⲩⲕⲁⲑⲓⲥⲧⲁ ⲛⲕⲉⲟⲩⲁ ⲉⲡⲉϥⲙⲁ · ⲧⲟⲧⲉ ⲁⲩ**ⲧⲁⲣⲁⲭⲏ** ϣⲱⲡⲉ ϩⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲧⲁⲓ ⲧⲁⲓⲧⲓⲁ ·",
+      "english": "After he'd spent time in the monastery living his life through Christ's virtues, i.e., humility, meekness, renunciation, and the rest of the virtues resembling these, the abbot—a quiet and peaceful man—passed away in that monastery, with someone else appointed in his stead. Then, disorder arose amongst the monastery's congregation, for this reason:",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁⲩⲕⲟⲧϥ ϩⲛⲟⲩⲥϭⲣⲁϩⲧ ⲁⲩϣⲣϣⲱⲣϥ ϩⲛⲟⲩⲛⲟϭ ⲛ**ⲧⲁⲣⲁⲭⲏ** ·",
+      "english": "That which had been builded in silence was destroyed amid great confusion and noise.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲉⲓϣⲧⲟⲣⲧⲣ · ⲙⲛⲛⲉⲓ**ⲧⲁⲣⲁⲭⲏ** · ⲙⲛⲛⲉⲓⲁⲧⲁⲝⲓⲁ ϩⲛⲛⲉⲛⲙⲉⲗⲟⲥ ⲉⲧⲃⲉⲡⲉϩⲟⲩⲟ ⲙⲡⲏⲣⲡ ·",
+      "english": "The disturbances in our members, and the twitchings therein, and their jerky and disconnected movements are due to overmuch wine",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲧⲁⲝⲓⲁ",
+        1,
+        16.276
+      ],
+      [
+        "ⲥⲉϩ",
+        1,
+        13.632
+      ],
+      [
+        "ϣⲧⲟⲣⲧⲣ",
+        2,
+        12.702
+      ],
+      [
+        "ⲇⲁⲓⲙⲱⲛ",
+        1,
+        12.276
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        11.146
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        1,
+        11.096
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        9.995
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        9.632
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.077
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.912
+      ],
+      [
+        "ⲩ",
+        3,
+        8.243
+      ],
+      [
+        "·",
+        1,
+        7.856
+      ],
+      [
+        "ⲁ",
+        3,
+        7.477
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.976
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.871
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        5.702
+      ],
+      [
+        "ⲡ",
+        2,
+        5.175
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲣⲁⲭⲏ_0_node",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          "ⲧⲁⲣⲁⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          "ϩⲉⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          "ⲧⲁⲣⲁⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          "ⲛⲉⲓ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲧⲁⲣⲁⲭⲏ",
+          "ⲧⲁⲣⲁⲭⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4494,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2153",
+    "grl_lemma": "ταραχή",
+    "grl_meaning": "disorder, disturbance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1758a; Preisigke 2:578"
+  }
+}

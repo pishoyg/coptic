@@ -1,0 +1,613 @@
+{
+  "id": "C425",
+  "forms": [
+    {
+      "id": "CF1772",
+      "orth": "ⲥⲁⲃⲟⲗ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31586",
+      "orth": "ⲛⲥⲁⲛⲃⲟⲗ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF1769",
+      "orth": "ⲥⲁⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 5.29,
+        "rank": 221,
+        "count": 449
+      }
+    },
+    {
+      "id": "CF31588",
+      "orth": "ⲛⲥⲁⲛⲃⲟⲗ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1766",
+      "orth": "ⲥⲁⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2387,
+        "count": 21
+      }
+    },
+    {
+      "id": "CF31590",
+      "orth": "ⲛⲥⲁⲛⲃⲟⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31591",
+      "orth": "ⲛⲥⲁⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5420,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF1767",
+      "orth": "ⲥⲁⲛⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6237,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF31589",
+      "orth": "ⲛⲥⲁⲃⲟⲗ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1770",
+      "orth": "ⲥⲁⲛⲃⲟⲗ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31587",
+      "orth": "ⲛⲥⲁⲃⲟⲗ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF1773",
+      "orth": "ⲥⲁⲛⲃⲟⲗ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "collocPrep": "ⲛ-, ⲉ-",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS513",
+      "bibliography": "CD 35b; KoptHWb 23; ChLCS 8a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲁⲥⲛⲏⲟⲩ ⲁⲓϣⲟⲡⲧⲟⲩ ⲛⲥⲭⲏⲙⲁ ⲉⲣⲟⲓ ⲛⲉⲙⲁⲡⲟⲗⲗⲱ ⲉⲑⲃⲉⲑⲏⲛⲟⲩ ϩⲓⲛⲁ ⲛϧⲣⲏⲓ ⲛϧⲏⲧⲉⲛ ⲛⲧⲉⲧⲉⲛϭⲓⲥⲃⲱ ⲉϣⲧⲉⲙⲉⲣ **ⲥⲁⲃⲟⲗ** ⲛⲛⲏ ⲉⲧⲥϧⲏⲟⲩⲧ ϩⲓⲛⲁ ϫⲉⲛⲛⲉⲟⲩⲁⲓ ϭⲓⲥⲓ ⲙⲙⲟϥ ⲉⲑⲃⲉⲟⲩⲁⲓ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲉϥϣⲫⲏⲣ .",
+      "english": "Now these things, brothers, I have in a figure transferred to myself and Apollos for your sakes, that in us you might learn not to think beyond the things which are written, that none of you be puffed up against one another.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲟⲩϫⲉ ⲛⲧⲁⲓ **ⲥⲁⲃⲟⲗ** ⲙⲙⲟϥ . ⲟⲩϩⲧⲟ ⲛⲗⲁⲃⲥϩⲓⲙⲉ ⲡⲉ ·",
+      "english": "The one who casts this away from himself is like a lustful horse.”",
+      "source": "Apopthegmata Patrum Sahidic 009: Hyperechius 2",
+      "urn": "urn:cts:copticLit:ap.9.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲟⲛ ϩⲗⲓ **ⲥⲁⲃⲟⲗ** ⲙⲡⲓⲣⲱⲙⲓ ⲉϥⲛⲁ ⲉϧⲟⲩⲛ ⲉⲣⲱϥ ⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲙⲙⲟϥ ⲉⲥⲟϥϥ ⲁⲗⲗⲁ ⲛⲏ ⲉⲑⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲣⲱϥ ⲙⲡⲓⲣⲱⲙⲓ .",
+      "english": "There is nothing from outside of the man, that going into him can defile him; but the things which proceed out of the man are those that defile the man.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲏⲡⲟⲧⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲕⲧⲉⲡⲉϥϩⲟ **ⲥⲁⲃⲟⲗ** ⲙⲙⲟ ⲉⲧⲃⲉⲧⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ·",
+      "english": "lest God turn His face away from thee because of thine exaltation of heart (or, pride).",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ⲡⲉ ϫⲉⲛⲑⲱⲧⲉⲛ ⲉⲧⲉⲛⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲧⲟⲓ ⲛⲱⲧⲉⲛ ⲛⲧⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲏ ⲇⲉ ⲛⲑⲱⲟⲩ ⲉⲧ**ⲥⲁⲃⲟⲗ** ϣⲁⲣⲉⲡⲧⲏⲣϥ ϣⲱⲡⲓ ⲛⲱⲟⲩ ϧⲉⲛϩⲁⲛⲡⲁⲣⲁⲃⲟⲗⲏ",
+      "english": "He said to them, 'To you is given the mystery of the Kingdom of God, but to those who are outside, all things are done in parables,",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲱϩⲁⲛⲛⲏⲥ ⲛⲁϥ · ϫⲉⲃⲱⲕ ⲛⲅϫⲟⲟⲥ ⲛⲁⲥ ϫⲉⲡⲉϫⲉⲡⲉⲓⲣⲱⲙⲉ ⲛϩⲏⲕⲉ ⲁⲩⲱ ⲛϭⲱⲃ ⲉⲧ**ⲥⲁⲃⲟⲗ** ⲙⲡⲟⲩⲣⲟ ⲡⲁⲓ ⲛⲧⲁⲣϫⲟⲟⲥ ϫⲉⲛⲟϫϥ ⲉⲃⲟⲗ ·",
+      "english": "And John said iinto him, ' Go, and say unto her thus : This poor and diseased man, who is outside the door, and of whom thou didst say, 'Cast him outside,'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ",
+        69,
+        22.221
+      ],
+      [
+        "ⲛ",
+        358,
+        21.232
+      ],
+      [
+        "ⲙ",
+        246,
+        20.6
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        199,
+        19.179
+      ],
+      [
+        "ⲡⲓ",
+        165,
+        19.059
+      ],
+      [
+        "ϥ",
+        199,
+        18.524
+      ],
+      [
+        "ⲣⲓⲕⲓ",
+        29,
+        18.493
+      ],
+      [
+        ".",
+        136,
+        18.068
+      ],
+      [
+        "ϯ",
+        116,
+        18.054
+      ],
+      [
+        "ⲉⲧ",
+        109,
+        17.745
+      ],
+      [
+        "ⲃⲁⲕⲓ",
+        41,
+        17.492
+      ],
+      [
+        "ⲁⲩⲗⲏ",
+        23,
+        17.478
+      ],
+      [
+        "ⲙⲙⲟ",
+        78,
+        17.414
+      ],
+      [
+        "ϩⲉⲛ",
+        18,
+        17.307
+      ],
+      [
+        "ⲙⲙⲟⲓ:",
+        9,
+        16.809
+      ],
+      [
+        "ⲉ",
+        112,
+        16.629
+      ],
+      [
+        "ⲁ",
+        112,
+        16.601
+      ],
+      [
+        "ⲟⲩⲉⲓ",
+        18,
+        16.561
+      ],
+      [
+        "ⲫⲱⲛϩ",
+        15,
+        16.539
+      ],
+      [
+        "ⲛⲧⲉ",
+        86,
+        16.534
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.206
+      ],
+      [
+        "ⲛⲧⲕⲩⲃⲱⲧⲟⲥ",
+        1,
+        16.206
+      ],
+      [
+        "ⲡⲥϫⲓϣϣⲱⲟⲩ",
+        1,
+        16.206
+      ],
+      [
+        "ϩⲟ",
+        6,
+        14.194
+      ],
+      [
+        "ⲙ",
+        16,
+        12.959
+      ],
+      [
+        "ⲡⲱⲧ",
+        4,
+        12.643
+      ],
+      [
+        "ⲕⲧⲉ",
+        2,
+        12.046
+      ],
+      [
+        "ⲙⲙⲟ",
+        8,
+        11.588
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        3,
+        11.52
+      ],
+      [
+        "ⲡ",
+        12,
+        10.86
+      ],
+      [
+        "ϣⲏⲧ",
+        1,
+        10.714
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        2,
+        10.674
+      ],
+      [
+        "ⲧⲱⲛ",
+        2,
+        10.537
+      ],
+      [
+        "ⲡⲉⲕ",
+        4,
+        10.476
+      ],
+      [
+        "ⲡⲁⲑⲟⲥ",
+        1,
+        10.161
+      ],
+      [
+        "ⲙⲙⲱ",
+        2,
+        10.159
+      ],
+      [
+        "ⲛⲟϫ",
+        2,
+        10.021
+      ],
+      [
+        "ⲉⲃⲓⲏⲛ",
+        1,
+        9.902
+      ],
+      [
+        "ϣⲧⲁⲙ",
+        1,
+        9.848
+      ],
+      [
+        "ⲛ",
+        11,
+        9.795
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲥϧⲏⲟⲩⲧ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁⲃⲟⲗ_0_node",
+          "ⲛ_1_post_ⲥⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁⲃⲟⲗ",
+          "ⲛⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛⲏ",
+          "ⲥϧⲏⲟⲩⲧ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲃⲟⲗ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲣⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_3_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲧ_4_post_ⲡⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁⲃⲟⲗ_0_node",
+          "ⲙ_1_post_ⲥⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲁⲃⲟⲗ",
+          "ⲡⲟⲩ_3_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲣⲟ",
+          "ⲣⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲟ_2_post_ⲙ",
+          "ⲡⲁⲓ_3_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_3_post_ⲣⲟ",
+          "ⲛⲧ_4_post_ⲡⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2106,
+      "count": 21
+    },
+    "B": {
+      "rate": 5.29,
+      "rank": 195,
+      "count": 449
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C415",
+      "type": "cf",
+      "label": "the outside"
+    },
+    {
+      "target": "C3263",
+      "type": "cf",
+      "label": "side, part"
+    },
+    {
+      "target": "C3268",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

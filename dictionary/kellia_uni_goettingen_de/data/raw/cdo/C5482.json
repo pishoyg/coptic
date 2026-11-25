@@ -1,0 +1,158 @@
+{
+  "id": "C5482",
+  "forms": [
+    {
+      "id": "CF12936",
+      "orth": "ⲱⲙⲥ ⲉϧⲣⲏⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4007,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6142",
+      "bibliography": "CD 523b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉϫⲟⲥ ϫⲉⲡⲁⲓⲣⲏϯ **ⲉⲥⲉⲱⲙⲥ **ⲉϧⲣⲏⲓ**** ⲛϫⲉⲃⲁⲃⲩⲗⲱⲛ ⲟⲩⲟϩ ⲛⲛⲉⲥⲧⲱⲛⲥ ⲉⲃⲟⲗϩⲁ ⲡϩⲟ ⲛⲛⲓⲡⲉⲧϩⲱⲟⲩ ⲛⲏⲉϯⲛⲁⲉⲛⲟⲩ ⲁⲛⲟⲕ ⲉϫⲱⲥ .",
+      "english": "and shalt say, Thus shall Babylon sink, and not rise, because of the evils which I bring upon it.",
+      "source": "24_Ieremias_28",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲟⲩⲛⲁϩϯ ⲁⲩⲥⲓⲛⲓ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲫⲓⲟⲙ ⲛϣⲁⲣⲓ ⲙⲫⲣⲏϯ ⲛⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲕⲁϩⲓ ⲉϥϣⲟⲩⲱⲟⲩ ⲫⲏ ⲉⲧⲁⲩϭⲓⲡⲓⲣⲁ ⲛϧⲏⲧϥ ⲛϫⲉⲛⲓⲣⲉⲙⲛⲭⲏ ⲙⲓ **ⲁⲩⲱⲙⲥ **ⲉϧⲣⲏⲓ**** .",
+      "english": "By faith, they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up.",
+      "source": "19_Hebrews_11",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϩⲱⲃⲥ ⲉϧⲣⲏⲓ ⲉϫⲱⲟⲩ ⲛϫⲉⲡⲓⲙⲱⲟⲩ **ⲁⲩⲱⲙⲥ **ⲉϧⲣⲏⲓ**** ⲉⲡⲉⲧϣⲏⲕ ⲙⲫⲣⲏϯ ⲛⲟⲩⲱⲛⲓ",
+      "english": "He covered them with the sea: they sank to the depth like a stone.",
+      "source": "02_Exodus_15",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 3139,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5492",
+      "label": "ϫⲓⲙⲥⲉ ⲙⲙⲟ⸗",
+      "pos": "V",
+      "gloss": "immerse someone (as a punishment)"
+    },
+    {
+      "target": "C5489",
+      "label": "ϫⲓⲛϭⲓⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5490",
+      "label": "ϫⲓⲛⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5479",
+      "label": "ϫⲓⲛⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "immersion"
+    },
+    {
+      "target": "C5487",
+      "label": "ϭⲓⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "get baptism, be baptized"
+    },
+    {
+      "target": "C5488",
+      "label": "ϭⲓⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5485",
+      "label": "ϯⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "give baptism, baptize"
+    },
+    {
+      "target": "C5491",
+      "label": "ⲙⲥⲉ",
+      "pos": "N",
+      "gloss": "diving, immersion"
+    },
+    {
+      "target": "C5486",
+      "label": "ⲣⲉϥϯⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptist"
+    },
+    {
+      "target": "C5484",
+      "label": "ⲣⲉϥⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "diver"
+    },
+    {
+      "target": "C5476",
+      "label": "ⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "be sunk, be submerged; sink, dip"
+    },
+    {
+      "target": "C5483",
+      "label": "ⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "sinking, dipping, baptism"
+    },
+    {
+      "target": "C5481",
+      "label": "ⲱⲙⲥ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "sink down"
+    },
+    {
+      "target": "C5477",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "sink, dip"
+    },
+    {
+      "target": "C5478",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "weakness of sight"
+    },
+    {
+      "target": "C5480",
+      "label": "ⲱⲙⲥ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "sink down"
+    }
+  ]
+}

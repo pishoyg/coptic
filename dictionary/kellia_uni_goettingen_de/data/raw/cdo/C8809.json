@@ -1,0 +1,704 @@
+{
+  "id": "C8809",
+  "forms": [
+    {
+      "id": "CF21199",
+      "orth": "ⲇⲓⲱⲅⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21200",
+      "orth": "ⲇⲓⲱⲅⲙⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21201",
+      "orth": "ⲇⲓⲱⲅⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2061,
+        "count": 28
+      }
+    },
+    {
+      "id": "CF21202",
+      "orth": "ⲇⲓⲱⲅⲙⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2054,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF21203",
+      "orth": "ⲇⲓⲱⲅⲙⲟⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10565",
+      "bibliography": "DDGLC",
+      "cu_ID": "5486"
+    },
+    {
+      "id": "CS10566",
+      "bibliography": "DDGLC",
+      "cu_ID": "248"
+    },
+    {
+      "id": "CS10567",
+      "bibliography": "DDGLC",
+      "cu_ID": "7555"
+    },
+    {
+      "id": "CS10568",
+      "bibliography": "DDGLC",
+      "cu_ID": "8021"
+    },
+    {
+      "id": "CS10569",
+      "bibliography": "DDGLC",
+      "cu_ID": "15114"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲙⲟⲛⲛⲟⲩⲛⲓ ⲛϧⲏⲧⲟⲩ ⲁⲗⲗⲁ ϩⲁⲛⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ ⲛⲉ ⲓⲧⲁ ⲁⲣⲉϣⲁⲛⲟⲩϩⲟϫϩⲉϫ ϣⲱⲡⲓ ⲓⲉ ⲟⲩ**ⲇⲓⲱⲅⲙⲟⲥ** ⲉⲑⲃⲉⲡⲓⲥⲁϫⲓ ⲥⲁⲧⲟⲧⲟⲩ ϣⲁⲩⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉⲥⲑⲉ .",
+      "english": "They have no root in themselves, but are short-lived. When oppression or persecution arises because of the word, immediately they stumble.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲕⲉⲙⲓⲛⲉ ⲛ**ⲇⲓⲱⲅⲙⲟⲥ** ⲁⲛ ⲧⲉ ⲧⲁⲓ ⲉⲧⲉⲧⲛⲡⲏⲧ ⲛⲥⲁⲛⲣⲱⲙⲉ , ⲙⲁⲗⲓⲥⲧⲁ ⲛⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ",
+      "english": "or isn’t it another kind of persecution when you pursue men, most of all the elders of the church",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲧⲉⲙϭⲓⲧⲟⲩ ⲛⲣ ⲛⲕⲱⲃ ⲛⲥⲟⲡ ϯⲛⲟⲩ ϧⲉⲛⲡⲁⲓⲥⲏⲟⲩ ϩⲁⲛⲏⲓ ⲛⲉⲙϩⲁⲛⲥⲛⲏⲩ ⲛⲉⲙϩⲁⲛⲥⲱⲛⲓ ⲛⲉⲙϩⲁⲛⲙⲁⲩ ⲛⲉⲙϩⲁⲛⲓⲱⲧ ⲛⲉⲙϩⲁⲛϣⲏⲣⲓ ⲛⲉⲙϩⲁⲛⲓⲟϩⲓ ϧⲉⲛⲛⲓ**ⲇⲓⲱⲅⲙⲟⲥ** ⲟⲩⲟϩ ϧⲉⲛⲡⲓⲉⲱⲛ ⲉⲧⲛⲏⲟⲩ ⲟⲩⲱⲛϧ ⲛⲉⲛⲉϩ .",
+      "english": "but he will receive one hundred times more now in this time, houses, brothers, sisters, mothers, children, and land, with persecutions; and in the age to come eternal life.",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲧⲣⲉϥⲙⲟⲩ ⲅⲁⲣ ⲛϭⲓⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲓⲟⲩⲗⲓⲁⲛⲟⲥ ⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲣⲁⲕⲟⲧⲉ ⲁⲡⲉⲑⲣⲟⲛⲟⲥ ⲛⲣⲁⲕⲟⲧⲉ ⲣⲟⲩⲙⲏⲏϣⲉ ⲛϩⲟⲟⲩ ⲉϥⲕⲏ ⲉⲃⲟⲗ ⲛⲁⲧⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲙⲡⲉⲣⲱⲙⲉ ϩⲙⲟⲟⲥ ⲉϫⲙⲡⲉⲑⲣⲟⲛⲟⲥ ⲛⲧⲙⲛⲧⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲃⲟⲗ ϫⲉⲡⲕⲁⲓⲣⲟⲥ ⲡⲉ ⲛⲛⲣⲣⲱⲟⲩ ⲛⲁⲛⲟⲙⲟⲥ · ⲁⲩⲱ ⲛⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ · ⲉⲣⲉⲟⲩⲛⲟϭ ⲛ**ⲇⲓⲱⲅⲙⲟⲥ** ϩⲓϫⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ · ⲁⲩⲱ ⲛⲉⲣⲉⲡⲗⲁⲟⲥ ⲟ ⲛⲧϩⲉ ⲛⲛⲉⲓⲉⲥⲟⲟⲩ ⲉⲧⲉⲙⲛⲧⲟⲩϣⲱⲥ ⲙⲙⲁⲩ ·",
+      "english": "And after Saint Julianus, the Archbishop of Rakote was dead, the throne of Rakote remained empty for many days, and there was no bishop, and no man sat on the archiepiscopal throne, because it was the period during which lawless and idol-worshipping Emperors reigned. A great persecution of the Church was in progress, and the people were like unto the sheep that are without a shepherd.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁⲩⲗⲟⲥ ⲇⲉ ⲛⲁϥϯⲙⲁϯ ⲡⲉ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲉϥϧⲱⲧⲉⲃ ⲁϥϣⲱⲡⲓ ⲇⲉ ⲙⲡⲓⲥⲏⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛϫⲉⲟⲩⲛⲓϣϯ ⲛ**ⲇⲓⲱⲅⲙⲟⲥ** ⲉϫⲉⲛϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲉⲧϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ ⲁⲩⲥⲱⲣ ⲇⲉ ⲉⲃⲟⲗ ⲧⲏⲣⲟⲩ ⲉⲛⲓⲭⲱⲣⲁ ⲛⲧⲉϯⲓⲟⲩⲇⲉⲁ ⲛⲉⲙⲧⲥⲁⲙⲁⲣⲓⲁ ϣⲁⲧⲉⲛ ⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲙⲙⲁⲩⲁⲧⲟⲩ .",
+      "english": "Saul was consenting to his death. A great persecution arose against the assembly which was in Jerusalem in that day. They were all scattered abroad throughout the regions of Judea and Samaria, except for the apostles.",
+      "source": "05_Acts_08",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲙⲛⲛⲟⲩⲛⲉ ⲇⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲁⲗⲗⲁ ϩⲉⲛⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ ⲛⲉ ⲉⲣϣⲁⲛⲟⲩⲑⲗⲓⲯⲓⲥ ⲇⲉ ϣⲱⲡⲉ ⲏ ⲟⲩ**ⲇⲓⲱⲅⲙⲟⲥ** ⲉⲧⲃⲉⲡϣⲁϫⲉ ⲛⲧⲉⲩⲛⲟⲩ ϣⲁⲩⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ .",
+      "english": "They have no root in themselves, but are short-lived. When oppression or persecution arises because of the word, immediately they stumble.",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲱⲛ",
+        2,
+        17.303
+      ],
+      [
+        "ⲗⲩⲥⲧⲣⲟⲓⲥ",
+        1,
+        15.888
+      ],
+      [
+        "ⲧⲁⲙⲉⲧϩⲏⲕⲓ",
+        1,
+        15.888
+      ],
+      [
+        "ⲕⲟⲛⲓⲟⲛ",
+        1,
+        14.888
+      ],
+      [
+        "ϩⲟϫϩⲉϫ",
+        4,
+        14.341
+      ],
+      [
+        "ⲓⲉ",
+        7,
+        14.321
+      ],
+      [
+        "ⲥⲁⲧⲟⲧ",
+        4,
+        14.194
+      ],
+      [
+        "ⲧⲁⲧϩⲟ",
+        1,
+        13.303
+      ],
+      [
+        "ⲛⲉⲙ",
+        9,
+        11.945
+      ],
+      [
+        "ⲓⲟϩⲓ",
+        2,
+        11.822
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        11.702
+      ],
+      [
+        "ϧⲉⲛ",
+        9,
+        11.465
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        4,
+        11.049
+      ],
+      [
+        "ϣⲁϣⲓ",
+        1,
+        10.843
+      ],
+      [
+        "ϩⲩⲡⲟⲙⲟⲛⲏ",
+        1,
+        10.8
+      ],
+      [
+        "ⲁⲛⲁⲅⲕⲏ",
+        1,
+        10.53
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        4,
+        10.477
+      ],
+      [
+        "ϩⲁⲛ",
+        5,
+        10.471
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        4,
+        9.827
+      ],
+      [
+        "ⲡⲓ",
+        6,
+        9.718
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        15.791
+      ],
+      [
+        "ϩⲩⲡⲟⲙⲟⲛⲏ",
+        4,
+        15.076
+      ],
+      [
+        "ⲗⲩⲥⲇⲣⲁ",
+        1,
+        14.206
+      ],
+      [
+        "ⲏ",
+        9,
+        14.181
+      ],
+      [
+        "ⲗⲱϫϩ",
+        2,
+        14.147
+      ],
+      [
+        "ϩⲓⲕⲟⲛⲓⲟⲥ",
+        1,
+        13.469
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        4,
+        12.746
+      ],
+      [
+        "ⲟⲩ",
+        17,
+        12.675
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        3,
+        12.265
+      ],
+      [
+        "ⲡ",
+        16,
+        11.69
+      ],
+      [
+        "ϩⲉⲛ",
+        7,
+        11.689
+      ],
+      [
+        "ⲛ",
+        18,
+        11.511
+      ],
+      [
+        "ⲕⲓⲛⲇⲩⲛⲟⲥ",
+        1,
+        11.147
+      ],
+      [
+        "ⲱⲛϩ",
+        3,
+        10.664
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        2,
+        10.331
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        10.259
+      ],
+      [
+        "ⲥⲱϣⲉ",
+        2,
+        10.15
+      ],
+      [
+        "ⲧⲁ",
+        4,
+        10.143
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        4,
+        9.973
+      ],
+      [
+        "ⲥⲓϣⲉ",
+        1,
+        9.813
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲉ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          5
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          13
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲟϫϩⲉϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_2_post_ϩⲟϫϩⲉϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲕⲁⲩϩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲕⲁⲩϩ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲟⲡ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲉ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛⲉⲙ_2_post_ϩⲟϫϩⲉϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲟϫϩⲉϫ",
+          "ⲛⲉⲧⲉⲛ_2_post_ϩⲟϫϩⲉϫ",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲕⲁⲩϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲕⲁⲩϩ",
+          "ⲛⲁⲓ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲙⲕⲁⲩϩ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲕⲁⲩϩ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲛⲏ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲉⲧ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_2_post_ϣⲟⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲟⲡ",
+          "ⲁ_2_post_ϣⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          16
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          3
+        ],
+        [
+          "ⲏ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲏⲗⲓⲁⲥ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲥⲉⲃⲏⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          "ϩⲁⲅⲓⲟⲥ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ϩⲏⲗⲓⲁⲥ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲛⲉⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          "ⲇⲉ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲙ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲥⲉⲃⲏⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ϩⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲓⲱⲅⲙⲟⲥ",
+          "ⲇⲓⲱⲅⲙⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1822,
+      "count": 28
+    },
+    "B": {
+      "rate": 0.16,
+      "rank": 1767,
+      "count": 14
+    }
+  },
+  "etym": {
+    "grl_ID": "561",
+    "grl_lemma": "διωγμός",
+    "grl_meaning": "chase, pursuit",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 440a"
+  }
+}

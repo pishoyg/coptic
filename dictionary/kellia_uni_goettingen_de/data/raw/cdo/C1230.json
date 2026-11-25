@@ -1,0 +1,115 @@
+{
+  "id": "C1230",
+  "forms": [
+    {
+      "id": "CF3857",
+      "orth": "ⲣⲕⲁⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3858",
+      "orth": "ⲣⲕⲁⲙⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3859",
+      "orth": "ⲣⲕⲙⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3860",
+      "orth": "ⲣⲕⲁⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1425",
+      "bibliography": "CD 110a; ChLCS 17b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1227",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black"
+    },
+    {
+      "target": "C1228",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, female; black thing"
+    },
+    {
+      "target": "C1229",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, male; black thing"
+    },
+    {
+      "target": "C1232",
+      "label": "ⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "the black (land), Egypt"
+    },
+    {
+      "target": "C1231",
+      "label": "ⲕⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1236",
+      "label": "ⲕⲙⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1225",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "V",
+      "gloss": "be, become black"
+    },
+    {
+      "target": "C1226",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "N",
+      "gloss": "blackness"
+    },
+    {
+      "target": "C1234",
+      "label": "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian nationality, speech"
+    },
+    {
+      "target": "C1233",
+      "label": "ⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian"
+    },
+    {
+      "target": "C1235",
+      "label": "ⲭⲏⲙⲓ",
+      "pos": "N",
+      "gloss": "brazier, hearth"
+    }
+  ]
+}

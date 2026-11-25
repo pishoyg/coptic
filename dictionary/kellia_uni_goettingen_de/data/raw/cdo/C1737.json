@@ -1,0 +1,134 @@
+{
+  "id": "C1737",
+  "forms": [
+    {
+      "id": "CF5031",
+      "orth": "ⲗⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13243,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2015",
+      "bibliography": "CD 149a; KoptHWb 82; ChLCS 22b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲡⲣⲱⲙⲉ ⲛⲉⲃⲓⲏⲛ ⲛⲧⲕⲟⲩ ⲧⲉⲓⲙⲓⲛⲉ · ϩⲉⲛⲟⲩ ⲛⲉ ⲛⲉⲓ**ⲗⲉϩ** ⲙⲛⲛⲉⲓⲣⲟⲟⲩϣ ·",
+      "english": "O wretched man, how and in what way art thou benefited by all these cares and all these anxieties?",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲓ",
+        2,
+        13.467
+      ],
+      [
+        "ⲣⲟⲟⲩϣ",
+        1,
+        13.051
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲓ_1_pre_ⲗⲉϩ",
+          1
+        ],
+        [
+          "ⲗⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲣⲟⲟⲩϣ_1_post_ⲗⲉϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲓ_1_pre_ⲗⲉϩ",
+          "ⲗⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲗⲉϩ_0_node",
+          "ⲙⲛ_2_post_ⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲟⲟⲩϣ",
+          "ⲛⲉⲓ_2_post_ⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲣⲟⲟⲩϣ",
+          "ⲣⲟⲟⲩϣ_1_post_ⲗⲉϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12834,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "85420",
+    "egy_lemma": "nh.w",
+    "demo_num": "d3680",
+    "demo_lemma": "lh",
+    "english": "loss; lack",
+    "german": "Verlust; Verminderung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/85420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3680"
+  }
+}

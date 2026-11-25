@@ -1,0 +1,150 @@
+{
+  "id": "C3",
+  "forms": [
+    {
+      "id": "CF17",
+      "orth": "ⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 304.88,
+        "rank": 5,
+        "count": 48102
+      }
+    },
+    {
+      "id": "CF18",
+      "orth": "ⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 315.04,
+        "rank": 4,
+        "count": 26719
+      }
+    },
+    {
+      "id": "CF19",
+      "orth": "ⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20",
+      "orth": "ⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21",
+      "orth": "ⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF22",
+      "orth": "ⲁ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF23",
+      "orth": "ⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24",
+      "orth": "ⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25",
+      "orth": "ⲉ-",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "NEG",
+    "subc": "Imperativpräfix ⲁ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3",
+      "bibliography": "CD 1a; CED 1; KoptHWb 1; DELC 2-3"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁϥ **ⲁ**ⲩⲫⲱⲧ ⲧⲏⲣⲟⲩ",
+      "english": "They all left him, and fled.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁϥϣⲁϫⲉ ⲛⲙⲙⲁⲩ ϫⲉ ⲙⲡⲣⲣϩⲟⲧⲉ ⲉⲧⲉⲧⲛⲕⲱⲧⲉ ⲛⲥⲁⲓⲏⲥⲟⲩⲥ ⲡⲛⲁⲍⲁⲣⲏⲛⲟⲥ ⲡⲉⲛⲧⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ **ⲁ**ϥⲧⲱⲟⲩⲛϥ ⲛϥϩⲙⲡⲉⲓⲙⲁ ⲁⲛ . ⲁⲛⲁⲩ ⲉⲡⲙⲁ ⲛⲧⲁⲩⲕⲁⲁϥ ⲛϩⲏⲧϥ",
+      "english": "He said to them, &apos;Don&apos;t be amazed. You seek Jesus, the Nazarene, who has been crucified. He has risen. He is not here. Behold, the place where they laid him!",
+      "source": "Mark Chapter 16",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ **ⲁ**ϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ϫⲉⲁⲛⲟⲕ ⲡⲉ ⲓⲥⲁⲁⲕ .",
+      "english": "Then Isaac said, ‘I am Isaac.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ **ⲁ**ⲩⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟϥ ⲛϭⲓⲛⲉⲥⲛⲏⲩ ⲉⲩϫⲱ ⲙⲙⲟⲥ · ϫⲉⲁϫⲓⲥ ⲛⲁⲛ ⲁⲡⲁ ϫⲉⲉⲧⲃⲉ ⲟⲩ ⲁⲛⲟⲛ ⲧⲛⲣⲓⲙⲉ ⲙⲙⲁⲧⲉ ⲁⲩⲱ ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲟⲛ ⲕⲥⲱⲃⲉ ·",
+      "english": "And immediately, the brothers exhorted him, saying, 'Tell us, Abba, why while we are crying greatly, you are laughing?'",
+      "source": "Apophthegmata Patrum Sahidic 093: Anonymous Nau 279",
+      "urn": "urn:cts:copticLit:ap.93.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲫⲛⲁⲩ ⲇⲉ ⲛⲁϫⲡⲅ ⲡⲉ ⲟⲩⲟϩ **ⲁ**ⲩⲁϣϥ",
+      "english": "It was the third hour, and they crucified him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁ**ⲩⲥⲟⲛ ϫⲛⲉⲁⲡⲁ ϫⲓϫⲱⲓ",
+      "english": "A brother asked Apa Sisoes,",
+      "source": "Apophthegmata Patrum Sahidic 120: Sisoes 13",
+      "urn": "urn:cts:copticLit:ap.120.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C13001",
+      "label": "ϩⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C1",
+      "label": "ⲁ",
+      "pos": "NUM",
+      "gloss": "1"
+    },
+    {
+      "target": "C2",
+      "label": "ⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C4",
+      "label": "ⲁ-",
+      "pos": "PTC",
+      "gloss": "about"
+    },
+    {
+      "target": "C5",
+      "label": "ⲁ-",
+      "pos": "N",
+      "gloss": "house, region, environment"
+    }
+  ]
+}

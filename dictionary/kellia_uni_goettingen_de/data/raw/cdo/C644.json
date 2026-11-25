@@ -1,0 +1,68 @@
+{
+  "id": "C644",
+  "forms": [
+    {
+      "id": "CF2437",
+      "orth": "ϯ ⲉⲕⲓⲃⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2438",
+      "orth": "ϯ ⲉⲕⲓⲃⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS780",
+      "bibliography": "CD 54a; ChLCS 11a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "ⲟⲩⲉⲙϭⲓ",
+      "type": "cf",
+      "label": "säugen (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C645",
+      "label": "ϫⲓ ⲉⲕⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "take breast, be suckled"
+    },
+    {
+      "target": "C641",
+      "label": "ⲉⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast, nipple"
+    },
+    {
+      "target": "C642",
+      "label": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast"
+    },
+    {
+      "target": "C643",
+      "label": "ⲡⲉⲣⲕⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "breast"
+    }
+  ]
+}

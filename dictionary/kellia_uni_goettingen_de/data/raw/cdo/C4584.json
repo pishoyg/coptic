@@ -1,0 +1,87 @@
+{
+  "id": "C4584",
+  "forms": [
+    {
+      "id": "CF31816",
+      "orth": "ⲥⲧⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4963,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF31815",
+      "orth": "ⲧⲥⲧⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2666,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5174",
+      "bibliography": "CD 437a; ChLCS 61b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6399,
+      "count": 3
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3787",
+      "type": "cf",
+      "label": "return, repeat"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4586",
+      "label": "ϫⲓⲛⲧⲁⲥⲑⲟ",
+      "pos": "N",
+      "gloss": "return"
+    },
+    {
+      "target": "C4585",
+      "label": "ⲙⲁ ⲛⲥⲑⲟ",
+      "pos": "N",
+      "gloss": "sanctuary, abode"
+    },
+    {
+      "target": "C4581",
+      "label": "ⲥⲧⲟ",
+      "pos": "V",
+      "gloss": "bring back, pay back, repeat; return"
+    },
+    {
+      "target": "C4582",
+      "label": "ⲥⲧⲟ",
+      "pos": "N",
+      "gloss": "sending back"
+    },
+    {
+      "target": "C4583",
+      "label": "ⲥⲧⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "reject, return"
+    }
+  ]
+}

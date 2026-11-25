@@ -1,0 +1,117 @@
+{
+  "id": "C1306",
+  "forms": [
+    {
+      "id": "CF4018",
+      "orth": "ϩⲓⲭⲣⲱⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11351,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1512",
+      "bibliography": "CD 116a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲉⲟⲩϩⲃⲱⲛ ϩⲓϫⲉⲛⲡⲕⲁϩⲓ ⲧⲁϫⲣⲟ ⲛⲓⲃⲉⲛ ⲛⲧⲉⲡⲱⲓⲕ ⲁϥϧⲉⲙϧⲱⲙϥ ⲁϥⲟⲩⲱⲣⲡ ⲛⲟⲩⲣⲱⲙⲓ ϧⲁϫⲱⲟⲩ ⲁϥϯ ⲛⲓⲱⲥⲏⲫ ⲉⲃⲟⲗ ϧⲁⲃⲱⲕ ⲁⲩⲑⲉⲃⲓⲟ ⲛⲛⲉϥϭⲁⲗⲁⲩϫ ϧⲉⲛϩⲁⲛⲡⲉⲇⲏⲥ ⲟⲩⲃⲉⲛⲓⲡⲓ ⲁⲥⲥⲉⲛϥ ⲛϫⲉⲧⲉϥⲩⲭⲏ ϣⲁⲧⲉϥⲓ ⲛϫⲉⲡⲉϥⲥⲁϫⲓ ⲟⲩⲟϩ ⲡⲥⲁϫⲓ ⲙⲡϭⲟⲓⲥ ⲁϥ**ϩⲓⲭⲣⲱⲙ** ⲉⲣⲟϥ",
+      "english": "which he established as a covenant to Abraam, and he remembered his oath to Isaac.",
+      "source": "19_Psalmi_104",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:104",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        3,
+        9.179
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲁ",
+        2,
+        7.989
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        7.897
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10796,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1307",
+      "label": "ϭⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "take fire"
+    },
+    {
+      "target": "C1305",
+      "label": "ϯⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1304",
+      "label": "ⲉⲣⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "be on fire, burn"
+    },
+    {
+      "target": "C1302",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "fire"
+    },
+    {
+      "target": "C1303",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "of fire, fiery"
+    }
+  ]
+}

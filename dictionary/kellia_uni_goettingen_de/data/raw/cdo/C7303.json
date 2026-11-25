@@ -1,0 +1,127 @@
+{
+  "id": "C7303",
+  "forms": [
+    {
+      "id": "CF16665",
+      "orth": "ϭⲓⲛϫⲡⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13469,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8068",
+      "bibliography": "CD 780a"
+    },
+    {
+      "id": "CS8069",
+      "bibliography": "CD 780a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲗⲱⲥ ⲧⲉⲛⲧ ⲁⲥⲧⲟⲩϫⲟ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ · ϩⲓⲧⲛⲧⲉⲥ**ϭⲓⲛϫⲡⲟ** ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲗⲱⲥ",
+        1,
+        12.667
+      ],
+      [
+        "ⲧⲉⲥ",
+        1,
+        11.529
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        1,
+        11.065
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲥ_1_pre_ϭⲓⲛϫⲡⲟ",
+          1
+        ],
+        [
+          "ϭⲓⲛϫⲡⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲥ_1_pre_ϭⲓⲛϫⲡⲟ",
+          "ϭⲓⲛϫⲡⲟ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13064,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7299",
+      "label": "ϫⲡⲟ",
+      "pos": "V",
+      "gloss": "beget, bring forth, father, give birth; acquire"
+    },
+    {
+      "target": "C7300",
+      "label": "ϫⲡⲟ",
+      "pos": "N",
+      "gloss": "birth, fathering; product, creature, progeny; possession, gain"
+    },
+    {
+      "target": "C7301",
+      "label": "ⲁⲧϫⲡⲟϥ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C7302",
+      "label": "ⲣⲉϥϫⲡⲟ",
+      "pos": "N",
+      "gloss": "begetter, maker"
+    }
+  ]
+}

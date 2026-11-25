@@ -1,0 +1,109 @@
+{
+  "id": "C4076",
+  "forms": [
+    {
+      "id": "CF10095",
+      "orth": "ⲁⲛⲑⲃⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7073,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "m.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS4630",
+      "bibliography": "CD 399a; KoptHWb 220"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲥϧⲏⲧϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲁϥⲧⲁⲕⲟⲥ ϧⲉⲛⲡⲉϥⲟⲩⲱϣ ⲉϥⲙⲉⲩⲓ ϫⲉϩⲓⲧⲉⲛⲧⲁⲓⲁⲓⲧⲓⲁ ⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲁⲭⲁϥ ⲉⲃⲟⲗ ⲉϣⲧⲉⲙⲁⲙⲟⲛⲓ ⲙⲙⲟϥ ⲉⲑⲃⲉϫⲉⲉⲣⲁⲅⲁⲡⲁⲛ ⲙⲡⲓⲱⲣϥ ⲉⲁϥⲧⲉⲛⲑⲱⲛϥ ⲉⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲇⲁⲩⲓⲇ ⲉⲧⲁϥⲁⲓϥ ⲛⲥⲱϥ ⲙⲡⲉⲙⲑⲟ ⲛⲁⲭⲟⲩⲥ ⲡⲟⲩⲣⲟ ⲛⲅⲉⲑ ϧⲉⲛⲡϫⲓⲛⲑⲣⲟⲩⲧⲁⲙⲟϥ ⲛϫⲉⲛⲉϥⲁⲗⲱⲟⲩⲓ ϫⲉⲫⲁⲓ ⲡⲉ ⲇⲁⲩⲓⲇ ⲡⲟⲩⲣⲟ ⲫⲏ ⲉⲧⲁⲩⲉⲣⲭⲟⲣⲉⲩⲉⲓⲛ ϧⲁϫⲱϥ ⲛϫⲉⲛⲓϧⲉⲗϣⲁⲓⲣⲓ ⲛⲧⲉⲡⲓⲥⲗ ϫⲉⲁⲥⲁⲟⲩⲗ ϣⲁⲓⲣⲓ ϧⲉⲛϩⲁⲛⲁⲛϣⲟ ⲇⲁⲩⲓⲇ ϧⲉⲛϩⲁⲛ**ⲁⲛⲑⲃⲁ** .",
+      "english": "so he wrote it badly of his own free will, thinking that on account of it the patriarch would send him away and not take him, because he loved the solitary and quiet life, following the example of the prophet David when he withdrew from the presence of Achish king of Gath, and the servants said to him, “It is King David, it is the one of whom the virgins of Israel sang in their choirs, saying: Saul has killed thousands, and David tens of thousands. ”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲛϣⲟ",
+        1,
+        17.11
+      ],
+      [
+        "ⲇⲁⲩⲓⲇ",
+        1,
+        11.995
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6546,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4",
+      "type": "cf",
+      "label": "about"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4077",
+      "label": "ϭⲓⲥⲧⲃⲁ",
+      "pos": "NUM",
+      "gloss": "half ten thousand"
+    },
+    {
+      "target": "C4075",
+      "label": "ⲧⲃⲁ",
+      "pos": "NUM",
+      "gloss": "ten thousand"
+    }
+  ]
+}

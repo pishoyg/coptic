@@ -1,0 +1,478 @@
+{
+  "id": "C11100",
+  "forms": [
+    {
+      "id": "CF30626",
+      "orth": "ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF30628",
+      "orth": "ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3096,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF30627",
+      "orth": "ϩⲉⲣⲙⲉⲛⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9157,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF30629",
+      "orth": "ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30630",
+      "orth": "ϩⲏⲣⲙⲏⲛⲉⲩ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲉⲣⲙⲉⲛⲉⲩⲓⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2742,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15528",
+      "bibliography": "DDGLC",
+      "cu_ID": "1896"
+    },
+    {
+      "id": "CS15529",
+      "bibliography": "DDGLC",
+      "cu_ID": "9756"
+    },
+    {
+      "id": "CS15530",
+      "bibliography": "DDGLC",
+      "cu_ID": "958"
+    },
+    {
+      "id": "CS15531",
+      "bibliography": "DDGLC",
+      "cu_ID": "9757"
+    },
+    {
+      "id": "CS15532",
+      "bibliography": "DDGLC",
+      "cu_ID": "5378"
+    },
+    {
+      "id": "CS15533",
+      "bibliography": "DDGLC",
+      "cu_ID": "3261"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲟⲩⲟⲛⲛⲧⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛϩⲁⲛϩⲙⲟⲧ ⲛⲧⲁⲗϭⲟ ⲙⲏ ⲥⲉⲛⲁⲥⲁϫⲓ ⲧⲏⲣⲟⲩ ϧⲉⲛϩⲁⲛⲗⲁⲥ ⲙⲏ ⲥⲉⲛⲁ**ⲉⲣⲙⲉⲛⲉⲩⲓⲛ** ⲧⲏⲣⲟⲩ .",
+      "english": "Do all have gifts of healings? Do all speak with various languages? Do all interpret?",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲉⲩⲉϣ**ϩⲉⲣⲙⲏⲛⲉⲩⲉ** ⲙⲙⲟⲥ ϩⲛⲗⲁⲁⲩ ⲙⲙⲁ ·",
+      "english": "and in no place whatsoever can any interpret it.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲧⲉ ⲡⲉⲧⲥⲁϫⲓ ϧⲉⲛⲫⲗⲁⲥ ⲕⲁⲧⲁ ⲃ ⲓⲉ ⲡⲓϩⲟⲩⲟ ⲅ ⲟⲩⲟϩ ⲟⲩⲙⲉⲣⲟⲥ ⲉⲫⲟⲩⲁⲓ ⲟⲩⲟϩ ⲙⲁⲣⲉⲟⲩⲁⲓ **ⲉⲣⲙⲉⲛⲉⲩⲓⲛ** .",
+      "english": "If any man speaks in another language, let it be two, or at the most three, and in turn; and let one interpret.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲛⲧϥ ⲉϩⲣⲁⲓ ⲉⲡⲙⲁ ϫⲉⲅⲟⲗⲅⲟⲑⲁ ⲡⲁⲓ ⲉϣⲁⲩ**ϩⲉⲣⲙⲏⲛⲉⲩⲉ** ⲙⲙⲟϥ ϫⲉⲡⲧⲟⲡⲟⲥ ⲙⲡⲉⲕⲣⲁⲛⲓⲟⲛ",
+      "english": "They brought him to the place called Golgotha, which is, being interpreted, &apos;The place of a skull.&apos;",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲟⲩⲉϣ ⲑⲏⲛⲟⲩ ⲇⲉ ⲧⲏⲣⲟⲩ ⲉⲣⲉⲧⲉⲛⲥⲁϫⲓ ϧⲉⲛϩⲁⲛⲗⲁⲥ ⲙⲁⲗⲗⲟⲛ ⲇⲉ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲉⲣⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ ⲛⲁⲁ ⲡⲉⲧⲉⲣⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ ⲇⲉ ⲉϩⲟⲧⲉ ⲡⲉⲧⲥⲁϫⲓ ϧⲉⲛⲫⲗⲁⲥ ⲥⲁⲃⲟⲗ ⲓⲙⲏⲧⲓ ⲛⲧⲉϥ**ⲉⲣⲙⲉⲛⲉⲩⲓⲛ** ϩⲓⲛⲁ ⲛⲧⲉϯⲉⲕⲕⲗⲏⲥⲓⲁ ϭⲓ ⲛⲟⲩⲕⲱⲧ .",
+      "english": "Now I desire to have you all speak with other languages, but rather that you would prophesy. For he is greater who prophesies than he who speaks with other languages, unless he interprets, that the assembly may be built up.",
+      "source": "07_I Corinthians_14",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲟⲩⲛⲧⲁⲩ ⲧⲏⲣⲟⲩ ⲛϩⲉⲛϩⲙⲟⲧ ⲛⲧⲁⲗϭⲟ . ⲙⲏ ⲉⲩⲛⲁϣⲁϫⲉ ⲧⲏⲣⲟⲩ ϩⲛⲛⲁⲥⲡⲉ . ⲙⲏ ⲉⲩⲛⲁ**ϩⲉⲣⲙⲏⲛⲉⲩⲉ** ⲧⲏⲣⲟⲩ .",
+      "english": "Do all have gifts of healings? Do all speak with various languages? Do all interpret?",
+      "source": "46_1 Corinthians_12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗⲩⲥⲓⲙⲁⲭⲟⲥ",
+        1,
+        16.898
+      ],
+      [
+        "ⲧⲟⲙⲉ",
+        1,
+        15.898
+      ],
+      [
+        "ⲩ",
+        11,
+        12.488
+      ],
+      [
+        "ⲕⲱϩ",
+        2,
+        12.211
+      ],
+      [
+        "ⲙⲙⲟ",
+        7,
+        11.702
+      ],
+      [
+        "ϣⲁ",
+        5,
+        11.611
+      ],
+      [
+        "ⲟⲩⲱ",
+        2,
+        11.386
+      ],
+      [
+        "ⲡⲟⲩ",
+        2,
+        10.929
+      ],
+      [
+        "ⲡⲁⲓ",
+        4,
+        10.877
+      ],
+      [
+        "ϫⲉ",
+        7,
+        10.868
+      ],
+      [
+        "ⲉ",
+        9,
+        10.626
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        10.404
+      ],
+      [
+        "ϥ",
+        9,
+        10.331
+      ],
+      [
+        "ⲥ",
+        6,
+        10.329
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        9.942
+      ],
+      [
+        "ⲣⲁⲛ",
+        2,
+        9.292
+      ],
+      [
+        "ⲉϣ",
+        1,
+        9.058
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        8.055
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        7.988
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          10
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          12
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          5
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ϫⲉ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          5
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉϣ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉⲕϣⲁⲛ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          3
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲣⲁⲛ",
+          2
+        ],
+        [
+          "ⲣⲁⲛ_2_post_ⲙ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲏ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲛⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          6
+        ],
+        [
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϫⲉ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϣⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲉϣ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉϣ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲇⲉ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϣⲁ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲉⲕϣⲁⲛ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉⲕϣⲁⲛ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          "ⲙⲉⲛ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲙ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲡⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲉⲣⲙⲏⲛⲉⲩⲉ_0_node",
+          "ⲙ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          "ⲡⲟⲩ_3_post_ⲣⲁⲛ",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲣⲁⲛ",
+          "ⲣⲁⲛ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲣⲁⲛ_2_post_ⲙ",
+          "ϫⲉ_1_post_ϩⲉⲣⲙⲏⲛⲉⲩⲉ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2746,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "799",
+    "grl_lemma": "ἑρμηνεύω",
+    "grl_meaning": "to interpret, translate",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 690b; Preisigke 1:600"
+  }
+}

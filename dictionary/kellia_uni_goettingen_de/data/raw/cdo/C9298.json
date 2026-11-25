@@ -1,0 +1,366 @@
+{
+  "id": "C9298",
+  "forms": [
+    {
+      "id": "CF23326",
+      "orth": "ⲕⲁⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23327",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.41,
+        "rank": 572,
+        "count": 223
+      }
+    },
+    {
+      "id": "CF23328",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23329",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.62,
+        "rank": 964,
+        "count": 53
+      }
+    },
+    {
+      "id": "CF23330",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23331",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23332",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23333",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF23334",
+      "orth": "ⲕⲁⲛ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF23335",
+      "orth": "ⲕⲁⲛⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17169,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS11647",
+      "bibliography": "DDGLC",
+      "cu_ID": "235"
+    },
+    {
+      "id": "CS11648",
+      "bibliography": "DDGLC",
+      "cu_ID": "11401"
+    },
+    {
+      "id": "CS11649",
+      "bibliography": "DDGLC",
+      "cu_ID": "3175"
+    },
+    {
+      "id": "CS11650",
+      "bibliography": "DDGLC",
+      "cu_ID": "963"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲕⲁⲛ** ⲉϣⲱⲡ ⲁⲕϣⲁⲛϭⲓ ⲙⲡⲉⲕⲉⲣⲛⲟⲃⲓ ⲟⲩⲟϩ ⲉϣⲱⲡ ⲁⲥϣⲁⲛϭⲓ ⲛϫⲉϯⲡⲁⲣⲑⲉⲛⲟⲥ ⲙⲡⲁⲥⲉⲣⲛⲟⲃⲓ ⲉⲩⲉϭⲓ ⲇⲉ ⲛⲟⲩϩⲟϫϩⲉϫ ⲛⲧⲟⲩⲥⲁⲣⲝ ⲛϫⲉⲛⲁⲓ ⲙⲡⲁⲓⲣⲏϯ ⲁⲛⲟⲕ ⲇⲉ ϯϯⲁⲥⲟ ⲉⲣⲱⲧⲉⲛ .",
+      "english": "But if you marry, you have not sinned. If a virgin marries, she has not sinned. Yet such will have oppression in the flesh, and I want to spare you.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲕⲁⲛ** ⲉⲕϣⲁⲛϫⲟⲟϥ ⲛⲧⲛⲧⲙⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ ⲉⲃⲟⲗ",
+      "english": "Even if you tell it and we don't understand,",
+      "source": "Apophthegmata Patrum Sahidic 138: Unidentified",
+      "urn": "urn:cts:copticLit:ap.138.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲛⲁϥⲥⲁϫⲓ ϧⲉⲛⲟⲩⲙⲉⲧϩⲟⲩⲟ ϫⲉ**ⲕⲁⲛ** ⲁⲥϣⲁⲛⲫⲟϩ ⲛⲧⲁⲙⲟⲩ ⲛⲉⲙⲁⲕ ⲛⲛⲁϫⲟⲗⲕ ⲉⲃⲟⲗ ⲡⲁⲓⲣⲏϯ ⲇⲉ ⲟⲛ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "But he spoke all the more, 'If I must die with you, I will not deny you.' They all said the same thing.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲕⲁⲛ** ⲉⲩϣⲁⲛⲱⲛϩ ·",
+      "english": "or whether they live,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲙⲁ ⲉϣⲁϥϣⲉ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ ⲉⲛⲓϯⲙⲓ ⲓⲉ ⲛⲓⲃⲁⲕⲓ ⲓⲉ ⲛⲓⲓⲟϩⲓ ⲛⲁⲩⲭⲱ ⲛⲛⲏ ⲉⲧϣⲱⲛⲓ ϩⲓⲛⲓⲁⲅⲟⲣⲁ ⲟⲩⲟϩ ⲛⲁⲩϯϩⲟ ⲉⲣⲟϥ ϩⲓⲛⲁ **ⲕⲁⲛ** ⲛⲧⲟⲩϭⲓ ⲛⲉⲙⲡⲓϣⲧⲁϯ ⲛⲧⲉⲛⲉϥϩⲃⲱⲥ ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉϣⲁⲩϭⲓ ⲛⲉⲙⲁϥ ϣⲁⲩⲟⲩϫⲁⲓ .",
+      "english": "Wherever he entered, into villages, or into cities, or into the country, they laid the sick in the marketplaces, and begged him that they might touch just the fringe of his garment; and as many as touched him were made well.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ **ⲕⲁⲛ** ⲉⲛϣⲁⲛⲉⲓⲣⲉ ⲛⲟⲩⲙⲛⲧϣⲁϥⲧⲉ ϩⲛⲟⲩⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ · ϩⲛⲟⲩϫⲡⲓⲟ ⲛⲧⲛϫⲡⲓⲟ ⲛⲛⲉⲛⲉⲣⲏⲩ ⲉⲧⲣⲉⲛⲙⲉⲧⲁⲛⲟⲉⲓ ·",
+      "english": "our companions so that we repent,",
+      "source": "Abraham Our Father YA 551-54",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:42-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓⲛⲛⲁⲩ",
+        4,
+        16.508
+      ],
+      [
+        "ⲁⲥϣⲁⲛ",
+        6,
+        16.05
+      ],
+      [
+        "ⲉϣⲱⲡ",
+        9,
+        15.631
+      ],
+      [
+        "ⲁⲕϣⲁⲛ",
+        6,
+        14.889
+      ],
+      [
+        "ⲉϣⲗⲏⲗⲟⲩⲓ",
+        2,
+        14.645
+      ],
+      [
+        "ⲁⲓϣⲁⲛ",
+        6,
+        14.593
+      ],
+      [
+        "ⲁⲩϣⲁⲛ",
+        6,
+        14.532
+      ],
+      [
+        "ⲙⲉⲧϣⲟⲃⲓ",
+        2,
+        14.16
+      ],
+      [
+        "ϫⲉ",
+        21,
+        13.586
+      ],
+      [
+        "ⲟⲃϣ",
+        2,
+        13.16
+      ],
+      [
+        "ϭⲓ",
+        9,
+        13.049
+      ],
+      [
+        "ϭ",
+        1,
+        12.967
+      ],
+      [
+        "ⲕⲁⲙ",
+        1,
+        12.967
+      ],
+      [
+        "ⲓ",
+        16,
+        12.848
+      ],
+      [
+        "ⲙⲉⲧϩⲟⲩⲟ",
+        2,
+        12.797
+      ],
+      [
+        "ⲟⲩ",
+        24,
+        12.781
+      ],
+      [
+        "ⲣⲏⲧ",
+        2,
+        12.719
+      ],
+      [
+        "ⲫⲟϩ",
+        3,
+        12.474
+      ],
+      [
+        "ϥ",
+        23,
+        12.267
+      ],
+      [
+        "ⲁϥϣⲁⲛ",
+        4,
+        11.906
+      ]
+    ],
+    "S": [
+      [
+        "ⲉ",
+        174,
+        19.345
+      ],
+      [
+        "ⲉϣϫⲉ",
+        41,
+        19.168
+      ],
+      [
+        "ⲕ",
+        88,
+        18.43
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        25,
+        18.193
+      ],
+      [
+        "ⲟⲩ",
+        114,
+        17.918
+      ],
+      [
+        "ⲁⲡⲟⲧⲁⲕϯⲕⲟⲥ",
+        3,
+        17.552
+      ],
+      [
+        "ⲛ",
+        140,
+        17.396
+      ],
+      [
+        "ⲛⲧⲉⲧⲉⲛ",
+        3,
+        16.552
+      ],
+      [
+        "ⲕⲁⲛ",
+        14,
+        16.418
+      ],
+      [
+        "ⲉⲕϣⲁⲛ",
+        14,
+        15.608
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        18,
+        15.603
+      ],
+      [
+        "ϥ",
+        76,
+        15.465
+      ],
+      [
+        "ⲥⲱ",
+        12,
+        15.101
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        14,
+        14.913
+      ],
+      [
+        "ⲩ",
+        45,
+        14.484
+      ],
+      [
+        "ⲁⲛⲅ",
+        10,
+        14.401
+      ],
+      [
+        "ⲛⲧⲕ",
+        9,
+        14.296
+      ],
+      [
+        "ⲁ",
+        51,
+        14.261
+      ],
+      [
+        "ϩⲛ",
+        35,
+        14.066
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        9,
+        13.458
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.41,
+      "rank": 504,
+      "count": 223
+    },
+    "B": {
+      "rate": 0.62,
+      "rank": 852,
+      "count": 53
+    }
+  },
+  "etym": {
+    "grl_ID": "1026",
+    "grl_lemma": "κἄν",
+    "grl_meaning": "at least, even, but",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 873b"
+  }
+}

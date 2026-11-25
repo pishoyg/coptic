@@ -1,0 +1,131 @@
+{
+  "id": "C6766",
+  "forms": [
+    {
+      "id": "CF32041",
+      "orth": "ϩⲟⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18272,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32040",
+      "orth": "ϩⲟⲉⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6871,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲟⲓⲗⲉ",
+      "dialect": "S",
+      "id": "2242.1"
+    },
+    {
+      "orth": "ϩⲟⲉⲓⲗⲉ",
+      "dialect": "S",
+      "id": "2242.2"
+    },
+    {
+      "orth": "ϩⲱⲓⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2674,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲁⲓⲣⲉ",
+      "dialect": "A",
+      "id": "2242.4"
+    },
+    {
+      "orth": "ϩⲁⲓⲣⲉ",
+      "dialect": "A",
+      "id": "2242.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7480",
+      "bibliography": "CD 697b; CED 291; KoptHWb 359; DELC 292b; ChLCS 89a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲧ",
+        1,
+        12.249
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.526
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲓⲣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "egy_num": "108410",
+    "egy_lemma": "ḥry.t",
+    "demo_num": "d4204",
+    "demo_lemma": "ḥꜥjr.t",
+    "english": "dung",
+    "german": "Dung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/108410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4204"
+  }
+}

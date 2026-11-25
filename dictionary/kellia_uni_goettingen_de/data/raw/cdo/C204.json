@@ -1,0 +1,154 @@
+{
+  "id": "C204",
+  "forms": [
+    {
+      "id": "CF808",
+      "orth": "ⲁⲣⲏϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1513,
+        "count": 49
+      }
+    },
+    {
+      "id": "CF809",
+      "orth": "ⲁⲣⲏϫ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF810",
+      "orth": "ⲁⲣⲏϫ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF811",
+      "orth": "ⲁⲩⲣⲏϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1573,
+        "count": 23
+      }
+    },
+    {
+      "id": "CF812",
+      "orth": "ⲁⲗⲟϫ⸗",
+      "dialect": "F"
+    },
+    {
+      "id": "CF813",
+      "orth": "ⲁⲣⲱϫ⸗",
+      "dialect": "F"
+    },
+    {
+      "id": "CF814",
+      "orth": "ⲁⲣⲟⲩϫ⸗",
+      "dialect": "M"
+    },
+    {
+      "orth": "ⲁⲣⲏⲏϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16879,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲁⲗⲟϫ⸗",
+      "dialect": "S",
+      "id": "498.2"
+    },
+    {
+      "orth": "ⲁⲣⲏⲏϫ⸗",
+      "dialect": "A",
+      "id": "498.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "immer mit Suffixpronomen",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS229",
+      "bibliography": "CD 16b; CED 12; KoptHWb 12, 488; DELC 16; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ϥⲛⲁⲟⲩⲱⲣⲡ ⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲟⲩⲟϩ ϥⲛⲁⲑⲱⲟⲩϯ ⲛⲛⲉϥⲥⲱⲧⲡ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓϥⲧⲟⲩ ⲑⲏⲟⲩ ⲓⲥϫⲉⲛⲁⲩⲣⲏϫϥ ⲙⲡⲕⲁϩⲓ ϣⲁ**ⲁⲩⲣⲏϫ**ⲥ ⲛⲧⲫⲉ .",
+      "english": "Then he will send out his angels, and will gather together his chosen ones from the four winds, from the ends of the earth to the ends of the sky.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲛⲛⲉⲧⲟⲩϫⲓ ⲙⲙⲟⲟⲩ ⲛϭⲟⲛⲥ ϫⲓⲛϫⲱϥ ⲙⲡⲕⲁϩ ϣⲁ**ⲁⲣⲏϫ**ⲥ ⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ,",
+      "english": "From those who did violence to them, from the head of the land to the end of the world,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲛⲁϣⲱⲡⲓ ⲉϥⲟⲓ ⲛⲛⲓϣϯ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲉⲓⲥ ⲟⲩⲟϩ ⲛⲉϥⲥⲁϫⲓ ⲛⲁⲫⲟϩ ϣⲁ**ⲁⲩⲣⲏϫ**ⲥ ⲛϯⲟⲓⲕⲟⲩⲙⲉⲛⲏ .",
+      "english": "he will be great before God, and his words will reach the limits of the inhabited earth.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛⲥⲟⲟⲩⲛ ⲇⲉ ⲟⲛ ⲙⲡⲁⲓ ϫⲉⲡⲁⲅⲁⲑⲟⲥ ⲡⲛⲟⲩⲧⲉ ⲛϣⲁⲛϩⲧⲏϥ ϥϥⲓ ⲉϩⲣⲁⲓ ϩⲁⲣⲟⲛ ⲧⲏⲣⲛ ϫⲓⲛϫⲱϥ ⲙⲡⲕⲁϩ · ϣⲁ**ⲁⲣⲏϫ**ⲥ ⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+      "english": "And also we know that the good and compassionate God supports all of us from the start of the earth to the ends of the inhabited world,",
+      "source": "Abraham Our Father: YA 535-40",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:21-27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲉⲉⲣϭⲟⲓⲥ ⲓⲥϫⲉⲛ ⲓⲟⲙ ϣⲁⲓⲟⲙ: ⲛⲉⲙⲓⲥϫⲉⲛ ⲫⲓⲁⲣⲟ ϣⲁ**ⲁⲩⲣⲏϫ**ⲥ ⲛϯⲟⲓⲕⲟⲩⲙⲉⲛⲏ .",
+      "english": "In his days shall righteousness spring up; and abundance of peace till the moon be removed.",
+      "source": "19_Psalmi_71",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:71",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲁϫⲟⲟⲥ ⲙⲡⲉⲙϩⲡ ϫⲉⲁⲛⲓⲥⲟⲩ ⲁⲩⲱ ⲡⲉⲙⲛⲧ ϫⲉⲙⲡⲣⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲟⲩ ⲁⲛⲓⲛⲉ ⲛⲛⲁϣⲏⲣⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲉⲧⲟⲩⲏⲩ ⲁⲩⲱ ⲛⲁϣⲉⲉⲣⲉ ϫⲓⲛ**ⲁⲣⲏϫ**ϥ ⲙⲡⲕⲁϩ",
+      "english": "I will say to the north, Bring; and to the south, Keep not back; bring my sons from the land afar off, and my daughters from the ends of the earth;",
+      "source": "Isaiah 43",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C5560",
+      "type": "cf",
+      "label": "confirm, fasten, imprison (according to CED 12)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C205",
+      "label": "ⲁⲧⲁⲣⲏϫ⸗",
+      "pos": "N",
+      "gloss": "limitless, boundless"
+    },
+    {
+      "target": "C206",
+      "label": "ⲙⲛⲧⲁⲧⲁⲣⲏϫⲥ",
+      "pos": "N",
+      "gloss": "boundlessness"
+    }
+  ],
+  "etym": {
+    "egy_num": "184990",
+    "egy_lemma": "ḏr.w",
+    "english": "end; limit; boundary",
+    "german": "Ende; Grenze; Bereich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/184990"
+  }
+}

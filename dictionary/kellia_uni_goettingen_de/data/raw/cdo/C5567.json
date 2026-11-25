@@ -1,0 +1,38 @@
+{
+  "id": "C5567",
+  "forms": [
+    {
+      "id": "CF13109",
+      "orth": "ⲁⲥⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6232",
+      "bibliography": "CD 531b; CDC 81b; KoptHWb 294; DELC 251a; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5565",
+      "label": "ⲱⲥⲕ",
+      "pos": "V",
+      "gloss": "delay, continue, be prolonged"
+    },
+    {
+      "target": "C5566",
+      "label": "ⲱⲥⲕ",
+      "pos": "N",
+      "gloss": "duration, delay"
+    }
+  ]
+}

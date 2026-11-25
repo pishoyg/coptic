@@ -1,0 +1,62 @@
+{
+  "id": "C13009",
+  "forms": [
+    {
+      "id": "CF34041",
+      "orth": "ⲙⲁⲗⲗⲱⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34042",
+      "orth": "ⲙⲉⲗⲗⲱⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34043",
+      "orth": "ⲙⲉⲗⲱⲧⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8734,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS18008",
+      "bibliography": "CD 38b, 165a; CED 23, 81; KoptHWb 24; DELC 28a, 111a; ChLCS 25b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϩⲓⲱⲛⲓ ⲉϫⲱⲟⲩ ⲁⲩⲃⲁⲥⲟⲩ ⲛⲧⲃⲁϣⲟⲩⲣ ⲁⲩⲉⲣⲡⲓⲣⲁⲍⲓⲛ ⲙⲙⲱⲟⲩ ⲁⲩⲙⲟⲩ ϧⲉⲛⲡϧⲱⲧⲉⲃ ⲛⲧⲥⲏϥⲓ ⲁⲩⲙⲟϣⲓ ϧⲉⲛϩⲁⲛ**ⲙⲉⲗⲱⲧⲏ** ϧⲉⲛϩⲁⲛϣⲁⲣ ⲙⲃⲁⲉⲙⲡⲓ ⲉⲩⲉⲣϧⲁⲉ ⲉⲩϩⲉϫϩⲱϫ ⲉⲩϭⲓⲙⲕⲁϩ .",
+      "english": "They were stoned. They went around in sheep skins and in goat skins; being destitute, afflicted, ill-treated",
+      "source": "19_Hebrews_11",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C454",
+      "type": "cf",
+      "label": "skin garment"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C454",
+      "label": "ⲃⲁⲗⲟⲧ",
+      "pos": "N",
+      "gloss": "skin garment; skin bag (containing sleeping mat)"
+    }
+  ]
+}

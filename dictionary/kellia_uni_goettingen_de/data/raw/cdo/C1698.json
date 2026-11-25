@@ -1,0 +1,44 @@
+{
+  "id": "C1698",
+  "forms": [
+    {
+      "id": "CF4913",
+      "orth": "ⲙⲛⲧⲁⲧⲗⲱⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4914",
+      "orth": "ⲙⲛⲧⲁⲧⲗⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1965",
+      "bibliography": "CD 145a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12208",
+      "label": "ⲉⲗⲟⲩⲥⲉ",
+      "pos": "N",
+      "gloss": "bruise"
+    },
+    {
+      "target": "C1697",
+      "label": "ⲗⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "be bruised, crushed; bruise, crush"
+    }
+  ]
+}

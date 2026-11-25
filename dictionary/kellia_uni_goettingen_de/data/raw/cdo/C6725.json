@@ -1,0 +1,62 @@
+{
+  "id": "C6725",
+  "forms": [
+    {
+      "id": "CF32039",
+      "orth": "ϯϩⲛⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32038",
+      "orth": "ϯϩⲛⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9362,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7439",
+      "bibliography": "CD 693a; KoptHWb 380; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6723",
+      "label": "ϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "vessel, pot, receptacle; thing"
+    },
+    {
+      "target": "C6726",
+      "label": "ϫⲓϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "bring offering, tribute(?)"
+    },
+    {
+      "target": "C6724",
+      "label": "ⲙⲛⲧⲁⲧϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "state of being without property, poverty"
+    }
+  ]
+}

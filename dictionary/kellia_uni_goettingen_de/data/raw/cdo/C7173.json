@@ -1,0 +1,76 @@
+{
+  "id": "C7173",
+  "forms": [
+    {
+      "id": "CF16405",
+      "orth": "ϫⲓⲛϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7916",
+      "bibliography": "CD 767b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7172",
+      "label": "ϩⲛ ⲟⲩϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "ADV",
+      "gloss": "continuously; strenuously"
+    },
+    {
+      "target": "C7176",
+      "label": "ϫⲗⲁⲕ",
+      "pos": "N",
+      "gloss": "stretching, strain, punishment"
+    },
+    {
+      "target": "C7178",
+      "label": "ϫⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "strain (cord), stringency (exercise)"
+    },
+    {
+      "target": "C7170",
+      "label": "ϫⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "stretch, extend; sew"
+    },
+    {
+      "target": "C7171",
+      "label": "ϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "stretching, extent; endurance"
+    },
+    {
+      "target": "C7174",
+      "label": "ϭⲱⲗⲕ",
+      "pos": "N",
+      "gloss": "strain, tension"
+    },
+    {
+      "target": "C7177",
+      "label": "ϯϫⲗⲁⲕ",
+      "pos": "V",
+      "gloss": "stretch, bend, torture"
+    },
+    {
+      "target": "C7175",
+      "label": "ⲟ ⲛϫⲱⲗⲕ",
+      "pos": "VSTAT",
+      "gloss": "be in anxiety(?)"
+    }
+  ]
+}

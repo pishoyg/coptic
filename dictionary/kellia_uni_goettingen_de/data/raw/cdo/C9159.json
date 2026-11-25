@@ -1,0 +1,173 @@
+{
+  "id": "C9159",
+  "forms": [
+    {
+      "id": "CF22781",
+      "orth": "ⲑⲉⲟⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22782",
+      "orth": "ⲑⲉⲟⲫⲟⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7287,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11345",
+      "bibliography": "DDGLC",
+      "cu_ID": "11235"
+    },
+    {
+      "id": "CS11346",
+      "bibliography": "DDGLC",
+      "cu_ID": "4194"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲛⲉⲛⲉⲓⲟⲧⲉ ⲛ**ⲑⲉⲟⲫⲟⲣⲟⲥ** ⲛⲉⲡⲓⲥⲕⲟⲡⲟⲥ · ⲛⲧⲁⲩϣⲱⲡⲉ ϩⲁⲧⲁϩⲏ ⲉⲧⲉⲛⲁⲓ ⲛⲉ · ⲉⲩⲥⲉⲃⲓⲟⲥ ⲙⲛⲓⲟⲩⲗⲓⲟⲥ · ⲙⲛⲉⲛⲛⲟⲕⲉⲛϯⲟⲥ · ⲛⲉⲓⲇⲓⲇⲁⲥⲕⲁⲗⲱⲥ ⲛⲁⲙⲉ · ⲉⲧⲫⲟⲣⲉⲓ ⲙⲡⲛⲟⲩⲧⲉ · ⲁϩⲟⲓⲛⲉ ⲛϩⲏⲧⲟⲩ ϩⲓⲧⲟⲟⲧⲟⲩ ⲉϣⲁϫⲉ ⲉⲡⲉⲕⲧⲁⲉⲓⲟ · ⲙⲛⲛⲉϣⲡⲏⲣⲉ ⲉⲧⲉⲕⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ϩⲙⲡⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ ·",
+      "english": "And, moreover, since certain of our inspired Fathers and Bishops who have lived before my time, that is to say, Eusebius, and Julius, and Innocent, who were teachers in very truth and were inspired by God, undertook to declare thy honour and the miracles which thou didst perform in thy martyrium,",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲱ ⲡⲛⲓⲕⲟⲫⲟⲣⲟⲥ ⲁⲩⲱ ⲡⲁⲑⲗⲟⲫⲟⲣⲟⲥ ⲁⲩⲱ ⲡ**ⲑⲉⲟⲫⲟⲣⲟⲥ** ⲁⲩⲱ ⲡⲉⲡⲛⲁⲧⲟⲫⲟⲣⲟⲥ ·",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲧⲟⲫⲟⲣⲟⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲡⲉⲡ",
+        1,
+        17.276
+      ],
+      [
+        "ⲁⲑⲗⲟⲫⲟⲣⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        13.172
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        1,
+        10.426
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        9.573
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲑⲉⲟⲫⲟⲣⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          "ⲡ_1_pre_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          "ⲑⲉⲟⲫⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲑⲉⲟⲫⲟⲣⲟⲥ_0_node",
+          "ⲛ_1_post_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲟⲫⲟⲣⲟⲥ",
+          "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6836,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "918",
+    "grl_lemma": "θεοφόρος",
+    "grl_meaning": "bearing God",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 792a"
+  }
+}

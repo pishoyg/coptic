@@ -1,0 +1,50 @@
+{
+  "id": "C6978",
+  "forms": [
+    {
+      "id": "CF16010",
+      "orth": "ϩⲓⲟⲩⲉ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7698",
+      "bibliography": "CD 733a; ChLCS 98a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6980",
+      "label": "ϩⲓ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cast down"
+    },
+    {
+      "target": "C6979",
+      "label": "ϩⲓ ⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "lay hand, undertake, begin, attempt"
+    },
+    {
+      "target": "C6977",
+      "label": "ϩⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "strike, cast, lay"
+    },
+    {
+      "target": "C6981",
+      "label": "ⲣⲉϥϩⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "smiter, thrower"
+    }
+  ]
+}

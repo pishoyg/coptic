@@ -1,0 +1,46 @@
+{
+  "id": "C11201",
+  "forms": [
+    {
+      "id": "CF31081",
+      "orth": "ϩⲩⲇⲣⲟⲡⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31082",
+      "orth": "ϩⲩⲇⲣⲟⲡⲓⲕⲟⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF31083",
+      "orth": "ϩⲩⲧⲣⲟⲡⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10092,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15761",
+      "bibliography": "DDGLC",
+      "cu_ID": "4658"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2241",
+    "grl_lemma": "ὑδρωπικός",
+    "grl_meaning": "suffering from dropsy",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1845b"
+  }
+}

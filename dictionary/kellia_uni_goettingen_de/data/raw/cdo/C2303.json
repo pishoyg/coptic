@@ -1,0 +1,39 @@
+{
+  "id": "C2303",
+  "forms": [
+    {
+      "id": "CF6340",
+      "orth": "ⲉϥⲣⲁⲙⲁϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2659",
+      "bibliography": "CD 211a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2302",
+      "label": "ⲙⲁϩⲉ",
+      "pos": "N",
+      "gloss": "flax"
+    },
+    {
+      "target": "C2304",
+      "label": "ⲣⲉϥϯⲙⲁϩⲓ",
+      "pos": "N",
+      "gloss": "flaxseller"
+    }
+  ]
+}

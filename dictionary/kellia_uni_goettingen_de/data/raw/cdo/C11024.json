@@ -1,0 +1,491 @@
+{
+  "id": "C11024",
+  "forms": [
+    {
+      "id": "CF30280",
+      "orth": "ⲯⲏⲫⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30282",
+      "orth": "ⲯⲏⲫⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2869,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF30281",
+      "orth": "ⲯⲏⲫ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30283",
+      "orth": "ⲯⲏⲫⲟⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15356",
+      "bibliography": "DDGLC",
+      "cu_ID": "4557"
+    },
+    {
+      "id": "CS15357",
+      "bibliography": "DDGLC",
+      "cu_ID": "872"
+    },
+    {
+      "id": "CS15358",
+      "bibliography": "DDGLC",
+      "cu_ID": "8297"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲙⲡⲟⲩⲱϣ ⲟⲩⲛ ⲙⲡⲛⲟⲩⲧⲉ · ⲙⲛⲧⲉ**ⲯⲏⲫⲟⲥ** ⲙⲡⲗⲁⲟⲥ ⲧⲏⲣϥ ⲁⲩⲁⲙⲁϩⲧⲉ ⲛⲓⲱⲥⲏⲫ ⲛⲃⲣⲣⲉ ·",
+      "english": "However, by the Will of God, and by the votes of the whole congregation, they laid hold of a second Joseph,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϯⲛⲁϯ ⲛⲏⲧⲛ ⲛⲛⲉⲩ**ⲯⲏⲫⲟⲥ** ⲙⲛⲛⲉⲩⲥⲫⲣⲁⲅⲓⲥ ·",
+      "english": "and I will give you their ciphers and their seals.",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥϣⲁⲛϣⲱⲡⲉ ⲛϭⲓⲡⲁⲣⲓⲑⲙⲟⲥ ⲛⲧⲉ**ⲯⲏⲫⲟⲥ** ⲙⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ · ⲡⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ · ⲛⲉϣⲁϥⲉⲓ ⲟⲛ ⲉⲃⲟⲗ ⲡⲉ . ⲛϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲏⲧⲉ ⲛⲛⲁⲣⲭⲱⲛ ⲛⲛⲁⲓⲱⲛ ⲧⲏⲣⲟⲩ · ⲁⲩⲱ ⲉⲧⲙⲏⲧⲉ ⲛⲛⲁⲣⲭⲱⲛ ⲧⲏⲣⲟⲩ ⲛⲧϩⲓⲙⲁⲣⲙⲉⲛⲏ . ⲙⲛⲛⲁⲧⲉⲥⲫⲁⲓⲣⲁ · ⲁⲩⲱ ϣⲁϥϣⲧⲣⲧⲱⲣⲟⲩ · ⲛϥⲧⲣⲉⲩ ⲕⲱ ⲉⲃⲟⲗ ⲛϭⲓⲛⲉⲩⲕⲩⲕⲗⲟⲥ ϩⲛⲟⲩϭⲉⲡⲏ · ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ϣⲁⲩⲑⲗⲓⲃⲉ ⲛⲥⲉⲥⲓⲧⲉ ⲛⲧϭⲟⲙ ⲛⲥⲁⲃⲟⲗ ⲙⲙⲟⲟⲩ · ⲉⲃⲟⲗ ϩⲙⲡⲛⲓϥⲉ ⲛⲧⲉⲩⲧⲁⲡⲣⲟ · ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲙⲙⲟⲩⲉⲓⲟⲟⲩⲉ ⲛⲛⲉⲩⲃⲁⲗ · ⲁⲩⲱ ⲉⲃⲟⲗ ⲛϥⲱⲧⲉ ⲛⲛⲉⲩⲥⲱⲙⲁ ·",
+      "english": "and when the number of the cipher of Melchisedec, the Receiver [of the Light], happened, then had he to come out again and enter into the midst of the rulers of all the æons and into the midst of all the rulers of the Fate and of those of the sphere; and he threw them into agitation, and made them quickly abandon their circles. And forthwith they were constrained, and cast forth the power out of themselves, out of the breath of their mouth and the tears of their eyes and the sweat of their bodies.",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        1,
+        7.749
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲫⲣⲁⲅⲓⲥ",
+        11,
+        20.187
+      ],
+      [
+        "ⲡⲉⲟⲩⲟⲓϣ",
+        1,
+        15.691
+      ],
+      [
+        "ⲛⲉⲩ",
+        9,
+        14.419
+      ],
+      [
+        "ⲥⲩⲙⲃⲟⲗⲟⲛ",
+        1,
+        14.106
+      ],
+      [
+        "ⲙⲛ",
+        12,
+        13.492
+      ],
+      [
+        "ⲉⲓⲁⲁⲩ",
+        1,
+        13.232
+      ],
+      [
+        "ⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ",
+        1,
+        12.168
+      ],
+      [
+        "ⲧⲏⲣ",
+        6,
+        11.712
+      ],
+      [
+        "ⲡ",
+        13,
+        11.691
+      ],
+      [
+        "ⲧⲉ",
+        6,
+        11.651
+      ],
+      [
+        "ⲁⲣⲓⲑⲙⲟⲥ",
+        1,
+        11.299
+      ],
+      [
+        "ⲇⲩⲛⲁⲙⲓⲥ",
+        1,
+        11.299
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        3,
+        11.124
+      ],
+      [
+        "ⲟⲩⲟⲃϣ",
+        1,
+        10.406
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        2,
+        10.209
+      ],
+      [
+        "ⲉⲥϣⲁⲛ",
+        1,
+        9.936
+      ],
+      [
+        "ⲣⲁⲛ",
+        2,
+        9.086
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        2,
+        9.018
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        8.806
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        3,
+        8.627
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲙⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲟⲙⲟⲛⲟⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          "ⲛⲉⲙ_2_post_ⲟⲙⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲙⲟⲛⲟⲓⲁ",
+          "ⲟⲩ_2_post_ⲟⲙⲟⲛⲟⲓⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲯⲏⲫⲟⲥ",
+          5
+        ],
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          13
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          2
+        ],
+        [
+          "ⲥⲫⲣⲁⲅⲓⲥ_1_post_ⲯⲏⲫⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲯⲏⲫⲟⲥ",
+          3
+        ],
+        [
+          "ⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲯⲏⲫⲟⲥ",
+          3
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_7_pre_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲣⲁⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲯⲏⲫⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          "ⲛⲉⲩ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲥⲫⲣⲁⲅⲓⲥ",
+          "ⲥⲫⲣⲁⲅⲓⲥ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲯⲏⲫⲟⲥ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲯⲏⲫⲟⲥ_0_node",
+          "ⲙ_1_post_ⲯⲏⲫⲟⲥ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲯⲏⲫⲟⲥ",
+          "ⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲉⲗⲭⲓⲥⲉⲇⲉⲕ_2_post_ⲙ",
+          "ⲡ_2_post_ⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ",
+          "ⲡⲁⲣⲁⲗⲏⲙⲡⲧⲱⲣ_1_post_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲛⲉⲩ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲯⲏⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲛⲉϥ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲯⲏⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_7_pre_ⲟⲩⲟⲉⲓⲛ",
+          "ⲧⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲯⲏⲫⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲯⲏⲫⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲁⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲛⲉⲩ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲯⲏⲫⲟⲥ",
+          "ⲧⲉ_1_pre_ⲯⲏⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2542,
+      "count": 15
+    }
+  },
+  "etym": {
+    "grl_ID": "2818",
+    "grl_lemma": "ψῆφος",
+    "grl_meaning": "pebble; reckoning; election",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2022b; Preisigke 2:771; Bauer 1780"
+  }
+}

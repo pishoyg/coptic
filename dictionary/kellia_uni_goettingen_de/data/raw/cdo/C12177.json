@@ -1,0 +1,44 @@
+{
+  "id": "C12177",
+  "forms": [
+    {
+      "id": "CF33189",
+      "orth": "ϣⲁⲙⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17181",
+      "bibliography": "KoptHWB 314; DELC 264b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5883",
+      "label": "ϣⲱⲙ",
+      "pos": "N",
+      "gloss": "summer; tribute, tax"
+    },
+    {
+      "target": "C5884",
+      "label": "ϩⲛϣⲱⲙ",
+      "pos": "N",
+      "gloss": "spring"
+    },
+    {
+      "target": "C5885",
+      "label": "ϯϣⲱⲙ",
+      "pos": "V",
+      "gloss": "pay tribute"
+    }
+  ]
+}

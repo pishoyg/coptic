@@ -1,0 +1,69 @@
+{
+  "id": "C4512",
+  "forms": [
+    {
+      "id": "CF10980",
+      "orth": "ⲛⲕⲁ ⲛⲧⲱⲣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5100",
+      "bibliography": "CD 431a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4509",
+      "label": "ⲁⲧⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "unsewn"
+    },
+    {
+      "target": "C4515",
+      "label": "ⲑⲣⲁⲡⲥ",
+      "pos": "N",
+      "gloss": "awl, spike"
+    },
+    {
+      "target": "C4510",
+      "label": "ⲙⲁ ⲛⲑⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "darning needle"
+    },
+    {
+      "target": "C4511",
+      "label": "ⲙⲉϩⲧⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "darning needle"
+    },
+    {
+      "target": "C4513",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4514",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4508",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "sew, stitch"
+    }
+  ]
+}

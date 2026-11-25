@@ -1,0 +1,606 @@
+{
+  "id": "C6112",
+  "forms": [
+    {
+      "id": "CF14229",
+      "orth": "ϣⲱⲧⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2714,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ϣⲧⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4083,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϣⲉⲧⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16187,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲟⲧⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2975,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϣⲱⲧⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 5098,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϣⲟⲧⲉⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2635,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⳉⲱⲧⲙⲉ",
+      "dialect": "A",
+      "id": "1989.6"
+    },
+    {
+      "orth": "ϣⲁⲧⲙ⸗",
+      "dialect": "L",
+      "id": "1989.7"
+    },
+    {
+      "orth": "ϣⲁⲧⲙ†",
+      "dialect": "L",
+      "id": "1989.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6799",
+      "bibliography": "CD 595b-596b; CED 255-256; KoptHWb 331-332; DELC 272b; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥ**ϣⲱⲧⲙ** ⲙⲡⲣⲟ ⲁϥⲕⲱ ⲛⲟⲩⲇⲩⲛⲁⲙⲓⲥ ⲛⲥⲁⲧⲉ ⲉⲥⲣⲟⲉⲓⲥ · ⲉⲡⲣⲟ ⲙⲡⲡⲁⲣⲁⲇⲉⲓⲥⲟⲥ ϫⲉⲛⲛⲉⲗⲁⲁⲩ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ · ϣⲁⲛⲧⲉ ⲛⲉⲛⲧⲁϥϫⲟⲟⲩ ⲧⲏⲣⲟⲩ ϫⲱⲕ ⲉⲃⲟⲗ ⲉϫⲛⲁⲇⲁⲙ ·",
+      "english": "He shut the gate [thereof], and He placed a mighty being of fire to watch the gate of Paradise, so that no one might enter therein until all those things which He had proclaimed concerning Adam had been fulfilled.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲥϣⲟⲟⲡ ⲛⲁⲙⲉ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲡⲥⲟⲫⲟⲥ ⲛⲧϩⲉ ⲛⲟⲩⲕⲏⲡⲟⲥ ⲉϥ**ϣⲟⲧⲙ** ⲙⲛⲟⲩⲡⲏⲅⲏ ⲉⲥⲧⲟⲟⲃⲉ ϫⲉⲉⲛⲉ ⲗⲁⲁⲩ ⲥⲩⲗⲁ ⲙⲙⲟⲥ · ⲁⲩⲱ ⲉⲧⲁⲕⲉⲡⲙⲁ ⲛⲟⲩⲱϩ ⲛⲛϣⲟⲩϩⲏⲛⲉ ⲙⲛⲧⲙⲛⲧϩⲁⲕ ⲁⲩⲱ ⲉⲥⲱϥⲧ ⲉⲃⲟⲗ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲙⲡⲥⲁ ⲛⲧⲡⲏⲅⲏ ⲛⲧⲥⲟⲫⲣⲟⲥⲩⲛⲏ ·",
+      "english": "and she became in very truth, according to the word of the Wise Man, like a garden enclosed, and a fountain which hath been sealed which no man was able to strip bare, and no man was able to destroy the abiding place of the sweet-smelling flowers of chastity, and to ravage and lay waste that place of beauty wherein was the fountain of discretion.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲟ ϣⲁϥⲟⲩⲟⲧⲟⲩⲉⲓⲧ ϩⲙⲡⲉⲥⲭⲏⲙⲁ ⲙⲡⲙⲟⲩ · ⲙⲛⲡⲥⲱⲙⲁ ⲛⲧⲁϥϭⲃⲃⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧ**ϣⲟⲧⲙ** · ⲙⲛⲡϥⲱ ⲉⲛⲧⲁϥⲗⲱϭϫ · ⲙⲛⲛⲃⲁⲗ ⲉⲛⲧⲁⲩⲥⲱⲧⲣ · ⲁⲩϣⲧⲁⲙ · ⲙⲛⲙⲙⲉⲗⲟⲥ ⲉⲧⲉⲛⲥⲉⲕⲓⲙ ⲁⲛ ·",
+      "english": "The face hath become ghastly pallid in the garb of death, and the body hath become shrivelled up, and the mouth is shut up, and the hair hath become lustreless (?), and the eyes have become sightless and are shut, and the limbs are motionless.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        18.691
+      ],
+      [
+        "ϣⲱⲧⲙ",
+        2,
+        14.604
+      ],
+      [
+        "ⲡⲩⲗⲏ",
+        4,
+        13.604
+      ],
+      [
+        "ⲃⲁⲅⲱⲁⲥ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛ",
+        24,
+        12.657
+      ],
+      [
+        "ⲡⲩⲗⲱⲛ",
+        1,
+        11.884
+      ],
+      [
+        "ϣⲟⲩⲱ",
+        1,
+        11.691
+      ],
+      [
+        "ⲣⲟ",
+        3,
+        11.645
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        3,
+        11.597
+      ],
+      [
+        "ⲁ",
+        11,
+        10.516
+      ],
+      [
+        "ⲥ",
+        8,
+        10.367
+      ],
+      [
+        "ⲁⲩⲱ",
+        9,
+        10.35
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        3,
+        9.783
+      ],
+      [
+        "ⲛⲁ",
+        8,
+        9.781
+      ],
+      [
+        "ϣ",
+        2,
+        9.754
+      ],
+      [
+        "ⲡ",
+        10,
+        9.556
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ",
+        1,
+        9.232
+      ],
+      [
+        "ⲙ",
+        7,
+        8.866
+      ],
+      [
+        "ϩⲓⲃⲟⲗ",
+        1,
+        8.282
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        2,
+        8.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          8
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲧⲙ",
+          4
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          12
+        ],
+        [
+          "ⲁ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲕⲱ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲧⲙ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲧⲙ",
+          4
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          6
+        ],
+        [
+          "ⲧ_2_pre_ⲡⲩⲗⲏ",
+          2
+        ],
+        [
+          "ⲡⲩⲗⲏ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲡ_3_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_pre_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲅⲱⲁⲥ_1_pre_ϣⲱⲧⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          "ϥ_1_pre_ϣⲱⲧⲙ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲧⲙ",
+          "ϣⲱⲧⲙ_0_node",
+          4
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲁ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲕⲱ",
+          "ϥ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲱ",
+          "ⲕⲱ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲧⲙ",
+          "ⲛⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲧⲙ",
+          "ϣⲱⲧⲙ_0_node",
+          2
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲛ_1_post_ϣⲱⲧⲙ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲧⲙ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          "ⲧ_2_pre_ⲡⲩⲗⲏ",
+          2
+        ],
+        [
+          "ⲧ_2_pre_ⲡⲩⲗⲏ",
+          "ⲡⲩⲗⲏ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲡⲩⲗⲏ_1_pre_ϣⲱⲧⲙ",
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          "ⲩ_1_pre_ϣⲱⲧⲙ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲧⲙ",
+          "ϣⲱⲧⲙ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲧⲙ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲉⲣⲱ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ϣⲱⲧⲙ",
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          "ϣⲱⲧⲙ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲉⲣⲉ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϣⲱⲧⲙ",
+          "ⲙⲡ_3_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          "ⲛ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲱⲧⲙ",
+          "ⲥⲉ_1_pre_ϣⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϣⲱⲧⲙ",
+          "ϣⲱⲧⲙ_0_node",
+          2
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲁⲩⲱ_2_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲧⲱⲟⲩⲛ",
+          "ⲥⲉ_2_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_pre_ⲡⲟⲗⲓⲥ",
+          "ⲙ_2_pre_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲡⲟⲗⲓⲥ",
+          "ⲡⲟⲗⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_1_pre_ϣⲱⲧⲙ",
+          "ⲛⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϣⲱⲧⲙ_0_node",
+          "ⲁⲛ_1_post_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_1_pre_ϣⲱⲧⲙ",
+          "ⲛ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲧⲙ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲧⲙ",
+          "ⲃⲁⲅⲱⲁⲥ_1_pre_ϣⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲃⲁⲅⲱⲁⲥ_1_pre_ϣⲱⲧⲙ",
+          "ⲁ_1_pre_ϣⲱⲧⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.19,
+      "rank": 1777,
+      "count": 30
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6113",
+      "label": "ϣⲧⲁⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C6115",
+      "label": "ϣⲧⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "closing"
+    },
+    {
+      "target": "C6116",
+      "label": "ϣⲧⲙⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "joints"
+    },
+    {
+      "target": "C6114",
+      "label": "ϣⲧⲟⲙ",
+      "pos": "N",
+      "gloss": "thing shutting or shut, gate"
+    },
+    {
+      "target": "C12047",
+      "label": "ⳉⲱⲧⲙⲉ",
+      "pos": "N",
+      "gloss": "closed thing, chain"
+    }
+  ],
+  "etym": {
+    "egy_num": "121710",
+    "egy_lemma": "ḫtm",
+    "demo_num": "d4633",
+    "demo_lemma": "ḫtm",
+    "english": "to seal; to put a seal on",
+    "german": "siegeln; verschließen; umschließen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/121710",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4633"
+  }
+}

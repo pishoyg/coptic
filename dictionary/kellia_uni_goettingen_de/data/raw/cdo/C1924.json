@@ -1,0 +1,38 @@
+{
+  "id": "C1924",
+  "forms": [
+    {
+      "id": "CF5498",
+      "orth": "ϭⲓⲛⲙⲓⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2235",
+      "bibliography": "CD 173a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1922",
+      "label": "ⲙⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "sort, quality, manner"
+    },
+    {
+      "target": "C1923",
+      "label": "ⲛⲧⲉⲓⲙⲓⲛⲉ",
+      "pos": "ADV",
+      "gloss": "of this sort (= aforesaid and as follows)"
+    }
+  ]
+}

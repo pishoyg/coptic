@@ -1,0 +1,211 @@
+{
+  "id": "C3897",
+  "forms": [
+    {
+      "id": "CF9725",
+      "orth": "ⲥⲁⲭⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3826,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4423",
+      "bibliography": "CD 374b; CED 169; KoptHWb 181"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲥϧⲏⲟⲩⲧ ⲅⲁⲣ ϧⲉⲛⲫⲛⲟⲙⲟⲥ ⲙⲙⲱⲩⲥⲏⲥ ϫⲉⲛⲛⲉⲕϯ **ⲥⲁⲭⲟⲗ** ⲉϩⲣⲉⲛⲉϩⲉ ⲉϥϩⲓ ⲙⲏ ⲁⲥⲉⲣⲙⲉⲗⲓⲛ ⲙⲫⲛⲟⲩϯ ϧⲁⲛⲓⲉϩⲱⲟⲩ",
+      "english": "For it is written in the law of Moses, 'You shall not muzzle an ox while it treads out the grain.' Is it for the oxen that God cares,",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥϫⲱ ⲅⲁⲣ ⲙⲙⲟⲥ ⲛϫⲉϯⲅⲣⲁⲫⲏ ϫⲉⲛⲛⲉⲕϯ**ⲥⲁⲭⲟⲗ** ⲉϩⲣⲉⲛⲉϩⲉ ⲉϥϩⲓ ⲟⲩⲟϩ ⲡⲓⲉⲣⲅⲁⲧⲏ ⲥϥⲉⲙⲡϣⲁ ⲙⲡⲉϥⲃⲉⲭⲉ .",
+      "english": "For the Scripture says, 'You shall not muzzle the ox when it treads out the grain.'",
+      "source": "15_I Timothy_05",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕϯ**ⲥⲁⲭⲟⲗ** ⲉϩⲣⲉⲛⲉϩⲉ ⲉϥϩⲓ",
+      "english": "Thou shalt not muzzle the ox that treads out the corn.",
+      "source": "05_Deuteronomium_25",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:25",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲉ",
+        4,
+        18.41
+      ],
+      [
+        "ⲉϩⲣⲉⲛ",
+        4,
+        17.486
+      ],
+      [
+        "ⲛⲛⲉⲕ",
+        2,
+        16.051
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        1,
+        11.286
+      ],
+      [
+        "ⲛⲛⲉ",
+        2,
+        10.972
+      ],
+      [
+        "ϯ",
+        4,
+        10.29
+      ],
+      [
+        "ⲉ",
+        4,
+        9.017
+      ],
+      [
+        "ϫⲉ",
+        3,
+        8.892
+      ],
+      [
+        "ϥ",
+        4,
+        8.424
+      ],
+      [
+        "ⲕ",
+        2,
+        8.128
+      ],
+      [
+        "ⲙⲑⲟ",
+        1,
+        7.817
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.736
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲁⲭⲟⲗ_0_node",
+          4
+        ],
+        [
+          "ⲉϩⲣⲉⲛ_1_post_ⲥⲁⲭⲟⲗ",
+          2
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲉϩⲣⲉⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥⲁⲭⲟⲗ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥⲁⲭⲟⲗ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϯ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϩⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁⲭⲟⲗ_0_node",
+          "ⲉϩⲣⲉⲛ_1_post_ⲥⲁⲭⲟⲗ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲉⲛ_1_post_ⲥⲁⲭⲟⲗ",
+          "ⲉϩⲉ_2_post_ⲉϩⲣⲉⲛ",
+          2
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲉϩⲣⲉⲛ",
+          "ⲉ_1_post_ⲥⲁⲭⲟⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲁⲭⲟⲗ",
+          "ϥ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲓ",
+          "ϩⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥⲁⲭⲟⲗ",
+          "ⲥⲁⲭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲉϩⲣⲉⲛ",
+          "ⲉ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϯ",
+          "ϥ_4_post_ϩⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3405,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "146910",
+    "egy_lemma": "skr",
+    "english": "[a vessel]",
+    "german": "Glocke (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/146910"
+  }
+}

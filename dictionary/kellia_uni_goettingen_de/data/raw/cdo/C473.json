@@ -1,0 +1,505 @@
+{
+  "id": "C473",
+  "forms": [
+    {
+      "id": "CF1929",
+      "orth": "ⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3564,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF1930",
+      "orth": "ⲣⲃⲟⲟⲛⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1931",
+      "orth": "ⲉⲣⲃⲟⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3349,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS574",
+      "bibliography": "CD 39b; KoptHWb 25; ChLCS 8b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛⲟⲩϯ ⲅⲁⲣ ⲡⲉ ⲡⲓⲕⲁϯ ⲉⲧϣⲟⲡ ⲛϧⲏⲧⲉⲛ ⲉϥϯ ⲟⲩⲃⲉⲛⲓⲕⲓⲙ ⲛⲧⲉⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲧϩⲱⲟⲩ ⲉⲑⲃⲟⲧⲥ ⲉⲣⲟⲛ ⲉⲧⲉⲛⲓⲙⲉⲩⲓ ⲛⲉ ⲉϥϩⲓⲟⲩⲓ ⲉⲃⲟⲗ ⲛⲛⲏⲉⲧ**ⲉⲣⲃⲟⲛⲓ** ⲉϥⲓⲛⲓ ⲇⲉ ⲉϧⲟⲩⲛ ⲛⲛⲏ ⲉⲧϯϩⲏⲟⲩ ⲛⲁⲛ",
+      "english": "For the intelligence that resides in us is divine, fighting against the harmful movements of the evil spirit battling against us—that is, our thoughts—driving out those that are harmful and bringing in those that benefit us.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲉⲛⲁϥⲓ ⲛⲛϩⲟϥ ϩⲛⲛⲉⲩϭⲓϫ ⲕⲁⲛ ⲉⲩϣⲁⲛⲥⲱ ⲛⲟⲩⲡⲁϩⲣⲉ ⲙⲙⲟⲩ ⲛⲥⲛⲁ**ⲣⲃⲟⲟⲛⲉ** ⲛⲁⲩ ⲁⲛ ⲥⲉⲛⲁⲧⲁⲗⲉ ⲧⲟⲟⲧⲟⲩ ⲉϫⲛⲛⲉⲧϣⲱⲛⲉ ⲛⲥⲉⲙⲧⲟⲛ",
+      "english": "they will take up serpents; and if they drink any deadly thing, it will in no way hurt them; they will lay hands on the sick, and they will recover.&apos;",
+      "source": "Mark Chapter 16",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲉⲕⲉⲉⲙⲓ ϫⲉⲉϥⲉⲉⲣϩⲓⲣⲏⲛⲏ ⲛϫⲉⲡⲉⲕⲏⲓ ⲭ ⲡⲥⲟⲃϯ ⲇⲉ ⲛⲧⲉⲧⲉⲕⲥⲕⲉⲡⲏ ⲛⲛⲉϥ**ⲉⲣⲃⲟⲛⲓ** .",
+      "english": "Then shalt thou know that thy house shall be at peace, and the provision for thy tabernacle shall not fail.",
+      "source": "18_Iob_05",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲙⲡⲛⲟⲩⲃ ⲉⲧⲉⲙⲁⲣⲉⲧⲉϩⲣⲱ ⲣⲃⲟⲟⲛⲉ ⲛⲁϥ · ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲙⲡⲉⲧϥⲓ ⲉⲣⲟϥ ϩⲛⲟⲩⲙⲛⲧϫⲱⲱⲣⲉ · ⲉⲙⲁⲣⲉⲧⲉⲑⲗⲓⲯⲓⲥ **ⲣⲃⲟⲟⲛⲉ** ⲛⲁϥ ·",
+      "english": "For the matter is like unto the gold to which the furnace doeth no injury, that is to say, tribulation doeth no harm to him that beareth himself with fortitude.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁⲁⲙⲟⲛⲓ ⲛⲧⲟⲧϥ ϩⲱϥ ⲥⲁⲃⲟⲗ ⲛⲛⲏ ⲉⲧ**ⲉⲣⲃⲟⲛⲓ** ⲛϯⲯⲩⲭⲏ ⲉⲧⲉⲡⲓϫⲱⲛⲧ ⲡⲉ ⲛⲉⲙⲡⲓⲫⲑⲟⲛⲟⲥ ⲛⲉⲙ ϯⲕⲁⲧⲁⲗⲁⲗⲓⲁ ⲛⲉⲙⲡⲓⲙⲟⲥϯ ⲛⲉⲙⲡⲓⲭⲟϩ ⲛⲉⲙϯⲙⲉⲧⲣⲉϥϯϣⲱϣ ⲛⲉⲙϯⲙⲉⲧϭⲁⲥⲓϩⲏⲧ ⲉⲃⲟⲗ ⲙⲫⲛⲟⲩϯ ⲛⲉⲙⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ",
+      "english": "However, they will abstain from those things that harm the soul, such as anger, envy, vanity, hatred, jealousy, insult, and pride in the sight of God and His angels.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲁⲛⲥⲱ ⲛⲟⲩⲡⲁϩⲣⲉ ⲙⲙⲟⲩ ⲛⲥⲛⲁ**ⲣⲃⲟⲟⲛⲉ** ⲛⲏⲧⲛ ⲁⲛ ·",
+      "english": "And when ye drink deadly poisons they shall have no evil effect upon you.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲟϭⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲉⲗⲉⲗϩⲙϫ",
+        1,
+        15.276
+      ],
+      [
+        "ⲛⲁϫϩⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ⲛⲁ",
+        13,
+        13.468
+      ],
+      [
+        "ϩⲙϫ",
+        1,
+        12.369
+      ],
+      [
+        "ⲉϣⲁⲣⲉ",
+        1,
+        12.067
+      ],
+      [
+        "ⲱⲙⲥ",
+        1,
+        12.028
+      ],
+      [
+        "ⲥⲁϣ",
+        1,
+        11.884
+      ],
+      [
+        "ϩⲣⲱ",
+        1,
+        11.469
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        2,
+        10.359
+      ],
+      [
+        "ⲩ",
+        6,
+        10.243
+      ],
+      [
+        "ⲙⲟⲛⲟⲛ",
+        1,
+        10.076
+      ],
+      [
+        "ⲧⲁⲓ",
+        2,
+        9.757
+      ],
+      [
+        "ⲁⲧϩⲏⲧ",
+        1,
+        9.59
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        9.561
+      ],
+      [
+        "ⲛ",
+        8,
+        9.487
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.391
+      ],
+      [
+        "ⲑⲗⲓⲯⲓⲥ",
+        1,
+        9.363
+      ],
+      [
+        "ⲉ",
+        5,
+        8.461
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.761
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁϫϩⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          2
+        ],
+        [
+          "ⲧⲉ_2_pre_ϩⲣⲱ",
+          1
+        ],
+        [
+          "ϩⲣⲱ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲑⲗⲓⲯⲓⲥ",
+          1
+        ],
+        [
+          "ⲑⲗⲓⲯⲓⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϣⲁⲣⲉ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ϩⲙϫ",
+          1
+        ],
+        [
+          "ϩⲙϫ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          "ⲛ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲛⲁϫϩⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁϫϩⲉ_3_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲧⲉ_2_pre_ϩⲣⲱ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_pre_ϩⲣⲱ",
+          "ϩⲣⲱ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲱ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          "ⲛⲁ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          "ϥ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲧⲉ_2_pre_ⲑⲗⲓⲯⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲑⲗⲓⲯⲓⲥ",
+          "ⲑⲗⲓⲯⲓⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲑⲗⲓⲯⲓⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          "ⲙ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϣⲁⲣⲉ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲟⲩ_2_pre_ϩⲙϫ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ϩⲙϫ",
+          "ϩⲙϫ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲙϫ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲛⲁ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲃⲟⲟⲛⲉ",
+          "ⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲃⲟⲟⲛⲉ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3187,
+      "count": 10
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C481",
+      "label": "ϫⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "take, receive evil eye; envy"
+    },
+    {
+      "target": "C471",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C472",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil, misfortune"
+    },
+    {
+      "target": "C470",
+      "label": "ⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C475",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil eye"
+    },
+    {
+      "target": "C476",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envious, wretched"
+    },
+    {
+      "target": "C477",
+      "label": "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envy, greed"
+    },
+    {
+      "target": "C480",
+      "label": "ⲙⲛⲧⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "greed, concupiscence"
+    },
+    {
+      "target": "C474",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil doing"
+    },
+    {
+      "target": "C479",
+      "label": "ⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who casts an evil eye, enchanter"
+    },
+    {
+      "target": "C478",
+      "label": "ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be envious"
+    }
+  ]
+}

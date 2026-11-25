@@ -1,0 +1,366 @@
+{
+  "id": "C491",
+  "forms": [
+    {
+      "id": "CF1974",
+      "orth": "ⲃⲉⲛⲓⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2481,
+        "count": 20
+      }
+    },
+    {
+      "id": "CF1975",
+      "orth": "ⲃⲉⲛⲓⲡⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF1976",
+      "orth": "ⲃⲉⲛⲓⲡⲉ",
+      "dialect": "Ak"
+    },
+    {
+      "orth": "ⲃⲓⲛⲓⲃⲉ",
+      "dialect": "S",
+      "id": "353.1"
+    },
+    {
+      "orth": "ⲡⲓⲛⲓⲡⲉ",
+      "dialect": "S",
+      "id": "353.2"
+    },
+    {
+      "orth": "ⲃⲁⲛⲓⲡⲉ",
+      "dialect": "S",
+      "id": "353.3"
+    },
+    {
+      "orth": "ⲡⲁⲛⲓⲡ",
+      "dialect": "S",
+      "id": "353.4"
+    },
+    {
+      "orth": "ⲃⲉⲛⲓⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.79,
+        "rank": 844,
+        "count": 67
+      }
+    },
+    {
+      "orth": "ⲃⲁⲛⲓⲡⲉ",
+      "dialect": "A",
+      "id": "353.6"
+    },
+    {
+      "orth": "ⲃⲉⲛⲓⲡⲓ",
+      "dialect": "F",
+      "id": "353.7"
+    },
+    {
+      "orth": "ⲡⲉⲛⲓⲡⲉ",
+      "dialect": "F",
+      "id": "353.8"
+    },
+    {
+      "orth": "ⲃⲓⲛⲓⲡⲓ",
+      "dialect": "F",
+      "id": "353.9"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS593",
+      "bibliography": "CD 41a; CED 24-25; KoptHWb 25, 494; DELC 29-30; ChLCS 9a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲓⲃⲱⲕ ⲉϩⲟⲩⲛ ϩⲛⲟⲩⲣⲱ ⲛⲱⲛⲉ · ⲁⲓⲉⲓ ⲉⲃⲟⲗ ϩⲛⲟⲩⲣⲟ ⲙ**ⲃⲉⲛⲓⲡⲉ** ·",
+      "english": "I went in through a door of stone, I came out through a door of iron.",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲇⲉ ⲁⲡⲛⲟⲩⲧⲉ ϫⲓⲧⲏⲩⲧⲛ ⲁⲩⲱ ⲁϥⲛⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ϩⲛⲧⲉϩⲣⲱ ⲙ**ⲃⲉⲛⲓⲡⲉ** ⲉⲧⲉⲡⲕⲁϩ ⲛⲕⲏⲙⲉ ⲡⲉ ⲉⲧⲣⲉⲧⲛϣⲱⲡⲉ ⲛⲁϥ ⲛⲟⲩⲗⲁⲟⲥ ⲛⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛⲧϩⲉ ⲙⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ",
+      "english": "But God took you, and led you forth out of the land of Egypt, out of the iron furnace, out of Egypt, to be to him a people of inheritance, as at this day.",
+      "source": "Deuteronomy 4",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲕⲁϩ ⲉⲕⲛⲁⲟⲩⲱⲙ ⲙⲡⲉⲕⲟⲉⲓⲕ ⲁⲛ ϩⲓϫⲱϥ ϩⲛⲟⲩⲙⲛⲧϩⲏⲕⲉ ⲁⲩⲱ ⲉⲛⲕⲛⲁϣⲱⲱⲧ ⲁⲛ ⲛⲗⲁⲁⲩ ϩⲓϫⲱϥ ⲟⲩⲕⲁϩ ⲉⲣⲉⲛⲉϥⲱⲛⲉ ⲟ ⲛⲧϩⲉ ⲙⲡ**ⲃⲉⲛⲓⲡⲉ** ⲉⲕⲛⲁϣⲱⲱⲧ ⲙⲡϩⲟⲙⲛⲧ ⲉⲃⲟⲗ ϩⲛⲛⲉϥⲧⲟⲩⲉⲓⲏ",
+      "english": "a land on which thou shalt not eat thy bread with poverty, and thou shalt not want any thing upon it; a land whose stones are iron, and out of its mountains thou shalt dig brass.",
+      "source": "Deuteronomy 8",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲗⲁⲓⲛⲟⲛ",
+        1,
+        16.074
+      ],
+      [
+        "ⲕⲟⲟⲣ",
+        1,
+        16.074
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.074
+      ],
+      [
+        "ϩⲁⲗⲏⲥⲓⲥ",
+        1,
+        16.074
+      ],
+      [
+        "ⲃⲁⲣⲱⲧ",
+        1,
+        14.074
+      ],
+      [
+        "ⲙⲛ",
+        15,
+        13.841
+      ],
+      [
+        "ϩⲟⲙⲛⲧ",
+        3,
+        13.64
+      ],
+      [
+        "ⲛ",
+        22,
+        12.664
+      ],
+      [
+        "ϭⲗⲟϭ",
+        2,
+        12.583
+      ],
+      [
+        "ⲥⲟⲧⲃⲉϥ",
+        1,
+        12.267
+      ],
+      [
+        "ⲕⲗⲁⲗ",
+        1,
+        12.267
+      ],
+      [
+        "ⲣⲟ",
+        3,
+        12.028
+      ],
+      [
+        "ⲕⲉⲗⲉⲃⲓⲛ",
+        1,
+        11.682
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        11.451
+      ],
+      [
+        "ⲛⲟⲩϩⲉ",
+        1,
+        11.12
+      ],
+      [
+        "ⲟⲣϫ",
+        1,
+        10.615
+      ],
+      [
+        "ⲙ",
+        9,
+        10.337
+      ],
+      [
+        "ϩⲣⲱ",
+        1,
+        10.267
+      ],
+      [
+        "ϩⲟⲙⲟⲓⲱⲥ",
+        1,
+        10.192
+      ],
+      [
+        "ⲉϫⲱ",
+        3,
+        9.978
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          18
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲕⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲛⲧ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          "ⲙ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          "ⲉϫⲱ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          "ⲉ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          "ⲕⲟⲟⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲣ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲕⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲃⲉⲛⲓⲡⲉ",
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓⲡⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲙⲛⲧ",
+          "ⲟⲩ_2_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲟⲙⲛⲧ",
+          "ϩⲟⲙⲛⲧ_1_post_ⲃⲉⲛⲓⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2043,
+      "count": 23
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C320",
+      "type": "cf",
+      "label": "prefix in names of metals"
+    },
+    {
+      "target": "C2348",
+      "type": "cf",
+      "label": "particle of genitive"
+    },
+    {
+      "target": "C2790",
+      "type": "cf",
+      "label": "heaven, sky"
+    }
+  ],
+  "etym": {
+    "egy_num": "54450",
+    "egy_lemma": "bjꜣ-n-p.t",
+    "demo_num": "d1731",
+    "demo_lemma": "bnpj",
+    "english": "iron",
+    "german": "Eisen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54450",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1731"
+  }
+}

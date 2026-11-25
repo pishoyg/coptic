@@ -1,0 +1,65 @@
+{
+  "id": "C4531",
+  "forms": [
+    {
+      "id": "CF11019",
+      "orth": "ⲧⲣⲟϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5119",
+      "bibliography": "CD 432ab; CED 196; KoptHWb 245; ChLCS 61a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4534",
+      "label": "ⲧϣⲣⲉ",
+      "pos": "V",
+      "gloss": "grow red"
+    },
+    {
+      "target": "C4532",
+      "label": "ⲧⲣⲟϣⲣϣ",
+      "pos": "V",
+      "gloss": "be red, become red"
+    },
+    {
+      "target": "C4533",
+      "label": "ⲧⲣⲟϣⲣϣ",
+      "pos": "N",
+      "gloss": "redness"
+    },
+    {
+      "target": "C4529",
+      "label": "ⲧⲱⲣϣ",
+      "pos": "V",
+      "gloss": "be red"
+    },
+    {
+      "target": "C4530",
+      "label": "ⲧⲱⲣϣ",
+      "pos": "N",
+      "gloss": "red"
+    }
+  ],
+  "etym": {
+    "egy_num": "180690",
+    "egy_lemma": "dšr",
+    "demo_num": "dm8099",
+    "demo_lemma": "dšr",
+    "english": "to be red; to become red",
+    "german": "rot werden; rot sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/180690",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm8099"
+  }
+}

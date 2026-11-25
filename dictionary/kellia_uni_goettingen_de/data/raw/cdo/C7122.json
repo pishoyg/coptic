@@ -1,0 +1,65 @@
+{
+  "id": "C7122",
+  "forms": [
+    {
+      "id": "CF16302",
+      "orth": "ⲣⲉϥϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7857",
+      "bibliography": "CD 762a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛϭⲱϣⲧ ⲉⲡⲁⲣⲭⲏⲅⲟⲥ ⲛⲧⲡⲓⲥⲧⲓⲥ **ⲙⲛⲡⲣⲉϥϫⲱⲕ **ⲉⲃⲟⲗ**** ⲓⲏⲥⲟⲩⲥ ⲡⲁⲓ ⲉⲡⲙⲁ ⲙⲡⲣⲁϣⲉ ⲉⲧⲕⲏ ⲛⲁϥ ⲉϩⲣⲁⲓ ⲁϥϩⲩⲡⲟⲙⲓⲛⲉ ⲉⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲉⲁϥⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲙⲡϣⲓⲡⲉ ⲁϥϩⲙⲟⲟⲥ ϩⲓⲧⲟⲩⲛⲁⲙ ⲙⲡⲉⲑⲣⲟⲛⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "looking to Jesus, the author and perfecter of faith, who for the joy that was set before him endured the cross, despising its shame, and has sat down at the right hand of the throne of God.",
+      "source": "58_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7119",
+      "label": "ϫⲱⲕ",
+      "pos": "V",
+      "gloss": "be completed, full, end (life); complete, finish"
+    },
+    {
+      "target": "C7120",
+      "label": "ϫⲱⲕ",
+      "pos": "N",
+      "gloss": "completion, end, total"
+    },
+    {
+      "target": "C12164",
+      "label": "ϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be completed, full, end (life); complete, finish"
+    },
+    {
+      "target": "C7123",
+      "label": "ϭⲓⲛϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "completion, death"
+    },
+    {
+      "target": "C7121",
+      "label": "ⲁⲧϫⲱⲕ",
+      "pos": "N",
+      "gloss": "without end, endless"
+    }
+  ]
+}

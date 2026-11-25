@@ -1,0 +1,113 @@
+{
+  "id": "C9475",
+  "forms": [
+    {
+      "id": "CF24068",
+      "orth": "ⲕⲟⲗⲁⲕⲉⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF24069",
+      "orth": "ⲕⲟⲗⲁⲕⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10064,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS12035",
+      "bibliography": "DDGLC",
+      "cu_ID": "3518"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥ**ⲕⲟⲗⲁⲕⲉⲩⲉ** .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲉⲓⲗⲏ",
+        1,
+        15.313
+      ],
+      [
+        ".",
+        2,
+        9.557
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲕⲟⲗⲁⲕⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲗⲁⲕⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲗⲁⲕⲉⲩⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲕⲟⲗⲁⲕⲉⲩⲉ",
+          "ϥ_1_pre_ⲕⲟⲗⲁⲕⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲗⲁⲕⲉⲩⲉ",
+          "ⲕⲟⲗⲁⲕⲉⲩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9640,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3584",
+    "grl_lemma": "κολακεύω",
+    "grl_meaning": "to be a flatterer, flatter",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 971b; Preisigke 2:818"
+  }
+}

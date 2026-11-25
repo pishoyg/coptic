@@ -1,0 +1,519 @@
+{
+  "id": "C7565",
+  "forms": [
+    {
+      "id": "CF17189",
+      "orth": "ϭⲃⲟⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 1013,
+        "count": 94
+      }
+    },
+    {
+      "orth": "ϭⲃⲟⲉ",
+      "dialect": "S",
+      "id": "2512.1"
+    },
+    {
+      "orth": "ϫⲫⲟⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.42,
+        "rank": 1219,
+        "count": 36
+      }
+    },
+    {
+      "orth": "ϭⲃⲁⲓ",
+      "dialect": "A",
+      "id": "2512.3"
+    },
+    {
+      "orth": "ϭⲃⲁⲉⲓ",
+      "dialect": "A",
+      "id": "2512.4"
+    },
+    {
+      "orth": "ϭⲃⲁⲓ",
+      "dialect": "F",
+      "id": "2512.5"
+    },
+    {
+      "orth": "ϭⲃⲁⲓ",
+      "dialect": "L",
+      "id": "2512.6"
+    },
+    {
+      "orth": "ϭⲃⲁⲉⲓ",
+      "dialect": "L",
+      "id": "2512.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8391",
+      "bibliography": "CD 805a; CED 325; KoptHWb 446; DELC 336a; ChLCS 106a"
+    },
+    {
+      "id": "CS8392",
+      "bibliography": "CD 805a; CED 325; KoptHWb 446; DELC 336a; ChLCS 106a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲁⲙⲁϩⲧⲉ ⲇⲉ ⲙⲡⲉϥϭⲃⲟⲓ · ⲁⲩⲱ ⲁⲡⲉϥ**ϭⲃⲟⲓ** ⲃⲱⲗ ⲉⲃⲟⲗ ϩⲛⲛⲁϭⲓϫ · ⲁϥⲣⲧϩⲉ ⲛⲛⲉⲓⲙⲓⲥⲗⲏⲥ ⲛⲕⲁϩ ·",
+      "english": "and I took hold of his arm, and his arm came off in my hands, and became particles of dust;",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲁϩⲉⲣⲁⲧ ϩⲓϫⲱϥ ⲁⲓⲙⲟⲟⲩⲧϥ ϫⲉⲛⲉⲓⲥⲟⲟⲩⲛ ϫⲉⲛϥⲛⲁⲱⲛϩ ⲁⲛ ⲙⲛⲛⲥⲁⲉⲧⲣⲉϥϩⲉ ⲁⲩⲱ ⲁⲓϥⲓ ⲛⲧⲉϭⲣⲏⲡⲉ ⲉⲧϩⲓϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲱ ⲡⲉⲕⲗⲁⲗ ⲉⲧⲉⲛϩⲟⲩⲛ ⲉⲡⲉϥ**ϭⲃⲟⲓ** ⲁⲓⲉⲛⲧⲟⲩ ⲉⲡⲉⲓⲙⲁ ⲉⲣⲁⲧϥ ⲙⲡⲁϫⲟⲉⲓⲥ",
+      "english": "So I stood over him and slew him, because I knew he would not live after he was fallen; and I took the crown that was upon his head, and the bracelet that was upon his arm, and I have brought them hither to my lord.",
+      "source": "II Samuel 1",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲟⲩⲛⲟϭ ⲛⲑⲗⲓⲯⲓⲥ ⲙⲛⲟⲩⲛⲁϭ ⲛⲁϣϭⲁⲡ ϣⲱⲡⲉ ϩⲓϫⲛⲡⲉϥⲏⲓ ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ ⲛⲧϩⲉ ⲛⲧϣⲉ ⲛⲛⲉⲧⲛϭⲓϫ ⲁϫⲱⲟⲩ ⲧⲉⲧϭⲓϫ ⲉⲧϫⲟⲟⲣ ⲙⲛⲡ**ϭⲃⲁⲓ** ⲉⲧϫⲁⲥⲉ ⲉⲓ ⲉϫⲱⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ⲛⲧⲟϥ ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ",
+      "english": "and so that a great suffering and a great outcry will be upon his house and his wife, like a blow of your hands upon [them], and so that the strong hand and the outstretched arm shall come upon them at once, he and his wife!",
+      "source": "Applied curse with judicial features for Theodora against Pjor and his wife",
+      "urn": "urn:cts:copticMag:kyprianos.tm99995.kyp_t_53",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲥⲉ",
+        21,
+        18.62
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        17,
+        17.89
+      ],
+      [
+        "ⲡⲁⲫⲁⲓⲣⲉ",
+        3,
+        17.198
+      ],
+      [
+        "ϫⲟⲟⲣ",
+        11,
+        17.103
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        17.028
+      ],
+      [
+        "ⲛ",
+        91,
+        16.762
+      ],
+      [
+        "ⲁⲩⲱ",
+        52,
+        16.279
+      ],
+      [
+        "ϥ",
+        64,
+        15.952
+      ],
+      [
+        "ⲉ",
+        52,
+        15.349
+      ],
+      [
+        "ⲁ",
+        48,
+        15.229
+      ],
+      [
+        "ⲡⲉϥ",
+        23,
+        15.097
+      ],
+      [
+        "ⲙⲛ",
+        31,
+        14.937
+      ],
+      [
+        "ϭⲟⲙ",
+        13,
+        14.37
+      ],
+      [
+        "ⲡⲉⲕ",
+        16,
+        14.299
+      ],
+      [
+        "ⲉⲧ",
+        28,
+        14.091
+      ],
+      [
+        "ⲙⲁⲣⲟⲩⲟϭⲉ",
+        1,
+        14.028
+      ],
+      [
+        "ⲛⲟⲩⲏⲧⲉ",
+        1,
+        14.028
+      ],
+      [
+        "ⲥⲟⲩⲛⲧⲛⲁϣⲧⲉ",
+        1,
+        14.028
+      ],
+      [
+        "ϩⲏⲇⲣⲓⲁ",
+        1,
+        14.028
+      ],
+      [
+        "ⲥⲟⲗⲡⲟⲩ",
+        1,
+        14.028
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ϭⲃⲟⲓ",
+          14
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          57
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϭⲃⲟⲓ",
+          12
+        ],
+        [
+          "ⲉ_1_post_ϭⲃⲟⲓ",
+          12
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲥⲉ",
+          11
+        ],
+        [
+          "ϫⲟⲥⲉ_2_post_ⲉ",
+          11
+        ],
+        [
+          "ⲡⲁ_1_pre_ϭⲃⲟⲓ",
+          4
+        ],
+        [
+          "ⲡⲉ_1_pre_ϭⲃⲟⲓ",
+          5
+        ],
+        [
+          "ⲙ_2_post_ⲙⲁ",
+          3
+        ],
+        [
+          "ⲡⲁⲫⲁⲓⲣⲉ_3_post_ⲙ",
+          3
+        ],
+        [
+          "ⲙⲁ_1_post_ϭⲃⲟⲓ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲃⲟⲓ",
+          6
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲃⲟⲓ",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲃⲟⲓ",
+          4
+        ],
+        [
+          "ϫⲟⲥⲉ_2_post_ⲉⲧ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϭⲃⲟⲓ",
+          6
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϭⲃⲟⲓ",
+          2
+        ],
+        [
+          "ϩⲱⲥⲧⲉ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          2
+        ],
+        [
+          "ϩⲃⲟⲩⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲟⲥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲟϭ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          3
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          "ⲉ_1_post_ϭⲃⲟⲓ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ϭⲃⲟⲓ",
+          "ϥ_3_post_ϫⲟⲥⲉ",
+          4
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲥⲉ",
+          "ϫⲟⲥⲉ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲡⲁ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          2
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          "ⲙ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲙⲁ",
+          "ⲡⲁⲫⲁⲓⲣⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲫⲁⲓⲣⲉ_3_post_ⲙ",
+          "ⲙⲁ_1_post_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲃⲟⲓ",
+          "ⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲃⲟⲓ",
+          "ⲡⲉⲕ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          "ⲉⲧ_1_post_ϭⲃⲟⲓ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲃⲟⲓ",
+          "ϫⲟⲥⲉ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          "ⲛ_1_post_ϭⲃⲟⲓ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϭⲃⲟⲓ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲃⲟⲓ",
+          "ⲡⲉⲕ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲥⲧⲉ_1_pre_ϭⲃⲟⲓ",
+          "ⲛⲧⲉ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϭⲃⲟⲓ",
+          "ⲡⲉϥ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ϭⲃⲟⲓ_0_node",
+          "ϩⲓ_1_post_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϭⲃⲟⲓ",
+          "ⲥⲉ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϭⲃⲟⲓ",
+          "ϩⲃⲟⲩⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲃⲟⲓ",
+          "ⲛⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲃⲟⲓ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ϫⲟⲥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲥⲉ_2_post_ⲉ",
+          "ⲙⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟϭ",
+          "ⲟⲩ_2_post_ⲛⲟϭ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.6,
+      "rank": 878,
+      "count": 95
+    }
+  },
+  "etym": {
+    "egy_num": "166900",
+    "egy_lemma": "gbꜣ",
+    "demo_num": "dm627",
+    "demo_lemma": "gbj",
+    "english": "arm",
+    "german": "Arm, Oberarm",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm627"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "C4365",
+  "forms": [
+    {
+      "id": "CF10682",
+      "orth": "ϭⲓⲛⲧⲛⲛⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4944",
+      "bibliography": "CD 420a; ChLCS 59a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4363",
+      "label": "ⲧⲛⲛⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "send"
+    },
+    {
+      "target": "C4364",
+      "label": "ⲧⲛⲛⲟⲟⲩ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "send after, summon"
+    }
+  ]
+}

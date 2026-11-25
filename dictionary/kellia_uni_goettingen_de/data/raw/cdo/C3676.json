@@ -1,0 +1,42 @@
+{
+  "id": "C3676",
+  "forms": [
+    {
+      "id": "CF31695",
+      "orth": "ⲥⲁⲥⲡⲓⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31694",
+      "orth": "ⲛⲥⲁⲥⲡⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15357,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS4180",
+      "bibliography": "CD 352a; KoptHWb 193; ChLCS 49b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3675",
+      "label": "ⲥⲡⲓⲣ",
+      "pos": "N",
+      "gloss": "rib, side"
+    }
+  ]
+}

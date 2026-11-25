@@ -1,0 +1,118 @@
+{
+  "id": "C8396",
+  "forms": [
+    {
+      "id": "CF19552",
+      "orth": "ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19553",
+      "orth": "ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11303,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9691",
+      "bibliography": "DDGLC",
+      "cu_ID": "7451"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲇⲉ ⲉϩⲟⲩⲛ ⲉⲡⲉϥⲏⲓ · ⲁϥϩⲱⲧⲡ ⲉⲧⲉϥⲥϩⲓⲙⲉ ⲁϥϫⲡⲟ ⲛⲟⲩϣⲏⲣⲉ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲡ**ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ** ⲁⲡⲁ ⲡⲉⲥⲩⲛⲑⲓⲟⲥ ·",
+      "english": "Now when he had gone into his house, he made peace with his wife, and begot a son according to the word of Apa Pisentius, who was like unto an Apostle.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ",
+        1,
+        14.469
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        11.348
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ_2_post_ⲁⲡⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ_0_node",
+          "ⲁⲡⲁ_1_post_ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲥ",
+          "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ_2_post_ⲁⲡⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10890,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "245",
+    "grl_lemma": "ἀποστολικός",
+    "grl_meaning": "apostolic",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 220a"
+  }
+}

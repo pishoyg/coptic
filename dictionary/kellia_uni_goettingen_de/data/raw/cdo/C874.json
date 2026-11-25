@@ -1,0 +1,57 @@
+{
+  "id": "C874",
+  "forms": [
+    {
+      "id": "CF3090",
+      "orth": "ⲣⲉϥⲉⲓⲱ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1026",
+      "bibliography": "CD 75b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12117",
+      "label": "ⲁⲑⲓⲱⲟⲩ",
+      "pos": "VSTAT",
+      "gloss": "be unwashed, filthy, dirty"
+    },
+    {
+      "target": "C875",
+      "label": "ⲉⲓⲁⲧⲟⲟⲧ⸗ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "be desperate, renounce"
+    },
+    {
+      "target": "C871",
+      "label": "ⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "wash"
+    },
+    {
+      "target": "C872",
+      "label": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "wash"
+    },
+    {
+      "target": "C873",
+      "label": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "washing"
+    }
+  ]
+}

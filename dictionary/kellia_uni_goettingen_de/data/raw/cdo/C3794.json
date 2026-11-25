@@ -1,0 +1,255 @@
+{
+  "id": "C3794",
+  "forms": [
+    {
+      "id": "CF9510",
+      "orth": "ϯⲥⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8301,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4307",
+      "bibliography": "CD 362b; KoptHWb 200"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲧⲙ**ϯⲥⲱⲧⲉ** ⲇⲉ ⲛⲧⲉϥⲥⲱϣⲉ ⲁⲗⲗⲁ ⲛϥϯⲧⲥⲱϣⲉ ⲉⲃⲟⲗ ⲛⲕⲉⲣⲱⲙⲉ ⲛⲛⲉϥⲕⲟⲧϥ ⲉϯⲥⲱⲧⲉ ⲙⲙⲟⲥ",
+      "english": "And if he do not redeem the field, but should sell the field to another man, he shall not after redeem it.",
+      "source": "Leviticus 27",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣϣⲁⲛⲟⲩⲁ ⲛⲕⲟⲧⲕ ⲙⲛⲟⲩⲥϩⲓⲙⲉ ⲛϭⲣⲟϭ ⲙⲙⲁ ⲛⲛⲕⲟⲧⲕ ⲁⲩⲱ ⲛⲧⲟⲥ ⲉⲩϩⲙϩⲁⲗ ⲧⲉ ⲉⲁⲩϩⲁⲣⲉϩ ⲉⲣⲟⲥ ⲉⲧⲁⲁⲥ ⲛⲟⲩⲣⲱⲙⲉ ⲁⲩⲱ ⲛⲧⲟⲥ ⲙⲡⲟⲩ**ϯⲥⲱⲧⲉ** ⲙⲙⲟⲥ ϩⲛϩⲉⲛⲥⲱⲧⲉ ϫⲉⲙⲡⲟⲩϯ ⲛⲁⲥ ⲛⲟⲩⲙⲛⲧⲣⲙϩⲉ ⲉⲩⲉϭⲙⲡⲉⲩϣⲓⲛⲉ ⲛⲥⲉⲧⲙⲙⲟⲩ ⲉⲃⲟⲗ ϫⲉⲙⲡⲉⲥⲣⲣⲙϩⲉ",
+      "english": "And if any one lie carnally with a woman, and she should be a home-servant kept for a man, and she has not been ransomed, and her freedom has not been given to her, they shall be visited with punishment; but they shall not die, because she was not set at liberty.",
+      "source": "Leviticus 19",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲟⲥ",
+        1,
+        11.74
+      ],
+      [
+        "ⲥⲱϣⲉ",
+        1,
+        10.958
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        8.938
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        8.732
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϯⲥⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϯⲥⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϯⲥⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϯⲥⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϯⲥⲱⲧⲉ",
+          "ⲧⲙ_1_pre_ϯⲥⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϯⲥⲱⲧⲉ",
+          "ϯⲥⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲥⲱⲧⲉ_0_node",
+          "ⲇⲉ_1_post_ϯⲥⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϯⲥⲱⲧⲉ",
+          "ⲁⲗⲗⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ϯ",
+          "ⲛ_2_post_ϯ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7857,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3796",
+      "label": "ϫⲓⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "get ransom"
+    },
+    {
+      "target": "C3795",
+      "label": "ϯ ⲉⲡⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "pay for, as ransom"
+    },
+    {
+      "target": "C3790",
+      "label": "ⲣⲉϥⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "spinner"
+    },
+    {
+      "target": "C3797",
+      "label": "ⲣⲉϥⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redeemer"
+    },
+    {
+      "target": "C3791",
+      "label": "ⲥⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "spun (fabric)"
+    },
+    {
+      "target": "C3787",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "return, repeat, not . . . again (in neg. clause)"
+    },
+    {
+      "target": "C3789",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "stretch, reach; spin"
+    },
+    {
+      "target": "C3788",
+      "label": "ⲥⲱⲧ (ⲉ-)",
+      "pos": "V",
+      "gloss": "repeat (to do sth)"
+    },
+    {
+      "target": "C3792",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem, rescue, save"
+    },
+    {
+      "target": "C3793",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redemption, rescue; ransom, price"
+    }
+  ]
+}

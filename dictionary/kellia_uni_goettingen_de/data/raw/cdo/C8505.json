@@ -1,0 +1,150 @@
+{
+  "id": "C8505",
+  "forms": [
+    {
+      "id": "CF19991",
+      "orth": "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19992",
+      "orth": "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18709,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9958",
+      "bibliography": "DDGLC",
+      "cu_ID": "1682"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩϭⲓⲛⲁⲙⲱⲙⲟⲛ ⲁⲩⲱ ⲟⲩϣⲉ ⲛⲥⲱⲧϥ ⲙⲛⲟⲩ**ⲁⲥⲡⲁⲗⲁⲑⲟⲥ** ⲛⲁⲣⲱⲙⲁⲧⲁ ⲁⲓϯ ⲙⲡⲁⲥⲧⲟⲓ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲭⲁⲗⲃⲁⲛⲏ ⲙⲛⲟⲩⲉⲓⲃ ⲙⲛⲟⲩⲥⲧⲁⲕⲧⲏ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲗϩⲱⲃ ⲛⲗⲓⲃⲁⲛⲟⲥ ϩⲛⲟⲩⲥⲕⲏⲛⲏ",
+      "english": "I gave a sweet smell like cinnamon and aspalathus, and I yielded a pleasant odour like the best myrrh, as galbanum, and onyx, and sweet storax, and as the fume of frankincense in the tabernacle.",
+      "source": "Sirach 24",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲱⲙⲁⲧⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ⲥⲱⲧϥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲱⲙⲁⲧⲁ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          "ⲙⲛ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          "ⲟⲩ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥⲡⲁⲗⲁⲑⲟⲥ_0_node",
+          "ⲛ_1_post_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲡⲁⲗⲁⲑⲟⲥ",
+          "ⲁⲣⲱⲙⲁⲧⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18327,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6257",
+    "grl_lemma": "ἀσπάλαθος",
+    "grl_meaning": "camel's thorn (fragrance)",
+    "grl_pos": "noun",
+    "grl_ref": "Muraoka 2009, 98a"
+  }
+}

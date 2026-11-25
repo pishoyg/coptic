@@ -1,0 +1,257 @@
+{
+  "id": "C8163",
+  "forms": [
+    {
+      "id": "CF18712",
+      "orth": "ⲁⲕⲣⲟⲁⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18713",
+      "orth": "ⲁⲕⲣⲟⲁⲇⲏⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18714",
+      "orth": "ⲁⲕⲣⲟⲁⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5034,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9223",
+      "bibliography": "DDGLC",
+      "cu_ID": "1305"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲉⲙⲁⲣⲉⲡ**ⲁⲕⲣⲟⲁⲧⲏⲥ** ϯϩⲏⲩ ⲉϫⲙⲡⲉⲧϯⲥⲃⲱ ⲛⲁϥ · ⲟⲩⲇⲉ ⲡⲉⲧϯⲥⲃⲱ ⲉϫⲙⲡⲉⲧⲥⲱⲧⲙ ⲛⲥⲱϥ ·",
+      "english": "The meaning of which is, that the disciple gaineth no advantage without a master to teach him, neither doth the master without a pupil to listen to him.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲱ ⲛ**ⲁⲕⲣⲟⲁⲧⲏⲥ** ⲙⲡⲣϫⲛⲁⲁⲩ ⲉϯ ⲕⲁⲧⲁⲧⲉⲛϭⲟⲙ . ⲉⲛⲥⲟⲟⲩⲛ · ϫⲉⲡⲧⲉⲧⲛⲛⲁⲧⲁⲁϥ · ⲙⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ . ⲙⲓⲭⲁⲏⲗ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 5",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:62-70",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲱ ⲛⲁⲙⲉⲣⲁⲧⲉ ⲟⲩⲛⲟϭ ⲡⲉ ⲡⲧⲁⲉⲓⲟ ⲙⲡⲉⲓⲛⲟϭ ⲛϣⲁ ⲙⲡϩⲟⲟⲩ ⲉⲧⲡⲟⲣϣ ⲛⲁⲛ ⲉⲃⲟⲗ · ϩⲙⲡ ⲙⲙⲁⲧⲉ ⲁⲛ · ⲁⲗⲗⲁ ϩⲛⲧⲕⲉ ⲡⲉ ⲟⲛ · ⲧⲉⲛⲟⲩ ϭⲉ ⲱ ⲛ**ⲁⲕⲣⲟⲁⲧⲏⲥ** ⲙⲙⲁⲓⲥⲃⲱ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:31-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲓⲥⲃⲱ",
+        3,
+        21.031
+      ],
+      [
+        "ϫⲛⲁⲁⲩ",
+        1,
+        14.276
+      ],
+      [
+        "ⲱ",
+        4,
+        14.24
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        3,
+        12.594
+      ],
+      [
+        "ϭⲉ",
+        3,
+        11.883
+      ],
+      [
+        "ϯϩⲏⲩ",
+        1,
+        11.406
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        2,
+        11.359
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        8.91
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.885
+      ],
+      [
+        "ⲙ",
+        3,
+        7.784
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        7.714
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.962
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.423
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.405
+      ],
+      [
+        "ϯ",
+        1,
+        5.194
+      ],
+      [
+        "ⲕ",
+        1,
+        4.531
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.824
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ϭⲉ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲁⲕⲣⲟⲁⲧⲏⲥ_0_node",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲙⲁⲓⲥⲃⲱ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ϭⲉ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϭⲉ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲱ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲛ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲁⲕⲣⲟⲁⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲕⲣⲟⲁⲧⲏⲥ_0_node",
+          "ⲙ_1_post_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲁⲕⲣⲟⲁⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲡ_1_pre_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲕⲣⲟⲁⲧⲏⲥ",
+          "ⲙⲁⲓⲥⲃⲱ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4613,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "3433",
+    "grl_lemma": "ἀκροατής",
+    "grl_meaning": "hearer",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 56a; Preisigke 1:49"
+  }
+}

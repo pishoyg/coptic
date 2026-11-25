@@ -1,0 +1,127 @@
+{
+  "id": "C6421",
+  "forms": [
+    {
+      "id": "CF14870",
+      "orth": "ϩⲁⲁⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12295,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7128",
+      "bibliography": "CD 652b; CED 274; KoptHWb 353; DELC 288a; ChLCS 87b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉϯⲛⲁϫⲉⲕⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲓⲙ ⲛⲧⲉⲡⲟⲩⲟⲉⲓⲛ · ⲁⲩⲱ ⲙⲛⲅⲛⲱⲥⲓⲥ ⲛⲓⲙ ϫⲓⲛⲙⲡⲥⲁ ⲛϩⲟⲩⲛ ⲛⲥⲁ ⲛϩⲟⲩⲛ . ϣⲁⲡⲥⲁ ⲛⲃⲟⲗ ⲛⲛⲥⲁ ⲛⲃⲟⲗ · ϫⲓⲛⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ ϣⲁⲡⲕⲁⲕⲉ ⲛⲛⲕⲁⲕⲉ · ⲁⲩⲱ ϫⲓⲛⲡⲟⲩⲟⲉⲓⲛ ⲛⲛⲟⲩⲟⲉⲓⲛ . ϣⲁⲡ**ϩⲁⲁⲃ** ⲛⲧϩⲩⲗⲏ · ϫⲓⲛⲛⲛⲟⲩⲧⲉ ⲧⲏⲣⲟⲩ . ϣⲁⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ · ϫⲓⲛⲛϫⲟⲉⲓⲥ ⲧⲏⲣⲟⲩ . ϣⲁⲛⲇⲉⲕⲁⲛⲟⲥ · ϫⲓⲛⲛⲉⲝⲟⲩⲥⲓⲁ ⲧⲏⲣⲟⲩ . ϣⲁⲛⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ · ϫⲓⲛⲡⲧⲁⲙⲓⲟ ⲛⲣⲣⲱⲙⲉ . ϣⲁⲛⲉⲑⲏⲣⲓⲟⲛ · ⲙⲛⲛⲧⲃⲛⲟⲟⲩⲉ . ⲙⲛⲛϫⲁⲧϥⲉ · ϫⲉⲉⲩⲉⲙⲟⲩⲧⲉ ⲉⲣⲱⲧⲛϫⲉⲛⲧⲉⲗⲉⲓⲟⲥ · ⲉⲧϫⲏⲕ ⲉⲃⲟⲗ ϩⲙⲡⲗⲏⲣⲱⲙⲁ ⲛⲓⲙ ·",
+      "english": "Amēn, amēn, I say unto you: I will perfect you in all mysteries of the Light and all gnoses from the interiors of the interiors to the exteriors of the exteriors, from the Ineffable down to the darkness of darknesses, from the Light of lights down to the . . . . of matter, from all the gods down to the demons, from all the lords down to the decans, from all the authorities down to the servitors, from the creation of men down to [that] of the wild-beasts, of the cattle and of the reptiles, in order that ye may be called perfect, perfected in | all fulness.",
+      "source": "Pistis Sophia Book 1 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:50-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲩⲗⲏ",
+        1,
+        12.877
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        1,
+        9.865
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲁⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲩⲗⲏ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲁⲃ_0_node",
+          "ⲛ_1_post_ϩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲁⲃ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϩⲩⲗⲏ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11870,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "103540",
+    "egy_lemma": "ḥbꜣ",
+    "english": "[beer in a certain state (med.)]",
+    "german": "[guter Zustand des Bieres]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/103540"
+  }
+}

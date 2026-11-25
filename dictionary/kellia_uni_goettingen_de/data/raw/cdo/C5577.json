@@ -1,0 +1,65 @@
+{
+  "id": "C5577",
+  "forms": [
+    {
+      "id": "CF13129",
+      "orth": "ϭⲓⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6242",
+      "bibliography": "CD 532a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5579",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "prison"
+    },
+    {
+      "target": "C5576",
+      "label": "ⲙⲁ ⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "place of confinement, prison"
+    },
+    {
+      "target": "C5574",
+      "label": "ⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "shut, enclose, imprison"
+    },
+    {
+      "target": "C5578",
+      "label": "ⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "seclusion, imprisonment"
+    },
+    {
+      "target": "C5575",
+      "label": "ⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "imprison"
+    }
+  ]
+}

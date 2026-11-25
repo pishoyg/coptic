@@ -1,0 +1,285 @@
+{
+  "id": "C5249",
+  "forms": [
+    {
+      "id": "CF12467",
+      "orth": "ⲟⲑⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3894,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5893",
+      "bibliography": "CD 499a; KoptHWb 281; ChLCS 69b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲛⲉⲛⲃⲁⲗ ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛϩⲉⲛ**ⲟⲑⲉ** ⲙⲙⲟⲟⲩ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥϣⲁϫⲉ ⲙⲛⲧⲡⲉⲧⲣⲁ · ⲁⲥⲧⲁⲩⲟ ⲉⲃⲟⲗ ⲛϩⲉⲛ**ⲟⲑⲉ** ⲙⲙⲟⲟⲩ ⁛—",
+      "english": "It was Moses who spake to the rock, and it sent forth fountains of water.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁϩⲱⲣⲡ ⲙⲡⲁⲡⲣⲏϣ ϩⲛⲛⲁⲣⲙⲉⲓⲟⲟⲩⲉ · ⲁⲩⲱ ⲟⲛ ϫⲉⲁⲛⲁⲃⲁⲗ ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛϩⲉⲛ**ⲟⲑⲉ** ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϫⲉⲙⲡⲟⲩϩⲁⲣⲉϩ ⲉⲡⲉⲕⲛⲟⲙⲟⲥ · ⲉⲓⲱ ⲉⲃⲟⲗ ⲙⲡⲧⲱⲗⲙ ϩⲓⲧⲛ ⲛⲣⲙⲉⲓⲟⲟⲩⲉ ·",
+      "english": "and I soak my cushion[s] with my tears.' 'Wash though away the defilement by means of tears,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲕⲧⲟⲩ",
+        1,
+        16.013
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        4,
+        15.308
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        3,
+        12.829
+      ],
+      [
+        "ϩⲉⲛ",
+        6,
+        12.829
+      ],
+      [
+        "ⲉⲓⲃ",
+        1,
+        12.428
+      ],
+      [
+        "ⲓⲉⲣⲱⲟⲩ",
+        1,
+        12.389
+      ],
+      [
+        "ⲉⲓⲧⲁ",
+        1,
+        11.817
+      ],
+      [
+        "ϣⲟⲩⲟ",
+        1,
+        11.621
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        6,
+        11.22
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        3,
+        10.051
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        9.981
+      ],
+      [
+        "⁛—",
+        1,
+        9.753
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        9.299
+      ],
+      [
+        "ⲛ",
+        7,
+        9.231
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        9.186
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        8.022
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        1,
+        7.384
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        7.236
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.207
+      ],
+      [
+        "ⲙ",
+        3,
+        7.106
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲑⲉ_0_node",
+          8
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲑⲉ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲟⲑⲉ",
+          3
+        ],
+        [
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲑⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲑⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲟⲑⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲑⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲑⲉ_0_node",
+          "ⲙ_1_post_ⲟⲑⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲑⲉ",
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲑⲉ",
+          "ⲟⲑⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3505,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5246",
+      "label": "ϣⲉ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "ladle"
+    },
+    {
+      "target": "C5252",
+      "label": "ϫⲓⲛⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5244",
+      "label": "ⲙⲁ ⲛⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "melting pot"
+    },
+    {
+      "target": "C5247",
+      "label": "ⲟⲩⲟⲧϩ",
+      "pos": "N",
+      "gloss": "pouring thing, cup, bowl"
+    },
+    {
+      "target": "C5248",
+      "label": "ⲟⲩⲟⲧϩⲉ",
+      "pos": "N",
+      "gloss": "pouring thing, cup, bowl"
+    },
+    {
+      "target": "C5242",
+      "label": "ⲟⲩⲧⲱϩ",
+      "pos": "N",
+      "gloss": "molten thing"
+    },
+    {
+      "target": "C5243",
+      "label": "ⲟⲩⲧⲱϩ",
+      "pos": "N",
+      "gloss": "molten"
+    },
+    {
+      "target": "C5241",
+      "label": "ⲟⲩⲱⲧϩ",
+      "pos": "V",
+      "gloss": "pour (liquid), cast (in mould), draw (water)"
+    },
+    {
+      "target": "C5250",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C5251",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5245",
+      "label": "ⲣⲉϥⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "he that pours, cup-bearer, water-drawer"
+    }
+  ]
+}

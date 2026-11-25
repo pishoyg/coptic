@@ -1,0 +1,72 @@
+{
+  "id": "C1716",
+  "forms": [
+    {
+      "id": "CF4970",
+      "orth": "ⲙⲛⲧⲗⲁⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4971",
+      "orth": "ⲙⲛⲧⲗⲁⲁⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4972",
+      "orth": "ⲙⲛⲧⲗⲁⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4973",
+      "orth": "ⲙⲛⲧⲗⲁⲟⲩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1986",
+      "bibliography": "CD 147a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1712",
+      "label": "ⲁⲧⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "without, lacking any"
+    },
+    {
+      "target": "C1711",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "anyone, anything, something; (not) any; no one, nothing"
+    },
+    {
+      "target": "C1713",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "any"
+    },
+    {
+      "target": "C1714",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "any"
+    },
+    {
+      "target": "C1715",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "ADV",
+      "gloss": "(not) at all"
+    }
+  ]
+}

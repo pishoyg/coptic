@@ -1,0 +1,146 @@
+{
+  "id": "C9487",
+  "forms": [
+    {
+      "id": "CF24108",
+      "orth": "ⲕⲟⲗⲟⲃⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24109",
+      "orth": "ⲕⲟⲗⲟⲃⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24110",
+      "orth": "ⲕⲟⲗⲟⲃⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7046,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12055",
+      "bibliography": "DDGLC",
+      "cu_ID": "3058"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲁⲡⲁ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡ**ⲕⲟⲗⲟⲃⲟⲥ** · ϫⲉⲉⲓⲧⲛⲧⲱⲛ ⲉⲩⲣⲱⲙⲉ ⲉϥϩⲙⲟⲟⲥ ϩⲁⲣⲁⲧϥ ⲛⲟⲩϣⲏⲛ · ⲉϥⲛⲁⲩ ⲉϩⲁϩ ⲛⲑⲩⲣⲓⲟⲛ ⲙⲛϩⲉⲛϫⲁⲧⲃⲉ ⲉⲩⲛⲏⲩ ϣⲁⲣⲟϥ ·",
+      "english": "Aba John Kolobos said: 'I am like a man sitting at the foot of a tree who sees many beasts and reptiles coming towards him.'",
+      "source": "Apophthegmata Patrum Sahidic 085",
+      "urn": "urn:cts:copticLit:ap.85.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲁⲡⲁ ⲡⲟⲓⲙⲏⲛ ⲉⲧⲃⲉⲁⲡⲁ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡ**ⲕⲟⲗⲟⲃⲟⲥ** ϫⲉⲁϥⲧⲱⲃϩ ⲙⲡⲛⲟⲩⲧⲉ",
+      "english": "Abba Poemen said concerning Abba John the Little that he prayed to God.",
+      "source": "Apophthegmata Patrum Sahidic 037",
+      "urn": "urn:cts:copticLit:ap.37.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        2,
+        13.781
+      ],
+      [
+        "ⲁⲡⲁ",
+        2,
+        13.348
+      ],
+      [
+        "ⲧⲱⲃϩ",
+        1,
+        12.521
+      ],
+      [
+        "ϫⲉ",
+        2,
+        8.146
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲗⲟⲃⲟⲥ",
+          2
+        ],
+        [
+          "ⲕⲟⲗⲟⲃⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲗⲟⲃⲟⲥ",
+          "ⲕⲟⲗⲟⲃⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6598,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "4942",
+    "grl_lemma": "κολοβός",
+    "grl_meaning": "docked, curtailed, maimed, mutilated",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 973a; Preisigke 1:819"
+  }
+}

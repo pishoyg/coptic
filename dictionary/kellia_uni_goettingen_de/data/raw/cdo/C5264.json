@@ -1,0 +1,58 @@
+{
+  "id": "C5264",
+  "forms": [
+    {
+      "id": "CF12497",
+      "orth": "ⲣⲟⲩⲱϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5910",
+      "bibliography": "CD 502a; KoptHWb 282; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5265",
+      "label": "ϯⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "set a distance, separate"
+    },
+    {
+      "target": "C5267",
+      "label": "ⲛⲟⲩⲉϣ ⲛ-",
+      "pos": "PREP",
+      "gloss": "with lack of, without"
+    },
+    {
+      "target": "C5263",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "cleft, gap; space, distance; interval, pause, holiday"
+    },
+    {
+      "target": "C5266",
+      "label": "ⲧⲁⲡⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "gap, chink"
+    }
+  ]
+}

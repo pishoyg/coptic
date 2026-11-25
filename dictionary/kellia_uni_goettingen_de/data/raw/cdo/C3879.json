@@ -1,0 +1,88 @@
+{
+  "id": "C3879",
+  "forms": [
+    {
+      "id": "CF9689",
+      "orth": "ϫⲓⲥⲟⲟⲩⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4399",
+      "bibliography": "CD 370b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3880",
+      "label": "ϭⲓⲛⲥⲟⲩⲛ-",
+      "pos": "N",
+      "gloss": "knowing, knowledge"
+    },
+    {
+      "target": "C3874",
+      "label": "ⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "without knowledge"
+    },
+    {
+      "target": "C3875",
+      "label": "ⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C3878",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲟⲩⲉⲛ-",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3877",
+      "label": "ⲣⲉϥⲥⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one who knows"
+    },
+    {
+      "target": "C3876",
+      "label": "ⲣⲙⲛⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one known, acquaintance"
+    },
+    {
+      "target": "C3871",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "know; know, recognize, distinguish"
+    },
+    {
+      "target": "C3872",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3873",
+      "label": "ⲥⲟⲩⲏⲛ",
+      "pos": "N",
+      "gloss": "well known, famous person"
+    }
+  ]
+}

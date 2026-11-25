@@ -1,0 +1,139 @@
+{
+  "id": "C8574",
+  "forms": [
+    {
+      "id": "CF20190",
+      "orth": "ⲁϩⲟⲣⲁⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20191",
+      "orth": "ⲁϩⲟⲣⲁⲧⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13571,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20192",
+      "orth": "ⲁϩⲟⲣⲁⲧⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20193",
+      "orth": "ⲁⲟⲣⲁⲧⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10081",
+      "bibliography": "DDGLC",
+      "cu_ID": "2046"
+    },
+    {
+      "id": "CS10082",
+      "bibliography": "DDGLC",
+      "cu_ID": "3579"
+    },
+    {
+      "id": "CS10083",
+      "bibliography": "DDGLC",
+      "cu_ID": "9389"
+    },
+    {
+      "id": "CS10084",
+      "bibliography": "DDGLC",
+      "cu_ID": "5135"
+    },
+    {
+      "id": "CS10085",
+      "bibliography": "DDGLC",
+      "cu_ID": "8249"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲛⲕⲧⲟⲛ ϭⲉ ⲟⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲙⲉⲅⲉⲑⲟⲥ . ⲙⲡⲉⲓ**ⲁϩⲟⲣⲁⲧⲟⲛ** ⲥⲧⲁⲩⲣⲟⲥ ⲛⲧⲛϣⲁϫⲉ ⲉⲣⲟϥ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲅⲉⲑⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲥⲧⲁⲩⲣⲟⲥ",
+        1,
+        13.35
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϩⲟⲣⲁⲧⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13167,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3122",
+    "grl_lemma": "ἀόρατος",
+    "grl_meaning": "unseen, invisble",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 173a; Preisigke 1:149"
+  }
+}

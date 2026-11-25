@@ -1,0 +1,69 @@
+{
+  "id": "C11259",
+  "forms": [
+    {
+      "id": "CF31349",
+      "orth": "ϩⲩⲥⲩⲭⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF31351",
+      "orth": "ϩⲩⲥⲩⲭⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31350",
+      "orth": "ϩⲏⲥⲩⲭⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10931,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31352",
+      "orth": "ⲏⲥⲓⲭⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11530,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31353",
+      "orth": "ⲏⲥⲩⲭⲓⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15897",
+      "bibliography": "DDGLC",
+      "cu_ID": "2189"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉϫⲉϥⲟⲩⲱϣ ⲁⲛ ⲛϫⲉⲡⲁⲓⲗⲁⲟⲥ ⲙⲡⲓⲙⲱⲟⲩ ⲛⲧⲉⲡⲓⲥⲓⲗⲱⲁⲙ ⲫⲏⲉⲑⲙⲟϣⲓ ϧⲉⲛⲟⲩ**ⲏⲥⲓⲭⲓⲁ** ⲁⲗⲗⲁ ϫⲉⲧⲉⲧⲉⲛⲟⲩⲱϣ ⲉⲑⲣⲉϥⲉⲣⲟⲩⲣⲟ ⲉϫⲉⲛⲑⲏⲛⲟⲩ ⲛϫⲉⲣⲁⲥⲥⲱⲛ ⲛⲉⲙⲡϣⲏⲣⲓ ⲛⲣⲟⲙⲉⲗⲓⲁⲥ .",
+      "english": "Because this people chooses not the water of Siloam that goes softly, but wills to have Rassin, and the son of Romelias to be king over you;",
+      "source": "23_Isaias_08",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:08",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2505",
+    "grl_lemma": "ἡσυχία",
+    "grl_meaning": "rest, quiet",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 779b; Preisigke 1:663"
+  }
+}

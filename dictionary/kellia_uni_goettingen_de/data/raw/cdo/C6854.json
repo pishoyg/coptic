@@ -1,0 +1,76 @@
+{
+  "id": "C6854",
+  "forms": [
+    {
+      "id": "CF15757",
+      "orth": "ⲣϩⲓⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7571",
+      "bibliography": "CD 712a; KoptHWb 391; DELC 313a; ChLCS 95a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6857",
+      "label": "ϣⲡϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "take trouble, suffer"
+    },
+    {
+      "target": "C6852",
+      "label": "ϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "toil, be troubled, difficult; be wearied, suffering"
+    },
+    {
+      "target": "C6853",
+      "label": "ϩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "labour, weariness, suffering"
+    },
+    {
+      "target": "C6858",
+      "label": "ϩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "labour"
+    },
+    {
+      "target": "C6859",
+      "label": "ϭⲓϧⲓⲥⲓ",
+      "pos": "V",
+      "gloss": "labour, suffer"
+    },
+    {
+      "target": "C6855",
+      "label": "ϯϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "give trouble"
+    },
+    {
+      "target": "C6856",
+      "label": "ⲟⲩⲉϩϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "give trouble"
+    }
+  ]
+}

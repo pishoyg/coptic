@@ -1,0 +1,46 @@
+{
+  "id": "C5793",
+  "forms": [
+    {
+      "id": "CF13583",
+      "orth": "ϣⲕⲗⲕⲉⲗ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϣⲕⲏⲗⲕⲉⲗ",
+      "dialect": "S",
+      "id": "1877.1"
+    },
+    {
+      "orth": "ϣϭⲗϭⲗⲉ",
+      "dialect": "A",
+      "id": "1877.2"
+    },
+    {
+      "orth": "ϣⲕⲏⲗⲕⲉⲗ",
+      "dialect": "F",
+      "id": "1877.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6472",
+      "bibliography": "CD 556b-557a; CED 239; KoptHWb 308; ChLCS 76b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C5791",
+      "type": "cf",
+      "label": "bell, curl"
+    }
+  ]
+}

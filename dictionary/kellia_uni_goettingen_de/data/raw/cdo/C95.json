@@ -1,0 +1,102 @@
+{
+  "id": "C95",
+  "forms": [
+    {
+      "id": "CF335",
+      "orth": "ⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF336",
+      "orth": "ⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS112",
+      "bibliography": "CD 8ab"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C5673",
+      "type": "cf",
+      "label": "know, be able"
+    },
+    {
+      "target": "C116",
+      "type": "syn",
+      "label": "unrestrained, uncontrollable"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C94",
+      "label": "ϩⲓϫⲉⲛⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "overcome"
+    },
+    {
+      "target": "C99",
+      "label": "ϫⲓⲛⲁⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "arrest; restraint"
+    },
+    {
+      "target": "C91",
+      "label": "ⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "seize, possess, detain; prevail, be in possession, be strong"
+    },
+    {
+      "target": "C12028",
+      "label": "ⲁⲙⲟⲛⲓ",
+      "pos": "N",
+      "gloss": "handle"
+    },
+    {
+      "target": "C97",
+      "label": "ⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "endurance, patience"
+    },
+    {
+      "target": "C96",
+      "label": "ⲙⲉⲧⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "uncontrolledness, intemperance"
+    },
+    {
+      "target": "C98",
+      "label": "ⲙⲉⲧⲣⲉϥⲁⲙⲟⲛⲓ ⲛⲧⲉⲛ-",
+      "pos": "N",
+      "gloss": "endurance"
+    },
+    {
+      "target": "C92",
+      "label": "ⲛⲉⲙⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "support, help"
+    },
+    {
+      "target": "C93",
+      "label": "ⲛⲧⲉⲛⲁⲙⲟⲛⲓ",
+      "pos": "V",
+      "gloss": "hold, be in possession of; endure, restrain oneself"
+    }
+  ]
+}

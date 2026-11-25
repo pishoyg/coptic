@@ -1,0 +1,145 @@
+{
+  "id": "C5209",
+  "forms": [
+    {
+      "id": "CF12385",
+      "orth": "ⲟⲩⲱⲧⲃ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6950,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5852",
+      "bibliography": "CD 496b-497a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲡⲉⲧⲉⲛϥⲛⲏⲩ ⲁⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲣⲟ ⲉϩⲟⲩⲛ ⲉⲡⲟϩⲉ ⲛⲛⲉⲥⲟⲟⲩ ⲁⲗⲗⲁ **ⲉϥⲟⲩⲱⲧⲃ **ⲉⲃⲟⲗ**** ϩⲓⲕⲉⲥⲁ . ⲡⲉⲧⲙⲙⲁⲩ ⲟⲩⲣⲉϥϫⲓⲟⲩⲉ ⲁⲩⲱ ⲟⲩⲥⲟⲟⲛⲉ ⲡⲉ .",
+      "english": "'Most certainly, I tell you, one who doesn't enter by the door into the sheep fold, but climbs up some other way, the same is a thief and a robber.",
+      "source": "43_John_10",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ϭⲉ ⲧⲁⲭⲩ **ⲛⲧⲁϥⲟⲩⲱⲧⲃ **ⲉⲃⲟⲗ**** ϩⲓⲕⲉⲥⲁ · ⲁⲛⲧⲓⲣⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ⲁϥⲣⲇⲓⲁⲃⲟⲗⲟⲥ ·",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲧⲁϥⲟⲩⲱⲧⲃ **ⲉⲃⲟⲗ**** ϩⲓⲕⲉⲥⲁ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL 45-53",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_45_53",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6511,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5216",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉϧⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "mixture, blend (of wine)"
+    },
+    {
+      "target": "C5211",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "migration, death"
+    },
+    {
+      "target": "C5206",
+      "label": "ϭⲓⲛⲟⲩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "migration, changeableness"
+    },
+    {
+      "target": "C5205",
+      "label": "ⲁⲧⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "immutable"
+    },
+    {
+      "target": "C5203",
+      "label": "ⲟⲩⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "change/be changed, remove, pass through, transfer"
+    },
+    {
+      "target": "C5208",
+      "label": "ⲟⲩⲱⲧⲃ ϩⲛ-",
+      "pos": "V",
+      "gloss": "change from"
+    },
+    {
+      "target": "C5207",
+      "label": "ⲟⲩⲱⲧⲃ ⲉ-",
+      "pos": "V",
+      "gloss": "change to, change into, surpass"
+    },
+    {
+      "target": "C5214",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "pass within"
+    },
+    {
+      "target": "C5215",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ ⲉ-",
+      "pos": "V",
+      "gloss": "pass into, intrude into"
+    },
+    {
+      "target": "C5217",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "pass beyond"
+    },
+    {
+      "target": "C5204",
+      "label": "ⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "passing over, death"
+    },
+    {
+      "target": "C5210",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "overrun, crossing, death"
+    },
+    {
+      "target": "C5213",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "pass upward"
+    },
+    {
+      "target": "C5212",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲥⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "step over"
+    }
+  ]
+}

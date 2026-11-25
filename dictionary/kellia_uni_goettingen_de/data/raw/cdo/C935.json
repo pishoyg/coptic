@@ -1,0 +1,81 @@
+{
+  "id": "C935",
+  "forms": [
+    {
+      "id": "CF3214",
+      "orth": "ⲉⲓⲉⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15664,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1092",
+      "bibliography": "CD 81ab; KoptHWb 50; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡϣⲓ ⲛⲛϭⲁϫⲉ ⲛⲛⲟⲩⲃ ⲉⲛⲧⲁϥⲁⲓⲧⲉⲓ ⲙⲙⲟⲟⲩ ⲁϥⲣⲙⲛⲧⲥⲁϣϥⲉ ⲛϣⲉ ⲛⲭⲣⲩⲥⲟⲩⲥ ⲭⲱⲣⲓⲥ ⲙⲉⲛⲓⲥⲕⲟⲥ ⲁⲩⲱ ⲛⲉⲥⲫⲣⲁⲅⲓⲥ ⲙⲛⲛϩⲟⲓⲧⲉ ⲛⲉⲩⲟ ⲛⲉⲓⲉⲡϫⲏϭⲉ ⲉϣⲁⲣⲉⲡⲣⲣⲟ ⲙⲙⲁⲇⲓϩⲁⲙ ⲧⲁⲁⲩ ϩⲓⲱⲱϥ ⲁⲩⲱ ⲡⲃⲟⲗ ⲛⲙⲡⲉⲣⲓⲑⲉⲙⲁⲧⲁ ⲛⲛⲟⲩⲃ ⲉⲧⲉⲙⲡ**ⲉⲓⲉⲡ**ⲥⲁ ⲛⲉ ⲉⲧϩⲛⲙⲙⲁⲕϩ ⲛⲉⲩϭⲁⲙⲟⲩⲗ",
+      "english": "And the weight of the golden earrings which he asked, was a thousand and seven hundred pieces of gold, besides the crescents, and the chains, and the garments, and the purple cloths that were on the kings of Madiam, and besides the chains that were on the necks of their camels.",
+      "source": "Judges 8",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C936",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trade; merchandise"
+    },
+    {
+      "target": "C934",
+      "label": "ⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art, occupation"
+    },
+    {
+      "target": "C941",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art"
+    },
+    {
+      "target": "C939",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C940",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C937",
+      "label": "ⲣⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "V",
+      "gloss": "trade"
+    },
+    {
+      "target": "C938",
+      "label": "ⲣⲉⲓⲟⲡⲉ",
+      "pos": "V",
+      "gloss": "spin"
+    }
+  ]
+}

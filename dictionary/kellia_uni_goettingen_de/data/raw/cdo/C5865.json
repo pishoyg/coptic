@@ -1,0 +1,181 @@
+{
+  "id": "C5865",
+  "forms": [
+    {
+      "id": "CF13728",
+      "orth": "ϣⲗϭⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11452,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲉⲗϭⲁⲙ",
+      "dialect": "S",
+      "id": "1916.1"
+    },
+    {
+      "orth": "ϣⲗⲧⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5985,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϣⲗⲧⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4393,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϣⲗⲧⲉⲙ",
+      "dialect": "S",
+      "id": "1916.4"
+    },
+    {
+      "orth": "ϣⲉⲗⲧⲙ",
+      "dialect": "S",
+      "id": "1916.5"
+    },
+    {
+      "orth": "ϣⲉⲗⲧⲉⲙ",
+      "dialect": "S",
+      "id": "1916.6"
+    },
+    {
+      "orth": "ϣⲁⲗⲧⲉⲙ",
+      "dialect": "S",
+      "id": "1916.7"
+    },
+    {
+      "orth": "ϣⲁⲗⲧⲏⲙ",
+      "dialect": "S",
+      "id": "1916.8"
+    },
+    {
+      "orth": "ϣⲉⲗⲧⲏⲙ",
+      "dialect": "S",
+      "id": "1916.9"
+    },
+    {
+      "orth": "ϣⲁⲗⲧⲁⲙ",
+      "dialect": "S",
+      "id": "1916.10"
+    },
+    {
+      "orth": "ϣⲁⲗⲧⲁⲙ",
+      "dialect": "B",
+      "id": "1916.11"
+    },
+    {
+      "orth": "ϣⲉⲗⲧⲁⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2912,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϣⲉⲗⲧⲉⲙ",
+      "dialect": "F",
+      "id": "1916.13"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6547",
+      "bibliography": "CD 563a; CED 242; KoptHWb 313; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲕ ⲇⲉ ⲡϫⲱϥ ⲙⲡ**ϣⲗϭⲟⲙ** ⲉⲕⲛⲁϯ ⲡϫⲱϥ ⲙⲛⲡⲣⲱⲕϩ ⲉⲡⲟⲩϩⲏⲧ ϣⲁⲛⲟⲩⲉⲣⲏⲩ",
+      "english": "And you, O scorching of the mustard, may you put scorching and burning in their hearts towards one another!",
+      "source": "Separation spell",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡϫⲱ",
+        1,
+        20.598
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲗϭⲟⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11034,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d6129",
+    "demo_lemma": "šlgm",
+    "english": "[rapeseed]",
+    "german": "Raps",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6129"
+  }
+}

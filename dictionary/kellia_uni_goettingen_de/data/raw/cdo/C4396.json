@@ -1,0 +1,169 @@
+{
+  "id": "C4396",
+  "forms": [
+    {
+      "id": "CF10744",
+      "orth": "ⲉⲧⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12252,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4979",
+      "bibliography": "CD 259b; CED 192; KoptHWb 239; DELC 218b; ChLCS 59b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡϥϯⲡⲥⲱⲧϥ ⲙⲡⲉϥⲟⲩⲟⲉⲓⲛ ⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲛⲧⲁⲛⲁⲣⲭⲱⲛ ϯⲡⲉⲩⲥⲱⲧϥ ⲛϩⲏⲧϥ ⲁϥⲟⲩⲉϣⲣϫⲟⲉⲓⲥ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲙⲉϩⲙⲛⲧϣⲟⲙⲧⲉ ⲛⲁⲓⲱⲛ ⲧⲏⲣϥ ⲙⲛⲛⲉⲧϣⲟⲟⲡ ⲉⲡⲉϥⲉⲥⲏⲧ · ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲉⲛⲁⲣⲭⲱⲛ ⲙⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲁⲓⲱⲛ ⲛⲧⲉⲣⲟⲩϭⲱⲛⲧ ⲉⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ . ⲧⲁⲓ ⲉⲧⲙⲡⲉⲩ**ⲉⲧⲡⲉ** .",
+      "english": "“and had not given the purification of his light at the time when the rulers gave their purification, in that he desired to rule over the whole thirteenth æon | and those who are below it. It came to pass then, when the rulers of the twelve æons were enraged against Pistis Sophia, who is above them,”",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲥⲧⲱ",
+        1,
+        14.532
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲡⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲧⲡⲉ",
+          "ⲉⲧⲡⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11825,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4402",
+      "label": "ϩⲓⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4400",
+      "label": "ϩⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4398",
+      "label": "ⲙⲁ ⲛⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "upper part of the house"
+    },
+    {
+      "target": "C4399",
+      "label": "ⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4397",
+      "label": "ⲡⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "the top"
+    },
+    {
+      "target": "C4395",
+      "label": "ⲣϩⲓⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4394",
+      "label": "ⲣⲥⲁⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4393",
+      "label": "ⲣⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4401",
+      "label": "ⲥⲁⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4392",
+      "label": "ⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "what is above, upper part"
+    }
+  ]
+}

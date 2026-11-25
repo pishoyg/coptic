@@ -1,0 +1,52 @@
+{
+  "id": "C7012",
+  "forms": [
+    {
+      "id": "CF16080",
+      "orth": "ϭⲁⲗϩⲟϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7733",
+      "bibliography": "CD 741a; KoptHWb 405; DELC 319b; ChLCS 99a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7599",
+      "type": "cf",
+      "label": "return, roll back, curl up, separate, set apart, turn away"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7010",
+      "label": "ϩϥⲱ",
+      "pos": "N",
+      "gloss": "serpent"
+    },
+    {
+      "target": "C7011",
+      "label": "ϩⲟϥ",
+      "pos": "N",
+      "gloss": "serpent"
+    },
+    {
+      "target": "C7013",
+      "label": "ϭⲁⲡϩⲟϥ",
+      "pos": "N",
+      "gloss": "serpent-catcher"
+    }
+  ]
+}

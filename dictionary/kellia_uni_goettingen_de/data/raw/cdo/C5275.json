@@ -1,0 +1,46 @@
+{
+  "id": "C5275",
+  "forms": [
+    {
+      "id": "CF12519",
+      "orth": "ⲙⲁ ⲛⲟⲩⲱϣⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5921",
+      "bibliography": "CD 503a; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5273",
+      "label": "ⲟⲩⲱϣⲙ",
+      "pos": "V",
+      "gloss": "knead, bruise"
+    },
+    {
+      "target": "C5274",
+      "label": "ⲟⲩⲱϣⲙ",
+      "pos": "N",
+      "gloss": "dough"
+    }
+  ]
+}

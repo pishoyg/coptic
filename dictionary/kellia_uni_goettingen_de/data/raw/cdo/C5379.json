@@ -1,0 +1,269 @@
+{
+  "id": "C5379",
+  "forms": [
+    {
+      "id": "CF12727",
+      "orth": "ⲫⲟⲣⲡⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6092,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲫⲉⲣⲫⲱⲣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9762,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲫⲉⲣⲫⲱⲣ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9762,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲫⲁⲣⲫⲉⲣ-",
+      "dialect": "B",
+      "id": "1780.3"
+    },
+    {
+      "orth": "ⲫⲁⲣⲡⲉⲣ-",
+      "dialect": "B",
+      "id": "1780.4"
+    },
+    {
+      "orth": "ⲡⲁⲣⲫⲉⲣ-",
+      "dialect": "B",
+      "id": "1780.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6033",
+      "bibliography": "CD 515b; CED 225; KoptHWb 152; DELC 245a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓⲏⲥⲟⲩⲥ ⲛⲧⲟⲧⲟⲩ ⲁ ⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ **ⲫⲟⲣⲡⲉⲣ** ⲙⲡⲉϥⲥⲟⲕ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲟⲩⲟϩ ⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ⲟⲩⲱⲛ ⲙⲡⲉϥⲥⲟⲕ",
+      "english": "And they hasted, and took down every man his sack on the ground, and they opened every man his sack.",
+      "source": "01_Genesis_44",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:44",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ϯⲛⲟⲩ ϥⲧⲁⲗⲟ ⲛϩⲁⲛⲥⲁϫⲓ ⲉϫⲱⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲓϫⲓⲙⲓ ⲛⲛⲓⲙⲉⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲛⲧⲉⲧⲉⲕϣⲉⲣⲓ ⲟⲩⲟϩ ⲛⲁⲓ ⲛⲉ ⲛⲓⲙⲉⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲛⲧⲉⲧⲁϣⲉⲣⲓ ⲉⲩⲉ**ⲫⲟⲣⲡⲉⲣ** ⲙⲡⲓϩⲃⲟⲥ ⲉⲃⲟⲗ ⲙⲡⲉⲙⲑⲟ ⲛⲛⲓϧⲉⲗⲗⲟⲓ ⲛⲧⲉϯⲃⲁⲕⲓ ⲉⲧⲉⲙⲙⲁⲩ",
+      "english": "and now he has hated her, and attaches reproachful words to her, saying, I have not found tokens of virginity with thy daughter; and these are the tokens of my daughter's virginity. And they shall unfold the garment before the elders of the city.",
+      "source": "05_Deuteronomium_22",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:22",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩⲕⲁⲕⲥⲉϩⲧ ⲫⲏ ⲉⲧⲉⲡⲓϭⲟϩ ϩⲓϫⲱϥ ⲛⲉϥϩⲃⲱⲥ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩ**ⲫⲉⲣⲫⲱⲣ** ⲟⲩⲟϩ ⲛⲧⲉϥⲁⲫⲉ ⲉⲥϩⲟⲃⲥ ⲁⲛ ⲟⲩⲟϩ ⲉϥⲉϩⲱⲃⲥ ⲙⲡⲕⲱϯ ⲛⲣⲱϥ ⲟⲩⲟϩ ⲉⲩⲉⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉϥϭⲁϧⲉⲙ",
+      "english": "And the leper in whom the plague is, let his garments be ungirt, and his head uncovered; and let him have a covering put upon his mouth, and he shall be called unclean.",
+      "source": "03_Leviticus_13",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲕ",
+        1,
+        11.788
+      ],
+      [
+        "ϩⲃⲟⲥ",
+        1,
+        11.753
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        2,
+        10.486
+      ],
+      [
+        "ϣⲉⲣⲓ",
+        1,
+        9.536
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        8.941
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        7.886
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.686
+      ],
+      [
+        "ⲙ",
+        2,
+        6.998
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.75
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.455
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.719
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_3_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_2_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲫⲟⲣⲡⲉⲣ_0_node",
+          2
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲃⲟⲥ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ϩⲃⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          "ⲡⲓ_2_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲟⲩⲁⲓ",
+          "ⲟⲩⲁⲓ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          "ⲡⲓ_3_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_3_pre_ⲟⲩⲁⲓ",
+          "ⲟⲩⲁⲓ_2_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_2_pre_ⲟⲩⲁⲓ",
+          "ⲫⲟⲣⲡⲉⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲫⲟⲣⲡⲉⲣ",
+          "ⲫⲟⲣⲡⲉⲣ_0_node",
+          1
+        ],
+        [
+          "ⲫⲟⲣⲡⲉⲣ_0_node",
+          "ⲙ_1_post_ⲫⲟⲣⲡⲉⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲫⲟⲣⲡⲉⲣ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ϩⲃⲟⲥ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲃⲟⲥ_3_post_ⲡⲓ",
+          "ⲉⲃⲟⲗ_4_post_ϩⲃⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4305,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5380",
+      "label": "ⲫⲁⲣⲫⲉⲣⲓϧ",
+      "pos": "N",
+      "gloss": "wizard, exorcist"
+    }
+  ],
+  "etym": {
+    "egy_num": "61220",
+    "egy_lemma": "prpr",
+    "english": "jumping around (or similar)",
+    "german": "umherspringen (o. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/61220"
+  }
+}

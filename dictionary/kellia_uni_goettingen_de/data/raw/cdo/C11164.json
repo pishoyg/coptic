@@ -1,0 +1,299 @@
+{
+  "id": "C11164",
+  "forms": [
+    {
+      "id": "CF30927",
+      "orth": "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30929",
+      "orth": "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2941,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF30928",
+      "orth": "ϩⲟⲙⲁⲟⲩⲥⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30930",
+      "orth": "ϩⲟⲙⲟⲩⲟⲩⲥⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30931",
+      "orth": "ϩⲟⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15681",
+      "bibliography": "DDGLC",
+      "cu_ID": "9591"
+    },
+    {
+      "id": "CS15682",
+      "bibliography": "DDGLC",
+      "cu_ID": "6422"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲣⲉⲉⲟⲟⲩ ⲛⲓⲙ ⲡⲣⲉⲡⲉⲓ ⲙⲡⲉⲓⲱⲧ ⲛⲙⲙⲁϥ · ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲣⲉϥⲧⲁⲛϩⲟ ⲙⲡⲧⲏⲣϥ · ⲁⲩⲱ ⲛ**ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ** · ⲧⲉⲛⲟⲩ · ⲁⲩⲱ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ · ϣⲁⲛⲁⲓⲱⲛ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲓⲱⲛ ϩⲁⲙⲏⲛ :—",
+      "english": "to Whom, with the Father and the Holy, and universally vivifying and consubstantial Spirit, all glory is seemly, now, and always, and for ever and for ever. Amen.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲱϩⲁⲛⲛⲏⲥ ⲛⲁϥ ϫⲉϯⲧⲁⲣⲕⲟ ⲙⲙⲟⲕ ⲡⲁⲉⲓⲱⲧ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲧⲉⲧⲣⲓⲁⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲛ**ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ** ⲙⲛⲛⲉϣⲗⲏⲗ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲕⲉϣⲃϫⲱⲓ ⲙⲡϩⲟⲟⲩ · ⲉⲡⲉⲓⲇⲏ ⲡⲛⲟⲩⲧⲉ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲡⲁϩⲏⲧ ⲙⲟⲕϩ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ ⲙⲛⲡⲉⲥⲭⲏⲙⲁ ⲛⲁⲅⲅⲉⲗⲓⲕⲟⲛ ·",
+      "english": "And John said unto him, 'I adjure thee, O my holy father, by the Holy and Consubstantial Trinity, and by the prayers of the monastery, that thou shave my head this day, and especially, as God knoweth, my heart burneth with desire for the life of the monk, and for the garb of the angels.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲉⲓⲣⲏⲛⲏ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲛⲧⲁⲩⲣⲙⲁⲣⲧⲩⲣⲟⲥ ⲉϫⲙⲡⲣⲁⲛ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲡⲁⲓ ⲡⲉⲟⲟⲩ ⲛⲁϥ · ⲙⲛⲡⲉϥⲉⲓⲱⲧ ⲛⲁⲅⲁⲑⲟⲥ · ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲣⲉϥⲧⲁⲛϩⲟ ⲁⲩⲱ ⲛ**ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ** · ⲧⲉⲛⲟⲩ ⲁⲩⲱ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ ϩⲁⲙⲏⲛ :—",
+      "english": "Peace be upon every one who hath suffered martyrdom for the Name of our Lord Jesus the Christ, to Whom be the glory, and to His Good Farther, and to the Holy Spirit, life-giving and consubstantial, now and always, forever and ever, amen.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲧⲁⲛϩⲟ",
+        7,
+        21.512
+      ],
+      [
+        "ⲧⲣⲓⲁⲥ",
+        4,
+        17.933
+      ],
+      [
+        "ⲁⲧⲱ",
+        1,
+        16.791
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        9,
+        15.864
+      ],
+      [
+        "ⲁⲧⲡⲱⲣϫ",
+        1,
+        15.791
+      ],
+      [
+        "ⲧⲉⲧⲣⲓⲁ",
+        1,
+        15.791
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        6,
+        13.541
+      ],
+      [
+        "ⲁⲩⲱ",
+        14,
+        13.362
+      ],
+      [
+        "ⲛ",
+        21,
+        13.179
+      ],
+      [
+        "ⲧⲏⲣϥ",
+        2,
+        11.381
+      ],
+      [
+        "ϣⲗⲏⲗ",
+        2,
+        10.435
+      ],
+      [
+        "..",
+        1,
+        10.132
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.397
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        6.725
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        6.605
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        6.506
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        6.444
+      ],
+      [
+        "ϥⲓ",
+        1,
+        6.404
+      ],
+      [
+        "·",
+        1,
+        6.371
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        5.837
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_0_node",
+          11
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          6
+        ],
+        [
+          "ⲛ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          5
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          3
+        ],
+        [
+          "ⲁⲧⲱ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲁⲧⲱ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲁⲛϩⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_2_post_ⲁⲧⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲟⲩⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲉⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓϣ_4_post_ⲛⲓⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          "ⲛ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_0_node",
+          "ⲧⲉⲛⲟⲩ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          2
+        ],
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_0_node",
+          "ⲁⲧⲱ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲧⲱ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          "ⲛ_2_post_ⲁⲧⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲁⲧⲱ",
+          "ⲣⲉϥⲧⲁⲛϩⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲁⲛϩⲟ_3_post_ⲛ",
+          "ⲧⲉⲛⲟⲩ_2_post_ⲁⲧⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_post_ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+          "ⲁⲩⲱ_5_post_ⲟⲩⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲟⲩⲟⲉⲓϣ",
+          "ⲛ_2_post_ⲧⲉⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲉⲛⲟⲩ",
+          "ⲟⲩⲟⲉⲓϣ_4_post_ⲛⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2613,
+      "count": 14
+    }
+  },
+  "etym": {
+    "grl_ID": "1548",
+    "grl_lemma": "ὁμοούσιος",
+    "grl_meaning": "of the same substance, consubstantial",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1227b"
+  }
+}

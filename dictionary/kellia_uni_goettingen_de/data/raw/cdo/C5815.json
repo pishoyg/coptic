@@ -1,0 +1,116 @@
+{
+  "id": "C5815",
+  "forms": [
+    {
+      "id": "CF13627",
+      "orth": "ϣⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13551,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲗⲏ",
+      "dialect": "L",
+      "id": "1890.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6495",
+      "bibliography": "CD 558b; KoptHWb 309; DELC 260a; ChLCS 76b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ ⲁⲥⲕⲧⲟ ⲙⲡⲥϩⲟ · ⲉⲡⲥⲁ ⲛⲧⲁⲛⲁⲧⲟⲗⲏ ⲁⲥϯ ⲙⲡⲉⲥ**ϣⲗⲏ** ·",
+      "english": "And she turned her face towards the east, and yielded up her spirit (?).",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲥ",
+        1,
+        10.731
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.817
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲗⲏ",
+          1
+        ],
+        [
+          "ϣⲗⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲗⲏ",
+          "ϣⲗⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13150,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "118390",
+    "egy_lemma": "ḫnr",
+    "demo_num": "d4890",
+    "demo_lemma": "ẖlꜥ",
+    "english": "to scatter; to disperse",
+    "german": "zerstreuen; verbreiten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/118390",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4890"
+  }
+}

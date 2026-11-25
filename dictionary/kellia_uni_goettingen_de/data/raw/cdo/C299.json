@@ -1,0 +1,114 @@
+{
+  "id": "C299",
+  "forms": [
+    {
+      "id": "CF1266",
+      "orth": "ⲁϩⲣⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.74,
+        "rank": 885,
+        "count": 117
+      }
+    },
+    {
+      "id": "CF1267",
+      "orth": "ⲁϩⲣⲟ⸗",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF1268",
+      "orth": "ⲁϩⲣⲁ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1269",
+      "orth": "ⲁϩⲣⲁ⸗",
+      "dialect": "M"
+    },
+    {
+      "id": "CF1270",
+      "orth": "ⲁⳉⲣⲁ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1271",
+      "orth": "ⲁϧⲟ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1372,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF1272",
+      "orth": "ⲁϩⲁ⸗",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Fragepronomen",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS332",
+      "bibliography": "CD 25ab; CED 19; KoptHWb 18, 491; DELC 22-23; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲁϧⲟ**ⲕ ⲛⲉⲙⲁⲛ ⲓⲏⲥⲟⲩⲥ ⲡⲓⲣⲉⲙⲛⲁⲍⲁⲣⲉⲑ ⲉⲧⲁⲕⲓ ⲉⲧⲁⲕⲟⲛ ⲧⲉⲛⲥⲱⲟⲩⲛ ⲙⲙⲟⲕ ϫⲉⲛⲑⲟⲕ ⲛⲓⲙ ⲡⲓϩⲁⲅⲓⲟⲥ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "saying, 'Ha! What do we have to do with you, Jesus, you Nazarene? Have you come to destroy us? I know you who you are: the Holy One of God!'",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲣ **ⲁϩⲣⲟ**ⲕ ⲉⲕⲁϣⲁϩⲟⲙ",
+      "english": "Horus, why are you groaning?'",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲱϣ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛⲥⲙⲏ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉ**ⲁϧⲟ**ⲕ ⲛⲉⲙⲏⲓ ϩⲱⲕ ⲓⲏⲥⲟⲩⲥ ⲡϣⲏⲣⲓ ⲙⲫⲛⲟⲩϯ ⲉⲧϭⲟⲥⲓ ϯⲧⲁⲣⲕⲟ ⲙⲙⲟⲕ ⲙⲫⲛⲟⲩϯ ⲙⲡⲉⲣϯϭⲗⲁⲕ ⲛⲏⲓ .",
+      "english": "and crying out with a loud voice, he said, 'What have I to do with you, Jesus, you Son of the Most High God? I adjure you by God, don't torment me.'",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϩⲱⲣ **ⲁϩⲣⲟ**ⲕ ⲉⲕⲣⲓⲙⲉ",
+      "english": "'Horus, why are you crying?",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϥⲓⲁϩⲟⲙ ϧⲉⲛⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲡⲉϫⲁϥ ϫⲉ**ⲁϧⲟ** ⲡⲁⲓϫⲱⲟⲩ ϥⲕⲱϯ ⲛⲥⲁⲟⲩⲙⲏⲓⲛⲓ ⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲁⲛ ⲥⲉⲛⲁϯ ⲛⲟⲩⲙⲏⲓⲛⲓ ⲙⲡⲁⲓϫⲱⲟⲩ .",
+      "english": "He sighed deeply in his spirit, and said, 'Why does this generation seek a sign? Most certainly I tell you, no sign will be given to this generation.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϭⲉ **ⲁϩⲣⲱ**ⲧⲛ ⲧⲉⲧⲛϣⲁϫⲉ ⲛϫⲓⲟⲩⲉ ⲛⲥⲁⲛⲉⲧⲛⲉⲣⲏⲩ ϩⲛϩⲉⲛⲕⲁⲥⲕⲥ · ⲏ ϩⲛⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "dm400",
+    "demo_lemma": "ı ͗ḫ-r=",
+    "english": "what is (with) ..., that, why",
+    "german": "was ist (mit) ..., dass, wieso",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm400"
+  }
+}

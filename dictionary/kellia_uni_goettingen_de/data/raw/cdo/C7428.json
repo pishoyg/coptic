@@ -1,0 +1,136 @@
+{
+  "id": "C7428",
+  "forms": [
+    {
+      "id": "CF16915",
+      "orth": "ⲛϫⲓⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17693,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS8221",
+      "bibliography": "CD 794a; CED 321; KoptHWb 437; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲧⲛϩⲱⲧⲃ ⲧⲉⲧⲛⲟ ⲛⲛⲟⲉⲓⲕ ⲧⲉⲧⲛⲱⲣⲕ ⲛⲛⲟⲩϫ ⲉϫⲙⲡϫⲓ ⲛϭⲟⲛⲥ ⲧⲉⲧ**ⲛϫⲓⲟⲩⲉ** ⲧⲉⲧⲛⲧⲁⲗⲉϣⲟⲩϩⲏⲛⲉ ⲉϩⲣⲁⲓ ⲛⲧⲃⲁϩⲁⲗ ⲁⲩⲱ ⲁⲧⲉⲧⲛⲙⲟⲟϣⲉ ϩⲓⲡⲁϩⲟⲩ ⲛϩⲉⲛⲛⲟⲩⲧⲉ ⲛϣⲙⲙⲟ ⲛⲁⲓ ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ⲙⲙⲟⲟⲩ",
+      "english": "and ye murder, and commit adultery, and steal, and swear falsely, and burn incense to Baal, and are gone after strange gods whom ye know not,",
+      "source": "Jeremiah 7",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲗⲉϣⲟⲩϩⲏⲛⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ϭⲟⲛⲥ",
+        1,
+        12.511
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛϫⲓⲟⲩⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17306,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7430",
+      "label": "ϥⲓ ⲛϫⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "steal"
+    },
+    {
+      "target": "C7425",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "steal"
+    },
+    {
+      "target": "C7426",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "theft, fraud"
+    },
+    {
+      "target": "C7427",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "stolen, secret"
+    },
+    {
+      "target": "C12096",
+      "label": "ϭⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "theft, fraud"
+    },
+    {
+      "target": "C7429",
+      "label": "ⲛϫⲓⲟⲩⲉ (ⲉ-)",
+      "pos": "ADV",
+      "gloss": "unbeknown to"
+    },
+    {
+      "target": "C7431",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "thief"
+    }
+  ]
+}

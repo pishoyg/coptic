@@ -1,0 +1,69 @@
+{
+  "id": "C4570",
+  "forms": [
+    {
+      "id": "CF31804",
+      "orth": "ⲧⲥⲁⲓⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31803",
+      "orth": "ⲧⲥⲁⲉⲓⲟ⸗",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲥⲁⲓⲉ-",
+      "dialect": "S",
+      "id": "1649.1"
+    },
+    {
+      "orth": "ⲧⲥⲁⲓⲏⲩ†",
+      "dialect": "S",
+      "id": "1649.2"
+    },
+    {
+      "orth": "ⲥⲁⲓⲱⲟⲩ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2425,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲧⲥⲁⲓⲱⲟⲩ†",
+      "dialect": "B",
+      "id": "1649.4"
+    },
+    {
+      "orth": "ⲧⲥⲁⲓⲁ⸗",
+      "dialect": "L",
+      "id": "1649.5"
+    },
+    {
+      "orth": "ⲧⲥⲁⲓⲁⲓⲧ†",
+      "dialect": "L",
+      "id": "1649.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5159",
+      "bibliography": "CD 434a; CDC 68a; KoptHWb 247; DELC 222a; ChLCS 61b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C12353",
+      "type": "cf",
+      "label": "beautiful (person)"
+    }
+  ]
+}

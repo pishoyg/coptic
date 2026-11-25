@@ -1,0 +1,51 @@
+{
+  "id": "C3645",
+  "forms": [
+    {
+      "id": "CF9195",
+      "orth": "ⲙⲁ ⲛⲥⲱⲛϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4148",
+      "bibliography": "CD 349a; KoptHWb 191; ChLCS 49b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3646",
+      "label": "ϫⲓⲛⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "binding"
+    },
+    {
+      "target": "C3647",
+      "label": "ⲥⲛⲁϩ",
+      "pos": "N",
+      "gloss": "bond, fetter"
+    },
+    {
+      "target": "C3643",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "V",
+      "gloss": "be bound, fettered; bind, fetter"
+    },
+    {
+      "target": "C3644",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "bound, fetter"
+    }
+  ]
+}

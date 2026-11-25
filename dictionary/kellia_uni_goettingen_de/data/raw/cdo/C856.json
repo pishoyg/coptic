@@ -1,0 +1,101 @@
+{
+  "id": "C856",
+  "forms": [
+    {
+      "id": "CF3054",
+      "orth": "ⲕⲧⲉⲉⲓⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲕⲧⲉ ⲉⲓⲁⲧ⸗",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15774,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1008",
+      "bibliography": "CD 73b; KoptHWb 52; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩ**ⲕⲧⲉⲉⲓⲁⲧ**ⲟⲩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲣⲱⲙⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲧⲉϩⲓⲏ ⲉⲧϫⲓ ⲉⲃⲟⲗ ⲉⲧⲉⲣⲏⲙⲟⲥ ⲁⲩⲡⲱⲧ ⲉⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲡⲉⲙⲗⲁϩ ⲁϥⲧⲁϩⲟⲟⲩ ⲙⲛⲛⲉⲧϩⲛ ⲧⲡⲟⲗⲓⲥ ⲁⲩⲧⲁⲕⲟ ⲙⲙⲟⲟⲩ ϩⲛⲧⲉⲩⲙⲏⲧⲉ",
+      "english": "And they turned to the way of the wilderness from before the children of Israel, and fled: but the battle overtook them, and they from the cities destroyed them in the midst of them.",
+      "source": "Judges 20",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C862",
+      "label": "ϥⲓ ⲛⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "raise eye"
+    },
+    {
+      "target": "C859",
+      "label": "ϯ ⲛⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "see, observe"
+    },
+    {
+      "target": "C855",
+      "label": "ⲉⲓⲁ",
+      "pos": "N",
+      "gloss": "eye and its sight"
+    },
+    {
+      "target": "C863",
+      "label": "ⲕⲱ ϩⲁⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "intend to do"
+    },
+    {
+      "target": "C865",
+      "label": "ⲙⲛⲧⲛⲁⲓⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "blessedness"
+    },
+    {
+      "target": "C857",
+      "label": "ⲙⲟⲩϩ ⲛⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look intensely"
+    },
+    {
+      "target": "C864",
+      "label": "ⲛⲁⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "blessed is . . ., (great is the eye of . . .)"
+    },
+    {
+      "target": "C858",
+      "label": "ⲥⲙⲛⲉⲓⲁⲧ⸗ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "fix eyes upon"
+    },
+    {
+      "target": "C861",
+      "label": "ⲧⲟⲩⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    },
+    {
+      "target": "C860",
+      "label": "ⲧⲥⲁⲃⲟ ⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    }
+  ]
+}

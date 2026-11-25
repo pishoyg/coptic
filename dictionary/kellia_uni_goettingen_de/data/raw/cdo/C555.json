@@ -1,0 +1,605 @@
+{
+  "id": "C555",
+  "forms": [
+    {
+      "id": "CF2138",
+      "orth": "ⲃⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.04,
+        "rank": 702,
+        "count": 164
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS665",
+      "bibliography": "CD 45b; CED 28; KoptHWb 28, 496; DELC 32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲣⲉⲡϭⲱⲛⲧ · ⲏ ⲡⲉⲓⲱⲣϩ ⲛⲛⲉϩⲓⲟⲙⲉ ϣⲱⲡⲉ ⲛⲁⲓ ⲛ**ⲃⲟⲧⲉ** ·",
+      "english": "Thou it was Who didst make the joyful expectation of the contemplation of women to become to me an abomination.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲉⲕⲉⲓⲣⲉ ⲛⲧⲉⲕⲡⲣⲟⲥⲫⲟⲣⲁ ⲛ**ⲃⲟⲧⲉ** · ⲉⲕⲉⲡⲓⲭⲓⲣⲉ ⲉⲧⲁⲗⲟ ⲉϩⲣⲁⲓ ϩⲛⲟⲩϫⲓⲛϭⲟⲛⲥ · ϩⲙⲡⲉⲧⲕⲙⲉⲉⲩⲉ ⲉⲛⲁ ⲛⲕⲉϩⲏⲕⲉ ⲛϩⲏⲧϥ ·",
+      "english": "Why shouldst thou make thine offering to be an abomination (to God) by undertaking to offer up an offering of injustice, because thou thinkest to do a kindness to other poor men with it?",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲧⲛⲟⲩⲉⲙⲗⲁⲁⲩ ⲛ**ⲃⲟⲧⲉ**",
+      "english": "Ye shall not eat any abominable thing.",
+      "source": "Deuteronomy 14",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        35,
+        28.628
+      ],
+      [
+        "ⲛ",
+        169,
+        18.654
+      ],
+      [
+        "ⲙ",
+        92,
+        17.564
+      ],
+      [
+        "ⲡⲉ",
+        67,
+        17.349
+      ],
+      [
+        "ⲡ",
+        100,
+        17.071
+      ],
+      [
+        "ⲟⲩ",
+        65,
+        15.93
+      ],
+      [
+        "ϩⲛ",
+        39,
+        14.978
+      ],
+      [
+        "ⲧⲏⲣ",
+        24,
+        14.261
+      ],
+      [
+        "ⲉⲡⲓⲭⲓⲣⲉ",
+        2,
+        14.24
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        19,
+        14.226
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        15,
+        14.172
+      ],
+      [
+        "ⲙⲛ",
+        29,
+        13.86
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        21,
+        13.844
+      ],
+      [
+        "ⲉ",
+        44,
+        13.838
+      ],
+      [
+        "ϣⲱϥ",
+        4,
+        13.749
+      ],
+      [
+        "ⲛⲉⲩ",
+        17,
+        13.721
+      ],
+      [
+        "ⲛⲉ",
+        24,
+        13.71
+      ],
+      [
+        "ⲁ",
+        39,
+        13.543
+      ],
+      [
+        "ⲁⲩⲱ",
+        31,
+        13.252
+      ],
+      [
+        "ⲗⲓⲟⲡⲟⲛ",
+        1,
+        13.24
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          89
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲟⲧⲉ",
+          7
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲃⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲃⲟⲧⲉ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ϣⲱϥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲃⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲃⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲟⲧⲉ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲛ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲛⲁϩⲣⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲁ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲛⲁϩⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲣⲙⲛⲕⲩⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲁϩⲙ",
+          1
+        ],
+        [
+          "ϫⲁϩⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲓⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲟⲥ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲉⲅⲣⲩⲯ",
+          1
+        ],
+        [
+          "ⲡⲉⲅⲣⲩⲯ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲡⲁⲗⲓⲁⲉⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲟⲩⲟⲙϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲟⲩⲟⲙϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙϥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲙ_1_post_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲃⲟⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲱϥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲅⲁⲣ_1_post_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲃⲟⲧⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲟⲧⲉ",
+          "ϩⲉⲛ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲛⲛⲁϩⲣⲛ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲛ_1_post_ⲃⲟⲧⲉ",
+          "ⲛ_2_post_ⲛⲛⲁϩⲣⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲛⲁϩⲣⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲛⲛⲁϩⲣⲁ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲁ_1_post_ⲃⲟⲧⲉ",
+          "ⲓ_2_post_ⲛⲛⲁϩⲣⲁ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲃⲟⲧⲉ",
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲙⲛⲕⲩⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          "ⲅⲁⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲛ",
+          "ⲛ_1_post_ⲃⲟⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ_b",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲉ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲧⲉ",
+          "ϥ_3_post_ϫⲁϩⲙ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲁϩⲙ",
+          "ϫⲁϩⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲟⲧⲉ",
+          "ⲧⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          "ⲟⲩ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲟⲧⲉ",
+          "ⲡⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲃⲟⲧⲉ",
+          "ⲃⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲡ_2_post_ⲁⲓⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲓⲧⲟⲥ",
+          "ⲁⲓⲧⲟⲥ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲟⲥ_1_post_ⲃⲟⲧⲉ",
+          "ⲁⲩⲱ_2_post_ⲡⲉⲅⲣⲩⲯ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲉⲅⲣⲩⲯ",
+          "ⲡⲉⲅⲣⲩⲯ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲅⲣⲩⲯ_1_post_ⲃⲟⲧⲉ",
+          "ⲙⲛ_3_post_ⲡⲁⲗⲓⲁⲉⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ⲟⲩⲟⲙϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲟⲩⲟⲙϥ",
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲟⲧⲉ",
+          "ⲛⲉⲧⲛ_3_post_ⲟⲩⲟⲙϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲟⲩⲟⲙϥ",
+          "ⲟⲩⲟⲙϥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.03,
+      "rank": 610,
+      "count": 164
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C560",
+      "label": "ϫⲓⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "loathe, abominate"
+    },
+    {
+      "target": "C556",
+      "label": "ⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "hateful thing, abomination, crime"
+    },
+    {
+      "target": "C557",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "make abominable, (also) anathematize"
+    },
+    {
+      "target": "C558",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "filth"
+    },
+    {
+      "target": "C561",
+      "label": "ⲗⲁⲃⲟϯ",
+      "pos": "N",
+      "gloss": "sodomite"
+    },
+    {
+      "target": "C559",
+      "label": "ⲟ ⲛⲃⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "become, be hateful"
+    }
+  ],
+  "etym": {
+    "egy_num": "58130",
+    "egy_lemma": "btꜣ.w",
+    "demo_num": "d1834",
+    "demo_lemma": "btj(.t)",
+    "english": "wrong; crime",
+    "german": "Verbrechen; Vergehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/58130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1834"
+  }
+}

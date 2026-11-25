@@ -1,0 +1,46 @@
+{
+  "id": "C4001",
+  "forms": [
+    {
+      "id": "CF9943",
+      "orth": "ⲥⲓϩⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4546",
+      "bibliography": "CD 386a; KoptHWb 213"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4000",
+      "label": "ⲣⲉϥⲥⲉϩⲡ ⲥⲛⲟϥ",
+      "pos": "N",
+      "gloss": "bloodsucker"
+    },
+    {
+      "target": "C3999",
+      "label": "ⲥⲱϩⲡ",
+      "pos": "V",
+      "gloss": "sink in, be swallowed; suck in, drink, swallow"
+    }
+  ],
+  "etym": {
+    "egy_num": "143490",
+    "egy_lemma": "sẖb.w",
+    "english": "[a draught (med.)]",
+    "german": "Trankmittel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/143490"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "id": "C7810",
+  "forms": [
+    {
+      "id": "CF17685",
+      "orth": "ϭⲱⲛϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8253,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲱϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4128,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϭⲱⲛϭⲛ",
+      "dialect": "S",
+      "id": "2587.2"
+    },
+    {
+      "orth": "ϭⲛϭ-",
+      "dialect": "S",
+      "id": "2587.3"
+    },
+    {
+      "orth": "ϭⲉⲛϭ-",
+      "dialect": "S",
+      "id": "2587.4"
+    },
+    {
+      "orth": "ϭⲛϭⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6573,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8680",
+      "bibliography": "CD 824a; CED 333; KoptHWb 461; DELC 343ab; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥⲉⲛⲧⲟⲩ ⲉⲣⲁⲧϥ ⲙⲡⲟⲩⲏⲏⲃ ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ϫⲓ ⲛϣⲟⲣⲡ ⲙⲡⲉⲧⲟⲩⲛⲁⲧⲁⲁϥ ϩⲁⲛⲟⲃⲉ ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ **ϭⲱⲛϭ** ⲛⲧⲉϥⲁⲡⲉ ⲉϫⲙⲡⲉϥⲥⲫⲟⲛⲇⲩⲗⲟⲥ ⲛϥⲧⲙⲡⲟϣϥ",
+      "english": "And he shall bring them to the priest, and the priest shall bring the sin-offering first; and the priest shall pinch off the head from the neck, and shall not divide the body.",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲉⲧⲣⲉϥⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲛⲙⲙⲁ ⲉⲧϫⲏⲩ ⲁⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ **ϭⲱⲛϭ** ⲛⲛϩⲙⲥ ⲁⲩⲥⲉϩⲥⲱϩⲟⲩ ⲛⲛⲉⲩϭⲓϫ ⲁⲩⲟⲩⲱⲙ",
+      "english": "Now it happened on the second Sabbath after the first, that he was going through the grain fields. His disciples plucked the heads of grain, and ate, rubbing them in their hands.",
+      "source": "42_Luke_6",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲏⲩ",
+        1,
+        15.511
+      ],
+      [
+        "ϩⲙⲥ",
+        1,
+        15.013
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        1,
+        10.734
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        10.581
+      ],
+      [
+        "ⲙⲁⲑⲏⲧⲏⲥ",
+        1,
+        10.451
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        9.207
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.102
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱⲛϭ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_pre_ϭⲱⲛϭ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_1_pre_ϭⲱⲛϭ",
+          1
+        ],
+        [
+          "ϭⲱⲛϭ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲛϭ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱⲛϭ",
+          "ⲉⲣⲉ_1_pre_ϭⲱⲛϭ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_pre_ϭⲱⲛϭ",
+          "ⲡ_2_pre_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_1_pre_ϭⲱⲛϭ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_1_pre_ϭⲱⲛϭ",
+          "ϭⲱⲛϭ_0_node",
+          1
+        ],
+        [
+          "ϭⲱⲛϭ_0_node",
+          "ⲛ_1_post_ϭⲱⲛϭ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7810,
+      "count": 2
+    }
+  }
+}

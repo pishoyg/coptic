@@ -1,0 +1,172 @@
+{
+  "id": "C12179",
+  "forms": [
+    {
+      "id": "CF33192",
+      "orth": "ϥⲟϭϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8044,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17183",
+      "bibliography": "CD 627b; KoptHWB 347"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉⲡⲣⲉϥⲧⲱⲣⲡ ϭⲱ ⲉϥⲟ ⲛ**ϥⲟϭϥ** ⲁⲗⲗⲁ ⲛⲧⲁϥⲣⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ ·",
+      "english": "and he who was a robber did not continue to be a man of greed, but became an Evangelist.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲣⲉⲟⲩⲃⲁⲗ ⲛ**ϥⲟϭϥ** ⲥⲉⲓ ⲛⲧⲉϥⲧⲟ ⲁⲩⲱ ⲟⲩϫⲓⲛϭⲟⲛⲥ ⲉϥϩⲟⲟⲩ ϣⲁϥⲥⲉϣϥ ⲟⲩⲯⲩⲭⲏ",
+      "english": "A covetous man's eye is not satisfied with his portion; and the iniquity of the wicked drieth up his soul.",
+      "source": "Sirach 14",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲓ",
+        1,
+        12.511
+      ],
+      [
+        "ⲧⲟ",
+        1,
+        12.479
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        11.516
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        10.036
+      ],
+      [
+        "ⲟ",
+        1,
+        8.805
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲟϭϥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7598,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12035",
+      "label": "ϥⲟϭⲥ",
+      "pos": "N",
+      "gloss": "leap, dance"
+    },
+    {
+      "target": "C6291",
+      "label": "ϥⲱϭⲉ",
+      "pos": "V",
+      "gloss": "leap, move hastily; pluck, seize, rob"
+    },
+    {
+      "target": "C6292",
+      "label": "ϥⲱϭⲉ",
+      "pos": "N",
+      "gloss": "impetuosity, grasping, greed"
+    },
+    {
+      "target": "C12183",
+      "label": "ϥⲱϭⲥ",
+      "pos": "V",
+      "gloss": "leap, move hastily"
+    },
+    {
+      "target": "C6294",
+      "label": "ϭⲓⲛϥⲱϭⲉ",
+      "pos": "N",
+      "gloss": "zeal, violence"
+    },
+    {
+      "target": "C12065",
+      "label": "ⲃⲉϭⲥⲉ",
+      "pos": "N",
+      "gloss": "leap"
+    },
+    {
+      "target": "C6293",
+      "label": "ⲣⲉϥϥⲱϭⲉ",
+      "pos": "N",
+      "gloss": "impetuous, violent person"
+    }
+  ]
+}

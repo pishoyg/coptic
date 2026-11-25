@@ -1,0 +1,45 @@
+{
+  "id": "C4284",
+  "forms": [
+    {
+      "id": "CF31760",
+      "orth": "ⲥⲁϩⲧⲙⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31759",
+      "orth": "ⲥⲁϩⲧⲧⲙⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4855",
+      "bibliography": "CD 415b; DELC 214b; ChLCS 58a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3965",
+      "type": "cf",
+      "label": "weave"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4283",
+      "label": "ⲧⲙⲏ",
+      "pos": "N",
+      "gloss": "mat"
+    }
+  ]
+}

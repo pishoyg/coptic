@@ -1,0 +1,228 @@
+{
+  "id": "C11241",
+  "forms": [
+    {
+      "id": "CF31267",
+      "orth": "ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF31268",
+      "orth": "ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6151,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF31269",
+      "orth": "ⲩⲡⲟⲙⲛⲏⲙⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31270",
+      "orth": "ⲫⲩⲡⲟⲙⲛⲏⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15850",
+      "bibliography": "DDGLC",
+      "cu_ID": "2816"
+    },
+    {
+      "id": "CS15851",
+      "bibliography": "DDGLC",
+      "cu_ID": "2888"
+    },
+    {
+      "id": "CS15852",
+      "bibliography": "DDGLC",
+      "cu_ID": "7434"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲙⲏ ⲙⲡⲉⲕⲱϣ ⲙⲡⲁ**ϩⲩⲡⲟⲙⲛⲏⲙⲁ** ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "Wilt thou not read the letter which concerneth my patient endurance again?",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲉⲛⲧⲁⲛϩⲉ ⲉⲣⲟⲥ ⲉϥϫⲓⲕⲃⲁ ⲙⲙⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲉϥⲕⲁⲧⲁⲕⲣⲓⲛⲉ ⲙⲙⲟⲟⲩ ⲉⲡⲙⲟⲩ ϩⲓⲧⲙⲡⲉⲓⲛⲉ ⲛⲛⲉϥⲡⲣⲟⲥⲧⲁⲅⲙⲁ ⲛⲁⲓ ⲉⲧⲥⲏϩ ϩⲛⲛ**ϩⲩⲡⲟⲙⲛⲏⲙⲁ** ⲛⲙⲙⲁⲣⲧⲩⲣⲟⲥ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA [37]-42",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:24-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ϩⲱⲱϥ ⲛⲧⲁⲛⲉⲓⲙⲉ ⲉⲡⲁⲓ ϩⲓⲧⲛⲛ**ϩⲩⲡⲟⲙⲛⲏⲙⲁ** ⲛⲙⲙⲁⲣⲧⲩⲣⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ϫⲉⲛϥϯⲥⲟ ⲁⲛ ⲉⲗⲁⲁⲩ ϩⲛⲛⲉⲛⲧⲁⲛϫⲟⲟⲩ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA [37]-42",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:24-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲣⲧⲩⲣⲟⲥ",
+        2,
+        15.024
+      ],
+      [
+        "ⲙ",
+        5,
+        10.732
+      ],
+      [
+        "ⲥⲏϩ",
+        1,
+        10.036
+      ],
+      [
+        "ⲱϣ",
+        1,
+        9.826
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        9.408
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        9.225
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.012
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.941
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.791
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲩⲡⲟⲙⲛⲏⲙⲁ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲧⲩⲣⲟⲥ_3_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉⲧ_4_post_ⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲩⲡⲟⲙⲛⲏⲙⲁ_0_node",
+          "ⲛ_1_post_ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+          "ⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲙⲁⲣⲧⲩⲣⲟⲥ_3_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲧⲩⲣⲟⲥ_3_post_ⲙ",
+          "ⲉⲧ_4_post_ⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲙⲁⲣⲧⲩⲣⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲙⲁ",
+          "ϩⲩⲡⲟⲙⲛⲏⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5712,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2271",
+    "grl_lemma": "ὑπόμνημα",
+    "grl_meaning": "reminder, memorial, mention",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1889b; Preisigke 2:667"
+  }
+}

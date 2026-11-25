@@ -1,0 +1,148 @@
+{
+  "id": "C3237",
+  "forms": [
+    {
+      "id": "CF8359",
+      "orth": "ϩⲓⲣⲟⲩϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20842,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3697",
+      "bibliography": "CD 310b; KoptHWb 171; ChLCS 44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ⲙⲡⲣϥⲓⲣⲟⲟⲩϣ ϫⲓⲛϩⲧⲟⲟⲩⲉ ϣⲁⲣⲟⲩϩⲉ ⲁⲩⲱ ϫⲓⲛ**ϩⲓⲣⲟⲩϩⲉ** ϣⲁϩⲧⲟⲟⲩⲉ ϫⲉⲟⲩ ⲡⲉⲧⲉⲧⲛⲛⲁⲧⲁⲁϥ ϩⲓⲱⲧⲧⲏⲩⲧⲛ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲩϩⲉ",
+        1,
+        13.18
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        1,
+        12.587
+      ],
+      [
+        "ϣⲁ",
+        2,
+        11.346
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        10.251
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲣⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ϩⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϩⲧⲟⲟⲩⲉ_2_post_ϣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲣⲟⲩϩⲉ",
+          "ϩⲓⲣⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲣⲟⲩϩⲉ_0_node",
+          "ϣⲁ_1_post_ϩⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ϩⲓⲣⲟⲩϩⲉ",
+          "ϩⲧⲟⲟⲩⲉ_2_post_ϣⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20443,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6389",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3236",
+      "label": "ϩⲁⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "time of evening"
+    },
+    {
+      "target": "C3238",
+      "label": "ϫⲓⲣⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "spend evening"
+    },
+    {
+      "target": "C3235",
+      "label": "ⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "evening"
+    }
+  ]
+}

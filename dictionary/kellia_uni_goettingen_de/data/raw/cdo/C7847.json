@@ -1,0 +1,95 @@
+{
+  "id": "C7847",
+  "forms": [
+    {
+      "id": "CF32204",
+      "orth": "ϭⲁⲡⲓϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9343,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF32203",
+      "orth": "ϭⲁⲡⲉⲓϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8722",
+      "bibliography": "CD 827b; CED 335; KoptHWb 464; DELC 346a; ChLCS 109a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲉⲉⲣⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ⲍⲱⲟⲛ",
+        1,
+        14.576
+      ],
+      [
+        "ⲥⲟⲩⲟ",
+        1,
+        13.804
+      ],
+      [
+        "ϣⲟⲙⲧⲉ",
+        1,
+        13.587
+      ],
+      [
+        "ϩⲁ",
+        2,
+        12.865
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲛ",
+        4,
+        9.809
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        9.626
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {},
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d6571",
+    "demo_lemma": "kpḏ(.t)",
+    "english": "Kapithe [hollow measure, 100 ml = 1 choinix]",
+    "german": "Kapithe [Hohlmaß, 100 ml = 1 choinix]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6571"
+  }
+}

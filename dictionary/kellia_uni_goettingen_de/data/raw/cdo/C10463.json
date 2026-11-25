@@ -1,0 +1,269 @@
+{
+  "id": "C10463",
+  "forms": [
+    {
+      "id": "CF28021",
+      "orth": "ⲥⲕⲁⲫⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF28022",
+      "orth": "ⲥⲕⲁⲫⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4614,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF28023",
+      "orth": "ⲥⲕⲁⲫⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9285,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14157",
+      "bibliography": "DDGLC",
+      "cu_ID": "2678"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲛⲓⲙⲁⲧⲟⲓ ⲁⲩⲥⲱⲗⲡ ⲛⲛⲓⲛⲟϩ ⲛⲧⲉϯ**ⲥⲕⲁⲫⲏ** ⲁⲩⲭⲁⲥ ⲉⲑⲣⲉⲥϩⲉⲓ .",
+      "english": "Then the soldiers cut away the ropes of the boat, and let it fall off.",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲧⲱⲙⲛⲧ ⲇⲉ ⲉⲩⲙⲁ ⲉϩⲟⲩⲛ ⲉⲩⲛⲏⲥⲟⲥ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ϫⲉⲕⲗⲁⲩⲇⲓⲁ . ⲙⲟⲅⲓⲥ ⲁⲛϭⲙϭⲟⲙ ⲉⲁⲙⲁϩⲧⲉ ⲛⲧⲉ**ⲥⲕⲁⲫⲏ** .",
+      "english": "Running under the lee of a small island called Clauda, we were able, with difficulty, to secure the boat.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲃⲃⲁⲕⲟⲩⲙ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲛⲁϥⲭⲏ ϧⲉⲛϯⲓⲟⲩⲇⲉⲁ ⲟⲩⲟϩ ⲁϥⲫⲓⲥⲓ ⲛⲟⲩⲫⲓⲥ ⲛⲉⲙϩⲁⲛⲱⲓⲕ ⲉⲩⲟϫⲡ ϧⲉⲛⲟⲩ**ⲥⲕⲁⲫⲏ** ⲟⲩⲟϩ ⲛⲁϥⲛⲁ ⲉⲧⲕⲟⲓ ⲉⲟⲗⲟⲩ ⲛⲛⲓϭⲁⲓⲟⲥϧ .",
+      "english": "...",
+      "source": "27_Daniel_18",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:18",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲙⲙⲁⲧⲟⲓ ⲁⲩⲥⲱⲗⲡ ⲛⲛⲛⲟⲩϩ ⲛⲧⲉ**ⲥⲕⲁⲫⲏ** ⲁⲩⲕⲁⲁⲥ ⲉⲃⲟⲗ ⲉⲧⲣⲉⲥⲃⲱⲕ .",
+      "english": "Then the soldiers cut away the ropes of the boat, and let it fall off.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲕⲱϯ ⲇⲉ ⲛϫⲉⲛⲓⲛⲉϥ ⲛⲥⲉⲫⲱⲧ ⲉⲃⲟⲗ ϩⲁⲡⲓϫⲟⲉⲓ ⲁⲩⲭⲱ ⲛϯ**ⲥⲕⲁⲫⲏ** ⲉϧⲣⲏⲓ ⲉⲫⲓⲟⲙ ϧⲉⲛⲟⲩⲗⲱⲓϫⲓ ϩⲱⲥ ϫⲉⲉⲩⲛⲁϩⲓⲟⲩⲓ ⲛϩⲁⲛⲁⲩϫⲁⲗ ⲉⲃⲟⲗ ⲥⲁⲧϩⲏ .",
+      "english": "As the sailors were trying to flee out of the ship, and had lowered the boat into the sea, pretending that they would lay out anchors from the bow,",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲩⲟϫⲡ",
+        1,
+        18.11
+      ],
+      [
+        "ⲛⲟϩ",
+        1,
+        13.11
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        9.424
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        8.799
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        8.514
+      ],
+      [
+        "ⲭⲁ",
+        1,
+        8.292
+      ],
+      [
+        "ⲉ",
+        3,
+        8.187
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲩ",
+        2,
+        7.536
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.369
+      ],
+      [
+        "ⲫ",
+        1,
+        4.979
+      ],
+      [
+        "ⲥ",
+        1,
+        4.843
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.178
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        3.495
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲟⲩϩ",
+        1,
+        14.276
+      ],
+      [
+        "ⲁⲗⲉ",
+        1,
+        12.632
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        10.559
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        9.606
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲕⲁⲫⲏ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4136,
+      "count": 3
+    },
+    "S": {
+      "rate": 0.01,
+      "rank": 8853,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3053",
+    "grl_lemma": "σκάφη",
+    "grl_meaning": "a small boat, ship",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1605a; Preisigke 2:466"
+  }
+}

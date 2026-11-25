@@ -1,0 +1,183 @@
+{
+  "id": "C3561",
+  "forms": [
+    {
+      "id": "CF9027",
+      "orth": "ϯⲥⲙⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18811,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4054",
+      "bibliography": "CD 342a; KoptHWb 187; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲛⲁ**ϯⲥⲙⲟⲧ** ⲉⲡⲟⲙⲉ ϩⲛⲛⲉϥϭⲃⲟⲉⲓ ⲁⲩⲱ ϥⲛⲁⲕⲱⲗϫ ⲛⲧⲉϥϭⲟⲙ ϩⲁⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ϥⲛⲁϯ ⲙⲡⲉϥϩⲏⲧ ⲉϫⲉⲕⲧⲧⲁϩⲥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲧⲉϥⲟⲩϣⲏ ⲛⲣⲟⲉⲓⲥ ⲡⲉ ⲧⲃⲃⲟ ⲛⲧⲉϥϩⲣⲱ",
+      "english": "He fashioneth the clay with his arm, and boweth down his strength before his feet; he applieth himself to lead it over; and he is diligent to make clean the furnace:",
+      "source": "Sirach 38",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:38",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲙⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ⲱⲡ",
+        1,
+        13.83
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϯⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ϯⲥⲙⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱⲗϫ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲱⲗϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲕⲱⲗϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϯⲥⲙⲟⲧ",
+          "ⲛⲁ_1_pre_ϯⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲥⲙⲟⲧ",
+          "ϯⲥⲙⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ϯⲥⲙⲟⲧ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲱⲗϫ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱⲗϫ",
+          "ϥ_2_post_ⲕⲱⲗϫ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲱⲗϫ",
+          "ⲛⲁ_2_post_ⲕⲱⲗϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18422,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3562",
+      "label": "ϫⲓⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "become, be like"
+    },
+    {
+      "target": "C3559",
+      "label": "ⲁⲧⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "without form"
+    },
+    {
+      "target": "C3560",
+      "label": "ⲉⲓⲣⲉ ⲛⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "have appearance, be like, be pattern"
+    },
+    {
+      "target": "C3557",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    },
+    {
+      "target": "C3558",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "C143",
+  "forms": [
+    {
+      "id": "CF549",
+      "orth": "ⲁⲛⲟⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4283,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS163",
+      "bibliography": "CD 12a; KoptHWb 8; DELC 13"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲉⲧⲉⲛⲟⲩⲛⲟϥ ϩⲓϫⲉⲛⲡⲕⲁϩⲓ ⲟⲩⲟϩ ⲁⲣⲉⲧⲉⲛ**ⲁⲛⲟⲛⲓ** ⲟⲩⲟϩ ⲁⲣⲉⲧⲉⲛϣⲁⲛϣ ⲛⲛⲉⲧⲉⲛϩⲏ ⲧⲉⲡⲉϩⲟⲟⲩ ⲙⲡϧⲟⲗϧⲉⲗ",
+      "english": "You have lived delicately on the earth, and taken your pleasure. You have nourished your hearts as in a day of slaughter.",
+      "source": "20_James_05",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲙⲉϩ ⲛⲱⲟⲩ ⲛⲉⲙⲫⲁϧⲣⲓ ⲛⲛⲟⲩϯ ⲉϥⲧⲁⲗϭⲟ ⲛϯⲉⲃϣⲓ ϫⲉϩⲓⲛⲁ ⲡⲓⲕⲉϩⲛⲓⲙ ⲛⲧⲉϯⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲧⲉϥϩⲓⲧϥ ⲉⲃⲟⲗ ϩⲁⲣⲟⲕ ⲛⲉⲙϯⲙⲉⲧϩⲏⲧⲃ ⲛⲉⲙⲡⲓ**ⲁⲛⲟⲛⲓ** ⲛⲧⲉⲡⲓϩⲟⲩⲟⲭⲣⲓⲁ ⲛⲧⲉⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲛⲉⲙⲙⲉⲧϭⲉⲛⲛⲉ ⲛⲓⲃⲉⲛ ⲛⲉⲙⲡⲓⲙⲕⲁϩ ⲛϩⲏⲧ ⲛⲉⲙⲡⲓϣⲑⲟⲣⲧⲉⲣ ⲛⲉⲙϯⲙⲉⲧⲕⲟⲩϫⲓ ⲛϩⲏⲧ ⲛⲉⲙⲡⲓϫⲱⲛⲧ ⲛⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲟⲧϥ",
+      "english": "For it is so full of glory and divine medicine that it will even cast out the domination of concupiscence from you, as well as the duplicity of the heart, the softness caused by the abundance of the riches of this world, all sloth, all affliction of the heart, all disturbance, faint-heartedness, and unrelenting anger.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲩⲟⲭⲣⲓⲁ",
+        2,
+        20.11
+      ],
+      [
+        "ⲙⲉⲧϩⲏⲧⲃ",
+        2,
+        20.11
+      ],
+      [
+        "ϣⲁⲛϣ",
+        1,
+        14.11
+      ],
+      [
+        "ⲁⲣⲉ",
+        2,
+        11.638
+      ],
+      [
+        "ⲛⲧⲉ",
+        4,
+        10.481
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        10.186
+      ],
+      [
+        "ⲧⲉⲛ",
+        2,
+        8.816
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        6.838
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        6.495
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟⲭⲣⲓⲁ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ϣⲁⲛϣ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ϣⲁⲛϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲛⲟⲛⲓ",
+          "ⲡⲓ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲛⲟⲛⲓ",
+          "ⲁⲛⲟⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ϩⲟⲩⲟⲭⲣⲓⲁ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲛⲟⲛⲓ",
+          "ⲧⲉⲛ_1_pre_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲛⲟⲛⲓ",
+          "ⲁⲛⲟⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛⲓ_0_node",
+          "ⲟⲩⲟϩ_3_post_ϣⲁⲛϣ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ϣⲁⲛϣ",
+          "ⲁⲣⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_post_ⲁⲛⲟⲛⲓ",
+          "ⲧⲉⲛ_3_post_ϣⲁⲛϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3818,
+      "count": 3
+    }
+  }
+}

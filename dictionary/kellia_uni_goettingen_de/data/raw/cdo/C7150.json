@@ -1,0 +1,339 @@
+{
+  "id": "C7150",
+  "forms": [
+    {
+      "id": "CF16358",
+      "orth": "ϫⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.62,
+        "rank": 962,
+        "count": 53
+      }
+    },
+    {
+      "id": "CF16359",
+      "orth": "ϫⲟⲗ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ϭⲁⲗ",
+      "dialect": "B",
+      "id": "2391.1"
+    },
+    {
+      "orth": "ϭⲁⲗ",
+      "dialect": "F",
+      "id": "2391.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7888",
+      "bibliography": "CD 765b; CED 312; KoptHWb 418, 572; DELC 325b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉϥⲉⲣⲉⲧⲓⲛ ⲇⲉ ϧⲉⲛⲟⲩⲛⲁϩϯ ⲛϥⲟⲓ ⲛϩⲏⲧ ⲃⲁⲛ ⲫⲏ ⲅⲁⲣ ⲉⲧⲟⲓ ⲛϩⲏⲧ ⲃⲁϥⲟⲓ ⲙⲫⲣⲏϯ ⲛⲛⲓ**ϫⲟⲗ** ⲛⲧⲉⲫⲓⲟⲙ ⲉⲣⲉⲡⲑⲏⲟⲩ ϭⲓ ⲙⲙⲱⲟⲩ ⲟⲩⲟϩ ⲉϥⲓⲛⲓ ⲙⲙⲱⲟⲩ",
+      "english": "But let him ask in faith, without any doubting, for he who doubts is like a wave of the sea, driven by the wind and tossed.",
+      "source": "20_James_01",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲛⲉ ⲁⲕⲥⲱⲧⲉⲙ ⲛⲥⲁⲛⲁⲉⲛⲧⲟⲗⲏ ⲛⲁⲥⲛⲁϣⲱⲡⲓ ⲡⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩⲓⲁⲣⲟ ⲛϫⲉⲧⲉⲕϩⲓⲣⲏⲛⲏ ⲟⲩⲟϩ ⲧⲉⲕⲙⲉⲑⲙⲏⲓ ⲙⲫⲣⲏϯ ⲛⲛⲓ**ϫⲟⲗ** ⲛⲧⲉⲫⲓⲟⲙ .",
+      "english": "And if thou hadst hearkened to my commandments, then would thy peace have been like a river, and thy righteousness as a wave of the sea.",
+      "source": "23_Isaias_48",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲟⲩϫⲟⲩϣⲧ ⲉⲣⲟⲓ ⲛϫⲉⲛⲏⲉⲧϧⲉⲛⲧ ⲉⲣⲟⲓ ⲭ ⲙⲫⲣⲏϯ ⲛⲟⲩⲙⲟⲩⲛⲥⲱⲣⲉⲙ ⲉⲁϥⲙⲟⲩⲛⲕ ⲓⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ϫⲟⲗ** ⲉⲁⲩⲥⲉⲛⲧ .",
+      "english": "My nearest relations have not regarded me; they have passed me by like a failing brook, or like a wave.",
+      "source": "18_Iob_06",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ϫⲟⲗ",
+          7
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          30
+        ],
+        [
+          "ⲭ_1_pre_ϫⲟⲗ",
+          7
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲟⲗ",
+          9
+        ],
+        [
+          "ⲧ_1_post_ϫⲟⲗ",
+          9
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          11
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲗ",
+          7
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲗ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲟⲗ",
+          4
+        ],
+        [
+          "ⲛⲓ_1_pre_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲓⲟⲙ_3_post_ⲫ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲥⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲥⲉⲛⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          2
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_post_ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲛ_1_pre_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲕ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_3_post_ⲣⲏϯ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ϫⲟⲗ",
+          "ϫⲟⲗ_0_node",
+          3
+        ],
+        [
+          "ⲭ_1_pre_ϫⲟⲗ",
+          "ⲛⲁ_1_pre_ϫⲟⲗ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲟⲗ",
+          "ϫⲟⲗ_0_node",
+          4
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          "ⲧ_1_post_ϫⲟⲗ",
+          4
+        ],
+        [
+          "ⲧ_1_post_ϫⲟⲗ",
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          "ⲛ_1_post_ϫⲟⲗ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲗ",
+          "ⲛⲉⲕ_1_pre_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲟⲗ",
+          "ϫⲟⲗ_0_node",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ϫⲟⲗ",
+          "ϫⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          "ⲛⲧⲉ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲗ",
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          "ⲓⲟⲙ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          "ⲙ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲟⲗ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          "ⲉ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲟⲗ",
+          "ⲁ_3_post_ⲥⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲥⲉⲛⲧ",
+          "ⲩ_3_post_ⲥⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲉⲛⲧ",
+          "ⲥⲉⲛⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          "ϭⲟⲉⲓⲥ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_1_post_ϫⲟⲗ",
+          "ⲡⲓ_2_post_ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+          "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ_1_post_ϫⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲛ_1_pre_ϫⲟⲗ",
+          "ⲁ_1_pre_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϫⲟⲗ",
+          "ϫⲟⲗ_0_node",
+          2
+        ],
+        [
+          "ϫⲟⲗ_0_node",
+          "ⲕ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲕ_1_post_ϫⲟⲗ",
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲟⲗ",
+          "ⲡⲁⲓ_3_post_ⲣⲏϯ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.33,
+      "rank": 1224,
+      "count": 28
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C7151",
+      "label": "ϩⲓϫⲟⲗ",
+      "pos": "V",
+      "gloss": "make, throw up waves"
+    }
+  ],
+  "etym": {
+    "egy_num": "52710",
+    "egy_lemma": "wḏn.w",
+    "english": "flood",
+    "german": "Flut",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/52710"
+  }
+}

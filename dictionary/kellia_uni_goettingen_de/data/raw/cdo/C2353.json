@@ -1,0 +1,63 @@
+{
+  "id": "C2353",
+  "forms": [
+    {
+      "id": "CF6448",
+      "orth": "ⲛⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "pl.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS2718",
+      "bibliography": "CD 258b; KoptHWb 116; DELC 135"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧ**ⲛⲁ**ϯϣⲓⲡⲉ ⲅⲁⲣ ⲛⲁⲓ ⲛⲙⲛⲁϣⲁϫⲉ . ⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲛⲁϯϣⲓⲡⲉ ⲙⲡⲁⲓ ⲉϥϣⲁⲛⲉⲓ ϩⲙⲡⲉϥⲉⲟⲟⲩ ⲛⲙⲡⲁⲧ ⲡⲉϥⲉⲓⲱⲧ ⲛⲙⲡⲁⲧ ⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ .",
+      "english": "For whoever will be ashamed of me and of my words, of him will the Son of Man be ashamed, when he comes in his glory, and the glory of the Father, and of the holy angels.",
+      "source": "42_Luke_9",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲥⲡⲁⲥⲙⲟⲥ ⲉⲛⲧⲁⲓⲥϩⲁⲓϥ ⲛⲧⲁϭⲓϫ ⲡⲁⲩⲗⲟⲥ . ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲛ**ⲛⲁ**ⲙⲣⲣⲉ . ⲧⲉⲭⲁⲣⲓⲥ ⲛⲙⲙⲏⲧⲛ",
+      "english": "The salutation of me, Paul, with my own hand: remember my bonds. Grace be with you. Amen.",
+      "source": "51_Colossians_4",
+      "urn": "urn:cts:copticLit:nt.col.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲛⲟⲩϩⲙ ⲙⲙⲟⲓ ⲉⲃⲟⲗ ϩⲙⲡⲉⲧϩⲟⲟⲩ ⲛⲓⲙ ⲛⲓⲙ ⲉϥⲉⲥⲙⲟⲩ ⲉⲛⲉⲓϣⲏⲣⲉ ϣⲏⲙ ⲁⲩⲱ ⲉⲩⲉⲙⲟⲩⲧⲉ ⲉⲡⲁⲣⲁⲛ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲙⲛⲡⲣⲁⲛ ⲛ**ⲛⲁ**ⲉⲓⲟⲧⲉ ⲁⲃⲣⲁϩⲁⲙ ⲙⲛⲓⲥⲁⲁⲕ ⲛⲥⲉⲁϣⲁⲓ ⲁⲩⲱ ⲛⲥⲉϣⲱⲡⲉ ⲉⲟⲩⲛⲟϭ ⲙⲙⲏⲏϣⲉ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲕⲁϩ",
+      "english": "the angel who delivers me from all evils, bless these boys, and my name shall be called upon them, and the name of my fathers, Abraam and Isaac; and let them be increased to a great multitude on the earth.",
+      "source": "Genesis 48",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2784",
+      "type": "cf",
+      "label": "possessive article sg. m."
+    },
+    {
+      "target": "C4005",
+      "type": "cf",
+      "label": "possessive article sg. f."
+    }
+  ]
+}

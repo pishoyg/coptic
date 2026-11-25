@@ -1,0 +1,134 @@
+{
+  "id": "C3654",
+  "forms": [
+    {
+      "id": "CF31689",
+      "orth": "ⲥⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10741,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31688",
+      "orth": "ⲥⲏⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7559,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4158",
+      "bibliography": "KoptHWb 192; ChLCS 49b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "＞—",
+        1,
+        19.598
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        9.512
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        8.95
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁ_1_pre_ⲥⲏⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲏⲡⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲥⲏⲡⲉ",
+          "ⲥⲏⲡⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10333,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3651",
+      "label": "ⲥⲉⲉⲡⲉ",
+      "pos": "V",
+      "gloss": "remain over, be remainder; leave remaining, spare"
+    },
+    {
+      "target": "C3652",
+      "label": "ⲥⲉⲉⲡⲉ",
+      "pos": "N",
+      "gloss": "remainder"
+    },
+    {
+      "target": "C3653",
+      "label": "ⲥⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "remainder"
+    }
+  ],
+  "etym": {
+    "egy_num": "132730",
+    "egy_lemma": "zp.yt",
+    "demo_num": "dm745",
+    "demo_lemma": "sp",
+    "english": "remainder; remnant",
+    "german": "Rest",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/132730",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm745"
+  }
+}

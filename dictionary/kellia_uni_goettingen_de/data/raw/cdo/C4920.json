@@ -1,0 +1,95 @@
+{
+  "id": "C4920",
+  "forms": [
+    {
+      "id": "CF11805",
+      "orth": "ϭⲙⲡⲟⲩⲱ",
+      "dialect": "S",
+      "oRef": "ϭⲙ ⲡ ⲟⲩⲱ"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5545",
+      "bibliography": "CD 475a; ChLCS 66a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7750",
+      "type": "cf",
+      "label": "find"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4915",
+      "label": "ϥⲓⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "news bearer, messenger"
+    },
+    {
+      "target": "C4916",
+      "label": "ϩⲉⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "enquire, investigate"
+    },
+    {
+      "target": "C4917",
+      "label": "ϩⲗⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "reply, dispute"
+    },
+    {
+      "target": "C4918",
+      "label": "ϫⲓⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4919",
+      "label": "ϫⲓⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4914",
+      "label": "ϯⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "give news"
+    },
+    {
+      "target": "C4912",
+      "label": "ⲛⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news"
+    },
+    {
+      "target": "C4910",
+      "label": "ⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "news, report, message, matter"
+    },
+    {
+      "target": "C4911",
+      "label": "ⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "reply, speak"
+    },
+    {
+      "target": "C4913",
+      "label": "ⲣⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "make reply, speak, answer"
+    }
+  ]
+}

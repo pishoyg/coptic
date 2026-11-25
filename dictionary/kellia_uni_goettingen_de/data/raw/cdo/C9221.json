@@ -1,0 +1,136 @@
+{
+  "id": "C9221",
+  "forms": [
+    {
+      "id": "CF23060",
+      "orth": "ⲓⲱⲧⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23061",
+      "orth": "ⲓⲱⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7950,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23062",
+      "orth": "ⲓⲱⲧⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11479",
+      "bibliography": "DDGLC",
+      "cu_ID": "323"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲉϥⲕⲱⲧⲉ ⲙⲙⲟϥ ⲉⲡⲉϥⲧⲉⲩⲗⲁⲕϩ ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ⲙⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲉⲩϭⲟⲟⲗⲉ ⲧⲏⲣⲟⲩ ⲛϩⲉⲛϩⲃⲟⲥ ⲛⲛⲉⲓⲁⲁⲩ · ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲓⲁⲱ · * ⲓⲁⲱ · ⲧⲁⲓ ⲧⲉ ⲧⲉϥϩⲉⲣⲙⲏⲛⲉⲓⲁ · **ⲓⲱⲧⲁ** · ϫⲉⲁⲡⲧⲏⲣϥ ⲉⲓ ⲉⲃⲟⲗ · ⲁⲗⲫⲁ ϫⲉⲥⲉⲛⲁⲕⲧⲟⲟⲩ ⲉϩⲟⲩⲛ · ⲱⲱ ϫⲉϥⲛⲁϣⲱⲡⲉ ⲛϭⲓⲡϫⲱⲕ ⲛⲛϫⲱⲕ ⲧⲏⲣⲟⲩ ·",
+      "english": "“And Jesus made invocation, turning himself towards the four corners of the world with his disciples, who were all clad in linen garments, and saying: iaō iaō iaō.” This is its interpretation: iōta, because the universe hath gone forth; alpha, because it will turn itself back again; ōmega, because the completion of all the completeness will take place.”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ⲅⲁⲣ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ . ϫⲉϣⲁⲛⲧⲉⲧⲡⲉ ⲡⲁⲣⲁⲅⲉ ⲙⲛⲡⲕⲁϩ ⲟⲩ**ⲓⲱⲧⲁ** ⲛⲟⲩⲱⲧ . ⲏⲟⲩϣⲱⲗϩ ⲛⲟⲩⲱⲧ ⲛⲛⲉⲩⲥⲉⲓⲛⲉ ⲉⲃⲟⲗ ϩⲙⲡⲛⲟⲙⲟⲥ ϣⲁⲛⲧⲟⲩϣⲱⲡⲉ ⲧⲏⲣⲟⲩ .",
+      "english": "For most certainly, I tell you, until heaven and earth pass away, not even one smallest letter shall in any way pass away from the law, until all things are accomplished.",
+      "source": "40_Matthew_5",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲣⲙⲏⲛⲉⲓⲁ",
+        1,
+        15.428
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        10.036
+      ],
+      [
+        "ⲏ",
+        1,
+        8.479
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7500,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2713",
+    "grl_lemma": "ἰῶτα",
+    "grl_meaning": "the letter Jota",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 847b; Preisigke 1:706"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "C6396",
+  "forms": [
+    {
+      "id": "CF31989",
+      "orth": "ⲣⲙϩⲓⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31988",
+      "orth": "ⲣⲙⲛϩⲓⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8064,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7099",
+      "bibliography": "CD 646a; KoptHWb 356"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6394",
+      "label": "ϩⲓⲏ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C6395",
+      "label": "ϩⲓⲧⲉϩⲓⲏ",
+      "pos": "ADV",
+      "gloss": "on road"
+    },
+    {
+      "target": "C6397",
+      "label": "ϯⲧⲉϩⲓⲏ",
+      "pos": "V",
+      "gloss": "give way, means"
+    }
+  ]
+}

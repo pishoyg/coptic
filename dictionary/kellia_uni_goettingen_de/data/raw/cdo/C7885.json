@@ -1,0 +1,44 @@
+{
+  "id": "C7885",
+  "forms": [
+    {
+      "id": "CF17835",
+      "orth": "ⲁⲧϭⲣⲟϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8765",
+      "bibliography": "CD 830a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7883",
+      "label": "ϭⲣⲱϩ",
+      "pos": "V",
+      "gloss": "be in want, needy, diminished"
+    },
+    {
+      "target": "C7884",
+      "label": "ϭⲣⲱⲱϩ",
+      "pos": "N",
+      "gloss": "want, need"
+    },
+    {
+      "target": "C7886",
+      "label": "ⲣϭⲣⲱϩ",
+      "pos": "V",
+      "gloss": "be in want"
+    }
+  ]
+}

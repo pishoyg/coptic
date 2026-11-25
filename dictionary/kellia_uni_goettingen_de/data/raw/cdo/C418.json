@@ -1,0 +1,192 @@
+{
+  "id": "C418",
+  "forms": [
+    {
+      "id": "CF1738",
+      "orth": "ⲉⲃⲟⲗ ϫⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.86,
+        "rank": 191,
+        "count": 925
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS504",
+      "bibliography": "CD 34b; KoptHWb 23"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ϫⲉ**ⲟⲩⲕⲁϩ** ⲙⲙⲉⲗϩ ⲡⲉ **ⲡⲉⲛⲕⲁϩ",
+      "english": "since our soil is salty soil.'",
+      "source": "Apophthegmata Patrum Sahidic 138: Unidentified",
+      "urn": "urn:cts:copticLit:ap.138.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲃⲟⲗ **ϫⲉ**ⲥⲉϫⲱ** ⲙⲙⲟⲥ ϫⲉⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲙⲙⲁϥ .",
+      "english": "--because they said, 'He has an unclean spirit.'",
+      "source": "Mark Chapter 3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲃⲟⲗ **ϫⲉ**ⲁⲧⲉⲧⲛⲕⲱ** ⲛⲥⲱⲧⲛ ⲛⲧϩⲟⲧⲉ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "For you have left the fear of God behind you;",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7055",
+      "type": "cf",
+      "label": "conjunction"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

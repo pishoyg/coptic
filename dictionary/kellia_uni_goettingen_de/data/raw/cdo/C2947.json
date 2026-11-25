@@ -1,0 +1,138 @@
+{
+  "id": "C2947",
+  "forms": [
+    {
+      "id": "CF7759",
+      "orth": "ⲡⲁϣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8971,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3374",
+      "bibliography": "CD 277a; KoptHWb 155; DELC 166; ChLCS 39a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲡⲏⲧ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛϩⲟⲧⲉ ϥⲛⲁϩⲉ ⲉϩⲣⲁⲓ ⲉⲡⲉϩⲓⲉⲓⲧ ⲁⲩⲱ ⲡⲉⲧⲛⲏⲩ ⲉϩⲣⲁⲓ ϩⲙⲡⲉϩⲓⲉⲓⲧ ⲥⲉⲛⲁⲧⲁϩⲟϥ ϩⲙⲡ**ⲡⲁϣϥ** ϫⲉϯⲛⲁⲉⲓⲛⲉ ⲛⲛⲁⲓ ⲉϫⲛⲙⲱⲁⲃ ϩⲛⲧⲉⲣⲟⲙⲡⲉ ⲙⲡⲉⲩϭⲙⲡϣⲓⲛⲉ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ",
+      "english": "He that flees from the terror shall fall into the pit, and he that comes up out of the pit shall even be taken in the snare: for I will bring these things upon Moab in the year of their visitation.",
+      "source": "Jeremiah 31",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉ ⲛϣⲁϥⲁⲁϥ ⲛϭⲓⲡϭⲉⲣⲏϭ · ϣⲁϥⲥⲡⲟⲩⲇⲁⲍⲉ ⲉⲩⲍⲱⲟⲛ · ⲏ ϩⲉⲛⲍⲱⲟⲛ · ⲛϥⲕⲁⲁϥ ϩⲙⲡⲕⲱⲧⲉ ⲛⲛⲉϥⲁⲗⲟⲟⲩⲉ · ⲙⲛⲛⲉϥϩⲛⲁⲁⲩ ⲛϭⲱⲣϭ ϣⲁⲛⲧⲉϩⲁϩ ϫⲱⲗϫ · ⲁⲩⲱ ϣⲁⲛⲧⲉϩⲁϩ ⲉⲓ · ⲁⲩⲱ ϣⲁⲛⲧⲟⲩϣⲱⲡⲉ ⲛϩⲓⲉⲓⲧ ⲛⲛⲉⲩⲉⲣⲏⲩ ϩⲙⲡ**ⲡⲁϣϥ** ·",
+      "english": "...",
+      "source": "Unknown Work 5-1: GF 381-88",
+      "urn": "urn:cts:copticLit:shenoute.unknown5_1.monbgf:131-139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        10.484
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        10.08
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        9.987
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        9.504
+      ],
+      [
+        "ϩⲙ",
+        2,
+        9.413
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁϣϥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8517,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2946",
+      "label": "ⲡⲁϣ",
+      "pos": "N",
+      "gloss": "trap, snare"
+    },
+    {
+      "target": "C2948",
+      "label": "ⲣⲉϥⲭⲁⲫⲁϣ",
+      "pos": "N",
+      "gloss": "trap-setter"
+    }
+  ]
+}

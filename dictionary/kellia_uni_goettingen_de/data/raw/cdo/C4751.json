@@ -1,0 +1,145 @@
+{
+  "id": "C4751",
+  "forms": [
+    {
+      "id": "CF11467",
+      "orth": "ⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.67,
+        "rank": 940,
+        "count": 105
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉⲣⲁⲧ⸗",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5368",
+      "bibliography": "CD 456ab; KoptHWb 257; DELC 225b; ChLCS 63b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁϥϣⲁϫⲉ ⲇⲉ ⲟⲛ ⲉⲧⲃⲉⲡⲧⲱⲃⲥ ⲛⲧⲉⲯⲩⲭⲏ ⲁⲩⲱ ⲉⲧⲃⲉⲡⲉϩⲣⲏⲧⲟⲛ ⲉⲧⲥⲏϩ ϩⲛⲓⲉⲣⲉⲙⲓⲁⲥ ⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ϫⲉϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ **ϯⲛⲁⲧⲁϩⲟ **ⲉⲣⲁⲧ**ⲥ** ⲛⲟⲩⲁⲛⲁⲧⲟⲗⲏ ⲙⲙⲉ ϩⲙⲡⲏⲓ ⲛⲇⲁⲩⲉⲓⲇ",
+      "english": "AND HE SPAKE ALSO CONCERNING THE IMPULSE OF THE SOUL, AND CONCERNING THE PASSAGE WHICH IS WRITTEN IN [THE BOOK OF] JEREMIAH THE PROPHET, WHICH SAITH, 'IN THAT DAY I WILL ESTABLISH SUNRISE (OR, MORNING) IN THE HOUSE OF DAVID.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲁⲃⲣⲁϩⲁⲙ **ⲧⲁϩⲟ **ⲉⲣⲁⲧ**ϥ** ⲛⲥⲁϣϥⲉ ⲛϩⲓⲁⲓⲃ ⲛⲉⲥⲟⲟⲩ ⲛⲥⲁⲟⲩⲥⲁ",
+      "english": "And Abraam set seven ewe-lambs by themselves.",
+      "source": "Genesis 21",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϣⲓⲛⲉ ⲛⲥⲁⲡϫⲟⲉⲓⲥ ⲛⲉ ⲣⲱⲙⲉ ⲛⲓⲙ ⲉⲧϣⲓⲛⲉ **ⲛⲥⲁⲡⲧⲁϩⲟ **ⲉⲣⲁⲧ**ϥ** ⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲡⲉⲩⲣⲡⲙⲉⲉⲩⲉ ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "Those who seek after God are those men who enquire concerning the creation of the angels of God, and who make manifest their holy commemorations.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5640",
+      "type": "cf",
+      "label": "stand, stay, wait"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4753",
+      "label": "ϭⲓⲛⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "establishment"
+    },
+    {
+      "target": "C4754",
+      "label": "ϭⲓⲛⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "establishment"
+    },
+    {
+      "target": "C4745",
+      "label": "ⲁⲧϣⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "unattainable, incomprehensible"
+    },
+    {
+      "target": "C4744",
+      "label": "ⲁⲧⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "unattainable, incomprehensible"
+    },
+    {
+      "target": "C4747",
+      "label": "ⲙⲉⲧⲁⲧϣⲧⲁϩⲟⲥ",
+      "pos": "N",
+      "gloss": "incomprehensibility"
+    },
+    {
+      "target": "C4746",
+      "label": "ⲙⲛⲧⲁⲧⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "incomprehensibility"
+    },
+    {
+      "target": "C4750",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁϩⲟ⸗",
+      "pos": "N",
+      "gloss": "tangibility"
+    },
+    {
+      "target": "C4748",
+      "label": "ⲣⲉϥⲧⲁϩⲉ-",
+      "pos": "N",
+      "gloss": "catcher, fisherwoman"
+    },
+    {
+      "target": "C4749",
+      "label": "ⲣⲉϥⲧⲁϩⲉ-",
+      "pos": "N",
+      "gloss": "catcher, fisherman"
+    },
+    {
+      "target": "C4740",
+      "label": "ⲧⲁϩⲟ",
+      "pos": "V",
+      "gloss": "make to stand, set up; attain, be able"
+    },
+    {
+      "target": "C4741",
+      "label": "ⲧⲁϩⲟ",
+      "pos": "N",
+      "gloss": "setting up, laying hold"
+    },
+    {
+      "target": "C4742",
+      "label": "ⲧⲁϩⲟ (ⲉ-)",
+      "pos": "V",
+      "gloss": "assign to, decide for; attain to, befall"
+    },
+    {
+      "target": "C4743",
+      "label": "ⲧⲁϩⲟ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "meet with"
+    },
+    {
+      "target": "C4752",
+      "label": "ⲧⲁϩⲟ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "establishment, right order"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "C8824",
+  "forms": [
+    {
+      "id": "CF21270",
+      "orth": "ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21271",
+      "orth": "ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10791,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10616",
+      "bibliography": "DDGLC",
+      "cu_ID": "2843"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲁⲧⲣⲉⲡⲇⲓⲱⲅⲙⲟⲥ ⲁⲩⲱ ⲁⲩⲕⲱⲧ ⲉⲣⲟⲟⲩ ⲛⲟⲩⲙⲁⲣⲧⲩⲣⲓⲟⲛ ⲉⲩⲣϣⲁ ⲛϩⲏⲧϥ ϩⲛϩⲉⲛϩⲩⲙⲛⲟⲥ · ⲙⲛϩⲉⲛ**ⲇⲟⲝⲟⲗⲟⲅⲓⲁ** ⲕⲁⲧⲁⲡⲥⲱⲛⲧ ⲛⲛⲉⲭⲣⲓⲥⲧⲓⲁⲛⲟⲥ ·",
+      "english": "And after the persecution (of them had died away) they built over them a martyrium, and they celebrated festivals therein with hymns and doxologies, according to the custom of the Christians.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲩⲙⲛⲟⲥ",
+        1,
+        14.554
+      ],
+      [
+        "ⲥⲱⲛⲧ",
+        1,
+        13.303
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲟⲝⲟⲗⲟⲅⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+          "ϩⲉⲛ_1_pre_ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲟⲝⲟⲗⲟⲅⲓⲁ",
+          "ⲇⲟⲝⲟⲗⲟⲅⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10382,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3448",
+    "grl_lemma": "δοξολογία",
+    "grl_meaning": "laudation, glorification",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 445a; Sophocles 393a"
+  }
+}

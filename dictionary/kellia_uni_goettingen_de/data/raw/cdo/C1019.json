@@ -1,0 +1,132 @@
+{
+  "id": "C1019",
+  "forms": [
+    {
+      "id": "CF3392",
+      "orth": "ⲁϣⲉ (ⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "collocPrep": "ⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1180",
+      "bibliography": "CD 88b-89a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲥⲛⲏⲩ ⲇⲉ ⲧⲏⲣⲟⲩ ⲉⲧϩⲙⲟⲟⲥ ϩⲙⲡⲥⲩⲛϩⲉⲇⲣⲓⲟⲛ ⲁⲩⲣϣⲡⲏⲣⲉ · **ⲉⲧⲃⲉⲧⲁϣⲉ **ⲛ**ⲛϫⲃⲃⲉⲥ** ϫⲉⲙⲡⲉⲡⲉϥⲫⲓⲗⲟⲛⲓⲟⲛ ⲣⲱⲕϩ ·",
+      "english": "And all the brethren who were sitting in the council chamber marveled at the large quantity of fire which he put into his tunic, and why it did not catch fire.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϩⲟⲥⲉ **ⲉⲧⲃⲉⲧⲁϣⲉ **ⲛ**ⲛⲉⲭⲣⲏⲙⲁ** · ϩⲙⲡⲉⲕⲙⲟⲩ ⲇⲉ ⲟⲛ ⲁⲕⲃⲱⲕ ⲉⲛⲕⲟⲗⲁⲥⲓⲥ ⲛⲁⲧⲟⲩⲱ · ⲛϣⲃⲃⲓⲟ ⲛⲛⲉⲕⲁⲛⲟⲙⲓⲁ ⁛",
+      "english": "and thou wast weary because of the multitude of thy possessions, and at thy death thou didst depart to the punishment which is neverending, in exchange for thy wickedness.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1025",
+      "label": "ϫⲓⲛⲓϣⲓ",
+      "pos": "N",
+      "gloss": "hanging, crucifixion"
+    },
+    {
+      "target": "C1021",
+      "label": "ⲁϣⲉ (ϩⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "depend on"
+    },
+    {
+      "target": "C1017",
+      "label": "ⲁϣⲉ (ⲉ-)",
+      "pos": "VSTAT",
+      "gloss": "depend from/on, rely on"
+    },
+    {
+      "target": "C1024",
+      "label": "ⲁϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "be hung up"
+    },
+    {
+      "target": "C1022",
+      "label": "ⲁϣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "VSTAT",
+      "gloss": "hang out, overhang"
+    },
+    {
+      "target": "C1020",
+      "label": "ⲁϣⲉ (ⲛⲥⲁ-)",
+      "pos": "VSTAT",
+      "gloss": "be attached to"
+    },
+    {
+      "target": "C1018",
+      "label": "ⲁϣⲓ (ⲉϫⲉⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "hang over, threaten"
+    },
+    {
+      "target": "C1023",
+      "label": "ⲁϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "be hung up"
+    },
+    {
+      "target": "C1010",
+      "label": "ⲉⲓϣⲉ",
+      "pos": "V",
+      "gloss": "hang, suspend"
+    },
+    {
+      "target": "C1016",
+      "label": "ⲉⲓϣⲉ",
+      "pos": "V",
+      "gloss": "be hung, depend"
+    },
+    {
+      "target": "C1011",
+      "label": "ⲉⲓϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "hang upon, to"
+    },
+    {
+      "target": "C1015",
+      "label": "ⲉⲓϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "hang up"
+    },
+    {
+      "target": "C1012",
+      "label": "ⲉⲓϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "hang upon"
+    },
+    {
+      "target": "C1013",
+      "label": "ⲉⲓϣⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hang from"
+    },
+    {
+      "target": "C1014",
+      "label": "ⲓϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "hang up"
+    }
+  ]
+}

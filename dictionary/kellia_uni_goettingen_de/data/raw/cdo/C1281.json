@@ -1,0 +1,103 @@
+{
+  "id": "C1281",
+  "forms": [
+    {
+      "id": "CF3967",
+      "orth": "ⲕⲁⲡⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18467,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲡⲉⲓ",
+      "dialect": "S",
+      "id": "833.1"
+    },
+    {
+      "orth": "ⲕⲁⲫⲁⲓ",
+      "dialect": "B",
+      "id": "833.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1485",
+      "bibliography": "CD 114a; KoptHWb 67; ChLCS 18a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲥⲣⲁⲛⲁϥ ⲅⲁⲣ ⲙⲡϫⲟⲉⲓⲥ ⲛϭⲓⲧⲉϥⲯⲩⲭⲏ ⲉⲧⲃⲉⲡⲁⲓ ⲁϥⲡⲱⲧ ⲉⲃⲟⲗ ⲛⲧⲙⲏⲧⲉ ⲛⲧⲡⲟⲛⲏⲣⲓⲁ ⲛⲗⲁⲟⲥ ⲇⲉ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲙⲡⲟⲩⲛⲟⲉⲓ ⲟⲩⲇⲉ ⲙⲡⲟⲩ**ⲕⲁⲡⲁⲓ** ϩⲙⲡⲉⲩϩⲏⲧ",
+      "english": "For his soul pleased the Lord: therefore hasted he to take him away from among the wicked.",
+      "source": "Wisdom 4",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲉⲓ",
+        1,
+        13.036
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        11.629
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        10.276
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        8.947
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18086,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "163450",
+    "egy_lemma": "kꜣp.w",
+    "english": "[a bird]",
+    "german": "[ein Vogel]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163450"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "C4077",
+  "forms": [
+    {
+      "id": "CF10097",
+      "orth": "ϭⲓⲥⲧⲃⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8556,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "m.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS4631",
+      "bibliography": "CD 399ab; ChLCS 55b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲕⲧⲟⲟⲩ ⲉⲃⲟⲗ ⲁⲩⲡⲱⲧ ⲉⲧⲉⲣⲏⲙⲟⲥ ⲉⲧⲡⲉⲧⲣⲁ ⲛϩⲣⲉⲙⲙⲱⲛ ⲁⲩⲱ ⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲡⲱⲧ ⲛⲥⲱⲟⲩ ⲁⲩⲱ ⲁⲩⲧⲁⲕⲟ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲛⲟⲩ**ϭⲓⲥⲧⲃⲁ** ⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲡⲱⲧ ⲛⲥⲱⲟⲩ ⲁⲩⲥⲣⲓⲧ ⲙⲙⲟⲟⲩ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ϣⲁϩⲣⲁⲓ ⲉⲅⲁⲗⲁⲁⲇ ⲁⲩⲣⲱϩⲧ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲛϣⲟ ⲥⲛⲁⲩ ⲛⲣⲱⲙⲉ",
+      "english": "And the rest turned, and fled to the wilderness to the rock of Remmon; and the children of Israel picked off of them five thousand men; and the children of Israel went down after them as far as Gedan, and they smote of them two thousand men.",
+      "source": "Judges 20",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉϯ ⲛⲧⲕⲁⲧⲁⲥⲭⲉⲥⲓⲥ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲟⲩ**ϭⲓⲥⲧⲃⲁ** ⲙⲙⲁϩⲉ ...",
+      "english": "And ye shall appoint for the possession of the city five thousand in breadth, and in length twenty-five thousand: after the manner of the first-fruits of the holy portion, they shall be for all the house of Israel.",
+      "source": "Ezekiel 45",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁϩⲉ",
+        1,
+        12.458
+      ],
+      [
+        "...",
+        2,
+        12.305
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        9.13
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        7.84
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲥⲧⲃⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲉ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲥⲧⲃⲁ_0_node",
+          "ⲛ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲥⲧⲃⲁ",
+          "ⲣⲱⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_2_post_ⲛ",
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ϭⲓⲥⲧⲃⲁ",
+          "ⲙ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲥⲧⲃⲁ_0_node",
+          "ⲙ_1_post_ϭⲓⲥⲧⲃⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲥⲧⲃⲁ",
+          "ⲙⲁϩⲉ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8113,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7917",
+      "type": "cf",
+      "label": "half"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4076",
+      "label": "ⲁⲛⲑⲃⲁ",
+      "pos": "NUM",
+      "gloss": "myriad"
+    },
+    {
+      "target": "C4075",
+      "label": "ⲧⲃⲁ",
+      "pos": "NUM",
+      "gloss": "ten thousand"
+    }
+  ]
+}

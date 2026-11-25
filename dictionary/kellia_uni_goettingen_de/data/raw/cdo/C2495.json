@@ -1,0 +1,75 @@
+{
+  "id": "C2495",
+  "forms": [
+    {
+      "id": "CF6773",
+      "orth": "ⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6774",
+      "orth": "ⲉⲓⲣⲉ ⲙⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2874",
+      "bibliography": "CD 227b; ChLCS 32b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2493",
+      "label": "ⲉⲛⲁⲛⲟⲩⲥ",
+      "pos": "ADV",
+      "gloss": "well"
+    },
+    {
+      "target": "C2492",
+      "label": "ⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "good, fair"
+    },
+    {
+      "target": "C2497",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "beneficence"
+    },
+    {
+      "target": "C2491",
+      "label": "ⲛⲁⲛⲟⲩ-",
+      "pos": "VBD",
+      "gloss": "be good, fair"
+    },
+    {
+      "target": "C2494",
+      "label": "ⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "that which is good"
+    },
+    {
+      "target": "C2496",
+      "label": "ⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "doer of good, benefactor"
+    }
+  ]
+}

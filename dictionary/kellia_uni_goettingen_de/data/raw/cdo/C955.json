@@ -1,0 +1,134 @@
+{
+  "id": "C955",
+  "forms": [
+    {
+      "id": "CF3254",
+      "orth": "ⲉⲓⲣⲉ (ϩⲁ-)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲓⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 12.16,
+        "rank": 110,
+        "count": 1031
+      }
+    },
+    {
+      "orth": "ⲉⲓⲣⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 11.22,
+        "rank": 107,
+        "count": 1770
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1115",
+      "bibliography": "CD 83b; KoptHWb 51"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲑⲛⲁ**ⲓⲣⲓ** ⲙⲡⲉⲧⲉϩⲛⲉⲫⲛⲟⲩϯ ⲫⲁⲓ ⲡⲉ ⲡⲁⲥⲟⲛ ⲛⲉⲙⲧⲁⲥⲱⲛⲓ ⲛⲉⲙⲧⲁⲙⲁⲩ .",
+      "english": "For whoever does the will of God, the same is my brother, and my sister, and mother.'",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧⲉⲛⲕⲱⲣϥ ⲙⲡⲓⲥⲁϫⲓ ⲛⲧⲉⲫⲛⲟⲩϯ ϧⲉⲛⲧⲉⲧⲛⲡⲁⲣⲁⲇⲟⲥⲓⲥ ⲑⲏ ⲉⲧⲁⲣⲉⲧⲉⲛⲧⲏⲓⲥ ⲟⲩⲟϩ ϩⲁⲛⲙⲏϣ ⲙⲡⲁⲓⲣⲏϯ ⲉⲩⲟⲛⲓ ⲛⲛⲁⲓ ⲧⲉⲧⲉⲛ**ⲣⲁ** ⲙⲙⲱⲟⲩ .",
+      "english": "making void the word of God by your tradition, which you have handed down. You do many things like this.'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥ **ⲟⲓ** ⲛⲧⲩⲡⲟⲥ ⲛⲱⲟⲩ ϧⲉⲛϩⲁⲛϩⲃⲏⲟⲩⲓ ⲉⲛⲁⲛⲉⲩ .",
+      "english": "He was a model for them in good works.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C961",
+      "label": "ϫⲓⲛⲓⲣⲓ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C951",
+      "label": "ⲉⲓⲣⲉ",
+      "pos": "V",
+      "gloss": "act; become, befall; do; make, do; make, bear fruit; pass (time); make (total), amount to; make (price),\n              value at"
+    },
+    {
+      "target": "C960",
+      "label": "ⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C952",
+      "label": "ⲉⲓⲣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "befall; be incumbent on"
+    },
+    {
+      "target": "C954",
+      "label": "ⲉⲓⲣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "be at work upon"
+    },
+    {
+      "target": "C953",
+      "label": "ⲉⲓⲣⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "do on behalf of, make into"
+    },
+    {
+      "target": "C957",
+      "label": "ⲉⲣ-",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C956",
+      "label": "ⲣⲁ",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C958",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "maker, doer"
+    },
+    {
+      "target": "C959",
+      "label": "ⲣⲙⲛⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "worker"
+    },
+    {
+      "target": "C962",
+      "label": "ⲧⲁϣⲉⲉⲓⲣⲉ",
+      "pos": "V",
+      "gloss": "do more, increase doing"
+    }
+  ]
+}

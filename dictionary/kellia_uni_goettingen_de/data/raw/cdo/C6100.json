@@ -1,0 +1,122 @@
+{
+  "id": "C6100",
+  "forms": [
+    {
+      "id": "CF14205",
+      "orth": "ϣⲉⲧⲙⲛⲧⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9404,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6787",
+      "bibliography": "CD 594b; ChLCS 81b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲛⲥⲡⲥⲱⲡϥ ⲁⲣⲏⲩ ⲛϥⲣⲡⲛⲉⲩⲙⲁ ⲛⲙⲙⲁⲛ ⲛⲟⲩⲕⲟⲩⲓ ⲡⲣⲟⲥⲧϩⲉ ⲙⲡⲉⲕⲥⲉⲉⲡⲉ ⲉⲧ**ϣⲉⲧⲙⲛⲧⲛⲁ** · ⲉⲣⲙⲡⲣⲟ ⲛⲧⲁⲩⲗⲏ · ⲟⲩⲛⲁϩⲏⲧ ⲅⲁⲣ ⲡⲉ ⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲉⲧⲛϣⲁⲛⲣ ϣⲁ ⲛⲁϥ ⲛϥⲛⲁⲕⲁⲧⲏⲩⲧⲛ ⲁⲛ · ⲉϫⲛⲗⲁⲁⲩ · ⲁⲗⲗⲁ ⲧⲟⲩϫⲉⲧⲏⲩⲧⲛ ⲛⲥⲁⲃⲟⲗ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲟⲥⲡⲕⲥⲉⲉⲡⲉ ⲛⲛⲉⲧ**ϣⲉⲧⲙⲛⲧⲛⲁ** · ϩⲓⲣⲙⲡⲣⲟ ⲛⲧⲁⲩⲗⲏ · ⲟⲩⲛⲁϩⲏⲧ ⲅⲁⲣ ⲡⲉ ⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲉⲧⲛⲣ ϣⲁ ⲛⲁϥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:31-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲥⲉⲉⲡⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲉⲣⲙ",
+        1,
+        14.554
+      ],
+      [
+        "ⲣⲟ",
+        2,
+        13.797
+      ],
+      [
+        "ϩⲓⲣⲙ",
+        1,
+        13.598
+      ],
+      [
+        "ⲥⲉⲉⲡⲉ",
+        1,
+        11.843
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.238
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        7.868
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲉⲧⲙⲛⲧⲛⲁ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8980,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6099",
+      "label": "ϣⲓⲧⲉ",
+      "pos": "V",
+      "gloss": "demand, extort"
+    }
+  ]
+}

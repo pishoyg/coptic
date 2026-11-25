@@ -1,0 +1,49 @@
+{
+  "id": "C54",
+  "forms": [
+    {
+      "id": "CF199",
+      "orth": "ⲁⲗⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF200",
+      "orth": "ⲁⲗⲕⲉ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲁⲗⲕⲏ",
+      "dialect": "S",
+      "id": "427.1"
+    },
+    {
+      "orth": "ⲁⲗⲕⲏ",
+      "dialect": "B",
+      "id": "427.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS63",
+      "bibliography": "CD 5b; CED 4; KoptHWb 4, 485; DELC 8; 3b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "39740",
+    "egy_lemma": "ꜥrq.y",
+    "demo_num": "d1045",
+    "demo_lemma": "ꜥrqj",
+    "english": "month's end (i.e., the last day)",
+    "german": "letzter Monatstag",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39740",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1045"
+  }
+}

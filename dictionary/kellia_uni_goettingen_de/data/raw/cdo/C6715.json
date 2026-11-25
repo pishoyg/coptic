@@ -1,0 +1,135 @@
+{
+  "id": "C6715",
+  "forms": [
+    {
+      "id": "CF15475",
+      "orth": "ϩⲛⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17443,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲉⲙⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11605,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7429",
+      "bibliography": "CD 691a; CED 288; KoptHWb 379; DELC 305a-b; ChLCS 92b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲧⲟⲩⲱⲧϩ ⲙⲙⲟⲟⲩ ⲛⲁϣⲱⲡⲉ ϩⲛⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ ⲁⲩⲱ ⲛⲉⲧⲧⲁⲙⲓⲟ ⲙⲡ**ϩⲛⲕⲉ** ⲧⲏⲣⲟⲩ ⲛⲁⲗⲩⲡⲏ ⲁⲩⲱ ⲛⲥⲉⲙⲕⲁϩ ⲉⲡⲉⲩϩⲏⲧ",
+      "english": "And they that work at them shall be in pain, and all that make beer shall be grieved, and be pained in their souls.",
+      "source": "Isaiah 19",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲩⲡⲏ",
+        1,
+        13.791
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        11.453
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲛⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲛⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲛⲕⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲛⲕⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲛⲕⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17054,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "110300",
+    "egy_lemma": "ḥnq.t",
+    "demo_num": "d4294",
+    "demo_lemma": "ḥq.t",
+    "english": "beer",
+    "german": "Bier",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/110300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4294"
+  }
+}

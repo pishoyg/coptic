@@ -1,0 +1,219 @@
+{
+  "id": "C5167",
+  "forms": [
+    {
+      "id": "CF12300",
+      "orth": "ⲟⲩⲟⲥⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5559,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5802",
+      "bibliography": "CD 492b; KoptHWb 278; DELC 238a; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲕⲧⲁⲁⲧⲉ ⲉⲧⲟⲟⲧϥ ⲙⲡϫⲁϫⲉ ⲁⲕⲧⲁϩⲉⲛⲁⲟⲩⲉⲣⲏⲧⲉ ⲉⲣⲁⲧⲟⲩ ϩⲛⲟⲩ**ⲟⲩⲟⲥⲧⲛ**",
+      "english": "And thou hast not shut me up into the hands of the enemy: thou hast set my feet in a wide place.",
+      "source": "Psalms 30",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁ",
+        9,
+        13.198
+      ],
+      [
+        "ⲟⲩⲱϣⲥ",
+        1,
+        12.028
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        2,
+        11.812
+      ],
+      [
+        "ⲧⲟⲩϫⲟ",
+        1,
+        11.13
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲓ",
+        2,
+        7.85
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.231
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.944
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.91
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        6.23
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.083
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲩ",
+        1,
+        3.81
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲟⲥⲧⲛ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲟⲩⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ⲟⲩⲟⲥⲧⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲟⲩⲟⲥⲧⲛ",
+          "ⲥⲉ_1_pre_ⲟⲩⲟⲥⲧⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲟⲩⲟⲥⲧⲛ",
+          "ⲟⲩⲟⲥⲧⲛ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲥⲧⲛ_0_node",
+          "ⲛ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲃⲱⲕ",
+          "ⲛⲉ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_1_post_ⲟⲩⲟⲥⲧⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5123,
+      "count": 4
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5168",
+      "label": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be broad, be well provided; enlarge"
+    },
+    {
+      "target": "C5169",
+      "label": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "breadth; independence, abundance"
+    },
+    {
+      "target": "C5166",
+      "label": "ⲟⲩⲟⲥⲧⲛ",
+      "pos": "V",
+      "gloss": "become broad; make broad, broaden"
+    }
+  ]
+}

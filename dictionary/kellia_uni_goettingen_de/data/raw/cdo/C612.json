@@ -1,0 +1,392 @@
+{
+  "id": "C612",
+  "forms": [
+    {
+      "id": "CF2283",
+      "orth": "ⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 16.64,
+        "rank": 77,
+        "count": 2626
+      }
+    },
+    {
+      "orth": "ⲅ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.27,
+        "rank": 319,
+        "count": 277
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "dritter Buchstabe des Alphabets ⲅⲁⲙⲙⲁ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS731",
+      "bibliography": "CD 48a; KoptHWb 31; DELC 35; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲛⲟⲛ ⲁⲛⲥⲱⲧⲉⲙ ⲉⲣⲟϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲟⲕ ϯⲛⲁⲃⲱⲗ ⲙⲡⲁⲓⲉⲣⲫⲉⲓ ⲉⲃⲟⲗ ⲡⲁⲓⲙⲟⲩⲛⲕ ⲛϫⲓϫ ⲟⲩⲟϩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛ**ⲅ** ⲛⲉϩⲟⲟⲩ ⲕⲉⲟⲩⲁⲓ ⲛⲁⲑⲙⲟⲩⲛⲕ ⲛϫⲓϫ ϯⲛⲁⲕⲟⲧϥ",
+      "english": "We heard him say, 'I will destroy this temple that is made with hands, and in three days I will build another made without hands.''",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲙⲉϩϣⲟⲙⲧⲉ · **ⲅ** · ⲙⲙⲁⲣⲧⲩⲣⲓⲁ ⲙⲡϩⲁⲅⲓⲟⲥ ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ · ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ϩⲁⲙⲏⲛ · —",
+      "english": "THE THIRD MARTYRDOM OF SAINT APA VICTOR. IN THE PEACE OF GOD. AMEN.",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϯⲥⲃⲱ ⲛⲱⲟⲩ ϫⲉϩⲱϯ ⲛⲧⲉⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ϭⲓⲟⲩⲙⲏϣ ⲛϧⲓⲥⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲟϣϥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲟⲩ ⲛⲛⲓⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲉⲙⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲛⲉⲙⲛⲓⲥⲁϧ ⲟⲩⲟϩ ⲛⲧⲟⲩϧⲟⲑⲃϥ ⲟⲩⲟϩ ⲙⲉⲛⲉⲛⲥⲁ**ⲅ** ⲛⲉϩⲟⲟⲩ ⲛⲧⲉϥⲧⲱⲛϥ .",
+      "english": "He began to teach them that the Son of Man must suffer many things, and be rejected by the elders, the chief priests, and the scribes, and be killed, and after three days rise again.",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲅⲣⲁⲫⲏ ⲙⲩⲛⲏ ⲧⲩⲃⲓ **ⲅ** ⲁⲡⲟ ⲧⲱⲛ ⲁⲅⲓⲟⲛ ⲙⲁⲣⲧⲩⲣⲱⲛ ⲯⲕⲁ ⲉⲧⲟⲩⲥ ⲧⲝⲉⲓⲛⲇ ⲅ — ··· — ··· — ··· —",
+      "english": "Written [in the month of] Tybi, the third day (December 30), in the Third Indiction, in the seven hundred and twenty-first year of the Era of the Martyrs (i.e. A.D. 1005), year [of Saracens] 365 (i.e. A.D. 987).",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥϣⲱⲡⲓ ⲇⲉ ϧⲁⲧⲟⲧϥ ⲙⲡⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲛⲁⲩ**ⲅ** ⲛⲉϩⲟⲟⲩ ⲁϥⲥⲁϫⲓ ⲛⲉⲙⲁϥ ⲉⲑⲃⲉⲡⲉϥⲟⲩϫⲁⲓ",
+      "english": "When Isaac had stayed with the old man about three days, the old man spoke to him of his safety;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁ ⲛⲁⲓ ⲁⲣⲓ ⲡⲛⲟⲩϫ ⲡⲉⲧⲛⲁⲛⲟⲩϥ ϫⲓⲛⲟⲙⲓⲥⲙⲁ **ⲅ⳿** ⲛⲧⲉ ⲥⲓⲙⲱⲛ ⲡϣⲏⲣⲉ ⲛⲁⲡⲁ ⲓⲟⲩⲗⲉ",
+      "english": "Hereafter do a good deed, receiving a third (of a coin) from Simon, son of Apa Ioule.",
+      "source": "Letter of Zaleh",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82127.cpr_2_237",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲟⲩ",
+        63,
+        21.285
+      ],
+      [
+        "ⲛ",
+        263,
+        20.604
+      ],
+      [
+        "ⲛⲉ",
+        75,
+        18.963
+      ],
+      [
+        "ⲙⲁϩ",
+        34,
+        18.777
+      ],
+      [
+        "ⲣⲟⲙⲡⲓ",
+        38,
+        18.199
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        52,
+        18.127
+      ],
+      [
+        "ⲛⲉⲙ",
+        92,
+        17.71
+      ],
+      [
+        "ϯ",
+        88,
+        17.565
+      ],
+      [
+        "ⲥⲁϥ",
+        11,
+        17.326
+      ],
+      [
+        "ⲛⲧⲱ",
+        20,
+        17.263
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        107,
+        17.201
+      ],
+      [
+        "ⲙ",
+        93,
+        17.097
+      ],
+      [
+        "ⲥⲧⲩⲗⲗⲟⲥ",
+        12,
+        16.099
+      ],
+      [
+        "ⲛⲧⲉ",
+        62,
+        15.825
+      ],
+      [
+        "ϣⲟ",
+        15,
+        15.676
+      ],
+      [
+        "ⲛⲑⲃⲁⲥⲁⲛ",
+        5,
+        15.558
+      ],
+      [
+        "ⲟⲩ",
+        78,
+        15.507
+      ],
+      [
+        "ⲣⲉⲙⲏⲧ",
+        8,
+        15.382
+      ],
+      [
+        "ⲉ",
+        68,
+        15.176
+      ],
+      [
+        "ϧⲁϫⲉⲛ",
+        7,
+        15.156
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        3685,
+        33.243
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        63,
+        32.421
+      ],
+      [
+        "ⲕ",
+        815,
+        29.756
+      ],
+      [
+        "ⲉ",
+        1095,
+        28.999
+      ],
+      [
+        "ⲁⲛ",
+        462,
+        28.575
+      ],
+      [
+        "ⲡⲉⲕ",
+        313,
+        27.63
+      ],
+      [
+        "ⲓ",
+        431,
+        26.997
+      ],
+      [
+        "ⲧⲙ",
+        205,
+        26.868
+      ],
+      [
+        "ⲡ",
+        651,
+        26.428
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        404,
+        26.331
+      ],
+      [
+        "ⲛⲁ",
+        471,
+        26.219
+      ],
+      [
+        "ⲉⲣⲟ",
+        310,
+        26.204
+      ],
+      [
+        "ⲁⲩⲱ",
+        459,
+        26.166
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        13,
+        25.591
+      ],
+      [
+        "ⲙ",
+        440,
+        25.587
+      ],
+      [
+        "ⲅ",
+        176,
+        25.509
+      ],
+      [
+        "ⲧ",
+        362,
+        25.462
+      ],
+      [
+        "ⲃⲱⲕ",
+        183,
+        25.383
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        211,
+        25.35
+      ],
+      [
+        "ⲁⲗⲁⲁⲇ",
+        43,
+        25.342
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲓ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲅ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲓ_1_pre_ⲅ",
+          "ⲅ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲅ_0_node",
+          5
+        ],
+        [
+          "ⲁⲃⲉⲗ_1_post_ⲅ",
+          1
+        ],
+        [
+          "ϣⲁϩⲣⲁⲓ_2_post_ⲁⲃⲉⲗ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲅ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅ_0_node",
+          "ⲁⲃⲉⲗ_1_post_ⲅ",
+          1
+        ],
+        [
+          "ⲁⲃⲉⲗ_1_post_ⲅ",
+          "ϣⲁϩⲣⲁⲓ_2_post_ⲁⲃⲉⲗ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲅ",
+          "ⲛ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲅ",
+          "ⲧⲛ_1_pre_ⲅ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲅ",
+          "ⲅ_0_node",
+          1
+        ],
+        [
+          "ⲅ_0_node",
+          "ⲟⲩ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲅ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.43,
+      "rank": 1076,
+      "count": 69
+    },
+    "B": {
+      "rate": 3.24,
+      "rank": 271,
+      "count": 275
+    }
+  }
+}

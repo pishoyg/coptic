@@ -1,0 +1,157 @@
+{
+  "id": "C5227",
+  "forms": [
+    {
+      "id": "CF12421",
+      "orth": "ⲟⲩⲁⲧⲃⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16183,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5871",
+      "bibliography": "CD 497b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϫⲓ ⲇⲉ ⲛⲧⲗⲁⲕⲛⲧ ⲁⲥ**ⲟⲩⲁⲧⲃⲉⲥ** ⲙⲡⲉϥϩⲁⲁⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲉϥⲟⲩⲱϣ ⲇⲉ ⲉⲟⲩⲱⲙ ⲡⲉϫⲉⲁⲙⲛⲱⲛ ϫⲉⲛⲉϫⲣⲱⲙⲉ ⲛⲓⲙ ⲉⲃⲟⲗ ϩⲓϫⲱⲓ ⲁⲩⲱ ⲛⲣⲱⲙⲉ ⲧⲏⲣⲟⲩ ⲁⲩⲗⲟ ⲙⲙⲁⲩ ϩⲁⲧⲏϥ",
+      "english": "And she took the frying pan and poured them out before him, but he would not eat. And Amnon said, Send out every man from about me. And they removed every man from about him.",
+      "source": "II Samuel 13",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲁⲧⲉ",
+        1,
+        17.428
+      ],
+      [
+        "ⲗⲁⲕⲛⲧ",
+        1,
+        17.276
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲟⲩⲁⲧⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲟⲩⲁⲧⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲧⲃⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲁⲧⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲁⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲟⲩⲁⲧⲃⲉⲥ",
+          "ⲥ_1_pre_ⲟⲩⲁⲧⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲟⲩⲁⲧⲃⲉⲥ",
+          "ⲟⲩⲁⲧⲃⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲧⲃⲉⲥ_0_node",
+          "ⲙ_1_post_ⲟⲩⲁⲧⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲁⲧⲃⲉⲥ",
+          "ⲡⲉϥ_3_post_ϩⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲁⲁⲧⲉ",
+          "ϩⲁⲁⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15786,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5226",
+      "label": "ⲟⲩⲁⲧϥⲉ",
+      "pos": "N",
+      "gloss": "pierced place, hole"
+    },
+    {
+      "target": "C5225",
+      "label": "ⲟⲩⲱⲧϥ",
+      "pos": "V",
+      "gloss": "traverse, pierce"
+    }
+  ]
+}

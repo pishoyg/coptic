@@ -1,0 +1,132 @@
+{
+  "id": "C2019",
+  "forms": [
+    {
+      "id": "CF5713",
+      "orth": "ⲙⲟⲩⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18621,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2342",
+      "bibliography": "CD 184a; KoptHWb 100; ChLCS 27b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣ**ⲙⲟⲩⲣϣ** ⲛⲛϩⲓⲣ ⲛⲟⲩⲡⲟⲗⲓⲥ ⲟⲩⲇⲉ ⲙⲡⲣⲕⲱⲧⲉ ϩⲛⲛⲉⲥⲙⲁ ⲛϫⲁⲓⲉ",
+      "english": "Look not round about thee in the streets of the city, neither wander thou in the solitary place thereof.",
+      "source": "Sirach 9",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲣ",
+        1,
+        16.139
+      ],
+      [
+        "ⲧⲁⲕⲉ",
+        1,
+        13.998
+      ],
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+        1,
+        12.448
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        10.036
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲙⲟⲩⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_1_post_ⲙⲟⲩⲣϣ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲕⲱⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲙⲟⲩⲣϣ",
+          "ⲙⲟⲩⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲣϣ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲕⲱⲧⲉ",
+          "ⲙⲡⲣ_2_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_1_post_ⲙⲟⲩⲣϣ",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_1_post_ⲙⲟⲩⲣϣ",
+          "ϩⲛ_2_post_ⲕⲱⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18240,
+      "count": 1
+    }
+  }
+}

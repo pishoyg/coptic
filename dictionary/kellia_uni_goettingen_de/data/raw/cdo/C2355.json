@@ -1,0 +1,169 @@
+{
+  "id": "C2355",
+  "forms": [
+    {
+      "id": "CF6452",
+      "orth": "ⲛⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    },
+    {
+      "id": "CF6453",
+      "orth": "ⲛⲛⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2940,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF6454",
+      "orth": "ⲛⲁⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1756,
+        "count": 38
+      }
+    },
+    {
+      "id": "CF6455",
+      "orth": "ⲛⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 161.39,
+        "rank": 12,
+        "count": 13688
+      }
+    },
+    {
+      "id": "CF6456",
+      "orth": "ⲛⲛⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3547,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF6457",
+      "orth": "ⲛⲁⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1790,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF6458",
+      "orth": "ⲛⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF6459",
+      "orth": "ⲛⲛⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF6460",
+      "orth": "ⲛⲁⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF6461",
+      "orth": "ⲛⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6462",
+      "orth": "ⲛⲛⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6463",
+      "orth": "ⲛⲁⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6464",
+      "orth": "ⲛⲁⲩ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 23.86,
+        "rank": 63,
+        "count": 2024
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2720",
+      "bibliography": "CD 1ab; KoptHWb 116; DELC 135"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲛϫⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲫⲙⲁϩⲥⲟⲡ ⲃ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲙⲡⲓⲥⲁϫⲓ ⲙⲫⲣⲏϯ ⲉⲧⲁϥϫⲟⲥ **ⲛⲁ**ϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲙⲡⲁⲧⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲟⲩϯ ⲛⲥⲟⲡ ⲃ ⲭⲛⲁϫⲟⲗⲧ ⲉⲃⲟⲗ ⲛⲅ ⲛⲥⲟⲡ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲓⲧⲟⲧϥ ⲁϥⲣⲓⲙⲓ .",
+      "english": "The rooster crowed the second time. Peter remembered the word, how that Jesus said to him, 'Before the rooster crows twice, you will deny me three times.' When he thought about that, he wept.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲃⲏⲑⲁⲛⲓⲁ ⲇⲉ ⲛⲉⲥϩⲏⲛ ⲉϩⲟⲩⲛ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ **ⲛⲁ**ⲙⲛⲧⲏ ⲛⲥⲧⲁⲇⲓⲟⲛ .",
+      "english": "Now Bethany was near Jerusalem, about fifteen stadia away.",
+      "source": "43_John_11",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲛⲏ ⲉⲧⲙⲱⲟⲩⲧ ⲇⲉ ϫⲉⲥⲉⲛⲁⲧⲱⲟⲩⲛⲟⲩ ⲙⲡⲉⲧⲉⲛⲱϣ ϩⲓⲡϫⲱⲙ ⲙⲙⲱⲩⲥⲏⲥ ⲡⲱⲥ ⲁϥϫⲟⲥ **ⲛⲁ**ϥ ϩⲓϫⲉⲛⲡⲓⲃⲁⲧⲟⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲟⲕ ⲡⲉ ⲫⲛⲟⲩϯ ⲛⲁⲃⲣⲁⲁⲙ ⲛⲉⲙⲫⲛⲟⲩϯ ⲛⲓⲥⲁⲁⲕ ⲛⲉⲙⲫⲛⲟⲩϯ ⲛⲓⲁⲕⲱⲃ .",
+      "english": "But about the dead, that they are raised; haven't you read in the book of Moses, about the Bush, how God spoke to him, saying, 'I am the God of Abraham, the God of Isaac, and the God of Jacob'?",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϫⲓ ⲛⲁⲩ ⲛϩⲉⲛϩⲓⲟⲙⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲙⲙⲱⲁⲃ ⲉⲡⲣⲁⲛ ⲛⲧⲟⲩⲓ ⲙⲙⲟⲟⲩ ⲡⲉ ⲟⲣⲫⲁ ⲁⲩⲱ ⲡⲣⲁⲛ ⲛⲧⲙⲉϩⲥⲛⲧⲉ ⲧⲉ ϩⲣⲟⲩⲑ ⲁⲩⲟⲩⲱϩ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ **ⲛⲁ**ⲙⲏⲧⲉ ⲛⲣⲟⲙⲡⲉ",
+      "english": "And they took to themselves wives, women of Moab; the name of the one was Orpha, and the name of the second Ruth; and they dwelt there about ten years.",
+      "source": "Ruth Chapter 1",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲛⲁⲩ ⲇⲉ ⲛϫⲉⲛⲉϥⲓⲟϯ ϫⲉⲙⲡⲟⲩⲟⲩⲟⲛϩϥ ⲉⲣⲱⲟⲩ ⲁⲩϣⲉ **ⲛⲱ**ⲟⲩ ⲉⲣⲁⲕⲟϯ ⲉⲣⲁⲧϥ ⲙⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁⲩⲧⲁⲙⲟϥ ⲉⲡⲓϩⲱⲃ",
+      "english": "And when his parents saw that the monks did not reveal it to them, and they went to Alexandria to the archbishop, they told him about it.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲉ ⲛⲧⲟⲕ ⲁⲛ ϭⲉ ⲡⲉ ⲡⲣⲙⲛⲕⲏⲙⲉ ⲡⲉⲛⲧⲁϥⲃⲱϭⲥ ϩⲁⲧϩⲏ ⲛⲛⲉⲓϩⲟⲟⲩ . ⲁⲩⲱ ⲁϥϫⲓ ⲉⲃⲟⲗ ⲉⲧⲉⲣⲏⲙⲟⲥ **ⲛⲁ**ϥⲧⲟⲩ ϣⲟ ⲛⲣⲱⲙⲉ ⲛⲥⲓⲕⲁⲣⲓⲟⲥ .",
+      "english": "Aren't you then the Egyptian, who before these days stirred up to sedition and led out into the wilderness the four thousand men of the Assassins?'",
+      "source": "44_Acts of the Apostles_21",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C4",
+      "type": "cf",
+      "label": "about"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C11006",
+  "forms": [
+    {
+      "id": "CF30211",
+      "orth": "ⲭⲱⲣⲉⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF30214",
+      "orth": "ⲭⲱⲣⲉⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30213",
+      "orth": "ⲭⲟⲣⲉⲩⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF30212",
+      "orth": "ⲭⲟⲣⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3659,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF30215",
+      "orth": "ⲭⲱⲣⲉⲩⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15316",
+      "bibliography": "DDGLC",
+      "cu_ID": "3304"
+    },
+    {
+      "id": "CS15317",
+      "bibliography": "DDGLC",
+      "cu_ID": "9014"
+    },
+    {
+      "id": "CS15318",
+      "bibliography": "DDGLC",
+      "cu_ID": "8827"
+    },
+    {
+      "id": "CS15319",
+      "bibliography": "DDGLC",
+      "cu_ID": "9827"
+    },
+    {
+      "id": "CS15320",
+      "bibliography": "DDGLC",
+      "cu_ID": "4549"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3201",
+    "grl_lemma": "χορεύω",
+    "grl_meaning": "to dance, practise dancing",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1998b; Preisigke 2:740"
+  }
+}

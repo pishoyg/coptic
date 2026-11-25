@@ -1,0 +1,62 @@
+{
+  "id": "C7273",
+  "forms": [
+    {
+      "id": "CF16605",
+      "orth": "ϫⲓ ⲛϫⲛⲁϩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32131",
+      "orth": "ϫⲓϫⲛⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8035",
+      "bibliography": "CD 777b; KoptHWb 428; DELC 329a; ChLCS 103a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7274",
+      "label": "ϫⲓ ⲛϫⲛⲁϩ",
+      "pos": "N",
+      "gloss": "violence, compulsion"
+    },
+    {
+      "target": "C7271",
+      "label": "ϫⲛⲁϩ",
+      "pos": "N",
+      "gloss": "forearm, wing; strength, violence"
+    },
+    {
+      "target": "C7275",
+      "label": "ⲙⲟⲩⲣϫⲛⲁϩ",
+      "pos": "N",
+      "gloss": "scapular (vestments of monks)"
+    },
+    {
+      "target": "C7272",
+      "label": "ⲛϫⲛⲁϩ",
+      "pos": "ADV",
+      "gloss": "violently, forcibly"
+    }
+  ]
+}

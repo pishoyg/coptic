@@ -1,0 +1,146 @@
+{
+  "id": "C10039",
+  "forms": [
+    {
+      "id": "CF26287",
+      "orth": "ⲡⲁⲣⲁⲇⲉⲭⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF26288",
+      "orth": "ⲡⲁⲣⲁⲇⲉⲭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14344,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13167",
+      "bibliography": "DDGLC",
+      "cu_ID": "2838"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲟⲩⲱⲙ ⲇⲉ ⲉⲩⲟⲩⲱⲙⲥ ϩⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛϩⲟⲟⲩ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲁⲛ ⲧⲉ ⲛⲛⲉⲩ**ⲡⲁⲣⲁⲇⲉⲭⲉ** ⲙⲙⲟⲥ",
+      "english": "And if it should be at all eaten on the third day, it is unfit for sacrifice: it shall not be accepted.",
+      "source": "Leviticus 19",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲛⲉ",
+        1,
+        10.414
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲛⲉ_1_pre_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲉⲭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲛⲉ_1_pre_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          "ⲩ_1_pre_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          "ⲡⲁⲣⲁⲇⲉⲭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲉⲭⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁⲣⲁⲇⲉⲭⲉ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13943,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3552",
+    "grl_lemma": "παραδέχομαι",
+    "grl_meaning": "to receive from another, take over (an office or function),\n    admit",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1308a; Preisigke 2:239"
+  }
+}

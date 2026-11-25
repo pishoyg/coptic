@@ -1,0 +1,93 @@
+{
+  "id": "C4915",
+  "forms": [
+    {
+      "id": "CF11795",
+      "orth": "ϥⲓⲟⲩⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5540",
+      "bibliography": "CD 475a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4916",
+      "label": "ϩⲉⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "enquire, investigate"
+    },
+    {
+      "target": "C4917",
+      "label": "ϩⲗⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "reply, dispute"
+    },
+    {
+      "target": "C4918",
+      "label": "ϫⲓⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4919",
+      "label": "ϫⲓⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4920",
+      "label": "ϭⲙⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "find news, inquire"
+    },
+    {
+      "target": "C4914",
+      "label": "ϯⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "give news"
+    },
+    {
+      "target": "C4912",
+      "label": "ⲛⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news"
+    },
+    {
+      "target": "C4910",
+      "label": "ⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "news, report, message, matter"
+    },
+    {
+      "target": "C4911",
+      "label": "ⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "reply, speak"
+    },
+    {
+      "target": "C4913",
+      "label": "ⲣⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "make reply, speak, answer"
+    }
+  ]
+}

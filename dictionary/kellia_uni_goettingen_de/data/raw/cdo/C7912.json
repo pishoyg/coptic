@@ -1,0 +1,174 @@
+{
+  "id": "C7912",
+  "forms": [
+    {
+      "id": "CF32216",
+      "orth": "ϫⲓϭⲣⲟϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14302,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32215",
+      "orth": "ϫⲓϭⲣⲟⲟϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8792",
+      "bibliography": "CD 832a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲱⲱ",
+        1,
+        15.511
+      ],
+      [
+        "ⲉⲥϣⲁⲛ",
+        1,
+        13.843
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        10.255
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲥϣⲁⲛ_1_pre_ϫⲓϭⲣⲟϭ",
+          1
+        ],
+        [
+          "ϫⲓϭⲣⲟϭ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲱⲱ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲱⲱ",
+          1
+        ],
+        [
+          "ⲱⲱ_1_post_ϫⲓϭⲣⲟϭ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲥϣⲁⲛ_1_pre_ϫⲓϭⲣⲟϭ",
+          "ϫⲓϭⲣⲟϭ_0_node",
+          1
+        ],
+        [
+          "ϫⲓϭⲣⲟϭ_0_node",
+          "ⲛ_2_post_ⲱⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲱⲱ",
+          "ⲥ_2_post_ⲱⲱ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲱⲱ",
+          "ⲱⲱ_1_post_ϫⲓϭⲣⲟϭ",
+          1
+        ],
+        [
+          "ⲱⲱ_1_post_ϫⲓϭⲣⲟϭ",
+          "ⲛ_3_post_ϫⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7907",
+      "label": "ϫⲣⲟϫ",
+      "pos": "N",
+      "gloss": "seed, semen (of a man)"
+    },
+    {
+      "target": "C7906",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seed (of plants)"
+    },
+    {
+      "target": "C7908",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "sown, fertilized"
+    },
+    {
+      "target": "C7911",
+      "label": "ϯϫⲣⲟϫ",
+      "pos": "V",
+      "gloss": "copulate"
+    },
+    {
+      "target": "C7909",
+      "label": "ⲁⲧϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seedless, infertile"
+    },
+    {
+      "target": "C7910",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "produce seed, semen, sperm"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "C8159",
+  "forms": [
+    {
+      "id": "CF18699",
+      "orth": "ⲁⲕⲣⲓⲃⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18700",
+      "orth": "ⲁⲕⲣⲓⲃⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9217",
+      "bibliography": "DDGLC",
+      "cu_ID": "9970"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲣⲁⲫⲏ",
+        1,
+        13.286
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲕⲣⲓⲃⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "3270",
+    "grl_lemma": "ἀκριβής",
+    "grl_meaning": "exact, accurate, precise",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 55a; Preisigke 1:48"
+  }
+}

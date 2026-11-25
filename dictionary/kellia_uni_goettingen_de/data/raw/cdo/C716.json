@@ -1,0 +1,370 @@
+{
+  "id": "C716",
+  "forms": [
+    {
+      "id": "CF2701",
+      "orth": "ⲉⲣϣⲁⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.01,
+        "rank": 270,
+        "count": 633
+      }
+    },
+    {
+      "orth": "ⲁⲣⲉϣⲁⲛ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.26,
+        "rank": 420,
+        "count": 192
+      }
+    },
+    {
+      "orth": "ⲁⲕϣⲁⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.34,
+        "rank": 611,
+        "count": 114
+      }
+    },
+    {
+      "orth": "ⲉⲕϣⲁⲛ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.48,
+        "rank": 380,
+        "count": 391
+      }
+    },
+    {
+      "orth": "ⲉⲣⲉϣⲁⲛ-",
+      "dialect": "S",
+      "id": "674.1"
+    },
+    {
+      "orth": "ⲉⲣϣⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17457,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉϣⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7459,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲁϣⲁ-",
+      "dialect": "A",
+      "id": "674.4"
+    },
+    {
+      "orth": "ⲉⲣϣⲁⲛ-",
+      "dialect": "F",
+      "id": "674.6"
+    },
+    {
+      "orth": "ⲁⲗⲉϣⲁⲛ-",
+      "dialect": "F",
+      "id": "674.5"
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Konditionalis ⲉⲣϣⲁⲛ-",
+    "note": "vor nominalem Subjekt",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS856",
+      "bibliography": "CD 59ab; CED 38; KoptHWb 40, 500; DELC 46; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲧⲉⲧⲉⲛϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲁⲣⲉϣⲁⲛ**ⲟⲩⲣⲱⲙⲓ ϫⲟⲥ ⲙⲡⲉϥⲓⲱⲧ ⲛⲉⲙⲧⲉϥⲙⲁⲩ ϫⲉⲕⲟⲣⲃⲁⲛ ⲉⲧⲉⲟⲩⲧⲁⲓⲟ ⲡⲉ ⲁⲕϣⲁⲛϫⲉⲙϩⲏⲟⲩ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲙⲙⲟⲓ",
+      "english": "But you say, 'If a man tells his father or his mother, 'Whatever profit you might have received from me is Corban, that is to say, given to God;''",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲣϣⲁⲛ**ⲟⲩⲥⲟⲛ ⲉⲓ ϣⲁⲣⲟⲕ ⲣⲁϣⲉ ⲛⲙⲙⲁϥ ·",
+      "english": "If a brother come to thee rejoice with him.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲁⲣⲉϣⲁⲛ**ⲡⲓⲟⲩⲱⲓⲛⲓ ⲓ ⲉⲃⲟⲗ ⲙⲙⲏⲛⲓ ϣⲁⲣⲉⲧⲙⲁⲩ ⲙⲡⲓⲕⲟⲩϫⲓ ⲛϣⲏⲣⲓ ⲛⲉⲙⲡⲉϥⲓⲱⲧ ⲉⲙⲗⲁϧ ⲛⲉⲙⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲉⲑⲃⲉⲟⲩ ⲙⲡⲉⲕⲟⲩⲱⲣⲡ ⲙⲡⲉⲛϣⲏⲣⲓ ⲛⲁⲛ ⲛⲣⲟⲩϩⲓ ;",
+      "english": "And when light came out every day the little boy's mother and his father would quarrel with the shepherd saying: “Why didn't you send our son to us in the evening?",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲣϣⲁⲛ**ⲟⲩⲁ ⲟⲩⲱϣ ⲉϣⲁϫⲉ ⲉⲣⲟϥ · ϥⲛⲁϫⲟⲟⲥ",
+      "english": "If one wants to speak about him, one would say",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁϫⲟⲥ ⲛⲁⲛ ϫⲉⲁⲣⲉⲛⲁⲓ ⲛⲁϣⲱⲡⲓ ⲛⲧⲛⲁⲩ ⲟⲩⲟϩ ⲟⲩ ⲡⲉ ⲡⲓⲙⲏⲓⲛⲓ **ⲁⲣⲉϣⲁⲛ**ⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲛⲟⲩⲓ ⲉϫⲱⲕ ⲉⲃⲟⲗ .",
+      "english": "Tell us, when will these things be? What is the sign that these things are all about to be fulfilled?'",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϯⲙⲉⲉⲩⲉ ϫⲉ**ⲉⲣϣⲁⲛ**ⲡⲣⲱⲙⲉ ⲁⲙⲁϩⲧⲉ ⲙⲡⲉϫⲡⲓⲟ ϩⲙⲡⲉϥϩⲏⲧ",
+      "english": "“I think that if a man holds blame in his heart,",
+      "source": "Apophthegmata Patrum Sahidic 003: Anonymous Nau 138",
+      "urn": "urn:cts:copticLit:ap.3.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲱⲡ",
+        104,
+        29.943
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        52,
+        26.173
+      ],
+      [
+        "ⲉ",
+        122,
+        25.809
+      ],
+      [
+        "ⲉϣⲱⲡ",
+        23,
+        25.42
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        59,
+        25.282
+      ],
+      [
+        "ⲛ",
+        99,
+        24.479
+      ],
+      [
+        "ⲇⲉ",
+        52,
+        24.15
+      ],
+      [
+        "ⲟⲩ",
+        82,
+        23.827
+      ],
+      [
+        "ⲡⲉⲕ",
+        30,
+        23.456
+      ],
+      [
+        "ϯ",
+        49,
+        23.134
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        33,
+        23.031
+      ],
+      [
+        "ⲡ",
+        45,
+        22.095
+      ],
+      [
+        ".",
+        45,
+        22.092
+      ],
+      [
+        "ϩⲟⲧⲁⲛ",
+        7,
+        22.03
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        27,
+        22.014
+      ],
+      [
+        "ⲉⲣⲛⲟⲃⲓ",
+        9,
+        21.892
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        22,
+        21.866
+      ],
+      [
+        "ⲡⲓ",
+        41,
+        21.843
+      ],
+      [
+        "ϣⲉⲛⲉ",
+        2,
+        21.695
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        44,
+        21.458
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        67,
+        29.483
+      ],
+      [
+        "ⲡ",
+        468,
+        21.795
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        154,
+        20.801
+      ],
+      [
+        "ⲇⲉ",
+        208,
+        20.774
+      ],
+      [
+        "ⲛ",
+        348,
+        19.825
+      ],
+      [
+        "ⲉⲓ",
+        95,
+        18.805
+      ],
+      [
+        "ⲟⲩ",
+        198,
+        18.795
+      ],
+      [
+        "ⲟⲩⲁ",
+        76,
+        18.76
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        52,
+        18.683
+      ],
+      [
+        "ⲥⲟⲛ",
+        50,
+        18.351
+      ],
+      [
+        "ⲡⲉⲕ",
+        76,
+        18.299
+      ],
+      [
+        "ⲧⲉ",
+        91,
+        18.013
+      ],
+      [
+        "ϫⲉ",
+        114,
+        17.332
+      ],
+      [
+        "ⲡⲉ",
+        99,
+        17.083
+      ],
+      [
+        "ⲙ",
+        127,
+        17.004
+      ],
+      [
+        "ϫⲱⲕ",
+        34,
+        16.879
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        95,
+        16.862
+      ],
+      [
+        "ϩⲙⲟⲩ",
+        14,
+        16.73
+      ],
+      [
+        "ⲙⲟⲩ",
+        41,
+        16.503
+      ],
+      [
+        "ⲧⲙ",
+        39,
+        16.481
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.01,
+      "rank": 229,
+      "count": 636
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "ϣⲁⲛ",
+      "type": "cf",
+      "label": "Partikel des Conditionalis"
+    }
+  ],
+  "etym": {
+    "egy_num": "142460",
+    "egy_lemma": "zḫn",
+    "demo_num": "d630",
+    "demo_lemma": "ı ͗r-ḫn",
+    "english": "random event",
+    "german": "zufälliges Ereignis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/142460",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d630"
+  }
+}

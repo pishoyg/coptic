@@ -1,0 +1,90 @@
+{
+  "id": "C12032",
+  "forms": [
+    {
+      "id": "CF32266",
+      "orth": "ϣⲁⲁⲧⲛ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32267",
+      "orth": "ϣⲁⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2150,
+        "count": 26
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS17032",
+      "bibliography": "CD 593a; KoptHWB 331"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ]
+}

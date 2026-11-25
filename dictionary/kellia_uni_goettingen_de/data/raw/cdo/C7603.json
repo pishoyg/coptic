@@ -1,0 +1,67 @@
+{
+  "id": "C7603",
+  "forms": [
+    {
+      "id": "CF17266",
+      "orth": "ϫⲓⲛϫⲱⲗ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32149",
+      "orth": "ϫⲓⲛϫⲱⲗ ⲉⲃⲟⲗ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF32150",
+      "orth": "ϫⲓⲛϫⲱⲗ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8435",
+      "bibliography": "CD 807b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7601",
+      "label": "ϫⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "deny, reject"
+    },
+    {
+      "target": "C7602",
+      "label": "ϫⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "denial"
+    },
+    {
+      "target": "C7599",
+      "label": "ϭⲱⲗ",
+      "pos": "V",
+      "gloss": "return, roll back; curl up; separate, set apart, turn away"
+    },
+    {
+      "target": "C7600",
+      "label": "ϭⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "return, turn back, turn"
+    },
+    {
+      "target": "C7604",
+      "label": "ⲣⲁϭⲱⲗ",
+      "pos": "N",
+      "gloss": "rolling up, return, end"
+    }
+  ]
+}

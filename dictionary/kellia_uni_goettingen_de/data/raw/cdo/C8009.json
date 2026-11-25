@@ -1,0 +1,57 @@
+{
+  "id": "C8009",
+  "forms": [
+    {
+      "id": "CF18084",
+      "orth": "ⲙⲁ ⲛϭⲟϫⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8907",
+      "bibliography": "CD 841a; KoptHWb 473; DELC 350b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C8011",
+      "label": "ϫⲓⲛϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "path"
+    },
+    {
+      "target": "C8006",
+      "label": "ϭⲟϫⲓ",
+      "pos": "V",
+      "gloss": "run; run away"
+    },
+    {
+      "target": "C8008",
+      "label": "ϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "course"
+    },
+    {
+      "target": "C8007",
+      "label": "ϭⲟϫⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "follow, pursue, drive out"
+    },
+    {
+      "target": "C8010",
+      "label": "ⲣⲉϥϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "runner; pursuer, dispeller"
+    }
+  ]
+}

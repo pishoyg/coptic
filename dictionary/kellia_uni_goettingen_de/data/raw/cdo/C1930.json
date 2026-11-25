@@ -1,0 +1,235 @@
+{
+  "id": "C1930",
+  "forms": [
+    {
+      "id": "CF5510",
+      "orth": "ⲙⲁⲛⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8686,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2243",
+      "bibliography": "CED 84; KoptHWb 94; DELC 115-116; ChLCS 26a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲁⲉⲥⲟⲟⲩ ϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ⲉⲧⲃⲉϫⲉⲙⲛⲧⲟⲩ**ⲙⲁⲛⲏⲩ** ⲉⲁⲩϣⲱⲡⲉ ⲛϩⲣⲉ ⲛⲛⲉⲑⲩⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲛⲧⲥⲱϣⲉ",
+      "english": "And my sheep were scattered, because there were no shepherds: and they became meat to all the wild beasts of the field.",
+      "source": "Ezekiel 34",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲙⲓⲭⲁⲁⲥ ⲛⲁϥ ϫⲉⲛ... ⲁⲛ ⲧⲉ ⲛⲁϣⲱⲡⲉ ϫⲉⲁⲛⲟⲕ ⲁⲓⲛⲁⲩ ⲉⲡⲓⲥⲣⲁⲏⲗ ⲧⲏⲣϥ ⲉϥϫⲟⲟⲣⲉ ⲉⲃⲟⲗ ϩⲛⲛⲧⲟⲩⲉⲓⲏ ⲛⲧϩⲉ ⲛⲟⲩⲟϩⲉ ⲛⲧⲃⲛⲏ ⲉⲙⲛ**ⲙⲁⲛⲏⲩ** ϩⲓϫⲱⲟⲩ ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲡⲉϫⲁϥ ϫⲉⲡϫⲟⲉⲓⲥ ⲛⲉϥϣⲟⲟⲡ ⲁⲛ ⲛⲛⲁⲓ ⲛⲛⲟⲩⲧⲉ ⲙⲁⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲟⲟⲩ ⲛⲧⲟϥ ⲉϩⲣⲁⲓ ⲉⲡⲉϥⲏⲓ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ",
+      "english": "And he said, Not so. I saw all Israel scattered on the mountains as a flock without a shepherd: and the Lord said, Is not God lord of these? let each one return to his home in peace.",
+      "source": "I Kings 22",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲟⲩ",
+        1,
+        16.276
+      ],
+      [
+        "ⲧⲃⲛⲏ",
+        1,
+        12.804
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        10.81
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲛⲏⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲟⲩ_1_pre_ⲙⲁⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲁⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲟⲩ_1_pre_ⲙⲁⲛⲏⲩ",
+          "ⲙⲁⲛⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲏⲩ_0_node",
+          "ⲉ_1_post_ⲙⲁⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲁⲛⲏⲩ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ⲩ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8237,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1926",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "place of pasture"
+    },
+    {
+      "target": "C1933",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "harbour"
+    },
+    {
+      "target": "C1929",
+      "label": "ⲙⲁⲛⲉ",
+      "pos": "N",
+      "gloss": "herdsman, pastor"
+    },
+    {
+      "target": "C1928",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "part, function of shepherd"
+    },
+    {
+      "target": "C1925",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "pasture, feed; feed, tend cattle; feed on, devour"
+    },
+    {
+      "target": "C1931",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be made fast, come to land, into port (of ship); bring to land, into port"
+    },
+    {
+      "target": "C1932",
+      "label": "ⲙⲟⲟⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "come in to shore, lie in port; bring into shore, port"
+    },
+    {
+      "target": "C1927",
+      "label": "ⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who pastures"
+    }
+  ]
+}

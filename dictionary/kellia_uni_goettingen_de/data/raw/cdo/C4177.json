@@ -1,0 +1,974 @@
+{
+  "id": "C4177",
+  "forms": [
+    {
+      "id": "CF10300",
+      "orth": "ⲧⲁⲕⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.89,
+        "rank": 190,
+        "count": 929
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲟ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.7,
+        "rank": 164,
+        "count": 653
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 989,
+        "count": 97
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4721,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲏⲩⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5405,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 981,
+        "count": 51
+      }
+    },
+    {
+      "orth": "ⲧⲁⲕⲏⲟⲩⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1498,
+        "count": 25
+      }
+    },
+    {
+      "orth": "ⲧⲉⲕⲟ",
+      "dialect": "A",
+      "id": "199.6"
+    },
+    {
+      "orth": "ⲧⲉⲕⲁ⸗",
+      "dialect": "A",
+      "id": "199.7"
+    },
+    {
+      "orth": "ⲧⲁⲕⲁ⸗",
+      "dialect": "F",
+      "id": "199.8"
+    },
+    {
+      "orth": "ⲧⲁⲕⲉ-",
+      "dialect": "F",
+      "id": "199.9"
+    },
+    {
+      "orth": "ⲧⲉⲕⲟ",
+      "dialect": "L",
+      "id": "199.10"
+    },
+    {
+      "orth": "ⲧⲉⲕⲉ-",
+      "dialect": "L",
+      "id": "199.11"
+    },
+    {
+      "orth": "ⲧⲉⲕⲁ-",
+      "dialect": "L",
+      "id": "199.12"
+    },
+    {
+      "orth": "ⲧⲉⲕⲁ⸗",
+      "dialect": "L",
+      "id": "199.13"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4739",
+      "bibliography": "CD 405a; CDC 63b; CED 184; KoptHWb 226; DELC 218b; ChLCS 57a"
+    },
+    {
+      "id": "CS4740",
+      "bibliography": "CD 405a; KoptHWb 226; ChLCS 57a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧϯ ⲛⲟⲩⲑⲱⲗⲉⲃ ⲛⲥⲁϯⲛⲁⲓⲁⲧⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲕⲁⲑⲟⲗⲓⲕⲏ ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲑⲏ ⲉⲧⲟⲓ ⲛⲁⲧⲁϭⲛⲓ ϧⲉⲛⲡⲉⲥϫⲓⲛⲱⲛϧ ⲧⲏⲣϥ ⲉⲩⲥⲓϯ ⲛϩⲁⲛⲥⲁϫⲓ ⲉⲩϩⲱⲟⲩ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲡϩⲏⲧ ⲛⲛⲓⲣⲱⲙⲓ ⲛⲁⲧⲕⲁϯ ϫⲉϩⲓⲛⲁ ⲛⲧⲟⲩ**ⲧⲁⲕⲟ** ⲙⲡⲟⲩϫⲓⲛⲱⲛϧ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲥⲉⲙⲛⲟⲥ .",
+      "english": "All those who have stained the happy and catholic Church, which remains free from blemish throughout its entire life, by injecting evil words of philosophy into the hearts of men without understanding, so that their lives might be destroyed far from purity.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲥⲉⲛⲁ**ⲧⲁⲕⲟ** : —",
+      "english": "' All these things shall perish ' ;",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁϧⲟⲕ ⲛⲉⲙⲁⲛ ⲓⲏⲥⲟⲩⲥ ⲡⲓⲣⲉⲙⲛⲁⲍⲁⲣⲉⲑ ⲉⲧⲁⲕⲓ ⲉ**ⲧⲁⲕⲟ**ⲛ ⲧⲉⲛⲥⲱⲟⲩⲛ ⲙⲙⲟⲕ ϫⲉⲛⲑⲟⲕ ⲛⲓⲙ ⲡⲓϩⲁⲅⲓⲟⲥ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "saying, 'Ha! What do we have to do with you, Jesus, you Nazarene? Have you come to destroy us? I know you who you are: the Holy One of God!'",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓ**ⲧⲁⲕⲟ** ⲙⲡⲉⲕϩⲓⲥⲉ ·",
+      "english": "and have destroyed thy labours.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲙⲡⲉⲛⲑⲣⲉⲛⲓⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ **ⲧⲁⲕⲟ** ⲛⲛⲓϣⲁⲉⲛⲉϩ ⲛⲧⲟⲧⲑⲏⲛⲟⲩ",
+      "english": "Moreover, let not ephemeral things cause us to lose eternity.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲣ**ⲧⲁⲕⲉ**ⲙⲙⲉⲗⲟⲥ · ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "Destroy not the member of the Christ.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        ".",
+        250,
+        20.002
+      ],
+      [
+        "ϥ",
+        329,
+        19.998
+      ],
+      [
+        "ⲁ",
+        271,
+        19.724
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        237,
+        19.234
+      ],
+      [
+        "ⲟⲩ",
+        252,
+        19.174
+      ],
+      [
+        "ⲛⲁ",
+        182,
+        18.966
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        152,
+        18.536
+      ],
+      [
+        "ⲛ",
+        220,
+        18.423
+      ],
+      [
+        "ⲡ",
+        163,
+        18.154
+      ],
+      [
+        "ⲛⲓ",
+        126,
+        17.638
+      ],
+      [
+        "ϧⲉⲛ",
+        138,
+        17.577
+      ],
+      [
+        "ⲉ",
+        163,
+        17.552
+      ],
+      [
+        "ⲙ",
+        136,
+        17.334
+      ],
+      [
+        "ⲥ",
+        111,
+        17.299
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        42,
+        17.241
+      ],
+      [
+        "ⲛϫⲉ",
+        102,
+        17.1
+      ],
+      [
+        "ⲛⲧⲉ",
+        113,
+        17.015
+      ],
+      [
+        "ϫⲉ",
+        105,
+        16.768
+      ],
+      [
+        "ⲛⲉⲙ",
+        102,
+        16.748
+      ],
+      [
+        "ⲇⲉ",
+        81,
+        16.556
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        1104,
+        24.125
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        17,
+        22.851
+      ],
+      [
+        "ⲡ",
+        500,
+        21.385
+      ],
+      [
+        "ⲟⲩ",
+        415,
+        21.301
+      ],
+      [
+        "ⲁⲩⲱ",
+        338,
+        20.94
+      ],
+      [
+        "ⲉ",
+        372,
+        20.425
+      ],
+      [
+        "ϥ",
+        376,
+        20.176
+      ],
+      [
+        "ⲛⲁ",
+        264,
+        19.812
+      ],
+      [
+        "ⲁ",
+        272,
+        19.297
+      ],
+      [
+        "ⲙ",
+        250,
+        19.239
+      ],
+      [
+        "ⲩ",
+        201,
+        18.753
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        169,
+        18.658
+      ],
+      [
+        "ⲧ",
+        151,
+        17.776
+      ],
+      [
+        "ⲥⲉ",
+        92,
+        17.643
+      ],
+      [
+        ".",
+        123,
+        17.375
+      ],
+      [
+        "ⲇⲉ",
+        111,
+        17.359
+      ],
+      [
+        "ⲥ",
+        125,
+        17.162
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        44,
+        17.107
+      ],
+      [
+        "ⲕⲁϩ",
+        64,
+        16.917
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        50,
+        16.89
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          163
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          11
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          8
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          8
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          11
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          12
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          7
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲁⲕⲟ",
+          6
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲧⲁⲕⲟ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲕⲟ",
+          4
+        ],
+        [
+          "ϣⲧⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          4
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲧⲁⲕⲟ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          7
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲃⲉⲭⲉ",
+          3
+        ],
+        [
+          "ⲃⲉⲭⲉ_2_post_ⲛϫⲉ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲁⲕⲟ",
+          4
+        ],
+        [
+          "ⲡⲁ_3_post_ⲱⲛϧ",
+          2
+        ],
+        [
+          "ⲱⲛϧ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ϭⲟⲉⲓⲥ",
+          2
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_3_post_ⲱⲛϧ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲥⲁⲣⲝ_3_post_ϯ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲧⲁⲕⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          2
+        ],
+        [
+          "ⲉⲑ_1_pre_ⲧⲁⲕⲟ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁⲕⲟ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲧⲁⲕⲟ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲛⲧⲉ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲧⲁⲕⲟ",
+          "ⲛ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲕⲟ",
+          "ϣⲧⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϣⲧⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲧⲁⲕⲟ",
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲛ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲧⲁⲕⲟ",
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲛϫⲉ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲧⲁⲕⲟ",
+          "ⲡⲉϥ_3_post_ⲃⲉⲭⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲃⲉⲭⲉ",
+          "ⲃⲉⲭⲉ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲛⲧⲉ_1_post_ⲧⲁⲕⲟ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲁⲕⲟ",
+          "ⲡⲁ_3_post_ⲱⲛϧ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲱⲛϧ",
+          "ⲱⲛϧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲱⲛϧ_2_post_ⲛⲧⲉ",
+          "ⲡ_4_post_ϭⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϭⲟⲉⲓⲥ",
+          "ϭⲟⲉⲓⲥ_3_post_ⲱⲛϧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲁⲕⲟ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲥⲁⲣⲝ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ϧⲉⲛ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲧⲁⲕⲟ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_pre_ⲧⲁⲕⲟ",
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲅⲁⲣ_1_post_ⲧⲁⲕⲟ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          194
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          16
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲧⲁⲕⲟ",
+          12
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          14
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲕⲟ",
+          8
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          10
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲕⲟ",
+          7
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲧⲁⲕⲟ",
+          7
+        ],
+        [
+          "ⲥ_1_post_ⲧⲁⲕⲟ",
+          6
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁⲕⲟ",
+          6
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          12
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲕⲟ",
+          6
+        ],
+        [
+          "ϥ_1_post_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲟⲩⲁⲁ_1_post_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲟⲩⲁⲁ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          5
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁⲕⲟ",
+          3
+        ],
+        [
+          "ϩⲓ_1_pre_ⲧⲁⲕⲟ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲕⲟ",
+          "ⲥⲉ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲥ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲕⲟ",
+          "ⲡ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ϥ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲕⲟ",
+          "ⲟⲩ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_0_node",
+          "ⲙⲙⲟ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲁⲕⲟ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲟⲩⲁⲁ_1_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁ_1_post_ⲧⲁⲕⲟ",
+          "ϥ_2_post_ⲟⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲕⲟ",
+          "ⲛⲁ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲕⲟ",
+          "ⲩ_1_pre_ⲧⲁⲕⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 6.5,
+      "rank": 146,
+      "count": 1031
+    },
+    "B": {
+      "rate": 8.6,
+      "rank": 132,
+      "count": 730
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C29",
+      "type": "cf",
+      "label": "decay, loss, destruction"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4187",
+      "label": "ϫⲓⲛⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destruction"
+    },
+    {
+      "target": "C4179",
+      "label": "ⲁⲧⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "imperishable"
+    },
+    {
+      "target": "C4180",
+      "label": "ⲙⲛⲧⲁⲧⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "incorruptibility"
+    },
+    {
+      "target": "C4186",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲕⲉ ϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deception"
+    },
+    {
+      "target": "C4184",
+      "label": "ⲣⲉϥⲧⲁⲕⲉϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C4185",
+      "label": "ⲣⲉϥⲧⲁⲕⲉϩⲏⲧ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C4181",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destroyer"
+    },
+    {
+      "target": "C4182",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destroyer"
+    },
+    {
+      "target": "C4183",
+      "label": "ⲣⲉϥⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "perishable"
+    },
+    {
+      "target": "C4178",
+      "label": "ⲧⲁⲕⲟ",
+      "pos": "N",
+      "gloss": "destruction, perdition"
+    }
+  ],
+  "etym": {
+    "demo_num": "d9059",
+    "demo_lemma": "dj ꜣq",
+    "english": "destroy; lose",
+    "german": "zerstören; verlieren",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d9059"
+  }
+}

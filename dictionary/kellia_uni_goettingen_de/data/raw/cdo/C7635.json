@@ -1,0 +1,180 @@
+{
+  "id": "C7635",
+  "forms": [
+    {
+      "id": "CF17331",
+      "orth": "ϩⲓϭⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20246,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32178",
+      "orth": "ϩⲓϭⲗⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF32177",
+      "orth": "ϩⲓϭⲗⲁϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8475",
+      "bibliography": "CD 810a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲁⲧⲏ",
+        1,
+        16.074
+      ],
+      [
+        "ⲁⲕⲁⲑⲁⲣⲧⲟⲛ",
+        1,
+        14.043
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓϭⲗⲁ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲓϭⲗⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲧⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲁⲡⲁⲧⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓϭⲗⲁ_0_node",
+          "ϩⲛ_1_post_ϩⲓϭⲗⲁ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲓϭⲗⲁ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲁⲡⲁⲧⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲧⲏ_3_post_ⲧ",
+          "ⲛ_4_post_ⲁⲡⲁⲧⲏ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲁⲡⲁⲧⲏ",
+          "ϩⲉⲛ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19854,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7632",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "sway, stagger"
+    },
+    {
+      "target": "C7633",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "push"
+    },
+    {
+      "target": "C7634",
+      "label": "ϭⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "throng, press upon"
+    },
+    {
+      "target": "C7630",
+      "label": "ϭⲗⲁ",
+      "pos": "N",
+      "gloss": "wave(?); dizziness, stagger(?)"
+    },
+    {
+      "target": "C7631",
+      "label": "ϯϭⲗⲁ",
+      "pos": "V",
+      "gloss": "sway, stagger"
+    }
+  ]
+}

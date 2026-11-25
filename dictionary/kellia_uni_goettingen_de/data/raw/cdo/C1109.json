@@ -1,0 +1,76 @@
+{
+  "id": "C1109",
+  "forms": [
+    {
+      "id": "CF3581",
+      "orth": "ϯⲕⲃⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1292",
+      "bibliography": "CD 99b; KoptHWb 56; ChLCS 15b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1110",
+      "label": "ϫⲓⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "take vengeance"
+    },
+    {
+      "target": "C1111",
+      "label": "ϫⲓⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "retribution, compensation"
+    },
+    {
+      "target": "C1105",
+      "label": "ⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "compulsion, forced labour"
+    },
+    {
+      "target": "C1107",
+      "label": "ⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "vengeance"
+    },
+    {
+      "target": "C1104",
+      "label": "ⲕⲱⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "compel, seize by force"
+    },
+    {
+      "target": "C1106",
+      "label": "ⲣⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "do forced labour"
+    },
+    {
+      "target": "C1108",
+      "label": "ⲣⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "do vengeance"
+    }
+  ]
+}

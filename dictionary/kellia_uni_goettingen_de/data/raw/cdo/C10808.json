@@ -1,0 +1,129 @@
+{
+  "id": "C10808",
+  "forms": [
+    {
+      "id": "CF29460",
+      "orth": "ⲧⲩⲡⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF29461",
+      "orth": "ⲧⲩⲡⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10143,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14898",
+      "bibliography": "DDGLC",
+      "cu_ID": "1304"
+    },
+    {
+      "id": "CS14899",
+      "bibliography": "DDGLC",
+      "cu_ID": "5814"
+    },
+    {
+      "id": "CS14900",
+      "bibliography": "DDGLC",
+      "cu_ID": "7172"
+    },
+    {
+      "id": "CS14901",
+      "bibliography": "DDGLC",
+      "cu_ID": "2200"
+    },
+    {
+      "id": "CS14902",
+      "bibliography": "DDGLC",
+      "cu_ID": "4152"
+    },
+    {
+      "id": "CS14903",
+      "bibliography": "DDGLC",
+      "cu_ID": "10425"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲡⲉⲓⲁⲅⲱⲛ ⲥⲛⲁⲩ ⲁⲡⲉⲭⲣⲓⲥⲧⲟⲥ **ⲧⲩⲡⲟⲩ** ⲙⲙⲟⲟⲩ ⲛⲁⲛ ϩⲣⲁⲓ ⲛϩⲏⲧϥ ⲙⲙⲓⲛ ⲙⲙⲟϥ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        10.92
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        10.318
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9720,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2232",
+    "grl_lemma": "τυπόω",
+    "grl_meaning": "to impress, stamp, form, mould",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1835b; Preisigke 2:627"
+  }
+}

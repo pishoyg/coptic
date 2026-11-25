@@ -1,0 +1,69 @@
+{
+  "id": "C1850",
+  "forms": [
+    {
+      "id": "CF5327",
+      "orth": "ⲙⲁⲕⲟⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5328",
+      "orth": "ⲙⲁⲕⲱⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5329",
+      "orth": "ⲙⲁⲅⲁⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5330",
+      "orth": "ⲙⲁⲅⲁⲇ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16101,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁⲕⲁⲧ",
+      "dialect": "S",
+      "id": "1052.1"
+    },
+    {
+      "orth": "ⲙⲁⲕⲁⲧ",
+      "dialect": "A",
+      "id": "1052.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2156",
+      "bibliography": "CD 162b; KoptHWb 90; ChLCS 25a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲇⲁⲩⲉⲓⲇ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ϫⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁⲣⲱϩⲧ ⲛⲟⲩⲓⲉⲃⲟⲩⲥⲁⲓⲟⲥ ⲙⲁⲣⲉϥϫⲣⲟ ⲉⲣⲟϥ ϩⲙ**ⲙⲁⲅⲁⲇ** ⲁⲩⲱ ⲛⲕⲉϭⲁⲗⲉⲉⲩ ⲙⲛⲛⲉⲃⲗⲗⲉⲉⲩ ⲙⲛⲛⲉⲧⲙⲟⲥⲧⲉ ⲛⲧⲉⲯⲩⲭⲏ ⲛⲇⲁⲩⲉⲓⲇ ⲉⲧⲃⲉⲡⲁⲓ ⲥⲉⲛⲁϫⲟⲟⲥ ϫⲉⲛⲉⲃⲗⲗⲉⲉⲩ ⲙⲛⲛⲉϭⲁⲗⲉⲉⲩ ⲛⲛⲉⲩⲉⲓ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And David said on that day, Every one that smites the Jebusite, let him attack with the dagger both the lame and the blind, and those that hate the soul of David. Therefore they say, The lame and the blind shall not enter into the house of the Lord.",
+      "source": "II Samuel 5",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15703,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "C7329",
+  "forms": [
+    {
+      "id": "CF16717",
+      "orth": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8100",
+      "bibliography": "CD 782b; ChLCS 103b"
+    },
+    {
+      "id": "CS8101",
+      "bibliography": "CD 782b-783a; KoptHWb 432; DELC 331a; ChLCS 103b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲧⲁ **ϫⲉⲛⲛⲉⲛϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ⲙⲡϣⲁϫⲉ ⁛—",
+      "english": "let us then not be troubled at the words.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲛⲧⲁϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲧⲛⲕⲉⲉⲥ ⲙⲡⲕⲱⲧⲉ ⲛⲛⲉⲧⲛⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "english": "And I will scatter your bones round about your altars,",
+      "source": "Ezekiel 6",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲁⲉⲥⲟⲟⲩ ϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ϩⲓϫⲛⲛⲧⲟⲩⲉⲓⲏ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ϩⲓϫⲛⲛⲃⲟⲩⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲉⲧϫⲟⲥⲉ **ⲉⲁⲩϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ϩⲓϫⲙⲡϩⲟ ⲙⲡⲕⲁϩ ⲧⲏⲣϥ ⲉⲙⲛⲡⲉⲧⲕⲱⲧⲉ ⲛⲥⲱⲟⲩ ⲟⲩⲧⲉ ⲉⲙⲛⲡⲉⲧⲛⲁⲕⲧⲟⲟⲩ",
+      "english": "And my sheep were scattered on every mountain, and on every high hill: yea, they were scattered on the face of the earth, and there was none to seek them out, nor to bring them back.",
+      "source": "Ezekiel 34",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7331",
+      "label": "ϫⲓⲛϫⲱⲣ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "scattering, dispersion"
+    },
+    {
+      "target": "C7328",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "scatter, disperse"
+    },
+    {
+      "target": "C7330",
+      "label": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "scattering, dissolution"
+    }
+  ]
+}

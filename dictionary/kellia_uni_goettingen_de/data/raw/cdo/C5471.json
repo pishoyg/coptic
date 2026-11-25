@@ -1,0 +1,273 @@
+{
+  "id": "C5471",
+  "forms": [
+    {
+      "id": "CF31927",
+      "orth": "ⲱⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4489,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF31926",
+      "orth": "ⲱⲗⲉⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11097,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲗⲙ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13206,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲗⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13206,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲗⲙ",
+      "dialect": "F",
+      "id": "1811.3"
+    },
+    {
+      "orth": "ⲱⲗⲉⲙ",
+      "dialect": "F",
+      "id": "1811.4"
+    },
+    {
+      "orth": "ⲱⲗⲙⲉ",
+      "dialect": "L",
+      "id": "1811.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6130",
+      "bibliography": "CD 522b; CDC 80b; KoptHWb 291; DELC 249a; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲩⲡⲁϩⲧⲟⲩ ⲉϫⲛⲧⲉϥⲙⲉⲥⲑⲏⲧ ⲁⲩ**ⲱⲗⲙ** ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲛⲟⲩⲛⲟϭ ⲛⲛⲁⲩ ϫⲓⲛⲧϣⲟⲣⲡ ⲛⲟⲩⲣϣⲉ ⲛⲧⲉⲩϣⲏ · ϣⲁϫⲡⲥⲟ ϩⲱⲥⲧⲉ ⲛⲥⲉⲉⲓ ⲧⲏⲣⲟⲩ ⲛϭⲓⲛⲛⲟϭ ⲙⲡⲡⲁⲗⲗⲁϯⲟⲛ · ⲛⲥⲉⲣⲓⲙⲉ ⲧⲏⲣⲟⲩ ⲛⲙⲙⲁⲩ · ⲉⲧⲃⲉϫⲉⲛⲧⲁⲩϭⲛⲓⲱϩⲁⲛⲛⲏⲥ ϩⲛϩⲛⲟⲩⲛⲟϭ ⲛⲑⲃⲃⲓⲟ ·",
+      "english": "Then they threw themselves on his breast, and they mourned over him for a very long time, from the first watch of the night until the sixth hour. And at length all the nobles of the palace a came and wept with them because John had been found in such a miserable condition.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ⲉⲡⲣⲱⲙⲉ ⲁϥ**ⲱⲗⲙ** ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ·",
+      "english": "and when he saw the grey-headed old man he was filled with sorrow and compassion for Him",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧⲉϥⲁⲡⲉ ⲟ ⲛⲧϩⲉ ⲛⲟⲩⲛⲟⲩⲃ ⲛⲕⲉⲫⲁⲥ ⲛⲉϥϥⲱ ⲉⲧ**ⲱⲗⲙ** ⲥⲉⲥⲏⲕ ⲉⲩⲕⲏⲙ ⲛⲧϩⲉ ⲛϩⲉⲛⲁⲃⲟⲟⲕⲉ",
+      "english": "His head is as very fine gold, his locks are flowing, black as a raven.",
+      "source": "Song of Solomon 5",
+      "urn": "urn:cts:copticLit:ot.song.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲥⲏⲕ",
+        1,
+        18.013
+      ],
+      [
+        "ⲕⲉⲫⲁⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲕⲏⲙ",
+        1,
+        15.428
+      ],
+      [
+        "ⲇ",
+        1,
+        15.013
+      ],
+      [
+        "ⲙⲉⲥⲑⲏⲧ",
+        1,
+        14.843
+      ],
+      [
+        "ϥⲱ",
+        1,
+        11.691
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        11.505
+      ],
+      [
+        "ⲕⲁⲕⲓⲁ",
+        1,
+        10.595
+      ],
+      [
+        "ⲕⲁⲛ",
+        1,
+        10.212
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        9.093
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        8.702
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.408
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        7.899
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.541
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        7.35
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.059
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.379
+      ],
+      [
+        "ⲩ",
+        2,
+        6.225
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.212
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱⲗⲙ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲱⲗⲙ",
+          "ⲩ_1_pre_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲱⲗⲙ",
+          "ⲱⲗⲙ_0_node",
+          1
+        ],
+        [
+          "ⲱⲗⲙ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲗⲙ",
+          "ⲉⲣⲟ_1_post_ⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲱⲗⲙ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4089,
+      "count": 6
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C66",
+      "type": "cf",
+      "label": "bosom"
+    }
+  ],
+  "etym": {
+    "egy_num": "38390",
+    "egy_lemma": "ꜥnb",
+    "english": "to close (the mouth)",
+    "german": "(den Mund) verschließen; umschließen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/38390"
+  }
+}

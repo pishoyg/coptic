@@ -1,0 +1,101 @@
+{
+  "id": "C5131",
+  "forms": [
+    {
+      "id": "CF12227",
+      "orth": "ⲟⲩⲣⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16083,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5762",
+      "bibliography": "CD 489b; KoptHWb 275; DELC 236b; ChLCS 68b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲛⲁⲓ ⲛⲁⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲁⲡⲉ ⲛⲓⲱⲁⲃ ⲁⲩⲱ ⲉϫⲙⲡⲏⲓ ⲧⲏⲣϥ ⲙⲡⲉϥⲉⲓⲱⲧ ⲛϥⲧⲉⲙⲱϫⲛ ⲉⲃⲟⲗ ϩⲙⲡⲏⲓ ⲛⲓⲱⲁⲃ ⲉϥϫⲁϩⲙ ⲁⲩⲱ ⲉϥⲥⲟⲃϩ ⲉϥⲁⲙⲁϩⲧⲉ ⲛⲟⲩ**ⲟⲩⲣⲁⲥ** ⲁⲩⲱ ⲉϥϩⲏⲩ ϩⲛⲧⲥⲏϥⲉ ⲁⲩⲱ ⲉϥⲣϭⲣⲱϩ ⲛⲟⲉⲓⲕ",
+      "english": "Let it fall upon the head of Joab, and upon all the house of his father; and let there not be wanting of the house of Joab one that has an issue, or a leper, or that leans on a staff, or that falls by the sword, or that wants bread.",
+      "source": "II Samuel 3",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲩ",
+        1,
+        13.655
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        11.559
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲣⲁⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15685,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "48090",
+    "egy_lemma": "wrs",
+    "demo_num": "d1441",
+    "demo_lemma": "wrs",
+    "english": "headrest",
+    "german": "Kopfstütze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48090",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1441"
+  }
+}

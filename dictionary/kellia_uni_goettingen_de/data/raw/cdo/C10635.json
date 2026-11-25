@@ -1,0 +1,109 @@
+{
+  "id": "C10635",
+  "forms": [
+    {
+      "id": "CF28759",
+      "orth": "ⲥⲩⲛⲧⲁⲅⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28761",
+      "orth": "ⲥⲩⲛⲧⲁⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20647,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28760",
+      "orth": "ⲥⲏⲛⲧⲁⲅⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14506",
+      "bibliography": "DDGLC",
+      "cu_ID": "3756"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲧⲁⲓⲏⲩ ⲕⲁⲧⲁⲥⲙⲟⲧ ⲛⲓⲙ ⲁⲡⲁ ⲑⲉⲟⲇⲱⲥⲓⲟⲥ ⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲣⲁⲕⲟⲧⲉ · ⲉⲁϥⲧⲁⲩⲟϥ ⲉⲡϣⲁ ⲙⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲙⲓⲭⲁⲏⲗ · ⲉⲧⲉⲥⲟⲩⲡ ⲛⲧⲥⲛⲟⲟⲩⲥ ⲡⲉ ⲙⲡⲉⲃⲟⲧ ⲁⲑⲱⲣ · ⲉⲁϥⲧⲁⲩⲟⲟⲩ ⲙⲙⲏⲏϣⲉ ⲛ**ⲥⲩⲛⲧⲁⲅⲙⲁ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        10.887
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲧⲁⲅⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20249,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3489",
+    "grl_lemma": "σύνταγμα",
+    "grl_meaning": "arrangement; battalion; constitution, work, book",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1724a; Preisigke 2:548"
+  }
+}

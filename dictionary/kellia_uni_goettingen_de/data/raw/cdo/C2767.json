@@ -1,0 +1,207 @@
+{
+  "id": "C2767",
+  "forms": [
+    {
+      "id": "CF7363",
+      "orth": "ⲁϣⲟⲉⲓϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16986,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3164",
+      "bibliography": "CD 257b; KoptHWb 140; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲣⲱⲙⲉ ⲛ**ⲁϣⲟⲉⲓϣ** ⲛⲛⲉϥⲥⲟⲟⲩⲧⲛ ϩⲓϫⲙⲡⲕⲁϩ ⲟⲩⲣⲱⲙⲉ ⲛϫⲓⲛϭⲟⲛⲥ ⲙⲡⲉⲧϩⲟⲟⲩ ⲛⲁϭⲱⲣϭ ⲉⲣⲟϥ ⲉⲧⲁⲕⲟϥ",
+      "english": "A talkative man shall not prosper on the earth: evils shall hunt the unrighteous man to destruction.",
+      "source": "Psalms 139",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲗⲁⲓⲡⲱⲣⲓⲁ",
+        1,
+        15.898
+      ],
+      [
+        "ⲥⲟⲟⲩⲧⲛ",
+        1,
+        12.374
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        11.004
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϣⲟⲉⲓϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲧⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲓϫⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϣⲟⲉⲓϣ_0_node",
+          "ⲛ_1_post_ⲁϣⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲟⲉⲓϣ",
+          "ⲛⲉϥ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          "ⲥⲟⲟⲩⲧⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲧⲛ_2_post_ⲛ",
+          "ϩⲓϫⲙ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_3_post_ⲥⲟⲟⲩⲧⲛ",
+          "ⲡ_4_post_ϩⲓϫⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16591,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C255",
+      "type": "cf",
+      "label": "become many, multiply"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2772",
+      "label": "ϩⲓⲱⲓϣ",
+      "pos": "V",
+      "gloss": "call out, proclaim, preach"
+    },
+    {
+      "target": "C2773",
+      "label": "ϩⲓⲱⲓϣ",
+      "pos": "N",
+      "gloss": "preaching, announcement"
+    },
+    {
+      "target": "C2775",
+      "label": "ϫⲓⲛϩⲓⲱⲓϣ",
+      "pos": "N",
+      "gloss": "annunciation"
+    },
+    {
+      "target": "C12222",
+      "label": "ⲁⲓϣⲉ",
+      "pos": "N",
+      "gloss": "cry"
+    },
+    {
+      "target": "C2771",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "proclamation"
+    },
+    {
+      "target": "C2766",
+      "label": "ⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "cry"
+    },
+    {
+      "target": "C2774",
+      "label": "ⲣⲉϥϩⲓⲱⲓϣ",
+      "pos": "N",
+      "gloss": "preacher"
+    },
+    {
+      "target": "C2770",
+      "label": "ⲣⲉϥⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "preacher, herald"
+    },
+    {
+      "target": "C2768",
+      "label": "ⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "V",
+      "gloss": "call out, proclaim, preach"
+    },
+    {
+      "target": "C2769",
+      "label": "ⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "preaching, proclamation"
+    }
+  ]
+}

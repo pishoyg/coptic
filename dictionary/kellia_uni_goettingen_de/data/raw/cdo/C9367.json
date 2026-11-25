@@ -1,0 +1,51 @@
+{
+  "id": "C9367",
+  "forms": [
+    {
+      "id": "CF23619",
+      "orth": "ⲕⲁⲧⲏⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF23621",
+      "orth": "ⲕⲁⲧⲏⲭⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23620",
+      "orth": "ⲕⲁⲧⲉⲭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2197,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11802",
+      "bibliography": "DDGLC",
+      "cu_ID": "3441"
+    },
+    {
+      "id": "CS11803",
+      "bibliography": "DDGLC",
+      "cu_ID": "5350"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1084",
+    "grl_lemma": "κατέχω",
+    "grl_meaning": "to hold back, withhold, gain possession of",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 926a; Preisigke 1:776"
+  }
+}

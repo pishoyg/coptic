@@ -1,0 +1,577 @@
+{
+  "id": "C5995",
+  "forms": [
+    {
+      "id": "CF13995",
+      "orth": "ϣⲱⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 38.64,
+        "rank": 33,
+        "count": 6097
+      }
+    },
+    {
+      "orth": "ϣⲱⲡⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 50.37,
+        "rank": 32,
+        "count": 4272
+      }
+    },
+    {
+      "orth": "ϣⲟⲡ†",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 13.45,
+        "rank": 99,
+        "count": 1141
+      }
+    },
+    {
+      "orth": "ϣⲟⲟⲡ†",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 11.36,
+        "rank": 105,
+        "count": 1792
+      }
+    },
+    {
+      "orth": "ⳉⲱⲡⲉ",
+      "dialect": "A",
+      "id": "13.1"
+    },
+    {
+      "orth": "ⳉⲟⲟⲡ†",
+      "dialect": "A",
+      "id": "13.2"
+    },
+    {
+      "orth": "ϣⲱⲡⲓ",
+      "dialect": "F",
+      "id": "13.3"
+    },
+    {
+      "orth": "ϣⲟⲡ†",
+      "dialect": "F",
+      "id": "13.4"
+    },
+    {
+      "orth": "ϣⲁⲁⲡ†",
+      "dialect": "F",
+      "id": "13.5"
+    },
+    {
+      "orth": "ϣⲱⲡⲉ",
+      "dialect": "L",
+      "id": "13.6"
+    },
+    {
+      "orth": "ϣⲟⲟⲡ†",
+      "dialect": "L",
+      "id": "13.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6679",
+      "bibliography": "CD 577b-580b; CED 249; KoptHWb 322; DELC 268b; ChLCS 80a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲟⲩⲁⲓ ⲇⲉ ⲟⲛ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲓⲁⲛⲛⲏ ⲫⲁⲓ ⲇⲉ ⲟⲩⲅⲉⲛⲟⲥ ⲉⲧϭⲟⲥⲓ ⲡⲉ ⲉϥⲟⲓ ⲛϣⲏⲣⲓ ⲙⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲛⲉⲟⲩⲉⲃⲟⲗ ⲡⲉ ϧⲉⲛⲧϩⲁⲓⲣⲉⲥⲓⲥ ⲛⲛⲓⲁⲧⲥⲙⲟⲩ ⲛⲁⲓ ⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲓⲥϫⲉⲛ ⲡⲓϩⲁⲅⲓⲟⲥ ⲇⲓⲟⲥⲕⲟⲣⲟⲥ ⲙⲡⲉⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϣⲱⲡⲓ ⲉϫⲱⲟⲩ ϧⲉⲛⲫⲁⲓ ⲁⲩⲡⲱⲣϫ ⲥⲁⲃⲟⲗ ⲛⲛⲓⲉⲕⲕⲗⲏⲥⲓⲁ ⲁⲩ**ϣⲱⲡⲓ** ⲛϩⲁⲓⲣⲉⲧⲓⲕⲟⲥ .",
+      "english": "And another whose name was Ianni, who came from a high family and became the son of the saint, and belonged to the heresy of the accursed ones who say that, since the time of the holy Dioscorus, there has been no patriarch for them: in this they have divided the churches and become heretics.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉ ⲭⲣⲏⲙⲁ ϩⲁⲙⲟⲓ ⲛⲧⲟⲟⲩⲛ · ⲉⲛⲉⲙⲡⲉ ⲡⲛⲟⲩⲃ **ϣⲱⲡⲉ**",
+      "english": "For money, oh would that gold did not exist!",
+      "source": "I See Your Eagerness: GL 29-30",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_29_30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲧⲉⲕϣⲱⲡⲓ ⲉⲕⲛⲏⲟⲩ ⲉⲧϩⲏ ϧⲉⲛϯⲡⲣⲟⲕⲟⲡⲏ ⲛⲧⲉⲛⲓⲙⲉⲩⲓ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲉⲙϯⲙⲉⲧϣⲁⲙϣⲉⲛⲟⲩϯ ⲉⲧⲧⲟⲩⲃⲏⲟⲩⲧ ⲟⲩⲟϩ ⲛⲧⲉⲕ**ϣⲱⲡⲓ** ⲉⲕⲟⲓ ⲉϭⲁⲩⲙⲱⲓⲧ ⲛⲁⲕ ⲛⲉⲙⲛⲏ ⲉⲑⲛⲉⲙⲁⲕ ⲛⲉⲙⲛⲏ ⲉⲑⲛⲏⲟⲩ ϩⲁⲣⲟⲕ ⲛⲉⲙⲛⲓϣⲁⲙϣⲉⲛⲟⲩϯ ⲛⲟⲩⲣⲱⲟⲩ",
+      "english": "In this way, you will become one who progresses in the thought of God and sincere piety, becoming a guide for yourself and for those who are with you, as well as for those who will come to you, and for pious kings.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲉⲡⲁⲑⲟⲥ · ⲏ ⲙⲟⲩ ⲛⲧⲟϥ ⲛⲁⲧⲛⲟⲃⲉ **ϣⲱⲡⲉ** ⲉⲛⲉϩ ⲙⲙⲁ ⲛⲟⲩⲱⲧϩ ⲙⲡⲛⲟⲃⲉ ·",
+      "english": "Never before did there exist passion and death, which were without sin, in the smelting furnace of sin.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϥⲛⲁ**ϣⲱⲡⲓ** ⲛⲥⲟⲗⲥⲉⲗ ⲛⲉⲙⲥⲕⲉⲡⲓ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲑⲛⲁϣⲉ ⲉⲣⲁⲧϥ ⲙⲡⲉϥⲧⲟⲡⲟⲥ ⲟⲩⲟϩ ⲧⲉϥⲉⲕⲕⲗⲏⲥⲓⲁ ⲥⲛⲁϣⲱⲡⲓ ⲉⲥⲙⲏⲛ ⲉⲃⲟⲗ ϣⲁϩⲁⲛϫⲱⲟⲩ .",
+      "english": "He will build a monastery, and he will become a jewel and a protector for anyone who will come before his place, and his church will remain for generations.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲁⲁⲧ ⲛϣⲙⲙⲟ ⲉⲧⲙⲁⲛⲓⲁ ⲉⲧϩⲟⲟⲩ · ⲧⲁⲓ ⲉⲧ**ϣⲟⲟⲡ** ϩⲛⲧⲥⲁⲣⲝ ⲉⲁϥⲧⲣⲁⲟⲩⲉ ⲉⲃⲟⲗ ⲙⲡⲙⲟⲩ ⲉⲧⲥⲁϣⲉ ·",
+      "english": "Thou it was Who didst make me to become a stranger to the madness of evil which ariseth in the flesh, and didst make me to be remote from the death which is bitter.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉ",
+        2404,
+        38.711
+      ],
+      [
+        "ⲛϫⲉ",
+        1347,
+        37.781
+      ],
+      [
+        "ϧⲉⲛ",
+        1544,
+        37.54
+      ],
+      [
+        "ⲁ",
+        1694,
+        37.168
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1538,
+        36.841
+      ],
+      [
+        "ϥ",
+        1667,
+        36.533
+      ],
+      [
+        ".",
+        1235,
+        36.427
+      ],
+      [
+        "ⲛ",
+        1517,
+        36.292
+      ],
+      [
+        "ⲙ",
+        1160,
+        36.123
+      ],
+      [
+        "ⲟⲩ",
+        1316,
+        35.84
+      ],
+      [
+        "ⲩ",
+        916,
+        35.638
+      ],
+      [
+        "ⲥ",
+        749,
+        35.074
+      ],
+      [
+        "ⲇⲉ",
+        646,
+        35.055
+      ],
+      [
+        "ⲉⲥⲉ",
+        291,
+        35.055
+      ],
+      [
+        "ⲉϥⲉ",
+        474,
+        34.887
+      ],
+      [
+        "ⲛⲱ",
+        389,
+        34.147
+      ],
+      [
+        "ⲉⲩⲉ",
+        389,
+        34.146
+      ],
+      [
+        "ⲛⲁ",
+        671,
+        34.125
+      ],
+      [
+        "ⲛⲧⲉ",
+        589,
+        33.673
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        284,
+        33.553
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        249,
+        31.533
+      ],
+      [
+        "ⲛ",
+        6446,
+        28.826
+      ],
+      [
+        "ⲛⲁ",
+        2549,
+        26.69
+      ],
+      [
+        "ϥ",
+        3064,
+        26.32
+      ],
+      [
+        "ⲁ",
+        2606,
+        26.142
+      ],
+      [
+        "ⲡ",
+        2482,
+        25.384
+      ],
+      [
+        "ⲟⲩ",
+        2007,
+        25.187
+      ],
+      [
+        "ⲥ",
+        1564,
+        25.162
+      ],
+      [
+        "ⲉ",
+        2004,
+        24.778
+      ],
+      [
+        "ⲁⲩⲱ",
+        1570,
+        24.652
+      ],
+      [
+        "ϩⲛ",
+        1322,
+        24.639
+      ],
+      [
+        "ⲇⲉ",
+        1063,
+        24.202
+      ],
+      [
+        "ⲙ",
+        1470,
+        23.971
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        504,
+        23.915
+      ],
+      [
+        "ⲛϭⲓ",
+        802,
+        23.816
+      ],
+      [
+        "ⲩ",
+        1207,
+        23.576
+      ],
+      [
+        "ⲧ",
+        1106,
+        23.459
+      ],
+      [
+        "ϩⲙ",
+        742,
+        23.074
+      ],
+      [
+        "ⲓ",
+        767,
+        22.654
+      ],
+      [
+        ".",
+        809,
+        22.592
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲱⲡⲉ_0_node",
+          487
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          172
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲡⲉ",
+          72
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲡⲉ",
+          42
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ϣⲱⲡⲉ",
+          25
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲡⲉ",
+          51
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲡⲉ",
+          34
+        ],
+        [
+          "ⲥ_1_pre_ϣⲱⲡⲉ",
+          60
+        ],
+        [
+          "ⲇⲉ_1_post_ϣⲱⲡⲉ",
+          17
+        ],
+        [
+          "ⲕ_1_pre_ϣⲱⲡⲉ",
+          17
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϣⲱⲡⲉ",
+          15
+        ],
+        [
+          "ϩⲧⲟⲟⲩⲉ_1_pre_ϣⲱⲡⲉ",
+          11
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ϣⲱⲡⲉ",
+          20
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϣⲱⲡⲉ",
+          11
+        ],
+        [
+          "ⲓ_1_pre_ϣⲱⲡⲉ",
+          11
+        ],
+        [
+          "ⲉⲥⲉ_1_pre_ϣⲱⲡⲉ",
+          10
+        ],
+        [
+          "ⲣⲟⲩϩⲉ_1_pre_ϣⲱⲡⲉ",
+          9
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          "ϥ_1_pre_ϣⲱⲡⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲡⲉ",
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          "ⲩ_1_pre_ϣⲱⲡⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          "ⲥ_1_pre_ϣⲱⲡⲉ",
+          3
+        ],
+        [
+          "ⲥ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          4
+        ],
+        [
+          "ϣⲱⲡⲉ_0_node",
+          "ⲇⲉ_1_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          "ⲕ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲧⲟⲟⲩⲉ_1_pre_ϣⲱⲡⲉ",
+          "ⲛⲧⲉⲣⲉ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ϣⲱⲡⲉ",
+          "ϥ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϣⲱⲡⲉ",
+          "ⲥ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲡⲉ",
+          "ⲓ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲥⲉ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ϣⲱⲡⲉ",
+          "ⲣⲟⲩϩⲉ_1_pre_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲣⲟⲩϩⲉ_1_pre_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 49.69,
+      "rank": 27,
+      "count": 7887
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5996",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "being"
+    },
+    {
+      "target": "C6000",
+      "label": "ϭⲓⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "act, state of being"
+    },
+    {
+      "target": "C5997",
+      "label": "ⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "uninhabited, unoccupied"
+    },
+    {
+      "target": "C6001",
+      "label": "ⲉϣⲱⲡⲉ",
+      "pos": "CONJ",
+      "gloss": "if it happens that, if, when"
+    },
+    {
+      "target": "C5999",
+      "label": "ⲙⲁ ⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "dwelling place, monk's cell, monastery"
+    },
+    {
+      "target": "C5998",
+      "label": "ⲙⲛⲧⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "nothingness"
+    }
+  ],
+  "etym": {
+    "egy_num": "854383",
+    "egy_lemma": "ḫpr",
+    "demo_num": "d4467",
+    "demo_lemma": "ḫpr",
+    "english": "create; arise",
+    "german": "erschaffen; entstehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854383",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4467"
+  }
+}

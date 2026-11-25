@@ -1,0 +1,142 @@
+{
+  "id": "C3948",
+  "forms": [
+    {
+      "id": "CF9833",
+      "orth": "ⲥϥⲱϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10082,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4481",
+      "bibliography": "CD 379a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϫⲱⲛⲧ ⲛϫⲉⲡϭⲟⲓⲥ ⲉϫⲉⲛⲡⲓⲥⲣⲁⲏⲗ ⲁϥⲕⲱϯ ⲛⲉⲙⲱⲟⲩ ⲛϩⲣⲏⲓ ϩⲓⲡϣⲁϥⲉ ⲛϩⲙⲉ ⲛⲣⲟⲙⲡⲓ ϣⲁⲧⲉ**ⲥϥⲱϯ** ⲉⲃⲟⲗ ⲛϫⲉϯⲅⲉⲛⲉⲁ ⲧⲏⲣⲥ ⲉⲧⲓⲣⲓ ⲙⲡⲓⲡⲉⲧϩⲱⲟⲩ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ",
+      "english": "And the Lord was very angry with Israel; and for forty years he caused them to wander in the wilderness, until all the generation which did evil in the sight of the Lord was extinct.",
+      "source": "04_Numeri_32",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲉⲛⲉⲁ",
+        1,
+        13.566
+      ],
+      [
+        "ⲣⲟⲙⲡⲓ",
+        1,
+        10.558
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        9.986
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.666
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲥϥⲱϯ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ⲥϥⲱϯ",
+          "ⲧⲉ_1_pre_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲥϥⲱϯ",
+          "ⲥϥⲱϯ_0_node",
+          1
+        ],
+        [
+          "ⲥϥⲱϯ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥϥⲱϯ",
+          "ⲛϫⲉ_1_post_ⲥϥⲱϯ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲥϥⲱϯ",
+          "ϯ_2_post_ⲛϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9538,
+      "count": 1
+    }
+  }
+}

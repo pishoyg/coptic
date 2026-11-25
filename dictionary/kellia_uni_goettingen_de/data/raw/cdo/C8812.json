@@ -1,0 +1,136 @@
+{
+  "id": "C8812",
+  "forms": [
+    {
+      "id": "CF21216",
+      "orth": "ⲇⲟⲅⲙⲁⲧⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21217",
+      "orth": "ⲇⲟⲅⲙⲁⲧⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5962,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10579",
+      "bibliography": "DDGLC",
+      "cu_ID": "1168"
+    },
+    {
+      "id": "CS10580",
+      "bibliography": "DDGLC",
+      "cu_ID": "3016"
+    },
+    {
+      "id": "CS10581",
+      "bibliography": "DDGLC",
+      "cu_ID": "5556"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲛ**ⲇⲟⲅⲙⲁⲧⲓⲍⲉ** ϩⲙⲡⲕⲟⲥⲙⲟⲥ ⲛⲧϩⲉ ⲛⲛⲉⲧⲟⲛϩ ·",
+      "english": "[Why] do you subject [yourselves] to laws in the world as the living do:",
+      "source": "On Vigilance",
+      "urn": "urn:cts:copticLit:besa.vigilance.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ⲁⲧⲉⲧⲛⲙⲟⲩ ⲙⲛⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲉⲃⲟⲗ ϩⲛⲛⲉⲥⲧⲟⲓⲭⲓⲟⲛ ⲙⲡⲕⲟⲥⲙⲟⲥ . ⲁϩⲣⲱⲧⲛ ⲧⲉⲧⲛ**ⲇⲟⲅⲙⲁⲧⲓⲍⲉ** ϩⲙⲡⲕⲟⲥⲙⲟⲥ ⲛⲧϩⲉ ⲛⲛⲉⲧⲟⲛϩ .",
+      "english": "If you died with Christ from the elements of the world, why, as though living in the world, do you subject yourselves to ordinances,",
+      "source": "51_Colossians_2",
+      "urn": "urn:cts:copticLit:nt.col.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        3,
+        14.023
+      ],
+      [
+        "ⲁϩⲣⲱ",
+        1,
+        13.804
+      ],
+      [
+        "ⲧⲛ",
+        3,
+        11.334
+      ],
+      [
+        "ϩⲙ",
+        3,
+        10.583
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲛ_1_pre_ⲇⲟⲅⲙⲁⲧⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲇⲟⲅⲙⲁⲧⲓⲍⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲛ_1_pre_ⲇⲟⲅⲙⲁⲧⲓⲍⲉ",
+          "ⲇⲟⲅⲙⲁⲧⲓⲍⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5522,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3527",
+    "grl_lemma": "δογματίζω",
+    "grl_meaning": "to lay down as an opinion, decree by ordinance",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 441b"
+  }
+}

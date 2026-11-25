@@ -1,0 +1,71 @@
+{
+  "id": "C7285",
+  "forms": [
+    {
+      "id": "CF16629",
+      "orth": "ϫⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.36,
+        "rank": 1395,
+        "count": 57
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8047",
+      "bibliography": "CD 777b-778a; CED 317; KoptHWb 428, 572; DELC 329b; ChLCS 103a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲡⲛⲁⲩ ⲇⲉ ⲛϫⲡⲥⲟ ϣⲱⲡⲉ ⲁⲟⲩⲕⲁⲕⲉ ϣⲱⲡⲉ ϩⲓϫⲛⲡⲕⲁϩ ⲧⲏⲣϥ ϣⲁⲡⲛⲁⲩ ⲛ**ϫⲡ**ⲥⲓⲧⲉ .",
+      "english": "When the sixth hour",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲛⲁⲩ ⲛ**ϫⲡ**ⲯⲓⲧⲉ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϩⲛⲟⲩⲛⲟϭ ⲛϩⲣⲟⲟⲩ ϫⲉⲉⲗⲱⲉⲓ ⲉⲗⲱⲉⲓ ⲗⲁⲙⲁ ⲥⲁⲭⲑⲁⲛⲉⲓ . ⲉⲧⲉⲡⲁⲓ ⲡⲉ ϣⲁⲩϩⲉⲣⲙⲉⲛⲉⲩⲉ ⲙⲙⲟϥ ϫⲉⲡⲁⲛⲟⲩⲧⲉ ⲡⲁⲛⲟⲩⲧⲉ ⲉⲧⲃⲉⲟⲩ ⲁⲕⲕⲁⲁⲧ ⲛⲥⲱⲕ .",
+      "english": "At the ninth hour Jesus cried with a loud voice, saying, &apos;Eloi, Eloi, lama sabachthani?&apos; which is, being interpreted, &apos;My God, my God, why have you forsaken me?&apos;",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲡⲛⲁⲩ ⲇⲉ ⲡⲉ ⲛ**ϫⲡ**ϣⲟⲙⲧⲉ ⲁⲩⲱ ⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ",
+      "english": "It was the third hour, and they crucified him.",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7286",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C12185",
+      "label": "ⲁϫⲡⲓⲁ",
+      "pos": "N",
+      "gloss": "book of hours"
+    },
+    {
+      "target": "C7287",
+      "label": "ⲙⲡⲛⲁⲩ ⲛ-",
+      "pos": "PREP",
+      "gloss": "at time of, about the ... hour"
+    }
+  ]
+}

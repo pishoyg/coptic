@@ -1,0 +1,117 @@
+{
+  "id": "C233",
+  "forms": [
+    {
+      "id": "CF31501",
+      "orth": "ⲁⲉⲓⲧ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31502",
+      "orth": "ⲁⲓⲧ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31503",
+      "orth": "ⲁⲉⲓⲧ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31504",
+      "orth": "ⲁⲓⲧ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF925",
+      "orth": "ⲁⲧ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF926",
+      "orth": "ⲁⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5635,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF927",
+      "orth": "ⲁⲧ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF928",
+      "orth": "ⲁⲧ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF929",
+      "orth": "ⲁⲧ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF930",
+      "orth": "ⲁⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20474,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF931",
+      "orth": "ⲁⲑ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Negativpräfix zur Bildung von Adjektiven",
+    "tlapos": "Adjektivpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS261",
+      "bibliography": "CD 18b-19a; CED 13; KoptHWb 13, 489; DELC 17-18; ChLCS 5b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓ**ⲁⲧ**ϩⲏⲧ ⲙⲏ ⲫⲏ ⲁⲛ ⲉⲧⲁϥⲑⲁⲙⲓⲉ ⲥⲁⲃⲟⲗ ⲛⲑⲟϥ ⲟⲛ ⲁϥⲑⲁⲙⲓⲉ ⲥⲁϧⲟⲩⲛ .",
+      "english": "You foolish ones, didn't he who made the outside make the inside also?",
+      "source": "03_Luke_11",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲟⲛ ϧⲉⲛⲛⲉϥⲉⲡⲓⲥⲧⲟⲗⲏ ⲧⲏⲣⲟⲩ ⲉϥⲥⲁϫⲓ ⲛϧⲣⲏⲓ ⲛϧⲏⲧⲟⲩ ⲉⲑⲃⲉⲛⲁⲓ ⲛⲁⲓ ⲉⲧⲉϩⲁⲛⲟⲩⲟⲛ ⲛϧⲏⲧⲟⲩ ⲙⲟⲕϩ ⲛⲉⲙⲓ ⲉⲣⲱⲟⲩ ⲛⲁⲓ ⲉⲧⲉϣⲁⲣⲉ ⲛⲓ**ⲁⲧ**ϩⲏⲧ ⲛⲉⲙⲛⲏ ⲉⲧⲉⲛⲥⲉⲧⲁϫⲣⲏⲟⲩⲧ ⲁⲛ ⲉⲣⲥⲧⲣⲉⲃⲗⲟⲓⲛ ⲙⲙⲱⲟⲩ ⲙⲫⲣⲏϯ ⲙⲡⲥⲉⲡⲓ ⲛⲛⲓⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲛⲁⲥⲟⲕⲟⲩ ⲕⲁⲧⲁⲛⲟⲩⲁⲅⲱ ⲙⲙⲁⲩⲁⲧⲟⲩ",
+      "english": "as also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.",
+      "source": "22_II Peter_03",
+      "urn": "urn:cts:copticLit:nt.2pet.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C234",
+      "label": "ⲙⲛⲧⲁⲧ-",
+      "pos": "N",
+      "gloss": ""
+    }
+  ],
+  "etym": {
+    "egy_num": "22030",
+    "egy_lemma": "jw.tj",
+    "demo_num": "d432",
+    "demo_lemma": "ı ͗wtj",
+    "english": "who not; which not (neg. rel. adj.)",
+    "german": "welcher nicht (neg. Rel.Pron)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/22030",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d432"
+  }
+}

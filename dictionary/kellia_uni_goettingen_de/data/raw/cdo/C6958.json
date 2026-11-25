@@ -1,0 +1,59 @@
+{
+  "id": "C6958",
+  "forms": [
+    {
+      "id": "CF15967",
+      "orth": "ⲁⲧϩⲟⲧϩⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7678",
+      "bibliography": "CD 728b; ChLCS 97b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲁⲧ ⲟⲩⲛ ⲛⲙⲡϣⲁ ⲉⲧⲣⲉⲕϯⲙⲧⲟⲛ ⲛⲁⲓ ϩⲛⲧⲉⲕⲁⲛⲁⲡⲁⲩⲥⲓⲥ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲅⲭⲁⲣⲓⲍⲉ ⲛⲁⲓ ⲛⲧⲙⲛⲧⲧⲉⲗⲓⲟⲥ ⲉⲧⲛϩⲏⲧⲕ · ⲉⲧⲉⲧⲙⲛⲧⲁⲧⲛⲟⲃⲉ ⲧⲉ · ⲙⲛⲡⲟⲩϫⲁⲓ ⲛⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ · ⲁⲩⲱ ⲛ**ⲁⲧϩⲉⲧϩⲱⲧ**ϥ · ⲁⲩⲱ ⲛⲁⲧⲧⲁϩⲟϥ · ⲉⲓⲛⲏⲩ ϣⲁⲣⲟⲕ ⲡⲁϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "make me therefore worthy to enjoy rest in Thy holy repose. Do thou bestow upon me graciously the perfection which is in Thee, that is to say, the sinlessness and the salvation, which cannot be described, and which cannot be pried into, and which are beyond the comprehension [of man]. I come unto Thee, my Lord Jesus, the Christ.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6698,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6956",
+      "label": "ϩⲟⲧϩⲧ",
+      "pos": "V",
+      "gloss": "enquire, examine"
+    },
+    {
+      "target": "C6957",
+      "label": "ϩⲟⲧϩⲧ",
+      "pos": "N",
+      "gloss": "enquiry, question"
+    },
+    {
+      "target": "C6959",
+      "label": "ⲣⲉϥϩⲟⲧϩⲧ",
+      "pos": "N",
+      "gloss": "enquirer"
+    }
+  ]
+}

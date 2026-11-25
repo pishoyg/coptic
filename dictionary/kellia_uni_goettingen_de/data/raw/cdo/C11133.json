@@ -1,0 +1,99 @@
+{
+  "id": "C11133",
+  "forms": [
+    {
+      "id": "CF30770",
+      "orth": "ϩⲓⲙⲉⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30771",
+      "orth": "ϩⲓⲙⲉⲣⲟⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF30772",
+      "orth": "ϩⲓ︦ⲙ︦ⲓ︦ⲣ︦ⲏ︦ⲣ︦ⲓ︦ⲥ︦",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15599",
+      "bibliography": "DDGLC",
+      "cu_ID": "2152"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲣⲉϥⲙⲓϣⲉ ⲛⲟⲩⲁϩⲓⲏⲧ ⲛⲇⲓⲁⲃⲟⲗⲟⲥ ⲛⲁⲧⲁⲙⲁϩⲧⲉ ⲛⲥⲉⲟ ⲁⲛ ⲛ**ϩⲓⲙⲉⲣⲟⲥ** ⲉⲩⲙⲟⲥⲧⲉ ⲙⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ .",
+      "english": "without natural affection, unforgiving, slanderers, without self-control, fierce, no lovers of good,",
+      "source": "55_2 Timothy_3",
+      "urn": "urn:cts:copticLit:nt.2tim.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲥⲧⲉ",
+        1,
+        12.565
+      ],
+      [
+        "ⲟ",
+        1,
+        9.805
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19465,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5069",
+    "grl_lemma": "ἵμερος",
+    "grl_meaning": "longing, yearning after",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 830a"
+  }
+}

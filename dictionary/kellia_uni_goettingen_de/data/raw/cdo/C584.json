@@ -1,0 +1,87 @@
+{
+  "id": "C584",
+  "forms": [
+    {
+      "id": "CF2207",
+      "orth": "ⲣⲉϥⲃⲏϣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2208",
+      "orth": "ⲣⲉϥⲃⲏϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS702",
+      "bibliography": "CD 47a; KoptHWb 29"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C585",
+      "label": "ϫⲓⲛⲃⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "laying bare, display"
+    },
+    {
+      "target": "C587",
+      "label": "ⲃⲁϣⲁϩⲏⲩ",
+      "pos": "N",
+      "gloss": "naked"
+    },
+    {
+      "target": "C586",
+      "label": "ⲃⲁϣⲁⲡⲏ",
+      "pos": "N",
+      "gloss": "bareheaded"
+    },
+    {
+      "target": "C579",
+      "label": "ⲃⲱϣ",
+      "pos": "V",
+      "gloss": "be loosened, undone, naked; undress, uncover, divest; flay, lay bare, despoil; loosen, unfasten; release, give leave; forsake"
+    },
+    {
+      "target": "C580",
+      "label": "ⲃⲱϣ",
+      "pos": "N",
+      "gloss": "nakedness"
+    },
+    {
+      "target": "C581",
+      "label": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be naked, revealed; uncover, lay bare; divest of"
+    },
+    {
+      "target": "C582",
+      "label": "ⲃⲱϣ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "nakedness"
+    },
+    {
+      "target": "C583",
+      "label": "ⲣⲉϥⲃⲱϣ",
+      "pos": "N",
+      "gloss": "despoiler, robber"
+    }
+  ]
+}

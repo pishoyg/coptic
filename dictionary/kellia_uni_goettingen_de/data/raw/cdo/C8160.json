@@ -1,0 +1,259 @@
+{
+  "id": "C8160",
+  "forms": [
+    {
+      "id": "CF18701",
+      "orth": "ⲁⲕⲣⲓⲃⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18705",
+      "orth": "ⲁⲕⲣⲓⲃⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5469,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF18702",
+      "orth": "ⲁⲕⲗⲓⲃⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18703",
+      "orth": "ⲁⲕⲣⲏⲃⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10740,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18704",
+      "orth": "ⲁⲕⲣⲓⲃⲉⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18706",
+      "orth": "ⲁⲕⲣⲓⲃⲓⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9218",
+      "bibliography": "DDGLC",
+      "cu_ID": "6512"
+    },
+    {
+      "id": "CS9219",
+      "bibliography": "DDGLC",
+      "cu_ID": "2452"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲁ ⲇⲉ ϣⲓⲛⲉ ϩⲛⲟⲩ**ⲁⲕⲣⲓⲃⲓⲁ** ·ϫⲉ ⲉⲧⲃⲉⲟⲩ ⲁⲡⲉⲓⲡⲉⲧⲟⲩⲁⲁⲃ ϫⲉⲡⲁⲓ ·",
+      "english": "Now if any man shall ask in a spirit of contentiousness why the holy man said this,",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ϭⲉ ⲛⲧⲉⲣⲉϥϫⲟⲟⲩ ⲛϭⲓⲡⲥⲱⲧⲏⲣ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲁϥ ⲛⲁⲩ · ϫⲉⲧⲉⲧⲛⲛⲟⲉⲓ ϭⲉ ϫⲉⲉⲓϣⲁϫⲉ ⲛⲙⲙⲏⲧⲛ ⲛⲁϣ ⲛϩⲉ · ⲁⲥⲟⲩⲱϩⲙ ⲛϭⲓⲙⲁⲣⲓⲁ ⲡⲉϫⲁⲥ ϫⲉⲥⲉ ⲡⲁϫⲟⲉⲓⲥ · ϩⲛⲟⲩ**ⲁⲕⲣⲓⲃⲓⲁ** ⲁⲓⲁⲕⲣⲓⲃⲁⲥⲉ ⲛⲥⲁϣⲁϫⲉ ⲛⲓⲙ ⲉⲧⲕϫⲱ ⲙⲙⲟⲟⲩ ·",
+      "english": "“When then the Saviour had said this unto his disciples, he said unto them: Understand ye in what manner I speak with you?” Mary answered and said: “Yea, my Lord, with precision have I precisely followed all the words which thou hast said.”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲟⲩⲱϣ ⲅⲁⲣ ⲉⲧⲥⲁⲃⲟⲕ ⲉⲣⲟⲥ ϩⲛⲟⲩ**ⲁⲕⲣⲓⲃⲓⲁ** ⲉⲥⲟ ⲛⲁⲧⲉⲥⲙⲟⲧ ⲁⲩⲱ ⲉⲛⲁϣⲉⲡⲉⲥⲧⲣⲟⲡⲟⲥ ·",
+      "english": "For He wisheth to make thee to know this with careful exactness, and the forms and ways in which He doeth this are various.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲁⲕⲣⲓⲃⲁⲥⲉ",
+        1,
+        18.598
+      ],
+      [
+        "ϩⲛϣⲓ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲙⲁϣⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        3,
+        11.535
+      ],
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+        1,
+        10.448
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        10.186
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.234
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        8.455
+      ],
+      [
+        "...",
+        1,
+        8.305
+      ],
+      [
+        "ⲟ",
+        1,
+        7.805
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        7.76
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        6.471
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.484
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.688
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲕⲣⲓⲃⲓⲁ_0_node",
+          4
+        ],
+        [
+          "ⲉ_1_post_ⲁⲕⲣⲓⲃⲓⲁ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲧⲉ_4_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲕⲣⲓⲃⲓⲁ_0_node",
+          "ⲉ_1_post_ⲁⲕⲣⲓⲃⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲕⲣⲓⲃⲓⲁ",
+          "ⲥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟ",
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉ",
+          "ⲛⲁ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲟ",
+          "ⲧⲉ_4_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5034,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "74",
+    "grl_lemma": "ἀκρίβεια",
+    "grl_meaning": "exactness, precision",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 55a; Preisigke 1:48"
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "id": "C10598",
+  "forms": [
+    {
+      "id": "CF28618",
+      "orth": "ⲥⲩⲙⲫⲟⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28619",
+      "orth": "ⲥⲩⲙⲫⲟⲣⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF28620",
+      "orth": "ⲥⲩⲙⲫⲟⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6189,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF28621",
+      "orth": "ⲥⲩⲛⲫⲱⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14423",
+      "bibliography": "DDGLC",
+      "cu_ID": "2768"
+    },
+    {
+      "id": "CS14424",
+      "bibliography": "DDGLC",
+      "cu_ID": "3790"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ϩⲛⲧⲉⲟⲩϣⲏ ⲉⲧⲙⲙⲁⲩ · ⲛⲧⲉⲣⲉⲡⲣⲱⲙⲉ ⲉⲧⲥⲟⲃϩ ⲟⲩⲱⲙ ⲙⲛⲛⲉϥϩⲙϩⲁⲗ ⲛⲥⲉⲛⲕⲟⲧⲕ ⲛⲥⲉⲱⲃϣ · ⲁⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ ϣⲛϩⲧⲏϥ ϩⲁⲧ**ⲥⲩⲙⲫⲟⲣⲁ** ⲙⲡⲉⲧⲥⲟⲃϩ ⲙⲛⲡⲃⲗⲗⲉ ·",
+      "english": "And it came to pass during that night, when the man who had the skin disease had eaten with his servants, and had lain down to sleep, that Saint Victor had compassion on the miserable state of the man with the skin disease and on the blind man,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥϫⲓϭⲟⲗ ⲁⲛ ⲛϭⲓ ⲡⲉ ⲛⲧⲁϥϫⲟⲟⲥ ϫⲉϯⲟⲩⲱϣ ⲉⲧⲣⲉⲣⲱⲙⲉ ⲛⲓⲙ ⲟⲩϫⲁⲓ · ⲉⲧⲃⲉⲡⲁⲓ ⲟⲩⲙⲟⲛⲟⲛ ϫⲉϥϯⲥⲃⲱ ⲛⲁⲛⲟⲩ ϩⲛⲧⲉⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲁⲁⲃ · ⲁⲗⲗⲁ ϥϯⲥⲃⲱ ⲛⲁⲛⲟⲩ ⲟⲛ ϩⲓⲧⲛⲛ**ⲥⲩⲙⲫⲟⲣⲁ** ⲙⲛⲛϩⲓⲥⲉ ⲛϩⲉⲛⲕⲟⲟⲩⲉ ·",
+      "english": "He Who said, I would that all men should be saved,' is no liar; for this reason He teacheth us not only by the Holy Scriptures, but also by the misfortunes and sufferings of others.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲧⲡⲁϣⲉ ⲇⲉ ⲛⲧⲉⲩϣⲏ ⲁⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ ϣⲛϩⲧⲏϥ ϩⲁⲧ**ⲥⲩⲙⲫⲟⲣⲁ** ⲛⲧⲉⲥϩⲓⲙⲉ :",
+      "english": "And in the middle of the night Saint Victor considered the misfortune of the woman,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲃϩ",
+        1,
+        13.843
+      ],
+      [
+        "ϩⲧⲏ",
+        2,
+        13.398
+      ],
+      [
+        "ϩⲁ",
+        2,
+        11.28
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        10.079
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        1,
+        9.969
+      ],
+      [
+        ":",
+        1,
+        9.821
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.012
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        8.67
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        7.642
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲙⲫⲟⲣⲁ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲥⲉ_b",
+          1
+        ],
+        [
+          "ϩⲉⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥⲟⲃϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_6_post_ⲃⲗⲗⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲩⲙⲫⲟⲣⲁ_0_node",
+          "ⲙⲛ_2_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲥⲉ",
+          "ⲛ_2_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          "ⲛ_2_post_ϩⲓⲥⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲥⲉ_b",
+          "ϩⲉⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲫⲟⲣⲁ_0_node",
+          "ⲛ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲫⲟⲣⲁ_0_node",
+          "ⲙ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲙⲫⲟⲣⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ⲥⲟⲃϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲟⲃϩ_4_post_ⲉⲧ",
+          "ⲙⲛ_6_post_ⲃⲗⲗⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5748,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3487",
+    "grl_lemma": "συμφορά",
+    "grl_meaning": "bringing together, collecting",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1687b; Preisigke 2:518"
+  }
+}

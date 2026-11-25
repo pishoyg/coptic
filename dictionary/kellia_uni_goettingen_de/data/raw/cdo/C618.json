@@ -1,0 +1,262 @@
+{
+  "id": "C618",
+  "forms": [
+    {
+      "id": "CF2332",
+      "orth": "ⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 356.84,
+        "rank": 4,
+        "count": 56300
+      }
+    },
+    {
+      "id": "CF2333",
+      "orth": "ⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 309.07,
+        "rank": 5,
+        "count": 26213
+      }
+    },
+    {
+      "id": "CF2334",
+      "orth": "ⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2335",
+      "orth": "ⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2336",
+      "orth": "ⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 18.3,
+        "rank": 72,
+        "count": 2888
+      }
+    },
+    {
+      "id": "CF2337",
+      "orth": "ⲉⲣⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2338",
+      "orth": "ⲁⲣⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 8.37,
+        "rank": 153,
+        "count": 710
+      }
+    },
+    {
+      "id": "CF2339",
+      "orth": "ⲁⲣⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2340",
+      "orth": "ⲁⲗⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2341",
+      "orth": "ⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2342",
+      "orth": "ⲉ-",
+      "dialect": "P"
+    },
+    {
+      "id": "CF2343",
+      "orth": "ⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 356.84,
+        "rank": 4,
+        "count": 56300
+      }
+    },
+    {
+      "id": "CF2344",
+      "orth": "ⲉ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2345",
+      "orth": "ⲁ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 315.04,
+        "rank": 4,
+        "count": 26719
+      }
+    },
+    {
+      "id": "CF2346",
+      "orth": "ⲁ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2347",
+      "orth": "ⲁ⸗",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 304.88,
+        "rank": 5,
+        "count": 48102
+      }
+    },
+    {
+      "orth": "ⲉⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 131.36,
+        "rank": 18,
+        "count": 11141
+      }
+    },
+    {
+      "orth": "ⲛⲧ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 33.5,
+        "rank": 40,
+        "count": 5285
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Fokalisierungskonverter",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS752",
+      "bibliography": "CD 52ab; CED 31-32; KoptHWb 31, 38; DELC 37; LCG § 444; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲧⲱⲙⲓ ⲙⲙⲟϥ **ⲉ**ⲡϭⲟⲓⲥ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ .",
+      "english": "But he who is joined to the Lord is one spirit.",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲓⲱⲥⲏⲫ **ⲉ**ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲣⲱⲙⲉ ⲉϣⲧⲟⲗⲙⲁ · ⲉϭⲱϣⲧ ⲉϩⲟⲩⲛ ϩⲙⲡⲉϥϩⲟ ⲛⲥⲉⲧⲙⲣϩⲟⲧⲉ · ⲉⲃⲟⲗ ϩⲛⲧϩⲟⲧⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲉⲧϣⲟⲟⲡ ⲛⲙⲙⲁϥ ·",
+      "english": "And no man dared to look into his face without being afraid of the fear of God which rested with him.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩϭⲓⲧϥ ⲁⲩϩⲓⲟⲩⲓ **ⲉⲣⲟ**ϥ ⲟⲩⲟϩ ⲁⲩⲟⲩⲟⲣⲡϥ ⲉϥϣⲟⲩⲓⲧ .",
+      "english": "They took him, beat him, and sent him away empty.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ⲧⲉⲧⲛⲟ ⲛⲁⲧϩⲏⲧ ϩⲓⲛⲁⲓ . ⲛⲧⲉⲧⲛⲛⲟⲉⲓ ⲁⲛ ϫⲉⲛⲕⲁ ⲛⲓⲙ **ⲉ**ϥⲙⲡⲃⲟⲗ ⲙⲡⲣⲱⲙⲉ ⲉϥⲛⲁⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲛϥⲛⲁϣϫⲁϩⲙⲉϥ ⲁⲛ",
+      "english": "He said to them, &apos;Are you thus without understanding also? Don&apos;t you perceive that whatever goes into the man from outside can&apos;t defile him,",
+      "source": "Mark Chapter 7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲏⲧⲥ ⲛϯϩⲟ **ⲉⲣⲟ**ϥ ϫⲉⲛⲧⲉϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲑⲟϣ",
+      "english": "They began to beg him to depart from their region.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ ⲉⲧⲣⲉⲛⲓⲙ ⲧϣⲉⲉⲣⲉ ⲛⲛⲓⲙ ⲣϩⲙⲉ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲉ ⲛⲟⲩϣⲏ **ⲉ**ⲥⲁϣⲉ ⲉⲃⲟⲗ ⲛⲥⲱⲓ ⲛⲧϩⲉ ⲛⲟⲩⲟⲩϩⲟⲣⲉ ϩⲁⲟⲩϩⲟⲣ ⲛⲧϩⲉ ⲛⲟⲩϣⲟⲩ ϩⲁⲟⲩⲕⲁⲡⲣⲥ",
+      "english": "I want to make NN, the daughter of NN, spend forty nights and forty days clinging to me like a female dog under a male dog, like a sow under a boar,",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "ⲉⲧⲉ-",
+      "type": "cf",
+      "label": "Fokalisierungskonverter (\"2. Tempus\")"
+    },
+    {
+      "target": "ⲉⲛⲧ-",
+      "type": "cf",
+      "label": "Fokalisierungskonverter (\"2. Tempus\")"
+    },
+    {
+      "target": "ⲛ̄ⲧ-",
+      "type": "cf",
+      "label": "Fokalisierungskonverter (\"2. Tempus\")"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C615",
+      "label": "ⲉ-",
+      "pos": "PREP",
+      "gloss": "to, for, according to, as regards; for, in order to; about, because of; from, by means of; towards, to; against; indicating debt or responsibility; ethic dative; distance of time (Past or Fut.): until, since; distance of place, separation, freedom from; distributive; comparison; elliptic; in adverbial expressions; indicating direct obj.; co-ordinating a second verb"
+    },
+    {
+      "target": "C616",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C617",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C11277",
+      "label": "ⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": "if (verbal prefix of the conditional)"
+    },
+    {
+      "target": "C619",
+      "label": "ⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": ""
+    }
+  ],
+  "etym": {
+    "egy_num": "21881",
+    "egy_lemma": "jw",
+    "demo_num": "d305",
+    "demo_lemma": "ı ͗.ı ͗r",
+    "english": "[auxiliary]",
+    "german": "[aux.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/21881",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d305"
+  }
+}

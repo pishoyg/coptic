@@ -1,0 +1,77 @@
+{
+  "id": "C2968",
+  "forms": [
+    {
+      "id": "CF7801",
+      "orth": "ⲡⲱϣⲥ (ϩⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3398",
+      "bibliography": "CD 279b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲟⲩⲣⲟⲧ ⲙⲡⲧⲏⲣϥ · ⲡⲉⲧⲙϯⲗⲩⲡⲏ ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲏ · **ⲛⲧⲛⲧⲙⲡⲱϣⲥ **ϩⲛ**ⲟⲩϩⲏⲇⲟⲛⲏ** ·",
+      "english": "The greatest joy in all the world is to sorrow in the Holy Spirit; let us not stray in pleasure.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥⲁⲁⲕ **ⲁϥⲡⲱϣⲥ **ϩⲛ**ⲟⲩⲛⲟϭ** ⲙⲡⲱϣⲥ ⲉⲙⲁⲧⲉ ⲁⲩⲱ ⲡⲉϫⲁϥ ϫⲉⲛⲓⲙ ⲟⲩⲛ ⲁϥϭⲱⲣϭ ⲛⲟⲩϭⲟⲣϭⲥ ⲁϥⲛⲧⲥ ⲛⲁⲓ ⲉϩⲟⲩⲛ ⲁⲓⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲙⲡⲁⲧⲕⲉⲓ ⲁⲓⲥⲙⲟⲩ ⲉⲣⲟϥ ⲁⲩⲱ ⲉϥⲉϣⲱⲡⲉ ⲉϥⲥⲙⲁⲙⲁⲁⲧ",
+      "english": "And Isaac was amazed with very great amazement, and said, Who then is it that has procured venison for me and brought it to me? and I have eaten of all before thou camest, and I have blessed him, and he shall be blessed.",
+      "source": "Genesis 27",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2972",
+      "label": "ⲡⲁϣⲥ",
+      "pos": "N",
+      "gloss": "agitation, disorder, tumult"
+    },
+    {
+      "target": "C2966",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "V",
+      "gloss": "be amazed, beside oneself; amaze, turn aside"
+    },
+    {
+      "target": "C2969",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "N",
+      "gloss": "amazement"
+    },
+    {
+      "target": "C2967",
+      "label": "ⲡⲱϣⲥ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "to be obsessed with"
+    },
+    {
+      "target": "C2970",
+      "label": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be disturbed in mind, amazed"
+    },
+    {
+      "target": "C2971",
+      "label": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "amazement"
+    }
+  ]
+}

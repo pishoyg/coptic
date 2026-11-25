@@ -1,0 +1,371 @@
+{
+  "id": "C6077",
+  "forms": [
+    {
+      "id": "CF14159",
+      "orth": "ϣⲥⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.26,
+        "rank": 1664,
+        "count": 41
+      }
+    },
+    {
+      "orth": "ϣⲥⲡⲛⲉ",
+      "dialect": "S",
+      "id": "908.1"
+    },
+    {
+      "orth": "ⲥϣⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3542,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲥⳉⲛⲉ",
+      "dialect": "A",
+      "id": "908.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6762",
+      "bibliography": "CD 589b-590a; CED 253; KoptHWb 328; DELC 271a; ChLCS 81b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏⲡⲱⲥ ⲛϥⲉⲓ ϩⲛⲟⲩ**ϣⲥⲛⲉ** ⲛϥϩⲉ ⲉⲣⲱⲧⲛ ⲉⲧⲉⲧⲛⲟⲃϣ .",
+      "english": "lest coming suddenly he might find you sleeping.",
+      "source": "Mark Chapter 13",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩ**ϣⲥⲛⲉ** ⲛⲧⲉⲣⲟⲩϥⲓⲉⲓⲁⲧⲟⲩ ⲉϩⲣⲁⲓ ⲙⲡⲟⲩⲛⲁⲩ ⲉⲕⲉⲗⲁⲁⲩ ⲛⲙⲙⲁⲩ ⲛⲥⲁⲓⲏⲥⲟⲩⲥ ⲙⲁⲩⲁⲁϥ .",
+      "english": "Suddenly looking around, they saw no one with them any more, except Jesus only.",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲱⲥⲟⲛ ⲇⲉ ϥⲁϩⲉⲣⲁⲧϥ ϩⲛⲧⲁⲅⲱⲣⲁ ⲉϯ ⲙⲡⲉϥϩⲱⲃ ⲛϭⲓϫ ⲉⲃⲟⲗ · ⲉⲓⲥϩⲏⲏⲧⲉ ϩⲛⲟⲩ**ϣⲥⲛⲉ** ⲁϥϭⲓⲛⲉ ⲛⲟⲩⲃⲁⲗⲗⲁⲧⲓⲟⲛ ⲉⲩⲛⲙⲏⲧ ⲛϣⲉ ⲛϩⲟⲗⲟⲕⲟⲧⲧⲓⲛⲟⲥ ϩⲓⲱⲱⲥ .",
+      "english": "While he stood in the marketplace selling his handiwork, Behold! Suddenly he found a bag filled with a thousand gold coins!",
+      "source": "Apophthegmata Patrum Sahidic 031",
+      "urn": "urn:cts:copticLit:ap.31.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲛ",
+        43,
+        17.4
+      ],
+      [
+        "ⲟⲩ",
+        51,
+        16.88
+      ],
+      [
+        "ⲣⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+        1,
+        15.24
+      ],
+      [
+        "ⲟⲩϭⲟϫϫ",
+        1,
+        15.24
+      ],
+      [
+        "ϣⲙⲟⲩ",
+        2,
+        14.334
+      ],
+      [
+        "ⲙⲙⲁⲣⲣⲱⲛ",
+        1,
+        14.24
+      ],
+      [
+        "ⲛ",
+        35,
+        13.839
+      ],
+      [
+        "ⲉⲓⲁⲧ",
+        3,
+        13.825
+      ],
+      [
+        "ⲙⲛⲧⲁⲧϣⲏⲣⲉ",
+        1,
+        13.655
+      ],
+      [
+        "ⲧⲁⲗⲁⲓⲡⲱⲣⲉⲓ",
+        1,
+        13.24
+      ],
+      [
+        "ϥ",
+        24,
+        12.919
+      ],
+      [
+        "ⲉϫⲱ",
+        6,
+        12.144
+      ],
+      [
+        "ⲉⲓ",
+        8,
+        12.051
+      ],
+      [
+        "ⲩ",
+        14,
+        11.874
+      ],
+      [
+        "ⲇⲉ",
+        10,
+        11.594
+      ],
+      [
+        "ϣϥ",
+        1,
+        11.54
+      ],
+      [
+        "ⲛⲏⲩ",
+        4,
+        11.203
+      ],
+      [
+        "ϭⲓⲛⲉ",
+        2,
+        11.142
+      ],
+      [
+        "ϩⲉ",
+        7,
+        10.792
+      ],
+      [
+        "ⲁ",
+        13,
+        10.788
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲥⲛⲉ_0_node",
+          31
+        ],
+        [
+          "ⲇⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲥⲟⲛ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲣⲣⲱⲛ_4_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲱ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ϣϥ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ⲁⲧⲧⲁⲗϭⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲥⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲥⲛⲉ_0_node",
+          "ⲇⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϣⲥⲛⲉ",
+          "ϩⲟⲥⲟⲛ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲥⲟⲛ_1_post_ϣⲥⲛⲉ",
+          "ⲉⲣⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϣⲥⲛⲉ",
+          "ⲡ_4_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_3_post_ⲛⲏⲩ",
+          1
+        ],
+        [
+          "ϣⲥⲛⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲥⲛⲉ",
+          "ⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛⲧⲉ",
+          "ⲁⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϣⲥⲛⲉ_0_node",
+          "ⲉϫⲙ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ϣⲥⲛⲉ",
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          "ⲙⲙⲁⲣⲣⲱⲛ_4_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲥⲛⲉ_0_node",
+          "ⲙⲛ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣϥ",
+          "ⲟⲩⲱ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲱ_2_post_ϣϥ",
+          "ϣϥ_1_post_ϣⲥⲛⲉ",
+          1
+        ],
+        [
+          "ϣϥ_1_post_ϣⲥⲛⲉ",
+          "ⲛ_2_post_ϣϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣϥ",
+          "ⲁⲧⲧⲁⲗϭⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲥⲛⲉ",
+          "ϣⲥⲛⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.26,
+      "rank": 1454,
+      "count": 41
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6078",
+      "label": "ϩⲛⲟⲩϣⲥⲛⲉ",
+      "pos": "ADV",
+      "gloss": "on a sudden"
+    }
+  ],
+  "etym": {
+    "egy_num": "142460",
+    "egy_lemma": "zḫn",
+    "demo_num": "d5528",
+    "demo_lemma": "sḫn(j)",
+    "english": "random event",
+    "german": "zufälliges Ereignis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/142460",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5528"
+  }
+}

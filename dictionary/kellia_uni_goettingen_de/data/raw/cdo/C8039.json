@@ -1,0 +1,86 @@
+{
+  "id": "C8039",
+  "forms": [
+    {
+      "id": "CF18144",
+      "orth": "ϭⲉϭⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20381,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8941",
+      "bibliography": "CD 843b; KoptHWb 475, 575"
+    },
+    {
+      "id": "CS8942",
+      "bibliography": "KoptHWb 475"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉϣⲁⲩⲉϣⲧϩⲉⲛⲉⲓⲇⲟⲥ ⲉⲩⲣϩⲟⲩⲟⲛ**ϭⲉϭⲟⲩ** · ⲏ ⲉⲩⲙⲉϩ ⲉⲙⲁⲧⲉ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 259-262",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:7-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϩⲟⲩⲟⲛ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲓⲇⲟⲥ",
+        1,
+        16.791
+      ],
+      [
+        "ⲏ",
+        1,
+        9.479
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲉϭⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19996,
+      "count": 1
+    }
+  }
+}

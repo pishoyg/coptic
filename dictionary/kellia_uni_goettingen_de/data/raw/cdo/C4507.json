@@ -1,0 +1,70 @@
+{
+  "id": "C4507",
+  "forms": [
+    {
+      "id": "CF10970",
+      "orth": "ϭⲓⲛⲧⲱⲣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5095",
+      "bibliography": "CD 431a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4503",
+      "label": "ⲙⲁⲓⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunder-loving"
+    },
+    {
+      "target": "C4506",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "robbery"
+    },
+    {
+      "target": "C4504",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4505",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4501",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "seize, rob"
+    },
+    {
+      "target": "C4502",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunder"
+    }
+  ]
+}

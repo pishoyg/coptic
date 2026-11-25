@@ -1,0 +1,268 @@
+{
+  "id": "C10955",
+  "forms": [
+    {
+      "id": "CF29969",
+      "orth": "ⲭⲉⲣⲥⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29970",
+      "orth": "ⲭⲉⲣⲥⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7410,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15179",
+      "bibliography": "DDGLC",
+      "cu_ID": "7721"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲱϩⲁⲛⲛⲏⲥ ⲉϥⲟⲩⲏϩ ϩⲛⲧⲉⲣⲏⲙⲟⲥ ⲙⲡϥϫⲡⲟ ⲛⲁϥ ⲛⲟⲩⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ϫⲉⲕⲁⲥ ⲉⲛⲉϥⲁⲁϥ ⲛ**ⲭⲉⲣⲥⲟⲥ** ⲙⲙⲓⲛⲙⲙⲟϥ ·",
+      "english": "And John who dwelt in the desert did not cultivate a vineyard for himself, in order that he might not make himself to be a being attached to the earth.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲛⲁϣⲱⲡⲉ ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲙⲁ ⲛⲓⲙ ⲉⲧⲉⲣⲉϣⲟ ⲛⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲛⲁϣⲱⲡⲉ ⲛϩⲏⲧϥ ϩⲁϣⲟ ⲛⲥⲓⲕⲗⲟⲥ ⲛⲥⲉϣⲱⲡⲉ ⲛ**ⲭⲉⲣⲥⲟⲥ** ⲁⲩⲱ ⲛⲥⲉⲣϣⲟⲛⲧⲉ",
+      "english": "And it shall come to pass in that day, for every place where there shall be a thousand vines at a thousand shekels, they shall become barren land and thorns.",
+      "source": "Isaiah 7",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲩⲣⲓ",
+        2,
+        15.525
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.998
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        10.726
+      ],
+      [
+        "ⲟⲩⲱⲧⲉⲃ",
+        1,
+        10.41
+      ],
+      [
+        ":",
+        1,
+        8.531
+      ],
+      [
+        "ⲉ",
+        3,
+        8.187
+      ],
+      [
+        "ⲛ",
+        3,
+        7.761
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.005
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.75
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ⲩ",
+        1,
+        4.536
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        3.495
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲣϣⲟⲛⲧⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲙⲓⲛⲙⲙⲟ",
+        1,
+        12.543
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        10.083
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        1,
+        9.384
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        9.022
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲭⲉⲣⲥⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲟⲩⲣⲓ",
+          2
+        ],
+        [
+          "ⲥⲟⲩⲣⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲓ_2_post_ⲥⲟⲩⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲛϩⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲙⲁⲛϩⲱⲙⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲭⲉⲣⲥⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲟⲩⲣⲓ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲟⲩⲣⲓ",
+          "ⲥⲟⲩⲣⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲟⲩⲣⲓ",
+          "ⲛⲓ_2_post_ⲥⲟⲩⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲥⲟⲩⲣⲓ",
+          "ⲥⲟⲩⲣⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          "ⲛⲉⲙ_2_post_ⲙⲁⲛϩⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲛϩⲱⲙⲓ",
+          "ⲙⲁⲛϩⲱⲙⲓ_1_post_ⲭⲉⲣⲥⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲉⲣⲥⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6956,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2371",
+    "grl_lemma": "χέρσος",
+    "grl_meaning": "dry land",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1989a; Preisigke 2:735"
+  }
+}

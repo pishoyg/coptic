@@ -1,0 +1,99 @@
+{
+  "id": "C10971",
+  "forms": [
+    {
+      "id": "CF30027",
+      "orth": "ⲭⲟⲣⲏⲅⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF30028",
+      "orth": "ⲭⲟⲣⲏⲅⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10584,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15202",
+      "bibliography": "DDGLC",
+      "cu_ID": "7241"
+    },
+    {
+      "id": "CS15203",
+      "bibliography": "DDGLC",
+      "cu_ID": "10707"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲉⲡⲏⲑⲩⲙⲉⲓ ⲉⲧⲙⲛⲧⲙⲁⲣⲑⲉⲛⲟⲥ ⲉⲕϣⲁⲛϩⲁⲣⲉϩ ⲉⲛⲉⲛⲧⲟⲗⲏ · ⲡϫⲟⲉⲓⲥ ⲛⲁ**ⲭⲟⲣⲏⲅⲉⲓ** ⲙⲙⲟⲥ ⲛⲁⲕ ·",
+      "english": "If thou desirest earnestly virginity, and thou dost keep the commandments, God will bestow it upon thee in full measure.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        8.688
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10173,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2386",
+    "grl_lemma": "χορηγέω",
+    "grl_meaning": "to supply, furnish",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1998b; Preisigke 2:740"
+  }
+}

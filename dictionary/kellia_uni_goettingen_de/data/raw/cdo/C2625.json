@@ -1,0 +1,45 @@
+{
+  "id": "C2625",
+  "forms": [
+    {
+      "id": "CF7051",
+      "orth": "ⲙⲛⲧⲛⲉⲉϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3011",
+      "bibliography": "CD 238b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2624",
+      "label": "ⲁⲧⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "without sailor"
+    },
+    {
+      "target": "C2626",
+      "label": "ⲕⲁⲧⲁⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "list of sailors, crew"
+    },
+    {
+      "target": "C2623",
+      "label": "ⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "sailor"
+    }
+  ]
+}

@@ -1,0 +1,786 @@
+{
+  "id": "C5640",
+  "forms": [
+    {
+      "id": "CF13256",
+      "orth": "ⲱϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2176,
+        "count": 26
+      }
+    },
+    {
+      "orth": "ⲟϩⲓ†",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.67,
+        "rank": 150,
+        "count": 735
+      }
+    },
+    {
+      "orth": "ⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.47,
+        "rank": 1177,
+        "count": 74
+      }
+    },
+    {
+      "orth": "ⲁϩⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.27,
+        "rank": 180,
+        "count": 990
+      }
+    },
+    {
+      "orth": "ⲱϩⲉ",
+      "dialect": "A",
+      "id": "148.3"
+    },
+    {
+      "orth": "ⲁϩⲉ†",
+      "dialect": "A",
+      "id": "148.4"
+    },
+    {
+      "orth": "ⲱϩⲓ",
+      "dialect": "F",
+      "id": "148.5"
+    },
+    {
+      "orth": "ⲁϩⲓ",
+      "dialect": "F",
+      "id": "148.6"
+    },
+    {
+      "orth": "ⲟϩⲓ†",
+      "dialect": "F",
+      "id": "148.7"
+    },
+    {
+      "orth": "ⲱϩⲉ",
+      "dialect": "L",
+      "id": "148.8"
+    },
+    {
+      "orth": "ⲁϩⲉ†",
+      "dialect": "L",
+      "id": "148.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6312",
+      "bibliography": "CD 536b-537a; CDC 82a; CED 232; KoptHWb 297; DELC 252a; ChLCS\n                            74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲥϫⲉ ⲡⲥⲁⲧⲁⲛⲁⲥ ⲡⲉⲧⲁϥⲧⲱⲛϥ ⲉϫⲱϥ ⲙⲙⲓⲛⲙⲙⲟϥ ⲟⲩⲟϩ ⲁϥⲫⲱϣ ⲙⲙⲟⲛ ϣϫⲟⲙ ⲙⲙⲟϥ ⲉ**ⲟϩⲓ** ⲉⲣⲁⲧϥ ⲁⲗⲗⲁ ⲟⲩⲟⲛⲧⲉϥ ⲟⲩϫⲱⲕ .",
+      "english": "If Satan has risen up against himself, and is divided, he can't stand, but has an end.",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲙⲟⲩ ⲉϩⲟⲩⲛ ⲙⲡⲣ**ⲁϩⲉ**ⲣⲁⲧⲕ ϩⲓⲡⲥⲁ ⲛⲃⲟⲗ ·",
+      "english": "come inside, and do not stand outside.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲧⲁⲯⲩⲭⲏ ⲙⲟⲕϩ ϣⲁⲉϧⲣⲏⲓ ⲉⲫⲙⲟⲩ **ⲟϩⲓ** ⲙⲡⲁⲓⲙⲁ ⲟⲩⲟϩ ⲣⲱⲓⲥ .",
+      "english": "He said to them, 'My soul is exceedingly sorrowful, even to death. Stay here, and watch.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲕ · ⲛⲧⲟϥ ⲇⲉ ⲁϥ**ⲁϩⲉ**ⲣⲁⲧϥ ϩⲛⲧⲉⲩⲙⲏⲧⲉ ·",
+      "english": "And he took his stand in the midst of them,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁ**ⲟϩⲓ** ⲉⲣⲁⲧ ⲉϫⲉⲛⲡⲁⲙⲁ ⲛⲁⲣⲉϩ ⲟⲩⲟϩ ϯⲛⲁϣⲉ ⲛⲏⲓ ⲉϫⲉⲛⲟⲩⲡⲉⲧⲣⲁ ⲟⲩⲟϩ ϯⲛⲁϫⲟⲩϣⲧ ⲉⲑⲣⲓⲛⲁⲩ ϫⲉⲟⲩ ⲡⲉ ⲉⲧⲉϥⲛⲁⲥⲁϫⲓ ⲙⲙⲟϥ ⲛϧⲏⲧ ⲟⲩⲟϩ ϫⲉⲟⲩ ⲡⲉⲧⲓⲛⲁⲉⲣⲟⲩⲱ ⲙⲙⲟϥ ⲉϫⲉⲛⲡⲁⲥⲟϩⲓ .",
+      "english": "I will stand upon my watch, and mount upon the rock, and watch to see what he will say by me, and what I shall answer when I am reproved.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡϥ**ⲁϩⲉ**ⲣⲁⲧϥ ϩⲛⲙⲉ ⲉⲛⲉϩ",
+      "english": "and he does not ever stand fast truthfully.",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲁⲧ",
+        919,
+        39.822
+      ],
+      [
+        "ⲉⲣⲁ",
+        83,
+        32.913
+      ],
+      [
+        "ϥ",
+        569,
+        31.881
+      ],
+      [
+        "ⲟⲩ",
+        447,
+        31.166
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        275,
+        29.39
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        90,
+        28.826
+      ],
+      [
+        "ⲉ",
+        240,
+        28.738
+      ],
+      [
+        "ⲙ",
+        209,
+        28.705
+      ],
+      [
+        "ⲁ",
+        221,
+        28.353
+      ],
+      [
+        "ⲛ",
+        241,
+        28.329
+      ],
+      [
+        "ⲛϫⲉ",
+        148,
+        28.223
+      ],
+      [
+        "ⲕ",
+        121,
+        27.884
+      ],
+      [
+        ".",
+        147,
+        27.215
+      ],
+      [
+        "ⲙⲡⲉⲙⲑⲟ",
+        16,
+        26.741
+      ],
+      [
+        "ⲉⲥⲱⲟⲩ",
+        35,
+        26.632
+      ],
+      [
+        "ⲡⲉ",
+        86,
+        26.517
+      ],
+      [
+        "ⲡⲓ",
+        117,
+        26.382
+      ],
+      [
+        "ⲛⲁ",
+        112,
+        26.377
+      ],
+      [
+        "ϧⲉⲛ",
+        113,
+        26.223
+      ],
+      [
+        "ⲥⲁ",
+        39,
+        26.102
+      ]
+    ],
+    "S": [
+      [
+        "ⲉ",
+        23,
+        8.557
+      ],
+      [
+        "ⲧ",
+        17,
+        8.502
+      ],
+      [
+        "ⲛ",
+        27,
+        8.242
+      ],
+      [
+        "ⲙⲟⲛⲕ",
+        1,
+        8.182
+      ],
+      [
+        "ⲟⲩⲁⲁⲧ",
+        1,
+        7.445
+      ],
+      [
+        "ⲥⲩⲙⲃⲟⲩⲗⲉⲩⲉ",
+        1,
+        7.307
+      ],
+      [
+        "ϩⲱⲃ",
+        5,
+        7.222
+      ],
+      [
+        "ϥ",
+        18,
+        7.2
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        4,
+        6.98
+      ],
+      [
+        "ⲁ",
+        15,
+        6.934
+      ],
+      [
+        "ⲗⲟⲅⲭⲏ",
+        1,
+        5.637
+      ],
+      [
+        "ⲣⲁⲧ",
+        3,
+        5.597
+      ],
+      [
+        "ϣⲟⲩϣⲧ",
+        1,
+        5.275
+      ],
+      [
+        "ⲃⲱⲕ",
+        4,
+        5.113
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        4,
+        4.847
+      ],
+      [
+        "ϣⲱⲧⲉ",
+        1,
+        4.637
+      ],
+      [
+        "ⲁⲛⲁ",
+        1,
+        4.5
+      ],
+      [
+        "ⲕⲓⲃⲱⲧⲟⲥ",
+        1,
+        4.012
+      ],
+      [
+        "ⲕⲁϩ",
+        3,
+        3.85
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        3.811
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲱϩⲉ",
+          11
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          24
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϩⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱϩⲉ",
+          3
+        ],
+        [
+          "ⲛⲧ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲓ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ϩⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲱϩⲉ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲙⲟⲛⲕ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲙⲟⲛⲕ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲕ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲟⲙⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱϩⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲁⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱϩⲉ",
+          "ⲥⲉ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱϩⲉ",
+          "ⲛⲁ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲱϩⲉ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          "ⲉ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱϩⲉ",
+          "ⲛⲧ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲱϩⲉ",
+          "ⲁ_3_post_ϣⲱϫⲡ",
+          1
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲙⲛ_2_post_ⲏⲓ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲓ",
+          "ⲡⲉϥ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲏⲓ",
+          "ⲏⲓ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ⲱϩⲉ",
+          "ⲧⲏⲣ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲏⲓ",
+          "ϥ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲓ",
+          "ⲛⲉϥ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲏⲓ",
+          "ⲏⲓ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ⲱϩⲉ",
+          "ⲛ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱϩⲉ",
+          "ϩⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲉⲣⲁⲧ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲁⲧ_1_post_ⲱϩⲉ",
+          "ⲟⲩ_2_post_ⲉⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲱϩⲉ",
+          "ⲥ_1_pre_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          3
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲛ_2_post_ⲙⲟⲛⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲟⲛⲕ",
+          "ⲅ_2_post_ⲙⲟⲛⲕ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲙⲟⲛⲕ",
+          "ⲙⲟⲛⲕ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲱϩⲉ",
+          "ⲥ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲛ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱϩⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ϩⲓⲟⲙⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱϩⲉ",
+          "ϥ_1_pre_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲣⲁⲧ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲱϩⲉ",
+          "ϥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲣⲁⲧ",
+          "ϩⲁ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲱϩⲉ_0_node",
+          "ⲉ_1_post_ⲱϩⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲱϩⲉ",
+          "ⲣⲁⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲣⲁⲧ_2_post_ⲉ",
+          "ϥ_3_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲣⲁⲧ",
+          "ϩⲛ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱϩⲉ",
+          "ⲓ_1_pre_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲱϩⲉ",
+          "ⲱϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_2_post_ⲉ",
+          "ϩⲛ_1_post_ⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_1_post_ⲱϩⲉ",
+          "ϥ_2_post_ⲉⲣⲁⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.74,
+      "rank": 162,
+      "count": 911
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5643",
+      "label": "ϭⲓⲛⲁϩⲉ (ⲉϫⲛ-)",
+      "pos": "N",
+      "gloss": "act of remaining on"
+    },
+    {
+      "target": "C5648",
+      "label": "ϭⲓⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "standing"
+    },
+    {
+      "target": "C5647",
+      "label": "ϯⲙⲉⲧⲣⲉϥⲟϩⲉ ⲉⲣⲁⲧϥ ⲛⲧⲉⲡⲭⲟⲣⲟⲥ",
+      "pos": "N",
+      "gloss": "chorus, institution of choruses (χοροστασία)"
+    },
+    {
+      "target": "C5649",
+      "label": "ⲁϩⲉ (ⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "need"
+    },
+    {
+      "target": "C5646",
+      "label": "ⲙⲁ ⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "place of standing"
+    },
+    {
+      "target": "C5641",
+      "label": "ⲱϩⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "abide by, wait for"
+    },
+    {
+      "target": "C5645",
+      "label": "ⲱϩⲉ (ⲉⲣⲁⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "stand before, stand against, attend on"
+    },
+    {
+      "target": "C5642",
+      "label": "ⲱϩⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "wait for, attend to"
+    },
+    {
+      "target": "C5644",
+      "label": "ⲱϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "stand on foot, stand"
+    }
+  ],
+  "etym": {
+    "egy_num": "851887",
+    "egy_lemma": "ꜥḥꜥ",
+    "demo_num": "d1072",
+    "demo_lemma": "ꜥḥꜥ",
+    "english": "to stand; to get ready to do (something)",
+    "german": "aufstehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851887",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1072"
+  }
+}

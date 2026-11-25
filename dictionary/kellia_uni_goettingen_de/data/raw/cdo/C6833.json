@@ -1,0 +1,732 @@
+{
+  "id": "C6833",
+  "forms": [
+    {
+      "id": "CF15715",
+      "orth": "ϩⲁⲣⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.55,
+        "rank": 245,
+        "count": 718
+      }
+    },
+    {
+      "orth": "ⲁⲣⲉϩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.21,
+        "rank": 225,
+        "count": 442
+      }
+    },
+    {
+      "orth": "ⲁⲣⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3392,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ϩⲁⲣⲏϩⲉ",
+      "dialect": "S",
+      "id": "116.2"
+    },
+    {
+      "orth": "ⲉⲣⲉϩ",
+      "dialect": "S",
+      "id": "116.3"
+    },
+    {
+      "orth": "ⲉⲣⲏϩ",
+      "dialect": "S",
+      "id": "116.4"
+    },
+    {
+      "orth": "ϩⲁⲣⲏϩⲉ",
+      "dialect": "A",
+      "id": "116.5"
+    },
+    {
+      "orth": "ⲉⲣⲉϩ",
+      "dialect": "A",
+      "id": "116.6"
+    },
+    {
+      "orth": "ⲉⲣⲏϩ",
+      "dialect": "A",
+      "id": "116.7"
+    },
+    {
+      "orth": "ⲁⲣⲏϩ",
+      "dialect": "A",
+      "id": "116.8"
+    },
+    {
+      "orth": "ⲉⲣⲏϩⲧⲉ",
+      "dialect": "A",
+      "id": "116.9"
+    },
+    {
+      "orth": "ⲁⲣⲏϩⲧⲉ",
+      "dialect": "A",
+      "id": "116.10"
+    },
+    {
+      "orth": "ⲁⲗⲉϩ",
+      "dialect": "F",
+      "id": "116.11"
+    },
+    {
+      "orth": "ⲁⲣⲏϩ",
+      "dialect": "L",
+      "id": "116.12"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7549",
+      "bibliography": "CD 707b-708b; CED 296; KoptHWb 390; DELC 311a-312a; ChLCS\n                            94b-95a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲕⲁⲗⲱⲥ ⲧⲉⲧⲛⲉⲣⲁⲑⲉⲧⲓⲛ ⲛϯⲉⲛⲧⲟⲗⲏ ⲛⲧⲉⲫⲛⲟⲩϯ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛ**ⲁⲣⲉϩ** ⲉⲧⲉⲧⲉⲛⲡⲁⲣⲁⲇⲟⲥⲓⲥ",
+      "english": "He said to them, 'Full well do you reject the commandment of God, that you may keep your tradition.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲕ ϩⲱⲱⲕ **ϩⲁⲣⲉϩ** ⲉⲣⲟⲟⲩ ϩⲛⲧⲉⲕⲙⲛⲧⲕⲟⲩⲓ ·",
+      "english": "do thou keep them in thy youth.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲇⲉ ⲉⲧⲟϩⲓ ⲉⲣⲁⲧϥ ϧⲉⲛⲡⲉϥϩⲏⲧ ⲉϥⲧⲁϫⲣⲏⲟⲩⲧ ⲙⲙⲟⲛⲁⲛⲁⲅⲕⲏ ⲧⲟⲓ ⲉⲣⲟϥ ⲟⲩⲟⲛⲧⲉϥ ⲉⲣϣⲓϣⲓ ⲙⲙⲁⲩ ⲉⲑⲃⲉⲡⲉⲧⲉϩⲛⲁϥ ⲙⲙⲓⲛⲙⲙⲟϥ ⲟⲩⲟϩ ⲫⲁⲓ ϥϯϩⲁⲡ ⲉⲣⲟϥ ⲙⲙⲓⲛⲙⲙⲟϥ ϧⲉⲛⲡⲉϥϩⲏⲧ ⲉ**ⲁⲣⲉϩ** ⲉⲧⲉϥⲡⲁⲣⲑⲉⲛⲟⲥ ⲕⲁⲗⲱⲥ ϥⲛⲁⲁⲓⲥ .",
+      "english": "But he who stands steadfast in his heart, having no necessity, but has power over his own heart, to keep his own virgin, does well.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲕ**ϩⲁⲣⲉϩ** ⲉⲧⲡⲓⲥⲧⲓⲥ ·",
+      "english": "thou didst keep the faith,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲉⲧⲁϥϫⲟⲧⲟⲩ ⲛϫⲉⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲑⲟⲩⲁⲃ ⲁϥⲧⲏⲓϥ ⲛⲛⲉϥⲓⲟϯ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲁⲣⲉϩ** ⲉⲡⲁⲓⲁⲗⲟⲩ ϫⲉⲟⲩⲇⲱⲣⲟⲛ ⲛⲧⲉⲫⲛⲟⲩϯ ⲡⲉ ⲫⲁⲓ ⲅⲁⲣ ⲛⲁϣⲱⲡⲓ ⲛⲟⲩⲛⲓϣϯ ⲛⲁⲣⲭⲓⲉⲣⲉⲩⲥ ϧⲉⲛⲡⲏⲓ ⲙⲫⲛⲟⲩϯ ⲟⲩⲟϩ ⲥⲉⲛⲁⲧⲉⲛϩⲟⲩⲧϥ ⲉϩⲁⲛⲗⲁⲟⲥ ⲉⲩⲟϣ .",
+      "english": "After saying these words, the holy bishop gave the child to his parents, saying: ‘Keep this child well, for he is a gift from God, he will be a great pontiff in the house of God and many peoples will be entrusted to him.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣϣⲉ ⲅⲁⲣ ⲉⲣⲟⲛ ⲧⲉⲛⲟⲩ ⲉⲧⲣⲉⲛⲕⲉⲣⲁ ⲙⲡⲛⲁ ⲙⲛⲡϩⲁⲡ : ⲉⲧⲣⲉⲛϫⲡⲟ ⲙⲉⲛ ⲙⲡϩⲁⲡ ⲉⲧⲣⲉⲛϫⲟ ⲇⲉ ⲉⲃⲟⲗ ϩⲙⲡⲛⲁ ⲕⲁⲧⲁⲡⲉⲧⲥⲏϩ · ϫⲉ**ϩⲁⲣⲉϩ** ⲉⲡⲛⲁ ⲙⲛⲡϩⲁⲡ · ⲁⲩⲱ ⲛⲅϩⲛⲧⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ·",
+      "english": "Now it is meet for us to mingle mercy with judgement, and we must acquire the faculty of judging, but we must speak in mercy, according to that which is written, 'Keep mercy and judgement, and do thou draw nigh unto thy God at all times.’",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉ",
+        668,
+        33.168
+      ],
+      [
+        "ⲉⲛⲧⲟⲗⲏ",
+        103,
+        32.111
+      ],
+      [
+        "ⲉⲣⲟ",
+        185,
+        30.711
+      ],
+      [
+        "ⲉⲣⲱ",
+        119,
+        30.079
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        257,
+        29.097
+      ],
+      [
+        "ⲛⲁ",
+        128,
+        26.954
+      ],
+      [
+        "ⲛⲉϥ",
+        66,
+        26.8
+      ],
+      [
+        "ⲛⲓ",
+        115,
+        26.755
+      ],
+      [
+        "ⲟⲩ",
+        155,
+        26.582
+      ],
+      [
+        "ⲛⲧⲉ",
+        108,
+        26.331
+      ],
+      [
+        "ⲙⲉⲑⲙⲏⲓ",
+        31,
+        25.441
+      ],
+      [
+        "ⲧⲉⲛ",
+        62,
+        25.264
+      ],
+      [
+        "ϥ",
+        122,
+        25.216
+      ],
+      [
+        "ⲟⲩⲉⲣϣⲓ",
+        11,
+        24.986
+      ],
+      [
+        "ⲥⲁϩⲛⲓ",
+        9,
+        24.957
+      ],
+      [
+        "ⲕ",
+        59,
+        24.776
+      ],
+      [
+        "ⲉⲣⲉ",
+        39,
+        24.747
+      ],
+      [
+        "ⲛⲉⲙ",
+        68,
+        24.505
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        42,
+        24.461
+      ],
+      [
+        "ϩⲁ",
+        31,
+        24.398
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        37,
+        26.739
+      ],
+      [
+        "ⲉ",
+        1229,
+        26.119
+      ],
+      [
+        "ⲉⲛⲧⲟⲗⲏ",
+        164,
+        24.761
+      ],
+      [
+        "ⲉⲣⲟ",
+        445,
+        24.389
+      ],
+      [
+        "ⲛ",
+        602,
+        22.022
+      ],
+      [
+        "ⲟⲩ",
+        277,
+        20.073
+      ],
+      [
+        "ⲡ",
+        264,
+        19.142
+      ],
+      [
+        "ⲛⲉϥ",
+        94,
+        18.973
+      ],
+      [
+        "ϥ",
+        222,
+        18.417
+      ],
+      [
+        "ⲛⲁ",
+        167,
+        18.352
+      ],
+      [
+        "ⲕ",
+        127,
+        18.331
+      ],
+      [
+        "ⲁⲩⲱ",
+        161,
+        18.252
+      ],
+      [
+        "ϣⲁϫⲉ",
+        85,
+        18.212
+      ],
+      [
+        "ⲉⲧ",
+        138,
+        18.076
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        34,
+        17.946
+      ],
+      [
+        "ⲓ",
+        109,
+        17.667
+      ],
+      [
+        "ⲛⲉⲕ",
+        54,
+        17.563
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲱⲙⲁ",
+        21,
+        17.333
+      ],
+      [
+        "ⲙ",
+        129,
+        16.897
+      ],
+      [
+        "ⲛⲟⲙⲟⲥ",
+        30,
+        16.865
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          66
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲣⲉϩ",
+          11
+        ],
+        [
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ϩⲁⲣⲉϩ",
+          6
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲣⲉϩ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲣⲉϩ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲃⲟⲛⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          8
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲉⲛⲧⲟⲗⲏ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲁϫⲉ",
+          2
+        ],
+        [
+          "ϣⲁϫⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩⲁⲣⲉϩ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲟⲛ_1_post_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          8
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲛⲟⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲟⲙⲟⲥ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          2
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ϩⲛ_1_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲁⲣⲉϩ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          2
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ⲛ_1_post_ϩⲁⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲣⲉϩ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲣⲣⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲣⲉϩ",
+          "ⲃⲟⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲡ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          "ⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          "ⲉⲛⲧⲟⲗⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲩ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          "ⲡⲁ_3_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲛⲁ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ⲟⲛ_1_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          4
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲟⲩ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          "ⲡⲉⲕ_3_post_ⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲛⲟⲙⲟⲥ",
+          "ⲛⲟⲙⲟⲥ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲣⲉϩ",
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲁⲣⲉϩ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲥⲉ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲣⲉϩ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲣⲉϩ",
+          "ⲉⲕⲉ_1_pre_ϩⲁⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ϩⲁⲣⲉϩ",
+          "ϩⲁⲣⲉϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.52,
+      "rank": 212,
+      "count": 718
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6834",
+      "label": "ϩⲁⲣⲉϩ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C6835",
+      "label": "ⲣⲉϥϩⲁⲣⲉϩ",
+      "pos": "N",
+      "gloss": "watcher, guard"
+    }
+  ],
+  "etym": {
+    "egy_num": "109180",
+    "egy_lemma": "ḥrḥr",
+    "demo_num": "d4238",
+    "demo_lemma": "ḥrḥ",
+    "english": "to guard; to keep",
+    "german": "bewachen; hüten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/109180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4238"
+  }
+}

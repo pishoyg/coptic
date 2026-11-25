@@ -1,0 +1,179 @@
+{
+  "id": "C7068",
+  "forms": [
+    {
+      "id": "CF16193",
+      "orth": "ϭⲓⲛϫⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10490,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7800",
+      "bibliography": "CD 751b; KoptHWb 411"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲧⲉ ⲧⲉⲛϭⲓⲛⲃⲱⲕ ⲉⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲉⲓⲧⲉ ⲧⲉⲛ**ϭⲓⲛϫⲓ** ⲉⲃⲟⲗ ϩⲙⲡⲥⲱⲙⲁ ⲙⲛⲡⲉⲥⲛⲟϥ ⲙⲡϫⲟⲉⲓⲥ · ⲉⲛⲟ ⲛⲟⲩⲙⲛⲧⲟⲩⲁ ⲛⲟⲩⲱⲧ ⲙⲛⲧⲁⲅⲁⲡⲏ ⲙⲛⲟⲩⲙⲛⲧϩⲏⲧ ⲛⲟⲩⲱⲧ ϩⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲉⲛϣⲗⲏⲗ ϩⲁⲛⲉⲛⲉⲣⲏⲩ ϩⲛⲟⲩⲁⲅⲁⲡⲏ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA 241-252",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:501-514",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        12.317
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        1,
+        11.929
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        11.587
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϭⲓⲛϫⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛϫⲓ",
+          1
+        ],
+        [
+          "ϭⲓⲛϫⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϭⲓⲛϫⲓ",
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛϫⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛϫⲓ",
+          "ϭⲓⲛϫⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10072,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7058",
+      "label": "ϫⲓ",
+      "pos": "V",
+      "gloss": "receive, take; take (as spouse), marry; touch, reach, hit; take, get, bring, accept; have, to be provided with; learn (by heart); buy"
+    },
+    {
+      "target": "C7066",
+      "label": "ϫⲓ",
+      "pos": "N",
+      "gloss": "taking, bringing"
+    },
+    {
+      "target": "C7062",
+      "label": "ϫⲓ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "take instead of, on account of"
+    },
+    {
+      "target": "C7063",
+      "label": "ϫⲓ (ϩⲁϫⲛ-)",
+      "pos": "V",
+      "gloss": "take in advance, from before"
+    },
+    {
+      "target": "C7059",
+      "label": "ϫⲓ (ⲉ-)",
+      "pos": "V",
+      "gloss": "lead, relate to, attain to"
+    },
+    {
+      "target": "C7065",
+      "label": "ϫⲓ (ⲉϩⲟⲩⲛ ⲉ-)",
+      "pos": "V",
+      "gloss": "be a close relative of"
+    },
+    {
+      "target": "C7060",
+      "label": "ϫⲓ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "take upon, take for, borrow"
+    },
+    {
+      "target": "C7064",
+      "label": "ϫⲓ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "pos": "V",
+      "gloss": "select from"
+    },
+    {
+      "target": "C7061",
+      "label": "ϫⲓ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "be concerned with, touch"
+    },
+    {
+      "target": "C7067",
+      "label": "ⲣⲉϥϫⲓ",
+      "pos": "N",
+      "gloss": "taker"
+    }
+  ]
+}

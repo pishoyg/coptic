@@ -1,0 +1,155 @@
+{
+  "id": "C9014",
+  "forms": [
+    {
+      "id": "CF22212",
+      "orth": "ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF22213",
+      "orth": "ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22214",
+      "orth": "ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10659,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11052",
+      "bibliography": "DDGLC",
+      "cu_ID": "2598"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲁϩⲉ ⲇⲉ ⲉⲣⲁⲧϥ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲫⲟⲩ ϩⲓⲣⲙⲡⲣⲟ ⲙⲡ**ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ** ⲛϣⲟⲙⲧ ⲛϩⲟⲟⲩ ⲁⲩⲱ ⲙⲡⲉⲗⲁⲁⲩ ϫⲓⲧϥ ⲛⲁϥ ⲉϩⲟⲩⲛ ⲉⲩⲛⲁⲩ ⲉⲡⲣⲱⲙⲉ ⲉϣϫⲉ ⲟⲩϩⲓⲇⲓⲱⲧⲏⲥ ⲡⲉ",
+      "english": "And the blessed Apa Aphou stood before the door of the Bishop for three days and nobody received him inside, looking at him as if he was a crazy person.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        8.336
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        8.057
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲟⲙⲧ",
+        1,
+        14.954
+      ],
+      [
+        "ⲣⲟ",
+        1,
+        11.797
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲓⲥⲕⲟⲡⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10248,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3420",
+    "grl_lemma": "ἐπισκοπεῖον",
+    "grl_meaning": "residence or household of a bishop",
+    "grl_pos": "noun",
+    "grl_ref": "Lampe 531b"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "C2170",
+  "forms": [
+    {
+      "id": "CF6052",
+      "orth": "ⲣⲙⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8083,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2510",
+      "bibliography": "CD 198ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲛⲧⲟⲩ ⲇⲉ ⲉϩⲟⲩⲛ ϫⲉⲁϥⲛⲁⲃⲁⲡⲧⲓⲍⲉ ⲙⲙⲟⲟⲩ · ⲁⲧⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ **ⲣⲙⲟⲟⲩ** ⲛⲧⲉⲥϩⲉ ·",
+      "english": "and when he had brought them in [and the Archbishop began] to baptize them the water in the font assumed the form which it usually had.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣϥⲁⲣⲭⲉⲓ ⲇⲉ ⲛⲃⲁⲡⲧⲓⲍⲉ · ⲙⲙⲟⲟⲩ ⲁⲧⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ **ⲣⲙⲟⲟⲩ** ⲛⲧⲉⲥϩⲉ ·",
+      "english": "and when he had begun to baptize them the water which was in the font assumed the form which it had usually.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ",
+        2,
+        18.898
+      ],
+      [
+        "ⲧⲉⲥ",
+        2,
+        13.529
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7638,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2173",
+      "label": "ϯⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give water, irrigate"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2168",
+      "label": "ⲕⲁⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "cease (to give) water"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2165",
+      "label": "ⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "water; inundation"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2171",
+      "label": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2172",
+      "label": "ⲥⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "scatter, distribute water"
+    }
+  ]
+}

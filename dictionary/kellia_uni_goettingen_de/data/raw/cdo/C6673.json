@@ -1,0 +1,57 @@
+{
+  "id": "C6673",
+  "forms": [
+    {
+      "id": "CF15391",
+      "orth": "ⲣⲉϥⲙⲡϩⲓⲛ ⲉϩⲟⲩⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7387",
+      "bibliography": "CD 685b; KoptHWb 377; ChLCS 92a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C905",
+      "type": "cf",
+      "label": "bring, bear"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6674",
+      "label": "ϣⲉ ⲛϩⲓⲛ",
+      "pos": "N",
+      "gloss": "divination"
+    },
+    {
+      "target": "C6672",
+      "label": "ϩⲓⲛ",
+      "pos": "N",
+      "gloss": "vessel, cup; liquid measure"
+    },
+    {
+      "target": "C6675",
+      "label": "ⲣⲉϥϣⲉⲛϩⲓⲛ",
+      "pos": "N",
+      "gloss": "diviner"
+    }
+  ]
+}

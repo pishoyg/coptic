@@ -1,0 +1,219 @@
+{
+  "id": "C3692",
+  "forms": [
+    {
+      "id": "CF9298",
+      "orth": "ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8646,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4197",
+      "bibliography": "CD 354b; KoptHWb 194; DELC 195; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲗⲁⲟⲥ ⲉⲧⲛϩⲏⲧⲥ ⲁϥⲉⲛⲧⲟⲩ ⲉⲃⲟⲗ ⲁϥⲟⲩⲟⲥⲧⲟⲩ ϩⲛⲧⲃⲁϣⲟⲩⲣ ⲁⲩⲱ ϩⲛⲛ**ⲥⲉⲣϭⲁⲙⲟⲩⲗ** ⲙⲡⲉⲛⲓⲡⲉ ⲉⲁϥⲡⲟⲙⲡⲉⲩⲉ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲙⲁ ⲧⲏⲣϥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁϥⲁⲁⲥ ⲛⲛⲉⲡⲟⲗⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲛⲉϣⲏⲣⲉ ⲛⲁⲙⲙⲱⲛ ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲁϥⲕⲧⲟϥ ⲙⲛⲡⲗⲁⲟⲥ ⲧⲏⲣϥ ⲉϩⲣⲁⲓ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "And he brought forth the people that were in it, and put them under the saw, and under iron harrows, and axes of iron, and made them pass through the brick-kiln: and thus he did to all the cities of the children of Ammon. And David and all the people returned to Jerusalem.",
+      "source": "II Samuel 12",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲧⲉ ⲙⲉⲩⲕⲉⲧϥⲕⲛⲧⲉ ⲉⲃⲟⲗ ϩⲛ**ⲥⲉⲣϭⲁⲙⲟⲩⲗ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲉⲧϥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲃⲁϣⲟⲩⲣ",
+        1,
+        17.276
+      ],
+      [
+        "ⲕⲛⲧⲉ",
+        1,
+        13.644
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        1,
+        13.294
+      ],
+      [
+        "ⲕⲁⲣⲡⲟⲥ",
+        1,
+        11.433
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.941
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲥⲉⲣϭⲁⲙⲟⲩⲗ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲡⲉⲛⲓⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲡⲟⲙⲡⲉⲩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          "ⲥⲉⲣϭⲁⲙⲟⲩⲗ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉⲣϭⲁⲙⲟⲩⲗ_0_node",
+          "ⲙ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          "ⲡⲉⲛⲓⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲛⲓⲡⲉ_2_post_ⲙ",
+          "ⲉ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+          "ⲁ_3_post_ⲡⲟⲙⲡⲉⲩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8199,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7737",
+      "type": "cf",
+      "label": "camel"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3693",
+      "label": "ⲥⲉⲣⲟϫⲓ",
+      "pos": "N",
+      "gloss": "thistle (\"fake thorn\")"
+    },
+    {
+      "target": "C3690",
+      "label": "ⲥⲟⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "thorn, spike, dart; needle, awl"
+    },
+    {
+      "target": "C12141",
+      "label": "ⲥⲣⲁⲣⲟⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "briar, thorn, thistle"
+    },
+    {
+      "target": "C3691",
+      "label": "ⲥⲣⲃⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "thorn of datepalm"
+    }
+  ]
+}

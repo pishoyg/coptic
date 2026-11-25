@@ -1,0 +1,99 @@
+{
+  "id": "C5233",
+  "forms": [
+    {
+      "id": "CF12433",
+      "orth": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF12434",
+      "orth": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5877",
+      "bibliography": "CD 498ab"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2037",
+      "type": "cf",
+      "label": "bearing, producing"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5239",
+      "label": "ϥⲁⲓⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-carrier"
+    },
+    {
+      "target": "C5237",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5238",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5234",
+      "label": "ϯⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "give fruit"
+    },
+    {
+      "target": "C5230",
+      "label": "ⲁⲧⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruitless"
+    },
+    {
+      "target": "C5232",
+      "label": "ⲉⲛⲟⲩⲧⲁϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "bring forth fruit"
+    },
+    {
+      "target": "C5231",
+      "label": "ⲉⲣⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "bear fruits"
+    },
+    {
+      "target": "C5236",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "quality of the fruit-giver"
+    },
+    {
+      "target": "C5229",
+      "label": "ⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit"
+    },
+    {
+      "target": "C5235",
+      "label": "ⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-giver"
+    }
+  ]
+}

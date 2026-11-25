@@ -1,0 +1,432 @@
+{
+  "id": "C4988",
+  "forms": [
+    {
+      "id": "CF11941",
+      "orth": "ⲟⲩⲗⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3562,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲟⲩⲉⲗⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7775,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲩⲗⲗⲉ",
+      "dialect": "L",
+      "id": "1719.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5614",
+      "bibliography": "CD 477ab; CDC 74a; CED 211; KoptHWb 270; DELC 232a; ChLCS 67a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲥⲕⲁ ⲛⲉⲥⲙⲁⲁϫⲉ ⲉⲛⲉϩ ⲉⲥⲱⲧⲙ ⲉⲧ**ⲟⲩⲗⲗⲉ** ⲛⲛϫⲱ ⲉⲧⲥⲟⲟϥ ·",
+      "english": "She neither allowed her ears to listen at any time to the words of lewd speech,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲉϥⲧⲱⲛ ⲡⲁⲥⲱⲙⲁ · ⲡⲁⲓ ⲉϣⲁⲓϫⲱ ⲛϩⲏⲧϥ ⲛϩⲏⲧϥ ⲛϩⲉⲛ**ⲟⲩⲗⲗⲉ** ·",
+      "english": "Where is my body, that body wherein I used to sing hymns?",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲥⲫⲣⲁⲅⲓⲥ ⲛⲥⲙⲁⲣⲁⲅⲇⲟⲥ ϩⲓⲟⲩⲧⲁⲙⲓⲟ ⲛⲛⲟⲩⲃ ⲁⲩⲱ ⲛⲧϩⲉ ⲛ**ⲟⲩⲗⲗⲉ** ⲙⲙⲟⲩⲥⲓⲕⲟⲛ ϩⲛⲟⲩⲏⲣⲡ ⲉⲛⲁⲛⲟⲩϥ",
+      "english": "The offering of the righteous maketh the altar fat, and the sweet savour thereof is before the most High.",
+      "source": "Sirach 35",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "...ⲧⲟⲩⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲟⲩⲥⲓⲕⲟⲛ",
+        2,
+        16.954
+      ],
+      [
+        "ⲁⲧⲟⲩⲟⲉⲓϣ",
+        1,
+        16.276
+      ],
+      [
+        "ⲕⲁⲡ",
+        1,
+        14.469
+      ],
+      [
+        "ⲕⲱⲃϩ",
+        1,
+        14.276
+      ],
+      [
+        "ⲕⲓⲑⲁⲣⲁ",
+        1,
+        12.232
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        2,
+        11.721
+      ],
+      [
+        "ϩⲏⲃⲉ",
+        1,
+        11.299
+      ],
+      [
+        "ϩⲛ",
+        6,
+        10.912
+      ],
+      [
+        "ⲛ",
+        11,
+        10.865
+      ],
+      [
+        "ⲉ",
+        8,
+        10.495
+      ],
+      [
+        "ⲥⲱⲕ",
+        1,
+        10.147
+      ],
+      [
+        "ϫⲱ",
+        3,
+        9.838
+      ],
+      [
+        "ⲗⲁⲥ",
+        1,
+        9.393
+      ],
+      [
+        "ⲙ",
+        5,
+        8.995
+      ],
+      [
+        "ⲁ",
+        5,
+        8.688
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        8.607
+      ],
+      [
+        "ⲥⲙⲏ",
+        1,
+        8.604
+      ],
+      [
+        "ⲩ",
+        4,
+        8.488
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.898
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲗⲗⲉ_0_node",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲥⲟⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲕⲓⲑⲁⲣⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲱⲃϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲃⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲧⲓⲅⲝ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲗⲗⲉ",
+          2
+        ],
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϩⲛ_3_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲥ_1_post_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲛⲟⲧⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲧⲙ_3_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲗⲗⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϫⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲱ_3_post_ⲛ",
+          "ⲉⲧ_4_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ϫⲱ",
+          "ⲥⲟⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲗⲗⲉ",
+          "ⲟⲩ_1_pre_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲗⲗⲉ",
+          "ⲟⲩⲗⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲕⲓⲑⲁⲣⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲕⲱⲃϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲗⲗⲉ_0_node",
+          "ϩⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ϩⲏⲃⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲏⲃⲉ_3_post_ⲟⲩ",
+          "ⲙ_4_post_ϩⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲏⲃⲉ",
+          "ⲙⲁⲥⲧⲓⲅⲝ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲗⲗⲉ_0_node",
+          "ⲙ_1_post_ⲟⲩⲗⲗⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲟⲩⲥⲓⲕⲟⲛ_2_post_ⲙ",
+          "ϩⲛ_3_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲙⲟⲩⲥⲓⲕⲟⲛ",
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          "ⲏⲣⲡ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲗⲗⲉ_0_node",
+          "ⲟⲩ_2_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲗⲁⲥ",
+          "ⲗⲁⲥ_1_post_ⲟⲩⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲗⲁⲥ_1_post_ⲟⲩⲗⲗⲉ",
+          "ⲉ_2_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲗⲁⲥ",
+          "ϥ_4_post_ⲛⲟⲧⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲛⲟⲧⲙ",
+          "ⲛⲟⲧⲙ_3_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3185,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4989",
+      "label": "ⲣϥⲥⲉϩⲟⲩⲉⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "psalmist"
+    },
+    {
+      "target": "C4990",
+      "label": "ⲥⲉⲕⲟⲩⲉⲗⲗⲓ",
+      "pos": "V",
+      "gloss": "make music, play music"
+    },
+    {
+      "target": "C4991",
+      "label": "ⲥⲓⲧⲉ ⲛⲉϥⲟⲩⲉⲗⲗⲉ",
+      "pos": "V",
+      "gloss": "recite one's poetry"
+    }
+  ],
+  "etym": {
+    "egy_num": "42940",
+    "egy_lemma": "wꜣr",
+    "demo_num": "d1456",
+    "demo_lemma": "wl",
+    "english": "to dance",
+    "german": "tanzen (o. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/42940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1456"
+  }
+}

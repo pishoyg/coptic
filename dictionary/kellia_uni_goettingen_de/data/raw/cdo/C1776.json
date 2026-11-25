@@ -1,0 +1,449 @@
+{
+  "id": "C1776",
+  "forms": [
+    {
+      "id": "CF5132",
+      "orth": "ϯⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3883,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2076",
+      "bibliography": "CD 155a; KoptHWb 85; ChLCS 24a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲣ**ϯⲙⲁ** ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ .",
+      "english": "neither give place to the devil.",
+      "source": "49_Ephesians_4",
+      "urn": "urn:cts:copticLit:nt.eph.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϯ**ϯⲙⲁ** ⲇⲉ ⲁⲛ ⲛⲥϩⲓⲙⲉ ⲉϯⲥⲃⲱ . ⲟⲩⲇⲉ ⲣϫⲟⲉⲓⲥ ⲉⲡⲉⲥϩⲁⲓ . ⲁⲗⲗⲁ ⲉⲧⲣⲉⲥϣⲱⲡⲉ ϩⲛⲟⲩⲙⲛⲧⲣⲙⲣⲁϣ .",
+      "english": "But I don't permit a woman to teach, nor to exercise authority over a man, but to be in quietness.",
+      "source": "54_1 Timothy_2",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲅ**ϯⲙⲁ** ⲛⲟⲩⲥⲁⲉⲓⲛ ⲕⲁⲓ ⲅⲁⲣ ⲡϫⲟⲉⲓⲥ ⲁϥⲥⲟⲛⲧϥ ⲙⲡⲣⲧⲣⲉϥⲟⲩⲉ ⲙⲙⲟⲕ ⲕⲁⲓ ⲅⲁⲣ ⲕⲛⲁⲣⲭⲣⲉⲓⲁ ⲛⲁϥ",
+      "english": "Then give place to the physician, for the Lord hath created him: let him not go from thee, for thou hast need of him.",
+      "source": "Sirach 38",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:38",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲧⲉⲓ",
+        1,
+        17.598
+      ],
+      [
+        "ⲁⲛ",
+        5,
+        12.094
+      ],
+      [
+        "ⲥⲁⲉⲓⲛ",
+        1,
+        11.644
+      ],
+      [
+        "ⲛⲟⲩϭⲥ",
+        1,
+        11.428
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ϣⲱⲥ",
+        1,
+        10.5
+      ],
+      [
+        "ⲕⲁⲓ",
+        1,
+        9.857
+      ],
+      [
+        "ⲇⲓⲁⲃⲟⲗⲟⲥ",
+        1,
+        9.516
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        2,
+        9.512
+      ],
+      [
+        "ⲩ",
+        4,
+        8.81
+      ],
+      [
+        ".",
+        3,
+        8.312
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.22
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        7.835
+      ],
+      [
+        "ⲉ",
+        4,
+        7.817
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        7.276
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        7.255
+      ],
+      [
+        "·",
+        1,
+        7.178
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        7.036
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        6.986
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        6.981
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϯⲙⲁ",
+          2
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          6
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϯⲙⲁ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_2_post_ⲥⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲥⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϯⲙⲁ",
+          "ϯⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          "ⲙⲙⲟ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϯⲙⲁ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ϯⲙⲁ",
+          "ⲟⲩ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲙⲁ",
+          "ϯⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          "ⲛ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲙⲁ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲯⲩⲭⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯⲙⲁ",
+          "ϯⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          "ⲁⲛ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϯⲙⲁ",
+          "ⲁ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲣⲉ",
+          "ⲧⲙ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_2_post_ⲧⲣⲉ",
+          "ⲧⲣⲉ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϯⲙⲁ",
+          "ϯⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          "ⲛⲁ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲙⲁ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ϩⲓ_1_post_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϯⲙⲁ",
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯⲙⲁ",
+          "ⲅ_1_pre_ϯⲙⲁ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϯⲙⲁ",
+          "ϯⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲁ_0_node",
+          "ⲕⲁⲓ_2_post_ⲥⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_2_post_ⲥⲟⲛⲧ",
+          "ⲅⲁⲣ_2_post_ⲥⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲥⲟⲛⲧ",
+          "ⲡ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3493,
+      "count": 8
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1777",
+      "label": "ϫⲓⲙⲁ",
+      "pos": "V",
+      "gloss": "take place, usurp place"
+    },
+    {
+      "target": "C12270",
+      "label": "ⲉⲩⲙⲁ",
+      "pos": "ADV",
+      "gloss": "to/in one place, together"
+    },
+    {
+      "target": "C1774",
+      "label": "ⲕⲁⲙⲁ",
+      "pos": "V",
+      "gloss": "allow place, give opportunity"
+    },
+    {
+      "target": "C1771",
+      "label": "ⲙⲁ",
+      "pos": "N",
+      "gloss": "place; dwelling place; chamber (monk's cell); temple, shrine, monastery; part, district; part, duty"
+    },
+    {
+      "target": "C12107",
+      "label": "ⲙⲁ ⲛ-",
+      "pos": "N",
+      "gloss": "place of ..."
+    },
+    {
+      "target": "C1775",
+      "label": "ⲟⲓ ⲛⲕⲉⲙⲁ",
+      "pos": "V",
+      "gloss": "be elsewhere, separated; unclean"
+    },
+    {
+      "target": "C1772",
+      "label": "ⲡⲉⲓⲙⲁ",
+      "pos": "N",
+      "gloss": "this world"
+    },
+    {
+      "target": "C1779",
+      "label": "ⲣⲉϥⲙⲁ",
+      "pos": "N",
+      "gloss": "one set over a place, house-guard"
+    },
+    {
+      "target": "C1773",
+      "label": "ⲣⲉⲙⲫⲙⲁ",
+      "pos": "N",
+      "gloss": "man of the place, native"
+    },
+    {
+      "target": "C1778",
+      "label": "ⲧⲉϣⲙⲁ",
+      "pos": "N",
+      "gloss": "one set over a place, house-guard"
+    }
+  ]
+}

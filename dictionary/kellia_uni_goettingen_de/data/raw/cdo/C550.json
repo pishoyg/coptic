@@ -1,0 +1,144 @@
+{
+  "id": "C550",
+  "forms": [
+    {
+      "id": "CF2127",
+      "orth": "ⲃⲏⲧϩⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7054,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS660",
+      "bibliography": "CD 45a; KoptHWb 28; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲃⲛⲛⲉ ⲥⲱ · ⲁⲩⲱ ⲥⲉⲛⲁⲧⲁⲩⲉ**ⲃⲏⲧϩⲁⲧⲉ** ⲉⲃⲟⲗ ·",
+      "english": "And the palm trees have drunk and they will produce white branches.",
+      "source": "Apophthegmata Patrum Sahidic 083",
+      "urn": "urn:cts:copticLit:ap.83.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲩϣⲱⲡⲉ ⲛⲃⲣⲣⲉ ⲛⲥⲉⲧⲁⲩⲉ**ⲃⲏⲧϩⲁⲧⲉ** ⲉⲃⲟⲗ ϩⲛⲧϩⲟⲧⲉ ⲙⲡⲛⲟⲩⲧⲉ :",
+      "english": "It becomes new and produces white branches through the fear of God.",
+      "source": "Apophthegmata Patrum Sahidic 083",
+      "urn": "urn:cts:copticLit:ap.83.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        12.114
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        1,
+        11.804
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        10.083
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲏⲧϩⲁⲧⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6607,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "ϩⲁⲧⲉ",
+      "type": "cf",
+      "label": "hell, weiß"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C551",
+      "label": "ϣⲉⲛⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-fibres"
+    },
+    {
+      "target": "C549",
+      "label": "ⲃⲁⲓⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "branch of (date-)palm"
+    },
+    {
+      "target": "C547",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C548",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C552",
+      "label": "ⲃⲏⲧⲥⲡⲓⲣ",
+      "pos": "N",
+      "gloss": "rib"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "C1285",
+  "forms": [
+    {
+      "id": "CF3975",
+      "orth": "ⲕⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7909,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1490",
+      "bibliography": "CD 114b; KoptHWb 67"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲟⲩⲟⲛ ϩⲁⲛⲡⲣⲟⲫⲏⲧⲏⲥ ⲇⲉ ⲛⲉⲙϩⲁⲛⲣⲉϥϯⲥⲃⲱ ϧⲉⲛϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲧⲉⲧⲁⲛϯⲟⲭⲓⲁ ⲃⲁⲣⲛⲁⲃⲁⲥ ⲛⲉⲙⲥⲓⲙⲱⲛ ⲫⲏ ⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲛⲓ**ⲕⲉⲣ** ⲛⲉⲙⲗⲟⲩⲕⲓⲟⲥ ⲡⲓⲕⲩⲣⲓⲛⲛⲉⲟⲥ ⲛⲉⲙⲙⲁⲛⲁⲏ ⲡⲓϣⲫⲏⲣ ⲛϣⲁⲛϣ ⲛⲧⲉⲏⲣⲱⲇⲏⲥ ⲡⲓⲧⲉⲧⲣⲁⲁⲣⲭⲏⲥ ⲛⲉⲙⲥⲁⲩⲗⲟⲥ",
+      "english": "Now in the assembly that was at Antioch there were some prophets and teachers: Barnabas, Simeon who was called Niger, Lucius of Cyrene, Manaen the foster brother of Herod the tetrarch, and Saul.",
+      "source": "05_Acts_13",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲗⲟⲩⲕⲓⲟⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲕⲩⲣⲓⲛⲛⲉⲟⲥ",
+        1,
+        17.11
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲓ_1_pre_ⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲕⲉⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲗⲟⲩⲕⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲟⲩⲕⲓⲟⲥ_1_post_ⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲕⲩⲣⲓⲛⲛⲉⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲩⲣⲓⲛⲛⲉⲟⲥ_1_post_ⲕⲉⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ⲕⲉⲣ",
+          "ⲕⲉⲣ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲣ_0_node",
+          "ⲛⲉⲙ_2_post_ⲗⲟⲩⲕⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲗⲟⲩⲕⲓⲟⲥ",
+          "ⲗⲟⲩⲕⲓⲟⲥ_1_post_ⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲗⲟⲩⲕⲓⲟⲥ_1_post_ⲕⲉⲣ",
+          "ⲡⲓ_2_post_ⲕⲩⲣⲓⲛⲛⲉⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲕⲩⲣⲓⲛⲛⲉⲟⲥ",
+          "ⲕⲩⲣⲓⲛⲛⲉⲟⲥ_1_post_ⲕⲉⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7373,
+      "count": 1
+    }
+  }
+}

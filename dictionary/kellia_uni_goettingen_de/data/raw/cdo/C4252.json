@@ -1,0 +1,154 @@
+{
+  "id": "C4252",
+  "forms": [
+    {
+      "id": "CF10455",
+      "orth": "ϫⲓⲛⲧⲁⲗⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9826,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4822",
+      "bibliography": "CD 409b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉⲧⲁⲗⲱⲟⲩ ⲉⲡϣⲱⲓ ⲛ**ϫⲓⲛⲧⲁⲗⲟ** ⲃ ⲋ ⲛⲱⲓⲕ ⲉϯⲟⲩⲓ ⲛⲧⲟⲓ ⲉϫⲉⲛϯⲧⲣⲁⲡⲉⲍⲁ ⲉⲧⲧⲟⲩⲃⲏⲟⲩⲧ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ",
+      "english": "And ye shall put them in two rows, each row containing six loaves, on the pure table before the Lord.",
+      "source": "03_Leviticus_24",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲋ",
+        1,
+        13.505
+      ],
+      [
+        "ⲱⲓⲕ",
+        1,
+        11.203
+      ],
+      [
+        "ⲃ",
+        1,
+        10.709
+      ],
+      [
+        "ϣⲱⲓ",
+        1,
+        10.503
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲧⲁⲗⲟ_0_node",
+          1
+        ],
+        [
+          "ⲃ_1_post_ϫⲓⲛⲧⲁⲗⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓⲛⲧⲁⲗⲟ_0_node",
+          "ⲃ_1_post_ϫⲓⲛⲧⲁⲗⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9284,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4251",
+      "label": "ⲙⲁ ⲛⲧⲁⲗⲟ",
+      "pos": "N",
+      "gloss": "place whereon to mount, vehicle"
+    },
+    {
+      "target": "C4245",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "lift, offer up, set on (beast or ship); set up (on loom), weave; go up, mount (beast), go aboard"
+    },
+    {
+      "target": "C4246",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "raising up, offering"
+    },
+    {
+      "target": "C4247",
+      "label": "ⲧⲁⲗⲟ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "enclose, add"
+    },
+    {
+      "target": "C4248",
+      "label": "ⲧⲁⲗⲟ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "load with"
+    },
+    {
+      "target": "C4249",
+      "label": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "rise, raise up, add"
+    },
+    {
+      "target": "C4250",
+      "label": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "addition"
+    }
+  ]
+}

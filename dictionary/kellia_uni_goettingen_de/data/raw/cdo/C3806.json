@@ -1,0 +1,623 @@
+{
+  "id": "C3806",
+  "forms": [
+    {
+      "id": "CF9536",
+      "orth": "ⲥⲧⲟⲓ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1507,
+        "count": 50
+      }
+    },
+    {
+      "orth": "ⲥⲧⲁⲓ-",
+      "dialect": "S",
+      "id": "1496.1"
+    },
+    {
+      "orth": "ⲥϯ-",
+      "dialect": "S",
+      "id": "1496.2"
+    },
+    {
+      "orth": "ⲥⲧⲉ-",
+      "dialect": "S",
+      "id": "1496.3"
+    },
+    {
+      "orth": "ⲥⲑⲟⲓ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.73,
+        "rank": 881,
+        "count": 62
+      }
+    },
+    {
+      "orth": "ⲥⲑⲓ-",
+      "dialect": "B",
+      "id": "1496.5"
+    },
+    {
+      "orth": "ⲥⲑⲩ-",
+      "dialect": "B",
+      "id": "1496.6"
+    },
+    {
+      "orth": "ⲥϯ-",
+      "dialect": "A",
+      "id": "1496.7"
+    },
+    {
+      "orth": "ⲥⲧⲁⲓ",
+      "dialect": "F",
+      "id": "1496.8"
+    },
+    {
+      "orth": "ⲥϯ-",
+      "dialect": "F",
+      "id": "1496.9"
+    },
+    {
+      "orth": "ⲥⲧⲁⲉⲓ",
+      "dialect": "L",
+      "id": "1496.10"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4319",
+      "bibliography": "CD 362b; CED 165; KoptHWb 200; DELC 199; ChLCS 51a"
+    },
+    {
+      "id": "CS4320",
+      "bibliography": "CD 363a; KoptHWb 200; ChLCS 51a"
+    },
+    {
+      "id": "CS4321",
+      "bibliography": "CD 363a; KoptHWb 200; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲣⲱⲙⲉ ⲣⲁⲡⲟⲡⲛⲓⲅⲉ ϩⲓⲧⲙⲡⲉ**ⲥⲧⲟⲓ** ⲙⲡⲗⲓⲃⲁⲛⲟⲥ · ⲙⲛⲡϣⲟⲩϩⲏⲛⲉ ⲉⲧⲉⲣⲉⲛⲣⲱⲙⲉ ⲧⲁⲗⲟ ⲙⲙⲟϥ ⲉϩⲣⲁⲓ : —",
+      "english": "and men died, being choked by the fumes of the frankincense^ and by the smell of the incense which the people were offering up upon the altar",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡϣⲱⲗⲙ ⲟⲛ ⲉϥϣⲁⲛϩⲩⲇⲁⲛⲉ ⲛⲥⲁⲡⲉ**ⲥⲧⲟⲓ** ⲉⲧⲛⲁⲛⲟⲩϥ ⲛⲛⲥⲟϭⲛ ⲙⲛⲛϣⲟⲩϩⲏⲛⲉ ϣⲁϥϣⲱⲡⲉ ϩⲛⲟⲩⲁⲡⲁⲧⲏ ·",
+      "english": "Yet again in the case of the smell. If the nose be in the habit of taking delight in the things which have sweet smells, that is, in scented unguents, and in aromatic perfumes, and in balsams, it falleth at length into a state of numbness,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ ⲛⲁⲓ ϫⲉϫⲓⲛⲛⲧⲁⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲁϥⲣϩⲁⲗ ⲛⲁⲇⲁⲙ ⲙⲛⲉⲩϩⲁ ⲧⲉϥⲥϩⲓⲙⲉ ⲁⲛϣⲏⲛ ϣⲱⲗⲙ ⲙⲡⲉⲩ**ⲥⲧⲟⲓ** ⲁⲛⲉⲩϭⲱⲱⲃⲉ ϩⲉ ⲉⲡⲉⲥⲏⲧ",
+      "english": "And the Cherubim said unto me, 'From the moment when the Devil entered into Paradise, and seduced Adam, and Eve his wife, the trees, which up to that time had possessed a sweet smell, ceased to have any smell at all, and their leaves [began to] fall off.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϯⲛⲟⲩϥⲉ",
+        8,
+        17.199
+      ],
+      [
+        "ⲣⲁⲡⲟⲡⲛⲓⲅⲉ",
+        2,
+        16.954
+      ],
+      [
+        "ⲙ",
+        49,
+        16.551
+      ],
+      [
+        "ⲛ",
+        63,
+        16.097
+      ],
+      [
+        "ⲥⲟϭⲛ",
+        4,
+        15.825
+      ],
+      [
+        "ϩⲟⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲙⲁⲓⲣⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲛϣⲁⲁⲛⲧⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲃⲁϣⲟⲩϣ",
+        1,
+        14.954
+      ],
+      [
+        "ⲁⲕⲁⲣⲡⲟⲥ",
+        1,
+        14.954
+      ],
+      [
+        "ϩⲁϭⲓⲛ",
+        1,
+        14.954
+      ],
+      [
+        "ⲫⲁϭⲓⲛⲛ",
+        1,
+        14.954
+      ],
+      [
+        "ϩⲓⲁⲙⲟⲙⲟⲛ",
+        1,
+        14.954
+      ],
+      [
+        "ⲗⲓⲃⲁⲛⲟⲥ",
+        4,
+        14.687
+      ],
+      [
+        "ⲡⲉ",
+        22,
+        14.243
+      ],
+      [
+        "ϩⲩⲇⲁⲛⲉ",
+        1,
+        13.954
+      ],
+      [
+        "ⲧⲁⲧⲙ",
+        1,
+        13.369
+      ],
+      [
+        "ⲟⲩⲧⲁϩ",
+        1,
+        13.369
+      ],
+      [
+        "ϣⲱⲗⲙ",
+        2,
+        13.31
+      ],
+      [
+        "ⲡ",
+        28,
+        13.275
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲥⲧⲟⲓ",
+          6
+        ],
+        [
+          "ⲥⲧⲟⲓ_0_node",
+          29
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲧⲟⲓ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          12
+        ],
+        [
+          "ⲥϯⲛⲟⲩϥⲉ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲙ_3_post_ⲥϯⲛⲟⲩϥⲉ",
+          5
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          5
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_5_post_ⲡ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲧⲟⲓ",
+          2
+        ],
+        [
+          "ⲕⲱϩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲟⲙⲥ",
+          1
+        ],
+        [
+          "ⲗⲟⲙⲥ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ⲗⲟⲙⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲧⲟⲓ",
+          3
+        ],
+        [
+          "ⲧⲟⲩ_3_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲑⲩⲥⲓⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲟϭⲛ",
+          1
+        ],
+        [
+          "ⲥⲟϭⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲥⲱϣⲉ",
+          1
+        ],
+        [
+          "ϫⲏⲕ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲥⲟϭⲛ",
+          2
+        ],
+        [
+          "ⲥⲟϭⲛ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲓ_0_node",
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲥϯⲛⲟⲩϥⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲥϯⲛⲟⲩϥⲉ_2_post_ⲛ",
+          "ⲙ_3_post_ⲥϯⲛⲟⲩϥⲉ",
+          3
+        ],
+        [
+          "ⲙ_3_post_ⲥϯⲛⲟⲩϥⲉ",
+          "ⲡ_4_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_5_post_ⲡ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲕⲱϩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲓ_0_node",
+          "ⲉ_1_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲓ",
+          "ⲩ_3_post_ⲗⲟⲙⲥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲟⲙⲥ",
+          "ⲗⲟⲙⲥ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲙⲥ_2_post_ⲉ",
+          "ϩⲙ_3_post_ⲗⲟⲙⲥ",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲓ_0_node",
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲓⲃⲁⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_3_post_ⲡ",
+          "ⲙⲛ_5_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϣⲟⲩϩⲏⲛⲉ",
+          "ⲡ_5_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲓ_0_node",
+          "ⲉⲧ_1_post_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲧⲟⲓ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲧⲟⲩ_3_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_3_post_ⲑⲩⲥⲓⲁ",
+          "ⲑⲩⲥⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          "ⲡⲉϥ_3_post_ⲥⲟϭⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲟϭⲛ",
+          "ⲥⲟϭⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲥⲧⲟⲓ",
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          "ⲡⲉ_1_pre_ⲥⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          "ⲡⲁ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          "ⲉⲧ_4_post_ⲥⲱϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲥⲱϣⲉ",
+          "ϫⲏⲕ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲥⲧⲟⲓ",
+          "ⲥⲧⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲛⲉⲧⲛ_3_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲑⲩⲥⲓⲁ",
+          "ⲑⲩⲥⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲟⲓ",
+          "ⲙⲟⲩⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲧⲟⲓ",
+          "ⲛⲉⲕ_3_post_ⲥⲟϭⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲥⲟϭⲛ",
+          "ⲥⲟϭⲛ_2_post_ⲛ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.32,
+      "rank": 1304,
+      "count": 50
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3809",
+      "label": "ⲣⲥⲧⲟⲓ",
+      "pos": "V",
+      "gloss": "make smell"
+    },
+    {
+      "target": "C13002",
+      "label": "ⲥϯⲁⲛ",
+      "pos": "N",
+      "gloss": "perfume"
+    },
+    {
+      "target": "C3808",
+      "label": "ⲥϯⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad smell"
+    },
+    {
+      "target": "C12149",
+      "label": "ⲥϯⲕⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "black cumin"
+    },
+    {
+      "target": "C3807",
+      "label": "ⲥϯⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good smell, perfume"
+    }
+  ],
+  "etym": {
+    "egy_num": "148990",
+    "egy_lemma": "sṯj",
+    "demo_num": "d5724",
+    "demo_lemma": "stj",
+    "english": "fragrance; stench",
+    "german": "Duft; Gestank; Geruch",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/148990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5724"
+  }
+}

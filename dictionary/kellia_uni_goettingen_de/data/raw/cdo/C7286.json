@@ -1,0 +1,71 @@
+{
+  "id": "C7286",
+  "forms": [
+    {
+      "id": "CF16631",
+      "orth": "ϫⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.36,
+        "rank": 1395,
+        "count": 57
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8048",
+      "bibliography": "CD 777b-778a; CED 317; KoptHWb 428, 572; DELC 329b; ChLCS 103a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲉⲓ ⲇⲉ ⲟⲛ ⲉⲃⲟⲗ ⲙⲡⲛⲁⲩ ⲛ**ϫⲡ**ⲙⲛⲧⲟⲩⲉ . ⲁϥⲛⲁⲩ ⲉϩⲉⲛⲕⲟⲟⲩⲉ ⲉⲩⲁϩⲉⲣⲁⲧⲟⲩ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲁϩⲣⲱⲧⲛ ⲧⲉⲧⲛⲁϩⲉⲣⲁⲧⲧⲏⲩⲧⲛ ⲙⲡⲉⲓⲙⲁ ⲙⲡⲉϩⲟⲟⲩ ⲧⲏⲣϥ ⲉⲧⲉⲧⲛⲟⲩⲟⲥϥ .",
+      "english": "About the eleventh hour he went out, and found others standing idle. He said to them, 'Why do you stand here all day idle?'",
+      "source": "40_Matthew_20",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲡⲛⲁⲩ ⲅⲁⲣ ⲛⲧ**ϫⲡ**ⲥⲟ ⲡⲉ ·",
+      "english": "For the time was the sixth hour.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲙⲁⲕⲁⲣⲓⲟⲥ ⲇⲉ ⲛⲥⲟⲛ ⲁⲡⲁ ⲫⲓϥ ⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ϩⲛⲥⲟⲩϫⲟⲩⲧⲏ ⲙⲡⲁⲟⲡⲉ · ⲙⲡⲛⲁⲩ ⲛ**ϫⲡ**ϣⲟⲙⲧⲉ ⲙⲡⲉϩⲟⲟⲩ · ⲁⲩⲱ ⲁⲛⲙⲕⲁϩ · ⲉⲙⲁⲧⲉ · ⲉⲁⲛⲟⲩⲱⲗⲥ ⲛϩⲏⲧ ⲛⲥⲱϥ ϩⲛⲟⲩⲛⲟϭ ⲛⲗⲩⲡⲏ ·",
+      "english": "Our blessed brother Apa Phib lay to rest there on the 25th of Paope at the 3rd hour of the day, and we were very saddened, heartbroken for him with great grief.",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7285",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C12185",
+      "label": "ⲁϫⲡⲓⲁ",
+      "pos": "N",
+      "gloss": "book of hours"
+    },
+    {
+      "target": "C7287",
+      "label": "ⲙⲡⲛⲁⲩ ⲛ-",
+      "pos": "PREP",
+      "gloss": "at time of, about the ... hour"
+    }
+  ]
+}

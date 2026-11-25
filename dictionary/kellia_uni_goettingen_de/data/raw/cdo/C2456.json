@@ -1,0 +1,161 @@
+{
+  "id": "C2456",
+  "forms": [
+    {
+      "id": "CF6694",
+      "orth": "ⲛⲟⲩⲕⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13485,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2826",
+      "bibliography": "CD 224a; CED 107; KoptHWb 122; DELC 142"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲁⲙⲱⲥ ⲡⲉϫⲁϥ ⲛⲁⲙⲁⲥⲓⲁⲥ ϫⲉⲛⲉ ⲁⲛⲟⲕ ⲟⲩⲡⲣⲟⲫⲏⲧⲏⲥ ⲁⲛ ⲡⲉ ⲁⲛⲟⲕ ⲟⲩⲇⲉ ⲟⲩϣⲏⲣⲓ ⲙⲡⲣⲟⲫⲏⲧⲏⲥ ⲁⲗⲗⲁ ⲛⲉ ⲁⲛⲟⲕ ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ ⲉⲓ**ⲛⲟⲩⲕⲉⲣ** ⲛϩⲁⲛⲉⲗⲕⲱ .",
+      "english": "And Amos answered, and said to Amasias, I was not a prophet, nor the son of a prophet; but I was a herdman, and a gatherer of sycamore fruits.",
+      "source": "30_Amos_07",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:07",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲗⲕⲱ",
+        1,
+        19.695
+      ],
+      [
+        "ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        8.949
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲁ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲕⲉⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          "ⲛⲉ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          "ⲁⲛⲟⲕ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_pre_ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ",
+          "ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲙⲁⲛⲓⲙⲃⲁⲉⲙⲡⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          "ⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲛⲟⲩⲕⲉⲣ",
+          "ⲛⲟⲩⲕⲉⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12920,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C2457",
+      "label": "ⲛⲟⲩⲕⲉⲣ",
+      "pos": "N",
+      "gloss": "incision"
+    }
+  ],
+  "etym": {
+    "egy_num": "88990",
+    "egy_lemma": "nqꜥ",
+    "demo_num": "d3284",
+    "demo_lemma": "nqr",
+    "english": "to rip; to scratch",
+    "german": "ritzen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/88990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3284"
+  }
+}

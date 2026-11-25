@@ -1,0 +1,124 @@
+{
+  "id": "C3175",
+  "forms": [
+    {
+      "id": "CF8234",
+      "orth": "ϩⲓⲣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10551,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3628",
+      "bibliography": "CD 303b; CED 140; KoptHWb 167; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲛⲁⲡⲱⲧ ⲉⲃⲟⲗ **ϩⲓⲣⲁⲧ**ⲛ ⲛϥϣⲟⲡⲛ ⲉⲣⲟϥ · ⲛⲧϩⲉ ⲙⲡⲉⲛⲧⲁϥⲁⲁⲥ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ ⲉⲛⲧⲁϥⲧⲁⲕⲟ ⲙⲡⲙⲉⲣⲟⲥ ⲛⲧⲉϥⲟⲩⲥⲓⲁ ·",
+      "english": "Whomsoever shall flee unto Him He will receive, even as He did in the case of the young man who had squandered the portion of the riches which had fallen to his share.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3174",
+      "label": "ϩⲁⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "under foot, beneath"
+    },
+    {
+      "target": "C3170",
+      "label": "ϫⲓⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "hold foot, impede"
+    },
+    {
+      "target": "C3171",
+      "label": "ϭⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "find foot, base, search"
+    },
+    {
+      "target": "C3169",
+      "label": "ϯ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "put on foot, shoe"
+    },
+    {
+      "target": "C3172",
+      "label": "ⲁⲧϭⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable, unattainable"
+    },
+    {
+      "target": "C3167",
+      "label": "ⲁⲧⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable"
+    },
+    {
+      "target": "C3173",
+      "label": "ⲉⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "to foot of, to (mostly of persons)"
+    },
+    {
+      "target": "C3164",
+      "label": "ⲕⲁⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "lay, set foot"
+    },
+    {
+      "target": "C3165",
+      "label": "ⲕⲁⲣⲁⲧ⸗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "step, set forth"
+    },
+    {
+      "target": "C3166",
+      "label": "ⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "bring, follow foot, trace"
+    },
+    {
+      "target": "C3162",
+      "label": "ⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "foot; lowest part, bottom; limit; trace"
+    },
+    {
+      "target": "C3163",
+      "label": "ⲣⲙⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "footman"
+    },
+    {
+      "target": "C3168",
+      "label": "ⲥⲣⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "spread feet (pee)"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4186",
+    "demo_lemma": "ḥr-rd.wj(.ṱ)",
+    "english": "before",
+    "german": "vor",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4186"
+  }
+}

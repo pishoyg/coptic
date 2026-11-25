@@ -1,0 +1,111 @@
+{
+  "id": "C1135",
+  "forms": [
+    {
+      "id": "CF3644",
+      "orth": "ⲕⲟⲩⲕⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11335,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲟⲩⲗⲗⲁ",
+      "dialect": "B",
+      "id": "772.1"
+    },
+    {
+      "orth": "ⲕⲟⲩⲕⲗⲁ",
+      "dialect": "F",
+      "id": "772.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1321",
+      "bibliography": "CD 101b; KoptHWb 59; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲕ ⲇⲉ ⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ϣⲟⲡϥ ⲛϩⲃⲟⲟⲥ ⲡⲁⲥⲱⲙⲁ · ⲁⲩⲱ ⲙⲡⲣⲛⲉϫⲕⲉⲗⲁⲁⲩ ⲉⲣⲟⲓ · ⲉⲓⲙⲏⲧⲓ ⲧⲗⲉⲃⲓⲧⲟⲛ ⲛⲧⲁⲩⲙⲟⲣⲧ ⲙⲙⲟⲥ ⲙⲛⲡⲁⲥⲭⲏⲙⲁ ⲙⲛⲧⲁ**ⲕⲟⲩⲕⲗⲉ** · ⲙⲛⲡⲁⲙⲟϫⲕϥ · ⲙⲛⲧⲁϭⲟⲟⲗⲉⲥ · ⲙⲙⲁⲧⲉ · ⲛⲧⲉⲧⲛⲕⲟⲥⲧ ⲛⲧⲉⲧⲛⲧⲟⲙⲥⲧ ·",
+      "english": "Do thou then, O John, buy a covering for my body, and do not put on me anything except the shroud wherein I am wrapped, and my monk's dress, and my skull-cap, and my girdle, and my tunic—only these—and ye shall prepare me for burial and ye shall bury me.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟϫⲕ",
+        1,
+        19.598
+      ],
+      [
+        "ⲥⲭⲏⲙⲁ",
+        1,
+        14.35
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        11.376
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        9.644
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        8.95
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲩⲕⲗⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲕⲟⲩⲕⲗⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲕⲗⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲩⲕⲗⲉ",
+          "ⲧⲁ_1_pre_ⲕⲟⲩⲕⲗⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲕⲟⲩⲕⲗⲉ",
+          "ⲕⲟⲩⲕⲗⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10921,
+      "count": 1
+    }
+  }
+}

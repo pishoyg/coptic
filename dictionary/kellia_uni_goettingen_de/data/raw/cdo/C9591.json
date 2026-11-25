@@ -1,0 +1,208 @@
+{
+  "id": "C9591",
+  "forms": [
+    {
+      "id": "CF24483",
+      "orth": "ⲗⲁⲗⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24484",
+      "orth": "ⲗⲁⲗⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8361,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24485",
+      "orth": "ⲗⲁⲗⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13473,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12262",
+      "bibliography": "DDGLC",
+      "cu_ID": "511"
+    },
+    {
+      "id": "CS12263",
+      "bibliography": "DDGLC",
+      "cu_ID": "8875"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲉⲣϩⲟϯ ⲇⲉ ⲙⲏⲡⲱⲥ ⲁⲓϣⲁⲛⲓ ⲛⲧⲁϫⲉⲙ ⲑⲏⲛⲟⲩ ⲙⲫⲣⲏϯ ⲉⲧⲉⲛϯⲟⲩⲱϣ ⲁⲛ ⲟⲩⲟϩ ⲁⲛⲟⲕ ϩⲱ ⲛⲧⲉⲧⲉⲛϫⲉⲙⲧ ⲙⲫⲣⲏϯ ⲉⲧⲉⲧⲉⲛⲟⲩⲱϣ ⲁⲛ ⲙⲏⲡⲱⲥ ⲉⲟⲩⲟⲛ ϣϭⲛⲏⲛ ⲓⲉ ⲭⲟϩ ⲓⲉ ϫⲱⲛⲧ ⲓⲉ ϣⲉⲣϣⲓ ⲓⲉ ⲕⲁⲧⲁ**ⲗⲁⲗⲓⲁ** ⲓⲉ ⲭⲁⲥⲕⲉⲥ ⲓⲉ ϣⲑⲟⲣⲧⲉⲣ ⲓⲉ ϭⲓⲥⲓ ⲛϩⲏⲧ .",
+      "english": "For I am afraid that by any means, when I come, I might find you not the way I want to, and that I might be found by you as you don't desire; that by any means there would be strife, jealousy, outbursts of anger, factions, slander, whisperings, proud thoughts, riots;",
+      "source": "08_II Corinthians_12",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓⲁⲧⲉ ⲛⲧⲟ ⲱ ⲙⲁⲣⲓⲁ ⲡϣⲟⲩϣⲟⲩ ⲛⲛⲁⲅⲅⲉⲗⲟⲥ · ⲧ**ⲗⲁⲗⲓⲁ** ⲛⲛⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ · ⲡϩⲩⲙⲛⲟⲥ ⲛⲛⲉⲭⲁⲓⲣⲟⲩⲃⲓⲛ · ⲙⲛⲛⲉⲍⲉⲣⲁⲫⲓⲛ · ⲧϭⲓ ⲛϩⲱⲥ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲁⲥⲕⲉⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ϣⲉⲣϣⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ⲓⲉ",
+        4,
+        15.706
+      ],
+      [
+        "ϣⲑⲟⲣⲧⲉⲣ",
+        1,
+        12.219
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.228
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        12.13
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        11.019
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲉ_1_pre_ⲗⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲗⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲓⲉ_1_post_ⲗⲁⲗⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲉ_1_pre_ⲗⲁⲗⲓⲁ",
+          "ⲗⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲗⲓⲁ_0_node",
+          "ⲓⲉ_1_post_ⲗⲁⲗⲓⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲗⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲗⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲗⲁⲗⲓⲁ",
+          "ⲗⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲗⲓⲁ_0_node",
+          "ⲛ_1_post_ⲗⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲗⲓⲁ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7831,
+      "count": 1
+    },
+    "S": {
+      "rate": 0.01,
+      "rank": 13068,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2530",
+    "grl_lemma": "λαλιά",
+    "grl_meaning": "talk, chat",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1026a; Preisigke 2:3"
+  }
+}

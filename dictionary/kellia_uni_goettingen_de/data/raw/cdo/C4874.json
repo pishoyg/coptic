@@ -1,0 +1,63 @@
+{
+  "id": "C4874",
+  "forms": [
+    {
+      "id": "CF11713",
+      "orth": "ϣⲥⲛⲧⲁϭⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5499",
+      "bibliography": "CD 467a; KoptHWb 263; ChLCS 65b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12378",
+      "type": "cf",
+      "label": "stroke, blow, sore"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4875",
+      "label": "ϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "track, follow sb"
+    },
+    {
+      "target": "C4878",
+      "label": "ϯⲧⲉϭⲥⲉ",
+      "pos": "V",
+      "gloss": "run"
+    },
+    {
+      "target": "C4876",
+      "label": "ⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "N",
+      "gloss": "not to be tracked"
+    },
+    {
+      "target": "C4877",
+      "label": "ⲙⲛⲧⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "N",
+      "gloss": "state of the one that is not to be tracked"
+    },
+    {
+      "target": "C4873",
+      "label": "ⲧⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "sole of foot, footprint"
+    }
+  ]
+}

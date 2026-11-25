@@ -1,0 +1,97 @@
+{
+  "id": "C12088",
+  "forms": [
+    {
+      "id": "CF33095",
+      "orth": "ϣⲟⲩϣⲓⲧⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13556,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17089",
+      "bibliography": "CD 603b; KoptHWB 338"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲕⲁⲣⲉϩ ⲉⲛⲓⲙⲉⲑⲙⲏⲓ ⲛⲧⲉⲍⲁⲙⲃⲣⲓ ⲛⲉⲙⲛⲓϩⲃⲏⲟⲩⲓ ⲛⲧⲉⲡⲏⲓ ⲛⲁⲭⲁⲃ ⲟⲩⲟϩ ⲁⲣⲉⲧⲉⲛⲙⲟϣⲓ ⲛϧⲣⲏⲓ ϧⲉⲛⲡⲟⲩⲥⲟϭⲛⲓ ϩⲟⲡⲱⲥ ⲛⲧⲁⲧⲏⲓϯ ⲉⲡⲧⲁⲕⲟ ⲟⲩⲟϩ ⲛⲏⲉⲧϣⲟⲡ ⲛϧⲏⲧⲥ ⲉⲩ**ϣⲟⲩϣⲓⲧⲥ** ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉϭⲓ ⲛϩⲁⲛϣⲱϣ ⲛⲧⲉϩⲁⲛⲗⲁⲟⲥ .",
+      "english": "For thou hast kept the statues of Zambri, and done all the works of the house of Achaab; and ye have walked in their ways, that I might deliver thee to utter destruction, and those that inhabit the city to hissing: and ye shall bear the reproach of nations.",
+      "source": "33_Michaeas_06",
+      "urn": "urn:cts:copticLit:ot.mic.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉⲛⲉ",
+        1,
+        12.133
+      ],
+      [
+        "ϭⲓ",
+        1,
+        9.267
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        9.104
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲟⲩϣⲓⲧⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12989,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "C2590",
+  "forms": [
+    {
+      "id": "CF6972",
+      "orth": "ⲛⲛⲁⲩ ⲛⲓⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2971",
+      "bibliography": "CD 235a; KoptHWb 130; ChLCS 33b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2591",
+      "label": "ⲙⲡⲉⲓⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "just now, meanwhile, forthwith"
+    },
+    {
+      "target": "C2589",
+      "label": "ⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "hour, time"
+    },
+    {
+      "target": "C2592",
+      "label": "ⲛⲧⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "When?"
+    }
+  ]
+}

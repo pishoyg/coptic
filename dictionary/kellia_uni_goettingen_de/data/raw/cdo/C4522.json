@@ -1,0 +1,59 @@
+{
+  "id": "C4522",
+  "forms": [
+    {
+      "id": "CF11000",
+      "orth": "ⲧⲱⲣⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲱⲣⲧ",
+      "dialect": "L",
+      "id": "484.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5110",
+      "bibliography": "CD 431b-432a; CDC 67b; CED 195; KoptHWb 244; DELC 221a; ChLCS 61a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12142",
+      "label": "ⲁⲛⲉⲧⲱⲣⲧ",
+      "pos": "N",
+      "gloss": "step, stairs (?)"
+    },
+    {
+      "target": "C4524",
+      "label": "ⲁⲛⲧⲱⲧⲉⲣ",
+      "pos": "N",
+      "gloss": "threshold"
+    },
+    {
+      "target": "C4523",
+      "label": "ⲧⲱⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "ladder, step, stair, degree (of sundial)"
+    }
+  ],
+  "etym": {
+    "egy_num": "169220",
+    "egy_lemma": "tꜣ-rd",
+    "demo_num": "d7371",
+    "demo_lemma": "trt",
+    "english": "stairway; ramp",
+    "german": "Treppe; Rampe",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/169220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7371"
+  }
+}

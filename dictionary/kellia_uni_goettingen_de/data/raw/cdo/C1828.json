@@ -1,0 +1,66 @@
+{
+  "id": "C1828",
+  "forms": [
+    {
+      "id": "CF5265",
+      "orth": "ⲙⲁⲥ ⲙⲙⲟⲩⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5266",
+      "orth": "ⲙⲁⲥ ⲙⲙⲟⲩⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5267",
+      "orth": "ⲙⲉⲥ ⲙⲙⲟⲩⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5268",
+      "orth": "ⲙⲉⲥ ⲙⲙⲟⲩⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2131",
+      "bibliography": "CD 160b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2045",
+      "type": "cf",
+      "label": "young (mostly of animal or bird), child"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1825",
+      "label": "ⲙⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "lioness"
+    },
+    {
+      "target": "C1826",
+      "label": "ⲙⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "lion"
+    },
+    {
+      "target": "C1827",
+      "label": "ⲙⲟⲩⲓⲏ",
+      "pos": "N",
+      "gloss": "lioness"
+    }
+  ]
+}

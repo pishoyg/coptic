@@ -1,0 +1,180 @@
+{
+  "id": "C1410",
+  "forms": [
+    {
+      "id": "CF4241",
+      "orth": "ⲕⲉⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4668,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1633",
+      "bibliography": "CD 123b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲡⲉⲧⲛⲁⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲛⲧⲉϥⲥϩⲓⲙⲉ ⲛϥϩⲙⲟⲟⲥ ⲛⲙ**ⲕⲉⲧⲉ** ⲉϥⲣⲛⲟⲉⲓⲕ ⲉϫⲱⲥ .",
+      "english": "He said to them, &apos;Whoever divorces his wife, and marries another, commits adultery against her.",
+      "source": "41_Mark_10",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲟⲩⲛⲧⲁϥ ⲅⲁⲣ ⲥⲉⲛⲁϯ ⲛⲁϥ ⲛϥⲣϩⲟⲩⲟ . ⲁⲩⲱ ⲡⲉⲧⲉⲙⲛⲧⲁϥ ⲡ**ⲕⲉⲧⲉ**ⲟⲩⲛⲧⲁϥ ⲥⲉⲛⲁϥⲓⲧϥ ⲛⲧⲟⲟⲧϥ .",
+      "english": "For whoever has, to him will be given, and he will have abundance, but whoever doesn't have, from him will be taken away even that which he has.",
+      "source": "40_Matthew_13",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲙⲡⲣⲁϩⲉⲣⲁⲧⲧⲏⲩⲧⲛ ⲟⲩⲃⲉ ⲡⲡⲉⲧϩⲟⲟⲩ ⲁⲗⲗⲁ ⲡⲉⲧⲛⲁⲣⲁϩⲧⲕ ⲉⲧⲉⲕⲟⲩⲟϭⲉ ⲛⲟⲩⲛⲁⲙ ⲕⲧⲟ ⲉⲣⲟϥ ⲛⲧ**ⲕⲉⲧⲉ** .",
+      "english": "But I tell you, don't resist him who is evil; but whoever strikes you on your right cheek, turn to him the other also.",
+      "source": "40_Matthew_5",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲛⲟⲉⲓⲕ",
+        2,
+        16.554
+      ],
+      [
+        "ϥ",
+        14,
+        13.359
+      ],
+      [
+        "ⲛⲙ",
+        2,
+        12.313
+      ],
+      [
+        "ⲁⲩ",
+        1,
+        11.621
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        2,
+        11.417
+      ],
+      [
+        "ⲙⲛⲧⲁ",
+        1,
+        11.327
+      ],
+      [
+        "ϣⲧⲉⲕⲟ",
+        1,
+        11.245
+      ],
+      [
+        "ⲉϫⲱ",
+        2,
+        10.161
+      ],
+      [
+        "ⲙⲟⲥⲧⲉ",
+        1,
+        9.98
+      ],
+      [
+        "ⲟⲩⲛⲧⲁ",
+        1,
+        9.558
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        1,
+        9.554
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.917
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.396
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.699
+      ],
+      [
+        "ⲥ",
+        2,
+        6.689
+      ],
+      [
+        "ⲡ",
+        3,
+        6.667
+      ],
+      [
+        "ⲧ",
+        2,
+        6.486
+      ],
+      [
+        "ⲛ",
+        3,
+        5.979
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.498
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉⲧⲉ_0_node",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲕⲉⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲕⲉⲧⲉ",
+          "ⲕⲉⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4252,
+      "count": 6
+    }
+  }
+}

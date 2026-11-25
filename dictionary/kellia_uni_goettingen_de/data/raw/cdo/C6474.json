@@ -1,0 +1,305 @@
+{
+  "id": "C6474",
+  "forms": [
+    {
+      "id": "CF14976",
+      "orth": "ϩⲱⲱⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5561,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϩⲱⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1613,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ϩⲉⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4959,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲟⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2239,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ϩⲟⲟⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14320,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲏⲕ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2704,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ϧⲱⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.26,
+        "rank": 1623,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϧⲉⲕ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2503,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ϧⲟⲕ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2072,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϧⲏⲕ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2362,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⳉⲱⲕ",
+      "dialect": "A",
+      "id": "477.10"
+    },
+    {
+      "orth": "ⳉⲁⲕ⸗",
+      "dialect": "A",
+      "id": "477.11"
+    },
+    {
+      "orth": "ⳉⲉⲕ⸗",
+      "dialect": "A",
+      "id": "477.12"
+    },
+    {
+      "orth": "ϩⲱⲕ",
+      "dialect": "F",
+      "id": "477.13"
+    },
+    {
+      "orth": "ϩⲁⲕ⸗",
+      "dialect": "F",
+      "id": "477.14"
+    },
+    {
+      "orth": "ϩⲏⲕ†",
+      "dialect": "F",
+      "id": "477.15"
+    },
+    {
+      "orth": "ϩⲱⲕ",
+      "dialect": "L",
+      "id": "477.16"
+    },
+    {
+      "orth": "ϩⲁⲕ-",
+      "dialect": "L",
+      "id": "477.17"
+    },
+    {
+      "orth": "ϩⲁⲕ⸗",
+      "dialect": "L",
+      "id": "477.18"
+    },
+    {
+      "orth": "ϩⲏⲕ†",
+      "dialect": "L",
+      "id": "477.19"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7184",
+      "bibliography": "CD 661b-662b; CED 276-277; KoptHWb 361; DELC 294a; ChLCS 89a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲡⲉϫⲁϥ ⲛⲛⲉϥⲣⲱⲙⲉ ϫⲉⲙⲁⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲱⲧⲛ **ϩⲟⲕ**ϥ ⲛⲧⲉϥⲥⲏϥⲉ ⲁⲩⲱ ⲁⲩⲧⲱⲟⲩⲛ ⲁⲩⲟⲩⲁϩⲟⲩ ⲛⲥⲁⲇⲁⲩⲉⲓⲇ ⲛϭⲓⲁϥⲧⲟⲩϣⲏ ⲛⲣⲱⲙⲉ ⲡⲕⲉϣⲏⲧ ⲇⲉ ⲛⲣⲱⲙⲉ ⲁⲩϩⲙⲟⲟⲥ ϩⲁⲧⲛⲛⲉⲥⲕⲉⲩⲏ",
+      "english": "And David said to his men, Gird on every man his sword. And they went up after David, about four hundred men: and two hundred abode with the stuff.",
+      "source": "I Samuel 25",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥ**ϩⲟⲕ**ϥ ⲛⲧⲥⲏϥⲉ ·",
+      "english": "and (Horion) girded on the sword.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ϩⲟⲕ**ⲟⲩ ⲁϥϯ ⲛⲛⲉⲩⲟⲩⲁⲙⲟⲙⲉ ⲉⲩⲧⲟⲉⲓⲥ · ⲁϥϯ ⲟⲛ ⲙⲡⲁϩⲏⲡⲁⲣ · ⲉⲡⲉϥⲙⲁ ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "and he relieved the pains in them, and bound the wounds up, and he put my liver back into its place again.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲕ",
+        1,
+        11.969
+      ],
+      [
+        "ⲧⲏⲙ",
+        1,
+        10.509
+      ],
+      [
+        "ⲡⲣⲟⲫⲏⲧⲏⲥ",
+        2,
+        9.482
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        2,
+        9.026
+      ],
+      [
+        "ⲁⲣⲁ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙ",
+        5,
+        7.273
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        6.824
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        6.176
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        4.464
+      ],
+      [
+        "ϥ",
+        3,
+        4.232
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        3.736
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        3.472
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        2.44
+      ],
+      [
+        "ϩⲙ",
+        1,
+        2.369
+      ],
+      [
+        "ⲛ",
+        2,
+        1.765
+      ],
+      [
+        "ⲉ",
+        1,
+        -0.227
+      ],
+      [
+        "ⲡ",
+        1,
+        -0.547
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲱⲱⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1663,
+      "count": 33
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6475",
+      "label": "ϩⲱⲱⲕ",
+      "pos": "N",
+      "gloss": "girdle, breastplate"
+    }
+  ],
+  "etym": {
+    "egy_num": "124730",
+    "egy_lemma": "ẖkr",
+    "demo_num": "d4909",
+    "demo_lemma": "ẖq",
+    "english": "to adorn; to be adorned",
+    "german": "geschmückt sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/124730",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4909"
+  }
+}

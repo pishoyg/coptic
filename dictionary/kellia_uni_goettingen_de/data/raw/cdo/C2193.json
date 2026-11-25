@@ -1,0 +1,188 @@
+{
+  "id": "C2193",
+  "forms": [
+    {
+      "id": "CF6104",
+      "orth": "ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7976,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2535",
+      "bibliography": "CD 201a; KoptHWb 107; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲧⲃⲃⲟ ⲡⲉ ⲉⲃⲟⲗ ϫⲉⲡ**ⲣⲉϥⲙⲟⲩⲟⲩⲧ** ⲙⲡⲛⲟⲃⲉ ⲡⲉ ·",
+      "english": "He is Holiness, therefore is He the Slayer of sin.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡϫⲟⲉⲓⲥ ϫⲟⲟⲩ ⲉϩⲟⲩⲛ ⲉⲡⲗⲁⲟⲥ ⲛϩⲉⲛϩⲟϥ ⲛ**ⲣⲉϥⲙⲟⲩⲟⲩⲧ** ⲁⲩⲗⲱⲕⲥ ⲉⲡⲗⲁⲟⲥ ⲁⲩⲙⲟⲩ ⲛϭⲓⲟⲩⲙⲏⲏϣⲉ ⲉϥⲟϣ ⲉⲃⲟⲗ ϩⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "And the Lord sent among the people deadly serpents, and they bit the people, and much people of the children of Israel died.",
+      "source": "Numbers 21",
+      "urn": "urn:cts:copticLit:ot.num.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲱⲕⲥ",
+        1,
+        16.791
+      ],
+      [
+        "ϩⲟϥ",
+        1,
+        12.576
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        9.287
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲟⲩⲟⲩⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+          "ⲣⲉϥⲙⲟⲩⲟⲩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲟⲩⲟⲩⲧ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7527,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2192",
+      "label": "ⲙⲟⲩⲟⲩⲧ",
+      "pos": "V",
+      "gloss": "kill"
+    },
+    {
+      "target": "C2194",
+      "label": "ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "deadly"
+    }
+  ]
+}

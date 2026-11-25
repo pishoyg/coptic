@@ -1,0 +1,49 @@
+{
+  "id": "C504",
+  "forms": [
+    {
+      "id": "CF2007",
+      "orth": "ⲃⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS610",
+      "bibliography": "CD 42b; KoptHWb 495; ChLCS 9a"
+    },
+    {
+      "id": "CS611",
+      "bibliography": "CD 42b; ChLCS 9a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C506",
+      "label": "ⲃⲉⲣⲱ",
+      "pos": "N",
+      "gloss": "whirlpool"
+    },
+    {
+      "target": "C503",
+      "label": "ⲃⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "be imposing, overbearing, arrogant; push, drive; repel, defend; prevail over, defeat, repress"
+    },
+    {
+      "target": "C505",
+      "label": "ⲃⲱⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "protuberance"
+    }
+  ]
+}

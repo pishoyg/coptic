@@ -1,0 +1,299 @@
+{
+  "id": "C5863",
+  "forms": [
+    {
+      "id": "CF13724",
+      "orth": "ϣⲱⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6326,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϣⲗϭ-",
+      "dialect": "S",
+      "id": "1915.1"
+    },
+    {
+      "orth": "ϣⲁⲗⲕ⸗",
+      "dialect": "S",
+      "id": "1915.2"
+    },
+    {
+      "orth": "ϣⲟⲗϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12333,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲁⲗϫ-",
+      "dialect": "S",
+      "id": "1915.4"
+    },
+    {
+      "orth": "ϣⲁⲗϭ†",
+      "dialect": "A",
+      "id": "1915.5"
+    },
+    {
+      "orth": "ϣⲁⲗϭ†",
+      "dialect": "L",
+      "id": "1915.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6544",
+      "bibliography": "CD 562b-563a; CED 242; KoptHWb 313; DELC 262a; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲛⲉⲧⲛϩⲉⲉⲕⲉϫⲱⲧⲛ ⲉϫⲛⲟⲩⲕⲱⲱⲥ ⲁⲩⲱ ⲡⲃⲱ ⲛⲧⲉⲩⲙⲟⲣⲧ ⲛⲛⲉⲩϩⲟⲟⲕⲉϥ ⲁⲩⲱ ⲛⲛⲉⲩ**ϣⲱⲗϭ** ⲛⲛⲉⲩⲥⲁⲣⲝ",
+      "english": "And ye shall not shave your head for the dead with a baldness on the top; and they shall not shave their beard, neither shall they make gashes on their flesh.",
+      "source": "Leviticus 21",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲟⲛ ⲁϥⲕⲉⲗⲉⲉⲩⲉ ⲛϭⲓⲡⲣⲣⲟ ⲉⲧⲣⲉⲩ**ϣⲱⲗϭ** ⲙⲡⲉϥⲥⲱⲙⲁ ϩⲛϩⲉⲛϭⲟⲣⲧⲉ ⲉⲩϫⲏⲣ ⲉⲡⲙⲁ · ⲛϩⲉⲛⲙⲁⲥϯⲅⲝ · ⲁⲩⲱ ⲙⲛⲛⲥⲱⲥ ⲛⲥⲉⲡⲉⲣϣϩⲉⲛϫⲃⲃⲥⲛⲕⲱϩⲧ ϩⲁⲣⲟϥ ϫⲉⲕⲁⲥ ⲉϥⲉⲣⲱⲕϩ · ⲕⲁⲧⲁⲕⲟⲩⲓ ⲕⲟⲩⲓ ⲁϥⲱϣⲙ ⲛϭⲓⲡϣⲁϩ ⲙⲡⲕⲱϩⲧ ϩⲙⲡⲉⲥⲛⲟϥ ⲙⲡⲇⲓⲕⲁⲓⲟⲥ ⲉⲧϩⲁⲧⲉ ⲉⲡⲉⲥⲏⲧ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁϥϭⲱϣⲧ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ⲡⲉϫⲁϥ · ϫⲉⲡϫⲟⲉⲓⲥ ⲃⲟⲑⲉⲓ ⲉⲣⲟⲓ · ⲁⲛⲟⲕ ⲡⲉⲕϩⲙϩⲁⲗ · ⲡⲁⲗⲓⲛ ⲟⲛ ⲁϥⲕⲉⲗⲉⲩⲉ ⲛϭⲓⲡⲣⲣⲟ · ⲉⲧⲣⲉⲩ**ϣⲱⲗϭ** ⲙⲡⲉϥⲥⲱⲙⲁ · ⲛϩⲉⲛϭⲟⲣⲧⲉ ⲉⲩϫⲏⲣ · ⲙⲛϩⲉⲛⲙⲁⲥⲧⲓⲅⲝ · ⲙⲛⲛⲥϫⲟⲉⲓⲥ ⲛⲥⲉⲡⲱⲣϣ ⲛϩⲉⲛϫⲃⲃⲥ ⲛⲕⲱϩⲧ ϩⲁⲣⲟϥ · ϫⲉⲕⲁⲥ ⲉϥⲉⲣⲱⲕϩ ⲕⲟⲩⲓ ⲕⲟⲩⲓ · ⲁⲩⲱ ⲁϥⲱϣⲙ ⲛϭⲓⲡⲕⲱϩⲧ ϩⲙⲡⲉⲥⲛⲟϥ · ⲙⲡⲇⲓⲕⲁⲓⲟⲥ ⲉⲧϩⲁⲁⲧⲉ ⲉⲡⲉⲥⲏⲧ ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲙⲁ",
+        2,
+        12.039
+      ],
+      [
+        "ⲧⲣⲉ",
+        2,
+        10.079
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        10.059
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        9.511
+      ],
+      [
+        "ⲩ",
+        3,
+        8.98
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        8.829
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        7.872
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.719
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.231
+      ],
+      [
+        "ⲙ",
+        2,
+        6.766
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲱⲗϭ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲗϭ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲥⲁⲣⲝ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲱⲗϭ_0_node",
+          "ⲙ_1_post_ϣⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲗϭ",
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          "ⲛ_1_post_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲗϭ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          "ϩⲛ_1_post_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲱⲗϭ",
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲗϭ",
+          "ⲛⲛⲉ_1_pre_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϣⲱⲗϭ",
+          "ⲩ_1_pre_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲗϭ",
+          "ϣⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲗϭ_0_node",
+          "ⲛ_1_post_ϣⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲗϭ",
+          "ⲛⲉⲩ_3_post_ⲥⲁⲣⲝ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5890,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5864",
+      "label": "ϣⲗⲓϭ",
+      "pos": "N",
+      "gloss": "sharpened thing, spike; pointed, forked flame, ray"
+    }
+  ],
+  "etym": {
+    "egy_num": "139770",
+    "egy_lemma": "srq",
+    "english": "to open; to make inhale",
+    "german": "atmen lassen; atmen; öffnen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/139770"
+  }
+}

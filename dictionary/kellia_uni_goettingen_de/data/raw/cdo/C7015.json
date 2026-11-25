@@ -1,0 +1,68 @@
+{
+  "id": "C7015",
+  "forms": [
+    {
+      "id": "CF32070",
+      "orth": "ϩⲁϥⲗⲉⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32069",
+      "orth": "ϩⲁϥⲗⲉⲉⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14297,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲃⲗⲉⲗⲉ",
+      "dialect": "S",
+      "id": "2337.1"
+    },
+    {
+      "orth": "ϩⲁⲃⲗⲉⲉⲗⲉ",
+      "dialect": "S",
+      "id": "2337.2"
+    },
+    {
+      "orth": "ϩⲁϥⲗⲉⲗⲓ",
+      "dialect": "S",
+      "id": "2337.3"
+    },
+    {
+      "orth": "ⲁϥⲗⲉⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9743,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7736",
+      "bibliography": "CD 741a; CED 306; KoptHWb 406; DELC 319b; ChLCS 99a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "104490",
+    "egy_lemma": "ḥfnn.t",
+    "demo_num": "d4050",
+    "demo_lemma": "ḥfl(e)l(ꜥ).t",
+    "english": "[a snake]",
+    "german": "[Bezeichnung einer weiblichen Schlange]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/104490",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4050"
+  }
+}

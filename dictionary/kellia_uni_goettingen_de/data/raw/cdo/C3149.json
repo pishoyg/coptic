@@ -1,0 +1,166 @@
+{
+  "id": "C3149",
+  "forms": [
+    {
+      "id": "CF8179",
+      "orth": "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14045,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3599",
+      "bibliography": "CD 302b; KoptHWb 166; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϩⲧⲟⲟⲩⲉ ⲇⲉ ϣⲱⲡⲉ ⲁⲥϣⲧⲟⲣⲧⲣ ⲛϭⲓⲧⲉϥⲯⲩⲭⲏ ⲁϥϫⲟⲟⲩ ⲁϥⲙⲟⲩⲧⲉ ⲉⲛ**ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ** ⲧⲏⲣⲟⲩ ⲛⲕⲏⲙⲉ ⲙⲛⲛⲉϥⲥⲟⲫⲓⲥⲧⲏⲥ ⲧⲏⲣⲟⲩ ⲁⲫⲁⲣⲁⲱ ϫⲱ ⲉⲣⲟⲟⲩ ⲛⲧⲉϥⲣⲁⲥⲟⲩ ⲁⲩⲱ ⲙⲡⲟⲩϩⲉ ⲉⲡⲉⲧⲛⲁⲃⲟⲗⲥ ⲉⲫⲁⲣⲁⲱ",
+      "english": "And it was morning, and his soul was troubled; and he sent and called all the interpreters of Egypt, and all her wise men; and Pharao related to them his dream, and there was no one to interpret it to Pharao.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲏⲙⲉ",
+        1,
+        11.615
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        1,
+        10.598
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13642,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5320",
+      "type": "cf",
+      "label": "explain, interpret"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3148",
+      "label": "ⲉⲣⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "have, dream a dream"
+    },
+    {
+      "target": "C3147",
+      "label": "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "dream a dream"
+    },
+    {
+      "target": "C3146",
+      "label": "ⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "dream"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C10175",
+  "forms": [
+    {
+      "id": "CF26824",
+      "orth": "ⲡⲓⲥⲧⲉⲩⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26825",
+      "orth": "ⲡⲓⲥⲧⲉⲟⲩⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26826",
+      "orth": "ⲡⲓⲥⲧⲉⲩⲓⲛ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13480",
+      "bibliography": "DDGLC",
+      "cu_ID": "11611"
+    },
+    {
+      "id": "CS13481",
+      "bibliography": "DDGLC",
+      "cu_ID": "11604"
+    },
+    {
+      "id": "CS13482",
+      "bibliography": "DDGLC",
+      "cu_ID": "11603"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1744",
+    "grl_lemma": "πιστεύω",
+    "grl_meaning": "to trust, put faith in, rely on",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1407b; Preisigke 2:307"
+  }
+}

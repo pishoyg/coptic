@@ -1,0 +1,50 @@
+{
+  "id": "C12227",
+  "forms": [
+    {
+      "id": "CF33244",
+      "orth": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17231",
+      "bibliography": "CD 386b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12230",
+      "label": "ⲉⲣⲥⲉϩⲧ",
+      "pos": "V",
+      "gloss": "be leprous"
+    },
+    {
+      "target": "C12229",
+      "label": "ⲕⲁⲕⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leper"
+    },
+    {
+      "target": "C12228",
+      "label": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "(state of) being coated with leprosy"
+    },
+    {
+      "target": "C12072",
+      "label": "ⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leprosy"
+    }
+  ]
+}

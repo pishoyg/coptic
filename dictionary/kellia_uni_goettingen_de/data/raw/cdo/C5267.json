@@ -1,0 +1,64 @@
+{
+  "id": "C5267",
+  "forms": [
+    {
+      "id": "CF12503",
+      "orth": "ⲛⲟⲩⲉϣ ⲛ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5913",
+      "bibliography": "CD 502a; CED 220; KoptHWb 131, 282; DELC 240a; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2348",
+      "type": "cf",
+      "label": "particle of genitive"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5265",
+      "label": "ϯⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "set a distance, separate"
+    },
+    {
+      "target": "C5263",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "cleft, gap; space, distance; interval, pause, holiday"
+    },
+    {
+      "target": "C5264",
+      "label": "ⲣⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "make a pause, wait (for)"
+    },
+    {
+      "target": "C5266",
+      "label": "ⲧⲁⲡⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "gap, chink"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2884",
+    "demo_lemma": "n-wš(-n)",
+    "english": "without",
+    "german": "ohne",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2884"
+  }
+}

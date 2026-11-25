@@ -1,0 +1,89 @@
+{
+  "id": "C2950",
+  "forms": [
+    {
+      "id": "CF7765",
+      "orth": "ⲡⲱϣ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3378",
+      "bibliography": "CD 278a; KoptHWb 155"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲩⲡⲱϣ **ⲉⲃⲟⲗ**** ϩⲛⲧⲟⲣⲅⲏ ⲙⲡⲉϥϩⲟ ⲁⲩⲱ ⲁϥϩⲱⲛ ⲉϩⲟⲩⲛ ⲛϭⲓⲡⲉϥϩⲏⲧ ⲁⲛⲉϥϣⲁϫⲉ ⲕⲛⲛⲉ ⲉϩⲟⲩⲉ ⲟⲩⲛⲉϩ ⲁⲩⲱ ⲛⲧⲟⲟⲩ ⲉⲩⲟ ⲛⲧϩⲉ ⲛϩⲉⲛⲥⲟⲧⲉ",
+      "english": "They were scattered at the anger of his countenance, and his heart drew nigh them. His words were smoother than oil, yet are they darts.",
+      "source": "Psalms 54",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲏⲗⲓ ⲁϥⲥⲱⲧⲙ ⲉⲡⲉϩⲣⲟⲟⲩ **ⲙⲡⲱϣ **ⲉⲃⲟⲗ**** ⲡⲉϫⲁϥ ϫⲉⲟⲩ ⲡⲉ ⲡⲉⲓϩⲣⲟⲟⲩ ⲙⲛⲡⲓⲱϣ ⲉⲃⲟⲗ ⲡⲣⲱⲙⲉ ⲇⲉ ⲁϥⲡⲱⲧ ⲁϥⲉⲓ ⲉⲧⲁⲙⲉϩⲏⲗⲓ",
+      "english": "And Heli heard the sound of the cry, and said, What is the voice of this cry? and the men hasted and went in, and reported to Heli.",
+      "source": "I Samuel 4",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2955",
+      "label": "ϫⲓⲛⲫⲱϣ",
+      "pos": "N",
+      "gloss": "dividing, division"
+    },
+    {
+      "target": "C2952",
+      "label": "ⲁⲧⲡⲱϣ",
+      "pos": "N",
+      "gloss": "indivisible, undivided"
+    },
+    {
+      "target": "C2953",
+      "label": "ⲙⲁ ⲙⲡⲱϣ",
+      "pos": "N",
+      "gloss": "place of dividing"
+    },
+    {
+      "target": "C2956",
+      "label": "ⲡⲁϣⲉ",
+      "pos": "N",
+      "gloss": "division, half"
+    },
+    {
+      "target": "C2949",
+      "label": "ⲡⲱϣ",
+      "pos": "V",
+      "gloss": "divide, be separate; divide"
+    },
+    {
+      "target": "C2951",
+      "label": "ⲡⲱϣ",
+      "pos": "N",
+      "gloss": "division"
+    },
+    {
+      "target": "C2954",
+      "label": "ⲣⲉϥⲡⲱϣ",
+      "pos": "N",
+      "gloss": "divider"
+    },
+    {
+      "target": "C2957",
+      "label": "ⲣⲡⲁϣⲉ",
+      "pos": "V",
+      "gloss": "be half, be midway"
+    }
+  ]
+}

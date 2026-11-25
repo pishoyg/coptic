@@ -1,0 +1,295 @@
+{
+  "id": "C9749",
+  "forms": [
+    {
+      "id": "CF25141",
+      "orth": "ⲙⲉⲛⲧⲟⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF25142",
+      "orth": "ⲙⲉⲛⲧⲟⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25143",
+      "orth": "ⲙⲉⲛⲧⲟⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6945,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF25144",
+      "orth": "ⲙⲉⲛⲧⲟⲓ",
+      "dialect": "W"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS12609",
+      "bibliography": "DDGLC",
+      "cu_ID": "211"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲙⲙⲛⲗⲁⲁⲩ **ⲙⲉⲛⲧⲟⲓ** ϣⲁϫⲉ ⲉⲧⲃⲏⲏ ⲧⲉϥ ϩⲛⲟⲩⲡⲁⲣⲣⲏⲥⲓⲁ ⲉⲧⲃⲉⲧϩⲟⲧⲉ ⲛⲓⲟⲩⲇⲁⲓ .",
+      "english": "Yet no one spoke openly of him for fear of the Jews.",
+      "source": "43_John_7",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲩⲉⲓ ⲛϭⲓⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁⲩⲱ ⲛⲉⲩⲣϣⲡⲏⲣⲉ ϫⲉⲛⲉϥϣⲁϫⲉ ⲛⲙⲟⲩⲥϩⲓⲙⲉ . ⲙⲡⲉⲗⲁⲁⲩ **ⲙⲉⲛⲧⲟⲓ** ϫⲟⲟⲥ ϫⲉⲉⲕϣⲓⲛⲉ ⲛⲥⲁⲟⲩⲏⲁϩⲣⲟⲕ ⲕϣⲁϫⲉ ⲛⲙⲙⲁⲥ .",
+      "english": "At this, his disciples came. They marveled that he was speaking with a woman; yet no one said, 'What are you looking for?' or, 'Why do you speak with her?'",
+      "source": "43_John_4",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲙⲟⲓⲱⲥ **ⲙⲉⲛⲧⲟⲓ** ⲉⲃⲟⲗ ϩⲛⲛⲁⲣⲭⲱⲛ ⲁϩⲁϩ ⲡⲓⲥⲧⲉⲩⲉ ⲉⲣⲟϥ . ⲁⲗⲗⲁ ⲉⲧⲃⲉⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ⲛⲉⲩϩⲟⲙⲟⲗⲟⲅⲉⲓ ⲁⲛ ⲡⲉ ϫⲉⲕⲁⲁⲥ ⲉⲛⲛⲉⲩϣⲱⲡⲉ ⲛⲁⲡⲟⲥⲩⲛⲁⲅⲱⲅⲟⲥ .",
+      "english": "Nevertheless even of the rulers many believed in him, but because of the Pharisees they didn't confess it, so that they wouldn't be put out of the synagogue,",
+      "source": "43_John_12",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲧⲟⲛϧ:",
+        1,
+        16.525
+      ],
+      [
+        "ⲟⲙⲱⲥ",
+        1,
+        14.525
+      ],
+      [
+        "ⲉⲑⲃⲏⲧ",
+        3,
+        13.772
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        2,
+        12.784
+      ],
+      [
+        "ⲭⲣⲟ",
+        1,
+        12.438
+      ],
+      [
+        "ⲅⲉ",
+        1,
+        12.277
+      ],
+      [
+        "ⲣⲁϣⲓ",
+        2,
+        11.536
+      ],
+      [
+        "ⲥⲉⲛϯ",
+        1,
+        10.417
+      ],
+      [
+        "ⲧⲁϫⲣⲏⲟⲩⲧ",
+        1,
+        10.396
+      ],
+      [
+        "ϩⲗⲓ",
+        2,
+        10.07
+      ],
+      [
+        "ⲙⲡⲉ",
+        2,
+        9.772
+      ],
+      [
+        "ϥ",
+        7,
+        9.676
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.339
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        8.593
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        2,
+        8.318
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        7.889
+      ],
+      [
+        ".",
+        3,
+        7.201
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        1,
+        7.192
+      ],
+      [
+        "ⲙ",
+        3,
+        7.168
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.068
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲧⲃⲏⲏ",
+        1,
+        15.843
+      ],
+      [
+        "ϩⲟⲙⲟⲓⲱⲥ",
+        1,
+        13.13
+      ],
+      [
+        "ⲙⲙⲛ",
+        1,
+        11.474
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        2,
+        11.35
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        1,
+        9.971
+      ],
+      [
+        ".",
+        3,
+        9.727
+      ],
+      [
+        "ⲁⲣⲭⲱⲛ",
+        1,
+        9.256
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        8.67
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        8.516
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.894
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        7.531
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.379
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        6.886
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.728
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲛⲧⲟⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6506,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2826",
+    "grl_lemma": "μέντοι",
+    "grl_meaning": "yet, nevertheless, of course",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 1103a"
+  }
+}

@@ -1,0 +1,797 @@
+{
+  "id": "C4635",
+  "forms": [
+    {
+      "id": "CF11233",
+      "orth": "ⲧⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.01,
+        "rank": 710,
+        "count": 160
+      }
+    },
+    {
+      "orth": "ⲑⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.1,
+        "rank": 689,
+        "count": 93
+      }
+    },
+    {
+      "orth": "ⲧⲏⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3839,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.43,
+        "rank": 385,
+        "count": 383
+      }
+    },
+    {
+      "orth": "ⲑⲟⲩ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4852,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲏⲟⲩ",
+      "dialect": "A",
+      "id": "319.4"
+    },
+    {
+      "orth": "ⲧⲟⲩ-",
+      "dialect": "A",
+      "id": "319.5"
+    },
+    {
+      "orth": "ⲧⲏⲟⲩ",
+      "dialect": "F",
+      "id": "319.6"
+    },
+    {
+      "orth": "ⲧⲟⲩ-",
+      "dialect": "F",
+      "id": "319.7"
+    },
+    {
+      "orth": "ⲧⲏⲩ",
+      "dialect": "L",
+      "id": "319.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5236",
+      "bibliography": "CD 439b-440a; CDC 68b; CED 198; KoptHWb 252; DELC 223b; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲱⲟⲩ ⲉⲩⲧϩⲉⲙⲕⲏⲟⲩⲧ ϧⲉⲛⲡⲓϫⲓⲛⲥⲱⲕ ⲛⲁⲣⲉⲡⲓ**ⲑⲏⲟⲩ** ⲅⲁⲣ ⲉϧⲟⲩⲛ ⲉϩⲣⲁⲩ ⲡⲉ ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛϯⲙⲁϩⲇ ⲛⲟⲩⲉⲣϣⲓ ⲛⲧⲉⲡⲓⲉϫⲱⲣϩ ⲁϥⲓ ϩⲁⲣⲱⲟⲩ ⲉϥⲙⲟϣⲓ ϩⲓϫⲉⲛⲫⲓⲟⲙ ⲟⲩⲟϩ ⲛⲁϥⲟⲩⲱϣ ⲉⲥⲉⲛⲟⲩ ⲡⲉ .",
+      "english": "Seeing them distressed in rowing, for the wind was contrary to them, about the fourth watch of the night he came to them, walking on the sea, and he would have passed by them,",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲓ ⲛϭⲓⲟⲩ**ⲧⲏⲩ** ⲉⲛⲁⲛⲟⲩϥ ·",
+      "english": "and a favorable wind arose,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛϩⲟϯ ⲟⲩⲟϩ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲛⲛⲟⲩⲉⲣⲏⲟⲩ ϫⲉⲛⲓⲙ ϩⲁⲣⲁ ⲡⲉ ⲡϩⲁⲓ ϫⲉⲛⲓ**ⲑⲏⲟⲩ** ⲛⲉⲙⲫⲓⲟⲙ ⲥⲉⲥⲱⲧⲉⲙ ⲛⲁϥ .",
+      "english": "They were greatly afraid, and said to one another, 'Who then is this, that even the wind and the sea obey him?'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩ**ⲧⲏⲩ** ⲉϥⲛⲁϣⲧ ϯⲟⲩⲃⲏⲛ",
+      "english": "If a strong wind comes against us,",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ϥⲛⲁⲟⲩⲱⲣⲡ ⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲟⲩⲟϩ ϥⲛⲁⲑⲱⲟⲩϯ ⲛⲛⲉϥⲥⲱⲧⲡ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓϥⲧⲟⲩ **ⲑⲏⲟⲩ** ⲓⲥϫⲉⲛⲁⲩⲣⲏϫϥ ⲙⲡⲕⲁϩⲓ ϣⲁⲁⲩⲣⲏϫⲥ ⲛⲧⲫⲉ .",
+      "english": "Then he will send out his angels, and will gather together his chosen ones from the four winds, from the ends of the earth to the ends of the sky.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲡⲱⲧ ⲛⲛ**ⲧⲏⲩ** · ⲏ ⲡⲉⲥϭⲣⲁϩⲧ ·",
+      "english": "the flight of the wind and its sinking to rest",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥⲧⲟⲩ",
+        11,
+        26.073
+      ],
+      [
+        "ϫⲓⲛⲥⲱⲕ",
+        3,
+        22.865
+      ],
+      [
+        "ⲉϩⲣⲁ",
+        9,
+        22.477
+      ],
+      [
+        "ϫⲟⲗ",
+        7,
+        22.389
+      ],
+      [
+        "ϥ",
+        58,
+        21.998
+      ],
+      [
+        "ⲡⲓ",
+        40,
+        21.737
+      ],
+      [
+        "ⲟⲩ",
+        49,
+        21.598
+      ],
+      [
+        "ϩⲉⲣⲓ",
+        4,
+        21.373
+      ],
+      [
+        "ⲩ",
+        28,
+        20.543
+      ],
+      [
+        "ⲓⲟⲙ",
+        9,
+        20.518
+      ],
+      [
+        "ⲕⲁⲩⲥⲱⲛ",
+        3,
+        20.45
+      ],
+      [
+        "ⲛ",
+        38,
+        20.334
+      ],
+      [
+        "ⲉⲣⲉⲡⲓⲧⲓⲙⲁⲛ",
+        4,
+        20.172
+      ],
+      [
+        "ⲛⲓ",
+        24,
+        19.973
+      ],
+      [
+        "ⲛⲓϥⲓ",
+        4,
+        19.967
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        31,
+        19.943
+      ],
+      [
+        "ⲛⲓϣϯ",
+        10,
+        19.771
+      ],
+      [
+        "ⲛⲁ",
+        24,
+        19.709
+      ],
+      [
+        "ⲉϥⲉⲟⲗⲉⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁⲣⲧⲉⲙⲱⲛ",
+        1,
+        19.695
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        173,
+        18.791
+      ],
+      [
+        "ϥ",
+        121,
+        17.956
+      ],
+      [
+        "ϩⲣⲏϭ",
+        3,
+        16.446
+      ],
+      [
+        "ⲟⲩ",
+        68,
+        16.16
+      ],
+      [
+        "ⲉ",
+        74,
+        16.124
+      ],
+      [
+        "ⲡ",
+        79,
+        16.086
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        49,
+        15.987
+      ],
+      [
+        "ⲑⲗⲟ",
+        4,
+        15.954
+      ],
+      [
+        "ⲁⲩⲱ",
+        57,
+        15.924
+      ],
+      [
+        "ϥⲧⲟⲩ",
+        4,
+        15.469
+      ],
+      [
+        "ⲛⲓϥⲉ",
+        7,
+        15.45
+      ],
+      [
+        ".",
+        42,
+        15.412
+      ],
+      [
+        "ⲁ",
+        58,
+        15.296
+      ],
+      [
+        "ⲧⲣⲱⲙ",
+        2,
+        15.276
+      ],
+      [
+        "ϣⲟⲉⲓϣ",
+        6,
+        15.224
+      ],
+      [
+        "ϣⲁⲣⲃⲁ",
+        2,
+        14.276
+      ],
+      [
+        "ⲓⲛⲁ",
+        2,
+        14.276
+      ],
+      [
+        "ⲉⲣⲉ",
+        17,
+        14.043
+      ],
+      [
+        "ϣⲉⲉⲓ",
+        3,
+        14.031
+      ],
+      [
+        "ⲛⲁϣⲧ",
+        7,
+        13.97
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲏⲩ_0_node",
+          103
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲏⲩ",
+          23
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲏⲩ",
+          11
+        ],
+        [
+          "ⲉ_1_post_ⲧⲏⲩ",
+          4
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          3
+        ],
+        [
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          8
+        ],
+        [
+          "ⲙϩⲓⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ϭⲟⲛⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ⲛⲙ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          2
+        ],
+        [
+          "ⲧⲉ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          2
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_1_post_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "[...]_1_pre_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ⲟⲩⲃⲏ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲃⲟⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ϭⲏⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲗⲁⲁⲧⲉ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲉⲃⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          3
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲉ_1_post_ⲧⲏⲩ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲧⲏⲩ",
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲛ_1_post_ⲧⲏⲩ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ⲙϩⲓⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ϭⲟⲛⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲏⲩ",
+          "ⲕⲉ_1_pre_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲛⲙ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          "ⲧⲉ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲑⲁⲗⲁⲥⲥⲁ",
+          "ⲑⲁⲗⲁⲥⲥⲁ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "[...]_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲉⲧ_1_post_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲏⲩ",
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉⲧ",
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          "ⲩ_4_post_ⲟⲩⲃⲏ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲛⲧ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲏⲩ",
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          "ⲉϫⲱ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲏⲩ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ⲃⲟⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲏⲩ",
+          "ⲧⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲏⲩ",
+          "ϭⲏⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_0_node",
+          "ⲁⲩⲱ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          "ⲛ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          "ⲥ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲥⲗⲁⲁⲧⲉ",
+          "ⲥⲗⲁⲁⲧⲉ_1_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ⲉⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲏⲩ",
+          "ⲉⲓⲉⲃⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.01,
+      "rank": 618,
+      "count": 160
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4648",
+      "label": "ϩⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "whirlwind"
+    },
+    {
+      "target": "C4647",
+      "label": "ϩⲏ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "breeze"
+    },
+    {
+      "target": "C4639",
+      "label": "ϩⲓⲡⲑⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "gasp, expire"
+    },
+    {
+      "target": "C4649",
+      "label": "ϫⲓⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "burning breath, drought"
+    },
+    {
+      "target": "C4640",
+      "label": "ⲁⲛϣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "take a breath"
+    },
+    {
+      "target": "C4637",
+      "label": "ⲕⲁⲡⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "leave breath, expire"
+    },
+    {
+      "target": "C4636",
+      "label": "ⲙⲁ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "place of breath, life"
+    },
+    {
+      "target": "C4643",
+      "label": "ⲛⲉϣⲡⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "fan"
+    },
+    {
+      "target": "C4638",
+      "label": "ⲛⲉϫⲧⲏⲩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out breath, expire"
+    },
+    {
+      "target": "C4650",
+      "label": "ⲣϫⲛⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "(to) wither, singe"
+    },
+    {
+      "target": "C4644",
+      "label": "ⲣⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "open-air space (on roof)"
+    },
+    {
+      "target": "C4642",
+      "label": "ⲣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "make wind, be windy"
+    },
+    {
+      "target": "C4646",
+      "label": "ⲥⲁⲣⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "storm"
+    },
+    {
+      "target": "C4641",
+      "label": "ⲥⲉⲕⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "draw breath, breathe stertorously"
+    },
+    {
+      "target": "C4645",
+      "label": "ⲭⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "window"
+    }
+  ],
+  "etym": {
+    "egy_num": "174480",
+    "egy_lemma": "ṯꜣw",
+    "demo_num": "d7638",
+    "demo_lemma": "ṯꜣw",
+    "english": "air; wind; breath",
+    "german": "Luft; Wind; Atem; Segel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/174480",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7638"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C8838",
+  "forms": [
+    {
+      "id": "CF21320",
+      "orth": "ⲇⲩⲕⲁⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21322",
+      "orth": "ⲇⲩⲕⲁⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21321",
+      "orth": "ⲇⲉⲕⲁⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3718,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10640",
+      "bibliography": "DDGLC",
+      "cu_ID": "9876"
+    },
+    {
+      "id": "CS10641",
+      "bibliography": "DDGLC",
+      "cu_ID": "9873"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2866",
+    "grl_lemma": "δεκανός",
+    "grl_meaning": "police officer (in Egypt)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 376a; Preisigke 1:323"
+  }
+}

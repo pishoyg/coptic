@@ -1,0 +1,692 @@
+{
+  "id": "C437",
+  "forms": [
+    {
+      "id": "CF1833",
+      "orth": "ⲕⲁⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2465,
+        "count": 20
+      }
+    },
+    {
+      "id": "CF1834",
+      "orth": "ⲕⲁⲃⲁⲗ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS528",
+      "bibliography": "CD 37a; KoptHWb 23; ChLCS 8a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁϫⲟⲟⲥ ϩⲱⲱⲧ ⲛⲧⲉⲓϩⲉ ⲛⲛⲁϩⲣⲛⲛⲉⲕϣⲁϫⲉ ⲛ**ⲕⲁⲃⲟⲗ**",
+      "english": "I will say for my part as follows against your nauseating words:",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛϩⲉ ⲉⲉⲃⲓⲱ ⲟⲩⲉⲙⲡⲉⲕⲣⲱϣⲉ ⲙⲏⲡⲟⲧⲉ ⲛⲅⲥⲉⲓ ⲛⲅ**ⲕⲁⲃⲟⲗ**",
+      "english": "Having found honey, eat only what is enough, lest haply thou be filled, and vomit it up.",
+      "source": "Proverbs 25",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲥⲉⲥⲱ ⲛⲥⲉ**ⲕⲁⲃⲟⲗ** ⲛⲥⲉⲗⲓⲃⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲧⲥⲏϥⲉ ⲉϯⲛⲁϫⲟⲟⲩⲥ ⲉⲧⲉⲩⲙⲏⲧⲉ",
+      "english": "And they shall drink, and vomit, and be mad, because of the sword which I send among them.",
+      "source": "Jeremiah 32",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲃⲉ",
+        1,
+        16.511
+      ],
+      [
+        "ⲁⲃⲉ",
+        1,
+        15.511
+      ],
+      [
+        "ϯⲃⲱⲱⲛ",
+        1,
+        14.511
+      ],
+      [
+        "ⲙⲉⲥⲧⲱ",
+        2,
+        13.444
+      ],
+      [
+        "ϩⲟⲣⲡ",
+        1,
+        13.051
+      ],
+      [
+        "ⲥⲉ",
+        8,
+        12.995
+      ],
+      [
+        "ⲗⲓⲃⲉ",
+        1,
+        12.423
+      ],
+      [
+        "ϩⲏⲙ",
+        1,
+        12.423
+      ],
+      [
+        "ⲅ",
+        5,
+        12.118
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲛ",
+        2,
+        12.043
+      ],
+      [
+        "ⲛ",
+        17,
+        11.984
+      ],
+      [
+        "ⲉ",
+        11,
+        11.108
+      ],
+      [
+        "ϯϩⲉ",
+        1,
+        10.867
+      ],
+      [
+        "ⲧⲁϣⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲙⲙⲟ",
+        6,
+        10.648
+      ],
+      [
+        "ⲧⲣⲉ",
+        4,
+        10.577
+      ],
+      [
+        "ⲕⲟⲧ",
+        2,
+        10.568
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        4,
+        10.36
+      ],
+      [
+        "ϣⲟⲃⲉ",
+        1,
+        10.321
+      ],
+      [
+        "ⲁϣⲏ",
+        1,
+        9.987
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          17
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          5
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲁⲃⲟⲗ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ϯⲃⲱⲱⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲗⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϩⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲧⲟⲛ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲛⲁ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϩⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲣⲡ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲥ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲉⲧⲃⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          "ϯ_2_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲅ_1_pre_ⲕⲁⲃⲟⲗ",
+          3
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          3
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲙ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲡⲉⲥ_3_post_ϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ϯⲃⲱⲱⲛ",
+          "ϯⲃⲱⲱⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲛⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲅⲁⲣ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          "ϩⲟⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ϩⲓ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          "ⲥⲟⲡ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲥⲉ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲛ_2_post_ⲗⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲓⲃⲉ",
+          "ⲥⲉ_2_post_ⲗⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲗⲓⲃⲉ",
+          "ⲗⲓⲃⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲧⲉⲧⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲕⲁⲃⲟⲗ",
+          "ⲕⲁⲃⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲛ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲉ",
+          "ⲧⲉⲧⲛ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_2_post_ϩⲉ",
+          "ϩⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲛ_2_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲧⲟⲛ",
+          "ⲅ_2_post_ⲙⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲙⲧⲟⲛ",
+          "ⲙⲧⲟⲛ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          "ϩⲛⲁ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲛⲁ_2_post_ⲉ",
+          "ⲕ_3_post_ϩⲛⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲃⲟⲗ_0_node",
+          "ⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲁⲃⲟⲗ",
+          "ⲩ_3_post_ϩⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲣⲡ",
+          "ϩⲟⲣⲡ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2375,
+      "count": 17
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C415",
+      "type": "cf",
+      "label": "the outside"
+    },
+    {
+      "target": "C12103",
+      "type": "syn",
+      "label": "leap, gush, vomit (B)"
+    },
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

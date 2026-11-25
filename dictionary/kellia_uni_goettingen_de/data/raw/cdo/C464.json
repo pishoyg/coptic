@@ -1,0 +1,63 @@
+{
+  "id": "C464",
+  "forms": [
+    {
+      "id": "CF1905",
+      "orth": "ⲃⲁⲁⲙⲡⲉⲛⲥϩⲓⲙⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS565",
+      "bibliography": "CD 39a; KoptHWb 24; ChLCS 8b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3986",
+      "type": "cf",
+      "label": "female (of animals)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13010",
+      "label": "ϣⲁⲥⲃⲁⲙⲡⲓ",
+      "pos": "N",
+      "gloss": "goatherd"
+    },
+    {
+      "target": "C463",
+      "label": "ⲃⲁⲁⲙⲡϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "he-goat"
+    },
+    {
+      "target": "C461",
+      "label": "ⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "she-goat"
+    },
+    {
+      "target": "C462",
+      "label": "ⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "he-goat"
+    },
+    {
+      "target": "C465",
+      "label": "ⲙⲁⲛⲉⲃⲁⲁⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "goatherd"
+    }
+  ]
+}

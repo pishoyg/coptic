@@ -1,0 +1,297 @@
+{
+  "id": "C9020",
+  "forms": [
+    {
+      "id": "CF22246",
+      "orth": "ⲉⲡⲓⲧⲁⲥⲥⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF22248",
+      "orth": "ⲉⲡⲓⲧⲁⲥⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4387,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF22247",
+      "orth": "ⲉⲡⲉⲓⲧⲏⲥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22249",
+      "orth": "ⲉⲡⲓⲧⲁⲥⲥⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22250",
+      "orth": "ⲉⲡⲓⲧⲁⲥⲥⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11073",
+      "bibliography": "DDGLC",
+      "cu_ID": "9929"
+    },
+    {
+      "id": "CS11074",
+      "bibliography": "DDGLC",
+      "cu_ID": "387"
+    },
+    {
+      "id": "CS11075",
+      "bibliography": "DDGLC",
+      "cu_ID": "5156"
+    },
+    {
+      "id": "CS11076",
+      "bibliography": "DDGLC",
+      "cu_ID": "5155"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲉⲡⲧⲃⲧ ⲙⲡⲣϫⲱϩ ⲉⲣⲟϥ ⲟⲩⲇⲉ ⲙⲡⲣⲁⲟⲩⲱⲛ ⲛϩⲏⲧϥ ϣⲁⲛⲧⲉⲓ ⲉϩⲟⲩⲛ ⲛⲧⲁ**ⲉⲡⲓⲧⲁⲥⲥⲉ** ⲙⲙⲟϥ ⲕⲁⲧⲁⲣⲟⲓ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:49-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲉⲗⲉⲩⲉ ϫⲉⲁⲛⲓⲛⲉ ⲙⲡⲧⲉⲃⲧ ⲛⲁⲓ ⲛⲧⲁ**ⲉⲡⲓⲧⲁⲥⲥⲉ** ⲙⲙⲟϥ ⲕⲁⲧⲁⲣⲟⲓ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI)",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:49-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲉⲗⲉⲩⲉ ϫⲉⲁⲛⲓⲛⲉ ⲛⲁⲓ ⲙⲡⲧⲃⲧ · ⲛⲧⲁ**ⲉⲡⲓⲧⲁⲥⲥⲉ** ⲙⲙⲟϥ ⲕⲁⲧⲁⲣⲟⲓ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:49-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲁⲣⲟ",
+        3,
+        18.652
+      ],
+      [
+        "ⲁⲡⲥ",
+        2,
+        17.428
+      ],
+      [
+        "ⲓ",
+        11,
+        15.229
+      ],
+      [
+        "ⲧⲁ",
+        4,
+        12.95
+      ],
+      [
+        "ⲧⲃⲧ",
+        1,
+        11.998
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        11.087
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        10.981
+      ],
+      [
+        "ⲛ",
+        8,
+        10.809
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        10.654
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        9.408
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ϥ",
+        4,
+        8.522
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        7.31
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.678
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.376
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          4
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          4
+        ],
+        [
+          "ⲉⲡⲓⲧⲁⲥⲥⲉ_0_node",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲕⲁⲧⲁⲣⲟ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_pre_ⲁⲡⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲥ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲡⲥ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ⲧⲁ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ⲉⲡⲓⲧⲁⲥⲥⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉⲡⲓⲧⲁⲥⲥⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲕⲁⲧⲁⲣⲟ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ⲩ_2_pre_ⲁⲡⲥ",
+          1
+        ],
+        [
+          "ⲩ_2_pre_ⲁⲡⲥ",
+          "ⲁⲡⲥ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲥ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ⲛ_2_pre_ⲁⲡⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲡⲥ",
+          "ⲣⲱⲙⲉ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_pre_ⲛ",
+          "ⲉⲡⲓⲧⲁⲥⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          "ⲛ_1_pre_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲕⲁⲧⲁ_1_post_ⲉⲡⲓⲧⲁⲥⲥⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5474,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "771",
+    "grl_lemma": "ἐπιτάσσω",
+    "grl_meaning": "to put upon one as a duty, enjoin",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 664a; Preisigke 1:578"
+  }
+}

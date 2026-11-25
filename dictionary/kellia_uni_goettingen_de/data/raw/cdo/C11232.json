@@ -1,0 +1,61 @@
+{
+  "id": "C11232",
+  "forms": [
+    {
+      "id": "CF31227",
+      "orth": "ϩⲩⲡⲟⲕⲉⲓⲥⲑⲁⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF31228",
+      "orth": "ϩⲩⲡⲟⲕⲉⲓⲥⲑⲁⲓ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF31229",
+      "orth": "ϩⲩⲡⲟⲕⲓⲥⲑⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7655,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31230",
+      "orth": "ϩⲩⲡⲟⲕⲩⲥⲑⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15823",
+      "bibliography": "DDGLC",
+      "cu_ID": "9183"
+    },
+    {
+      "id": "CS15824",
+      "bibliography": "DDGLC",
+      "cu_ID": "2396"
+    },
+    {
+      "id": "CS15825",
+      "bibliography": "DDGLC",
+      "cu_ID": "11331"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2268",
+    "grl_lemma": "ὑπόκειμαι",
+    "grl_meaning": "to lie under, be established; be subject to",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1884a; Preisigke 2:661"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "C9717",
+  "forms": [
+    {
+      "id": "CF25022",
+      "orth": "ⲙⲁⲣⳇ",
+      "dialect": null
+    },
+    {
+      "id": "CF25024",
+      "orth": "ⲙⲁⲣⳇ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25023",
+      "orth": "ⲙⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.18,
+        "rank": 262,
+        "count": 660
+      }
+    },
+    {
+      "id": "CF25025",
+      "orth": "ⲙⲁⲣⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25026",
+      "orth": "ⲙⲁⲣⲧⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25027",
+      "orth": "ⲙⲁⲣⲧⲩⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25028",
+      "orth": "ⲙⲁⲣⲧⲩⲣⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS12549",
+      "bibliography": "DDGLC",
+      "cu_ID": "3892"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲫⲁⲣⲙⲁⲅⲟⲥ ⲇⲉ ⲙⲛⲛⲣⲉϥ‐ⲙⲟⲩⲧⲉ ⲙⲛⲛⲣⲉϥϣⲙϣⲉ ⲉⲓⲇⲟⲗⲟⲛ ⲥⲉⲟ ⲛϣⲉⲙⲙⲟ ⲉⲣⲟϥ · ⲁⲩⲱ ϥⲛⲁ**ⲙⲁⲣ**ⲟⲩ ⲛϩⲉⲛⲙⲣⲣⲉ ⲛⲁⲧⲃⲱⲗ ⲉⲃⲟⲗ · ⲛϥⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟⲟⲩ ⲉⲡⲕⲱϩⲧ ⲛⲧⲅⲉϩⲉⲛⲛⲁ · ⲉⲧⲃⲉϫⲉ ⲙⲡⲟⲩⲥⲟⲩⲛ ⲡⲛⲟⲩⲧⲉ ⲙⲙⲉ ⲛⲧⲁϥⲧⲁⲙⲓⲟⲟⲩ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲁⲣ**ⲛϩⲉⲧⲁⲍⲉ ⲙⲙⲟϥ ϩⲛϩⲉⲛϣⲱϣ ⲙⲛϩⲉⲛⲃⲁⲥⲁⲛⲟⲥ ϫⲉⲕⲁⲥ ⲉⲛⲉⲉⲓⲙⲉ ⲉⲧⲉϥⲙⲛⲧϩⲁⲕ ⲁⲩⲱ ⲛⲧⲛⲇⲟⲕⲓⲙⲁⲍⲉ ⲛⲧⲉϥⲙⲛⲧϩⲁⲣϣϩⲏⲧ",
+      "english": "Let us examine him with despitefulness and torture, that we may know his meekness, and prove his patience.",
+      "source": "Wisdom 2",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲧⲱⲛ ⲡⲛⲟⲩⲧⲉ ⲛⲁ**ⲙⲁⲣ** ⲙⲛⲁⲣⲫⲁⲇ ⲁⲩⲱ ⲉϥⲧⲱⲛ ⲡⲛⲟⲩⲧⲉ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲥⲁⲫⲁⲣⲉⲙ ⲙⲏ ⲁⲩⲉϣϭⲙϭⲟⲙ ⲉⲛⲟⲩϩⲙ ⲙⲙⲟⲟⲩ ⲏ ⲉⲛⲉϩⲙⲧⲥⲁⲙⲁⲣⲓⲁ ⲉⲃⲟⲗ ϩⲛⲧⲁϭⲓϫ",
+      "english": "Where is the god of Emath, and Arphath? and where is the god of Eppharuaim? have they been able to deliver Samaria out of my hand?",
+      "source": "Isaiah 36",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1352",
+    "grl_lemma": "μαρτυρέω",
+    "grl_meaning": "to bear witness, give evidence",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1082a; Preisigke 2:51"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "C10868",
+  "forms": [
+    {
+      "id": "CF29636",
+      "orth": "ⲫⲗⲉⲕⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29637",
+      "orth": "ⲫⲗⲉⲕⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6084,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14998",
+      "bibliography": "DDGLC",
+      "cu_ID": "8567"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕϣⲁⲛϩⲙⲟⲟⲥ ϩⲛⲧⲙⲏⲏⲧⲉ ⲛⲛⲉⲥⲛⲏⲩ ⲛⲧⲉⲟⲩ**ⲫⲗⲉⲕⲙⲁ** ⲉⲓ ⲉⲣⲱⲕ ⲙⲡⲣⲛⲟϫⲥ ⲉⲃⲟⲗ ϩⲛⲧⲉⲩⲙⲏⲏⲧⲉ ·",
+      "english": "When thou art sitting in the midst of the brethren, and phlegm riseth up in thee, do not eject it in the midst of them,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲓ ⲧⲟ ⲡⲥⲁ ⲛⲛⲥⲱⲙⲁ ⲟⲩ ⲉⲃⲟⲗ ⲡⲉ ϩⲛϩⲉⲛⲭⲩⲙⲟⲥ · ⲙⲛϩⲉⲛ**ⲫⲗⲉⲕⲙⲁ** ⲁⲩⲱ ⲙⲛⲛⲥⲁⲡⲙⲟⲩ ϣⲁⲩⲕⲁⲧⲁⲛⲧⲁ ⲉⲩϥⲛⲧ ⲙⲛⲟⲩⲕⲣⲙⲉⲥ ⲙⲛⲟⲩⲧⲟⲉⲓⲧ ·",
+      "english": "Now the beauty of human bodies ariseth from humours and from heat, which after death turn into worms, and ashes, and corruption.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲩⲙⲟⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲣⲱ",
+        2,
+        12.804
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        2,
+        12.344
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        10.787
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        9.823
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.728
+      ],
+      [
+        "ⲕ",
+        2,
+        8.268
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        8.175
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          1
+        ],
+        [
+          "ⲫⲗⲉⲕⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          "ϩⲉⲛ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          "ⲫⲗⲉⲕⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲫⲗⲉⲕⲙⲁ",
+          "ⲫⲗⲉⲕⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5639,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "5531",
+    "grl_lemma": "φλέγμα",
+    "grl_meaning": "flame, heat, inflammation; phlegm (one of the 4 humors);\n    malignant, angry humour",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1943b"
+  }
+}

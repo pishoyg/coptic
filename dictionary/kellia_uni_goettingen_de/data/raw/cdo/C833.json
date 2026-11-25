@@ -1,0 +1,236 @@
+{
+  "id": "C833",
+  "forms": [
+    {
+      "id": "CF3008",
+      "orth": "ⲉⲓ (ⲉϫⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.53,
+        "rank": 168,
+        "count": 639
+      }
+    },
+    {
+      "orth": "ⲛⲏⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 6.66,
+        "rank": 171,
+        "count": 1051
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS984",
+      "bibliography": "CD 70b-71a; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ϣⲁⲣⲉⲡⲕⲱϩⲧ **ⲉⲓ **ⲉϫⲛ**ⲛϣⲟⲛⲧⲉ** ⲛϥⲟϫⲛⲟⲩ ·",
+      "english": "If fire cometh upon thorns it consumeth them :",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ϫⲉⲁⲙⲏⲉⲓⲧⲛ ⲛⲧⲛⲛⲉϫⲕⲗⲏⲣⲟⲥ ⲧⲁⲣⲛⲉⲓⲙⲉ ϫⲉⲉⲧⲃⲉⲟⲩ ⲛϩⲱⲃ ⲧⲉⲓⲕⲁⲕⲓⲁ ϩⲓϫⲱⲛ : ⲁⲩⲛⲉϫⲕⲗⲏⲣⲟⲥ ⲁⲩⲱ ⲁⲡⲉⲕⲗⲏⲣⲟⲥ **ⲉⲓ **ⲉϫⲛ**ⲓⲱⲛⲁⲥ** :",
+      "english": "And each man said to his neighbour, Come, let us cast lots, and find out for whose sake this mischief is upon us. So they cast lots, and the lot fell upon Jonas.",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ϣⲁⲣⲉⲡⲕⲁϩ ⲉⲩⲫⲣⲁⲛⲉ ⲉⲣϣⲁⲛⲡϩⲟⲩⲟ ⲙⲡⲉ · ⲉⲓ ⲉϫⲱϥ · ⲉⲓⲉ ⲟⲩⲏⲣ ⲧⲉ ⲧⲉⲩⲫⲣⲟⲥⲩⲛⲏ ⲙⲛⲡⲣⲁϣⲉ ⲛⲛⲣⲱⲙⲉ · ⲙⲡⲛⲁⲩ ⲛⲧⲁⲡⲙⲟⲩⲓ ⲛϩⲱⲟⲩ ⲛⲛⲟⲏⲧⲟⲛ **ⲉⲓ **ⲉϫⲛ**ⲧⲥⲟⲣⲧ** ⲛⲛⲟⲏⲧⲏ ·",
+      "english": "If the earth rejoiceth when the water of heaven cometh upon it, how much more joy and gladness shall men [feel] at the moment when the waters of understanding fall upon the grass of the mind!",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C825",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "come, go"
+    },
+    {
+      "target": "C826",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "be about to"
+    },
+    {
+      "target": "C827",
+      "label": "ⲉⲓ",
+      "pos": "N",
+      "gloss": "coming, advent"
+    },
+    {
+      "target": "C837",
+      "label": "ⲉⲓ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "come to, approach"
+    },
+    {
+      "target": "C838",
+      "label": "ⲉⲓ (ϩⲁⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, near to"
+    },
+    {
+      "target": "C828",
+      "label": "ⲉⲓ (ⲉ-)",
+      "pos": "V",
+      "gloss": "come to"
+    },
+    {
+      "target": "C849",
+      "label": "ⲉⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "come in, enter"
+    },
+    {
+      "target": "C851",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come upon, up upon, reach"
+    },
+    {
+      "target": "C853",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come (down) upon, befall"
+    },
+    {
+      "target": "C850",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "come up"
+    },
+    {
+      "target": "C852",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "come down, descend"
+    },
+    {
+      "target": "C843",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come through, forth from, leave"
+    },
+    {
+      "target": "C842",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "pos": "V",
+      "gloss": "come forth from"
+    },
+    {
+      "target": "C841",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "come forth to (places, things); sue, proceed against"
+    },
+    {
+      "target": "C840",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "come, go forth, be displayed, set forth"
+    },
+    {
+      "target": "C847",
+      "label": "ⲉⲓ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "come after, go back"
+    },
+    {
+      "target": "C845",
+      "label": "ⲉⲓ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "come down"
+    },
+    {
+      "target": "C830",
+      "label": "ⲉⲓ (ⲉⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "come to (superior or dignitary)"
+    },
+    {
+      "target": "C829",
+      "label": "ⲉⲓ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come to, arrive at"
+    },
+    {
+      "target": "C848",
+      "label": "ⲉⲓ (ⲉⲧⲑⲏ)",
+      "pos": "V",
+      "gloss": "come forward, progress"
+    },
+    {
+      "target": "C831",
+      "label": "ⲉⲓ (ⲉⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come into the hand of (power of)"
+    },
+    {
+      "target": "C834",
+      "label": "ⲉⲓ (ⲛ-)",
+      "pos": "V",
+      "gloss": "come to (of persons)"
+    },
+    {
+      "target": "C836",
+      "label": "ⲉⲓ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come before, into presence of (superior)"
+    },
+    {
+      "target": "C835",
+      "label": "ⲉⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "come after, to fetch"
+    },
+    {
+      "target": "C844",
+      "label": "ⲉⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "coming forth, departure from"
+    },
+    {
+      "target": "C839",
+      "label": "ⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, upon"
+    },
+    {
+      "target": "C832",
+      "label": "ⲓ (ⲉϩⲣⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come against, to meet"
+    },
+    {
+      "target": "C846",
+      "label": "ⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "come, go up"
+    }
+  ]
+}

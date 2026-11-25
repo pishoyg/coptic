@@ -1,0 +1,51 @@
+{
+  "id": "C10687",
+  "forms": [
+    {
+      "id": "CF28989",
+      "orth": "ⲧⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28992",
+      "orth": "ⲧⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28990",
+      "orth": "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4498,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF28991",
+      "orth": "ⲧⲁⲛⲉⲥⲧⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14661",
+      "bibliography": "DDGLC",
+      "cu_ID": "3344"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "4797",
+    "grl_lemma": "δανειστής",
+    "grl_meaning": "money-lender, creditor, borrower",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 369a; Preisigke 1:318; Bauer 341"
+  }
+}

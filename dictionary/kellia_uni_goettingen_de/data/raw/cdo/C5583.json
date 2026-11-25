@@ -1,0 +1,317 @@
+{
+  "id": "C5583",
+  "forms": [
+    {
+      "id": "CF13141",
+      "orth": "ⲱⲧϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6728,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲩⲱⲧϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2123,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ⲟⲧϩ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4086,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲟⲧϩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4086,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲱⲧϩ",
+      "dialect": "B",
+      "id": "1828.4"
+    },
+    {
+      "orth": "ⲟⲩⲱⲧϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1870,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ⲱⲧϩ",
+      "dialect": "L",
+      "id": "1828.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6249",
+      "bibliography": "CD 532b; CDC 81b; CED 230; KoptHWb 295; DELC 251a; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲓⲥⲣⲁⲏⲗ ⲧⲏⲣϥ ⲛⲉⲩⲛⲏⲩ ⲉϩⲣⲁⲓ ⲉⲡⲕⲁϩ ⲛⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲉⲧⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲱⲧϩ ⲙⲡⲉϥⲟϩⲥ ⲁⲩⲱ ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲉⲧⲣⲉϥ**ⲱⲧϩ** ⲙⲡⲉϥⲕⲉⲗⲉⲃⲓⲛ ⲙⲛⲧⲉϥϩⲉⲗⲕⲟⲩ ⲙⲛⲡⲉϥⲥⲟⲧⲃⲉϥ ⲛⲣϩⲱⲃ",
+      "english": "And all Israel went down to the Land of the Philistines to forge every one his reaping-hook and his tool, and every one his axe and his sickle.",
+      "source": "I Samuel 13",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϭⲟⲡ ⲛⲛⲉⲩⲧⲟⲟⲩⲉ ⲉⲧ**ⲟⲧϩ** ⲉⲣⲁⲧⲟⲩ ⲙⲛⲛⲉⲩⲕⲉⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲉⲁⲩⲣⲡⲗϭⲉ ⲉⲁϩⲓⲗⲁⲧⲃⲥ ⲉⲣⲟⲟⲩ ϩⲛⲛⲉⲩⲟⲩⲉⲣⲏⲧⲉ ⲁⲩⲱ ⲛⲉⲩϩⲟⲓⲧⲉ ⲉⲧϩⲓⲟⲟⲩ ⲉⲩⲗⲁϩⲙ ⲁⲩⲱ ⲉⲩⲟ ⲙⲡⲉⲗϭⲉ ⲁⲩⲱ ⲛⲉⲩⲟⲉⲓⲕ ⲉⲛⲧⲁⲩⲧⲁⲙⲓⲟⲟⲩ ⲉⲩϣⲟⲩⲱⲟⲩ ⲁⲩⲱ ⲉⲁⲩⲣϫⲟⲟⲗⲉⲥ",
+      "english": "And our elders and all that inhabit our land when they heard spoke to us, saying, Take to yourselves provision for the way, and go to meet them; and ye shall say to them, We are thy servants, and now make a covenant with us.",
+      "source": "Joshua 9",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲣⲉⲛⲉⲩⲥⲁⲛⲇⲁⲗⲓⲟⲛ **ⲟⲧϩ** ⲉⲣⲁⲧⲟⲩ . ⲟⲩⲇⲉ ⲛⲥⲉⲧⲙϯϣⲧⲏⲛ ⲥⲛⲧⲉ ϩⲓⲱⲟⲩ",
+      "english": "but to wear sandals, and not put on two tunics.",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲉⲗⲉⲃⲓⲛ",
+        1,
+        13.036
+      ],
+      [
+        "ⲟϩⲥ",
+        1,
+        12.728
+      ],
+      [
+        "ⲟⲩⲁ",
+        3,
+        10.914
+      ],
+      [
+        "ⲥⲱⲧⲏⲣ",
+        1,
+        8.714
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        7.926
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        7.905
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        5.494
+      ],
+      [
+        "ⲙ",
+        2,
+        5.181
+      ],
+      [
+        "ⲡ",
+        2,
+        4.327
+      ],
+      [
+        "ⲓ",
+        1,
+        3.681
+      ],
+      [
+        "ⲛ",
+        2,
+        3.639
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        3.474
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.309
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        2.577
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        2.518
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.05
+      ],
+      [
+        "ⲉ",
+        1,
+        1.647
+      ],
+      [
+        "ϥ",
+        1,
+        1.352
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱⲧϩ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲱⲧϩ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲟϩⲥ",
+          1
+        ],
+        [
+          "ⲟϩⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲕⲉⲗⲉⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲉⲃⲓⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲉⲗⲕⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_4_post_ϩⲉⲗⲕⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱⲧϩ_0_node",
+          "ⲙ_1_post_ⲱⲧϩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲱⲧϩ",
+          "ⲡⲉϥ_3_post_ⲟϩⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲟϩⲥ",
+          "ⲟϩⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲱⲧϩ",
+          "ⲡⲉϥ_3_post_ⲕⲉⲗⲉⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲕⲉⲗⲉⲃⲓⲛ",
+          "ⲕⲉⲗⲉⲃⲓⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲉⲃⲓⲛ_2_post_ⲙ",
+          "ⲙⲛ_4_post_ϩⲉⲗⲕⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲉⲗⲕⲟⲩ",
+          "ⲧⲉϥ_4_post_ϩⲉⲗⲕⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3271,
+      "count": 9
+    },
+    "B": {
+      "rate": 0.09,
+      "rank": 2426,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5588",
+      "label": "ⲁⲑⲁϩ",
+      "pos": "N",
+      "gloss": "burden"
+    },
+    {
+      "target": "C5585",
+      "label": "ⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "woven garment?"
+    },
+    {
+      "target": "C5587",
+      "label": "ⲁⲧϩⲥ",
+      "pos": "N",
+      "gloss": "tissue, material"
+    },
+    {
+      "target": "C5586",
+      "label": "ⲟⲩⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "warp (on loom)"
+    },
+    {
+      "target": "C5584",
+      "label": "ⲱⲧϩ",
+      "pos": "N",
+      "gloss": "fastened thing or place, lock"
+    }
+  ],
+  "etym": {
+    "egy_num": "33410",
+    "egy_lemma": "jtḥ",
+    "demo_num": "d279",
+    "demo_lemma": "ꜣtḥ",
+    "english": "to tow",
+    "german": "ziehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/33410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d279"
+  }
+}

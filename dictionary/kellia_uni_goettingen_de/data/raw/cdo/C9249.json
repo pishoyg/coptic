@@ -1,0 +1,250 @@
+{
+  "id": "C9249",
+  "forms": [
+    {
+      "id": "CF23148",
+      "orth": "ⲕⲁⲑⲟⲗⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23150",
+      "orth": "ⲕⲁⲑⲟⲗⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4926,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF23149",
+      "orth": "ⲕⲁⲑⲗⲟⲗⲓⲕⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11549",
+      "bibliography": "DDGLC",
+      "cu_ID": "2475"
+    },
+    {
+      "id": "CS11550",
+      "bibliography": "DDGLC",
+      "cu_ID": "5327"
+    },
+    {
+      "id": "CS11551",
+      "bibliography": "DDGLC",
+      "cu_ID": "2951"
+    },
+    {
+      "id": "CS11552",
+      "bibliography": "DDGLC",
+      "cu_ID": "10002"
+    },
+    {
+      "id": "CS11553",
+      "bibliography": "DDGLC",
+      "cu_ID": "2876"
+    },
+    {
+      "id": "CS11554",
+      "bibliography": "DDGLC",
+      "cu_ID": "9675"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϣϣⲉ ⲉⲣⲟⲛ ⲉⲧⲣⲉⲛⲱϣ · ⲁⲩⲱ ⲉⲧⲣⲉⲛⲙⲉⲗⲉⲧⲁ ⲛⲛⲁⲩ ⲛⲓⲙ ⲁⲩⲱ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲛⲛϣⲁϫⲉ ⲛⲛⲉⲅⲣⲁⲫⲏ ⲛ**ⲕⲁⲑⲟⲗⲓⲕⲟⲛ** ⲛⲧⲕⲁⲑⲟⲗⲓⲕⲏ ⲉⲕⲕⲗⲏⲥⲓⲁ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲇⲉ ⲓⲁⲕⲱⲃⲟⲥ ⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲱϣ ⲉⲃⲟⲗ ϩⲛⲧⲉϥⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ**ⲕⲁⲑⲟⲗⲓⲕⲟⲛ** ϫⲉⲡⲉⲧⲥⲟⲟⲩⲛ ⲛⲉⲓⲣⲉ ⲙⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲛϥⲉⲓⲣⲉ ⲙⲙⲟϥ ⲁⲛ ⲟⲩⲛⲟⲃⲉ ⲛⲁϥ ⲡⲉ ⁛—",
+      "english": "Saint James the Apostle cried out in his Catholic Epistle, saying, 'He who knoweth how to do what is good, and doeth it not, it is a sin unto him.'",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲁⲇⲟⲛ ϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲁⲣⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲁϩⲉⲣⲁⲧϥ ⲛⲥⲁⲟⲩⲛⲁⲙ ⲙⲙⲟϥ ⁖ ⲉⲣⲉⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲟⲛ ϫⲱ ⲙⲙⲟⲥ · ϩⲛⲛ**ⲕⲁⲑⲟⲗⲓⲕⲟⲛ** ϫⲉϫⲓⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ϫⲓϣⲓⲡⲉ",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲑⲟⲗⲓⲕⲏ",
+        2,
+        17.954
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        3,
+        15.185
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        2,
+        12.995
+      ],
+      [
+        "ϩⲟⲩⲉⲓⲧⲉ",
+        1,
+        12.576
+      ],
+      [
+        "ⲉⲡⲓⲥⲧⲟⲗⲏ",
+        1,
+        11.784
+      ],
+      [
+        "ⲛ",
+        9,
+        10.997
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.746
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        7.93
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.63
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.157
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.824
+      ],
+      [
+        "ⲧ",
+        2,
+        6.749
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.642
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.342
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.497
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.481
+      ],
+      [
+        ".",
+        1,
+        4.235
+      ],
+      [
+        "ⲥ",
+        1,
+        3.952
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲛ_2_post_ⲉⲕⲕⲗⲏⲥⲓⲁ",
+          2
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_4_post_ⲧ",
+          2
+        ],
+        [
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲟⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲟⲛ_0_node",
+          "ⲛ_2_post_ⲉⲕⲕⲗⲏⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲕⲕⲗⲏⲥⲓⲁ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_4_post_ⲧ",
+          1
+        ],
+        [
+          "ⲕⲁⲑⲟⲗⲓⲕⲏ_4_post_ⲧ",
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_1_post_ⲕⲁⲑⲟⲗⲓⲕⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4510,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "990",
+    "grl_lemma": "καθολικός",
+    "grl_meaning": "general, universal, catholic",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 855b; Preisigke 1:718"
+  }
+}

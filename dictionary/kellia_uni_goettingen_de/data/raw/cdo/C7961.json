@@ -1,0 +1,143 @@
+{
+  "id": "C7961",
+  "forms": [
+    {
+      "id": "CF17988",
+      "orth": "ϭⲟⲩⲏⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14291,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8847",
+      "bibliography": "CD 835b; KoptHWb 470; ChLCS 110a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲁⲓ ⲛⲉⲧⲉⲧⲛⲁⲟⲩⲟⲙⲟⲩ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲡⲉⲃⲣⲟⲩⲭⲟⲥ ⲙⲛⲛⲉⲧⲧⲛⲧⲱⲛ ⲉⲣⲟϥ ⲁⲩⲱ ⲡ**ϭⲟⲩⲏⲗ** ⲙⲛⲛⲉⲧⲧⲛⲧⲱⲛ ⲉⲣⲟϥ ⲁⲩⲱ ⲡⲉϣϫⲉ ⲙⲛⲛⲉⲧⲧⲛⲧⲱⲛ ⲉⲣⲟϥ ⲁⲩⲱ ⲡⲟⲫⲓⲟⲙⲁⲭⲏⲥ ⲙⲛⲛⲉⲧⲧⲛⲧⲱⲛ ⲉⲣⲟϥ",
+      "english": "And these of them ye shall eat: the caterpillar and his like, and the attacus and his like, and the cantharus and his like, and the locust and his like.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲛⲧⲱⲛ",
+        1,
+        12.998
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲟⲩⲏⲗ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϭⲟⲩⲏⲗ",
+          1
+        ],
+        [
+          "ϭⲟⲩⲏⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲩⲏⲗ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲟⲩⲏⲗ",
+          "ⲡ_1_pre_ϭⲟⲩⲏⲗ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϭⲟⲩⲏⲗ",
+          "ϭⲟⲩⲏⲗ_0_node",
+          1
+        ],
+        [
+          "ϭⲟⲩⲏⲗ_0_node",
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          "ⲛ_1_post_ϭⲟⲩⲏⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲩⲏⲗ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13889,
+      "count": 1
+    }
+  }
+}

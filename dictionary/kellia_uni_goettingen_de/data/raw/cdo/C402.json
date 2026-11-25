@@ -1,0 +1,130 @@
+{
+  "id": "C402",
+  "forms": [
+    {
+      "id": "CF1669",
+      "orth": "ⲙⲛⲧⲁⲧⲃⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18722,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS450",
+      "bibliography": "CD 32a; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲣⲅⲏ ⲙⲛⲟⲩ**ⲙⲛⲧⲁⲧⲃⲁⲗ** ⲙⲛⲟⲩϣⲓⲡⲉ ⲡⲉ ⲟⲩⲥϩⲓⲙⲉ ⲉⲥϯ ⲉⲧⲟⲟⲧϥ ⲙⲡⲉⲥϩⲁⲓ",
+      "english": "A woman, if she maintain her husband, is full of anger, impudence, and much reproach.",
+      "source": "Sirach 25",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓⲡⲉ",
+        1,
+        12.484
+      ],
+      [
+        "ⲟⲣⲅⲏ",
+        1,
+        12.11
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        9.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲁⲧⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲃⲁⲗ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲁⲧⲃⲁⲗ",
+          "ⲙⲛⲧⲁⲧⲃⲁⲗ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18340,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C5989",
+      "type": "syn",
+      "label": "shamelessness"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C401",
+      "label": "ⲁⲧⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impertinent"
+    },
+    {
+      "target": "C400",
+      "label": "ⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "eye"
+    },
+    {
+      "target": "C403",
+      "label": "ⲙⲉⲧⲃⲁⲗⲙⲃⲱⲕ",
+      "pos": "N",
+      "gloss": "eye-service"
+    }
+  ]
+}

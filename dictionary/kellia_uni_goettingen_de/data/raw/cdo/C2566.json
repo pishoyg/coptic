@@ -1,0 +1,356 @@
+{
+  "id": "C2566",
+  "forms": [
+    {
+      "id": "CF6924",
+      "orth": "ⲛⲧⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.05,
+        "rank": 268,
+        "count": 639
+      }
+    },
+    {
+      "orth": "ⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 143.81,
+        "rank": 14,
+        "count": 12197
+      }
+    },
+    {
+      "orth": "ⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 179.34,
+        "rank": 10,
+        "count": 28296
+      }
+    },
+    {
+      "orth": "ⲥⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 23.48,
+        "rank": 64,
+        "count": 1991
+      }
+    },
+    {
+      "orth": "ⲥⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 37.11,
+        "rank": 35,
+        "count": 5855
+      }
+    },
+    {
+      "orth": "ⲛⲑⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.56,
+        "rank": 244,
+        "count": 387
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "3. Pers.",
+    "number": "pl.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2946",
+      "bibliography": "(CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲑⲱⲟⲩ** ⲇⲉ ⲟⲛ ⲁⲩⲱϣ ⲉⲃⲟⲗ ϫⲉⲁϣϥ .",
+      "english": "They cried out again, 'Crucify him!'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲧⲟⲟⲩ** ⲇⲉ ⲁⲩⲥⲱⲧⲙ ⲁⲩϯϩⲏⲩ ⲙⲙⲁⲧⲉ ·",
+      "english": "And they heard this and they profited greatly.",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁϥ ⲁⲩⲫⲱⲧ ⲧⲏⲣ**ⲟⲩ**",
+      "english": "They all left him, and fled.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲛⲟϫ**ⲟⲩ** ⲉϩⲣⲁⲓ ⲉⲛϫⲃⲃⲉⲥ ⲉⲧϫⲉⲣⲟ .",
+      "english": "they were thrown on the burning embers!",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ**ⲩ**ⲟⲩⲱⲙ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲁⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲟⲩⲱⲙ ⲧⲏⲣⲟⲩ ⲁ**ⲩ**ⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲩ",
+        313,
+        30.991
+      ],
+      [
+        "ⲟⲩ",
+        347,
+        30.07
+      ],
+      [
+        "ⲇⲉ",
+        194,
+        29.848
+      ],
+      [
+        "ⲁ",
+        274,
+        29.284
+      ],
+      [
+        "ⲡⲉϫⲱ",
+        51,
+        28.464
+      ],
+      [
+        "ⲛⲁ",
+        170,
+        28.183
+      ],
+      [
+        "ϩⲱ",
+        53,
+        27.669
+      ],
+      [
+        "ⲉⲧ",
+        123,
+        27.079
+      ],
+      [
+        ".",
+        123,
+        26.444
+      ],
+      [
+        "ⲉⲩⲉ",
+        59,
+        25.983
+      ],
+      [
+        "ⲉ",
+        96,
+        24.772
+      ],
+      [
+        "ϫⲉ",
+        73,
+        24.706
+      ],
+      [
+        "ⲡ",
+        73,
+        24.189
+      ],
+      [
+        "ⲛ",
+        87,
+        23.92
+      ],
+      [
+        "ⲛⲟⲩ",
+        32,
+        23.903
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        68,
+        23.342
+      ],
+      [
+        "ⲙⲉⲛ",
+        15,
+        23.318
+      ],
+      [
+        "ⲥⲉ",
+        28,
+        23.158
+      ],
+      [
+        "ⲛⲉ",
+        30,
+        23.101
+      ],
+      [
+        "ⲧⲏⲣ",
+        32,
+        22.971
+      ]
+    ],
+    "S": [
+      [
+        "ⲇⲉ",
+        510,
+        33.969
+      ],
+      [
+        "ⲩ",
+        577,
+        33.327
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        16,
+        32.598
+      ],
+      [
+        "ⲁ",
+        378,
+        30.731
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        127,
+        29.711
+      ],
+      [
+        "ⲟⲩ",
+        240,
+        28.941
+      ],
+      [
+        "ⲛⲁ",
+        212,
+        28.872
+      ],
+      [
+        "ⲛⲉ",
+        143,
+        28.793
+      ],
+      [
+        "ⲛ",
+        305,
+        28.567
+      ],
+      [
+        "ⲥⲉ",
+        110,
+        28.427
+      ],
+      [
+        ".",
+        155,
+        28.386
+      ],
+      [
+        "ⲉⲧ",
+        160,
+        28.204
+      ],
+      [
+        "ϩⲱ",
+        40,
+        27.33
+      ],
+      [
+        "ⲉ",
+        136,
+        26.08
+      ],
+      [
+        "ⲁⲩⲱ",
+        106,
+        25.931
+      ],
+      [
+        "ⲛⲉⲩ",
+        50,
+        25.747
+      ],
+      [
+        "ⲙ",
+        111,
+        25.734
+      ],
+      [
+        "ⲧⲏⲣ",
+        57,
+        25.363
+      ],
+      [
+        "ⲙⲛ",
+        74,
+        25.272
+      ],
+      [
+        "ⲡ",
+        118,
+        25.145
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9021,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2567",
+      "label": "ⲛⲧⲟⲟⲩ",
+      "pos": "PTC",
+      "gloss": "rather, but, whereas"
+    },
+    {
+      "target": "C2568",
+      "label": "ⲛⲧⲟⲟⲩ",
+      "pos": "PTC",
+      "gloss": "likewise, again"
+    }
+  ],
+  "etym": {
+    "egy_num": "89980",
+    "egy_lemma": "ntw",
+    "english": "she [self.pron. pl.3.c]",
+    "german": "sie [Selbst.Pron. pl.3.c]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89980"
+  }
+}

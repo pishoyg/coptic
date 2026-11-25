@@ -1,0 +1,184 @@
+{
+  "id": "C2365",
+  "forms": [
+    {
+      "id": "CF6484",
+      "orth": "ⲣⲉϥⲛⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11856,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2730",
+      "bibliography": "CD 217b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲟⲩϩⲕⲟ ⲟⲩⲇⲉ ⲛⲛⲟⲩⲓⲃⲓ ⲟⲩⲇⲉ ⲛⲛⲟⲩϧⲓⲥⲓ ⲟⲩⲇⲉ ⲛⲛⲉϥⲙⲁϣⲟⲩ ⲛϫⲉⲟⲩⲕⲁⲩⲥⲱⲛ ⲟⲩⲇⲉ ⲡⲓⲣⲏ ⲁⲗⲗⲁ ⲫⲏⲉⲧⲟⲓ ⲛ**ⲣⲉϥⲛⲁⲓ** ⲛⲱⲟⲩ ⲉϥⲉϯⲛⲟⲙϯ ⲛⲱⲟⲩ ⲟⲩⲟϩ ⲉϥⲉⲉⲛⲟⲩ ⲉⲃⲟⲗϩⲓⲧⲉⲛ ϩⲁⲛⲙⲟⲩⲙⲓ ⲙⲙⲱⲟⲩ .",
+      "english": "They shall not hunger, neither shall they thirst; neither shall the heat nor the sun smite them; but he that has mercy on them shall comfort them, and by fountains of waters shall he lead them.",
+      "source": "23_Isaias_49",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:49",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲏⲉⲧⲟⲓ",
+        1,
+        15.695
+      ],
+      [
+        "ⲣⲏ",
+        1,
+        12.608
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.51
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        8.336
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲛⲁⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11295,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2359",
+      "label": "ϣⲡⲛⲁ",
+      "pos": "V",
+      "gloss": "receive charity"
+    },
+    {
+      "target": "C2366",
+      "label": "ϫⲓⲛⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "pity, act of pitying"
+    },
+    {
+      "target": "C2370",
+      "label": "ϯⲙⲉⲧⲛⲁϩⲏⲧ",
+      "pos": "V",
+      "gloss": "give charity"
+    },
+    {
+      "target": "C2360",
+      "label": "ⲁⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pitiless"
+    },
+    {
+      "target": "C2362",
+      "label": "ⲙⲛⲧⲁⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pitilessness"
+    },
+    {
+      "target": "C2363",
+      "label": "ⲙⲛⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pity, charity, alms"
+    },
+    {
+      "target": "C2368",
+      "label": "ⲙⲛⲧⲛⲁⲏⲧ",
+      "pos": "N",
+      "gloss": "pity, charity"
+    },
+    {
+      "target": "C2356",
+      "label": "ⲛⲁ",
+      "pos": "V",
+      "gloss": "have pity, mercy"
+    },
+    {
+      "target": "C2357",
+      "label": "ⲛⲁ",
+      "pos": "N",
+      "gloss": "pity, charity"
+    },
+    {
+      "target": "C2367",
+      "label": "ⲛⲁⲏⲧ",
+      "pos": "N",
+      "gloss": "pitiful of heart, compassionate"
+    },
+    {
+      "target": "C2361",
+      "label": "ⲣⲁⲧⲛⲁ",
+      "pos": "V",
+      "gloss": "be pitiless"
+    },
+    {
+      "target": "C2364",
+      "label": "ⲣⲉⲙⲛⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "charitable person"
+    },
+    {
+      "target": "C2369",
+      "label": "ⲣⲙⲛⲧⲛⲁⲏⲧ",
+      "pos": "V",
+      "gloss": "do charity, have pity"
+    },
+    {
+      "target": "C2358",
+      "label": "ⲣⲡⲛⲁ",
+      "pos": "V",
+      "gloss": "do charity, kindness"
+    }
+  ]
+}

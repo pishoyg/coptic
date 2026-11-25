@@ -1,0 +1,86 @@
+{
+  "id": "C5072",
+  "forms": [
+    {
+      "id": "CF12109",
+      "orth": "ⲟⲩⲱⲛⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19422,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5703",
+      "bibliography": "CD 483b; KoptHWb 274"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲉⲓⲱⲧ ⲡⲇⲓⲕⲁⲓⲟⲥ ⲙⲡⲉⲡⲕⲟⲥⲙⲟⲥ ⲥ**ⲟⲩⲱⲛⲅ** ⲁⲛⲟⲕ ⲇⲉ ⲁⲉⲓⲥⲟⲩⲱⲛⲅ ⲁⲩⲱ ⲛⲁⲓ ⲁⲩⲥⲟⲩⲱⲛⲧ ϫⲉⲛⲧⲟⲕ ⲡⲉ ⲛⲧⲁⲕⲧⲛⲛⲟⲟⲩⲧ",
+      "english": "Righteous Father, the world hasn't known you, but I knew you; and these knew that you sent me.",
+      "source": "43_John_17",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲥⲟⲩⲱⲛ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        10.853
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        10.101
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        9.512
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19034,
+      "count": 1
+    }
+  }
+}

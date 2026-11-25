@@ -1,0 +1,296 @@
+{
+  "id": "C1287",
+  "forms": [
+    {
+      "id": "CF3979",
+      "orth": "ⲕⲟⲩⲣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲩⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1371,
+        "count": 29
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1492",
+      "bibliography": "CD 114b; ChLCS 18a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲛⲁϥ ⲛⲟⲩ**ⲕⲟⲩⲣ** ⲛⲉⲃⲟ ⲟⲩⲟϩ ⲁⲩϯϩⲟ ⲉⲣⲟϥ ϩⲓⲛⲁ ⲛⲧⲉϥⲭⲁϫⲓϫ ϩⲓϫⲱϥ .",
+      "english": "They brought to him one who was deaf and had an impediment in his speech. They begged him to lay his hand on him.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉⲥⲱⲧⲉⲙ ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛϫⲉϩⲁⲛ**ⲕⲟⲩⲣ** ⲉϩⲁⲛⲥⲁϫⲓ ⲛⲧⲉⲟⲩϫⲱⲙ ⲟⲩⲟϩ ⲛⲓⲃⲁⲗ ⲛⲧⲉⲛⲓⲃⲉⲗⲗⲉⲩ ⲛⲏⲉⲧⲭⲏ ϧⲉⲛⲡⲭⲁⲕⲓ ⲛⲉⲙⲡⲓϩⲗⲟⲗ: ⲛⲓⲃⲁⲗ ⲛⲧⲉⲛⲏⲉⲧⲉ ⲛⲥⲉⲛⲁⲩ ⲉⲃⲟⲗ ⲁⲛ ⲉⲩⲉⲛⲁⲩ .",
+      "english": "And in that day the deaf shall hear the words of the book, and they that are in darkness, and they that are in mist: the eyes of the blind shall see,",
+      "source": "23_Isaias_29",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:29",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲕⲟⲩⲣ** ⲛⲁⲓⲥⲱⲧⲉⲙ ⲁⲛ: ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩⲁⲧⲥⲁϫⲓ ⲛϥⲟⲩⲱⲛ ⲛⲣⲱϥ ⲁⲛ .",
+      "english": "But I, as a deaf man, heard not; and was as a dumb man not opening his mouth.",
+      "source": "19_Psalmi_37",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:37",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲃⲟ",
+        7,
+        19.937
+      ],
+      [
+        "ⲁⲧⲥⲁϫⲓ",
+        3,
+        15.27
+      ],
+      [
+        "ϫⲁϭ",
+        1,
+        14.837
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲁⲛⲟⲕ",
+        1,
+        14.837
+      ],
+      [
+        "ⲕⲁⲕⲥⲉϩⲧ",
+        2,
+        13.75
+      ],
+      [
+        "ⲛ",
+        25,
+        13.664
+      ],
+      [
+        "ⲩⲉⲣϣⲫⲏ",
+        1,
+        13.252
+      ],
+      [
+        "ⲃⲉⲗⲗⲉⲩ",
+        2,
+        13.252
+      ],
+      [
+        "ⲓⲇⲱⲗⲟⲛ",
+        3,
+        13.149
+      ],
+      [
+        "ⲙ",
+        15,
+        12.446
+      ],
+      [
+        "ⲟⲩⲟⲓ",
+        3,
+        12.307
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        16,
+        12.222
+      ],
+      [
+        "ⲥⲱⲧⲉⲙ",
+        6,
+        12.096
+      ],
+      [
+        "ϩⲁⲛ",
+        9,
+        11.965
+      ],
+      [
+        "ⲛⲓ",
+        11,
+        11.739
+      ],
+      [
+        "ⲁ",
+        13,
+        11.233
+      ],
+      [
+        ".",
+        11,
+        11.137
+      ],
+      [
+        "ⲁⲛ:",
+        1,
+        11.137
+      ],
+      [
+        "ⲉⲧⲟⲓ",
+        1,
+        11.137
+      ],
+      [
+        "ⲣⲉϥⲙⲱⲟⲩⲧ",
+        2,
+        10.992
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          25
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          3
+        ],
+        [
+          "ⲉⲃⲟ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲟⲩⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          3
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          2
+        ],
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          "ⲉⲃⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          "ⲥⲱⲧⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.34,
+      "rank": 1201,
+      "count": 29
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1288",
+      "label": "ⲉⲣⲕⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "become deaf"
+    },
+    {
+      "target": "C1286",
+      "label": "ⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deaf person"
+    },
+    {
+      "target": "C1289",
+      "label": "ⲙⲉⲧⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deafness"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "C8668",
+  "forms": [
+    {
+      "id": "CF20519",
+      "orth": "ⲅⲉⲛⲛⲉⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20522",
+      "orth": "ⲅⲉⲛⲛⲉⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20521",
+      "orth": "ⲅⲉⲛⲛⲉⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF20520",
+      "orth": "ⲅⲉⲛⲛⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2604,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF20523",
+      "orth": "ⲅⲉⲛⲉⲟⲥ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10260",
+      "bibliography": "DDGLC",
+      "cu_ID": "5877"
+    },
+    {
+      "id": "CS10261",
+      "bibliography": "DDGLC",
+      "cu_ID": "1839"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2475",
+    "grl_lemma": "γενναῖος",
+    "grl_meaning": "high-born, noble, excellent, genuine",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 344a; Preisigke 1:287"
+  }
+}

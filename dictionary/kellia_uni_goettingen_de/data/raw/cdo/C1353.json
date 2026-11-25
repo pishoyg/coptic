@@ -1,0 +1,133 @@
+{
+  "id": "C1353",
+  "forms": [
+    {
+      "id": "CF4115",
+      "orth": "ⲕⲉⲣϩⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9760,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1564",
+      "bibliography": "CD 119a; ChLCS 18b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁⲣⲉϣⲁⲛ ⲧⲁⲫⲉ ⲥⲱⲓ ⲟⲩ**ⲕⲉⲣϩⲉ** ⲡⲉ ϥⲧⲟⲩⲃⲏⲟⲩⲧ",
+      "english": "And if any one's head should lose the hair, he is only bald, he is clean.",
+      "source": "03_Leviticus_13",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲟⲩⲃⲏⲟⲩⲧ",
+        1,
+        12.525
+      ],
+      [
+        "ⲥⲱ",
+        1,
+        11.782
+      ],
+      [
+        "ⲁⲫⲉ",
+        1,
+        11.373
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲣϩⲉ",
+          1
+        ],
+        [
+          "ⲕⲉⲣϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲟⲩⲃⲏⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲧⲟⲩⲃⲏⲟⲩⲧ_1_post_ⲕⲉⲣϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲣϩⲉ",
+          "ⲕⲉⲣϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲣϩⲉ_0_node",
+          "ϥ_2_post_ⲧⲟⲩⲃⲏⲟⲩⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲟⲩⲃⲏⲟⲩⲧ",
+          "ⲧⲟⲩⲃⲏⲟⲩⲧ_1_post_ⲕⲉⲣϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9219,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1354",
+      "label": "ⲙⲉⲧⲕⲉⲣϩⲉ",
+      "pos": "N",
+      "gloss": "baldness"
+    }
+  ]
+}

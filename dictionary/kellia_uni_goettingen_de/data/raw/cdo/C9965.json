@@ -1,0 +1,603 @@
+{
+  "id": "C9965",
+  "forms": [
+    {
+      "id": "CF26001",
+      "orth": "ⲟⲩⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26007",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 8.5,
+        "rank": 142,
+        "count": 1341
+      }
+    },
+    {
+      "id": "CF26002",
+      "orth": "ⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2529,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF26003",
+      "orth": "ⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 16.79,
+        "rank": 75,
+        "count": 2649
+      }
+    },
+    {
+      "id": "CF26005",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 7.11,
+        "rank": 176,
+        "count": 603
+      }
+    },
+    {
+      "id": "CF26006",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26004",
+      "orth": "ⲟⲩ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26008",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26009",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF26010",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF26011",
+      "orth": "ⲟⲩⲛ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS13018",
+      "bibliography": "DDGLC",
+      "cu_ID": "54"
+    },
+    {
+      "id": "CS13019",
+      "bibliography": "DDGLC",
+      "cu_ID": "4259"
+    },
+    {
+      "id": "CS13020",
+      "bibliography": "DDGLC",
+      "cu_ID": "10949"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϯϩⲟ **ⲟⲩⲛ** ⲉⲣⲱⲧⲉⲛ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲛⲓ ⲙⲙⲟⲓ .",
+      "english": "I beg you therefore, be imitators of me.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲁⲧ **ⲟⲩⲛ** ⲛⲙⲡϣⲁ ⲉⲧⲣⲉⲕϯⲙⲧⲟⲛ ⲛⲁⲓ ϩⲛⲧⲉⲕⲁⲛⲁⲡⲁⲩⲥⲓⲥ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲅⲭⲁⲣⲓⲍⲉ ⲛⲁⲓ ⲛⲧⲙⲛⲧⲧⲉⲗⲓⲟⲥ ⲉⲧⲛϩⲏⲧⲕ · ⲉⲧⲉⲧⲙⲛⲧⲁⲧⲛⲟⲃⲉ ⲧⲉ · ⲙⲛⲡⲟⲩϫⲁⲓ ⲛⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ · ⲁⲩⲱ ⲛⲁⲧϩⲉⲧϩⲱⲧϥ · ⲁⲩⲱ ⲛⲁⲧⲧⲁϩⲟϥ · ⲉⲓⲛⲏⲩ ϣⲁⲣⲟⲕ ⲡⲁϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "make me therefore worthy to enjoy rest in Thy holy repose. Do thou bestow upon me graciously the perfection which is in Thee, that is to say, the sinlessness and the salvation, which cannot be described, and which cannot be pried into, and which are beyond the comprehension [of man]. I come unto Thee, my Lord Jesus, the Christ.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲗⲁⲧⲟⲥ ⲇⲉ ⲉⲧⲁϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲟⲩ **ⲟⲩⲛ** ⲡⲉϯⲛⲁⲁⲓϥ ⲙⲫⲏ ⲉⲧⲉⲧⲉⲛϫⲱ ⲙⲙⲟⲥ ⲉⲣⲟϥ ϫⲉⲡⲟⲩⲣⲟ ⲛⲧⲉⲛⲓⲓⲟⲩⲇⲁⲓ",
+      "english": "Pilate again asked them, 'What then should I do to him whom you call the King of the Jews?'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲗⲱⲥ **ⲟⲩⲛ** ⲁϥϫⲟⲟⲥ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲡⲁⲩⲗⲟⲥ ϫⲉⲁⲛⲁⲣⲭⲁⲓⲟⲛ ⲟⲩⲉⲓⲛⲉ · ⲉⲓⲥϩⲏⲏⲧⲉ ⲁϩⲉⲛⲃⲣⲣⲉ ϣⲱⲡⲉ ·",
+      "english": "Well therefore hath the blessed Paul said, 'Old things a have departed; behold, new things exist.'",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲣⲱⲓⲥ **ⲟⲩⲛ** ⲟⲩⲟϩ ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛϣⲧⲉⲙⲓ ⲉϧⲟⲩⲛ ⲉⲡⲓⲣⲁⲥⲙⲟⲥ ⲡⲓⲡⲛⲉⲩⲙⲁ ⲙⲉⲛ ϥⲣⲱⲟⲩⲧ ϯⲥⲁⲣⲝ ⲇⲉ ⲟⲩⲁⲥⲑⲉⲛⲏⲥ ⲧⲉ .",
+      "english": "Watch and pray, that you may not enter into temptation. The spirit indeed is willing, but the flesh is weak.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲛⲟⲩ **ⲟⲩⲛ** ϯϩⲟⲙⲟⲗⲟⲅⲉⲓ ⲁⲩⲱ ϯⲉⲅⲅⲩⲏ ⲛⲏⲧⲛ ⲙⲡⲉⲧⲣⲓⲧⲟⲛ ⲙⲉⲣⲟⲥ ϩⲛⲛⲉⲃⲓⲟⲟⲩⲉ",
+      "english": "I therefore agree now and I pledge for the third part of the honey",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        ".",
+        360,
+        21.856
+      ],
+      [
+        "ⲛⲁ",
+        210,
+        19.861
+      ],
+      [
+        "ⲁ",
+        188,
+        18.417
+      ],
+      [
+        "ⲉⲧ",
+        140,
+        18.403
+      ],
+      [
+        "ϥ",
+        210,
+        18.331
+      ],
+      [
+        "ϫⲉ",
+        132,
+        18.034
+      ],
+      [
+        "ⲛ",
+        169,
+        17.557
+      ],
+      [
+        "ⲛϫⲉ",
+        105,
+        17.501
+      ],
+      [
+        "ⲙⲉⲛ",
+        33,
+        17.494
+      ],
+      [
+        "ⲡⲉ",
+        88,
+        17.38
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        38,
+        17.296
+      ],
+      [
+        "ⲡⲓ",
+        119,
+        17.219
+      ],
+      [
+        "ⲉ",
+        135,
+        17.012
+      ],
+      [
+        "ⲓ",
+        94,
+        17.003
+      ],
+      [
+        "ⲟⲩ",
+        136,
+        16.78
+      ],
+      [
+        "ⲩ",
+        98,
+        16.729
+      ],
+      [
+        "ⲛⲓ",
+        95,
+        16.692
+      ],
+      [
+        "ⲙ",
+        106,
+        16.531
+      ],
+      [
+        "ⲣⲱⲓⲥ",
+        15,
+        16.297
+      ],
+      [
+        "ⲧⲉⲛ",
+        65,
+        16.232
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        58,
+        27.649
+      ],
+      [
+        "ⲟⲩ",
+        878,
+        24.032
+      ],
+      [
+        "ϭⲟⲙ",
+        275,
+        23.626
+      ],
+      [
+        "ⲛ",
+        939,
+        22.911
+      ],
+      [
+        "ⲉ",
+        722,
+        22.782
+      ],
+      [
+        "ⲛⲁ",
+        525,
+        22.274
+      ],
+      [
+        "ⲙⲙⲟ",
+        354,
+        21.861
+      ],
+      [
+        "ϩⲁϩ",
+        122,
+        21.651
+      ],
+      [
+        "ϥ",
+        527,
+        21.124
+      ],
+      [
+        "ϫⲉ",
+        356,
+        21.051
+      ],
+      [
+        "ϩⲉⲛ",
+        199,
+        20.461
+      ],
+      [
+        "ⲟⲩⲕ",
+        40,
+        20.064
+      ],
+      [
+        "ⲙ",
+        330,
+        19.928
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        118,
+        19.916
+      ],
+      [
+        "ⲧⲁϥ",
+        31,
+        19.546
+      ],
+      [
+        "ⲟⲩⲁ",
+        119,
+        19.491
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        55,
+        19.359
+      ],
+      [
+        "ⲡ",
+        324,
+        18.994
+      ],
+      [
+        "ⲛⲏⲩ",
+        76,
+        18.782
+      ],
+      [
+        ".",
+        188,
+        18.698
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲛ_0_node",
+          10
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲓⲁ",
+          1
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲫⲉⲇⲁⲛ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲥⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲓⲛ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲟⲩⲛ",
+          2
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "...._1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲛ_0_node",
+          "ϥⲧⲟⲟⲩ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_0_node",
+          "ⲛ_4_post_ⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲓⲁ",
+          "ϥⲧⲟⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ϥⲧⲟⲟⲩ_5_post_ⲛ",
+          "ⲙ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲛ",
+          "ⲡ_1_pre_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲩⲛ",
+          "ⲟⲩⲛ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲛ_0_node",
+          "ⲛ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          "ϣⲟⲙⲛⲧ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_2_post_ⲙⲙⲁⲫⲉⲇⲁⲛ",
+          "ⲙⲙⲁⲫⲉⲇⲁⲛ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_0_node",
+          "ⲛ_1_post_ⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲛ",
+          "ⲥⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩ_2_post_ⲛ",
+          "ⲛⲧⲉ_3_post_ⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲥⲟⲟⲩ",
+          "ⲟⲩⲉⲓⲛ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲛ",
+          "ⲕⲉ_1_pre_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲟⲩⲛ",
+          "ⲟⲩⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲛ",
+          "ϥⲧⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲛ_0_node",
+          "ⲛ_2_post_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲟⲙⲛⲧ",
+          "ϣⲟⲙⲛⲧ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲛ",
+          "ⲧⲉ_1_pre_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲟⲩⲛ",
+          "ⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_0_node",
+          "...._1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "...._1_post_ⲟⲩⲛ",
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 9.27,
+      "rank": 114,
+      "count": 1471
+    },
+    "B": {
+      "rate": 7.1,
+      "rank": 153,
+      "count": 603
+    }
+  },
+  "etym": {
+    "grl_ID": "1597",
+    "grl_lemma": "οὖν",
+    "grl_meaning": "so, then",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 1271b"
+  }
+}

@@ -1,0 +1,1314 @@
+{
+  "id": "C1443",
+  "forms": [
+    {
+      "id": "CF4307",
+      "orth": "ⲕⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.12,
+        "rank": 332,
+        "count": 492
+      }
+    },
+    {
+      "id": "CF4308",
+      "orth": "ⲕⲁⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.96,
+        "rank": 348,
+        "count": 251
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1684",
+      "bibliography": "CD 127a; KoptHWb 71; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲱⲗⲓ ⲙⲓⲃ ⲛ**ⲕⲟⲧ** ⲛⲗⲁⲕϩ ⲉⲩⲙⲉϩ ⲛⲉⲙⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲕⲉⲧⲉⲃⲧ .",
+      "english": "They took up twelve baskets full of broken pieces and also of the fish.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲕⲉ**ⲕⲟⲧ** ⲉϥⲙⲉϩ ⲛⲕⲛⲧⲉ ⲉⲩϩⲟⲟⲩ ⲉⲙⲁⲧⲉ ⲉⲛⲥⲉⲛⲁϣⲟⲩⲟⲙⲟⲩ ⲁⲛ ⲉⲃⲟⲗ ⲙⲡⲉⲩⲑⲟ",
+      "english": "The one basket was full of very good figs, as the early figs; and the other basket was full of very bad figs, which could not be eaten, for their badness.",
+      "source": "Jeremiah 24",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϧⲱⲛⲧ ⲉⲡⲉϥϧⲁⲉ ⲛⲛⲓϥⲓ ⲁⲥⲣⲁⲟⲩⲱ ⲙⲙⲁⲩ ϩⲱⲥ ⲛϫⲉⲙⲉⲗⲁⲛⲏ ⲉⲧⲁⲥϩⲓⲟⲩ**ⲕⲟⲧ** ⲉⲣⲟϥ ⲛⲕⲉⲥⲟⲡ ⲁϥϭⲱⲣⲉⲙ ⲉⲣⲟⲥ ⲉⲑⲣⲉⲥϧⲱⲛⲧ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲉⲧⲁⲥⲓ ϧⲁⲧⲟⲧϥ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲙⲉ ⲉⲧⲁⲓⲃⲁⲓⲣⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡϧⲓⲥⲓ ⲛⲧⲉⲛⲁϫⲓϫ ϩⲓⲛⲁ ⲛⲧⲉⲉⲣⲡⲁⲙⲉⲩⲓ ϫⲉⲟⲩⲏⲓ ⲙⲙⲟⲛ ϩⲗⲓ ⲛⲧⲏⲓ ⲉⲑⲣⲓⲭⲱ ⲛⲉ ⲟⲩⲟϩ ⲥⲁⲧⲟⲧϥ ⲁϥϯ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲛⲉⲛϫⲓϫ ⲙⲡⲟⲥ ⲛⲑⲟⲥ ⲇⲉ ⲁⲥϯϩⲟ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϣⲁⲧⲟⲩⲭⲁⲥ ⲛⲧⲉⲥⲕⲟⲥϥ ⲁⲥⲕⲟⲥϥ ⲇⲉ ϧⲉⲛϩⲁⲛ ϩⲃⲱⲥ ⲛⲓⲁⲩ ⲉⲩⲧⲁⲓⲏⲟⲩⲧ ⲁⲥϣⲉ ⲛⲁⲥ ⲉⲃⲟⲗ ϧⲉⲛⲡϣⲁϥⲉ ⲉⲣⲉϯⲃⲁⲓⲣⲓ ⲉⲧⲉⲙⲙⲁⲩ ⲛⲧⲟⲧⲥ ϣⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲉⲥⲙⲟⲩ .",
+      "english": "When the hour came for his spirit to depart, Melania came again to see him. Pambo signaled to her: “Take this basket, made by the labor of my hands, as a remembrance of me; for I have nothing else to leave you.” Immediately, he gave his spirit into the hands of God. She then prayed to his disciples that she might be allowed to care for his body. And so she prepared his body with clean and honorable linens, left the desert, and kept that basket in her hands until her final day.",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ϫⲓ ⲙⲡ**ⲕⲟⲧ** ⲛⲧⲟⲟⲧⲕ ⲛϥⲕⲁⲁϥ ⲉϩⲣⲁⲓ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ",
+      "english": "And the priest shall take the basket out of thine hands, and shall set it before the altar of the Lord thy God:",
+      "source": "Deuteronomy 26",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲧⲉⲕⲉⲟⲩⲁⲓ ⲛ**ⲕⲟⲧ** ⲛⲉⲙⲁⲥ ϧⲉⲛⲟⲩϣⲁⲓⲣⲓ ⲛϫⲣⲟϫ ⲟⲩⲟϩ ⲛⲧⲉϣⲧⲉⲙ ⲡⲓϩⲱⲃ ⲟⲩⲱⲛϩ ⲛⲁϩⲣⲉⲛ ⲛⲉⲛⲃⲁⲗ ⲙⲡⲉⲥϩⲁⲓ ⲟⲩⲟϩ ⲛⲧⲉϣⲧⲉⲙ ⲙⲉⲑⲣⲉ ϣⲱⲡⲓ ϧⲁⲣⲟⲥ ⲑⲁⲓ ⲇⲉ ⲁⲥⲥⲱϥ ⲑⲁⲓ ⲙⲡⲉⲥⲉⲣⲃⲟⲕⲓ",
+      "english": "and supposing any one shall lie with her carnally, and the thing shall be hid from the eyes of her husband, and she should conceal it and be herself defiled, and there be no witness with her, and she should not be taken;",
+      "source": "04_Numeri_05",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲅⲉⲇⲉⲱⲛ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡⲉϥⲏⲓ ⲁϥⲧⲁⲙⲓⲟ ⲛⲟⲩⲙⲁⲥ ⲛⲃⲁⲁⲙⲡⲉ ⲁⲩⲱ ⲟⲩϣⲓ ⲛⲛⲟⲉⲓⲧ ⲁϥⲧⲁⲙⲓⲟϥ ⲛϩⲉⲛⲁⲧⲑⲁⲃ ⲛⲁϥ ⲁϥⲕⲁⲁⲩ ϩⲛⲟⲩ**ⲕⲟⲧ** ⲁⲩⲱ ⲡⲉⲩⲥⲱⲙⲓⲛ ⲁϥⲡⲁϩⲧϥ ⲉⲧϭⲁⲗⲁϩⲧ ⲁϥⲉⲛⲧⲟⲩ ⲉⲃⲟⲗ ⲉⲣⲁⲧϥ ϩⲁⲣⲟⲥ ⲛⲧⲧⲉⲣⲉⲙⲓⲛⲑⲟⲥ ⲁϥⲕⲁⲁⲩ ⲙⲡⲉϥⲙⲑⲟ ⲉⲃⲟⲗ",
+      "english": "And Gedeon went in, and prepared a kid of the goats, and an ephah of fine flour unleavened; and he put the flesh in the basket, and poured the broth into the pot, and brought them forth to him under the turpentine tree, and drew nigh.",
+      "source": "Judges 6",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        220,
+        22.376
+      ],
+      [
+        "ⲉ",
+        189,
+        22.311
+      ],
+      [
+        "ⲕ",
+        103,
+        21.795
+      ],
+      [
+        "ⲟⲩ",
+        152,
+        21.105
+      ],
+      [
+        "ⲛ",
+        147,
+        20.797
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        130,
+        20.755
+      ],
+      [
+        "ⲩ",
+        75,
+        19.415
+      ],
+      [
+        "ⲁ",
+        97,
+        19.397
+      ],
+      [
+        "ⲛϫⲉ",
+        48,
+        17.957
+      ],
+      [
+        ".",
+        60,
+        17.945
+      ],
+      [
+        "ⲓⲉⲣⲟⲥⲁⲗⲏⲙ",
+        11,
+        17.481
+      ],
+      [
+        "ϧⲉⲛ",
+        48,
+        17.126
+      ],
+      [
+        "ⲥ",
+        40,
+        17.001
+      ],
+      [
+        "ⲗⲁⲕϩ",
+        8,
+        16.945
+      ],
+      [
+        "ⲓ",
+        35,
+        16.571
+      ],
+      [
+        "ⲫⲁϩⲟⲩ",
+        9,
+        16.509
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        24,
+        16.26
+      ],
+      [
+        "ⲇⲉ",
+        27,
+        15.921
+      ],
+      [
+        "ⲉⲩⲉ",
+        20,
+        15.908
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        12,
+        15.782
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        46,
+        32.039
+      ],
+      [
+        "ⲟⲩ",
+        407,
+        26.097
+      ],
+      [
+        "ϥ",
+        447,
+        25.805
+      ],
+      [
+        "ⲕ",
+        211,
+        24.887
+      ],
+      [
+        "ⲉ",
+        274,
+        23.982
+      ],
+      [
+        "ⲁ",
+        230,
+        23.451
+      ],
+      [
+        "ⲛ",
+        263,
+        22.796
+      ],
+      [
+        "ⲡⲁϩⲟⲩ",
+        31,
+        22.202
+      ],
+      [
+        "ⲩ",
+        115,
+        21.217
+      ],
+      [
+        "ⲥ",
+        90,
+        20.621
+      ],
+      [
+        "ⲥⲉ",
+        55,
+        20.297
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        3,
+        20.224
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        51,
+        20.184
+      ],
+      [
+        "ⲇⲉ",
+        68,
+        20.119
+      ],
+      [
+        "ⲁⲩⲱ",
+        90,
+        20.093
+      ],
+      [
+        "ⲡ",
+        108,
+        19.632
+      ],
+      [
+        "ⲟⲛ",
+        36,
+        19.607
+      ],
+      [
+        "ⲛⲁ",
+        76,
+        19.303
+      ],
+      [
+        "ⲙⲉϩ",
+        17,
+        19.235
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲉⲓ",
+        13,
+        19.186
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲟⲧ_0_node",
+          37
+        ],
+        [
+          "ⲉⲧ_1_pre_ⲕⲟⲧ",
+          6
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          10
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          5
+        ],
+        [
+          "ⲓⲃ_1_pre_ⲕⲟⲧ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲧ",
+          6
+        ],
+        [
+          "ⲗⲁⲕϩ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          7
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          5
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲧ",
+          4
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲥ_1_post_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥϩⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ⲥϩⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲓ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲁϥϣⲁⲛ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲱϣ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙⲁ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲛⲉⲙⲁ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_3_pre_ⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲕ_5_post_ϣⲁⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲧ_1_pre_ⲕⲟⲧ",
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲓⲃ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          4
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲛ_1_post_ⲕⲟⲧ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲧ",
+          "ⲗⲁⲕϩ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲗⲁⲕϩ_2_post_ⲛ",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲩ_3_post_ⲙⲉϩ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          "ⲙⲉϩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ϥ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ϥ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲥ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲧⲉⲛ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲩ_3_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲛⲁⲓ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲟⲧ",
+          "ⲧⲏⲣ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲛⲁⲓ",
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥϩⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥϩⲓⲙⲓ",
+          "ⲧⲉⲕ_2_post_ⲥϩⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ⲥϩⲓⲙⲓ",
+          "ⲥϩⲓⲙⲓ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ϧⲉⲛ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲕⲟⲧ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          "ⲟⲩⲛ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_2_post_ⲱϣ",
+          "ⲁϥϣⲁⲛ_2_post_ⲱϣ",
+          1
+        ],
+        [
+          "ⲁϥϣⲁⲛ_2_post_ⲱϣ",
+          "ⲱϣ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲛⲉⲙⲁ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲛⲉⲙⲁ_1_post_ⲕⲟⲧ",
+          "ⲥ_2_post_ⲛⲉⲙⲁ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_3_pre_ⲥ",
+          "ⲛⲧⲉ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲉⲙⲁ",
+          "ϧⲉⲛ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲛⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉ",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          "ⲛⲟⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲟⲧ",
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          "ⲉⲧⲉ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_3_post_ⲛⲏ",
+          "ⲕ_5_post_ϣⲁⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          14
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲧ",
+          16
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          45
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          16
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲕ_1_post_ⲕⲟⲧ",
+          6
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          12
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          2
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲉϩ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          12
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲟⲧ",
+          6
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲕⲟⲧ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          16
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ϭⲉ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲙⲉⲧⲁⲛⲟⲉⲓ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲕⲟⲧ",
+          4
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲓ_2_post_ⲛⲙⲙⲁ",
+          2
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲥⲉⲃⲏⲥ",
+          2
+        ],
+        [
+          "ⲁⲥⲉⲃⲏⲥ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱ",
+          2
+        ],
+        [
+          "ⲥⲉ_2_post_ⲕⲱ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_4_post_ϩⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡⲉⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ϥ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          5
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ϥ_1_post_ⲕⲟⲧ",
+          5
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲕ_1_post_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲩ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉϩ",
+          "ⲙⲉϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_2_post_ⲉ",
+          "ⲛ_3_post_ⲙⲉϩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          "ⲅ_1_pre_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲟⲧ",
+          "ⲧⲙ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲕⲟⲧ_0_node",
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          8
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲕⲟⲧ",
+          "ϥ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          "ϭⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϭⲉ_1_post_ⲕⲟⲧ",
+          "ⲉϩⲟⲩⲛ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲟⲧ",
+          "ϥ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲙⲉⲧⲁⲛⲟⲉⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ⲕ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          "ⲥⲉ_1_pre_ⲕⲟⲧ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲡⲉⲩ_3_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          "ⲇⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲟⲧ",
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_post_ⲕⲟⲧ",
+          "ⲛⲙⲙⲁ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲕⲟⲧ",
+          "ⲓ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲕⲟⲧ",
+          "ⲟⲩ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲡⲁϩⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲟⲧ",
+          "ⲛ_2_pre_ⲁⲥⲉⲃⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲁⲥⲉⲃⲏⲥ",
+          "ⲁⲥⲉⲃⲏⲥ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲁⲥⲉⲃⲏⲥ_1_pre_ⲕⲟⲧ",
+          "ⲛⲁ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲕⲟⲧ",
+          "ⲕⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲕⲟⲧ",
+          "ⲛ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱ",
+          "ⲥⲉ_2_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲕ_1_post_ⲕⲟⲧ",
+          "ⲉ_1_post_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲧ",
+          "ϥ_1_pre_ⲕⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲕⲟⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲟⲙⲛⲧ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲧ",
+          "ⲡⲉⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_2_post_ⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡⲉⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.22,
+      "rank": 1603,
+      "count": 35
+    },
+    "B": {
+      "rate": 0.49,
+      "rank": 976,
+      "count": 42
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1439",
+      "label": "ϩⲓⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "make a move, pay visit; encompass, encamp"
+    },
+    {
+      "target": "C1440",
+      "label": "ϩⲓⲕⲱⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pay visit"
+    },
+    {
+      "target": "C1447",
+      "label": "ϫⲓⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "take turn, be crooked"
+    },
+    {
+      "target": "C1441",
+      "label": "ϫⲓⲛϩⲓⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "visit"
+    },
+    {
+      "target": "C1422",
+      "label": "ϫⲓⲛⲕⲱϯ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "search after"
+    },
+    {
+      "target": "C1435",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1436",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1434",
+      "label": "ϭⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1446",
+      "label": "ϯⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, go about"
+    },
+    {
+      "target": "C1437",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "circular motion, turn, visit"
+    },
+    {
+      "target": "C1442",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "wheel"
+    },
+    {
+      "target": "C1444",
+      "label": "ⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "going round, turning, circuit; twist, knot; crookedness, guile"
+    },
+    {
+      "target": "C1449",
+      "label": "ⲕⲟⲧⲥⲓ",
+      "pos": "N",
+      "gloss": "circuit?"
+    },
+    {
+      "target": "C1423",
+      "label": "ⲕⲱϯ (ⲛⲧⲉⲛ-)",
+      "pos": "V",
+      "gloss": "seek, beg from sb"
+    },
+    {
+      "target": "C1424",
+      "label": "ⲕⲱϯ (ⲥⲁⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "turn about, circumvent"
+    },
+    {
+      "target": "C1450",
+      "label": "ⲕⲱⲧϥ",
+      "pos": "N",
+      "gloss": "circumference"
+    },
+    {
+      "target": "C1416",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "turn, go round; go round (with waterwheel), water; form circle; return; wander, stray; go about seeking, seek; turn; surround"
+    },
+    {
+      "target": "C1431",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, circuit, surroundings; turning (of water-wheel); seeking, enquiry"
+    },
+    {
+      "target": "C1433",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "PREP",
+      "gloss": "about, concerning"
+    },
+    {
+      "target": "C1430",
+      "label": "ⲕⲱⲧⲉ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go about outside"
+    },
+    {
+      "target": "C12171",
+      "label": "ⲕⲱⲧⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "surround"
+    },
+    {
+      "target": "C1427",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "turn, bend inwards; turn, bring round; return"
+    },
+    {
+      "target": "C1429",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "turn, go round; return"
+    },
+    {
+      "target": "C1418",
+      "label": "ⲕⲱⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "turn upon, go round, among"
+    },
+    {
+      "target": "C1425",
+      "label": "ⲕⲱⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wander out, round, return; turn away"
+    },
+    {
+      "target": "C1426",
+      "label": "ⲕⲱⲧⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "turn back"
+    },
+    {
+      "target": "C1419",
+      "label": "ⲕⲱⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go round with, turn hither and thither; inquire of, dispute with"
+    },
+    {
+      "target": "C1420",
+      "label": "ⲕⲱⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go round seeking, seek"
+    },
+    {
+      "target": "C1428",
+      "label": "ⲕⲱⲧⲉ ⲉϩⲟⲩⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "go in and out"
+    },
+    {
+      "target": "C1438",
+      "label": "ⲕⲱⲱⲃⲉ ⲛⲟⲩⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "compel a turn"
+    },
+    {
+      "target": "C1448",
+      "label": "ⲙⲛⲧⲙⲉⲧⲥⲁ ⲛⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "crookedness, dishonesty"
+    },
+    {
+      "target": "C1417",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "good conduct"
+    },
+    {
+      "target": "C1432",
+      "label": "ⲙⲡⲕⲱⲧⲉ",
+      "pos": "ADV",
+      "gloss": "round about"
+    },
+    {
+      "target": "C1421",
+      "label": "ⲣⲉϥⲕⲱⲧⲉ ⲛⲥⲁ-",
+      "pos": "N",
+      "gloss": "seeker"
+    },
+    {
+      "target": "C1445",
+      "label": "ⲣⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, plan, circumvent"
+    }
+  ]
+}

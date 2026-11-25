@@ -1,0 +1,226 @@
+{
+  "id": "C9193",
+  "forms": [
+    {
+      "id": "CF22915",
+      "orth": "ⲑⲩⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22916",
+      "orth": "ⲑⲩⲙⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF22917",
+      "orth": "ⲑⲩⲙⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22918",
+      "orth": "ⲑⲩⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4177,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF22919",
+      "orth": "ⲑⲩⲙⲟⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11428",
+      "bibliography": "DDGLC",
+      "cu_ID": "849"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲉⲕϭⲱⲛⲧ ⲕⲛⲁⲧⲥⲃⲕⲉⲡⲕⲁϩ ⲁⲩⲱ ϩⲙⲡⲉⲕ**ⲑⲩⲙⲟⲥ** ⲕⲛⲁⲉⲓⲛⲉ ⲉⲡⲉⲥⲏⲧ ⲛⲛϩⲉⲑⲛⲟⲥ",
+      "english": "Thou wilt bring low the land with threatening, and in wrath thou wilt break down the nations.",
+      "source": "Habakkuk 3",
+      "urn": "urn:cts:copticLit:ot.hab.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ϩⲱ ϯⲛⲁⲙⲟⲟϣⲉ ⲛⲙⲙⲏⲧⲛ ϩⲛⲟⲩ**ⲑⲩⲙⲟⲥ** ϩⲛⲟⲩⲥⲟⲟⲩⲧⲛ ⲁⲛ ⲁⲩⲱ ⲁⲛⲟⲕ ϯⲛⲁⲡⲁⲓⲇⲉⲩⲉ ⲙⲙⲱⲧⲛ ⲛⲥⲁϣϥ ⲛⲥⲟⲡ ⲕⲁⲧⲁⲛⲉⲧⲛⲛⲟⲃⲉ",
+      "english": "then will I walk with you with a froward mind, and I will chasten you seven-fold according to your sins.",
+      "source": "Leviticus 26",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϣⲱⲡⲉ ⲛⲧⲉⲣⲟⲩϭⲟϫϭϫ ⲁⲓϩⲉ ⲉϫⲙⲡⲁϩⲟ ⲁⲓⲱϣ ⲉⲃⲟⲗ ⲉⲓϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲟⲉⲓ ⲛⲁⲓ ⲡϫⲟⲉⲓⲥ ⲙⲏ ⲕⲧⲣⲉⲩϥⲱⲧⲉ ⲛⲧⲟⲕ ⲛϭⲓⲡⲕⲉⲥⲉⲉⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲧⲣⲉⲕⲡⲉⲛⲉ ⲡⲉⲕ**ⲑⲩⲙⲟⲥ** ⲉϫⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "And it came to pass as they were smiting, that I fell upon my face, and cried out, and said, Alas, O Lord! wilt thou destroy the remnant of Israel, in pouring out thy wrath upon Jerusalem?",
+      "source": "Ezekiel 9",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲛⲉ",
+        1,
+        13.621
+      ],
+      [
+        "ⲛⲙⲙⲏ",
+        2,
+        12.791
+      ],
+      [
+        "ⲁⲡⲟⲗⲟⲅⲓⲁ",
+        1,
+        12.331
+      ],
+      [
+        "ϣⲱϣ",
+        1,
+        12.236
+      ],
+      [
+        "ⲛⲟⲩϭⲥ",
+        1,
+        11.621
+      ],
+      [
+        "ϩⲛ",
+        5,
+        10.638
+      ],
+      [
+        "ⲙⲙⲁⲧⲉ",
+        1,
+        9.752
+      ],
+      [
+        "ⲉϫⲛ",
+        2,
+        9.618
+      ],
+      [
+        "ⲥⲟⲟⲩⲧⲛ",
+        1,
+        9.567
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        9.378
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        9.061
+      ],
+      [
+        "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+        1,
+        8.939
+      ],
+      [
+        "ⲛ",
+        6,
+        8.756
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        8.685
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        8.357
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.321
+      ],
+      [
+        "ϫⲟⲟⲩ",
+        1,
+        8.271
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        8.036
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        7.697
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲑⲩⲙⲟⲥ_0_node",
+          7
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲑⲩⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲑⲩⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲩⲙⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲑⲩⲙⲟⲥ",
+          "ⲑⲩⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲑⲩⲙⲟⲥ",
+          "ⲑⲩⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲩⲙⲟⲥ",
+          "ⲡⲉⲕ_1_pre_ⲑⲩⲙⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3782,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "2709",
+    "grl_lemma": "θυμός",
+    "grl_meaning": "soul, spirit, mind, temper, will, courage, anger",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 810a; Preisigke 1:681"
+  }
+}

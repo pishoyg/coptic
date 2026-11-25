@@ -1,0 +1,198 @@
+{
+  "id": "C6143",
+  "forms": [
+    {
+      "id": "CF14291",
+      "orth": "ϣⲉⲉⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8957,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6830",
+      "bibliography": "CD 601a; KoptHWb 334; ChLCS 83a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ ⲉⲧⲃⲉⲛⲧⲉ**ϣⲉⲉⲩ** ⲧⲏⲣⲟⲩ ⲙⲡⲟⲛⲏⲣⲟⲥ ⲛⲉⲧϫⲱϩ ⲉⲧⲁⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲧⲁⲓ ⲛⲧⲁⲓⲡⲟϣⲥ ⲉϫⲙⲡⲁⲗⲁⲟⲥ ⲡⲓⲥⲣⲁⲏⲗ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲧⲟⲕⲙⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲩⲕⲁϩ ⲁⲩⲱ ⲡⲏⲓ ⲛⲓⲟⲩⲇⲁ ...",
+      "english": "For thus saith the Lord, concerning all the evil neighbours that touch mine inheritance, which I have divided to my people Israel; Behold, I will draw them away from their land, and I will cast out Juda from the midst of them.",
+      "source": "Jeremiah 12",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲧⲛⲟⲩⲉϩⲧⲏⲩⲧⲛ ⲛⲥⲱⲟⲩ ⲛⲧⲱⲧⲛ ⲙⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲟⲩⲏϩ ϩⲛⲛⲉⲧⲉ**ϣⲉⲉⲩ** ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲧⲉⲧⲛⲣⲱϩⲧ ⲙⲙⲟⲟⲩ ϩⲣⲁⲓ ϩⲛⲛⲉⲩϩⲓⲟⲟⲩⲉ",
+      "english": "So ye, and all that inhabit the coast of Israel, shall pursue them, and overthrow them as they go.",
+      "source": "Judith 14",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲛⲏⲣⲟⲥ",
+        1,
+        12.469
+      ],
+      [
+        "ⲟⲩⲏϩ",
+        1,
+        10.492
+      ],
+      [
+        "ⲓⲥⲣⲁⲏⲗ",
+        1,
+        8.771
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        8.284
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲉⲉⲩ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲉⲉⲩ",
+          2
+        ],
+        [
+          "ⲡⲟⲛⲏⲣⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲉⲉⲩ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲉⲉⲩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲉⲉⲩ",
+          "ⲡⲟⲛⲏⲣⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲛⲏⲣⲟⲥ_2_post_ⲙ",
+          "ⲛ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ϣⲉⲉⲩ_0_node",
+          "ⲙ_1_post_ϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲉⲉⲩ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8504,
+      "count": 2
+    }
+  }
+}

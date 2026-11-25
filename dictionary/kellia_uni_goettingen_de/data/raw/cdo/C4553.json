@@ -1,0 +1,481 @@
+{
+  "id": "C4553",
+  "forms": [
+    {
+      "id": "CF11063",
+      "orth": "ⲧⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3478,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲧⲉⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.4,
+        "rank": 304,
+        "count": 537
+      }
+    },
+    {
+      "orth": "ⲧⲟⲥ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4962,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲧⲏⲥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5441,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲧⲉⲥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.4,
+        "rank": 304,
+        "count": 537
+      }
+    },
+    {
+      "orth": "ⲧⲁⲥ-",
+      "dialect": "S",
+      "id": "1647.5"
+    },
+    {
+      "orth": "ⲧⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7035,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲟⲥ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2485,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲧⲟⲥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2485,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲧⲏⲥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.74,
+        "rank": 875,
+        "count": 63
+      }
+    },
+    {
+      "orth": "ⲧⲉⲥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.33,
+        "rank": 310,
+        "count": 282
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5141",
+      "bibliography": "CD 433b; CDC 68a; CED 196; KoptHWb 246; DELC 222a; ChLCS 61a"
+    },
+    {
+      "id": "CS5142",
+      "bibliography": "CD 433b; CDC 68a; KoptHWb 246; DELC 222a; ChLCS 61a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲙⲁ ⲉⲧϥⲛⲁⲧⲁϩⲟϥ ϣⲁϥⲣⲁϩⲧϥ ⲉⲡⲕⲁϩ ⲛϥⲧⲁⲩⲉⲥϩⲃⲏⲓⲧⲉ ⲉⲃⲟⲗ ⲛϥϩⲣⲁϫⲣⲉϫ ⲛⲛⲉϥⲟⲃϩⲉ ⲛϥ**ⲧⲱⲥ** . ⲁⲓϫⲟⲟⲥ ϭⲉ ⲛⲛⲉⲕⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲉⲩⲉⲛⲟϫϥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲙⲡⲟⲩϣⲛⲟϫϥ .",
+      "english": "and wherever it seizes him, it throws him down, and he foams at the mouth, and grinds his teeth, and wastes away. I asked your disciples to cast it out, and they weren&apos;t able.&apos;",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩ**ⲧⲱⲥ** ⲁⲩⲣⲧϭⲟⲧ ⲛⲟⲩⲱⲛⲉ ⲉⲩⲁϣⲉ ⲛⲥⲱⲥ ·",
+      "english": "and at the same time they shrivelled up, and became as hard as stones, and they hung down on her body;",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲛⲉⲩⲣⲱⲛ ⲛⲛⲉⲕϭⲓϫ ⲙⲛⲛⲉⲕⲟⲩⲣⲏⲏⲧⲉ **ⲧⲱⲥ** ·",
+      "english": "and the veins, and tendons, and sinews of thy hands and feet shall dry up,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲗⲏⲗ",
+        1,
+        8.787
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        6.061
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        5.451
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        3.036
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        1.923
+      ],
+      [
+        "ⲫ",
+        1,
+        0.61
+      ],
+      [
+        "ⲙ",
+        1,
+        -0.371
+      ],
+      [
+        "ⲛ",
+        1,
+        -1.364
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲃϩⲉ",
+        3,
+        15.861
+      ],
+      [
+        "ϩⲣⲏ",
+        1,
+        15.276
+      ],
+      [
+        "ⲁ",
+        16,
+        13.722
+      ],
+      [
+        "ϩⲓⲱⲛⲉ",
+        1,
+        12.028
+      ],
+      [
+        "ⲟⲩⲣⲏⲏⲧⲉ",
+        1,
+        11.661
+      ],
+      [
+        ".",
+        7,
+        11.657
+      ],
+      [
+        "ϩⲱⲥ",
+        2,
+        11.562
+      ],
+      [
+        "ⲣⲧϩⲉ",
+        1,
+        10.706
+      ],
+      [
+        "ϫⲟⲟ",
+        3,
+        10.549
+      ],
+      [
+        "ⲛⲉϥ",
+        3,
+        10.23
+      ],
+      [
+        "ϣⲱⲥ",
+        1,
+        10.178
+      ],
+      [
+        "ϩⲁⲏ",
+        1,
+        9.647
+      ],
+      [
+        "ϥ",
+        7,
+        9.622
+      ],
+      [
+        "ⲥⲁϣϥ",
+        1,
+        8.936
+      ],
+      [
+        "ⲩ",
+        4,
+        8.488
+      ],
+      [
+        "ⲓ",
+        3,
+        8.283
+      ],
+      [
+        "ϩⲟⲧⲉ",
+        1,
+        8.224
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        7.792
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        7.643
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        6.652
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲧⲱⲥ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲧⲱⲥ",
+          3
+        ],
+        [
+          "ⲧⲱⲥ_0_node",
+          6
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲱⲥ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲱⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲥ",
+          1
+        ],
+        [
+          "ϣⲱⲥ_1_post_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲣ",
+          1
+        ],
+        [
+          "ⲣ_1_post_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲧϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲧⲱⲥ",
+          "ϥ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲱⲥ",
+          "ⲧⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲱⲥ",
+          "ⲩ_1_pre_ⲧⲱⲥ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲱⲥ",
+          "ⲧⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲱⲥ_0_node",
+          "ⲡ_2_post_ϣⲱⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲱⲥ",
+          "ϣⲱⲥ_1_post_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲧⲱⲥ_0_node",
+          "ⲁ_2_post_ⲣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣ",
+          "ⲩ_2_post_ⲣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲣ",
+          "ⲣ_1_post_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱⲥ",
+          "ⲛⲧⲟϥ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲧⲱⲥ",
+          "ⲁ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲱⲥ",
+          "ϥ_1_pre_ⲧⲱⲥ",
+          1
+        ],
+        [
+          "ⲧⲱⲥ_0_node",
+          "ⲁ_2_post_ⲣⲧϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3109,
+      "count": 10
+    },
+    "B": {
+      "rate": 0.73,
+      "rank": 774,
+      "count": 62
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4556",
+      "label": "ⲁⲧⲧⲱⲥ",
+      "pos": "N",
+      "gloss": "not stiff, limp"
+    },
+    {
+      "target": "C4557",
+      "label": "ⲙⲉⲧⲧⲱⲥⲓ",
+      "pos": "N",
+      "gloss": "dryness"
+    },
+    {
+      "target": "C4560",
+      "label": "ⲙⲛⲧⲧⲁⲥⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impudence"
+    },
+    {
+      "target": "C4559",
+      "label": "ⲣⲧⲁⲥⲃⲁⲗ",
+      "pos": "V",
+      "gloss": "be \"proud-eyed\", be impudent"
+    },
+    {
+      "target": "C4558",
+      "label": "ⲧⲁⲥ-",
+      "pos": "N",
+      "gloss": "who hardens"
+    },
+    {
+      "target": "C4554",
+      "label": "ⲧⲱⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "stretch out, stiffen"
+    },
+    {
+      "target": "C4555",
+      "label": "ⲧⲱⲥ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "stand up stiffly"
+    }
+  ],
+  "etym": {
+    "egy_num": "177780",
+    "egy_lemma": "dꜣz",
+    "english": "sling; tie",
+    "german": "(Schlinge) umlegen; fixieren; festbinden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/177780"
+  }
+}

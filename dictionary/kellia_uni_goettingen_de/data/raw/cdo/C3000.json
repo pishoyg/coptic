@@ -1,0 +1,62 @@
+{
+  "id": "C3000",
+  "forms": [
+    {
+      "id": "CF7866",
+      "orth": "ⲁⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3435",
+      "bibliography": "CD 284a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3001",
+      "label": "ⲙⲛⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "pouring out, shedding (blood)"
+    },
+    {
+      "target": "C3003",
+      "label": "ⲡⲁϩⲧⲥ",
+      "pos": "N",
+      "gloss": "bowing, genuflection"
+    },
+    {
+      "target": "C2997",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "V",
+      "gloss": "bend, bow down, fall; pour, flow"
+    },
+    {
+      "target": "C2999",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "N",
+      "gloss": "effusion"
+    },
+    {
+      "target": "C2998",
+      "label": "ⲡⲱϩⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "pour (forth), shed"
+    },
+    {
+      "target": "C3002",
+      "label": "ⲣⲉϥⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "one who sheds (blood)"
+    }
+  ]
+}

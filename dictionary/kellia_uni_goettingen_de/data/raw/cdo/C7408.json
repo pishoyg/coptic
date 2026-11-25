@@ -1,0 +1,309 @@
+{
+  "id": "C7408",
+  "forms": [
+    {
+      "id": "CF16875",
+      "orth": "ϫⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5765,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲁⲁⲧⲉ",
+      "dialect": "S",
+      "id": "2463.1"
+    },
+    {
+      "orth": "ϫⲟⲧⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14047,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8195",
+      "bibliography": "CD 791b; KoptHWb 435, 573; DELC 332b; ChLCS 104b"
+    },
+    {
+      "id": "CS8196",
+      "bibliography": "CD 791b; KoptHWb 435; DELC 332b; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϩⲏⲕⲉ ⲇⲉ ϩⲱⲱϥ ⲛⲉⲙⲛⲧϥⲗⲁⲁⲩ ⲙⲙⲁⲩ ⲛⲥⲁⲟⲩϩⲓⲉⲓⲃ ⲛⲟⲩⲱⲧ ⲧⲁⲓ ⲛⲧⲁϥⲕⲁⲁⲥ ⲛⲁⲥ ⲁⲩⲱ ⲁϥϩⲁⲣⲉϩ ⲉⲣⲟⲥ ⲉϥⲥⲁⲁⲛϣ ⲙⲙⲟⲥ ⲁⲥ**ϫⲁⲧⲉ** ⲇⲉ ⲉⲥⲛⲙⲙⲁϥ ⲁⲩⲱ ⲛⲉⲥⲟⲩⲱⲙ ⲛⲙⲙⲁϥ ⲙⲛⲛⲉϥⲕⲉϣⲏⲣⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉϥⲟⲉⲓⲕ ⲁⲩⲱ ⲛⲉⲥⲥⲱ ⲉⲃⲟⲗ ϩⲙⲡⲉϥⲁⲡⲟⲧ ⲁⲩⲱ ⲛⲉⲥⲛⲕⲟⲧⲕ ϩⲛⲕⲟⲩⲛϥ ⲉⲥⲟ ⲛⲁϥ ⲛⲧϩⲉ ⲛⲟⲩϣⲉⲉⲣⲉ",
+      "english": "But the poor man had only one little ewe lamb, which he had purchased, and preserved, and reared; an it grew up with himself and his children in common; it ate of his bread and drank of his cup, and slept in his bosom, and was to him as a daughter.",
+      "source": "II Samuel 12",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲛⲁ ⲇⲉ ⲙⲡⲉⲥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲛⲙⲙⲁϥ ϫⲉⲁⲥϫⲟⲟⲥ ⲙⲡⲉⲥϩⲁⲓ ϫⲉϯⲛⲁϭⲱ ϣⲁⲛⲧⲉⲡϣⲏⲣⲉ ⲕⲟⲩⲓ **ϫⲁⲧⲉ** ⲛⲧⲁⲟⲙϫϥ ϫⲉⲉϥⲉⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲓⲧϩⲏ ⲙⲡϫⲟⲉⲓⲥ ⲛϥϭⲱ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛϣⲁ ⲉⲛⲉϩ",
+      "english": "But Anna did not go up with him, for she said to her husband, I will not go up until the child goes up, when I have weaned him, and he shall be presented before the Lord, and he shall abide there continually.",
+      "source": "I Samuel 1",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲥϩⲓⲙⲉ ⲇⲉ ⲁⲥϫⲡⲉⲡϣⲏⲣⲉ ⲁⲩⲱ ⲁⲥⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲣⲁⲛ ϫⲉⲥⲁⲙⲯⲱⲛ ⲁⲩⲱ ⲡϣⲏⲣⲉ ⲕⲟⲩⲓ ⲁϥ**ϫⲁⲧⲉ** ⲁⲡϫⲟⲉⲓⲥ ⲥⲙⲟⲩ ⲉⲣⲟϥ",
+      "english": "And the woman brought forth a son, and she called his name Sampson; and the child grew, and the Lord blessed him.",
+      "source": "Judges 13",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲟⲙϫϥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        2,
+        12.034
+      ],
+      [
+        "ⲁ",
+        6,
+        10.799
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        10.094
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        10.067
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        2,
+        9.29
+      ],
+      [
+        "ⲥ",
+        3,
+        9.029
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        8.721
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        8.255
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        7.47
+      ],
+      [
+        "ⲡ",
+        3,
+        7.252
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲁⲧⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϫⲁⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲁ_2_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϫⲉ_1_post_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲁⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲁⲧⲉ",
+          "ⲩ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϫⲁⲧⲉ",
+          "ϫⲁⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁⲧⲉ_0_node",
+          "ⲁ_2_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲛⲟⲩϫⲉ",
+          "ⲩ_2_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲟⲩϫⲉ",
+          "ⲛⲟⲩϫⲉ_1_post_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ϫⲁⲧⲉ",
+          "ⲡ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϫⲁⲧⲉ",
+          "ⲕⲟⲩⲓ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_2_pre_ϣⲏⲣⲉ",
+          "ϫⲁⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁⲧⲉ_0_node",
+          "ⲛ_1_post_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲁⲧⲉ",
+          "ⲥ_1_pre_ϫⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲁⲧⲉ",
+          "ϫⲁⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁⲧⲉ_0_node",
+          "ⲇⲉ_1_post_ϫⲁⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5328,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "186090",
+    "egy_lemma": "ḏdꜣ",
+    "english": "to ripen; to swell; to grow fat",
+    "german": "reif sein; reifen machen; fett sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/186090"
+  }
+}

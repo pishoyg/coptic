@@ -1,0 +1,76 @@
+{
+  "id": "C8558",
+  "forms": [
+    {
+      "id": "CF20145",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20146",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20147",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5258,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF20148",
+      "orth": "ⲁⲫ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20149",
+      "orth": "ⲁⲫⲑⲁⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20150",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5258,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10047",
+      "bibliography": "DDGLC",
+      "cu_ID": "5868"
+    },
+    {
+      "id": "CS10048",
+      "bibliography": "DDGLC",
+      "cu_ID": "6464"
+    },
+    {
+      "id": "CS10049",
+      "bibliography": "DDGLC",
+      "cu_ID": "10462"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3286",
+    "grl_lemma": "ἄφθαρτος",
+    "grl_meaning": "incorruptible, eternal, immortal",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 289a"
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "id": "C7714",
+  "forms": [
+    {
+      "id": "CF17493",
+      "orth": "ϯϭⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1476,
+        "count": 52
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8577",
+      "bibliography": "CD 816ab; ChLCS 107b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲓ ϣⲁⲣⲟⲓ ⲟⲛ ⲁϥ**ϯϭⲟⲙ** ⲛⲁⲓ ⲛⲧϩⲉ ⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ·",
+      "english": "and he gave unto me strength as at the first.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣ**ϯϭⲟⲙ** ⲙⲡⲛⲟⲃⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ·",
+      "english": "Never let sin gain dominion over thee.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲁⲓ ⲛⲉ ⲛⲛⲟⲩⲧⲉ ⲉⲧϯ ⲛⲁⲛ ⲙⲡⲉϫⲣⲟ ϩⲙⲡⲡⲟⲗⲉⲙⲟⲥ · ⲁⲩⲱ ⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ⲛⲥⲉϣⲱⲡⲉ ⲛⲏⲧⲛ ⲛⲛⲁϣⲧⲉ · ⲉⲩ**ϯϭⲟⲙ** ⲛⲏⲧⲛ ⲙⲛⲡⲉⲥⲧⲣⲁⲧⲉⲩⲙⲁ ⲧⲏⲣϥ ·",
+      "english": "for these are the gods who give us victory in battle, and it is they who are the protectors of you yourselves, and they give strength unto you and unto the whole army.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁ",
+        68,
+        18.25
+      ],
+      [
+        "ⲛ",
+        56,
+        15.531
+      ],
+      [
+        "ⲟⲩⲁⲥⲧ",
+        2,
+        15.313
+      ],
+      [
+        "ⲕ",
+        22,
+        14.53
+      ],
+      [
+        "ⲁ",
+        33,
+        14.477
+      ],
+      [
+        "ⲓ",
+        21,
+        14.327
+      ],
+      [
+        "ϣⲁⲛϯ",
+        1,
+        13.898
+      ],
+      [
+        "ϥ",
+        31,
+        13.684
+      ],
+      [
+        "ⲡ",
+        26,
+        12.898
+      ],
+      [
+        "ⲛⲁϣⲧⲉ",
+        2,
+        12.612
+      ],
+      [
+        "ⲁⲩⲱ",
+        16,
+        12.047
+      ],
+      [
+        "ⲛⲃⲁⲣⲁⲕ",
+        1,
+        11.576
+      ],
+      [
+        "ⲇⲉⲃⲃⲱⲣⲁ",
+        1,
+        11.197
+      ],
+      [
+        "ⲁⲡⲟϩⲣⲟⲓⲁ",
+        1,
+        10.991
+      ],
+      [
+        "ⲧⲛ",
+        7,
+        10.886
+      ],
+      [
+        "ⲡⲉ",
+        10,
+        10.773
+      ],
+      [
+        "ϭⲃⲃⲉ",
+        1,
+        10.143
+      ],
+      [
+        "[",
+        1,
+        10.09
+      ],
+      [
+        "ⲥ",
+        9,
+        10.084
+      ],
+      [
+        "ⲙ",
+        11,
+        10.029
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕ_1_pre_ϯϭⲟⲙ",
+          2
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          20
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          13
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ϩⲛ_1_post_ϯϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϯϭⲟⲙ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ϯϭⲟⲙ",
+          6
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲛϯ_2_post_ϩⲱⲙ",
+          1
+        ],
+        [
+          "ϩⲱⲙ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          4
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ϯϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲱⲧⲡ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϭⲱⲧⲡ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲛⲏ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_4_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ϯ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲉⲩⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_5_post_ⲡⲓⲥⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ϩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲡⲁⲣϩⲏⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲣϩⲏⲥⲓⲁ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          12
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ⲓ_2_post_ⲛⲁ",
+          4
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          "ϩⲛ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϯϭⲟⲙ",
+          "ⲛⲁⲓ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯϭⲟⲙ",
+          "ϥ_1_pre_ϯϭⲟⲙ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ⲛ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲁ",
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ϯϭⲟⲙ",
+          "ⲡ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          "ϣⲁⲛϯ_2_post_ϩⲱⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲛϯ_2_post_ϩⲱⲙ",
+          "ϩⲱⲙ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          "ϥ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ϯϭⲟⲙ",
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ϯϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯϭⲟⲙ",
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ϯϭⲟⲙ",
+          "ⲉϥⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          "ⲛ_2_post_ϭⲱⲧⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲱⲧⲡ",
+          "ϥ_2_post_ϭⲱⲧⲡ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          "ⲛⲏ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ϯϭⲟⲙ",
+          "ⲧⲛ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          "ⲙⲛ_4_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          "ⲡⲉ_4_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ⲥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲁ",
+          "ϣⲁⲛⲧⲉ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯϭⲟⲙ",
+          "ϥ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ϩⲛ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϭⲟⲙ",
+          "ⲕ_2_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ϫⲱⲕ",
+          "ⲕ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲡⲓⲥⲧⲉⲩⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲉⲩⲉ_4_post_ⲉⲧ",
+          "ⲉⲣⲟ_5_post_ⲡⲓⲥⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯϭⲟⲙ",
+          "ⲧⲉ_1_pre_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϯϭⲟⲙ",
+          "ϯϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          "ϩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟ_2_post_ⲛ",
+          "ⲙ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϭⲟⲙ",
+          "ⲩ_1_pre_ϯϭⲟⲙ",
+          2
+        ],
+        [
+          "ϯϭⲟⲙ_0_node",
+          "ⲙ_1_post_ϯϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯϭⲟⲙ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϭⲟⲙ",
+          "ⲧⲉⲩ_3_post_ⲡⲁⲣϩⲏⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲡⲁⲣϩⲏⲥⲓⲁ",
+          "ⲡⲁⲣϩⲏⲥⲓⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1279,
+      "count": 52
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7722",
+      "label": "ϣϭⲙϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find strength, be able (to do)"
+    },
+    {
+      "target": "C7719",
+      "label": "ϩⲉϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find power"
+    },
+    {
+      "target": "C7720",
+      "label": "ϭⲓϭⲟⲙ",
+      "pos": "V",
+      "gloss": "get strength"
+    },
+    {
+      "target": "C7721",
+      "label": "ϭⲙϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find strength, be able (to do)"
+    },
+    {
+      "target": "C7706",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "power, strength, might, authority"
+    },
+    {
+      "target": "C7707",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerful, mighty, strong"
+    },
+    {
+      "target": "C7708",
+      "label": "ⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerless, unable"
+    },
+    {
+      "target": "C7712",
+      "label": "ⲕⲁϭⲟⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "abandon strength, lose strength"
+    },
+    {
+      "target": "C7718",
+      "label": "ⲙⲙⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7717",
+      "label": "ⲙⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7709",
+      "label": "ⲙⲛⲧⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "impotence, incapacity, powerlessness, inability"
+    },
+    {
+      "target": "C7716",
+      "label": "ⲟⲩⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7715",
+      "label": "ⲟⲩⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7713",
+      "label": "ⲣϭⲟⲙ",
+      "pos": "V",
+      "gloss": "exercise power, do mighty deeds; do wonders"
+    },
+    {
+      "target": "C7710",
+      "label": "ⲣⲁⲧϭⲟⲙ",
+      "pos": "V",
+      "gloss": "lack strength, to be unable, impossible"
+    },
+    {
+      "target": "C7711",
+      "label": "ⲣⲙⲛϭⲟⲙ",
+      "pos": "N",
+      "gloss": "mighty man, ruler"
+    }
+  ]
+}

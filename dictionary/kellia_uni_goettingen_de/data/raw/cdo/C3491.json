@@ -1,0 +1,210 @@
+{
+  "id": "C3491",
+  "forms": [
+    {
+      "id": "CF8883",
+      "orth": "ϯⲥⲗⲁⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8809,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3973",
+      "bibliography": "CD 333a; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲣⲉϩ ⲉⲣⲟⲓ ⲡϫⲟⲉⲓⲥ ⲉⲧϭⲓϫ ⲙⲡⲣⲉϥⲣⲛⲟⲃⲉ ⲙⲁⲧⲟⲩϫⲟⲓ ⲉϩⲉⲛⲣⲱⲙⲉ ⲛϫⲓⲛϭⲟⲛⲥ ⲛⲁⲓ ⲉⲛⲧⲁⲩⲙⲉⲉⲩⲉ ⲉ**ϯⲥⲗⲁⲁⲧⲉ** ⲛⲛⲁⲧⲁϭⲥⲉ",
+      "english": "Keep me, O Lord, from the hand of the sinner; rescue me from unjust men; who have purposed to overthrow my goings.",
+      "source": "Psalms 139",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:139",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲉⲣϣⲙⲙⲟ ⲉⲣⲟⲛ ⲛⲕⲉⲥⲟⲛ ϫⲉⲁⲩⲕⲱⲧⲉ ⲛⲥⲁⲧϩⲉ ⲛ**ϯⲥⲗⲁⲁⲧⲉ** ⲛⲛⲉⲩⲥⲛⲏⲩ · ⲁⲩⲱ ⲉⲧⲣⲉⲩϯϫⲣⲟⲡ ⲛⲁⲩ ϩⲛⲧⲉⲩϩⲩⲡⲟⲧⲁⲅⲏ ⲙⲛⲧⲉⲩϩⲩⲡⲟⲙⲟⲛⲏ ·",
+      "english": "...",
+      "source": "Acephelous Work 22 YB 67-80",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:180-197",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϭⲥⲉ",
+        1,
+        14.313
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        9.929
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        9.222
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        8.76
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯⲥⲗⲁⲁⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϯⲥⲗⲁⲁⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁϭⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲁϭⲥⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲥⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲥⲛⲏⲩ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯⲥⲗⲁⲁⲧⲉ_0_node",
+          "ⲛ_1_post_ϯⲥⲗⲁⲁⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϯⲥⲗⲁⲁⲧⲉ",
+          "ⲛⲁ_3_post_ⲧⲁϭⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁϭⲥⲉ",
+          "ⲧⲁϭⲥⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲥⲗⲁⲁⲧⲉ",
+          "ⲛⲉⲩ_3_post_ⲥⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲥⲛⲏⲩ",
+          "ⲥⲛⲏⲩ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8362,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3493",
+      "label": "ⲁⲧⲥⲗⲁϯ",
+      "pos": "N",
+      "gloss": "not stumbling"
+    },
+    {
+      "target": "C3492",
+      "label": "ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "one that stumbles"
+    },
+    {
+      "target": "C3489",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "stumble, slip"
+    },
+    {
+      "target": "C3490",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "stumbling, falling"
+    },
+    {
+      "target": "C3494",
+      "label": "ⲥⲗⲁⲧⲗⲉⲧ",
+      "pos": "N",
+      "gloss": "slip, stumbling"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "id": "C8012",
+  "forms": [
+    {
+      "id": "CF18090",
+      "orth": "ϭⲱⲱϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12081,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲱϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2853,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ϭⲱϫ",
+      "dialect": "S",
+      "id": "2653.2"
+    },
+    {
+      "orth": "ϫⲉϫ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13115,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲟϫϩ⸗",
+      "dialect": "S",
+      "id": "2653.4"
+    },
+    {
+      "orth": "ϭⲟⲟϫⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17478,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁϫⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3253,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϭⲁⲁϫⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6520,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϫⲱϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2151,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϫⲉϫ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3173,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϫⲁϫ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4137,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲟϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2225,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϫⲏϫⲓ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6232,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲱϫⲉ",
+      "dialect": "A",
+      "id": "2653.13"
+    },
+    {
+      "orth": "ϭⲁⲁϫⲉ†",
+      "dialect": "F",
+      "id": "2653.14"
+    },
+    {
+      "orth": "ϭⲁϫⲉ-",
+      "dialect": "F",
+      "id": "2653.15"
+    },
+    {
+      "orth": "ϭⲁⲁϫⲉ-",
+      "dialect": "F",
+      "id": "2653.16"
+    },
+    {
+      "orth": "ϭⲱϫⲉ",
+      "dialect": "L",
+      "id": "2653.17"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8911",
+      "bibliography": "CD 841ab; CED 340; KoptHWb 473; DELC 350b; ChLCS 110b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛⲧⲉϥⲥⲧⲟⲗⲏ ⲁϥⲱⲗ ⲉⲃⲟⲗ ϩⲁⲡϣⲏⲛ ⲁϥ**ϭⲱⲱϫⲉ** ⲉⲡⲕⲁϩ ⲁϥⲧⲟⲙⲥⲟⲩ ·",
+      "english": "He was spreading out his garment, and he was carrying away in his garment [the leaves] which were under the tree, and pouring them out on the ground, and burying them.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲛ",
+        1,
+        12.272
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        8.927
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϭⲱⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲱⲱϫⲉ",
+          1
+        ],
+        [
+          "ϭⲱⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϭⲱⲱϫⲉ",
+          "ϥ_1_pre_ϭⲱⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲱⲱϫⲉ",
+          "ϭⲱⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϭⲱⲱϫⲉ_0_node",
+          "ⲉ_1_post_ϭⲱⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱⲱϫⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11655,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C8013",
+      "label": "ϫⲱϫⲓ",
+      "pos": "N",
+      "gloss": "cutting, cut, incision"
+    },
+    {
+      "target": "C8015",
+      "label": "ϭⲱϫⲉ",
+      "pos": "V",
+      "gloss": "dig"
+    },
+    {
+      "target": "C8016",
+      "label": "ϭⲱϫⲉ",
+      "pos": "N",
+      "gloss": "what is dug, spadeful, excavation"
+    },
+    {
+      "target": "C8014",
+      "label": "ⲣϭⲱⲱϫⲉ",
+      "pos": "V",
+      "gloss": "be incisive"
+    },
+    {
+      "target": "C8017",
+      "label": "ⲣⲉϥϫⲱϫ",
+      "pos": "N",
+      "gloss": "digger(?)"
+    }
+  ]
+}

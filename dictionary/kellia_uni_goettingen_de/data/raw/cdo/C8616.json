@@ -1,0 +1,109 @@
+{
+  "id": "C8616",
+  "forms": [
+    {
+      "id": "CF20339",
+      "orth": "ⲃⲓⲱⲧⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20340",
+      "orth": "ⲃⲓⲱⲧⲓⲕⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7670,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10165",
+      "bibliography": "DDGLC",
+      "cu_ID": "2026"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁϩⲑⲏⲧⲉⲛ ⲇⲉ ⲉⲣⲱⲧⲉⲛ ⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩϩⲣⲟϣ ⲛϫⲉⲛⲉⲧⲉⲛϩⲏⲧ ϧⲉⲛϩⲁⲛϭⲓⲙⲉ ⲛⲉⲙϩⲁⲛⲑⲓϧⲓ ⲛⲉⲙϩⲁⲛⲣⲱⲟⲩϣ ⲙ**ⲃⲓⲱⲧⲓⲕⲟⲛ** ⲟⲩⲟϩ ⲛⲟⲩϩⲟϯ ϧⲉⲛⲟⲩϩⲟϯ ⲉⲧⲉϥⲓ ⲉϫⲉⲛⲑⲏⲛⲟⲩ ⲛϫⲉⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ",
+      "english": "'So be careful, or your hearts will be loaded down with carousing, drunkenness, and cares of this life, and that day will come on you suddenly.",
+      "source": "03_Luke_21",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲱⲟⲩϣ",
+        1,
+        14.338
+      ],
+      [
+        "ϩⲟϯ",
+        1,
+        11.535
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲓⲱⲧⲓⲕⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7136,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2474",
+    "grl_lemma": "βιωτικός",
+    "grl_meaning": "fit for life, lively, of or pertaining to life",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 316b; Preisigke 1:270"
+  }
+}

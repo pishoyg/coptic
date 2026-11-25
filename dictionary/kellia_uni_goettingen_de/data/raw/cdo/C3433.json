@@ -1,0 +1,58 @@
+{
+  "id": "C3433",
+  "forms": [
+    {
+      "id": "CF8765",
+      "orth": "ⲣⲥⲕⲓⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3911",
+      "bibliography": "CD 329a; KoptHWb 182; ChLCS 47a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3434",
+      "label": "ⲣⲙⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "grey-haired man"
+    },
+    {
+      "target": "C3431",
+      "label": "ⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "discoloured, grey hair"
+    },
+    {
+      "target": "C3432",
+      "label": "ⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "grey-haired"
+    },
+    {
+      "target": "C3435",
+      "label": "ⲥⲕⲙⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "spotted(?) with bald spots(?)"
+    }
+  ]
+}

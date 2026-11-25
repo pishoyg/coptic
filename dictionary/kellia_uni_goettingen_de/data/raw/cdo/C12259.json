@@ -1,0 +1,49 @@
+{
+  "id": "C12259",
+  "forms": [
+    {
+      "id": "CF33276",
+      "orth": "ϩⲛⲟⲩⲥϭⲣⲁϩⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS17263",
+      "bibliography": "CD 389b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12261",
+      "label": "ϫⲓⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "be quieted, silenced"
+    },
+    {
+      "target": "C12260",
+      "label": "ⲕⲱ ⲛⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "leave be"
+    },
+    {
+      "target": "C12161",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "rest, pause, be quiet; rest oneself (refl.)"
+    },
+    {
+      "target": "C12258",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "N",
+      "gloss": "quiet, rest"
+    }
+  ]
+}

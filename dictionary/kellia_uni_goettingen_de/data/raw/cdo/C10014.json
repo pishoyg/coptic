@@ -1,0 +1,134 @@
+{
+  "id": "C10014",
+  "forms": [
+    {
+      "id": "CF26160",
+      "orth": "ⲡⲁⲛⲧⲉⲗⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26162",
+      "orth": "ⲡⲁⲛⲧⲉⲗⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12561,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26161",
+      "orth": "ⲡⲁⲛⲧⲉⲗⲉⲓⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13091",
+      "bibliography": "DDGLC",
+      "cu_ID": "5948"
+    },
+    {
+      "id": "CS13092",
+      "bibliography": "DDGLC",
+      "cu_ID": "4287"
+    },
+    {
+      "id": "CS13093",
+      "bibliography": "DDGLC",
+      "cu_ID": "7170"
+    },
+    {
+      "id": "CS13094",
+      "bibliography": "DDGLC",
+      "cu_ID": "3329"
+    },
+    {
+      "id": "CS13095",
+      "bibliography": "DDGLC",
+      "cu_ID": "6968"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲛⲁϫⲓ ⲙⲡϣⲁϫⲉ ⲛⲟⲩⲱⲧ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲡⲁⲓ ⲉϯⲛⲁϫⲟⲟϥ ⲉⲣⲱⲧⲛ ⲧⲉⲛⲟⲩ ⲙⲛⲛⲉϥⲧⲩⲡⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉϥⲥⲭⲏⲙⲁ ⲧⲏⲣⲟⲩ ⲙⲛⲧϩⲉ ⲛϫⲱⲕ' ⲉⲃⲟⲗ ⲙⲡⲉϥⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲃⲟⲗ ϫⲉⲛⲧⲱⲧⲛ ⲛⲉ ⲛⲧⲉⲗⲓⲟⲥ ⲙ**ⲡⲁⲛⲧⲉⲗⲓⲟⲥ** ⲁⲩⲱ ⲛⲧⲱⲧⲛ ⲡⲉⲧⲛⲁϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲥⲟⲟⲩⲛ ⲧⲏⲣϥ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲙⲛⲧⲉϥⲟⲓⲕⲟⲛⲟⲙⲓⲁ ⲧⲏⲣⲥ ⲙⲛⲡⲉϥϫⲉ ⲛⲧⲱⲧⲛ ⲡⲉⲛⲧⲁⲩⲧⲁⲛϩⲉⲧ ⲧⲏⲩⲧⲛ ⲉⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲓⲙ :",
+      "english": "“And he who will receive the one and only word of that mystery which I shall now say unto you, and all its types and all its figures, and the manner of accomplishing its mystery,--for ye are perfect and all-perfect and ye will accomplish the whole gnosis of that mystery with its whole economy, for unto you all mysteries are entrusted,”",
+      "source": "Pistis Sophia Book 2 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:66-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲗⲓⲟⲥ",
+        1,
+        15.276
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        11.331
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲛⲧⲉⲗⲓⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12134,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3316",
+    "grl_lemma": "παντέλειος",
+    "grl_meaning": "in pure perfection",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1300a"
+  }
+}

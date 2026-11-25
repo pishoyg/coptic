@@ -1,0 +1,64 @@
+{
+  "id": "C6782",
+  "forms": [
+    {
+      "id": "CF15611",
+      "orth": "ⲣϩⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7496",
+      "bibliography": "CD 701a; ChLCS 93b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6779",
+      "label": "ϩⲣⲉ",
+      "pos": "N",
+      "gloss": "food, fodder; need"
+    },
+    {
+      "target": "C6780",
+      "label": "ϩⲣⲉ",
+      "pos": "N",
+      "gloss": "food, fodder; need"
+    },
+    {
+      "target": "C6781",
+      "label": "ϩⲣⲉⲃⲟⲧ",
+      "pos": "ADV",
+      "gloss": "per month"
+    },
+    {
+      "target": "C6784",
+      "label": "ϫⲓϩⲣⲉ",
+      "pos": "V",
+      "gloss": "get fodder"
+    },
+    {
+      "target": "C6783",
+      "label": "ϯϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give food"
+    }
+  ]
+}

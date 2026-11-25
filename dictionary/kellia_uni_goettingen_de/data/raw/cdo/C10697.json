@@ -1,0 +1,46 @@
+{
+  "id": "C10697",
+  "forms": [
+    {
+      "id": "CF29026",
+      "orth": "ⲧⲁⲣⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29028",
+      "orth": "ⲧⲁⲣⲙⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29027",
+      "orth": "ⲑⲁⲣⲙⲟⲩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11565,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14688",
+      "bibliography": "DDGLC",
+      "cu_ID": "3536"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "925",
+    "grl_lemma": "θέρμος",
+    "grl_meaning": "lupine (Lupinus albus)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 794b; Preisigke 1:674"
+  }
+}

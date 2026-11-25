@@ -1,0 +1,150 @@
+{
+  "id": "C11243",
+  "forms": [
+    {
+      "id": "CF31273",
+      "orth": "ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF31274",
+      "orth": "ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9607,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15854",
+      "bibliography": "DDGLC",
+      "cu_ID": "3317"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲁ ⲁⲩ**ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ** ⲙⲙⲟⲥ ⲛⲧⲟⲟⲧⲕ · ⲁⲣⲁ ⲁⲕϫⲓ ⲏⲡⲉ ⲙⲙⲟⲥϩⲁⲡⲁⲣⲓⲑⲙⲟⲥ ⲉⲧⲟϣ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲁ",
+        1,
+        13.331
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        11.065
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          1
+        ],
+        [
+          "ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲁ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϫⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          "ⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          "ⲩ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ",
+          "ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲩⲡⲟⲙⲛⲏⲥⲕⲉ_0_node",
+          "ⲁⲣⲁ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲁ_2_post_ϫⲓ",
+          "ⲁ_2_post_ϫⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9175,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2272",
+    "grl_lemma": "ὑπομνῄσκω",
+    "grl_meaning": "to mention, remenber",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1890a"
+  }
+}

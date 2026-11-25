@@ -1,0 +1,141 @@
+{
+  "id": "C9493",
+  "forms": [
+    {
+      "id": "CF24132",
+      "orth": "ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24133",
+      "orth": "ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9826,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24134",
+      "orth": "ⲕⲱⲙⲁⲣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12063",
+      "bibliography": "DDGLC",
+      "cu_ID": "4126"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲙⲧⲓⲑⲁⲗⲓⲁ ⲙⲡ**ⲕⲟⲙⲁⲣⲓⲧⲏⲥ** ⲡⲥⲁ ..ⲟⲩⲟⲟⲧⲉ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 2 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:12-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲙⲧⲓⲑⲁⲗⲓⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ⲟⲩⲟⲟⲧⲉ",
+        1,
+        17.139
+      ],
+      [
+        "..",
+        1,
+        13.94
+      ],
+      [
+        "ⲥⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲁ",
+          1
+        ],
+        [
+          "ⲥⲁ_1_post_ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          ".._2_post_ⲟⲩⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲟⲧⲉ_1_post_ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲟⲙⲁⲣⲓⲧⲏⲥ_0_node",
+          "ⲡ_2_post_ⲥⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲁ",
+          "ⲥⲁ_1_post_ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲥⲁ_1_post_ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+          ".._2_post_ⲟⲩⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          ".._2_post_ⲟⲩⲟⲟⲧⲉ",
+          "ⲟⲩⲟⲟⲧⲉ_1_post_ⲕⲟⲙⲁⲣⲓⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9396,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1251",
+    "grl_lemma": "κωμαρίτης",
+    "grl_meaning": "gardener , fruiterer",
+    "grl_pos": "noun",
+    "grl_ref": null
+  }
+}

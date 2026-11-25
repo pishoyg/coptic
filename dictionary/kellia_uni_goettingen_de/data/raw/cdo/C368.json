@@ -1,0 +1,80 @@
+{
+  "id": "C368",
+  "forms": [
+    {
+      "id": "CF1570",
+      "orth": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1571",
+      "orth": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS408",
+      "bibliography": "CD 31a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C366",
+      "type": "syn",
+      "label": "conception"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C369",
+      "label": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C363",
+      "label": "ⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "pregnant"
+    },
+    {
+      "target": "C365",
+      "label": "ⲉⲣⲃⲟⲕⲓ",
+      "pos": "V",
+      "gloss": "conceive; conceive (a child)"
+    },
+    {
+      "target": "C364",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "V",
+      "gloss": "conceive; conceive (a child)"
+    },
+    {
+      "target": "C366",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C367",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "pregnant (woman)"
+    }
+  ]
+}

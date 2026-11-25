@@ -1,0 +1,104 @@
+{
+  "id": "C10025",
+  "forms": [
+    {
+      "id": "CF26211",
+      "orth": "ⲡⲁⲡⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26212",
+      "orth": "ⲡⲁⲡⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7063,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13116",
+      "bibliography": "DDGLC",
+      "cu_ID": "7366"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲧⲁⲟⲩⲉ ⲟⲩϣⲁϫⲉ ⲛⲟⲩⲱⲧ ⲉⲡ**ⲡⲁⲡⲁⲥ** ⲧⲁⲣⲉϥϯϩⲏⲩ ·",
+      "english": "'Tell the Father one word that he may benefit.'",
+      "source": "Apophthegmata Patrum Sahidic 114: Theophilus Beta",
+      "urn": "urn:cts:copticLit:ap.114.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯϩⲏⲩ",
+        2,
+        15.728
+      ],
+      [
+        "ⲧⲁⲣⲉ",
+        2,
+        15.715
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        2,
+        13.036
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲡⲁⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6616,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5797",
+    "grl_lemma": "παπᾶς",
+    "grl_meaning": "papa, father (often as title)",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 839a"
+  }
+}

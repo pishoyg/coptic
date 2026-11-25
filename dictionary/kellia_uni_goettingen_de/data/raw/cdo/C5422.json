@@ -1,0 +1,64 @@
+{
+  "id": "C5422",
+  "forms": [
+    {
+      "id": "CF12815",
+      "orth": "ϯⲱⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6076",
+      "bibliography": "CD 518a; KoptHWb 289; ChLCS 71b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5425",
+      "label": "ϭⲓⲛⲱⲱ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C5423",
+      "label": "ϯⲱⲱ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C5424",
+      "label": "ⲙⲉⲛⲧⲱ",
+      "pos": "N",
+      "gloss": "pregnancy"
+    },
+    {
+      "target": "C5420",
+      "label": "ⲱⲱ",
+      "pos": "V",
+      "gloss": "conceive"
+    },
+    {
+      "target": "C5421",
+      "label": "ⲱⲱ",
+      "pos": "N",
+      "gloss": "conception"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "C1317",
+  "forms": [
+    {
+      "id": "CF4041",
+      "orth": "ⲭⲣⲉⲙⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF4042",
+      "orth": "ⲭⲉⲙⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5634,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF4043",
+      "orth": "ⲭⲉⲙⲧⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1526",
+      "bibliography": "CD 116b-117a; KoptHWb 68"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1315",
+      "label": "ⲕⲣⲙⲧⲥ",
+      "pos": "N",
+      "gloss": "smoke, mist; obscurity, darkness; rust; fire"
+    },
+    {
+      "target": "C1313",
+      "label": "ⲕⲣⲟⲙⲣⲙ",
+      "pos": "V",
+      "gloss": "be dark"
+    },
+    {
+      "target": "C1314",
+      "label": "ⲕⲣⲟⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1316",
+      "label": "ⲣⲕⲣⲙⲧⲥ",
+      "pos": "V",
+      "gloss": "be smoky, dark"
+    }
+  ],
+  "etym": {
+    "egy_num": "161740",
+    "egy_lemma": "qrm.t",
+    "demo_num": "d6397",
+    "demo_lemma": "qrm",
+    "english": "ashes",
+    "german": "Asche",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/161740",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6397"
+  }
+}

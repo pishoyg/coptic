@@ -1,0 +1,45 @@
+{
+  "id": "C5784",
+  "forms": [
+    {
+      "id": "CF13561",
+      "orth": "ϭⲓⲛϣⲓⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6462",
+      "bibliography": "CD 556a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5785",
+      "label": "ϣⲓⲕ",
+      "pos": "N",
+      "gloss": "what is dug, depth"
+    },
+    {
+      "target": "C5782",
+      "label": "ϣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "dig"
+    },
+    {
+      "target": "C5783",
+      "label": "ϣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "what is dug, depth"
+    }
+  ]
+}

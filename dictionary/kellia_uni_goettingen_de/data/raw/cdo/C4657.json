@@ -1,0 +1,87 @@
+{
+  "id": "C4657",
+  "forms": [
+    {
+      "id": "CF11277",
+      "orth": "ϯⲟⲩ ⲛϣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS5258",
+      "bibliography": "CD 440b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5704",
+      "type": "cf",
+      "label": "hundred"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4654",
+      "label": "ϫⲟⲩⲧⲏ",
+      "pos": "NUM",
+      "gloss": "twenty-five"
+    },
+    {
+      "target": "C4651",
+      "label": "ϯⲟⲩ",
+      "pos": "NUM",
+      "gloss": "five"
+    },
+    {
+      "target": "C4658",
+      "label": "ϯⲟⲩ ⲛϣⲟ",
+      "pos": "NUM",
+      "gloss": "five thousand"
+    },
+    {
+      "target": "C4659",
+      "label": "ⲙⲉϩϯⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fifth"
+    },
+    {
+      "target": "C4660",
+      "label": "ⲙⲉϩⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fiftieth"
+    },
+    {
+      "target": "C4653",
+      "label": "ⲙⲛⲧⲏ",
+      "pos": "NUM",
+      "gloss": "fifteen"
+    },
+    {
+      "target": "C4652",
+      "label": "ⲡϯⲟⲩ",
+      "pos": "N",
+      "gloss": "Thursday"
+    },
+    {
+      "target": "C4655",
+      "label": "ⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fifty"
+    },
+    {
+      "target": "C4656",
+      "label": "ⲧⲁⲓⲟⲩⲙⲁϥ",
+      "pos": "NUM",
+      "gloss": "eighty"
+    }
+  ]
+}

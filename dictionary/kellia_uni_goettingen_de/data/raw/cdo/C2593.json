@@ -1,0 +1,81 @@
+{
+  "id": "C2593",
+  "forms": [
+    {
+      "id": "CF6979",
+      "orth": "ⲛⲁⲩⲓ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲛⲁⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4874,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲛⲁϩⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.55,
+        "rank": 1034,
+        "count": 47
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2974",
+      "bibliography": "CD 235b; CED 114; KoptHWb 130, 526; DELC 147"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲥⲱⲧⲉⲙ ⲇⲉ ⲛϫⲉⲏⲣⲱⲇⲏⲥ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲓⲱⲁⲛⲛⲏⲥ ⲫⲏ ⲁⲛⲟⲕ ⲉⲧⲁⲓⲉⲗⲧⲉϥ**ⲛⲁϩⲃⲓ** ⲛⲑⲟϥ ⲡⲉⲧⲁϥⲧⲱⲛϥ .",
+      "english": "But Herod, when he heard this, said, 'This is John, whom I beheaded. He has risen from the dead.'",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲱⲛϥ ⲇⲉ ⲛϫⲉⲁⲃⲣⲁⲁⲙ ⲛϣⲱⲣⲡ ⲁϥϭⲓ ⲛϩⲁⲛⲱⲓⲕ ⲛⲉⲙⲟⲩⲁⲥⲕⲟⲥ ⲙⲙⲱⲟⲩ ⲟⲩⲟϩ ⲁϥⲧⲏⲓϥ ⲛⲁⲅⲁⲣ ⲟⲩⲟϩ ⲁϥⲧⲁⲗⲱⲟⲩ ⲉⲧⲉⲥ**ⲛⲁϩⲃⲓ** ⲛⲉⲙⲡⲓⲁⲗⲟⲩ ⲟⲩⲟϩ ⲁϥⲟⲩⲟⲣⲡⲥ ⲉⲃⲟⲗ ⲉⲧⲁⲥϣⲉ ⲇⲉ ⲛⲁⲥⲥⲱⲣⲉⲙ ⲡⲉ ⲛϧⲣⲏⲓ ϩⲓⲡϣⲁϥⲉ ϧⲁⲧⲉⲛⲧϣⲱϯ ⲙⲡⲁⲛⲁϣ",
+      "english": "And Abraam rose up in the morning and took loaves and a skin of water, and gave to Agar, and he put the child on her shoulder, and sent her away, and she having departed wandered in the wilderness near the well of the oath.",
+      "source": "01_Genesis_21",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲩⲗⲏ ⲛⲛⲉⲫⲑⲁⲗⲓⲙ ⲗⲓⲙⲁⲃⲓ ⲡϣⲏⲣⲓ **ⲛⲁⲃⲓ**",
+      "english": "Of the tribe of Dan, Amiel the son of Gamali.",
+      "source": "04_Numeri_13",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.59,
+      "rank": 876,
+      "count": 50
+    }
+  },
+  "etym": {
+    "egy_num": "80060",
+    "egy_lemma": "njw.y",
+    "demo_num": "d3089",
+    "demo_lemma": "nw",
+    "english": "lance; spear",
+    "german": "Speer; Lanze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/80060",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3089"
+  }
+}

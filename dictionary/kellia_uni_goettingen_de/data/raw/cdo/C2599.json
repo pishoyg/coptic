@@ -1,0 +1,72 @@
+{
+  "id": "C2599",
+  "forms": [
+    {
+      "id": "CF6992",
+      "orth": "ⲛϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5830,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF6993",
+      "orth": "ⲛϣⲁⲗⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6994",
+      "orth": "ⲛϣⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2428,
+        "count": 21
+      }
+    },
+    {
+      "id": "CF6995",
+      "orth": "ⲛϣⲁ⸗",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Relativkonverter",
+    "note": "Relativkonverter + Aorist ϣⲁⲣⲉ-",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS2980",
+      "bibliography": "KoptHWb 131; DELC 148"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛⲧϩⲉ **ⲛϣⲁⲣⲉ**ⲟⲩⲣⲟⲟⲩⲉ ⲙⲟⲩϩ ϩⲓⲧⲛⲟⲩϫⲃⲃⲉⲥ ⲛⲕⲱϩⲧ ⲁⲩⲱ ⲉϣⲁⲩⲣⲱⲕϩ ⲙⲙⲟϥ ϩⲓⲧⲛⲟⲩϣⲁϩ ⲉϥⲥⲱⲕ ⲧⲉⲩⲛⲟⲩⲛⲉ ⲛⲁϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲛⲉⲓϣⲟⲉⲓϣ ⲁⲩⲱ ⲡⲉⲩϩⲣⲏⲣⲉ ⲛⲁϫⲓⲥⲉ ⲛⲧϩⲉ ⲛⲟⲩϣϩⲓϭ ⲙⲡⲟⲩⲟⲩⲉϣⲡⲛⲟⲙⲟⲥ ⲅⲁⲣ ⲙⲡϫⲟⲉⲓⲥ ⲥⲁⲃⲁⲱⲑ ⲁⲗⲗⲁ ⲁⲩϯⲛⲟⲩϭⲥ ⲙⲡϣⲟϫⲛⲉ ⲙⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "Therefore as stubble shall be burnt by a coal of fire, and shall be consumed by a violent flame, their root shall be as chaff, and their flower shall go up as dust: for they rejected the law of the Lord of hosts, and insulted the word of the Holy One of Israel.",
+      "source": "Isaiah 5",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲁⲡⲗⲁⲛⲁ ⲇⲉ ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲉⲛⲁⲧⲟϭϥ ⲉⲣϣⲁⲛϫⲟϥ ⲇⲉ ⲉϩⲧⲟⲟⲩⲉ ⲉϥⲛⲁϯⲟⲩⲱ ⲉⲡⲟϩⲥϥ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧϥⲛⲁϯⲟⲩⲱ ⲁⲩⲱ ⲛⲧϩⲉ **ⲛϣⲁⲣⲉ**ⲟⲩⲉⲓⲱⲧ ⲡⲱϣ ⲉϫⲛⲛⲉϥϣⲏⲣⲉ",
+      "english": "In the day wherein thou shalt plant thou shalt be deceived; but if thou sow in the morning, the seed shall spring up for a crop in the day wherein thou shalt obtain an inheritance, and as a man's father, thou shalt obtain an inheritance for thy sons.",
+      "source": "Isaiah 17",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲏⲧ ⲛⲧⲙⲱⲁⲃⲓⲧⲏⲥ ⲱϣ ⲉⲃⲟⲗ ⲛϩⲏⲧⲥ ϣⲁⲥⲉⲅⲱⲣ ⲟⲩⲃⲁϩⲥⲉ ⲅⲁⲣ ⲛϣⲙⲛⲧⲣⲟⲙⲡⲉ ⲧⲉ ϩⲣⲁⲓ ⲇⲉ ⲙⲡⲉⲓⲉϩⲣⲁⲓ ⲉⲣⲁⲧⲉ ⲥⲉⲛⲏⲩ ⲉϩⲣⲁⲓ ⲉⲩⲣⲓⲙⲉ ϩⲓⲧⲉϩⲓⲏ ⲛⲁⲣⲱⲛⲓⲉⲓⲙ ⲛⲧϩⲉ **ⲛϣⲁⲣⲉ**ⲟⲩⲟⲩⲱϣϥ ⲱϣ ⲉⲃⲟⲗ ⲙⲛⲟⲩⲕⲙⲧⲟ",
+      "english": "The heart of the region of Moab cries within her to Segor; for it is as a heifer of three years old: and on the ascent of Luith they shall go up to thee weeping by the way of Aroniim: she cries, Destruction, and trembling.",
+      "source": "Isaiah 15",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

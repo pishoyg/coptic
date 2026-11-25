@@ -1,0 +1,109 @@
+{
+  "id": "C8775",
+  "forms": [
+    {
+      "id": "CF21034",
+      "orth": "ⲇⲓⲏⲅⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21035",
+      "orth": "ⲇⲓⲏⲅⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11258,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10500",
+      "bibliography": "DDGLC",
+      "cu_ID": "4226"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲉⲧⲛⲉⲓⲙⲉ ϭⲉ ϫⲉⲟⲩⲡⲛⲉⲩⲙⲁ ⲧⲟ ⲡϩⲟⲣⲟⲥ · ⲁⲩⲱ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲡⲉ ⲡⲉⲛⲉⲓⲱⲧ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲁⲡⲁ ⲡⲉⲥⲩⲛⲑⲓⲟⲥ ⁛— ⲉϣϫⲉⲙⲙⲟⲛ ⲥⲱⲧⲙ ⲉⲡⲉ**ⲇⲓⲏⲅⲏⲙⲁ** ⲛⲧⲉⲧⲛⲣϣⲡⲏⲣⲉ ⁛",
+      "english": "Now ye must know that our righteous father Apa Pisentius was inspired by the Holy Spirit, and he was a righteous man, and if (ye imagine) that he was not, hearken ye unto the following narrative, and ye will assuredly be struck with wonder.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "⁛",
+        1,
+        14.489
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        12.823
+      ],
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        12.728
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        9.27
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲏⲅⲏⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10845,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3406",
+    "grl_lemma": "διήγημα",
+    "grl_meaning": "tale",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 427a; Preisigke 1:377"
+  }
+}

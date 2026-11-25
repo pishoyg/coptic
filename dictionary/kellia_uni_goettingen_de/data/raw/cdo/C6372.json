@@ -1,0 +1,880 @@
+{
+  "id": "C6372",
+  "forms": [
+    {
+      "id": "CF14759",
+      "orth": "ϩⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.57,
+        "rank": 244,
+        "count": 721
+      }
+    },
+    {
+      "orth": "ϩⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.73,
+        "rank": 190,
+        "count": 571
+      }
+    },
+    {
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 20.39,
+        "rank": 68,
+        "count": 3217
+      }
+    },
+    {
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 15.12,
+        "rank": 88,
+        "count": 1282
+      }
+    },
+    {
+      "orth": "ϩⲓⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.97,
+        "rank": 220,
+        "count": 784
+      }
+    },
+    {
+      "orth": "ⲉϩⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6374,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲉϩⲏⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11148,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲓ-",
+      "dialect": "A",
+      "id": "227.4"
+    },
+    {
+      "orth": "ⲉϩⲓ",
+      "dialect": "A",
+      "id": "227.5"
+    },
+    {
+      "orth": "ⲉϩⲓⲉⲓ",
+      "dialect": "A",
+      "id": "227.6"
+    },
+    {
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "A",
+      "id": "227.7"
+    },
+    {
+      "orth": "ϩⲏ",
+      "dialect": "F",
+      "id": "227.8"
+    },
+    {
+      "orth": "ⲉϩⲏ",
+      "dialect": "L",
+      "id": "227.9"
+    },
+    {
+      "orth": "ϩⲓ-",
+      "dialect": "L",
+      "id": "227.10"
+    },
+    {
+      "orth": "ϩⲏⲧ⸗",
+      "dialect": "L",
+      "id": "227.11"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7068",
+      "bibliography": "CD 640b-642b; CED 270; KoptHWb 350; DELC 285a; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲛⲑⲟⲕ ⲁⲛ ⲡⲉ ⲡϭⲟⲉⲓⲥ ⲡⲁⲛⲟⲩϯ ⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲛⲧⲏⲓ ⲓⲥϫⲉⲛ**ϩⲏ** ⲟⲩⲟϩ ⲛⲛⲉⲛⲙⲟⲩ ⲡϭⲟⲉⲓⲥ ⲁⲕⲑⲁϣϥ ⲉⲩϩⲁⲡ ⲟⲩⲟϩ ⲁϥⲙⲟⲛⲕⲧ ⲉⲥⲟϩⲓ ϧⲉⲛⲧⲉϥⲥⲃⲱ .",
+      "english": "Art not thou from the beginning, O Lord God, my Holy One? and surely we shall not die. O Lord, thou hast established it for judgment, and he has formed me to chasten with his correction.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁⲧ**ϩⲏ** ⲛⲉⲛⲉϩ ⲁϥⲥⲟⲛⲧⲧ ϫⲓⲛⲛϣⲟⲣⲡ ⲁⲩⲱ ⲛϯⲛⲁⲱϫⲛ ⲁⲛ ⲛϣⲁⲉⲛⲉϩ",
+      "english": "He created me from the beginning before the world, and I shall never fail.",
+      "source": "Sirach 24",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲉϣⲱⲡⲓ ⲅⲁⲣ ⲛϫⲉⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ϩⲟϫϩⲉϫ ⲙⲡⲉⲟⲩⲟⲛ ϣⲱⲡⲓ ⲙⲡⲉϥⲣⲏϯ ⲓⲥϫⲉⲛ**ϩⲏ** ⲙⲡⲓⲥⲱⲛⲧ ⲉⲧⲁϥⲥⲟⲛⲧϥ ⲛϫⲉⲫⲛⲟⲩϯ ϣⲁⲉϧⲟⲩⲛ ⲉϯⲛⲟⲩ ⲟⲩⲟϩ ⲛⲛⲉⲟⲩⲟⲛ ϣⲱⲡⲓ ⲟⲛ",
+      "english": "For in those days there will be oppression, such as there has not been the like from the beginning of the creation which God created until now, and never will be.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲉϥϥⲱⲧⲉ ⲉⲃⲟⲗ ⲛϩⲉⲛⲛⲟϭ ⲛϩⲉⲑⲛⲟⲥ ⲉⲩϫⲟⲟⲣ ⲉⲣⲟⲕ ϩⲁⲧⲉⲕ**ϩⲏ** ⲉϫⲓⲧⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉⲩⲕⲁϩ ⲉⲧⲁⲁϥ ⲛⲁⲕ ⲛⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲉⲟⲩⲛⲧⲁⲕϥ ⲙⲡϩⲟⲟⲩ",
+      "english": "to destroy nations great and stronger than thou before thy face, to bring thee in, to give thee their land to inherit, as thou hast it this day.",
+      "source": "Deuteronomy 4",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲉⲛⲁϥⲭⲏ ⲓⲥϫⲉⲛ **ϩⲏ** ϧⲁⲧⲉⲛⲫⲛⲟⲩϯ .",
+      "english": "The same was in the beginning with God.",
+      "source": "04_John_01",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲉϥⲡⲱⲧ ⲉϩⲟⲩⲛ ⲉⲣⲟⲟⲩ ⲛϭⲓⲡⲣⲉϥϩⲱⲧⲃ ⲡⲉⲧⲛⲁϩⲉⲧⲃⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ⲉⲙⲡϥϯϩⲧⲏϥ ⲁⲩⲱ ⲡⲁⲓ ⲉⲛϥⲙⲟⲥⲧⲉ ⲙⲙⲟϥ ⲁⲛ ϩⲁⲧ**ϩⲏ** ⲛⲥⲁϥ ⲙⲛϣⲙⲧ ⲉⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ⲁⲩⲱ ⲉϥⲉⲡⲱⲧ ⲉϩⲟⲩⲛ ⲉⲟⲩⲉⲓ ⲛⲛⲉⲓⲡⲟⲗⲓⲥ ⲛϥⲱⲛϩ",
+      "english": "that the slayer might flee thither, who should have slain his neighbour unintentionally, and should not have hated him in times past, and he shall flee to one of these cities and live:",
+      "source": "Deuteronomy 4",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        74,
+        29.689
+      ],
+      [
+        "ϩⲁ",
+        330,
+        25.427
+      ],
+      [
+        "ⲧ",
+        566,
+        23.968
+      ],
+      [
+        "ϩⲓ",
+        180,
+        22.169
+      ],
+      [
+        "ⲙ",
+        429,
+        22.048
+      ],
+      [
+        "ⲡ",
+        394,
+        20.826
+      ],
+      [
+        "ⲛ",
+        400,
+        20.203
+      ],
+      [
+        "ⲉ",
+        301,
+        19.981
+      ],
+      [
+        "ϥ",
+        260,
+        19.052
+      ],
+      [
+        "ⲛϭⲓ",
+        111,
+        18.665
+      ],
+      [
+        "ⲉⲓ",
+        90,
+        18.347
+      ],
+      [
+        "ⲁⲩⲱ",
+        163,
+        18.256
+      ],
+      [
+        "ⲟⲩ",
+        179,
+        18.134
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        33,
+        18.06
+      ],
+      [
+        "ⲁ",
+        183,
+        18.054
+      ],
+      [
+        "ⲙⲙⲟ",
+        116,
+        18.017
+      ],
+      [
+        "ⲣⲣⲟ",
+        65,
+        17.986
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        76,
+        17.951
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        50,
+        17.63
+      ],
+      [
+        "ⲧⲉϥ",
+        55,
+        16.771
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          288
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          39
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          90
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          24
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          35
+        ],
+        [
+          "ⲟⲩ_1_post_ϩⲏ",
+          20
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          13
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          13
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          12
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          11
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          32
+        ],
+        [
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          11
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          7
+        ],
+        [
+          "ⲧ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          6
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          6
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          5
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          5
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          3
+        ],
+        [
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲧ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          "ⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          375
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          34
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          29
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          55
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          55
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          21
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          19
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          19
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          17
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          31
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          10
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          5
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          3
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛ_1_post_ϩⲏ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.68,
+      "rank": 201,
+      "count": 743
+    },
+    "B": {
+      "rate": 7.06,
+      "rank": 157,
+      "count": 599
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6377",
+      "label": "ϩⲁⲑⲏ",
+      "pos": "ADV",
+      "gloss": "in front of, before"
+    },
+    {
+      "target": "C6373",
+      "label": "ϩⲏⲧ⸗",
+      "pos": "ADV",
+      "gloss": "forward, before"
+    },
+    {
+      "target": "C6379",
+      "label": "ϩⲓϩⲏ",
+      "pos": "ADV",
+      "gloss": "to, in front, forward"
+    },
+    {
+      "target": "C6378",
+      "label": "ϩⲓⲑⲏ",
+      "pos": "ADV",
+      "gloss": "to, in front, forward"
+    },
+    {
+      "target": "C6380",
+      "label": "ϫⲓⲛⲛϩⲏ",
+      "pos": "ADV",
+      "gloss": "from beginning"
+    },
+    {
+      "target": "C6375",
+      "label": "ⲉⲑⲏ",
+      "pos": "ADV",
+      "gloss": "to the front, forwards"
+    },
+    {
+      "target": "C6376",
+      "label": "ⲛⲥⲁⲑⲏ",
+      "pos": "ADV",
+      "gloss": "before, formerly"
+    },
+    {
+      "target": "C6374",
+      "label": "ⲣϩⲏⲧⲥ",
+      "pos": "V",
+      "gloss": "make beginning"
+    }
+  ],
+  "etym": {
+    "egy_num": "100310",
+    "egy_lemma": "ḥꜣ.t",
+    "demo_num": "dm1087",
+    "demo_lemma": "ḥꜣ.t",
+    "english": "forepart; beginning; foremost; best",
+    "german": "Vorderseite; Anfang; Bestes; Spitze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/100310",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1087"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "C8607",
+  "forms": [
+    {
+      "id": "CF20300",
+      "orth": "ⲃⲉⲃⲁⲓⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF20302",
+      "orth": "ⲃⲉⲃⲁⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20301",
+      "orth": "ⲃⲁⲓⲃⲁⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20303",
+      "orth": "ⲃⲉⲃⲉⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20304",
+      "orth": "ⲃⲓⲃⲁⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20305",
+      "orth": "ⲃⲓⲃⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20306",
+      "orth": "ⲡⲉⲡⲁⲓⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10147",
+      "bibliography": "DDGLC",
+      "cu_ID": "2903"
+    },
+    {
+      "id": "CS10148",
+      "bibliography": "DDGLC",
+      "cu_ID": "2229"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "376",
+    "grl_lemma": "βεβαιόω",
+    "grl_meaning": "to confirm, establish, make good",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 312b; Preisigke 1:262"
+  }
+}

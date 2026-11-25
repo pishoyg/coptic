@@ -1,0 +1,353 @@
+{
+  "id": "C1323",
+  "forms": [
+    {
+      "id": "CF4055",
+      "orth": "ⲕⲣⲟⲩⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2913,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ⲭⲣⲟⲩⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2080,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ⲕⲣⲟⲩⲣ",
+      "dialect": "F",
+      "id": "849.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1532",
+      "bibliography": "CD 117b; KoptHWb 68"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲉⲩⲕⲁϩ ⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛϩⲉⲛ**ⲕⲣⲟⲩⲣ** ϩⲛⲛⲧⲁⲙⲉⲓⲟⲛ ⲛⲛⲉⲩⲣⲣⲱⲟⲩ",
+      "english": "Their land produced frogs abundantly, in the chambers of their kings.",
+      "source": "Psalms 104",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:104",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲫⲁⲣⲁⲱ ⲙⲟⲩⲧⲉ ⲉⲙⲱⲩⲥⲏⲥ ⲙⲛⲁⲁⲣⲱⲛ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉϣⲗⲏⲗ ⲉϩⲣⲁⲓ ⲉϫⲱⲉⲓ ⲛⲛⲁϩⲣⲙⲡϫⲟⲉⲓⲥ ⲛϥϥⲓ ⲛⲉⲓ**ⲕⲣⲟⲩⲣ** ⲉⲃⲟⲗ ⲙⲙⲟⲉⲓ ⲉⲃⲟⲗ ϩⲛⲡⲁⲗⲁⲟⲥ ⲛⲧⲁⲕⲱ ⲉⲃⲟⲗ ⲙⲡⲗⲁⲟⲥ ⲛⲥⲉϣⲱⲱⲧ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉⲩⲛⲟⲩⲧⲉ",
+      "english": "And Pharao called Moses and Aaron, and said, Pray for me to the Lord, and let him take away the frogs from me and from my people; and I will send them away, and they shall sacrifice to the Lord.",
+      "source": "Exodus 8",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲛⲅⲟⲩⲱϣ ⲁⲛ ⲉⲕⲱ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲣⲱϩⲧ ⲛⲛⲉⲕⲧⲟϣ ⲧⲏⲣⲟⲩ ⲛϩⲉⲛ**ⲕⲣⲟⲩⲣ**",
+      "english": "And if thou wilt not send them forth, behold, I afflict all thy borders with frogs:",
+      "source": "Exodus 7",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲟⲩⲉ",
+        2,
+        17.369
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        4,
+        14.401
+      ],
+      [
+        "ϫⲛ",
+        2,
+        13.121
+      ],
+      [
+        "ⲧⲣⲓⲣ",
+        1,
+        12.884
+      ],
+      [
+        "ⲛ",
+        19,
+        12.646
+      ],
+      [
+        "ⲛⲉ",
+        7,
+        11.828
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        5,
+        11.355
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        11.133
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        6,
+        10.313
+      ],
+      [
+        "ⲧⲁⲙⲉⲓⲟⲛ",
+        1,
+        10.265
+      ],
+      [
+        "ⲁϣⲏ",
+        1,
+        10.168
+      ],
+      [
+        "ⲡ",
+        9,
+        10.1
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        2,
+        9.597
+      ],
+      [
+        "ⲓⲉⲣⲟ",
+        1,
+        9.593
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        9.561
+      ],
+      [
+        "ϩⲱⲃⲥ",
+        1,
+        9.369
+      ],
+      [
+        "ⲟⲩⲟⲙ",
+        1,
+        8.956
+      ],
+      [
+        "ⲧⲱϣ",
+        1,
+        8.652
+      ],
+      [
+        "ϩⲉ",
+        3,
+        8.575
+      ],
+      [
+        "ⲁⲁⲣⲱⲛ",
+        1,
+        8.472
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲣⲟⲩⲣ_0_node",
+          14
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲟⲩⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲣⲟⲩⲣ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_7_post_ⲥⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϫⲛ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲟⲟⲩⲉ_2_post_ϫⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲕⲣⲟⲩⲣ",
+          "ⲕⲣⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲩⲣ_0_node",
+          "ⲙ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲣⲟⲩⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          "ⲧⲏⲣ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲕⲁϩ",
+          "ϥ_5_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲕⲣⲟⲩⲣ",
+          "ⲕⲣⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲩⲣ_0_node",
+          "ⲁⲩⲱ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ϩⲙϩⲁⲗ",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲣⲟⲩⲣ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲩⲣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲏⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲛ",
+          "ⲁⲩⲱ_7_post_ⲥⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲩⲣ_0_node",
+          "ϫⲛ_1_post_ⲕⲣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϫⲛ_1_post_ⲕⲣⲟⲩⲣ",
+          "ⲟⲟⲩⲉ_2_post_ϫⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2586,
+      "count": 15
+    }
+  },
+  "etym": {
+    "egy_num": "161780",
+    "egy_lemma": "qrr",
+    "demo_num": "d6402",
+    "demo_lemma": "qrr",
+    "english": "frog",
+    "german": "Frosch",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/161780",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6402"
+  }
+}

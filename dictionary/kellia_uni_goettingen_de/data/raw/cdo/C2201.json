@@ -1,0 +1,72 @@
+{
+  "id": "C2201",
+  "forms": [
+    {
+      "id": "CF6120",
+      "orth": "ⲙⲉϣⲉ ⲛⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4335,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Indefinitpronomen",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2543",
+      "bibliography": "CD 201b; KoptHWb 108; DELC 128; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲙⲉϣⲉⲛⲓⲙ** ⲡⲉ ⲛϣⲏⲣⲉϣⲏⲙ .",
+      "english": "But it was some other youth.”",
+      "source": "Apophthegmata Patrum Sahidic 101: Macarius 1",
+      "urn": "urn:cts:copticLit:ap.101.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ⲙⲡⲛⲁⲩ ⲉϥⲛⲁϩⲙⲟⲟⲥ ⲉⲛⲟⲩϥⲧ ϣⲁⲣⲉⲛⲉϥⲙⲉⲉⲩⲉ ϫⲟⲟⲥ ⲛⲁϥ · ϫⲉⲃⲱⲕ **ϣⲁⲙⲉϣⲉ **ⲛⲓⲙ**** ⲛϩⲗⲗⲟ ·",
+      "english": "and just at the time he was sitting to weave, his thoughts said to him, 'Go to this particular old man.'",
+      "source": "Apophthegmata Patrum Sahidic 092: Anonymous Nau 278",
+      "urn": "urn:cts:copticLit:ap.92.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲃⲱⲕ **ϣⲁⲙⲉϣⲉ **ⲛⲓⲙ**** ⲛⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ ·",
+      "english": "He said to him, 'Go to this particular archimandrite,",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3940,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2202",
+      "label": "ⲙⲉϣⲁⲕ",
+      "pos": "PTC",
+      "gloss": "(\"thou knowest not\") perhaps"
+    },
+    {
+      "target": "C2200",
+      "label": "ⲙⲉϣⲉ",
+      "pos": "V",
+      "gloss": "not know"
+    }
+  ]
+}

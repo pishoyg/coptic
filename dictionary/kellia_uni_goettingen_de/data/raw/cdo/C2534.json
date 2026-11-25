@@ -1,0 +1,177 @@
+{
+  "id": "C2534",
+  "forms": [
+    {
+      "id": "CF6859",
+      "orth": "ⲛⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.94,
+        "rank": 743,
+        "count": 149
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "2. Pers.",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2914",
+      "bibliography": "(CD 11b); CED 112; KoptHWb 126; DELC 145; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲟⲉⲥ ⲡⲉϫⲁϥ ⲛϩⲣⲟⲩⲑ ϫⲉⲙⲡⲉⲥⲱⲧⲙ ⲧⲁϣⲉⲉⲣⲉ ϫⲉⲙⲡⲣⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲕⲉⲉⲓⲱϩⲉ ⲛϣⲙⲙⲟ ⲉⲥⲣⲓⲧ ⲛϩⲏⲧϥ **ⲛⲧⲟ** ϭⲉ ⲙⲡⲣⲣⲡⲃⲟⲗ ⲙⲡⲉⲓⲙⲁ ⲁⲗⲗⲁ ⲧⲟϭⲉ ⲉⲛⲁⲕⲉϣⲉⲉⲣⲉ ϣⲏⲙ",
+      "english": "And Booz said to Ruth, Hast thou not heard, my daughter? go not to glean in another field; and depart not thou hence, join thyself here with my damsels.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲡⲉⲓⲙⲁ ϫⲓⲧ**ⲉ** ⲛϭⲟⲛⲥ ϩⲛⲟⲩ ·",
+      "english": "In what was it that this place did you violence?",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲉ**ⲣ**ⲕⲱ ⲉⲡⲁϩⲟⲩ ⲛϩⲏⲧϥ ·",
+      "english": "and that thou wnlt not neglect it,",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉ",
+        84,
+        16.775
+      ],
+      [
+        "ⲛ",
+        114,
+        14.103
+      ],
+      [
+        "ⲁⲣ",
+        13,
+        13.987
+      ],
+      [
+        "ⲡ",
+        93,
+        13.91
+      ],
+      [
+        "ⲣ",
+        29,
+        13.783
+      ],
+      [
+        "ⲥⲙⲁⲙⲁⲁⲧ",
+        12,
+        13.689
+      ],
+      [
+        "ϩⲱⲱ",
+        20,
+        13.221
+      ],
+      [
+        "ϫⲉ",
+        47,
+        12.606
+      ],
+      [
+        "ⲙⲁⲣⲓⲁ",
+        11,
+        12.5
+      ],
+      [
+        "ⲧⲉⲣⲁⲱ",
+        2,
+        12.393
+      ],
+      [
+        "ⲁⲣⲉ",
+        4,
+        12.306
+      ],
+      [
+        "ⲇⲉ",
+        35,
+        12.169
+      ],
+      [
+        "ⲡⲟⲩ",
+        11,
+        11.803
+      ],
+      [
+        "ϫⲡⲟ",
+        11,
+        11.543
+      ],
+      [
+        "ⲧⲁ",
+        19,
+        11.489
+      ],
+      [
+        "ⲁⲫⲑⲟⲛⲓⲁ",
+        2,
+        11.393
+      ],
+      [
+        "ⲣⲙⲁⲅⲉⲓⲁ",
+        2,
+        11.393
+      ],
+      [
+        "ⲁ",
+        44,
+        11.218
+      ],
+      [
+        "ϫⲟⲕⲙ",
+        3,
+        11.148
+      ],
+      [
+        "ⲧ",
+        33,
+        11.0
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 7.43,
+      "rank": 137,
+      "count": 1180
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2556",
+      "type": "cf",
+      "label": "Pers. Pron. 2. sg. m."
+    }
+  ],
+  "etym": {
+    "egy_num": "90160",
+    "egy_lemma": "jntṯ",
+    "english": "you [self.pron. sg.2.f.]",
+    "german": "du [Selbst.Pron. sg.2.f.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/90160"
+  }
+}

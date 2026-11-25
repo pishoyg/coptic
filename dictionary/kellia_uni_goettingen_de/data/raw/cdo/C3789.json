@@ -1,0 +1,415 @@
+{
+  "id": "C3789",
+  "forms": [
+    {
+      "id": "CF9500",
+      "orth": "ⲥⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3424,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4300",
+      "bibliography": "CD 360a; KoptHWb 200; DELC 198; ChLCS 51a"
+    },
+    {
+      "id": "CS4301",
+      "bibliography": "KoptHWb 200; DELC 198; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕ**ⲥⲱⲧ** ⲉⲣⲟⲓ ⲙⲡⲉϥⲥⲛⲟϥ .",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩ**ⲥⲁⲁⲧ** ⲧⲙⲩⲥⲓⲁ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ⲉⲧⲉⲧⲣⲱⲁⲥ .",
+      "english": "Passing by Mysia, they came down to Troas.",
+      "source": "44_Acts of the Apostles_16",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲉⲧϩⲏ ⲛⲟⲩⲕⲟⲩⲉⲓ . ⲁϥⲡⲁϩⲧϥ ⲉϫⲙⲡⲕⲁϩ ⲁϥϣⲗⲏⲗ . ϫⲉⲕⲁⲁⲥ ⲉϣⲱⲡⲉ ⲟⲩⲛϭⲟⲙ ⲛⲧⲉⲧⲉⲓⲟⲩⲛⲟⲩ **ⲥⲁⲁⲧ**ϥ .",
+      "english": "He went forward a little, and fell on the ground, and prayed that, if it were possible, the hour might pass away from him.",
+      "source": "Mark Chapter 14",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϯⲡ",
+        1,
+        13.765
+      ],
+      [
+        "ⲡⲣⲟⲃⲟⲗⲏ",
+        1,
+        8.958
+      ],
+      [
+        "ϥ",
+        11,
+        8.067
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        2,
+        6.486
+      ],
+      [
+        "ⲧⲙ",
+        2,
+        6.105
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        2,
+        6.032
+      ],
+      [
+        "ϯⲥⲃⲱ",
+        1,
+        5.759
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        5.675
+      ],
+      [
+        "ⲅ",
+        2,
+        5.406
+      ],
+      [
+        "ⲉ",
+        5,
+        4.95
+      ],
+      [
+        "ⲛ",
+        6,
+        4.731
+      ],
+      [
+        "ⲙ",
+        4,
+        4.518
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        3.898
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        3.848
+      ],
+      [
+        "ϯ",
+        2,
+        3.683
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        3.651
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        3.579
+      ],
+      [
+        "ⲕ",
+        2,
+        3.02
+      ],
+      [
+        "ⲓ",
+        2,
+        3.018
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        2.899
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲱⲧ_0_node",
+          9
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲥⲱⲧ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱⲧ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲥⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲥϯⲡ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲧ_0_node",
+          "ϥ_1_post_ⲥⲱⲧ",
+          4
+        ],
+        [
+          "ϥ_1_post_ⲥⲱⲧ",
+          "ⲙⲙⲟ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲱⲧ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲙⲛ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱⲧ",
+          "ⲅ_1_pre_ⲥⲱⲧ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲥⲱⲧ",
+          "ⲛⲁ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲥⲱⲧ",
+          "ⲁⲛ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲥⲱⲧ",
+          "ⲥϯⲡ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲥϯⲡ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲥⲱⲧ",
+          "ⲙ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲧ",
+          "ⲡⲉⲥ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲥⲱⲧ",
+          "ⲧⲙ_1_pre_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲥⲱⲧ",
+          "ⲥⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲧ_0_node",
+          "ⲉ_1_post_ⲥⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲱⲧ",
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.72,
+      "rank": 768,
+      "count": 114
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3796",
+      "label": "ϫⲓⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "get ransom"
+    },
+    {
+      "target": "C3795",
+      "label": "ϯ ⲉⲡⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "pay for, as ransom"
+    },
+    {
+      "target": "C3794",
+      "label": "ϯⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem"
+    },
+    {
+      "target": "C3790",
+      "label": "ⲣⲉϥⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "spinner"
+    },
+    {
+      "target": "C3797",
+      "label": "ⲣⲉϥⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redeemer"
+    },
+    {
+      "target": "C3791",
+      "label": "ⲥⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "spun (fabric)"
+    },
+    {
+      "target": "C3787",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "return, repeat, not . . . again (in neg. clause)"
+    },
+    {
+      "target": "C3788",
+      "label": "ⲥⲱⲧ (ⲉ-)",
+      "pos": "V",
+      "gloss": "repeat (to do sth)"
+    },
+    {
+      "target": "C3792",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem, rescue, save"
+    },
+    {
+      "target": "C3793",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redemption, rescue; ransom, price"
+    }
+  ],
+  "etym": {
+    "egy_num": "854555",
+    "egy_lemma": "sṯꜣ",
+    "demo_num": "d5720",
+    "demo_lemma": "sṯꜣ(.ṱ)",
+    "english": "pull; bring about; move along; flow; go (to); spin",
+    "german": "ziehen; herbeiführen; dahinziehen; fließen; sich begeben (zu); spinnen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854555",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5720"
+  }
+}

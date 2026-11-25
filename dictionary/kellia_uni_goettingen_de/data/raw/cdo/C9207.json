@@ -1,0 +1,51 @@
+{
+  "id": "C9207",
+  "forms": [
+    {
+      "id": "CF22983",
+      "orth": "ⲓⲉⲣⲟⲯⲁⲗⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22984",
+      "orth": "ϩⲓⲉⲣⲟⲩⲯⲁⲗⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22985",
+      "orth": "ϩⲓⲉⲣⲟⲯⲁⲗⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7522,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22986",
+      "orth": "ⲓⲉⲣⲟⲯⲁⲗⲧⲏⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11458",
+      "bibliography": "DDGLC",
+      "cu_ID": "1837"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "948",
+    "grl_lemma": "ἱεροψάλτης",
+    "grl_meaning": "singer in the temple",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 823a; Preisigke 1:693"
+  }
+}

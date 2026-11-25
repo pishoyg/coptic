@@ -1,0 +1,424 @@
+{
+  "id": "C3625",
+  "forms": [
+    {
+      "id": "CF9155",
+      "orth": "ⲣⲥⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3077,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4126",
+      "bibliography": "CD 347a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲙⲡⲉⲣⲡⲉ ⲁϥⲡⲱϩ ⲁϥ**ⲣⲥⲛⲁⲩ** ϫⲓⲛⲧⲡⲉ ⲉⲡⲉⲥⲏⲧ",
+      "english": "The veil of the temple was torn in two from the top to the bottom.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲛⲥⲉⲕⲁⲁⲩ ⲉⲃⲟⲗ ϩⲛⲟⲩⲛϣⲟⲧ · ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ⲁⲥⲡⲱⲣϫ ⲉⲧⲉⲥⲙⲏⲧⲉ ⲁⲥ**ⲣⲥⲛⲁⲩ** ·",
+      "english": "And afterwards the two palms were released suddenly by cutting the rope, and in this way she was rent asunder down to the middle of her body, and she became two pieces.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ ⲡⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲙⲡⲣⲡⲉ ⲁϥⲡⲱϩ ϫⲓⲛⲧⲡⲉ ⲉⲡⲉⲥⲏⲧ ⲁϥ**ⲣⲥⲛⲁⲩ** ⲡⲕⲁϩ ⲁϥⲛⲟⲉⲓⲛ ⲁⲩⲱ ⲙⲡⲉⲧⲣⲁ ⲁⲩⲡⲱϩ .",
+      "english": "Behold, the veil of the temple was torn in two from the top to the bottom. The earth quaked and the rocks were split.",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.898
+      ],
+      [
+        "ⲧⲁⲙ",
+        1,
+        16.898
+      ],
+      [
+        "ⲣⲥⲛⲁⲩ",
+        2,
+        16.197
+      ],
+      [
+        "ⲡⲱ",
+        1,
+        14.898
+      ],
+      [
+        "ⲡⲱϩ",
+        3,
+        13.608
+      ],
+      [
+        "ⲁ",
+        15,
+        13.064
+      ],
+      [
+        "ⲟⲩⲱϭⲡ",
+        1,
+        12.254
+      ],
+      [
+        "ϥ",
+        11,
+        11.199
+      ],
+      [
+        "ⲁϣⲉ",
+        1,
+        11.17
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        10.404
+      ],
+      [
+        "ⲡⲱϣ",
+        1,
+        10.077
+      ],
+      [
+        "ⲛ",
+        10,
+        10.074
+      ],
+      [
+        "ϫⲓⲛ",
+        2,
+        9.551
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        2,
+        8.811
+      ],
+      [
+        "ⲣⲡⲉ",
+        1,
+        8.805
+      ],
+      [
+        "ⲡ",
+        6,
+        8.552
+      ],
+      [
+        "ⲕⲁϩ",
+        2,
+        8.226
+      ],
+      [
+        "ⲉ",
+        5,
+        8.083
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.047
+      ],
+      [
+        "ⲧⲉⲥ",
+        1,
+        7.829
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          8
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲛⲁⲩ",
+          6
+        ],
+        [
+          "ⲣⲥⲛⲁⲩ_0_node",
+          12
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲣⲥⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϫⲓⲛ",
+          2
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲃⲱⲗ_1_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          5
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲣⲥⲛⲁⲩ_1_post_ⲣⲥⲛⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ϥ_1_pre_ⲣⲥⲛⲁⲩ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲣⲥⲛⲁⲩ_0_node",
+          "ϫⲓⲛ_1_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲣⲥⲛⲁⲩ",
+          "ⲧ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϫⲓⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲥ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲥⲛⲁⲩ_0_node",
+          "ⲁ_2_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲗ",
+          "ⲩ_2_post_ⲃⲱⲗ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲃⲱⲗ",
+          "ⲃⲱⲗ_1_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲧⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ϥ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲥⲛⲁⲩ",
+          "ⲛ_1_pre_ⲣⲥⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲣⲥⲛⲁⲩ_0_node",
+          "ⲁ_2_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲥⲛⲁⲩ",
+          "ⲛ_2_post_ⲣⲥⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲥⲛⲁⲩ",
+          "ⲣⲥⲛⲁⲩ_1_post_ⲣⲥⲛⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2731,
+      "count": 13
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3620",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3621",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3622",
+      "label": "-ⲥⲛⲟⲟⲩⲥⲉ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3627",
+      "label": "ⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "second, deputy (monastic title)"
+    },
+    {
+      "target": "C3626",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "duality"
+    },
+    {
+      "target": "C3623",
+      "label": "ⲙⲡⲉⲥⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C3624",
+      "label": "ⲛⲧⲥⲛⲧⲉ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C12018",
+      "label": "ⲡⲉⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "Monday"
+    },
+    {
+      "target": "C3628",
+      "label": "ⲣⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "be second"
+    },
+    {
+      "target": "C3616",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3618",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two"
+    },
+    {
+      "target": "C3617",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3619",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "two"
+    }
+  ]
+}

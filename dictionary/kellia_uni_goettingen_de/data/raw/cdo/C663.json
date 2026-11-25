@@ -1,0 +1,155 @@
+{
+  "id": "C663",
+  "forms": [
+    {
+      "id": "CF2485",
+      "orth": "ⲉⲗⲧⲟϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9771,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2486",
+      "orth": "ⲉⲗⲧⲟⲧϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS799",
+      "bibliography": "CED 34; KoptHWb 35; DELC 41-42"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁϥϣⲁⲛ**ⲉⲗⲧⲟϥ** ⲛϫⲉⲫⲏ ⲉⲧⲉⲡⲉϥϫⲣⲟϫ ⲧⲉⲗⲧⲉⲗ ⲉϫⲉⲛⲫⲏ ⲉⲧⲧⲟⲩⲃⲏⲟⲩⲧ ⲉϥⲉⲣⲱϧⲓ ⲛⲛⲉϥϩⲃⲱⲥ ⲟⲩⲟϩ ⲉϥⲉϫⲱⲕⲉⲙ ϧⲉⲛⲟⲩⲙⲱⲟⲩ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ⲉϥϭⲁϧⲉⲙ ϣⲁⲫⲛⲁⲩ ⲛϩⲁⲛⲁⲣⲟⲩϩⲓ",
+      "english": "And if he that has the issue should spit upon one that is clean, that person shall wash his garments, and bathe himself in water, and be unclean until evening.",
+      "source": "03_Leviticus_15",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁϥ",
+        1,
+        12.741
+      ],
+      [
+        "ϣⲁⲛ",
+        1,
+        12.227
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        9.842
+      ],
+      [
+        "ⲫⲏ",
+        1,
+        8.358
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.934
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        7.049
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁϥ_1_pre_ⲉⲗⲧⲟϥ",
+          1
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲗⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲉⲗⲧⲟϥ_0_node",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲉⲗⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲫⲏ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_3_post_ⲫⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϥ_1_pre_ⲉⲗⲧⲟϥ",
+          "ϣⲁⲛ_1_pre_ⲉⲗⲧⲟϥ",
+          1
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲗⲧⲟϥ",
+          "ⲉⲗⲧⲟϥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲗⲧⲟϥ_0_node",
+          "ⲛϫⲉ_1_post_ⲉⲗⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲉⲗⲧⲟϥ",
+          "ⲫⲏ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲫⲏ_2_post_ⲛϫⲉ",
+          "ⲉⲧⲉ_3_post_ⲫⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9229,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "90030",
+    "egy_lemma": "ntf",
+    "english": "to besprinkle; to wet",
+    "german": "begießen; befeuchten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/90030"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C9139",
+  "forms": [
+    {
+      "id": "CF22720",
+      "orth": "ⲑⲁⲩⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22721",
+      "orth": "ⲑⲁⲩⲙⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF22722",
+      "orth": "ⲑⲁⲩⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13475,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11314",
+      "bibliography": "DDGLC",
+      "cu_ID": "10728"
+    },
+    {
+      "id": "CS11315",
+      "bibliography": "DDGLC",
+      "cu_ID": "2659"
+    },
+    {
+      "id": "CS11316",
+      "bibliography": "DDGLC",
+      "cu_ID": "2489"
+    },
+    {
+      "id": "CS11317",
+      "bibliography": "DDGLC",
+      "cu_ID": "7556"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲛⲓⲙ ⲧⲛⲧⲱⲛ ⲉⲣⲟ · ⲱ ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲛⲥⲁⲃⲏ · ⲱ ⲧⲉⲓ ⲛⲟϭ ⲛϣⲡⲏⲣⲉ · ⲙⲛⲡⲉⲓⲛⲟϭ ⲛ**ⲑⲁⲩⲙⲁ** ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲑⲁⲩⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13070,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "898",
+    "grl_lemma": "θαῦμα",
+    "grl_meaning": "wonder, marvel",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 785a; Preisigke 1:666"
+  }
+}

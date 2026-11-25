@@ -1,0 +1,46 @@
+{
+  "id": "C9328",
+  "forms": [
+    {
+      "id": "CF23448",
+      "orth": "ⲕⲁⲧⲁⲕⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23450",
+      "orth": "ⲕⲁⲧⲁⲕⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23449",
+      "orth": "ⲕⲁⲧⲁⲅⲁⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7159,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11701",
+      "bibliography": "DDGLC",
+      "cu_ID": "4246"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1052",
+    "grl_lemma": "κατάγειον",
+    "grl_meaning": "cellar",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 886a; Preisigke 1:744"
+  }
+}

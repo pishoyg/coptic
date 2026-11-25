@@ -1,0 +1,153 @@
+{
+  "id": "C7048",
+  "forms": [
+    {
+      "id": "CF32076",
+      "orth": "ⲙⲁⲓϫⲁⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10946,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32075",
+      "orth": "ⲙⲁⲓϫⲁⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7769",
+      "bibliography": "CD 746a; KoptHWb 414; ChLCS 100b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲓⲱⲕⲉⲓ",
+        1,
+        17.276
+      ],
+      [
+        "ⲉⲓⲟⲩⲗ",
+        1,
+        16.791
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        12.857
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ⲉⲓⲟⲩⲗ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲩⲗ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲓϫⲁⲓⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ⲉⲓⲟⲩⲗ",
+          "ⲉⲓⲟⲩⲗ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲩⲗ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓϫⲁⲓⲉ",
+          "ⲙⲁⲓϫⲁⲓⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7052",
+      "label": "ϣⲱⲡⲉ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "become desert"
+    },
+    {
+      "target": "C7047",
+      "label": "ϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "desert"
+    },
+    {
+      "target": "C7051",
+      "label": "ϯ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "make desert"
+    },
+    {
+      "target": "C7050",
+      "label": "ⲕⲱ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "make desert"
+    },
+    {
+      "target": "C7049",
+      "label": "ⲙⲛⲧϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "solitude, desolation"
+    },
+    {
+      "target": "C7053",
+      "label": "ⲣϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be desert, abandoned"
+    }
+  ]
+}

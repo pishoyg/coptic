@@ -1,0 +1,117 @@
+{
+  "id": "C2504",
+  "forms": [
+    {
+      "id": "CF6795",
+      "orth": "ⲛⲛⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 7.37,
+        "rank": 160,
+        "count": 1163
+      }
+    },
+    {
+      "orth": "ⲛⲛⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.96,
+        "rank": 131,
+        "count": 845
+      }
+    },
+    {
+      "orth": "ⲛⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.03,
+        "rank": 339,
+        "count": 257
+      }
+    },
+    {
+      "orth": "ⲛⲛ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.83,
+        "rank": 834,
+        "count": 131
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Futur III neg. ⲛⲛⲉ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2883",
+      "bibliography": "CD 228a; CED 109; KoptHWb 123; DELC 143; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲉⲣϩⲟϯ ⲅⲁⲣ ϫⲉ**ⲛⲛⲉ**ⲟⲩⲡⲉⲧϩⲱⲟⲩ ϣⲱⲡⲓ ⲙⲙⲟϥ .",
+      "english": "We worry lest something bad might happen to him.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲙⲟⲟⲩ ⲉⲛⲉϥⲟⲩⲣⲏⲏⲧⲉ ϫⲉ**ⲛⲛⲉ**ⲕⲟⲃϣⲕ ⲉⲃⲟⲗ",
+      "english": "Set water for his feet. Forget not this.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲅⲁⲣ ⲁⲛⲟⲛ ϩⲁⲛⲓⲇⲓⲱⲧⲏⲥ ⲛⲣⲱⲙⲓ ⲙⲡⲉⲛϭⲓⲥⲃⲱ ⲛⲧⲉⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲟⲩⲇⲉ **ⲛⲛⲉ**ⲥϣⲱⲡⲓ ⲙⲙⲟⲛ",
+      "english": "For we are simple people and have not received the wisdom of this world (and so much the better for us).",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲛⲛⲉ**ⲗⲁⲁⲩ ⲛⲥⲁⲣⲝ ϣⲟⲩϣⲟⲩ ⲙⲙⲟϥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "that no flesh should boast before God.",
+      "source": "1 Corinthians 1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲉⲣϩⲟϯ ⲇⲉ ⲛϫⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉⲙⲏⲡⲱⲥ ⲛⲧⲟⲩⲧⲁⲙⲉϯⲉⲝⲟⲩⲥⲓⲁ ⲟⲩⲟϩ ⲛⲧⲟⲩⲉⲣⲡⲉⲧϩⲱⲟⲩ ⲙⲡⲓⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲁϥⲟⲩⲱⲣⲡ ⲛⲟⲩⲉⲡⲓⲥⲧⲟⲗⲏ ⲉϣⲓⲏⲧ ϫⲉϩⲓⲛⲁ **ⲛⲛ**ⲟⲩⲭⲁϥ ⲥⲁⲡⲉⲙⲉⲛⲧ ⲙⲫⲓⲁⲣⲟ .",
+      "english": "When the archbishop feared that the authorities would be warned and that misfortune would happen to the holy place, he sent a letter to Skete, that they might not place the boy to the west of the river.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲛⲛⲉ**ⲩⲧϭⲁⲓⲟⲕ ⲙⲛⲡⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ .",
+      "english": "so that they do not condemn you with the Pharisee.",
+      "source": "Apophthegmata Patrum Sahidic 123: Syncletica 11",
+      "urn": "urn:cts:copticLit:ap.123.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2505",
+      "label": "ⲛⲛⲟ",
+      "pos": "PTC",
+      "gloss": "it shall not be, no"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1714",
+    "demo_lemma": "bn-ı ͗w",
+    "english": "[Negation of the future tense]; (in the sense of): should not; [Negation itself. Subjunctive]",
+    "german": "[Negation des Futurs]; (im Sinne von): soll nicht; [Negation selbst. Subjunktiv]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1714"
+  }
+}

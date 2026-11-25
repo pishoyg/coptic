@@ -1,0 +1,43 @@
+{
+  "id": "C6483",
+  "forms": [
+    {
+      "id": "CF14994",
+      "orth": "ϩⲟⲕⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7194",
+      "bibliography": "CD 663a; KoptHWb 362"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6484",
+      "label": "ϩⲁⲕⲉ",
+      "pos": "N",
+      "gloss": "shearer"
+    },
+    {
+      "target": "C6482",
+      "label": "ϩⲱⲕⲉ",
+      "pos": "V",
+      "gloss": "scrape, scratch; shave, shear"
+    },
+    {
+      "target": "C6485",
+      "label": "ϩⲱⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "fleece"
+    }
+  ]
+}

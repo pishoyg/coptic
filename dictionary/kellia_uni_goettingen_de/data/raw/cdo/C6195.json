@@ -1,0 +1,128 @@
+{
+  "id": "C6195",
+  "forms": [
+    {
+      "id": "CF14399",
+      "orth": "ϣⲓϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13196,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6882",
+      "bibliography": "CD 610b; KoptHWb 339; ChLCS 83b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩ**ϣⲓϥⲉ** ⲁⲩⲱ ⲁⲩⲡⲟⲙⲡⲉⲙ ⲉⲙⲁⲧⲉ ·",
+      "english": "and they swelled up (?) and throbbed (?) violently,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲙⲡⲉⲙ",
+        1,
+        20.598
+      ],
+      [
+        "ⲥⲛⲧⲉ",
+        1,
+        12.322
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲓϥⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲓϥⲉ",
+          1
+        ],
+        [
+          "ϣⲓϥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲓϥⲉ",
+          "ⲩ_1_pre_ϣⲓϥⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲓϥⲉ",
+          "ϣⲓϥⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲓϥⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          "ⲁ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          "ⲩ_2_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12782,
+      "count": 1
+    }
+  }
+}

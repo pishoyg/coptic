@@ -1,0 +1,761 @@
+{
+  "id": "C110",
+  "forms": [
+    {
+      "id": "CF31440",
+      "orth": "ⲉⲙⲉϩⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31441",
+      "orth": "ⲁⲙⲉϩⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31442",
+      "orth": "ⲙⲉϩⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF385",
+      "orth": "ⲁⲙⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.33,
+        "rank": 312,
+        "count": 526
+      }
+    },
+    {
+      "id": "CF386",
+      "orth": "ⲁⲙⲁϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF387",
+      "orth": "ⲁⲙⲁϩⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF388",
+      "orth": "ⲁⲙⲁϩⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF389",
+      "orth": "ⲁⲙⲁϩⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF390",
+      "orth": "ⲁⲙⲁϩⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF391",
+      "orth": "ⲉⲙⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8771,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF392",
+      "orth": "ⲉⲙⲁϩⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF393",
+      "orth": "ⲉⲙⲁϩⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF394",
+      "orth": "ⲙⲁϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.89,
+        "rank": 775,
+        "count": 141
+      }
+    },
+    {
+      "id": "CF395",
+      "orth": "ⲁⲙⲉϩⲧⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF396",
+      "orth": "ⲁⲙⲁϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.66,
+        "rank": 531,
+        "count": 141
+      }
+    },
+    {
+      "id": "CF397",
+      "orth": "ⲁⲙⲁϩⲓ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS129",
+      "bibliography": "CD 9ab; CED 7; KoptHWb 6, 486; ChLCS 4a"
+    },
+    {
+      "id": "CS130",
+      "bibliography": "CD 9b-10a; CED 7; KoptHWb 6; DELC 11; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥ**ⲁⲙⲁϩⲓ** ⲛϫⲉϯⲥⲟⲫⲓⲁ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉⲥϩⲃⲏⲟⲩⲓ .",
+      "english": "Thus, Wisdom was fulfilled by its deeds.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲓⲡⲁⲣⲁⲛⲟⲙⲟⲥ ⲙⲉⲛ ⲁⲩ**ⲁⲙⲁϩⲧⲉ** ⲙⲙⲟⲥ",
+      "english": "And these lawless men laid hold upon Susanna",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲥⲃⲱ ⲅⲁⲣ ⲙⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲟⲩⲙⲉⲧⲥⲟϫ ⲧⲉ ⲛⲁϩⲣⲉⲛⲫⲛⲟⲩϯ ⲥⲥϧⲏⲟⲩⲧ ⲅⲁⲣ ϫⲉⲫⲏ ⲉⲧ**ⲁⲙⲁϩⲓ** ⲛⲛⲓⲥⲁⲃⲉⲩ ϧⲉⲛⲧⲟⲩⲙⲉⲧⲥⲉⲃ .",
+      "english": "For the wisdom of this world is foolishness with God. For it is written, 'He has taken the wise in their craftiness.'",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲁⲉⲓⲱⲧ **ⲁⲙⲁϩⲧⲉ** ⲙⲛϥⲱ ⲛⲧⲉϥⲁⲡⲉ",
+      "english": "And my father laid hold upon the hair of his head,",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲱⲣⲡ ⲛϩⲁⲛⲣⲱⲙⲓ ⲙⲁⲣⲟⲩϫⲉⲣ ⲡⲓⲕⲁϩⲓ ⲛⲧⲉⲛⲓⲭⲁⲛⲁⲛⲉⲟⲥ ⲫⲏ ⲁⲛⲟⲕ ⲉϯⲛⲁⲧⲏⲓϥ ⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉ**ⲁⲙⲁϩⲓ** ⲙⲙⲟϥ ⲟⲩⲣⲱⲙⲓ ⲕⲁⲧⲁⲫⲩⲗⲏ ⲕⲁⲧⲁⲛⲓⲇⲏⲙⲟⲥ ⲛⲧⲉⲛⲟⲩⲙⲁⲛϣⲱⲡⲓ ⲉⲕⲉⲟⲩⲱⲣⲡ ⲛⲁⲣⲭⲏⲅⲟⲥ ⲛⲓⲃⲉⲛ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ",
+      "english": "And the Lord spoke to Moses, saying,",
+      "source": "04_Numeri_13",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ⲇⲉ ⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ⲉⲛⲉⲓϣⲁϫⲉ ⲁϥ**ⲁⲙⲁϩⲧⲉ** ⲛⲧϭⲓϫ ⲙⲡⲥⲟⲛ ⲙⲙⲟⲛⲁⲭⲟⲥ ⲁϥϫⲓⲧϥ ⲉⲩⲙⲁ ⲉϥⲉⲥⲩⲭⲁⲍⲉ",
+      "english": "And when John had heard these words he laid hold upon the hand of the monkish brother, and took him to a place which was quiet and secret,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲫⲟⲓ",
+        11,
+        24.903
+      ],
+      [
+        "ϫⲓϫ",
+        35,
+        24.901
+      ],
+      [
+        "ⲛ",
+        87,
+        23.92
+      ],
+      [
+        "ⲛⲉⲙ",
+        50,
+        23.174
+      ],
+      [
+        "ϧⲉⲛ",
+        55,
+        23.107
+      ],
+      [
+        "ⲉ",
+        64,
+        23.017
+      ],
+      [
+        "ⲟⲩ",
+        68,
+        23.016
+      ],
+      [
+        ".",
+        40,
+        21.582
+      ],
+      [
+        "ϫⲟⲙ",
+        13,
+        21.575
+      ],
+      [
+        "ⲁ",
+        44,
+        21.368
+      ],
+      [
+        "ϥ",
+        49,
+        21.268
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        42,
+        21.257
+      ],
+      [
+        "ⲛⲧⲉ",
+        29,
+        20.64
+      ],
+      [
+        "ⲡⲓ",
+        31,
+        20.633
+      ],
+      [
+        "ϣⲁ",
+        15,
+        20.386
+      ],
+      [
+        "ϣ",
+        8,
+        20.351
+      ],
+      [
+        "ⲧⲉϥ",
+        13,
+        20.092
+      ],
+      [
+        "ⲉⲧ",
+        24,
+        20.006
+      ],
+      [
+        "ⲙⲙⲟ",
+        18,
+        19.878
+      ],
+      [
+        "ϧⲉⲗⲙⲉϩⲓ",
+        1,
+        19.695
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲙⲟ",
+        347,
+        23.255
+      ],
+      [
+        "ⲛ",
+        408,
+        20.785
+      ],
+      [
+        "ⲁ",
+        260,
+        20.07
+      ],
+      [
+        "ϥ",
+        293,
+        20.064
+      ],
+      [
+        "ϭⲓϫ",
+        83,
+        20.058
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        19.978
+      ],
+      [
+        "ⲙ",
+        212,
+        19.493
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲟⲥⲓⲥ",
+        16,
+        18.856
+      ],
+      [
+        "ⲟⲩ",
+        170,
+        18.407
+      ],
+      [
+        "ⲉ",
+        172,
+        18.054
+      ],
+      [
+        "ⲡ",
+        171,
+        17.709
+      ],
+      [
+        "ⲓ",
+        97,
+        17.609
+      ],
+      [
+        "ⲩ",
+        122,
+        17.56
+      ],
+      [
+        "ⲧ",
+        113,
+        17.49
+      ],
+      [
+        "ⲧⲉϥ",
+        54,
+        17.187
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        33,
+        16.473
+      ],
+      [
+        "ⲁⲩⲱ",
+        85,
+        15.934
+      ],
+      [
+        "ⲉⲧ",
+        75,
+        15.883
+      ],
+      [
+        "ϭⲟⲣⲧⲉ",
+        7,
+        15.393
+      ],
+      [
+        "ⲇⲉ",
+        56,
+        15.366
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          78
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲙⲁϩⲧⲉ",
+          31
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          20
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          16
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          8
+        ],
+        [
+          "ϥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          8
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          5
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲉϫⲛ",
+          2
+        ],
+        [
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+          2
+        ],
+        [
+          "ⲥ_5_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲙⲟⲭⲗⲟⲥ",
+          2
+        ],
+        [
+          "ⲙⲟⲭⲗⲟⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ϣⲁ_1_post_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲛⲉϩ_2_post_ϣⲁ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          4
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲙⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲙⲁϩⲧⲉ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ϥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲟⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲡ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲉϫⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲧ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉϫⲛ",
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          "ⲧⲏⲣ_4_post_ⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+          "ⲥ_5_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲡⲉⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲙⲟⲭⲗⲟⲥ",
+          "ⲙⲟⲭⲗⲟⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲭⲗⲟⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          "ϣⲁ_1_post_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲉⲛⲉϩ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲙ_1_post_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          "ϥ_1_pre_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲙⲁϩⲧⲉ_0_node",
+          "ⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲙⲁϩⲧⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.32,
+      "rank": 263,
+      "count": 527
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C91",
+      "type": "syn",
+      "label": "grasp, endure (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C119",
+      "label": "ϭⲓⲛⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "control, restraint"
+    },
+    {
+      "target": "C115",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "power, possession"
+    },
+    {
+      "target": "C114",
+      "label": "ⲁⲙⲁϩⲧⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "possess, master"
+    },
+    {
+      "target": "C111",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule, have power over"
+    },
+    {
+      "target": "C112",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "hold with, support"
+    },
+    {
+      "target": "C113",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hold, abide by"
+    },
+    {
+      "target": "C116",
+      "label": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unrestrained, uncontrollable"
+    },
+    {
+      "target": "C117",
+      "label": "ⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "uncontrolledness, incontinence"
+    },
+    {
+      "target": "C118",
+      "label": "ⲣⲉϥⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "self-controlled person"
+    }
+  ],
+  "etym": {
+    "egy_num": "73300",
+    "egy_lemma": "mḥ",
+    "demo_num": "d111",
+    "demo_lemma": "ꜣmḥṱ",
+    "english": "to hold; to sieze",
+    "german": "fassen; packen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/73300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d111"
+  }
+}

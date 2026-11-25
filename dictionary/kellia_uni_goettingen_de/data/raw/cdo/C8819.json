@@ -1,0 +1,141 @@
+{
+  "id": "C8819",
+  "forms": [
+    {
+      "id": "CF21258",
+      "orth": "ⲇⲟⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21259",
+      "orth": "ⲇⲟⲗⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21260",
+      "orth": "ⲧⲟⲗⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21261",
+      "orth": "ⲇⲟⲗⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4328,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10609",
+      "bibliography": "DDGLC",
+      "cu_ID": "270"
+    },
+    {
+      "id": "CS10610",
+      "bibliography": "DDGLC",
+      "cu_ID": "5884"
+    },
+    {
+      "id": "CS10611",
+      "bibliography": "DDGLC",
+      "cu_ID": "1849"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲉⲧⲁϥⲛⲁⲩ ⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲓⲥⲁⲁⲕ ⲡⲉϫⲁϥ ⲛⲛⲓⲥⲛⲏⲟⲩ ⲉⲑⲙⲟϣⲓ ⲛⲉⲙⲁϥ ϫⲉⲓⲥ ⲟⲩⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ ⲙⲙⲟⲛ **ⲇⲟⲗⲟⲥ** ⲛϧⲏⲧϥ ⲫⲁⲓ ⲛⲁϣⲱⲡⲓ ⲛⲟⲩⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛϯⲡⲟⲗⲓⲥ ⲣⲁⲕⲟϯ ⲟⲩⲟϩ ⲙⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+      "english": "It came to pass that after seeing the holy Isaac, he said to the brethren who were walking with him, ‘Here is an Israelite in whom there is no cunning: he will be archbishop of the city of Alexandria and patriarch;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲇⲉ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ⲉⲛⲁⲑⲁⲛⲁⲏⲗ ⲉϥⲛⲏⲟⲩ ϩⲁⲣⲟϥ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲉⲑⲃⲏⲧϥ ϫⲉⲓⲥ ϩⲏⲡⲡⲉ ⲧⲁⲫⲙⲏⲓ ⲓⲥ ⲟⲩⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ ⲙⲙⲟⲛ **ⲇⲟⲗⲟⲥ** ⲛϧⲏⲧϥ",
+      "english": "Jesus saw Nathanael coming to him, and said about him, 'Behold, an Israelite indeed, in whom is no deceit!'",
+      "source": "04_John_01",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ",
+        3,
+        19.058
+      ],
+      [
+        "ⲓⲥ",
+        3,
+        14.067
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        3,
+        12.984
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        3,
+        12.273
+      ],
+      [
+        "ⲫⲁⲓ",
+        2,
+        10.073
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        9.124
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.924
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        7.86
+      ],
+      [
+        "ϥ",
+        3,
+        7.594
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲇⲟⲗⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3867,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2479",
+    "grl_lemma": "δόλος",
+    "grl_meaning": "bait, trick, craft, cunning",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 443b; Preisigke 1:396"
+  }
+}

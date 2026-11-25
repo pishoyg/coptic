@@ -1,0 +1,76 @@
+{
+  "id": "C4251",
+  "forms": [
+    {
+      "id": "CF10453",
+      "orth": "ⲙⲁ ⲛⲧⲁⲗⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4821",
+      "bibliography": "CD 409b; ChLCS 58a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4252",
+      "label": "ϫⲓⲛⲧⲁⲗⲟ",
+      "pos": "N",
+      "gloss": "raising"
+    },
+    {
+      "target": "C4245",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "lift, offer up, set on (beast or ship); set up (on loom), weave; go up, mount (beast), go aboard"
+    },
+    {
+      "target": "C4246",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "raising up, offering"
+    },
+    {
+      "target": "C4247",
+      "label": "ⲧⲁⲗⲟ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "enclose, add"
+    },
+    {
+      "target": "C4248",
+      "label": "ⲧⲁⲗⲟ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "load with"
+    },
+    {
+      "target": "C4249",
+      "label": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "rise, raise up, add"
+    },
+    {
+      "target": "C4250",
+      "label": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "addition"
+    }
+  ]
+}

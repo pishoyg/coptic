@@ -1,0 +1,94 @@
+{
+  "id": "C10820",
+  "forms": [
+    {
+      "id": "CF29496",
+      "orth": "ⲩⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF29497",
+      "orth": "ⲩⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20296,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14924",
+      "bibliography": "DDGLC",
+      "cu_ID": "8729"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲁⲛ ϫⲉⲁⲥⲥⲉⲓ ⲁⲗⲗⲁ ϫⲉⲛⲉ ⲁⲥϯⲥⲟ ⲡⲉ ⲛⲛⲁϩⲣⲛⲡⲟⲩⲱϣ ⲙⲡⲣⲱⲙⲉ ⲉⲛⲧⲁⲥⲁϩⲉ ⲣⲁⲧⲥ ⲛⲥⲁⲡⲉⲓⲥⲁ ⲙⲙⲟϥ . ⲉϥⲛⲁ ⲉϥⲛⲁ**ⲩⲟⲩ**",
+      "english": "...",
+      "source": "If Everyone Errs MONB.XG 336-343 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.errs.amelineau:1-20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲁϣ",
+        1,
+        13.5
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        12.139
+      ],
+      [
+        "ⲏ",
+        1,
+        9.479
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        8.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19910,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "957",
+    "grl_lemma": "ἰός",
+    "grl_meaning": "rust on iron, verdigris on copper and bronze",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 832a; Preisigke 1:696"
+  }
+}

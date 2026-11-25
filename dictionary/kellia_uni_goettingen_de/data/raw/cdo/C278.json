@@ -1,0 +1,46 @@
+{
+  "id": "C278",
+  "forms": [
+    {
+      "id": "CF1166",
+      "orth": "ⲁⳉⲁⲣⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31555",
+      "orth": "ⲁⳉⲁⲣⲉ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31556",
+      "orth": "ⲁⳉⲁⲣ⸗",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Umstandsatzkonverter",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS310",
+      "bibliography": "KoptHWb 18"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C13005",
+      "type": "cf",
+      "label": "verbal prefix circumstantial converter + aorist"
+    },
+    {
+      "target": "C6025",
+      "type": "cf",
+      "label": "verbal prefix aorist"
+    }
+  ]
+}

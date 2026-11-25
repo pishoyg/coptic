@@ -1,0 +1,133 @@
+{
+  "id": "C2954",
+  "forms": [
+    {
+      "id": "CF7773",
+      "orth": "ⲣⲉϥⲡⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19276,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3382",
+      "bibliography": "CD 278a; ChLCS 39a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ϫⲉ . ⲡⲣⲱⲙⲉ ⲛⲓⲙ ⲡⲉⲛⲧⲁϥⲕⲁⲑⲓⲥⲧⲁ ⲙⲙⲟⲓ ⲛⲕⲣⲓⲧⲏⲥ ⲁⲩⲱ ⲛ**ⲣⲉϥⲡⲱϣ** ⲉϫⲱⲧⲛ .",
+      "english": "But he said to him, 'Man, who made me a judge or an arbitrator over you?'",
+      "source": "42_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲣⲓⲧⲏⲥ",
+        1,
+        14.139
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18889,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2955",
+      "label": "ϫⲓⲛⲫⲱϣ",
+      "pos": "N",
+      "gloss": "dividing, division"
+    },
+    {
+      "target": "C2952",
+      "label": "ⲁⲧⲡⲱϣ",
+      "pos": "N",
+      "gloss": "indivisible, undivided"
+    },
+    {
+      "target": "C2953",
+      "label": "ⲙⲁ ⲙⲡⲱϣ",
+      "pos": "N",
+      "gloss": "place of dividing"
+    },
+    {
+      "target": "C2956",
+      "label": "ⲡⲁϣⲉ",
+      "pos": "N",
+      "gloss": "division, half"
+    },
+    {
+      "target": "C2949",
+      "label": "ⲡⲱϣ",
+      "pos": "V",
+      "gloss": "divide, be separate; divide"
+    },
+    {
+      "target": "C2951",
+      "label": "ⲡⲱϣ",
+      "pos": "N",
+      "gloss": "division"
+    },
+    {
+      "target": "C2950",
+      "label": "ⲡⲱϣ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "separate, part"
+    },
+    {
+      "target": "C2957",
+      "label": "ⲣⲡⲁϣⲉ",
+      "pos": "V",
+      "gloss": "be half, be midway"
+    }
+  ]
+}

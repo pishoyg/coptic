@@ -1,0 +1,68 @@
+{
+  "id": "C945",
+  "forms": [
+    {
+      "id": "CF3233",
+      "orth": "ϧⲁⲓⲟⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3234",
+      "orth": "ϧⲁⲓⲟⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1102",
+      "bibliography": "CD 82a; KoptHWb 51; ChLCS 14b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C946",
+      "label": "ϫⲓⲟⲟⲣ",
+      "pos": "V",
+      "gloss": "ferry over, ford a river; cross (sea or land)"
+    },
+    {
+      "target": "C949",
+      "label": "ϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "place of ferry, ford; ferry-boat; ferryman"
+    },
+    {
+      "target": "C948",
+      "label": "ϭⲓⲛϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "crossing, transit"
+    },
+    {
+      "target": "C947",
+      "label": "ⲁⲧϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "not to be crossed, inaccessible"
+    },
+    {
+      "target": "C950",
+      "label": "ⲉⲓⲉⲣⲟ",
+      "pos": "N",
+      "gloss": "river (\"great canal\"), stream, Nile"
+    },
+    {
+      "target": "C944",
+      "label": "ⲉⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "canal"
+    }
+  ]
+}

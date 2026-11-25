@@ -1,0 +1,133 @@
+{
+  "id": "C864",
+  "forms": [
+    {
+      "id": "CF31639",
+      "orth": "ⲛⲁⲓⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲛⲁ ⲓⲁⲧ⸗",
+      "freq_form": {
+        "rate": 1.05,
+        "rank": 696,
+        "count": 166
+      }
+    },
+    {
+      "id": "CF31638",
+      "orth": "ⲛⲁⲉⲓⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲛⲁ ⲉⲓⲁⲧ⸗",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5277,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1016",
+      "bibliography": "CD 74a; KoptHWb 52; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲁⲓⲁⲧ**ⲟⲩ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲙⲛⲛⲉⲧϣⲓⲛⲉ ⲛⲥⲱⲟⲩ ·",
+      "english": "Blessed are the saints, and those who seek them.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲁⲓⲁⲧ**ⲥ ⲇⲉ ⲛϩⲟⲩⲟ ⲉⲥϣⲁⲛϭⲱ ⲛⲧⲉⲓϩⲉ ⲕⲁⲧⲁⲧⲁⲅⲛⲱⲙⲏ . ϯϫⲱ ⲅⲁⲣ ⲙⲙⲟⲥ ϩⲱ ϫⲉⲟⲩⲛⲧⲁⲓ ⲙⲙⲁⲩ ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "But she is happier if she stays as she is, in my judgment, and I think that I also have God&apos;s Spirit.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ **ⲛⲁⲓⲁⲧ**ⲟⲩ ⲛⲛϣⲏⲣⲉ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲉⲧⲉⲛⲉⲧⲙⲟⲟϣⲉ ⲛⲉ ϩⲛⲧⲡⲁⲣⲣⲏⲥⲓⲁ ⲛϩⲩⲡⲟⲧⲁⲅⲏ ⲛⲓⲙ ϩⲓⲙⲛⲧⲥⲧⲙⲏⲧ ⲛⲓⲙ ϩⲓϩⲱⲃ ⲛⲓⲙ ⲛⲁⲅⲁⲑⲟⲛ",
+      "english": "For this reason, blessed are the children of light, that is, those who walk in the openness of submission and complete obedience and good.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2382",
+      "type": "cf",
+      "label": "be great"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C862",
+      "label": "ϥⲓ ⲛⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "raise eye"
+    },
+    {
+      "target": "C859",
+      "label": "ϯ ⲛⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "see, observe"
+    },
+    {
+      "target": "C855",
+      "label": "ⲉⲓⲁ",
+      "pos": "N",
+      "gloss": "eye and its sight"
+    },
+    {
+      "target": "C856",
+      "label": "ⲕⲧⲉⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look round, turn eye"
+    },
+    {
+      "target": "C863",
+      "label": "ⲕⲱ ϩⲁⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "intend to do"
+    },
+    {
+      "target": "C865",
+      "label": "ⲙⲛⲧⲛⲁⲓⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "blessedness"
+    },
+    {
+      "target": "C857",
+      "label": "ⲙⲟⲩϩ ⲛⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look intensely"
+    },
+    {
+      "target": "C858",
+      "label": "ⲥⲙⲛⲉⲓⲁⲧ⸗ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "fix eyes upon"
+    },
+    {
+      "target": "C861",
+      "label": "ⲧⲟⲩⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    },
+    {
+      "target": "C860",
+      "label": "ⲧⲥⲁⲃⲟ ⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    }
+  ]
+}

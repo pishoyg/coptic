@@ -1,0 +1,131 @@
+{
+  "id": "C3445",
+  "forms": [
+    {
+      "id": "CF8790",
+      "orth": "ⲥⲕⲁⲣⲁⲕⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18720,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3923",
+      "bibliography": "CD 330a; KoptHWb 182; DELC 187; ChLCS 47a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲟⲩϩⲗⲗⲟ ⲉϥⲱⲗ ⲉϩⲣⲁⲓ ϩⲛⲟⲩ**ⲥⲕⲁⲣⲁⲕⲓⲣ** ⲛϣⲱ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲟⲩⲥϩⲓⲙⲉ ⲛⲣⲉϥⲁϣⲕⲁⲕ ⲉⲃⲟⲗ ⲛⲛⲁϩⲣⲛⲟⲩϩⲁⲓ ⲛⲣⲙⲣⲁϣ",
+      "english": "As the climbing up a sandy way is to the feet of the aged, so is a wife full of words to a quiet man.",
+      "source": "Sirach 25",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲱⲗ",
+        1,
+        15.276
+      ],
+      [
+        "ϣⲱ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲕⲁⲣⲁⲕⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲕⲁⲣⲁⲕⲓⲣ",
+          1
+        ],
+        [
+          "ϣⲱ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲕⲁⲣⲁⲕⲓⲣ_0_node",
+          "ⲛ_1_post_ⲥⲕⲁⲣⲁⲕⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲕⲁⲣⲁⲕⲓⲣ",
+          "ϣⲱ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18338,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3443",
+      "label": "ⲥⲕⲟⲣⲕⲣ",
+      "pos": "V",
+      "gloss": "turn, roll, be rolled"
+    },
+    {
+      "target": "C3444",
+      "label": "ⲥⲕⲟⲣⲕⲣ",
+      "pos": "N",
+      "gloss": "rolling"
+    }
+  ]
+}

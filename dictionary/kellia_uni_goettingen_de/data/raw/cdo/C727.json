@@ -1,0 +1,181 @@
+{
+  "id": "C727",
+  "forms": [
+    {
+      "id": "CF2732",
+      "orth": "ⲙⲡⲉⲥⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9109,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "note": "zuweilen wie ein Adj. verwendet",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS867",
+      "bibliography": "CD 60a; KoptHWb 40; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛϣⲱⲡⲉ ⲉⲛ**ⲙⲡⲉⲥⲏⲧ** ⲉⲛⲧⲛⲛⲧⲡⲉ ⲁⲛ ϫⲉⲁⲛⲣⲛⲟⲃⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉⲛⲛⲟⲩⲧⲉ ⲙⲡⲛⲥⲱⲧⲙ ⲛⲥⲁⲧⲉϥⲥⲙⲏ",
+      "english": "Thus we were cast down, and not exalted, because we have sinned against the Lord our God, and have not been obedient unto his voice.",
+      "source": "Baruch 2",
+      "urn": "urn:cts:copticLit:ot.bar.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉϥⲥⲏϩ ϫⲉⲁϥⲛⲟϫϥ ⲉⲧⲗⲓⲙⲛⲏ ⲛⲥⲁⲧⲉ ⲉⲧϫⲉⲣⲟ ⲉⲓϫⲱ ⲙⲙⲟⲥ ϫⲉϥ**ⲙⲡⲉⲥⲏⲧ** ⲙⲡⲛⲟⲩⲛ ⲙⲛⲡⲕⲁⲕⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲛⲧⲛ",
+        1,
+        18.598
+      ],
+      [
+        "ⲛⲟⲩⲛ",
+        1,
+        13.258
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8663,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2349",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C729",
+      "label": "ϣⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "as far as, down to the ground"
+    },
+    {
+      "target": "C730",
+      "label": "ϩⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "below ground, under"
+    },
+    {
+      "target": "C731",
+      "label": "ϩⲓⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "on, to the ground; from off ground"
+    },
+    {
+      "target": "C732",
+      "label": "ϫⲓⲛⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "from the ground, from below"
+    },
+    {
+      "target": "C726",
+      "label": "ⲉⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "to the ground, downward"
+    },
+    {
+      "target": "C725",
+      "label": "ⲉⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "ground, bottom, lowest part"
+    },
+    {
+      "target": "C733",
+      "label": "ⲣⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "go, be below"
+    },
+    {
+      "target": "C728",
+      "label": "ⲥⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "(on the) lower side, below"
+    }
+  ]
+}

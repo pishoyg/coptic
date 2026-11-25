@@ -1,0 +1,111 @@
+{
+  "id": "C1118",
+  "forms": [
+    {
+      "id": "CF3602",
+      "orth": "ⲕⲁⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12093,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲭⲁⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2512,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲕⲁⲕ",
+      "dialect": "F",
+      "id": "768.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1302",
+      "bibliography": "CD 100b; KoptHWb 58; ChLCS 16a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲓⲟⲩⲱⲛϩ **ⲕⲁⲕ** ⲉⲃⲟⲗ ⲛϩⲱⲃ ⲛⲓⲙ ⲱ ⲡⲙⲉⲣⲓⲧ ⲙⲡⲛⲟⲩⲧⲉ ⲧⲱⲟⲩⲛ ⲛⲅⲃⲱⲕ ⲉⲡⲕⲟⲥⲙⲟⲥ ⲛⲅϫⲱ ⲛⲛⲉⲛⲧⲁⲕⲛⲁⲩ ⲉⲣⲟⲟⲩ ⲧⲏⲣⲟⲩ ·",
+      "english": "Behold now, I have made manifest unto thee all things, O beloved one of God. Arise, get thee down into the world, and tell therein everything which thou hast seen.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        11.411
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        10.929
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        10.087
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11666,
+      "count": 1
+    }
+  }
+}

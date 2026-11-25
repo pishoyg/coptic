@@ -1,0 +1,61 @@
+{
+  "id": "C8051",
+  "forms": [
+    {
+      "id": "CF18202",
+      "orth": "ⲁⲅⲁⲡⲁⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18203",
+      "orth": "ⲁⲅⲁⲡⲁⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18204",
+      "orth": "ⲁⲅⲁⲡⲁⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF18205",
+      "orth": "ⲁⲅⲁⲡⲁⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF18206",
+      "orth": "ⲁⲅⲁⲡⲁⲛ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8972",
+      "bibliography": "DDGLC",
+      "cu_ID": "10961"
+    },
+    {
+      "id": "CS8973",
+      "bibliography": "DDGLC",
+      "cu_ID": "10086"
+    },
+    {
+      "id": "CS8974",
+      "bibliography": "DDGLC",
+      "cu_ID": "2963"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2441",
+    "grl_lemma": "ἀγαπάω",
+    "grl_meaning": "to be fond of, prize, desire",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 6b; Preisigke 1:5"
+  }
+}

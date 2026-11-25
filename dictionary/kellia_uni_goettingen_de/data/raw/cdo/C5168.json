@@ -1,0 +1,69 @@
+{
+  "id": "C5168",
+  "forms": [
+    {
+      "id": "CF12302",
+      "orth": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11989,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5803",
+      "bibliography": "CD 492b; KoptHWb 278"
+    },
+    {
+      "id": "CS5804",
+      "bibliography": "CD 492b; KoptHWb 278"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲥⲟⲩⲟⲥⲑⲉⲛ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲥⲙⲱⲓⲧ ϩⲓϫⲉⲛⲛⲓⲙⲱⲓⲧ ⲛⲧⲉⲡϣⲁϥⲉ ⲛⲁⲥⲉⲣⲫⲟⲣⲓⲛ ⲛⲟⲩⲡⲛⲁ ϧⲉⲛⲛⲓⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲧⲉⲧⲉⲥⲯⲩⲭⲏ ⲁⲩⲧⲏⲓⲥ ⲛⲓⲙ ⲟⲩⲛ ⲉⲑⲛⲁⲧⲁⲥⲑⲟⲥ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲕⲱϯ ⲛⲥⲱⲥ ⲛⲛⲟⲩϧⲓⲥⲓ ⲟⲩⲟϩ ϧⲉⲛⲡⲉⲥⲑⲉⲃⲓⲟ ⲉⲩⲉϫⲉⲙⲥ .",
+      "english": "she has extended her ways over the waters of the desert; she was hurried along by the lusts of her soul; she is given up to them, who will turn her back? none that seek her shall be weary; at the time of her humiliation they shall find her.",
+      "source": "24_Ieremias_02",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4553,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5169",
+      "label": "ⲟⲩⲟⲥⲑⲉⲛ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "breadth; independence, abundance"
+    },
+    {
+      "target": "C5166",
+      "label": "ⲟⲩⲟⲥⲧⲛ",
+      "pos": "V",
+      "gloss": "become broad; make broad, broaden"
+    },
+    {
+      "target": "C5167",
+      "label": "ⲟⲩⲟⲥⲧⲛ",
+      "pos": "N",
+      "gloss": "breadth"
+    }
+  ]
+}

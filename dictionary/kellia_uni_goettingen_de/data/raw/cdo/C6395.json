@@ -1,0 +1,139 @@
+{
+  "id": "C6395",
+  "forms": [
+    {
+      "id": "CF14815",
+      "orth": "ϩⲓⲧⲉϩⲓⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9229,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7098",
+      "bibliography": "CD 646a; KoptHWb 356; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲥⲉⲡⲥⲱⲡϥ ⲉⲩⲁⲓⲧⲉⲓ ⲛⲟⲩϩⲙⲟⲧ ⲛⲧⲟⲟⲧϥ ϫⲉⲕⲁⲁⲥ ⲉϥⲉⲧⲛⲛⲟⲟⲩ ⲛⲥⲱϥ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲉⲩⲉⲓⲣⲉ ⲛⲟⲩⲕⲣⲟϥ ⲉⲣⲟϥ ⲉⲙⲟⲟⲩⲧϥ **ϩⲓⲧⲉϩⲓⲏ** .",
+      "english": "asking a favor against him, that he would summon him to Jerusalem; plotting to kill him on the way.",
+      "source": "44_Acts of the Apostles_25",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϫⲱ ϩⲱⲟⲩ ⲛⲛⲉⲧⲁⲩϣⲱⲡⲉ **ϩⲓⲧⲉϩⲓⲏ** . ⲁⲩⲱ ⲛⲧϩⲉ ⲉⲛⲧⲁϥⲟⲩⲱⲛϩ ⲉⲣⲟⲟⲩ ϩⲙⲡⲡⲱϣ ⲙⲡⲟⲉⲓⲕ .",
+      "english": "They related the things that happened along the way, and how he was recognized by them in the breaking of the bread.",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲏⲥⲧⲟⲥ",
+        1,
+        16.276
+      ],
+      [
+        "ⲙⲟⲟⲩⲧ",
+        1,
+        10.513
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ϭⲉ",
+        1,
+        8.45
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8794,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6394",
+      "label": "ϩⲓⲏ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C6397",
+      "label": "ϯⲧⲉϩⲓⲏ",
+      "pos": "V",
+      "gloss": "give way, means"
+    },
+    {
+      "target": "C6396",
+      "label": "ⲣⲙϩⲓⲏ",
+      "pos": "N",
+      "gloss": "man of the road, travelling companion"
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "id": "C217",
+  "forms": [
+    {
+      "id": "CF883",
+      "orth": "ⲁⲥⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3459,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF884",
+      "orth": "ⲁⲥⲓⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3197,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS245",
+      "bibliography": "CD 17b; KoptHWb 12; DELC 17; ChLCS 5b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲁⲓ ⲟⲩⲛ ⲉⲓⲟⲩⲁϣϥ ⲙⲏⲧⲓ ϩⲁⲣⲁ ⲁⲓⲓⲣⲓ ϧⲉⲛⲟⲩ**ⲁⲥⲓⲁⲓ** ⲓⲉ ⲛⲏ ⲉϯⲥⲟϭⲛⲓ ⲉⲣⲱⲟⲩ ⲁⲓⲥⲟϭⲛⲓ ⲉⲣⲱⲟⲩ ⲕⲁⲧⲁⲥⲁⲣⲝ ϩⲓⲛⲁ ⲛⲧⲉϥϣⲱⲡⲓ ⲛⲧⲟⲧⲛϫⲉⲡⲓⲁϩⲁ ⲁϩⲁ ⲛⲉⲙⲡⲓⲙⲙⲟⲛ ⲙⲙⲟⲛ .",
+      "english": "When I therefore was thus determined, did I show fickleness? Or the things that I purpose, do I purpose according to the flesh, that with me there should be the 'Yes, yes' and the 'No, no?'",
+      "source": "08_II Corinthians_01",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲁⲓ ϭⲉ ⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ϣϣⲉ ⲉⲣⲱⲧⲛ ⲉⲧⲣⲉⲧⲛⲥⲙⲛ ⲧⲏⲩⲧⲛ . ⲛⲧⲉⲧⲛⲧⲙⲣⲗⲁⲁⲩ ⲛϩⲱⲃ ϩⲛⲟⲩ**ⲁⲥⲁⲓ** .",
+      "english": "Seeing then that these things can't be denied, you ought to be quiet, and to do nothing rash.",
+      "source": "44_Acts of the Apostles_19",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲉϥⲉⲱⲗⲓ ⲛⲟⲩⲙⲏⲓⲛⲓ ϧⲉⲛⲛⲓⲉⲑⲛⲟⲥ ⲛⲏⲉⲧϧⲉⲛⲧ ⲛⲉⲙⲛⲏⲉⲑⲟⲩⲏⲟⲩ ⲉϥⲉⲉⲣϣⲟⲩϣⲓⲧⲥ ⲛⲥⲱⲟⲩ ⲓⲥϫⲉⲛ ⲁⲩⲣⲏϫϥ ⲙⲡⲕⲁϩⲓ ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲉⲩⲉⲓ ⲛⲭⲱⲗⲉⲙ ϧⲉⲛⲟⲩ**ⲁⲥⲓⲁⲓ** .",
+      "english": "Therefore shall he lift up a signal to the nations that are afar, and shall hiss for them from the end of the earth; and, behold, they are coming very quickly.",
+      "source": "23_Isaias_05",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ϭⲉ ⲉⲁⲓⲟⲩⲁϣϥ ⲙⲏⲧⲓ ⲁⲓⲭⲣⲱ ϩⲛⲟⲩ**ⲁⲥⲁⲓ** ⲏⲛⲉϯⲙⲉⲉⲩⲉ ⲉⲣⲟⲟⲩ ⲙⲏ ⲉⲉⲓⲙⲉⲉⲩⲉ ⲉⲣⲟⲟⲩ ⲕⲁⲧⲁⲥⲁⲣⲝ ϫⲉⲕⲁⲁⲥ ⲉϥⲉϣⲱⲡⲉ ⲛⲧⲟⲟⲧⲛϭⲓⲡⲥⲉ ⲛⲥⲉⲁⲩⲱ ⲡⲙⲙⲟⲛ ⲛⲙⲙⲟⲛ .",
+      "english": "When I therefore was thus determined, did I show fickleness? Or the things that I purpose, do I purpose according to the flesh, that with me there should be the 'Yes, yes' and the 'No, no?'",
+      "source": "47_2 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲟⲛ ϩⲗⲓ ⲟⲩⲛ ϯⲉϧⲟⲩⲛ ⲉϩⲣⲉⲛⲛⲁⲓ ⲥⲉⲙⲡϣⲁ ⲟⲩⲛ ⲛⲧⲉⲧⲉⲛϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲥⲙⲟⲛⲧ ⲟⲩⲟϩ ⲛⲧⲉⲧⲉⲛϣⲧⲉⲙⲉⲣ ϩⲗⲓ ⲛϩⲱⲃ ϧⲉⲛⲟⲩ**ⲁⲥⲓⲁⲓ** .",
+      "english": "Seeing then that these things can't be denied, you ought to be quiet, and to do nothing rash.",
+      "source": "05_Acts_19",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓ ⲇⲉ ⲉⲃⲟⲗ ⲉϫⲛⲧϩⲁⲗⲗⲁⲥⲁ ⲁⲩϩⲉ ⲉⲡϫⲟⲉⲓ ϩⲛⲟⲩϣⲡⲛϣⲱⲡ · ⲁⲩⲁⲗⲉ ⲁⲩⲉⲓ ⲉⲣⲁⲕⲟⲧⲉ ϩⲛⲟⲩ**ⲁⲥⲁⲓ** ⲁⲩⲧⲁⲁⲩ ⲛⲁⲑⲁⲛⲁⲥⲓⲟⲥ · ⲁϥⲣⲁϣⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ · ⲛⲧϩⲉ ⲛⲧⲁϥⲛⲁⲩ ⲉⲣⲟⲟⲩ ϩⲱⲥ ϫⲉⲛⲧⲁϥⲛⲁⲩ ⲉⲣⲟⲟⲩ ϩⲙⲡⲥⲱⲙⲁ",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲱⲛⲁⲥ",
+        3,
+        14.538
+      ],
+      [
+        "ϯⲙⲉⲉⲩⲉ",
+        1,
+        13.189
+      ],
+      [
+        "ϫⲟⲉⲓ",
+        3,
+        12.389
+      ],
+      [
+        "ϭⲓⲛⲙⲟⲟϣⲉ",
+        1,
+        10.81
+      ],
+      [
+        "ⲧⲣⲉ",
+        5,
+        10.543
+      ],
+      [
+        "ⲭⲣⲱ",
+        1,
+        10.341
+      ],
+      [
+        "ⲟⲩ",
+        9,
+        9.642
+      ],
+      [
+        "ⲣⲁⲕⲟⲧⲉ",
+        1,
+        9.466
+      ],
+      [
+        ":",
+        2,
+        9.318
+      ],
+      [
+        "ⲣⲁⲥⲟⲩ",
+        1,
+        9.068
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        2,
+        8.509
+      ],
+      [
+        "ⲉⲣⲟ",
+        4,
+        8.397
+      ],
+      [
+        "ϩⲁⲧⲛ",
+        1,
+        8.244
+      ],
+      [
+        "ⲁⲧϩⲏⲧ",
+        1,
+        7.824
+      ],
+      [
+        "ⲁ",
+        6,
+        7.712
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        6.723
+      ],
+      [
+        "ⲓ",
+        3,
+        6.518
+      ],
+      [
+        "ϩⲛ",
+        3,
+        6.147
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        5.931
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        5.9
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥⲁⲓ_0_node",
+          7
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲥⲁⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ϭⲓⲛⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲙⲟⲟϣⲉ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲁⲥⲁⲓ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲡⲣⲉⲥⲃⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲉⲥⲃⲉⲓⲁ_2_post_ϩⲓⲧⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲧⲛ",
+          1
+        ],
+        [
+          "ⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲥⲁⲓ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲥⲁⲓ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁⲥⲁⲓ_0_node",
+          "ⲛϭⲓ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲁⲥⲁⲓ",
+          "ⲧⲉⲩ_3_post_ϭⲓⲛⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ϭⲓⲛⲙⲟⲟϣⲉ",
+          "ϭⲓⲛⲙⲟⲟϣⲉ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲁⲥⲁⲓ_0_node",
+          "ϩⲓϫⲱ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ⲁⲥⲁⲓ",
+          "ⲓ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ϩⲓϫⲱ",
+          "ϩⲓⲧⲛ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲁⲥⲁⲓ",
+          "ⲛⲉⲕ_3_post_ⲡⲣⲉⲥⲃⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲡⲣⲉⲥⲃⲉⲓⲁ",
+          "ⲡⲣⲉⲥⲃⲉⲓⲁ_2_post_ϩⲓⲧⲛ",
+          1
+        ],
+        [
+          "ⲁⲥⲁⲓ_0_node",
+          "ϩⲓⲧⲛ_1_post_ⲁⲥⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲁⲥⲁⲓ",
+          "ⲛ_2_post_ϩⲓⲧⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲧⲛ",
+          "ⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1647,
+      "count": 34
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C216",
+      "label": "ⲁⲥⲁⲓ",
+      "pos": "V",
+      "gloss": "be light, relieved; be swift, fast; lighten"
+    },
+    {
+      "target": "C218",
+      "label": "ⲁⲥⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "levity, hastiness"
+    },
+    {
+      "target": "C219",
+      "label": "ⲉⲥⲓⲉ",
+      "pos": "N",
+      "gloss": "careless"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "id": "C2585",
+  "forms": [
+    {
+      "id": "CF6962",
+      "orth": "ⲁⲧⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4371,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2966",
+      "bibliography": "CD 234a; ChLCS 33b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲛⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲛⲧⲉⲕⲙⲛⲧⲛⲟϭ ⲛ**ⲁⲧⲛⲁⲩ** ⲉⲣⲟⲥ · ⲧⲁⲓ ⲉⲧⲉⲛⲥⲟⲩⲟⲛϩ ⲉⲣⲟⲛ ⲁⲛ ⲧⲉⲛⲟⲩ ·",
+      "english": "For we know Thy Majesty which is invisible, and which doth not make itself manifest unto us at this time.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲓ**ⲁⲧⲛⲁⲩ** ⲉⲣⲟϥ ⲙⲏ ⲙⲡⲟⲩⲛⲁⲩ ⲉⲣⲟϥ ⲉⲧⲃⲏⲏⲧⲛ ·",
+      "english": "Did not He Who was invisible make Himself visible for our sakes?",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲧⲉⲕⲧⲏⲥⲓⲥ ⲧⲏⲣⲥ ⲉⲓⲙⲉ ϫⲉⲉⲧⲃⲉ ⲡⲟⲩϫⲁⲓ ⲙⲡⲣⲱⲙⲉ ⲛⲧⲁⲩⲕⲣⲓⲛⲉ ⲙⲡⲉⲕⲣⲓⲧⲏⲥ · ⲁⲩⲱ ⲉⲧⲃⲏⲏⲧϥ ⲛⲧⲁⲩⲛⲁⲩ ⲉⲡⲓ**ⲁⲧⲛⲁⲩ** ⲉⲣⲟϥ ·",
+      "english": "Then did every created thing know that the Judge had had judgement passed on Him for the sake of the salvation of man, and that, for man's sake, He Who was invisible had been seen,",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲟⲡ",
+        1,
+        9.539
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧⲛⲟϭ",
+        2,
+        14.118
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        13.04
+      ],
+      [
+        "ⲉⲣⲟ",
+        6,
+        12.654
+      ],
+      [
+        "ⲧⲁⲓ",
+        2,
+        10.494
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        10.285
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        9.289
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ϣⲁⲣⲟ",
+        1,
+        8.833
+      ],
+      [
+        ".",
+        3,
+        8.727
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        8.519
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        8.194
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.147
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        6.742
+      ],
+      [
+        "ⲥ",
+        2,
+        6.689
+      ],
+      [
+        "ⲡ",
+        3,
+        6.667
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.232
+      ],
+      [
+        "ⲩ",
+        1,
+        3.225
+      ],
+      [
+        "ⲁ",
+        1,
+        2.459
+      ],
+      [
+        "ⲉ",
+        1,
+        2.232
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ⲁⲧⲥⲟⲃϯ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲟⲃϯ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲛⲁⲩ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          "ⲟⲩⲟϩ_3_post_ⲁⲧⲥⲟⲃϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ⲁⲧⲥⲟⲃϯ",
+          "ⲛ_1_post_ⲁⲧⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲛⲁⲩ",
+          "ⲁⲧⲥⲟⲃϯ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲛⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲛⲁⲩ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲛⲁⲩ",
+          "ⲁⲧⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲛⲁⲩ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3973,
+      "count": 6
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2587",
+      "label": "ϭⲓⲛⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight, vision"
+    },
+    {
+      "target": "C2588",
+      "label": "ϭⲓⲛⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight, vision"
+    },
+    {
+      "target": "C2583",
+      "label": "ⲙⲉⲧⲁⲑⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sightlessnees"
+    },
+    {
+      "target": "C2578",
+      "label": "ⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "look, behold"
+    },
+    {
+      "target": "C2584",
+      "label": "ⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sight, view, vision"
+    },
+    {
+      "target": "C2579",
+      "label": "ⲛⲁⲩ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "see (opp not see, be blind)"
+    },
+    {
+      "target": "C2582",
+      "label": "ⲛⲁⲩ (ⲙⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "see (contrary to: not see, be blind)"
+    },
+    {
+      "target": "C2580",
+      "label": "ⲛⲁⲩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight (power to see)"
+    },
+    {
+      "target": "C2586",
+      "label": "ⲣⲉϥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "seer"
+    },
+    {
+      "target": "C2581",
+      "label": "ⲣⲉϥⲛⲁⲩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "seer"
+    }
+  ]
+}

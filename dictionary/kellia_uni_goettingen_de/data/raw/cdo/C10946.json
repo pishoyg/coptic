@@ -1,0 +1,423 @@
+{
+  "id": "C10946",
+  "forms": [
+    {
+      "id": "CF29915",
+      "orth": "ⲭⲁⲣⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29921",
+      "orth": "ⲭⲁⲣⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2456,
+        "count": 20
+      }
+    },
+    {
+      "id": "CF29916",
+      "orth": "ⲭⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9181,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF29917",
+      "orth": "ⲭⲁⲗⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29918",
+      "orth": "ⲭⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3993,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF29919",
+      "orth": "ⲭⲁⲣⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29920",
+      "orth": "ⲭⲁⲣⲧⲏⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29922",
+      "orth": "ⲭⲁⲣⲧⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29923",
+      "orth": "ⲭⲁⲣⲧⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29924",
+      "orth": "ⲭⲁⲣⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13520,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15157",
+      "bibliography": "DDGLC",
+      "cu_ID": "2004"
+    },
+    {
+      "id": "CS15158",
+      "bibliography": "DDGLC",
+      "cu_ID": "7621"
+    },
+    {
+      "id": "CS15159",
+      "bibliography": "DDGLC",
+      "cu_ID": "3599"
+    },
+    {
+      "id": "CS15160",
+      "bibliography": "DDGLC",
+      "cu_ID": "3045"
+    },
+    {
+      "id": "CS15161",
+      "bibliography": "DDGLC",
+      "cu_ID": "10304"
+    },
+    {
+      "id": "CS15162",
+      "bibliography": "DDGLC",
+      "cu_ID": "9227"
+    },
+    {
+      "id": "CS15163",
+      "bibliography": "DDGLC",
+      "cu_ID": "11863"
+    },
+    {
+      "id": "CS15164",
+      "bibliography": "DDGLC",
+      "cu_ID": "15348"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲁⲣⲭⲉ ⲛϭⲓⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲉⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲛⲟⲩ**ⲭⲁⲣⲧⲏⲥ** ·",
+      "english": "Then the Devil began to produce a written letter,",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲕⲟⲟⲩⲉ ⲇⲉ ⲧⲏⲣⲟⲩ ⲉⲧⲉϣϣⲉ ⲉⲥⲁϩⲟⲩ ⲉϩⲣⲁⲓ ⲉⲧⲉⲓⲉⲡⲓⲥⲧⲟⲗⲏ · ⲁⲩⲱ ⲙⲡⲛⲥⲁϩⲟⲩ · ⲉⲓⲥϩⲏⲏⲛⲉ ⲥⲉⲥⲏϩ ⲧⲏⲣⲟⲩ ϩⲛⲛⲉ**ⲭⲁⲣⲧⲏⲥ** ⲉⲧⲥⲏϩ ϫⲓⲛⲛϣⲟⲣⲡ ·",
+      "english": "All the things that it is fitting to write in this letter and which we have not written, they are all written on the papers written from the beginning.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲥⲏϩ ⲉϩⲉⲛ**ⲭⲁⲣⲧⲏⲥ** · ⲉⲁⲩⲟⲩⲱϭⲡ ⲛⲛⲉⲕⲙⲏⲙⲟⲟⲩ ⲉⲧϩⲛϩⲉⲛϣⲟϣⲟⲩ ϩⲱⲥ ⲏⲣⲡ ϩⲓϫⲛⲙⲡⲛⲏ ⲙⲡⲉⲕⲏⲓ . ⲁⲩⲱ ⲉϩⲟⲩⲛ ϩⲙⲡⲉⲕⲣⲟ , ⲙⲛⲡⲣⲟ ⲛⲛⲉⲧⲉⲓⲛⲉ ⲙⲙⲟⲕ ,",
+      "english": "written on pieces of papyrus—as they broke your urine, in jars like wine —upon the threshold of your house, and on your door and the doors of those who are like you,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲗⲁ",
+        3,
+        19.031
+      ],
+      [
+        "ⲥⲏϩ",
+        14,
+        18.721
+      ],
+      [
+        "ⲛ",
+        28,
+        13.909
+      ],
+      [
+        "ⲧⲟⲙⲟⲥ",
+        1,
+        13.691
+      ],
+      [
+        "ϫⲓⲛ",
+        6,
+        13.684
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        4,
+        13.453
+      ],
+      [
+        "ϩⲏⲏⲛⲉ",
+        1,
+        13.276
+      ],
+      [
+        "ⲕⲁⲗⲟⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲥⲉϩ",
+        1,
+        11.632
+      ],
+      [
+        "ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ",
+        1,
+        11.469
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        2,
+        11.393
+      ],
+      [
+        "ⲟⲩ",
+        9,
+        10.408
+      ],
+      [
+        "ⲓⲉⲣⲉⲙⲓⲁⲥ",
+        1,
+        10.147
+      ],
+      [
+        "ⲁ",
+        8,
+        9.722
+      ],
+      [
+        "ϥ",
+        9,
+        9.709
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        9.671
+      ],
+      [
+        "ϩⲉⲗⲡⲓⲍⲉ",
+        1,
+        9.618
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        9.146
+      ],
+      [
+        "ϩⲛ",
+        5,
+        9.123
+      ],
+      [
+        "ⲉ",
+        7,
+        8.917
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲁⲣⲧⲏⲥ_0_node",
+          16
+        ],
+        [
+          "ⲉⲧ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          4
+        ],
+        [
+          "ⲥⲏϩ_2_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲥⲏϩ",
+          3
+        ],
+        [
+          "ⲛ_4_post_ϫⲓⲛ",
+          3
+        ],
+        [
+          "ϣⲟⲣⲡ_5_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉⲗⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲉⲗⲁ",
+          1
+        ],
+        [
+          "ⲙⲉⲗⲁ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲭⲁⲣⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲏϩ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲕⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲭⲁⲣⲧⲏⲥ_0_node",
+          "ⲉⲧ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          "ⲥⲏϩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲥⲏϩ_2_post_ⲉⲧ",
+          "ϫⲓⲛ_3_post_ⲥⲏϩ",
+          2
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲥⲏϩ",
+          "ⲛ_4_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϫⲓⲛ",
+          "ϣⲟⲣⲡ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲁⲣⲧⲏⲥ_0_node",
+          "ⲙⲛ_2_post_ⲙⲉⲗⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉⲗⲁ",
+          "ⲡ_2_post_ⲙⲉⲗⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲉⲗⲁ",
+          "ⲙⲉⲗⲁ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲭⲁⲣⲧⲏⲥ",
+          "ⲭⲁⲣⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲭⲁⲣⲧⲏⲥ_0_node",
+          "ⲛ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲥⲏϩ",
+          "ⲛ_3_post_ⲥⲏϩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲏϩ",
+          "ϣⲟⲣⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲭⲁⲣⲧⲏⲥ",
+          "ⲕⲏ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉⲧ",
+          "ⲉϩⲣⲁⲓ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_3_post_ⲕⲏ",
+          "ϫⲓⲛ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲕⲏ",
+          "ⲛ_4_post_ϫⲓⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2167,
+      "count": 20
+    }
+  },
+  "etym": {
+    "grl_ID": "2355",
+    "grl_lemma": "χάρτης",
+    "grl_meaning": "papyrus, papyrus-roll",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1980b; Preisigke 2:723"
+  }
+}

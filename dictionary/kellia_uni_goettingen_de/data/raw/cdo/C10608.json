@@ -1,0 +1,84 @@
+{
+  "id": "C10608",
+  "forms": [
+    {
+      "id": "CF28663",
+      "orth": "ⲥⲩⲛⲁⲛⲧⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28664",
+      "orth": "ⲥⲩⲛⲁⲛⲧⲏⲙⲁ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14459",
+      "bibliography": "DDGLC",
+      "cu_ID": "984"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧⲏ",
+        1,
+        13.764
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        10.055
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.736
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        1,
+        8.515
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲁⲛⲧⲏⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "2799",
+    "grl_lemma": "συνάντημα",
+    "grl_meaning": "incident, occurrence, visitation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1696b"
+  }
+}

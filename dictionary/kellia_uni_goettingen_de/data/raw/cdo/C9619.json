@@ -1,0 +1,56 @@
+{
+  "id": "C9619",
+  "forms": [
+    {
+      "id": "CF24587",
+      "orth": "ⲗⲉⲩⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24588",
+      "orth": "ⲗⲉⲩⲕⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24589",
+      "orth": "ⲗⲉⲩⲕⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24590",
+      "orth": "ⲗⲉⲩⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24591",
+      "orth": "ⲗⲉⲩⲕⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11871,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12312",
+      "bibliography": "DDGLC",
+      "cu_ID": "7779"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1289",
+    "grl_lemma": "λευκός",
+    "grl_meaning": "light, bright, clear, white",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1042a; Preisigke 2:16"
+  }
+}

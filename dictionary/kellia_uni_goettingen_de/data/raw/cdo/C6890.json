@@ -1,0 +1,439 @@
+{
+  "id": "C6890",
+  "forms": [
+    {
+      "id": "CF15829",
+      "orth": "ϩⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.15,
+        "rank": 657,
+        "count": 181
+      }
+    },
+    {
+      "orth": "ϩⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1637,
+        "count": 43
+      }
+    },
+    {
+      "orth": "ϩⲟⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3230,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7607",
+      "bibliography": "CD 718b; CED 299; KoptHWb 396; DELC 315b; ChLCS 97a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛⲁⲥ ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲡⲏⲣⲡ ⲛⲁⲡⲉϩⲛϩⲱⲧ ⲛⲧⲉⲡⲏⲣⲡ ⲡⲱⲛ ⲉⲃⲟⲗ ⲛⲧⲉⲛ**ϩⲱⲧ** ⲧⲁⲕⲟ . ⲁⲗⲗⲁ ⲉϣⲁⲩⲛⲉϫⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϩⲱⲧ ⲛⲃⲣⲣⲉ .",
+      "english": "No one puts new wine into old wineskins, or else the new wine will burst the skins, and the wine pours out, and the skins will be destroyed; but they put new wine into fresh wineskins.'",
+      "source": "41_Mark_2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓϩⲟⲧⲉ ϭⲉ **ϩⲱⲧ**ⲧⲏⲧⲛ ϩⲏⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲧⲛⲁⲩ ⲉⲣⲟⲛ ·",
+      "english": "' Besides this, have ye in fear God Who is looking at you.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲥⲧⲣⲉⲩⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲛⲛϩⲟⲓⲧⲉ ⲙⲡⲉⲗϭⲉ · ⲉⲧⲧⲟ ϩⲓⲱⲱϥ ⲙⲛⲛⲕⲉ**ϩⲱⲧ** ⲛⲧⲁⲩⲣϩⲣⲏⲥⲥⲉ ⲁⲥϯ ϩⲓⲱⲱϥ · ⲛⲟⲩϩⲃⲥⲱ ⲉⲥⲧⲁⲓⲏⲩ ⲕⲁⲧⲁⲡⲙⲡϣⲁ ⲛⲧⲙⲛⲧⲣⲣⲟ ·",
+      "english": "and she had the ragged apparel which was upon him stripped off, and the pieces of old skins, and she arrayed him in fine raiment, such as befitted (his position) in the state.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲑⲁⲣⲥⲓⲥ",
+        1,
+        16.11
+      ],
+      [
+        "ⲛⲉⲙⲱ",
+        1,
+        10.924
+      ],
+      [
+        "ⲉⲣ",
+        1,
+        9.658
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲏⲩⲧⲛ",
+        290,
+        29.316
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        59,
+        23.809
+      ],
+      [
+        "ⲡⲱⲛ",
+        13,
+        21.671
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        21.428
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        63,
+        21.21
+      ],
+      [
+        ".",
+        82,
+        20.46
+      ],
+      [
+        "ⲛ",
+        131,
+        19.739
+      ],
+      [
+        "ⲉⲧⲉⲧⲛⲉ",
+        18,
+        19.391
+      ],
+      [
+        "ⲏⲣⲡ",
+        16,
+        19.233
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        13,
+        18.735
+      ],
+      [
+        "ϩⲉ",
+        36,
+        18.067
+      ],
+      [
+        "ⲁⲣⲓ",
+        11,
+        17.467
+      ],
+      [
+        "ⲣϩⲣⲏⲥⲥⲉ",
+        2,
+        17.428
+      ],
+      [
+        "ⲡ",
+        56,
+        16.749
+      ],
+      [
+        "ⲛⲧⲉ",
+        18,
+        16.711
+      ],
+      [
+        "ⲛⲁ",
+        40,
+        16.484
+      ],
+      [
+        "ⲑⲁⲃ",
+        5,
+        16.417
+      ],
+      [
+        "ⲡⲉϩ",
+        4,
+        16.219
+      ],
+      [
+        "ⲁⲩⲱ",
+        37,
+        16.206
+      ],
+      [
+        "ⲧⲛ",
+        21,
+        16.171
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲱⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϩⲱⲧ",
+          5
+        ],
+        [
+          "ϩⲱⲧ_0_node",
+          15
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧ",
+          5
+        ],
+        [
+          "ⲁⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲣϩⲣⲏⲥⲥⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲣϩⲣⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲱⲧ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϩⲟⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲃⲏⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲃⲏⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲕⲉⲗⲗⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲡⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲱⲧ",
+          "ϩⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧ_0_node",
+          "ⲛ_1_post_ϩⲱⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧ",
+          "ⲁⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧ",
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲱⲧ",
+          "ⲟⲩ_1_pre_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧ",
+          "ϩⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧ_0_node",
+          "ⲛⲧ_1_post_ϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ϩⲱⲧ",
+          "ⲁ_3_post_ⲣϩⲣⲏⲥⲥⲉ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲣϩⲣⲏⲥⲥⲉ",
+          "ϥ_3_post_ⲣϩⲣⲏⲥⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲱⲧ",
+          "ⲛ_1_pre_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲧ",
+          "ⲕⲉ_1_pre_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ϩⲱⲧ",
+          "ϩⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϩⲱⲧ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲱⲧ",
+          "ⲙ_1_post_ϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲃⲏⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲃⲏⲙⲁ_3_post_ⲡ",
+          "ⲙ_4_post_ⲃⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧ",
+          "ϩⲁⲙⲕⲉⲗⲗⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲕⲉⲗⲗⲉ_2_post_ⲛ",
+          "ⲉ_1_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲱⲧ",
+          "ⲁ_3_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲡⲱϩ",
+          "ϥ_3_post_ⲡⲱϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.23,
+      "rank": 1583,
+      "count": 36
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 12946,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "101770",
+    "egy_lemma": "ḥꜣd",
+    "english": "trap (esp. for fish)",
+    "german": "Korb-Reuse (Fischfalle)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/101770"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "C3266",
+  "forms": [
+    {
+      "id": "CF8420",
+      "orth": "ⲉⲃⲟⲗ ⲥⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.47,
+        "rank": 1140,
+        "count": 40
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3731",
+      "bibliography": "CD 313b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲅⲁⲣ ⲉϯ ⲙⲫⲁⲓ **ⲉⲃⲟⲗ **ⲥⲁ**ⲡϣⲱⲓ** ⲛⲧ ⲛⲥⲁⲑⲉⲣⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩⲧⲏⲓⲧⲟⲩ ⲛⲛⲓϩⲏⲕⲓ ⲟⲩⲟϩ ⲛⲁⲩⲙⲃⲟⲛ ⲉⲣⲟⲥ ⲡⲉ .",
+      "english": "For this might have been sold for more than three hundred denarii, and given to the poor.' They grumbled against her.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲥ ⲟⲩⲥⲙⲏ ⲁⲥⲓ **ⲉⲃⲟⲗ **ⲥⲁ**ⲡϣⲱⲓ** ⲙⲡⲓⲥⲧⲉⲣⲉⲱⲙⲁ ⲫⲏⲉⲧϩⲓϫⲉⲛ ⲧⲟⲩⲁⲫⲉ .",
+      "english": "And lo! a voice from above the firmament",
+      "source": "26_Ezechiel_01",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲅⲁⲣ ⲙⲡⲓⲥⲉⲧⲉⲃⲣⲏϫ ⲉϣⲁϥⲓ **ⲉⲃⲟⲗ **ⲥⲁ**ⲡⲉⲓⲉⲃⲧ** ⲟⲩⲟϩ ⲛⲧⲉϥⲟⲩⲟⲛϩϥ ⲥⲁⲡⲉⲙⲉⲛⲧ ⲫⲁⲓ ⲡⲉ ⲙⲫⲣⲏϯ ⲙⲡϫⲓⲛⲓ ⲙⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ .",
+      "english": "For as the lightning flashes from the east, and is seen even to the west, so will be the coming of the Son of Man.",
+      "source": "01_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3264",
+      "label": "ⲉⲡⲉⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    },
+    {
+      "target": "C3267",
+      "label": "ⲕⲉⲥⲁ",
+      "pos": "ADV",
+      "gloss": "other part, apart, elsewhere"
+    },
+    {
+      "target": "C3269",
+      "label": "ⲙⲛⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "after (of time)"
+    },
+    {
+      "target": "C3270",
+      "label": "ⲙⲛⲛⲥⲱⲥ",
+      "pos": "ADV",
+      "gloss": "afterward"
+    },
+    {
+      "target": "C3268",
+      "label": "ⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "behind, after; against, at, from; except, beyond"
+    },
+    {
+      "target": "C3263",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "side, part"
+    },
+    {
+      "target": "C3265",
+      "label": "ⲥⲁⲡⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    }
+  ]
+}

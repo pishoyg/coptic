@@ -1,0 +1,75 @@
+{
+  "id": "C4315",
+  "forms": [
+    {
+      "id": "CF10581",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4889",
+      "bibliography": "CD 413b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C4314",
+      "type": "cf",
+      "label": "maker, creator"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4316",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4317",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4314",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4313",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4311",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "V",
+      "gloss": "make, create"
+    },
+    {
+      "target": "C4312",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "thing made, creation"
+    }
+  ]
+}

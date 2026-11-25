@@ -1,0 +1,88 @@
+{
+  "id": "C5645",
+  "forms": [
+    {
+      "id": "CF13266",
+      "orth": "ⲱϩⲉ (ⲉⲣⲁⲧ⸗ ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉⲣⲁⲧ⸗",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6317",
+      "bibliography": "CD 537b-538a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3162",
+      "type": "cf",
+      "label": "foot"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5643",
+      "label": "ϭⲓⲛⲁϩⲉ (ⲉϫⲛ-)",
+      "pos": "N",
+      "gloss": "act of remaining on"
+    },
+    {
+      "target": "C5648",
+      "label": "ϭⲓⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "standing"
+    },
+    {
+      "target": "C5647",
+      "label": "ϯⲙⲉⲧⲣⲉϥⲟϩⲉ ⲉⲣⲁⲧϥ ⲛⲧⲉⲡⲭⲟⲣⲟⲥ",
+      "pos": "N",
+      "gloss": "chorus, institution of choruses (χοροστασία)"
+    },
+    {
+      "target": "C5649",
+      "label": "ⲁϩⲉ (ⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "need"
+    },
+    {
+      "target": "C5646",
+      "label": "ⲙⲁ ⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "place of standing"
+    },
+    {
+      "target": "C5640",
+      "label": "ⲱϩⲉ",
+      "pos": "V",
+      "gloss": "stand, stay, wait"
+    },
+    {
+      "target": "C5641",
+      "label": "ⲱϩⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "abide by, wait for"
+    },
+    {
+      "target": "C5642",
+      "label": "ⲱϩⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "wait for, attend to"
+    },
+    {
+      "target": "C5644",
+      "label": "ⲱϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "stand on foot, stand"
+    }
+  ]
+}

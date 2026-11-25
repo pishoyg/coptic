@@ -1,0 +1,160 @@
+{
+  "id": "C8766",
+  "forms": [
+    {
+      "id": "CF21007",
+      "orth": "ⲇⲓⲁⲧⲟⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21008",
+      "orth": "ⲇⲓⲁⲧⲟⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13192,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10487",
+      "bibliography": "DDGLC",
+      "cu_ID": "10831"
+    },
+    {
+      "id": "CS10488",
+      "bibliography": "DDGLC",
+      "cu_ID": "15495"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉⲥϫⲡⲉϣⲏⲣⲉ ⲉⲛⲉϩ · ⲁⲩⲱ ⲛⲉⲩⲛⲟⲩⲛⲟϭ ⲛⲗⲩⲡⲉⲓ ϩⲙⲡⲉⲩϩⲏⲧ ⲉⲧⲃⲉⲡⲉⲓϩⲱⲃ : ϫⲉⲙⲛⲧⲁⲩ ⲙⲙⲁⲩ ⲛⲟⲩ**ⲇⲓⲁⲧⲟⲭⲟⲥ** ⲉⲧⲉⲩⲟⲩⲥⲓⲁ ·",
+      "english": "and who had never given birth to a child, and there was great sorrow in their hearts because of this thing, for they had no heir to inherit their substance.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲟⲣⲕⲓⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲫⲩⲗⲓⲝ",
+        1,
+        16.525
+      ],
+      [
+        "ⲫⲏⲥⲧⲟⲥ",
+        1,
+        16.373
+      ],
+      [
+        "ϭⲓ",
+        1,
+        9.267
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲥⲓⲁ",
+        1,
+        15.791
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        10.438
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲧⲟⲭⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲧⲟⲭⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12778,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "493",
+    "grl_lemma": "διάδοχος",
+    "grl_meaning": "successor",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 393b; Preisigke 1:347"
+  }
+}

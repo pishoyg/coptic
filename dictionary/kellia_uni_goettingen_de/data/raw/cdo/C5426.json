@@ -1,0 +1,162 @@
+{
+  "id": "C5426",
+  "forms": [
+    {
+      "id": "CF12823",
+      "orth": "ⲱⲃⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11196,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19809,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲃⲉⲧ",
+      "dialect": "F",
+      "id": "1806.2"
+    },
+    {
+      "orth": "ⲱⲃⲧ",
+      "dialect": "L",
+      "id": "1806.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6080",
+      "bibliography": "CD 518b; CED 227; KoptHWb 289; DELC 248b-249a; ChLCS 71b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕⲥⲁⲛⲁϣⲧ ϩⲛϩⲉⲛ**ⲱⲃⲧ** · ⲙⲛϩⲉⲛⲡⲁⲡⲟⲓ · ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲛⲧⲃⲛⲏ · ⲉⲕⲟⲩⲱⲙ ⲛⲛⲉⲕⲣⲱⲱϭ · ⲙⲡⲕⲁϩ ⲙⲁⲁⲩⲁⲕ · ϩⲛⲟⲩⲙⲛⲧⲁⲧⲥⲉⲓ ⲙⲛⲧⲉⲕⲙⲛⲧⲁⲡⲁⲛⲑⲣⲱⲡⲟⲥ ⲉⲕⲥⲱ ⲙⲡⲏⲣⲡ ⲉⲧⲥⲟⲧϥ ϩⲛϩⲉⲛⲫⲩⲁⲗⲏ ·",
+      "english": "Thou didst feed thyself on young and tender flesh (?), and on small birds, and on other creatures, thou didst eat by thyself the tender plants of the earth, thou didst drink undiluted wine in glasses insatiably and without consideration for any other man.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲛⲁϣⲧ",
+        1,
+        18.598
+      ],
+      [
+        "ⲡⲁⲡⲟⲓ",
+        1,
+        17.791
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          1
+        ],
+        [
+          "ⲡⲁⲡⲟⲓ_1_post_ⲱⲃⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱⲃⲧ_0_node",
+          "ⲙⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          "ϩⲉⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲁⲡⲟⲓ",
+          "ⲡⲁⲡⲟⲓ_1_post_ⲱⲃⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲡⲟⲓ_1_post_ⲱⲃⲧ",
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          "ⲡ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10782,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "107",
+    "egy_lemma": "ꜣpd",
+    "demo_num": "d472",
+    "demo_lemma": "ı ͗pd",
+    "english": "bird (gen.); fowl",
+    "german": "Vogel (allg.); Geflügel (koll.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/107",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d472"
+  }
+}

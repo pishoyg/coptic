@@ -1,0 +1,664 @@
+{
+  "id": "C6464",
+  "forms": [
+    {
+      "id": "CF14956",
+      "orth": "ϩⲃⲥⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.87,
+        "rank": 791,
+        "count": 137
+      }
+    },
+    {
+      "orth": "ϩⲃⲱⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.08,
+        "rank": 457,
+        "count": 176
+      }
+    },
+    {
+      "orth": "ϩⲃⲟⲟⲥ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4067,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϩⲃⲟⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.97,
+        "rank": 741,
+        "count": 82
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7174",
+      "bibliography": "CD 660a; CED 276; KoptHWb 356; DELC 289b; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϭⲓ ⲉⲃⲟⲗϧⲉⲛ ⲡⲓⲙⲁ ⲉⲧⲉⲙⲙⲁⲩ ⲛⲟⲩⲕⲟⲩϫⲓ ⲛⲏⲡⲓ ⲙⲟⲣⲟⲩ ϧⲉⲛⲡⲓϣⲧⲁϯ ⲛⲧⲉⲡⲉⲕ**ϩⲃⲱⲥ** .",
+      "english": "And thou shalt take thence a few in number, and shalt wrap them in the fold of thy garment.",
+      "source": "26_Ezechiel_05",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲉⲧⲛ**ϩⲃⲥⲱ** ⲉⲥⲡⲣⲓⲱⲟⲩ ·",
+      "english": "Let your apparel be splendid.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩϯϩⲟ ⲉⲣⲟϥ ⲡⲉ ϩⲓⲛⲁ ⲙⲟⲛⲟⲛ ⲛⲥⲉϭⲓ ⲛⲉⲙⲡϣⲧⲁϯ ⲛⲧⲉⲛⲉϥ**ϩⲃⲱⲥ** ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲁⲩϭⲓ ⲁⲩⲛⲟϩⲉⲙ .",
+      "english": "and they begged him that they might just touch the fringe of his garment. As many as touched it were made whole.",
+      "source": "01_Matthew_14",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲧⲟⲃⲧⲃ ⲟⲩⲇⲉ ⲙⲉϥϣⲟⲩϣⲟⲩ ⲙⲙⲟϥ ϩⲛⲟⲩ**ϩⲃⲥⲱ** ⲛϩⲟⲉⲓⲧⲉ ⲉⲛⲉϩ ·",
+      "english": "He did not decorate his person, and he did not adorn himself with rich apparel and fine raiment.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲧⲟⲗⲏ ⲛⲓⲃⲉⲛ ⲉⲁⲩⲑⲟⲩⲱⲧⲟⲩ ϧⲉⲛⲡⲭⲣⲟϥ ⲛⲉⲙ**ϩⲃⲱⲥ** ⲛⲓⲃⲉⲛ ⲉⲩⲉⲧⲟⲃⲟⲩ ϧⲉⲛⲟⲩϩⲱⲧⲡ ⲟⲩⲟϩ ⲥⲉⲛⲁⲟⲩⲱϣ ⲉⲁⲩⲣⲟⲕϩⲟⲩ ϧⲉⲛⲡⲓⲭⲣⲱⲙ .",
+      "english": "For they shall compensate for every garment that has been acquired by deceit, and all raiment with restitution; and they shall be willing, even if they were burnt with fire.",
+      "source": "23_Isaias_09",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲧⲉⲭⲣⲓⲁ ⲧⲉ ⲛⲟⲩ**ϩⲃⲥⲱ** ⲛⲉⲥⲟⲟⲩ ϫⲉⲕⲁⲥ ⲉϥⲉϭⲱⲣϭ ⲛϩⲏⲧⲥ ⲉⲡⲟⲩⲱⲛϣ ⲛⲟⲩⲁⲙⲣⲱⲙⲉ ·",
+      "english": "Now the sheep hath need of a covering [of wool], in order that it may be guarded by it from the wolf which eateth man.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        199,
+        19.59
+      ],
+      [
+        "ϭⲟⲟⲗⲉ",
+        15,
+        18.763
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        22,
+        18.388
+      ],
+      [
+        "ⲗⲁⲁⲙ",
+        7,
+        18.19
+      ],
+      [
+        "ϣⲉⲗⲉⲉⲧ",
+        12,
+        17.004
+      ],
+      [
+        "ϩⲣⲉ",
+        9,
+        16.146
+      ],
+      [
+        "ⲡⲣⲓⲱⲟⲩ",
+        3,
+        15.902
+      ],
+      [
+        "ⲧⲣⲟⲫⲏ",
+        6,
+        15.866
+      ],
+      [
+        "ⲉ",
+        65,
+        15.755
+      ],
+      [
+        "ⲡⲣⲉⲓⲱⲟⲩ",
+        3,
+        15.639
+      ],
+      [
+        "ⲥ",
+        44,
+        15.523
+      ],
+      [
+        "ⲕⲁϩⲏⲟⲩ",
+        2,
+        15.469
+      ],
+      [
+        "ⲓⲙⲏⲧⲉⲓ",
+        2,
+        15.469
+      ],
+      [
+        "ⲧ",
+        40,
+        14.907
+      ],
+      [
+        "ⲧⲟ",
+        6,
+        14.105
+      ],
+      [
+        "ⲁⲩⲱ",
+        35,
+        14.006
+      ],
+      [
+        "ϭⲏⲛ",
+        3,
+        13.976
+      ],
+      [
+        "ⲭⲣⲓⲁ",
+        2,
+        13.884
+      ],
+      [
+        "ⲟⲩ",
+        38,
+        13.835
+      ],
+      [
+        "ϩⲟⲉⲓⲧⲉ",
+        5,
+        13.693
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲃⲥⲱ_0_node",
+          57
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲃⲥⲱ",
+          7
+        ],
+        [
+          "ⲙ_1_post_ϩⲃⲥⲱ",
+          6
+        ],
+        [
+          "ⲙⲁ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁ",
+          5
+        ],
+        [
+          "ϣⲉⲗⲉⲉⲧ_4_post_ⲛ",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲃⲥⲱ",
+          7
+        ],
+        [
+          "ⲧ_1_pre_ϩⲃⲥⲱ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          8
+        ],
+        [
+          "ϩⲟⲉⲓⲧⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲃⲥⲱ",
+          3
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϩⲃⲥⲱ",
+          3
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "....ϩⲁⲙⲏⲛ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲥ_3_post_ⲧⲁⲓⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲁⲓⲏⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ϫⲱⲕ_1_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲩⲱ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲡⲣⲉⲓⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲣⲉⲓⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          3
+        ],
+        [
+          "ⲓ_3_post_ϭⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϭⲟϫⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_3_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ϩⲓⲱⲱ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          2
+        ],
+        [
+          "ϩⲃⲥⲱ_0_node",
+          "ⲙ_1_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲃⲥⲱ",
+          "ⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁ_2_post_ⲙ",
+          "ⲛ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁ",
+          "ϣⲉⲗⲉⲉⲧ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲃⲥⲱ",
+          "ⲧ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          2
+        ],
+        [
+          "ϩⲃⲥⲱ_0_node",
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          "ϩⲟⲉⲓⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲃⲥⲱ",
+          "ⲧⲉϥ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "....ϩⲁⲙⲏⲛ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ϩⲃⲥⲱ_0_node",
+          "ⲉ_1_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϩⲃⲥⲱ",
+          "ⲥ_3_post_ⲧⲁⲓⲏⲩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲁⲓⲏⲩ",
+          "ⲧⲁⲓⲏⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲃⲥⲱ",
+          "ⲧⲉⲩ_1_pre_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ϩⲃⲥⲱ_0_node",
+          "ⲁⲩⲱ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϫⲱⲕ",
+          "ⲡ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲱⲕ",
+          "ϫⲱⲕ_1_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ϫⲱⲕ_1_post_ϩⲃⲥⲱ",
+          "ⲛ_2_post_ϫⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲱⲕ",
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲃⲥⲱ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲓⲧⲟⲩⲱ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲃⲥⲱ",
+          "ⲥ_3_post_ⲡⲣⲉⲓⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲡⲣⲉⲓⲱⲟⲩ",
+          "ⲡⲣⲉⲓⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲃⲥⲱ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          "ⲓ_3_post_ϭⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲃⲥⲱ_0_node",
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          "ϭⲟϫⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲃⲥⲱ",
+          "ⲧⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲟ_2_post_ⲉⲧ",
+          "ϩⲓⲱⲱ_3_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_3_post_ⲧⲟ",
+          "ⲧ_4_post_ϩⲓⲱⲱ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ϩⲓⲱⲱ",
+          "ⲁⲗⲗⲁ_4_post_ϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.88,
+      "rank": 674,
+      "count": 140
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6462",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6463",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6459",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "V",
+      "gloss": "cover, be covered"
+    },
+    {
+      "target": "C6460",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "covering, lid"
+    },
+    {
+      "target": "C12093",
+      "label": "ϭⲓϩⲃⲟⲥ",
+      "pos": "N",
+      "gloss": "clothing"
+    },
+    {
+      "target": "C6461",
+      "label": "ⲣⲉϥϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "coverer, protector"
+    }
+  ],
+  "etym": {
+    "egy_num": "103920",
+    "egy_lemma": "ḥbs.wt",
+    "demo_num": "d4033",
+    "demo_lemma": "ḥbs.t",
+    "english": "cloth",
+    "german": "Stück Stoff; Decke; Umhüllung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/103920",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4033"
+  }
+}

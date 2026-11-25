@@ -1,0 +1,455 @@
+{
+  "id": "C2820",
+  "forms": [
+    {
+      "id": "CF7487",
+      "orth": "ⲡⲱⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5398,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲡⲱⲗⲕ",
+      "dialect": "S",
+      "id": "1263.1"
+    },
+    {
+      "orth": "ⲡⲱⲗϫ",
+      "dialect": "S",
+      "id": "1263.2"
+    },
+    {
+      "orth": "ⲡⲁⲣⲕⲉ",
+      "dialect": "S",
+      "id": "1263.3"
+    },
+    {
+      "orth": "ⲡⲗϭ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19891,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲉⲗⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7172,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲡⲟⲗϭ⸗",
+      "dialect": "S",
+      "id": "1263.6"
+    },
+    {
+      "orth": "ⲡⲟⲗⲕ⸗",
+      "dialect": "S",
+      "id": "1263.7"
+    },
+    {
+      "orth": "ⲡⲟⲗϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10704,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲁⲗϭ⸗",
+      "dialect": "S",
+      "id": "1263.9"
+    },
+    {
+      "orth": "ⲫⲱⲗϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13152,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲫⲟⲗϫ-",
+      "dialect": "B",
+      "id": "1263.11"
+    },
+    {
+      "orth": "ⲫⲟⲗϫ⸗",
+      "dialect": "B",
+      "id": "1263.12"
+    },
+    {
+      "orth": "ⲡⲁⲗϫ-",
+      "dialect": "F",
+      "id": "1263.13"
+    },
+    {
+      "orth": "ⲡⲁⲗϫ⸗",
+      "dialect": "F",
+      "id": "1263.14"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3224",
+      "bibliography": "CD 261b; CED 125; KoptHWb 147; DELC 159; ChLCS 37a"
+    },
+    {
+      "id": "CS3225",
+      "bibliography": "CD 261b; CED 125; KoptHWb 147; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲕ ⲟⲩⲛ ⲙⲁⲣⲛⲣⲡⲱⲃϣ ⲙⲉⲛ ⲛⲛⲁⲡⲁϩⲟⲩ ⲉⲛ**ⲡⲱⲗϭ** ⲇⲉ ⲙⲙⲟⲛ ⲉⲛⲁⲧϩⲏ ·",
+      "english": "Therefore let us forget the things which are behind, and reach forth unto those things which are before.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲉⲕⲙⲟⲟϣⲉ ⲙⲛⲡⲉⲧϫⲓϩⲁⲡ ⲟⲩⲃⲏⲕ ⲉϥϩⲓⲧⲉϩⲓⲏ ⲙⲁⲧϥⲧϩⲉ ⲙ**ⲡⲱⲗϭ** ⲛⲙⲙⲁⲕ ⲙⲏⲡⲱⲥ ⲛϥⲥⲱⲕ ⲙⲙⲟⲕ ⲉⲩⲣⲉϥϯϩⲁⲡ ⲛⲧⲉⲡⲣⲉϥϯϩⲁⲡ ⲧⲁⲁⲕ ⲉⲧⲟⲟⲧϥ ⲙⲡⲉⲡⲣⲁⲕⲧⲱⲣ ⲛⲧⲉⲡⲉⲡⲣⲁⲕⲧⲱⲣ ⲛⲟϫⲕ ⲉⲡⲉϣⲧⲉⲕⲟ .",
+      "english": "For when you are going with your adversary before the magistrate, try diligently on the way to be released from him, lest perhaps he drag you to the judge, and the judge deliver you to the officer, and the officer throw you into prison.",
+      "source": "42_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ⲁϥϣⲁϫⲉ ⲙⲛⲡⲛⲉⲉϥ ⲙⲡϫⲟⲉⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉϯⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲕ ⲡⲁⲥⲟⲛ ⲉⲧⲣⲕ**ⲡⲉⲗⲕ**ⲧϩⲏⲙⲉ ⲛⲙⲙⲁⲛ · ϫⲉⲕⲁⲥ ⲉⲕⲉϫⲓ ⲙⲙⲟⲛ ⲙⲡⲉⲥⲛⲁⲩ ⲉⲧⲙⲟⲛⲏ ⲛⲛⲉⲧⲉⲙⲉⲩⲛⲕⲟⲧⲕ ·",
+      "english": "And John spake unto the captain of a ship, saying, 'I charge thee, my brother, to halve the fare in our case, for then thou wilt be able to take the two of us to the Monastery of the Sleepless Ones.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲧϥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲧϩⲉ",
+        1,
+        13.155
+      ],
+      [
+        "ⲙⲏⲡⲱⲥ",
+        1,
+        11.991
+      ],
+      [
+        "ⲡⲱϩ",
+        1,
+        9.969
+      ],
+      [
+        "ⲡⲁϩⲟⲩ",
+        1,
+        9.884
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        9.283
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        8.495
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        8.398
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        8.039
+      ],
+      [
+        "ⲙ",
+        3,
+        7.521
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.516
+      ],
+      [
+        "ⲛ",
+        4,
+        7.224
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        6.885
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        6.362
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.231
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.162
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.401
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.396
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲡⲱⲗϭ_0_node",
+          3
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲡⲱⲗϭ",
+          "ⲡⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲗϭ_0_node",
+          "ⲇⲉ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲱⲗϭ",
+          "ⲙⲙⲟ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲱⲗϭ",
+          "ⲛ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲗϭ",
+          "ⲙⲡⲉ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲡⲱⲗϭ",
+          "ⲡⲉⲕ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ⲡⲱⲗϭ",
+          "ⲡⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲗϭ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲗϭ",
+          "ⲁ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲗϭ",
+          "ⲩ_1_pre_ⲡⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲗϭ",
+          "ⲡⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲗϭ",
+          "ⲁ_2_post_ϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3984,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2826",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2825",
+      "label": "ⲡⲟⲗϭⲥ",
+      "pos": "N",
+      "gloss": "clod, lump (of earth)"
+    },
+    {
+      "target": "C2822",
+      "label": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "reach conclusion, make an end, be freed (from), be transferred, relieved; settle, make an end of, take off/out, bring to terms with, relieve from,\n              satisfy"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2829",
+      "label": "ⲣⲡⲉⲗϭⲉ",
+      "pos": "V",
+      "gloss": "become, be ragged, old"
+    },
+    {
+      "target": "C2823",
+      "label": "ⲫⲱⲗϫ",
+      "pos": "N",
+      "gloss": "ease, liberty"
+    }
+  ],
+  "etym": {
+    "egy_num": "60150",
+    "egy_lemma": "png",
+    "demo_num": "d2112",
+    "demo_lemma": "plk",
+    "english": "[to divide; to share (?)]",
+    "german": "teilen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60150",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2112"
+  }
+}

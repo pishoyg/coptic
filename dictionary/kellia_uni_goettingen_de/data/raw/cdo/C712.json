@@ -1,0 +1,64 @@
+{
+  "id": "C712",
+  "forms": [
+    {
+      "id": "CF2690",
+      "orth": "ϭⲓⲉⲣⲱϯ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS850",
+      "bibliography": "CD 58b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C711",
+      "label": "ϯⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "give milk, suckle"
+    },
+    {
+      "target": "C708",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C709",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C713",
+      "label": "ⲟⲩⲉⲙⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "feeding on milk"
+    },
+    {
+      "target": "C710",
+      "label": "ⲣⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "make, give forth milk"
+    }
+  ]
+}

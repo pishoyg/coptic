@@ -1,0 +1,42 @@
+{
+  "id": "C7243",
+  "forms": [
+    {
+      "id": "CF32120",
+      "orth": "ⲁⲧϫⲛⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32119",
+      "orth": "ⲁⲧϫⲉⲛⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7993",
+      "bibliography": "CD 774a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7242",
+      "label": "ϫⲛⲁ",
+      "pos": "V",
+      "gloss": "be quenched, quench, make cease"
+    },
+    {
+      "target": "C7244",
+      "label": "ⲟ ⲛϫⲛⲉ",
+      "pos": "VSTAT",
+      "gloss": "tire out, be wearied"
+    }
+  ]
+}

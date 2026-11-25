@@ -1,0 +1,50 @@
+{
+  "id": "C2098",
+  "forms": [
+    {
+      "id": "CF5899",
+      "orth": "ⲛⲧⲙⲏⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS2431",
+      "bibliography": "CD 191a; KoptHWb 104; ChLCS 28b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2100",
+      "label": "ϩⲓⲧⲙⲏⲧⲉ",
+      "pos": "PREP",
+      "gloss": "in, through midst"
+    },
+    {
+      "target": "C2099",
+      "label": "ϩⲛⲧⲙⲏⲧⲉ",
+      "pos": "PREP",
+      "gloss": "in midst, between"
+    },
+    {
+      "target": "C2097",
+      "label": "ⲉⲧⲙⲏⲧⲉ",
+      "pos": "PREP",
+      "gloss": "to, into midst, between"
+    },
+    {
+      "target": "C2096",
+      "label": "ⲙⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "middle"
+    }
+  ]
+}

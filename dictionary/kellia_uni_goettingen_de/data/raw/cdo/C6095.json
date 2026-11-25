@@ -1,0 +1,87 @@
+{
+  "id": "C6095",
+  "forms": [
+    {
+      "id": "CF14195",
+      "orth": "ϣⲁⲁⲧⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6782",
+      "bibliography": "CD 593b; CED 254; KoptHWb 330-331; DELC 272a; ChLCS 82a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5871",
+    "demo_lemma": "šꜥd.ṱ=s",
+    "english": "piece, part; wound; trench",
+    "german": "Stück, Teil; Wunde; Graben",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5871"
+  }
+}

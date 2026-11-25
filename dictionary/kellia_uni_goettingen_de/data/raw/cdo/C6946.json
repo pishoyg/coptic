@@ -1,0 +1,64 @@
+{
+  "id": "C6946",
+  "forms": [
+    {
+      "id": "CF15943",
+      "orth": "ϩⲉⲧⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7666",
+      "bibliography": "CD 726b; KoptHWb 400; DELC 316b; ChLCS 97b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6945",
+      "label": "ϩⲁⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "a doubled thing, twin"
+    },
+    {
+      "target": "C6947",
+      "label": "ϩⲁⲧⲣⲉⲥ",
+      "pos": "N",
+      "gloss": "yoke, pair (of mules)"
+    },
+    {
+      "target": "C6943",
+      "label": "ϩⲱⲧⲣ",
+      "pos": "V",
+      "gloss": "be joined, doubled"
+    },
+    {
+      "target": "C6944",
+      "label": "ϩⲱⲧⲣ",
+      "pos": "N",
+      "gloss": "joint yoke, union"
+    },
+    {
+      "target": "C12176",
+      "label": "ϩⲱⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "(female) companion"
+    }
+  ],
+  "etym": {
+    "egy_num": "111850",
+    "egy_lemma": "ḥtr",
+    "english": "lashings",
+    "german": "Bindung; Seil",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/111850"
+  }
+}

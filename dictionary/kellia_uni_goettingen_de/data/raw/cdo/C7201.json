@@ -1,0 +1,43 @@
+{
+  "id": "C7201",
+  "forms": [
+    {
+      "id": "CF16460",
+      "orth": "ϫⲓⲛϫⲱⲗϩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF16461",
+      "orth": "ϫⲓⲛϫⲱⲗϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7949",
+      "bibliography": "CD 769b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7202",
+      "label": "ϫⲟⲗϩϥ",
+      "pos": "N",
+      "gloss": "grating, lattice"
+    },
+    {
+      "target": "C7200",
+      "label": "ϫⲱⲗϩ",
+      "pos": "V",
+      "gloss": "swathe, clothe, cover"
+    }
+  ]
+}

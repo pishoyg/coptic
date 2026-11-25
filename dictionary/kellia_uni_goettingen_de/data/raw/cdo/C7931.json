@@ -1,0 +1,44 @@
+{
+  "id": "C7931",
+  "forms": [
+    {
+      "id": "CF17928",
+      "orth": "ⲁϣ ⲛϭⲟⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Kompositum"
+  },
+  "senses": [
+    {
+      "id": "CS8813",
+      "bibliography": "CD 833a; KoptHWb 469"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7929",
+      "label": "ϭⲟⲧ",
+      "pos": "N",
+      "gloss": "sort, form; size, age"
+    },
+    {
+      "target": "C7930",
+      "label": "ⲛⲧⲉⲓϭⲟⲧ",
+      "pos": "N",
+      "gloss": "of this sort, such"
+    },
+    {
+      "target": "C7932",
+      "label": "ⲣⲧϭⲟⲧ",
+      "pos": "V",
+      "gloss": "be like"
+    }
+  ]
+}

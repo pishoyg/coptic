@@ -1,0 +1,310 @@
+{
+  "id": "C3213",
+  "forms": [
+    {
+      "id": "CF8311",
+      "orth": "ϥⲁⲓⲣⲟⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3836,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3670",
+      "bibliography": "CD 307b-308a; KoptHWb 170; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲡ**ϥⲁⲓⲣⲟⲟⲩϣ** ⲙⲁⲩⲁⲁϥ ϩⲁⲛⲉϥϩⲙϩⲁⲗ ·",
+      "english": "Thou Who alone dost have a care for Thy servants!",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ϥⲁⲓⲣⲟⲟⲩϣ** ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ·",
+      "english": "who bore the care of the Churches,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲓⲥⲱⲧⲙ ⲉⲛⲁⲓ ⲛⲧⲟⲟⲧϥ ⲙⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ · ⲡ**ϥⲁⲓⲣⲟⲟⲩϣ** ϩⲁⲛⲉⲧϩⲟⲥⲉ ⲧⲏⲣⲟⲩ · ⲉⲁϥⲡⲁⲣⲁⲓⲧⲉⲓ ⲙⲡⲉϥⲧⲁⲉⲓⲟ ⲙⲙⲓⲛⲙⲙⲟϥ · ⲉⲧⲃⲉⲡⲟⲩϫⲁⲓ ⲙⲡⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲛⲧⲉⲛⲯⲩⲭⲏ ⲙⲛⲡⲉⲛⲥⲱⲙⲁ ·",
+      "english": "And when I had heard these (words) from Saint Victor, (and saw) the care which he took for all those who are heavy laden, and that he was laying aside his own honour for the sake of the salvation and well-being of our souls and our bodies,",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲡⲁⲣⲁⲕⲁⲗⲉⲓ",
+        2,
+        12.877
+      ],
+      [
+        "ⲙⲟⲅⲓⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲧⲟⲛⲧⲛ",
+        1,
+        12.35
+      ],
+      [
+        "ϩⲟⲥⲉ",
+        1,
+        12.043
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        2,
+        11.873
+      ],
+      [
+        "ϩⲁ",
+        3,
+        11.62
+      ],
+      [
+        "ⲛ",
+        12,
+        11.564
+      ],
+      [
+        "ⲙⲓⲭⲁⲏⲗ",
+        2,
+        11.537
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        2,
+        10.976
+      ],
+      [
+        "ⲱ",
+        2,
+        10.562
+      ],
+      [
+        "ⲡⲉⲛ",
+        2,
+        10.081
+      ],
+      [
+        "ⲃⲓⲕⲧⲱⲣ",
+        1,
+        9.527
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        9.317
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        9.238
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        9.098
+      ],
+      [
+        "ϩⲏⲕⲉ",
+        1,
+        9.036
+      ],
+      [
+        ",",
+        1,
+        8.867
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        8.797
+      ],
+      [
+        "ϣⲁϫⲉ",
+        2,
+        8.471
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          7
+        ],
+        [
+          "ⲱ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϥⲁⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ϥⲁⲓⲣⲟⲟⲩϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϥⲁⲓⲣⲟⲟⲩϣ",
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ϥⲁⲓⲣⲟⲟⲩϣ_0_node",
+          "ⲉⲧ_1_post_ϥⲁⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϥⲁⲓⲣⲟⲟⲩϣ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲙⲓⲭⲁⲏⲗ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ϥⲁⲓⲣⲟⲟⲩϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3451,
+      "count": 8
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3211",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "take care, thought"
+    },
+    {
+      "target": "C3212",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, anxiety"
+    },
+    {
+      "target": "C3215",
+      "label": "ⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-free, not liable"
+    },
+    {
+      "target": "C3209",
+      "label": "ⲕⲁⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "set as a care, be careful, intent"
+    },
+    {
+      "target": "C3214",
+      "label": "ⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, providence"
+    },
+    {
+      "target": "C3216",
+      "label": "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "freedom from care"
+    },
+    {
+      "target": "C3207",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "have care for, be intent on"
+    },
+    {
+      "target": "C3208",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, concern; cause of anxiety"
+    },
+    {
+      "target": "C3210",
+      "label": "ⲣⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "make care, be anxious, take care of, give heed to"
+    }
+  ]
+}

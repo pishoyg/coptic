@@ -1,0 +1,121 @@
+{
+  "id": "C6929",
+  "forms": [
+    {
+      "id": "CF15909",
+      "orth": "ϩⲁⲧⲁⲓⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14358,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲧⲁⲗⲏ",
+      "dialect": "S",
+      "id": "2307.1"
+    },
+    {
+      "orth": "ϩⲁⲧⲁⲗ",
+      "dialect": "S",
+      "id": "2307.2"
+    },
+    {
+      "orth": "ϩⲁⲧⲁⲗⲉ",
+      "dialect": "S",
+      "id": "2307.3"
+    },
+    {
+      "orth": "ϩⲁⲧⲁⲗⲉⲉⲗⲉ",
+      "dialect": "S",
+      "id": "2307.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7649",
+      "bibliography": "CD 724a; CED 301; KoptHWb 397; DELC 316a; ChLCS 97a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏ ⲉϥⲟ ⲛⲕⲩⲣⲧⲟⲥ ⲏ ⲉϥⲟ ⲛⲗⲉⲯ ⲏ ⲉⲣⲉⲟⲩ**ϩⲁⲧⲁⲓⲗⲉ** ϩⲛⲛⲉϥⲃⲁⲗ ⲏ ⲟⲩⲣⲱⲙⲉ ⲉⲣⲉⲟⲩⲯⲱⲣⲁ ⲛⲁⲅⲣⲓⲟⲛ ϩⲓⲱⲱϥ ⲏ ⲟⲩⲙⲉϫⲡⲱⲛⲉ ⲏ ⲉϥⲟ ⲙⲙⲟⲛⲟⲣⲭⲓⲥ ⲉⲧⲉⲟⲩϫⲟⲉⲓⲧ ⲛⲟⲩⲱⲧ ⲡⲉ",
+      "english": "or hump-backed, or blear-eyed, or that has lost his eye-lashes, or a man who has a malignant ulcer, or tetter, or one that has lost a testicle.",
+      "source": "Leviticus 21",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲗⲉⲯ",
+        1,
+        20.598
+      ],
+      [
+        "ⲏ",
+        2,
+        12.479
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        11.036
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϩⲁⲧⲁⲓⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲁⲓⲗⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϩⲁⲧⲁⲓⲗⲉ",
+          "ϩⲁⲧⲁⲓⲗⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13957,
+      "count": 1
+    }
+  }
+}

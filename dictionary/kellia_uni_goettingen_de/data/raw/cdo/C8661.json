@@ -1,0 +1,173 @@
+{
+  "id": "C8661",
+  "forms": [
+    {
+      "id": "CF20497",
+      "orth": "ⲅⲉⲛⲉⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20498",
+      "orth": "ⲅⲉⲛⲉⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6453,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF20499",
+      "orth": "ⲅⲉⲛⲉⲥⲓⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF20500",
+      "orth": "ⲕⲏⲛⲏⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10249",
+      "bibliography": "DDGLC",
+      "cu_ID": "3652"
+    },
+    {
+      "id": "CS10250",
+      "bibliography": "DDGLC",
+      "cu_ID": "769"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲛⲛⲥⲁⲧⲉⲡⲗⲁⲥⲓⲥ ⲙⲡϣⲟⲣⲡ ⲛⲣⲱⲙⲉ ⲉⲧϩⲛⲧ**ⲅⲉⲛⲉⲥⲓⲥ** ·",
+      "english": "Therefore, after the fashioning of the first man which is (related) in Genesis....?",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲩϫⲉⲡⲁⲓ ⲅⲁⲣ ⲉⲃⲟⲗ ϫⲉⲁⲩⲥⲱⲧⲙ ϩⲛⲧ**ⲅⲉⲛⲉⲥⲓⲥ** ϫⲉⲁⲇⲁⲙ ⲉⲕⲧⲱⲛ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 268-270",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:16-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁϥϫⲟⲟⲥ · ⲏ ⲉⲁϥⲣⲡⲁⲓ ⲛⲧⲟϥ ⲡϫⲟⲉⲓⲥ ϩⲱⲥⲣⲱⲙⲉ ⲛⲧϩⲉ ⲉⲧⲥⲏϩ ϩⲛⲧ**ⲅⲉⲛⲉⲥⲓⲥ** · ⲉⲁϥϫⲛⲉⲁⲃⲣⲁϩⲁⲙ ϫⲉⲉⲥⲧⲱⲛ ⲥⲁⲣⲣⲁ ⲧⲉⲕⲥϩⲓⲙⲉ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 268-270",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:16-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲇⲁⲙ",
+        1,
+        11.466
+      ],
+      [
+        "ⲥⲏϩ",
+        1,
+        10.036
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.649
+      ],
+      [
+        "ⲧ",
+        3,
+        9.241
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        7.685
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.653
+      ],
+      [
+        "ϫⲱ",
+        1,
+        6.82
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.728
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲅⲉⲛⲉⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6017,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "421",
+    "grl_lemma": "γένεσις",
+    "grl_meaning": "origin, source, the book Genesis",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 343b; Preisigke 1:286"
+  }
+}

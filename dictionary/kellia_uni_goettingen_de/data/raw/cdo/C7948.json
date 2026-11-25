@@ -1,0 +1,129 @@
+{
+  "id": "C7948",
+  "forms": [
+    {
+      "id": "CF17962",
+      "orth": "ϭⲱⲧⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10553,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲧⲥ†",
+      "dialect": "S",
+      "id": "2635.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8832",
+      "bibliography": "CD 834a; KoptHWb 469"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁϥⲑⲉⲃⲓⲟϥ ⲙⲙⲓⲛⲙⲙⲟϥ ⲟⲩⲟϩ ⲭⲛⲁϫⲟⲥ ϫⲉⲁϥϭⲓⲥⲓ ⲙⲙⲟϥ : ⲟⲩⲟϩ ϥⲛⲁⲛⲟϩⲉⲙ ⲙⲫⲏⲉⲧ**ϭⲱⲧⲥ** ⲛⲛⲉϥⲃⲁⲗ .",
+      "english": "Because thou hast humbled thyself; and thou shalt say, Man has behaved proudly, but he shall save him that is of lowly eyes.",
+      "source": "18_Iob_22",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲫⲏⲉⲧ",
+        1,
+        16.373
+      ],
+      [
+        "ⲛⲟϩⲉⲙ",
+        1,
+        11.286
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        10.782
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.666
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲱⲧⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲧⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲃⲁⲗ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱⲧⲥ_0_node",
+          "ⲛ_1_post_ϭⲱⲧⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲧⲥ",
+          "ⲛⲉϥ_3_post_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲃⲁⲗ",
+          "ⲃⲁⲗ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10005,
+      "count": 1
+    }
+  }
+}

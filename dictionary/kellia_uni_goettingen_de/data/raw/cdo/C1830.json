@@ -1,0 +1,219 @@
+{
+  "id": "C1830",
+  "forms": [
+    {
+      "id": "CF5271",
+      "orth": "ⲙⲁⲁⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 996,
+        "count": 96
+      }
+    },
+    {
+      "orth": "ⲙⲁⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2525,
+        "count": 19
+      }
+    },
+    {
+      "orth": "ⲙⲁⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12901,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁⲡ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5996,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲙⲁⲁⲃⲉ",
+      "dialect": "A",
+      "id": "1045.4"
+    },
+    {
+      "orth": "ⲙⲁⲃⲉ",
+      "dialect": "A",
+      "id": "1045.5"
+    },
+    {
+      "orth": "ⲙⲏⲃ",
+      "dialect": "F",
+      "id": "1045.6"
+    },
+    {
+      "orth": "ⲙⲁⲁⲃ-",
+      "dialect": "L",
+      "id": "1045.7"
+    },
+    {
+      "orth": "ⲙⲁⲃ-",
+      "dialect": "L",
+      "id": "1045.8"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS2133",
+      "bibliography": "CD 161a; KoptHWb 87; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲏ ⲛⲉ ⲛⲧⲁⲩϫⲟⲟⲩ ⲉϫⲙⲡⲕⲁϩ ⲉⲧⲛⲁⲛⲟⲩϥ ⲉⲩⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲥⲉϣⲱⲡ ⲙⲙⲟϥ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲥⲉⲧⲁⲩⲉⲕⲁⲣⲡⲟⲥ ⲉⲃⲟⲗ ϩⲛ**ⲙⲁⲁⲃ** ⲁⲩⲱ ϩⲛⲥⲉ ⲁⲩⲱ ϩⲛϣⲉ .",
+      "english": "Those which were sown on the good ground are those who hear the word, and accept it, and bear fruit, some thirty times, some sixty times, and some one hundred times.",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲟⲩⲧⲁⲁϥ ⲉⲃⲟⲗ ⲉⲛⲉϩ · ⲉⲧⲣⲉϥⲥⲱⲧⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ ϩⲁ**ⲙⲁⲁⲃ** ⲛϩⲁⲧ ·",
+      "english": "Never before was the redemption of the world sold for thirty (pieces) of silver.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ **ⲙⲁⲁⲃⲉ** ⲛⲣⲟⲙⲡⲉ · ϫⲓⲛⲧⲁⲓⲉⲓ ⲉⲡⲉⲓⲙⲁ · ⲉⲣⲉⲡⲁⲏⲣ ϯ ⲛⲁⲓ ⲛⲟⲩⲕⲣⲁⲥⲓⲥ · ⲉⲥϣⲏϣ ⲁⲩⲱ ⲙⲡⲓⲟⲩⲉⲙⲟⲉⲓⲕ ⲉⲡⲧⲏⲣϥ ·",
+      "english": "And behold, it is thirty years since I came to this place, and the climate thereof bestoweth upon me health uniformly. And I never eat bread.'",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        228,
+        20.475
+      ],
+      [
+        "ϣⲉ",
+        38,
+        20.093
+      ],
+      [
+        "ϩⲁⲧ",
+        28,
+        19.838
+      ],
+      [
+        "ⲛⲥⲓⲕⲗⲟⲥ",
+        8,
+        19.065
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        25,
+        18.115
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.765
+      ],
+      [
+        "ⲁⲩⲱ",
+        54,
+        16.179
+      ],
+      [
+        "ⲕⲉⲛⲧⲏⲛⲁⲣⲓⲟⲛ",
+        4,
+        16.065
+      ],
+      [
+        "ϩⲣⲏϣⲉ",
+        4,
+        15.765
+      ],
+      [
+        "ⲧⲁⲩⲉⲕⲁⲣⲡⲟⲥ",
+        3,
+        15.52
+      ],
+      [
+        "ⲥⲓⲛⲇⲱⲛ",
+        3,
+        14.935
+      ],
+      [
+        "ϩⲟⲗⲟⲕⲟⲧϯⲛⲟⲥ",
+        2,
+        14.765
+      ],
+      [
+        "ϩⲟⲗⲟⲕⲟϯⲛⲟⲥ",
+        2,
+        14.765
+      ],
+      [
+        "ⲫⲓⲁⲗⲏ",
+        4,
+        14.721
+      ],
+      [
+        "ⲧⲁⲥⲉ",
+        3,
+        14.52
+      ],
+      [
+        "ϣⲓ",
+        8,
+        14.364
+      ],
+      [
+        "...ⲱⲙ",
+        1,
+        13.765
+      ],
+      [
+        "...............ⲙ.................................................ⲛ",
+        1,
+        13.765
+      ],
+      [
+        "ⲛⲫⲁⲗⲗⲟⲩⲥ",
+        1,
+        13.765
+      ],
+      [
+        "ⲕ.................",
+        1,
+        13.765
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.72,
+      "rank": 771,
+      "count": 114
+    }
+  },
+  "etym": {
+    "egy_num": "68690",
+    "egy_lemma": "mꜥbꜣ",
+    "english": "thirty",
+    "german": "dreißig",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/68690"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "C3102",
+  "forms": [
+    {
+      "id": "CF8078",
+      "orth": "ⲣⲉϥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2706,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "zur Bildung von Nomina agentis (mit Inf. oder Qualitativ)",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3552",
+      "bibliography": "CD 295b-296a; CED 136-137; KoptHWb 164; DELC 174; ChLCS 43b-44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲅⲁⲣ ϫⲉϩⲉⲛϣⲁⲛⲧϩⲧⲏⲩ ⲛⲛⲁⲏⲧ ⲛⲉ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ · ⲁⲩⲱ ϩⲉⲛ**ⲣⲉϥ**ⲕⲁⲛⲟⲃⲉ ⲉⲃⲟⲗ ⲛⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ · ⲗⲟⲛ ·",
+      "english": "“for in sooth those mysteries are compassionate and merciful-minded and forgiving of sins at every time.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩⲕⲟⲕⲕⲟⲥ ⲉϥϩⲟⲥⲉ ⲛϩⲱⲃ ⲛⲧⲉⲭⲛⲓⲧⲏⲥ ϩⲛϩⲉⲛⲉⲛⲉⲙⲉ ⲛϣⲟϣⲧ ⲛⲥⲫⲣⲁⲅⲓⲥ ϩⲛⲟⲩⲙⲣⲣⲉ ⲛⲛⲟⲩⲃ ⲛϩⲱⲃ ⲛ**ⲣⲉϥ**ⲕⲉϩⲕⲱⲛⲉ ⲉⲥϣⲉⲧϣⲱⲧ ϩⲛⲟⲩⲥϩⲁⲓ ⲉⲩⲣⲡⲙⲉⲉⲩⲉ ⲕⲁⲧⲁⲧⲏⲡⲉ ⲛⲛⲉⲫⲩⲗⲏ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "With twisted scarlet, the work of the cunning workman, with precious stones graven like seals, and set in gold, the work of the jeweller, with a writing engraved for a memorial, after the number of the tribes of Israel.",
+      "source": "Sirach 45",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲛⲛϭⲟⲙ ⲛⲙⲙⲁⲛ ⲡⲛ**ⲣⲉϥ**ϣⲟⲡⲛ ⲉⲣⲟϥ ⲡⲉ ⲡⲛⲟⲩⲧⲉ ⲛⲓⲁⲕⲱⲃ ⲇⲓⲁⲯⲁⲗⲙⲁ",
+      "english": "The Lord of hosts is with us; the God of Jacob is our helper. Pause.",
+      "source": "Psalms 45",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ]
+}

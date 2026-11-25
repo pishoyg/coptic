@@ -1,0 +1,44 @@
+{
+  "id": "C7475",
+  "forms": [
+    {
+      "id": "CF17009",
+      "orth": "ⲁⲧϫⲱϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8277",
+      "bibliography": "CD 797a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7472",
+      "label": "ϫⲱϩ",
+      "pos": "V",
+      "gloss": "touch; approach, reach; wound, injure; consort, associate with"
+    },
+    {
+      "target": "C7473",
+      "label": "ϫⲱϩ",
+      "pos": "N",
+      "gloss": "touch; contagion; near kinsman, close relative"
+    },
+    {
+      "target": "C7474",
+      "label": "ϫⲱϩ ⲛϫⲱϩ",
+      "pos": "N",
+      "gloss": "distant kinsman, relative"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "C4572",
+  "forms": [
+    {
+      "id": "CF11101",
+      "orth": "ⲧⲥⲁⲙⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17576,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5161",
+      "bibliography": "CDC 68a; KoptHWb 247; DELC 222b; ChLCS 61b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲛ ⲛⲓⲙ ⲛⲧⲁⲩⲙⲟⲩⲧⲉ ⲉϫⲱⲟⲩ ⲙⲡⲁⲣⲁⲛ ⲛⲧⲁⲓ**ⲧⲥⲁⲙⲓⲟ**ϥ ⲅⲁⲣ ϩⲙⲡⲁⲉⲟⲟⲩ ⲁⲩⲱ ⲁⲓⲡⲗⲁⲥⲥⲉ ⲙⲙⲟϥ ⲁⲓⲧⲁⲙⲓⲟϥ",
+      "english": "even all who are called by my name: for I have prepared him for my glory, and I have formed him, and have made him:",
+      "source": "Isaiah 43",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁⲛ",
+        1,
+        9.993
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲥⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲥⲁⲙⲓⲟ",
+          "ⲓ_1_pre_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲥⲁⲙⲓⲟ",
+          "ⲧⲥⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲥⲁⲙⲓⲟ_0_node",
+          "ϥ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          "ⲅⲁⲣ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          "ϩⲙ_1_post_ⲧⲥⲁⲙⲓⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17189,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4573",
+      "type": "cf",
+      "label": "adorn, set in order, provide"
+    }
+  ]
+}

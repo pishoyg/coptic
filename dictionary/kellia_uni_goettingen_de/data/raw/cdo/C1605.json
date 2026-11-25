@@ -1,0 +1,40 @@
+{
+  "id": "C1605",
+  "forms": [
+    {
+      "id": "CF4666",
+      "orth": "ⲣⲗⲁⲕⲙ ⲗⲁⲕⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1868",
+      "bibliography": "CD 139a; KoptHWb 77"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1604",
+      "label": "ⲗⲁⲕⲙ",
+      "pos": "N",
+      "gloss": "piece, fragment"
+    }
+  ]
+}

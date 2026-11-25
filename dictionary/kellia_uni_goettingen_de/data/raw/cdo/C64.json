@@ -1,0 +1,41 @@
+{
+  "id": "C64",
+  "forms": [
+    {
+      "id": "CF226",
+      "orth": "ⲁⲗⲱⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS73",
+      "bibliography": "KoptHWb 485; DELC 8; ChLCS 3b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C36",
+      "type": "cf",
+      "label": "pebble"
+    }
+  ],
+  "etym": {
+    "egy_num": "39180",
+    "egy_lemma": "ꜥr",
+    "demo_num": "d1052",
+    "demo_lemma": "ꜥl",
+    "english": "pebble",
+    "german": "Kiesel; Stein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1052"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C8686",
+  "forms": [
+    {
+      "id": "CF20608",
+      "orth": "ⲅⲣⲁⲙⲙⲁⲧⲏⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20610",
+      "orth": "ⲅⲣⲁⲙⲙⲁⲧⲏⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20609",
+      "orth": "ⲅⲣⲁⲙⲁⲧⲉⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20611",
+      "orth": "ⲅⲣⲁⲙⲙⲁⲧⲟⲏⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20612",
+      "orth": "ⲕⲣⲁⲙⲁⲧⲟⲩⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10311",
+      "bibliography": "DDGLC",
+      "cu_ID": "2365"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "442",
+    "grl_lemma": "γραμματηφόρος",
+    "grl_meaning": "letter-carrier",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 359a; Preisigke 1:307"
+  }
+}

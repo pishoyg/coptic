@@ -1,0 +1,236 @@
+{
+  "id": "C1213",
+  "forms": [
+    {
+      "id": "CF3814",
+      "orth": "ⲕⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14002,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲁⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6076,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1406",
+      "bibliography": "CD 108a; KoptHWb 64; ChLCS 17a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉ ⲛϣⲏⲣⲉ ⲛⲁⲥⲁⲣ ⲃⲁⲗⲁⲁⲙ ⲙⲛⲥⲟⲩⲕⲁⲁⲙ ⲙⲛⲟⲩⲕⲁⲁⲙ ⲙⲛⲟⲩ**ⲕⲁⲙ**",
+      "english": "And these the sons of Asar; Balaam, and Zucam, and Jucam.",
+      "source": "Genesis 36",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲙ",
+        2,
+        20.695
+      ],
+      [
+        "ⲍⲟⲩ",
+        1,
+        18.695
+      ],
+      [
+        "ⲃⲁⲗⲁⲁⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ⲥⲁⲣ",
+        1,
+        16.11
+      ],
+      [
+        "ⲕⲁⲛ",
+        1,
+        12.967
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        11.243
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        10.72
+      ],
+      [
+        "ⲓ",
+        3,
+        10.33
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲣⲓ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲁⲁⲙ",
+        1,
+        20.598
+      ],
+      [
+        "ⲥⲱⲛ",
+        1,
+        18.276
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        8.29
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁⲙ",
+          "ⲓ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲁⲙ",
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          "ⲕⲁⲙ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲙ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲕⲁⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲙ",
+          "ⲙⲛ_1_pre_ⲕⲁⲙ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲙ_b",
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲙ",
+          "ⲕⲁⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13599,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5572,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1214",
+      "label": "ⲛⲟⲩⲛⲉ ⲛⲕⲁⲙ",
+      "pos": "N",
+      "gloss": "root of reed"
+    }
+  ],
+  "etym": {
+    "egy_num": "160630",
+    "egy_lemma": "qmꜣ",
+    "demo_num": "d6331",
+    "demo_lemma": "qm(ꜣ)(e)",
+    "english": "reeds",
+    "german": "[eine Binse]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160630",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6331"
+  }
+}

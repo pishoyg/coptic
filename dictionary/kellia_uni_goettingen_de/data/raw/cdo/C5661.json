@@ -1,0 +1,668 @@
+{
+  "id": "C5661",
+  "forms": [
+    {
+      "id": "CF13297",
+      "orth": "ⲱϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.67,
+        "rank": 512,
+        "count": 263
+      }
+    },
+    {
+      "orth": "ⲉϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 14.63,
+        "rank": 87,
+        "count": 2309
+      }
+    },
+    {
+      "orth": "ⲉϫⲛⲉ-",
+      "dialect": "S",
+      "id": "483.2"
+    },
+    {
+      "orth": "ⲟϫⲛ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2149,
+        "count": 26
+      }
+    },
+    {
+      "orth": "ⲱϫⲛⲉ",
+      "dialect": "A",
+      "id": "483.4"
+    },
+    {
+      "orth": "ⲁϫⲛ⸗",
+      "dialect": "A",
+      "id": "483.5"
+    },
+    {
+      "orth": "ⲱϫⲛ",
+      "dialect": "F",
+      "id": "483.6"
+    },
+    {
+      "orth": "ⲱϫⲉⲛ",
+      "dialect": "F",
+      "id": "483.7"
+    },
+    {
+      "orth": "ⲁϫⲛ⸗",
+      "dialect": "F",
+      "id": "483.8"
+    },
+    {
+      "orth": "ⲱϫⲛⲉ",
+      "dialect": "L",
+      "id": "483.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6333",
+      "bibliography": "CD 539ab; CED 233; KoptHWb 298; ChLCS 74a"
+    },
+    {
+      "id": "CS6334",
+      "bibliography": "CD 539b; CDC 82b; CED 233; KoptHWb 298; DELC 252b; ChLCS 74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲙⲉⲣⲓⲧ ϩⲙⲡϫⲟⲉⲓⲥ ϣⲟⲣⲡ ⲙⲉⲛ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲕⲁⲡⲑⲃⲃⲓⲟ ϩⲛⲧⲉⲕⲧⲁⲡⲣⲟ · ⲉⲕⲥⲃⲧⲱⲧ ϩⲛⲧⲉⲕϭⲓⲛⲟⲩⲱϣⲃ ϫⲉⲕⲱ ⲛⲁⲓ ⲉⲃⲟⲗ ⲉⲕⲥⲟⲟⲩⲛ · ϫⲉϩⲓⲧⲛⲡⲉⲑⲃⲃⲓⲟ · ϣⲁⲣⲉⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡϫⲁϫⲉ **ⲱϫⲛ** ·",
+      "english": "My beloved in the Lord, before every other thing set humility in thy mouth when thou art ready to make answer, for, forgive me, thou knowest that by humility all the power of the Enemy is brought to naught.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲟⲩⲣⲁⲧϭⲟⲙ ⲁⲩⲱ ⲁⲧⲉⲩϭⲟⲙ ⲁⲣⲭⲉⲓ ⲛⲱϫⲛ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲁⲩⲱ ⲛⲥⲉⲣϭⲱⲃ ϩⲛⲧⲉⲩϭⲟⲙ · ⲁⲩⲱ ⲛϥ**ⲱϫⲛ** ⲛϭⲓⲡⲉⲩⲟⲩⲟⲉⲓⲛ ⲉⲧϣⲟⲟⲡ ϩⲙⲡⲉⲩⲧⲟⲡⲟⲥ ·",
+      "english": "It came to pass then, when they became powerless, that their power began to cease in them, so that they became exhausted in their power, and their light, which was in their region, ceased",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲡⲁⲑⲟⲥ ⲧⲃⲥⲕ ⲉⲧⲃⲉⲩⲙⲛⲧⲙⲁⲓϩⲙⲛⲧ · ⲙⲛϫⲕⲱϩ?· · ⲏ ⲟⲩⲙⲟⲥⲧⲉ · ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲙⲡⲁⲑⲟⲥ · ⲛⲏⲫⲉ ⲙⲙⲟⲕ ⲛⲅϫⲓ ⲛⲁⲕ ⲛⲟⲩϩⲏⲧ ⲙⲙⲟⲩⲓ · ⲛⲅϫⲓ ⲛⲁⲕ ⲛⲟⲩϩⲏⲧ ⲛϫⲱⲱⲣⲉ · ⲛⲅⲙⲓϣⲉ ⲛⲙⲙⲁⲩ ⲛⲅ**ⲟϫⲛ**ⲟⲩ ⲛⲧϩⲉ ⲛⲥⲓⲱⲛ ⲙⲛⲱⲅ ⲙⲛⲛⲣⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲙⲟⲣⲣⲁⲓⲟⲥ ·",
+      "english": "If the passion of the love of money attack thee, and envy, or hatred, or any one of the other passions, enter into thee, take thou to thyself the heart of the lion, take thou to thyself the heart of the mighty warrior, and do battle with them, and destroy them like Sihon, and Og, and all the kings of the Amorites;",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        19.389
+      ],
+      [
+        "ⲛ",
+        180,
+        18.11
+      ],
+      [
+        "ⲁ",
+        112,
+        17.291
+      ],
+      [
+        "ⲁⲩⲱ",
+        89,
+        16.999
+      ],
+      [
+        "ϩⲛ",
+        73,
+        16.874
+      ],
+      [
+        "ⲁϫⲛ",
+        14,
+        16.216
+      ],
+      [
+        "ⲛϭⲓ",
+        45,
+        16.119
+      ],
+      [
+        "ⲧ",
+        67,
+        16.094
+      ],
+      [
+        "ⲟⲩ",
+        67,
+        15.243
+      ],
+      [
+        "ⲛⲁ",
+        60,
+        15.234
+      ],
+      [
+        "ⲛⲁⲃⲁⲗ",
+        5,
+        14.997
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        17,
+        14.826
+      ],
+      [
+        "ϩⲙ",
+        36,
+        14.748
+      ],
+      [
+        "ⲡ",
+        69,
+        14.648
+      ],
+      [
+        "ϫⲉ",
+        44,
+        14.35
+      ],
+      [
+        "ⲥⲉ",
+        27,
+        14.172
+      ],
+      [
+        "ⲩ",
+        45,
+        14.11
+      ],
+      [
+        "ϫⲓϣⲓⲡⲉ",
+        7,
+        13.779
+      ],
+      [
+        "ⲉ",
+        50,
+        13.574
+      ],
+      [
+        "ϩⲏⲧ",
+        19,
+        13.515
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱϫⲛ_0_node",
+          39
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲱϫⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱϫⲛ",
+          4
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲱϫⲛ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲛⲁⲃⲁⲗ_1_pre_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲱϫⲛ",
+          3
+        ],
+        [
+          "ⲓ_3_post_ⲕⲱ",
+          2
+        ],
+        [
+          "ⲕⲱ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲱϫⲛ",
+          4
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱϫⲛ",
+          6
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲱϫⲛ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛϭⲓ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲱϫⲛ",
+          5
+        ],
+        [
+          "ⲧⲉⲕ_2_pre_ϩⲉⲗⲡⲓⲥ",
+          2
+        ],
+        [
+          "ϩⲉⲗⲡⲓⲥ_1_pre_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϫⲛ",
+          4
+        ],
+        [
+          "ⲁⲛ_1_post_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ϩⲙ_1_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲧⲁⲙⲉⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲉⲓⲟⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲱ_1_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲟⲩⲧⲱ",
+          1
+        ],
+        [
+          "ⲁ_2_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲣϭⲣⲱϩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲉϣⲁⲣⲉ_2_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲡⲛⲟⲥ_2_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲛⲧϣⲁⲛϩⲧⲏϥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲛϩⲧⲏϥ_2_post_ⲛϭⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱϫⲛ",
+          "ⲛⲉϥ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲱϫⲛ",
+          "ⲛⲁⲃⲁⲗ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛⲁⲃⲁⲗ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          1
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ⲉ_1_post_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲱϫⲛ",
+          "ⲓ_3_post_ⲕⲱ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲕⲱ",
+          "ⲕⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲱϫⲛ",
+          "ⲥⲉ_1_pre_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          2
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ⲛϭⲓ_1_post_ⲱϫⲛ",
+          3
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲱϫⲛ",
+          "ⲛ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛϭⲓ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲱϫⲛ",
+          "ⲟⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱϫⲛ",
+          "ⲧⲉⲕ_2_pre_ϩⲉⲗⲡⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_2_pre_ϩⲉⲗⲡⲓⲥ",
+          "ϩⲉⲗⲡⲓⲥ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲗⲡⲓⲥ_1_pre_ⲱϫⲛ",
+          "ⲛⲁ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          2
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ⲁⲛ_1_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱϫⲛ",
+          "ⲛⲁ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ϩⲙ_1_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲱϫⲛ",
+          "ⲡⲉⲕ_3_post_ⲧⲁⲙⲉⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲧⲁⲙⲉⲓⲟⲛ",
+          "ⲧⲁⲙⲉⲓⲟⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲉⲓⲟⲛ_2_post_ϩⲙ",
+          "ⲟⲩⲧⲱ_1_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲧⲱ_1_post_ⲱϫⲛ",
+          "ⲕ_2_post_ⲟⲩⲧⲱ",
+          1
+        ],
+        [
+          "ⲁ_2_pre_ⲙⲁⲁⲩ",
+          "ⲛ_2_pre_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_1_pre_ⲱϫⲛ",
+          "ⲟⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ⲛ_1_post_ⲱϫⲛ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲱϫⲛ",
+          "ⲣⲱⲙⲉ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_2_post_ⲛϭⲓ",
+          "ⲉ_3_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲣⲱⲙⲉ",
+          "ϥ_5_post_ⲣϭⲣⲱϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱϫⲛ",
+          "ϥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟ",
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_1_pre_ⲱϫⲛ",
+          "ⲟⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲱϫⲛ_0_node",
+          "ⲉϣⲁⲣⲉ_2_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲉϣⲁⲣⲉ_2_post_ⲱϫⲛ",
+          "ⲟⲩ_3_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲕⲁⲡⲛⲟⲥ",
+          "ⲕⲁⲡⲛⲟⲥ_2_post_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱϫⲛ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲗⲁⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲱϫⲛ",
+          "ⲡⲟⲩ_1_pre_ⲱϫⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲱϫⲛ",
+          "ⲱϫⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲱϫⲛ",
+          "ⲛⲉϥ_3_post_ⲙⲛⲧϣⲁⲛϩⲧⲏϥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲛⲧϣⲁⲛϩⲧⲏϥ",
+          "ⲙⲛⲧϣⲁⲛϩⲧⲏϥ_2_post_ⲛϭⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.82,
+      "rank": 407,
+      "count": 289
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5663",
+      "label": "ⲁⲧⲱϫⲛ",
+      "pos": "N",
+      "gloss": "unceasing, uninterrupted"
+    },
+    {
+      "target": "C5665",
+      "label": "ⲣⲉϥⲱϫⲛ",
+      "pos": "N",
+      "gloss": "who, what makes to cease"
+    },
+    {
+      "target": "C5664",
+      "label": "ⲣⲱϫⲛ",
+      "pos": "V",
+      "gloss": "be slothful"
+    },
+    {
+      "target": "C5662",
+      "label": "ⲱϫⲛ",
+      "pos": "N",
+      "gloss": "ceasing, destruction"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1165",
+    "demo_lemma": "ꜥḏn(ꜣ)",
+    "english": "[to destroy]",
+    "german": "vernichten; vertrocknen; aufhören (o.ä.)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1165"
+  }
+}

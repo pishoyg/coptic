@@ -1,0 +1,76 @@
+{
+  "id": "C9627",
+  "forms": [
+    {
+      "id": "CF24609",
+      "orth": "ⲗⲏⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24611",
+      "orth": "ⲗⲏⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24610",
+      "orth": "ⲗⲉⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13636,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24612",
+      "orth": "ⲗⲏⲥⲧⲏⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24613",
+      "orth": "ⲗⲏⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2153,
+        "count": 26
+      }
+    },
+    {
+      "id": "CF24614",
+      "orth": "ⲗⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7670,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12322",
+      "bibliography": "DDGLC",
+      "cu_ID": "1173"
+    },
+    {
+      "id": "CS12323",
+      "bibliography": "DDGLC",
+      "cu_ID": "7585"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "6414",
+    "grl_lemma": "ληστήριον",
+    "grl_meaning": "band of robbers",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1046a"
+  }
+}

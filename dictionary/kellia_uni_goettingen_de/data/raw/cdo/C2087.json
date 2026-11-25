@@ -1,0 +1,219 @@
+{
+  "id": "C2087",
+  "forms": [
+    {
+      "id": "CF5874",
+      "orth": "ϯⲙⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13903,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϯⲙⲁϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.5,
+        "rank": 563,
+        "count": 127
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2419",
+      "bibliography": "CD 189b; KoptHWb 103; ChLCS 28b"
+    },
+    {
+      "id": "CS2420",
+      "bibliography": "CD 189b; KoptHWb 103; ChLCS 28b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲣⲏⲟⲩ ⲛⲧⲁ**ϯⲙⲁϯ** ⲉⲡⲧⲱⲛϥ ⲛⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ",
+      "english": "if by any means I may attain to the resurrection from the dead.",
+      "source": "11_Philippians_03",
+      "urn": "urn:cts:copticLit:nt.phil.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲥ ⲛϭⲓⲗⲉⲓⲁ ϫⲉϩⲛⲟⲩⲙⲁⲧⲉ ⲁⲓ**ϯⲙⲁⲧⲉ** ⲁⲥⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲣⲁⲛ ϫⲉⲅⲁⲇ",
+      "english": "And Lea said, happily: and she called his name, Gad.",
+      "source": "Genesis 30",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲉϣⲱⲡ ⲁⲣⲉϣⲁⲛ ⲃϧⲉⲛ ⲑⲏⲛⲟⲩ **ϯⲙⲁϯ** ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲑⲃⲉϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲩⲉⲣⲉⲧⲓⲛ ⲙⲙⲱⲟⲩ ⲉⲥⲉϣⲱⲡⲓ ⲛⲱⲟⲩ ⲛⲧⲉⲛⲡⲁⲓⲱⲧ ⲉⲧϧⲉⲛⲛⲓⲫⲏⲟⲩⲓ .",
+      "english": "Again, assuredly I tell you, that if two of you will agree on earth concerning anything that they will ask, it will be done for them by my Father who is in heaven.",
+      "source": "01_Matthew_18",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:18",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲁⲓϩⲉⲗⲡⲓⲥ ⲧⲉ ⲉⲛⲁⲣⲉϯⲓⲃ ⲙⲫⲩⲗⲏ ϣⲉⲙϣⲓ ϧⲉⲛⲟⲩⲙⲟⲩⲛ ⲉⲃⲟⲗ ⲙⲡⲓⲉϩⲟⲟⲩ ⲛⲉⲙⲡⲓⲉϫⲱⲣϩ ⲉⲩⲟⲩⲱϣ ⲉⲧⲣⲉ ⲧⲟⲧⲟⲩ **ϯⲙⲁϯ** ⲉⲣⲟⲥ ⲉⲑⲃⲉⲧⲁⲓϩⲉⲗⲡⲓⲥ ⲡⲟⲩⲣⲟ ⲥⲉϫⲉⲙ ⲁⲣⲓⲕⲓ ⲉⲣⲟⲓ ⲛϫⲉⲛⲓⲓⲟⲩⲇⲁⲓ .",
+      "english": "which our twelve tribes, earnestly serving night and day, hope to attain. Concerning this hope I am accused by the Jews, King Agrippa!",
+      "source": "05_Acts_26",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:26",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲧⲉ",
+        1,
+        15.74
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        1,
+        10.598
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲛ_1_pre_ϯⲙⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲙⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯⲙⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϯⲙⲁⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲛ_1_pre_ϯⲙⲁⲧⲉ",
+          "ⲟⲩ_2_pre_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ϩⲛ",
+          "ⲙⲁⲧⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲉ_3_pre_ⲟⲩ",
+          "ⲁ_1_pre_ϯⲙⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲙⲁⲧⲉ",
+          "ⲓ_1_pre_ϯⲙⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯⲙⲁⲧⲉ",
+          "ϯⲙⲁⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13500,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2085",
+      "label": "ϭⲓⲛⲙⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "obtaining"
+    },
+    {
+      "target": "C2088",
+      "label": "ϯⲙⲁϯ",
+      "pos": "N",
+      "gloss": "assent, good pleasure"
+    },
+    {
+      "target": "C2090",
+      "label": "ⲁⲧϯⲙⲁϯ",
+      "pos": "N",
+      "gloss": "not agreeing"
+    },
+    {
+      "target": "C2084",
+      "label": "ⲙⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "reach, obtain, enjoy; be successful, hit the mark"
+    },
+    {
+      "target": "C2086",
+      "label": "ⲙⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "attainment, success"
+    },
+    {
+      "target": "C2089",
+      "label": "ⲣⲉϥϯⲙⲁϯ",
+      "pos": "N",
+      "gloss": "obedient person"
+    }
+  ]
+}

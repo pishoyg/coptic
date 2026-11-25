@@ -1,0 +1,121 @@
+{
+  "id": "C2638",
+  "forms": [
+    {
+      "id": "CF7079",
+      "orth": "ⲛⲟⲩϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9559,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲃⲧ",
+      "dialect": "S",
+      "id": "1219.1"
+    },
+    {
+      "orth": "ⲛⲟⲩϥⲧ",
+      "dialect": "B",
+      "id": "1219.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3024",
+      "bibliography": "CD 240ab; CED 116; KoptHWb 133; DELC 151; ChLCS 34b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ⲙⲡⲛⲁⲩ ⲉϥⲛⲁϩⲙⲟⲟⲥ ⲉ**ⲛⲟⲩϥⲧ** ϣⲁⲣⲉⲛⲉϥⲙⲉⲉⲩⲉ ϫⲟⲟⲥ ⲛⲁϥ · ϫⲉⲃⲱⲕ ϣⲁⲙⲉϣⲉ ⲛⲓⲙ ⲛϩⲗⲗⲟ ·",
+      "english": "and just at the time he was sitting to weave, his thoughts said to him, 'Go to this particular old man.'",
+      "source": "Apophthegmata Patrum Sahidic 092: Anonymous Nau 278",
+      "urn": "urn:cts:copticLit:ap.92.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲙⲟⲉⲓϩⲉ ⲧⲉ ϫⲉⲛⲓⲛⲟϭ ⲙⲙⲟⲟⲩ ⲉⲧⲟϣ ⲉⲧⲛⲏⲩ ⲉⲃⲟⲗ ϩⲛⲣⲱⲕ . ⲉⲛⲅϯⲥⲟ ⲁⲛ ⲉ**ⲛⲁϥⲧ**ⲟⲩ ϩⲛⲧⲉⲕϭⲟⲙ ⲧⲏⲣⲥ ·",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 195-204",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:28-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        10.002
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        9.987
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        9.222
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        8.116
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩϥⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6608,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2639",
+      "label": "ⲛⲉϥⲧⲉ",
+      "pos": "N",
+      "gloss": "swelling or wind (intestinal)"
+    }
+  ]
+}

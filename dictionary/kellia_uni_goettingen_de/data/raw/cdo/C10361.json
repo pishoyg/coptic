@@ -1,0 +1,155 @@
+{
+  "id": "C10361",
+  "forms": [
+    {
+      "id": "CF27626",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27627",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12617,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13969",
+      "bibliography": "DDGLC",
+      "cu_ID": "10058"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ **ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ** ⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ⲉϩⲣⲏⲓ ⲉϫⲱⲟⲩ .",
+      "english": "Therefore prophesy against them, prophesy, son of man.",
+      "source": "26_Ezechiel_11",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁϥ",
+        1,
+        12.741
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        8.857
+      ],
+      [
+        "ⲫⲁⲓ",
+        1,
+        8.658
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        8.297
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲫ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_4_post_ⲫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ_0_node",
+          "ⲡ_2_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲓ",
+          "ϣⲏⲣⲓ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_1_post_ⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ",
+          "ⲙ_2_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲏⲣⲓ",
+          "ⲫ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_3_post_ⲙ",
+          "ⲣⲱⲙⲓ_4_post_ⲫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12056,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2576",
+    "grl_lemma": "προφητεύω",
+    "grl_meaning": "to be a prophet or interpreter of the gods",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1539b; Preisigke 2:427"
+  }
+}

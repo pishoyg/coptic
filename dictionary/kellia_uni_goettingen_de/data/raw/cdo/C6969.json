@@ -1,0 +1,56 @@
+{
+  "id": "C6969",
+  "forms": [
+    {
+      "id": "CF15992",
+      "orth": "ⲡⲟⲟⲩ ⲛϩⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7689",
+      "bibliography": "CD 731a; KoptHWb 403; ChLCS 98b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6965",
+      "label": "ϩⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "day"
+    },
+    {
+      "target": "C6967",
+      "label": "ϩⲟⲟⲩ ϩⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "from day to day"
+    },
+    {
+      "target": "C6970",
+      "label": "ϩⲟⲩⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birthday"
+    },
+    {
+      "target": "C6968",
+      "label": "ⲙⲡⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "today"
+    },
+    {
+      "target": "C6966",
+      "label": "ⲣϩⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "spend day"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "C4254",
+  "forms": [
+    {
+      "id": "CF10459",
+      "orth": "ⲧⲱⲗⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6393,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲱⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10754,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲟⲗⲕ⸗",
+      "dialect": "S",
+      "id": "1587.2"
+    },
+    {
+      "orth": "ⲧⲱⲗⲕ",
+      "dialect": "L",
+      "id": "1587.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4824",
+      "bibliography": "CD 410a; CED 186; KoptHWb 229; DELC 213b; ChLCS 58a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲙⲙⲁⲩ ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϩⲓⲧⲛⲙⲙⲁ ⲉⲧϫⲏⲩ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ . ⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲇⲉ ⲁⲩϩⲕⲟ ⲁⲩⲁⲣⲭⲉⲓ ⲛ**ⲧⲱⲗⲕ** ⲛⲛϩⲙⲥ ⲉⲩⲟⲩⲱⲙ .",
+      "english": "At that time, Jesus went on the Sabbath day through the grain fields. His disciples were hungry and began to pluck heads of grain and to eat.",
+      "source": "40_Matthew_12",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲧⲟⲕⲙⲉⲕ ⲉⲃⲟⲗ ϩⲙⲡⲉⲕⲙⲁ ⲛϣⲱⲡⲉ ⲁⲩⲱ ϥⲛⲁ**ⲧⲱⲗⲕ** ⲛⲧⲉⲕⲛⲟⲩⲛⲉ ⲛϥⲛⲟϫⲥ ⲥⲁⲃⲟⲗ ⲛⲛⲉⲧⲟⲛϩ .",
+      "english": "and drag thee out from thy dwelling-place, and will root out thy root and cast it away from the living.",
+      "source": "Pistis Sophia Book 1 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:75-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲥⲉⲛⲁⲧⲁⲗⲉ ⲛⲇⲱⲣⲟⲛ ⲉϩⲣⲁⲓ ⲙⲡϫⲟⲉⲓⲥ ⲥⲁⲃⲁⲱⲑ ⲉⲃⲟⲗ ϩⲛⲟⲩⲗⲁⲟⲥ ⲉϥϩⲉϫϩⲱϫ ⲁⲩⲱ ⲉⲩ**ⲧⲱⲗⲕ** ⲙⲙⲟϥ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲓⲧⲛⲟⲩⲛⲟϭ ⲛⲗⲁⲟⲥ ϫⲓⲛⲧⲉⲛⲟⲩ ϣⲁⲉⲛⲉϩ ⲛⲟⲩⲟⲉⲓϣ ⲟⲩϩⲉⲑⲛⲟⲥ ⲉϥⲛⲁϩⲧⲉ ⲁⲩⲱ ⲉϥⲑⲃⲃⲓⲏⲩ ⲡⲁⲓ ⲉⲧⲥⲁ ⲟⲩⲥⲁ ⲙⲡⲓⲉⲣⲟ ⲛⲧⲉⲭⲱⲣⲁ ⲛⲕⲏⲙⲉ ⲉⲡⲙⲁ ⲛⲧⲁⲩⲧⲁⲩⲉⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ⲥⲁⲃⲁⲱⲑ ⲉϫⲱϥ ⲡⲧⲟⲟⲩ ⲛⲥⲓⲱⲛ",
+      "english": "In that time shall presents be brought to the Lord of hosts from a people afflicted and peeled, and from a people great from henceforth and for ever; a nation hoping and yet trodden down, which is in a part of a river of his land, to the place where is the name of the Lord of hosts, the mount Sion.",
+      "source": "Isaiah 18",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉϫϩⲱϫ",
+        1,
+        14.554
+      ],
+      [
+        "ϩⲙⲥ",
+        1,
+        14.428
+      ],
+      [
+        "ⲛⲟⲩⲛⲉ",
+        1,
+        12.604
+      ],
+      [
+        "ⲛ",
+        9,
+        11.734
+      ],
+      [
+        "ⲁⲣⲭⲉⲓ",
+        1,
+        11.348
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        8.917
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.285
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.439
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱⲗⲕ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲧⲱⲗⲕ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱⲗⲕ",
+          "ϥ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲱⲗⲕ",
+          "ⲛⲁ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲧⲱⲗⲕ",
+          "ⲧⲱⲗⲕ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲗⲕ_0_node",
+          "ⲛ_1_post_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲗⲕ",
+          "ⲧⲉⲕ_3_post_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱⲗⲕ",
+          "ⲩ_1_pre_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲱⲗⲕ",
+          "ⲧⲱⲗⲕ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲗⲕ_0_node",
+          "ⲙⲙⲟ_1_post_ⲧⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲱⲗⲕ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5954,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4255",
+      "label": "ⲧⲗⲟⲕⲗⲉⲕ",
+      "pos": "V",
+      "gloss": "tear"
+    }
+  ],
+  "etym": {
+    "demo_num": "d7550",
+    "demo_lemma": "ṱlg",
+    "english": "[to resolve, release]",
+    "german": "lösen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7550"
+  }
+}

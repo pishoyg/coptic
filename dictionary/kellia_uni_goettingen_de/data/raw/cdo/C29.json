@@ -1,0 +1,446 @@
+{
+  "id": "C29",
+  "forms": [
+    {
+      "id": "CF115",
+      "orth": "ⲁⲕⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7891,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF116",
+      "orth": "ⲁⲕⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4218,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲁⲅⲱ",
+      "dialect": "S",
+      "id": "415.1"
+    },
+    {
+      "orth": "ⲅⲱ",
+      "dialect": "S",
+      "id": "415.2"
+    },
+    {
+      "orth": "ⲁⲅⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2806,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲅⲱ",
+      "dialect": "B",
+      "id": "415.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS29",
+      "bibliography": "CD 3b; CED 3; KoptHWb 3; DELC 6; ChLCS 3a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉϥⲣⲉⲙⲃⲉⲭⲉ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲙⲁⲥⲓ ⲉⲩϣⲁⲛⲉⲩϣ ⲉⲩϣⲁⲛϣ ⲙⲙⲱⲟⲩ ⲛϩⲣⲏⲓ ⲛϧⲏⲧϥ ⲉⲑⲃⲉϫⲉⲛⲑⲱⲟⲩ ϩⲱⲟⲩ ⲁⲩⲫⲟⲛϩⲟⲩ ⲟⲩⲟϩ ⲁⲩⲫⲱⲧ ⲉⲩⲥⲟⲡ ⲙⲡⲟⲩϣⲟϩⲓ ⲉⲣⲁⲧⲟⲩϫⲉⲁϥⲓ ⲉϩⲣⲏⲓ ⲉϫⲱⲟⲩ ⲛϫⲉⲡⲉϩⲟⲟⲩ ⲛⲧⲉⲧⲟⲩ**ⲁⲕⲱ** ⲛⲉⲙⲡⲥⲏⲟⲩ ⲛⲧⲉⲡⲟⲩϭⲓⲙⲡϣⲓϣ .",
+      "english": "Also her hired soldiers in the midst of her are as fatted calves fed in her; for they also have turned, and fled with one accord: they stood not, for the day of destruction was come upon them, and the time of their retribution.",
+      "source": "24_Ieremias_26",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲛⲧⲁϥⲧⲛⲛⲟⲟⲩⲧ' ⲛϭⲓⲡϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲣⲁ**ⲁⲕⲱ** ⲉⲃⲟⲗ ⲛⲛⲛⲟⲃⲉ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⁛ · ⁛ · ⁛ · ⁛ · ⁛ □□□□",
+      "english": "“for this cause, therefore, hath the First Mystery sent me, that I may forgive every one his sins.”",
+      "source": "Pistis Sophia Book 2 Part 9",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:74-76",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲛⲟⲩⲑⲏⲟⲩ ⲛⲕⲁⲩⲥⲱⲛ ⲉⲓⲉϫⲟⲣⲟⲩ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲁϩⲣⲉⲛ ⲡϩⲟ ⲛⲛⲟⲩϫⲁϫⲓ ⲉⲓⲉⲧⲁⲙⲱⲟⲩ ⲉⲡⲉϩⲟⲟⲩ ⲛⲧⲉⲧⲟⲩ**ⲁⲕⲱ** .",
+      "english": "I will scatter them before their enemies like an east wind; I will shew them the day of their destruction.",
+      "source": "24_Ieremias_18",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:18",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲟⲩⲁⲅⲁⲑⲟⲛ ⲛⲁⲓ ⲡⲉ ⲉⲧⲟϭⲧ ⲉⲡⲛⲟⲩⲧⲉ ⲉⲧⲣⲁ**ⲁⲕⲱ** ⲛⲧⲁϩⲉⲗⲡⲓⲥ ϩⲙⲡϫⲟⲉⲓⲥ ⲉϫⲱ ⲛⲛⲉⲕⲉⲣⲏⲧ ⲧⲏⲣⲟⲩ ϩⲛⲙⲡⲩⲗⲏ ⲛⲧϣⲉⲉⲣⲉ ⲛⲥⲓⲱⲛ",
+      "english": "But it is good for me to cleave close to God, to put my trust in the Lord; that I may proclaim all thy praises in the gates of the daughter of Sion.",
+      "source": "Psalms 72",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:72",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲟⲛ ϧⲉⲛⲛⲉϥⲉⲡⲓⲥⲧⲟⲗⲏ ⲧⲏⲣⲟⲩ ⲉϥⲥⲁϫⲓ ⲛϧⲣⲏⲓ ⲛϧⲏⲧⲟⲩ ⲉⲑⲃⲉⲛⲁⲓ ⲛⲁⲓ ⲉⲧⲉϩⲁⲛⲟⲩⲟⲛ ⲛϧⲏⲧⲟⲩ ⲙⲟⲕϩ ⲛⲉⲙⲓ ⲉⲣⲱⲟⲩ ⲛⲁⲓ ⲉⲧⲉϣⲁⲣⲉ ⲛⲓⲁⲧϩⲏⲧ ⲛⲉⲙⲛⲏ ⲉⲧⲉⲛⲥⲉⲧⲁϫⲣⲏⲟⲩⲧ ⲁⲛ ⲉⲣⲥⲧⲣⲉⲃⲗⲟⲓⲛ ⲙⲙⲱⲟⲩ ⲙⲫⲣⲏϯ ⲙⲡⲥⲉⲡⲓ ⲛⲛⲓⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲛⲁⲥⲟⲕⲟⲩ ⲕⲁⲧⲁⲛⲟⲩ**ⲁⲅⲱ** ⲙⲙⲁⲩⲁⲧⲟⲩ",
+      "english": "as also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.",
+      "source": "22_II Peter_03",
+      "urn": "urn:cts:copticLit:nt.2pet.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲑⲃⲏ",
+        1,
+        10.587
+      ],
+      [
+        "ⲧⲟⲩ",
+        2,
+        9.799
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        9.591
+      ],
+      [
+        "ⲛⲧⲉ",
+        4,
+        8.481
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        7.872
+      ],
+      [
+        "ⲡⲉϫⲱ",
+        1,
+        7.862
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        1,
+        6.889
+      ],
+      [
+        "ⲥⲏⲟⲩ",
+        1,
+        6.825
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        6.759
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        5.998
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        1,
+        5.625
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        5.544
+      ],
+      [
+        "ⲩ",
+        2,
+        5.536
+      ],
+      [
+        "ⲡ",
+        2,
+        5.034
+      ],
+      [
+        "ⲉ",
+        2,
+        4.432
+      ],
+      [
+        "ⲧ",
+        1,
+        3.94
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        3.653
+      ],
+      [
+        "ϯ",
+        1,
+        2.705
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        2.658
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        2.178
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲣ",
+        2,
+        14.032
+      ],
+      [
+        "ϩⲉⲗⲡⲓⲥ",
+        1,
+        12.006
+      ],
+      [
+        "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        9.456
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        9.287
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.95
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.779
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲟⲩ_1_pre_ⲁⲕⲱ",
+          2
+        ],
+        [
+          "ⲁⲕⲱ_0_node",
+          4
+        ],
+        [
+          "ⲉϩⲣⲏⲓ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲕⲱϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲟⲩ_1_pre_ⲁⲕⲱ",
+          "ⲁⲕⲱ_0_node",
+          1
+        ],
+        [
+          "ⲁⲕⲱ_0_node",
+          "ⲉϩⲣⲏⲓ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲏⲓ_1_post_ⲁⲕⲱ",
+          "ⲉϫⲱ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ⲁⲕⲱ",
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲱ",
+          "ⲉ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲕⲱ",
+          "ⲥ_3_post_ⲕⲱϯ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲕⲱ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲕⲱ",
+          2
+        ],
+        [
+          "ⲧⲁ_3_post_ϩⲉⲗⲡⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲗⲡⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲕⲱ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲕⲱ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ⲁⲕⲱ",
+          "ⲛ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲁⲕⲱ_0_node",
+          "ⲛ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲕⲱ",
+          "ⲧⲁ_3_post_ϩⲉⲗⲡⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ϩⲉⲗⲡⲓⲥ",
+          "ϩⲉⲗⲡⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲗⲡⲓⲥ_2_post_ⲛ",
+          "ϩⲙ_1_post_ⲁⲕⲱ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲕⲱ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7441,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.14,
+      "rank": 1960,
+      "count": 12
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4177",
+      "type": "cf",
+      "label": "destroy, perish"
+    }
+  ],
+  "etym": {
+    "egy_num": "294",
+    "egy_lemma": "ꜣq.yt",
+    "english": "loss",
+    "german": "Verlust",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/294"
+  }
+}

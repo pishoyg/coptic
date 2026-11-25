@@ -1,0 +1,112 @@
+{
+  "id": "C3017",
+  "forms": [
+    {
+      "id": "CF7900",
+      "orth": "ⲡⲉϫⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.73,
+        "rank": 123,
+        "count": 1535
+      }
+    },
+    {
+      "orth": "ⲡⲉϫⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 16.83,
+        "rank": 82,
+        "count": 1427
+      }
+    },
+    {
+      "orth": "ⲡⲉϫⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 23.45,
+        "rank": 57,
+        "count": 3700
+      }
+    },
+    {
+      "orth": "ⲡⲉϫⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.58,
+        "rank": 298,
+        "count": 304
+      }
+    },
+    {
+      "orth": "ⲡⲉϫⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 14.36,
+        "rank": 90,
+        "count": 1218
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VBD",
+    "subc": "Suffixkonjugation",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3452",
+      "bibliography": "CD 285ab; CED 132; KoptHWb 158, 533; DELC 168; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲡⲉϫⲉ**ⲁⲡⲁ ⲡϫⲱⲗ ⲛⲁϥ ϫⲉⲉⲧⲁⲕⲥⲟⲑⲙⲉⲥ ϫⲉⲟⲩ ;",
+      "english": "‘And what exactly did you hear?’ asked apa Pjol.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲉϫⲉ**ⲡϩⲗⲗⲟ ⲛⲁϥ",
+      "english": "The monk said to him,",
+      "source": "Apophthegmata Patrum Sahidic 120: Sisoes 13",
+      "urn": "urn:cts:copticLit:ap.120.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲉϫⲁ**ϥ ϫⲉϯⲉⲙⲓ ⲁⲛ .",
+      "english": "He answered, 'I don't know.'",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲉϫⲉ**ⲕⲉⲟⲩⲁ ⲇⲉ ⲛⲁϥ ⲛϩⲏⲧⲛ ·",
+      "english": "And another of us said to him,",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲉϫⲱ**ⲟⲩ ϫⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ .",
+      "english": "They said to him, “We do not know.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲉϫⲁ**ϥ ⲟⲛ ⲛϭⲓⲁⲡⲁ ⲁⲃⲣⲁϩⲁⲙ ·",
+      "english": "Again, Abba Abraham said,",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

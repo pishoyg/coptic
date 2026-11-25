@@ -1,0 +1,104 @@
+{
+  "id": "C8202",
+  "forms": [
+    {
+      "id": "CF18861",
+      "orth": "ⲁⲙⲉⲣⲓⲙⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18862",
+      "orth": "ⲁⲙⲉⲣⲓⲙⲛⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18863",
+      "orth": "ⲁⲙⲉⲣⲓⲙⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9518,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9286",
+      "bibliography": "DDGLC",
+      "cu_ID": "3109"
+    },
+    {
+      "id": "CS9287",
+      "bibliography": "DDGLC",
+      "cu_ID": "847"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϥⲓ ⲙⲡⲟⲗⲉⲙⲟⲥ ⲉⲃⲟⲗ ⲙⲙⲟϥ · ⲁⲩⲱ ⲁϥϣⲱⲡⲉ ⲛ**ⲁⲙⲉⲣⲓⲙⲛⲟⲥ** ·",
+      "english": "He (God) took away the struggles from him (John) and he became carefree.",
+      "source": "Apophthegmata Patrum Sahidic 037",
+      "urn": "urn:cts:copticLit:ap.37.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲱⲕ",
+        1,
+        8.944
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲙⲉⲣⲓⲙⲛⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9095,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "113",
+    "grl_lemma": "ἀμέριμνος",
+    "grl_meaning": "free from care",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 81b; Preisigke 1:67"
+  }
+}

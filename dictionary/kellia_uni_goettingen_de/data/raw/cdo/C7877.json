@@ -1,0 +1,527 @@
+{
+  "id": "C7877",
+  "forms": [
+    {
+      "id": "CF17819",
+      "orth": "ϭⲟⲣⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2242,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ⲕⲟⲣⲧⲉ",
+      "dialect": "S",
+      "id": "2614.1"
+    },
+    {
+      "orth": "ϭⲁⲣⲧⲉ",
+      "dialect": "S",
+      "id": "2614.2"
+    },
+    {
+      "orth": "ϫⲟⲣϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13552,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲣⲧⲉ",
+      "dialect": "F",
+      "id": "2614.4"
+    },
+    {
+      "orth": "ϭⲁⲣϯ",
+      "dialect": "F",
+      "id": "2614.5"
+    },
+    {
+      "orth": "ϭⲁⲗϯ",
+      "dialect": "F",
+      "id": "2614.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8756",
+      "bibliography": "CD 829b; CED 336; KoptHWb 466; DELC 346b-347a; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲓ ⲛⲧ**ϭⲟⲣⲧⲉ** ⲉⲛⲉϥϭⲓϫ ·",
+      "english": "He took the slaughtering knife in his hand,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲱϣⲧ ⲉⲓⲥⲁⲁⲕ ⲡϣⲏⲣⲉ ⲛⲁⲃⲣⲁϩⲁⲙ ϫⲉⲙⲡⲉϥⲣⲁⲧⲥⲱⲧⲙ ⲛⲥⲁⲡⲉϥⲉⲓⲱⲧ · ⲉϥⲛⲁⲩ ⲉⲧ**ϭⲟⲣⲧⲉ** ⲛⲧⲡⲉ ⲙⲙⲟϥ ⲉⲥⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ⲉϫⲱϥ ·",
+      "english": "Consider Isaac, the son of Abraham, who shewed no disobedience to his father when he saw the knife of slaughter which was to kill him coming down upon him.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲙⲉⲉⲩⲉ ⲇⲉ ⲉⲓⲉ ⲡⲁϩⲏⲧ ⲁⲓϫⲓ ⲛⲟⲩ**ϭⲟⲣⲧⲉ** ϩⲛⲧⲁϭⲓϫ ·",
+      "english": "but the thought came into my heart, and I took a butcher's knife in my hand,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲩⲡⲓⲥ",
+        1,
+        16.013
+      ],
+      [
+        "ϫⲏⲣ",
+        3,
+        15.91
+      ],
+      [
+        "ⲧ",
+        25,
+        15.418
+      ],
+      [
+        "ⲫⲣⲁⲅⲓⲍⲉ",
+        1,
+        15.013
+      ],
+      [
+        "ϭⲟⲣⲧⲉ",
+        2,
+        14.428
+      ],
+      [
+        "ϭⲓϫ",
+        8,
+        14.389
+      ],
+      [
+        "ϩⲛ",
+        17,
+        14.157
+      ],
+      [
+        "ⲧⲟⲕⲙⲉⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲉ",
+        23,
+        13.803
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        4,
+        12.974
+      ],
+      [
+        "ϥ",
+        20,
+        12.902
+      ],
+      [
+        "ϫⲓ",
+        6,
+        12.334
+      ],
+      [
+        "ⲕⲏ",
+        2,
+        11.595
+      ],
+      [
+        "ⲛ",
+        17,
+        11.486
+      ],
+      [
+        "ⲧⲏⲙ",
+        1,
+        10.969
+      ],
+      [
+        "ⲕⲟⲛⲥ",
+        1,
+        10.691
+      ],
+      [
+        "ⲡⲉϥ",
+        5,
+        10.477
+      ],
+      [
+        "ⲥ",
+        7,
+        10.111
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        9.489
+      ],
+      [
+        "ⲃⲁⲗ",
+        2,
+        9.451
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲟⲣⲧⲉ_0_node",
+          24
+        ],
+        [
+          "ⲧ_1_pre_ϭⲟⲣⲧⲉ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          5
+        ],
+        [
+          "ϥ_3_post_ⲡⲱϣ",
+          1
+        ],
+        [
+          "ⲡⲱϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲡⲱϣ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϫⲏⲣ",
+          1
+        ],
+        [
+          "ϫⲏⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲁⲥⲧⲓⲅⲝ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲁⲥⲧⲓⲅⲝ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ_b",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲧⲏⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲟⲣⲧⲉ",
+          2
+        ],
+        [
+          "ⲙⲏⲣ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϭⲓϫ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϭⲓϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϭⲟⲣⲧⲉ",
+          "ϭⲟⲣⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ϭⲟⲣⲧⲉ_0_node",
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          "ϥ_3_post_ⲡⲱϣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲡⲱϣ",
+          "ⲡⲱϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲱϣ_2_post_ⲉ",
+          "ⲙ_3_post_ⲡⲱϣ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲡⲱϣ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲥ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲕⲏ",
+          "ⲕⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲏ_2_post_ⲉ",
+          "ⲉϫⲱ_3_post_ⲕⲏ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_3_post_ⲕⲏ",
+          "ϥ_4_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ϭⲟⲣⲧⲉ_0_node",
+          "ⲛ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          "ⲙⲙⲟ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϭⲟⲣⲧⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          "ϩⲉⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          "ϭⲟⲣⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲩ_3_post_ϫⲏⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϫⲏⲣ",
+          "ϫⲏⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲏⲣ_2_post_ⲉ",
+          "ⲙⲛ_2_post_ⲙⲁⲥⲧⲓⲅⲝ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲁⲥⲧⲓⲅⲝ",
+          "ϩⲉⲛ_2_post_ⲙⲁⲥⲧⲓⲅⲝ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          "ⲧ_1_pre_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ",
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϭⲟⲣⲧⲉ_b",
+          "ⲧ_1_pre_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          "ϥ_3_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲥ_3_post_ⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲏⲙ",
+          "ⲧⲏⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲙ_2_post_ⲉ",
+          "ⲙ_3_post_ⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲧⲏⲙ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϭⲟⲣⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ϭⲟⲣⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲙⲏⲣ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲟⲣⲧⲉ",
+          "ϩⲛ_1_post_ϭⲟⲣⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϭⲟⲣⲧⲉ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ϭⲓϫ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϭⲓϫ_3_post_ⲧ",
+          "ⲙ_4_post_ϭⲓϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.15,
+      "rank": 1966,
+      "count": 24
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7878",
+      "label": "ⲁⲧϭⲟⲣⲧⲉ",
+      "pos": "N",
+      "gloss": "without knife; not cut"
+    }
+  ],
+  "etym": {
+    "egy_num": "162060",
+    "egy_lemma": "qrḏn",
+    "demo_num": "d6878",
+    "demo_lemma": "grṱ(j)",
+    "english": "ax; pick ax (Sem. loan word)",
+    "german": "Beil, Axt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162060",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6878"
+  }
+}

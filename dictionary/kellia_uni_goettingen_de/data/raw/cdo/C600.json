@@ -1,0 +1,208 @@
+{
+  "id": "C600",
+  "forms": [
+    {
+      "id": "CF2249",
+      "orth": "ⲃⲁϩⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2538,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF2250",
+      "orth": "ⲃⲁⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1767,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF2251",
+      "orth": "ⲃⲁⲁⲗ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS718",
+      "bibliography": "KoptHWb 497"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲟⲩ ⲡⲉⲧⲉ ⲡⲓⲭⲣⲏⲙⲁⲧⲓⲥⲙⲟⲥ ϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ⲁⲓⲥⲱϫⲡ ⲛⲏⲓ ⲛⲍ ⲛϣⲟ ⲛⲣⲱⲙⲓ ⲛⲁⲓ ⲉⲧⲉⲙⲡⲟⲩⲕⲉⲗϫ ⲕⲉⲗⲓ ⲛϯ**ⲃⲁⲁⲗ** .",
+      "english": "But how does God answer him? 'I have reserved for myself seven thousand men, who have not bowed the knee to Baal.'",
+      "source": "06_Romans_11",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱ ⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ · ⲁⲡⲉⲕⲥⲛⲟϥ ⲛⲧⲁⲩⲡⲁϩⲧϥ ⲉⲃⲟⲗ · ϣⲟⲣϣⲣ ⲛⲧⲉⲥⲧⲩⲗⲏ ⲛⲧ**ⲃⲁϩⲁⲗ** · ⲛⲧϩⲉ ⲛϩⲏⲗⲓⲁⲥ · ⲁⲩⲱ ⲁⲕⲧⲁⲕⲟ ⲛⲛⲉⲓⲇⲱⲗⲟⲛ ⲙⲛⲛⲉⲥⲧⲩⲗⲏ ·",
+      "english": "O Saint Victor, thy blood which hath been shed hath overthrown the pillar of Baal, even as did Elijah and thou hast destroyed the idols and the pillars (thereof).",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲛⲁⲥⲟⲩⲧⲉⲛ ⲧⲁϫⲓϫ ⲉⲃⲟⲗ ⲉϫⲉⲛⲓⲟⲩⲇⲁ ⲛⲉⲙⲉϫⲉⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧϣⲟⲡ ϧⲉⲛϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲟⲩⲟϩ ϯⲛⲁⲱⲗⲓ ⲉⲃⲟⲗϧⲉⲛ ⲡⲁⲓⲙⲁ ⲛⲛⲓⲣⲁⲛ ⲛⲧⲉϯ**ⲃⲁⲁⲗ** ⲛⲉⲙⲛⲓⲣⲁⲛ ⲛⲧⲉⲛⲓⲟⲩⲏⲃ .",
+      "english": "And I will stretch out mine hand upon Juda, and upon all the inhabitants of Jerusalem; and I will remove the names of Baal out of this place, and the names of the priests;",
+      "source": "36_Sophonias_01",
+      "urn": "urn:cts:copticLit:ot.zeph.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲕ ... ⲉϣⲓⲧⲉ ϩⲙⲡ**ⲃⲁϩⲁⲗ** ⲡⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲁϥⲛⲛⲟⲩⲧⲉ ⲁⲕⲕⲁⲣⲱⲛ ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ⲁⲛ ⲧⲉⲧⲛⲁϣⲱⲡⲉ ϫⲉⲡⲙⲁⲛⲕⲟⲧⲕ ...ⲛⲧⲁⲕⲛ ϩⲓϫⲱϥ......",
+      "english": "And they said to him, A man came up to meet us, and said to us, Go, return to the king that sent you, and say to him, Thus saith the Lord, Is it because there is no God in Israel, that thou goest to enquire of Baal fly, the God of Accaron? it shall not be so: the bed on which thou art gone up, thou shalt not come down from it, for thou shalt surely die.",
+      "source": "II Kings 1",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ⲉⲧⲁ ⲧⲟⲟⲩⲓ ϣⲱⲡⲓ ⲁ ⲃⲁⲗⲁⲕ ϭⲓ ⲙⲃⲁⲗⲁⲁⲙ ⲁϥⲟⲗϥ ⲉϩⲣⲏⲓ ⲉϫⲉⲛϯⲥⲧⲩⲗⲏ ⲛⲧⲉ**ⲃⲁⲁⲗ** ⲟⲩⲟϩ ⲁϥⲧⲁⲙⲟϥ ⲉⲟⲩⲙⲉⲣⲟⲥ ⲛⲧⲉⲡⲓⲗⲁⲟⲥ ⲉⲃⲟⲗ ⲙⲙⲁⲩ",
+      "english": "And it was morning; and Balac took Balaam, and brought him up to the pillar of Baal, and shewed him thence a part of the people.",
+      "source": "04_Numeri_22",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:22",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉϣⲁⲣⲉ ⲡϣⲁϫⲉ ϫⲟⲟⲥ ⲛⲁϥ ϫⲉⲟⲩ ϫⲉⲁⲓϣⲱϫⲡ ⲛⲁⲓ ⲛⲥⲁϣϥ ⲛϣⲟ ⲛⲣⲱⲙⲉ ⲛⲁⲓ ⲉⲧⲉⲙⲡⲟⲩⲕⲗϫⲡⲁⲧ ⲛⲧ**ⲃⲁϩⲁⲗ** .",
+      "english": "But how does God answer him? 'I have reserved for myself seven thousand men, who have not bowed the knee to Baal.'",
+      "source": "45_Romans_11",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲁⲥⲧⲁⲣⲧⲏ",
+        1,
+        16.35
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.35
+      ],
+      [
+        "ⲕⲗϫⲡⲁⲧ",
+        1,
+        16.35
+      ],
+      [
+        "ⲥⲧⲩⲗⲏ",
+        2,
+        16.028
+      ],
+      [
+        "ⲧⲁⲗⲉϣⲟⲩϩⲏⲛⲉ",
+        1,
+        13.543
+      ],
+      [
+        "ϣⲣϣⲣ",
+        1,
+        13.35
+      ],
+      [
+        "ϣⲓⲧⲉ",
+        1,
+        13.35
+      ],
+      [
+        "ⲩ",
+        15,
+        13.282
+      ],
+      [
+        "ⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ",
+        3,
+        13.05
+      ],
+      [
+        "ⲡ",
+        19,
+        12.993
+      ],
+      [
+        "ϥ",
+        15,
+        11.994
+      ],
+      [
+        "ⲙ",
+        12,
+        11.858
+      ],
+      [
+        "ϣⲙϣⲉ",
+        2,
+        11.024
+      ],
+      [
+        "ϣⲣϣⲱⲣ",
+        1,
+        10.827
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        2,
+        10.486
+      ],
+      [
+        "ⲡⲉ",
+        6,
+        10.015
+      ],
+      [
+        "ϯϩⲁⲡ",
+        1,
+        9.842
+      ],
+      [
+        "ⲁ",
+        8,
+        9.796
+      ],
+      [
+        "ⲧ",
+        6,
+        9.578
+      ],
+      [
+        "ⲛ",
+        10,
+        9.527
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2247,
+      "count": 19
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "egy_num": "54960",
+    "egy_lemma": "Bꜥr",
+    "demo_num": "d1683",
+    "demo_lemma": "Bꜥl",
+    "english": "Baal",
+    "german": "Baal",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1683"
+  }
+}

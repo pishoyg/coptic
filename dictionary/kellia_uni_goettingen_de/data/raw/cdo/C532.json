@@ -1,0 +1,207 @@
+{
+  "id": "C532",
+  "forms": [
+    {
+      "id": "CF2083",
+      "orth": "ⲃⲣⲉϣⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6565,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲃⲉⲣⲉϣⲏⲩ",
+      "dialect": "S",
+      "id": "595.1"
+    },
+    {
+      "orth": "ⲃⲣϣⲏⲩ",
+      "dialect": "S",
+      "id": "595.2"
+    },
+    {
+      "orth": "ⲃⲉⲣϣⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4816,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS642",
+      "bibliography": "CD 44a; CED 26; KoptHWb 27; DELC 31; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ ⲟⲩⲛⲕⲁ ⲉϥⲡⲟⲕ ϩⲓⲣⲙⲡϩⲟ ⲙⲡϫⲁⲓⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲃⲣⲉϣⲏⲩ** ⲉϥⲟⲩⲟⲃϣ ⲛⲧϩⲉ ⲛⲟⲩϫⲁϥ ϩⲣⲁⲓ ϩⲓϫⲙⲡⲕⲁϩ",
+      "english": "in the morning it came to pass as the dew ceased round about the camp, that, behold, on the face of the wilderness was a small thing like white coriander seed, as frost upon the earth.",
+      "source": "Exodus 16",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁⲛⲛⲁ ⲇⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϭⲣⲟϭ ⲛ**ⲃⲣⲉϣⲏⲩ** ⲁⲩⲱ ⲡⲉϥⲉⲓⲛⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲙⲡⲉⲓⲛⲉ ⲛⲟⲩⲕⲣⲩⲥⲧⲁⲗⲗⲟⲥ",
+      "english": "And the manna is as coriander seed, and the appearance of it the appearance of hoar-frost.",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲣⲁⲛ ⲛϭⲓⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲡⲙⲁⲛⲛⲁ ⲛⲉϥⲟ ⲇⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲃⲣⲉϣⲏⲩ** ⲉϥⲟⲩⲟⲃϣ ⲉⲣⲉⲧⲉϥϯⲡⲉ ⲟ ⲛⲧϩⲉ ⲛⲟⲩⲁⲅⲕⲣⲓⲥ ϩⲛⲟⲩⲉⲃⲓⲱ",
+      "english": "And the children of Israel called the name of it Man; and it was as white coriander seed, and the taste of it as a wafer with honey.",
+      "source": "Exodus 16",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲃϣ",
+        2,
+        15.728
+      ],
+      [
+        "ϭⲣⲟϭ",
+        1,
+        13.398
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.142
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.919
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲉ",
+        3,
+        7.987
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲣⲉϣⲏⲩ_0_node",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲃⲣⲉϣⲏⲩ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲃϣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲟⲃϣ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲣⲉϣⲏⲩ_0_node",
+          "ⲉ_1_post_ⲃⲣⲉϣⲏⲩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲃⲣⲉϣⲏⲩ",
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          "ⲟⲩⲟⲃϣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲃϣ_2_post_ⲉ",
+          "ⲛ_3_post_ⲟⲩⲟⲃϣ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲟⲃϣ",
+          "ⲧ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6128,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C633",
+      "type": "cf",
+      "label": "seed"
+    },
+    {
+      "target": "C12062",
+      "type": "cf",
+      "label": "coriander (B)"
+    }
+  ]
+}

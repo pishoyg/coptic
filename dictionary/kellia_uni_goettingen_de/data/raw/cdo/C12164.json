@@ -1,0 +1,59 @@
+{
+  "id": "C12164",
+  "forms": [
+    {
+      "id": "CF33176",
+      "orth": "ϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17165",
+      "bibliography": "CD 762a-b; KoptHWB 417; DELC 325a"
+    },
+    {
+      "id": "CS17166",
+      "bibliography": "CD 762a-b; KoptHWB 417; DELC 325a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7119",
+      "label": "ϫⲱⲕ",
+      "pos": "V",
+      "gloss": "be completed, full, end (life); complete, finish"
+    },
+    {
+      "target": "C7120",
+      "label": "ϫⲱⲕ",
+      "pos": "N",
+      "gloss": "completion, end, total"
+    },
+    {
+      "target": "C7123",
+      "label": "ϭⲓⲛϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "completion, death"
+    },
+    {
+      "target": "C7121",
+      "label": "ⲁⲧϫⲱⲕ",
+      "pos": "N",
+      "gloss": "without end, endless"
+    },
+    {
+      "target": "C7122",
+      "label": "ⲣⲉϥϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "perfect person"
+    }
+  ]
+}

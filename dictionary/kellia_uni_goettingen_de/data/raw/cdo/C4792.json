@@ -1,0 +1,52 @@
+{
+  "id": "C4792",
+  "forms": [
+    {
+      "id": "CF11549",
+      "orth": "ⲑⲗⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19118,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5411",
+      "bibliography": "CD 458b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18729,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6512",
+      "type": "cf",
+      "label": "fly, go, hurry"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4791",
+      "label": "ⲑⲗⲟ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "make to fly, drive away, scatter"
+    }
+  ]
+}

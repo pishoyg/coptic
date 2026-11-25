@@ -1,0 +1,126 @@
+{
+  "id": "C3270",
+  "forms": [
+    {
+      "id": "CF8428",
+      "orth": "ⲙⲛⲛⲥⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13467,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3737",
+      "bibliography": "CD 315a; KoptHWb 95; ChLCS 44b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲙⲛⲛⲥⲱⲥ** ⲟⲛ ϣⲁⲥⲟⲩⲱϣⲧ ⲛⲁϥ · ⲉⲥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲡⲁϫⲟⲉⲓⲥ · ⲁⲩⲱ ⲡⲁϣⲏⲣⲉ ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲩⲣⲅⲟⲥ",
+        1,
+        15.428
+      ],
+      [
+        "ⲟⲩⲱϣⲧ",
+        1,
+        12.139
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13061,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3266",
+      "label": "ⲉⲃⲟⲗ ⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "from the side, from"
+    },
+    {
+      "target": "C3264",
+      "label": "ⲉⲡⲉⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    },
+    {
+      "target": "C3267",
+      "label": "ⲕⲉⲥⲁ",
+      "pos": "ADV",
+      "gloss": "other part, apart, elsewhere"
+    },
+    {
+      "target": "C3269",
+      "label": "ⲙⲛⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "after (of time)"
+    },
+    {
+      "target": "C3268",
+      "label": "ⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "behind, after; against, at, from; except, beyond"
+    },
+    {
+      "target": "C3263",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "side, part"
+    },
+    {
+      "target": "C3265",
+      "label": "ⲥⲁⲡⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    }
+  ]
+}

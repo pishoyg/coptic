@@ -1,0 +1,155 @@
+{
+  "id": "C8869",
+  "forms": [
+    {
+      "id": "CF21478",
+      "orth": "ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21479",
+      "orth": "ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13233,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10714",
+      "bibliography": "DDGLC",
+      "cu_ID": "4197"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ϩⲛⲛⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲡⲕⲟⲥⲙⲟⲥ · ⲡⲉⲧⲛⲁϣ**ⲉⲅⲕⲱⲙⲓⲁⲍⲉ** ⲙⲙⲟⲕ ⲕⲁⲧⲁⲡⲉⲕⲙⲡϣⲁ · ⲱ ⲡⲉⲛⲧⲁϥⲡⲁⲣϩⲓⲥⲧⲁ ⲙⲡⲉϥⲥⲱⲙⲁ · ⲛⲟⲩⲑⲩⲥⲓⲁ · ⲉⲥⲟⲛϩ · ⲉⲥⲟⲩⲁⲁⲃ ⲉⲥϣⲏⲡ · ⲉⲥⲣⲁⲛⲁϥ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "Who is there among all the philosophers of the world who is able to pronounce on thee an encomium which shall adequately praise thy merits, O thou who didst make of thy body a sacrifice, which was living, and was holy, and was acceptable, and was pleasing unto God?",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣ",
+        1,
+        11.661
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲱⲙⲓⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          "ϣ_1_pre_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          "ⲉⲅⲕⲱⲙⲓⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲱⲙⲓⲁⲍⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲕⲁⲧⲁ_1_post_ⲉⲅⲕⲱⲙⲓⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12823,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3449",
+    "grl_lemma": "εγκωμιάζω",
+    "grl_meaning": "to praise, laud, extol",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 474b"
+  }
+}

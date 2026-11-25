@@ -1,0 +1,106 @@
+{
+  "id": "C6420",
+  "forms": [
+    {
+      "id": "CF14868",
+      "orth": "ϩⲱⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 7.14,
+        "rank": 166,
+        "count": 1127
+      }
+    },
+    {
+      "orth": "ϩⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.98,
+        "rank": 183,
+        "count": 592
+      }
+    },
+    {
+      "orth": "ϩⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 3.82,
+        "rank": 278,
+        "count": 602
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "IMOD",
+    "subc": "Status pronominalis",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS7126",
+      "bibliography": "CD 651b-652a; CED 273; KoptHWb 352; DELC 287a-288b; ChLCS 87b"
+    },
+    {
+      "id": "CS7127",
+      "bibliography": "CD 652a-b; KoptHWb 352; ChLCS 87b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲇⲉ ⲉⲧⲁ ⲗⲱⲧ ⲓ ⲉⲃⲟⲗ ϧⲉⲛⲥⲟⲇⲟⲙⲁ ⲁϥ**ϩⲱ**ⲟⲩ ⲛⲟⲩⲭⲣⲱⲙ ⲛⲉⲙⲟⲩⲑⲏⲛ ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲉ ⲟⲩⲟϩ ⲁϥⲧⲁⲕⲉ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ .",
+      "english": "but in the day that Lot went out from Sodom, it rained fire and sulfur from the sky, and destroyed them all.",
+      "source": "03_Luke_17",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲣⲱⲕ **ϩⲱⲱ**ⲕ ϣⲁⲛⲧⲟⲩϫⲛⲟⲩⲕ ·",
+      "english": "Hold thy peace until thou art asked a question.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡϭⲟⲓⲥ ϯ ⲙⲡⲓ**ϩⲱ**ⲟⲩ ⲛⲧⲉⲡⲉⲕⲕⲁϩⲓ ⲛⲟⲩϣⲱⲓϣ ⲟⲩⲕⲁϩⲓ ⲉϥⲉⲓ ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲉ ⲉϧⲣⲏⲓ ⲉϫⲱⲕ ϣⲁⲧⲉϥϥⲟⲧⲕ ⲉⲃⲟⲗ ⲛⲧⲉϥⲧⲁⲕⲟⲕ",
+      "english": "The Lord thy God make the rain of thy land dust; and dust shall come down from heaven, until it shall have destroyed thee, and until it shall have quickly consumed thee.",
+      "source": "05_Deuteronomium_28",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲯⲩⲭⲏ **ϩⲱⲱ**ⲥ ϯⲟⲩⲱ .",
+      "english": "the soul grows.'",
+      "source": "Apophthegmata Patrum Sahidic 054: Daniel 4",
+      "urn": "urn:cts:copticLit:ap.54.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁ**ϩⲱ**ⲟⲩ ⲛϩⲁⲛⲫⲁϣ ⲉϫⲉⲛⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲟⲩⲭⲣⲱⲙ ⲛⲉⲙⲟⲩⲑⲏⲛ: ⲛⲉⲙⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲥⲁⲣⲁⲑⲏⲟⲩ ⲑⲁⲓ ⲇⲉ ⲧⲉ ⲧⲧⲟⲓ ⲛⲧⲉⲡⲟⲩⲁⲫⲟⲧ .",
+      "english": "He shall rain upon sinners snares, fire, and brimstone, and a stormy blast shall be the portion of their cup.",
+      "source": "19_Psalmi_10",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲁϫⲛⲉⲡⲣⲡⲉ **ϩⲱⲱ**ϥ ⲟⲛ",
+      "english": "Let us enquire also of the temple.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "854529",
+    "egy_lemma": "ḥꜥ.w",
+    "demo_num": "d3971",
+    "demo_lemma": "ḥꜥ",
+    "english": "body; flesh; self",
+    "german": "Körper; Leib; Fleisch; Selbst",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854529",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3971"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "C25",
+  "forms": [
+    {
+      "id": "CF105",
+      "orth": "ⲉⲣⲁⲓⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS25",
+      "bibliography": "CD 3a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C26",
+      "label": "ϫⲓⲁⲉⲓⲕ",
+      "pos": "V",
+      "gloss": "consecrate"
+    },
+    {
+      "target": "C27",
+      "label": "ϫⲓⲁⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "consecration"
+    },
+    {
+      "target": "C24",
+      "label": "ⲁⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "consecration"
+    }
+  ]
+}

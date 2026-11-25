@@ -1,0 +1,145 @@
+{
+  "id": "C5",
+  "forms": [
+    {
+      "id": "CF34",
+      "orth": "ⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 304.88,
+        "rank": 5,
+        "count": 48102
+      }
+    },
+    {
+      "id": "CF35",
+      "orth": "ⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 315.04,
+        "rank": 4,
+        "count": 26719
+      }
+    },
+    {
+      "id": "CF36",
+      "orth": "ⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF37",
+      "orth": "ⲁ-",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "subc": "zur Bildung von Ortsangaben",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS5",
+      "bibliography": "KoptHWb 1"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲥⲁⲧⲟⲧϥ ⲁϥⲁⲗⲏⲓ ⲉⲡⲓϫⲟⲉⲓ **ⲁ**ϥⲓ ⲉⲛⲓⲥⲁ ⲛⲧⲉⲇⲁⲗⲙⲁⲛⲟⲩⲑⲁ .",
+      "english": "Immediately he entered into the boat with his disciples, and came into the region of Dalmanutha.",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁ**ⲥϣⲱⲡⲉ ⲇⲉ ⲙⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ ⲇⲁⲩⲉⲓⲇ ⲁϥⲧⲱⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓϫⲛⲡⲉϥⲙⲁ ⲛⲛⲕⲟⲧⲕ ⲁϥⲙⲟⲟϣⲉ ϩⲓⲧϫⲉⲛⲉⲡⲱⲣ ⲙⲡⲏⲓ ⲙⲡⲣⲣⲟ ⲁⲩⲱ ⲁϥⲛⲁⲩ ϩⲓⲧⲉϥϫⲉⲛⲉⲡⲱⲣ ⲉⲩⲥϩⲓⲙⲉ ⲉⲥϫⲱⲕⲙ ⲧⲉⲥϩⲓⲙⲉ ⲇⲉ ⲛⲉ ⲛⲉⲥⲉ ϩⲣⲁⲥ ⲉⲙⲁⲧⲉ",
+      "english": "And it came to pass toward evening, that David arose off his couch, and walked on the roof of the king's house, and saw from the roof a woman bathing; and the woman was very beautiful to look upon.",
+      "source": "II Samuel 11",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲁ**ϥⲓ ⲉϧⲟⲩⲛ ⲉⲕⲁⲫⲁⲣⲛⲁⲟⲩⲙ ⲟⲩⲟϩ ⲉⲧⲁϥⲓ ⲉϧⲟⲩⲛ ⲉⲡⲓⲏⲓ ⲛⲁϥϣⲓⲛⲓ ⲙⲙⲱⲟⲩ ϫⲉⲟⲩ ⲉⲛⲁⲣⲉⲧⲉⲛⲙⲟⲕⲙⲉⲕ ⲉⲣⲱⲟⲩ ϩⲓⲫⲙⲱⲓⲧ .",
+      "english": "He came to Capernaum, and when he was in the house he asked them, 'What were you arguing among yourselves on the way?'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϥⲙⲁ ⲛⲉⲥⲑⲁ ⲇⲉ ⲡⲉ **ⲁ**ⲣⲙⲁⲑⲁⲉⲓⲙ ⲉⲃⲟⲗ ϫⲉⲛⲉⲣⲉⲡⲉϥⲏⲓ ⲙⲙⲁⲩ ⲁⲩⲱ ⲛⲉϥϯϩⲁⲡ ⲉⲡⲓⲥⲣⲁⲏⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲁϥⲕⲱⲧ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛⲟⲩⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And his return was to Armathaim, because there was his house; and there he judged Israel, and built there an altar to the Lord.",
+      "source": "I Samuel 7",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲓ ⲟⲛ ⲉϧⲟⲩⲛ ⲉⲕⲁⲫⲁⲣⲛⲁⲟⲩⲙ ⲙⲉⲛⲉⲛⲥⲁϩⲁⲛⲉϩⲟⲟⲩ **ⲁ**ⲩⲥⲱⲧⲉⲙ ϫⲉϥⲛϧⲟⲩⲛ ϧⲉⲛⲟⲩⲏⲓ .",
+      "english": "When he entered again into Capernaum after some days, it was heard that he was in the house.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁ**ϥⲕⲁⲡⲉϥⲏⲓ ⲅⲁⲣ ϩⲁⲧⲙⲡⲙⲟⲩ ⲁⲩⲱ ⲉⲣⲉⲛⲉϥⲙⲁⲙⲙⲟⲟϣⲉ ⲙⲛⲛⲣⲱⲙⲉ ϩⲁⲧⲛⲁⲙⲛⲧⲉ",
+      "english": "For she has fixed her house near death, and guided her wheels near Hades with the giants.",
+      "source": "Proverbs 2",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C125",
+      "type": "cf",
+      "label": "school"
+    },
+    {
+      "target": "C292",
+      "type": "cf",
+      "label": "treasury, storehouse"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13001",
+      "label": "ϩⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C1",
+      "label": "ⲁ",
+      "pos": "NUM",
+      "gloss": "1"
+    },
+    {
+      "target": "C2",
+      "label": "ⲁ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C3",
+      "label": "ⲁ-",
+      "pos": "NEG",
+      "gloss": ""
+    },
+    {
+      "target": "C4",
+      "label": "ⲁ-",
+      "pos": "PTC",
+      "gloss": "about"
+    }
+  ],
+  "etym": {
+    "egy_num": "854495",
+    "egy_lemma": "ꜥ.t",
+    "english": "part (of something)",
+    "german": "Teil (von etwas)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854495"
+  }
+}

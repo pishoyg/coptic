@@ -1,0 +1,268 @@
+{
+  "id": "C5013",
+  "forms": [
+    {
+      "id": "CF11991",
+      "orth": "ⲟⲩⲁⲙⲉϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8587,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5641",
+      "bibliography": "CD 479a; CED 212; KoptHWb 272; DELC 233a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲟⲩⲥⲁϫⲓ ϣⲁϥϫⲉⲙⲙⲁ ⲛⲙⲟⲛⲓ ⲙⲫⲣⲏϯ ⲛ**ⲟⲩⲁⲙⲉϯ** ⲉⲥⲟⲩⲱⲙ ⲉⲧⲉⲉⲃⲟⲗ ⲛϧⲏ ⲧⲟⲩ ⲡⲉ ϩⲩⲙⲉⲛⲉⲟⲥ ⲛⲉⲙⲫⲩⲗⲉⲧⲟⲥ .",
+      "english": "and their word will consume like gangrene, of whom is Hymenaeus and Philetus;",
+      "source": "16_II Timothy_02",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        10.221
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.934
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲁⲙⲉϯ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8058,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5030",
+      "label": "ϭⲓⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "food"
+    },
+    {
+      "target": "C5031",
+      "label": "ϭⲓⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "food"
+    },
+    {
+      "target": "C5008",
+      "label": "ⲁⲑⲟⲩⲱⲙ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "unrepentant"
+    },
+    {
+      "target": "C5021",
+      "label": "ⲁⲧⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "not eating, foodless"
+    },
+    {
+      "target": "C5024",
+      "label": "ⲙⲁ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "eating place, refectory"
+    },
+    {
+      "target": "C5022",
+      "label": "ⲙⲁⲓⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "fond of eating"
+    },
+    {
+      "target": "C5007",
+      "label": "ⲙⲉⲧⲣⲉϥⲟⲩⲉⲙϩⲏⲧ",
+      "pos": "N",
+      "gloss": "repentance"
+    },
+    {
+      "target": "C5023",
+      "label": "ⲙⲛⲧⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "act of eating, habit of eating"
+    },
+    {
+      "target": "C5028",
+      "label": "ⲙⲛⲧⲣⲉϥⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "gluttony"
+    },
+    {
+      "target": "C5025",
+      "label": "ⲛⲕⲁ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "food"
+    },
+    {
+      "target": "C5011",
+      "label": "ⲟⲩⲁⲙ-",
+      "pos": "N",
+      "gloss": "eater"
+    },
+    {
+      "target": "C5012",
+      "label": "ⲟⲩⲁⲙⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "infant"
+    },
+    {
+      "target": "C5014",
+      "label": "ⲟⲩⲁⲙⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "cannibal, man-eater"
+    },
+    {
+      "target": "C5016",
+      "label": "ⲟⲩⲁⲙⲥⲁⲣⲝ",
+      "pos": "N",
+      "gloss": "carnivore"
+    },
+    {
+      "target": "C5017",
+      "label": "ⲟⲩⲁⲙⲥⲓⲣ",
+      "pos": "N",
+      "gloss": "name of a disease"
+    },
+    {
+      "target": "C5015",
+      "label": "ⲟⲩⲁⲙⲥⲛⲟϥ",
+      "pos": "N",
+      "gloss": "bloodsucker"
+    },
+    {
+      "target": "C5018",
+      "label": "ⲟⲩⲁⲙⲥⲟⲧ",
+      "pos": "N",
+      "gloss": "excrement-eater"
+    },
+    {
+      "target": "C5019",
+      "label": "ⲟⲩⲁⲙⲭⲟⲣⲧⲟⲥ",
+      "pos": "N",
+      "gloss": "herbivore"
+    },
+    {
+      "target": "C5020",
+      "label": "ⲟⲩⲁⲙⲯⲩⲭⲏ",
+      "pos": "N",
+      "gloss": "soul-eater"
+    },
+    {
+      "target": "C5009",
+      "label": "ⲟⲩⲉⲙϧⲣⲉ",
+      "pos": "N",
+      "gloss": "belly"
+    },
+    {
+      "target": "C5010",
+      "label": "ⲟⲩⲉⲙϭⲓ",
+      "pos": "V",
+      "gloss": "feed (at the breast)"
+    },
+    {
+      "target": "C5003",
+      "label": "ⲟⲩⲱⲙ",
+      "pos": "V",
+      "gloss": "eat, bite"
+    },
+    {
+      "target": "C5004",
+      "label": "ⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "eating, food"
+    },
+    {
+      "target": "C5005",
+      "label": "ⲟⲩⲱⲙϩⲏⲧ",
+      "pos": "V",
+      "gloss": "repent, regret"
+    },
+    {
+      "target": "C5006",
+      "label": "ⲟⲩⲱⲙϩⲏⲧ",
+      "pos": "N",
+      "gloss": "repentance"
+    },
+    {
+      "target": "C5027",
+      "label": "ⲣⲉϥⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "eater, glutton"
+    },
+    {
+      "target": "C5026",
+      "label": "ⲣⲟⲙⲡⲉ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "year of food, alimony"
+    },
+    {
+      "target": "C5029",
+      "label": "ⲭⲟⲩ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "food"
+    }
+  ]
+}

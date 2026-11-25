@@ -1,0 +1,189 @@
+{
+  "id": "C7077",
+  "forms": [
+    {
+      "id": "CF16211",
+      "orth": "ⲣⲉϥϫⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7359,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7809",
+      "bibliography": "CD 752b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲉⲓ ⲇⲉ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲉϩⲣⲁⲓ ⲉⲡⲏⲓ ⲙⲡⲁⲣⲭⲱⲛ ⲁϥⲛⲁⲩ ⲉⲛ**ⲣⲉϥϫⲟ**ⲟⲩⲉ ⲙⲛⲡⲙⲏⲏϣⲉ ⲉⲩϣⲧⲣⲧⲱⲣ .",
+      "english": "When Jesus came into the ruler's house, and saw the flute players, and the crowd in noisy disorder,",
+      "source": "40_Matthew_9",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲡⲉⲓⲕⲁⲗⲉⲓ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ · ⲙⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ϫⲉⲡⲛⲟⲩⲧⲉ ⲡϣⲁ ⲉⲛⲉϩ · ⲏ ⲉⲛⲉⲟⲩ**ⲣⲉϥϫⲟ** ⲁⲛ ⲡⲉ ⲁⲃⲣⲁϩⲁⲙ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲉ",
+        1,
+        11.626
+      ],
+      [
+        "ⲁⲃⲣⲁϩⲁⲙ",
+        1,
+        11.418
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        9.887
+      ],
+      [
+        "·",
+        1,
+        9.178
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        7.817
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_1_post_ⲣⲉϥϫⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲣⲉϥϫⲟ",
+          "ⲛ_1_pre_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲟ",
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϫⲟ",
+          "ⲣⲉϥϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲟ_0_node",
+          "ⲁⲛ_1_post_ⲣⲉϥϫⲟ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥϫⲟ",
+          "ⲁⲃⲣⲁϩⲁⲙ_1_post_ⲣⲉϥϫⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6907,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7075",
+      "label": "ϫⲟ",
+      "pos": "V",
+      "gloss": "plant, sow"
+    },
+    {
+      "target": "C7076",
+      "label": "ϫⲟ",
+      "pos": "N",
+      "gloss": "planting, sowing"
+    }
+  ]
+}

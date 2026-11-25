@@ -1,0 +1,104 @@
+{
+  "id": "C8304",
+  "forms": [
+    {
+      "id": "CF19229",
+      "orth": "ⲁⲛⲧⲓⲧⲩⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19230",
+      "orth": "ⲁⲛⲧⲓⲧⲩⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12828,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9494",
+      "bibliography": "DDGLC",
+      "cu_ID": "4676"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲁ* ⲧⲉⲯⲩⲭⲏ ⲕⲱ ⲙⲡⲁⲛⲧⲓⲙⲓⲙⲟⲛ ⲙⲡⲛⲉⲩⲙⲁ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉϣⲁⲩϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲩⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ ⲙⲙⲟⲥ · ϫⲉⲉⲩⲉⲕⲁⲁⲩ ϩⲣⲁⲓ ϩⲛⲛⲥⲱⲙⲁ ⲙⲡ**ⲁⲛⲧⲓⲧⲩⲡⲟⲥ** ·",
+      "english": "“and after the soul put the counterfeiting spirit.' Thus they give commandment to their servitors, that they may deposit it into the bodies of the antitype.”",
+      "source": "Pistis Sophia Book 3 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:109-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲧⲓⲧⲩⲡⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12404,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3275",
+    "grl_lemma": "ἀντίτυπος",
+    "grl_meaning": "being a copy or reflection",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 165a"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "C3300",
+  "forms": [
+    {
+      "id": "CF8488",
+      "orth": "ⲙⲛⲧⲣⲉϥϯⲥⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3767",
+      "bibliography": "CD 317b; ChLCS 45b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3296",
+      "label": "ϯⲥⲟ",
+      "pos": "V",
+      "gloss": "spare oneself sth, refrain"
+    },
+    {
+      "target": "C3297",
+      "label": "ϯⲥⲟ",
+      "pos": "N",
+      "gloss": "forbearance, reserve"
+    },
+    {
+      "target": "C3298",
+      "label": "ⲁⲧϯⲁⲥⲟ",
+      "pos": "N",
+      "gloss": "unsparing"
+    },
+    {
+      "target": "C3299",
+      "label": "ⲙⲛⲧⲁⲧϯⲥⲟ",
+      "pos": "N",
+      "gloss": "unrestrainedness"
+    },
+    {
+      "target": "C3295",
+      "label": "ⲥⲟ",
+      "pos": "N",
+      "gloss": "protection"
+    }
+  ]
+}

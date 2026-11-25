@@ -1,0 +1,46 @@
+{
+  "id": "C4326",
+  "forms": [
+    {
+      "id": "CF10604",
+      "orth": "ϭⲓⲛⲧⲱⲙⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4900",
+      "bibliography": "CD 416b; ChLCS 59a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4324",
+      "label": "ⲧⲱⲙⲧ",
+      "pos": "V",
+      "gloss": "happen, befall"
+    },
+    {
+      "target": "C4325",
+      "label": "ⲧⲱⲙⲧ",
+      "pos": "N",
+      "gloss": "meeting, event"
+    }
+  ]
+}

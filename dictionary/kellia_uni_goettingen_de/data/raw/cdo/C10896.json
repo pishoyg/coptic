@@ -1,0 +1,119 @@
+{
+  "id": "C10896",
+  "forms": [
+    {
+      "id": "CF29711",
+      "orth": "ⲫⲩⲗⲁⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29712",
+      "orth": "ⲫⲩⲗⲁⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16269,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29713",
+      "orth": "ⲫⲩⲗⲗⲁⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11307,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15044",
+      "bibliography": "DDGLC",
+      "cu_ID": "3217"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉϥⲏⲓ ⲉⲧϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲡⲣⲣⲟ ⲇⲉ ⲁϥϫⲓ ⲛⲧⲉϥⲙⲏⲧⲉ ⲛⲥϩⲓⲙⲉ ⲛⲉϥⲡⲁⲗⲗⲁⲕⲏ ⲛⲉⲛⲧⲁϥⲕⲁⲁⲩ ⲉⲡⲁϩⲟⲩ ⲉⲣⲟⲉⲓⲥ ⲉⲡⲉϥⲏⲓ ⲁⲩⲧⲁⲁⲩ ⲉϩⲣⲁⲓ ⲉⲡⲏⲓ ⲛⲧⲉ**ⲫⲩⲗⲁⲕⲏ** ⲁϥϭⲱ ⲉϥⲥⲁⲁⲛϣ ⲙⲟⲟⲩ ⲙⲡⲉϥⲃⲱⲕ ⲇⲉ ⲉϩⲟⲩⲛ ϣⲁⲣⲟⲟⲩ ⲛⲉⲩⲟⲧⲡ ⲇⲉ ⲉϩⲟⲩⲛ ⲉⲩⲟ ⲛⲭⲏⲣⲁ ⲉⲩⲟⲛϩ ϣⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲉⲩⲙⲟⲩ",
+      "english": "And David went into his house at Jerusalem: and the king took the ten women his concubines, whom he had left to keep the house, and he put them in a place of custody, and maintained them, and went not in to them; and they were kept living as widows, till the day of their death.",
+      "source": "II Samuel 20",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱ",
+        1,
+        11.254
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲫⲩⲗⲁⲕⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15872,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2329",
+    "grl_lemma": "φυλακή",
+    "grl_meaning": "watching or guarding; M4548prison",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1960a; Preisigke 2:707"
+  }
+}

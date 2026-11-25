@@ -1,0 +1,170 @@
+{
+  "id": "C2671",
+  "forms": [
+    {
+      "id": "CF7148",
+      "orth": "ⲛϩⲟⲩⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13182,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲛϩⲟⲩⲣ",
+      "dialect": "B",
+      "id": "1229.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3061",
+      "bibliography": "CD 245a; CED 118; KoptHWb 135; DELC 152"
+    },
+    {
+      "id": "CS3062",
+      "bibliography": "CD 245a; CED 118"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲥⲁⲫⲁϩⲟⲩ ⲙⲫⲁⲓ ⲁⲓⲛⲁⲩ ϩⲏⲡⲡⲉ ⲓⲥ ⲟⲩⲑⲏⲣⲓⲟⲛ ⲙⲙⲁϩ ⲇ ⲉϥⲟⲓ ⲛϩⲟϯ ⲟⲩⲟϩ ⲉϥⲉ**ⲛϩⲟⲩⲣ** ⲉϥϫⲟⲣ ⲛϩⲟⲩⲟ ⲛⲉϥⲛⲁϫϩⲓ ϩⲁⲛⲃⲉⲛⲓⲡⲓ ⲛⲉ ⲉⲩⲟⲓ ⲛⲛⲓϣϯ ⲉϥⲟⲩⲱⲙ ⲟⲩⲟϩ ⲉϥϣⲧⲙⲟ ⲛⲓⲥⲱϫⲡ ⲛⲁϩⲱⲙⲓ ⲉϫⲱⲟⲩ ⲛⲛⲉϥⲫⲁⲧ ⲟⲩⲟϩ ⲛⲑⲟϥ ϩⲱϥ ⲟⲩⲟⲛ ⲇⲓⲁⲫⲟⲣⲁ ⲙⲙⲟϥ ⲛϩⲟⲩⲟ ⲉⲃⲟⲗ ⲟⲩⲧⲉ ⲛⲓⲑⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲉⲛⲁⲩ ϧⲁϫⲱϥ ⲛⲉ ⲟⲩⲟⲛ ⲓ ⲛⲧⲁⲡ ⲙⲙⲟϥ ⲡⲉ .",
+      "english": "To thee, O Lord, belongs righteousness, an to us confusion of face, as at this day; to the men of Juda, and to the dwellers in Jerusalem, and to all Israel, to them that are near, and to them that are far off in all the earth, wherever thou has scattered them, for the sin which they committed.",
+      "source": "27_Daniel_09",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:09",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲣ",
+        1,
+        12.133
+      ],
+      [
+        "ϩⲟϯ",
+        1,
+        11.535
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.22
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲛϩⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲛϩⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛϩⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛϩⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ϫⲟⲣ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲛϩⲟⲩⲣ",
+          "ⲉϥⲉ_1_pre_ⲛϩⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲛϩⲟⲩⲣ",
+          "ⲛϩⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛϩⲟⲩⲣ_0_node",
+          "ⲉ_1_post_ⲛϩⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛϩⲟⲩⲣ",
+          "ϥ_3_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϫⲟⲣ",
+          "ϫⲟⲣ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12620,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2673",
+      "label": "ⲁⲧⲛϩⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "unshakeable, immovable"
+    },
+    {
+      "target": "C2672",
+      "label": "ⲛϩⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "shuddering, fear"
+    }
+  ],
+  "etym": {
+    "egy_num": "85710",
+    "egy_lemma": "nhr",
+    "demo_num": "dm2099",
+    "demo_lemma": "nhwr",
+    "english": "terrifer (Seth)",
+    "german": "Bösewicht (Seth u.a. Götter)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/85710",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm2099"
+  }
+}

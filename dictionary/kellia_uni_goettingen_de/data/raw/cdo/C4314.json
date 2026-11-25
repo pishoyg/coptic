@@ -1,0 +1,88 @@
+{
+  "id": "C4314",
+  "forms": [
+    {
+      "id": "CF10579",
+      "orth": "ⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19559,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4888",
+      "bibliography": "CD 413b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϭⲱ ϩⲁϩⲧⲏⲩ ⲁϥⲣϩⲱⲃ . ϫⲉⲛⲉⲧⲉϥⲉⲓⲟⲡⲉ ⲧⲱⲟⲩ ⲧⲉ . ⲛⲉ ⲧⲉⲩⲧⲉⲭⲛⲏ ⲅⲁⲣ ⲡⲉ **ⲣⲉϥⲧⲁⲙⲓⲉ** ⲥⲕⲩⲛⲏ .",
+      "english": "and because he practiced the same trade, he lived with them and worked, for by trade they were tent makers.",
+      "source": "44_Acts of the Apostles_18",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4311",
+      "type": "cf",
+      "label": "make, create"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4316",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4317",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4315",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "act of making, act of creating"
+    },
+    {
+      "target": "C4313",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4311",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "V",
+      "gloss": "make, create"
+    },
+    {
+      "target": "C4312",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "thing made, creation"
+    }
+  ]
+}

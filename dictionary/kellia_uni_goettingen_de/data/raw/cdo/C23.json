@@ -1,0 +1,63 @@
+{
+  "id": "C23",
+  "forms": [
+    {
+      "id": "CF96",
+      "orth": "ϫⲓⲛⲁⲓⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF97",
+      "orth": "ϫⲓⲛⲁⲓⲁⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS23",
+      "bibliography": "CD 2a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C22",
+      "label": "ⲁⲉⲓⲏⲥ",
+      "pos": "N",
+      "gloss": "greatness, size, quality"
+    },
+    {
+      "target": "C19",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "V",
+      "gloss": "increase (in size), advance (in age)"
+    },
+    {
+      "target": "C20",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "VSTAT",
+      "gloss": "be great, goodly, honoured"
+    },
+    {
+      "target": "C21",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "N",
+      "gloss": "increase, growth"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "C5824",
+  "forms": [
+    {
+      "id": "CF13645",
+      "orth": "ϭⲓⲛϣⲗⲏⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6504",
+      "bibliography": "CD 559b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5821",
+      "label": "ϣⲗⲏⲗ",
+      "pos": "V",
+      "gloss": "pray"
+    },
+    {
+      "target": "C5822",
+      "label": "ϣⲗⲏⲗ",
+      "pos": "N",
+      "gloss": "prayer"
+    },
+    {
+      "target": "C5823",
+      "label": "ⲁⲧϣⲗⲏⲗ",
+      "pos": "N",
+      "gloss": "without prayer"
+    }
+  ]
+}

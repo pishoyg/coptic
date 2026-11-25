@@ -1,0 +1,124 @@
+{
+  "id": "C1614",
+  "forms": [
+    {
+      "id": "CF4689",
+      "orth": "ⲣⲉϥⲗⲱⲕⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13162,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4690",
+      "orth": "ⲣⲉϥⲗⲱϭⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4691",
+      "orth": "ⲣⲉϥⲗⲟⲩⲝ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1877",
+      "bibliography": "CD 139b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲁϫⲉ ⲡⲉ ⲛⲣⲱⲙⲉ ⲛⲓⲙ · ⲡⲉⲓⲑⲏⲣⲓⲟⲛ ⲉⲧϩⲟⲟⲩ ⲛⲣⲉϥⲙⲉⲩⲧⲯⲩⲭⲏ · ⲡⲉⲓϩⲁⲗⲏⲧ ⲛⲣⲉϥⲧⲱⲣⲡ · ⲡⲉⲓϩⲟϥ ⲛ**ⲣⲉϥⲗⲱⲕⲥ** · ⲡⲕⲱϩⲧ ⲛⲣⲉϥⲣⲱⲕϩ · ⲡⲉⲓⲥⲟⲟⲛⲉ ⲛⲣⲉϥⲥⲩⲗⲁ ⲛⲛⲉⲯⲩⲭⲏ · ⲧⲏⲣⲟⲩ · ⲡⲛⲟⲃⲉ ⲡⲉⲓⲃⲁⲣⲃⲁⲣⲟⲥ ⲛⲣⲉϥϩⲱⲧⲃ · ⲡⲉⲓⲗⲏⲙⲏⲛ ⲉⲧϣⲧⲣⲧⲱⲣ ·",
+      "english": "It is the Enemy of every man, this evil beast which slayeth the soul, this bird which snatcheth greedily at its prey, this serpent which biteth, this fire which blazeth fiercely, this thief who carrieth off all souls (into) sin, this murderous barbarian, this troubled pool,",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟϥ",
+        1,
+        13.576
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        1,
+        11.641
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲗⲱⲕⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12748,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1617",
+      "label": "ϣⲉ ⲛⲗⲟⲩⲝ",
+      "pos": "N",
+      "gloss": "piercing wood"
+    },
+    {
+      "target": "C1615",
+      "label": "ϣⲥⲛⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "piercing blow, stab"
+    },
+    {
+      "target": "C1612",
+      "label": "ⲗⲱⲕⲥ",
+      "pos": "V",
+      "gloss": "bite, pierce"
+    },
+    {
+      "target": "C1616",
+      "label": "ⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "bite"
+    },
+    {
+      "target": "C1613",
+      "label": "ⲗⲱⲕⲥ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "bite, snap at"
+    }
+  ]
+}

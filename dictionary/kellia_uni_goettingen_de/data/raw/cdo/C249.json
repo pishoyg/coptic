@@ -1,0 +1,293 @@
+{
+  "id": "C249",
+  "forms": [
+    {
+      "id": "CF1024",
+      "orth": "ⲁⲫⲱⲫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1950,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF1025",
+      "orth": "ⲁⲫⲱⲡ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1026",
+      "orth": "ⲁⲫⲟⲫⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1027",
+      "orth": "ⲁⲫⲟⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9153,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS281",
+      "bibliography": "CD 21b; CED 15; KoptHWb 10, 488; DELC 19-20"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲉⲑⲟⲩⲁϩⲥⲁϩⲛⲓ ⲟⲩⲟϩ ⲁⲛⲟⲕ ⲉⲑⲛⲁⲉⲛⲟⲩ ⲥⲉⲛⲁⲓ ⲛϫⲉϩⲁⲛ**ⲁⲫⲱⲫ** ⲉϫⲱⲕ ⲙⲡⲁϫⲱⲛⲧ ⲉⲩⲉⲣⲁϣⲓ ⲟⲩⲟϩ ⲉⲩⲉϯϣⲱϣ ⲉⲩⲥⲟⲡ .",
+      "english": "I give command, and I bring them: giants are coming to fulfil my wrath, rejoicing at the same time and insulting.",
+      "source": "23_Isaias_13",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁϥⲟⲓ ⲛ**ⲁⲫⲱⲫ** ⲛϫⲉⲣⲏϫ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ ⲫⲛⲟⲩϯ ⲉⲑⲃⲉⲫⲁⲓ ⲉⲩⲉϫⲟⲥ ϫⲉⲙⲫⲣⲏϯ ⲛⲛⲉⲃⲣⲱⲇ ⲡⲓⲁⲫⲱⲫ ⲛϫⲉⲣⲏϫ ⲙⲡⲉⲙⲑⲟ ⲙⲡϭⲟⲓⲥ",
+      "english": "He was a giant hunter before the Lord God; therefore they say, As Nebrod the giant hunter before the Lord.",
+      "source": "01_Genesis_10",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲛⲕⲟⲧ ⲛⲉⲙⲛⲓⲁⲫⲱⲫ ⲛⲏⲉⲧⲁⲩϩⲉⲓ ⲓⲥϫⲉⲛ ⲡⲉⲛⲉϩ ⲁⲩϣⲉ ⲉⲡⲉⲥⲏⲧ ⲉⲁⲙⲉⲛϯ ϧⲉⲛⲛⲓϩⲟⲡⲗⲟⲛ ⲉⲧⲁⲩⲙⲗⲁϧ ⲛϧⲏⲧⲟⲩ ⲟⲩⲟϩ ⲁⲩⲭⲱ ⲛⲛⲟⲩⲥⲏϥⲓ ϧⲁϫⲱⲟⲩ ⲟⲩⲟϩ ⲛⲟⲩⲁⲛⲟⲙⲓⲁ ⲁⲩϣⲱⲡⲓ ϩⲓϫⲉⲛⲛⲟⲩⲕⲁⲥ ϫⲉⲁⲩϣⲑⲟⲣⲧⲉⲣ ⲛⲛⲓ**ⲁⲫⲱⲫ** ϧⲉⲛⲡⲟⲩⲱⲛϧ .",
+      "english": "And they are laid with the giants that fell of old, who went down to Hades with their weapons of war: and they laid their swords under their heads, but their iniquities were upon their bones, because they terrified all men during their life.",
+      "source": "26_Ezechiel_32",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲏϫ",
+        2,
+        16.373
+      ],
+      [
+        "ⲑⲙⲉⲥⲓⲉ",
+        1,
+        15.695
+      ],
+      [
+        "ⲛⲉⲃⲣⲱⲇ",
+        1,
+        14.695
+      ],
+      [
+        "ⲭⲙⲁⲗⲱⲧⲉⲩⲓⲛ",
+        1,
+        14.695
+      ],
+      [
+        "ⲛϫⲉ",
+        8,
+        11.594
+      ],
+      [
+        "ⲛ",
+        11,
+        10.969
+      ],
+      [
+        "ⲛⲓ",
+        7,
+        10.64
+      ],
+      [
+        "ⲛⲏⲉⲧ",
+        2,
+        10.091
+      ],
+      [
+        "ⲛⲁ",
+        6,
+        9.709
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        9.176
+      ],
+      [
+        "ⲛⲧⲉ",
+        5,
+        9.032
+      ],
+      [
+        "ⲉⲛⲕⲟⲧ",
+        1,
+        8.954
+      ],
+      [
+        "ϣⲑⲟⲣⲧⲉⲣ",
+        1,
+        8.219
+      ],
+      [
+        "ⲉ",
+        5,
+        7.983
+      ],
+      [
+        "ⲕ",
+        3,
+        7.883
+      ],
+      [
+        "ⲙⲡⲁ",
+        1,
+        7.85
+      ],
+      [
+        "ϣⲁⲓ",
+        1,
+        7.825
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.736
+      ],
+      [
+        "ϭⲟϫⲓ",
+        1,
+        7.689
+      ],
+      [
+        "ⲟⲩϫⲁⲓ",
+        1,
+        7.689
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲫⲱⲫ_0_node",
+          16
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲁⲫⲱⲫ",
+          "ⲁⲫⲱⲫ_0_node",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲫⲱⲫ",
+          "ⲁⲫⲱⲫ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲁⲫⲱⲫ",
+          "ⲁⲫⲱⲫ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲫⲱⲫ",
+          "ⲁⲫⲱⲫ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲱⲫ_0_node",
+          "ⲛⲉⲙ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲩⲁⲓ",
+          "ⲟⲩⲁⲓ_1_post_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ⲁⲫⲱⲫ",
+          "ⲉ_2_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲟⲩⲁⲓ",
+          "ⲟⲩⲟⲛ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲫⲱⲫ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲫⲱⲫ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲫⲱⲫ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.19,
+      "rank": 1686,
+      "count": 16
+    }
+  },
+  "etym": {
+    "egy_num": "35360",
+    "egy_lemma": "Ꜥꜣpp",
+    "demo_num": "dm759",
+    "demo_lemma": "ꜥpp",
+    "english": "Apophis",
+    "german": "Apophis (Schlangengott, Götterfeind)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/35360",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm759"
+  }
+}

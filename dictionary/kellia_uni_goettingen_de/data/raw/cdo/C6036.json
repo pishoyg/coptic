@@ -1,0 +1,121 @@
+{
+  "id": "C6036",
+  "forms": [
+    {
+      "id": "CF14077",
+      "orth": "ⲙⲛⲧϣⲏⲣⲉ ϣⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2425,
+        "count": 21
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6721",
+      "bibliography": "CD 585a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲅⲙⲏ ⲅⲁⲣ **ⲛⲧⲙⲛⲧϣⲏⲣⲉ **ϣⲏⲙ**** ⲕⲱⲧⲉ ⲉⲣⲟϥ ⲛⲥⲁⲥⲁ ⲛⲓⲙ ϩⲛϩⲉⲛⲉⲡⲏⲑⲩⲙⲓⲁ ⲉⲩⲙⲏϩ ⲛⲕⲓⲛⲇⲩⲛⲟⲥ · ⲁⲩⲱ ⲉⲛⲥⲧⲟ ⲛⲁϥ ⲁⲛ ⲉⲁⲁⲩϫⲉⲛⲉϥⲙⲟⲩ ⲕⲁⲕⲱⲥ ·",
+      "english": "for the disposition of youth surroundeth him on every side with the lusts which are full of danger, and if he doth not crush them they cause him to die in an evil manner.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲡⲛⲉⲩⲙⲁ ⲅⲁⲣ ⲧⲏⲣⲟⲩ ⲱ ⲡⲁϣⲏⲣⲉ ⲁⲩⲉⲛⲱⲭⲗⲉⲓ ⲛⲁⲓ ⲛϩⲁϩ ⲛⲥⲟⲡ **ϫⲓⲛⲧⲁⲙⲛⲧϣⲏⲣⲉ **ϣⲏⲙ**** ·",
+      "english": "For, O my son, all the spirits from my youth up have on many occasions made me weak,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲣⲉϩ ⲟⲛ **ⲉⲧⲉⲕⲙⲛⲧϣⲏⲣⲉ **ϣⲏⲙ**** · ϫⲉⲕⲛⲁϩⲁⲣⲉϩ ⲉⲧⲉⲕⲙⲛⲧϩⲗⲗⲟ · ⲙⲏⲡⲟⲧⲉ ⲛⲅϫⲓϣⲓⲡⲉ ⲛⲅⲣϩⲧⲏⲕ · ϩⲙⲡⲉⲓⲁ ⲛⲓⲱⲥⲁⲫⲁⲧ ·",
+      "english": "Moreover, keep diligently thy youth with all care, in order that thou mayest be able to keep diligently thine old age with all care, lest thou be put to shame, and thou come to an end in the Valley of Jehoshaphat.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2136,
+      "count": 21
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6033",
+      "label": "ϣⲉⲉⲣⲉ",
+      "pos": "N",
+      "gloss": "daughter, child"
+    },
+    {
+      "target": "C6035",
+      "label": "ϣⲉⲉⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small child, baby girl"
+    },
+    {
+      "target": "C6041",
+      "label": "ϣⲉⲣϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "male child"
+    },
+    {
+      "target": "C6032",
+      "label": "ϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "son, child"
+    },
+    {
+      "target": "C6034",
+      "label": "ϣⲏⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small child, baby boy"
+    },
+    {
+      "target": "C6038",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6040",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6037",
+      "label": "ϣⲛⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "cousin"
+    },
+    {
+      "target": "C6039",
+      "label": "ϣⲛⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "cousin"
+    },
+    {
+      "target": "C6042",
+      "label": "ⲁⲧϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "without child"
+    }
+  ]
+}

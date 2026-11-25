@@ -1,0 +1,88 @@
+{
+  "id": "C7092",
+  "forms": [
+    {
+      "id": "CF16242",
+      "orth": "ⲣⲉϥϫⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9118,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7825",
+      "bibliography": "CD 755b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁϩ ⲅⲁⲣ ⲛⲉⲧⲉⲛⲥⲉϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲁⲛ . ⲛ**ⲣⲉϥϫⲉ**ϣⲁϫⲉ ⲛⲉⲡⲣⲁ . ⲁⲩⲱ ⲛⲣⲉϥⲧⲁⲕⲉ ϩⲏⲧ ⲛϩⲟⲩⲟ ⲇⲉ ⲛⲉⲃⲟⲗ ϩⲙⲡⲥⲃⲃⲉ .",
+      "english": "For there are also many unruly men, vain talkers and deceivers, especially those of the circumcision,",
+      "source": "56_Titus_1",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲕⲱ ⲇⲉ ⲛⲛϣⲏⲣⲉ ϣⲏⲙ ⲛⲟⲩⲥⲙⲟⲧ ⲙⲙⲛⲧϫⲱⲱⲣⲉ ⲉⲧⲣⲉⲩⲙⲟⲩ ϩⲱⲟⲩ ϩⲛⲟⲩⲟⲩⲣⲟⲧ ⲙⲛⲟⲩⲧⲱⲕ ⲛϩⲏⲧ ϩⲁⲡⲛⲟⲙⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲥⲉⲙⲛⲟⲛ ⲛⲧⲁ**ⲣⲉϥϫⲉ**ⲛⲁⲓ ⲛⲧⲉⲩⲛⲟⲩ ⲁϥϯⲡⲉⲣⲟⲩⲟⲉⲓⲉ ⲉⲧⲃⲁⲥⲁⲛⲟⲥ",
+      "english": "And leave a notable example to such as be young to die willingly and courageously for the honourable and holy laws. And when he had said these words, immediately he went to the torment:",
+      "source": "II Maccabees 6",
+      "urn": "urn:cts:copticLit:ot.2macc.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7095",
+      "label": "ϫⲉⲣⲟ-",
+      "pos": "V",
+      "gloss": "mean"
+    },
+    {
+      "target": "C7096",
+      "label": "ϫⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech, claim"
+    },
+    {
+      "target": "C7089",
+      "label": "ϫⲱ",
+      "pos": "V",
+      "gloss": "say, speak, tell; sing"
+    },
+    {
+      "target": "C7091",
+      "label": "ϫⲱ",
+      "pos": "N",
+      "gloss": "singing, song"
+    },
+    {
+      "target": "C7094",
+      "label": "ϭⲓⲛϫⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech"
+    },
+    {
+      "target": "C7090",
+      "label": "ⲁⲧϫⲱ",
+      "pos": "N",
+      "gloss": "ineffable"
+    },
+    {
+      "target": "C7093",
+      "label": "ⲣⲉϥϫⲱ",
+      "pos": "N",
+      "gloss": "singer, minstrel"
+    }
+  ]
+}

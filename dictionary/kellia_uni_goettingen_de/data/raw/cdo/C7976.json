@@ -1,0 +1,202 @@
+{
+  "id": "C7976",
+  "forms": [
+    {
+      "id": "CF18018",
+      "orth": "ϭⲱϣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϭⲟϣ⸗",
+      "dialect": "S",
+      "id": "2644.1"
+    },
+    {
+      "orth": "ϫⲱϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 799,
+        "count": 72
+      }
+    },
+    {
+      "orth": "ϫⲉϣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2376,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ϫⲟϣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1583,
+        "count": 23
+      }
+    },
+    {
+      "orth": "ϫⲏϣ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3628,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8864",
+      "bibliography": "CD 836b-837a; CED 339; KoptHWb 471; DELC 349b; ChLCS 110b"
+    },
+    {
+      "id": "CS8865",
+      "bibliography": "CD 836b-837a; KoptHWb 471; DELC 349b; ChLCS 110b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϫⲉⲛ",
+        45,
+        24.89
+      ],
+      [
+        "ⲛⲧⲉϥ",
+        6,
+        24.28
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        30,
+        23.931
+      ],
+      [
+        "ⲫⲩⲁⲗⲏ",
+        6,
+        22.202
+      ],
+      [
+        "ⲛⲉϩ",
+        9,
+        21.721
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        11,
+        21.496
+      ],
+      [
+        "ⲡⲓ",
+        36,
+        21.28
+      ],
+      [
+        "ⲉϫⲱ",
+        13,
+        20.684
+      ],
+      [
+        "ϫⲱⲛⲧ",
+        9,
+        20.627
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        26,
+        20.405
+      ],
+      [
+        "ⲡⲓⲥⲟⲩⲓⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲡⲁⲧⲓϩⲟ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲃⲟⲛⲉϫⲉⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲃⲙⲃⲟⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲕⲑⲣⲟⲩ",
+        1,
+        19.695
+      ],
+      [
+        "ϧϥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲉⲙⲁⲛⲁⲣⲉϩ",
+        1,
+        19.695
+      ],
+      [
+        "ⲇⲓⲟⲥⲡⲟⲗⲓⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲁⲛϯⲥⲟⲗⲃ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛ",
+        32,
+        19.591
+      ]
+    ]
+  },
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C7533",
+      "type": "cf",
+      "label": "ingot (of metal)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7977",
+      "label": "ϭⲱϣ",
+      "pos": "N",
+      "gloss": "pouring, casting; confusion"
+    },
+    {
+      "target": "C7978",
+      "label": "ⲁⲧϭⲱϣ",
+      "pos": "N",
+      "gloss": "unmixed"
+    }
+  ],
+  "etym": {
+    "egy_num": "858492",
+    "egy_lemma": "gš",
+    "demo_num": "d6944",
+    "demo_lemma": "gš",
+    "english": "pour, throw (something) away",
+    "german": "schütten, (etwas) wegschütten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/858492",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6944"
+  }
+}

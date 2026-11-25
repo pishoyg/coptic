@@ -1,0 +1,54 @@
+{
+  "id": "C9416",
+  "forms": [
+    {
+      "id": "CF23816",
+      "orth": "ⲕⲏⲙⲏⲧⲉⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23817",
+      "orth": "ⲕⲏⲙⲏⲧⲉⲣⲓⲟⲛ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF23818",
+      "orth": "ⲕⲏⲙⲏⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10402,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11904",
+      "bibliography": "DDGLC",
+      "cu_ID": "1308"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲣⲁⲛ ⲉⲣⲥⲟⲉⲓⲧ ϩⲙⲙⲁ ⲛⲓⲙ ⲛⲧⲁⲧⲣⲉϩⲉⲛⲛⲟϭ ⲛϭⲟⲙ ϩⲓϣⲏⲏⲣⲉ ϣⲱⲡⲉ ϩⲙⲡⲉⲕ**ⲕⲏⲙⲏⲧⲏⲣⲓⲟⲛ**",
+      "english": "...",
+      "source": "Martyrdom of Helias (Sobhy ed.) Part 5",
+      "urn": "urn:cts:copticLit:helias.martyrdom.sobhy_ed:32-49",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1148",
+    "grl_lemma": "κοιμητήριον",
+    "grl_meaning": "sleeping room, burial-place",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 968a"
+  }
+}

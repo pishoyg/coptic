@@ -1,0 +1,278 @@
+{
+  "id": "C927",
+  "forms": [
+    {
+      "id": "CF3197",
+      "orth": "ϫⲓⲛⲓⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3198",
+      "orth": "ϫⲓⲛⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13214,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1084",
+      "bibliography": "CD 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟ ⲛⲉⲃⲇⲟⲙⲁⲥ ⲁⲩϣⲁⲧⲟⲩ ⲉⲃⲟⲗ ⲉϫⲉⲛⲡⲉⲕⲗⲁⲟⲥ ⲛⲉⲙⲉϫⲉⲛϯⲃⲁⲕⲓ ⲉⲑⲟⲩⲁⲃ ⲉⲡϫⲓⲛⲑⲣⲉϥϫⲱⲕ ⲉⲃⲟⲗ ⲛϫⲉⲫⲛⲟⲃⲓ ⲛⲉⲙⲡϫⲓⲛⲉⲣⲥⲫⲣⲁⲅⲓⲍⲓⲛ ⲛϩⲁⲛⲛⲟⲃⲓ ⲛⲉⲙⲉϥⲱϯ ⲉⲃⲟⲗ ⲛⲛⲓⲁⲛⲟⲙⲓⲁ ⲛⲉⲙⲉⲡϫⲓⲛⲭⲱ ⲉⲃⲟⲗ ⲛϩⲁⲛϭⲓⲛϫⲟⲛⲥ ⲛⲉⲙⲉⲡ**ϫⲓⲛⲓⲛⲓ** ⲛⲟⲩⲇⲓⲁⲑⲏⲕⲏ ⲛⲉⲛⲉϩ ⲛⲉⲙⲉⲡϫⲓⲛⲉⲣⲥⲫⲣⲁⲅⲓⲍⲓⲛ ⲛⲟⲩϩⲟⲣⲁⲥⲓⲥ ⲛⲉⲙⲟⲩⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲉⲙⲉⲡϫⲓⲛⲑⲱϩⲥ ⲙⲡⲉⲑⲟⲩⲁⲃ ⲛⲧⲉⲛⲏⲉⲑⲟⲩⲁⲃ .",
+      "english": "And he shall enter with prosperity, and that into fertile districts; and he shall do what his fathers and his fathers' fathers have not done; he shall scatter among them plunder, and spoils, and wealth; and he shall devise plans against Egypt, even for a time.",
+      "source": "27_Daniel_11",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲡ",
+        1,
+        14.741
+      ],
+      [
+        "ϭⲓⲛϫⲟⲛⲥ",
+        1,
+        12.32
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        1,
+        11.927
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲓⲛⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲉⲡ_1_pre_ϫⲓⲛⲓⲛⲓ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲓⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲓⲛⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲑⲏⲕⲏ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲓⲛⲓⲛⲓ",
+          "ⲉⲡ_1_pre_ϫⲓⲛⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲉⲡ_1_pre_ϫⲓⲛⲓⲛⲓ",
+          "ϫⲓⲛⲓⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛⲓⲛⲓ_0_node",
+          "ⲛ_1_post_ϫⲓⲛⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲓⲛⲓⲛⲓ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲇⲓⲁⲑⲏⲕⲏ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12652,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C905",
+      "label": "ⲉⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "bring, bear"
+    },
+    {
+      "target": "C914",
+      "label": "ⲉⲓⲛⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C915",
+      "label": "ⲉⲓⲛⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C916",
+      "label": "ⲉⲓⲛⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring, carry upon"
+    },
+    {
+      "target": "C906",
+      "label": "ⲉⲓⲛⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "bring to, for"
+    },
+    {
+      "target": "C923",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bring, put in; insert"
+    },
+    {
+      "target": "C924",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "N",
+      "gloss": "reception, receipt"
+    },
+    {
+      "target": "C925",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring up"
+    },
+    {
+      "target": "C926",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C910",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ- ⲧⲟⲟⲧ⸗)",
+      "pos": "V",
+      "gloss": "lay hands on, seize"
+    },
+    {
+      "target": "C909",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring upon; liken to, compare with"
+    },
+    {
+      "target": "C917",
+      "label": "ⲉⲓⲛⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "bring, put out, publish; take off (sandals); produce, extend"
+    },
+    {
+      "target": "C922",
+      "label": "ⲉⲓⲛⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "bring forward"
+    },
+    {
+      "target": "C920",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "bring back"
+    },
+    {
+      "target": "C918",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C908",
+      "label": "ⲉⲓⲛⲉ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "bring to, before"
+    },
+    {
+      "target": "C921",
+      "label": "ⲉⲓⲛⲉ (ⲉⲧⲙⲏⲧⲉ)",
+      "pos": "V",
+      "gloss": "bring into midst, recall"
+    },
+    {
+      "target": "C911",
+      "label": "ⲉⲓⲛⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C913",
+      "label": "ⲉⲓⲛⲉ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bring before"
+    },
+    {
+      "target": "C912",
+      "label": "ⲉⲓⲛⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "bring sth against sb, accuse sb of"
+    },
+    {
+      "target": "C907",
+      "label": "ⲉⲓⲛⲉ (ⲛⲧⲟⲟⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "set free, release, withdraw"
+    },
+    {
+      "target": "C919",
+      "label": "ⲓⲛⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "bring, raise up"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "C450",
+  "forms": [
+    {
+      "id": "CF1867",
+      "orth": "ⲃⲗⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7091,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS545",
+      "bibliography": "CD 38a; CED 23; KoptHWb 23-24, 494; DELC 27; ChLCS 8b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧ**ⲃⲗⲗⲏ** ⲛⲁⲙⲉ ⲉⲧϫⲟⲡϫⲡ ⲙⲙⲉⲉⲣⲉ ⲛⲧϩⲉ ⲛⲛⲉⲧϩⲛⲧⲡⲁϣⲉ ⲛⲧⲉⲩϣⲏ · ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲛⲓⲃⲗⲗⲉ , ⲉⲧⲉⲙⲛⲃⲁⲗ ⲙⲙⲟⲟⲩ ·",
+      "english": "Oh you truly blind one who gropes in daylight like those who are in midnight and like those blind ones, who have no eyes.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲡϫⲡ",
+        2,
+        21.598
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        2,
+        15.969
+      ],
+      [
+        "ⲛⲁⲙⲉ",
+        2,
+        15.587
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        13.664
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.238
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲗⲗⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁⲙⲉ_1_post_ⲃⲗⲗⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲗⲗⲏ_0_node",
+          "ⲛⲁⲙⲉ_1_post_ⲃⲗⲗⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6641,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C448",
+      "label": "ⲃⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "blind person"
+    },
+    {
+      "target": "C449",
+      "label": "ⲃⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "blind"
+    },
+    {
+      "target": "C451",
+      "label": "ⲙⲛⲧⲃⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "blindness"
+    },
+    {
+      "target": "C452",
+      "label": "ⲣⲃⲗⲗⲉ",
+      "pos": "V",
+      "gloss": "become blind; make blind"
+    }
+  ]
+}

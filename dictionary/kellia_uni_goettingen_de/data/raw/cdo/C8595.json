@@ -1,0 +1,169 @@
+{
+  "id": "C8595",
+  "forms": [
+    {
+      "id": "CF20270",
+      "orth": "ⲃⲁⲥⲓⲗⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20271",
+      "orth": "ⲃⲁⲥⲓⲗⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7500,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10131",
+      "bibliography": "DDGLC",
+      "cu_ID": "9349"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲅⲱ ⲧⲁⲗⲁⲥ ⲁⲙⲁⲣⲧⲱⲗⲟⲩⲥ ⲃⲓⲕⲧⲱⲣ ⲉⲗⲁⲭⲓⲥⲧⲟⲥ ⲇⲓⲁⲕⲟⲛⲟⲥ ⲡⲁⲓⲥ ⲧⲟⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲙⲉⲣ ⲇⲓⲁⲕⲟⲛⲟⲥ ⲩⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲉⲡⲱⲛⲩⲭⲟⲥ ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ ⲧⲟⲩ ⲁⲅⲓⲟⲩ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲩ ⲙⲉⲅⲁ ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲁ ⲁⲡⲟ ⲧⲏⲥ ⲡⲟⲗⲗⲁⲧⲱⲛ ⲉⲅⲣⲁⲯⲁⲥ ⲃⲓⲃⲗⲟⲥ ⲙⲛⲏⲥⲑⲓϯ ⲙⲟⲩ ⲕⲉⲟⲧⲁⲛ ⲏⲗⲑⲉⲥ ⲛ ⲧⲏ **ⲃⲁⲥⲓⲗⲓⲁ** ⲥⲟⲩϥⲑ .",
+      "english": "I, the wretched sinner, the least of all men, Victor the deacon, the son of the blessed Mercurius the deacon, the son of the blessed Eponuchos, archdeacon of the church of Saint Mercurius, the general-in-chief, of the city of Latopolis (i. e. Esna, or Asna), wrote [this] book. Remember Thou me, O Lord, when Thou eomest into Thy kingdom ! Amen.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲏⲥⲑⲏϯ ⲙⲟⲩ ⲕⲩⲣⲓⲉ ⲟⲧⲁⲛ ⲉⲗⲑⲏⲥ ⲉⲛ ⲧⲏ **ⲃⲁⲥⲓⲗⲓⲁ** ⲥⲟⲩ — ··· — ··· — ··· — ··· — ··· —",
+      "english": "Remember me, O Lord, when Thou comest into Thy kingdom!",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲉⲟⲧⲁⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲧⲁⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲏⲗⲑⲉⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲉⲗⲑⲏⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲧⲏ",
+        2,
+        17.644
+      ],
+      [
+        "ⲉⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲥⲟⲩ",
+        2,
+        14.991
+      ],
+      [
+        "ϥⲑ",
+        1,
+        14.554
+      ],
+      [
+        "—",
+        2,
+        14.379
+      ],
+      [
+        "···",
+        1,
+        14.043
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.597
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏⲗⲑⲉⲥ_1_pre_ⲃⲁⲥⲓⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲃⲁⲥⲓⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲩ_1_post_ⲃⲁⲥⲓⲗⲓⲁ",
+          1
+        ],
+        [
+          "ϥⲑ_1_post_ⲃⲁⲥⲓⲗⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏⲗⲑⲉⲥ_1_pre_ⲃⲁⲥⲓⲗⲓⲁ",
+          "ⲃⲁⲥⲓⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲥⲓⲗⲓⲁ_0_node",
+          "ⲥⲟⲩ_1_post_ⲃⲁⲥⲓⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲥⲟⲩ_1_post_ⲃⲁⲥⲓⲗⲓⲁ",
+          "ϥⲑ_1_post_ⲃⲁⲥⲓⲗⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7040,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "370",
+    "grl_lemma": "βασιλεία",
+    "grl_meaning": "kingdom, dominion",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 309a; Preisigke 1:257"
+  }
+}

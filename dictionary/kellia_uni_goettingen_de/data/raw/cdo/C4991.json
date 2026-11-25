@@ -1,0 +1,52 @@
+{
+  "id": "C4991",
+  "forms": [
+    {
+      "id": "CF11947",
+      "orth": "ⲥⲓⲧⲉ ⲛⲉϥⲟⲩⲉⲗⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5617",
+      "bibliography": "KoptHWb 270"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3768",
+      "type": "cf",
+      "label": "throw, sow, put"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4988",
+      "label": "ⲟⲩⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "melody, music"
+    },
+    {
+      "target": "C4989",
+      "label": "ⲣϥⲥⲉϩⲟⲩⲉⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "psalmist"
+    },
+    {
+      "target": "C4990",
+      "label": "ⲥⲉⲕⲟⲩⲉⲗⲗⲓ",
+      "pos": "V",
+      "gloss": "make music, play music"
+    }
+  ]
+}

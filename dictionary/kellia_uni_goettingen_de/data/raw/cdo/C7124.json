@@ -1,0 +1,92 @@
+{
+  "id": "C7124",
+  "forms": [
+    {
+      "id": "CF32096",
+      "orth": "ϫⲱⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32095",
+      "orth": "ϫⲱⲱⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϫⲟⲩⲟⲩⲕⲉ",
+      "dialect": "S",
+      "id": "2378.1"
+    },
+    {
+      "orth": "ϫⲉⲉⲕⲉ-",
+      "dialect": "S",
+      "id": "2378.2"
+    },
+    {
+      "orth": "ϫⲉⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1484,
+        "count": 51
+      }
+    },
+    {
+      "orth": "ϫⲟⲟⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7360,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲁⲕⲁ-",
+      "dialect": "F",
+      "id": "2378.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7859",
+      "bibliography": "CD 763a; CED 311, 312; KoptHWb 417, 418; DELC 325a; ChLCS 101a"
+    },
+    {
+      "id": "CS7860",
+      "bibliography": "CD 763a; CED 311; KoptHWb 417; DELC 325a; ChLCS 101a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7127",
+      "label": "ϫⲟⲟⲕⲉϥ",
+      "pos": "N",
+      "gloss": "goad, sting"
+    },
+    {
+      "target": "C7125",
+      "label": "ϫⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "prick, sting"
+    },
+    {
+      "target": "C7126",
+      "label": "ϫⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "hole"
+    }
+  ],
+  "etym": {
+    "demo_num": "d7831",
+    "demo_lemma": "ḏqꜥ",
+    "english": "[to strike, beat]",
+    "german": "schlagen, einritzen; schneiden, teilen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7831"
+  }
+}

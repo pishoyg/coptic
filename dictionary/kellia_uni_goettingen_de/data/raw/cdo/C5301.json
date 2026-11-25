@@ -1,0 +1,157 @@
+{
+  "id": "C5301",
+  "forms": [
+    {
+      "id": "CF12571",
+      "orth": "ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9360,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5949",
+      "bibliography": "CD 508b-509a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧϣⲟⲟⲡ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ϩⲛϩⲉⲛⲙⲛⲧⲛⲁϣⲧϩⲏⲧ ⲙⲛϩⲉⲛⲙⲛⲧⲛⲁϣⲧⲙⲁⲕϩ · ⲙⲛϩⲉⲛⲙⲛⲧⲛⲁϣⲧⲉⲓⲙⲉ ⲙⲛϩⲉⲛⲙⲛⲧⲁⲧⲥⲃⲱ · ⲙⲛϩⲉⲛⲙⲛⲧⲁⲧⲥⲱⲧⲙ ⲙⲛϩⲉⲛ**ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ** ⲙⲛϩⲉⲛⲙⲓϣⲉ ⲙⲛϩⲉⲛϯⲧⲱⲛ ⲙⲛϩⲉⲛⲕⲱϩ ⲙⲛϩⲉⲛⲙⲟⲥⲧⲉ ⲙⲛϩⲉⲛϫⲱϩⲙ ⲙⲛϩⲱⲃ ⲛⲓⲙ ⲙⲡⲟⲛⲏⲣⲟⲛ ⲛⲧⲟⲟⲩ ⲛⲉⲧⲟ ⲛⲁⲧⲥⲃⲃⲉ ϩⲙⲡⲉⲩϩⲏⲧ ⲙⲛⲛⲉⲩⲕⲉⲙⲁⲁϫⲉ ⲕⲁⲧⲁⲛⲉⲅⲣⲁⲫⲏ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧ**ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ** ⲅⲁⲣ ϭⲙϭⲟⲙ ⲉϫⲛⲛⲉⲧⲟⲩⲏϩ ⲧⲏⲣⲟⲩ ϩⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ϫⲓⲛⲛⲉⲧⲟ ⲛⲁⲧⲥⲟⲟⲩⲛ ⲙⲡⲛⲟⲩⲧⲉ · ϣⲁϩⲣⲁⲓ ⲉⲛⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲧⲉⲛⲉⲣϩⲟⲩⲉⲥⲟⲟⲩⲛ ⲙⲙⲟϥ ·",
+      "english": "...",
+      "source": "Unknown Work 5-1: GF 381-88",
+      "urn": "urn:cts:copticLit:shenoute.unknown5_1.monbgf:131-139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+        1,
+        14.074
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        11.829
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        1,
+        11.106
+      ],
+      [
+        "ϭⲙϭⲟⲙ",
+        1,
+        10.8
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        8.808
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        8.425
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ_0_node",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ",
+          "ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8929,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5300",
+      "label": "ⲟⲩⲁϩⲓϩⲏⲧ",
+      "pos": "N",
+      "gloss": "bitter-hearted, cruel"
+    },
+    {
+      "target": "C5298",
+      "label": "ⲟⲩⲓϩⲉ",
+      "pos": "V",
+      "gloss": "be bitter, be cruel"
+    },
+    {
+      "target": "C5299",
+      "label": "ⲟⲩⲓϩⲉ",
+      "pos": "N",
+      "gloss": "cruelty"
+    }
+  ]
+}

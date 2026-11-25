@@ -1,0 +1,91 @@
+{
+  "id": "C5590",
+  "forms": [
+    {
+      "id": "CF13155",
+      "orth": "ⲱⲟⲩ ⲛϩⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3833,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6256",
+      "bibliography": "CD 533a; KoptHWb 296; DELC 251b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ϣⲁⲥⲱⲟⲩ **ⲛϩⲏⲧ**** ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ϣⲁⲥⲛⲁϩϯ ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ϣⲁⲥⲉⲣϩⲉⲗⲡⲓⲥ ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ϣⲁⲥⲁⲙⲟⲛⲓ ⲛⲧⲟⲧⲥ ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ .",
+      "english": "bears all things, believes all things, hopes all things, endures all things.",
+      "source": "Bohairic 1 Corinthians 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲁⲅⲁⲡⲏ **ϣⲁⲥⲱⲟⲩ **ⲛϩⲏⲧ**** ϣⲁⲥⲉⲣϩⲉⲗϫⲉ ϯⲁⲅⲁⲡⲏ ⲙⲡⲁⲥⲭⲟϩ ϯⲁⲅⲁⲡⲏ ⲙⲡⲁⲥⲉⲣⲡⲉⲣⲡⲉⲣⲟⲥ ⲙⲡⲁⲥϭⲓⲥⲓ ⲛϩⲏⲧ .",
+      "english": "Love is patient and is kind; love doesn't envy. Love doesn't brag, is not proud,",
+      "source": "Bohairic 1 Corinthians 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3413,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5594",
+      "label": "ϯⲱⲟⲩ ⲛⲃⲁⲗ",
+      "pos": "V",
+      "gloss": "deem happy"
+    },
+    {
+      "target": "C5592",
+      "label": "ⲙⲉⲧⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "patience"
+    },
+    {
+      "target": "C5591",
+      "label": "ⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "patient person"
+    },
+    {
+      "target": "C5589",
+      "label": "ⲱⲟⲩ",
+      "pos": "V",
+      "gloss": "be long"
+    },
+    {
+      "target": "C5593",
+      "label": "ⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "length (in ⲱⲟⲩ ⲛⲓⲁⲧ⸗, \"blessing ...\")"
+    }
+  ]
+}

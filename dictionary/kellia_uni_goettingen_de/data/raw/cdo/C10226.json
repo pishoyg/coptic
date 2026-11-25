@@ -1,0 +1,104 @@
+{
+  "id": "C10226",
+  "forms": [
+    {
+      "id": "CF27050",
+      "orth": "ⲡⲟⲓⲏⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27051",
+      "orth": "ⲡⲟⲓⲏⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19554,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13659",
+      "bibliography": "DDGLC",
+      "cu_ID": "8134"
+    },
+    {
+      "id": "CS13660",
+      "bibliography": "DDGLC",
+      "cu_ID": "9799"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛϣⲟⲟⲡ ⲅⲁⲣ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲉⲛⲟⲛϩ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲉⲛⲕⲓⲙ ⲛⲧϩⲉ ⲟⲛ ⲛⲧⲁϩⲟⲓⲛⲉ ⲛⲛⲉⲧⲛ**ⲡⲟⲓⲏⲧⲏⲥ** ϫⲟⲟⲥ ϫⲉⲁⲛⲟⲛ ⲡⲉϥⲅⲉⲛⲟⲥ .",
+      "english": "'For in him we live, and move, and have our being.' As some of your own poets have said, 'For we are also his offspring.'",
+      "source": "44_Acts of the Apostles_17",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲓⲛⲉ",
+        1,
+        12.537
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        11.503
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        10.33
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        9.116
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        8.95
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19165,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3038",
+    "grl_lemma": "ποιητής",
+    "grl_meaning": "maker, workman, composer of a poem or music, author",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1429a; Preisigke 2:332"
+  }
+}

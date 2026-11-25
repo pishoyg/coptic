@@ -1,0 +1,207 @@
+{
+  "id": "C1911",
+  "forms": [
+    {
+      "id": "CF5471",
+      "orth": "ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8883,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2222",
+      "bibliography": "CD 171a; KoptHWb 89; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲱϣ ⲅⲁⲣ ⲙⲡⲉϥⲗⲁⲟⲥ ⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲁⲧⲉⲩⲭⲱⲣⲁ ⲙⲟⲩϩ ⲛ**ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ** ⲛⲧϩⲉ ⲛⲧⲁⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲛⲧϩⲉ ⲛϣⲟⲣⲡ ⲁⲩⲱ ⲁϩⲁϩ ⲛϣⲏⲣⲉ ⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ϣⲱⲡⲉ ⲛⲁⲩ",
+      "english": "For he has forsaken his people the house of Israel, because their land is filled as at the beginning with divinations, as the land of the Philistines, and many strange children were born to them.",
+      "source": "Isaiah 2",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ϭⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲛⲟϭ ⲛⲟⲩⲏⲏⲃ ⲛⲧⲟⲕ ⲙⲛⲛⲉⲕϣⲃⲉⲉⲣ ⲉⲧϩⲙⲟⲟⲥ ⲙⲡⲉⲕⲙⲧⲟ ⲉⲃⲟⲗ ϫⲉϩⲉⲛⲣⲱⲙⲉ ⲛⲉ ⲛ**ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ** ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲉⲓⲛⲉ ⲉϫⲙⲡⲁϩⲙϩⲁⲗ ⲛⲟⲩⲁⲛⲁⲧⲟⲗⲏ",
+      "english": "Thus saith the Lord Almighty; If thou wilt walk in my ways, and take heed to my charges, then shalt thou judge my house: and if thou wilt diligently keep my court, then will I give thee men to walk in the midst of these that stand here.",
+      "source": "Zechariah 3",
+      "urn": "urn:cts:copticLit:ot.zech.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲱⲣⲁ",
+        1,
+        12.006
+      ],
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        11.389
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        9.929
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        9.438
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        8.512
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          "ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8434,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1910",
+      "label": "ϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "take sign, augury"
+    },
+    {
+      "target": "C1908",
+      "label": "ϯⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "give sign, signify"
+    },
+    {
+      "target": "C1905",
+      "label": "ⲁⲧⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "without mark"
+    },
+    {
+      "target": "C1904",
+      "label": "ⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "sign, mark"
+    },
+    {
+      "target": "C1912",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "augury, divination"
+    },
+    {
+      "target": "C1909",
+      "label": "ⲣⲉϥϯⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "one who points out, gives augury"
+    },
+    {
+      "target": "C1907",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ ⲙⲡⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "wonder-doer, miracle worker"
+    },
+    {
+      "target": "C1906",
+      "label": "ⲣⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "be marked, remarkable"
+    }
+  ]
+}

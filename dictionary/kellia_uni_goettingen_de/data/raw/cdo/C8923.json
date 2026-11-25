@@ -1,0 +1,141 @@
+{
+  "id": "C8923",
+  "forms": [
+    {
+      "id": "CF21794",
+      "orth": "ⲉⲗⲉⲫⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21795",
+      "orth": "ⲉⲗⲉⲫⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9013,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10837",
+      "bibliography": "DDGLC",
+      "cu_ID": "9385"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲧⲁⲙⲓⲟ ⲛⲛⲟⲩⲟⲥⲣ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲛⲧⲃⲁⲥⲁⲛ ⲛⲟⲩⲣⲡⲏⲩⲉ ⲛⲧⲁⲩⲧⲁⲙⲓⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲛ**ⲉⲗⲉⲫⲁⲥ** ϩⲉⲛⲏⲓ ⲉⲩⲟ ⲛϩⲁⲓⲃⲉⲥ ⲛϣⲏⲛ ⲉⲃⲟⲗ ϩⲛⲛⲛⲏⲥⲟⲥ ⲛϫⲉⲧⲧⲓⲛ",
+      "english": "They made thine oars of wood out of the land of Basan; thy sacred utensils they made of ivory, thy shady houses of wood from the isles of Chetiim.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϣⲏⲣⲉ ⲛⲛⲉϩⲣⲟⲇⲓⲟⲥ ⲛⲉⲩⲟ ⲛⲉϣⲱⲧ ⲛⲉ ⲁⲩⲧⲁϣⲟ ⲛⲧⲟⲩⲉⲓⲉⲡϣⲱⲧ ⲉⲃⲟⲗ ϩⲛⲛⲛⲏⲥⲟⲥ ϩⲛϩⲉⲛϣⲟⲗ ⲛ**ⲉⲗⲉⲫⲁⲥ** ⲁⲩⲱ ϩⲛⲛⲉϣⲁⲩⲛⲧⲟⲩ ⲉϩⲟⲩⲛ ⲛⲉϣⲁⲣⲉϯ ⲛⲛⲟⲩⲃⲉⲕⲉⲉⲩⲉ",
+      "english": "The sons of the Rhodians were thy merchants; from the islands they multiplied thy merchandise, even elephants' teeth: and to them that came in thou didst return thy prices,",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲗ",
+        1,
+        16.598
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        11.829
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.735
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲗⲉⲫⲁⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8559,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "6020",
+    "grl_lemma": "ἐλέφας",
+    "grl_meaning": "elephant; ivory",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 533a; Preisigke 1:469"
+  }
+}

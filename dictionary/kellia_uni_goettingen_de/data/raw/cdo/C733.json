@@ -1,0 +1,82 @@
+{
+  "id": "C733",
+  "forms": [
+    {
+      "id": "CF2744",
+      "orth": "ⲣⲡⲉⲥⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS874",
+      "bibliography": "CD 60b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C729",
+      "label": "ϣⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "as far as, down to the ground"
+    },
+    {
+      "target": "C730",
+      "label": "ϩⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "below ground, under"
+    },
+    {
+      "target": "C731",
+      "label": "ϩⲓⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "on, to the ground; from off ground"
+    },
+    {
+      "target": "C732",
+      "label": "ϫⲓⲛⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "from the ground, from below"
+    },
+    {
+      "target": "C726",
+      "label": "ⲉⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "to the ground, downward"
+    },
+    {
+      "target": "C725",
+      "label": "ⲉⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "ground, bottom, lowest part"
+    },
+    {
+      "target": "C727",
+      "label": "ⲙⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "at the bottom, below"
+    },
+    {
+      "target": "C728",
+      "label": "ⲥⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "(on the) lower side, below"
+    }
+  ]
+}

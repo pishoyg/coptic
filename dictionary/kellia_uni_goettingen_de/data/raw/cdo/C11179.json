@@ -1,0 +1,289 @@
+{
+  "id": "C11179",
+  "forms": [
+    {
+      "id": "CF30996",
+      "orth": "ϩⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30997",
+      "orth": "ϩⲟⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6373,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF30998",
+      "orth": "ϩⲟⲣⲟⲩⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30999",
+      "orth": "ϩⲣⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15722",
+      "bibliography": "DDGLC",
+      "cu_ID": "1323"
+    },
+    {
+      "id": "CS15723",
+      "bibliography": "DDGLC",
+      "cu_ID": "7483"
+    },
+    {
+      "id": "CS15724",
+      "bibliography": "DDGLC",
+      "cu_ID": "3152"
+    },
+    {
+      "id": "CS15725",
+      "bibliography": "DDGLC",
+      "cu_ID": "7174"
+    },
+    {
+      "id": "CS15726",
+      "bibliography": "DDGLC",
+      "cu_ID": "10999"
+    },
+    {
+      "id": "CS15727",
+      "bibliography": "DDGLC",
+      "cu_ID": "11009"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉ ⲛ**ϩⲟⲣⲟⲥ** ⲧⲏⲣⲟⲩ ⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲛⲉⲧⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“These are all the boundaries of the ways for those who are worthy of the mysteries of the Light.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲉⲁⲛⲧⲛⲛⲟⲟⲩ ⲛⲁⲕ ⲙⲡⲉⲕⲉⲛⲇⲩⲙⲁ ⲉⲧⲉⲡⲱⲕ ⲣⲱⲱ ⲡⲉ ϫⲓⲛⲛϣⲟⲣⲡ ⲡⲁⲓ ⲉⲛⲧⲁⲕⲕⲁⲁϥ ϩⲙⲡⲁⲉ ⲛ**ϩⲟⲣⲟⲥ** ⲉⲧⲉⲛⲧⲟϥ ⲡⲉ ⲡϩⲁⲉ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϫⲓⲛϩⲟⲩⲛ · ϣⲁⲛⲧⲉⲡⲉϥⲟⲩⲟⲉⲓϣ ϫⲱⲕ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲧⲕⲉⲗⲉⲩⲥⲓⲥ ⲙⲡϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ·",
+      "english": "Now, therefore, have we sent thee thy Vesture, which hath belonged to thee from the beginning, which thou hast left behind in the last limit, which also is the last mystery from within, until its time should be completed, according to the commandment of the First Mystery.",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲥⲛⲏⲩ ⲇⲉ ⲛⲧⲉⲣⲟⲩⲥⲱⲧⲙ ⲙⲙⲁⲩ ⲉⲧⲃⲏⲧⲛ ⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲛϣⲟⲙⲧⲉ ⲙⲙⲟⲛⲏ ϣⲁⲡⲡⲓⲟⲥ ⲡ**ϩⲟⲣⲟⲥ** ⲉⲧⲱⲙⲛⲧ ⲉⲣⲟⲛ ⲛⲧⲉⲣⲉⲡⲁⲩⲗⲟⲥ ⲇⲉ ⲛⲁⲩ ⲉⲣⲟⲟⲩ ⲁϥⲧⲱⲕ ⲛϩⲏⲧ ⲁϥⲉⲩⲭⲁⲣⲓⲥⲧⲓ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "From there the brothers, when they heard of us, came to meet us as far as The Market of Appius and The Three Taverns. When Paul saw them, he thanked God, and took courage.",
+      "source": "44_Acts of the Apostles_28",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲓⲟⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲁⲉ",
+        1,
+        16.206
+      ],
+      [
+        "ⲧⲱⲙⲛⲧ",
+        1,
+        11.936
+      ],
+      [
+        "ⲡ",
+        4,
+        8.912
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.728
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        8.272
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.699
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.325
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.761
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.279
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.899
+      ],
+      [
+        "ϩⲙ",
+        1,
+        5.828
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲣⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲉ_3_post_ⲛⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲣⲟⲥ_0_node",
+          "ⲉⲧⲉ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲟⲣⲟⲥ",
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ϩⲟⲣⲟⲥ",
+          "ⲡ_4_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲁⲉ",
+          "ϩⲁⲉ_3_post_ⲛⲧⲟϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲟⲣⲟⲥ",
+          "ϩⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲣⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲟⲣⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ϩⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲣⲟⲥ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5937,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1578",
+    "grl_lemma": "ὅρος",
+    "grl_meaning": "boundary, landmark, standard, definition, rule",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1255b; Preisigke 2:202; Lampe 974b-975a"
+  }
+}

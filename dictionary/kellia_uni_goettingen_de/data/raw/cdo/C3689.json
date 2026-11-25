@@ -1,0 +1,97 @@
+{
+  "id": "C3689",
+  "forms": [
+    {
+      "id": "CF9292",
+      "orth": "ⲥⲓⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8094,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4193",
+      "bibliography": "CD 353b; KoptHWb 194, 539"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲑⲁⲓ ⲉⲧⲁⲩⲟⲗⲥ ⲛⲁⲩⲉⲣⲃⲟⲏⲑⲓⲛ ⲉⲩⲙⲟⲩⲣ ⲙⲡⲓϫⲟⲉⲓ ⲉⲩⲉⲣϩⲟϯ ⲇⲉ ⲙⲏⲡⲱⲥ ⲛⲥⲉϩⲉⲓ ⲉϧⲣⲏⲓ ⲉϯ**ⲥⲓⲣ**ⲧⲏⲥ ⲁⲛⲭⲱ ⲙⲡⲓⲥⲕⲉⲩⲟⲥ ⲉⲡⲉⲥⲏⲧ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ⲁⲛⲗⲱⲓⲗⲓ .",
+      "english": "After they had hoisted it up, they used cables to help reinforce the ship. Fearing that they would run aground on the Syrtis sand bars, they lowered the sea anchor, and so were driven along.",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲓⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7559,
+      "count": 1
+    }
+  },
+  "type": "hom"
+}

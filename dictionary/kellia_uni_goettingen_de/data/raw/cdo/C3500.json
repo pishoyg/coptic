@@ -1,0 +1,209 @@
+{
+  "id": "C3500",
+  "forms": [
+    {
+      "id": "CF8901",
+      "orth": "ⲥⲱⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8289,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3984",
+      "bibliography": "CD 333b; ChLCS 47b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲥⲉ",
+        1,
+        16.139
+      ],
+      [
+        "ⲏⲓ",
+        5,
+        15.701
+      ],
+      [
+        "ⲡ",
+        7,
+        11.919
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        1,
+        11.804
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        10.749
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        10.126
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲥⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲥⲱⲗϭ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲥⲉ_1_pre_ⲥⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ϩⲓⲉⲣⲉⲩⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲱⲗϭ",
+          "ⲥⲉ_1_pre_ⲥⲱⲗϭ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲱⲗϭ",
+          "ⲥⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲗϭ_0_node",
+          "ⲙ_1_post_ⲥⲱⲗϭ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲗϭ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲥⲉ_1_pre_ⲥⲱⲗϭ",
+          "ⲥⲱⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          "ⲡ_5_post_ϩⲓⲉⲣⲉⲩⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7845,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3501",
+      "label": "ⲁⲧⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "unobliterated"
+    },
+    {
+      "target": "C3507",
+      "label": "ⲉⲣⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "blunt"
+    },
+    {
+      "target": "C3502",
+      "label": "ⲣⲉϥⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "one who wipes out"
+    },
+    {
+      "target": "C3505",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "be blunt"
+    },
+    {
+      "target": "C3506",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "N",
+      "gloss": "bluntness"
+    },
+    {
+      "target": "C3503",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "V",
+      "gloss": "be, make smooth"
+    },
+    {
+      "target": "C3504",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "N",
+      "gloss": "smoothness"
+    },
+    {
+      "target": "C3499",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "V",
+      "gloss": "smooth, smear, anoint; wipe (out), obliterate; cleave, adhere, make cleave, join"
+    }
+  ]
+}

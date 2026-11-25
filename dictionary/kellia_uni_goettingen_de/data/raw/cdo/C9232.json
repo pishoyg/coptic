@@ -1,0 +1,51 @@
+{
+  "id": "C9232",
+  "forms": [
+    {
+      "id": "CF23090",
+      "orth": "ⲕⲁⲑⲁⲣⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF23091",
+      "orth": "ⲕⲁⲑⲁⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23092",
+      "orth": "ⲕⲁⲑⲁⲣⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1203,
+        "count": 72
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11505",
+      "bibliography": "DDGLC",
+      "cu_ID": "9772"
+    },
+    {
+      "id": "CS11506",
+      "bibliography": "DDGLC",
+      "cu_ID": "9751"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "6734",
+    "grl_lemma": "καθαίρω",
+    "grl_meaning": "cleanse; purge away wash off",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 849a; Sophocles 610b"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "id": "C4266",
+  "forms": [
+    {
+      "id": "CF10483",
+      "orth": "ⲧⲗⲧⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4725,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲧⲉⲗⲧⲉⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1346,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲧⲗⲧⲗⲉ",
+      "dialect": "A",
+      "id": "465.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4837",
+      "bibliography": "CD 411ab; CDC 64b; CED 186; KoptHWb 230; DELC 214a; ChLCS 58a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲡⲱⲧ ⲛⲥⲁⲧⲏⲩⲧⲛ ⲉⲙⲛⲡⲉⲧⲡⲏⲧ ⲛⲥⲱⲧⲛ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛϭⲟⲗ ⲁϥⲁϩⲉⲣⲁⲧϥ ⲁϥ**ⲧⲗⲧⲗ** ⲛⲁⲕ ⲛⲟⲩⲏⲣⲡ ⲙⲛⲛⲟⲩϯϩⲉ ⲁⲩⲱ ⲥⲛⲁϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛⲛⲧⲗϯⲗⲉ ⲙⲡⲉⲓⲗⲁⲟⲥ",
+      "english": "ye have fled, no one pursuing you: thy spirit has framed falsehood, it has dropped on thee for wine and strong drink. But it shall come to pass, that out of the dropping of this people,",
+      "source": "Micah 2",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲉⲧ**ⲧⲗⲧⲗ** ⲛⲁϥ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL 45-53",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_45_53",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲉⲧ**ⲧⲗⲧⲗ** ⲛⲁϥ ⲛϩⲉⲛⲣⲡⲙⲉⲉⲩⲉ ⲉⲩⲧⲁⲕⲟ ⲙⲡϩⲏⲧ ⲙⲛⲧⲉⲯⲩⲭⲏ ⲛⲛⲣⲱⲙⲉ ⲉⲧⲛⲁϣⲟⲡⲟⲩ ⲉⲣⲟⲟⲩ",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁⲧ",
+        3,
+        12.843
+      ],
+      [
+        "ϥ",
+        10,
+        11.902
+      ],
+      [
+        "ⲉⲃⲓⲱ",
+        1,
+        11.638
+      ],
+      [
+        "ⲥⲡⲟⲧⲟⲩ",
+        1,
+        10.647
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        10.069
+      ],
+      [
+        "ⲏ",
+        2,
+        9.894
+      ],
+      [
+        "ⲕ",
+        3,
+        9.022
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.408
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.094
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.489
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        4.899
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        4.728
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        3.88
+      ],
+      [
+        "ⲡ",
+        1,
+        1.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲧⲗⲧⲗ",
+          2
+        ],
+        [
+          "ⲧⲗⲧⲗ_0_node",
+          6
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲗⲧⲗ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲧⲗⲧⲗ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_post_ⲧⲗⲧⲗ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲗⲧⲗ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧⲗⲧⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥⲡⲟⲧⲟⲩ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲡⲟⲧⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲧⲗⲧⲗ",
+          "ⲧⲗⲧⲗ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲗⲧⲗ",
+          "ϥ_1_pre_ⲧⲗⲧⲗ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲧⲗⲧⲗ",
+          "ⲧⲗⲧⲗ_0_node",
+          2
+        ],
+        [
+          "ⲧⲗⲧⲗ_0_node",
+          "ⲛⲁ_1_post_ⲧⲗⲧⲗ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲧⲗⲧⲗ",
+          "ⲕ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲛ_1_post_ⲧⲗⲧⲗ",
+          2
+        ],
+        [
+          "ⲧⲗⲧⲗ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲧⲗⲧⲗ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧⲗⲧⲗ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          "ⲥⲡⲟⲧⲟⲩ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲡⲟⲧⲟⲩ_3_post_ⲛⲉ",
+          "ⲛ_4_post_ⲥⲡⲟⲧⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4308,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C4236",
+      "type": "cf",
+      "label": "drip, let drop"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4270",
+      "label": "ⲧⲁⲗⲧⲉⲗ",
+      "pos": "N",
+      "gloss": "a kind of wine?"
+    },
+    {
+      "target": "C4268",
+      "label": "ⲧⲗϯⲗⲉ",
+      "pos": "N",
+      "gloss": "drop"
+    },
+    {
+      "target": "C4269",
+      "label": "ⲧⲗϯⲗⲉ",
+      "pos": "N",
+      "gloss": "drop"
+    },
+    {
+      "target": "C4267",
+      "label": "ⲧⲗⲧⲗ",
+      "pos": "N",
+      "gloss": "dripping"
+    }
+  ]
+}

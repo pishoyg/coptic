@@ -1,0 +1,132 @@
+{
+  "id": "C6377",
+  "forms": [
+    {
+      "id": "CF14769",
+      "orth": "ϩⲁⲑⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9535,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7073",
+      "bibliography": "CD 641b-642a; CED 270; KoptHWb 350; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲟⲛ ϫⲉϣϣⲉ ⲉⲣⲟⲛ ⲉⲧⲣⲉⲛϩⲟⲕⲛ ⲙⲁⲩⲁⲁⲛ **ϩⲁⲑⲏ** ⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲻ",
+      "english": "Again, he said, 'We must arm ourselves against temptations.",
+      "source": "Apophthegmata Patrum Sahidic 044: Hyperechius",
+      "urn": "urn:cts:copticLit:ap.44.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲕ",
+        1,
+        16.013
+      ],
+      [
+        "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+        1,
+        14.258
+      ],
+      [
+        "ⲻ",
+        1,
+        13.521
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        11.873
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9110,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6372",
+      "label": "ϩⲏ",
+      "pos": "N",
+      "gloss": "front part, beginning"
+    },
+    {
+      "target": "C6373",
+      "label": "ϩⲏⲧ⸗",
+      "pos": "ADV",
+      "gloss": "forward, before"
+    },
+    {
+      "target": "C6379",
+      "label": "ϩⲓϩⲏ",
+      "pos": "ADV",
+      "gloss": "to, in front, forward"
+    },
+    {
+      "target": "C6378",
+      "label": "ϩⲓⲑⲏ",
+      "pos": "ADV",
+      "gloss": "to, in front, forward"
+    },
+    {
+      "target": "C6380",
+      "label": "ϫⲓⲛⲛϩⲏ",
+      "pos": "ADV",
+      "gloss": "from beginning"
+    },
+    {
+      "target": "C6375",
+      "label": "ⲉⲑⲏ",
+      "pos": "ADV",
+      "gloss": "to the front, forwards"
+    },
+    {
+      "target": "C6376",
+      "label": "ⲛⲥⲁⲑⲏ",
+      "pos": "ADV",
+      "gloss": "before, formerly"
+    },
+    {
+      "target": "C6374",
+      "label": "ⲣϩⲏⲧⲥ",
+      "pos": "V",
+      "gloss": "make beginning"
+    }
+  ]
+}

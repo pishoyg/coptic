@@ -1,0 +1,46 @@
+{
+  "id": "C6052",
+  "forms": [
+    {
+      "id": "CF14109",
+      "orth": "ϯϣⲁⲣⲃⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6737",
+      "bibliography": "CD 586b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6050",
+      "label": "ϣⲁⲣⲃⲁ",
+      "pos": "N",
+      "gloss": "scorching heat"
+    },
+    {
+      "target": "C6051",
+      "label": "ⲧⲏⲩ ⲛϣⲁⲣⲃⲁ",
+      "pos": "N",
+      "gloss": "scorching wind"
+    }
+  ]
+}

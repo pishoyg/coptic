@@ -1,0 +1,64 @@
+{
+  "id": "C5498",
+  "forms": [
+    {
+      "id": "CF12969",
+      "orth": "ⲱⲛⲉ ⲙⲙⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6158",
+      "bibliography": "CD 524a; CED 228; KoptHWb 292; DELC 250a; ChLCS 72b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1789",
+      "type": "cf",
+      "label": "truth, justice"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5500",
+      "label": "ϩⲓⲱⲛⲉ",
+      "pos": "V",
+      "gloss": "throw stone"
+    },
+    {
+      "target": "C5499",
+      "label": "ⲙⲁ ⲛⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "stony place"
+    },
+    {
+      "target": "C5495",
+      "label": "ⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "stone"
+    },
+    {
+      "target": "C5496",
+      "label": "ⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "stone"
+    },
+    {
+      "target": "C5497",
+      "label": "ⲱⲛⲉ ⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "precious stone, pearl"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C6429",
+  "forms": [
+    {
+      "id": "CF14886",
+      "orth": "ϩⲱⲃ ⲛϭⲓϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7136",
+      "bibliography": "CD 654a; ChLCS 88a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7995",
+      "type": "cf",
+      "label": "hand"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6426",
+      "label": "ϩⲱⲃ",
+      "pos": "N",
+      "gloss": "thing, work, matter, event"
+    },
+    {
+      "target": "C6432",
+      "label": "ϩⲱⲃ ⲛⲓⲙ",
+      "pos": "N",
+      "gloss": "all"
+    },
+    {
+      "target": "C6431",
+      "label": "ϯϩⲱⲃ",
+      "pos": "V",
+      "gloss": "give work"
+    },
+    {
+      "target": "C6433",
+      "label": "ⲛϩⲱⲃ",
+      "pos": "ADV",
+      "gloss": "actually"
+    },
+    {
+      "target": "C6428",
+      "label": "ⲟⲩⲛϩⲱⲃ ⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "there is a matter with"
+    },
+    {
+      "target": "C6427",
+      "label": "ⲟⲩⲡⲉ ⲡϩⲱⲃ",
+      "pos": "ADV",
+      "gloss": "What is the matter?"
+    },
+    {
+      "target": "C6430",
+      "label": "ⲣϩⲱⲃ",
+      "pos": "V",
+      "gloss": "do work"
+    }
+  ]
+}

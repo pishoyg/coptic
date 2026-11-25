@@ -1,0 +1,254 @@
+{
+  "id": "C9644",
+  "forms": [
+    {
+      "id": "CF24684",
+      "orth": "ⲗⲟⲅⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF24688",
+      "orth": "ⲗⲟⲅⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6297,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF24685",
+      "orth": "ⲗⲓⲅⲓⲍⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24687",
+      "orth": "ⲗⲟⲅⲓⲍⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24686",
+      "orth": "ⲗⲟⲅⲉⲍⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS12348",
+      "bibliography": "DDGLC",
+      "cu_ID": "15251"
+    },
+    {
+      "id": "CS12349",
+      "bibliography": "DDGLC",
+      "cu_ID": "2795"
+    },
+    {
+      "id": "CS12350",
+      "bibliography": "DDGLC",
+      "cu_ID": "10045"
+    },
+    {
+      "id": "CS12351",
+      "bibliography": "DDGLC",
+      "cu_ID": "10006"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲛⲧⲉⲧⲛ**ⲗⲟⲅⲓⲍⲉ** ⲁⲛ ϫⲉⲥⲣⲛⲟϥⲣⲉ ⲛⲁⲛ ϫⲉⲕⲁⲁⲥ ⲉⲣⲉⲟⲩⲣⲱⲙⲉ ⲛⲟⲩⲱⲧ ⲙⲟⲩ ϩⲁⲡⲗⲁⲟⲥ ⲁⲩⲱ ⲛⲧⲉⲧⲙ ⲡϩⲉⲑⲛⲟⲥ ⲧⲏⲣϥ ϩⲉ ⲉⲃⲟⲗ .",
+      "english": "nor do you consider that it is advantageous for us that one man should die for the people, and that the whole nation not perish.'",
+      "source": "43_John_11",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩ**ⲗⲟⲅⲓⲍⲉ** ⲁⲛ ⲛⲛⲣⲱⲙⲉ ⲛⲁⲓ ⲉⲧⲟⲩϯ ⲛⲁⲩ ⲙⲡϩⲁⲧ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲟⲩ ⲉⲧⲣⲉⲩϯ ⲙⲙⲟϥ ⲛⲛⲉⲧⲉⲓⲣⲉ ⲛⲛⲉϩⲃⲏⲩⲉ ⲉⲃⲟⲗ ϫⲉⲛⲉⲩⲣϩⲱⲃ ϩⲙⲡⲉⲩⲛⲁϩⲧⲉ",
+      "english": "Also they took no account of the men into whose hands they gave the money to give to the workmen, for they acted faithfully.",
+      "source": "II Kings 12",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥ**ⲗⲟⲅⲓⲍⲉ** ⲉⲙⲙⲟϥ ϩⲛⲛⲉϥⲙⲉⲉⲩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲙⲡⲓⲥⲱⲧⲙ ⲉⲛⲉϩ ϩⲛⲧⲛⲁⲗⲁⲓⲁ ⲟⲩⲇⲉ ϩⲛⲧⲕⲁⲓⲛⲏ ϫⲉⲁⲥϩⲓⲙⲉ ⲱⲱ ⲉⲃⲟⲗ ϩⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲉϥⲟⲩⲁⲁⲃ ⲏ ϫⲉϣⲁⲣⲉⲟⲩⲟⲛⲱⲱ ⲭⲱⲣⲓⲥ ⲥⲩⲛⲟⲩⲥⲓⲁ ⲛϩⲟⲟⲩⲧ ⲉⲓⲙⲏⲧⲓ ⲉⲧⲉⲑⲉⲟⲇⲱⲕⲧⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲙⲁⲣⲓⲁ ⲧⲉ ⲛⲧⲁⲥⲙⲓⲥⲉ ⲙⲡⲉⲛⲥⲱⲧⲏⲣ ⲉⲥⲧⲟⲟⲃⲉ ⲛⲧⲉⲥⲡⲁⲣⲑⲉⲛⲓⲁ",
+      "english": "...",
+      "source": "History of the Emperor's Daughter Fragment 3 (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.empdaughter.giro_ed:200",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲣⲛⲟϥⲣⲉ",
+        1,
+        13.884
+      ],
+      [
+        "ϣⲉ",
+        1,
+        9.597
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        9.543
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.728
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        8.691
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.728
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲓⲍⲉ_0_node",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          "ⲛⲉ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          "ϥ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          "ⲗⲟⲅⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          "ⲩ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟⲅⲓⲍⲉ",
+          "ⲗⲟⲅⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲓⲍⲉ_0_node",
+          "ⲁⲛ_1_post_ⲗⲟⲅⲓⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5858,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2886",
+    "grl_lemma": "λογίζομαι",
+    "grl_meaning": "to count, reckon",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1055b; Preisigke 2:27"
+  }
+}

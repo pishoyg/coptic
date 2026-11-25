@@ -1,0 +1,405 @@
+{
+  "id": "C142",
+  "forms": [
+    {
+      "id": "CF31459",
+      "orth": "ⲁⲛⲛ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31460",
+      "orth": "ⲁⲛ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF31461",
+      "orth": "ⲁⲛⲛ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31462",
+      "orth": "ⲁⲛ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31463",
+      "orth": "ⲁⲛⲛ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31464",
+      "orth": "ⲁⲛ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31465",
+      "orth": "ⲁⲛⲛ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31466",
+      "orth": "ⲁⲛ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF537",
+      "orth": "ⲁⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.47,
+        "rank": 301,
+        "count": 547
+      }
+    },
+    {
+      "id": "CF31467",
+      "orth": "ⲁⲛⲛ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31468",
+      "orth": "ⲁⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 35.96,
+        "rank": 37,
+        "count": 5674
+      }
+    },
+    {
+      "id": "CF538",
+      "orth": "ⲁⲛⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.78,
+        "rank": 288,
+        "count": 321
+      }
+    },
+    {
+      "id": "CF539",
+      "orth": "ⲁⲛⲁⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF540",
+      "orth": "ⲁⲛⲁⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF541",
+      "orth": "ⲁⲛⲁⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF542",
+      "orth": "ⲁⲛⲁⲛ",
+      "dialect": "M"
+    },
+    {
+      "orth": "ⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.91,
+        "rank": 147,
+        "count": 756
+      }
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "1. Pers.",
+    "number": "pl.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS162",
+      "bibliography": "CED 9; KoptHWb 8, 487; DELC 13; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲟⲩ **ⲁⲛⲟⲛ** ϩⲱⲛ ⲧⲉⲛⲉⲣⲕⲩⲛⲇⲓⲛⲉⲩⲓⲛ ⲛⲟⲩⲛⲟⲩ ⲛⲓⲃⲉⲛ .",
+      "english": "Why do we also stand in jeopardy every hour?",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲁⲛⲟⲛ** ϩⲉⲛⲥⲁⲃⲉ ·",
+      "english": "While you say: &apos;we are clever&apos;.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲧⲉⲛϥⲟⲩⲃⲏⲛ ⲁⲛ ⲁϥϯ ⲉϫⲱ**ⲛ** .",
+      "english": "For whoever is not against us is on our side.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲕⲉⲟⲩⲁ ⲇⲉ ⲛⲁϥ ⲛϩⲏⲧ**ⲛ** ·",
+      "english": "And another of us said to him,",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲥϧⲁⲓ ⲅⲁⲣ ϥϧⲱⲧⲉⲃ ⲉϣⲱⲡ **ⲧⲉⲛ**ⲕⲁϯ ⲁⲛ",
+      "english": "For Scripture, unless it is understood, kills.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲛ ⲉⲕϣⲁⲛϫⲟⲟϥ ⲛ**ⲧⲛ**ⲧⲙⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ ⲉⲃⲟⲗ",
+      "english": "Even if you tell it and we don't understand,",
+      "source": "Apophthegmata Patrum Sahidic 138: Unidentified",
+      "urn": "urn:cts:copticLit:ap.138.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲱⲛ",
+        59,
+        19.186
+      ],
+      [
+        "ⲛ",
+        276,
+        17.134
+      ],
+      [
+        "ⲧⲉⲛ",
+        131,
+        16.72
+      ],
+      [
+        "ⲇⲉ",
+        140,
+        16.655
+      ],
+      [
+        "ϩⲁⲛ",
+        116,
+        16.105
+      ],
+      [
+        "ϧⲁ",
+        55,
+        15.415
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        34,
+        14.849
+      ],
+      [
+        "ⲅⲁⲣ",
+        52,
+        13.909
+      ],
+      [
+        ".",
+        98,
+        13.679
+      ],
+      [
+        "ⲛⲉⲛ",
+        41,
+        13.37
+      ],
+      [
+        "ⲛⲏ",
+        44,
+        12.654
+      ],
+      [
+        "ⲛⲁ",
+        71,
+        12.622
+      ],
+      [
+        "ϫⲉ",
+        68,
+        12.617
+      ],
+      [
+        "ⲉⲛ",
+        25,
+        12.283
+      ],
+      [
+        "ⲫⲩⲥⲓ",
+        3,
+        11.668
+      ],
+      [
+        "ⲉ",
+        65,
+        11.302
+      ],
+      [
+        "ⲁ",
+        65,
+        11.275
+      ],
+      [
+        "ϩⲓⲣⲏⲛⲓ",
+        3,
+        11.083
+      ],
+      [
+        "ϩⲓⲣⲏⲛⲓⲕⲟⲥ",
+        3,
+        11.083
+      ],
+      [
+        "ⲉⲛⲉ",
+        10,
+        10.89
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        18,
+        19.772
+      ],
+      [
+        "ⲛ",
+        853,
+        19.682
+      ],
+      [
+        "ϩⲱⲱ",
+        129,
+        18.158
+      ],
+      [
+        "ⲧⲛ",
+        170,
+        17.056
+      ],
+      [
+        "ⲇⲉ",
+        223,
+        17.053
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        50,
+        15.099
+      ],
+      [
+        "ϩⲉⲛ",
+        100,
+        14.67
+      ],
+      [
+        "ⲁ",
+        200,
+        14.64
+      ],
+      [
+        "ⲅⲁⲣ",
+        82,
+        14.416
+      ],
+      [
+        ".",
+        121,
+        13.978
+      ],
+      [
+        "ϫⲉ",
+        132,
+        13.944
+      ],
+      [
+        "ⲉ",
+        179,
+        13.933
+      ],
+      [
+        "ⲛⲉⲛ",
+        42,
+        13.414
+      ],
+      [
+        "ⲁⲩⲱ",
+        99,
+        12.3
+      ],
+      [
+        "ⲉⲛϣⲁⲛ",
+        15,
+        11.994
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        32,
+        11.971
+      ],
+      [
+        "ⲛⲁ",
+        92,
+        11.923
+      ],
+      [
+        "ⲡⲉ",
+        74,
+        11.801
+      ],
+      [
+        "ⲡ",
+        116,
+        11.735
+      ],
+      [
+        "ⲛⲉ",
+        58,
+        11.551
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 65.14,
+      "rank": 22,
+      "count": 10338
+    },
+    "B": {
+      "rate": 41.48,
+      "rank": 39,
+      "count": 3521
+    }
+  },
+  "etym": {
+    "egy_num": "27490",
+    "egy_lemma": "jnn",
+    "demo_num": "d582",
+    "demo_lemma": "ı ͗nn",
+    "english": "we; of ours",
+    "german": "wir [Selbst. Pron. pl.1.c.] (NÄg)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27490",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d582"
+  }
+}

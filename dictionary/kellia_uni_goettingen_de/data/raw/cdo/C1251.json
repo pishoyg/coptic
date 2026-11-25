@@ -1,0 +1,52 @@
+{
+  "id": "C1251",
+  "forms": [
+    {
+      "id": "CF3903",
+      "orth": "ϯⲕⲛⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1449",
+      "bibliography": "CD 112a; KoptHWb 65; ChLCS 17b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1248",
+      "label": "ⲕⲛⲛⲉ",
+      "pos": "V",
+      "gloss": "be fat, sweet"
+    },
+    {
+      "target": "C1249",
+      "label": "ⲕⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "fatness, sweetness"
+    },
+    {
+      "target": "C1250",
+      "label": "ⲣⲕⲛⲛⲉ",
+      "pos": "V",
+      "gloss": "be fat"
+    }
+  ]
+}

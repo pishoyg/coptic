@@ -1,0 +1,51 @@
+{
+  "id": "C6201",
+  "forms": [
+    {
+      "id": "CF14412",
+      "orth": "ⲁⲧϣⲟϥⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6888",
+      "bibliography": "CD 611b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6202",
+      "label": "ϣⲁϥⲧⲉ",
+      "pos": "N",
+      "gloss": "iniquitous, impious (person)"
+    },
+    {
+      "target": "C6200",
+      "label": "ϣⲟϥⲧ",
+      "pos": "N",
+      "gloss": "error, fault"
+    },
+    {
+      "target": "C6203",
+      "label": "ϣⲟϥⲧⲥ",
+      "pos": "N",
+      "gloss": "error"
+    },
+    {
+      "target": "C6199",
+      "label": "ϣⲱϥⲧ",
+      "pos": "V",
+      "gloss": "stumble, err, commit error"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C1768",
+  "forms": [
+    {
+      "id": "CF5111",
+      "orth": "ⲣⲗⲟϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5112",
+      "orth": "ⲉⲣⲗⲟϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2056",
+      "bibliography": "CD 151ab; KoptHWb 83; ChLCS 23a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1767",
+      "label": "ⲗⲟϭ",
+      "pos": "N",
+      "gloss": "impudent, persistent person"
+    },
+    {
+      "target": "C1769",
+      "label": "ⲙⲛⲧⲗⲟϭ",
+      "pos": "N",
+      "gloss": "impudence, persistence"
+    }
+  ]
+}

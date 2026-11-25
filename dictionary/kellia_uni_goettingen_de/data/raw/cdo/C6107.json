@@ -1,0 +1,52 @@
+{
+  "id": "C6107",
+  "forms": [
+    {
+      "id": "CF14219",
+      "orth": "ϣⲱⲧⲃ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϣⲧⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19845,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉⲧⲃ-",
+      "dialect": "S",
+      "id": "1986.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6794",
+      "bibliography": "CD 595b; CED 255; KoptHWb 331; DELC 272a; ChLCS 82a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6108",
+      "label": "ϣⲧⲟⲃ",
+      "pos": "N",
+      "gloss": "muzzle"
+    }
+  ],
+  "etym": {
+    "egy_num": "158290",
+    "egy_lemma": "štb",
+    "english": "to shut in; to enclose",
+    "german": "einschließen; verschließen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/158290"
+  }
+}

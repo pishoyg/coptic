@@ -1,0 +1,169 @@
+{
+  "id": "C1912",
+  "forms": [
+    {
+      "id": "CF5473",
+      "orth": "ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17732,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2223",
+      "bibliography": "CD 171a; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲓ ϫⲉⲛⲉⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲩⲡⲣⲟⲫⲏⲧⲉⲩⲉ ⲛϩⲉⲛⲙⲛⲧⲛⲟⲩϫ ⲉϫⲙⲡⲁⲣⲁⲛ ⲙⲡⲉⲓⲧⲛⲛⲟⲟⲩⲥⲉ ⲟⲩⲇⲉ ⲙⲡⲓϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲟⲩⲇⲉ ⲙⲡⲉⲓϣⲁϫⲉ ⲛⲙⲙⲁⲩ ϫⲉϩⲉⲛϩⲟⲣⲁⲥⲓⲥ ⲛⲛⲟⲩϫ ⲙⲛϩⲉⲛϣⲓⲛⲉ ⲙⲛϩⲉⲛ**ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ** ⲙⲛϩⲉⲛⲟⲩⲱϣ ⲛⲧⲉⲡⲉⲩϩⲏⲧ ⲛⲉⲧⲟⲩⲡⲣⲟⲫⲏⲧⲉⲩⲉ ⲙⲙⲟⲟⲩ ⲛⲏⲧⲛ",
+      "english": "Then the Lord said to me, The prophets prophesy lies in my name: I sent them not, and I commanded them not, and I spoke not to them: for they prophesy to you false visions, and divinations, and auguries, and devices of their own heart.",
+      "source": "Jeremiah 14",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲛ",
+        3,
+        12.829
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        10.455
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        10.413
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        9.644
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          "ϩⲉⲛ_1_pre_ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+          "ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17347,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1910",
+      "label": "ϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "take sign, augury"
+    },
+    {
+      "target": "C1908",
+      "label": "ϯⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "give sign, signify"
+    },
+    {
+      "target": "C1905",
+      "label": "ⲁⲧⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "without mark"
+    },
+    {
+      "target": "C1904",
+      "label": "ⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "sign, mark"
+    },
+    {
+      "target": "C1911",
+      "label": "ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "augur, diviner"
+    },
+    {
+      "target": "C1909",
+      "label": "ⲣⲉϥϯⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "one who points out, gives augury"
+    },
+    {
+      "target": "C1907",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ ⲙⲡⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "wonder-doer, miracle worker"
+    },
+    {
+      "target": "C1906",
+      "label": "ⲣⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "be marked, remarkable"
+    }
+  ]
+}

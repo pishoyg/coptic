@@ -1,0 +1,325 @@
+{
+  "id": "C1104",
+  "forms": [
+    {
+      "id": "CF3570",
+      "orth": "ⲕⲱⲱⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5266,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF3571",
+      "orth": "ⲕⲱⲱϥⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲉⲉⲃⲉ-",
+      "dialect": "S",
+      "id": "766.1"
+    },
+    {
+      "orth": "ⲕⲁⲁⲃⲉ-",
+      "dialect": "S",
+      "id": "766.2"
+    },
+    {
+      "orth": "ⲕⲉϥⲉ-",
+      "dialect": "S",
+      "id": "766.3"
+    },
+    {
+      "orth": "ⲕⲟⲟⲃⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13148,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1287",
+      "bibliography": "CD 99b; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩ**ⲕⲱⲱⲃⲉ** ⲟⲩⲁ ⲇⲉ ⲉϥⲙⲟⲟϣⲉ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡⲕⲩⲣⲏⲛⲁⲓⲟⲥ ⲉϥⲛⲏⲩ ⲉϩⲣⲁⲓ ϩⲛⲧⲥⲱϣⲉ ⲡⲉⲓⲱⲧ ⲛⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ ⲙⲛϩⲣⲟⲩⲫⲟⲥ ϫⲉⲉϥⲉϥⲓ ⲡⲉϥⲥⲧⲁⲩⲣⲟⲥ",
+      "english": "They compelled one passing by, coming from the country, Simon of Cyrene, the father of Alexander and Rufus, to go with them, that he might bear his cross.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲛⲏⲩ ⲇⲉ ⲉⲃⲟⲗ ⲁⲩϩⲉ ⲉⲩⲣⲱⲙⲉ ⲛⲕⲩⲣⲏⲛⲛⲁⲓⲟⲥ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ . ⲁⲩ**ⲕⲱⲱⲃⲉ** ⲙⲡⲁⲓ ϫⲉⲕⲁⲁⲥ ⲉϥⲉϥⲓ ⲙⲡⲉϥⲥⲧⲁⲩⲣⲟⲥ .",
+      "english": "As they came out, they found a man of Cyrene, Simon by name, and they compelled him to go with them, that he might carry his cross.",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲃⲱⲕ ϣⲁⲧⲡⲟⲗⲓⲥ ⲁⲓⲙⲟⲟⲛⲉ ⲉⲧⲉⲙⲣⲱ ⲛⲧⲉⲓⲣⲏⲛⲏ · ⲉⲣⲉⲡⲁϫⲟⲉⲓⲟⲩⲟϫ ⲁⲓϩⲉ ⲉⲧⲙⲣⲱ ⲉⲩ**ⲕⲱⲱⲃⲉ** ⲛϩⲏⲧⲥ ⲛϭⲓⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 3 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:20-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲣⲱ",
+        1,
+        15.598
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        1,
+        11.912
+      ],
+      [
+        "ⲟⲩⲁ",
+        2,
+        10.329
+      ],
+      [
+        "ⲩ",
+        4,
+        9.81
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        9.341
+      ],
+      [
+        ".",
+        3,
+        9.312
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.789
+      ],
+      [
+        "ϥ",
+        4,
+        8.522
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.986
+      ],
+      [
+        "ⲁ",
+        3,
+        7.799
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.84
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.819
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ],
+      [
+        "ⲛ",
+        1,
+        1.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲕⲱⲱⲃⲉ",
+          3
+        ],
+        [
+          "ⲕⲱⲱⲃⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲕⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲕⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲉ_2_post_ⲟⲩⲁ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲕⲱⲱⲃⲉ",
+          "ⲕⲱⲱⲃⲉ_0_node",
+          3
+        ],
+        [
+          "ⲕⲱⲱⲃⲉ_0_node",
+          "ⲛϩⲏⲧ_1_post_ⲕⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲕⲱⲱⲃⲉ",
+          "ⲥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛϩⲏⲧ",
+          "ⲛϭⲓ_1_post_ⲕⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲕⲱⲱⲃⲉ",
+          "ⲛ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲱⲱⲃⲉ",
+          "ⲩ_1_pre_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲕⲱⲱⲃⲉ_0_node",
+          "ⲟⲩⲁ_1_post_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲕⲱⲱⲃⲉ",
+          "ⲇⲉ_1_post_ⲕⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲕⲱⲱⲃⲉ",
+          "ⲉ_2_post_ⲟⲩⲁ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4848,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1110",
+      "label": "ϫⲓⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "take vengeance"
+    },
+    {
+      "target": "C1111",
+      "label": "ϫⲓⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "retribution, compensation"
+    },
+    {
+      "target": "C1109",
+      "label": "ϯⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "avenge"
+    },
+    {
+      "target": "C1105",
+      "label": "ⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "compulsion, forced labour"
+    },
+    {
+      "target": "C1107",
+      "label": "ⲕⲃⲁ",
+      "pos": "N",
+      "gloss": "vengeance"
+    },
+    {
+      "target": "C1106",
+      "label": "ⲣⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "do forced labour"
+    },
+    {
+      "target": "C1108",
+      "label": "ⲣⲕⲃⲁ",
+      "pos": "V",
+      "gloss": "do vengeance"
+    }
+  ],
+  "etym": {
+    "egy_num": "164220",
+    "egy_lemma": "kfꜥ",
+    "demo_num": "d6297",
+    "demo_lemma": "qbj",
+    "english": "to plunder; to capture",
+    "german": "erbeuten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6297"
+  }
+}

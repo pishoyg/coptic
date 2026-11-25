@@ -1,0 +1,554 @@
+{
+  "id": "C11079",
+  "forms": [
+    {
+      "id": "CF30530",
+      "orth": "ϩⲉⲑⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30531",
+      "orth": "ϩⲉⲑⲛⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30532",
+      "orth": "ϩⲉⲑⲛⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30533",
+      "orth": "ϩⲉⲑⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.08,
+        "rank": 217,
+        "count": 802
+      }
+    },
+    {
+      "id": "CF30534",
+      "orth": "ϩⲉⲑⲛⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30535",
+      "orth": "ϩⲉⲑⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7437,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF30536",
+      "orth": "ϩⲑⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6859,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF30537",
+      "orth": "ⲉϩⲑⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30538",
+      "orth": "ⲉⲑⲛⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 8.23,
+        "rank": 157,
+        "count": 698
+      }
+    },
+    {
+      "id": "CF30539",
+      "orth": "ⲉⲑⲛⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF30540",
+      "orth": "ⲉⲑⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30541",
+      "orth": "ⲉⲧⲑⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30542",
+      "orth": "ⲫⲉⲑⲛⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30543",
+      "orth": "ⲫⲉⲑⲛⲟⲥ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15487",
+      "bibliography": "DDGLC",
+      "cu_ID": "833"
+    },
+    {
+      "id": "CS15488",
+      "bibliography": "DDGLC",
+      "cu_ID": "87"
+    },
+    {
+      "id": "CS15489",
+      "bibliography": "DDGLC",
+      "cu_ID": "7977"
+    },
+    {
+      "id": "CS15490",
+      "bibliography": "DDGLC",
+      "cu_ID": "308"
+    },
+    {
+      "id": "CS15491",
+      "bibliography": "DDGLC",
+      "cu_ID": "7582"
+    },
+    {
+      "id": "CS15492",
+      "bibliography": "DDGLC",
+      "cu_ID": "5537"
+    },
+    {
+      "id": "CS15493",
+      "bibliography": "DDGLC",
+      "cu_ID": "11598"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛⲡⲉⲕϫⲱⲛⲧ ⲉⲕⲉⲑⲣⲉⲡⲕⲁϩⲓ ⲉⲣⲕⲟⲩϫⲓ ⲟⲩⲟϩ ϧⲉⲛⲡⲉⲕⲙⲃⲟⲛ ⲉⲕⲉⲃⲱⲗ ⲛϩⲁⲛ**ⲉⲑⲛⲟⲥ** ⲉⲃⲟⲗ .",
+      "english": "Thou wilt bring low the land with threatening, and in wrath thou wilt break down the nations.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉⲛ**ϩⲉⲑⲛⲟⲥ** ⲧⲏⲣⲟⲩ ϫⲁⲕⲛⲉⲧⲛϭⲓϫ ·",
+      "english": "And again, 'O all ye nations, clap ye your hands'",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲇⲉ ⲧⲉⲛϩⲓⲱⲓϣ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ⲉⲁⲩⲁϣϥ ⲛⲓⲓⲟⲩⲇⲁⲓ ⲙⲉⲛ ⲟⲩⲥⲕⲁⲛⲇⲁⲗⲟⲛ ⲛⲱⲟⲩ ⲡⲉ ⲛⲓ**ⲉⲑⲛⲟⲥ** ⲇⲉ ⲟⲩⲙⲉⲧⲥⲟϫ ⲡⲉ .",
+      "english": "but we preach Christ crucified; a stumbling block to Jews, and foolishness to Greeks,",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲕⲩⲣⲝ ⲁⲩⲱ ⲡⲥⲁϩ ⲛⲛ**ϩⲉⲑⲛⲟⲥ** ·",
+      "english": "the herald and teacher of the Gentiles,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲕⲁⲧⲁⲫⲣⲟⲛⲓⲧⲏⲥ ⲇⲉ ⲡⲣⲱⲙⲓ ⲛϭⲁⲥⲓϩⲏⲧ ⲉⲛⲁϣⲉⲡⲉϥⲟⲩⲟⲓ ⲛⲛⲉϥϫⲉⲕϩⲗⲓ ⲉⲃⲟⲗ ⲙⲫⲁⲓ ⲉⲧⲁϥⲟⲩⲟⲥⲑⲉⲛ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲛⲁⲙⲉⲛϯ ⲟⲩⲟϩ ⲛⲑⲟϥ ⲙⲡⲁϥⲥⲓ ⲙⲫⲣⲏϯ ⲙⲫⲙⲟⲩ ⲟⲩⲟϩ ⲉϥⲉⲑⲱⲟⲩϯ ϩⲁⲣⲟϥ ⲛⲛⲓ**ⲉⲑⲛⲟⲥ** ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡ ⲉⲣⲟϥ ⲛⲛⲓⲗⲁⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "But the arrogant man and the scorner, the boastful man, shall not finish anything; who has enlarged his desire as the grave, and like death he is never satisfied, and he will gather to himself all the nations, and will receive to himself all the peoples.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲇⲉ ⲉⲛⲧⲁϣⲉⲟⲉⲓϣ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲉⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ . ⲛⲓⲟⲩⲇⲁⲓ ⲙⲉⲛ ⲟⲩⲥⲕⲁⲛⲇⲁⲗⲟⲛ ⲛⲁⲩ ⲡⲉ . ⲟⲩⲙⲛⲧⲥⲟϭ ⲇⲉ ⲡⲉ ⲛⲛ**ϩⲉⲑⲛⲟⲥ** .",
+      "english": "but we preach Christ crucified; a stumbling block to Jews, and foolishness to Greeks,",
+      "source": "1 Corinthians 1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        43,
+        27.229
+      ],
+      [
+        "ⲛ",
+        1203,
+        24.859
+      ],
+      [
+        "ⲉ",
+        433,
+        21.444
+      ],
+      [
+        "ⲟⲩ",
+        369,
+        21.155
+      ],
+      [
+        "ⲛⲁ",
+        263,
+        20.158
+      ],
+      [
+        "ⲧⲏⲣ",
+        155,
+        20.045
+      ],
+      [
+        "ⲡ",
+        296,
+        19.478
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        45,
+        18.926
+      ],
+      [
+        "ϩⲛ",
+        161,
+        18.824
+      ],
+      [
+        ".",
+        158,
+        18.821
+      ],
+      [
+        "ⲁ",
+        221,
+        18.76
+      ],
+      [
+        "ϥ",
+        242,
+        18.631
+      ],
+      [
+        "ⲥⲉ",
+        98,
+        18.279
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        131,
+        17.918
+      ],
+      [
+        "ⲁⲩⲱ",
+        154,
+        17.9
+      ],
+      [
+        "ⲉϫⲛ",
+        53,
+        16.961
+      ],
+      [
+        "ⲩ",
+        119,
+        16.847
+      ],
+      [
+        "ⲛⲁⲓ",
+        49,
+        16.107
+      ],
+      [
+        "ϩⲉⲛ",
+        59,
+        16.075
+      ],
+      [
+        "ⲙ",
+        108,
+        15.968
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          433
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲉⲑⲛⲟⲥ",
+          68
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          68
+        ],
+        [
+          "ⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          50
+        ],
+        [
+          "ⲉ_1_post_ϩⲉⲑⲛⲟⲥ",
+          8
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          8
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲑⲛⲟⲥ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲑⲛⲟⲥ",
+          7
+        ],
+        [
+          "ⲁⲧϩⲏⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲑⲛⲟⲥ",
+          6
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          3
+        ],
+        [
+          "ϣⲙⲙⲟ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϩⲓϫⲙ_3_post_ϣⲟⲟⲡ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲉⲑⲛⲟⲥ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          "ⲉ_1_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          "ⲛ_1_post_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲁⲧϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ϣⲙⲙⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲑⲛⲟⲥ",
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          "ϩⲓϫⲙ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_0_node",
+          "ⲅⲁⲣ_1_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          "ⲛ_1_pre_ϩⲉⲑⲛⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.05,
+      "rank": 185,
+      "count": 802
+    },
+    "B": {
+      "rate": 8.02,
+      "rank": 139,
+      "count": 681
+    }
+  },
+  "etym": {
+    "grl_ID": "612",
+    "grl_lemma": "ἔθνος",
+    "grl_meaning": "people, nation, tribe",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 480a; Preisigke 1:418"
+  }
+}

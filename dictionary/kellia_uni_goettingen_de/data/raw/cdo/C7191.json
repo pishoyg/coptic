@@ -1,0 +1,289 @@
+{
+  "id": "C7191",
+  "forms": [
+    {
+      "id": "CF16441",
+      "orth": "ϫⲟⲟⲗⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3341,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ϫⲟⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5505,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲁⲗⲉⲥ",
+      "dialect": "A",
+      "id": "2404.2"
+    },
+    {
+      "orth": "ϫⲁⲁⲗⲉⲥ",
+      "dialect": "A",
+      "id": "2404.3"
+    },
+    {
+      "orth": "ϫⲁⲁⲗⲓ",
+      "dialect": "F",
+      "id": "2404.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7938",
+      "bibliography": "CD 769a; KoptHWb 420; DELC 326a; ChLCS 101b"
+    },
+    {
+      "id": "CS7939",
+      "bibliography": "CD 769a; KoptHWb 420; DELC 326a; ChLCS 101b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲉⲧⲛⲛⲕⲁ ⲉⲃⲟⲗ ⲧⲁⲁⲩ ⲙⲙⲛⲧⲛⲁ ⲙⲁⲧⲁⲙⲓⲟ ⲛⲏⲧⲛ ⲛϩⲉⲛⲧⲱⲱⲙⲉ ⲉⲛⲥⲉⲛⲁⲣⲁⲥ ⲁⲛ ⲛⲙⲟⲩⲁϩⲟ ⲛⲁⲧⲱϫⲛ ϩⲛⲙⲡⲏⲩⲉ ⲡⲙⲁ ⲉⲧⲉⲙⲉⲣⲉ ⲡⲉϥϫⲓⲟⲩⲉ ϩⲱⲛ ⲉⲣⲟϥ ⲁⲩⲱ ⲙⲉⲣⲉ**ϫⲟⲟⲗⲉⲥ** ⲧⲁⲕⲟϥ .",
+      "english": "Sell that which you have, and give gifts to the needy. Make for yourselves purses which don't grow old, a treasure in the heavens that doesn't fail, where no thief approaches, neither moth destroys.",
+      "source": "42_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲥⲱⲟⲩϩ ⲛⲏⲧⲛ ⲉϩⲟⲩⲛ ⲛϩⲛⲁϩⲟ ϩⲓϫⲙⲡⲕⲁϩ . ⲡⲙⲁ ⲛϣⲁⲣⲉ ⲧ**ϫⲟⲟⲗⲉⲥ** ⲙⲛⲧϩⲟⲟⲗⲉ ⲧⲁⲕⲟ ⲛϩⲏⲧϥ . ⲁⲩⲱ ⲡⲙⲁ ⲛϣⲁⲣⲉ ⲛⲣⲉϥϫⲓⲟⲩⲉ ϣⲟϫⲧ ⲉⲣⲟϥ ⲛⲥⲉϫⲓⲟⲩⲉ .",
+      "english": "'Don't lay up treasures for yourselves on the earth, where moth and rust consume, and where thieves break through and steal;",
+      "source": "40_Matthew_6",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲙⲉⲩⲣⲃⲟⲗ ⲉϣⲏⲃⲉ ϩⲓ**ϫⲟⲟⲗⲉⲥ** ⲉϣⲁⲩϭⲟⲗⲟⲩ ⲇⲉ ⲛϩⲉⲛϩⲟⲉⲓⲧⲉ ⲛϫⲏϭⲉ",
+      "english": "Yet cannot these gods save themselves from rust and moth, though they be covered with purple raiment.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲃⲉⲥⲕ",
+        1,
+        17.139
+      ],
+      [
+        "ϭⲟⲗⲟⲩ",
+        1,
+        17.139
+      ],
+      [
+        "ϩⲟⲟⲗⲉ",
+        2,
+        16.817
+      ],
+      [
+        "ⲧϩⲛⲟ",
+        1,
+        16.139
+      ],
+      [
+        "ϣⲏⲃⲉ",
+        1,
+        14.331
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        3,
+        13.811
+      ],
+      [
+        "ⲕⲟⲟⲩ",
+        1,
+        12.139
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        3,
+        12.034
+      ],
+      [
+        "ⲛ",
+        12,
+        11.104
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        10.631
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉ",
+        8,
+        10.358
+      ],
+      [
+        "ⲙⲁ",
+        3,
+        9.882
+      ],
+      [
+        "ⲁⲙⲛⲧⲉ",
+        1,
+        9.338
+      ],
+      [
+        "ⲩ",
+        5,
+        9.316
+      ],
+      [
+        "ⲉⲗⲟⲟⲗⲉ",
+        1,
+        9.293
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        1,
+        8.803
+      ],
+      [
+        "ⲡ",
+        6,
+        8.793
+      ],
+      [
+        "ⲧ",
+        4,
+        8.611
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        2,
+        8.38
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          8
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲕⲉⲉⲥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          "ⲇⲉ_1_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲟⲟⲗⲉⲥ",
+          "ⲛ_1_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲟⲗⲉⲥ",
+          "ⲛ_3_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲉⲉⲥ",
+          "ⲕⲉⲉⲥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2975,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7192",
+      "label": "ⲣϫⲟⲟⲗⲉⲥ",
+      "pos": "V",
+      "gloss": "be moth-eaten, rotten"
+    }
+  ]
+}

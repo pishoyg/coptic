@@ -1,0 +1,308 @@
+{
+  "id": "C3824",
+  "forms": [
+    {
+      "id": "CF9573",
+      "orth": "ⲥⲧⲙⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4337,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4339",
+      "bibliography": "CD 364b; KoptHWb 201, 541; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲕⲉⲟⲩⲁ ⲟⲩ**ⲥⲧⲙⲏⲧ** ⲡⲉ ⲉⲙⲁⲧⲉ ·",
+      "english": "The other was very obedient.",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁϥϣⲱⲡⲉ ⲛ**ⲥⲧⲙⲏⲧ** ϣⲁⲁ ϩⲣⲁⲓ ⲉⲡⲙⲟⲩ ·",
+      "english": "and He became obedient even unto death,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲛⲁⲩ ϫⲉⲟⲩ**ⲥⲧⲙⲏⲧ** ⲡⲉ .",
+      "english": "and I will see if he is obedient.”",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲁϫⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ϣⲁⲁ",
+        1,
+        13.155
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        9.77
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        9.406
+      ],
+      [
+        "ϣⲁϩⲣⲁⲓ",
+        1,
+        9.398
+      ],
+      [
+        "ⲉ",
+        5,
+        9.198
+      ],
+      [
+        "ⲛ",
+        6,
+        8.979
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        8.707
+      ],
+      [
+        "ⲁ",
+        4,
+        8.459
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        8.439
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ϥ",
+        4,
+        7.937
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        7.502
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        7.437
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        7.158
+      ],
+      [
+        ".",
+        2,
+        6.972
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        6.941
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.923
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        6.744
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲧⲙⲏⲧ_0_node",
+          4
+        ],
+        [
+          "ⲡ_2_pre_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲥⲧⲙⲏⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲥⲧⲙⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲧⲙⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ⲟⲩⲁ",
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_pre_ⲥⲧⲙⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲥⲧⲙⲏⲧ",
+          "ⲥⲧⲙⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲙⲏⲧ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲥⲧⲙⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲧⲙⲏⲧ",
+          "ⲥⲧⲙⲏⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3941,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3823",
+      "label": "ϭⲓⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, report"
+    },
+    {
+      "target": "C3825",
+      "label": "ⲁⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "disobedient"
+    },
+    {
+      "target": "C3816",
+      "label": "ⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "unhearing, disobedient"
+    },
+    {
+      "target": "C3819",
+      "label": "ⲙⲁⲓⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "loving to hear, to obey"
+    },
+    {
+      "target": "C3817",
+      "label": "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "disobedience"
+    },
+    {
+      "target": "C3822",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3826",
+      "label": "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3820",
+      "label": "ⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "place of hearing, music room"
+    },
+    {
+      "target": "C3818",
+      "label": "ⲣⲁⲧⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "be disobedient"
+    },
+    {
+      "target": "C3821",
+      "label": "ⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearer"
+    },
+    {
+      "target": "C3827",
+      "label": "ⲣⲥⲧⲙⲏⲧ",
+      "pos": "V",
+      "gloss": "be obedient"
+    },
+    {
+      "target": "C3812",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "hear"
+    },
+    {
+      "target": "C3815",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, obedience"
+    },
+    {
+      "target": "C3813",
+      "label": "ⲥⲱⲧⲙ (ⲛ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    },
+    {
+      "target": "C3814",
+      "label": "ⲥⲱⲧⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    }
+  ]
+}

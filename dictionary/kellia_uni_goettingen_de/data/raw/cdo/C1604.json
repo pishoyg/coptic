@@ -1,0 +1,309 @@
+{
+  "id": "C1604",
+  "forms": [
+    {
+      "id": "CF4664",
+      "orth": "ⲗⲁⲕⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2208,
+        "count": 25
+      }
+    },
+    {
+      "orth": "ⲗⲁⲕⲙⲉ",
+      "dialect": "S",
+      "id": "951.1"
+    },
+    {
+      "orth": "ⲗⲁⲕⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11445,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲁⲭⲙⲏ",
+      "dialect": "B",
+      "id": "951.3"
+    },
+    {
+      "orth": "ⲗⲉⲕⲙⲉ",
+      "dialect": "A",
+      "id": "951.4"
+    },
+    {
+      "orth": "ⲗⲉⲕⲙⲓ",
+      "dialect": "F",
+      "id": "951.5"
+    },
+    {
+      "orth": "ⲗⲉⲭⲙⲓ",
+      "dialect": "F",
+      "id": "951.6"
+    },
+    {
+      "orth": "ⲗⲉⲕⲙⲉ",
+      "dialect": "L",
+      "id": "951.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1867",
+      "bibliography": "CD 139a; KoptHWb 77; ChLCS 21a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϥⲓⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲕⲟⲧ ⲉⲩⲙⲉϩ ⲛ**ⲗⲁⲕⲙ** ⲁⲩϥⲓ ⲟⲛ ⲉⲃⲟⲗ ϩⲛⲛⲧⲃⲧ .",
+      "english": "They took up twelve baskets full of broken pieces and also of the fish.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲃⲟⲉⲥ ⲛⲁⲥ ϫⲉⲏⲇⲏ ⲁⲡⲛⲁⲩ ⲛⲟⲩⲱⲙ ϣⲱⲡⲉ ϯⲡⲟⲩⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲡⲉⲓⲙⲁ ⲛⲧⲉⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲉⲛⲟⲉⲓⲕ ⲁⲩⲱ ⲛⲧⲉⲥⲉⲡⲧⲟⲩ**ⲗⲁⲕⲙ** ϩⲙⲡϩⲙϫ ⲁⲩⲱ ϩⲣⲟⲩⲑ ⲁⲥϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲛⲥⲁⲥⲡⲓⲣ ⲛⲛⲉⲧⲱϩⲥ ⲁⲃⲟⲉⲥ ⲧⲁⲙⲓⲟ ⲛⲁⲥ ⲙⲡⲉⲧⲥⲛⲁⲟⲩⲟⲙϥ ⲁⲥⲟⲩⲱⲙ ⲁⲥⲥⲉⲓ ⲁⲥⲕⲱ ⲉⲡⲁϩⲟⲩ ⲙⲡⲥⲉⲉⲡⲉ",
+      "english": "And Booz said to her, Now it is time to eat; come hither, and thou shalt eat of the bread, and thou shalt dip thy morsel in the vinegar: and Ruth sat by the side of the reapers: and Booz handed her meal, and she ate, and was satisfied, and left.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲟⲩⲱⲙ ⲇⲉ ⲁⲩⲥⲉⲓ ⲁⲩⲱ ⲁⲩϥⲓ ⲛⲛ**ⲗⲁⲕⲙ** . ⲉⲛⲧⲁⲩⲣϩⲟⲩⲟ ⲉⲩⲛⲁⲣⲥⲁϣϥ ⲛⲃⲓⲣ",
+      "english": "They ate, and were filled. They took up seven baskets of broken pieces that were left over.",
+      "source": "Mark Chapter 8",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉϩ",
+        9,
+        16.968
+      ],
+      [
+        "ⲩ",
+        32,
+        16.166
+      ],
+      [
+        "ⲛⲟⲟⲩⲥ",
+        1,
+        15.954
+      ],
+      [
+        "ϩⲙϫ",
+        3,
+        15.802
+      ],
+      [
+        "ⲥⲉⲡ",
+        3,
+        15.755
+      ],
+      [
+        "ϥⲓ",
+        10,
+        15.533
+      ],
+      [
+        "ⲥⲓⲕⲉ",
+        2,
+        15.369
+      ],
+      [
+        "ⲛ",
+        39,
+        15.021
+      ],
+      [
+        "ⲥⲏⲏⲡⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲗⲁⲕⲙ",
+        2,
+        14.31
+      ],
+      [
+        "ⲡⲉϩ",
+        2,
+        13.745
+      ],
+      [
+        "ⲣϩⲟⲩⲟ",
+        2,
+        12.339
+      ],
+      [
+        "ⲧⲟⲩ",
+        3,
+        12.128
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        6,
+        11.856
+      ],
+      [
+        "ⲃⲓⲣ",
+        1,
+        11.562
+      ],
+      [
+        "ⲥⲉⲉⲡⲉ",
+        2,
+        11.199
+      ],
+      [
+        "ⲉ",
+        12,
+        10.928
+      ],
+      [
+        "ⲁ",
+        11,
+        10.779
+      ],
+      [
+        "ⲉⲛⲧ",
+        5,
+        10.515
+      ],
+      [
+        "...",
+        3,
+        10.416
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲕⲙ_0_node",
+          13
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲗⲁⲕⲙ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲗⲁⲕⲙ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲣϩⲟⲩⲟ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲣϩⲟⲩⲟ",
+          2
+        ],
+        [
+          "ⲣϩⲟⲩⲟ_2_post_ⲉⲛⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕⲙ",
+          2
+        ],
+        [
+          "ⲱⲛⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲥⲓⲕⲉ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_5_post_ⲥⲓⲕⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲟⲩ_1_pre_ⲗⲁⲕⲙ",
+          "ⲗⲁⲕⲙ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲕⲙ_0_node",
+          "ⲉⲛⲧ_1_post_ⲗⲁⲕⲙ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲗⲁⲕⲙ",
+          "ⲁ_3_post_ⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲣϩⲟⲩⲟ",
+          "ⲩ_3_post_ⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲣϩⲟⲩⲟ",
+          "ⲣϩⲟⲩⲟ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲗⲁⲕⲙ_0_node",
+          "ⲛ_1_post_ⲗⲁⲕⲙ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕⲙ",
+          "ⲱⲛⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲱⲛⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲱⲛⲉ",
+          "ⲥⲓⲕⲉ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲓⲕⲉ_4_post_ⲛ",
+          "ⲉⲃⲟⲗ_5_post_ⲥⲓⲕⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.16,
+      "rank": 1937,
+      "count": 25
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1605",
+      "label": "ⲣⲗⲁⲕⲙ ⲗⲁⲕⲙ",
+      "pos": "V",
+      "gloss": "break, tear in pieces"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "C3082",
+  "forms": [
+    {
+      "id": "CF8038",
+      "orth": "ⲣⲉϥⲣⲱⲕϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13163,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3530",
+      "bibliography": "CD 293b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲁϫⲉ ⲡⲉ ⲛⲣⲱⲙⲉ ⲛⲓⲙ · ⲡⲉⲓⲑⲏⲣⲓⲟⲛ ⲉⲧϩⲟⲟⲩ ⲛⲣⲉϥⲙⲉⲩⲧⲯⲩⲭⲏ · ⲡⲉⲓϩⲁⲗⲏⲧ ⲛⲣⲉϥⲧⲱⲣⲡ · ⲡⲉⲓϩⲟϥ ⲛⲣⲉϥⲗⲱⲕⲥ · ⲡⲕⲱϩⲧ ⲛ**ⲣⲉϥⲣⲱⲕϩ** · ⲡⲉⲓⲥⲟⲟⲛⲉ ⲛⲣⲉϥⲥⲩⲗⲁ ⲛⲛⲉⲯⲩⲭⲏ · ⲧⲏⲣⲟⲩ · ⲡⲛⲟⲃⲉ ⲡⲉⲓⲃⲁⲣⲃⲁⲣⲟⲥ ⲛⲣⲉϥϩⲱⲧⲃ · ⲡⲉⲓⲗⲏⲙⲏⲛ ⲉⲧϣⲧⲣⲧⲱⲣ ·",
+      "english": "It is the Enemy of every man, this evil beast which slayeth the soul, this bird which snatcheth greedily at its prey, this serpent which biteth, this fire which blazeth fiercely, this thief who carrieth off all souls (into) sin, this murderous barbarian, this troubled pool,",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲟⲛⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        1,
+        11.641
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        9.327
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲣⲱⲕϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12749,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3083",
+      "label": "ⲣⲟⲕϩ",
+      "pos": "N",
+      "gloss": "fuel, firewood"
+    },
+    {
+      "target": "C3084",
+      "label": "ⲣⲟⲕϩⲉ",
+      "pos": "N",
+      "gloss": "fuel"
+    },
+    {
+      "target": "C3085",
+      "label": "ⲣⲟⲭⲏ",
+      "pos": "N",
+      "gloss": "baked cake"
+    },
+    {
+      "target": "C3080",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "V",
+      "gloss": "burn"
+    },
+    {
+      "target": "C3081",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "N",
+      "gloss": "burning, fervour"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "C3255",
+  "forms": [
+    {
+      "id": "CF8396",
+      "orth": "ⲣⲁϩⲧⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18499,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3718",
+      "bibliography": "CD 312b; CED 143; KoptHWb 172; DELC 180; ChLCS 44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϫⲛⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ ⲛⲉⲩⲛϣϭⲟⲙ ⲛ**ⲣⲁϩⲧⲟⲩ** ⲉϩⲣⲁⲓ ϩⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ ⲁⲡϫⲓⲕⲃⲁ ⲡⲱⲧ ⲛⲥⲱⲟⲩ ⲁⲩⲱ ⲛⲥⲉϣⲁϣⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲛⲧⲉⲕϭⲟⲙ ⲁⲗⲗⲁ ⲁⲕⲧⲉϣϩⲱⲃ ⲛⲓⲙ ϩⲛⲟⲩⲣⲱϣⲉ ⲙⲛⲟⲩⲏⲡⲉ ⲙⲛⲟⲩϣⲓ",
+      "english": "For thou canst shew thy great strength at all times when thou wilt; and who may withstand the power of thine arm?",
+      "source": "Wisdom 11",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣϭⲟⲙ",
+        1,
+        13.532
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        10.412
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲁϩⲧⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲣⲁϩⲧⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_post_ⲣⲁϩⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲁϩⲧⲟⲩ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲣⲁϩⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲣⲁϩⲧⲟⲩ",
+          "ϩⲛ_2_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉϩⲣⲁⲓ",
+          "ⲟⲩ_2_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲡⲛⲉⲩⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁ_1_post_ⲣⲁϩⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_post_ⲣⲁϩⲧⲟⲩ",
+          "ⲛ_2_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18118,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d3541",
+    "demo_lemma": "rḥṱw",
+    "english": "[item of clothing]",
+    "german": "[Kleidungsstück]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3541"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C4812",
+  "forms": [
+    {
+      "id": "CF11589",
+      "orth": "ⲁⲧⲧⲁϩⲛⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5431",
+      "bibliography": "CD 460b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4813",
+      "label": "ϫⲓⲛⲧⲁϩⲛⲟ",
+      "pos": "N",
+      "gloss": "hindering, obstruction"
+    },
+    {
+      "target": "C4810",
+      "label": "ⲧⲁϩⲛⲟ",
+      "pos": "V",
+      "gloss": "hinder"
+    },
+    {
+      "target": "C4811",
+      "label": "ⲧⲁϩⲛⲟ",
+      "pos": "N",
+      "gloss": "hindrance (only with ⲁⲧϭⲛⲉ-, \"without hindrance\")"
+    }
+  ]
+}

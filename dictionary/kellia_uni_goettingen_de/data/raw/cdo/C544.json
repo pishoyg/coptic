@@ -1,0 +1,237 @@
+{
+  "id": "C544",
+  "forms": [
+    {
+      "id": "CF2110",
+      "orth": "ⲃⲁⲥⲛϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5860,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF2111",
+      "orth": "ⲃⲁⲥⲛϭ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲃⲁⲥⲉⲛϭ",
+      "dialect": "S",
+      "id": "604.1"
+    },
+    {
+      "orth": "ⲃⲁⲥⲛⲏϭ",
+      "dialect": "S",
+      "id": "604.2"
+    },
+    {
+      "orth": "ⲃⲁⲥⲏϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14734,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲁⲥⲓϭ",
+      "dialect": "S",
+      "id": "604.4"
+    },
+    {
+      "orth": "ⲃⲁⲥⲓⲛϭ",
+      "dialect": "A",
+      "id": "604.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS654",
+      "bibliography": "CD 44b; CED 27; KoptHWb 28, 495; DELC 32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲉⲓⲥ ⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩϣⲱⲡⲉ ⲛⲁⲓ ⲉⲩⲙⲟϫϭ ⲧⲏⲣⲟⲩ ⲙⲛⲡϩⲟⲙⲛⲧ ⲁⲩⲱ ⲡⲡⲉⲛⲓⲡⲉ ⲙⲛⲡ**ⲃⲁⲥⲛϭ** ⲙⲛⲡⲧⲁϩⲧ ⲉϥⲙⲟϫϭ ϩⲛⲧⲙⲏⲧⲉ ⲙⲡϩⲁⲧ",
+      "english": "Son of man, behold, the house of Israel are all become to me as it were mixed with brass, and iron, and tin, and lead; they are mixed up in the midst of the silver.",
+      "source": "Ezekiel 22",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲓⲙ ⲡⲉⲛⲧⲁϥϯⲥⲱϣ ⲛⲁⲕ ⲉϩⲉⲛⲕⲟⲩⲓ ⲛϩⲟⲟⲩ ⲁⲩⲱ ⲥⲉⲛⲁⲣⲁϣⲉ ⲛⲥⲉⲛⲁⲩ ⲉⲡⲱⲛⲉ ⲛ**ⲃⲁⲥⲛϭ** ϩⲛⲧϭⲓϫ ⲛⲍⲟⲣⲟⲃⲁⲃⲉⲗ ⲡⲥⲁϣϥ ⲛⲃⲁⲗ ⲙⲡϫⲟⲉⲓⲥ ⲛⲉ ⲛⲁⲓ ⲉⲧϭⲱϣⲧ ⲉϫⲙⲡⲕⲁϩ ⲧⲏⲣϥ",
+      "english": "For who has despised the small days? surely they shall rejoice, and shall see the plummet of tin in the hand of Zorobabel: these are the seven eyes that look upon all the earth.",
+      "source": "Zechariah 4",
+      "urn": "urn:cts:copticLit:ot.zech.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲡⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲕⲥⲉⲩϩⲛⲟⲩⲃ ⲉϩⲟⲩⲛ ⲛⲧϩⲉ ⲙⲡ**ⲃⲁⲥⲛϭ** ⲁⲩⲱ ⲡϩⲁⲧ ⲛⲧϩⲉ ⲙⲡⲧⲁϩⲧ",
+      "english": "By the name of the Lord God, which is called the Lord God of Israel, thou didst gather gold as tin and didst multiply silver as lead.",
+      "source": "Sirach 47",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϩⲧ",
+        2,
+        17.898
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        2,
+        15.294
+      ],
+      [
+        "ⲡ",
+        9,
+        12.007
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        10.644
+      ],
+      [
+        "ϩⲁⲧ",
+        1,
+        10.249
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        9.926
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ⲧ",
+        3,
+        8.826
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        7.974
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.727
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲥⲛϭ_0_node",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲁⲥⲛϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_1_post_ⲃⲁⲥⲛϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲃⲁⲥⲛϭ",
+          "ⲃⲁⲥⲛϭ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲥⲛϭ_0_node",
+          "ⲁⲩⲱ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲁⲧ",
+          "ⲡ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲧ",
+          "ϩⲁⲧ_1_post_ⲃⲁⲥⲛϭ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_1_post_ⲃⲁⲥⲛϭ",
+          "ⲛ_2_post_ϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲧ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5418,
+      "count": 4
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C320",
+      "type": "cf",
+      "label": "prefix in names of metals"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "C10011",
+  "forms": [
+    {
+      "id": "CF26154",
+      "orth": "ⲡⲁⲛⲥⲟⲫⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26155",
+      "orth": "ⲡⲁⲛⲥⲟⲫⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17303,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13086",
+      "bibliography": "DDGLC",
+      "cu_ID": "4278"
+    },
+    {
+      "id": "CS13087",
+      "bibliography": "DDGLC",
+      "cu_ID": "5967"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲕⲧⲟⲓ ⲁⲓⲛⲁⲩ ϩⲁⲣⲟϥ ⲙⲡⲣⲏ ϫⲉⲡⲡⲱⲧ ⲙⲡⲁⲧⲛⲕⲟⲩⲫⲟⲥ ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲡⲡⲟⲗⲉⲙⲟⲥ ⲙⲡⲁⲧⲛϫⲱⲱⲣⲉ ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲡⲟⲉⲓⲕ ⲙ**ⲡⲁⲛⲥⲟⲫⲟⲥ** ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲧⲙⲛⲧⲣⲙⲙⲁⲟ ⲛⲧⲁⲛⲣⲙⲛϩⲏⲧ ⲁⲛ ⲧⲉ ⲁⲩⲱ ⲧⲉⲭⲁⲣⲓⲥ ⲛⲧⲁⲛⲣⲉϥⲛⲟⲓ ⲁⲛ ⲧⲉ ⲡⲉⲩⲟⲩⲟⲉⲓϣ ⲙⲛⲟⲩⲁⲡⲁⲛⲧⲏⲙⲁ ⲡⲉⲧⲛⲁⲧⲁϩⲟⲟⲩ ⲧⲏⲣⲟⲩ",
+      "english": "I returned, and saw under the sun, that the race is not to the swift, nor the battle to the strong, nor yet bread to the wise, nor yet wealth to men of understanding, nor yet favour to men of knowledge; for time and chance will happen to them all.",
+      "source": "Ecclesiastes 9",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲉⲓⲕ",
+        1,
+        11.67
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        8.747
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16914,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3649",
+    "grl_lemma": "πάνσοφος",
+    "grl_meaning": "most clever",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1299a; Preisigke 2:228"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C7537",
+  "forms": [
+    {
+      "id": "CF17133",
+      "orth": "ϭⲁϫⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8355",
+      "bibliography": "CD 800b; KoptHWb 444; DELC 334-335; ChLCS 105b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7534",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted person"
+    },
+    {
+      "target": "C7535",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted"
+    },
+    {
+      "target": "C7538",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left"
+    },
+    {
+      "target": "C7536",
+      "label": "ⲟⲓ ⲛϫⲁϭⲉ",
+      "pos": "VSTAT",
+      "gloss": "be lame"
+    },
+    {
+      "target": "C7539",
+      "label": "ⲣϭⲁϫⲏ",
+      "pos": "V",
+      "gloss": "be small, weak(?)"
+    }
+  ]
+}

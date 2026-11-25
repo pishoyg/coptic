@@ -1,0 +1,82 @@
+{
+  "id": "C6885",
+  "forms": [
+    {
+      "id": "CF15819",
+      "orth": "ⲉϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11148,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7602",
+      "bibliography": "CD 717b; KoptHWb 395; DELC 315a; ChLCS 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϩⲧⲟⲟⲩⲉ · ⲇⲉ ϣⲱⲡⲉ ⲁⲛⲉⲓ **ⲉϩⲏⲧ** ⲉϯⲧⲕⲟⲟϩ ·",
+      "english": "And when morning came, we went north to Tetkooh.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲧⲕⲟⲟϩ",
+        1,
+        18.598
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10735,
+      "count": 1
+    }
+  },
+  "type": "compound"
+}

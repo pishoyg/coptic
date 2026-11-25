@@ -1,0 +1,294 @@
+{
+  "id": "C2548",
+  "forms": [
+    {
+      "id": "CF6888",
+      "orth": "ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8892,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2928",
+      "bibliography": "CD 231a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲛⲁⲧⲁⲁⲩ ϩⲙⲡⲛⲟⲙⲟⲥ ⲉⲣⲉⲡⲉⲛⲟⲩϫⲁⲓ ϩⲛⲛⲁϩⲱⲱⲣ ⲉⲣⲉⲧⲥⲟⲫⲓⲁ ⲙⲛⲧⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲙⲛⲧ**ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ** ⲛⲏⲩ ⲛϩⲁⲣⲙ ⲡϫⲟⲉⲓⲥ ⲛⲁⲓ ⲛⲉ ⲛⲁϩⲱⲱⲣ ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "english": "They shall be delivered up to the law: our salvation is our treasure: there are wisdom and knowledge and piety toward the Lord; these are the treasures of righteousness.",
+      "source": "Isaiah 33",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲁⲙⲧⲟⲛ ⲙⲙⲟϥ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲥⲟⲫⲓⲁ ϩⲓⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛϣⲟϫⲛⲉ ϩⲓϭⲟⲙ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲥⲟⲟⲩⲛ ϩⲓ**ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ**",
+      "english": "and the Spirit of God shall rest upon him, the spirit of wisdom and understanding, the spirit of counsel and strength, the spirit of knowledge and godliness shall fill him;",
+      "source": "Isaiah 11",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲣⲙ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲛⲧⲣⲙⲛϩⲏⲧ",
+        1,
+        12.884
+      ],
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        11.389
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        9.56
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        9.412
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        8.951
+      ],
+      [
+        "ϩⲓ",
+        1,
+        8.231
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          "ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_b",
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+          "ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8443,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2551",
+      "label": "ϣⲁⲙϣⲉⲛⲟⲩϯ",
+      "pos": "N",
+      "gloss": "serving God, God-server"
+    },
+    {
+      "target": "C2550",
+      "label": "ϩⲁⲧⲃⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god-slaying"
+    },
+    {
+      "target": "C2555",
+      "label": "ϫⲡⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godbearing"
+    },
+    {
+      "target": "C2539",
+      "label": "ⲁⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godless"
+    },
+    {
+      "target": "C2542",
+      "label": "ⲙⲁⲓⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god loving"
+    },
+    {
+      "target": "C2544",
+      "label": "ⲙⲁⲥⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godbearing (of Virgin Mary)"
+    },
+    {
+      "target": "C2545",
+      "label": "ⲙⲁⲥⲧⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god-hater"
+    },
+    {
+      "target": "C2552",
+      "label": "ⲙⲉⲧϣⲁⲙϣⲉⲛⲟⲩϯ",
+      "pos": "N",
+      "gloss": "God-service, piety"
+    },
+    {
+      "target": "C2540",
+      "label": "ⲙⲛⲧⲁⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godlessness"
+    },
+    {
+      "target": "C2543",
+      "label": "ⲙⲛⲧⲙⲁⲓⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godliness, piety"
+    },
+    {
+      "target": "C2541",
+      "label": "ⲙⲛⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "divinity"
+    },
+    {
+      "target": "C2554",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲉⲙϣⲉ ⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "piety"
+    },
+    {
+      "target": "C2537",
+      "label": "ⲛⲉⲧⲟ",
+      "pos": "N",
+      "gloss": "the great god"
+    },
+    {
+      "target": "C2535",
+      "label": "ⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god"
+    },
+    {
+      "target": "C2538",
+      "label": "ⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godly, divine"
+    },
+    {
+      "target": "C2536",
+      "label": "ⲛⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "goddess"
+    },
+    {
+      "target": "C2553",
+      "label": "ⲣⲉϥϣⲉⲙϣⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "God-serving, pious person"
+    },
+    {
+      "target": "C2547",
+      "label": "ⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "man of god, godly person"
+    },
+    {
+      "target": "C2546",
+      "label": "ⲣⲛⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "be god"
+    },
+    {
+      "target": "C2549",
+      "label": "ⲣⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "be godly"
+    }
+  ]
+}

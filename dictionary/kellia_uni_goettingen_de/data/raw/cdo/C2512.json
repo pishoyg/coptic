@@ -1,0 +1,143 @@
+{
+  "id": "C2512",
+  "forms": [
+    {
+      "id": "CF6814",
+      "orth": "ⲛⲟⲩⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6214,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2891",
+      "bibliography": "CD 228b; KoptHWb 125"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲓ ⲛⲛⲉⲧⲉⲛⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ ⲡⲓⲁϧⲱⲙ ⲡⲓ**ⲛⲟⲩⲣⲓ** ⲡⲓⲛⲟϣⲉⲣ ⲡⲓⲁⲗⲓⲉⲧⲟⲛ",
+      "english": "And these of them ye shall not eat; the eagle, and the ossifrage, and the sea-eagle,",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲓ ⲟⲣⲃⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓϩⲁⲗⲁϯ ⲟⲩⲟϩ ⲛⲛⲉⲧⲉⲛⲟⲩⲟⲙⲟⲩ ϩⲁⲛⲱⲣⲉⲃ ⲛⲉ ⲡⲓⲁϧⲱⲙ ⲛⲉⲙⲡⲓ**ⲛⲟⲩⲣⲓ** ⲛⲉⲙⲡⲓⲁⲗⲗⲓⲁⲧⲟⲛ",
+      "english": "And these are the things which ye shall abhor of birds, and they shall not be eaten, they are an abomination: the eagle and the ossifrage, and the sea-eagle.",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲗⲗⲓⲁⲧⲟⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ⲡⲓⲁⲗⲓⲉⲧⲟⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ⲁϧⲱⲙ",
+        2,
+        16.94
+      ],
+      [
+        "ⲛⲟϣⲉⲣ",
+        1,
+        16.373
+      ],
+      [
+        "ⲡⲓ",
+        6,
+        12.526
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        11.243
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲛⲟⲩⲣⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲛⲟⲩⲣⲓ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲣⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲛⲟⲩⲣⲓ",
+          "ⲡⲓ_1_pre_ⲛⲟⲩⲣⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲛⲟⲩⲣⲓ",
+          "ⲛⲟⲩⲣⲓ_0_node",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5704,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2510",
+      "label": "ⲛⲟⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "vulture"
+    },
+    {
+      "target": "C2511",
+      "label": "ⲛⲟⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "vulture"
+    }
+  ],
+  "etym": {
+    "egy_num": "85040",
+    "egy_lemma": "nr.t",
+    "demo_num": "d3205",
+    "demo_lemma": "nrj.t",
+    "english": "vulture",
+    "german": "Geier",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/85040",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3205"
+  }
+}

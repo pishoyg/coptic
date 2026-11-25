@@ -1,0 +1,109 @@
+{
+  "id": "C8059",
+  "forms": [
+    {
+      "id": "CF18239",
+      "orth": "ⲁⲅⲅⲉⲗⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18240",
+      "orth": "ⲁⲅⲅⲉⲗⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13307,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8996",
+      "bibliography": "DDGLC",
+      "cu_ID": "3465"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ϩⲁⲣⲉϩ ⲉⲡⲱⲛϩ ⲁⲩⲱ ⲧⲥⲱⲧⲏⲣⲓⲁ · ⲙⲡⲙⲁⲓⲛⲟⲩⲧⲉ ⲛⲥⲟⲛ ⲉⲧⲧⲡⲟⲩⲣⲟⲧ · ⲛϥⲁⲁϥ ⲛⲙⲡϣⲁ ⲙⲧⲉⲩⲫⲣⲟⲥⲩⲛⲏ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ · ⲛϥϫⲟⲕϥ ⲉⲃⲟⲗ ϩⲙⲡⲃⲓⲟⲥ ⲛ**ⲁⲅⲅⲉⲗⲓⲕⲟⲥ** ⲛⲧⲁϥⲫⲟⲣⲉ ⲙⲙⲟϥ · ⲛⲧϩⲉ ⲛⲛⲉⲛⲉⲓⲟⲧⲉ ⲙⲡⲣⲟⲡⲁⲧⲱⲣ ⲛⲧⲕⲟⲓⲛⲱⲛⲓⲁ ⲛⲉϥ ⲙⲡⲉϥⲥⲙⲟⲩ ⲉϩⲣⲁⲓ ⲉϫⲱⲛ · ⲙⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ ϩⲁⲙⲏⲛ",
+      "english": "May God preserve for life and health (or, salvation) the God-loving brother . . , . Pourot, and make him to be worthy of the joy of the kingdom which is in the heavens. May he live to the full the angelic life which he hath assumed, even as did our fathers, the ancestors (of our) community, and may he (pour out) his blessing upon us, and upon all the saints likewise! Amen.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲟⲣⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲃⲓⲟⲥ",
+        1,
+        13.448
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲅⲅⲉⲗⲓⲕⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12897,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "10",
+    "grl_lemma": "ἀγγελικός",
+    "grl_meaning": "angelic",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 7a"
+  }
+}

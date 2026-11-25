@@ -1,0 +1,534 @@
+{
+  "id": "C7680",
+  "forms": [
+    {
+      "id": "CF17425",
+      "orth": "ϭⲗⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4256,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϭⲗⲟⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3107,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϭⲗⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3927,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϭⲗⲟⲟϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4466,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϭⲗⲱⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1397,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ϣⲗⲱⲧ",
+      "dialect": "B",
+      "id": "2552.5"
+    },
+    {
+      "orth": "ϭⲗⲱⲧ",
+      "dialect": "L",
+      "id": "2552.6"
+    },
+    {
+      "orth": "ϭⲗⲱⲧⲉ",
+      "dialect": "L",
+      "id": "2552.7"
+    },
+    {
+      "orth": "ϭⲗⲁⲧⲉ",
+      "dialect": "L",
+      "id": "2552.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8531",
+      "bibliography": "CD 813a; CED 329; KoptHWb 453; DELC 339ab; ChLCS 107b"
+    },
+    {
+      "id": "CS8532",
+      "bibliography": "CD 813a; KoptHWb 453; DELC 339ab; ChLCS 107b"
+    },
+    {
+      "id": "CS8533",
+      "bibliography": "KoptHWb 453; DELC 339ab; ChLCS 107b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉϥⲣϩⲛⲁϥ ⲉⲥⲁϩⲱⲱϥ ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲁⲃⲉⲛⲛⲏⲣ ⲇⲉ ⲁϥϫⲁⲧϥ ⲛⲧⲉϥⲗⲟⲅⲭⲏ ⲉϫⲛⲛⲉϥ**ϭⲗⲟⲟⲧⲉ** ⲛⲥⲁⲡⲁϩⲟⲩⲟ ⲁⲧⲗⲟⲅⲭⲏ ϫⲱⲧⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉϥϣⲁⲛⲡⲱϩ ⲉⲡⲙⲁ ⲛⲧⲁⲁⲍⲁⲏⲗ ϩⲉ ⲛϩⲏⲧϥ ⲁϥⲙⲟⲩ ϣⲁϥⲧⲱⲱϭⲉ ⲛϥⲁϩⲉⲣⲁⲧϥ",
+      "english": "And what does this mean? return to Joab thy brother? But he would not stand aloof; and Abenner smites him with the hinder end of the spear on the loins, and the spear went out behind him, and he falls there and dies on the spot: and it came to pass that every one that came to the place where Asael fell and died, stood still.",
+      "source": "II Samuel 2",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲧⲉⲁⲃⲉⲛⲛⲏⲣ ⲉϩⲣⲁⲓ ⲉⲭⲉⲃⲣⲱⲛ ⲓⲱⲁⲃ ⲇⲉ ⲁϥⲥⲟⲕϥ ⲛⲥⲁⲥⲡⲓⲣ ⲛⲧⲡⲩⲗⲏ ⲉϣⲁϫⲉ ⲛⲙⲙⲁϥ ⲉϥⲟ ⲛⲕⲣⲟϥ ⲉⲣⲟϥ ⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲙⲙⲟϥ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲉϫⲛⲛⲉϥ**ϭⲗⲟⲟⲧⲉ** ⲁϥⲙⲟⲩ ⲉⲧⲃⲉⲡⲉⲥⲛⲟϥ ⲛⲁⲍⲁⲏⲗ ⲡⲥⲟⲛ ⲛⲓⲱⲁⲃ",
+      "english": "And he brought back Abenner to Chebron, and Joab caused him to turn aside from the gate to speak to him, laying wait for him: and he smote him there in the loins, and he died for the blood of Asael the brother of Joab.",
+      "source": "II Samuel 3",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲱⲣⲕ ⲉⲣⲱⲧⲛ ⲛⲉⲧⲛⲛⲟϭ ⲛⲣⲁⲛ ⲙⲛⲛⲉⲧⲛⲙⲁ ⲛϣⲱⲡⲉ ⲉⲧⲉⲧⲛⲟⲩⲏϩ ⲛϩⲏⲧⲟⲩ ⲻ ϫⲉⲕⲁⲥ ⲉⲧⲉⲧⲛⲱⲗ ⲙⲡⲙⲁϩⲧ ⲇⲉⲓⲛⲁ ⲇⲉⲓⲛⲁ ⲙⲛⲛⲉϥ**ϭⲗⲟⲧⲉ**",
+      "english": "I adjure you ⟨by⟩ your great names and your dwelling places in which you dwell, that you contain the bowels ⟨of⟩ NN, child of NN, and his innards!",
+      "source": "PCM 1.5: Procedure for the healing of internal organs",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲱⲧ",
+        22,
+        21.149
+      ],
+      [
+        "ϩⲩⲡⲁⲣ",
+        3,
+        18.007
+      ],
+      [
+        "ⲛⲉⲙ",
+        32,
+        16.385
+      ],
+      [
+        "ⲃ",
+        9,
+        15.361
+      ],
+      [
+        "ⲡⲓ",
+        26,
+        15.014
+      ],
+      [
+        "ⲟⲗ",
+        5,
+        14.048
+      ],
+      [
+        "ⲛⲉϫⲓ",
+        4,
+        13.782
+      ],
+      [
+        "ⲛⲓ",
+        14,
+        12.782
+      ],
+      [
+        "ⲡⲓϩⲩⲡⲁⲣ",
+        1,
+        12.252
+      ],
+      [
+        "ϯ",
+        12,
+        12.187
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        2,
+        11.179
+      ],
+      [
+        "ⲥⲁϧⲟⲩⲛ",
+        2,
+        11.151
+      ],
+      [
+        "ⲥⲟⲡ",
+        3,
+        11.068
+      ],
+      [
+        "ⲉ",
+        12,
+        10.914
+      ],
+      [
+        "ⲗⲟⲃⲟⲥ",
+        1,
+        10.667
+      ],
+      [
+        "ϣⲟⲡⲧ",
+        1,
+        10.515
+      ],
+      [
+        "ϩⲏⲧ",
+        4,
+        10.513
+      ],
+      [
+        "ⲛ",
+        11,
+        10.111
+      ],
+      [
+        "ⲛⲁ",
+        8,
+        10.096
+      ],
+      [
+        "ϣⲱⲃⲧ",
+        1,
+        9.979
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲟⲉⲓϣ",
+        5,
+        19.297
+      ],
+      [
+        "ⲡⲱⲧ",
+        7,
+        14.65
+      ],
+      [
+        "ϩⲓϫⲱ",
+        4,
+        13.003
+      ],
+      [
+        "ⲙⲛ",
+        12,
+        12.592
+      ],
+      [
+        "ϩⲏⲡⲁⲣ",
+        1,
+        11.398
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        9.362
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        9.186
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        2,
+        9.113
+      ],
+      [
+        "ⲡ",
+        6,
+        7.445
+      ],
+      [
+        "ϩⲏ",
+        1,
+        6.297
+      ],
+      [
+        "ⲛ",
+        5,
+        5.967
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        4.701
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        3.057
+      ],
+      [
+        "ⲧ",
+        1,
+        1.264
+      ],
+      [
+        "ϥ",
+        1,
+        -0.286
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ϭⲗⲱⲧ",
+          6
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          29
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϭⲗⲱⲧ",
+          13
+        ],
+        [
+          "ⲡⲓ_1_pre_ϭⲗⲱⲧ",
+          9
+        ],
+        [
+          "ⲃ_1_post_ϭⲗⲱⲧ",
+          9
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲱⲧ",
+          6
+        ],
+        [
+          "ⲡⲓ_2_post_ⲱⲧ",
+          6
+        ],
+        [
+          "ⲛⲓ_1_pre_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲥⲛⲟⲩϯ_1_post_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲛⲓ_2_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϭⲗⲱⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϭⲗⲱⲧ",
+          "ⲡⲓ_1_pre_ϭⲗⲱⲧ",
+          5
+        ],
+        [
+          "ⲡⲓ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          5
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          "ⲃ_1_post_ϭⲗⲱⲧ",
+          5
+        ],
+        [
+          "ⲃ_1_post_ϭⲗⲱⲧ",
+          "ⲛⲉⲙ_2_post_ⲱⲧ",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲱⲧ",
+          "ⲡⲓ_2_post_ⲱⲧ",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϭⲗⲱⲧ",
+          "ⲛⲓ_1_pre_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϭⲗⲱⲧ",
+          "ϯ_1_pre_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          "ⲥⲛⲟⲩϯ_1_post_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          "ⲛⲉⲙ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲏⲧ",
+          "ⲛⲓ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϩⲏⲧ",
+          "ϩⲏⲧ_1_post_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          "ⲛⲧⲉ_1_post_ϭⲗⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϭⲗⲱⲧ",
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          "ⲥⲟⲩⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϭⲗⲱⲧ_0_node",
+          7
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          2
+        ],
+        [
+          "ⲡⲱⲧ_1_post_ϭⲗⲱⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲗⲱⲧ",
+          "ⲡⲉ_1_pre_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ϭⲗⲱⲧ",
+          "ϭⲗⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ϭⲗⲱⲧ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ϭⲗⲱⲧ",
+          2
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ϭⲗⲱⲧ",
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          "ⲡⲱⲧ_1_post_ϭⲗⲱⲧ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1853,
+      "count": 28
+    },
+    "B": {
+      "rate": 0.34,
+      "rank": 1217,
+      "count": 29
+    }
+  },
+  "etym": {
+    "egy_num": "168180",
+    "egy_lemma": "gr.tj",
+    "english": "kidneys (Sem. loan word)",
+    "german": "Nieren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/168180"
+  }
+}

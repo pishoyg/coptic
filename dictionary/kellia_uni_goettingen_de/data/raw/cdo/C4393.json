@@ -1,0 +1,208 @@
+{
+  "id": "C4393",
+  "forms": [
+    {
+      "id": "CF10738",
+      "orth": "ⲣⲧⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20316,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4976",
+      "bibliography": "CD 259b; KoptHWb 239; DELC 218b; ChLCS 59b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁϣ ⲛϩⲉ ⲕⲁⲓ ⲅⲁⲣ ⲉⲩϣⲁⲛⲣϩⲁϩ ⲛⲕⲟⲧⲥ ϣⲁⲧⲟⲩⲃⲱⲕ ⲉϩⲣⲁⲓ . ⲉϫⲙⲡⲁⲡⲃⲟ[ⲗ] .. .. ⲉⲧⲟⲩⲥⲙⲓⲛⲉ ⲙⲙⲟϥ ϩⲓϩⲟⲩⲛ ⲉⲧⲉⲡⲣⲱⲙⲉ ⲡⲉ ⲉⲓⲧⲉ ϩⲟⲟⲩⲧ ⲉⲓⲧⲉ ⲥϩⲓⲙⲉ ⲙⲛ.. ⲉϩⲱⲃ ⲟⲩⲇⲉ ⲙⲛⲕⲉⲧⲱϣ ⲙⲛⲕⲉⲥⲙⲟⲧ ⲛϩⲱⲧⲡ ⲉⲡⲛⲟⲩⲧⲉ ⲛⲥⲁ ϩⲁⲣⲁϩ ⲉⲛⲉϥⲛⲟⲙⲟⲥ ⲁⲩⲱ ⲭⲱⲣⲓⲥⲛⲉⲅⲣⲁⲫⲏ ⲙⲛⲣⲱⲙⲉ ⲛⲁϣⲧⲉⲕⲙⲡⲉϥϩⲏⲧ ⲉϩⲣⲁⲓ ϩⲛⲙⲡⲁⲣⲁϥⲩⲥⲓⲥ ⲛϥⲧⲣⲉϥ**ⲣⲧⲡⲉ** ⲙⲙⲟⲟⲩ ϩⲙⲡⲧⲃⲃⲟ ⲟⲩⲇⲉ ⲡⲉϥϩⲏⲧ ⲛⲁⲣⲃⲟⲗ ⲛⲛⲁⲡⲕⲁϩ ⲁⲛ ⲉⲛⲉϩ ⲉⲧⲣⲉϥϣⲱⲡⲉ ⲙⲛⲡⲉⲭⲣⲓⲥⲧⲟⲥ ϩⲛⲧⲡⲉ .",
+      "english": "...",
+      "source": "This Great House MONB.XG Fragment 1 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:460-465",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲧⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲃⲃⲟ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲧⲡⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲣⲧⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣⲧⲡⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲙ_1_post_ⲣⲧⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲧⲡⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲧⲃⲃⲟ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19930,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4402",
+      "label": "ϩⲓⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4400",
+      "label": "ϩⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4396",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C4398",
+      "label": "ⲙⲁ ⲛⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "upper part of the house"
+    },
+    {
+      "target": "C4399",
+      "label": "ⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4397",
+      "label": "ⲡⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "the top"
+    },
+    {
+      "target": "C4395",
+      "label": "ⲣϩⲓⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4394",
+      "label": "ⲣⲥⲁⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4401",
+      "label": "ⲥⲁⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4392",
+      "label": "ⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "what is above, upper part"
+    }
+  ]
+}

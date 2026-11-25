@@ -1,0 +1,103 @@
+{
+  "id": "C1920",
+  "forms": [
+    {
+      "id": "CF5490",
+      "orth": "ⲙⲟⲩⲛ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1376,
+        "count": 58
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2231",
+      "bibliography": "CD 172a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲃⲗ ⲡⲉϭⲗⲓⲗ ⲙⲡⲛⲁⲩ ⲛϣⲱⲣⲡ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲉⲧⲉⲡⲁⲓ ⲡⲉ ⲡϩⲟⲗⲟⲕⲁⲩⲧⲱⲙⲁ **ⲛⲧⲉⲡⲙⲟⲩⲛ **ⲉⲃⲟⲗ****",
+      "english": "Beside the perpetual whole-burnt-offering in the morning, which is a whole-burnt-sacrifice for a continuance,",
+      "source": "Numbers 28",
+      "urn": "urn:cts:copticLit:ot.num.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲕ ⲉϣⲱⲡⲉ ⲙⲉⲕϭⲱ **ϩⲛⲟⲩⲙⲟⲩⲛ **ⲉⲃⲟⲗ**** · ⲉⲕϣⲗⲏⲗ ϩⲁⲧⲁⲙⲛⲧⲉⲃⲓⲏⲛ · ⲧⲁⲣⲉⲡⲛⲟⲩⲧⲉ ϫⲟⲕⲧ ⲉⲃⲟⲗ ⲕⲁⲗⲱⲥ ϩⲛⲧϩⲩⲡⲟⲙⲟⲛⲏ ϣⲁⲛⲧⲉⲓϩⲱⲙ ⲉϫⲛⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡϫⲁϫⲉ · ⲗⲟⲓⲡⲟⲛ ⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁⲓ ⲉⲧⲣⲁⲃⲱⲕ ·",
+      "english": "but I entreat thee to I pray for my wretched state, and perhaps thou wilt continue to do so, that God may make me perfect in patient. endurance until I trample upon all the powder of the Enemy; besides the command (hath come) to me to go.'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱⲁⲕⲓⲙ ⲡⲛⲟϭ ⲛⲟⲩⲏⲏⲃ ⲙⲛⲟⲩⲏⲏⲃ ⲛⲓⲙ ⲉⲧⲁϩⲉⲣⲁⲧⲟⲩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲙⲛⲛⲉⲧϣⲙϣⲉ ⲙⲡϫⲟⲉⲓⲥ ⲉⲩϭⲟⲟⲗⲉ ⲛϩⲉⲛϭⲟⲟⲩⲛⲉ ⲉϫⲛⲛⲉⲩϯⲡⲉ ⲛⲉⲩⲧⲁⲗⲟⲟⲩ ⲡⲉ ⲉϩⲣⲁⲓ ⲙⲡⲉϭⲗⲓⲗ **ⲙⲡⲙⲟⲩⲛ **ⲉⲃⲟⲗ**** ⲁⲩⲱ ⲛⲉⲣⲏⲧ ⲙⲛⲛⲉⲧⲉϣⲁⲣⲉⲡⲗⲁⲟⲥ ⲧⲁⲁⲩ ϩⲁⲣⲟϥ",
+      "english": "And Joacim the high priest, and all the priests that stood before the Lord, and they which ministered unto the Lord, had their loins girt with sackcloth, and offered the daily burnt offerings, with the vows and free gifts of the people,",
+      "source": "Judith 4",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.98,
+      "rank": 629,
+      "count": 155
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1917",
+      "label": "ϫⲓⲛⲙⲟⲩⲛⲓ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1918",
+      "label": "ϫⲓⲛⲙⲟⲩⲛⲓ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1914",
+      "label": "ⲙⲏⲛ",
+      "pos": "ADV",
+      "gloss": "constantly, continuously"
+    },
+    {
+      "target": "C1913",
+      "label": "ⲙⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "remain, continue"
+    },
+    {
+      "target": "C1916",
+      "label": "ⲙⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1915",
+      "label": "ⲙⲟⲩⲛ (ⲉ-)",
+      "pos": "V",
+      "gloss": "remain by, wait upon, continue in"
+    },
+    {
+      "target": "C1919",
+      "label": "ⲙⲟⲩⲛ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "remain, continue"
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "id": "C6011",
+  "forms": [
+    {
+      "id": "CF14027",
+      "orth": "ϣⲱⲡϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5093,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϣⲱⲡϣ",
+      "dialect": "B",
+      "id": "475.1"
+    },
+    {
+      "orth": "ϣⲱⲃϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.81,
+        "rank": 826,
+        "count": 69
+      }
+    },
+    {
+      "orth": "ⳉⲱⲡϣ",
+      "dialect": "A",
+      "id": "475.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6695",
+      "bibliography": "CD 582a; CED 250; KoptHWb 323; DELC 269a; ChLCS 80a"
+    },
+    {
+      "id": "CS6696",
+      "bibliography": "CD 582a; CED 250; KoptHWb 323; DELC 269a; ChLCS 80a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥⲉϥⲓ ⲙⲙⲁⲩ ⲙⲡⲉϥ**ϣⲱⲡϣ** ⲙⲛⲛⲉϥⲧⲛϩ ⲛϥⲛⲟϫⲟⲩ ϩⲁⲧⲙ ⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲕⲁⲧⲁⲛⲣⲁϣⲁ ϩⲣⲁⲓ ⲉⲡⲙⲁ ⲙⲡⲕⲣⲙⲉⲥ",
+      "english": "And he shall take away the crop with the feathers, and shall cast it forth by the altar toward the east to the place of the ashes.",
+      "source": "Leviticus 1",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ϫⲓ ⲙⲡ**ϣⲱⲡϣ** ⲛⲟⲩⲉⲫⲑⲟⲛ ⲉⲃⲟⲗ ϩⲙⲡⲟⲉⲓⲗⲉ ⲁⲩⲱ ⲟⲩⲟⲉⲓⲕ ⲛⲁⲑⲁⲃ ⲉⲃⲟⲗ ϩⲙⲡϩⲱⲧ ⲙⲛⲟⲩϭⲱⲱⲗⲉ ⲛⲁⲑⲁⲃ ⲛϥⲧⲁⲗⲟⲟⲩ ⲉϩⲣⲁⲓ ⲉϫⲛⲛϭⲓϫ ⲙⲡⲉⲛⲧⲁϥⲉⲣⲏⲧ ⲙⲛⲛⲥⲁⲧⲣⲉϥϩⲱⲱⲕⲉ ⲛⲧⲉϥⲁⲡⲉ",
+      "english": "And the priest shall take the sodden shoulder of the ram, and one unleavened loaf from the basket, and one unleavened cake, and shall put them on the hands of the votary after he has shaved off his",
+      "source": "Numbers 6",
+      "urn": "urn:cts:copticLit:ot.num.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲉⲧϭⲓⲛⲙⲟⲩⲧ ⲙⲛⲡⲥⲟⲩⲛⲣⲟⲩϩⲉ ⲙⲛⲡ**ϣⲱⲡϣ** ⲙⲛⲛⲧⲁⲙⲉⲓⲟⲛ ⲙⲡⲣⲏⲥ",
+      "english": "Who makes Pleias, and Hesperus, and Arcturus, and the chambers of the south.",
+      "source": "Job 9",
+      "urn": "urn:cts:copticLit:ot.job.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲉⲫⲑⲟⲛ",
+        1,
+        18.276
+      ],
+      [
+        "ⲧⲛϩ",
+        1,
+        11.867
+      ],
+      [
+        "ⲧⲁⲙⲉⲓⲟⲛ",
+        1,
+        11.85
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        11.288
+      ],
+      [
+        "ϥⲓ",
+        2,
+        10.889
+      ],
+      [
+        "ⲣⲟⲩϩⲉ",
+        1,
+        10.858
+      ],
+      [
+        "ⲥⲟⲩⲛ",
+        1,
+        10.535
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        1,
+        9.875
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        9.768
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        1,
+        9.412
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        8.701
+      ],
+      [
+        "ⲛ",
+        5,
+        8.453
+      ],
+      [
+        "ⲡ",
+        4,
+        8.175
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.885
+      ],
+      [
+        "ⲙ",
+        3,
+        7.784
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.41
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        6.988
+      ],
+      [
+        "ϫⲓ",
+        1,
+        6.842
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.651
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.475
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ϣⲱⲡϣ_0_node",
+          5
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲧⲛϩ_1_post_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲡϣ",
+          3
+        ],
+        [
+          "ⲟⲩⲉⲫⲑⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲟⲩⲉⲫⲑⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϥⲓ",
+          1
+        ],
+        [
+          "ϥⲓ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϣⲱⲡϣ",
+          "ϣⲱⲡϣ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲡϣ_0_node",
+          "ⲙⲛ_2_post_ⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲛϩ",
+          "ⲛⲉϥ_2_post_ⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲧⲛϩ",
+          "ⲧⲛϩ_1_post_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ϣⲱⲡϣ_0_node",
+          "ⲛ_1_post_ϣⲱⲡϣ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲡϣ",
+          "ⲟⲩⲉⲫⲑⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲫⲑⲟⲛ_2_post_ⲛ",
+          "ⲉⲃⲟⲗ_3_post_ⲟⲩⲉⲫⲑⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲟⲩⲉⲫⲑⲟⲛ",
+          "ϩⲙ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_4_post_ⲉⲃⲟⲗ",
+          "ⲡ_4_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲡϣ",
+          "ϣⲱⲡϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲡϣ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲡ_4_post_ϥⲓ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϥⲓ",
+          "ϥⲓ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲱⲡϣ",
+          "ⲡ_1_pre_ϣⲱⲡϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲱⲡϣ",
+          "ϣⲱⲡϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲡϣ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4670,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.81,
+      "rank": 725,
+      "count": 69
+    }
+  },
+  "etym": {
+    "egy_num": "116430",
+    "egy_lemma": "ḫpš",
+    "demo_num": "d4473",
+    "demo_lemma": "ḫpš",
+    "english": "foreleg; thigh",
+    "german": "Vorderschenkel; Schenkel (allg.); Arm",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/116430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4473"
+  }
+}

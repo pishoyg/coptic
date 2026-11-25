@@ -1,0 +1,75 @@
+{
+  "id": "C4509",
+  "forms": [
+    {
+      "id": "CF10974",
+      "orth": "ⲁⲧⲧⲱⲣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5097",
+      "bibliography": "CD 431a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4515",
+      "label": "ⲑⲣⲁⲡⲥ",
+      "pos": "N",
+      "gloss": "awl, spike"
+    },
+    {
+      "target": "C4510",
+      "label": "ⲙⲁ ⲛⲑⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "darning needle"
+    },
+    {
+      "target": "C4511",
+      "label": "ⲙⲉϩⲧⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "darning needle"
+    },
+    {
+      "target": "C4512",
+      "label": "ⲛⲕⲁ ⲛⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "needle"
+    },
+    {
+      "target": "C4513",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4514",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4508",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "sew, stitch"
+    }
+  ]
+}

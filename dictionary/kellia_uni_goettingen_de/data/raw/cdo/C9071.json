@@ -1,0 +1,84 @@
+{
+  "id": "C9071",
+  "forms": [
+    {
+      "id": "CF22456",
+      "orth": "ⲉⲩⲉⲣⲅⲉⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22457",
+      "orth": "ⲉⲩⲉⲣⲅⲉⲧⲏⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11180",
+      "bibliography": "DDGLC",
+      "cu_ID": "1562"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲩⲧⲱⲕⲣⲁⲧⲱⲣ",
+        1,
+        19.013
+      ],
+      [
+        "ⲛⲛ",
+        1,
+        13.565
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲩⲉⲣⲅⲉⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "819",
+    "grl_lemma": "εὐεργέτης",
+    "grl_meaning": "benefactor, do-gooder",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 712a; Preisigke 1:611"
+  }
+}

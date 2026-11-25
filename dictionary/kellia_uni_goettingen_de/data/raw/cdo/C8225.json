@@ -1,0 +1,198 @@
+{
+  "id": "C8225",
+  "forms": [
+    {
+      "id": "CF18935",
+      "orth": "ⲁⲛⲁⲃⲁⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18936",
+      "orth": "ⲁⲛⲁⲃⲁⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6692,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9318",
+      "bibliography": "DDGLC",
+      "cu_ID": "4081"
+    },
+    {
+      "id": "CS9319",
+      "bibliography": "DDGLC",
+      "cu_ID": "8068"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲧⲟⲟⲩ ⲙⲡⲁⲙⲟⲣⲣⲁⲓⲟⲥ ⲁϥϭⲱⲡⲉ ϫⲓⲛⲧ**ⲁⲛⲁⲃⲁⲥⲓⲥ** ⲛⲁⲕⲣⲁⲃⲓⲛ ϫⲓⲛⲧⲡⲉⲧⲣⲁ ⲉϩⲣⲁⲓ",
+      "english": "And the border of the Amorite was from the going up of Acrabin, from the rock and upwards.",
+      "source": "Judges 1",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧ**ⲁⲛⲁⲃⲁⲥⲓⲥ** ϣⲱⲡⲉ · ⲉⲧⲙⲧⲣⲉⲡⲙⲟⲟⲩ ⲉⲓⲉϫⲙⲡ ⲉⲩⲡⲁⲓⲇⲉⲩⲥⲓⲥ ⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲉⲧⲃⲉⲛⲉⲩⲛⲟⲃⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:31-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧ**ⲁⲛⲁⲃⲁⲥⲓⲥ** ϣⲱⲡⲉ · ⲉⲧⲙⲧⲣⲉⲡⲙⲟⲟⲩ ⲉⲓ ⲉϫⲙⲡⲕⲁϩ ⲉⲩⲡⲁⲓⲇⲉⲩⲥⲓⲥ ⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲉⲧⲃⲉⲛⲉⲩⲛⲟⲃⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:31-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲱⲧ",
+        1,
+        12.14
+      ],
+      [
+        "ⲫⲏⲉⲧ",
+        1,
+        11.481
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.99
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.666
+      ],
+      [
+        "ⲧ",
+        1,
+        7.525
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲉⲗⲉⲩⲉ",
+        2,
+        14.709
+      ],
+      [
+        "ⲧⲙ",
+        2,
+        11.353
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        9.439
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲃⲁⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          "ⲁⲛⲁⲃⲁⲥⲓⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲁⲛⲁⲃⲁⲥⲓⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲁⲕⲣⲁⲃⲓⲛ_1_post_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          "ⲁⲛⲁⲃⲁⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲃⲁⲥⲓⲥ_0_node",
+          "ⲛⲁⲕⲣⲁⲃⲓⲛ_1_post_ⲁⲛⲁⲃⲁⲥⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6254,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "125",
+    "grl_lemma": "ἀνάβασις",
+    "grl_meaning": "going up, ascent",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 99a; Preisigke 1:76"
+  }
+}

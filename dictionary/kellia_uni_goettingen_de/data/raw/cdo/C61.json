@@ -1,0 +1,155 @@
+{
+  "id": "C61",
+  "forms": [
+    {
+      "id": "CF216",
+      "orth": "ⲁⲗⲓⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF217",
+      "orth": "ⲁⲗⲓⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9740,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF218",
+      "orth": "ⲁⲗⲓⲗⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS70",
+      "bibliography": "CD 6a; CED 5; KoptHWb 4, 485; DELC 8; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲡⲓ**ⲁⲗⲓⲗ** ⲛⲉⲙⲡⲓⲭⲁⲙⲏⲗⲉⲟⲛ ⲛⲉⲙⲡⲓⲁⲛⲑⲟⲩⲥ ⲛⲉⲙϯⲁϥⲗⲉⲗⲓ ⲛⲉⲙⲡⲓⲥⲡⲁⲗⲁⲝ",
+      "english": "the ferret, and the chameleon, and the evet, and the newt, and the mole.",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲁⲙⲏⲗⲉⲟⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲧⲱ",
+        1,
+        12.4
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        10.997
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲓⲗ",
+          1
+        ],
+        [
+          "ⲁⲗⲓⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          1
+        ],
+        [
+          "ⲭⲁⲙⲏⲗⲉⲟⲛ_1_post_ⲁⲗⲓⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲛⲑⲟⲩⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲓⲗ",
+          "ⲁⲗⲓⲗ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲓⲗ_0_node",
+          "ⲛⲉⲙ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          "ⲡⲓ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲭⲁⲙⲏⲗⲉⲟⲛ",
+          "ⲭⲁⲙⲏⲗⲉⲟⲛ_1_post_ⲁⲗⲓⲗ",
+          1
+        ],
+        [
+          "ⲭⲁⲙⲏⲗⲉⲟⲛ_1_post_ⲁⲗⲓⲗ",
+          "ⲛⲉⲙ_2_post_ⲁⲛⲑⲟⲩⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9199,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C668",
+      "type": "cf",
+      "label": "shrew mouse"
+    }
+  ],
+  "etym": {
+    "egy_num": "39410",
+    "egy_lemma": "ꜥrꜥr",
+    "demo_num": "d1057",
+    "demo_lemma": "ꜥlꜥl",
+    "english": "shrewmouse",
+    "german": "Spitzmaus",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1057"
+  }
+}

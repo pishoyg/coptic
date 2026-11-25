@@ -1,0 +1,153 @@
+{
+  "id": "C1841",
+  "forms": [
+    {
+      "id": "CF5305",
+      "orth": "ⲙⲟⲩⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9276,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2145",
+      "bibliography": "CD 161b-162a; KoptHWb 90"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲛⲁⲩ ⲉⲟⲩⲣⲁⲥⲟⲩⲓ ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲓⲥ ⲟⲩ**ⲙⲟⲩⲕⲓ** ⲉⲥⲧⲁϫⲣⲏⲟⲩⲧ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲣⲉϫⲱⲥ ϭⲓ ϣⲁⲉϩⲣⲏⲓ ⲉⲧⲫⲉ ⲟⲩⲟϩ ⲛⲁⲣⲉⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲁⲩⲛⲁ ⲉⲡϣⲱⲓ ⲟⲩⲟϩ ⲛⲁⲩⲛⲏⲟⲩ ⲉⲡⲉⲥⲏⲧ ϩⲓⲱⲧⲥ ⲡⲉ",
+      "english": "and dreamed, and behold a ladder fixed on the earth, whose top reached to heaven, and the angels of God ascended and descended on it.",
+      "source": "01_Genesis_28",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:28",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲁϫⲣⲏⲟⲩⲧ",
+        1,
+        13.566
+      ],
+      [
+        "ⲓⲥ",
+        1,
+        10.897
+      ],
+      [
+        "ϩⲏⲡⲡⲉ",
+        1,
+        10.148
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        9.471
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲡⲡⲉ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲩⲕⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲙⲟⲩⲕⲓ",
+          "ϩⲏⲡⲡⲉ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲡⲡⲉ_1_pre_ⲙⲟⲩⲕⲓ",
+          "ⲓⲥ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲙⲟⲩⲕⲓ",
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲕⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲕⲓ",
+          "ⲙⲟⲩⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲕⲓ_0_node",
+          "ⲉ_1_post_ⲙⲟⲩⲕⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8743,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "67450",
+    "egy_lemma": "mꜣq.t",
+    "demo_num": "d2724",
+    "demo_lemma": "mqj",
+    "english": "ladder",
+    "german": "Leiter",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/67450",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2724"
+  }
+}

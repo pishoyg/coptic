@@ -1,0 +1,138 @@
+{
+  "id": "C5639",
+  "forms": [
+    {
+      "id": "CF13254",
+      "orth": "ⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7709,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6349,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲱϩ",
+      "dialect": "L",
+      "id": "1839.2"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS6311",
+      "bibliography": "CD 536b; CED 232; KoptHWb 297; DELC 252a; ChLCS 74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲙⲁⲣⲧⲩⲣⲟⲥ ⲇⲉ · ⲁⲧϭⲟⲙ ⲙⲡⲛⲟⲩⲧⲉ **ⲱϩ** ⲛϩⲏⲧϥ · ⲙⲛⲧⲭⲁⲣⲓⲥ ⲁϥⲙⲟⲩⲛⲉ ⲉⲃⲟⲗ ⲛⲛⲟⲩⲛⲟϭ ⲛⲁⲩ · ϩⲛϯⲃⲁⲥⲁⲛⲟⲥ ⲧⲁⲓ ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲉⲡⲓⲑⲩⲙⲉⲓ ⲁⲩⲱ ⲙⲛⲧⲏⲧⲛ ⲧⲉⲧⲛϩⲱⲧⲃ ⲧⲉⲧⲛⲕ **ⲱϩ** ⲙⲛϭⲟⲙ ⲙⲙⲱⲧⲛ ⲙⲙⲁⲧⲉ ⲧⲉⲧⲛⲙⲓϣⲉ ⲁⲩⲱ ⲧⲉⲧⲛⲣ ⲡⲟⲗⲏⲙⲟⲥ ⲙⲛⲧⲛ ⲙⲙⲁⲩ ϫⲉⲛⲧⲉⲧⲛⲛⲁⲓⲧⲉⲓ ⲁⲛ",
+      "english": "You lust, and don't have. You kill, covet, and can't obtain. You fight and make war. You don't have, because you don't ask.",
+      "source": "59_James_4",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲧⲃ",
+        1,
+        12.418
+      ],
+      [
+        "ϭⲟⲙ",
+        2,
+        11.839
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        10.551
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        10.448
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        7.84
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.779
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7249,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "30160",
+    "egy_lemma": "jhj",
+    "demo_num": "d660",
+    "demo_lemma": "ı ͗hj",
+    "english": "Oho!",
+    "german": "[Interjektion]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/30160",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d660"
+  }
+}

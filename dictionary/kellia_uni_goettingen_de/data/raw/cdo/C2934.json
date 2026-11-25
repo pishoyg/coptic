@@ -1,0 +1,46 @@
+{
+  "id": "C2934",
+  "forms": [
+    {
+      "id": "CF7732",
+      "orth": "ⲣⲁ ⲙⲡⲓⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3359",
+      "bibliography": "CD 276a; KoptHWb 154, 160; ChLCS 38a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3029",
+      "type": "cf",
+      "label": "state, condition, position"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2933",
+      "label": "ⲡⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "bow (arcus)"
+    },
+    {
+      "target": "C12074",
+      "label": "ⲫⲏⲧⲧⲉ",
+      "pos": "N",
+      "gloss": "rainbow"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "C6356",
+  "forms": [
+    {
+      "id": "CF14727",
+      "orth": "ϩⲉ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.68,
+        "rank": 931,
+        "count": 107
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7052",
+      "bibliography": "CD 637b-638a; KoptHWb 349; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϣⲁϫⲉ ⲅⲁⲣ ⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲟⲩⲙⲛⲧⲥⲟϭ ⲙⲉⲛ ⲡⲉ **ⲛⲛⲉⲧⲛⲁϩⲉ **ⲉⲃⲟⲗ**** . ⲛⲁⲛ ⲇⲉ ⲛⲉⲧⲛⲁⲟⲩϫⲁⲓ . ⲟⲩϭⲟⲙ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ .",
+      "english": "For the word of the cross is foolishness to those who are dying, but to us who are saved it is the power of God.",
+      "source": "46_1 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ ⲡⲉϫⲁⲥ ⲛⲁⲥ ϫⲉϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲧⲁϣⲉⲉⲣⲉ ϣⲁⲛⲧⲉⲉⲓⲙⲉ ϫⲉⲙⲛⲗⲁⲁⲩ ⲛϣⲁϫⲉ **ⲛⲁϩⲉ **ⲉⲃⲟⲗ**** ⲙⲡⲣⲱⲙⲉ ⲅⲁⲣ ⲛⲁϭⲱ ⲁⲛ ⲉⲙⲡϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡϩⲟⲟⲩ ⲙⲡϣⲁϫⲉ",
+      "english": "And she said, Sit still, my daughter, until thou shalt know how the matter will fall out; for the man will not rest until the matter be accomplished this day.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲛⲉⲩϥⲱ **ϩⲉ **ⲉⲃⲟⲗ**** ϩⲛⲧⲉⲧⲛⲁⲡⲉ .",
+      "english": "And not a hair of your head will perish.",
+      "source": "42_Luke_21",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.67,
+      "rank": 804,
+      "count": 107
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6354",
+      "label": "ϩⲉ",
+      "pos": "V",
+      "gloss": "fall; light upon, find"
+    },
+    {
+      "target": "C6358",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "fall, destruction"
+    },
+    {
+      "target": "C6355",
+      "label": "ϩⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "fall upon, into"
+    },
+    {
+      "target": "C6357",
+      "label": "ϩⲉ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "fall down"
+    },
+    {
+      "target": "C6359",
+      "label": "ⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "indestructible"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "C2569",
+  "forms": [
+    {
+      "id": "CF6930",
+      "orth": "ⲛⲧⲟⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2268,
+        "count": 24
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2949",
+      "bibliography": "CD 232a; CED 113; KoptHWb 129; DELC 147; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲛⲉⲧⲟⲩⲛⲁϥⲓ ⲡⲉⲩⲣⲟⲟⲩϣ · ⲏ **ⲛⲧⲟⲟⲩⲛ** ⲉⲧⲟⲩϥⲓ ⲙⲡⲉⲩⲣⲟⲟⲩϣ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉ ⲭⲣⲏⲙⲁ ϩⲁⲙⲟⲓ **ⲛⲧⲟⲟⲩⲛ** · ⲉⲛⲉⲙⲡⲉ ⲡⲛⲟⲩⲃ ϣⲱⲡⲉ",
+      "english": "For money, oh would that gold did not exist!",
+      "source": "I See Your Eagerness: GL 29-30",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_29_30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ⲇⲉ ⲛϭⲓⲛⲉⲧⲥⲱⲧⲙ ϫⲉⲛⲓⲙ **ⲛⲧⲟⲟⲩⲛ** ⲛⲉⲧⲛⲁϣⲱⲛϩ .",
+      "english": "Those who heard it said, 'Then who can be saved?'",
+      "source": "42_Luke_18",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.013
+      ],
+      [
+        "ⲉⲡⲛⲟⲩⲃ",
+        1,
+        15.013
+      ],
+      [
+        "ⲥⲱⲡⲥ",
+        1,
+        15.013
+      ],
+      [
+        "ϩⲁⲙⲟⲓ",
+        2,
+        14.258
+      ],
+      [
+        "ⲙⲁⲉⲓⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ϫⲉ",
+        12,
+        12.316
+      ],
+      [
+        "ⲣⲥⲟⲫⲟⲥ",
+        1,
+        12.313
+      ],
+      [
+        "ⲭⲣⲏⲙⲁ",
+        2,
+        12.193
+      ],
+      [
+        "ⲡⲉ",
+        9,
+        11.433
+      ],
+      [
+        "ⲛⲁϣ",
+        1,
+        11.428
+      ],
+      [
+        "ⲛ",
+        16,
+        11.224
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        5,
+        11.161
+      ],
+      [
+        "ϯ",
+        6,
+        10.686
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        2,
+        10.587
+      ],
+      [
+        "ⲁ",
+        10,
+        10.425
+      ],
+      [
+        "ⲛⲟⲙⲟⲥ",
+        2,
+        10.047
+      ],
+      [
+        "ϩⲱ",
+        2,
+        9.779
+      ],
+      [
+        "ϭⲉ",
+        3,
+        9.62
+      ],
+      [
+        "ⲛⲁ",
+        7,
+        9.525
+      ],
+      [
+        "ⲙⲛⲧⲕⲟⲩⲓ",
+        1,
+        9.384
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.15,
+      "rank": 1984,
+      "count": 24
+    }
+  },
+  "type": "compound",
+  "etym": {
+    "egy_num": "66000",
+    "egy_lemma": "m-dwn",
+    "english": "furthermore; furthermore; usually",
+    "german": "ferner; weiterhin; gewöhnlich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/66000"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "C2632",
+  "forms": [
+    {
+      "id": "CF7066",
+      "orth": "*ⲛⲟⲩϥⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF7067",
+      "orth": "ⲛⲉϥⲣ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "VBD",
+    "subc": "Adjektivverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3018",
+      "bibliography": "CD 239b; CED 116; KoptHWb 133; DELC 150; ChLCS 34b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2635",
+      "label": "ⲙⲉⲧⲛⲟϥⲣⲓ",
+      "pos": "N",
+      "gloss": "good things"
+    },
+    {
+      "target": "C2636",
+      "label": "ⲙⲛⲧⲁⲧⲛⲟϥⲣⲉ",
+      "pos": "N",
+      "gloss": "unprofitableness"
+    },
+    {
+      "target": "C2633",
+      "label": "ⲛⲟϥⲣⲉ",
+      "pos": "N",
+      "gloss": "good, profit, advantage"
+    },
+    {
+      "target": "C2637",
+      "label": "ⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good"
+    },
+    {
+      "target": "C2634",
+      "label": "ⲣⲛⲟϥⲣⲉ",
+      "pos": "V",
+      "gloss": "be profitable"
+    }
+  ],
+  "etym": {
+    "egy_num": "854519",
+    "egy_lemma": "nfr",
+    "demo_num": "dm3275",
+    "demo_lemma": "nfr",
+    "english": "be good; be beautiful; be perfect; be complete; make beautiful",
+    "german": "gut sein; schön sein; vollkommen sein; vollendet sein; schön machen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854519",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3275"
+  }
+}

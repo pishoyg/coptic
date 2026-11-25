@@ -1,0 +1,151 @@
+{
+  "id": "C10358",
+  "forms": [
+    {
+      "id": "CF27604",
+      "orth": "ⲡⲣⲟⲫⲁⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27605",
+      "orth": "ⲡⲣⲟⲫⲁⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7217,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF27606",
+      "orth": "ⲡⲣⲱⲫⲁⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13954",
+      "bibliography": "DDGLC",
+      "cu_ID": "3468"
+    },
+    {
+      "id": "CS13955",
+      "bibliography": "DDGLC",
+      "cu_ID": "9592"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥϯ ⲛⲁⲕ ⲱ ⲡⲣⲙⲙⲁⲟ ⲛⲟⲩ**ⲡⲣⲟⲫⲁⲥⲓⲥ** ⲙⲙⲛⲧⲣⲙϩⲉ ⲙⲙⲉ ·",
+      "english": "He will give unto thee, O rich man, the occasion for true liberty.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲣⲙϩⲉ",
+        2,
+        17.691
+      ],
+      [
+        "ⲣⲙⲙⲁⲟ",
+        2,
+        15.232
+      ],
+      [
+        "ⲙⲉ",
+        2,
+        11.941
+      ],
+      [
+        "ⲙ",
+        4,
+        10.351
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲫⲁⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲫⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙϩⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲛⲧⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_4_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲫⲁⲥⲓⲥ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲫⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲫⲁⲥⲓⲥ",
+          "ⲙⲛⲧⲣⲙϩⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙϩⲉ_2_post_ⲙ",
+          "ⲙ_3_post_ⲙⲛⲧⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲛⲧⲣⲙϩⲉ",
+          "ⲙⲉ_4_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6766,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1879",
+    "grl_lemma": "πρόφασις",
+    "grl_meaning": "alleged motive, actual motive",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1539b; Preisigke 2:426"
+  }
+}

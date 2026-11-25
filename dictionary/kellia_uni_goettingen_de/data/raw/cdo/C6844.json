@@ -1,0 +1,343 @@
+{
+  "id": "C6844",
+  "forms": [
+    {
+      "id": "CF15737",
+      "orth": "ϩⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5609,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϩⲱⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2883,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ϩⲱⲣϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12572,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲣϭ-",
+      "dialect": "S",
+      "id": "986.3"
+    },
+    {
+      "orth": "ϩⲉⲣϭ-",
+      "dialect": "S",
+      "id": "986.4"
+    },
+    {
+      "orth": "ϩⲟⲣϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14252,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟⲣϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4116,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϩⲟⲣϫ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14252,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟⲣϫ⸗",
+      "dialect": "B",
+      "id": "986.8"
+    },
+    {
+      "orth": "ϩⲱⲣϭ",
+      "dialect": "L",
+      "id": "986.9"
+    },
+    {
+      "orth": "ϩⲁⲣϭ⸗",
+      "dialect": "L",
+      "id": "986.10"
+    },
+    {
+      "orth": "ϩⲁⲣϭ†",
+      "dialect": "L",
+      "id": "986.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7560",
+      "bibliography": "CD 709a; CED 296; KoptHWb 391; ChLCS 95a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲡⲱϣ ⲙⲡⲉⲛⲧⲁϥ**ϩⲱⲣϭ** ⲛⲙⲡⲏⲩⲉ ϩⲛⲧⲉϥⲥⲟⲫⲓⲁ ·",
+      "english": "They broke (the limbs) of Him that had heaped up the heavens in His wisdom.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ϩⲱⲣϭ** ⲛⲛϣⲉ ⲉϫⲱϥ · ⲁⲩⲱ ⲉⲛⲉⲙⲛⲟⲓⲗⲉ ⲙⲙⲁⲩ ⲡⲉ ·",
+      "english": "he heaped up wood upon the altar, and there was no ram there.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϫⲓ ⲛⲁⲃⲏⲥⲁⲗⲱⲙ ⲁⲩⲛⲟϫϥ ⲉϩⲣⲁⲓ ⲉⲩⲛⲟϭ ⲛⲟⲩⲱϣ ϩⲙⲡⲙⲁ ⲛϣⲏⲛ ⲉϩⲣⲁⲓ ⲉⲡⲛⲟϭ ⲛϩⲓⲉⲓⲧ ⲁⲩⲱ ⲁϥ**ϩⲱⲣϭ** ⲉϫⲱϥ ⲛⲟⲩⲛⲟϭ ⲛⲥⲟⲟⲩϩⲥ ⲛⲱⲛⲉ ⲡⲓⲥⲣⲁⲏⲗ ⲇⲉ ⲧⲏⲣϥ ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲧⲉϥⲥⲕⲏⲛⲏ",
+      "english": "And he took Abessalom, and cast him into a great cavern in the wood, into a deep pit, and set up over him a very great heap of stones: and all Israel fled every man to his tent.",
+      "source": "II Samuel 18",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲉⲓⲧ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛ",
+        10,
+        11.19
+      ],
+      [
+        "ⲉϫⲱ",
+        2,
+        10.161
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        1,
+        10.002
+      ],
+      [
+        "ϥ",
+        6,
+        9.692
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        9.225
+      ],
+      [
+        "ⲡⲏⲩⲉ",
+        1,
+        9.118
+      ],
+      [
+        "ϣⲉ",
+        1,
+        8.597
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.923
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.894
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.162
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.635
+      ],
+      [
+        "ⲡ",
+        1,
+        1.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          4
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          "ϩⲱⲣϭ_0_node",
+          4
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣϭ",
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          "ϥ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓϫⲱ",
+          "ⲙ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣϭ",
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4026,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6845",
+      "label": "ϩⲱⲣϭ",
+      "pos": "N",
+      "gloss": "order, harmony"
+    }
+  ]
+}

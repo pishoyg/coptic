@@ -1,0 +1,62 @@
+{
+  "id": "C2964",
+  "forms": [
+    {
+      "id": "CF7793",
+      "orth": "ⲫⲟϣⲛⲉϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3393",
+      "bibliography": "CD 279a; KoptHWb 155; DELC 166"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2961",
+      "label": "ϫⲓⲛⲫⲱϣⲛ",
+      "pos": "N",
+      "gloss": "service"
+    },
+    {
+      "target": "C2962",
+      "label": "ⲡⲁϣⲛⲉ",
+      "pos": "N",
+      "gloss": "service, ordination"
+    },
+    {
+      "target": "C2963",
+      "label": "ⲡⲁϣⲛⲉⲥ",
+      "pos": "N",
+      "gloss": "ordination"
+    },
+    {
+      "target": "C2958",
+      "label": "ⲡⲱϣⲛ",
+      "pos": "V",
+      "gloss": "do service, serve (as priest); serve, ordain (to office)"
+    },
+    {
+      "target": "C2959",
+      "label": "ⲡⲱϣⲛ",
+      "pos": "N",
+      "gloss": "service, ordination"
+    },
+    {
+      "target": "C2960",
+      "label": "ⲣⲉϥⲡⲱϣⲛ",
+      "pos": "N",
+      "gloss": "servant"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "C593",
+  "forms": [
+    {
+      "id": "CF2232",
+      "orth": "ⲃⲁϣⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19270,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2233",
+      "orth": "ⲃⲁϣⲟⲩϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7597,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS711",
+      "bibliography": "CD 47b; CED 29; KoptHWb 29; DELC 33; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲟⲩⲟⲓ ⲛⲱⲧⲉⲛ ⲛⲓⲫⲁⲣⲓⲥⲁⲓⲟⲥ ϫⲉⲧⲉⲧⲉⲛϯ ⲙⲫⲣⲉⲙⲏⲧ ⲙⲡⲓⲁϭⲓⲛⲛⲥⲑⲟⲓ ⲛⲉⲙⲡⲓ**ⲃⲁϣⲟⲩϣ** ⲛⲉⲙⲟⲩⲟϯ ⲛⲓⲃⲉⲛ ⲟⲩⲟϩ ⲧⲉⲧⲉⲛⲭⲱ ⲛⲥⲱⲧⲉⲛ ⲙⲡⲓϩⲁⲡ ⲛⲉⲙϯⲁⲅⲁⲡⲏ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲁⲓ ⲇⲉ ⲛⲁⲥⲙⲡϣⲁ ⲛⲧⲉⲧⲉⲛⲁⲓⲧⲟⲩ ⲟⲩⲟϩ ⲛⲓⲕⲉⲭⲱⲟⲩⲛⲓ ⲛⲧⲉⲧⲉⲛϣⲧⲉⲙⲭⲁⲩ ⲛⲥⲁⲑⲏⲛⲟⲩ .",
+      "english": "But woe to you Pharisees! For you tithe mint and rue and every herb, but you bypass justice and the love of God. You ought to have done these, and not to have left the other undone.",
+      "source": "03_Luke_11",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲟⲩⲟⲓ ⲛⲏⲧⲛ ⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ϫⲉⲧⲉⲧⲛϯ ⲙⲡⲣⲉⲙⲏⲧ ⲙⲫⲁϭⲓⲛⲛⲥⲧⲟⲓ ⲛⲙⲡ**ⲃⲁϣⲟⲩϣ** ⲛⲙⲟⲩⲟⲟⲧⲉ ⲛⲓⲙ ⲧⲉⲧⲛⲕⲱ ⲛⲥⲱⲧⲛ ⲙⲡϩⲁⲡ ⲛⲙⲧⲁⲅⲁⲡⲏ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲁⲓ ⲇⲉ ⲉϣϣⲉ ⲉⲁⲁⲩ ⲉⲧⲙⲕⲁ ⲛⲉⲓⲕⲟⲟⲩⲉ ⲛⲥⲁⲧⲏⲟⲩⲧⲛ .",
+      "english": "But woe to you Pharisees! For you tithe mint and rue and every herb, but you bypass justice and the love of God. You ought to have done these, and not to have left the other undone.",
+      "source": "42_Luke_11",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁϭⲓⲛⲛⲥⲑⲟⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲟϯ",
+        1,
+        14.608
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        9.243
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        1,
+        8.515
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲫⲁϭⲓⲛⲛ",
+        1,
+        20.598
+      ],
+      [
+        "ⲟⲟⲧⲉ",
+        1,
+        15.511
+      ],
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        14.954
+      ],
+      [
+        "ⲛⲙ",
+        2,
+        14.898
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲁϣⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲃⲁϣⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲃⲁϣⲟⲩϣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲃⲁϣⲟⲩϣ",
+          "ⲡⲓ_1_pre_ⲃⲁϣⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲃⲁϣⲟⲩϣ",
+          "ⲃⲁϣⲟⲩϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18883,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 7067,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d1800",
+    "demo_lemma": "bšwš(e)",
+    "english": "diamond",
+    "german": "Raute",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1800"
+  }
+}

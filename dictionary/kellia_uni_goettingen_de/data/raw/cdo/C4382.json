@@ -1,0 +1,162 @@
+{
+  "id": "C4382",
+  "forms": [
+    {
+      "id": "CF10716",
+      "orth": "ϫⲓⲧⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10579,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4963",
+      "bibliography": "CD 421a; KoptHWb 238"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲛⲧⲱⲥ ⲡⲉⲓⲙⲉ ⲏ ⲡⲉⲓⲟⲩⲣⲟⲧ ⲛⲧⲉⲓⲙⲓⲛⲉ · ⲡⲁⲟⲩⲯⲩⲭⲏ ⲡⲉ ⲙⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲁⲥ**ϫⲓⲧⲛϩ** ⲉⲥϩⲏⲗ ⲉⲧⲡⲉ ·",
+      "english": "Such desire or such readiness appertained to the soul of the philosopher, which took to itself wings and flew up into the sky.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲓⲗⲟⲥⲟⲫⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ϩⲏⲗ",
+        1,
+        15.276
+      ],
+      [
+        "ⲉ",
+        3,
+        9.572
+      ],
+      [
+        "ⲥ",
+        2,
+        9.274
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲓⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲓⲧⲛϩ",
+          1
+        ],
+        [
+          "ϫⲓⲧⲛϩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲓⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲓⲧⲛϩ",
+          "ⲥ_1_pre_ϫⲓⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϫⲓⲧⲛϩ",
+          "ϫⲓⲧⲛϩ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲧⲛϩ_0_node",
+          "ⲉ_1_post_ϫⲓⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲓⲧⲛϩ",
+          "ⲥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲏⲗ",
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10166,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4380",
+      "label": "ⲣⲉⲧⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4379",
+      "label": "ⲣⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4381",
+      "label": "ⲧⲁⲁⲧⲉⲧⲛϩ",
+      "pos": "V",
+      "gloss": "flap(?) wings"
+    },
+    {
+      "target": "C4378",
+      "label": "ⲧⲛϩ",
+      "pos": "N",
+      "gloss": "wing"
+    }
+  ]
+}

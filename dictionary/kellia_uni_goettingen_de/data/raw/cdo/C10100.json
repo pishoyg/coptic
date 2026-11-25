@@ -1,0 +1,136 @@
+{
+  "id": "C10100",
+  "forms": [
+    {
+      "id": "CF26516",
+      "orth": "ⲡⲁⲣⲟⲝⲩⲥⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26517",
+      "orth": "ⲡⲁⲣⲟⲝⲩⲥⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9260,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13307",
+      "bibliography": "DDGLC",
+      "cu_ID": "1685"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩ**ⲡⲁⲣⲟⲝⲩⲥⲙⲟⲥ** ⲇⲉ ϣⲱⲡⲉ . ϩⲱⲥⲧⲉ ⲛⲥⲉⲥⲁϩⲱⲟⲩ ⲉⲃⲟⲗ ⲛⲛⲉⲩⲉⲣⲏⲩ . ⲃⲁⲣⲛⲁⲃⲁⲥ ⲙⲉⲛ ⲁϥϫⲓ ⲙⲙⲁⲣⲕⲟⲥ ⲁϥⲥϭⲏⲣ ⲉϩⲣⲁⲓ ⲉⲕⲩⲡⲣⲟⲥ .",
+      "english": "Then the contention grew so sharp that they separated from each other. Barnabas took Mark with him, and sailed away to Cyprus,",
+      "source": "44_Acts of the Apostles_15",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲛϭⲱϣⲧ ⲛⲥⲁⲛⲉⲛⲉⲣⲏⲩ ⲉⲩ**ⲡⲁⲣⲟⲝⲩⲥⲙⲟⲥ** ⲛⲁⲅⲁⲡⲏ ⲙⲛϩⲉⲛϩⲃⲏⲩⲉ ⲉⲛⲁⲛⲟⲩⲟⲩ .",
+      "english": "Let us consider how to provoke one another to love and good works,",
+      "source": "58_Hebrews_10",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        11.327
+      ],
+      [
+        "ⲁⲅⲁⲡⲏ",
+        1,
+        11.206
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        10.08
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        9.573
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        9.087
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8829,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2771",
+    "grl_lemma": "παροξυσμός",
+    "grl_meaning": "irritation, exasperation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1343a"
+  }
+}

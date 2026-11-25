@@ -1,0 +1,943 @@
+{
+  "id": "C7332",
+  "forms": [
+    {
+      "id": "CF16723",
+      "orth": "ϫⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.03,
+        "rank": 703,
+        "count": 163
+      }
+    },
+    {
+      "orth": "ϭⲣⲟ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.91,
+        "rank": 763,
+        "count": 77
+      }
+    },
+    {
+      "orth": "ϭⲣⲟ",
+      "dialect": "S",
+      "id": "187.1"
+    },
+    {
+      "orth": "ϫⲣⲁⲉⲓⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3613,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ϭⲣⲁⲉⲓⲧ†",
+      "dialect": "S",
+      "id": "187.3"
+    },
+    {
+      "orth": "ϫⲣⲟⲉⲓⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8246,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲣⲟⲉⲓⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20364,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲣⲏⲟⲩⲧ†",
+      "dialect": "S",
+      "id": "187.6"
+    },
+    {
+      "orth": "ϭⲣⲏⲟⲩⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3751,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϫⲣⲟ",
+      "dialect": "A",
+      "id": "187.8"
+    },
+    {
+      "orth": "ϭⲣⲟ",
+      "dialect": "A",
+      "id": "187.9"
+    },
+    {
+      "orth": "ϫⲣⲁ",
+      "dialect": "F",
+      "id": "187.10"
+    },
+    {
+      "orth": "ϫⲁⲣⲏⲟⲩⲧ†",
+      "dialect": "F",
+      "id": "187.11"
+    },
+    {
+      "orth": "ϫⲣⲟ",
+      "dialect": "L",
+      "id": "187.12"
+    },
+    {
+      "orth": "ϭⲣⲟ",
+      "dialect": "L",
+      "id": "187.13"
+    },
+    {
+      "orth": "ϫⲣⲁⲉⲓⲧ†",
+      "dialect": "L",
+      "id": "187.14"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8104",
+      "bibliography": "CD 783ab; CED 319; KoptHWb 430-431; DELC 330a; ChLCS 103b"
+    },
+    {
+      "id": "CS8105",
+      "bibliography": "CD 783ab; CED 319; KoptHWb 430-431; DELC 330a; ChLCS 103b"
+    },
+    {
+      "id": "CS8106",
+      "bibliography": "CD 783b; KoptHWb 430-431; DELC 330a; ChLCS 103b"
+    },
+    {
+      "id": "CS8107",
+      "bibliography": "CD 783b; KoptHWb 430-431; DELC 330a; ChLCS 103b"
+    },
+    {
+      "id": "CS8108",
+      "bibliography": "CD 783b; KoptHWb 430-431; DELC 330a; ChLCS 103b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϭⲟⲉⲓⲥ ⲫⲛⲟⲩϯ ⲡⲉ ⲧⲁϫⲟⲙ ⲟⲩⲟϩ ⲉϥⲉⲑⲱϣ ⲛⲛⲁϭⲁⲗⲁⲩϫ ⲉⲟⲩⲥⲩⲛⲧⲉⲗⲓⲁ ϥⲛⲁⲧⲁⲗⲟⲓ ⲉϫⲉⲛⲛⲓϭⲓⲥⲓ ⲉⲑⲣⲓ**ϭⲣⲟ** ϧⲉⲛⲧⲉϥϩⲱⲇⲏ .",
+      "english": "The Lord God is my strength, and he will perfectly strengthen my feet; he mounts me upon high places, that I may conquer by his song.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϫⲣⲟ** ⲁⲩⲱ ⲛⲅϭⲙϭⲟⲙ · ϫⲉⲡⲛⲟⲩⲧⲉ ⲙⲓϣⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ·",
+      "english": "Peace be unto thee, O God-loving Emperor! Be strong, and of good courage, for God hath fought for thee.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲣⲱⲓⲥ ⲟⲩⲛ ⲟⲩⲟϩ ⲟϩⲓ ⲉⲣⲁⲧ ⲉⲛⲑⲏⲛⲟⲩ ϧⲉⲛⲫⲛⲁϩϯ **ϭⲣⲟ** ⲙⲙⲱⲧⲉⲛ ⲟⲩⲟϩ ϫⲉⲙⲛⲟⲙϯ .",
+      "english": "Watch! Stand firm in the faith! Be courageous! Be strong!",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲁⲡⲥ ⲅⲁⲣ ⲡⲉ ⲉⲧⲣⲉⲕⲉⲓⲱⲃ ⲛⲃⲣⲣⲉ ϣⲱⲡⲉ ϩⲛⲛⲉⲓⲕⲁⲓⲣⲟⲥ · ⲡⲁⲓ ⲉⲧⲛⲁ**ϫⲣⲟ** ⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ · ϩⲙⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⁛",
+      "english": "For needs must that thou shouldst become a second Job, in these times, who shall vanquish the Devil in temptation.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ ⲙⲱⲩⲥⲏⲥ ϩⲟⲛϩⲉⲛ ⲉⲧⲟⲧϥ ⲛⲓⲏⲥⲟⲩ ⲡϣⲏⲣⲓ ⲛⲛⲁⲩⲏ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉ**ϭⲣⲟ** ⲙⲙⲟⲕ ⲟⲩⲟϩ ϫⲉⲙⲛⲟⲙϯ ⲛⲑⲟⲕ ⲅⲁⲣ ⲉⲧⲛⲁϭⲓ ⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉϧⲟⲩⲛ ⲉⲡⲓⲕⲁϩⲓ ⲉⲧⲁϥⲱⲣⲕ ⲛⲱⲟⲩ ⲉⲣⲟϥ ⲛϫⲉⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲛⲑⲟϥ ⲉϥⲉϣⲱⲡⲓ ⲛⲉⲙⲁⲕ",
+      "english": "And he charged Joshua, and said, Be courageous and strong, for thou shalt bring the sons of Israel into the land, which the Lord sware to them, and he shall be with thee.",
+      "source": "05_Deuteronomium_31",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:31",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲁϩⲩⲡⲟⲙⲉⲓⲛⲉ ⲉⲡϫⲟⲉⲓⲥ **ϫⲣⲟ** ⲁⲩⲱ ⲙⲁⲣⲉⲡⲉⲕϩⲏⲧ ⲧⲱⲕ ⲛⲅϩⲩⲡⲟⲙⲉⲓⲛⲉ ⲉⲡϫⲟⲉⲓⲥ",
+      "english": "Wait on the Lord: be of good courage, and let thy heart be strengthened: yea wait on the Lord.",
+      "source": "Psalms 26",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲉⲙⲛⲟⲙϯ",
+        7,
+        22.259
+      ],
+      [
+        "ⲛⲁ",
+        39,
+        21.811
+      ],
+      [
+        "ⲉⲣⲱ",
+        17,
+        21.657
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        41,
+        21.153
+      ],
+      [
+        "ⲉ",
+        36,
+        20.527
+      ],
+      [
+        "ⲉⲣⲟ",
+        17,
+        20.379
+      ],
+      [
+        ".",
+        29,
+        20.19
+      ],
+      [
+        "ϥ",
+        36,
+        19.934
+      ],
+      [
+        "ⲑⲱⲛ",
+        6,
+        19.835
+      ],
+      [
+        "ϩⲁⲛ..........",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲟϫⲡⲉⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲣⲱⲛⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉⲡϩⲁⲡ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲉⲛⲱⲃϣ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁ",
+        29,
+        19.563
+      ],
+      [
+        "ⲫⲏ",
+        13,
+        19.459
+      ],
+      [
+        "ⲧⲉⲛ",
+        16,
+        19.401
+      ],
+      [
+        "ⲡⲟⲛⲏⲣⲟⲥ",
+        2,
+        18.888
+      ],
+      [
+        "ⲕ",
+        15,
+        18.849
+      ],
+      [
+        "ⲧⲥⲁⲃⲏⲟⲩⲧ",
+        1,
+        18.695
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        20.896
+      ],
+      [
+        "ⲉ",
+        121,
+        17.45
+      ],
+      [
+        "ⲡ",
+        129,
+        17.407
+      ],
+      [
+        "ⲉⲣⲟ",
+        45,
+        15.836
+      ],
+      [
+        "ϥ",
+        77,
+        15.198
+      ],
+      [
+        "ⲁ",
+        61,
+        14.712
+      ],
+      [
+        "ϩⲙ",
+        35,
+        14.677
+      ],
+      [
+        "ⲃⲓⲕⲧⲱⲣⲓⲁ",
+        2,
+        14.474
+      ],
+      [
+        "ⲛ",
+        73,
+        14.254
+      ],
+      [
+        "ⲙⲟⲩ",
+        18,
+        14.129
+      ],
+      [
+        "ϭⲙϭⲟⲙ",
+        11,
+        14.055
+      ],
+      [
+        "ⲛⲁ",
+        43,
+        13.843
+      ],
+      [
+        "ⲁⲩⲱ",
+        42,
+        13.8
+      ],
+      [
+        "ⲡⲉ",
+        33,
+        13.517
+      ],
+      [
+        "ⲕ",
+        30,
+        13.449
+      ],
+      [
+        "ⲟⲩ",
+        42,
+        13.273
+      ],
+      [
+        "ⲙ",
+        37,
+        12.855
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        12.474
+      ],
+      [
+        "ⲁⲙⲁⲁⲏⲕ",
+        1,
+        12.474
+      ],
+      [
+        "ⲉⲣⲟϥⲁⲛ",
+        1,
+        12.474
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲣⲟ_0_node",
+          39
+        ],
+        [
+          "ⲩ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ϩⲙ_1_post_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          3
+        ],
+        [
+          "ⲡⲟⲗⲉⲙⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲣⲟ",
+          4
+        ],
+        [
+          "ⲡⲉ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_2_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ϭⲙϭⲟⲙ_1_post_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲣⲟ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲧⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_4_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ϩⲁϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲣⲃⲁⲣⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲣⲟ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟϭ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲥⲁϥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_pre_ϯ",
+          1
+        ],
+        [
+          "ⲛ_4_pre_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ϯ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ⲛⲏⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲣⲟ",
+          "ϥ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ϩⲙ_1_post_ϫⲣⲟ",
+          2
+        ],
+        [
+          "ϩⲙ_1_post_ϫⲣⲟ",
+          "ⲡ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲡⲟⲗⲉⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲣⲟ",
+          "ⲡⲉ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϫⲣⲟ",
+          "ⲧⲁ_1_pre_ϫⲣⲟ",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          2
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲛ_2_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲙϭⲟⲙ",
+          "ⲧⲉⲧⲛ_2_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_2_post_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲉⲣⲟ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲣⲟ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲧⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_3_post_ⲡ",
+          "ϥ_4_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲧⲣⲉ",
+          "ϣⲱⲡⲉ_4_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲣⲟ",
+          "ⲡⲉϥ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲛ_1_post_ϫⲣⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟ",
+          "ϩⲁϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁϩ_2_post_ⲛ",
+          "ⲛ_3_post_ϩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲃⲁⲣⲃⲁⲣⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ϭⲙϭⲟⲙ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_1_post_ϫⲣⲟ",
+          "ⲉⲛⲧ_2_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ϭⲙϭⲟⲙ",
+          "ⲁ_4_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϭⲙϭⲟⲙ",
+          "ϥ_4_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲣⲟ",
+          "ⲡⲉⲓ_1_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧⲣⲣⲟ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲣⲟ_3_post_ⲧ",
+          "ⲛ_4_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲛⲧⲣⲣⲟ",
+          "ⲙ_4_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          "ⲧ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲛⲧⲛⲟϭ",
+          "ⲙⲛⲧⲛⲟϭ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟϭ_1_post_ϫⲣⲟ",
+          "ⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛⲧⲛⲟϭ",
+          "ⲥⲁϥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_pre_ϯ",
+          "ⲛ_4_pre_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_4_pre_ⲉⲣⲟ",
+          "ϫⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲉⲧ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲣⲟ",
+          "ⲟⲩ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ϯ",
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_0_node",
+          "ⲡ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲏⲓ",
+          "ⲏⲓ_1_post_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ϫⲣⲟ",
+          "ⲇⲉ_2_post_ⲛⲏⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.76,
+      "rank": 421,
+      "count": 279
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7343",
+      "label": "ϫⲉⲙϫⲱⲣⲓ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7339",
+      "label": "ϫⲟⲟⲣ",
+      "pos": "VSTAT",
+      "gloss": "be strong, hard, bold"
+    },
+    {
+      "target": "C7333",
+      "label": "ϫⲣⲟ",
+      "pos": "N",
+      "gloss": "strength; victory; health"
+    },
+    {
+      "target": "C7340",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "power, strength"
+    },
+    {
+      "target": "C7341",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strong, powerful"
+    },
+    {
+      "target": "C7344",
+      "label": "ϭⲉⲡϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "use strength, force"
+    },
+    {
+      "target": "C7338",
+      "label": "ϭⲓⲛϫⲣⲟ",
+      "pos": "N",
+      "gloss": "victory"
+    },
+    {
+      "target": "C7348",
+      "label": "ϯϫⲣⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "encourage, console"
+    },
+    {
+      "target": "C7335",
+      "label": "ⲁⲧϫⲣⲟ",
+      "pos": "N",
+      "gloss": "unconquerable"
+    },
+    {
+      "target": "C7336",
+      "label": "ⲙⲁⲓϫⲣⲟ",
+      "pos": "N",
+      "gloss": "loving victory"
+    },
+    {
+      "target": "C7345",
+      "label": "ⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "strength, prowess, feat"
+    },
+    {
+      "target": "C7334",
+      "label": "ⲣϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be victorious"
+    },
+    {
+      "target": "C7342",
+      "label": "ⲣϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "be strong"
+    },
+    {
+      "target": "C7347",
+      "label": "ⲣⲉϥϫⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "strong man"
+    },
+    {
+      "target": "C7337",
+      "label": "ⲣⲉϥϫⲣⲟ",
+      "pos": "N",
+      "gloss": "victor (epithet of emperors, martyrs)"
+    },
+    {
+      "target": "C7346",
+      "label": "ⲣⲙⲛⲧϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "to gain strength"
+    }
+  ],
+  "etym": {
+    "egy_num": "184860",
+    "egy_lemma": "ḏrj",
+    "demo_num": "d7775",
+    "demo_lemma": "ḏr",
+    "english": "firm; stout",
+    "german": "fest; hart; tüchtig",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/184860",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7775"
+  }
+}

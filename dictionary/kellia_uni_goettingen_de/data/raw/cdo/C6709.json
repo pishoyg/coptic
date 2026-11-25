@@ -1,0 +1,73 @@
+{
+  "id": "C6709",
+  "forms": [
+    {
+      "id": "CF15463",
+      "orth": "ⲣϩⲛⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2382,
+        "count": 21
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7423",
+      "bibliography": "CD 690b; KoptHWb 375; DELC 303b; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲧⲛⲛⲁ**ⲣϩⲛⲁ**ϥⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "'We are pleasing to God,'",
+      "source": "Abraham Our Father: YA 525-30",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:10-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲣϩⲛⲁ**ϥ ⲉⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲛⲉϥϣⲡⲏⲣⲉ ·",
+      "english": "and he was pleased to make manifest his miracles.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲅⲁⲣ ϩⲛⲧⲥⲟⲫⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲡⲉⲡⲕⲟⲥⲙⲟⲥ ⲥⲟⲩⲛ ⲡⲛⲟⲩⲧⲉ ϩⲓⲧⲛⲧⲥⲟⲫⲓⲁ . ⲁϥ**ⲣϩⲛⲁ**ϥ ⲇⲉ ⲛϭⲓⲡⲛⲟⲩⲧⲉ ⲉⲧⲟⲩϫⲉⲛⲉⲧⲡⲓⲥⲧⲉⲩⲉ ϩⲓⲧⲛⲧⲙⲛⲧⲥⲟϭ ⲙⲡⲧⲁϣⲉⲟⲉⲓϣ .",
+      "english": "For seeing that in the wisdom of God, the world through its wisdom didn&apos;t know God, it was God&apos;s good pleasure through the foolishness of the preaching to save those who believe.",
+      "source": "46_1 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6707",
+      "label": "ϩⲛⲉ-",
+      "pos": "N",
+      "gloss": "will, desire"
+    },
+    {
+      "target": "C6708",
+      "label": "ϩⲛⲉ-",
+      "pos": "V",
+      "gloss": "will, desire, be willing"
+    }
+  ]
+}

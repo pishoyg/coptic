@@ -1,0 +1,73 @@
+{
+  "id": "C1237",
+  "forms": [
+    {
+      "id": "CF3874",
+      "orth": "ⲕⲟⲙⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲙⲏ",
+      "dialect": "S",
+      "id": "807.1"
+    },
+    {
+      "orth": "ⲕⲟⲙⲓ",
+      "dialect": "S",
+      "id": "807.2"
+    },
+    {
+      "orth": "ⲕⲙⲙⲉ",
+      "dialect": "S",
+      "id": "807.3"
+    },
+    {
+      "orth": "ⲕⲏⲙⲙⲉ",
+      "dialect": "S",
+      "id": "807.4"
+    },
+    {
+      "orth": "ⲕⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.21,
+        "rank": 321,
+        "count": 506
+      }
+    },
+    {
+      "orth": "ⲕⲟⲙⲏ",
+      "dialect": "B",
+      "id": "807.6"
+    },
+    {
+      "orth": "ⲕⲟⲙⲓ",
+      "dialect": "B",
+      "id": "807.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1432",
+      "bibliography": "CD 110b; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "160800",
+    "egy_lemma": "qmy.t",
+    "demo_num": "d6338",
+    "demo_lemma": "qmj",
+    "english": "gum; resin",
+    "german": "Harz; Gummi",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160800",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6338"
+  }
+}

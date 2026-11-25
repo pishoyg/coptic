@@ -1,0 +1,124 @@
+{
+  "id": "C3195",
+  "forms": [
+    {
+      "id": "CF8275",
+      "orth": "ⲣⲧⲟⲃ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉⲣⲧⲟⲃ",
+      "dialect": "S",
+      "id": "1344.1"
+    },
+    {
+      "orth": "ⲣⲧⲟϥ",
+      "dialect": "S",
+      "id": "1344.2"
+    },
+    {
+      "orth": "ⲉⲣⲧⲟϥ",
+      "dialect": "S",
+      "id": "1344.3"
+    },
+    {
+      "orth": "ⲣⲧⲁⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7266,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲉⲣⲧⲁⲃ",
+      "dialect": "S",
+      "id": "1344.5"
+    },
+    {
+      "orth": "ⲁⲣⲧⲟⲃ",
+      "dialect": "S",
+      "id": "1344.6"
+    },
+    {
+      "orth": "ⲁⲣⲧⲁⲃ",
+      "dialect": "S",
+      "id": "1344.7"
+    },
+    {
+      "orth": "ⲉⲣⲧⲟⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5230,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲉⲣⲧⲟⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11509,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲣⲧⲱⲃ",
+      "dialect": "B",
+      "id": "1344.10"
+    },
+    {
+      "orth": "ⲉⲣⲧⲁⲃ",
+      "dialect": "F",
+      "id": "1344.11"
+    },
+    {
+      "orth": "ⲉⲗⲧⲁⲃ",
+      "dialect": "F",
+      "id": "1344.12"
+    },
+    {
+      "orth": "ⲉⲗⲧⲁϥ",
+      "dialect": "F",
+      "id": "1344.13"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3651",
+      "bibliography": "CD 305b; CED 141; KoptHWb 168; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲥⲉⲟϣ ⲛⲣⲱⲙⲉ ϩⲉⲛⲕⲟⲟⲩⲉ ⲛϫⲟⲩⲧⲏ ⲙⲙⲁⲁϫⲉ , ϩⲉⲛⲕⲟⲟⲩⲉ ⲛⲟⲩ**ⲣⲧⲁⲃ** ·",
+      "english": "because they are numerous—some twenty five dry measures, others one measure of grain.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6815,
+      "count": 2
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d3611",
+    "demo_lemma": "rtb",
+    "english": "Artabe",
+    "german": "Artabe",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3611"
+  }
+}

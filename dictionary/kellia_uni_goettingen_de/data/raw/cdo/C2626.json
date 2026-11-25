@@ -1,0 +1,45 @@
+{
+  "id": "C2626",
+  "forms": [
+    {
+      "id": "CF7053",
+      "orth": "ⲕⲁⲧⲁⲛⲉⲉϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3012",
+      "bibliography": "CD 238b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2624",
+      "label": "ⲁⲧⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "without sailor"
+    },
+    {
+      "target": "C2625",
+      "label": "ⲙⲛⲧⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "sailor's occupation, trade of sailor"
+    },
+    {
+      "target": "C2623",
+      "label": "ⲛⲉⲉϥ",
+      "pos": "N",
+      "gloss": "sailor"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "id": "C5035",
+  "forms": [
+    {
+      "id": "CF12035",
+      "orth": "ⲟⲩⲟⲙⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8801,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5666",
+      "bibliography": "CD 480a; CDC 74b; CED 212; KoptHWb 271; DELC 233b; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲟⲩⲉⲓⲣⲏⲛⲏ ϣⲱⲡⲉ ϩⲛⲧⲉⲕϭⲟⲙ ⲁⲩⲱ ⲟⲩⲟⲩⲣⲟⲧ ϩⲛⲛⲉⲕ**ⲟⲩⲟⲙⲧⲉ**",
+      "english": "Let peace, I pray, be within thine host, and prosperity in thy palaces.",
+      "source": "Psalms 121",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:121",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲱⲧⲉ ⲉⲥⲓⲱⲛ ⲛⲧⲉⲧⲛϩⲱⲗϭ ⲉⲣⲟⲥ ϣⲁϫⲉ ϩⲛⲛⲉⲥ**ⲟⲩⲟⲙⲧⲉ**",
+      "english": "Go round about Sion, and encompass her: tell ye her towers.",
+      "source": "Psalms 47",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲣⲟⲧ",
+        1,
+        12.983
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        10.384
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        9.929
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        9.33
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        9.236
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        8.787
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        7.947
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        7.471
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲩⲟⲙⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲟⲙⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲩⲟⲙⲧⲉ",
+          "ⲟⲩⲟⲙⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲟⲙⲧⲉ",
+          "ⲟⲩⲟⲙⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8354,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5033",
+      "label": "ⲟⲩⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "become thick, be thick; become mighty, be mighty"
+    },
+    {
+      "target": "C5034",
+      "label": "ⲟⲩⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "thickness"
+    }
+  ],
+  "etym": {
+    "egy_num": "45990",
+    "egy_lemma": "wmt.t",
+    "demo_num": "d1349",
+    "demo_lemma": "wmt(e.t)",
+    "english": "enceinte",
+    "german": "Umwallung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/45990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1349"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C6979",
+  "forms": [
+    {
+      "id": "CF16012",
+      "orth": "ϩⲓ ⲧⲟⲟⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.36,
+        "rank": 1393,
+        "count": 57
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7699",
+      "bibliography": "CD 734b-735a; KoptHWb 403; ChLCS 98a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6980",
+      "label": "ϩⲓ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cast down"
+    },
+    {
+      "target": "C6977",
+      "label": "ϩⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "strike, cast, lay"
+    },
+    {
+      "target": "C6978",
+      "label": "ϩⲓⲟⲩⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out, put forth"
+    },
+    {
+      "target": "C6981",
+      "label": "ⲣⲉϥϩⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "smiter, thrower"
+    }
+  ]
+}

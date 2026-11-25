@@ -1,0 +1,595 @@
+{
+  "id": "C9024",
+  "forms": [
+    {
+      "id": "CF22262",
+      "orth": "ⲉⲡⲓⲧⲓⲙⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22269",
+      "orth": "ⲉⲡⲓⲧⲓⲙⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4015,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF22263",
+      "orth": "ⲉⲡⲉⲓⲧⲉⲙⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22264",
+      "orth": "ⲉⲡⲉⲓⲧⲓⲙⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22265",
+      "orth": "ⲉⲡⲉⲧⲉⲙⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22266",
+      "orth": "ⲉⲡⲉⲧⲏⲙⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22267",
+      "orth": "ⲉⲡⲉⲧⲓⲙⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22268",
+      "orth": "ⲉⲡⲓⲧⲏⲙⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12066,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22270",
+      "orth": "ⲉⲡⲓⲧⲓⲙⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22271",
+      "orth": "ⲉⲡⲓⲧⲓⲙⲓⲁ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF22272",
+      "orth": "ⲉⲡⲓⲧⲓⲙⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3533,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11082",
+      "bibliography": "DDGLC",
+      "cu_ID": "1756"
+    },
+    {
+      "id": "CS11083",
+      "bibliography": "DDGLC",
+      "cu_ID": "850"
+    },
+    {
+      "id": "CS11084",
+      "bibliography": "DDGLC",
+      "cu_ID": "2355"
+    },
+    {
+      "id": "CS11085",
+      "bibliography": "DDGLC",
+      "cu_ID": "10445"
+    },
+    {
+      "id": "CS11086",
+      "bibliography": "DDGLC",
+      "cu_ID": "4478"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϧⲉⲛⲧⲉⲕ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲫⲛⲟⲩϯ ⲛⲓⲁⲕⲱⲃ ⲁⲩϩⲩⲛⲓⲙ ⲛϫⲉⲛⲏ ⲉⲧⲧⲁⲗⲏⲟⲩⲧ ⲉⲛⲓϩⲑⲱⲣ",
+      "english": "All the simple ones in heart were troubled; all the men of wealth have slept their sleep, and have found nothing in their hands.",
+      "source": "19_Psalmi_75",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:75",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲥⲉⲃⲏⲥ ⲇⲉ ⲛⲧⲟⲟⲩ ⲕⲁⲧⲁⲛⲉⲛⲧⲁⲩⲙⲉⲉⲩⲉ ⲉⲣⲟⲟⲩ ⲥⲉⲛⲁϫⲓ ⲛⲟⲩ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲛⲁⲓ ⲉⲛⲧⲁⲩⲁⲙⲉⲗⲓ ⲉⲡⲇⲓⲕⲁⲓⲟⲥ ⲁⲩⲥⲁϩⲱⲟⲩ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "But the ungodly shall be punished according to their own imaginations, which have neglected the righteous, and forsaken the Lord.",
+      "source": "Wisdom 3",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϫⲉⲛⲓⲙⲟⲩⲙⲓ ⲛⲧⲉⲛⲓⲙⲱⲟⲩ: ⲟⲩⲟϩ ⲛⲓⲥⲉⲛϯ ⲛⲧⲉϯⲟⲓⲕⲟⲩⲙⲉⲛⲏ ⲁⲩϭⲱⲣⲡ ⲉⲃⲟⲗ ⲛⲧⲉⲛⲧⲉⲕ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲡϭⲟⲓⲥ: ⲛⲉⲙⲛⲧⲉⲛⲫⲛⲓϥⲓ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲛⲧⲉⲡⲉⲕⲙⲃⲟⲛ .",
+      "english": "And the springs of waters appeared, and the foundations of the world were exposed, at thy rebuke, O Lord, at the blasting of the breath of thy wrath.",
+      "source": "19_Psalmi_17",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲉⲛⲁⲡⲱⲧ ⲉⲃⲟⲗ ⲛⲧⲉⲕ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲛⲥⲉⲣϭⲱⲃ ⲙⲡⲉϩⲣⲟⲟⲩ ⲛⲛⲉⲕϩⲣⲟⲩⲃⲁⲓ",
+      "english": "At thy rebuke they shall flee; at the voice of thy thunder they shall be alarmed.",
+      "source": "Psalms 103",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲩⲣⲟⲕϩⲥ ϧⲉⲛⲡⲓⲭⲣⲱⲙ ⲟⲩⲟϩ ⲁⲩϭⲣⲏ ⲙⲙⲟⲥ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲧ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲛⲧⲉⲡⲉⲕϩⲟ ⲉⲩⲉⲧⲁⲕⲟ",
+      "english": "and restore that which thy right hand has planted: and look on the son of man whom thou didst strengthen for thyself.",
+      "source": "19_Psalmi_79",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:79",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϭⲓⲙⲡⲏⲅⲏ ⲛⲙⲙⲟⲟⲩ ⲁⲩϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛϭⲓⲛⲥⲛⲧⲉ ⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ⲉⲃⲟⲗ ⲛⲧⲉⲕ**ⲉⲡⲓⲧⲓⲙⲓⲁ** ⲡϫⲟⲉⲓⲥ ⲉⲃⲟⲗ ⲙⲡⲛⲓϥⲉ ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲛⲧⲉⲕⲟⲣⲅⲏ",
+      "english": "He sent from on high and took me, he drew me to himself out of many waters.",
+      "source": "Psalms 17",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧⲉⲛ",
+        3,
+        14.499
+      ],
+      [
+        "ⲧⲉⲕ",
+        3,
+        12.71
+      ],
+      [
+        "ϭⲟⲓⲥ:",
+        1,
+        12.244
+      ],
+      [
+        "ϭⲱⲣⲡ",
+        1,
+        10.213
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4,
+        9.982
+      ],
+      [
+        "ⲫⲱⲧ",
+        1,
+        9.865
+      ],
+      [
+        "ⲑⲁⲓ",
+        1,
+        9.618
+      ],
+      [
+        "ⲥ",
+        3,
+        8.861
+      ],
+      [
+        "ⲓⲁⲕⲱⲃ",
+        1,
+        8.722
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        8.69
+      ],
+      [
+        "ⲧⲱⲟⲩ",
+        1,
+        8.387
+      ],
+      [
+        "ϩⲟ",
+        1,
+        8.074
+      ],
+      [
+        "ϩⲓⲧⲉⲛ",
+        1,
+        7.964
+      ],
+      [
+        "ϫⲓϫ",
+        1,
+        7.191
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.441
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.414
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.414
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.311
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.013
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        5.556
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲣϭⲱⲃ",
+        1,
+        12.276
+      ],
+      [
+        "ⲧⲉⲕ",
+        3,
+        11.625
+      ],
+      [
+        "ϫⲓⲥⲃⲱ",
+        1,
+        11.621
+      ],
+      [
+        "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ",
+        1,
+        11.028
+      ],
+      [
+        "ⲣⲱϣⲉ",
+        1,
+        10.926
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        10.431
+      ],
+      [
+        "ⲥⲁⲃⲉ",
+        1,
+        10.303
+      ],
+      [
+        "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+        1,
+        10.249
+      ],
+      [
+        "ⲥⲱⲃⲉ",
+        1,
+        9.954
+      ],
+      [
+        "ⲓⲁⲕⲱⲃ",
+        1,
+        8.867
+      ],
+      [
+        "ⲛ",
+        6,
+        8.564
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        8.036
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.831
+      ],
+      [
+        "ⲧ",
+        3,
+        7.826
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        7.738
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        7.597
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        7.144
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.126
+      ],
+      [
+        "ⲙ",
+        3,
+        7.106
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          3
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          5
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ:",
+          1
+        ],
+        [
+          "ϭⲟⲓⲥ:_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲛⲓϥⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲛ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲡ_2_post_ϭⲟⲓⲥ:",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ:",
+          "ϭⲟⲓⲥ:_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϭⲟⲓⲥ:_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲛⲉⲙ_4_post_ⲛⲓϥⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲛⲓϥⲓ",
+          "ⲛⲧⲉⲛ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          7
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲓⲁⲕⲱⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          "ⲓⲁⲕⲱⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲙ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲓⲙⲓⲁ_0_node",
+          "ⲛ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲡⲓⲧⲓⲙⲓⲁ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲏⲓ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3619,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3120,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "776",
+    "grl_lemma": "ἐπιτιμία",
+    "grl_meaning": "punishment, penalty; dignity, respect",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 667a; Preisigke 1:582"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "C123",
+  "forms": [
+    {
+      "id": "CF439",
+      "orth": "ⲁⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 35.96,
+        "rank": 37,
+        "count": 5674
+      }
+    },
+    {
+      "id": "CF440",
+      "orth": "ⲁⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 38.69,
+        "rank": 38,
+        "count": 3281
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS143",
+      "bibliography": "CED 8; KoptHWb 7, 486; DELC 12"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲧⲉⲛϥⲟⲩⲃⲏⲛ **ⲁⲛ** ⲁϥϯ ⲉϫⲱⲛ .",
+      "english": "For whoever is not against us is on our side.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϯⲥⲟⲟⲩⲛ **ⲁⲛ** ·",
+      "english": "I know not.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲡⲁⲓⲣⲏϯ ⲛⲁⲥⲟⲓ ⲛϩⲩⲥⲟⲥ **ⲁⲛ** ⲛϫⲉⲧⲟⲩⲙⲉⲧⲙⲉⲑⲣⲉ .",
+      "english": "Even so, their testimony did not agree.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩϫⲡⲟ ⲡⲉ ⲛⲟⲩⲧⲁⲙⲓⲟ **ⲁⲛ** ⲡⲉ ·",
+      "english": "He was produced and was not a creation.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲡⲱⲥ ⲧⲉⲧⲉⲛⲕⲁϯ **ⲁⲛ** .",
+      "english": "He asked them, 'Don't you understand, yet?'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲛⲕⲏⲣⲩⲥⲥⲉ **ⲁⲛ** ⲡⲉϫⲁⲥ ⲛⲟⲩϩⲏⲃⲉ ⲙⲡⲣⲉϥⲥⲱⲛⲧ ·",
+      "english": "Did we not proclaim our grief for the Creator,",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C120",
+      "label": "ⲁⲛ",
+      "pos": "PTC",
+      "gloss": ""
+    },
+    {
+      "target": "C121",
+      "label": "ⲁⲛ-",
+      "pos": "N",
+      "gloss": "great one (of . . .)"
+    },
+    {
+      "target": "C124",
+      "label": "ⲁⲛ-",
+      "pos": "N",
+      "gloss": ""
+    },
+    {
+      "target": "C122",
+      "label": "ⲙⲛⲧⲁⲛϣⲟ",
+      "pos": "N",
+      "gloss": "unit under the command of a χιλίαρχος"
+    }
+  ]
+}

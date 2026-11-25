@@ -1,0 +1,52 @@
+{
+  "id": "C2152",
+  "forms": [
+    {
+      "id": "CF6014",
+      "orth": "ⲛⲉϫⲙⲁⲧⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2491",
+      "bibliography": "CD 196ab; DELC 125; ChLCS 29a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2691",
+      "type": "cf",
+      "label": "throw, cast"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2153",
+      "label": "ϫⲓⲙⲁⲧⲟⲩ",
+      "pos": "V",
+      "gloss": "receive poison, be poisoned"
+    },
+    {
+      "target": "C2151",
+      "label": "ⲃⲁⲕⲙⲁⲧⲟⲩ",
+      "pos": "N",
+      "gloss": "sending, casting poison"
+    },
+    {
+      "target": "C2150",
+      "label": "ⲙⲁⲧⲟⲩ",
+      "pos": "N",
+      "gloss": "poison"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "C6893",
+  "forms": [
+    {
+      "id": "CF15835",
+      "orth": "ϫⲓⲛⲉⲣϩⲱⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8083,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7610",
+      "bibliography": "CD 719a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ⲛⲓⲣⲱⲙⲓ ϯⲛⲁⲩ ϫⲉⲟⲩⲟⲛ ⲟⲩϣⲱϣ ⲛⲉⲙⲟⲩⲙⲏϣ ⲛⲟⲥⲓ ⲛⲁϣⲱⲡⲓ ⲟⲩ ⲙⲟⲛⲟⲛ ⲙⲡⲓϫⲟⲉⲓ ⲛⲉⲙⲡⲓⲁⲟⲩⲓⲛ ⲁⲗⲗⲁ ⲛⲉⲙⲛⲉⲛⲕⲉⲯⲩⲭⲏ ϧⲉⲛⲡⲁⲓ**ϫⲓⲛⲉⲣϩⲱⲧ** .",
+      "english": "and said to them, 'Sirs, I perceive that the voyage will be with injury and much loss, not only of the cargo and the ship, but also of our lives.'",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ",
+        1,
+        15.303
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        10.576
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.46
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.633
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        7.049
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲉⲣϩⲱⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7548,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6891",
+      "label": "ϩⲱⲧ",
+      "pos": "N",
+      "gloss": "sail"
+    },
+    {
+      "target": "C6892",
+      "label": "ⲣϩⲱⲧ",
+      "pos": "V",
+      "gloss": "make sail, float"
+    }
+  ]
+}

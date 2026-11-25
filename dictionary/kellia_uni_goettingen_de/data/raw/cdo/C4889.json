@@ -1,0 +1,182 @@
+{
+  "id": "C4889",
+  "forms": [
+    {
+      "id": "CF11743",
+      "orth": "ϫⲁⲧⲟⲩⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18581,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5514",
+      "bibliography": "CD 468b; KoptHWb 265; DELC 229b; ChLCS 65b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "...",
+        2,
+        13.305
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        10.896
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲁⲧⲟⲩⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_post_ϫⲁⲧⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "..._3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲥϩⲟⲩⲟⲣⲧ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲥϩⲟⲩⲟⲣⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲁⲧⲟⲩⲁ_0_node",
+          "ⲡ_1_post_ϫⲁⲧⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ϫⲁⲧⲟⲩⲁ",
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          "..._3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "..._3_post_ⲉⲧ",
+          "ⲁⲩⲱ_5_post_ⲥϩⲟⲩⲟⲣⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲥϩⲟⲩⲟⲣⲧ",
+          "ϥ_5_post_ⲥϩⲟⲩⲟⲣⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18200,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "say, speak, tell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4888",
+      "label": "ϫⲁⲧⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    },
+    {
+      "target": "C4885",
+      "label": "ϫⲓⲟⲩⲁ",
+      "pos": "V",
+      "gloss": "speak blasphemy"
+    },
+    {
+      "target": "C4886",
+      "label": "ϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "act of blaspheming"
+    },
+    {
+      "target": "C4887",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "act of blaspheming"
+    },
+    {
+      "target": "C4884",
+      "label": "ⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "blasphemy"
+    },
+    {
+      "target": "C4890",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    },
+    {
+      "target": "C4891",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    }
+  ]
+}

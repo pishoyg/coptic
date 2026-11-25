@@ -1,0 +1,117 @@
+{
+  "id": "C8433",
+  "forms": [
+    {
+      "id": "CF19669",
+      "orth": "ⲁⲣⲕⲉⲩⲑⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19670",
+      "orth": "ⲁⲣⲕⲉⲩⲑⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9772",
+      "bibliography": "DDGLC",
+      "cu_ID": "1153"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲟϣ",
+        1,
+        11.812
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣⲕⲉⲩⲑⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲕⲉⲩⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲟϣ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲕⲉⲩⲑⲟⲥ_0_node",
+          "ⲉ_1_post_ⲁⲣⲕⲉⲩⲑⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲕⲉⲩⲑⲟⲥ",
+          "ⲥ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟϣ",
+          "ⲟϣ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "grl_ID": "3124",
+    "grl_lemma": "ἄρκευθος",
+    "grl_meaning": "juniper (Juniperus macrocarpa), Phoenician cedar (Juniperus\n    phoenicea), prickly cedar (Juniperus oxycdrus)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 242a"
+  }
+}

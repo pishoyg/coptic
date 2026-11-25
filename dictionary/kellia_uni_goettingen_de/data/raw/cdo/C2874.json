@@ -1,0 +1,460 @@
+{
+  "id": "C2874",
+  "forms": [
+    {
+      "id": "CF7606",
+      "orth": "ⲡⲱⲱⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3363,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲡⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8456,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲡⲟⲟⲣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16799,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲫⲱⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2369,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲫⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4005,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲡⲟⲩⲣⲉ",
+      "dialect": "A",
+      "id": "1276.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3286",
+      "bibliography": "CD 268a; CED 127; KoptHWb 151; DELC 163; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲕⲱ ⲛⲟⲩⲱⲛⲉ ϩⲁⲧⲉϥⲁⲡⲉ · ⲁϥⲛⲕⲟⲧⲕ ⲁϥ**ⲡⲱⲱⲣⲉ** ⲛⲟⲩⲣⲁⲥⲟⲩ ϩⲛⲧⲉⲟⲩϣⲏ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "And when he had placed a stone under his head, he lay down and fell asleep, and that night he dreamed a dream.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲙⲛⲧⲣⲙⲙⲁⲟ ⲛⲛϩⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲛⲁⲣⲧϩⲉ ⲙⲡⲉⲧ**ⲡⲱⲱⲣⲉ** ⲛⲟⲩⲣⲁⲥⲟⲩ ⲉϥⲟⲃϣ ⲛⲁⲓ ⲉⲛⲧⲁⲩⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲧⲱⲟⲩⲛ ⲉϫⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲥⲟⲟⲩϩ ⲉⲣⲟⲥ ⲁⲩⲱ ⲉⲧⲑⲗⲓⲃⲉ ⲙⲙⲟⲥ",
+      "english": "And the wealth of all the nations together, as many as have fought against Ariel, and all they that war against Jerusalem, and all who are gathered against her, and they that distress her, shall be as one that dreams in sleep by night.",
+      "source": "Isaiah 29",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲙⲁⲓⲱⲥ ⲛⲉⲓⲕⲉⲕⲟⲟⲩⲉ ⲉⲩ**ⲡⲉⲣⲉ** ⲣⲁⲥⲟⲩ ⲛⲥⲁⲣⲝ ⲙⲛⲥⲉϫⲱϩⲙ ⲙⲙⲟⲟⲩ ⲙⲙⲛⲧϫⲟⲉⲓⲥ ⲥⲉⲁⲑⲏⲧⲉⲓ ⲙⲙⲟⲟⲩ ⲛⲉⲟⲟⲩ ⲥⲉϫⲓ ⲟⲩⲁ ⲉⲣⲟⲟⲩ",
+      "english": "Yet in like manner these also in their dreaming defile the flesh, despise authority, and slander celestial beings.",
+      "source": "65_Jude_1",
+      "urn": "urn:cts:copticLit:nt.jude.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁⲥⲟⲩ",
+        10,
+        20.536
+      ],
+      [
+        "ⲟⲩⲁϩⲃⲉϥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ",
+        1,
+        17.013
+      ],
+      [
+        "ⲁⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ",
+        1,
+        17.013
+      ],
+      [
+        "ϩⲟⲣⲟⲥⲓⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛ",
+        26,
+        14.325
+      ],
+      [
+        "ϩⲗⲗⲟ",
+        2,
+        11.718
+      ],
+      [
+        "ⲛⲕⲟⲧⲕ",
+        2,
+        11.177
+      ],
+      [
+        "ⲣⲧϩⲉ",
+        1,
+        10.443
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        3,
+        10.143
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        10.057
+      ],
+      [
+        "ϫⲓϣⲓⲡⲉ",
+        1,
+        9.947
+      ],
+      [
+        "ⲁ",
+        7,
+        9.881
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        2,
+        9.745
+      ],
+      [
+        "ⲉ",
+        6,
+        8.987
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        8.653
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        8.313
+      ],
+      [
+        "ϥ",
+        5,
+        7.902
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        7.489
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        1,
+        7.432
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲡⲱⲱⲣⲉ",
+          4
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_0_node",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲱⲣⲉ",
+          7
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_3_post_ⲟⲩ",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲏⲧⲉ_3_post_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_1_post_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲡⲱϣⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲡⲱϣⲥ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϭⲟⲗ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ϥ_1_pre_ⲡⲱⲱⲣⲉ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_0_node",
+          "ⲛ_1_post_ⲡⲱⲱⲣⲉ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲱⲣⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲣⲁⲥⲟⲩ_3_post_ⲟⲩ",
+          5
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          "ⲉⲓⲥ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_2_post_ⲟⲩⲧⲗⲟⲟϭⲉ",
+          "ϩⲏⲏⲧⲉ_3_post_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_0_node",
+          "ⲛⲙ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲙⲁ",
+          "ⲙⲁ_1_post_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲁⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_0_node",
+          "ⲁ_2_post_ⲡⲱϣⲥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲡⲱϣⲥ",
+          "ϥ_2_post_ⲡⲱϣⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲓ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲛⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲱⲣⲉ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲣⲁⲥⲟⲩ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲱⲣⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲁⲥⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_3_post_ⲛ",
+          "ⲛ_4_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲣⲁⲥⲟⲩ",
+          "ϭⲟⲗ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2868,
+      "count": 12
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2875",
+      "label": "ⲣⲉϥⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "dreamer of dreams"
+    }
+  ],
+  "etym": {
+    "egy_num": "62900",
+    "egy_lemma": "ptr",
+    "demo_num": "d2084",
+    "demo_lemma": "prj",
+    "english": "to see; to behold",
+    "german": "sehen; erblicken",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2084"
+  }
+}

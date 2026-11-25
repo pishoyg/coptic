@@ -1,0 +1,47 @@
+{
+  "id": "C5878",
+  "forms": [
+    {
+      "id": "CF13754",
+      "orth": "ϣⲟⲉⲓⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϣⲁⲉⲓⲙ",
+      "dialect": "F",
+      "id": "1918.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6560",
+      "bibliography": "CD 564a; CED 242; KoptHWb 307; ChLCS 76a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5879",
+      "label": "ϣⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "row, course"
+    }
+  ],
+  "etym": {
+    "egy_num": "154450",
+    "egy_lemma": "šmw",
+    "demo_num": "dm8108",
+    "demo_lemma": "šm",
+    "english": "movements",
+    "german": "der Gang; das Gehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/154450",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm8108"
+  }
+}

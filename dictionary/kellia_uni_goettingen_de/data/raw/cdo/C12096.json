@@ -1,0 +1,141 @@
+{
+  "id": "C12096",
+  "forms": [
+    {
+      "id": "CF33103",
+      "orth": "ϭⲟⲩⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9568,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17097",
+      "bibliography": "CD 794a; KoptHWB 437; DELC 332b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁϥϣⲁⲛϣⲁⲓ ⲉϫⲱϥ ⲛϫⲉⲡⲣⲏ ϥⲣⲁⲟⲩⲏⲟⲩⲧ ⲉϥⲉⲙⲟⲩ ⲛⲧⲉϥϣⲉⲃⲓⲱ ⲉϣⲱⲡ ⲇⲉ ⲙⲙⲟⲛⲧⲁϥ ⲙⲙⲁⲩ ⲉϥⲉⲧⲏⲓϥ ⲉⲃⲟⲗ ⲛⲧϣⲉⲃⲓⲱ ⲛϯ**ϭⲟⲩⲱ**",
+      "english": "But if the sun be risen upon him, he is guilty, he shall die instead; and if a thief have nothing, let him be sold in compensation for what he has stolen.",
+      "source": "02_Exodus_22",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲉⲃⲓⲱ",
+        1,
+        12.236
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        10.495
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        9.842
+      ],
+      [
+        "ⲧ",
+        1,
+        7.525
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        7.049
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲟⲩⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9031,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7430",
+      "label": "ϥⲓ ⲛϫⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "steal"
+    },
+    {
+      "target": "C7425",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "steal"
+    },
+    {
+      "target": "C7426",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "theft, fraud"
+    },
+    {
+      "target": "C7427",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "stolen, secret"
+    },
+    {
+      "target": "C7428",
+      "label": "ⲛϫⲓⲟⲩⲉ",
+      "pos": "ADV",
+      "gloss": "stealthily"
+    },
+    {
+      "target": "C7429",
+      "label": "ⲛϫⲓⲟⲩⲉ (ⲉ-)",
+      "pos": "ADV",
+      "gloss": "unbeknown to"
+    },
+    {
+      "target": "C7431",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "thief"
+    }
+  ]
+}

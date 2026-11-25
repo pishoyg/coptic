@@ -1,0 +1,218 @@
+{
+  "id": "C5460",
+  "forms": [
+    {
+      "id": "CF12891",
+      "orth": "ⲣⲉϥⲱⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10444,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6118",
+      "bibliography": "CD 522a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩ**ⲣⲉϥⲱⲗ** ⲡⲉ ⲛⲉϥⲛⲁⲧⲱϭⲉ ⲛⲧⲟϥ ⲡⲉ ϩⲣⲁⲓ ϩⲓϫⲛⲧϣⲱⲧⲉ ⲙⲡⲁⲛⲁϣ ⲙⲛⲛⲥⲁⲧⲣⲉϥⲟⲩⲱ ⲉϥⲥⲙⲛⲇⲓⲁⲑⲏⲕⲏ ⲙⲛⲁⲃⲓⲙⲉⲗⲉⲭ ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲩⲥϩⲁⲓ ⲉⲧⲃⲏⲏⲧϥ",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲃⲣⲁϩⲁⲙ",
+        1,
+        12.418
+      ],
+      [
+        "·",
+        1,
+        10.178
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲱⲗ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲱⲗ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲱⲗ",
+          "ⲣⲉϥⲱⲗ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10024,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5461",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5462",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5448",
+      "label": "ⲁⲗ-",
+      "pos": "N",
+      "gloss": "taker"
+    },
+    {
+      "target": "C5446",
+      "label": "ⲁⲗⲓ",
+      "pos": "VIMP",
+      "gloss": "Take!"
+    },
+    {
+      "target": "C5447",
+      "label": "ⲁⲗⲓⲟⲩⲓ",
+      "pos": "VIMP",
+      "gloss": "lift! Pick ... up!"
+    },
+    {
+      "target": "C5463",
+      "label": "ⲟⲗⲥ",
+      "pos": "N",
+      "gloss": "what is collected"
+    },
+    {
+      "target": "C5445",
+      "label": "ⲱⲗ",
+      "pos": "V",
+      "gloss": "hold, contain, enclose; take, lay hold of, gather"
+    },
+    {
+      "target": "C5459",
+      "label": "ⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering, harvest"
+    },
+    {
+      "target": "C5449",
+      "label": "ⲱⲗ (ⲉ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5454",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "bring in, enclose"
+    },
+    {
+      "target": "C5455",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "enclosure, siege"
+    },
+    {
+      "target": "C5456",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "take, lift up, withdraw"
+    },
+    {
+      "target": "C5457",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "withdrawal"
+    },
+    {
+      "target": "C5452",
+      "label": "ⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take away"
+    },
+    {
+      "target": "C5450",
+      "label": "ⲱⲗⲓ (ⲉϫⲉⲛ)-",
+      "pos": "V",
+      "gloss": "bring up(on)"
+    },
+    {
+      "target": "C5451",
+      "label": "ⲱⲗⲓ (ⲛ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5453",
+      "label": "ⲱⲗⲓ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "take upward"
+    },
+    {
+      "target": "C5458",
+      "label": "ⲱⲗⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "take/carry away"
+    }
+  ]
+}

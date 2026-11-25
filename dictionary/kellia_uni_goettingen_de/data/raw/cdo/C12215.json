@@ -1,0 +1,43 @@
+{
+  "id": "C12215",
+  "forms": [
+    {
+      "id": "CF33231",
+      "orth": "ϫⲁⲧⲃⲁⲓⲛⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17219",
+      "bibliography": "DMT 94b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C341",
+      "label": "ⲃⲟⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "harp"
+    },
+    {
+      "target": "C342",
+      "label": "ⲉⲣⲟⲩⲱⲓⲛⲓ",
+      "pos": "V",
+      "gloss": "play the harp"
+    },
+    {
+      "target": "C343",
+      "label": "ⲣⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "harp-player"
+    }
+  ]
+}

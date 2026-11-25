@@ -1,0 +1,43 @@
+{
+  "id": "C6703",
+  "forms": [
+    {
+      "id": "CF15451",
+      "orth": "ϩⲓⲛⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7417",
+      "bibliography": "CD 689a; CED 287; KoptHWb 377; DELC 304a; ChLCS 92a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6702",
+      "label": "ϩⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "move by rowing, row"
+    }
+  ],
+  "etym": {
+    "egy_num": "105300",
+    "egy_lemma": "ḥmw",
+    "demo_num": "d4123",
+    "demo_lemma": "ḥnj",
+    "english": "steering oar",
+    "german": "Steuerruder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/105300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4123"
+  }
+}

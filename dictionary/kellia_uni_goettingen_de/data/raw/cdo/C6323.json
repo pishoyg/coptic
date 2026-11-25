@@ -1,0 +1,106 @@
+{
+  "id": "C6323",
+  "forms": [
+    {
+      "id": "CF14657",
+      "orth": "ϧⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10318,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7013",
+      "bibliography": "CD 631b; KoptHWb 392"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉ ⲡⲟⲣⲛⲏ ϣⲱⲡⲓ ϧⲉⲛⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲟϩ ⲛⲛⲉ ⲟⲩⲟⲛ ⲉϥⲉⲣⲡⲟⲣⲛⲉⲩⲓⲛ ϣⲱⲡⲓ ϧⲉⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲛⲉ ⲧⲉⲗⲉⲥⲫⲟⲣⲟⲥ ϣⲱⲡⲓ ϧⲉⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲛⲉ **ϧⲱⲥ** ϣⲱⲡⲓ ϧⲉⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "There shall not be a harlot of the daughters of Israel, and there shall not be a fornicator of the sons of Israel; there shall not be an idolatress of the daughters of Israel, and there shall not be an initiated person of the sons of Israel.",
+      "source": "05_Deuteronomium_23",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲥⲣⲁⲏⲗ",
+        1,
+        10.349
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        9.972
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        9.079
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        8.297
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        7.634
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϧⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9774,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "124610",
+    "egy_lemma": "ẖz",
+    "demo_num": "dm7962",
+    "demo_lemma": "ẖsj",
+    "english": "coward; vile person",
+    "german": "Schwacher; Elender",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/124610",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7962"
+  }
+}

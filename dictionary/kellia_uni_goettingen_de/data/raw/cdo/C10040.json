@@ -1,0 +1,348 @@
+{
+  "id": "C10040",
+  "forms": [
+    {
+      "id": "CF26289",
+      "orth": "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26290",
+      "orth": "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26291",
+      "orth": "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3511,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF26292",
+      "orth": "ⲡⲁⲣⲁⲧⲓⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20308,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13168",
+      "bibliography": "DDGLC",
+      "cu_ID": "1158"
+    },
+    {
+      "id": "CS13169",
+      "bibliography": "DDGLC",
+      "cu_ID": "9995"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ϫⲉⲡⲕⲉⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲁⲛⲧⲁⲁϥ ⲛⲛⲉⲓⲯⲩⲭⲟⲟⲩⲉ ⲛⲁⲥⲉⲃⲏⲥ ⲁⲩⲱ ⲙⲡⲁⲣⲁⲛⲟⲙⲟⲥ ⲉⲙⲡⲟⲩⲉⲓⲣⲉ ⲙⲡⲉⲙⲡϣⲁ ⲙⲡⲉⲕⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲁⲗⲗⲁ ⲁⲩⲁⲁ ⲛⲙ**ⲡⲁⲣⲁⲇⲓⲅⲙⲁ** · ⲕⲧⲟ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲣⲟⲛ · ⲁⲩⲱ ⲛⲅⲁⲁⲩ ⲛⲁⲗⲗⲟⲧⲣⲓⲟⲥ ⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲉⲕⲙⲛⲧⲣⲣⲟ ϣⲁⲉⲛⲉϩ ·",
+      "english": "and say: Thou Mystery, which we have given unto these impious and iniquitous souls who have not done what is worthy of thy mystery but have made a show of us, turn back [then] the mystery unto us and make them for ever strangers to the mystery of thy kingdom.",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲑⲉⲱⲣⲉⲓ ⲛⲙ**ⲡⲁⲣⲁⲇⲓⲅⲙⲁ** ⲧⲏⲣⲟⲩ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ · ⲁⲩⲱ ⲁⲕⲛⲟⲓ ⲛⲙⲡⲁⲣⲁⲡⲟⲗⲏ ⲧⲏⲣⲟⲩ ⲛⲛⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ · ⲁⲕϯϩⲧⲏⲕ ⲉⲛⲉⲩϩⲣⲙⲓⲛⲓⲁ ⲧⲏⲣⲟⲩ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ ·",
+      "english": "Thou didst meditate upon all the spiritual paradigms, thou didst understand all the parables of the Gospels, and thou didst devote thyself earnestly to the spiritual interpretations thereof.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲙⲉⲛ ⲉⲓϫⲱ ⲙⲙⲟϥ ϩⲛⲟⲩ**ⲡⲁⲣⲁⲇⲓⲅⲙⲁ** ⲙⲛⲟⲩϩⲓⲥⲟⲥ ⲙⲛⲟⲩⲧⲟⲛⲧⲛ · ⲁⲗⲗⲁ ϩⲛⲟⲩⲁⲗⲏⲑⲉⲓⲁ ⲁⲛ ⲙⲙⲟⲣⲫⲏ · ⲟⲩⲧⲉ ⲛⲧⲁⲓⲟⲩⲉⲛϩⲡϣⲁϫⲉ ⲉⲃⲟⲗ ⲁⲛ ϩⲛⲟⲩⲙⲉ ⲁⲗⲗⲁ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ · ⲁⲩⲱ ⲙⲉⲗⲟⲥ ⲛⲓⲙ ⲉⲧⲛϩⲏⲧϥ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲉⲛⲧⲁⲓⲧⲟⲛⲧⲛ ⲉⲣⲟϥ ⲉⲧⲉⲛⲉⲧⲙⲙⲁⲩ ⲛⲉⲧⲕⲁⲧⲟⲓⲕⲓ ⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ ⲙⲛⲛⲉⲧⲕⲁⲧⲟⲓⲕⲓ ⲛϩⲏⲧϥ · ⲁⲩⲱ ⲡⲕⲉϣⲟⲙⲛⲧ ⲛⲭⲱⲣⲏⲙⲁ ⲉⲧⲙⲛⲛⲥⲱⲟⲩ ⲕⲁⲧⲁ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϩⲛⲟⲩⲁ ⲛⲁⲓ ⲧⲏⲣⲟⲩ ϩⲛⲟⲩⲁⲗⲏⲑⲉⲓⲁ ⲙⲛⲟⲩⲙⲉ ·",
+      "english": "“Of this indeed have I spoken in a pattern and similitude and likeness, but not in a form in truth; nor have I revealed the word in truth, but the mystery [only] of the Ineffable. And all the Limbs which are in it,--according to the word with which I have made comparison,--that is, those which abide on the mystery of the Ineffable, and those which abide in it, and also the three spaces which are after them according to the mysteries,--of all these in truth and verity”",
+      "source": "Pistis Sophia Book 2 Part 9",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:74-76",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲩⲭⲓⲙⲁⲍⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲙⲟⲛⲱⲧⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ϩⲓⲥⲟⲥ",
+        1,
+        16.276
+      ],
+      [
+        "ⲙ",
+        12,
+        12.784
+      ],
+      [
+        "ⲑⲉⲱⲣⲉⲓ",
+        1,
+        11.784
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+        1,
+        10.85
+      ],
+      [
+        "ϩⲓϫⲙ",
+        2,
+        10.682
+      ],
+      [
+        "ϩⲟ",
+        2,
+        10.51
+      ],
+      [
+        "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+        2,
+        10.134
+      ],
+      [
+        "ⲁⲁ",
+        2,
+        9.701
+      ],
+      [
+        "ⲩ",
+        5,
+        9.454
+      ],
+      [
+        "ⲛ",
+        6,
+        8.242
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.077
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.898
+      ],
+      [
+        "ⲕⲧⲟ",
+        1,
+        7.802
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        1,
+        7.794
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        7.702
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        7.521
+      ],
+      [
+        "ⲉ",
+        4,
+        7.495
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        6.853
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          10
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          2
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          2
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓⲥⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲥ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲉⲩⲭⲓⲙⲁⲍⲉ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          "ϩⲓϫⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          "ϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          "ⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          "ⲙⲛ_2_post_ϩⲓⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲥⲟⲥ",
+          "ⲟⲩ_2_post_ϩⲓⲥⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓⲥⲟⲥ",
+          "ϩⲓⲥⲟⲥ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲥ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲙⲛ_2_post_ⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲟⲛⲧⲛ",
+          "ⲟⲩ_2_post_ⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          "ⲉⲩⲭⲓⲙⲁⲍⲉ_1_post_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲁⲣⲁⲇⲓⲅⲙⲁ",
+          "ⲡⲁⲣⲁⲇⲓⲅⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3144,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "2560",
+    "grl_lemma": "παράδειγμα",
+    "grl_meaning": "pattern, model, precedent, example",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1307b; Preisigke 2:238"
+  }
+}

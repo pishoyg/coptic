@@ -1,0 +1,150 @@
+{
+  "id": "C10994",
+  "forms": [
+    {
+      "id": "CF30130",
+      "orth": "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF30131",
+      "orth": "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13546,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15266",
+      "bibliography": "DDGLC",
+      "cu_ID": "9534"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲟⲩⲱϣⲃ ⲛϭⲓⲧⲙⲁⲁⲩ ⲛⲛϣⲏⲣⲉ ⲕⲟⲩⲓ ⲡⲉϫⲁⲥ ⲙⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉⲁⲛⲅⲟⲩ**ⲭⲣⲓⲥⲧⲓⲁⲛⲏ** · ⲙⲛⲛⲁⲉⲓⲟⲟⲧⲉ ⲁⲩⲱ ⲁⲛⲅⲟⲩ ⲣⲙⲧⲁⲛⲧⲓⲟⲭⲓⲁ ·",
+      "english": "And the mother of the little children answered and said unto the Archbishop, 'I am a Christian, and my parents were Christians, and I am a woman of Antioch.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲟⲟⲧⲉ",
+        1,
+        16.139
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        14.24
+      ],
+      [
+        "ⲁⲛⲅ",
+        1,
+        12.236
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲅ_1_pre_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲟⲧⲉ_1_post_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲛⲅ_1_pre_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          "ⲟⲩ_1_pre_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ_0_node",
+          "ⲙⲛ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          "ⲛⲁ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲉⲓⲟⲟⲧⲉ",
+          "ⲉⲓⲟⲟⲧⲉ_1_post_ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13145,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2403",
+    "grl_lemma": "χριστιανός",
+    "grl_meaning": "Christian",
+    "grl_pos": "adjective",
+    "grl_ref": "Sophocles 1171b"
+  }
+}

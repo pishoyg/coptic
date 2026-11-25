@@ -1,0 +1,313 @@
+{
+  "id": "C11034",
+  "forms": [
+    {
+      "id": "CF30323",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30324",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5271,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF30325",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30326",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15393",
+      "bibliography": "DDGLC",
+      "cu_ID": "1482"
+    },
+    {
+      "id": "CS15394",
+      "bibliography": "DDGLC",
+      "cu_ID": "5931"
+    },
+    {
+      "id": "CS15395",
+      "bibliography": "DDGLC",
+      "cu_ID": "1600"
+    },
+    {
+      "id": "CS15396",
+      "bibliography": "DDGLC",
+      "cu_ID": "5933"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ⲯⲩⲭⲓⲕⲟⲥ** ⲇⲉ ⲛⲣⲱⲙⲉ ⲙⲉϥϣⲱⲡ ⲉⲣⲟϥ ⲛⲛⲁⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡⲛⲟⲩⲧⲉ . ⲟⲩⲙⲛⲧⲥⲟϭ ⲅⲁⲣ ⲛⲁϥ ⲧⲉ . ⲁⲩⲱ ⲙⲛϭⲟⲙ ⲙⲙⲟϥ ⲉⲉⲓⲙⲉ ϫⲉⲥⲉⲁⲛⲁⲕⲣⲓⲛⲉ ⲙⲙⲟϥ ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲱⲥ .",
+      "english": "Now the natural man doesn&apos;t receive the things of God&apos;s Spirit, for they are foolishness to him, and he can&apos;t know them, because they are spiritually discerned.",
+      "source": "46_1 Corinthians_2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉⲧⲡⲱⲣϫ ⲉⲃⲟⲗ ⲉϩⲉⲛ**ⲯⲩⲭⲓⲕⲟⲥ** ⲛⲉ ⲉⲙⲛⲧⲟⲩ ⲡⲛⲉⲩⲙⲁ ⲙⲙⲁⲩ",
+      "english": "These are they who cause divisions, and are sensual, not having the Spirit.",
+      "source": "65_Jude_1",
+      "urn": "urn:cts:copticLit:nt.jude.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲥ",
+        3,
+        19.643
+      ],
+      [
+        "ⲙⲡⲁ",
+        3,
+        14.604
+      ],
+      [
+        "ⲫⲟⲣϫ",
+        1,
+        12.051
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        3,
+        11.242
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        9.803
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        8.973
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        8.526
+      ],
+      [
+        ".",
+        3,
+        8.371
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.986
+      ],
+      [
+        "ⲛ",
+        3,
+        7.346
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        6.057
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.368
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.304
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.251
+      ],
+      [
+        "ⲙ",
+        1,
+        3.583
+      ],
+      [
+        "ⲉ",
+        1,
+        3.017
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲥ",
+        3,
+        18.829
+      ],
+      [
+        "ⲙⲉ",
+        3,
+        12.696
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        12.074
+      ],
+      [
+        "ⲡⲱⲣϫ",
+        1,
+        11.276
+      ],
+      [
+        "ⲙⲛⲧ",
+        1,
+        11.098
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        3,
+        11.068
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        9.741
+      ],
+      [
+        ".",
+        3,
+        9.312
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲉ",
+        2,
+        5.817
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲓ_1_pre_ⲯⲩⲭⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲯⲩⲭⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲯⲩⲭⲓⲕⲟⲥ",
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          "ⲛ_1_post_ⲯⲩⲭⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲯⲩⲭⲓⲕⲟⲥ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲯⲩⲭⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲣⲱⲙⲉ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_post_ⲯⲩⲭⲓⲕⲟⲥ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲯⲩⲭⲓⲕⲟⲥ",
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲓⲕⲟⲥ_0_node",
+          "ⲛ_2_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_1_post_ⲯⲩⲭⲓⲕⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4853,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2665",
+    "grl_lemma": "ψυχικός",
+    "grl_meaning": "of the soul or life, spiritual, animate",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 2027b"
+  }
+}

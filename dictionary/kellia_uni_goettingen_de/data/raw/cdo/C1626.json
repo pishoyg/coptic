@@ -1,0 +1,38 @@
+{
+  "id": "C1626",
+  "forms": [
+    {
+      "id": "CF4722",
+      "orth": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1890",
+      "bibliography": "CD 140b; KoptHWb 77"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1625",
+      "label": "ϫⲁϫⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "hard-cornered"
+    },
+    {
+      "target": "C1624",
+      "label": "ⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "corner, extremity, top; piece, fragment"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "C8353",
+  "forms": [
+    {
+      "id": "CF19393",
+      "orth": "ⲁⲡⲓⲥⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF19394",
+      "orth": "ⲁⲡⲓⲥⲧⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17435,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9587",
+      "bibliography": "DDGLC",
+      "cu_ID": "5143"
+    },
+    {
+      "id": "CS9588",
+      "bibliography": "DDGLC",
+      "cu_ID": "367"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲕⲁⲡⲟⲩⲛⲟⲩⲧⲉ ⲛⲥⲱⲡⲟⲩⲥⲱⲧⲏⲣ ⲁⲩⲱ ⲙⲡⲣⲡⲙⲉⲉⲩⲉ ⲙⲡⲟⲩϫⲟⲉⲓⲥ ⲉⲧⲃⲉⲡⲁⲓ ⲧⲉⲛⲁⲧⲱϭⲉ ⲛⲟⲩⲧⲱϭⲉ ⲛ**ⲁⲡⲓⲥⲧⲟⲛ** ⲁⲩⲱ ⲡⲟⲩⲥⲡⲉⲣⲙⲁ ⲛⲁⲧⲛⲁϩⲧⲉ",
+      "english": "Because thou hast forsaken God thy Saviour, and hast not been mindful of the Lord thy helper; therefore shalt thou plant a false plant, and a false seed.",
+      "source": "Isaiah 17",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        13.587
+      ],
+      [
+        "ⲥⲡⲉⲣⲙⲁ",
+        1,
+        12.691
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        11.629
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲓⲥⲧⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17045,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2459",
+    "grl_lemma": "ἄπιστος",
+    "grl_meaning": "faithless, mistrustful, untrustworthy",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 189b; Preisigke 1:164"
+  }
+}

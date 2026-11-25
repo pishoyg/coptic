@@ -1,0 +1,331 @@
+{
+  "id": "C7214",
+  "forms": [
+    {
+      "id": "CF16487",
+      "orth": "ϫⲟⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 7.04,
+        "rank": 181,
+        "count": 597
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7963",
+      "bibliography": "CD 770b; KoptHWb 422"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲓ ⲟⲛ ϫⲉⲡⲓⲫⲁϣ ⲁϥϧⲟⲙϧⲉⲙ ⲟⲩⲟϩ ⲟⲛ ϫⲉⲧⲉⲕⲟⲩⲓⲛⲁⲙ ⲛϭⲟⲉⲓⲥ ⲁⲥⲓⲣⲓⲛⲟⲩ**ϫⲟⲙ** .",
+      "english": "and also this: ‘the trap has been broken’; and also, ‘Thy right hand, O Lord, hath done wonders.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲙⲏ ⲉⲑⲃⲉⲫⲁⲓ ⲁⲛ ⲧⲉⲧⲉⲛⲥⲟⲣⲉⲙ ⲛⲧⲉⲧⲉⲛⲥⲱⲟⲩⲛ ⲁⲛ ⲛϯⲅⲣⲁⲫⲏ ⲟⲩⲇⲉ ϯ**ϫⲟⲙ** ⲛⲧⲉⲫⲛⲟⲩϯ",
+      "english": "Jesus answered them, 'Isn't this because you are mistaken, not knowing the Scriptures, nor the power of God?",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲫⲣⲁⲛ ⲙⲡⲉⲛϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲛⲧⲉⲧⲉⲛⲑⲱⲟⲩϯ ⲉⲩⲙⲁ ⲛⲉⲙⲡⲁⲡⲛⲉⲩⲙⲁ ⲛⲉⲙϯ**ϫⲟⲙ** ⲛⲧⲉⲡⲉⲛϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "In the name of our Lord Jesus Christ, you being gathered together, and my spirit, with the power of our Lord Jesus Christ,",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        9.116
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲟⲙ_0_node",
+          334
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϫⲟⲙ",
+          70
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϫⲟⲙ",
+          37
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϫⲟⲙ",
+          26
+        ],
+        [
+          "ⲧⲁ_1_pre_ϫⲟⲙ",
+          15
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          46
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲙ",
+          9
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϫⲟⲙ",
+          7
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲙ",
+          12
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          8
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          8
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲟⲙ",
+          9
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          9
+        ],
+        [
+          "ⲛⲓ_1_pre_ϫⲟⲙ",
+          7
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          4
+        ],
+        [
+          "ⲫⲏⲟⲩⲓ_3_post_ⲛⲓ",
+          4
+        ],
+        [
+          "ϯ_1_pre_ϫⲟⲙ",
+          7
+        ],
+        [
+          "ⲛⲓⲃⲉⲛ_1_post_ϫⲟⲙ",
+          3
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϫⲟⲙ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ϫⲟⲙ",
+          3
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲟⲙ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ⲧⲟⲩ_1_pre_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ⲟⲩ_1_pre_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲙ_0_node",
+          "ⲛⲧⲉ_1_post_ϫⲟⲙ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲙ",
+          "ⲫ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ⲧⲉⲕ_1_pre_ϫⲟⲙ",
+          2
+        ],
+        [
+          "ϫⲟⲙ_0_node",
+          "ⲧⲏⲣ_1_post_ϫⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲟⲙ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲙ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲫⲏⲟⲩⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ϯ_1_pre_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ⲧⲉϥ_1_pre_ϫⲟⲙ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲙ_0_node",
+          "ⲛⲓⲃⲉⲛ_1_post_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϫⲟⲙ",
+          "ϯ_1_pre_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ϫⲟⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ϫⲟⲙ",
+          "ϫⲟⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 7.03,
+      "rank": 159,
+      "count": 597
+    }
+  }
+}

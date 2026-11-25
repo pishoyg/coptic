@@ -1,0 +1,54 @@
+{
+  "id": "C263",
+  "forms": [
+    {
+      "id": "CF1102",
+      "orth": "ⲁϣⲓⲣⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1103",
+      "orth": "ⲁϣⲓⲣⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1104",
+      "orth": "ⲁϣⲓⲗⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS295",
+      "bibliography": "CD 84a; KoptHWb 16; DELC 20; ChLCS 6a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C255",
+      "type": "cf",
+      "label": "become many, multiply"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C264",
+      "label": "ⲙⲉⲧⲁϣⲓⲗⲓ",
+      "pos": "N",
+      "gloss": "diligence, activity"
+    }
+  ]
+}

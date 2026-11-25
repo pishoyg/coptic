@@ -1,0 +1,528 @@
+{
+  "id": "C3104",
+  "forms": [
+    {
+      "id": "CF8082",
+      "orth": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.03,
+        "rank": 704,
+        "count": 163
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3554",
+      "bibliography": "CD 296a; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲣⲟⲟⲩϣ ⲙⲡⲁⲓⲱⲛ ⲛⲙⲧⲁⲡⲁⲧⲏ ⲛⲧ**ⲙⲛⲧⲣⲙⲙⲁⲟ** ⲁⲩⲱ ⲛⲕⲉⲉⲡⲓⲑⲩⲙⲓⲁ ⲉⲧⲃⲏⲕ ⲉϩⲟⲩⲛ ⲉⲣⲟⲟⲩ ⲥⲉⲱϭⲧ ⲙⲡϣⲁϫⲉ ⲁⲩⲱ ⲛϥϯⲕⲁⲣⲡⲟⲥ ⲁⲛ ⲉⲃⲟⲗ",
+      "english": "and the cares of this age, and the deceitfulness of riches, and the lusts of other things entering in choke the word, and it becomes unfruitful.'",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲉⲕⲧⲱⲗⲙ ⲛⲧⲉⲕ**ⲙⲛⲧⲣⲙⲙⲁⲟ** ⲉⲕⲉⲓⲛⲉ ⲉϫⲱⲥ ⲛⲛⲉϩⲃⲏⲩⲉ ⲉⲧⲉϩⲉⲛⲇⲓⲕⲁⲓⲟⲛ ⲁⲛ ⲛⲉ :",
+      "english": "Why shouldst thou pollute thy riches and bring upon them works which are unrighteous?",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲕⲁⲛⲱⲙⲓⲁ ϩⲛϩⲉⲛⲙⲛⲧϣⲁⲛϩⲧⲏϥ ⲉϩⲟⲩⲛ ⲉⲛϩⲏⲕⲉ · ϫⲉⲕⲁⲥ ⲉⲕⲛⲁⲡⲟⲗⲁⲩⲉ ⲙⲙⲟⲕ ϩⲛⲧ**ⲙⲛⲧⲣⲙⲙⲁⲟ** ⲛⲁⲧⲟⲩⲱ ·",
+      "english": "Do thou redeem thy sins by charity, and thy lawlessness by gifts of alms to the poor, in order that thou mayest have enjoyment in the riches which do not come to an end.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧ",
+        92,
+        18.293
+      ],
+      [
+        "ⲛ",
+        133,
+        17.626
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        21,
+        16.553
+      ],
+      [
+        "ⲉ",
+        77,
+        16.269
+      ],
+      [
+        "ⲟⲩ",
+        62,
+        15.734
+      ],
+      [
+        "ⲛⲁ",
+        54,
+        15.604
+      ],
+      [
+        "ⲁⲩⲱ",
+        53,
+        15.582
+      ],
+      [
+        "ⲙⲛⲧϩⲏⲕⲉ",
+        6,
+        14.896
+      ],
+      [
+        "ⲁⲡⲁⲧⲏ",
+        4,
+        14.726
+      ],
+      [
+        "ⲙⲛ",
+        34,
+        14.558
+      ],
+      [
+        "ϩⲛ",
+        35,
+        14.518
+      ],
+      [
+        "ⲧⲉϥ",
+        19,
+        14.359
+      ],
+      [
+        "ⲥ",
+        34,
+        14.188
+      ],
+      [
+        "ⲧⲉⲥ",
+        9,
+        13.69
+      ],
+      [
+        "ⲡ",
+        45,
+        13.624
+      ],
+      [
+        "ⲙ",
+        35,
+        13.39
+      ],
+      [
+        "⁖ⲙⲛ",
+        1,
+        13.249
+      ],
+      [
+        "ⲩⲥⲟⲩⲱϩ",
+        1,
+        13.249
+      ],
+      [
+        "ⲩϣϯ",
+        1,
+        13.249
+      ],
+      [
+        "ⲙⲛⲧϭⲟⲙ",
+        1,
+        13.249
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          92
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          12
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          6
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          14
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          8
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          7
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          9
+        ],
+        [
+          "ⲁⲧⲟⲩⲱ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲥⲉⲃⲏⲥ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲁⲧⲧⲁⲕⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲁϫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_3_post_ⲁⲧϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          3
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲁⲧⲟⲩⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲥⲉⲃⲏⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲁⲧⲧⲁⲕⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲁⲧϣⲁϫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲁϫⲉ_2_post_ⲛ",
+          "ⲉⲣⲟ_3_post_ⲁⲧϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲡⲉⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲛⲧⲉ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲙⲙⲁⲟ_0_node",
+          "ⲙ_2_post_ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ",
+          "ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ_1_post_ⲙⲛⲧⲣⲙⲙⲁⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.03,
+      "rank": 612,
+      "count": 163
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ]
+}

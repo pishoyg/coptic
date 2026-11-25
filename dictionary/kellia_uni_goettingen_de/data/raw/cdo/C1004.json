@@ -1,0 +1,44 @@
+{
+  "id": "C1004",
+  "forms": [
+    {
+      "id": "CF3362",
+      "orth": "ⲉⲡⲓⲧⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1165",
+      "bibliography": "CD 88a; CED 49; KoptHWb 505"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1001",
+      "label": "ⲉⲓⲧⲛ",
+      "pos": "N",
+      "gloss": "ground, earth, dust, rubbish"
+    },
+    {
+      "target": "C1002",
+      "label": "ⲉⲡⲉⲓⲧⲛ",
+      "pos": "ADV",
+      "gloss": "to the ground, downwards"
+    },
+    {
+      "target": "C1003",
+      "label": "ⲙⲡⲉⲓⲧⲛ",
+      "pos": "ADV",
+      "gloss": "on the ground, below"
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "id": "C2869",
+  "forms": [
+    {
+      "id": "CF7594",
+      "orth": "ⲡⲉⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4645,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF7595",
+      "orth": "ⲡⲣⲓⲉ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲡⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3064,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲡⲟⲣⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14305,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲣⲉⲓⲱⲟⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4453,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲡⲉⲣⲉⲓⲱⲟⲩ†",
+      "dialect": "S",
+      "id": "239.4"
+    },
+    {
+      "orth": "ⲫⲓⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.99,
+        "rank": 727,
+        "count": 84
+      }
+    },
+    {
+      "orth": "ⲫⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4005,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲫⲟⲣⲓ†",
+      "dialect": "B",
+      "id": "239.7"
+    },
+    {
+      "orth": "ⲫⲉⲣⲓⲱⲟⲩ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3097,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲫⲉⲣⲓⲱⲟⲩⲧ†",
+      "dialect": "B",
+      "id": "239.9"
+    },
+    {
+      "orth": "ⲡⲣⲉⲓⲱⲟⲩ†",
+      "dialect": "A",
+      "id": "239.10"
+    },
+    {
+      "orth": "ⲡⲣⲣⲓⲉ",
+      "dialect": "A",
+      "id": "239.11"
+    },
+    {
+      "orth": "ⲡⲣⲣⲉⲓⲉ",
+      "dialect": "L",
+      "id": "239.12"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3280",
+      "bibliography": "CD 267ab; CED 127; KoptHWb 150; DELC 162; ChLCS 37b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲉⲓⲉ ⲛⲧⲁⲛⲡⲗⲁⲛⲁ ⲛⲧⲟⲟⲩⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲧⲙⲉ ⲁⲩⲱ ⲙⲡϥϣⲁ ⲛⲁⲛ ⲛϭⲓⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲁⲩⲱ ⲡⲣⲏ ⲙⲡϥ**ⲡⲉⲓⲣⲉ** ⲛⲁⲛ",
+      "english": "Therefore have we erred from the way of truth, and the light of righteousness hath not shined unto us, and the sun of righteousness rose not upon us.",
+      "source": "Wisdom 5",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛⲟⲩⲱⲛϩ ⲇⲉ ⲉⲃⲟⲗ ⲟⲛ ϩⲙⲡϩⲟⲓⲧⲉ ⲏ ϩⲙⲡⲉϣⲧⲓⲧ ⲏ ϩⲙⲡⲃⲏⲕⲉ ⲏ ϩⲛⲥⲕⲉⲩⲟⲥ ⲛⲓⲙ ⲛϣⲁⲁⲣ ⲟⲩⲥⲱⲃϩ ⲡⲉ ⲉⲁϥ**ⲡⲓⲣⲉ** ⲉⲩⲉⲣⲟⲕϩⲟⲩ ϩⲛⲟⲩⲥⲁⲧⲉ ⲡⲉⲧⲉⲣⲉⲡϩⲣⲃ ⲉⲧⲙⲙⲁⲩ ⲛϩⲏⲧϥ",
+      "english": "And if it should still appear in the garment, either in the warp or in the woof, or in any article of skin, it is a leprosy bursting forth: that wherein is the plague shall be burnt with fire.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ⲟⲩⲙⲏⲏϣⲉ ⲛⲟⲩⲟⲉⲓϣ ϫⲓⲛⲛⲧⲁⲥⲥⲙⲟⲩ ⲁⲩⲱ ⲡⲧⲁⲉⲓⲟ ⲙⲡⲉⲥⲣⲡⲙⲉⲉⲩⲉ ⲙⲏⲛ ⲉⲃⲟⲗ ⲉϥ**ⲡⲣⲉⲓⲱⲟⲩ** ·",
+      "english": "And behold, very many times thou shalt acquire blessing and honour by the remembrance of her, which shall abide and be glorious.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲁⲧⲉ",
+        1,
+        16.139
+      ],
+      [
+        "ⲣⲏ",
+        3,
+        12.608
+      ],
+      [
+        "ϫⲟⲩϥ",
+        1,
+        12.554
+      ],
+      [
+        "ⲥⲁϣ",
+        1,
+        10.746
+      ],
+      [
+        "ϩⲙ",
+        5,
+        9.919
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        2,
+        9.833
+      ],
+      [
+        "ⲙ",
+        5,
+        7.858
+      ],
+      [
+        "ⲡ",
+        5,
+        7.003
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        6.733
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        6.637
+      ],
+      [
+        "ⲁ",
+        4,
+        6.585
+      ],
+      [
+        "ϩⲉⲑⲛⲟⲥ",
+        1,
+        6.491
+      ],
+      [
+        "ϥ",
+        4,
+        6.062
+      ],
+      [
+        "ϥⲓ",
+        1,
+        5.752
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        5.272
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        4.127
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        4.118
+      ],
+      [
+        "ⲛ",
+        3,
+        4.104
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        3.836
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        3.771
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲓ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲣⲉ_0_node",
+          6
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϯⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲏ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲡⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ϩⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲁϣ",
+          1
+        ],
+        [
+          "ⲥⲁϣ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϫⲟⲩϥ",
+          1
+        ],
+        [
+          "ϫⲟⲩϥ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲏ",
+          1
+        ],
+        [
+          "ⲣⲏ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲓ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲇⲉ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲟⲩ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲡⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲣⲉ_0_node",
+          "ⲛⲧ_1_post_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲉⲓⲣⲉ",
+          "ⲁ_3_post_ϯⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲣⲉ_0_node",
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲏ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲣⲏ_3_post_ⲡ",
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲓⲣⲉ_b",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ϥ_1_pre_ⲡⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲡⲉⲓⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉⲓⲣⲉ_0_node",
+          "ϩⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ϩⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          "ⲡⲉϥ_3_post_ⲥⲁϣ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲁϣ",
+          "ⲥⲁϣ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲡⲉⲓⲣⲉ",
+          "ⲡⲉϥ_3_post_ϫⲟⲩϥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϫⲟⲩϥ",
+          "ϫⲟⲩϥ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲡ_2_pre_ⲣⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲏ",
+          "ⲣⲏ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲣⲏ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ⲙⲡ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲡⲉⲓⲣⲉ",
+          "ϥ_1_pre_ⲡⲉⲓⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2067,
+      "count": 22
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2872",
+      "label": "ϭⲓⲛⲡⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "coming, showing forth"
+    },
+    {
+      "target": "C2871",
+      "label": "ⲡⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "coming, shining forth; tale"
+    },
+    {
+      "target": "C2870",
+      "label": "ⲫⲓⲣⲓ (ⲉ)",
+      "pos": "V",
+      "gloss": "put forth, announce, tell, proclaim"
+    }
+  ],
+  "etym": {
+    "egy_num": "60920",
+    "egy_lemma": "pri̯",
+    "demo_num": "d2083",
+    "demo_lemma": "pr",
+    "english": "to go forth; to come forth",
+    "german": "herauskommen; herausgehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60920",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2083"
+  }
+}

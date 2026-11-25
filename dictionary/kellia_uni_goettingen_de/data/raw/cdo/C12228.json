@@ -1,0 +1,50 @@
+{
+  "id": "C12228",
+  "forms": [
+    {
+      "id": "CF33245",
+      "orth": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17232",
+      "bibliography": "CD 386b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12230",
+      "label": "ⲉⲣⲥⲉϩⲧ",
+      "pos": "V",
+      "gloss": "be leprous"
+    },
+    {
+      "target": "C12229",
+      "label": "ⲕⲁⲕⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leper"
+    },
+    {
+      "target": "C12227",
+      "label": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "pos": "V",
+      "gloss": "be barked, coated with leprosy"
+    },
+    {
+      "target": "C12072",
+      "label": "ⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leprosy"
+    }
+  ]
+}

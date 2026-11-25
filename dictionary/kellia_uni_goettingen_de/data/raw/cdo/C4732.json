@@ -1,0 +1,462 @@
+{
+  "id": "C4732",
+  "forms": [
+    {
+      "id": "CF11429",
+      "orth": "ⲧⲁϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1658,
+        "count": 42
+      }
+    },
+    {
+      "orth": "ⲑⲁϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2949,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲑⲏϥ",
+      "dialect": "B",
+      "id": "1677.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5346",
+      "bibliography": "CD 453a; CDC 70a; CED 202; KoptHWb 256; DELC 225a; ChLCS 63b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϩⲓⲟⲩⲉ ⲙⲡⲕⲁϣ ⲉϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲛⲉϫ**ⲧⲁϥ** ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ . ⲁⲩⲱ ⲁⲩⲕⲗϫⲛⲉⲩⲡⲁⲧ ϩⲓϩⲏ ⲙⲙⲟϥ ⲁⲩⲟⲩⲱϣⲧ ⲛⲁϥ .",
+      "english": "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥⲉⲓ ⲛϭⲓⲧⲉⲓⲉⲃⲓⲏⲛ ⲉⲥⲥⲟⲡⲥ ϩⲁⲡϩⲱⲃ ⲉⲛ**ⲧⲁϥ** ⲧⲁϩⲉⲧⲉⲥϣⲉⲉⲣⲉ · ⲁⲩⲱ ⲡⲉϫⲁⲕ ϫⲉⲙⲡⲟⲩⲧⲛⲛⲟⲟⲩⲧ ⲉⲗⲁⲁⲩ ⲉⲙⲏⲧⲧⲉⲓ ⲉⲛⲉⲥⲟⲟⲩ ⲉⲛⲧⲁⲩⲥⲱⲣⲙ ⲛⲧⲉⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ·",
+      "english": "This miserable woman came and made entreaty by reason of the matter which had come upon her daughter, and Thou didst say unto her, 'I have not been sent to any except the sheep which have gone astray of the House of Israel.'",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲱⲧ ⲛϩⲏⲧ ϫⲉⲡⲉⲛ**ⲧⲁϥ** ⲉⲣⲏⲧ ⲙⲙⲟϥ ⲟⲩⲛϭⲟⲙ ⲙⲙⲟϥ ⲉⲁⲁϥ .",
+      "english": "and being fully assured that what he had promised, he was able also to perform.",
+      "source": "45_Romans_4",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲉⲧⲛⲁϣⲧϩⲏ",
+        1,
+        17.695
+      ],
+      [
+        "ⲥϧⲉ",
+        1,
+        13.051
+      ],
+      [
+        "ⲉⲛⲧⲟⲗⲏ",
+        1,
+        11.051
+      ],
+      [
+        "ⲡⲉⲧⲉⲛ",
+        1,
+        10.103
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.012
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        1,
+        8.58
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        1,
+        8.21
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        7.857
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        7.414
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        7.336
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.971
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲛ",
+        16,
+        16.817
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        19,
+        16.324
+      ],
+      [
+        "ⲧⲙⲏⲥⲟⲡⲟⲧⲏⲙⲓⲁ",
+        1,
+        15.206
+      ],
+      [
+        "ⲉⲝⲟⲩⲥⲓⲁ",
+        6,
+        14.889
+      ],
+      [
+        "ⲛ",
+        43,
+        14.695
+      ],
+      [
+        "ⲙ",
+        27,
+        14.224
+      ],
+      [
+        "ⲛⲁⲛⲁϩⲙⲉ",
+        1,
+        14.206
+      ],
+      [
+        "ⲡ",
+        30,
+        13.825
+      ],
+      [
+        "ⲟⲩ",
+        22,
+        13.206
+      ],
+      [
+        "ⲧⲁⲡⲁⲛⲏ",
+        1,
+        13.206
+      ],
+      [
+        "ⲙⲛ",
+        15,
+        12.972
+      ],
+      [
+        "ⲧ",
+        17,
+        12.941
+      ],
+      [
+        "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+        1,
+        12.621
+      ],
+      [
+        "ⲱⲛϩ",
+        5,
+        12.29
+      ],
+      [
+        "ⲉϩⲣⲁ",
+        2,
+        11.763
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        6,
+        11.667
+      ],
+      [
+        "ⲡⲉⲛ",
+        5,
+        11.655
+      ],
+      [
+        "ⲁⲣⲭⲁⲓⲟⲛ",
+        1,
+        10.958
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        4,
+        10.938
+      ],
+      [
+        "ⲁⲅⲣⲓⲟⲛ",
+        1,
+        10.884
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲧⲁϥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲧⲁϥ",
+          "ⲧⲁϥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁϥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁϥ_0_node",
+          20
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲧⲁϥ",
+          3
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          6
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲇⲁⲛⲓⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ_b",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲛ_1_pre_ⲧⲁϥ",
+          "ⲧⲁϥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          "ⲧⲁϥ_0_node",
+          3
+        ],
+        [
+          "ⲧⲁϥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          5
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲧⲁϥ_0_node",
+          "ⲛ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁϥ",
+          "ⲟⲩ_4_post_ⲇⲁⲛⲓⲏⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲇⲁⲛⲓⲏⲗ",
+          "ϩⲙ_1_post_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲧⲁϥ",
+          "ⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁϥ",
+          "ⲧⲁϥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ",
+          "ⲙⲛ_1_pre_ⲧⲁϥ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ_b",
+          "ⲛⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ",
+          "ⲛⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁϥ",
+          "ⲡⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲧⲁϥ",
+          "ⲧⲁϥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁϥ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.26,
+      "rank": 1448,
+      "count": 42
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5077,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4734",
+      "label": "ϩⲓⲑⲁϥ",
+      "pos": "V",
+      "gloss": "spit"
+    },
+    {
+      "target": "C4733",
+      "label": "ⲛⲉϫⲧⲁϥ",
+      "pos": "V",
+      "gloss": "spit"
+    },
+    {
+      "target": "C4735",
+      "label": "ⲥⲉⲧⲧⲁϥ",
+      "pos": "V",
+      "gloss": "spit"
+    }
+  ],
+  "etym": {
+    "egy_num": "171750",
+    "egy_lemma": "tf",
+    "demo_num": "dm206",
+    "demo_lemma": "tfꜣ",
+    "english": "spittle",
+    "german": "Speichel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/171750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm206"
+  }
+}

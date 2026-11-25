@@ -1,0 +1,199 @@
+{
+  "id": "C726",
+  "forms": [
+    {
+      "id": "CF2730",
+      "orth": "ⲉⲡⲉⲥⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7681,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS866",
+      "bibliography": "CD 60a; KoptHWb 40; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲛⲏⲩ **ⲉⲡⲉⲥⲏⲧ** ϩⲙⲡⲡⲁϣⲥ · ϥⲛⲁⲡⲱϣⲥ ⲛⲧⲉⲡⲙⲟⲛⲟⲃⲟⲗⲓⲥ ⲃⲱⲕ ⲉϩⲣⲁⲓ ϩⲛⲧⲉϥⲟⲩⲣⲏⲏⲧⲉ · ⲛⲥⲣⲟⲩⲟⲙⲟⲙⲉ ⲉⲣⲟϥ ⲛϥⲙⲟⲩ ϩⲙⲡϫⲱⲕ ⲙⲡⲁϫⲟⲩⲧⲁϥⲧⲉ ·",
+      "english": "And as he is coming down from the boat by the landing plank he shall trip up, and the monobolis shall penetrate his foot, and the foot shall mortify, and he shall die in the twenty-fourth year after my death.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϣⲉⲡ ⲟⲩⲥⲓⲛⲇⲱⲛ ⲁϥⲙⲡⲥⲱⲙⲁ **ⲉⲡⲉⲥⲏⲧ**ⲡⲉⲥⲏⲧ ⲁϥϭⲗⲙⲗⲱⲙϥ ϩⲛⲧⲥⲓⲛⲇⲱⲛ . ⲁϥⲕⲁⲁϥ ϩⲙⲡⲉϥⲙϩⲁⲁⲩ ⲉⲁⲩϣⲉⲧϣⲱⲧϥ ⲉⲃⲟⲗ ϩⲛⲧⲡⲉⲧⲣⲁ ⲁⲩⲱ ⲁⲩⲥⲕⲣⲕⲣⲟⲩⲱⲛⲉ ⲉⲣⲟⲙⲡⲉⲙϩⲁⲁⲩ .",
+      "english": "He bought a linen cloth, and taking him down, wound him in the linen cloth, and laid him in a tomb which had been cut out of a rock. He rolled a stone against the door of the tomb.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁϣⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲥⲏⲧ",
+        1,
+        16.598
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        9.624
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        9.56
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        7.408
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲉⲥⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲡⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ⲥⲏⲧ_2_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲡⲉⲥⲏⲧ_0_node",
+          "ⲡⲉ_1_post_ⲉⲡⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲡⲉⲥⲏⲧ",
+          "ⲥⲏⲧ_2_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7222,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C729",
+      "label": "ϣⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "as far as, down to the ground"
+    },
+    {
+      "target": "C730",
+      "label": "ϩⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "below ground, under"
+    },
+    {
+      "target": "C731",
+      "label": "ϩⲓⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "on, to the ground; from off ground"
+    },
+    {
+      "target": "C732",
+      "label": "ϫⲓⲛⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "from the ground, from below"
+    },
+    {
+      "target": "C725",
+      "label": "ⲉⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "ground, bottom, lowest part"
+    },
+    {
+      "target": "C727",
+      "label": "ⲙⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "at the bottom, below"
+    },
+    {
+      "target": "C733",
+      "label": "ⲣⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "go, be below"
+    },
+    {
+      "target": "C728",
+      "label": "ⲥⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "(on the) lower side, below"
+    }
+  ]
+}

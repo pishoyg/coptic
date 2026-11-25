@@ -1,0 +1,47 @@
+{
+  "id": "C4528",
+  "forms": [
+    {
+      "id": "CF11012",
+      "orth": "ⲧⲁⲣϣⲟ⸗",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲧⲁⲣϣⲏⲟⲩⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10514,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5116",
+      "bibliography": "CD 432b; CED 196; KoptHWb 244; DELC 221b-222a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲟⲛⲟⲛ ⲁⲣⲓⲉⲙⲓ ϫⲉⲡϭⲟⲉⲓⲥ ⲁϥⲁⲓⲧ ⲙⲡⲁⲓⲣⲏϯ: ⲧⲉⲧⲉⲛⲥⲁϫⲓ ⲛⲥⲱⲓ ⲟⲩⲟϩ ⲧⲉⲧⲉⲛϣⲫⲓⲧ ϧⲁϫⲱⲓ ⲁⲛ ⲟⲩⲟϩ ⲧⲉⲧⲉⲛ**ⲧⲁⲣϣⲏⲟⲩⲧ** ⲉϫⲱⲓ .",
+      "english": "Ye speak against me; ye do not feel for me, but bear hard upon me.",
+      "source": "18_Iob_19",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9966,
+      "count": 1
+    }
+  }
+}

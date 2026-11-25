@@ -1,0 +1,63 @@
+{
+  "id": "C6735",
+  "forms": [
+    {
+      "id": "CF15516",
+      "orth": "ⲙⲁ ⲛϯϩⲁⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7449",
+      "bibliography": "CD 694b; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6732",
+      "label": "ϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judgement, inquest"
+    },
+    {
+      "target": "C6737",
+      "label": "ϩⲓⲟⲩⲓ ⲉⲡϩⲁⲡ",
+      "pos": "V",
+      "gloss": "condemn"
+    },
+    {
+      "target": "C6738",
+      "label": "ϫⲓϩⲁⲡ",
+      "pos": "V",
+      "gloss": "receive judgement"
+    },
+    {
+      "target": "C6734",
+      "label": "ϯϩⲁⲡ",
+      "pos": "V",
+      "gloss": "give judgement"
+    },
+    {
+      "target": "C6733",
+      "label": "ⲣϩⲁⲡ",
+      "pos": "V",
+      "gloss": "give judgement, avenge, go to law"
+    },
+    {
+      "target": "C6736",
+      "label": "ⲣⲉϥϯϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judge"
+    }
+  ]
+}

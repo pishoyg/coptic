@@ -1,0 +1,343 @@
+{
+  "id": "C868",
+  "forms": [
+    {
+      "id": "CF3078",
+      "orth": "ⲉⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.3,
+        "rank": 315,
+        "count": 520
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1020",
+      "bibliography": "CD 74b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲉⲓⲉ** ⲉⲛⲉⲛⲧⲁⲡⲗⲁⲟⲥ ϭⲉ ⲟⲩⲱⲙ ϩⲛⲟⲩⲱⲙ ⲙⲡϩⲟⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉϣⲱⲗ ⲛⲛⲉⲩϫⲁϫⲉ ⲛⲁⲓ ⲛⲧⲁϥϩⲉ ⲉⲣⲟⲟⲩ ⲧⲉⲛⲟⲩ ⲛⲉⲣⲉⲧⲉⲡⲗⲏⲅⲏ ⲛⲁⲁϣⲁⲓ ⲡⲉ ⲉϫⲛⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ",
+      "english": "Surely if the people had this day eaten freely of the spoils of their enemies which they found, the slaughter among the Philistines would have been greater.",
+      "source": "I Samuel 14",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲙⲉⲉⲩⲉ ⲇⲉ **ⲉⲓⲉ** ⲡⲁϩⲏⲧ ⲁⲓϫⲓ ⲛⲟⲩϭⲟⲣⲧⲉ ϩⲛⲧⲁϭⲓϫ ·",
+      "english": "but the thought came into my heart, and I took a butcher's knife in my hand,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥⲟⲩⲱϩ ⲟⲛ ⲉⲧⲟⲟⲧⲥ ⲛϭⲓⲙⲁⲣⲓⲁ ⲡⲉϫⲁⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ **ⲉⲓⲉ** ⲛⲣⲉϥⲕⲁⲟⲩⲛⲟⲩ ⲙⲛⲛⲣⲉϥϣⲓⲛⲉ · ⲉⲓⲉ ⲛⲥⲉⲛⲁⲧⲁⲙⲉⲛⲣⲱⲙⲉ ⲁⲛ ⲉⲡⲉⲧⲛⲁϣⲱⲡⲉ ⲙⲙⲟⲟⲩ ϫⲓⲛⲙⲡⲉⲓⲛⲁⲩ ·",
+      "english": "“that Mary continued again and said: My Lord, will not then the horoscope-casters and consulters from now on declare unto men what will come to pass for them?”",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲉ",
+        328,
+        29.255
+      ],
+      [
+        "ⲟⲩ",
+        814,
+        28.237
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        571,
+        27.028
+      ],
+      [
+        "ⲛ",
+        510,
+        26.05
+      ],
+      [
+        "ϥ",
+        490,
+        25.711
+      ],
+      [
+        "ⲕ",
+        238,
+        25.289
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        277,
+        25.121
+      ],
+      [
+        "ϯ",
+        257,
+        24.784
+      ],
+      [
+        "ⲟⲩⲁⲑⲓ",
+        22,
+        24.742
+      ],
+      [
+        "ⲟⲩ",
+        359,
+        24.694
+      ],
+      [
+        "ⲛ",
+        367,
+        24.626
+      ],
+      [
+        "ⲙ",
+        274,
+        24.354
+      ],
+      [
+        "ⲛⲓⲙ",
+        83,
+        24.294
+      ],
+      [
+        "ⲛⲁ",
+        247,
+        24.276
+      ],
+      [
+        "ⲣⲉϥϭⲓⲛϫⲟⲛⲥ",
+        27,
+        24.188
+      ],
+      [
+        "ϧⲉⲛ",
+        252,
+        24.171
+      ],
+      [
+        "ϧⲉ",
+        31,
+        24.08
+      ],
+      [
+        "ⲙⲁⲩ",
+        61,
+        23.964
+      ],
+      [
+        "ϧⲉⲛ",
+        232,
+        23.813
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        99,
+        23.715
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        43,
+        28.605
+      ],
+      [
+        "ⲛ",
+        300,
+        20.224
+      ],
+      [
+        "ϫⲉ",
+        167,
+        20.026
+      ],
+      [
+        "ⲛⲁ",
+        185,
+        20.011
+      ],
+      [
+        "ⲟⲩ",
+        190,
+        19.658
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        27,
+        19.411
+      ],
+      [
+        "ⲕ",
+        119,
+        19.266
+      ],
+      [
+        "ⲉ",
+        172,
+        18.824
+      ],
+      [
+        "ϥ",
+        145,
+        17.79
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        87,
+        17.523
+      ],
+      [
+        "ⲧⲛ",
+        57,
+        17.391
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        28,
+        17.277
+      ],
+      [
+        "ⲛⲓⲃⲉ",
+        6,
+        17.274
+      ],
+      [
+        "ⲡⲉ",
+        81,
+        17.256
+      ],
+      [
+        "ⲁ",
+        113,
+        17.233
+      ],
+      [
+        "ⲡ",
+        127,
+        17.192
+      ],
+      [
+        "ⲡⲁ",
+        51,
+        17.122
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        30,
+        16.721
+      ],
+      [
+        "ⲓ",
+        66,
+        16.712
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        46,
+        16.612
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲓⲉ_0_node",
+          39
+        ],
+        [
+          "ϩⲱ_1_post_ⲉⲓⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲉ_0_node",
+          "ϩⲱ_1_post_ⲉⲓⲉ",
+          1
+        ],
+        [
+          "ϩⲱ_1_post_ⲉⲓⲉ",
+          "ⲟⲩ_2_post_ϩⲱ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲓⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲉⲓⲉ",
+          "ⲉⲓⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.95,
+      "rank": 392,
+      "count": 309
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C866",
+      "label": "ⲉⲓⲉ",
+      "pos": "PTC",
+      "gloss": "then"
+    },
+    {
+      "target": "C867",
+      "label": "ⲉⲓⲉ",
+      "pos": "PTC",
+      "gloss": "unless, without"
+    },
+    {
+      "target": "C869",
+      "label": "ⲉⲓⲉ",
+      "pos": "PTC",
+      "gloss": ""
+    },
+    {
+      "target": "C870",
+      "label": "ⲉⲓⲉ",
+      "pos": "CONJ",
+      "gloss": "or, whether . . . or"
+    }
+  ],
+  "etym": {
+    "egy_num": "20060",
+    "egy_lemma": "jꜣ",
+    "english": "oh!",
+    "german": "oh!; wahrlich!; [Interjektion]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/20060"
+  }
+}

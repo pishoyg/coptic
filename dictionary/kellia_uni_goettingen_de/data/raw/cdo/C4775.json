@@ -1,0 +1,188 @@
+{
+  "id": "C4775",
+  "forms": [
+    {
+      "id": "CF11515",
+      "orth": "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8565,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5393",
+      "bibliography": "CD 454b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙϩⲁⲛ**ⲙⲉⲧⲣⲉϥϯⲑⲱϧ** ϩⲁⲛⲣⲱⲙⲓ ⲉⲣⲉⲡⲟⲩϩⲏⲧ ⲧⲁⲕⲏⲟⲩⲧ ⲟⲩⲟϩ ⲉⲩϥⲏϫ ⲛⲧⲙⲏⲓ ⲉⲩⲙⲉⲩⲓ ⲉϯⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ ϫⲉⲟⲩⲙⲉⲧⲣⲉϥϫⲫⲉ ϩⲏⲟⲩ ⲧⲉ .",
+      "english": "constant friction of people of corrupt minds and destitute of the truth, who suppose that godliness is a means of gain. Withdraw yourself from such.",
+      "source": "15_I Timothy_06",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        11.298
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        10.313
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        9.692
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        1,
+        8.487
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_1_post_ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+          "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ_0_node",
+          "ϩⲁⲛ_2_post_ⲣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲣⲱⲙⲓ",
+          "ⲣⲱⲙⲓ_1_post_ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8035,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4768",
+      "type": "cf",
+      "label": "be mixed, be disturbed, mix, stir"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4770",
+      "label": "ⲁⲧⲧⲱϩ",
+      "pos": "N",
+      "gloss": "unmixed, not confused"
+    },
+    {
+      "target": "C4771",
+      "label": "ⲙⲁⲓⲧⲱϩ",
+      "pos": "N",
+      "gloss": "who loves to meddle"
+    },
+    {
+      "target": "C4774",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "confusion, disturbance"
+    },
+    {
+      "target": "C4772",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "person interfering/poking the nose in sth"
+    },
+    {
+      "target": "C4773",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "person interfering/poking the nose in sth"
+    },
+    {
+      "target": "C4776",
+      "label": "ⲧⲁϩⲥ",
+      "pos": "N",
+      "gloss": "confusion"
+    },
+    {
+      "target": "C4768",
+      "label": "ⲧⲱϩ",
+      "pos": "V",
+      "gloss": "be mixed, be disturbed, be clouded; mix, stir"
+    },
+    {
+      "target": "C4769",
+      "label": "ⲧⲱϩ",
+      "pos": "N",
+      "gloss": "mixture, disturbance"
+    }
+  ]
+}

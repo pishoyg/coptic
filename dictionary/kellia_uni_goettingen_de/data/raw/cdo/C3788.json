@@ -1,0 +1,101 @@
+{
+  "id": "C3788",
+  "forms": [
+    {
+      "id": "CF9498",
+      "orth": "ⲥⲱⲧ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4299",
+      "bibliography": "CD 360a; KoptHWb 199; DELC 198; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲡϫⲟⲉⲓⲥ ϣⲧⲁⲙ ⲉⲣⲛⲧⲟⲟⲧⲉ ⲛⲧⲉⲩⲯⲩⲭⲏ ⲛⲧϩⲉ ⲛⲟⲩⲁϭⲣⲏⲛ · ⲁⲩⲱ ⲛϥⲧⲣⲉⲛϣⲟϫⲛⲉ ⲛⲧⲉⲥⲃⲱ ϣⲟⲟⲩⲉ ⲉϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲛⲧϩⲉ ⲛϩⲉⲛⲉⲕⲓⲃⲉ ⲉⲩϣⲟⲩⲱⲟⲩ **ⲉⲧⲙⲧⲣⲉⲩⲥⲱⲧ **ⲉ**ϯⲥⲃⲱ** ⲛϩⲉⲛⲕⲟⲟⲩⲉ ϫⲓⲛⲡⲉⲓⲛⲁⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and the Lord shut the womb of their souls like a barren woman, and caused the counsels of the teaching to dry up in our community like empty breasts, so that they should not again teach others, from this moment, through God.",
+      "source": "Abraham Our Father: YA 525-30",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:10-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲡⲓⲧⲱϣ ⲛⲣⲉϥⲧⲁⲛϩⲟⲉⲓⲣⲉ ⲙⲙⲟⲕ ⲛⲉⲃⲓⲏⲛ ϣⲁⲧⲥⲩⲛⲧⲉⲗⲉⲁ ⲉⲧⲉⲣⲉⲓⲏⲥⲟⲩⲥ ⲛⲁϥⲱⲧⲉ ⲉⲃⲟⲗ ⲛⲛⲕⲉϣⲱϫⲡ ⲛⲛⲉⲕⲙⲉⲉⲩⲉ ϩⲓϫⲙⲡⲕⲁϩ **ⲛⲅⲧⲙⲥⲱⲧ **ⲉ**ϣⲱⲡⲉ** .",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 185-194",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:1-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3796",
+      "label": "ϫⲓⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "get ransom"
+    },
+    {
+      "target": "C3795",
+      "label": "ϯ ⲉⲡⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "pay for, as ransom"
+    },
+    {
+      "target": "C3794",
+      "label": "ϯⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem"
+    },
+    {
+      "target": "C3790",
+      "label": "ⲣⲉϥⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "spinner"
+    },
+    {
+      "target": "C3797",
+      "label": "ⲣⲉϥⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redeemer"
+    },
+    {
+      "target": "C3791",
+      "label": "ⲥⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "spun (fabric)"
+    },
+    {
+      "target": "C3787",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "return, repeat, not . . . again (in neg. clause)"
+    },
+    {
+      "target": "C3789",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "stretch, reach; spin"
+    },
+    {
+      "target": "C3792",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem, rescue, save"
+    },
+    {
+      "target": "C3793",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redemption, rescue; ransom, price"
+    }
+  ]
+}

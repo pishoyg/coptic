@@ -1,0 +1,107 @@
+{
+  "id": "C859",
+  "forms": [
+    {
+      "id": "CF3060",
+      "orth": "ϯ ⲛⲓⲁⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3506,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1011",
+      "bibliography": "CD 73b; KoptHWb 52"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲉⲛⲟⲩⲣⲉϥϭⲓⲥⲙⲏ ⲡⲉ ⲛⲧⲉⲡⲓⲥⲁϫⲓ ⲟⲩⲟϩ ⲛⲟⲩⲣⲉϥⲉⲣϩⲱⲃ ⲁⲛ ⲡⲉ ⲫⲁⲓ ⲁϥⲟⲛⲓ ⲛⲟⲩⲣⲱⲙⲓ ⲉⲁϥ**ϯⲛⲓⲁⲧ**ϥ ⲙⲡϩⲟ ⲛⲧⲉⲡⲉϥϫⲓⲛⲙⲓⲥⲓ ϧⲉⲛⲟⲩⲓⲁⲗ",
+      "english": "For if anyone is a hearer of the word and not a doer, he is like a man looking at his natural face in a mirror;",
+      "source": "20_James_01",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C862",
+      "label": "ϥⲓ ⲛⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "raise eye"
+    },
+    {
+      "target": "C855",
+      "label": "ⲉⲓⲁ",
+      "pos": "N",
+      "gloss": "eye and its sight"
+    },
+    {
+      "target": "C856",
+      "label": "ⲕⲧⲉⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look round, turn eye"
+    },
+    {
+      "target": "C863",
+      "label": "ⲕⲱ ϩⲁⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "intend to do"
+    },
+    {
+      "target": "C865",
+      "label": "ⲙⲛⲧⲛⲁⲓⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "blessedness"
+    },
+    {
+      "target": "C857",
+      "label": "ⲙⲟⲩϩ ⲛⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look intensely"
+    },
+    {
+      "target": "C864",
+      "label": "ⲛⲁⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "blessed is . . ., (great is the eye of . . .)"
+    },
+    {
+      "target": "C858",
+      "label": "ⲥⲙⲛⲉⲓⲁⲧ⸗ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "fix eyes upon"
+    },
+    {
+      "target": "C861",
+      "label": "ⲧⲟⲩⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    },
+    {
+      "target": "C860",
+      "label": "ⲧⲥⲁⲃⲟ ⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    }
+  ]
+}

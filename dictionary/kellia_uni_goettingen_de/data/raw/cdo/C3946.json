@@ -1,0 +1,169 @@
+{
+  "id": "C3946",
+  "forms": [
+    {
+      "id": "CF9829",
+      "orth": "ⲁⲧⲥⲱϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8696,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4479",
+      "bibliography": "CD 379a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲁⲣⲭⲏⲉⲣⲉⲩⲥ ⲅⲁⲣ ⲙⲡⲁⲓⲣⲏϯ ⲉⲛⲁϥⲥⲁⲓⲱⲟⲩ ⲛⲁⲛ ⲉϥⲧⲁⲓⲏⲟⲩⲧ ⲛⲁⲧⲡⲉⲧϩⲱⲟⲩ ⲛ**ⲁⲧⲥⲱϥ** ⲉϥⲫⲱⲣϫ ⲉⲃⲟⲗ ⲛⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲟⲩⲟϩ ⲁϥϭⲓⲥⲓ ⲥⲁⲡϣⲱⲓ ⲛⲛⲓⲫⲏⲟⲩⲓ .",
+      "english": "For such a high priest was fitting for us: holy, guiltless, undefiled, separated from sinners, and made higher than the heavens;",
+      "source": "19_Hebrews_07",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:07",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲡⲉⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲫⲱⲣϫ",
+        1,
+        12.825
+      ],
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        11.298
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲥⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲱϥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲫⲱⲣϫ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲫⲱⲣϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲥⲱϥ_0_node",
+          "ⲉ_1_post_ⲁⲧⲥⲱϥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲱϥ",
+          "ϥ_3_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲫⲱⲣϫ",
+          "ⲫⲱⲣϫ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲫⲱⲣϫ_2_post_ⲉ",
+          "ⲉⲃⲟⲗ_3_post_ⲫⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲫⲱⲣϫ",
+          "ⲛ_3_post_ⲫⲱⲣϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8165,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3947",
+      "label": "ⲣⲉϥⲥⲉϥ-",
+      "pos": "N",
+      "gloss": "defiler"
+    },
+    {
+      "target": "C3944",
+      "label": "ⲥⲁϥϩⲏⲧ",
+      "pos": "N",
+      "gloss": "defiled in heart"
+    },
+    {
+      "target": "C3943",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "V",
+      "gloss": "be defiled, polluted; defile, pollute"
+    },
+    {
+      "target": "C3945",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "N",
+      "gloss": "pollution, abomination"
+    }
+  ]
+}

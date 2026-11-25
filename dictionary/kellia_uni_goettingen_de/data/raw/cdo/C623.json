@@ -1,0 +1,44 @@
+{
+  "id": "C623",
+  "forms": [
+    {
+      "id": "CF2369",
+      "orth": "ⲙⲛⲧⲉⲃⲃⲉ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS759",
+      "bibliography": "CD XVIb; KoptHWb 32"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C620",
+      "label": "ⲉⲃⲏ",
+      "pos": "N",
+      "gloss": "darkening, rapture, confusion; darkness"
+    },
+    {
+      "target": "C622",
+      "label": "ⲙⲉⲧⲉⲃⲏ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C621",
+      "label": "ⲣⲉⲃⲏ",
+      "pos": "V",
+      "gloss": "to darken, be dark"
+    }
+  ]
+}

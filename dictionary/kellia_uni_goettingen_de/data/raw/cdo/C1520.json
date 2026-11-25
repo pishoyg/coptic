@@ -1,0 +1,247 @@
+{
+  "id": "C1520",
+  "forms": [
+    {
+      "id": "CF4473",
+      "orth": "ⲕⲁϩⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8889,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1777",
+      "bibliography": "CD 133a; KoptHWb 73"
+    },
+    {
+      "id": "CS1778",
+      "bibliography": "CD 133a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϩⲉⲛⲧⲱⲃⲉ ϩⲉ ⲁⲗⲗⲁ ⲁⲙⲏⲓⲧⲛ ⲛⲧⲛ**ⲕⲁϩⲕ** ⲛϩⲉⲛⲱⲛⲉ ⲛⲧⲛϣⲱⲱⲧ ⲛϩⲉⲛⲛⲟⲩϩⲉ ⲙⲛϩⲉⲛⲕⲩⲇⲣⲟⲥ ⲛⲧⲛⲕⲱⲧ ⲛⲁⲛ ⲛⲟⲩⲡⲩⲣⲅⲟⲥ",
+      "english": "The bricks are fallen down, but come, let us hew stones, and cut down sycamores and cedars, and let us build for ourselves a tower.",
+      "source": "Isaiah 9",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲣⲟⲩ ⲙⲡⲉⲓⲙⲁ ⲁⲩⲱ ⲟⲩⲛⲧⲕ ⲟⲩ ⲙⲡⲉⲓⲙⲁ ϫⲉⲁⲕ**ⲕⲁϩⲕ** ⲛⲁⲕ ⲛⲟⲩⲙϩⲁⲁⲩ ⲙⲡⲉⲓⲙⲁ ⲁⲕⲧⲁⲙⲓⲟ ⲛⲟⲩⲙϩⲁⲁⲩ ϩⲙⲡϫⲓⲥⲉ ⲁⲩⲱ ⲁⲕϣⲟϫⲧ ⲛⲁⲕ ⲛⲟⲩⲥⲕⲩⲛⲏ ϩⲛⲟⲩⲡⲉⲧⲣⲁ",
+      "english": "and what hast thou to do here, that thou hast here hewn thyself a sepulchre, and madest thyself a sepulchre on high, and hast graven for thyself a dwelling in the rock?",
+      "source": "Isaiah 22",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲙⲏⲓ",
+        1,
+        14.313
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        10.926
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ⲕ",
+        2,
+        8.853
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        7.587
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲕⲁϩⲕ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁϩⲕ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲕⲁϩⲕ",
+          "ⲧⲛ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲕⲁϩⲕ",
+          "ⲕⲁϩⲕ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁϩⲕ_0_node",
+          "ⲛ_1_post_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁϩⲕ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲱⲛⲉ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁϩⲕ",
+          "ⲕ_1_pre_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲕⲁϩⲕ",
+          "ⲕⲁϩⲕ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁϩⲕ_0_node",
+          "ⲛⲁ_1_post_ⲕⲁϩⲕ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲕⲁϩⲕ",
+          "ⲕ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          "ⲛ_1_post_ⲕⲁϩⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8440,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1517",
+      "label": "ⲉⲣⲕⲁϩⲥ",
+      "pos": "V",
+      "gloss": "become custom"
+    },
+    {
+      "target": "C1518",
+      "label": "ⲕⲁϩⲕϩ",
+      "pos": "V",
+      "gloss": "hew out, smooth; make smooth, cause to heal up"
+    },
+    {
+      "target": "C1516",
+      "label": "ⲕⲁϩⲥ",
+      "pos": "N",
+      "gloss": "custom"
+    },
+    {
+      "target": "C1514",
+      "label": "ⲕⲱϩ",
+      "pos": "V",
+      "gloss": "make level, smooth, tame"
+    },
+    {
+      "target": "C1515",
+      "label": "ⲕⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be familiar, accustomed"
+    },
+    {
+      "target": "C1519",
+      "label": "ⲣⲉϥⲕϩⲕϩ-",
+      "pos": "N",
+      "gloss": "hewer of stone"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C3847",
+  "forms": [
+    {
+      "id": "CF9620",
+      "orth": "ⲥⲁⲧϥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4365",
+      "bibliography": "CD 367a; CED 166; KoptHWb 202; ChLCS 52a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3846",
+      "label": "ⲣⲉϥⲥⲱⲧϥ",
+      "pos": "N",
+      "gloss": "purifier"
+    },
+    {
+      "target": "C3844",
+      "label": "ⲥⲱⲧϥ",
+      "pos": "V",
+      "gloss": "be pure, clear, purified, separated; purify, strain; cause to drip, pour"
+    },
+    {
+      "target": "C3845",
+      "label": "ⲥⲱⲧϥ",
+      "pos": "N",
+      "gloss": "what is purified, purity"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5792",
+    "demo_lemma": "sḏf(.t)",
+    "english": "[to spit]",
+    "german": "Kanal(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5792"
+  }
+}

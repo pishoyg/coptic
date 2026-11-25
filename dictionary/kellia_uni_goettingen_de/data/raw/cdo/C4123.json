@@ -1,0 +1,58 @@
+{
+  "id": "C4123",
+  "forms": [
+    {
+      "id": "CF10191",
+      "orth": "ϥⲓϯⲃⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4682",
+      "bibliography": "KoptHWb 223; ChLCS 56a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4124",
+      "label": "ϫⲓϯⲃⲥ",
+      "pos": "V",
+      "gloss": "trip up"
+    },
+    {
+      "target": "C4122",
+      "label": "ϯⲃⲥ",
+      "pos": "N",
+      "gloss": "heel"
+    },
+    {
+      "target": "C4126",
+      "label": "ⲙⲉⲧⲑⲓⲃⲥ",
+      "pos": "N",
+      "gloss": "currier's tool?"
+    },
+    {
+      "target": "C4125",
+      "label": "ⲙⲛⲧϫⲓϯⲃⲥ",
+      "pos": "N",
+      "gloss": "act of tripping up"
+    }
+  ]
+}

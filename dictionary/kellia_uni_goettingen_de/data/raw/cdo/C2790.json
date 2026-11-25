@@ -1,0 +1,737 @@
+{
+  "id": "C2790",
+  "forms": [
+    {
+      "id": "CF7416",
+      "orth": "ⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 110.52,
+        "rank": 17,
+        "count": 17438
+      }
+    },
+    {
+      "orth": "ⲫⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.07,
+        "rank": 179,
+        "count": 600
+      }
+    },
+    {
+      "orth": "ⲫⲏⲟⲩⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.83,
+        "rank": 496,
+        "count": 155
+      }
+    },
+    {
+      "orth": "ⲡⲏⲩⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 3.02,
+        "rank": 337,
+        "count": 476
+      }
+    },
+    {
+      "orth": "ⲡⲉ",
+      "dialect": "A",
+      "id": "50.1"
+    },
+    {
+      "orth": "ⲡⲏ",
+      "dialect": "A",
+      "id": "50.2"
+    },
+    {
+      "orth": "ⲡⲏⲟⲩⲉ",
+      "dialect": "A",
+      "id": "50.3"
+    },
+    {
+      "orth": "ⲡⲏ",
+      "dialect": "F",
+      "id": "50.4"
+    },
+    {
+      "orth": "ⲡⲏⲟⲩⲓ",
+      "dialect": "F",
+      "id": "50.5"
+    },
+    {
+      "orth": "ⲡⲏⲩⲉ",
+      "dialect": "L",
+      "id": "50.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3191",
+      "bibliography": "CD 259a; CED 124; KoptHWb 144; DELC 157; ChLCS 36b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛⲫⲁⲓ ⲅⲁⲣ ⲁϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ ⲛⲧⲁⲓϧⲉ ⲧⲏⲣⲟⲩ ϩⲱⲥⲧⲉ ⲛⲥⲉⲧⲉⲛϩⲟⲩⲧϥ ⲉⲁⲙⲟⲛⲓ ⲛⲛⲓϩⲓⲏⲃ ⲛⲧⲉϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲧⲉϯⲛⲓϣϯ ⲙⲡⲟⲗⲓⲥ ⲣⲁⲕⲟϯ ⲛⲉⲙⲭⲏⲙⲓ ⲧⲏⲣϥ ⲙⲁⲗⲗⲟⲛ ⲇⲉ ⲛⲉⲙⲥⲁⲡⲉⲥⲏⲧ ⲛⲧ**ⲫⲉ** ⲧⲏⲣⲥ .",
+      "english": "In this he manifested himself with brilliance of all kinds, so that he was entrusted with the care of the lambs of the church of the great city of Alexandria, of all Egypt and even under the whole heaven.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧϭⲓⲛⲣϩⲏⲃⲉ ⲛⲧ**ⲡⲉ** ·",
+      "english": "the lamentation of heaven",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲡⲓⲉϩⲟⲟⲩ ⲇⲉ ⲉⲧⲉⲙⲙⲁⲩ ⲛⲉⲙϯⲟⲩⲛⲟⲩ ⲙⲙⲟⲛ ϩⲗⲓ ⲉⲙⲓ ⲉⲣⲱⲟⲩ ⲟⲩⲇⲉ ⲁⲅⲅⲉⲗⲟⲥ ϧⲉⲛⲧ**ⲫⲉ** ⲟⲩⲇⲉ ⲡϣⲏⲣⲓ ⲉⲃⲏⲗ ⲉⲫⲓⲱⲧ .",
+      "english": "But of that day or that hour no one knows, not even the angels in heaven, nor the Son, but only the Father.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲁⲧⲟⲩⲱ ⲅⲁⲣ ⲛⲁⲕ **ⲡⲉ** ⲡⲙⲧⲟⲛ ⲛϣⲁⲉⲛⲉϩ .",
+      "english": "for there is unceasing rest for you forever.'",
+      "source": "Apophthegmata Patrum Sahidic 030",
+      "urn": "urn:cts:copticLit:ap.30.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲅⲁⲣ ⲁⲩϣⲁⲛⲧⲱⲟⲩⲛⲟⲩ ϧⲉⲛⲛⲏ ⲉⲧⲙⲱⲟⲩⲧ ⲟⲩⲇⲉ ⲙⲡⲁⲩϭⲓ ⲟⲩⲇⲉ ⲙⲡⲁⲩϭⲓⲧⲟⲩ ⲁⲗⲗⲁ ⲁⲩⲙⲫⲣⲏϯ ⲛⲛⲓⲁⲅⲅⲉⲗⲟⲥ ϧⲉⲛⲛⲓ**ⲫⲏⲟⲩⲓ** .",
+      "english": "For when they will rise from the dead, they neither marry, nor are given in marriage, but are like angels in heaven.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱⲧⲡ ⲛⲁⲕ ⲉϩⲟⲩⲛ · ⲁⲩⲱ ⲛⲅⲥⲱⲟⲩϩ ⲛⲁⲕ ⲉϩⲟⲩⲛ ϩⲛⲙ**ⲡⲏⲩⲉ** ·",
+      "english": "Store and gather for yourself in heaven,",
+      "source": "Apophthegmata Patrum Sahidic 030",
+      "urn": "urn:cts:copticLit:ap.30.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲑⲟ",
+        1124,
+        27.284
+      ],
+      [
+        "ⲙ",
+        2553,
+        26.601
+      ],
+      [
+        "ⲡ",
+        2120,
+        25.832
+      ],
+      [
+        "ϥ",
+        2776,
+        25.804
+      ],
+      [
+        "ⲛ",
+        2104,
+        24.771
+      ],
+      [
+        "ⲡⲓ",
+        1569,
+        24.681
+      ],
+      [
+        "ⲫⲁⲓ",
+        802,
+        24.663
+      ],
+      [
+        "ⲟⲩ",
+        1909,
+        24.513
+      ],
+      [
+        ".",
+        1560,
+        24.502
+      ],
+      [
+        "ⲛⲁ",
+        1372,
+        24.284
+      ],
+      [
+        "ϫⲉ",
+        1216,
+        23.944
+      ],
+      [
+        "ⲁ",
+        1584,
+        23.941
+      ],
+      [
+        "ⲉⲧ",
+        1170,
+        23.892
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        737,
+        23.538
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        663,
+        22.931
+      ],
+      [
+        "ⲉⲧⲉ",
+        630,
+        22.895
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1142,
+        22.616
+      ],
+      [
+        "ϧⲉⲛ",
+        941,
+        22.461
+      ],
+      [
+        "ⲧ",
+        605,
+        22.311
+      ],
+      [
+        "ⲛⲧⲉ",
+        841,
+        22.278
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1131,
+        37.26
+      ],
+      [
+        "ⲡ",
+        12952,
+        31.711
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        2532,
+        30.468
+      ],
+      [
+        "ⲙ",
+        6897,
+        29.838
+      ],
+      [
+        "ⲉ",
+        6223,
+        28.859
+      ],
+      [
+        "ⲙⲧⲟ",
+        1853,
+        28.817
+      ],
+      [
+        "ⲛ",
+        7651,
+        28.745
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        2550,
+        28.697
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3521,
+        28.042
+      ],
+      [
+        "ⲟⲩ",
+        4684,
+        28.032
+      ],
+      [
+        "ⲁⲩⲱ",
+        3961,
+        27.834
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1256,
+        27.527
+      ],
+      [
+        "ϫⲉ",
+        3285,
+        27.423
+      ],
+      [
+        "ϥ",
+        4402,
+        27.065
+      ],
+      [
+        "ⲡⲁⲓ",
+        1714,
+        27.039
+      ],
+      [
+        "ⲧ",
+        2852,
+        26.736
+      ],
+      [
+        "ⲙⲛ",
+        2179,
+        26.144
+      ],
+      [
+        "ⲛⲁ",
+        2489,
+        25.764
+      ],
+      [
+        "ⲁ",
+        2880,
+        25.751
+      ],
+      [
+        "ⲉⲧ",
+        2154,
+        25.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉ_0_node",
+          720
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲉ",
+          84
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁϩ",
+          37
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁϩ",
+          39
+        ],
+        [
+          "ⲕⲁϩ_1_post_ⲡⲉ",
+          39
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲕⲁϩ",
+          7
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲉ",
+          8
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          8
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          8
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲉ",
+          5
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          3
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲡⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_1_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲓ",
+          2
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲉ",
+          4
+        ],
+        [
+          "ⲛⲙ_2_post_ⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲟⲛ_1_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲕⲣⲟ_3_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲛⲧⲟⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲟⲛⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲕⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲡⲉ",
+          "ⲡⲉ_0_node",
+          6
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲙⲛ_2_post_ⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁϩ",
+          "ⲡ_2_post_ⲕⲁϩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁϩ",
+          "ⲕⲁϩ_1_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲁⲩⲱ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲕⲁϩ",
+          "ϩⲓϫⲙ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲉ",
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲛ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲉ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲙ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲭⲁⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲉ",
+          "ⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ϩⲓ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲡⲉ",
+          "ⲧ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲓ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲉ",
+          "ⲧ_1_pre_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲉ",
+          "ⲧ_1_pre_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲛⲙ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲙ_2_post_ⲕⲁϩ",
+          "ⲡ_2_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲡⲉ",
+          "ⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲟⲛ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲡⲉ",
+          "ⲟⲩ_1_pre_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲉ",
+          "ⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲉ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲉ",
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          "ⲕⲣⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲡⲉ",
+          "ⲧ_1_pre_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲧ_2_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲟⲗⲓⲥ",
+          "ⲡⲟⲗⲓⲥ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_1_post_ⲡⲉ",
+          "ⲛ_2_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲡⲟⲗⲓⲥ",
+          "ⲛⲟⲛⲧⲟⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲛⲧⲟⲛ_3_post_ⲛ",
+          "ⲛ_4_post_ⲛⲟⲛⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_0_node",
+          "ⲟⲩⲇⲉ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲕⲁϩ",
+          "ϩⲓϫⲙ_1_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          "ⲛ_4_post_ⲕⲁϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 87.91,
+      "rank": 18,
+      "count": 13953
+    },
+    "B": {
+      "rate": 92.35,
+      "rank": 22,
+      "count": 7839
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "58710",
+    "egy_lemma": "p.t",
+    "demo_num": "d1838",
+    "demo_lemma": "p.t",
+    "english": "heaven(s)",
+    "german": "Himmel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/58710",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1838"
+  }
+}

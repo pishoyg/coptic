@@ -1,0 +1,66 @@
+{
+  "id": "C10499",
+  "forms": [
+    {
+      "id": "CF28150",
+      "orth": "ⲥⲙⲩⲣⲛⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28155",
+      "orth": "ⲥⲙⲩⲣⲛⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28151",
+      "orth": "ⲍ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.63,
+        "rank": 966,
+        "count": 100
+      }
+    },
+    {
+      "id": "CF28152",
+      "orth": "ⲥⲙⲏⲗⲛⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28153",
+      "orth": "ⲥⲙⲏⲣⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28154",
+      "orth": "ⲥⲙⲏⲣⲛⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14222",
+      "bibliography": "DDGLC",
+      "cu_ID": "7672"
+    },
+    {
+      "id": "CS14223",
+      "bibliography": "DDGLC",
+      "cu_ID": "8659"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2004",
+    "grl_lemma": "σμύρνα",
+    "grl_meaning": "myrrh (Balasamodendron Myrrha)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1620a; Preisigke 2:473"
+  }
+}

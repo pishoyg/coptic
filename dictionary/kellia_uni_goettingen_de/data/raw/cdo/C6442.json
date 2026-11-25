@@ -1,0 +1,210 @@
+{
+  "id": "C6442",
+  "forms": [
+    {
+      "id": "CF14912",
+      "orth": "ϩⲓⲃⲱⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8274,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲉⲃⲱⲓ",
+      "dialect": "S",
+      "id": "2123.1"
+    },
+    {
+      "orth": "ϩⲓⲃⲟⲩⲓ",
+      "dialect": "S",
+      "id": "2123.2"
+    },
+    {
+      "orth": "ϩⲃⲟⲩⲓ",
+      "dialect": "S",
+      "id": "2123.3"
+    },
+    {
+      "orth": "ϩⲁⲃⲓⲟⲩⲓ",
+      "dialect": "S",
+      "id": "2123.4"
+    },
+    {
+      "orth": "ϩⲓϥⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11722,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲃⲟⲩⲓ",
+      "dialect": "B",
+      "id": "2123.6"
+    },
+    {
+      "orth": "ϩⲓⲡⲟⲩⲓ",
+      "dialect": "B",
+      "id": "2123.7"
+    },
+    {
+      "orth": "ϩⲓⲃⲱⲓ",
+      "dialect": "F",
+      "id": "2123.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7149",
+      "bibliography": "CD 655b-656a; CED 274-275; KoptHWb 354; DELC 289a; ChLCS 88a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲛⲩⲕⲧⲓⲕⲟⲣⲁⲝ ⲙⲛⲡⲕⲁⲧⲁϩⲣⲁⲕⲧⲏⲥ ⲁⲩⲱ ⲡ**ϩⲓⲃⲱⲓ**",
+      "english": "and the night-raven and the cormorant and the stork,",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϩⲁⲗⲁⲧⲉ ⲛⲁⲟⲩⲱϩ ⲛϩⲏⲧⲥ ⲙⲛⲛⲉϩⲃⲱ ⲙⲛⲛⲉ**ϩⲓⲃⲱⲓ** ⲙⲛⲛⲁⲃⲟⲟⲕⲉ ⲁⲩⲱ ⲥⲉⲛⲁⲥⲱⲣ ⲉϫⲱⲥ ⲛⲟⲩⲛⲟⲩϩ ⲛϣⲓⲉⲓⲱϩⲉ ⲛϫⲁⲓⲉ ⲁⲩⲱ ⲛϩⲟⲛⲟⲕⲉⲛⲧⲁⲩⲣⲟⲥ ⲛⲁⲟⲩⲱϩ ⲛϩⲏⲧⲥ",
+      "english": "and for a long time birds and hedgehogs, and ibises and ravens shall dwell in it: and the measuring line of desolation shall be cast over it, and satyrs shall dwell in it.",
+      "source": "Isaiah 34",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲩⲕⲛⲟⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲁⲃⲟⲟⲕⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲕⲁⲧⲁϩⲣⲁⲕⲧⲏⲥ",
+        1,
+        16.428
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        12.61
+      ],
+      [
+        "ⲃⲱ",
+        1,
+        12.036
+      ],
+      [
+        "ⲛⲉϩ",
+        1,
+        11.74
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        9.502
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲃⲱⲓ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲃⲱⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲃⲱⲓ",
+          "ⲁⲩⲱ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲃⲱⲓ",
+          "ⲡ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲃⲱⲓ",
+          "ϩⲓⲃⲱⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲃⲱⲓ",
+          "ⲛⲉ_1_pre_ϩⲓⲃⲱⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲓⲃⲱⲓ",
+          "ϩⲓⲃⲱⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7830,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "98120",
+    "egy_lemma": "hbj",
+    "demo_num": "d3783",
+    "demo_lemma": "hb",
+    "english": "ibis",
+    "german": "Ibis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/98120",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3783"
+  }
+}

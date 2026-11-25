@@ -1,0 +1,160 @@
+{
+  "id": "C6020",
+  "forms": [
+    {
+      "id": "CF14045",
+      "orth": "ⲣϣⲁⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20309,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6705",
+      "bibliography": "CD 582b-583a; KoptHWb 324"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϯⲉⲓⲙⲉ ⲁⲛ ⲛⲧⲟϥ ⲅⲁⲣ ⲡⲉⲧ**ⲣϣⲁⲁⲣ** ⲉⲛⲉⲧⲛⲁⲣⲧⲃⲛⲏ ⲕⲁⲧⲁⲕⲁⲓⲣⲟⲥ ⲕⲁⲛ ⲧⲙⲁⲁⲩ ⲧⲉ ⲕⲁⲛ ⲛϣⲏⲣⲉ ⲛⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϩⲙⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ϫⲉⲁϣ ⲡⲉ ⲡϫⲱⲱⲙⲉ ⲙⲡⲧⲟⲩⲉⲓⲟ ⲛⲧⲉⲧⲛⲙⲁⲁⲩ ⲛⲧⲁⲓⲛⲟϫⲥ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⲏ ⲛⲧⲁϯⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ⲛⲛⲓⲙ ⲛⲉⲟⲩⲱ .",
+      "english": "...",
+      "source": "This Great House MONB.XG Fragment 1 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:460-465",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        9.857
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        9.238
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣϣⲁⲁⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_5_post_ⲣⲧⲃⲛⲏ",
+          1
+        ],
+        [
+          "ⲣⲧⲃⲛⲏ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣϣⲁⲁⲣ_0_node",
+          "ⲉ_1_post_ⲣϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣϣⲁⲁⲣ",
+          "ⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲛⲁ_5_post_ⲣⲧⲃⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲁ_5_post_ⲣⲧⲃⲛⲏ",
+          "ⲣⲧⲃⲛⲏ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19923,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6019",
+      "label": "ϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "price"
+    },
+    {
+      "target": "C6021",
+      "label": "ϯϣⲁⲁⲣ",
+      "pos": "V",
+      "gloss": "make, fix price"
+    }
+  ]
+}

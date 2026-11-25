@@ -1,0 +1,131 @@
+{
+  "id": "C1155",
+  "forms": [
+    {
+      "id": "CF3691",
+      "orth": "ⲕⲁⲗⲉⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11323,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF3692",
+      "orth": "ⲕⲁⲗⲉⲉⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3693",
+      "orth": "ⲕⲁⲗⲏⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3694",
+      "orth": "ⲕⲁⲗⲏⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3695",
+      "orth": "ⲕⲉⲗⲉⲉⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲉⲗⲉⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5352,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1341",
+      "bibliography": "CD 103b; KoptHWb 62"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲕⲧⲟϥ ⲟⲛ ⲉϫⲛⲉⲗⲓⲥⲁⲓⲟⲥ ⲡⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ · ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲉⲗⲓⲥⲁⲓⲟⲥ · ⲡⲣⲟⲥⲉⲭⲉ ⲉϫⲛⲛⲉⲥⲛⲏⲩ ⲕⲁⲗⲱⲥ · ⲛⲅⲁⲙⲁϩⲧⲉ ⲉϫⲛⲛⲉⲛⲧⲁⲓϩⲟⲛⲟⲩ ⲉⲧⲟⲟⲧⲕ · ⲛⲅⲣⲧ**ⲕⲁⲗⲉⲗⲉ** ⲕⲁⲧⲁⲟⲩⲛⲟⲩ · ϫⲉⲕⲁⲥ ⲉⲣⲉⲛⲉⲥⲛⲏⲩ ⲛⲁⲣⲛⲉⲩϣⲗⲏⲗ · ⲕⲁⲧⲁⲛⲕⲱⲧ ⲛⲛⲉⲥⲏⲛⲩ ⲛⲥⲉϯϩⲏⲩ ⲛⲛⲉⲩⲯⲩⲭⲏ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲕ ·",
+      "english": "And again he turned to Elisha the Presbyter, and said unto him, Elisha, 'Govern thou most carefully the brethren. Lay fast hold upon the things which I have commanded thee, and do thou pne summon the brethren regularly each hour in order that they may recite their offices according to the rules of the brethren, and do good to their souls through thee.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲛⲟⲩ",
+        1,
+        13.667
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        11.126
+      ],
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲕⲁⲗⲉⲗⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲗⲉⲗⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲕⲁⲗⲉⲗⲉ",
+          "ⲕⲁⲗⲉⲗⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10910,
+      "count": 1
+    }
+  }
+}

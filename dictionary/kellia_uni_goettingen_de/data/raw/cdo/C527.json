@@ -1,0 +1,206 @@
+{
+  "id": "C527",
+  "forms": [
+    {
+      "id": "CF2070",
+      "orth": "ⲃⲁⲣⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5725,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF2071",
+      "orth": "ⲃⲁⲣⲱⲧ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2072",
+      "orth": "ⲃⲁⲣⲱⲧ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2073",
+      "orth": "ⲃⲁⲣⲱⲧ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲃⲁⲣⲟⲧ",
+      "dialect": "S",
+      "id": "593.1"
+    },
+    {
+      "orth": "ⲃⲁⲣⲁⲧⲉ",
+      "dialect": "S",
+      "id": "593.2"
+    },
+    {
+      "orth": "ⲃⲁⲣⲟⲧ",
+      "dialect": "B",
+      "id": "593.3"
+    },
+    {
+      "orth": "ⲃⲁⲣⲟⲧ",
+      "dialect": "A",
+      "id": "593.4"
+    },
+    {
+      "orth": "ⲃⲁⲣⲟⲧ",
+      "dialect": "F",
+      "id": "593.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS637",
+      "bibliography": "CD 43b-44a; CED 26; KoptHWb 27, 495; DELC 30-31; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲧⲛ ⲡⲛⲟⲩⲃ ⲙⲛⲡϩⲁⲧ ⲙⲛⲡϩⲟⲙⲛⲧ ⲙⲛⲡⲃⲉⲛⲓⲡⲉ ⲙⲛⲡ**ⲃⲁⲣⲱⲧ** ⲙⲛⲡⲧⲁϩⲧ ⲙⲛⲃⲁⲥⲏϭ",
+      "english": "Beside the gold, and the silver, and the brass, and the iron, and lead, and tin,",
+      "source": "Numbers 31",
+      "urn": "urn:cts:copticLit:ot.num.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲉⲓⲛⲉ ⲛⲟⲩϩⲟⲙⲛⲧ ⲛ**ⲃⲁⲣⲱⲧ** ⲉϥⲡⲟⲥⲉ ϩⲛⲟⲩϩⲣⲱ ⲉⲣⲉⲧⲉϥⲥⲙⲏ ⲟⲛⲧϩⲉ ⲙⲡⲉϩⲣⲟⲟⲩ ⲛϩⲉⲛⲙⲟⲟⲩ ⲉⲛⲁϣⲱⲟⲩ",
+      "english": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters.",
+      "source": "66_Revelation_1",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϫⲓⲧ ⲉϩⲟⲩⲛ ⲉⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲉⲓⲥ ⲟⲩⲣⲱⲙⲉ ⲡⲉϥⲉⲓⲛⲉ ⲇⲉ ⲛⲉϥⲟ ⲛⲧϩⲉ ⲙⲡⲉⲓⲛⲉ ⲛⲟⲩϩⲟⲙⲛⲧ **ⲃⲁⲣⲱⲧ** ⲉⲣⲉⲟⲩⲛⲟⲩϩ ⲛⲗⲁⲥ ⲛⲧⲟⲟⲧϥ ⲉϥϣⲏϣ ⲉⲣⲉⲟⲩⲕⲁϣ ⲛϣⲓ ϩⲛⲧⲉϥϭⲓϫ ⲁⲩⲱ ⲛⲉϥⲁϩⲉⲣⲁⲧϥ ϩⲓⲣⲛ ⲧⲡⲩⲗⲏ",
+      "english": "And he brought me in thither, and, behold, there was a man, and the appearance of him was as the appearance of shining brass, and in his hand was a builder's line, and a measuring reed; and he stood at the gate.",
+      "source": "Ezekiel 40",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲙⲛⲧ",
+        3,
+        16.163
+      ],
+      [
+        "ⲧⲁϩⲧ",
+        1,
+        14.898
+      ],
+      [
+        "ⲡⲟⲥⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ⲃⲉⲛⲓⲡⲉ",
+        1,
+        14.276
+      ],
+      [
+        "ⲛⲟⲩϩ",
+        1,
+        13.276
+      ],
+      [
+        "ⲛ",
+        7,
+        10.231
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.399
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.504
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.951
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.787
+      ],
+      [
+        "ⲡ",
+        3,
+        7.252
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.102
+      ],
+      [
+        "ϯ",
+        1,
+        5.516
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5289,
+      "count": 4
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C320",
+      "type": "cf",
+      "label": "prefix in names of metals"
+    },
+    {
+      "target": "C3180",
+      "type": "cf",
+      "label": "hard, strong"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C528",
+      "label": "ϩⲟⲙⲛⲧⲃⲁⲣⲱⲧ",
+      "pos": "N",
+      "gloss": "a composite metal (brass, bronze?)"
+    }
+  ]
+}

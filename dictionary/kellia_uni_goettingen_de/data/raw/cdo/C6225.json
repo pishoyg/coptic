@@ -1,0 +1,220 @@
+{
+  "id": "C6225",
+  "forms": [
+    {
+      "id": "CF14460",
+      "orth": "ϣⲱϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6988,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6912",
+      "bibliography": "CD 615a; KoptHWb 341; ChLCS 84b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϫⲁϫⲉ",
+        1,
+        13.258
+      ],
+      [
+        "ⲓ",
+        5,
+        12.231
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        11.244
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        2,
+        10.885
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        10.47
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.814
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        9.495
+      ],
+      [
+        "ⲁ",
+        3,
+        8.214
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.927
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.231
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣⲱϫⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ϣⲱϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ϣⲱϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣⲱϫⲉ",
+          "ϥ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲱϫⲉ",
+          "ϣⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱϫⲉ",
+          "ⲁⲛⲟⲕ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ϣⲱϫⲉ",
+          "ⲁ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱϫⲉ",
+          "ⲓ_1_pre_ϣⲱϫⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϣⲱϫⲉ",
+          "ϣⲱϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲱϫⲉ_0_node",
+          "ⲛⲙⲙⲁ_1_post_ϣⲱϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6546,
+      "count": 3
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6228",
+      "label": "ϣⲟⲉⲓϫ",
+      "pos": "N",
+      "gloss": "athlete, gladiator"
+    },
+    {
+      "target": "C6229",
+      "label": "ϣⲟⲉⲓϫ",
+      "pos": "N",
+      "gloss": "athlete, gladiator"
+    },
+    {
+      "target": "C6230",
+      "label": "ϣⲟⲉⲓϫϥ",
+      "pos": "N",
+      "gloss": "athlete, gladiator"
+    },
+    {
+      "target": "C6224",
+      "label": "ϣⲱϫⲉ",
+      "pos": "V",
+      "gloss": "contend, wrestle"
+    },
+    {
+      "target": "C6226",
+      "label": "ⲙⲁ ⲛϣⲱϫⲉ",
+      "pos": "N",
+      "gloss": "place of contest, arena"
+    },
+    {
+      "target": "C6227",
+      "label": "ⲣⲉϥϣⲱϫⲉ",
+      "pos": "N",
+      "gloss": "contender"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5786",
+    "demo_lemma": "sḏj",
+    "english": "[to pull, drag]",
+    "german": "Kampf",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5786"
+  }
+}

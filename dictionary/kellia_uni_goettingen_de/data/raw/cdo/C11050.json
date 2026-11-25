@@ -1,0 +1,122 @@
+{
+  "id": "C11050",
+  "forms": [
+    {
+      "id": "CF30402",
+      "orth": "ϩⲁⲅⲓⲁⲥⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30403",
+      "orth": "ϩⲁⲅⲓⲁⲥⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11977,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15428",
+      "bibliography": "DDGLC",
+      "cu_ID": "3060"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϥⲓ ⲛⲧⲉϥϩⲓⲕⲱⲛ · ⲉϩⲟⲩⲛ ⲉⲧⲉⲕⲕⲗⲏⲥⲓⲁ · ⲙⲛⲛⲥⲁⲡ**ϩⲁⲅⲓⲁⲥⲙⲟⲥ** · ⲙⲡⲧⲟⲡⲟⲥ ⲁϥⲕⲁⲁⲥ ϩⲓⲧϩⲏ ⲙⲡϩⲓⲣⲁⲧⲓⲟⲛ · ϣⲁϩⲣⲁⲓ ⲉⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        12.317
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        1,
+        11.116
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲅⲓⲁⲥⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲅⲓⲁⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲅⲓⲁⲥⲙⲟⲥ_0_node",
+          "ⲙ_1_post_ϩⲁⲅⲓⲁⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲅⲓⲁⲥⲙⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲡⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11551,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "4777",
+    "grl_lemma": "ἁγιασμός",
+    "grl_meaning": "holiness, sanctification, consecration",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 9a; Sophocles 67a; Lampe 17b"
+  }
+}

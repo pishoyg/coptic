@@ -1,0 +1,193 @@
+{
+  "id": "C9566",
+  "forms": [
+    {
+      "id": "CF24384",
+      "orth": "ⲕⲩⲡⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24386",
+      "orth": "ⲕⲩⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5932,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF24385",
+      "orth": "ⲕⲩⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12212",
+      "bibliography": "DDGLC",
+      "cu_ID": "2631"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲡⲱⲧ ⲉⲃⲟⲗ ϩⲓϫⲱⲥ ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲥϩⲉ ⲛϭⲓⲧ**ⲕⲩⲡⲏ**",
+      "english": "He fled from it and suddenly the cellar fell.",
+      "source": "Apophthegmata Patrum Sahidic 017",
+      "urn": "urn:cts:copticLit:ap.17.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲟⲩⲁ ⲇⲉ ⲛⲛⲉⲥⲛⲏⲩ ⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉϫⲛⲧ**ⲕⲩⲡⲏ** .",
+      "english": "But one of the brothers went up to the cellar.",
+      "source": "Apophthegmata Patrum Sahidic 017",
+      "urn": "urn:cts:copticLit:ap.17.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲟⲛϩ ⲛϭⲓⲡϫⲟⲉⲓⲥ ϫⲉⲛⲛⲉⲩⲕⲉⲧⲧⲉⲓ**ⲕⲩⲡⲏ** ϩⲙⲡⲁⲟⲩⲟⲉⲓϣ .",
+      "english": "The Lord lives so that they might not rebuild this cellar in my time.",
+      "source": "Apophthegmata Patrum Sahidic 017",
+      "urn": "urn:cts:copticLit:ap.17.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲉⲧ",
+        1,
+        12.638
+      ],
+      [
+        "ⲃⲱⲕ",
+        2,
+        10.359
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        9.451
+      ],
+      [
+        "ⲩ",
+        3,
+        8.98
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        8.947
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        8.829
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        8.559
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.84
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.791
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        6.711
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.234
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ϩⲙ",
+        1,
+        5.828
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲩⲡⲏ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲕⲩⲡⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲓ_1_pre_ⲕⲩⲡⲏ",
+          "ⲕⲩⲡⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5491,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1238",
+    "grl_lemma": "κύπη",
+    "grl_meaning": "hollow, cellar",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1012a; Preisigke 1:848"
+  }
+}

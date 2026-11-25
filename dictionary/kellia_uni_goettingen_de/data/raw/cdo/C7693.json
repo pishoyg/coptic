@@ -1,0 +1,56 @@
+{
+  "id": "C7693",
+  "forms": [
+    {
+      "id": "CF17451",
+      "orth": "ϭⲱⲗϫ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8551",
+      "bibliography": "CD 814ab; KoptHWb 454; DELC 340a; ChLCS 107b"
+    },
+    {
+      "id": "CS8552",
+      "bibliography": "CD 814b; KoptHWb 454"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲁϭⲟⲙ ϣⲟⲟⲩⲉ ⲛⲧϩⲉ ⲛⲛⲓⲃⲗϫⲉ ⲁⲡⲁⲗⲁⲥ **ϭⲱⲗϫ **ⲉ**ⲧⲁϣⲟⲩⲱⲃⲉ** ⲁⲩⲱ ⲁⲕϫⲓⲧ ⲉϩⲣⲁⲓ ⲉⲡⲉⲭⲟⲩⲥ ⲙⲡⲙⲟⲩ",
+      "english": "My strength is dried up, like a potsherd; and my tongue is glued to my throat; and thou hast brought me down to the dust of death.",
+      "source": "Psalms 21",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7692",
+      "label": "ϭⲱⲗϫ",
+      "pos": "V",
+      "gloss": "entangle, ensnare; be entwined, implicated; withhold, conceal oneself"
+    },
+    {
+      "target": "C7695",
+      "label": "ϭⲱⲗϫ",
+      "pos": "N",
+      "gloss": "entanglement; abstinence; snare"
+    },
+    {
+      "target": "C7694",
+      "label": "ϭⲱⲗϫ (ⲛ-)",
+      "pos": "V",
+      "gloss": "cleave, adhere to; abstain from"
+    }
+  ]
+}

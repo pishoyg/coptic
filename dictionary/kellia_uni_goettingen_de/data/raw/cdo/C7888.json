@@ -1,0 +1,98 @@
+{
+  "id": "C7888",
+  "forms": [
+    {
+      "id": "CF17841",
+      "orth": "ϭⲟⲣϫ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF17842",
+      "orth": "ϭⲟⲣϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9330,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲉⲣϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6234,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8768",
+      "bibliography": "CD 830a; CED 336; KoptHWb 467; DELC 347a; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲡⲧⲩⲡⲟⲥ ⲙⲡⲃⲁⲡⲧⲓⲥⲙⲁ ⲉⲧⲟⲩϫⲟ ⲙⲙⲱⲧⲛ ⲧⲉⲛⲟⲩ ϩⲛⲟⲩⲉⲓⲱ ⲁⲛ ⲉⲃⲟⲗ ⲛ**ϭⲟⲣϫⲉ** ⲛⲧⲉⲧⲥⲁⲣⲝ ⲁⲗⲗⲁ ⲙⲡⲟⲩⲱϣⲃ ⲛⲧⲉⲩⲥⲩⲛⲉⲓⲇⲏⲥⲓⲥ ⲉⲧⲛⲁⲛⲟⲩⲥ ⲛⲁϩⲣⲙ ⲡⲛⲟⲩⲧⲉ ϩⲓⲧⲙⲡⲧⲱⲟⲩⲛ ⲛⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ",
+      "english": "This is a symbol of baptism, which now saves you--not the putting away of the filth of the flesh, but the answer of a good conscience toward God, through the resurrection of Jesus Christ,",
+      "source": "60_1 Peter_3",
+      "urn": "urn:cts:copticLit:nt.1pet.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲛ ⲡⲉ ⁖ⲻ ⲁⲗⲗⲁ ⲙⲉϣⲁⲕ ⲛⲧⲉⲟⲩⲁ ϫⲟⲟⲥ ⲛⲁⲓ · ϫⲉⲟⲩ ⲛⲉ ⲛⲉⲓϩⲟⲓⲧⲉ ⲉⲧⲗⲁⲁⲙ ⲏ ⲟⲩ ⲛⲉ ⲛⲉⲓ**ϭⲟⲣϫⲉ** ⲛⲧⲉⲡⲥⲱⲙⲁ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:31-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8899,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7889",
+      "label": "ϫⲉⲣϫⲓ",
+      "pos": "N",
+      "gloss": "dirt, filth"
+    },
+    {
+      "target": "C7890",
+      "label": "ϫⲉⲣϫⲓ",
+      "pos": "N",
+      "gloss": "scabies"
+    },
+    {
+      "target": "C7891",
+      "label": "ⲙⲉⲧϫⲉⲣϫⲓ",
+      "pos": "N",
+      "gloss": "nauseousness"
+    },
+    {
+      "target": "C7892",
+      "label": "ⲣϭⲟⲣϫ",
+      "pos": "V",
+      "gloss": "have got an itch"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6621",
+    "demo_lemma": "krky",
+    "english": "dirt",
+    "german": "Schmutz",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6621"
+  }
+}

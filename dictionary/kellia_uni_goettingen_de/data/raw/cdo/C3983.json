@@ -1,0 +1,250 @@
+{
+  "id": "C3983",
+  "forms": [
+    {
+      "id": "CF9906",
+      "orth": "ⲥϧⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2934,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4523",
+      "bibliography": "CD 383b; CED 173; KoptHWb 211; DELC 204-205"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲇⲉ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲁϥⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛϫⲉⲙⲱⲩⲥⲏⲥ ⲉⲥϧⲉⲟⲩϫⲱⲙ ⲛ**ⲥϧⲓ** ⲛⲟⲩⲉⲓ ⲟⲩⲟϩ ⲉⲭⲱ ⲉⲃⲟⲗ .",
+      "english": "They said, 'Moses allowed a certificate of divorce to be written, and to divorce her.'",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲉⲑⲃⲉⲟⲩ ⲟⲩⲛ ⲁ ⲙⲱⲩⲥⲏⲥ ϩⲟⲛϩⲉⲛ ⲉϯ**ⲥϧⲓ** ⲛⲟⲩⲉⲓ ⲟⲩⲟϩ ⲉϩⲓⲧⲟⲩ ⲉⲃⲟⲗ .",
+      "english": "They asked him, 'Why then did Moses command us to give her a bill of divorce, and divorce her?'",
+      "source": "01_Matthew_19",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁⲣⲉϣⲁⲛ ⲟⲩⲁⲓ ϭⲓ ⲛⲟⲩⲥϩⲓⲙⲓ ⲛⲧⲉϥϣⲱⲡⲓ ⲛⲉⲙⲁⲥ ⲉⲥⲉϣⲱⲡⲓ ⲁⲥϣⲧⲉⲙϫⲉⲙ ⲁⲅⲁⲡⲏ ⲛⲁϩⲣⲁϥ ϫⲉⲁϥϫⲉⲙ ⲟⲩϩⲱⲃ ⲉϥϣⲏϣ ⲛϧⲏⲧⲥ ⲉϥⲉⲥϧⲉ ⲟⲩϫⲱⲙ ⲛ**ⲥϧⲓ** ⲛⲟⲩⲉⲓ ⲛⲁⲥ ⲉϥⲉⲧⲏⲓϥ ⲉϧⲣⲏⲓ ⲉⲛⲉⲥϫⲓϫ ⲟⲩⲟϩ ⲉϥⲉⲟⲩⲟⲣⲡⲥ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥⲏⲓ",
+      "english": "And if thou shouldest go into the corn field of thy neighbour, then thou mayest gather the ears with thy hands; but thou shalt not put the sickle to thy neighbour's corn.",
+      "source": "05_Deuteronomium_24",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲉⲓ",
+        7,
+        18.477
+      ],
+      [
+        "ⲥϧⲉ",
+        4,
+        17.244
+      ],
+      [
+        "ϫⲱⲙ",
+        5,
+        16.684
+      ],
+      [
+        "ⲛ",
+        14,
+        13.205
+      ],
+      [
+        "ⲉ",
+        9,
+        11.719
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.702
+      ],
+      [
+        "ϩⲟⲛϩⲉⲛ",
+        1,
+        8.713
+      ],
+      [
+        "ⲥ",
+        3,
+        8.375
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        7.902
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        7.292
+      ],
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        1,
+        7.271
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.028
+      ],
+      [
+        "ϯ",
+        2,
+        6.483
+      ],
+      [
+        "ϥ",
+        1,
+        1.617
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥϧⲓ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲥϧⲓ",
+          7
+        ],
+        [
+          "ⲟⲩⲉⲓ_2_post_ⲛ",
+          7
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥϧⲓ_0_node",
+          "ⲛ_1_post_ⲥϧⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥϧⲓ",
+          "ⲟⲩⲉⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.08,
+      "rank": 2570,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3980",
+      "label": "ϭⲓⲛⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "act, form of writing"
+    },
+    {
+      "target": "C3978",
+      "label": "ⲁⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "without letters, illiterate"
+    },
+    {
+      "target": "C3977",
+      "label": "ⲙⲛⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writing"
+    },
+    {
+      "target": "C3984",
+      "label": "ⲙⲛⲧⲥⲁϩ",
+      "pos": "N",
+      "gloss": "skill"
+    },
+    {
+      "target": "C3979",
+      "label": "ⲣⲉϥⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writer, scribe"
+    },
+    {
+      "target": "C3985",
+      "label": "ⲣⲥⲁϩ",
+      "pos": "V",
+      "gloss": "become, be teacher, skilled"
+    },
+    {
+      "target": "C3972",
+      "label": "ⲥϩⲁⲓ",
+      "pos": "V",
+      "gloss": "write; register; draw, paint"
+    },
+    {
+      "target": "C3976",
+      "label": "ⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writing, letter (epistle or alphabetical)"
+    },
+    {
+      "target": "C3975",
+      "label": "ⲥϩⲁⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "write in (to palace), inscribe, register"
+    },
+    {
+      "target": "C3974",
+      "label": "ⲥϩⲁⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "write outward, publish"
+    },
+    {
+      "target": "C3973",
+      "label": "ⲥϩⲁⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "ascribe to, inscribe, write down"
+    },
+    {
+      "target": "C3981",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    },
+    {
+      "target": "C3982",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    }
+  ],
+  "etym": {
+    "egy_num": "450097",
+    "egy_lemma": "zẖꜣ.w",
+    "demo_num": "d5553",
+    "demo_lemma": "sẖ",
+    "english": "writing; record; depiction",
+    "german": "Schrift; Schriftstück",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/450097",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5553"
+  }
+}

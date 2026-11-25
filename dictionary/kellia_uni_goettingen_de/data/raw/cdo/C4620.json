@@ -1,0 +1,71 @@
+{
+  "id": "C4620",
+  "forms": [
+    {
+      "id": "CF11200",
+      "orth": "ϯⲧⲟⲩⲱ⸗",
+      "dialect": "L",
+      "oRef": "ϯⲧⲟⲩⲱ⸗"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5216",
+      "bibliography": "CDC 69a; KoptHWb 251"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4622",
+      "label": "ϩⲁⲧⲟⲩⲱ⸗",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4623",
+      "label": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, next"
+    },
+    {
+      "target": "C4621",
+      "label": "ⲉⲧⲟⲩⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4619",
+      "label": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "sit (to eat)"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    },
+    {
+      "target": "C4618",
+      "label": "ⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "bosom"
+    }
+  ]
+}

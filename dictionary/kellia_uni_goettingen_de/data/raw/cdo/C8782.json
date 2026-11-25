@@ -1,0 +1,673 @@
+{
+  "id": "C8782",
+  "forms": [
+    {
+      "id": "CF21061",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF21066",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.06,
+        "rank": 336,
+        "count": 483
+      }
+    },
+    {
+      "id": "CF21062",
+      "orth": "ⲇⲓϗⲟⲥⲩⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21063",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲏⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21065",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21064",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21067",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21068",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21069",
+      "orth": "ⲇⲓⲕⲁⲓⲱⲥⲩⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21070",
+      "orth": "ⲇⲓⲕⲁⲓⲱⲥⲩⲛⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21071",
+      "orth": "ⲇⲓⲕⲉⲟⲥⲏⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21072",
+      "orth": "ⲇⲓⲕⲉⲟⲥⲩⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6517,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF21073",
+      "orth": "ⲇⲓⲕⲉⲟⲥⲩⲛⲏ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF21074",
+      "orth": "ⲇⲓⲕⲉⲟⲥⲩⲛⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1396,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF21075",
+      "orth": "ⲇⲓⲕⲉⲱⲥⲏⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21076",
+      "orth": "ⲇⲓⲕⲟⲥⲩⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21077",
+      "orth": "ⲧⲓⲕⲁⲓⲟⲥⲏⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21078",
+      "orth": "ⲧⲓⲕⲉⲱⲥⲩⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10517",
+      "bibliography": "DDGLC",
+      "cu_ID": "84"
+    },
+    {
+      "id": "CS10518",
+      "bibliography": "DDGLC",
+      "cu_ID": "7473"
+    },
+    {
+      "id": "CS10519",
+      "bibliography": "DDGLC",
+      "cu_ID": "2317"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲅⲣⲁⲫⲏ ⲛⲓⲃⲉⲛ ⲛⲛⲓϥⲓ ⲛⲧⲉⲫⲛⲟⲩϯ ⲥⲉⲟⲓ ⲛϩⲏⲟⲩ ⲉⲩⲥⲃⲱ ⲉⲩⲥⲟϩⲓ ⲉⲩⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲉⲩⲥⲃⲱ ⲑⲏ ⲉⲧϧⲉⲛϯ**ⲇⲓⲕⲉⲟⲥⲩⲛⲏ** .",
+      "english": "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,",
+      "source": "16_II Timothy_03",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣⲓⲛⲉ ⲛⲧⲟϥ ⲛⲥⲁⲧⲉϥⲙⲛⲧⲣⲣⲟ ⲙⲛⲧⲉϥ**ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ** ·",
+      "english": "Seek ye His kingdom and His righteousness,",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉϣⲱⲡⲓ ⲛϫⲉⲛⲓϩⲃⲏⲟⲩⲓ ⲛⲧⲉϯⲇⲓⲕⲉⲟⲥⲩⲛⲏ ⲉⲩϩⲓⲣⲏⲛⲏ ⲟⲩⲟϩ ϯ**ⲇⲓⲕⲉⲟⲥⲩⲛⲏ** ⲉⲥⲉⲁⲙⲁϩⲓ ⲛⲟⲩⲙⲧⲟⲛ ⲟⲩⲟϩ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲑⲏⲧⲛϩⲏⲧ ϣⲁⲉⲛⲉϩ .",
+      "english": "And the works of righteousness shall be peace; and righteousness shall ensure rest, and the righteous shall be confident for ever.",
+      "source": "23_Isaias_32",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲇⲉ ⲛⲧⲉⲧⲛ ϩⲉⲛⲉⲃⲟⲗ ⲛϩⲏⲧϥ ϩⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲁⲓ ⲉⲛⲧⲁϥϣⲱⲡⲉ ⲛⲁⲛ ⲛⲥⲟⲫⲓⲁ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ ⲛ**ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ** ⲁⲩⲱ ⲛⲧⲃⲃⲟ ⲁⲩⲱ ⲛⲥⲱⲧⲉ .",
+      "english": "But of him, you are in Christ Jesus, who was made to us wisdom from God, and righteousness and sanctification, and redemption:",
+      "source": "46_1 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ⲉϥⲙⲏⲣ ⲛϯ**ⲇⲓⲕⲉⲟⲥⲩⲛⲏ** ⲉϫⲉⲛⲧⲉϥϯⲡⲓ ⲟⲩⲟϩ ϯⲙⲉⲑⲙⲏⲓ ⲉⲥⲉϫⲟⲗϩ ⲉⲛⲉϥⲥⲫⲓⲣⲱⲟⲩⲓ .",
+      "english": "And he shall have his loins girt with righteousness, and his sides clothed with truth.",
+      "source": "23_Isaias_11",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉϥϯϩⲧⲏϥ ⲉⲛⲉⲧϥϫⲡⲟ ⲙⲙⲟⲟⲩ ⲛϭⲓⲡⲣⲙⲙⲁⲟ : ⲛⲁⲓ ⲉⲧϥⲙⲉⲉⲩⲉ ⲉⲛⲇⲱⲣⲟⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ · ϫⲉⲙⲏⲧⲓ ⲁϥϫⲓ ⲡϩⲏⲕⲉ ⲛϭⲟⲛⲥ · ⲙⲏⲧⲓ ⲁϥⲥⲓⲁⲍⲉ ⲙⲡϭⲱⲃ ⲉⲣⲟϥ · ⲙⲏⲧⲓ ⲁϥⲡⲗⲉⲟⲛⲉⲕⲧⲉ ⲙⲡⲉⲧϩⲁⲣⲁⲧϥ · ⲉϥⲭⲣⲱ ⲛⲟⲩⲉⲝⲟⲩⲥⲓⲁ · ⲉⲡⲙⲁ ⲛⲟⲩ**ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ** ·",
+      "english": "Let the rich man consider most carefully concerning the things which he hath gotten, and among which he considereth the gifts of God to be, whether he hath acted unjustly towards the poor man, or whether he hath taken advantage of his weakness, or whether he hath claimed more than his share of that which belongeth to him, (or whether) he hath employed force (in his dealing with him) instead of righteousness.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲛϩⲟⲧ",
+        2,
+        16.08
+      ],
+      [
+        "ⲉⲧ",
+        4,
+        11.251
+      ],
+      [
+        "ⲫⲏ",
+        2,
+        10.358
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.066
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        20,
+        24.648
+      ],
+      [
+        "ⲧ",
+        316,
+        22.066
+      ],
+      [
+        "ⲛ",
+        380,
+        20.603
+      ],
+      [
+        "ⲁⲩⲱ",
+        168,
+        19.008
+      ],
+      [
+        "ⲟⲩ",
+        161,
+        18.297
+      ],
+      [
+        "ⲧⲉⲕ",
+        54,
+        18.219
+      ],
+      [
+        "ϩⲛ",
+        116,
+        18.137
+      ],
+      [
+        "ⲉ",
+        160,
+        17.867
+      ],
+      [
+        "ⲧⲁϩⲉⲧ",
+        4,
+        17.682
+      ],
+      [
+        "ⲙ",
+        129,
+        17.469
+      ],
+      [
+        "ⲡ",
+        147,
+        17.18
+      ],
+      [
+        "ⲙⲛ",
+        83,
+        16.853
+      ],
+      [
+        "ⲁ",
+        110,
+        16.472
+      ],
+      [
+        "ⲛⲁ",
+        91,
+        16.296
+      ],
+      [
+        "ϩⲁⲡ",
+        23,
+        16.29
+      ],
+      [
+        "ⲛⲓⲙ",
+        47,
+        16.035
+      ],
+      [
+        "ⲙⲉ",
+        31,
+        15.887
+      ],
+      [
+        "ⲕ",
+        58,
+        15.511
+      ],
+      [
+        "ⲩ",
+        71,
+        15.343
+      ],
+      [
+        "ⲧⲉϥ",
+        34,
+        15.311
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          291
+        ],
+        [
+          "ⲧ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          53
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          38
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          21
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          25
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          16
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          13
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          11
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          3
+        ],
+        [
+          "ⲉⲓⲣⲏⲛⲏ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          6
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ϯⲣⲏⲛⲏ",
+          2
+        ],
+        [
+          "ϯⲣⲏⲛⲏ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲡⲉⲣⲧⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲁϭⲉ_3_post_ⲡⲉⲣⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲛ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲱϩⲉ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲧ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲣ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲟⲩ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲧ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲧⲉϥ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲧⲉⲕ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲙⲛ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          "ⲧ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉⲓⲣⲏⲛⲏ",
+          "ⲉⲓⲣⲏⲛⲏ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲙ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲙⲛ_2_post_ϯⲣⲏⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϯⲣⲏⲛⲏ",
+          "ϯⲣⲏⲛⲏ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲙⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          "ⲡⲉⲕ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲧ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          2
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲧⲏⲣ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲡⲉⲣⲧⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲣⲧⲣⲉ_2_post_ⲙ",
+          "ⲟⲩⲁϭⲉ_3_post_ⲡⲉⲣⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲁⲩⲱ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲱϩⲉ",
+          "ⲟⲛ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲛ_2_post_ⲛⲱϩⲉ",
+          "ⲛⲱϩⲉ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲱϩⲉ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲛⲧ_2_post_ⲛⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_0_node",
+          "ⲛ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲛⲉⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ⲉⲓⲟⲧⲉ",
+          "ⲉⲓⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲧⲉ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲉⲓⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲉⲓⲟⲧⲉ",
+          "ⲣ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.04,
+      "rank": 278,
+      "count": 483
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4769,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "536",
+    "grl_lemma": "δικαιοσύνη",
+    "grl_meaning": "righteousness, justice",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 429a; Preisigke 1:382"
+  }
+}

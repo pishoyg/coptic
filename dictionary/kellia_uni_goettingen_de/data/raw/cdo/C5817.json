@@ -1,0 +1,156 @@
+{
+  "id": "C5817",
+  "forms": [
+    {
+      "id": "CF13630",
+      "orth": "ϣⲱⲗⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9556,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲗⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11329,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲱⲗⲕ",
+      "dialect": "B",
+      "id": "1892.2"
+    },
+    {
+      "orth": "ϣⲟⲗⲕ-",
+      "dialect": "B",
+      "id": "1892.3"
+    },
+    {
+      "orth": "ϣⲟⲗⲕ⸗",
+      "dialect": "B",
+      "id": "1892.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6497",
+      "bibliography": "CD 558b; CED 240; KoptHWb 310; DELC 260a; ChLCS 76b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲟⲛ ⲉⲧⲃⲏⲏⲧϥ ϫⲉϣⲁϥ**ϣⲱⲗⲕ** ⲛⲧⲛⲏϥⲧⲉ ⲛⲃⲓⲣ ⲥⲛⲁⲩ ⲉⲩⲃⲓⲣ ⲛⲟⲩⲱⲧ ⲉⲙⲉϥⲛⲟⲉⲓ ⲉⲣⲉⲡⲉϥⲙⲉⲉⲩⲉ ⲥⲣⲟⲃⲧ ⲉⲧⲉⲑⲉⲱⲣⲓⲁ :",
+      "english": "It was also said about him that he wove the plait for two baskets into one without thinking about it, his mind being occupied in contemplation.",
+      "source": "Apophthegmata Patrum Sahidic 084",
+      "urn": "urn:cts:copticLit:ap.84.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲏⲃⲧⲉ",
+        1,
+        19.013
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ϣⲱⲗⲕ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲗⲕ",
+          1
+        ],
+        [
+          "ϣⲱⲗⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲏⲃⲧⲉ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ϣⲱⲗⲕ",
+          "ϥ_1_pre_ϣⲱⲗⲕ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲗⲕ",
+          "ϣⲱⲗⲕ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲗⲕ_0_node",
+          "ⲛ_1_post_ϣⲱⲗⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲗⲕ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲛⲏⲃⲧⲉ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9131,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "C2004",
+  "forms": [
+    {
+      "id": "CF5672",
+      "orth": "ⲙⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.13,
+        "rank": 183,
+        "count": 967
+      }
+    },
+    {
+      "orth": "ⲙⲁⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.17,
+        "rank": 175,
+        "count": 608
+      }
+    },
+    {
+      "orth": "ⲙⲁⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.89,
+        "rank": 275,
+        "count": 330
+      }
+    },
+    {
+      "orth": "ⲙⲁⲣ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 4.18,
+        "rank": 262,
+        "count": 660
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Kausativer Imperativ ⲙⲁⲣⲉ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2326",
+      "bibliography": "CD 182b; KoptHWb 98f; DELC 119"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲉⲟⲩⲟⲛ ⲟⲩⲙⲁϣϫ ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ **ⲙⲁⲣⲉ**ϥⲥⲱⲧⲉⲙ",
+      "english": "If any man has ears to hear, let him hear.'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲙⲁⲣⲉ**ϥⲥⲱⲧⲡ ⲛⲁϥ ⲙⲡⲕⲁⲣⲱϥ ⲻ",
+      "english": "'Let him choose to be silent.'",
+      "source": "Apophthegmata Patrum Sahidic 137: P263",
+      "urn": "urn:cts:copticLit:ap.137.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲉ ⲟⲩⲟⲛ ⲙⲁϣϫ ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ **ⲙⲁⲣⲉ**ϥⲥⲱⲧⲉⲙ",
+      "english": "If anyone has ears to hear, let him hear!'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉϥϫⲱ ⲇⲉ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲡⲉⲧⲉⲩⲛⲧϥⲙⲁⲁϫⲉ ⲙⲙⲁⲩ ⲉⲥⲱⲧⲙ **ⲙⲁⲣⲉ**ϥⲥⲱⲧⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲃ ⲇⲉ ⲛⲓⲃⲉⲛ **ⲙⲁⲣ**ⲟⲩϣⲱⲡⲓ ⲉⲩⲕⲱⲧ ⲟⲩⲟϩ ⲉⲩⲑⲏϣ .",
+      "english": "Let all things be done decently and in order.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲁⲣ**ⲛⲁⲅⲱⲛⲓⲍⲉ ·",
+      "english": "Let us struggle.",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "ⲙⲡⲣⲧⲣⲉ-",
+      "type": "cf",
+      "label": "Verbalpräfix neg. kausativer Imperativ"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "C4068",
+  "forms": [
+    {
+      "id": "CF10079",
+      "orth": "ⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4622",
+      "bibliography": "CD 396b; ChLCS 55b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4067",
+      "label": "ϫⲓⲧⲟⲉ",
+      "pos": "V",
+      "gloss": "receive share, be partaker, participate"
+    },
+    {
+      "target": "C4069",
+      "label": "ⲙⲛⲧⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "covetousness"
+    },
+    {
+      "target": "C4066",
+      "label": "ⲧⲟⲉ",
+      "pos": "N",
+      "gloss": "part, share"
+    }
+  ]
+}

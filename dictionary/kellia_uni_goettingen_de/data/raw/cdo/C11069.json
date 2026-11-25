@@ -1,0 +1,191 @@
+{
+  "id": "C11069",
+  "forms": [
+    {
+      "id": "CF30494",
+      "orth": "ϩⲁⲣⲡⲁⲅⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF30495",
+      "orth": "ϩⲁⲣⲡⲁⲅⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8256,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15468",
+      "bibliography": "DDGLC",
+      "cu_ID": "7046"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲯⲩⲭⲏ ⲉⲥϣⲁⲛⲣⲛⲟⲃⲉ ⲁⲩⲱ ϩⲛⲟⲩⲱⲃϣ ⲛⲥⲟⲃϣⲥ ⲉⲛⲉⲛⲧⲟⲗⲏ ⲙⲡϫⲟⲉⲓⲥ ⲛϥϫⲓϭⲟⲗ ⲉⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ϩⲛⲟⲩⲡⲁⲣⲁⲑⲏⲕⲏ ⲏ ⲉⲧⲃⲉⲟⲩⲕⲟⲓⲛⲱⲛⲓⲁ ⲏ ⲉⲧⲃⲉⲟⲩ**ϩⲁⲣⲡⲁⲅⲏ** ⲏ ⲁϥⲁⲇⲓⲕⲉⲓ ⲙⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ϩⲛⲟⲩϩⲱⲃ",
+      "english": "The soul which shall have sinned, and willfully overlooked the commandments of the Lord, and shall have dealt falsely in the affairs of his neighbour in the matter of a deposit, or concerning fellowship, or concerning plunder, or has in anything wronged his neighbour,",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥϣⲁⲛⲣⲛⲟⲃⲉ ⲛϥϣⲱϥⲧ ⲁⲩⲱ ⲛϥϯ ⲛⲧ**ϩⲁⲣⲡⲁⲅⲏ** ⲛⲧⲁϥϩⲁⲣⲡⲁⲍⲉ ⲙⲙⲟⲥ ⲏ ⲡϩⲱⲃ ⲛϫⲓ ⲛϭⲟⲛⲥ ⲛⲧⲁϥⲁⲇⲓⲕⲉⲓ ⲛϩⲏⲧⲥ ⲏ ⲧⲡⲁⲣⲁⲑⲏⲕⲏ ⲛⲧⲁⲩϭⲁⲗⲱⲱⲥ ⲉⲣⲟϥ ⲏ ⲡⲉⲛⲧⲁⲩϩⲉ ⲉⲣⲟϥ ⲉϥⲥⲟⲣⲙ",
+      "english": "it shall come to pass, whensoever he shall have sinned, and transgressed, that he shall restore the plunder which he has seized, or redress the injury which he has committed, or restore the deposit which was entrusted to him, or the lost article which he has found of any kind,",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲇⲓⲕⲉⲓ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲁⲣⲡⲁⲍⲉ",
+        1,
+        15.139
+      ],
+      [
+        "ⲕⲟⲓⲛⲱⲛⲓⲁ",
+        1,
+        14.206
+      ],
+      [
+        "ⲏ",
+        2,
+        11.479
+      ],
+      [
+        "ϥ",
+        5,
+        10.487
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ϩⲁⲣⲡⲁⲅⲏ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲡⲁⲅⲏ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ϩⲁⲣⲡⲁⲅⲏ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲡⲁⲍⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ϩⲁⲣⲡⲁⲅⲏ",
+          "ϩⲁⲣⲡⲁⲅⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲣⲡⲁⲅⲏ_0_node",
+          "ⲛⲧ_1_post_ϩⲁⲣⲡⲁⲅⲏ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ϩⲁⲣⲡⲁⲅⲏ",
+          "ⲁ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          "ϥ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          "ϩⲁⲣⲡⲁⲍⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲡⲁⲍⲉ_2_post_ⲛⲧ",
+          "ⲙⲙⲟ_3_post_ϩⲁⲣⲡⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7813,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "278",
+    "grl_lemma": "ἁρπαγή",
+    "grl_meaning": "seizure, robbery",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 245b; Preisigke 1:215"
+  }
+}

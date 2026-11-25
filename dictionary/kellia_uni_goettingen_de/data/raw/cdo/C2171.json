@@ -1,0 +1,215 @@
+{
+  "id": "C2171",
+  "forms": [
+    {
+      "id": "CF6054",
+      "orth": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9384,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2511",
+      "bibliography": "CD 198b; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϣⲁⲛ**ⲥⲉⲕⲙⲟⲟⲩ** ⲉϩⲣⲁⲓ ⲛϥⲧⲥⲟ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL 63-70",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_63_70",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛ**ⲥⲉⲕⲙⲟⲟⲩ** ⲉϩⲣⲁⲓ ⲛϥⲧⲥⲟ ⲛⲟⲩⲟϩⲉ ⲛⲉⲥⲟⲟⲩ . ⲛϥⲧⲙⲧⲥⲟ ⲇⲉ ⲛⲧⲟϥ ⲛⲟⲩϩⲓⲁⲉⲓⲃⲉ ⲉⲧⲱϥ ⲧⲉ ·",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 77-86",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_77_86",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲥⲟ",
+        2,
+        16.276
+      ],
+      [
+        "ϣⲱⲥ",
+        2,
+        15.5
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        2,
+        13.749
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        10.296
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲥⲉⲕⲙⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲥⲉⲕⲙⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲉⲕⲙⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲧⲥⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲧⲥⲟ",
+          2
+        ],
+        [
+          "ⲧⲥⲟ_1_post_ⲥⲉⲕⲙⲟⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲥⲉⲕⲙⲟⲟⲩ",
+          "ⲥⲉⲕⲙⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲥⲉⲕⲙⲟⲟⲩ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲉⲕⲙⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲉⲕⲙⲟⲟⲩ",
+          "ⲛ_2_post_ⲧⲥⲟ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲧⲥⲟ",
+          "ϥ_2_post_ⲧⲥⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲧⲥⲟ",
+          "ⲧⲥⲟ_1_post_ⲥⲉⲕⲙⲟⲟⲩ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8955,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2173",
+      "label": "ϯⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give water, irrigate"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2168",
+      "label": "ⲕⲁⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "cease (to give) water"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2165",
+      "label": "ⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "water; inundation"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2170",
+      "label": "ⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "become water, liquify"
+    },
+    {
+      "target": "C2172",
+      "label": "ⲥⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "scatter, distribute water"
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "id": "C12040",
+  "forms": [
+    {
+      "id": "CF33047",
+      "orth": "ⲙⲉϣϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2068,
+        "count": 28
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17040",
+      "bibliography": "CD 608a; KoptHWB 301"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁⲧⲉⲧⲛϣⲓⲃⲉ ⲙⲡⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛϩⲉⲛϩⲃⲏⲩⲉ ⲉ**ⲙⲉϣϣⲉ** .",
+      "english": "While you have changed the honor of God in your actions which are unworthy.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲇⲉ ⲡⲣⲣⲟ · ⲁϥⲥⲩⲙⲃⲟⲩⲗⲉⲩⲉ ⲉⲣⲛⲉⲧⲉ**ⲙⲉϣϣⲉ** ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲁⲩⲱ ⲛⲁⲓ ⲛⲉ ⲛⲧⲁϥⲁⲁⲩ ·",
+      "english": "And the Emperor Diocletian took counsel and decided to do the things that were unseemly before God, Jesus the Christ; and this is what he did.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲥⲉϫⲟⲟⲥ ϫⲉⲁⲕⲣⲡⲃⲟⲗ ⲛⲛⲉⲧⲉ**ⲙⲉϣϣⲉ** ·",
+      "english": "and who would say. Thou hast broken a custom which was seemly.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲉ",
+        19,
+        17.22
+      ],
+      [
+        "ⲗⲗⲏⲃ",
+        1,
+        14.791
+      ],
+      [
+        "ⲛ",
+        27,
+        13.266
+      ],
+      [
+        "ⲉ",
+        20,
+        12.976
+      ],
+      [
+        "ⲡⲣⲟⲑⲉⲥⲓⲥ",
+        1,
+        12.791
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        6,
+        12.756
+      ],
+      [
+        "ⲡ",
+        18,
+        12.199
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        4,
+        12.004
+      ],
+      [
+        "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+        2,
+        11.884
+      ],
+      [
+        "ⲥⲕⲁⲓ",
+        1,
+        11.331
+      ],
+      [
+        ".",
+        9,
+        11.26
+      ],
+      [
+        "ⲟϫⲛ",
+        1,
+        11.09
+      ],
+      [
+        "ϥ",
+        13,
+        10.816
+      ],
+      [
+        "ⲁ",
+        11,
+        10.615
+      ],
+      [
+        "ϣⲙϣⲉ",
+        2,
+        10.464
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        10.233
+      ],
+      [
+        "ⲛⲁⲓ",
+        4,
+        10.103
+      ],
+      [
+        "ϩⲱⲃ",
+        3,
+        10.035
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        3,
+        9.883
+      ],
+      [
+        "ϣⲁϫⲉ",
+        4,
+        9.664
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉϣϣⲉ_0_node",
+          18
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉϣϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲉϣϣⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲇⲉ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉϣϣⲉ_0_node",
+          "ⲉ_1_post_ⲙⲉϣϣⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉϣϣⲉ",
+          "ⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲉϣϣⲉ_0_node",
+          "ⲙ_1_post_ⲙⲉϣϣⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲙⲉϣϣⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲧⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_3_post_ⲡ",
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          "ⲙ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲙⲉϣϣⲉ_0_node",
+          "ⲛ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉϣϣⲉ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ϫⲟ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲟ_3_post_ⲉⲧ",
+          "ⲇⲉ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_4_post_ϫⲟ",
+          "ⲙⲙⲟ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉϣϣⲉ",
+          "ⲗⲁⲁⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_2_post_ⲉ",
+          "ϩⲙ_3_post_ⲗⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ⲗⲁⲁⲩ",
+          "ⲡ_4_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲙ",
+          "ⲗⲁⲟⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲉϣϣⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲙⲉϣϣⲉ",
+          "ϩⲛ_1_post_ⲙⲉϣϣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲉϣϣⲉ",
+          "ⲛⲓ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϩⲛ",
+          "ⲥⲩⲛⲁⲅⲱⲅⲏ_3_post_ⲛⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1828,
+      "count": 28
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6178",
+      "label": "ϣϣⲉ",
+      "pos": "V",
+      "gloss": "it is fitting, right"
+    }
+  ]
+}

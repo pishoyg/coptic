@@ -1,0 +1,649 @@
+{
+  "id": "C2747",
+  "forms": [
+    {
+      "id": "CF7313",
+      "orth": "ⲟⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1473,
+        "count": 52
+      }
+    },
+    {
+      "id": "CF7314",
+      "orth": "ⲟⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1395,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF7315",
+      "orth": "ⲁⲙ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "subc": "Status nominalis",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3141",
+      "bibliography": "CD 254b-255a; CED 121; KoptHWb 141; DELC 155; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϣ ⲡⲉ ⲡⲓⲡⲉⲑⲛⲁⲛⲉϥ ⲁⲓⲙⲟⲛⲕⲕ ⲙⲫⲣⲏϯ ⲛⲟⲩⲟⲙⲓ ⲛⲕⲉⲣⲁⲙⲉⲩⲥ ⲙⲏ ⲫⲏⲉⲧⲥⲭⲁⲓ ⲛⲁⲥⲭⲁⲓ ⲙⲡⲓⲉϩⲟⲟⲩ ⲧⲏⲣϥ ⲙⲏ ϥⲛⲁϫⲟⲥ ⲛϫⲉⲡⲓ**ⲟⲙⲓ** ⲙⲡⲓⲕⲉⲣⲁⲙⲉⲩⲥ ϫⲉⲟⲩ ⲡⲉⲧⲉⲕⲣⲁ ⲙⲙⲟϥ ϫⲉⲛⲕⲉⲣϩⲱⲃ ⲁⲛ ⲟⲩⲇⲉ ⲙⲙⲟⲛ ϫⲓϫ ⲙⲙⲟⲕ ⲙⲏ ϥⲛⲁⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲙⲟⲛⲕ ⲙⲫⲏⲉⲧⲁϥⲙⲟⲛⲕϥ .",
+      "english": "What excellent thing have I prepared as clay of the potter? Will the ploughman plough the earth all day? shall the clay say to the potter, What art thou doing that thou dost not work, nor hast hands? shall the thing formed answer him that formed it?",
+      "source": "23_Isaias_45",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:45",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲥⲟⲟⲩⲛ ϫⲉⲛⲧⲟⲕ ⲙⲛⲡϩⲏⲕⲉ ⲛⲧⲁⲩⲧⲁⲙⲓⲉⲧⲏⲩⲧⲛ ϩⲙⲡⲉⲓ**ⲟⲙⲉ** ⲛⲟⲩⲱⲧ",
+      "english": "For thou knowest that thou and the poor man were made of one and the same kind of clay.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱϣ ⲉⲃⲟⲗ: ⲙⲙⲟⲛ ⲡⲉⲑⲛⲟϩⲉⲙ: ⲉϩⲣⲏⲓ ϩⲁⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲙⲡⲉϥⲥⲱⲧⲉⲙ ⲉⲣⲱⲟⲩ . ⲉⲓⲉⲑⲣⲟⲩϣⲙⲁ ⲙⲫⲣⲏϯ ⲛⲟⲩϣⲱⲓϣ ⲙⲡⲉⲙⲑⲟ ⲛⲟⲩⲑⲏⲟⲩ: ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲟⲙⲓ** ⲛⲧⲉϩⲁⲛϣⲑⲉϩ ⲉⲓⲉϥⲟⲧⲟⲩ ⲉⲃⲟⲗ .",
+      "english": "I will grind them as the mud of the streets: and I will beat them small as dust before the wind.",
+      "source": "19_Psalmi_17",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓ ⲙⲡ**ⲟⲙⲉ** ⲛⲧⲟⲟⲧϥ ⲙⲡⲁⲅⲅⲉⲗⲟⲥ ⲁϥⲧⲁⲙⲓⲟ ⲛⲁⲇⲁⲙ · ⲕⲁⲧⲁⲡⲉⲛⲉⲓⲛⲉ ⲙⲛⲧⲉⲛϩⲓⲕⲱⲛ · ⲁϥⲕⲁⲁϥ ⲉϥⲛⲏϫ ⲉⲃⲟⲗ ⲛϩⲙⲉ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲉ ⲛⲟⲩϣⲏ ⲙⲡⲉϥϯⲡⲛⲉⲩⲙⲁ ⲉⲣⲟϥ ·",
+      "english": "And He took the clay from the hand of the angel, and made Adam according to Our image and likeness, and He left him lying for forty days and forty nights without putting breath into him.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲫⲙⲉⲩⲓ ϫⲉⲁⲕⲉⲣⲡⲗⲁⲍⲓⲛ ⲙⲙⲟⲓ ⲛⲟⲩ**ⲟⲙⲓ** ⲭ ⲟⲩⲟϩ ⲁⲕⲧⲁⲥⲑⲟⲓ ⲟⲛ ⲉⲡⲕⲁϩⲓ .",
+      "english": "Remember that thou hast made me as clay, and thou dost turn me again to earth.",
+      "source": "18_Iob_10",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩϭⲓϫ ⲛ**ⲟⲙⲉ** ⲟⲩϭⲓϫ ⲛⲕⲁϩ ϩⲓⲕⲣⲙⲉⲥ ⲉⲁⲩⲡⲗⲁⲥⲥⲉ ⲙⲙⲟⲥ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ · ⲁⲥⲧⲟⲗⲙⲁ ⲁⲥϯⲁⲁⲥ ⲉϩⲟⲩⲛ ϩⲙⲡϩⲟ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ⲡⲉ ⲛⲧⲁϥⲡⲗⲁⲥⲥⲉ ⲛⲧⲡⲉ ⲙⲛⲡⲕⲁϩ · ⲁⲩⲱ ⲁϥϥⲓ ⲉⲣⲟϥ ϩⲛⲟⲩⲑⲃⲃⲓⲟ ·",
+      "english": "A hand made of mud, a hand of clay, a hand of dust and ashes, which was fashioned out of the earth, dared to thrust itself into the Face of Christ, Who fashioned the heavens and the earth, and He endured it with humility!",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱⲧ",
+        15,
+        17.056
+      ],
+      [
+        "ⲕⲉⲣⲁⲙⲉⲩⲥ",
+        4,
+        16.898
+      ],
+      [
+        "ⲗⲟⲓϩⲉ",
+        3,
+        15.952
+      ],
+      [
+        "ⲗⲟⲉⲓϩⲉ",
+        2,
+        15.898
+      ],
+      [
+        "ϫⲉϩ",
+        2,
+        15.898
+      ],
+      [
+        "ⲧⲁⲙⲓⲉ",
+        5,
+        14.944
+      ],
+      [
+        "ⲥⲟⲗϭⲟⲩ",
+        1,
+        14.898
+      ],
+      [
+        "ϯⲥⲙⲟⲧ",
+        1,
+        14.898
+      ],
+      [
+        "ⲛ",
+        48,
+        14.863
+      ],
+      [
+        "ⲁ",
+        32,
+        14.344
+      ],
+      [
+        "ϥ",
+        33,
+        13.954
+      ],
+      [
+        "ⲧⲙⲛⲧⲡⲁⲡⲉ",
+        1,
+        13.898
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲓⲕⲟⲛ",
+        1,
+        13.313
+      ],
+      [
+        "ϭⲃⲟⲉⲓ",
+        1,
+        13.313
+      ],
+      [
+        "ⲧⲁⲗⲁⲓⲡⲱⲣⲓⲁ",
+        2,
+        13.197
+      ],
+      [
+        "ϩⲉ",
+        12,
+        12.782
+      ],
+      [
+        "ⲡ",
+        25,
+        12.728
+      ],
+      [
+        "ⲟⲩ",
+        21,
+        12.697
+      ],
+      [
+        "ⲙⲁⲧⲟⲩϫⲟ",
+        2,
+        12.374
+      ],
+      [
+        "ⲧ",
+        16,
+        12.37
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲙⲉ_0_node",
+          45
+        ],
+        [
+          "ⲛ_1_post_ⲟⲙⲉ",
+          13
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲕⲉⲣⲁⲙⲉⲩⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲟⲙⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲙⲉ",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲃⲏⲩⲉ",
+          2
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲙⲉ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲗⲟⲓϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲉⲓϩⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲙⲉ",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲕⲁ",
+          1
+        ],
+        [
+          "ⲧⲙⲛⲧⲡⲁⲡⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲱⲃⲉ_2_post_ⲧⲙⲛⲧⲡⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲟⲟⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲉ_2_pre_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ⲟϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲉⲓϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲉⲣⲁⲙⲉⲩⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲏ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲥⲉⲕ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_2_pre_ⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_pre_ⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲧⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲱⲱⲃⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_1_post_ⲟⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲛ_1_post_ⲟⲙⲉ",
+          8
+        ],
+        [
+          "ⲛ_1_post_ⲟⲙⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲙⲉ",
+          "ⲕⲉⲣⲁⲙⲉⲩⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲟⲙⲉ",
+          "ⲡ_1_pre_ⲟⲙⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲙⲉ",
+          "ⲟⲙⲉ_0_node",
+          6
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲃⲏⲩⲉ",
+          "ⲛⲉ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲃⲏⲩⲉ",
+          "ϩⲃⲏⲩⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲙⲉ",
+          "ⲡ_1_pre_ⲟⲙⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲙⲉ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲗⲟⲓϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲛ_2_post_ⲗⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲗⲟⲉⲓϩⲉ",
+          "ⲗⲟⲉⲓϩⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲙ_1_post_ⲟⲙⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲟⲙⲉ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲕⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲙⲛ_2_post_ⲛⲕⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲕⲁ",
+          "ⲧⲙⲛⲧⲡⲁⲡⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲙⲛⲧⲡⲁⲡⲉ_1_post_ⲟⲙⲉ",
+          "ⲧⲱⲃⲉ_2_post_ⲧⲙⲛⲧⲡⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲱⲃⲉ_2_post_ⲧⲙⲛⲧⲡⲁⲡⲉ",
+          "ⲙⲛ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲏⲩⲉ",
+          "ⲛⲉ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲙⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ϩⲓⲟⲟⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲉ_2_pre_ⲥⲙⲟⲧ",
+          "ⲉ_1_pre_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲟⲙⲉ",
+          "ⲁⲛ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_2_pre_ⲉ",
+          "ⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ϩⲙ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲟⲙⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲙⲉ",
+          "ϥ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟϣ",
+          "ⲟϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲗⲟⲉⲓϩⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲙⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲉⲣⲁⲙⲉⲩⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲙⲉ",
+          "ⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲣⲁⲙⲉⲩⲥ_2_post_ⲛ",
+          "ⲙⲏ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲏ_2_post_ⲡ",
+          "ⲡ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲟⲙⲉ",
+          "ⲉⲧ_3_post_ⲥⲉⲕ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_2_pre_ⲁⲛⲟⲛ",
+          "ⲇⲉ_2_pre_ⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_pre_ⲁⲛⲟⲛ",
+          "ⲁⲛⲟⲛ_1_pre_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲙⲉ_0_node",
+          "ϩⲓ_2_post_ⲧⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲧⲱⲱⲃⲉ",
+          "ⲧⲱⲱⲃⲉ_1_post_ⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲱⲱⲃⲉ_1_post_ⲟⲙⲉ",
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          "ⲱⲛⲉ_1_post_ⲟⲙⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1276,
+      "count": 52
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2749",
+      "label": "ⲁⲙϩⲁⲧ",
+      "pos": "N",
+      "gloss": "white clay"
+    },
+    {
+      "target": "C2748",
+      "label": "ⲁⲙⲡⲏⲣϣ",
+      "pos": "N",
+      "gloss": "red clay"
+    },
+    {
+      "target": "C2750",
+      "label": "ⲁⲙⲧⲱϩ",
+      "pos": "N",
+      "gloss": "clay mixed with straw"
+    },
+    {
+      "target": "C2746",
+      "label": "ⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "clay, mud"
+    },
+    {
+      "target": "C2751",
+      "label": "ⲟⲩⲁⲙⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "eartheater (a rodent or devouring animal, worm?); \"eartheater\": rodent ulcer, gangrene"
+    },
+    {
+      "target": "C2752",
+      "label": "ⲣⲟⲩⲁⲙⲟⲙⲉ",
+      "pos": "V",
+      "gloss": "eat, spread (as gangrene)"
+    }
+  ],
+  "etym": {
+    "egy_num": "37740",
+    "egy_lemma": "ꜥmꜥ.t",
+    "demo_num": "d967",
+    "demo_lemma": "ꜥmj",
+    "english": "mud; muddy ground",
+    "german": "Schmiere; Lehm; Nilschlamm",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37740",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d967"
+  }
+}

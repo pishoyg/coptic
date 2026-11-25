@@ -1,0 +1,52 @@
+{
+  "id": "C7231",
+  "forms": [
+    {
+      "id": "CF16521",
+      "orth": "ϫⲛ- (ⲙⲡⲱⲣ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "collocPartikel": "ⲙⲡⲱⲣ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS7981",
+      "bibliography": "CD 772a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩϯ ⲡⲉⲩⲟⲩⲟⲉⲓ ⲉⲣⲟϥ ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉⲡⲥⲁϩ ⲧⲛⲥⲟⲟⲩⲛ ϫⲉⲛⲧⲕⲟⲩⲣⲙⲙⲙⲉ ⲁⲩⲱ ⲛⲅϩⲏϭⲉ ⲁⲛ ϩⲏⲧϥ ⲛⲗⲁⲁⲩ ⲛⲅϫⲓϩⲟ ⲅⲁⲣ ⲁⲛ ⲛⲣⲱⲙⲉ ⲁⲗⲗⲁ ϩⲛⲟⲩⲙⲉ ⲉⲕϯⲥⲃⲱ ⲛⲧⲉϩⲓⲏ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲝⲉⲥⲧⲓ ⲉϯⲕⲏⲛⲥⲟⲥ ⲙⲡⲣⲣⲟ ϫⲛⲙⲙⲟⲛ ⲧⲁⲣⲛϯ **ϫⲛⲙⲡⲱⲣ** .",
+      "english": "When they had come, they asked him, &apos;Teacher, we know that you are honest, and don&apos;t defer to anyone; for you aren&apos;t partial to anyone, but truly teach the way of God. Is it lawful to pay taxes to Caesar, or not?",
+      "source": "Mark Chapter 12",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7228",
+      "label": "ϫⲛ-",
+      "pos": "CONJ",
+      "gloss": "or"
+    },
+    {
+      "target": "C7229",
+      "label": "ϫⲛ- (ⲙⲙⲟⲛ)",
+      "pos": "CONJ",
+      "gloss": "or not"
+    },
+    {
+      "target": "C7230",
+      "label": "ϫⲛ- (ⲙⲡⲉ)",
+      "pos": "CONJ",
+      "gloss": "or not"
+    }
+  ]
+}

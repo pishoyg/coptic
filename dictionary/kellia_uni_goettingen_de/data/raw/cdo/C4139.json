@@ -1,0 +1,141 @@
+{
+  "id": "C4139",
+  "forms": [
+    {
+      "id": "CF10223",
+      "orth": "ⲧⲟⲃⲧⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7203,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4699",
+      "bibliography": "CD 402a; KoptHWb 223; ChLCS 56b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲙ",
+        2,
+        18.511
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        4,
+        15.276
+      ],
+      [
+        "ϣⲟⲩϣⲟⲩ",
+        2,
+        14.691
+      ],
+      [
+        "ⲙⲉ",
+        2,
+        11.941
+      ],
+      [
+        "ϥ",
+        4,
+        9.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲧⲟⲃⲧⲃ",
+          1
+        ],
+        [
+          "ⲧⲟⲃⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲟⲩϣⲟⲩ_1_post_ⲧⲟⲃⲧⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲧⲟⲃⲧⲃ",
+          "ⲧⲟⲃⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲃⲧⲃ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          "ⲙⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ϣⲟⲩϣⲟⲩ",
+          "ϥ_2_post_ϣⲟⲩϣⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲟⲩϣⲟⲩ",
+          "ϣⲟⲩϣⲟⲩ_1_post_ⲧⲟⲃⲧⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6752,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4140",
+      "label": "ⲙⲁⲓⲧⲁⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "ornament-loving"
+    },
+    {
+      "target": "C4141",
+      "label": "ⲧⲃⲧⲃ",
+      "pos": "N",
+      "gloss": "mixed(?) food"
+    },
+    {
+      "target": "C4138",
+      "label": "ⲧⲟⲃⲧⲃ",
+      "pos": "V",
+      "gloss": "form, compound, invent"
+    }
+  ]
+}

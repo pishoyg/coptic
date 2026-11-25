@@ -1,0 +1,120 @@
+{
+  "id": "C980",
+  "forms": [
+    {
+      "id": "CF3309",
+      "orth": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.1,
+        "rank": 216,
+        "count": 805
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1140",
+      "bibliography": "CD 85b; KoptHWb 52; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲥⲱⲧⲙ **ⲉⲓⲥ **ϩⲏⲏⲧⲉ**** ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓⲡⲉⲧϫⲟ ⲉⲧϫⲟ .",
+      "english": "Listen! Behold, the farmer went out to sow,",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲓⲥϩⲏⲏⲧⲉ** ϯϭⲱϣⲧ ⲉⲃⲟⲗ ϩⲏⲧⲕ ·",
+      "english": "behold, I will wait for thee here';",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲉⲓⲥϩⲏⲏⲧⲉ** ⲁⲕⲥⲱⲧⲙ ⲉⲧⲃⲉⲥⲟⲛ ⲥⲛⲁⲩ .",
+      "english": "'Behold, you heard concerning two brothers",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.08,
+      "rank": 184,
+      "count": 806
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12184",
+      "label": "ϩⲉⲓ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C987",
+      "label": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs mostly = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C982",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before pl. nouns or pronouns)"
+    },
+    {
+      "target": "C983",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C981",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before nouns)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

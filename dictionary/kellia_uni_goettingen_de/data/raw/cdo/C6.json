@@ -1,0 +1,204 @@
+{
+  "id": "C6",
+  "forms": [
+    {
+      "id": "CF39",
+      "orth": "ⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7492,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6",
+      "bibliography": "CD 2a; DELC 3; ChLCS 3a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲉⲥϩⲏⲧ ϯⲃⲉ ⲁⲩⲱ ⲁⲥⲕⲁⲃⲟⲗ ⲉⲧⲃⲉϯ**ⲁⲃⲉ** ⲙⲡⲉϥⲥⲱⲙⲁ ·",
+      "english": "and her stomach turned, and she vomited because of the loathsomeness of his body.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁⲅⲟⲥ ⲇⲉ ⲁϥⲧⲁⲙⲓⲟ ⲛϩⲉⲛⲕⲉⲡⲁϩⲣⲉ ⲉⲩⲛⲁϣⲧ ⲛϩⲟⲩⲟ ⲉⲛϣⲟⲣⲡ · ϩⲱⲥⲧⲉ ⲟⲩⲥⲓϣⲉ ⲙⲛϯ**ⲁⲃⲉ** ⲛⲟⲩⲕⲱⲱⲥ ·",
+      "english": "And the magician made other medicaments which were far more powerful than those which he had made first, using even the gall and the humours from a corpse.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲃⲟⲗ",
+        1,
+        15.276
+      ],
+      [
+        "ⲕⲱⲱⲥ",
+        1,
+        14.74
+      ],
+      [
+        "ⲥⲓϣⲉ",
+        1,
+        13.621
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        9.624
+      ],
+      [
+        "ϯ",
+        2,
+        9.516
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲱⲱⲥ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲃⲉ_0_node",
+          "ⲙ_1_post_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲃⲉ",
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲃⲉ",
+          "ϯ_1_pre_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲃⲉ",
+          "ⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲃⲉ_0_node",
+          "ⲛ_1_post_ⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲃⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲕⲱⲱⲥ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7032,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "36610",
+    "egy_lemma": "ꜥbꜣ.yt",
+    "english": "rope",
+    "german": "Lenkseil; Fessel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/36610"
+  }
+}

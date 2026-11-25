@@ -1,0 +1,392 @@
+{
+  "id": "C8676",
+  "forms": [
+    {
+      "id": "CF20550",
+      "orth": "ⲅⲉϩⲉⲛⲛⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20551",
+      "orth": "ⲅⲉϩⲉⲛⲛⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20552",
+      "orth": "ⲅⲉϩⲉⲛⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1520,
+        "count": 49
+      }
+    },
+    {
+      "id": "CF20553",
+      "orth": "ⲅⲉϩⲛⲛⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10282",
+      "bibliography": "DDGLC",
+      "cu_ID": "414"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲛⲁϩⲙⲉⲧ ⲉⲡⲙⲟⲩ ⲙⲙⲉϩⲥⲛⲁⲩ · ⲉⲧⲉⲧ**ⲅⲉϩⲉⲛⲛⲁ** ⲛⲥⲁⲧⲉ ⲧⲉ · ⲉⲁⲕⲧⲁϩⲟⲓ ⲉⲣⲁⲧ ⲉⲓⲟⲩⲁⲁⲃ ·",
+      "english": "Thou it was Who didst deliver me from the second death, that is to say, the Gehenna of fire, and didst make me to stand up, being a pure man.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲉⲕⲃⲁⲗ ⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ ⲙⲙⲟⲕ ⲡⲟⲣⲕϥ ⲛⲅⲛⲟϫϥ ⲉⲃⲟⲗ ⲙⲙⲟⲕ ⲛⲁⲛⲟⲩⲥ ⲛⲁⲕ ⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛⲟⲩⲃⲁⲗ ⲟⲩⲱⲧ ⲉϩⲟⲩ ⲉⲣⲟⲥ ⲉⲣⲉⲃⲁⲗ ⲥⲛⲁⲩ ⲙⲙⲟⲕ ⲛⲥⲉⲛⲟϫⲕ ⲉⲧ**ⲅⲉϩⲉⲛⲛⲁ**",
+      "english": "If your eye causes you to stumble, cast it out. It is better for you to enter into the Kingdom of God with one eye, rather than having two eyes to be cast into the Gehenna of fire,",
+      "source": "Mark Chapter 9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ ⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ ⲙⲙⲟⲕ ϣⲁⲁⲧⲥ ⲉⲃⲟⲗ ⲙⲙⲟⲕ ⲛⲁⲛⲟⲩⲥ ⲛⲁⲕ ⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲱⲛϩ ⲉⲕⲟ ⲛϭⲁⲗⲉ ⲉϩⲟⲩ ⲉⲣⲟⲥ ⲉⲣⲉⲟⲩⲉⲣⲏⲧⲉ ⲥⲛⲧⲉ ⲙⲙⲟⲕ ⲛⲥⲉⲛⲟϫⲕ ⲉⲧ**ⲅⲉϩⲉⲛⲛⲁ**",
+      "english": "If your foot causes you to stumble, cut it off. It is better for you to enter into life lame, rather than having your two feet to be cast into Gehenna, into the fire that will never be quenched--",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲉ",
+        12,
+        18.271
+      ],
+      [
+        "ⲧ",
+        52,
+        17.558
+      ],
+      [
+        "ⲛ",
+        62,
+        16.057
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        10,
+        15.992
+      ],
+      [
+        "[...]",
+        3,
+        15.416
+      ],
+      [
+        "ⲛⲟϫ",
+        9,
+        15.308
+      ],
+      [
+        "ϩⲣⲏ...ⲥⲧⲏⲥ",
+        1,
+        14.983
+      ],
+      [
+        "ⲱϣⲙ.......ⲭⲟ....ϣⲓⲡⲉ",
+        1,
+        14.983
+      ],
+      [
+        "ⲛⲉϫⲧⲏⲟⲩⲧⲛ",
+        1,
+        14.983
+      ],
+      [
+        "ⲉ",
+        28,
+        13.625
+      ],
+      [
+        "ⲁ..",
+        1,
+        13.398
+      ],
+      [
+        "ⲡ",
+        26,
+        12.984
+      ],
+      [
+        "⁘",
+        2,
+        12.735
+      ],
+      [
+        "ϫⲛⲁ",
+        1,
+        12.661
+      ],
+      [
+        "ⲁⲧϭⲟⲙ",
+        2,
+        12.591
+      ],
+      [
+        "ⲱϣⲙ",
+        2,
+        12.398
+      ],
+      [
+        "ⲉⲧⲉ",
+        7,
+        12.091
+      ],
+      [
+        "ϣⲁϩ",
+        2,
+        11.608
+      ],
+      [
+        "ⲃⲛⲧ",
+        1,
+        11.283
+      ],
+      [
+        "ⲧⲣⲓⲣ",
+        1,
+        11.176
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          25
+        ],
+        [
+          "ⲛ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          4
+        ],
+        [
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲅⲉϩⲉⲛⲛⲁ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲡⲉⲛ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲡⲉⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲉ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲧⲱϫⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ⲁⲙⲛⲧⲉ_4_post_ϩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          "ⲛ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          "ⲥⲁⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲅⲉϩⲉⲛⲛⲁ",
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          2
+        ],
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲓ",
+          "ⲡⲁⲓ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          "ⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧ_2_post_ⲡⲁⲓ",
+          "ⲁ_4_post_ⲡⲉⲛ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲡⲉⲛ",
+          "ϥ_4_post_ⲡⲉⲛ",
+          1
+        ],
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲁⲧⲉ",
+          "ⲧ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲥⲁⲧⲉ",
+          "ⲥⲁⲧⲉ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲉ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          "ⲛ_2_post_ⲥⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲁⲧⲉ",
+          "ⲁⲧⲱϫⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          "ⲙ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲱⲧ_3_post_ⲡ",
+          "ⲉⲃⲟⲗ_4_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ϩⲱⲧ",
+          "ⲙ_4_post_ϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲅⲉϩⲉⲛⲛⲁ_0_node",
+          "ⲉⲧ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲅⲉϩⲉⲛⲛⲁ",
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          "ϩⲛ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ϣⲟⲟⲡ",
+          "ⲁⲙⲛⲧⲉ_4_post_ϩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.31,
+      "rank": 1313,
+      "count": 49
+    }
+  },
+  "etym": {
+    "grl_ID": "2671",
+    "grl_lemma": "γέεννα",
+    "grl_meaning": "Gehenna",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 341a; Bauer 306"
+  }
+}

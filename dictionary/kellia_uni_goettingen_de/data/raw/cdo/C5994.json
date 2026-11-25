@@ -1,0 +1,153 @@
+{
+  "id": "C5994",
+  "forms": [
+    {
+      "id": "CF13993",
+      "orth": "ϣⲡⲓⲉⲉⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18730,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6678",
+      "bibliography": "CD 577b; KoptHWb 321; DELC 268a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲭⲁⲣⲓⲥ ⲉϫⲛⲟⲩⲭⲁⲣⲓⲥ ⲡⲉ ⲟⲩⲥϩⲓⲙⲉ ⲛ**ϣⲡⲓⲉⲉⲧⲉ** ⲁⲩⲱ ⲙⲛϣⲓ ⲛⲓⲙ ⲙⲡϣⲁ ⲛⲧⲉⲥⲯⲩⲭⲏ ⲛⲣⲉϥⲁⲙⲁϩⲧⲉ",
+      "english": "A shamefaced and faithful woman is a double grace, and her continent mind cannot be valued.",
+      "source": "Sirach 26",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓ",
+        1,
+        12.197
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        10.255
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲡⲓⲉⲉⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18348,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5986",
+      "label": "ϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "be ashamed, shame, make ashamed"
+    },
+    {
+      "target": "C5987",
+      "label": "ϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "shame"
+    },
+    {
+      "target": "C5993",
+      "label": "ϣⲡⲓⲏⲧ",
+      "pos": "N",
+      "gloss": "modest person"
+    },
+    {
+      "target": "C12110",
+      "label": "ϣⲫⲓⲧ",
+      "pos": "VSTAT",
+      "gloss": "be ashamed"
+    },
+    {
+      "target": "C5992",
+      "label": "ϫⲓϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "take shame, be ashamed"
+    },
+    {
+      "target": "C5991",
+      "label": "ϯϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "give, put to shame"
+    },
+    {
+      "target": "C5988",
+      "label": "ⲁⲧϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "unashamed"
+    },
+    {
+      "target": "C5989",
+      "label": "ⲙⲛⲧⲁⲧϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "shamelessness"
+    },
+    {
+      "target": "C5990",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "shyness, modesty"
+    }
+  ]
+}

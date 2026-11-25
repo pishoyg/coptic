@@ -1,0 +1,369 @@
+{
+  "id": "C7560",
+  "forms": [
+    {
+      "id": "CF17179",
+      "orth": "ϭⲱⲱⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3467,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF32253",
+      "orth": "ϭⲱⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 2018,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ϭⲃ-",
+      "dialect": "S",
+      "id": "327.1"
+    },
+    {
+      "orth": "ϫⲱⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1547,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ϭⲱⲃⲉ",
+      "dialect": "A",
+      "id": "327.3"
+    },
+    {
+      "orth": "ϭⲱⲃⲓ",
+      "dialect": "F",
+      "id": "327.4"
+    },
+    {
+      "orth": "ϭⲱⲃⲉ",
+      "dialect": "L",
+      "id": "327.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8384",
+      "bibliography": "CD 804b; CED 325; KoptHWb 446; DELC 335b-336a; ChLCS 106a"
+    },
+    {
+      "id": "CS8385",
+      "bibliography": "CD 804b; KoptHWb 446; ChLCS 106a"
+    },
+    {
+      "id": "CS8386",
+      "bibliography": "KoptHWb 446; ChLCS 106a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲇⲉ · ⲁⲓϭⲱϣⲧ ⲁⲓⲛⲁⲩ ⲉⲩⲣⲱⲙⲉ · ⲙⲡⲟⲩⲉ ⲉϥⲟ ⲛϩⲟⲧⲉ ⲉⲙⲁⲧⲉ · ⲉⲣⲉⲡⲉϥϥⲱ ⲡⲟⲣϣ ⲉⲃⲟⲗ · ⲉϫⲙⲡⲉϥⲥⲱⲙⲁ · ⲛⲧϩⲉ ⲙⲡⲁⲛⲉⲓⲡⲁⲣⲧⲁⲗⲏⲥ · ⲛϥⲕⲏⲕⲁϩⲏⲩ ⲅⲁⲣ ⲡⲉ · ⲉⲣⲉϩⲉⲛ**ϭⲱⲱⲃⲉ** ϩⲱⲃⲥ ⲙⲡⲉϥⲥⲙⲟⲧ ⲛϩⲟⲟⲩⲧ ·",
+      "english": "And straightway I looked, and I saw a man in the distance, and he was an exceedingly terrifying object, for his hair was spread out over his body like that of a panther, and he was naked, and his privy parts were covered with leaves.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ ⲛⲁⲓ ϫⲉϫⲓⲛⲛⲧⲁⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲁϥⲣϩⲁⲗ ⲛⲁⲇⲁⲙ ⲙⲛⲉⲩϩⲁ ⲧⲉϥⲥϩⲓⲙⲉ ⲁⲛϣⲏⲛ ϣⲱⲗⲙ ⲙⲡⲉⲩⲥⲧⲟⲓ ⲁⲛⲉⲩ**ϭⲱⲱⲃⲉ** ϩⲉ ⲉⲡⲉⲥⲏⲧ",
+      "english": "And the Cherubim said unto me, 'From the moment when the Devil entered into Paradise, and seduced Adam, and Eve his wife, the trees, which up to that time had possessed a sweet smell, ceased to have any smell at all, and their leaves [began to] fall off.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲥϣⲱⲡⲉ ⲉⲥⲕⲏⲕⲁϩⲏⲩ ⲁⲥⲉⲓⲙⲉ ϫⲉⲉⲥⲕⲏⲕⲁϩⲏⲩ · ⲁⲥϫⲓ ⲛϩⲉⲛ**ϭⲱⲱⲃⲉ** ⲛⲕⲛⲧⲉ ⲁⲥϩⲱⲃⲥ ⲙⲡⲥⲕⲱⲕⲁϩⲏⲩ ·",
+      "english": "And straightaway Eve became naked, and she knew that she was naked, and she took some leaves of the fig-tree, and covered her nakedness.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲃⲥ",
+        5,
+        16.92
+      ],
+      [
+        "ⲑⲉⲣⲁⲡⲓⲁ",
+        1,
+        15.276
+      ],
+      [
+        "ⲕⲛⲧⲉ",
+        2,
+        14.322
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        2,
+        11.941
+      ],
+      [
+        "ⲉⲣⲉ",
+        4,
+        11.78
+      ],
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        11.632
+      ],
+      [
+        "ⲉϥ",
+        1,
+        11.369
+      ],
+      [
+        "ⲕⲁϩⲏⲩ",
+        1,
+        11.047
+      ],
+      [
+        "ⲛ",
+        11,
+        10.865
+      ],
+      [
+        "ϣⲟⲟⲩⲉ",
+        1,
+        10.768
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        10.752
+      ],
+      [
+        "ⲧⲁⲕⲉ",
+        1,
+        10.676
+      ],
+      [
+        "ⲛⲏϫ",
+        1,
+        10.548
+      ],
+      [
+        "ⲛⲛⲉ",
+        2,
+        10.092
+      ],
+      [
+        "ⲁⲇⲁⲙ",
+        1,
+        9.729
+      ],
+      [
+        "⁛—",
+        1,
+        9.431
+      ],
+      [
+        "ⲥ",
+        4,
+        8.952
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        1,
+        8.945
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        8.745
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        7.774
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲱⲱⲃⲉ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲱⲃⲉ",
+          2
+        ],
+        [
+          "ⲕⲛⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲩⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ_b",
+          1
+        ],
+        [
+          "ⲛⲏϫ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲛⲏϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲧⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲉ_1_post_ϭⲱⲱⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱⲱⲃⲉ_0_node",
+          "ⲛ_1_post_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲱⲃⲉ",
+          "ⲕⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲱⲱⲃⲉ",
+          "ϭⲱⲱⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϭⲱⲱⲃⲉ_0_node",
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ",
+          "ϣⲟⲟⲩⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲩⲉ_2_post_ⲉⲧ",
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϭⲱⲱⲃⲉ_b",
+          "ⲛⲏϫ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲏϫ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ⲛⲏϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲱⲱⲃⲉ",
+          "ϭⲱⲱⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ϭⲱⲱⲃⲉ",
+          "ⲕ_1_pre_ϭⲱⲱⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϭⲱⲱⲃⲉ",
+          "ϭⲱⲱⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϭⲱⲱⲃⲉ_0_node",
+          "ⲛ_2_post_ⲧⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲕⲉ",
+          "ⲅ_2_post_ⲧⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲧⲁⲕⲉ",
+          "ⲧⲁⲕⲉ_1_post_ϭⲱⲱⲃⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3099,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7562",
+      "label": "ϫⲓϭⲱⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "harvest (grapes)"
+    },
+    {
+      "target": "C7561",
+      "label": "ⲁⲧϭⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "without leaves"
+    }
+  ],
+  "etym": {
+    "egy_num": "166380",
+    "egy_lemma": "gꜣb.t",
+    "demo_num": "d6767",
+    "demo_lemma": "gbꜣ.t",
+    "english": "leaf; (lotus) petal",
+    "german": "Blatt (einer Pflanze); Blütenblatt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6767"
+  }
+}

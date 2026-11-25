@@ -1,0 +1,150 @@
+{
+  "id": "C8772",
+  "forms": [
+    {
+      "id": "CF21027",
+      "orth": "ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21028",
+      "orth": "ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10727,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21029",
+      "orth": "ⲇⲓⲧⲁⲥⲕⲁⲗⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10497",
+      "bibliography": "DDGLC",
+      "cu_ID": "2637"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲛⲉⲧⲉϥⲣⲡⲉⲧⲛⲁⲛ ⲙⲛⲡⲉⲛⲧⲁϩⲟ ⲉⲣⲁⲧϥ ϩⲁϩ ⲇⲉ ⲟⲛ ⲛⲉ ⲛ**ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ** ⲙⲛⲛⲉⲡⲣⲁⲝⲓⲥ ⲛⲛⲣⲱⲙⲉ ⲛϫⲱⲱⲣⲉ ⲁⲩⲱ ⲙⲙⲁⲕⲁⲣⲓⲟⲥ ⲉⲧⲕⲏ ⲛⲁⲛ ⲉϩⲣⲁⲓ ϩⲛⲛⲉⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲧϩⲉ ⲛϩⲉⲛϩⲓⲕⲱⲛ ⲉⲩⲛⲟⲩⲯⲩⲭⲏ ⲙⲙⲟⲟⲩ · ⲉⲧⲣⲉⲛⲉⲧⲟⲩⲱϣ ⲉⲟⲩⲁϩⲟⲩ ⲛⲥⲱⲟⲩ · ⲧⲛⲧⲱⲛⲟⲩ ⲉⲛⲉⲩⲕⲁⲧⲟⲣⲑⲱⲙⲁ ⲉⲧⲧⲁⲓⲏⲩ ⲉⲧⲙⲧⲣⲉⲩϣⲱⲡⲉ ⲉⲩϭⲟϫⲃ ⲉⲣⲟⲟⲩ ϩⲓⲧⲛⲧⲉⲩⲙⲛⲧϫⲱⲱⲣⲉ ·",
+      "english": "We are those (unto whom) He doeth good. And there are very many admonitions (or, teachings), and acts of valiant and blessed men which have come down to us in the Holy Scriptures, which are like unto images that have souls in them, and which will make those who wish to follow them resemble [them] in their glorious integrity, and prevent them from becoming feeble in the performance of their mighty deeds.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲁⲝⲓⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲁⲝⲓⲥ_1_post_ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+          "ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ_0_node",
+          "ⲙⲛ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          "ⲛⲉ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲡⲣⲁⲝⲓⲥ",
+          "ⲡⲣⲁⲝⲓⲥ_1_post_ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲁⲝⲓⲥ_1_post_ⲇⲓⲇⲁⲥⲕⲁⲗⲓⲁ",
+          "ⲁⲩⲱ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10319,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3447",
+    "grl_lemma": "διδασκαλία",
+    "grl_meaning": "teaching, instruction, training",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 421b; Preisigke 1:370"
+  }
+}

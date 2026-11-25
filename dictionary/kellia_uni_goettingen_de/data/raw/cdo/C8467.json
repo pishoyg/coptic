@@ -1,0 +1,109 @@
+{
+  "id": "C8467",
+  "forms": [
+    {
+      "id": "CF19829",
+      "orth": "ⲁⲣⲭⲏⲗⲏⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19830",
+      "orth": "ⲁⲣⲭⲏⲗⲏⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9588,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9856",
+      "bibliography": "DDGLC",
+      "cu_ID": "10297"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ⲛϭⲓⲡ**ⲁⲣⲭⲏⲗⲏⲥⲧⲏⲥ**",
+      "english": "He said to him, that is the head-bandit:",
+      "source": "Apophthegmata Patrum Sahidic 157: Papnoute",
+      "urn": "urn:cts:copticLit:ap.157.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲓⲥⲧⲉⲩⲉ",
+        1,
+        11.635
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲭⲏⲗⲏⲥⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9156,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3437",
+    "grl_lemma": "ἀρχιλῃστής",
+    "grl_meaning": "chief robber",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 253a; Preisigke 1:220"
+  }
+}

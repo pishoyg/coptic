@@ -1,0 +1,50 @@
+{
+  "id": "C12230",
+  "forms": [
+    {
+      "id": "CF33247",
+      "orth": "ⲉⲣⲥⲉϩⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17234",
+      "bibliography": "CD 286b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12229",
+      "label": "ⲕⲁⲕⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leper"
+    },
+    {
+      "target": "C12227",
+      "label": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "pos": "V",
+      "gloss": "be barked, coated with leprosy"
+    },
+    {
+      "target": "C12228",
+      "label": "ⲕⲱⲕ ⲛⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "(state of) being coated with leprosy"
+    },
+    {
+      "target": "C12072",
+      "label": "ⲥⲉϩⲧ",
+      "pos": "N",
+      "gloss": "leprosy"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "C2216",
+  "forms": [
+    {
+      "id": "CF6150",
+      "orth": "ⲙⲓϣⲉ (ⲙⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲙⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2559",
+      "bibliography": "CD 203a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁϥⲃⲱⲕ ⲟⲛ ⲉϫⲛⲛⲁϣⲁϫⲉ ⲛϭⲓⲡⲓⲟⲩⲇⲁⲓ ⲛⲃⲣⲣⲉ · ⲁⲩⲱ ϥⲥⲱⲃⲉ ⲛⲥⲁⲧⲙⲛⲧⲛⲟϭ ⲙⲡϣⲁϫⲉ ⲙⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ **ⲉϥⲙⲓϣⲉ **ⲙⲛ**ⲡⲉⲡⲛⲉⲩⲙⲁ** ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "Now the new Jew hath also attacked my words, and hath scoffed at the words of great import of the prophet, and hath contended against the Holy Spirit.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲉⲧⲙⲓϣⲉ **ⲙⲛ**ⲛⲉⲑⲏⲣⲓⲟⲛ** ⲛⲟⲩⲙⲛⲧϫⲱⲱⲣⲉ ⲁⲛ ⲡⲉ · ⲛⲧϩⲉ ⲙⲡⲉⲧⲙⲓϣⲉ ⲙⲛⲙⲡⲁⲑⲟⲥ ·",
+      "english": "He who fighteth with wild beasts is not as valiant as the man who fighteth against passion.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϯⲛⲁⲙⲓϣⲉ **ⲙⲛ**ⲡⲁⲙⲉⲉⲩⲉ** ⲉⲧⲙϫⲱϩ ⲉⲣⲟⲥ .",
+      "english": "...'I will struggle with my thought to not touch her.'",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2213",
+      "label": "ϭⲓⲛⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "art of fighting"
+    },
+    {
+      "target": "C2210",
+      "label": "ⲁⲧⲙⲓϣⲓ",
+      "pos": "N",
+      "gloss": "not attacked, unhurt"
+    },
+    {
+      "target": "C2207",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "V",
+      "gloss": "fight"
+    },
+    {
+      "target": "C2208",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "V",
+      "gloss": "strike"
+    },
+    {
+      "target": "C2209",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fight, quarrel"
+    },
+    {
+      "target": "C2214",
+      "label": "ⲙⲓϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "fight for, fight bravely; fight against, attack"
+    },
+    {
+      "target": "C2215",
+      "label": "ⲙⲓϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "fight for, on behalf of"
+    },
+    {
+      "target": "C2217",
+      "label": "ⲙⲓϣⲉ (ⲟⲩⲃⲉ-)",
+      "pos": "V",
+      "gloss": "fight against"
+    },
+    {
+      "target": "C2218",
+      "label": "ⲙⲓϣⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "fight on behalf of"
+    },
+    {
+      "target": "C2211",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fighter"
+    },
+    {
+      "target": "C2212",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "hostile, quarrelsome"
+    }
+  ]
+}

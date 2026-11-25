@@ -1,0 +1,67 @@
+{
+  "id": "C1662",
+  "forms": [
+    {
+      "id": "CF4819",
+      "orth": "ⲗⲉⲙⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9498,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1927",
+      "bibliography": "CD 143a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲓ ⲁⲇⲁⲭ· ⲉⲫⲕⲓⲇⲣⲟⲩ· ⲁⲇⲱⲛⲁⲓ · ⲁⲣⲟⲁ · ⲥⲁⲃⲏⲗ · ⲗⲟⲩⲏⲗ · ⲉⲗⲱⲉⲓ · ⲉ**ⲗⲉⲙⲁⲥ** · ⲁⲃⲁⲕⲇⲁⲛⲉⲓ· ⲟⲣⲓⲱⲑ · ⲙⲓⲟⲑ · ⲟⲩⲁⲁⲑ · ⲥⲟⲩⲛ ⲡⲉⲣⲓⲛⲏⲑ · ⲻ ⲓⲱⲑⲁⲧ . ⲧⲉⲡⲣⲟⲥⲉⲩⲭⲏ ⲙⲡⲥⲱⲧⲏⲣ ϩⲓϫⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲉⲧⲻⲃⲉⲁⲇⲁⲙ · ϩⲛⲧⲉⲩⲛⲟⲩ ⲇⲉ ⲛⲧⲁⲡⲥⲱⲧⲏⲣ ϫⲉⲛⲁⲓ ·",
+      "english": "...",
+      "source": "Acts of Pilate-Gospel of Nicodemus CM.1643 part 2",
+      "urn": "urn:cts:copticLit:misc.acts_pilate.lacau_ed:10-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲃⲁⲕⲇⲁⲛⲉⲓ·",
+        1,
+        20.598
+      ],
+      [
+        "ⲟⲣⲓⲱⲑ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲗⲱⲉⲓ",
+        1,
+        17.598
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9076,
+      "count": 1
+    }
+  }
+}

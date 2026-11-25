@@ -1,0 +1,55 @@
+{
+  "id": "C1160",
+  "forms": [
+    {
+      "id": "CF3706",
+      "orth": "ⲕⲉⲗⲟⲩⲛϫϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1348",
+      "bibliography": "CD 104a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1161",
+      "label": "ϩⲁⲙⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt-smith, smith"
+    },
+    {
+      "target": "C1159",
+      "label": "ⲕⲉⲗⲉⲛⲕⲉϩ",
+      "pos": "N",
+      "gloss": "elbow"
+    },
+    {
+      "target": "C1158",
+      "label": "ⲕⲉⲗⲓ",
+      "pos": "N",
+      "gloss": "limb, trunk"
+    },
+    {
+      "target": "C1156",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    },
+    {
+      "target": "C1157",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    }
+  ]
+}

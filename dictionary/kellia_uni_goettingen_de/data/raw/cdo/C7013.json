@@ -1,0 +1,62 @@
+{
+  "id": "C7013",
+  "forms": [
+    {
+      "id": "CF16081",
+      "orth": "ϭⲁⲡϩⲟϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF16082",
+      "orth": "ϭⲁⲡϩⲟϥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF16083",
+      "orth": "ϭⲁⲡϩⲟϥ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7734",
+      "bibliography": "CD 741a; ChLCS 99a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7830",
+      "type": "cf",
+      "label": "seize, take, begin"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7010",
+      "label": "ϩϥⲱ",
+      "pos": "N",
+      "gloss": "serpent"
+    },
+    {
+      "target": "C7011",
+      "label": "ϩⲟϥ",
+      "pos": "N",
+      "gloss": "serpent"
+    },
+    {
+      "target": "C7012",
+      "label": "ϭⲁⲗϩⲟϥ",
+      "pos": "N",
+      "gloss": "serpent-charmer"
+    }
+  ]
+}

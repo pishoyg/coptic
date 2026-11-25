@@ -1,0 +1,81 @@
+{
+  "id": "C5708",
+  "forms": [
+    {
+      "id": "CF13394",
+      "orth": "ϣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17171,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6386",
+      "bibliography": "CD 547a; KoptHWb 302"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲡⲁⲥⲉⲃⲏⲥ **ϣⲉⲓ** ϩⲙⲡⲧⲁⲕⲟ ⲧϩⲟⲧⲉ ⲇⲉ ⲙⲡⲁⲥⲉⲃⲏⲥ ⲛⲧⲟⲥ ⲉⲧⲛⲏⲩ ⲉϫⲱϥ ⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲇⲉ ⲛⲛⲇⲓⲕⲁⲓⲟⲥ ⲥⲟⲧⲡ",
+      "english": "The ungodly is engulphed in destruction; but the desire of the righteous is acceptable.",
+      "source": "Proverbs 10",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲥⲉⲃⲏⲥ",
+        1,
+        12.469
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        10.738
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16776,
+      "count": 1
+    }
+  }
+}

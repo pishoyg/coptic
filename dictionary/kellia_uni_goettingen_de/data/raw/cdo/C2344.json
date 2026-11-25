@@ -1,0 +1,58 @@
+{
+  "id": "C2344",
+  "forms": [
+    {
+      "id": "CF6426",
+      "orth": "ⲣⲉϥⲙⲟⲩϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2703",
+      "bibliography": "CD 214b; KoptHWb 114; ChLCS 31a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2345",
+      "label": "ϭⲓⲛⲙⲟⲩϫϭ",
+      "pos": "N",
+      "gloss": "mixture, intercourse"
+    },
+    {
+      "target": "C2343",
+      "label": "ⲙⲉⲧⲁⲧⲙⲟⲩϫⲧ",
+      "pos": "N",
+      "gloss": "unmixedness"
+    },
+    {
+      "target": "C2341",
+      "label": "ⲙⲟⲩϫϭ",
+      "pos": "V",
+      "gloss": "be mixed; mix"
+    },
+    {
+      "target": "C2342",
+      "label": "ⲙⲟⲩϫϭ",
+      "pos": "N",
+      "gloss": "mixture"
+    }
+  ]
+}

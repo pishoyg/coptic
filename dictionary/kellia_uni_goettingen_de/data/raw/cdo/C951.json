@@ -1,0 +1,959 @@
+{
+  "id": "C951",
+  "forms": [
+    {
+      "id": "CF3246",
+      "orth": "ⲉⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 11.22,
+        "rank": 107,
+        "count": 1770
+      }
+    },
+    {
+      "orth": "ⲟⲓ†",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 13.05,
+        "rank": 102,
+        "count": 1107
+      }
+    },
+    {
+      "orth": "ⲟ†",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 11.24,
+        "rank": 106,
+        "count": 1774
+      }
+    },
+    {
+      "orth": "ⲉⲣ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 12.39,
+        "rank": 107,
+        "count": 1051
+      }
+    },
+    {
+      "orth": "ⲣ-",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 14.76,
+        "rank": 86,
+        "count": 2328
+      }
+    },
+    {
+      "orth": "ⲓⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 12.16,
+        "rank": 110,
+        "count": 1031
+      }
+    },
+    {
+      "orth": "ⲁⲓ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.92,
+        "rank": 207,
+        "count": 502
+      }
+    },
+    {
+      "orth": "ⲁⲁ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 9.67,
+        "rank": 126,
+        "count": 1526
+      }
+    },
+    {
+      "orth": "ⲁⲓⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.14,
+        "rank": 260,
+        "count": 351
+      }
+    },
+    {
+      "orth": "ⲉⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.56,
+        "rank": 1046,
+        "count": 88
+      }
+    },
+    {
+      "orth": "ⲉⲓⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1199,
+        "count": 72
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2696,
+        "count": 17
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.05,
+        "rank": 441,
+        "count": 324
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.05,
+        "rank": 441,
+        "count": 324
+      }
+    },
+    {
+      "orth": "ⲣⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.2,
+        "rank": 652,
+        "count": 102
+      }
+    },
+    {
+      "orth": "ⲗⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4317,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1071,
+        "count": 45
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.29,
+        "rank": 414,
+        "count": 194
+      }
+    },
+    {
+      "orth": "ⲁⲣⲓⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1475,
+        "count": 26
+      }
+    },
+    {
+      "orth": "ⲉⲓⲣⲉ",
+      "dialect": "A",
+      "id": "23.11"
+    },
+    {
+      "orth": "ⲣ-",
+      "dialect": "A",
+      "id": "23.12"
+    },
+    {
+      "orth": "ⲉⲉⲧ⸗",
+      "dialect": "A",
+      "id": "23.13"
+    },
+    {
+      "orth": "ⲉ†",
+      "dialect": "A",
+      "id": "23.14"
+    },
+    {
+      "orth": "ⲉⲓⲉ†",
+      "dialect": "A",
+      "id": "23.15"
+    },
+    {
+      "orth": "ⲁⲣⲓ-",
+      "dialect": "A",
+      "id": "23.16"
+    },
+    {
+      "orth": "ⲉⲣⲓ-",
+      "dialect": "A",
+      "id": "23.17"
+    },
+    {
+      "orth": "ⲓⲗⲓ",
+      "dialect": "F",
+      "id": "23.18"
+    },
+    {
+      "orth": "ⲣⲁ",
+      "dialect": "F",
+      "id": "23.19"
+    },
+    {
+      "orth": "ⲗⲁ",
+      "dialect": "F",
+      "id": "23.20"
+    },
+    {
+      "orth": "ⲉⲗ-",
+      "dialect": "F",
+      "id": "23.21"
+    },
+    {
+      "orth": "ⲉⲓ⸗",
+      "dialect": "F",
+      "id": "23.22"
+    },
+    {
+      "orth": "ⲉⲓⲧ⸗",
+      "dialect": "F",
+      "id": "23.23"
+    },
+    {
+      "orth": "ⲟ†",
+      "dialect": "F",
+      "id": "23.24"
+    },
+    {
+      "orth": "ⲟⲓ†",
+      "dialect": "F",
+      "id": "23.25"
+    },
+    {
+      "orth": "ⲁⲓ†",
+      "dialect": "F",
+      "id": "23.26"
+    },
+    {
+      "orth": "ⲉⲓ†",
+      "dialect": "F",
+      "id": "23.27"
+    },
+    {
+      "orth": "ⲉ†",
+      "dialect": "F",
+      "id": "23.28"
+    },
+    {
+      "orth": "ⲁⲗⲓ-",
+      "dialect": "F",
+      "id": "23.29"
+    },
+    {
+      "orth": "ⲁⲗⲉ-",
+      "dialect": "F",
+      "id": "23.30"
+    },
+    {
+      "orth": "ⲁⲗⲓⲧ⸗",
+      "dialect": "F",
+      "id": "23.31"
+    },
+    {
+      "orth": "ⲉⲓⲣⲉ",
+      "dialect": "L",
+      "id": "23.32"
+    },
+    {
+      "orth": "ⲓⲣⲉ",
+      "dialect": "L",
+      "id": "23.33"
+    },
+    {
+      "orth": "ⲣ-",
+      "dialect": "L",
+      "id": "23.34"
+    },
+    {
+      "orth": "ⲉⲉⲧ⸗",
+      "dialect": "L",
+      "id": "23.35"
+    },
+    {
+      "orth": "ⲉⲉⲓⲧ⸗",
+      "dialect": "L",
+      "id": "23.36"
+    },
+    {
+      "orth": "ⲉⲉ⸗",
+      "dialect": "L",
+      "id": "23.37"
+    },
+    {
+      "orth": "ⲁⲉ⸗",
+      "dialect": "L",
+      "id": "23.38"
+    },
+    {
+      "orth": "ⲟ†",
+      "dialect": "L",
+      "id": "23.39"
+    },
+    {
+      "orth": "ⲟⲉⲓ†",
+      "dialect": "L",
+      "id": "23.40"
+    },
+    {
+      "orth": "ⲉⲣⲓ-",
+      "dialect": "L",
+      "id": "23.41"
+    },
+    {
+      "orth": "ⲁⲣⲓ⸗",
+      "dialect": "L",
+      "id": "23.42"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1110",
+      "bibliography": "CD 83a; KoptHWb 51; ChLCS 14a"
+    },
+    {
+      "id": "CS1111",
+      "bibliography": "CD 83ab; KoptHWb 51; DELC 65; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲭⲛⲁ**ⲓⲣⲓ** ⲛⲛⲓⲣⲱⲙⲓ ⲙⲫⲣⲏϯ ⲛⲛⲓⲧⲉⲃⲛⲱⲟⲩⲓ ⲫⲓⲟⲙ ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲛⲓϭⲁⲧϥⲓ ⲉⲧⲉⲙⲙⲟⲛⲧⲟⲩϩⲩⲅⲟⲩⲙⲉⲛⲟⲥ .",
+      "english": "And wilt thou make men as the fishes of the sea, and as the reptiles which have no guide?",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯ**ⲉⲓⲣⲉ** ⲙⲙⲟϥ ⲛϩⲙϩⲁⲗ ·",
+      "english": "and make it to be a servant,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲑⲁϩⲙⲉⲕ ⲉⲕⲟⲓ ⲙⲃⲱⲕ ⲙⲡⲉⲛⲑⲣⲉⲥⲉⲣⲙⲉⲗⲓ ⲛⲁⲕ ⲁⲗⲗⲁ ⲓⲥϫⲉ ⲟⲩⲟⲛϣϫⲟⲙ ⲙⲙⲟⲕ ⲉⲉⲣⲣⲉⲙϩⲉ ⲙⲁⲗⲗⲟⲛ **ⲁⲣⲓⲟⲩⲓ** .",
+      "english": "Were you called being a bondservant? Don't let that bother you, but if you get an opportunity to become free, use it.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲁⲁ**ⲧ ⲛⲕⲟⲙⲉⲥ ⲉⲣⲁⲕⲟⲧⲉ ·",
+      "english": "Make me Count of Rakote.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲓⲥϫⲉⲛ ⲧⲁⲙⲉⲧⲕⲟⲩϫⲓ ϣⲁϯⲛⲟⲩ ⲁⲓⲉⲣⲗⲅ ⲛⲣⲟⲙⲡⲓ ϧⲉⲛϯⲡⲟⲗⲏⲧⲓⲁ ⲛⲧⲉⲛⲓⲥⲛⲏⲟⲩ ⲉⲓ**ⲟⲓ** ⲙⲙⲟⲛⲁⲭⲟⲥ ⲛⲱⲟⲩ ϧⲉⲛϯⲁⲥⲕⲩⲥⲓⲥ",
+      "english": "From my youth until this time, spanning thirty-three years, I have confessed to leading the life of brothers, becoming a monk among them in ascetic practices.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲛ**ⲟ** ⲛⲁⲅⲣⲓⲟⲥ ⲉϩⲟⲩⲛ ⲉⲛⲉⲛⲉⲣⲏⲩ ·",
+      "english": "And we all act savagely towards each other.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        1197,
+        35.266
+      ],
+      [
+        "ⲙ",
+        719,
+        34.053
+      ],
+      [
+        "ⲟⲩ",
+        716,
+        33.205
+      ],
+      [
+        "ⲡⲁⲓ",
+        205,
+        31.671
+      ],
+      [
+        "ϩⲱⲃ",
+        108,
+        30.319
+      ],
+      [
+        "ⲉ",
+        329,
+        30.103
+      ],
+      [
+        "ⲛⲁⲓ",
+        149,
+        30.082
+      ],
+      [
+        "ϥ",
+        370,
+        30.018
+      ],
+      [
+        "ⲙⲙⲱ",
+        117,
+        29.417
+      ],
+      [
+        "ⲁ",
+        278,
+        29.346
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        259,
+        29.13
+      ],
+      [
+        "ⲡⲉⲧϩⲱⲟⲩ",
+        51,
+        28.776
+      ],
+      [
+        "ϩⲁⲛ",
+        140,
+        28.701
+      ],
+      [
+        "ⲉⲧ",
+        175,
+        28.605
+      ],
+      [
+        "ⲛⲁ",
+        187,
+        28.595
+      ],
+      [
+        "ϧⲉⲛ",
+        187,
+        28.404
+      ],
+      [
+        "ⲫ",
+        155,
+        28.393
+      ],
+      [
+        "ϩⲁⲡ",
+        55,
+        28.126
+      ],
+      [
+        "ϩⲃⲏⲟⲩⲓ",
+        53,
+        28.094
+      ],
+      [
+        "ⲣⲏϯ",
+        103,
+        27.937
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        90,
+        27.173
+      ],
+      [
+        "ⲛ",
+        2959,
+        25.501
+      ],
+      [
+        "ⲙ",
+        1146,
+        22.938
+      ],
+      [
+        "ⲟⲩ",
+        986,
+        22.156
+      ],
+      [
+        "ⲙⲙⲟ",
+        560,
+        21.468
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        271,
+        20.656
+      ],
+      [
+        "ϥ",
+        734,
+        20.18
+      ],
+      [
+        "ⲉ",
+        594,
+        19.56
+      ],
+      [
+        "ⲡ",
+        617,
+        19.404
+      ],
+      [
+        "ⲉⲧ",
+        387,
+        19.127
+      ],
+      [
+        "ⲁ",
+        465,
+        18.727
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        108,
+        18.176
+      ],
+      [
+        "ϩⲱⲃ",
+        124,
+        18.05
+      ],
+      [
+        "ⲡⲟⲛⲏⲣⲟⲛ",
+        64,
+        17.91
+      ],
+      [
+        "ⲛⲁ",
+        326,
+        17.834
+      ],
+      [
+        "ⲕ",
+        243,
+        17.727
+      ],
+      [
+        "ϩⲓ",
+        131,
+        17.431
+      ],
+      [
+        "ⲧ",
+        257,
+        17.187
+      ],
+      [
+        "ⲩ",
+        267,
+        17.091
+      ],
+      [
+        "ⲁⲩⲱ",
+        267,
+        17.029
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          123
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲣⲉ",
+          36
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲣⲉ",
+          38
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          28
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲣⲉ",
+          13
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲣⲉ",
+          31
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲣⲉ",
+          13
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          7
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓⲣⲉ",
+          6
+        ],
+        [
+          "ⲕ_1_pre_ⲉⲓⲣⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲣⲉ",
+          9
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡⲟⲛⲏⲣⲟⲛ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲣⲉ_b",
+          5
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓⲣⲉ",
+          15
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲣⲉ",
+          4
+        ],
+        [
+          "ⲇⲉ_1_post_ⲉⲓⲣⲉ",
+          4
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲡⲉⲓ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲧⲁ_2_pre_ⲯⲩⲭⲏ",
+          3
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲓⲣⲉ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲓⲣⲉ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲣⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          "ⲛ_1_post_ⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲣⲉ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲣⲉ",
+          "ϥ_1_pre_ⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲣⲉ",
+          "ⲁ_1_pre_ⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲣⲉ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓⲣⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲣⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲡⲟⲛⲏⲣⲟⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲟⲛⲏⲣⲟⲛ_3_post_ⲡ",
+          "ⲙ_1_post_ⲉⲓⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲣⲉ_b",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲣⲉ",
+          "ⲩ_1_pre_ⲉⲓⲣⲉ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          "ⲇⲉ_1_post_ⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲣⲉ",
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          "ϣⲁϫⲉ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲣⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_pre_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_1_pre_ⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲉⲓⲣⲉ",
+          "ⲛⲁ_1_pre_ⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲓⲣⲉ",
+          "ⲉⲓⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲣⲉ_0_node",
+          "ⲁⲛ_1_post_ⲉⲓⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲓⲣⲉ",
+          "ⲛ_1_post_ⲉⲓⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 48.17,
+      "rank": 28,
+      "count": 7645
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C961",
+      "label": "ϫⲓⲛⲓⲣⲓ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C960",
+      "label": "ⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "doing"
+    },
+    {
+      "target": "C955",
+      "label": "ⲉⲓⲣⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "oblige"
+    },
+    {
+      "target": "C952",
+      "label": "ⲉⲓⲣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "befall; be incumbent on"
+    },
+    {
+      "target": "C954",
+      "label": "ⲉⲓⲣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "be at work upon"
+    },
+    {
+      "target": "C953",
+      "label": "ⲉⲓⲣⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "do on behalf of, make into"
+    },
+    {
+      "target": "C957",
+      "label": "ⲉⲣ-",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C956",
+      "label": "ⲣⲁ",
+      "pos": "V",
+      "gloss": ""
+    },
+    {
+      "target": "C958",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "maker, doer"
+    },
+    {
+      "target": "C959",
+      "label": "ⲣⲙⲛⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "worker"
+    },
+    {
+      "target": "C962",
+      "label": "ⲧⲁϣⲉⲉⲓⲣⲉ",
+      "pos": "V",
+      "gloss": "do more, increase doing"
+    }
+  ],
+  "etym": {
+    "egy_num": "851809",
+    "egy_lemma": "jri̯",
+    "demo_num": "d592",
+    "demo_lemma": "ı ͗r",
+    "english": "make",
+    "german": "machen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851809",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d592"
+  }
+}

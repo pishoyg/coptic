@@ -1,0 +1,180 @@
+{
+  "id": "C9101",
+  "forms": [
+    {
+      "id": "CF22547",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22550",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6002,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF22548",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥϯⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22549",
+      "orth": "ⲉⲩⲭⲁⲣⲓⲥⲧⲉⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11231",
+      "bibliography": "DDGLC",
+      "cu_ID": "3817"
+    },
+    {
+      "id": "CS11232",
+      "bibliography": "DDGLC",
+      "cu_ID": "3180"
+    },
+    {
+      "id": "CS11233",
+      "bibliography": "DDGLC",
+      "cu_ID": "3178"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲁⲧⲣⲉϥϫⲉⲛⲁⲓ ⲛϭⲓⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ · ⲁϥϫⲓ ⲛⲟⲩⲟⲉⲓⲕ · ⲁϥϣⲡϩⲙⲟⲧ ⲛⲧⲉⲓϩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲁϣ ⲡⲉ ⲡⲕⲉⲥⲙⲟⲩ · ⲏ ⲁϣ ⲡⲉ ⲡⲕⲉⲉⲓ ⲉⲃⲟⲗ ⲙⲡϣⲁϫⲉ · ⲏ ⲁϣ ⲧⲉ ⲧⲕⲉ**ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ** ⲉⲛⲛⲁⲟⲛⲟⲙⲁⲍⲉ ⲙⲙⲟⲟⲩ ⲉϫⲙⲡⲉⲓⲟⲉⲓⲕ ⲉⲛⲡⲱϣ ⲙⲙⲟϥ · ⲉⲓⲙⲏⲧⲓ ⲛⲧⲟⲕ ⲙⲁⲩⲁⲁⲕ · ⲡϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "And when Saint John the Evangelist had made an end of saying these words, he took bread, and he gave thanks unto God in this manner, saying, ' What other blessing is there? Or what other word can be spoken? Or what other giving of thanks is there which we can pronounce over this bread [which] we break, except Thou alone, the Lord Jesus, the  Christ?",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉϩⲁⲙⲏⲛ ⲡⲉⲥⲙⲟⲩ ⲙⲛⲡⲉⲟⲟⲩ ⲙⲛⲧⲥⲟⲫⲓⲁ ⲁⲩⲱ ⲧ**ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ** ⲙⲛⲡⲧⲁⲓⲟ ⲙⲛⲧϭⲟⲙ ⲙⲛⲡⲁⲙⲁϩⲧⲉ ⲙⲡⲉⲛⲛⲟⲩⲧⲉ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ ϩⲁⲙⲏⲛ .",
+      "english": "saying, 'Amen! Blessing, glory, wisdom, thanksgiving, honor, power, and might, be to our God forever and ever! Amen.'",
+      "source": "66_Revelation_7",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲛⲟⲙⲁⲍⲉ",
+        2,
+        18.691
+      ],
+      [
+        "ⲧⲁⲓⲟ",
+        1,
+        13.106
+      ],
+      [
+        "ⲁϣ",
+        2,
+        12.466
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        10.941
+      ],
+      [
+        "ⲧ",
+        4,
+        10.486
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        9.799
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.218
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.103
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+          "ⲕⲉ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ",
+          "ⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5565,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "849",
+    "grl_lemma": "εὐχαριστία",
+    "grl_meaning": "thankfulness, gratitude",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 738b; Preisigke 1:627"
+  }
+}

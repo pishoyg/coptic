@@ -1,0 +1,272 @@
+{
+  "id": "C8526",
+  "forms": [
+    {
+      "id": "CF20050",
+      "orth": "ⲁⲥⲱⲙⲁⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20054",
+      "orth": "ⲁⲥⲱⲙⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4451,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF20051",
+      "orth": "ⲁⲍⲱⲙⲁⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20053",
+      "orth": "ⲁⲥⲱⲙⲁⲧⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF20052",
+      "orth": "ⲁⲥⲟⲙⲁⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20055",
+      "orth": "ⲁⲥⲱⲙⲁⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9988",
+      "bibliography": "DDGLC",
+      "cu_ID": "2804"
+    },
+    {
+      "id": "CS9989",
+      "bibliography": "DDGLC",
+      "cu_ID": "5855"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲟⲛ ϩⲉⲛ**ⲁⲥⲱⲙⲁⲧⲟⲥ** ⲁⲛⲃⲱⲗ ⲉⲃⲟⲗ ϩⲁⲧϩⲟⲧⲉ ·",
+      "english": "For behold, even we who are incorporeal shall perish through terror.'",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲡⲁⲩⲗⲟⲥ ⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲛⲛϩⲉⲑⲛⲟⲥ ⲡⲉⲛⲧⲁϥϣⲱⲡⲉ ⲛⲥⲁϩ ⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲡⲉⲛⲧⲁϥⲁⲅⲱⲛⲓⲍⲉ ⲉⲧⲛⲧⲱⲛϥ ⲉⲛⲇⲩⲛⲁⲙⲓⲥ ⲛ**ⲁⲥⲱⲙⲁⲧⲟⲥ** ϩⲛⲧⲉϥⲡⲟⲗⲩⲧⲧⲓⲁ ·",
+      "english": "If the blessed man Paul, the Apostle of the Gentiles,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲥⲧⲱⲛ ⲇⲉ ϩⲉⲛⲗⲁⲥ ⲛⲥⲁⲣⲝ ϫⲱ ⲉⲣⲟⲟⲩ ⲛϩⲉⲛⲁⲓⲡⲁⲓⲛⲟⲥ · ⲛⲉⲛⲧⲁⲩⲣⲡⲉⲧⲡⲉ ⲙⲡϣⲓ ⲛⲛⲣⲱⲙⲉ ϩⲛⲧⲉⲩⲡⲟⲗⲏϯⲁ ⲁⲩⲱ ⲁⲛⲉⲩⲕⲁⲧⲟⲣⲑⲟⲙⲁ ⲣⲡⲉⲧⲡⲉ ⲙⲡⲉϩⲣⲟϣ ⲛⲛⲉⲧⲫⲟⲣⲉⲓ ⲛⲧⲥⲁⲣⲝ , ⲥⲭⲉⲇⲱⲛ ⲉⲙⲛⲥⲁⲣⲝ ⲧⲟ ϩⲓⲱⲟⲩ , ⲁϣ ⲛⲗⲁⲥ ⲛⲥⲁⲣⲝ ⲡⲉⲧⲛⲁϣϫⲱ ⲙⲡⲧⲁⲉⲓⲟ ⲛⲛⲉⲧⲙⲙⲁⲩ · ⲛⲁⲓ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲥⲉⲣⲭⲣⲉⲓⲁ ⲙⲡⲗⲁⲥ ⲛϩⲉⲛ**ⲁⲥⲱⲙⲁⲧⲟⲥ** ⲉⲧⲣⲉⲩϫⲱ ⲛϩⲉⲛⲁⲓⲡⲁⲓⲛⲟⲥ ⲉⲣⲟⲟⲩ ,",
+      "english": "let's suppose carnal tongues speak praises about them: Whoever has performed above the measure of men through their conduct, and whose rightful actions were above the burden of those who bear flesh, with nearly no flesh on them—which carnal tongue can speak the praise of those ones? Those of this kind need the tongue of incorporeal people to speak praises about them,",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲗⲩⲧⲧⲓⲁ",
+        1,
+        16.428
+      ],
+      [
+        "ⲧⲉⲡ",
+        1,
+        15.013
+      ],
+      [
+        "ⲛϩⲟⲧ",
+        1,
+        13.206
+      ],
+      [
+        "ⲇⲩⲛⲁⲙⲓⲥ",
+        1,
+        12.621
+      ],
+      [
+        "ϣⲉⲗⲉⲉⲧ",
+        1,
+        10.794
+      ],
+      [
+        "ⲗⲁⲥ",
+        1,
+        10.13
+      ],
+      [
+        "ⲡⲉ",
+        4,
+        9.923
+      ],
+      [
+        "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        9.545
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        9.282
+      ],
+      [
+        "ⲙⲓⲭⲁⲏⲗ",
+        1,
+        8.952
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        8.918
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.635
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        8.489
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        8.344
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.516
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        7.461
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.379
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.094
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.079
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥⲱⲙⲁⲧⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϣϭⲟⲙ_2_post_ⲙⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ϩⲉⲛ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ⲁⲥⲱⲙⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ⲁⲥⲱⲙⲁⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲥⲱⲙⲁⲧⲟⲥ_0_node",
+          "ⲅⲁⲣ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ⲙⲛ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲥⲱⲙⲁⲧⲟⲥ",
+          "ϣϭⲟⲙ_2_post_ⲙⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4054,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "3438",
+    "grl_lemma": "ἀσώματος",
+    "grl_meaning": "disembodied, incorporeal",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 267a; Preisigke 1:232"
+  }
+}

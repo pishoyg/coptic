@@ -1,0 +1,101 @@
+{
+  "id": "C3026",
+  "forms": [
+    {
+      "id": "CF7918",
+      "orth": "ⲡⲱϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19587,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3463",
+      "bibliography": "CD 286b; CED 133; KoptHWb 159; DELC 168; ChLCS 40b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲧⲱⲟⲩⲛ ⲉⲃⲟⲗ ⲛϩⲏⲧ ⲧⲏⲩⲧⲛ ⲛϭⲓϩⲉⲛⲣⲱⲙⲉ ⲉⲩϫⲱ ⲛϩⲉⲛϣⲁϫⲉ ⲉⲩϭⲟⲟⲙⲉ ⲉⲧⲣⲉⲩ**ⲡⲱϭⲥ** ⲛⲙⲙⲁⲑⲏⲧⲏⲥ ϩⲓⲡⲁϩⲟⲩ ⲙⲙⲟⲟⲩ .",
+      "english": "Men will arise from among your own selves, speaking perverse things, to draw away the disciples after them.",
+      "source": "44_Acts of the Apostles_20",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲟⲟⲙⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲙⲁⲑⲏⲧⲏⲥ",
+        1,
+        11.451
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19199,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3027",
+      "label": "ⲡⲱϭⲥ",
+      "pos": "N",
+      "gloss": "spittle"
+    }
+  ],
+  "etym": {
+    "egy_num": "62340",
+    "egy_lemma": "psg",
+    "english": "to spit on; to spit at",
+    "german": "speien; anspucken",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62340"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "C5291",
+  "forms": [
+    {
+      "id": "CF12551",
+      "orth": "ⲙⲁ ⲛⲟⲩⲟϣⲟⲩⲉϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5938",
+      "bibliography": "KoptHWb 283; DELC 241a; ChLCS 70b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5290",
+      "label": "ⲟⲩⲟϣⲟⲩⲉϣ",
+      "pos": "V",
+      "gloss": "strike, thresh"
+    }
+  ]
+}

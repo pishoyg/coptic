@@ -1,0 +1,374 @@
+{
+  "id": "C1256",
+  "forms": [
+    {
+      "id": "CF3913",
+      "orth": "ⲕⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4363,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF3914",
+      "orth": "ⲕⲛⲟⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3915",
+      "orth": "ⲕⲛⲱⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10871,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲟⲛⲥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1706,
+        "count": 40
+      }
+    },
+    {
+      "orth": "ⲭⲱⲛⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2964,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲭⲟⲛⲥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7199,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1454",
+      "bibliography": "CD 112b; KoptHWb 65"
+    },
+    {
+      "id": "CS1455",
+      "bibliography": "CD 112b; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲙⲟⲩ ⲛϭⲓⲛⲧⲃⲧ ⲉⲧϩⲛⲡⲓⲉⲣⲟ ⲁⲩⲱ ⲁϥ**ⲕⲛⲟⲥ** ⲛϭⲓⲡⲙⲟⲟⲩ ⲙⲡⲓⲉⲣⲟ ⲙⲡⲟⲩϣϭⲙϭⲟⲙ ⲛϭⲓⲛⲣⲙⲛⲕⲏⲙⲉ ⲉⲥⲉⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲛⲡⲓⲉⲣⲟ ⲡⲉⲥⲛⲟϥ ⲇⲉ ⲛⲉϥϣⲟⲟⲡ ⲡⲉ ϩⲓϫⲙⲡⲕⲁϩ ⲧⲏⲣϥ ⲛⲕⲏⲙⲉ",
+      "english": "And the fish in the river died, and the river stank thereupon; and the Egyptians could not drink water from the river, and the blood was in all the land of Egypt.",
+      "source": "Exodus 7",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲟⲩⲥⲱⲧⲙ ⲛⲥⲁⲙⲱⲩⲥⲏⲥ ⲁⲗⲗⲁ ⲁϩⲟⲓⲛⲉ ⲕⲱ ⲉⲡⲁϩⲟⲩ ⲛϩⲏⲧϥ ϣⲁϩⲧⲟⲟⲩⲉ ⲁϥⲣⲃⲛⲧ ⲁⲩⲱ ⲁϥ**ⲕⲛⲟⲥ** ⲁϥⲛⲟⲩϭⲥ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲛϭⲓⲙⲱⲩⲥⲏⲥ",
+      "english": "But they did not hearken to Moses, but some left of it till the morning; and it bred worms and stank: and Moses was irritated with them.",
+      "source": "Exodus 16",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲁⲡⲉϥⲥⲱⲙⲁ ϣⲟⲟⲩⲉ ⲁⲩⲱ ⲁϥ**ⲕⲛⲱⲱⲥ** ϩⲓⲧⲛⲡⲛⲟϭ ⲛϫⲱⲗϭ ⲉⲃⲟⲗ ⲛⲛⲉϥⲁⲥⲕⲏⲥⲓⲥ ⲉⲧϥⲛϩⲏⲧⲟⲩ ⲙⲛⲡⲙⲕⲁϩ ⲛϩⲏⲧ ⲉⲧϥⲛϩⲏⲧϥ ·",
+      "english": "For his body was pinched and shrivelled up, and was covered with putrefying sores caused by the severe and prolonged labours of asceticism which he practised, and by the affliction of heart wherein he lived;",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲃⲛⲧ",
+        1,
+        17.791
+      ],
+      [
+        "ⲟⲟⲩⲉ",
+        1,
+        15.469
+      ],
+      [
+        "ⲗⲟϥⲗⲉϥ",
+        1,
+        15.206
+      ],
+      [
+        "ϥⲛⲧ",
+        1,
+        12.469
+      ],
+      [
+        "ϩⲟⲣϣ",
+        1,
+        11.813
+      ],
+      [
+        "ⲛⲟⲩϭⲥ",
+        1,
+        11.621
+      ],
+      [
+        "ⲓⲉⲣⲟ",
+        1,
+        10.693
+      ],
+      [
+        "ⲁ",
+        7,
+        10.659
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        10.469
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.906
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲙ",
+        4,
+        8.544
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        8.289
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        8.267
+      ],
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        1,
+        8.099
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        8.011
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.924
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        6.12
+      ],
+      [
+        "ⲩ",
+        2,
+        6.002
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        5.488
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲛⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲛⲟⲥ",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲛⲟⲥ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲕⲛⲟⲥ",
+          4
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲕⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛϭⲓ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲗⲟϥⲗⲉϥ_1_post_ⲕⲛⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲛⲟⲥ",
+          "ⲕⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲛⲟⲥ",
+          "ⲁ_1_pre_ⲕⲛⲟⲥ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲛⲟⲥ",
+          "ϥ_1_pre_ⲕⲛⲟⲥ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲕⲛⲟⲥ",
+          "ⲕⲛⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲕⲛⲟⲥ_0_node",
+          "ⲛϭⲓ_1_post_ⲕⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲕⲛⲟⲥ",
+          "ⲡ_2_post_ⲛϭⲓ",
+          2
+        ],
+        [
+          "ⲕⲛⲟⲥ_0_node",
+          "ⲁ_2_post_ⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲛⲟⲩϭⲥ",
+          "ϥ_2_post_ⲛⲟⲩϭⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲛⲟⲥ",
+          "ⲙⲡ_1_pre_ⲕⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲛⲟⲥ",
+          "ϥ_1_pre_ⲕⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲛⲟⲥ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣⲱⲡⲉ",
+          "ⲙ_2_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲛⲟⲥ",
+          "ⲕⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲛⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲗⲟϥⲗⲉϥ",
+          "ⲁ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲗⲟϥⲗⲉϥ",
+          "ⲩ_2_post_ⲗⲟϥⲗⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲗⲟϥⲗⲉϥ",
+          "ⲗⲟϥⲗⲉϥ_1_post_ⲕⲛⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3665,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1257",
+      "label": "ⲕⲛⲟⲥ",
+      "pos": "N",
+      "gloss": "stink"
+    }
+  ]
+}

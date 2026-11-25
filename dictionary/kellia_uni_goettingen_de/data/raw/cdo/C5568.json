@@ -1,0 +1,303 @@
+{
+  "id": "C5568",
+  "forms": [
+    {
+      "id": "CF13111",
+      "orth": "ⲱⲥϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8225,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲱⲥⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 987,
+        "count": 97
+      }
+    },
+    {
+      "orth": "ⲱϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10507,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲥϭ-",
+      "dialect": "S",
+      "id": "1825.3"
+    },
+    {
+      "orth": "ⲟⲥϭ-",
+      "dialect": "S",
+      "id": "1825.4"
+    },
+    {
+      "orth": "ⲟⲩⲉϭⲥ-",
+      "dialect": "S",
+      "id": "1825.5"
+    },
+    {
+      "orth": "ⲟⲥϭ⸗",
+      "dialect": "S",
+      "id": "1825.6"
+    },
+    {
+      "orth": "ⲟⲩⲟⲥϭ⸗",
+      "dialect": "S",
+      "id": "1825.7"
+    },
+    {
+      "orth": "ⲁϣϭ⸗",
+      "dialect": "S",
+      "id": "1825.8"
+    },
+    {
+      "orth": "ⲟⲥϭ†",
+      "dialect": "S",
+      "id": "1825.9"
+    },
+    {
+      "orth": "ⲱϣϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4856,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟϣϫ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2357,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲟϣϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2357,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲟϣϫ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2357,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6233",
+      "bibliography": "CD 531b; KoptHWb 295; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲧⲛϫⲓ ⲉⲃⲟⲗ ϩⲛⲡⲉϥⲥⲛⲟϥ ⲛⲧⲉⲧⲛ**ⲱⲥϭ** ⲙⲙⲟϥ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲟⲩⲉϭⲣⲟ ⲥⲛⲧⲉ ⲁⲩⲱ ⲉϩⲣⲁⲓ ⲉϫⲛⲛⲏⲓ ⲉⲧⲟⲩⲛⲁⲟⲩⲱⲙ ⲙⲙⲟϥ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ",
+      "english": "And they shall take of the blood, and shall put it on the two door-posts, and on the lintel, in the houses in which soever they shall eat them.",
+      "source": "Exodus 12",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛⲉϫⲓ ⲇⲉ ⲛⲟⲩϣⲟⲗ ⲛϩⲩⲥⲥⲱⲡⲟⲛ ⲛⲧⲉⲧⲛⲥⲟⲡϥ ϩⲛⲡⲉⲥⲛⲟϥ ⲉⲧϩⲁⲧⲙⲡⲣⲟ ⲛⲧⲉⲧⲛ**ⲱⲥϭ** ⲙⲡⲉⲧⲟⲩⲁ ⲙⲛⲧⲟⲩⲉϭⲣⲟ ⲥⲛⲧⲉ ⲉⲃⲟⲗ ϩⲛⲡⲉⲥⲛⲟϥ ⲡⲁⲓ ⲉⲧϩⲓⲣⲙⲡⲣⲟ ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲇⲉ ⲙⲙⲱⲧⲛ ⲛⲛⲉϥⲣⲡⲃⲟⲗ ⲙⲡⲣⲟ ⲙⲡⲉϥⲏⲓ ϣⲁϩⲧⲟⲟⲩⲉ",
+      "english": "And ye shall take a bunch of hyssop, and having dipped it into some of the blood that is by the door, ye shall touch the lintel, and shall put it upon both door-posts, even of the blood which is by the door; but ye shall not go out every one from the door of his house till the morning.",
+      "source": "Exodus 12",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟ",
+        1,
+        10.797
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        10.565
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        10.448
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        9.101
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        8.425
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        8.329
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        7.296
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲱⲥϭ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲱⲥϭ",
+          2
+        ],
+        [
+          "ⲱⲥϭ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲱⲥϭ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲱⲥϭ",
+          "ⲧⲉⲧⲛ_1_pre_ⲱⲥϭ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲱⲥϭ",
+          "ⲱⲥϭ_0_node",
+          2
+        ],
+        [
+          "ⲱⲥϭ_0_node",
+          "ⲙⲙⲟ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲱⲥϭ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉϩⲣⲁⲓ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ⲱⲥϭ_0_node",
+          "ⲙⲡⲉ_1_post_ⲱⲥϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_post_ⲱⲥϭ",
+          "ⲧ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_post_ⲱⲥϭ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7783,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5569",
+      "label": "ⲱⲥϭ",
+      "pos": "N",
+      "gloss": "plastering, anointing"
+    }
+  ]
+}

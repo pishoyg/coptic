@@ -1,0 +1,741 @@
+{
+  "id": "C2778",
+  "forms": [
+    {
+      "id": "CF7386",
+      "orth": "ⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.47,
+        "rank": 1177,
+        "count": 74
+      }
+    },
+    {
+      "orth": "ⲟϩⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.67,
+        "rank": 150,
+        "count": 735
+      }
+    },
+    {
+      "orth": "ⲓⲟϩⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.58,
+        "rank": 549,
+        "count": 134
+      }
+    },
+    {
+      "orth": "ⲟⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6177,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲱϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2176,
+        "count": 26
+      }
+    },
+    {
+      "orth": "ⲟϩⲉ",
+      "dialect": "A",
+      "id": "1249.3"
+    },
+    {
+      "orth": "ⲟⲟϩⲉ",
+      "dialect": "A",
+      "id": "1249.4"
+    },
+    {
+      "orth": "ⲱϩⲉ",
+      "dialect": "A",
+      "id": "1249.5"
+    },
+    {
+      "orth": "ⲁϩⲓ",
+      "dialect": "F",
+      "id": "1249.6"
+    },
+    {
+      "orth": "ⲉⲓⲁϩ-",
+      "dialect": "L",
+      "id": "1249.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3176",
+      "bibliography": "CD 258a; CED 123; KoptHWb 142; DELC 156; ChLCS 36b"
+    },
+    {
+      "id": "CS3177",
+      "bibliography": "CD 258a; KoptHWb 142"
+    },
+    {
+      "id": "CS3178",
+      "bibliography": "CD 258a; KoptHWb 142; DELC 156"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲗⲓⲛ ϫⲉⲫⲏ ⲉⲧⲁϥⲭⲁⲓⲱⲧ ⲛⲥⲱϥ ⲓⲉ ⲙⲁⲩ ⲓⲉ ⲥϩⲓⲙⲓ ⲓⲉ ⲥⲱⲛⲓ ⲓⲉ ⲥⲟⲛ ⲓⲉ ⲏⲓ ⲓⲉ **ⲟϩⲓ** ⲓⲉ ϣⲏⲣⲓ ⲉⲑⲃⲉⲧⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ϥⲛⲁϭⲓⲧⲟⲩ ⲛⲣ ⲛⲕⲱⲡ ⲛⲥⲟⲡ ϧⲉⲛⲡⲁⲓⲉⲛⲉϩ ⲟⲩⲟϩ ϧⲉⲛⲡⲉⲑⲛⲏⲟⲩ ⲟⲩⲱⲛϧ ⲛⲉⲛⲉϩ .",
+      "english": "and also: ‘He who leaves his father, or his mother, or his wife, or his sister, or his brother, or his house, or his flock, or his children for the kingdom of God, shall receive them a hundredfold in this world, and eternal life in the world to come’;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲣⲙⲙⲁⲟ ⲇⲉ ⲛⲉⲟⲩⲛⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛϩⲉⲛ**ⲟϩⲉ** ⲛⲉⲥⲟⲟⲩ ⲙⲛϩⲉⲛⲉϩⲟⲟⲩ ⲉⲛⲁϣⲱⲟⲩ ⲉⲙⲁⲧⲉ",
+      "english": "And the rich man had very many flocks and herds.",
+      "source": "II Samuel 12",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲉϣⲁϥⲉⲣⲙⲁⲧⲟⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉⲧⲉⲛⲟⲩϥ ⲛⲟⲯⲱⲛⲓⲟⲛ ⲉⲛⲉϩ ⲛⲓⲙ ⲉϣⲁϥϭⲟ ⲛⲟⲩⲓⲁϩⲁⲗⲟⲗⲓ ⲟⲩⲟϩ ⲙⲡⲁϥⲟⲩⲱⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥⲟⲩⲧⲁϩ ⲓⲉ ⲛⲓⲙ ⲉϣⲁϥⲙⲟⲛⲓ ⲛⲟⲩⲟϩⲓ ⲛⲉⲥⲱⲟⲩ ⲛⲧⲉϥϣⲧⲉⲙⲟⲩⲱⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉⲣⲱϯ ⲛⲧⲉⲡⲓ**ⲟϩⲓ** .",
+      "english": "What soldier ever serves at his own expense? Who plants a vineyard, and doesn't eat of its fruit? Or who feeds a flock, and doesn't drink from the flock's milk?",
+      "source": "Bohairic 1 Corinthians 9 (Digital Editions)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓ ⲛⲇⲁⲩⲉⲓⲇ ⲉⲃⲟⲗ ϩⲛⲛ**ⲟϩⲉ** ⲛⲉⲥⲟⲟⲩ ⲁϥⲁⲁϥ ⲛⲣⲣⲟ ⲉⲡⲉϥⲅⲉⲛⲟⲥ · ⲁⲩⲱ ⲛⲉⲓⲱⲧ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧϩⲁϩⲟⲧⲉ ·",
+      "english": "He took David from a flock of sheep, and made him king of his race, and the father of the Awful Mystery.[1 Sam.16:13]",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϥⲥϩⲟⲩⲟⲣⲧ ⲛϫⲉⲟⲩⲣⲱⲙⲓ ⲛϫⲱⲣⲓ ⲫⲏⲉⲧⲉ ⲟⲩⲟⲛϣϫⲟⲙ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉⲧⲉⲟⲩⲟⲛ ϩⲱⲟⲩⲧ ϣⲟⲡ ϧⲉⲛⲡⲉϥ**ⲟϩⲓ** ⲟⲩⲟϩ ⲉⲣⲉⲧⲉϥⲯⲩⲭⲏ ϩⲓϫⲱϥ ⲟⲩⲟϩ ⲉϥϣⲱⲧ ⲛⲛⲏⲉⲧⲧⲁⲕⲏⲟⲩⲧ ⲙⲡϭⲟⲉⲓⲥ ϫⲉⲟⲩⲏⲓ ⲁⲛⲟⲕ ⲟⲩⲛⲓϣϯ ⲛⲟⲩⲣⲟ ⲁⲛⲟⲕ ⲡⲉϫⲉ ⲡϭⲟⲉⲓⲥ ⲡⲓⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ ⲟⲩⲟϩ ⲡⲁⲣⲁⲛ ϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲉⲑⲛⲟⲥ .",
+      "english": "And cursed is the man who had the power, and possessed a male in his flock, and whose vow is upon him, and who sacrifices a corrupt thing to the Lord: for I am a great King, saith the Lord Almighty, and my name is glorious among the nations.",
+      "source": "39_Malachias_01",
+      "urn": "urn:cts:copticLit:ot.mal.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉ ⲉϣⲁϥⲣⲙⲁⲧⲟⲓ ϩⲛⲛⲉϥⲟⲯⲱⲛⲓⲟⲛ ⲙⲙⲓⲛⲙⲙⲟϥ ⲉⲛⲉϩ . ⲛⲓⲙ ⲡⲉ ϣⲁϥⲧⲱϭⲉ ⲛⲟⲩⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲛϥⲧⲙⲟⲩⲱⲙ ⲙⲡⲉϥⲕⲁⲣⲡⲟⲥ . ⲛⲓⲙ ⲡⲉ ϣⲁϥⲙⲟⲟⲛⲉ ⲛⲟⲩ**ⲟϩⲉ** ⲛϥⲧⲙⲟⲩⲱⲙ ⲙⲡⲉϥⲉⲣⲱⲧⲉ .",
+      "english": "What soldier ever serves at his own expense? Who plants a vineyard, and doesn&apos;t eat of its fruit? Or who feeds a flock, and doesn&apos;t drink from the flock&apos;s milk?",
+      "source": "1 Corinthians 9",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲙ",
+        65,
+        24.31
+      ],
+      [
+        "ⲉϩⲱⲟⲩ",
+        13,
+        24.289
+      ],
+      [
+        "ⲛ",
+        87,
+        23.92
+      ],
+      [
+        "ⲉⲥⲱⲟⲩ",
+        17,
+        23.506
+      ],
+      [
+        "ⲡⲓ",
+        53,
+        22.954
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        56,
+        22.502
+      ],
+      [
+        "ⲛⲧⲉ",
+        44,
+        22.444
+      ],
+      [
+        "ϧⲉⲛ",
+        46,
+        22.334
+      ],
+      [
+        "ⲓⲁϩⲁⲗⲟⲗⲓ",
+        7,
+        22.14
+      ],
+      [
+        "ⲟⲩ",
+        55,
+        22.098
+      ],
+      [
+        "ⲧⲓⲙⲏ",
+        6,
+        21.958
+      ],
+      [
+        "ⲉⲫ",
+        3,
+        21.865
+      ],
+      [
+        "ⲡⲉϥ",
+        24,
+        21.795
+      ],
+      [
+        "ⲩ",
+        35,
+        21.509
+      ],
+      [
+        "ⲛⲉⲕ",
+        15,
+        21.336
+      ],
+      [
+        "ⲉⲧ",
+        31,
+        21.114
+      ],
+      [
+        "ϩⲁⲧ",
+        9,
+        21.086
+      ],
+      [
+        "ⲓⲉ",
+        13,
+        20.808
+      ],
+      [
+        "ⲛⲓ",
+        27,
+        20.483
+      ],
+      [
+        "ⲙⲙⲁⲙⲃⲣⲏ",
+        2,
+        20.373
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲥⲟⲟⲩ",
+        58,
+        23.301
+      ],
+      [
+        "ⲛ",
+        147,
+        19.199
+      ],
+      [
+        "ⲙⲟⲟⲛⲉ",
+        10,
+        16.911
+      ],
+      [
+        "ϩⲉⲛⲁ",
+        2,
+        16.389
+      ],
+      [
+        "ϩⲉⲛⲕ",
+        1,
+        14.389
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.389
+      ],
+      [
+        "ϣⲟⲙⲏⲧ",
+        1,
+        14.389
+      ],
+      [
+        "ⲟⲩϣⲏⲓ",
+        1,
+        14.389
+      ],
+      [
+        "ϣⲱⲥ",
+        5,
+        14.256
+      ],
+      [
+        "ⲟϩⲉ",
+        4,
+        14.179
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        4,
+        13.745
+      ],
+      [
+        "ⲙ",
+        27,
+        13.406
+      ],
+      [
+        "ⲛⲉⲥⲧⲣⲉⲟⲩⲑⲟⲥ",
+        1,
+        13.389
+      ],
+      [
+        "ⲥⲓⲣⲏⲛⲟⲥ",
+        1,
+        13.389
+      ],
+      [
+        "ⲟⲩ",
+        27,
+        13.275
+      ],
+      [
+        "ⲛⲉⲕ",
+        9,
+        13.087
+      ],
+      [
+        "ⲁⲩⲱ",
+        22,
+        12.916
+      ],
+      [
+        "ⲡ",
+        29,
+        12.862
+      ],
+      [
+        "ⲃⲁⲙⲡⲉ",
+        1,
+        12.804
+      ],
+      [
+        "ⲩ",
+        19,
+        12.344
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟϩⲉ_0_node",
+          42
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲟϩⲉ",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲟϩⲉ",
+          16
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          16
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲟϩⲉ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟϩⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲟϩⲉ",
+          4
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲉⲥⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲱⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ϣⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲥⲁ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟϩⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_2_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟϩⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_2_post_ⲉⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲃⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛⲁ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲁϩⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲛ_1_post_ⲟϩⲉ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ⲟϩⲉ",
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟϩⲉ",
+          "ⲛ_1_pre_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟϩⲉ",
+          "ⲛⲉⲕ_3_post_ⲉⲥⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲉⲥⲟⲟⲩ",
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲙ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟϩⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲱⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲱⲥ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ϣⲱⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ϣⲱⲥ",
+          "ⲛⲁⲛⲟⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲛⲥⲁ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ⲟϩⲉ",
+          "ⲟⲩ_2_post_ⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲥⲁ",
+          "ⲥⲁ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲡ_2_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟϩⲉ",
+          "ⲟϩⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_1_post_ⲟϩⲉ",
+          "ⲙⲁⲩⲁⲁ_2_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_2_post_ⲟϩⲉ",
+          "ϥ_3_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲟϩⲉ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟϩⲉ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          "ⲟϩⲉ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟϩⲉ",
+          "ⲛ_1_pre_ⲟϩⲉ",
+          2
+        ],
+        [
+          "ⲟϩⲉ_0_node",
+          "ϩⲓ_2_post_ⲉⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲉⲓⲃⲉ",
+          "ⲉⲓⲃⲉ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          "ⲙⲛ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲟⲟⲩ",
+          "ϩⲉⲛⲁ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛⲁ_4_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_3_post_ⲉⲥⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          "ⲉⲧ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟϩⲉ",
+          "ⲧⲁϩⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲁϩⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲟⲩ",
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟϩⲉ",
+          "ⲟϩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.47,
+      "rank": 1020,
+      "count": 74
+    }
+  },
+  "etym": {
+    "egy_num": "30210",
+    "egy_lemma": "jh.w",
+    "demo_num": "d662",
+    "demo_lemma": "ı ͗hj",
+    "english": "camp; pen (for livestock)",
+    "german": "Feldlager; Viehhürde",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/30210",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d662"
+  }
+}

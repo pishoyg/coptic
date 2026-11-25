@@ -1,0 +1,52 @@
+{
+  "id": "C7871",
+  "forms": [
+    {
+      "id": "CF17807",
+      "orth": "ⲣϭⲣⲏⲡⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8750",
+      "bibliography": "CD 829a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7873",
+      "label": "ϫⲁⲓϭⲣⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "crown-bearing"
+    },
+    {
+      "target": "C7872",
+      "label": "ϫⲓϭⲣⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "be crowned"
+    },
+    {
+      "target": "C7870",
+      "label": "ϭⲣⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "diadem, crown; sceptre"
+    }
+  ]
+}

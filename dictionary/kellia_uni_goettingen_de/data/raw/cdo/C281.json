@@ -1,0 +1,68 @@
+{
+  "id": "C281",
+  "forms": [
+    {
+      "id": "CF1177",
+      "orth": "ⲁϩⲁ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF1178",
+      "orth": "ⲁϩⲁ⸗",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Perfekt II ⲉⲛⲧⲁ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS313",
+      "bibliography": "KoptHWb 491"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2530",
+      "type": "syn",
+      "label": "verbal prefix Perfect II"
+    },
+    {
+      "target": "C13007",
+      "type": "syn",
+      "label": "verbal prefix Perfect II"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C280",
+      "label": "ⲁϩ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C282",
+      "label": "ⲁϩ-",
+      "pos": "PTC",
+      "gloss": ""
+    },
+    {
+      "target": "C283",
+      "label": "ⲁϩⲁ",
+      "pos": "CONJ",
+      "gloss": "and"
+    },
+    {
+      "target": "C13007",
+      "label": "ⲉϩⲁ-",
+      "pos": "C",
+      "gloss": ""
+    }
+  ]
+}

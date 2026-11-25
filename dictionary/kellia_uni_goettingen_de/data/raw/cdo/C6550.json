@@ -1,0 +1,300 @@
+{
+  "id": "C6550",
+  "forms": [
+    {
+      "id": "CF15143",
+      "orth": "ϩⲗⲟⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3874,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϩⲗⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11062,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲗⲟⲗⲓ",
+      "dialect": "B",
+      "id": "2160.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7262",
+      "bibliography": "CD 669a; CED 279; KoptHWb 366; DELC 297b; ChLCS 90a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲟⲉⲙⲓⲛ ⲁⲥϫⲓ ⲙⲡϣⲏⲣⲉ ⲕⲟⲩⲓ ⲁⲥⲕⲁⲁϥ ϩⲛⲕⲟⲩⲛⲥ ⲁⲥϣⲱⲡⲉ ⲉⲥ**ϩⲗⲟⲟⲗⲉ** ⲙⲙⲟϥ",
+      "english": "And Noemin took the child and laid it in her bosom, and became a nurse to it.",
+      "source": "Ruth Chapter 4",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲟⲩⲱⲙ ⲛⲛⲉϩⲣⲏⲩⲉ ⲁⲩⲧⲁⲕⲟ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲁⲩⲱ ⲛⲉⲧⲟⲩ**ϩⲗⲟⲟⲗⲉ** ⲙⲙⲟⲟⲩ ϩⲓϫⲛⲛⲕⲟⲕⲕⲟⲥ ⲁⲩϭⲟⲟⲗⲟⲩ ⲙⲡⲉⲓⲧⲛ",
+      "english": "HE. They that feed on dainties are desolate in the streets: they that used to be nursed in scarlet have clothed themselves with dung.",
+      "source": "Lamentations 4",
+      "urn": "urn:cts:copticLit:ot.lam.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲛⲁϯⲛⲁⲁⲕⲉ ⲁⲛ . ⲉⲧⲣⲉϫⲡⲟ ⲛϩⲉⲛϣⲏⲣⲉ · ⲏ ⲉ**ϩⲗⲟⲟⲗⲉ** ⲙⲙⲟⲟⲩ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: XJ 65-76",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_65_76",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲥ",
+        3,
+        13.139
+      ],
+      [
+        "ⲙⲙⲟ",
+        7,
+        12.403
+      ],
+      [
+        "ⲃⲁⲥⲁⲛⲓⲍⲉ",
+        1,
+        12.106
+      ],
+      [
+        "ⲥ",
+        7,
+        11.696
+      ],
+      [
+        "ϩⲓϫⲛ",
+        2,
+        11.413
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        11.169
+      ],
+      [
+        "ⲉ",
+        7,
+        10.239
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        10.036
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.975
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        3,
+        9.779
+      ],
+      [
+        "ⲏ",
+        2,
+        9.479
+      ],
+      [
+        "ⲧⲣ",
+        1,
+        9.032
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        7.993
+      ],
+      [
+        "ⲛ",
+        4,
+        6.809
+      ],
+      [
+        "ϥ",
+        3,
+        6.277
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.102
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        5.29
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        5.23
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.146
+      ],
+      [
+        "ⲙ",
+        1,
+        2.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          3
+        ],
+        [
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲗⲟⲟⲗⲉ",
+          6
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ϩⲓϫⲛ_1_post_ϩⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϩⲓϫⲛ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲗⲟⲟⲗⲉ",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲗⲟⲟⲗⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲗⲟⲟⲗⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲓϫⲛ_1_post_ϩⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ϩⲓϫⲛ_1_post_ϩⲗⲟⲟⲗⲉ",
+          "ⲛ_2_post_ϩⲓϫⲛ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          "ⲥ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          "ⲙ_1_post_ϩⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲟⲟⲗⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲗⲟⲟⲗⲉ",
+          "ϩⲗⲟⲟⲗⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3484,
+      "count": 8
+    }
+  },
+  "etym": {
+    "demo_num": "d3855",
+    "demo_lemma": "hlꜥlꜥ",
+    "english": "[to rejoice]",
+    "german": "einlullen (vgl. hll \"ein Kind tragen\")",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3855"
+  }
+}

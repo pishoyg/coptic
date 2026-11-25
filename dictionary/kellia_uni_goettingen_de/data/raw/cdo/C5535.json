@@ -1,0 +1,604 @@
+{
+  "id": "C5535",
+  "forms": [
+    {
+      "id": "CF31931",
+      "orth": "ⲱⲣⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4106,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF31930",
+      "orth": "ⲱⲣⲉⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18223,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8085,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲉⲣⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8963,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲣⲃ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4879,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲟⲣϥ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10448,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲣⲃ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4879,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲁⲣⲃ†",
+      "dialect": "S",
+      "id": "1819.6"
+    },
+    {
+      "orth": "ⲟⲣϥ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10448,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲣϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3111,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲉⲣϥ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5808,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲣϥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2110,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲟⲣϥ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2110,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲱⲣⲃⲉ",
+      "dialect": "A",
+      "id": "1819.12"
+    },
+    {
+      "orth": "ⲁⲣⲃ⸗",
+      "dialect": "A",
+      "id": "1819.13"
+    },
+    {
+      "orth": "ⲁⲣⲃⲉ†",
+      "dialect": "A",
+      "id": "1819.14"
+    },
+    {
+      "orth": "ⲁⲣⲉϥ-",
+      "dialect": "F",
+      "id": "1819.15"
+    },
+    {
+      "orth": "ⲁⲣⲃ†",
+      "dialect": "L",
+      "id": "1819.16"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6197",
+      "bibliography": "CD 528ab; CDC 81a; KoptHWb 293-294; ChLCS 72b"
+    },
+    {
+      "id": "CS6198",
+      "bibliography": "CD 528ab; CDC 81a; CED 229; KoptHWb 293-294; DELC 250b; ChLCS\n                            72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲉϣϫⲉ ⲁⲓϫⲓ ⲡⲉϫⲁϥ ⲉⲡⲁϩⲁⲙⲏⲣ ⲛⲧⲉϥⲥⲁⲣⲝ ϩⲙⲡⲟⲩⲟⲙϥ · ⲁⲗⲗⲁ ⲙⲡⲉⲓⲉϣ**ⲱⲣⲃ** ⲉϩⲟⲩⲛ ⲙⲡⲁⲙⲁϩⲧⲉ ⲛⲧⲉϥⲙⲛⲧⲛⲟⲩⲧⲉ ·",
+      "english": "It saith also, 'Now though I took His flesh into my bosom when He was in the manger, I could not include within my dominion His Divinity.'",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲛⲁⲉⲩⲫⲣⲁⲛⲉ ⲛⲁϣ ⲛϩⲉ · ⲉⲕ**ⲟⲣⲃ** ⲉϩⲟⲩⲛ ⲉⲡⲕⲁⲕⲉ ⲙⲛⲡⲉⲥϯⲃⲱⲱⲛ · ⲛⲅⲥⲟⲟⲩⲛ ⲁⲛ ⲙⲡⲉϩⲟⲟⲩ ⲟⲩⲇⲉ ⲧⲉⲩϣⲏ ·",
+      "english": "If so, what kind of enjoyment hadst tbou? Thou wast shut up in the darkness and in the humour of her body, and thou didst not know when it was day, or when it was night.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲛⲟⲩϫⲉ ⲉⲡⲣⲱⲙⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲛⲛⲉϥⲁⲛⲟⲙⲓⲁ · ϣⲁⲛⲧϥⲟⲣϫϥ ϩⲁⲧⲟⲟⲧϥ ⲙⲡⲙⲟⲩ · ⲁⲩⲱ ⲁϥ**ⲟⲣⲃⲉ**ϥ ⲉϩⲟⲩⲛ ⲉⲡⲉϣⲧⲉⲕⲟ · ⲛⲁⲙⲛⲧⲉ ·",
+      "english": "And he hurleth his wickedness against man at all times, until at length he bringeth him under the power of death, and he shutteth him up in the prison of Amente.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲟⲗⲟⲓⲡⲟⲛ",
+        3,
+        22.865
+      ],
+      [
+        "ⲧⲉⲛⲑⲱⲛ",
+        1,
+        15.373
+      ],
+      [
+        "ⲥⲏⲟⲩ",
+        3,
+        15.165
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        3,
+        14.209
+      ],
+      [
+        "ⲉⲣⲁⲅⲁⲡⲁⲛ",
+        1,
+        14.203
+      ],
+      [
+        "ⲡ",
+        6,
+        13.374
+      ],
+      [
+        "ⲛⲏ",
+        3,
+        12.812
+      ],
+      [
+        "ⲉ",
+        6,
+        12.772
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        11.993
+      ],
+      [
+        "ⲙ",
+        4,
+        11.583
+      ],
+      [
+        "ⲉⲣϩⲟϯ",
+        1,
+        11.048
+      ],
+      [
+        "ⲁⲣⲉϩ",
+        1,
+        10.907
+      ],
+      [
+        "ϫⲉ",
+        3,
+        10.892
+      ],
+      [
+        "ⲙⲡⲉⲣ",
+        1,
+        10.576
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.459
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        9.814
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        9.76
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        9.371
+      ],
+      [
+        "ⲫⲁⲓ",
+        1,
+        8.658
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲙⲁⲩ",
+        1,
+        16.511
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        15.511
+      ],
+      [
+        "ⲁϣ",
+        3,
+        11.719
+      ],
+      [
+        "ⲉϣ",
+        2,
+        11.671
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        5,
+        11.556
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        2,
+        10.472
+      ],
+      [
+        "ⲛ",
+        11,
+        10.1
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        9.171
+      ],
+      [
+        "ⲙⲡ",
+        2,
+        8.644
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        8.217
+      ],
+      [
+        "ϫⲟ",
+        1,
+        8.039
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        7.494
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        7.321
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        7.125
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        1,
+        6.977
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        6.074
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        5.197
+      ],
+      [
+        "ϥ",
+        3,
+        5.189
+      ],
+      [
+        "ⲅ",
+        1,
+        5.152
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        4.863
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲙⲁⲩ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲱⲣⲃ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲱⲣⲃ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲣⲃ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲉϣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲙⲁⲩ_1_pre_ⲱⲣⲃ",
+          "ⲱⲣⲃ_0_node",
+          1
+        ],
+        [
+          "ⲱⲣⲃ_0_node",
+          "ⲛ_1_post_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱⲣⲃ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ϫⲟ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ϫⲟ_3_post_ϩⲉⲛ",
+          "ⲉⲣⲟ_4_post_ϫⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲱⲣⲃ",
+          "ⲁ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱⲣⲃ",
+          "ϥ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱⲣⲃ",
+          "ⲱⲣⲃ_0_node",
+          1
+        ],
+        [
+          "ⲱⲣⲃ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲣⲃ",
+          3
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲣⲃ",
+          "ⲛ_1_post_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲱⲣⲃ",
+          "ⲱⲣⲃ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲱⲣⲃ",
+          "ⲥⲉ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲱⲣⲃ",
+          "ⲛⲁ_1_pre_ⲱⲣⲃ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱⲣⲃ",
+          "ⲱⲣⲃ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱⲣⲃ",
+          "ⲁ_2_post_ⲧⲉϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2376,
+      "count": 17
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5540",
+      "label": "ϧⲉⲛⲟⲩⲱⲣϥ",
+      "pos": "ADV",
+      "gloss": "quietly"
+    },
+    {
+      "target": "C5541",
+      "label": "ⲁⲧⲟⲣⲃ⸗",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5542",
+      "label": "ⲁⲧⲟⲣⲃ⸗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5543",
+      "label": "ⲟⲣⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "constraint"
+    },
+    {
+      "target": "C5544",
+      "label": "ⲣⲃⲉ",
+      "pos": "N",
+      "gloss": "enclosure, pen (for animals)"
+    },
+    {
+      "target": "C5539",
+      "label": "ⲱⲣϥ",
+      "pos": "N",
+      "gloss": "seclusion, quietude"
+    },
+    {
+      "target": "C5537",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "shut in, lock up"
+    },
+    {
+      "target": "C5538",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "surrounding, frame, siege"
+    },
+    {
+      "target": "C5536",
+      "label": "ⲱⲣⲃ ⲉⲡⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "reject"
+    }
+  ],
+  "etym": {
+    "egy_num": "27190",
+    "egy_lemma": "jnb",
+    "demo_num": "d578",
+    "demo_lemma": "ı ͗nb",
+    "english": "to surround (with walls)",
+    "german": "ummauern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27190",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d578"
+  }
+}

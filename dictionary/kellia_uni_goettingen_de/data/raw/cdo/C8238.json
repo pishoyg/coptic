@@ -1,0 +1,123 @@
+{
+  "id": "C8238",
+  "forms": [
+    {
+      "id": "CF18995",
+      "orth": "ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18996",
+      "orth": "ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10739,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9352",
+      "bibliography": "DDGLC",
+      "cu_ID": "9618"
+    },
+    {
+      "id": "CS9353",
+      "bibliography": "DDGLC",
+      "cu_ID": "2462"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲟⲩⲇⲓⲕⲁⲓⲟⲛ ⲁⲛ ⲡⲉ · ⲉⲧⲣⲉⲛⲉⲧⲙⲉ ⲙⲙⲟⲓ ϩⲛⲛⲉⲩⲡⲣⲁⲝⲓⲥ · ⲉⲧⲛⲁⲛⲱⲟⲩ ⲣϩⲙϩⲁⲗ ⲛⲛⲇⲁⲓⲙⲱⲛⲓⲟⲛ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ · ⲙⲛⲛⲉⲓⲇⲱⲗⲟⲛ ⲉⲧⲙⲟⲟⲩⲧ · ⲛⲁⲗ · ⲁⲩⲱ ⲛ**ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ** ·",
+      "english": "It is not just to allow those who love Me by their good deeds to act as slaves to unclean demons, and idols which are dead, and dumb, and without feeling.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗ",
+        1,
+        15.043
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+          "ⲛ_1_pre_ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ",
+          "ⲁⲛⲁⲓⲥⲑⲏⲧⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10331,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3515",
+    "grl_lemma": "ἀναίσθητος",
+    "grl_meaning": "without sense, perception, or feeling",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 106b"
+  }
+}

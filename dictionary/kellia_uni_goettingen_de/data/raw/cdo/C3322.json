@@ -1,0 +1,283 @@
+{
+  "id": "C3322",
+  "forms": [
+    {
+      "id": "CF8534",
+      "orth": "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10673,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3790",
+      "bibliography": "CD 320a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ⲇⲉ ⲉⲛⲉⲓϣⲁϫⲉ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲛⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁϥⲧⲱⲟⲩⲛ ⲁϥⲡⲁϩⲧϥ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲉϥⲙⲁⲕϩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲛⲧⲱⲥ ⲥⲡⲣⲉⲡⲉⲓ ⲉⲧⲣⲉⲧ**ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ** ϣⲱⲡⲉ ⲛⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲧⲏⲥⲩⲭⲁⲍⲉ ⲙⲁⲩⲁⲁⲩ",
+      "english": "When the blessed archbishop had heard these words, he rose and threw himself at his neck (?) and said: It is truly fitting that wisdom comes from the silent alone.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲉⲡⲉⲓ",
+        1,
+        15.691
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        11.065
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+          "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10262,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3326",
+      "label": "ϫⲉⲙⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "outwit (by sophisms or fallacies), falsify"
+    },
+    {
+      "target": "C3334",
+      "label": "ϫⲓⲛⲉⲣⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "becoming wise, instruction"
+    },
+    {
+      "target": "C3323",
+      "label": "ϫⲓⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "get teaching, be taught"
+    },
+    {
+      "target": "C3319",
+      "label": "ϯⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "teach, chastise"
+    },
+    {
+      "target": "C3315",
+      "label": "ⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "without teaching, ignorant"
+    },
+    {
+      "target": "C3325",
+      "label": "ⲙⲁ ⲛϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "learning place, school"
+    },
+    {
+      "target": "C3320",
+      "label": "ⲙⲁ ⲛϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching place, school"
+    },
+    {
+      "target": "C3317",
+      "label": "ⲙⲁⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "loving instruction, docile"
+    },
+    {
+      "target": "C3336",
+      "label": "ⲙⲉⲧⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "craftiness, guile"
+    },
+    {
+      "target": "C3316",
+      "label": "ⲙⲛⲧⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "want of education, stupidity"
+    },
+    {
+      "target": "C3332",
+      "label": "ⲙⲛⲧⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wisdom"
+    },
+    {
+      "target": "C3338",
+      "label": "ⲙⲛⲧⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "state of pupilage"
+    },
+    {
+      "target": "C3324",
+      "label": "ⲣⲉϥϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "one taught, instructed"
+    },
+    {
+      "target": "C3321",
+      "label": "ⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teacher"
+    },
+    {
+      "target": "C3318",
+      "label": "ⲣⲙⲛⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "instructed, knowledgeable person"
+    },
+    {
+      "target": "C3333",
+      "label": "ⲣⲥⲁⲃⲉ",
+      "pos": "V",
+      "gloss": "become, be wise"
+    },
+    {
+      "target": "C3327",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3330",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3328",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3329",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3331",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C12125",
+      "label": "ⲥⲃⲁ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3313",
+      "label": "ⲥⲃⲟ",
+      "pos": "V",
+      "gloss": "learn; teach"
+    },
+    {
+      "target": "C3337",
+      "label": "ⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "disciple, apprentice"
+    },
+    {
+      "target": "C3314",
+      "label": "ⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "doctrine, teaching"
+    },
+    {
+      "target": "C3335",
+      "label": "ⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "knowing, cunning person"
+    }
+  ]
+}

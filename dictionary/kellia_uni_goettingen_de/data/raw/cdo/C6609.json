@@ -1,0 +1,46 @@
+{
+  "id": "C6609",
+  "forms": [
+    {
+      "id": "CF15262",
+      "orth": "ϥⲓϩⲟⲉⲓⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7321",
+      "bibliography": "CD 674b; ChLCS 88b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6607",
+      "label": "ϩⲟⲉⲓⲙ",
+      "pos": "N",
+      "gloss": "wave, flood"
+    },
+    {
+      "target": "C6608",
+      "label": "ⲣϩⲟⲉⲓⲙ",
+      "pos": "V",
+      "gloss": "be covered with waves, be agitated"
+    }
+  ]
+}

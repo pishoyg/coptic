@@ -1,0 +1,197 @@
+{
+  "id": "C3492",
+  "forms": [
+    {
+      "id": "CF8885",
+      "orth": "ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9423,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3974",
+      "bibliography": "CD 333a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲛⲫⲩⲥⲓⲥ ⲟⲩ**ⲣⲉϥⲥⲗⲁⲁⲧⲉ** ⲧⲉ · ⲁⲗⲗⲁ ⲡⲛⲟⲩⲧⲉ ⲟⲩⲛⲁϩⲏⲧ ⲡⲉ ⲛⲣⲉϥⲕⲱ ⲉⲃⲟⲗ · ⲡⲱⲛ ⲡⲉ ⲣⲛⲟⲃⲉ · ⲡⲱⲕ ϩⲱⲱⲕ ⲡⲉ ⲥⲟⲡⲥⲡ ⲉϫⲱⲛ · ⲛⲛⲁϩⲣⲙⲡⲛⲟⲩⲧⲉ ⲛϥⲕⲱ ⲛⲁⲛ ⲉⲃⲟⲗ ⲛⲛⲉⲛⲛⲟⲃⲉ · ⲡⲱⲛ ⲡⲉⲥⲟⲡⲥⲡ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 4",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:62-70",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲛⲫⲩⲥⲓⲛ ⲟⲩ**ⲣⲉϥⲥⲗⲁⲁⲧⲉ** ⲧⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 5",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:62-70",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲩⲥⲓⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲫⲩⲥⲓⲥ",
+        1,
+        13.276
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        11.304
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        10.587
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_pre_ⲫⲩⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲫⲩⲥⲓⲥ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲗⲁⲁⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲱⲕ_1_post_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲱ_2_post_ⲡⲱⲕ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          "ⲧⲉⲛ_2_pre_ⲫⲩⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_pre_ⲫⲩⲥⲓⲥ",
+          "ⲫⲩⲥⲓⲥ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲫⲩⲥⲓⲥ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          "ⲣⲉϥⲥⲗⲁⲁⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲗⲁⲁⲧⲉ_0_node",
+          "ⲡⲱⲕ_1_post_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲱⲕ_1_post_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          "ϩⲱⲱ_2_post_ⲡⲱⲕ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲥⲗⲁⲁⲧⲉ",
+          "ⲣⲉϥⲥⲗⲁⲁⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8997,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3491",
+      "label": "ϯⲥⲗⲁⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "cause to stumble"
+    },
+    {
+      "target": "C3493",
+      "label": "ⲁⲧⲥⲗⲁϯ",
+      "pos": "N",
+      "gloss": "not stumbling"
+    },
+    {
+      "target": "C3489",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "stumble, slip"
+    },
+    {
+      "target": "C3490",
+      "label": "ⲥⲗⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "stumbling, falling"
+    },
+    {
+      "target": "C3494",
+      "label": "ⲥⲗⲁⲧⲗⲉⲧ",
+      "pos": "N",
+      "gloss": "slip, stumbling"
+    }
+  ]
+}

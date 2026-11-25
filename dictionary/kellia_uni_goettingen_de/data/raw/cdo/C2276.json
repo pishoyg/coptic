@@ -1,0 +1,205 @@
+{
+  "id": "C2276",
+  "forms": [
+    {
+      "id": "CF6282",
+      "orth": "ϭⲓⲙϣⲓϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5665,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2624",
+      "bibliography": "CD 207b; KoptHWb 109"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲓ",
+        1,
+        10.457
+      ],
+      [
+        "ⲑⲣ",
+        1,
+        10.203
+      ],
+      [
+        "ϫⲱⲕ",
+        1,
+        10.156
+      ],
+      [
+        "ⲉ",
+        3,
+        8.772
+      ],
+      [
+        "ⲡϭⲥ",
+        1,
+        8.667
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        8.129
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.066
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        1,
+        7.487
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.934
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲓⲙϣⲓϣ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲙϣⲓϣ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_4_post_ⲣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲙϣⲓϣ_0_node",
+          "ⲙ_1_post_ϭⲓⲙϣⲓϣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲙϣⲓϣ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲣⲱⲙⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_3_post_ⲡⲓ",
+          "ⲉⲧⲉ_4_post_ⲣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_4_post_ⲣⲱⲙⲓ",
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5167,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2275",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "take vengeance, be avenged"
+    },
+    {
+      "target": "C2277",
+      "label": "ϯ ⲛⲟⲩϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "give requital, take vengeance"
+    },
+    {
+      "target": "C2274",
+      "label": "ⲓⲣⲓ ⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "do vengeance for, requite"
+    },
+    {
+      "target": "C2273",
+      "label": "ⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "vengeance"
+    },
+    {
+      "target": "C2278",
+      "label": "ⲣⲉϥϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taker of vengeance, avenger"
+    }
+  ]
+}

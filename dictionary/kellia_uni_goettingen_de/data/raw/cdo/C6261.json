@@ -1,0 +1,167 @@
+{
+  "id": "C6261",
+  "forms": [
+    {
+      "id": "CF14532",
+      "orth": "ϥⲓⲧⲟⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16843,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6949",
+      "bibliography": "CD 620b; KoptHWb 344; ChLCS 85b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲁⲓ**ϥⲓⲧⲟⲟⲧ** ⲉϫⲛⲟⲩⲟⲣⲫⲁⲛⲟⲥ ⲉⲓⲙⲉⲉⲩⲉ ϫⲉⲟⲩⲛⲧⲁⲓ ⲟⲩⲛⲟϭ ⲛϭⲟⲙ",
+      "english": "if I lifted my hand against an orphan, trusting that my strength was far superior to his:",
+      "source": "Job 31",
+      "urn": "urn:cts:copticLit:ot.job.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲣⲫⲁⲛⲟⲥ",
+        1,
+        14.24
+      ],
+      [
+        "ϩⲓⲉⲓⲃ",
+        1,
+        13.285
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        10.896
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        9.425
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϥⲓⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϥⲓⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ϥⲓⲧⲟⲟⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϥⲓⲧⲟⲟⲧ",
+          "ⲓ_1_pre_ϥⲓⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϥⲓⲧⲟⲟⲧ",
+          "ϥⲓⲧⲟⲟⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16445,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C13017",
+      "label": "ϥⲁⲓ-",
+      "pos": "N",
+      "gloss": "carrier"
+    },
+    {
+      "target": "C6260",
+      "label": "ϥⲓ",
+      "pos": "V",
+      "gloss": "bear, carry, take"
+    },
+    {
+      "target": "C6263",
+      "label": "ϥⲓ ϩⲁ-",
+      "pos": "V",
+      "gloss": "support, tolerate; rise up/above"
+    },
+    {
+      "target": "C6264",
+      "label": "ϥⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take, take away"
+    },
+    {
+      "target": "C6265",
+      "label": "ϥⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "be carried off, disappear"
+    },
+    {
+      "target": "C6262",
+      "label": "ϥⲓ ⲙⲛ",
+      "pos": "V",
+      "gloss": "agree with"
+    },
+    {
+      "target": "C6267",
+      "label": "ⲃⲁⲓⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "wine measure(?)"
+    },
+    {
+      "target": "C6266",
+      "label": "ⲙⲛⲧϥⲓ",
+      "pos": "N",
+      "gloss": "patience"
+    }
+  ]
+}

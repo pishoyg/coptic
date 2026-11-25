@@ -1,0 +1,426 @@
+{
+  "id": "C9320",
+  "forms": [
+    {
+      "id": "CF23416",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF23422",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2522,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF23417",
+      "orth": "ⲕⲁⲧⲁⲃⲁⲗⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23419",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2756,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF23420",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23421",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23418",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23423",
+      "orth": "ⲕⲁⲧⲁⲃⲟⲩⲗⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23424",
+      "orth": "ⲕⲁⲧⲁⲩⲗⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23425",
+      "orth": "ⲕⲁⲧⲁⲃⲁⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11688",
+      "bibliography": "DDGLC",
+      "cu_ID": "475"
+    },
+    {
+      "id": "CS11689",
+      "bibliography": "DDGLC",
+      "cu_ID": "3951"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁϥⲥⲟⲧⲡⲉⲛ ⲛϧⲏⲧϥ ϧⲁϫⲉⲛ ⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲓⲕⲟⲥⲙⲟⲥ ϫⲉⲛⲧⲉⲛϣⲱⲡⲓ ⲉⲛⲟⲩⲁⲃ ⲉⲛⲟⲓ ⲛⲁⲧⲑⲱⲗⲉⲃ ⲙⲡⲉϥⲙⲑⲟ ϧⲉⲛⲟⲩⲁⲅⲁⲡⲏ .",
+      "english": "even as he chose us in him before the foundation of the world, that we would be holy and without blemish before him in love;",
+      "source": "10_Ephesians_01",
+      "urn": "urn:cts:copticLit:nt.eph.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲅⲁⲣ ⲛⲉⲧⲁϩⲉⲣⲁⲧⲟⲩ ⲛⲥⲁⲟⲩⲛⲁⲙ ⲙⲡϫⲟⲉⲓⲥ · ⲛⲁⲓ ⲉⲛⲧϥϫⲟⲟⲥ ⲛⲁⲩ ⲉϥϣⲁⲛⲉⲓ ⲛϭⲓⲡⲣⲣⲟ ϫⲉⲁⲙⲏⲉⲓⲛ ⲛⲉⲧⲥⲙⲁⲁⲧ ⲛⲧⲉⲡⲁⲉⲓⲱⲧ ⲛⲧⲉⲧⲛⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲉⲛⲧⲁⲩⲥⲃⲧⲱⲧⲥ ⲛⲏⲧⲛ ϫⲓⲛⲛⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "For these are they who shall take their stand at the right hand of God, and these are they unto whom the King, when He shall come, shall speak saying, ' Come, ye blessed of My Father, and ye shall inherit the kingdom which hath been prepared for you from the foundation of the world.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁⲩⲉⲣϣⲟⲣⲡ ⲙⲉⲛ ⲛⲥⲟⲩⲱⲛϥ ⲓⲥϫⲉⲛ ⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲓⲕⲟⲥⲙⲟⲥ ⲉⲁϥⲟⲩⲱⲛϩ ⲇⲉ ⲉⲃⲟⲗ ⲉⲡϧⲁⲉ ⲛⲧⲉⲛⲓⲥⲏⲟⲩ ⲉⲑⲃⲉⲑⲏⲛⲟⲩ",
+      "english": "who was foreknown indeed before the foundation of the world, but was revealed at the end of times for your sake,",
+      "source": "21_I Peter_01",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲙⲡⲉϥϭⲱ ⲉⲛⲉϩ · ⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ · ϫⲓⲛⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲕⲟⲥⲙⲟⲥ · ⲉϥⲧⲟⲩϫⲟ ⲛⲟⲩⲟⲛ ⲛⲓⲙ · ⲉⲧⲉⲙⲛϭⲟⲙ ⲙⲙⲟⲟⲩ ·",
+      "english": "Who hast never ceased from doing that which is good since the foundation of the world. Who deliverest every one who hath no strength.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲓⲛⲁ ⲛⲧⲉϥϫⲱⲕ ⲉⲃⲟⲗ ⲛϫⲉⲫⲏ ⲉⲧⲁϥϫⲟϥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧϥ ⲙⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲛⲁⲟⲩⲱⲛ ⲛⲣⲱⲓ ϧⲉⲛϩⲁⲛⲡⲁⲣⲁⲃⲟⲗⲏ ⲟⲩⲟϩ ⲛⲧⲁⲥⲁϫⲓ ⲛⲛⲏ ⲉⲧϩⲏⲡ ⲓⲥϫⲉⲛ ⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲓⲕⲟⲥⲙⲟⲥ .",
+      "english": "that it might be fulfilled which was spoken through the prophet, saying, 'I will open my mouth in parables; I will utter things hidden from the foundation of the world.'",
+      "source": "01_Matthew_13",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲟⲩⲱϣ ⲇⲉ ⲉϯⲡⲛⲉⲩⲙⲁ ⲉⲣⲟϥ ⲁϥϫⲓ ⲙⲡϫⲱⲱⲙⲉ ⲁϥⲥϩⲁⲓ ⲛⲛⲉⲧⲛⲁⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⲉⲧⲛⲁⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ · ⲛⲙⲡⲏⲩⲉ · ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ ϫⲉⲛⲁⲓ ⲉⲣⲉⲛⲉⲩⲣⲁⲛ ⲥⲏϩ · ⲉⲡϫⲱⲱⲙⲉ ⲙⲡⲱⲛϩ ϫⲓⲛⲧ**ⲕⲁⲧⲁⲃⲟⲗⲏ** ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "And whilst He was wishing to put breath into him He took a book, and wrote therein [the names of] those who should come forth from him and who should enter into the kingdom which is in the heavens, according to what is written, 'These are they whose names are written in the Book of Life from the foundation of the world.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        8,
+        17.613
+      ],
+      [
+        "ⲓⲥϫⲉⲛ",
+        6,
+        15.068
+      ],
+      [
+        "ϫⲉⲛ",
+        1,
+        14.373
+      ],
+      [
+        "ⲧ",
+        8,
+        13.525
+      ],
+      [
+        "ϧⲁϫⲉⲛ",
+        1,
+        11.837
+      ],
+      [
+        "ⲡⲓ",
+        8,
+        11.771
+      ],
+      [
+        "ⲙ",
+        8,
+        11.583
+      ],
+      [
+        "ϩⲏⲡ",
+        1,
+        10.236
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        9.954
+      ],
+      [
+        "ⲙⲉⲛⲣⲓⲧ",
+        1,
+        9.695
+      ],
+      [
+        ".",
+        4,
+        8.616
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        8.172
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        1,
+        7.788
+      ],
+      [
+        "ⲛⲧⲟⲧ",
+        1,
+        7.616
+      ],
+      [
+        "ϧⲁ",
+        1,
+        6.853
+      ],
+      [
+        "ϥ",
+        3,
+        6.179
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        5.336
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        4.634
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        4.401
+      ],
+      [
+        "ⲕ",
+        1,
+        4.128
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        17,
+        18.868
+      ],
+      [
+        "ϫⲓⲛ",
+        14,
+        17.426
+      ],
+      [
+        "ⲡ",
+        37,
+        15.877
+      ],
+      [
+        "ⲧ",
+        20,
+        14.789
+      ],
+      [
+        "ϩⲁⲧϩⲏ",
+        1,
+        14.35
+      ],
+      [
+        "ⲙ",
+        17,
+        13.366
+      ],
+      [
+        "ⲧⲛ",
+        7,
+        12.338
+      ],
+      [
+        "ϩⲏ",
+        3,
+        11.611
+      ],
+      [
+        ".",
+        6,
+        10.064
+      ],
+      [
+        "ⲛ",
+        11,
+        9.939
+      ],
+      [
+        "ⲱⲛϩ",
+        2,
+        9.469
+      ],
+      [
+        "ⲛⲏ",
+        2,
+        8.812
+      ],
+      [
+        "ⲥⲡⲉⲣⲙⲁ",
+        1,
+        8.443
+      ],
+      [
+        "ⲡⲁⲣⲁ",
+        1,
+        8.39
+      ],
+      [
+        "ⲉ",
+        4,
+        6.569
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        6.562
+      ],
+      [
+        "ϥ",
+        4,
+        6.274
+      ],
+      [
+        "ϭⲟⲙ",
+        1,
+        5.591
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        5.217
+      ],
+      [
+        "ⲩ",
+        2,
+        4.562
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲧⲁⲃⲟⲗⲏ_0_node",
+          7
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          7
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲓ",
+          7
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲧⲁⲃⲟⲗⲏ_0_node",
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲧⲁⲃⲟⲗⲏ_0_node",
+          7
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          7
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          7
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲧⲁⲃⲟⲗⲏ_0_node",
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲁⲃⲟⲗⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2231,
+      "count": 19
+    },
+    "B": {
+      "rate": 0.09,
+      "rank": 2410,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "1051",
+    "grl_lemma": "καταβολή",
+    "grl_meaning": "throwing down, laying down, foundation, payment",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 885b; Preisigke 1:743"
+  }
+}

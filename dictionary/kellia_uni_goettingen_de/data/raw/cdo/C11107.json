@@ -1,0 +1,178 @@
+{
+  "id": "C11107",
+  "forms": [
+    {
+      "id": "CF30651",
+      "orth": "ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30652",
+      "orth": "ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF30653",
+      "orth": "ⲑⲩⲅⲉⲙⲟⲛⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15540",
+      "bibliography": "DDGLC",
+      "cu_ID": "1666"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲕⲣⲓⲧⲏⲥ ⲛⲥⲁⲃⲉ ϣⲁϥϯⲥⲃⲱ ⲙⲡⲉϥⲗⲁⲟⲥ ⲁⲩⲱ ⲧ**ϩⲏⲅⲉⲙⲟⲛⲓⲁ** ⲛⲟⲩⲥⲁⲃⲉ ⲛⲁϣⲱⲡⲉ ⲉⲥⲧⲏϣ",
+      "english": "A wise judge will instruct his people; and the government of a prudent man is well ordered.",
+      "source": "Sirach 10",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲥⲡⲙⲛⲧⲏ ⲇⲉ ⲛⲧ**ϩⲏⲅⲉⲙⲟⲛⲓⲁ** ⲛⲧⲓⲃⲉⲣⲓⲟⲥ ⲕⲁⲓⲥⲁⲣ ⲉϥⲟ ⲛϩⲏⲅⲉⲙⲱⲛ ⲉϫⲛⲧⲓⲟⲩⲇⲁⲓⲁ ⲛϭⲓⲡⲟⲛⲧⲓⲟⲥ ⲡⲓⲗⲁⲧⲟⲥ ⲉⲣⲉϩⲏⲣⲱⲇⲏⲥ ⲟⲛⲧⲉⲧⲣⲁⲣⲭⲏⲥ ⲉϫⲛⲧⲅⲁⲗⲓⲗⲁⲓⲁ ⲉⲣⲉⲫⲓⲗⲓⲡⲡⲟⲥ ⲡⲉϥⲥⲟⲛ ⲟⲛⲧⲉⲧⲣⲁⲣⲭⲏⲥ ⲉϫⲛϯⲧⲟⲩⲣⲁⲓⲁⲥ ⲛⲙⲧⲉⲧⲉⲧⲣⲁⲭⲱⲛⲓⲧⲓⲇⲟⲥ ⲛⲭⲱⲣⲁ ⲛⲙⲗⲩⲥⲁⲛⲓⲁⲥ ⲉϥⲟ ⲛⲧⲉⲧⲣⲁⲣⲭⲏⲥ ⲉⲧⲁⲃⲓⲗⲏⲛⲏ",
+      "english": "Now in the fifteenth year of the reign of Tiberius Caesar, Pontius Pilate being governor of Judea, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of the region of Ituraea and Trachonitis, and Lysanias tetrarch of Abilene,",
+      "source": "42_Luke_3",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲓⲃⲉⲣⲓⲟⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲕⲁⲓⲥⲁⲣ",
+        1,
+        16.428
+      ],
+      [
+        "ⲙⲛⲧⲏ",
+        1,
+        13.926
+      ],
+      [
+        "ⲥⲁⲃⲉ",
+        1,
+        12.303
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        8.925
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲏⲅⲉⲙⲟⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+          "ϩⲏⲅⲉⲙⲟⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲅⲉⲙⲟⲛⲓⲁ_0_node",
+          "ⲛ_1_post_ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲅⲉⲙⲟⲛⲓⲁ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲥⲁⲃⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8630,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2955",
+    "grl_lemma": "ἡγεμονία",
+    "grl_meaning": "leading the way, going first",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 762b; Preisigke 1:651"
+  }
+}

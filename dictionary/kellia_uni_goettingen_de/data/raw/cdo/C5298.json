@@ -1,0 +1,87 @@
+{
+  "id": "C5298",
+  "forms": [
+    {
+      "id": "CF12565",
+      "orth": "ⲟⲩⲓϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲟϩⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16509,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲓ-",
+      "dialect": "S",
+      "id": "1767.2"
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲓ-",
+      "dialect": "A",
+      "id": "1767.3"
+    },
+    {
+      "orth": "ⲟⲩⲓϩⲉ",
+      "dialect": "L",
+      "id": "1767.4"
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲉ†",
+      "dialect": "L",
+      "id": "1767.5"
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲓ-",
+      "dialect": "L",
+      "id": "1767.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5946",
+      "bibliography": "CD 508b; CDC 78b; CED 222; KoptHWb 284; DELC 241a; ChLCS 70b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5301",
+      "label": "ⲙⲛⲧⲟⲩⲁϩⲓϩⲏⲧ",
+      "pos": "N",
+      "gloss": "cruelty"
+    },
+    {
+      "target": "C5300",
+      "label": "ⲟⲩⲁϩⲓϩⲏⲧ",
+      "pos": "N",
+      "gloss": "bitter-hearted, cruel"
+    },
+    {
+      "target": "C5299",
+      "label": "ⲟⲩⲓϩⲉ",
+      "pos": "N",
+      "gloss": "cruelty"
+    }
+  ],
+  "etym": {
+    "egy_num": "48330",
+    "egy_lemma": "whi̯",
+    "demo_num": "d1473",
+    "demo_lemma": "whj",
+    "english": "to escape; to miss; to fail",
+    "german": "entgehen; entkommen; verfehlen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48330",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1473"
+  }
+}

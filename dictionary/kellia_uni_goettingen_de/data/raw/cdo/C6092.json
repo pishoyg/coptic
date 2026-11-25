@@ -1,0 +1,115 @@
+{
+  "id": "C6092",
+  "forms": [
+    {
+      "id": "CF14189",
+      "orth": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2440,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6779",
+      "bibliography": "CD 592a; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲣⲁϣⲉ ⲇⲉ ⲉϫⲛⲧⲡⲁⲣϩⲟⲩⲥⲓⲁ ⲛⲥⲧⲉⲫⲁⲛⲁ ⲙⲛⲫⲟⲣⲧⲟⲩⲛⲁⲧⲟⲥ ⲙⲛⲁⲭⲁⲓⲕⲟⲥ ϫⲉⲛⲁⲓ **ⲛⲉⲛⲧⲁⲩϫⲉⲕⲡⲉⲧⲛϣⲱⲱⲧ **ⲉⲃⲟⲗ**** .",
+      "english": "I rejoice at the coming of Stephanas, Fortunatus, and Achaicus; for that which was lacking on your part, they supplied.",
+      "source": "46_1 Corinthians_16",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲟⲩⲟⲓ ⲙⲡⲛⲁⲩⲉⲧⲉⲕⲛⲁⲥⲱⲧⲙ ⲉⲧⲉⲥⲙⲏ ⲛϩⲟⲧⲉ · ⲁⲩⲱ **ⲉⲧϣⲱⲱⲧ **ⲉⲃⲟⲗ**** · ϫⲉⲙⲁⲣⲉⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲕⲟⲧⲟⲩ ⲉⲁⲙⲛⲧⲉ ·",
+      "english": "O woe be unto thee in that hour wherein thou shalt hear that terrible voice which shall give judgement, saying, 'Let the sinners return to Amente.'",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛϯϩⲁⲧⲉ ⲧⲏⲩⲧⲛ ⲁⲛ ϯⲥϩⲁⲓ ⲛⲛⲁⲓ . ϫⲉⲕⲁⲁⲥ ⲉⲛⲛⲁⲉⲓ ⲧⲁⲭⲣⲱ **ϩⲛⲟⲩϣⲱⲱⲧ **ⲉⲃⲟⲗ**** ⲕⲁⲧⲁⲧⲉⲝⲟⲩⲥⲓⲁ ⲉⲛⲧⲁⲡϫⲟⲉⲓⲥ ⲧⲁⲁⲥ ⲛⲁⲓ ⲉⲩⲕⲱⲧ ⲁⲩⲱ ⲉⲩϣⲟⲣϣⲣ ⲁⲛ .",
+      "english": "For this cause I write these things while absent, that I may not deal sharply when present, according to the authority which the Lord gave me for building up, and not for tearing down.",
+      "source": "47_2 Corinthians_13",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2154,
+      "count": 20
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ]
+}

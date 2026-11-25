@@ -1,0 +1,441 @@
+{
+  "id": "C2862",
+  "forms": [
+    {
+      "id": "CF7576",
+      "orth": "ⲡⲣⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2191,
+        "count": 25
+      }
+    },
+    {
+      "id": "CF7577",
+      "orth": "ⲫⲣⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2315,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF7578",
+      "orth": "ⲡⲣⲟⲩ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ⲡⲣⲱ",
+      "dialect": "F",
+      "id": "939.1"
+    },
+    {
+      "id": "CF7579",
+      "orth": "ⲡⲗⲱ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲡⲣⲱ",
+      "dialect": "L",
+      "id": "939.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3273",
+      "bibliography": "CD 268a; CED 127; KoptHWb 150, 531; DELC 161-162; ChLCS 37b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲇⲉ ϩⲓⲛⲁ ⲛⲧⲉϥϣⲧⲉⲙϣⲱⲡⲓ ϧⲉⲛⲧ**ⲫⲣⲱ** ⲛϫⲉⲡⲉⲧⲉⲛⲫⲱⲧ .",
+      "english": "Pray that your flight won't be in the winter.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣⲗⲏⲗ ϫⲉⲕⲁⲁⲥⲉⲛⲛⲉⲡⲉⲧⲛⲡⲱⲧ ϣⲱⲡⲉ ⲛⲧⲉ**ⲡⲣⲱ** .",
+      "english": "Pray that your flight won&apos;t be in the winter.",
+      "source": "41_Mark_13",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲱⲡⲓ ⲙⲡⲓⲥⲏⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛϫⲉⲟⲩⲁⲓⲕ ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ ⲛⲉⲧ**ⲫⲣⲱ** ⲧⲉ .",
+      "english": "It was the Feast of the Dedication at Jerusalem.",
+      "source": "04_John_10",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲓⲥⲧⲉⲩⲉ ⲛⲁⲓ ⲱ ⲡⲁⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ϫⲉⲉⲓⲥϫⲟⲩⲱⲧⲉ ⲛⲣⲟⲙⲡⲉ · ϫⲓⲛⲛⲧⲁⲓⲉⲓ ⲉⲡⲉⲓⲙⲁ ⲧⲉⲓϩⲃⲥⲱ ⲛⲟⲩⲱⲧ ⲧⲉⲧⲓϭⲓⲛⲉ ⲛⲧⲁϩⲙⲙⲉ ⲛϩⲏⲧⲥ · ⲛⲧⲉ**ⲡⲣⲱ** · ⲁⲩⲱ ⲧⲕⲉⲕⲣⲁⲥⲓⲥ ⲙⲡⲁⲏⲣ ⲙⲡϣⲱⲙ ·",
+      "english": "Believe me, O my beloved father, behold, it is twenty years ago since I came to this place, and with this single garment I have found means to keep myself warm during the winter, and to moderate the heat of the atmosphere in summer time.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲭⲁ ⲇⲉ ⲛⲧⲁⲟϩⲓ ϧⲁⲧⲉⲛ ⲑⲏⲛⲟⲩ ⲓⲉ ⲛⲧⲁⲉⲣϯ**ⲫⲣⲱ** ϩⲓⲛⲁ ⲛⲑⲱⲧⲉⲛ ⲛⲧⲉⲧⲉⲛⲧⲫⲟⲓ ⲉⲡⲓⲙⲁ ⲉϯⲛⲁϣⲉ ⲉⲣⲟϥ .",
+      "english": "But with you it may be that I will stay, or even winter, that you may send me on my journey wherever I go.",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲉⲙ**ⲡⲣⲱ**ⲙⲉ ⲛⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ ·",
+      "english": "“This is the chastisement of the slanderer.”",
+      "source": "Pistis Sophia Book 4 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:129-139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲓⲑⲣⲟϣⲣⲉϣ",
+        1,
+        19.695
+      ],
+      [
+        "ⲍⲏⲛⲁⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲫⲱⲧ",
+        5,
+        19.153
+      ],
+      [
+        "ⲧ",
+        7,
+        15.947
+      ],
+      [
+        "ϧⲁϫⲉⲛ",
+        1,
+        14.837
+      ],
+      [
+        "ⲙⲟⲩⲛϩⲱⲟⲩ",
+        1,
+        14.837
+      ],
+      [
+        "ϣⲗⲏⲗ",
+        1,
+        14.741
+      ],
+      [
+        "ⲉⲣ",
+        3,
+        14.412
+      ],
+      [
+        "ⲡⲉⲧⲉⲛ",
+        2,
+        14.103
+      ],
+      [
+        "ⲃⲏϣ",
+        1,
+        14.051
+      ],
+      [
+        "ϯ",
+        6,
+        14.045
+      ],
+      [
+        "ⲛⲑⲱⲧⲉⲛ",
+        2,
+        13.581
+      ],
+      [
+        "ϧⲉⲛ",
+        6,
+        13.518
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        2,
+        13.058
+      ],
+      [
+        "ⲓⲉⲣⲟⲥⲁⲗⲏⲙ",
+        1,
+        12.495
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        2,
+        12.454
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        3,
+        12.389
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        12.271
+      ],
+      [
+        "ⲥⲁⲃⲃⲁⲧⲟⲛ",
+        1,
+        12.236
+      ],
+      [
+        "ⲟⲟⲩ",
+        1,
+        12.179
+      ]
+    ],
+    "S": [
+      [
+        "ⲱϭⲃ",
+        3,
+        18.124
+      ],
+      [
+        "ⲧⲉ",
+        25,
+        17.091
+      ],
+      [
+        "ⲥⲱϣⲉⲙ",
+        1,
+        15.954
+      ],
+      [
+        "ⲃⲟⲩⲗⲟⲥ",
+        1,
+        15.954
+      ],
+      [
+        "ⲍⲏⲛⲁ",
+        1,
+        15.954
+      ],
+      [
+        "ⲱϭⲉⲃ",
+        1,
+        15.954
+      ],
+      [
+        "ⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ",
+        1,
+        14.369
+      ],
+      [
+        "ⲙⲉ",
+        6,
+        13.052
+      ],
+      [
+        "ⲟⲩⲉⲓⲛⲉ",
+        2,
+        13.0
+      ],
+      [
+        "ⲥⲱϣⲙ",
+        1,
+        12.254
+      ],
+      [
+        "ⲉⲛⲕⲟⲧⲕ",
+        1,
+        12.047
+      ],
+      [
+        "ⲛ",
+        17,
+        11.427
+      ],
+      [
+        "ϫⲁϥ",
+        1,
+        11.147
+      ],
+      [
+        "ⲡⲱⲧ",
+        3,
+        11.147
+      ],
+      [
+        "ϭⲱⲃⲉ",
+        1,
+        11.047
+      ],
+      [
+        "ⲧ",
+        9,
+        10.937
+      ],
+      [
+        "ⲛⲉ",
+        6,
+        10.424
+      ],
+      [
+        "ⲉⲧⲉⲧⲛⲉ",
+        2,
+        10.407
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        3,
+        10.387
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        5,
+        10.346
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲱ_0_node",
+          19
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲱ",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲣⲁⲥⲓⲥ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲣⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲱ",
+          "ⲡⲣⲱ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲱ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          "ⲧ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          "ⲕⲉ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          "ⲕⲣⲁⲥⲓⲥ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲕⲣⲁⲥⲓⲥ_1_post_ⲡⲣⲱ",
+          "ⲙ_2_post_ⲕⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲣⲱ",
+          "ⲡⲣⲱ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲱ_0_node",
+          "ⲙⲉ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_post_ⲡⲣⲱ",
+          "ⲛ_1_post_ⲡⲣⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲱ",
+          "ⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲣⲱ",
+          "ⲡⲣⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.16,
+      "rank": 1923,
+      "count": 25
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2869",
+      "type": "cf",
+      "label": "come forth, shine, blossom forth"
+    }
+  ],
+  "etym": {
+    "egy_num": "60300",
+    "egy_lemma": "pr.t",
+    "demo_num": "d2078",
+    "demo_lemma": "pr.t",
+    "english": "peret-season (winter)",
+    "german": "Peret-Jahreszeit (Winter)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2078"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "C1279",
+  "forms": [
+    {
+      "id": "CF3963",
+      "orth": "ϧⲉⲛ ⲟⲩⲭⲱⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS1483",
+      "bibliography": "CD 114a; KoptHWb 66"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1276",
+      "label": "ⲕⲱⲡ",
+      "pos": "V",
+      "gloss": "hide, be hidden; hide"
+    },
+    {
+      "target": "C1277",
+      "label": "ⲕⲱⲡ",
+      "pos": "N",
+      "gloss": "hiding, concealment"
+    },
+    {
+      "target": "C1278",
+      "label": "ⲙⲁ ⲛⲭⲱⲡ",
+      "pos": "N",
+      "gloss": "hiding place"
+    },
+    {
+      "target": "C1280",
+      "label": "ⲛⲭⲱⲡ",
+      "pos": "ADV",
+      "gloss": "secretly"
+    }
+  ]
+}

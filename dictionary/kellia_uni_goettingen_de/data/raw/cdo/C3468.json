@@ -1,0 +1,75 @@
+{
+  "id": "C3468",
+  "forms": [
+    {
+      "id": "CF8836",
+      "orth": "ⲥⲱⲗⲡ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12170,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3949",
+      "bibliography": "CD 331b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11744,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3469",
+      "label": "ⲁⲧⲥⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unbroken"
+    },
+    {
+      "target": "C3471",
+      "label": "ⲥⲗⲉⲡⲗⲓⲡ",
+      "pos": "N",
+      "gloss": "part of a snake"
+    },
+    {
+      "target": "C3472",
+      "label": "ⲥⲗⲟⲡⲗⲉⲡ",
+      "pos": "V",
+      "gloss": "tear asunder"
+    },
+    {
+      "target": "C3470",
+      "label": "ⲥⲗⲡⲉ",
+      "pos": "N",
+      "gloss": "strip"
+    },
+    {
+      "target": "C3466",
+      "label": "ⲥⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "break, burst; break, cut off"
+    },
+    {
+      "target": "C3467",
+      "label": "ⲥⲱⲗⲡ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be cut, broken off; cut off, decide"
+    }
+  ]
+}

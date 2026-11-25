@@ -1,0 +1,126 @@
+{
+  "id": "C245",
+  "forms": [
+    {
+      "id": "CF31514",
+      "orth": "ⲁⲩⲓⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31513",
+      "orth": "ⲁⲩⲉⲓⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31516",
+      "orth": "ⲁⲩⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31515",
+      "orth": "ⲁⲩⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2587,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF997",
+      "orth": "ⲁⲩⲁⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1646,
+        "count": 42
+      }
+    },
+    {
+      "id": "CF998",
+      "orth": "ⲁⲩⲁⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF999",
+      "orth": "ⲁⲟⲩⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5770,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF1000",
+      "orth": "ⲁⲃⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11305,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1001",
+      "orth": "ⲁⲃⲏⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1002",
+      "orth": "ⲉⲟⲩⲉⲓⲛ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS276",
+      "bibliography": "CD 21a; CED 14; KoptHWb 15, 490; DELC 19; ChLCS 6a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C244",
+      "label": "ⲁⲟⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "jaundice"
+    },
+    {
+      "target": "C241",
+      "label": "ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "colour; appearance"
+    },
+    {
+      "target": "C242",
+      "label": "ⲁⲩⲁⲛ ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "variety of colours"
+    },
+    {
+      "target": "C243",
+      "label": "ⲁⲩⲁⲛⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "linen (\"colour of the sky\")"
+    }
+  ],
+  "etym": {
+    "egy_num": "27090",
+    "egy_lemma": "jn.wt",
+    "demo_num": "d403",
+    "demo_lemma": "ı ͗wn",
+    "english": "freight (?)",
+    "german": "Schiffsladung (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27090",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d403"
+  }
+}

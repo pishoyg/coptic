@@ -1,0 +1,104 @@
+{
+  "id": "C9489",
+  "forms": [
+    {
+      "id": "CF24118",
+      "orth": "ⲕⲟⲗⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24119",
+      "orth": "ⲕⲟⲗⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19631,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12057",
+      "bibliography": "DDGLC",
+      "cu_ID": "6395"
+    },
+    {
+      "id": "CS12058",
+      "bibliography": "DDGLC",
+      "cu_ID": "8333"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϩⲧⲟⲟⲩⲉ ⲇⲉ ϣⲱⲡⲉ ⲡⲙⲁ ⲙⲉⲛ ⲙⲡⲉⲛⲛⲉⲉϥ ⲥⲟⲩⲱⲛϥ ⲟⲩ**ⲕⲟⲗⲡⲟⲥ** ⲇⲉ ⲡⲉⲛⲧⲁⲩⲉⲓⲟⲣϩϥ ⲉⲩⲛ ⲟⲩⲙⲁ ⲙⲙⲟⲟⲛⲉ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲁⲩϫⲓϣⲟϫⲛⲉ ⲉⲛⲁⲩ ϫⲉⲥⲉⲛⲁϣϭⲙϭⲟⲙ ⲉⲧⲟⲩϫⲉ ⲡϫⲟⲉⲓ ⲉϩⲟⲩⲛ ⲙⲙⲁⲩ .",
+      "english": "When it was day, they didn't recognize the land, but they noticed a certain bay with a beach, and they decided to try to drive the ship onto it.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲉⲉϥ",
+        1,
+        15.469
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19244,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2983",
+    "grl_lemma": "κόλπος",
+    "grl_meaning": "bosom, hollow",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 974a; Preisigke 1:820"
+  }
+}

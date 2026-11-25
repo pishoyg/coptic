@@ -1,0 +1,630 @@
+{
+  "id": "C715",
+  "forms": [
+    {
+      "id": "CF2698",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.65,
+        "rank": 240,
+        "count": 733
+      }
+    },
+    {
+      "id": "CF2699",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2700",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲉⲣⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.52,
+        "rank": 388,
+        "count": 214
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS854",
+      "bibliography": "CD 59a; CED 38; KoptHWb 39-40, 500; DELC 46; ChLCS 11b"
+    },
+    {
+      "id": "CS855",
+      "bibliography": "CD 59a; KoptHWb 39-40, 500; DELC 46; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲫⲛⲟⲩϯ ϯ ⲛⲟⲩⲛⲟϩⲉⲙ ⲛⲁϥ ⲙⲡⲉⲙⲑⲟ ⲙⲡⲟⲩⲣⲟ ⲛⲛⲓⲥⲁⲣⲁⲕⲏⲛⲟⲥ ⲟⲩⲟϩ ⲛⲁϥⲧⲁⲓⲏⲟⲩⲧ ⲛⲧⲟⲧϥ ⲉⲙⲁϣⲱ ⲉϥϯⲧⲁⲓⲟ ⲛⲁϥ . ⲟⲩⲙⲏϣ ⲛⲥⲟⲡ ϣⲁϥⲙⲟⲩϯ ⲛⲁϥ ⲛⲧⲟⲩϩⲉⲙⲥⲓ ⲛⲉⲙⲛⲟⲩ**ⲉⲣⲏⲟⲩ** ⲛⲧⲟⲩⲉⲣⲥⲩⲛⲧⲩⲭⲓⲁ ⲉⲑⲃⲉϫⲉⲁⲡⲓⲟⲩⲣⲟ ⲛⲁⲩ ⲉϩⲁⲛⲙⲏϣ ⲛⲧⲁⲗϭⲟ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧϥ .",
+      "english": "And God made him find favor with the king of the Saracens who honored him greatly, giving him glory a multitude of times until his death, so much so that they sat together, that they had interviews, because the king saw the multitude of cures (operated) by him.",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲟⲛ ⲁⲡⲁ ϩⲓⲉⲣⲁⲝ ⲁϥⲟⲩⲱⲛ ⲙⲡⲣⲟ · ⲁϥϫⲓⲧϥ · ⲉϩⲟⲩⲛ ⲁⲩϩⲙⲟⲟⲥ ⲙⲛⲛⲉⲩ**ⲉⲣⲏⲩ** ·",
+      "english": "And Apa Hierax opened the door, and brought in Apa Pambo, and they sat down together.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲟⲩⲛ ⲛⲁⲥⲛⲏⲩ ⲁⲣⲉⲧⲉⲛϣⲁⲛⲑⲱⲟⲩϯ ⲉⲟⲩⲱⲙ ⲟϩⲓ ⲛⲛⲉⲧⲉⲛ**ⲉⲣⲏⲟⲩ** .",
+      "english": "Therefore, my brothers, when you come together to eat, wait one for another.",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲁⲧⲉⲧⲛⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲉⲛⲉⲧⲛ**ⲉⲣⲏⲩ** ϩⲙⲡⲣⲁⲛ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲡⲁⲡⲛⲉⲩⲙⲁ ⲙⲛⲧϭⲟⲙ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ .",
+      "english": "In the name of our Lord Jesus Christ, you being gathered together, and my spirit, with the power of our Lord Jesus Christ,",
+      "source": "46_1 Corinthians_5",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲁⲅ ⲛⲇⲁⲓⲙⲱⲛ ⲉⲣⲁⲡⲁⲛⲧⲁⲛ ⲉⲣⲟϥ ⲛⲟⲩⲥⲟⲡ ⲉⲩⲟⲓ ⲙⲡⲥⲙⲟⲧ ⲛϩⲁⲛⲣⲉϥⲫⲱϣⲉⲛ ⲛⲧⲉϯⲉⲕⲕⲗⲏⲥⲓⲁ ϧⲉⲛⲧⲫⲁϣⲓ ⲡⲓⲉϩⲟⲟⲩ ⲛϩⲁⲛⲁⲙⲉⲣⲓ ⲛϯⲕⲁⲩⲙⲁ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ⲛⲁⲩϯⲥⲁⲕ ⲉⲣⲱⲟⲩ ⲡⲉ ϩⲱⲥⲇⲉ ⲛⲧⲟⲩϣⲧⲉⲙⲭⲁϥ ⲛⲧⲉϥⲉⲓ ⲉⲣⲱⲟⲩ ϫⲉϩⲁⲛⲇⲁⲓⲙⲱⲛ ⲛⲉ . ⲉⲑⲃⲉⲫⲁⲓ ⲙⲉⲛⲉⲛⲥⲁⲑⲣⲟⲩϣⲉ ⲛⲱⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϥϫⲉⲙⲡⲓⲣⲟ ⲉϥⲧⲁϫⲣⲏⲟⲩⲧ ⲁϥⲉⲙⲓ ϫⲉϩⲁⲛⲇⲁⲓⲙⲱⲛ ⲛⲉ ⲙⲙⲟⲛ ⲙⲡⲉϥⲉⲙⲓ ⲛϣⲟⲣⲡ ⲟⲩⲟϩ ⲁⲩⲉⲣⲙⲫⲣⲏϯ ⲛϩⲁⲛⲟⲩⲟⲛ ⲉⲩϩⲓⲟⲓ ⲛⲉⲙⲁϥ ⲉⲑⲃⲉⲡⲓⲛⲁϩϯ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲅⲣⲁⲫⲏ ⲟⲩⲟϩ ⲁⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲥⲁϫⲓ ⲛⲉⲙⲁϥ ⲙⲡⲉϥⲡⲣⲟⲃⲗⲏⲙⲁ ⲟⲩⲟϩ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ⲡⲉ ϫⲉⲁⲛⲥⲱⲧⲉⲙ ⲉⲑⲃⲏⲧⲕ ϫⲉⲕⲥⲁϫⲓ ⲛⲕⲁⲗⲱⲥ ϧⲁⲡⲓⲛⲁϩϯ ⲉⲧⲥⲟⲩⲧⲱⲛ ⲉⲑⲃⲉⲫⲁⲓ ⲁⲛⲓ ϣⲁⲣⲟⲕ ϩⲓⲛⲁ ⲛⲧⲉⲕⲑⲉⲧⲡⲉⲛϩⲏⲧ ϧⲉⲛⲫⲣⲏ ⲉⲧⲉⲛϣⲓⲛⲓ ⲛⲥⲱϥ ⲛⲧⲟⲧⲕ . ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲁϫⲉⲣⲏ ⲉⲧⲉⲧⲉⲛⲟⲩⲁϣϥ . ⲡⲉϫⲉⲡⲓϩⲟⲩⲓⲧ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲟⲩⲉⲩⲙⲉⲛⲓⲟⲥ ⲁⲛⲟⲕ ⲇⲉ ⲉⲧⲁⲓⲓ ϩⲁⲣⲟⲕ ϫⲉϩⲓⲛⲁ ⲛⲧⲉⲕⲧⲁⲙⲟⲓ ϫⲉⲫⲓⲱⲧ ⲟⲩⲅⲉⲛⲉⲧⲟⲥ ⲡⲉ ϣⲁⲛ ⲟⲩⲁⲅⲉⲛⲉⲧⲟⲥ ⲡⲉ . ⲡⲉϫⲉⲁⲡⲁ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉϯⲛⲁⲉⲣⲟⲩⲱ ⲛⲁⲕ ⲁⲛ ϫⲉⲕⲁⲕⲱⲥ ⲁⲕϣⲓⲛⲓ ϯⲫⲩⲥⲓⲥ ⲅⲁⲣ ⲛⲁⲧⲙⲓⲥⲓ ⲙⲡⲁⲥⲥϣⲉ ⲉⲫⲓⲣⲓ ⲉⲑⲃⲏⲧⲥ ϫⲉⲟⲩⲙⲓⲥⲓ ⲧⲉ ϣⲁⲛ ⲟⲩⲁⲑⲙⲓⲥⲓ ⲧⲉ . ⲉⲧⲁⲡⲓϩⲟⲩⲓⲧ ⲉⲙⲓ ϫⲉⲁϥϭⲣⲟ ⲉⲣⲟϥ ⲁϥⲥⲉⲕⲡⲉϥ**ⲁⲣⲏⲟⲩ** ⲉⲧϩⲏ ⲉⲧⲁϥⲓ ⲇⲉ ⲉⲧϩⲏ ⲡⲉϫⲁϥ ⲙⲡⲓϣⲟⲣⲡ ϫⲉⲕⲁⲕⲱⲥ ⲁⲕϣⲓⲛⲓ . ⲡⲉϫⲉⲁⲡⲁ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉⲛⲑⲟⲕ ⲟⲩ ⲛⲑⲟⲕ . ⲡⲉϫⲁϥ ϫⲉⲟⲩⲁⲣⲓⲁⲛⲟⲥ ⲁⲛⲟⲕ . ⲡⲉϫⲉⲁⲡⲁ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉⲉⲕⲕⲱϯ ⲛⲥⲁⲟⲩ ⲛⲑⲟⲕ ϩⲱⲕ . ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲉⲓϣⲓⲛⲓ ⲉⲑⲃⲉⲡⲓⲡⲛⲁ ⲛⲁⲅⲓⲟⲛ ⲛⲉ ⲉⲑⲃⲉⲡⲥⲱⲙⲁ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ϫⲉⲁⲛ ⲛⲑⲟϥ ⲡⲉ ϧⲉⲛⲟⲩⲙⲉⲑⲙⲏⲓ ⲡⲉ ⲫⲏ ⲉⲧⲁⲙⲁⲣⲓⲁ ⲙⲁⲥϥ . ⲡⲉϫⲉⲡⲓⲁⲅⲓⲟⲥ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉⲡⲓⲡⲛⲁ ⲛⲁⲅⲓⲟⲛ ⲟⲩⲇⲉ ⲟⲩⲙⲓⲥⲓ ⲁⲛ ⲡⲉ ⲟⲩⲇⲉ ⲟⲩⲥⲱⲛⲧ ⲁⲛ ⲡⲉ ⲥⲱⲛⲧ ⲛⲓⲃⲉⲛ ⲥⲉⲁⲙⲟⲛⲓ ⲙⲙⲱⲟⲩ ϧⲉⲛⲟⲩⲧⲟⲡⲟⲥ ⲥⲱⲛⲧ ⲛⲓⲃⲉⲛ ϣⲁⲩϣⲓⲃϯ ⲟⲩⲟϩ ⲥⲉⲉⲣⲁⲅⲓⲁⲍⲓⲛ ⲙⲙⲱⲟⲩ ϩⲓⲧⲉⲛⲫⲏ ⲉⲧⲥⲟⲧⲡ ⲉⲣⲱⲟⲩ ⲡⲉϫⲉⲡⲓⲙⲁϩⲅ ϫⲉⲁϭⲣⲟ ⲉⲛⲁⲓ ϫⲉϩⲁⲛ.......... ⲟⲩ ⲡⲉⲧⲉⲕⲟⲩⲱϣ ⲉϫⲟϥ ⲛⲏⲓ ϩⲱ . ⲡⲉϫⲉⲡⲓϧⲉⲗⲗⲟ ⲛⲁϥ ϫⲉⲟⲩ ⲡⲉ ⲉⲧⲉⲕⲕⲱϯ ⲛⲥⲱϥ ⲛⲑⲟⲕ ϫⲉⲁⲕϣⲟⲩϣⲟⲩ ⲙⲙⲟⲕ ϧⲁϫⲉⲛⲡⲓⲁⲅⲱⲛ . ⲡⲉϫⲉⲡⲓⲇⲉⲙⲱⲛ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲙⲉⲛ ϯⲉⲣⲁⲙⲫⲓⲃⲁⲗⲓⲛ ⲁⲛ ϩⲗⲓ ⲁⲗⲗⲁ ⲡⲁϩⲏⲧ ⲑⲏⲧ ⲁⲛ ⲟⲩⲇⲉ ϥⲧⲁϫⲣⲏⲟⲩⲧ ⲁⲛ ϫⲉⲁⲡⲭⲣⲓⲥⲧⲟⲥ ϭⲓⲕⲁϯ ⲛⲣⲱⲙⲓ ⲁⲗⲗⲁ ⲛⲧϣⲉⲃⲓⲱ ⲙⲡⲓⲕⲁϯ ⲛⲑⲟϥ ⲫⲛⲟⲩϯ ⲁϥϣⲱⲡⲓ ⲛϧⲏⲧϥ ⲕⲉ ⲅⲁⲣ ⲙⲙⲟⲛ ϣϫⲟⲙ ⲛⲧⲉⲕⲁϯ ⲛⲣⲱⲙⲓ ϩⲓⲟⲩⲓ ⲉⲃⲟⲗ ⲙⲡⲁⲣⲭⲱⲛ ⲛⲧⲉⲛⲓⲇⲁⲓⲙⲱⲛ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲣⲱⲛⲓ ⲟⲩⲟϩ ⲛⲧⲉϥϭⲣⲟ ⲉⲣⲟϥ ⲕⲉ ⲅⲁⲣ ⲙⲡⲁⲣⲉⲕⲁϯ ⲛⲣⲱⲙⲓ ϣⲱⲡⲓ ϧⲉⲛⲡⲓⲥⲱⲙⲁ ⲛⲉⲙⲫⲛⲟⲩϯ .",
+      "english": "Another time, three demons approached him at midday, disguised in the form of ministers of the church. By their appearance, they displayed themselves as though they were righteous, and he did not immediately recognize them as demons. After they left and he found the door firmly closed, he knew they were demons, though at first he had not realized it. They showed themselves in such a way as to dispute with men of faith about the Scriptures and each of them presented him with a problem: ‘We have heard of you, that you speak beautifully of the orthodox faith; therefore, we have come to you to persuade our hearts concerning these matters which we question.’ He replied to them: ‘Say what you want.’ The first said: ‘I am a Eunomian, and I have come to you so that you may teach me whether the Father is unbegotten or begotten.’ Apa Evagrius said to him: ‘I will not answer you because you have questioned poorly, for it is not fitting to speak of what is unbegotten by nature as something begotten or unbegotten.’ When the first man knew that he had been defeated, he instructed his companion to proceed. The second man stepped forward and said to the first: ‘You questioned poorly.’ Apa Evagrius said to him: ‘And you, who are you?’ He replied: ‘I am an Arian.’ Apa Evagrius said: ‘And what do you seek?’ He said: ‘Concerning the Holy Spirit and about the truth of the saying that Mary bore God in the flesh.’ Then Saint Evagrius said to them: ‘The Holy Spirit is neither begotten nor created; for every created thing is comprehensible, mutable, and is sanctified by Him who chose to sanctify it.’ The third said: ‘You have defeated these […] The old man replied: ‘What are you seeking, you who boast of yourself before the battle?’ The demon replied: ‘I bring no ambiguity, but my heart is not persuaded, nor am I certain that Christ accepted human understanding. Instead, I believe divine understanding was in Him. For it cannot happen that a human spirit could drive out demons who dominate and overcome them. However, the human spirit does not exist in a body alongside God.’",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛⲟ ⲛⲟⲩϩⲏⲧ ⲛⲟⲩⲱⲧ ⲙⲛⲛⲉⲛⲉⲣⲏⲩ ϩⲓⲟⲩⲥⲟⲡ · ⲉⲣⲉϯⲣⲏⲛⲏ ϣⲟⲟⲡ ϩⲛⲧⲉⲛⲙⲏⲏⲧⲉ · ⲉⲛϣⲟⲟⲡ ϩⲛⲟⲩⲉⲥⲩⲭⲓⲁ ⲙⲛⲛⲉⲛ**ⲉⲣⲏⲩ** · ⲉⲛϯⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "We all lived together, and each of us was of the same mind, and peace dwelt in our midst. We lived with each other a life of quiet contemplation, and we ascribed glory unto God.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟⲩ",
+        130,
+        29.97
+      ],
+      [
+        "ⲛⲉⲧⲉⲛ",
+        45,
+        26.539
+      ],
+      [
+        "ⲛ",
+        145,
+        26.13
+      ],
+      [
+        "ⲉ",
+        128,
+        26.017
+      ],
+      [
+        "ⲛⲉⲙ",
+        84,
+        25.42
+      ],
+      [
+        "ⲩ",
+        86,
+        25.4
+      ],
+      [
+        "ⲟⲩ",
+        108,
+        25.019
+      ],
+      [
+        ".",
+        80,
+        24.582
+      ],
+      [
+        "ⲙⲙⲟ",
+        50,
+        24.3
+      ],
+      [
+        "ⲙⲉⲛⲣⲉ",
+        13,
+        24.167
+      ],
+      [
+        "ⲁⲣⲓⲁⲥⲡⲁⲍⲉⲥⲑⲉ",
+        5,
+        24.076
+      ],
+      [
+        "ϫⲉ",
+        59,
+        23.785
+      ],
+      [
+        "ϧⲉⲛ",
+        51,
+        22.78
+      ],
+      [
+        "ⲫⲓ",
+        5,
+        22.661
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        55,
+        22.424
+      ],
+      [
+        "ⲡⲓ",
+        42,
+        21.948
+      ],
+      [
+        "ⲥⲩⲛⲫⲱⲛⲓⲛ",
+        2,
+        21.695
+      ],
+      [
+        "ϣⲉⲡⲧⲟⲧⲟⲩ",
+        2,
+        21.695
+      ],
+      [
+        "ⲁ",
+        47,
+        21.653
+      ],
+      [
+        "ϥⲉϫ",
+        3,
+        21.643
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲉⲩ",
+        421,
+        25.451
+      ],
+      [
+        "ⲛⲉⲛ",
+        184,
+        23.626
+      ],
+      [
+        "ⲉ",
+        438,
+        21.624
+      ],
+      [
+        "ⲛ",
+        515,
+        21.317
+      ],
+      [
+        "ⲙⲛ",
+        220,
+        20.47
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        92,
+        20.383
+      ],
+      [
+        "ⲩ",
+        217,
+        19.577
+      ],
+      [
+        "ⲟⲩ",
+        248,
+        19.565
+      ],
+      [
+        ".",
+        174,
+        19.368
+      ],
+      [
+        "ⲡ",
+        270,
+        19.21
+      ],
+      [
+        "ⲁ",
+        231,
+        19.082
+      ],
+      [
+        "ϩⲛ",
+        142,
+        18.411
+      ],
+      [
+        "ⲁⲩⲱ",
+        151,
+        17.945
+      ],
+      [
+        "ⲧ",
+        124,
+        17.416
+      ],
+      [
+        "ⲁⲥⲡⲁⲍⲉ",
+        19,
+        17.27
+      ],
+      [
+        "ϩⲓ",
+        57,
+        17.212
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        60,
+        16.881
+      ],
+      [
+        "ⲙ",
+        116,
+        16.407
+      ],
+      [
+        "ⲡⲉ",
+        87,
+        16.319
+      ],
+      [
+        "ϫⲱ",
+        51,
+        15.904
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          331
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          542
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          128
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          29
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲉⲣⲏⲩ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          9
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲣⲏⲩ",
+          5
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲉⲣⲏⲩ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲏⲩ",
+          5
+        ],
+        [
+          "ⲁⲛ_1_pre_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱϩ",
+          1
+        ],
+        [
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          10
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          4
+        ],
+        [
+          "ⲁⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          "ⲉ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          "ⲡ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          "ⲛ_2_post_ⲕⲱϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱϩ",
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ϣⲡⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.62,
+      "rank": 205,
+      "count": 733
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C793",
+      "type": "cf",
+      "label": "friend, companion (B)"
+    }
+  ],
+  "etym": {
+    "egy_num": "28510",
+    "egy_lemma": "jr.j",
+    "demo_num": "d632",
+    "demo_lemma": "ı ͗rj",
+    "english": "fellow; companion",
+    "german": "Zugehöriger; Genosse",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/28510",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d632"
+  }
+}

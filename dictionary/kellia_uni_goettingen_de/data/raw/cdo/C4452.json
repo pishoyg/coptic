@@ -1,0 +1,285 @@
+{
+  "id": "C4452",
+  "forms": [
+    {
+      "id": "CF10857",
+      "orth": "ⲧⲱⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3457,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲑⲱⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6237,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5040",
+      "bibliography": "CD 424b; KoptHWb 242; DELC 220a; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲧⲛⲧⲱⲣⲡ ⲙⲙⲟⲟⲩ ⲛ**ⲧⲟⲟⲧ**ⲟⲩ ,",
+      "english": "You rob them by using them,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓ ⲁⲡⲁ**ⲧⲟⲟⲧ**ⲕ ⲉⲕϩⲙⲡⲉⲕⲙⲁ ⲛϣⲱⲡⲉ ·",
+      "english": "Do diligently whilst thou art in thy habitation.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "[....] ⲛⲉⲛⲧⲁⲩϩⲓ**ⲧⲟⲟⲧ**ⲟⲩ ⲉⲡⲗⲉⲁ .",
+      "english": "…The ones who began to sail…",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲱⲣϭ",
+        1,
+        12.067
+      ],
+      [
+        "ϣⲏⲧⲥ",
+        1,
+        11.067
+      ],
+      [
+        "ⲟⲩⲉϩ",
+        2,
+        8.607
+      ],
+      [
+        "ⲉⲅⲗⲱⲙ",
+        1,
+        8.607
+      ],
+      [
+        "ⲛ",
+        18,
+        7.787
+      ],
+      [
+        "ⲧⲉⲥ",
+        3,
+        7.753
+      ],
+      [
+        "ⲃⲱ",
+        2,
+        7.504
+      ],
+      [
+        "ⲟⲙⲥ",
+        1,
+        7.482
+      ],
+      [
+        "ⲛⲟⲩϩⲉ",
+        1,
+        7.112
+      ],
+      [
+        "ⲕⲗⲁⲇⲟⲥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲥⲏϥⲉ",
+        2,
+        6.398
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        1,
+        5.482
+      ],
+      [
+        "ⲥⲟⲧⲉ",
+        1,
+        5.352
+      ],
+      [
+        "ⲧ",
+        6,
+        5.294
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        5.055
+      ],
+      [
+        "ⲥⲃⲱ",
+        1,
+        4.078
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        3.654
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        3.147
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        2.917
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        2.882
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.33,
+      "rank": 339,
+      "count": 370
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4695,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "176250",
+    "egy_lemma": "ṯr.t",
+    "demo_num": "d7148",
+    "demo_lemma": "twrꜣ(.t)",
+    "english": "willow",
+    "german": "Weide (Salix subserrata Wild.); ägyptische Weide (Salix mucronata Thunb.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/176250",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7148"
+  }
+}

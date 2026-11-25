@@ -1,0 +1,187 @@
+{
+  "id": "C603",
+  "forms": [
+    {
+      "id": "CF2257",
+      "orth": "ⲃⲱϩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6608,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF2258",
+      "orth": "ⲃⲁϩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8330,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS722",
+      "bibliography": "CD 48a; KoptHWb 30; DELC 34; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥϣⲱⲡⲉ ⲛϩⲁⲓⲃⲉⲥ ⲉⲃⲟⲗ ϩⲛⲟⲩⲕⲁⲩⲙⲁ ⲁⲩⲱ ⲛ**ⲃⲱϩⲛ** ⲁⲩⲱ ⲛϩⲱⲡ ⲉⲃⲟⲗ ϩⲛⲟⲩⲛϣⲟⲧ ⲙⲛⲟⲩϩⲱⲟⲩ",
+      "english": "And it shall be for a shadow from the heat, and as a shelter and a hiding place from inclemency of weather and from rain.",
+      "source": "Isaiah 4",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲩⲙⲁ",
+        1,
+        13.898
+      ],
+      [
+        "ⲫⲓⲁⲗⲏ",
+        1,
+        13.554
+      ],
+      [
+        "ⲥⲕⲉⲩⲏ",
+        1,
+        12.155
+      ],
+      [
+        "ϩⲱⲡ",
+        1,
+        11.036
+      ],
+      [
+        "ⲟⲩⲁϩ",
+        1,
+        10.197
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        9.747
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.789
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        8.606
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.313
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        6.296
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.864
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲃⲱϩⲛ",
+          2
+        ],
+        [
+          "ⲃⲱϩⲛ_0_node",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱϩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲃⲱϩⲛ",
+          "ⲃⲱϩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱϩⲛ",
+          "ⲛ_1_pre_ⲃⲱϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲱϩⲛ",
+          "ⲃⲱϩⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5269,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "859161",
+    "egy_lemma": "bhn",
+    "english": "[garment]",
+    "german": "[Kleidungsstück]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/859161"
+  }
+}

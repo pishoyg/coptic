@@ -1,0 +1,51 @@
+{
+  "id": "C5135",
+  "forms": [
+    {
+      "id": "CF12234",
+      "orth": "ⲙⲟⲩⲃⲉⲣⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF12235",
+      "orth": "ⲙⲟⲩⲃⲉⲣⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5766",
+      "bibliography": "CD 490a; KoptHWb 276"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2165",
+      "type": "cf",
+      "label": "water"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5133",
+      "label": "ⲟⲩⲣⲧ",
+      "pos": "N",
+      "gloss": "rose"
+    },
+    {
+      "target": "C5134",
+      "label": "ⲟⲩⲣⲧ",
+      "pos": "N",
+      "gloss": "rose"
+    }
+  ]
+}

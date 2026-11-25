@@ -1,0 +1,174 @@
+{
+  "id": "C2921",
+  "forms": [
+    {
+      "id": "CF7706",
+      "orth": "ⲡⲥⲧⲁⲓⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3975,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS3343",
+      "bibliography": "CD 273b; CED 129; KoptHWb 153; DELC 248; ChLCS 38b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉ . ⲛⲓⲙ ⲛⲣⲱⲙⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧ ⲧⲏⲩⲧⲛ ⲡⲉⲧⲉⲟⲩⲛⲧⲁϥ ϣⲉ ⲛⲉⲥⲟⲟⲩ ⲁⲩⲱ ⲉϥϣⲁⲛⲥⲉⲣⲙ ⲟⲩⲁ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲙⲏ ⲛϥⲛⲁⲕⲁ ⲡⲓ**ⲡⲥⲧⲁⲓⲟⲩ**ⲯⲓⲥ ⲁⲛ ϩⲓⲡϫⲁⲓⲉ ⲛϥⲃⲱⲕ ⲛϥϣⲓⲛⲉ ⲛⲥⲁⲡⲓⲟⲩⲁ ϣⲁⲛⲧϥϩⲉ ⲉⲣⲟϥ .",
+      "english": "'Which of you men, if you had one hundred sheep, and lost one of them, wouldn't leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it?",
+      "source": "42_Luke_15",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉⲧⲥⲇⲟⲕⲉⲓ ⲛⲏⲧⲛ ⲉϣⲱⲡⲉ ⲟⲩⲣⲱⲙⲉ ⲉϥϣⲁⲛⲕⲱ ⲛⲁϥ ⲛϣⲉ ⲛⲉⲥⲟⲟⲩ ⲛⲧⲉⲟⲩⲁ ⲥⲱⲣⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ . ⲙⲏ ⲛϥⲛⲁⲕⲱ ⲁⲛ ⲙⲡⲉⲓ**ⲡⲥⲧⲁⲓⲟⲩ**ⲯⲓⲥ ⲛⲉⲥⲟⲟⲩ ϩⲓϫⲛⲛⲧⲟⲟⲩ ⲛϥⲃⲱⲕ ⲛϥϣⲓⲛⲉ ⲛⲥⲁⲡⲉⲧⲥⲱⲣⲙ .",
+      "english": "'What do you think? If a man has one hundred sheep, and one of them goes astray, doesn't he leave the ninety-nine, go to the mountains, and seek that which has gone astray?",
+      "source": "40_Matthew_18",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉϣⲁⲣⲉⲟⲩⲣⲁϣⲉ ⲛⲧⲉⲓϩⲉ ϣⲱⲡⲉ ⲉϫⲛⲟⲩⲣⲉϥⲣⲛⲟⲃⲉ ⲉϥϣⲁⲛⲙⲉⲧⲁⲛⲟⲉⲓ . ⲉϩⲟⲩⲉ ⲡⲓ**ⲡⲥⲧⲁⲓⲟⲩ**ⲯⲓⲥ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲛⲁⲓ ⲉⲧⲉⲛⲥⲉⲣⲭⲣⲉⲓⲁ ⲁⲛ ⲙⲙⲉⲧⲁⲛⲟⲓⲁ .",
+      "english": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance.",
+      "source": "42_Luke_15",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲗⲉⲁⲍⲁⲣⲟⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲯⲓⲥ",
+        3,
+        17.309
+      ],
+      [
+        "ⲉⲛⲱⲥ",
+        1,
+        16.013
+      ],
+      [
+        "ϣⲉ",
+        3,
+        12.937
+      ],
+      [
+        "ⲥⲡⲓⲣ",
+        1,
+        11.313
+      ],
+      [
+        "ⲉⲕⲉ",
+        2,
+        11.294
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        2,
+        11.017
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        10.87
+      ],
+      [
+        "ⲙⲁϩⲉ",
+        1,
+        10.458
+      ],
+      [
+        "ⲏⲡⲉ",
+        1,
+        10.322
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        3,
+        10.271
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲉⲓ",
+        1,
+        10.214
+      ],
+      [
+        "ⲛ",
+        8,
+        9.809
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        9.559
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        1,
+        8.936
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        1,
+        8.456
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        8.413
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.128
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        7.843
+      ],
+      [
+        "ϥ",
+        4,
+        7.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3581,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2919",
+      "label": "ⲯⲓⲥ",
+      "pos": "NUM",
+      "gloss": "nine"
+    },
+    {
+      "target": "C2920",
+      "label": "ⲯⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "nine"
+    }
+  ]
+}

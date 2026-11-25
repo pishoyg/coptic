@@ -1,0 +1,151 @@
+{
+  "id": "C9099",
+  "forms": [
+    {
+      "id": "CF22534",
+      "orth": "ⲉⲩⲫⲩⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22536",
+      "orth": "ⲉⲩⲫⲩⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7597,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22535",
+      "orth": "ⲉⲩⲫⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11223",
+      "bibliography": "DDGLC",
+      "cu_ID": "10430"
+    },
+    {
+      "id": "CS11224",
+      "bibliography": "DDGLC",
+      "cu_ID": "1801"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲛⲅ ⲟⲩϣⲏⲣⲉ ϣⲏⲙ ⲛ**ⲉⲩⲫⲩⲏⲥ** ⲉⲩⲛⲧⲁⲓ ⲙⲙⲁⲩ ⲛⲟⲩⲯⲩⲭⲏ ⲉⲛⲁⲛⲟⲩⲥ",
+      "english": "For I was a witty child, and had a good spirit.",
+      "source": "Wisdom 8",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕϣⲱⲡⲉ ⲛ**ⲉⲩⲫⲩⲏⲥ** · ϩⲛⲧⲥⲟⲫⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ · ⲁⲩⲱ ⲛⲅⲛⲱⲥϯⲕⲟⲥ ϩⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲟⲩⲁⲁⲃ ⁛—",
+      "english": "Thou wast a man of gracious speech concerning the wisdom of God, and thou wast a possessor of the true knowledge of the Holy Mysteries.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        10.384
+      ],
+      [
+        "ϣⲏⲙ",
+        1,
+        10.32
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        9.079
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        7.29
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲩⲫⲩⲏⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7141,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "847",
+    "grl_lemma": "εὐφυής",
+    "grl_meaning": "well-grown, shapely",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 737b; Preisigke 1:626"
+  }
+}

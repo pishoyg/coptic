@@ -1,0 +1,122 @@
+{
+  "id": "C6877",
+  "forms": [
+    {
+      "id": "CF15803",
+      "orth": "ⲕⲱ ⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3914,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7594",
+      "bibliography": "CD 715b; KoptHWb 394; ChLCS 96a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6881",
+      "label": "ϣⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "(have) pity"
+    },
+    {
+      "target": "C6876",
+      "label": "ϣⲥⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "grief"
+    },
+    {
+      "target": "C6882",
+      "label": "ϥⲓϩⲏⲧ",
+      "pos": "V",
+      "gloss": "take heart, delight"
+    },
+    {
+      "target": "C6883",
+      "label": "ϩⲁϩⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "with, beside"
+    },
+    {
+      "target": "C6869",
+      "label": "ϩⲏⲧ",
+      "pos": "N",
+      "gloss": "heart, mind"
+    },
+    {
+      "target": "C6872",
+      "label": "ϩⲏⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small heart, impatient"
+    },
+    {
+      "target": "C6870",
+      "label": "ϩⲏⲧ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single heart, one mind"
+    },
+    {
+      "target": "C6871",
+      "label": "ϩⲏⲧ ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two hearts, double-minded"
+    },
+    {
+      "target": "C6880",
+      "label": "ϯϩⲏⲧ",
+      "pos": "V",
+      "gloss": "pay heed, observe"
+    },
+    {
+      "target": "C6873",
+      "label": "ⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "without mind, senseless"
+    },
+    {
+      "target": "C6874",
+      "label": "ⲃⲁⲗϩⲏⲧ",
+      "pos": "N",
+      "gloss": "open, simple-minded"
+    },
+    {
+      "target": "C12198",
+      "label": "ⲕⲁϩⲧⲏϥ",
+      "pos": "N",
+      "gloss": "trust, confidence"
+    },
+    {
+      "target": "C6878",
+      "label": "ⲣϩⲏⲧ",
+      "pos": "V",
+      "gloss": "reflect, regret"
+    },
+    {
+      "target": "C6875",
+      "label": "ⲣⲙⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "(man of heart), wise (man)"
+    },
+    {
+      "target": "C6879",
+      "label": "ⲥⲱⲕ ϩⲏⲧ",
+      "pos": "V",
+      "gloss": "persuade"
+    }
+  ]
+}

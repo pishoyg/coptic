@@ -1,0 +1,61 @@
+{
+  "id": "C1805",
+  "forms": [
+    {
+      "id": "CF5203",
+      "orth": "ⲙⲁ ⲛⲣⲙⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2107",
+      "bibliography": "CD 158b; KoptHWb 86; ChLCS 24b"
+    },
+    {
+      "id": "CS2108",
+      "bibliography": "CD 158b; KoptHWb 86; ChLCS 24b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1804",
+      "label": "ϯⲙⲉ",
+      "pos": "N",
+      "gloss": "penis(?)"
+    },
+    {
+      "target": "C1801",
+      "label": "ⲙⲏ",
+      "pos": "N",
+      "gloss": "urine"
+    },
+    {
+      "target": "C1802",
+      "label": "ⲙⲏ ⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "\"urine of bread\" (food), excrement"
+    },
+    {
+      "target": "C1803",
+      "label": "ⲣⲙⲏ",
+      "pos": "V",
+      "gloss": "urinate, make water; evacuate excrements"
+    }
+  ]
+}

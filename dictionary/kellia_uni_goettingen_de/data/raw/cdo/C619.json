@@ -1,0 +1,182 @@
+{
+  "id": "C619",
+  "forms": [
+    {
+      "id": "CF2349",
+      "orth": "ⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 18.3,
+        "rank": 72,
+        "count": 2888
+      }
+    },
+    {
+      "id": "CF2350",
+      "orth": "ⲉⲣⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 21.08,
+        "rank": 69,
+        "count": 1788
+      }
+    },
+    {
+      "id": "CF2351",
+      "orth": "ⲉⲗⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2352",
+      "orth": "ⲉⲣⲉ- ⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2353",
+      "orth": "ⲁ- ⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2354",
+      "orth": "ⲉ⸗ ⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2355",
+      "orth": "ⲉ⸗ ⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2356",
+      "orth": "ⲉ⸗ ⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2357",
+      "orth": "ⲉ⸗ ⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2358",
+      "orth": "ⲁ⸗ ⲁ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ⲉⲓⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 11.11,
+        "rank": 120,
+        "count": 942
+      }
+    },
+    {
+      "orth": "ⲉⲓⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 3.3,
+        "rank": 315,
+        "count": 520
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Futur III ⲉ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS754",
+      "bibliography": "CD 52a; CED 31; Till D § 253; KoptHWb 38; DELC 37; LCG § 338; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲇⲉ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲙⲙⲟⲛ ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲡⲓⲁⲫⲟⲧ ⲉⲧⲓⲥⲱ ⲙⲙⲟϥ ⲉⲣⲉⲧⲉⲛⲉⲥⲟϥ ⲟⲩⲟϩ ⲡⲓⲱⲙⲥ ⲉⲧⲓⲱⲙⲥ ⲙⲙⲟⲓ ⲙⲙⲟϥ **ⲉⲣⲉ**ⲧⲉⲛⲉⲉⲙⲥⲑⲏⲛⲟⲩ ⲙⲙⲟϥ .",
+      "english": "They said to him, 'We are able.' Jesus said to them, 'You shall indeed drink the cup that I drink, and you shall be baptized with the baptism that I am baptized with;",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲕⲁⲗⲱⲥ ⲁϥϫⲟⲟⲥ ⲛϭⲉⲡϫⲟⲉⲓⲥ ϫⲉⲙⲡⲣⲉⲓⲣⲉ ϫⲉⲕⲁⲥ **ⲉⲣⲉ**ⲛⲣⲱⲙⲉ ⲛⲁⲩ ⲉⲣⲱⲧⲛ ·",
+      "english": "It was for this reason that the Lord rightly said, ‘Do not your acts (of charity) in order that men may see you.’",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲇⲉ **ⲉ**ⲩⲉⲣⲙⲉⲑⲣⲉ ϧⲁⲣⲟϥ ⲛϫⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲑⲃⲉ ⲛⲉϥⲁⲣⲉⲧⲏ .",
+      "english": "Everyone testified to his virtues.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲟⲉⲙⲓⲛ ⲇⲉ ⲧⲉⲥϣⲱⲙⲉ ⲡⲉϫⲁⲥ ⲛⲁⲥ ϫⲉⲧⲁϣⲉⲉⲣⲉ ⲛⲛⲁⲕⲱⲧⲉ ⲛⲉ ⲛⲥⲁⲟⲩⲙⲁ ⲛⲙⲧⲟⲛ ϫⲉⲕⲁⲥ **ⲉⲣⲉ**ⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ ϣⲱⲡⲉ ⲙⲙⲟ",
+      "english": "And she lodged with her mother-in-law: and Noemin her mother-in-law said to her, My daughter, shall I not seek rest for thee, that it may be well with thee?",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ϯⲛⲟⲩ **ⲉⲧ**ⲓⲛⲁⲧⲁⲟⲩⲉϩⲁⲛⲕⲟⲩϫⲓ ⲉⲣⲱⲧⲉⲛ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ .",
+      "english": "I will now recount a few of them to you.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟ ⲇⲉ ϫⲟⲕⲙⲉ ⲛⲧⲉⲧⲁϩⲥⲉ ⲛⲧⲉϯ ⲛⲛⲟⲩϩⲟⲉⲓⲧⲉ ϩⲓⲱⲱⲧⲉ ⲛⲧⲉⲃⲱⲕ ⲉⲃⲟⲗ ⲉⲡⲉϫⲛⲟⲟⲩ ⲛⲧⲉⲧⲙⲟⲩⲟⲛϩⲉ ⲉⲡⲣⲱⲙⲉ ϣⲁⲛⲧϥⲟⲩⲱ ⲉϥⲟⲩⲱⲙ ⲁⲩⲱ **ⲉ**ϥⲥⲱ",
+      "english": "But do thou wash, and anoint thyself, and put thy raiment upon thee, and go up to the threshing-floor: do not discover thyself to the man until he has done eating and drinking.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C615",
+      "label": "ⲉ-",
+      "pos": "PREP",
+      "gloss": "to, for, according to, as regards; for, in order to; about, because of; from, by means of; towards, to; against; indicating debt or responsibility; ethic dative; distance of time (Past or Fut.): until, since; distance of place, separation, freedom from; distributive; comparison; elliptic; in adverbial expressions; indicating direct obj.; co-ordinating a second verb"
+    },
+    {
+      "target": "C616",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C617",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C618",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C11277",
+      "label": "ⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": "if (verbal prefix of the conditional)"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm16",
+    "demo_lemma": "r",
+    "english": "[to make; to do]",
+    "german": "bei nominalem Subjekt im Futurum III",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm16"
+  }
+}

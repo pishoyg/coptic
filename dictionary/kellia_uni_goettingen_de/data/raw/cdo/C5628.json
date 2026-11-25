@@ -1,0 +1,168 @@
+{
+  "id": "C5628",
+  "forms": [
+    {
+      "id": "CF13232",
+      "orth": "ⲱϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12007,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6203,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲩϥ",
+      "dialect": "S",
+      "id": "1834.2"
+    },
+    {
+      "orth": "ⲱⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13251,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6299",
+      "bibliography": "CD 535b; CED 231; KoptHWb 297; DELC 251b-252a; ChLCS 71b (s. v. ⲱⲃ),\n                        73b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲕ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        11.898
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲱϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲱϥ",
+          1
+        ],
+        [
+          "ⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲱϥ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱϥ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲱϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲱϥ",
+          "ⲩ_1_pre_ⲱϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲱϥ",
+          "ⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲱϥ_0_node",
+          "ⲧ_1_post_ⲱϥ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲱϥ",
+          "ⲉϩⲟⲩⲛ_1_post_ⲱϥ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲱϥ",
+          "ⲉⲣⲟ_1_post_ⲱϥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11581,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "36750",
+    "egy_lemma": "ꜥb.w",
+    "demo_num": "dm3456",
+    "demo_lemma": "ꜥbj",
+    "english": "lettuce",
+    "german": "Lattich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/36750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3456"
+  }
+}

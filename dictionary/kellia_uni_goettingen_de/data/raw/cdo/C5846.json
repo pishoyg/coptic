@@ -1,0 +1,61 @@
+{
+  "id": "C5846",
+  "forms": [
+    {
+      "id": "CF13689",
+      "orth": "ϣⲗϣⲓⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34064",
+      "orth": "ϣⲉⲗϣⲏⲓⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3669,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF34065",
+      "orth": "ϣⲉⲗϣⲏⲗⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6527",
+      "bibliography": "CD 561a; KoptHWb 311; DELC 261b; ChLCS 77a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲉϥⲉⲙⲟⲩ ϧⲉⲛⲡⲉϥⲛⲟⲃⲓ ⲟⲩⲟϩ ⲫⲏⲉⲧⲛⲁⲟⲩⲱⲙ ⲡⲓ**ϣⲉⲗϣⲏⲓⲗⲓ** ⲉⲣⲉⲛⲉϥⲛⲁϫϩⲓ ⲉⲣⲥⲗⲓϫ .",
+      "english": "But every one shall die in his own sin; and the teeth of him that eats the sour grape shall be set on edge.",
+      "source": "24_Ieremias_38",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϧⲁϫⲱϥ ⲙⲡⲱⲥϧ ⲉϣⲱⲡ ⲁⲥϣⲁⲛϫⲱⲕ ⲉⲃⲟⲗ ⲛϫⲉϯϩⲣⲏⲣⲓ ⲛⲉⲙϯ**ϣⲉⲗϣⲏⲓⲗⲓ** ⲟⲩⲟϩ ⲉϥⲉⲱⲗⲓ ⲛⲛⲓⲕⲟⲩϫⲓ ⲛⲥⲙⲁϩ ϧⲉⲛⲛⲓⲥⲏϥⲓ ⲛϣⲱⲗ ⲟⲩⲟϩ ⲛⲓⲕⲗⲏⲙⲁ ⲉϥⲉⲟⲗⲟⲩ .",
+      "english": "Before the reaping time, when the flower has been completely formed, and the unripe grape has put forth its flower and blossomed, then shall he take away the little clusters with pruning-hooks, and shall take away the small branches, and cut them off;",
+      "source": "23_Isaias_18",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:18",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ⲁϧⲱⲧⲉⲛ ⲧⲉ ⲧⲁⲓⲡⲁⲣⲁⲃⲟⲗⲏ ϧⲉⲛⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲗ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲓⲓⲟϯ ⲁⲩⲟⲩⲱⲙ ⲙⲡⲓ**ϣⲉⲗϣⲏⲓⲗⲓ** ⲁ ⲛⲓⲛⲁϫϩⲓ ⲛⲛⲓϣⲏⲣⲓ ⲥⲑⲉⲣⲧⲉⲣ .",
+      "english": "Son of man, what mean ye by this parable among the children of Israel, saying, The fathers have eaten unripe grapes, and the children's teeth have been set on edge?",
+      "source": "26_Ezechiel_18",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

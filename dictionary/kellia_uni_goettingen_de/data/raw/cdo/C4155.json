@@ -1,0 +1,93 @@
+{
+  "id": "C4155",
+  "forms": [
+    {
+      "id": "CF10255",
+      "orth": "ⲉⲓⲣⲉ ⲛⲟⲩⲧⲁⲉⲓⲟ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4717",
+      "bibliography": "CD 391a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C20",
+      "type": "cf",
+      "label": "be great, goodly, honoured"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4159",
+      "label": "ϣⲟⲩⲧⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "be worthy of honour"
+    },
+    {
+      "target": "C4160",
+      "label": "ϫⲓⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "receive an honour, receive a gift"
+    },
+    {
+      "target": "C4158",
+      "label": "ϯⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "give an honour, make a gift"
+    },
+    {
+      "target": "C4154",
+      "label": "ⲙⲁⲓⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour-loving"
+    },
+    {
+      "target": "C4156",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4157",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4152",
+      "label": "ⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "honor, pay respect to, adorn"
+    },
+    {
+      "target": "C4153",
+      "label": "ⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour, compliments (in the plural); complimentary gift"
+    },
+    {
+      "target": "C4161",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "V",
+      "gloss": "greet"
+    }
+  ]
+}

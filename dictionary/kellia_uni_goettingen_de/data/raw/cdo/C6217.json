@@ -1,0 +1,550 @@
+{
+  "id": "C6217",
+  "forms": [
+    {
+      "id": "CF14444",
+      "orth": "ϣⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 28.34,
+        "rank": 50,
+        "count": 4472
+      }
+    },
+    {
+      "orth": "ⲥⲁϫⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 32.11,
+        "rank": 43,
+        "count": 2723
+      }
+    },
+    {
+      "orth": "ⲥⲁϫⲓ",
+      "dialect": "S",
+      "id": null
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6904",
+      "bibliography": "CD 613b-615a; KoptHWb 341; DELC 278a; ChLCS 84a-b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲥⲓϯ ⲁϥⲥⲓϯ ⲙⲡⲓ**ⲥⲁϫⲓ** .",
+      "english": "The farmer sows the word.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧϫⲟ ⲉϥϫⲟ ⲙⲡ**ϣⲁϫⲉ** .",
+      "english": "The farmer sows the word.",
+      "source": "41_Mark_4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲙⲉⲧⲟⲩⲣⲟ ⲅⲁⲣ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲁⲥϧⲉⲛⲡ**ⲥⲁϫⲓ** ⲁⲛ ⲁⲗⲗⲁ ⲁⲥϧⲉⲛⲟⲩϫⲟⲙ .",
+      "english": "For the Kingdom of God is not in word, but in power.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲟⲩⲉ ⲟⲩ**ϣⲁϫⲉ** ⲛⲟⲩⲱⲧ ⲉⲡⲡⲁⲡⲁⲥ ⲧⲁⲣⲉϥϯϩⲏⲩ ·",
+      "english": "'Tell the Father one word that he may benefit.'",
+      "source": "Apophthegmata Patrum Sahidic 114: Theophilus Beta",
+      "urn": "urn:cts:copticLit:ap.114.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲟⲩⲟⲩⲟⲛϩϥ ⲉⲣⲱⲟⲩ ⲛϫⲉⲛⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲉⲡⲉⲓⲇⲏ ⲧⲟⲩⲥⲩⲛⲏⲑⲉⲓⲁ ⲧⲉ ⲑⲁⲓ ⲉⲩϣⲉⲡϧⲓⲥⲓ ⲉϫⲉⲛⲛⲟⲩⲉⲣⲏⲟⲩ ⲉⲑⲣⲟⲩⲛⲁϩⲙⲟⲩ ⲉⲃⲟⲗ ϩⲗⲓ ⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲧⲉⲡⲓⲕⲟⲥⲙⲟⲥ ⲉⲩⲓⲣⲓ ⲛⲧⲟⲩⲥⲡⲟⲩⲇⲏ ⲧⲏⲣⲥ ⲉⲑⲣⲟⲩϫⲱⲕ ⲙⲡ**ⲥⲁϫⲓ** ⲙⲡⲓⲥⲱⲧⲏⲣ ⲉⲃⲟⲗ ϫⲉⲙⲙⲟⲛ ⲡⲉⲑⲛⲁⲁⲥ ⲉⲧⲁⲓⲁⲅⲁⲡⲏ ⲛⲧⲉⲟⲩⲁⲓ ⲭⲱ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉϫⲉⲛⲡⲉϥϣⲫⲏⲣ .",
+      "english": "And the holy elders did not reveal it, for it is their custom to suffer for one another, to deliver themselves from all the desires of the world, to put all their cares into fulfilling the word of the Lord who said: ‘There is no greater charity than for one to give their soul for a companion.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲟⲩⲥⲟⲛ ϫⲛⲉⲁⲡⲁ ⲥⲁⲣⲁⲡⲓⲟⲛ ϫⲉⲁϫⲓ ⲟⲩ**ϣⲁϫⲉ** ⲉⲣⲟⲓ .",
+      "english": "A brother asked Apa Sarapion, 'Give me a word.'",
+      "source": "Apophthegmata Patrum Sahidic 028",
+      "urn": "urn:cts:copticLit:ap.28.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡ",
+        1067,
+        35.797
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1109,
+        35.425
+      ],
+      [
+        "ⲛⲉⲙ",
+        773,
+        35.026
+      ],
+      [
+        "ⲁ",
+        967,
+        34.742
+      ],
+      [
+        "ϥ",
+        1083,
+        34.667
+      ],
+      [
+        "ⲛⲉⲙⲱ",
+        240,
+        34.644
+      ],
+      [
+        "ⲛⲧⲉ",
+        705,
+        34.451
+      ],
+      [
+        "ⲛⲉⲙⲁ",
+        269,
+        34.308
+      ],
+      [
+        "ⲉ",
+        857,
+        34.247
+      ],
+      [
+        ".",
+        675,
+        33.813
+      ],
+      [
+        "ⲛ",
+        854,
+        33.805
+      ],
+      [
+        "ⲟⲩ",
+        814,
+        33.761
+      ],
+      [
+        "ⲙ",
+        607,
+        33.32
+      ],
+      [
+        "ϭⲟⲉⲓⲥ",
+        255,
+        33.271
+      ],
+      [
+        "ⲡⲓ",
+        567,
+        33.212
+      ],
+      [
+        "ⲓ",
+        460,
+        33.112
+      ],
+      [
+        "ⲉⲧ",
+        444,
+        32.635
+      ],
+      [
+        "ϫⲉ",
+        429,
+        32.371
+      ],
+      [
+        "ⲫ",
+        379,
+        32.262
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        271,
+        32.144
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        681,
+        36.706
+      ],
+      [
+        "ⲛ",
+        2792,
+        26.023
+      ],
+      [
+        "ϥ",
+        2352,
+        25.994
+      ],
+      [
+        "ⲡ",
+        2290,
+        25.854
+      ],
+      [
+        "ⲙ",
+        1727,
+        25.487
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        661,
+        25.449
+      ],
+      [
+        "ⲉ",
+        1784,
+        25.093
+      ],
+      [
+        "ⲁ",
+        1436,
+        24.381
+      ],
+      [
+        "ⲟⲩ",
+        1309,
+        24.156
+      ],
+      [
+        "ϩⲛ",
+        791,
+        23.235
+      ],
+      [
+        "ⲛⲉⲓ",
+        302,
+        23.056
+      ],
+      [
+        "ⲓ",
+        668,
+        22.875
+      ],
+      [
+        ".",
+        679,
+        22.652
+      ],
+      [
+        "ⲛⲁ",
+        809,
+        22.542
+      ],
+      [
+        "ⲛⲙⲙⲏ",
+        161,
+        22.464
+      ],
+      [
+        "ⲉⲧ",
+        664,
+        22.237
+      ],
+      [
+        "ⲕ",
+        536,
+        21.924
+      ],
+      [
+        "ⲁⲩⲱ",
+        681,
+        21.855
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        301,
+        21.844
+      ],
+      [
+        "ⲧⲏⲣ",
+        413,
+        21.807
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁϫⲉ_0_node",
+          1213
+        ],
+        [
+          "ⲡ_1_pre_ϣⲁϫⲉ",
+          144
+        ],
+        [
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          138
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          138
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          114
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲁϫⲉ",
+          46
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          44
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          44
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          70
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          70
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          70
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          88
+        ],
+        [
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          62
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲁϫⲉ",
+          41
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲁϫⲉ",
+          38
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲁϫⲉ",
+          55
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲁϫⲉ",
+          28
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲁϫⲉ",
+          28
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲁϫⲉ",
+          25
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          24
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁϫⲉ",
+          16
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ϣⲁϫⲉ_0_node",
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϣⲁϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲁϫⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲁϫⲉ",
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁϫⲉ",
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 28.18,
+      "rank": 45,
+      "count": 4472
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6216",
+      "label": "ϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "speak, say"
+    },
+    {
+      "target": "C6223",
+      "label": "ϭⲓⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speech, saying, tale"
+    },
+    {
+      "target": "C6220",
+      "label": "ⲁⲧϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speechless, unspeakable"
+    },
+    {
+      "target": "C6218",
+      "label": "ⲛⲉϫϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "cast in word, make mention"
+    },
+    {
+      "target": "C6219",
+      "label": "ⲣϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "make agreement"
+    },
+    {
+      "target": "C6221",
+      "label": "ⲣⲉϥϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speaker"
+    },
+    {
+      "target": "C6222",
+      "label": "ⲥⲁ ⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "man of words, babbler"
+    }
+  ]
+}

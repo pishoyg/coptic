@@ -1,0 +1,191 @@
+{
+  "id": "C10824",
+  "forms": [
+    {
+      "id": "CF29504",
+      "orth": "ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29505",
+      "orth": "ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7451,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14928",
+      "bibliography": "DDGLC",
+      "cu_ID": "4160"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϯⲙⲁ ⲙⲉⲛ ⲉⲓⲥϩⲏⲏⲧⲉ · ⲥⲉⲙⲏⲣ · ⲉⲩ**ⲫⲁⲕⲓⲁⲣⲓⲟⲛ** · ⲛⲧⲟⲟⲧⲥ ⲛⲁⲓ ⲛⲧⲁⲕⲛⲧⲟⲩ ⲉⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲟⲛ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "As for the money (?), behold, it is tied up in a bundle in her hand, and it is this which thou hast brought to tempt me therewith.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲭⲁⲗⲭⲓⲩⲱⲛ ⲇⲉ ⲁϥϯ ⲙⲡⲉϥϩⲟ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲉϥ**ⲫⲁⲕⲓⲁⲣⲓⲟⲛ** ⲛⲟⲩⲛⲟϭ ⲛⲛⲁⲩ ⲁϥⲣⲓⲙⲉ ⲉϥϫⲱⲙⲙⲟⲥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲉⲡⲙⲁ ⲛⲟⲩⲗⲁⲥ ⲛⲛⲟⲩⲃ ⲉⲧⲉⲕⲧⲁⲡⲣⲟ ⲕⲙⲡϣⲁ ⲛⲟⲩⲗⲁⲥ ⲛⲱⲛⲉ ⲙⲙⲉ ⲉϥⲧⲁⲉⲓⲏⲩ ⲡⲁⲣⲁⲡⲛⲟⲩⲃ ⲛⲟⲩⲙⲏⲏϣⲉ ⲛⲕⲱⲃ ⲛⲥⲟⲡ ϫⲉⲛⲧⲟⲕ ⲟⲩϣⲟⲩ ϯⲙⲁⲛⲛⲁ .......",
+      "english": "...",
+      "source": "Life of John Chrysostom (Giron Sacr of Abraham)",
+      "urn": "urn:cts:copticLit:lives.chrysostom.giron_ed:400-405",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲣ",
+        1,
+        12.303
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        1,
+        10.094
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        10.065
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        8.298
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲫⲁⲕⲓⲁⲣⲓⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          "ⲫⲁⲕⲓⲁⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲫⲁⲕⲓⲁⲣⲓⲟⲛ_0_node",
+          "ⲛⲧⲟⲟⲧ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          "ⲥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲛⲧⲟⲟⲧ",
+          "ⲛⲁⲓ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲫⲁⲕⲓⲁⲣⲓⲟⲛ",
+          "ⲛⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧ_2_post_ⲛⲁⲓ",
+          "ⲁ_4_post_ⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6996,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2286",
+    "grl_lemma": "φακιάλιον",
+    "grl_meaning": "towel, face cloth, turban",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 1133a; LSJ 1913b; Preisigke 2:683"
+  }
+}

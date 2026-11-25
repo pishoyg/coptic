@@ -1,0 +1,164 @@
+{
+  "id": "C4580",
+  "forms": [
+    {
+      "id": "CF11117",
+      "orth": "ⲧⲁⲥⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8948,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5169",
+      "bibliography": "CD 436a; KoptHWb 247"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲧⲟϭⲕ ⲛⲟⲩⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲛϥⲁⲓⲟⲩⲧⲁϩ ⲧⲏⲣⲥ ⲙⲙⲉ ⲛⲁϣ ⲛϩⲉ ⲁⲣⲕⲧⲟ ⲉⲩⲥⲓϣⲉ ⲧⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲉⲛ**ⲧⲁⲥⲣ** ϣⲙⲙⲱ",
+      "english": "Yet I planted thee a fruitful vine, entirely of the right sort: how art thou a strange vine turned to bitterness!",
+      "source": "Jeremiah 2",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛ**ⲧⲁⲥⲣ**ⲛⲁⲓ ⲛⲉ ϩⲙⲡⲧⲣⲉⲡⲟⲣⲛⲉⲩⲉ ⲉⲟⲩⲁϩⲉ ⲛⲥⲁⲛϩⲉⲑⲛⲟⲥ ⲁⲩⲱ ⲉϫⲱϩⲙ ϩⲣⲁⲓ ϩⲙⲡⲟⲩⲱϣ ⲛϩⲏⲧ",
+      "english": "brought this upon thee, in that thou wentest a-whoring after the nations, and didst defile thyself with their devices.",
+      "source": "Ezekiel 23",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲁⲁⲧⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ϣⲙⲙⲱ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲛⲧⲁⲥⲉⲃⲏⲥ",
+        1,
+        14.791
+      ],
+      [
+        "ⲡⲟⲣⲛⲉⲓⲁ",
+        1,
+        12.5
+      ],
+      [
+        "ⲉⲗⲟⲟⲗⲉ",
+        1,
+        11.753
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        11.017
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        10.587
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        10.292
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        9.894
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲧⲁⲥⲣ",
+          1
+        ],
+        [
+          "ⲧⲁⲥⲣ_0_node",
+          1
+        ],
+        [
+          "ϣⲙⲙⲱ_1_post_ⲧⲁⲥⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲧⲁⲥⲣ",
+          "ⲧⲁⲥⲣ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲥⲣ_0_node",
+          "ϣⲙⲙⲱ_1_post_ⲧⲁⲥⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8496,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "854592",
+    "egy_lemma": "ḏsr",
+    "english": "segregate",
+    "german": "absondern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854592"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "C4404",
+  "forms": [
+    {
+      "id": "CF10760",
+      "orth": "ⲡⲁⲡⲧⲁⲡ ⲛⲟⲩⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4988",
+      "bibliography": "CD 422a; CDC 66b; KoptHWb 239; DELC 218b; ChLCS 59b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2785",
+      "type": "cf",
+      "label": "possessive prefix sg. m."
+    },
+    {
+      "target": "C5190",
+      "type": "cf",
+      "label": "single, alone, any, one and same"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4405",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "sound trumpet"
+    },
+    {
+      "target": "C4406",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "N",
+      "gloss": "act of sounding trumpet"
+    },
+    {
+      "target": "C4403",
+      "label": "ⲧⲁⲡ",
+      "pos": "N",
+      "gloss": "horn; trumpet"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "id": "C8119",
+  "forms": [
+    {
+      "id": "CF18472",
+      "orth": "ⲁⲓⲛⲓⲅⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18473",
+      "orth": "ⲁⲓⲛⲓⲅⲙⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18474",
+      "orth": "ⲁⲓⲛⲓⲅⲙⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18475",
+      "orth": "ⲁⲓⲛⲓⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3513,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF18476",
+      "orth": "ⲉⲛⲓⲅⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9109",
+      "bibliography": "DDGLC",
+      "cu_ID": "89"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲁⲩⲟ ⲙⲡⲉⲓ**ⲁⲓⲛⲓⲅⲙⲁ** · ⲛϯϩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲣⲱⲙⲉ ⲙⲡϩⲟⲟⲩ ⲉⲣⲉⲛⲉϥⲃⲁⲗ ⲟⲩⲱⲛ ⲉⲙⲛⲗⲁⲁⲩ ⲛⲕⲁⲕⲉ ⲡⲓⲣⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ · ⲛϥϩⲉⲃⲥⲛⲉϥⲃⲁⲗ ⲙⲡⲉϩⲟⲟⲩ ⲙⲛⲧⲉⲩϣⲏ ⲡϥⲙⲟⲟϣⲉ ϩⲱⲥ ⲃⲗⲗⲉ · ⲕⲁⲓ ⲡⲉⲧⲉⲣⲉⲛⲉϥⲃⲁⲗ ⲉⲩⲟ ⲛⲟⲩⲟⲉⲓⲛ ·",
+      "english": "and he uttered the following riddle, saying thus : This day, a man whose eyes were open, a man whose eyes had no darkness (in them), and who saw clearly, covered up his eyes by day and by night, and walked about like a blind man, although his eyes possessed the faculty of sight.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲁⲛⲁⲩ ⲉⲣⲟϥ ⲁⲛ ϩⲓⲧⲛⲟⲩ**ⲁⲓⲛⲓⲅⲙⲁ** · ⲁⲗⲗⲁ ⲉⲛⲁⲑⲉⲱⲣⲉⲓ ⲙⲙⲟϥ ⲟⲛ ⲛⲧϩⲉ ⲉⲧϥϣⲟⲟⲡ ⲙⲙⲟⲥ · ϩⲛⲛⲉⲛⲃⲁⲗ ⲙⲙⲓⲛⲙⲙⲟⲛ ⲕⲁⲧⲁⲧⲙⲛⲧⲙⲛⲧⲣⲉ ⲙⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲣⲉϥϣⲁϫⲉ ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "We shall not see Him in a riddle, but we shall | see Him as He really is, with our own eyes, according to the testimony of the Apostle John, who preached concerning God.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁϣⲓⲛⲉ ⲛⲥⲁⲙⲡⲉⲧϩⲏⲡ ⲛⲙⲡⲁⲣϩⲟⲓⲙⲓⲁ ⲁⲩⲱ ϥⲛⲁⲃⲱⲕ ϩⲛⲛ**ⲁⲓⲛⲓⲅⲙⲁ** ⲛⲙⲡⲁⲣⲁⲃⲟⲗⲏ",
+      "english": "He will seek out the secrets of grave sentences, and be conversant in dark parables.",
+      "source": "Sirach 39",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲣⲁⲧⲓⲅⲙⲁ",
+        1,
+        17.276
+      ],
+      [
+        "ⲡⲁⲣⲁⲃⲟⲗⲏ",
+        4,
+        16.189
+      ],
+      [
+        "ⲣⲱϣⲉ",
+        2,
+        13.604
+      ],
+      [
+        "ⲉⲧⲉⲧ",
+        1,
+        13.189
+      ],
+      [
+        "ⲁⲣⲁ",
+        2,
+        13.009
+      ],
+      [
+        "ⲛ",
+        16,
+        12.487
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        11.319
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        10.752
+      ],
+      [
+        "ⲃⲱⲕ",
+        3,
+        10.377
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        1,
+        9.784
+      ],
+      [
+        "ⲙⲡⲉ",
+        2,
+        9.779
+      ],
+      [
+        "ⲛⲟⲉⲓ",
+        1,
+        9.714
+      ],
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        9.475
+      ],
+      [
+        "ⲡⲱϩ",
+        1,
+        9.232
+      ],
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        9.067
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        1,
+        8.986
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        8.545
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        7.704
+      ],
+      [
+        "ⲉ",
+        4,
+        7.495
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        7.275
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          10
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲃⲟⲗⲏ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲛⲉⲩ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          "ⲛ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲁⲣⲁⲃⲟⲗⲏ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ϩⲉⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲓⲛⲓⲅⲙⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲓⲛⲓⲅⲙⲁ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3147,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "2448",
+    "grl_lemma": "αἴνιγμα",
+    "grl_meaning": "dark saying, riddle",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 39b"
+  }
+}

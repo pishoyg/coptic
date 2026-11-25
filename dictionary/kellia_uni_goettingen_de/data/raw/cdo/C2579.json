@@ -1,0 +1,108 @@
+{
+  "id": "C2579",
+  "forms": [
+    {
+      "id": "CF6950",
+      "orth": "ⲛⲁⲩ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2960",
+      "bibliography": "CD 234a; KoptHWb 130; ChLCS 33b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲛⲁⲗ ϥⲓ ⲛⲛⲉⲧⲛⲃⲁⲗ ⲉϩⲣⲁⲓ ⲛⲃⲗⲗⲉ **ⲉⲩⲛⲁⲩ **ⲉⲃⲟⲗ****",
+      "english": "Hear, ye deaf, and look up, ye blind, to see.",
+      "source": "Isaiah 42",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲟⲩⲱϣⲃ ⲇⲉ ⲛⲁϥ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩ ⲡⲉⲧⲕⲟⲩⲁϣϥ ⲉⲧⲣⲁⲁⲁϥ ⲛⲁⲕ . ⲡⲃⲗⲗⲉ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉϩⲣⲁⲃⲃⲟⲩⲛⲉⲓ ⲉⲓⲟⲩⲱϣ **ⲛⲁⲩ **ⲉⲃⲟⲗ**** .",
+      "english": "Jesus asked him, &apos;What do you want me to do for you?&apos; The blind man said to him, &apos;Rhabboni, that I may see again.&apos;",
+      "source": "Mark Chapter 10",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲃⲗⲗⲉ **ⲁϥⲧⲣⲉⲩⲛⲁⲩ **ⲉⲃⲟⲗ**** · ⲙⲛⲛⲕⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲛⲁⲓ ⲉⲧⲉⲛⲟ ⲕⲏ ⲛⲁⲛ ⲁⲛ ⲉϩⲣⲁⲓ ⲉⲧⲣⲉⲛⲧⲁⲩⲟⲟⲩ ⲟⲩⲁ ⲟⲩⲁ ·",
+      "english": "He made the blind to see, besides all these other healiugs which we put aside and do not attempt and describe one by one.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2587",
+      "label": "ϭⲓⲛⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight, vision"
+    },
+    {
+      "target": "C2588",
+      "label": "ϭⲓⲛⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight, vision"
+    },
+    {
+      "target": "C2585",
+      "label": "ⲁⲧⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "unseen, unseeing (+ ⲉ-)"
+    },
+    {
+      "target": "C2583",
+      "label": "ⲙⲉⲧⲁⲑⲛⲁⲩ ⲙⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sightlessnees"
+    },
+    {
+      "target": "C2578",
+      "label": "ⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "look, behold"
+    },
+    {
+      "target": "C2584",
+      "label": "ⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sight, view, vision"
+    },
+    {
+      "target": "C2582",
+      "label": "ⲛⲁⲩ (ⲙⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "see (contrary to: not see, be blind)"
+    },
+    {
+      "target": "C2580",
+      "label": "ⲛⲁⲩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sight (power to see)"
+    },
+    {
+      "target": "C2586",
+      "label": "ⲣⲉϥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "seer"
+    },
+    {
+      "target": "C2581",
+      "label": "ⲣⲉϥⲛⲁⲩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "seer"
+    }
+  ]
+}

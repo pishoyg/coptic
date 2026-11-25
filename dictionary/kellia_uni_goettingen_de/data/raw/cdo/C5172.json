@@ -1,0 +1,50 @@
+{
+  "id": "C5172",
+  "forms": [
+    {
+      "id": "CF12310",
+      "orth": "ⲟⲩⲁⲥϥ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5810",
+      "bibliography": "CD 493a; KoptHWb 278; DELC 238a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5174",
+      "label": "ⲟⲩⲁⲥϥⲉ",
+      "pos": "N",
+      "gloss": "idleness, inaction"
+    },
+    {
+      "target": "C5170",
+      "label": "ⲟⲩⲱⲥϥ",
+      "pos": "V",
+      "gloss": "be idle, be lazy, be brought to naught; leave idle, leave barren, annul"
+    },
+    {
+      "target": "C5173",
+      "label": "ⲟⲩⲱⲥϥ",
+      "pos": "N",
+      "gloss": "idleness, ceasing"
+    },
+    {
+      "target": "C5171",
+      "label": "ⲟⲩⲱⲥϥ ⲉ-",
+      "pos": "V",
+      "gloss": "wait upon, for; busy oneself"
+    }
+  ]
+}

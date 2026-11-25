@@ -1,0 +1,200 @@
+{
+  "id": "C2140",
+  "forms": [
+    {
+      "id": "CF5988",
+      "orth": "ⲙⲟⲩⲧⲛ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲙⲉⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4896,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲙⲟⲧⲛ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1569,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ⲙⲁⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13941,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲟⲧⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1751,
+        "count": 19
+      }
+    },
+    {
+      "orth": "ⲙⲁⲧⲛ⸗",
+      "dialect": "F",
+      "id": "1118.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2478",
+      "bibliography": "CD 195b; KoptHWb 105; ChLCS 29a"
+    },
+    {
+      "id": "CS2479",
+      "bibliography": "CD 195b-196a; KoptHWb 105; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲟⲩⲁ ⲇⲉ ⲉⲓⲛⲉ ⲛⲁⲩ ⲛⲟⲩϣⲏⲙ ⲛⲧⲃⲧ ⲁⲩⲱ ⲁϥⲟⲩⲱϣ ⲛϭⲓⲁⲡⲁ ϩⲁⲧⲣⲉ ⲉ**ⲙⲟⲧⲛ**ⲉϥ ⲛⲁⲡⲁ ϩⲱⲣ ·",
+      "english": "Someone brought a small fish to them and he, namely Apa Hatre, wanted to relieve Apa Or.",
+      "source": "Apophthegmata Patrum Sahidic 115: Pistus 1",
+      "urn": "urn:cts:copticLit:ap.115.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩ**ⲙⲟⲧⲛ**ϥ ⲁⲩⲣⲓⲙⲉ ⲉⲣⲟϥ ⲉⲙⲁⲧⲉ ·",
+      "english": "And they laid him to rest and they cried for him greatly.",
+      "source": "Apophthegmata Patrum Sahidic 093: Anonymous Nau 279",
+      "urn": "urn:cts:copticLit:ap.93.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6609,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2139",
+      "label": "ϩⲛⲟⲩⲙⲟⲧⲛⲉⲥ",
+      "pos": "ADV",
+      "gloss": "with ease, easily"
+    },
+    {
+      "target": "C2131",
+      "label": "ϩⲛⲟⲩⲙⲧⲟⲛ",
+      "pos": "ADV",
+      "gloss": "with ease, easily"
+    },
+    {
+      "target": "C2136",
+      "label": "ϫⲓⲙⲧⲟⲛ",
+      "pos": "V",
+      "gloss": "get rest, be at ease"
+    },
+    {
+      "target": "C2133",
+      "label": "ϭⲓⲛⲙⲧⲟⲛ",
+      "pos": "N",
+      "gloss": "resting, death"
+    },
+    {
+      "target": "C2135",
+      "label": "ϯⲙⲧⲟⲛ (ⲛ-)",
+      "pos": "V",
+      "gloss": "set at ease, content, set a pause"
+    },
+    {
+      "target": "C2132",
+      "label": "ⲁⲧⲉⲙⲧⲟⲛ",
+      "pos": "N",
+      "gloss": "unquiet"
+    },
+    {
+      "target": "C2130",
+      "label": "ⲙⲁⲓⲙⲧⲟⲛ",
+      "pos": "N",
+      "gloss": "one who loves ease"
+    },
+    {
+      "target": "C2137",
+      "label": "ⲙⲟⲧⲛ",
+      "pos": "N",
+      "gloss": "health, ease"
+    },
+    {
+      "target": "C2138",
+      "label": "ⲙⲟⲧⲛⲉⲥ",
+      "pos": "N",
+      "gloss": "ease, contentment; satisfaction"
+    },
+    {
+      "target": "C2122",
+      "label": "ⲙⲧⲟⲛ",
+      "pos": "V",
+      "gloss": "be at rest, at ease, be relieved (from sickness); rest self; go to rest, die"
+    },
+    {
+      "target": "C2123",
+      "label": "ⲙⲧⲟⲛ",
+      "pos": "VSTAT",
+      "gloss": "easy, hale, satisfied"
+    },
+    {
+      "target": "C2129",
+      "label": "ⲙⲧⲟⲛ",
+      "pos": "N",
+      "gloss": "rest, ease, relief"
+    },
+    {
+      "target": "C2124",
+      "label": "ⲙⲧⲟⲛ (ⲉ-)",
+      "pos": "VSTAT",
+      "gloss": "easy to, to be"
+    },
+    {
+      "target": "C2125",
+      "label": "ⲙⲧⲟⲛ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rest upon, be satisfied with"
+    },
+    {
+      "target": "C2126",
+      "label": "ⲙⲧⲟⲛ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "rest upon, be satisfied with"
+    },
+    {
+      "target": "C2127",
+      "label": "ⲙⲧⲟⲛ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be at rest, be content"
+    },
+    {
+      "target": "C2128",
+      "label": "ⲙⲧⲟⲛ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "rest, satisfaction"
+    },
+    {
+      "target": "C2134",
+      "label": "ⲣⲙⲧⲟⲛ",
+      "pos": "V",
+      "gloss": "be, set at rest, ease"
+    }
+  ]
+}

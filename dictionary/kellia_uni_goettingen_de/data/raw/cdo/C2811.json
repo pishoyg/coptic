@@ -1,0 +1,51 @@
+{
+  "id": "C2811",
+  "forms": [
+    {
+      "id": "CF7468",
+      "orth": "ⲡⲁⲕⲉ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3214",
+      "bibliography": "CD 261a; CED 125; KoptHWb 145; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2812",
+      "label": "ⲡⲁⲕϩⲏⲧ",
+      "pos": "N",
+      "gloss": "faint-hearted"
+    },
+    {
+      "target": "C2809",
+      "label": "ⲡⲁⲕⲉ",
+      "pos": "V",
+      "gloss": "be, become light, thin; grow small"
+    },
+    {
+      "target": "C2810",
+      "label": "ⲡⲁⲕⲉ",
+      "pos": "N",
+      "gloss": "lightness"
+    },
+    {
+      "target": "C2813",
+      "label": "ⲡⲟⲕϥ",
+      "pos": "N",
+      "gloss": "thin sheet, plate"
+    }
+  ]
+}

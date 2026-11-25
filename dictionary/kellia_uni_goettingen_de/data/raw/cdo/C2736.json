@@ -1,0 +1,84 @@
+{
+  "id": "C2736",
+  "forms": [
+    {
+      "id": "CF7289",
+      "orth": "ϯⲟⲃ",
+      "dialect": "S",
+      "oRef": "ϯ ⲟⲃ"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3130",
+      "bibliography": "CD 254a; KoptHWb 139; ChLCS 35b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲃⲇⲟⲙⲁⲥ",
+        1,
+        16.888
+      ],
+      [
+        "ϥⲱϯ",
+        1,
+        12.695
+      ],
+      [
+        "ⲙⲉⲛⲉⲛⲥⲁ",
+        1,
+        11.298
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        10.5
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.22
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        7.634
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2735",
+      "label": "ⲟⲃ",
+      "pos": "N",
+      "gloss": "disgust(?), revulsion(?)"
+    }
+  ]
+}

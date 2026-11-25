@@ -1,0 +1,146 @@
+{
+  "id": "C10616",
+  "forms": [
+    {
+      "id": "CF28691",
+      "orth": "ⲥⲩⲛⲇⲟⲛⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF28692",
+      "orth": "ⲥⲩⲛⲇⲟⲛⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3846,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF28693",
+      "orth": "ⲥⲩⲛⲧⲱⲛⲓⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14467",
+      "bibliography": "DDGLC",
+      "cu_ID": "2861"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲣⲉⲟⲩⲟⲛ ⲟⲩϧⲉⲗϣⲓⲣⲓ ⲙⲟϣⲓ ⲛⲥⲱϥ ⲉϥϫⲏⲗ ⲛⲟⲩ**ⲥⲩⲛⲇⲟⲛⲓⲟⲛ** ⲉϫⲉⲛⲡⲉϥⲃⲱϣ ⲟⲩⲟϩ ⲁⲩⲁⲙⲟⲛⲓ ⲙⲙⲟϥ",
+      "english": "A certain young man followed him, having a linen cloth thrown around himself, over his naked body. The young men grabbed him,",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁϥⲥⲱϫⲡ ⲛϯ**ⲥⲩⲛⲇⲟⲛⲓⲟⲛ** ⲁϥⲫⲱⲧ ⲉϥⲃⲏϣ .",
+      "english": "but he left the linen cloth, and fled from them naked.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲏⲗ",
+        2,
+        18.373
+      ],
+      [
+        "ⲃⲱϣ",
+        2,
+        15.788
+      ],
+      [
+        "ⲫⲱⲧ",
+        2,
+        13.187
+      ],
+      [
+        "ⲥⲱϫⲡ",
+        2,
+        12.571
+      ],
+      [
+        "ϥ",
+        6,
+        10.179
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        2,
+        9.414
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        9.04
+      ],
+      [
+        "ⲛ",
+        4,
+        8.591
+      ],
+      [
+        "ϯ",
+        2,
+        7.29
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        6.08
+      ],
+      [
+        "ⲉ",
+        2,
+        6.017
+      ],
+      [
+        "ⲁ",
+        2,
+        5.989
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲇⲟⲛⲓⲟⲛ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3424,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "1966",
+    "grl_lemma": "σινδόνιον",
+    "grl_meaning": "curtain, garment (of linen)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1599b; Preisigke 2:460"
+  }
+}

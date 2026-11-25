@@ -1,0 +1,119 @@
+{
+  "id": "C1335",
+  "forms": [
+    {
+      "id": "CF4079",
+      "orth": "ⲕⲟⲣϣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17259,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1544",
+      "bibliography": "CD 118a; KoptHWb 69; ChLCS 18b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϣⲁϫⲉ ⲙⲡ**ⲕⲟⲣϣϥ** ϭⲏⲛ ⲛⲁⲓ ⲇⲉ ⲣⲱϩⲧ ⲉϩⲟⲩⲛ ⲉⲛⲧⲁⲙⲉⲓⲟⲛ ⲛⲧϩⲏ",
+      "english": "The words of cunning knaves are soft; but they smite even to the inmost parts of the bowels.",
+      "source": "Proverbs 26",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲏⲛ",
+        1,
+        16.35
+      ],
+      [
+        "ⲣⲱϩⲧ",
+        1,
+        13.954
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16868,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1334",
+      "label": "ϭⲓⲛⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "flattery, cajolery"
+    },
+    {
+      "target": "C1330",
+      "label": "ⲕⲱⲣϣ",
+      "pos": "V",
+      "gloss": "request, persuade, cajole"
+    },
+    {
+      "target": "C1331",
+      "label": "ⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "entreaty, persuasion"
+    },
+    {
+      "target": "C1333",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "flattery"
+    },
+    {
+      "target": "C1332",
+      "label": "ⲣⲉϥⲕⲱⲣϣ",
+      "pos": "N",
+      "gloss": "flatterer"
+    }
+  ]
+}

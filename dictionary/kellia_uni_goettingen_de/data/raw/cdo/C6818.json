@@ -1,0 +1,198 @@
+{
+  "id": "C6818",
+  "forms": [
+    {
+      "id": "CF15685",
+      "orth": "ⲣϩⲣⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17944,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7533",
+      "bibliography": "CD 705a; KoptHWb 389; ChLCS 94b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ ϫⲉϫⲁⲕ ⲛⲧⲉⲕϭⲓϫ ⲛⲅ**ⲣϩⲣⲟⲟⲩ** ⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ ⲛⲅϫⲟⲟⲥ ϫⲉⲉⲩⲅⲉ ⲉⲩⲅⲉ ⲉϫⲛⲛⲃⲟⲧⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲥⲉⲛⲁϩⲉ ϩⲛⲧⲥⲏϥⲉ ⲙⲛⲡⲙⲟⲩ ⲙⲛⲡϩⲉⲃⲱⲱⲛⲉ",
+      "english": "Thus saith the Lord; Clap with thy hand, and stamp with thy foot and say, Aha, aha! for all the abominations of the house of Israel: they shall fall by the sword, and by pestilence, and by famine.",
+      "source": "Ezekiel 6",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲕ",
+        2,
+        12.87
+      ],
+      [
+        "ⲟⲩⲉⲣⲏⲧⲉ",
+        1,
+        12.071
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        9.974
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲣϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲣϩⲣⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲣⲏⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣϩⲣⲟⲟⲩ",
+          "ⲅ_1_pre_ⲣϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲣϩⲣⲟⲟⲩ",
+          "ⲣϩⲣⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲣϩⲣⲟⲟⲩ_0_node",
+          "ⲛ_1_post_ⲣϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣϩⲣⲟⲟⲩ",
+          "ⲧⲉⲕ_3_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          "ⲟⲩⲉⲣⲏⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17563,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6821",
+      "label": "ϥⲓϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "raise voice"
+    },
+    {
+      "target": "C6815",
+      "label": "ϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voice, sound"
+    },
+    {
+      "target": "C12091",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C12092",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C6822",
+      "label": "ϩⲣⲟⲩⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "voice of sky, thunder"
+    },
+    {
+      "target": "C6823",
+      "label": "ϩⲣⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "great voice, boastful talk"
+    },
+    {
+      "target": "C6820",
+      "label": "ϯϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give, utter voice"
+    },
+    {
+      "target": "C6816",
+      "label": "ⲁⲧϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voiceless"
+    },
+    {
+      "target": "C6817",
+      "label": "ⲛⲟⲩϫⲉϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "allow a cry (\"throw voice\")"
+    },
+    {
+      "target": "C6819",
+      "label": "ⲥⲉⲕϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw sound, snort"
+    }
+  ]
+}

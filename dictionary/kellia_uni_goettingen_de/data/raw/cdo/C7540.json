@@ -1,0 +1,400 @@
+{
+  "id": "C7540",
+  "forms": [
+    {
+      "id": "CF32144",
+      "orth": "ϫⲱϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6194,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF32143",
+      "orth": "ϫⲱⲱϭⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϫⲱϫⲉ",
+      "dialect": "S",
+      "id": "2505.1"
+    },
+    {
+      "orth": "ϫⲉϭ-",
+      "dialect": "S",
+      "id": "2505.2"
+    },
+    {
+      "orth": "ϫⲟϭ⸗",
+      "dialect": "S",
+      "id": "2505.3"
+    },
+    {
+      "orth": "ϫⲟϫ⸗",
+      "dialect": "S",
+      "id": "2505.4"
+    },
+    {
+      "orth": "ϫⲁⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3964,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϫⲏϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8524,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲱϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6898,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲟϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11203,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲏϫ†",
+      "dialect": "B",
+      "id": "2505.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8358",
+      "bibliography": "CD 800b-801a"
+    },
+    {
+      "id": "CS8359",
+      "bibliography": "CD 800b-801a; CED 324; KoptHWb 444, 573; DELC 335b; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϩⲛⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲡⲉϥϩⲏⲧ ⲁⲩϯ ⲙⲙⲟϥ ⲙⲛⲛⲑⲏⲣⲓⲟⲛ ⲁⲩⲱ ⲡⲉϥⲙⲁ ⲛⲟⲩⲱϩ ⲙⲛⲛⲉⲓⲁ ⲛⲧⲟⲟⲩ ⲁⲩⲧⲙⲙⲟϥ ⲭⲟⲣⲧⲟⲥ ⲛⲧϩⲉ ⲛⲟⲩⲙⲁⲥⲉ ⲡⲉϥⲥⲱⲙⲁ ⲁϥ**ϫⲱϭⲉ** ⲉⲃⲟⲗ ϩⲛⲛⲉⲓⲱⲧⲉ ⲛⲧⲡⲉ ϣⲁⲛⲧϥ ⲉⲓⲙⲉ ϫⲉⲡⲛⲟⲩⲧⲉ ⲉⲧϫⲟⲥⲉ ⲉⲧⲟⲩⲟⲓ ⲛϫⲟⲉⲓⲥ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲛⲛⲣⲱⲙⲉ",
+      "english": "And he was driven forth from men; and his heart was given him after the nature of wild beasts, and his dwelling was with the wild asses; and they fed him with grass as an ox, and his body was bathed with the dew of heaven; until he knew that the most high God is Lord of the kingdom of men, and will give it to whomsoever he shall please.",
+      "source": "Daniel 5",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥϫⲉϭⲥⲟⲣⲧ",
+        1,
+        20.598
+      ],
+      [
+        "ⲩϫⲏϭ",
+        1,
+        20.598
+      ],
+      [
+        "ⲁⲩⲉⲓⲛ",
+        1,
+        16.428
+      ],
+      [
+        "ⲉⲓⲱⲧⲉ",
+        1,
+        15.276
+      ],
+      [
+        "ⲁⲩⲁⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ϣⲱⲗ",
+        1,
+        13.912
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ⲛ",
+        4,
+        9.809
+      ],
+      [
+        "ϩⲛ",
+        2,
+        9.479
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϫⲱϭⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϫⲱϭⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲱϭⲉ",
+          2
+        ],
+        [
+          "ⲣⲉϥϫⲉϭⲥⲟⲣⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲉⲓⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲁⲛ_3_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲱϭⲉ_b",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ϫⲱϭⲉ",
+          "ϩⲉⲛ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϫⲱϭⲉ",
+          "ⲟⲩ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲱϭⲉ",
+          "ϫⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲱϭⲉ_0_node",
+          "ⲛ_1_post_ϫⲱϭⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϫⲱϭⲉ",
+          "ⲣⲉϥϫⲉϭⲥⲟⲣⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϫⲱϭⲉ",
+          "ϫⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲱϭⲉ",
+          "ⲁⲩⲉⲓⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲉⲓⲛ_2_post_ⲛ",
+          "ⲁⲩⲁⲛ_3_post_ⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲁⲛ_3_post_ⲉⲓⲟⲡⲉ",
+          "ⲛ_1_post_ϫⲱϭⲉ_b",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲱϭⲉ",
+          "ϥ_1_pre_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱϭⲉ",
+          "ϫⲱϭⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲱϭⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϫⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϫⲱϭⲉ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17766,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7547",
+      "label": "ϫϭⲓⲧ",
+      "pos": "N",
+      "gloss": "dyer"
+    },
+    {
+      "target": "C7543",
+      "label": "ϫⲏϭⲉ",
+      "pos": "N",
+      "gloss": "purple dye"
+    },
+    {
+      "target": "C7544",
+      "label": "ϫⲏϭⲉ",
+      "pos": "N",
+      "gloss": "purple"
+    },
+    {
+      "target": "C7541",
+      "label": "ϫⲱϭⲉ",
+      "pos": "N",
+      "gloss": "colour, dye"
+    },
+    {
+      "target": "C7545",
+      "label": "ⲉⲓⲉⲡϫⲏϭⲉ",
+      "pos": "N",
+      "gloss": "purple embroidery"
+    },
+    {
+      "target": "C7542",
+      "label": "ⲣⲉϥϫⲱϭⲉ",
+      "pos": "N",
+      "gloss": "dyer"
+    },
+    {
+      "target": "C7546",
+      "label": "ⲥⲁ ⲛϫⲏϭⲉ",
+      "pos": "N",
+      "gloss": "purple seller"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm3206",
+    "demo_lemma": "ṯk",
+    "english": "[to color, dye]",
+    "german": "bemalen, färben",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3206"
+  }
+}

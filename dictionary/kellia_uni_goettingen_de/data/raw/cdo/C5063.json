@@ -1,0 +1,62 @@
+{
+  "id": "C5063",
+  "forms": [
+    {
+      "id": "CF12091",
+      "orth": "ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "EXIST",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS5694",
+      "bibliography": "CD 482b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5058",
+      "label": "ⲕⲉⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone else, something else"
+    },
+    {
+      "target": "C5059",
+      "label": "ⲗⲁⲁⲩ ⲛⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "any one"
+    },
+    {
+      "target": "C5062",
+      "label": "ⲙⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is not one, any"
+    },
+    {
+      "target": "C5061",
+      "label": "ⲟⲩⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is someone"
+    },
+    {
+      "target": "C5057",
+      "label": "ⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone, something"
+    },
+    {
+      "target": "C5060",
+      "label": "ⲟⲩⲟⲛ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "every one"
+    }
+  ]
+}

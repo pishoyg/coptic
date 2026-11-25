@@ -1,0 +1,55 @@
+{
+  "id": "C5191",
+  "forms": [
+    {
+      "id": "CF12349",
+      "orth": "ⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5832",
+      "bibliography": "CD 494a; CED 217; KoptHWb 279; DELC 239a; ChLCS 69a"
+    },
+    {
+      "id": "CS5833",
+      "bibliography": "CD 494a; CED 217; KoptHWb 279; DELC 239a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12406",
+      "type": "cf",
+      "label": "one, someone"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5192",
+      "label": "ⲙⲛⲧⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "unity"
+    },
+    {
+      "target": "C5190",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single, alone, any, one and same"
+    },
+    {
+      "target": "C5193",
+      "label": "ⲣⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "V",
+      "gloss": "make one"
+    }
+  ]
+}

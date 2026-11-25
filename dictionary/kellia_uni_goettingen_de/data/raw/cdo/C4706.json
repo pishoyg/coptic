@@ -1,0 +1,165 @@
+{
+  "id": "C4706",
+  "forms": [
+    {
+      "id": "CF11375",
+      "orth": "ⲧⲁϣⲉϣⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18697,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5314",
+      "bibliography": "KoptHWb 255; ChLCS 63b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣ**ⲧⲁϣⲉϣⲁϫⲉ** ⲙⲛⲟⲩⲥⲟϭ ⲁⲩⲱ ⲙⲡⲣⲃⲱⲕ ⲉⲣⲁⲧϥ ⲛⲟⲩⲁⲧϩⲏⲧ ⲁⲣⲉϩ ⲉⲣⲟⲕ ⲉⲣⲟϥ ϫⲉⲕⲁⲥ ⲛⲛⲉⲕϣⲡϩⲓⲥⲉ ⲁⲩⲱ ⲛⲛⲉⲕⲧⲱⲗⲙ ⲉϥϣⲁⲛⲛⲉϩϥ ⲉⲃⲟⲗ ⲥⲁϩⲱⲕ ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲧⲁⲣⲉⲕϩⲉ ⲉⲩⲙⲧⲟⲛ ⲁⲩⲱ ⲛⲛⲉⲕⲙⲕⲁϩ ⲛϩⲏⲧ ϩⲛⲧⲉϥⲁⲡⲟⲛⲟⲓⲁ",
+      "english": "Talk not much with a fool, and go not to him that hath no understanding: beware of him, lest thou have trouble, and thou shalt never be defiled with his fooleries: depart from him, and thou shalt find rest, and never be disquieted with madness.",
+      "source": "Sirach 22",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟϭ",
+        1,
+        14.469
+      ],
+      [
+        "ⲁϩⲉ",
+        1,
+        10.647
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        10.036
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁϣⲉϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲧⲁϣⲉϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ⲧⲁϣⲉϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲧ_2_post_ⲃⲱⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁϣⲉϣⲁϫⲉ",
+          "ⲧⲁϣⲉϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁϣⲉϣⲁϫⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲃⲱⲕ",
+          "ⲙⲡⲣ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_1_post_ⲧⲁϣⲉϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ⲧⲁϣⲉϣⲁϫⲉ",
+          "ⲉⲣⲁⲧ_2_post_ⲃⲱⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18316,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6217",
+      "type": "cf",
+      "label": "saying, word, affair"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4705",
+      "label": "ⲧⲁϣⲉⲟⲩⲱϣⲃ",
+      "pos": "V",
+      "gloss": "reply"
+    },
+    {
+      "target": "C4703",
+      "label": "ⲧⲁϣⲟ",
+      "pos": "V",
+      "gloss": "increase"
+    }
+  ]
+}

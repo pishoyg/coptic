@@ -1,0 +1,335 @@
+{
+  "id": "C6314",
+  "forms": [
+    {
+      "id": "CF14639",
+      "orth": "ϧⲉⲙⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1545,
+        "count": 24
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7003",
+      "bibliography": "CD 630b; KoptHWb 373"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲡⲓⲕⲁϩⲓ ⲙⲙⲁⲩⲁⲧϥ ϯⲟⲩⲧⲁϩ ⲛϣⲟⲣⲡ ⲛⲟⲩⲥⲓⲙ ⲓⲧⲁ ⲟⲩ**ϧⲉⲙⲥ** ⲓⲧⲁ ϣⲁϥⲙⲟϩ ⲛϫⲉⲫⲏ ⲉⲧϧⲉⲛⲡⲓϧⲉⲙⲥ",
+      "english": "For the earth bears fruit: first the blade, then the ear, then the full grain in the ear.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁϥⲥⲓⲛⲓ ϧⲉⲛⲛⲓⲥⲁⲃⲃⲁⲧⲟⲛ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲟⲩ ⲛⲛⲓⲣⲟϯ ⲟⲩⲟϩ ⲛⲁⲣⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϥⲱϫⲓ ⲛⲛⲓ**ϧⲉⲙⲥ** ⲉⲩⲥⲁϩⲥⲁϩ ⲙⲙⲱⲟⲩ ϧⲉⲛⲛⲟⲩϫⲓϫ ⲟⲩⲟϩ ⲉⲩⲟⲩⲱⲙ ⲙⲙⲱⲟⲩ",
+      "english": "Now it happened on the second Sabbath after the first, that he was going through the grain fields. His disciples plucked the heads of grain, and ate, rubbing them in their hands.",
+      "source": "03_Luke_06",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲍ ⲛⲉϩⲉ ⲉⲑⲛⲁⲛⲉⲩ ⲍ ⲛⲣⲟⲙⲡⲓ ⲛⲉ ⲟⲩⲟϩ ⲡⲓⲍ ⲛ**ϧⲉⲙⲥ** ⲉⲑⲛⲁⲛⲉⲩ ⲍ ⲛⲣⲟⲙⲡⲓ ⲛⲉ ⲧⲣⲁⲥⲟⲩⲓ ⲙⲫⲁⲣⲁⲱ ⲟⲩⲓ ⲧⲉ",
+      "english": "The seven good cows are seven years, and the seven good ears are seven years; the dream of Pharao is one.",
+      "source": "01_Genesis_41",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϧⲉⲙⲥ_0_node",
+          22
+        ],
+        [
+          "ⲓⲧⲁ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲍ_1_pre_ϧⲉⲙⲥ",
+          7
+        ],
+        [
+          "ⲉ_1_post_ϧⲉⲙⲥ",
+          4
+        ],
+        [
+          "ⲩ_3_post_ϣⲟⲙ",
+          2
+        ],
+        [
+          "ϣⲟⲙ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲉ_3_post_ϣⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲍ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲥⲟⲧⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲓⲥ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲍ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_6_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲛⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_5_post_ϫⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϧⲉⲙⲥ",
+          2
+        ],
+        [
+          "ⲉⲑ_2_post_ⲍ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_3_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲓⲉ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩⲁⲧ_3_post_ϩⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲧⲁ_1_pre_ϧⲉⲙⲥ",
+          "ⲟⲩ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϧⲉⲙⲥ",
+          "ϧⲉⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ⲍ_1_pre_ϧⲉⲙⲥ",
+          "ϧⲉⲙⲥ_0_node",
+          7
+        ],
+        [
+          "ϧⲉⲙⲥ_0_node",
+          "ⲉ_1_post_ϧⲉⲙⲥ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϧⲉⲙⲥ",
+          "ⲩ_3_post_ϣⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ϣⲟⲙ",
+          "ϣⲟⲙ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϣⲟⲙ_2_post_ⲉ",
+          "ⲉ_3_post_ϣⲟⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲍ",
+          "ⲍ_1_pre_ϧⲉⲙⲥ",
+          2
+        ],
+        [
+          "ϧⲉⲙⲥ_0_node",
+          "ⲉⲧ_1_post_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϧⲉⲙⲥ",
+          "ⲥⲟⲧⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲓⲥ_1_pre_ϧⲉⲙⲥ",
+          "ⲕⲉ_2_pre_ⲍ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲍ",
+          "ⲍ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϧⲉⲙⲥ",
+          "ϧⲉⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϧⲉⲙⲥ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ϣⲟⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲙ_3_post_ⲧ",
+          "ⲟⲩⲟϩ_6_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲙⲥ_0_node",
+          "ⲉⲑ_1_post_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ϧⲉⲙⲥ",
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          "ⲩ_3_post_ⲛⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲛⲁⲛⲉ",
+          "ⲟⲩⲟϩ_5_post_ϫⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϧⲉⲙⲥ",
+          "ⲡⲓ_2_pre_ⲍ",
+          1
+        ],
+        [
+          "ϧⲉⲙⲥ_0_node",
+          "ⲉⲑ_2_post_ⲍ",
+          1
+        ],
+        [
+          "ⲉⲑ_2_post_ⲍ",
+          "ⲛⲁⲛⲉ_3_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϧⲉⲙⲥ",
+          "ϧⲉⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ⲓⲉ_1_pre_ϧⲉⲙⲥ",
+          "ϩⲁⲛ_1_pre_ϧⲉⲙⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϧⲉⲙⲥ",
+          "ϧⲉⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϧⲉⲙⲥ",
+          "ⲁ_3_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲉⲓ",
+          "ϥ_3_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲉⲓ",
+          "ϩⲉⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_2_post_ⲉ",
+          "ⲙⲙⲁⲩⲁⲧ_3_post_ϩⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.28,
+      "rank": 1330,
+      "count": 24
+    }
+  }
+}

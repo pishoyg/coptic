@@ -1,0 +1,250 @@
+{
+  "id": "C5416",
+  "forms": [
+    {
+      "id": "CF12801",
+      "orth": "ⲯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2769,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF12802",
+      "orth": "ⲯ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF12803",
+      "orth": "ⲯ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11077,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "23. Buchstabe des Alphabets ⲯⲓ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS6070",
+      "bibliography": "CD 517a; KoptHWb 289; DELC 247"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉⲫⲛⲁⲩ ϩⲏⲇⲏ ⲛⲁϫⲡ 6 ⲡⲉ ⲟⲩⲟϩ ⲁⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲡⲕⲁϩⲓ ⲧⲏⲣϥ ϣⲁⲫⲛⲁⲩ ⲛⲁϫⲡ **ⲯ** .",
+      "english": "It was now about the sixth hour",
+      "source": "03_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲅⲣⲁⲫⲏ ⲙⲩⲛⲏ ⲧⲩⲃⲓ ⲅ ⲁⲡⲟ ⲧⲱⲛ ⲁⲅⲓⲟⲛ ⲙⲁⲣⲧⲩⲣⲱⲛ **ⲯ**ⲕⲁ ⲉⲧⲟⲩⲥ ⲧⲝⲉⲓⲛⲇ ⲅ — ··· — ··· — ··· —",
+      "english": "Written [in the month of] Tybi, the third day (December 30), in the Third Indiction, in the seven hundred and twenty-first year of the Era of the Martyrs (i.e. A.D. 1005), year [of Saracens] 365 (i.e. A.D. 987).",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉϥϫⲟⲙ ⲛⲏ ⲉⲧⲁⲩϣⲓⲛⲓ ⲉⲣⲱⲟⲩ ⲝⲃ ⲛϣⲟ ⲛⲉⲙ**ⲯ**",
+      "english": "His forces that were numbered, were sixty-two thousand and seven hundred.",
+      "source": "04_Numeri_02",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ⲉⲧⲁϥⲉⲛϥ ⲉⲃⲟⲗ ⲡⲉϫⲁϥ ϫⲉϧⲉⲛⲟⲩⲛⲟϩⲉⲙ ⲛⲟϩⲉⲙ ⲛⲧⲉⲕ**ⲯ**ⲯⲩⲭⲏ ⲟⲩⲟϩ ⲙⲡⲉⲣϫⲟⲩϣⲧ ⲉⲫⲁϩⲟⲩ ⲟⲩⲟϩ ⲙⲡⲉⲣⲟϩⲓ ⲉⲣⲁⲧⲕ ϧⲉⲛϯⲡⲉⲣⲓⲭⲱⲣⲟⲥ ⲧⲏⲣⲥ ⲁⲗⲗⲁ ⲛⲁϩⲙⲉⲕ ⲉⲡⲧⲱⲟⲩ ⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩⲧⲁϩⲟⲕ ⲛϫⲉⲛⲓⲡⲉⲧϩⲱⲟⲩ",
+      "english": "And it came to pass when they brought them out, that they said, Save thine own life by all means; look not round to that which is behind, nor stay in all the country round about, escape to the mountain, lest perhaps thou be overtaken together with them.",
+      "source": "01_Genesis_19",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲝⲃ",
+        3,
+        19.128
+      ],
+      [
+        "ϣⲟ",
+        6,
+        16.813
+      ],
+      [
+        "ⲛⲧⲉⲕ",
+        1,
+        14.373
+      ],
+      [
+        "ⲟⲉ",
+        1,
+        13.888
+      ],
+      [
+        "ⲁϫⲡ",
+        1,
+        12.447
+      ],
+      [
+        "ⲛⲉⲙ",
+        8,
+        12.243
+      ],
+      [
+        "ⲥⲓⲕⲗⲟⲥ",
+        1,
+        11.695
+      ],
+      [
+        "ⲛⲟϩⲉⲙ",
+        2,
+        11.286
+      ],
+      [
+        "ⲛ",
+        9,
+        11.1
+      ],
+      [
+        "ⲛⲉⲛ",
+        3,
+        10.834
+      ],
+      [
+        "ϩⲓⲕⲟⲧ",
+        1,
+        10.286
+      ],
+      [
+        "ⲇ",
+        1,
+        9.391
+      ],
+      [
+        "ϫⲟⲩϣⲧ",
+        1,
+        8.364
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        2,
+        8.297
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        8.08
+      ],
+      [
+        "ⲛⲏ",
+        2,
+        8.057
+      ],
+      [
+        "ⲥⲁⲃⲟⲗ",
+        1,
+        7.885
+      ],
+      [
+        "ⲃ",
+        1,
+        7.709
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.576
+      ],
+      [
+        "ⲙⲡⲉⲣ",
+        1,
+        7.576
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲝⲉⲓⲛⲇ",
+        1,
+        20.598
+      ],
+      [
+        "ⲁⲅⲓⲟⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲉⲧⲟⲩⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲙⲁⲣⲧⲩⲣⲱⲛ",
+        1,
+        18.598
+      ],
+      [
+        "ⲁⲡⲟ",
+        1,
+        17.139
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        11.929
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲯ",
+          5
+        ],
+        [
+          "ⲯ_0_node",
+          5
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲯ",
+          "ⲯ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.09,
+      "rank": 2424,
+      "count": 8
+    },
+    "S": {
+      "rate": 0.01,
+      "rank": 10668,
+      "count": 1
+    }
+  }
+}

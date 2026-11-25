@@ -1,0 +1,91 @@
+{
+  "id": "C358",
+  "forms": [
+    {
+      "id": "CF1545",
+      "orth": "ⲁⲧⲃⲉⲭⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1546",
+      "orth": "ⲁⲧⲃⲉⲭⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1547",
+      "orth": "ⲁⲧⲃⲉⲕⲏ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS396",
+      "bibliography": "CD 31a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

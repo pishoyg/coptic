@@ -1,0 +1,84 @@
+{
+  "id": "C3225",
+  "forms": [
+    {
+      "id": "CF8335",
+      "orth": "ⲣⲱϣⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3685",
+      "bibliography": "CD 309ab; KoptHWb 170; DELC 179; ChLCS 43b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϥⲥⲙⲟⲧ **ⲣⲱϣⲉ **ⲉ**ⲡⲉⲧϩⲓⲧⲟⲩⲱⲛ**",
+      "english": "its example is enough for our companion.'",
+      "source": "Apophthegmata Patrum Sahidic 133: N 303",
+      "urn": "urn:cts:copticLit:ap.133.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲇⲉ ⲛⲉϣⲁϥⲁⲁϥ ⲡⲉ ϩⲛ... ⲛⲉⲧϣⲁⲁⲧ ⲇⲉ ⲙⲛⲛⲉⲧϫⲏⲩ ⲛϭⲟⲛⲥ **ⲛⲉϣⲁϥⲣⲱϣⲉ **ⲉ**ⲛⲉⲩⲭⲣⲉⲓⲁ**",
+      "english": "Saturdays he spent among [...] the needy and those who had endured violence, he relieved their need.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲛⲧⲁⲓϫⲟⲟⲩ ⲉⲣⲟ ⲱ ⲧⲁⲙⲁⲁⲩ ⲡⲛⲟⲩⲧⲉ **ⲣⲱϣⲉ **ⲉ**ⲧⲟⲩⲯⲩⲭⲏ** ·",
+      "english": "The things which I have spoken unto thee, O my mother, may God make sufficient for thy soul.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3230",
+      "label": "ϩⲛⲟⲩⲣⲱϣⲉ",
+      "pos": "ADV",
+      "gloss": "moderately"
+    },
+    {
+      "target": "C3229",
+      "label": "ⲉⲡⲣⲱϣⲉ",
+      "pos": "ADV",
+      "gloss": "sufficiently"
+    },
+    {
+      "target": "C3228",
+      "label": "ⲣⲡⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "be, do enough"
+    },
+    {
+      "target": "C3224",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "V",
+      "gloss": "suffice; be concerned, responsible; suffice, content"
+    },
+    {
+      "target": "C3227",
+      "label": "ⲣⲱϣⲉ",
+      "pos": "N",
+      "gloss": "sufficiency, enough, plenty"
+    },
+    {
+      "target": "C3226",
+      "label": "ⲣⲱϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "be concerned with, deal with"
+    }
+  ]
+}

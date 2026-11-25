@@ -1,0 +1,132 @@
+{
+  "id": "C2698",
+  "forms": [
+    {
+      "id": "CF7202",
+      "orth": "ⲛⲟⲩϫⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3090",
+      "bibliography": "CD 248ab; KoptHWb 137; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲉⲃⲟⲗ **ϫⲉⲁⲛⲛⲟⲩϫⲉ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲛϩⲟⲡⲗⲟⲛ ·",
+      "english": "'Because we cast off our armor,",
+      "source": "Apophthegmata Patrum Sahidic 132: N 302",
+      "urn": "urn:cts:copticLit:ap.132.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁϥⲛⲟⲩϫⲉ **ⲉⲃⲟⲗ**** ⲛⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲁϥⲧⲣⲉⲛϭⲁⲗ ⲉⲙⲟⲟϣⲉ ·",
+      "english": "He cast out the devils, He made the lame to walk,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲣⲱ ⲁⲥϫⲟⲟⲥ ϩⲛⲟⲩⲡⲁⲣⲣⲏⲥⲓⲁ ϩⲙⲡⲥⲟⲟⲩⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲛϭⲓⲧⲙⲁⲁⲩ ⲙⲡϣⲏⲣⲉ ⲉⲧⲟⲓ ⲛⲧⲟⲟⲧⲥ · **ϫⲉⲛⲟⲩϫⲉ **ⲉⲃⲟⲗ**** ⲛⲧⲉⲓϩⲙϩⲁⲗ ⲙⲛⲡⲉⲥϣⲏⲣⲉ ·",
+      "english": "Therefore indeed she spoke boldly in the knowledge of God, namely, the mother of the child whom she had borne: 'cast out this slave with her child.",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2705",
+      "label": "ⲛⲁϫϥ",
+      "pos": "N",
+      "gloss": "storeroom (in a ship)"
+    },
+    {
+      "target": "C2691",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "V",
+      "gloss": "throw, cast"
+    },
+    {
+      "target": "C2704",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "N",
+      "gloss": "throw, cast (of stone, arrow)"
+    },
+    {
+      "target": "C2696",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "cast, put beneath"
+    },
+    {
+      "target": "C2697",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "throw (self) upon"
+    },
+    {
+      "target": "C2692",
+      "label": "ⲛⲟⲩϫⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "throw at, put into"
+    },
+    {
+      "target": "C2701",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "cast, put in, introduce"
+    },
+    {
+      "target": "C2702",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, put forth"
+    },
+    {
+      "target": "C2703",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw down"
+    },
+    {
+      "target": "C2693",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "cast, impose upon, put (clothes) on"
+    },
+    {
+      "target": "C2700",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "cast behind; postpone"
+    },
+    {
+      "target": "C2699",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "cast down, discard"
+    },
+    {
+      "target": "C2694",
+      "label": "ⲛⲟⲩϫⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "throw to"
+    },
+    {
+      "target": "C2695",
+      "label": "ⲛⲟⲩϫⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "throw after, cast upon"
+    }
+  ]
+}

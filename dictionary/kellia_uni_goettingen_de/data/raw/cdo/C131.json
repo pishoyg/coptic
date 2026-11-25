@@ -1,0 +1,85 @@
+{
+  "id": "C131",
+  "forms": [
+    {
+      "id": "CF477",
+      "orth": "ⲙⲉⲧⲣⲉϥⲣⲁⲛⲁ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF478",
+      "orth": "ⲙⲉⲧⲣⲉϥⲣⲁⲛⲁ⸗",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS151",
+      "bibliography": "CD 11b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C132",
+      "label": "ϭⲓⲛⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C126",
+      "label": "ⲁⲛⲁⲓ",
+      "pos": "V",
+      "gloss": "be pleasing, pleasant, grow better"
+    },
+    {
+      "target": "C127",
+      "label": "ⲁⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C129",
+      "label": "ⲙⲉⲧⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C128",
+      "label": "ⲣⲁⲛⲁ",
+      "pos": "V",
+      "gloss": "be pleasing, be pleased, please"
+    },
+    {
+      "target": "C130",
+      "label": "ⲣⲉϥⲣⲁⲛⲁ⸗",
+      "pos": "N",
+      "gloss": "one who pleases"
+    }
+  ]
+}

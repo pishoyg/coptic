@@ -1,0 +1,704 @@
+{
+  "id": "C9943",
+  "forms": [
+    {
+      "id": "CF25913",
+      "orth": "ⲟⲣⲅⲁⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25916",
+      "orth": "ⲟⲣⲅⲁⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2684,
+        "count": 17
+      }
+    },
+    {
+      "id": "CF25915",
+      "orth": "ⲟⲣⲅⲁⲛⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF25914",
+      "orth": "ⲟⲣⲅⲁⲛⲟ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25917",
+      "orth": "ⲟⲣⲅⲁⲛⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25918",
+      "orth": "ⲟⲣⲅⲁⲛⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3690,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12977",
+      "bibliography": "DDGLC",
+      "cu_ID": "962"
+    },
+    {
+      "id": "CS12978",
+      "bibliography": "DDGLC",
+      "cu_ID": "7459"
+    },
+    {
+      "id": "CS12979",
+      "bibliography": "DDGLC",
+      "cu_ID": "2735"
+    },
+    {
+      "id": "CS12980",
+      "bibliography": "DDGLC",
+      "cu_ID": "3392"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁϫⲓϫ ⲁⲩⲑⲁⲙⲓⲟ ⲛⲟⲩ**ⲟⲣⲅⲁⲛⲟⲛ** ⲟⲩⲟϩ ⲛⲁⲧⲏⲃ ⲁⲩϩⲱⲧⲡ ⲛⲟⲩⲁⲗⲧⲏⲣⲓⲟⲛ ⲁⲗⲗⲏⲗⲟⲩⲓⲁ",
+      "english": "My hands formed a musical instrument, and my fingers tuned a psaltery.",
+      "source": "19_Psalmi_151",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:151",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲕⲁⲓⲣⲟⲥ ⲗⲟⲓⲡⲟⲛ ⲕⲓⲙ ⲉⲣⲟⲓ ⲉⲧⲣⲁⲕⲓⲙ ⲉⲡ**ⲟⲣⲅⲁⲛⲟⲛ** ⲙⲡⲁⲗⲁⲥ ⲉⲧϭⲟϫⲃ ⲁⲩⲱ ⲧⲁⲧⲁⲡⲣⲟ ⲛⲁⲥⲑⲉⲛⲏⲥ ⲉⲧⲣⲁϫⲟⲟⲥ ϩⲱⲱⲧ ⲙⲛⲡⲣⲉϥⲯⲁⲗⲗⲉⲓ ⲇⲁⲩⲉⲓⲇ ⲁⲩⲱ ⲡⲣⲉϥϩⲱⲥ ⲉⲡⲛⲟⲩⲧⲉ ϫⲉⲁⲕϭⲙⲡϣⲓⲛⲉ ⲙⲡⲕⲁϩ ⲁⲕⲧⲣⲉϥϯϩⲉ ⲁⲕⲧⲁϣⲉ ⲁⲁϥ ⲛⲣⲙⲙⲁⲟ ·",
+      "english": "The occasion moveth me to set in motion the organ of my halting tongue, and my infirm mouth, and it maketh me a to say with the Psalmist David, the Singer of God, 'Thou visitest the earth, Thou makest it to produce food, Thou multipliest in great abundance the riches [thereof].",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲓϫⲉⲛⲛⲓⲃⲱ ⲛⲑⲱⲣⲓ ϧⲉⲛⲧⲉⲥⲙⲏϯ ⲁⲛⲓϣⲓ ⲛⲛⲉⲛ**ⲟⲣⲅⲁⲛⲟⲛ**",
+      "english": "We hung our harps on the willows in the midst of it.",
+      "source": "19_Psalmi_136",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:136",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲃⲱⲕ ⲇⲉ ⲁⲓϫⲛⲉⲡⲁⲉⲓⲱⲧ ϫⲉⲁⲓϩⲉ ⲉⲛ**ⲟⲣⲅⲁⲛⲟⲛ** ⲉⲩⲙⲏϩ ⲙⲙⲟⲟⲩ · ⲁⲣⲁ ⲉⲩⲛⲏⲩ ⲧⲱⲛ ⲡⲁϫⲟⲉⲓⲥ ⲛⲉⲓⲱⲧ ⁛",
+      "english": "Then I went and enquired of my father, saying, 'I found the water-pots full of water, whence cometh the water then, O my Lord and father?",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲧⲁⲥⲑⲟ ⲉⲃⲟⲗϩⲁⲣⲟⲓ ⲙⲡϧⲣⲱⲟⲩ ⲛⲧⲉⲛⲉⲕϩⲱⲇⲏ ⲟⲩⲟϩ ⲡⲓⲯⲁⲗⲙⲟⲥ ⲛⲧⲉⲛⲉⲕ**ⲟⲣⲅⲁⲛⲟⲛ** ⲛϯⲛⲁⲥⲱⲧⲉⲙ ⲉⲣⲟϥ ⲁⲛ .",
+      "english": "Remove from me the sound of thy songs, and I will not hear the music of thine instruments.",
+      "source": "30_Amos_05",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲥⲱⲧⲙ ⲇⲉ ⲉⲛⲁⲓ ⲛϭⲓⲛⲉⲧⲟⲩⲁⲁⲃ · ⲁⲩⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲟⲟⲩ ⲙⲁⲩⲁⲁⲩ ϩⲛⲟⲩⲟⲩⲣⲟⲧ ⲁⲙⲙⲁⲧⲟⲓ ⲛⲟϫⲟⲩ ⲉⲡ**ⲟⲣⲅⲁⲛⲟⲛ** ⲛϩⲟⲙⲛⲧ ·",
+      "english": "And when the saints had heard these things they delivered themselves joyfully over to the soldiers, who cast them into the brazen instrument.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓϣⲓ",
+        1,
+        14.566
+      ],
+      [
+        "ⲕⲁⲡ",
+        1,
+        14.566
+      ],
+      [
+        "ⲯⲁⲗⲙⲟⲥ",
+        1,
+        13.203
+      ],
+      [
+        "ⲟⲡ",
+        1,
+        12.051
+      ],
+      [
+        "ⲧⲏⲃ",
+        1,
+        11.981
+      ],
+      [
+        "ⲩ",
+        5,
+        10.765
+      ],
+      [
+        "ϣⲉⲛ",
+        1,
+        9.922
+      ],
+      [
+        "ⲛ",
+        5,
+        9.235
+      ],
+      [
+        "ⲑⲁⲙⲓⲟ",
+        1,
+        8.652
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        8.437
+      ],
+      [
+        "ⲥⲙⲏ",
+        1,
+        8.213
+      ],
+      [
+        "ⲁ",
+        3,
+        7.422
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.294
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.187
+      ],
+      [
+        "ⲥⲱⲧⲉⲙ",
+        1,
+        6.877
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        6.758
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.633
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.795
+      ],
+      [
+        "ⲧ",
+        1,
+        5.203
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        4.991
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.511
+      ],
+      [
+        "ⲭⲟⲣⲇⲏ",
+        1,
+        16.511
+      ],
+      [
+        "ⲙⲏⲭⲁⲛⲏ",
+        1,
+        15.511
+      ],
+      [
+        "ⲗⲁⲥ",
+        4,
+        14.628
+      ],
+      [
+        "ⲕⲓⲙ",
+        4,
+        14.562
+      ],
+      [
+        "ⲣⲧⲱⲣⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲙ",
+        19,
+        14.007
+      ],
+      [
+        "ⲧⲏϣ",
+        2,
+        13.604
+      ],
+      [
+        "ⲣⲉϥϣⲁϫⲉ",
+        1,
+        13.189
+      ],
+      [
+        "ⲧⲟⲩⲛ",
+        1,
+        12.263
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        3,
+        11.742
+      ],
+      [
+        "ⲩ",
+        9,
+        11.232
+      ],
+      [
+        "ⲛ",
+        14,
+        11.144
+      ],
+      [
+        "ⲉ",
+        11,
+        11.108
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        10.953
+      ],
+      [
+        "ⲡ",
+        11,
+        10.788
+      ],
+      [
+        "ⲙⲏϩ",
+        1,
+        10.756
+      ],
+      [
+        "ⲧⲏⲏⲃⲉ",
+        1,
+        10.58
+      ],
+      [
+        "ⲯⲁⲗⲗⲉⲓ",
+        1,
+        10.444
+      ],
+      [
+        "ⲡⲁ",
+        4,
+        10.288
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲩ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          15
+        ],
+        [
+          "ⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          4
+        ],
+        [
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲣ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ⲙⲏϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲉϥϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲗⲁⲥ",
+          2
+        ],
+        [
+          "ⲗⲁⲥ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ϭⲟϫⲃ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ϭⲓϫ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲧⲏϣ",
+          2
+        ],
+        [
+          "ⲧⲏϣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϩⲛ_3_post_ⲧⲏϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲧⲏϣ",
+          1
+        ],
+        [
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          "ⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          "ⲙ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          "ⲛⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲁ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲣ",
+          "ⲕ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲣ",
+          "ⲣ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲣ_2_post_ⲛⲧ",
+          "ⲡ_4_post_ⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          "ⲉ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲩ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲏϩ",
+          "ⲙⲏϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲏϩ_2_post_ⲉ",
+          "ⲙ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲏϩ",
+          "ⲙⲟⲟⲩ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲉϥϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲡⲁ_3_post_ⲗⲁⲥ",
+          2
+        ],
+        [
+          "ⲡⲁ_3_post_ⲗⲁⲥ",
+          "ⲗⲁⲥ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲗⲁⲥ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲗⲁⲥ",
+          "ϭⲟϫⲃ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ϩⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲩ_3_post_ⲧⲏϣ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲧⲏϣ",
+          "ⲧⲏϣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲧⲏϣ_2_post_ⲉ",
+          "ϩⲛ_3_post_ⲧⲏϣ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲧⲏϣ",
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲏϣ_2_post_ⲉ",
+          "ⲙ_3_post_ⲧⲏϣ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲧⲏϣ",
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ϩⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲣⲅⲁⲛⲟⲛ",
+          "ⲟⲣⲅⲁⲛⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2378,
+      "count": 17
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3265,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2761",
+    "grl_lemma": "ὄργανον",
+    "grl_meaning": "instrument, implement, tool",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1245b; Preisigke 2:193"
+  }
+}

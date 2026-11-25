@@ -1,0 +1,140 @@
+{
+  "id": "C3024",
+  "forms": [
+    {
+      "id": "CF7914",
+      "orth": "ⲡⲟϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14963,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3461",
+      "bibliography": "CD 286ab; CED 133; KoptHWb 159; DELC 168; ChLCS 40a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲟⲩⲉ",
+        1,
+        14.954
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        11.867
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲣⲏⲧⲉ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟϭⲉ_0_node",
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲉ",
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲟⲟⲩⲉ",
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_5_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          "ⲟⲩⲉⲣⲏⲧⲉ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14561,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3023",
+      "label": "ⲡⲱϭⲉ",
+      "pos": "V",
+      "gloss": "break, burst; break, burst"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2162",
+    "demo_lemma": "pk",
+    "english": "[to spread; to open]",
+    "german": "Bruchstück; Streifen, dünne Platte, Stück(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2162"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "id": "C8891",
+  "forms": [
+    {
+      "id": "CF21625",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21626",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21627",
+      "orth": "ⲉⲓⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1424,
+        "count": 55
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS10763",
+      "bibliography": "DDGLC",
+      "cu_ID": "5560"
+    },
+    {
+      "id": "CS10764",
+      "bibliography": "DDGLC",
+      "cu_ID": "5553"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ⲟⲩⲣⲟ ⲡⲉ ⲉⲃⲟⲗ ϫⲉⲡⲣⲉϥϫⲓⲙⲟⲉⲓⲧ ⲡⲉ ⲉϩⲟⲩⲛ ⲉⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ·",
+      "english": "Next He is the Door, therefore He is the Guide into Paradise.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ⲟⲛ ⲁϥⲥⲱⲃⲉ ·",
+      "english": "Then, he laughed again.",
+      "source": "Apophthegmata Patrum Sahidic 093: Anonymous Nau 279",
+      "urn": "urn:cts:copticLit:ap.93.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲁ** ⲟⲛ ϫⲉⲁⲛⲁⲃⲁⲗϣⲧⲟⲣⲧⲣ ⲉⲃⲟⲗ ⲙⲡⲣⲓⲙⲉ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲧ",
+        1,
+        12.741
+      ],
+      [
+        "ϣⲉⲛ",
+        1,
+        12.244
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        1,
+        9.772
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        19.572
+      ],
+      [
+        "ⲁⲡⲁⲥ",
+        2,
+        15.817
+      ],
+      [
+        "ⲡⲁⲣϩⲟⲩⲥⲓⲁ",
+        2,
+        15.009
+      ],
+      [
+        "ⲛ",
+        49,
+        14.872
+      ],
+      [
+        "ϫ[ⲉ]",
+        1,
+        14.817
+      ],
+      [
+        "ⲡⲁⲣⲣⲏⲍⲓⲁⲍⲉ",
+        1,
+        14.817
+      ],
+      [
+        "ⲫⲓⲗⲟⲛⲓⲟⲛ",
+        2,
+        14.817
+      ],
+      [
+        "ⲟⲛ",
+        13,
+        14.547
+      ],
+      [
+        "ϫⲉ",
+        25,
+        14.297
+      ],
+      [
+        "ⲁ",
+        31,
+        14.125
+      ],
+      [
+        "ⲧⲙⲛⲧⲁⲛⲟⲓⲁ",
+        1,
+        13.817
+      ],
+      [
+        "ⲕⲏⲫⲁⲥ",
+        2,
+        13.817
+      ],
+      [
+        "ⲯⲁⲗⲙⲱⲇⲟⲥ",
+        1,
+        13.232
+      ],
+      [
+        "ϩⲏⲇⲟⲛⲏ",
+        2,
+        12.687
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        3,
+        12.402
+      ],
+      [
+        "ϥ",
+        23,
+        12.311
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        5,
+        12.311
+      ],
+      [
+        "ⲟⲑⲉ",
+        1,
+        11.817
+      ],
+      [
+        "ⲡ",
+        20,
+        11.681
+      ],
+      [
+        "ⲇⲱⲣⲟⲑⲉⲟⲥ",
+        2,
+        11.647
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.35,
+      "rank": 1232,
+      "count": 55
+    }
+  },
+  "etym": {
+    "grl_ID": "2485",
+    "grl_lemma": "εἶτα",
+    "grl_meaning": "then, next",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 498a"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C5664",
+  "forms": [
+    {
+      "id": "CF13304",
+      "orth": "ⲣⲱϫⲛ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6337",
+      "bibliography": "CD 540a; KoptHWb 298"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5663",
+      "label": "ⲁⲧⲱϫⲛ",
+      "pos": "N",
+      "gloss": "unceasing, uninterrupted"
+    },
+    {
+      "target": "C5665",
+      "label": "ⲣⲉϥⲱϫⲛ",
+      "pos": "N",
+      "gloss": "who, what makes to cease"
+    },
+    {
+      "target": "C5661",
+      "label": "ⲱϫⲛ",
+      "pos": "V",
+      "gloss": "cease, perish; make cease, destroy"
+    },
+    {
+      "target": "C5662",
+      "label": "ⲱϫⲛ",
+      "pos": "N",
+      "gloss": "ceasing, destruction"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "id": "C6608",
+  "forms": [
+    {
+      "id": "CF15260",
+      "orth": "ⲣϩⲟⲉⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6006,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7320",
+      "bibliography": "CD 674b; CED 282; KoptHWb 359; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩⲉⲓⲣⲉ ⲛⲁⲡⲁⲧⲟⲟⲧⲟⲩ ⲛϭⲓⲛⲣⲱⲙⲉ ⲉⲕⲧⲟⲟⲩ ⲉⲡⲉⲕⲣⲟ : ⲁⲩⲱ ⲙⲡⲟⲩϣⲕⲧⲟⲟⲩ ⲉⲃⲟⲗ ϫⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲉⲥ**ⲣϩⲟⲉⲓⲙ** ⲉⲙⲁⲧⲉ ⲉϫⲱⲟⲩ :",
+      "english": "And the men tried hard to return to the land, and were not able: for the sea rose and grew more and more tempestuous against them.",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩⲉⲓⲣⲉ ⲛⲁⲡⲁⲧⲟⲟⲧⲟⲩ ⲛϭⲓⲛⲣⲱⲙⲉ ⲉⲕⲧⲟⲟⲩ ⲉⲡⲉⲕⲣⲟ ⲁⲩⲱ ⲙⲡⲟⲩϣⲕⲧⲟⲟⲩ ⲉⲃⲟⲗ ϫⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲉⲥ**ⲣϩⲟⲉⲓⲙ** ⲉⲙⲁⲧⲉ ⲉϫⲱⲟⲩ",
+      "english": "And the men tried hard to return to the land, and were not able: for the sea rose and grew more and more tempestuous against them.",
+      "source": "Jonah 1",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        17.428
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        3,
+        14.135
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        2,
+        13.355
+      ],
+      [
+        "ⲉϫⲱ",
+        3,
+        12.916
+      ],
+      [
+        ":",
+        2,
+        12.821
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        10.483
+      ],
+      [
+        "ⲥ",
+        3,
+        9.444
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.218
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉ_2_pre_ⲑⲁⲗⲁⲥⲥⲁ",
+          1
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          2
+        ],
+        [
+          "ⲣϩⲟⲉⲓⲙ_0_node",
+          2
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ϫⲉ_2_pre_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲉⲑⲁⲗⲁⲥⲥⲁ_2_pre_ⲉⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_2_pre_ⲑⲁⲗⲁⲥⲥⲁ",
+          "ⲑⲁⲗⲁⲥⲥⲁ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          "ⲛⲉ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          "ⲥ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          "ⲣϩⲟⲉⲓⲙ_0_node",
+          2
+        ],
+        [
+          "ⲣϩⲟⲉⲓⲙ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣϩⲟⲉⲓⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          "ϫⲉ_2_pre_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϫⲉ_2_pre_ⲉⲃⲟⲗ",
+          "ⲧⲉⲑⲁⲗⲁⲥⲥⲁ_2_pre_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲉⲑⲁⲗⲁⲥⲥⲁ_2_pre_ⲉⲃⲟⲗ",
+          "ⲛⲉ_1_pre_ⲣϩⲟⲉⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5570,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6609",
+      "label": "ϥⲓϩⲟⲉⲓⲙ",
+      "pos": "V",
+      "gloss": "throw up waves, be agitated"
+    },
+    {
+      "target": "C6607",
+      "label": "ϩⲟⲉⲓⲙ",
+      "pos": "N",
+      "gloss": "wave, flood"
+    }
+  ]
+}

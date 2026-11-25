@@ -1,0 +1,146 @@
+{
+  "id": "C786",
+  "forms": [
+    {
+      "id": "CF2900",
+      "orth": "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2901",
+      "orth": "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9794,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS936",
+      "bibliography": "CD 66b; KoptHWb 46"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩϣⲓⲡⲓ ⲛⲧⲉⲧⲥⲱⲛⲓ ⲙⲡⲉⲕⲉⲓⲱⲧ ⲛⲉⲙⲟⲩⲥⲱⲛⲓ ⲛⲧⲉⲧⲉⲕⲙⲁⲩ ⲛⲛⲉⲕϭⲟⲣⲡϥ ⲉⲃⲟⲗ ϯ**ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ** ⲅⲁⲣ ⲁⲩϭⲟⲣⲡⲥ ⲉⲃⲟⲗ ⲉⲩⲉϭⲓ ⲛⲟⲩⲛⲟⲃⲓ",
+      "english": "And thou shalt not uncover the nakedness of thy father's sister, or of the sister of thy mother; for that man has uncovered the nakedness of one near akin: they shall bear their iniquity.",
+      "source": "03_Leviticus_20",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:20",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲟⲣⲡ",
+        2,
+        17.888
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.59
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+          "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9253,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C788",
+      "label": "ϫⲙⲡⲏⲓ",
+      "pos": "N",
+      "gloss": "roof"
+    },
+    {
+      "target": "C783",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "house; household, family"
+    },
+    {
+      "target": "C789",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "pair, couple"
+    },
+    {
+      "target": "C784",
+      "label": "ⲙⲉⲥϩⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "born in the house"
+    },
+    {
+      "target": "C785",
+      "label": "ⲣⲙⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "member of household, domestic, kinsman; monastic superintendent, warden"
+    },
+    {
+      "target": "C787",
+      "label": "ⲣⲣⲙⲛⲏⲓ",
+      "pos": "V",
+      "gloss": "be akin"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "id": "C9410",
+  "forms": [
+    {
+      "id": "CF23794",
+      "orth": "ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23797",
+      "orth": "ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4199,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF23796",
+      "orth": "ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF23795",
+      "orth": "ⲕⲉⲥⲧⲟⲛⲁⲣⲓⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11891",
+      "bibliography": "DDGLC",
+      "cu_ID": "2640"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲧⲉⲩⲛⲟⲩ ⲁⲩⲃⲱⲕ ⲛϭⲓⲛ**ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ** · ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ · ⲁⲩⲣⲃⲗⲗⲉ ·",
+      "english": "and straightway the soldiers departed (to fetch him). And when they laid their hands upon him they became blind.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ** ⲇⲉ ⲁⲩϭⲱⲡⲉ ⲛⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲛϩⲟⲩⲛ ⲛⲧⲉϥⲣⲓ · ⲉⲣⲉϩⲉⲛⲑⲁⲣⲙⲟⲩⲥ ϩⲛⲧⲉϥϭⲓϫ ⲉϥⲟⲩⲱⲙ ·",
+      "english": "And the torturers seized Apa Victor whilst he was in his cell, and he had lentils in his hand, and he was eating",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲇⲉ · ⲡⲉϫⲁϥ ⲙⲡ**ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ** · ϫⲉⲡⲟⲗϭⲧ ⲉⲃⲟⲗ ⲧⲁⲭⲏ ⲉⲧⲃⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲕⲁⲧⲉⲭⲉ ⲉⲣⲟⲓ ·",
+      "english": "And Apa Victor said unto the executioner, 'Dismiss me speedily, for the sake of the angels who have hold upon me.'",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲗϭⲧ",
+        1,
+        17.791
+      ],
+      [
+        "ⲩ",
+        10,
+        12.968
+      ],
+      [
+        "ϭⲱⲡⲉ",
+        1,
+        12.469
+      ],
+      [
+        "ϩⲱⲕ",
+        1,
+        12.331
+      ],
+      [
+        "ⲁ",
+        9,
+        11.747
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        11.011
+      ],
+      [
+        "ⲧⲏⲣϥ",
+        1,
+        9.381
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        9.259
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        8.933
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        1,
+        8.746
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        1,
+        8.649
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.027
+      ],
+      [
+        "ϥ",
+        4,
+        7.714
+      ],
+      [
+        "ⲡ",
+        4,
+        7.69
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        6.497
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.137
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        5.937
+      ],
+      [
+        "ⲛ",
+        3,
+        5.756
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        5.601
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        4.506
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ",
+          "ⲕⲉⲥⲧⲱⲛⲁⲣⲓⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3802,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "4968",
+    "grl_lemma": "κυαιστιωνάριος",
+    "grl_meaning": "executioner",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 694b"
+  }
+}

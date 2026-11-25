@@ -1,0 +1,404 @@
+{
+  "id": "C3503",
+  "forms": [
+    {
+      "id": "CF8907",
+      "orth": "ⲥⲗⲟϭⲗϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4388,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲗⲉⲥⲗⲱϭ-",
+      "dialect": "S",
+      "id": "1418.1"
+    },
+    {
+      "orth": "ⲥⲗⲉⲥⲗⲱϭ†",
+      "dialect": "S",
+      "id": "1418.2"
+    },
+    {
+      "orth": "ⲥⲗⲏⲗⲱⲕ†",
+      "dialect": "S",
+      "id": "1418.3"
+    },
+    {
+      "orth": "ⲥⲗⲁϫⲗⲉϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10484,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲗⲉϫⲗⲱϫ†",
+      "dialect": "B",
+      "id": "1418.5"
+    },
+    {
+      "orth": "ⲥⲗⲉϭⲗⲁϭ†",
+      "dialect": "A",
+      "id": "1418.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3987",
+      "bibliography": "CD 333b-334a; CED 152; KoptHWb 185; DELC 188; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲟⲩⲉⲣⲅⲁⲧⲏⲥ ⲡⲉ ϩⲙⲡⲕⲟⲥⲙⲟⲥ · ϣⲁϥⲫⲓⲗⲟⲕⲁⲗⲉⲓ ⲙⲡⲉϥⲥⲱⲙⲁ · ⲉⲧⲣⲉϥϣⲱⲡⲉ ⲉϥ**ⲥⲗⲟϭⲗϭ** ⲁⲩⲱ ⲛⲉϥⲧⲏⲏⲃⲉ ⲉⲧⲣⲉⲩϣⲱⲡⲉ ⲉⲩⲕⲓⲱⲟⲩ ·",
+      "english": "If he hath been a workman in the world he will minister to his body most carefully and diligently so that it may become refined ; and he will make his hands to become soft.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥ**ⲥⲗⲟϭⲗϭ** ⲉϫⲙⲡⲁⲥⲱⲙⲁ ϩⲛⲛⲉϥϭⲓϫ · ⲁϥⲧⲱϭⲉ ⲙⲡⲙⲁ ⲛⲧⲁϥⲡⲁϩϥ ⲉϫⲛⲛⲉϥⲉⲣⲏⲩ ·",
+      "english": "And he rubbed my body lightly with his hands, and he rejoined the sides of the opening which he had made in my side,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲁⲛ ⲡⲉ ⲟⲩⲇⲉ ⲛⲕⲉⲟⲩⲁ ⲁⲛ ⲡⲉ ⲉⲧⲉⲧⲛⲉϣⲙⲉⲉⲩⲉ ⲉⲣⲟϥ ϫⲉⲉⲩⲉϥⲱⲧⲉ ⲉⲃⲟⲗ ⲟⲛ ⲛⲛⲉⲧⲛⲣⲙⲉⲓⲏ ⲛⲕⲉⲥⲟⲡ ϩⲙⲡⲧⲣⲉⲧⲉⲧⲛⲁϣⲁϩⲟⲙ ⲛⲧϩⲉ ⲛⲟⲩⲁⲣⲝ . ⲛⲧⲱⲧⲛ ⲛⲉⲧⲉ ⲙⲡⲉ ⲡⲉⲩϩⲁⲡ ⲥⲁϩⲱϥ ⲉⲃⲟⲗ ⲙⲙⲟⲟⲩ ϫⲓⲛⲛϣⲟⲣⲡ ⲁⲩⲱ ⲙⲡⲉⲡⲉⲩⲥⲛⲟϥ ⲱϣⲙ ⲉⲃⲟⲗ ϫⲉⲛϥⲡⲁϩⲧ ⲁⲛ ⲉϫⲙⲡⲕⲁϩ ⲉϩⲱⲃⲥ ⲛⲟⲩⲕⲁϩ ⲉⲃⲟⲗ ⲉϫⲱϥ ⲁⲗⲗⲁ ⲉϥⲡⲁϩⲧ ⲉϫⲛⲟⲩⲡⲉⲧⲣⲁ ⲉⲥ**ⲥⲗϭⲗⲱϭ**",
+      "english": "...",
+      "source": "Who but God is the Witness MONB.FL 185-186 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.witness.amelineau:44-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲱⲙⲁ",
+        4,
+        13.816
+      ],
+      [
+        "ⲧⲏⲏⲃⲉ",
+        1,
+        11.86
+      ],
+      [
+        "ⲡⲉⲥ",
+        2,
+        10.923
+      ],
+      [
+        "ⲁⲣⲁ",
+        1,
+        10.524
+      ],
+      [
+        "ⲉϫⲙ",
+        2,
+        10.399
+      ],
+      [
+        "ⲙ",
+        5,
+        9.51
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        9.143
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.568
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        8.315
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.297
+      ],
+      [
+        "ϥ",
+        4,
+        7.714
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.695
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        7.415
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.294
+      ],
+      [
+        "ϩⲁ",
+        1,
+        7.058
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.701
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.672
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.157
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        5.99
+      ],
+      [
+        "ⲁ",
+        2,
+        5.237
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲱϭⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲗⲟϭⲗϭ",
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_2_post_ⲙ",
+          "ⲉ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          1
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲗⲟϭⲗϭ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          "ⲧⲁ_2_post_ⲟⲩⲱϣϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲗⲟϭⲗϭ",
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          2
+        ],
+        [
+          "ⲥⲗⲟϭⲗϭ_0_node",
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲱϭⲉ",
+          "ϥ_2_post_ⲧⲱϭⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3691,
+      "count": 7
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1600",
+      "type": "cf",
+      "label": "become soft, soften, smooth"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3501",
+      "label": "ⲁⲧⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "unobliterated"
+    },
+    {
+      "target": "C3507",
+      "label": "ⲉⲣⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "blunt"
+    },
+    {
+      "target": "C3502",
+      "label": "ⲣⲉϥⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "one who wipes out"
+    },
+    {
+      "target": "C3505",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "be blunt"
+    },
+    {
+      "target": "C3506",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "N",
+      "gloss": "bluntness"
+    },
+    {
+      "target": "C3504",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "N",
+      "gloss": "smoothness"
+    },
+    {
+      "target": "C3499",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "V",
+      "gloss": "smooth, smear, anoint; wipe (out), obliterate; cleave, adhere, make cleave, join"
+    },
+    {
+      "target": "C3500",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "N",
+      "gloss": "obliteration"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5412",
+    "demo_lemma": "srkrk",
+    "english": "[to creep]",
+    "german": "glätten(?); schärfen, wetzen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5412"
+  }
+}

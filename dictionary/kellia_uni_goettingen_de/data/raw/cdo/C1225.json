@@ -1,0 +1,414 @@
+{
+  "id": "C1225",
+  "forms": [
+    {
+      "id": "CF3838",
+      "orth": "ⲕⲙⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5407,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲕⲏⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4529,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲭⲙⲟⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8935,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲭⲏⲙ†",
+      "dialect": "B",
+      "id": "339.3"
+    },
+    {
+      "orth": "ⲕⲏⲙ†",
+      "dialect": "A",
+      "id": "339.4"
+    },
+    {
+      "orth": "ⲕⲙⲁⲙ",
+      "dialect": "F",
+      "id": "339.5"
+    },
+    {
+      "orth": "ⲕⲏⲙ†",
+      "dialect": "F",
+      "id": "339.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1420",
+      "bibliography": "CD 109b; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲕⲟⲟⲩⲉ ⲇⲉ ⲁⲩ**ⲕⲙⲟⲙ** ϩⲓⲧⲙⲡⲉⲭⲣⲟⲛⲟⲥ ⲁⲩⲧⲁⲕⲟ ⲁⲩⲣⲧϩⲉ ⲛϩⲉⲛϩⲃⲏⲩⲉ ⲛⲥⲱⲃⲉ ·",
+      "english": "whilst others have become black through (the lapse of) time, and have decayed, and have become objects of derision?",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲡⲉϯⲧⲁⲟⲩⲟ ⲛⲛⲓⲣⲁⲛ ⲉϫⲱⲧⲛ ⲛⲧⲟ .. ⲓⲣ ⲉⲧϫⲡⲟ ⲉⲧⲕⲏⲙ ‧ ⲙⲁⲣⲉⲛⲓⲙ ⲡϣⲏⲣⲉ ⲣⲉ ⲛⲛⲓⲙ ⲙⲁⲣⲉⲡⲟⲩϩⲏⲧ **ⲕⲙⲁⲙ** ⲙⲛⲛⲟⲩⲉⲣⲏⲩ ‧",
+      "english": "It is you (pl.) upon whom I pronounce these names, O ... that give birth(?), that are black, may NN son of NN, may their heart become black with one another!",
+      "source": "Separation spell",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϩ ⲟⲛ ⲉⲧⲟⲟⲧϥ ϩⲙⲡϣⲁϫⲉ ⲡⲉϫⲁϥ · ϫⲉⲧⲙⲉϩⲥⲛⲧⲉ ⲛⲧⲁⲝⲓⲥ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ϫⲉⲁⲣⲓⲟⲩⲑ ⲧⲉϭⲟⲟϣⲉ · ⲉⲩⲁⲣⲭⲱⲛ ⲛⲥϩⲓⲙⲉ ⲧⲉ ⲉⲥ**ⲕⲏⲙ** ⲧⲏⲣⲥ ⲉⲣⲉⲕⲉⲙⲛⲧⲁϥⲧⲉ ⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ ϩⲁⲣⲁⲧⲥ ⲉⲩⲁⲣⲭⲉⲓ ⲉϫⲛⲕⲉⲙⲏⲏϣⲉ ⲛⲇⲁⲓⲙⲱⲛ ·",
+      "english": "“He continued in the discourse and said: The second order is called Ariouth the Æthiopian, a female ruler, who is entirely black, under whom stand fourteen other [arch]demons which rule over a multitude of other demons.”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲥⲧⲣⲉⲟⲩⲑⲟⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ϣⲁⲣ",
+        1,
+        15.013
+      ],
+      [
+        "ⲭⲣⲟⲛⲟⲥ",
+        1,
+        13.621
+      ],
+      [
+        "ⲟⲩⲃⲁϣ",
+        1,
+        13.013
+      ],
+      [
+        "ϣⲁⲁⲣ",
+        1,
+        11.369
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        1,
+        11.258
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        9.714
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        9.47
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        8.763
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        1,
+        8.675
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        8.441
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.096
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        7.496
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.401
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲏ",
+        1,
+        6.894
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        5.886
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.142
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ⲁⲡⲁ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲟⲕ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲥⲟⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲕⲙⲟⲙ",
+          "ⲁⲩⲱ_2_post_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲙⲟⲙ",
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ϣⲁⲁⲣ",
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣ_1_pre_ⲕⲙⲟⲙ",
+          "ⲕⲙⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲕⲙⲟⲙ_0_node",
+          "ⲁ_2_post_ⲥⲟⲕ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲟⲕ",
+          "ⲩ_2_post_ⲥⲟⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4067,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1227",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black"
+    },
+    {
+      "target": "C1228",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, female; black thing"
+    },
+    {
+      "target": "C1229",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, male; black thing"
+    },
+    {
+      "target": "C1232",
+      "label": "ⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "the black (land), Egypt"
+    },
+    {
+      "target": "C1231",
+      "label": "ⲕⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1236",
+      "label": "ⲕⲙⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1226",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "N",
+      "gloss": "blackness"
+    },
+    {
+      "target": "C1234",
+      "label": "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian nationality, speech"
+    },
+    {
+      "target": "C1230",
+      "label": "ⲣⲕⲁⲙⲉ",
+      "pos": "V",
+      "gloss": "be black"
+    },
+    {
+      "target": "C1233",
+      "label": "ⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian"
+    },
+    {
+      "target": "C1235",
+      "label": "ⲭⲏⲙⲓ",
+      "pos": "N",
+      "gloss": "brazier, hearth"
+    }
+  ],
+  "etym": {
+    "egy_num": "164310",
+    "egy_lemma": "kmm",
+    "demo_num": "dm1514",
+    "demo_lemma": "km",
+    "english": "to be black; to be dark",
+    "german": "schwarz sein; dunkel sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164310",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1514"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "C6645",
+  "forms": [
+    {
+      "id": "CF15334",
+      "orth": "ⲣϩⲁⲙⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10640,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7358",
+      "bibliography": "CD 679a; KoptHWb 373; DELC 301b; ChLCS 91b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥ**ⲣϩⲁⲙⲏⲣ** ⲙⲙⲟⲟⲩ ⲁϥⲣⲓⲙⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲁϥϯⲡⲓ ⲉⲣⲟⲟⲩ ϩⲁⲡⲣⲁϣⲉ ϩⲱⲥ ϫⲉⲛⲉⲣⲉⲓⲏⲥⲟⲩⲥ ϭⲗⲙⲗⲱⲙ ⲉⲣⲟⲟⲩ",
+      "english": "...",
+      "source": "Lament of Mary CM.5139 part 1",
+      "urn": "urn:cts:copticLit:misc.lament_mary.lacau_ed:55-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.544
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ⲣϩⲁⲙⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_1_post_ⲣϩⲁⲙⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣϩⲁⲙⲏⲣ",
+          "ϥ_1_pre_ⲣϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϩⲁⲙⲏⲣ",
+          "ⲣϩⲁⲙⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲣϩⲁⲙⲏⲣ_0_node",
+          "ⲁ_2_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲓⲙⲉ",
+          "ϥ_2_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_1_post_ⲣϩⲁⲙⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10229,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6644",
+      "label": "ϩⲁⲙⲏⲣ",
+      "pos": "N",
+      "gloss": "arms, embrace"
+    },
+    {
+      "target": "C6646",
+      "label": "ϯϩⲁⲙⲏⲣ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "C5555",
+  "forms": [
+    {
+      "id": "CF13085",
+      "orth": "ⲣⲉϥⲧⲁϣⲉⲱⲣⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18741,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6218",
+      "bibliography": "CD 530a; DELC 250b; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲧϭⲓⲛϣⲁϫⲉ ⲛⲟⲩ**ⲣⲉϥⲧⲁϣⲉⲱⲣⲕ** ⲛⲉϩϣⲗϩϥ ⲉⲡⲉⲕϣⲁϥ ⲁⲩⲱ ⲟⲩϩⲱϫⲡ ⲙⲙⲁⲁϫⲉ ⲡⲉ ⲡⲉϥⲙⲓϣⲉ",
+      "english": "The talk of him that sweareth much maketh the hair stand upright; and their brawls make one stop his ears.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉϩϣⲗϩ",
+        1,
+        19.598
+      ],
+      [
+        "ϭⲓⲛϣⲁϫⲉ",
+        1,
+        15.74
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲁϣⲉⲱⲣⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18359,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4703",
+      "type": "cf",
+      "label": "increase"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5556",
+      "label": "ϭⲓⲛⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5554",
+      "label": "ⲃⲁⲓⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "oath-bearer(?)"
+    },
+    {
+      "target": "C5552",
+      "label": "ⲙⲛⲧⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    },
+    {
+      "target": "C5551",
+      "label": "ⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearer"
+    },
+    {
+      "target": "C5548",
+      "label": "ⲱⲣⲕ",
+      "pos": "V",
+      "gloss": "swear (oath), invoke (person etc.)"
+    },
+    {
+      "target": "C5553",
+      "label": "ⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5549",
+      "label": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "V",
+      "gloss": "swear falsely"
+    },
+    {
+      "target": "C5550",
+      "label": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C4411",
+  "forms": [
+    {
+      "id": "CF10774",
+      "orth": "ⲙⲉϩⲧⲱⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4996",
+      "bibliography": "CD 422b; CDC 66b; CED 191; KoptHWb 239; DELC 131b; ChLCS 60a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2285",
+      "type": "cf",
+      "label": "fill"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4412",
+      "label": "ϩⲁⲙⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "needle, peg"
+    },
+    {
+      "target": "C4413",
+      "label": "ⲧⲁⲡⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "joint"
+    },
+    {
+      "target": "C4410",
+      "label": "ⲧⲱⲡ",
+      "pos": "V",
+      "gloss": "stitch, stop, caulk"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2613",
+    "demo_lemma": "mḥ-n-tp",
+    "english": "needle",
+    "german": "Nadel",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2613"
+  }
+}

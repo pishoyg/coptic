@@ -1,0 +1,213 @@
+{
+  "id": "C938",
+  "forms": [
+    {
+      "id": "CF3220",
+      "orth": "ⲣⲉⲓⲟⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4823,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1095",
+      "bibliography": "CD 82a; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϩⲣⲱⲧⲛ ⲧⲉⲧⲛϥⲓⲣⲟⲟⲩϣ ϩⲁⲧϩⲃⲥⲱ ϭⲱϣⲧ ⲉⲛⲉⲕⲣⲓⲛⲟⲛ ⲛⲧⲥⲱϣⲉ ⲛⲧϩⲉ ⲉⲧⲟⲩⲁⲩⲝⲁⲛⲉ ⲙⲙⲟⲥ ϫⲉⲛⲥⲉϩⲓⲥⲉ ⲁⲛ ⲟⲩⲇⲉ ⲛⲥⲉ**ⲣⲉⲓⲟⲡⲉ** ⲁⲛ .",
+      "english": "Why are you anxious about clothing? Consider the lilies of the field, how they grow. They don't toil, neither do they spin,",
+      "source": "40_Matthew_6",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲡⲉ ⲁⲛ ⲛϩⲁ**ⲣⲉⲓⲟⲡⲉ** ·",
+      "english": "It was not a curtain which was made by cunning weavers,",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "... ϩⲁ**ⲣⲉⲓⲟⲡⲉ**",
+      "english": "And they shall make the shoulder-piece of fine linen spun, the woven work of the embroiderer.",
+      "source": "Exodus 28",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲏⲧ",
+        1,
+        15.276
+      ],
+      [
+        "...",
+        5,
+        14.948
+      ],
+      [
+        "ϩⲁ",
+        4,
+        13.543
+      ],
+      [
+        "ⲥⲁ",
+        2,
+        11.936
+      ],
+      [
+        "ⲁⲛ",
+        4,
+        11.806
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        9.768
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        9.357
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        8.774
+      ],
+      [
+        "ⲛ",
+        5,
+        8.453
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        7.954
+      ],
+      [
+        "ⲟ",
+        1,
+        7.483
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.186
+      ],
+      [
+        "ϥ",
+        3,
+        6.955
+      ],
+      [
+        "ⲅ",
+        1,
+        6.917
+      ],
+      [
+        "ϫⲱ",
+        1,
+        6.083
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.761
+      ],
+      [
+        "ϯ",
+        1,
+        5.194
+      ],
+      [
+        ".",
+        1,
+        4.235
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉⲓⲟⲡⲉ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4410,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C935",
+      "label": "ⲉⲓⲉⲡ-",
+      "pos": "N",
+      "gloss": "(with or without ⲛ-) + name of craft, its material or product"
+    },
+    {
+      "target": "C936",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trade; merchandise"
+    },
+    {
+      "target": "C934",
+      "label": "ⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art, occupation"
+    },
+    {
+      "target": "C941",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art"
+    },
+    {
+      "target": "C939",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C940",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C937",
+      "label": "ⲣⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "V",
+      "gloss": "trade"
+    }
+  ]
+}

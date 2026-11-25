@@ -1,0 +1,170 @@
+{
+  "id": "C2442",
+  "forms": [
+    {
+      "id": "CF6665",
+      "orth": "ⲛⲟⲩⲃⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛⲟⲃⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9521,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲃⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 6968,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲧⲃ",
+      "dialect": "B",
+      "id": "1177.3"
+    },
+    {
+      "orth": "ⲛⲟⲩⲧⲡ",
+      "dialect": "B",
+      "id": "1177.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2809",
+      "bibliography": "CD 222b; CED 107; KoptHWb 120; ChLCS 32a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲏⲧ",
+        1,
+        16.525
+      ],
+      [
+        "ϩⲉⲙⲥⲓ",
+        1,
+        10.96
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲛⲟⲩⲃⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲃⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲏⲧ_3_post_ϩⲁⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩⲃⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲛⲟⲩⲃⲧ",
+          "ⲛⲟⲩⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲃⲧ_0_node",
+          "ⲛ_1_post_ⲛⲟⲩⲃⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲃⲧ",
+          "ϩⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲛ",
+          "ⲃⲏⲧ_3_post_ϩⲁⲛ",
+          1
+        ],
+        [
+          "ⲃⲏⲧ_3_post_ϩⲁⲛ",
+          "ⲉ_1_post_ⲛⲟⲩⲃⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6436,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2443",
+      "label": "ⲛⲏⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "plait, tress"
+    }
+  ],
+  "etym": {
+    "egy_num": "82850",
+    "egy_lemma": "nbd",
+    "demo_num": "d3138",
+    "demo_lemma": "nbt",
+    "english": "to wind around; to coil",
+    "german": "flechten; sich frisieren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/82850",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3138"
+  }
+}

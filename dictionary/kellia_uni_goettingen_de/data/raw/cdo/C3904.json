@@ -1,0 +1,123 @@
+{
+  "id": "C3904",
+  "forms": [
+    {
+      "id": "CF9739",
+      "orth": "ⲣⲉϥⲥⲉϣⲉⲓⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19830,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4431",
+      "bibliography": "CD 374b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲥⲟⲟⲩⲛ ⲙⲡⲁⲓ ϫⲉⲛⲉⲣⲉ ⲡⲛⲟⲙⲟⲥ ⲕⲏ ⲁⲛ ⲉϩⲣⲁⲓ ⲙⲡⲇⲓⲕⲁⲓⲟⲥ ⲁⲗⲗⲁ ⲛⲛⲁⲛⲟⲙⲟⲥ ⲙⲛⲛⲉⲧⲉⲛⲥⲉϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲁⲛ ⲛⲛⲁⲥⲉⲃⲏⲥ ⲙⲛⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲛⲛⲉⲧϫⲁϩⲙ ⲁⲩⲱ ⲛⲉⲧⲃⲏⲧ ⲛⲛ**ⲣⲉϥⲥⲉϣⲉⲓⲱⲧ** ⲙⲛⲛⲣⲉϥⲥⲉϣⲙⲁⲁⲩ ⲛⲛⲣⲉϥϩⲉⲧⲃ ⲣⲱⲙⲉ .",
+      "english": "as knowing this, that law is not made for a righteous man, but for the lawless and insubordinate, for the ungodly and sinners, for the unholy and profane, for murderers of fathers and murderers of mothers, for manslayers,",
+      "source": "54_1 Timothy_1",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲥⲉϣⲙⲁⲁⲩ",
+        1,
+        20.598
+      ],
+      [
+        "ⲃⲏⲧ",
+        1,
+        15.791
+      ],
+      [
+        "ⲛ",
+        4,
+        9.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19440,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C3903",
+      "type": "cf",
+      "label": "strike"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3909",
+      "label": "ϫⲓⲥⲁϣ",
+      "pos": "V",
+      "gloss": "receive wound, be wounded"
+    },
+    {
+      "target": "C3908",
+      "label": "ϯⲥⲁϣ",
+      "pos": "V",
+      "gloss": "give a blow"
+    },
+    {
+      "target": "C3907",
+      "label": "ⲣⲥⲁϣ",
+      "pos": "V",
+      "gloss": "cover with wounds, sores"
+    },
+    {
+      "target": "C3905",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3906",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3903",
+      "label": "ⲥⲱϣ",
+      "pos": "V",
+      "gloss": "strike"
+    }
+  ]
+}

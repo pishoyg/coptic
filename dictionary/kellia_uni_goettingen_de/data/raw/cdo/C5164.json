@@ -1,0 +1,46 @@
+{
+  "id": "C5164",
+  "forms": [
+    {
+      "id": "CF12294",
+      "orth": "ⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5798",
+      "bibliography": "KoptHWb 277; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5163",
+      "label": "ⲟⲩⲟⲥⲣ",
+      "pos": "N",
+      "gloss": "oar"
+    },
+    {
+      "target": "C5165",
+      "label": "ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "pos": "N",
+      "gloss": "puller of oar, rower"
+    }
+  ]
+}

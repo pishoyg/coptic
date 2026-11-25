@@ -1,0 +1,56 @@
+{
+  "id": "C1362",
+  "forms": [
+    {
+      "id": "CF4134",
+      "orth": "ⲕⲁⲥⲣⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1574",
+      "bibliography": "CD 120a; KoptHWb 69"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1358",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "bone"
+    },
+    {
+      "target": "C1363",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "stone, pit (of fruit)"
+    },
+    {
+      "target": "C1361",
+      "label": "ⲕⲁⲥⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "rib-bones"
+    },
+    {
+      "target": "C1359",
+      "label": "ⲙⲁⲣⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "bone-setter (doctor)"
+    },
+    {
+      "target": "C1360",
+      "label": "ⲣⲕⲁⲥ",
+      "pos": "V",
+      "gloss": "become bony"
+    }
+  ]
+}

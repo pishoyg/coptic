@@ -1,0 +1,225 @@
+{
+  "id": "C7504",
+  "forms": [
+    {
+      "id": "CF17067",
+      "orth": "ⲉϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 14.63,
+        "rank": 87,
+        "count": 2309
+      }
+    },
+    {
+      "orth": "ⲉϫⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 29.34,
+        "rank": 50,
+        "count": 2488
+      }
+    },
+    {
+      "orth": "ⲉϫⲉⲛ",
+      "dialect": "S",
+      "id": null
+    },
+    {
+      "orth": "ⲉϫⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 13.05,
+        "rank": 103,
+        "count": 1107
+      }
+    },
+    {
+      "orth": "ⲉϫⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 11.71,
+        "rank": 101,
+        "count": 1848
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS8311",
+      "bibliography": "CD 757a; CED 310-311; KoptHWb 442; ChLCS 105b"
+    },
+    {
+      "id": "CS8312",
+      "bibliography": "CD 757ab; KoptHWb 442"
+    },
+    {
+      "id": "CS8313",
+      "bibliography": "CD 757b"
+    },
+    {
+      "id": "CS8314",
+      "bibliography": "CD 757b"
+    },
+    {
+      "id": "CS8315",
+      "bibliography": "CD 757b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲕⲉⲟⲩⲁⲓ ⲁϥϩⲉⲓ **ⲉϫⲉⲛ**ⲡⲓⲙⲁ ⲙⲡⲉⲧⲣⲁ ⲡⲓⲙⲁ ⲉⲧⲉⲙⲙⲟⲛⲙⲏϣ ⲛⲕⲁϩⲓ ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲥⲁⲧⲟⲧϥ ⲁϥⲣⲱⲧ ⲉⲑⲃⲉϫⲉⲙⲙⲟⲛⲧⲉϥ ϣⲱⲕ ⲛⲕⲁϩⲓ",
+      "english": "Others fell on the rocky ground, where it had little soil, and immediately it sprang up, because it had no depth of soil.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲓ ⲉϩⲣⲁⲓ **ⲉϫⲛ**ⲟⲩⲕⲁⲧⲁⲅⲁⲓⲟⲛ ·",
+      "english": "and he came to the cell of a monk,",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϩⲓⲟⲩⲓ ϧⲉⲛⲧⲉϥⲁⲫⲉ ⲛⲟⲩⲕⲁϣ ⲟⲩⲟϩ ⲛⲁⲩϩⲓⲑⲁϥ ϧⲉⲛⲡⲉϥϩⲟ ⲟⲩⲟϩ ⲉⲩϩⲓⲟⲩⲓ ⲙⲙⲱⲟⲩ **ⲉϫⲉⲛ**ⲛⲟⲩⲕⲉⲗⲓ ⲉⲟⲩⲱϣⲧ ⲙⲙⲟϥ .",
+      "english": "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥϣⲗⲏⲗ **ⲉϫⲙ**ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲟⲟⲩ ·",
+      "english": "And he prayed over each one of them.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲇⲉ ⲁⲩⲉⲛⲛⲟⲩϫⲓϫ **ⲉϫⲱ**ϥ ⲟⲩⲟϩ ⲁⲩⲁⲙⲟⲛⲓ ⲙⲙⲟϥ .",
+      "english": "They laid their hands on him, and seized him.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓⲧϥ ϫⲉⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ⲁϥⲣⲁϣⲉ ⲉϩⲣⲁⲓ **ⲉϫⲱ**ϥ ·",
+      "english": "and John took it, and rejoiced over it,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7498",
+      "label": "ϣⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "headache"
+    },
+    {
+      "target": "C7506",
+      "label": "ϩⲁϫⲛ-",
+      "pos": "PREP",
+      "gloss": "before (local); before (temporal)"
+    },
+    {
+      "target": "C7508",
+      "label": "ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; upon, in; on, at, beside; for; through; from upon"
+    },
+    {
+      "target": "C7512",
+      "label": "ϩⲓϫⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "meaning obscure"
+    },
+    {
+      "target": "C7500",
+      "label": "ϫⲁϫⲃⲱⲛ",
+      "pos": "N",
+      "gloss": "wrongdoer"
+    },
+    {
+      "target": "C7497",
+      "label": "ϫⲱϫ",
+      "pos": "N",
+      "gloss": "head, capital; leader"
+    },
+    {
+      "target": "C7501",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "cornerstone"
+    },
+    {
+      "target": "C7499",
+      "label": "ⲁⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "leader, commander"
+    },
+    {
+      "target": "C7510",
+      "label": "ⲉⲃⲟⲗ ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "from upon"
+    },
+    {
+      "target": "C7503",
+      "label": "ⲛⲥⲁϫⲱ⸗",
+      "pos": "ADV",
+      "gloss": "behind head, backward, head down"
+    },
+    {
+      "target": "C7509",
+      "label": "ⲡⲉⲧϩⲓϫⲛ-",
+      "pos": "N",
+      "gloss": "who is in command, commander"
+    },
+    {
+      "target": "C7507",
+      "label": "ⲣ ϩⲁϫⲱ⸗",
+      "pos": "V",
+      "gloss": "go toward"
+    },
+    {
+      "target": "C7511",
+      "label": "ⲣ ϩⲓϫⲛ-",
+      "pos": "V",
+      "gloss": "be over"
+    },
+    {
+      "target": "C7505",
+      "label": "ⲣ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "be over(?)"
+    },
+    {
+      "target": "C7502",
+      "label": "ⲣϫⲱϫ",
+      "pos": "V",
+      "gloss": "head, lead, make head"
+    }
+  ],
+  "etym": {
+    "egy_num": "883385",
+    "egy_lemma": "r-ḏꜣḏꜣ",
+    "demo_num": "d3407",
+    "demo_lemma": "r-ḏꜣḏꜣ(-n)",
+    "english": "[preposition]",
+    "german": "gegen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/883385",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3407"
+  }
+}

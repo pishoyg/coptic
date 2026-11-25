@@ -1,0 +1,318 @@
+{
+  "id": "C8559",
+  "forms": [
+    {
+      "id": "CF20151",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20152",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5258,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF20153",
+      "orth": "ⲁⲫⲁⲣⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20154",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20155",
+      "orth": "ⲁⲫⲑⲁⲣⲧⲟⲥⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10050",
+      "bibliography": "DDGLC",
+      "cu_ID": "4374"
+    },
+    {
+      "id": "CS10051",
+      "bibliography": "DDGLC",
+      "cu_ID": "6408"
+    },
+    {
+      "id": "CS10052",
+      "bibliography": "DDGLC",
+      "cu_ID": "9244"
+    },
+    {
+      "id": "CS10053",
+      "bibliography": "DDGLC",
+      "cu_ID": "4292"
+    },
+    {
+      "id": "CS10054",
+      "bibliography": "DDGLC",
+      "cu_ID": "4375"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩⲥⲕⲩⲗⲗⲉⲓ ⲙⲙⲟⲟⲩ ⲛϭⲓⲛⲓ**ⲁⲫⲑⲁⲣⲧⲟⲥ** ⲧⲏⲣⲟⲩ ⲉⲩⲟ ⲙⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲧⲟⲡⲟⲥ ·",
+      "english": "“And that mystery knoweth wherefor all the Imperishables, being their twelve orders, have rent themselves asunder”",
+      "source": "Pistis Sophia Book 2 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:66-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲟⲛ ⲧⲉⲛⲟⲩ ⲧⲁϫⲱ ⲉⲣⲱⲧⲛ ⲛⲛⲉⲩⲕⲉⲣⲁⲛ ⲛ**ⲁⲫⲑⲁⲣⲧⲟⲥ** ⲉⲧⲉⲛⲁⲓ ⲛⲉ ·",
+      "english": "Hearken now then that I may tell you also their incorruptible names, which are:",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲟⲟⲩ ⲛⲁⲕ ⲡⲁ**ⲁⲫⲑⲁⲣⲧⲟⲥ** ϩⲁⲙⲏⲛ ⲡⲉⲟⲟⲩ ⲛⲁⲕ ⲡⲣⲣⲟ ⲙⲡⲉⲟⲟⲩ ϥⲑ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 2 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:12-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲉⲣⲁ",
+        1,
+        14.791
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        2,
+        11.725
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        10.068
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        9.737
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        9.641
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.835
+      ],
+      [
+        "ⲩ",
+        3,
+        8.565
+      ],
+      [
+        "ⲣⲁⲛ",
+        1,
+        7.993
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.975
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.284
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        7.27
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.91
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.816
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.688
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.376
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.864
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.819
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲫⲑⲁⲣⲧⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ_b",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          "ⲁⲫⲑⲁⲣⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲑⲁⲣⲧⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          "ⲩ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟ",
+          "ⲟ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          "ⲛ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ_b",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲫⲑⲁⲣⲧⲟⲥ_b",
+          "ⲁⲫⲑⲁⲣⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲫⲑⲁⲣⲧⲟⲥ_0_node",
+          "ⲉⲧⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          "ⲛⲁⲓ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛⲉ",
+          "ⲛⲉ_1_post_ⲁⲫⲑⲁⲣⲧⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4839,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "3286",
+    "grl_lemma": "ἄφθαρτος",
+    "grl_meaning": "incorruptible, eternal, immortal",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 289a"
+  }
+}

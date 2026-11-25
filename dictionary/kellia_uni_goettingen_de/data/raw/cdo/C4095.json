@@ -1,0 +1,56 @@
+{
+  "id": "C4095",
+  "forms": [
+    {
+      "id": "CF10135",
+      "orth": "ⲧⲟⲡⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4653",
+      "bibliography": "CD 399a; KoptHWb 222"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4098",
+      "label": "ⲡⲉⲧⲃⲉ",
+      "pos": "N",
+      "gloss": "\"Requiter\" (name of a god)"
+    },
+    {
+      "target": "C4096",
+      "label": "ⲣⲉϥⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requiter"
+    },
+    {
+      "target": "C4097",
+      "label": "ⲣⲉϥⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requiter"
+    },
+    {
+      "target": "C4093",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "repay, requite"
+    },
+    {
+      "target": "C4094",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "requital"
+    }
+  ]
+}

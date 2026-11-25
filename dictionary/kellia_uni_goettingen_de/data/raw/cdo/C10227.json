@@ -1,0 +1,183 @@
+{
+  "id": "C10227",
+  "forms": [
+    {
+      "id": "CF27052",
+      "orth": "ⲡⲟⲓⲙⲏⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27054",
+      "orth": "ⲡⲟⲓⲙⲏⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27053",
+      "orth": "ⲡⲟⲓⲙⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27055",
+      "orth": "ⲡⲟⲓⲙⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4328,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13661",
+      "bibliography": "DDGLC",
+      "cu_ID": "1401"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲁⲡⲁ **ⲡⲟⲓⲙⲏⲛ** . ϫⲉⲁⲟⲩⲥⲟⲛ ϫⲟⲟⲥ ⲛⲁⲡⲁ ⲡⲁⲏⲥⲉ . ϫⲉⲉⲓⲛⲁⲣⲟⲩ ⲙⲡⲁϩⲏⲧ ⲉϥⲛⲁϣⲧ .",
+      "english": "Abba Poemen said, a brother said to Abba Païse, 'what should I do about my hard heart?",
+      "source": "Apophthegmata Patrum Sahidic 004: Poemen",
+      "urn": "urn:cts:copticLit:ap.4.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲁⲡⲁ **ⲡⲟⲓⲙⲏⲛ** ⲉⲧⲃⲉⲁⲡⲁ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲕⲟⲗⲟⲃⲟⲥ ϫⲉⲁϥⲧⲱⲃϩ ⲙⲡⲛⲟⲩⲧⲉ",
+      "english": "Abba Poemen said concerning Abba John the Little that he prayed to God.",
+      "source": "Apophthegmata Patrum Sahidic 037",
+      "urn": "urn:cts:copticLit:ap.37.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲉⲧⲃⲉⲁⲡⲁ **ⲡⲟⲓⲙⲏⲛ** ϫⲉⲙⲡⲉϥⲟⲩⲱϣ ⲉⲛⲉϩ ⲉⲕⲁⲡⲉϥϣⲁϫⲉ ⲉϫⲙⲡϣⲁϫⲉ ⲛⲗⲁⲁⲩ ⲛϩⲗⲗⲟ · ⲁⲗⲗⲁ ⲛⲧⲟϥ ⲛϩⲟⲩⲟ ⲛⲉϣⲁϥϯⲉⲟⲟⲩ ⲙⲡⲉⲩϣⲁϫⲉ ⲡⲁⲣⲁⲡⲱϥ ·",
+      "english": "They said of Apa Poemen that he never wanted to make his speeches after the speeches of any old man, but he was greater when he praised their words instead of his own.",
+      "source": "Apophthegmata Patrum Sahidic 113: Poemen 105",
+      "urn": "urn:cts:copticLit:ap.113.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛⲟⲙⲁϩⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ⲁⲡⲁ",
+        7,
+        17.185
+      ],
+      [
+        "ϫⲟⲟ",
+        4,
+        12.531
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        11.234
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        3,
+        10.95
+      ],
+      [
+        "ⲥ",
+        4,
+        9.689
+      ],
+      [
+        "ϫⲉ",
+        4,
+        9.561
+      ],
+      [
+        "ⲧⲁⲡⲣⲟ",
+        1,
+        9.225
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        1,
+        9.196
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        8.417
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        7.828
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.516
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        ".",
+        2,
+        6.972
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.379
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.16
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ],
+      [
+        "ⲛ",
+        2,
+        4.224
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.059
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3934,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1781",
+    "grl_lemma": "ποιμήν",
+    "grl_meaning": "herdsman",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1430b; Preisigke 2:333"
+  }
+}

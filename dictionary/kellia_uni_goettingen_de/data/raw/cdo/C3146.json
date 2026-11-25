@@ -1,0 +1,739 @@
+{
+  "id": "C3146",
+  "forms": [
+    {
+      "id": "CF8173",
+      "orth": "ⲣⲁⲥⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.55,
+        "rank": 1057,
+        "count": 87
+      }
+    },
+    {
+      "orth": "ⲣⲁⲥⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.13,
+        "rank": 678,
+        "count": 96
+      }
+    },
+    {
+      "orth": "ⲣⲉⲥⲟⲩ",
+      "dialect": "A",
+      "id": "918.2"
+    },
+    {
+      "orth": "ⲗⲉⲥⲃⲓ",
+      "dialect": "F",
+      "id": "918.3"
+    },
+    {
+      "orth": "ⲣⲉⲥⲟⲩⲉ",
+      "dialect": "L",
+      "id": "918.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3596",
+      "bibliography": "CD 302b; CED 139; KoptHWb 166; DELC 177-178; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉ ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲉⲫⲣⲉⲙ ⲟ ⲛϣⲏⲣⲉϣⲏⲙ ⲁϥⲛⲁⲩ ⲉⲩ**ⲣⲁⲥⲟⲩ** · ⲏ ⲟⲩϭⲱⲗⲡ ⲉⲃⲟⲗ ·",
+      "english": "When the blessed Ephraim was a little boy he saw a dream or a revelation",
+      "source": "Apophthegmata Patrum Sahidic 177: Ephraim",
+      "urn": "urn:cts:copticLit:ap.177.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲱ ⲛⲟⲩⲱⲛⲉ ϩⲁⲧⲉϥⲁⲡⲉ · ⲁϥⲛⲕⲟⲧⲕ ⲁϥⲡⲱⲱⲣⲉ ⲛⲟⲩ**ⲣⲁⲥⲟⲩ** ϩⲛⲧⲉⲟⲩϣⲏ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "And when he had placed a stone under his head, he lay down and fell asleep, and that night he dreamed a dream.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ ⲇⲉ ⲁϥⲣⲡⲙⲁ ⲙⲡⲣⲣⲟ ⲁⲣⲇⲁⲝⲉⲣⲝⲏⲥ ⲁⲩⲱ ⲛⲉⲩⲛⲟϭ ⲡⲉ ϩⲛⲧⲙⲛⲧⲣⲣⲟ ⲉϥⲟⲩⲟⲓ ⲉⲣⲉⲛⲓⲟⲩⲇⲁⲓⲟⲥ ⲙⲉ ⲙⲙⲟϥ ⲡⲉϥⲥⲙⲟⲧ ⲛⲛⲉϥⲕⲱ ⲙⲙⲟϥ ⲙⲡⲉϥϩⲉⲑⲛⲟⲥ ⲧⲏⲣϥ ⲡⲉϫⲉⲙⲁⲣⲇⲟⲩⲭⲁⲓⲟⲥ ϫⲉⲁⲣⲁ ⲉⲛⲧⲁⲛⲁⲓ ϣⲱⲡⲉ ⲛⲧⲟⲟⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲓⲣⲡⲙⲉⲉⲩⲉ ⲛⲧ**ⲣⲁⲥⲟⲩ** ⲉⲛⲧⲁⲓⲛⲁⲩ ⲉⲣⲟⲥ ⲉⲧⲃⲉⲛⲉⲓϣⲁϫⲉ ⲙⲡⲉⲗⲁⲁⲩ ⲛϣⲁϫⲉ ϩⲉ ⲉⲃⲟⲗ ⲧⲕⲟⲩⲓ ⲙⲡⲏⲅⲏ ⲁⲥϣⲱⲡⲉ ⲉⲩⲓⲉⲣⲟ ⲁⲩⲱ ⲛⲉⲣⲉⲟⲩⲟⲉⲓⲛ ϣⲟⲟⲡ ϩⲙⲡⲣⲏ ⲁⲩⲱ ⲟⲩⲛⲟϭ ⲙⲙⲟⲟⲩ ⲉⲥⲑⲏⲣ ⲧⲉ ⲡⲓⲉⲣⲟ ⲉⲛⲧⲁⲡⲣⲣⲟ ϩⲙⲟⲟⲥ ⲛⲙⲙⲁⲥ ⲁϥⲁⲁⲥ ⲛⲣⲣⲱ ⲡⲁⲇⲣⲁⲕⲱⲛ ⲇⲉ ⲥⲛⲁⲩ ⲁⲛⲟⲕ ⲡⲉ ⲙⲛⲁⲙⲁⲛ ⲛϩⲉⲑⲛⲟⲥ ⲇⲉ ⲉⲛⲧⲁⲩⲥⲟⲩⲱϩ ⲉϩⲟⲩⲛ ⲉⲧⲁⲕⲉⲡⲣⲁⲛ ⲛⲓⲟⲩⲇⲁⲓ ⲡⲁϩⲉⲑⲛⲟⲥ ⲇⲉ ⲡⲁⲓ ⲡⲉ ⲡⲓⲥⲣⲁⲏⲗ ⲛⲉⲛⲧⲁⲩⲱϣ ⲉⲃⲟⲗ ⲉϩⲣⲁⲓ ⲉⲡⲛⲟⲩⲧⲉ ⲁⲩⲟⲩϫⲁⲓ ⲁϥⲛⲁ ϩⲛⲡⲉϥⲗⲁⲟⲥ ⲁϥϥⲓⲧⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉⲓⲡⲉⲧϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲡⲛⲟⲩⲧⲉ ⲁϥⲉⲓⲣⲉ ⲛϩⲉⲛⲛⲟϭ ⲙⲙⲁⲉⲓⲛ ⲙⲛϩⲉⲛϣⲡⲏⲣⲉ ⲛⲁⲓ ⲉⲙⲡⲟⲩϣⲱⲡⲉ ϩⲛⲛϩⲉⲑⲛⲟⲥ ⲉⲧⲃⲉⲡⲁⲓ ⲁϥⲧⲁⲙⲓⲉⲕⲗⲏⲣⲟⲥ ⲥⲛⲁⲩ ⲟⲩⲁ ⲙⲡⲗⲁⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲕⲉⲟⲩⲁ ⲛⲛϩⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲡⲉⲕⲗⲏⲣⲟⲥ ⲥⲛⲁⲩ ⲁⲩⲉⲓ ⲉⲩⲟⲩⲛⲟⲩ ⲛⲟⲩⲱⲧ ⲙⲛⲟⲩⲕⲁⲓⲣⲟⲥ ⲁⲩⲱ ⲉⲩϩⲟⲟⲩ ⲛⲕⲣⲓⲥⲓⲥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲛⲛⲛϩⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲡⲛⲟⲩⲧⲉ ⲁϥⲣⲡⲙⲉⲉⲩⲉ ⲙⲡⲉϥⲗⲁⲟⲥ ⲁϥⲧⲙⲁⲓⲉⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲁⲩⲱ ⲛⲉⲓϩⲟⲟⲩ ⲥⲉⲛⲁϣⲱⲡⲉ ⲛⲁⲩ ⲙⲡⲉⲃⲟⲧ ⲛⲁⲇⲁⲣ ⲛⲥⲟⲩⲙⲛⲧⲁϥⲧⲉ ⲙⲛⲥⲟⲩⲙⲛⲧⲏ ⲙⲡⲉⲓⲉⲃⲟⲧ ⲛⲟⲩⲱⲧ ϩⲛⲟⲩⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲙⲛⲟⲩⲣⲁϣⲉ ⲙⲛⲟⲩⲉⲩⲫⲣⲟⲥⲩⲛⲏ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ⲕⲁⲧⲁⲅⲉⲛⲉⲁ ϣⲁⲉⲛⲉϩ ϩⲙⲡⲉϥⲗⲁⲟⲥ ⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲛⲥⲡϥⲧⲟ ⲙⲡⲧⲟⲗⲙⲁⲓⲟⲥ ⲉϥⲟ ⲛⲛⲣⲣⲟ ⲙⲛⲕⲗⲉⲟⲡⲁⲧⲣⲁ ⲇⲱⲥⲑⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲏⲏⲃ ⲡⲉ ⲁⲩⲱ ⲟⲩⲗⲉⲩⲓⲧⲏⲥ ⲡⲉ ⲙⲛⲡⲧⲟⲗⲉⲙⲁⲓⲟⲥ ⲡⲉϥϣⲏⲣⲉ ⲁϥⲉⲓⲛⲉ ⲛⲧⲉⲡⲓⲥⲧⲟⲗⲏ ⲉⲧⲥⲏϩ ⲛϣⲟⲣⲡ ⲛⲛⲉϥⲣⲟⲩⲣⲁⲓ ⲧⲉⲛⲧⲁⲩϫⲟⲟⲥ ⲉⲧⲃⲏⲏⲧⲥ ⲁⲗⲩⲥⲓⲙⲁⲭⲟⲥ ϩⲉⲣⲙⲏⲛⲉⲩⲉ ⲙⲙⲟⲥ ⲡϣⲏⲣⲉ ⲙⲡⲧⲟⲗⲉⲙⲁⲓⲟⲥ ⲛⲛⲉⲧⲟⲩⲏϩ ϩⲛⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "And Mardochaeus was viceroy to king Artaxerxes, and was a great man in the kingdom, and honoured by the Jews, and passed his life beloved of all his nation. [And Mardocheus said, These things have been done of God. For I remember the dream which I had concerning these matters: for not one particular of them has failed. There was the little fountain which became a river, and there was light, and the sun and much water. The river is Esther, whom the king married, and made queen. And the two serpents are I and Aman. And the nations are those nations that combined to destroy the name of the Jews. But as for my nation, this is Israel, even they that cried to God and were delivered: for the Lord delivered his people. And the Lord rescued us out of all these calamities; and God wrought such signs and great wonders as have not been done among the nations. Therefore did he ordain two lots. One for the people of God, and one for all the other nations. And these two lots came for an appointed season, and for a day of judgment, before God, and for all the nations. And God remembered his people, and vindicated his inheritance. And they shall observe these days in the month Adar, on the fourteenth and on the fifteenth day of the month, with an assembly, and joy and gladness before God, throughout the generations for ever among his people Israel. In the fourth year of the reign of Ptolemeus and Cleopatra, Dositheus, who said he was a priest and Levite, and Ptolemeus his son, brought this epistle of Phurim, which they said was the same, and that Lysimachus the son of Ptolemeus, that was in Jerusalem, had interpreted.]",
+      "source": "Esther 10",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲱⲱⲣⲉ",
+        10,
+        20.661
+      ],
+      [
+        "ϩⲛ",
+        39,
+        15.892
+      ],
+      [
+        "ⲁⲩⲱ",
+        45,
+        15.78
+      ],
+      [
+        "ⲟⲩ",
+        49,
+        15.621
+      ],
+      [
+        "ⲣⲉϥⲟⲩⲱⲧϩ",
+        3,
+        15.451
+      ],
+      [
+        "ⲉⲓⲥ",
+        15,
+        15.324
+      ],
+      [
+        "ⲛ",
+        58,
+        14.94
+      ],
+      [
+        "ϩⲉⲛ",
+        20,
+        14.597
+      ],
+      [
+        "ⲡⲟⲟⲣⲉⲥ",
+        1,
+        14.155
+      ],
+      [
+        "ⲛⲉⲓⲣⲁⲓⲟⲥ",
+        1,
+        14.155
+      ],
+      [
+        "ⲟⲩⲙⲏⲗⲏⲧⲁ",
+        1,
+        14.155
+      ],
+      [
+        "ⲟⲩⲱⲙⲁϥ",
+        1,
+        14.155
+      ],
+      [
+        "ⲙⲉϩⲥⲟⲡⲥⲛⲁⲩ",
+        1,
+        14.155
+      ],
+      [
+        "ⲁⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲱⲣ",
+        1,
+        14.155
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        14.155
+      ],
+      [
+        "ⲙⲛ",
+        23,
+        13.772
+      ],
+      [
+        "ⲛⲁⲩ",
+        13,
+        13.475
+      ],
+      [
+        "ⲫⲁⲛⲧⲁⲥⲓⲁ",
+        2,
+        13.248
+      ],
+      [
+        "ⲉ",
+        31,
+        13.237
+      ],
+      [
+        "ⲛⲟϣⲡⲧ",
+        1,
+        13.155
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          61
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲣⲁⲥⲟⲩ",
+          6
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲁⲥⲟⲩ",
+          4
+        ],
+        [
+          "ⲏ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ϭⲱⲗⲡ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲓⲃⲉⲥ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲉⲡⲓⲑⲩⲙⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲑⲩⲙⲓⲁ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲉⲡⲓⲑⲩⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲣⲉϥⲟⲩⲱⲧϩ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲟⲩⲱⲧϩ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲁⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲉϣϫⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_2_post_ⲉϣϫⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_6_post_ⲡⲣⲟⲫⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲓⲣⲁⲓⲟⲥ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲁϩ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲁϩⲛⲉ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲟⲩⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲏ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϭⲱⲗⲡ",
+          "ⲟⲩ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϭⲱⲗⲡ",
+          "ϭⲱⲗⲡ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϭⲱⲗⲡ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲉⲃⲟⲗ_2_post_ϭⲱⲗⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ϩⲉⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲙⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          "ϩⲉⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲁⲓⲃⲉⲥ",
+          "ϩⲁⲓⲃⲉⲥ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲏ_4_post_ⲉⲡⲓⲑⲩⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲉⲡⲓⲑⲩⲙⲓⲁ",
+          "ϩⲛ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲁⲥⲟⲩ",
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϩⲛ",
+          "ⲉⲡⲓⲑⲩⲙⲓⲁ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲑⲩⲙⲓⲁ_3_post_ϩⲉⲛ",
+          "ⲛⲧⲉ_4_post_ⲉⲡⲓⲑⲩⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ϩⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲥⲛⲁⲩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲡ_2_post_ⲣⲉϥⲟⲩⲱⲧϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲣⲉϥⲟⲩⲱⲧϩ",
+          "ⲣⲉϥⲟⲩⲱⲧϩ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲟⲩⲱⲧϩ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲙⲛ_2_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲙⲣⲉ",
+          "ⲡ_2_post_ⲁⲙⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲧⲁ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲡ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲡ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲟⲩⲁ",
+          "ⲟⲩⲁ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲉϣϫⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲉϣϫⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲛⲉ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ⲛⲁⲩ",
+          "ⲓ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲛⲁⲩ",
+          "ⲛⲁⲩ_2_post_ⲉϣϫⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲁⲩⲱ_3_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲁⲉⲓⲛ",
+          "ϩⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲙⲁⲉⲓⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_2_post_ϩⲙ",
+          "ⲁⲩⲱ_6_post_ⲡⲣⲟⲫⲏⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_6_post_ⲡⲣⲟⲫⲏⲧⲏⲥ",
+          "ϩⲛ_3_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲉⲓⲥ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲏⲏⲧⲉ_2_pre_ⲉⲓⲥ",
+          "ⲛⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲁⲥⲟⲩ",
+          "ⲟⲩ_1_pre_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲛⲉⲓⲣⲁⲓⲟⲥ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲓⲣⲁⲓⲟⲥ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲡ_2_post_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ_b",
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_0_node",
+          "ⲙⲛ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲁϩ",
+          "ⲛ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲁϩ",
+          "ⲟⲩⲁϩ_1_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲁϩ_1_post_ⲣⲁⲥⲟⲩ",
+          "ⲥⲁϩⲛⲉ_2_post_ⲟⲩⲁϩ",
+          1
+        ],
+        [
+          "ⲥⲁϩⲛⲉ_2_post_ⲟⲩⲁϩ",
+          "ⲛⲧⲉ_2_post_ⲟⲩⲁϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.55,
+      "rank": 921,
+      "count": 87
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3148",
+      "label": "ⲉⲣⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "have, dream a dream"
+    },
+    {
+      "target": "C3147",
+      "label": "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "dream a dream"
+    },
+    {
+      "target": "C3149",
+      "label": "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "interpreter of dreams"
+    }
+  ],
+  "etym": {
+    "egy_num": "96130",
+    "egy_lemma": "rs.wt",
+    "demo_num": "d3575",
+    "demo_lemma": "rsw(e)(ꜣ)(.t)",
+    "english": "awakening; dream",
+    "german": "Traum (\"Wachen (im Schlaf)\")",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/96130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3575"
+  }
+}

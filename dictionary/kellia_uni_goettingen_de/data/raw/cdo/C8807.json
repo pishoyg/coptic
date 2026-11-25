@@ -1,0 +1,46 @@
+{
+  "id": "C8807",
+  "forms": [
+    {
+      "id": "CF21194",
+      "orth": "ⲇⲓⲧⲁⲥⲅⲁⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21195",
+      "orth": "ⲇⲓⲇⲁⲥⲕⲁⲗⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8012,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21196",
+      "orth": "ⲇⲓⲧⲁⲥⲅⲁⲗⲟⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10563",
+      "bibliography": "DDGLC",
+      "cu_ID": "538"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2478",
+    "grl_lemma": "διδάσκαλος",
+    "grl_meaning": "teacher",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 421b; Preisigke 1:371"
+  }
+}

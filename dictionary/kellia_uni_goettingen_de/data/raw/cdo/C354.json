@@ -1,0 +1,110 @@
+{
+  "id": "C354",
+  "forms": [
+    {
+      "id": "CF1532",
+      "orth": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31575",
+      "orth": "ϫⲓⲃⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13432,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1533",
+      "orth": "ϭⲓⲃⲉⲭⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12660,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS392",
+      "bibliography": "CD 30b; CED 21; KoptHWb 21; DELC 26; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲉϣⲱⲡⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲡⲟⲣⲛⲏ ⲉⲥⲑⲟⲩⲏⲧ ⲉϧⲟⲩⲛ ⲛϩⲁⲛⲃⲉⲭⲉ ϯⲥϩⲓⲙⲓ ⲉⲧⲟⲓ ⲛⲛⲱⲓⲕ ⲉⲥⲧⲉⲛⲑⲱⲛⲧ ⲉⲣⲟⲉⲥ**ϭⲓⲃⲉⲭⲉ** ⲛⲧⲉⲡⲉⲥϩⲁⲓ .",
+      "english": "An adulteress resembles thee, taking rewards of her husband.",
+      "source": "26_Ezechiel_16",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:16",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

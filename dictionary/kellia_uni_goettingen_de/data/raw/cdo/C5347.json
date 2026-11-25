@@ -1,0 +1,49 @@
+{
+  "id": "C5347",
+  "forms": [
+    {
+      "id": "CF12663",
+      "orth": "*ⲟⲩⲏϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6000",
+      "bibliography": "CD 511b; KoptHWb 497; ChLCS 71b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5348",
+      "label": "ϭⲓⲛⲟⲩⲱϫⲉ",
+      "pos": "N",
+      "gloss": "cutting"
+    },
+    {
+      "target": "C5346",
+      "label": "ⲟⲩⲁϭⲉ",
+      "pos": "N",
+      "gloss": "blow"
+    },
+    {
+      "target": "C5345",
+      "label": "ⲟⲩⲉⲓϫⲉ",
+      "pos": "N",
+      "gloss": "slash, injury, wound"
+    },
+    {
+      "target": "C5344",
+      "label": "ⲟⲩⲱϫⲉ",
+      "pos": "V",
+      "gloss": "cut (out, off), separate, hurt"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "C6706",
+  "forms": [
+    {
+      "id": "CF15457",
+      "orth": "ϩⲱⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17290,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲱⲛⲓ",
+      "dialect": "F",
+      "id": "2218.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7420",
+      "bibliography": "CD 690a; CED 288; KoptHWb 378; DELC 304b-305a; ChLCS 92b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲛⲉϫⲱⲛⲉ ⲉⲃⲟⲗ ⲁⲩⲱ ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲥⲉⲩ**ϩⲱⲛⲉ** ⲉϩⲟⲩⲛ ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛϩⲟⲗϭ ⲁⲩⲱ ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲟⲩⲉ ⲉⲃⲟⲗ ⲙⲡϩⲱⲗϭ",
+      "english": "a time to throw stones, and a time to gather stones together; a time to embrace, and a time to abstain from embracing;",
+      "source": "Ecclesiastes 3",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        10.532
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16900,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "106050",
+    "egy_lemma": "ḥn.t",
+    "demo_num": "d4121",
+    "demo_lemma": "ḥnj(.t)",
+    "english": "pool; lake",
+    "german": "Gewässer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/106050",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4121"
+  }
+}

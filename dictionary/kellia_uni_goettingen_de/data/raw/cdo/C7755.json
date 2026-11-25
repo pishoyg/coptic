@@ -1,0 +1,88 @@
+{
+  "id": "C7755",
+  "forms": [
+    {
+      "id": "CF17575",
+      "orth": "ⲉⲣⲁⲧϫⲓⲙⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8623",
+      "bibliography": "CD 820b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7759",
+      "label": "ϫⲓⲛϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "act of finding, discovery"
+    },
+    {
+      "target": "C7750",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "find"
+    },
+    {
+      "target": "C7753",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "find, thing found; finding"
+    },
+    {
+      "target": "C7752",
+      "label": "ϭⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "learn wisdom"
+    },
+    {
+      "target": "C7751",
+      "label": "ϭⲛⲧⲥ",
+      "pos": "V",
+      "gloss": "find that"
+    },
+    {
+      "target": "C7754",
+      "label": "ⲁⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "nowhere to be found"
+    },
+    {
+      "target": "C7757",
+      "label": "ⲙⲉⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "existence"
+    },
+    {
+      "target": "C7756",
+      "label": "ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "lack"
+    },
+    {
+      "target": "C7758",
+      "label": "ⲣⲉϥϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "finder"
+    }
+  ]
+}

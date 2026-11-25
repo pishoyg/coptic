@@ -1,0 +1,108 @@
+{
+  "id": "C5469",
+  "forms": [
+    {
+      "id": "CF12910",
+      "orth": "ⲗⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6128",
+      "bibliography": "CD 522b; KoptHWb 291; ChLCS 72a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲝ",
+        1,
+        17.695
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        3,
+        13.826
+      ],
+      [
+        "ⲉⲛ",
+        1,
+        10.133
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.46
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_post_ⲗⲕⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲕⲉ_0_node",
+          "ⲟⲩⲁⲓ_1_post_ⲗⲕⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5470",
+      "label": "ⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "bend, corner"
+    },
+    {
+      "target": "C5465",
+      "label": "ⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "become, be bent, be distorted; bend"
+    },
+    {
+      "target": "C5466",
+      "label": "ⲱⲗⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "lean, bow down"
+    },
+    {
+      "target": "C5467",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "V",
+      "gloss": "turn up one's nose, sneer"
+    },
+    {
+      "target": "C5468",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "N",
+      "gloss": "jeer, mockery"
+    }
+  ]
+}

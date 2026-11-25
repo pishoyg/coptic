@@ -1,0 +1,137 @@
+{
+  "id": "C6362",
+  "forms": [
+    {
+      "id": "CF14739",
+      "orth": "ⲛⲧⲉⲓϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19758,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7058",
+      "bibliography": "CD 639a-b; KoptHWb 349; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲣϣⲡⲏⲣⲉ ϫⲉ**ⲛⲧⲉⲓϩⲉ** ϩⲛⲟⲩϭⲉⲡⲏ ⲧⲉⲧⲛⲡⲱⲱⲛⲉ ⲛⲧⲙⲡⲉⲛⲧⲁϥⲧⲉϩⲙ ⲧⲏⲩⲧⲛ ϩⲙⲡⲉϩⲙⲟⲧ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲉⲕⲉⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ",
+      "english": "I marvel that you are so quickly deserting him who called you in the grace of Christ to a different 'good news';",
+      "source": "48_Galatians_1",
+      "urn": "urn:cts:copticLit:nt.gal.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        12.728
+      ],
+      [
+        "ϭⲉⲡⲏ",
+        1,
+        12.398
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19372,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6360",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "manner"
+    },
+    {
+      "target": "C6368",
+      "label": "ϫⲓ ⲛⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "from when, since"
+    },
+    {
+      "target": "C6367",
+      "label": "ϭⲛⲑⲉ",
+      "pos": "V",
+      "gloss": "find means"
+    },
+    {
+      "target": "C6366",
+      "label": "ϯⲑⲉ",
+      "pos": "V",
+      "gloss": "give means"
+    },
+    {
+      "target": "C6363",
+      "label": "ⲁϣ ⲛϩⲉ",
+      "pos": "ADV",
+      "gloss": "of what sort"
+    },
+    {
+      "target": "C6364",
+      "label": "ⲕⲁⲧⲁ ⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "even as, like"
+    },
+    {
+      "target": "C6361",
+      "label": "ⲛⲑⲉ (ⲛ-)",
+      "pos": "ADV",
+      "gloss": "in manner of, even as"
+    },
+    {
+      "target": "C6365",
+      "label": "ⲣⲑⲉ",
+      "pos": "V",
+      "gloss": "make, be like"
+    }
+  ]
+}

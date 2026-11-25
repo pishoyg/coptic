@@ -1,0 +1,87 @@
+{
+  "id": "C4354",
+  "forms": [
+    {
+      "id": "CF10660",
+      "orth": "ⲙⲛⲧϯⲧⲱⲛ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4932",
+      "bibliography": "CD 418a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4350",
+      "label": "ϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, strife"
+    },
+    {
+      "target": "C4352",
+      "label": "ⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "without strife"
+    },
+    {
+      "target": "C4351",
+      "label": "ⲙⲁⲓϯⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "strife-loving"
+    },
+    {
+      "target": "C4353",
+      "label": "ⲙⲛⲧⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "lack of strife"
+    },
+    {
+      "target": "C4357",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "discrepancy"
+    },
+    {
+      "target": "C4355",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4356",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4349",
+      "label": "ⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, quarrel (in ϯⲧⲱⲛ, \"to dispute\", \"to quarrel\")"
+    }
+  ]
+}

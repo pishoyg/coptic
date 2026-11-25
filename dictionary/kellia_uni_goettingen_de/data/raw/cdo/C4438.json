@@ -1,0 +1,134 @@
+{
+  "id": "C4438",
+  "forms": [
+    {
+      "id": "CF10828",
+      "orth": "ⲧⲣⲟ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.79,
+        "rank": 54,
+        "count": 3912
+      }
+    },
+    {
+      "orth": "ⲧⲣⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.79,
+        "rank": 54,
+        "count": 3912
+      }
+    },
+    {
+      "orth": "ⲑⲣⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.64,
+        "rank": 950,
+        "count": 54
+      }
+    },
+    {
+      "orth": "ⲑⲣⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 7.07,
+        "rank": 178,
+        "count": 600
+      }
+    },
+    {
+      "orth": "ⲑⲣⲉ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 7.07,
+        "rank": 178,
+        "count": 600
+      }
+    },
+    {
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "A",
+      "id": "1623.6"
+    },
+    {
+      "orth": "ⲧⲉ-",
+      "dialect": "A",
+      "id": "1623.7"
+    },
+    {
+      "orth": "ⲧⲣⲉ⸗",
+      "dialect": "A",
+      "id": "1623.8"
+    },
+    {
+      "orth": "ⲧⲉ⸗",
+      "dialect": "A",
+      "id": "1623.9"
+    },
+    {
+      "orth": "ⲧⲉ-",
+      "dialect": "F",
+      "id": "1623.10"
+    },
+    {
+      "orth": "ⲧⲗⲉ-",
+      "dialect": "F",
+      "id": "1623.11"
+    },
+    {
+      "orth": "ⲧⲉ⸗",
+      "dialect": "F",
+      "id": "1623.12"
+    },
+    {
+      "orth": "ⲧⲣⲟ",
+      "dialect": "L",
+      "id": "1623.13"
+    },
+    {
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "L",
+      "id": "1623.14"
+    },
+    {
+      "orth": "ⲧⲣⲉ⸗",
+      "dialect": "L",
+      "id": "1623.15"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Hilfsverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5025",
+      "bibliography": "CD 430a; CDC 67ab; CED 194; KoptHWb 241; DELC 220a; ChLCS 60a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4439",
+      "label": "ⲧⲣⲉ-",
+      "pos": "A",
+      "gloss": "prefix of causative infinitive"
+    }
+  ]
+}

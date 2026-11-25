@@ -1,0 +1,84 @@
+{
+  "id": "C2388",
+  "forms": [
+    {
+      "id": "CF6536",
+      "orth": "ⲛⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 30.04,
+        "rank": 49,
+        "count": 2548
+      }
+    },
+    {
+      "id": "CF6537",
+      "orth": "ⲛⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6538",
+      "orth": "ⲛⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF6539",
+      "orth": "ⲛⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF6540",
+      "orth": "ⲛⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.1,
+        "rank": 334,
+        "count": 489
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "pl.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS2754",
+      "bibliography": "KoptHWb 118; LCG § 54"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏ ⲁⲣⲧⲁⲓⲉⲡⲙⲁ ⲉⲛⲧⲁⲩⲥⲁⲛⲟⲩϣⲉ ⲛϩⲏⲧτ ⲕⲁⲧⲁⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲕⲁⲧⲁⲡⲕⲟⲥⲙⲟⲥ , ϩⲛ**ⲛⲟⲩ**ϣⲁϫⲉ ⲙⲛⲛⲟⲩϩⲃⲏⲩⲉ ·",
+      "english": "Have you not honoured the place you were nourished in according to God and according to the world , in your words and your deeds?",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁⲥ ⲙⲡⲉⲥϩⲁⲓ · ϫⲉϩⲣⲁⲓ ϩⲛⲧⲉⲟⲩϣⲏ ⲛⲧⲁⲥⲟⲩⲉⲓⲛⲉ · ⲁⲛⲟⲕ ϩⲱⲱⲧ ⲟⲛ · ⲁⲓⲛⲁⲩ ⲉⲣⲟϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲓ ϫⲉⲣⲁⲥⲧⲉ ⲛⲧⲟ ⲙⲛⲡⲟⲩϩⲁⲓ ⲙⲛ**ⲛⲟⲩ**ϣⲏⲣⲉ ⲧⲉⲧⲛⲛⲏⲩ ϣⲁⲣⲟⲓ ·",
+      "english": "And she said unto her husband, In the night which hath passed I myself also saw Him, and He said unto me, To-morrow do thou, and thy husband, and your sons come to Me.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲥⲱⲧⲙ ⲉⲣⲟⲓ ⲧⲁⲙⲁⲁⲩ · ⲛⲧⲁϫⲱ ⲛⲛⲁϣⲁϫⲉ ⲉⲧϩⲟⲗϭ ⲉϩⲟⲩⲛ ⲉ**ⲛⲟⲩ**ⲙⲁⲁϫⲉ ·",
+      "english": "Now, therefore, hearken thou unto me, my mother, and I will declare in thine ears my words which are sweet.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2384",
+      "type": "cf",
+      "label": "possessive article pl."
+    }
+  ]
+}

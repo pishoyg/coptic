@@ -1,0 +1,68 @@
+{
+  "id": "C4449",
+  "forms": [
+    {
+      "id": "CF10851",
+      "orth": "ⲡⲓⲉⲡⲧⲏⲣϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5037",
+      "bibliography": "CD 424b; KoptHWb 242"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "ⲡⲓ-",
+      "type": "cf",
+      "label": "bestimmter Artikel m."
+    },
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    },
+    {
+      "target": "C2783",
+      "type": "cf",
+      "label": "masc. sg. definite article"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4448",
+      "label": "ⲉⲡⲧⲏⲣϥ",
+      "pos": "ADV",
+      "gloss": "wholly, at all"
+    },
+    {
+      "target": "C4447",
+      "label": "ⲛⲓⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the wholeness"
+    },
+    {
+      "target": "C4446",
+      "label": "ⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole, the creation, the world"
+    },
+    {
+      "target": "C4445",
+      "label": "ⲧⲏⲣ⸗",
+      "pos": "IMOD",
+      "gloss": "all, whole, every"
+    }
+  ]
+}

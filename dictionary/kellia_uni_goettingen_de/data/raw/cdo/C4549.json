@@ -1,0 +1,70 @@
+{
+  "id": "C4549",
+  "forms": [
+    {
+      "id": "CF11055",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲥⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5137",
+      "bibliography": "CD 434b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4546",
+      "label": "ⲙⲁ ⲛⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "watering place"
+    },
+    {
+      "target": "C4547",
+      "label": "ⲣⲉϥⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "drink giver"
+    },
+    {
+      "target": "C4548",
+      "label": "ⲣⲉϥⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "drink giver"
+    },
+    {
+      "target": "C4543",
+      "label": "ⲧⲥⲟ",
+      "pos": "V",
+      "gloss": "give to drink, slake"
+    },
+    {
+      "target": "C4544",
+      "label": "ⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "watering"
+    },
+    {
+      "target": "C4545",
+      "label": "ⲧⲥⲱ",
+      "pos": "N",
+      "gloss": "beverage, drink"
+    }
+  ]
+}

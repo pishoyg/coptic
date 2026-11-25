@@ -1,0 +1,246 @@
+{
+  "id": "C5847",
+  "forms": [
+    {
+      "id": "CF13691",
+      "orth": "ϣⲟⲗϣⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9096,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲗϣⲱⲗ⸗",
+      "dialect": "S",
+      "id": "1909.1"
+    },
+    {
+      "orth": "ϣⲉⲗϣⲱⲗ⸗",
+      "dialect": "S",
+      "id": "1909.2"
+    },
+    {
+      "orth": "ϣⲗϣⲱⲗ†",
+      "dialect": "S",
+      "id": "1909.3"
+    },
+    {
+      "orth": "ϣⲉⲗϣⲱⲗ†",
+      "dialect": "S",
+      "id": "1909.4"
+    },
+    {
+      "orth": "ϣⲣϣⲱⲣ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1591,
+        "count": 46
+      }
+    },
+    {
+      "orth": "ϣⲉⲗϣⲉⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7680,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6528",
+      "bibliography": "CD 561b; CED 241; KoptHWb 312; DELC 261b-262a; ChLCS 77a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛϩⲉⲛⲙⲓⲛⲉ ⲛⲣⲱⲙⲉ ⲉⲩ**ϣⲟⲗϣⲗ** ⲛϩⲉⲛⲉⲥⲏⲧ ϩⲛⲛⲕⲟⲡⲣⲓⲁ · ⲁⲩⲱ ϩⲛϩⲉⲛⲧⲟⲡⲟⲥ ⲉⲩⲕⲱⲧⲉ ϩⲙⲡⲕⲁϩ ϣⲁⲛⲧⲟⲩϭⲛ·ϩⲉⲛⲉⲗⲁⲭⲓⲥⲧⲟⲛ · ⲛⲛⲟⲩⲃ ϩⲓϩⲁⲧ ⲏ ϩⲉⲛϩⲟⲙⲛⲧ · ⲏ ⲛⲧⲟϥ ⲡⲉⲧϭⲟϫⲃ ⲉⲣⲟⲟⲩ · ϣⲁϩⲣⲁⲓ ⲉϩⲉⲛⲥⲁⲁⲧⲉ · ⲉⲩⲕⲱⲧⲉ ϣⲁⲛⲧⲟⲩϭⲛⲡⲉⲩⲱⲛϩ ·",
+      "english": "...",
+      "source": "Some Kinds of People Sift Dirt: GL71-74",
+      "urn": "urn:cts:copticLit:shenoute.dirt.monbgl:0-5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲉϣⲁⲣⲉϩⲛⲉⲓⲧⲛ ϣⲱϫⲡ ϩⲙⲡ**ϣⲟⲗϣⲗ** ⲛⲟⲩⲥⲟⲗϥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲣⲉⲙⲡⲉⲧϩⲟⲟⲩ ⲙⲡⲣⲱⲙⲉ ϩⲙⲡⲉϥϩⲏⲧ",
+      "english": "As when one sifteth with a sieve, the refuse remaineth; so the filth of man in his talk.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲗϥ",
+        1,
+        19.598
+      ],
+      [
+        "ϣⲱϫⲡ",
+        1,
+        12.331
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        1,
+        10.094
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        9.079
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲟⲗϣⲗ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲟⲗϣⲗ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲗϥ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲟⲗϣⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲟⲗϣⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲟⲗϣⲗ_0_node",
+          "ⲛ_1_post_ϣⲟⲗϣⲗ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲟⲗϣⲗ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲥⲟⲗϥ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲟⲗϣⲗ",
+          "ϣⲟⲗϣⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲟⲗϣⲗ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲉⲥⲏⲧ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ϩⲉⲛ",
+          "ϩⲛ_1_post_ϣⲟⲗϣⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8647,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "120420",
+    "egy_lemma": "ḫrḫr",
+    "demo_num": "d4574",
+    "demo_lemma": "ḫrḫr",
+    "english": "to upset; to overturn",
+    "german": "zerstören; ausschütten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/120420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4574"
+  }
+}

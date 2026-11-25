@@ -1,0 +1,278 @@
+{
+  "id": "C9107",
+  "forms": [
+    {
+      "id": "CF22565",
+      "orth": "ⲉⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF22570",
+      "orth": "ⲉⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17883,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22567",
+      "orth": "ⲁⲓⲱⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF22566",
+      "orth": "ⲁⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22568",
+      "orth": "ⲁⲓⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.43,
+        "rank": 383,
+        "count": 384
+      }
+    },
+    {
+      "id": "CF22569",
+      "orth": "ⲉⲓⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10556,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11240",
+      "bibliography": "DDGLC",
+      "cu_ID": "3420"
+    },
+    {
+      "id": "CS11241",
+      "bibliography": "DDGLC",
+      "cu_ID": "8323"
+    },
+    {
+      "id": "CS11242",
+      "bibliography": "DDGLC",
+      "cu_ID": "3436"
+    },
+    {
+      "id": "CS11243",
+      "bibliography": "DDGLC",
+      "cu_ID": "10515"
+    },
+    {
+      "id": "CS11244",
+      "bibliography": "DDGLC",
+      "cu_ID": "11785"
+    },
+    {
+      "id": "CS11245",
+      "bibliography": "DDGLC",
+      "cu_ID": "10474"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥⲟⲩⲱϣϥ ⲛⲛⲉⲥⲧⲩⲗⲟⲥ ⲛⲧⲡⲟⲗⲓⲥ ⲙⲡⲣⲏ ⲉⲧ**ⲉⲱⲛ** ⲧⲉ ⲁⲩⲱ ⲛⲉⲩⲏⲓ ϥⲛⲁⲣⲟⲕϩⲟⲩ ϩⲛⲟⲩⲕⲱϩⲧ",
+      "english": "And he shall break to pieces the pillars of Heliopolis that are in On, and shall burn their houses with fire.",
+      "source": "Jeremiah 50",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:50",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲇⲓⲱⲅⲙⲟⲥ",
+        2,
+        17.888
+      ],
+      [
+        "ⲱⲛϧ",
+        2,
+        12.624
+      ],
+      [
+        "ⲛⲏⲟⲩ",
+        2,
+        12.375
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        9.526
+      ],
+      [
+        "ϧⲉⲛ",
+        3,
+        9.518
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        8.46
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.054
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        7.59
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        6.634
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.251
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲏ",
+        1,
+        12.313
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲱⲛ_0_node",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲏⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲉⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲏⲟⲩ_2_post_ⲉⲑ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲱⲛ_0_node",
+          "ⲉⲧ_1_post_ⲉⲱⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲱⲛ",
+          "ⲛⲏⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲱⲛ_0_node",
+          "ⲉⲑ_1_post_ⲉⲱⲛ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲉⲱⲛ",
+          "ⲛⲏⲟⲩ_2_post_ⲉⲑ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17501,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "61",
+    "grl_lemma": "αἰών",
+    "grl_meaning": "age, era, lifetime",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 45b; Preisigke 1:39"
+  }
+}

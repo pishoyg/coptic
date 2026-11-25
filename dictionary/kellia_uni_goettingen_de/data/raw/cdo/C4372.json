@@ -1,0 +1,126 @@
+{
+  "id": "C4372",
+  "forms": [
+    {
+      "id": "CF10696",
+      "orth": "ⲣⲉϥⲧⲟⲛⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17364,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4953",
+      "bibliography": "CD 420b; ChLCS 59b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲗⲗⲟ",
+        1,
+        12.303
+      ],
+      [
+        "ⲡⲣⲟⲫⲏⲧⲏⲥ",
+        1,
+        11.527
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        9.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲟⲛⲧⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥⲧⲟⲛⲧⲛ",
+          "ⲟⲩ_1_pre_ⲣⲉϥⲧⲟⲛⲧⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲧⲟⲛⲧⲛ",
+          "ⲣⲉϥⲧⲟⲛⲧⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16975,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4369",
+      "label": "ϯⲧⲟⲛⲧⲛ",
+      "pos": "V",
+      "gloss": "guess"
+    },
+    {
+      "target": "C4370",
+      "label": "ⲁⲧⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "incomparable"
+    },
+    {
+      "target": "C4371",
+      "label": "ⲣⲉϥⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "diviner"
+    },
+    {
+      "target": "C4367",
+      "label": "ⲧⲟⲛⲧⲛ",
+      "pos": "V",
+      "gloss": "be like, liken to; estimate, speculate; throw"
+    },
+    {
+      "target": "C4368",
+      "label": "ⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "likeness, oracle"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "C7614",
+  "forms": [
+    {
+      "id": "CF32153",
+      "orth": "ϭⲟⲓⲗⲉ (ⲉ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32154",
+      "orth": "ϭⲟⲉⲓⲗⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8446",
+      "bibliography": "CD 808a; CED 326-327; KoptHWb 447-448; DELC 336b-337a; ChLCS 106b"
+    },
+    {
+      "id": "CS8447",
+      "bibliography": "CD 808a; CED 326-327; KoptHWb 447-448; DELC 336b-337a; ChLCS 106b"
+    },
+    {
+      "id": "CS8448",
+      "bibliography": "CD 808a; KoptHWb 447-448; DELC 336b-337a; ChLCS 106b"
+    },
+    {
+      "id": "CS8449",
+      "bibliography": "CD 808a; KoptHWb 447-448; DELC 336b-337a; ChLCS 106b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7620",
+      "label": "ϭⲓⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "settling, dwelling"
+    },
+    {
+      "target": "C7613",
+      "label": "ϭⲟⲓⲗⲉ",
+      "pos": "V",
+      "gloss": "dwell"
+    },
+    {
+      "target": "C7615",
+      "label": "ϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stay; furniture"
+    },
+    {
+      "target": "C7616",
+      "label": "ⲙⲁ ⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "dwelling place"
+    },
+    {
+      "target": "C7619",
+      "label": "ⲙⲉⲧⲣⲉⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stay (in foreign parts)"
+    },
+    {
+      "target": "C7617",
+      "label": "ⲣⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stranger; guest, visitor"
+    },
+    {
+      "target": "C7618",
+      "label": "ⲣⲣⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "V",
+      "gloss": "be foreign"
+    }
+  ]
+}

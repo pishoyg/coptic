@@ -1,0 +1,119 @@
+{
+  "id": "C8629",
+  "forms": [
+    {
+      "id": "CF20389",
+      "orth": "ⲃⲟⲏⲑⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20390",
+      "orth": "ⲃⲟⲏⲑⲓⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF20391",
+      "orth": "ⲃⲟⲏⲑⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7206,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10187",
+      "bibliography": "DDGLC",
+      "cu_ID": "4590"
+    },
+    {
+      "id": "CS10188",
+      "bibliography": "DDGLC",
+      "cu_ID": "5077"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲁϩⲁⲛⲥⲟⲛⲓ ⲕⲱⲗⲡ ⲙⲡⲉϥⲏⲓ ⲡⲉ ⲙⲡⲟⲩⲭⲁϩⲗⲓ ⲛⲁϥ ⲟⲩⲟϩ ⲫⲁⲓ ⲁϥⲓ ϩⲁⲡⲁⲓⲱⲧ ⲉϥⲱϣ ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲁϭⲥ ⲛⲓⲱⲧ ⲁⲣⲓ**ⲃⲟⲏⲑⲓⲛ** ⲉⲣⲟⲓ ϫⲉⲁⲩϣⲱϥ ⲙⲡⲁⲏⲓ ⲙⲡⲟⲩⲭⲁϩⲗⲓ ⲛⲏⲓ ⲉⲡⲧⲏⲣϥ .",
+      "english": "...",
+      "source": "Life of Shenoute - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:27-58",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲟⲓⲉⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁⲣⲓ",
+        1,
+        12.095
+      ],
+      [
+        "ⲓⲱⲧ",
+        1,
+        9.767
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲟⲏⲑⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6673,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "393",
+    "grl_lemma": "βοηθέω",
+    "grl_meaning": "to help",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 320a; Preisigke 1:272"
+  }
+}

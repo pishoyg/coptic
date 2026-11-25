@@ -1,0 +1,68 @@
+{
+  "id": "C4102",
+  "forms": [
+    {
+      "id": "CF10149",
+      "orth": "ⲁⲧⲧⲃⲃⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4661",
+      "bibliography": "CD 400a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C5096",
+      "type": "cf",
+      "label": "be pure, be innocent"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4101",
+      "label": "ϩⲛⲟⲩⲧⲃⲃⲟ",
+      "pos": "ADV",
+      "gloss": "purely"
+    },
+    {
+      "target": "C4104",
+      "label": "ϭⲓⲛⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purification"
+    },
+    {
+      "target": "C4103",
+      "label": "ⲙⲉⲧⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purity"
+    },
+    {
+      "target": "C4099",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "V",
+      "gloss": "become pure, be pure; make pure, purify"
+    },
+    {
+      "target": "C4100",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purity, purification"
+    }
+  ]
+}

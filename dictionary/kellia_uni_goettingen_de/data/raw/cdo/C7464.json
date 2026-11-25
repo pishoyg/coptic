@@ -1,0 +1,104 @@
+{
+  "id": "C7464",
+  "forms": [
+    {
+      "id": "CF16987",
+      "orth": "ϫⲟϥⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19210,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲟϥⲧⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7760,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "bisher nur adverbiellen Verbindungen bekannt",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8260",
+      "bibliography": "CD 796b; CED 322; KoptHWb 439; ChLCS 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲧⲱⲟⲩⲛⲟⲩ ⲁⲩⲛⲟϫϥ ⲡⲃⲟⲗ ⲛⲧⲡⲟⲗⲓⲥ ⲁⲩⲛⲧϥ ϣⲁⲡⲕⲟⲟϩ ⲙⲡⲧⲟⲟⲩ ⲉⲧⲉⲣⲉⲧⲉⲩⲡⲟⲗⲓⲥ ⲕⲏⲧ ϩⲓϫⲱϥ ϩⲱⲥⲧⲉ ⲉⲧⲣⲉⲩⲛⲟϫϥ ⲉⲃⲟⲗ ⲛ**ϫⲟϥⲧⲛ** .",
+      "english": "They rose up, threw him out of the city, and led him to the brow of the hill that their city was built on, that they might throw him off the cliff.",
+      "source": "42_Luke_4",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟϫ",
+        1,
+        11.413
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        9.857
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18824,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7465",
+      "label": "ⲛϫⲟϥⲧⲛ",
+      "pos": "ADV",
+      "gloss": "headlong, suddenly"
+    }
+  ]
+}

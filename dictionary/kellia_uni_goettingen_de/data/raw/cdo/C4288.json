@@ -1,0 +1,52 @@
+{
+  "id": "C4288",
+  "forms": [
+    {
+      "id": "CF10527",
+      "orth": "ⲣⲉϥⲧⲁⲙⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4859",
+      "bibliography": "CD 414a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C897",
+      "type": "cf",
+      "label": "know, understand"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4289",
+      "label": "ⲣⲉϥⲧⲁⲙⲟ",
+      "pos": "N",
+      "gloss": "who sais"
+    },
+    {
+      "target": "C4286",
+      "label": "ⲧⲁⲙⲟ",
+      "pos": "V",
+      "gloss": "tell, make know, inform"
+    },
+    {
+      "target": "C4287",
+      "label": "ⲧⲁⲙⲟ",
+      "pos": "N",
+      "gloss": "thing told"
+    }
+  ]
+}

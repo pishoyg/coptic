@@ -1,0 +1,590 @@
+{
+  "id": "C9471",
+  "forms": [
+    {
+      "id": "CF24047",
+      "orth": "ⲕⲟⲓⲧⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24051",
+      "orth": "ⲕⲟⲓⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3225,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF24049",
+      "orth": "ⲕⲟⲓⲧⲱⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2716,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF24050",
+      "orth": "ⲕⲟⲓⲧⲱⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24048",
+      "orth": "ⲕⲓⲧⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24052",
+      "orth": "ⲕⲟⲓⲧⲱⲛ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12025",
+      "bibliography": "DDGLC",
+      "cu_ID": "931"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲉⲣϣⲫⲏⲣⲓ ⲇⲉ ⲛϫⲉⲡⲓⲁⲣⲭⲱⲛ ⲉϫⲉⲛⲧⲉϥϫⲓⲛⲉⲣⲟⲩⲱ ⲟⲩⲟϩ ϩⲱⲥ ϫⲉⲉϥⲉⲣⲇⲟⲕⲓⲙⲁⲍⲓⲛ ⲙⲙⲟϥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲙⲁϣⲉ ⲛⲁⲕ ⲉϧⲟⲩⲛ ⲉⲟⲩⲁⲓ ⲙⲙⲁ ⲛ**ⲕⲟⲓⲧⲱⲛ** ⲥϧⲏⲧⲥ ⲁⲛⲓⲧⲥ ⲛⲧⲁⲛⲁⲩ ⲉⲣⲟⲥ .",
+      "english": "The prefect, surprised at his reply, said to him, as if to put him to the test: ‘Go to one of the rooms, write it down, bring it to me, so that I may see it.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲉⲣⲉⲧⲉⲯⲩⲭⲏ ϣⲟⲟⲡ ϩⲙⲡϩⲏⲧ ⲛⲧϩⲉ ⲛⲟⲩⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲥϭⲣⲁϩⲧ ϩⲙⲡⲉⲥ**ⲕⲟⲓⲧⲱⲛ** · ⲉⲣⲉⲧϯⲉ ⲛⲁⲓⲥⲑⲏⲥⲓⲥ ⲟ ⲛⲁⲥ ⲛϩⲙϩⲁⲗ ·",
+      "english": "For the soul abideth in the heart, even as a virgin who liveth quietly in her chamber, and the five senses are the servants which (minister) unto her.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲛⲟⲩⲉϩⲟⲟⲩ ⲉⲣⲉⲡⲟⲩⲣⲟ ϧⲉⲛⲁⲗⲃⲁⲛ ϯⲃⲁⲕⲓ ⲉⲧⲁϥⲕⲟⲧⲥ ⲙⲃⲉⲣⲓ ϧⲉⲛⲛⲓⲉϩⲟⲩ ⲛⲧⲉⲧⲉϥⲙⲉⲧⲟⲩⲣⲟ ⲁϥⲙⲟⲩϯ ⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁϥⲁⲙⲟⲛⲓ ⲛⲧⲉϥϫⲓϫ ⲁϥⲟⲗϥ ⲉϧⲟⲩⲛ ⲉⲡⲉϥⲏⲓ ⲙⲡⲉϥⲭⲁⲣⲱⲙⲓ ⲉϧⲟⲩⲛ ⲛⲉⲙⲁϥ ϧⲉⲛⲛⲏ ⲉⲑⲙⲏⲛ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲁϥⲟⲗϥ ⲉϧⲟⲩⲛ ⲉⲟⲩⲁⲓ ⲛⲛⲉϥ**ⲕⲟⲓⲧⲱⲛ** ⲁϥⲭⲁϥ ⲙⲙⲁⲩⲁⲧϥ .",
+      "english": "It happened one day that the king was in the city of Helwan which he had recently built in the days of his kingship: he sent for the archbishop, took him by the hand, brought him into his house, and did not let in any of those who were waiting for him. He led him into one of his rooms and left him alone.",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲥⲫⲣⲁⲅⲓⲍⲉ ⲙⲡⲣⲟ ⲙⲡⲉϥ**ⲕⲟⲓⲧⲱⲛ** · ϩⲙⲡⲣⲁⲛ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲁϥⲉⲓ ⲉⲃⲟⲗ · ⲁⲩⲱ ⲡⲉϫⲁϥ",
+      "english": "And he sealed the door of his bedroom in the Name of thee Christ Jesus, and come out, and said",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁϥϣⲟⲡ ⲇⲉ ϧⲉⲛⲟⲩⲙⲃⲟⲛ ⲉϥϯ ⲟⲩⲃⲉ ⲛⲁⲧⲩⲣⲟⲥ ⲛⲉⲙⲧⲥⲓⲇⲱⲛ ⲁⲩⲓ ⲇⲉ ⲉⲩⲥⲟⲡ ϣⲁⲣⲟϥ ⲟⲩⲟϩ ⲉⲧⲁⲩⲑⲉⲧ ⲡϩⲏⲧ ⲙⲡⲗⲁⲥⲧⲟⲥ ⲫⲏ ⲉⲧⲭⲏ ϩⲓϫⲉⲛⲡⲓ**ⲕⲟⲓⲧⲱⲛ** ⲛⲧⲉⲡⲟⲩⲣⲟ ⲛⲁⲩⲉⲣⲉⲧⲓⲛ ⲛⲟⲩϩⲓⲣⲏⲛⲏ ⲉⲑⲃⲉϫⲉⲛⲁⲩϣⲁⲛϣ ⲛⲧⲟⲩⲭⲱⲣⲁ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲥ ⲛⲧⲉϥⲙⲉⲧⲟⲩⲣⲟ .",
+      "english": "Now Herod was very angry with the people of Tyre and Sidon. They came with one accord to him, and, having made Blastus, the king's personal aide, their friend, they asked for peace, because their country depended on the king's country for food.",
+      "source": "05_Acts_12",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲟⲛϣⲟⲩ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲓⲉⲃⲟⲩⲥⲑⲉ ⲇⲉ ⲛⲉϥⲛⲕⲟⲧⲕ ϩⲓϫⲙⲡⲉϥϭⲗⲟϭ ϩⲙⲡⲉϥ**ⲕⲟⲓⲧⲱⲛ** ⲁⲩⲕⲟⲛⲥϥ ⲇⲉ ⲁⲩⲙⲟⲟⲩⲧϥ ⲁⲩⲱ ⲁⲩϥⲓ ⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲉⲩⲙⲟⲟϣⲉ ϩⲛⲧⲉϩⲓⲏ ⲉⲧϫⲓ ⲙⲙⲁ ⲛϩⲱⲧⲡ ⲛⲧⲉⲩϣⲏ ⲧⲏⲣⲥ",
+      "english": "And Jebosthe was sleeping on his bed in his chamber: and they smite him, and slay him, and take off his head: and they took his head, and went all the night by the western road.",
+      "source": "II Samuel 4",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲁⲧϣⲉⲗⲏⲧ",
+        1,
+        16.695
+      ],
+      [
+        "ⲁⲛⲓⲧ",
+        2,
+        14.486
+      ],
+      [
+        "ⲥϧⲏⲧ",
+        2,
+        13.718
+      ],
+      [
+        "ⲧⲁⲙⲓⲟⲛ",
+        1,
+        12.788
+      ],
+      [
+        "ϣⲉⲗⲉⲧ",
+        1,
+        12.11
+      ],
+      [
+        "ϭⲗⲟϫ",
+        1,
+        11.236
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        3,
+        10.826
+      ],
+      [
+        "ⲛⲧⲉ",
+        5,
+        10.032
+      ],
+      [
+        "ⲭⲏ",
+        2,
+        9.878
+      ],
+      [
+        "ϥ",
+        7,
+        9.846
+      ],
+      [
+        "ⲛⲉⲕ",
+        2,
+        9.616
+      ],
+      [
+        "ⲥ",
+        4,
+        9.428
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        9.064
+      ],
+      [
+        "ⲟⲗ",
+        1,
+        8.94
+      ],
+      [
+        "ⲧⲱⲃϩ",
+        1,
+        8.391
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        7.526
+      ],
+      [
+        "ⲭⲁ",
+        1,
+        6.876
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        1,
+        6.772
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        1,
+        6.677
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        6.471
+      ]
+    ],
+    "S": [
+      [
+        "ⲗⲁⲙⲡⲁⲓ",
+        1,
+        17.013
+      ],
+      [
+        "ⲧⲁⲙⲉⲓⲟⲛ",
+        4,
+        16.587
+      ],
+      [
+        "ϯⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ⲣⲣⲱ",
+        1,
+        12.013
+      ],
+      [
+        "ⲗⲩⲭⲛⲓⲁ",
+        1,
+        11.843
+      ],
+      [
+        "ⲕⲟⲛⲥ",
+        1,
+        11.691
+      ],
+      [
+        "ⲥϭⲣⲁϩⲧ",
+        1,
+        11.691
+      ],
+      [
+        "ϩⲁⲗⲏⲧ",
+        1,
+        11.554
+      ],
+      [
+        "ⲡⲉϥ",
+        5,
+        11.477
+      ],
+      [
+        "ⲟⲧⲡ",
+        1,
+        11.398
+      ],
+      [
+        "ⲡ",
+        10,
+        10.878
+      ],
+      [
+        "ⲡⲉⲩ",
+        3,
+        10.859
+      ],
+      [
+        "ϭⲗⲟϭ",
+        1,
+        10.521
+      ],
+      [
+        "ⲙⲛⲧⲕⲟⲩⲓ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        10.272
+      ],
+      [
+        "ⲛ",
+        10,
+        10.19
+      ],
+      [
+        "ⲡⲉⲥ",
+        2,
+        10.146
+      ],
+      [
+        "ϩⲙ",
+        4,
+        9.828
+      ],
+      [
+        "ⲉ",
+        7,
+        9.654
+      ],
+      [
+        "ⲩ",
+        5,
+        9.191
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          7
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲫⲏ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲉⲑ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲃ_3_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲟⲩⲁⲃ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϭⲗⲟϫ",
+          1
+        ],
+        [
+          "ϭⲗⲟϫ_2_post_ⲉϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ϧⲣⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          "ⲛⲉⲙ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲏ",
+          "ⲫⲏ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲫⲏ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          "ⲉⲑ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲉⲑ_2_post_ⲫⲏ",
+          "ⲟⲩⲁⲃ_3_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲃ_3_post_ⲉⲑ",
+          "ⲛ_4_post_ⲟⲩⲁⲃ",
+          1
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          "ⲛⲧⲉ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲟⲩⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          "ⲉϫⲉⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          "ⲛⲉⲕ_3_post_ϭⲗⲟϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϭⲗⲟϫ",
+          "ϭⲗⲟϫ_2_post_ⲉϫⲉⲛ",
+          1
+        ],
+        [
+          "ϭⲗⲟϫ_2_post_ⲉϫⲉⲛ",
+          "ⲛⲉⲙ_4_post_ϧⲣⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          3
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          11
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          2
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲕⲟⲩⲓ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          "ⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          "ⲧⲁ_3_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ϣⲉⲉⲣⲉ",
+          "ϣⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          2
+        ],
+        [
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          "ϫⲓⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲕⲟⲓⲧⲱⲛ",
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲛ",
+          "ⲧⲉⲥ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_3_post_ⲙⲛⲧⲕⲟⲩⲓ",
+          "ⲙⲛⲧⲕⲟⲩⲓ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲟⲓⲧⲱⲛ",
+          "ⲕⲟⲓⲧⲱⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2871,
+      "count": 12
+    },
+    "B": {
+      "rate": 0.09,
+      "rank": 2369,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "1156",
+    "grl_lemma": "κοιτών (I)",
+    "grl_meaning": "bed-chamber",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 970b; Preisigke 1:817"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C1872",
+  "forms": [
+    {
+      "id": "CF5383",
+      "orth": "ⲙⲉⲗⲱⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲙⲉⲗⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18209,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲉⲗⲱⲧ",
+      "dialect": "B",
+      "id": "1055.2"
+    },
+    {
+      "orth": "ⲙⲉⲗⲱⲧ",
+      "dialect": "A",
+      "id": "1055.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2179",
+      "bibliography": "CD 165a; KoptHWb 91; ChLCS 25b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d2340",
+    "demo_lemma": "mjlṱ",
+    "english": "Milet; Milesian (fabric)",
+    "german": "Milet; milesisch(er Stoff)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2340"
+  }
+}

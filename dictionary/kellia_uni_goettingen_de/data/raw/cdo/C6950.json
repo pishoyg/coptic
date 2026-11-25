@@ -1,0 +1,334 @@
+{
+  "id": "C6950",
+  "forms": [
+    {
+      "id": "CF15951",
+      "orth": "ϯϩⲧⲟⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5876,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7670",
+      "bibliography": "CD 727a; KoptHWb 399; ChLCS 97b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲛⲕⲉⲥⲟϣϥ ⲛⲥⲟⲛ ⲙⲛⲧⲉⲩⲙⲁⲁⲩ ⲉⲩ**ϯϩⲧⲟⲣ** ⲉⲣⲟⲟⲩ ϩⲓⲧⲙⲡⲣⲟ ⲉⲩⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲧⲉⲑⲩⲥⲓⲁ ⲉⲧϫⲁϩⲙ ⲉⲩϩⲓⲟⲩⲉ ⲉⲣⲟⲟⲩ ϩⲛϩⲉⲛⲙⲁⲥⲧⲓⲅⲝ ⲙⲛϩⲉⲛⲕⲱⲃϩ",
+      "english": "It came to pass also, that seven brethren with their mother were taken, and compelled by the king against the law to taste swine's flesh, and were tormented with scourges and whips.",
+      "source": "II Maccabees 7",
+      "urn": "urn:cts:copticLit:ot.2macc.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲉⲓⲛⲉ ⲙⲙⲟⲟⲩ ϩⲛⲟⲩⲁⲛⲁⲅⲕⲏ ⲉⲥⲥⲁϣ ⲉϩⲣⲉⲃⲟⲧ ⲇⲉ ⲙⲡⲉϩⲟⲟⲩ ⲙⲫⲟⲩⲙⲓⲥⲉ ⲙⲡⲣⲣⲟⲉⲣⲑⲩⲥⲓⲁ ⲁⲩⲱ ⲛⲧⲁⲣⲉϥⲓ ⲛϭⲓⲡϣⲁⲉ ⲙⲡⲇⲓⲟⲛⲩⲥⲟⲥ ⲁⲩ**ϯϩⲧⲟⲣ** ⲉⲣⲟⲟⲩ ⲉⲙⲟⲟϣⲉ ϩⲁⲧⲉϥϩⲏ ⲉⲣⲉϩⲉⲛⲕⲗⲟⲟⲙ ϩⲓϫⲱⲟⲩ",
+      "english": "And in the day of the king's birth every month they were brought by bitter constraint to eat of the sacrifices; and when the fast of Bacchus was kept, the Jews were compelled to go in procession to Bacchus, carrying ivy.",
+      "source": "II Maccabees 6",
+      "urn": "urn:cts:copticLit:ot.2macc.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲛⲁⲓⲥⲑⲁⲛⲉ ⲁⲛ ⲟⲛ ⲉⲧⲣⲉⲛⲉⲓⲣⲉ ⲙⲡⲉϥⲟⲩⲱϣ ϩⲁⲡⲉⲛϩⲧⲟⲣ ⲙⲁⲩⲁⲁⲛ ϩⲱⲥ ϣⲏⲣⲉ ⲉⲩⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲉⲩⲉⲓⲱⲧ ⲉⲧϩⲛⲙⲡⲏⲩⲉ ⲟⲩⲇⲉ ⲟⲛ ⲙⲡⲛⲥⲱⲧⲙ ⲛⲥⲁⲛⲉϥϣⲁϫⲉ ⲙⲛⲛⲉϥⲥⲃⲟⲟⲩ ⲛⲉⲃⲟⲗ ϩⲛⲛⲉⲅⲣⲁⲫⲏ ⲛⲁⲓ ⲉⲧ**ϯϩⲧⲟⲣ** ⲉⲣⲟⲛ ⲉⲧⲣⲉⲛϩⲩⲡⲟⲧⲁⲥⲥⲉ .",
+      "english": "...",
+      "source": "The Lord Thundered GG 19-28 in Amélineau",
+      "urn": "urn:cts:copticLit:shenoute.thundered.amelineau:26-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲇⲓⲟⲛⲩⲥⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲓⲥⲙⲏ",
+        1,
+        13.511
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        1,
+        10.753
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        10.317
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        1,
+        9.592
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        1,
+        9.26
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        8.484
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        8.438
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        8.236
+      ],
+      [
+        "ⲙ",
+        3,
+        8.106
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        8.036
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.868
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        6.29
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ϯϩⲧⲟⲣ_0_node",
+          4
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ϯ",
+          1
+        ],
+        [
+          "ϯ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲙⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯϩⲧⲟⲣ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϯϩⲧⲟⲣ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϯϩⲧⲟⲣ",
+          2
+        ],
+        [
+          "ϩⲓⲧⲙ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓⲧⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ϯϩⲧⲟⲣ",
+          "ϯϩⲧⲟⲣ_0_node",
+          1
+        ],
+        [
+          "ϯϩⲧⲟⲣ_0_node",
+          "ⲙⲡⲣ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ϯ",
+          "ϯ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ϯ_1_post_ϯϩⲧⲟⲣ",
+          "ⲡⲉⲕ_3_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲭⲣⲏⲙⲁ",
+          "ⲭⲣⲏⲙⲁ_2_post_ϯ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯϩⲧⲟⲣ",
+          "ⲩ_1_pre_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϯϩⲧⲟⲣ",
+          "ϯϩⲧⲟⲣ_0_node",
+          2
+        ],
+        [
+          "ϯϩⲧⲟⲣ_0_node",
+          "ⲉⲣⲟ_1_post_ϯϩⲧⲟⲣ",
+          3
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϯϩⲧⲟⲣ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          "ⲉ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          "ϩⲓⲧⲙ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲙ_1_post_ϯϩⲧⲟⲣ",
+          "ⲡ_2_post_ϩⲓⲧⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϯϩⲧⲟⲣ",
+          "ⲛ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲣⲟ",
+          "ⲉ_1_post_ϯϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯϩⲧⲟⲣ",
+          "ⲧⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_2_post_ⲉ",
+          "ⲛ_3_post_ⲧⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5433,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6948",
+      "label": "ϩⲧⲟⲣ",
+      "pos": "N",
+      "gloss": "necessity, constraint"
+    },
+    {
+      "target": "C6949",
+      "label": "ⲣϩⲧⲟⲣ",
+      "pos": "V",
+      "gloss": "constrain"
+    }
+  ]
+}

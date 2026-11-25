@@ -1,0 +1,106 @@
+{
+  "id": "C2939",
+  "forms": [
+    {
+      "id": "CF7742",
+      "orth": "ⲡⲁⲧⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19633,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3365",
+      "bibliography": "CD 276b; CED 130; KoptHWb 154; DELC 166; ChLCS 39a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲕⲉⲥⲉⲉⲡⲉ ϩⲟⲓⲛⲉ ⲙⲉⲛ ϩⲛϩⲉⲛ**ⲡⲁⲧⲥⲉ** ϩⲉⲛⲕⲟⲟⲩⲉ ⲇⲉ ϩⲓϩⲉⲛϩⲛⲁⲁⲩ ⲛⲧⲉⲡϫⲟⲉⲓ . ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁⲟⲩⲟⲛ ⲛⲓⲙ ⲟⲩϫⲁⲓ ⲉⲡⲉⲕⲣⲟ .",
+      "english": "and the rest should follow, some on planks, and some on other things from the ship. So it happened that they all escaped safely to the land.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲓⲛⲉ",
+        1,
+        12.537
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        12.055
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        11.756
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19246,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2938",
+      "label": "ⲁⲧⲡⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "unbroken, not cracked"
+    },
+    {
+      "target": "C2937",
+      "label": "ⲡⲱⲧⲥ",
+      "pos": "V",
+      "gloss": "divide, split, crack"
+    }
+  ],
+  "etym": {
+    "egy_num": "63110",
+    "egy_lemma": "pds",
+    "demo_num": "d2187",
+    "demo_lemma": "pds",
+    "english": "box (for clothing, for documents)",
+    "german": "Kasten (für Kleider, Schriftstücke)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/63110",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2187"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "C1894",
+  "forms": [
+    {
+      "id": "CF5434",
+      "orth": "ⲉϣϫⲉ ⲙⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3516,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2205",
+      "bibliography": "CD 168b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲉϣϫⲉⲙⲙⲟⲛ** ⲥⲱⲧⲙ ⲉⲛⲉⲅⲣⲁⲫⲏ ⲛⲛⲓϥⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ · ⲥⲉⲛⲁⲧⲟⲩⲛⲟⲉⲓⲁⲧⲕ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲡⲉⲧⲉϣϣⲉ · ⲁⲩⲱ ⲕⲁⲧⲁⲛⲉϩⲣⲏⲧⲱⲛ ⲛⲧⲁⲛϫⲟⲟⲩ ·",
+      "english": "If it be not so (in your opinion) hearken ye to the writings of the Spirit of God, and they shall instruct thee with divine knowledge according to what is seemly, and according to the things which we have said.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉϣϫⲉ **ⲙⲙⲟⲛ**** ϯⲡⲧⲱⲃⲟ ⲛⲧⲉⲕⲯⲩⲭⲏ · ϯ ⲛⲟⲩⲛⲏⲥⲧⲉⲓⲁ · ϯ ⲛϩⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ ·",
+      "english": "If (thou hast) not (these things), then give the innocence of thy soul, give fastings, give tears.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉϣϫⲉ **ⲙⲙⲟⲛ**** ⲥⲱⲧⲙ ⲛⲧⲁⲧⲁⲙⲱⲧⲛ ·",
+      "english": "If this be not so (in your opinion), hearken and I will shew you that it is.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3150,
+      "count": 10
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1895",
+      "label": "ϫⲛ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "or not, or else, rather"
+    },
+    {
+      "target": "C1893",
+      "label": "ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1890",
+      "label": "ⲙⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "not to be, there is not"
+    },
+    {
+      "target": "C1892",
+      "label": "ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "no; if not, else"
+    },
+    {
+      "target": "C1891",
+      "label": "ⲙⲛⲧⲉ-",
+      "pos": "EXIST",
+      "gloss": "not to have"
+    }
+  ]
+}

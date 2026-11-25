@@ -1,0 +1,132 @@
+{
+  "id": "C2692",
+  "forms": [
+    {
+      "id": "CF7190",
+      "orth": "ⲛⲟⲩϫⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3084",
+      "bibliography": "CD 247b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ **ⲉϥⲛⲟⲩϫⲉ **ⲉ**ⲡⲉⲛⲗⲁⲥ** ⲉⲧⲣⲉⲛϣⲱⲥ ⲙⲡⲉⲛⲥⲟⲛ ·",
+      "english": "And another shooteth an arrow into our tongue, so as to make us to revile scornfully our brother.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉϥⲛⲟⲩϫⲉ **ⲉ**ⲡⲣⲱⲙⲉ** ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲛⲛⲉϥⲁⲛⲟⲙⲓⲁ · ϣⲁⲛⲧϥⲟⲣϫϥ ϩⲁⲧⲟⲟⲧϥ ⲙⲡⲙⲟⲩ · ⲁⲩⲱ ⲁϥⲟⲣⲃⲉϥ ⲉϩⲟⲩⲛ ⲉⲡⲉϣⲧⲉⲕⲟ · ⲛⲁⲙⲛⲧⲉ ·",
+      "english": "And he hurleth his wickedness against man at all times, until at length he bringeth him under the power of death, and he shutteth him up in the prison of Amente.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲙⲟⲩⲧⲉ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲉϥϫⲱⲙⲙⲟⲥ ⲛⲁⲩ . ϫⲉϩⲁⲙⲏⲛ ϯϫⲱⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲧⲉⲓⲭⲏⲣⲁ ⲛϩⲏⲕⲉ **ⲁⲥⲛⲟⲩϫⲉ **ⲉ**ⲡⲅⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ** ⲉϩⲟⲩⲉ ⲛⲉⲧⲛⲟⲩϫⲉ ⲧⲏⲣⲟⲩ .",
+      "english": "He called his disciples to himself, and said to them, &apos;Most certainly I tell you, this poor widow gave more than all those who are giving into the treasury,",
+      "source": "41_Mark_12",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2705",
+      "label": "ⲛⲁϫϥ",
+      "pos": "N",
+      "gloss": "storeroom (in a ship)"
+    },
+    {
+      "target": "C2691",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "V",
+      "gloss": "throw, cast"
+    },
+    {
+      "target": "C2704",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "N",
+      "gloss": "throw, cast (of stone, arrow)"
+    },
+    {
+      "target": "C2696",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "cast, put beneath"
+    },
+    {
+      "target": "C2697",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "throw (self) upon"
+    },
+    {
+      "target": "C2701",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "cast, put in, introduce"
+    },
+    {
+      "target": "C2702",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, put forth"
+    },
+    {
+      "target": "C2703",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw down"
+    },
+    {
+      "target": "C2693",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "cast, impose upon, put (clothes) on"
+    },
+    {
+      "target": "C2698",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "cast forth, discard, put down sth"
+    },
+    {
+      "target": "C2700",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "cast behind; postpone"
+    },
+    {
+      "target": "C2699",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "cast down, discard"
+    },
+    {
+      "target": "C2694",
+      "label": "ⲛⲟⲩϫⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "throw to"
+    },
+    {
+      "target": "C2695",
+      "label": "ⲛⲟⲩϫⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "throw after, cast upon"
+    }
+  ]
+}

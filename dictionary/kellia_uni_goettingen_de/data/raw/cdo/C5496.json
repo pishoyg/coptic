@@ -1,0 +1,568 @@
+{
+  "id": "C5496",
+  "forms": [
+    {
+      "id": "CF12965",
+      "orth": "ⲱⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.59,
+        "rank": 369,
+        "count": 408
+      }
+    },
+    {
+      "orth": "ⲱⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.34,
+        "rank": 309,
+        "count": 283
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6156",
+      "bibliography": "CD 524a; CDC 80a; CED 228; KoptHWb 292; DELC 249b-250a; ChLCS\n                            72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩϥⲁⲓ ⲛⲛⲟⲩⲃⲁⲗ ⲉⲡϣⲱⲓ ⲁⲩⲛⲁⲩ ⲉⲡⲓ**ⲱⲛⲓ** ϫⲉⲁⲩⲥⲕⲉⲣⲕⲱⲣϥ ⲛⲉⲟⲩⲛⲓϣϯ ⲅⲁⲣ ⲉⲙⲁϣⲱ ⲡⲉ .",
+      "english": "for it was very big. Looking up, they saw that the stone was rolled back.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲉⲓ ⲇⲉ ⲁⲩϩⲉ ⲉⲡ**ⲱⲛⲉ** ⲉⲁⲩⲥⲕⲣⲕⲱⲣϥ ⲉⲃⲟⲗ ϩⲙⲡⲉⲙϩⲁⲟⲩ .",
+      "english": "They found the stone rolled away from the tomb.",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲛⲁϥ ϫⲉⲭⲛⲁⲩ ⲉⲛⲁⲓⲛⲓϣϯ ⲛ**ⲱⲛⲓ** ⲛⲛⲟⲩⲭⲁⲟⲩⲱⲛⲓ ⲉϫⲉⲛⲟⲩⲱⲛⲓ ⲙⲡⲁⲓⲙⲁ ⲛⲥⲉⲛⲁⲃⲟⲗϥ ⲉⲃⲟⲗ ⲁⲛ .",
+      "english": "Jesus said to him, 'Do you see these great buildings? There will not be left here one stone on another, which will not be thrown down.'",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲥⲟⲩⲟⲩⲁ ⲇⲉ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲉϩⲧⲟⲟⲩⲉ ⲛϣⲱⲣⲡ ⲁⲩⲉⲓ ⲉⲡⲉⲙϩⲁⲟⲩ ⲉⲣⲉⲛ ϩⲏⲛⲉ ⲛⲧⲟⲟⲧⲟⲩ ⲉⲛⲧⲁⲩⲥⲃⲧⲱⲧⲟⲩ ⲛⲙϩⲉⲛⲕⲟⲟⲩⲉ ⲛⲙⲙⲁⲩ . ⲛⲉⲩⲙⲉⲉⲩⲉ ⲇⲉ ⲡⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ϫⲉⲛⲓⲙ ⲁⲣⲁ ⲡⲉⲧⲛⲁⲥⲕⲟⲣⲕⲣ ⲛⲁⲛ ⲙⲡ**ⲱⲛⲉ** .",
+      "english": "But on the first day of the week, at early dawn, they and some others came to the tomb, bringing the spices which they had prepared.",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲟⲩⲟⲧⲉⲛ ⲛϫⲉⲡⲓ**ⲱⲛⲓ** ⲉⲧⲉⲙⲙⲁⲩ ϣⲁⲉϧⲟⲩⲛ ⲉⲡⲁⲓⲉϩⲟⲟⲩ ⲉⲩⲙⲏⲓⲛⲓ ⲛⲉⲛⲉϩ ϣⲁϩⲁⲛϫⲱⲟⲩ ⲛϫⲱⲟⲩ .",
+      "english": "That hole remains visible in the stone to this day, a lasting testimony for all future generations.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩϥⲓ **ⲱⲛⲉ** ⲟⲛ ⲛϭⲓⲛⲓⲟⲩⲇⲁⲓ ϫⲉⲕⲁⲁⲥ ⲉⲩⲉⲛⲟⲩϫⲉ ⲉⲣⲟϥ .",
+      "english": "Therefore Jews took up stones again to stone him.",
+      "source": "43_John_10",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲗⲁⲝ",
+        18,
+        27.035
+      ],
+      [
+        "ⲛ",
+        170,
+        26.819
+      ],
+      [
+        "ⲥⲙⲁⲣⲁⲅⲇⲟⲥ",
+        9,
+        26.62
+      ],
+      [
+        "ⲛⲥⲁⲣⲇⲓⲛⲟⲛ",
+        6,
+        26.45
+      ],
+      [
+        "ⲟⲩ",
+        141,
+        26.173
+      ],
+      [
+        "ⲩ",
+        88,
+        25.499
+      ],
+      [
+        "ⲥⲓⲕⲓ",
+        8,
+        25.373
+      ],
+      [
+        "ϩⲁⲛ",
+        64,
+        25.313
+      ],
+      [
+        "ⲙ",
+        90,
+        25.059
+      ],
+      [
+        "ⲡⲓ",
+        86,
+        25.05
+      ],
+      [
+        "ⲁ",
+        101,
+        24.964
+      ],
+      [
+        "ϧⲉⲛ",
+        80,
+        24.729
+      ],
+      [
+        "ⲥⲉⲧ",
+        9,
+        24.62
+      ],
+      [
+        "ⲱⲛⲓ",
+        20,
+        24.516
+      ],
+      [
+        "ⲥⲧⲓⲭⲟⲛ",
+        3,
+        24.45
+      ],
+      [
+        "ⲡⲉⲡⲓⲣⲓⲃⲟⲗⲟⲥ",
+        3,
+        24.45
+      ],
+      [
+        "ⲛⲉⲙ",
+        67,
+        24.441
+      ],
+      [
+        "ⲥⲕⲉⲣⲕⲉⲣ",
+        7,
+        24.31
+      ],
+      [
+        "ⲫⲱⲧϩ",
+        11,
+        24.292
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        63,
+        24.236
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        389,
+        20.94
+      ],
+      [
+        "ϩⲉⲛ",
+        104,
+        19.496
+      ],
+      [
+        "ⲡⲗⲁⲝ",
+        17,
+        19.011
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        18.884
+      ],
+      [
+        "ⲟⲩ",
+        173,
+        18.844
+      ],
+      [
+        "ⲁ",
+        162,
+        18.384
+      ],
+      [
+        "ⲥⲕⲟⲣⲕⲣ",
+        11,
+        18.209
+      ],
+      [
+        "ⲥⲓⲕⲉ",
+        9,
+        17.843
+      ],
+      [
+        "ⲉ",
+        148,
+        17.766
+      ],
+      [
+        "ⲁⲩⲱ",
+        115,
+        17.604
+      ],
+      [
+        "ϩⲓϫⲛ",
+        31,
+        17.596
+      ],
+      [
+        "ϫⲱⲣⲡ",
+        9,
+        17.18
+      ],
+      [
+        "ϩⲛ",
+        79,
+        16.711
+      ],
+      [
+        "ⲃⲩⲣⲓⲗⲗⲟⲥ",
+        3,
+        16.673
+      ],
+      [
+        "ϥ",
+        123,
+        16.67
+      ],
+      [
+        "ⲡ",
+        123,
+        16.645
+      ],
+      [
+        "ⲙⲛ",
+        70,
+        16.352
+      ],
+      [
+        "ⲱⲛⲉ",
+        20,
+        16.212
+      ],
+      [
+        "ⲩ",
+        82,
+        16.203
+      ],
+      [
+        "ⲙⲉ",
+        30,
+        15.982
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱⲛⲉ_0_node",
+          189
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲱⲛⲉ",
+          12
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲱⲛⲉ",
+          9
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲱⲛⲉ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲱⲛⲉ",
+          11
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲡ_1_pre_ⲱⲛⲉ",
+          8
+        ],
+        [
+          "ⲛ_1_pre_ⲱⲛⲉ",
+          8
+        ],
+        [
+          "ⲥⲛⲧⲉ_1_pre_ⲱⲛⲉ",
+          9
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲱⲛⲉ",
+          3
+        ],
+        [
+          "ⲡⲗⲁⲝ_1_pre_ⲱⲛⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲱⲛⲉ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲥⲟⲩⲛⲧ_3_post_ⲛⲁϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲱⲛⲉ",
+          8
+        ],
+        [
+          "ⲁⲇⲁⲙⲁⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲟⲩⲣⲏⲏⲧⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲣⲏⲏⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙ_2_pre_ⲥⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲗⲁⲝ_3_pre_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲥⲓⲕⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲱⲛⲉ",
+          "ϩⲉⲛ_1_pre_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_0_node",
+          "ⲙ_1_post_ⲱⲛⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲱⲛⲉ",
+          "ⲙⲉ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲥⲛⲧⲉ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲱⲛⲉ",
+          "ⲛ_1_pre_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲝ_1_pre_ⲱⲛⲉ",
+          "ⲥⲛⲧⲉ_1_pre_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          "ⲉ_1_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲱⲛⲉ",
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          "ⲥⲟⲩⲛⲧ_3_post_ⲛⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_0_node",
+          "ⲛ_1_post_ⲱⲛⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲱⲛⲉ",
+          "ⲁⲇⲁⲙⲁⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱⲛⲉ",
+          "ⲧⲉⲕ_3_post_ⲟⲩⲣⲏⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲟⲩⲣⲏⲏⲧⲉ",
+          "ⲟⲩⲣⲏⲏⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲥⲛⲧⲉ",
+          "ⲡⲗⲁⲝ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲝ_3_pre_ⲙ",
+          "ⲥⲛⲧⲉ_1_pre_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱⲛⲉ",
+          "ⲥⲓⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲱⲛⲉ",
+          "ⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲱⲛⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.58,
+      "rank": 314,
+      "count": 410
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5500",
+      "label": "ϩⲓⲱⲛⲉ",
+      "pos": "V",
+      "gloss": "throw stone"
+    },
+    {
+      "target": "C5499",
+      "label": "ⲙⲁ ⲛⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "stony place"
+    },
+    {
+      "target": "C5495",
+      "label": "ⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "stone"
+    },
+    {
+      "target": "C5497",
+      "label": "ⲱⲛⲉ ⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "precious stone, pearl"
+    },
+    {
+      "target": "C5498",
+      "label": "ⲱⲛⲉ ⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "precious stone, pearl"
+    }
+  ],
+  "etym": {
+    "egy_num": "27560",
+    "egy_lemma": "jnr",
+    "demo_num": "d572",
+    "demo_lemma": "ı ͗nj",
+    "english": "stone; (block of) stone (gen.)",
+    "german": "Stein (Material); Steinblock",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27560",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d572"
+  }
+}

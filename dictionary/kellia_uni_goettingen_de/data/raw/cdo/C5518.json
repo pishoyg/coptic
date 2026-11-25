@@ -1,0 +1,315 @@
+{
+  "id": "C5518",
+  "forms": [
+    {
+      "id": "CF13009",
+      "orth": "ϯⲱⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6180",
+      "bibliography": "CD 527b; KoptHWb 293; ChLCS 72b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲑⲣ",
+        1,
+        17.695
+      ],
+      [
+        "ϧⲁⲣⲱ",
+        1,
+        13.741
+      ],
+      [
+        "ϩⲟⲡⲱⲥ",
+        1,
+        12.037
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        10.72
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        9.495
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        8.228
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        7.806
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.666
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        7.336
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.238
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲑⲣ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ϯⲱⲡ_0_node",
+          2
+        ],
+        [
+          "ⲛⲱ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲱ",
+          1
+        ],
+        [
+          "ϩⲟⲡⲱⲥ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ϧⲁⲣⲱ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲁⲣⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲑⲣ_1_pre_ϯⲱⲡ",
+          "ⲟⲩ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲱⲡ",
+          "ϯⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ϯⲱⲡ_0_node",
+          "ⲛⲱ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲛⲱ_1_post_ϯⲱⲡ",
+          "ⲟⲩ_2_post_ⲛⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲱ",
+          "ϩⲟⲡⲱⲥ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲱⲡ",
+          "ⲓ_1_pre_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϯⲱⲡ",
+          "ϯⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ϯⲱⲡ_0_node",
+          "ϧⲁⲣⲱ_1_post_ϯⲱⲡ",
+          1
+        ],
+        [
+          "ϧⲁⲣⲱ_1_post_ϯⲱⲡ",
+          "ⲟⲩ_2_post_ϧⲁⲣⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5519",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "V",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5520",
+      "label": "ϣⲡⲱⲡ",
+      "pos": "N",
+      "gloss": "promise"
+    },
+    {
+      "target": "C5521",
+      "label": "ϥⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, calculate"
+    },
+    {
+      "target": "C5524",
+      "label": "ϩⲓⲱⲡ",
+      "pos": "V",
+      "gloss": "take reckoning, cast a lot"
+    },
+    {
+      "target": "C5530",
+      "label": "ϫⲓⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "take number, count"
+    },
+    {
+      "target": "C5526",
+      "label": "ϭⲓⲛⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning, calculation"
+    },
+    {
+      "target": "C5529",
+      "label": "ϯⲏⲡⲉ",
+      "pos": "V",
+      "gloss": "count"
+    },
+    {
+      "target": "C5531",
+      "label": "ⲁⲧϫⲓⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "countless"
+    },
+    {
+      "target": "C5528",
+      "label": "ⲁⲧⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "numberless, innumerable"
+    },
+    {
+      "target": "C5515",
+      "label": "ⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncounted, unesteemed"
+    },
+    {
+      "target": "C5527",
+      "label": "ⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "number"
+    },
+    {
+      "target": "C5522",
+      "label": "ⲙⲉⲧϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5516",
+      "label": "ⲙⲛⲧⲁⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "uncountability"
+    },
+    {
+      "target": "C5533",
+      "label": "ⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C5523",
+      "label": "ⲣⲉϥϥⲓⲱⲡ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5532",
+      "label": "ⲣⲉϥϫⲓⲏⲡⲉ",
+      "pos": "N",
+      "gloss": "accountant"
+    },
+    {
+      "target": "C5525",
+      "label": "ⲣⲉϥⲱⲡ",
+      "pos": "N",
+      "gloss": "counter"
+    },
+    {
+      "target": "C5517",
+      "label": "ⲣⲱⲡ",
+      "pos": "V",
+      "gloss": "make reckoning, esteem"
+    },
+    {
+      "target": "C5513",
+      "label": "ⲱⲡ",
+      "pos": "V",
+      "gloss": "count, esteem"
+    },
+    {
+      "target": "C5514",
+      "label": "ⲱⲡ",
+      "pos": "N",
+      "gloss": "reckoning"
+    },
+    {
+      "target": "C12120",
+      "label": "ⲱⲡ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "be betrothed to"
+    }
+  ]
+}

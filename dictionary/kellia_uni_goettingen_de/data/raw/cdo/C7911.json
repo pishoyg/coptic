@@ -1,0 +1,162 @@
+{
+  "id": "C7911",
+  "forms": [
+    {
+      "id": "CF17888",
+      "orth": "ϯϫⲣⲟϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9169,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8791",
+      "bibliography": "CD 832a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲁⲃⲣⲁⲙ ϫⲉⲉⲡⲓⲇⲏ ⲙⲡⲉⲕ**ϯϫⲣⲟϫ** ⲛⲏⲓ ⲡⲁⲙⲉⲥ ϧⲉⲛⲏⲓ ⲉϥⲉⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ ⲙⲙⲟⲓ",
+      "english": "And Abram said, since thou hast given me no seed, but my home-born shall succeed me.",
+      "source": "01_Genesis_15",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲁⲙⲉⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲇⲏ",
+        1,
+        17.373
+      ],
+      [
+        "ⲉⲡⲓ",
+        1,
+        15.888
+      ],
+      [
+        "ⲙⲡⲉⲕ",
+        1,
+        14.695
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.609
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯϫⲣⲟϫ_0_node",
+          "ⲛ_1_post_ϯϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯϫⲣⲟϫ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8637,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7912",
+      "label": "ϫⲓϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "become pregnant, conceive (child)"
+    },
+    {
+      "target": "C7907",
+      "label": "ϫⲣⲟϫ",
+      "pos": "N",
+      "gloss": "seed, semen (of a man)"
+    },
+    {
+      "target": "C7906",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seed (of plants)"
+    },
+    {
+      "target": "C7908",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "sown, fertilized"
+    },
+    {
+      "target": "C7909",
+      "label": "ⲁⲧϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seedless, infertile"
+    },
+    {
+      "target": "C7910",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "produce seed, semen, sperm"
+    }
+  ]
+}

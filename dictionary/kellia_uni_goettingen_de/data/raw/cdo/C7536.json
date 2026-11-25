@@ -1,0 +1,64 @@
+{
+  "id": "C7536",
+  "forms": [
+    {
+      "id": "CF17131",
+      "orth": "ⲟⲓ ⲛϫⲁϭⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8354",
+      "bibliography": "CD 800b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7534",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted person"
+    },
+    {
+      "target": "C7535",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted"
+    },
+    {
+      "target": "C7537",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left hand"
+    },
+    {
+      "target": "C7538",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left"
+    },
+    {
+      "target": "C7539",
+      "label": "ⲣϭⲁϫⲏ",
+      "pos": "V",
+      "gloss": "be small, weak(?)"
+    }
+  ]
+}

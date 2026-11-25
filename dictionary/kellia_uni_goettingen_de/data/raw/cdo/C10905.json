@@ -1,0 +1,372 @@
+{
+  "id": "C10905",
+  "forms": [
+    {
+      "id": "CF29749",
+      "orth": "ⲫⲩⲥⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29750",
+      "orth": "ⲫⲩⲥⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5057,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15057",
+      "bibliography": "DDGLC",
+      "cu_ID": "11422"
+    },
+    {
+      "id": "CS15058",
+      "bibliography": "DDGLC",
+      "cu_ID": "8055"
+    },
+    {
+      "id": "CS15059",
+      "bibliography": "DDGLC",
+      "cu_ID": "2712"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲕϩⲟ ⲅⲁⲣ ⲟⲩ**ⲫⲩⲥⲓⲕⲟⲛ** ⲡⲉ ·",
+      "english": "And yet hunger is a natural thing",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏⲡⲱⲥ ϭⲉ ⲟⲩⲛⲟⲩⲁ ⲛⲁϫⲟⲟⲥ · ϫⲉⲙⲡⲁⲑⲟⲥ ⲙⲡⲥⲱⲙⲁ ϩⲉⲛ**ⲫⲩⲥⲓⲕⲟⲛ** ⲛⲉ · ⲉⲙⲛⲁⲣⲓⲕⲉ ⁛— ⲉⲡⲉⲧⲛⲁⲣϩⲙϩⲁⲗ ⲛⲁⲩ ·",
+      "english": "But peradventure there will be some one who will say, ' The passions of the body are natural, and the man who becometh a servant unto them is without blame.'",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛⲥⲱ ⲇⲉ ϩⲛⲟⲩⲙⲛⲧⲁⲧⲥⲉⲓ · ϣⲁⲩϭⲙⲁⲣⲓⲕⲉ ⲉⲣⲟϥ ⲉⲃⲟⲗ ϫⲉⲡⲉⲓⲕⲉ ⲟⲩ**ⲫⲩⲥⲓⲕⲟⲛ** ⲡⲉ ·",
+      "english": "but if he taketh to drinking and swilling at all times men will blame him. Now thirst is a natural thing,",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲁⲧⲥⲁϫⲓ",
+        1,
+        15.373
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        10.344
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲉϩⲕⲟ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲥⲉⲓ",
+        1,
+        15.106
+      ],
+      [
+        "ϩⲟⲙⲟⲓⲱⲥ",
+        1,
+        12.393
+      ],
+      [
+        "ⲣϫⲟⲉⲓⲥ",
+        1,
+        12.106
+      ],
+      [
+        "ⲫⲩⲥⲓⲥ",
+        1,
+        11.954
+      ],
+      [
+        "ⲧⲃⲛⲏ",
+        1,
+        11.482
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        11.152
+      ],
+      [
+        "ⲉ",
+        5,
+        9.461
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        9.357
+      ],
+      [
+        "ⲧ",
+        3,
+        8.504
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        8.302
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        8.146
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.204
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        7.005
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        6.905
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        5.974
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.481
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲉ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲉⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϥⲱϯ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϥⲱϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          "ⲛⲉⲉ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲉ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲡ_2_post_ⲛⲉⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲉⲉ",
+          "ⲧⲁⲕⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_3_post_ⲡ",
+          "ⲛⲉⲙ_2_post_ϥⲱϯ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϥⲱϯ",
+          "ⲡ_2_post_ϥⲱϯ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_2_pre_ⲉϩⲕⲟ",
+          1
+        ],
+        [
+          "ⲉϩⲕⲟ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          4
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲛⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_3_post_ⲧⲃⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ⲉϩⲕⲟ",
+          "ⲉϩⲕⲟ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲕⲟ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲅⲁⲣ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲕⲉ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲟⲩ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲫⲩⲥⲓⲕⲟⲛ_0_node",
+          "ⲛ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲫⲩⲥⲓⲕⲟⲛ",
+          "ⲧⲃⲛⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲃⲛⲏ_2_post_ⲛ",
+          "ⲉϩⲣⲁⲓ_3_post_ⲧⲃⲛⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4636,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "3079",
+    "grl_lemma": "φυσικός",
+    "grl_meaning": "natural, inborn, native",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1964a; Preisigke 2:711"
+  }
+}

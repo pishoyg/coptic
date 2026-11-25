@@ -1,0 +1,295 @@
+{
+  "id": "C5966",
+  "forms": [
+    {
+      "id": "CF31967",
+      "orth": "ϣⲛϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5691,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF31966",
+      "orth": "ϣⲉⲛϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14905,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲛⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16290,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉⲛⲃⲉ",
+      "dialect": "S",
+      "id": "1945.2"
+    },
+    {
+      "orth": "ϣⲏⲛϥⲉ",
+      "dialect": "S",
+      "id": "1945.3"
+    },
+    {
+      "orth": "ϣⲏϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18555,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲏⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4309,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϣⲓϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13196,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉⲛϥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3631,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϣⲏⲓϥⲓ",
+      "dialect": "B",
+      "id": "1945.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6650",
+      "bibliography": "CD 574a-b; CED 247-248; KoptHWb 320; DELC 267b; ChLCS 79b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲕⲁ ⲛⲓⲙ ⲉⲧⲉⲙⲛⲧⲛϩ ⲙⲙⲟⲟⲩ ⲟⲩⲇⲉ ⲉⲙⲛ**ϣⲛϥⲉ** ϩⲓⲱⲟⲩ ϩⲛⲙⲟⲩ ⲏ ϩⲛⲛⲉⲑⲁⲗⲁⲥⲥⲁ ⲁⲩⲱ ϩⲛⲛⲉⲭⲉⲓⲙⲁⲣⲣⲟⲥ ⲉⲃⲟⲗ ϩⲛⲛⲉϣⲁⲣⲉⲙⲙⲟⲩⲉⲓⲟⲟⲩⲉ ⲧⲁⲩⲟⲟⲩ ⲉⲃⲟⲗ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲯⲩⲭⲏ ⲛⲓⲙ ⲉⲧⲟⲛϩ ϩⲛⲙⲟⲩ ⲧⲁⲓ ⲟⲩⲃⲟⲧⲉ ⲧⲉ",
+      "english": "And all things which have not fins or scales in the water, or in the seas, and in the brooks, of all which the waters produce, and of every soul living in the water, are an abomination; and they shall be abominations to you.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲕⲁ ⲛⲓⲙ ⲉⲧⲉⲙⲛⲧⲛϩ ⲙⲙⲟⲟⲩ ⲟⲩⲇⲉ ⲉⲙⲛ**ϣⲛϥⲉ** ϩⲓⲱⲟⲩ ϩⲛⲛⲉⲧϩⲛⲙⲙⲟⲟⲩ ⲡⲁⲓ ⲟⲩⲃⲟⲧⲉ ⲛⲏⲧⲛ ⲡⲉ",
+      "english": "And all things that have not fins or scales of those that are in the waters, these are an abomination to you.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲁⲓ ⲛⲉⲧⲉⲧⲛⲁⲟⲩⲟⲙⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧϣⲟⲟⲡ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϩⲛⲙⲙⲟⲩⲉⲓⲟⲟⲩⲉ ⲛⲕⲁ ⲛⲓⲙ ⲉⲣⲉⲧⲛϩ ⲙⲙⲟⲟⲩ ⲁⲩⲱ ⲉⲣⲉ**ϣⲛϥⲉ** ⲙⲙⲟⲟⲩ ϩⲛⲙⲙⲟⲩⲛⲉⲓⲟⲟⲩⲉ ⲁⲩⲱ ϩⲛⲛⲉⲑⲁⲗⲁⲥⲥⲁ ⲁⲩⲱ ϩⲛⲛⲉⲭⲉⲓⲙⲁⲣⲣⲟⲥ ⲛⲁⲓ ⲉⲧⲉⲧⲛⲉⲟⲩⲟⲙⲟⲩ",
+      "english": "And these are what ye shall eat of all that are in the waters: all things that have fins and scales in the waters, and in the seas, and in the brooks, these ye shall eat.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲱ",
+        2,
+        15.587
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        12.057
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        11.691
+      ],
+      [
+        "ⲉϣ",
+        1,
+        11.174
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.649
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        9.451
+      ],
+      [
+        "ϥⲓ",
+        1,
+        8.626
+      ],
+      [
+        "ⲙ",
+        3,
+        8.521
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ϩⲁ",
+        1,
+        8.28
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲛϥⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_pre_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϣⲛϥⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲛϥⲉ_0_node",
+          "ⲛ_1_post_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲛϥⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲛϥⲉ",
+          "ⲉⲣⲉ_1_pre_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_pre_ϣⲛϥⲉ",
+          "ϣⲛϥⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲛϥⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ϣⲛϥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϣⲛϥⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ϣⲛϥⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6146,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "156140",
+    "egy_lemma": "šnf.t",
+    "demo_num": "d4526",
+    "demo_lemma": "ḫnfj",
+    "english": "scale (of a fish)",
+    "german": "Schuppe",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/156140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4526"
+  }
+}

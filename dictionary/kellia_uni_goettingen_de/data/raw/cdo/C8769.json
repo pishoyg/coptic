@@ -1,0 +1,261 @@
+{
+  "id": "C8769",
+  "forms": [
+    {
+      "id": "CF21017",
+      "orth": "ⲇⲓⲁⲫⲟⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21020",
+      "orth": "ⲇⲓⲁⲫⲟⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10670,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21019",
+      "orth": "ⲇⲓⲁⲫⲟⲣⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21018",
+      "orth": "ϯⲁⲫⲟⲣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21021",
+      "orth": "ⲧⲓⲁⲫⲟⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10491",
+      "bibliography": "DDGLC",
+      "cu_ID": "2274"
+    },
+    {
+      "id": "CS10492",
+      "bibliography": "DDGLC",
+      "cu_ID": "7033"
+    },
+    {
+      "id": "CS10493",
+      "bibliography": "DDGLC",
+      "cu_ID": "2617"
+    },
+    {
+      "id": "CS10494",
+      "bibliography": "DDGLC",
+      "cu_ID": "4619"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲧ**ⲇⲓⲁⲫⲟⲣⲁ** ⲇⲉ ⲛⲛϣⲱⲛⲉ ⲙⲛⲛⲁⲩⲁⲛ ⲙⲛⲛϭⲱϫⲃ ⲉⲧⲛϩⲏⲧⲛ ⲉⲩⲡⲉⲧⲉⲩⲥⲓⲥ ⲛⲁⲛ ⲉⲧⲃⲉⲡⲉⲛⲟⲩϫⲁⲓ ⲙⲛϣϭⲟⲙ ⲅⲁⲣ ⲛⲗⲁⲁⲩ ⲛⲛⲁⲓ ⲉⲥⲉϣϥ ⲡⲉⲟⲟⲩ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲧⲁⲁϥ ⲛⲁⲛ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲉⲣⲉⲡⲁⲩⲗⲟⲥ ϫⲱ ⲙⲙⲟⲥ ϫⲉⲡϩⲟⲟⲩⲧ ⲅⲁⲣ ⲛⲥϣϣⲉ ⲁⲛ ⲉⲣⲟϥ ⲉϩⲱⲃⲥ ⲛⲧⲉϥⲁⲡⲉ",
+      "english": "As for the distinction of the sick, and the skin colors and defects in us which are [unclear] for our wellbeing, it is impossible for any of these to humiliate the glory which God has given us like Paul said: For it is not fitting for a man to cover his head (because he is the image and glory of God).",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲧⲱ",
+        1,
+        12.505
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        2,
+        10.8
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        10.651
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        10.009
+      ],
+      [
+        "ϩⲱ",
+        1,
+        9.486
+      ],
+      [
+        "ⲛⲑⲟϥ",
+        1,
+        9.082
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.903
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.368
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        12.098
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        8.927
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲫⲟⲣⲁ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲫⲟⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϭⲱϫⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲁⲫⲟⲣⲁ_0_node",
+          "ⲇⲉ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          "ⲛ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲫⲟⲣⲁ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲱⲛⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_3_post_ⲛ",
+          "ⲙⲛ_5_post_ϭⲱϫⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10259,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "524",
+    "grl_lemma": "διαφορά",
+    "grl_meaning": "difference, variance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 418b; Preisigke 1:368"
+  }
+}

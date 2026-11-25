@@ -1,0 +1,48 @@
+{
+  "id": "C3385",
+  "forms": [
+    {
+      "id": "CF8663",
+      "orth": "ⲥⲱⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF8664",
+      "orth": "ⲥⲟⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2237,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3857",
+      "bibliography": "CD 318b; KoptHWb 179"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3386",
+      "label": "ⲥⲱⲓ",
+      "pos": "N",
+      "gloss": "hair loss"
+    }
+  ],
+  "etym": {
+    "egy_num": "131460",
+    "egy_lemma": "zbi̯",
+    "english": "to go; to conduct; to send; to attain",
+    "german": "(weg)gehen; führen; aussenden; durchlaufen; verbrennen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131460"
+  }
+}

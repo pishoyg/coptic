@@ -1,0 +1,184 @@
+{
+  "id": "C9352",
+  "forms": [
+    {
+      "id": "CF23535",
+      "orth": "ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23536",
+      "orth": "ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7967,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23537",
+      "orth": "ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23538",
+      "orth": "ⲕⲁⲧⲁⲥⲡⲟⲡⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11751",
+      "bibliography": "DDGLC",
+      "cu_ID": "3000"
+    },
+    {
+      "id": "CS11752",
+      "bibliography": "DDGLC",
+      "cu_ID": "1459"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲉⲥⲟⲩ ⲛⲁⲩⲏ ϣⲱⲡⲉ ⲛ**ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ** ⲛⲧⲡⲁⲗⲁⲥⲧⲓⲛⲏ · ⲉⲁϥⲭⲁⲗⲓⲛⲟⲩ ⲙⲡⲉⲧⲣⲟⲙⲟⲥ ⲙⲡⲣⲏ ⲙⲛⲡⲟⲟϩ ·",
+      "english": "Jesus, the son of Nun, was a spy in the country of Palestine, and He curbed the course of the sun and the moon (for him). (Joshua 10:13)",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲇⲁⲩⲉⲓⲇ ϫⲟⲟⲩ ⲛϩⲉⲛ**ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ** ⲁϥⲉⲓⲙⲉ ϫⲉⲥⲁⲟⲩⲗ ⲁϥⲉⲓ ⲉⲃⲟⲗ ϩⲛⲕⲉⲉⲓⲗⲁ ⲉϥⲥⲃⲧⲱⲧ",
+      "english": "And David sent spies, and ascertained that Saul was come prepared out of Keila.",
+      "source": "I Samuel 26",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲗⲁⲥⲧⲓⲛⲏ",
+        1,
+        19.598
+      ],
+      [
+        "ⲓⲉⲥⲟⲩ",
+        1,
+        19.598
+      ],
+      [
+        "ⲛⲁⲩⲏ",
+        1,
+        14.24
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        9.441
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        8.116
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲗⲁⲥⲧⲓⲛⲏ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲛ_1_post_ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲧⲁⲥⲕⲟⲡⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲁⲗⲁⲥⲧⲓⲛⲏ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7520,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2515",
+    "grl_lemma": "κατάσκοπος",
+    "grl_meaning": "scout, spy",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 912a"
+  }
+}

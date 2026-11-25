@@ -1,0 +1,210 @@
+{
+  "id": "C4908",
+  "forms": [
+    {
+      "id": "CF11781",
+      "orth": "ⲁⲧϯⲟⲩⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18151,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5533",
+      "bibliography": "CD 474a; ChLCS 66a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϯ ⲛⲁϥ ⲛⲧⲁⲣⲭⲏ ⲙⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲙⲛⲧⲙⲛⲧⲣⲣⲟ ⲁⲩⲱ ⲛⲗⲁⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉⲫⲩⲗⲏ ⲙⲛⲛⲁⲥⲡⲉ ⲛⲗⲁⲥ ⲁⲩⲣϩⲙϩⲁⲗ ⲛⲁϥ ⲛⲉⲣⲉⲧⲉϥⲉⲝⲟⲩⲥⲓⲁ ⲇⲉ ⲙⲏⲛ ⲉⲃⲟⲗ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ ⲛ**ⲁⲧϯⲟⲩⲱ** ⲁⲩⲱ ⲧⲉϥⲙⲛⲧⲣⲣⲟ ⲟⲩⲁⲧⲧⲁⲕⲟ ⲧⲉ",
+      "english": "And to him was given the dominion, and the honour, and the kingdom; and all nations, tribes, and languages, shall serve him: his dominion is an everlasting dominion, which shall not pass away, and his kingdom shall not be destroyed.",
+      "source": "Daniel 7",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲱⲃⲓ",
+        1,
+        12.927
+      ],
+      [
+        "ϩⲑⲏ",
+        1,
+        11.967
+      ],
+      [
+        "ⲕⲱϯ",
+        1,
+        10.086
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.8
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲛⲉϩ",
+        2,
+        13.381
+      ],
+      [
+        "ⲙⲛⲧⲣⲣⲟ",
+        1,
+        11.161
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧϯⲟⲩⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϯⲟⲩⲱ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲣⲟ_1_post_ⲁⲧϯⲟⲩⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧϯⲟⲩⲱ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          "ⲧⲉϥ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲛⲧⲣⲣⲟ",
+          "ⲙⲛⲧⲣⲣⲟ_1_post_ⲁⲧϯⲟⲩⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17774,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4906",
+      "label": "ϫⲓⲛⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "ceasing, end"
+    },
+    {
+      "target": "C4909",
+      "label": "ϭⲓⲁⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring to an end, delay"
+    },
+    {
+      "target": "C4907",
+      "label": "ϯⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "make cease, release, loose"
+    },
+    {
+      "target": "C4905",
+      "label": "ⲁⲧⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "ceaseless"
+    },
+    {
+      "target": "C4904",
+      "label": "ⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "cease, stay, finish"
+    }
+  ]
+}

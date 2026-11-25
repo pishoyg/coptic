@@ -1,0 +1,91 @@
+{
+  "id": "C1522",
+  "forms": [
+    {
+      "id": "CF4477",
+      "orth": "ⲕⲟⲓⲁϩⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲓⲁϩⲕ",
+      "dialect": "S",
+      "id": "2746.1"
+    },
+    {
+      "orth": "ⲭⲟⲓⲁϩⲕ",
+      "dialect": "S",
+      "id": "2746.2"
+    },
+    {
+      "orth": "ⲭⲓⲁϩⲕ",
+      "dialect": "S",
+      "id": "2746.3"
+    },
+    {
+      "orth": "ⲭⲟⲓⲁⲕ",
+      "dialect": "S",
+      "id": "2746.4"
+    },
+    {
+      "orth": "ⲭⲟⲓⲁⲭ",
+      "dialect": "S",
+      "id": "2746.5"
+    },
+    {
+      "orth": "ⲭⲁⲓⲁⲕ",
+      "dialect": "S",
+      "id": "2746.6"
+    },
+    {
+      "orth": "ⲭⲟⲓⲁⲕϥ",
+      "dialect": "S",
+      "id": "2746.7"
+    },
+    {
+      "orth": "ⲭⲟⲓⲁⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7118,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲁⲓⲁⲕ",
+      "dialect": "A",
+      "id": "2746.9"
+    },
+    {
+      "orth": "ⲕⲓⲁⲭ",
+      "dialect": "F",
+      "id": "2746.10"
+    },
+    {
+      "orth": "ⲭⲓⲁⲕ",
+      "dialect": "F",
+      "id": "2746.11"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Name einer Sache oder Institution",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1780",
+      "bibliography": "CD 133b; CED 68; KoptHWb 58; DELC 74a; ChLCS 16a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "163150",
+    "egy_lemma": "Kꜣ-ḥr-kꜣ",
+    "english": "Khoiak (festival); [month name]",
+    "german": "Choiak (Fest); Choiak (Monatsname); Choiak (4. Monat der Achet-Jahreszeit)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163150"
+  }
+}

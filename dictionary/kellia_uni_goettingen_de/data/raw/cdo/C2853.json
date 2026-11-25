@@ -1,0 +1,69 @@
+{
+  "id": "C2853",
+  "forms": [
+    {
+      "id": "CF7554",
+      "orth": "ⲣⲉϥⲫⲱⲛⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3264",
+      "bibliography": "CD 266a; KoptHWb 148; DELC 160"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2854",
+      "label": "ⲡⲟⲛⲕϥ",
+      "pos": "N",
+      "gloss": "bottle, tube(?)"
+    },
+    {
+      "target": "C2847",
+      "label": "ⲡⲱⲛⲕ",
+      "pos": "V",
+      "gloss": "draw, bail, empty out (water etc.); transfer, carry over"
+    },
+    {
+      "target": "C2850",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "transfer into"
+    },
+    {
+      "target": "C2851",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "transfer, bring up"
+    },
+    {
+      "target": "C2848",
+      "label": "ⲡⲱⲛⲕ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "pile upon"
+    },
+    {
+      "target": "C2849",
+      "label": "ⲡⲱⲛⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "empty, remove"
+    },
+    {
+      "target": "C2852",
+      "label": "ⲫⲱⲛⲕ",
+      "pos": "V",
+      "gloss": "hollow, cut out"
+    }
+  ]
+}

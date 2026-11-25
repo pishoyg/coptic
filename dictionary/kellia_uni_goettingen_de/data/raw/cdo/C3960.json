@@ -1,0 +1,173 @@
+{
+  "id": "C3960",
+  "forms": [
+    {
+      "id": "CF31731",
+      "orth": "ⲥⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11192,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31730",
+      "orth": "ⲥⲟⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2383,
+        "count": 21
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4496",
+      "bibliography": "CD 381a; ChLCS 53b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲃⲧ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲥⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲥⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲥⲟϩⲉ",
+          1
+        ],
+        [
+          "ϩⲱ_2_post_ϫⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲥⲟϩⲉ",
+          "ⲥⲟϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟϩⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟϩⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϫⲉ_1_post_ⲥⲟϩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲥⲟϩⲉ",
+          "ϩⲱ_2_post_ϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3962",
+      "label": "ϫⲓⲛⲥⲟϩⲓ",
+      "pos": "N",
+      "gloss": "reproval"
+    },
+    {
+      "target": "C3961",
+      "label": "ⲣⲉϥⲥⲟϩⲉ",
+      "pos": "N",
+      "gloss": "prosecutor"
+    },
+    {
+      "target": "C3959",
+      "label": "ⲥⲟϩⲉ",
+      "pos": "V",
+      "gloss": "reprove, correct, blame"
+    },
+    {
+      "target": "C3957",
+      "label": "ⲥⲟⲟϩⲉ",
+      "pos": "V",
+      "gloss": "be set up, upright; set up, upright"
+    },
+    {
+      "target": "C3958",
+      "label": "ⲥⲟⲟϩⲉ",
+      "pos": "N",
+      "gloss": "setting up, uprightness"
+    },
+    {
+      "target": "C12160",
+      "label": "ⲥⲟⲟϩⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "set up"
+    },
+    {
+      "target": "C12159",
+      "label": "ⲥⲟⲟϩⲉ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "set up(right)"
+    }
+  ]
+}

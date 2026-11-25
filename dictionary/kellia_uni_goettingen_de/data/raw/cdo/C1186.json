@@ -1,0 +1,56 @@
+{
+  "id": "C1186",
+  "forms": [
+    {
+      "id": "CF3759",
+      "orth": "ⲕⲟⲗⲡⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1376",
+      "bibliography": "CD 105b; KoptHWb 63; ChLCS 17a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1184",
+      "label": "ϫⲓⲛⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "robbing"
+    },
+    {
+      "target": "C1185",
+      "label": "ⲁⲧⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unstolen, inviolate"
+    },
+    {
+      "target": "C1182",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "steal, rob"
+    },
+    {
+      "target": "C1183",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "theft, thing stolen"
+    },
+    {
+      "target": "C12274",
+      "label": "ⲛⲕⲱⲗⲡ",
+      "pos": "ADV",
+      "gloss": "thievishly"
+    }
+  ]
+}

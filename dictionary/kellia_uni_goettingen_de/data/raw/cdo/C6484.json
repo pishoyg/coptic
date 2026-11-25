@@ -1,0 +1,53 @@
+{
+  "id": "C6484",
+  "forms": [
+    {
+      "id": "CF14996",
+      "orth": "ϩⲁⲕⲉ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7195",
+      "bibliography": "CD 663b; KoptHWb 362; DELC 294b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6483",
+      "label": "ϩⲟⲕⲥ",
+      "pos": "N",
+      "gloss": "scraper"
+    },
+    {
+      "target": "C6482",
+      "label": "ϩⲱⲕⲉ",
+      "pos": "V",
+      "gloss": "scrape, scratch; shave, shear"
+    },
+    {
+      "target": "C6485",
+      "label": "ϩⲱⲱⲕⲉ",
+      "pos": "N",
+      "gloss": "fleece"
+    }
+  ],
+  "etym": {
+    "egy_num": "122810",
+    "egy_lemma": "ẖꜥq",
+    "demo_num": "d4739",
+    "demo_lemma": "ẖꜥq",
+    "english": "barber",
+    "german": "Barbier",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/122810",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4739"
+  }
+}

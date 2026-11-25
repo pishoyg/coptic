@@ -1,0 +1,210 @@
+{
+  "id": "C7548",
+  "forms": [
+    {
+      "id": "CF17155",
+      "orth": "ϭⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8009,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲕⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.36,
+        "rank": 585,
+        "count": 214
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8367",
+      "bibliography": "CD 802a; KoptHWb 444; DELC 336b; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲧⲁⲓⲉⲟⲩⲣⲱⲙⲉ ⲉⲧⲃⲉⲡⲉϥⲥⲁ ⲁⲩⲱ ⲙⲡⲣⲃⲉⲧⲟⲩⲣⲱⲙⲉ ⲉⲧⲃⲉⲡⲉϥ**ϭⲁ**",
+      "english": "Commend not a man for his beauty; neither abhor a man for his outward appearance.",
+      "source": "Sirach 11",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲁⲛⲡⲁⲣⲁⲃⲁ ϭⲉ ⲛⲛⲁⲉⲛⲧⲟⲗⲏ · ⲡⲉⲓⲛⲟϭ ⲙⲙⲁ ϯⲛⲁⲛⲟϫϥ ⲉⲃⲟⲗ ⲙⲙⲟⲓ · ⲛⲥⲉϣⲣϣⲱⲣϥ ⲁⲩⲱ ⲛϥϣⲱⲡⲉ ⲛϫⲁⲓⲉ ⲛⲧⲉⲛⲉⲧⲡⲁⲣⲁⲅⲉ ⲧⲏⲣⲟⲩ ⲣϣⲡⲏⲣⲉ ⲛⲥⲉϣ**ϭⲁ**ϭⲓϫ · ⲁⲩⲱ ⲛⲥⲉϣⲙϣⲏϭⲉ ⲛⲥⲉϫⲟⲟⲥ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩⲉⲓⲣⲉ ϩⲓⲛⲁⲓ ⲙⲡⲉⲓⲛⲟϭ ⲙⲙⲁ",
+      "english": "If, however, thou transgress My commandments, I will cast away this great place from Me, and it shall be destroyed and become such a wilderness that all those who shall pass by it shall marvel, and shall smite together their hands, and shall whistle, and shall say, 'Why have these things happened to this great place?'",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        11.728
+      ],
+      [
+        "ϣ",
+        1,
+        10.661
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        10.034
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        8.974
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.78
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ϭⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ϭⲓϫ_1_post_ϭⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲙϣⲏϭⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϭⲁ",
+          "ϭⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲁ",
+          "ⲥⲉ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲁ",
+          "ϣ_1_pre_ϭⲁ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ϭⲁ",
+          "ϭⲁ_0_node",
+          1
+        ],
+        [
+          "ϭⲁ_0_node",
+          "ϭⲓϫ_1_post_ϭⲁ",
+          1
+        ],
+        [
+          "ϭⲓϫ_1_post_ϭⲁ",
+          "ⲁⲩⲱ_2_post_ϣⲙϣⲏϭⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7565,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4862",
+      "type": "cf",
+      "label": "make ugly, disgrace, condemn"
+    }
+  ],
+  "etym": {
+    "egy_num": "166130",
+    "egy_lemma": "gꜣi̯",
+    "demo_num": "d6679",
+    "demo_lemma": "gꜣ",
+    "english": "to caluminate; to lie",
+    "german": "(jmdn.) schmähen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6679"
+  }
+}

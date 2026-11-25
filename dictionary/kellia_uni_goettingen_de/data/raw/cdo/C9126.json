@@ -1,0 +1,165 @@
+{
+  "id": "C9126",
+  "forms": [
+    {
+      "id": "CF22651",
+      "orth": "ⲏⲛⲓⲟⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22653",
+      "orth": "ⲏⲛⲓⲟⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16423,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22652",
+      "orth": "ⲉⲟⲛⲓⲟⲭⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11278",
+      "bibliography": "DDGLC",
+      "cu_ID": "3102"
+    },
+    {
+      "id": "CS11279",
+      "bibliography": "DDGLC",
+      "cu_ID": "5986"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲁ ⲇⲉ ⲁϥϫⲱⲗⲕ ⲛⲧⲉϥⲡⲓⲧⲉ ⲉⲡϣⲱϣ ⲁϥⲛⲉϫⲥⲟⲧⲉ ⲉⲡⲣⲣⲟ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲧⲙⲏⲧⲉ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲱⲛ ⲉⲧⲉⲡⲉϥⲟⲩⲟϥ ⲡⲉ ⲟⲩⲧⲉ ⲧⲉϥⲙⲉⲥⲧϩⲏⲧ ⲡⲉϫⲁϥ ⲇⲉ ⲙⲡ**ⲏⲛⲓⲟⲭⲟⲥ** ⲉⲧϫⲱⲣⲙ ⲉⲡⲉϥϩⲁⲣⲙⲁ ϫⲉⲥⲉⲕⲧⲟⲟⲧⲕ ⲉⲣⲟⲕ ⲛⲅⲛⲧ ⲉⲃⲟⲗ ϩⲛⲧⲙⲏⲧⲉ ⲙⲡⲡⲟⲗⲉⲙⲟⲥ ⲡⲥ...... ⲉⲙⲁ...",
+      "english": "And one drew a bow with a good aim, and smote the king of Israel between the lungs and the breast-plate: and he said to his charioteer, Turn thine hands, and carry me away out of the battle, for I am wounded.",
+      "source": "I Kings 22",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲣⲙ",
+        1,
+        15.954
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏⲛⲓⲟⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲏⲛⲓⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϫⲱⲣⲙ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϫⲱⲣⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_5_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲙⲁ_4_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏⲛⲓⲟⲭⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲏⲛⲓⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲏⲛⲓⲟⲭⲟⲥ",
+          "ϫⲱⲣⲙ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲱⲣⲙ_2_post_ⲉⲧ",
+          "ⲉ_3_post_ϫⲱⲣⲙ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϫⲱⲣⲙ",
+          "ⲡⲉϥ_5_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_5_post_ϩⲁⲣⲙⲁ",
+          "ϩⲁⲣⲙⲁ_4_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16029,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "889",
+    "grl_lemma": "ἡνίοχος",
+    "grl_meaning": "driver, charioteer",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 775b; Preisigke 1:661"
+  }
+}

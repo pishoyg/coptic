@@ -1,0 +1,71 @@
+{
+  "id": "C6085",
+  "forms": [
+    {
+      "id": "CF14175",
+      "orth": "ⲙⲁ ⲛⲉϣⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19373,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6770",
+      "bibliography": "CD 590b; ChLCS 81b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲛⲉⲧϯ ⲉⲃⲟⲗ ⲛⲛⲉϭⲣⲟⲟⲙⲡⲉ . ϫⲉϥⲓ ⲛⲁⲓ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ . ⲙⲡⲣⲉⲓⲣⲉ ⲙⲡⲏⲓ ⲙⲡⲁⲉⲓⲱⲧ ⲛⲏⲓ **ⲙⲙⲁ **ⲛⲉϣⲱⲧ**** .",
+      "english": "To those who sold the doves, he said, 'Take these things out of here! Don't make my Father's house a marketplace!'",
+      "source": "43_John_2",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18985,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6084",
+      "label": "ϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trader, merchant"
+    },
+    {
+      "target": "C6088",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "merchandise"
+    },
+    {
+      "target": "C6086",
+      "label": "ⲙⲛⲧⲉϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trading, commerce"
+    },
+    {
+      "target": "C6087",
+      "label": "ⲣⲉϣⲱⲧ",
+      "pos": "V",
+      "gloss": "be trader, traffic"
+    }
+  ]
+}

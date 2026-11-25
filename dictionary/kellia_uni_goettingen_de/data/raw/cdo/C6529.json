@@ -1,0 +1,208 @@
+{
+  "id": "C6529",
+  "forms": [
+    {
+      "id": "CF15086",
+      "orth": "ⲣϩⲟⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6309,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7240",
+      "bibliography": "CD 667a; KoptHWb 364; ChLCS 89b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲛⲟⲩⲃ ⲅⲁⲣ ⲙⲛⲡϩⲁⲧ ⲛⲁⲣϣⲓⲃⲉ · ⲛϩⲟⲉⲓⲧⲉ ⲛⲁ**ⲣϩⲟⲟⲗⲉ** · ⲡⲣⲱⲙⲉ ⲛⲁⲙⲟⲩ ⲛϥⲣϭⲁⲓⲉ ϩⲛⲛⲧⲁⲫⲟⲥ · ⲛⲧⲉⲡⲉϥⲣⲡⲙⲉⲉⲩⲉ ⲧⲁⲕⲟϥ ϩⲓϫⲙⲡⲕⲁϩ · ⲡⲇⲓⲕⲁⲓⲟⲥ ⲇⲉ ⲛⲧⲟϥ ⲛⲁⲕⲓⲙ ⲁⲛ ϣⲁⲉⲛⲉϩ :—",
+      "english": "For gold and silver rust, (fine) raiment becometh moth-eaten and falleth into holes,- a man dieth and he turneth into corruption in the tomb, and the remembrance of him perisheth on the earth; but the righteous man shall never be moved.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲛⲉϣⲁϥⲟⲩⲱϣⲃ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲛϩⲟⲓⲧⲉ ⲛⲁ**ⲣϩⲟⲟⲗⲉ** ·",
+      "english": "But he was wont to make answer [unto them], saying, ' Apparel becometh moth-eaten,",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉϣⲁⲩϩⲓⲧⲉ ⲛⲧϩⲉ ⲛⲛⲉⲓⲁⲥⲕⲱⲥ ⲏ ⲛⲧϩⲉ ⲛⲟⲩϩⲟⲓⲧⲉ ⲉⲁϥ**ⲣϩⲟⲟⲗⲉ**",
+      "english": "I am as that which waxes old like a bottle, or like a moth-eaten garment.",
+      "source": "Job 13",
+      "urn": "urn:cts:copticLit:ot.job.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲉⲓⲧⲉ",
+        1,
+        12.272
+      ],
+      [
+        "ϩⲟⲓⲧⲉ",
+        1,
+        11.155
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        1,
+        10.406
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        8.858
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.728
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_2_pre_ϩⲟⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲣϩⲟⲟⲗⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_2_pre_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲉⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_2_pre_ϩⲟⲓⲧⲉ",
+          "ϩⲟⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          "ⲛⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          "ⲣϩⲟⲟⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_2_pre_ϩⲟⲉⲓⲧⲉ",
+          "ϩⲟⲉⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲉⲓⲧⲉ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          "ⲛⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          "ϥ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϩⲟⲟⲗⲉ",
+          "ⲣϩⲟⲟⲗⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5871,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6527",
+      "label": "ϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "moth"
+    },
+    {
+      "target": "C6528",
+      "label": "ϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "moth"
+    },
+    {
+      "target": "C6530",
+      "label": "ⲁⲧⲣϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "incorruptible, indestructible"
+    }
+  ]
+}

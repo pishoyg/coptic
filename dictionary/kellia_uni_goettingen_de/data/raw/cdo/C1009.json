@@ -1,0 +1,163 @@
+{
+  "id": "C1009",
+  "forms": [
+    {
+      "id": "CF3372",
+      "orth": "ⲓϣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲓϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3893,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲓϣ",
+      "dialect": "F",
+      "id": "750.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1170",
+      "bibliography": "CD 88ab; KoptHWb 53; ChLCS 15a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲱⲕ",
+        2,
+        18.695
+      ],
+      [
+        "ⲑⲟⲙ",
+        1,
+        17.695
+      ],
+      [
+        "ⲕⲃⲉⲣⲃⲱⲣⲧ",
+        1,
+        16.695
+      ],
+      [
+        "ⲃⲉⲣⲃⲱⲣ",
+        1,
+        12.608
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        9.009
+      ],
+      [
+        "ⲉ",
+        3,
+        7.772
+      ],
+      [
+        "ⲁ",
+        3,
+        7.744
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        7.371
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        7.066
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.712
+      ],
+      [
+        "ⲡ",
+        2,
+        6.619
+      ],
+      [
+        "ⲛ",
+        2,
+        5.591
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.049
+      ],
+      [
+        "ⲫ",
+        1,
+        4.564
+      ],
+      [
+        "ⲥ",
+        1,
+        4.428
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.304
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓϣ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲓϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲓϣ",
+          "ⲓϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3467,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "49970",
+    "egy_lemma": "wzš.t",
+    "demo_num": "dm7500",
+    "demo_lemma": "wh̭h̭j",
+    "english": "urine",
+    "german": "Harn",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/49970",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7500"
+  }
+}

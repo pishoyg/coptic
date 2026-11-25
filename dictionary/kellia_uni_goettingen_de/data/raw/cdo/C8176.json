@@ -1,0 +1,346 @@
+{
+  "id": "C8176",
+  "forms": [
+    {
+      "id": "CF18759",
+      "orth": "ⲁⲗⲏⲑⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18765",
+      "orth": "ⲁⲗⲏⲑⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1066,
+        "count": 85
+      }
+    },
+    {
+      "id": "CF18760",
+      "orth": "ⲁⲗⲏⲑⲉⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18761",
+      "orth": "ⲁⲗⲏⲑ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18763",
+      "orth": "ⲁⲗⲏⲑⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18764",
+      "orth": "ⲁⲗⲏⲑⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1736,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF18762",
+      "orth": "ⲁⲗⲏⲑⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7585,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF18766",
+      "orth": "ⲁⲗⲩⲑⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS9243",
+      "bibliography": "DDGLC",
+      "cu_ID": "507"
+    },
+    {
+      "id": "CS9244",
+      "bibliography": "DDGLC",
+      "cu_ID": "6011"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲇⲉ ⲛϫⲉⲡⲓⲉⲕⲁⲧⲟⲛⲧⲁⲣⲭⲟⲥ ⲫⲏ ⲉⲧⲟϩⲓ ⲉⲣⲁⲧϥ ⲙⲡⲉϥⲙⲑⲟ ϫⲉⲁϥϯ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲡⲉϫⲁϥ ϫⲉ**ⲁⲗⲏⲑⲱⲥ** ⲡⲁⲓⲣⲱⲙⲓ ⲛⲉⲡϣⲏⲣⲓ ⲙⲫⲛⲟⲩϯ ⲡⲉ",
+      "english": "When the centurion, who stood by opposite him, saw that he cried out like this and breathed his last, he said, 'Truly this man was the Son of God!'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲗⲏⲑⲱⲥ** ⲁⲕϫⲉ ⲕⲡⲱⲧ ⲉⲃⲟⲗ",
+      "english": "Verily thou didst effect thy escape,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁ ⲡϫⲱⲗ ⲇⲉ ⲛⲉⲙⲁⲡⲁ ⲡϣⲟⲓ ⲁⲩⲉⲣϣⲫⲏⲣⲓ ⲙⲙⲟϥ ⲉⲙⲁϣⲱ ⲟⲩⲟϩ ⲛⲁⲩϯⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲁⲗⲏⲑⲱⲥ** ϥⲛⲁϣⲱⲡⲓ ⲛⲟⲩⲧⲉⲗⲓⲟⲥ ⲉϥϫⲏⲕ ⲉⲃⲟⲗ .",
+      "english": "Apa Pjol and apa Pshoi were very surprised and gave glory to God. They said: ‘He will indeed be entirely perfect!’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉ**ⲁⲗⲏⲑⲱⲥ** ⲁⲛⲟⲕ ⲡⲉⲧϩⲏⲛ ⲉϩⲟⲩⲛ ϩⲙⲡⲅⲉⲛⲟⲥ ⲁⲩⲱ ⲟⲩⲛⲡⲉⲧϩⲏⲛ ⲉϩⲟⲩⲛ ⲉⲡⲅⲉⲛⲟⲥ ⲉϩⲟⲩⲉⲣⲟⲓ",
+      "english": "And now I am truly akin to thee; nevertheless there is a kinsman nearer than I.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲁⲣⲭⲱⲛ ϫⲉⲟⲩⲕⲟⲩⲛ ⲛⲑⲟⲕ ⲟⲩⲁⲓ ⲙⲡⲁⲓⲣⲏϯ ⲟⲩⲟϩ ⲙⲡⲓⲉⲙⲓ ϣⲁⲫⲟⲟⲩ **ⲁⲗⲏⲑⲱⲥ** ⲉⲣⲉⲡⲓⲣⲱⲙⲓ ϫⲟⲩϣⲧ ⲉⲡⲓϩⲟ ⲫⲛⲟⲩϯ ⲇⲉ ⲛⲑⲟϥ ⲉⲡⲓϩⲏⲧ",
+      "english": "The prefect spoke up and said: ‘You have such merit and I have not known it until today? Truly man looks at the appearance, but God at the heart.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲗⲏⲑⲱⲥ** ⲟⲩⲡⲁϩⲣⲉ ⲛⲁⲛ ⲡⲉ ⲡⲉⲓⲉⲛⲕⲱⲙⲓⲟⲛ ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "Verily, this holy' encomium is a healing medicine for us.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲛⲁⲧⲟⲫⲟⲣⲟⲥ",
+        1,
+        15.447
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲡⲉϫⲁ",
+        1,
+        14.447
+      ],
+      [
+        "ϯⲩⲭⲏ",
+        1,
+        13.862
+      ],
+      [
+        "ⲡⲓ",
+        13,
+        12.624
+      ],
+      [
+        "ϫⲉ",
+        11,
+        12.267
+      ],
+      [
+        "ⲁⲑⲁⲛⲁⲥⲓⲟⲥ",
+        1,
+        11.54
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        5,
+        11.205
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        5,
+        11.002
+      ],
+      [
+        "ⲟⲟⲩ",
+        2,
+        10.931
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        2,
+        10.9
+      ],
+      [
+        "ϯⲁⲅⲁⲡⲏ",
+        1,
+        10.64
+      ],
+      [
+        "ⲛⲁ",
+        7,
+        10.129
+      ],
+      [
+        "ϫⲱ",
+        4,
+        10.121
+      ],
+      [
+        "ϫⲟⲩϣⲧ",
+        2,
+        10.116
+      ],
+      [
+        "ⲥ",
+        6,
+        9.935
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        3,
+        9.723
+      ],
+      [
+        "ϥ",
+        9,
+        9.686
+      ],
+      [
+        "ⲧⲁⲗϭⲟ",
+        1,
+        9.47
+      ],
+      [
+        "ⲫ",
+        5,
+        9.282
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        9.12
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        3,
+        18.944
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        17.189
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        15,
+        16.382
+      ],
+      [
+        "ⲕ",
+        32,
+        15.443
+      ],
+      [
+        "ϫⲉ",
+        36,
+        15.247
+      ],
+      [
+        "ⲡ",
+        47,
+        14.751
+      ],
+      [
+        "ⲑⲁⲩⲙⲁⲍⲉ",
+        2,
+        14.604
+      ],
+      [
+        "ⲧⲛ",
+        19,
+        14.498
+      ],
+      [
+        ".............ⲡϣⲁ",
+        1,
+        14.189
+      ],
+      [
+        "ⲟⲩⲙⲁⲓ‐ϣⲏⲣⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲧⲣⲁⲱϣ",
+        1,
+        14.189
+      ],
+      [
+        "ⲣⲉϥⲙⲟⲟϣⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲛⲉⲓ.............ⲛ",
+        1,
+        14.189
+      ],
+      [
+        "ⲱ",
+        10,
+        14.118
+      ],
+      [
+        "ⲁ",
+        35,
+        14.023
+      ],
+      [
+        "ⲙⲉ",
+        11,
+        13.91
+      ],
+      [
+        "ⲡⲁ",
+        14,
+        13.388
+      ],
+      [
+        "ⲙⲉⲣⲁⲧⲉ",
+        4,
+        13.211
+      ],
+      [
+        "ⲥⲕⲉⲟⲥ",
+        1,
+        13.189
+      ],
+      [
+        "ⲟⲩ",
+        25,
+        12.742
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.54,
+      "rank": 933,
+      "count": 85
+    },
+    "B": {
+      "rate": 0.22,
+      "rank": 1498,
+      "count": 19
+    }
+  },
+  "etym": {
+    "grl_ID": "93",
+    "grl_lemma": "ἀληθές",
+    "grl_meaning": "truly",
+    "grl_pos": "adverb",
+    "grl_ref": "Bauer 72"
+  }
+}

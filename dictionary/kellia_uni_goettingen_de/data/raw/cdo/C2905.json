@@ -1,0 +1,238 @@
+{
+  "id": "C2905",
+  "forms": [
+    {
+      "id": "CF7672",
+      "orth": "ⲁⲧⲡⲱⲣϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7377,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3326",
+      "bibliography": "CD 272b; ChLCS 38b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ **ⲁⲧⲡⲱⲣϫ** ⲉⲃⲟⲗ ⲙⲡⲉⲓⲱⲧ ⲡⲉ · ⲁⲩⲱ ⲁⲩⲥⲁⲛⲟⲩϣϥ ⲙⲛⲛⲣⲱⲙⲉ ·",
+      "english": "The Son cannot be separated from the Father, and yet He was nourished like men. (2 Cor. 5:21; Heb. 4:15)",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲣⲁⲛ ⲙⲡⲉⲓⲱⲧ ⲙⲛⲡϣⲏⲣⲉ · ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲧⲉ ⲧⲣⲓⲁⲥ ⲛϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ · ⲛⲁ**ⲁⲧⲡⲱⲣϫ**",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA253-255",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:514-516",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+        1,
+        15.791
+      ],
+      [
+        "ϩⲉⲗⲗⲏⲛ",
+        1,
+        13.715
+      ],
+      [
+        "ⲡⲓⲥⲧⲉⲩⲉ",
+        1,
+        10.635
+      ],
+      [
+        "·",
+        1,
+        9.178
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        8.626
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ⲁⲧⲡⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲁⲧⲡⲱⲣϫ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲧⲡⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲥⲁⲛⲟⲩϣ_1_post_ⲁⲧⲡⲱⲣϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲁⲧⲡⲱⲣϫ",
+          "ⲁⲧⲡⲱⲣϫ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧⲡⲱⲣϫ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁⲧⲡⲱⲣϫ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲧⲡⲱⲣϫ",
+          "ⲁⲩⲱ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲁⲛⲟⲩϣ",
+          "ⲁ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲥⲁⲛⲟⲩϣ",
+          "ⲩ_2_post_ⲥⲁⲛⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲥⲁⲛⲟⲩϣ",
+          "ⲥⲁⲛⲟⲩϣ_1_post_ⲁⲧⲡⲱⲣϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6923,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2910",
+      "label": "ϭⲓⲛⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "separation, parting"
+    },
+    {
+      "target": "C2908",
+      "label": "ⲙⲁ ⲛⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "place of dividing, frontier"
+    },
+    {
+      "target": "C2907",
+      "label": "ⲙⲛⲧⲁⲧⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "indivisibility"
+    },
+    {
+      "target": "C2903",
+      "label": "ⲡⲱⲣϫ",
+      "pos": "V",
+      "gloss": "divide, be divided; divide, separate"
+    },
+    {
+      "target": "C2904",
+      "label": "ⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "separation, parting"
+    },
+    {
+      "target": "C2906",
+      "label": "ⲣⲁⲧⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "be inseparable"
+    },
+    {
+      "target": "C2909",
+      "label": "ⲣⲉϥⲡⲱⲣϫ",
+      "pos": "N",
+      "gloss": "divider"
+    }
+  ]
+}

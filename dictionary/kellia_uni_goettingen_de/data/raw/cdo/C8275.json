@@ -1,0 +1,61 @@
+{
+  "id": "C8275",
+  "forms": [
+    {
+      "id": "CF19115",
+      "orth": "ⲁⲛⲉⲭⲉⲥⲑⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19116",
+      "orth": "ⲁⲛⲉⲭⲉⲥⲑⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF19117",
+      "orth": "ⲛⲉⲭⲉⲥⲑⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19118",
+      "orth": "ⲁⲛⲉⲭⲉⲥⲑⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9424",
+      "bibliography": "DDGLC",
+      "cu_ID": "2957"
+    },
+    {
+      "id": "CS9425",
+      "bibliography": "DDGLC",
+      "cu_ID": "5454"
+    },
+    {
+      "id": "CS9426",
+      "bibliography": "DDGLC",
+      "cu_ID": "4582"
+    },
+    {
+      "id": "CS9427",
+      "bibliography": "DDGLC",
+      "cu_ID": "10896"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "156",
+    "grl_lemma": "ἀνέχω",
+    "grl_meaning": "to hold up, lift up, rise up",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 136b; Preisigke 1:120"
+  }
+}

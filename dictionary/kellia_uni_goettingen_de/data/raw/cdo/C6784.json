@@ -1,0 +1,160 @@
+{
+  "id": "C6784",
+  "forms": [
+    {
+      "id": "CF15615",
+      "orth": "ϫⲓϩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15763,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7498",
+      "bibliography": "CD 701a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲧⲛⲛⲁⲕⲁⲙⲏⲧ ⲛⲣⲱⲙⲉ ⲉϫⲛϣⲉ ⲉⲛⲉⲫⲩⲗⲏ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ϣⲉ ⲉϫⲛϣⲟ ⲁⲩⲱ ϣⲟ ⲉⲩⲧⲃⲁ ⲉⲧⲣⲉⲩ**ϫⲓϩⲣⲉ** ⲙⲡⲗⲁⲟⲥ ⲉⲧⲣⲉⲩⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲅⲁⲃⲁⲁ ⲧⲡⲟⲗⲓⲥ ⲛⲃⲉⲛⲓⲁⲙⲓⲛ ⲉⲉⲓⲣⲉ ⲛⲁⲩ ⲕⲁⲧⲁⲧⲙⲛⲧⲁⲧϩⲏⲧ ⲧⲏⲣⲥ ⲧⲁⲓ ⲉⲛⲧⲁⲩⲁⲁⲥ ϩⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "Moreover we will take ten men for a hundred for all the tribes of Israel, and a hundred for a thousand, and a thousand for ten thousand, to take provision, to cause them to come to Gabaa of Benjamin, to do to it according to all the abomination, which they wrought in Israel.",
+      "source": "Judges 20",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲃⲁ",
+        1,
+        13.294
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.925
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲓϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲓϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲓϩⲣⲉ_0_node",
+          "ⲙ_1_post_ϫⲓϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲓϩⲣⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15361,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6779",
+      "label": "ϩⲣⲉ",
+      "pos": "N",
+      "gloss": "food, fodder; need"
+    },
+    {
+      "target": "C6780",
+      "label": "ϩⲣⲉ",
+      "pos": "N",
+      "gloss": "food, fodder; need"
+    },
+    {
+      "target": "C6781",
+      "label": "ϩⲣⲉⲃⲟⲧ",
+      "pos": "ADV",
+      "gloss": "per month"
+    },
+    {
+      "target": "C6783",
+      "label": "ϯϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give food"
+    },
+    {
+      "target": "C6782",
+      "label": "ⲣϩⲣⲉ",
+      "pos": "V",
+      "gloss": "become, be food"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C8463",
+  "forms": [
+    {
+      "id": "CF19808",
+      "orth": "ⲁⲣⲭⲏⲇⲓⲁⲕⳇ",
+      "dialect": null
+    },
+    {
+      "id": "CF19809",
+      "orth": "ⲁⲣⲭⲏⲇⲓⲁⲕⳇ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19810",
+      "orth": "ⲁⲣⲭⲏⲇⲓⲁⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19811",
+      "orth": "ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3870,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9851",
+      "bibliography": "DDGLC",
+      "cu_ID": "4085"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "293",
+    "grl_lemma": "ἀρχιδιάκονος",
+    "grl_meaning": "chief deacon",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 252b; Preisigke 1:220"
+  }
+}

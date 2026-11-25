@@ -1,0 +1,115 @@
+{
+  "id": "C6682",
+  "forms": [
+    {
+      "id": "CF15409",
+      "orth": "ⲥⲁ ⲛϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.31,
+        "rank": 1527,
+        "count": 49
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7396",
+      "bibliography": "CD 686b-687a; KoptHWb 378; ChLCS 92b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲛⲟϭ ⲛⲁⲓⲥⲑⲏⲥⲓⲥ · ϣⲱⲡⲉ **ϩⲙⲡⲁⲥⲁ **ⲛϩⲟⲩⲛ**** ·",
+      "english": "and a mighty ecstasy took place within me,",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϩⲓⲧⲛⲧϩⲉ ⲉⲧϥⲙⲏⲛ ⲉⲃⲟⲗ ⲉϥⲛⲏⲩ ϣⲁⲣⲟⲓ ⲁⲓϩⲱⲛ ⲉⲧⲟⲟⲧϥ **ϩⲙⲡⲥⲁ **ⲛϩⲟⲩⲛ**** ⲉⲓϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲗⲟⲕ ⲉⲕϯϩⲓⲥⲉ ⲛⲁⲕ · ⲉⲕⲛⲏⲩ ϣⲁⲣⲟⲓ",
+      "english": "On the contrary, when any one came hither, whilst he remained outside I commanded him from inside this abode saying, 'Get thee gone, thou hast troubled thyself [to no purpose] in coming to me.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ **ⲁⲛⲉⲧⲙⲡⲁⲥⲁ **ⲛϩⲟⲩⲛ**** ⲧⲏⲣⲟⲩ · ⲟⲩϫⲁⲓ ⲁⲩⲱ ⲁⲓⲗⲟ ⲉⲓϣⲱⲛⲉ ⲉⲡⲁϩⲏⲡⲁⲣ ·",
+      "english": "From that day all my bowels have remained in a healthy condition, and I have ceased to suffer in my liver,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.31,
+      "rank": 1316,
+      "count": 49
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6683",
+      "label": "ϣⲁϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "inward"
+    },
+    {
+      "target": "C6684",
+      "label": "ϩⲓϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    },
+    {
+      "target": "C6676",
+      "label": "ϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "inward part"
+    },
+    {
+      "target": "C6679",
+      "label": "ⲉϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "to inside, inward"
+    },
+    {
+      "target": "C6677",
+      "label": "ⲙⲡϩⲟⲩⲛ",
+      "pos": "PREP",
+      "gloss": "inside, within"
+    },
+    {
+      "target": "C6680",
+      "label": "ⲛϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    },
+    {
+      "target": "C6685",
+      "label": "ⲣⲙⲛϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ecclesiastical official(?)"
+    },
+    {
+      "target": "C6678",
+      "label": "ⲣⲡϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "go within"
+    },
+    {
+      "target": "C6681",
+      "label": "ⲥⲁϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    }
+  ]
+}

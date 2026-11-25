@@ -1,0 +1,188 @@
+{
+  "id": "C2798",
+  "forms": [
+    {
+      "id": "CF7432",
+      "orth": "ⲡⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5621,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF7433",
+      "orth": "ⲡⲱ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF7434",
+      "orth": "ⲡⲱ⸗",
+      "dialect": "L"
+    },
+    {
+      "id": "CF7435",
+      "orth": "ⲡⲱ⸗",
+      "dialect": "F"
+    },
+    {
+      "id": "CF7436",
+      "orth": "ⲫⲱ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2326,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF7437",
+      "orth": "ⲡⲟ⸗",
+      "dialect": "M"
+    },
+    {
+      "orth": "ⲧⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1442,
+        "count": 54
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.1,
+        "rank": 334,
+        "count": 489
+      }
+    },
+    {
+      "orth": "ⲑⲱ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3865,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 20.91,
+        "rank": 70,
+        "count": 1773
+      }
+    },
+    {
+      "orth": "ⲧⲱ⸗",
+      "dialect": "A",
+      "id": "1040.5"
+    },
+    {
+      "orth": "ⲛⲟⲩ⸗",
+      "dialect": "A",
+      "id": "1040.6"
+    },
+    {
+      "orth": "ⲧⲱ⸗",
+      "dialect": "F",
+      "id": "1040.7"
+    },
+    {
+      "orth": "ⲛⲟⲩ⸗",
+      "dialect": "F",
+      "id": "1040.8"
+    },
+    {
+      "orth": "ⲧⲱ⸗",
+      "dialect": "L",
+      "id": "1040.9"
+    },
+    {
+      "orth": "ⲛⲟⲩ⸗",
+      "dialect": "L",
+      "id": "1040.10"
+    }
+  ],
+  "grammar": {
+    "pos": "PPERO",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Poss. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS3200",
+      "bibliography": "CD 260b; CED 125; KoptHWb 144, 530; DELC 158; LCG § 54"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲛⲁϩⲃⲉϥ ⲅⲁⲣ ϩⲟⲗϫ ⲟⲩⲟϩ ⲧⲁⲉⲧ**ⲫⲱ** ⲁⲥⲓⲱⲟⲩ .",
+      "english": "For my yoke is easy, and my burden is light.'",
+      "source": "01_Matthew_11",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ ϭⲉ ⲡⲉ ⲁⲧⲉⲭⲁⲛⲁⲛⲁⲓⲁ ⲛⲉϫⲡⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲉⲃⲟⲗ ϩⲛⲧⲉⲥϣⲉⲉⲣⲉ · ⲁⲩⲱ ⲁⲥⲛⲉϫ**ⲡⲱ**ⲥ ϩⲱⲱⲥ ⲉⲃⲟⲗ · ⲕⲁⲧⲁⲡⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲡⲥⲱⲧⲏⲣ ⲛⲛⲉⲯⲩⲭⲟⲟⲩⲉ ·",
+      "english": "What was it that enabled the Canaanitish woman to drive the devil out of her daughter, or to drive him out at all? (It was done) according to the command of the Saviour of souls.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲟⲩⲁⲓ ⲅⲁⲣ ⲡⲓⲟⲩⲁⲓ ⲉϥⲉⲧⲱⲟⲩⲛ ϧⲁⲧⲉϥⲉⲧ**ⲫⲱ** ⲙⲙⲓⲛⲙⲙⲟϥ .",
+      "english": "For each man will bear his own burden.",
+      "source": "09_Galathians_06",
+      "urn": "urn:cts:copticLit:nt.gal.bohairic:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲟⲛ ⲁϥ**ⲡⲱ** ⲛⲧⲙⲉϩⲥⲛⲧⲉ ⲛ ⲁⲩⲱ ⲡⲥⲁϣ ⲛϩⲙⲥ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ϩⲛⲟⲩⲥⲃⲣⲟⲟⲩⲉ ⲛⲟⲩⲱⲧ ⲉⲩⲥⲟⲧⲡ ⲁⲩⲱ ⲉⲛⲁⲛⲟⲩⲟⲩ",
+      "english": "And he dreamed again. And, behold, seven ears came up on one stalk, choice and good.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲥⲙⲡϣⲁ ⲟⲩⲛ ⲛⲁⲕ ⲡⲉ ⲉϯ ⲙⲡⲁϩⲁⲧ ⲉⲧⲟⲧⲟⲩ ⲛⲛⲓⲧⲣⲁⲡⲉⲍⲓⲧⲏⲥ ⲟⲩⲟϩ ⲁⲛⲟⲕ ⲁⲓϣⲁⲛⲓ ⲛⲁⲓⲛⲁϭⲓ ⲙⲫⲏ ⲉⲧⲉ**ⲫⲱ**ⲓ ⲛⲉⲙⲧⲉϥⲙⲏ ⲥⲓ .",
+      "english": "You ought therefore to have deposited my money with the bankers, and at my coming I should have received back my own with interest.",
+      "source": "01_Matthew_25",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉⲉⲩⲉⲓⲛⲉ ⲛϩⲉⲛϣⲏⲣⲉ ϣⲏⲙ ⲉⲩϭⲉⲗⲓⲧ ⲉⲩⲥⲱϣⲉ ⲉ**ⲧⲱ**ⲟⲩ ⲁⲛ ⲧⲉ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2394",
+      "type": "cf",
+      "label": "Poss. Pron. pl."
+    },
+    {
+      "target": "C4073",
+      "type": "cf",
+      "label": "Poss. Pron. sg. f."
+    }
+  ],
+  "etym": {
+    "demo_num": "d1926",
+    "demo_lemma": "pꜣj=",
+    "english": "[absolutely used possessive masculine singular]",
+    "german": "[absolut gebrauchtes Possessivum mask. Sg.]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1926"
+  }
+}

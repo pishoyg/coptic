@@ -1,0 +1,51 @@
+{
+  "id": "C7739",
+  "forms": [
+    {
+      "id": "CF17543",
+      "orth": "ⲙⲁⲛϭⲁⲙⲟⲩⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8606",
+      "bibliography": "CD 818b; KoptHWb 457; ChLCS 108a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C1925",
+      "type": "cf",
+      "label": "pasture, feed"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7738",
+      "label": "ϭⲁⲙⲁⲩⲗⲉ",
+      "pos": "N",
+      "gloss": "she-camel"
+    },
+    {
+      "target": "C7737",
+      "label": "ϭⲁⲙⲟⲩⲗ",
+      "pos": "N",
+      "gloss": "he-camel"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm6417",
+    "demo_lemma": "mnj-gmwl",
+    "english": "camel herder",
+    "german": "Kamelhirt",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm6417"
+  }
+}

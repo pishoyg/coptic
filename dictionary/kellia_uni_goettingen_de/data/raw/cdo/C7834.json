@@ -1,0 +1,95 @@
+{
+  "id": "C7834",
+  "forms": [
+    {
+      "id": "CF17733",
+      "orth": "ϭⲱⲡⲉ (ϫⲓⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϫⲓⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8708",
+      "bibliography": "CD 827a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲧⲟⲟⲩ ⲙⲡⲁⲙⲟⲣⲣⲁⲓⲟⲥ **ⲁϥϭⲱⲡⲉ **ϫⲓⲛ**ⲧⲁⲛⲁⲃⲁⲥⲓⲥ** ⲛⲁⲕⲣⲁⲃⲓⲛ ϫⲓⲛⲧⲡⲉⲧⲣⲁ ⲉϩⲣⲁⲓ",
+      "english": "And the border of the Amorite was from the going up of Acrabin, from the rock and upwards.",
+      "source": "Judges 1",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲙⲁⲛⲁⲏⲙ ⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲛⲑⲉⲣⲥⲁ ⲙⲛⲛⲉⲧϩⲛϩⲏⲧⲥ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ⲛⲉⲥⲕⲉⲧⲟϣ **ⲉⲩϭⲱⲡⲉ **ϫⲓⲛ**ⲑⲉⲣⲥⲁ** ⲉⲃⲟⲗ ϫⲉⲙⲡⲟⲩⲟⲩⲱⲛ ⲛⲁϥ ⲉⲧⲃⲉⲡⲁⲓ ⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲙⲙⲟⲥ ⲁⲩⲱ ⲛⲉϩⲓⲟⲙⲉ ⲉⲧⲛϩⲏⲧⲥ ⲁϥⲡⲉϩϩⲏⲧⲟⲩ",
+      "english": "Then Manaem smote both Thersa and all that was in it, and its borders extending beyond Thersa, because they opened not to him: and he smote it, and ripped up the women with child.",
+      "source": "II Kings 15",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7832",
+      "label": "ϭⲏⲡ (ⲉ-)",
+      "pos": "VSTAT",
+      "gloss": "be liable, guilty, responsible"
+    },
+    {
+      "target": "C7838",
+      "label": "ϭⲓⲛϭⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "taking, grasping"
+    },
+    {
+      "target": "C7839",
+      "label": "ϭⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "capture"
+    },
+    {
+      "target": "C7830",
+      "label": "ϭⲱⲡⲉ",
+      "pos": "V",
+      "gloss": "seize, take; take captive, arrest; begin"
+    },
+    {
+      "target": "C7835",
+      "label": "ϭⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "taking, catching"
+    },
+    {
+      "target": "C7831",
+      "label": "ϭⲱⲡⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "have account against, have a claim against"
+    },
+    {
+      "target": "C7833",
+      "label": "ϭⲱⲡⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hunt after"
+    },
+    {
+      "target": "C7836",
+      "label": "ⲁⲧϭⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "not to be taken"
+    },
+    {
+      "target": "C7837",
+      "label": "ⲣⲉϥϭⲉⲡ-",
+      "pos": "N",
+      "gloss": "catcher"
+    }
+  ]
+}

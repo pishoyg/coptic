@@ -1,0 +1,64 @@
+{
+  "id": "C4112",
+  "forms": [
+    {
+      "id": "CF10169",
+      "orth": "ⲙⲛⲧⲧⲉⲃⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4671",
+      "bibliography": "CD 400b; ChLCS 56a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4111",
+      "label": "ⲙⲁ ⲛⲧⲉⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle-herd"
+    },
+    {
+      "target": "C4110",
+      "label": "ⲡⲁⲛⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattleman, cattle rancher"
+    },
+    {
+      "target": "C4113",
+      "label": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle breeder"
+    },
+    {
+      "target": "C4114",
+      "label": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle breeder"
+    },
+    {
+      "target": "C4109",
+      "label": "ⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "beast, domestic animal"
+    }
+  ]
+}

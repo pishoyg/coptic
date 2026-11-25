@@ -1,0 +1,126 @@
+{
+  "id": "C3620",
+  "forms": [
+    {
+      "id": "CF9145",
+      "orth": "-ⲥⲛⲟⲟⲩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "f.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS4121",
+      "bibliography": "CD 347a; CED 157; KoptHWb 190; DELC 192; ChLCS 49a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϩⲟⲟⲩ ⲥⲉⲉⲓⲣⲉ ⲛϣϥⲉ**ⲥⲛⲟⲟⲩⲥ** ⲛϣⲟ",
+      "english": "and oxen, seventy-two thousand:",
+      "source": "Numbers 31",
+      "urn": "urn:cts:copticLit:ot.num.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉϥϭⲟⲙ ⲛⲁⲓ ⲉⲛⲧⲁⲩϭⲙⲡⲉⲩϣⲓⲛⲉ ⲉⲧⲉⲓⲣⲉ ⲙⲙⲁⲁⲃ**ⲥⲛⲟⲟⲩⲥ** ⲛϣⲟ ⲙⲛϣⲏⲧ",
+      "english": "His forces that were numbered, were thirty-two thousand and two hundred.",
+      "source": "Numbers 2",
+      "urn": "urn:cts:copticLit:ot.num.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲡⲕⲉⲭⲏ[....] ⲡⲁⲅⲅⲉⲗⲟⲥ ⲥⲛⲁⲩ ⲛⲧⲁⲩⲟⲩⲱϩ ⲉⲧⲟⲟⲧⲟⲩ ⲉⲩϩⲓⲛⲏϥ ⲉϫⲛⲁϥⲧⲓⲙⲉⲗⲉⲭ ⲛϣⲃⲉ **ⲥⲛⲟⲟⲥ** ⲉⲛⲣⲟⲙⲡⲉ ⲟⲩⲱϩ ⲉⲧⲟⲟⲧⲧⲏⲩⲧⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲇͅⲇͅ",
+      "english": "‘O ... O two angels through whom sleep was set upon Abdemelech for seventy-two [years], set sleep upon NN, child of NN;",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3621",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3622",
+      "label": "-ⲥⲛⲟⲟⲩⲥⲉ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3627",
+      "label": "ⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "second, deputy (monastic title)"
+    },
+    {
+      "target": "C3626",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "duality"
+    },
+    {
+      "target": "C3623",
+      "label": "ⲙⲡⲉⲥⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C3624",
+      "label": "ⲛⲧⲥⲛⲧⲉ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C12018",
+      "label": "ⲡⲉⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "Monday"
+    },
+    {
+      "target": "C3628",
+      "label": "ⲣⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "be second"
+    },
+    {
+      "target": "C3625",
+      "label": "ⲣⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "become, be two"
+    },
+    {
+      "target": "C3616",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3618",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two"
+    },
+    {
+      "target": "C3617",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3619",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "two"
+    }
+  ]
+}

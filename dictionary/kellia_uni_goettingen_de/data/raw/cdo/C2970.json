@@ -1,0 +1,69 @@
+{
+  "id": "C2970",
+  "forms": [
+    {
+      "id": "CF7805",
+      "orth": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3400",
+      "bibliography": "CD 280a; KoptHWb 156; DELC 167; ChLCS 39b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2972",
+      "label": "ⲡⲁϣⲥ",
+      "pos": "N",
+      "gloss": "agitation, disorder, tumult"
+    },
+    {
+      "target": "C2966",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "V",
+      "gloss": "be amazed, beside oneself; amaze, turn aside"
+    },
+    {
+      "target": "C2969",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "N",
+      "gloss": "amazement"
+    },
+    {
+      "target": "C2968",
+      "label": "ⲡⲱϣⲥ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "be dazed, bemused"
+    },
+    {
+      "target": "C2967",
+      "label": "ⲡⲱϣⲥ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "to be obsessed with"
+    },
+    {
+      "target": "C2971",
+      "label": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "amazement"
+    }
+  ]
+}

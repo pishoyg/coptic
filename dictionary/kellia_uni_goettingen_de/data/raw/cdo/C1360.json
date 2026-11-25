@@ -1,0 +1,69 @@
+{
+  "id": "C1360",
+  "forms": [
+    {
+      "id": "CF4129",
+      "orth": "ⲣⲕⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4130",
+      "orth": "ⲉⲣⲕⲁⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1572",
+      "bibliography": "CD 119b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1358",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "bone"
+    },
+    {
+      "target": "C1363",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "stone, pit (of fruit)"
+    },
+    {
+      "target": "C1361",
+      "label": "ⲕⲁⲥⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "rib-bones"
+    },
+    {
+      "target": "C1362",
+      "label": "ⲕⲁⲥⲣⲟ",
+      "pos": "N",
+      "gloss": "jaw-bone"
+    },
+    {
+      "target": "C1359",
+      "label": "ⲙⲁⲣⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "bone-setter (doctor)"
+    }
+  ]
+}

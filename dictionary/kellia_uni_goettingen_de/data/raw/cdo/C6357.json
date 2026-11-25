@@ -1,0 +1,89 @@
+{
+  "id": "C6357",
+  "forms": [
+    {
+      "id": "CF14729",
+      "orth": "ϩⲉ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.89,
+        "rank": 779,
+        "count": 140
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7053",
+      "bibliography": "CD 638a; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲩϩⲉ **ⲉϩⲣⲁⲓ**** ⲉϫⲙⲡⲕⲁϩ · ϩⲁⲧϩⲟⲧⲉ ·",
+      "english": "and they fell down upon the earth through fear;",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϫⲉⲛⲉⲕϩⲉ **ⲉϩⲣⲁⲓ**** ⲉⲩⲥⲩⲛⲏⲑⲓⲁ ⲉⲥϩⲟⲟⲩ ·",
+      "english": "for otherwise, thou wilt fall into an evil habit.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉⲩⲁ ⲇⲉ **ⲁϥϩⲉ **ⲉϩⲣⲁⲓ**** ⲉϫⲛⲧⲡⲉⲧⲣⲁ ⲡⲙⲁ ⲉⲧⲉⲙⲙⲛϩⲁϩ ⲛⲕⲁϩ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲩϯⲟⲩⲱ ⲉϩⲣⲁⲓ ⲉⲧⲃⲉϫⲉⲙⲛϩⲁϩ ⲛⲕⲁϩ ϩⲁⲣⲟⲟⲩ",
+      "english": "Others fell on the rocky ground, where it had little soil, and immediately it sprang up, because it had no depth of soil.",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.88,
+      "rank": 677,
+      "count": 140
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6354",
+      "label": "ϩⲉ",
+      "pos": "V",
+      "gloss": "fall; light upon, find"
+    },
+    {
+      "target": "C6358",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "fall, destruction"
+    },
+    {
+      "target": "C6355",
+      "label": "ϩⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "fall upon, into"
+    },
+    {
+      "target": "C6356",
+      "label": "ϩⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "fall out, away, perish"
+    },
+    {
+      "target": "C6359",
+      "label": "ⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "indestructible"
+    }
+  ]
+}

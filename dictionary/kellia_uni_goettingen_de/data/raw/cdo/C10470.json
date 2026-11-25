@@ -1,0 +1,124 @@
+{
+  "id": "C10470",
+  "forms": [
+    {
+      "id": "CF28045",
+      "orth": "ⲥⲕⲉⲡⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28046",
+      "orth": "ⲥⲕⲉⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5960,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF28047",
+      "orth": "ⲥⲕⲉⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5353,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14170",
+      "bibliography": "DDGLC",
+      "cu_ID": "2860"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϥⲛⲁϣⲱⲡⲓ ⲛⲥⲟⲗⲥⲉⲗ ⲛⲉⲙ**ⲥⲕⲉⲡⲓ** ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲑⲛⲁϣⲉ ⲉⲣⲁⲧϥ ⲙⲡⲉϥⲧⲟⲡⲟⲥ ⲟⲩⲟϩ ⲧⲉϥⲉⲕⲕⲗⲏⲥⲓⲁ ⲥⲛⲁϣⲱⲡⲓ ⲉⲥⲙⲏⲛ ⲉⲃⲟⲗ ϣⲁϩⲁⲛϫⲱⲟⲩ .",
+      "english": "He will build a monastery, and he will become a jewel and a protector for anyone who will come before his place, and his church will remain for generations.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲗⲥⲉⲗ",
+        2,
+        15.764
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        2,
+        10.8
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        10.59
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        2,
+        10.515
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        2,
+        9.634
+      ],
+      [
+        "ⲛ",
+        4,
+        9.591
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        8.243
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲕⲉⲡⲓ",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲡⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲕⲉⲡⲓ",
+          "ⲥⲕⲉⲡⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4849,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1985",
+    "grl_lemma": "σκέπη",
+    "grl_meaning": "covering, shelter, protection",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1606b; Preisigke 2:467"
+  }
+}

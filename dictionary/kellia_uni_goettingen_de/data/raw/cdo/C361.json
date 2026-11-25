@@ -1,0 +1,205 @@
+{
+  "id": "C361",
+  "forms": [
+    {
+      "id": "CF1553",
+      "orth": "ⲃⲏⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3405,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS399",
+      "bibliography": "CD 31a; CED 21; KoptHWb 22, 493; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉ ⲡⲛⲟⲙⲟⲥ ⲙⲡϩⲣⲃ ⲙⲡⲥⲱⲃϩ ⲛϩⲟⲉⲓⲧⲉ ⲛⲣⲱⲧ ⲏ ϩⲉⲛϩⲟⲓⲧⲉ ⲛⲥⲓⲡⲡⲟⲛ ⲏ ⲟⲩϣⲧⲓⲧ ⲏ ⲟⲩ**ⲃⲏⲕⲉ** ⲏ ⲥⲕⲉⲩⲟⲥ ⲛⲓⲙ ⲛϣⲁⲁⲣ ⲉⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲙⲟϥ ⲏ ⲉϫⲁϩⲙⲉϥ",
+      "english": "This is the law of the plague of leprosy of a woollen or linen garment, either of the warp, or woof, or any leathern article, to pronounce it clean or unclean.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲧⲓⲧ",
+        7,
+        26.02
+      ],
+      [
+        "ⲏ",
+        21,
+        22.656
+      ],
+      [
+        "ⲡⲉϣⲧⲓⲧ",
+        2,
+        22.598
+      ],
+      [
+        "ⲥⲕⲉⲩⲟⲥ",
+        5,
+        21.891
+      ],
+      [
+        "ⲉⲓⲁⲁⲩ",
+        1,
+        17.139
+      ],
+      [
+        "ϩⲙ",
+        7,
+        15.835
+      ],
+      [
+        "ⲥⲟⲣⲧ",
+        1,
+        15.791
+      ],
+      [
+        "ⲛⲓⲙ",
+        5,
+        15.253
+      ],
+      [
+        "ⲡ",
+        12,
+        15.252
+      ],
+      [
+        "ϣⲁⲁⲣ",
+        1,
+        13.954
+      ],
+      [
+        "ϩⲓⲉⲣⲉⲩⲥ",
+        1,
+        13.898
+      ],
+      [
+        "ϫⲏⲕ",
+        1,
+        13.691
+      ],
+      [
+        "ϩⲛ",
+        5,
+        13.445
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        11.749
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        11.411
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        11.292
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        11.22
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        10.618
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ϫⲓ",
+        1,
+        9.164
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲃⲏⲕⲉ",
+          9
+        ],
+        [
+          "ⲃⲏⲕⲉ_0_node",
+          10
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲏⲕⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲏⲕⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲃⲏⲕⲉ",
+          "ⲃⲏⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲃⲏⲕⲉ",
+          "ⲡ_1_pre_ⲃⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲃⲏⲕⲉ",
+          "ⲃⲏⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲃⲏⲕⲉ",
+          "ⲟⲩ_1_pre_ⲃⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲃⲏⲕⲉ",
+          "ⲃⲏⲕⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13914,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "53840",
+    "egy_lemma": "bꜣk",
+    "demo_num": "dm236",
+    "demo_lemma": "bꜣk.t",
+    "english": "[a device used during a siege (stone thrower?)]",
+    "german": "Plattform, Rampe; Tribüne",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/53840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm236"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "id": "C9739",
+  "forms": [
+    {
+      "id": "CF25106",
+      "orth": "ⲙⲉⲗⲉⲧⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25107",
+      "orth": "ⲙⲉⲗⲉⲧⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3036,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF25108",
+      "orth": "ⲙⲉⲗⲉⲧⲏⲥⲓⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12589",
+      "bibliography": "DDGLC",
+      "cu_ID": "1125"
+    },
+    {
+      "id": "CS12590",
+      "bibliography": "DDGLC",
+      "cu_ID": "1102"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩϣⲁϫⲉ ⲛϩⲏⲧϥ · ⲉϥⲟ ⲙ**ⲙⲉⲗⲉⲧⲏⲥⲓⲥ** ⲛⲁⲩ ϩⲛⲧⲁⲡⲣⲟ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ·",
+      "english": "And they spoke about it, and it was the subject of meditation in the mouth of everyone.",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲡⲣⲟ",
+        1,
+        11.81
+      ],
+      [
+        "ⲟ",
+        1,
+        9.805
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲗⲉⲧⲏⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲙⲉⲗⲉⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲗⲉⲧⲏⲥⲓⲥ_0_node",
+          "ⲛⲁ_1_post_ⲙⲉⲗⲉⲧⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲙⲉⲗⲉⲧⲏⲥⲓⲥ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10658,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2750",
+    "grl_lemma": "μελέτησις",
+    "grl_meaning": "care, attention, treatment, practise, exercise",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1096b"
+  }
+}

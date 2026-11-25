@@ -1,0 +1,176 @@
+{
+  "id": "C1371",
+  "forms": [
+    {
+      "id": "CF4157",
+      "orth": "ⲣⲉϥⲕⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6109,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1583",
+      "bibliography": "CD 120b; KoptHWb 70"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛϫⲉⲓⲱⲥⲏⲫ ⲉⲧⲟⲧⲟⲩ ⲛⲛⲉϥⲁⲗⲱⲟⲩⲓ ⲛⲣⲉϥⲕⲱⲥ ⲉⲑⲣⲟⲩⲕⲉⲥ ⲡⲉϥⲉⲓⲱⲧ ⲟⲩⲟϩ ⲁⲩⲕⲱⲥ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛϫⲉⲛⲓ**ⲣⲉϥⲕⲱⲥ**",
+      "english": "And Joseph commanded his servants the embalmers to embalm his father; and the embalmers embalmed Israel.",
+      "source": "01_Genesis_50",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:50",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲉⲥ",
+        1,
+        17.11
+      ],
+      [
+        "ⲁⲗⲱⲟⲩⲓ",
+        1,
+        11.016
+      ],
+      [
+        "ⲙⲟϩ",
+        1,
+        10.587
+      ],
+      [
+        "ⲑⲣ",
+        1,
+        10.203
+      ],
+      [
+        "ⲓⲥⲣⲁⲏⲗ",
+        1,
+        9.349
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.666
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲕⲱⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5603,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1372",
+      "label": "ϫⲓⲛⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial"
+    },
+    {
+      "target": "C1373",
+      "label": "ⲕⲁⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "preparation for burial, embalming; grave-clothes, shroud; corpse"
+    },
+    {
+      "target": "C1368",
+      "label": "ⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial, funeral"
+    },
+    {
+      "target": "C1366",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "dress, prepare corpse for burial, bury"
+    },
+    {
+      "target": "C1367",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "corpse"
+    },
+    {
+      "target": "C1369",
+      "label": "ⲣⲉϥⲛⲕⲱⲱⲥ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "invoker, producer of dead"
+    },
+    {
+      "target": "C1370",
+      "label": "ⲣⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "be corpse, be dead"
+    }
+  ]
+}

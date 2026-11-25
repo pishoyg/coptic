@@ -1,0 +1,144 @@
+{
+  "id": "C4430",
+  "forms": [
+    {
+      "id": "CF10812",
+      "orth": "ⲧⲁⲡⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18780,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5017",
+      "bibliography": "CD 423b; KoptHWb 240; DELC 219a; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲱⲙ ⲛⲧϩⲉ ⲛⲟⲩⲣⲱⲙⲉ ⲛⲛⲉⲧϩⲁⲣⲱⲕ ⲁⲩⲱ ⲙⲡⲣ**ⲧⲁⲡⲧ** ⲛⲣⲱⲕ ⲙⲏⲡⲟⲧⲉ ⲛⲥⲉⲙⲉⲥⲧⲱⲕ",
+      "english": "For the eyes of the Lord are upon them that love him, he is their mighty protection and strong stay, a defence from heat, and a cover from the sun at noon, a preservation from stumbling, and an help from falling.",
+      "source": "Sirach 34",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲣⲱ",
+        1,
+        13.565
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        1,
+        13.24
+      ],
+      [
+        "ⲣⲱ",
+        1,
+        11.389
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        10.036
+      ],
+      [
+        "ⲕ",
+        2,
+        9.853
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲁⲡⲧ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁⲡⲧ",
+          1
+        ],
+        [
+          "ⲧⲁⲡⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲧ",
+          1
+        ],
+        [
+          "ⲣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲣⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲁⲡⲧ",
+          "ⲙⲡⲣ_1_pre_ⲧⲁⲡⲧ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲧⲁⲡⲧ",
+          "ⲧⲁⲡⲧ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲡⲧ_0_node",
+          "ⲛ_1_post_ⲧⲁⲡⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲧ",
+          "ⲣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱ_2_post_ⲛ",
+          "ⲕ_3_post_ⲣⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18393,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "858677",
+    "egy_lemma": "dbdb",
+    "english": "attack; move; stab; dismember",
+    "german": "angreifen; bewegen; stechen; zerstückeln",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/858677"
+  }
+}

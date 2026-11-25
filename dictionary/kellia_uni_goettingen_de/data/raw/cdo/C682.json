@@ -1,0 +1,169 @@
+{
+  "id": "C682",
+  "forms": [
+    {
+      "id": "CF2565",
+      "orth": "ⲉⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10441,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2566",
+      "orth": "ⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5456,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF2567",
+      "orth": "ⲉⲛϩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2568",
+      "orth": "ⲛϩ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS819",
+      "bibliography": "CD 56b-57a; CED 36; KoptHWb 37, 499; DELC 44; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉⲉⲕⲉⲟⲩⲱⲙ ⲙⲡⲉⲕⲟⲉⲓⲕ ϣⲁⲛⲧⲉⲕⲕⲟⲧⲕ · ⲉϩⲣⲁⲓ ⲉⲡⲕⲁϩ · ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ϭⲛⲁⲣⲓⲕⲉ ⲉⲛⲓⲙ ⲛⲣⲱⲙⲉ **ⲉⲛϩ** ϫⲓⲛⲛϣⲟⲣⲡ",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        10.442
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        10.251
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲛϩ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲉⲛϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲛϩ_0_node",
+          "ϫⲓⲛ_1_post_ⲉⲛϩ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲉⲛϩ",
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲛ",
+          "ϣⲟⲣⲡ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10021,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2643",
+      "type": "cf",
+      "label": "eyelids (pl.)"
+    },
+    {
+      "target": "C3717",
+      "type": "cf",
+      "label": "eyebrows (pl.)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C683",
+      "label": "ⲙϫⲛϩ",
+      "pos": "N",
+      "gloss": "eyebrow"
+    }
+  ],
+  "etym": {
+    "egy_num": "27700",
+    "egy_lemma": "jnḥ",
+    "demo_num": "d585",
+    "demo_lemma": "ı ͗nḥ",
+    "english": "eyebrow",
+    "german": "Augenbraue",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27700",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d585"
+  }
+}

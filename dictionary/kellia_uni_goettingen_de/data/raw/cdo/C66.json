@@ -1,0 +1,160 @@
+{
+  "id": "C66",
+  "forms": [
+    {
+      "id": "CF232",
+      "orth": "ⲁⲗⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8802,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS75",
+      "bibliography": "CD 6a; KoptHWb 4; DELC 8; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲙⲡⲉϥⲙⲉϩⲧϭⲓϫ ⲙⲡⲉⲧⲱϩⲥ ⲙⲙⲟϥ ⲉⲙⲡⲉⲡⲉⲧⲥⲱⲟⲩϩ ⲛⲛⲉϥⲕⲛⲁⲁⲩ ⲙⲉϩⲡⲉϥ**ⲁⲗⲟⲙ**",
+      "english": "Wherewith the reaper fills not his hand, nor he that makes up the sheaves, his bosom.",
+      "source": "Psalms 128",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:128",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲥϩⲟⲩⲟⲣⲧ ⲛϭⲓⲡⲉⲧⲛⲁⲡⲱⲧ ⲉϩⲟⲩⲛ ⲉⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ϩⲁϩⲧⲏⲛ ⲏ ϩⲁϩⲧⲛⲧⲏⲩⲧⲛ ⲛⲧⲱⲧⲛ ⲉⲧⲣⲉϥⲕⲧⲉ ⲛⲉϥ**ⲁⲗⲟⲙ** ⲉⲃⲟⲗ ⲉⲣⲟϥ",
+      "english": "…",
+      "source": "Acephelous 22 YB 307-20",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:801-825",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲡⲉⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲕⲛⲁⲁⲩ",
+        1,
+        15.35
+      ],
+      [
+        "ⲡⲁⲣⲁⲅⲉ",
+        1,
+        12.87
+      ],
+      [
+        "ⲕⲧⲉ",
+        1,
+        12.438
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        11.102
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        10.797
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        7.664
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲁⲗⲟⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲙ",
+          "ⲁⲗⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲁⲗⲟⲙ",
+          "ⲁⲗⲟⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8355,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5471",
+      "type": "cf",
+      "label": "clasp, embrace, entwine"
+    }
+  ]
+}

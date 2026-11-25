@@ -1,0 +1,71 @@
+{
+  "id": "C1712",
+  "forms": [
+    {
+      "id": "CF4950",
+      "orth": "ⲁⲧⲗⲁⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4951",
+      "orth": "ⲁⲧⲗⲁⲁⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4952",
+      "orth": "ⲁⲧⲗⲁⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4953",
+      "orth": "ⲁⲧⲗⲁⲟⲩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1982",
+      "bibliography": "CD 146b-147a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1711",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "anyone, anything, something; (not) any; no one, nothing"
+    },
+    {
+      "target": "C1713",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "any"
+    },
+    {
+      "target": "C1714",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "any"
+    },
+    {
+      "target": "C1715",
+      "label": "ⲗⲁⲁⲩ",
+      "pos": "ADV",
+      "gloss": "(not) at all"
+    },
+    {
+      "target": "C1716",
+      "label": "ⲙⲛⲧⲗⲁⲁⲩ",
+      "pos": "N",
+      "gloss": "nothingness, insignificance"
+    }
+  ]
+}

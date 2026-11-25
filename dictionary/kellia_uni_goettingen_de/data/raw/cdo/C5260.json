@@ -1,0 +1,62 @@
+{
+  "id": "C5260",
+  "forms": [
+    {
+      "id": "CF12489",
+      "orth": "ⲟⲩⲱϣ ⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6013,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5904",
+      "bibliography": "CD 501b; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5261",
+      "label": "ϭⲓⲛⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "desire, intention"
+    },
+    {
+      "target": "C5262",
+      "label": "ⲟⲩⲁϣϥ",
+      "pos": "N",
+      "gloss": "desire"
+    },
+    {
+      "target": "C5257",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5258",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "wish, desire, love"
+    },
+    {
+      "target": "C5259",
+      "label": "ⲟⲩⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "wish, desire, love"
+    }
+  ]
+}

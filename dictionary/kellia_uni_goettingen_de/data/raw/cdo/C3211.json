@@ -1,0 +1,742 @@
+{
+  "id": "C3211",
+  "forms": [
+    {
+      "id": "CF8307",
+      "orth": "ϥⲓⲣⲟⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1236,
+        "count": 69
+      }
+    },
+    {
+      "orth": "ϥⲓⲣⲱⲟⲩϣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.48,
+        "rank": 1119,
+        "count": 41
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3668",
+      "bibliography": "CD 307b; KoptHWb 170, 535; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲛⲁ ⲛⲧⲉϣⲧⲉⲙⲫⲱⲣϫ ϣⲱⲡⲓ ϧⲉⲛⲡⲓⲥⲱⲙⲁ ⲁⲗⲗⲁ ⲛⲧⲉⲛⲓⲙⲉⲗⲟⲥ ⲧⲏⲣⲟⲩ **ϥⲓⲣⲱⲟⲩϣ** ϧⲁⲛⲟⲩⲉⲣⲏⲩ .",
+      "english": "that there should be no division in the body, but that the members should have the same care for one another.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲅⲁⲣ ϩⲙⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲉⲧⲟⲩⲁⲁⲃ · ϫⲉⲙⲡⲣ**ϥⲓⲣⲟⲟⲩϣ** ϫⲉⲟⲩ ⲡⲉ ⲡⲉⲧⲉⲧⲛⲉⲟⲩⲟⲙϥ · ⲏ ⲟⲩ ⲡⲉ ⲡⲉⲧⲉⲧⲛⲉⲥⲟⲟϥ · ⲏ ⲟⲩ ⲡⲉ ⲡⲉⲧⲉⲧⲛⲉⲧⲁⲁϥ ϩⲓⲱⲧⲧⲏⲩⲧⲛ · ⲡⲉⲧⲛⲉⲓⲱⲧ ⲉⲧϩⲛⲙⲡⲏⲩⲉ · ⲥⲟⲟⲩⲛ ⲙⲡⲉⲧⲉⲧⲛⲣⲭⲣⲉⲓⲁ ⲙⲙⲟϥ ⲙⲡⲁⲧⲉⲧⲛⲁⲓⲧⲉⲓ ⲙⲙⲟϥ ·",
+      "english": "For He hath said in the Holy Gospel, Take no care for what ye shall eat, or for what ye shall drink, or with what raiment ye shall clothe yourselves, for your Father Who is in heaven knoweth of what things ye have need without your asking Him.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓ**ϥⲓⲣⲱⲟⲩϣ** ϧⲉⲛⲟⲩϫⲱϥ ⲛϩⲏⲧ ⲉϯ ⲛϩⲑⲏⲓ ⲉⲑⲣⲓⲥϧⲉⲡⲁⲓϫⲱⲙ ⲛⲁⲕ ⲓⲥϫⲉⲛⲧⲁⲣⲭⲏ ⲛⲛⲓϩⲃⲏⲟⲩⲓ ⲛⲧⲉϯⲙⲉⲧⲙⲟⲛⲁⲭⲟⲥ ⲉⲧⲁⲥϣⲱⲡⲓ ϩⲓⲡϣⲁϥⲉ ϩⲟⲡⲟⲥ ⲛⲧⲉϥϣⲱⲡⲓ ⲛⲁⲕ ⲛⲟⲩⲓⲁⲗ ⲉⲑⲣⲉⲕⲛⲁⲩ ⲉⲡⲉⲕⲥⲙⲟⲧ ⲛϧⲏⲧϥ ⲉⲕⲓⲣⲓ ⲙⲡⲉϥⲙⲉⲩⲓ ⲙⲡⲉϩⲟⲟⲩ ⲛⲉⲙⲡⲓⲉϫⲱⲣϩ ⲉⲩⲛⲟϩⲉⲙ ⲛⲧⲉⲕⲯⲩⲭⲏ",
+      "english": "With all the fervor of my heart, I have striven to direct my attention to writing this book for you, from the beginnings of the monastic works that arose in the desert, so that it might be a mirror in which you see your reflection and remember it day and night for the salvation of your soul.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲁⲥ ⲉⲛⲛⲉⲡⲱⲣϫϣⲱⲡⲉ ϩⲙⲡⲥⲱⲙⲁ . ⲁⲗⲗⲁ ⲉⲣⲉⲙⲙⲉⲗⲟⲥ **ϥⲓⲣⲟⲟⲩϣ** ϩⲁⲛⲉⲩⲉⲣⲏⲩ .",
+      "english": "that there should be no division in the body, but that the members should have the same care for one another.",
+      "source": "46_1 Corinthians_12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲟⲩⲉϣⲑⲏⲛⲟⲩ ⲇⲉ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛⲁⲧⲣⲱⲟⲩϣ ⲫⲏ ⲉⲧⲉⲙⲡⲉϥϭⲓ ⲁϥ**ϥⲓⲣⲱⲟⲩϣ** ϧⲁⲛⲁⲡϭⲟⲓⲥ ϫⲉⲡⲱⲥ ϥⲛⲁⲣⲁⲛⲁϥ ⲙⲡϭⲟⲓⲥ .",
+      "english": "But I desire to have you to be free from cares. He who is unmarried is concerned for the things of the Lord, how he may please the Lord;",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲁⲣⲭⲉⲓ ⲛϥⲓⲧⲉϥϭⲓϫ ⲉϩⲣⲁⲓ ⲉⲣⲟⲓ ⲉⲣⲡⲟⲗⲉⲙⲟⲥ ⲛⲙⲙⲁⲓ ⲉϥⲟ ⲛⲧϩⲉ ⲙⲡⲉⲧ**ϥⲓⲣⲟⲟⲩϣ** ϩⲁⲛⲉⲧⲙⲙⲁⲩ",
+      "english": "He starts to raise his hand against me, to fight with me, acting like someone who takes care of those ones who were there.",
+      "source": "In the Night: BV278-282",
+      "urn": "urn:cts:copticLit:shenoute.night.monbbv:1-7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        9,
+        23.999
+      ],
+      [
+        "ϩⲁ",
+        21,
+        16.933
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        10,
+        15.303
+      ],
+      [
+        "ⲣⲁⲥⲧⲉ",
+        6,
+        14.729
+      ],
+      [
+        "ⲛⲉⲛⲯⲉⲭⲏ",
+        1,
+        14.489
+      ],
+      [
+        "ⲙⲫⲁⲧ",
+        1,
+        14.489
+      ],
+      [
+        "ⲉ",
+        38,
+        14.452
+      ],
+      [
+        "ⲙⲡⲣ",
+        11,
+        14.306
+      ],
+      [
+        "ϫⲓϩⲁⲓ",
+        2,
+        14.168
+      ],
+      [
+        "ⲛⲁ",
+        27,
+        13.844
+      ],
+      [
+        "ϥ",
+        33,
+        13.546
+      ],
+      [
+        "ⲑⲩⲗⲉⲓ",
+        1,
+        13.489
+      ],
+      [
+        ".",
+        18,
+        12.959
+      ],
+      [
+        "ⲟⲩ",
+        24,
+        12.866
+      ],
+      [
+        "ⲙⲁⲣⲑⲁ",
+        2,
+        12.535
+      ],
+      [
+        "ⲡ",
+        26,
+        12.49
+      ],
+      [
+        "ⲛ",
+        30,
+        12.421
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        10,
+        12.305
+      ],
+      [
+        "ⲁϩⲉⲣⲁⲧⲉ",
+        1,
+        11.905
+      ],
+      [
+        "ⲉϣⲱⲧ",
+        1,
+        11.905
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          20
+        ],
+        [
+          "ⲕ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          3
+        ],
+        [
+          "ϫⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          4
+        ],
+        [
+          "ⲓ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "....._1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          3
+        ],
+        [
+          ".._1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲧ_2_post_..",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          5
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ⲟⲩϫⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          3
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲏ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ϫⲟⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲣⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲉⲓϣ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲣⲁⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲧⲉ_2_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲧⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲡⲣⲟⲇⲟⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲕ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ϩⲁⲣⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          4
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲓ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "....._1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          ".._1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          ".._1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲧ_2_post_..",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲧⲛ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ⲁⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲁⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲡⲉⲥ_3_post_ⲟⲩϫⲁⲓ",
+          1
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ϩⲏ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲏ_3_post_ⲧⲉⲓ",
+          "ⲧⲏⲣ_4_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲟⲩⲏⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲣ_2_post_ⲛ",
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲧⲉⲛ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲛⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ⲛ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲟⲟ",
+          "ⲅ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ϫⲟⲟ",
+          "ϫⲟⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ϣⲏⲣⲉ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ϩⲁ",
+          "ⲁ_2_post_ⲣⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲛ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ϫⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲟⲩ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲡ_4_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲟⲩⲟⲉⲓϣ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲡⲉϥ_3_post_ⲣⲁⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲣⲁⲥⲧⲉ",
+          "ⲣⲁⲥⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲧⲉ_2_post_ⲉ",
+          "ⲣⲁⲥⲧⲉ_2_post_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲧⲉ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲅⲁⲣ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲛⲁ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϥⲓⲣⲟⲟⲩϣ",
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ϥⲓⲣⲟⲟⲩϣ_0_node",
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲛ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁ",
+          "ⲕⲟⲩⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϥⲓⲣⲟⲟⲩϣ",
+          "ⲡ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁ",
+          "ϩⲏⲕⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲉ_3_post_ⲡ",
+          "ⲱ_2_post_ⲡⲣⲟⲇⲟⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.43,
+      "rank": 1070,
+      "count": 69
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3213",
+      "label": "ϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-taker, guardian"
+    },
+    {
+      "target": "C3212",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, anxiety"
+    },
+    {
+      "target": "C3215",
+      "label": "ⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-free, not liable"
+    },
+    {
+      "target": "C3209",
+      "label": "ⲕⲁⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "set as a care, be careful, intent"
+    },
+    {
+      "target": "C3214",
+      "label": "ⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, providence"
+    },
+    {
+      "target": "C3216",
+      "label": "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "freedom from care"
+    },
+    {
+      "target": "C3207",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "have care for, be intent on"
+    },
+    {
+      "target": "C3208",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, concern; cause of anxiety"
+    },
+    {
+      "target": "C3210",
+      "label": "ⲣⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "make care, be anxious, take care of, give heed to"
+    }
+  ]
+}

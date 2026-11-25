@@ -1,0 +1,80 @@
+{
+  "id": "C732",
+  "forms": [
+    {
+      "id": "CF2742",
+      "orth": "ϫⲓⲛⲡⲉⲥⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS873",
+      "bibliography": "CD 60b; KoptHWb 40"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C7233",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C729",
+      "label": "ϣⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "as far as, down to the ground"
+    },
+    {
+      "target": "C730",
+      "label": "ϩⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "below ground, under"
+    },
+    {
+      "target": "C731",
+      "label": "ϩⲓⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "on, to the ground; from off ground"
+    },
+    {
+      "target": "C726",
+      "label": "ⲉⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "to the ground, downward"
+    },
+    {
+      "target": "C725",
+      "label": "ⲉⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "ground, bottom, lowest part"
+    },
+    {
+      "target": "C727",
+      "label": "ⲙⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "at the bottom, below"
+    },
+    {
+      "target": "C733",
+      "label": "ⲣⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "go, be below"
+    },
+    {
+      "target": "C728",
+      "label": "ⲥⲁⲡⲉⲥⲏⲧ",
+      "pos": "ADV",
+      "gloss": "(on the) lower side, below"
+    }
+  ]
+}

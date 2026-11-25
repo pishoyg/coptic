@@ -1,0 +1,162 @@
+{
+  "id": "C4545",
+  "forms": [
+    {
+      "id": "CF11047",
+      "orth": "ⲧⲥⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5133",
+      "bibliography": "KoptHWb 246"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲥⲱⲟⲩ",
+        1,
+        11.244
+      ],
+      [
+        "ⲁ",
+        2,
+        7.989
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ⲧⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲥⲱ",
+          "ⲁ_1_pre_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲥⲱ",
+          "ϥ_1_pre_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲥⲱ",
+          "ⲧⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲧⲥⲱ_0_node",
+          "ⲛ_1_post_ⲧⲥⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲥⲱ",
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3304",
+      "type": "cf",
+      "label": "drink"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4546",
+      "label": "ⲙⲁ ⲛⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "watering place"
+    },
+    {
+      "target": "C4549",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "watering"
+    },
+    {
+      "target": "C4547",
+      "label": "ⲣⲉϥⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "drink giver"
+    },
+    {
+      "target": "C4548",
+      "label": "ⲣⲉϥⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "drink giver"
+    },
+    {
+      "target": "C4543",
+      "label": "ⲧⲥⲟ",
+      "pos": "V",
+      "gloss": "give to drink, slake"
+    },
+    {
+      "target": "C4544",
+      "label": "ⲧⲥⲟ",
+      "pos": "N",
+      "gloss": "watering"
+    }
+  ]
+}

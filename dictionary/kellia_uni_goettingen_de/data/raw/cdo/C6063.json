@@ -1,0 +1,87 @@
+{
+  "id": "C6063",
+  "forms": [
+    {
+      "id": "CF14131",
+      "orth": "ⲙⲁⲓⲣϣⲟⲡⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6748",
+      "bibliography": "CD 588b; ChLCS 81a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6058",
+      "label": "ϣⲟⲣⲡ",
+      "pos": "N",
+      "gloss": "first"
+    },
+    {
+      "target": "C6059",
+      "label": "ϣⲟⲣⲡ",
+      "pos": "N",
+      "gloss": "first"
+    },
+    {
+      "target": "C6055",
+      "label": "ϣⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "be early"
+    },
+    {
+      "target": "C6056",
+      "label": "ϣⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "morning"
+    },
+    {
+      "target": "C6061",
+      "label": "ϫⲓⲛϣⲟⲡⲣ",
+      "pos": "ADV",
+      "gloss": "from the beginning"
+    },
+    {
+      "target": "C6060",
+      "label": "ⲛϣⲟⲣⲡ",
+      "pos": "ADV",
+      "gloss": "at first, formerly"
+    },
+    {
+      "target": "C6057",
+      "label": "ⲛϣⲱⲣⲡ",
+      "pos": "ADV",
+      "gloss": "early"
+    },
+    {
+      "target": "C6062",
+      "label": "ⲣϣⲟⲣⲡ",
+      "pos": "V",
+      "gloss": "be first, hasten"
+    }
+  ]
+}

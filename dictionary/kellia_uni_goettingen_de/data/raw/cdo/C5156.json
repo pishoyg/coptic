@@ -1,0 +1,44 @@
+{
+  "id": "C5156",
+  "forms": [
+    {
+      "id": "CF12278",
+      "orth": "ⲟⲩⲓⲥⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5790",
+      "bibliography": "KoptHWb 277"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5154",
+      "label": "ⲟⲩⲉⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "saw"
+    },
+    {
+      "target": "C5155",
+      "label": "ⲟⲩⲓⲥⲓ",
+      "pos": "V",
+      "gloss": "saw; swell(?)"
+    },
+    {
+      "target": "C5157",
+      "label": "ⲣⲉϥⲟⲩⲉⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "sawyer"
+    }
+  ]
+}

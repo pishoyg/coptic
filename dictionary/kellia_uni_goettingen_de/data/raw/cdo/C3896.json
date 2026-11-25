@@ -1,0 +1,187 @@
+{
+  "id": "C3896",
+  "forms": [
+    {
+      "id": "CF9723",
+      "orth": "ⲥⲫⲣⲁⲛϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6088,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4422",
+      "bibliography": "CD 374a; CED 169; KoptHWb 193, 539; DELC 194-195"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁ ⲧⲟⲟⲩⲓ ϣⲱⲡⲓ ⲁⲥϣⲑⲟⲣⲧⲉⲣ ⲛϫⲉⲧⲉϥⲯⲩⲭⲏ ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲣⲡ ⲁϥⲙⲟⲩϯ ⲉⲛⲓ**ⲥⲫⲣⲁⲛϣ** ⲛⲧⲉⲭⲏⲙⲓ ⲛⲉⲙⲛⲓⲥⲁⲃⲉⲩ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲁ ⲫⲁⲣⲁⲱ ϫⲉϯⲣⲁⲥⲟⲩⲓ ⲛⲱⲟⲩ ⲟⲩⲟϩ ⲛⲉ ⲙⲙⲟⲛ ⲫⲏⲉⲧⲧⲁⲙⲟ ⲙⲫⲁⲣⲁⲱ ⲉⲣⲟⲥ ⲡⲉ",
+      "english": "And it was morning, and his soul was troubled; and he sent and called all the interpreters of Egypt, and all her wise men; and Pharao related to them his dream, and there was no one to interpret it to Pharao.",
+      "source": "01_Genesis_41",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ ⲡⲓⲍ ⲛϧⲉⲙⲥ ⲉⲧϣⲟⲙ ⲟⲩⲟϩ ⲉⲧⲟⲓ ⲛϫⲓⲙⲫⲉϩ ⲁⲩⲱⲙⲕ ⲙⲡⲓⲍ ⲛϧⲉⲙⲥ ⲉⲑⲛⲁⲛⲉⲩ ⲟⲩⲟϩ ⲉⲧϫⲟⲛⲧ ⲁⲓϫⲉ ⲧⲁⲣⲁⲥⲟⲩⲓ ⲟⲩⲛ ⲛⲛⲓ**ⲥⲫⲣⲁⲛϣ** ⲟⲩⲟϩ ⲛⲉ ⲙⲙⲟⲛ ⲫⲏ ⲉⲧⲧⲁⲙⲟ ⲙⲙⲟⲓ ⲉⲣⲟⲥ",
+      "english": "And the seven thin and blasted ears devoured the seven fine and full ears: so I spoke to the interpreters, and there was no one to explain it to me.",
+      "source": "01_Genesis_41",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲁⲥⲟⲩⲓ",
+        1,
+        12.11
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        9.973
+      ],
+      [
+        "ⲭⲏⲙⲓ",
+        1,
+        9.643
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        1,
+        9.473
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        9.459
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        8.814
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.38
+      ],
+      [
+        "ⲫⲏ",
+        1,
+        7.358
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲫⲣⲁⲛϣ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲫⲣⲁⲛϣ",
+          1
+        ],
+        [
+          "ⲭⲏⲙⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲥⲁⲃⲉⲩ",
+          1
+        ],
+        [
+          "ⲛⲓ_4_post_ⲥⲁⲃⲉⲩ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲉⲩ_3_post_ⲭⲏⲙⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲫⲣⲁⲛϣ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲫⲣⲁⲛϣ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲫⲣⲁⲛϣ",
+          "ⲭⲏⲙⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲭⲏⲙⲓ_2_post_ⲛⲧⲉ",
+          "ⲛⲉⲙ_4_post_ⲥⲁⲃⲉⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲥⲁⲃⲉⲩ",
+          "ⲛⲓ_4_post_ⲥⲁⲃⲉⲩ",
+          1
+        ],
+        [
+          "ⲛⲓ_4_post_ⲥⲁⲃⲉⲩ",
+          "ⲥⲁⲃⲉⲩ_3_post_ⲭⲏⲙⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5584,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3149",
+      "type": "syn",
+      "label": "interpreter of dreams (S)"
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "id": "C10424",
+  "forms": [
+    {
+      "id": "CF27898",
+      "orth": "ⲥⲁⲧⲉⲉⲣⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF27899",
+      "orth": "ⲥⲁⲑⲉⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1374,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF27900",
+      "orth": "ⲥⲁⲧⲉⲉⲣⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27901",
+      "orth": "ⲥⲁⲧⲉⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1479,
+        "count": 52
+      }
+    },
+    {
+      "id": "CF27902",
+      "orth": "ⲥⲁⲧⲏⲏⲗⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27903",
+      "orth": "ⲥⲁⲧⲏⲏⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27904",
+      "orth": "ⲥⲁⲧⲏⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27905",
+      "orth": "ⲥⲧⲁⲧⲏⲣⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14081",
+      "bibliography": "DDGLC",
+      "cu_ID": "471"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲟⲩⲟⲛ ϣϫⲟⲙ ⲅⲁⲣ ⲉϯ ⲙⲫⲁⲓ ⲉⲃⲟⲗ ⲥⲁⲡϣⲱⲓ ⲛⲧ ⲛ**ⲥⲁⲑⲉⲣⲓ** ⲟⲩⲟϩ ⲛⲧⲟⲩⲧⲏⲓⲧⲟⲩ ⲛⲛⲓϩⲏⲕⲓ ⲟⲩⲟϩ ⲛⲁⲩⲙⲃⲟⲛ ⲉⲣⲟⲥ ⲡⲉ .",
+      "english": "For this might have been sold for more than three hundred denarii, and given to the poor.' They grumbled against her.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲣⲟⲩϩⲉ ⲇⲉ ⲛⲧⲉⲣⲉϥϣⲱⲡⲉ ⲡⲉϫⲁϥ ⲛϭⲓⲡϫⲟⲉⲓⲥ ⲙⲡⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲙⲡⲉϥⲉⲡⲓⲧⲣⲟⲡⲟⲥ ϫⲉⲙⲟⲩⲧⲉ ⲉⲛⲉⲣⲅⲁⲧⲏⲥ ⲛⲅϯ ⲛⲁⲩ ⲙⲡⲉⲩⲃⲉⲕⲉ · ⲛⲅⲁⲣⲭⲉⲓ ϫⲓⲛⲛⲛϩⲁⲉⲉⲩ ϣⲁⲛⲧⲕⲡⲱϩ ⲉⲛϣⲟⲣⲡ · ⲛⲅϯ ⲛⲁⲩ ⲛⲟⲩ**ⲥⲁⲧⲉⲉⲣⲉ** ⲉⲡⲟⲩⲁ ·",
+      "english": "Now when the evening had come the lord of the vineyard said unto his steward, 'Call the labourers, give them their wages; begin with the last and continue until thou comest to the first; give unto each a stater'",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲉ ⲁⲟⲩⲏⲣ ⲙⲁⲗⲗⲟⲛ ⲁⲛⲟⲕ ⲫⲁⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲟⲩⲑⲃⲁ ⲛ**ⲥⲁⲑⲉⲣⲓ** ⲉⲣⲟϥ ⲟⲩⲁⲛⲁⲅⲕⲉⲟⲛ ⲟⲩⲛ ⲛⲏⲓ ϩⲱ ⲡⲉ ⲉⲑⲣⲓϫⲉⲛⲏ ⲉⲧⲁⲓⲛⲁⲩ ⲉⲣⲱⲟⲩ ⲛⲧⲉⲛⲉⲛⲓⲟϯ ⲉⲑⲟⲩⲁⲃ",
+      "english": "How much more must I, who am a debtor of ten thousand talents, find it necessary to narrate what I have seen regarding our holy Fathers?",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧ**ⲥⲁⲧⲉⲉⲣⲉ** ⲉⲛⲧⲁϥⲧⲁⲁⲥ ⲛⲁⲩ ⲧⲉ ⲧⲙⲛⲧⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ⲁⲩⲱ ⲧⲉⲡⲣⲟⲥⲫⲟⲣⲁ ⲉⲧⲟⲩⲁⲁⲃ :",
+      "english": "The stater which He gave unto them was the honour of Apostleship, and the Holy Offering.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥϫⲉⲛ ⲟⲩⲁⲃⲟⲧ ⲇⲉ ⲉⲡϣⲱⲓ ϣⲁⲉⲛⲣⲟⲙⲡⲓ ⲉⲥⲉϣⲱⲡⲓ ⲛϫⲉⲧⲧⲓⲙⲏ ⲛⲧⲉⲡⲓϩⲱⲟⲩⲧ ⲉⲉ ⲛ**ⲥⲁⲑⲉⲣⲓ** ⲛϩⲁⲧ ⲉⲩⲕⲏⲃ ϯⲥϩⲓⲙⲓ ⲇⲉ ⲉⲅ ⲛⲥⲁⲑⲉⲣⲓ ⲉⲩⲕⲏⲃ",
+      "english": "And from a month old to five years old, the valuation of a male shall be five didrachms, and of a female, three didrachms of silver.",
+      "source": "03_Leviticus_27",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲥⲙⲛⲧⲥ ⲛⲙⲙⲁⲩ ⲉⲩ**ⲥⲁⲧⲉⲉⲣⲉ** · ⲡⲧⲁⲉⲓⲟ ⲛⲧⲙⲛⲧⲡⲣⲟⲫⲏⲧⲏⲥ · ⲁⲁⲣⲱⲛ ϩⲱⲱϥ ⲛⲟⲩⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲉϫⲙⲡⲉϥⲗⲁⲟⲥ ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲃⲱⲕ ·",
+      "english": "And He covenanted with them for a stater, that is, Moses was to have the honourable rank of prophet, and Aaron was to hold the office of high priest over His people, and they were to serve (him).",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲏⲃ",
+        8,
+        23.788
+      ],
+      [
+        "ⲉ",
+        36,
+        20.527
+      ],
+      [
+        "ⲛ",
+        39,
+        20.447
+      ],
+      [
+        "ⲁⲛⲁⲅⲕⲉⲟⲛ",
+        2,
+        19.525
+      ],
+      [
+        "ⲧⲓⲙⲏ",
+        3,
+        18.958
+      ],
+      [
+        "ⲛⲧ",
+        7,
+        18.917
+      ],
+      [
+        "ⲟⲩⲧⲏ",
+        1,
+        18.695
+      ],
+      [
+        "ⲕⲟⲣⲟⲥ",
+        1,
+        17.695
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        17,
+        17.342
+      ],
+      [
+        "ⲓⲧ",
+        1,
+        17.11
+      ],
+      [
+        "ⲛⲕ",
+        1,
+        17.11
+      ],
+      [
+        "ⲟⲩ",
+        17,
+        17.016
+      ],
+      [
+        "ⲩ",
+        12,
+        16.876
+      ],
+      [
+        "ⲑⲃⲁ",
+        2,
+        16.837
+      ],
+      [
+        "ⲉⲕ",
+        1,
+        16.525
+      ],
+      [
+        "ⲅ",
+        3,
+        16.336
+      ],
+      [
+        "ⲁⲗⲓⲧ",
+        1,
+        15.995
+      ],
+      [
+        "ϩⲱⲟⲩⲧ",
+        2,
+        15.862
+      ],
+      [
+        "ϧⲁ",
+        4,
+        15.853
+      ],
+      [
+        "ϣⲉⲡ",
+        2,
+        15.718
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲣⲏϣⲉ",
+        11,
+        21.276
+      ],
+      [
+        "ϩⲁⲧ",
+        16,
+        18.549
+      ],
+      [
+        "ⲛ",
+        88,
+        17.487
+      ],
+      [
+        "ϩⲁϣ",
+        2,
+        16.898
+      ],
+      [
+        "ⲧⲁⲉⲓⲟⲩ",
+        6,
+        16.503
+      ],
+      [
+        "ϣⲉ",
+        11,
+        15.86
+      ],
+      [
+        "ⲣⲁϣⲧ",
+        1,
+        14.898
+      ],
+      [
+        "ϭⲓⲥⲕⲓⲧⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ϭⲁⲡⲓϫⲉ",
+        1,
+        13.898
+      ],
+      [
+        "ⲙⲁⲁⲃⲉ",
+        2,
+        13.65
+      ],
+      [
+        "ⲉⲥⲉ",
+        4,
+        13.558
+      ],
+      [
+        "ϣⲙⲧ",
+        2,
+        13.438
+      ],
+      [
+        "ⲙⲛⲧϣⲉ",
+        1,
+        13.313
+      ],
+      [
+        "ⲙⲁⲧⲥⲁⲃⲟ",
+        1,
+        13.313
+      ],
+      [
+        "ⲛⲟⲣⲛⲁ",
+        1,
+        12.898
+      ],
+      [
+        "ⲉⲣⲅⲁⲧⲏⲥ",
+        2,
+        12.81
+      ],
+      [
+        "ϣⲟⲙⲧⲉ",
+        3,
+        12.641
+      ],
+      [
+        "ϣⲏⲧ",
+        2,
+        12.406
+      ],
+      [
+        "ⲛⲁⲣ",
+        1,
+        12.313
+      ],
+      [
+        "ⲁⲛⲓ",
+        2,
+        12.254
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          28
+        ],
+        [
+          "ⲧⲁⲉⲓⲟⲩ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          14
+        ],
+        [
+          "ϩⲁⲧ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲙⲏⲧⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          2
+        ],
+        [
+          "ϣⲙⲧ_2_pre_ϣⲉ",
+          2
+        ],
+        [
+          "ϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲡⲣⲟⲫⲏⲧⲏⲥ_4_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲃⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          2
+        ],
+        [
+          "ϯⲟⲩ_3_pre_ϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          3
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_pre_ϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲛⲧⲏ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϩⲁⲧ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲏ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲏϣⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁⲉⲓⲟⲩ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          "ⲛ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          12
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ϩⲁⲧ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲙⲏⲧⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲙⲧ_2_pre_ϣⲉ",
+          "ϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          "ⲡ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲉⲓⲟ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          "ⲙⲛⲧⲡⲣⲟⲫⲏⲧⲏⲥ_4_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲃⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ϯⲟⲩ_3_pre_ϣⲉ",
+          "ⲛ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ϣⲉ_2_pre_ⲛ",
+          2
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ϯⲟⲩ_3_pre_ϣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲧⲉⲩ_2_pre_ϣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_pre_ϣⲉ",
+          "ϣⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲛⲧⲏ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲛ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲧ_2_post_ⲛ",
+          "ⲙ_3_post_ϩⲁⲧ",
+          2
+        ],
+        [
+          "ⲙ_3_post_ϩⲁⲧ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_2_post_ⲛ",
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲧⲓⲙⲏ",
+          "ⲧⲓⲙⲏ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲇⲉ_2_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧⲉ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲏ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ϩⲣⲏϣⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1282,
+      "count": 52
+    }
+  },
+  "etym": {
+    "grl_ID": "2024",
+    "grl_lemma": "στατήρ",
+    "grl_meaning": "Stater (a coin and a weight)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1634b; Preisigke 2:482"
+  }
+}

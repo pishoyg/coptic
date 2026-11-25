@@ -1,0 +1,76 @@
+{
+  "id": "C11221",
+  "forms": [
+    {
+      "id": "CF31170",
+      "orth": "ϩⲩⲡⲏⲣⲉⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF31171",
+      "orth": "ϩⲏⲡⲉⲣⲉϯ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31173",
+      "orth": "ϩⲩⲡⲏⲣⲉⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31172",
+      "orth": "ϩⲩⲡⲉⲣⲏⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8070,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31174",
+      "orth": "ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7911,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31175",
+      "orth": "ⲩⲡⲏⲣⲉⲧⲉⲓ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15802",
+      "bibliography": "DDGLC",
+      "cu_ID": "5825"
+    },
+    {
+      "id": "CS15803",
+      "bibliography": "DDGLC",
+      "cu_ID": "1214"
+    },
+    {
+      "id": "CS15804",
+      "bibliography": "DDGLC",
+      "cu_ID": "5827"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3497",
+    "grl_lemma": "ὑπηρετέω",
+    "grl_meaning": "to do service on board ship, as a rower",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1872a; Preisigke 2:652"
+  }
+}

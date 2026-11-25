@@ -1,0 +1,162 @@
+{
+  "id": "C12018",
+  "forms": [
+    {
+      "id": "CF33019",
+      "orth": "ⲡⲉⲥⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19779,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17018",
+      "bibliography": "KoptHWB 190; DELC 192b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲅⲁⲣ ⲡⲉ ⲧⲉⲛⲉⲓⲣⲏⲛⲏ ⲡⲉⲛⲧⲁϥⲣ**ⲡⲉⲥⲛⲁⲩ** ⲛⲟⲩⲁ ⲉⲁϥⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲧϫⲉ ⲛⲉⲧⲙⲏⲧⲉ ⲙⲡϫⲟⲗϫⲗ ⲧⲙⲛⲧϫⲁϫⲉ ϩⲛⲧⲉϥⲥⲁⲣⲝ .",
+      "english": "For he is our peace, who made both one, and broke down the middle wall of partition,",
+      "source": "49_Ephesians_2",
+      "urn": "urn:cts:copticLit:nt.eph.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        9.329
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19394,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3620",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3621",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3622",
+      "label": "-ⲥⲛⲟⲟⲩⲥⲉ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3627",
+      "label": "ⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "second, deputy (monastic title)"
+    },
+    {
+      "target": "C3626",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "duality"
+    },
+    {
+      "target": "C3623",
+      "label": "ⲙⲡⲉⲥⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C3624",
+      "label": "ⲛⲧⲥⲛⲧⲉ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C3628",
+      "label": "ⲣⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "be second"
+    },
+    {
+      "target": "C3625",
+      "label": "ⲣⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "become, be two"
+    },
+    {
+      "target": "C3616",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3618",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two"
+    },
+    {
+      "target": "C3617",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3619",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "two"
+    }
+  ]
+}

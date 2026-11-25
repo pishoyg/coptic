@@ -1,0 +1,132 @@
+{
+  "id": "C2111",
+  "forms": [
+    {
+      "id": "CF5925",
+      "orth": "ⲙⲟⲩⲧⲉ (ⲉϩⲟⲩⲛ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2446",
+      "bibliography": "CD 192b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "〈 ⲙⲡⲣ **ⲙⲟⲩⲧⲉ **ⲉϩⲟⲩⲛ**** ⲉⲣⲱⲙⲉ ⲉⲧⲃⲉⲧⲉⲕⲙⲟⲧⲛⲉⲥ · ⲙⲛⲡⲟⲩⲱϣ ⲛⲛⲉⲕⲙⲁϩⲧ 〉",
+      "english": "Do not cry into [the abode of] a man because of thy belief, nor because of the desire of thy bowels.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲓⲙⲟⲩⲧⲉ **ⲉϩⲟⲩⲛ**** ⲕⲁⲧⲁⲡⲕⲁⲛⲱⲛ ⲛⲛⲉⲥⲛⲏⲩ ⲙⲙⲟⲛⲁⲭⲟⲥ ·",
+      "english": "and I called into it according to the rule of the monkish brethren.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ϫⲉⲁⲛⲉⲓ ϫⲓⲛⲛϣⲱⲣⲡ ⲙⲡⲉⲛⲧⲟⲗⲙⲁ **ⲉⲙⲟⲩⲧⲉ **ⲉϩⲟⲩⲛ**** ⲉⲣⲟⲕ ϣⲁⲛⲧⲕⲟⲩⲱ ⲉⲕⲙⲉⲗⲏⲧⲁ ⁛",
+      "english": "And they said unto him, 'We came here at dawn, but we did not dare to cry out to thee inside until thou hadst finished thy recital (of the Scriptures)",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2113",
+      "label": "ϭⲓⲛⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "calling, naming"
+    },
+    {
+      "target": "C2104",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "enchantment"
+    },
+    {
+      "target": "C2107",
+      "label": "ⲙⲟⲩϯ (ϧⲁϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "call ahead, forward"
+    },
+    {
+      "target": "C2108",
+      "label": "ⲙⲟⲩϯ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "call to"
+    },
+    {
+      "target": "C2112",
+      "label": "ⲙⲟⲩϯ (ⲉϧⲣⲏⲓ)",
+      "pos": "V",
+      "gloss": "call down (from above)"
+    },
+    {
+      "target": "C2101",
+      "label": "ⲙⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "speak, call; enchant, charm; call, pronounce (mostly of name)"
+    },
+    {
+      "target": "C2102",
+      "label": "ⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "(magical) call, incantation"
+    },
+    {
+      "target": "C2105",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "call upon, cry to"
+    },
+    {
+      "target": "C2109",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "call out (from within), call (to come) out, call out to, accost,\n                            resound, echo"
+    },
+    {
+      "target": "C2110",
+      "label": "ⲙⲟⲩⲧⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "call down (from above)"
+    },
+    {
+      "target": "C2106",
+      "label": "ⲙⲟⲩⲧⲉ (ⲟⲩⲃⲉ-)",
+      "pos": "V",
+      "gloss": "call upon, cry to"
+    },
+    {
+      "target": "C2103",
+      "label": "ⲣⲉϥⲙⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "enchanter"
+    },
+    {
+      "target": "C2114",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "V",
+      "gloss": "address word to, greet (deferentially)"
+    },
+    {
+      "target": "C2115",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "N",
+      "gloss": "greeting"
+    }
+  ]
+}

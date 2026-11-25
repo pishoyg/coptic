@@ -1,0 +1,390 @@
+{
+  "id": "C3874",
+  "forms": [
+    {
+      "id": "CF9679",
+      "orth": "ⲁⲧⲥⲟⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1826,
+        "count": 36
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4394",
+      "bibliography": "CD 370b; ChLCS 52b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲟ ⲇⲉ ⲛ**ⲁⲧⲥⲟⲟⲩⲛ** ⲥⲉⲟ ⲛⲁⲧⲥⲟⲟⲩⲛ ⲙⲙⲟϥ .",
+      "english": "But if anyone is ignorant, let him be ignorant.",
+      "source": "46_1 Corinthians_14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏⲫⲉ ⲇⲓⲕⲁⲓⲱⲥ ⲁⲩⲱ ⲙⲡⲣⲣⲛⲟⲃⲉ . ⲟⲩⲛϩⲟⲓⲛⲉ ⲅⲁⲣ ⲟ ⲛ**ⲁⲧⲥⲟⲟⲩⲛ** ⲙⲡⲛⲟⲩⲧⲉ . ⲉⲓϫⲱ ⲛⲛⲁⲓ ⲉⲓϯϣⲓⲡⲉ ⲛⲏⲧⲛ .",
+      "english": "Wake up righteously, and don&apos;t sin, for some have no knowledge of God. I say this to your shame.",
+      "source": "1 Corinthians 15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲉⲧⲉⲧⲛⲟ ⲛ**ⲁⲧⲥⲟⲟⲩⲛ** ⲛⲉⲥⲛⲏⲩ ϫⲉⲁⲛⲟⲛ ϩⲉⲛϣⲗϩ ⲉⲃⲟⲗ ϩⲛⲧⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲙⲙⲉ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲁⲩⲱ ⲡⲉⲓⲱⲧ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲡⲉ ⲡⲟⲩⲟⲓ ·",
+      "english": "O brethren, is it possible that ye do not know that we are branches of the True Vine, the Christ, and that the Father of the Christ is the Husbandman?",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟ",
+        30,
+        19.356
+      ],
+      [
+        "ⲁⲧⲥⲟⲟⲩⲛ",
+        4,
+        16.258
+      ],
+      [
+        "ⲛⲇⲓⲕⲉⲟⲥ",
+        1,
+        15.428
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.428
+      ],
+      [
+        "ⲛ",
+        45,
+        15.115
+      ],
+      [
+        "ⲁⲧⲕⲁⲣⲡⲟⲥ",
+        2,
+        14.106
+      ],
+      [
+        "ⲩⲟ",
+        1,
+        13.843
+      ],
+      [
+        "ⲉ",
+        24,
+        13.402
+      ],
+      [
+        "ⲙⲙⲛⲛⲥⲁ",
+        1,
+        12.621
+      ],
+      [
+        "ⲁⲩⲱ",
+        16,
+        12.577
+      ],
+      [
+        "ϥ",
+        20,
+        12.317
+      ],
+      [
+        "ⲡ",
+        20,
+        12.293
+      ],
+      [
+        "ⲁⲗⲗⲟ",
+        1,
+        12.106
+      ],
+      [
+        ".",
+        11,
+        11.766
+      ],
+      [
+        "ϫⲉ",
+        10,
+        10.942
+      ],
+      [
+        "ⲇⲉ",
+        8,
+        10.816
+      ],
+      [
+        "ⲥⲉ",
+        6,
+        10.668
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        2,
+        10.367
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        3,
+        10.238
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        2,
+        10.157
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          35
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲧⲕⲁⲣⲡⲟⲥ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲕⲁⲑⲁⲣⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲁⲕⲁⲑⲁⲣⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          2
+        ],
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          "ⲙ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          "ⲁⲩⲱ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          "ⲛ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲁⲧⲕⲁⲣⲡⲟⲥ",
+          "ⲁⲧⲕⲁⲣⲡⲟⲥ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲧⲕⲁⲣⲡⲟⲥ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲁⲩⲱ_2_post_ⲁⲕⲁⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲕⲁⲑⲁⲣⲧⲟⲥ",
+          "ⲛ_2_post_ⲁⲕⲁⲑⲁⲣⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          "ⲉ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲡⲁⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲇⲉ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲁⲧⲥⲟⲟⲩⲛ",
+          "ⲁⲧⲥⲟⲟⲩⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.23,
+      "rank": 1588,
+      "count": 36
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3879",
+      "label": "ϫⲓⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "get knowledge"
+    },
+    {
+      "target": "C3880",
+      "label": "ϭⲓⲛⲥⲟⲩⲛ-",
+      "pos": "N",
+      "gloss": "knowing, knowledge"
+    },
+    {
+      "target": "C3875",
+      "label": "ⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C3878",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲟⲩⲉⲛ-",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3877",
+      "label": "ⲣⲉϥⲥⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one who knows"
+    },
+    {
+      "target": "C3876",
+      "label": "ⲣⲙⲛⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one known, acquaintance"
+    },
+    {
+      "target": "C3871",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "know; know, recognize, distinguish"
+    },
+    {
+      "target": "C3872",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3873",
+      "label": "ⲥⲟⲩⲏⲛ",
+      "pos": "N",
+      "gloss": "well known, famous person"
+    }
+  ]
+}

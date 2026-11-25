@@ -1,0 +1,262 @@
+{
+  "id": "C6845",
+  "forms": [
+    {
+      "id": "CF15739",
+      "orth": "ϩⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5609,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7561",
+      "bibliography": "CD 709a; KoptHWb 391; ChLCS 95a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩⲉϫⲉⲣⲉⲟⲩⲕⲱϩⲧ ⲉϫⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲛϥⲧⲙϫⲉⲛⲁ ⲁⲩⲱ ⲉⲣⲉⲡⲟⲩⲏⲏⲃ ⲣⲱⲕϩ ϩⲓϫⲱϥ ⲛϩⲉⲛϣⲉ ⲙⲡⲛⲁⲩ ⲛϩⲧⲟⲟⲩⲉ ⲛϥ**ϩⲱⲣϭ** ϩⲓϫⲱϥ ⲙⲡⲉϭⲗⲓⲗ ⲁⲩⲱ ⲉϥⲉⲧⲁⲗⲟ ⲉϫⲱϥ ⲙⲡⲱⲧ ⲙⲡⲟⲩϫⲁⲓ",
+      "english": "And the fire on the altar shall be kept burning on it, and shall not be extinguished; and the priest shall burn on it wood every morning, and shall heap on it the whole-burnt-offering, and shall lay on it the fat of the peace-offering.",
+      "source": "Leviticus 6",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲟⲉⲥ ⲁϥⲟⲩⲱⲙ ⲁⲩⲱ ⲁϥⲥⲱ ⲁⲡⲉϥϩⲏⲧ ⲟⲩⲛⲟϥ ⲁϥⲉⲓ ⲉⲧⲣⲉϥⲛⲕⲟⲧⲕ ϩⲛⲧⲙⲉⲣⲓⲥ ⲉⲧ**ϩⲟⲣϭ** ⲛⲧⲟⲥ ⲇⲉ ϩⲣⲟⲩⲑ ⲁⲥⲉⲓ ⲛϩⲱⲡ ⲁⲥϭⲱⲗⲡ ϩⲁⲣⲁⲧϥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲁⲥⲛⲕⲟⲧⲕ",
+      "english": "And Booz ate and drank, and his heart was glad, and he came to lie down by the side of the heap of corn; and she came secretly, and lifted up the covering of his feet.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲉⲓⲧ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛ",
+        10,
+        11.19
+      ],
+      [
+        "ⲉϫⲱ",
+        2,
+        10.161
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        1,
+        10.002
+      ],
+      [
+        "ϥ",
+        6,
+        9.692
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        9.225
+      ],
+      [
+        "ⲡⲏⲩⲉ",
+        1,
+        9.118
+      ],
+      [
+        "ϣⲉ",
+        1,
+        8.597
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.923
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.894
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.162
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.635
+      ],
+      [
+        "ⲡ",
+        1,
+        1.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          4
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          "ϩⲱⲣϭ_0_node",
+          4
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲣϭ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲏⲩⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣϭ",
+          "ϥ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_1_post_ϩⲱⲣϭ",
+          "ϥ_2_post_ϩⲓϫⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓϫⲱ",
+          "ⲙ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣϭ",
+          "ⲁ_1_pre_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ϩⲱⲣϭ_0_node",
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲱⲣϭ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4026,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6844",
+      "label": "ϩⲱⲣϭ",
+      "pos": "V",
+      "gloss": "be heaped up, set in order"
+    }
+  ]
+}

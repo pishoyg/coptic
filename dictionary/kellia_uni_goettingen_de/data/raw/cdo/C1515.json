@@ -1,0 +1,84 @@
+{
+  "id": "C1515",
+  "forms": [
+    {
+      "id": "CF4463",
+      "orth": "ⲕⲱϩ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1771",
+      "bibliography": "CD 133a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁϥⲕⲱϩ **ⲉ**ⲧⲉϥⲥϩⲓⲙⲉ** ·",
+      "english": "and he became jealous about his wife.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲁⲣⲛⲕⲱϩ **ⲉ**ⲡⲃⲓⲟⲥ** ⲛⲛⲉⲛⲉⲓⲟⲟⲧⲉ · ⲛϣⲟⲣⲡ ⲉⲛⲙⲏⲛ ⲉⲃⲟⲗ ϩⲛⲟⲩϩⲩⲡⲟⲙⲟⲛⲏ ·",
+      "english": "Let us emulate the life of our fathers, and first of all let us continue in patient endurance.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛⲁⲥⲛⲏⲩ **ⲕⲱϩ **ⲉ**ⲡⲣⲟⲫⲏⲧⲉⲩⲉ** . ⲁⲩⲱ ⲙⲡⲣⲕⲱⲗⲩϣⲁϫⲉ ϩⲛⲛⲁⲥⲡⲉ .",
+      "english": "Therefore, brothers, desire earnestly to prophesy, and don&apos;t forbid speaking with other languages.",
+      "source": "46_1 Corinthians_14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1517",
+      "label": "ⲉⲣⲕⲁϩⲥ",
+      "pos": "V",
+      "gloss": "become custom"
+    },
+    {
+      "target": "C1520",
+      "label": "ⲕⲁϩⲕ",
+      "pos": "V",
+      "gloss": "hew out, smooth, cause to heal up; be healed"
+    },
+    {
+      "target": "C1518",
+      "label": "ⲕⲁϩⲕϩ",
+      "pos": "V",
+      "gloss": "hew out, smooth; make smooth, cause to heal up"
+    },
+    {
+      "target": "C1516",
+      "label": "ⲕⲁϩⲥ",
+      "pos": "N",
+      "gloss": "custom"
+    },
+    {
+      "target": "C1514",
+      "label": "ⲕⲱϩ",
+      "pos": "V",
+      "gloss": "make level, smooth, tame"
+    },
+    {
+      "target": "C1519",
+      "label": "ⲣⲉϥⲕϩⲕϩ-",
+      "pos": "N",
+      "gloss": "hewer of stone"
+    }
+  ]
+}

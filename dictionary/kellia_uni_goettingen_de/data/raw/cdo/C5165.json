@@ -1,0 +1,160 @@
+{
+  "id": "C5165",
+  "forms": [
+    {
+      "id": "CF12296",
+      "orth": "ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18073,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5799",
+      "bibliography": "CD 492b; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲟⲩ**ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ** ⲧⲏⲣⲟⲩ ⲛⲉⲧⲟⲩⲏϩ ϩⲛⲛⲛⲏⲥⲟⲥ ⲁⲩⲱⲕⲙ ⲉϫⲱ ⲛⲉⲩⲕⲉⲣⲣⲱⲟⲩ ϩⲛⲟⲩϣⲧⲟⲣⲧⲣ ⲁⲩϣⲧⲟⲣⲧⲣ ⲁⲩⲱ ⲁⲩⲣⲓⲙⲉ",
+      "english": "All the dwellers in the islands have mourned over thee, and their kings have been utterly amazed, and their countenance has wept.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲩ",
+        1,
+        12.017
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        10.72
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲏϩ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ⲟⲩⲏϩ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17694,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5163",
+      "label": "ⲟⲩⲟⲥⲣ",
+      "pos": "N",
+      "gloss": "oar"
+    },
+    {
+      "target": "C5164",
+      "label": "ⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "pos": "V",
+      "gloss": "row"
+    }
+  ]
+}

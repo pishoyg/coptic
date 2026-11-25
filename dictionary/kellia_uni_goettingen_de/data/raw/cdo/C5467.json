@@ -1,0 +1,101 @@
+{
+  "id": "C5467",
+  "forms": [
+    {
+      "id": "CF12905",
+      "orth": "ⲱⲗⲕϣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31924",
+      "orth": "ⲉⲗⲕϣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31925",
+      "orth": "ⲗⲕϣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6363,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6126",
+      "bibliography": "CD 522b; CDC 80a; KoptHWb 291; ChLCS 72a, 74b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲟⲩⲉϣϯϩⲧⲏⲩ ⲉⲛⲁϣⲟϫⲛⲉ ⲁⲩ**ⲗⲕϣⲁ** ⲇⲉ ⲛⲥⲁⲛⲁϫⲡⲓⲟ",
+      "english": "neither would they attend to my counsels, but derided my reproofs.",
+      "source": "Proverbs 1",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲕⲱ ⲙⲙⲟⲛ ⲛⲟⲩⲱϩⲙ ⲛⲛⲉⲧϩⲏⲛ ⲉⲣⲟⲛ ⲁⲩⲱ ⲛⲉⲛϫⲓϫⲉⲉⲩⲉ ⲁⲩ**ⲗⲕϣⲁ** ⲛⲥⲱⲛ",
+      "english": "Thou has made us a strife to our neighbours; and our enemies have mocked at us.",
+      "source": "Psalms 79",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:79",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8383,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5691",
+      "type": "cf",
+      "label": "nose"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5469",
+      "label": "ⲗⲕⲉ",
+      "pos": "N",
+      "gloss": "bend, crease, corner"
+    },
+    {
+      "target": "C5470",
+      "label": "ⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "bend, corner"
+    },
+    {
+      "target": "C5465",
+      "label": "ⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "become, be bent, be distorted; bend"
+    },
+    {
+      "target": "C5466",
+      "label": "ⲱⲗⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "lean, bow down"
+    },
+    {
+      "target": "C5468",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "N",
+      "gloss": "jeer, mockery"
+    }
+  ]
+}

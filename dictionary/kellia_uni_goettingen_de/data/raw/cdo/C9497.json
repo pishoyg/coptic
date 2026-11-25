@@ -1,0 +1,51 @@
+{
+  "id": "C9497",
+  "forms": [
+    {
+      "id": "CF24149",
+      "orth": "ⲕⲟⲙⲙⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF24152",
+      "orth": "ⲕⲟⲙⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24150",
+      "orth": "ⲕⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.21,
+        "rank": 321,
+        "count": 506
+      }
+    },
+    {
+      "id": "CF24151",
+      "orth": "ⲕⲙⲙⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12068",
+      "bibliography": "DDGLC",
+      "cu_ID": "8059"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1174",
+    "grl_lemma": "κόμμι",
+    "grl_meaning": "gum",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 976a; Preisigke 1:822"
+  }
+}

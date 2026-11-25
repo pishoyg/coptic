@@ -1,0 +1,62 @@
+{
+  "id": "C6671",
+  "forms": [
+    {
+      "id": "CF32029",
+      "orth": "ⲉϩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18817,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32028",
+      "orth": "ⲉϩⲉⲛ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7385",
+      "bibliography": "CD 685a; KoptHWb 375; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲛⲧⲁⲩⲥⲟⲛⲧⲟⲩ ⲛⲛⲣⲙⲛⲛⲟⲩⲧⲉ **ⲉϩⲛ**ⲁⲅⲁⲑⲟⲛ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲟⲩⲛⲁⲕⲧⲟⲟⲩ ⲛⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲉϩⲛⲡⲉⲧϩⲟⲟⲩ",
+      "english": "All these things are for good to the godly: so to the sinners they are turned into evil.",
+      "source": "Sirach 39",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6668",
+      "label": "ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, at, on; by, with (as agent)"
+    },
+    {
+      "target": "C6670",
+      "label": "ϩⲣⲁⲓ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in"
+    },
+    {
+      "target": "C6669",
+      "label": "ⲉⲃⲟⲗ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "from in, from"
+    }
+  ]
+}

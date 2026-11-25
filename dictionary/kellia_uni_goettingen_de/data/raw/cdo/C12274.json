@@ -1,0 +1,55 @@
+{
+  "id": "C12274",
+  "forms": [
+    {
+      "id": "CF33292",
+      "orth": "ⲛⲕⲱⲗⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS17278",
+      "bibliography": "CD 105b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1184",
+      "label": "ϫⲓⲛⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "robbing"
+    },
+    {
+      "target": "C1185",
+      "label": "ⲁⲧⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unstolen, inviolate"
+    },
+    {
+      "target": "C1186",
+      "label": "ⲕⲟⲗⲡⲥ",
+      "pos": "N",
+      "gloss": "theft"
+    },
+    {
+      "target": "C1182",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "steal, rob"
+    },
+    {
+      "target": "C1183",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "theft, thing stolen"
+    }
+  ]
+}

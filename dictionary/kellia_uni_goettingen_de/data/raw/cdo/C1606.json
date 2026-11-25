@@ -1,0 +1,125 @@
+{
+  "id": "C1606",
+  "forms": [
+    {
+      "id": "CF4668",
+      "orth": "ⲗⲟⲕⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17969,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1869",
+      "bibliography": "CD 139a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲃⲟⲧⲧ ⲛⲁϩⲣⲙ ⲡⲁⲗⲁⲟⲥ ⲉⲧⲃⲉⲛϭⲓϫ ⲛⲉⲓⲱⲧ ⲁⲩⲱ ⲉⲧⲃⲉϩⲉⲛ**ⲗⲟⲕⲙ** ⲛⲁⲉⲓⲕ",
+      "english": "And they have dishonoured me before my people for a handful of barley, and for pieces of bread, to slay the souls which should not die, and to save alive the souls which should not live, while ye speak to a people hearing vain speeches.",
+      "source": "Ezekiel 13",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲉⲓⲕ",
+        1,
+        18.276
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        14.644
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        9.626
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲕⲙ",
+          1
+        ],
+        [
+          "ⲗⲟⲕⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲟⲕⲙ",
+          1
+        ],
+        [
+          "ⲁⲉⲓⲕ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲕⲙ",
+          "ⲗⲟⲕⲙ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲕⲙ_0_node",
+          "ⲛ_1_post_ⲗⲟⲕⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲟⲕⲙ",
+          "ⲁⲉⲓⲕ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17588,
+      "count": 1
+    }
+  }
+}

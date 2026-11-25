@@ -1,0 +1,53 @@
+{
+  "id": "C5178",
+  "forms": [
+    {
+      "id": "CF12323",
+      "orth": "ⲟⲩⲏⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲉⲧⲉ",
+      "dialect": "S",
+      "id": "1749.1"
+    },
+    {
+      "orth": "ⲟⲩⲉⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1590,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5816",
+      "bibliography": "CD 495a; KoptHWb 278; DELC 238b; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5179",
+      "label": "ⲟⲩⲏⲧ",
+      "pos": "N",
+      "gloss": "remission"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1566",
+    "demo_lemma": "wtj",
+    "english": "[to cook]",
+    "german": "schmelzen, erweichen, auflösen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1566"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C6968",
+  "forms": [
+    {
+      "id": "CF15990",
+      "orth": "ⲙⲡⲟⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32066",
+      "orth": "ⲙⲡϩⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6726,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7688",
+      "bibliography": "CD 731a; CED 304; KoptHWb 403; DELC 318a; ChLCS 98b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6965",
+      "label": "ϩⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "day"
+    },
+    {
+      "target": "C6967",
+      "label": "ϩⲟⲟⲩ ϩⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "from day to day"
+    },
+    {
+      "target": "C6970",
+      "label": "ϩⲟⲩⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birthday"
+    },
+    {
+      "target": "C6969",
+      "label": "ⲡⲟⲟⲩ ⲛϩⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "today, this day"
+    },
+    {
+      "target": "C6966",
+      "label": "ⲣϩⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "spend day"
+    }
+  ],
+  "etym": {
+    "egy_num": "58940",
+    "egy_lemma": "pꜣ-hrw",
+    "demo_num": "d1881",
+    "demo_lemma": "pꜣ-hrw",
+    "english": "today",
+    "german": "Heute",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/58940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1881"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "C3556",
+  "forms": [
+    {
+      "id": "CF9017",
+      "orth": "ⲥⲓⲙⲥⲓⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲙⲥⲓⲙ",
+      "dialect": "S",
+      "id": "1428.1"
+    },
+    {
+      "orth": "ⲥⲙⲥⲙ",
+      "dialect": "S",
+      "id": "1428.2"
+    },
+    {
+      "orth": "ⲥⲉⲙⲥⲏⲙ",
+      "dialect": "S",
+      "id": "1428.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4049",
+      "bibliography": "CD 340b; CED 153; KoptHWb 187; DELC 189; ChLCS 48a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "foreign",
+  "crossReferences": [
+    {
+      "target": "C2744",
+      "type": "syn",
+      "label": "sesame"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm3386",
+    "demo_lemma": "smsm",
+    "english": "Sesame(?)",
+    "german": "Sesam(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3386"
+  }
+}

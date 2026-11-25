@@ -1,0 +1,292 @@
+{
+  "id": "C8100",
+  "forms": [
+    {
+      "id": "CF18406",
+      "orth": "ⲁⲉⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18407",
+      "orth": "ⲁⲉⲧⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18408",
+      "orth": "ⲁⲉⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4835,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF18409",
+      "orth": "ⲁⲉⲧⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18410",
+      "orth": "ⲁⲓⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2455,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9073",
+      "bibliography": "DDGLC",
+      "cu_ID": "575"
+    },
+    {
+      "id": "CS9074",
+      "bibliography": "DDGLC",
+      "cu_ID": "8776"
+    },
+    {
+      "id": "CS9075",
+      "bibliography": "DDGLC",
+      "cu_ID": "8547"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲙⲉⲛ ⲉϣⲁⲛⲛⲕⲟⲧⲕ ⲙⲛⲛⲉⲛⲉⲣⲏⲩ ϣⲁⲛⲛⲁⲩ ⲉⲩⲍⲱⲟⲛ ⲛⲧϩⲉ ⲛⲟⲩ**ⲁⲉⲧⲟⲥ** ⲉϥϩⲏⲗ ϣⲁϥⲉⲓ ⲛϥϩⲱⲥ ⲉⲃⲟⲗ ⲉϫⲙⲡⲉⲛⲙⲁ ⲛⲛⲕⲟⲧⲕ ⲙⲡⲉⲥⲛⲁⲩ ·",
+      "english": "Moreover, when we used to lie together in bed, we used to see a creature like unto an a eagle flying in the air, and he would come and sing over the bed whereon we two were lying;",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲣⲉⲧⲧⲛϩ ⲛⲧϩⲉ ⲛⲟⲩ**ⲁⲉⲧⲟⲥ** ⁛— ⲁⲩⲱ ⲁⲕϣⲓⲃⲉ ϩⲛⲧϭⲟⲙ ⲛⲧⲙⲛⲧⲣⲉϥϣⲙϣⲉⲛⲟⲩⲧⲉ · ⲛⲧϩⲉ ⲛⲟⲩⲁϩⲱⲙ ·",
+      "english": "Thou didst spread out thy wing like the eagle, and thou wast transformed in the strength of the service of God like a young, strong eagle.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲉⲛⲁⲣⲉⲧⲧⲛϩ ⲛⲧϩⲉ ⲛⲛⲓ**ⲁⲓⲧⲟⲥ** ·",
+      "english": "They shall spread out their wings like the eagles in flight.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲁⲓⲉ",
+        2,
+        17.303
+      ],
+      [
+        "ⲛⲓϣϯ",
+        2,
+        11.805
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.238
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        8.46
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲏⲗ",
+        2,
+        15.691
+      ],
+      [
+        "⁛—",
+        1,
+        10.168
+      ],
+      [
+        "ϩⲉ",
+        3,
+        9.897
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        8.907
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ϣⲁ",
+        2,
+        8.761
+      ],
+      [
+        "ⲧ",
+        3,
+        8.241
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.234
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.218
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        4.899
+      ],
+      [
+        "ⲕ",
+        1,
+        4.268
+      ],
+      [
+        ".",
+        1,
+        3.972
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.162
+      ],
+      [
+        "ⲁ",
+        1,
+        2.459
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲉⲧⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲉⲧⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲉⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲉⲧⲟⲥ_0_node",
+          "ⲉ_1_post_ⲁⲉⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲉⲧⲟⲥ",
+          "ϥ_3_post_ϩⲏⲗ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲗ",
+          "ϩⲏⲗ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4021,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2611",
+    "grl_lemma": "ἀετός",
+    "grl_meaning": "eagle",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 29a; Preisigke 1:26"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "C12061",
+  "forms": [
+    {
+      "id": "CF33068",
+      "orth": "ⲕⲁⲡϣⲱ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲕⲁⲡϣⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11506,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17062",
+      "bibliography": "CD 114b; KoptHWB 67; CED 61"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉⲥⲱϫⲡ ⲙⲡⲁⲓⲁϩⲁⲗⲟⲗⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲉϣⲉⲛϣⲁⲧϥ ⲟⲩⲇⲉ ⲛⲛⲟⲩϭⲣⲏ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉⲩⲉⲣⲱⲧ ⲛϧⲏⲧϥ ⲛϫⲉϩⲁⲛⲥⲟⲩⲣⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲕⲁⲡϣⲟ** ⲉⲓⲉϩⲟⲛϩⲉⲛ ⲉⲧⲟⲧⲟⲩ ⲛⲛⲓϭⲏⲡⲓ ⲉϣⲧⲉⲙϩⲱⲟⲩ ⲉϫⲱϥ ⲛⲟⲩⲙⲟⲩⲛⲱϣⲓ .",
+      "english": "And I will forsake my vineyard; and it shall not be pruned, nor dug, and thorns shall come up upon it as on barren land; and I will command the clouds to rain no rain upon it.",
+      "source": "23_Isaias_05",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10947,
+      "count": 1
+    }
+  }
+}

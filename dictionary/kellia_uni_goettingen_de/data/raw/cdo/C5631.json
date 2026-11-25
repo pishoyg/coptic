@@ -1,0 +1,230 @@
+{
+  "id": "C5631",
+  "forms": [
+    {
+      "id": "CF13238",
+      "orth": "ⲱϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19809,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲃⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11196,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉϥⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4229,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲉⲃⲧ-",
+      "dialect": "S",
+      "id": "1836.3"
+    },
+    {
+      "orth": "ⲟϥⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6452,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲃⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2785,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲟϥⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6452,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟⲃⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2785,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲱϥⲧ",
+      "dialect": "B",
+      "id": "1836.8"
+    },
+    {
+      "orth": "ⲟϥⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4087,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϩⲟϥⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4827,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲟϥⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4087,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲱϥⲧ",
+      "dialect": "F",
+      "id": "1836.12"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6303",
+      "bibliography": "CD 536a; CDC 82a; CED 232; KoptHWb 297; DELC 252a; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁϥϥⲱⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲭⲉⲓⲣⲟⲅⲣⲁⲫⲟⲛ ⲉⲧⲉⲣⲟⲛ ϩⲛⲛⲇⲟⲅⲙⲁ ⲡⲁⲓ ⲉⲛϥϣⲟⲟⲡ ⲟⲩⲃⲏⲛ ⲁϥϥⲓ ⲙⲙⲟϥ ⲛⲧⲙⲏⲧⲉ ⲁϥ**ⲱϥⲧ** ⲙⲙⲟϥ ⲉⲡⲉⲥⲧⲁⲩⲣⲟⲥ .",
+      "english": "wiping out the handwriting in ordinances which was against us; and he has taken it out of the way, nailing it to the cross;",
+      "source": "51_Colossians_2",
+      "urn": "urn:cts:copticLit:nt.col.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁⲡⲙⲟⲟⲩ ϣⲱⲡⲉ ⲛⲁⲩ ⲛⲥ**ⲟⲃⲧ** ϩⲙⲡⲓⲥⲁ ⲙⲛⲡⲁⲓ ⲛⲥⲁⲟⲩⲛⲁⲙ · ⲁⲩⲱ ⲛⲥⲁϩⲃⲟⲩⲣ ⲙⲙⲟⲟⲩ ·",
+      "english": "and the water was to them a wall of water on this side and on that, on the right hand and on the left.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲛⲧⲁⲡϫⲟⲉⲓⲥ ϫⲟⲟⲥ ⲉⲧⲃⲉⲛⲏⲓ ⲛⲧⲉⲓⲡⲟⲗⲓⲥ ⲁⲩⲱ ⲉⲧⲃⲉⲛⲏⲓ ⲙⲡⲣⲣⲟ ⲛⲓⲟⲩⲇⲁ ⲛⲁⲓ ⲉⲛⲧⲁⲩϣⲣϣⲱⲣⲟⲩ ⲉϩⲉⲛⲙⲁ ⲙⲙⲓϣⲉ ⲙⲛϩⲉⲛⲡⲣⲟⲙⲁⲭⲱⲛ ⲛⲥ**ⲟⲃⲧ**",
+      "english": "For thus saith the Lord concerning the houses of this city, and concerning the houses of the king of Juda, which have been pulled down for mounds and fortifications,",
+      "source": "Jeremiah 40",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        6.632
+      ],
+      [
+        "ϥ",
+        2,
+        3.434
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        2.893
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        2.421
+      ],
+      [
+        "ⲧ",
+        1,
+        1.983
+      ],
+      [
+        "ⲁ",
+        1,
+        0.957
+      ],
+      [
+        "ⲉ",
+        1,
+        0.73
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.11,
+      "rank": 2388,
+      "count": 17
+    },
+    "B": {
+      "rate": 0.08,
+      "rank": 2653,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5634",
+      "label": "ϣⲥ ⲛⲓϥⲧ",
+      "pos": "N",
+      "gloss": "blow/wound of nail"
+    },
+    {
+      "target": "C5632",
+      "label": "ϭⲓⲛⲱϥⲧ",
+      "pos": "N",
+      "gloss": "nailing"
+    },
+    {
+      "target": "C5635",
+      "label": "ϯⲓϥⲧ",
+      "pos": "V",
+      "gloss": "put/fix a nail"
+    },
+    {
+      "target": "C5633",
+      "label": "ⲓϥⲧ",
+      "pos": "N",
+      "gloss": "nail, spike"
+    }
+  ],
+  "etym": {
+    "egy_num": "37480",
+    "egy_lemma": "ꜥfd",
+    "english": "nail; peg",
+    "german": "Nagel; Stift",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37480"
+  }
+}

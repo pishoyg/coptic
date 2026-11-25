@@ -1,0 +1,66 @@
+{
+  "id": "C11080",
+  "forms": [
+    {
+      "id": "CF30544",
+      "orth": "ϩⲉⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF30545",
+      "orth": "ϩⲉⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF30546",
+      "orth": "ϣⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30547",
+      "orth": "ϩⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1388,
+        "count": 58
+      }
+    },
+    {
+      "id": "CF30548",
+      "orth": "ϫⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30549",
+      "orth": "ϫⲓⲙⲁⲣⲙⲉⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30550",
+      "orth": "ⲑⲓⲙⲁⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15494",
+      "bibliography": "DDGLC",
+      "cu_ID": "1573"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3292",
+    "grl_lemma": "εἱμαρμένη",
+    "grl_meaning": "fate, necessity; chain of causes",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 487b"
+  }
+}

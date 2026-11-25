@@ -1,0 +1,159 @@
+{
+  "id": "C672",
+  "forms": [
+    {
+      "id": "CF2522",
+      "orth": "ⲉⲙⲏⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8777,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2523",
+      "orth": "ⲉⲙⲏⲣⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2524",
+      "orth": "ⲁⲙⲏⲓⲣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS809",
+      "bibliography": "CD 56a; CED 35; KoptHWb 36, 498; DELC 43; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲧ**ⲉⲙⲏⲣⲉ** ⲇⲉ ϣⲱⲡ ⲉⲙⲉϥⲁⲓⲥⲑⲁⲛⲉ",
+      "english": "If there should be a flood, he will not perceive it; he trust that Jordan will rush up into his mouth.",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲧⲛⲧⲱⲛ ⲉⲩⲣⲱⲙⲉ ⲉϥⲕⲱⲧ ⲛⲟⲩⲏⲓ ⲡⲁⲓ ⲉⲛⲧⲁϥϭⲱϫⲉ ⲁⲩⲱ ⲁϥϣⲓⲕⲉ ⲁϥⲥⲙⲓⲛⲉ ⲛⲧⲥⲛⲧⲉ ⲉϫⲛⲧⲡⲉⲧⲣⲁ . ⲛⲧⲉⲣⲉⲧ**ⲉⲙⲏⲣⲉ** ⲇⲉ ϣⲱⲡⲉ ⲁⲡⲓⲉⲣⲟ ϩⲓⲟⲩⲉ ⲉϩⲟⲩⲛ ⲉϩⲙⲡⲏⲓ ⲉⲧⲙⲙⲁⲩ ⲙⲡϥⲉϣϭⲙϭⲟⲙ ⲉⲣⲟϥ ϫⲉⲛⲉϥⲕⲏⲧ ⲕⲁⲗⲱⲥ .",
+      "english": "He is like a man building a house, who dug and went deep, and laid a foundation on the rock. When a flood arose, the stream broke against that house, and could not shake it, because it was founded on the rock.",
+      "source": "42_Luke_6",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲧⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲡⲉⲧⲣⲁ",
+        1,
+        12.369
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        11.991
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        10.292
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        8.986
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.941
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        8.928
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲉⲙⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲙⲏⲣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲉⲙⲏⲣⲉ",
+          "ⲉⲙⲏⲣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8330,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "71840",
+    "egy_lemma": "mr",
+    "demo_num": "d2273",
+    "demo_lemma": "mꜣ",
+    "english": "canal",
+    "german": "Kanal",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/71840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2273"
+  }
+}

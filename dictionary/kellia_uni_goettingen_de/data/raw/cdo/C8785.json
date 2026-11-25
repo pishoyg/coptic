@@ -1,0 +1,193 @@
+{
+  "id": "C8785",
+  "forms": [
+    {
+      "id": "CF21104",
+      "orth": "ⲇⲓⲕⲁⲓⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21107",
+      "orth": "ⲇⲓⲕⲁⲓⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3092,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF21106",
+      "orth": "ⲇⲓⲕⲁⲓⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21105",
+      "orth": "ⲇⲓⲕⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.58,
+        "rank": 296,
+        "count": 565
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS10528",
+      "bibliography": "DDGLC",
+      "cu_ID": "685"
+    },
+    {
+      "id": "CS10529",
+      "bibliography": "DDGLC",
+      "cu_ID": "6215"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲟⲩ ϫⲉⲥⲟϭ · ⲁⲩⲱ **ⲇⲓⲕⲁⲓⲱⲥ** ⲁⲗⲏⲑⲱⲥ ⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲟⲩ ⲙⲡⲉⲓⲣⲁⲛ · ⲉⲃⲟⲗ ϫⲉⲡⲛⲟϭ ⲙⲉⲛ ⲛϩⲱⲃ ⲛⲧⲉⲧⲡⲁⲣⲑⲉⲛⲓⲁ ⲁⲩⲕⲁⲧⲟⲣⲑⲟⲩ ⲙⲙⲟϥ ·",
+      "english": "He called them 'foolish', and in very truth rightly did He call them by this name, because, though they had observed the great",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏⲫⲉ **ⲇⲓⲕⲁⲓⲱⲥ** ⲁⲩⲱ ⲙⲡⲣⲣⲛⲟⲃⲉ . ⲟⲩⲛϩⲟⲓⲛⲉ ⲅⲁⲣ ⲟ ⲛⲁⲧⲥⲟⲟⲩⲛ ⲙⲡⲛⲟⲩⲧⲉ . ⲉⲓϫⲱ ⲛⲛⲁⲓ ⲉⲓϯϣⲓⲡⲉ ⲛⲏⲧⲛ .",
+      "english": "Wake up righteously, and don&apos;t sin, for some have no knowledge of God. I say this to your shame.",
+      "source": "1 Corinthians 15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲕ ⲟⲩⲇⲓⲕⲁⲓⲟⲥ ⲇⲉ ⲕⲣϩⲙⲙⲉ ⲙⲙⲟⲟⲩ ⲧⲏⲣⲟⲩ **ⲇⲓⲕⲁⲓⲱⲥ** ⲉⲕⲱⲡ ⲙⲡⲁⲓ ϫⲉⲟⲩϣⲙⲙⲟ ⲡⲉ ⲉⲧⲉⲕϭⲟⲙ ⲉⲕⲟⲗⲁⲍⲉ ⲛⲟⲩⲁ ⲉⲛϥⲙⲡϣⲁ ⲁⲛ ⲛⲧϭⲁⲓⲟϥ",
+      "english": "Forsomuch then as thou art righteous thyself, thou orderest all things righteously: thinking it not agreeable with thy power to condemn him that hath not deserved to be punished.",
+      "source": "Wisdom 12",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲏⲫⲉ",
+        2,
+        14.09
+      ],
+      [
+        "ⲅⲁⲣ",
+        5,
+        11.944
+      ],
+      [
+        "ⲕⲣⲓⲛⲉ",
+        2,
+        11.463
+      ],
+      [
+        "ⲕⲣⲓⲙⲁ",
+        1,
+        11.343
+      ],
+      [
+        "ⲣⲛⲟⲃⲉ",
+        2,
+        11.103
+      ],
+      [
+        "ⲥⲟϭ",
+        1,
+        10.768
+      ],
+      [
+        "ⲁⲗⲏⲑⲱⲥ",
+        1,
+        10.488
+      ],
+      [
+        "ⲣⲁⲥⲟⲩ",
+        1,
+        10.455
+      ],
+      [
+        "ⲛⲟϭ",
+        3,
+        10.353
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        2,
+        10.276
+      ],
+      [
+        "ⲱⲡ",
+        1,
+        10.129
+      ],
+      [
+        ".",
+        5,
+        9.823
+      ],
+      [
+        "ⲥⲟⲟⲩϩ",
+        1,
+        9.821
+      ],
+      [
+        "ⲉⲣⲟ",
+        4,
+        9.784
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        3,
+        9.732
+      ],
+      [
+        "ⲃⲟⲏⲑⲉⲓ",
+        1,
+        9.549
+      ],
+      [
+        "ⲛⲧⲉⲧⲛ",
+        1,
+        9.438
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        9.335
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.274
+      ],
+      [
+        "ⲁ",
+        6,
+        9.099
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2742,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "538",
+    "grl_lemma": "δικαίως",
+    "grl_meaning": "righteously",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 429a; Preisigke 1:381"
+  }
+}

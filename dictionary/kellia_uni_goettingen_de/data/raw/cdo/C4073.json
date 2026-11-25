@@ -1,0 +1,74 @@
+{
+  "id": "C4073",
+  "forms": [
+    {
+      "id": "CF10089",
+      "orth": "ⲧⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1442,
+        "count": 54
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPERO",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Poss. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS4627",
+      "bibliography": "CD 260b; CED 180; KoptHWb 220; DELC 210a; LCG § 54"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲛⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲛⲉϥϣⲡϩⲙⲟⲧ ⲡⲉ ⲛ**ⲧⲱ**ⲡⲛⲟⲩⲧⲉ ⲻ",
+      "english": "And in all things he gave thanks to God.",
+      "source": "Apophthegmata Patrum Sahidic 045",
+      "urn": "urn:cts:copticLit:ap.45.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲛⲁⲙⲉ ⲡⲉ ⲡⲣⲱⲙⲉ ⲛⲧⲁⲛⲉϥϩⲓⲥⲉ ⲟⲩⲱ · ⲁⲩⲱ ⲁϥⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲙⲡⲙⲧⲟⲛ ⲉⲧⲉⲙⲉϥⲟⲩⲱ ϣⲁⲉⲛⲉϩ · ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ ϫⲉⲛⲁⲓⲁⲧⲟⲩ ⲛⲛϩⲏⲕⲉ ϩⲙⲡⲉⲡⲛⲉⲩⲙⲁ · ϫⲉ**ⲧⲱ**ⲟⲩ ⲧⲉ ⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ ·",
+      "english": "In very truth this is the man whose sorrows shall come to an end, and who shall inherit the rest that shall never end, even as it is written, 'Blessed are the poor in spirit, for to them belongeth the kingdom which is in the heavens.'",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓϫⲛⲟⲩϥ ϫⲉⲛⲧⲁⲕⲉⲓ ⲉⲡⲉⲓⲙⲁ ⲛⲁϣ ⲛϩⲉ · ⲁⲩⲱ ⲉⲓⲥⲟⲩⲏⲣ · ⲛⲟⲩⲟⲉⲓϣ ϫⲓⲛⲧⲁⲕⲉⲓ ⲉⲡⲉⲓⲙⲁ · ⲁⲩⲱ ⲛⲉϣⲁⲕⲟⲩⲙⲟⲩ · ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲉⲕⲕⲏⲕⲁϩⲏⲩ ⲉⲙⲛϩⲃⲥⲱ **ⲧⲱ** ϩⲓⲱⲱⲕ ·",
+      "english": "And I asked him, saying, ' How didst thou come to this place? And how long ago is it since thou didst come here? And what dost thou usually eat? And why dost thou go naked and wear no € clothing on thy body?",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2394",
+      "type": "cf",
+      "label": "Poss. Pron. pl."
+    },
+    {
+      "target": "C2798",
+      "type": "cf",
+      "label": "Poss. Pron. sg. m."
+    }
+  ],
+  "etym": {
+    "egy_num": "550046",
+    "egy_lemma": "tꜣy=",
+    "demo_num": "d7044",
+    "demo_lemma": "tꜣj=",
+    "english": "[poss. adj., fem. sing.]",
+    "german": "[Poss.artikel sg.f.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550046",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7044"
+  }
+}

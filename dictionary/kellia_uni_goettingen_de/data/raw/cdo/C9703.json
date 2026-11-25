@@ -1,0 +1,510 @@
+{
+  "id": "C9703",
+  "forms": [
+    {
+      "id": "CF24945",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24949",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2499,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF24947",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2158,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF24948",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24946",
+      "orth": "ⲙⲁⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8475,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF24950",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF24951",
+      "orth": "ⲙⲁⲛⲛⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12515",
+      "bibliography": "DDGLC",
+      "cu_ID": "170"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϩⲟⲛϩⲉⲛ ⲛⲛⲓϭⲏⲡⲓ ⲉⲧⲥⲁⲡϣⲱⲓ ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲛ ⲛⲛⲓⲣⲱⲟⲩ ⲛⲧⲉⲧⲫⲉ ⲁϥϩⲱⲟⲩ ⲛⲱⲟⲩ ⲛⲟⲩ**ⲙⲁⲛⲛⲁ** ⲉⲑⲣⲟⲩⲟⲩⲱⲙ ⲟⲩⲟϩ ⲟⲩⲱⲓⲕ ⲛⲧⲉⲧⲫⲉ ⲁϥⲧⲏⲓϥ ⲛⲱⲟⲩ ⲡⲱⲓⲕ ⲛⲧⲉⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲁϥⲟⲩⲟⲙϥ ⲛϫⲉⲫⲣⲱⲙⲓ ⲁϥⲟⲩⲱⲣⲡ ⲛⲱⲟⲩ ⲛⲟⲩϧⲣⲉ ⲉⲩⲥⲓ",
+      "english": "Forasmuch as he smote the rock, and the waters flowed, and the torrents ran abundantly; will he be able also to give bread, or prepare a table for his people?",
+      "source": "19_Psalmi_77",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:77",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲑⲣⲟⲛⲟⲥ ⲡⲟⲣϣ · ⲡⲣⲟ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲟⲩⲱⲛ · ⲡⲉⲧⲛⲁϫⲣⲟ ϯⲛⲁϯ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲙⲡ**ⲙⲁⲛⲛⲁ** ⲉⲧϩⲏⲡ ·",
+      "english": "The throne is spread, the door of the kingdom is open, 'to him who overcometh will I give the manna which is his'",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϯⲣⲉⲛϥ ⲛϫⲉⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲡⲓ**ⲙⲁⲛⲛⲁ** ⲛⲁϥⲟⲓ ⲇⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩϫⲣⲟϫ ⲙⲃⲉⲣϣⲏⲟⲩ ⲉϥⲟⲩⲟⲃϣ ⲧⲉϥϯⲡⲓ ⲇⲉ ⲙⲫⲣⲏϯ ⲛⲟⲩⲉⲅⲕⲣⲓⲥ ϧⲉⲛⲟⲩⲉⲃⲓⲱ",
+      "english": "And the children of Israel called the name of it Man; and it was as white coriander seed, and the taste of it as a wafer with honey.",
+      "source": "02_Exodus_16",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲙⲁⲛⲛⲁ** ⲇⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϭⲣⲟϭ ⲛⲃⲣⲉϣⲏⲩ ⲁⲩⲱ ⲡⲉϥⲉⲓⲛⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲙⲡⲉⲓⲛⲉ ⲛⲟⲩⲕⲣⲩⲥⲧⲁⲗⲗⲟⲥ",
+      "english": "And the manna is as coriander seed, and the appearance of it the appearance of hoar-frost.",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲉⲛⲓⲟϯ ⲁⲩⲟⲩⲱⲙ ⲙⲡⲓ**ⲙⲁⲛⲛⲁ** ⲛϩⲣⲏ ⲓϩⲓ ⲡϣⲁϥⲉ ⲟⲩⲟϩ ⲁⲩⲙⲟⲩ .",
+      "english": "Your fathers ate the manna in the wilderness, and they died.",
+      "source": "04_John_06",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϩⲱⲟⲩ ⲛⲁⲩ ⲙⲡ**ⲙⲁⲛⲛⲁ** ⲉⲟⲩⲟⲙϥ ⲁϥϯ ⲛⲁⲩ ⲙⲡⲟⲉⲓⲕ ⲛⲧⲡⲉ",
+      "english": "and rained upon them manna to eat, and gave them the bread of heaven.",
+      "source": "Psalms 77",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:77",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉⲙⲙⲟ",
+        2,
+        14.747
+      ],
+      [
+        "ϩⲙ",
+        1,
+        13.995
+      ],
+      [
+        "ⲅⲟⲙⲟⲣ",
+        1,
+        13.995
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        5,
+        13.487
+      ],
+      [
+        "ϩⲣⲏ",
+        1,
+        13.41
+      ],
+      [
+        "ⲡⲓ",
+        11,
+        12.449
+      ],
+      [
+        "ϣⲁϥⲉ",
+        3,
+        12.423
+      ],
+      [
+        "ϩⲓ",
+        4,
+        11.837
+      ],
+      [
+        "ⲡ",
+        8,
+        10.919
+      ],
+      [
+        "ⲗⲓⲃⲁⲛⲟⲥ",
+        1,
+        10.44
+      ],
+      [
+        "ⲙ",
+        6,
+        9.637
+      ],
+      [
+        "ϩⲏⲡ",
+        1,
+        9.535
+      ],
+      [
+        "ⲛ",
+        7,
+        9.312
+      ],
+      [
+        "ⲭⲁ",
+        2,
+        9.176
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        8.766
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        5,
+        8.345
+      ],
+      [
+        "ⲟⲩⲓ",
+        1,
+        8.181
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        8.063
+      ],
+      [
+        "ⲛϩⲣⲏⲓ",
+        1,
+        8.035
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.019
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲉⲓⲙⲁⲛⲛⲁ",
+        1,
+        16.35
+      ],
+      [
+        "ⲙⲁⲣⲕⲁⲣⲓⲧⲏⲥ",
+        1,
+        14.765
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        6,
+        14.136
+      ],
+      [
+        "ⲧⲉⲣⲉ",
+        1,
+        14.028
+      ],
+      [
+        "ⲙⲙⲟⲥ",
+        1,
+        14.028
+      ],
+      [
+        "ⲛⲟⲩϥⲉ",
+        1,
+        13.765
+      ],
+      [
+        "ⲧⲙⲉ",
+        1,
+        12.443
+      ],
+      [
+        "ⲡ",
+        15,
+        11.97
+      ],
+      [
+        "ϩⲏⲡ",
+        2,
+        11.866
+      ],
+      [
+        "ⲉⲣⲏⲙⲟⲥ",
+        2,
+        11.858
+      ],
+      [
+        "ⲛ",
+        16,
+        11.561
+      ],
+      [
+        "ⲧⲙⲙⲟ",
+        1,
+        11.492
+      ],
+      [
+        "ⲙ",
+        11,
+        11.482
+      ],
+      [
+        "ϣⲓ",
+        2,
+        10.949
+      ],
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        10.706
+      ],
+      [
+        "ϩⲟⲗϭ",
+        1,
+        10.263
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        2,
+        10.178
+      ],
+      [
+        "ϩⲱⲧⲡ",
+        1,
+        9.622
+      ],
+      [
+        "ⲉⲛϣⲁⲛ",
+        1,
+        9.361
+      ],
+      [
+        "ϩⲙⲉ",
+        1,
+        9.273
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          13
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲣⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ϩⲣⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲏⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲛⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          "ⲛ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲛⲛⲁ",
+          "ϩⲣⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲏ_2_post_ⲛ",
+          "ⲓ_3_post_ϩⲣⲏ",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          "ϩⲏⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲁⲛⲛⲁ",
+          "ⲙⲁⲛⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲛⲛⲁ",
+          "ⲟⲩ_1_pre_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲛⲛⲁ",
+          "ⲙⲁⲛⲛⲁ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          15
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲛⲛⲁ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲏⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_3_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲙⲁⲛⲛⲁ",
+          "ⲙⲁⲛⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲛⲛⲁ",
+          "ϩⲏⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲛⲛⲁ",
+          "ⲙⲁⲛⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲛⲁ_0_node",
+          "ⲡⲁⲓ_1_post_ⲙⲁⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲙⲁⲛⲛⲁ",
+          "ⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲡⲁⲓ",
+          "ⲛ_4_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲟⲟⲩⲛ",
+          "ⲥⲉ_4_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_4_post_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_3_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2207,
+      "count": 19
+    },
+    "B": {
+      "rate": 0.15,
+      "rank": 1862,
+      "count": 13
+    }
+  },
+  "etym": {
+    "grl_ID": "2535",
+    "grl_lemma": "μάννα (I)",
+    "grl_meaning": "manna",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1079b; Preisigke 2:50; Bauer 995"
+  }
+}

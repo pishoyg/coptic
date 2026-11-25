@@ -1,0 +1,159 @@
+{
+  "id": "C3791",
+  "forms": [
+    {
+      "id": "CF9504",
+      "orth": "ⲥⲏⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18493,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4303",
+      "bibliography": "CD 359a; KoptHWb 200; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲃⲱⲕ ⲛⲙⲙⲁϥ ⲉⲡⲉ**ⲥⲏⲧⲉ** ⲉⲡϣⲏⲕ ⲁⲩⲱ ⲙⲡⲥⲃⲟϣϥ ϩⲛⲙⲙⲣⲣⲉ ϣⲁⲛⲧⲥⲉⲓⲛⲉ ⲛⲁϥ ⲛⲟⲩϭⲣⲏⲡⲉ ⲙⲙⲛⲧⲣⲣⲟ ⲙⲛⲟⲩⲉⲝⲟⲩⲥⲓⲁ ⲉϫⲛⲛⲉⲧϫⲓ ⲙⲙⲟϥ ⲛϭⲟⲛⲥ ⲁⲥⲟⲩⲱⲛϩ ⲛⲛⲉⲧϩⲓⲗⲁ ⲉⲣⲟϥ ϫⲉⲉⲩϫⲓϭⲟⲗ ⲁⲥϯ ⲛⲁϥ ⲛⲟⲩⲉⲟⲟⲩ ⲛϣⲁⲉⲛⲉϩ",
+      "english": "And left him not in bonds, till she brought him the sceptre of the kingdom, and power against those that oppressed him: as for them that had accused him, she shewed them to be liars, and gave him perpetual glory.",
+      "source": "Wisdom 10",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏ",
+        1,
+        15.954
+      ],
+      [
+        "ⲉⲡ",
+        1,
+        14.715
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        9.47
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲏⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18112,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3796",
+      "label": "ϫⲓⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "get ransom"
+    },
+    {
+      "target": "C3795",
+      "label": "ϯ ⲉⲡⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "pay for, as ransom"
+    },
+    {
+      "target": "C3794",
+      "label": "ϯⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem"
+    },
+    {
+      "target": "C3790",
+      "label": "ⲣⲉϥⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "spinner"
+    },
+    {
+      "target": "C3797",
+      "label": "ⲣⲉϥⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redeemer"
+    },
+    {
+      "target": "C3787",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "return, repeat, not . . . again (in neg. clause)"
+    },
+    {
+      "target": "C3789",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "stretch, reach; spin"
+    },
+    {
+      "target": "C3788",
+      "label": "ⲥⲱⲧ (ⲉ-)",
+      "pos": "V",
+      "gloss": "repeat (to do sth)"
+    },
+    {
+      "target": "C3792",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem, rescue, save"
+    },
+    {
+      "target": "C3793",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redemption, rescue; ransom, price"
+    }
+  ]
+}

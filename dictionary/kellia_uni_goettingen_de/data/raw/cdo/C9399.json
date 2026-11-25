@@ -1,0 +1,195 @@
+{
+  "id": "C9399",
+  "forms": [
+    {
+      "id": "CF23743",
+      "orth": "ⲕⲉⲣⲁⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23746",
+      "orth": "ⲕⲉⲣⲁⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8010,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23744",
+      "orth": "ϭⲉⲣⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23745",
+      "orth": "ⲕⲁⲓⲣⲉⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23747",
+      "orth": "ⲕⲉⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23748",
+      "orth": "ⲕⲉⲣⲉⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8840,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23749",
+      "orth": "ⲕⲉⲣⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23750",
+      "orth": "ⲕⲩⲣⲉⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23751",
+      "orth": "ⲭⲉⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11874",
+      "bibliography": "DDGLC",
+      "cu_ID": "1999"
+    },
+    {
+      "id": "CS11875",
+      "bibliography": "DDGLC",
+      "cu_ID": "7519"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲙⲟⲩⲛ ⲛⲧⲃⲁ ⲛϥⲁⲓⲉⲧⲡⲱ · ⲛ(?)ϣⲟⲙⲛⲧ ⲛⲧⲃⲁ ϩⲙⲡⲗⲓⲃⲁⲛⲟⲥ ⲉⲩ**ⲕⲉⲣⲁⲓⲁ**ϣⲉ · ⲙⲁⲃⲧⲁⲥⲉ ⲛϣⲉ ⲛⲥⲁϩ · ϣⲙⲟⲩⲛ ⲛⲧⲃⲁ ⲛⲗⲁⲧⲟⲙⲟⲥ ϩⲙⲡⲧⲟⲟⲩ ·",
+      "english": "the work of the eighty thousand men who bare burdens, and thirty thousand men who cut down trees in Lebanon, and thirty-six hundred scribes (i.e., overseers), and eighty thousand hewers of stone in the mountains.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲛⲁⲃⲱⲕ ⲉϩⲟⲩⲛ ⲙⲛⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ⲉⲩⲙⲁ ⲛϣⲏⲛ ⲉⲩ**ⲕⲉⲣⲁⲓⲁ**ϣⲉ ⲁⲩⲱ ⲛⲧⲉⲧⲉϥϭⲓϫ ϫⲱⲣⲡ ⲉϥⲕⲱⲱⲣⲉ ⲙⲡϣⲉ ϩⲙⲡⲕⲉⲗⲉⲃⲓⲛ ⲁⲩⲱ ⲛⲧⲉⲡⲃⲉⲛⲓⲡⲉ ⲛⲟⲩϩⲉ ⲉⲃⲟⲗ ⲛⲧⲧⲱⲣⲉ ⲛϥⲣⲁϩⲧ ⲡⲉⲧϩⲓⲧⲟⲩⲱϥ ⲛϥⲙⲟⲩ ⲡⲁⲓ ⲉϥⲉⲡⲱⲧ ⲉⲩⲉⲓ ⲛⲛⲉⲓⲡⲟⲗⲓⲥ ⲛϥⲱⲛϩ",
+      "english": "And whosoever shall enter with his neighbour into the thicket, to gather wood, if the hand of him that cuts wood with the axe should be violently shaken, and the axe head falling off from the handle should light on his neighbour, and he should die, he shall flee to one of these cities, and live.",
+      "source": "Deuteronomy 19",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲃⲧⲁⲥⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲗⲓⲃⲁⲛⲟⲥ",
+        1,
+        13.331
+      ],
+      [
+        "ϣⲉ",
+        2,
+        13.182
+      ],
+      [
+        "ϣⲏⲛ",
+        1,
+        11.272
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲕⲉⲣⲁⲓⲁ",
+          2
+        ],
+        [
+          "ⲕⲉⲣⲁⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ϣⲉ_1_post_ⲕⲉⲣⲁⲓⲁ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲕⲉⲣⲁⲓⲁ",
+          "ⲕⲉⲣⲁⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲕⲉⲣⲁⲓⲁ_0_node",
+          "ϣⲉ_1_post_ⲕⲉⲣⲁⲓⲁ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7566,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1097",
+    "grl_lemma": "κειρία",
+    "grl_meaning": "bandage",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 935a; Preisigke 1:798"
+  }
+}

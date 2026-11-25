@@ -1,0 +1,64 @@
+{
+  "id": "C1482",
+  "forms": [
+    {
+      "id": "CF4389",
+      "orth": "ϯ ⲉⲡⲕⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1727",
+      "bibliography": "CD 130b; ChLCS 20"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1478",
+      "label": "ⲕⲁϣ",
+      "pos": "N",
+      "gloss": "reed"
+    },
+    {
+      "target": "C1479",
+      "label": "ⲕⲁϣ",
+      "pos": "N",
+      "gloss": "reed"
+    },
+    {
+      "target": "C1483",
+      "label": "ⲕⲁϣ",
+      "pos": "N",
+      "gloss": "reed-bed, plantation"
+    },
+    {
+      "target": "C1481",
+      "label": "ⲕⲱⲱⲣⲉ ⲕⲁϣ",
+      "pos": "V",
+      "gloss": "cut, gather reeds"
+    },
+    {
+      "target": "C1480",
+      "label": "ⲙⲁ ⲛⲕⲁϣ",
+      "pos": "N",
+      "gloss": "bed, plantation of reeds"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "C8391",
+  "forms": [
+    {
+      "id": "CF19539",
+      "orth": "ⲁⲡⲟⲥⲧⲉⲣⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF19542",
+      "orth": "ⲁⲡⲟⲥⲧⲉⲣⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19543",
+      "orth": "ⲁⲡⲟⲥⲧⲉⲣⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7401,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19540",
+      "orth": "ⲁⲡⲟⲥⲧⲉⲣⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19541",
+      "orth": "ⲁⲡⲟⲥⲧⲉⲣⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9682",
+      "bibliography": "DDGLC",
+      "cu_ID": "876"
+    },
+    {
+      "id": "CS9683",
+      "bibliography": "DDGLC",
+      "cu_ID": "3106"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲟⲗⲗⲁⲕⲓⲥ ⲕⲛⲁϫⲟⲟⲥ ϫⲉⲁⲩϫⲓⲧ ⲛϭⲟⲛⲥ ⲁⲩ**ⲁⲡⲟⲥⲧⲉⲣⲓ** ⲙⲙⲟⲓ ⲛⲛⲁϩⲩⲡⲁⲣⲭⲟⲛⲧⲁ ⲁⲩⲡⲗⲁⲡⲧⲉⲓ ⲙⲙⲟⲓ · ⲁⲩϣⲁϫⲉ ⲛⲥⲱⲓ ⲕⲁⲕⲱⲥ ·",
+      "english": "Moreover, on many occasions thou hast said, 'They have treated me unjustly, they have defrauded me of my property, they have done me an injury, and they have spoken evil things against me ';",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡⲉⲕⲙⲁ ⲛⲉⲁⲓϫⲟⲟⲥ ⲡⲉ ϫⲉϯⲛⲁⲧⲁⲉⲓⲟⲕ ⲧⲉⲛⲟⲩ ϭⲉ ⲁⲡⲛⲟⲩⲧⲉ **ⲁⲡⲟⲥⲧⲉⲣⲓ** ⲙⲙⲟⲕ ⲉⲡⲉⲟⲟⲩ",
+      "english": "Now therefore flee to thy place: I said, I will honour thee, but now the Lord has deprived thee of glory.",
+      "source": "Numbers 24",
+      "urn": "urn:cts:copticLit:ot.num.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲟⲛⲥ",
+        1,
+        11.511
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.981
+      ],
+      [
+        "ϭⲉ",
+        1,
+        8.45
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.779
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ϭⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲉⲣⲓ_0_node",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ϭⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ϭⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲁ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲁⲡⲟⲥⲧⲉⲣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲩ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲁⲡⲟⲥⲧⲉⲣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲉⲣⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ⲛ_1_post_ⲁⲡⲟⲥⲧⲉⲣⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6948,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "242",
+    "grl_lemma": "ἀποστερέω",
+    "grl_meaning": "to rob, dispoil",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 219b; Preisigke 1:194"
+  }
+}

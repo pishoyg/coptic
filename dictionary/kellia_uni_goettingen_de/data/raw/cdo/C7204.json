@@ -1,0 +1,142 @@
+{
+  "id": "C7204",
+  "forms": [
+    {
+      "id": "CF16467",
+      "orth": "ϫⲱⲗϩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16092,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7952",
+      "bibliography": "CD 769b; CED 313; KoptHWb 421, 572; ChLCS 102a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲱⲛⲁⲑⲁⲛ ⲇⲉ ⲡϣⲏⲣⲉ ⲛⲥⲁⲟⲩⲗ ⲛⲉⲟⲩⲛⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛⲟⲩϣⲏⲣⲉ ⲉϥϣⲟⲟϭⲉ ⲉⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲉⲩϣⲏⲣⲉ ⲡⲉ ⲉϥϩⲛϯ ⲛⲣⲟⲙⲡⲉ ⲡⲁⲓ ⲇⲉ ⲛⲧⲉⲣⲟⲩⲛⲡⲟⲩⲱ ⲛⲥⲁⲟⲩⲗ ⲙⲛⲓⲱⲛⲁⲑⲁⲛ ⲡⲉϥϣⲏⲣⲉ ⲉⲃⲟⲗ ϩⲙⲡⲓⲥⲣⲁⲏⲗ ⲧⲉϥⲙⲟⲟⲛⲉ ⲁⲥϥⲓⲧϥ ⲁⲥⲡⲱⲧ ⲛⲙⲙⲁϥ ⲉⲥⲡⲏⲧ ⲇⲉ ⲛⲙⲙⲁϥ ⲉⲁϥ**ϫⲱⲗϩⲥ** ⲁϥϩⲉ ⲁϥⲣϭⲁⲗⲉ ⲡⲉϥⲣⲁⲛ ⲡⲉ ⲙⲉⲙⲫⲓⲃⲟⲥⲑⲉ",
+      "english": "And Jonathan Saul's son had a son lame of his feet, five years old, and he was in the way when the news of Saul and Jonathan his son came from Jezrael, and his nurse took him up, and fled; and it came to pass as he hasted and retreated, that he fell, and was lamed. And his name was Memphibosthe.",
+      "source": "II Samuel 4",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁ",
+        3,
+        9.799
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲱⲗϩⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱⲗϩⲥ",
+          1
+        ],
+        [
+          "ϫⲱⲗϩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϩⲉ_1_post_ϫⲱⲗϩⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲱⲗϩⲥ",
+          "ϥ_1_pre_ϫⲱⲗϩⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱⲗϩⲥ",
+          "ϫⲱⲗϩⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲱⲗϩⲥ_0_node",
+          "ⲁ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϩⲉ",
+          "ϥ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲉ",
+          "ϩⲉ_1_post_ϫⲱⲗϩⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15694,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7205",
+      "label": "ϫⲗϩⲏⲥ",
+      "pos": "V",
+      "gloss": "be exhausted, pant"
+    },
+    {
+      "target": "C7206",
+      "label": "ϫⲗϩⲏⲥ",
+      "pos": "N",
+      "gloss": "exhaustion, panting"
+    },
+    {
+      "target": "C7207",
+      "label": "ⲉⲗϩⲏⲥ",
+      "pos": "N",
+      "gloss": "exhaustion, panting(?)"
+    }
+  ]
+}

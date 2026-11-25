@@ -1,0 +1,307 @@
+{
+  "id": "C3042",
+  "forms": [
+    {
+      "id": "CF7955",
+      "orth": "ⲕⲁⲣⲱϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3288,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3484",
+      "bibliography": "CD 288b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲙⲁⲣⲉϥⲥⲱⲧⲡ ⲛⲁϥ ⲙⲡ**ⲕⲁⲣⲱϥ** ⲻ",
+      "english": "'Let him choose to be silent.'",
+      "source": "Apophthegmata Patrum Sahidic 137: P263",
+      "urn": "urn:cts:copticLit:ap.137.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡϩⲗⲗⲟ ϫⲉⲉⲛⲟⲩⲉϣⲡ**ⲕⲁⲣⲱϥ** ·",
+      "english": "The monk said, 'What we desire is silence,",
+      "source": "Apophthegmata Patrum Sahidic 133: N 303",
+      "urn": "urn:cts:copticLit:ap.133.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲉϣⲱⲡⲉ ⲙⲉϥϯϩⲏⲩ ⲉⲡⲉⲛ**ⲕⲁⲣⲱϥ** · ⲉⲓⲉ ⲉⲛϣⲁⲛϣⲁϫⲉ ⲟⲛ ⲛϥⲛⲁϯϩⲏⲩ ⲁⲛ ·",
+      "english": "'If he does not always benefit from our silence, then if we speak he will still not benefit.'",
+      "source": "Apophthegmata Patrum Sahidic 114: Theophilus Beta",
+      "urn": "urn:cts:copticLit:ap.114.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲱⲉⲣⲟⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ϯϩⲏⲩ",
+        2,
+        13.268
+      ],
+      [
+        "ⲉⲛϣⲁⲛ",
+        2,
+        13.15
+      ],
+      [
+        "ⲁϫⲓ",
+        2,
+        12.214
+      ],
+      [
+        "ⲟⲩⲏⲛ",
+        1,
+        12.094
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        2,
+        12.056
+      ],
+      [
+        "ⲉⲓⲉ",
+        2,
+        11.116
+      ],
+      [
+        "ⲫⲟⲣⲉⲓ",
+        1,
+        10.729
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        1,
+        9.647
+      ],
+      [
+        "ⲡⲉⲛ",
+        2,
+        9.622
+      ],
+      [
+        "ⲛⲧⲕ",
+        1,
+        9.127
+      ],
+      [
+        "ⲧⲁⲡⲣⲟ",
+        1,
+        8.351
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        2,
+        8.285
+      ],
+      [
+        "ϣⲁϫⲉ",
+        2,
+        8.012
+      ],
+      [
+        "ⲡ",
+        5,
+        8.003
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        7.605
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        7.428
+      ],
+      [
+        "ⲉ",
+        4,
+        7.358
+      ],
+      [
+        "ⲛ",
+        5,
+        7.315
+      ],
+      [
+        "ϥ",
+        4,
+        7.062
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲕⲁⲣⲱϥ",
+          2
+        ],
+        [
+          "ⲕⲁⲣⲱϥ_0_node",
+          7
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲁⲣⲱϥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲁⲣⲱϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲱϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲁⲣⲱϥ",
+          "ⲕⲁⲣⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲕⲁⲣⲱϥ",
+          "ⲕⲁⲣⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲁⲣⲱϥ",
+          "ⲕⲁⲣⲱϥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲱϥ",
+          "ⲕⲁⲣⲱϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2933,
+      "count": 11
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3052",
+      "label": "ϩⲁⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "beneath, before (\"under mouth of\")"
+    },
+    {
+      "target": "C3053",
+      "label": "ϩⲓⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "at door of, at, upon (\"at mouth of\")"
+    },
+    {
+      "target": "C3046",
+      "label": "ϫⲉⲕⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "fill mouth, satisfy"
+    },
+    {
+      "target": "C3045",
+      "label": "ϫⲓⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "deprive, prevent, anticipate (\"take the word\")"
+    },
+    {
+      "target": "C3044",
+      "label": "ϯⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "give sb one's word, promise"
+    },
+    {
+      "target": "C3043",
+      "label": "ⲁⲧⲕⲁⲣⲱ⸗",
+      "pos": "N",
+      "gloss": "without keeping one's mouth shut, never silent"
+    },
+    {
+      "target": "C3047",
+      "label": "ⲁⲧⲣⲟ",
+      "pos": "N",
+      "gloss": "doorless"
+    },
+    {
+      "target": "C3039",
+      "label": "ⲁⲧⲣⲱϥ",
+      "pos": "N",
+      "gloss": "mouthless (not speaking the language)"
+    },
+    {
+      "target": "C3050",
+      "label": "ⲉⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "to, upon, against (\"to mouth of\")"
+    },
+    {
+      "target": "C12191",
+      "label": "ⲕⲁⲣⲁⲓⲧϥ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C3040",
+      "label": "ⲕⲱ ⲛⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "keep one's mouth shut, be silent"
+    },
+    {
+      "target": "C3051",
+      "label": "ⲛⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "to, upon, against (\"to mouth of\")"
+    },
+    {
+      "target": "C3048",
+      "label": "ⲡⲁⲡⲣⲟ",
+      "pos": "N",
+      "gloss": "he of the door, doorkeeper"
+    },
+    {
+      "target": "C3049",
+      "label": "ⲣⲁ-",
+      "pos": "N",
+      "gloss": "part, fraction"
+    },
+    {
+      "target": "C3038",
+      "label": "ⲣⲟ",
+      "pos": "N",
+      "gloss": "mouth; edge of weapon; door, gate"
+    },
+    {
+      "target": "C3041",
+      "label": "ⲭⲁⲣⲱϥ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "open mouth upward, lift up voice"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "C739",
+  "forms": [
+    {
+      "id": "CF2774",
+      "orth": "ⲉⲧⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 22.88,
+        "rank": 59,
+        "count": 3610
+      }
+    },
+    {
+      "id": "CF2775",
+      "orth": "ⲉⲧⲃⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2776",
+      "orth": "ⲉⲧⲃⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2777",
+      "orth": "ⲉⲧⲃⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2778",
+      "orth": "ⲉⲧⲃⲉ-",
+      "dialect": "M"
+    },
+    {
+      "orth": "ⲉⲑⲃⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 21.59,
+        "rank": 68,
+        "count": 1831
+      }
+    },
+    {
+      "orth": "ⲉⲑⲃⲏⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.15,
+        "rank": 441,
+        "count": 182
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS881",
+      "bibliography": "CD 61ab; CED 39; KoptHWb 41, 500; DELC 47; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲁⲓ ⲇⲉ ⲉⲩⲉⲣⲙⲉⲑⲣⲉ ϧⲁⲣⲟϥ ⲛϫⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ **ⲉⲑⲃⲉ** ⲛⲉϥⲁⲣⲉⲧⲏ .",
+      "english": "Everyone testified to his virtues.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲧⲃⲉ**ⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲇⲉ ⲓⲱⲥⲏⲫ",
+      "english": "About the holy Joseph:",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲑⲃⲉ**ⲫⲁⲓ ⲁϥⲉⲣⲁⲅⲱⲛⲓⲍⲉⲥⲑⲉ ϣⲁⲧⲉϥⲛⲁⲩ ⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "For this reason he strove until he saw Peter.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲉⲧⲃⲉ**ⲟⲩ ⲛⲇⲁⲓⲙⲱⲛ ⲙⲓϣⲉ ⲛⲙⲙⲁⲛ ⲛⲧⲉⲓϩⲉ ⲧⲏⲣⲥ ·",
+      "english": "'Why do demons attack us like all this?'",
+      "source": "Apophthegmata Patrum Sahidic 132: N 302",
+      "urn": "urn:cts:copticLit:ap.132.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲑⲃⲉ**ⲁⲡⲁ ⲡⲁⲙⲱ .",
+      "english": "Concerning Abba Pambo.",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲉⲧⲃⲉ**ⲟⲩ ⲉⲓϩⲙⲟⲟⲥ ϩⲙⲡⲁⲙⲁⲛϣⲱⲱⲡⲉ",
+      "english": "why is it that when I sit in my dwelling",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C740",
+      "label": "ⲉⲧⲃⲉ ϫⲉ",
+      "pos": "CONJ",
+      "gloss": "because"
+    },
+    {
+      "target": "C741",
+      "label": "ⲉⲧⲃⲉ ⲡⲁⲓ",
+      "pos": "CONJ",
+      "gloss": "wherefore"
+    }
+  ],
+  "etym": {
+    "egy_num": "851527",
+    "egy_lemma": "r-ḏbꜣ.t",
+    "demo_num": "d3401",
+    "demo_lemma": "r-ḏbꜣ",
+    "english": "as a replacement; payment for; against; instead of; because of",
+    "german": "als Ersatz; Bezahlung für; gegen; anstelle von; wegen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851527",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3401"
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "id": "C8534",
+  "forms": [
+    {
+      "id": "CF20071",
+      "orth": "ⲁⲩⲑⲁⲇⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20072",
+      "orth": "ⲁⲩⲑⲁⲇⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.49,
+        "rank": 1143,
+        "count": 78
+      }
+    },
+    {
+      "id": "CF20073",
+      "orth": "ⲁⲩⲑⲁⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2809,
+        "count": 16
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9998",
+      "bibliography": "DDGLC",
+      "cu_ID": "5856"
+    },
+    {
+      "id": "CS9999",
+      "bibliography": "DDGLC",
+      "cu_ID": "8178"
+    },
+    {
+      "id": "CS10000",
+      "bibliography": "DDGLC",
+      "cu_ID": "11175"
+    },
+    {
+      "id": "CS10001",
+      "bibliography": "DDGLC",
+      "cu_ID": "11201"
+    },
+    {
+      "id": "CS10002",
+      "bibliography": "DDGLC",
+      "cu_ID": "1476"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲙⲉⲥⲧⲱⲥ ⲉⲙⲁⲧⲉ · ⲁⲩⲱ ⲡⲛⲟϭ ⲛⲧⲣⲓⲇⲩⲛⲁⲙⲟⲥ ⲛ**ⲁⲩⲑⲁⲇⲏⲥ** ⲡⲁⲓ ⲉⲛⲧⲁⲓⲟⲩⲱ ⲉⲓϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ⲧⲉⲛⲟⲩ ⲉⲧⲃⲏⲏⲧϥ ·",
+      "english": "and hated her exceedingly, that the great triple-powered Self-willed, of whom I have just now told you,",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ ⲟⲛ ⲁϥϣⲃⲧϥ ⲉⲩⲙⲟⲣⲫⲏ ⲛϩⲟϥ ⲛⲥⲓⲧⲉⲩⲛⲥⲁϣϥⲉ ⲛⲁⲡⲉ ⲙⲙⲟϥ · ⲕⲉⲟⲩⲁ ⲟⲛ ⲁϥϣⲃⲧϥ ⲉⲩⲙⲟⲣⲫⲏ ⲛⲇⲣⲁⲕⲱⲛ · ⲁⲩⲱ ⲙⲛⲧⲕⲉϣⲟⲣⲡ ⲛⲇⲩⲛⲁⲙⲓⲥ ⲛⲧⲉⲡⲁⲩⲑⲁⲧⲏⲥ ⲉⲧⲟ ⲛϩⲟ ⲙⲙⲟⲩⲓ · ⲁⲩⲱ ⲙⲛⲛⲉϥⲕⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲉⲛⲁϣⲱⲟⲩ ⲉⲙⲁⲧⲉ · ⲁⲩⲱ ⲁⲩⲉⲓ ⲉϩⲉⲛ ⲛⲉⲩⲉⲣⲏⲩ ⲁⲩϩⲱϫ ⲛⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ · ⲁⲩⲱ ⲟⲛ ⲁⲩⲛⲧⲥ ⲉⲛⲧⲟⲡⲟⲥ ⲉⲧⲙⲡⲉⲥⲏⲧ ⲙⲡⲉⲭⲁⲟⲥ · ⲁⲩⲱ ⲟⲛ ⲁⲩϣⲧⲣⲧⲱⲣⲥ ⲉⲙⲁⲧⲉ · ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲟⲩϣⲧⲣⲧⲱⲣⲥ · ⲁⲥⲡⲱⲧ ⲛⲧⲟⲟⲧⲟⲩ ⲁⲥⲉⲓ ⲉⲛⲧⲟⲡⲟⲥ ⲉⲧⲙⲡⲥⲁ ⲛⲧⲡⲉ ⲙⲡⲉⲭⲁⲟⲥ · ⲁⲩⲱ ⲁⲩⲡⲱⲧ ⲛⲥⲱⲥ ⲛϭⲓⲛⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲙⲡ**ⲁⲩⲑⲁⲇⲏⲥ** · ⲁⲩϣⲧⲣⲧⲱⲣⲥ ⲉⲙⲁⲧⲉ · ⲁⲥϣⲱⲡⲉ ϭⲉ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲁϥϭⲱϣⲧ ⲉⲃⲟⲗ ϩⲙⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲁⲓⲱⲛ ⲛϭⲓⲡⲁⲇⲁⲙⲁⲥ ⲡⲧⲩⲣⲁⲛⲛⲟⲥ ⲡⲁⲓ ⲟⲛ ⲉⲛⲉϥϭⲟⲛⲧ ⲉⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ · ⲉⲃⲟⲗ ϫⲉⲛⲉⲥⲟⲩⲉϣⲃⲱⲕ ⲉⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲛⲓⲟⲩⲟⲉⲓⲛ · ⲡⲁⲓ ⲛⲉϥ ⲛⲧⲡⲉ ⲙⲙⲟⲟⲩ ⲧⲏⲣⲟⲩ · ⲉⲧⲃⲉⲡⲁⲓ ⲛⲉϥϭⲟⲛⲧ ⲉⲣⲟⲥ ⲡⲉ · ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲉⲡⲁⲇⲁⲙⲁⲥ ⲡⲧⲩⲣⲁⲛⲛⲟⲥ ⲛⲧⲉⲣⲉϥϭⲱϣⲧ ⲉⲃⲟⲗ ϩⲙⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲁⲓⲱⲛ .",
+      "english": "“another again changed itself also into the form of a seven-headed basilisk; another again changed itself into the form of a dragon. And moreover the first power of Self-willed, the lion-faced, and all his other very numerous emanations, they came together and oppressed Pistis Sophia and led her again into the lower regions of the chaos and alarmed her again exceedingly. The demon-power of Adamas dasheth Sophia down.''It came to pass then that there looked down out of the twelve æons, Adamas, the Tyrant, who also was wroth with Pistis Sophia, because she desired to go to the Light of lights, which was above them all; therefore was he wroth with her. It came to pass then, when Adamas, the Tyrant, had looked down out of the twelve æons,”",
+      "source": "Pistis Sophia Book 2 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲛⲉⲙⲡⲟⲩⲉϣϩⲱⲛ ⲉⲣⲟⲥ ⲉⲡⲗⲁⲧⲉ ⲙⲙⲟⲥ · ⲁⲩⲱ ⲡϣⲁϫⲉ ⲉⲛⲧⲁⲧⲉⲕϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ϫⲟⲟϥ ϩⲓⲧⲛⲇⲁⲩⲓⲇ · ϫⲉⲡⲗⲏⲛ ⲕⲛⲁⲙⲉϩⲉⲓⲁⲧⲕ ⲙⲙⲟⲟⲩ · ⲁⲩⲱ ⲕⲛⲁⲛⲁⲩ ⲉⲡⲧⲟⲩⲓⲟ ⲛⲛⲣⲉϥⲣⲛⲟⲃⲉ · ϫⲉⲛⲧⲟⲕ ⲡϫⲟⲉⲓⲥ ⲡⲉ ⲧⲁϩⲉⲗⲡⲓⲥ · ⲉⲧⲉⲡⲁⲓ ⲡⲉ ⲡϣⲁϫⲉ · ϫⲉⲛⲧⲁⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ ⲙⲉϩⲉⲓⲁⲧⲥ ⲛⲛⲉⲥϫⲁϫⲉ · ⲉⲧⲉⲛⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲙⲡⲁⲩⲑⲁⲧⲏⲥ ⲛⲉⲛⲁⲓ ⲉⲛⲧⲁⲩϩⲉ ⲧⲏⲣⲟⲩ ⲉϫⲛⲛⲉⲩⲉⲣⲏⲩ ⲟⲩⲙⲟⲛⲟⲛ ⲁⲥⲙⲉϩⲉⲓⲁⲧⲥ ⲙⲙⲟⲟⲩ ϩⲙⲡⲁⲓ . ⲁⲗⲗⲁ ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲟⲛ ⲡⲁϫⲟⲉⲓⲥ ⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲁⲕϥⲓ ⲧϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲧϣⲟⲟⲡ ϩⲛϯϭⲟⲙ ⲛϩⲟ ⲙⲙⲟⲩⲓ ⲁⲩⲱ ⲟⲛ ⲁⲕϥⲓ ⲧϭⲟⲙ ⲛⲛⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲙⲡ**ⲁⲩⲑⲁⲧⲏⲥ** ⲁⲩⲱ ⲟⲛ ⲁⲕⲕⲁⲧⲉⲭⲉ ⲙⲙⲟⲟⲩ ϩⲙⲡⲉⲭⲁⲟⲥ ⲉⲧⲙⲙⲁⲩ ⲃⲱⲕ ⲉⲡⲉⲩⲧⲟⲡⲟⲥ ϫⲓⲛⲙⲡⲉⲓⲛⲁⲩ ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲁⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ ⲙⲉϩⲉⲓⲁⲧⲥ ⲛⲛⲉⲥϫⲁϫⲉ . ⲉⲧⲉⲛⲉⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ⲛⲉ ⲙⲡⲁⲩⲑⲁⲧⲏⲥ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲉⲛⲧⲁϥⲡⲣⲟⲫⲏⲧⲉⲩⲉ ⲙⲙⲟⲟⲩ ⲛϭⲓⲇⲁⲩⲉⲓⲇ . ϩⲁⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ · ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲗⲏⲛ ⲕⲛⲁⲙⲉϩⲉⲓⲁⲧⲕ ⲙⲙⲟⲟⲩ ·",
+      "english": "“and they could not come nigh her, to do her [harm]. And the word which thy light-power hath spoken through David: 'Nay rather with thine eyes wilt thou behold, and wilt see the requital of the sinners, for thou, O Lord, art my hope,'--that is the word: Pistis Sophia hath with her eyes beheld her foes, that is the emanations of Self-willed, who all | have fallen one on another; not only hath she with her eyes beheld this, but thou also thyself, my Lord, the First Mystery, hast taken the light-power which is in the lion-faced power, and hast moreover taken the power of all the emanations of Self-willed and moreover thou hast imprisoned them in that chaos, [so that] from henceforth they have not gone forth to their own region. Therefore then hath Pistis Sophia with her eyes beheld her foes, that is the emanations of Self-willed, in all which David hath prophesied concerning Pistis Sophia, saying: 'Nay rather with thine eyes wilt thou behold,”",
+      "source": "Pistis Sophia Book 2 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:10-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲁϣⲧ",
+        1,
+        13.051
+      ],
+      [
+        "ϣⲱϣ",
+        1,
+        10.907
+      ],
+      [
+        "ⲕ",
+        2,
+        9.128
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+        37,
+        22.788
+      ],
+      [
+        "ϩⲩⲗⲓⲕⲟⲛ",
+        6,
+        17.313
+      ],
+      [
+        "ⲡ",
+        76,
+        16.901
+      ],
+      [
+        "ⲙ",
+        59,
+        16.659
+      ],
+      [
+        "ⲛⲉ",
+        37,
+        16.602
+      ],
+      [
+        "ⲁ",
+        59,
+        16.352
+      ],
+      [
+        "ⲡⲣⲟⲃⲟⲗⲏ",
+        4,
+        15.451
+      ],
+      [
+        "ⲩ",
+        35,
+        14.858
+      ],
+      [
+        "ⲟⲩⲣⲟⲧⲧⲟⲛⲱ",
+        1,
+        14.258
+      ],
+      [
+        "ⲙⲛⲧⲉ",
+        1,
+        14.258
+      ],
+      [
+        "ϭⲁⲣ",
+        1,
+        14.258
+      ],
+      [
+        "ⲃⲟⲗⲟⲟⲩⲉ",
+        1,
+        14.258
+      ],
+      [
+        "ⲉ",
+        38,
+        14.221
+      ],
+      [
+        "ⲛⲁⲓ",
+        13,
+        13.672
+      ],
+      [
+        "ⲁⲩⲱ",
+        26,
+        13.509
+      ],
+      [
+        "ⲧⲣⲓⲇⲩⲛⲁⲙⲟⲥ",
+        2,
+        13.451
+      ],
+      [
+        "ⲓ",
+        19,
+        13.254
+      ],
+      [
+        "ϩⲱϫ",
+        3,
+        13.206
+      ],
+      [
+        "ⲧⲏⲣ",
+        13,
+        12.626
+      ],
+      [
+        "ⲛ",
+        29,
+        12.043
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          77
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          4
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲓ_4_post_ⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲟⲩⲱ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲡ_4_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲙ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          4
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          3
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲱϫ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲁⲓ",
+          2
+        ],
+        [
+          "ϯ_3_post_ⲉ",
+          2
+        ],
+        [
+          "ϩⲏϫ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲏⲣ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ϩⲁϭⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ϥ_3_post_ϭⲟⲛⲧ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲟ_3_post_ϭⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲩⲣⲁⲛⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲩⲣⲁⲛⲛⲟⲥ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲓ_4_post_ⲟⲩⲃⲏ",
+          1
+        ],
+        [
+          "ⲁⲧϭⲟⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲡⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          "ⲁ_4_post_ⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲟⲩⲱ",
+          "ⲓ_4_post_ⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲓ_4_post_ⲟⲩⲱ",
+          "ⲟⲩⲱ_3_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲉⲧⲉ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲡⲁⲓ",
+          "ⲙⲡ_4_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲡ_4_post_ⲥⲱⲧⲙ",
+          "ϥ_4_post_ⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲥⲱⲧⲙ",
+          "ⲥⲱⲧⲙ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲛⲟⲩⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲛ",
+          "ⲛⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          "ϩⲱϫ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲛⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲉ_2_post_ⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲉ_2_post_ⲛⲁⲓ",
+          "ϯ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲉ",
+          "ϩⲏϫ_4_post_ϯ",
+          1
+        ],
+        [
+          "ϩⲏϫ_4_post_ϯ",
+          "ⲛϩⲏⲧ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲥⲱⲧⲏⲣ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲏⲣ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲁⲩⲱ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲁϭⲉ",
+          "ⲙⲛ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁϭⲉ",
+          "ⲛ_2_post_ϩⲁϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁϭⲉ",
+          "ϩⲁϭⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ϥ_3_post_ϭⲟⲛⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϭⲟⲛⲧ",
+          "ϭⲟⲛⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲧ_2_post_ⲉ",
+          "ⲉⲙⲁϣⲟ_3_post_ϭⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲟ_3_post_ϭⲟⲛⲧ",
+          "ⲁⲩⲱ_5_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲙⲛ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          "ⲛⲉϥ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ",
+          "ⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲡ_2_post_ⲧⲩⲣⲁⲛⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲧⲩⲣⲁⲛⲛⲟⲥ",
+          "ⲧⲩⲣⲁⲛⲛⲟⲥ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲁⲓ",
+          "ⲩ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ϯ",
+          "ϯ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲉ",
+          "ⲛ_4_post_ϯ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲉⲧ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ϯ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉⲧ",
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲃⲏ_3_post_ϯ",
+          "ⲓ_4_post_ⲟⲩⲃⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲁⲧϭⲟⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲛⲁ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲑⲁⲇⲏⲥ_0_node",
+          "ⲙⲛ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲣⲭⲱⲛ",
+          "ⲛⲉϥ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲁⲣⲭⲱⲛ",
+          "ⲁⲣⲭⲱⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_1_post_ⲁⲩⲑⲁⲇⲏⲥ",
+          "ⲧⲏⲣ_2_post_ⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲁⲣⲭⲱⲛ",
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.51,
+      "rank": 967,
+      "count": 81
+    }
+  },
+  "etym": {
+    "grl_ID": "2920",
+    "grl_lemma": "αὐθάδης",
+    "grl_meaning": "self-willed, stubborn",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 275a; Preisigke 1:235"
+  }
+}

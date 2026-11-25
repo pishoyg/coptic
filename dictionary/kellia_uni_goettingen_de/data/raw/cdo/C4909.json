@@ -1,0 +1,183 @@
+{
+  "id": "C4909",
+  "forms": [
+    {
+      "id": "CF11783",
+      "orth": "ϭⲓⲁⲟⲩⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8813,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5534",
+      "bibliography": "CD 474a; KoptHWb 266"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϧⲉⲛⲟⲩⲙⲉⲧⲣⲉⲙⲣⲁⲩϣ ⲛⲉⲙⲟⲩϩⲟϯ ⲉⲟⲩⲟⲛ ⲛⲧⲱⲧⲉⲛ ⲙⲙⲁⲩ ⲛⲟⲩⲥⲩⲛⲏⲇⲉⲥⲓⲥ ⲉⲛⲁⲛⲉⲥ ϩⲓⲛⲁ ⲛⲧⲟⲩϭⲓϣⲓⲡⲓ ⲛϫⲉⲛⲏ ⲉⲧⲥⲁϫⲓ ϧⲁⲣⲱⲧⲉⲛ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲥⲁⲙⲡⲉⲧϩⲱⲟⲩ ⲟⲩⲟϩ ⲉⲧ**ϭⲓⲁⲟⲩⲱ** ⲙⲡⲉⲧⲉⲛϫⲓⲛⲙⲟϣⲓ ⲉⲑⲛⲁⲛⲉϥ ϧⲉⲛⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "having a good conscience; that, while you are spoken against as evildoers, they may be disappointed who curse your good manner of life in Christ.",
+      "source": "21_I Peter_03",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲉⲧⲉⲛ",
+        1,
+        16.236
+      ],
+      [
+        "ⲥⲁⲙⲡⲉⲧϩⲱⲟⲩ",
+        1,
+        15.888
+      ],
+      [
+        "ϫⲓⲛⲙⲟϣⲓ",
+        1,
+        14.695
+      ],
+      [
+        "ⲛⲁⲛⲉ",
+        1,
+        11.277
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        8.59
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲓⲁⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϭⲓⲁⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϭⲓⲁⲟⲩⲱ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡⲉⲧⲉⲛ_1_post_ϭⲓⲁⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲙⲟϣⲓ_2_post_ⲙⲡⲉⲧⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲑ_3_post_ϫⲓⲛⲙⲟϣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲓⲁⲟⲩⲱ",
+          "ⲉⲧ_1_pre_ϭⲓⲁⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϭⲓⲁⲟⲩⲱ",
+          "ϭⲓⲁⲟⲩⲱ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲁⲟⲩⲱ_0_node",
+          "ⲙⲡⲉⲧⲉⲛ_1_post_ϭⲓⲁⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲙⲡⲉⲧⲉⲛ_1_post_ϭⲓⲁⲟⲩⲱ",
+          "ϫⲓⲛⲙⲟϣⲓ_2_post_ⲙⲡⲉⲧⲉⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲙⲟϣⲓ_2_post_ⲙⲡⲉⲧⲉⲛ",
+          "ⲉⲑ_3_post_ϫⲓⲛⲙⲟϣⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8284,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4906",
+      "label": "ϫⲓⲛⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "ceasing, end"
+    },
+    {
+      "target": "C4907",
+      "label": "ϯⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "make cease, release, loose"
+    },
+    {
+      "target": "C4908",
+      "label": "ⲁⲧϯⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "unending"
+    },
+    {
+      "target": "C4905",
+      "label": "ⲁⲧⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "ceaseless"
+    },
+    {
+      "target": "C4904",
+      "label": "ⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "cease, stay, finish"
+    }
+  ]
+}

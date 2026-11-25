@@ -1,0 +1,89 @@
+{
+  "id": "C10442",
+  "forms": [
+    {
+      "id": "CF27959",
+      "orth": "ⲥⲑⲣⲟⲩⲑⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27960",
+      "orth": "ⲥⲑⲣⲟⲩⲑⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14117",
+      "bibliography": "DDGLC",
+      "cu_ID": "9268"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲛⲕⲟⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲙⲁ",
+        1,
+        14.608
+      ],
+      [
+        "ⲉⲙⲓ",
+        1,
+        9.766
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲑⲣⲟⲩⲑⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "5911",
+    "grl_lemma": "στρουθός",
+    "grl_meaning": "sparrow (Fringilla domestica)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1655b; Preisigke 2:492"
+  }
+}

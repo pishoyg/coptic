@@ -1,0 +1,73 @@
+{
+  "id": "C3030",
+  "forms": [
+    {
+      "id": "CF7928",
+      "orth": "ⲣⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6458,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3469",
+      "bibliography": "CD 287a; CED 134; KoptHWb 159-160; DELC 170; ChLCS 40b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ϫⲉϥ**ⲣⲁ**ⲛⲁⲩ ⲛⲛⲓⲟⲩⲇⲁⲓ . ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲉϭⲱⲡⲉ ⲙⲡⲕⲉ ⲡⲉⲧⲣⲟⲥ . ⲛⲉ ⲛⲉϩⲟⲟⲩ ⲇⲉ ⲛⲁⲑⲁⲃ ⲛⲉ .",
+      "english": "When he saw that it pleased the Jews, he proceeded to seize Peter also. This was during the days of unleavened bread.",
+      "source": "44_Acts of the Apostles_12",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲙϩⲁⲗ ⲉⲧⲣⲉⲩϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲉⲩϫⲓⲥⲟⲟⲩⲉ . ⲉⲩ**ⲣⲁ**ⲛⲁⲩ ϩⲛϩⲱⲃ ⲛⲓⲙ . ⲉⲛⲥⲉⲟⲩⲱϩⲙ ⲁⲛ .",
+      "english": "Exhort servants to be in subjection to their own masters, and to be well-pleasing in all things; not contradicting;",
+      "source": "56_Titus_2",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3031",
+      "label": "ϣⲁⲡⲣⲁ",
+      "pos": "PREP",
+      "gloss": "to the extent, as far as (with nn), until, even (with vb)"
+    },
+    {
+      "target": "C3032",
+      "label": "ϩⲁⲡⲣⲁ",
+      "pos": "PREP",
+      "gloss": "as to, in respect of"
+    },
+    {
+      "target": "C3029",
+      "label": "ⲣⲁ",
+      "pos": "N",
+      "gloss": "state, condition; position; point in time, end"
+    }
+  ],
+  "etym": {
+    "egy_num": "600214",
+    "egy_lemma": "rʾ-ꜥ",
+    "demo_num": "d3438",
+    "demo_lemma": "rꜥ-",
+    "english": "state (of)",
+    "german": "Zustand; Tätigkeit; [als Präfix in Zusammensetzungen]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600214",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3438"
+  }
+}

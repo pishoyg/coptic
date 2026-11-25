@@ -1,0 +1,51 @@
+{
+  "id": "C7585",
+  "forms": [
+    {
+      "id": "CF17229",
+      "orth": "ⲁϣϭⲏⲗ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8412",
+      "bibliography": "CD 806ab; KoptHWb 449"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6354",
+      "type": "cf",
+      "label": "fall, light upon, find"
+    },
+    {
+      "target": "C5595",
+      "type": "cf",
+      "label": "cry, announce, sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7584",
+      "label": "ϭⲏⲗ",
+      "pos": "N",
+      "gloss": "cry"
+    },
+    {
+      "target": "C7586",
+      "label": "ⲁϣϭⲏⲗ",
+      "pos": "N",
+      "gloss": "cry"
+    }
+  ]
+}

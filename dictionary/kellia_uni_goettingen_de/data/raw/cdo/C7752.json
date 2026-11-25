@@ -1,0 +1,194 @@
+{
+  "id": "C7752",
+  "forms": [
+    {
+      "id": "CF17569",
+      "orth": "ϭⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17626,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8619",
+      "bibliography": "CD 820a; KoptHWb 458"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲁⲩ ϫⲉⲁⲩⲣⲃⲗⲗⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲟⲩⲉⲓⲙⲉ ⲉ**ϭⲛϩⲏⲧ** ϩⲉⲛⲟⲩϩⲟⲟⲣ ⲧⲏⲣⲟⲩ ⲉⲩⲟⲛϣ ⲛⲉ ⲉⲙⲛϭⲟⲙ ⲙⲙⲟⲟⲩ ⲉⲟⲩⲁϩⲃⲉϥ ⲉⲩⲡⲱⲱⲣⲉ ⲛⲙⲙⲁⲛⲕⲟⲧⲕ ⲉⲩⲙⲉ ⲛϫⲓⲣⲉⲕⲣⲓⲕⲉ",
+      "english": "See how they are all blinded: they have not known; they are dumb dogs that will not bark; dreaming of rest, loving to slumber.",
+      "source": "Isaiah 56",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϩⲟⲟⲣ",
+        1,
+        16.35
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        10.441
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.732
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲛϩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲟⲩϩⲟⲟⲣ_1_post_ϭⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲛϩⲏⲧ_0_node",
+          "ϩⲉⲛ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲟⲩϩⲟⲟⲣ",
+          "ⲟⲩϩⲟⲟⲣ_1_post_ϭⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩϩⲟⲟⲣ_1_post_ϭⲛϩⲏⲧ",
+          "ⲧⲏⲣ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲟⲩϩⲟⲟⲣ",
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          "ⲉ_2_post_ⲟⲩϩⲟⲟⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17238,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7759",
+      "label": "ϫⲓⲛϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "act of finding, discovery"
+    },
+    {
+      "target": "C7750",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "find"
+    },
+    {
+      "target": "C7753",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "find, thing found; finding"
+    },
+    {
+      "target": "C7751",
+      "label": "ϭⲛⲧⲥ",
+      "pos": "V",
+      "gloss": "find that"
+    },
+    {
+      "target": "C7754",
+      "label": "ⲁⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "nowhere to be found"
+    },
+    {
+      "target": "C7755",
+      "label": "ⲉⲣⲁⲧϫⲓⲙⲓ",
+      "pos": "V",
+      "gloss": "be untraceable, be undiscovered"
+    },
+    {
+      "target": "C7757",
+      "label": "ⲙⲉⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "existence"
+    },
+    {
+      "target": "C7756",
+      "label": "ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "lack"
+    },
+    {
+      "target": "C7758",
+      "label": "ⲣⲉϥϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "finder"
+    }
+  ]
+}

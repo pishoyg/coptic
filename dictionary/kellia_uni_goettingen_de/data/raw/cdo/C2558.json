@@ -1,0 +1,69 @@
+{
+  "id": "C2558",
+  "forms": [
+    {
+      "id": "CF6908",
+      "orth": "ⲛⲟⲩⲧⲉⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2938",
+      "bibliography": "CD 231b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲥⲁϫⲓ ⲛⲉⲙⲁϥ ⲉϥ**ⲛⲟⲧⲉⲙ** ⲁϥϯ ⲙⲡⲉϥⲑⲣⲟⲛⲟⲥ ⲥⲁⲡϣⲱⲓ ⲛⲛⲓⲟⲩⲣⲱⲟⲩ ⲛⲏⲉⲑⲛⲉⲙⲁϥ ϧⲉⲛⲃⲁⲃⲩⲗⲱⲛ .",
+      "english": "and spoke kindly to him, and set his throne above the kings that were with him in Babylon,",
+      "source": "24_Ieremias_52",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:52",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11919,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2560",
+      "label": "ⲙⲛⲧⲛⲟⲩⲧⲙ",
+      "pos": "N",
+      "gloss": "sweetness"
+    },
+    {
+      "target": "C2557",
+      "label": "ⲛⲟⲩⲧⲙ",
+      "pos": "V",
+      "gloss": "be sweet, pleasant"
+    },
+    {
+      "target": "C2559",
+      "label": "ⲛⲟⲩⲧⲙ",
+      "pos": "N",
+      "gloss": "sweetness"
+    }
+  ],
+  "etym": {
+    "egy_num": "91410",
+    "egy_lemma": "nḏm",
+    "demo_num": "dm3297",
+    "demo_lemma": "nḏm",
+    "english": "sweet; pleasing",
+    "german": "süß; angenehm",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/91410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3297"
+  }
+}

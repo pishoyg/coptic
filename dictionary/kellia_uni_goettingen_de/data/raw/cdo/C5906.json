@@ -1,0 +1,152 @@
+{
+  "id": "C5906",
+  "forms": [
+    {
+      "id": "CF13810",
+      "orth": "ⲡϣⲟⲙⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12502,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6589",
+      "bibliography": "CD 566b; KoptHWb 315; DELC 264b; ChLCS 78a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲉⲧⲣⲉϥⲃⲱⲕ ⲉⲛⲧⲁⲝⲓⲥ ⲙⲡϫⲓⲥⲉ ⲙⲡⲓⲙⲉϩϣⲟⲙⲛⲧ ⲛⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ · ⲁⲩⲱ ⲡⲉⲛⲧⲁϥϫⲓ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ . ⲓ ⲡⲁⲓ ⲉⲧⲁⲣϫⲓⲉ**ⲡϣⲟⲙⲛⲧ** ⲛⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ · ⲙⲛⲡϣⲟⲙⲛⲧ ⲛⲭⲱⲣⲏⲙⲁ ϩⲓⲛⲉⲩⲉⲣⲏⲩ ⲛⲧⲉⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ·",
+      "english": "“but he hath not the power to go into the higher orders of the third Thrice-spiritual. And he who hath received the mystery of the third Thrice-spiritual, which ruleth over the three Thrice-spirituals and the three spaces of the First Mystery all together, [hath the power to go into all the orders which are below him];”",
+      "source": "Pistis Sophia Book 2 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:59-65",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲣϫⲓⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ",
+        1,
+        15.954
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡϣⲟⲙⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_6_post_ⲭⲱⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_6_post_ⲭⲱⲣⲏⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡϣⲟⲙⲛⲧ_0_node",
+          "ⲛ_1_post_ⲡϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡϣⲟⲙⲛⲧ",
+          "ⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲡⲛⲉⲩⲙⲁⲧⲟⲥ_2_post_ⲛ",
+          "ⲙⲛ_6_post_ⲭⲱⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_6_post_ⲭⲱⲣⲏⲙⲁ",
+          "ⲡ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲛ",
+          "ϣⲟⲙⲛⲧ_6_post_ⲭⲱⲣⲏⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12075,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5905",
+      "label": "ϣⲟⲙⲛⲧ",
+      "pos": "NUM",
+      "gloss": "three"
+    },
+    {
+      "target": "C5907",
+      "label": "ⲙⲡϣⲟⲙⲛⲧ",
+      "pos": "ADV",
+      "gloss": "three together, all three"
+    }
+  ]
+}

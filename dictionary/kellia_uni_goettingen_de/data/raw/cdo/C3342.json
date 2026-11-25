@@ -1,0 +1,46 @@
+{
+  "id": "C3342",
+  "forms": [
+    {
+      "id": "CF8575",
+      "orth": "ⲥⲏⲃⲉ ⲛϫⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3812",
+      "bibliography": "CD 320b; KoptHWb 176; DELC 183; ChLCS 46a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "sing"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3340",
+      "label": "ⲥⲏⲃⲉ",
+      "pos": "N",
+      "gloss": "reed; greave, shin-bone; flute"
+    },
+    {
+      "target": "C3341",
+      "label": "ⲥⲏⲃⲉ ⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "pipe, stalk of leg, shin-bone, greave"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "C3719",
+  "forms": [
+    {
+      "id": "CF9352",
+      "orth": "ⲥⲟⲣⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18484,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4227",
+      "bibliography": "CD 356b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕϫⲟⲟⲥ ⲉⲕⲱⲧ ⲛⲁⲕ ⲛⲟⲩⲣⲡⲉ ϩⲙⲡⲉⲕⲧⲟⲟⲩ ⲉⲧⲟⲩⲁⲁⲃ ⲁⲩⲱ ⲟⲩⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ϩⲛⲧⲡⲟⲗⲓⲥ ⲙⲡⲉⲕⲙⲁ ⲛϣⲱⲡⲉ ⲡⲉⲓⲛⲉ ⲛⲧⲉⲕⲥⲕⲏⲛⲏ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲛⲧⲁⲕⲥⲃⲧⲱⲧϥ ϫⲓⲛⲛ**ⲥⲟⲣⲡ**",
+      "english": "Thou hast commanded me to build a temple upon thy holy mount, and an altar in the city wherein thou dwellest, a resemblance of the holy tabernacle, which thou hast prepared from the beginning.",
+      "source": "Wisdom 9",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲃⲧⲱⲧ",
+        1,
+        12.728
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        11.384
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        10.251
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲣⲡ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18103,
+      "count": 1
+    }
+  }
+}

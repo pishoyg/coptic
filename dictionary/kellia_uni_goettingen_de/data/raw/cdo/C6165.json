@@ -1,0 +1,57 @@
+{
+  "id": "C6165",
+  "forms": [
+    {
+      "id": "CF14338",
+      "orth": "ϯϣⲟⲩϣⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6852",
+      "bibliography": "CD 604b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6161",
+      "label": "ϣⲟⲩϣⲟⲩ",
+      "pos": "V",
+      "gloss": "boast, pride oneself"
+    },
+    {
+      "target": "C6162",
+      "label": "ϣⲟⲩϣⲟⲩ",
+      "pos": "N",
+      "gloss": "boast, pride"
+    },
+    {
+      "target": "C6163",
+      "label": "ⲙⲛⲧϣⲟⲩϣⲟ",
+      "pos": "N",
+      "gloss": "pride, impudence"
+    },
+    {
+      "target": "C6164",
+      "label": "ⲣϣⲟⲩϣⲟ",
+      "pos": "V",
+      "gloss": "boast"
+    }
+  ]
+}

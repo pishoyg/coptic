@@ -1,0 +1,407 @@
+{
+  "id": "C3337",
+  "forms": [
+    {
+      "id": "CF8565",
+      "orth": "ⲥⲃⲟⲩⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4431,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3805",
+      "bibliography": "CD 319b; CED 147; KoptHWb 176, 536; DELC 183; ChLCS 45b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛⲟⲛ",
+        2,
+        14.503
+      ],
+      [
+        "ϩⲱ",
+        2,
+        14.364
+      ],
+      [
+        "ⲣⲧϩⲉ",
+        1,
+        14.028
+      ],
+      [
+        "ⲅⲁⲣ",
+        3,
+        13.434
+      ],
+      [
+        "ⲙⲙⲛ",
+        1,
+        13.059
+      ],
+      [
+        "ⲉ",
+        6,
+        12.572
+      ],
+      [
+        "ϫⲟⲥⲉ",
+        1,
+        12.013
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        11.797
+      ],
+      [
+        ".",
+        3,
+        11.312
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        11.292
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        11.263
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        10.92
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        10.789
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        10.318
+      ],
+      [
+        "ⲟ",
+        1,
+        9.805
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.304
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲥⲃⲟⲩⲓ_0_node",
+          3
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲥⲃⲟⲩⲓ_b",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ϩⲙϩⲁⲗ_1_post_ⲥⲃⲟⲩⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲥⲃⲟⲩⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲅⲁⲣ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲁⲛⲟⲛ_1_pre_ⲥⲃⲟⲩⲓ_b",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲥⲃⲟⲩⲓ_b",
+          "ϩⲉⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲥⲃⲟⲩⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲃⲟⲩⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲛⲉϥ_1_pre_ⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲃⲟⲩⲓ",
+          "ⲥⲃⲟⲩⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲃⲟⲩⲓ_0_node",
+          "ⲁⲩⲱ_2_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲙϩⲁⲗ",
+          "ⲛⲉϥ_2_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϩⲙϩⲁⲗ",
+          "ϩⲙϩⲁⲗ_1_post_ⲥⲃⲟⲩⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3326",
+      "label": "ϫⲉⲙⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "outwit (by sophisms or fallacies), falsify"
+    },
+    {
+      "target": "C3334",
+      "label": "ϫⲓⲛⲉⲣⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "becoming wise, instruction"
+    },
+    {
+      "target": "C3323",
+      "label": "ϫⲓⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "get teaching, be taught"
+    },
+    {
+      "target": "C3319",
+      "label": "ϯⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "teach, chastise"
+    },
+    {
+      "target": "C3315",
+      "label": "ⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "without teaching, ignorant"
+    },
+    {
+      "target": "C3325",
+      "label": "ⲙⲁ ⲛϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "learning place, school"
+    },
+    {
+      "target": "C3320",
+      "label": "ⲙⲁ ⲛϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching place, school"
+    },
+    {
+      "target": "C3317",
+      "label": "ⲙⲁⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "loving instruction, docile"
+    },
+    {
+      "target": "C3336",
+      "label": "ⲙⲉⲧⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "craftiness, guile"
+    },
+    {
+      "target": "C3316",
+      "label": "ⲙⲛⲧⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "want of education, stupidity"
+    },
+    {
+      "target": "C3322",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching"
+    },
+    {
+      "target": "C3332",
+      "label": "ⲙⲛⲧⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wisdom"
+    },
+    {
+      "target": "C3338",
+      "label": "ⲙⲛⲧⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "state of pupilage"
+    },
+    {
+      "target": "C3324",
+      "label": "ⲣⲉϥϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "one taught, instructed"
+    },
+    {
+      "target": "C3321",
+      "label": "ⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teacher"
+    },
+    {
+      "target": "C3318",
+      "label": "ⲣⲙⲛⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "instructed, knowledgeable person"
+    },
+    {
+      "target": "C3333",
+      "label": "ⲣⲥⲁⲃⲉ",
+      "pos": "V",
+      "gloss": "become, be wise"
+    },
+    {
+      "target": "C3327",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3330",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3328",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3329",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3331",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C12125",
+      "label": "ⲥⲃⲁ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3313",
+      "label": "ⲥⲃⲟ",
+      "pos": "V",
+      "gloss": "learn; teach"
+    },
+    {
+      "target": "C3314",
+      "label": "ⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "doctrine, teaching"
+    },
+    {
+      "target": "C3335",
+      "label": "ⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "knowing, cunning person"
+    }
+  ],
+  "etym": {
+    "egy_num": "131230",
+    "egy_lemma": "sbꜣ",
+    "english": "pupil",
+    "german": "Zögling",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131230"
+  }
+}

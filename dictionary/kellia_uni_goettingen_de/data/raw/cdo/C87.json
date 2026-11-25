@@ -1,0 +1,46 @@
+{
+  "id": "C87",
+  "forms": [
+    {
+      "id": "CF320",
+      "orth": "ⲉⲣⲁⲙⲁⲗⲏϫ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS102",
+      "bibliography": "CD 7b; KoptHWb 6; DELC 9"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C88",
+      "label": "ϫⲓⲛⲁⲙⲁⲗⲏϫ",
+      "pos": "N",
+      "gloss": "act of embracing"
+    },
+    {
+      "target": "C86",
+      "label": "ⲁⲙⲁⲗⲏϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ]
+}

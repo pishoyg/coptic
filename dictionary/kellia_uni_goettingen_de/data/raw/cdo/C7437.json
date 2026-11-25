@@ -1,0 +1,280 @@
+{
+  "id": "C7437",
+  "forms": [
+    {
+      "id": "CF16932",
+      "orth": "ϫⲟⲩⲱⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.43,
+        "rank": 1247,
+        "count": 68
+      }
+    },
+    {
+      "orth": "ϫⲟⲩⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3296,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ϫⲁⲩⲱⲧ-",
+      "dialect": "S",
+      "id": "2473.2"
+    },
+    {
+      "orth": "ϫⲱⲧ-",
+      "dialect": "S",
+      "id": "2473.3"
+    },
+    {
+      "orth": "ϫⲟⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3867,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϫⲟⲩⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1702,
+        "count": 40
+      }
+    },
+    {
+      "orth": "ϫⲟⲩⲟⲩⲱⲧⲉ",
+      "dialect": "S",
+      "id": "2473.6"
+    },
+    {
+      "orth": "ϫⲱⲧ",
+      "dialect": "B",
+      "id": "2473.7"
+    },
+    {
+      "orth": "ϫⲟⲩⲱⲧ",
+      "dialect": "A",
+      "id": "2473.8"
+    },
+    {
+      "orth": "ϫⲟⲩⲧ-",
+      "dialect": "A",
+      "id": "2473.9"
+    },
+    {
+      "orth": "ϫⲟⲩⲱⲧ",
+      "dialect": "F",
+      "id": "2473.10"
+    },
+    {
+      "orth": "ϫⲟⲩⲧ-",
+      "dialect": "F",
+      "id": "2473.11"
+    },
+    {
+      "orth": "ϫⲟⲧ-",
+      "dialect": "F",
+      "id": "2473.12"
+    },
+    {
+      "orth": "ϫⲟⲩⲱⲧⲉ",
+      "dialect": "F",
+      "id": "2473.13"
+    },
+    {
+      "orth": "ϫⲟⲩⲧ-",
+      "dialect": "L",
+      "id": "2473.14"
+    },
+    {
+      "orth": "ϫⲟⲩⲱⲧⲉ",
+      "dialect": "L",
+      "id": "2473.15"
+    },
+    {
+      "orth": "ϫⲟⲩⲟⲩⲱⲧⲉ",
+      "dialect": "L",
+      "id": "2473.16"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "m.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS8230",
+      "bibliography": "CD 794b-795a; CED 322; KoptHWb 438; DELC 333a; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲣⲱⲙⲁⲛⲟⲥ ⲇⲉ ⲁϥϯⲙⲁⲁⲃ ⲛⲕⲉⲛⲧⲏⲛⲁⲣⲓⲟⲛ ⲛⲛⲟⲩⲃ · ⲃⲁⲥⲓⲗⲉⲓⲧⲏⲥ ⲇⲉ ⲁϥϯ**ϫⲟⲩⲱⲧ** · ⲉⲩϩⲁⲓⲟⲥ ⲁϥϯⲙⲏⲧ · ⲡⲣⲣⲟ ⲇⲉ ⲁϥϯⲥⲉ ·",
+      "english": "And Romanus gave thirty centenarii of gold, and Basileides gave twenty, and Euaios gave ten, and the Emperor gave sixty ;",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲛⲟⲩϫⲉ ⲛⲧⲃⲟⲗⲓⲥ ⲁⲩϩⲉ ⲉ**ϫⲟⲩⲱⲧ** ⲛϩⲡⲟⲧ ⲙⲙⲟⲟⲩ . ⲛⲧⲉⲣⲟⲩϭⲱ ⲟⲛ ⲛⲕⲉⲕⲟⲩⲓ . ⲁⲩⲛⲟⲩϫⲉ ⲟⲛ ⲛⲧⲃⲟⲗⲓⲥ ⲉⲡⲙⲟⲟⲩ ⲁⲩϩⲉ ⲉⲙⲛⲧⲏ ⲛϩⲡⲟⲧ .",
+      "english": "They took soundings, and found twenty fathoms.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲣⲧⲣⲉⲛⲡⲟⲣⲛⲉⲩⲉ ⲛⲧϩⲉ ⲉⲛⲧⲁϩⲟⲓⲛⲉ ⲙⲙⲟⲟⲩ ⲡⲟⲣⲛⲉⲩⲉ . ⲁⲩⲱ ⲁⲩϩⲉ ⲛⲟⲩϩⲟⲟⲩ ⲛⲟⲩⲱⲧ ⲛϭⲓ**ϫⲟⲩⲧ**ϣⲟⲙⲧⲉ ⲛϣⲟ .",
+      "english": "Neither let us commit sexual immorality, as some of them committed, and in one day twenty-three thousand fell.",
+      "source": "1 Corinthians 10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁϩⲉ",
+        26,
+        21.312
+      ],
+      [
+        "ϣⲉ",
+        26,
+        19.036
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        16,
+        18.019
+      ],
+      [
+        "ⲛ",
+        97,
+        17.361
+      ],
+      [
+        "ϩⲟⲃⲟⲗⲟⲥ",
+        4,
+        16.891
+      ],
+      [
+        "ⲙ",
+        47,
+        15.767
+      ],
+      [
+        "ⲡⲥⲓⲕⲗⲟⲥ",
+        3,
+        15.405
+      ],
+      [
+        "ϥⲧⲟⲟⲩ",
+        6,
+        14.876
+      ],
+      [
+        "ⲥⲟⲩ",
+        6,
+        14.498
+      ],
+      [
+        "ⲇⲉⲕⲉⲙⲃⲣⲓⲟⲥ",
+        1,
+        14.35
+      ],
+      [
+        "ⲇⲉⲛⲁⲣⲓⲟⲛ",
+        1,
+        14.35
+      ],
+      [
+        "ⲧⲉⲙⲛⲁ",
+        1,
+        14.35
+      ],
+      [
+        "ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+        1,
+        14.35
+      ],
+      [
+        "ⲧⲥⲁⲧⲉⲉⲉⲣⲉ",
+        1,
+        14.35
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        16,
+        14.065
+      ],
+      [
+        "ⲕⲉⲛⲧⲏⲛⲁⲣⲓⲟⲛ",
+        2,
+        13.65
+      ],
+      [
+        "ϣⲏⲧ",
+        3,
+        13.613
+      ],
+      [
+        "ⲁⲩⲱ",
+        26,
+        13.601
+      ],
+      [
+        "ϩⲡⲟⲧ",
+        1,
+        13.35
+      ],
+      [
+        "ⲁ",
+        28,
+        13.218
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.48,
+      "rank": 1001,
+      "count": 76
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7438",
+      "label": "ϫⲟⲩⲱⲧ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    },
+    {
+      "target": "C7436",
+      "label": "ϫⲟⲩⲱⲧⲉ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    },
+    {
+      "target": "C7439",
+      "label": "ϫⲟⲩⲱⲧⲉ",
+      "pos": "NUM",
+      "gloss": "twenty"
+    }
+  ],
+  "etym": {
+    "egy_num": "183070",
+    "egy_lemma": "ḏwt",
+    "english": "twenty",
+    "german": "Zwanzig; zwanzig",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/183070"
+  }
+}

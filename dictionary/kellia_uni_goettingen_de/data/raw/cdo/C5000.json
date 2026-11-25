@@ -1,0 +1,50 @@
+{
+  "id": "C5000",
+  "forms": [
+    {
+      "id": "CF11965",
+      "orth": "ϩⲛ ⲟⲩⲟⲩⲱⲗⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5628",
+      "bibliography": "ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4996",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "V",
+      "gloss": "lean, be bent, be confounded; bend, humiliate"
+    },
+    {
+      "target": "C4997",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "N",
+      "gloss": "humiliation"
+    },
+    {
+      "target": "C4998",
+      "label": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be bowed down in mind, be disheartened"
+    },
+    {
+      "target": "C4999",
+      "label": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "humiliation"
+    }
+  ]
+}

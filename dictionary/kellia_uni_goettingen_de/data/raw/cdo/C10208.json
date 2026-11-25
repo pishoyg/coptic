@@ -1,0 +1,363 @@
+{
+  "id": "C10208",
+  "forms": [
+    {
+      "id": "CF26966",
+      "orth": "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF26967",
+      "orth": "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5483,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF26968",
+      "orth": "ⲡⲗⲱⲣⲟⲩⲫⲱⲣⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13583",
+      "bibliography": "DDGLC",
+      "cu_ID": "3801"
+    },
+    {
+      "id": "CS13584",
+      "bibliography": "DDGLC",
+      "cu_ID": "9538"
+    },
+    {
+      "id": "CS13585",
+      "bibliography": "DDGLC",
+      "cu_ID": "7173"
+    },
+    {
+      "id": "CS13586",
+      "bibliography": "DDGLC",
+      "cu_ID": "7208"
+    },
+    {
+      "id": "CS13587",
+      "bibliography": "DDGLC",
+      "cu_ID": "10582"
+    },
+    {
+      "id": "CS13588",
+      "bibliography": "DDGLC",
+      "cu_ID": "10575"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ⲉϣⲱⲡⲉ ⲉⲕⲟⲩⲱϣ ⲉ**ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ** ϩⲙⲡⲉⲕϩⲏⲧ ϩⲁⲣⲟⲥ ⲙⲛⲡⲣⲱⲙⲉ ⲛⲧⲁⲕⲙⲉⲉⲩⲉ ⲉⲡⲡⲉⲧϩⲟⲟⲩ ϩⲁⲣⲟϥ ⲉⲧⲃⲏⲏⲧⲥ ·",
+      "english": "But I say unto thee, supposing that thou wishest to be wholly satisfied in respect of her, and in respect of the man about whom thou hast thought evil in thy mind",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲡⲁϣⲏⲣⲉ · ⲉϣⲡⲉ ⲁⲕ**ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ** · ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲧⲁⲣⲕⲟⲥ · ⲛⲧⲉⲓⲕⲱⲗⲉⲓ ⲙⲙⲟⲛ ⲁⲛ ·",
+      "english": "And now, O my son, if thou art quite satisfied about the matter, (good and well); but if not, make her take the oath. I shall not attempt to prevent thee.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧⲉⲧⲛ**ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ** ⲛⲟⲩⲕⲟⲩⲓ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 4",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:62-70",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲣⲁⲧⲉ",
+        1,
+        11.621
+      ],
+      [
+        "ⲕ",
+        4,
+        10.853
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        10.823
+      ],
+      [
+        "ⲉϣ",
+        1,
+        10.759
+      ],
+      [
+        "ⲕⲁⲗⲱⲥ",
+        1,
+        10.667
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        9.446
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        9.034
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        8.894
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        8.413
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        6.947
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.868
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.448
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ϩⲙ",
+        1,
+        5.413
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.146
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          4
+        ],
+        [
+          "ϩⲙ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϣⲱⲡⲉ_2_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟⲛ_2_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ⲁⲣⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲕⲁⲗⲱⲥ_3_post_ⲣⲁϣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          "ϩⲙ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ϩⲙ",
+          "ϩⲁⲣⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲕ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          "ⲉϣⲱⲡⲉ_2_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϣⲱⲡⲉ_2_post_ⲕⲱⲗⲉⲓ",
+          "ⲙⲙⲟⲛ_2_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟⲛ_2_post_ⲕⲱⲗⲉⲓ",
+          "ⲧ_4_post_ⲁⲣⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲧⲉⲧⲛ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ϫⲉ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲡⲗⲏⲣⲟⲫⲟⲣⲉⲓ",
+          "ⲕⲁⲗⲱⲥ_3_post_ⲣⲁϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5046,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "1767",
+    "grl_lemma": "πληροφορέω",
+    "grl_meaning": "to bring full measure, satisfy fully",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1419b; Preisigke 2:320"
+  }
+}

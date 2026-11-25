@@ -1,0 +1,94 @@
+{
+  "id": "C3882",
+  "forms": [
+    {
+      "id": "CF9695",
+      "orth": "ⲥⲟⲟⲩⲧⲛ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4403",
+      "bibliography": "CD 371b; CED 169; KoptHWb 204-205; DELC 202; ChLCS 52b"
+    },
+    {
+      "id": "CS4404",
+      "bibliography": "CD 371b; KoptHWb 204-205; DELC 202; ChLCS 52b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϫⲉ . ⲙⲉⲣⲉⲗⲁⲁⲩ ⲧⲁⲗⲉⲧⲟⲟⲧϥ ⲉϫⲛⲟⲩϩⲃⲃⲉ ⲛϥϭⲱϣⲧ ⲉⲡⲁϩⲟⲩ **ⲛϥⲥⲟⲟⲩⲧⲛ **ⲉ**ⲧⲙⲛⲧⲣⲣⲟ** ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "But Jesus said to him, 'No one, having put his hand to the plow, and looking back, is fit for the Kingdom of God.'",
+      "source": "42_Luke_9",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲛⲟⲩⲥ ⲉⲣⲉⲛⲁϩⲓⲟⲟⲩ **ⲉⲛⲁⲥⲟⲟⲩⲧⲛ **ⲉ**ⲧⲣⲁϩⲁⲣⲉϩ** ⲉⲛⲉⲕⲇⲓⲕⲁⲓⲱⲙⲁ",
+      "english": "O that my ways were directed to keep thine ordinances.",
+      "source": "Psalms 118",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:118",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲣⲥⲟⲟⲩⲧⲛ **ⲉ**ⲃⲟⲗ** ⲙⲡⲟⲩϭⲃⲟⲓ ⲛⲟⲩⲛⲁⲙ · ⲁⲣⲁⲙⲁϩⲧⲉ ⲙⲙⲟϥ ⲁⲣϫⲧⲟϥ ϩⲙⲡⲟⲩϭⲃⲟⲓ ⲛϩⲃⲟⲩⲣ ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3884",
+      "label": "ϩⲛⲟⲩⲥⲟⲟⲩⲧⲛ",
+      "pos": "ADV",
+      "gloss": "uprightly, forthwith"
+    },
+    {
+      "target": "C3888",
+      "label": "ϭⲓⲛⲥⲟⲟⲩⲧⲛ",
+      "pos": "N",
+      "gloss": "uprightness, establishment"
+    },
+    {
+      "target": "C3886",
+      "label": "ⲙⲉⲧⲥⲱⲟⲩⲧⲉⲛ",
+      "pos": "N",
+      "gloss": "rectification (astrologer's reckoning table)"
+    },
+    {
+      "target": "C3885",
+      "label": "ⲛⲥⲟⲟⲩⲧⲛ",
+      "pos": "ADV",
+      "gloss": "forthwith, just now"
+    },
+    {
+      "target": "C3887",
+      "label": "ⲣⲉϥⲥⲱⲟⲩⲧⲉⲛ",
+      "pos": "N",
+      "gloss": "straightener"
+    },
+    {
+      "target": "C3881",
+      "label": "ⲥⲟⲟⲩⲧⲛ",
+      "pos": "V",
+      "gloss": "be straight, upright, stretch; straighten, stretch"
+    },
+    {
+      "target": "C3883",
+      "label": "ⲥⲟⲟⲩⲧⲛ",
+      "pos": "N",
+      "gloss": "uprightness"
+    }
+  ]
+}

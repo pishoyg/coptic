@@ -1,0 +1,156 @@
+{
+  "id": "C2787",
+  "forms": [
+    {
+      "id": "CF7406",
+      "orth": "ⲡⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 66.29,
+        "rank": 27,
+        "count": 5622
+      }
+    },
+    {
+      "id": "CF7407",
+      "orth": "ⲡⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF7408",
+      "orth": "ⲡⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF7409",
+      "orth": "ⲡⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF7410",
+      "orth": "ⲡⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.18,
+        "rank": 324,
+        "count": 501
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 20.91,
+        "rank": 70,
+        "count": 1773
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 3.1,
+        "rank": 334,
+        "count": 489
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.49,
+        "rank": 170,
+        "count": 635
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.43,
+        "rank": 385,
+        "count": 383
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "sg.",
+    "gen": "m.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS3187",
+      "bibliography": "KoptHWb 143; DELC 157; LCG § 54"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲧⲁϣⲉⲣⲓ **ⲡⲉ**ⲛⲁϩϯ ⲡⲉⲧⲁϥⲛⲁϩⲙⲓ ⲙⲁϣⲉ ⲛⲉ ϧⲉⲛⲟⲩϩⲓⲣⲏⲛⲏ ⲟⲩⲟϩ ϣⲱⲡⲓ ⲉⲟⲩⲟⲩϫⲁⲓ ⲉⲃⲟⲗ ϩⲁⲧⲉⲙⲁⲥⲧⲓⲅⲝ .",
+      "english": "He said to her, 'Daughter, your faith has made you well. Go in peace, and be cured of your disease.'",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲁⲧⲣⲉ**ⲡⲟⲩ**ϩⲏⲧ ⲙⲕⲁϩ .",
+      "english": "I will make your heart suffer.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲉⲑⲃⲉⲡⲁⲓⲥⲁϫⲓ ⲙⲁϣⲉ ⲛⲉ ⲁϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲓ**ⲧⲉ**ϣⲉⲣⲓ ⲛϫⲉⲡⲓⲇⲁⲓⲙⲱⲛ .",
+      "english": "He said to her, 'For this saying, go your way. The demon has gone out of your daughter.'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉ**ⲡⲟⲩ**ⲁⲏⲣ ϣⲱⲡⲉ ⲁϥϣⲱⲡⲉ ·",
+      "english": "(And), ' Let the air (or, sky) be and the air was.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲛϩⲁⲛϣⲏⲣⲓ ⲛⲧⲉⲡⲥⲱⲧⲉⲙ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛϣⲫⲏⲣ ⲛⲥⲙⲟⲧ ⲁⲛ ⲛϧⲣⲏⲓ ϧⲉⲛⲛⲓⲉⲡⲓⲑⲩⲙⲓⲁ ⲛ**ⲧⲉ**ϣⲟⲣⲡ ⲛⲏ ⲉⲛⲁⲣⲉⲧⲉⲛⲓⲣⲓ ⲙⲙⲱⲟⲩ ϧⲉⲛⲟⲩⲙⲉⲧⲁⲧⲉⲙⲓ .",
+      "english": "as children of obedience, not conforming yourselves according to your former lusts as in your ignorance,",
+      "source": "21_I Peter_01",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲟ ⲇⲉ ⲛⲁⲧⲥⲱⲧⲙ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲉⲧϯⲛⲟⲩϭⲥ ⲙⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ϩⲛ**ⲧⲟⲩ**ⲙⲛⲧⲁⲧⲥⲱⲧⲙ ⲙⲛⲧⲉⲩⲙⲛⲧⲣⲉϥⲕⲁϩⲧⲏⲩ ⲉⲣⲟⲟⲩ ⲙⲁⲩⲁⲁⲩ ⲧⲛⲥⲟⲟⲩⲛ ⲙⲙⲟⲟⲩ ϫⲉⲛⲓⲙ ⲛⲉ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2786",
+      "type": "cf",
+      "label": "possessive article sg. m."
+    },
+    {
+      "target": "C2388",
+      "type": "cf",
+      "label": "possessive article pl. (2 p. sg. f.)"
+    },
+    {
+      "target": "C11281",
+      "type": "cf",
+      "label": "possessive article sg. f. (2 p. sg. f.)"
+    }
+  ]
+}

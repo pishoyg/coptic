@@ -1,0 +1,185 @@
+{
+  "id": "C3309",
+  "forms": [
+    {
+      "id": "CF8506",
+      "orth": "ϭⲓⲛⲥⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7390,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3776",
+      "bibliography": "CD 318b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲛ ⲉⲣϣⲁⲛⲟⲩⲁ ⲣⲡⲉϥⲁϩⲉ ⲧⲏⲣϥ ϩⲛϩⲉⲛϭⲓⲛⲟⲩⲱⲙ ⲙⲛϩⲉⲛ**ϭⲓⲛⲥⲱ** · ⲟⲩⲗⲁⲁⲩ ⲡⲉ ⲛⲛⲁϩⲣⲛⲛⲁⲓⲱⲛ ⲛⲁⲧⲟⲩⲱ ·",
+      "english": "And if any man shall pass the whole of his life in eating at feasts, and in drinking of wine, (that period of time) will be as nothing compared with the ages which shall follow it without end.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲛⲧⲉⲙⲙⲏⲏϣⲉ ⲏⲣⲟⲩ ⲉⲧϣⲟⲟⲡ ϩⲛⲙⲡⲟⲗⲓⲥ · ⲥⲱⲟⲩϩ ⲙⲛⲛⲉⲩϭⲓⲛⲟⲩⲱⲙ ⲙⲛⲛⲉⲩ**ϭⲓⲛⲥⲱ** ⲙⲛⲛⲉⲩⲏⲣⲡ ⲛⲥⲉⲱⲙ......... ⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ ϣⲁⲛⲧⲉϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ... ⲛϫⲡⲯⲓⲧⲉ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛ",
+        1,
+        16.013
+      ],
+      [
+        "ϭⲓⲛⲟⲩⲱⲙ",
+        1,
+        14.511
+      ],
+      [
+        "ⲛⲉⲩ",
+        3,
+        12.571
+      ],
+      [
+        "ⲏⲣⲡ",
+        1,
+        11.403
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        9.629
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        8.935
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϭⲓⲛⲥⲱ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲓⲛⲥⲱ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲥⲱ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲓⲛⲥⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϭⲓⲛⲥⲱ",
+          "ϩⲉⲛ_1_pre_ϭⲓⲛⲥⲱ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲓⲛⲥⲱ",
+          "ϭⲓⲛⲥⲱ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϭⲓⲛⲥⲱ",
+          "ϭⲓⲛⲥⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6938,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3308",
+      "label": "ⲁⲧⲥⲱ",
+      "pos": "N",
+      "gloss": "without drinking"
+    },
+    {
+      "target": "C3306",
+      "label": "ⲙⲁ ⲛⲥⲱ",
+      "pos": "N",
+      "gloss": "drinking place, bout"
+    },
+    {
+      "target": "C3307",
+      "label": "ⲣⲉϥⲥⲱ",
+      "pos": "N",
+      "gloss": "drinker"
+    },
+    {
+      "target": "C3304",
+      "label": "ⲥⲱ",
+      "pos": "V",
+      "gloss": "drink"
+    },
+    {
+      "target": "C3305",
+      "label": "ⲥⲱ",
+      "pos": "N",
+      "gloss": "drinking, potation"
+    },
+    {
+      "target": "C3310",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "N",
+      "gloss": "drinking bout, carousal"
+    }
+  ]
+}

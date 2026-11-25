@@ -1,0 +1,58 @@
+{
+  "id": "C5702",
+  "forms": [
+    {
+      "id": "CF13382",
+      "orth": "ⲉⲣϩⲁⲙϣⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6380",
+      "bibliography": "CD 546b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5699",
+      "label": "ϣⲉ",
+      "pos": "N",
+      "gloss": "wood"
+    },
+    {
+      "target": "C5700",
+      "label": "ϣⲉ ⲛⲛⲟϩ",
+      "pos": "N",
+      "gloss": "a land measure (100 cubits)"
+    },
+    {
+      "target": "C5701",
+      "label": "ϩⲁⲙϣⲉ",
+      "pos": "N",
+      "gloss": "carpenter"
+    },
+    {
+      "target": "C5703",
+      "label": "ⲙⲛⲧϩⲁⲙϣⲉ",
+      "pos": "N",
+      "gloss": "carpenter's craft"
+    }
+  ]
+}

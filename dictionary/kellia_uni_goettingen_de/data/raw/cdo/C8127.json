@@ -1,0 +1,611 @@
+{
+  "id": "C8127",
+  "forms": [
+    {
+      "id": "CF18530",
+      "orth": "ⲁⲓⲧⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18533",
+      "orth": "ⲁⲓⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1863,
+        "count": 34
+      }
+    },
+    {
+      "id": "CF18532",
+      "orth": "ⲁⲓⲧⲏⲙⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18531",
+      "orth": "ⲁⲓⲧⲉⲓⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18534",
+      "orth": "ⲉⲧⲉⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18535",
+      "orth": "ⲉⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10095,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18536",
+      "orth": "ⲉⲧⲏⲙⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6570,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF18537",
+      "orth": "ⲉⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10095,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18538",
+      "orth": "ⲏⲛⲧⲏⲙⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF18539",
+      "orth": "ⲏⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11471,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9149",
+      "bibliography": "DDGLC",
+      "cu_ID": "1103"
+    },
+    {
+      "id": "CS9150",
+      "bibliography": "DDGLC",
+      "cu_ID": "8013"
+    },
+    {
+      "id": "CS9151",
+      "bibliography": "DDGLC",
+      "cu_ID": "8298"
+    },
+    {
+      "id": "CS9152",
+      "bibliography": "DDGLC",
+      "cu_ID": "8561"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲩⲉⲣⲟⲩⲱ ⲡⲉϫⲱⲟⲩ ⲙⲡⲉⲙⲑⲟ ⲙⲡⲟⲩⲣⲟ ϫⲉⲇⲁⲛⲓⲏⲗ ⲡⲓⲉⲃⲟⲗϧⲉⲛ ⲛⲓϣⲏⲣⲓ ⲛⲧⲉϯⲉⲭⲙⲁⲗⲱⲥⲓⲁ ⲛⲧⲉϯⲓⲟⲩⲇⲉⲁ ⲙⲡⲉϥϭⲛⲉϫⲱϥ ⲙⲡⲉⲕϩⲱⲛ ⲟⲩⲟϩ ⲅ ⲛⲥⲏⲟⲩ ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ϥⲉⲣⲉⲧⲓⲛ ⲛⲛⲉϥ**ⲉⲧⲏⲙⲁ** ⲛⲧⲟⲧϥ ⲙⲡⲉϥⲛⲟⲩϯ .",
+      "english": "And I heard one saint speaking, and a saint said to a certain one speaking, How long shall the vision continue, even the removal of the sacrifice, and the bringing in of the sin of desolation; and how long shall the sanctuary and host be trampled?",
+      "source": "27_Daniel_08",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲛⲛⲉⲩ**ⲁⲓⲧⲏⲙⲁ** ⲧⲏⲣⲟⲩ ·",
+      "english": "filling all their requests,",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲛⲟϥ ϧⲉⲛⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲉϥⲉϯ ⲛⲁⲕ ⲛⲛⲓ**ⲉⲧⲏⲙⲁ** ⲛⲧⲉⲡⲉⲕϩⲏⲧ .",
+      "english": "Hope in the Lord, and do good; and dwell on the land, and thou shalt be fed with the wealth of it.",
+      "source": "19_Psalmi_36",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:36",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲉⲥⲑⲏⲣ ⲛⲁϥ ϫⲉⲡⲁⲓ ⲡⲉⲧⲓⲁⲝⲓⲟⲩ ⲙⲙⲟⲥ ⲁⲩⲱ ⲡⲁⲓ ⲡⲉ ⲡⲁ**ⲁⲓⲧⲏⲙⲁ**",
+      "english": "And she said, My request and my petition are:",
+      "source": "Esther 5",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛⲧⲓϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲁ**ⲏⲧⲏⲙⲁ** ⲧⲁⲉⲓⲣⲉ ⲙⲡⲟⲩⲱϣ ⲙⲡⲁϩⲏⲧ ⲉⲧⲓ ⲉⲧⲓ ⲧⲁⲭⲏ ⲧⲁⲭⲏ",
+      "english": "until I complete my demand, and I fulfil the desire of my heart, now, now, quickly quickly!''",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲝⲓⲟⲩ",
+        3,
+        15.976
+      ],
+      [
+        "ϫⲱⲕ",
+        10,
+        15.766
+      ],
+      [
+        "ⲁⲓⲧⲉⲓ",
+        5,
+        14.741
+      ],
+      [
+        "ⲟⲩ",
+        28,
+        14.513
+      ],
+      [
+        "ϫⲉⲕ",
+        2,
+        12.796
+      ],
+      [
+        "ⲡⲟⲩ",
+        4,
+        12.5
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        13,
+        12.437
+      ],
+      [
+        "ⲛⲉⲥⲑⲏⲣ",
+        1,
+        11.884
+      ],
+      [
+        "ⲛ",
+        19,
+        11.423
+      ],
+      [
+        "ⲧⲏⲣ",
+        7,
+        11.157
+      ],
+      [
+        "ⲙ",
+        12,
+        10.977
+      ],
+      [
+        ".",
+        9,
+        10.938
+      ],
+      [
+        "ⲟⲩⲉⲛϩ",
+        1,
+        10.611
+      ],
+      [
+        "ⲁⲙⲁⲛ",
+        1,
+        10.424
+      ],
+      [
+        "ⲍⲁⲭⲁⲣⲓⲁⲥ",
+        1,
+        10.299
+      ],
+      [
+        "ⲛⲁ",
+        9,
+        10.069
+      ],
+      [
+        "ⲡⲉ",
+        7,
+        9.801
+      ],
+      [
+        "ϥ",
+        11,
+        9.771
+      ],
+      [
+        "ⲡⲉⲕ",
+        4,
+        9.739
+      ],
+      [
+        "ⲡⲉⲛ",
+        3,
+        9.707
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          31
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          6
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          5
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          4
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲁ_3_post_ⲁⲓⲧⲉⲓ",
+          3
+        ],
+        [
+          "ⲕ_3_post_ⲁⲓⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲁⲓⲧⲉⲓ_2_post_ⲛⲧ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲛ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲉⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲉⲧⲉ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲛⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲛⲧ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁ_3_post_ⲁⲓⲧⲉⲓ",
+          3
+        ],
+        [
+          "ⲁ_3_post_ⲁⲓⲧⲉⲓ",
+          "ⲕ_3_post_ⲁⲓⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲕ_3_post_ⲁⲓⲧⲉⲓ",
+          "ⲁⲓⲧⲉⲓ_2_post_ⲛⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          "ⲡ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲉⲛⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲓⲧⲉⲓ",
+          "ⲓ_3_post_ⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲁⲓⲧⲉⲓ",
+          "ⲁⲓⲧⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲉⲓ_2_post_ⲛⲧ",
+          "ⲙⲙⲟ_3_post_ⲁⲓⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          "ⲙ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲧⲏⲙⲁ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲉⲃⲟⲧ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲉⲃⲟⲧ",
+          "ϩⲟⲟⲩ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲓⲧⲏⲙⲁ",
+          "ⲁⲓⲧⲏⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.22,
+      "rank": 1601,
+      "count": 35
+    }
+  },
+  "etym": {
+    "grl_ID": "55",
+    "grl_lemma": "αἴτημα",
+    "grl_meaning": "request, demand",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 44a; Preisigke 1:37"
+  }
+}

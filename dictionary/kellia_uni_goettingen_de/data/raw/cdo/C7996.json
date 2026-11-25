@@ -1,0 +1,87 @@
+{
+  "id": "C7996",
+  "forms": [
+    {
+      "id": "CF18058",
+      "orth": "ⲣⲛⲟϭ ⲛϭⲓϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8892",
+      "bibliography": "CD 840a; KoptHWb 472; DELC 350a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C2712",
+      "type": "cf",
+      "label": "great, large"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7998",
+      "label": "ϫⲓϭⲓϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    },
+    {
+      "target": "C7995",
+      "label": "ϭⲓϫ",
+      "pos": "N",
+      "gloss": "hand; forefoot (of animals); handful (as measure); handwriting; handiwork, handicraft, activity"
+    },
+    {
+      "target": "C7999",
+      "label": "ϭⲓϫ",
+      "pos": "N",
+      "gloss": "by hand"
+    },
+    {
+      "target": "C8001",
+      "label": "ϭⲓϫ ⲛⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "letter, document"
+    },
+    {
+      "target": "C7997",
+      "label": "ϯϭⲓϫ",
+      "pos": "V",
+      "gloss": "promise"
+    },
+    {
+      "target": "C8000",
+      "label": "ⲥϧⲓ ⲛϫⲓϫ",
+      "pos": "N",
+      "gloss": "document, recording, list"
+    },
+    {
+      "target": "C8002",
+      "label": "ⲧⲕⲟⲩⲓ ⲛϭⲓϫ",
+      "pos": "N",
+      "gloss": "minuscule"
+    },
+    {
+      "target": "C8003",
+      "label": "ⲧⲛⲟϭ ⲛϭⲓϫ",
+      "pos": "N",
+      "gloss": "majuscule"
+    }
+  ]
+}

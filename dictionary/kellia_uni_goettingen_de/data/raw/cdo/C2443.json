@@ -1,0 +1,224 @@
+{
+  "id": "C2443",
+  "forms": [
+    {
+      "id": "CF6667",
+      "orth": "ⲛⲏⲃⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5940,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2810",
+      "bibliography": "CD 222b; CED 107; KoptHWb 120; ChLCS 32a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉϩⲧⲟⲟⲩⲉ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲛⲧⲱⲛⲓⲟⲥ ⲁϥⲛⲁⲩ ⲉⲡⲁϣⲁⲓ ⲛⲧ**ⲛⲏⲃⲧⲉ** ⲛⲁⲡⲁ ⲙⲁⲕⲁⲣⲓⲟⲥ",
+      "english": "In the morning, the blessed Abba Antony went in and saw the great quantity of Abba Macarius’s palms.",
+      "source": "Apophthegmata Patrum Sahidic 038",
+      "urn": "urn:cts:copticLit:ap.38.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲟⲛ ⲉⲧⲃⲏⲏⲧϥ ϫⲉϣⲁϥϣⲱⲗⲕ ⲛⲧ**ⲛⲏⲃⲧⲉ** ⲛⲃⲓⲣ ⲥⲛⲁⲩ ⲉⲩⲃⲓⲣ ⲛⲟⲩⲱⲧ ⲉⲙⲉϥⲛⲟⲉⲓ ⲉⲣⲉⲡⲉϥⲙⲉⲉⲩⲉ ⲥⲣⲟⲃⲧ ⲉⲧⲉⲑⲉⲱⲣⲓⲁ :",
+      "english": "It was also said about him that he wove the plait for two baskets into one without thinking about it, his mind being occupied in contemplation.",
+      "source": "Apophthegmata Patrum Sahidic 084",
+      "urn": "urn:cts:copticLit:ap.84.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲙⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ ⲁⲩⲛⲟⲃⲧⲟⲩ · ⲁⲩⲱ ⲧ**ⲛⲏⲃⲧⲉ** ⲁⲥⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲉⲥⲡⲩⲗⲩⲟⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡϣⲟⲩϣⲧ ·",
+      "english": "From the evening hour onward, they wove, and the plaits went down from the cave through the window.",
+      "source": "Apophthegmata Patrum Sahidic 038",
+      "urn": "urn:cts:copticLit:ap.38.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲗⲕ",
+        1,
+        19.013
+      ],
+      [
+        "ⲃⲓⲣ",
+        1,
+        14.621
+      ],
+      [
+        "ⲙⲁⲕⲁⲣⲓⲟⲥ",
+        1,
+        11.436
+      ],
+      [
+        "ⲁϣⲁⲓ",
+        1,
+        11.265
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        9.763
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        9.335
+      ],
+      [
+        "ⲧ",
+        3,
+        9.241
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        7.359
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲛⲏⲃⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲏⲃⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲛⲏⲃⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲡⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲕⲁⲣⲓⲟⲥ_3_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_3_post_ⲃⲓⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲛⲏⲃⲧⲉ",
+          "ⲛⲏⲃⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲏⲃⲧⲉ_0_node",
+          "ⲛ_1_post_ⲛⲏⲃⲧⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲛⲏⲃⲧⲉ",
+          "ⲁⲡⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_2_post_ⲛ",
+          "ⲙⲁⲕⲁⲣⲓⲟⲥ_3_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲏⲃⲧⲉ",
+          "ⲃⲓⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲓⲣ_2_post_ⲛ",
+          "ⲥⲛⲁⲩ_3_post_ⲃⲓⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5499,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2442",
+      "label": "ⲛⲟⲩⲃⲧ",
+      "pos": "V",
+      "gloss": "weave"
+    }
+  ],
+  "etym": {
+    "egy_num": "82870",
+    "egy_lemma": "nbd",
+    "demo_num": "d3142",
+    "demo_lemma": "nbd(.t)",
+    "english": "basketwork",
+    "german": "Flechtwerk, Geflochtenes",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/82870",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3142"
+  }
+}

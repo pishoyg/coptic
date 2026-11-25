@@ -1,0 +1,43 @@
+{
+  "id": "C7207",
+  "forms": [
+    {
+      "id": "CF16473",
+      "orth": "ⲉⲗϩⲏⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7955",
+      "bibliography": "CD 770a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7205",
+      "label": "ϫⲗϩⲏⲥ",
+      "pos": "V",
+      "gloss": "be exhausted, pant"
+    },
+    {
+      "target": "C7206",
+      "label": "ϫⲗϩⲏⲥ",
+      "pos": "N",
+      "gloss": "exhaustion, panting"
+    },
+    {
+      "target": "C7204",
+      "label": "ϫⲱⲗϩⲥ",
+      "pos": "V",
+      "gloss": "be exhausted(?)"
+    }
+  ]
+}

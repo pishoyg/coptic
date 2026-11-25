@@ -1,0 +1,667 @@
+{
+  "id": "C5073",
+  "forms": [
+    {
+      "id": "CF12111",
+      "orth": "ⲟⲩⲛⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.14,
+        "rank": 430,
+        "count": 338
+      }
+    },
+    {
+      "orth": "ⲟⲩⲓⲛⲁⲙ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.31,
+        "rank": 411,
+        "count": 196
+      }
+    },
+    {
+      "orth": "ⲟⲩⲓⲛⲁⲙ",
+      "dialect": "S",
+      "id": "294.1"
+    },
+    {
+      "orth": "ⲟⲩⲉⲓⲛⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5569,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲓⲟⲩⲛⲁⲙ",
+      "dialect": "S",
+      "id": "294.3"
+    },
+    {
+      "orth": "ⲟⲩⲛⲟⲙ",
+      "dialect": "S",
+      "id": "294.4"
+    },
+    {
+      "orth": "ⲓⲟⲩⲛⲟⲙ",
+      "dialect": "S",
+      "id": "294.5"
+    },
+    {
+      "orth": "ⲟⲩⲛⲉⲙ",
+      "dialect": "A",
+      "id": "294.6"
+    },
+    {
+      "orth": "ⲟⲩⲛⲁⲙ",
+      "dialect": "F",
+      "id": "294.7"
+    },
+    {
+      "orth": "ⲟⲩⲓⲛⲉⲙ",
+      "dialect": "F",
+      "id": "294.8"
+    },
+    {
+      "orth": "ⲟⲩⲓⲉⲛⲏⲙ",
+      "dialect": "F",
+      "id": "294.9"
+    },
+    {
+      "orth": "ⲓⲟⲩⲛⲉⲙ",
+      "dialect": "F",
+      "id": "294.10"
+    },
+    {
+      "orth": "ⲓⲟⲩⲉⲛⲏⲙ",
+      "dialect": "F",
+      "id": "294.11"
+    },
+    {
+      "orth": "ⲓⲱⲛⲁⲙ",
+      "dialect": "F",
+      "id": "294.12"
+    },
+    {
+      "orth": "ⲓⲱⲛⲏⲙ",
+      "dialect": "F",
+      "id": "294.13"
+    },
+    {
+      "orth": "ⲟⲩⲛⲉⲙ",
+      "dialect": "L",
+      "id": "294.14"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5704",
+      "bibliography": "CD 483b-484a; CED 213; KoptHWb 274; DELC 234a-235a; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲁⲩⲓⲇ ⲁϥϫⲟⲥ ϧⲉⲛⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲃ ϫⲉⲡⲉϫⲉ ⲡϭⲟⲓⲥ ⲙⲡⲁϭⲟⲓⲥ ϫⲉϩⲉⲙⲥⲓ ⲥⲁⲧⲁ**ⲟⲩⲓⲛⲁⲙ** ϣⲁϯⲭⲁⲛⲉⲕϫⲁϫⲓ ⲥⲁⲡⲉⲥⲏⲧ ⲛⲛⲉⲕϭⲁⲗⲁⲩϫ .",
+      "english": "For David himself said in the Holy Spirit, 'The Lord said to my Lord, 'Sit at my right hand, until I make your enemies the footstool of your feet.''",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲙⲉⲛ ϣⲁϥϩⲱⲥ ⲙⲙⲟⲓ ϩⲙⲡⲉϥⲧⲛϩ ⲛ**ⲟⲩⲛⲁⲙ** ·",
+      "english": "and me he used to place under his right wing,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩϣⲉ ⲛⲱⲟⲩ ⲉϧⲟⲩⲛ ⲉⲡⲓⲙϩⲁⲩ ⲁⲩⲛⲁⲩ ⲉⲟⲩϧⲉⲗϣⲓⲣⲓ ⲉϥϩⲉⲙⲥⲓ ⲥⲁ**ⲟⲩⲓⲛⲁⲙ** ⲉϥϫⲏⲗ ⲛⲟⲩⲥⲧⲟⲗⲏ ⲉⲥⲟⲩⲟⲃϣ ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ .",
+      "english": "Entering into the tomb, they saw a young man sitting on the right side, dressed in a white robe, and they were amazed.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲕ**ⲟⲩⲛⲁⲙ** ⲧⲉ ⲛⲧⲁⲥϣⲟⲡⲧ ⲉⲣⲟⲥ ·",
+      "english": "and it is Thy right hand which hath received it.'",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲓ ⲟⲛ ϫⲉⲡⲓⲫⲁϣ ⲁϥϧⲟⲙϧⲉⲙ ⲟⲩⲟϩ ⲟⲛ ϫⲉⲧⲉⲕ**ⲟⲩⲓⲛⲁⲙ** ⲛϭⲟⲉⲓⲥ ⲁⲥⲓⲣⲓⲛⲟⲩϫⲟⲙ .",
+      "english": "and also this: ‘the trap has been broken’; and also, ‘Thy right hand, O Lord, hath done wonders.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣⲁⲩϣⲱⲛϥ [...] ⲧⲏⲩ ⲛ**ⲟⲩⲛⲁⲙ** .",
+      "english": "They meet with a favorable wind",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲁϭⲏ",
+        49,
+        30.839
+      ],
+      [
+        "ⲥⲁ",
+        71,
+        28.695
+      ],
+      [
+        "ⲛ",
+        152,
+        26.334
+      ],
+      [
+        "ⲧⲉⲕ",
+        34,
+        25.54
+      ],
+      [
+        "ϩⲉⲙⲥⲓ",
+        26,
+        25.062
+      ],
+      [
+        "ⲧⲉϥ",
+        40,
+        24.956
+      ],
+      [
+        "ⲛⲉⲙ",
+        71,
+        24.692
+      ],
+      [
+        "ⲙⲙⲟ",
+        53,
+        24.552
+      ],
+      [
+        "ϫⲓϫ",
+        29,
+        24.087
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        79,
+        23.991
+      ],
+      [
+        "ⲙ",
+        67,
+        23.781
+      ],
+      [
+        "ϥ",
+        86,
+        23.703
+      ],
+      [
+        "ϣⲱⲃϣ",
+        10,
+        23.552
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        32,
+        23.414
+      ],
+      [
+        "ⲁ",
+        67,
+        23.188
+      ],
+      [
+        "ⲫⲁⲧ",
+        8,
+        22.94
+      ],
+      [
+        "ⲫ",
+        41,
+        22.637
+      ],
+      [
+        "ⲥⲁϫⲁϭⲏ",
+        3,
+        22.45
+      ],
+      [
+        "ⲡ",
+        46,
+        22.19
+      ],
+      [
+        "ϯ",
+        39,
+        22.147
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        21,
+        25.374
+      ],
+      [
+        "ϩⲃⲟⲩⲣ",
+        63,
+        23.031
+      ],
+      [
+        "ⲙⲙⲟ",
+        156,
+        20.436
+      ],
+      [
+        "ϩⲓ",
+        78,
+        19.686
+      ],
+      [
+        "ⲁⲩⲱ",
+        170,
+        19.574
+      ],
+      [
+        "ⲛⲥⲁ",
+        64,
+        19.36
+      ],
+      [
+        "ⲛ",
+        253,
+        19.357
+      ],
+      [
+        "ⲡ",
+        163,
+        18.142
+      ],
+      [
+        "ⲙ",
+        131,
+        18.051
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        35,
+        17.989
+      ],
+      [
+        "ϭⲓϫ",
+        39,
+        17.429
+      ],
+      [
+        "ⲧⲉⲕ",
+        38,
+        17.213
+      ],
+      [
+        "ⲧⲉϥ",
+        45,
+        17.039
+      ],
+      [
+        "ⲉ",
+        108,
+        16.681
+      ],
+      [
+        "ϥ",
+        109,
+        16.425
+      ],
+      [
+        "ⲁ",
+        94,
+        16.307
+      ],
+      [
+        "ⲕ",
+        57,
+        15.95
+      ],
+      [
+        "ⲁϩⲉ",
+        23,
+        15.817
+      ],
+      [
+        "ϩⲧⲏⲥ",
+        5,
+        15.703
+      ],
+      [
+        "ⲣⲁⲧ",
+        22,
+        15.651
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲛⲁⲙ_0_node",
+          203
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲟⲩⲛⲁⲙ",
+          22
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          34
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          13
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲛⲁⲙ",
+          16
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲩⲛⲁⲙ",
+          12
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          10
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲛⲁⲙ",
+          5
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲟⲩⲛⲁⲙ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛⲁⲙ",
+          10
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲟⲩ_5_post_ⲕⲁⲑⲁⲣⲓⲍⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_5_post_ⲕⲁⲑⲁⲣⲓⲍⲉ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          3
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲛⲁⲙ",
+          8
+        ],
+        [
+          "ⲧ_1_pre_ⲟⲩⲛⲁⲙ",
+          3
+        ],
+        [
+          "ⲟⲩⲇⲉ_3_post_ϩⲃⲟⲩⲣ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲛⲁⲙ",
+          3
+        ],
+        [
+          "ϩⲃⲟⲩⲣ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲛⲁⲙ",
+          3
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲩⲛⲁⲙ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲥⲉ",
+          2
+        ],
+        [
+          "ⲥ_3_post_ϫⲓⲥⲉ",
+          2
+        ],
+        [
+          "ϫⲓⲥⲉ_2_post_ⲛⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_0_node",
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          6
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲛⲁ_1_pre_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_0_node",
+          "ⲙ_1_post_ⲟⲩⲛⲁⲙ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ⲟⲩ_5_post_ⲕⲁⲑⲁⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_5_post_ⲕⲁⲑⲁⲣⲓⲍⲉ",
+          "ⲛⲁ_5_post_ⲕⲁⲑⲁⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲟⲩⲛⲁⲙ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_0_node",
+          "ⲟⲩⲇⲉ_3_post_ϩⲃⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_3_post_ϩⲃⲟⲩⲣ",
+          "ⲉ_1_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲛⲁⲙ",
+          "ϩⲃⲟⲩⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲛⲁⲙ",
+          "ⲧⲉϥ_1_pre_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_0_node",
+          "ⲛⲧ_1_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲩⲛⲁⲙ",
+          "ⲁ_3_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲥⲉ",
+          "ⲥ_3_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϫⲓⲥⲉ",
+          "ϫⲓⲥⲉ_2_post_ⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.13,
+      "rank": 366,
+      "count": 338
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5076",
+      "label": "ϩⲓⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, at the right"
+    },
+    {
+      "target": "C5077",
+      "label": "ϩⲛⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "by the right, on the right"
+    },
+    {
+      "target": "C5074",
+      "label": "ⲉⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, to the right"
+    },
+    {
+      "target": "C5075",
+      "label": "ⲥⲁⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, to the right"
+    }
+  ],
+  "etym": {
+    "egy_num": "46790",
+    "egy_lemma": "wnm.j",
+    "demo_num": "dm4313",
+    "demo_lemma": "wnmj(.t)",
+    "english": "right hand",
+    "german": "rechte Hand",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/46790",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm4313"
+  }
+}

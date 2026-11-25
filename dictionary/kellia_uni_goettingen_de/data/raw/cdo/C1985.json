@@ -1,0 +1,300 @@
+{
+  "id": "C1985",
+  "forms": [
+    {
+      "id": "CF5628",
+      "orth": "ⲁⲧⲙⲡϣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4322,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2304",
+      "bibliography": "CD 179b; ChLCS 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲁⲛⲅⲟⲩ**ⲁⲧⲙⲡϣⲁ** ⲙⲙⲱⲧⲛ ·",
+      "english": "I am not worthy of you.'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲟⲩⲱⲛϩ ⲙⲙⲟⲛ ⲉⲃⲟⲗ ⲛ**ⲁⲧⲙⲡϣⲁ** ⲙⲡⲉϩⲙⲟⲧ ⲙⲡϫⲟⲉⲓⲥ ⲛⲧⲁϥⲁⲁⲛ ⲛⲙⲡϣⲁ ⲛⲑⲛⲟⲛ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ϩⲛϩⲉⲛϩⲃⲏⲩⲉ",
+      "english": "revealing that we are unworthy of the gift of the Lord, who made us worthy to approach him through deeds--",
+      "source": "Abraham Our Father: YA 535-40",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:21-27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲉⲛⲟⲩⲱϣ ⲛϩⲏⲧ · ⲙⲛⲛⲉⲛⲙⲛⲧⲁⲧⲥⲱⲧⲙ ⲛⲉⲧⲉⲓⲣⲉ ⲙⲙⲟⲛ ⲛ**ⲁⲧⲙⲡϣⲁ** ⲛⲛⲁⲓ · ⲕⲁⲓ ⲅⲁⲣ ⲉϥⲥⲏϩ",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA 225-232",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:474-487",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲍⲩⲛⲱⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲟⲗⲱⲥ",
+        1,
+        12.341
+      ],
+      [
+        "..",
+        1,
+        11.355
+      ],
+      [
+        "ϩⲙⲟⲧ",
+        1,
+        10.709
+      ],
+      [
+        "ⲕⲁⲓ",
+        1,
+        10.272
+      ],
+      [
+        "ⲛ",
+        8,
+        10.224
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        2,
+        9.927
+      ],
+      [
+        "ⲡⲉⲓ",
+        2,
+        9.742
+      ],
+      [
+        "ⲁⲛⲅ",
+        1,
+        9.651
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        9.566
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        8.966
+      ],
+      [
+        "ⲙⲛⲧⲣⲣⲟ",
+        1,
+        8.576
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        8.309
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.25
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        7.733
+      ],
+      [
+        "·",
+        1,
+        7.593
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.396
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        7.353
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        7.224
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        6.872
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          2
+        ],
+        [
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲧ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          "ⲙ_1_post_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲧⲙⲡϣⲁ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ϩⲙⲟⲧ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲧ_3_post_ⲡⲉ",
+          "ⲙ_4_post_ϩⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          "ⲛ_1_post_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲙⲡϣⲁ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          "ⲁⲛⲅ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲁⲧⲙⲡϣⲁ",
+          "ⲁⲧⲙⲡϣⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3925,
+      "count": 6
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1986",
+      "label": "ⲙⲛⲧⲁⲧⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "unworthiness"
+    },
+    {
+      "target": "C1982",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "be worthy, worth; be entitled, obliged"
+    },
+    {
+      "target": "C1987",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "worth, desert, fate"
+    },
+    {
+      "target": "C1983",
+      "label": "ⲙⲡϣⲁ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be worthy to"
+    },
+    {
+      "target": "C1988",
+      "label": "ⲣⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "become, be worthy, deserve"
+    },
+    {
+      "target": "C1984",
+      "label": "ⲥⲙⲡϣⲁ (ⲛ-)",
+      "pos": "V",
+      "gloss": "it is right, needful"
+    }
+  ]
+}

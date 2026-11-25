@@ -1,0 +1,113 @@
+{
+  "id": "C6473",
+  "forms": [
+    {
+      "id": "CF14974",
+      "orth": "ⲣⲉϥⲣϩⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18547,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7183",
+      "bibliography": "CD 661a-b; ChLCS 89a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲣⲉⲛⲁⲓ ⲇⲉ ϣⲟⲟⲡ ⲛⲛⲟϭⲛⲉϭ ⲛⲧⲧⲉⲭⲛⲏ ⲛⲛ**ⲣⲉϥⲣϩⲓⲕ** ⲁⲩⲱ ⲛϫⲡⲓⲟ ϩⲓⲥⲱϣ ⲛⲧⲉⲙⲛⲧⲃⲁⲃⲉⲣⲱⲙⲉ ⲛⲧⲉⲩⲥⲟⲫⲓⲁ",
+      "english": "As for the illusions of art magick, they were put down, and their vaunting in wisdom was reproved with disgrace.",
+      "source": "Wisdom 17",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲭⲛⲏ",
+        1,
+        15.954
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        13.206
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲣϩⲓⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18165,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6471",
+      "label": "ϩⲓⲕ",
+      "pos": "N",
+      "gloss": "magic"
+    },
+    {
+      "target": "C6472",
+      "label": "ⲣϩⲓⲕ",
+      "pos": "V",
+      "gloss": "bewitch, enchant"
+    }
+  ]
+}

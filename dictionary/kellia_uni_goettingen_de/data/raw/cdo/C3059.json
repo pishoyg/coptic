@@ -1,0 +1,76 @@
+{
+  "id": "C3059",
+  "forms": [
+    {
+      "id": "CF7991",
+      "orth": "ⲣⲟⲉⲓⲥ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3507",
+      "bibliography": "CD 301a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲁⲯⲩⲭⲏ ⲣⲟⲩϣⲏ **ⲛⲣⲟⲉⲓⲥ **ⲉⲃⲟⲗ**** ϩⲙⲡⲁⲙⲕⲁϩ ⲛϩⲏⲧ ⲙⲁⲧⲁϫⲣⲟⲓ ϩⲛⲛⲉⲕϣⲁϫⲉ",
+      "english": "My soul has slumbered for sorrow; strengthen thou me with thy words.",
+      "source": "Psalms 118",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:118",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3063",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "V",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3064",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3065",
+      "label": "ⲉⲣϣⲣⲱⲓⲥ",
+      "pos": "V",
+      "gloss": "keep vigil"
+    },
+    {
+      "target": "C3062",
+      "label": "ⲙⲁ ⲛⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "place of watching"
+    },
+    {
+      "target": "C3061",
+      "label": "ⲣⲉϥⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "watchman, guardian"
+    },
+    {
+      "target": "C3058",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "V",
+      "gloss": "be awake, watch; keep, observe"
+    },
+    {
+      "target": "C3060",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    }
+  ]
+}

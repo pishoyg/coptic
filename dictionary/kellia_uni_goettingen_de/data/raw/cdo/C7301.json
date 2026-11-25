@@ -1,0 +1,50 @@
+{
+  "id": "C7301",
+  "forms": [
+    {
+      "id": "CF16661",
+      "orth": "ⲁⲧϫⲡⲟϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8066",
+      "bibliography": "CD 780a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7299",
+      "label": "ϫⲡⲟ",
+      "pos": "V",
+      "gloss": "beget, bring forth, father, give birth; acquire"
+    },
+    {
+      "target": "C7300",
+      "label": "ϫⲡⲟ",
+      "pos": "N",
+      "gloss": "birth, fathering; product, creature, progeny; possession, gain"
+    },
+    {
+      "target": "C7303",
+      "label": "ϭⲓⲛϫⲡⲟ",
+      "pos": "N",
+      "gloss": "fathering; generation"
+    },
+    {
+      "target": "C7302",
+      "label": "ⲣⲉϥϫⲡⲟ",
+      "pos": "N",
+      "gloss": "begetter, maker"
+    }
+  ]
+}

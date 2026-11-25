@@ -1,0 +1,747 @@
+{
+  "id": "C3132",
+  "forms": [
+    {
+      "id": "CF8143",
+      "orth": "ⲣⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1873,
+        "count": 34
+      }
+    },
+    {
+      "orth": "ⲣⲓⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1808,
+        "count": 18
+      }
+    },
+    {
+      "orth": "ⲣⲏⲗ",
+      "dialect": "S",
+      "id": "1335.1"
+    },
+    {
+      "orth": "ⲗⲓⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15532,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲣⲣ-",
+      "dialect": "S",
+      "id": "1335.3"
+    },
+    {
+      "orth": "ⲣⲓⲣ",
+      "dialect": "A",
+      "id": "1335.4"
+    },
+    {
+      "orth": "ⲗⲓⲗ",
+      "dialect": "F",
+      "id": "1335.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3582",
+      "bibliography": "CD 299a; CED 138; KoptHWb 166; DELC 177; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲟⲩⲟⲛ ⲟⲩⲁⲅⲉⲗⲏ ⲇⲉ ⲛ**ⲣⲓⲣ** ⲉⲥⲟϣ ⲙⲙⲁⲩ ⲡⲉ ⲉⲥⲙⲟⲛⲓ ϧⲁⲧⲉⲛⲡⲓⲧⲱⲟⲩ",
+      "english": "Now on the mountainside there was a great herd of pigs feeding.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲟⲩⲫⲣⲁⲅⲉⲗⲗⲓⲟⲛ ⲛⲁϥ · ⲛⲅⲧⲣⲉϥⲙⲟⲟⲛⲉ ⲛⲛ**ⲣⲓⲣ** · ⲻ",
+      "english": "Give him a whip and make him tend the pigs.'",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩϯϩⲟ ⲉⲣⲟϥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲟⲣⲡⲧⲉⲛ ⲉⲛⲓ**ⲣⲓⲣ** ϩⲓⲛⲁ ⲛⲧⲉⲛϣⲉ ⲉϧⲟⲩⲛ ⲉⲣⲱⲟⲩ",
+      "english": "All the demons begged him, saying, 'Send us into the pigs, that we may enter into them.'",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲥⲙⲡⲙⲁ ⲇⲉ ⲉⲧⲙⲙⲁⲩ ϩⲁⲣⲁⲧϥ ⲙⲡⲧⲟⲟⲩ ⲛϭⲓⲟⲩⲛⲟϭ ⲛⲁⲅⲉⲗⲏ ⲛ**ⲣⲓⲣ** ⲉⲩⲙⲟⲟⲛⲉ ⲙⲙⲟⲥ",
+      "english": "Now on the mountainside there was a great herd of pigs feeding.",
+      "source": "Mark Chapter 5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲥⲁϫⲓ ϧⲁⲧⲟⲧⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧⲁⲩⲛⲁⲩ ϫⲉⲉⲧⲁⲥϣⲱⲡⲓ ⲛⲁϣ ⲛⲣⲏϯ ⲙⲫⲏ ⲉⲛⲁⲣⲉⲛⲓⲇⲁⲓⲙⲱⲛ ⲛⲉⲙⲁϥ ⲛⲉⲙⲉⲑⲃⲉⲛⲓ**ⲣⲓⲣ**",
+      "english": "Those who saw it declared to them how it happened to him who was possessed by demons, and about the pigs.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲉⲛⲕⲟⲟⲩⲉ ⲟⲛ ⲉⲧⲣⲉⲩⲥⲁⲛⲟⲩϣⲟⲩ ⲛⲏⲧⲛⲛⲧⲉⲓϩⲉ ⲟⲛ ϩⲉⲛϩⲧⲟ , ⲁⲩⲱ ϩⲉⲛⲉⲓⲱ , ⲙⲛϩⲉⲛⲉⲥⲟⲟⲩ , ⲙⲛϩⲉⲛⲙⲁⲥⲉ , ⲙⲛϩⲉⲛ**ⲣⲓⲣ** ,",
+      "english": "Whereas others are still fed to you in this way: horses, and asses, sheep, calves, and pigs.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲅⲉⲗⲏ",
+        4,
+        18.718
+      ],
+      [
+        "ⲟϣ",
+        4,
+        13.643
+      ],
+      [
+        "ⲉ",
+        18,
+        13.357
+      ],
+      [
+        "ⲟⲩⲟⲣⲡ",
+        3,
+        12.68
+      ],
+      [
+        "ⲟϩⲓ",
+        4,
+        12.004
+      ],
+      [
+        "ⲗⲩⲙⲛⲏ",
+        1,
+        11.825
+      ],
+      [
+        "ϭⲟⲡ",
+        1,
+        11.718
+      ],
+      [
+        "ϣⲉ",
+        4,
+        11.688
+      ],
+      [
+        "ⲛ",
+        13,
+        11.522
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        11,
+        11.288
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        4,
+        10.884
+      ],
+      [
+        "ⲥ",
+        7,
+        10.68
+      ],
+      [
+        "ⲛⲓ",
+        7,
+        10.47
+      ],
+      [
+        "ⲩ",
+        7,
+        10.373
+      ],
+      [
+        "ⲉⲣ",
+        3,
+        10.242
+      ],
+      [
+        "ⲧⲉⲛ",
+        5,
+        10.197
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        3,
+        10.039
+      ],
+      [
+        "ⲫⲟⲣϫ",
+        1,
+        9.881
+      ],
+      [
+        "ⲇⲉ",
+        5,
+        9.844
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        9.584
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲅⲉⲗⲏ",
+        8,
+        19.926
+      ],
+      [
+        "ⲙⲟⲟⲛⲉ",
+        12,
+        18.822
+      ],
+      [
+        "ⲻ",
+        6,
+        16.189
+      ],
+      [
+        "ⲍⲱⲙⲓⲛ",
+        1,
+        15.511
+      ],
+      [
+        "ⲟⲩⲱⲙⲁϥ",
+        1,
+        15.511
+      ],
+      [
+        "ⲩⲱⲙⲉϥ",
+        1,
+        15.511
+      ],
+      [
+        "ⲛ",
+        47,
+        15.385
+      ],
+      [
+        "ϣⲱⲙⲉ",
+        3,
+        14.622
+      ],
+      [
+        "ϩⲁⲙⲟⲓ",
+        2,
+        13.756
+      ],
+      [
+        ",",
+        4,
+        12.779
+      ],
+      [
+        "ⲉϩⲉ",
+        2,
+        12.556
+      ],
+      [
+        "ⲡⲁⲣⲇⲁⲗⲓⲥ",
+        1,
+        12.341
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        3,
+        12.081
+      ],
+      [
+        "ⲟⲩⲉⲙⲁϥ",
+        1,
+        11.926
+      ],
+      [
+        "ⲉ",
+        16,
+        11.73
+      ],
+      [
+        "ϥ",
+        16,
+        11.434
+      ],
+      [
+        "ⲧ",
+        11,
+        11.362
+      ],
+      [
+        "ϩⲓϫⲛ",
+        3,
+        11.081
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        3,
+        10.946
+      ],
+      [
+        "ⲙⲙⲟ",
+        8,
+        10.893
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲓⲣ_0_node",
+          15
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲓⲣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲓⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲓⲣ_0_node",
+          21
+        ],
+        [
+          "ⲉ_1_post_ⲣⲓⲣ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲙⲟⲟⲛⲉ",
+          2
+        ],
+        [
+          "ⲙⲟⲟⲛⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲟⲟⲛⲉ",
+          2
+        ],
+        [
+          "ⲥ_4_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲓⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲍⲱⲙⲓⲛ",
+          1
+        ],
+        [
+          "ⲍⲱⲙⲓⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲍⲱⲙⲓⲛ",
+          1
+        ],
+        [
+          "ⲑⲩⲥⲓⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲣⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲣⲛ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_5_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲉ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲕⲟⲛⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ⲡⲱϩ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲁⲛ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ϣⲁ_2_post_ⲡⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲓⲣ_0_node",
+          "ⲉ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲓⲣ",
+          "ⲩ_3_post_ⲙⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲟⲟⲛⲉ",
+          "ⲙⲟⲟⲛⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲛⲉ_2_post_ⲉ",
+          "ⲙⲙⲟ_3_post_ⲙⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲟⲟⲛⲉ",
+          "ⲥ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲓⲣ",
+          "ⲟⲩ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲓⲣ",
+          "ϩⲟⲟⲩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ϩⲟⲟⲩⲧ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_1_post_ⲣⲓⲣ",
+          "ⲉⲃⲟⲗ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲓⲣ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ϩⲓ_2_post_ⲍⲱⲙⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲍⲱⲙⲓⲛ",
+          "ⲍⲱⲙⲓⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲍⲱⲙⲓⲛ_1_post_ⲣⲓⲣ",
+          "ⲛ_2_post_ⲍⲱⲙⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲍⲱⲙⲓⲛ",
+          "ⲑⲩⲥⲓⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ϩⲓⲣⲛ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲓⲣⲛ_1_post_ⲣⲓⲣ",
+          "ⲛ_2_post_ϩⲓⲣⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓⲣⲛ",
+          "ⲣⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲛ",
+          "ⲁⲩⲱ_5_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲃⲟⲧⲉ",
+          "ⲛ_5_post_ⲃⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ⲙⲛ_2_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉϩⲉ",
+          "ⲧ_2_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉϩⲉ",
+          "ⲉϩⲉ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲉϩⲉ_1_post_ⲣⲓⲣ",
+          "ⲛⲧ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲣⲓⲣ",
+          "ⲁ_3_post_ⲕⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲓⲣ",
+          "ϩⲉⲛ_1_pre_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲓⲣ",
+          "ⲣⲓⲣ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲣ_0_node",
+          "ϣⲁⲛⲧⲉ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_2_post_ⲡⲱϩ",
+          "ϥ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲡⲱϩ",
+          "ⲡⲱϩ_1_post_ⲣⲓⲣ",
+          1
+        ],
+        [
+          "ⲡⲱϩ_1_post_ⲣⲓⲣ",
+          "ⲁⲛ_2_post_ⲡⲱϩ",
+          1
+        ],
+        [
+          "ⲁⲛ_2_post_ⲡⲱϩ",
+          "ϣⲁ_2_post_ⲡⲱϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1636,
+      "count": 34
+    },
+    "B": {
+      "rate": 0.21,
+      "rank": 1560,
+      "count": 18
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3135",
+      "label": "ⲙⲁⲛⲉⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swineherd"
+    },
+    {
+      "target": "C3137",
+      "label": "ⲣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "piglet"
+    },
+    {
+      "target": "C3134",
+      "label": "ⲣⲓⲣ ⲛϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild boar"
+    },
+    {
+      "target": "C3133",
+      "label": "ⲣⲓⲣ ⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain, wild boar"
+    },
+    {
+      "target": "C3136",
+      "label": "ⲥⲁ ⲛⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "pig dealer"
+    }
+  ],
+  "etym": {
+    "egy_num": "95350",
+    "egy_lemma": "rr.j",
+    "demo_num": "dm162",
+    "demo_lemma": "rjr(.t)",
+    "english": "swine (gen.); boar",
+    "german": "Schwein (allg.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95350",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm162"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "C1268",
+  "forms": [
+    {
+      "id": "CF3941",
+      "orth": "ⲕⲛϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18210,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲕⲉϩⲛⲓ",
+      "dialect": "B",
+      "id": "825.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1467",
+      "bibliography": "CD 113a; KoptHWb 66; ChLCS 18a"
+    },
+    {
+      "id": "CS1468",
+      "bibliography": "CD 113a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲛⲙⲉϣϯⲃⲥ ⲙⲡⲣⲡⲉ ϩⲛⲙⲙⲉⲗⲁⲧⲉ ⲛ**ⲕⲛϩⲉ** ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁϣⲉⲧⲣⲁϩⲧⲥ ⲛⲧⲁⲥϣⲱⲡⲉ ⲙⲛⲗⲁⲁⲩ ⲛⲁϯ ⲙⲡⲉϥϩⲣⲟⲟⲩ ϩⲛⲗⲁⲁⲩ ⲙⲙⲁ",
+      "english": "And the ceilings of the temple shall howl in that day, saith the Lord God: there shall be many a fallen one in every place; I will bring silence upon them.",
+      "source": "Amos 8",
+      "urn": "urn:cts:copticLit:ot.amos.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲗⲁⲧⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲛϩⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17831,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "164910",
+    "egy_lemma": "knḥ.t",
+    "demo_num": "d6371",
+    "demo_lemma": "qnḥ(j.t)",
+    "english": "porch; shrine",
+    "german": "Schrein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164910",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6371"
+  }
+}

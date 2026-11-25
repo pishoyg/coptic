@@ -1,0 +1,178 @@
+{
+  "id": "C1886",
+  "forms": [
+    {
+      "id": "CF5416",
+      "orth": "ⲙⲟⲩⲗⲁϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4849,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2196",
+      "bibliography": "CD 166b; KoptHWb 92; ChLCS 25b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲕⲁⲧⲁⲣⲁⲕⲓⲛ ⲛⲉⲙⲃⲏϫ ⲛⲉⲙⲛⲉⲧⲟⲛⲓ ⲙⲙⲟϥ ⲛⲉⲙⲃⲁⲓ ⲛⲉⲙ**ⲙⲟⲩⲗⲁϫ**",
+      "english": "and the cormorant, and the hawk, and its like, and the hoopoe, and the raven,",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲙⲥⲧⲣⲟⲩⲑⲟⲥ ⲛⲉⲙⲅⲗⲁⲩⲕⲱⲛ ⲛⲉⲙⲗⲁⲣⲟⲥ ⲛⲉⲙⲛⲏ ⲉⲧⲟⲛⲓ ⲙⲙⲟϥ ⲛⲉⲙ**ⲙⲟⲩⲗⲁϫ**",
+      "english": "and every raven, and the birds like it, and the hawk and his like,",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲕⲁⲥ ⲁϥⲧⲱⲙⲓ ⲉⲧⲁⲥⲁⲣ ⲁⲓⲉⲣ ⲙⲫⲣⲏϯ ⲛⲟⲩϩⲙⲏ ⲉⲃⲟⲗ ϩⲓⲡϣⲁϥⲉ ⲁⲓϣⲱⲡⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲙⲟⲩⲗⲁϫ** ϧⲉⲛⲟⲩⲏⲓ ⲉϥϣⲱϥ",
+      "english": "By reason of the voice of my groaning, my bone has cleaved to my flesh.",
+      "source": "19_Psalmi_101",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:101",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲗⲱⲙⲃⲏϫ",
+        1,
+        18.11
+      ],
+      [
+        "ϩⲏⲙⲏ",
+        1,
+        18.11
+      ],
+      [
+        "ⲭⲁⲗⲁⲧⲣⲓⲟⲛ",
+        1,
+        18.11
+      ],
+      [
+        "ⲃⲁⲓ",
+        1,
+        14.203
+      ],
+      [
+        "ⲛⲉⲙ",
+        6,
+        12.412
+      ],
+      [
+        "ⲟⲛⲓ",
+        1,
+        11.41
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        7.024
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.795
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        6.293
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.169
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.783
+      ],
+      [
+        "ⲫ",
+        1,
+        4.979
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.178
+      ],
+      [
+        "ⲙ",
+        1,
+        3.998
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲟⲩⲗⲁϫ",
+          2
+        ],
+        [
+          "ⲙⲟⲩⲗⲁϫ_0_node",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲟⲩⲗⲁϫ",
+          "ⲙⲟⲩⲗⲁϫ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4368,
+      "count": 3
+    }
+  },
+  "etym": {
+    "demo_num": "d109",
+    "demo_lemma": "ꜣmwlḏ",
+    "english": "Owl",
+    "german": "Eule",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d109"
+  }
+}

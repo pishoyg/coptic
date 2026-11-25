@@ -1,0 +1,280 @@
+{
+  "id": "C1072",
+  "forms": [
+    {
+      "id": "CF3503",
+      "orth": "ⲕⲱ (ϩⲓϫⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲭⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.49,
+        "rank": 169,
+        "count": 635
+      }
+    },
+    {
+      "orth": "ⲕⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 8.34,
+        "rank": 145,
+        "count": 1316
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲓϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1241",
+      "bibliography": "CD 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲡⲓϩⲙⲟⲧ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲧⲧⲟⲓ ⲛⲏⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲥⲁⲃⲉ ⲛⲁⲣⲭⲏⲇⲉⲕⲧⲱⲛ ⲁⲓ**ⲭⲱ** ⲛⲟⲩⲥⲉⲛϯ ⲉϧⲣⲏⲓ ⲕⲉⲟⲩⲁⲓ ⲡⲉⲑⲟⲩⲁϩⲉⲙ ⲕⲱⲧ ⲡⲓⲟⲩⲁⲓ ⲇⲉ ⲡⲓⲟⲩⲁⲓ ⲙⲁⲣⲉϥⲥⲟⲙⲥ ϫⲉⲁϥⲕⲱⲧ ⲛⲁϣ ⲛⲣⲏϯ .",
+      "english": "According to the grace of God which was given to me, as a wise master builder I laid a foundation, and another builds on it. But let each man be careful how he builds on it.",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲉⲧⲉⲧⲛⲉⲕⲱ **ϩⲓϫⲛ**ⲛⲉⲛⲧⲁⲧⲉⲧⲛⲧⲁⲗⲟⲟⲩ** ⲉϩⲣⲁⲓ ⲛⲟⲩⲗⲓⲃⲁⲛⲟⲥ ⲛⲕⲁⲑⲁⲣⲟⲛ ⲙⲛⲟⲩϩⲙⲟⲩ ⲛⲥⲉϣⲱⲡⲉ ⲛϩⲉⲛⲟⲉⲓⲕ ⲉⲩⲧⲃⲃⲏⲩ ⲛⲣⲡⲙⲉⲉⲩⲉ ⲉⲩⲕⲏ ⲉϩⲣⲁⲓ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧⲉⲧⲛⲉⲟⲩⲁϩⲟⲩ ⲉϩⲣⲁⲓ ⲙⲡⲉϩⲟⲟⲩ ⲛⲛⲥⲁⲃⲃⲁⲧⲟⲛ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "And ye shall put on each row pure frankincense and salt; and these things shall be for loaves for a memorial, set forth before the Lord.",
+      "source": "Leviticus 24",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲥⲉⲡⲓ ⲇⲉ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ⲁⲛⲟⲕ ⲡϭⲟⲓⲥ ⲁⲛ ϫⲉⲉϣⲱⲡ ⲉⲟⲩⲟⲛ ⲟⲩⲥⲟⲛ ⲉⲟⲩⲟⲛⲧⲉϥ ⲟⲩⲥϩⲓⲙⲓ ⲛⲁⲑⲛⲁϩϯ ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲑⲁⲓ ⲉⲥϯⲙⲁϯ ⲉϣⲱⲡⲓ ⲛⲉⲙⲁϥ ⲙⲡⲉⲛⲑⲣⲉϥ**ⲭⲁ**ⲥ ⲛⲥⲱϥ .",
+      "english": "But to the rest I--not the Lord--say, if any brother has an unbelieving wife, and she is content to live with him, let him not leave her.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲕⲱ ⲛⲧⲙⲓⲧⲣⲁ ϩⲓϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲱ **ⲁϥⲕⲱ **ϩⲓϫⲛ**ⲧⲙⲓⲧⲣⲁ** ϩⲓϩⲏ ⲙⲙⲟϥ ⲙⲡⲡⲉⲧⲁⲗⲟⲛ ⲛⲛⲟⲩⲃ ⲛⲧⲁⲩⲧⲃⲃⲟϥ ⲉϥⲟⲩⲁⲁⲃ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲡϫⲟⲉⲓⲥ ϩⲱⲛ ⲉⲧⲟⲟⲧϥ ⲙⲙⲱⲩⲥⲏⲥ",
+      "english": "And he put the mitre on his head, and put upon the mitre in front the golden plate, the most holy thing, as the Lord commanded Moses.",
+      "source": "Leviticus 8",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲥ ϫⲉ**ⲭⲁ**ⲥ ⲛϣⲟⲣⲡ ⲛⲧⲟⲩⲥⲓ ⲛϫⲉⲛⲓϣⲏⲣⲓ ⲟⲩ ⲅⲁⲣ ⲛⲁⲛⲉⲥ ⲁⲛ ⲉⲉⲗⲡⲱⲓⲕ ⲛⲛⲓϣⲏⲣⲓ ⲉⲧⲏⲓϥ ⲛⲛⲓⲟⲩϩⲱⲣ .",
+      "english": "But Jesus said to her, 'Let the children be filled first, for it is not appropriate to take the children's bread and throw it to the dogs.'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1060",
+      "label": "ϫⲓⲛⲭⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1089",
+      "label": "ϫⲓⲛⲭⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1080",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1081",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1061",
+      "label": "ϭⲓⲛⲕⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1085",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "entrance"
+    },
+    {
+      "target": "C1088",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1079",
+      "label": "ϭⲓⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1075",
+      "label": "ⲁⲧⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "without forgiveness"
+    },
+    {
+      "target": "C1059",
+      "label": "ⲕⲏ",
+      "pos": "VSTAT",
+      "gloss": "be loose, unrestrained; permitted; limp; be, exist, lie"
+    },
+    {
+      "target": "C1058",
+      "label": "ⲕⲱ",
+      "pos": "V",
+      "gloss": "place, appoint, set down, make; esteem; have, get, keep; preserve; permit, set free, let loose; admit, concede, suppose that; bequeath; quit, abandon, fail; leave, omit; go to, reach, enter"
+    },
+    {
+      "target": "C1062",
+      "label": "ⲕⲱ",
+      "pos": "N",
+      "gloss": "loosening, slackness"
+    },
+    {
+      "target": "C1068",
+      "label": "ⲕⲱ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "place under, on behalf of, renounce for"
+    },
+    {
+      "target": "C1071",
+      "label": "ⲕⲱ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "place before, commit to"
+    },
+    {
+      "target": "C1070",
+      "label": "ⲕⲱ (ϩⲁⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "place at feet of, before"
+    },
+    {
+      "target": "C1069",
+      "label": "ⲕⲱ (ϩⲁⲣⲛ-)",
+      "pos": "V",
+      "gloss": "place before (of food)"
+    },
+    {
+      "target": "C1091",
+      "label": "ⲕⲱ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude, excommunicate; lay out, distribute"
+    },
+    {
+      "target": "C1063",
+      "label": "ⲕⲱ (ⲉ-)",
+      "pos": "V",
+      "gloss": "rely upon"
+    },
+    {
+      "target": "C1084",
+      "label": "ⲕⲱ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "put in, admit"
+    },
+    {
+      "target": "C1086",
+      "label": "ⲕⲱ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "put, lay down, aside; lay down, publish; expose, set forth; leave behind; lay down, abandon"
+    },
+    {
+      "target": "C1064",
+      "label": "ⲕⲱ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "put, lay upon"
+    },
+    {
+      "target": "C1073",
+      "label": "ⲕⲱ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "release, loosen, dismiss; dispatch, send out; remit, forgive; quit, abandon; omit; desist from; publish; become loose, dissolved, be at ease"
+    },
+    {
+      "target": "C1083",
+      "label": "ⲕⲱ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "leave behind, over"
+    },
+    {
+      "target": "C1082",
+      "label": "ⲕⲱ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "put, let down"
+    },
+    {
+      "target": "C1065",
+      "label": "ⲕⲱ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "put, leave behind, renounce"
+    },
+    {
+      "target": "C1067",
+      "label": "ⲕⲱ (ⲛⲧⲛ-)",
+      "pos": "V",
+      "gloss": "put, keep in hand, have, entrust to, esteem"
+    },
+    {
+      "target": "C1087",
+      "label": "ⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, provision"
+    },
+    {
+      "target": "C1074",
+      "label": "ⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "freedom, remission, forgiveness"
+    },
+    {
+      "target": "C1066",
+      "label": "ⲕⲱ ⲛⲥⲁ-",
+      "pos": "N",
+      "gloss": "leaving behind"
+    },
+    {
+      "target": "C1076",
+      "label": "ⲙⲁ ⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "place of forgiveness, mercy-seat"
+    },
+    {
+      "target": "C1078",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1077",
+      "label": "ⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiver"
+    },
+    {
+      "target": "C1090",
+      "label": "ⲭⲱ (ⲥⲁⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude"
+    }
+  ]
+}

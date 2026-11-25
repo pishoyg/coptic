@@ -1,0 +1,202 @@
+{
+  "id": "C2435",
+  "forms": [
+    {
+      "id": "CF6651",
+      "orth": "ⲙⲁⲓⲛⲟⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8855,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2802",
+      "bibliography": "CD 222a; ChLCS 31b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲡ**ⲙⲁⲓⲛⲟⲃⲉ** ⲣⲁϣⲉ ϩⲛϩⲉⲛⲙⲓϣⲉ",
+      "english": "A lover of sin rejoices in strifes;",
+      "source": "Proverbs 17",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲧⲛⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲉⲛⲟⲩⲏⲣ ϫⲉⲁⲛⲟⲛ ϩⲉⲛ**ⲙⲁⲓⲛⲟⲃⲉ** ·",
+      "english": "…",
+      "source": "I See Your Eagerness: GF 17-18",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgf_17_18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲱϩⲉ",
+        1,
+        13.667
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        1,
+        12.418
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        11.829
+      ],
+      [
+        "ⲧⲁⲉⲓⲟ",
+        1,
+        11.621
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        1,
+        11.106
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        10.503
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        1,
+        10.071
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        9.987
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲓⲛⲟⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          "ⲙⲁⲓⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲓⲛⲟⲃⲉ",
+          "ⲙⲁⲓⲛⲟⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8408,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2439",
+      "label": "ϫⲓⲛⲟⲃⲉ",
+      "pos": "V",
+      "gloss": "bear sin"
+    },
+    {
+      "target": "C2433",
+      "label": "ⲁⲧⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinless, innocent"
+    },
+    {
+      "target": "C2434",
+      "label": "ⲙⲉⲧⲁⲧⲛⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "sinlessness"
+    },
+    {
+      "target": "C2438",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinfulness"
+    },
+    {
+      "target": "C2432",
+      "label": "ⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sin"
+    },
+    {
+      "target": "C2437",
+      "label": "ⲣⲉϥⲣⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinner"
+    },
+    {
+      "target": "C2436",
+      "label": "ⲣⲛⲟⲃⲉ",
+      "pos": "V",
+      "gloss": "commit sin"
+    }
+  ]
+}

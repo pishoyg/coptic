@@ -1,0 +1,84 @@
+{
+  "id": "C2998",
+  "forms": [
+    {
+      "id": "CF7862",
+      "orth": "ⲡⲱϩⲧ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3433",
+      "bibliography": "CD 284a; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲇⲏⲙⲏⲧⲣⲓⲟⲥ ⲡⲉϫⲁϥ ⲙⲡⲁⲅⲅⲉⲗⲟⲥ ϫⲉⲟⲩ ⲡⲉⲧϣⲟⲟⲡ ⲡⲁϫⲟⲉⲓⲥ ⲏ ⲟⲩⲡⲉⲧⲕⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲙⲟϥ ⲛⲁⲓ ⲙⲏ ⲉⲕⲧⲛⲛⲟⲟⲩ ⲙⲙⲟⲓ ⲉⲩⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ ϯⲥⲃⲧⲱⲧ **ⲉⲡⲱϩⲧ **ⲉⲃⲟⲗ**** ⲙⲡⲁⲥⲛⲟϥ · ϩⲁⲡⲣⲁⲛ ⲙⲡⲁϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "And the holy man Demetrius said unto the Angel, 'What is it, O my Lord? What is it that Thou wouldst command me to do? If Thou wishest to send me forth to martyrdom, am I not ready to pour out my blood for the Name of my Lord Jesus the Christ?'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲙⲡⲕⲛⲁϩϥ **ⲛⲧⲉⲣⲟⲩⲡⲱϩⲧ **ⲉⲃⲟⲗ**** ϩⲛⲧⲉⲕⲙⲏⲧⲉ ⲙⲡⲉⲥⲛⲟϥ ⲛⲍⲁⲭⲁⲣⲓⲁⲥ ·",
+      "english": "If He was, why wast not thou brought to the ground when they poured out in the midst of thee the blood of Zecharias?",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲩⲡⲱϩⲧ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲩⲥⲛⲟϥ · ⲉϫⲛⲧϩⲟⲙⲟⲗⲟⲅⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ · ⲁⲩⲱ ⲁⲩϫⲓ ⲙⲡⲉⲕⲗⲟⲙ ⲛⲧⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ ·",
+      "english": "They poured out their blood in their confession of God, and they received the crown of martyrdom.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3000",
+      "label": "ⲁⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "not pouring (blood)"
+    },
+    {
+      "target": "C3001",
+      "label": "ⲙⲛⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "pouring out, shedding (blood)"
+    },
+    {
+      "target": "C3003",
+      "label": "ⲡⲁϩⲧⲥ",
+      "pos": "N",
+      "gloss": "bowing, genuflection"
+    },
+    {
+      "target": "C2997",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "V",
+      "gloss": "bend, bow down, fall; pour, flow"
+    },
+    {
+      "target": "C2999",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "N",
+      "gloss": "effusion"
+    },
+    {
+      "target": "C3002",
+      "label": "ⲣⲉϥⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "one who sheds (blood)"
+    }
+  ]
+}

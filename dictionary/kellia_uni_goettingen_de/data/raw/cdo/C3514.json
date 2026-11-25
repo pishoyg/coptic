@@ -1,0 +1,108 @@
+{
+  "id": "C3514",
+  "forms": [
+    {
+      "id": "CF8931",
+      "orth": "ⲙⲁ ⲛϭⲓⲥⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8066,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3998",
+      "bibliography": "CD 335a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϥⲣⲁⲥϯ ⲟⲩⲛ ⲉⲧⲁϥⲓ ⲛϫⲉⲁⲅⲣⲓⲡⲡⲁ ⲛⲉⲙⲃⲉⲣⲛⲓⲕⲏ ⲛⲉⲙⲟⲩⲛⲓϣϯ ⲙⲫⲁⲛⲧⲁⲥⲓⲁ ⲟⲩⲟϩ ⲉⲧⲁⲩϣⲉ ⲉϧⲟⲩⲛ **ⲉⲡⲓⲙⲁ **ⲛϭⲓⲥⲙⲏ**** ⲛⲉⲙϩⲁⲛⲭⲓⲗⲓⲁⲣⲭⲟⲥ ⲛⲉⲙϩⲁⲛⲣⲱⲙⲓ ⲉⲩⲟⲓ ⲛⲛⲓϣϯ ⲛⲧⲉϯⲡⲟⲗⲓⲥ ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲣⲕⲉⲗⲉⲩⲓⲛ ⲛϫⲉⲫⲏⲥⲧⲟⲥ ⲁⲩⲓⲛⲓ ⲙⲡⲁⲩⲗⲟⲥ .",
+      "english": "So on the next day, when Agrippa and Bernice had come with great pomp, and they had entered into the place of hearing with the commanding officers and principal men of the city, at the command of Festus, Paul was brought in.",
+      "source": "05_Acts_25",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:25",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7531,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3513",
+      "label": "ϫⲓⲥⲙⲏ",
+      "pos": "V",
+      "gloss": "receive sound, listen"
+    },
+    {
+      "target": "C3511",
+      "label": "ϯⲥⲙⲏ",
+      "pos": "V",
+      "gloss": "give voice"
+    },
+    {
+      "target": "C3516",
+      "label": "ⲁⲧⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "voice-, soundless"
+    },
+    {
+      "target": "C3517",
+      "label": "ⲉⲣⲥⲙⲏ",
+      "pos": "V",
+      "gloss": "be famous"
+    },
+    {
+      "target": "C3515",
+      "label": "ⲣⲉϥϫⲓⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "listener, obeyer"
+    },
+    {
+      "target": "C3512",
+      "label": "ⲣⲉϥϯⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "vocal, vowel"
+    },
+    {
+      "target": "C3518",
+      "label": "ⲣⲉⲙⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "famous person"
+    },
+    {
+      "target": "C3509",
+      "label": "ⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "voice (of men and animals), sound (of things)"
+    },
+    {
+      "target": "C3510",
+      "label": "ⲥⲙⲏ",
+      "pos": "N",
+      "gloss": "famed"
+    }
+  ]
+}

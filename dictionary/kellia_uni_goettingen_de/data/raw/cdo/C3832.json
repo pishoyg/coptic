@@ -1,0 +1,129 @@
+{
+  "id": "C3832",
+  "forms": [
+    {
+      "id": "CF9589",
+      "orth": "ⲥⲟⲧⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8823,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4348",
+      "bibliography": "CD 365b; KoptHWb 201; DELC 199"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥϣⲓⲛⲓ ⲉⲣⲱⲧⲉⲛ ⲛϫⲉϯϣⲫⲉⲣⲓ ⲛ**ⲥⲟⲧⲡⲓ** ⲉⲧϧⲉⲛⲃⲁⲃⲩⲗⲱⲛ ⲛⲉⲙⲙⲁⲣⲕⲟⲥ ⲡⲁϣⲏⲣⲓ .",
+      "english": "She who is in Babylon, chosen together with you, greets you; and so does Mark, my son.",
+      "source": "21_I Peter_05",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲫⲉⲣⲓ",
+        1,
+        17.373
+      ],
+      [
+        "ⲃⲁⲃⲩⲗⲱⲛ",
+        1,
+        12.118
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲟⲧⲡⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8293,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3833",
+      "label": "ⲙⲛⲧⲥⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "election, choice, superiority"
+    },
+    {
+      "target": "C3829",
+      "label": "ⲥⲟⲧⲡ",
+      "pos": "VSTAT",
+      "gloss": "chosen, exquisite; excellent, better"
+    },
+    {
+      "target": "C3830",
+      "label": "ⲥⲟⲧⲡ (ⲉ-)",
+      "pos": "VSTAT",
+      "gloss": "better than"
+    },
+    {
+      "target": "C3828",
+      "label": "ⲥⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "choose"
+    },
+    {
+      "target": "C3831",
+      "label": "ⲥⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "chosen, elect (person or thing)"
+    }
+  ]
+}

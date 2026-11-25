@@ -1,0 +1,58 @@
+{
+  "id": "C6920",
+  "forms": [
+    {
+      "id": "CF15891",
+      "orth": "ⲙⲁⲛⲉϩⲧⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7640",
+      "bibliography": "CD 723a; KoptHWb 393; DELC 315a; ChLCS 95b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1929",
+      "type": "cf",
+      "label": "herdsman, pastor"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6918",
+      "label": "ϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horse"
+    },
+    {
+      "target": "C6922",
+      "label": "ϭⲁⲥⲓϩⲑⲟ",
+      "pos": "N",
+      "gloss": "rider"
+    },
+    {
+      "target": "C6919",
+      "label": "ⲙⲁⲥ ⲛϩⲧⲟ",
+      "pos": "N",
+      "gloss": "foal"
+    },
+    {
+      "target": "C6921",
+      "label": "ⲣⲱⲙϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horseman, rider"
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "id": "C7898",
+  "forms": [
+    {
+      "id": "CF17862",
+      "orth": "ϭⲉⲣⲏϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3350,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8778",
+      "bibliography": "CD 831a; CED 336; KoptHWb 467; DELC 347b; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁⲡϫⲟⲉⲓⲥ ⲧⲟⲩⲟⲓ ⲁⲩⲱ ⲉⲓⲥ ⲟⲩϩⲛⲁⲁⲩ ⲛ**ϭⲉⲣⲏϭ**",
+      "english": "And behold a fowler's basket.",
+      "source": "Amos 8",
+      "urn": "urn:cts:copticLit:ot.amos.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϫⲓⲥ ϫⲉⲛⲧⲟⲕ ⲉⲧⲛⲁⲧⲟⲩϫⲟⲓ ⲉⲧϭⲟⲣϭⲥ ⲛⲛ**ϭⲉⲣⲏϭ** ·",
+      "english": "And say, 'Thou art He Who doth deliver me from the snare of the hunter.'",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ϭⲉⲣⲁϭⲉ** ϭⲉ ⲁⲩϭⲱⲣϭ ⲉⲣⲟϥ ϩⲛⲛⲉⲩϭⲟⲣϭⲥ ⲁⲩⲱ ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲛⲧⲉⲩϣⲏ ϫⲉⲉϥⲛⲁⲥⲱ ⲙⲙⲟⲟⲩ ⲙⲛⲛϣⲟϣ",
+      "english": "The hunters ambushed him and he went out in the night as he was about to drink with the antelopes.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        19.791
+      ],
+      [
+        "ⲛⲉⲃⲣⲱⲇ",
+        1,
+        16.791
+      ],
+      [
+        "ϭⲟⲣϭⲥ",
+        4,
+        16.641
+      ],
+      [
+        "ⲡⲉⲣⲇⲓⲝ",
+        1,
+        15.791
+      ],
+      [
+        "ⲡⲁϣ",
+        2,
+        14.118
+      ],
+      [
+        "ϩⲛⲁⲁⲩ",
+        2,
+        12.621
+      ],
+      [
+        "ⲅⲓⲅⲁⲥ",
+        1,
+        12.267
+      ],
+      [
+        "ⲛ",
+        15,
+        11.722
+      ],
+      [
+        "ⲥⲡⲟⲩⲇⲁⲍⲉ",
+        1,
+        11.661
+      ],
+      [
+        "ⲗⲁⲙⲡⲁⲥ",
+        1,
+        11.543
+      ],
+      [
+        "ⲧⲁⲡ",
+        1,
+        11.206
+      ],
+      [
+        "ⲉ",
+        9,
+        10.52
+      ],
+      [
+        "ⲩ",
+        7,
+        10.424
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        2,
+        9.207
+      ],
+      [
+        "ⲡ",
+        7,
+        9.112
+      ],
+      [
+        "ⲕⲣⲟϥ",
+        1,
+        9.097
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        8.291
+      ],
+      [
+        "ⲧ",
+        4,
+        8.264
+      ],
+      [
+        "ϣⲁϫⲉ",
+        2,
+        7.664
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.413
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲉⲣⲏϭ_0_node",
+          11
+        ],
+        [
+          "ⲉ_1_post_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲣⲇⲓⲝ",
+          1
+        ],
+        [
+          "ⲡⲉⲣⲇⲓⲝ_1_pre_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϩⲉ_2_post_ⲧⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲉⲣⲏϭ_0_node",
+          "ⲉ_1_post_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲉⲣⲏϭ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲣⲇⲓⲝ",
+          "ⲡⲉⲣⲇⲓⲝ_1_pre_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲡⲉⲣⲇⲓⲝ_1_pre_ϭⲉⲣⲏϭ",
+          "ϭⲉⲣⲏϭ_0_node",
+          1
+        ],
+        [
+          "ϭⲉⲣⲏϭ_0_node",
+          "ⲧⲁⲓ_1_post_ϭⲉⲣⲏϭ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ϭⲉⲣⲏϭ",
+          "ⲧ_3_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ϩⲉ",
+          "ϩⲉ_2_post_ⲧⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2647,
+      "count": 14
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7896",
+      "label": "ϭⲟⲣϭⲥ",
+      "pos": "N",
+      "gloss": "ambush, snare, pit"
+    },
+    {
+      "target": "C7893",
+      "label": "ϭⲱⲣϭ",
+      "pos": "V",
+      "gloss": "hunt, waylay"
+    },
+    {
+      "target": "C7894",
+      "label": "ϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "snare"
+    },
+    {
+      "target": "C7899",
+      "label": "ⲙⲉⲧϫⲉⲣⲏϫ",
+      "pos": "N",
+      "gloss": "hunt, chase"
+    },
+    {
+      "target": "C7897",
+      "label": "ⲣϭⲟⲣϭⲥ",
+      "pos": "V",
+      "gloss": "lie in wait, lay snares"
+    },
+    {
+      "target": "C7895",
+      "label": "ⲣⲉϥϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "hunter"
+    }
+  ],
+  "etym": {
+    "egy_num": "167990",
+    "egy_lemma": "grg",
+    "demo_num": "d6868",
+    "demo_lemma": "grg",
+    "english": "hunter",
+    "german": "Fallensteller, Jäger",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/167990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6868"
+  }
+}

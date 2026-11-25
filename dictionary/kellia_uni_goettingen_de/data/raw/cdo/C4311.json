@@ -1,0 +1,708 @@
+{
+  "id": "C4311",
+  "forms": [
+    {
+      "id": "CF10572",
+      "orth": "ⲧⲁⲙⲓⲟ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.59,
+        "rank": 295,
+        "count": 566
+      }
+    },
+    {
+      "id": "CF10573",
+      "orth": "ⲧⲁⲙⲓⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.59,
+        "rank": 295,
+        "count": 566
+      }
+    },
+    {
+      "orth": "ⲑⲁⲙⲓⲟ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.98,
+        "rank": 233,
+        "count": 422
+      }
+    },
+    {
+      "orth": "ⲧⲁⲙⲓⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.77,
+        "rank": 868,
+        "count": 121
+      }
+    },
+    {
+      "orth": "ⲧⲁⲙⲓⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2046,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ⲑⲁⲙⲓⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1189,
+        "count": 37
+      }
+    },
+    {
+      "orth": "ⲑⲁⲙⲓⲏⲟⲩⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3024,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲧⲁⲙⲓⲟ",
+      "dialect": "A",
+      "id": "252.5"
+    },
+    {
+      "orth": "ⲧⲁⲙⲓⲁ⸗",
+      "dialect": "F",
+      "id": "252.6"
+    },
+    {
+      "orth": "ⲧⲁⲙⲓⲏⲩⲧ†",
+      "dialect": "F",
+      "id": "252.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4885",
+      "bibliography": "CD 413ab; CDC 64b; KoptHWb 233; ChLCS 58b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ ⲡϩⲏⲟⲩ ⲡⲉ ⲉⲧⲉϥϯ ⲙⲙⲟϥ ⲛϫⲉⲡⲓⲫⲱⲧϩ ⲁⲩⲙⲟⲛⲕϥ ⲛⲟⲩⲫⲱⲧϩ ⲛϩⲟⲣⲧϥ ⲙⲙⲉⲑⲛⲟⲩϫ ϫⲉⲁϥⲭⲁϩⲑⲏϥ ⲉϫⲉⲛⲡⲉϥⲙⲟⲛⲕ ⲉⲑⲣⲉϥ**ⲑⲁⲙⲓⲟ** ⲛϩⲁⲛⲓⲇⲱⲗⲟⲛ ⲛⲕⲟⲩⲣ .",
+      "english": "What profit it the graven image, that they have graven it? one has made it a molten work, a false image; for the maker has trusted in his work, to make dumb idols.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲓ ⲇⲉ ⲉⲥⲉⲓⲣⲉ ϩⲓⲛⲁⲓ ⲁⲥϣⲁϫⲉ ⲙⲛⲡⲉⲥϩⲁⲓ ⲉⲥϫⲱ ⲙⲙⲟⲥ ⲡⲁϫⲟⲉⲓⲥ ⲛⲥⲟⲛ **ⲧⲁⲙⲓⲟ** ⲛⲟⲩⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲛⲟⲩⲃ ⲙⲡⲉⲛϣⲏⲣⲉ ⲓⲱϩⲁⲛⲛⲏⲥ ·",
+      "english": "And when she had thought over these things she spake unto her husband, saying, 'My lord brother, make a Gospel of gold for our son John.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲧⲟⲧⲉ ⲉⲧⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲡⲉϫⲁϥ ⲛⲓⲏⲥⲟⲩⲥ ϫⲉⲣⲁⲃⲃⲓ ⲛⲁⲛⲉⲥ ⲛⲁⲛ ⲛⲧⲉⲛϣⲱⲡⲓ ⲙⲡⲁⲓⲙⲁ ⲟⲩⲟϩ ⲛⲧⲉⲛ**ⲑⲁⲙⲓⲟ** ⲛⲅ ⲛⲥⲕⲩⲛⲏ ⲟⲩⲓ ⲛⲁⲕ ⲛⲉⲙⲟⲩⲓ ⲙⲙⲱⲩⲥⲏⲥ ⲟⲩⲟϩ ⲟⲩⲓ ⲛⲏⲗⲓⲁⲥ .",
+      "english": "Peter answered Jesus, 'Rabbi, it is good for us to be here. Let's make three tents: one for you, one for Moses, and one for Elijah.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲟⲩⲱϣⲃ ⲇⲉ ⲛϭⲓⲡⲉⲧⲣⲟⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲓⲏⲥⲟⲩⲥ ϫⲉϩⲣⲁⲃⲃⲉⲓ ⲛⲁⲛⲟⲩⲥ ⲛⲁⲛ ⲉⲧⲣⲉⲛϭⲱ ⲙⲡⲉⲓⲙⲁ . ⲧⲁⲣⲛ**ⲧⲁⲙⲓⲟ** ϭⲉ ⲛϣⲟⲙⲧⲉ ⲛⲥⲕⲏⲛⲏ ⲟⲩⲉⲓ ⲛⲁⲕ ⲁⲩⲱ ⲟⲩⲉⲓ ⲙⲙⲱⲩⲥⲏⲥ ⲁⲩⲱ ⲟⲩⲉⲓ ⲛϩⲏⲗⲉⲓⲁⲥ .",
+      "english": "Peter answered Jesus, &apos;Rabbi, it is good for us to be here. Let&apos;s make three tents: one for you, one for Moses, and one for Elijah.&apos;",
+      "source": "Mark Chapter 9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥ**ⲑⲁⲙⲓⲉ**ⲓⲃ ⲛⲏ ⲉⲧⲁϥϯⲣⲉⲛⲟⲩ ϫⲉⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ϩⲓⲛⲁ ⲛⲧⲟⲩⲟϩⲓ ⲛⲉⲙⲁϥ ⲟⲩⲟϩ ϩⲓⲛⲁ ⲛⲧⲉϥⲟⲩⲟⲣⲡⲟⲩ ⲉϩⲓⲱⲓϣ",
+      "english": "He appointed twelve, that they might be with him, and that he might send them out to preach,",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲕ ⲟⲩⲛ ⲡⲇⲓⲙⲓⲟⲩⲣⲅⲟⲥ ⲁϥ**ⲧⲁⲙⲓⲉ**ⲥⲛⲁⲩ ⲛⲥⲱⲙⲁ ·",
+      "english": "The Almighty did not then create two bodies,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        697,
+        32.926
+      ],
+      [
+        "ⲟⲩ",
+        268,
+        28.952
+      ],
+      [
+        "ⲉⲕⲉ",
+        81,
+        28.606
+      ],
+      [
+        "ϥ",
+        244,
+        28.216
+      ],
+      [
+        "ϩⲁⲛ",
+        120,
+        28.034
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        200,
+        28.012
+      ],
+      [
+        "ⲁ",
+        203,
+        27.986
+      ],
+      [
+        "ⲙ",
+        151,
+        27.298
+      ],
+      [
+        "ⲫⲉ",
+        44,
+        26.845
+      ],
+      [
+        "ⲡⲓ",
+        115,
+        26.307
+      ],
+      [
+        "ⲛⲁ",
+        89,
+        25.382
+      ],
+      [
+        "ⲕⲩⲃⲱⲧⲟⲥ",
+        13,
+        24.989
+      ],
+      [
+        "ⲛⲉⲙ",
+        74,
+        24.871
+      ],
+      [
+        "ⲧ",
+        48,
+        24.28
+      ],
+      [
+        "ⲉⲧ",
+        64,
+        24.251
+      ],
+      [
+        "ϩⲱⲃ",
+        26,
+        24.156
+      ],
+      [
+        "ⲫⲏⲉⲧⲁ",
+        12,
+        24.058
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        60,
+        24.024
+      ],
+      [
+        "ϯ",
+        60,
+        24.011
+      ],
+      [
+        "ϧⲉⲛ",
+        65,
+        23.83
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        25,
+        25.099
+      ],
+      [
+        "ⲛ",
+        763,
+        23.105
+      ],
+      [
+        "ⲟⲩ",
+        487,
+        22.573
+      ],
+      [
+        "ⲁ",
+        389,
+        21.425
+      ],
+      [
+        "ϥ",
+        401,
+        21.034
+      ],
+      [
+        "ⲡ",
+        323,
+        20.073
+      ],
+      [
+        "ⲛⲁ",
+        199,
+        19.168
+      ],
+      [
+        "ⲉⲛⲧ",
+        103,
+        18.822
+      ],
+      [
+        "ϩⲉⲛ",
+        92,
+        18.214
+      ],
+      [
+        "ⲛⲧ",
+        88,
+        18.178
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        66,
+        18.012
+      ],
+      [
+        "ⲁⲇⲁⲙ",
+        25,
+        17.552
+      ],
+      [
+        "ⲙ",
+        146,
+        17.49
+      ],
+      [
+        "ⲉ",
+        146,
+        16.956
+      ],
+      [
+        "ⲕ",
+        90,
+        16.898
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        72,
+        16.858
+      ],
+      [
+        "ⲩ",
+        112,
+        16.801
+      ],
+      [
+        "ⲥ",
+        99,
+        16.732
+      ],
+      [
+        "ⲧ",
+        89,
+        16.068
+      ],
+      [
+        "ⲁⲩⲱ",
+        87,
+        15.646
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          88
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲙⲓⲟ",
+          70
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          101
+        ],
+        [
+          "ϥ_1_post_ⲧⲁⲙⲓⲟ",
+          35
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁⲙⲓⲟ",
+          34
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲙⲓⲟ",
+          6
+        ],
+        [
+          "ⲕ_1_post_ⲧⲁⲙⲓⲟ",
+          5
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          12
+        ],
+        [
+          "ⲕ_1_pre_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲥ_1_post_ⲧⲁⲙⲓⲟ",
+          3
+        ],
+        [
+          "ϭⲓϫ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲙⲁⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲙⲁⲅⲟⲥ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲁⲇⲁⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲛⲕⲁ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛϭⲓ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ϥ_1_pre_ⲧⲁⲙⲓⲟ",
+          9
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          9
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ϥ_1_post_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ⲟⲩ_1_post_ⲧⲁⲙⲓⲟ",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲩ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ⲕ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲓ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲕ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ⲥ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          "ϭⲓϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_0_node",
+          "ⲙ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲛ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲙⲁⲅⲟⲥ",
+          "ⲙⲁⲅⲟⲥ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲙⲁⲅⲟⲥ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲇⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲁⲇⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲕⲁⲧⲁ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲡⲉϥ_3_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲛⲕⲁ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲕⲁ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          "ⲕⲁⲧⲁ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲛϭⲓ_1_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲧⲁⲙⲓⲟ",
+          "ⲡ_2_post_ⲛϭⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.35,
+      "rank": 222,
+      "count": 690
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4316",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4317",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4315",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "act of making, act of creating"
+    },
+    {
+      "target": "C4314",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4313",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4312",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "thing made, creation"
+    }
+  ]
+}

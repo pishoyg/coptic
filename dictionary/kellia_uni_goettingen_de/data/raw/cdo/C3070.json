@@ -1,0 +1,149 @@
+{
+  "id": "C3070",
+  "forms": [
+    {
+      "id": "CF8013",
+      "orth": "ⲣⲉϥⲣⲓⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12278,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3518",
+      "bibliography": "CD 293a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ϩⲏⲡⲡⲉ ⲓⲥ ϩⲁⲛⲉϩⲟⲟⲩ ⲥⲉⲛⲏⲟⲩ ⲡⲉϫⲉ ⲡϭⲥ ⲟⲩⲟϩ ⲉⲓⲉⲧⲁⲟⲩⲟ ⲛⲁϥ ⲛϩⲁⲛ**ⲣⲉϥⲣⲓⲕⲓ** ⲟⲩⲟϩ ⲉⲩⲉⲣⲁⲕϥ ⲟⲩⲟϩ ⲛⲉϥⲥⲕⲉⲩⲟⲥ ⲉⲩⲉϧⲉⲙϧⲱⲙⲟⲩ ⲟⲩⲟϩ ⲛⲉϥⲧⲁⲡ ⲉⲩⲉϫⲟϫⲟⲩ .",
+      "english": "Therefore, behold, his days come, saith the Lord, when I shall send upon him bad leaders, and they shall lead him astray, and they shall utterly break in pieces his possessions, and shall cut his horns asunder.",
+      "source": "24_Ieremias_31",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:31",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲁⲕ",
+        1,
+        17.695
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        8.335
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲣⲓⲕⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11713,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3072",
+      "label": "ϭⲓⲛⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "inclination, perversion"
+    },
+    {
+      "target": "C3069",
+      "label": "ⲁⲧⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "without turning, unwavering"
+    },
+    {
+      "target": "C3071",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "inclination"
+    },
+    {
+      "target": "C3073",
+      "label": "ⲣⲁⲕⲧⲥ",
+      "pos": "N",
+      "gloss": "bent, reversal, direction, deviation"
+    },
+    {
+      "target": "C3066",
+      "label": "ⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "bend, turn, incline"
+    },
+    {
+      "target": "C3068",
+      "label": "ⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "turning, inclination"
+    },
+    {
+      "target": "C3067",
+      "label": "ⲣⲓⲕⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "turn from, away"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "id": "C7502",
+  "forms": [
+    {
+      "id": "CF17063",
+      "orth": "ⲣϫⲱϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17445,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8309",
+      "bibliography": "CD 799a; KoptHWb 442; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛϩⲱⲃ ⲛⲁϣⲱⲡⲉ ⲛⲛⲣⲙⲛⲕⲏⲙⲉ ⲉϥⲛⲁ**ⲣϫⲱϫ** ϩⲓⲥⲉⲓⲁⲧ ⲁⲣⲭⲏ ϩⲓϩⲁⲏ",
+      "english": "And there shall be no work to the Egyptians, which shall make head or tail, or beginning or end.",
+      "source": "Isaiah 19",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲓⲁⲧ",
+        1,
+        16.276
+      ],
+      [
+        "ⲣⲙⲛⲕⲏⲙⲉ",
+        1,
+        13.655
+      ],
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        12.797
+      ],
+      [
+        "ϩⲓ",
+        2,
+        12.231
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲣϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϫⲱϫ",
+          1
+        ],
+        [
+          "ⲣϫⲱϫ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲣⲭⲏ",
+          1
+        ],
+        [
+          "ⲥⲉⲓⲁⲧ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏ_1_post_ⲣϫⲱϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲣϫⲱϫ",
+          "ⲛⲁ_1_pre_ⲣϫⲱϫ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϫⲱϫ",
+          "ⲣϫⲱϫ_0_node",
+          1
+        ],
+        [
+          "ⲣϫⲱϫ_0_node",
+          "ϩⲓ_2_post_ⲁⲣⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲣⲭⲏ",
+          "ⲥⲉⲓⲁⲧ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲥⲉⲓⲁⲧ_3_post_ϩⲓ",
+          "ⲁⲣⲭⲏ_1_post_ⲣϫⲱϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17056,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7498",
+      "label": "ϣⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "headache"
+    },
+    {
+      "target": "C7506",
+      "label": "ϩⲁϫⲛ-",
+      "pos": "PREP",
+      "gloss": "before (local); before (temporal)"
+    },
+    {
+      "target": "C7508",
+      "label": "ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; upon, in; on, at, beside; for; through; from upon"
+    },
+    {
+      "target": "C7512",
+      "label": "ϩⲓϫⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "meaning obscure"
+    },
+    {
+      "target": "C7500",
+      "label": "ϫⲁϫⲃⲱⲛ",
+      "pos": "N",
+      "gloss": "wrongdoer"
+    },
+    {
+      "target": "C7497",
+      "label": "ϫⲱϫ",
+      "pos": "N",
+      "gloss": "head, capital; leader"
+    },
+    {
+      "target": "C7501",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "cornerstone"
+    },
+    {
+      "target": "C7499",
+      "label": "ⲁⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "leader, commander"
+    },
+    {
+      "target": "C7504",
+      "label": "ⲉϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; for, on account of; against; to; in addition to, after"
+    },
+    {
+      "target": "C7510",
+      "label": "ⲉⲃⲟⲗ ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "from upon"
+    },
+    {
+      "target": "C7503",
+      "label": "ⲛⲥⲁϫⲱ⸗",
+      "pos": "ADV",
+      "gloss": "behind head, backward, head down"
+    },
+    {
+      "target": "C7509",
+      "label": "ⲡⲉⲧϩⲓϫⲛ-",
+      "pos": "N",
+      "gloss": "who is in command, commander"
+    },
+    {
+      "target": "C7507",
+      "label": "ⲣ ϩⲁϫⲱ⸗",
+      "pos": "V",
+      "gloss": "go toward"
+    },
+    {
+      "target": "C7511",
+      "label": "ⲣ ϩⲓϫⲛ-",
+      "pos": "V",
+      "gloss": "be over"
+    },
+    {
+      "target": "C7505",
+      "label": "ⲣ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "be over(?)"
+    }
+  ]
+}

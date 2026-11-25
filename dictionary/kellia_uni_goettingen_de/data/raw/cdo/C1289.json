@@ -1,0 +1,45 @@
+{
+  "id": "C1289",
+  "forms": [
+    {
+      "id": "CF3983",
+      "orth": "ⲙⲉⲧⲕⲟⲩⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1494",
+      "bibliography": "CD 114b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1288",
+      "label": "ⲉⲣⲕⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "become deaf"
+    },
+    {
+      "target": "C1286",
+      "label": "ⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deaf person"
+    },
+    {
+      "target": "C1287",
+      "label": "ⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deaf"
+    }
+  ]
+}

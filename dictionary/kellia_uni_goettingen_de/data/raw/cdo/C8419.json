@@ -1,0 +1,351 @@
+{
+  "id": "C8419",
+  "forms": [
+    {
+      "id": "CF19618",
+      "orth": "ⲁⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19619",
+      "orth": "ⲁⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.98,
+        "rank": 729,
+        "count": 154
+      }
+    },
+    {
+      "id": "CF19620",
+      "orth": "ⲁⲣⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19621",
+      "orth": "ⲁⲣⲁ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ϩⲁⲣⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.08,
+        "rank": 690,
+        "count": 92
+      }
+    },
+    {
+      "orth": "ϩⲁⲣⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3745,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS9736",
+      "bibliography": "DDGLC",
+      "cu_ID": "14"
+    },
+    {
+      "id": "CS9737",
+      "bibliography": "DDGLC",
+      "cu_ID": "10820"
+    },
+    {
+      "id": "CS9738",
+      "bibliography": "DDGLC",
+      "cu_ID": "15507"
+    },
+    {
+      "id": "CS9739",
+      "bibliography": "DDGLC",
+      "cu_ID": "6918"
+    },
+    {
+      "id": "CS9740",
+      "bibliography": "DDGLC",
+      "cu_ID": "15293"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛϩⲟϯ ⲟⲩⲟϩ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲛⲛⲟⲩⲉⲣⲏⲟⲩ ϫⲉⲛⲓⲙ **ϩⲁⲣⲁ** ⲡⲉ ⲡϩⲁⲓ ϫⲉⲛⲓⲑⲏⲟⲩ ⲛⲉⲙⲫⲓⲟⲙ ⲥⲉⲥⲱⲧⲉⲙ ⲛⲁϥ .",
+      "english": "They were greatly afraid, and said to one another, 'Who then is this, that even the wind and the sea obey him?'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲣⲁ** ϭⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩⲕⲁⲣⲡⲟⲥ ⲉⲧⲉⲧⲛⲁⲥⲟⲩⲱⲛⲟⲩ .",
+      "english": "Therefore, by their fruits you will know them.",
+      "source": "40_Matthew_7",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲱⲥ ⲉϥⲥⲟϭⲛⲓ ⲛϧⲣⲏⲓ ⲛϧⲏⲧϥ ⲛϫⲉⲡⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲁⲃⲃⲁ ⲍⲁⲭⲁⲣⲓⲁⲥ ϫⲉⲟⲩ **ϩⲁⲣⲁ** ⲡⲉⲧⲛⲁϣⲱⲡⲓ ⲙⲡⲁⲓⲁⲗⲟⲩ ⲥⲁⲧⲟⲧϥ ⲁⲩϯ ⲛⲓⲁⲧϥ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲟⲩⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲉⲡϭⲟⲉⲓⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϩⲏⲡⲡⲉ ⲁⲡϭⲟⲉⲓⲥ ⲉⲣⲭⲁⲣⲓⲍⲉⲥⲑⲁⲓ ⲛⲁⲕ ⲛⲟⲩⲛⲓϣϯ ⲛⲇⲱⲣⲟⲛ ⲉϥⲟⲩⲁⲃ ⲉⲧⲉⲡⲁⲓⲁⲗⲟⲩ ⲡⲉ ⲉⲧⲁϥⲓ ϣⲁⲣⲟⲕ",
+      "english": "And so when the holy old man Abba Zacharias took counsel to himself, and said to himself, ‘What will become of this young boy?’, immediately he was warned by an angel of the Lord, who said to him, ‘Behold, the Lord has given you a great and holy gift: this young boy has come to you,",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲣⲁ** ⲛⲓⲙ ⲡⲉ · ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲡⲉⲧⲟⲩⲁⲁⲃ · ⲁⲡⲁ ⲡⲉⲥⲩⲛⲑⲓⲟⲥ · ϫⲉϩⲁⲧϩⲏ ⲉⲧⲣⲉⲡⲉⲕⲗⲏⲣⲟⲥ ⲉⲓ ⲉϩⲟⲩⲛ · ϣⲁⲧⲁⲙⲛⲧⲉⲗⲁⲭⲓⲥⲧⲟⲥ · ⲁⲓϩⲱⲣⲡ ⲛⲟⲩⲕⲟⲩⲓ · ⲁⲩⲥⲙⲏ ϣⲱⲡⲉ ϣⲁⲣⲟⲓ · ⲛϣⲟⲙⲛⲧ ⲛⲥⲟⲡ · ϫⲉⲡⲉⲥⲩⲛⲑⲓⲟⲥ · ⲡⲉⲥⲩⲛⲑⲓⲟⲥ · ⲡⲉⲥⲩⲛⲑⲓⲟⲥ ·",
+      "english": "Now who art thou (to speak thus)?' And the holy man Apa Pisentius answered and said, ' Before the clergy came unto my most unworthy self I fell asleep for a space, and a voice came unto me three times, saying, 'Pisentius, Pisentius, Pisentius.'",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲉⲟⲩⲃⲱ ⲛⲕⲉⲛⲧⲉ ϩⲓⲫⲟⲩⲉⲓ ⲉⲟⲩⲟⲛ ϩⲁⲛϫⲱⲃⲓ ϩⲓⲱⲧⲥ ⲁϥⲓ ϫⲉ**ϩⲁⲣⲁ** ϥⲛⲁϫⲉⲙϩⲗⲓ ϩⲓⲱⲧⲥ ⲟⲩⲟϩ ⲉⲧⲁϥⲓ ⲉϫⲱⲥ ⲙⲡⲉϥϫⲉⲙϩⲗⲓ ⲉⲃⲏⲗ ⲉϩⲁⲛϫⲱⲃⲓ ⲛⲉⲡⲥⲏⲟⲩ ⲅⲁⲣ ⲛⲕⲉⲛⲧⲉ ⲁⲛ ⲡⲉ .",
+      "english": "Seeing a fig tree afar off having leaves, he came to see if perhaps he might find anything on it. When he came to it, he found nothing but leaves, for it was not the season for figs.",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲣⲁ** ⲁϥϣⲱϫⲡ ⲛϭⲓⲟⲩⲥⲁⲃⲃⲁⲧⲓⲥⲙⲟⲥ ⲙⲡⲗⲁⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "There remains therefore a Sabbath rest for the people of God.",
+      "source": "58_Hebrews_4",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲉⲛⲁ",
+        1,
+        17.11
+      ],
+      [
+        "ⲑⲁⲣⲁ",
+        1,
+        14.525
+      ],
+      [
+        "ⲛⲓϫⲓⲛϫⲫⲟ",
+        1,
+        14.11
+      ],
+      [
+        "ⲭⲁⲣⲣⲁⲛ",
+        1,
+        13.41
+      ],
+      [
+        "ⲛⲓⲙⲁⲛ",
+        1,
+        13.11
+      ],
+      [
+        "ⲁⲛⲓ",
+        1,
+        12.11
+      ],
+      [
+        "ⲙⲟⲩϫⲧ",
+        1,
+        11.981
+      ],
+      [
+        "ⲥⲁⲣⲣⲁ",
+        1,
+        11.684
+      ],
+      [
+        "ⲃⲉⲛⲓⲡⲓ",
+        1,
+        11.044
+      ],
+      [
+        "ϫⲫⲉ",
+        1,
+        10.481
+      ],
+      [
+        "ⲧ",
+        3,
+        9.695
+      ],
+      [
+        "ϣⲁⲓ",
+        1,
+        9.24
+      ],
+      [
+        "ⲁⲃⲣⲁⲁⲙ",
+        1,
+        9.116
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        8.424
+      ],
+      [
+        "ⲓⲥ",
+        1,
+        8.312
+      ],
+      [
+        "ⲛ",
+        4,
+        8.006
+      ],
+      [
+        "ⲓⲥϫⲉⲛ",
+        1,
+        7.729
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        7.692
+      ],
+      [
+        "ϩⲏⲡⲡⲉ",
+        1,
+        7.563
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.401
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        19.331
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        10,
+        17.127
+      ],
+      [
+        "ϭⲉ",
+        29,
+        16.757
+      ],
+      [
+        "ⲛⲁ",
+        67,
+        16.62
+      ],
+      [
+        "ⲉⲩⲫⲣⲁⲛⲉ",
+        12,
+        16.031
+      ],
+      [
+        "ⲛ",
+        82,
+        15.615
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        14,
+        15.226
+      ],
+      [
+        "ⲙⲡⲉ",
+        17,
+        15.097
+      ],
+      [
+        "ⲕ",
+        36,
+        15.096
+      ],
+      [
+        "ⲉ",
+        56,
+        14.972
+      ],
+      [
+        "ⲡ",
+        57,
+        14.729
+      ],
+      [
+        "ⲙⲛⲧⲣⲱⲙⲉ",
+        6,
+        14.532
+      ],
+      [
+        "ϫⲉ",
+        36,
+        14.389
+      ],
+      [
+        "ⲙ",
+        43,
+        14.363
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        6,
+        13.916
+      ],
+      [
+        "ⲟⲩ",
+        39,
+        13.809
+      ],
+      [
+        "ϭⲓⲥ",
+        3,
+        13.764
+      ],
+      [
+        "ⲁϣ",
+        10,
+        13.75
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲉⲓ",
+        6,
+        13.702
+      ],
+      [
+        "ⲡⲉ",
+        28,
+        13.663
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.97,
+      "rank": 634,
+      "count": 154
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2827,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "260",
+    "grl_lemma": "ἄρα",
+    "grl_meaning": "so, then, thus",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 232b"
+  }
+}

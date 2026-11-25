@@ -1,0 +1,170 @@
+{
+  "id": "C2092",
+  "forms": [
+    {
+      "id": "CF5885",
+      "orth": "ⲙⲙⲁⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.67,
+        "rank": 510,
+        "count": 263
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2425",
+      "bibliography": "CD 190b; KoptHWb 103"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲥⲱⲧⲙ ⲁⲩϯϩⲏⲩ **ⲙⲙⲁⲧⲉ** ·",
+      "english": "And they heard this and they profited greatly.",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲧⲛⲟⲩϣⲉⲉⲣⲉ ϣⲏⲙ **ⲙⲙⲁⲧⲉ** ⲛⲧⲁϥ .",
+      "english": "except for only a young girl belonging to him.",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲁⲓ **ⲙⲙⲁⲧⲉ** ⲡⲉⲧⲕⲟⲗⲁⲍⲉ ⲙⲙⲟⲛ ϩⲙⲡⲉⲛϩⲏⲧ ⲉⲧⲣⲉⲛⲣϩⲙϩⲁⲗ ⲛⲛⲉⲛⲉⲣⲏⲩ · ⲕⲁⲧⲁⲧⲉⲛⲧⲟⲗⲏ ⲙⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ϫⲉϩⲛⲧⲁⲅⲁⲡⲏ ⲙⲡⲉⲛⲛⲁ ⲁⲣⲓϩⲙϩⲁⲗ ⲛⲛⲉⲧⲛⲉⲣⲏⲩ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗⲗⲁ",
+        93,
+        20.883
+      ],
+      [
+        "ⲁⲛ",
+        98,
+        19.933
+      ],
+      [
+        "ⲛ",
+        215,
+        19.015
+      ],
+      [
+        "ⲡ",
+        133,
+        17.624
+      ],
+      [
+        "ⲉ",
+        109,
+        17.083
+      ],
+      [
+        "ⲱⲣϣ",
+        5,
+        16.525
+      ],
+      [
+        "ⲡⲉ",
+        62,
+        16.332
+      ],
+      [
+        "ⲣⲁⲛ",
+        26,
+        16.055
+      ],
+      [
+        "ϩⲙ",
+        46,
+        15.945
+      ],
+      [
+        "ⲁⲩⲱ",
+        62,
+        15.571
+      ],
+      [
+        "ϥ",
+        73,
+        15.052
+      ],
+      [
+        "ⲙ",
+        60,
+        15.033
+      ],
+      [
+        "ⲛⲁ",
+        53,
+        14.833
+      ],
+      [
+        "ϩⲉⲟⲩⲧ",
+        2,
+        14.559
+      ],
+      [
+        "ϣⲁϫⲉ",
+        25,
+        14.364
+      ],
+      [
+        "ⲟⲩ",
+        50,
+        14.113
+      ],
+      [
+        "ⲉⲓⲙⲏⲧⲓ",
+        8,
+        14.067
+      ],
+      [
+        "ϫⲉ",
+        39,
+        13.964
+      ],
+      [
+        "ⲣⲉϥⲥⲱⲧⲙ",
+        3,
+        13.729
+      ],
+      [
+        "ϩⲛ",
+        34,
+        13.703
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲙⲁⲧⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.66,
+      "rank": 445,
+      "count": 263
+    }
+  }
+}

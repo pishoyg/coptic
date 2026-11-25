@@ -1,0 +1,130 @@
+{
+  "id": "C1972",
+  "forms": [
+    {
+      "id": "CF5599",
+      "orth": "ⲙⲡⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.16,
+        "rank": 134,
+        "count": 1445
+      }
+    },
+    {
+      "id": "CF31652",
+      "orth": "ⲙⲡⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.16,
+        "rank": 134,
+        "count": 1445
+      }
+    },
+    {
+      "id": "CF31653",
+      "orth": "ⲙⲡ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 11.83,
+        "rank": 98,
+        "count": 1867
+      }
+    },
+    {
+      "orth": "ⲙⲡⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 10.18,
+        "rank": 129,
+        "count": 863
+      }
+    },
+    {
+      "orth": "ⲙⲡ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.72,
+        "rank": 133,
+        "count": 824
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Perfekt neg. ⲙⲡⲉ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2290",
+      "bibliography": "CD 178a; KoptHWb 97; DELC 118"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲡⲉϥⲏⲓ ⲁⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϣⲉⲛϥ ⲥⲁⲡⲥⲁ ϫⲉⲉⲑⲃⲉⲟⲩ ⲁⲛⲟⲛ **ⲙⲡⲉ**ⲛϣϫⲉⲙϫⲟⲙ ⲛϩⲓⲧϥ ⲉⲃⲟⲗ .",
+      "english": "When he had come into the house, his disciples asked him privately, 'Why couldn't we cast it out?'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲇⲉ ⲉⲩϣⲁⲛⲡⲱⲧ ⲛⲥⲱⲧⲛ ϩⲛⲧⲉⲓⲡⲟⲗⲓⲥ ⲡⲱⲧ ⲉϩⲣⲁⲓ ⲉⲕⲉⲟⲩⲉⲓ . ϩⲁⲙⲏⲛ ⲅⲁⲣ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲛⲛⲉⲧⲛϫⲱⲕ ⲉⲃⲟⲗ ⲛⲙⲡⲟⲗⲓⲥ ⲙⲡⲓⲥⲣⲁⲏⲗ **ⲙⲡⲉ**ⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲉⲓ .",
+      "english": "But when they persecute you in this city, flee into the next, for most certainly I tell you, you will not have gone through the cities of Israel, until the Son of Man has come.",
+      "source": "40_Matthew_10",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲱⲧⲉⲛ ϩⲱⲧⲉⲛ ⲧⲉⲧⲉⲛϭⲟⲥⲓ ⲛϩⲏⲧ ⲟⲩⲟϩ ⲉⲑⲃⲉⲟⲩ ⲙⲁⲗⲗⲟⲛ **ⲙⲡⲉ**ⲧⲉⲛⲉⲣϩⲏⲃⲓ ϩⲓⲛⲁ ⲛⲥⲉⲱⲗⲓ ⲉⲃⲟⲗ ϧⲉⲛⲧⲉⲧⲉⲛⲙⲏϯ ⲙⲫⲏ ⲉⲧⲁϥⲓⲣⲓ ⲙⲡⲁⲓϩⲱⲃ ⲙⲡⲁⲓⲣⲏϯ .",
+      "english": "You are puffed up, and didn't rather mourn, that he who had done this deed might be removed from among you.",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲡⲉ**ϥⲑⲩⲥⲓⲁⲍⲉ ⲛⲛⲛⲟⲩⲧⲉ ⲙⲡⲣⲣⲟ ·",
+      "english": "he would not worship the gods of the Emperor ;",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲛⲁⲩ ⲇⲉ ⲉⲣⲟϥ ⲛϫⲉⲛⲉϥⲓⲟϯ ⲉϥⲟⲓ ⲙⲙⲟⲛⲁⲭⲟⲥ **ⲙⲡ**ⲟⲩⲉⲙⲓ ϫⲉⲟⲩ ⲡⲉ ⲉⲧⲟⲩⲛⲁⲁⲓϥ",
+      "english": "And when his parents saw that he was a monk, they did not know what to do.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲕⲏⲓ **ⲙⲡ**ⲓϭⲛ ⲗⲁⲁⲩ ⲛⲉⲓⲇⲱⲗⲟⲛ ⲛϩⲏⲧϥ .",
+      "english": "your house - I didn’t find any idols in it.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1973",
+      "label": "ⲙⲡⲉ",
+      "pos": "PTC",
+      "gloss": "no"
+    }
+  ],
+  "etym": {
+    "egy_num": "600469",
+    "egy_lemma": "bn-pw",
+    "demo_num": "dm26",
+    "demo_lemma": "bn-pw",
+    "english": "[negative word]",
+    "german": "[Negationspartikel (neg. Perfekt)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600469",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm26"
+  }
+}

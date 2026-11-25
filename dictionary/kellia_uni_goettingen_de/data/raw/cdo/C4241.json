@@ -1,0 +1,81 @@
+{
+  "id": "C4241",
+  "forms": [
+    {
+      "id": "CF10433",
+      "orth": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14441,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4809",
+      "bibliography": "CD 410a; KoptHWb 229"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14040,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12507",
+      "type": "cf",
+      "label": "wine"
+    },
+    {
+      "target": "C4237",
+      "type": "cf",
+      "label": "filtration"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4238",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4239",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4240",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4236",
+      "label": "ⲧⲗⲏ",
+      "pos": "V",
+      "gloss": "drip, let drop"
+    },
+    {
+      "target": "C4237",
+      "label": "ⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "filtration"
+    }
+  ]
+}

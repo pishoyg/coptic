@@ -1,0 +1,162 @@
+{
+  "id": "C1487",
+  "forms": [
+    {
+      "id": "CF4401",
+      "orth": "ⲕⲁϣⲁⲃⲉⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9380,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲕⲁϣⲁⲃⲉⲗ",
+      "dialect": "A",
+      "id": "896.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1734",
+      "bibliography": "CD 131a; KoptHWb 73; ChLCS 20a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲩⲙⲛⲧⲥⲧⲙⲏⲧ ⲧⲉ . ⲡ**ⲕⲁϣⲁⲃⲉⲗ** ⲉⲧϩⲛⲛⲟⲩⲙⲁⲁϫⲉ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: XJ 65-76",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_65_76",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ⲕⲁϣⲁⲃⲉⲗ** ⲉⲧϩⲛⲛⲟⲩⲙⲁⲁϫⲉ ⲡⲉⲑⲃⲃⲓⲟ ⲡⲉ ⲡⲉⲕⲣⲓⲕⲟⲥ ⲁⲩⲱ ⲡϩⲱⲥ · ⲛⲕⲁⲕⲟ · ⲉⲧϩⲙⲡⲟⲩⲙⲁⲕϩ · ⲧⲟⲩⲉⲡⲓⲥⲧⲏⲙⲉⲓ ⲧⲉ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL61-63",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_61_63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+        2,
+        17.843
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        2,
+        14.355
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        13.664
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.238
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲕⲁϣⲁⲃⲉⲗ",
+          2
+        ],
+        [
+          "ⲕⲁϣⲁⲃⲉⲗ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          2
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_2_post_ϩⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲁϣⲁⲃⲉⲗ",
+          "ⲕⲁϣⲁⲃⲉⲗ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁϣⲁⲃⲉⲗ_0_node",
+          "ⲉⲧ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          "ϩⲛ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲁϣⲁⲃⲉⲗ",
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_2_post_ϩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8951,
+      "count": 2
+    }
+  },
+  "etym": {
+    "demo_num": "d6469",
+    "demo_lemma": "qšbl",
+    "english": "Earring (Old Iranian *gaušabara-)",
+    "german": "Ohrring (altiran. *gaušabara-)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6469"
+  }
+}

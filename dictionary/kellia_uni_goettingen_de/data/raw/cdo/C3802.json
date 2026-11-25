@@ -1,0 +1,58 @@
+{
+  "id": "C3802",
+  "forms": [
+    {
+      "id": "CF9529",
+      "orth": "ⲥⲟⲧⲃⲉϥ ⲙⲙⲓϣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4315",
+      "bibliography": "CD 363b; KoptHWb 200; ChLCS 51a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12318",
+      "type": "cf",
+      "label": "fight"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3804",
+      "label": "ϩⲓⲥⲟⲑⲛⲉϥ",
+      "pos": "N",
+      "gloss": "cast darts, shoot arrows"
+    },
+    {
+      "target": "C3805",
+      "label": "ⲙⲟⲕⲓ ⲛⲭⲁⲥⲟⲑⲛⲉϥ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3803",
+      "label": "ⲥⲟⲑⲛⲉϥ ⲛϯ",
+      "pos": "N",
+      "gloss": "weapon for fighting"
+    },
+    {
+      "target": "C3801",
+      "label": "ⲥⲟⲧⲃⲉϥ",
+      "pos": "N",
+      "gloss": "tool, weapon"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "C8011",
+  "forms": [
+    {
+      "id": "CF18088",
+      "orth": "ϫⲓⲛϭⲟϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4290,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8910",
+      "bibliography": "CD 841a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲁⲝ ⲁⲡⲗⲱⲥ ϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛⲧⲉϯⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ ⲉⲩϣⲟⲩϣⲟⲩ ⲙⲙⲱⲟⲩ ϧⲉⲛⲛⲓⲡⲟⲗⲏⲧⲓⲁ ⲛⲉⲙⲛⲓⲛⲁϩϯ ⲉⲩⲉⲣⲑⲁⲣⲓⲛ ⲙⲙⲱⲟⲩ ϧⲉⲛⲧⲙⲉⲗⲉⲧⲏ ⲙⲡⲥⲁϫⲓ ⲙⲫⲛⲟⲩϯ ⲛⲉⲙϩⲁⲛ**ϫⲓⲛϭⲟϫⲓ** ϧⲉⲛϯⲁⲅⲁⲡⲏ ⲉⲧⲥⲟⲧⲡ",
+      "english": "In sum, they excelled in every work of virtue, transforming their way of life and their faith into glory, urging themselves onward to the meditation on divine teachings and an exceptional love through mutual encouragement.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϩⲁⲛ**ϫⲓⲛϭⲟϫⲓ** ⲉⲩⲥⲟⲩⲧⲱⲛ ⲛⲛⲉⲧⲉⲛϭ ⲁⲗⲁⲩϫ ϩⲓⲛⲁ ⲛⲧⲉϣⲧⲉⲙ ϯⲙⲉⲧϭⲁⲗⲉ ⲣⲓⲕⲓ ⲙⲁⲗⲗⲟⲛ ⲇⲉ ⲛⲧⲉⲥⲗⲟϫⲥ .",
+      "english": "and make straight paths for your feet, so that which is lame may not be dislocated, but rather be healed.",
+      "source": "19_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:12",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲅⲁⲡⲏ",
+        2,
+        14.121
+      ],
+      [
+        "ⲁⲣⲓⲟⲩⲓ",
+        1,
+        12.618
+      ],
+      [
+        "ⲥⲟⲩⲧⲱⲛ",
+        1,
+        11.156
+      ],
+      [
+        "ϩⲁⲛ",
+        3,
+        10.483
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        2,
+        9.164
+      ],
+      [
+        "ⲫ",
+        2,
+        7.979
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.667
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.178
+      ],
+      [
+        "ⲛ",
+        2,
+        6.006
+      ],
+      [
+        "ⲩ",
+        1,
+        4.536
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ϫⲓⲛϭⲟϫⲓ_0_node",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ϯ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲁⲅⲁⲡⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲧⲱⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛϭ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲓⲛϭⲟϫⲓ",
+          "ϩⲁⲛ_1_pre_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϫⲓⲛϭⲟϫⲓ",
+          "ϫⲓⲛϭⲟϫⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛϭⲟϫⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          "ϯ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ϯ_2_post_ϧⲉⲛ",
+          "ⲁⲅⲁⲡⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ϫⲓⲛϭⲟϫⲓ_0_node",
+          "ⲉ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲓⲛϭⲟϫⲓ",
+          "ⲩ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          "ⲥⲟⲩⲧⲱⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲧⲱⲛ_2_post_ⲉ",
+          "ⲛ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟⲩⲧⲱⲛ",
+          "ⲛⲉⲧⲉⲛϭ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3826,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C8006",
+      "label": "ϭⲟϫⲓ",
+      "pos": "V",
+      "gloss": "run; run away"
+    },
+    {
+      "target": "C8008",
+      "label": "ϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "course"
+    },
+    {
+      "target": "C8007",
+      "label": "ϭⲟϫⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "follow, pursue, drive out"
+    },
+    {
+      "target": "C8009",
+      "label": "ⲙⲁ ⲛϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "path"
+    },
+    {
+      "target": "C8010",
+      "label": "ⲣⲉϥϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "runner; pursuer, dispeller"
+    }
+  ]
+}

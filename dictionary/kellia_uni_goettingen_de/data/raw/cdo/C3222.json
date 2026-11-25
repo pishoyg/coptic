@@ -1,0 +1,411 @@
+{
+  "id": "C3222",
+  "forms": [
+    {
+      "id": "CF8329",
+      "orth": "ⲣⲁϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.68,
+        "rank": 237,
+        "count": 738
+      }
+    },
+    {
+      "orth": "ⲣⲁϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.99,
+        "rank": 344,
+        "count": 254
+      }
+    },
+    {
+      "orth": "ⲣⲉϣⲉ",
+      "dialect": "A",
+      "id": "1354.2"
+    },
+    {
+      "orth": "ⲗⲉϣⲓ",
+      "dialect": "F",
+      "id": "1354.3"
+    },
+    {
+      "orth": "ⲣⲉϣⲉ",
+      "dialect": "L",
+      "id": "1354.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3679",
+      "bibliography": "CD 308b; CED 142; KoptHWb 170; DELC 179; ChLCS 43b"
+    },
+    {
+      "id": "CS3680",
+      "bibliography": "CD 308b-309a; KoptHWb 170; DELC 179; ChLCS 43b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲥⲟⲛ ⲉⲓ ϣⲁⲣⲟⲕ **ⲣⲁϣⲉ** ⲛⲙⲙⲁϥ ·",
+      "english": "If a brother come to thee rejoice with him.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲧⲣⲓⲙⲉ ϩⲱⲥ ⲉⲛⲥⲉⲣⲓⲙⲉ ⲁⲛ . ⲁⲩⲱ ⲛⲉⲧⲣⲁϣⲉ ϩⲱⲥ ⲉⲛⲥⲉ**ⲣⲁϣⲉ** ⲁⲛ . ⲁⲩⲱ ⲛⲉⲧϣⲱⲡ ϩⲱⲥ ⲉⲛⲥⲉⲁⲙⲁϩⲧⲉ ⲁⲛ .",
+      "english": "and those who weep, as though they didn&apos;t weep; and those who rejoice, as though they didn&apos;t rejoice; and those who buy, as though they didn&apos;t possess;",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲛⲁ**ⲣⲁϣⲉ** ⲉⲕϣⲁⲛⲥⲱⲧⲙ ϫⲉⲁⲩⲃⲱⲕ ⲉⲙⲙⲁ ⲛϣⲓⲛⲉ ⲛⲛⲇⲁⲓⲙⲱⲛ .",
+      "english": "You will rejoice if you hear that they have gone to the oracles of demons,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        18,
+        23.58
+      ],
+      [
+        "ⲡ",
+        516,
+        22.003
+      ],
+      [
+        "ⲛ",
+        518,
+        21.332
+      ],
+      [
+        "ⲙ",
+        331,
+        20.936
+      ],
+      [
+        "ϥ",
+        340,
+        20.222
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        75,
+        20.124
+      ],
+      [
+        "ⲟⲩ",
+        259,
+        19.743
+      ],
+      [
+        "ⲧⲉⲗⲏⲗ",
+        38,
+        19.214
+      ],
+      [
+        "ⲛⲟϭ",
+        84,
+        18.948
+      ],
+      [
+        "ϫⲉ",
+        172,
+        18.898
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        94,
+        18.652
+      ],
+      [
+        "ⲁ",
+        197,
+        18.383
+      ],
+      [
+        "ⲙⲛ",
+        129,
+        18.15
+      ],
+      [
+        "ϩⲛ",
+        133,
+        18.118
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        66,
+        18.076
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        29,
+        17.958
+      ],
+      [
+        "ⲉ",
+        187,
+        17.93
+      ],
+      [
+        "ⲩ",
+        147,
+        17.881
+      ],
+      [
+        "ⲁⲩⲱ",
+        140,
+        17.608
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        68,
+        17.515
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲁϣⲉ_0_node",
+          215
+        ],
+        [
+          "ϯ_1_pre_ⲣⲁϣⲉ",
+          40
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁϣⲉ",
+          13
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲣⲁϣⲉ",
+          8
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲣⲁϣⲉ",
+          17
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          17
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲁϣⲉ",
+          11
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲁϣⲉ",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲁϣⲉ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲣⲁϣⲉ",
+          9
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲣⲁϣⲉ",
+          7
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁϣⲉ",
+          7
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲁϣⲉ",
+          4
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲁϣⲉ",
+          4
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲁϣⲉ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲗⲏⲗ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲉⲗⲏⲗ",
+          3
+        ],
+        [
+          "ⲧⲉⲗⲏⲗ_1_post_ⲣⲁϣⲉ",
+          3
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲣⲁϣⲉ",
+          3
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          9
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲁϣⲉ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲣⲁϣⲉ",
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          "ϯ_1_pre_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲣⲁϣⲉ_0_node",
+          "ⲙ_1_post_ⲣⲁϣⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲣⲁϣⲉ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲁϣⲉ",
+          "ⲟⲩ_1_pre_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁϣⲉ",
+          "ϥ_1_pre_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲣⲁϣⲉ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁϣⲉ_0_node",
+          "ⲙⲛ_2_post_ⲧⲉⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲗⲏⲗ",
+          "ⲟⲩ_2_post_ⲧⲉⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲉⲗⲏⲗ",
+          "ⲧⲉⲗⲏⲗ_1_post_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁϣⲉ",
+          "ⲩ_1_pre_ⲣⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲁϣⲉ",
+          "ⲣⲁϣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.65,
+      "rank": 203,
+      "count": 738
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3223",
+      "label": "ⲣⲁϣⲉ",
+      "pos": "N",
+      "gloss": "gladness, joy"
+    }
+  ],
+  "etym": {
+    "egy_num": "96210",
+    "egy_lemma": "ršu̯",
+    "demo_num": "d3586",
+    "demo_lemma": "ršj",
+    "english": "to rejoice",
+    "german": "sich freuen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/96210",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3586"
+  }
+}

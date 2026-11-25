@@ -1,0 +1,572 @@
+{
+  "id": "C6026",
+  "forms": [
+    {
+      "id": "CF14057",
+      "orth": "ϣⲁⲁⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3245,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϣⲁⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4701,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϣⲁⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.63,
+        "rank": 968,
+        "count": 100
+      }
+    },
+    {
+      "orth": "ϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.96,
+        "rank": 221,
+        "count": 782
+      }
+    },
+    {
+      "orth": "ϣⲁⲣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3931,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϣⲁⲣ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3931,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϣⲁⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.3,
+        "rank": 626,
+        "count": 110
+      }
+    },
+    {
+      "orth": "ϣⲁⲓⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1257,
+        "count": 34
+      }
+    },
+    {
+      "orth": "ϣⲏⲏⲗⲓ",
+      "dialect": "F",
+      "id": "1961.8"
+    },
+    {
+      "orth": "ϣⲁⲗ⸗",
+      "dialect": "F",
+      "id": "1961.9"
+    },
+    {
+      "orth": "ϣⲁⲣⲉ-",
+      "dialect": "L",
+      "id": "1961.10"
+    },
+    {
+      "orth": "ϣⲁⲣ⸗",
+      "dialect": "L",
+      "id": "1961.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6711",
+      "bibliography": "CD 583b-584a; CED 251; KoptHWb 324; DELC 269a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲇⲉ ⲛⲏⲩ ⲉ**ϣⲁⲁⲣⲉ** ⲉⲛⲣⲙⲛⲕⲏⲙⲉ ⲛϥⲛⲁⲩ ⲉⲡⲉⲥⲛⲟϥ ⲉϫⲙⲡⲉⲧⲟⲩⲁ ⲁⲩⲱ ϩⲣⲁⲓ ⲉϫⲛⲧⲟⲩⲉϭⲣⲟ ⲥⲛⲧⲉ ⲛⲧⲉⲡϫⲟⲉⲓⲥ ⲉⲓ ⲉϫⲙⲡⲣⲟ ⲛϥⲧⲙⲕⲱ ⲙⲡⲉⲧⲧⲁⲕⲟ ⲉⲉⲓ ⲉϩⲟⲩⲛ ⲉⲛⲉⲧⲛⲏⲓ ⲉϣⲁⲁⲣⲉ ⲉⲣⲱⲧⲛ",
+      "english": "And the Lord shall pass by to smite the Egyptians, and shall see the blood upon the lintel, and upon both the door-posts; and the Lord shall pass by the door, and shall not suffer the destroyer to enter into your houses to smite you.",
+      "source": "Exodus 12",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ⲅⲁⲣ ϯⲛⲁⲧⲛⲛⲟⲟⲩ ⲛⲧⲁϭⲓϫ ⲛⲧⲁ**ϣⲁⲁⲣⲉ** ⲉⲣⲟⲕ ⲁⲩⲱ ⲛⲧⲁⲙⲟⲩⲟⲩⲧ ⲙⲡⲉⲕⲗⲁⲟⲥ ⲛⲕϥⲱⲧⲉ ⲉⲃⲟⲗ ϩⲓϫⲙⲡⲕⲁϩ",
+      "english": "For now I will stretch forth my hand and smite thee and kill thy people, and thou shalt be consumed from off the earth.",
+      "source": "Exodus 9",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲥⲟⲟⲩⲧⲛ ⲉⲃⲟⲗ ⲛⲧⲁϭⲓϫ ⲧⲁ**ϣⲁⲁⲣⲉ** ⲉⲛⲛⲣⲙⲛⲕⲏⲙⲉ ϩⲣⲁⲓ ϩⲛⲛⲁϣⲡⲏⲣⲉ ⲧⲏⲣⲟⲩ ⲉϯⲛⲁⲁⲁⲩ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲙⲛⲛⲥⲁⲛⲁⲓ ϥⲛⲁⲕⲁⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ",
+      "english": "and I will stretch out my hand, and smite the Egyptians with all my wonders, which I shall work among them, and after that he will send you forth.",
+      "source": "Exodus 3",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.898
+      ],
+      [
+        "ⲛⲣⲙⲛⲕⲏⲙⲉ",
+        1,
+        15.898
+      ],
+      [
+        "ⲁⲧⲧⲁⲗϭⲟ",
+        1,
+        13.898
+      ],
+      [
+        "ϣⲁⲓ",
+        1,
+        13.576
+      ],
+      [
+        "ϣⲟⲟϭ",
+        1,
+        13.438
+      ],
+      [
+        "ⲧⲁ",
+        6,
+        13.005
+      ],
+      [
+        "ⲉ",
+        15,
+        12.837
+      ],
+      [
+        "ϭⲓϫ",
+        4,
+        12.274
+      ],
+      [
+        "ⲕⲁϩ",
+        5,
+        12.192
+      ],
+      [
+        "ⲁⲗ",
+        1,
+        11.343
+      ],
+      [
+        "ⲡⲗⲏⲅⲏ",
+        1,
+        10.967
+      ],
+      [
+        "ⲉⲣⲱ",
+        2,
+        10.512
+      ],
+      [
+        "ⲣⲙⲛⲕⲏⲙⲉ",
+        1,
+        9.955
+      ],
+      [
+        "ⲡ",
+        8,
+        9.797
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        2,
+        9.321
+      ],
+      [
+        "ϥ",
+        7,
+        9.243
+      ],
+      [
+        "ⲧⲁⲗϭⲟ",
+        1,
+        9.204
+      ],
+      [
+        "ⲛ",
+        7,
+        8.531
+      ],
+      [
+        "ϩⲙ",
+        3,
+        8.467
+      ],
+      [
+        "ⲉⲧⲉⲧⲛⲉ",
+        1,
+        8.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          12
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ϣⲁⲁⲣⲉ",
+          2
+        ],
+        [
+          "ⲧⲛ_2_post_ⲉⲣⲱ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          5
+        ],
+        [
+          "ϣⲁⲓ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲧⲁⲗϭⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ϭⲓϫ_2_post_ⲧⲁⲗϭⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          5
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁⲁⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲁⲁⲣⲉ",
+          4
+        ],
+        [
+          "ⲇⲉ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲣⲁϩⲧ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲁⲁⲣⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_3_post_ⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ⲉⲣⲱ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲧⲛ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲓ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲓ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲁⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ⲛⲧⲉ_2_post_ⲧⲁⲗϭⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲧⲁⲗϭⲟ",
+          "ⲧⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ⲧⲁⲗϭⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲁⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲛ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          "ⲛⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁⲁⲣⲉ",
+          "ⲧⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϥ_1_pre_ϣⲁⲁⲣⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲁⲣⲉ_0_node",
+          4
+        ],
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ⲇⲉ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϣⲁⲁⲣⲉ",
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲁⲩⲱ_2_post_ⲣⲁϩⲧ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲁⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲁⲁⲣⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϣⲁⲁⲣⲉ",
+          "ϩⲙ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉ",
+          "ⲣⲙⲛⲕⲏⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲁⲁⲣⲉ",
+          "ⲩ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϣⲁⲁⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲕⲏⲙⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲉ",
+          "ϩⲙ_1_post_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲁⲁⲣⲉ",
+          "ϥ_1_pre_ϣⲁⲁⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲁⲁⲣⲉ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          "ϩⲉⲑⲛⲟⲥ_3_post_ⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2767,
+      "count": 13
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6027",
+      "label": "ϣⲁⲁⲣⲉ",
+      "pos": "N",
+      "gloss": "blow, stroke"
+    },
+    {
+      "target": "C6029",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "evil, demonic"
+    },
+    {
+      "target": "C6028",
+      "label": "ⲣⲉϥϣⲁⲁⲣⲉ",
+      "pos": "N",
+      "gloss": "smiter, demon"
+    }
+  ],
+  "etym": {
+    "egy_num": "114890",
+    "egy_lemma": "ḫꜥr",
+    "demo_num": "d4435",
+    "demo_lemma": "ḫꜥr(j)",
+    "english": "to rage",
+    "german": "wütend werden; wütend sein; wüten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/114890",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4435"
+  }
+}

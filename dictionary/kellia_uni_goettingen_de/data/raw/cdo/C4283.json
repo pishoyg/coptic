@@ -1,0 +1,247 @@
+{
+  "id": "C4283",
+  "forms": [
+    {
+      "id": "CF10517",
+      "orth": "ⲧⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4333,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲑⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2945,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲧⲙⲉⲓ",
+      "dialect": "A",
+      "id": "1597.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4854",
+      "bibliography": "CD 415b; CED 188; KoptHWb 231; DELC 214b; ChLCS 58a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲫⲟⲣⲉⲓ ⲛⲧⲉ**ⲧⲙⲏ** ·",
+      "english": "carrying the reed mat.",
+      "source": "Apophthegmata Patrum Sahidic 053: Ammona",
+      "urn": "urn:cts:copticLit:ap.53.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲡϩⲱⲃ ⲙⲟⲧⲛ ⲙⲡⲣⲛⲕⲟⲧⲕ ϩⲓ**ⲧⲙⲏ** · ⲉⲕⲣⲥⲛⲁⲩ ⲛⲧⲕⲟⲩϣⲏⲣⲉ ϣⲏⲙ ·",
+      "english": "When it becomes quiet, do not sleep upon a mat two of you together for thou art a young man.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲫⲟⲣⲉⲓ ⲛⲟⲩ**ⲧⲙⲏ** ·",
+      "english": "who was carrying a reed mat,",
+      "source": "Apophthegmata Patrum Sahidic 053: Ammona",
+      "urn": "urn:cts:copticLit:ap.53.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲧⲁ",
+        1,
+        17.013
+      ],
+      [
+        "ⲙⲟⲧⲛ",
+        2,
+        15.458
+      ],
+      [
+        "ⲫⲟⲣⲉⲓ",
+        2,
+        14.604
+      ],
+      [
+        "ⲛⲕⲟⲧⲕ",
+        2,
+        12.177
+      ],
+      [
+        "ⲣ",
+        3,
+        11.583
+      ],
+      [
+        "ⲕⲧⲉ",
+        1,
+        10.853
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        1,
+        10.843
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        10.451
+      ],
+      [
+        "ϥ",
+        7,
+        10.359
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        9.973
+      ],
+      [
+        "ϩⲓ",
+        2,
+        9.646
+      ],
+      [
+        "ⲁ",
+        5,
+        9.425
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        8.861
+      ],
+      [
+        "ⲕ",
+        2,
+        7.268
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.84
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.359
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.16
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        5.511
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ],
+      [
+        "ⲛ",
+        2,
+        4.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲙⲏ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲧⲙⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲙⲏ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲧⲙⲏ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲧⲙⲏ",
+          "ⲧⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲙⲏ_0_node",
+          "ⲉⲧ_1_post_ⲧⲙⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲙⲏ",
+          "ϩⲁⲣⲟ_1_post_ⲧⲙⲏ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲧⲙⲏ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3938,
+      "count": 6
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4294",
+      "type": "cf",
+      "label": "mat"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4284",
+      "label": "ⲥⲁϩⲧⲙⲏ",
+      "pos": "N",
+      "gloss": "mat-weaver"
+    }
+  ],
+  "etym": {
+    "egy_num": "172210",
+    "egy_lemma": "tmꜣ.yt",
+    "demo_num": "dm3651",
+    "demo_lemma": "tme.t",
+    "english": "mat",
+    "german": "Matte",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/172210",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3651"
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "id": "C7994",
+  "forms": [
+    {
+      "id": "CF18054",
+      "orth": "ϭϩⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4666,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϭⲟϩⲥ",
+      "dialect": "S",
+      "id": "651.1"
+    },
+    {
+      "orth": "ϫϩⲟⲥ",
+      "dialect": "S",
+      "id": "651.2"
+    },
+    {
+      "orth": "ϣϭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10519,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣϫϩⲟⲥ",
+      "dialect": "S",
+      "id": "651.4"
+    },
+    {
+      "orth": "ϣϫⲟⲥ",
+      "dialect": "S",
+      "id": "651.5"
+    },
+    {
+      "orth": "ϭⲟϩⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17417,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁϩⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4544,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϭⲁϩⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3207,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲭⲁⲥ",
+      "dialect": "A",
+      "id": "651.9"
+    },
+    {
+      "orth": "ϭϩⲁⲥ",
+      "dialect": "F",
+      "id": "651.10"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8886",
+      "bibliography": "CD 839b; CED 340; KoptHWb 472, 575; DELC 350a; ChLCS 110b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϩⲙⲡⲉⲕⲟⲩⲱϣ ⲧⲏⲣϥ ⲉⲕⲉϣⲱⲱⲧ ⲛⲅⲟⲩⲉⲙⲁϥ ⲕⲁⲧⲁⲡⲉⲧⲉϩⲛⲉⲧⲉⲕⲯⲩⲭⲏ ⲕⲁⲧⲁⲡⲉⲥⲙⲟⲩ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲡⲁⲓ ⲉⲛⲧⲁϥⲧⲁⲁϥ ⲛⲁⲕ ϩⲛⲛⲉⲕⲡⲟⲗⲓⲥ ⲧⲏⲣⲟⲩ ⲡⲉⲧϫⲁϩⲙ ⲉⲧⲛⲙⲙⲁⲕ ⲁⲩⲱ ⲡⲉⲧⲧⲃⲃⲏⲩ ⲉⲟⲩⲱⲙ ϩⲓⲛⲉⲩⲉⲣⲏⲩ ⲛⲧϩⲉ ⲛⲟⲩ**ϭϩⲟⲥ** ⲉⲩⲟⲩⲱⲙ ⲙⲙⲟⲥ ⲏ ⲟⲩⲉⲓⲟⲩⲗ",
+      "english": "But thou shalt kill according to all thy desire, and shalt eat flesh according to the blessing of the Lord thy God, which he has given thee in every city; the unclean that is within thee and the clean shall eat it on equal terms, as the doe or the stag.",
+      "source": "Deuteronomy 12",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲕⲉⲟⲩⲟⲙϥ ϩⲛⲛⲉⲕⲡⲟⲗⲓⲥ ⲁⲩⲱ ⲡⲉⲧϫⲁϩⲙ ⲉⲧⲛⲙⲙⲁⲕ ⲙⲛⲡⲉⲧⲧⲃⲃⲏⲩ ⲉⲩⲉⲟⲩⲱⲙ ϩⲱⲱⲟⲩ ϩⲓⲛⲁⲓ ⲛⲧϩⲉ ⲛⲟⲩ**ϭϩⲟⲥ** ⲉⲩⲟⲩⲱⲙ ⲙⲙⲟⲥ ⲏ ⲟⲩⲉⲓⲟⲩⲗ",
+      "english": "Thou shalt eat it in thy cities; the unclean in thee and the clean shall eat it in like manner, as the doe or the stag.",
+      "source": "Deuteronomy 15",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲡⲱⲧ ⲛⲥⲱϥ ϫⲉⲁϥⲟⲩⲉ ⲁⲩⲱ ⲁϥⲡⲱⲧ ⲛⲧϩⲉ ⲛⲟⲩ**ϭϩⲟⲥ** ⲉⲃⲟⲗ ϩⲛⲟⲩⲡⲁϣ",
+      "english": "Follow after him no more, for he is too far off; he is as a roe escaped out of the snare.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁϭⲉ",
+        1,
+        15.428
+      ],
+      [
+        "ⲙⲁⲥ",
+        1,
+        12.969
+      ],
+      [
+        "ⲩ",
+        9,
+        12.735
+      ],
+      [
+        "ⲡⲁϣ",
+        1,
+        12.341
+      ],
+      [
+        "ϩⲉ",
+        5,
+        12.108
+      ],
+      [
+        "ⲉ",
+        9,
+        11.742
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        2,
+        11.044
+      ],
+      [
+        "ⲧ",
+        5,
+        10.452
+      ],
+      [
+        "ⲧⲛⲧⲱⲛ",
+        1,
+        10.413
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        10.39
+      ],
+      [
+        "ⲟⲩⲟⲙ",
+        1,
+        10.278
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.396
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.894
+      ],
+      [
+        "ⲏ",
+        1,
+        6.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ϣⲁ",
+        1,
+        5.761
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.489
+      ],
+      [
+        "ⲕ",
+        1,
+        4.268
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭϩⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          4
+        ],
+        [
+          "ⲩ_3_post_ⲟⲩⲱⲙ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲟⲩⲱⲙ",
+          2
+        ],
+        [
+          "ⲥ_4_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ϣⲁ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭϩⲟⲥ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲁϭⲉ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲙⲁⲥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲥ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϭϩⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲡⲁϣ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭϩⲟⲥ_0_node",
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          "ⲩ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲩⲱⲙ",
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲉ",
+          "ⲙⲙⲟ_3_post_ⲟⲩⲱⲙ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲟⲩⲱⲙ",
+          "ⲥ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          "ϣⲁ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲟⲩⲟⲙ",
+          "ⲩ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲩⲟⲙ",
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲙ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲟⲩⲟⲙ",
+          1
+        ],
+        [
+          "ϭϩⲟⲥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϭϩⲟⲥ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭϩⲟⲥ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ϩⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ϩⲁϭⲉ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲁϭⲉ_3_post_ϩⲉⲛ",
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϭϩⲟⲥ_0_node",
+          "ⲏ_4_post_ⲙⲁⲥ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲙⲁⲥ",
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭϩⲟⲥ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          "ⲙⲁⲥ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲥ_3_post_ⲩ",
+          "ⲛ_4_post_ⲙⲁⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭϩⲟⲥ",
+          "ϩⲛ_1_post_ϭϩⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϭϩⲟⲥ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲡⲁϣ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4250,
+      "count": 6
+    }
+  },
+  "etym": {
+    "egy_num": "168210",
+    "egy_lemma": "gḥs",
+    "demo_num": "d6920",
+    "demo_lemma": "gḥs(j.t)",
+    "english": "gazelle",
+    "german": "Gazelle",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/168210",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6920"
+  }
+}

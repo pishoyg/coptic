@@ -1,0 +1,761 @@
+{
+  "id": "C6339",
+  "forms": [
+    {
+      "id": "CF14693",
+      "orth": "ϩⲁⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.69,
+        "rank": 918,
+        "count": 109
+      }
+    },
+    {
+      "orth": "ϧⲁⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.76,
+        "rank": 510,
+        "count": 149
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7034",
+      "bibliography": "CD 635a; CED 269; KoptHWb 348; DELC 284b-285a; ChLCS 86a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲓ ⲛϫⲉϯ**ϧⲁⲉ** ϯⲛⲟⲩ ⲡⲓϫⲱⲕ ⲉⲃⲟⲗ ⲉϫⲱⲕ ⲟⲩⲟϩ ⲁⲛⲟⲕ ϯⲟⲩⲱⲣⲡ ⲉϫⲱⲕ ⲟⲩⲟϩ ⲉⲓⲉϭⲓⲙⲡϣⲓϣ ⲛϧⲏⲧⲕ ϧⲉⲛⲛⲉⲕⲙⲱⲓⲧ ⲟⲩⲟϩ ⲛⲉⲕⲃⲟϯ ⲧⲏⲣⲟⲩ ⲉⲓⲉⲉⲛⲟⲩ ϩⲉⲣⲏⲓ ⲉϫⲱⲕ",
+      "english": "The end is come on thee,",
+      "source": "26_Ezechiel_07",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϩⲱⲃ ⲟⲩⲱⲛϩ ⲉⲣⲟⲛ · ⲉⲡ**ϩⲁⲉ** ⲇⲉ ⲁⲛϯⲛⲁⲁⲕⲉ ⲙⲡⲙⲟⲩ ⲁⲛϫⲡⲟ · ⲛⲧⲁⲛⲟⲙⲓⲁ ·",
+      "english": "and the affair continued to grow until at last we brought forth death, and produced iniquity.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϩⲉⲙⲥⲓ ⲁϥⲙⲟⲩϯ ⲉⲡⲓⲓⲃ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲫⲏ ⲉⲧⲟⲩⲱϣ ⲉⲉⲣϩⲟⲩⲓⲧ ⲉϥⲉⲉⲣ**ϧⲁⲉ** ⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲛⲉⲙⲇⲓⲁⲕⲱⲛ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ .",
+      "english": "He sat down, and called the twelve; and he said to them, 'If any man wants to be first, he shall be last of all, and servant of all.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲛⲉⲧⲛⲥⲁϩ ⲡⲓⲣⲉ ⲁⲛ ⲉⲃⲟⲗ ϩⲙⲡⲛⲟⲃⲉ ⲛϣⲟⲣⲡ · ⲁⲗⲗⲁ ⲛⲧⲁⲩⲣⲟⲩⲟⲉⲓⲛ ϩⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲉⲡ**ϩⲁⲉ** ·",
+      "english": "Our masters did not give light whilst they lived in their former state of sin, but they did shine brightly at the last (when living) in (a state of) righteousness.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲟⲩ ϫⲉⲟⲩϩⲟⲣⲁⲥⲓⲥ ⲧⲉ ⲛⲧⲉⲟⲩⲥⲏⲟⲩ ⲟⲩⲟϩ ⲉⲥⲉⲉⲣⲟⲩⲱⲓⲛⲓ ⲉⲩ**ϧⲁⲉ** ⲟⲩⲟϩ ⲡⲉⲧϣⲟⲩⲓⲧ ⲁⲛ ⲉϣⲱⲡ ⲁϥϣⲁⲛϭⲓϩⲟ ϫⲟⲩϣⲧ ϧⲁϫⲱϥ ϫⲉϧⲉⲛⲟⲩⲓ ϥⲛⲁⲓ ⲟⲩⲟϩ ⲛⲛⲉϥⲱⲥⲕ .",
+      "english": "For the vision is yet for a time, and it shall shoot forth at the end, and not in vain: though he should tarry, wait for him; for he will surely come, and will not tarry.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲧⲓⲭⲁⲣⲓⲥ ⲛⲁⲕ ϩⲓⲡⲁⲣϩⲏⲥⲓⲁ ⲛⲛⲉϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲙⲡⲉⲕⲱⲛϩ ⲛϥⲕⲁ ⲡⲉⲕⲣⲁϣⲉ ϩⲓⲧⲁⲯⲩⲭⲏ ϣⲁⲡⲁ**ϩⲁⲉ** ⲛⲛⲉⲓⲃ ·",
+      "english": "And may he give you grace and confidence for all the days of your life as he keeps your joy upon my soul until my end of the gaps.",
+      "source": "Letter about wheat",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_31_14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡ",
+        74,
+        24.248
+      ],
+      [
+        "ⲉ",
+        84,
+        24.194
+      ],
+      [
+        "ⲇⲉ",
+        44,
+        23.427
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        26,
+        23.23
+      ],
+      [
+        "ⲛⲓ",
+        47,
+        22.882
+      ],
+      [
+        "ⲛ",
+        64,
+        22.591
+      ],
+      [
+        "ⲁ",
+        54,
+        22.254
+      ],
+      [
+        "ⲓ",
+        33,
+        21.709
+      ],
+      [
+        "ⲛⲧⲉ",
+        37,
+        21.695
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        46,
+        21.651
+      ],
+      [
+        "ⲉⲣϩⲟⲩⲓⲧ",
+        3,
+        21.643
+      ],
+      [
+        "ⲉⲥⲉ",
+        13,
+        21.602
+      ],
+      [
+        ".",
+        38,
+        21.36
+      ],
+      [
+        "ϣⲁ",
+        18,
+        21.176
+      ],
+      [
+        "ⲡⲓ",
+        35,
+        21.159
+      ],
+      [
+        "ⲛⲁ",
+        32,
+        20.954
+      ],
+      [
+        "ϧⲉⲛ",
+        32,
+        20.763
+      ],
+      [
+        "ⲟⲩ",
+        36,
+        20.264
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        18,
+        20.144
+      ],
+      [
+        "ⲛⲉⲣϧⲟⲧ",
+        2,
+        19.888
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ",
+        17,
+        21.264
+      ],
+      [
+        "ⲛ",
+        118,
+        17.446
+      ],
+      [
+        "ⲡ",
+        79,
+        16.397
+      ],
+      [
+        "ⲇⲉ",
+        33,
+        15.108
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        21,
+        14.682
+      ],
+      [
+        "ⲕⲩⲕⲗⲟⲥ",
+        4,
+        14.542
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        13,
+        14.532
+      ],
+      [
+        "ⲕⲟⲛⲧⲣⲁⲛⲧⲏⲥ",
+        1,
+        13.587
+      ],
+      [
+        "ϭⲗⲁ.....",
+        1,
+        13.587
+      ],
+      [
+        "ⲧⲥⲟⲣⲉ",
+        1,
+        13.587
+      ],
+      [
+        "ⲛⲗⲩⲡⲧⲟⲛ",
+        1,
+        13.587
+      ],
+      [
+        "◈◈◈",
+        1,
+        13.587
+      ],
+      [
+        "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+        1,
+        13.587
+      ],
+      [
+        "ⲉⲉⲛⲇⲩⲙⲁ",
+        1,
+        13.587
+      ],
+      [
+        "ⲥϯⲙ",
+        1,
+        13.587
+      ],
+      [
+        "ϣⲟⲣⲡ'ϩⲉⲱⲥ",
+        1,
+        13.587
+      ],
+      [
+        "ⲧⲟⲩⲛⲟⲟⲩ",
+        1,
+        13.587
+      ],
+      [
+        "ⲧⲁⲧⲟⲩⲛⲟⲥ",
+        1,
+        13.587
+      ],
+      [
+        "ⲡⲁⲓ",
+        16,
+        13.566
+      ],
+      [
+        "ⲉ",
+        37,
+        13.434
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲉ_0_node",
+          69
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲉ",
+          10
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲉ",
+          11
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲉ",
+          7
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲉϩⲟⲩⲉ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉϩⲟⲩⲉ",
+          2
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲉ",
+          3
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          8
+        ],
+        [
+          "ⲛ_2_post_ϫⲁϫⲉ",
+          2
+        ],
+        [
+          "ϫⲁϫⲉ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲁⲉ",
+          3
+        ],
+        [
+          "ⲡ_3_post_ⲙⲉϩϫⲟⲩⲧⲁϥⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲟϫϭ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲣⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲛ_4_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲧϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲥⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_5_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲉ",
+          "ⲛ_1_pre_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲉ",
+          "ϩⲁⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ϩⲁⲉ",
+          "ϩⲁⲉ_0_node",
+          7
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲙ_1_post_ϩⲁⲉ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲉ",
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲉϩⲟⲩⲉ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲉ_1_post_ϩⲁⲉ",
+          "ⲡ_2_post_ⲉϩⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϩⲟⲩⲉ",
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲉ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲉ",
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲉ",
+          "ⲛ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲛ_2_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲁⲉ",
+          "ϩⲁⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲛ_1_post_ϩⲁⲉ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲓⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲁⲉ",
+          "ϩⲁⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ⲥⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          "ⲡⲁⲓ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ϩⲁⲉ",
+          "ⲉ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲉ",
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_2_post_ⲙ",
+          "ⲉⲧⲉ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲁⲉ",
+          "ⲡ_3_post_ⲙⲉϩϫⲟⲩⲧⲁϥⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲁⲉ",
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ϩⲁⲉ",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_2_post_ⲙ",
+          "ⲧⲁⲓ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ϩⲁⲉ",
+          "ⲉⲧ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲧⲁⲓ",
+          "ⲙⲟϫϭ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲉ_0_node",
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ϩⲟⲣⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲣⲓⲟⲛ_2_post_ⲛ",
+          "ⲉⲧⲉ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_2_post_ⲙ",
+          "ϫⲓⲛ_3_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_3_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ϩⲟⲩⲛ_4_post_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ⲥⲱⲧϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲧϥ_2_post_ⲛ",
+          "ⲛⲧⲉ_3_post_ⲥⲱⲧϥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲥⲱⲧϥ",
+          "ⲡⲉⲩ_5_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲉ",
+          "ⲟⲩⲟⲉⲓⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          "ⲛϩⲏⲧ_3_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ_2_post_ⲙ",
+          "ⲡⲁⲓ_1_post_ϩⲁⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ϩⲁⲉ",
+          "ⲉⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡⲁⲓ",
+          "ⲕⲱⲧⲉ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.81,
+      "rank": 725,
+      "count": 129
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6343",
+      "label": "ϣⲁϩⲁⲉ",
+      "pos": "ADV",
+      "gloss": "till, lastly"
+    },
+    {
+      "target": "C6346",
+      "label": "ϣⲱⲡⲉ ⲛϩⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be lacking"
+    },
+    {
+      "target": "C6338",
+      "label": "ϩⲁⲉ",
+      "pos": "N",
+      "gloss": "last thing, end"
+    },
+    {
+      "target": "C6340",
+      "label": "ϩⲁⲉ",
+      "pos": "N",
+      "gloss": "last"
+    },
+    {
+      "target": "C6344",
+      "label": "ϩⲛⲑⲁⲏ",
+      "pos": "ADV",
+      "gloss": "in the end, at last"
+    },
+    {
+      "target": "C6347",
+      "label": "ϫⲓϩⲁⲉ",
+      "pos": "V",
+      "gloss": "take last (place), stay behind"
+    },
+    {
+      "target": "C6345",
+      "label": "ⲉⲓⲣⲉ ⲛϩⲁⲉ",
+      "pos": "V",
+      "gloss": "be last; be in want"
+    },
+    {
+      "target": "C6341",
+      "label": "ⲉⲡϩⲁⲉ",
+      "pos": "ADV",
+      "gloss": "at the end"
+    },
+    {
+      "target": "C6342",
+      "label": "ⲙⲫⲁⲉ",
+      "pos": "ADV",
+      "gloss": "at last, finally"
+    }
+  ],
+  "etym": {
+    "egy_num": "862789",
+    "egy_lemma": "ḫꜣꜥ",
+    "demo_num": "d4731",
+    "demo_lemma": "ẖꜥꜣ",
+    "english": "End",
+    "german": "Ende",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/862789",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4731"
+  }
+}

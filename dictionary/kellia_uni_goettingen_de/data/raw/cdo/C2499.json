@@ -1,0 +1,118 @@
+{
+  "id": "C2499",
+  "forms": [
+    {
+      "id": "CF6783",
+      "orth": "ⲛⲏⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10855,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF6784",
+      "orth": "ⲛⲏⲛⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2878",
+      "bibliography": "CD 227b; CED 109; KoptHWb 123; DELC 143"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲃⲓⲱ",
+        1,
+        14.023
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.46
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.736
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.59
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲛⲏⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲛⲏⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲏⲛⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲛⲏⲛⲓ",
+          "ⲡⲓ_1_pre_ⲛⲏⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲛⲏⲛⲓ",
+          "ⲛⲏⲛⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10306,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "69630",
+    "egy_lemma": "mn",
+    "demo_num": "d3198",
+    "demo_lemma": "nny(.t)",
+    "english": "[a jug (for wine, beer)]",
+    "german": "[Krug (für Wein, Bier)]; [Gefäß (für Weihrauch)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/69630",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3198"
+  }
+}

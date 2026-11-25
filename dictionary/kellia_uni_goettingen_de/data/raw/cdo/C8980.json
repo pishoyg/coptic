@@ -1,0 +1,61 @@
+{
+  "id": "C8980",
+  "forms": [
+    {
+      "id": "CF22048",
+      "orth": "ⲉⲝϩⲟⲙⲟⲗⲟⲅⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22049",
+      "orth": "ⲉⲝϩⲟⲙⲟⲗⲟⲅⲏⲥⲓⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22050",
+      "orth": "ⲉⲝⲟⲙⲟⲗⲟⲅⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6007,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10973",
+      "bibliography": "DDGLC",
+      "cu_ID": "1442"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ϩⲛⲟⲩϩⲣⲟⲟⲩ ⲛⲧⲱⲃϩ ϩⲓ**ⲉⲝⲟⲙⲟⲗⲟⲅⲏⲥⲓⲥ** ϯⲛⲁϣⲱⲱⲧ ⲛⲁⲕ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲛⲟⲩϫⲁⲓ ⲛⲉⲛⲧⲁⲓⲉⲣⲏⲧ ⲙⲙⲟⲟⲩ ϯⲛⲁⲧⲁⲁⲩ ⲛⲁⲕ ⲉⲡⲁⲟⲩϫⲁⲓ ⲡϫⲟⲉⲓⲥ :",
+      "english": "But I will sacrifice to thee with the voice of praise and thanksgiving: all that I have vowed I will pay to thee, the Lord of my salvation.",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6706,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2694",
+    "grl_lemma": "ἐξομολόγησις",
+    "grl_meaning": "admission, confession",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 597b"
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "id": "C2794",
+  "forms": [
+    {
+      "id": "CF7424",
+      "orth": "ⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1238,
+        "count": 69
+      }
+    },
+    {
+      "orth": "ⲛⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 37.58,
+        "rank": 40,
+        "count": 3187
+      }
+    },
+    {
+      "orth": "ⲛⲏ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 9.42,
+        "rank": 129,
+        "count": 1487
+      }
+    },
+    {
+      "orth": "ⲫⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 30.5,
+        "rank": 47,
+        "count": 2587
+      }
+    },
+    {
+      "orth": "ⲧⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1966,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲑⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.69,
+        "rank": 295,
+        "count": 313
+      }
+    },
+    {
+      "orth": "ⲡⲏ",
+      "dialect": "F",
+      "id": "1258.3"
+    },
+    {
+      "orth": "ⲧⲏ",
+      "dialect": "F",
+      "id": "1258.4"
+    },
+    {
+      "orth": "ⲛⲏ",
+      "dialect": "F",
+      "id": "1258.5"
+    },
+    {
+      "orth": "ⲡⲏ",
+      "dialect": "L",
+      "id": "1258.6"
+    },
+    {
+      "orth": "ⲧⲏ",
+      "dialect": "L",
+      "id": "1258.7"
+    },
+    {
+      "orth": "ⲛⲏ",
+      "dialect": "L",
+      "id": "1258.8"
+    }
+  ],
+  "grammar": {
+    "pos": "PDEM",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Dem. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS3196",
+      "bibliography": "CD 260b; CED 124; KoptHWb 144; DELC 157-158; ChLCS 36b; LCG § 58"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲫⲏ** ⲉⲧⲥⲓϯ ⲁϥⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ .",
+      "english": "The farmer sows the word.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲧⲟⲛ ⲙⲙⲟ ⲛⲧⲉⲓⲟⲩϣⲏ ϣⲁⲛⲧⲉϣⲱⲣⲡ ϣⲱⲡⲉ ⲁⲩⲱ ⲉⲛϣⲁⲛⲉⲓ ⲉϩⲧⲟⲟⲩⲉ ⲉⲣϣⲁⲛ**ⲡⲏ** ϫⲓⲧⲉ ⲟⲩⲁⲅⲁⲑⲟⲛ ⲡⲉ ⲙⲁⲣⲉϥϫⲓⲧⲉ ⲉϥϣⲁⲛⲧⲙⲣϩⲛⲁϥ ⲇⲉ ⲉϫⲓⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁϫⲓⲧⲉ ϥⲟⲛϩ ⲛϭⲓⲡϫⲟⲉⲓⲥ ⲛⲕⲟⲧⲕ ϣⲁϩⲧⲟⲟⲩⲉ",
+      "english": "Lodge here for the night, and it shall be in the morning, if he will do the part of a kinsman to thee, welllet him do it: but if he will not do the part of a kinsman to thee, I will do the kinsman's part to thee, as the Lord lives; lie down till the morning.",
+      "source": "Ruth Chapter 3",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲫⲏ** ⲉⲧⲧⲱⲙⲓ ⲙⲙⲟϥ ⲉⲡϭⲟⲓⲥ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ .",
+      "english": "But he who is joined to the Lord is one spirit.",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲭⲣⲱ ⲛⲧⲙⲛⲧⲙⲁⲓⲣⲱⲙⲉ ⲉϩⲟⲩⲛ ⲉ**ⲡⲏ** ⲁⲩⲱ ⲛⲅⲭⲁⲣⲓⲍⲉ ⲙⲡⲁⲓ ·",
+      "english": "Do deeds of kindness and charity to this man, and act with gracious goodness to that man.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲧⲁⲙⲉⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲉ**ⲛⲏ** ⲧⲏⲣⲟⲩ ⲉⲧⲁⲡⲓⲣⲱⲙⲓ ϫⲟⲧⲟⲩ .",
+      "english": "Apa Shenoute was informed of the man’s words.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲛⲏ** ⲛⲉ ⲛⲧⲁⲩϫⲟⲟⲩ ⲉϫⲙⲡⲕⲁϩ ⲉⲧⲛⲁⲛⲟⲩϥ ⲉⲩⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲥⲉϣⲱⲡ ⲙⲙⲟϥ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲥⲉⲧⲁⲩⲉⲕⲁⲣⲡⲟⲥ ⲉⲃⲟⲗ ϩⲛⲙⲁⲁⲃ ⲁⲩⲱ ϩⲛⲥⲉ ⲁⲩⲱ ϩⲛϣⲉ .",
+      "english": "Those which were sown on the good ground are those who hear the word, and accept it, and bear fruit, some thirty times, some sixty times, and some one hundred times.",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        13431,
+        45.564
+      ],
+      [
+        "ⲛ",
+        6614,
+        42.665
+      ],
+      [
+        "ⲟⲩ",
+        5955,
+        42.374
+      ],
+      [
+        "ⲕ",
+        3208,
+        42.07
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4608,
+        41.59
+      ],
+      [
+        "ⲉ",
+        4628,
+        41.546
+      ],
+      [
+        "ⲩ",
+        3385,
+        41.296
+      ],
+      [
+        "ϯ",
+        2723,
+        40.523
+      ],
+      [
+        ".",
+        3153,
+        40.484
+      ],
+      [
+        "ϫⲉ",
+        2511,
+        40.019
+      ],
+      [
+        "ⲁⲛ",
+        1532,
+        39.759
+      ],
+      [
+        "ⲙ",
+        2526,
+        39.491
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2065,
+        39.339
+      ],
+      [
+        "ϧⲉⲛ",
+        2337,
+        39.334
+      ],
+      [
+        "ⲥ",
+        1816,
+        38.907
+      ],
+      [
+        "ⲙⲙⲟ",
+        1449,
+        38.871
+      ],
+      [
+        "ⲁ",
+        2491,
+        38.837
+      ],
+      [
+        "ⲡⲓ",
+        2066,
+        38.809
+      ],
+      [
+        "ⲓ",
+        1686,
+        38.734
+      ],
+      [
+        "ⲉⲧ",
+        1502,
+        37.909
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲉⲥⲉ",
+        5,
+        17.756
+      ],
+      [
+        "ϥ",
+        53,
+        14.705
+      ],
+      [
+        "ⲛ",
+        54,
+        14.074
+      ],
+      [
+        "ⲑⲉⲓⲁⲧⲉⲓⲣⲁ",
+        1,
+        13.598
+      ],
+      [
+        "ϣⲉϫⲉ",
+        1,
+        13.598
+      ],
+      [
+        "ⲧⲙⲁⲓⲏⲟⲩ",
+        1,
+        13.598
+      ],
+      [
+        "ⲁ",
+        35,
+        13.432
+      ],
+      [
+        "ⲙⲉⲛ",
+        7,
+        13.178
+      ],
+      [
+        "ⲙⲙⲟ",
+        19,
+        12.724
+      ],
+      [
+        "ⲉⲧⲏⲛⲏ",
+        1,
+        12.598
+      ],
+      [
+        "ⲧⲏⲣⲟⲩ",
+        1,
+        12.598
+      ],
+      [
+        "ⲛⲁⲭⲓⲁⲭⲁⲣⲟⲥ",
+        1,
+        12.598
+      ],
+      [
+        ".",
+        19,
+        12.301
+      ],
+      [
+        "ⲉⲧ",
+        20,
+        12.204
+      ],
+      [
+        "ⲟⲩⲟϣⲃ",
+        1,
+        12.013
+      ],
+      [
+        "ⲇⲉ",
+        15,
+        11.706
+      ],
+      [
+        "ⲥⲁϣϥⲉ",
+        3,
+        11.287
+      ],
+      [
+        "ϫⲓⲙⲏⲥⲉ",
+        1,
+        11.276
+      ],
+      [
+        "ⲁⲩⲱ",
+        18,
+        11.257
+      ],
+      [
+        "ϭⲱϣⲧ",
+        5,
+        11.032
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ⲡⲏ",
+          1
+        ],
+        [
+          "ⲡⲏ_0_node",
+          3
+        ],
+        [
+          "ϧⲁⲑⲟⲩⲱϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϧⲁⲑⲟⲩⲱϥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲑⲏ_1_post_ⲡⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ⲭⲏ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_4_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_5_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_1_post_ⲡⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲡⲏ",
+          "ⲡⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡⲏ_0_node",
+          "ϧⲁⲑⲟⲩⲱϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϧⲁⲑⲟⲩⲱϥ_2_post_ⲛⲁ",
+          "ⲙ_3_post_ϧⲁⲑⲟⲩⲱϥ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϧⲁⲑⲟⲩⲱϥ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ⲏⲓ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲏ_0_node",
+          "ⲑⲏ_1_post_ⲡⲏ",
+          1
+        ],
+        [
+          "ⲑⲏ_1_post_ⲡⲏ",
+          "ⲉⲧ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲑⲏ",
+          "ⲭⲏ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲭⲏ_3_post_ⲉⲧ",
+          "ϧⲉⲛ_4_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_4_post_ⲭⲏ",
+          "ⲛⲓ_5_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲡⲏ_0_node",
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲉⲓⲥ",
+          "ϭⲟⲉⲓⲥ_1_post_ⲡⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.81,
+      "rank": 728,
+      "count": 128
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2393",
+      "type": "cf",
+      "label": "Dem. Pron. pl."
+    },
+    {
+      "target": "C4019",
+      "type": "cf",
+      "label": "Dem. Pron. sg. f."
+    }
+  ],
+  "etym": {
+    "egy_num": "851661",
+    "egy_lemma": "pꜣj",
+    "demo_num": "d1920",
+    "demo_lemma": "pꜣj",
+    "english": "[Dem.Pron. sg.m.]",
+    "german": "[Dem.Pron. sg.m.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851661",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1920"
+  }
+}

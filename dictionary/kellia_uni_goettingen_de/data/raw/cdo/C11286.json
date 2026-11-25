@@ -1,0 +1,51 @@
+{
+  "id": "C11286",
+  "forms": [
+    {
+      "id": "CF32245",
+      "orth": "ϯⲗⲟⲓϭⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2061",
+      "bibliography": "CD 152a; KoptHWb 76; ChLCS 21a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C11287",
+      "label": "ϭⲛⲗⲟⲓϭⲉ",
+      "pos": "V",
+      "gloss": "find occasion, excuse"
+    },
+    {
+      "target": "C11288",
+      "label": "ϭⲡⲗⲟⲓϭⲉ",
+      "pos": "V",
+      "gloss": "seize occasion, excuse"
+    },
+    {
+      "target": "C11285",
+      "label": "ⲁⲧⲗⲟⲓϭⲉ",
+      "pos": "N",
+      "gloss": "without cause"
+    },
+    {
+      "target": "C11284",
+      "label": "ⲗⲟⲓϭⲉ",
+      "pos": "N",
+      "gloss": "cause, excuse, motive, accusation, fault"
+    }
+  ]
+}

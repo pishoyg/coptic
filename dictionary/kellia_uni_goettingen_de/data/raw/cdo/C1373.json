@@ -1,0 +1,534 @@
+{
+  "id": "C1373",
+  "forms": [
+    {
+      "id": "CF4161",
+      "orth": "ⲕⲁⲓⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2245,
+        "count": 24
+      }
+    },
+    {
+      "id": "CF4162",
+      "orth": "ⲕⲉⲓⲥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4163",
+      "orth": "ⲕⲉⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4154,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1585",
+      "bibliography": "CD 121a; KoptHWb 58; ChLCS 19a"
+    },
+    {
+      "id": "CS1586",
+      "bibliography": "CD 121a; KoptHWb 58; ChLCS 19a"
+    },
+    {
+      "id": "CS1587",
+      "bibliography": "CD 121a; KoptHWb 58; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲟⲩⲱ ⲅⲁⲣ ⲉⲓϣⲱⲡ ⲛⲧⲁⲕⲁⲓⲥⲉ ⲙⲛⲧⲁⲧⲏⲃⲉ · ϫⲉⲕⲁⲥ ⲛⲛⲉⲩⲕⲟⲥⲧ ϩⲛⲟⲩ**ⲕⲁⲓⲥⲉ** ⲛϣⲙⲙⲟ ·",
+      "english": "For I have already bought the funerary swathings for my body and my coffin in order that they may not bury me in the funerary equipment of a stranger.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲇⲉ ⲁϥϣⲱⲡ ⲛⲁϥ ⲛⲧⲉϥ**ⲕⲁⲓⲥⲉ** ⲙⲛⲧⲉϥⲧⲁⲓⲃⲉ ·",
+      "english": "And Apa Victor purchased for himself the materials for his burial, and his coffin.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲟⲩⲱϣ ⲉⲡⲱⲛⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ⲛϥⲃⲱⲕ ⲉⲡⲙⲁ ⲉⲧⲟⲩⲛϩⲏⲧϥ ⲛϭⲓϯⲣⲏⲛⲏ ⲙⲛⲡⲣⲁϣⲉ ⲙⲛⲧⲁⲅⲁⲡⲏ ⲙⲛⲧⲙⲛⲧⲗⲁⲙⲡⲣⲟⲥ · ⲙⲛⲧⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ ⲙⲛⲡ**ⲕⲉⲥⲉ** ⲉⲡⲉⲧⲏⲣϥ ⲛⲁⲅⲁⲑⲟⲛ ⲛⲁⲓ ⲉⲙⲛⲗⲁⲁⲩ ⲛϣⲁϫⲉ ⲛⲁϣ ⲡⲁⲣϩⲓⲥⲧⲁ ⲙⲙⲟⲟⲩ ·",
+      "english": "He wished to depart from this place (i. e., world), and to enter into the place (or, world) wherein are peace, and gladness, and love, and splendour, and freedom from care, and all the good things which no words can possibly present to the mind.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲥⲧ",
+        1,
+        15.644
+      ],
+      [
+        "ϫⲉ....ⲁⲅⲓⲟⲉ...",
+        1,
+        15.644
+      ],
+      [
+        "ⲙⲟⲩⲗⲉⲥ",
+        1,
+        14.059
+      ],
+      [
+        "ⲧⲏⲃⲉ",
+        1,
+        13.644
+      ],
+      [
+        "ⲧⲁⲓⲃⲉ",
+        1,
+        13.322
+      ],
+      [
+        "ⲧ",
+        14,
+        12.539
+      ],
+      [
+        "ⲕⲟⲟⲥ",
+        1,
+        12.474
+      ],
+      [
+        "ⲛ",
+        23,
+        12.425
+      ],
+      [
+        "ⲙ",
+        15,
+        12.118
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        3,
+        12.063
+      ],
+      [
+        "ⲡⲁϣⲉ",
+        2,
+        11.798
+      ],
+      [
+        "ⲧⲉϥ",
+        6,
+        11.765
+      ],
+      [
+        "ϣⲓⲕ",
+        1,
+        10.599
+      ],
+      [
+        "ϥ",
+        11,
+        9.946
+      ],
+      [
+        "ⲡ",
+        11,
+        9.921
+      ],
+      [
+        "ⲉ",
+        10,
+        9.829
+      ],
+      [
+        "ⲉⲓⲱ",
+        1,
+        9.599
+      ],
+      [
+        "ⲡⲉ",
+        6,
+        9.309
+      ],
+      [
+        "ⲁⲩ",
+        1,
+        9.251
+      ],
+      [
+        "ⲛϩⲟⲩⲛ",
+        1,
+        9.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          23
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲁⲓⲥⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲓⲥⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          2
+        ],
+        [
+          "ⲃⲣⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_4_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_3_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙϩⲁⲁⲩ_4_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲓⲥⲉ",
+          4
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲓⲏⲥⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓⲃⲉ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϣⲙⲙⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲱ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲧⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲃⲉ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲁⲓⲥⲉ",
+          "ⲕⲁⲓⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          "ⲙ_1_post_ⲕⲁⲓⲥⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲓⲥⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲓⲥⲉ",
+          "ⲃⲣⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_2_post_ⲙ",
+          "ⲙⲛ_4_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲯⲩⲭⲏ",
+          "ⲧⲉⲓ_4_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_4_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_3_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          "ϩⲓ_2_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲡⲁϩⲟⲩ",
+          "ⲡⲁϩⲟⲩ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_1_post_ⲕⲁⲓⲥⲉ",
+          "ⲙ_2_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲁϩⲟⲩ",
+          "ⲡⲉ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲙ",
+          "ⲙϩⲁⲁⲩ_4_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          "ⲛ_1_post_ⲕⲁⲓⲥⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲓⲥⲉ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          "ⲡ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_3_post_ⲓⲏⲥⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲓⲏⲥⲟⲩⲥ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          "ⲙⲛ_2_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲓⲃⲉ",
+          "ⲧⲉϥ_2_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲧⲁⲓⲃⲉ",
+          "ⲧⲁⲓⲃⲉ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲓⲥⲉ",
+          "ϣⲙⲙⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲓⲥⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲉⲓⲱ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲓⲥⲉ",
+          "ⲧⲉⲩ_1_pre_ⲕⲁⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲕⲁⲓⲥⲉ",
+          "ⲕⲁⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲕⲁⲓⲥⲉ",
+          "ⲕⲁⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲓⲥⲉ_0_node",
+          "ⲙⲛ_2_post_ⲧⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲏⲃⲉ",
+          "ⲧⲁ_2_post_ⲧⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲧⲏⲃⲉ",
+          "ⲧⲏⲃⲉ_1_post_ⲕⲁⲓⲥⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1724,
+      "count": 31
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1372",
+      "label": "ϫⲓⲛⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial"
+    },
+    {
+      "target": "C1368",
+      "label": "ⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial, funeral"
+    },
+    {
+      "target": "C1366",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "dress, prepare corpse for burial, bury"
+    },
+    {
+      "target": "C1367",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "corpse"
+    },
+    {
+      "target": "C1371",
+      "label": "ⲣⲉϥⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "embalmer"
+    },
+    {
+      "target": "C1369",
+      "label": "ⲣⲉϥⲛⲕⲱⲱⲥ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "invoker, producer of dead"
+    },
+    {
+      "target": "C1370",
+      "label": "ⲣⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "be corpse, be dead"
+    }
+  ],
+  "etym": {
+    "egy_num": "161960",
+    "egy_lemma": "qrs.t",
+    "demo_num": "d6459",
+    "demo_lemma": "qs.t",
+    "english": "burial",
+    "german": "Begräbnis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/161960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6459"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "C3238",
+  "forms": [
+    {
+      "id": "CF8361",
+      "orth": "ϫⲓⲣⲟⲩϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18800,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3698",
+      "bibliography": "CD 310b; KoptHWb 171; ChLCS 44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉⲧⲛⲁⲧⲁⲛϩⲟⲩⲧϥ ⲙⲛⲟⲩⲥⲟⲟⲛⲉ ⲉϥϩⲏⲕ ⲉϥϥⲱϭⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩⲡⲟⲗⲓⲥ ⲉⲟⲩⲡⲟⲗⲓⲥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲟⲩⲣⲱⲙⲉ ⲉⲙⲛⲧϥⲙⲁ ⲛϣⲱⲡⲉ ⲉϣⲁϥϭⲟⲉⲓⲗⲉ ⲉⲡⲙⲁ ⲉⲧϥⲛⲁ**ϫⲓⲣⲟⲩϩⲉ** ⲛϩⲏⲧϥ",
+      "english": "...",
+      "source": "Sirach 36",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϫⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲣⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϫⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϫⲓⲣⲟⲩϩⲉ",
+          "ⲛⲁ_1_pre_ϫⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲓⲣⲟⲩϩⲉ",
+          "ϫⲓⲣⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲣⲟⲩϩⲉ_0_node",
+          "ⲛϩⲏⲧ_1_post_ϫⲓⲣⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϫⲓⲣⲟⲩϩⲉ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18411,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3236",
+      "label": "ϩⲁⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "time of evening"
+    },
+    {
+      "target": "C3237",
+      "label": "ϩⲓⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "time of evening"
+    },
+    {
+      "target": "C3235",
+      "label": "ⲣⲟⲩϩⲉ",
+      "pos": "N",
+      "gloss": "evening"
+    }
+  ]
+}

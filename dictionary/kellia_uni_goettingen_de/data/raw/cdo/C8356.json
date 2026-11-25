@@ -1,0 +1,239 @@
+{
+  "id": "C8356",
+  "forms": [
+    {
+      "id": "CF19402",
+      "orth": "ⲁⲡⲟⲅⲣⲁⲫⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF19403",
+      "orth": "ⲁⲡⲟⲅⲣⲁⲫⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9195,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19404",
+      "orth": "ⲁⲡⲟⲅⲣⲁⲫⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9593",
+      "bibliography": "DDGLC",
+      "cu_ID": "3196"
+    },
+    {
+      "id": "CS9594",
+      "bibliography": "DDGLC",
+      "cu_ID": "972"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϣⲟⲣⲡ ⲛ**ⲁⲡⲟⲅⲣⲁⲫⲏ** ⲉⲛⲧⲁⲥϣⲱⲡⲉ . ⲉⲣⲉⲕⲩⲣⲓⲛⲟⲥ ⲟⲛϩⲏⲅⲉⲙⲱⲛ ⲉⲧⲥⲩⲣⲓⲁ .",
+      "english": "This was the first enrollment made when Quirinius was governor of Syria.",
+      "source": "42_Luke_2",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲡⲁⲓ ⲁϥⲧⲱⲟⲩⲛ ⲛϭⲓⲓⲟⲩⲇⲁⲥ ⲡⲅⲁⲗⲓⲗⲁⲓⲟⲥ ϩⲛⲛⲉϩⲟⲟⲩ ⲛⲧ**ⲁⲡⲟⲅⲣⲁⲫⲏ** ⲁⲩⲱ ⲁϥⲡⲉϣⲥ ⲟⲩⲗⲁⲟⲥ ⲉⲛⲁϣⲱϥ ϩⲓⲡⲁϩⲟⲩ ⲙⲙⲟϥ ⲛⲧⲟϥ ⲇⲉ ϩⲱⲱϥ ⲟⲛ ⲁⲩⲧⲁⲕⲟϥ ⲁⲩⲱ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲥⲱⲧⲙ ⲛⲥⲱϥ ⲁⲩϫⲱⲱⲣⲉ ⲉⲃⲟⲗ .",
+      "english": "After this man, Judas of Galilee rose up in the days of the enrollment, and drew away some people after him. He also perished, and all, as many as obeyed him, were scattered abroad.",
+      "source": "44_Acts of the Apostles_5",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲩⲓϯ",
+        1,
+        14.651
+      ],
+      [
+        "ⲑⲁⲓ",
+        1,
+        11.94
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        9.986
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲉϣⲥ",
+        1,
+        16.791
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        9.442
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        7.516
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        7.193
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲁⲡⲟⲅⲣⲁⲫⲏ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲅⲣⲁⲫⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲅⲣⲁⲫⲏ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲓϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲱⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲁⲡⲟⲅⲣⲁⲫⲏ",
+          "ⲁⲡⲟⲅⲣⲁⲫⲏ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲅⲣⲁⲫⲏ_0_node",
+          "ⲛ_1_post_ⲁⲡⲟⲅⲣⲁⲫⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲅⲣⲁⲫⲏ",
+          "ϩⲟⲩⲓϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲓϯ_2_post_ⲛ",
+          "ⲉⲧ_2_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ϣⲱⲡⲓ",
+          "ⲁ_2_post_ϣⲱⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8760,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2643",
+    "grl_lemma": "ἀπογραφή",
+    "grl_meaning": "register, list, taxation-register, deposition",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 194b; Preisigke 1:170"
+  }
+}

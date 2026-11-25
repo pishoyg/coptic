@@ -1,0 +1,130 @@
+{
+  "id": "C6461",
+  "forms": [
+    {
+      "id": "CF14950",
+      "orth": "ⲣⲉϥϩⲱⲃⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7169",
+      "bibliography": "CD 659b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲟⲏⲑⲟⲥ",
+        1,
+        14.373
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        11.927
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϩⲱⲃⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϩⲱⲃⲥ",
+          1
+        ],
+        [
+          "ⲣⲉϥϩⲱⲃⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϩⲱⲃⲥ",
+          "ⲟⲩ_1_pre_ⲣⲉϥϩⲱⲃⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϩⲱⲃⲥ",
+          "ⲣⲉϥϩⲱⲃⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6462",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6463",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6464",
+      "label": "ϩⲃⲥⲱ",
+      "pos": "N",
+      "gloss": "garment"
+    },
+    {
+      "target": "C6459",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "V",
+      "gloss": "cover, be covered"
+    },
+    {
+      "target": "C6460",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "covering, lid"
+    },
+    {
+      "target": "C12093",
+      "label": "ϭⲓϩⲃⲟⲥ",
+      "pos": "N",
+      "gloss": "clothing"
+    }
+  ]
+}

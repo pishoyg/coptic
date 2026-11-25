@@ -1,0 +1,179 @@
+{
+  "id": "C12031",
+  "forms": [
+    {
+      "id": "CF33037",
+      "orth": "ϣⲟⲗϩⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4467,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17031",
+      "bibliography": "CD 562b; KoptHWB 312"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓ ⲛϫⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁⲩⲉⲗ ϯ**ϣⲟⲗϩⲥ** ⲁⲩⲑⲟⲙⲥⲥ ⲟⲩⲟϩ ⲁⲩⲓ ⲁⲩⲧⲁⲙⲉ ⲓⲏⲥⲟⲩⲥ .",
+      "english": "His disciples came, and took the body, and buried it; and they went and told Jesus.",
+      "source": "01_Matthew_14",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲓⲙⲁ ⲉⲧⲉϯ**ϣⲟⲗϩⲥ** ⲙⲙⲟϥ ϣⲁⲩⲑⲱⲟⲩϯ ⲙⲙⲁⲩ ⲛϫⲉⲛⲓⲁϧⲱⲙ .",
+      "english": "For wherever the carcass is, there is where the vultures gather together.",
+      "source": "01_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲁⲣⲉϣⲁⲛ ⲡⲓⲑⲏⲣⲓⲟⲛ ⲟⲩⲟⲙϥ ⲉϥⲉⲉⲛϥ ⲉϧⲣⲏⲓ ⲉϫⲉⲛϯ**ϣⲟⲗϩⲥ** ⲟⲩⲟϩ ⲛⲛⲉϥϯ ⲛⲧⲉϥϣⲉⲃⲓⲱ",
+      "english": "And if it be seized of beasts, he shall bring him to witness the prey, and he shall not make compensation.",
+      "source": "02_Exodus_22",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲑⲟⲙⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ⲉⲗ",
+        1,
+        11.651
+      ],
+      [
+        "ϯ",
+        4,
+        10.705
+      ],
+      [
+        "ϥ",
+        5,
+        9.805
+      ],
+      [
+        "ⲩ",
+        3,
+        9.291
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        8.514
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        8.387
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        7.479
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.081
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        6.829
+      ],
+      [
+        "ⲁ",
+        2,
+        6.405
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.349
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.783
+      ],
+      [
+        "ⲥ",
+        1,
+        4.843
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        3.495
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ϣⲟⲗϩⲥ",
+          2
+        ],
+        [
+          "ϣⲟⲗϩⲥ_0_node",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϣⲟⲗϩⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ϣⲟⲗϩⲥ",
+          "ϣⲟⲗϩⲥ_0_node",
+          2
+        ],
+        [
+          "ϣⲟⲗϩⲥ_0_node",
+          "ⲙⲙⲟ_1_post_ϣⲟⲗϩⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϣⲟⲗϩⲥ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3997,
+      "count": 3
+    }
+  }
+}

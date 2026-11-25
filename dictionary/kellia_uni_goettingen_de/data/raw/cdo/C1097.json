@@ -1,0 +1,45 @@
+{
+  "id": "C1097",
+  "forms": [
+    {
+      "id": "CF3554",
+      "orth": "ⲕⲟⲟⲃⲉϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1280",
+      "bibliography": "CD 99a; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1096",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "fold, crease"
+    },
+    {
+      "target": "C1094",
+      "label": "ⲕⲱⲃ",
+      "pos": "V",
+      "gloss": "be doubled; make double; double back, fold, close"
+    },
+    {
+      "target": "C1095",
+      "label": "ⲕⲱⲃ",
+      "pos": "N",
+      "gloss": "double, return, repetition"
+    }
+  ]
+}

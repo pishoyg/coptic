@@ -1,0 +1,46 @@
+{
+  "id": "C11103",
+  "forms": [
+    {
+      "id": "CF30639",
+      "orth": "ϩⲉⲧⲁⲓⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30640",
+      "orth": "ϩⲉⲧⲁⲓⲣⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30641",
+      "orth": "ϩⲉⲧⲉⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6829,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15536",
+      "bibliography": "DDGLC",
+      "cu_ID": "398"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2496",
+    "grl_lemma": "ἑταίρα",
+    "grl_meaning": "female companion, courtesan",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 700a; Preisigke 1:604"
+  }
+}

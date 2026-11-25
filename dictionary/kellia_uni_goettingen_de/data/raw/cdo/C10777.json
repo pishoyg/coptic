@@ -1,0 +1,680 @@
+{
+  "id": "C10777",
+  "forms": [
+    {
+      "id": "CF29322",
+      "orth": "ⲧⲣⲓⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29325",
+      "orth": "ⲧⲣⲓⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2038,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF29323",
+      "orth": "ⲇⲣⲓⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29324",
+      "orth": "ⲧⲣⲉⲓⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29326",
+      "orth": "ⲧⲣⲓⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29327",
+      "orth": "ⲧⲣⲓⲁⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3079,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14837",
+      "bibliography": "DDGLC",
+      "cu_ID": "2206"
+    },
+    {
+      "id": "CS14838",
+      "bibliography": "DDGLC",
+      "cu_ID": "3258"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲧⲁⲝⲓⲥ ⲛϩⲟⲩⲓϯ ⲉⲧⲉⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲛⲉ ϣⲁⲩϭⲓⲥⲃⲱ ⲛⲱⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲥ ⲛϯ**ⲧⲣⲓⲁⲥ** ⲉⲑⲟⲩⲁⲃ ⲟⲩⲟϩ ⲛⲟⲙⲟⲟⲩⲥⲓⲁ",
+      "english": "The first order, that is, the angels, are taught by the holy and consubstantial Trinity;",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲱϩⲁⲛⲛⲏⲥ ⲛⲁϥ ϫⲉϯⲧⲁⲣⲕⲟ ⲙⲙⲟⲕ ⲡⲁⲉⲓⲱⲧ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲧⲉ**ⲧⲣⲓⲁⲥ** ⲉⲧⲟⲩⲁⲁⲃ ⲛϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ ⲙⲛⲛⲉϣⲗⲏⲗ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲕⲉϣⲃϫⲱⲓ ⲙⲡϩⲟⲟⲩ · ⲉⲡⲉⲓⲇⲏ ⲡⲛⲟⲩⲧⲉ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲡⲁϩⲏⲧ ⲙⲟⲕϩ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ ⲙⲛⲡⲉⲥⲭⲏⲙⲁ ⲛⲁⲅⲅⲉⲗⲓⲕⲟⲛ ·",
+      "english": "And John said unto him, 'I adjure thee, O my holy father, by the Holy and Consubstantial Trinity, and by the prayers of the monastery, that thou shave my head this day, and especially, as God knoweth, my heart burneth with desire for the life of the monk, and for the garb of the angels.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟⲕ ⲇⲉ ϯⲛⲟⲩ ⲉⲕⲕⲱϯ ϫⲉⲛⲧⲟⲩϯⲥⲃⲱ ⲛⲁⲕ ϧⲉⲛⲛⲓⲥⲁϫⲓ ⲉⲑⲟⲩⲁⲃ ⲛⲧⲉⲡⲉⲕⲓⲱⲧ ⲛⲧⲁⲫⲙⲏⲓ ϫⲉⲟⲩⲏⲓ ⲙⲙⲟⲛ ϩⲗⲓ ⲉϥⲟⲓ ⲛⲁⲧϭⲓⲥⲃⲱ ⲉⲃⲏⲗ ⲉⲡⲓⲟⲩⲁⲓ ⲙⲙⲁⲩⲁⲧϥ ⲫⲛⲟⲩϯ ⲛⲧⲉⲡⲓⲉⲡⲧⲏⲣϥ ⲉⲧⲉϯ**ⲧⲣⲓⲁⲥ** ⲉⲑⲟⲩⲁⲃ ⲛⲟⲙⲟⲟⲩⲥⲓⲟⲥ ⲧⲉ",
+      "english": "But you now desire to be taught the truly just words of your holy father. For no one is untaught, except for the one who is the God of all things, that is, the holy and consubstantial Trinity;",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲛⲡⲓⲥⲧⲉⲩⲉ ⲉⲩⲛⲟⲩⲧⲉ ⲛⲟⲩⲱⲧ ⲡⲉⲓⲱⲧ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ ⲙⲛⲡⲉϥⲙⲟⲛⲟⲅⲉⲛⲏⲥ ⲛϣⲏⲣⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲡⲉⲛϫⲟⲉⲓⲥ ⲡⲉⲛⲧⲁⲡⲧⲏⲣϥ ϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ · ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲉⲧⲉⲧⲁⲓ ⲧⲉ **ⲧⲣⲓⲁⲥ** ⲉⲧⲥⲙⲁⲙⲁⲁⲧ ·",
+      "english": "We believe in the One God, the Father the Almighty, and in His only-begotten Son, Jesus the Christ, our Lord, through Whom the Universe came into being, and in the Holy Spirit, that is to say, in the Blessed Trinity,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲥⲣⲱϣⲓ ⲙⲙⲟⲛ ⲟⲩⲛ ϯⲛⲟⲩ ⲛϫⲉⲟⲩⲗⲁⲟⲩⲓ ⲙⲙⲉⲧⲙⲉⲑⲣⲉ ⲛⲧⲉⲡⲁⲩⲗⲟⲥ ⲡⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲉϥⲑⲱⲟⲩϯ ⲉϧⲟⲩⲛ ⲛⲁⲛ ⲙⲡⲓⲛⲁϩϯ ⲉⲟⲩⲙⲟⲛⲁⲥ ⲛⲟⲩⲱⲧ ⲛⲉⲙⲟⲩⲙⲉⲑⲛⲟⲩϯ ⲛⲟⲩⲱⲧ ⲛⲉⲙⲟⲩⲙⲉⲧⲟⲩⲣⲟ ⲛⲟⲩⲱⲧ ϫⲉ**ϯⲣⲓⲁⲥ** ⲛⲟⲙⲟⲟⲩⲥⲓⲟⲥ ⲟⲩⲁⲧϣⲓⲃϯ ⲧⲉ ϥϫⲱ ⲅⲁⲣ ⲙⲙⲟⲥ ϫⲉⲟⲩⲁⲓ ⲡⲉ ⲫⲛⲟⲩϯ ⲟⲩⲁⲓ ⲡⲉ ⲡⲓⲙⲉⲥⲓⲧⲏⲥ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲉⲙⲛⲓⲣⲱⲙⲓ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲡⲓϣⲏⲣⲓ ⲙⲫⲛⲟⲩϯ ⲫⲓⲱⲧ ⲛⲉⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲛⲁⲅⲓⲟⲛ ⲛⲟⲩⲱⲧ ⲛⲧⲉⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ ϧⲉⲛⲡⲓⲥⲏⲟⲩ ⲛⲧⲉⲡ.... ⲟⲩⲁⲛⲁⲥⲧⲁⲥⲓⲥ ⲛⲟⲩⲱⲧ ⲛⲧⲉⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ ϧⲉⲛⲡⲓⲥⲏⲟⲩ ⲛⲧⲉⲡ.... ⲕⲁⲧⲁϯϧⲉ ⲉⲧⲁⲡⲁⲩⲗⲟⲥ ϫⲟⲥ . .... ⲧⲉⲛ ⲙⲛⲧ..... ⲧⲉⲧⲉⲛϫⲱⲗ ⲉⲃⲟⲗ ⲙⲡⲙⲏⲥⲧⲏⲣⲓⲟⲛ ⲧⲏⲣϥ ⲛⲧⲉϯⲧⲣⲓⲁⲥ ⲉⲑⲟⲩⲁⲃ ⲟⲩⲁⲓ ⲉⲃⲟⲗ ϧⲉⲛⲑⲏⲛⲟⲩ ⲁϥⲉⲣⲡⲗⲟⲅⲟⲥ ⲛⲥⲱⲛⲧ ⲕⲉⲟⲩⲁⲓ ⲁϥⲉⲣⲡⲓⲡⲛⲁ ⲛⲁⲅⲓⲟⲛ ⲛⲥⲱⲛⲧ ⲛⲉⲙⲡⲓⲥⲱⲙⲁ ⲛⲧⲉⲡⲭⲣⲓⲥⲧⲟⲥ ⲡⲕⲉⲟⲩⲁⲓ ⲁϥϧⲱⲧⲉⲃ ⲛϯⲯⲩⲭⲏ ⲛⲉⲙⲛⲓⲥⲱⲙⲁ ⲛⲧⲉⲡⲭⲣⲓⲥⲧⲟⲥ .....",
+      "english": "Let us now simply bring forward Paul’s testimony, which says: to unite us into one faith, one divinity, one kingdom, because the Trinity is immutable. For he said: ‘There is one God and one mediator between God and humanity, Jesus Christ, the Son of God the Father, one Holy Spirit, one Catholic Church, one resurrection of the dead in time.’ Thus, Paul said, ‘[…] you have fully grasped the mystery of the Holy Trinity.’ One among you said the Word is a creature; another said the Holy Spirit and the body of Christ are creatures; another, however, killed the soul and body of Christ […].",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲙⲛⲧⲁⲧϩⲟⲧϩⲧ ⲛⲥⲁⲧⲡⲓⲥⲧⲓⲥ · ⲧⲙⲛⲧⲁⲧⲥⲱⲛⲧ ⲛⲧⲉ**ⲧⲣⲓⲁⲥ** · ⲧⲙⲛⲧⲁⲧⲧⲁϩⲟⲥ ⲛⲧⲟⲓⲕⲟⲛⲟⲙⲓⲁ ⲛⲧⲥⲁⲣⲝ ·",
+      "english": "and the character of not seeking to pry into faith, (and into) the Uncreatedness of the Trinity, and into the incomprehensibility of the dispensation of the flesh.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲙⲟⲟⲩⲥⲓⲟⲥ",
+        2,
+        18.888
+      ],
+      [
+        "ⲉⲡⲧⲏⲣϥ",
+        2,
+        18.888
+      ],
+      [
+        "ⲁⲅⲓⲁ",
+        1,
+        15.888
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        5,
+        13.835
+      ],
+      [
+        "ⲉⲑ",
+        5,
+        12.748
+      ],
+      [
+        "ⲛ",
+        12,
+        12.538
+      ],
+      [
+        "ϩⲓⲧⲟⲧ",
+        2,
+        11.517
+      ],
+      [
+        "ϯ",
+        6,
+        11.238
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        8.127
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.028
+      ],
+      [
+        "ⲥ",
+        2,
+        6.62
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        6.264
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        5.963
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.164
+      ],
+      [
+        "ϥ",
+        2,
+        4.617
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        3.496
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        3.259
+      ],
+      [
+        ".",
+        1,
+        2.809
+      ],
+      [
+        "ⲁ",
+        1,
+        2.182
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲁⲁⲃ",
+        23,
+        18.306
+      ],
+      [
+        "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ",
+        4,
+        17.933
+      ],
+      [
+        "ⲧⲉ",
+        27,
+        17.21
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲧⲁϩⲟ",
+        1,
+        15.74
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲥⲱⲛⲧ",
+        1,
+        15.74
+      ],
+      [
+        "ⲉⲧ",
+        27,
+        15.645
+      ],
+      [
+        "ϩⲟⲩⲁⲁⲃ",
+        1,
+        14.74
+      ],
+      [
+        "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲥ",
+        1,
+        14.155
+      ],
+      [
+        "ⲧⲩⲡⲟⲥ",
+        3,
+        13.753
+      ],
+      [
+        "ⲛ",
+        26,
+        13.052
+      ],
+      [
+        "ⲥⲙⲁⲙⲁⲁⲧ",
+        2,
+        11.281
+      ],
+      [
+        "ⲣϩⲱⲧ",
+        1,
+        11.155
+      ],
+      [
+        "ⲣⲁⲛ",
+        4,
+        11.135
+      ],
+      [
+        "ⲡⲁⲛⲧⲱⲥ",
+        1,
+        10.653
+      ],
+      [
+        "ⲛⲉⲉϥ",
+        1,
+        10.611
+      ],
+      [
+        "ⲉⲣⲉ",
+        4,
+        10.244
+      ],
+      [
+        "ⲧ",
+        8,
+        10.213
+      ],
+      [
+        "ⲡ",
+        11,
+        10.017
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        3,
+        9.523
+      ],
+      [
+        "ϫⲓⲉⲟⲟⲩ",
+        1,
+        9.418
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          4
+        ],
+        [
+          "ⲉⲑ_1_post_ⲧⲣⲓⲁⲥ",
+          3
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲙⲟⲟⲩⲥⲓⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_5_post_ⲟⲙⲟⲟⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲃ",
+          1
+        ],
+        [
+          "ⲟⲙⲟⲟⲩⲥⲓⲁ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲧⲣⲓⲁⲥ",
+          "ⲧⲣⲓⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          "ⲉⲑ_1_post_ⲧⲣⲓⲁⲥ",
+          3
+        ],
+        [
+          "ⲉⲑ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          3
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲟⲙⲟⲟⲩⲥⲓⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          "ⲟⲩⲟϩ_5_post_ⲟⲙⲟⲟⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_5_post_ⲟⲙⲟⲟⲩⲥⲓⲁ",
+          "ⲛ_3_post_ⲟⲩⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲃ",
+          "ⲟⲙⲟⲟⲩⲥⲓⲁ_4_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          21
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          18
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          16
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          2
+        ],
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲧⲣⲓⲁⲥ",
+          6
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲅⲱⲛⲓⲍⲉ",
+          1
+        ],
+        [
+          "ϫⲏⲕ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲁⲁⲃ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲱⲥ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ_b",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲙⲁⲙⲁⲁⲧ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          11
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          9
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲧⲣⲓⲁⲥ",
+          "ⲧⲣⲓⲁⲥ_0_node",
+          6
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲛⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲁ_3_post_ⲁⲅⲱⲛⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          "ϫⲏⲕ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲏⲕ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ϫⲏⲕ",
+          "ⲉ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϫⲏⲕ",
+          "ⲥ_3_post_ϫⲏⲕ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲣⲓⲁⲥ",
+          "ⲧⲉ_1_pre_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲓⲁⲥ",
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲧⲣⲓⲁⲥ",
+          "ⲧⲉ_1_pre_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲣⲓⲁⲥ_0_node",
+          "ⲉ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ϩⲟⲩⲁⲁⲃ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲧⲁⲓ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲉⲧⲉ_2_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲧⲁⲓ",
+          "ⲡⲱⲥ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ_4_post_ⲛ",
+          "ⲙⲛ_2_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ_b",
+          "ⲛⲁ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲡ_2_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲡ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲓⲁⲥ",
+          "ⲥⲙⲁⲙⲁⲁⲧ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1800,
+      "count": 29
+    },
+    "B": {
+      "rate": 0.08,
+      "rank": 2516,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "2213",
+    "grl_lemma": "τρίας",
+    "grl_meaning": "the number three, triad, the Holy Trinity",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1816b; Preisigke 2:616"
+  }
+}

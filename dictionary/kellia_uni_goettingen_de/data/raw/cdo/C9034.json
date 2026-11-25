@@ -1,0 +1,425 @@
+{
+  "id": "C9034",
+  "forms": [
+    {
+      "id": "CF22307",
+      "orth": "ⲉⲣⲅⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22310",
+      "orth": "ⲉⲣⲅⲁⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3437,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF22309",
+      "orth": "ⲉⲣⲅⲁⲥⲓⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF22308",
+      "orth": "ⲁⲣⲕⲁⲥⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22311",
+      "orth": "ⲉⲣⲕⲁⲥⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11108",
+      "bibliography": "DDGLC",
+      "cu_ID": "3429"
+    },
+    {
+      "id": "CS11109",
+      "bibliography": "DDGLC",
+      "cu_ID": "7618"
+    },
+    {
+      "id": "CS11110",
+      "bibliography": "DDGLC",
+      "cu_ID": "7734"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲁⲧⲉⲓⲣⲟⲙⲡⲉ ⲛⲟⲩⲱⲧ ⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲧⲉⲓ**ⲉⲣⲅⲁⲥⲓⲁ** ⲛⲧⲉⲓϫⲟⲩⲱⲧⲉ ⲛⲣⲟⲙⲡⲉ ⲉⲧⲃⲉⲡⲛⲟⲃⲉ ·",
+      "english": "Therefore in this one year was scattered and wasted the labours of the preceding twenty years, and this because of Sin.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛⲥⲥⲣϥⲉ ⲙⲉⲛ ⲉⲧ**ⲉⲣⲅⲁⲥⲓⲁ** ⲙⲡⲛⲟⲩⲧⲉ · ϣⲁⲣⲉⲡϫⲁϫⲉ ⲙⲉⲛ ⲃⲱⲕ ⲛⲁϥ ⲛϩⲛⲥⲟⲡⲥ ⲥⲟⲡ · ⲁⲗⲗⲁ ⲙⲉϥϭⲛⲙⲁ ⲛⲟⲩⲱϩ ⲛϩⲏⲧϥ . ⲻ",
+      "english": "If, say, they apply themself to the labor of God, then the enemy will visit them from time to time but will not find a dwelling place within them.",
+      "source": "Apophthegmata Patrum Sahidic 067",
+      "urn": "urn:cts:copticLit:ap.67.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲣⲉϥⲣϩⲁⲧ ⲅⲁⲣ ϫⲉⲧⲩⲙⲏⲧⲣⲓⲟⲥ ⲉϥⲧⲁⲙⲓⲟ ⲛϩⲉⲛⲧⲟⲩⲱⲧ ⲛϩⲁⲧ ⲛⲧⲁⲣⲧⲉⲙⲓⲥ . ⲛⲉⲩϯ ⲛⲟⲩⲛⲟϭ ⲛ**ⲉⲣⲅⲁⲥⲓⲁ** ⲛⲛⲧⲉⲭⲛⲓⲧⲏⲥ .",
+      "english": "For a certain man named Demetrius, a silversmith, who made silver shrines of Artemis, brought no little business to the craftsmen,",
+      "source": "44_Acts of the Apostles_19",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲓⲥⲉⲩ",
+        1,
+        14.788
+      ],
+      [
+        "ⲑⲱⲛ",
+        1,
+        11.08
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        10.351
+      ],
+      [
+        "ⲛ",
+        4,
+        9.591
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        8.986
+      ],
+      [
+        "ⲙⲏϣ",
+        1,
+        8.755
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.934
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲧ",
+        1,
+        6.525
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲏⲣ",
+        1,
+        15.276
+      ],
+      [
+        "ⲧⲉⲭⲛⲓⲧⲏⲥ",
+        1,
+        13.369
+      ],
+      [
+        "ⲧⲉⲭⲛⲏ",
+        1,
+        12.632
+      ],
+      [
+        "ⲥⲉⲧⲡ",
+        1,
+        12.369
+      ],
+      [
+        "ϫⲟⲩⲱⲧⲉ",
+        1,
+        11.954
+      ],
+      [
+        "ⲛ",
+        13,
+        11.588
+      ],
+      [
+        "ⲧⲉⲓ",
+        3,
+        11.577
+      ],
+      [
+        "ϩⲓϩⲟⲩⲛ",
+        1,
+        11.147
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        1,
+        9.721
+      ],
+      [
+        "ⲥⲟⲡⲥ",
+        1,
+        9.381
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        8.976
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        8.607
+      ],
+      [
+        "ⲃⲱⲗ",
+        1,
+        8.545
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        8.495
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        8.434
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        8.126
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.898
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        7.898
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        7.68
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        7.521
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          "ⲟⲩ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          8
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲥⲉⲧⲡ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲉⲧⲡ",
+          1
+        ],
+        [
+          "ⲥⲉⲧⲡ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲭⲛⲏ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲧⲉϥ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          "ⲛⲧ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲁ_3_post_ⲥⲉⲧⲡ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲥⲉⲧⲡ",
+          "ⲩ_3_post_ⲥⲉⲧⲡ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲉⲧⲡ",
+          "ⲥⲉⲧⲡ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲓⲁ_0_node",
+          "ⲛ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲅⲁⲥⲓⲁ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲧⲉⲭⲛⲏ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3068,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "789",
+    "grl_lemma": "ἐργασία",
+    "grl_meaning": "work, business, workshop",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 682a; Preisigke 1:594"
+  }
+}

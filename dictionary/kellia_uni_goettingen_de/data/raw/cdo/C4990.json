@@ -1,0 +1,52 @@
+{
+  "id": "C4990",
+  "forms": [
+    {
+      "id": "CF11945",
+      "orth": "ⲥⲉⲕⲟⲩⲉⲗⲗⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5616",
+      "bibliography": "KoptHWb 270; ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4988",
+      "label": "ⲟⲩⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "melody, music"
+    },
+    {
+      "target": "C4989",
+      "label": "ⲣϥⲥⲉϩⲟⲩⲉⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "psalmist"
+    },
+    {
+      "target": "C4991",
+      "label": "ⲥⲓⲧⲉ ⲛⲉϥⲟⲩⲉⲗⲗⲉ",
+      "pos": "V",
+      "gloss": "recite one's poetry"
+    }
+  ]
+}

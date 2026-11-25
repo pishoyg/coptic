@@ -1,0 +1,105 @@
+{
+  "id": "C2352",
+  "forms": [
+    {
+      "id": "CF6446",
+      "orth": "ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 415.36,
+        "rank": 2,
+        "count": 35227
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ART",
+    "number": "pl.",
+    "tlapos": "bestimmter Artikel"
+  },
+  "senses": [
+    {
+      "id": "CS2717",
+      "bibliography": "CD 258b; CED 103; KoptHWb 115; DELC 133"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϯ **ⲛ**ⲟⲩⲣⲁⲛ ⲉⲥⲓⲙⲱⲛ ϫⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "Simon, to whom he gave the name Peter;",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲛⲉ **ⲛ**ⲃⲁⲃⲉⲣⲱⲙⲉ · ⲉⲓⲙⲏⲧⲓ ⲉⲛⲁⲓ ⲉⲧϩⲙϩⲙ ·",
+      "english": "Who are the braggarts but those who shout,",
+      "source": "Abraham Our Father YA 551-54",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:42-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲧⲱⲙⲓ ⲙⲙⲟϥ ⲉⲡϭⲟⲓⲥ ⲟⲩⲡⲛⲉⲩⲙⲁ **ⲛ**ⲟⲩⲱⲧ .",
+      "english": "But he who is joined to the Lord is one spirit.",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲧⲁⲗⲉ ⲉⲡϫⲟⲉⲓ ⲁⲩⲃⲱⲕ ⲙⲁⲩⲁⲁⲩ ⲉⲩⲙⲁ **ⲛ**ϫⲁⲓⲉ .",
+      "english": "They went away in the boat to a deserted place by themselves.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲧⲁⲓϧⲣⲉ **ⲛ**ⲟⲩⲱⲧ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ ⲁⲩⲟⲩⲟⲙⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "and all ate the same spiritual food;",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲛ**ⲧⲉⲩⲛⲟⲩ ⲁϥⲁⲛⲁⲅⲕⲁⲍⲉ ⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲉⲧⲁⲗⲉ ⲉⲡϫⲟⲉⲓ ⲁⲩⲱ ⲉⲣϣⲟⲣⲡ ⲉⲣⲟϥ ⲉⲡⲓⲕⲣⲟ ⲉⲃⲏⲑⲥⲁⲓⲇⲁ ϣⲁⲛⲧⲉϥⲕⲁⲡⲙⲏⲏϣⲉ ⲉⲃⲟⲗ .",
+      "english": "Immediately he made his disciples get into the boat, and to go ahead to the other side, to Bethsaida, while he himself sent the multitude away.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2783",
+      "type": "cf",
+      "label": "masc. sg. definite article"
+    },
+    {
+      "target": "C4003",
+      "type": "cf",
+      "label": "f. sg. definite article"
+    }
+  ],
+  "etym": {
+    "egy_num": "851623",
+    "egy_lemma": "nꜣ",
+    "demo_num": "d2952",
+    "demo_lemma": "nꜣ",
+    "english": "[Dem.Pron. pl.c.]",
+    "german": "[Dem.Pron. pl.c.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851623",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2952"
+  }
+}

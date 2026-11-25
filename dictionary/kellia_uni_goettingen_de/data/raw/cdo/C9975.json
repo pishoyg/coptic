@@ -1,0 +1,189 @@
+{
+  "id": "C9975",
+  "forms": [
+    {
+      "id": "CF26033",
+      "orth": "ⲟⲭⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26034",
+      "orth": "ⲟⲭⲗⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26035",
+      "orth": "ⲟⲭⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18041,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13039",
+      "bibliography": "DDGLC",
+      "cu_ID": "819"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ ϫⲉⲁⲛⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲛⲟⲩ**ⲟⲭⲗⲟⲥ** ⲁⲩⲱ ⲛⲕⲧⲁⲁⲩ ⲉⲩϣⲧⲟⲣⲧⲣ ⲙⲛⲟⲩⲧⲱⲣⲡ",
+      "english": "Thus saith the Lord God, Bring up a multitude upon them, and send trouble and plunder into the midst of them.",
+      "source": "Ezekiel 23",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲓⲉ",
+        5,
+        15.781
+      ],
+      [
+        "ⲇⲁⲙⲁⲥⲕⲟⲥ",
+        1,
+        14.303
+      ],
+      [
+        "ϧⲟⲙϧⲉⲙ",
+        1,
+        11.164
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        8.583
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        7.336
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ϯ",
+        1,
+        5.29
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        5.218
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲁⲁ",
+        1,
+        10.175
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲭⲗⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲟⲭⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲁⲙⲁⲥⲕⲟⲥ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲭⲗⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲟⲭⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲟⲭⲗⲟⲥ",
+          "ⲇⲁⲙⲁⲥⲕⲟⲥ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲭⲗⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17662,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2764",
+    "grl_lemma": "ὄχλος",
+    "grl_meaning": "crowd, throng",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1281b; Preisigke 2:216"
+  }
+}

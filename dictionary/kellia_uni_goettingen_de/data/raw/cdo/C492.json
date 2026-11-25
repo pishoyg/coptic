@@ -1,0 +1,216 @@
+{
+  "id": "C492",
+  "forms": [
+    {
+      "id": "CF1978",
+      "orth": "ⲃⲟⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6835,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲃⲁⲛⲧⲉ",
+      "dialect": "S",
+      "id": "582.1"
+    },
+    {
+      "orth": "ⲃⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3035,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲃⲟⲛϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11456,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϥⲉⲛⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 1970,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ⲃⲁⲛⲧⲉ",
+      "dialect": "A",
+      "id": "582.5"
+    },
+    {
+      "orth": "ϥⲛⲧ-",
+      "dialect": "A",
+      "id": "582.6"
+    },
+    {
+      "orth": "ⲃⲁⲛϯ",
+      "dialect": "F",
+      "id": "582.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS594",
+      "bibliography": "CD 41ab; CED 25; KoptHWb 25, 494; DELC 30; ChLCS 9a"
+    },
+    {
+      "id": "CS595",
+      "bibliography": "CD 41b; DELC 30; ChLCS 9a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲛⲟⲩⲛⲁϣⲡ ϩⲁⲗⲁⲧⲉ ⲉϥϩⲛⲟⲩⲙⲁ ⲛ**ⲃⲟⲛⲧⲉ** ⲉⲙⲉϥⲁⲣⲉϩ ⲉⲗⲁⲁⲩ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲛⲉⲩⲛⲟⲩⲧⲉ ϩⲉⲛϣⲉ ⲛⲉ ⲙⲛϩⲉⲛⲛⲟⲩⲃ ⲙⲛϩⲉⲛϩⲁⲧ",
+      "english": "For as a scarecrow in a garden of cucumbers keepeth nothing: so are their gods of wood, and laid over with silver and gold.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲉⲛⲁⲕⲁⲧϣⲉⲉⲣⲉ ⲛⲥⲓⲱⲛ ⲉⲃⲟⲗ ⲛⲧϩⲉ ⲛⲟⲩϩⲃⲱ ϩⲛⲟⲩⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲙⲁ ⲛϩⲁⲣⲉϩ ⲛ**ⲃⲟⲛⲧⲉ** ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲡⲟⲗⲓⲥ ⲉⲥϣⲏϥ",
+      "english": "The daughter of Sion shall be deserted as a tent in a vineyard, and as a storehouse of fruits in a garden of cucumbers, as a besieged city.",
+      "source": "Isaiah 1",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲥⲉⲛⲁⲥⲕⲁⲓ ⲛⲥⲓⲱⲛ ⲛⲧϩⲉ ⲛⲟⲩⲥⲱϣⲉ ⲉⲧⲃⲉⲧⲏⲩⲧⲛ ⲁⲩⲱ ⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲥⲛⲁⲣⲧϩⲉ ⲛⲟⲩⲙⲁ ⲛϩⲁⲣⲉϩ ⲛ**ⲃⲟⲛⲧⲉ** ⲁⲩⲱ ⲡⲧⲟⲟⲩ ⲙⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ϥⲛⲁⲣⲧϩⲉ ⲛⲟⲩⲁⲗⲥⲟⲥ ⲙⲙⲁ ⲛϣⲏⲛ",
+      "english": "Therefore on your account Sion shall be ploughed as a field, and Jerusalem shall be as a storehouse of fruits, and the mountain of the house as a grove of the forest.",
+      "source": "Micah 3",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥⲁⲣⲉϩ",
+        1,
+        17.428
+      ],
+      [
+        "ϩⲁⲣⲉϩ",
+        2,
+        12.525
+      ],
+      [
+        "ⲙⲁ",
+        3,
+        11.757
+      ],
+      [
+        "ⲛ",
+        6,
+        9.979
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        9.537
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.356
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲟⲛⲧⲉ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6404,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C493",
+      "label": "ⲃⲛⲧⲛⲉϭⲗⲟϭ",
+      "pos": "N",
+      "gloss": "(round) gourd"
+    },
+    {
+      "target": "C494",
+      "label": "ⲥⲁⲣⲃⲟⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "gourd-seller"
+    }
+  ],
+  "etym": {
+    "egy_num": "850454",
+    "egy_lemma": "bnd.t",
+    "demo_num": "dm805",
+    "demo_lemma": "bnṱj",
+    "english": "cucumber garden; cucumber",
+    "german": "Gurkenbeet; Gurke",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850454",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm805"
+  }
+}

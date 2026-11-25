@@ -1,0 +1,315 @@
+{
+  "id": "C8250",
+  "forms": [
+    {
+      "id": "CF19026",
+      "orth": "ⲁⲛⲁⲡⲁⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19027",
+      "orth": "ⲁⲛⲁⲡⲁⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6211,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF19028",
+      "orth": "ⲁⲛⲁⲡⲉⲩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9369",
+      "bibliography": "DDGLC",
+      "cu_ID": "3629"
+    },
+    {
+      "id": "CS9370",
+      "bibliography": "DDGLC",
+      "cu_ID": "7875"
+    },
+    {
+      "id": "CS9371",
+      "bibliography": "DDGLC",
+      "cu_ID": "3130"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲁⲡⲛⲟⲩⲧⲉ ⲭⲁⲣⲓⲍⲉ ⲛⲁⲕ ⲛⲧⲉⲓⲛⲟϭ ⲙⲙⲛⲧⲣⲙⲙⲁⲟ · ϫⲉⲕⲁⲥ ⲉⲕⲛⲁ**ⲁⲛⲁⲡⲁⲩⲉ** ⲙⲙⲟⲕ ⲙⲡⲉⲓⲙⲁ ⲙⲛⲡⲕⲉⲙⲁ · ⲁⲩⲱ ⲁⲡⲥⲁⲧⲁⲛⲁⲥ ⲧⲱⲙ ⲙⲡⲉⲕϩⲏⲧ ·",
+      "english": "Now, therefore, hath God graciously given unto thee the large amount of wealth which thou hast in order that thou mayest rest and enjoy thyself in this world and in the next. But Satan hath shut thy heart,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲧⲟⲛ ϭⲉ ⲙⲙⲱⲧⲛ ϩⲁϩⲧⲏⲓ ϫⲉⲁⲡⲛⲁⲩ ⲡⲣⲟⲕⲟⲡⲧⲉⲓ · ⲛⲧⲉⲧⲛ**ⲁⲛⲁⲡⲁⲩⲉ** ⲙⲙⲱⲧⲛ ϩⲁϩⲧⲏⲓ ϩⲙⲡⲉⲓⲙⲁ ⲉϯϭⲁⲗⲱⲟⲩ ⲉⲣⲟϥ ·",
+      "english": "Rest ye, however, with me, for the day is far spent ; rest ye yourselves with me in this Replace which I inhabit.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣϥϫⲓⲟⲩⲛ ⲛⲧⲕⲱⲙⲏ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓⲡⲉⲥⲧⲣⲁϯⲗⲁⲧⲏⲥ · ⲁⲩⲱ ⲛϥϣⲟⲗⲥ ⲁϥⲡⲏⲥⲥⲉ ⲙⲡⲉϥⲫⲱⲥⲁⲧⲟⲛ ⲛϩⲏⲧⲥ · ⲛϣⲟⲙⲛⲧ ⲛϩⲟⲟⲩ ⲉϥ**ⲁⲛⲁⲡⲁⲩⲉ** ⲙⲙⲟϥ ⲙⲛⲡⲉϥⲥⲧⲣⲁⲧⲉⲩⲙⲁ ϩⲱⲥ ⲉⲣⲉⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲣϣⲁⲩ ⲉⲩⲁⲛⲁⲡⲁⲩⲥⲓⲥ ·",
+      "english": "And when the general had taken that town, and had spoiled it, he pitched his camp there for a period of three days, and rested there with his army, because that place was very suitable for encamping in.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲟⲕⲟⲡⲧⲉⲓ",
+        1,
+        15.843
+      ],
+      [
+        "ϩⲁϩⲧⲏ",
+        1,
+        11.587
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        9.966
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        9.541
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ⲕ",
+        2,
+        8.268
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        7.742
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.931
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.579
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          3
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ϩⲁϩⲧⲏ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          "ⲙⲙⲱ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲧⲛ_2_post_ⲙⲙⲱ",
+          "ϩⲁϩⲧⲏ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲙⲛ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲡⲉϥ_3_post_ⲥⲧⲣⲁⲧⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲛⲁ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲁⲛⲁⲡⲁⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲙ_1_post_ⲁⲛⲁⲡⲁⲩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5771,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "142",
+    "grl_lemma": "ἀναπαύω",
+    "grl_meaning": "to make to cease, stop, hinder, rest",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 115a; Preisigke 1:102"
+  }
+}

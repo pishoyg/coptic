@@ -1,0 +1,311 @@
+{
+  "id": "C8696",
+  "forms": [
+    {
+      "id": "CF20653",
+      "orth": "ⲅⲩⲙⲛⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF20654",
+      "orth": "ⲅⲩⲙⲛⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4521,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10327",
+      "bibliography": "DDGLC",
+      "cu_ID": "15267"
+    },
+    {
+      "id": "CS10328",
+      "bibliography": "DDGLC",
+      "cu_ID": "1328"
+    },
+    {
+      "id": "CS10329",
+      "bibliography": "DDGLC",
+      "cu_ID": "6946"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲛⲉⲥⲛⲏⲩ ⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲣⲡⲉϩⲟⲟⲩ ⲧⲏⲣϥ ⲉⲛ**ⲅⲩⲙⲛⲁⲍⲉ** ϩⲙⲡϣⲁϫⲉ · ϣⲁⲛⲧⲛⲧⲁϩⲉⲡϩⲱⲃ ⲉⲣⲁⲧϥ ⲉⲛⲧⲁⲛϩⲓⲧⲟⲟⲧⲛ ⲉⲣⲟϥ ·",
+      "english": "And now behold, O my brethren, we have passed the whole day in exercising ourselves in the word, so that we might at length set the matter, whereto we put our hands, upon its feet.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲕ**ⲅⲩⲙⲛⲁⲍⲉ** ⲛⲛⲉⲓϩⲏⲛ ⲉⲣⲟⲕ ϩⲛⲧⲉⲥⲃⲱ ⲉⲧⲟⲩⲟϫ ·",
+      "english": "And thou didst exercise (or, train) those who drew nigh unto thee in the doctrine which was sound.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲃⲱ ⲇⲉ ⲛⲓⲙ ⲡⲣⲟⲥⲧⲉⲩⲛⲟⲩ ⲙⲉⲛ ⲉϣϫⲉ ⲛⲟⲩⲣⲁϣⲉ ⲁⲛ ⲧⲉ ⲁⲗⲗⲁ ⲟⲩⲗⲩⲡⲏ ⲙⲛⲛⲥⲱⲥ ⲇⲉ ϣⲁⲥϯ ⲛⲟⲩⲕⲁⲣⲡⲟⲥ ⲛⲉⲓⲣⲏⲛⲓⲕⲟⲛ ⲛⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲛⲛⲉⲛⲧⲁⲩ**ⲅⲩⲙⲛⲁⲍⲉ** ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲥ .",
+      "english": "All chastening seems for the present to be not joyous but grievous; yet afterward it yields the peaceful fruit of righteousness to those who have been exercised thereby.",
+      "source": "58_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲡⲁⲣⲁⲓⲧⲉⲓ",
+        1,
+        13.765
+      ],
+      [
+        "ⲇⲓⲁⲕⲣⲓⲛⲉ",
+        1,
+        13.313
+      ],
+      [
+        "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ",
+        1,
+        11.884
+      ],
+      [
+        "ϩⲏⲛ",
+        1,
+        10.482
+      ],
+      [
+        "ⲙⲙⲟ",
+        4,
+        10.396
+      ],
+      [
+        "ⲉ",
+        5,
+        9.198
+      ],
+      [
+        "ⲛ",
+        6,
+        8.979
+      ],
+      [
+        "ϩⲓⲧⲟⲟⲧ",
+        1,
+        8.831
+      ],
+      [
+        "ⲩ",
+        3,
+        7.98
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.882
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲕ",
+        2,
+        7.268
+      ],
+      [
+        "ⲏ",
+        1,
+        6.894
+      ],
+      [
+        "ⲧ",
+        2,
+        6.486
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.231
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        5.886
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ],
+      [
+        "ⲁ",
+        2,
+        5.459
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.279
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_2_post_ⲧⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲏ_6_post_ϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲛⲉ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲕ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          "ϩⲙ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲡ",
+          "ϣⲁⲛⲧ_2_post_ⲧⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲩ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲅⲩⲙⲛⲁⲍⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲅⲩⲙⲛⲁⲍⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲏ_6_post_ϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4120,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "5600",
+    "grl_lemma": "γυμνάζω",
+    "grl_meaning": "to train, fight",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 362a; Preisigke 1:313"
+  }
+}

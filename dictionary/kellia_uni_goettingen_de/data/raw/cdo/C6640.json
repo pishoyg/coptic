@@ -1,0 +1,52 @@
+{
+  "id": "C6640",
+  "forms": [
+    {
+      "id": "CF15324",
+      "orth": "ϫⲓϩⲟⲙⲛⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7353",
+      "bibliography": "CD 678b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6639",
+      "label": "ϩⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "copper, bronze; money"
+    },
+    {
+      "target": "C6641",
+      "label": "ⲙⲁⲓϩⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "money-loving, greedy, stingy"
+    },
+    {
+      "target": "C6642",
+      "label": "ⲥⲁ ⲛϩⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "coppersmith, copper seller"
+    }
+  ]
+}

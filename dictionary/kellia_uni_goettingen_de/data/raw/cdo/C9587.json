@@ -1,0 +1,252 @@
+{
+  "id": "C9587",
+  "forms": [
+    {
+      "id": "CF24465",
+      "orth": "ⲗⲁⲕⲁⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24467",
+      "orth": "ⲗⲁⲕⲁⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8522,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF24466",
+      "orth": "ⲗⲁⲕⲁⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24468",
+      "orth": "ⲗⲁⲕⲁⲛⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24469",
+      "orth": "ⲗⲗⲕⲁⲛⲏ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12256",
+      "bibliography": "DDGLC",
+      "cu_ID": "9719"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁϥⲁⲓⲧⲉⲓ ⲛⲟⲩⲙⲟⲟⲩ ⲁⲥϯⲉⲣⲱⲧⲉ ⲛⲁϥ ϩⲛⲟⲩ**ⲗⲁⲕⲁⲛⲏ** ⲛⲛⲇⲩⲛⲁⲧⲟⲥ ⲉⲁⲥⲡⲣⲟⲥⲉⲅⲉⲅⲉ ⲛⲁϥ ⲛⲟⲩⲥⲁⲓⲣⲉ",
+      "english": "He asked for water, she gave him milk in a dish; she brought butter of princes.",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϣⲱⲡⲉ ϩⲓⲛⲁⲓ ⲁϥϣⲟⲣⲡϥ ⲛϭⲓⲅⲉⲇⲉⲱⲛ ⲙⲡⲉϥⲣⲁⲥⲧⲉ ⲁϥⲱϥⲉ ⲛⲧⲥⲟⲣⲧ ⲁⲙⲙⲟⲩ ⲛⲉⲓⲱⲧⲉ ϣⲟⲩⲟ ⲉⲃⲟⲗ ϩⲙⲡⲡⲟⲕϥ ⲛⲥⲟⲣⲧ ⲁϥⲙⲉϩⲟⲩ**ⲗⲁⲕⲁⲛⲏ** ⲙⲙⲟⲟⲩ",
+      "english": "And it was so: and he rose up early in the morning, and wrung the fleece, and dew dropped from the fleece, a bowl full of water.",
+      "source": "Judges 6",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲱⲟⲩ",
+        1,
+        10.54
+      ],
+      [
+        "ⲉⲣ",
+        1,
+        9.658
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲅⲉⲇⲉⲱⲛ",
+        1,
+        14.276
+      ],
+      [
+        "ⲇⲩⲛⲁⲧⲟⲥ",
+        1,
+        13.428
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        11.102
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        9.014
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲁⲕⲁⲛⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲕⲁⲛⲏ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲩⲛⲁⲧⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲁⲕⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲁⲕⲁⲛⲏ_0_node",
+          "ⲛ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲇⲩⲛⲁⲧⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲁⲕⲁⲛⲏ",
+          "ⲗⲁⲕⲁⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲕⲁⲛⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲁⲕⲁⲛⲏ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8080,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "6266",
+    "grl_lemma": "λάγηνα",
+    "grl_meaning": "flask, flagon",
+    "grl_pos": "noun",
+    "grl_ref": "LBG 908a"
+  }
+}

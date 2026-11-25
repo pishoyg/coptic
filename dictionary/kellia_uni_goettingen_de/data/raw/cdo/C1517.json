@@ -1,0 +1,70 @@
+{
+  "id": "C1517",
+  "forms": [
+    {
+      "id": "CF4467",
+      "orth": "ⲉⲣⲕⲁϩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1773",
+      "bibliography": "CD 133a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1520",
+      "label": "ⲕⲁϩⲕ",
+      "pos": "V",
+      "gloss": "hew out, smooth, cause to heal up; be healed"
+    },
+    {
+      "target": "C1518",
+      "label": "ⲕⲁϩⲕϩ",
+      "pos": "V",
+      "gloss": "hew out, smooth; make smooth, cause to heal up"
+    },
+    {
+      "target": "C1516",
+      "label": "ⲕⲁϩⲥ",
+      "pos": "N",
+      "gloss": "custom"
+    },
+    {
+      "target": "C1514",
+      "label": "ⲕⲱϩ",
+      "pos": "V",
+      "gloss": "make level, smooth, tame"
+    },
+    {
+      "target": "C1515",
+      "label": "ⲕⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be familiar, accustomed"
+    },
+    {
+      "target": "C1519",
+      "label": "ⲣⲉϥⲕϩⲕϩ-",
+      "pos": "N",
+      "gloss": "hewer of stone"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C206",
+  "forms": [
+    {
+      "id": "CF818",
+      "orth": "ⲙⲛⲧⲁⲧⲁⲣⲏϫⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF819",
+      "orth": "ⲙⲛⲧⲁⲧⲁⲣⲏϫⲥ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS231",
+      "bibliography": "KoptHWb 12"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C204",
+      "label": "ⲁⲣⲏϫ⸗",
+      "pos": "N",
+      "gloss": "end, limit"
+    },
+    {
+      "target": "C205",
+      "label": "ⲁⲧⲁⲣⲏϫ⸗",
+      "pos": "N",
+      "gloss": "limitless, boundless"
+    }
+  ]
+}

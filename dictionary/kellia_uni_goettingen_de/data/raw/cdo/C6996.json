@@ -1,0 +1,240 @@
+{
+  "id": "C6996",
+  "forms": [
+    {
+      "id": "CF16047",
+      "orth": "ϩⲟⲟⲩⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4771,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲟⲩⲧⲉⲛ",
+      "dialect": "F",
+      "id": "2326.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7717",
+      "bibliography": "CD 739b; CED 305; KoptHWb 405; DELC 319a; ChLCS 98b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϭⲓⲛⲉ ⲛⲟⲩⲥⲱⲙⲁ ⲉϥⲛⲏϫ ⲉⲃⲟⲗ ϩⲙⲡ**ϩⲟⲟⲩⲧⲛ** .",
+      "english": "they found a body lying in the road.",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲧⲟⲩⲁⲁⲃ ϫⲉⲉⲕϣⲁⲛⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕϯⲙⲉ ⲕⲛⲁⲁⲡⲁⲛⲧⲁ ⲉⲩⲥϩⲓⲙⲉ · ϩⲙⲡϣⲟⲣⲡ ⲛ**ϩⲟⲟⲩⲧⲛ** ⲙⲡⲉⲕϯⲙⲉ ·",
+      "english": "And the holy prophet answered and said, 'When thou goest to enter into thy village thou shalt meet a certain woman in the first street of thy village",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲩⲕⲟⲧⲟⲩ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲉⲃⲟⲗ ϩⲙⲡⲧⲟⲟⲩ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲧⲟⲟⲩ ⲛⲛϫⲟⲉⲓⲧ . ⲉϥⲟⲩⲏⲩ ⲉⲃⲟⲗ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲟⲩϩⲓⲏ ⲛⲥⲁϣϥ ⲛ**ϩⲟⲟⲩⲧⲛ** .",
+      "english": "Then they returned to Jerusalem from the mountain called Olivet, which is near Jerusalem, a Sabbath day's journey away.",
+      "source": "44_Acts of the Apostles_1",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲕⲉⲩⲟⲥ",
+        2,
+        15.604
+      ],
+      [
+        "ⲁⲣⲓ",
+        2,
+        12.936
+      ],
+      [
+        "ϯⲙⲉ",
+        1,
+        12.232
+      ],
+      [
+        "ⲛⲏϫ",
+        1,
+        11.548
+      ],
+      [
+        "ⲡⲉⲕ",
+        3,
+        11.301
+      ],
+      [
+        "ⲥⲁϣϥ",
+        1,
+        9.936
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        8.661
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.513
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        8.162
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        8.12
+      ],
+      [
+        "ϩⲙ",
+        2,
+        8.091
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        7.692
+      ],
+      [
+        "ⲕ",
+        2,
+        7.531
+      ],
+      [
+        ".",
+        2,
+        7.235
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.916
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.425
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ϥ",
+        2,
+        5.2
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲟⲩⲧⲛ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϯⲙⲉ",
+          1
+        ],
+        [
+          "ϯⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲟⲩⲧⲛ_0_node",
+          "ⲙ_1_post_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲟⲩⲧⲛ",
+          "ⲡⲉⲕ_3_post_ϯⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϯⲙⲉ",
+          "ϯⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϩⲟⲟⲩⲧⲛ",
+          "ⲛⲁ_1_pre_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲟⲟⲩⲧⲛ",
+          "ϩⲟⲟⲩⲧⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧⲛ_0_node",
+          "ⲉⲣⲟ_1_post_ϩⲟⲟⲩⲧⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲟⲟⲩⲧⲛ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4359,
+      "count": 5
+    }
+  }
+}

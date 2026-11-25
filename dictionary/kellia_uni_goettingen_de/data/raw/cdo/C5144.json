@@ -1,0 +1,142 @@
+{
+  "id": "C5144",
+  "forms": [
+    {
+      "id": "CF12252",
+      "orth": "ⲟⲩⲱⲣϩ-",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲣϩ-",
+      "dialect": "S",
+      "id": "1738.1"
+    },
+    {
+      "orth": "ⲟⲩⲉⲣϩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11246,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲣⲉϩ-",
+      "dialect": "S",
+      "id": "1738.3"
+    },
+    {
+      "orth": "ⲟⲩⲟⲣ-",
+      "dialect": "S",
+      "id": "1738.4"
+    },
+    {
+      "orth": "ⲟⲩⲁⲣ-",
+      "dialect": "S",
+      "id": "1738.5"
+    },
+    {
+      "orth": "ⲟⲩⲱⲣ-",
+      "dialect": "S",
+      "id": "1738.6"
+    },
+    {
+      "orth": "ⲟⲩⲟⲣϩ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11337,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲣ⸗",
+      "dialect": "S",
+      "id": "1738.8"
+    },
+    {
+      "orth": "ⲟⲩⲁⲣϩ⸗",
+      "dialect": "S",
+      "id": "1738.9"
+    },
+    {
+      "orth": "ⲟⲩⲁⲣ⸗",
+      "dialect": "S",
+      "id": "1738.10"
+    },
+    {
+      "orth": "ⲟⲩⲟⲣϩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11337,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲣϩ†",
+      "dialect": "S",
+      "id": "1738.12"
+    },
+    {
+      "orth": "ⲟⲩⲱⲣϩ",
+      "dialect": "L",
+      "id": "1738.13"
+    },
+    {
+      "orth": "ⲟⲩⲱⲣ⸗",
+      "dialect": "L",
+      "id": "1738.14"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5776",
+      "bibliography": "CD 491b; CDC 76b; KoptHWb 276; ChLCS 68b"
+    },
+    {
+      "id": "CS5777",
+      "bibliography": "CD 491b; CED 216; KoptHWb 276; DELC 237b; ChLCS 68b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5147",
+      "label": "ⲁⲧⲟⲩⲱⲣϩ",
+      "pos": "N",
+      "gloss": "unallowed, unremitted(?)"
+    },
+    {
+      "target": "C5148",
+      "label": "ⲟⲩⲣⲉϩ",
+      "pos": "N",
+      "gloss": "free space"
+    },
+    {
+      "target": "C5146",
+      "label": "ⲟⲩⲱⲣϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "allow in, admit"
+    },
+    {
+      "target": "C5145",
+      "label": "ⲟⲩⲱⲣϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "set free, dismiss"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1434",
+    "demo_lemma": "wrḥ",
+    "english": "[to set free]",
+    "german": "freilassen, loslassen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1434"
+  }
+}

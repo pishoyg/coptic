@@ -1,0 +1,57 @@
+{
+  "id": "C5340",
+  "forms": [
+    {
+      "id": "CF31913",
+      "orth": "ⲟⲩϩⲟⲗⲙⲟⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31912",
+      "orth": "ⲟⲩϩⲟⲗ ⲙⲙⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5993",
+      "bibliography": "CD 510b; KoptHWb 286; DELC 242b; ChLCS 71a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2165",
+      "type": "cf",
+      "label": "water"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5341",
+      "label": "ⲗⲁⲥ ⲛⲟⲩϩⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "cynoglossum (plant)"
+    },
+    {
+      "target": "C5338",
+      "label": "ⲟⲩϩⲟⲣ",
+      "pos": "N",
+      "gloss": "(male) dog"
+    },
+    {
+      "target": "C5339",
+      "label": "ⲟⲩϩⲟⲣⲉ",
+      "pos": "N",
+      "gloss": "(female) dog"
+    }
+  ]
+}

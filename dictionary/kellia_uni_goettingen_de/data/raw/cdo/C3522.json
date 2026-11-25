@@ -1,0 +1,158 @@
+{
+  "id": "C3522",
+  "forms": [
+    {
+      "id": "CF8947",
+      "orth": "ϯⲥⲙⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4008",
+      "bibliography": "CD 336a; ChLCS 47b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲓⲛⲓ",
+        1,
+        11.414
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲧⲉ_1_pre_ϯⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϯⲥⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲥⲙⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲧⲉ_1_pre_ϯⲥⲙⲟⲩ",
+          "ϥ_1_pre_ϯⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲥⲙⲟⲩ",
+          "ϯⲥⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϯⲥⲙⲟⲩ_0_node",
+          "ⲛⲁ_1_post_ϯⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲥⲙⲟⲩ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ⲙ_1_post_ϯⲥⲙⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3524",
+      "label": "ϫⲓⲛⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "act of blessing"
+    },
+    {
+      "target": "C3523",
+      "label": "ϫⲓⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "take blessing, sacrament, salute (a superior)"
+    },
+    {
+      "target": "C3521",
+      "label": "ⲁⲧⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "without blessing"
+    },
+    {
+      "target": "C3519",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "bless, praise, thank"
+    },
+    {
+      "target": "C3520",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "blessing, praise; gift, benevolence, alms; abundance, treasure"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "C12244",
+  "forms": [
+    {
+      "id": "CF33261",
+      "orth": "ϣϫⲥⲟϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9306,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17248",
+      "bibliography": "CD 388a; KoptHWB 215"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏⲟⲩϣⲗⲟϥ ⲏⲟⲩ**ϣϫⲥⲟϭ** ⲏⲟⲩⲗⲗⲏⲃ ⲛⲁⲓ ⲉⲧⲉⲙⲉϣϣⲉ ⲁⲗⲗⲁ ⲟⲩϣⲡϩⲙⲟⲧ ⲛⲧⲟϥ .",
+      "english": "nor filthiness, nor foolish talking, nor jesting, which are not appropriate; but rather giving of thanks.",
+      "source": "49_Ephesians_5",
+      "urn": "urn:cts:copticLit:nt.eph.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲣⲱ ⲁⲛⲟⲛ ⲧⲏⲣⲛ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉⲧⲙⲧⲣⲉⲩϩⲉ ⲉⲗⲁⲁⲩ ⲛϣⲗⲟϥ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲛ**ϣϫⲥⲟϭ** · ⲏ ⲗⲗⲏⲃ · ⲛⲁⲓ ⲉⲧⲉⲛⲉϣϣⲉ ·",
+      "english": "…",
+      "source": "Acephelous 22 YB 307-20",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:801-825",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲗⲏⲃ",
+        2,
+        21.598
+      ],
+      [
+        "ϣⲗⲟϥ",
+        1,
+        14.791
+      ],
+      [
+        "ⲏ",
+        3,
+        13.234
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        9.022
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        7.84
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣϫⲥⲟϭ_0_node",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲗⲗⲏⲃ",
+          1
+        ],
+        [
+          "ⲗⲗⲏⲃ_1_post_ϣϫⲥⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ϣϫⲥⲟϭ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_4_post_ϣϣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣϫⲥⲟϭ_0_node",
+          "ⲏ_2_post_ⲗⲗⲏⲃ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲗⲗⲏⲃ",
+          "ⲗⲗⲏⲃ_1_post_ϣϫⲥⲟϭ",
+          1
+        ],
+        [
+          "ⲗⲗⲏⲃ_1_post_ϣϫⲥⲟϭ",
+          "ⲛⲁⲓ_1_post_ϣϫⲥⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ϣϫⲥⲟϭ",
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          "ⲛⲉ_4_post_ϣϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8875,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12245",
+      "label": "ⲙⲛⲧⲥⲟϭ",
+      "pos": "N",
+      "gloss": "folly"
+    },
+    {
+      "target": "C12246",
+      "label": "ⲣⲥⲟϭ",
+      "pos": "V",
+      "gloss": "be foolish"
+    },
+    {
+      "target": "C12025",
+      "label": "ⲥⲟϭ",
+      "pos": "N",
+      "gloss": "fool"
+    },
+    {
+      "target": "C12243",
+      "label": "ⲥⲟϭ",
+      "pos": "N",
+      "gloss": "foolish"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "C3869",
+  "forms": [
+    {
+      "id": "CF9668",
+      "orth": "*ⲥⲟⲩⲟⲗⲟⲩⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31725",
+      "orth": "ⲥⲟⲩⲉⲗⲟⲩⲱⲗ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6017,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF31726",
+      "orth": "ⲥⲟⲩⲗⲟⲩⲱⲗ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7161,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Status pronominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4388",
+      "bibliography": "CD 369ab; KoptHWb 203; DELC 200; ChLCS 52a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲧⲉⲯⲩⲭⲏ ⲛⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ · ⲉⲁⲩ**ⲥⲟⲩⲉⲗⲟⲩⲱⲗ**ⲥ ϩⲛϩⲉⲛⲙⲁⲡⲡⲁ ⲛϣⲛⲥ ·",
+      "english": "and he saw the soul of Apa Victor, which Ausouel carried (to heaven) in a napkin made of byssus,",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

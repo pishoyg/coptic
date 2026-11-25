@@ -1,0 +1,243 @@
+{
+  "id": "C1295",
+  "forms": [
+    {
+      "id": "CF3996",
+      "orth": "ⲕⲣⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5527,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1500",
+      "bibliography": "CD 115a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲙⲡⲟⲩϫⲟⲟⲥ ⲛⲁⲕ ⲛϭⲓⲛⲁⲡⲏⲓ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲉⲧϯϭⲱⲛⲧ ϫⲉⲉ**ⲕⲣⲟⲩ** ⲛⲧⲟⲕ ϩⲓⲛⲁⲓ",
+      "english": "Son of man, have not the house of Israel, the provoking house, said to thee, What doest thou?",
+      "source": "Ezekiel 12",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲛⲁⲩ ⲇⲉ ⲉⲣⲟϥ ⲁⲩⲣϣⲡⲏⲣⲉ . ⲡⲉϫⲉⲧⲉϥⲙⲁⲁⲩ ⲛⲁϥ ϫⲉⲡⲁϣⲏⲣⲉ ⲛⲧⲁ**ⲕⲣⲟⲩ** ⲛⲁⲛ ϩⲓⲛⲁⲓ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ⲙⲛⲡⲉⲕⲉⲓⲱⲧ ⲉⲛⲙⲟⲕϩ ⲛϩⲏⲧ ⲉⲛϣⲓⲛⲉ ⲛⲥⲱⲕ .",
+      "english": "When they saw him, they were astonished, and his mother said to him, 'Son, why have you treated us this way? Behold, your father and I were anxiously looking for you.'",
+      "source": "42_Luke_2",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲓ ⲁϥϩⲙⲟⲟⲥ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁϥϭⲱ ϩⲙⲡⲉⲥⲡⲏⲗⲁⲓⲟⲛ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁϥⲡⲱϩ ϣⲁϩⲏⲗⲓⲁⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲉ**ⲕⲣⲟⲩ** ⲛⲧⲟⲕ ⲙⲡⲉⲓⲙⲁ",
+      "english": "And he entered there into a cave, and rested there; and, behold, the word of the Lord came to him, and he said, What doest thou here, Eliu?",
+      "source": "I Kings 19",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯϭⲱⲛⲧ",
+        1,
+        13.35
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        2,
+        11.384
+      ],
+      [
+        "ⲁϫⲓ",
+        1,
+        10.673
+      ],
+      [
+        "ⲡⲉⲓ",
+        2,
+        10.327
+      ],
+      [
+        "ϩⲓ",
+        2,
+        10.231
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.91
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        9.587
+      ],
+      [
+        "ϫⲉ",
+        3,
+        8.901
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        6.95
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.376
+      ],
+      [
+        "ⲙ",
+        2,
+        6.351
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        6.29
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.688
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲣⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_post_ⲕⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲕⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡⲉⲓ",
+          2
+        ],
+        [
+          "ϩⲓ_1_post_ⲕⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲣⲱⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲣⲟⲩ_0_node",
+          "ⲛⲧⲟⲕ_1_post_ⲕⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_post_ⲕⲣⲟⲩ",
+          "ⲙ_1_post_ⲕⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲣⲟⲩ",
+          "ⲡⲉⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          "ⲙⲁ_3_post_ⲡⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_post_ⲕⲣⲟⲩ",
+          "ϩⲓ_1_post_ⲕⲣⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲕⲣⲟⲩ",
+          "ⲛⲁⲓ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲕⲣⲟⲩ_0_node",
+          "ⲙ_1_post_ⲕⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡⲉⲓ",
+          "ⲱ_2_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲣⲱⲙⲉ",
+          "ⲡⲓ_2_post_ⲣⲱⲙⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5092,
+      "count": 4
+    }
+  }
+}

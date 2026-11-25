@@ -1,0 +1,50 @@
+{
+  "id": "C12242",
+  "forms": [
+    {
+      "id": "CF33259",
+      "orth": "ϫⲓⲥⲁϩⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17246",
+      "bibliography": "CD 387b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12241",
+      "label": "ϩⲁⲡⲥⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "under curse"
+    },
+    {
+      "target": "C12240",
+      "label": "ⲉⲡⲥⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "under curse"
+    },
+    {
+      "target": "C12041",
+      "label": "ⲥⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "curse"
+    },
+    {
+      "target": "C12239",
+      "label": "ⲥⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "curse"
+    }
+  ]
+}

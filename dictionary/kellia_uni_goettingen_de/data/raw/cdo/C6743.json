@@ -1,0 +1,170 @@
+{
+  "id": "C6743",
+  "forms": [
+    {
+      "id": "CF15533",
+      "orth": "ϩⲏⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9067,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7457",
+      "bibliography": "CD 696a; CED 290; KoptHWb 382; DELC 306b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉⲑⲁⲙⲓⲟ ⲛϯⲕⲩⲃⲱⲧⲟⲥ ⲉⲥⲑⲟⲩⲏⲧ ⲉϧⲟⲩⲛ ⲟⲩⲟϩ ⲉⲕⲉϫⲟⲕⲥ ⲉⲃⲟⲗ ⲥⲁⲡϣⲱⲓ ⲛⲟⲩⲙⲁϩⲓ ⲫⲣⲟ ⲇⲉ ⲛⲧⲉϯⲕⲩⲃⲱⲧⲟⲥ ⲉⲕⲉⲑⲁⲙⲓⲟϥ ⲥⲁ ⲡⲥⲫⲓⲣ ⲙⲙⲟⲥ ϩⲁⲛ**ϩⲏⲡⲓ** ⲛϧⲉ ⲃ ⲛⲉⲙⲅ ⲛϧⲉ ⲉⲕⲉⲑⲁⲙⲓⲟⲥ",
+      "english": "Thou shalt narrow the ark in making it, and in a cubit above thou shalt finish it, and the door of the ark thou shalt make on the side; with lower, second, and third stories thou shalt make it.",
+      "source": "01_Genesis_06",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲉ",
+        1,
+        14.741
+      ],
+      [
+        "ⲥⲫⲓⲣ",
+        1,
+        13.466
+      ],
+      [
+        "ⲃ",
+        1,
+        10.709
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        7.368
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲛ_1_pre_ϩⲏⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲏⲡⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲡⲓ",
+          1
+        ],
+        [
+          "ϧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃ_3_post_ϧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_5_post_ϧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲛ_1_pre_ϩⲏⲡⲓ",
+          "ϩⲏⲡⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲏⲡⲓ_0_node",
+          "ⲛ_1_post_ϩⲏⲡⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲡⲓ",
+          "ϧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϧⲉ_2_post_ⲛ",
+          "ⲃ_3_post_ϧⲉ",
+          1
+        ],
+        [
+          "ⲃ_3_post_ϧⲉ",
+          "ⲛⲉⲙ_5_post_ϧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8535,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6742",
+      "label": "ϩⲛⲟⲩϩⲱⲡ",
+      "pos": "ADV",
+      "gloss": "in hiding, secretly"
+    },
+    {
+      "target": "C6740",
+      "label": "ϩⲱⲡ",
+      "pos": "V",
+      "gloss": "be hidden, hide"
+    },
+    {
+      "target": "C6741",
+      "label": "ϩⲱⲡ",
+      "pos": "N",
+      "gloss": "secret, seclusion"
+    }
+  ],
+  "etym": {
+    "egy_num": "101330",
+    "egy_lemma": "ḥꜣp.t",
+    "english": "hiding place",
+    "german": "Versteck",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/101330"
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "id": "C363",
+  "forms": [
+    {
+      "id": "CF1557",
+      "orth": "ⲃⲟⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2135,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF1558",
+      "orth": "ⲃⲁⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1559",
+      "orth": "ⲃⲁⲕⲏ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "ursprünglich Partizip",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS401",
+      "bibliography": "CD 31a; CED 21; KoptHWb 22, 493; DELC 26"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲩⲟⲓ ⲇⲉ ⲛⲛⲏ ⲉⲧⲉⲙ**ⲃⲟⲕⲓ** ⲛⲉⲙⲛⲏ ⲉⲧϯϭⲓ ϧⲉⲛⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "But woe to those who are with child and to those who nurse babies in those days!",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲥⲟⲩⲉⲛ ⲧⲉϥⲥϩⲓⲙⲓ ⲛϫⲉⲕⲁⲓⲛ ⲟⲩⲟϩ ⲉⲧⲁⲥⲉⲣ**ⲃⲟⲕⲓ** ⲁⲥⲙⲓⲥⲓ ⲛⲉⲛⲱⲥ ⲟⲩⲟϩ ⲛⲁϥⲕⲱⲧ ⲛⲟⲩⲃⲁⲕⲓ ⲡⲉ ⲟⲩⲟϩ ⲁϥϯ ⲫⲣⲁⲛ ⲛϯⲃⲁⲕⲓ ⲉⲫⲣⲁⲛ ⲙⲡⲉϥϣⲏⲣⲓ ⲉⲛⲱⲥ",
+      "english": "And Cain knew his wife, and having conceived she bore Enoch; and he built a city; and he named the city after the name of his son, Enoch.",
+      "source": "01_Genesis_04",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲥⲉⲣ**ⲃⲟⲕⲓ** ⲁⲥⲙⲓⲥⲓ ⲛⲟⲩϣⲏⲣⲓ ⲛϩⲱⲟⲩⲧ ⲉⲧⲁⲩⲛⲁⲩ ⲇⲉ ⲉⲣⲟϥ ϫⲉⲟⲩⲁⲥⲧⲓⲟⲥ ⲡⲉ ⲁⲩⲭⲟⲡϥ ⲛⲅ ⲛⲁⲃⲟⲧ",
+      "english": "And she conceived, and bore a male child; and having seen that he was fair, they hid him three months.",
+      "source": "02_Exodus_02",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϯϭⲓ",
+        3,
+        19.165
+      ],
+      [
+        "ⲥⲉⲣ",
+        5,
+        18.206
+      ],
+      [
+        "ϣⲫⲱⲧ",
+        1,
+        15.995
+      ],
+      [
+        "ⲉⲧⲉⲙ",
+        1,
+        15.995
+      ],
+      [
+        "ⲙⲓⲥⲓ",
+        6,
+        15.904
+      ],
+      [
+        "ⲛⲉⲛⲱⲥ",
+        1,
+        14.41
+      ],
+      [
+        "ⲑⲏⲉⲧⲉ",
+        1,
+        14.41
+      ],
+      [
+        "ⲛⲏ",
+        8,
+        13.357
+      ],
+      [
+        "ⲧⲁ",
+        5,
+        12.536
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        13,
+        12.481
+      ],
+      [
+        "ⲛⲧⲱ",
+        2,
+        11.7
+      ],
+      [
+        "ⲉⲧⲉ",
+        5,
+        11.199
+      ],
+      [
+        "ⲛⲑⲟ",
+        1,
+        10.503
+      ],
+      [
+        "ⲉ",
+        8,
+        10.317
+      ],
+      [
+        "ⲙ",
+        7,
+        10.305
+      ],
+      [
+        "ⲛ",
+        8,
+        9.89
+      ],
+      [
+        "ⲥ",
+        5,
+        9.693
+      ],
+      [
+        "ⲫⲁϩⲟⲩ",
+        1,
+        8.691
+      ],
+      [
+        "ⲁ",
+        5,
+        8.255
+      ],
+      [
+        "ⲛⲛ",
+        1,
+        7.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲟⲕⲓ_0_node",
+          13
+        ],
+        [
+          "ⲙ_1_pre_ⲃⲟⲕⲓ",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲟⲕⲓ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ϯϭⲓ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_pre_ⲥⲉⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_pre_ⲥⲉⲣ",
+          1
+        ],
+        [
+          "ⲥⲉⲣ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲕⲓ_b",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲙϯ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲙ_1_pre_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲱ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙ_1_pre_ⲃⲟⲕⲓ",
+          "ⲃⲟⲕⲓ_0_node",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲃⲟⲕⲓ",
+          "ⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲕⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲛⲏ",
+          "ⲛⲏ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲃⲟⲕⲓ",
+          "ⲉⲧ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲏ",
+          "ϯϭⲓ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_pre_ⲥⲉⲣ",
+          "ⲉ_1_pre_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_pre_ⲃⲟⲕⲓ",
+          "ⲧⲁ_3_pre_ⲥⲉⲣ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_pre_ⲥⲉⲣ",
+          "ⲥⲉⲣ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲉⲣ_2_pre_ⲉ",
+          "ⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲕⲓ_0_node",
+          "ⲉ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲕⲓ",
+          "ϥ_3_post_ϯ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϯ",
+          "ⲉ_1_post_ⲃⲟⲕⲓ_b",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲕⲓ_b",
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          "ⲛⲟⲙϯ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲙ_1_pre_ⲃⲟⲕⲓ",
+          "ⲃⲟⲕⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲕⲓ_0_node",
+          "ⲛⲧⲱ_1_post_ⲃⲟⲕⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲱ_1_post_ⲃⲟⲕⲓ",
+          "ⲟⲩ_2_post_ⲛⲧⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.15,
+      "rank": 1842,
+      "count": 13
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C368",
+      "label": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C369",
+      "label": "ϫⲓⲛⲉⲣⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C365",
+      "label": "ⲉⲣⲃⲟⲕⲓ",
+      "pos": "V",
+      "gloss": "conceive; conceive (a child)"
+    },
+    {
+      "target": "C364",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "V",
+      "gloss": "conceive; conceive (a child)"
+    },
+    {
+      "target": "C366",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "conception"
+    },
+    {
+      "target": "C367",
+      "label": "ⲙⲃⲟⲕⲓ",
+      "pos": "N",
+      "gloss": "pregnant (woman)"
+    }
+  ],
+  "etym": {
+    "egy_num": "57820",
+    "egy_lemma": "bkꜣ",
+    "demo_num": "dm6256",
+    "demo_lemma": "bk",
+    "english": "to be (become) pregnant; to make pregnant",
+    "german": "schwanger sein; schwängern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/57820",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm6256"
+  }
+}

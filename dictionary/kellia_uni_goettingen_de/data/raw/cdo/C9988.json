@@ -1,0 +1,351 @@
+{
+  "id": "C9988",
+  "forms": [
+    {
+      "id": "CF26071",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26079",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.37,
+        "rank": 602,
+        "count": 116
+      }
+    },
+    {
+      "id": "CF26078",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.49,
+        "rank": 1145,
+        "count": 77
+      }
+    },
+    {
+      "id": "CF26072",
+      "orth": "ⲡⲁⲗⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF26075",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26076",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26077",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26073",
+      "orth": "ⲡⲁⲗⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26074",
+      "orth": "ⲡⲁⲗⲓⲁⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF26080",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF26081",
+      "orth": "ⲡⲁⲗⲓⲛ",
+      "dialect": "W"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS13058",
+      "bibliography": "DDGLC",
+      "cu_ID": "15"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲡⲁⲗⲓⲛ** ϫⲉⲥⲉⲃⲧⲉⲛⲉⲧⲉⲛϩⲃⲏⲟⲩⲓ ϧⲉⲛⲡⲉⲧⲉⲛϫⲓⲛⲓ ⲉⲃⲟⲗ ϧⲉⲛⲥⲱⲙⲁ",
+      "english": "And again: “Prepare your works for the departure of your soul from the body.”",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲁⲗⲓⲛ** ⲟⲛ ϣⲁⲣⲉⲛⲁⲅⲅⲉⲗⲟⲥ ϯⲉⲟⲟⲩ ⲛⲁϥ ·",
+      "english": "Moreover, when the angels glorify him,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲣϥⲉϫⲛⲉⲧⲉⲛⲉⲣⲏⲟⲩ ⲉⲃⲏⲗ ⲁⲣⲏⲟⲩ ϧⲉⲛⲟⲩϯⲙⲁϯ ⲡⲣⲟⲥ ⲟⲩⲥⲏⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲥⲣⲟϥⲧ ⲉϯⲡⲣⲟⲥⲉⲩⲭⲏ ⲟⲩⲟϩ **ⲡⲁⲗⲓⲛ** ⲛⲧⲉⲧⲉⲛⲓ ⲉⲩⲙⲁ ϩⲓⲛⲁ ⲛⲧⲉ ⲛⲧⲉϣⲧⲉⲙⲡⲥⲁⲧⲁⲛⲁⲥ ⲉⲣⲡⲓⲣⲁⲍⲓⲛ ⲙⲙⲱⲧⲉⲛ ⲉⲑⲃⲉⲧⲉⲧⲉⲛⲙⲉⲧⲁⲧⲑⲱⲧ .",
+      "english": "Don't deprive one another, unless it is by consent for a season, that you may give yourselves to fasting and prayer, and may be together again, that Satan doesn't tempt you because of your lack of self-control.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "▢ **ⲡⲁⲗⲓⲛ** ⲟⲛ ⲡⲉϫⲁⲓ ⲙⲡⲉⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ ·",
+      "english": "And again I said unto the Cherubim,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲡⲁⲗⲓⲛ** ⲉⲧⲁϥϣⲉ ⲛⲁϥ ⲛⲁϥⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲁϥϫⲉⲡⲁⲓⲥⲁϫⲓ ⲣⲱ .",
+      "english": "Again he went away, and prayed, saying the same words.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲁⲗⲓⲛ** ⲟⲛ ⲉⲕⲙⲟⲟϣⲉ · ϩⲛⲧⲉϩⲓⲏ . ⲁⲩⲱ ⲉⲕⲛⲁⲩ ⲉϩⲉⲛⲱⲛⲉ ⲙⲛϩⲉⲛⲃⲉⲗϫⲉ . ⲉⲣⲉⲟⲩⲛⲟⲩⲃ ⲇⲉ ϩⲛⲧⲉⲩⲙⲏⲧⲉ ·",
+      "english": "Again, if you are walking on the road, and you see some stones and some pottery pieces and gold in their midst,",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲛ",
+        101,
+        23.54
+      ],
+      [
+        "ⲁ",
+        96,
+        17.886
+      ],
+      [
+        ".",
+        50,
+        15.69
+      ],
+      [
+        "ϥ",
+        60,
+        15.287
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        51,
+        15.239
+      ],
+      [
+        "ⲕⲟⲡ",
+        2,
+        14.837
+      ],
+      [
+        "ϫⲉ",
+        36,
+        14.788
+      ],
+      [
+        "ⲙⲉⲧⲥⲉⲃ",
+        3,
+        14.592
+      ],
+      [
+        "ⲁⲥⲑⲉⲛⲏⲥ",
+        3,
+        14.592
+      ],
+      [
+        "ⲓ",
+        30,
+        14.438
+      ],
+      [
+        "ϫⲉⲙⲁⲣⲓⲕⲓ",
+        2,
+        13.515
+      ],
+      [
+        "ⲕⲉⲍ",
+        2,
+        13.515
+      ],
+      [
+        "ⲕⲉⲛⲧ",
+        2,
+        13.252
+      ],
+      [
+        "ⲁⲧⲣⲱⲟⲩϣ",
+        2,
+        13.252
+      ],
+      [
+        "ⲥ",
+        23,
+        13.141
+      ],
+      [
+        "ⲧⲟⲩ",
+        9,
+        13.036
+      ],
+      [
+        "ⲛⲁ",
+        25,
+        13.028
+      ],
+      [
+        "ϯ",
+        23,
+        13.003
+      ],
+      [
+        "ⲁⲓⲕⲟⲧⲧ",
+        1,
+        12.837
+      ],
+      [
+        "ⲧⲉϣⲁⲛ",
+        1,
+        12.837
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲛ",
+        72,
+        21.47
+      ],
+      [
+        "ⲁ",
+        61,
+        16.57
+      ],
+      [
+        "ⲛ",
+        54,
+        14.807
+      ],
+      [
+        "ϩⲛⲇⲏⲙⲉⲩⲥⲓⲥ",
+        1,
+        14.331
+      ],
+      [
+        "ⲧⲁⲡⲟⲡⲓⲁ",
+        1,
+        14.331
+      ],
+      [
+        "ⲛⲇⲩⲙⲓⲟⲥ",
+        1,
+        14.331
+      ],
+      [
+        "ⲥⲉϩⲏⲩϩⲓⲏ",
+        1,
+        14.331
+      ],
+      [
+        "ⲛⲡⲟϭ",
+        1,
+        14.331
+      ],
+      [
+        "ⲏⲣⲉⲙⲟⲥ",
+        1,
+        14.331
+      ],
+      [
+        "ⲁⲕⲟ",
+        1,
+        14.331
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.331
+      ],
+      [
+        "ϥ",
+        37,
+        13.883
+      ],
+      [
+        "ⲕⲉⲗⲉⲉⲩⲉ",
+        1,
+        13.331
+      ],
+      [
+        "ⲕⲉⲥⲟⲟⲩ",
+        1,
+        13.331
+      ],
+      [
+        "ⲕⲟⲗⲁⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        13.331
+      ],
+      [
+        "ⲉⲡⲛⲟⲩⲃ",
+        1,
+        13.331
+      ],
+      [
+        "ⲉ",
+        29,
+        13.124
+      ],
+      [
+        "ϫⲉ",
+        20,
+        12.845
+      ],
+      [
+        ".",
+        17,
+        12.553
+      ],
+      [
+        "▢",
+        2,
+        12.377
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 1.37,
+      "rank": 524,
+      "count": 116
+    },
+    "S": {
+      "rate": 0.49,
+      "rank": 988,
+      "count": 77
+    }
+  },
+  "etym": {
+    "grl_ID": "1616",
+    "grl_lemma": "πάλιν",
+    "grl_meaning": "back, backwards, again, once more",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1292a; Preisigke 2:225"
+  }
+}

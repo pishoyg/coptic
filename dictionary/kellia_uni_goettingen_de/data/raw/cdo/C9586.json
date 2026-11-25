@@ -1,0 +1,104 @@
+{
+  "id": "C9586",
+  "forms": [
+    {
+      "id": "CF24462",
+      "orth": "ⲗⲁⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24463",
+      "orth": "ⲗⲁⲓⲕⲟⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24464",
+      "orth": "ⲗⲁⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13338,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12255",
+      "bibliography": "DDGLC",
+      "cu_ID": "2592"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲧⲙⲛⲧⲣⲉϥϫⲛⲁⲁⲩ ⲟⲩⲉⲗⲥⲧⲉⲯⲩⲭⲏ · ⲁⲩⲱ ϣⲁⲣⲉⲟⲩⲡⲉⲓⲣⲁⲥⲙⲟⲥ ϯϫⲣⲟ ⲛⲛ**ⲗⲁⲓⲕⲟⲥ** ·",
+      "english": "Cowardly inaction weakeneth the soul, but trial giveth victory to the layman.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲣⲟ",
+        1,
+        13.249
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        10.441
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲓⲕⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12928,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1260",
+    "grl_lemma": "λαⲓκός",
+    "grl_meaning": "unofficial, civilian",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1024a; Preisigke 2:2"
+  }
+}

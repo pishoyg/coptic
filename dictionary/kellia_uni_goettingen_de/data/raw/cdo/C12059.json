@@ -1,0 +1,110 @@
+{
+  "id": "C12059",
+  "forms": [
+    {
+      "id": "CF33066",
+      "orth": "ϧⲑⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10496,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17060",
+      "bibliography": "CD 722b; KoptHWB 397; DELC 316a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϭⲟϫⲓ ⲇⲉ ⲙⲡⲉϥⲙⲑⲟ ϧⲉⲛⲟⲩϣⲱϣ ϧⲉⲛⲧⲉϥ**ϧⲑⲏ** ϧⲉⲛⲡⲥⲟⲓ ⲛⲧⲉⲧⲉϥϣⲉⲃϣⲓ .",
+      "english": "And he has run against him with insolence, on the thickness of the back of his shield.",
+      "source": "18_Iob_15",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲓ",
+        1,
+        16.11
+      ],
+      [
+        "ϣⲱϣ",
+        1,
+        11.907
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.99
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ϧⲑⲏ",
+          1
+        ],
+        [
+          "ϧⲑⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϧⲑⲏ",
+          "ϧⲑⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9947,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6916",
+      "label": "ϩⲧⲁⲓ",
+      "pos": "V",
+      "gloss": "become, be fat"
+    }
+  ]
+}

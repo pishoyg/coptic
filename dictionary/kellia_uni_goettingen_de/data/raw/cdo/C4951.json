@@ -1,0 +1,57 @@
+{
+  "id": "C4951",
+  "forms": [
+    {
+      "id": "CF11867",
+      "orth": "ⲙⲁ ⲛⲟⲩⲟⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5576",
+      "bibliography": "CD 473a; KoptHWb 268; ChLCS 66b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4949",
+      "label": "ⲉⲓⲉⲡⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "product of the land"
+    },
+    {
+      "target": "C4950",
+      "label": "ⲙⲛⲧⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandry"
+    },
+    {
+      "target": "C4948",
+      "label": "ⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandman, cultivator"
+    },
+    {
+      "target": "C4952",
+      "label": "ⲣⲙⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandman, cultivator"
+    },
+    {
+      "target": "C4953",
+      "label": "ⲣⲟⲩⲟⲉⲓⲉ",
+      "pos": "V",
+      "gloss": "do husbandry"
+    }
+  ]
+}

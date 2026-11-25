@@ -1,0 +1,164 @@
+{
+  "id": "C5493",
+  "forms": [
+    {
+      "id": "CF12959",
+      "orth": "ⲱⲙϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15787,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲙϫ-",
+      "dialect": "S",
+      "id": "1814.1"
+    },
+    {
+      "orth": "ⲟⲙϫ⸗",
+      "dialect": "S",
+      "id": "1814.2"
+    },
+    {
+      "orth": "ⲱⲙϫ",
+      "dialect": "A",
+      "id": "1814.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6153",
+      "bibliography": "CD 524a; CDC 80b; CED 228; KoptHWb 292; DELC 249b; ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲉⲗⲅⲁⲛⲁ ⲡⲉⲥϩⲁⲓ ⲛⲁⲥ ϫⲉⲁⲣⲓⲡⲁⲅⲁⲑⲟⲛ ⲛⲁϩⲣⲛ ⲛⲟⲩⲃⲁⲗ ϩⲙⲟⲟⲥ ⲛⲉ ϣⲁⲛⲧⲉ**ⲱⲙϫ** ⲙⲡϣⲏⲣⲉ ⲕⲟⲩⲓ ⲁⲗⲗⲁ ⲡϫⲟⲉⲓⲥ ⲉϥⲉⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲙⲡⲉⲛⲧⲁϥⲉⲓ ⲉⲃⲟⲗ ϩⲛⲧⲟⲩⲧⲁⲡⲣⲟ ⲧⲉⲥϩⲓⲙⲉ ⲇⲉ ⲁⲥϩⲙⲟⲟⲥ ⲁⲥⲧⲥⲛⲕⲟ ⲙⲡⲉⲥϣⲏⲣⲉ ϣⲁⲛⲧⲉⲥⲱⲙϫ ⲙⲙⲟϥ",
+      "english": "And Helkana her husband said to her, Do that which is good in thine eyes, abide still until thou shalt have weaned him; but may the Lord establish that which comes out of thy mouth: and the woman tarried, and suckled her son until she had weaned him.",
+      "source": "I Samuel 1",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        12.094
+      ],
+      [
+        "ⲃⲁⲗ",
+        1,
+        11.036
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        11.034
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        11.002
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        8.29
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲱⲙϫ",
+          1
+        ],
+        [
+          "ⲱⲙϫ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲱⲙϫ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_4_post_ϣⲏⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲱⲙϫ",
+          "ⲱⲙϫ_0_node",
+          1
+        ],
+        [
+          "ⲱⲙϫ_0_node",
+          "ⲙ_1_post_ⲱⲙϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲱⲙϫ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲡ",
+          "ⲕⲟⲩⲓ_4_post_ϣⲏⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15386,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "37990",
+    "egy_lemma": "ꜥmḏ",
+    "english": "to turn away",
+    "german": "sich (von etwas) abwenden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37990"
+  }
+}

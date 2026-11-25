@@ -1,0 +1,375 @@
+{
+  "id": "C135",
+  "forms": [
+    {
+      "id": "CF487",
+      "orth": "ⲁⲛⲟⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 13.78,
+        "rank": 92,
+        "count": 2174
+      }
+    },
+    {
+      "id": "CF488",
+      "orth": "ⲁⲛⲟⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 20.24,
+        "rank": 72,
+        "count": 1717
+      }
+    },
+    {
+      "id": "CF489",
+      "orth": "ⲁⲛⲟⲕ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF490",
+      "orth": "ⲁⲛⲁⲕ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF491",
+      "orth": "ⲁⲛⲁⲕ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF492",
+      "orth": "ⲁⲛⲁⲕ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF493",
+      "orth": "ⲁⲛⲁⲕ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF494",
+      "orth": "ⲁⲛⲅ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.09,
+        "rank": 436,
+        "count": 329
+      }
+    },
+    {
+      "id": "CF495",
+      "orth": "ⲁⲛⲅ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF496",
+      "orth": "ⲁⲛⲅ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF497",
+      "orth": "ⲁⲛⲅ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF498",
+      "orth": "ⲁⲛⲅ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF499",
+      "orth": "ⲁⲛⲕ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF500",
+      "orth": "ⲁⲛⲕ-",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "1. Pers.",
+    "number": "sg.",
+    "tlapos": "Selbst. Pers. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS155",
+      "bibliography": "CD 11b; KoptHWb 8, 487; DELC 12; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ϫⲉ**ⲁⲛⲟⲕ** ⲡⲉ ⲓⲥⲁⲁⲕ .",
+      "english": "Then Isaac said, ‘I am Isaac.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲁⲛⲟⲕ** ⲁⲓⲥⲉⲧⲡⲧⲏⲩⲧⲛ ·",
+      "english": "But I have chosen you.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϯϩⲟ ⲟⲩⲛ ⲉⲣⲱⲧⲉⲛ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲛⲓ ⲙⲙⲟ**ⲓ** .",
+      "english": "I beg you therefore, be imitators of me.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲁⲙⲟⲟϣⲉ ⲉⲡϫⲓⲥⲉ ⲙⲙⲟ**ⲓ**",
+      "english": "to move toward my exultation.",
+      "source": "Apophthegmata Patrum Sahidic 136",
+      "urn": "urn:cts:copticLit:ap.136.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ϯⲛⲟⲩ ⲉⲧ**ⲓ**ⲛⲁⲧⲁⲟⲩⲉϩⲁⲛⲕⲟⲩϫⲓ ⲉⲣⲱⲧⲉⲛ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ .",
+      "english": "I will now recount a few of them to you.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉ**ϯ**ⲛⲟⲉⲓ ⲡⲁⲣⲁⲣⲟϥ ·",
+      "english": "And, 'I know more than he.'",
+      "source": "Apophthegmata Patrum Sahidic 129: N 331",
+      "urn": "urn:cts:copticLit:ap.129.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϯ",
+        1000,
+        22.687
+      ],
+      [
+        "ⲡⲉ",
+        726,
+        22.249
+      ],
+      [
+        "ⲛⲁ",
+        736,
+        21.025
+      ],
+      [
+        "ϫⲉ",
+        605,
+        20.359
+      ],
+      [
+        "ⲇⲉ",
+        480,
+        20.269
+      ],
+      [
+        "ⲡ",
+        641,
+        20.091
+      ],
+      [
+        "ⲓ",
+        426,
+        19.279
+      ],
+      [
+        "ϩⲏⲡⲡⲉ",
+        179,
+        19.099
+      ],
+      [
+        ".",
+        465,
+        18.699
+      ],
+      [
+        "ⲉⲓⲉ",
+        176,
+        18.693
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        465,
+        18.163
+      ],
+      [
+        "ⲛ",
+        509,
+        18.065
+      ],
+      [
+        "ϩⲱ",
+        122,
+        17.777
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        215,
+        17.642
+      ],
+      [
+        "ⲟⲩ",
+        433,
+        17.528
+      ],
+      [
+        "ⲫⲁ",
+        95,
+        17.503
+      ],
+      [
+        "ⲡϭⲥ",
+        137,
+        17.461
+      ],
+      [
+        "ⲁⲛ",
+        184,
+        17.085
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        148,
+        17.077
+      ],
+      [
+        "ⲁ",
+        333,
+        16.627
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        246,
+        29.948
+      ],
+      [
+        "ϯ",
+        1259,
+        23.933
+      ],
+      [
+        "ⲓ",
+        1274,
+        23.319
+      ],
+      [
+        "ⲡⲉ",
+        1051,
+        22.144
+      ],
+      [
+        "ϩⲱ",
+        325,
+        21.92
+      ],
+      [
+        "ⲁ",
+        958,
+        20.279
+      ],
+      [
+        "ϫⲉ",
+        662,
+        19.781
+      ],
+      [
+        "ⲛⲁ",
+        735,
+        19.776
+      ],
+      [
+        "ⲛ",
+        874,
+        18.646
+      ],
+      [
+        "ⲡ",
+        723,
+        18.513
+      ],
+      [
+        "ⲉ",
+        665,
+        18.472
+      ],
+      [
+        "ⲇⲉ",
+        389,
+        18.319
+      ],
+      [
+        "ⲁⲛⲅ",
+        112,
+        18.181
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        151,
+        18.167
+      ],
+      [
+        "ⲉⲓⲥ",
+        159,
+        17.508
+      ],
+      [
+        ".",
+        319,
+        17.032
+      ],
+      [
+        "ⲁⲩⲱ",
+        378,
+        16.957
+      ],
+      [
+        "ⲅⲁⲣ",
+        165,
+        16.301
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        10,
+        16.087
+      ],
+      [
+        "ⲁⲛ",
+        177,
+        16.054
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 143.69,
+      "rank": 12,
+      "count": 22806
+    },
+    "B": {
+      "rate": 136.53,
+      "rank": 17,
+      "count": 11589
+    }
+  },
+  "etym": {
+    "egy_num": "27940",
+    "egy_lemma": "jnk",
+    "demo_num": "d590",
+    "demo_lemma": "ı ͗nk(j)",
+    "english": "I [indepen. pron., 1st per. sing.]",
+    "german": "ich [Selbst. Pron. sg.1.c]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d590"
+  }
+}

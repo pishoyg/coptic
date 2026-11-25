@@ -1,0 +1,171 @@
+{
+  "id": "C2652",
+  "forms": [
+    {
+      "id": "CF7107",
+      "orth": "ⲛⲉϩⲙⲁⲕϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16775,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3039",
+      "bibliography": "CD 242a; KoptHWb 134; ChLCS 34b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁϥϫⲉⲥⲧⲧⲟⲟⲧϥ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲁϥ**ⲛⲉϩⲙⲁⲕϩ** ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+      "english": "For he has lifted his hands against the Lord, and he has hardened his neck against the Almighty Lord.",
+      "source": "Job 15",
+      "urn": "urn:cts:copticLit:ot.job.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲧⲟ",
+        1,
+        10.019
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛⲉϩⲙⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          "ⲁ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          "ϥ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲉϩⲙⲁⲕϩ",
+          "ⲛⲉϩⲙⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϩⲙⲁⲕϩ_0_node",
+          "ⲙ_1_post_ⲛⲉϩⲙⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲉϩⲙⲁⲕϩ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16378,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1852",
+      "type": "cf",
+      "label": "neck"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12016",
+      "label": "ⲛⲉϩϥ",
+      "pos": "N",
+      "gloss": "what is shaken; that wherewith is shaken (of dust, chaff) (?)"
+    },
+    {
+      "target": "C2651",
+      "label": "ⲛⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "shake, cast off, set apart, separate; separate self, turn, return"
+    },
+    {
+      "target": "C2653",
+      "label": "ⲛⲟⲩϩⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "shake off, cast out, set apart, assign; come apart, be loosed"
+    }
+  ]
+}

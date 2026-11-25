@@ -1,0 +1,190 @@
+{
+  "id": "C1966",
+  "forms": [
+    {
+      "id": "CF5587",
+      "orth": "ⲙⲛⲟⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8630,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2283",
+      "bibliography": "CD 176b; KoptHWb 96; ChLCS 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧ**ⲙⲛⲟⲟⲧⲉ** ⲙⲡⲏⲓ ⲛⲉⲥⲧⲃⲃⲟ ⲛϩⲉⲛⲥⲟⲩⲟ ⲁⲥϫⲓⲣⲉⲕⲣⲓⲕⲉ ⲇⲉ ⲁⲥⲱⲃϣ ⲁⲩⲱ ⲃⲁⲛⲁⲁ ⲙⲛϩⲣⲏⲭⲁⲃ ⲛⲉϥⲥⲛⲏⲩ ⲙⲡⲉⲗⲁⲁⲩ ⲉⲓⲙⲉ ⲉⲣⲟⲟⲩ",
+      "english": "And, behold, the porter of the house winnowed wheat, and he slumbered and slept: and the brothers Rechab and Baana went privily into the house:",
+      "source": "II Samuel 4",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲥ ⲇⲉ ⲛⲉϥⲁϩⲉⲣⲁⲧϥ ⲡⲉ ⲉⲃⲟⲗ ϩⲓⲣⲙⲡⲣⲟ ⲁϥⲉⲓ ⲇⲉ ⲉⲃⲟⲗ ⲛϭⲓⲡⲙⲁⲑⲏⲧⲏⲥ ⲉⲧⲉⲣⲉⲡⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲥⲟⲟⲩⲛ ⲙⲙⲟϥ ⲁⲩⲱ ⲁϥϫⲟⲟⲥ ⲛⲧⲉ**ⲙⲛⲟⲟⲧⲉ** ⲁϥϫⲓ ⲡⲉⲧⲣⲟⲥ ⲉϩⲟⲩⲛ",
+      "english": "but Peter was standing at the door outside. So the other disciple, who was known to the high priest, went out and spoke to her who kept the door, and brought in Peter.",
+      "source": "43_John_18",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲉⲣⲉ",
+        1,
+        13.576
+      ],
+      [
+        "ⲡⲉⲧⲣⲟⲥ",
+        1,
+        11.667
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.735
+      ],
+      [
+        "ϫⲓ",
+        1,
+        8.164
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        8.116
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲟⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲟⲟⲧⲉ",
+          "ⲙⲛⲟⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲟⲟⲧⲉ_0_node",
+          "ⲙ_1_post_ⲙⲛⲟⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲟⲟⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8183,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1964",
+      "label": "ⲙⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "porter, doorkeeper"
+    },
+    {
+      "target": "C1965",
+      "label": "ⲙⲛⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "porter, doorkeeper"
+    }
+  ]
+}

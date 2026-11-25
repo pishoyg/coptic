@@ -1,0 +1,84 @@
+{
+  "id": "C9701",
+  "forms": [
+    {
+      "id": "CF24941",
+      "orth": "ⲙⲁⲛⲅⲁⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24942",
+      "orth": "ⲙⲁⲛⲅⲁⲛⲟⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12512",
+      "bibliography": "DDGLC",
+      "cu_ID": "2809"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁϩⲧ",
+        1,
+        12.543
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        11.157
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        11.083
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲛⲅⲁⲛⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "3159",
+    "grl_lemma": "μάγγανον",
+    "grl_meaning": "war-M2575engine, catapult; windlass, crane",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1070b; Preisigke 2:45"
+  }
+}

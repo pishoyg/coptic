@@ -1,0 +1,45 @@
+{
+  "id": "C1121",
+  "forms": [
+    {
+      "id": "CF3609",
+      "orth": "ⲕⲟⲩⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3610",
+      "orth": "ϭⲟⲩϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1305",
+      "bibliography": "CD 100b; KoptHWb 59; ChLCS 16a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4940,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "162280",
+    "egy_lemma": "qwq",
+    "demo_num": "d6546",
+    "demo_lemma": "kwk",
+    "english": "nuts; dom-palm nuts",
+    "german": "[Früchte]; Nüsse (der Dumpalme)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162280",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6546"
+  }
+}

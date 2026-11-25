@@ -1,0 +1,370 @@
+{
+  "id": "C170",
+  "forms": [
+    {
+      "id": "CF653",
+      "orth": "ⲣⲁⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5986,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF654",
+      "orth": "ⲣⲁⲡⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS193",
+      "bibliography": "CD 14a; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ϥⲛⲁϯ ⲛⲁⲕ ⲉⲙⲏⲥⲉ ⲛⲧⲟⲕ ⲇⲉ ⲛⲅⲧⲙϯ ⲛⲁϥ ⲉⲙⲏⲥⲉ ⲡⲁⲓ ϥⲛⲁ**ⲣⲁⲡⲉ** ⲉϫⲱⲕ ⲛⲧⲟⲕ ⲇⲉ ⲕⲛⲁⲣⲧϩⲉ ⲛⲟⲩⲥⲉⲓⲁⲧ",
+      "english": "He shall lend to thee, and thou shalt not lend to him: he shall be the head, and thou shalt be the tail.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓⲛⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲅⲁⲣ ⲛⲧⲁⲛⲉⲧⲛⲉⲓⲟⲧⲉ ⲙⲧⲟⲛ ⲙⲙⲟⲟⲩ · ⲉⲁⲧⲉⲧⲛ**ⲣⲁⲡⲉ** ⲉⲧⲉⲩⲟⲩⲥⲓⲁ ϣⲁϩⲣⲁⲓ ⲉⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 3",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:49-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ **ⲣⲁⲡⲉ** ⲉⲣⲟϥ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 3 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:20-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲥⲓⲁ",
+        1,
+        14.206
+      ],
+      [
+        "ⲙⲏⲥⲉ",
+        1,
+        13.804
+      ],
+      [
+        "ϣⲁϩⲣⲁⲓ",
+        1,
+        10.398
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        10.369
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        8.853
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        8.827
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        1,
+        8.799
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        8.161
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        8.009
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.899
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲧⲉ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_3_pre_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣⲁⲡⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲟⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲥⲓⲁ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲧⲉ_1_pre_ⲣⲁⲡⲉ",
+          "ⲡⲉ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲣⲁⲡⲉ",
+          "ⲉⲧ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          "ⲟⲩⲁⲁⲃ_3_pre_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_3_pre_ⲉⲧ",
+          "ⲣⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲣⲁⲡⲉ",
+          "ⲇⲉ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲁⲡⲉ",
+          "ⲡⲁⲓ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲣⲁⲡⲉ",
+          "ϥ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲁⲡⲉ",
+          "ⲛⲁ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲁⲡⲉ",
+          "ⲣⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲡⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲡⲉ",
+          "ⲣⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲡⲉ_0_node",
+          "ⲉ_1_post_ⲣⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲁⲡⲉ",
+          "ⲧⲉⲩ_3_post_ⲟⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲟⲩⲥⲓⲁ",
+          "ⲟⲩⲥⲓⲁ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5550,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C172",
+      "label": "ϥⲓ ⲛⲧⲁⲡⲉ",
+      "pos": "V",
+      "gloss": "behead"
+    },
+    {
+      "target": "C173",
+      "label": "ϥⲓⲁⲡⲉ",
+      "pos": "V",
+      "gloss": "behead"
+    },
+    {
+      "target": "C165",
+      "label": "ⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "head; magistrate, chief; capital of money, total, poll tax"
+    },
+    {
+      "target": "C11276",
+      "label": "ⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "head; magistrate, chief"
+    },
+    {
+      "target": "C168",
+      "label": "ⲁⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headless"
+    },
+    {
+      "target": "C169",
+      "label": "ⲙⲉⲧⲁⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headlessness"
+    },
+    {
+      "target": "C167",
+      "label": "ⲙⲛⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headship"
+    },
+    {
+      "target": "C171",
+      "label": "ⲣⲁⲡⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule over"
+    }
+  ]
+}

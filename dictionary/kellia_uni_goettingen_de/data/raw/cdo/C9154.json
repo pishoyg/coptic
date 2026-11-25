@@ -1,0 +1,312 @@
+{
+  "id": "C9154",
+  "forms": [
+    {
+      "id": "CF22761",
+      "orth": "ⲑⲉⲟⲗⲟⲅⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22762",
+      "orth": "ⲑⲉⲟⲗⲟⲅⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3172,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF22763",
+      "orth": "ⲑⲉⲟⲗⲟⲕⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11336",
+      "bibliography": "DDGLC",
+      "cu_ID": "2910"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲧⲉⲣⲉϥϫⲟⲟⲩ · ⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ⲡ**ⲑⲉⲟⲗⲟⲅⲟⲥ** · ⲉϥϭⲱϣⲧ ⲉⲙⲙⲁ ⲛϣⲁ ⲉϥϯⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "And when John the Theologian had said these things, he looked towards the east, and he ascribed glory to God",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲧⲛⲧⲱⲛ ⲉⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲃⲁⲥⲓⲗⲓⲟⲥ ⲙⲛⲅⲣⲏⲅⲟⲣⲓⲟⲥ · ⲡ**ⲑⲉⲟⲗⲟⲅⲟⲥ** ·",
+      "english": "Thou art like unto the holy man Basil, thou art like unto Gregory the Theologian,",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲁϫⲉ ⲇⲉ ⲟⲛ ⲉⲧⲃⲉⲡ**ⲑⲉⲟⲗⲟⲅⲟⲥ** ⲁⲩⲱ ⲡⲡⲁⲣⲑⲉⲛⲟⲥ ⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲡϩⲁⲅⲓⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ϫⲉⲛϥⲛⲁϫⲓϯⲡⲉ ⲁⲛ ⲙⲡⲙⲟⲩ ϣⲁⲛⲧⲟⲩⲥⲟⲃⲧⲉ ⲛⲛⲉⲑⲣⲟⲛⲟⲥ ϩⲙⲡⲉⲓⲁ ⲛⲓⲱⲥⲁⲫⲁⲧ ⲉⲧⲉⲡⲙⲁ ⲡⲉ ⲉⲧⲉⲣⲉⲡϩⲁⲏ ⲛⲁⲅⲱⲛ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲛⲁϣⲱⲡⲉ ⲛϩⲏⲧϥ",
+      "english": "And he spake also concerning the holy apostle Saint John, theologian and virgin who is not to taste death until the thrones are set in the valley of Jehosaphat, which is the place wherein the last strife of the world shall take place.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲓ",
+        2,
+        15.41
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        2,
+        10.284
+      ],
+      [
+        "ⲛⲏ",
+        2,
+        10.057
+      ],
+      [
+        "ⲓ",
+        2,
+        8.575
+      ],
+      [
+        "ϫⲉ",
+        2,
+        8.137
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ],
+      [
+        "ⲡ",
+        2,
+        7.619
+      ],
+      [
+        "ⲙ",
+        2,
+        7.583
+      ]
+    ],
+    "S": [
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        12,
+        18.951
+      ],
+      [
+        "ⲅⲣⲏⲅⲟⲣⲓⲟⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+        2,
+        16.106
+      ],
+      [
+        "ⲡ",
+        20,
+        13.878
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        3,
+        13.825
+      ],
+      [
+        "ⲡⲉⲧⲟⲩⲁⲁⲃ",
+        2,
+        11.474
+      ],
+      [
+        "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+        2,
+        11.451
+      ],
+      [
+        "ϭⲱϣⲧ",
+        2,
+        10.482
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        10.234
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        2,
+        9.722
+      ],
+      [
+        "ⲧⲉⲓ",
+        2,
+        9.559
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        2,
+        9.272
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.128
+      ],
+      [
+        "ϥ",
+        6,
+        8.692
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        8.156
+      ],
+      [
+        "ⲉ",
+        4,
+        7.232
+      ],
+      [
+        "ϩⲉ",
+        2,
+        7.142
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        6.728
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        5.642
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        5.517
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲑⲉⲟⲗⲟⲅⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          5
+        ],
+        [
+          "ⲑⲉⲟⲗⲟⲅⲟⲥ_0_node",
+          7
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_1_post_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          "ⲑⲉⲟⲗⲟⲅⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲑⲉⲟⲗⲟⲅⲟⲥ_0_node",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_1_post_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          "ⲡ_1_pre_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲑⲉⲟⲗⲟⲅⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          "ⲡ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲑⲉⲟⲗⲟⲅⲟⲥ",
+          "ⲡ_3_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2818,
+      "count": 12
+    }
+  },
+  "etym": {
+    "grl_ID": "3454",
+    "grl_lemma": "θεολόγος",
+    "grl_meaning": "one who discourses of the gods, theologian",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 790b; Preisigke 1:670"
+  }
+}

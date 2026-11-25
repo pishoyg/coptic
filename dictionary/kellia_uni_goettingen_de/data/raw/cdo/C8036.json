@@ -1,0 +1,60 @@
+{
+  "id": "C8036",
+  "forms": [
+    {
+      "id": "CF18138",
+      "orth": "ϭⲁⲁϭⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8938",
+      "bibliography": "CD 843b; CED 341-342; KoptHWb 475; DELC 351b; ChLCS 111a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C8035",
+      "label": "ϭⲁⲁϭⲉ",
+      "pos": "N",
+      "gloss": "baked loaf, cake"
+    },
+    {
+      "target": "C8032",
+      "label": "ϭⲱϭ",
+      "pos": "V",
+      "gloss": "roast, bake"
+    },
+    {
+      "target": "C8033",
+      "label": "ϭⲱϭ",
+      "pos": "N",
+      "gloss": "baked bread"
+    },
+    {
+      "target": "C8034",
+      "label": "ⲙⲁ ⲛϭⲟϭ",
+      "pos": "N",
+      "gloss": "baked, roasted food"
+    }
+  ],
+  "etym": {
+    "egy_num": "41610",
+    "egy_lemma": "ꜥkk",
+    "demo_num": "d6539",
+    "demo_lemma": "kꜥkꜥ(.t)",
+    "english": "[a kind of bread]",
+    "german": "[ein Brot]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/41610",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6539"
+  }
+}

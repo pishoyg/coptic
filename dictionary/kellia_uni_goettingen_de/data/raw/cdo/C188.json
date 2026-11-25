@@ -1,0 +1,467 @@
+{
+  "id": "C188",
+  "forms": [
+    {
+      "id": "CF710",
+      "orth": "ⲁⲣⲏⲃ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31479",
+      "orth": "ⲉⲣⲏⲃ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF708",
+      "orth": "ⲁⲣⲏⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2980,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF31481",
+      "orth": "ⲉⲣⲏⲃ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF707",
+      "orth": "ⲁⲣⲏⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4066,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF31483",
+      "orth": "ⲉⲣⲏⲃ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31484",
+      "orth": "ⲣⲏⲃ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31482",
+      "orth": "ⲣⲏⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10365,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF709",
+      "orth": "ⲁⲣⲏⲃ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31480",
+      "orth": "ⲣⲏⲃ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF711",
+      "orth": "ⲁⲣⲏⲃ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF715",
+      "orth": "ⲗⲏⲃ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS211",
+      "bibliography": "CD 15a; CED 11; KoptHWb 11, 488; DELC 15; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱⲣⲡ ⲇⲉ ⲛϫⲉⲙⲡⲓⲙⲁⲥ ⲙⲃⲁⲉⲙⲡⲓ ϧⲉⲛⲧϫⲓϫ ⲙⲡⲉϥⲙⲁⲛⲉⲥⲱⲟⲩ ⲡⲓⲟⲇⲟⲗⲁⲙⲓⲧⲏⲥ ϩⲓⲛⲁ ⲛⲧⲉϥϭⲓ ⲙⲡⲓ**ⲁⲣⲏⲃ** ⲉⲃⲟⲗ ⲛⲧⲟⲧⲥ ⲛϯⲥϩⲓⲙⲓ ⲟⲩⲟϩ ⲙⲡⲉϥϫⲉⲙⲥ",
+      "english": "And Judas sent the kid of the goats by the hand of his shepherd the Odollamite, to receive the pledge from the woman; and he found her not.",
+      "source": "01_Genesis_38",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲛⲧⲏⲧⲛ ⲙⲙⲁⲩ ⲙⲡ**ⲁⲣⲏⲃ** ⲛⲧⲉϥⲙⲛⲧⲣⲣⲟ ·",
+      "english": "There is for you the pledge of His kingdom",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲇⲉ ⲉⲧⲁϥⲉⲣϩⲱⲃ ⲉⲣⲟⲛ ⲉⲫⲁⲓ ⲫⲛⲟⲩϯ ⲡⲉ ⲫⲏ ⲉⲧⲁϥϯ ⲛⲁⲛ ⲙⲡⲁⲓ**ⲁⲣⲏⲃ** ⲛⲧⲉⲡⲓⲡⲛⲉⲩⲙⲁ .",
+      "english": "Now he who made us for this very thing is God, who also gave to us the down payment of the Spirit.",
+      "source": "08_II Corinthians_05",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϣⲗⲏⲗ ⲙⲛⲧⲡⲓⲥⲧⲓⲥ ⲛⲁⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲕ · ⲧⲉⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲁⲁⲃ ϯⲥⲃⲱ ⲛⲁⲕ · ⲟⲩⲛⲧⲁⲕ ⲙⲙⲁⲩ ϫⲓⲛⲙⲡⲉⲓⲙⲁ ⲙⲡ**ⲁⲣⲏⲃ** ⲛⲙⲙⲁⲛ ⲙⲧⲟⲛ ⲉⲧϩⲛⲙⲡⲏⲩⲉ ·",
+      "english": "Prayer and faith shall help thee, and the Holy Scriptures shall give thee instruction, and thou shalt have from this world, according to (His) pledge to us, the rest which is in the heavens.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲙ ⲛϫⲉⲓⲁⲕⲱⲃ ⲟⲩⲟϩ ⲁϥⲥⲓ ⲁϥϧⲑⲁⲓ ⲟⲩⲟϩ ⲁϥϩⲓⲧ**ⲣⲏⲃ** ⲉⲃⲟⲗ ⲛϫⲉⲡⲓⲙⲉⲛⲣⲓⲧ ⲁϥⲕⲉⲛⲓ ⲟⲩⲟϩ ⲁϥϧⲑⲁⲓ ⲟⲩⲟϩ ⲁϥⲟⲩⲱϣⲥ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲁϥⲭⲁ ⲫⲛⲟⲩϯ ⲛⲥⲱϥ ⲫⲏ ⲉⲧⲁϥⲑⲁⲙⲓⲟϥ ⲁϥϣⲉⲛⲁϥ ⲉⲃⲟⲗ ϩⲁⲫⲛⲟⲩϯ ⲡⲉϥⲥⲱⲧⲏⲣ",
+      "english": "So Jacob ate and was filled, and the beloved one kicked; he grew fat, he became thick and broad: then he forsook the God that made him, and departed from God his Saviour.",
+      "source": "05_Deuteronomium_32",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲣϩⲱⲃ ⲇⲉ ⲉⲣⲟⲛ ⲉⲡⲁⲓ ⲡⲉ ⲡⲛⲟⲩⲧⲉ . ⲡⲉⲛⲧⲁϥϯ ⲛⲁⲛ ⲙⲡ**ⲁⲣⲏⲃ** ⲙⲡⲉⲡⲛⲉⲩⲙⲁ .",
+      "english": "Now he who made us for this very thing is God, who also gave to us the down payment of the Spirit.",
+      "source": "47_2 Corinthians_5",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲛⲉⲩⲙⲁⲉϧⲣⲏⲓ",
+        1,
+        15.695
+      ],
+      [
+        "ⲉⲡⲁⲅⲅⲉⲗⲓⲁ",
+        1,
+        13.11
+      ],
+      [
+        "ϯ",
+        7,
+        11.712
+      ],
+      [
+        "ⲡⲓ",
+        6,
+        10.526
+      ],
+      [
+        "ⲏⲓ",
+        3,
+        10.364
+      ],
+      [
+        "ⲁⲕϣⲁⲛ",
+        1,
+        9.862
+      ],
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+        1,
+        9.695
+      ],
+      [
+        "ⲛ",
+        6,
+        9.346
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        9.016
+      ],
+      [
+        "ⲉ",
+        5,
+        8.983
+      ],
+      [
+        "ⲙ",
+        4,
+        8.583
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        8.505
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        7.821
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        7.709
+      ],
+      [
+        "ⲛⲧⲟⲧ",
+        1,
+        7.616
+      ],
+      [
+        "ⲧⲏⲓ",
+        1,
+        7.5
+      ],
+      [
+        "ⲡ",
+        3,
+        7.374
+      ],
+      [
+        ".",
+        3,
+        7.371
+      ],
+      [
+        ":",
+        1,
+        7.116
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        6.942
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        12,
+        11.756
+      ],
+      [
+        "ⲙ",
+        8,
+        11.544
+      ],
+      [
+        "ⲙⲛⲧⲣⲣⲟ",
+        2,
+        11.354
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        10.666
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        2,
+        10.605
+      ],
+      [
+        "ⲡ",
+        7,
+        10.112
+      ],
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+        1,
+        9.641
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        1,
+        9.478
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        2,
+        9.165
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        9.157
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        8.779
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        8.357
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.257
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        7.214
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        6.663
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        6.519
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.477
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        5.881
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        5.857
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        5.779
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣⲏⲃ_0_node",
+          7
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲣⲏⲃ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁⲉϧⲣⲏⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲣⲏⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲏⲃ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲣⲏⲃ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲣⲏⲃ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲡⲛⲉⲩⲙⲁⲉϧⲣⲏⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲣⲏⲃ",
+          "ⲁⲣⲏⲃ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲏⲃ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲏⲃ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲣⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲏⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲏⲃ_0_node",
+          "ⲛ_1_post_ⲁⲣⲏⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲏⲃ",
+          "ⲧⲉϥ_3_post_ⲙⲛⲧⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲙⲛⲧⲣⲣⲟ",
+          "ⲙⲛⲧⲣⲣⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲣⲏⲃ",
+          "ⲁⲣⲏⲃ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3677,
+      "count": 7
+    },
+    "B": {
+      "rate": 0.09,
+      "rank": 2453,
+      "count": 8
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "egy_num": "39480",
+    "egy_lemma": "ꜥrb.t",
+    "demo_num": "d174",
+    "demo_lemma": "ꜣlb",
+    "english": "pledge",
+    "german": "Pfand",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39480",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d174"
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "id": "C8171",
+  "forms": [
+    {
+      "id": "CF18732",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF18733",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF18734",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1928,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF18735",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18736",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18737",
+      "orth": "ⲁⲗⲉⲕⲧⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2725,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9233",
+      "bibliography": "DDGLC",
+      "cu_ID": "592"
+    },
+    {
+      "id": "CS9234",
+      "bibliography": "DDGLC",
+      "cu_ID": "4391"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲛϫⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲫⲙⲁϩⲥⲟⲡ ⲃ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲙⲡⲓⲥⲁϫⲓ ⲙⲫⲣⲏϯ ⲉⲧⲁϥϫⲟⲥ ⲛⲁϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲙⲡⲁⲧⲉⲟⲩ**ⲁⲗⲉⲕⲧⲱⲣ** ⲙⲟⲩϯ ⲛⲥⲟⲡ ⲃ ⲭⲛⲁϫⲟⲗⲧ ⲉⲃⲟⲗ ⲛⲅ ⲛⲥⲟⲡ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲓⲧⲟⲧϥ ⲁϥⲣⲓⲙⲓ .",
+      "english": "The rooster crowed the second time. Peter remembered the word, how that Jesus said to him, 'Before the rooster crows twice, you will deny me three times.' When he thought about that, he wept.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡ**ⲁⲗⲉⲕⲧⲱⲣ** ⲙⲟⲩⲧⲉ ⲙⲡⲙⲉϩⲥⲉⲡⲥⲛⲁⲩ . ⲁϥⲣⲡⲙⲉⲉⲩⲉ ⲇⲉ ⲛϭⲓⲡⲉⲧⲣⲟⲥ ⲙⲡϣⲁϫⲉ ⲛⲧϩⲉ ⲛⲧⲁⲓⲏⲥⲟⲩⲥ ϫⲟⲟⲥ ⲛⲁϥ ϫⲉⲙⲡⲁⲧⲉ ⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲟⲩⲧⲉ ⲛⲥⲉⲡⲥⲛⲁⲩ ⲕⲛⲁⲁⲡⲁⲣⲛⲁ ⲙⲙⲟⲓ ⲛϣoⲙⲛⲧⲥⲱⲱⲡ ⲁⲩⲱ ⲁϥϩⲓⲧⲟⲟⲧϥ ⲁϥⲣⲓⲙⲉ .",
+      "english": "The rooster crowed the second time. Peter remembered the word, how that Jesus said to him, &apos;Before the rooster crows twice, you will deny me three times.&apos; When he thought about that, he wept.",
+      "source": "Mark Chapter 14",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲣⲱⲓⲥ ⲟⲩⲛ ⲛⲧⲉⲧⲉⲛⲥⲱⲟⲩⲛ ⲅⲁⲣ ⲁⲛ ϫⲉⲁⲣⲉⲡϭⲟⲓⲥ ⲙⲡⲓⲏⲓ ⲛⲏⲟⲩ ⲛⲧⲛⲁⲩ ⲓⲉ ϩⲁⲛⲁⲣⲟⲩϩⲓ ⲓⲉ ⲧⲫⲁϣⲓ ⲙⲡⲓⲉϫⲱⲣϩ ⲓⲉ ⲉⲣⲉⲡⲓ**ⲁⲗⲉⲕⲧⲱⲣ** ⲙⲟⲩϯ ⲓⲉ ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+      "english": "Watch therefore, for you don't know when the lord of the house is coming, whether at evening, or at midnight, or when the rooster crows, or in the morning;",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲣⲟⲉⲓⲥ ϭⲉ ϩⲱⲧⲧⲏⲩⲧⲛ ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲁⲛ ϫⲉⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲙⲡⲏⲓ ⲛⲏⲩ ⲛⲁϣ ⲛⲛⲁⲩ ⲏ ⲛⲣⲟⲩϩⲉ ⲏ ϩⲛⲧⲡⲁϣⲉ ⲛⲧⲉⲩϣⲏ ⲏ ⲙⲡⲛⲁⲩ ⲉⲣⲉⲡ**ⲁⲗⲉⲕⲧⲱⲣ** ⲛⲁⲙⲟⲩⲧⲉ ⲏ ⲙⲡⲛⲁⲩ ⲛϩⲧⲟⲟⲩⲉ",
+      "english": "Watch therefore, for you don&apos;t know when the lord of the house is coming, whether at evening, or at midnight, or when the rooster crows, or in the morning;",
+      "source": "41_Mark_13",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲁϥ ⲛⲁϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ϫⲉⲛⲑⲟⲕ ⲙⲫⲟⲟⲩ ϧⲉⲛⲡⲁⲓⲉϫⲱⲣϩ ⲙⲡⲁⲧⲉⲟⲩ**ⲁⲗⲉⲕⲧⲱⲣ** ⲙⲟⲩϯ ⲛⲥⲟⲡ ⲃ ⲭⲛⲁϫⲟⲗⲧ ⲉⲃⲟⲗ ⲛⲅ ⲛⲥⲟⲡ .",
+      "english": "Jesus said to him, 'Most certainly I tell you, that you today, even this night, before the rooster crows twice, you will deny me three times.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ⲛⲁⲩ ϫⲉϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ϫⲉⲛⲧⲟⲕ ⲙⲡⲟⲟⲩ ϩⲛⲧⲉⲓⲟⲩϣⲏ ⲉⲙⲡⲁⲧⲉⲟⲩ**ⲁⲗⲉⲕⲧⲱⲣ** ⲙⲟⲩⲧⲉ ⲛⲥⲉⲡⲥⲛⲁⲩ ⲕⲛⲁⲁⲡⲁⲣⲛⲁ ⲙⲙⲟⲓ ⲛϣⲟⲙⲛⲧⲥⲱⲱⲡ",
+      "english": "Jesus said to him, &apos;Most certainly I tell you, that you today, even this night, before the rooster crows twice, you will deny me three times.&apos;",
+      "source": "41_Mark_14",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲩϯ",
+        30,
+        21.194
+      ],
+      [
+        "ⲙⲡⲁⲧⲉ",
+        7,
+        18.417
+      ],
+      [
+        "ⲙⲁϩⲥⲟⲡⲃ",
+        1,
+        15.695
+      ],
+      [
+        "ⲉϫⲱⲣϩ",
+        5,
+        14.847
+      ],
+      [
+        "ⲛⲥⲟⲡⲃ",
+        1,
+        14.11
+      ],
+      [
+        "ϫⲟⲗⲧ",
+        1,
+        14.11
+      ],
+      [
+        "ϫⲟⲗ",
+        2,
+        12.967
+      ],
+      [
+        "ⲭ",
+        4,
+        12.629
+      ],
+      [
+        "ⲙⲁϩⲥⲟⲡ",
+        1,
+        12.236
+      ],
+      [
+        "ⲟⲩ",
+        14,
+        12.176
+      ],
+      [
+        "ⲥⲟⲡ",
+        3,
+        11.926
+      ],
+      [
+        "ⲓⲉ",
+        4,
+        11.706
+      ],
+      [
+        "ⲃ",
+        3,
+        11.464
+      ],
+      [
+        "ⲟⲟⲩ",
+        2,
+        11.179
+      ],
+      [
+        "ⲥⲁⲧⲟⲧ",
+        2,
+        11.002
+      ],
+      [
+        "ϫⲉ",
+        6,
+        9.892
+      ],
+      [
+        "ⲡⲁⲓ",
+        3,
+        9.388
+      ],
+      [
+        "ⲛⲛⲉ",
+        2,
+        8.972
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        8.92
+      ],
+      [
+        "ϥ",
+        7,
+        8.846
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲟⲩⲧⲉ",
+        16,
+        18.511
+      ],
+      [
+        "ⲙⲡⲁⲧⲉ",
+        7,
+        18.274
+      ],
+      [
+        "ⲥⲉⲡ",
+        4,
+        17.556
+      ],
+      [
+        "ⲙⲉϩⲥⲉⲡⲥⲛⲁⲩ",
+        2,
+        16.051
+      ],
+      [
+        "ⲁⲡⲁⲣⲛⲁ",
+        2,
+        15.703
+      ],
+      [
+        "ⲟⲩϣⲏ",
+        3,
+        13.614
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        4,
+        12.833
+      ],
+      [
+        "ⲛⲟϣⲡ",
+        1,
+        12.511
+      ],
+      [
+        "ⲡ",
+        13,
+        11.511
+      ],
+      [
+        "ⲕ",
+        7,
+        11.187
+      ],
+      [
+        "ⲟⲩ",
+        9,
+        10.642
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        2,
+        10.405
+      ],
+      [
+        "ⲛ",
+        11,
+        10.1
+      ],
+      [
+        "ϫⲉ",
+        6,
+        9.814
+      ],
+      [
+        "ⲧⲃⲛⲏ",
+        1,
+        9.716
+      ],
+      [
+        ".",
+        5,
+        9.436
+      ],
+      [
+        "ⲁ",
+        7,
+        9.379
+      ],
+      [
+        "ⲉ",
+        7,
+        9.152
+      ],
+      [
+        "ⲙ",
+        6,
+        9.019
+      ],
+      [
+        "ϥ",
+        7,
+        8.856
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          12
+        ],
+        [
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          16
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲉⲕⲧⲱⲣ",
+          2
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲁϩⲥⲟⲡ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲃ_4_post_ⲙⲁϩⲥⲟⲡ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲥⲟⲡⲃ_3_post_ⲫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          "ⲙ_1_post_ⲁⲗⲉⲕⲧⲱⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲫ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲙⲁϩⲥⲟⲡ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲙⲁϩⲥⲟⲡ_3_post_ⲫ",
+          "ⲃ_4_post_ⲙⲁϩⲥⲟⲡ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲙⲁϩⲥⲟⲡⲃ_3_post_ⲫ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          4
+        ],
+        [
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          9
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲩϭⲓⲉ",
+          1
+        ],
+        [
+          "ⲟⲩϭⲓⲉ_1_post_ⲁⲗⲉⲕⲧⲱⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲗⲉⲕⲧⲱⲣ",
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲉⲕⲧⲱⲣ_0_node",
+          "ⲁⲩⲱ_2_post_ⲟⲩϭⲓⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲩϭⲓⲉ",
+          "ⲟⲩϭⲓⲉ_1_post_ⲁⲗⲉⲕⲧⲱⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.19,
+      "rank": 1667,
+      "count": 16
+    },
+    "S": {
+      "rate": 0.11,
+      "rank": 2415,
+      "count": 17
+    }
+  },
+  "etym": {
+    "grl_ID": "85",
+    "grl_lemma": "ἀλέκτωρ",
+    "grl_meaning": "cock, rooster",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 62b, Preisigke 1:53"
+  }
+}

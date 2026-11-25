@@ -1,0 +1,618 @@
+{
+  "id": "C3103",
+  "forms": [
+    {
+      "id": "CF8080",
+      "orth": "ⲣⲙⲙⲁⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.05,
+        "rank": 698,
+        "count": 165
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3553",
+      "bibliography": "CD 296a; CED 137; KoptHWb 164; DELC 154; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲏ ⲇⲉ ⲛⲉⲟⲩ**ⲣⲙⲙⲁⲟ** ⲧⲉ ⲉⲙⲁⲧⲉ ·",
+      "english": "and she was exceedingly rich.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϭⲙⲡϣⲓⲛⲉ ⲙⲡⲕⲁϩ ⲁϥⲧⲣⲉϥϯϩⲉ ⲁϥⲧⲁϣⲉ ⲁⲁϥ ⲛ**ⲣⲙⲙⲁⲟ** ·",
+      "english": "He hath visited the earth, He hath made it to produce food, He hath multiplied the riches [thereof] in great abundance.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉϥϯϩⲧⲏϥ ⲉⲛⲉⲧϥϫⲡⲟ ⲙⲙⲟⲟⲩ ⲛϭⲓⲡ**ⲣⲙⲙⲁⲟ** : ⲛⲁⲓ ⲉⲧϥⲙⲉⲉⲩⲉ ⲉⲛⲇⲱⲣⲟⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ · ϫⲉⲙⲏⲧⲓ ⲁϥϫⲓ ⲡϩⲏⲕⲉ ⲛϭⲟⲛⲥ · ⲙⲏⲧⲓ ⲁϥⲥⲓⲁⲍⲉ ⲙⲡϭⲱⲃ ⲉⲣⲟϥ · ⲙⲏⲧⲓ ⲁϥⲡⲗⲉⲟⲛⲉⲕⲧⲉ ⲙⲡⲉⲧϩⲁⲣⲁⲧϥ · ⲉϥⲭⲣⲱ ⲛⲟⲩⲉⲝⲟⲩⲥⲓⲁ · ⲉⲡⲙⲁ ⲛⲟⲩⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ·",
+      "english": "Let the rich man consider most carefully concerning the things which he hath gotten, and among which he considereth the gifts of God to be, whether he hath acted unjustly towards the poor man, or whether he hath taken advantage of his weakness, or whether he hath claimed more than his share of that which belongeth to him, (or whether) he hath employed force (in his dealing with him) instead of righteousness.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        223,
+        19.845
+      ],
+      [
+        "ϩⲏⲕⲉ",
+        22,
+        18.048
+      ],
+      [
+        "ⲡⲉ",
+        69,
+        17.467
+      ],
+      [
+        "ⲟⲩ",
+        85,
+        17.082
+      ],
+      [
+        "ⲧⲱⲡ",
+        4,
+        16.647
+      ],
+      [
+        "ⲉ",
+        78,
+        16.307
+      ],
+      [
+        "ⲡ",
+        74,
+        15.759
+      ],
+      [
+        "ⲡⲣⲟⲫⲁⲥⲓⲥ",
+        2,
+        15.232
+      ],
+      [
+        "ⲁⲣⲓⲙⲁⲑⲁⲓⲟⲥ",
+        2,
+        15.232
+      ],
+      [
+        "ⲙⲛ",
+        39,
+        15.134
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        13,
+        14.7
+      ],
+      [
+        "ⲁ",
+        48,
+        14.433
+      ],
+      [
+        "ϩⲟⲩⲉ",
+        5,
+        14.416
+      ],
+      [
+        "ϥ",
+        53,
+        14.339
+      ],
+      [
+        "ⲧⲁϣⲉ",
+        5,
+        14.339
+      ],
+      [
+        "ϩⲛ",
+        31,
+        13.975
+      ],
+      [
+        "ⲣⲉϥϫⲓϭⲟⲗ",
+        3,
+        13.665
+      ],
+      [
+        "ⲃⲟⲩⲗⲉⲩⲧⲏⲥ",
+        2,
+        13.647
+      ],
+      [
+        "ⲩ",
+        33,
+        13.577
+      ],
+      [
+        "ⲛⲉⲓⲛⲉⲩⲏ",
+        1,
+        13.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          88
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          12
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲙⲙⲁⲟ",
+          7
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          13
+        ],
+        [
+          "ⲏ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          3
+        ],
+        [
+          "ⲃⲟⲩⲗⲉⲩⲧⲏⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲧⲕ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲙⲙⲁⲟ",
+          3
+        ],
+        [
+          "ⲛ_3_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_7_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_9_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ⲣⲟⲩⲁϩⲉⲓⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲙⲙⲁⲟ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲉ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲟⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲕⲁⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          9
+        ],
+        [
+          "ⲏ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲃⲟⲩⲗⲉⲩⲧⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲕ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ⲕⲁⲧⲁ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲡ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲧⲁ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ϩⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲟⲩⲟⲛϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲇⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲙⲙⲁⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛ_3_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛ_5_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛ_7_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_7_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛ_9_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_9_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲣⲙⲙⲁⲟ_0_node",
+          2
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ⲉⲧ_1_post_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          "ⲡⲁⲓ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          "ⲁ_4_post_ⲣⲟⲩⲁϩⲉⲓⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲛⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲣⲙⲙⲁⲟ_0_node",
+          "ⲙⲛ_2_post_ϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲏⲕⲉ",
+          "ⲛ_2_post_ϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲏⲕⲉ",
+          "ϩⲏⲕⲉ_1_post_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ϩⲏⲕⲉ_1_post_ⲣⲙⲙⲁⲟ",
+          "ⲛ_2_post_ϩⲟⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          2
+        ],
+        [
+          "ⲕⲁⲛ_1_pre_ⲣⲙⲙⲁⲟ",
+          "ⲟⲩ_1_pre_ⲣⲙⲙⲁⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲙⲙⲁⲟ",
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.04,
+      "rank": 603,
+      "count": 165
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2734",
+      "type": "cf",
+      "label": "great"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ],
+  "etym": {
+    "egy_num": "94600",
+    "egy_lemma": "rmṯ-ꜥꜣ",
+    "demo_num": "d3500",
+    "demo_lemma": "rmṯ-ꜥꜣ",
+    "english": "notable(s)",
+    "german": "Reicher",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94600",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3500"
+  }
+}

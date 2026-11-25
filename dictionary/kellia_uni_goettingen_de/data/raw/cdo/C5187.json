@@ -1,0 +1,75 @@
+{
+  "id": "C5187",
+  "forms": [
+    {
+      "id": "CF31897",
+      "orth": "ⲥⲁ ⲛⲟⲩⲟⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31896",
+      "orth": "ⲥⲁ ⲛⲟⲩⲟⲟⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5828",
+      "bibliography": "CD 493b; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13000",
+      "type": "cf",
+      "label": "man (woman)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5186",
+      "label": "ⲙⲁ ⲛⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "herb-garden"
+    },
+    {
+      "target": "C5184",
+      "label": "ⲟⲩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "greens, vegetables, herbs"
+    },
+    {
+      "target": "C5185",
+      "label": "ⲟⲩⲟⲧⲉ ⲛⲟⲩⲱⲙ",
+      "pos": "N",
+      "gloss": "edible herbs"
+    },
+    {
+      "target": "C5188",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "V",
+      "gloss": "be/become green, be/become pallid"
+    },
+    {
+      "target": "C5189",
+      "label": "ⲟⲩⲟⲧⲟⲩⲉⲧ",
+      "pos": "N",
+      "gloss": "greenness, herbs, pallor"
+    },
+    {
+      "target": "C5183",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "V",
+      "gloss": "be raw, be fresh, be green; be/make soft"
+    }
+  ]
+}

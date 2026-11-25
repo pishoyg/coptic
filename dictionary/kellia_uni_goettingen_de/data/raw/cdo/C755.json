@@ -1,0 +1,213 @@
+{
+  "id": "C755",
+  "forms": [
+    {
+      "id": "CF2814",
+      "orth": "ⲉⲟⲩⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4640,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS897",
+      "bibliography": "CD 62b; CED 40; KoptHWb 42; DELC 48; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉⲛⲧⲁϥⲙⲉⲉⲩⲉ ⲛϩⲏⲧⲧⲏⲩⲧⲛ ϫⲉⲧⲉⲧⲛⲛⲁϯⲛⲉⲧⲛϭⲱⲙ ⲛ**ⲉⲟⲩⲱ** ⲛⲧⲉϩⲉⲛⲕⲟⲟⲩⲉ ϫⲟⲟⲗⲟⲩ ⲛⲁⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GL 283-284",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgl:145-147",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕϫⲓⲧ ⲛ**ⲉⲟⲩⲱ** ⲛⲛⲉⲕⲥⲛⲏⲩ ⲉⲡϫⲓⲛϫⲏ ⲁⲕϥⲓ ⲇⲉ ⲛⲧϩⲃⲥⲱ ⲛⲛⲉⲧⲕⲏⲕ ⲁϩⲏⲩ",
+      "english": "And thou hast taken security of thy brethren for nothing, and hast taken away the clothing of the naked.",
+      "source": "Job 22",
+      "urn": "urn:cts:copticLit:ot.job.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϥⲓ ⲡⲉⲓⲱ ⲙⲡⲟⲣⲫⲁⲛⲟⲥ ⲁⲩϫⲓⲧⲉϩⲉ ⲛⲧⲉⲭⲏⲣⲁ ⲛ**ⲉⲟⲩⲱ**",
+      "english": "They have led away, the ass of the fatherless, and taken the widow's ox for a pledge.",
+      "source": "Job 24",
+      "urn": "urn:cts:copticLit:ot.job.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲟⲗ",
+        1,
+        16.013
+      ],
+      [
+        "ϭⲱⲙ",
+        1,
+        13.258
+      ],
+      [
+        "ⲭⲏⲣⲁ",
+        1,
+        11.232
+      ],
+      [
+        "ⲛ",
+        10,
+        11.19
+      ],
+      [
+        "ⲕⲧⲉ",
+        1,
+        10.853
+      ],
+      [
+        "ϩⲓⲧⲟⲩⲱ",
+        1,
+        9.915
+      ],
+      [
+        "ϯ",
+        3,
+        9.686
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        9.47
+      ],
+      [
+        "ⲕ",
+        3,
+        9.022
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        8.709
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        8.635
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        8.344
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        8.344
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        8.309
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.204
+      ],
+      [
+        "ϫⲓⲧ",
+        1,
+        8.198
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        7.745
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        7.461
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.202
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲟⲩⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4227,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C760",
+      "label": "ϫⲓ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "take as pledge"
+    },
+    {
+      "target": "C756",
+      "label": "ϯ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "give as pledge"
+    },
+    {
+      "target": "C759",
+      "label": "ⲕⲁⲉⲟⲩⲱ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "curse"
+    },
+    {
+      "target": "C758",
+      "label": "ⲕⲱ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    },
+    {
+      "target": "C757",
+      "label": "ⲟⲩⲱϩ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    }
+  ],
+  "etym": {
+    "egy_num": "22230",
+    "egy_lemma": "jwꜣ.yt",
+    "demo_num": "d392",
+    "demo_lemma": "ı ͗wj.t",
+    "english": "helper",
+    "german": "Ersatzarbeiterin; Helferin",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/22230",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d392"
+  }
+}

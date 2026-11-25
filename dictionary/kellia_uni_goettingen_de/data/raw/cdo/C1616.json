@@ -1,0 +1,353 @@
+{
+  "id": "C1616",
+  "forms": [
+    {
+      "id": "CF4697",
+      "orth": "ⲗⲱⲕⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4267,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF4698",
+      "orth": "ⲗⲱϭⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4699",
+      "orth": "ⲗⲟⲩⲝ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14558,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1879",
+      "bibliography": "CD 140a; KoptHWb 77; ChLCS 21b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲓⲉⲓⲣⲏⲛⲏ ⲥⲛⲁϣⲱⲡⲉ ⲉⲣϣⲁⲛⲡⲁⲥⲥⲩⲣⲓⲟⲥ ⲉⲓ ⲉϫⲙⲡⲉⲧⲛⲕⲁϩ ⲁⲩⲱ ⲉϥϣⲁⲛⲟⲩⲉϩ ⲣⲁⲧϥ ⲉϫⲛⲧⲉⲧⲛⲭⲱⲣⲁ ⲟⲩⲛ ⲥⲁϣϥ ⲛϣⲱⲥ ⲛⲁⲧⲱⲟⲩⲛ ⲉϫⲱϥ ⲁⲩⲱ ϣⲙⲟⲩⲛ ⲛ**ⲗⲱⲕⲥ**",
+      "english": "And the Lord shall stand, and see, and feed his flock with power, and they shall dwell in the glory of the name of the Lord their God: for now shall they be magnified to the ends of the earth.",
+      "source": "Micah 5",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲱⲧ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲃⲉ ⲛⲧϩⲉ ⲙⲡⲉⲧⲡⲏⲧ ϩⲏⲧϥ ⲛⲟⲩϩⲟϥ ⲉϥϣⲁⲛϯ ⲙⲡⲉⲕⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ϥⲛⲁ**ⲗⲟⲕⲥ**ⲕ ϩⲛⲛⲁϫϩⲉ ⲙⲙⲟⲩⲓ ⲛⲉ ⲛⲉϥⲛⲁϫϩⲉ",
+      "english": "Flee from sin as from the face of a serpent: for if thou comest too near it, it will bite thee: the teeth thereof are as the teeth of a lion, slaying the souls of men.",
+      "source": "Sirach 21",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϩⲟϥ **ⲗⲟⲕⲥ** ϩⲛⲟⲩⲕⲁⲥⲕⲥ ⲙⲛϩⲟⲩⲟ ϣⲟⲟⲡ ⲙⲡⲣⲉϥⲙⲟⲩⲧⲉ",
+      "english": "If a serpent bite when there is no charmer's whisper, then there is no advantage to the charmer.",
+      "source": "Ecclesiastes 10",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲙⲟⲩⲟⲩⲧ",
+        1,
+        15.791
+      ],
+      [
+        "...",
+        4,
+        12.497
+      ],
+      [
+        "ϣⲙⲟⲩⲛ",
+        1,
+        11.331
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        3,
+        10.872
+      ],
+      [
+        "ⲟϩⲉ",
+        1,
+        10.581
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        9.835
+      ],
+      [
+        "ⲑⲏⲣⲓⲟⲛ",
+        1,
+        9.339
+      ],
+      [
+        "ϩⲓ",
+        2,
+        8.424
+      ],
+      [
+        "ⲙⲙⲟ",
+        3,
+        7.928
+      ],
+      [
+        "ⲙⲟⲟⲩⲧ",
+        1,
+        7.706
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        7.273
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        7.088
+      ],
+      [
+        "ⲉ",
+        4,
+        7.01
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        6.789
+      ],
+      [
+        "ⲩ",
+        3,
+        6.757
+      ],
+      [
+        "ϥ",
+        4,
+        6.714
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        6.523
+      ],
+      [
+        "ⲛ",
+        4,
+        6.002
+      ],
+      [
+        "ⲁ",
+        3,
+        5.992
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        5.924
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲗⲱⲕⲥ_0_node",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲱⲕⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_5_post_ⲉⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲱⲕⲥ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲱⲕⲥ",
+          "ϣⲙⲟⲩⲛ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_1_pre_ⲗⲱⲕⲥ",
+          "ⲗⲱⲕⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲗⲱⲕⲥ",
+          "ⲩ_1_pre_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲱⲕⲥ",
+          "ⲗⲱⲕⲥ_0_node",
+          2
+        ],
+        [
+          "ⲗⲱⲕⲥ_0_node",
+          "ⲉ_1_post_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲱⲕⲥ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲱⲕⲥ",
+          "ⲗⲱⲕⲥ_0_node",
+          1
+        ],
+        [
+          "ⲗⲱⲕⲥ_0_node",
+          "ϩⲓ_1_post_ⲗⲱⲕⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲗⲱⲕⲥ",
+          "ⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲓ",
+          "ⲟϩⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_3_post_ⲟⲩ",
+          "ϩⲓ_5_post_ⲉⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲗⲱⲕⲥ_0_node",
+          "ⲙⲙⲟ_1_post_ⲗⲱⲕⲥ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲱⲕⲥ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲱⲕⲥ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2644,
+      "count": 14
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1617",
+      "label": "ϣⲉ ⲛⲗⲟⲩⲝ",
+      "pos": "N",
+      "gloss": "piercing wood"
+    },
+    {
+      "target": "C1615",
+      "label": "ϣⲥⲛⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "piercing blow, stab"
+    },
+    {
+      "target": "C1612",
+      "label": "ⲗⲱⲕⲥ",
+      "pos": "V",
+      "gloss": "bite, pierce"
+    },
+    {
+      "target": "C1613",
+      "label": "ⲗⲱⲕⲥ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "bite, snap at"
+    },
+    {
+      "target": "C1614",
+      "label": "ⲣⲉϥⲗⲱⲕⲥ",
+      "pos": "N",
+      "gloss": "biter"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "C10641",
+  "forms": [
+    {
+      "id": "CF28783",
+      "orth": "ⲥⲩⲛⲫⲱⲛⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28784",
+      "orth": "ⲥⲩⲙⲫⲱⲛⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19728,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14517",
+      "bibliography": "DDGLC",
+      "cu_ID": "10214"
+    },
+    {
+      "id": "CS14518",
+      "bibliography": "DDGLC",
+      "cu_ID": "6709"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϣ ⲇⲉ ⲧⲉ ⲧ**ⲥⲩⲙⲫⲱⲛⲏⲥⲓⲥ** ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲃⲉⲗⲓⲁⲣ . ⲁϣ ⲇⲉ ⲧⲉ ⲧⲙⲉⲣⲓⲥ ⲛⲟⲩⲡⲓⲥⲧⲟⲥ ⲙⲛⲟⲩⲁⲡⲓⲥⲧⲟⲥ .",
+      "english": "What agreement has Christ with Belial? Or what portion has a believer with an unbeliever?",
+      "source": "47_2 Corinthians_6",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3069",
+    "grl_lemma": "συμφώνησις",
+    "grl_meaning": "agreement",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1689b"
+  }
+}

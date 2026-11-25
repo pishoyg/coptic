@@ -1,0 +1,144 @@
+{
+  "id": "C6846",
+  "forms": [
+    {
+      "id": "CF15741",
+      "orth": "ϩⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20832,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 5012,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲉⲥ",
+      "dialect": "F",
+      "id": "934.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7562",
+      "bibliography": "CD 709a-b; CED 296; KoptHWb 391; DELC 313a; ChLCS 95a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲣⲉⲡⲕⲁⲣⲡⲟⲥ ⲡⲱϩ ⲁϥⲉⲓ ϩⲛⲟⲩϭⲉⲡⲏ ⲉⲡⲉϥⲁⲥϩ ϩⲛⲧⲉϥϭⲓϫ ⲁϥ**ϩⲁⲥ**ϥ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        9.974
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϩⲁⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ϩⲁⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϩⲁⲥ",
+          "ϥ_1_pre_ϩⲁⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲁⲥ",
+          "ϩⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲥ_0_node",
+          "ϥ_1_post_ϩⲁⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20435,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "109370",
+    "egy_lemma": "ḥs",
+    "demo_num": "d4264",
+    "demo_lemma": "ḥs",
+    "english": "excrement",
+    "german": "Exkremente, Kot",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/109370",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4264"
+  }
+}

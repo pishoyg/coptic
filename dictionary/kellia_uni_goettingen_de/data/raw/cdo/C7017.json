@@ -1,0 +1,471 @@
+{
+  "id": "C7017",
+  "forms": [
+    {
+      "id": "CF16091",
+      "orth": "ϩⲱϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 3006,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϩⲱⲃⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4765,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲟϥⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7988,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲉϥⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20352,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟⲃⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7987,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7738",
+      "bibliography": "CD 741a-b; CED 306; KoptHWb 406; DELC 319b; ChLCS 99a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲕϥⲓⲣⲟⲟⲩϣ ϩⲁⲡϩⲏⲕⲉ ⲱ ⲡⲉⲡⲣⲟⲇⲟⲧⲏⲥ ⲁϩⲣⲟⲕ ⲕ**ϩⲱϥⲧ** ⲛⲛⲉⲩⲛⲕⲁ ϩⲙⲡⲉⲕⲗⲟⲥⲟⲅⲟⲙⲱⲛ ·",
+      "english": "If thou didst care for the poor, O betrayer, why didst thou steal their property from the coffer of the treasury?",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲉϥϫⲓⲟⲩⲉ ⲙⲉϥⲉⲓ ⲉⲧⲃⲉⲗⲁⲁⲩ . ⲉⲓ ⲙⲏⲧⲓ ϫⲉⲕⲁⲁⲥ ⲉϥⲉ**ϩⲱϥⲧ** ⲁⲩⲱ ⲛϥϣⲱⲱⲧ ⲁⲩⲱ ⲛϥⲧⲁⲕⲟ . ⲁⲛⲟⲕ ⲛⲧⲁⲓⲉⲓ ϫⲉⲕⲁⲁⲥ ⲉⲩⲉϫⲓ ⲛⲟⲩⲱⲛⲁϩ ⲁⲩⲱ ⲛⲥⲉϫⲓ ⲟⲩϩⲟⲩⲟ .",
+      "english": "The thief only comes to steal, kill, and destroy. I came that they may have life, and may have it abundantly.",
+      "source": "43_John_10",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁϥϫⲉ ⲡⲁⲓ ⲇⲉ . ⲉⲃⲟⲗ ⲁⲛ ϫⲉⲡⲉϥⲣⲟⲟⲩϣ ⲡⲉ ⲉⲧⲃⲉⲛϩⲏⲕⲉ . ⲁⲗⲗⲁ ϫⲉⲛⲉⲩⲣⲉϥϫⲓⲟⲩⲉ ⲡⲉ ⲁⲩⲱ ⲉⲣⲉⲡⲉⲅⲗⲱⲥ ⲥⲟⲕⲟⲙⲟⲛ ⲛⲧⲟⲟⲧϥ ⲛⲉϥ**ϩⲱϥⲧ** ⲛⲛⲉⲧⲟⲩⲛⲟⲩ ϫⲉⲙⲙⲟⲟⲩ ⲉⲣⲟϥ .",
+      "english": "Now he said this, not because he cared for the poor, but because he was a thief, and having the money box, used to steal what was put into it.",
+      "source": "43_John_12",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱϥⲧ",
+        2,
+        15.884
+      ],
+      [
+        "ϩⲱⲧⲃ",
+        3,
+        14.266
+      ],
+      [
+        "ⲛ",
+        26,
+        14.003
+      ],
+      [
+        "ⲡⲣⲟⲇⲟⲧⲏⲥ",
+        1,
+        13.884
+      ],
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        3,
+        13.024
+      ],
+      [
+        "ⲣⲛⲟⲉⲓⲕ",
+        1,
+        12.232
+      ],
+      [
+        "ⲥⲡⲟⲩⲇⲁⲍⲉ",
+        1,
+        11.562
+      ],
+      [
+        "ⲙⲏⲧⲓ",
+        1,
+        11.232
+      ],
+      [
+        "ⲙⲡⲣ",
+        3,
+        10.884
+      ],
+      [
+        "ⲟⲩⲁ",
+        3,
+        10.177
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        2,
+        9.987
+      ],
+      [
+        "ⲕ",
+        5,
+        9.911
+      ],
+      [
+        "ⲡⲣⲟⲥⲫⲟⲣⲁ",
+        1,
+        9.91
+      ],
+      [
+        "ⲁϩⲣⲟ",
+        1,
+        9.821
+      ],
+      [
+        "ⲟⲩⲛⲟⲩ",
+        1,
+        9.76
+      ],
+      [
+        "ⲛⲟⲩϫ",
+        1,
+        9.572
+      ],
+      [
+        "ⲡⲟⲛⲏⲣⲟⲥ",
+        1,
+        9.562
+      ],
+      [
+        "ⲛⲕⲁ",
+        1,
+        9.531
+      ],
+      [
+        "ⲛⲛⲉ",
+        2,
+        9.507
+      ],
+      [
+        "ϫⲓⲛ",
+        2,
+        9.345
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ϩⲱϥⲧ_0_node",
+          8
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_5_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲫⲟⲣⲁ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲡⲣⲟⲥⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲡⲁ_6_post_ⲙⲁⲣⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲱϥⲧ",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱϥⲧ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲱϥⲧ",
+          "ϩⲱϥⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲱϥⲧ_0_node",
+          "ⲁⲩⲱ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲏⲧ",
+          "ϩⲏⲧ_1_post_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϩⲱϥⲧ",
+          "ⲥ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϩⲏⲧ",
+          "ⲛ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲏⲧ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱϥⲧ",
+          "ϩⲱϥⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲱϥⲧ_0_node",
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲟⲩ_5_post_ⲛⲟⲩϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲡⲣⲟⲥⲫⲟⲣⲁ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲫⲟⲣⲁ_3_post_ⲧⲉ",
+          "ⲙ_4_post_ⲡⲣⲟⲥⲫⲟⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲡⲣⲟⲥⲫⲟⲣⲁ",
+          "ⲡⲁ_6_post_ⲙⲁⲣⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲱϥⲧ",
+          "ⲧⲉⲛ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲱϥⲧ",
+          "ⲛⲁ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱϥⲧ",
+          "ϩⲱϥⲧ_0_node",
+          2
+        ],
+        [
+          "ϩⲱϥⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϩⲱϥⲧ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          "ⲟⲩⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_2_post_ⲛ",
+          "ⲛ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁ",
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϩⲱϥⲧ",
+          "ⲉⲣϣⲁⲛ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ϩⲱϥⲧ",
+          "ⲟⲩⲁ_1_pre_ϩⲱϥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ϩⲱϥⲧ",
+          "ϩⲱϥⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱϥⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2573,
+      "count": 15
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7018",
+      "label": "ϩⲱϥⲧ",
+      "pos": "N",
+      "gloss": "theft"
+    },
+    {
+      "target": "C7019",
+      "label": "ⲣⲉϥϩⲱϥⲧ",
+      "pos": "N",
+      "gloss": "thief"
+    }
+  ],
+  "etym": {
+    "egy_num": "103270",
+    "egy_lemma": "ḥwtf",
+    "demo_num": "d4052",
+    "demo_lemma": "ḥft",
+    "english": "to rob; to plunder",
+    "german": "berauben; rauben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/103270",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4052"
+  }
+}

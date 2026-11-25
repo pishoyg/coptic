@@ -1,0 +1,58 @@
+{
+  "id": "C234",
+  "forms": [
+    {
+      "id": "CF935",
+      "orth": "ⲙⲛⲧⲁⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12619,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF936",
+      "orth": "ⲙⲉⲧⲁⲧ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Negativpräfix zur Bildung von Substantiven f.",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS262",
+      "bibliography": "CD 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲓ**ⲙⲛⲧⲁⲧ** ⲛⲟⲩⲧⲉ ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲡⲣⲓⲙⲉ ⲙⲛⲛϫⲁϩϫϩ ⲛⲛⲛⲟⲃϩⲉ ·",
+      "english": "“Say unto them: Renounce atheism, that ye may be worthy of the mysteries of the Light and be saved from the howling and grinding of teeth.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C233",
+      "label": "ⲁⲧ-",
+      "pos": "N",
+      "gloss": "without"
+    }
+  ]
+}

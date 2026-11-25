@@ -1,0 +1,456 @@
+{
+  "id": "C9664",
+  "forms": [
+    {
+      "id": "CF24764",
+      "orth": "ⲗⲟⲩⲧⲏⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF24765",
+      "orth": "ⲗⲟⲩⲧⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4190,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12420",
+      "bibliography": "DDGLC",
+      "cu_ID": "8855"
+    },
+    {
+      "id": "CS12421",
+      "bibliography": "DDGLC",
+      "cu_ID": "10343"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲁϥⲧⲣⲉⲩⲉⲓⲛⲉ ⲛⲁϥ ⲛⲟⲩⲕⲟⲩⲓ ⲙⲙⲟⲟⲩ · ϩⲙⲡ**ⲗⲟⲩⲧⲏⲣ** ⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ·",
+      "english": "And afterwards he made them bring unto him a little water in the vessel from the altar,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϯ ⲙⲡⲙⲟⲟⲩ ⲙⲡⲉϥⲉⲓⲱⲧ · ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ · ϫⲉϫⲓ ⲙⲡⲉⲕϣⲏⲣⲉ · ⲛⲅⲃⲱⲕ ⲉⲡⲉⲕⲏⲓ · ⲛⲅⲧⲥⲟⲟϥ ⲉⲃⲟⲗ ϩⲛⲛⲉⲓⲙⲟⲟⲩ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲧⲁⲓⲧⲁⲁⲩ ⲛⲁⲕ ⲉⲃⲟⲗ ϩⲙⲡ**ⲗⲟⲩⲧⲏⲣ** ⲙⲡⲥⲱⲟⲩϩ ⲛⲅⲡⲓⲥⲉⲩⲉ ⲉⲡⲭⲣⲓⲥⲧⲟⲥ ⲁⲩⲱ ϥⲛⲁⲧⲁⲗϭⲟϥ ·",
+      "english": "And he gave some of the water to his father, saying unto him, 'Take thou thy son, and depart thou to thy house, and thou shalt give him to drink of this water which I have given thee from the laver of the congregation, and thou shalt believe in the Lord, and He shall heal him.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲉϣϫⲉ ⲕⲟⲩⲱϣ ⲉⲗⲟ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓϣⲱⲛⲉ · ⲧⲱⲟⲩⲛ ϩⲛⲟⲩϭⲉⲡⲏ ⲛⲅⲃⲱⲕ ⲉⲡⲙⲁⲣⲧⲏⲣⲓⲟⲛ ⲉⲧϣⲟⲟⲡ ϩⲛϩⲣⲱⲙⲏ · ⲛⲅ ⲇⲉ ⲙⲟⲟⲩ ϩⲙⲡ**ⲗⲟⲩⲧⲏⲣ** ⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ · ⲁⲩⲱ ⲕⲛⲁⲙⲁⲁⲧⲉ ⲙⲡⲧⲁⲗϭⲟ ·",
+      "english": "and he said unto the sick general, 'If thou wishest to be made free of this disease, rise up quickly and depart to the martyrium (of Saint Victor) which is in Rome. Thou shalt drink the water which is in the vessel in the chamber of the altar of sacrifice, and thou shalt find healing.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲁⲥⲓⲥ",
+        4,
+        17.651
+      ],
+      [
+        "ⲛⲉⲙ",
+        8,
+        13.243
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        12.99
+      ],
+      [
+        "ϩⲱⲃⲥ",
+        1,
+        10.8
+      ],
+      [
+        "ⲥⲕⲉⲩⲟⲥ",
+        1,
+        10.391
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        9.771
+      ],
+      [
+        "ⲉⲩⲉ",
+        2,
+        9.335
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.971
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.666
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        6.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.754
+      ],
+      [
+        "ⲙ",
+        1,
+        3.583
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲁⲥⲓⲥ",
+        2,
+        15.703
+      ],
+      [
+        "ⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ",
+        2,
+        12.735
+      ],
+      [
+        "ⲥⲧⲩⲗⲟⲥ",
+        1,
+        12.469
+      ],
+      [
+        "ⲥⲱⲟⲩϩ",
+        2,
+        12.083
+      ],
+      [
+        "ⲙ",
+        9,
+        12.054
+      ],
+      [
+        "ⲥⲕⲉⲩⲏ",
+        1,
+        11.348
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        2,
+        11.267
+      ],
+      [
+        "ⲡ",
+        8,
+        10.69
+      ],
+      [
+        "ϩⲱⲃⲥ",
+        1,
+        10.469
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ϩⲙ",
+        3,
+        9.361
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        9.157
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.592
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.057
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.701
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.137
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        5.94
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        5.275
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.178
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲃⲁⲥⲓⲥ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ_b",
+          "ⲡⲓ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          "ⲛⲉⲙ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲃⲁⲥⲓⲥ",
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          "ⲃⲁⲥⲓⲥ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲡⲓ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          7
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲟⲩϩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ_3_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲃⲁⲥⲓⲥ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲩⲏ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          "ⲙ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲱⲟⲩϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲡ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          "ⲙⲛ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲃⲁⲥⲓⲥ",
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲃⲁⲥⲓⲥ",
+          "ⲃⲁⲥⲓⲥ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲛ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲗⲟⲩⲧⲏⲣ",
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲩⲧⲏⲣ_0_node",
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          "ⲛⲉ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲕⲉⲩⲏ",
+          "ⲥⲕⲉⲩⲏ_1_post_ⲗⲟⲩⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3795,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "1315",
+    "grl_lemma": "λουτήρ",
+    "grl_meaning": "washing or bathing-tub",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1061b"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "id": "C6471",
+  "forms": [
+    {
+      "id": "CF14970",
+      "orth": "ϩⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20099,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲓⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3399,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲓⲕ",
+      "dialect": "A",
+      "id": "2132.2"
+    },
+    {
+      "orth": "ϩⲓⲕ",
+      "dialect": "F",
+      "id": "2132.3"
+    },
+    {
+      "orth": "ϩⲓⲕ",
+      "dialect": "L",
+      "id": "2132.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7181",
+      "bibliography": "CD 661a-b; CED 276; KoptHWb 361; DELC 294a; ChLCS 89a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲟⲩⲙⲉ ⲧⲁⲛⲟⲓ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩϩⲱⲧⲃ ⲙⲛⲛⲉⲩ**ϩⲓⲕ** ⲙⲛⲛⲉⲩⲡⲟⲣⲛⲉⲓⲁ .",
+      "english": "They didn't repent of their murders, nor of their sorceries, nor of their sexual immorality, nor of their thefts.",
+      "source": "66_Revelation_9",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+        2,
+        19.373
+      ],
+      [
+        "ⲁϣⲉⲃⲉⲛ",
+        1,
+        17.373
+      ],
+      [
+        "ϫⲉⲙⲧⲁⲩ",
+        1,
+        17.373
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        7,
+        15.86
+      ],
+      [
+        "ⲫⲁϧⲣⲓ",
+        1,
+        13.566
+      ],
+      [
+        "ⲭⲁⲗⲇⲉⲟⲥ",
+        1,
+        11.069
+      ],
+      [
+        "ⲥⲟⲩⲧⲱⲛ",
+        1,
+        10.419
+      ],
+      [
+        "ϧⲉⲛ",
+        5,
+        10.407
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        10.144
+      ],
+      [
+        "ⲥⲕⲉⲩⲟⲥ",
+        1,
+        10.069
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        9.581
+      ],
+      [
+        "ⲛⲛ",
+        1,
+        9.368
+      ],
+      [
+        "ⲛ",
+        5,
+        9.235
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        8.676
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        8.651
+      ],
+      [
+        "ⲉ",
+        3,
+        7.45
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        7.37
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        6.758
+      ],
+      [
+        "ⲉⲑ",
+        1,
+        6.268
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        1,
+        6.193
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲓⲕ_0_node",
+          5
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19709,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 2995,
+      "count": 5
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6472",
+      "label": "ⲣϩⲓⲕ",
+      "pos": "V",
+      "gloss": "bewitch, enchant"
+    },
+    {
+      "target": "C6473",
+      "label": "ⲣⲉϥⲣϩⲓⲕ",
+      "pos": "N",
+      "gloss": "wizard, enchanter"
+    }
+  ],
+  "etym": {
+    "egy_num": "110660",
+    "egy_lemma": "ḥkꜣ.w",
+    "demo_num": "d3963",
+    "demo_lemma": "ḥjq",
+    "english": "magic; magical power",
+    "german": "Zauber; Zauberkraft",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/110660",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3963"
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "id": "C7721",
+  "forms": [
+    {
+      "id": "CF17507",
+      "orth": "ϭⲙϭⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.82,
+        "rank": 352,
+        "count": 445
+      }
+    },
+    {
+      "orth": "ϫⲉⲙϫⲟⲙ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.25,
+        "rank": 321,
+        "count": 276
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8584",
+      "bibliography": "CD 816b-817a; CED 330; KoptHWb 456; DELC 340b; ChLCS 107b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲧⲱⲛϥ ⲇⲉ ⲉⲃⲟⲗ ⲙⲙⲁⲩ ⲁϥϣⲉ ⲛⲁϥ ⲉⲛⲓⲥⲁ ⲛⲧⲉⲧⲩⲣⲟⲥ ⲛⲉⲙⲧⲥⲓⲇⲱⲛ ⲟⲩⲟϩ ⲉⲧⲁϥϣⲉ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲟⲩⲏⲓ ⲛⲁϥⲟⲩⲱϣ ⲁⲛ ⲡⲉ ⲛⲧⲉϩⲗⲓ ⲉⲙⲓ ⲟⲩⲟϩ ⲙⲡⲉϥϣ**ϫⲉⲙϫⲟⲙ** ⲛⲱⲃϣ",
+      "english": "From there he arose, and went away into the borders of Tyre and Sidon. He entered into a house, and didn't want anyone to know it, but he couldn't escape notice.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲥⲉⲛⲁϣ**ϭⲙϭⲟⲙ** ⲁⲛ ⲉϯⲛⲁⲕ ⲛⲛⲉⲩⲉⲣⲏⲧ ·",
+      "english": "They will not be able to give you their vow.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁϥⲧⲁϫⲣⲏⲟⲩⲧ ⲅⲁⲣ ⲡⲉ ⲛϫⲉⲡⲉϥϩⲏⲧ ⲟⲩⲟϩ ⲙⲡⲉⲥϣ**ϫⲉⲙϫⲟⲙ** ⲛⲉⲣϩⲁⲗ ⲙⲙⲟϥ ⲛϫⲉⲧⲉϥϭⲟⲉⲓⲥ ⲉⲡϭⲱϧⲉⲙ .",
+      "english": "For his heart was steadfast, and his master's wife could not deceive him into defilement.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ ⲁⲥϩⲓⲥⲉ ⲉⲥϣⲱϣⲧ ⲙⲙⲟϥ ⲙⲡⲉⲥϣ**ϭⲙϭⲟⲙ** ⲉⲣⲟϥ",
+      "english": "She labored to stop him, but she was not able to.",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ϩⲱ ⲛⲁⲥⲛⲏⲟⲩ ⲙⲡⲓϣ**ϫⲉⲙϫⲟⲙ** ⲉⲥⲁϫⲓ ⲛⲉⲙⲱⲧⲉⲛ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲡⲛⲁⲧⲓⲕⲱⲥ ⲁⲗⲗⲁ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲥⲁⲣⲕⲓⲕⲱⲥ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲕⲟⲩϫⲓ ⲛⲁⲗⲱⲟⲩⲓ ϧⲉⲛⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Brothers, I couldn't speak to you as to spiritual, but as to fleshly, as to babies in Christ.",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲛⲁ**ϭⲙϭⲟⲙ** ⲉⲟⲩϫⲁⲓ .",
+      "english": "and you will be able to be saved.””",
+      "source": "Apophthegmata Patrum Sahidic 053: Ammona",
+      "urn": "urn:cts:copticLit:ap.53.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉϣ",
+        89,
+        23.388
+      ],
+      [
+        "ⲉ",
+        474,
+        22.686
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        8,
+        20.8
+      ],
+      [
+        "ϣ",
+        53,
+        20.047
+      ],
+      [
+        "ⲉⲣⲟ",
+        128,
+        19.687
+      ],
+      [
+        "ϥ",
+        203,
+        18.72
+      ],
+      [
+        "ⲛ",
+        208,
+        18.113
+      ],
+      [
+        "ⲡ",
+        166,
+        17.825
+      ],
+      [
+        "ⲟⲩ",
+        131,
+        17.523
+      ],
+      [
+        "ⲙⲡ",
+        43,
+        17.213
+      ],
+      [
+        "ⲁ",
+        120,
+        16.967
+      ],
+      [
+        "ⲁⲩⲱ",
+        99,
+        16.838
+      ],
+      [
+        "ⲧⲙⲉϣ",
+        6,
+        16.748
+      ],
+      [
+        ".",
+        78,
+        16.616
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        28,
+        16.589
+      ],
+      [
+        "ⲛϭⲓ",
+        55,
+        16.365
+      ],
+      [
+        "ⲙⲡⲉ",
+        30,
+        16.024
+      ],
+      [
+        "ⲛⲁ",
+        80,
+        15.856
+      ],
+      [
+        "ⲁⲛ",
+        45,
+        15.806
+      ],
+      [
+        "ⲓ",
+        55,
+        15.397
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          49
+        ],
+        [
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          15
+        ],
+        [
+          "ⲁ_1_pre_ϭⲙϭⲟⲙ",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙϭⲟⲙ",
+          5
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          9
+        ],
+        [
+          "ⲅ_1_pre_ϭⲙϭⲟⲙ",
+          5
+        ],
+        [
+          "ⲙⲡ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲉϣ_1_pre_ϭⲙϭⲟⲙ",
+          4
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲙ_1_pre_ϭⲙϭⲟⲙ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϭⲙϭⲟⲙ",
+          8
+        ],
+        [
+          "ϩⲙⲟⲟⲥ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_3_post_ϩⲙⲟⲟⲥ",
+          2
+        ],
+        [
+          "ⲕⲉ_4_post_ⲙⲛ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲙⲡⲁⲧⲉ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ϩⲱⲥⲧⲉ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ϭⲙϭⲟⲙ",
+          6
+        ],
+        [
+          "ϣ_1_pre_ϭⲙϭⲟⲙ",
+          4
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_pre_ϭⲙϭⲟⲙ",
+          4
+        ],
+        [
+          "ϭⲉ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲧⲁⲭⲩ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ϫⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_post_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ϭⲙϭⲟⲙ",
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲅ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲙⲡ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲟⲩ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲉϣ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉϣ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲉ_1_post_ϭⲙϭⲟⲙ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϭⲙϭⲟⲙ",
+          "ϩⲙⲟⲟⲥ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲟⲥ_2_post_ⲉ",
+          "ⲙⲛ_3_post_ϩⲙⲟⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ϩⲙⲟⲟⲥ",
+          "ⲕⲉ_4_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲁⲛⲟⲕ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲙⲡⲁⲧⲉ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲡⲁⲧⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲉϣ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲅⲁⲣ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲧⲉⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲥⲧⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙϭⲟⲙ",
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲧⲙ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ϣ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ϣ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲗⲁⲁⲩ_1_pre_ϭⲙϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲉ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲁⲩ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲉⲣⲟ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϭⲙϭⲟⲙ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲥ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲇⲉ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲙϭⲟⲙ",
+          "ⲛⲁ_1_pre_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϭⲙϭⲟⲙ",
+          "ϭⲙϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲧⲁⲭⲩ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲁⲭⲩ_1_post_ϭⲙϭⲟⲙ",
+          "ⲉ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲙϭⲟⲙ",
+          "ϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲙϭⲟⲙ_0_node",
+          "ⲙⲛ_1_post_ϭⲙϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ϭⲙϭⲟⲙ",
+          "ⲡ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.8,
+      "rank": 295,
+      "count": 445
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7750",
+      "type": "cf",
+      "label": "find"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7722",
+      "label": "ϣϭⲙϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find strength, be able (to do)"
+    },
+    {
+      "target": "C7719",
+      "label": "ϩⲉϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find power"
+    },
+    {
+      "target": "C7720",
+      "label": "ϭⲓϭⲟⲙ",
+      "pos": "V",
+      "gloss": "get strength"
+    },
+    {
+      "target": "C7706",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "power, strength, might, authority"
+    },
+    {
+      "target": "C7707",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerful, mighty, strong"
+    },
+    {
+      "target": "C7714",
+      "label": "ϯϭⲟⲙ",
+      "pos": "V",
+      "gloss": "give power"
+    },
+    {
+      "target": "C7708",
+      "label": "ⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerless, unable"
+    },
+    {
+      "target": "C7712",
+      "label": "ⲕⲁϭⲟⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "abandon strength, lose strength"
+    },
+    {
+      "target": "C7718",
+      "label": "ⲙⲙⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7717",
+      "label": "ⲙⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7709",
+      "label": "ⲙⲛⲧⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "impotence, incapacity, powerlessness, inability"
+    },
+    {
+      "target": "C7716",
+      "label": "ⲟⲩⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7715",
+      "label": "ⲟⲩⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7713",
+      "label": "ⲣϭⲟⲙ",
+      "pos": "V",
+      "gloss": "exercise power, do mighty deeds; do wonders"
+    },
+    {
+      "target": "C7710",
+      "label": "ⲣⲁⲧϭⲟⲙ",
+      "pos": "V",
+      "gloss": "lack strength, to be unable, impossible"
+    },
+    {
+      "target": "C7711",
+      "label": "ⲣⲙⲛϭⲟⲙ",
+      "pos": "N",
+      "gloss": "mighty man, ruler"
+    }
+  ]
+}

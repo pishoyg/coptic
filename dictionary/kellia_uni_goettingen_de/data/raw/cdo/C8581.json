@@ -1,0 +1,46 @@
+{
+  "id": "C8581",
+  "forms": [
+    {
+      "id": "CF20211",
+      "orth": "ⲃⲁⲗⲁⲧ",
+      "dialect": null
+    },
+    {
+      "id": "CF20212",
+      "orth": "ⲃⲁⲗⲁⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20213",
+      "orth": "ⲃⲁⲗⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7545,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10101",
+      "bibliography": "DDGLC",
+      "cu_ID": "2040"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3001",
+    "grl_lemma": "μηλωτή",
+    "grl_meaning": "sheepskin, any rough woolly skin",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1127b; Preisigke 2:99; Lampe 868a"
+  }
+}

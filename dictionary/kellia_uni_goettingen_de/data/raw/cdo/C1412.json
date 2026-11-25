@@ -1,0 +1,140 @@
+{
+  "id": "C1412",
+  "forms": [
+    {
+      "id": "CF4245",
+      "orth": "ϭⲓⲥⲕⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15852,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1635",
+      "bibliography": "CD 124a; KoptHWb 71; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϩⲙϩⲁⲗ ⲇⲉ ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲁϥⲣⲟⲩⲱ ϩⲁⲣⲱϥ ⲛⲥⲁⲟⲩⲗ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲓϭⲓⲛⲉ ⲛⲟⲩ**ϭⲓⲥⲕⲓⲧⲉ** ⲛⲥⲁⲧⲉⲉⲣⲉ ⲛϩⲁⲧ ϩⲛⲧⲁϭⲓϫ ⲉⲕⲉϫⲓⲧⲥ ⲛⲅⲧⲁⲁⲥ ⲙⲡⲣⲱⲙⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲛϥⲧⲁⲙⲟⲛ ⲉⲡⲧⲱϣ ⲛⲧⲉⲛϩⲓⲏ",
+      "english": "And the young man answered Saul again, and said, Behold, there is found in my hand a fourth part of a shekel of silver; and thou shalt give it to the man of God, and he shall tell us our way.",
+      "source": "I Samuel 9",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲉⲉⲣⲉ",
+        1,
+        14.898
+      ],
+      [
+        "ϭⲓⲛⲉ",
+        1,
+        13.5
+      ],
+      [
+        "ϩⲁⲧ",
+        1,
+        12.249
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲥⲕⲓⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲥⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲥⲕⲓⲧⲉ_0_node",
+          "ⲛ_1_post_ϭⲓⲥⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲥⲕⲓⲧⲉ",
+          "ⲥⲁⲧⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲉⲉⲣⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲁⲧⲉⲉⲣⲉ",
+          "ϩⲁⲧ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15452,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7917",
+      "type": "cf",
+      "label": "half"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1411",
+      "label": "ⲕⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "double drachma"
+    }
+  ]
+}

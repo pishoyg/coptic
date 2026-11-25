@@ -1,0 +1,109 @@
+{
+  "id": "C9535",
+  "forms": [
+    {
+      "id": "CF24267",
+      "orth": "ⲕⲣⲁⲩⲅⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24268",
+      "orth": "ⲕⲣⲁⲩⲅⲏ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF24269",
+      "orth": "ⲕⲣⲁⲩⲕⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12140",
+      "bibliography": "DDGLC",
+      "cu_ID": "927"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ϩⲉⲛⲛⲟϭ ⲛ**ⲕⲣⲁⲩⲅⲏ** ⲁⲩϣⲱⲡⲉ ϩⲛⲛⲛⲟϭ ⲛⲧⲡⲟⲗⲓⲥ · ⲛⲣⲙⲙⲁⲟ ⲙⲛⲛϩⲏⲕⲉ · ⲛϩⲟⲟⲩⲧ ⲙⲛⲛⲉϩⲓⲟⲟⲙⲉ ⲛⲕⲟⲩⲓ ⲙⲛⲛⲛⲟϭ ·",
+      "english": "O how great were the outbursts of grief which took place among the nobles of the city! And rich and poor, and men and women, and little and great,",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲣⲁⲩⲅⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10470,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3463",
+    "grl_lemma": "κραυγή",
+    "grl_meaning": "crying, screaming, shouting",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 992b; Preisigke 1:836"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "C219",
+  "forms": [
+    {
+      "id": "CF888",
+      "orth": "ⲉⲥⲓⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8591,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS247",
+      "bibliography": "CD 17b-18a; KoptHWb 12; ChLCS 5b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲉϣⲱⲡⲓ ⲅⲁⲣ ⲛϫⲉⲛⲓⲣⲱⲙⲓ ⲉⲩⲙⲉⲓ ⲙⲙⲱⲟⲩ ⲙⲙⲁⲩⲁⲧⲟⲩ ⲉⲩⲟⲓ ⲙⲙⲁⲓϩⲁⲧ ⲛ**ⲉⲥⲓⲉ** ⲛϭⲁⲥⲓϧⲏⲧ ⲛⲣⲉϥϫⲉⲟⲩⲁ ⲛⲁⲧⲥⲱⲧⲉⲙ ⲛⲥⲁⲛⲟⲩⲓⲟϯ ⲛⲁⲧϩⲙⲟⲧ ⲛⲁⲧⲧⲟⲩⲃⲟ .",
+      "english": "For men will be lovers of self, lovers of money, boastful, arrogant, blasphemers, disobedient to parents, unthankful, unholy,",
+      "source": "16_II Timothy_03",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲁⲥⲓϧⲏⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲙⲁⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲣⲉϥϫⲉⲟⲩⲁ",
+        1,
+        18.11
+      ],
+      [
+        "ϩⲁⲧ",
+        1,
+        11.576
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲛ",
+        3,
+        9.346
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲉⲥⲓⲉ",
+          1
+        ],
+        [
+          "ⲉⲥⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲥⲓⲉ",
+          1
+        ],
+        [
+          "ϭⲁⲥⲓϧⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϭⲁⲥⲓϧⲏⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲉⲟⲩⲁ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲥⲓⲉ",
+          "ⲉⲥⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲥⲓⲉ_0_node",
+          "ⲛ_1_post_ⲉⲥⲓⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲥⲓⲉ",
+          "ϭⲁⲥⲓϧⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲁⲥⲓϧⲏⲧ_2_post_ⲛ",
+          "ⲛ_3_post_ϭⲁⲥⲓϧⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϭⲁⲥⲓϧⲏⲧ",
+          "ⲣⲉϥϫⲉⲟⲩⲁ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8061,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C216",
+      "label": "ⲁⲥⲁⲓ",
+      "pos": "V",
+      "gloss": "be light, relieved; be swift, fast; lighten"
+    },
+    {
+      "target": "C217",
+      "label": "ⲁⲥⲁⲓ",
+      "pos": "N",
+      "gloss": "lightness, alleviation"
+    },
+    {
+      "target": "C218",
+      "label": "ⲁⲥⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "levity, hastiness"
+    }
+  ]
+}

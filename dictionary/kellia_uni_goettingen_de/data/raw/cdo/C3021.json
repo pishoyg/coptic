@@ -1,0 +1,146 @@
+{
+  "id": "C3021",
+  "forms": [
+    {
+      "id": "CF7908",
+      "orth": "ⲡⲓϭⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17480,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲓϭⲏ",
+      "dialect": "S",
+      "id": "1310.1"
+    },
+    {
+      "orth": "ⲡⲓϭⲓ",
+      "dialect": "S",
+      "id": "1310.2"
+    },
+    {
+      "orth": "ⲡⲓϭⲉ",
+      "dialect": "F",
+      "id": "1310.3"
+    },
+    {
+      "orth": "ⲡⲓϭⲉⲉⲓ",
+      "dialect": "F",
+      "id": "1310.4"
+    },
+    {
+      "orth": "ⲡⲓϫⲉⲓ",
+      "dialect": "F",
+      "id": "1310.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3457",
+      "bibliography": "CD 285b; KoptHWb 159; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲛⲣⲙⲛⲕⲏⲙⲉ ⲛⲁϯ ⲙⲙⲱⲧⲛ ⲛϩⲉⲛ**ⲡⲓϭⲁ** ⲙⲛϩⲉⲛⲡⲉⲧϣⲟⲩⲉⲓⲧ ⲁϫⲓⲥ ⲛⲁⲩ ϫⲉⲡⲉⲓⲥⲟⲗⲥⲗ ⲛⲧⲉⲧⲏⲩⲧⲛ ϣⲟⲩⲉⲓⲧ",
+      "english": "The Egyptians shall help you utterly in vain: tell them, This your consolation is vain.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+        1,
+        14.059
+      ],
+      [
+        "ⲁϫⲓ",
+        1,
+        12.673
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        11.551
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        11.074
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲓϭⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧϣⲟⲩⲉⲓⲧ_1_post_ⲡⲓϭⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓϭⲁ_0_node",
+          "ⲙⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          "ϩⲉⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+          "ⲡⲉⲧϣⲟⲩⲉⲓⲧ_1_post_ⲡⲓϭⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17092,
+      "count": 1
+    }
+  }
+}

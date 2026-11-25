@@ -1,0 +1,160 @@
+{
+  "id": "C10636",
+  "forms": [
+    {
+      "id": "CF28762",
+      "orth": "ⲥⲩⲛⲧⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF28765",
+      "orth": "ⲥⲩⲛⲧⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10832,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28763",
+      "orth": "ⲥⲉⲛⲧⲁⲍⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28764",
+      "orth": "ⲥⲩⲛⲁⲍⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14507",
+      "bibliography": "DDGLC",
+      "cu_ID": "3321"
+    },
+    {
+      "id": "CS14508",
+      "bibliography": "DDGLC",
+      "cu_ID": "5774"
+    },
+    {
+      "id": "CS14509",
+      "bibliography": "DDGLC",
+      "cu_ID": "15207"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲁⲩ**ⲥⲩⲛⲧⲁⲍⲉ** ⲛⲁⲩ ⲁⲩⲃⲱⲕ ⲉⲡⲉⲩⲙⲁ .",
+      "english": "...",
+      "source": "Life of Hilaria BN 78 f. 39 (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1792:50-59",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲛⲥⲱ",
+        1,
+        12.299
+      ],
+      [
+        "ⲩ",
+        3,
+        10.565
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲩⲛⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲧⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲃⲱⲕ_1_post_ⲥⲩⲛⲧⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲩⲛⲧⲁⲍⲉ",
+          "ⲩ_1_pre_ⲥⲩⲛⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲧⲁⲍⲉ",
+          "ⲥⲩⲛⲧⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲧⲁⲍⲉ_0_node",
+          "ⲁ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲃⲱⲕ",
+          "ⲩ_2_post_ⲃⲱⲕ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲃⲱⲕ",
+          "ⲃⲱⲕ_1_post_ⲥⲩⲛⲧⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10422,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2114",
+    "grl_lemma": "συντάσσω",
+    "grl_meaning": "to put in order together",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1725a; Preisigke 2:549"
+  }
+}

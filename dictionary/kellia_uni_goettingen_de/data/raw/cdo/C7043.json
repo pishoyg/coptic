@@ -1,0 +1,95 @@
+{
+  "id": "C7043",
+  "forms": [
+    {
+      "id": "CF16143",
+      "orth": "ϩⲁϭⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19117,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲁϭⲓⲛ",
+      "dialect": "B",
+      "id": "2354.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7764",
+      "bibliography": "CD 744b; CED 307; KoptHWb 409; DELC 321b; ChLCS 99b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲏⲧⲛ ⲛⲉⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲙⲛⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ⲛϩⲩⲡⲟⲕⲣⲓⲧⲏⲥ ϫⲉⲧⲉⲧⲛϯ ⲙⲡⲣⲉⲙⲏⲧ ⲙⲡ**ϩⲁϭⲓⲛ** ⲛⲥⲧⲟⲓ ⲙⲛⲡⲉⲙⲓⲥⲉ ⲙⲛⲡⲧⲁⲡⲛ ⲛⲉⲧϩⲟⲣϣ ⲇⲉ ϩⲙⲡⲛⲟⲙⲟⲥ ⲁⲧⲉⲧⲛⲕⲁⲁⲩ ⲛⲥⲁⲧⲏⲩⲧⲛ ⲡϩⲁⲡ ⲙⲛⲡⲛⲁ ⲙⲛⲧⲡⲓⲥⲧⲓⲥ ⲛⲁⲓ ⲇⲉ ⲛⲉϣϣⲉ ⲉⲣⲱⲧⲛ ⲡⲉ ⲉⲁⲁⲩ ⲁⲩⲱ ⲛⲕⲟⲟⲩⲉ ⲉⲧⲙⲕⲁⲁⲩ ⲛⲥⲁⲧⲏⲩⲧⲛ .",
+      "english": "'Woe to you, scribes and Pharisees, hypocrites! For you tithe mint, dill, and cumin, and have left undone the weightier matters of the law: justice, mercy, and faith. But you ought to have done these, and not to have left the other undone.",
+      "source": "40_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        14.954
+      ],
+      [
+        "ⲣⲉⲙⲏⲧ",
+        1,
+        14.448
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18728,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7044",
+      "label": "ϩⲁϭⲓⲛ ⲛⲥⲧⲟⲓ",
+      "pos": "N",
+      "gloss": "mint odour"
+    }
+  ]
+}

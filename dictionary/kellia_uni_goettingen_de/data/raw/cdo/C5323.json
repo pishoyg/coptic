@@ -1,0 +1,57 @@
+{
+  "id": "C5323",
+  "forms": [
+    {
+      "id": "CF12615",
+      "orth": "ⲙⲛⲧⲣⲉϥⲟⲩⲱϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5975",
+      "bibliography": "CD 509a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5324",
+      "label": "ϭⲓⲛⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "act of fishing, means for fishing, fishing boat"
+    },
+    {
+      "target": "C5322",
+      "label": "ⲙⲛⲧⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "fisher's craft"
+    },
+    {
+      "target": "C5321",
+      "label": "ⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "fisher"
+    }
+  ]
+}

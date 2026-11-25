@@ -1,0 +1,46 @@
+{
+  "id": "C2861",
+  "forms": [
+    {
+      "id": "CF7574",
+      "orth": "ⲣⲉϥⲡⲁⲡⲉⲧⲱⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3272",
+      "bibliography": "CD 266b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12384",
+      "type": "cf",
+      "label": "brick, adobe"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2860",
+      "label": "ⲡⲁⲡⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "brick-maker"
+    },
+    {
+      "target": "C2859",
+      "label": "ⲡⲱⲱⲡⲉ",
+      "pos": "V",
+      "gloss": "knead (clay), make bricks"
+    }
+  ]
+}

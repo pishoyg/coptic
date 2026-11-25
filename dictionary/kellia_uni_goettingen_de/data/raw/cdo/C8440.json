@@ -1,0 +1,51 @@
+{
+  "id": "C8440",
+  "forms": [
+    {
+      "id": "CF19691",
+      "orth": "ⲁⲣⲛⲓⲥⲑⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19693",
+      "orth": "ⲁⲣⲛⲓⲥⲑⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19692",
+      "orth": "ⲁⲣⲛⲉⲥⲑⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19694",
+      "orth": "ⲁⲣⲛⲓⲥⲑⲉ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9788",
+      "bibliography": "DDGLC",
+      "cu_ID": "5437"
+    },
+    {
+      "id": "CS9789",
+      "bibliography": "DDGLC",
+      "cu_ID": "951"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "274",
+    "grl_lemma": "ἀρνέομαι",
+    "grl_meaning": "to deny",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 244b; Preisigke 1:214"
+  }
+}

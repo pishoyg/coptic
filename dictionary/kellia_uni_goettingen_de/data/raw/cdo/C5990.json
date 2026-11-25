@@ -1,0 +1,185 @@
+{
+  "id": "C5990",
+  "forms": [
+    {
+      "id": "CF13985",
+      "orth": "ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7412,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6674",
+      "bibliography": "CD 577a; ChLCS 79b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲡⲟ ⲛⲁⲕ ⲛⲟⲩⲡⲟⲗⲩⲧⲧⲓⲁ ⲉⲛⲁⲛⲟⲩⲥ ⲁⲩⲱ ⲛⲁⲧϫⲃⲓⲛ · ⲟⲩⲑⲃⲃⲓⲟ ⲙⲛⲟⲩ**ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ** ·",
+      "english": "Create for thyself a citizenship which shall be good, and without blemish, by means of humility, and shamefacedness,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉϩⲓⲟⲙⲉ ⲟⲛ ⲛⲧⲉⲓϩⲉ ⲉⲩⲕⲟⲥⲙⲉⲓ ϩⲛⲟⲩⲥϭⲣⲉϩⲧ ϩⲛⲟⲩ**ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ** ⲙⲛⲟⲩⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲉⲧⲣⲉⲩⲧⲥⲁⲛⲟⲟⲩ ϩⲛϩⲉⲛϩⲱⲗⲕ ⲁⲛ ⲙⲛⲟⲩⲛⲟⲩⲃ ⲁⲩⲱ ϩⲉⲛⲉⲛⲉ ⲙⲙⲉ ⲙⲛϩⲉⲛϩⲟⲓⲧⲉ ⲉⲛⲁϣⲉ ⲥⲟⲩⲛⲧⲟⲩ .",
+      "english": "In the same way, that women also adorn themselves in decent clothing, with modesty and propriety; not just with braided hair, gold, pearls, or expensive clothing;",
+      "source": "54_1 Timothy_2",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲧϣⲧⲟⲣⲧⲣ",
+        1,
+        19.598
+      ],
+      [
+        "ⲥϭⲣⲉϩⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ⲙⲛⲧⲣⲙⲛϩⲏⲧ",
+        1,
+        12.884
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        11.975
+      ],
+      [
+        "ⲑⲃⲃⲓⲟ",
+        1,
+        11.331
+      ],
+      [
+        ":",
+        1,
+        10.406
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ",
+          "ⲙⲛⲧⲣⲉϥϣⲓⲡⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6958,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5986",
+      "label": "ϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "be ashamed, shame, make ashamed"
+    },
+    {
+      "target": "C5987",
+      "label": "ϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "shame"
+    },
+    {
+      "target": "C5994",
+      "label": "ϣⲡⲓⲉⲉⲧⲉ",
+      "pos": "N",
+      "gloss": "modest person"
+    },
+    {
+      "target": "C5993",
+      "label": "ϣⲡⲓⲏⲧ",
+      "pos": "N",
+      "gloss": "modest person"
+    },
+    {
+      "target": "C12110",
+      "label": "ϣⲫⲓⲧ",
+      "pos": "VSTAT",
+      "gloss": "be ashamed"
+    },
+    {
+      "target": "C5992",
+      "label": "ϫⲓϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "take shame, be ashamed"
+    },
+    {
+      "target": "C5991",
+      "label": "ϯϣⲓⲡⲉ",
+      "pos": "V",
+      "gloss": "give, put to shame"
+    },
+    {
+      "target": "C5988",
+      "label": "ⲁⲧϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "unashamed"
+    },
+    {
+      "target": "C5989",
+      "label": "ⲙⲛⲧⲁⲧϣⲓⲡⲉ",
+      "pos": "N",
+      "gloss": "shamelessness"
+    }
+  ]
+}

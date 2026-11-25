@@ -1,0 +1,197 @@
+{
+  "id": "C9503",
+  "forms": [
+    {
+      "id": "CF24168",
+      "orth": "ⲕⲟⲡⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24169",
+      "orth": "ⲕⲟⲡⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8262,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12075",
+      "bibliography": "DDGLC",
+      "cu_ID": "7836"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲁⲥⲉ ⲙⲛⲡⲉϥϣⲁⲁⲣ ⲙⲛⲛⲉϥⲁϥ ⲙⲛⲧⲉϥ**ⲕⲟⲡⲣⲟⲥ** ⲁϥⲣⲁⲕϩⲟⲩ ϩⲛⲟⲩⲥⲁⲧⲉ ⲡⲃⲟⲗ ⲛⲧⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲡϫⲟⲉⲓⲥ ϩⲱⲛ ⲉⲧⲟⲟⲧϥ ⲙⲙⲱⲩⲥⲏⲥ",
+      "english": "But the calf, and his hide, and his flesh, and his dung, he burnt with fire without the camp, as the Lord commanded Moses.",
+      "source": "Leviticus 8",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲁⲥⲉ ⲉⲧⲃⲉⲡⲛⲟⲃⲉ ⲁⲩⲱ ⲡⲕⲉⲃⲁⲁⲙⲡⲉ ϩⲁⲛⲟⲃⲉ ⲛⲁⲓ ⲉⲛⲧⲁⲩϫⲓ ⲙⲡⲉⲩⲥⲛⲟϥ ⲉϩⲟⲩⲛ ⲉⲡⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲧⲱⲃϩ ⲛϩⲏⲧϥ ⲉϥⲉⲛⲧⲟⲩ ⲉⲡⲥⲁ ⲛⲃⲟⲗ ⲉⲡⲃⲟⲗ ⲛⲧⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛⲥⲉⲣⲱⲕϩ ⲛⲛⲉⲩϣⲁⲁⲣ ϩⲛⲟⲩⲕⲱϩⲧ ⲁⲩⲱ ⲛⲉⲩⲁϥ ⲙⲛⲡⲉⲩ**ⲕⲟⲡⲣⲟⲥ**",
+      "english": "And the calf for the sin-offering, and the goat for the sin-offering, whose blood was brought in to make atonement in the holy place, they shall carry forth out of the camp, and burn them with fire, even their skins and their flesh and their dung.",
+      "source": "Leviticus 16",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁⲕϩⲟⲩ",
+        1,
+        19.598
+      ],
+      [
+        "ⲁϥ",
+        2,
+        15.511
+      ],
+      [
+        "ⲣⲟⲕϩ",
+        1,
+        12.753
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        8.689
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b_1",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲟⲡⲣⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b",
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b_1",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ_b_1",
+          "ⲧⲉϥ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          "ⲕⲟⲡⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          "ⲡⲉⲩ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲟⲡⲣⲟⲥ",
+          "ⲕⲟⲡⲣⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7819,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1183",
+    "grl_lemma": "κόπρος",
+    "grl_meaning": "excrement, dunghill",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 979a; Preisigke 1:825"
+  }
+}

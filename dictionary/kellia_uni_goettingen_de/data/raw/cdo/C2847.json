@@ -1,0 +1,213 @@
+{
+  "id": "C2847",
+  "forms": [
+    {
+      "id": "CF7542",
+      "orth": "ⲡⲱⲛⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20268,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲱⲛⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4840,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲡⲱⲛϭ",
+      "dialect": "S",
+      "id": "1269.2"
+    },
+    {
+      "orth": "ⲡⲛⲅ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14952,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲉⲛⲕ-",
+      "dialect": "S",
+      "id": "1269.4"
+    },
+    {
+      "orth": "ⲡⲟⲛⲅ-",
+      "dialect": "S",
+      "id": "1269.5"
+    },
+    {
+      "orth": "ⲡⲟⲛⲕ⸗",
+      "dialect": "S",
+      "id": "1269.6"
+    },
+    {
+      "orth": "ⲫⲱⲛⲕ",
+      "dialect": "B",
+      "id": "1269.7"
+    },
+    {
+      "orth": "ⲫⲉⲛⲕ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13637,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲫⲟⲛⲕ†",
+      "dialect": "B",
+      "id": "1269.9"
+    },
+    {
+      "orth": "ⲡⲁⲛⲕ-",
+      "dialect": "F",
+      "id": "1269.10"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3257",
+      "bibliography": "CD 265b; CED 126; KoptHWb 148; DELC 160; ChLCS 37b"
+    },
+    {
+      "id": "CS3258",
+      "bibliography": "CD 265b; KoptHWb 148; DELC 160; ChLCS 37b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙ**ⲡⲱⲛⲕ** ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL 45-53",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_45_53",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲟⲉⲓ ⲡⲁⲣⲁⲧⲏⲣⲉⲓ ⲉⲡⲉϥⲟⲩⲟⲛⲧ ⲙ**ⲡⲱⲛⲅ** ·",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲛⲧ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        10.341
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        9.46
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲱⲛⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8943,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2854",
+      "label": "ⲡⲟⲛⲕϥ",
+      "pos": "N",
+      "gloss": "bottle, tube(?)"
+    },
+    {
+      "target": "C2850",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "transfer into"
+    },
+    {
+      "target": "C2851",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "transfer, bring up"
+    },
+    {
+      "target": "C2848",
+      "label": "ⲡⲱⲛⲕ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "pile upon"
+    },
+    {
+      "target": "C2849",
+      "label": "ⲡⲱⲛⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "empty, remove"
+    },
+    {
+      "target": "C2853",
+      "label": "ⲣⲉϥⲫⲱⲛⲕ",
+      "pos": "N",
+      "gloss": "sculptor"
+    },
+    {
+      "target": "C2852",
+      "label": "ⲫⲱⲛⲕ",
+      "pos": "V",
+      "gloss": "hollow, cut out"
+    }
+  ],
+  "etym": {
+    "egy_num": "60130",
+    "egy_lemma": "pnq",
+    "demo_num": "d1983",
+    "demo_lemma": "pnq",
+    "english": "to empty",
+    "german": "schöpfen; ausschöpfen; gießen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1983"
+  }
+}

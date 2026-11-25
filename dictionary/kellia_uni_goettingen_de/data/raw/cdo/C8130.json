@@ -1,0 +1,251 @@
+{
+  "id": "C8130",
+  "forms": [
+    {
+      "id": "CF18557",
+      "orth": "ⲁⲓⲧⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18558",
+      "orth": "ⲁⲓⲧⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6459,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF18559",
+      "orth": "ⲉⲧⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10728,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9158",
+      "bibliography": "DDGLC",
+      "cu_ID": "7330"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲡⲉ ⲛⲧⲁⲛϣⲱⲡⲉ ⲛ**ⲁⲓⲧⲓⲟⲥ** ⲙⲡⲉⲕⲙⲟⲩ · ⲉⲃⲟⲗ ϫⲉⲁⲛⲉⲣⲏⲧ ⲙⲡⲛϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉⲛⲉⲣⲏⲧ · ⲛⲧⲛⲧⲁⲁⲕ ⲉϩⲟⲩⲛ ⲉⲡⲧⲟⲡⲟⲥ ⲙⲡⲡⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "It is we ourselves who have been the cause of thy death; because we made a vow, and we did not fulfil our vow. We dedicated thee to the shrine of the holy man,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲁϥϫⲱⲕ ⲉⲃⲟⲗ ⲁϥϣⲱⲡⲉ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲥⲱⲧⲙ ⲛⲥⲱϥ ⲛ**ⲁⲓⲧⲓⲟⲥ** ⲙⲡⲉⲩϫⲁⲓ ⲛϣⲁ ⲉⲛⲉϩ .",
+      "english": "Having been made perfect, he became to all of those who obey him the author of eternal salvation,",
+      "source": "58_Hebrews_5",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲉϥⲙⲉⲉⲩⲉ ⲉⲣⲟⲟⲩ ⲁϥⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁⲡⲁ ⲗⲟⲅⲅⲓⲛⲟⲥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉ · ⲡⲁϣⲏⲣⲉ , ⲧⲛⲥⲟⲟⲩⲛ ϫⲉⲟⲩϩⲟⲩⲟ ⲡⲉ ⲉⲧⲣⲉⲛⲥⲉⲛ ⲛⲡⲉⲛⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲃⲟⲗ ϩⲙⲡⲉⲛⲱⲛϩ · ⲁⲗⲗⲁ ϫⲉⲕⲁⲥ ⲛⲛϣⲱⲡⲉ ⲛ**ⲁⲓϯⲟⲥ** ⲛⲟⲩϣⲧⲟⲣⲧⲣ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲛⲧⲉⲟⲩⲕⲣⲓⲙⲁ ϣⲱⲡⲉ ⲛⲁⲛ ϯⲙⲉⲉⲩⲉ ϫⲉⲛⲁⲛⲟⲩⲥ ⲉⲧⲣⲉⲛⲛⲁⲛⲁⲭⲱⲣⲉⲓ ⲛⲁⲛ ⲉⲩⲙⲁ ⲙⲁⲩⲁⲁⲛ , ⲕⲁⲧⲁⲡⲉⲧⲥⲏϩ ϩⲛⲙⲡⲁⲣⲣⲟⲓⲙⲓⲁ ϫⲉ ·",
+      "english": "As he thought about these things, he called his disciple Apa Longinus and said to him, “My son, we know it's superfluous for us to part from our monastery during our lives; but, in order for us to avoid being responsible for such disorder and having an accusation against us, I think it's better for us to retire somewhere alone, just like what's written in the Proverbs:",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲁⲓ",
+        1,
+        15.139
+      ],
+      [
+        "ⲛ",
+        5,
+        8.775
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        8.126
+      ],
+      [
+        "ⲙ",
+        3,
+        8.106
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.969
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        7.743
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        7.689
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        7.512
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        7.27
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.868
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.024
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲓⲧⲓⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲓⲧⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲯⲩⲭⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲓⲧⲓⲟⲥ_0_node",
+          "ⲙ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          "ⲡⲉⲕ_3_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲙⲟⲩ",
+          "ⲙⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲓⲧⲓⲟⲥ",
+          "ⲁⲓⲧⲓⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲓⲧⲓⲟⲥ_0_node",
+          "ⲛ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲓⲧⲓⲟⲥ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲯⲩⲭⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_3_post_ⲛⲉ",
+          "ⲙ_4_post_ⲯⲩⲭⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5018,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2896",
+    "grl_lemma": "αἴτιος",
+    "grl_meaning": "culpable, responsible",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 44b; Preisigke 1:39"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "C3002",
+  "forms": [
+    {
+      "id": "CF7870",
+      "orth": "ⲣⲉϥⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3437",
+      "bibliography": "CD 284a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3000",
+      "label": "ⲁⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "not pouring (blood)"
+    },
+    {
+      "target": "C3001",
+      "label": "ⲙⲛⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "pouring out, shedding (blood)"
+    },
+    {
+      "target": "C3003",
+      "label": "ⲡⲁϩⲧⲥ",
+      "pos": "N",
+      "gloss": "bowing, genuflection"
+    },
+    {
+      "target": "C2997",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "V",
+      "gloss": "bend, bow down, fall; pour, flow"
+    },
+    {
+      "target": "C2999",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "N",
+      "gloss": "effusion"
+    },
+    {
+      "target": "C2998",
+      "label": "ⲡⲱϩⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "pour (forth), shed"
+    }
+  ]
+}

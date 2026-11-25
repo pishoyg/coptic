@@ -1,0 +1,51 @@
+{
+  "id": "C9069",
+  "forms": [
+    {
+      "id": "CF22450",
+      "orth": "ⲉⲩⲉⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF22452",
+      "orth": "ⲉⲩⲉⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22451",
+      "orth": "ⲉⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22453",
+      "orth": "ⲉⲩⲕⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6105,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11178",
+      "bibliography": "DDGLC",
+      "cu_ID": "10285"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "826",
+    "grl_lemma": "εὐκτήριον",
+    "grl_meaning": "oratory, chapel",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 719b; Preisigke 1:614"
+  }
+}

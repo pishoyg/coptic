@@ -1,0 +1,106 @@
+{
+  "id": "C2066",
+  "forms": [
+    {
+      "id": "CF5827",
+      "orth": "ⲙⲉⲥⲟⲩⲁⲫⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7094,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2395",
+      "bibliography": "CD 187b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲣϯϣⲟⲟⲩ , ⲁⲩⲱ **ⲙⲉⲥⲟⲩⲁⲫⲓ** ⲛⲟⲩⲗⲉⲗⲟⲩ ⲉⲥϩⲙⲡⲏⲓ ⲛⲙⲙⲉ",
+      "english": "because you gave perfume and mesouaphi to a maiden while she was in the house with you",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲉⲗⲟⲩ",
+        2,
+        21.598
+      ],
+      [
+        "ϣⲟⲟⲩ",
+        2,
+        21.598
+      ],
+      [
+        ",",
+        2,
+        13.867
+      ],
+      [
+        "ϯ",
+        2,
+        9.516
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲉⲥⲟⲩⲁⲫⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲥⲟⲩⲁⲫⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲉⲥⲟⲩⲁⲫⲓ",
+          "ⲙⲉⲥⲟⲩⲁⲫⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6643,
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "id": "C7756",
+  "forms": [
+    {
+      "id": "CF17577",
+      "orth": "ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6388,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8624",
+      "bibliography": "CD 820b; KoptHWb 458"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲥⲉⲥⲟⲙⲥ ⲉⲡϣⲱⲓ ⲉⲧⲫⲉ ⲛⲉⲙⲡⲕⲁϩⲓ ⲉⲡⲉⲥⲏⲧ ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲓⲥ ⲟⲩⲑⲗⲓⲯⲓⲥ ⲛⲉⲙⲟⲩϩⲟϫϩⲉϫ ⲛⲉⲙⲟⲩⲭⲁⲕⲓ ⲛⲉⲙⲟⲩ**ⲙⲉⲧⲁⲧϫⲓⲙⲓ** ⲉⲥϩⲉϫϩⲱϫ ⲛⲉⲙⲟⲩⲭⲁⲕⲓ ϩⲱⲥⲧⲉ ⲛⲧⲟⲩϣⲧⲉⲙⲛⲁⲩ ⲙⲃⲟⲗ ⲟⲩⲟϩ ⲛⲛⲉϥϭⲣⲟϩ ⲛϫⲉⲫⲏⲉⲧⲭⲏ ϧⲉⲛⲟⲩϩⲟϫϩⲉϫ ϣⲁⲟⲩⲥⲏⲟⲩ .",
+      "english": "and they shall look on the earth below, and behold severe distress, and darkness, affliction, and anguish, and darkness so that one cannot see; and he that is in anguish shall not be distressed only for a time.",
+      "source": "23_Isaias_08",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲉϣⲁⲣⲓ ⲉⲣⲟⲕ ⲛϫⲉⲡϭⲟⲓⲥ ϧⲉⲛⲟⲩ**ⲙⲉⲧⲁⲧϫⲓⲙⲓ** ⲛⲉⲙⲟⲩϧⲙⲟⲙ ⲛⲉⲙⲟⲩⲁⲣⲟϣ ⲛⲉⲙⲟⲩϭⲛⲏⲛ ⲛⲉⲙⲟⲩⲉⲙⲕⲁϩ ⲛⲉⲙⲟⲩϫⲓⲙⲫⲉϩ ⲛⲉⲙⲟⲩⲟⲧⲟⲩⲉⲧ ⲟⲩⲟϩ ⲉϥⲉϭⲟϫⲓ ⲛⲥⲱⲕ ϣⲁⲧⲉϥⲧⲁⲕⲟⲕ",
+      "english": "The Lord smite thee with distress, and fever, and cold, and inflammation, and blighting, and paleness, and they shall pursue thee until they have destroyed thee.",
+      "source": "05_Deuteronomium_28",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:28",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲙⲟⲙ",
+        1,
+        13.788
+      ],
+      [
+        "ⲛⲉⲙ",
+        7,
+        13.665
+      ],
+      [
+        "ϩⲉϫϩⲱϫ",
+        1,
+        13.608
+      ],
+      [
+        "ⲭⲁⲕⲓ",
+        1,
+        11.495
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.754
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        6.897
+      ],
+      [
+        "ⲥ",
+        1,
+        5.428
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲧⲁⲧϫⲓⲙⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϧⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲙⲟⲙ",
+          1
+        ],
+        [
+          "ϧⲙⲟⲙ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲉϫϩⲱϫ",
+          1
+        ],
+        [
+          "ϩⲉϫϩⲱϫ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲧⲁⲧϫⲓⲙⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ϧⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϧⲙⲟⲙ",
+          "ⲟⲩ_2_post_ϧⲙⲟⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲙⲟⲙ",
+          "ϧⲙⲟⲙ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ϧⲙⲟⲙ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟϣ",
+          "ⲟⲩ_2_post_ⲁⲣⲟϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          "ⲙⲉⲧⲁⲧϫⲓⲙⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁⲧϫⲓⲙⲓ_0_node",
+          "ⲉ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉⲧⲁⲧϫⲓⲙⲓ",
+          "ⲥ_3_post_ϩⲉϫϩⲱϫ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲉϫϩⲱϫ",
+          "ϩⲉϫϩⲱϫ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5874,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7759",
+      "label": "ϫⲓⲛϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "act of finding, discovery"
+    },
+    {
+      "target": "C7750",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "find"
+    },
+    {
+      "target": "C7753",
+      "label": "ϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "find, thing found; finding"
+    },
+    {
+      "target": "C7752",
+      "label": "ϭⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "learn wisdom"
+    },
+    {
+      "target": "C7751",
+      "label": "ϭⲛⲧⲥ",
+      "pos": "V",
+      "gloss": "find that"
+    },
+    {
+      "target": "C7754",
+      "label": "ⲁⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "nowhere to be found"
+    },
+    {
+      "target": "C7755",
+      "label": "ⲉⲣⲁⲧϫⲓⲙⲓ",
+      "pos": "V",
+      "gloss": "be untraceable, be undiscovered"
+    },
+    {
+      "target": "C7757",
+      "label": "ⲙⲉⲧϫⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "existence"
+    },
+    {
+      "target": "C7758",
+      "label": "ⲣⲉϥϭⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "finder"
+    }
+  ]
+}

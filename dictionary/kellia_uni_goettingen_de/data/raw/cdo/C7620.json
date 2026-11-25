@@ -1,0 +1,73 @@
+{
+  "id": "C7620",
+  "forms": [
+    {
+      "id": "CF32166",
+      "orth": "ϭⲓⲛϭⲟⲓⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32165",
+      "orth": "ϭⲓⲛϭⲟⲉⲓⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8457",
+      "bibliography": "CD 808b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7613",
+      "label": "ϭⲟⲓⲗⲉ",
+      "pos": "V",
+      "gloss": "dwell"
+    },
+    {
+      "target": "C7615",
+      "label": "ϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stay; furniture"
+    },
+    {
+      "target": "C7614",
+      "label": "ϭⲟⲓⲗⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "visit; dwell; give lodging, accommodate; spend the night, stay overnight"
+    },
+    {
+      "target": "C7616",
+      "label": "ⲙⲁ ⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "dwelling place"
+    },
+    {
+      "target": "C7619",
+      "label": "ⲙⲉⲧⲣⲉⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stay (in foreign parts)"
+    },
+    {
+      "target": "C7617",
+      "label": "ⲣⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "N",
+      "gloss": "stranger; guest, visitor"
+    },
+    {
+      "target": "C7618",
+      "label": "ⲣⲣⲙⲛϭⲟⲓⲗⲉ",
+      "pos": "V",
+      "gloss": "be foreign"
+    }
+  ]
+}

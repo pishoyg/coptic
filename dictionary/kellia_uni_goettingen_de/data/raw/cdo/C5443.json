@@ -1,0 +1,45 @@
+{
+  "id": "C5443",
+  "forms": [
+    {
+      "id": "CF12857",
+      "orth": "ⲁⲧⲱⲕⲉⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6100",
+      "bibliography": "CD 520a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5441",
+      "label": "ⲱⲕⲙ",
+      "pos": "V",
+      "gloss": "be dark, be gloomy, worsen; darken, worsen"
+    },
+    {
+      "target": "C5442",
+      "label": "ⲱⲕⲙ",
+      "pos": "N",
+      "gloss": "gloom, sadness"
+    }
+  ]
+}

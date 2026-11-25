@@ -1,0 +1,289 @@
+{
+  "id": "C1425",
+  "forms": [
+    {
+      "id": "CF4271",
+      "orth": "ⲕⲱⲧⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲱϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.21,
+        "rank": 140,
+        "count": 781
+      }
+    },
+    {
+      "orth": "ⲕⲱⲧⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 4.4,
+        "rank": 255,
+        "count": 695
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1656",
+      "bibliography": "CD 125b; ChLCS 19a"
+    },
+    {
+      "id": "CS1657",
+      "bibliography": "CD 125b; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩ**ⲕⲱϯ** ⲛⲥⲁⲁⲙⲟⲛⲓ ⲙⲙⲟϥ ⲡⲉ ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ ϧⲁⲧϩⲏ ⲙⲡⲓⲙⲏϣ ⲁⲩⲉⲙⲓ ⲅⲁⲣ ϫⲉⲉⲧⲁϥϫⲉⲧⲁⲓⲡⲁⲣⲁⲃⲟⲗⲏ ⲉⲑⲃⲏⲧⲟⲩ ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁϥ ⲁⲩϣⲉ ⲛⲱⲟⲩ",
+      "english": "They tried to seize him, but they feared the multitude; for they perceived that he spoke the parable against them. They left him, and went away.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲉⲣⲉⲗⲁⲁⲩ ϩⲓⲟⲩⲧⲟⲉⲓⲥ ⲛϣⲁⲓ ⲉⲩϣⲧⲏⲛ ⲙⲡⲗϭⲉ . ⲥⲛⲁϥⲓ ⲅⲁⲣ **ⲙⲡⲉⲥⲕⲱⲧⲉ **ⲉⲃⲟⲗ**** ϩⲛⲧⲉϣⲧⲏⲛ ⲛϥϣⲱⲡⲉ ⲛϭⲓⲟⲩⲛⲟϭ ⲙⲡⲱϩ .",
+      "english": "No one puts a piece of unshrunk cloth on an old garment; for the patch would tear away from the garment, and a worse hole is made.",
+      "source": "40_Matthew_9",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲥⲣⲁⲏⲗ ⲧⲏⲣϥ ⲉⲧ**ⲕⲱϯ** ⲉⲣⲱⲟⲩ ⲁⲩⲫⲱⲧ ⲉⲃⲟⲗ ϧⲉⲛⲧⲟⲩⲥⲙⲏ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲏⲡⲟⲧⲉ ⲛⲧⲉⲡⲕⲁϩⲓ ⲟⲙⲕⲧⲉⲛ ϩⲱⲛ",
+      "english": "And all Israel round about them fled from the sound of them, for they said, Lest the earth swallow us up also.",
+      "source": "04_Numeri_16",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛ ⲟⲩⲃⲏⲃ ⲛϩⲱϯ ⲧⲉ ⲧⲁⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛⲏⲓ ⲙⲏ ⲁⲛ ⲟⲩⲙϩⲁⲩ ⲉⲧ**ⲕⲱϯ** ⲉⲣⲟⲥ ⲙⲁϣⲉⲛⲱⲧⲉⲛ ⲑⲱⲟⲩϯ ⲛⲛⲓⲑⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲧⲕⲟⲓ ⲟⲩⲟϩ ⲙⲁⲣⲟⲩⲓ ⲉⲑⲣⲟⲩⲟⲩⲟⲙⲥⲟⲩ .",
+      "english": "Is not my inheritance to me a hyaena's cave, or a cave round about her? Go ye, gather together all the wild beasts of the field, and let them come to devour her.",
+      "source": "24_Ieremias_12",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:12",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1439",
+      "label": "ϩⲓⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "make a move, pay visit; encompass, encamp"
+    },
+    {
+      "target": "C1440",
+      "label": "ϩⲓⲕⲱⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pay visit"
+    },
+    {
+      "target": "C1447",
+      "label": "ϫⲓⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "take turn, be crooked"
+    },
+    {
+      "target": "C1441",
+      "label": "ϫⲓⲛϩⲓⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "visit"
+    },
+    {
+      "target": "C1422",
+      "label": "ϫⲓⲛⲕⲱϯ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "search after"
+    },
+    {
+      "target": "C1435",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1436",
+      "label": "ϫⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1434",
+      "label": "ϭⲓⲛⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, cycle; enquiry"
+    },
+    {
+      "target": "C1446",
+      "label": "ϯⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, go about"
+    },
+    {
+      "target": "C1437",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "circular motion, turn, visit"
+    },
+    {
+      "target": "C1442",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "wheel"
+    },
+    {
+      "target": "C1443",
+      "label": "ⲕⲟⲧ",
+      "pos": "N",
+      "gloss": "basket"
+    },
+    {
+      "target": "C1444",
+      "label": "ⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "going round, turning, circuit; twist, knot; crookedness, guile"
+    },
+    {
+      "target": "C1449",
+      "label": "ⲕⲟⲧⲥⲓ",
+      "pos": "N",
+      "gloss": "circuit?"
+    },
+    {
+      "target": "C1423",
+      "label": "ⲕⲱϯ (ⲛⲧⲉⲛ-)",
+      "pos": "V",
+      "gloss": "seek, beg from sb"
+    },
+    {
+      "target": "C1424",
+      "label": "ⲕⲱϯ (ⲥⲁⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "turn about, circumvent"
+    },
+    {
+      "target": "C1450",
+      "label": "ⲕⲱⲧϥ",
+      "pos": "N",
+      "gloss": "circumference"
+    },
+    {
+      "target": "C1416",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "turn, go round; go round (with waterwheel), water; form circle; return; wander, stray; go about seeking, seek; turn; surround"
+    },
+    {
+      "target": "C1431",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "turning round, circuit, surroundings; turning (of water-wheel); seeking, enquiry"
+    },
+    {
+      "target": "C1433",
+      "label": "ⲕⲱⲧⲉ",
+      "pos": "PREP",
+      "gloss": "about, concerning"
+    },
+    {
+      "target": "C1430",
+      "label": "ⲕⲱⲧⲉ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go about outside"
+    },
+    {
+      "target": "C12171",
+      "label": "ⲕⲱⲧⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "surround"
+    },
+    {
+      "target": "C1427",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "turn, bend inwards; turn, bring round; return"
+    },
+    {
+      "target": "C1429",
+      "label": "ⲕⲱⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "turn, go round; return"
+    },
+    {
+      "target": "C1418",
+      "label": "ⲕⲱⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "turn upon, go round, among"
+    },
+    {
+      "target": "C1426",
+      "label": "ⲕⲱⲧⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "turn back"
+    },
+    {
+      "target": "C1419",
+      "label": "ⲕⲱⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go round with, turn hither and thither; inquire of, dispute with"
+    },
+    {
+      "target": "C1420",
+      "label": "ⲕⲱⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go round seeking, seek"
+    },
+    {
+      "target": "C1428",
+      "label": "ⲕⲱⲧⲉ ⲉϩⲟⲩⲛ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "go in and out"
+    },
+    {
+      "target": "C1438",
+      "label": "ⲕⲱⲱⲃⲉ ⲛⲟⲩⲕⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "compel a turn"
+    },
+    {
+      "target": "C1448",
+      "label": "ⲙⲛⲧⲙⲉⲧⲥⲁ ⲛⲕⲟⲧⲥ",
+      "pos": "N",
+      "gloss": "crookedness, dishonesty"
+    },
+    {
+      "target": "C1417",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "good conduct"
+    },
+    {
+      "target": "C1432",
+      "label": "ⲙⲡⲕⲱⲧⲉ",
+      "pos": "ADV",
+      "gloss": "round about"
+    },
+    {
+      "target": "C1421",
+      "label": "ⲣⲉϥⲕⲱⲧⲉ ⲛⲥⲁ-",
+      "pos": "N",
+      "gloss": "seeker"
+    },
+    {
+      "target": "C1445",
+      "label": "ⲣⲕⲟⲧⲥ-",
+      "pos": "V",
+      "gloss": "make a turn, plan, circumvent"
+    }
+  ]
+}

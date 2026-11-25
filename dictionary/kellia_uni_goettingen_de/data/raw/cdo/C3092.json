@@ -1,0 +1,675 @@
+{
+  "id": "C3092",
+  "forms": [
+    {
+      "id": "CF8058",
+      "orth": "ⲣⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 31.63,
+        "rank": 44,
+        "count": 4990
+      }
+    },
+    {
+      "orth": "ⲣⲱⲙⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 27.89,
+        "rank": 53,
+        "count": 2365
+      }
+    },
+    {
+      "orth": "ⲣⲱⲙ-",
+      "dialect": "S",
+      "id": "21.1"
+    },
+    {
+      "orth": "ⲣⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1577,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ⲣⲉⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19964,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲣⲉⲙ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2865,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲣⲱⲙⲉ",
+      "dialect": "A",
+      "id": "21.5"
+    },
+    {
+      "orth": "ⲣⲙ-",
+      "dialect": "A",
+      "id": "21.6"
+    },
+    {
+      "orth": "ⲣⲱⲙⲓ",
+      "dialect": "F",
+      "id": "21.7"
+    },
+    {
+      "orth": "ⲗⲱⲙⲓ",
+      "dialect": "F",
+      "id": "21.8"
+    },
+    {
+      "orth": "ⲗⲟⲙⲓ",
+      "dialect": "F",
+      "id": "21.9"
+    },
+    {
+      "orth": "ⲣⲉⲙ-",
+      "dialect": "F",
+      "id": "21.10"
+    },
+    {
+      "orth": "ⲗⲉⲙ-",
+      "dialect": "F",
+      "id": "21.11"
+    },
+    {
+      "orth": "ⲗⲉ-",
+      "dialect": "F",
+      "id": "21.12"
+    },
+    {
+      "orth": "ⲣⲱⲙⲉ",
+      "dialect": "L",
+      "id": "21.13"
+    },
+    {
+      "orth": "ⲣⲙ-",
+      "dialect": "L",
+      "id": "21.14"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3540",
+      "bibliography": "CD 294b; CED 136; KoptHWb 163; DELC 172; ChLCS 41b"
+    },
+    {
+      "id": "CS3541",
+      "bibliography": "CD 294b; KoptHWb 163; DELC 172; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲧⲉⲡⲓ**ⲣⲱⲙⲓ** ⲛⲁⲧⲏⲓϥ ⲛⲧϣⲉⲃⲓⲱ ⲛⲧⲉϥⲯⲩⲭⲏ .",
+      "english": "For what will a man give in exchange for his life?",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩϫⲡⲟϥ ⲛⲧϩⲉ ⲛⲟⲩ**ⲣⲱⲙⲉ** ·",
+      "english": "He was produced like a man.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲧⲁⲙⲉⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲉⲛⲏ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲡⲓ**ⲣⲱⲙⲓ** ϫⲟⲧⲟⲩ .",
+      "english": "Apa Shenoute was informed of the man’s words.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲙⲟⲩ ⲉϩⲟⲩⲛ ⲡ**ⲣⲱⲙⲉ** ⲉⲧⲥⲙⲁⲙⲁⲁⲧ ⁛ —",
+      "english": "Come in, O blessed man!'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲁⲩⲉⲛⲡⲓⲣⲱⲙⲓ ⲅⲁⲣ ⲁⲛ ⲉⲃⲟⲗ ϧⲉⲛϯⲥϩⲓⲙⲓ ⲁⲗⲗⲁ ϯⲥϩⲓⲙⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓ**ⲣⲱⲙⲓ** .",
+      "english": "For man is not from woman, but woman from man;",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϯⲙⲉⲉⲩⲉ ϫⲉⲉⲣϣⲁⲛⲡ**ⲣⲱⲙⲉ** ⲁⲙⲁϩⲧⲉ ⲙⲡⲉϫⲡⲓⲟ ϩⲙⲡⲉϥϩⲏⲧ",
+      "english": "“I think that if a man holds blame in his heart,",
+      "source": "Apophthegmata Patrum Sahidic 003: Anonymous Nau 138",
+      "urn": "urn:cts:copticLit:ap.3.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        1244,
+        35.596
+      ],
+      [
+        "ϥ",
+        1298,
+        35.45
+      ],
+      [
+        "ⲉ",
+        1081,
+        35.252
+      ],
+      [
+        "ⲛ",
+        1095,
+        34.881
+      ],
+      [
+        "ⲛⲓ",
+        688,
+        34.497
+      ],
+      [
+        "ⲫ",
+        600,
+        34.251
+      ],
+      [
+        "ⲙ",
+        720,
+        34.059
+      ],
+      [
+        "ⲁ",
+        698,
+        33.331
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        668,
+        33.231
+      ],
+      [
+        "ⲡⲓ",
+        569,
+        33.228
+      ],
+      [
+        "ϧⲉⲛ",
+        556,
+        33.12
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        440,
+        32.648
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        271,
+        32.544
+      ],
+      [
+        "ⲛⲉⲙ",
+        433,
+        32.517
+      ],
+      [
+        "ϫⲉ",
+        412,
+        32.196
+      ],
+      [
+        "ⲡ",
+        420,
+        31.762
+      ],
+      [
+        "ⲉⲧⲉ",
+        240,
+        31.655
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        201,
+        31.468
+      ],
+      [
+        "ⲛⲧⲉ",
+        323,
+        31.072
+      ],
+      [
+        ".",
+        339,
+        30.832
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        124,
+        29.165
+      ],
+      [
+        "ⲛ",
+        4646,
+        28.059
+      ],
+      [
+        "ⲉ",
+        2689,
+        26.7
+      ],
+      [
+        "ⲡ",
+        2835,
+        26.609
+      ],
+      [
+        "ⲟⲩ",
+        1566,
+        24.763
+      ],
+      [
+        "ⲉⲧ",
+        1217,
+        24.69
+      ],
+      [
+        "ⲁ",
+        1524,
+        24.47
+      ],
+      [
+        "ϥ",
+        1537,
+        23.984
+      ],
+      [
+        "ⲛⲁ",
+        1150,
+        23.895
+      ],
+      [
+        "ⲙ",
+        1191,
+        23.71
+      ],
+      [
+        "ⲩ",
+        1056,
+        23.647
+      ],
+      [
+        "ⲁⲩⲱ",
+        1065,
+        23.622
+      ],
+      [
+        "ⲇⲉ",
+        673,
+        22.874
+      ],
+      [
+        "ⲡⲉ",
+        747,
+        22.847
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        703,
+        22.542
+      ],
+      [
+        ".",
+        616,
+        22.062
+      ],
+      [
+        "ϫⲉ",
+        626,
+        21.721
+      ],
+      [
+        "ⲛⲉ",
+        467,
+        21.619
+      ],
+      [
+        "ⲛⲓⲙ",
+        335,
+        21.155
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        279,
+        21.05
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          2220
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          395
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          140
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲱⲙⲉ",
+          81
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          57
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          57
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          43
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲣⲱⲙⲉ",
+          24
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲱⲙⲉ",
+          20
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲱⲙⲉ",
+          16
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          16
+        ],
+        [
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          35
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          35
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          25
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          57
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          13
+        ],
+        [
+          "ϫⲱⲱⲣⲉ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲱⲙⲉ",
+          10
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          10
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲛⲓⲙ_1_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲱⲙⲉ",
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ϫⲱⲱⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 31.67,
+      "rank": 43,
+      "count": 5027
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ],
+  "etym": {
+    "egy_num": "94530",
+    "egy_lemma": "rmṯ",
+    "demo_num": "d3491",
+    "demo_lemma": "rmṯ",
+    "english": "human being; man",
+    "german": "Mensch; Mann",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94530",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3491"
+  }
+}

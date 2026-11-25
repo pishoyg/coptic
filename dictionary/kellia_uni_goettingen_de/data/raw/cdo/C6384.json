@@ -1,0 +1,732 @@
+{
+  "id": "C6384",
+  "forms": [
+    {
+      "id": "CF14783",
+      "orth": "ϩⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.57,
+        "rank": 244,
+        "count": 721
+      }
+    },
+    {
+      "orth": "ϩⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.73,
+        "rank": 190,
+        "count": 571
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7080",
+      "bibliography": "CD 643a; CED 271; KoptHWb 350; DELC 285b; ChLCS 87a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲥϧⲏⲟⲩⲧ ϧⲉⲛⲏⲥⲁⲓⲁⲥ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ϫⲉϩⲏⲡⲡⲉ ϯⲛⲁⲟⲩⲱⲣⲡ ⲙⲡⲁⲅⲅⲉⲗⲟⲥ ϧⲁⲧ**ϩⲏ** ⲙⲡⲉⲕϩⲟ ⲫⲏ ⲉⲑⲛⲁⲥⲟⲃϯ ⲙⲡⲉⲕⲙⲱⲓⲧ ϧⲁϫⲱⲕ .",
+      "english": "As it is written in the prophets; Behold, I send my messenger before your face, who will prepare your way before you.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧϭⲓϫ ⲙⲙⲁⲇⲓϩⲁⲙ ⲁⲥϩⲣⲟϣ ⲉϫⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲁⲩⲧⲁⲙⲓⲟ ⲛⲁⲩ ⲛϭⲓⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲁⲡϩⲟ ⲙⲙⲁⲇⲓϩⲁⲙ ⲛⲛⲟⲩⲱϣ ⲉⲧϩⲛⲛⲛⲧⲟⲩⲉⲓⲏ ⲙⲛⲛⲉⲥⲡⲏⲗⲁⲓⲟⲛ ⲙⲛⲛ**ϩⲏ** ⲛϣⲁⲧⲱⲛⲉ",
+      "english": "And the hand of Madiam prevailed against Israel: and the children of Israel made for themselves because of Madiam the caves in the mountains, and the dens, and the holes in the rocks.",
+      "source": "Judges 6",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲛⲁⲓⲥⲃⲱⲟⲩⲓ ⲛⲉⲙⲛⲓⲥⲁϫⲓ ⲛⲧⲉⲛⲁⲓⲁⲥⲕⲏⲧⲏⲥ ⲉⲧⲉⲛϧⲉⲗⲗⲟⲓ ⲉⲑⲟⲩⲁⲃ ⲛⲉ ϩⲓⲛⲁ ⲛⲥⲉⲓⲏⲥ ⲙⲙⲱⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧⲟⲓ ⲙⲙⲁⲓⲭⲣⲓⲥⲧⲟⲥ ⲉⲉⲣⲟⲩⲁⲓ ⲛⲉⲙⲫϯ ⲕⲁⲧⲁⲛⲓⲁⲣⲉⲧⲏ ⲛⲉⲙϯⲁⲅⲁⲡⲏ ⲛⲁⲧⲫⲱⲣϫ ⲉⲩⲥⲟⲡ ⲟⲩⲟϩ ⲉϫⲟⲩϣⲧ ⲉⲃⲟⲗ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ ϧⲁⲧ**ϩⲏ** ⲙⲡⲓϫⲓⲛⲓ ⲉⲃⲟⲗ ϧⲉⲛⲥⲱⲙⲁ ⲉϣⲱⲡⲓ ⲛⲉⲙⲁϥ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲥϧⲏⲟⲩⲧ ϫⲉⲛⲁⲛⲉⲥ ⲛⲏⲓ ⲉⲃⲱⲗ ⲉⲃⲟⲗ ϧⲉⲛⲧⲁⲓⲥⲁⲣⲝ ⲉϣⲱⲡⲓ ⲛⲉⲙ ⲡⲭⲣⲓⲥⲧⲟⲥ",
+      "english": "From the teachings and words of these ascetics, that is, the holy elders, let those who love Christ hasten to unite themselves to God according to virtue and undivided love, expecting at all times the departure of their souls from their bodies, as it is written: “It is better for me to be dissolved from this flesh so that I may be with Christ.”",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛϭⲓⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ · ϩⲓⲧ**ϩⲏ** ⲙⲡⲇⲟⲩⲝ ·",
+      "english": "And Apa Victor spake before the Duke, saying",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲓ ⲟⲩϣⲏⲣⲓ ⲙⲙⲉⲛⲣⲓⲧ ⲉⲛⲁϥⲛⲧⲁϥ ⲁϥⲟⲩⲟⲣⲡϥ ⲉⲡϧⲁⲉ ϩⲁⲣⲱⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲉⲛⲁϣⲫⲓⲧ ϧⲁⲧ**ϩⲏ** ⲙⲡⲁϣⲏⲣⲓ .",
+      "english": "Therefore still having one, his beloved son, he sent him last to them, saying, 'They will respect my son.'",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲙⲡⲉϥⲟⲩⲱϣ ⲉⲥⲗⲥⲱⲗϥ ⲉϥϫⲱ ⲙⲙⲟⲥ . ϫⲉⲉϣϫⲉ ⲙⲡⲓϣϭⲙϭⲟⲙ ⲉⲧⲱⲟⲩⲛ ϩⲁⲡⲛⲟϭⲛⲉϭ ⲛⲧⲁⲙⲁⲁⲩ . ⲛⲁϣ ⲛϩⲉ ⲉⲓⲛⲁϣⲧⲱⲟⲩⲛ ϩⲁⲡϣⲓⲡⲉ ⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲉⲕⲣⲓⲥⲓⲥ ϩⲓⲧ**ϩⲏ** ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "But he did not wish to console himself, saying, “If I have not been able to bear the reproach of my mother, how will I be able to bear the shame on the Day of Judgment in the presence of Christ and all his angels?”",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        74,
+        29.689
+      ],
+      [
+        "ϩⲁ",
+        330,
+        25.427
+      ],
+      [
+        "ⲧ",
+        566,
+        23.968
+      ],
+      [
+        "ϩⲓ",
+        180,
+        22.169
+      ],
+      [
+        "ⲙ",
+        429,
+        22.048
+      ],
+      [
+        "ⲡ",
+        394,
+        20.826
+      ],
+      [
+        "ⲛ",
+        400,
+        20.203
+      ],
+      [
+        "ⲉ",
+        301,
+        19.981
+      ],
+      [
+        "ϥ",
+        260,
+        19.052
+      ],
+      [
+        "ⲛϭⲓ",
+        111,
+        18.665
+      ],
+      [
+        "ⲉⲓ",
+        90,
+        18.347
+      ],
+      [
+        "ⲁⲩⲱ",
+        163,
+        18.256
+      ],
+      [
+        "ⲟⲩ",
+        179,
+        18.134
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        33,
+        18.06
+      ],
+      [
+        "ⲁ",
+        183,
+        18.054
+      ],
+      [
+        "ⲙⲙⲟ",
+        116,
+        18.017
+      ],
+      [
+        "ⲣⲣⲟ",
+        65,
+        17.986
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        76,
+        17.951
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        50,
+        17.63
+      ],
+      [
+        "ⲧⲉϥ",
+        55,
+        16.771
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          288
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          39
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          90
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          24
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          35
+        ],
+        [
+          "ⲟⲩ_1_post_ϩⲏ",
+          20
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          13
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          13
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          12
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          11
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          32
+        ],
+        [
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          11
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          7
+        ],
+        [
+          "ⲧ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          6
+        ],
+        [
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          6
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          5
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          5
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          3
+        ],
+        [
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          "ⲙⲏϣ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲧ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϩⲟ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟ_3_post_ⲡ",
+          "ⲙ_4_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲟ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϣⲏⲣⲓ",
+          "ϣⲏⲣⲓ_2_post_ⲙ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲏ_0_node",
+          375
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          34
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          29
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          55
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          55
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          21
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          19
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          19
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          17
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          31
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          10
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          8
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          5
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          5
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          4
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          3
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙ_1_post_ϩⲏ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲏ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲏ_0_node",
+          "ⲛ_1_post_ϩⲏ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲕⲟⲩⲓ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲏ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ϩⲏ",
+          "ϩⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.68,
+      "rank": 201,
+      "count": 743
+    },
+    "B": {
+      "rate": 7.06,
+      "rank": 157,
+      "count": 599
+    }
+  },
+  "type": "hom"
+}

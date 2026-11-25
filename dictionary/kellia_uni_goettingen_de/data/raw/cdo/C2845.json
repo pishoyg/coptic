@@ -1,0 +1,159 @@
+{
+  "id": "C2845",
+  "forms": [
+    {
+      "id": "CF7538",
+      "orth": "ϭⲓⲛⲡⲱⲱⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9539,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3255",
+      "bibliography": "CD 265b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϩⲩⲡⲟⲙⲓⲛⲏ ϣⲁⲛⲧⲉⲡⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲥⲓⲛⲉ · ϫⲉⲕⲁⲥ ⲉⲣⲉⲧⲉⲕ**ϭⲓⲛⲡⲱⲱⲛⲉ** ⲉⲃⲟⲗ ϣⲱⲡⲉ ...ⲥⲕⲁⲛⲇⲁⲗⲟⲛ . ⲁⲩⲱ ϩⲛⲟⲩⲟⲉⲓϣ ⲛⲉⲓⲣⲏⲛⲏ ϫⲉⲕⲁⲥ ⲛⲉ ⲡⲉⲕⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ϣⲱⲡⲉ ⲑⲗⲓⲯⲓⲥ ⲛⲛⲉⲧ.... ϩⲙⲡ.......",
+      "english": "But remain until the temptation passes over, so that your departure is not an obstacle, and (occurs) in a time of peace, so that your removal is not an affliction for those [...] in [that place]",
+      "source": "Apophthegmata Patrum Sahidic 47",
+      "urn": "urn:cts:copticLit:ap.47.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲕⲁⲛⲇⲁⲗⲟⲛ",
+        1,
+        15.313
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        11.126
+      ],
+      [
+        "...",
+        1,
+        10.305
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ϭⲓⲛⲡⲱⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲡⲱⲱⲛⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ϭⲓⲛⲡⲱⲱⲛⲉ",
+          "ϭⲓⲛⲡⲱⲱⲛⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9113,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2841",
+      "label": "ⲁⲧⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "immovable, unchangeable"
+    },
+    {
+      "target": "C2842",
+      "label": "ⲙⲛⲧⲁⲧⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "unchangeableness"
+    },
+    {
+      "target": "C2844",
+      "label": "ⲙⲛⲧⲣⲉϥⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "changeableness"
+    },
+    {
+      "target": "C2837",
+      "label": "ⲡⲱⲱⲛⲉ",
+      "pos": "V",
+      "gloss": "change, turn; turn, alter, adapt, copy, transfer"
+    },
+    {
+      "target": "C2840",
+      "label": "ⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "removal, change, death"
+    },
+    {
+      "target": "C2838",
+      "label": "ⲡⲱⲱⲛⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be changed to, turn toward; turn to, transfer"
+    },
+    {
+      "target": "C2839",
+      "label": "ⲡⲱⲱⲛⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "move out, go forth; carry out, remove"
+    },
+    {
+      "target": "C2846",
+      "label": "ⲡⲱⲱⲛⲉⲥ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C2843",
+      "label": "ⲣⲉϥⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "changeable person"
+    }
+  ]
+}

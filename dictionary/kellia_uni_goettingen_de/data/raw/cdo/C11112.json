@@ -1,0 +1,195 @@
+{
+  "id": "C11112",
+  "forms": [
+    {
+      "id": "CF30694",
+      "orth": "ϩⲏⲗⲓⲕⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30695",
+      "orth": "ϩⲏⲗⲓⲕⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6231,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15558",
+      "bibliography": "DDGLC",
+      "cu_ID": "3074"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁϫⲱ ⲇⲉ ⲟⲛ ⲛⲕⲉϣⲡⲏⲣⲉ ⲉⲁⲡⲛⲟⲩⲧⲉ ⲁⲁⲥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲛⲛⲉϥϩⲙϩⲁⲗ · ⲛⲉⲩⲛⲟⲩⲣⲱⲙⲉ ϩⲛⲧⲡⲉⲣⲓⲭⲱⲣⲟⲥ ⲉⲧⲙⲙⲁⲩ ⲉⲟⲩⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛⲟⲩϣⲏⲣⲉ ⲛⲉⲩⲅⲉⲛⲏⲥ ⲉⲁϥⲉⲓ ⲉⲧ**ϩⲏⲗⲓⲕⲓⲁ** ⲛⲧⲙⲛⲧϣⲏⲣⲉ ϣⲏⲙ ·",
+      "english": "I will now also tell of the other miracle that God performed through his servants. There was a man in that region who had a noble son who was nearing adolescence.",
+      "source": "Life of Longinus and Lucius part 2",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:10-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲁⲓⲁⲓ ϩⲛⲧ**ϩⲏⲗⲓⲕⲓⲁ** · ϥⲟⲩⲉϩⲥⲁϩⲛⲉ · ϩⲛⲟⲩⲉⲝⲟⲩⲥⲓⲁ ·",
+      "english": "He who hath attained to the full height of his stature g-iveth [his] orders with authority,",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲛⲉϥⲡⲣⲟⲕⲟⲡⲧⲉ ϩⲛⲧⲥⲟⲫⲓⲁ ⲛⲙⲧ**ϩⲏⲗⲓⲕⲓⲁ** ⲛⲙⲧⲉⲭⲁⲣⲓⲥ ⲛⲛⲁϩⲣⲙⲡⲛⲟⲩⲧⲉ ⲛⲙⲛⲣⲱⲙⲉ .",
+      "english": "And Jesus increased in wisdom and stature, and in favor with God and men.",
+      "source": "42_Luke_2",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϣⲏⲣⲉ",
+        1,
+        14.059
+      ],
+      [
+        "ⲛⲙ",
+        2,
+        13.313
+      ],
+      [
+        "ⲁⲓⲁⲓ",
+        1,
+        13.082
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲙ",
+        1,
+        11.466
+      ],
+      [
+        "ⲧ",
+        5,
+        11.452
+      ],
+      [
+        "ⲭⲁⲣⲓⲥ",
+        1,
+        11.174
+      ],
+      [
+        "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+        1,
+        10.451
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        9.799
+      ],
+      [
+        "ϣⲏⲙ",
+        1,
+        9.735
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.823
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲏⲗⲓⲕⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲗⲓⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲏⲣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_4_post_ⲙⲛⲧϣⲏⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲏⲗⲓⲕⲓⲁ_0_node",
+          "ⲛ_1_post_ϩⲏⲗⲓⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲏⲗⲓⲕⲓⲁ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧϣⲏⲣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲏⲣⲉ_3_post_ⲧ",
+          "ϣⲏⲙ_4_post_ⲙⲛⲧϣⲏⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5793,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "885",
+    "grl_lemma": "ἡλικία",
+    "grl_meaning": "time of life, age, prime of life, manhood",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 768b; Preisigke 1:654"
+  }
+}

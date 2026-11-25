@@ -1,0 +1,386 @@
+{
+  "id": "C2307",
+  "forms": [
+    {
+      "id": "CF6349",
+      "orth": "ⲙⲟⲉⲓϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3986,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF6350",
+      "orth": "ⲙⲟⲓϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3795,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲙⲁⲉⲓϩⲉ",
+      "dialect": "A",
+      "id": "1158.1"
+    },
+    {
+      "orth": "ⲙⲁⲓϩⲉ",
+      "dialect": "A",
+      "id": "1158.2"
+    },
+    {
+      "orth": "ⲙⲁⲓϩⲉ",
+      "dialect": "F",
+      "id": "1158.3"
+    },
+    {
+      "orth": "ⲙⲁⲓϩⲓ",
+      "dialect": "F",
+      "id": "1158.4"
+    },
+    {
+      "orth": "ⲙⲁⲉⲓϩⲉ",
+      "dialect": "L",
+      "id": "1158.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2664",
+      "bibliography": "CD 211b; CED 99; KoptHWb 89; DELC 110; ChLCS 25a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ⲡⲉⲧⲉⲓⲛⲉ ⲙⲙⲟⲕ ϩⲛⲛⲛⲟⲩⲧⲉ ⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛⲓⲙ ⲡⲉⲧⲉⲓⲛⲉ ⲙⲙⲟⲕ ⲉⲕϫⲓⲉⲟⲟⲩ ϩⲛⲛⲉⲕⲡⲉⲧⲟⲩⲁⲁⲃ ⲛⲧⲕ ⲟⲩϣⲡⲏⲣⲉ ϩⲛⲛⲉⲕⲉⲟⲟⲩ ⲉⲕⲉⲓⲣⲉ ⲛϩⲉⲛ**ⲙⲟⲉⲓϩⲉ**",
+      "english": "Who is like to thee among the gods, O Lord? who is like to thee? glorified in holiness, marvellous in glories, doing wonders.",
+      "source": "Exodus 15",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲉⲛⲁⲛⲁⲩ ⲛⲥⲉϣⲧⲟⲣⲧⲣ ϩⲛⲟⲩϩⲟⲧⲉ ⲉⲥⲛⲁϣⲧ ⲛⲥⲉⲡⲱϣⲥ ⲉϫⲛⲧ**ⲙⲟⲉⲓϩⲉ** ⲙⲡⲉϥⲟⲩϫⲁⲓ",
+      "english": "When they see it, they shall be troubled with terrible fear, and shall be amazed at the strangeness of his salvation, so far beyond all that they looked for.",
+      "source": "Wisdom 5",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲁⲙⲱⲩⲥⲏⲥ ⲡⲉϥⲥⲱⲧⲡ ⲉⲣⲛⲉⲓ**ⲙⲟⲓϩⲉ** ⲧⲏⲣⲟⲩ ϩⲛⲕⲏⲙⲉ · ⲁⲩⲱ ϩⲛⲧⲉⲣⲩⲑⲣⲁ ⲑⲁⲗⲁⲥⲥⲁ · ⲁⲩⲱ ⲡϫⲁⲓⲉ ⲛϩⲙⲉ ⲛⲣⲟⲙⲡⲉ · ⲁⲩⲱ ⲛⲉⲛⲧⲁϥⲁⲁⲩ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉϥϩⲙϩⲁⲗ ⲓⲏⲥⲟⲩⲥ ⲡϣⲏⲣⲉ ⲛⲛⲁⲩⲏ · ⲡⲇⲩⲛⲁⲧⲟⲥ ϩⲛⲧⲉϥϭⲟⲙ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 301-306",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:51-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "⸗",
+        1,
+        12.106
+      ],
+      [
+        "ⲁⲧⲛⲟⲩⲧⲉ",
+        1,
+        11.926
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        11.059
+      ],
+      [
+        "ϫⲓⲟⲩⲁ",
+        1,
+        10.784
+      ],
+      [
+        "ⲧⲉ",
+        4,
+        10.218
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        9.266
+      ],
+      [
+        "ⲥⲟⲟⲩⲧⲛ",
+        1,
+        8.789
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        8.713
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.601
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        8.212
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        8.056
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        7.707
+      ],
+      [
+        "ⲟⲩϫⲁⲓ",
+        1,
+        7.629
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        7.529
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.247
+      ],
+      [
+        "ⲛ",
+        5,
+        7.19
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        6.882
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        6.856
+      ],
+      [
+        "ⲙ",
+        3,
+        6.521
+      ],
+      [
+        "ⲕ",
+        2,
+        6.268
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲟⲩϫⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩϫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_3_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          "ⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          "ⲡⲉϥ_3_post_ⲟⲩϫⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲟⲩϫⲁⲓ",
+          "ⲟⲩϫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          "ⲟⲩ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          "ϫⲉ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲙⲟⲉⲓϩⲉ",
+          "ⲛ_3_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲣϩⲟⲧⲉ",
+          "ⲧⲛ_3_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          "ⲁⲛ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          "ⲟⲩ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          "ⲛ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲉⲓϩⲉ",
+          "ϩⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲉⲓϩⲉ",
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲉⲓϩⲉ_0_node",
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          "ⲛⲉϥ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲟⲙ",
+          "ϭⲟⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_1_post_ⲙⲟⲉⲓϩⲉ",
+          "ⲙⲛ_2_post_ϩⲃⲏⲩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2902,
+      "count": 12
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2308",
+      "label": "ⲙⲟⲉⲓϩⲉ",
+      "pos": "N",
+      "gloss": "wonder"
+    },
+    {
+      "target": "C2309",
+      "label": "ⲣⲙⲟⲉⲓϩⲉ",
+      "pos": "V",
+      "gloss": "wonder, be astonished"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2341",
+    "demo_lemma": "mjh(ꜣ)",
+    "english": "[wonder]",
+    "german": "Wunder; Verwunderung",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2341"
+  }
+}

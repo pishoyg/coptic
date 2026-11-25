@@ -1,0 +1,51 @@
+{
+  "id": "C8096",
+  "forms": [
+    {
+      "id": "CF18395",
+      "orth": "ⲁⲇⲓϭⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF18396",
+      "orth": "ⲁⲇⲓϭⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF18397",
+      "orth": "ⲁⲇⲓⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6435,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9067",
+      "bibliography": "DDGLC",
+      "cu_ID": "1149"
+    },
+    {
+      "id": "CS9068",
+      "bibliography": "DDGLC",
+      "cu_ID": "5000"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "35",
+    "grl_lemma": "ἀδικέω",
+    "grl_meaning": "to do wrong",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 23a; Preisigke 1:23"
+  }
+}

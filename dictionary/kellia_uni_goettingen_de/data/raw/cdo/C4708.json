@@ -1,0 +1,794 @@
+{
+  "id": "C4708",
+  "forms": [
+    {
+      "id": "CF11379",
+      "orth": "ⲧⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.67,
+        "rank": 511,
+        "count": 263
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5317",
+      "bibliography": "CD 451a; KoptHWb 255; ChLCS 63b"
+    },
+    {
+      "id": "CS5318",
+      "bibliography": "CD 451a; KoptHWb 255; ChLCS 63b"
+    },
+    {
+      "id": "CS5319",
+      "bibliography": "CD 451a; KoptHWb 255; ChLCS 63b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲓ**ⲧⲱϣ** ⲛⲟⲩⲱⲧ ⲡⲉⲧϣⲟⲟⲡ ⲙⲙⲟⲟⲩ ⲙⲡⲉⲥⲛⲁⲩ ·",
+      "english": "[shall also never receive forgiveness, for], the same ordinance applieth to both the water and the wheat-plant.'",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉⲉⲥⲁϣⲉ ϩⲛⲟⲩⲡⲓⲥⲧⲓⲥ ⲙⲛⲟⲩ**ⲧⲱϣ** ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "And he said unto me, 'It is suspended by faith, and by the ordinance of God.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲧⲁⲙⲟⲓ ϩⲛⲟⲩⲱⲣϫ ϩⲛⲛⲉⲧⲛⲥϩⲁⲓ ⲧⲏⲣⲧⲛ ϩⲓⲟⲩⲥⲟⲡ ⲁϫⲛϩⲩⲡⲟⲕⲣⲓⲛⲉ ϫⲉϩⲓⲧⲛⲟⲩ ⲁⲧⲉⲧⲛϥⲓⲡⲉⲓ**ⲧⲱϣ** ⲙⲙⲁⲩ ϩⲁⲧⲉⲧⲏⲩⲧⲛ ϫⲉⲕⲁⲥ ⲉⲓⲛⲁⲉⲓⲙⲉ ϫⲉⲟⲩ ⲧⲉ ⲧⲱⲫⲉⲗⲓⲁ ⲛⲛⲁϩⲣⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲛⲛⲁϩⲣⲛⲛⲣⲱⲙⲉ .",
+      "english": "Therefore tell me assuredly in all of your letters at once, without nonsense, by what have you carried this condition among you, because I will know what the advantage is before God and before the people.",
+      "source": "So Concerning the Little Place BV 277-278",
+      "urn": "urn:cts:copticLit:shenoute.place.amelineau:55-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        62,
+        22.453
+      ],
+      [
+        "ⲟⲩ",
+        40,
+        20.72
+      ],
+      [
+        "ⲙ",
+        29,
+        20.157
+      ],
+      [
+        "ⲁ",
+        31,
+        19.852
+      ],
+      [
+        "ⲛⲟⲩϣⲥⲉⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉⲡⲓⲥⲧⲟⲗⲁⲣⲓⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉⲡⲓⲇⲣⲟⲡⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲕⲟⲡⲟⲗⲓⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲉⲥⲉⲩⲭⲏ",
+        1,
+        19.695
+      ],
+      [
+        "ⲑⲁⲙⲓⲟⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ϫⲱⲣⲓ:ⲁϥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲥⲧⲩⲗⲏ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉ",
+        27,
+        19.282
+      ],
+      [
+        "ⲛⲧⲉ",
+        19,
+        18.81
+      ],
+      [
+        "ϥ",
+        26,
+        18.526
+      ],
+      [
+        "ⲉⲧ",
+        17,
+        18.514
+      ],
+      [
+        "ϧⲉⲛ",
+        19,
+        18.507
+      ],
+      [
+        "ϫⲓⲛϣⲱⲡⲓ",
+        1,
+        18.11
+      ],
+      [
+        "ⲛⲓⲉⲣⲟⲩ",
+        1,
+        18.11
+      ],
+      [
+        "ⲡⲉϥ",
+        10,
+        18.006
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        13,
+        22.792
+      ],
+      [
+        "ⲛ",
+        286,
+        19.382
+      ],
+      [
+        "ⲡ",
+        188,
+        18.254
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        43,
+        16.682
+      ],
+      [
+        "ⲁ",
+        110,
+        16.481
+      ],
+      [
+        "ⲉ",
+        112,
+        16.332
+      ],
+      [
+        "ⲟⲩϭⲓⲉ",
+        8,
+        15.936
+      ],
+      [
+        "ⲙ",
+        89,
+        15.871
+      ],
+      [
+        "ⲛⲧ",
+        43,
+        15.602
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        25,
+        15.467
+      ],
+      [
+        "ⲡⲉ",
+        62,
+        15.464
+      ],
+      [
+        "ⲟⲩ",
+        77,
+        15.113
+      ],
+      [
+        "ⲁⲩⲱ",
+        66,
+        14.973
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        18,
+        14.863
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        49,
+        14.403
+      ],
+      [
+        "ⲡⲉⲓ",
+        24,
+        14.175
+      ],
+      [
+        "ⲡⲃⲉⲍⲉⲕ",
+        3,
+        14.124
+      ],
+      [
+        "ⲡⲁⲓ",
+        26,
+        13.772
+      ],
+      [
+        "ϩⲛ",
+        41,
+        13.645
+      ],
+      [
+        "ⲡⲉⲕ",
+        23,
+        13.532
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱϣ_0_node",
+          83
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲱϣ",
+          12
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱϣ",
+          9
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲧⲱϣ",
+          7
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲱϣ",
+          9
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲱϣ",
+          6
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲱϣ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲧⲱϣ",
+          7
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙ_4_post_ϣⲟⲣⲡ",
+          2
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_5_post_ⲙ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲧⲟϣ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲃⲟⲩⲣ_4_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_4_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϣⲱⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱϣ",
+          "ⲡⲉⲩ_1_pre_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲧⲱϣ_0_node",
+          "ⲙ_1_post_ⲧⲱϣ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲧⲱϣ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲡ",
+          "ⲙ_4_post_ϣⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲟⲣⲡ",
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲱϣ",
+          "ⲡⲉϥ_1_pre_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱϣ_0_node",
+          "ⲙⲙⲟ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲧⲱϣ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲱϣ",
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲱϣ_0_node",
+          "ⲛⲧ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲱϣ",
+          "ⲁ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲟϣ",
+          "ⲧⲉⲧⲛ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲧⲟϣ",
+          "ⲧⲟϣ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲟϣ_2_post_ⲛⲧ",
+          "ⲥ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲧⲱϣ",
+          "ⲧⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱϣ_0_node",
+          "ⲛ_1_post_ⲧⲱϣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱϣ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ϩⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_3_post_ⲛ",
+          "ϩⲃⲟⲩⲣ_4_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲧⲱϣ_0_node",
+          "ⲁⲛ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲧⲱϣ",
+          "ⲡⲁⲓ_1_post_ⲧⲱϣ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲧⲱϣ",
+          "ⲉⲧⲃⲉ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_3_post_ⲉⲓ",
+          "ⲡⲁⲓ_4_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲱϣ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          "ⲙⲙⲟ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱϣ",
+          "ⲣⲱⲙⲉ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          "ⲁ_2_post_ϣⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲱⲛⲉ",
+          "ϥ_2_post_ϣⲱⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.02,
+      "rank": 279,
+      "count": 480
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4719",
+      "label": "ϫⲓⲛⲑⲱϣ",
+      "pos": "N",
+      "gloss": "order, disposition"
+    },
+    {
+      "target": "C4725",
+      "label": "ϫⲓⲧⲟϣ",
+      "pos": "V",
+      "gloss": "adjoin"
+    },
+    {
+      "target": "C4724",
+      "label": "ϯⲧⲟϣ",
+      "pos": "V",
+      "gloss": "adjoin bounds, set bounds"
+    },
+    {
+      "target": "C4713",
+      "label": "ϯⲧⲱϣ",
+      "pos": "V",
+      "gloss": "give orders, take decision, provide"
+    },
+    {
+      "target": "C4714",
+      "label": "ⲁⲧϯⲧⲱϣ",
+      "pos": "N",
+      "gloss": "unlimited"
+    },
+    {
+      "target": "C4710",
+      "label": "ⲁⲧⲧⲱϣ",
+      "pos": "N",
+      "gloss": "unlimited, immoderate"
+    },
+    {
+      "target": "C4711",
+      "label": "ⲙⲛⲧⲁⲧⲧⲱϣ",
+      "pos": "N",
+      "gloss": "extremeness, lack of moderation"
+    },
+    {
+      "target": "C4728",
+      "label": "ⲟ ⲛⲧⲉϣⲉ",
+      "pos": "V",
+      "gloss": "adjoin, be a neighbour"
+    },
+    {
+      "target": "C4717",
+      "label": "ⲣⲉϥⲧⲉϣⲙⲁ",
+      "pos": "N",
+      "gloss": "house guard"
+    },
+    {
+      "target": "C4718",
+      "label": "ⲣⲉϥⲧⲉϣⲙⲁ",
+      "pos": "N",
+      "gloss": "house guard"
+    },
+    {
+      "target": "C4715",
+      "label": "ⲣⲉϥⲧⲱϣ",
+      "pos": "N",
+      "gloss": "commander"
+    },
+    {
+      "target": "C4716",
+      "label": "ⲣⲉϥⲧⲱϣ",
+      "pos": "N",
+      "gloss": "commander"
+    },
+    {
+      "target": "C4721",
+      "label": "ⲣⲙⲛⲧⲟϣ",
+      "pos": "N",
+      "gloss": "man of the nome, dweller of the nome"
+    },
+    {
+      "target": "C4722",
+      "label": "ⲣⲙⲛⲧⲟϣ",
+      "pos": "N",
+      "gloss": "man of the nome, dweller of the nome"
+    },
+    {
+      "target": "C4723",
+      "label": "ⲣⲧⲟϣ",
+      "pos": "V",
+      "gloss": "be adjacent"
+    },
+    {
+      "target": "C4712",
+      "label": "ⲣⲧⲱϣ",
+      "pos": "V",
+      "gloss": "set in order, prepare"
+    },
+    {
+      "target": "C4726",
+      "label": "ⲧⲉϣⲉ",
+      "pos": "N",
+      "gloss": "borderer, neighbour"
+    },
+    {
+      "target": "C4727",
+      "label": "ⲧⲉϣⲉ",
+      "pos": "N",
+      "gloss": "borderer, neighbour"
+    },
+    {
+      "target": "C4720",
+      "label": "ⲧⲟϣ",
+      "pos": "N",
+      "gloss": "border, limit; nome; province, district, suburb; bishopric"
+    },
+    {
+      "target": "C4707",
+      "label": "ⲧⲱϣ",
+      "pos": "V",
+      "gloss": "be boundary, be fixed, be moderate; limit, determine, appoint"
+    },
+    {
+      "target": "C4709",
+      "label": "ⲧⲱϣ (ⲉ-)",
+      "pos": "V",
+      "gloss": "ordain"
+    }
+  ]
+}

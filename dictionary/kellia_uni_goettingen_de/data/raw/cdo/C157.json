@@ -1,0 +1,68 @@
+{
+  "id": "C157",
+  "forms": [
+    {
+      "id": "CF601",
+      "orth": "ⲙⲉⲧⲣⲉϥϯⲁⲛⲁϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS177",
+      "bibliography": "CD 12b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C156",
+      "label": "ϯⲁⲛⲁϣ",
+      "pos": "V",
+      "gloss": "to take an oath"
+    },
+    {
+      "target": "C154",
+      "label": "ⲁⲛⲁϣ",
+      "pos": "N",
+      "gloss": "oath"
+    },
+    {
+      "target": "C158",
+      "label": "ⲁⲛⲁϣ",
+      "pos": "N",
+      "gloss": "bunch of flowers"
+    },
+    {
+      "target": "C155",
+      "label": "ⲣⲁⲛⲁϣ",
+      "pos": "V",
+      "gloss": "swear"
+    }
+  ]
+}

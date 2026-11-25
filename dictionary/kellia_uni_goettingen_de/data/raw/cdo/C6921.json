@@ -1,0 +1,58 @@
+{
+  "id": "C6921",
+  "forms": [
+    {
+      "id": "CF15893",
+      "orth": "ⲣⲱⲙϩⲧⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7641",
+      "bibliography": "CD 723a; CED 300; KoptHWb 393; DELC 315a; ChLCS 95b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6918",
+      "label": "ϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horse"
+    },
+    {
+      "target": "C6922",
+      "label": "ϭⲁⲥⲓϩⲑⲟ",
+      "pos": "N",
+      "gloss": "rider"
+    },
+    {
+      "target": "C6920",
+      "label": "ⲙⲁⲛⲉϩⲧⲟ",
+      "pos": "N",
+      "gloss": "horsekeeper, groom"
+    },
+    {
+      "target": "C6919",
+      "label": "ⲙⲁⲥ ⲛϩⲧⲟ",
+      "pos": "N",
+      "gloss": "foal"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm1183",
+    "demo_lemma": "rmṯ-ḥtr",
+    "english": "rider, cavalryman",
+    "german": "Reiter, Kavallerist",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1183"
+  }
+}

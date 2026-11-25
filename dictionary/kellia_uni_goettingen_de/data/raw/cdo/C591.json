@@ -1,0 +1,407 @@
+{
+  "id": "C591",
+  "forms": [
+    {
+      "id": "CF2224",
+      "orth": "ⲃⲁϣⲟⲩⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4958,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF2225",
+      "orth": "ⲃⲁϣⲟⲩⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4008,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF2226",
+      "orth": "ⲃⲁϣⲟⲩⲣ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS709",
+      "bibliography": "CD 47b; CED 29; KoptHWb 29, 496; DELC 33; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲏⲡⲡⲉ ⲁⲓⲁⲓⲕ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲧⲣⲟⲭⲟⲥ ⲛⲉⲃⲣⲉϩⲓ ⲉⲩϩⲓ ⲉⲩⲟⲓ ⲙⲃⲉⲣⲓ ⲛⲣⲟ ⲙ**ⲃⲁϣⲟⲩⲣ** ⲉⲕⲉϩⲓ ⲛⲛⲓⲧⲱⲟⲩ ⲟⲩⲟϩ ⲉⲕⲉⲧϣⲙⲟ ⲛⲛⲓⲕⲁⲗⲁⲙⲫⲟ ⲉⲕⲉⲭⲁⲩ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲏⲓⲥⲓ .",
+      "english": "Behold, I have made thee as new saw-shaped threshing wheels of a waggon; and thou shalt thresh the mountains, and beat the hills to powder, and make them as chaff:",
+      "source": "23_Isaias_41",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡϫⲁϫⲉ ⲕⲱϩ ⲉⲣⲟⲕ ⲉⲣⲟⲕ ⲛⲧϩⲉ ⲛⲏⲥⲁⲓⲁⲥ ⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ · ⲡⲁⲓ ⲛⲧⲁⲩⲟⲩⲁⲥⲧϥ ϩⲛⲟⲩ**ⲃⲁϣⲟⲩⲣ** ⲛϣⲉ · ⲁⲩⲱ ⲙⲡⲉⲡⲕⲱϩⲧ ϫⲱϩ ⲉⲣⲟⲕ ⲛⲧϩⲉ ⲙⲡϣⲟⲙⲛⲧ ⲛϩⲁⲅⲓⲟⲥ · ⲉⲧⲉⲙⲡⲉⲡⲕⲱϩⲧ ⲛⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ ϫⲱϩ ⲉⲣⲟⲟⲩ ·",
+      "english": "The Enemy hath been envious of thee as he was of Isaiah the Prophet, whose body they sawed in twain lengthwise with a wood saw. And the fire hath not touched thee, even as the fire of Nebuchadnezzar touched not the Three Holy (Children).",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ ϥⲛⲁϭⲓⲱⲟⲩ ⲛϫⲉⲟⲩⲕⲉⲗⲉⲃⲓⲛ ⲁⲧϭⲛⲉⲫⲏⲉⲧⲕⲱⲣϫ ⲙⲙⲟϥ ⲓⲉ ⲥⲛⲁϭⲓⲥⲓ ⲛϫⲉⲟⲩ**ⲃⲁϣⲟⲩⲣ** ⲁⲧϭⲛⲉⲫⲏⲉⲧⲥⲱⲕ ⲙⲙⲟⲥ ⲡⲁⲓⲣⲏϯ ⲟⲛ ⲁⲣⲉϣⲁⲛ ⲟⲩⲁⲓ ϭⲓ ⲛⲟⲩϣⲃⲱⲧ ⲓⲉ ⲟⲩϣⲉ ⲟⲩⲟϩ ⲙⲡⲁⲓⲣⲏϯ ⲁⲛ .",
+      "english": "Shall the axe glorify itself without him that hews with it? or shall the saw lift up itself without him that uses it, as if one should lift a rod or staff? but it shall not be so;",
+      "source": "23_Isaias_10",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲓⲧⲁⲙⲓⲟⲕ ⲛⲧϩⲉ ⲛϩⲉⲛⲕⲟⲧ ⲛⲁϭⲟⲗⲧⲉ ⲛⲃⲣⲣⲉ ⲛⲣⲉ ⲛ**ⲃⲁϣⲟⲩⲣ** ⲉⲩϩⲓ ⲁⲩⲱ ⲕⲛⲁϩⲓ ⲛⲛⲧⲟⲟⲩ ⲁⲩⲱ ⲛⲅϩⲓⲧⲉ ⲉⲃⲟⲗ ⲛⲛⲥⲓⲃⲧ ⲛⲅⲁⲁⲩ ⲛⲧϩⲉ ⲛⲟⲩϣⲉⲓϣ",
+      "english": "Behold, I have made thee as new saw-shaped threshing wheels of a waggon; and thou shalt thresh the mountains, and beat the hills to powder, and make them as chaff:",
+      "source": "Isaiah 41",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲡϭⲟⲉⲓⲥ ϫⲉⲉϫⲉⲛϯⲙⲉⲧⲅ ⲛⲁⲥⲉⲃⲏⲥ ⲛⲧⲉⲇⲁⲙⲁⲥⲕⲟⲥ ⲛⲉⲙⲉϫⲉⲛϯⲙⲁϩⲇ ⲛⲛⲁⲧⲁⲥⲑⲟ ⲉⲃⲟⲗϩⲁⲣⲟⲥ ⲉⲫⲙⲁ ϫⲉⲛⲁⲩⲃⲓⲥⲓ ⲡⲉ ϧⲉⲛϩⲁⲛ**ⲃⲁϣⲟⲩⲣ** ⲙⲃⲉⲛⲓⲡⲓ ⲛⲛⲏⲉⲧⲉⲙⲃⲟⲕⲓ ⲛⲧⲉⲛⲏⲉⲧϧⲉⲛ ⲅⲁⲗⲁⲁⲇ .",
+      "english": "And the Lord said, For three sins of Damascus, and for four, I will not turn away from it; because they sawed with iron saws the women with child of the Galaadites.",
+      "source": "30_Amos_01",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲗⲁⲟⲥ ⲉⲧⲛϩⲏⲧⲥ ⲁϥⲉⲛⲧⲟⲩ ⲉⲃⲟⲗ ⲁϥⲟⲩⲟⲥⲧⲟⲩ ϩⲛⲧ**ⲃⲁϣⲟⲩⲣ** ⲁⲩⲱ ϩⲛⲛⲥⲉⲣϭⲁⲙⲟⲩⲗ ⲙⲡⲉⲛⲓⲡⲉ ⲉⲁϥⲡⲟⲙⲡⲉⲩⲉ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲙⲁ ⲧⲏⲣϥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁϥⲁⲁⲥ ⲛⲛⲉⲡⲟⲗⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲛⲉϣⲏⲣⲉ ⲛⲁⲙⲙⲱⲛ ⲁⲩⲱ ⲇⲁⲩⲉⲓⲇ ⲁϥⲕⲧⲟϥ ⲙⲛⲡⲗⲁⲟⲥ ⲧⲏⲣϥ ⲉϩⲣⲁⲓ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "And he brought forth the people that were in it, and put them under the saw, and under iron harrows, and axes of iron, and made them pass through the brick-kiln: and thus he did to all the cities of the children of Ammon. And David and all the people returned to Jerusalem.",
+      "source": "II Samuel 12",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲏⲉⲧⲥⲱⲕ",
+        1,
+        17.695
+      ],
+      [
+        "ⲉⲧⲉⲙⲃⲟⲕⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ⲃⲓⲥⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ⲃⲁⲥ",
+        1,
+        15.11
+      ],
+      [
+        "ϭⲛⲉ",
+        1,
+        12.888
+      ],
+      [
+        "ⲉⲣⲡⲓⲣⲁⲍⲓⲛ",
+        1,
+        11.741
+      ],
+      [
+        "ⲃⲉⲛⲓⲡⲓ",
+        1,
+        11.629
+      ],
+      [
+        "ⲣⲟ",
+        1,
+        10.515
+      ],
+      [
+        "ⲃⲉⲣⲓ",
+        1,
+        10.495
+      ],
+      [
+        "ⲛⲛⲏ",
+        1,
+        10.277
+      ],
+      [
+        "ϭⲓⲥⲓ",
+        1,
+        9.36
+      ],
+      [
+        "ⲧ",
+        2,
+        8.525
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        7.587
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.538
+      ],
+      [
+        "ⲛ",
+        3,
+        7.346
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        6.806
+      ],
+      [
+        "ⲙ",
+        2,
+        6.583
+      ],
+      [
+        "ⲁ",
+        2,
+        5.989
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.754
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        5.313
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲟⲥⲧⲟⲩ",
+        1,
+        18.276
+      ],
+      [
+        "ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+        1,
+        17.276
+      ],
+      [
+        "ⲟⲩⲁⲥⲧ",
+        1,
+        15.691
+      ],
+      [
+        "ⲧⲣⲟⲭⲟⲥ",
+        1,
+        14.028
+      ],
+      [
+        "ⲁϫⲙ",
+        1,
+        13.884
+      ],
+      [
+        "ⲣⲉ",
+        1,
+        12.919
+      ],
+      [
+        "ⲁⲩⲱ",
+        7,
+        11.847
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        1,
+        10.482
+      ],
+      [
+        "ⲛ",
+        7,
+        9.909
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.912
+      ],
+      [
+        "ϫⲓⲥⲉ",
+        1,
+        8.897
+      ],
+      [
+        "ϣⲉ",
+        1,
+        8.86
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        7.887
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.204
+      ],
+      [
+        "ⲏ",
+        1,
+        7.157
+      ],
+      [
+        "ϥ",
+        3,
+        6.955
+      ],
+      [
+        "ϩⲓ",
+        1,
+        6.909
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ⲡ",
+        2,
+        5.175
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.659
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲃⲁϣⲟⲩⲣ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛⲏⲉⲧ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲁϣⲟⲩⲣ_0_node",
+          "ⲙ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲃⲁϣⲟⲩⲣ",
+          "ⲃⲉⲛⲓⲡⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓⲡⲓ_2_post_ⲙ",
+          "ⲛⲧⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          "ⲛⲏⲉⲧ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁϣⲟⲩⲣ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲁϣⲟⲩⲣ_0_node",
+          "ⲛ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲁϣⲟⲩⲣ",
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲁϣⲟⲩⲣ_0_node",
+          "ⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲁϣⲟⲩⲣ",
+          "ⲩ_3_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲓ",
+          "ϩⲓ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4541,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.05,
+      "rank": 3567,
+      "count": 4
+    }
+  },
+  "type": "foreign"
+}

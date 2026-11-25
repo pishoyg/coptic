@@ -1,0 +1,89 @@
+{
+  "id": "C2454",
+  "forms": [
+    {
+      "id": "CF6690",
+      "orth": "ⲛⲟⲕⲛⲉⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19673,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2824",
+      "bibliography": "CD 223b-224a; KoptHWb 121; ChLCS 32a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲧⲙⲛⲧⲙⲁⲓⲥⲟⲛ ⲉⲧⲉⲧ**ⲛⲟⲕⲛⲉⲕ** ⲉϩⲟⲩⲛ ⲉⲛⲉⲧⲛⲉⲣⲏⲩ ⲉⲧⲉⲧⲛϫⲓⲥⲉ ⲛⲛⲉⲧⲛⲉⲣⲏⲩ ⲉⲣⲱⲧⲛ ϩⲙⲡⲧⲁⲉⲓⲟ .",
+      "english": "In love of the brothers be tenderly affectionate one to another; in honor preferring one another;",
+      "source": "45_Romans_12",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲙⲁⲓⲥⲟⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        11.08
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        10.33
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19288,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2455",
+      "label": "ⲛⲟⲕⲛⲉⲕ",
+      "pos": "N",
+      "gloss": "affection"
+    }
+  ]
+}

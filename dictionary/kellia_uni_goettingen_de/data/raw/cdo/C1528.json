@@ -1,0 +1,58 @@
+{
+  "id": "C1528",
+  "forms": [
+    {
+      "id": "CF4490",
+      "orth": "ϫⲓⲕⲱϩⲧ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1786",
+      "bibliography": "CD 134a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1527",
+      "label": "ϯⲕⲱϩⲧ-",
+      "pos": "V",
+      "gloss": "put fire, set on fire"
+    },
+    {
+      "target": "C1524",
+      "label": "ⲕⲱϩⲧ",
+      "pos": "N",
+      "gloss": "fire"
+    },
+    {
+      "target": "C1525",
+      "label": "ⲕⲱϩⲧ",
+      "pos": "N",
+      "gloss": "fiery"
+    },
+    {
+      "target": "C1526",
+      "label": "ⲣⲕⲱϩⲧ-",
+      "pos": "V",
+      "gloss": "be on fire"
+    }
+  ]
+}

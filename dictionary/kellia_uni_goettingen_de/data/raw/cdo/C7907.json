@@ -1,0 +1,351 @@
+{
+  "id": "C7907",
+  "forms": [
+    {
+      "id": "CF17880",
+      "orth": "ϫⲣⲟϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.04,
+        "rank": 338,
+        "count": 258
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8787",
+      "bibliography": "CD 831b; KoptHWb 467; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲫⲣⲉϥϯⲥⲃⲱ ⲙⲱⲩⲥⲏⲥ ⲁϥⲥϧⲁⲓ ⲛⲁⲛ ϫⲉⲉϣⲱⲡ ⲛⲧⲉⲡⲥⲟⲛ ⲛⲟⲩⲁⲓ ⲙⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϥⲥⲉϫⲡⲟⲩⲥϩⲓⲙⲓ ⲟⲩⲟϩ ⲛⲧⲉϥϣⲧⲉⲙⲭⲁϣⲏⲣⲓ ϩⲓⲛⲁ ⲛⲧⲉⲡⲉϥⲥⲟⲛ ϭⲓ ⲛϯⲥϩⲓⲙⲓ ⲟⲩⲟϩ ⲛⲧⲉϥⲧⲟⲩⲛⲟⲥ ⲟⲩ**ϫⲣⲟϫ** ⲙⲡⲉϥⲥⲟⲛ .",
+      "english": "Teacher, Moses wrote to us, 'If a man's brother dies, and leaves a wife behind him, and leaves no children, that his brother should take his wife, and raise up offspring for his brother.'",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲉϥϯ ⲛⲁϥ ⲛⲟⲩⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛϧⲏⲧϥ ⲟⲩⲇⲉ ⲟⲩϣⲉⲛⲧⲁⲧⲥⲓ ⲛⲧⲉⲟⲩϭⲁⲗⲟϫ ⲁϥⲱϣ ⲉⲧⲏⲓϥ ⲛⲁϥ ϧⲉⲛⲟⲩⲁⲙⲁϩⲓ ⲛⲉⲙⲡⲉϥ**ϫⲣⲟϫ** ⲙⲉⲛⲉⲛⲥⲱϥ ⲙⲙⲟⲛⲧⲉϥ ϣⲏⲣⲓ ⲇⲉ ⲙⲙⲁⲩ .",
+      "english": "He gave him no inheritance in it, no, not so much as to set his foot on. He promised that he would give it to him for a possession, and to his seed after him, when he still had no child.",
+      "source": "05_Acts_07",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲕⲉϯ ⲡⲓⲣⲉⲙⲏⲧ ⲛⲧⲉⲟⲩⲧⲁϩ ⲛⲓⲃⲉⲛ ⲛⲧⲉⲡⲉⲕ**ϫⲣⲟϫ** ⲡⲟⲩⲧⲁϩ ⲛⲧⲉⲧⲉⲕⲕⲟⲓ ⲛⲧⲉⲛⲣⲟⲙⲡⲓ",
+      "english": "Thou shalt tithe a tenth of all the produce of thy seed, the fruit of thy field year by year.",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲣⲟϫ",
+          50
+        ],
+        [
+          "ϫⲣⲟϫ_0_node",
+          156
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲣⲟϫ",
+          33
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲣⲟϫ",
+          24
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲣⲟϫ",
+          10
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϫⲣⲟϫ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ϫⲣⲟϫ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲟⲛ",
+          4
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲣⲟϫ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ϫⲣⲟϫ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟϫ",
+          8
+        ],
+        [
+          "ⲁⲃⲣⲁⲁⲙ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ϫⲣⲟϫ",
+          7
+        ],
+        [
+          "ⲕ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          3
+        ],
+        [
+          "ⲓⲁⲕⲱⲃ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲏ_1_post_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲏ",
+          2
+        ],
+        [
+          "ϩⲓϫⲉⲛ_2_post_ⲛⲏ",
+          2
+        ],
+        [
+          "ⲇⲁⲩⲓⲇ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲣⲟϫ",
+          "ⲡⲉⲕ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          3
+        ],
+        [
+          "ϫⲣⲟϫ_0_node",
+          "ⲙ_1_post_ϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲣⲟϫ",
+          "ⲡⲉϥ_3_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲟⲛ",
+          "ⲥⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲣⲟϫ",
+          "ⲡⲉϥ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ϫⲣⲟϫ_0_node",
+          "ⲛ_1_post_ϫⲣⲟϫ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟϫ",
+          "ⲁⲃⲣⲁⲁⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲣⲟϫ_0_node",
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ϫⲣⲟϫ",
+          3
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ϫⲣⲟϫ",
+          "ⲕ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟϫ",
+          "ⲓⲁⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲣⲟϫ_0_node",
+          "ⲧⲏⲣ_1_post_ϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲣⲟϫ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛⲏ_1_post_ϫⲣⲟϫ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ϫⲣⲟϫ",
+          "ⲉⲧ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲏ",
+          "ϩⲓϫⲉⲛ_2_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲣⲟϫ",
+          "ⲇⲁⲩⲓⲇ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ϫⲣⲟϫ",
+          "ϥ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ϫⲣⲟϫ",
+          "ⲡⲟⲩ_1_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ϫⲣⲟϫ",
+          "ⲟⲩ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 3.05,
+      "rank": 286,
+      "count": 259
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7912",
+      "label": "ϫⲓϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "become pregnant, conceive (child)"
+    },
+    {
+      "target": "C7906",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seed (of plants)"
+    },
+    {
+      "target": "C7908",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "sown, fertilized"
+    },
+    {
+      "target": "C7911",
+      "label": "ϯϫⲣⲟϫ",
+      "pos": "V",
+      "gloss": "copulate"
+    },
+    {
+      "target": "C7909",
+      "label": "ⲁⲧϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seedless, infertile"
+    },
+    {
+      "target": "C7910",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "produce seed, semen, sperm"
+    }
+  ]
+}

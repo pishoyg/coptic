@@ -1,0 +1,82 @@
+{
+  "id": "C4864",
+  "forms": [
+    {
+      "id": "CF31858",
+      "orth": "ϭⲁⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31857",
+      "orth": "ϭⲁⲉⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17117,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5489",
+      "bibliography": "CD 466a; KoptHWb 447; CED 207; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C13015",
+      "type": "cf",
+      "label": "ugly, disgraced, condemned"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13015",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly, disgraced, condemned"
+    },
+    {
+      "target": "C4865",
+      "label": "ⲙⲛⲧϭⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "ugliness, disgrace"
+    },
+    {
+      "target": "C4866",
+      "label": "ⲣϭⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be ugly, be disgraceful"
+    },
+    {
+      "target": "C4862",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "make ugly, disgrace, condemn; be disgraced, be condemned"
+    },
+    {
+      "target": "C4863",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "N",
+      "gloss": "disgrace, condemnation"
+    }
+  ],
+  "etym": {
+    "egy_num": "166130",
+    "egy_lemma": "gꜣi̯",
+    "demo_num": "d6679",
+    "demo_lemma": "gꜣ",
+    "english": "to caluminate; to lie",
+    "german": "(jmdn.) schmähen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6679"
+  }
+}

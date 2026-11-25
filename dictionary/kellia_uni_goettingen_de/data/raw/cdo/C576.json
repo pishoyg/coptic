@@ -1,0 +1,56 @@
+{
+  "id": "C576",
+  "forms": [
+    {
+      "id": "CF2185",
+      "orth": "ⲃⲟⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃⲁⲩ",
+      "dialect": "S",
+      "id": "612.1"
+    },
+    {
+      "orth": "ⲃⲱⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1390,
+        "count": 29
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS687",
+      "bibliography": "CD 46b; CED 29; KoptHWb 29, 496; CDC 9b; DELC 33; ChLCS 9b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C577",
+      "label": "ⲡⲃⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "Pbow"
+    }
+  ],
+  "etym": {
+    "egy_num": "850444",
+    "egy_lemma": "bꜣw",
+    "demo_num": "d1687",
+    "demo_lemma": "bw(e)",
+    "english": "[noun (hill?)]",
+    "german": "Hügel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850444",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1687"
+  }
+}

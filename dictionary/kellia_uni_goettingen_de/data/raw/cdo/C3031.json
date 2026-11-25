@@ -1,0 +1,44 @@
+{
+  "id": "C3031",
+  "forms": [
+    {
+      "id": "CF7930",
+      "orth": "ϣⲁⲡⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3470",
+      "bibliography": "CD 287a; CED 134; KoptHWb 160; DELC 170; ChLCS 40b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3032",
+      "label": "ϩⲁⲡⲣⲁ",
+      "pos": "PREP",
+      "gloss": "as to, in respect of"
+    },
+    {
+      "target": "C3029",
+      "label": "ⲣⲁ",
+      "pos": "N",
+      "gloss": "state, condition; position; point in time, end"
+    },
+    {
+      "target": "C3030",
+      "label": "ⲣⲁ-",
+      "pos": "N",
+      "gloss": "with following nn or inf giving local or generic sense"
+    }
+  ]
+}

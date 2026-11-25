@@ -1,0 +1,51 @@
+{
+  "id": "C5145",
+  "forms": [
+    {
+      "id": "CF12255",
+      "orth": "ⲟⲩⲱⲣϩ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5778",
+      "bibliography": "CD 491b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5147",
+      "label": "ⲁⲧⲟⲩⲱⲣϩ",
+      "pos": "N",
+      "gloss": "unallowed, unremitted(?)"
+    },
+    {
+      "target": "C5148",
+      "label": "ⲟⲩⲣⲉϩ",
+      "pos": "N",
+      "gloss": "free space"
+    },
+    {
+      "target": "C5144",
+      "label": "ⲟⲩⲱⲣϩ",
+      "pos": "V",
+      "gloss": "be open, be free; set open, set free, renounce"
+    },
+    {
+      "target": "C5146",
+      "label": "ⲟⲩⲱⲣϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "allow in, admit"
+    }
+  ]
+}

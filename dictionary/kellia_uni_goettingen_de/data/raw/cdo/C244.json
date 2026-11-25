@@ -1,0 +1,196 @@
+{
+  "id": "C244",
+  "forms": [
+    {
+      "id": "CF993",
+      "orth": "ⲁⲟⲩⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5770,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS275",
+      "bibliography": "CD 21a; KoptHWb 490"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲛⲛⲁⲩ ⲇⲉ ⲉⲕⲩⲡⲣⲟⲥ ⲁⲛⲥⲟϫⲡⲥ ⲥⲁϫⲁϭⲏ ⲙⲙⲟⲛ ⲁⲛⲉⲣϩⲱⲧ ⲉⲧⲥⲩⲣⲓⲁ ⲟⲩⲟϩ ⲁⲛⲓ ⲉⲧⲩⲣⲟⲥ ⲛⲁⲣⲉⲡⲓϫⲟⲉⲓ ⲅⲁⲣ ⲛⲁϩⲓⲟⲩⲓ ⲙⲡⲉϥ**ⲁⲟⲩⲓⲛ** ⲙⲙⲁⲩ .",
+      "english": "When we had come in sight of Cyprus, leaving it on the left hand, we sailed to Syria, and landed at Tyre, for there the ship was to unload her cargo.",
+      "source": "05_Acts_21",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ⲛⲓⲣⲱⲙⲓ ϯⲛⲁⲩ ϫⲉⲟⲩⲟⲛ ⲟⲩϣⲱϣ ⲛⲉⲙⲟⲩⲙⲏϣ ⲛⲟⲥⲓ ⲛⲁϣⲱⲡⲓ ⲟⲩ ⲙⲟⲛⲟⲛ ⲙⲡⲓϫⲟⲉⲓ ⲛⲉⲙⲡⲓ**ⲁⲟⲩⲓⲛ** ⲁⲗⲗⲁ ⲛⲉⲙⲛⲉⲛⲕⲉⲯⲩⲭⲏ ϧⲉⲛⲡⲁⲓϫⲓⲛⲉⲣϩⲱⲧ .",
+      "english": "and said to them, 'Sirs, I perceive that the voyage will be with injury and much loss, not only of the cargo and the ship, but also of our lives.'",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲟⲩⲓ ⲛⲱⲟⲩ ⲙⲫⲣⲏϯ ⲙⲙⲁⲇⲓⲁⲙ ⲛⲉⲙⲥⲓⲥⲁⲣⲁ ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲓ**ⲁⲃⲓⲛ** ϧⲉⲛⲡⲓⲙⲟⲩⲛⲥⲱⲣⲉⲙ ⲛⲧⲉⲕⲓⲥⲥⲱⲛ",
+      "english": "Gebal, and Ammon, and Amalec; the Philistines also, with them that dwell at Tyre.",
+      "source": "19_Psalmi_82",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:82",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲉⲓ",
+        1,
+        10.991
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        9.986
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.925
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.875
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        7.494
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.469
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.186
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.455
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.667
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.369
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲙ",
+        1,
+        3.998
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲟⲩⲓⲛ",
+          1
+        ],
+        [
+          "ⲁⲟⲩⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲟⲩⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲟⲩⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲟⲩⲓⲛ",
+          "ⲁⲟⲩⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲟⲩⲓⲛ",
+          "ⲡⲓ_1_pre_ⲁⲟⲩⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲟⲩⲓⲛ",
+          "ⲁⲟⲩⲓⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4127,
+      "count": 3
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C241",
+      "label": "ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "colour; appearance"
+    },
+    {
+      "target": "C242",
+      "label": "ⲁⲩⲁⲛ ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "variety of colours"
+    },
+    {
+      "target": "C243",
+      "label": "ⲁⲩⲁⲛⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "linen (\"colour of the sky\")"
+    },
+    {
+      "target": "C245",
+      "label": "ⲁⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "ship's cargo, load"
+    }
+  ]
+}

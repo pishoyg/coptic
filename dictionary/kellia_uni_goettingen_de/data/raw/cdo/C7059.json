@@ -1,0 +1,108 @@
+{
+  "id": "C7059",
+  "forms": [
+    {
+      "id": "CF16175",
+      "orth": "ϫⲓ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7791",
+      "bibliography": "CD 748b-749a; KoptHWb 410-411; ChLCS 100a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ **ⲉϥϫⲓ **ⲉ**ⲕⲓⲃⲉ** · ⲛⲁϣ ⲛϩⲉ ϥϫⲓϣⲕⲁⲕ ⲉⲃⲟⲗ ⲁⲩⲱ ϥⲣⲓⲙⲉ ·",
+      "english": "Now in what manner doth he take the nipple? He crieth loudly and weepeth.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉⲁⲗⲟⲕ ϩⲁⲣⲟϥ · **ϣⲁⲛⲧⲉϥϫⲓ **ⲉ**ⲡⲉⲓⲧⲏⲙⲁ** ⲕⲁⲗⲱⲥ · ⲙⲙⲟⲛ ⲟⲩⲁⲧⲥⲃⲱ ⲡⲉ ·",
+      "english": "And he said unto me, 'Keep away from him until he maketh the petition in a proper manner, for he is not a man without education.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲟⲛ **ⲁⲓϫⲓ **ⲉ**ϩⲟⲟⲩ** ϩⲱ ⲁⲩⲱ ⲁⲓϫⲓⲥⲉ ·",
+      "english": "I have never glorified myself, and I have never exalted myself.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7058",
+      "label": "ϫⲓ",
+      "pos": "V",
+      "gloss": "receive, take; take (as spouse), marry; touch, reach, hit; take, get, bring, accept; have, to be provided with; learn (by heart); buy"
+    },
+    {
+      "target": "C7066",
+      "label": "ϫⲓ",
+      "pos": "N",
+      "gloss": "taking, bringing"
+    },
+    {
+      "target": "C7062",
+      "label": "ϫⲓ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "take instead of, on account of"
+    },
+    {
+      "target": "C7063",
+      "label": "ϫⲓ (ϩⲁϫⲛ-)",
+      "pos": "V",
+      "gloss": "take in advance, from before"
+    },
+    {
+      "target": "C7065",
+      "label": "ϫⲓ (ⲉϩⲟⲩⲛ ⲉ-)",
+      "pos": "V",
+      "gloss": "be a close relative of"
+    },
+    {
+      "target": "C7060",
+      "label": "ϫⲓ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "take upon, take for, borrow"
+    },
+    {
+      "target": "C7064",
+      "label": "ϫⲓ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "pos": "V",
+      "gloss": "select from"
+    },
+    {
+      "target": "C7061",
+      "label": "ϫⲓ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "be concerned with, touch"
+    },
+    {
+      "target": "C7068",
+      "label": "ϭⲓⲛϫⲓ",
+      "pos": "N",
+      "gloss": "partaking, participation"
+    },
+    {
+      "target": "C7067",
+      "label": "ⲣⲉϥϫⲓ",
+      "pos": "N",
+      "gloss": "taker"
+    }
+  ]
+}

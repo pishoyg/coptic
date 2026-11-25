@@ -1,0 +1,76 @@
+{
+  "id": "C7257",
+  "forms": [
+    {
+      "id": "CF16573",
+      "orth": "ϫⲓϫⲛⲓⲧ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocPrep": "ⲛⲥⲁ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8011",
+      "bibliography": "CD 776a; KoptHWb 426"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7258",
+      "label": "ϫⲓ-ϫⲛⲓⲧ",
+      "pos": "N",
+      "gloss": "trial"
+    },
+    {
+      "target": "C7256",
+      "label": "ϫⲓϫⲛⲓⲧ",
+      "pos": "V",
+      "gloss": "try"
+    },
+    {
+      "target": "C7255",
+      "label": "ϫⲛⲓⲧ",
+      "pos": "N",
+      "gloss": "trial"
+    },
+    {
+      "target": "C7254",
+      "label": "ϫⲟⲛⲧⲥ",
+      "pos": "N",
+      "gloss": "trial"
+    },
+    {
+      "target": "C7251",
+      "label": "ϫⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "try, test, attempt; begin"
+    },
+    {
+      "target": "C7252",
+      "label": "ϫⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "trial"
+    },
+    {
+      "target": "C7253",
+      "label": "ⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "untried, untempted"
+    }
+  ]
+}

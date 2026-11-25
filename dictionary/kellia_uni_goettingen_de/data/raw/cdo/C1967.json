@@ -1,0 +1,807 @@
+{
+  "id": "C1967",
+  "forms": [
+    {
+      "id": "CF5589",
+      "orth": "ⲙⲛⲧⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.57,
+        "rank": 531,
+        "count": 248
+      }
+    },
+    {
+      "orth": "ⲙⲉⲧⲙⲉⲑⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.97,
+        "rank": 347,
+        "count": 252
+      }
+    },
+    {
+      "orth": "ⲙⲛⲧⲙⲛⲧⲣⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 817,
+        "count": 134
+      }
+    },
+    {
+      "orth": "ⲙⲉⲑⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.21,
+        "rank": 649,
+        "count": 103
+      }
+    },
+    {
+      "orth": "ⲙⲉⲧⲣⲏ",
+      "dialect": "S",
+      "id": "1079.1"
+    },
+    {
+      "orth": "ⲙⲛⲧⲣⲉⲉⲩ",
+      "dialect": "S",
+      "id": "1079.2"
+    },
+    {
+      "orth": "ⲙⲉⲑⲣⲉⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2775,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲙⲛⲧⲣⲉ",
+      "dialect": "A",
+      "id": "1079.4"
+    },
+    {
+      "orth": "ⲙⲉⲧⲣⲏ",
+      "dialect": "F",
+      "id": "1079.5"
+    },
+    {
+      "orth": "ⲙⲛⲧⲣⲉ",
+      "dialect": "L",
+      "id": "1079.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2284",
+      "bibliography": "CD 177a; KoptHWb 96; ChLCS 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲡⲁⲓⲣⲏϯ ⲛⲁⲥⲟⲓ ⲛϩⲩⲥⲟⲥ ⲁⲛ ⲛϫⲉⲧⲟⲩ**ⲙⲉⲧⲙⲉⲑⲣⲉ** .",
+      "english": "Even so, their testimony did not agree.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲣⲟⲩⲑ ⲧⲙⲱⲁⲃⲓⲧⲏⲥ ⲧϩⲓⲙⲉ ⲙⲙⲁⲁⲗⲱⲛ ⲁⲓϫⲓⲧⲥ ⲉⲩⲥϩⲓⲙⲉ ⲛⲁⲓ ⲉⲧⲟⲩⲛⲉⲥ ⲡⲣⲁⲛ ⲙⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉϫⲛⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛϥⲧⲙϥⲱⲧⲉ ⲉⲃⲟⲗ ⲛϭⲓⲡⲣⲁⲛ ⲙⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉϥⲥⲛⲏⲩ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲧⲉⲫⲩⲗⲏ ⲙⲡⲉϥⲗⲁⲟⲥ ⲛⲧⲱⲧⲛ ⲧⲉⲧⲛⲟ ⲙ**ⲙⲛⲧⲣⲉ** ⲙⲡϩⲟⲟⲩ",
+      "english": "Moreover I have bought for myself for a wife Ruth the Moabitess, the wife of Maalon, to raise up the name of the dead upon his inheritance; so the name of the dead shall not be destroyed from among his brethren, and from the tribe of his people: ye are this day witnesses.",
+      "source": "Ruth Chapter 4",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲁ ⲛⲓⲃⲉⲛ ⲉⲧⲉⲛϥⲛⲁϣⲉⲡⲑⲏⲛⲟⲩ ⲉⲣⲟϥ ⲁⲛ ⲟⲩⲇⲉ ⲛⲧⲟⲩϣⲧⲉⲙⲥⲱⲧⲉⲙ ⲉⲣⲱⲧⲉⲛ ⲁⲛ ⲉⲣⲉⲧⲉⲛⲛⲏⲟⲩ ⲉⲃⲟⲗ ⲙⲙⲁⲩ ⲛⲉϩⲡϣⲱⲓϣ ⲉⲧⲥⲁⲉϧⲣⲏⲓ ⲛⲛⲉⲧⲉⲛϭⲁⲗⲁⲩϫ ⲉⲃⲟⲗ ⲉⲩ**ⲙⲉⲧⲙⲉⲑⲣⲉ** ⲛⲱⲟⲩ .",
+      "english": "Whoever will not receive you nor hear you, as you depart from there, shake off the dust that is under your feet for a testimony against them.'",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲭⲣⲓⲥⲧⲟⲫⲟⲣⲟⲥ ϯⲥϩⲁⲓ ϩⲁⲣⲟϥ ϫⲛϥⲛⲟⲉⲓ ⲁⲛ ⲁⲩⲱ ϯⲟ ⲙ**ⲙⲛⲧⲣⲉ**",
+      "english": "I Christophoros, I write instead of him since he does not know (how to write) and I am witness.",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲇⲉ ⲛⲑⲱⲧⲉⲛ ⲉⲣⲱⲧⲉⲛ ⲥⲉⲛⲁϯⲑⲏⲛⲟⲩ ⲉϩⲁⲛⲙⲁ ⲛϯϩⲁⲡ ⲟⲩⲟϩ ϧⲉⲛⲛⲓⲥⲩⲛⲁⲅⲱⲅⲏ ⲥⲉⲛⲁϩⲓⲟⲩⲓ ⲉⲣⲱⲧⲉⲛ ⲟⲩⲟϩ ⲛⲧⲟⲩⲧⲁϩⲱⲧⲉⲛ ⲉⲣⲁⲧ ⲉⲛⲑⲏⲛⲟⲩ ⲛⲁϩⲣⲉⲛϩⲁⲛϩⲏⲅⲉⲙⲱⲛ ⲛⲉⲙϩⲁⲛⲟⲩⲣⲱⲟⲩ ⲉⲑⲃⲏⲧ ⲉⲩ**ⲙⲉⲧⲙⲉⲑⲣⲉ** ⲛⲱⲟⲩ ⲛⲉⲙⲛⲓⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "But watch yourselves, for they will deliver you up to councils. You will be beaten in synagogues. You will stand before rulers and kings for my sake, for a testimony to them.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲛϩⲱⲃ ⲏ ⲁϣ ⲛϣⲁϫⲉ ϩⲛⲛⲉⲛⲧⲁⲕϫⲟⲟⲩ ⲛⲉⲧⲟ ⲙ**ⲙⲛⲧⲣⲉ** ⲉⲣⲟⲕ ⲁⲛ ϫⲉⲉⲕⲏⲡ ⲉⲡⲥⲁⲧⲁⲛⲁⲥ .",
+      "english": "What act or which word among those which you have uttered is it, that does not constitute evidence against you that you belong to Satan?",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟⲩϫ",
+        14,
+        25.563
+      ],
+      [
+        "ⲉⲣ",
+        39,
+        25.514
+      ],
+      [
+        "ϥ",
+        66,
+        22.557
+      ],
+      [
+        "ⲉⲧⲉⲣ",
+        3,
+        22.128
+      ],
+      [
+        "ϧⲁⲣⲟ",
+        9,
+        22.035
+      ],
+      [
+        "ⲛ",
+        52,
+        21.692
+      ],
+      [
+        "ⲙ",
+        40,
+        21.549
+      ],
+      [
+        "ⲅ",
+        9,
+        21.091
+      ],
+      [
+        "ⲑⲁⲗ",
+        3,
+        20.75
+      ],
+      [
+        "ϭⲓⲟⲩⲓ",
+        4,
+        20.41
+      ],
+      [
+        "ⲟⲓ",
+        12,
+        20.338
+      ],
+      [
+        "ⲫ",
+        21,
+        19.741
+      ],
+      [
+        "ⲅϣⲁ",
+        1,
+        19.695
+      ],
+      [
+        "ⲃⲉⲩⲉⲉⲣⲡⲣⲟⲫⲏ",
+        1,
+        19.695
+      ],
+      [
+        ".",
+        24,
+        19.371
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        27,
+        19.345
+      ],
+      [
+        "ⲟⲩ",
+        29,
+        19.328
+      ],
+      [
+        "ϫⲉ",
+        21,
+        19.314
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        6,
+        19.124
+      ],
+      [
+        "ⲁⲣⲓ",
+        5,
+        19.061
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲕⲏⲛⲏ",
+        69,
+        22.835
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        8,
+        21.644
+      ],
+      [
+        "ⲙ",
+        199,
+        20.307
+      ],
+      [
+        "ⲡ",
+        202,
+        19.517
+      ],
+      [
+        "ⲁⲩⲱ",
+        138,
+        19.119
+      ],
+      [
+        "ⲧⲉ",
+        80,
+        18.815
+      ],
+      [
+        "ⲛ",
+        134,
+        17.053
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        23,
+        16.537
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        19,
+        16.493
+      ],
+      [
+        "ⲟ",
+        28,
+        16.273
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        11,
+        15.852
+      ],
+      [
+        "ϣⲁⲛⲟⲩ",
+        3,
+        15.814
+      ],
+      [
+        "ⲥⲕⲩⲛⲏ",
+        7,
+        15.708
+      ],
+      [
+        "ⲁ",
+        73,
+        15.659
+      ],
+      [
+        "ϥ",
+        70,
+        14.955
+      ],
+      [
+        "ⲩ",
+        51,
+        14.873
+      ],
+      [
+        "ⲛⲉ",
+        36,
+        14.869
+      ],
+      [
+        "ⲉ",
+        63,
+        14.795
+      ],
+      [
+        "ⲛⲁ",
+        49,
+        14.578
+      ],
+      [
+        "ϫⲉ",
+        43,
+        14.471
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          139
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          10
+        ],
+        [
+          "ⲛⲟⲩϫ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲙⲛⲧⲣⲉ",
+          4
+        ],
+        [
+          "ϫⲓⲛϭⲟⲛⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲛⲧⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲙⲛⲧⲣⲉ",
+          2
+        ],
+        [
+          "ⲧⲛ_2_post_ⲉⲣⲱ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲟⲙⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲓ",
+          1
+        ],
+        [
+          "ϭⲟⲛⲥ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          2
+        ],
+        [
+          "ⲛϩⲟⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲃⲁⲗ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲟⲩⲁⲁⲃ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉⲫⲁⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲉⲫⲁⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲕⲏⲛⲏ_5_post_ⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲛⲟⲩϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲙⲛⲧⲣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ϫⲓⲛϭⲟⲛⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲉⲣⲱ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲧⲛ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲙⲏⲏϣⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲡⲓⲥⲧⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲟⲥ_2_post_ⲙ",
+          "ⲛ_3_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲁⲩⲱ_2_post_ϣⲟⲙⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲟⲙⲧ",
+          "ϣⲟⲙⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲛⲉ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ϥ_1_pre_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲓ_2_post_ⲛ",
+          "ⲛ_3_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲓ",
+          "ϭⲟⲛⲥ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲛⲧⲣⲉ",
+          "ⲙⲛⲧⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲛϩⲟⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛϩⲟⲧ_2_post_ⲉⲧ",
+          "ⲡ_2_post_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲃⲁⲗ",
+          "ⲃⲁⲗ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉ",
+          "ϩⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲡⲉⲧⲟⲩⲁⲁⲃ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲟⲩⲁⲁⲃ_2_post_ϩⲛ",
+          "ⲛ_3_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉ",
+          "ⲕⲉⲫⲁⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉⲫⲁⲗⲓⲥ_2_post_ⲛ",
+          "ⲛ_3_post_ⲕⲉⲫⲁⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲕⲉⲫⲁⲗⲓⲥ",
+          "ⲧⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_4_post_ⲛ",
+          "ⲥⲕⲏⲛⲏ_5_post_ⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.56,
+      "rank": 461,
+      "count": 248
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1968",
+      "label": "ⲙⲛⲧⲙⲛⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "testimony"
+    },
+    {
+      "target": "C1969",
+      "label": "ⲣⲙⲛⲧⲣⲉ",
+      "pos": "V",
+      "gloss": "testify, bear witness"
+    }
+  ],
+  "etym": {
+    "egy_num": "77760",
+    "egy_lemma": "mtr.w",
+    "demo_num": "d2803",
+    "demo_lemma": "mtr(e)",
+    "english": "witness",
+    "german": "Zeuge",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/77760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2803"
+  }
+}

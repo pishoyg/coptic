@@ -1,0 +1,131 @@
+{
+  "id": "C1143",
+  "forms": [
+    {
+      "id": "CF3661",
+      "orth": "ⲕⲁⲗⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1329",
+      "bibliography": "CD 102a; KoptHWb 60"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲓⲛ",
+        1,
+        17.373
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        9.471
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        9.243
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        8.423
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲕⲁⲗⲏ",
+          1
+        ],
+        [
+          "ⲕⲁⲗⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲫⲓⲛ_1_post_ⲕⲁⲗⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲥⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲕⲁⲗⲏ",
+          "ⲕⲁⲗⲏ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲗⲏ_0_node",
+          "ⲛⲉⲙ_2_post_ⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲫⲓⲛ",
+          "ⲡⲓ_2_post_ⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲫⲓⲛ",
+          "ⲫⲓⲛ_1_post_ⲕⲁⲗⲏ",
+          1
+        ],
+        [
+          "ⲫⲓⲛ_1_post_ⲕⲁⲗⲏ",
+          "ⲛⲉⲙ_2_post_ⲙⲥⲁϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1142",
+      "label": "ⲕⲗⲏ",
+      "pos": "N",
+      "gloss": "cat"
+    }
+  ],
+  "etym": {
+    "egy_num": "163750",
+    "egy_lemma": "ky.t",
+    "demo_num": "d6417",
+    "demo_lemma": "qle.t",
+    "english": "[a monkey]",
+    "german": "[eine Äffin]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6417"
+  }
+}

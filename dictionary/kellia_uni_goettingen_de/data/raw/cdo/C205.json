@@ -1,0 +1,50 @@
+{
+  "id": "C205",
+  "forms": [
+    {
+      "id": "CF816",
+      "orth": "ⲁⲧⲁⲣⲏϫ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF817",
+      "orth": "ⲁⲧⲁⲩⲣⲏϫ⸗",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS230",
+      "bibliography": "CD 17a; ChLCS 5a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C204",
+      "label": "ⲁⲣⲏϫ⸗",
+      "pos": "N",
+      "gloss": "end, limit"
+    },
+    {
+      "target": "C206",
+      "label": "ⲙⲛⲧⲁⲧⲁⲣⲏϫⲥ",
+      "pos": "N",
+      "gloss": "boundlessness"
+    }
+  ]
+}

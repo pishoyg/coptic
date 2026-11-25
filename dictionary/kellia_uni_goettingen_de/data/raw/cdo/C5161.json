@@ -1,0 +1,43 @@
+{
+  "id": "C5161",
+  "forms": [
+    {
+      "id": "CF12288",
+      "orth": "ⲟⲩⲥⲓⲣⲉ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5795",
+      "bibliography": "KoptHWb 277; DELC 238a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5162",
+      "label": "ⲟⲩⲥⲉⲣⲟⲩⲉⲛⲁⲃⲣⲉ",
+      "pos": "N",
+      "gloss": "Osiris-Wen(en-)nefer/Unnefer"
+    }
+  ],
+  "etym": {
+    "egy_num": "49460",
+    "egy_lemma": "Wsjr",
+    "demo_num": "d1502",
+    "demo_lemma": "Wsı ͗r",
+    "english": "Osiris",
+    "german": "Osiris",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/49460",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1502"
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "id": "C6089",
+  "forms": [
+    {
+      "id": "CF14183",
+      "orth": "ϣⲱⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.73,
+        "rank": 492,
+        "count": 273
+      }
+    },
+    {
+      "orth": "ϣⲁⲧ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.17,
+        "rank": 666,
+        "count": 99
+      }
+    },
+    {
+      "orth": "ϣⲁⲁⲧ⸗",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.99,
+        "rank": 723,
+        "count": 156
+      }
+    },
+    {
+      "orth": "ϣⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2037,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ϣⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1229,
+        "count": 70
+      }
+    },
+    {
+      "orth": "ϣⲱⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6270,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϣⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14061,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4540,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϣⲉⲉⲧ-",
+      "dialect": "S",
+      "id": "122.6"
+    },
+    {
+      "orth": "ϣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2326,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲁⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2326,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲏⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1600,
+        "count": 45
+      }
+    },
+    {
+      "orth": "ϣⲁⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2326,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲱⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.51,
+        "rank": 559,
+        "count": 128
+      }
+    },
+    {
+      "orth": "ϣⲱϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.9,
+        "rank": 767,
+        "count": 76
+      }
+    },
+    {
+      "orth": "ϣⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3626,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϣⲉⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2272,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϣⲟⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6492,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲩⲟⲩⲧ",
+      "dialect": "A",
+      "id": "122.16"
+    },
+    {
+      "orth": "ϣⲟⲩⲧ",
+      "dialect": "A",
+      "id": "122.17"
+    },
+    {
+      "orth": "ϣⲁⲧ⸗",
+      "dialect": "A",
+      "id": "122.18"
+    },
+    {
+      "orth": "ϣⲁⲁⲧ†",
+      "dialect": "A",
+      "id": "122.19"
+    },
+    {
+      "orth": "ϣⲱⲱⲧ",
+      "dialect": "F",
+      "id": "122.20"
+    },
+    {
+      "orth": "ϣⲧ-",
+      "dialect": "F",
+      "id": "122.21"
+    },
+    {
+      "orth": "ϣⲉⲧ-",
+      "dialect": "F",
+      "id": "122.22"
+    },
+    {
+      "orth": "ϣⲉⲉⲧ-",
+      "dialect": "F",
+      "id": "122.23"
+    },
+    {
+      "orth": "ϣⲉⲉⲧ⸗",
+      "dialect": "F",
+      "id": "122.24"
+    },
+    {
+      "orth": "ϣⲁⲧ-",
+      "dialect": "F",
+      "id": "122.25"
+    },
+    {
+      "orth": "ϣⲱⲱⲧ",
+      "dialect": "L",
+      "id": "122.26"
+    },
+    {
+      "orth": "ϣⲱⲧ-",
+      "dialect": "L",
+      "id": "122.27"
+    },
+    {
+      "orth": "ϣⲧ-",
+      "dialect": "L",
+      "id": "122.28"
+    },
+    {
+      "orth": "ϣⲉⲧ-",
+      "dialect": "L",
+      "id": "122.29"
+    },
+    {
+      "orth": "ϣⲁⲁⲧ⸗",
+      "dialect": "L",
+      "id": "122.30"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6774",
+      "bibliography": "CD 590b-594a; CED 254; KoptHWb 330; DELC 272a; ChLCS 82a"
+    },
+    {
+      "id": "CS6775",
+      "bibliography": "CD 592b; KoptHWb 330; DELC 272a; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϧⲱⲛⲧ ⲉⲡⲉϥϧⲁⲉ ⲛⲛⲓϥⲓ ⲁⲥⲣⲁⲟⲩⲱ ⲙⲙⲁⲩ ϩⲱⲥ ⲛϫⲉⲙⲉⲗⲁⲛⲏ ⲉⲧⲁⲥϩⲓⲟⲩⲕⲟⲧ ⲉⲣⲟϥ ⲛⲕⲉⲥⲟⲡ ⲁϥϭⲱⲣⲉⲙ ⲉⲣⲟⲥ ⲉⲑⲣⲉⲥϧⲱⲛⲧ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲉⲧⲁⲥⲓ ϧⲁⲧⲟⲧϥ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲙⲉ ⲉⲧⲁⲓⲃⲁⲓⲣⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡϧⲓⲥⲓ ⲛⲧⲉⲛⲁϫⲓϫ ϩⲓⲛⲁ ⲛⲧⲉⲉⲣⲡⲁⲙⲉⲩⲓ ϫⲉⲟⲩⲏⲓ ⲙⲙⲟⲛ ϩⲗⲓ ⲛⲧⲏⲓ ⲉⲑⲣⲓⲭⲱ ⲛⲉ ⲟⲩⲟϩ ⲥⲁⲧⲟⲧϥ ⲁϥϯ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲛⲉⲛϫⲓϫ ⲙⲡⲟⲥ ⲛⲑⲟⲥ ⲇⲉ ⲁⲥϯϩⲟ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ **ϣⲁⲧ**ⲟⲩⲭⲁⲥ ⲛⲧⲉⲥⲕⲟⲥϥ ⲁⲥⲕⲟⲥϥ ⲇⲉ ϧⲉⲛϩⲁⲛ ϩⲃⲱⲥ ⲛⲓⲁⲩ ⲉⲩⲧⲁⲓⲏⲟⲩⲧ ⲁⲥϣⲉ ⲛⲁⲥ ⲉⲃⲟⲗ ϧⲉⲛⲡϣⲁϥⲉ ⲉⲣⲉϯⲃⲁⲓⲣⲓ ⲉⲧⲉⲙⲙⲁⲩ ⲛⲧⲟⲧⲥ ϣⲁⲡⲉϩⲟⲟⲩ ⲙⲡⲉⲥⲙⲟⲩ .",
+      "english": "When the hour came for his spirit to depart, Melania came again to see him. Pambo signaled to her: “Take this basket, made by the labor of my hands, as a remembrance of me; for I have nothing else to leave you.” Immediately, he gave his spirit into the hands of God. She then prayed to his disciples that she might be allowed to care for his body. And so she prepared his body with clean and honorable linens, left the desert, and kept that basket in her hands until her final day.",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲁⲩ**ϣⲱⲱⲧ** ⲉⲃⲟⲗ ⲙⲙⲟⲟⲩ ⲛⲛϣⲏⲣⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ·",
+      "english": "but they cut off the sinful children",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲥⲱⲗⲡ ⲛϫⲉⲛⲉⲛⲛⲟϩ ϫⲉⲟⲩⲏⲓ ⲙⲡⲟⲩϫⲉⲙϫⲟⲙ ⲡⲉⲛϣⲑⲉϧⲁⲓ ⲁϥⲣⲓⲕⲓ ⲛⲛⲟⲩⲭⲱ ⲉϧⲣⲏⲓ ⲛⲛⲉⲛϣⲑⲉϧⲁⲓ ⲛⲛⲉϥⲱⲗⲓ ⲛⲟⲩⲙⲏⲓⲛⲓ **ϣⲁⲧ**ⲟⲩⲧⲏⲓϥ ⲉⲡϣⲱⲗ ⲉⲑⲃⲉⲫⲁⲓ ⲟⲩⲙⲏϣ ⲛϭⲁⲗⲉ ⲉⲩⲉⲓⲣⲓ ⲛⲟⲩϣⲱⲗ .",
+      "english": "Thy cords are broken, for they had no strength: thy meat has given way, it shall not spread the sails, it shall not bear a signal, until it be given up for plunder; therefore shall many lame men take spoil.",
+      "source": "23_Isaias_33",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:33",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲛⲟϭ ⲅⲁⲣ ⲙⲙⲛⲧⲧⲉⲗⲓⲟⲥ ⲧⲉ ⲉⲧⲣⲉⲡⲣⲱⲙⲉ **ϣⲱⲱⲧ** ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲙⲡⲉϥⲥⲟⲛ ⲏ ⲡⲉϥϣⲏⲣⲉ ⲏ ⲧⲉϥϣⲉⲉⲣⲉ ⲏ ⲡⲉϥⲉⲓⲱⲧ ⲏ ⲧⲉϥⲙⲁⲁⲩ ⲏ ϭⲉⲗⲁⲁⲩ ⲛⲣⲱⲙⲉ ⲛⲧⲁϥ ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ · ϩⲟⲧⲁⲛ ⲉⲩϣⲁⲛⲣⲛⲟⲃⲉ ⲉⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲟⲟⲩ ⲉⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ ·",
+      "english": "For it is a great perfection for a man to cut himself off from his brother or his son or his daughter or his father or his mother or any other person of his for the sake of God, when they sin against the One who created them, God.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲓϣⲉ ⲉⲧⲉⲕⲥⲱⲟⲩⲛ ⲙⲙⲟϥ ϫⲉⲟⲩⲣⲉϥϯⲟⲩⲧⲁϩ ⲛⲟⲩⲱⲙ ⲁⲛ ⲡⲉ ⲫⲁⲓ ⲉⲕⲉϧⲟⲣϥ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲑⲟϥ ⲉⲧⲉⲕⲉⲕⲟⲣϫϥ ⲟⲩⲟϩ ⲉⲕⲉⲕⲱⲧ ⲛⲟⲩⲥⲟⲃⲧⲉ ϯⲃⲁⲕⲓ ⲑⲏ ⲉⲧⲛⲁⲃⲱⲧⲥ ⲟⲩⲃⲏⲕ **ϣⲁⲧ**ⲟⲩⲧⲏⲓⲥ ⲉϧⲣⲏⲓ ⲉⲛⲉⲕϫⲓϫ",
+      "english": "But the tree which thou knowest to be not fruit-bearing, this thou shalt destroy and cut down; and thou shalt construct a mound against the city, which makes war against thee, until it be delivered up.",
+      "source": "05_Deuteronomium_20",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲧⲙⲕⲁⲛⲉϥⲧⲟⲡⲟⲥ ⲉ**ϣⲱⲱⲧ** ⲛⲗⲁⲁⲩ :",
+      "english": "and that he may not let his monasteries (lit. places) lack anything.",
+      "source": "On Lack of Food",
+      "urn": "urn:cts:copticLit:besa.food.monbbb",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        23,
+        26.065
+      ],
+      [
+        "ⲛ",
+        436,
+        22.01
+      ],
+      [
+        "ⲙ",
+        157,
+        19.132
+      ],
+      [
+        "ⲙⲁⲥⲉ",
+        25,
+        18.443
+      ],
+      [
+        "ⲟⲩ",
+        128,
+        18.117
+      ],
+      [
+        "ⲡ",
+        148,
+        18.022
+      ],
+      [
+        "ⲉⲓⲇⲱⲗⲟⲛ",
+        14,
+        16.94
+      ],
+      [
+        "ⲙⲙⲟ",
+        59,
+        16.525
+      ],
+      [
+        "ⲁ",
+        86,
+        16.22
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        58,
+        15.936
+      ],
+      [
+        "ϥ",
+        85,
+        15.647
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        23,
+        15.403
+      ],
+      [
+        "ⲁⲩⲱ",
+        59,
+        15.292
+      ],
+      [
+        "ⲑⲩⲥⲓⲁ",
+        14,
+        15.087
+      ],
+      [
+        "ⲡⲉⲛ",
+        20,
+        14.944
+      ],
+      [
+        "ⲡⲁⲥⲭⲁ",
+        7,
+        14.788
+      ],
+      [
+        "ⲉ",
+        65,
+        14.781
+      ],
+      [
+        "ϩⲉⲛ",
+        29,
+        14.545
+      ],
+      [
+        "ⲛⲁ",
+        50,
+        14.517
+      ],
+      [
+        "ⲩ",
+        48,
+        14.461
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲱⲱⲧ_0_node",
+          41
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲱⲱⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲱⲧ",
+          8
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲉⲓⲇⲱⲗⲟⲛ_3_post_ⲛ",
+          5
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲏⲇⲏ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ϩⲟⲗⲱⲥ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲣⲱ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲉⲧⲃⲉ_2_post_ϫⲓ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲱⲧ",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲱⲱⲧ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲱⲱⲧ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲱⲧ",
+          4
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϣⲱⲱⲧ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲱⲧ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          2
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲁⲭⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲛ_1_post_ϣⲱⲱⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲱⲧ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲓⲇⲱⲗⲟⲛ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲱⲱⲧ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲏⲇⲏ_1_pre_ϣⲱⲱⲧ",
+          "ⲙⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          "ϩⲟⲗⲱⲥ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲗⲱⲥ_1_pre_ϣⲱⲱⲧ",
+          "ⲣⲱ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲉⲧⲃⲉ_2_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϣⲱⲱⲧ",
+          "ⲛⲉⲩ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲱⲱⲧ",
+          "ⲛⲁ_1_pre_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲛϩⲏⲧ_1_post_ϣⲱⲱⲧ",
+          2
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϣⲱⲱⲧ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          "ⲛ_1_post_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          "ⲙ_1_post_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_pre_ⲕⲟⲟⲩⲉ",
+          "ⲕⲟⲟⲩⲉ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_1_pre_ϣⲱⲱⲧ",
+          "ⲇⲉ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϣⲱⲱⲧ",
+          "ⲁ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲱⲧ",
+          "ⲩ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϣⲱⲱⲧ_0_node",
+          "ⲙ_1_post_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲱⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲛⲁⲭⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲱⲧ",
+          "ⲡⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲱⲧ",
+          "ϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲱⲧ",
+          "ⲧⲉϥ_3_post_ⲙⲛⲧϩⲏⲕⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲙⲛⲧϩⲏⲕⲉ",
+          "ⲙⲛⲧϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.73,
+      "rank": 426,
+      "count": 275
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4914,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ],
+  "etym": {
+    "egy_num": "450452",
+    "egy_lemma": "šꜥḏ",
+    "demo_num": "d5872",
+    "demo_lemma": "šꜥd(.ṱ)",
+    "english": "to cut off",
+    "german": "abschneiden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/450452",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5872"
+  }
+}

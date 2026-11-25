@@ -1,0 +1,172 @@
+{
+  "id": "C6903",
+  "forms": [
+    {
+      "id": "CF15855",
+      "orth": "ⲁⲧϩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6912,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7623",
+      "bibliography": "CD 721a; KoptHWb 396; ChLCS 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲟⲩⲙⲟⲟϣⲉ ⲇⲉ ϩⲛⲧⲉϩⲓⲏ ⲉⲩⲛⲁ ⲉϩⲣⲁⲓ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲉⲣⲉⲓⲏⲥⲟⲩⲥ ⲇⲉ ϩⲓϩⲏ ⲙⲙⲟⲟⲩ ⲛⲉⲧⲟⲩⲏϩ ⲇⲉ ⲛⲥⲱϥ **ⲁⲧϩⲟⲧⲉ** ϫⲓⲧⲟⲩ ⲁⲩⲱ ⲁϥⲙⲟⲩⲧⲉ ⲟⲛ ⲉⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲁϥⲁⲣⲭⲓ ⲛϫⲱ ⲉⲣⲟⲟⲩ ⲛⲛⲉⲧⲛⲁϣⲱⲡⲉ ⲙⲙⲟϥ",
+      "english": "They were on the way, going up to Jerusalem; and Jesus was going in front of them, and they were amazed; and those who followed were afraid. He again took the twelve, and began to tell them the things that were going to happen to him.",
+      "source": "Mark Chapter 10",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲛⲛⲉⲧⲉⲣⲱⲧⲛ ⲡϣⲱⲙ ⲙⲡⲁⲡϣⲱⲙ ⲡⲧⲉⲗⲟⲥ ⲙⲡⲁⲧⲡⲧⲉⲗⲟⲥ ⲧϩⲟⲧⲉ ⲙⲡ**ⲁⲧϩⲟⲧⲉ** ⲡⲧⲁⲉⲓⲟ ⲙⲡⲁⲧⲡⲧⲁⲉⲓⲟ .",
+      "english": "Give therefore to everyone what you owe: taxes to whom taxes are due; customs to whom customs; respect to whom respect; honor to whom honor.",
+      "source": "45_Romans_13",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲏϩ",
+        2,
+        12.907
+      ],
+      [
+        "ϫⲓⲧ",
+        2,
+        12.198
+      ],
+      [
+        "ⲛⲥⲱ",
+        2,
+        11.541
+      ],
+      [
+        "ⲧⲁⲉⲓⲟ",
+        1,
+        11.036
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        10.879
+      ],
+      [
+        "ϩⲟⲧⲉ",
+        1,
+        9.96
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        8.401
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϩⲟⲧⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6473,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6907",
+      "label": "ϩⲓϩⲟϯ",
+      "pos": "V",
+      "gloss": "strike fear, frighten"
+    },
+    {
+      "target": "C6902",
+      "label": "ϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "fear"
+    },
+    {
+      "target": "C6908",
+      "label": "ϫⲓϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "strike fear, frighten"
+    },
+    {
+      "target": "C6906",
+      "label": "ϯϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "give fear, terrify"
+    },
+    {
+      "target": "C6904",
+      "label": "ⲙⲛⲧⲁⲧϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "fearlessness, impudence"
+    },
+    {
+      "target": "C6905",
+      "label": "ⲣϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "be afraid"
+    }
+  ]
+}

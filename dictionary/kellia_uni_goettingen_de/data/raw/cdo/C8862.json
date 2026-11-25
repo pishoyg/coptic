@@ -1,0 +1,71 @@
+{
+  "id": "C8862",
+  "forms": [
+    {
+      "id": "CF21451",
+      "orth": "ⲉⲅⲕⲉⲫⲁⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21452",
+      "orth": "ⲉⲅⲕⲉⲫⲁⲗⲟⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF21453",
+      "orth": "ⲁⲛⲅⲉⲫⲁⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21454",
+      "orth": "ⲁⲛⲅⲕⲉⲫⲁⲗⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21455",
+      "orth": "ⲁⲛⲕⲉⲫⲁⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4873,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF21456",
+      "orth": "ⲁⲛⲕⲉⲫⲟⲗⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21457",
+      "orth": "ⲉⲅⲕⲉⲫⲁⲗⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21458",
+      "orth": "ⲉⲛⲕⲉⲫⲁⲗⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10704",
+      "bibliography": "DDGLC",
+      "cu_ID": "1488"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "605",
+    "grl_lemma": "ἐγκέφαλος",
+    "grl_meaning": "within the head, brain",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 472a; Preisigke 1:413"
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "id": "C694",
+  "forms": [
+    {
+      "id": "CF2635",
+      "orth": "ⲉⲡⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3498,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF2636",
+      "orth": "ⲡⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14720,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2637",
+      "orth": "ⲉⲫⲗⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.4,
+        "rank": 1251,
+        "count": 34
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS832",
+      "bibliography": "CD 57b, 63a; KoptHWB 38; DELC 45; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲛ**ⲉⲫⲗⲏⲟⲩ** ⲅⲁⲣ ⲛⲉ ϩⲁⲛϩⲃⲏⲟⲩⲓ ⲉⲩϣⲟⲩⲓⲧ ⲛⲉ ϧⲉⲛⲡⲥⲏⲟⲩ ⲛⲧⲉⲡⲟⲩϫⲉⲙⲡϣⲓⲛⲓ ⲥⲉⲛⲁⲧⲁⲕⲟ .",
+      "english": "They are vain works, objects of scorn; in the time of their visitation they shall perish.",
+      "source": "24_Ieremias_28",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲩⲡⲣϣϣⲛⲉ ⲅⲁⲣ ⲁⲛ ⲉⲃⲟⲗ ⲉⲛϩⲁⲗⲁⲧⲉ **ⲉⲡⲣⲁ**",
+      "english": "for nets are not without cause spread for birds.",
+      "source": "Proverbs 1",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏⲉⲧⲓⲛⲓ ⲛⲏⲓ ⲛⲟⲩⲥⲉⲙⲉⲇⲁⲗⲓⲟⲛ ⲟⲩ**ⲉⲫⲗⲏⲟⲩ** ⲛⲏⲓ ⲡⲉ : ⲟⲩⲥⲑⲟⲓⲛⲟⲩϥⲓ ⲟⲩⲱⲣⲉⲃ ⲛⲏⲓ ⲡⲉ .",
+      "english": "Though ye bring fine flour, it is vain; incense is an abomination to me; I cannot bear your new moons, and your sabbaths, and the great day;",
+      "source": "23_Isaias_01",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϥⲥϩⲟⲩⲟⲣⲧ ⲛϭⲓⲡⲉⲧⲛⲁϫⲟⲟⲥ ϫⲉϩⲉⲛ**ⲉⲡⲣⲁ** ⲛⲉ ⲛⲉⲓϣⲁϫⲉ ⲏ ⲛⲥⲁϩⲟⲩ · ⲏ ⲛⲥⲙⲟⲩ · ⲉⲧⲉⲣⲉⲡⲁⲓϫⲱ ⲙⲙⲟⲟⲩ",
+      "english": "...",
+      "source": "Acephelous 22: ZC 301-308",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbzc:1001-1006",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ**ⲉⲫⲗⲏⲟⲩ** ⲛⲱⲧⲉⲛ ⲡⲉ ⲉϣⲉⲣⲡ ⲑⲏⲛⲟⲩ ⲧⲉⲛ ⲑⲏⲛⲟⲩ ⲙⲉⲛⲉⲥⲁ ⲑⲣⲉⲧⲉⲧⲉⲛϩⲉⲙⲥⲓ ⲛⲏ ⲉⲑⲟⲩⲱⲙ ⲛⲟⲩⲱⲓⲕ ⲛⲉⲙⲕⲁϩ ⲛϩⲏⲧ",
+      "english": "It is vain for you to rise early: ye rise up after resting, ye that eat the bread of grief; while he gives sleep to his beloved.",
+      "source": "19_Psalmi_126",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:126",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛ**ⲉⲡⲣⲁ**ⲛ ⲇⲉ ⲙⲡⲣⲱⲙⲉ ⲉⲧⲙⲙⲁⲩ ⲡⲉ ⲛⲁⲃⲁⲗ ⲁⲩⲱ ⲡⲣⲁⲛ ⲛⲧⲉϥⲥϩⲓⲙⲉ ⲡⲉ ⲁⲃⲓⲕⲓⲁ ⲧⲉⲥϩⲓⲙⲉ ⲇⲉ ⲛⲉⲛⲁⲛⲟⲩⲥ ϩⲛⲧⲙⲛⲧⲣⲙⲛⲧϩⲏⲧ ⲁⲩⲱ ⲛⲉⲛⲉⲥⲉϩⲣⲁⲥ ⲉⲙⲁⲧⲉ ⲡⲉⲥϩⲁⲓ ⲇⲉ ⲛⲉⲟⲩⲣⲱⲙⲉ ⲡⲉ ⲉϥⲛⲁϣⲧ ⲁⲩⲱ ⲙⲡⲟⲛⲏⲣⲟⲥ ϩⲛⲛⲉϥϩⲃⲏⲩⲉ ⲡⲣⲱⲙⲉ ⲇⲉ ⲛⲉ ⲟⲩϣⲱⲥ ⲡⲉ ⲉϥϫⲁϫⲱ",
+      "english": "And the man's name was Nabal, and his wife's name was Abigaia: and his wife was of good understanding and very beautiful in person: but the man was harsh, and evil in his doings, and the man was churlish.",
+      "source": "I Samuel 25",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲧⲁⲕⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ⲣⲉϥϫⲉ",
+        1,
+        16.276
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        2,
+        13.106
+      ],
+      [
+        "ϣⲁϫⲉ",
+        6,
+        12.904
+      ],
+      [
+        "ⲕⲁⲣⲙⲏⲗⲟⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲛ",
+        15,
+        12.208
+      ],
+      [
+        "ⲉⲛⲉ",
+        2,
+        11.643
+      ],
+      [
+        "ⲙⲟⲩϣⲧ",
+        1,
+        11.369
+      ],
+      [
+        "ϩⲁⲗⲁⲧⲉ",
+        1,
+        10.753
+      ],
+      [
+        "ⲛⲁϩⲧⲉ",
+        1,
+        10.019
+      ],
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        9.792
+      ],
+      [
+        "ϫⲉ",
+        5,
+        9.79
+      ],
+      [
+        "ⲁϫⲛ",
+        1,
+        9.647
+      ],
+      [
+        "ⲧⲙ",
+        2,
+        9.616
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        9.507
+      ],
+      [
+        "ⲛⲉⲕ",
+        2,
+        9.465
+      ],
+      [
+        "ⲩ",
+        5,
+        9.454
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        7.956
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.761
+      ],
+      [
+        "ⲉ",
+        4,
+        7.495
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          7
+        ],
+        [
+          "ⲡ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ⲏⲓ",
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_pre_ⲉⲡⲣⲁ",
+          "ⲙ_2_pre_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲏⲓ",
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_4_pre_ⲡ",
+          "ⲉⲡⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲡⲣⲁ",
+          "ⲉⲡⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ϣⲁϫⲉ",
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_1_post_ⲉⲡⲣⲁ",
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲥⲁϩⲟⲩ",
+          "ⲛ_3_post_ⲥⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲡⲣⲁ_0_node",
+          "ⲇⲉ_1_post_ⲉⲡⲣⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3131,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C692",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanities, senselessness"
+    },
+    {
+      "target": "C693",
+      "label": "ⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vain, empty"
+    },
+    {
+      "target": "C696",
+      "label": "ⲉⲣⲉⲫⲗⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "act vainly, be vain, empty"
+    },
+    {
+      "target": "C695",
+      "label": "ⲙⲛⲧⲉⲡⲣⲁ",
+      "pos": "N",
+      "gloss": "vanity, emptiness"
+    }
+  ]
+}

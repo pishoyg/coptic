@@ -1,0 +1,210 @@
+{
+  "id": "C4772",
+  "forms": [
+    {
+      "id": "CF11509",
+      "orth": "ⲣⲉϥⲧⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4107,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5390",
+      "bibliography": "CD 454b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲩϣⲟ",
+        1,
+        16.206
+      ],
+      [
+        "ⲧⲁⲣ",
+        2,
+        14.104
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        2,
+        13.236
+      ],
+      [
+        "ϩⲁϩ",
+        2,
+        11.574
+      ],
+      [
+        "ϭⲱ",
+        2,
+        11.446
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        11.297
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        2,
+        11.18
+      ],
+      [
+        "ⲛ",
+        10,
+        10.967
+      ],
+      [
+        "ⲕ",
+        4,
+        10.045
+      ],
+      [
+        "ⲟ",
+        2,
+        9.998
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        9.309
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.103
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        8.506
+      ],
+      [
+        ".",
+        3,
+        8.505
+      ],
+      [
+        "ⲩ",
+        3,
+        7.757
+      ],
+      [
+        "·",
+        1,
+        7.371
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.837
+      ],
+      [
+        "ⲉ",
+        3,
+        6.765
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ⲥ",
+        2,
+        6.467
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3716,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4770",
+      "label": "ⲁⲧⲧⲱϩ",
+      "pos": "N",
+      "gloss": "unmixed, not confused"
+    },
+    {
+      "target": "C4771",
+      "label": "ⲙⲁⲓⲧⲱϩ",
+      "pos": "N",
+      "gloss": "who loves to meddle"
+    },
+    {
+      "target": "C4775",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+      "pos": "N",
+      "gloss": "confusion, disturbance"
+    },
+    {
+      "target": "C4774",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "confusion, disturbance"
+    },
+    {
+      "target": "C4773",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "person interfering/poking the nose in sth"
+    },
+    {
+      "target": "C4776",
+      "label": "ⲧⲁϩⲥ",
+      "pos": "N",
+      "gloss": "confusion"
+    },
+    {
+      "target": "C4768",
+      "label": "ⲧⲱϩ",
+      "pos": "V",
+      "gloss": "be mixed, be disturbed, be clouded; mix, stir"
+    },
+    {
+      "target": "C4769",
+      "label": "ⲧⲱϩ",
+      "pos": "N",
+      "gloss": "mixture, disturbance"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C4878",
+  "forms": [
+    {
+      "id": "CF11721",
+      "orth": "ϯⲧⲉϭⲥⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5503",
+      "bibliography": "KoptHWb 263"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4874",
+      "label": "ϣⲥⲛⲧⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "sole of foot, footprint"
+    },
+    {
+      "target": "C4875",
+      "label": "ϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "track, follow sb"
+    },
+    {
+      "target": "C4876",
+      "label": "ⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "N",
+      "gloss": "not to be tracked"
+    },
+    {
+      "target": "C4877",
+      "label": "ⲙⲛⲧⲁⲧϫⲓⲧⲁϭⲥⲉ (ⲛⲥⲁ-)",
+      "pos": "N",
+      "gloss": "state of the one that is not to be tracked"
+    },
+    {
+      "target": "C4873",
+      "label": "ⲧⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "sole of foot, footprint"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "C3346",
+  "forms": [
+    {
+      "id": "CF8583",
+      "orth": "ⲉⲓⲣⲉ ⲛⲟⲩⲥⲱⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3817",
+      "bibliography": "CD 321b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3349",
+      "label": "ϣϫⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "teasing, jesting talk"
+    },
+    {
+      "target": "C3350",
+      "label": "ϭⲓⲛⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "laughter"
+    },
+    {
+      "target": "C3347",
+      "label": "ⲙⲁ ⲛⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "funfair"
+    },
+    {
+      "target": "C3348",
+      "label": "ⲣⲉϥⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "jester, clown"
+    },
+    {
+      "target": "C3344",
+      "label": "ⲥⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "laugh, play; deride, mock"
+    },
+    {
+      "target": "C3345",
+      "label": "ⲥⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "laughter, derision"
+    }
+  ]
+}

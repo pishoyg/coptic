@@ -1,0 +1,72 @@
+{
+  "id": "C2516",
+  "forms": [
+    {
+      "id": "CF6822",
+      "orth": "ⲛⲉⲥⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8068,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VBD",
+    "subc": "Adjektivverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2895",
+      "bibliography": "CD 228a; KoptHWb 125; DELC 144; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲙⲙⲟⲓ ⲛⲟⲩϩⲟⲟⲩ ⲁⲛⲟⲕ ⲓⲱϩⲁⲛⲛⲏⲥ ⲉⲓⲉⲓⲣⲉ ⲛⲧⲁⲥⲩⲛⲁⲝⲓⲥ ⲙⲡⲛⲁⲩ ⲛϫⲡⲥⲟ ⲁⲩⲛⲟϭ ⲛⲟⲩⲟⲉⲓⲛ ϣⲁ ϩⲙⲡⲏⲓ ⲉⲛⲉⲓ ⲛϩⲏⲧϥ · ⲉⲓⲥ ⲟⲩϩⲣϣⲓⲣⲉ ⲉ**ⲛⲉⲥⲉ**ϩⲣⲁϥ ⲉⲙⲁⲧⲉ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲟⲥⲟⲛ ⲇⲉ ⲉⲓⲣϣⲡⲏⲣⲉ · ⲛⲛϣⲏⲛ · ⲁⲩⲱ ⲉⲓⲑⲉⲱⲣⲉⲓ ⲙⲙⲟⲟⲩ ⲙⲛⲛⲉⲩⲕⲁⲣⲡⲟⲥ · ⲉⲓⲥϥⲧⲟⲟⲩ ⲛϣⲏⲣⲉ ϣⲏⲙ ⲁⲩⲉⲓ ⲙⲡⲟⲩⲉ ⲉⲛⲉⲥⲱⲟⲩ ϩⲛⲧⲉⲩϩⲓⲕⲱⲛ · ⲉⲣⲉϩⲉⲛⲃⲁⲗⲟⲧ ⲉ**ⲛⲉⲥⲟ**ⲟⲩ ⲧⲟ ϩⲓⲱⲟⲩ · ⲙⲡⲉⲥⲙⲟⲧ ⲛϩⲉⲛⲡⲉⲣⲓⲥⲱⲙⲁ ·",
+      "english": "And whilst I was marvelling at the trees, and was looking at them, and at the fruit that was on them, behold four young men appeared in the distance, and their forms were goodly, and they were dressed in fine skin garments which, as it were, covered all their bodies.",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛϭⲓⲟⲩⲁ ⲛϩⲏⲧⲟⲩ ⲉ**ⲛⲉⲥⲱ**ϥ ·",
+      "english": "And one of them appeared from out of the herd,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3274",
+      "type": "cf",
+      "label": "be beautiful"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2517",
+      "label": "ⲉⲧⲛⲉⲥⲱϥ",
+      "pos": "N",
+      "gloss": "beautiful"
+    },
+    {
+      "target": "C2518",
+      "label": "ⲡⲉⲧⲛⲉⲥⲱϥ",
+      "pos": "N",
+      "gloss": "that which is beautiful"
+    }
+  ]
+}

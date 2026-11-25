@@ -1,0 +1,64 @@
+{
+  "id": "C1304",
+  "forms": [
+    {
+      "id": "CF4014",
+      "orth": "ⲉⲣⲭⲣⲱⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1510",
+      "bibliography": "CD 116a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1306",
+      "label": "ϩⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1307",
+      "label": "ϭⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "take fire"
+    },
+    {
+      "target": "C1305",
+      "label": "ϯⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1302",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "fire"
+    },
+    {
+      "target": "C1303",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "of fire, fiery"
+    }
+  ]
+}

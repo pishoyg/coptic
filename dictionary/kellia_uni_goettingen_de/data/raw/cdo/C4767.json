@@ -1,0 +1,201 @@
+{
+  "id": "C4767",
+  "forms": [
+    {
+      "id": "CF11499",
+      "orth": "ⲣⲉϥⲧⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4107,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5384",
+      "bibliography": "CD 453b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲛⲥⲱⲧⲙ ⲅⲁⲣ ⲉⲧⲃⲉϩⲟⲓⲛⲉ ϫⲉⲥⲉⲙⲟⲟϣⲉ ⲛϩⲏⲧ ⲧⲏⲩⲧⲛ ⲁⲧⲁⲕⲧⲱⲥ ⲛⲥⲉⲣⲗⲁⲁⲩ ⲛϩⲱⲃ ⲁⲛ . ⲁⲗⲗⲁ ⲉⲩⲟ ⲛ**ⲣⲉϥⲧⲱϩ** .",
+      "english": "For we hear of some who walk among you in rebellion, who don't work at all, but are busybodies.",
+      "source": "53_2 Thessalonians_3",
+      "urn": "urn:cts:copticLit:nt.2thess.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲛⲥⲱⲧⲙ ⲣⲱ ⲉⲧⲃⲉϩⲟⲓⲛⲉ ⲛϩⲏⲧⲧⲏⲩⲧⲛ ϫⲉⲥⲉⲙⲟⲟϣⲉ ⲉⲧⲁⲕⲧⲱⲥ · ⲉⲛⲥⲉⲣⲗⲁⲁⲩ ⲛϩⲱⲃ ⲁⲛ · ⲁⲗⲗⲁ ⲉⲩⲟ ⲛ**ⲣⲉϥⲧⲱϩ** ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲩϣⲟ",
+        1,
+        16.206
+      ],
+      [
+        "ⲧⲁⲣ",
+        2,
+        14.104
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        2,
+        13.236
+      ],
+      [
+        "ϩⲁϩ",
+        2,
+        11.574
+      ],
+      [
+        "ϭⲱ",
+        2,
+        11.446
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        11.297
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        2,
+        11.18
+      ],
+      [
+        "ⲛ",
+        10,
+        10.967
+      ],
+      [
+        "ⲕ",
+        4,
+        10.045
+      ],
+      [
+        "ⲟ",
+        2,
+        9.998
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        9.309
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        9.103
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        8.506
+      ],
+      [
+        ".",
+        3,
+        8.505
+      ],
+      [
+        "ⲩ",
+        3,
+        7.757
+      ],
+      [
+        "·",
+        1,
+        7.371
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.837
+      ],
+      [
+        "ⲉ",
+        3,
+        6.765
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ⲥ",
+        2,
+        6.467
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲧⲱϩ",
+          "ⲣⲉϥⲧⲱϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3716,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4764",
+      "label": "ⲁⲙⲧⲱϩ",
+      "pos": "N",
+      "gloss": "clay mixed with chaff"
+    },
+    {
+      "target": "C4765",
+      "label": "ⲙⲱⲓⲧ ⲛⲧⲉⲡⲓⲧⲟϩ",
+      "pos": "N",
+      "gloss": "Milky Way"
+    },
+    {
+      "target": "C4766",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "chaff seller"
+    },
+    {
+      "target": "C4763",
+      "label": "ⲧⲱϩ",
+      "pos": "N",
+      "gloss": "chaff"
+    }
+  ]
+}

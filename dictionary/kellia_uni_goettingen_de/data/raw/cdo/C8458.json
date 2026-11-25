@@ -1,0 +1,479 @@
+{
+  "id": "C8458",
+  "forms": [
+    {
+      "id": "CF19778",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲁⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF19784",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲁⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19779",
+      "orth": "ⲁⲣϫⲁⲓⲥⲑⲁⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19783",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2528,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF19781",
+      "orth": "ⲁⲣⲭⲉⲑⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19782",
+      "orth": "ⲁⲣⲭⲉⲓⲥⲑⲁⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19780",
+      "orth": "ⲁⲣϫⲉⲥⲑⲁⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19785",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲁⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19786",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲁⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF19787",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19788",
+      "orth": "ⲁⲣⲭⲉⲥⲑⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19789",
+      "orth": "ⲁⲣⲭⲓⲥⲑ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19790",
+      "orth": "ⲁⲣⲭⲓⲥⲑⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5447,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF19791",
+      "orth": "ⲁⲣⲭⲓⲥⲑⲁⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF19792",
+      "orth": "ⲁⲣⲭⲓⲥⲑⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9835",
+      "bibliography": "DDGLC",
+      "cu_ID": "10876"
+    },
+    {
+      "id": "CS9836",
+      "bibliography": "DDGLC",
+      "cu_ID": "9178"
+    },
+    {
+      "id": "CS9837",
+      "bibliography": "DDGLC",
+      "cu_ID": "5067"
+    },
+    {
+      "id": "CS9838",
+      "bibliography": "DDGLC",
+      "cu_ID": "5070"
+    },
+    {
+      "id": "CS9839",
+      "bibliography": "DDGLC",
+      "cu_ID": "121"
+    },
+    {
+      "id": "CS9840",
+      "bibliography": "DDGLC",
+      "cu_ID": "10877"
+    },
+    {
+      "id": "CS9841",
+      "bibliography": "DDGLC",
+      "cu_ID": "10878"
+    },
+    {
+      "id": "CS9842",
+      "bibliography": "DDGLC",
+      "cu_ID": "2363"
+    },
+    {
+      "id": "CS9843",
+      "bibliography": "DDGLC",
+      "cu_ID": "11552"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲙⲟⲩⲧⲉ ⲉⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲁϥ**ⲁⲣⲭⲉⲥⲑⲁⲓ** ⲛϫⲟⲟⲩⲥⲉ ⲥⲛⲁⲩ ⲥⲛⲁⲩ ⲁⲩⲱ ⲁϥϯ ⲛⲁⲩ ⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲉϩⲟⲩⲛ ⲉⲛⲉⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ",
+      "english": "He called to himself the twelve, and began to send them out two by two; and he gave them authority over the unclean spirits.",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲉⲓ ⲇⲉ ⲉⲃⲟⲗ ⲁϥ**ⲁⲣⲭⲉⲥⲑⲁⲓ** ⲛⲧⲁϣⲉⲟⲉⲓϣ ⲛϩⲁϩ ⲁⲩⲱ ⲉⲥⲣⲡϣⲁϫⲉ ϩⲱⲥⲧⲉ ⲛϥⲧⲙϭⲙϭⲟⲙ ⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲡⲟⲗⲓⲥ ⲛⲟⲩⲱⲛϩ ⲁⲗⲗⲁ ⲛⲉϥϩⲛϩⲉⲛⲙⲁ ⲛϫⲁⲓⲉ ⲁⲩⲱ ⲛⲉⲩⲛⲏⲩ ⲉⲣⲁⲧϥ ⲉⲃⲟⲗ ϩⲙⲙⲁ ⲛⲓⲙ .",
+      "english": "But he went out, and began to proclaim it much, and to spread about the matter, so that Jesus could no more openly enter into a city, but was outside in desert places: and they came to him from everywhere.",
+      "source": "Mark Chapter 1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁϥⲛⲁ ⲛⲁⲕ ⲁϥⲃⲱⲕ ⲇⲉ ⲁϥ**ⲁⲣⲭⲉⲥⲑⲁⲓ** ⲛⲧⲁϣⲉⲟⲉⲓϣ ϩⲛⲧⲇⲉⲕⲁⲡⲟⲗⲓⲥ ⲛⲛⲉⲛⲧⲁⲓⲏⲥⲟⲩⲥ ⲁⲁⲩ ⲛⲁϥ . ⲁⲩⲱ ⲁⲩⲣϣⲡⲏⲣⲉ ⲧⲏⲣⲟⲩ",
+      "english": "He went his way, and began to proclaim in Decapolis how Jesus had done great things for him, and everyone marveled.",
+      "source": "Mark Chapter 5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϣⲉⲟⲉⲓϣ",
+        6,
+        16.558
+      ],
+      [
+        "ϯⲥⲃⲱ",
+        6,
+        16.099
+      ],
+      [
+        "ⲛ",
+        36,
+        15.071
+      ],
+      [
+        "ⲁ",
+        17,
+        13.059
+      ],
+      [
+        "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+        3,
+        13.028
+      ],
+      [
+        "ⲇⲉ",
+        9,
+        12.248
+      ],
+      [
+        "ϥ",
+        15,
+        11.994
+      ],
+      [
+        "ϩⲁϩ",
+        3,
+        11.888
+      ],
+      [
+        "ϫⲟⲟⲩ",
+        3,
+        11.585
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        3,
+        11.427
+      ],
+      [
+        "⁖",
+        1,
+        10.765
+      ],
+      [
+        "ⲡⲟⲗⲉⲙⲉⲓ",
+        1,
+        10.569
+      ],
+      [
+        "ϩⲁ",
+        3,
+        10.372
+      ],
+      [
+        "ϩⲛ",
+        6,
+        9.986
+      ],
+      [
+        "ⲟⲛ",
+        3,
+        9.734
+      ],
+      [
+        "ⲧ",
+        6,
+        9.578
+      ],
+      [
+        "ⲃⲱⲕ",
+        3,
+        9.451
+      ],
+      [
+        "ϩⲙⲉ",
+        1,
+        9.273
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        1,
+        8.795
+      ],
+      [
+        "ⲥⲉ",
+        3,
+        8.59
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          6
+        ],
+        [
+          "ϥ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          6
+        ],
+        [
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          9
+        ],
+        [
+          "ⲟⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          5
+        ],
+        [
+          "ⲧⲁϣⲉⲟⲉⲓϣ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲛ_3_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          2
+        ],
+        [
+          "ϫⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲉ_3_post_ϫⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ϥ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          3
+        ],
+        [
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          "ⲟⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          "ⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲧⲁϣⲉⲟⲉⲓϣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁϣⲉⲟⲉⲓϣ_2_post_ⲛ",
+          "ϩⲛ_3_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ϫⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟⲟⲩ_2_post_ⲛ",
+          "ⲥⲉ_3_post_ϫⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ϣⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          "ⲉ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲧⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲗⲏⲛ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ϯ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲛⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ⲁⲣⲭⲉⲥⲑⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲉⲥⲑⲁⲓ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2238,
+      "count": 19
+    }
+  },
+  "etym": {
+    "grl_ID": "305",
+    "grl_lemma": "ἄρχω",
+    "grl_meaning": "to rule, command, begin",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 254a; Preisigke 1:221"
+  }
+}

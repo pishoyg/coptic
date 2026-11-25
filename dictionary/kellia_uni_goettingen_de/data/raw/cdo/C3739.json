@@ -1,0 +1,218 @@
+{
+  "id": "C3739",
+  "forms": [
+    {
+      "id": "CF31704",
+      "orth": "ⲥⲣⲟϥⲣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7468,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31703",
+      "orth": "ⲥⲣⲟϥⲣⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2565,
+        "count": 19
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4247",
+      "bibliography": "CD 357b; CED 162; KoptHWb 196; DELC 197; ChLCS 50b"
+    },
+    {
+      "id": "CS4248",
+      "bibliography": "CD 357b; KoptHWb 196; DELC 197; ChLCS 50b"
+    },
+    {
+      "id": "CS4249",
+      "bibliography": "CDC 56b; KoptHWb 196; DELC 197; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ⲇⲉ ⲁⲓϣⲟⲟⲩⲉ ⲁⲩⲱ ⲁⲓ**ⲥⲣⲟϥⲣϥ** ·",
+      "english": "but now I am dried up and withered.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲁⲣⲝ ⲛⲓⲙ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲟⲩⲭⲟⲣⲧⲟⲥ ⲁⲩⲱ ⲉⲟⲟⲩ ⲛⲓⲙ ⲛⲧⲁⲩ ⲛⲧϩⲉ ⲙⲡⲉϩⲣⲏⲣⲉ ⲙⲡⲉⲭⲟⲣⲧⲟⲥ ⲉⲁϥϣⲟⲟⲩⲉ ⲛϭⲓⲡⲉⲭⲟⲣⲧⲟⲥ ⲁⲩⲱ ⲡⲉϥϩⲣⲏⲣⲉ ⲁϥ**ⲥⲣⲟϥⲣϥ**",
+      "english": "For, 'All flesh is like grass, and all of man's glory like the flower in the grass. The grass withers, and its flower falls;",
+      "source": "60_1 Peter_1",
+      "urn": "urn:cts:copticLit:nt.1pet.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲏⲣⲉ",
+        1,
+        14.74
+      ],
+      [
+        "ϣⲟⲟⲩⲉ",
+        1,
+        13.09
+      ],
+      [
+        "ⲟⲩⲟⲓ",
+        1,
+        10.82
+      ],
+      [
+        "ⲓ",
+        2,
+        8.85
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        7.471
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲣⲟϥⲣϥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲣⲟϥⲣϥ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲥⲣⲟϥⲣϥ",
+          1
+        ],
+        [
+          "ⲥⲣⲟϥⲣϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲣⲟϥⲣϥ",
+          "ⲁ_1_pre_ⲥⲣⲟϥⲣϥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲣⲟϥⲣϥ",
+          "ⲓ_1_pre_ⲥⲣⲟϥⲣϥ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲥⲣⲟϥⲣϥ",
+          "ⲥⲣⲟϥⲣϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7008,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1731",
+      "type": "cf",
+      "label": "mortify, become rotten, perish"
+    },
+    {
+      "target": "C13013",
+      "type": "cf",
+      "label": "gießen, schmieren"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3741",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "unwithered state"
+    },
+    {
+      "target": "C13026",
+      "label": "ⲣⲉϥⲣⲓϥ",
+      "pos": "N",
+      "gloss": "waste"
+    },
+    {
+      "target": "C13013",
+      "label": "ⲣⲟϥⲣⲉϥ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C3740",
+      "label": "ⲥⲣⲟϥⲣϥ",
+      "pos": "N",
+      "gloss": "falling, withering"
+    },
+    {
+      "target": "C3742",
+      "label": "ⲥⲣⲣⲓϥⲉ",
+      "pos": "N",
+      "gloss": "what falls, droppings"
+    }
+  ]
+}

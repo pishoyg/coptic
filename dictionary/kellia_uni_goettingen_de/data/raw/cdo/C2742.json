@@ -1,0 +1,46 @@
+{
+  "id": "C2742",
+  "forms": [
+    {
+      "id": "CF7301",
+      "orth": "ⲥⲁ ⲛⲱⲓⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3136",
+      "bibliography": "CD 254b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2741",
+      "label": "ⲁⲧⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "without bread"
+    },
+    {
+      "target": "C2740",
+      "label": "ⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "bread, loaf"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm2539",
+    "demo_lemma": "s-n-ꜥq",
+    "english": "Baker",
+    "german": "Bäcker",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm2539"
+  }
+}

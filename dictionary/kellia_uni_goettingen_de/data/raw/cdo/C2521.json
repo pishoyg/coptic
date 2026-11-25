@@ -1,0 +1,49 @@
+{
+  "id": "C2521",
+  "forms": [
+    {
+      "id": "CF6833",
+      "orth": "ⲛⲉⲥⲃⲱⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16384,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VBD",
+    "subc": "Adjektivverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2900",
+      "bibliography": "CD 229a; CED 110; KoptHWb 125; DELC 144; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲓⲉⲓⲣⲉ ⲙⲡⲉⲕϣⲁϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲓϯ ⲛⲁⲕ ⲛⲟⲩϩⲏⲧ ⲛⲥⲁⲃⲉ ⲉ**ⲛⲉⲥⲃⲱⲱ**ϥ ⲉⲙⲡⲉⲟⲩⲟⲛ ⲛⲧⲉⲕⲙⲓⲛⲉ ϣⲱⲡⲉ ϩⲁⲧⲉⲕϩⲏ ⲁⲩⲱ ⲙⲛⲛⲥⲱⲕ ⲙⲛⲟⲩⲟⲛ ⲛⲁⲛⲉϩⲥⲉ ⲉϥⲧⲛⲧⲱⲛ ⲉⲣⲟⲕ",
+      "english": "behold, I have done according to thy word: behold, I have given thee an understanding and wise heart: there has not been any one like thee before thee, and after thee there shall not arise one like thee.",
+      "source": "I Kings 3",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3330",
+      "type": "cf",
+      "label": "wise"
+    },
+    {
+      "target": "C3313",
+      "type": "cf",
+      "label": "learn"
+    }
+  ]
+}

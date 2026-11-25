@@ -1,0 +1,55 @@
+{
+  "id": "C535",
+  "forms": [
+    {
+      "id": "CF2089",
+      "orth": "ⲃⲁⲣⲱϩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃⲁⲣⲉϩ",
+      "dialect": "S",
+      "id": "598.1"
+    },
+    {
+      "orth": "ⲃⲁⲣⲏϩ",
+      "dialect": "S",
+      "id": "598.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS645",
+      "bibliography": "CD 44b; ChLCS 9b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C320",
+      "type": "cf",
+      "label": "prefix in names of metals"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C533",
+      "label": "ⲃⲁⲣⲱϩ",
+      "pos": "N",
+      "gloss": "a transport animal, camel(?)"
+    },
+    {
+      "target": "C534",
+      "label": "ⲃⲁⲣⲱϩ",
+      "pos": "N",
+      "gloss": "fodderer or sim. (among monastic officials)"
+    }
+  ]
+}

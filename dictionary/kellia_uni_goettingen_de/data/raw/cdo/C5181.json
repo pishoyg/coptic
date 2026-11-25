@@ -1,0 +1,76 @@
+{
+  "id": "C5181",
+  "forms": [
+    {
+      "id": "CF12329",
+      "orth": "ⲟⲩⲉⲓⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲉⲉⲧⲉ",
+      "dialect": "S",
+      "id": "1750.1"
+    },
+    {
+      "orth": "ⲟⲩⲓⲧⲉ",
+      "dialect": "S",
+      "id": "1750.2"
+    },
+    {
+      "orth": "ⲃⲓⲧⲉ",
+      "dialect": "S",
+      "id": "1750.3"
+    },
+    {
+      "orth": "ⲃⲓϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10429,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲓⲧⲉ",
+      "dialect": "A",
+      "id": "1750.5"
+    },
+    {
+      "orth": "ⲟⲩⲉⲓⲧⲓ",
+      "dialect": "F",
+      "id": "1750.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5819",
+      "bibliography": "CD 495a; CED 218; KoptHWb 279; DELC 238b; ChLCS 69a"
+    },
+    {
+      "id": "CS5820",
+      "bibliography": "CD 495a; KoptHWb 279; DELC 238b; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5182",
+      "label": "ⲟⲩⲉⲓⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "waste away, dry up; dissolve, destroy"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1566",
+    "demo_lemma": "wtj",
+    "english": "[to cook]",
+    "german": "schmelzen, erweichen, auflösen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1566"
+  }
+}

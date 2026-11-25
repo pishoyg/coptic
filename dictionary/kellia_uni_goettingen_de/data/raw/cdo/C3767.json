@@ -1,0 +1,294 @@
+{
+  "id": "C3767",
+  "forms": [
+    {
+      "id": "CF9455",
+      "orth": "ⲥⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3535,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲥⲓϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.08,
+        "rank": 691,
+        "count": 92
+      }
+    },
+    {
+      "orth": "ⲥⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3942,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4278",
+      "bibliography": "CD 359a; CED 164; KoptHWb 198; DELC 198; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲉⲧ**ⲥⲓϯ** ⲁϥⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ .",
+      "english": "The farmer sows the word.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲛⲙⲁⲥϯⲅⲍ ⲛⲁϣϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲛⲉⲕⲙⲁ ⲛϣⲱⲡⲉ ⲕⲛⲁⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉϫⲛⲟⲩϩⲟϥ ⲙⲛⲟⲩ**ⲥⲓⲧ** · ⲛⲅϩⲱⲙⲉ ϩⲣⲁⲓ ⲉϫⲛⲟⲩⲙⲟⲩⲓ ⲙⲛⲟⲩⲇⲣⲁⲕⲱⲛ · ϫⲉⲁϥⲛⲁϩⲧⲉ ⲉⲣⲟⲓ · ϯⲛⲁⲧⲟⲩϫⲟϥ · ϯⲛⲁⲣϩⲁⲓⲃⲥ ⲉⲣⲟϥ ϫⲉⲁϥⲥⲟⲩⲛⲡⲁⲣⲁⲛ ·",
+      "english": "neither shall the evil draw nigh to thy habitation; Thou shalt go up upon the adder and the scorpion, thou shalt tread upon the lion and the serpent; Because he hath believed in Me I will deliver him, and I will protect him because he hath known My Name;",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲥⲓⲛⲓ ⲉⲃⲟⲗ ϩⲁ ⲫⲓⲟⲙ ⲛⲧⲉϯⲅⲁⲗⲓⲗⲉⲁ ⲁϥⲛⲁⲩ ⲉⲥⲓⲙⲱⲛ ⲛⲉⲙⲁⲛⲇⲣⲉⲁⲥ ⲡⲥⲟⲛ ⲛⲥⲓⲙⲱⲛ ⲉⲩϩⲓϣⲛⲉ ⲛ**ⲥⲓϯ** ⲉⲫⲓⲟⲙ ϫⲉⲟⲩⲏⲓ ⲅⲁⲣ ⲛⲉϩⲁⲛⲟⲩⲟϩⲓ ⲛⲉ .",
+      "english": "Passing along by the sea of Galilee, he saw Simon and Andrew the brother of Simon casting a net into the sea, for they were fishermen.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲛⲁⲧⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉϫⲛⲟⲩϩⲟϥ ⲙⲛⲟⲩ**ⲥⲓⲧ** ⲛⲅϩⲱⲙ ⲉϫⲛⲟⲩⲙⲟⲩⲓ ⲙⲛⲟⲩⲇⲣⲁⲕⲱⲛ",
+      "english": "Thou shalt tread on the asp and basilisk: and thou shalt trample on the lion and dragon.",
+      "source": "Psalms 90",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲫⲛⲟⲩϯ ϫⲉϩⲏⲡⲡⲉ ⲁⲓϯ ⲛⲱⲧⲉⲛ ⲛⲥⲓⲙ ⲛⲓⲃⲉⲛ ⲛⲥⲓϯ ⲙⲡ**ⲥⲓϯ** ⲛⲛⲓϫⲣⲟϫ ⲫⲏⲉⲧⲭⲏ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ ⲛⲉⲙϣϣⲏⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲉⲡⲉϥⲟⲩⲧⲁϩ ⲛϧⲏⲧϥ ⲛϫⲣⲟϫ ⲛⲥⲓϯ ⲉϥⲉϣⲱⲡⲓ ⲛⲱⲧⲉⲛ ⲉⲩϧⲣⲉ:",
+      "english": "And God said, Behold I have given to you every seed-bearing herb sowing seed which is upon all the earth, and every tree which has in itself the fruit of seed that is sown, to you it shall be for food.",
+      "source": "01_Genesis_01",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲃⲟⲩⲣ ⲙⲙⲟⲕ · ⲁⲩⲱ ⲟⲩⲧⲃⲁ ϩⲓⲟⲩⲛⲁⲙ ⲙⲙⲟⲕ · ⲛⲥⲉⲛⲁϩⲱⲛ ⲇⲉ ⲉⲣⲟⲕ ⲁⲛ · ⲡⲗⲏⲛ ⲕⲛⲁⲙⲉϩⲉⲓⲁⲧⲕ ⲙⲙⲟⲟⲩ · ⲕⲛⲁⲛⲁⲩ ⲉⲡⲧⲱⲱⲃⲉ ⲛⲣⲣⲉϥⲣⲛⲟⲃⲉ · ϫⲉⲛⲧⲟⲕ ⲡϫⲟⲉⲓⲥ ⲡⲉ ⲧⲁϩⲉⲗⲡⲓⲥ · ⲁⲕⲕⲱ ⲛⲁⲕ ⲙⲛⲉⲧϫⲟⲥⲉ ⲙⲙⲁ ⲙⲡⲱⲧ ⲙⲛⲡⲉⲧϩⲟⲟⲩ ⲛⲁϩⲱⲛ ⲉⲣⲟⲕ · ⲙⲛⲙⲁⲥⲧⲓⲅϫⲛⲁϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲙⲁ ⲛϣⲱⲡⲉ · ϫⲉϥⲛⲁϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲃⲏⲏⲧⲕ ⲉⲧⲣⲉⲩϩⲁⲣⲉϩ ⲉⲣⲟⲕ ϩⲛⲛⲉⲕϩⲓⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ · ⲛⲥⲉϥⲓⲧⲕ ⲉϫⲛⲛⲉⲩϭⲓϫ · ⲙⲏⲡⲟⲧⲉ ⲛⲅϫⲱⲣⲡ ⲉⲩⲱⲛⲉ ϩⲛⲧⲉⲕⲟⲩⲉⲣⲏⲧⲉ · ⲕⲛⲁⲧⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉϫⲛⲟⲩϩⲟϥ · ⲙⲛⲟⲩ**ⲥⲓⲧ** · ⲛⲅϩⲱⲙ ⲉϫⲛⲟⲩⲙⲟⲩⲓ ⲙⲛⲟⲩⲇⲣⲁⲕⲱⲛ · ϫⲉⲁϥⲛⲁϩⲧⲉ ⲉⲣⲟⲓ ·",
+      "english": "“thy left, and ten thousand at thy right hand; but they shall not come nigh thee. “8. Nay rather with thine eyes wilt thou behold, thou wilt see the requital of the sinners. “9. For thou, O Lord, art my hope. Thou hast established the Most High for thyself as refuge. “10. Harm will not come nigh unto thee; scourge will not come nigh thy dwelling. “11. For he will give commandment to his angels on thy behalf that they guard thee on all thy ways, “12. And bear thee on their hands, that thou mayest never strike with thy foot against a stone. 13. Thou wilt stride over the serpent and basilisk and tread on lion and dragon. 14. Because he hath trusted in me,”",
+      "source": "Pistis Sophia Book 2 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:10-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟϥ",
+        8,
+        19.254
+      ],
+      [
+        "ⲩⲟⲩⲣⲓⲟⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ϩⲱⲙⲉ",
+        1,
+        15.691
+      ],
+      [
+        "ⲥⲁϣϥⲉ",
+        3,
+        14.965
+      ],
+      [
+        "ϩⲱⲙ",
+        2,
+        14.126
+      ],
+      [
+        "ⲛ",
+        20,
+        13.453
+      ],
+      [
+        "ⲡⲣⲟⲃⲟⲗⲏ",
+        1,
+        12.469
+      ],
+      [
+        "ⲛϩⲣⲁⲓ",
+        1,
+        12.232
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        10.898
+      ],
+      [
+        "ⲅ",
+        3,
+        10.672
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        10.535
+      ],
+      [
+        "ⲟ",
+        2,
+        9.483
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.322
+      ],
+      [
+        "ⲉϫⲛ",
+        2,
+        9.103
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        1,
+        8.945
+      ],
+      [
+        "ⲕ",
+        3,
+        8.286
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        8.124
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.51
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.18
+      ],
+      [
+        "ϩⲁ",
+        1,
+        6.543
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲥⲓⲧ",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲓⲧ",
+          5
+        ],
+        [
+          "ⲥⲓⲧ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲧ",
+          3
+        ],
+        [
+          "ϩⲟϥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲛϩⲣⲁⲓ_1_post_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲛϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲥⲓⲧ",
+          "ⲟⲩ_1_pre_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲓⲧ",
+          "ⲥⲓⲧ_0_node",
+          2
+        ],
+        [
+          "ⲥⲓⲧ_0_node",
+          "ⲛ_1_post_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲧ",
+          "ϩⲟϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲓⲧ",
+          "ⲟⲩ_1_pre_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲓⲧ_0_node",
+          "ⲛϩⲣⲁⲓ_1_post_ⲥⲓⲧ",
+          1
+        ],
+        [
+          "ⲛϩⲣⲁⲓ_1_post_ⲥⲓⲧ",
+          "ⲛϩⲏⲧ_2_post_ⲛϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲛϩⲣⲁⲓ",
+          "ϥ_3_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3163,
+      "count": 10
+    }
+  },
+  "etym": {
+    "egy_num": "126130",
+    "egy_lemma": "zꜣ-tꜣ",
+    "demo_num": "d5069",
+    "demo_lemma": "sjt",
+    "english": "son of the earth (i.e. snake)",
+    "german": "Schlange",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/126130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5069"
+  }
+}

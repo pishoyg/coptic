@@ -1,0 +1,117 @@
+{
+  "id": "C2431",
+  "forms": [
+    {
+      "id": "CF6643",
+      "orth": "ϭⲓⲛⲛⲏⲏⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20667,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2798",
+      "bibliography": "CD 222a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉⲟⲩⲉⲧⲧ**ϭⲓⲛⲛⲏⲏⲃⲉ** · ⲡⲁⲥⲕⲁⲫⲟⲥ ⲡⲉ ⲡⲁⲥⲱⲙⲁ ⲛⲣⲉϥⲣⲛⲟⲃⲉ · ⲡⲁⲓ ⲉⲧⲉⲙⲡⲉⲓⲣϩⲙⲙⲉ ⲙⲙⲟϥ ϩⲱⲗⲟⲥ ⲉⲛⲉϩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲕⲁⲫⲟⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ⲟⲩⲉⲧ",
+        1,
+        15.074
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲛⲏⲏⲃⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲛⲏⲏⲃⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛⲛⲏⲏⲃⲉ",
+          "ϭⲓⲛⲛⲏⲏⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20269,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2429",
+      "label": "ⲛⲏⲏⲃⲉ",
+      "pos": "V",
+      "gloss": "swim, float"
+    },
+    {
+      "target": "C2430",
+      "label": "ⲣⲉϥⲛⲏⲏⲃⲉ",
+      "pos": "N",
+      "gloss": "swimmer"
+    }
+  ]
+}

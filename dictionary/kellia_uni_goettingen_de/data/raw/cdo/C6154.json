@@ -1,0 +1,100 @@
+{
+  "id": "C6154",
+  "forms": [
+    {
+      "id": "CF31977",
+      "orth": "ϣⲟⲩⲏⲃ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31976",
+      "orth": "ϣⲟⲩⲏⲏⲃ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϣⲃⲓⲃ",
+      "dialect": "S",
+      "id": "2006.1"
+    },
+    {
+      "orth": "ϣⲟⲩⲉⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5525,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϣⲟⲩⲉϥⲉ",
+      "dialect": "S",
+      "id": "2006.3"
+    },
+    {
+      "orth": "ϣⲛⲃ",
+      "dialect": "S",
+      "id": "2006.4"
+    },
+    {
+      "orth": "ϣⲏⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1975,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ϣⲟⲩⲏⲟⲩ",
+      "dialect": "S",
+      "id": "2006.6"
+    },
+    {
+      "orth": "ϣⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2912,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ϣⲃⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4023,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϣⲉⲩⲃ",
+      "dialect": "F",
+      "id": "2006.9"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6841",
+      "bibliography": "CD 603a; CED 258; KoptHWb 335; DELC 274b; ChLCS 83a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "153110",
+    "egy_lemma": "šwb",
+    "demo_num": "d5903",
+    "demo_lemma": "šwꜣb(ꜣ.t)",
+    "english": "persea tree",
+    "german": "Perseabaum; Perseasbaumfrüchte",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/153110",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5903"
+  }
+}

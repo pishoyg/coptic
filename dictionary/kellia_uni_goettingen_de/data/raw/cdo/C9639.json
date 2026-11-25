@@ -1,0 +1,99 @@
+{
+  "id": "C9639",
+  "forms": [
+    {
+      "id": "CF24663",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24664",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19890,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12342",
+      "bibliography": "DDGLC",
+      "cu_ID": "9769"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲛϩⲉⲛ**ⲗⲓⲧⲟⲩⲣⲅⲓⲕⲟⲛ** ⲁⲛ ⲙⲡⲛⲉⲩⲙⲁ ⲧⲏⲣⲟⲩ ⲛⲉ ⲉⲩⲧⲛⲛⲟⲟⲩ ⲙⲙⲟⲟⲩ ⲉϩⲉⲛⲇⲓⲁⲕⲟⲛⲓⲁ . ⲉⲧⲃⲉⲛⲉⲧⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲟⲩⲟⲩϫⲁⲓ .",
+      "english": "Aren't they all serving spirits, sent out to do service for the sake of those who will inherit salvation?",
+      "source": "58_Hebrews_1",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏ",
+        1,
+        11.104
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        10.412
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19500,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2990",
+    "grl_lemma": "λειτουργικός",
+    "grl_meaning": "of or for a λειτουργία",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1036b"
+  }
+}

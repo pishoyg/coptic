@@ -1,0 +1,183 @@
+{
+  "id": "C7631",
+  "forms": [
+    {
+      "id": "CF17324",
+      "orth": "ϯϭⲗⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15967,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8471",
+      "bibliography": "CD 810a; KoptHWb 448; DELC 337a; ChLCS 106b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϣⲓⲃⲉ ⲙⲡⲉϥⲥⲙⲟⲧ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲁϥϭⲱ ⲉϥⲉϣϭⲁ ϭⲓϫ ϩⲓⲣⲛ ⲛⲣⲟ ⲛⲧⲡⲩⲗⲏ ⲛⲧⲡⲟⲗⲓⲥ ⲉⲁϥⲣⲧϩⲉ ⲛⲛⲉⲧⲡⲟϣⲥ ⲛϩⲏⲧ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲛⲉϥ**ϯϭⲗⲁ** ⲉⲡⲓⲥⲁ ⲙⲛⲡⲁⲓ ⲙⲡⲉⲩⲙⲧⲟ ⲉⲃⲟⲗ ⲉϥϩⲏⲩ ⲉϩⲣⲁⲓ ϩⲓⲣⲛ ⲛⲣⲟ ⲛⲧⲡⲩⲗⲏ ⲉⲣⲉⲛⲉϥϫⲓϩ ϣⲟⲩⲟ ⲉϫⲛⲧⲉϥⲙⲟⲣⲧ",
+      "english": "And he changed his appearance before him, and feigned himself a false character in that day; and drummed upon the doors of the city, and used extravagant gestures with his hands, and fell against the doors of the gate, and his spittle ran down upon his beard.",
+      "source": "I Samuel 21",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        10.87
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ϯϭⲗⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯϭⲗⲁ",
+          "ⲛⲉ_1_pre_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϯϭⲗⲁ",
+          "ϥ_1_pre_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯϭⲗⲁ",
+          "ϯϭⲗⲁ_0_node",
+          1
+        ],
+        [
+          "ϯϭⲗⲁ_0_node",
+          "ⲉ_1_post_ϯϭⲗⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϯϭⲗⲁ",
+          "ⲡⲓ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15567,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7632",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "sway, stagger"
+    },
+    {
+      "target": "C7633",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "push"
+    },
+    {
+      "target": "C7635",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "N",
+      "gloss": "push"
+    },
+    {
+      "target": "C7634",
+      "label": "ϭⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "throng, press upon"
+    },
+    {
+      "target": "C7630",
+      "label": "ϭⲗⲁ",
+      "pos": "N",
+      "gloss": "wave(?); dizziness, stagger(?)"
+    }
+  ]
+}

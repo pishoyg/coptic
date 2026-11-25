@@ -1,0 +1,74 @@
+{
+  "id": "C551",
+  "forms": [
+    {
+      "id": "CF2128",
+      "orth": "ϣⲉⲛⲃⲏⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2129",
+      "orth": "ϣⲉⲛⲃⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS661",
+      "bibliography": "KoptHWb 28; ChLCS 9b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13020",
+      "type": "cf",
+      "label": "hair (nominal prefix)"
+    },
+    {
+      "target": "C490",
+      "type": "syn",
+      "label": "palm-fibre"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C549",
+      "label": "ⲃⲁⲓⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "branch of (date-)palm"
+    },
+    {
+      "target": "C547",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C548",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C550",
+      "label": "ⲃⲏⲧϩⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "palm frond"
+    },
+    {
+      "target": "C552",
+      "label": "ⲃⲏⲧⲥⲡⲓⲣ",
+      "pos": "N",
+      "gloss": "rib"
+    }
+  ]
+}

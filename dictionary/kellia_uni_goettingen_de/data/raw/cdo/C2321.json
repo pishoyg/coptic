@@ -1,0 +1,135 @@
+{
+  "id": "C2321",
+  "forms": [
+    {
+      "id": "CF6380",
+      "orth": "ϣⲁⲛⲑⲙⲁϧⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8787,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2678",
+      "bibliography": "CD 212a; KoptHWb 112; DELC 132"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲏⲡⲡⲉ ⲧⲉⲛⲉⲣⲙⲁⲕⲁⲣⲓⲍⲓⲛ ⲛⲛⲏ ⲉⲧⲁⲩⲁⲙⲟⲛⲓ ⲛⲧⲟⲧⲟⲩ ⲁⲧⲉⲧⲉⲛⲥⲱⲧⲉⲙ ⲉϯϩⲩⲡⲟⲙⲟⲛⲏ ⲛⲧⲉⲓⲱⲃ ⲟⲩⲟϩ ⲡⲓϫⲱⲕ ⲛⲧⲉⲡϭⲟⲓⲥ ⲁⲧⲉⲧⲉⲛⲛⲁⲩ ⲉⲣⲟϥ ϫⲉⲟⲩⲛⲓϣϯ ⲛ**ϣⲁⲛⲑⲙⲁϧⲧ** ⲉⲙⲁϣⲱ ⲡⲉ ⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲟⲩⲣⲉϥⲱⲟⲩⲛϩⲏ ⲧⲡⲉ",
+      "english": "Behold, we call them blessed who endured. You have heard of the patience of Job, and have seen the Lord in the outcome, and how the Lord is full of compassion and mercy.",
+      "source": "20_James_05",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲙⲁϣⲱ",
+        1,
+        11.373
+      ],
+      [
+        "ⲛⲓϣϯ",
+        1,
+        9.805
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        7.897
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲑⲙⲁϧⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8258,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2320",
+      "label": "ϣⲁⲛⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "dysentery"
+    },
+    {
+      "target": "C2319",
+      "label": "ⲁⲧⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "without bowles (of compassion)"
+    },
+    {
+      "target": "C2316",
+      "label": "ⲙⲁϩⲧ",
+      "pos": "N",
+      "gloss": "bowel, umbilical cord"
+    },
+    {
+      "target": "C2318",
+      "label": "ⲙⲁϩⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small intestine"
+    },
+    {
+      "target": "C2317",
+      "label": "ⲙⲉϩⲧⲟ",
+      "pos": "N",
+      "gloss": "colon, large bowel"
+    },
+    {
+      "target": "C2322",
+      "label": "ⲙⲉⲧϣⲁⲛⲑⲙⲁϧⲧ",
+      "pos": "N",
+      "gloss": "compassion"
+    }
+  ]
+}

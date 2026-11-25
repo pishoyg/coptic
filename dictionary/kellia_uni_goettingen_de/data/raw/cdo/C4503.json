@@ -1,0 +1,70 @@
+{
+  "id": "C4503",
+  "forms": [
+    {
+      "id": "CF10962",
+      "orth": "ⲙⲁⲓⲧⲱⲣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5091",
+      "bibliography": "CD 431a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4507",
+      "label": "ϭⲓⲛⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "seizing"
+    },
+    {
+      "target": "C4506",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "robbery"
+    },
+    {
+      "target": "C4504",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4505",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunderer"
+    },
+    {
+      "target": "C4501",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "seize, rob"
+    },
+    {
+      "target": "C4502",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "plunder"
+    }
+  ]
+}

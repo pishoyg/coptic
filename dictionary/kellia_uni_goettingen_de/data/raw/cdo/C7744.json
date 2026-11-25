@@ -1,0 +1,55 @@
+{
+  "id": "C7744",
+  "forms": [
+    {
+      "id": "CF32200",
+      "orth": "ⲁⲧϭⲟⲙϭⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32199",
+      "orth": "ⲁⲧϭⲟⲙϭⲉⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8611",
+      "bibliography": "CD 819a; ChLCS 108a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7745",
+      "label": "ϫⲓⲛϫⲟⲙϫⲉⲙ",
+      "pos": "N",
+      "gloss": "touch, act of touching"
+    },
+    {
+      "target": "C7741",
+      "label": "ϭⲟⲙϭⲙ",
+      "pos": "V",
+      "gloss": "touch, grope"
+    },
+    {
+      "target": "C7742",
+      "label": "ϭⲟⲙϭⲙ",
+      "pos": "N",
+      "gloss": "sense of touch"
+    },
+    {
+      "target": "C7743",
+      "label": "ϭⲟⲙϭⲙ",
+      "pos": "N",
+      "gloss": "that can be felt, palpable"
+    }
+  ]
+}

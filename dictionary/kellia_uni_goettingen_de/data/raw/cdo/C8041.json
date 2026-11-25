@@ -1,0 +1,134 @@
+{
+  "id": "C8041",
+  "forms": [
+    {
+      "id": "CF18148",
+      "orth": "ϭⲁϭⲓⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18821,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁϭⲓⲧⲱⲛⲉ",
+      "dialect": "S",
+      "id": "2659.1"
+    },
+    {
+      "orth": "ϫⲁϫⲓⲑⲱⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13135,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8944",
+      "bibliography": "CD 844a; CED 342; KoptHWb 475; DELC 351b-352a; ChLCS 111a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲓⲛⲡⲉⲧⲫⲟⲣⲉⲓ ⲛⲟⲩϩⲩⲁⲕⲓⲛⲑⲓⲛⲟⲛ ⲙⲛⲟⲩⲕⲗⲟⲙ ϣⲁϩⲣⲁⲓ ⲉⲡⲉⲧⲉⲣⲉⲟⲩ**ϭⲁϭⲓⲧⲱⲛ** ϩⲓⲱⲱϥ",
+      "english": "From him that weareth purple and a crown, unto him that is clothed with a linen frock.",
+      "source": "Sirach 40",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲱⲱ",
+        1,
+        12.139
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        11.492
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁϭⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ϭⲁϭⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_1_post_ϭⲁϭⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁϭⲓⲧⲱⲛ",
+          "ϭⲁϭⲓⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ϭⲁϭⲓⲧⲱⲛ_0_node",
+          "ϩⲓⲱⲱ_1_post_ϭⲁϭⲓⲧⲱⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_1_post_ϭⲁϭⲓⲧⲱⲛ",
+          "ϥ_2_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18432,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "C5884",
+  "forms": [
+    {
+      "id": "CF31965",
+      "orth": "ϩⲛϣⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31964",
+      "orth": "ϩⲉ ⲛϣⲱⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6567",
+      "bibliography": "CD 564b; KoptHWb 314; ChLCS 78a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12177",
+      "label": "ϣⲁⲙⲏ",
+      "pos": "N",
+      "gloss": "summer"
+    },
+    {
+      "target": "C5883",
+      "label": "ϣⲱⲙ",
+      "pos": "N",
+      "gloss": "summer; tribute, tax"
+    },
+    {
+      "target": "C5885",
+      "label": "ϯϣⲱⲙ",
+      "pos": "V",
+      "gloss": "pay tribute"
+    }
+  ]
+}

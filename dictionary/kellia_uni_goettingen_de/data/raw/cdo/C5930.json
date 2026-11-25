@@ -1,0 +1,129 @@
+{
+  "id": "C5930",
+  "forms": [
+    {
+      "id": "CF13857",
+      "orth": "ϫⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13858",
+      "orth": "ϫⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF13859",
+      "orth": "ϭⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF13860",
+      "orth": "ϫⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF13861",
+      "orth": "ϭⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF13862",
+      "orth": "ϫⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF13863",
+      "orth": "ϭⲓ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6614",
+      "bibliography": "CD 570a; KoptHWb 317; ChLCS 78b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5922",
+      "label": "ϣⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "seek, ask"
+    },
+    {
+      "target": "C5926",
+      "label": "ϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquiry; news, report"
+    },
+    {
+      "target": "C5923",
+      "label": "ϣⲓⲛⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "visit, greet"
+    },
+    {
+      "target": "C5924",
+      "label": "ϣⲓⲛⲉ ⲉⲧⲃⲉ-",
+      "pos": "V",
+      "gloss": "concerning"
+    },
+    {
+      "target": "C5925",
+      "label": "ϣⲓⲛⲉ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "inquire for, seek after"
+    },
+    {
+      "target": "C5927",
+      "label": "ϣⲙⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good news"
+    },
+    {
+      "target": "C5933",
+      "label": "ϥⲁⲓϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "messenger"
+    },
+    {
+      "target": "C5934",
+      "label": "ϭⲓⲛϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquiry"
+    },
+    {
+      "target": "C5931",
+      "label": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "visit"
+    },
+    {
+      "target": "C5932",
+      "label": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "visitation"
+    },
+    {
+      "target": "C5928",
+      "label": "ⲙⲁ ⲛϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "place of enquiry, oracle"
+    },
+    {
+      "target": "C5929",
+      "label": "ⲣⲉϥϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquirer, wizard"
+    }
+  ]
+}

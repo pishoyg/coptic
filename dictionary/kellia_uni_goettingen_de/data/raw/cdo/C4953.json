@@ -1,0 +1,64 @@
+{
+  "id": "C4953",
+  "forms": [
+    {
+      "id": "CF11871",
+      "orth": "ⲣⲟⲩⲟⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5578",
+      "bibliography": "CD 473b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4949",
+      "label": "ⲉⲓⲉⲡⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "product of the land"
+    },
+    {
+      "target": "C4951",
+      "label": "ⲙⲁ ⲛⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "arable land, farmland"
+    },
+    {
+      "target": "C4950",
+      "label": "ⲙⲛⲧⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandry"
+    },
+    {
+      "target": "C4948",
+      "label": "ⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandman, cultivator"
+    },
+    {
+      "target": "C4952",
+      "label": "ⲣⲙⲟⲩⲟⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "husbandman, cultivator"
+    }
+  ]
+}

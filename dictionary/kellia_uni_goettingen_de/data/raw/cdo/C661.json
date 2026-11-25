@@ -1,0 +1,112 @@
+{
+  "id": "C661",
+  "forms": [
+    {
+      "id": "CF2480",
+      "orth": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2481",
+      "orth": "ϣⲉⲛⲁⲗⲟⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13136,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS797",
+      "bibliography": "CD 55a; KoptHWb 34"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲟⲩⲕⲏⲛ ⲛϫⲉⲛⲏⲉⲧϩⲓⲟⲩⲓ ⲉϧⲟⲩⲛ ⲉϯϩⲣⲱ ⲛⲭⲣⲱⲙ ⲛⲓϩⲩⲡⲉⲣⲉⲧⲏⲥ ⲛⲧⲉⲡⲟⲩⲣⲟ ⲉⲩⲑⲱⲕ ⲉϯϩⲣⲱ ⲛⲟⲩⲑⲏⲛ ⲛⲉⲙⲟⲩⲗⲁⲙϫⲁⲡⲧ ⲛⲉⲙⲟⲩϫⲁϫⲓⲑⲱⲗ ⲛⲉⲙϩⲁⲛ**ϣⲉⲛⲁⲗⲟⲗⲓ** .",
+      "english": "And they shall drive thee forth from men, and thy dwelling shall be with wild beasts, and they shall feed thee with grass as an ox, and thou shall have thy lodging under the dew of heaven, and seven times shall pass over thee, until thou known that the Most High is Lord of the kingdom of men, and will give it to whom he shall please.",
+      "source": "27_Daniel_04",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5699",
+      "type": "cf",
+      "label": "wood"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C652",
+      "label": "ⲁⲗⲟⲗⲓ",
+      "pos": "N",
+      "gloss": "vine, vineyard (elliptic)"
+    },
+    {
+      "target": "C657",
+      "label": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C655",
+      "label": "ⲉⲗⲉⲗϩⲙϫ",
+      "pos": "N",
+      "gloss": "unripe, sour grape"
+    },
+    {
+      "target": "C660",
+      "label": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "bruise (dark coloured like grapes, \"grape of Egypt\")"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    },
+    {
+      "target": "C658",
+      "label": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    }
+  ]
+}

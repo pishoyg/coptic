@@ -1,0 +1,60 @@
+{
+  "id": "C7261",
+  "forms": [
+    {
+      "id": "CF32126",
+      "orth": "ⲁⲧϫⲛⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32125",
+      "orth": "ⲁⲧϫⲛⲁⲁⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8016",
+      "bibliography": "CD 776a; KoptHWb 427; ChLCS 102b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7259",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "delay, hesitate; laze, be sluggish"
+    },
+    {
+      "target": "C7260",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sloth"
+    },
+    {
+      "target": "C7264",
+      "label": "ϭⲉⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "sluggard, delayer"
+    },
+    {
+      "target": "C7263",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "delay; sloth"
+    },
+    {
+      "target": "C7262",
+      "label": "ⲣⲉϥϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sluggard"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "C5972",
+  "forms": [
+    {
+      "id": "CF13949",
+      "orth": "ϣⲱⲡ ⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3967,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6656",
+      "bibliography": "CD 575a-b; KoptHWb 321; ChLCS 79b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲁⲩⲗⲟⲥ ⲇⲉ ⲣⲣⲙⲡⲉ ⲥⲛⲧⲉ ⲧⲏⲣⲟⲩ . ⲉϥⲟⲩⲏϩ ϩⲛⲟⲩⲙⲁ ⲉⲁϥⲙⲓⲥⲑⲟⲩ ⲙⲙⲟϥ . ⲁⲩⲱ **ⲛⲉϥϣⲱⲡ **ⲉ**ϩⲟϥ** ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲃⲏⲕ ⲛⲁϥ ⲉϩⲟⲩⲛ .",
+      "english": "Paul stayed two whole years in his own rented house, and received all who were coming to him,",
+      "source": "44_Acts of the Apostles_28",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉ**ⲩⲟ** ⲅⲁⲣ ⲛⲁⲧⲛⲁϩⲧⲉ ⲉϩⲱⲃ ⲛⲓⲙ ⲉⲧⲃⲉⲛⲉⲩⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ ϩⲙⲡⲧⲣⲉⲛⲉⲩϣⲣⲡⲙⲙⲓⲥⲉ ⲧⲁⲕⲟ ⲁⲩϩⲟⲙⲟⲗⲟⲅⲉⲓ ϫⲉⲟⲩϣⲏⲣⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ **ⲡⲉⲓⲗⲁⲟⲥ",
+      "english": "For whereas they would not believe any thing by reason of the enchantments; upon the destruction of the firstborn, they acknowledged this people to be the sons of God.",
+      "source": "Wisdom 18",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟ ⲇⲉ ⲁⲧⲟⲩⲕⲁⲗⲁϩⲏ ϣⲱⲡⲉ ⲙⲡⲉ · ⲁⲩⲱ ⲛⲕⲁϩ · ϫⲉⲁⲧⲟⲩⲙⲏⲧⲣⲁ **ϣⲱⲡ **ⲉ**ⲣⲟⲥ** ⲙⲡⲉⲧⲙⲟⲩϩ ⲛⲧⲡⲉ ⲙⲛⲡⲕⲁϩ ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5979",
+      "label": "ϣⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "reception, entertainment"
+    },
+    {
+      "target": "C5971",
+      "label": "ϣⲱⲡ",
+      "pos": "V",
+      "gloss": "receive, contain, take, suffer"
+    },
+    {
+      "target": "C5975",
+      "label": "ϣⲱⲡ",
+      "pos": "N",
+      "gloss": "acceptance, purchase"
+    },
+    {
+      "target": "C5973",
+      "label": "ϣⲱⲡ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "on behalf of"
+    },
+    {
+      "target": "C5974",
+      "label": "ϣⲱⲡ ⲛ-",
+      "pos": "V",
+      "gloss": "acquire, expend on"
+    },
+    {
+      "target": "C5980",
+      "label": "ϣⲱⲡⲥ",
+      "pos": "N",
+      "gloss": "seizing, impressing"
+    },
+    {
+      "target": "C5978",
+      "label": "ϭⲓⲛϣⲱⲡ",
+      "pos": "N",
+      "gloss": "receiving, acceptance"
+    },
+    {
+      "target": "C5976",
+      "label": "ⲁⲧϣⲱⲡ",
+      "pos": "N",
+      "gloss": "uncontainable, illimitable"
+    },
+    {
+      "target": "C5977",
+      "label": "ⲣⲉϥϣⲱⲡ",
+      "pos": "N",
+      "gloss": "receiver"
+    }
+  ]
+}

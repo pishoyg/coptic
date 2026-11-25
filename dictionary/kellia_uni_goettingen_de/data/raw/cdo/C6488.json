@@ -1,0 +1,55 @@
+{
+  "id": "C6488",
+  "forms": [
+    {
+      "id": "CF15004",
+      "orth": "ⲁⲧϩⲕⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7199",
+      "bibliography": "CD 664a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6489",
+      "label": "ϩⲏⲕⲉ",
+      "pos": "N",
+      "gloss": "poor"
+    },
+    {
+      "target": "C6486",
+      "label": "ϩⲕⲟ",
+      "pos": "V",
+      "gloss": "be hungry"
+    },
+    {
+      "target": "C6487",
+      "label": "ϩⲕⲟ",
+      "pos": "N",
+      "gloss": "hunger, famine"
+    },
+    {
+      "target": "C6490",
+      "label": "ⲙⲛⲧϩⲏⲕⲉ",
+      "pos": "N",
+      "gloss": "poverty"
+    },
+    {
+      "target": "C6491",
+      "label": "ⲣϩⲏⲕⲉ",
+      "pos": "V",
+      "gloss": "become, be poor"
+    }
+  ]
+}

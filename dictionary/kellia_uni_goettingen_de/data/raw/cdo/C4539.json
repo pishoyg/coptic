@@ -1,0 +1,111 @@
+{
+  "id": "C4539",
+  "forms": [
+    {
+      "id": "CF31796",
+      "orth": "ⲧⲣⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18590,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31795",
+      "orth": "ⲧⲁⲣⲁϩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲁⲣⲁϩ",
+      "dialect": "B",
+      "id": "1642.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5127",
+      "bibliography": "CD 433a; KoptHWb 245"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        1,
+        12.176
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        1,
+        10.307
+      ],
+      [
+        "ⲟ",
+        1,
+        9.805
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.787
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲁϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4538",
+      "label": "ϩⲛⲟⲩⲧⲱⲣϣ",
+      "pos": "ADV",
+      "gloss": "with vigilance, with calmness, with soberness"
+    },
+    {
+      "target": "C4536",
+      "label": "ⲧⲱⲣϩ",
+      "pos": "V",
+      "gloss": "be keen, be alert, be sober, be upright"
+    },
+    {
+      "target": "C4537",
+      "label": "ⲧⲱⲣϩ",
+      "pos": "N",
+      "gloss": "vigilance, calmness, soberness"
+    }
+  ]
+}

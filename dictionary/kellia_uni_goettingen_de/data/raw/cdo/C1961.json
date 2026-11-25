@@ -1,0 +1,61 @@
+{
+  "id": "C1961",
+  "forms": [
+    {
+      "id": "CF5577",
+      "orth": "ⲙⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.15,
+        "rank": 656,
+        "count": 181
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "vor Subst. u. Adj. zur Bildung fem. Abstrakta",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2278",
+      "bibliography": "CD 176ab; KoptHWb 96; DELC 117"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲁⲛ ⲇⲉ ⲙⲡⲙⲉϩⲥⲛⲁⲩ ⲁϥⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲉⲫⲣⲁⲓⲙ ϫⲉⲁⲡⲛⲟⲩⲧⲉ ⲁⲩⲝⲁⲛⲉ ⲙⲙⲟⲓ ⲉϩⲣⲁⲓ ϩⲙⲡⲕⲁϩ ⲛⲧⲁ**ⲙⲛⲧ**",
+      "english": "And he called the name of the second, Ephraim; for God, , has increased me in the land of my humiliation.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉⲥⲁⲗⲡⲓⲍⲉ ⲛⲟⲩⲥⲏⲙⲁⲥⲓⲁ ⲙⲙⲉϩⲥⲛⲧⲉ ⲛⲥⲉⲧⲱⲟⲩⲛ ⲛϭⲓⲙⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛⲁⲓ ⲉⲧϣⲟⲟⲡ ϩⲓⲡⲥⲁ ⲉ**ⲙⲛⲧ** ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉⲥⲁⲗⲡⲓⲍⲉ ⲛⲟⲩⲥⲏⲙⲁⲥⲓⲁ ⲙⲙⲉϩϣⲟⲙⲧⲉ ⲛⲥⲉⲧⲱⲟⲩⲛ ⲛϭⲓⲙⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛⲁⲓ ⲉⲧⲥⲱⲧⲏⲣ ⲉⲃⲟⲗ ϩⲁⲧⲛⲧⲑⲁⲗⲁⲥⲥⲁ ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉⲥⲁⲗⲡⲓⲍⲉ ⲛⲟⲩⲥⲏⲙⲁⲥⲓⲁ ⲙⲙⲉϩϥⲧⲟ ⲛⲥⲉⲧⲱⲟⲩⲛ ⲛϭⲓⲙⲡⲁⲣⲉⲙⲃⲟⲗⲏ ⲛⲁⲓ ⲉⲧⲟⲩⲏϩ ϩⲓⲡⲥⲁ ⲙϩⲓⲧ ⲕⲁⲧⲁⲥⲏⲙⲁⲥⲓⲁ ⲉⲩⲉⲥⲁⲗⲡⲓⲍⲉ ϩⲣⲁⲓ ϩⲛⲧⲉⲩϭⲓⲛⲧⲱⲟⲩⲛ",
+      "english": "And ye shall sound a second alarm, and the camps pitched southward shall move; and ye shall sound a third alarm, and the camps pitched westward shall move forward; and ye shall sound a fourth alarm, and they that encamp toward the north shall move forward: they shall sound an alarm at their departure.",
+      "source": "Numbers 10",
+      "urn": "urn:cts:copticLit:ot.num.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲧⲃⲉⲟⲩ ⲙⲡⲟⲩϯ ⲡⲉⲓⲥⲟϭⲛ ⲉⲃⲟⲗ ϩⲁϣ**ⲙⲛⲧ** ϣⲉ ⲛⲥⲁⲧⲉⲉⲣⲉ ⲛⲥⲉⲧⲁⲁⲩ ⲛⲛϩⲏⲕⲉ .",
+      "english": "'Why wasn't this ointment sold for three hundred denarii, and given to the poor?'",
+      "source": "43_John_12",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "78030",
+    "egy_lemma": "mdw.t",
+    "demo_num": "d2753",
+    "demo_lemma": "md(.t)",
+    "english": "word; speech; matter",
+    "german": "Wort; Rede; Angelegenheit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/78030",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2753"
+  }
+}

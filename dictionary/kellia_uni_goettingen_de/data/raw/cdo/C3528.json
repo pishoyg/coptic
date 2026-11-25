@@ -1,0 +1,59 @@
+{
+  "id": "C3528",
+  "forms": [
+    {
+      "id": "CF8959",
+      "orth": "ⲥⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲟⲙ⸗",
+      "dialect": "S",
+      "id": "482.1"
+    },
+    {
+      "orth": "ⲥⲁⲙ⸗",
+      "dialect": "S",
+      "id": "482.2"
+    },
+    {
+      "orth": "ⲥⲏⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3976,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲥⲁⲙ⸗",
+      "dialect": "A",
+      "id": "482.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4015",
+      "bibliography": "CD 334b; CED 152; KoptHWb 186, 538; ChLCS 48a"
+    },
+    {
+      "id": "CS4016",
+      "bibliography": "CD 334b; CED 152; KoptHWb 186, 538; ChLCS 48a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3529",
+      "label": "ⲥⲱⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "rub, polish"
+    }
+  ]
+}

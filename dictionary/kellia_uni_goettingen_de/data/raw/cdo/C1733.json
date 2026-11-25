@@ -1,0 +1,78 @@
+{
+  "id": "C1733",
+  "forms": [
+    {
+      "id": "CF5020",
+      "orth": "ⲗⲟϥⲗϥ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5021",
+      "orth": "ⲗⲟϥⲗⲉϥ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5022",
+      "orth": "ⲗⲟⲃⲗⲉϥ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5023",
+      "orth": "ⲗⲟϥⲗⲃ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2010",
+      "bibliography": "CD 148b"
+    },
+    {
+      "id": "CS2011",
+      "bibliography": "CD 148b-149a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲥⲁⲣⲝ ⲛⲓⲙ ⲛⲣⲱⲙⲉ ⲛⲧⲁⲩϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ · **ⲛⲉⲛⲧⲁⲩⲗⲟϥⲗϥ **ⲉⲃⲟⲗ**** ⲧⲏⲣⲟⲩ ⲥⲉⲛⲁⲥⲱⲧⲙ ⲉⲡⲉϩⲣⲟⲟⲩ ⲛⲧⲥⲁⲗⲡⲓⲅⲝ ⲛⲥⲉⲱⲛϩ ⲧⲏⲣⲟⲩ ·",
+      "english": "Then all the flesh of men who have come into being from the earth, and who have all turned to corruption, shall hear the sound of the trumpet, and they all shall come to life.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲇⲉ ⲙⲡϫⲏϭⲉ **ⲉϣⲁϥⲗⲟϥⲗϥ **ⲉⲃⲟⲗ**** ⲙⲛⲡⲙⲁⲣⲙⲁⲣⲟⲛ ⲉϣⲁⲩⲧⲁⲕⲟ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲉⲧⲃⲉⲡⲁⲓ ⲧⲉⲧⲛⲁⲉⲓⲙⲉ ⲉⲣⲟⲟⲩ ϫⲉϩⲉⲛⲛⲟⲩⲧⲉ ⲁⲛ ⲛⲉ ⲛⲧⲟⲟⲩ ⲇⲉ ⲥⲉⲛⲁⲟⲩⲟⲙⲟⲩ ⲁⲩⲱ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲥⲉⲛⲁϣⲱⲡⲉ ⲛⲟⲩⲛⲟϭⲛⲉϭ ϩⲛⲧⲉⲭⲱⲣⲁ",
+      "english": "And ye shall know them to be no gods by the bright purple that rotteth upon them: and they themselves afterward shall be eaten, and shall be a reproach in the country.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1734",
+      "label": "ⲗⲉϥⲗⲓϥⲉ",
+      "pos": "N",
+      "gloss": "what drops off"
+    },
+    {
+      "target": "C1731",
+      "label": "ⲗⲟϥⲗϥ",
+      "pos": "V",
+      "gloss": "mortify, become rotten, perish; make rotten, destroy"
+    },
+    {
+      "target": "C1732",
+      "label": "ⲗⲟϥⲗϥ",
+      "pos": "N",
+      "gloss": "corruption"
+    }
+  ]
+}

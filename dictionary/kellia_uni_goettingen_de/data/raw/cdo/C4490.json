@@ -1,0 +1,139 @@
+{
+  "id": "C4490",
+  "forms": [
+    {
+      "id": "CF10936",
+      "orth": "ⲧⲣⲃⲏⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16894,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲏⲣⲃⲏⲓⲛ",
+      "dialect": "S",
+      "id": "1625.1"
+    },
+    {
+      "orth": "ⲧⲉⲣⲃⲉⲉⲓⲛ",
+      "dialect": "S",
+      "id": "1625.2"
+    },
+    {
+      "orth": "ⲧⲉⲣϥⲉⲉⲓⲛ",
+      "dialect": "S",
+      "id": "1625.3"
+    },
+    {
+      "orth": "ⲧⲉⲣⲃⲁⲉⲓⲛ",
+      "dialect": "S",
+      "id": "1625.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5078",
+      "bibliography": "CD 430a; CED 194; KoptHWb 242; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲛⲕⲟⲧⲕ ϩⲁϣⲏⲛ ⲛⲓⲙ ϩⲁⲧⲛⲟⲩϫⲟⲟⲩϥ ⲙⲛⲟⲩⲕⲁϣ ⲙⲛⲟⲩ**ⲧⲣⲃⲏⲓⲛ**",
+      "english": "He lies under trees of every kind, by the papyrus, and reed, and bulrush.",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲓϩⲁⲓⲃⲉⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲕⲁϣ",
+        1,
+        15.24
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        8.84
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲧⲣⲃⲏⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲣⲃⲏⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲣⲃⲏⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲧⲣⲃⲏⲓⲛ",
+          "ⲟⲩ_1_pre_ⲧⲣⲃⲏⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲣⲃⲏⲓⲛ",
+          "ⲧⲣⲃⲏⲓⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16495,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C700",
+      "type": "cf",
+      "label": "papyrus"
+    }
+  ]
+}

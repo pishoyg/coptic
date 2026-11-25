@@ -1,0 +1,178 @@
+{
+  "id": "C7070",
+  "forms": [
+    {
+      "id": "CF16197",
+      "orth": "ϯϭⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4422,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7802",
+      "bibliography": "CD 752a; KoptHWb 411"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲩⲟⲓ ⲇⲉ ⲛⲛⲏ ⲉⲧⲉⲙⲃⲟⲕⲓ ⲛⲉⲙⲛⲏ ⲉⲧ**ϯϭⲓ** ϧⲉⲛⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "But woe to those who are with child and to those who nurse babies in those days!",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲇⲉ ⲛⲛⲏ ⲉⲧⲉⲙⲃⲟⲕⲓ ⲛⲉⲙⲛⲏ ⲉⲧ**ϯϭⲓ** ϧⲉⲛⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "But woe to those who are with child and to nursing mothers in those days!",
+      "source": "01_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲟⲕⲓ",
+        3,
+        19.165
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        3,
+        12.299
+      ],
+      [
+        "ⲛⲏ",
+        3,
+        11.227
+      ],
+      [
+        "ⲉⲧⲉ",
+        3,
+        11.104
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        9.421
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        9.412
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        9.388
+      ],
+      [
+        "ϧⲉⲛ",
+        3,
+        8.933
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯϭⲓ_0_node",
+          3
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϯϭⲓ",
+          3
+        ],
+        [
+          "ⲛⲓ_2_post_ϧⲉⲛ",
+          3
+        ],
+        [
+          "ⲉϩⲟⲟⲩ_3_post_ⲛⲓ",
+          3
+        ],
+        [
+          "ⲉⲧⲉ_4_post_ⲉϩⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧⲉ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ϯϭⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϯϭⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϯϭⲓ",
+          "ⲛⲓ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϧⲉⲛ",
+          "ⲉϩⲟⲟⲩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲟⲩ_3_post_ⲛⲓ",
+          "ⲉⲧⲉ_4_post_ⲉϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_4_post_ⲉϩⲟⲟⲩ",
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3954,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7069",
+      "label": "ϫⲓ",
+      "pos": "N",
+      "gloss": "breast, nipple"
+    },
+    {
+      "target": "C7072",
+      "label": "ϭⲓ",
+      "pos": "V",
+      "gloss": "suckle"
+    },
+    {
+      "target": "C7071",
+      "label": "ⲟⲩⲉⲙϭⲓ",
+      "pos": "V",
+      "gloss": "take suck"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "C2493",
+  "forms": [
+    {
+      "id": "CF6769",
+      "orth": "ⲉⲛⲁⲛⲟⲩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "gen": "f.",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2872",
+      "bibliography": "CD 227ab; KoptHWb 123"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2492",
+      "label": "ⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "good, fair"
+    },
+    {
+      "target": "C2497",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "beneficence"
+    },
+    {
+      "target": "C2491",
+      "label": "ⲛⲁⲛⲟⲩ-",
+      "pos": "VBD",
+      "gloss": "be good, fair"
+    },
+    {
+      "target": "C2494",
+      "label": "ⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "that which is good"
+    },
+    {
+      "target": "C2496",
+      "label": "ⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "N",
+      "gloss": "doer of good, benefactor"
+    },
+    {
+      "target": "C2495",
+      "label": "ⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "pos": "V",
+      "gloss": "do good"
+    }
+  ]
+}

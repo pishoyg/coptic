@@ -1,0 +1,183 @@
+{
+  "id": "C1255",
+  "forms": [
+    {
+      "id": "CF3911",
+      "orth": "ⲣⲉϥⲕⲱⲛⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8243,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1453",
+      "bibliography": "CD 112b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲉⲩϣⲁⲛⲉⲓⲙⲉ ⲉⲡⲙⲁⲥⲉ ϫⲉⲟⲩ**ⲣⲉϥⲕⲱⲛⲥ** ⲡⲉ ϩⲁⲧϩⲏ ⲛⲥⲁϥ ⲙⲛϣⲙⲧⲉ ⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ⲛⲥⲉⲣⲙⲛⲧⲣⲉ ⲙⲡⲉϥϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛϥⲧⲙⲧⲁⲕⲟϥ ⲉϥⲉϯ ⲛⲟⲩⲙⲁⲥⲉ ⲉⲡⲙⲁ ⲛⲟⲩⲙⲁⲥⲉ ⲁⲩⲱ ⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉϥⲉϣⲱⲡⲉ ⲛⲁϥ",
+      "english": "But if the bull be known to have been given to goring in time past, and they have testified to his owner, and he have not removed him, he shall repay bull for bull, but the dead shall be his own.",
+      "source": "Exodus 21",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲡⲙⲁⲥⲉ ⲉⲩ**ⲣⲉϥⲕⲱⲛⲥ** ⲡⲉ ϩⲁⲧϩⲏ ⲛⲥⲁϥ ⲙⲛϣⲙⲧⲉ ⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ⲛⲥⲉⲣⲙⲛⲧⲣⲉ ⲙⲡⲉϥϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛϥⲧⲙⲧⲁⲕⲟϥ ⲛϥⲙⲟⲩⲟⲩⲧ ⲇⲉ ⲛⲟⲩⲣⲱⲙⲉ ⲏ ⲟⲩⲥϩⲓⲙⲉ ⲉⲩⲉϩⲓⲱⲛⲉ ⲉⲡⲙⲁⲥⲉ ⲁⲩⲱ ⲡⲉϥϫⲟⲉⲓⲥ ⲉⲩⲉⲙⲟⲟⲩⲧϥ ⲛⲙⲙⲁϥ",
+      "english": "But if the bull should have been given to goring in former time, and men should have told his owner, and he have not removed him, but he should have slain a man or woman, the bull shall be stoned, and his owner shall die also.",
+      "source": "Exodus 21",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲥⲉ",
+        2,
+        14.615
+      ],
+      [
+        "ϩⲏ",
+        2,
+        13.104
+      ],
+      [
+        "ϩⲁ",
+        2,
+        11.865
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲣⲉϥⲕⲱⲛⲥ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲕⲱⲛⲥ_0_node",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ⲣⲉϥⲕⲱⲛⲥ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲁ",
+          2
+        ],
+        [
+          "ϩⲏ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ϩⲏ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲕⲱⲛⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲣⲉϥⲕⲱⲛⲥ",
+          "ⲣⲉϥⲕⲱⲛⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲕⲱⲛⲥ_0_node",
+          "ϩⲁ_1_post_ⲣⲉϥⲕⲱⲛⲥ",
+          2
+        ],
+        [
+          "ϩⲁ_1_post_ⲣⲉϥⲕⲱⲛⲥ",
+          "ⲧ_2_post_ϩⲁ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ϩⲁ",
+          "ϩⲏ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ϩⲏ_3_post_ⲧ",
+          "ⲛ_4_post_ϩⲏ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲕⲱⲛⲥ",
+          "ⲣⲉϥⲕⲱⲛⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7801,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1253",
+      "label": "ⲕⲱⲛⲥ",
+      "pos": "V",
+      "gloss": "pierce, slay"
+    },
+    {
+      "target": "C1254",
+      "label": "ⲕⲱⲛⲥ",
+      "pos": "N",
+      "gloss": "slaughter"
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "id": "C2155",
+  "forms": [
+    {
+      "id": "CF6020",
+      "orth": "ⲙⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2751,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF6021",
+      "orth": "ⲙⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20512,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.02,
+        "rank": 342,
+        "count": 256
+      }
+    },
+    {
+      "orth": "ⲙⲟ",
+      "dialect": "A",
+      "id": "170.2"
+    },
+    {
+      "orth": "ⲙⲉⲩ",
+      "dialect": "F",
+      "id": "170.3"
+    },
+    {
+      "orth": "ⲙⲉⲟⲩ",
+      "dialect": "F",
+      "id": "170.4"
+    },
+    {
+      "orth": "ⲙⲉⲩ",
+      "dialect": "L",
+      "id": "170.5"
+    },
+    {
+      "orth": "ⲙⲉⲟⲩ",
+      "dialect": "L",
+      "id": "170.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2494",
+      "bibliography": "CD 196b; KoptHWb 106; DELC 126"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲧⲉϥ**ⲙⲁⲩ** ·",
+      "english": "And Apa Victor said unto his mother",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲁⲩϣⲁϫⲉ ⲙⲛⲛⲉⲩⲉⲣⲏⲩ · ⲛϭⲓⲡⲉⲓⲱⲧ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ ⲙⲛⲧⲉϥ**ⲙⲁⲩ** ⲉⲩϫⲱ ⲙⲙⲟⲥ · ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲙⲡⲉⲡⲉⲛϩⲏⲧ ⲕⲁⲁⲛ · ⲉϯ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ ⲉϩⲟⲩⲛ ⲉⲡⲧⲟⲡⲟⲥ ⲕⲁⲧⲁⲡⲉⲛⲧⲁⲛⲉⲣⲏⲧ ⲙⲙⲟϥ ·",
+      "english": "Finally, the father of the child and his mother spake together, saying, 'Behold, our hearts will not let us send the child into the shrine according to what we vowed.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁⲕϩⲉ ⲉⲩϭⲉⲣⲱⲃ ⲛⲛⲟⲩⲃ ⲛⲧⲟⲟⲧⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩⲣⲱⲙⲉ ⲉϥⲟ ⲛⲕⲣⲓⲧⲏⲥ ⲉⲩⲭⲱⲣⲁ ⲛⲉⲧⲣⲛⲟⲃⲉ ⲉⲣⲟⲟⲩ **ⲙⲁⲩ**ϣ ⲙⲟⲟⲩⲧⲟⲩ",
+      "english": "And he that cannot put to death one that offendeth him holdeth a scepter, as though he were a judge of the country.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲩⲁ",
+        1,
+        16.598
+      ],
+      [
+        "ⲡⲟⲩⲁϩⲛ",
+        1,
+        16.598
+      ],
+      [
+        "ϣⲕⲁⲑⲓⲥⲧⲁ",
+        1,
+        16.598
+      ],
+      [
+        "ϣⲧⲱⲱⲃⲉ",
+        1,
+        16.598
+      ],
+      [
+        "ⲍⲱⲏ",
+        1,
+        15.598
+      ],
+      [
+        "ϣⲱⲙⲛⲧ",
+        1,
+        15.013
+      ],
+      [
+        "ⲕⲉⲣⲟⲥ",
+        1,
+        14.276
+      ],
+      [
+        "ⲛ",
+        19,
+        12.553
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        3,
+        12.201
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        4,
+        11.304
+      ],
+      [
+        "ⲓ",
+        7,
+        11.273
+      ],
+      [
+        "ϩⲉⲡ",
+        1,
+        11.172
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        10.964
+      ],
+      [
+        "ϣⲟⲙⲧ",
+        1,
+        10.954
+      ],
+      [
+        "ⲁⲁ",
+        3,
+        10.777
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        3,
+        10.701
+      ],
+      [
+        "ϥⲓⲣⲟⲟⲩϣ",
+        1,
+        10.489
+      ],
+      [
+        "ⲉⲓⲁⲧ",
+        1,
+        10.428
+      ],
+      [
+        "ⲁ",
+        7,
+        9.466
+      ],
+      [
+        "·",
+        2,
+        9.178
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          81
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          176
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          56
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲩ",
+          30
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲁⲩ",
+          24
+        ],
+        [
+          "ⲓⲉ_1_pre_ⲙⲁⲩ",
+          14
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲩ",
+          12
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲛⲏⲟⲩ",
+          13
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲟⲩ",
+          4
+        ],
+        [
+          "ⲥⲛⲏⲟⲩ_1_post_ⲙⲁⲩ",
+          13
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲥⲛⲏⲟⲩ",
+          3
+        ],
+        [
+          "ⲛⲁ_2_post_ⲥⲛⲏⲟⲩ",
+          6
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ϯ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲙⲁⲩ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          4
+        ],
+        [
+          "ⲓⲉ_1_pre_ⲙⲁⲩ",
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲓⲉ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲛⲏⲟⲩ",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲥⲛⲏⲟⲩ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ⲧⲁ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲛⲉϥ_2_post_ⲥⲛⲏⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲥⲛⲏⲟⲩ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲛⲁ_2_post_ⲥⲛⲏⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲁ_2_post_ⲥⲛⲏⲟⲩ",
+          "ⲥⲛⲏⲟⲩ_1_post_ⲙⲁⲩ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ϩⲁⲛ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲓⲥ_1_pre_ⲙⲁⲩ",
+          "ⲧⲁ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲁⲩ",
+          "ⲟⲩ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          9
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲛϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲙⲁⲩ",
+          2
+        ],
+        [
+          "ⲡⲟⲩⲁ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲟⲩⲁϩⲛ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲭⲱⲣⲁ_2_post_ⲡⲟⲩⲁϩⲛ",
+          1
+        ],
+        [
+          "..._1_post_ⲙⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          "ⲛ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲩ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲟⲛϩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲩ",
+          "ⲧⲉϥ_1_pre_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲙⲁⲩ",
+          "ⲙⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          "ⲡⲟⲩⲁ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲟⲩⲁ_1_post_ⲙⲁⲩ",
+          "ⲡⲟⲩⲁϩⲛ_1_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲟⲩⲁϩⲛ_1_post_ⲙⲁⲩ",
+          "ⲧⲉϥ_3_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲭⲱⲣⲁ",
+          "ⲭⲱⲣⲁ_2_post_ⲡⲟⲩⲁϩⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲩ_0_node",
+          "..._1_post_ⲙⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2436,
+      "count": 16
+    },
+    "B": {
+      "rate": 3.02,
+      "rank": 291,
+      "count": 256
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2159",
+      "label": "ⲉⲙⲁⲩ",
+      "pos": "ADV",
+      "gloss": "thither"
+    },
+    {
+      "target": "C2157",
+      "label": "ⲉⲧⲙⲙⲁⲩ",
+      "pos": "N",
+      "gloss": "who, which is there, (demonstr.) that"
+    },
+    {
+      "target": "C2156",
+      "label": "ⲙⲙⲁⲩ",
+      "pos": "ADV",
+      "gloss": "there, therein"
+    },
+    {
+      "target": "C2158",
+      "label": "ⲣⲉⲙⲙⲙⲁⲩ",
+      "pos": "N",
+      "gloss": "\"man from here\", local, native"
+    }
+  ],
+  "etym": {
+    "egy_num": "24640",
+    "egy_lemma": "jm",
+    "demo_num": "d2942",
+    "demo_lemma": "n.ı ͗m=w",
+    "english": "there",
+    "german": "da; dort; davon; dadurch; damit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/24640",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2942"
+  }
+}

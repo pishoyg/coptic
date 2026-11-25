@@ -1,0 +1,45 @@
+{
+  "id": "C5474",
+  "forms": [
+    {
+      "id": "CF12920",
+      "orth": "ⲱⲙⲕ ⲉϧⲣⲏⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϧⲣϩⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6133",
+      "bibliography": "CD 523a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5475",
+      "label": "ⲙⲁ ⲛⲱⲙⲕ",
+      "pos": "N",
+      "gloss": "throat"
+    },
+    {
+      "target": "C5472",
+      "label": "ⲱⲙⲕ",
+      "pos": "V",
+      "gloss": "swallow"
+    },
+    {
+      "target": "C5473",
+      "label": "ⲱⲙⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "be engulfed"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "id": "C898",
+  "forms": [
+    {
+      "id": "CF3137",
+      "orth": "ⲉⲙⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3138",
+      "orth": "ⲉⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 11.5,
+        "rank": 115,
+        "count": 975
+      }
+    },
+    {
+      "id": "CF3139",
+      "orth": "ⲓⲙⲓ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲉⲓⲙⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 7.24,
+        "rank": 162,
+        "count": 1142
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1054",
+      "bibliography": "CD 78a; KoptHWb 49"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉϧⲉⲛϩⲱⲃ ⲛⲓⲃⲉⲛ ⲁⲧⲉⲧⲉⲛⲉⲣⲣⲁⲙⲁⲟ ⲛϧⲣⲏⲓ ⲛϧⲏⲧϥ ϧⲉⲛⲥⲁϫⲓ ⲛⲓⲃⲉⲛ ⲛⲉⲙ**ⲉⲙⲓ** ⲛⲓⲃⲉⲛ",
+      "english": "that in everything you were enriched in him, in all speech and all knowledge;",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲏ ⲅⲁⲣ ⲉⲧⲟⲓ ⲛⲛⲓϣϯ ϧⲉⲛⲡⲟⲩ**ⲉⲙⲓ** ⲛⲉⲙⲧⲟⲩⲁⲣⲉⲧⲏ ⲛⲑⲱⲟⲩ ⲛⲉ ⲉϣⲁⲩϯⲥⲃⲱ ⲛⲛⲏ ⲉⲧⲟⲓ ⲛⲕⲟⲩϫⲓ ϧⲉⲛⲛⲓⲁⲣⲉⲧⲏ ⲛⲉⲙⲡⲓⲉⲙⲓ ⲙⲙⲏⲓ",
+      "english": "For those who excel in knowledge and virtue teach those who are inferior in virtues and true knowledge.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡ**ⲉⲙⲓ** ϧⲉⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲁⲛ ϩⲁⲛⲟⲩⲟⲛ ⲅⲁⲣ ϣⲁⲉϧⲟⲩⲛ ⲉϯⲛⲟⲩ ϧⲉⲛϯⲕⲁϩⲥ ⲛⲧⲉⲛⲓⲓⲇⲱⲗⲟⲛ ⲥⲉⲟⲩⲱⲙ ⲙⲫⲣⲏϯ ⲛϩⲁⲛϣⲱⲧ ⲛⲓⲇⲱⲗⲟⲛ ⲟⲩⲟϩ ⲧⲟⲩⲥⲩⲛⲏⲇⲉⲥⲓⲥ ⲉⲥϣⲱⲛⲓ ⲉⲣⲱⲟⲩ ϣⲁⲥϭⲱϧⲉⲙ .",
+      "english": "However, that knowledge isn't in all men. But some, with consciousness of the idol until now, eat as of a thing sacrificed to an idol, and their conscience, being weak, is defiled.",
+      "source": "Bohairic 1 Corinthians 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:8",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲙⲓ_0_node",
+          103
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          21
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲙⲓ",
+          24
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          18
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲙⲓ",
+          18
+        ],
+        [
+          "ⲡϭⲥ_3_post_ⲁⲛⲟⲕ",
+          14
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲙⲓ",
+          10
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          16
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲙⲓ",
+          17
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲙⲓ",
+          6
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲉⲙⲓ",
+          15
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲙⲓ",
+          12
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲉⲙⲓ",
+          4
+        ],
+        [
+          "ϩⲗⲓ_1_pre_ⲉⲙⲓ",
+          4
+        ],
+        [
+          "ϯ_1_pre_ⲉⲙⲓ",
+          4
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          3
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲉⲙⲓ",
+          6
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ϥ_3_post_ϧⲉⲛⲧ",
+          3
+        ],
+        [
+          "ϧⲉⲛⲧ_2_post_ϫⲉ",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ϯ_3_post_ⲙⲉⲓ",
+          3
+        ],
+        [
+          "ⲙⲉⲓ_2_post_ϫⲉ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲉⲓ",
+          3
+        ],
+        [
+          "ⲕ_4_post_ⲙⲙⲟ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          4
+        ],
+        [
+          "ⲉⲙⲓ_0_node",
+          "ϫⲉ_1_post_ⲉⲙⲓ",
+          5
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲙⲓ",
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲙⲓ",
+          "ⲡϭⲥ_3_post_ⲁⲛⲟⲕ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲙⲓ",
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          3
+        ],
+        [
+          "ⲉⲙⲓ_0_node",
+          "ⲁⲛ_1_post_ⲉⲙⲓ",
+          3
+        ],
+        [
+          "ϣⲁⲛ_1_pre_ⲉⲙⲓ",
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲙⲓ",
+          "ⲉⲩⲉ_1_pre_ⲉⲙⲓ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲉⲙⲓ",
+          "ϩⲗⲓ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲙⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲉⲙⲓ",
+          "ⲫ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩϯ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲙⲓ",
+          "ⲙⲡ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲙⲓ",
+          "ⲓ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲉⲙⲓ",
+          "ϥ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          2
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲉⲙⲓ",
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲙⲓ",
+          "ϥ_3_post_ϧⲉⲛⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϧⲉⲛⲧ",
+          "ϧⲉⲛⲧ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲙⲓ",
+          "ϥ_1_pre_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ⲉⲙⲓ_0_node",
+          "ⲅⲁⲣ_1_post_ⲉⲙⲓ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲙⲓ",
+          "ϯ_3_post_ⲙⲉⲓ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲙⲉⲓ",
+          "ⲙⲉⲓ_2_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲉⲓ_2_post_ϫⲉ",
+          "ⲙⲙⲟ_3_post_ⲙⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲙⲉⲓ",
+          "ⲕ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲙⲓ",
+          "ⲉⲙⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 11.49,
+      "rank": 105,
+      "count": 975
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C902",
+      "label": "ϭⲓⲛⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C899",
+      "label": "ⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorant, innocent"
+    },
+    {
+      "target": "C897",
+      "label": "ⲉⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "know, understand"
+    },
+    {
+      "target": "C900",
+      "label": "ⲙⲛⲧⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorance, innocence"
+    },
+    {
+      "target": "C904",
+      "label": "ⲙⲛⲧⲛⲁϣⲧⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "presumption, stubbornness"
+    },
+    {
+      "target": "C903",
+      "label": "ⲛⲁϣⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "presumptuous, impudent, obdurate"
+    },
+    {
+      "target": "C901",
+      "label": "ⲣⲉϥⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "one that knows"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm7923",
+    "demo_lemma": "ꜥmj",
+    "english": "[to swallow]",
+    "german": "Wissen, Fähigkeit",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm7923"
+  }
+}

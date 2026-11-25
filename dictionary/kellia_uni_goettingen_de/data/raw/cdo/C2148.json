@@ -1,0 +1,45 @@
+{
+  "id": "C2148",
+  "forms": [
+    {
+      "id": "CF6004",
+      "orth": "ⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2487",
+      "bibliography": "CD 196a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2147",
+      "label": "ϫⲉⲙⲧⲁⲩ",
+      "pos": "V",
+      "gloss": "say magic"
+    },
+    {
+      "target": "C2149",
+      "label": "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magic"
+    },
+    {
+      "target": "C2146",
+      "label": "ⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "wizardry, magic (words)"
+    }
+  ]
+}

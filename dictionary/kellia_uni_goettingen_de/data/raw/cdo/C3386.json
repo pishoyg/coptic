@@ -1,0 +1,43 @@
+{
+  "id": "C3386",
+  "forms": [
+    {
+      "id": "CF8666",
+      "orth": "ⲥⲱⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF8667",
+      "orth": "ⲥⲟⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2237,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3858",
+      "bibliography": "CD 318b; KoptHWb 179"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3385",
+      "label": "ⲥⲱⲓ",
+      "pos": "V",
+      "gloss": "become hairless"
+    }
+  ]
+}

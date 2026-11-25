@@ -1,0 +1,249 @@
+{
+  "id": "C3487",
+  "forms": [
+    {
+      "id": "CF8875",
+      "orth": "ⲣⲉϥⲥⲟⲗⲥⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7603,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3969",
+      "bibliography": "CD 332b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲡ**ⲣⲉϥⲥⲟⲗⲥⲗ** ⲙⲙⲉ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲡⲣⲉϥⲯⲁⲗⲗⲉⲓ ⲇⲁⲇ · ϫⲉⲁⲡⲉⲕϣⲁϫⲉ ⲧⲁⲛϩⲟⲓ · ⲁⲡⲉⲕϣⲁϫⲉ ⲥⲗⲥⲱⲗⲧ ⁛—",
+      "english": "O thou true consoler, according to the words of the Psalmist David, 'Thy words give me life, thy words comfort me.'",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥϫⲉⲛⲁⲓ ⲛⲁⲛ ⲛϭⲓⲡⲁⲉⲓⲱⲧ · ⲁⲩⲛⲟϭ ⲛⲁϣⲕⲁⲕ ⲛⲣⲓⲙⲉ ϣⲱⲡⲉ ϩⲛⲧⲙⲏⲏⲧⲉ ϩⲓⲟⲩⲥⲟⲡ ϫⲉⲧⲛⲛⲁϣⲱⲱⲧ ⲛⲟⲩⲉⲓⲱⲧ ⲛⲁⲅⲁⲑⲟⲥ ⲛⲧⲉⲓϩⲉ ⲛ**ⲣⲉϥⲥⲟⲗⲥⲗ** ⲛⲛⲉⲧϩⲛϩⲉⲛⲗⲩⲡⲏ · ⲡⲣⲉϥϯⲙⲉⲧⲁⲛⲟⲓⲁ ·",
+      "english": "And when my father had said these things unto me, a great outcry broke forth with tears and sobs in (our) midst; ' Thus are we bereaved of our good father, the consoler of those who were in trouble, who gave penitence to the sinner, who provided the poor with food, and who made it his care to find clothing for their bodies.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁϣⲉ",
+        1,
+        10.071
+      ],
+      [
+        "ⲱ",
+        1,
+        9.562
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        9.144
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.941
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        8.31
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱ_1_pre_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_4_post_ϩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲱ_1_pre_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          "ⲡ_1_pre_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          "ⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲉ_2_post_ⲙ",
+          "ⲕⲁⲧⲁ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_0_node",
+          "ⲛ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ϩⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲛ",
+          "ϩⲉⲛ_4_post_ϩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7147,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3485",
+      "label": "ϣⲱⲡⲉ ⲛⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "become, be comforted"
+    },
+    {
+      "target": "C3486",
+      "label": "ϫⲓⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "take comfort"
+    },
+    {
+      "target": "C3484",
+      "label": "ⲣⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "make, have comfort"
+    },
+    {
+      "target": "C3488",
+      "label": "ⲥⲉⲗⲥⲓⲗ",
+      "pos": "N",
+      "gloss": "comfort"
+    },
+    {
+      "target": "C3482",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "be comforted, encouraged; comfort, encourage"
+    },
+    {
+      "target": "C3483",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "N",
+      "gloss": "consolation, amusement"
+    }
+  ]
+}

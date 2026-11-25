@@ -1,0 +1,90 @@
+{
+  "id": "C321",
+  "forms": [
+    {
+      "id": "CF1396",
+      "orth": "ⲃⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4500,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF1397",
+      "orth": "ⲃⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2621,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF1398",
+      "orth": "ⲃⲁ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1399",
+      "orth": "ⲃⲁ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1400",
+      "orth": "ⲃⲁ-",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "usprünglich Subst. m.",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS354",
+      "bibliography": "KoptHWb 20, 492; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲡⲓⲙⲁϩⲥⲟⲡ **ⲃⲁ**ϥⲟⲩⲟⲛϩϥ ⲛϫⲉⲓⲱⲥⲏⲫ ⲉⲛⲉϥⲥⲛⲏⲟⲩ ⲟⲩⲟϩ ⲁⲡⲅⲉⲛⲟⲥ ⲛⲓⲱⲥⲏⲫ ⲁϥⲟⲩⲟⲛϩϥ ⲉⲫⲁⲣⲁⲱ .",
+      "english": "On the second time Joseph was made known to his brothers, and Joseph's race was revealed to Pharaoh.",
+      "source": "05_Acts_07",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥⲙⲓⲥⲓ ⲇⲉ ⲛⲏⲥⲁⲩ ⲛϫⲉⲁⲇⲁ ⲛⲉⲗⲓⲫⲁⲥ **ⲃⲁ**ⲥⲉⲙⲙⲁⲑ ⲁⲥⲙⲓⲥⲓ ⲛⲣⲁⲅⲟⲩⲏⲗ",
+      "english": "And Ada bore to him Eliphas; and Basemath bore Raguel.",
+      "source": "01_Genesis_36",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:36",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C319",
+      "label": "ⲃⲁ",
+      "pos": "N",
+      "gloss": "branch of date-palm"
+    },
+    {
+      "target": "C320",
+      "label": "ⲃⲁ-",
+      "pos": "N",
+      "gloss": ""
+    },
+    {
+      "target": "C318",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "branch of date-palm [as a writing tool = \"lanceola\n                            scriptoris\"]"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "C3122",
+  "forms": [
+    {
+      "id": "CF8120",
+      "orth": "ϯⲣⲉⲛ⸗",
+      "dialect": "S",
+      "oRef": "ϯ ⲣⲉⲛ⸗",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15498,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3572",
+      "bibliography": "CD 298a; KoptHWb 165; DELC 176; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉ ⲙⲡⲟⲗⲓⲥ ⲛⲧⲁⲩ**ϯⲣⲉⲛ**ⲟⲩ ⲉⲣⲟⲟⲩ ⲛϭⲓⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲡⲉⲡⲣⲟⲥⲩⲗⲏⲧⲟⲥ ⲡⲉⲧϣⲟⲟⲡ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲉⲧⲣⲉⲩⲡⲱⲧ ⲉϩⲣⲁⲓ ⲉⲣⲟⲟⲩ ⲛϭⲓⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁⲣⲱϩⲧ ⲛⲟⲩⲯⲩⲭⲏ ⲉϩⲛⲁϥ ⲁⲛ ϫⲉⲕⲁⲥ ⲛⲛⲉϥⲙⲟⲩ ϩⲁⲧϭⲓϫ ⲙⲡⲉⲧϫⲓ ⲉϩⲟⲩⲛ ⲉⲡⲉⲥⲛⲟϥ ϣⲁⲛⲧⲉϥⲁϩⲉⲣⲁⲧϥ ⲉⲧⲥⲩⲛⲁⲅⲱⲅⲏ ⲉⲧⲛⲁϯϩⲁⲡ ⲉⲣⲟϥ",
+      "english": "...",
+      "source": "Joshua 20",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3125",
+      "label": "ϫⲓⲣⲁⲛ",
+      "pos": "V",
+      "gloss": "take name, be named"
+    },
+    {
+      "target": "C3123",
+      "label": "ⲁⲧϯⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "unnamed"
+    },
+    {
+      "target": "C3121",
+      "label": "ⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "name"
+    },
+    {
+      "target": "C3126",
+      "label": "ⲣⲙⲛⲣⲁⲛ",
+      "pos": "N",
+      "gloss": "office-bearer, dignitary"
+    },
+    {
+      "target": "C3124",
+      "label": "ⲧⲁⲩⲉⲣⲓⲛ⸗",
+      "pos": "V",
+      "gloss": "pronounce name"
+    }
+  ]
+}

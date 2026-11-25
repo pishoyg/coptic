@@ -1,0 +1,704 @@
+{
+  "id": "C3976",
+  "forms": [
+    {
+      "id": "CF9892",
+      "orth": "ⲥϩⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.87,
+        "rank": 349,
+        "count": 453
+      }
+    },
+    {
+      "orth": "ⲥϧⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.13,
+        "rank": 443,
+        "count": 181
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4514",
+      "bibliography": "CD 383a; KoptHWb 211; ChLCS 53b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲫⲩⲥⲓⲕⲏ ⲙⲙⲉⲧⲁⲧⲥⲉⲃⲓ ⲉⲥϫⲱⲕ ⲙⲡϩⲱⲃ ⲛⲧⲉⲡⲓⲛⲟⲙⲟⲥ ⲉⲃⲟⲗ ⲥⲛⲁϯϩⲁⲡ ⲉⲣⲟⲕ ϧⲁⲡⲓⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲡⲓ**ⲥϧⲁⲓ** ⲛⲉⲙⲡⲓⲥⲉⲃⲓ ϫⲉⲁⲕⲉⲣ ⲟⲩⲡⲁⲣⲁⲃⲁⲧⲏ ⲛⲧⲉⲡⲓⲛⲟⲙⲟⲥ",
+      "english": "Won't the uncircumcision which is by nature, if it fulfills the law, judge you, who with the letter and circumcision are a transgressor of the law?",
+      "source": "06_Romans_02",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥϫⲓ ⲇⲉ ⲛⲛⲉ**ⲥϩⲁⲓ** ⲛϭⲓⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁⲡⲁ ⲑⲉⲟⲫⲓⲗⲟⲥ",
+      "english": "When the archbishop had received the writing",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲁⲛⲕⲱⲣϥ ⲉⲃⲟⲗ ϩⲁⲫⲛⲟⲙⲟⲥ ⲉⲁⲛⲙⲟⲩ ϧⲉⲛⲫⲏ ⲉⲛⲁⲩⲁⲙⲟⲛⲓ ⲙⲙⲟⲛ ⲛϧⲏⲧϥ ϩⲱⲥⲧⲉ ⲛⲧⲉⲛⲉⲣⲃⲱⲕ ϧⲉⲛⲟⲩⲙⲉⲧⲃⲉⲣⲓ ⲛⲧⲉⲡⲓⲡⲛⲉⲩⲙⲁⲟⲩⲟϩ ϧⲉⲛⲟⲩⲙⲉⲧⲁⲡⲁⲥ ⲁⲛ ⲛⲧⲉⲟⲩ**ⲥϧⲁⲓ** .",
+      "english": "But now we have been discharged from the law, having died to that in which we were held; so that we serve in newness of the spirit, and not in oldness of the letter.",
+      "source": "06_Romans_07",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲛϫⲡϣⲟⲙⲧⲉ ⲛⲥⲟⲩ ϫⲟⲩⲱⲧ ⲙⲡⲁⲣⲙⲟⲩⲧⲉ · ⲙⲙⲁⲧⲟⲓ ⲇⲉ ⲁⲩϫⲓ ⲛⲛⲉ**ⲥϩⲁⲓ** ⲁⲩⲧⲣⲉⲩⲟϣⲟⲩ ⲉⲡⲇⲟⲩⲝ · ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲉⲣⲉⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲥϩⲁⲓ ⲙⲙⲟⲥ :—",
+      "english": "And at the third hour of the twentieth day of Pharmoute, the soldiers took the letter and had it read to the Duke, according to that which Diocletian had written therein.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲉⲧⲁϥⲑⲣⲉⲛⲉⲣⲡⲉⲙⲡϣⲁ ⲛⲉⲣⲇⲓⲁⲕⲱⲛ ⲉϯⲇⲓⲁⲑⲏⲕⲏ ⲙⲃⲉⲣⲓ ⲛⲧⲉⲟⲩ**ⲥϧⲁⲓ** ⲁⲛ ⲁⲗⲗⲁ ⲛⲧⲉⲟⲩⲡⲛⲉⲩⲙⲁⲡⲓⲥϧⲁⲓ ⲅⲁⲣ ϥϧⲱⲧⲉⲃ ⲡⲓⲡⲛⲉⲩⲙⲁϥⲧⲁⲛϧⲟ .",
+      "english": "who also made us sufficient as servants of a new covenant; not of the letter, but of the Spirit. For the letter kills, but the Spirit gives life.",
+      "source": "08_II Corinthians_03",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲥⲱⲧⲙ ⲅⲁⲣ ⲉⲛⲉⲕⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛϩⲁϩ ⲛⲥⲟⲡ ϩⲛⲛⲉⲕⲉⲡⲓⲥⲧⲟⲗⲏ · ⲁⲩⲱ ⲁⲛⲛⲁⲩ ⲉⲡⲃⲁⲑⲙⲟⲥ ⲛⲛⲉⲕ**ⲥϩⲁⲓ** ⲉⲧⲟⲩⲁⲁⲃ ϩⲛⲛⲉⲕⲉⲡⲓⲥⲧⲟⲗⲟⲟⲩⲉ · ⲙⲛⲧⲉⲕⲥⲟⲫⲓⲁ ⲉⲧⲟϣ ·",
+      "english": "For we heard of thy mysteries very frequently in thy epistle(s), and we saw the depth of thy understanding of the Holy Scriptures in the letters which thou didst indite, and of thy wisdom which was great.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲱ",
+        84,
+        27.513
+      ],
+      [
+        "ⲛ",
+        161,
+        26.583
+      ],
+      [
+        "ⲟⲩ",
+        85,
+        23.982
+      ],
+      [
+        "ⲧⲉⲛ",
+        46,
+        23.972
+      ],
+      [
+        "ⲉⲡⲓⲥⲧⲟⲗⲏ",
+        9,
+        23.423
+      ],
+      [
+        "ⲙ",
+        60,
+        23.304
+      ],
+      [
+        "ⲛⲁⲓ",
+        31,
+        23.287
+      ],
+      [
+        "ⲁ",
+        66,
+        23.123
+      ],
+      [
+        "ϥ",
+        70,
+        22.812
+      ],
+      [
+        "ⲉ",
+        58,
+        22.591
+      ],
+      [
+        "ⲥⲁⲓⲉ",
+        5,
+        22.269
+      ],
+      [
+        "ⲁⲛ",
+        26,
+        22.116
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        50,
+        22.012
+      ],
+      [
+        "ⲙⲙⲱ",
+        21,
+        21.983
+      ],
+      [
+        "ⲛⲓ",
+        36,
+        21.728
+      ],
+      [
+        "ⲓ",
+        33,
+        21.709
+      ],
+      [
+        "ⲙⲁⲑⲏⲙⲁ",
+        2,
+        21.695
+      ],
+      [
+        "ⲉⲩⲇⲟⲝⲓⲟⲥ",
+        2,
+        21.695
+      ],
+      [
+        "ⲙⲟ",
+        2,
+        21.695
+      ],
+      [
+        "ⲛⲧⲉ",
+        34,
+        21.329
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        9,
+        20.109
+      ],
+      [
+        "ⲛⲏ",
+        89,
+        19.488
+      ],
+      [
+        "ⲛ",
+        337,
+        19.0
+      ],
+      [
+        "ⲉⲡⲓⲥⲧⲟⲗⲏ",
+        25,
+        18.039
+      ],
+      [
+        "ⲁ",
+        192,
+        17.8
+      ],
+      [
+        "ⲥⲟⲩ",
+        29,
+        17.566
+      ],
+      [
+        "ⲉ",
+        189,
+        17.505
+      ],
+      [
+        "ϥ",
+        190,
+        17.233
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        37,
+        17.186
+      ],
+      [
+        "ⲙ",
+        134,
+        16.551
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        24,
+        16.472
+      ],
+      [
+        "ⲡⲉ",
+        96,
+        16.264
+      ],
+      [
+        "ⲥ",
+        99,
+        16.164
+      ],
+      [
+        "ⲕⲟⲣⲓⲛⲑⲓⲟⲥ",
+        5,
+        15.98
+      ],
+      [
+        "ϫⲉ",
+        97,
+        15.948
+      ],
+      [
+        "ⲩ",
+        102,
+        15.828
+      ],
+      [
+        "ⲛⲁ",
+        98,
+        15.534
+      ],
+      [
+        "ⲧⲛ",
+        52,
+        15.267
+      ],
+      [
+        "ⲛⲉⲓ",
+        28,
+        14.891
+      ],
+      [
+        "ϣⲁϫⲉ",
+        43,
+        14.752
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥϩⲁⲓ_0_node",
+          105
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥϩⲁⲓ",
+          29
+        ],
+        [
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          26
+        ],
+        [
+          "ⲩ_1_pre_ⲥϩⲁⲓ",
+          14
+        ],
+        [
+          "ⲉⲧⲃⲏⲏⲧ_1_post_ⲥϩⲁⲓ",
+          5
+        ],
+        [
+          "ϥ_2_post_ⲉⲧⲃⲏⲏⲧ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲥϩⲁⲓ",
+          10
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲣⲟ",
+          3
+        ],
+        [
+          "ⲣⲣⲟ_1_pre_ⲥϩⲁⲓ",
+          3
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲥϩⲁⲓ",
+          5
+        ],
+        [
+          "ⲓ_1_pre_ⲥϩⲁⲓ",
+          7
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥϩⲁⲓ",
+          4
+        ],
+        [
+          "ⲛⲏ_1_post_ⲥϩⲁⲓ",
+          4
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          4
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲥⲟⲩ_1_post_ⲥϩⲁⲓ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_post_ⲥϩⲁⲓ",
+          4
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          "ⲩ_1_pre_ⲥϩⲁⲓ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          5
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲉⲧⲃⲏⲏⲧ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲏⲏⲧ_1_post_ⲥϩⲁⲓ",
+          "ϥ_2_post_ⲉⲧⲃⲏⲏⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          "ϥ_1_pre_ⲥϩⲁⲓ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          4
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_1_pre_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_1_pre_ⲥϩⲁⲓ",
+          "ⲇⲉ_1_pre_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲥϩⲁⲓ",
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          "ⲓ_1_pre_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲉⲧ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥϩⲁⲓ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲙ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥϩⲁⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥϩⲁⲓ",
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲉⲣⲟ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲥϩⲁⲓ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          "ⲛ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲛⲏ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲏ_1_post_ⲥϩⲁⲓ",
+          "ⲧⲛ_2_post_ⲛⲏ",
+          2
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          "ⲛ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥϩⲁⲓ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛⲟⲩ_1_pre_ⲥϩⲁⲓ",
+          "ⲇⲉ_1_pre_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥϩⲁⲓ",
+          "ⲧⲉⲧⲛ_1_pre_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲥⲟⲩ_1_post_ⲥϩⲁⲓ",
+          2
+        ],
+        [
+          "ⲥⲟⲩ_1_post_ⲥϩⲁⲓ",
+          "ⲛⲁ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲥϩⲁⲓ",
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲥⲟⲩ_1_post_ⲥϩⲁⲓ",
+          "ⲇⲉ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥϩⲁⲓ",
+          "ⲛⲁ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥϩⲁⲓ",
+          "ⲥϩⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥϩⲁⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥϩⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥϩⲁⲓ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛⲏ_1_post_ⲥϩⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 6.45,
+      "rank": 149,
+      "count": 1023
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3980",
+      "label": "ϭⲓⲛⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "act, form of writing"
+    },
+    {
+      "target": "C3978",
+      "label": "ⲁⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "without letters, illiterate"
+    },
+    {
+      "target": "C3977",
+      "label": "ⲙⲛⲧⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writing"
+    },
+    {
+      "target": "C3984",
+      "label": "ⲙⲛⲧⲥⲁϩ",
+      "pos": "N",
+      "gloss": "skill"
+    },
+    {
+      "target": "C3979",
+      "label": "ⲣⲉϥⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "writer, scribe"
+    },
+    {
+      "target": "C3985",
+      "label": "ⲣⲥⲁϩ",
+      "pos": "V",
+      "gloss": "become, be teacher, skilled"
+    },
+    {
+      "target": "C3983",
+      "label": "ⲥϧⲓ",
+      "pos": "N",
+      "gloss": "written copy, diploma"
+    },
+    {
+      "target": "C3972",
+      "label": "ⲥϩⲁⲓ",
+      "pos": "V",
+      "gloss": "write; register; draw, paint"
+    },
+    {
+      "target": "C3975",
+      "label": "ⲥϩⲁⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "write in (to palace), inscribe, register"
+    },
+    {
+      "target": "C3974",
+      "label": "ⲥϩⲁⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "write outward, publish"
+    },
+    {
+      "target": "C3973",
+      "label": "ⲥϩⲁⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "ascribe to, inscribe, write down"
+    },
+    {
+      "target": "C3981",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    },
+    {
+      "target": "C3982",
+      "label": "ⲥⲁϩ",
+      "pos": "N",
+      "gloss": "writer, teacher, master; master (of a craft)"
+    }
+  ]
+}

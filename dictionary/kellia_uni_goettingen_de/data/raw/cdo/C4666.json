@@ -1,0 +1,64 @@
+{
+  "id": "C4666",
+  "forms": [
+    {
+      "id": "CF11295",
+      "orth": "ϩⲁⲛⲧⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5270",
+      "bibliography": "CD 441b; KoptHWb 253, 376; ChLCS 62b, 92a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6666",
+      "type": "cf",
+      "label": "region, side, surface"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4662",
+      "label": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain woman"
+    },
+    {
+      "target": "C4663",
+      "label": "ⲣⲙⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    },
+    {
+      "target": "C4664",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain woman"
+    },
+    {
+      "target": "C4665",
+      "label": "ⲣⲙⲡⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain man"
+    },
+    {
+      "target": "C4661",
+      "label": "ⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain; monastic community, monastery; cemetery, necropolis; desert"
+    }
+  ]
+}

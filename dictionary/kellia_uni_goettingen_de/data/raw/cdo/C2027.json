@@ -1,0 +1,44 @@
+{
+  "id": "C2027",
+  "forms": [
+    {
+      "id": "CF5733",
+      "orth": "ⲙⲣⲏϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2350",
+      "bibliography": "CD 184a; KoptHWb 101; ChLCS 27b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2026",
+      "label": "ϥⲁⲓⲙⲉⲣⲉϩ",
+      "pos": "N",
+      "gloss": "spear-bearer"
+    },
+    {
+      "target": "C2025",
+      "label": "ⲙⲉⲣⲉϩ",
+      "pos": "N",
+      "gloss": "spear, javelin"
+    }
+  ],
+  "etym": {
+    "egy_num": "72830",
+    "egy_lemma": "mrḥ",
+    "english": "lance (Sem. loan word)",
+    "german": "Lanze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72830"
+  }
+}

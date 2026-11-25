@@ -1,0 +1,185 @@
+{
+  "id": "C6659",
+  "forms": [
+    {
+      "id": "CF15362",
+      "orth": "ϭⲛϩⲙⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8865,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7372",
+      "bibliography": "CD 682a; ChLCS 91b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧϫⲡⲓⲟ ⲛⲟⲩⲣⲱⲙⲉ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ϥⲛⲁ**ϭⲛϩⲙⲟⲧ** ⲉϩⲟⲩⲉⲡⲉⲧϯϩⲙⲟⲧ ϩⲙⲡⲉϥⲗⲁⲥ",
+      "english": "He that reproves a man's ways shall have more favour than he that flatters with the tongue.",
+      "source": "Proverbs 28",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲛⲁⲥ ⲉϩⲟⲩⲛ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲭⲁⲓⲣⲉ ⲧⲉⲛⲧⲁⲥ**ϭⲛϩⲙⲟⲧ** ⲡϫⲟⲉⲓⲥ ⲛⲙⲙⲉ .",
+      "english": "Having come in, the angel said to her, 'Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!'",
+      "source": "42_Luke_1",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ϯϩⲙⲟⲧ",
+        1,
+        18.013
+      ],
+      [
+        "ⲛⲙⲙ",
+        1,
+        13.35
+      ],
+      [
+        "ⲡⲉⲧ",
+        1,
+        13.028
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        11.559
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        11.172
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        7.193
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8416,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7750",
+      "type": "cf",
+      "label": "find"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6657",
+      "label": "ϣⲡϩⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "take grace, give thanks"
+    },
+    {
+      "target": "C6653",
+      "label": "ϩⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "grace, gift"
+    },
+    {
+      "target": "C6658",
+      "label": "ϫⲓϩⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "obtain grace, favour"
+    },
+    {
+      "target": "C6656",
+      "label": "ϯϩⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "give grace, benefit, be kind"
+    },
+    {
+      "target": "C6654",
+      "label": "ⲁⲧϩⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "graceless, thankless"
+    },
+    {
+      "target": "C6655",
+      "label": "ⲣϩⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "give grace, favour"
+    }
+  ]
+}

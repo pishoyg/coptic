@@ -1,0 +1,268 @@
+{
+  "id": "C33",
+  "forms": [
+    {
+      "id": "CF126",
+      "orth": "ⲁⲕⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF127",
+      "orth": "ⲁⲕⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4585,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲁⲕⲉⲥ",
+      "dialect": "S",
+      "id": "417.1"
+    },
+    {
+      "orth": "ⲁⲕⲓⲥ",
+      "dialect": "S",
+      "id": "417.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS33",
+      "bibliography": "CD 3b; KoptHWb 3, 484; DELC 6; ChLCS 3b"
+    },
+    {
+      "id": "CS34",
+      "bibliography": "CD 3b; KoptHWb 3, 484; DELC 6; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲙ ⲛϫⲉⲛⲉⲛⲃⲁⲗ ⲙⲡⲓⲃ ⲟⲩⲟϩ ⲁⲩⲉⲙⲓ ϫⲉⲥⲉⲃⲏϣ ⲟⲩⲟϩ ⲁⲩⲑⲱⲣⲡ ⲛϩⲁⲛϫⲱⲃⲓ ⲛⲧⲉⲟⲩⲃⲱ ⲛⲕⲉⲛⲧⲉ: ⲁⲩⲑⲁⲙⲓⲟ ⲛⲱⲟⲩ ⲛϩⲁⲛ**ⲁⲕⲏⲥ**",
+      "english": "And the eyes of both were opened, and they perceived that they were naked, and they sewed fig leaves together, and made themselves aprons to go round them.",
+      "source": "01_Genesis_03",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉϩⲁⲛⲭⲗⲟⲙ ⲛⲟⲩⲑⲟ ⲛⲣⲏϯ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲛⲟⲩⲁⲫⲏⲟⲩⲓ ⲟⲩⲟϩ ϩⲁⲛ**ⲁⲕⲏⲥ** ⲛⲟⲩⲑⲟ ⲛⲣⲏϯ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲙⲏⲣ ϩⲓϫⲉⲛⲧⲟⲩϯⲡⲓ ⲉⲛⲁⲩⲙⲟⲩⲣ ⲙⲙⲱⲟⲩ ϧⲉⲛⲧⲟⲩϥⲟϯ ⲁⲛ .",
+      "english": "And they shall have linen mitres upon their heads, and shall have linen drawers upon their loins; and they shall not tightly gird themselves.",
+      "source": "26_Ezechiel_44",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:44",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲧⲱⲛϥ ⲁϥϣⲉ ⲛⲁϥ ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲓⲥ ⲟⲩⲣⲱⲙⲓ ⲛⲉⲑⲱϣ ⲛⲥⲓⲟⲩⲣ ⲛⲣⲉⲙⲛϫⲟⲙ ⲛⲕⲁⲛⲇ**ⲁⲕⲏⲥ** ⲛⲧⲉϯⲟⲩⲣⲱ ⲛⲧⲉⲛⲓⲉⲑⲁⲩϣ ⲫⲁⲓ ⲛⲁϥⲭⲏ ϩⲓϫⲉⲛⲧⲉⲥⲅⲁⲍⲁ ⲧⲏⲣⲥ ⲛⲉⲁϥⲓ ⲡⲉ ⲉⲟⲩⲱϣⲧ ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ .",
+      "english": "He arose and went; and behold, there was a man of Ethiopia, a eunuch of great authority under Candace, queen of the Ethiopians, who was over all her treasure, who had come to Jerusalem to worship.",
+      "source": "05_Acts_08",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:08",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲛⲇ",
+        1,
+        18.11
+      ],
+      [
+        "ⲣⲉⲙⲛϫⲟⲙ",
+        1,
+        16.11
+      ],
+      [
+        "ⲟⲩⲣⲱ",
+        1,
+        14.525
+      ],
+      [
+        "ⲁⲫⲏⲟⲩⲓ",
+        1,
+        13.466
+      ],
+      [
+        "ⲑⲟ",
+        1,
+        12.753
+      ],
+      [
+        "ⲛ",
+        5,
+        9.971
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        8.728
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        8.25
+      ],
+      [
+        "ⲥⲱⲧⲉⲙ",
+        1,
+        7.614
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        7.481
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.318
+      ],
+      [
+        "ⲛⲱ",
+        1,
+        6.751
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.169
+      ],
+      [
+        "ϯ",
+        1,
+        4.705
+      ],
+      [
+        "ⲩ",
+        1,
+        4.536
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲕⲏⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲕⲏⲥ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲣⲱ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲟⲩⲣⲱ",
+          1
+        ],
+        [
+          "ⲛⲓ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲁⲕⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲕⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲑⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲕⲏⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲁⲕⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲁⲕⲏⲥ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲟⲩⲣⲱ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲣⲱ_3_post_ϯ",
+          "ⲛⲧⲉ_4_post_ⲟⲩⲣⲱ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲟⲩⲣⲱ",
+          "ⲛⲓ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲁⲕⲏⲥ",
+          "ⲁⲕⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲕⲏⲥ_0_node",
+          "ⲛ_1_post_ⲁⲕⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲕⲏⲥ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲑⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲑⲟ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ⲑⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4108,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "41800",
+    "egy_lemma": "ꜥgsw",
+    "english": "belt (Sem. loan word)",
+    "german": "Gurt (?) (aus Leder)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/41800"
+  }
+}

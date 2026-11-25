@@ -1,0 +1,64 @@
+{
+  "id": "C710",
+  "forms": [
+    {
+      "id": "CF2686",
+      "orth": "ⲣⲉⲣⲱⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS848",
+      "bibliography": "CD 58b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C712",
+      "label": "ϭⲓⲉⲣⲱϯ",
+      "pos": "V",
+      "gloss": "get milk, suck"
+    },
+    {
+      "target": "C711",
+      "label": "ϯⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "give milk, suckle"
+    },
+    {
+      "target": "C708",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C709",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C713",
+      "label": "ⲟⲩⲉⲙⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "feeding on milk"
+    }
+  ]
+}

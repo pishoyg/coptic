@@ -1,0 +1,150 @@
+{
+  "id": "C8392",
+  "forms": [
+    {
+      "id": "CF19544",
+      "orth": "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF19545",
+      "orth": "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10697,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9684",
+      "bibliography": "DDGLC",
+      "cu_ID": "3796"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟϥ ⲉϥϣⲁⲛⲛⲟⲩⲉ ⲉⲡⲱϣⲛ ⲛⲟⲩⲇⲓⲁⲕⲟⲛⲟⲥ ⲙⲉϥⲭⲉⲓⲣⲟⲇⲟⲛⲉⲓ ⲙⲙⲟϥ ⲛϣⲟⲣⲡ ⲉⲓⲙⲏⲧⲓ ⲛϥ**ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ** ⲛϫⲟⲩⲧⲏ ⲙⲯⲁⲗⲙⲟⲥ ⲁⲩⲱ ⲉⲡⲓⲥⲧⲟⲗⲏ ⲥⲛⲧⲉ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲁⲩⲱ ⲟⲩⲙⲉⲣⲟⲥ ⲛⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ",
+      "english": "And when he was to ordain a deacon he would not ordain him first if he had not learned 25 psalms and two letters of the Apostles and a part of the Gospel by heart.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲩⲧⲏ",
+        1,
+        15.644
+      ],
+      [
+        "ⲯⲁⲗⲙⲟⲥ",
+        1,
+        13.479
+      ],
+      [
+        "ⲉⲓⲙⲏⲧⲓ",
+        1,
+        13.106
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        10.442
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲯⲁⲗⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲩⲧⲏ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          "ϥ_1_pre_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ_0_node",
+          "ⲛ_3_post_ⲯⲁⲗⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲯⲁⲗⲙⲟⲥ",
+          "ϫⲟⲩⲧⲏ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟⲩⲧⲏ_4_post_ⲛ",
+          "ⲙ_1_post_ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10287,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "243",
+    "grl_lemma": "ἀποστηθίζω",
+    "grl_meaning": "repeat by heart, repeat from memory",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 219b"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "C5339",
+  "forms": [
+    {
+      "id": "CF31911",
+      "orth": "ⲟⲩϩⲟⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11473,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31910",
+      "orth": "ⲟⲩϩⲟⲟⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5992",
+      "bibliography": "CD 510b-511a; CDC 79a; CED 224; KoptHWb 286; DELC 242ab; ChLCS 71a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϩⲟⲣ",
+        1,
+        15.172
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩϩⲟⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲟⲩϩⲟⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩϩⲟⲣ_2_post_ϩⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩϩⲟⲣⲉ_0_node",
+          "ϩⲁ_1_post_ⲟⲩϩⲟⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲟⲩϩⲟⲣⲉ",
+          "ⲟⲩϩⲟⲣ_2_post_ϩⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5341",
+      "label": "ⲗⲁⲥ ⲛⲟⲩϩⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "cynoglossum (plant)"
+    },
+    {
+      "target": "C5340",
+      "label": "ⲟⲩϩⲟⲗⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "\"water-dog\", otter(?)"
+    },
+    {
+      "target": "C5338",
+      "label": "ⲟⲩϩⲟⲣ",
+      "pos": "N",
+      "gloss": "(male) dog"
+    }
+  ],
+  "etym": {
+    "egy_num": "48630",
+    "egy_lemma": "whr.t",
+    "demo_num": "d1487",
+    "demo_lemma": "wḥr.t",
+    "english": "bitch (fem. dog)",
+    "german": "Hündin",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48630",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1487"
+  }
+}

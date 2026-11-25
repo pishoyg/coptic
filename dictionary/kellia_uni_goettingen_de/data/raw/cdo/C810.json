@@ -1,0 +1,157 @@
+{
+  "id": "C810",
+  "forms": [
+    {
+      "id": "CF2957",
+      "orth": "ⲑⲏⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4389,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF2958",
+      "orth": "ⲑⲉⲛⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS960",
+      "bibliography": "CD 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲧⲉϥⲛⲕⲟⲧ ⲟⲩⲟϩ ϣⲁϥⲧⲱⲛϥ ⲙⲡⲓⲉϫⲱⲣϩ ⲛⲉⲙⲡⲓⲉϩⲟⲟⲩ ⲟⲩⲟϩ ϣⲁⲣⲉⲡⲓϫⲣⲟϫ **ⲑⲏⲛⲓ** ⲟⲩⲟϩ ϣⲁϥϣⲓⲏ ϩⲱⲥ ⲛϥⲉⲙⲓ ⲁⲛ ⲛⲑⲟϥ",
+      "english": "and should sleep and rise night and day, and the seed should spring up and grow, he doesn't know how.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲧⲉϥⲛⲕⲟⲧ ⲟⲩⲟϩ ϣⲁϥⲧⲱⲛϥ ⲙⲡⲓⲉϫⲱⲣϩ ⲛⲉⲙⲡⲓⲉϩⲟⲟⲩ ⲟⲩⲟϩ ϣⲁⲣⲉ ⲡⲓϫⲣⲟϫ **ⲑⲏⲛⲓ** ⲟⲩⲟϩ ϣⲁϥϣⲓⲏ ϩⲱⲥ ⲛϥⲉⲙⲓ ⲁⲛ ⲛⲑⲟϥ",
+      "english": "and should sleep and rise night and day, and the seed should spring up and grow, he doesn't know how.",
+      "source": "02_Mark_04",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲓⲏ",
+        3,
+        16.756
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        3,
+        16.11
+      ],
+      [
+        "ϫⲣⲟϫ",
+        3,
+        14.854
+      ],
+      [
+        "ϣⲁ",
+        3,
+        11.836
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        6,
+        11.25
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        8.941
+      ],
+      [
+        "ϥ",
+        3,
+        7.594
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲑⲏⲛⲓ",
+          2
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲑⲏⲛⲓ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ϫⲣⲟϫ_1_pre_ⲑⲏⲛⲓ",
+          2
+        ],
+        [
+          "ⲑⲏⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϣⲓⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲑⲏⲛⲓ",
+          "ϣⲁⲣⲉ_1_pre_ⲑⲏⲛⲓ",
+          2
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲑⲏⲛⲓ",
+          "ⲡⲓ_2_pre_ϫⲣⲟϫ",
+          2
+        ],
+        [
+          "ⲡⲓ_2_pre_ϫⲣⲟϫ",
+          "ϫⲣⲟϫ_1_pre_ⲑⲏⲛⲓ",
+          2
+        ],
+        [
+          "ϫⲣⲟϫ_1_pre_ⲑⲏⲛⲓ",
+          "ⲑⲏⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ⲑⲏⲛⲓ_0_node",
+          "ⲟⲩⲟϩ_2_post_ϣⲓⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3923,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4922",
+      "type": "syn",
+      "label": "blossom, sprout"
+    }
+  ]
+}

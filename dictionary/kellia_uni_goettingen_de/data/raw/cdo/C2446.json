@@ -1,0 +1,629 @@
+{
+  "id": "C2446",
+  "forms": [
+    {
+      "id": "CF6674",
+      "orth": "ⲛⲟⲉⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.36,
+        "rank": 1398,
+        "count": 57
+      }
+    },
+    {
+      "orth": "ⲛⲱⲓⲕ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1154,
+        "count": 39
+      }
+    },
+    {
+      "orth": "ⲛⲁⲉⲓⲕ",
+      "dialect": "A",
+      "id": "348.1"
+    },
+    {
+      "orth": "ⲛⲁⲓⲕ",
+      "dialect": "F",
+      "id": "348.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2813",
+      "bibliography": "CD 222b; KoptHWb 120-121; DELC 140; ChLCS 32a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲑⲛⲁϣⲓⲡⲓ ⲉⲟⲩⲟⲛϩⲧ ⲉⲃⲟⲗ ⲛⲉⲙⲛⲁⲥⲁϫⲓ ϧⲉⲛⲡⲁⲓϫⲱⲟⲩ ⲛ**ⲛⲱⲓⲕ** ⲟⲩⲟϩ ⲛⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲡϣⲏⲣⲓ ϩⲱϥ ⲙⲫⲣⲱⲙⲓ ⲛⲁϯϣⲓⲡⲓ ⲛⲁϥ ϩⲟⲧⲁⲛ ⲁϥϣⲁⲛⲓ ϧⲉⲛⲡⲱⲟⲩ ⲛⲧⲉⲡⲉϥⲉⲓⲱⲧ ⲛⲉⲙⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲑⲟⲩⲁⲃ .",
+      "english": "For whoever will be ashamed of me and of my words in this adulterous and sinful generation, the Son of Man also will be ashamed of him, when he comes in the glory of his Father with the holy angels.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲛⲣⲉϥϫⲓ ⲛϭⲟⲛⲥ ⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲁⲛ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲡⲣⲡⲗⲁⲛⲁ ⲟⲩⲇⲉ ⲙⲛⲡⲟⲣⲛⲟⲥ ⲟⲩⲇⲉ ⲙⲛⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ ⲟⲩⲇⲉ ⲙⲛ**ⲛⲟⲉⲓⲕ** ⲟⲩⲇⲉ ⲙⲛⲙⲁⲗⲁⲕⲟⲥ ⲟⲩⲇⲉ ⲙⲛⲣⲉϥⲛⲕⲟⲧⲕ ⲙⲛϩⲟⲟⲩⲧ .",
+      "english": "Or don&apos;t you know that the unrighteous will not inherit the Kingdom of God? Don&apos;t be deceived. Neither the sexually immoral, nor idolaters, nor adulterers, nor male prostitutes, nor homosexuals,",
+      "source": "1 Corinthians 6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛ ⲧⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ ϫⲉⲛⲓⲣⲉϥϭⲓ ⲛϫⲟⲛⲥ ϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲥⲉⲛⲁⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ ⲙⲙⲟⲥ ⲁⲛ ⲙⲡⲉⲣⲥⲱⲣⲉⲙ ϫⲉⲟⲩⲇⲉ ⲡⲟⲣⲛⲟⲥ ⲟⲩⲇⲉ ⲣⲉϥϣⲁⲙϣⲉⲓⲇⲱⲗⲟⲛ ⲟⲩⲇⲉ **ⲛⲱⲓⲕ** ⲟⲩⲇⲉ ⲙⲁⲗⲁⲕⲟⲥ ⲟⲩⲇⲉ ⲣⲉϥⲉⲛⲕⲟⲧ ⲛⲉⲙϩⲱⲟⲩⲧ .",
+      "english": "Or don't you know that the unrighteous will not inherit the Kingdom of God? Don't be deceived. Neither the sexually immoral, nor idolaters, nor adulterers, nor male prostitutes, nor homosexuals,",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲟⲣⲛⲟⲥ ⲙⲛⲛ**ⲛⲟⲉⲓⲕ** ⲛⲉⲧⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲕⲣⲓⲛⲉ ⲙⲙⲟⲟⲩ ·",
+      "english": "[but] the whoremonger and the adulterer shall God judge.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϣⲱⲡ ϩⲱⲥ ⲛⲧⲉⲥⲭⲁⲡⲉⲥϩⲁⲓ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲧⲉⲥϭⲓ ⲛⲕⲉⲟⲩⲁⲓ ⲥⲟⲓ ⲛ**ⲛⲱⲓⲕ** .",
+      "english": "If a woman herself divorces her husband, and marries another, she commits adultery.'",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲛⲁϯϣⲓⲡⲉ ⲅⲁⲣ ⲛⲁⲓ ⲙⲛⲛⲉⲧⲉⲛⲟⲩⲓ ⲛⲉ ϩⲛⲧⲉⲓⲅⲉⲛⲉⲁ ⲛ**ⲛⲟⲉⲓⲕ** . ⲁⲩⲱ ⲛⲣⲉϥⲣⲛⲟⲃⲉ . ⲡϣⲏⲣⲉ ϩⲱⲱϥ ⲙⲡⲣⲱⲙⲉ ⲛⲁϯϣⲓⲡⲉ ⲛⲁϥ ⲉϥϣⲁⲛⲉⲓ ϩⲙⲡⲉⲟⲟⲩ ⲙⲡⲉϥⲉⲓⲱⲧ ⲙⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ",
+      "english": "For whoever will be ashamed of me and of my words in this adulterous and sinful generation, the Son of Man also will be ashamed of him, when he comes in the glory of his Father with the holy angels.&apos;",
+      "source": "Mark Chapter 8",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲁⲗⲁⲕⲟⲥ",
+        3,
+        22.865
+      ],
+      [
+        "ⲣⲉϥⲉⲛⲕⲟⲧ",
+        3,
+        22.865
+      ],
+      [
+        "ⲟⲓ",
+        18,
+        22.092
+      ],
+      [
+        "ⲛ",
+        41,
+        20.663
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        12,
+        20.515
+      ],
+      [
+        "ⲣⲉϥϣⲁⲙϣⲉⲓⲇⲱⲗⲟⲛ",
+        2,
+        20.11
+      ],
+      [
+        "ⲡⲟⲣⲛⲟⲥ",
+        3,
+        19.926
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        25,
+        19.012
+      ],
+      [
+        "ⲛⲏⲉⲧⲱⲣⲕ",
+        1,
+        18.695
+      ],
+      [
+        "ⲛⲉⲙ",
+        16,
+        18.243
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        5,
+        18.083
+      ],
+      [
+        "ϭⲓⲙⲡϣⲓϣ",
+        3,
+        17.991
+      ],
+      [
+        "ⲥ",
+        14,
+        17.85
+      ],
+      [
+        "ϫⲱⲟⲩ",
+        3,
+        17.778
+      ],
+      [
+        "ⲣⲉϥϣⲁⲙϣⲉ",
+        1,
+        17.695
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        5,
+        17.328
+      ],
+      [
+        "ⲟⲩ",
+        18,
+        17.264
+      ],
+      [
+        "ϩⲓⲟⲙⲓ",
+        3,
+        17.241
+      ],
+      [
+        "ⲣⲉϥⲉⲣⲛⲟⲃⲓ",
+        3,
+        17.212
+      ],
+      [
+        "ⲣⲉϥ",
+        2,
+        17.14
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲣⲟⲑⲉⲥⲓⲥ",
+        5,
+        18.731
+      ],
+      [
+        "ⲑⲁⲃ",
+        7,
+        17.21
+      ],
+      [
+        "ⲙⲁⲗⲁⲕⲟⲥ",
+        3,
+        16.935
+      ],
+      [
+        "ⲛ",
+        72,
+        16.486
+      ],
+      [
+        "ⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ",
+        3,
+        15.52
+      ],
+      [
+        "ⲡⲟⲣⲛⲟⲥ",
+        4,
+        15.408
+      ],
+      [
+        "ⲙⲛ",
+        28,
+        15.233
+      ],
+      [
+        "ⲁⲩⲱ",
+        34,
+        15.177
+      ],
+      [
+        "ⲙⲙⲛⲧⲛϩⲟⲩⲟ",
+        1,
+        14.765
+      ],
+      [
+        "ⲧⲉⲧⲣⲁⲡⲓⲍⲁ",
+        1,
+        14.765
+      ],
+      [
+        "ⲣⲉϥϫⲓ",
+        3,
+        14.662
+      ],
+      [
+        "ⲡ",
+        39,
+        14.52
+      ],
+      [
+        "ⲣⲙⲛ",
+        3,
+        14.52
+      ],
+      [
+        ".",
+        23,
+        14.295
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        9,
+        13.953
+      ],
+      [
+        "ⲩⲙ",
+        1,
+        13.765
+      ],
+      [
+        "ⲛⲁ",
+        21,
+        13.032
+      ],
+      [
+        "ⲟ",
+        8,
+        12.972
+      ],
+      [
+        "ⲁⲃⲟⲕⲉ",
+        1,
+        12.765
+      ],
+      [
+        "ⲫⲟⲛⲉⲩⲥ",
+        1,
+        12.765
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          33
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          9
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲟⲉⲓⲕ",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲉⲓⲕ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_1_post_ⲛⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_3_post_ϩⲓⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ_b",
+          1
+        ],
+        [
+          "ϩⲓⲉⲓⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϩⲓⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲣⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲛⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲑⲁⲃ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲥⲛⲟϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲁⲩⲱ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ",
+          "ⲥⲁϣϥ_3_post_ϩⲓⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_3_post_ϩⲓⲉⲓⲃ",
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲉⲓⲕ_b",
+          "ϩⲓⲉⲓⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲉⲓⲃ_2_post_ⲛ",
+          "ⲉ_3_post_ϩⲓⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲙ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲉⲓⲕ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲣⲱⲧ_3_post_ⲡ",
+          "ⲛ_4_post_ⲣⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲛⲁ_1_post_ⲛⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ⲛⲟⲉⲓⲕ",
+          "ⲑⲁⲃ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ϩⲓ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲏⲣⲡ",
+          "ⲏⲣⲡ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲛⲧ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲛⲟⲉⲓⲕ",
+          "ⲁ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲁ",
+          "ⲓ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲧⲁⲁ",
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲁⲁ_2_post_ⲛⲧ",
+          "ⲩ_3_post_ⲧⲁⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲉⲓⲕ",
+          "ⲛⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲉⲓⲕ_0_node",
+          "ⲁⲩⲱ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲥⲛⲟϥ",
+          "ⲡⲉ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲥⲛⲟϥ",
+          "ⲥⲛⲟϥ_1_post_ⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_1_post_ⲛⲟⲉⲓⲕ",
+          "ϩⲛ_2_post_ⲥⲛⲟϥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.36,
+      "rank": 1205,
+      "count": 57
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2449",
+      "label": "ⲙⲛⲧⲛⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "adultery"
+    },
+    {
+      "target": "C2448",
+      "label": "ⲣⲉϥⲉⲣⲛⲱⲓⲕ",
+      "pos": "N",
+      "gloss": "adulterer"
+    },
+    {
+      "target": "C2447",
+      "label": "ⲣⲛⲟⲉⲓⲕ",
+      "pos": "V",
+      "gloss": "commit adultery"
+    }
+  ],
+  "etym": {
+    "egy_num": "89240",
+    "egy_lemma": "nk.w",
+    "demo_num": "d3286",
+    "demo_lemma": "nk",
+    "english": "fornicator",
+    "german": "Begatter, Beischläfer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89240",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3286"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C3995",
+  "forms": [
+    {
+      "id": "CF9930",
+      "orth": "ⲣⲉϥⲥⲁϩⲛⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4539",
+      "bibliography": "CD 385b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3996",
+      "label": "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+      "pos": "V",
+      "gloss": "lay a command, bid"
+    },
+    {
+      "target": "C3997",
+      "label": "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+      "pos": "N",
+      "gloss": "command"
+    },
+    {
+      "target": "C3993",
+      "label": "ⲥⲁϩⲛⲉ",
+      "pos": "V",
+      "gloss": "provide, supply"
+    },
+    {
+      "target": "C3994",
+      "label": "ⲥⲁϩⲛⲉ",
+      "pos": "N",
+      "gloss": "provision, supply; agreement, contract"
+    }
+  ]
+}

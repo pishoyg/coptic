@@ -1,0 +1,198 @@
+{
+  "id": "C4790",
+  "forms": [
+    {
+      "id": "CF11545",
+      "orth": "ⲧϩⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15064,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲑⲓⲟ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17926,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲑⲓⲉ-",
+      "dialect": "S",
+      "id": "1679.2"
+    },
+    {
+      "orth": "ⲧⲏⲓⲏⲩ†",
+      "dialect": "S",
+      "id": "1679.3"
+    },
+    {
+      "orth": "ⲑⲓⲏⲩ†",
+      "dialect": "S",
+      "id": "1679.4"
+    },
+    {
+      "orth": "ⲧϩⲓⲟ",
+      "dialect": "A",
+      "id": "1679.5"
+    },
+    {
+      "orth": "ⲧϩⲓⲁ⸗",
+      "dialect": "A",
+      "id": "1679.6"
+    },
+    {
+      "orth": "ⲑⲓⲁ⸗",
+      "dialect": "A",
+      "id": "1679.7"
+    },
+    {
+      "orth": "ⲑⲓⲟ-",
+      "dialect": "L",
+      "id": "1679.8"
+    },
+    {
+      "orth": "ⲧϩⲓⲁ⸗",
+      "dialect": "L",
+      "id": "1679.9"
+    },
+    {
+      "orth": "ⲑⲓⲁ⸗",
+      "dialect": "L",
+      "id": "1679.10"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5409",
+      "bibliography": "CD 457a; CDC 70b; CED 203; KoptHWb 258; DELC 57a, 226a; ChLCS 64a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϭⲟⲡ ⲛⲛⲉⲩⲧⲟⲟⲩⲉ ⲉⲧⲟⲧϩ ⲉⲣⲁⲧⲟⲩ ⲙⲛⲛⲉⲩⲕⲉⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲉⲁⲩⲣⲡⲗϭⲉ ⲉⲁϩⲓⲗⲁⲧⲃⲥ ⲉⲣⲟⲟⲩ ϩⲛⲛⲉⲩⲟⲩⲉⲣⲏⲧⲉ ⲁⲩⲱ ⲛⲉⲩϩⲟⲓⲧⲉ ⲉ**ⲧϩⲓⲟ**ⲟⲩ ⲉⲩⲗⲁϩⲙ ⲁⲩⲱ ⲉⲩⲟ ⲙⲡⲉⲗϭⲉ ⲁⲩⲱ ⲛⲉⲩⲟⲉⲓⲕ ⲉⲛⲧⲁⲩⲧⲁⲙⲓⲟⲟⲩ ⲉⲩϣⲟⲩⲱⲟⲩ ⲁⲩⲱ ⲉⲁⲩⲣϫⲟⲟⲗⲉⲥ",
+      "english": "And our elders and all that inhabit our land when they heard spoke to us, saying, Take to yourselves provision for the way, and go to meet them; and ye shall say to them, We are thy servants, and now make a covenant with us.",
+      "source": "Joshua 9",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲁϩⲙ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲟⲓⲧⲉ",
+        1,
+        12.74
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧϩⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧϩⲓⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧϩⲓⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲁϩⲙ",
+          1
+        ],
+        [
+          "ⲗⲁϩⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧϩⲓⲟ_0_node",
+          "ⲟⲩ_1_post_ⲧϩⲓⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧϩⲓⲟ",
+          "ⲉ_1_post_ⲧϩⲓⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧϩⲓⲟ",
+          "ⲩ_3_post_ⲗⲁϩⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲁϩⲙ",
+          "ⲗⲁϩⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲗⲁϩⲙ_2_post_ⲉ",
+          "ⲁⲩⲱ_3_post_ⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14663,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C6354",
+      "type": "cf",
+      "label": "fall"
+    }
+  ]
+}

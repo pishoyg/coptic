@@ -1,0 +1,173 @@
+{
+  "id": "C3685",
+  "forms": [
+    {
+      "id": "CF9280",
+      "orth": "ⲥⲓⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31700",
+      "orth": "ⲥⲁⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3966,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF31701",
+      "orth": "ⲥⲁⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8594,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF9282",
+      "orth": "ⲥⲏⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲁⲉⲓⲣ",
+      "dialect": "S",
+      "id": "1458.1"
+    },
+    {
+      "orth": "ⲥⲁⲉⲓⲣⲉ",
+      "dialect": "S",
+      "id": "1458.2"
+    },
+    {
+      "orth": "ⲥⲉⲉⲣⲉ",
+      "dialect": "A",
+      "id": "1458.3"
+    },
+    {
+      "orth": "ⲥⲉⲓⲣⲉ",
+      "dialect": "L",
+      "id": "1458.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4189",
+      "bibliography": "CD 353a; CED 160; KoptHWb 193, 539; DELC 195; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲓⲙⲏⲧ ϩⲱⲱϥ ⲛⲟⲉⲓⲕ ⲛ**ⲥⲁⲓⲣ** ⲛⲅϫⲓⲧⲟⲩ ⲉϩⲟⲩⲛ ⲙⲡⲭⲓⲗⲓⲁⲣⲭⲟⲥ ⲛⲅⲛⲡⲟⲩⲱ ⲛⲛⲉⲕⲥⲛⲏⲩ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲅⲛⲁⲩ ϫⲉⲉⲩϣⲁⲁⲧ ⲛⲟⲩⲛⲅⲉⲛⲡⲉⲩⲟⲩⲱ ⲛⲁⲓ",
+      "english": "And thou shalt carry to the captain of the thousand these ten cheeses of milk, and thou shalt see how thy brethren fare, and learn what they want.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲥϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉϩⲟⲩⲟ ⲛϩⲣⲉⲣⲱⲧⲉ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁϣⲱϫⲡ ϩⲓϫⲙⲡⲕⲁϩ ⲛⲁⲟⲩⲉⲙ**ⲥⲁⲓⲣⲉ** ϩⲓⲉⲃⲓⲱ",
+      "english": "And it shall come to pass from their drinking an abundance of milk, that every one that is left on the land shall eat butter and honey.",
+      "source": "Isaiah 7",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉϥⲛⲁⲩ ⲛϩⲱⲣ ⲛⲛⲉϥⲟϩⲉ ⲟⲩⲇⲉ ⲡⲙⲁ ⲙⲡⲉϥⲃⲓⲱ ⲙⲡ**ⲥⲁⲓⲣⲉ**",
+      "english": "Let him not see the milk of the pastures, nor the supplies of honey and butter.",
+      "source": "Job 20",
+      "urn": "urn:cts:copticLit:ot.job.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲓⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3189,
+      "count": 10
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C12138",
+      "label": "ϭⲃⲥⲉⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "pat of butter"
+    },
+    {
+      "target": "C3686",
+      "label": "ⲥⲓⲣ",
+      "pos": "N",
+      "gloss": "leaven"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5046",
+    "demo_lemma": "sjr",
+    "english": "[butter]",
+    "german": "Butter",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5046"
+  }
+}

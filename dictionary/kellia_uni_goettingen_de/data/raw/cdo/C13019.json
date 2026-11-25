@@ -1,0 +1,68 @@
+{
+  "id": "C13019",
+  "forms": [
+    {
+      "id": "CF34089",
+      "orth": "ⲙⲛⲧⲉⲓⲁⲛϭⲁⲩⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS18016",
+      "bibliography": "CD 835b; ChLCS 111b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C855",
+      "type": "cf",
+      "label": "eye"
+    },
+    {
+      "target": "C403",
+      "type": "syn",
+      "label": "eye-service"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7964",
+      "label": "ϭⲁⲩⲟⲛ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C7965",
+      "label": "ϭⲁⲩⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C7966",
+      "label": "ⲙⲛⲧϭⲁⲩⲟⲛ",
+      "pos": "N",
+      "gloss": "servitude, slavery"
+    },
+    {
+      "target": "C7967",
+      "label": "ⲣϭⲁⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "become servant"
+    }
+  ]
+}

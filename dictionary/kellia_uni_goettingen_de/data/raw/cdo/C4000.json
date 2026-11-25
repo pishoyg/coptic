@@ -1,0 +1,39 @@
+{
+  "id": "C4000",
+  "forms": [
+    {
+      "id": "CF9941",
+      "orth": "ⲣⲉϥⲥⲉϩⲡ ⲥⲛⲟϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4545",
+      "bibliography": "CD 386a; KoptHWb 213"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4001",
+      "label": "ⲥⲓϩⲡⲉ",
+      "pos": "N",
+      "gloss": "drop"
+    },
+    {
+      "target": "C3999",
+      "label": "ⲥⲱϩⲡ",
+      "pos": "V",
+      "gloss": "sink in, be swallowed; suck in, drink, swallow"
+    }
+  ]
+}

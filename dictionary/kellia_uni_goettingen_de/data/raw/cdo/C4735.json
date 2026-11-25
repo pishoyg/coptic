@@ -1,0 +1,52 @@
+{
+  "id": "C4735",
+  "forms": [
+    {
+      "id": "CF11435",
+      "orth": "ⲥⲉⲧⲧⲁϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5349",
+      "bibliography": "CD 453a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3768",
+      "type": "cf",
+      "label": "throw, sow, put"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4734",
+      "label": "ϩⲓⲑⲁϥ",
+      "pos": "V",
+      "gloss": "spit"
+    },
+    {
+      "target": "C4733",
+      "label": "ⲛⲉϫⲧⲁϥ",
+      "pos": "V",
+      "gloss": "spit"
+    },
+    {
+      "target": "C4732",
+      "label": "ⲧⲁϥ",
+      "pos": "N",
+      "gloss": "saliva, spittle"
+    }
+  ]
+}

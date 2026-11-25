@@ -1,0 +1,69 @@
+{
+  "id": "C2650",
+  "forms": [
+    {
+      "id": "CF7103",
+      "orth": "ⲛⲟϩⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3036",
+      "bibliography": "CD 241b; KoptHWb 134; DELC 151"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2649",
+      "label": "ϣⲉ ⲛⲛⲟϩ",
+      "pos": "N",
+      "gloss": "land measure, portion so bounded"
+    },
+    {
+      "target": "C2647",
+      "label": "ⲛⲟϩ ⲛⲣⲱϣ",
+      "pos": "N",
+      "gloss": "land measure"
+    },
+    {
+      "target": "C2644",
+      "label": "ⲛⲟⲩϩ",
+      "pos": "N",
+      "gloss": "rope, cord"
+    },
+    {
+      "target": "C2645",
+      "label": "ⲛⲟⲩϩ ⲛϣⲓⲉⲓⲱϩⲉ",
+      "pos": "N",
+      "gloss": "rope for measuring (land)"
+    },
+    {
+      "target": "C2646",
+      "label": "ⲛⲱϩ ⲛⲕⲁϩ",
+      "pos": "N",
+      "gloss": "measuring-line (agricultural measure)"
+    },
+    {
+      "target": "C2648",
+      "label": "ⲥⲕⲛⲟⲩϩ",
+      "pos": "N",
+      "gloss": "land measure (\"stretching of cord\"), portion so bounded"
+    }
+  ],
+  "etym": {
+    "demo_num": "d3100",
+    "demo_lemma": "nwḥ",
+    "english": "[to bind, fetter]",
+    "german": "Strick; Landvermesser",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3100"
+  }
+}

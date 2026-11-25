@@ -1,0 +1,81 @@
+{
+  "id": "C5549",
+  "forms": [
+    {
+      "id": "CF13073",
+      "orth": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6212",
+      "bibliography": "CD 529b; KoptHWb 294; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13016",
+      "type": "cf",
+      "label": "false, liar"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5556",
+      "label": "ϭⲓⲛⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5554",
+      "label": "ⲃⲁⲓⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "oath-bearer(?)"
+    },
+    {
+      "target": "C5552",
+      "label": "ⲙⲛⲧⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    },
+    {
+      "target": "C5555",
+      "label": "ⲣⲉϥⲧⲁϣⲉⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "much-swearer"
+    },
+    {
+      "target": "C5551",
+      "label": "ⲣⲉϥⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearer"
+    },
+    {
+      "target": "C5548",
+      "label": "ⲱⲣⲕ",
+      "pos": "V",
+      "gloss": "swear (oath), invoke (person etc.)"
+    },
+    {
+      "target": "C5553",
+      "label": "ⲱⲣⲕ",
+      "pos": "N",
+      "gloss": "swearing"
+    },
+    {
+      "target": "C5550",
+      "label": "ⲱⲣⲕ ⲛⲛⲟⲩϫ",
+      "pos": "N",
+      "gloss": "false swearing"
+    }
+  ]
+}

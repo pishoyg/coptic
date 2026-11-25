@@ -1,0 +1,392 @@
+{
+  "id": "C5903",
+  "forms": [
+    {
+      "id": "CF13804",
+      "orth": "ϣⲙⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1611,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ϣⲙⲟⲩⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3607,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ϣⲙⲏⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5997,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲙⲏⲛⲓ",
+      "dialect": "B",
+      "id": "916.3"
+    },
+    {
+      "orth": "ⳉⲙⲟⲩⲛ",
+      "dialect": "A",
+      "id": "916.4"
+    },
+    {
+      "orth": "ϣⲙⲟⲩⲛ",
+      "dialect": "F",
+      "id": "916.5"
+    },
+    {
+      "orth": "ϣⲙⲟⲩⲛⲓ",
+      "dialect": "F",
+      "id": "916.6"
+    },
+    {
+      "orth": "ϣⲙⲟⲩⲛ",
+      "dialect": "L",
+      "id": "916.7"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS6586",
+      "bibliography": "CD 566b; CED 244; KoptHWb 315; DELC 264b; ChLCS 78a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉϯ ϩⲛⲙⲛⲧⲏ ⲛⲣⲟⲙⲡⲉ · ⲙⲛ**ϣⲙⲟⲩⲛ** ⲛⲉⲃⲟⲧ ·",
+      "english": "I am fifteen years and eight months old.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉⲉⲓⲥ **ϣⲙⲟⲩⲛ** ⲛⲣⲟⲙⲡⲉ .",
+      "english": "He said: “It’s been eight years.”",
+      "source": "Apophthegmata Patrum Sahidic 034: Theodorus",
+      "urn": "urn:cts:copticLit:ap.34.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϣⲙⲟⲩⲛ** ⲛⲧⲃⲁ ⲛϥⲁⲓⲉⲧⲡⲱ · ⲛ(?)ϣⲟⲙⲛⲧ ⲛⲧⲃⲁ ϩⲙⲡⲗⲓⲃⲁⲛⲟⲥ ⲉⲩⲕⲉⲣⲁⲓⲁϣⲉ · ⲙⲁⲃⲧⲁⲥⲉ ⲛϣⲉ ⲛⲥⲁϩ · ϣⲙⲟⲩⲛ ⲛⲧⲃⲁ ⲛⲗⲁⲧⲟⲙⲟⲥ ϩⲙⲡⲧⲟⲟⲩ ·",
+      "english": "the work of the eighty thousand men who bare burdens, and thirty thousand men who cut down trees in Lebanon, and thirty-six hundred scribes (i.e., overseers), and eighty thousand hewers of stone in the mountains.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲁⲣⲏⲥ",
+        1,
+        16.695
+      ],
+      [
+        "ⲡⲟⲗⲉⲙⲟⲥ",
+        1,
+        11.927
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        11.016
+      ],
+      [
+        "ⲙⲉⲛⲉⲛⲥⲁ",
+        1,
+        10.298
+      ],
+      [
+        "ⲃⲁⲕⲓ",
+        1,
+        9.23
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        8.986
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.424
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.934
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        6.634
+      ],
+      [
+        "ⲫ",
+        1,
+        5.564
+      ],
+      [
+        "ϯ",
+        1,
+        5.29
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        101,
+        18.324
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        9,
+        16.317
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        17,
+        15.319
+      ],
+      [
+        "ϥⲁⲓⲉⲧⲡⲱ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲱⲣⲧⲣ",
+        3,
+        14.893
+      ],
+      [
+        "ⲑⲏⲃⲁⲓⲥ",
+        2,
+        14.817
+      ],
+      [
+        "ⲧⲃⲁ",
+        5,
+        14.801
+      ],
+      [
+        "ⲥⲧⲩⲗⲟⲥ",
+        3,
+        14.572
+      ],
+      [
+        "ⲙⲛ",
+        22,
+        14.563
+      ],
+      [
+        "ⲗⲁⲧⲟⲙⲟⲥ",
+        1,
+        14.139
+      ],
+      [
+        "ⲙⲉϩϣⲉ",
+        1,
+        14.139
+      ],
+      [
+        "ϣⲟ",
+        5,
+        13.97
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        6,
+        13.312
+      ],
+      [
+        "ⲟⲩⲛⲟⲩ",
+        3,
+        12.963
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        5,
+        12.633
+      ],
+      [
+        "ⲛⲧⲉ",
+        7,
+        12.334
+      ],
+      [
+        "ⲗⲱⲕⲥ",
+        1,
+        12.331
+      ],
+      [
+        "ⲕⲟⲟϩ",
+        2,
+        12.161
+      ],
+      [
+        "ⲉⲧⲣⲉϥϫⲡⲟ",
+        1,
+        12.139
+      ],
+      [
+        "ⲥⲭⲏⲙⲁ",
+        2,
+        11.891
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲙⲟⲩⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϣⲙⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲙⲟⲩⲛ",
+          5
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_post_ϣⲙⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲥⲙⲟⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲙⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲥⲭⲏⲙⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲙⲟⲩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϣⲙⲟⲩⲛ",
+          "ⲡⲉⲩ_1_pre_ϣⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲙⲟⲩⲛ",
+          "ϣⲙⲟⲩⲛ_0_node",
+          3
+        ],
+        [
+          "ϣⲙⲟⲩⲛ_0_node",
+          "ⲛ_1_post_ϣⲙⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϣⲙⲟⲩⲛ",
+          "ⲥⲙⲟⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲙⲟⲩⲛ",
+          "ⲡⲉⲩ_1_pre_ϣⲙⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϣⲙⲟⲩⲛ",
+          "ⲥⲭⲏⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϣⲙⲟⲩⲛ",
+          "ϣⲙⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲙⲟⲩⲛ",
+          "ϣⲙⲟⲩⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.28,
+      "rank": 1399,
+      "count": 44
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 6381,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5904",
+      "label": "ϩⲙⲉⲛⲉ",
+      "pos": "NUM",
+      "gloss": "eighty"
+    }
+  ],
+  "etym": {
+    "egy_num": "117240",
+    "egy_lemma": "ḫmn",
+    "english": "eight",
+    "german": "acht",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/117240"
+  }
+}

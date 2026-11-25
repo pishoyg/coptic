@@ -1,0 +1,188 @@
+{
+  "id": "C1876",
+  "forms": [
+    {
+      "id": "CF5391",
+      "orth": "ⲣⲉϥⲙⲗⲁϧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5903,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2183",
+      "bibliography": "CD 165b; KoptHWb 91"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲟⲩⲣⲉϥⲥⲉ ϩⲟⲩⲟ ⲏⲣⲡ ⲁⲛ ⲡⲉ ⲛⲟⲩⲣⲉϥϯ ⲧⲉⲛϣⲓ ⲁⲛ ⲁⲗⲗⲁ ⲟⲩⲉⲡⲓⲕⲏⲥ ⲡⲉ ⲛⲟⲩ**ⲣⲉϥⲙⲗⲁϧ** ⲁⲛ ⲡⲉ ⲛⲟⲩⲙⲁⲓϩⲁⲧ ⲁⲛ ⲡⲉ .",
+      "english": "not a drinker, not violent, not greedy for money, but gentle, not quarrelsome, not covetous;",
+      "source": "15_I Timothy_03",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲥⲉϫⲉⲟⲩⲁ ⲉϩⲗⲓ ⲁⲛ ⲛⲥⲉⲟⲓ ⲛ**ⲣⲉϥⲙⲗⲁϧ** ⲁⲛ ⲉⲩⲟⲓ ⲛⲉⲡⲓⲕⲏⲥ ⲉⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲙⲉⲧⲣⲉⲙⲣⲁⲩϣ ⲛⲓⲃⲉⲛ ⲛⲉⲙⲣⲱⲙⲓ ⲛⲓⲃⲉⲛ .",
+      "english": "to speak evil of no one, not to be contentious, to be gentle, showing all humility toward all men.",
+      "source": "17_Titus_03",
+      "urn": "urn:cts:copticLit:nt.titus.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲏⲥ",
+        1,
+        16.373
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        11.583
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        10.015
+      ],
+      [
+        "ⲛ",
+        4,
+        9.591
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.238
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.736
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲙⲗⲁϧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲙⲗⲁϧ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲗⲁϧ_0_node",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲙⲁⲓϩⲁⲧ_2_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲙⲗⲁϧ",
+          "ⲟⲩ_1_pre_ⲣⲉϥⲙⲗⲁϧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲙⲗⲁϧ",
+          "ⲣⲉϥⲙⲗⲁϧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲗⲁϧ_0_node",
+          "ⲛ_3_post_ⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁⲓϩⲁⲧ",
+          "ⲟⲩ_3_post_ⲙⲁⲓϩⲁⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲙⲁⲓϩⲁⲧ",
+          "ⲙⲁⲓϩⲁⲧ_2_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5409,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1877",
+      "label": "ϫⲓⲙⲗⲁϩ",
+      "pos": "V",
+      "gloss": "fight"
+    },
+    {
+      "target": "C1874",
+      "label": "ⲙⲗⲁϧ",
+      "pos": "V",
+      "gloss": "fight, quarrel"
+    },
+    {
+      "target": "C1875",
+      "label": "ⲙⲗⲁϩ",
+      "pos": "N",
+      "gloss": "battle, battle-array, quarrel"
+    },
+    {
+      "target": "C1878",
+      "label": "ⲣⲉϥϫⲓⲙⲗⲁϩ",
+      "pos": "N",
+      "gloss": "fighter"
+    }
+  ]
+}

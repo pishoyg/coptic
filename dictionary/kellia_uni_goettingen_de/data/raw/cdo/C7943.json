@@ -1,0 +1,176 @@
+{
+  "id": "C7943",
+  "forms": [
+    {
+      "id": "CF17952",
+      "orth": "ⲁⲧϭⲱⲧⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8016,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8827",
+      "bibliography": "CD 834a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲡⲁⲅⲱⲛⲟⲑⲉⲧⲏⲥ ⲛ**ⲁⲧϭⲱⲧⲡ** ·",
+      "english": "O thou unconquered fighter!",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲡϩⲟⲙⲟⲗⲟⲅⲓⲧⲏⲥ ⲁⲩⲱ ⲡⲁⲑⲗⲏⲧⲏⲥ ⲛ**ⲁⲧϭⲱⲧⲡ** · ⲉⲣⲉⲛⲓⲙ ⲛⲁϣⲕⲁⲧⲁⲗⲁⲃⲁⲛⲉ ⲙⲡϫⲱⲕ ⲙⲡⲉⲕⲧⲁⲉⲓⲟ · ⲙⲛⲙⲙⲁⲉⲓⲛ ⲛⲧⲁⲩϣⲱⲡⲉ ϩⲙⲡⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ :—",
+      "english": "O thou confessor and invincible athlete, who is there that is able to comprehend the full extent of thine honourable estate, and the wonderful things that have taken place in thy martyrium?",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲅⲱⲛⲟⲑⲉⲧⲏⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲁⲑⲗⲏⲧⲏⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ϥⲁⲓⲕⲗⲟⲙ",
+        1,
+        16.791
+      ],
+      [
+        "ⲱ",
+        2,
+        12.562
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.102
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        7.287
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϭⲱⲧⲡ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7572,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7946",
+      "label": "ϭⲟⲧⲡⲥ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7945",
+      "label": "ϭⲧⲟⲡ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7936",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "defeat, overcome; be defeated, overcome"
+    },
+    {
+      "target": "C7942",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "intimidation, discouragement"
+    },
+    {
+      "target": "C7938",
+      "label": "ϭⲱⲧⲡ (ϩⲁⲧϩⲏ⸗)",
+      "pos": "V",
+      "gloss": "beware of, watch out for, take care"
+    },
+    {
+      "target": "C7939",
+      "label": "ϭⲱⲧⲡ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "fail"
+    },
+    {
+      "target": "C7937",
+      "label": "ϭⲱⲧⲡ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be wearied of"
+    },
+    {
+      "target": "C7940",
+      "label": "ϭⲱⲧⲡ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "scare away"
+    },
+    {
+      "target": "C7941",
+      "label": "ϭⲱⲧⲡ (ⲛϩⲏⲧ)",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C7944",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "unconcern, carefreeness"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "C9301",
+  "forms": [
+    {
+      "id": "CF23342",
+      "orth": "ⲕⲁⲡⲣⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23343",
+      "orth": "ⲕⲁⲡⲣⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11474,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11654",
+      "bibliography": "DDGLC",
+      "cu_ID": "9853"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ ⲉⲧⲣⲉⲛⲓⲙ ⲧϣⲉⲉⲣⲉ ⲛⲛⲓⲙ ⲣϩⲙⲉ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲉ ⲛⲟⲩϣⲏ ⲉⲥⲁϣⲉ ⲉⲃⲟⲗ ⲛⲥⲱⲓ ⲛⲧϩⲉ ⲛⲟⲩⲟⲩϩⲟⲣⲉ ϩⲁⲟⲩϩⲟⲣ ⲛⲧϩⲉ ⲛⲟⲩϣⲟⲩ ϩⲁⲟⲩ**ⲕⲁⲡⲣⲥ**",
+      "english": "I want to make NN, the daughter of NN, spend forty nights and forty days clinging to me like a female dog under a male dog, like a sow under a boar,",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲩ",
+        1,
+        15.35
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        9.512
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲡⲣⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11055,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "4896",
+    "grl_lemma": "κάπρος",
+    "grl_meaning": "boar, wild boar; a sea fish (Caprus aper)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 876b"
+  }
+}

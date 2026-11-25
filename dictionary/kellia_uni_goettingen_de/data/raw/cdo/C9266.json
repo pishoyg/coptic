@@ -1,0 +1,349 @@
+{
+  "id": "C9266",
+  "forms": [
+    {
+      "id": "CF23228",
+      "orth": "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23229",
+      "orth": "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7103,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23230",
+      "orth": "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5668,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23231",
+      "orth": "ⲕⲁⲕⲟⲩⲣⲕⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11588",
+      "bibliography": "DDGLC",
+      "cu_ID": "7433"
+    },
+    {
+      "id": "CS11589",
+      "bibliography": "DDGLC",
+      "cu_ID": "2761"
+    },
+    {
+      "id": "CS11590",
+      "bibliography": "DDGLC",
+      "cu_ID": "8933"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲓ ⲉϫⲉⲛⲡⲓⲙⲁ ⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲡⲓⲕⲣⲁⲛⲓⲟⲛ ⲁⲩⲁϣϥ ⲙⲙⲁⲩ ⲛⲉⲙⲛⲓ**ⲕⲁⲕⲟⲩⲣⲅⲟⲥ** ⲟⲩⲁⲓ ⲙⲉⲛ ⲥⲁⲟⲩⲓⲛⲁⲙ ⲟⲩⲁⲓ ⲇⲉ ⲥⲁϫⲁϭⲏ ⲁⲩⲫⲱϣ ⲇⲉ ⲛⲛⲉϥϩⲃⲱⲥ ⲉϩⲣⲁⲩ ⲁⲩϩⲓⲱⲡ ⲉⲣⲱⲟⲩ .",
+      "english": "When they came to the place that is called The Skull, they crucified him there with the criminals, one on the right and the other on the left.",
+      "source": "03_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲉⲓⲙⲉ ⲇⲉ ⲛϭⲓⲛ**ⲕⲁⲕⲟⲩⲣⲅⲟⲥ** · ϫⲉⲁⲩⲁⲛⲁⲭⲱⲣⲉⲓ ⲛⲁⲩ · ⲁⲩϯⲡⲉⲩⲟⲩⲟⲓ · ⲛⲧⲉⲩϣⲏ ⲁⲩⲥⲩⲗⲁ ⲙⲡⲉϥⲏⲓ ·",
+      "english": "And when the doers of iniquity knew that they had departed, they went by night and plundered his house,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲁⲓ ⲇⲉ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓ**ⲕⲁⲕⲟⲩⲣⲅⲟⲥ** ⲉⲧⲁⲩⲁϣⲟⲩ ⲛⲉⲙⲁϥ ϫⲉⲟⲩⲁ ⲉⲣⲟϥ ⲡⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲏ ⲛⲑⲟⲕ ⲁⲛ ⲡⲉ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲛⲁϩⲙⲉⲕ ⲟⲩⲟϩ ⲛⲁϩⲙⲉⲛ ϩⲱⲛ .",
+      "english": "One of the criminals who was hanged insulted him, saying, 'If you are the Christ, save yourself and us!'",
+      "source": "03_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲓⲥⲟⲛⲉ ⲙⲛⲛⲉⲓ**ⲕⲁⲕⲟⲩⲣⲅⲟⲥ** · ⲉⲛⲉⲩϭⲱϣⲧ ⲉⲃⲟⲗ ⲡⲉ ⲉⲧⲃⲉⲡⲛⲁⲩ ⲉⲧⲉⲣⲉⲡⲥⲱⲧⲏⲣ ⲛⲁⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲁⲙⲉⲛⲧⲉ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲓⲛⲁⲙ",
+        1,
+        11.08
+      ],
+      [
+        "ⲁϣ",
+        1,
+        10.85
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲥⲁ",
+        1,
+        9.246
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        8.218
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        8.071
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.054
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.049
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.251
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲟⲛⲉ",
+        1,
+        18.598
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        12.467
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        9.441
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲁϣ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲛⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲁ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁϣ",
+          "ⲩ_3_post_ⲁϣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲁϣ",
+          "ⲁϣ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲛⲉⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲕⲁⲕⲟⲩⲣⲅⲟⲥ",
+          "ⲕⲁⲕⲟⲩⲣⲅⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6652,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5170,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2970",
+    "grl_lemma": "κακοῦργος",
+    "grl_meaning": "doing ill, mischievous, knavish",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 864a; Preisigke 1:725"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C4796",
+  "forms": [
+    {
+      "id": "CF11557",
+      "orth": "ϯϩⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲉϩⲙⲉ",
+      "dialect": "S",
+      "id": "1684.1"
+    },
+    {
+      "orth": "ⲧⲉϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1727,
+        "count": 39
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5415",
+      "bibliography": "CD 459a; CED 204; KoptHWb 258; ChLCS 64a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4797",
+      "label": "ϯϩⲙⲉϥ",
+      "pos": "N",
+      "gloss": "box, basket"
+    }
+  ],
+  "etym": {
+    "egy_num": "173050",
+    "egy_lemma": "thm",
+    "demo_num": "d7392",
+    "demo_lemma": "thm",
+    "english": "[a large vessel]",
+    "german": "[ein großes Gefäß]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/173050",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7392"
+  }
+}

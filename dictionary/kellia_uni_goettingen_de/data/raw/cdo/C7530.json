@@ -1,0 +1,181 @@
+{
+  "id": "C7530",
+  "forms": [
+    {
+      "id": "CF17119",
+      "orth": "ϫⲓϫⲱⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2736,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ϭⲓϫⲱⲓ",
+      "dialect": "S",
+      "id": "2501.1"
+    },
+    {
+      "orth": "ϫⲓϭⲱⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9790,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8348",
+      "bibliography": "CD 800a; CED 324; KoptHWb 443; DELC 334; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲁϥϫⲟⲟⲩ ⲛϭⲓⲁⲡⲁ **ϫⲓϫⲱⲓ** ·",
+      "english": "Apa Sisoes said these things.",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ⲛⲁϥ ⲛϭⲓⲁⲡⲁ **ϫⲓϫⲱⲓ** ·",
+      "english": "Apa Sisoes said to him,",
+      "source": "Apophthegmata Patrum Sahidic 118: Sisoes 11",
+      "urn": "urn:cts:copticLit:ap.118.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲥⲟⲛ ϫⲛⲉⲁⲡⲁ **ϫⲓϫⲱⲓ**",
+      "english": "A brother asked Apa Sisoes,",
+      "source": "Apophthegmata Patrum Sahidic 120: Sisoes 13",
+      "urn": "urn:cts:copticLit:ap.120.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲁ",
+        13,
+        18.449
+      ],
+      [
+        "ϯϩⲓⲥⲉ",
+        2,
+        14.74
+      ],
+      [
+        "ϫⲉ",
+        14,
+        13.568
+      ],
+      [
+        "ϫⲛⲉ",
+        2,
+        13.059
+      ],
+      [
+        "ⲙⲡⲁⲧⲉ",
+        2,
+        12.94
+      ],
+      [
+        "ⲥⲟⲛ",
+        4,
+        12.732
+      ],
+      [
+        "ϥ",
+        16,
+        12.522
+      ],
+      [
+        "ⲁⲛⲁⲭⲱⲣⲏⲧⲏⲥ",
+        1,
+        11.898
+      ],
+      [
+        "ⲕⲉ",
+        4,
+        11.526
+      ],
+      [
+        "ϫⲟ",
+        2,
+        11.126
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        2,
+        10.122
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        9.819
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        2,
+        9.629
+      ],
+      [
+        "ⲉ",
+        7,
+        9.239
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        2,
+        9.161
+      ],
+      [
+        "ϣⲁ",
+        3,
+        9.101
+      ],
+      [
+        "ⲟⲩⲁ",
+        2,
+        8.329
+      ],
+      [
+        "ⲡ",
+        6,
+        8.252
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.186
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        8.116
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2422,
+      "count": 16
+    }
+  },
+  "etym": {
+    "demo_num": "d7635",
+    "demo_lemma": "ṯꜣj-ḏꜣḏꜣ",
+    "english": "Locke, Locke of Hair; Kraushaar (as a derogatory term)",
+    "german": "Locke, Haarlocke; Kraushaar (als Schimpfname)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7635"
+  }
+}

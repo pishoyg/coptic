@@ -1,0 +1,177 @@
+{
+  "id": "C903",
+  "forms": [
+    {
+      "id": "CF3149",
+      "orth": "ⲛⲁϣⲧⲉⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20153,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1059",
+      "bibliography": "CD 78b; KoptHWb 49; ChLCS 13b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧⲟ ⲇⲉ ⲛⲁⲧⲥⲱⲧⲙ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲙⲙⲁⲥⲧⲛⲟⲩⲧⲉ ⲛϫⲁⲥⲓϩⲏⲧ ⲛ ⲃⲁⲃⲉⲣⲱⲙⲉ ⲛⲁⲧⲥⲃⲱ ⲛⲛⲁϣⲧϩⲏⲧ ⲛ**ⲛⲁϣⲧⲉⲓⲙⲉ** ⲛⲟⲩⲁ ϩⲓϩⲏⲧ ⲛⲁⲧϣⲡϩⲙⲟⲧ ⲉⲩϫⲁϩⲙ ·",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁϣⲧϩⲏⲧ",
+        1,
+        17.791
+      ],
+      [
+        "ⲁⲧⲥⲃⲱ",
+        1,
+        15.35
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        9.329
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        8.947
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁϣⲧⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁϣⲧⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_4_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁϣⲧⲉⲓⲙⲉ_0_node",
+          "ⲛ_1_post_ⲛⲁϣⲧⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁϣⲧⲉⲓⲙⲉ",
+          "ⲟⲩⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_2_post_ⲛ",
+          "ϩⲓ_4_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_4_post_ϩⲏⲧ",
+          "ϩⲏⲧ_3_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲟⲩⲁ",
+          "ⲛ_4_post_ϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19763,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C902",
+      "label": "ϭⲓⲛⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C899",
+      "label": "ⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorant, innocent"
+    },
+    {
+      "target": "C897",
+      "label": "ⲉⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "know, understand"
+    },
+    {
+      "target": "C898",
+      "label": "ⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C900",
+      "label": "ⲙⲛⲧⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorance, innocence"
+    },
+    {
+      "target": "C904",
+      "label": "ⲙⲛⲧⲛⲁϣⲧⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "presumption, stubbornness"
+    },
+    {
+      "target": "C901",
+      "label": "ⲣⲉϥⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "one that knows"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C10173",
+  "forms": [
+    {
+      "id": "CF26809",
+      "orth": "ⲡⲓⲣⲁⲍⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26810",
+      "orth": "ⲡⲓⲣⲁⲍⲓⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF26811",
+      "orth": "ⲡⲓⲣⲁⲍⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲉⲣⲡⲓⲣⲁⲍⲓⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.73,
+        "rank": 880,
+        "count": 62
+      }
+    },
+    {
+      "orth": "ⲣⲡⲓⲣⲁⲥⲙⲟⲥ",
+      "dialect": "S",
+      "id": null
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13460",
+      "bibliography": "DDGLC",
+      "cu_ID": "11546"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1704",
+    "grl_lemma": "πειράζω",
+    "grl_meaning": "to try, put to the test, tempt",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1354b"
+  }
+}

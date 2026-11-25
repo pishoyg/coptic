@@ -1,0 +1,38 @@
+{
+  "id": "C2892",
+  "forms": [
+    {
+      "id": "CF7644",
+      "orth": "ⲡⲟⲣⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3310",
+      "bibliography": "CD 269b; KoptHWb 152; DELC 164; ChLCS 38a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2891",
+      "label": "*ⲡⲱⲣⲥ",
+      "pos": "V",
+      "gloss": "stretch, strain(?); contend, attack; glassy eyes, become stiff (of hair)"
+    },
+    {
+      "target": "C2893",
+      "label": "ⲡⲣⲉⲥⲣⲁⲥⲧ",
+      "pos": "VSTAT",
+      "gloss": "become stiff (of hair)"
+    }
+  ]
+}

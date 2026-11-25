@@ -1,0 +1,86 @@
+{
+  "id": "C11272",
+  "forms": [
+    {
+      "id": "CF1419",
+      "orth": "ⲃⲁⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7576,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF1420",
+      "orth": "ⲃⲁⲃⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1421",
+      "orth": "ⲃⲁⲃⲉ-",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS359",
+      "bibliography": "CD 28b; CED 20; KoptHWb 20; DELC 24-25; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲉϩⲙⲟⲩ ⲇⲉ **ⲃⲁⲃⲉ** ⲉⲩⲛⲁⲙⲟⲗϩϥ ϩⲛⲟⲩ ·",
+      "english": "Now if the salt hath become tasteless, wherewith shall they make it salt (again)?",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲣⲱⲙⲉ ⲅⲁⲣ ⲛⲁϣⲱⲡⲉ ⲙⲙⲁⲓ ⲡⲉⲩⲙⲧⲟⲛ ⲙⲙⲁⲓ ϩⲟⲙⲛⲧ ⲛ**ⲃⲁⲃⲉ** ⲣⲱⲙⲉ ⲛϫⲁⲥⲓϩⲏⲧ ⲛϫⲁⲧ ⲟⲩⲁ ⲛⲥⲉⲥⲱⲧⲙ ⲁⲛ ⲛⲥⲁⲛⲉⲩⲉⲓⲟⲧⲉ ⲛⲁⲧϣⲡϩⲙⲟⲧ ⲉⲩϫⲁϩⲙ .",
+      "english": "For men will be lovers of self, lovers of money, boastful, arrogant, blasphemers, disobedient to parents, unthankful, unholy,",
+      "source": "55_2 Timothy_3",
+      "urn": "urn:cts:copticLit:nt.2tim.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C324",
+      "label": "ⲃⲁⲁⲃⲉ",
+      "pos": "V",
+      "gloss": "be insipid, foolish; regard as foolish, despise"
+    },
+    {
+      "target": "C325",
+      "label": "ⲃⲁⲃⲉⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "boaster"
+    },
+    {
+      "target": "C328",
+      "label": "ⲃⲟⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "bad"
+    },
+    {
+      "target": "C327",
+      "label": "ⲃⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "bad"
+    },
+    {
+      "target": "C326",
+      "label": "ⲙⲛⲧⲃⲁⲃⲉⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "boastfulness"
+    }
+  ]
+}

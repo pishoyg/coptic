@@ -1,0 +1,395 @@
+{
+  "id": "C751",
+  "forms": [
+    {
+      "id": "CF2806",
+      "orth": "ϯⲉⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 473,
+        "count": 293
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS893",
+      "bibliography": "CD 62a; KoptHWb 42; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲟⲛ ϣⲁⲣⲉⲛⲁⲅⲅⲉⲗⲟⲥ **ϯⲉⲟⲟⲩ** ⲛⲁϥ ·",
+      "english": "Moreover, when the angels glorify him,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣ**ϯⲉⲟⲟⲩ** ⲙⲡⲛⲟⲩⲧⲉ ⲧⲱⲛⲉ .",
+      "english": "You have given glory to God indeed.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛ**ϯⲉⲟⲟⲩ** ⲛⲁⲕ ⲧⲉϩⲓⲏ ·",
+      "english": "We ascribe glory unto Thee, the Way.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        33,
+        27.536
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        202,
+        22.559
+      ],
+      [
+        "ⲙ",
+        313,
+        22.026
+      ],
+      [
+        "ⲛⲁ",
+        225,
+        20.935
+      ],
+      [
+        "ⲡ",
+        295,
+        20.916
+      ],
+      [
+        "ⲛ",
+        149,
+        17.272
+      ],
+      [
+        "ϥ",
+        117,
+        16.938
+      ],
+      [
+        "ⲩ",
+        83,
+        16.74
+      ],
+      [
+        "ⲉ",
+        104,
+        16.724
+      ],
+      [
+        "ⲁ",
+        84,
+        16.026
+      ],
+      [
+        "ⲉⲧ",
+        57,
+        15.542
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        26,
+        15.532
+      ],
+      [
+        "ⲡⲉⲕ",
+        28,
+        15.096
+      ],
+      [
+        "ⲁⲩⲱ",
+        57,
+        15.051
+      ],
+      [
+        "ⲣⲁⲛ",
+        21,
+        14.975
+      ],
+      [
+        "ⲕ",
+        42,
+        14.835
+      ],
+      [
+        "ⲧⲱⲛⲉ",
+        2,
+        14.403
+      ],
+      [
+        "ϫⲉ",
+        44,
+        14.33
+      ],
+      [
+        "ⲓ",
+        36,
+        14.165
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        11,
+        13.21
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϯⲉⲟⲟⲩ",
+          14
+        ],
+        [
+          "ϯⲉⲟⲟⲩ_0_node",
+          51
+        ],
+        [
+          "ⲙ_1_post_ϯⲉⲟⲟⲩ",
+          26
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          24
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          24
+        ],
+        [
+          "ⲩ_1_pre_ϯⲉⲟⲟⲩ",
+          16
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲉⲟⲟⲩ",
+          10
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          11
+        ],
+        [
+          "ⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          9
+        ],
+        [
+          "ⲥⲉ_1_pre_ϯⲉⲟⲟⲩ",
+          6
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲉⲓⲱⲧ",
+          2
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          4
+        ],
+        [
+          "ⲇⲉ_1_post_ϯⲉⲟⲟⲩ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ϯⲉⲟⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          5
+        ],
+        [
+          "ϯⲉⲟⲟⲩ_0_node",
+          "ⲙ_1_post_ϯⲉⲟⲟⲩ",
+          9
+        ],
+        [
+          "ⲙ_1_post_ϯⲉⲟⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          8
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          8
+        ],
+        [
+          "ⲩ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϯⲉⲟⲟⲩ_0_node",
+          "ⲛⲁ_1_post_ϯⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲉⲟⲟⲩ",
+          "ⲓ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          "ⲩ_1_pre_ϯⲉⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          "ⲥⲉ_1_pre_ϯⲉⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲥⲉ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϯⲉⲟⲟⲩ",
+          "ⲡⲉⲧⲛ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϯⲉⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲉⲟⲟⲩ",
+          "ⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϯⲉⲟⲟⲩ",
+          "ϥ_1_pre_ϯⲉⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲉⲟⲟⲩ",
+          "ϥ_2_post_ⲛⲁ",
+          2
+        ],
+        [
+          "ϯⲉⲟⲟⲩ_0_node",
+          "ⲇⲉ_1_post_ϯⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          "ϫⲉ_1_post_ϯⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲉⲟⲟⲩ",
+          "ⲧⲛ_1_pre_ϯⲉⲟⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.85,
+      "rank": 402,
+      "count": 293
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C750",
+      "label": "ϩⲁⲉⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "honourable, glorious"
+    },
+    {
+      "target": "C754",
+      "label": "ϫⲓⲉⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "be glorified"
+    },
+    {
+      "target": "C753",
+      "label": "ϫⲓⲛϯⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "act of glorifying"
+    },
+    {
+      "target": "C749",
+      "label": "ⲉⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "honour, glory"
+    },
+    {
+      "target": "C752",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲉⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "glorification"
+    },
+    {
+      "target": "C12202",
+      "label": "ⲡⲁ ⲡⲉⲁⲩ",
+      "pos": "N",
+      "gloss": "glorious one"
+    }
+  ]
+}

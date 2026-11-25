@@ -1,0 +1,93 @@
+{
+  "id": "C2268",
+  "forms": [
+    {
+      "id": "CF6263",
+      "orth": "ⲙⲟϣⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6264",
+      "orth": "ⲙⲟⲟϣⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19034,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2615",
+      "bibliography": "CD 207a; KoptHWb 109; ChLCS 30a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲥⲱⲧⲙ ⲇⲉ ϫⲉⲁⲣⲭⲏⲗⲁⲟⲥ ⲡⲉⲧⲟ ⲛⲣⲣⲟ ⲉϫⲛⲧⲓⲟⲩⲇⲁⲓⲁ ⲉⲡⲙⲁ ⲛϩⲏⲣⲱⲇⲏⲥ ⲡⲉϥⲉⲓⲱⲧ ⲁϥⲣϩⲟⲧⲉ ⲉⲃⲱⲕ ⲉⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ . ⲁⲩⲧⲟⲩⲛⲉⲓⲁⲧϥ ⲇⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩⲣⲁⲥⲟⲩ ⲁϥⲁⲛⲁⲭⲱⲣⲉⲓ ⲉϩⲣⲁⲓ ⲉⲙ**ⲙⲟⲟϣⲧⲉ** ⲛⲧⲅⲁⲗⲓⲗⲁⲓⲁ .",
+      "english": "But when he heard that Archelaus was reigning over Judea in the place of his father, Herod, he was afraid to go there. Being warned in a dream, he withdrew into the region of Galilee,",
+      "source": "40_Matthew_2",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18644,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2267",
+      "label": "ϭⲓⲛⲙⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "examination, deliberation"
+    },
+    {
+      "target": "C2265",
+      "label": "ⲁⲧⲙⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "intangible, unexperienced"
+    },
+    {
+      "target": "C2269",
+      "label": "ⲙⲁϣⲧϥ",
+      "pos": "N",
+      "gloss": "explorer"
+    },
+    {
+      "target": "C2262",
+      "label": "ⲙⲟⲩϣⲧ",
+      "pos": "V",
+      "gloss": "examine, search out, visit; examine self, reflect; consider, visit, wander"
+    },
+    {
+      "target": "C2264",
+      "label": "ⲙⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "consideration, opinion"
+    },
+    {
+      "target": "C2263",
+      "label": "ⲙⲟⲩϣⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "consider, ponder"
+    },
+    {
+      "target": "C2266",
+      "label": "ⲣⲉϥⲙⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "examiner"
+    }
+  ]
+}

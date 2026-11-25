@@ -1,0 +1,159 @@
+{
+  "id": "C1705",
+  "forms": [
+    {
+      "id": "CF4929",
+      "orth": "ⲗⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14883,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4930",
+      "orth": "ⲗⲱⲱⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1972",
+      "bibliography": "CD 145b; KoptHWb 80"
+    },
+    {
+      "id": "CS1973",
+      "bibliography": "CD 145b0"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲕϩⲟⲓⲧⲉ ⲙⲡⲟⲩϩⲓⲧⲉ ϩⲓⲱⲱⲕ ⲛⲉⲕⲟⲩⲉⲣⲏⲧⲉ ⲙⲡⲟⲩ**ⲗⲱⲧⲉ** ⲉⲣⲟⲕ ⲉⲓⲥ ϩⲙⲉ ⲛⲣⲟⲙⲡⲉ",
+      "english": "Thy garments grew not old from off thee, thy shoes were not worn from off thee, thy feet were not painfully hardened, lo! these forty years.",
+      "source": "Deuteronomy 8",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲙⲉ",
+        1,
+        13.521
+      ],
+      [
+        "ⲟⲩⲉⲣⲏⲧⲉ",
+        1,
+        12.071
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        11.629
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        10.046
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.787
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟⲩ_1_pre_ⲗⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲗⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲗⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_3_post_ⲣⲟⲙⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲙⲉ_3_post_ⲣⲟⲙⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲩ_1_pre_ⲗⲱⲧⲉ",
+          "ⲗⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲗⲱⲧⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲗⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲗⲱⲧⲉ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          "ⲉⲓⲥ_3_post_ⲣⲟⲙⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_3_post_ⲣⲟⲙⲡⲉ",
+          "ϩⲙⲉ_3_post_ⲣⲟⲙⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14481,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1706",
+      "label": "ⲗⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "hardness (of skin) (?)"
+    }
+  ]
+}

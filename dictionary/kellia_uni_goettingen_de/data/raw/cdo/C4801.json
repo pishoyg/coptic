@@ -1,0 +1,51 @@
+{
+  "id": "C4801",
+  "forms": [
+    {
+      "id": "CF11567",
+      "orth": "ⲣⲉϥⲧⲱϩⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5420",
+      "bibliography": "CD 459a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4802",
+      "label": "ϫⲓⲛⲑⲱϩⲙ",
+      "pos": "N",
+      "gloss": "act of calling"
+    },
+    {
+      "target": "C4800",
+      "label": "ⲣⲉϥⲧⲱϩⲙ",
+      "pos": "N",
+      "gloss": "summoner, inviter"
+    },
+    {
+      "target": "C4798",
+      "label": "ⲧⲱϩⲙ",
+      "pos": "V",
+      "gloss": "knock on the door, summon, invite, chase, urge, pursue"
+    },
+    {
+      "target": "C4799",
+      "label": "ⲧⲱϩⲙ",
+      "pos": "N",
+      "gloss": "calling, convocation"
+    }
+  ]
+}

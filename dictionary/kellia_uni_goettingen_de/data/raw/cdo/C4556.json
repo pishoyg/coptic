@@ -1,0 +1,75 @@
+{
+  "id": "C4556",
+  "forms": [
+    {
+      "id": "CF11069",
+      "orth": "ⲁⲧⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5145",
+      "bibliography": "CD 433b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4557",
+      "label": "ⲙⲉⲧⲧⲱⲥⲓ",
+      "pos": "N",
+      "gloss": "dryness"
+    },
+    {
+      "target": "C4560",
+      "label": "ⲙⲛⲧⲧⲁⲥⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impudence"
+    },
+    {
+      "target": "C4559",
+      "label": "ⲣⲧⲁⲥⲃⲁⲗ",
+      "pos": "V",
+      "gloss": "be \"proud-eyed\", be impudent"
+    },
+    {
+      "target": "C4558",
+      "label": "ⲧⲁⲥ-",
+      "pos": "N",
+      "gloss": "who hardens"
+    },
+    {
+      "target": "C4553",
+      "label": "ⲧⲱⲥ",
+      "pos": "V",
+      "gloss": "become/be hard, stiff, dry; fix"
+    },
+    {
+      "target": "C4554",
+      "label": "ⲧⲱⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "stretch out, stiffen"
+    },
+    {
+      "target": "C4555",
+      "label": "ⲧⲱⲥ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "stand up stiffly"
+    }
+  ]
+}

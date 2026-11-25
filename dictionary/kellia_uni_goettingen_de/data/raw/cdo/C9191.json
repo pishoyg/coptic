@@ -1,0 +1,124 @@
+{
+  "id": "C9191",
+  "forms": [
+    {
+      "id": "CF22907",
+      "orth": "ⲑⲩⲗⲓⲕⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22912",
+      "orth": "ⲑⲩⲗⲓⲕⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11267,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22908",
+      "orth": "ⲑⲏⲗⲏⲕⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22909",
+      "orth": "ⲑⲏⲗⲓⲕⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22910",
+      "orth": "ⲑⲏⲗⲩⲕⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13264,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22911",
+      "orth": "ⲑⲓⲗⲓⲕⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11426",
+      "bibliography": "DDGLC",
+      "cu_ID": "4183"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲟⲛ ⲛⲟⲩϩⲟⲟⲩ ⲁⲩⲣⲱⲙⲉ ⲉⲓ ϣⲁⲣⲟϥ ⲉⲃⲟⲗ ϩⲙⲡⲧⲟϣ ⲛⲕⲃⲧ · ⲉⲣⲉⲡⲉϥϣⲏⲣⲉ ⲙⲟⲟϣⲉ ⲛⲙⲙⲁϥ ⲉⲁϥⲉⲓ ⲉⲧ**ⲑⲩⲗⲓⲕⲓⲁ** ⲉⲧⲣⲉϥϩⲟⲧⲣϥ ⲉϩⲟⲩⲛ ⲉⲡⲅⲁⲙⲟⲥ ⲛⲥⲩⲙⲛⲟⲛ ·",
+      "english": "Now it came to pass on a day that a certain man came unto him from the district of Kebt (Coptos), and there was travelling with him his son, who had reached a time of life when he might, very properly, have been permitted to undergo the yoke of matrimony.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲧⲣ",
+        1,
+        17.276
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲑⲩⲗⲓⲕⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10854,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "885",
+    "grl_lemma": "ἡλικία",
+    "grl_meaning": "time of life, age, prime of life, manhood",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 768b; Preisigke 1:654"
+  }
+}

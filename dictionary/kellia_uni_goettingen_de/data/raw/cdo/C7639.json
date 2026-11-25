@@ -1,0 +1,45 @@
+{
+  "id": "C7639",
+  "forms": [
+    {
+      "id": "CF17340",
+      "orth": "ⲉⲡⲉϭⲗⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS8480",
+      "bibliography": "CD 810a; KoptHWb 449; DELC 337a; ChLCS 106b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7638",
+      "label": "ϭⲗⲟ",
+      "pos": "N",
+      "gloss": "futility, vanity; delusion, illusion"
+    },
+    {
+      "target": "C7640",
+      "label": "ⲁⲡϭⲗⲁ",
+      "pos": "N",
+      "gloss": "vain"
+    },
+    {
+      "target": "C7641",
+      "label": "ⲙⲛⲧⲁⲡϭⲗⲁ",
+      "pos": "N",
+      "gloss": "deception, slander"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C8918",
+  "forms": [
+    {
+      "id": "CF21779",
+      "orth": "ⲉⲗⲉⲩⲑⲉⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21780",
+      "orth": "ⲉⲗⲉⲩⲑⲉⲣⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21781",
+      "orth": "ⲉⲗⲉⲩⲑⲉⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11301,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10826",
+      "bibliography": "DDGLC",
+      "cu_ID": "2866"
+    },
+    {
+      "id": "CS10827",
+      "bibliography": "DDGLC",
+      "cu_ID": "3928"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲓⲥⲧⲉⲩⲉ ⲛⲁⲓ ϫⲉⲟⲩ**ⲉⲗⲉⲩⲑⲉⲣⲁ** ⲧⲉ ·",
+      "english": "And believe me, for she is a free woman.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        10.894
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲁ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲩⲑⲉⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲁ",
+          "ⲉⲗⲉⲩⲑⲉⲣⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10888,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "658",
+    "grl_lemma": "ἐλεύθερος",
+    "grl_meaning": "free",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 532b; Preisigke 1:468"
+  }
+}

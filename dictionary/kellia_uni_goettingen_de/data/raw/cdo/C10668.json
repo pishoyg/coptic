@@ -1,0 +1,163 @@
+{
+  "id": "C10668",
+  "forms": [
+    {
+      "id": "CF28889",
+      "orth": "ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28890",
+      "orth": "ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4381,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14600",
+      "bibliography": "DDGLC",
+      "cu_ID": "3131"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲁⲩⲧⲁⲁⲧ ⲉⲧⲟⲟⲧⲟⲩ ⲛϩⲉⲛ**ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ** ·",
+      "english": "for they have placed me in the hands of instructors,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲇⲉ ⲁϥⲉⲓⲙⲉ ⲉⲛⲱϣ ⲛⲛⲉ**ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ** · ⲁⲩⲱ ⲛⲉϥϩⲛⲧⲉⲩⲙⲏⲏⲧⲉ ⲡⲉ ·",
+      "english": "And after these things he learned the teachings of the wise men, and associated with them.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲱϩⲁⲛⲛⲏⲥ ⲇⲉ ⲡⲉϫⲁϥ ⲙⲡϩⲙϩⲁⲗ ⲉⲧⲙⲟⲟϣⲉ ⲛⲙⲙⲁϥ ϫⲉⲧⲱⲟⲩⲛ ⲛⲅⲃⲱⲕ ⲉⲡⲡⲁⲗⲗⲁϯⲟⲛ ϩⲁϩⲧⲛⲛⲉ**ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ** ⲛⲅⲛⲁⲩ ϫⲉⲁⲩⲥⲱⲟⲩϩ ⲧⲏⲣⲟⲩ ⲛⲅⲉⲓ ⲛⲅⲧⲁⲙⲟⲓ ϩⲛⲟⲩϭⲉⲡⲏ",
+      "english": "And John said unto the servant who was accompanying him, 'Rise up and go to the palace, to the scholars, and see if they have all assembled there, and then come back quickly and let me know;",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲗⲗⲁϯⲟⲛ",
+        2,
+        15.369
+      ],
+      [
+        "ϩⲁϩⲧⲛ",
+        2,
+        15.206
+      ],
+      [
+        "ⲛⲉ",
+        6,
+        12.483
+      ],
+      [
+        "ⲱϣ",
+        2,
+        11.826
+      ],
+      [
+        "ⲉⲧⲟⲟⲧ",
+        2,
+        11.183
+      ],
+      [
+        "ⲛ",
+        8,
+        10.224
+      ],
+      [
+        "ⲅ",
+        2,
+        9.654
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        9.517
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        9.232
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        9.162
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        8.791
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        8.489
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.561
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ],
+      [
+        "ϥ",
+        2,
+        4.937
+      ],
+      [
+        "ⲡ",
+        2,
+        4.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲭⲟⲗⲁⲥⲧⲓⲕⲟⲥ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3982,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2132",
+    "grl_lemma": "σχολαστικός",
+    "grl_meaning": "academic, advocate",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1747b; Preisigke 2:565"
+  }
+}

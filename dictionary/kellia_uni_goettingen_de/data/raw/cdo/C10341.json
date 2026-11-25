@@ -1,0 +1,212 @@
+{
+  "id": "C10341",
+  "forms": [
+    {
+      "id": "CF27545",
+      "orth": "ⲡⲣⲟⲥⲱⲡⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27552",
+      "orth": "ⲡⲣⲟⲥⲱⲡⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13579,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27546",
+      "orth": "ⲡⲣⲟⲥⲟⲡⲟ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27547",
+      "orth": "ⲡⲣⲟⲥⲟⲡⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4405,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF27548",
+      "orth": "ⲡⲣⲟⲥⲟⲡⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27549",
+      "orth": "ⲡⲣⲟⲥⲥⲟⲡⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27551",
+      "orth": "ⲡⲣⲟⲥⲱⲡⲟⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF27550",
+      "orth": "ⲡⲣⲟⲥⲱⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27553",
+      "orth": "ⲡⲣⲱⲍⲱⲡⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27554",
+      "orth": "ⲡⲣⲱⲥⲱⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27555",
+      "orth": "ⲡⲣⲱⲥⲱⲡⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13919",
+      "bibliography": "DDGLC",
+      "cu_ID": "1625"
+    },
+    {
+      "id": "CS13920",
+      "bibliography": "DDGLC",
+      "cu_ID": "1457"
+    },
+    {
+      "id": "CS13921",
+      "bibliography": "DDGLC",
+      "cu_ID": "8749"
+    },
+    {
+      "id": "CS13922",
+      "bibliography": "DDGLC",
+      "cu_ID": "1468"
+    },
+    {
+      "id": "CS13923",
+      "bibliography": "DDGLC",
+      "cu_ID": "2777"
+    },
+    {
+      "id": "CS13924",
+      "bibliography": "DDGLC",
+      "cu_ID": "3728"
+    },
+    {
+      "id": "CS13925",
+      "bibliography": "DDGLC",
+      "cu_ID": "8753"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲛⲁⲩ ⲉⲡⲥⲱⲛⲧ ⲧⲏⲣϥ ⲉϥⲧⲁϩⲏⲩ ⲉⲣⲁⲧϥ ⲁⲩⲱ ⲉϥⲥⲙⲟⲛⲧ ϩⲙⲡⲉ**ⲡⲣⲟⲥⲱⲡⲟⲛ** ⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲙⲟⲛⲧ",
+        1,
+        15.206
+      ],
+      [
+        "ⲥⲧⲁⲩⲣⲟⲥ",
+        1,
+        13.35
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲥⲱⲡⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲱⲡⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲧⲁⲩⲣⲟⲥ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲟⲥⲱⲡⲟⲛ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲥⲱⲡⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲱⲡⲟⲛ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲥⲧⲁⲩⲣⲟⲥ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13176,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1875",
+    "grl_lemma": "πρόσωπον",
+    "grl_meaning": "face, countenance, person",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1533a; Preisigke 2:421"
+  }
+}

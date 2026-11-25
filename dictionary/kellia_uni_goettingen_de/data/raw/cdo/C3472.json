@@ -1,0 +1,80 @@
+{
+  "id": "C3472",
+  "forms": [
+    {
+      "id": "CF8844",
+      "orth": "ⲥⲗⲟⲡⲗⲉⲡ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲗⲉⲡⲗⲱⲡ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13039,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲗⲟⲡⲗⲉⲡ",
+      "dialect": "B",
+      "id": "1406.2"
+    },
+    {
+      "orth": "ⲥⲗⲉⲡⲗⲱⲡ†",
+      "dialect": "B",
+      "id": "1406.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3953",
+      "bibliography": "CD 331b; KoptHWb 184; ChLCS 47b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3469",
+      "label": "ⲁⲧⲥⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unbroken"
+    },
+    {
+      "target": "C3471",
+      "label": "ⲥⲗⲉⲡⲗⲓⲡ",
+      "pos": "N",
+      "gloss": "part of a snake"
+    },
+    {
+      "target": "C3470",
+      "label": "ⲥⲗⲡⲉ",
+      "pos": "N",
+      "gloss": "strip"
+    },
+    {
+      "target": "C3466",
+      "label": "ⲥⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "break, burst; break, cut off"
+    },
+    {
+      "target": "C3467",
+      "label": "ⲥⲱⲗⲡ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be cut, broken off; cut off, decide"
+    },
+    {
+      "target": "C3468",
+      "label": "ⲥⲱⲗⲡ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    }
+  ]
+}

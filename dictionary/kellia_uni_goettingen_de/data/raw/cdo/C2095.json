@@ -1,0 +1,124 @@
+{
+  "id": "C2095",
+  "forms": [
+    {
+      "id": "CF5892",
+      "orth": "ⲙⲁⲥⲙⲁⲧⲟⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11540,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2428",
+      "bibliography": "KoptHWb 105; ChLCS 28b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲉⲛⲧϥ ⲉⲣⲏⲥ · ⲙⲙⲏⲧ ⲛϩⲟⲟⲩ ϩⲓⲧⲛϥⲧⲟⲟⲩ ⲙ**ⲙⲁⲥⲙⲁⲧⲟⲓ** ·",
+      "english": "and four soldiers brought him to the south in ten days.",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲗⲗⲁⲣⲓⲟⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ϥⲧⲟⲟⲩ",
+        1,
+        13.369
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ⲙⲁⲥⲙⲁⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲁⲥⲙⲁⲧⲟⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ⲙⲁⲥⲙⲁⲧⲟⲓ",
+          "ⲙⲁⲥⲙⲁⲧⲟⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11109,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2045",
+      "type": "cf",
+      "label": "young (mostly of animal or bird), child"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2093",
+      "label": "ⲙⲁⲧⲟⲓ",
+      "pos": "N",
+      "gloss": "soldier"
+    },
+    {
+      "target": "C2094",
+      "label": "ⲙⲛⲧⲙⲁⲧⲟⲓ",
+      "pos": "N",
+      "gloss": "soldiery, warfare"
+    }
+  ]
+}

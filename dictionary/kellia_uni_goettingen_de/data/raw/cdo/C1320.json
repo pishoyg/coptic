@@ -1,0 +1,155 @@
+{
+  "id": "C1320",
+  "forms": [
+    {
+      "id": "CF4049",
+      "orth": "ⲣⲕⲣⲙⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20362,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1529",
+      "bibliography": "CD 117a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲛⲁ**ⲣⲕⲣⲙⲉⲥ** ⲛⲛⲁϩⲣⲁϥ · ⲡⲉⲧⲛⲁⲁⲙⲉⲗⲉⲓ ⲇⲉ ⲉϣⲁⲥⲣⲥⲟⲧⲉ ϩⲓⲥⲏϥⲉ ϩⲓⲥⲕⲉⲩⲟⲥ ⲛⲓⲙ ⲙⲡⲟⲗⲉⲙⲓⲕⲟⲛ ⲛⲛⲁϩⲣⲁϥ ⸗",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 195-204",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:28-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲛⲁϩⲣⲁ",
+        1,
+        14.059
+      ],
+      [
+        "ⲥ",
+        2,
+        9.274
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        8.84
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥ_1_pre_ⲣⲕⲣⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲕⲣⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲣⲕⲣⲙⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣⲕⲣⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_4_post_ⲁⲙⲉⲗⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥ_1_pre_ⲣⲕⲣⲙⲉⲥ",
+          "ⲛⲁ_1_pre_ⲣⲕⲣⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲕⲣⲙⲉⲥ",
+          "ⲣⲕⲣⲙⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲕⲣⲙⲉⲥ_0_node",
+          "ⲡ_1_post_ⲣⲕⲣⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲣⲕⲣⲙⲉⲥ",
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          "ⲛⲁ_4_post_ⲁⲙⲉⲗⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19976,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1318",
+      "label": "ⲕⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "ash, soot, dust"
+    },
+    {
+      "target": "C1319",
+      "label": "ⲕⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "ash, soot, dust"
+    }
+  ]
+}

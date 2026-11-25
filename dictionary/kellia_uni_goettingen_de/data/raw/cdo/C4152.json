@@ -1,0 +1,788 @@
+{
+  "id": "C4152",
+  "forms": [
+    {
+      "id": "CF10248",
+      "orth": "ⲧⲁⲉⲓⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.6,
+        "rank": 526,
+        "count": 252
+      }
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲟ⸗",
+      "dialect": "B",
+      "id": "247.7"
+    },
+    {
+      "orth": "ⲧⲁⲓⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.38,
+        "rank": 1353,
+        "count": 60
+      }
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4141,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2335,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.38,
+        "rank": 1350,
+        "count": 60
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.05,
+        "rank": 695,
+        "count": 166
+      }
+    },
+    {
+      "orth": "ⲧⲁⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9955,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓⲟ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.73,
+        "rank": 515,
+        "count": 147
+      }
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲉ-",
+      "dialect": "B",
+      "id": "247.8"
+    },
+    {
+      "orth": "ⲧⲁⲓⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5540,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓⲏⲟⲩⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.96,
+        "rank": 743,
+        "count": 81
+      }
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲟ",
+      "dialect": "A",
+      "id": "247.11"
+    },
+    {
+      "orth": "ⲧⲁⲓⲟ",
+      "dialect": "A",
+      "id": "247.12"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲁ⸗",
+      "dialect": "A",
+      "id": "247.13"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁ⸗",
+      "dialect": "A",
+      "id": "247.14"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲏⲟⲩ†",
+      "dialect": "A",
+      "id": "247.15"
+    },
+    {
+      "orth": "ⲧⲁⲓⲏⲟⲩ†",
+      "dialect": "A",
+      "id": "247.16"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁⲉⲓⲧ†",
+      "dialect": "A",
+      "id": "247.17"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲁ",
+      "dialect": "F",
+      "id": "247.18"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁ",
+      "dialect": "F",
+      "id": "247.19"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲉ-",
+      "dialect": "F",
+      "id": "247.20"
+    },
+    {
+      "orth": "ⲧⲁⲓⲉ-",
+      "dialect": "F",
+      "id": "247.21"
+    },
+    {
+      "orth": "ⲧⲁⲓⲏⲟⲩⲧ†",
+      "dialect": "F",
+      "id": "247.22"
+    },
+    {
+      "orth": "ⲧⲁⲏⲟⲩⲧ†",
+      "dialect": "F",
+      "id": "247.23"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲟ",
+      "dialect": "L",
+      "id": "247.24"
+    },
+    {
+      "orth": "ⲧⲁⲓⲟ",
+      "dialect": "L",
+      "id": "247.25"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲁ-",
+      "dialect": "L",
+      "id": "247.26"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁ-",
+      "dialect": "L",
+      "id": "247.27"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲁ⸗",
+      "dialect": "L",
+      "id": "247.28"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁ⸗",
+      "dialect": "L",
+      "id": "247.29"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁⲉⲓⲧ†",
+      "dialect": "L",
+      "id": "247.30"
+    },
+    {
+      "orth": "ⲧⲁⲉⲓⲁⲏⲧ†",
+      "dialect": "L",
+      "id": "247.31"
+    },
+    {
+      "orth": "ⲧⲁⲓⲁⲏⲧ†",
+      "dialect": "L",
+      "id": "247.32"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4713",
+      "bibliography": "CD 390b; CDC 62a; CED 177; KoptHWb 224; DELC 212a; ChLCS 56b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏ ⲉⲧⲉⲛⲙⲉⲩⲓ ⲉⲣⲱⲟⲩ ⲛⲧⲉⲡⲓⲥⲱⲙⲁ ϫⲉⲥⲉϣⲏϣ ⲛⲁⲓ ⲇⲉ ⲛϯ ⲛⲱⲟⲩ ⲛⲟⲩ**ⲧⲁⲓⲟ** ⲛϩⲟⲩⲟ ⲟⲩⲟϩ ⲛⲏ ⲉⲧⲁϫⲁⲓⲱⲟⲩ ⲛⲧⲁⲛ ⲟⲩⲟⲛⲛⲧⲱⲟⲩ ⲛϩⲟⲩⲟ ⲉⲥⲁⲓ ⲙⲙⲁⲩ .",
+      "english": "Those parts of the body which we think to be less honorable, on those we bestow more abundant honor; and our unpresentable parts have more abundant propriety;",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲧⲁⲓⲉ** ⲛⲉⲭⲏⲣⲁ . ⲛⲉⲭⲏⲣⲁ ⲛⲁⲙⲉ .",
+      "english": "Honor widows who are widows indeed.",
+      "source": "54_1 Timothy_5",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲓ ⲉϥⲙⲟϣⲓ ⲉϥϩⲏⲗ ϣⲁⲡⲟⲩⲣⲟ ⲁϥⲛⲁⲩ ⲉⲣⲱⲙⲓ ⲃ ⲉⲩϭⲟⲥⲓ ⲉⲩⲉⲣⲫⲟⲣⲉⲓⲛ ⲛϩⲁⲛϩⲉⲃⲥⲱ ⲛⲟⲩⲱⲃϣ ⲙⲙⲟⲛ ϩⲗⲓ ⲛⲗⲁⲥ ⲛⲥⲁⲣⲝ ⲛⲁϣⲥⲁϫⲓ ⲙⲡⲟⲩⲱⲟⲩ ⲛⲉⲙⲡⲟⲩ**ⲧⲁⲓⲟ** .",
+      "english": "He was still walking, praying, towards the king, when he saw two tall men walking wearing white garments - no tongue of flesh could speak of their glory and honor!",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲁⲛⲣⲥⲟϭ ⲉⲧⲃⲉⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲛⲧⲱⲧⲛ ⲇⲉ ⲛⲧⲉⲧⲛ ϩⲉⲛⲥⲁⲃⲉ ϩⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲁⲛⲟⲛ ⲧⲛϭⲟⲟⲃ ⲛⲧⲱⲧⲛ ⲇⲉ ⲧⲉⲧⲛϫⲟⲟⲣ ⲛⲧⲱⲧⲛ ⲧⲉⲧⲛ**ⲧⲁⲉⲓⲏⲩ** ⲁⲛⲟⲛ ⲇⲉ ⲧⲛⲥⲏϣ",
+      "english": "We are fools for Christ&apos;s sake, ·but you are wise in Christ. We are weak, but you are strong. You have honor, but we have dishonor.",
+      "source": "46_1 Corinthians_4",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲧⲉⲧⲉⲛϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲣⲉϣⲁⲛⲟⲩⲣⲱⲙⲓ ϫⲟⲥ ⲙⲡⲉϥⲓⲱⲧ ⲛⲉⲙⲧⲉϥⲙⲁⲩ ϫⲉⲕⲟⲣⲃⲁⲛ ⲉⲧⲉⲟⲩ**ⲧⲁⲓⲟ** ⲡⲉ ⲁⲕϣⲁⲛϫⲉⲙϩⲏⲟⲩ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲙⲙⲟⲓ",
+      "english": "But you say, 'If a man tells his father or his mother, 'Whatever profit you might have received from me is Corban, that is to say, given to God;''",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "▢▢▢ ⲁ ▢▢▢ ⲱ ▢▢▢▢ ⲓⲏⲥⲟⲩⲥ ▢✠▢ ⲭⲣⲓⲥⲧⲟⲥ ▢ ⲟⲩⲉⲅⲕⲱⲙⲓⲟⲛ ⲉⲁϥⲧⲁⲩⲟⲟϥ ⲛϭⲓⲡⲉⲛⲡⲉⲧⲟⲩⲁⲁⲃ ⲛⲉⲓⲱⲧ ⲉⲧ**ⲧⲁⲓⲏⲩ** ⲕⲁⲧⲁⲥⲙⲟⲧ ⲛⲓⲙ · ⲁⲡⲁ ⲧⲓⲙⲟⲑⲉⲟⲥ ⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲣⲁⲕⲟⲧⲉ · ⲛⲧⲁϥⲧⲁⲩⲟⲟϥ ⲇⲉ ⲉⲧⲃⲉⲡⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲛⲁⲃⲃⲁⲧⲱⲛ ⲡⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲙⲟⲩ ·",
+      "english": "The discourse which Apa Timothy, Archbishop of Rakote, our Holy Father, who was glorious in every respect, pronounced on the making of Abbaton, the Angel of Death.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        11,
+        22.008
+      ],
+      [
+        "ⲛ",
+        201,
+        17.793
+      ],
+      [
+        "ⲙⲛ",
+        102,
+        17.693
+      ],
+      [
+        "ⲡ",
+        160,
+        17.494
+      ],
+      [
+        "ⲙ",
+        130,
+        17.45
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        28,
+        16.178
+      ],
+      [
+        "ⲟⲩ",
+        79,
+        15.163
+      ],
+      [
+        "ⲛⲁ",
+        60,
+        14.44
+      ],
+      [
+        "ⲛⲟϭ",
+        26,
+        14.431
+      ],
+      [
+        "ϥ",
+        71,
+        14.002
+      ],
+      [
+        "ϩⲉⲛ",
+        28,
+        13.528
+      ],
+      [
+        "ⲉ",
+        57,
+        13.347
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        25,
+        13.276
+      ],
+      [
+        "ⲡⲉ",
+        35,
+        12.927
+      ],
+      [
+        "ⲁⲩⲱ",
+        40,
+        12.744
+      ],
+      [
+        "ⲧⲁⲉⲓⲟ",
+        8,
+        12.652
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        32,
+        12.497
+      ],
+      [
+        ".",
+        30,
+        12.309
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        8,
+        12.182
+      ],
+      [
+        "ⲙⲛⲧⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+        2,
+        12.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          93
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲁⲉⲓⲟ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲉⲓⲟ",
+          7
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲉⲓⲟ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲉⲓⲟ",
+          7
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲉⲓⲟ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲉⲓⲟ",
+          6
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁⲉⲓⲟ",
+          9
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          3
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          6
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲙⲡ_3_post_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲓⲙⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲣⲱⲙⲉ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_1_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲟⲩⲁ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡ_5_post_ⲟⲩⲁ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          2
+        ],
+        [
+          "ⲭⲣⲏⲙⲁ_1_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁⲉⲓⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲟⲩ_1_pre_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲛ_1_post_ⲧⲁⲉⲓⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲙ_1_post_ⲧⲁⲉⲓⲟ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲡⲉⲕ_1_pre_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲧⲁⲉⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲉ_1_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲙⲡ_3_post_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_3_post_ⲉⲓⲙⲉ",
+          "ϥ_3_post_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲡ_2_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_1_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_3_post_ⲡ",
+          "ⲡ_5_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          "ϩⲉⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          "ⲭⲣⲏⲙⲁ_1_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲣⲭⲱⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲟⲩ_1_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲉⲓⲟ_0_node",
+          "ⲧⲏⲣ_1_post_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲉⲓⲟ",
+          "ⲡ_1_pre_ⲧⲁⲉⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲉⲓⲟ",
+          "ⲛⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲛ",
+          "ⲙ_3_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.16,
+      "rank": 272,
+      "count": 501
+    },
+    "B": {
+      "rate": 2.66,
+      "rank": 320,
+      "count": 226
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C20",
+      "type": "cf",
+      "label": "be great, goodly, honoured"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4159",
+      "label": "ϣⲟⲩⲧⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "be worthy of honour"
+    },
+    {
+      "target": "C4160",
+      "label": "ϫⲓⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "receive an honour, receive a gift"
+    },
+    {
+      "target": "C4158",
+      "label": "ϯⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "give an honour, make a gift"
+    },
+    {
+      "target": "C4155",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩⲧⲁⲉⲓⲟ",
+      "pos": "V",
+      "gloss": "pay respect"
+    },
+    {
+      "target": "C4154",
+      "label": "ⲙⲁⲓⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour-loving"
+    },
+    {
+      "target": "C4156",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4157",
+      "label": "ⲣⲉϥⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honourable person"
+    },
+    {
+      "target": "C4153",
+      "label": "ⲧⲁⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "honour, compliments (in the plural); complimentary gift"
+    },
+    {
+      "target": "C4161",
+      "label": "ⲧⲁⲓⲉⲙⲟⲩϯ",
+      "pos": "V",
+      "gloss": "greet"
+    }
+  ]
+}

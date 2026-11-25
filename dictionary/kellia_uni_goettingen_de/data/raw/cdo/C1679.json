@@ -1,0 +1,126 @@
+{
+  "id": "C1679",
+  "forms": [
+    {
+      "id": "CF4872",
+      "orth": "ⲗⲉⲯⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20218,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1944",
+      "bibliography": "CD 144a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉⲣⲱⲙⲉ ⲟⲩⲱⲙ ϩⲛⲟ ⲛⲧⲉⲓϩⲉ ϩⲛⲗⲁⲁⲩ ⲙⲙⲁ ⲉⲓⲙⲏⲧⲓ ⲉⲡⲙⲁ ⲛⲛⲣⲱⲙⲉ ⲉⲧϣⲱⲛⲉ ⲙⲁⲩⲁⲁⲧⲟⲩ ⲉϣⲁⲩϣⲓⲛⲉ ⲛⲥⲁⲡ**ⲗⲉⲯⲉ** ⲛⲏⲣⲡ",
+      "english": "...",
+      "source": "I Have Been Considering BV 283-284",
+      "urn": "urn:cts:copticLit:shenoute.considering.amelineau:1-2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲣⲡ",
+        1,
+        12.403
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        10.455
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        9.76
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲉⲯⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲉⲯⲉ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲯⲉ_0_node",
+          "ⲛ_1_post_ⲗⲉⲯⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲉⲯⲉ",
+          "ⲏⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19823,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1678",
+      "label": "ⲗⲉⲯ",
+      "pos": "N",
+      "gloss": "one having an eye-disease"
+    }
+  ],
+  "etym": {
+    "egy_num": "88180",
+    "egy_lemma": "nzp.w",
+    "english": "wounds",
+    "german": "Wunden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/88180"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "C1669",
+  "forms": [
+    {
+      "id": "CF4837",
+      "orth": "ⲗⲉⲙⲏⲏϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15933,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1934",
+      "bibliography": "CD 143b; KoptHWb 79"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϯ ⲙⲡⲉϥⲟⲩⲟⲓ ⲁϥⲁϩⲉⲣⲁⲧϥ ⲉϫⲙⲡⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲁϥⲁⲙⲁϩⲧⲉ ⲛⲧⲉϥⲥⲏϥⲉ ⲁϥⲧⲟⲕⲙⲉⲥ ⲉⲃⲟⲗ ϩⲙⲡⲉⲥⲕⲟⲉⲓϩ ⲁϥⲙⲟⲟⲩⲧϥ ⲁϥⲥⲉⲗⲉⲡⲧⲉϥⲁⲡⲉ ⲛϩⲏⲧⲥ ⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲇⲉ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ϫⲉⲁⲡⲉⲩ**ⲗⲉⲙⲏⲏϣⲉ** ⲙⲟⲩ ⲁⲩϯϩⲣⲟⲟⲩ ⲉⲃⲟⲗ ⲁⲩⲡⲱⲧ",
+      "english": "And David ran, and stood upon him, and took his sword, and slew him, and cut off his head: and the Philistines saw that their champion was dead, and they fled.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯϩⲣⲟⲟⲩ",
+        1,
+        18.276
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        9.743
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.817
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲗⲉⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲗⲉⲙⲏⲏϣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲗⲉⲙⲏⲏϣⲉ",
+          "ⲗⲉⲙⲏⲏϣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15534,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "400043",
+    "egy_lemma": "jm.j-rʾ-mšꜥ",
+    "demo_num": "d2517",
+    "demo_lemma": "mr-mšꜥ",
+    "english": "overseer of work-gangs (i.e. expedition leader)",
+    "german": "Vorsteher der Expedition; Vorsteher des Heeres",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/400043",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2517"
+  }
+}

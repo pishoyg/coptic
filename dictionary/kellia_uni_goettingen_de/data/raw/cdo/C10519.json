@@ -1,0 +1,181 @@
+{
+  "id": "C10519",
+  "forms": [
+    {
+      "id": "CF28230",
+      "orth": "ⲥⲡⲟⲅⲅⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28231",
+      "orth": "ⲥⲡⲟⲅⲅⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28232",
+      "orth": "ⲥⲫⲟⲅⲅⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF28233",
+      "orth": "ⲥⲫⲟⲅⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28234",
+      "orth": "ⲥⲫⲟⲛⲅⲟⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14267",
+      "bibliography": "DDGLC",
+      "cu_ID": "617"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲟⲩⲁ ⲇⲉ ⲡⲱⲧ ⲁϥⲙⲁϩⲟⲩ**ⲥⲡⲟⲅⲅⲟⲥ** ⲛϩⲙϫ ⲁϥⲕⲁⲁⲥ ϩⲓϫⲛⲟⲩⲕⲁϣ ⲁϥⲧⲥⲟϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϭⲱ ⲛⲧⲛⲛⲁⲩ ϫⲉϩⲏⲗⲉⲓⲁⲥ ⲛⲁⲉⲓ ⲉⲛⲧϥ ⲉⲡⲉⲥⲏⲧ .",
+      "english": "One ran, and filling a sponge full of vinegar, put it on a reed, and gave it to him to drink, saying, &apos;Let him be. Let&apos;s see whether Elijah comes to take him down.&apos;",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲛ ⲟⲩϩⲛⲁⲁⲩ ⲇⲉ ⲕⲏ ⲉϩⲣⲁⲓ ⲉϥⲙⲉϩ ⲛϩⲙϫ . ⲟⲩ**ⲥⲡⲟⲅⲅⲟⲥ** ⲇⲉ ⲉϥⲙⲉϩ ⲉⲃⲟⲗ ⲛϩⲙϫ ⲁⲩⲕⲁⲁϥ ⲉϫⲛⲟⲩϩⲩⲥⲥⲱⲡⲟⲥ ⲁⲩⲱ ⲁⲩⲥⲟⲟⲩⲧⲛ ⲙⲙⲟϥ ⲉⲧⲉϥⲧⲁⲡⲣⲟ .",
+      "english": "Now a vessel full of vinegar was set there; so they put a sponge full of the vinegar on hyssop, and held it at his mouth.",
+      "source": "43_John_19",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲟⲩⲁ ⲇⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲡⲱⲧ ⲛⲧⲉⲩⲛⲟⲩ ⲁϥϫⲓ ⲛⲟⲩ**ⲥⲡⲟⲅⲅⲟⲥ** ⲁϥⲙⲁϩⲥ ⲛϩⲙϫ ⲁϥⲙⲟⲣⲉⲥ ⲉⲩⲕⲁϣ ⲁϥⲧⲥⲟ ⲙⲙⲟϥ .",
+      "english": "Immediately one of them ran, and took a sponge, and filled it with vinegar, and put it on a reed, and gave him a drink.",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲙϫ",
+        5,
+        20.657
+      ],
+      [
+        "ⲙⲁϩ",
+        3,
+        17.163
+      ],
+      [
+        "ϥ",
+        7,
+        10.944
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        10.102
+      ],
+      [
+        "ⲁ",
+        5,
+        10.01
+      ],
+      [
+        "ⲛ",
+        6,
+        9.564
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.22
+      ],
+      [
+        "ϫⲓ",
+        1,
+        7.164
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        ".",
+        1,
+        4.557
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲡⲟⲅⲅⲟⲥ",
+          2
+        ],
+        [
+          "ⲥⲡⲟⲅⲅⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲡⲟⲅⲅⲟⲥ",
+          2
+        ],
+        [
+          "ϩⲙϫ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲡⲟⲅⲅⲟⲥ",
+          "ⲥⲡⲟⲅⲅⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲡⲟⲅⲅⲟⲥ_0_node",
+          "ⲛ_1_post_ⲥⲡⲟⲅⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲡⲟⲅⲅⲟⲥ",
+          "ϩⲙϫ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5447,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2587",
+    "grl_lemma": "σπόγγος",
+    "grl_meaning": "sponge",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1628b; Preisigke 2:476"
+  }
+}

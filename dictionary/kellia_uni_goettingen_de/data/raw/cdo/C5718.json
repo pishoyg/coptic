@@ -1,0 +1,93 @@
+{
+  "id": "C5718",
+  "forms": [
+    {
+      "id": "CF13414",
+      "orth": "ⲣϣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13415",
+      "orth": "ⲟ ⲛϣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6396",
+      "bibliography": "CD 548b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5713",
+      "label": "ϣⲓ",
+      "pos": "V",
+      "gloss": "measure, weigh"
+    },
+    {
+      "target": "C5714",
+      "label": "ϣⲓ",
+      "pos": "N",
+      "gloss": "measure, weight"
+    },
+    {
+      "target": "C5722",
+      "label": "ϣⲓⲧⲉϥ",
+      "pos": "N",
+      "gloss": "measuring, weighing(?)"
+    },
+    {
+      "target": "C5721",
+      "label": "ϫⲓϣⲓ",
+      "pos": "V",
+      "gloss": "take measure, estimate"
+    },
+    {
+      "target": "C5719",
+      "label": "ϯϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, restrict"
+    },
+    {
+      "target": "C5715",
+      "label": "ⲁⲧϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured, immeasurable"
+    },
+    {
+      "target": "C5720",
+      "label": "ⲁⲧϯϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured"
+    },
+    {
+      "target": "C5717",
+      "label": "ⲕⲁϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, limit"
+    },
+    {
+      "target": "C5716",
+      "label": "ⲣⲉϥϣⲓ",
+      "pos": "N",
+      "gloss": "measurer"
+    }
+  ]
+}

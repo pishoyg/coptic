@@ -1,0 +1,160 @@
+{
+  "id": "C3147",
+  "forms": [
+    {
+      "id": "CF8175",
+      "orth": "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9393,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3597",
+      "bibliography": "CD 302b; KoptHWb 166; DELC 178; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ϭⲉ ⲧⲉⲛⲟⲩ ⲉⲧⲃⲏⲏⲧⲟⲩ · ϫⲉϩⲟⲙⲟⲓⲱⲥ · ⲛⲉⲓⲕⲟⲟⲩⲉ ⲉⲩ**ⲡⲉⲣⲉⲣⲁⲥⲟⲩ** ⲛⲥⲁⲣⲝ ⲙⲉⲛ ⲥⲉϫⲱϩⲙ ⲙⲙⲟⲟⲩ · ⲙⲙⲛⲧϫⲟⲉⲓⲥ ⲥⲉⲁⲑⲉⲧⲉⲓ ⲙⲙⲟⲟⲩ ⲛⲉⲟⲟⲩ ⲇⲉ ⲥⲉϫⲓⲟⲩⲁ ⲉⲣⲟⲟⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GL 251-252",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgl:56-59",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲥ ϭⲉ ⲧⲉⲛⲟⲩ ⲉⲧⲃⲏⲏⲧⲟⲩ · ϫⲉϩⲟⲙⲟⲓⲱⲥ ⲛⲉⲓⲕⲟⲟⲩⲉ ⲉⲩ**ⲡⲉⲣⲉⲣⲁⲥⲟⲩ** · ⲛⲥⲁⲣⲝ ⲙⲉⲛ ⲥⲉϫⲱϩⲙ ⲙⲙⲟⲟⲩ · ⲙⲙⲛⲧϫⲟⲉⲓⲥ ⲇⲉ ⲥⲉⲁⲑⲉⲧⲉⲓ ⲙⲙⲟⲟⲩ · ⲛⲉⲟⲟⲩ ⲇⲉ ⲥⲉϫⲓⲟⲩⲁ ⲉⲣⲟⲟⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 307-310",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:55-60",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲟⲩⲉ",
+        2,
+        14.055
+      ],
+      [
+        "ⲙⲉⲛ",
+        2,
+        13.756
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        2,
+        13.644
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        12.467
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲥⲁⲣⲝ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_1_post_ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+          "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲣⲉⲣⲁⲥⲟⲩ_0_node",
+          "ⲛ_2_post_ⲥⲁⲣⲝ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲁⲣⲝ",
+          "ⲥⲁⲣⲝ_1_post_ⲡⲉⲣⲉⲣⲁⲥⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8967,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2874",
+      "type": "cf",
+      "label": "dream"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3148",
+      "label": "ⲉⲣⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "have, dream a dream"
+    },
+    {
+      "target": "C3146",
+      "label": "ⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "dream"
+    },
+    {
+      "target": "C3149",
+      "label": "ⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ",
+      "pos": "N",
+      "gloss": "interpreter of dreams"
+    }
+  ]
+}

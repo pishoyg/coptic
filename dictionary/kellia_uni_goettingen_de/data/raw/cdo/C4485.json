@@ -1,0 +1,341 @@
+{
+  "id": "C4485",
+  "forms": [
+    {
+      "id": "CF10924",
+      "orth": "ⲛⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3315,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF10925",
+      "orth": "ⲛⲧⲟⲟⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.7,
+        "rank": 234,
+        "count": 741
+      }
+    },
+    {
+      "orth": "ⲛⲧⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.38,
+        "rank": 199,
+        "count": 541
+      }
+    },
+    {
+      "orth": "ⲛⲧⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.33,
+        "rank": 410,
+        "count": 198
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5073",
+      "bibliography": "CD 427b-428b; KoptHWb 249; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲭⲁⲟⲩⲛⲁϩϯ ⲛⲧⲉⲫⲛⲟⲩϯ **ⲛⲧⲉⲛ**ⲑⲏⲛⲟⲩ .",
+      "english": "Jesus answered them, 'Have faith in God.",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲩⲙⲏⲣ **ⲛⲧⲟⲟⲧ**ⲟⲩ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲻ",
+      "english": "but they are bound by the holy ones.'",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉⲛⲟⲩ ϫⲉⲁⲣⲉⲧⲉⲛⲕⲱϯ ⲛⲥⲁⲟⲩ **ⲛⲧⲟⲧ**ⲟⲩ .",
+      "english": "He asked the scribes, 'What are you asking them?'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲣϩⲛⲁⲓ ⲙⲡⲱⲧ **ⲛⲧⲟⲟⲧ**ϥ ⲙⲡⲛⲟⲃⲉ ·",
+      "english": "And I wished to escape from the sin.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲡⲓⲁⲗⲟⲩ ⲥⲱⲧⲉⲙ ⲉⲡⲓⲥⲁϫⲓ **ⲛⲧⲟⲧ**ϥ ⲁϥⲉⲣϩⲟϯ",
+      "english": "When the young man heard this, he was frightened.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲥⲁⲉⲓⲛ ⲁⲙⲁϩⲧⲉ **ⲛⲧⲟⲟⲧ**ϥ ·",
+      "english": "The Physician held His hand.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2349",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4480",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "grasp hand, greet, promise, engage"
+    },
+    {
+      "target": "C4481",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "engagement gift"
+    },
+    {
+      "target": "C4455",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4456",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4463",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4464",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4487",
+      "label": "ϩⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "under the hand of, beside, with"
+    },
+    {
+      "target": "C4488",
+      "label": "ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4459",
+      "label": "ϫⲓϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4467",
+      "label": "ϫⲓϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4482",
+      "label": "ϫⲓⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "receive a promise"
+    },
+    {
+      "target": "C4475",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "give a hand, help"
+    },
+    {
+      "target": "C4476",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "hand, assistance, help"
+    },
+    {
+      "target": "C4458",
+      "label": "ϯϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4466",
+      "label": "ϯϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4474",
+      "label": "ⲁⲧⲕⲁ ⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "continuous, incessant"
+    },
+    {
+      "target": "C4465",
+      "label": "ⲃⲱⲗϣⲧⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "dissolve a guarantee"
+    },
+    {
+      "target": "C4489",
+      "label": "ⲉⲃⲟⲗ ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4486",
+      "label": "ⲉⲃⲟⲗ ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "from"
+    },
+    {
+      "target": "C4472",
+      "label": "ⲉⲓⲛⲉ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "put a hand on"
+    },
+    {
+      "target": "C4471",
+      "label": "ⲉⲓⲣⲉ ⲛⲁⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "endeavour"
+    },
+    {
+      "target": "C4457",
+      "label": "ⲉⲣⲡϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee"
+    },
+    {
+      "target": "C4484",
+      "label": "ⲉⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "to hand of, to"
+    },
+    {
+      "target": "C4473",
+      "label": "ⲕⲱ ⲛⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "\"loosen hand\", cease, despair, renounce"
+    },
+    {
+      "target": "C4468",
+      "label": "ⲙⲉⲧϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4479",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "help"
+    },
+    {
+      "target": "C4462",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4483",
+      "label": "ⲛⲥⲁⲧⲟⲟⲧ⸗",
+      "pos": "ADV",
+      "gloss": "immediately"
+    },
+    {
+      "target": "C4460",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4461",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4477",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4478",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4469",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4470",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4454",
+      "label": "ⲣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "clap hands, beat time, stamp, make music"
+    },
+    {
+      "target": "C4453",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "hand"
+    },
+    {
+      "target": "C12173",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "strike (instrument), clap (hands)"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2937",
+    "demo_lemma": "(n-)ḏr.t",
+    "english": "in the hand; out of the hand; into the hand; by; from, before; through; because of",
+    "german": "in der Hand; aus der Hand; in die Hand; bei; von, vor; durch; wegen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2937"
+  }
+}

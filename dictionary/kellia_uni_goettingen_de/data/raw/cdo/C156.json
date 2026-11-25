@@ -1,0 +1,58 @@
+{
+  "id": "C156",
+  "forms": [
+    {
+      "id": "CF599",
+      "orth": "ϯⲁⲛⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS176",
+      "bibliography": "CD 12b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C154",
+      "label": "ⲁⲛⲁϣ",
+      "pos": "N",
+      "gloss": "oath"
+    },
+    {
+      "target": "C158",
+      "label": "ⲁⲛⲁϣ",
+      "pos": "N",
+      "gloss": "bunch of flowers"
+    },
+    {
+      "target": "C157",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲁⲛⲁϣ",
+      "pos": "N",
+      "gloss": "a swearing"
+    },
+    {
+      "target": "C155",
+      "label": "ⲣⲁⲛⲁϣ",
+      "pos": "V",
+      "gloss": "swear"
+    }
+  ]
+}

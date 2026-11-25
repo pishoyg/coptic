@@ -1,0 +1,114 @@
+{
+  "id": "C10168",
+  "forms": [
+    {
+      "id": "CF26790",
+      "orth": "ⲡⲓⲕⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26792",
+      "orth": "ⲡⲓⲕⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19920,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26791",
+      "orth": "ⲡⲉⲕⲓⲣⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26793",
+      "orth": "ⲡⲓⲕⲣⲓⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13453",
+      "bibliography": "DDGLC",
+      "cu_ID": "1041"
+    },
+    {
+      "id": "CS13454",
+      "bibliography": "DDGLC",
+      "cu_ID": "2129"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϭⲱϣⲧ ⲉⲃⲟⲗ ϫⲉⲙⲏⲡⲱⲥ ⲟⲩⲛ ⲟⲩⲁ ϣⲁⲁⲧ ⲉⲃⲟⲗ ϩⲙⲡⲉϩⲙⲟⲧ ⲙⲡⲛⲟⲩⲧⲉ . ⲙⲏⲡⲱⲥ ⲟⲩⲛ ⲟⲩⲛⲟⲩⲛⲉ ⲙ**ⲡⲓⲕⲣⲓⲁ** ⲉⲥⲣⲏⲧ ⲉϩⲣⲁⲓ ϩⲛⲟⲩⲭⲟⲗⲏ ⲛⲥⲉⲥⲱⲱϥ ⲛϭⲓⲟⲩⲙⲏⲏ ϣⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲥ .",
+      "english": "looking carefully lest there be any man who falls short of the grace of God; lest any root of bitterness springing up trouble you, and many be defiled by it;",
+      "source": "58_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲏⲧ",
+        1,
+        15.389
+      ],
+      [
+        "ⲛⲟⲩⲛⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19532,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2779",
+    "grl_lemma": "πικρία",
+    "grl_meaning": "bitterness",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1403b; Preisigke 2:305"
+  }
+}

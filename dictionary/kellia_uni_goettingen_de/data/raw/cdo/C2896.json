@@ -1,0 +1,745 @@
+{
+  "id": "C2896",
+  "forms": [
+    {
+      "id": "CF7652",
+      "orth": "ⲡⲱⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.7,
+        "rank": 905,
+        "count": 111
+      }
+    },
+    {
+      "orth": "ⲫⲱⲣϫ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.38,
+        "rank": 599,
+        "count": 117
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3316",
+      "bibliography": "CD 271a; KoptHWb 152; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϯϩⲟ ⲟⲩⲛ ⲉⲣⲱⲧⲉⲛ ⲛⲁⲥⲛⲏⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲫⲣⲁⲛ ⲙⲡⲉⲛϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ϩⲓⲛⲁ ⲟⲩⲥⲁϫⲓ ⲛⲟⲩⲱⲧ ⲉⲣⲉⲧⲉⲛϫⲱ ⲙⲙⲟϥ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϣⲧⲉⲙϩⲁⲛ**ⲫⲱⲣϫ** ϣⲱⲡⲓ ϧⲉⲛⲑⲏⲛⲟⲩ ⲛⲧⲉⲧⲉⲛϣⲱⲡⲓ ⲇⲉ ⲉⲣⲉⲧⲉⲛⲥⲉⲃⲧⲱⲧ ϧⲉⲛⲟⲩϩⲏⲧ ⲛⲟⲩⲱⲧ ⲛⲉⲙⲟⲩⲅⲛⲱⲙⲏ ⲛⲟⲩⲱⲧ .",
+      "english": "Now I beg you, brothers, through the name of our Lord, Jesus Christ, that you all speak the same thing and that there be no divisions among you, but that you be perfected together in the same mind and in the same judgment.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϩⲓⲉⲣⲉⲩⲥ ⲇⲉ ⲉⲓ ⲛϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲛϥⲛⲁⲩ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ϩⲛⲟⲩ**ⲡⲱⲣϣ** ⲙⲡϥⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛϭⲓⲡϩⲣⲃ ⲙⲡⲥⲱⲃϩ ϩⲙⲡⲏⲓ ⲙⲛⲛⲥⲁⲛⲥⲉⲥⲱⲗϭ ⲙⲡⲏⲓ ⲡϩⲓⲉⲣⲉⲩⲥ ⲉϥⲉⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲡⲏⲓ ⲉⲧⲃⲉϫⲉⲁⲡⲙⲁⲉⲓⲛ ⲉⲧⲙⲙⲁⲩ ⲗⲟ ϩⲓⲱⲱϥ",
+      "english": "and if the priest shall arrive and enter and see, and behold the plague be not at all spread in the house after the house has been plastered, then the priest shall declare the house clean, because the plague is healed.",
+      "source": "Leviticus 14",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲛⲟⲩϯ ⲅⲁⲣ ⲫⲁ**ⲫⲱⲣϫ** ⲁⲛ ⲡⲉ ⲁⲗⲗⲁ ⲫⲁⲧϩⲓⲣⲏⲛⲏ ⲡⲉ ⲙⲫⲣⲏϯ ⲉⲧϣⲟⲡ ϧⲉⲛⲛⲓⲉⲕⲕⲗⲏⲥⲓⲁ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲛⲏ ⲉⲧⲟⲩⲁⲃ .",
+      "english": "for God is not a God of confusion, but of peace. As in all the assemblies of the saints,",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲙⲟϣⲧϥ ⲙⲡⲙⲉϩⲥⲁϣϥ ⲛϩⲟⲟⲩ ϩⲛⲟⲩ**ⲡⲱⲣϣ** ⲇⲉ ⲉϥϣⲁⲛⲡⲱⲣϣ ⲉⲃⲟⲗ ϩⲙⲡϣⲁⲁⲣ ⲙⲡⲉϥⲥⲱⲙⲁ ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ϫⲱϩⲙ ⲙⲙⲟϥ ⲟⲩϩⲱⲃ ⲛⲥⲱⲃϩ ⲡⲉⲛⲧⲁϥⲡⲉⲓⲣⲉ ϩⲙⲡⲉϥϫⲟⲩϥ",
+      "english": "And the priest shall look upon him on the seventh day; and if the spot be much spread in the skin, then the priest shall pronounce him unclean: it is a plague of leprosy, it has broken out in the ulcer.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲥⲱⲧⲉⲙ ϫⲉⲁϥⲙⲟⲩ ⲛϫⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲩⲟⲩⲱϣ ⲉⲫⲱϣⲉⲛ ⲙⲫⲏ ⲉⲧⲁ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲥⲟⲧⲡϥ ⲉⲧⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲓⲥⲁⲁⲕ ⲡⲉ ⲟⲩⲟϩ ⲉⲧⲁⲩϫⲉⲙⲛⲓⲕⲉⲭⲱⲟⲩⲛⲓ ⲉⲧⲁⲩⲣⲁⲃⲏⲟⲩⲧ ϧⲁϫⲱⲟⲩ ⲉⲁⲩϯⲙⲁϯ ⲛⲉⲙⲅⲉⲱⲣⲅⲓⲟⲥ ⲁϥϣⲱⲡⲓ ⲛϫⲉⲟⲩ**ⲫⲱⲣϫ** ϧⲉⲛⲧⲟⲩϩⲙⲏϯ",
+      "english": "When they heard that the patriarch was dead, wishing to take the side of him whom Christ had chosen, that is, the holy Isaac, and finding that the others who had preceded them had agreed with Georgios, they became divided.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ϩⲟⲉⲓⲧⲉ ϩⲓ**ⲡⲣⲏϣ** ϩⲓⲕⲗⲁϥⲧ · ⲁⲩⲱ ϣⲁϩⲣⲁⲓ ⲉⲟⲩⲉⲗⲁⲭⲓⲥⲧⲟⲛ ⲛϩⲛⲟ ⲛⲟⲩⲱⲙ ·",
+      "english": "Most of all clothes and robes and hoods. And down to the least of things of eating.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓϫ",
+        29,
+        24.087
+      ],
+      [
+        "ⲛ",
+        76,
+        23.334
+      ],
+      [
+        "ⲧⲉⲛϩ",
+        7,
+        21.795
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        33,
+        21.437
+      ],
+      [
+        "ⲛⲉϥ",
+        15,
+        20.387
+      ],
+      [
+        "ϣⲛⲉ",
+        3,
+        20.28
+      ],
+      [
+        "ⲉⲓⲉϣϯ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲁⲅⲏⲓⲛⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲁⲅⲏⲛⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲓⲧⲁⲃⲓⲣⲓⲟⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲁⲥⲃⲁⲉⲙⲡⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ϭⲟⲗϫ",
+        1,
+        19.695
+      ],
+      [
+        "ⲧⲁⲟⲓⲙⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲉⲧⲉⲣⲥⲡⲁⲧⲁⲗⲁⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲟⲩ",
+        31,
+        19.617
+      ],
+      [
+        "ⲁ",
+        28,
+        19.412
+      ],
+      [
+        "ⲛⲟⲩ",
+        11,
+        19.281
+      ],
+      [
+        "ⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ⲙⲁⲧⲁϫⲣⲱⲟⲩ",
+        1,
+        18.695
+      ],
+      [
+        "ϥ",
+        25,
+        18.356
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲃⲟⲗ",
+        141,
+        20.306
+      ],
+      [
+        "ϭⲓϫ",
+        53,
+        19.58
+      ],
+      [
+        "ⲛ",
+        142,
+        17.681
+      ],
+      [
+        "ϣⲁⲁⲣ",
+        9,
+        15.886
+      ],
+      [
+        "ⲁ",
+        67,
+        15.665
+      ],
+      [
+        "ⲛⲉⲩ",
+        26,
+        15.34
+      ],
+      [
+        "ⲡⲱⲣϣ",
+        6,
+        13.981
+      ],
+      [
+        "ⲛⲉϥ",
+        19,
+        13.963
+      ],
+      [
+        "ⲩ",
+        36,
+        13.742
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        9,
+        13.378
+      ],
+      [
+        "ⲉϫⲱ",
+        13,
+        13.27
+      ],
+      [
+        "ⲛⲁ",
+        33,
+        13.244
+      ],
+      [
+        "ⲙ",
+        34,
+        13.036
+      ],
+      [
+        "ⲡⲁⲕⲟⲩⲃⲁⲧⲱⲛ",
+        1,
+        13.021
+      ],
+      [
+        "ⲛⲁⲕⲟⲩⲃⲓⲧⲱⲛ",
+        1,
+        13.021
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        13.021
+      ],
+      [
+        "ϥ",
+        38,
+        12.688
+      ],
+      [
+        "ⲟⲩ",
+        32,
+        12.643
+      ],
+      [
+        "ⲧⲛϩ",
+        4,
+        12.611
+      ],
+      [
+        "ⲕⲗⲟⲟⲗⲉ",
+        5,
+        12.594
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲓⲉ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ⲙⲟϩ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ϧⲁⲣⲟ_2_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϧⲁⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲉ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ⲛⲁ_2_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲙⲟϩ",
+          "ⲙⲟϩ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲟϩ_1_post_ⲡⲱⲣϣ",
+          "ϧⲁⲣⲟ_2_post_ⲙⲟϩ",
+          1
+        ],
+        [
+          "ϧⲁⲣⲟ_2_post_ⲙⲟϩ",
+          "ⲕ_3_post_ϧⲁⲣⲟ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲱⲣϣ_0_node",
+          22
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          14
+        ],
+        [
+          "ⲩ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲡⲱⲣϣ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          10
+        ],
+        [
+          "ⲁ_2_post_ⲉⲓ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲣϣ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲱⲣϣ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲣϣ",
+          6
+        ],
+        [
+          "ϣⲁ_1_pre_ⲡⲱⲣϣ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲱⲣϣ",
+          5
+        ],
+        [
+          "ⲁ_2_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          2
+        ],
+        [
+          "ϭⲓϫ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϫⲃⲃⲉⲥ",
+          1
+        ],
+        [
+          "ϫⲃⲃⲉⲥ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲃⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲓϫ_3_post_ⲛⲉⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲓϫ_3_post_ⲛⲉⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲩ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          7
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          "ⲁ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲣϣ",
+          "ⲛ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲩ_1_pre_ⲡⲱⲣϣ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          5
+        ],
+        [
+          "ϣⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲩ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ⲡⲱⲣϣ",
+          "ⲛ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          "ⲁ_2_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          "ⲩ_2_post_ⲧⲁϣⲉⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲱⲣϣ",
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          "ϥ_1_pre_ⲡⲱⲣϣ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          5
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          "ⲁ_2_post_ϣⲗⲏⲗ",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲥ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          "ϩⲓϫⲙ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲡⲱⲣϣ",
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ϩⲉⲛ_2_post_ϫⲃⲃⲉⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϫⲃⲃⲉⲥ",
+          "ϫⲃⲃⲉⲥ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ϫⲃⲃⲉⲥ_1_post_ⲡⲱⲣϣ",
+          "ⲛ_2_post_ϫⲃⲃⲉⲥ",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ⲇⲉ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲱⲣϣ",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲱⲣϣ",
+          "ⲛⲧⲟϥ_1_post_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲡⲱⲣϣ",
+          "ⲇⲉ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲱⲣϣ",
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲡⲱⲣϣ_0_node",
+          "ⲛⲉϥ_2_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲓ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲱⲣϣ",
+          "ⲡⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          "ⲛⲁ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          "ⲛⲉⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲛ",
+          "ϭⲓϫ_3_post_ⲛⲉⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲱⲣϣ",
+          "ⲛ_1_pre_ⲡⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲱⲣϣ",
+          "ⲛⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_2_post_ⲛ",
+          "ϭⲓϫ_3_post_ⲛⲉⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.2,
+      "rank": 556,
+      "count": 191
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 12336,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2898",
+      "label": "ϫⲓⲛⲫⲱⲣϣ",
+      "pos": "N",
+      "gloss": "act of, place of spreading"
+    },
+    {
+      "target": "C2897",
+      "label": "ⲙⲁ ⲙⲡⲱⲣϣ",
+      "pos": "N",
+      "gloss": "place spread, couch"
+    },
+    {
+      "target": "C2899",
+      "label": "ⲡⲟⲣϣⲥ",
+      "pos": "N",
+      "gloss": "spread table"
+    },
+    {
+      "target": "C2901",
+      "label": "ⲡⲣⲁϣ",
+      "pos": "N",
+      "gloss": "division, branch (of canal)"
+    },
+    {
+      "target": "C2900",
+      "label": "ⲡⲣⲏϣ",
+      "pos": "N",
+      "gloss": "thing spread (mat, cloak)"
+    },
+    {
+      "target": "C2895",
+      "label": "ⲡⲱⲣϣ",
+      "pos": "V",
+      "gloss": "be spread; spread, stretch"
+    }
+  ]
+}

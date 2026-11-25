@@ -1,0 +1,256 @@
+{
+  "id": "C10304",
+  "forms": [
+    {
+      "id": "CF27397",
+      "orth": "ⲡⲣⲟⲕⲟⲡⲧⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF27399",
+      "orth": "ⲡⲣⲟⲕⲟⲡⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3672,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF27398",
+      "orth": "ⲡⲣⲟⲕⲟⲡⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27400",
+      "orth": "ⲡⲣⲟⲕⲟⲡⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3608,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13833",
+      "bibliography": "DDGLC",
+      "cu_ID": "1221"
+    },
+    {
+      "id": "CS13834",
+      "bibliography": "DDGLC",
+      "cu_ID": "10620"
+    },
+    {
+      "id": "CS13835",
+      "bibliography": "DDGLC",
+      "cu_ID": "7601"
+    },
+    {
+      "id": "CS13836",
+      "bibliography": "DDGLC",
+      "cu_ID": "5676"
+    },
+    {
+      "id": "CS13837",
+      "bibliography": "DDGLC",
+      "cu_ID": "10710"
+    },
+    {
+      "id": "CS13838",
+      "bibliography": "DDGLC",
+      "cu_ID": "10817"
+    },
+    {
+      "id": "CS13839",
+      "bibliography": "DDGLC",
+      "cu_ID": "7405"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲕⲣⲓⲧⲏⲥ ⲁϩⲉⲣⲁⲧϥ ϩⲓⲣⲙⲡⲣⲟ · ⲁⲧⲉⲩϣⲏ **ⲡⲣⲟⲕⲟⲡⲧⲉ** ⲁⲡⲉϩⲟⲟⲩ ϩⲱⲛ ⲉϩⲟⲩⲛ ·",
+      "english": "and that the Judge standeth at the door; the evening approacheth, and the day hath declined",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲥⲉⲛⲁ**ⲡⲣⲟⲕⲟⲡⲧⲉ** ⲁⲛ ⲉⲙⲁⲧⲉ . ⲧⲉⲩⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲛⲧϩⲉ ⲉⲛⲧⲁⲧⲁ ⲛⲓⲕⲟⲟⲩⲉ ϣⲱⲡⲉ ⲉⲥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ .",
+      "english": "But they will proceed no further. For their folly will be evident to all men, as theirs also came to be.",
+      "source": "55_2 Timothy_3",
+      "urn": "urn:cts:copticLit:nt.2tim.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧⲉⲩϣⲏ **ⲡⲣⲟⲕⲟⲡⲧⲉ** . ⲁⲡⲉϩⲟⲟⲩ ϩⲱⲛ ⲉϩⲟⲩⲛ ⲙⲁⲣⲛⲕⲱ ϭⲉ ⲛⲥⲱⲛ ⲛⲛⲉϩⲃⲏⲩⲉ ⲙⲡⲕⲁⲕⲉ . ⲛⲧⲛϯ ⲇⲉ ϩⲓⲱⲱⲛ ⲛⲛϩⲟⲡⲗⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ .",
+      "english": "The night is far gone, and the day is near. Let's therefore throw off the works of darkness, and let's put on the armor of light.",
+      "source": "45_Romans_13",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲓⲟⲩⲇⲁⲓ",
+        1,
+        16.428
+      ],
+      [
+        "ⲉⲩϣⲏ",
+        1,
+        16.428
+      ],
+      [
+        "ⲡⲗⲁⲛⲟⲥ",
+        1,
+        13.728
+      ],
+      [
+        "ⲁⲅⲁⲑⲟⲛ",
+        2,
+        12.066
+      ],
+      [
+        ".",
+        6,
+        11.142
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        9.389
+      ],
+      [
+        "ⲏ",
+        2,
+        9.309
+      ],
+      [
+        "ⲁⲥⲉⲃⲏⲥ",
+        1,
+        9.299
+      ],
+      [
+        "ⲩϣⲏ",
+        1,
+        9.106
+      ],
+      [
+        "ⲡⲉⲧϩⲟⲟⲩ",
+        1,
+        8.977
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        8.898
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        8.728
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        2,
+        8.346
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        8.214
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        8.093
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        7.985
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        7.944
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        7.913
+      ],
+      [
+        "ⲁ",
+        4,
+        7.874
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        7.795
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲕⲟⲡⲧⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          "ⲛⲉ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          "ϯ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲡⲣⲟⲕⲟⲡⲧⲉ",
+          "ⲡⲣⲟⲕⲟⲡⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3299,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "1840",
+    "grl_lemma": "προκόπτω",
+    "grl_meaning": "to cut one's way forward, advance",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1486b; Preisigke 2:376"
+  }
+}

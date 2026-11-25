@@ -1,0 +1,136 @@
+{
+  "id": "C2898",
+  "forms": [
+    {
+      "id": "CF7656",
+      "orth": "ϫⲓⲛⲫⲱⲣϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13442,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3318",
+      "bibliography": "CD 271a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲟⲩϩⲃⲱⲥ ⲛⲁⲩⲙⲟⲩⲣ ⲙⲙⲱⲟⲩ ⲛϩⲁⲛⲛⲟϩ ⲛⲁⲩⲓⲣⲓ ⲛϩⲁⲛ**ϫⲓⲛⲫⲱⲣϣ** ⲉⲃⲟⲗ ϧⲁⲧⲉⲛⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ ⲟⲩⲟϩ ⲛⲁⲩⲥⲱ ⲙⲙⲟϥ ϧⲉⲛⲡⲏⲓ ⲙⲡⲟⲩⲛⲟⲩϯ .",
+      "english": "And binding their clothes with cords they have made them curtains near the altar, and they have drunk wine gained by extortion in the house of their God.",
+      "source": "30_Amos_02",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ",
+        1,
+        11.758
+      ],
+      [
+        "ϧⲁⲧⲉⲛ",
+        1,
+        11.51
+      ],
+      [
+        "ⲓⲣⲓ",
+        1,
+        9.685
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲫⲱⲣϣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12877,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2897",
+      "label": "ⲙⲁ ⲙⲡⲱⲣϣ",
+      "pos": "N",
+      "gloss": "place spread, couch"
+    },
+    {
+      "target": "C2899",
+      "label": "ⲡⲟⲣϣⲥ",
+      "pos": "N",
+      "gloss": "spread table"
+    },
+    {
+      "target": "C2901",
+      "label": "ⲡⲣⲁϣ",
+      "pos": "N",
+      "gloss": "division, branch (of canal)"
+    },
+    {
+      "target": "C2900",
+      "label": "ⲡⲣⲏϣ",
+      "pos": "N",
+      "gloss": "thing spread (mat, cloak)"
+    },
+    {
+      "target": "C2895",
+      "label": "ⲡⲱⲣϣ",
+      "pos": "V",
+      "gloss": "be spread; spread, stretch"
+    },
+    {
+      "target": "C2896",
+      "label": "ⲡⲱⲣϣ",
+      "pos": "N",
+      "gloss": "thing spread (mat, coverlet)"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "C4351",
+  "forms": [
+    {
+      "id": "CF10654",
+      "orth": "ⲙⲁⲓϯⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13625,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4929",
+      "bibliography": "CD 418a; ChLCS 59a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲥⲟⲟⲩⲛ ⲡⲁϫⲟⲉⲓⲥ · ϫⲉⲟⲩⲛϩⲁϩ ⲙ**ⲙⲁⲓϯⲧⲱⲛ** ϩⲙⲡⲕⲟⲥⲙⲟⲥ ϩⲓⲁⲡⲓⲥⲧⲟⲥ ⲥⲉⲛⲁϣⲓⲛⲉ ⲛⲥⲁϩⲱⲃ ⲛⲓⲙ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲛ · ⲉⲛⲟⲩⲱϣ ϫⲉⲕⲁⲥ ⲉⲛⲉϭ ⲛⲧϩⲉ ⲛⲁⲡⲟⲗⲟⲅⲓⲍⲉ ⲛⲁⲩ ϩⲛϩⲱⲃ ⲛⲓⲙ ·",
+      "english": "And, O my Lord, Thou knowest that there are very many contentious and unbelieving people who will ask questions of us concerning everything, and we wish to be able to explain unto them everything.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁϩ",
+        1,
+        11.381
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        10.853
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲓϯⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲓⲥⲧⲟⲥ_1_post_ⲙⲁⲓϯⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲁⲓϯⲧⲱⲛ_0_node",
+          "ϩⲓ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          "ⲁⲡⲓⲥⲧⲟⲥ_1_post_ⲙⲁⲓϯⲧⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13222,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C1785",
+      "type": "cf",
+      "label": "love"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4350",
+      "label": "ϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, strife"
+    },
+    {
+      "target": "C4352",
+      "label": "ⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "without strife"
+    },
+    {
+      "target": "C4354",
+      "label": "ⲙⲛⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarrelling"
+    },
+    {
+      "target": "C4353",
+      "label": "ⲙⲛⲧⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "lack of strife"
+    },
+    {
+      "target": "C4357",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "discrepancy"
+    },
+    {
+      "target": "C4355",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4356",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4349",
+      "label": "ⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, quarrel (in ϯⲧⲱⲛ, \"to dispute\", \"to quarrel\")"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "C7694",
+  "forms": [
+    {
+      "id": "CF17453",
+      "orth": "ϭⲱⲗϫ (ⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8553",
+      "bibliography": "CD 814b; KoptHWb 454; DELC 340a; ChLCS 107b"
+    },
+    {
+      "id": "CS8554",
+      "bibliography": "CD 814b; KoptHWb 454; DELC 340a; ChLCS 107b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲩϭⲱⲗϫ **ⲛ**ⲛⲉⲩⲡⲁⲧ** ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": "And they knelt down together on their knees,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲧⲣⲉⲡⲙⲟⲩⲓ ⲇⲉ ϯⲡⲉϥⲟⲩⲟⲓ ⲉϫⲱⲟⲩ ⲁϥⲁϩⲉⲣⲁⲧϥ ϩⲁϩⲧⲛⲛⲉⲧⲟⲩⲁⲁⲃ · **ⲁϥϭⲱⲗϫ **ⲛ**ⲛⲉϥⲡⲁⲧ** ⲁϥⲟⲩⲱϣⲧ ⲛⲁⲩ · ⲁϥⲕⲱ ⲟⲛ ⲉⲧⲉϥⲁⲡⲉ ⲉⲛⲁⲩ ⲉⲡⲉⲥⲏⲧ",
+      "english": "And when the lion advanced to attack them he stood still before the saints, and bent his legs and worshipped them, and he laid his head also down on the ground.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7692",
+      "label": "ϭⲱⲗϫ",
+      "pos": "V",
+      "gloss": "entangle, ensnare; be entwined, implicated; withhold, conceal oneself"
+    },
+    {
+      "target": "C7695",
+      "label": "ϭⲱⲗϫ",
+      "pos": "N",
+      "gloss": "entanglement; abstinence; snare"
+    },
+    {
+      "target": "C7693",
+      "label": "ϭⲱⲗϫ (ⲉ-)",
+      "pos": "V",
+      "gloss": "glue, adhere; withdraw, abstain from"
+    }
+  ]
+}

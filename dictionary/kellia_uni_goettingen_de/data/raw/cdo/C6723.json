@@ -1,0 +1,567 @@
+{
+  "id": "C6723",
+  "forms": [
+    {
+      "id": "CF32035",
+      "orth": "ϩⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2731,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF32034",
+      "orth": "ϩⲛⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.91,
+        "rank": 758,
+        "count": 144
+      }
+    },
+    {
+      "orth": "ϩⲛⲁⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6030,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲛⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4366,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϩⲛⲟⲟⲩ",
+      "dialect": "S",
+      "id": "2225.3"
+    },
+    {
+      "orth": "ϩⲛⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2109,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ϩⲛⲱ",
+      "dialect": "S",
+      "id": "2225.5"
+    },
+    {
+      "orth": "ϩⲛⲁⲩⲉ",
+      "dialect": "A",
+      "id": "2225.6"
+    },
+    {
+      "orth": "ϩⲛⲁⲟⲩⲉ",
+      "dialect": "A",
+      "id": "2225.7"
+    },
+    {
+      "orth": "ϩⲛⲟ",
+      "dialect": "A",
+      "id": "2225.8"
+    },
+    {
+      "orth": "ϩⲛⲱ",
+      "dialect": "A",
+      "id": "2225.9"
+    },
+    {
+      "orth": "ϩⲛⲉ",
+      "dialect": "A",
+      "id": "2225.10"
+    },
+    {
+      "orth": "ϩⲛⲉⲩ",
+      "dialect": "F",
+      "id": "2225.11"
+    },
+    {
+      "orth": "ϩⲛⲉⲉⲩ",
+      "dialect": "F",
+      "id": "2225.12"
+    },
+    {
+      "orth": "ϩⲉⲛⲉⲟⲩ",
+      "dialect": "F",
+      "id": "2225.13"
+    },
+    {
+      "orth": "ϩⲛⲏⲟⲩ",
+      "dialect": "F",
+      "id": "2225.14"
+    },
+    {
+      "orth": "ϩⲉⲉⲩ",
+      "dialect": "F",
+      "id": "2225.15"
+    },
+    {
+      "orth": "ϩⲉⲉⲟⲩ",
+      "dialect": "F",
+      "id": "2225.16"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7437",
+      "bibliography": "CD 692b-693a; CED 289; KoptHWb 380; DELC 306a; ChLCS 93a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓⲗⲟ ϩⲁ**ϩⲛⲁⲩ** ⲛⲓⲙ · ⲛⲧⲉⲧⲉⲥϩⲓⲙⲉ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "and I have never been with that woman since I have been here.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲓⲧⲉ ⲙⲙⲟⲟⲩ ⲛϩⲉⲛϩⲟⲙⲛⲧ ⲡⲁⲣⲁⲧⲉⲩⲁⲥⲟⲩ ϣⲁⲛⲧⲉⲧⲛⲥⲉⲩϩ ⲧⲉⲧⲓⲙⲏ ⲙⲡⲙⲁⲥⲉ ⲉϩⲟⲩⲛ ⲉⲥⲕⲏⲃ ϩⲁϩⲉⲛⲉⲗⲁⲭⲓⲥⲧⲟⲛ ⲛⲁϥ , ⲉϩⲉⲛⲕⲉⲉⲥⲛⲉ ϩⲓ**ϩⲛⲁⲩ** ⲛⲁⲧϣⲁⲩ .",
+      "english": "And you extort them for copper beyond its value until you collect the price of the calf doubled for ones least of flesh, while they are bones on something useless.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲛϥϫⲓⲟⲩⲉ ϩⲛⲗⲁⲁⲩ ⲛ**ϩⲛⲟ** · ϫⲓⲛⲟⲩϩⲱⲥ ⲙⲛⲟⲩⲙⲟⲩⲥ ·",
+      "english": "or steal anything, from a string to a lace.”",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲁⲩⲁⲛ",
+        1,
+        15.35
+      ],
+      [
+        "ⲁⲧϣⲁⲩ",
+        2,
+        13.958
+      ],
+      [
+        "ⲭⲣⲏⲥⲓⲙⲟⲛ",
+        1,
+        13.765
+      ],
+      [
+        "ⲟⲩⲟⲧϩ",
+        1,
+        13.35
+      ],
+      [
+        "ⲡⲉⲧⲉ",
+        1,
+        12.765
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        2,
+        11.595
+      ],
+      [
+        "ⲛ",
+        20,
+        11.527
+      ],
+      [
+        "ⲛⲓⲙ'",
+        1,
+        11.18
+      ],
+      [
+        "ⲟⲩⲱⲧⲛ",
+        1,
+        10.492
+      ],
+      [
+        "ⲗⲟ",
+        2,
+        10.019
+      ],
+      [
+        "ⲁⲩⲁⲛ",
+        1,
+        9.958
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        9.818
+      ],
+      [
+        "ϩⲟⲗⲱⲥ",
+        1,
+        9.678
+      ],
+      [
+        "ⲟⲩⲟⲃϣ",
+        1,
+        9.065
+      ],
+      [
+        "ⲛⲓⲙ",
+        4,
+        9.039
+      ],
+      [
+        "ⲙⲛⲧϫⲱⲱⲣⲉ",
+        1,
+        8.993
+      ],
+      [
+        "ⲉⲣ",
+        1,
+        8.891
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        2,
+        8.827
+      ],
+      [
+        "ⲕⲏ",
+        1,
+        7.932
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        7.839
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲛⲁⲩ_0_node",
+          13
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ϩⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲛⲁⲩ",
+          2
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲟⲟⲡ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ_b",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          5
+        ],
+        [
+          "ⲟⲩⲱⲧⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϣⲓⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ϣⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲥⲓⲙⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲁⲩ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ",
+          "ϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϩⲛⲁⲩ_0_node",
+          "ⲛⲓⲙ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ϩⲛⲁⲩ",
+          "ⲉⲧ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲛⲁⲩ",
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉⲧ",
+          "ⲛⲁ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ϩⲛⲁⲩ_0_node",
+          "ⲛⲧⲉ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲛⲁⲩ",
+          "ⲧⲉ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛⲧⲉ",
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          "ⲉⲧ_4_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲥϩⲓⲙⲉ",
+          "ⲙⲙⲁⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ",
+          "ⲟⲩ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲛⲁⲩ",
+          "ϩⲛⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ϩⲛⲁⲩ_0_node",
+          "ⲙ_1_post_ϩⲛⲁⲩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲛⲁⲩ",
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ",
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲛⲁⲩ_b",
+          "ⲛⲉ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲛⲁⲩ",
+          "ϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ϩⲛⲁⲩ_0_node",
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          "ⲟⲩⲱⲧⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϩⲛⲁⲩ",
+          "ϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          "ϣⲓⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲓⲛⲉ_2_post_ⲛ",
+          "ϩⲙ_3_post_ϣⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ϣⲓⲛⲉ",
+          "ⲡ_4_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲛⲁⲩ",
+          "ⲟⲩ_1_pre_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          "ⲭⲣⲏⲥⲓⲙⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲥⲓⲙⲟⲛ_2_post_ⲛ",
+          "ⲉ_1_post_ϩⲛⲁⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲛⲁⲩ",
+          "ϩⲛⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲛⲁⲩ",
+          "ⲁⲧϣⲁⲩ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.24,
+      "rank": 1527,
+      "count": 38
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6726",
+      "label": "ϫⲓϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "bring offering, tribute(?)"
+    },
+    {
+      "target": "C6725",
+      "label": "ϯϩⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "pay fee"
+    },
+    {
+      "target": "C6724",
+      "label": "ⲙⲛⲧⲁⲧϩⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "state of being without property, poverty"
+    }
+  ],
+  "etym": {
+    "egy_num": "106280",
+    "egy_lemma": "ḥn.w",
+    "demo_num": "d4131",
+    "demo_lemma": "ḥnw",
+    "english": "jar; chattel(s)",
+    "german": "Topf; Behältnis; Sachen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/106280",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4131"
+  }
+}

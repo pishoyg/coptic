@@ -1,0 +1,321 @@
+{
+  "id": "C11140",
+  "forms": [
+    {
+      "id": "CF30795",
+      "orth": "ϩⲓⲥⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30798",
+      "orth": "ϩⲓⲥⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5411,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF30796",
+      "orth": "ϩⲓⲥⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30797",
+      "orth": "ϩⲓⲥⲟ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30799",
+      "orth": "ⲫⲓⲥⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15610",
+      "bibliography": "DDGLC",
+      "cu_ID": "3402"
+    },
+    {
+      "id": "CS15611",
+      "bibliography": "DDGLC",
+      "cu_ID": "4350"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲕⲉⲗⲉⲩⲉ ⲛⲧⲉⲩⲛⲟⲩ ⲛϭⲓⲁⲡⲁ ⲑⲉⲟⲫⲓⲗⲟⲥ ⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁⲩⲉⲓⲛⲉ ⲙⲡ**ϩⲓⲥⲟⲛ** ⲙⲡⲧⲁϣⲉⲟⲉⲓϣ",
+      "english": "The archbishop Apa Theophilus commanded (it) right away and they brought the copy of the sermon.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "▢ ⲡⲙⲟⲟⲩ ϭⲉ ⲙⲛⲡⲉⲥⲟⲩⲟ ⲙⲛⲡⲉϭⲣⲟⲟϭ ⲁⲩⲱ ⲡⲉⲑⲣⲟⲛⲟⲥ ⲙⲡⲉⲓⲱⲧ ⲡⲉⲓⲧⲱϣ ⲛⲟⲩⲱⲧ ⲡⲉⲧϣⲟⲟⲡ ⲙⲙⲟⲟⲩ ⲁⲩⲱ ϩⲉⲛ**ϩⲓⲥⲟⲛ** ⲛⲉ ⲙⲛⲡϣⲏⲣⲉ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "'Therefore the water, and the wheat-plant, and grain, and the throne of the Father stand in one category, and they are the equals of the Son of God.",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲁⲛ ⲙⲡⲟⲩⲁ ⲙⲙⲟⲟⲩ ⲡⲉ ⲡ**ϩⲓⲥⲟⲛ** ⲡⲁⲓ ⲡⲉⲧⲕⲱⲧⲉ ⲉⲡⲕⲁϩ ⲧⲏⲣϥ ⲛⲛⲉⲩⲉⲓⲗⲁⲧ ⲉϥⲙⲙⲁⲩ ⲛϭⲓⲡⲛⲟⲩⲃ",
+      "english": "The name of the one, Phisom, this it is which encircles the whole land of Evilat, where there is gold.",
+      "source": "Genesis 2",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϣⲉⲟⲉⲓϣ",
+        2,
+        14.051
+      ],
+      [
+        "ⲡ",
+        7,
+        10.919
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        10.857
+      ],
+      [
+        "ⲙ",
+        4,
+        9.351
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        9.157
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.835
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.504
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.981
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        7.327
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.587
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        6.29
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ⲩ",
+        1,
+        3.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲥⲟⲛ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲓⲥⲟⲛ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧⲁϣⲉⲟⲉⲓϣ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓⲥⲟⲛ_0_node",
+          "ⲙ_1_post_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲓⲥⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲁϣⲉⲟⲉⲓϣ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲥⲟⲛ",
+          "ϩⲉⲛ_1_pre_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲓⲥⲟⲛ",
+          "ϩⲓⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲛ_0_node",
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲥⲟⲛ",
+          "ϩⲓⲥⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲛ_0_node",
+          "ⲡⲁⲓ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡ",
+          "ⲡ_1_post_ϩⲓⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ϩⲓⲥⲟⲛ",
+          "ⲉⲧ_3_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡⲁⲓ",
+          "ⲕⲱⲧⲉ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4984,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "962",
+    "grl_lemma": "ἴσον",
+    "grl_meaning": "equal, equivalent, copy",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke Fwb, 103"
+  }
+}

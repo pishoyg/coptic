@@ -1,0 +1,57 @@
+{
+  "id": "C7440",
+  "forms": [
+    {
+      "id": "CF16939",
+      "orth": "ϫⲟⲟⲩϥ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ϫⲟⲟⲩϥ",
+      "dialect": "S",
+      "id": "2474.1"
+    },
+    {
+      "orth": "ϭⲟⲙϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11600,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲟⲛϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6424,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8233",
+      "bibliography": "CD 795a; CED 322; KoptHWb 438; DELC 333a; ChLCS 105a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "174970",
+    "egy_lemma": "ṯwfj",
+    "demo_num": "d7719",
+    "demo_lemma": "ḏwf",
+    "english": "papyrus flowers; papyrus marsh",
+    "german": "Papyruspflanze; Papyrusdickicht",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/174970",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7719"
+  }
+}

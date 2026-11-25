@@ -1,0 +1,648 @@
+{
+  "id": "C9451",
+  "forms": [
+    {
+      "id": "CF23955",
+      "orth": "ⲕⲗⲏⲣⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23956",
+      "orth": "ⲕⲗⲏⲣⲓⲕⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3382,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF23957",
+      "orth": "ⲕⲗⲏⲣⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2304,
+        "count": 23
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11971",
+      "bibliography": "DDGLC",
+      "cu_ID": "2057"
+    },
+    {
+      "id": "CS11972",
+      "bibliography": "DDGLC",
+      "cu_ID": "10923"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ⲉⲧⲁⲩⲫⲟϩ ⲉϯⲃⲁⲕⲓ ⲣⲁⲕⲟϯ ⲁⲩⲓ ⲉⲃⲟⲗ ⲉϩⲣⲁϥ ⲛϫⲉⲡⲓⲙⲏϣ ⲧⲏⲣϥ ⲉⲣⲉⲛⲓ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ϥⲁⲓ ⲛⲛⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲉⲙⲛⲓⲥⲧⲁⲩⲣⲟⲥ ⲛⲉⲙϩⲁⲛⲕⲩⲣⲱⲛ ⲉⲩⲙⲟϩ",
+      "english": "And when they had reached the city of Alexandria, it came to pass that the whole crowd went out: the clerics carried the gospels, crosses and lit candles.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲛⲉ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ⲙⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉⲧⲛⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲛⲧⲉⲕⲙⲛⲧⲡⲉⲧⲟⲩⲁⲁⲃ ⲉⲧⲣⲉⲕⲧⲁⲙⲟⲛ ϫⲉⲟⲩ ⲡⲉ ⲡⲉⲓⲧⲩⲡⲟⲥ ⲛⲧⲁⲕⲁⲁϥ ϫⲉⲁⲛⲣϣⲡⲏⲣⲉ ⲧⲏⲣⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡϩⲱⲃ ·",
+      "english": "the clergy said unto the Archbishop, 'We entreat thee and the holy woman to explain unto us the meaning of this symbolic act which thou hast performed, for we are all wondering about the matter, and what it meaneth.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲥⲱⲧⲉⲙ ⲇⲉ ⲛϫⲉⲛⲉϥⲥⲛⲏⲟⲩ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ ⲉⲧϧⲉⲛⲡⲓⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲉϣⲓⲏⲧ ⲁⲩⲓ ϩⲁⲣⲟϥ ⲁⲩⲉⲣⲡⲉϥϣⲉⲙϣⲓ ϣⲁⲧⲉⲡϭⲟⲉⲓⲥ ϫⲉⲙⲡⲉϥϣⲓⲛⲓ . ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉϥⲛⲁⲙⲧⲟⲛ ⲙⲙⲟϥ ⲛϫⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲛⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲧⲧⲁⲓⲏⲟⲩⲧ ⲛⲁⲩϩⲉⲙⲥⲓ ϧⲁⲧⲟⲧϥ ⲛϫⲉϩⲁⲛⲙⲏϣ ⲛϩⲁⲅⲓⲟⲥ ⲉⲩⲟⲩⲁⲃ ⲉⲧⲉϩⲁⲛⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲉ ⲛⲉⲙϩⲁⲛ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ⲛⲉⲙϩⲁⲛⲙⲟⲛⲁⲭⲟⲥ .",
+      "english": "When his spiritual brothers who were in the desert of Scete heard of it, they came to him, they cared for him until the Lord visited him. And when the holy and glorious archbishop was about to rest, it happened that crowds of blessed saints, bishops, clerics, monks, were sitting near him.",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲙⲡⲉϥϯ ⲛⲁⲩ · ⲁⲗⲗⲁ ⲡⲉϫⲁϥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲉⲣⲉⲡⲁⲉⲓⲱⲧ ⲙⲟⲥⲧⲉ ⲙⲡⲉⲧⲛⲧⲁϥ · ⲉϥϫⲱ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲕⲁⲕⲱⲥ · ⲙⲏ ⲉⲣⲉⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ ⲥⲉⲏⲣⲡ · ⲁⲗⲗⲁ ⲛⲉ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ⲉⲧⲥⲱ ⲙⲙⲟⲟⲩ ·",
+      "english": "the son would not give them but said (to himself), 'Verily my father hated the things which belonged to him,' and he spake out loud with evil words, saying, 'It is not Saint Victor who drinketh the wine, but it is the clergy who drink it;",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲁϥⲉⲣⲟⲩⲛⲓϣϯ ⲛϣⲁⲓ ⲉⲛⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲉⲙⲛⲓ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ⲛϫⲉⲡⲓⲙⲁⲓⲛⲟⲩϯ ⲛⲁⲣⲭⲱⲛ ⲕⲩⲣⲓⲟⲥ ⲓⲥⲁⲁⲕ ⲡⲓⲭⲁⲣⲧⲟⲗⲁⲣⲓⲟⲥ .",
+      "english": "And on that day, Isaac the truly God-loving tax collector made a celebration for the bishops and clerics.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲉ**ⲕⲗⲏⲣⲓⲕⲟⲥ** ⲧⲁⲙⲉⲡⲁⲉⲓⲱⲧ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲡϣⲁϫⲉ",
+      "english": "and the clergy informed my holy father concerning the matter.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲯⲁⲗⲧⲏⲥ",
+        1,
+        17.373
+      ],
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        3,
+        15.77
+      ],
+      [
+        "ⲙⲁⲓⲛⲟⲩϯ",
+        1,
+        13.566
+      ],
+      [
+        "ⲛⲓ",
+        8,
+        12.896
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        1,
+        12.051
+      ],
+      [
+        "ⲛⲉⲙ",
+        5,
+        10.886
+      ],
+      [
+        "ⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ",
+        1,
+        10.659
+      ],
+      [
+        "ϥⲁⲓ",
+        1,
+        10.069
+      ],
+      [
+        "ϩⲁⲛ",
+        3,
+        9.746
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.649
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.569
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        6.478
+      ],
+      [
+        ".",
+        2,
+        6.294
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.058
+      ],
+      [
+        "ⲛ",
+        2,
+        5.269
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        4.272
+      ],
+      [
+        "ⲓ",
+        1,
+        4.254
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        3.449
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        3.441
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        2.758
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲁⲓⲛⲟⲩⲧⲉ",
+        5,
+        17.158
+      ],
+      [
+        "ⲛⲉ",
+        22,
+        16.168
+      ],
+      [
+        "ⲑⲁⲃⲙⲁⲍⲉ",
+        1,
+        16.074
+      ],
+      [
+        "ⲡⲁⲛ‐ϩⲱⲗⲟⲙⲁ",
+        1,
+        16.074
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        3,
+        14.472
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩⲥ",
+        1,
+        13.753
+      ],
+      [
+        "ⲙ",
+        18,
+        13.337
+      ],
+      [
+        "ⲁⲙⲟⲕ",
+        1,
+        12.905
+      ],
+      [
+        "ⲙⲁⲓⲣⲱⲙⲉ",
+        1,
+        11.074
+      ],
+      [
+        "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+        1,
+        10.753
+      ],
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+        1,
+        10.753
+      ],
+      [
+        "ⲁ",
+        10,
+        10.486
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        3,
+        10.245
+      ],
+      [
+        "ϫⲉ",
+        7,
+        10.045
+      ],
+      [
+        "ϯⲙⲉ",
+        1,
+        10.03
+      ],
+      [
+        "ⲡⲉⲥⲩⲛⲑⲓⲟⲥ",
+        1,
+        9.945
+      ],
+      [
+        "ϭⲟⲓⲗⲉ",
+        1,
+        9.789
+      ],
+      [
+        "ⲣⲏⲥ",
+        1,
+        9.753
+      ],
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        9.648
+      ],
+      [
+        "ϭⲗⲟϭ",
+        1,
+        9.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          3
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          3
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          5
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲯⲁⲗⲧⲏⲥ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲛⲓ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ϩⲁⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          "ⲛⲓ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲯⲁⲗⲧⲏⲥ",
+          "ⲯⲁⲗⲧⲏⲥ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          22
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          13
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          6
+        ],
+        [
+          "ⲙⲁⲓⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲩⲣⲓⲅⲙⲁ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϯⲙⲉ",
+          1
+        ],
+        [
+          "ϯⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          3
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲁⲙⲟⲕ",
+          1
+        ],
+        [
+          "ⲁⲙⲟⲕ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲥⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          10
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲛⲉ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲙ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲙⲁⲓⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲁⲓⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          "ⲙⲛ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          "ⲡⲉϥ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲕⲩⲣⲓⲅⲙⲁ",
+          "ⲕⲩⲣⲓⲅⲙⲁ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲡⲉϥ_3_post_ϯⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ϯⲙⲉ",
+          "ϯⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ⲡ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲗⲏⲣⲓⲕⲟⲥ_0_node",
+          "ⲧ_2_post_ⲁⲙⲟⲕ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲁⲙⲟⲕ",
+          "ⲁⲙⲟⲕ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ϩⲛ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲉⲕⲕⲗⲏⲥⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲛⲉ_1_pre_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲗⲏⲣⲓⲕⲟⲥ",
+          "ⲥⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲱ_2_post_ⲉⲧ",
+          "ⲙⲙⲟ_3_post_ⲥⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 2980,
+      "count": 5
+    },
+    "S": {
+      "rate": 0.14,
+      "rank": 2027,
+      "count": 23
+    }
+  },
+  "etym": {
+    "grl_ID": "1134",
+    "grl_lemma": "κληρικός",
+    "grl_meaning": "cleric",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 959a; Preisigke 1:801"
+  }
+}

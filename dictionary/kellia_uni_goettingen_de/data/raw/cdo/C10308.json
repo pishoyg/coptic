@@ -1,0 +1,46 @@
+{
+  "id": "C10308",
+  "forms": [
+    {
+      "id": "CF27407",
+      "orth": "ⲡⲣⲟⲛⲟⲏⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27409",
+      "orth": "ⲡⲣⲟⲛⲟⲏⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27408",
+      "orth": "ⲡⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11524,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13843",
+      "bibliography": "DDGLC",
+      "cu_ID": "1930"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1843",
+    "grl_lemma": "προνοητής",
+    "grl_meaning": "supervisor, administrator",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1491a; Preisigke 2:379"
+  }
+}

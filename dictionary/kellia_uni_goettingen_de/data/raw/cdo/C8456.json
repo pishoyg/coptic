@@ -1,0 +1,375 @@
+{
+  "id": "C8456",
+  "forms": [
+    {
+      "id": "CF19760",
+      "orth": "ⲁⲣⲭⲁⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19763",
+      "orth": "ⲁⲣⲭⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1805,
+        "count": 36
+      }
+    },
+    {
+      "id": "CF19762",
+      "orth": "ⲁⲣⲭⲁⲓⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19761",
+      "orth": "ⲁⲣⲭⲁⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2532,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF19764",
+      "orth": "ⲁⲣⲭⲁⲓⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19765",
+      "orth": "ⲁⲣⲭⲉⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1576,
+        "count": 23
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9821",
+      "bibliography": "DDGLC",
+      "cu_ID": "5205"
+    },
+    {
+      "id": "CS9822",
+      "bibliography": "DDGLC",
+      "cu_ID": "325"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲛⲕⲉⲭⲱⲟⲩⲛⲓ ⲇⲉ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲏⲗⲓⲁⲥ ⲡⲉ ϩⲁⲛⲕⲉⲭⲱⲟⲩⲛⲓ ⲇⲉ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲡⲣⲟⲫⲏⲧⲏⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩⲁⲓ ⲛⲛⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲛ**ⲁⲣⲭⲉⲟⲥ**",
+      "english": "But others said, 'He is Elijah.' Others said, 'He is a prophet, or like one of the prophets.'",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲁⲩⲣϩⲏⲃⲉ ⲉⲙⲁⲧⲉ ⲉⲙⲁⲧⲉ ϫⲓⲛⲙ ....... ⲛⲉⲛ .... ⲉ ⲙⲛ**ⲁⲣⲭⲁⲓⲟⲥ** ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲁⲣⲉⲧⲉⲛⲥⲱⲧⲉⲙ ϫⲉⲁⲩϫⲟⲥ ⲛⲛⲓ**ⲁⲣⲭⲉⲟⲥ** ϫⲉⲛⲛⲉⲕⲱⲣⲕ ⲛⲛⲟⲩϫ ⲉⲕⲉϯ ⲇⲉ ⲛⲛⲉⲕⲁⲛⲁⲩϣ ⲙⲡϭⲟⲓⲥ .",
+      "english": "'Again you have heard that it was said to them of old time, 'You shall not make false vows, but shall perform to the Lord your vows,'",
+      "source": "01_Matthew_05",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁϩⲁϩ ⲛϣⲏⲣⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲗⲩⲡⲉⲓ ⲛⲛⲉⲛⲉⲓⲟⲧⲉ ⲛ**ⲁⲣⲭⲁⲓⲟⲥ** ·",
+      "english": "Therefore just as many sinful children cause grief to our ancient ancestors,",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲣⲉⲣⲫⲙⲉⲩⲓ ⲛⲛⲉⲛⲁⲛⲟⲙⲓⲁ ⲛ**ⲁⲣⲭⲉⲟⲥ** ⲙⲁⲣⲟⲩⲉⲣϣⲟⲣⲡ ⲛⲧⲁϩⲟⲛ ⲛⲭⲱⲗⲉⲙ ⲛϫⲉⲛⲉⲕⲙⲉⲧϣⲉⲛϩⲏⲧ ϫⲉⲁⲛⲉⲣϩⲏⲕⲓ ⲉⲙⲁϣⲱ",
+      "english": "For they have devoured Jacob, and laid his place waste.",
+      "source": "19_Psalmi_78",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:78",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ⲛⲁⲓ ⲙⲛϩⲉⲛⲕⲟⲟⲩⲉ ϩⲛⲛⲉϩⲓⲟⲙⲉ ⲉⲧⲟⲩⲁⲁⲃ ⲛ**ⲁⲣⲭⲁⲓⲟⲥ** ⲛⲉⲩⲱϣ ⲡⲉ ⲉϩⲣⲁⲓ ⲉⲡϫⲟⲉⲓⲥ ⲉⲩⲧⲱⲃϩ · ⲁⲩⲱ ⲉⲩⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲉⲧⲙⲧⲣⲉⲩϣⲱⲡⲉ ⲛⲁϭⲣⲏⲛ ·",
+      "english": "given that these women and others of the ancient holy women called out to the Lord, praying and beseeching that they not be barren women,",
+      "source": "Abraham Our Father: YA 525-30",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:10-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        69,
+        16.965
+      ],
+      [
+        "ⲡⲣⲟⲫⲏⲧⲏⲥ",
+        8,
+        15.357
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        7,
+        14.678
+      ],
+      [
+        "ⲧⲏⲣⲁⲛⲟⲥ",
+        1,
+        14.428
+      ],
+      [
+        "ⲕⲩⲡⲣⲓⲟⲥ",
+        1,
+        13.843
+      ],
+      [
+        "ⲛⲕⲓⲥⲱⲛ",
+        1,
+        13.428
+      ],
+      [
+        "ⲛⲉ",
+        13,
+        13.244
+      ],
+      [
+        "ϩⲁϩ",
+        5,
+        13.177
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        7,
+        13.177
+      ],
+      [
+        "ⲛⲉⲛ",
+        6,
+        13.158
+      ],
+      [
+        "ⲭⲉⲓⲙⲁⲣⲣⲟⲥ",
+        2,
+        13.036
+      ],
+      [
+        "ⲙⲛⲁ",
+        1,
+        12.843
+      ],
+      [
+        "ⲡ",
+        19,
+        12.071
+      ],
+      [
+        "ⲙⲛ",
+        11,
+        11.852
+      ],
+      [
+        "ϩⲟϥ",
+        2,
+        11.406
+      ],
+      [
+        "ⲁⲥⲕⲏⲧⲏⲥ",
+        1,
+        11.18
+      ],
+      [
+        "ⲉ",
+        14,
+        11.069
+      ],
+      [
+        "ⲁⲑⲉⲧⲓ",
+        1,
+        11.036
+      ],
+      [
+        "ⲁⲧϣⲁⲩ",
+        1,
+        11.036
+      ],
+      [
+        "ⲅⲓⲅⲁⲥ",
+        1,
+        10.905
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲭⲁⲓⲟⲥ_0_node",
+          29
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲅⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲣⲉ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲓⲥⲁⲁⲕ",
+          1
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲓⲁⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲓⲁⲕⲱⲃ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲱⲩⲥⲏⲥ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲁⲣⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲁⲣⲱⲛ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲭⲁⲓⲟⲥ_0_node",
+          "ⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲙⲁⲅⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲅⲟⲥ_2_post_ⲙ",
+          "ⲉ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ϩⲛ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲣⲉ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲁⲓⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲁⲓⲟⲥ_0_node",
+          "ⲁⲃⲣⲁϩⲁⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲙⲛ_2_post_ⲓⲥⲁⲁⲕ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲓⲥⲁⲁⲕ",
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲙⲛ_2_post_ⲓⲁⲕⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲓⲁⲕⲱⲃ",
+          "ⲓⲁⲕⲱⲃ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲁⲓⲟⲥ_0_node",
+          "ⲙⲱⲩⲥⲏⲥ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲱⲩⲥⲏⲥ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          "ⲙⲛ_2_post_ⲁⲁⲣⲱⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲁⲣⲱⲛ",
+          "ⲁⲁⲣⲱⲛ_1_post_ⲁⲣⲭⲁⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.23,
+      "rank": 1573,
+      "count": 36
+    }
+  },
+  "etym": {
+    "grl_ID": "288",
+    "grl_lemma": "ἀρχαῖος",
+    "grl_meaning": "ancient, old, origin",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 251a; Preisigke 1:218"
+  }
+}

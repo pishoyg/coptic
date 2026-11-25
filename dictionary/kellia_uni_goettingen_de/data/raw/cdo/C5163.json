@@ -1,0 +1,318 @@
+{
+  "id": "C5163",
+  "forms": [
+    {
+      "id": "CF12292",
+      "orth": "ⲟⲩⲟⲥⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4588,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲥⲉⲣ",
+      "dialect": "B",
+      "id": "1743.1"
+    },
+    {
+      "orth": "ⲃⲟⲥⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4251,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5797",
+      "bibliography": "CD 492ab; CED 216; KoptHWb 277; DELC 238a; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡ**ⲟⲩⲟⲥⲣ** ⲥⲛⲁⲩ ϩⲓⲱⲱϥ · ⲉⲩϩⲓⲛⲉ ⲙⲙⲟϥ · ⲉⲧⲉⲛⲁⲓ ⲛⲉ ⲧⲇⲓⲁⲑⲏⲕⲏ ⲥⲛⲧⲉ ⲉⲕⲙⲉⲗⲉⲧⲁ ⲙⲙⲟⲟⲩ · ⲛⲁⲓ ⲛⲉⲧⲛⲁϫⲓⲧⲕ ⲉⲡⲙⲁ ⲙⲙⲟⲟⲛⲉ ⲉⲧⲛⲁⲛⲟⲩϥ ·",
+      "english": "It hath two steering oars, wherewith it is guided, and these are the Testaments, whereon if thou shalt meditate they will bring thee unto a good place for tying up thy boat.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲟⲩⲃⲉⲕⲉ ⲙⲛⲛⲉⲧⲧⲏϩ ⲛⲙⲙⲉ ⲁⲩⲱ ⲛⲉⲧⲥⲉⲕ **ⲟⲩⲟⲥⲣ** ϩⲁⲣⲟⲙⲛⲛⲟⲩⲣⲉϥϩⲙⲙⲉ ⲁⲩⲱ ⲛⲉⲧϫⲓϣⲟϫⲛⲉ ⲛⲙⲙⲉ ⲙⲛⲛⲉⲧⲧⲏϩ ⲛⲙⲙⲉ ⲁⲩⲱ ⲛⲟⲩⲣⲱⲙⲉ ⲧⲏⲣⲟⲩ ⲉⲧⲙⲓϣⲉ ⲁⲩⲱ ⲉⲧⲉⲛⲙⲉ ⲁⲩⲱ ⲧⲟⲩⲥⲟⲟⲩϩⲥ ⲧⲏⲣⲥ ⲥⲉⲛⲁϩⲉ ϩⲛⲧⲟⲩⲙⲏⲧⲉ ϩⲙⲡϩⲏⲧ ⲛⲧⲑⲁⲗⲁⲥⲥⲁ ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡⲟⲩϩⲉ",
+      "english": "Thy forces, and thy gain, and that of thy traders, and thy rowers, and thy pilots, and thy counselors, and they that traffic with thee, and all thy warriors that are in thee: and all thy company in the midst of thee shall perish in the heart of the sea, in the day of thy fall.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲥⲉⲕ **ⲟⲩⲟⲥⲣ** ϩⲁⲣⲟⲛⲉⲩⲥⲱⲕ ⲙⲙⲟϩⲙⲡϩⲏⲧ ⲛⲧⲑⲁⲗⲁⲥⲥⲁ ϩⲛⲟⲩⲙⲟⲟⲩ ⲉⲛⲁϣⲱϥ ⲡⲧⲟⲩⲣⲏⲥ ⲁϥⲑⲙⲕⲟ ⲛⲟⲩϭⲟⲙ ⲛⲉⲩϣⲟⲟⲡ ϩⲙⲡϩⲏⲧ ⲛⲧⲉⲑⲁⲗⲁⲥⲥⲁ",
+      "english": "Thy rowers have brought thee into great waters: the south wind has broken thee in the heart of the sea.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩⲣⲉϥϩⲙⲙⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ⲣⲉϥⲥⲱⲕ",
+        1,
+        17.013
+      ],
+      [
+        "ⲥⲉⲕ",
+        2,
+        15.655
+      ],
+      [
+        "ⲥⲟⲣ",
+        1,
+        14.013
+      ],
+      [
+        "ⲥⲁⲃⲉⲉⲩ",
+        1,
+        13.554
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        2,
+        11.861
+      ],
+      [
+        "ⲛ",
+        11,
+        11.602
+      ],
+      [
+        "ⲥⲱⲕ",
+        1,
+        10.884
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        9.732
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        1,
+        9.554
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        8.996
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        8.868
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        8.335
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.653
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.517
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        6.342
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.231
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲟⲥⲣ_0_node",
+          6
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲉⲉⲩ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲟⲣ_4_post_ⲥⲁⲃⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲛ_5_post_ⲥⲟⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲟⲩⲟⲥⲣ",
+          "ⲟⲩⲟⲥⲣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲥⲣ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲥⲣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲟⲩⲟⲥⲣ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          "ⲛ_4_post_ⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲥⲣ_0_node",
+          "ⲛ_1_post_ⲟⲩⲟⲥⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲟⲥⲣ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲥⲁⲃⲉⲉⲩ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲁⲃⲉⲉⲩ_3_post_ⲟⲩ",
+          "ⲥⲟⲣ_4_post_ⲥⲁⲃⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲥⲟⲣ_4_post_ⲥⲁⲃⲉⲉⲩ",
+          "ⲛ_5_post_ⲥⲟⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4180,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5165",
+      "label": "ⲣⲉϥⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "pos": "N",
+      "gloss": "puller of oar, rower"
+    },
+    {
+      "target": "C5164",
+      "label": "ⲥⲉⲕⲟⲩⲟⲥⲣ",
+      "pos": "V",
+      "gloss": "row"
+    }
+  ],
+  "etym": {
+    "egy_num": "49620",
+    "egy_lemma": "wsr",
+    "demo_num": "d1512",
+    "demo_lemma": "wsr",
+    "english": "oar",
+    "german": "Ruder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/49620",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1512"
+  }
+}

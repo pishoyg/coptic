@@ -1,0 +1,45 @@
+{
+  "id": "C2197",
+  "forms": [
+    {
+      "id": "CF6112",
+      "orth": "ⲡⲓⲙⲁϣ ⲛⲧⲉⲡⲓⲕⲁⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2539",
+      "bibliography": "CD 201b; KoptHWb 107"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2195",
+      "label": "ⲙⲁϣⲉ",
+      "pos": "N",
+      "gloss": "balance"
+    },
+    {
+      "target": "C2196",
+      "label": "ⲙⲁϣⲉ",
+      "pos": "N",
+      "gloss": "balance"
+    },
+    {
+      "target": "C12221",
+      "label": "ⲙⲁϣⲉⲥⲱⲡ",
+      "pos": "N",
+      "gloss": "counting-balance"
+    }
+  ]
+}

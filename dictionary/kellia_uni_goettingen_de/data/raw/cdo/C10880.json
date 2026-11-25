@@ -1,0 +1,221 @@
+{
+  "id": "C10880",
+  "forms": [
+    {
+      "id": "CF29672",
+      "orth": "ⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29673",
+      "orth": "ⲫⲟⲣⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29674",
+      "orth": "ⲫⲟⲣⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29675",
+      "orth": "ⲫⲟⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11318,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15024",
+      "bibliography": "DDGLC",
+      "cu_ID": "552"
+    },
+    {
+      "id": "CS15025",
+      "bibliography": "DDGLC",
+      "cu_ID": "15478"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ · ⲉϥⲣⲓⲙⲉ · ⲁϥⲃⲱⲕ ⲉⲡⲉϥⲏⲓ ⲉϥⲙⲟⲕϩ ⲛϩⲏⲧ ⲉⲙⲁⲧⲉ · ⲁⲧⲉⲧⲛⲉⲓⲙⲉ ϫⲉⲙⲡⲉⲓϣⲱϥⲧ ϩⲛⲧⲁⲣⲭⲏ ⲙⲡⲉⲓⲉⲅⲕⲱⲙⲓⲟⲛ ⲛⲧⲉⲣⲓ ϫⲟⲟⲥ ϫⲉⲟⲩⲡⲛⲉⲩⲙⲁ ⲧⲟ **ⲫⲟⲣⲟⲥ** ϩⲱⲱϥ ⲡⲉ ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲡⲉⲥⲩⲛⲑⲓⲟⲥ ·",
+      "english": "Now ye know, (O my beloved,) that in the beginning of this Encomium I did not fail to say that the blessed man Apa Pisentius was endowed with the gift of the Spirit,",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟⲛⲉⲥⲩ",
+        1,
+        19.695
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.609
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲟ",
+        1,
+        13.479
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        10.46
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        10.412
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲫⲟⲣⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲟ_1_pre_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲫⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲱ_1_post_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲱⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_2_pre_ⲡⲛⲉⲩⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_1_pre_ⲫⲟⲣⲟⲥ",
+          "ⲧⲟ_1_pre_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲟ_1_pre_ⲫⲟⲣⲟⲥ",
+          "ⲫⲟⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲫⲟⲣⲟⲥ_0_node",
+          "ϩⲱⲱ_1_post_ⲫⲟⲣⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲱⲱ_1_post_ⲫⲟⲣⲟⲥ",
+          "ϥ_2_post_ϩⲱⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10905,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2322",
+    "grl_lemma": "φόρος",
+    "grl_meaning": "payment, tribute",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1951b; Preisigke 2:701"
+  }
+}

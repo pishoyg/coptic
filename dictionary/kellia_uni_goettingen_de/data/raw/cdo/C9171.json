@@ -1,0 +1,430 @@
+{
+  "id": "C9171",
+  "forms": [
+    {
+      "id": "CF22825",
+      "orth": "ⲑⲉⲱⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22827",
+      "orth": "ⲑⲉⲱⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3802,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF22826",
+      "orth": "ⲑⲉⲱⲣⲉⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22828",
+      "orth": "ⲑⲉⲱⲣⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7689,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11377",
+      "bibliography": "DDGLC",
+      "cu_ID": "2835"
+    },
+    {
+      "id": "CS11378",
+      "bibliography": "DDGLC",
+      "cu_ID": "3710"
+    },
+    {
+      "id": "CS11379",
+      "bibliography": "DDGLC",
+      "cu_ID": "10034"
+    },
+    {
+      "id": "CS11380",
+      "bibliography": "DDGLC",
+      "cu_ID": "4188"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲓⲙⲏϣ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲩⲓ ⲉϫⲉⲛⲧⲁⲓ**ⲑⲉⲱⲣⲓⲁ** ⲉⲧⲁⲩⲛⲁⲩ ⲉⲛⲏ ⲉⲧⲁⲩϣⲱⲡⲓ ⲁⲩⲧⲁⲥⲑⲟ ⲉⲩⲕⲱⲗϩ ϧⲉⲛⲧⲟⲩⲙⲉⲥⲧⲉⲛϩⲏⲧ .",
+      "english": "All the multitudes that came together to see this, when they saw the things that were done, returned home beating their breasts.",
+      "source": "03_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲧⲣⲉⲛⲡⲗⲏⲥⲥⲉ ⲛⲧⲟϥ ⲉϫⲛⲧⲉϥ**ⲑⲉⲱⲣⲓⲁ** ·",
+      "english": "but in order that we might not be struck dumb at the sight of Him.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲥⲱⲟⲩϩ ⲇⲉ ⲛϭⲓⲡⲙⲏⲏϣⲉ ⲉⲛⲁⲩ ⲉⲡⲁⲅⲱⲛ · ⲙⲛⲧⲉ**ⲑⲉⲱⲣⲓⲁ** ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "And the multitude gathered together to see the strife, and the spectacle of the saints",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲉⲥⲧⲟⲓⲭⲓⲟⲛ ⲣϩⲟⲧⲉ · ⲁⲩⲱ ⲁⲧⲉⲕⲧⲏⲥⲓⲥ ⲧⲏⲣⲥ ϣⲧⲟⲣⲧⲣ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲉⲡⲉⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲃⲣⲣⲉ ⲙⲛⲧⲉⲓ**ⲑⲉⲱⲣⲓⲁ** ⲛϩⲟⲧⲉ ·",
+      "english": "The elements were terror-stricken, and all created things were shaken when they saw this new mystery, and this awful sight.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲁⲓ",
+        1,
+        11.012
+      ],
+      [
+        "ⲩ",
+        2,
+        9.121
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.712
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        8.414
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲗⲏⲥⲥⲉ",
+        2,
+        18.598
+      ],
+      [
+        "ⲕⲁⲗⲩⲙⲁ",
+        2,
+        17.791
+      ],
+      [
+        "ⲧⲱϥⲧⲉ",
+        1,
+        17.598
+      ],
+      [
+        "ϣϣⲡⲏⲣⲉ",
+        1,
+        17.598
+      ],
+      [
+        "ⲧⲉ",
+        5,
+        11.769
+      ],
+      [
+        "ⲁⲅⲱⲛ",
+        1,
+        11.74
+      ],
+      [
+        "ⲛ",
+        11,
+        11.187
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        2,
+        9.857
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        1,
+        9.804
+      ],
+      [
+        "ⲉϫⲛ",
+        2,
+        9.425
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        8.964
+      ],
+      [
+        "ϩⲟⲧⲉ",
+        1,
+        8.545
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.399
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.128
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        7.144
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        1,
+        6.865
+      ],
+      [
+        "ⲟ",
+        1,
+        6.805
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        6.594
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.298
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          6
+        ],
+        [
+          "ⲇⲉ_6_pre_ⲁⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲉ_6_pre_ⲁⲡⲟⲣⲉⲓ",
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          "ⲉⲧ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ⲛⲟϭ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          "ⲧⲉ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          "ⲛ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          "ⲧⲉⲓ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲑⲉⲱⲣⲓⲁ",
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          "ϩⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲉⲱⲣⲓⲁ_0_node",
+          "ⲙ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲑⲉⲱⲣⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          "ⲛ_4_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3425,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 7155,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2960",
+    "grl_lemma": "θεωρία",
+    "grl_meaning": "viewing, beholding, sight, spectacle",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 797a; Preisigke 1:675"
+  }
+}

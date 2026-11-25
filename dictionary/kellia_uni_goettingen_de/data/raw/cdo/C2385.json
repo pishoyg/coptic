@@ -1,0 +1,120 @@
+{
+  "id": "C2385",
+  "forms": [
+    {
+      "id": "CF6529",
+      "orth": "ⲛⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.6,
+        "rank": 367,
+        "count": 410
+      }
+    },
+    {
+      "id": "CF6530",
+      "orth": "ⲛⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 63.26,
+        "rank": 24,
+        "count": 9981
+      }
+    },
+    {
+      "orth": "ⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 161.39,
+        "rank": 12,
+        "count": 13688
+      }
+    },
+    {
+      "orth": "ⲛⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 30.04,
+        "rank": 49,
+        "count": 2548
+      }
+    },
+    {
+      "orth": "ⲛⲁⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.91,
+        "rank": 272,
+        "count": 332
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Imperfekt ⲛⲉ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2751",
+      "bibliography": "CD 219a; KoptHWb 117, 125; DELC 135; ChLCS 31b; LCG §§ 434-439"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏ ⲉ**ⲛⲁ**ⲩⲟⲩⲱⲙ ⲛⲛⲓⲱⲓⲕ ⲛⲁⲩⲉⲣⲛϣⲟ ⲛⲣⲱⲙⲓ .",
+      "english": "Those who ate the loaves were five thousand men.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ **ⲛⲉⲣⲉ**ϣⲟⲙⲛⲧ ⲛϣⲏⲣⲉ ϣⲟⲟⲡ ⲛⲁⲩ ·",
+      "english": "And they had three children.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲛⲁ**ϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲟⲩⲙⲁϣϫ ⲙⲙⲟϥ ⲉⲥⲱⲧⲉⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲉⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲧⲉ **ⲛⲉ**ϥⲟϣ ⲁⲛ",
+      "english": "...",
+      "source": "So Listen FL15-28",
+      "urn": "urn:cts:copticLit:shenoute.listen.amelineau:5-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲉ**ⲡⲥⲏⲟⲩ ⲅⲁⲣ ⲙⲡⲓϣⲱⲙ ⲛⲉ ⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "For it was the summer at that time.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲉ**ⲕⲛⲁϭⲱ ⲉϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲡⲉ",
+      "english": "you would stay among them,",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2386",
+      "label": "ⲛⲉ-",
+      "pos": "A",
+      "gloss": "immutable Preterite converter"
+    }
+  ]
+}

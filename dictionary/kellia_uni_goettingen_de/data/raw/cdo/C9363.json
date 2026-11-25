@@ -1,0 +1,513 @@
+{
+  "id": "C9363",
+  "forms": [
+    {
+      "id": "CF23603",
+      "orth": "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23604",
+      "orth": "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3913,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF23605",
+      "orth": "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23606",
+      "orth": "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4152,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF23607",
+      "orth": "ⲕⲁⲧⲟⲓⲅⲟⲣⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11796",
+      "bibliography": "DDGLC",
+      "cu_ID": "750"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲁⲓ ⲉϥⲟⲓ ⲛⲁⲧⲗⲱⲓϫⲓ ⲉⲁϥⲉⲣϩⲁⲓ ⲛⲟⲩⲥϩⲓⲙⲓ ⲛⲟⲩⲱⲧ ⲉⲟⲩⲟⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛϩⲁⲛϣⲏ ⲣⲓ ⲙⲡⲓⲥⲧⲟⲥ ⲛⲥⲉϧⲉⲛ ⲟⲩ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** ⲁⲛ ⲙⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ ⲓⲉ ⲉⲩⲟⲓ ⲛⲁⲧϭⲛⲉϫⲱⲟⲩ .",
+      "english": "if anyone is blameless, the husband of one wife, having children who believe, who are not accused of loose or unruly behavior.",
+      "source": "17_Titus_01",
+      "urn": "urn:cts:copticLit:nt.titus.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛⲁ ⲣⲟⲩ ⲇⲉ ⲟⲛ ⲉϥϣⲁⲛⲉⲓⲛⲉ ⲉⲧⲙⲏⲏⲧⲉ ⲛⲛ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** ⲉⲧⲛϫⲱ ⲙⲙⲟⲟⲩ ⲛⲥⲁⲛⲉⲛⲉⲣⲏⲩ ⲙⲛⲛⲕⲱϩ ⲙⲛⲙⲙⲟⲥⲧⲉ ·",
+      "english": "If, moreover, He were to bring forward (or, into the midst) the charges which we have uttered against each other, and the jealousy, and the hatred, what should we do?",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲉⲣⲁⲛⲧⲓⲗⲉⲅⲓⲛ ⲇⲉ ⲛϫⲉⲛⲓⲓⲟⲩⲇⲁⲓ ⲁⲥⲉⲣⲁⲛⲁⲅⲕⲏ ⲉⲣⲟⲓ ⲉⲉⲣⲉⲡⲓⲕⲁⲗⲓⲥⲑⲉ ⲙⲡⲟⲩⲣⲟ ⲙⲫⲣⲏϯ ⲁⲛ ϫⲉⲟⲩⲟⲛ ϩⲗⲓ ⲛ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** ⲉⲓⲣⲓ ⲙⲡⲁϣⲗⲱⲗ .",
+      "english": "But when the Jews spoke against it, I was constrained to appeal to Caesar, not that I had anything about which to accuse my nation.",
+      "source": "05_Acts_28",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲥⲕⲉⲡⲁⲍⲉ ⲙⲙⲟⲕ · ⲛⲥⲉⲛⲁϩⲙⲉⲕ ⲉⲛⲉⲡⲓⲃⲟⲩⲗⲏ ⲛⲛⲓⲟⲩⲇⲁⲓ ⲛⲛⲉⲩϩⲉ ⲉⲗⲁⲁⲩ ⲛ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** ⲉϩⲟⲩⲛ ⲉⲣⲟⲕ · ϩⲛⲧⲉⲕϭⲓⲛⲁⲡⲁⲛⲧⲁ ⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "May the angels shelter thee, and deliver thee from the plottings of the Jews, and may no accusation fall upon thee when thou hast to meet God.'",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕϭⲓ ⲛⲟⲩ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** ϧⲁⲟⲩⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲥⲁⲃⲟⲗ ⲙⲙⲉⲑⲣⲉ ⲃⲓⲉ ⲅ",
+      "english": "Don't receive an accusation against an elder, except at the word of two or three witnesses.",
+      "source": "15_I Timothy_05",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲟⲩⲱϣⲃ ⲇⲉ ⲛⲁⲩ ϫⲉⲙⲡⲥⲱⲛⲧ ⲁⲛ ⲡⲉ ⲛⲛⲉϩⲣⲱⲙⲁⲓⲟⲥ ⲉϯ ⲛⲟⲩⲣⲱⲙⲉ ⲉⲩⲕⲁⲧⲏ ⲅⲟⲣⲓ ⲙⲙⲟϥ ⲉⲧⲁⲕⲟϥ . ⲙⲡⲁⲧⲉ ⲛⲕⲁⲧⲏⲅⲟⲣⲟⲥ ⲉⲓ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ . ⲉⲧⲣⲉϥϭⲛⲑⲉ ⲛⲟⲩⲱϣⲃ ⲟⲩⲃⲉ ⲧ**ⲕⲁⲧⲏⲅⲟⲣⲓⲁ** .",
+      "english": "To whom I answered that it is not the custom of the Romans to give up any man to destruction, before the accused has met the accusers face to face, and has had opportunity to make his defense concerning the matter laid against him.",
+      "source": "44_Acts of the Apostles_25",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲉϧⲉⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ",
+        1,
+        15.373
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        1,
+        12.269
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        1,
+        10.535
+      ],
+      [
+        "ϧⲁⲣⲟ",
+        1,
+        10.525
+      ],
+      [
+        "ϫⲉⲙ",
+        1,
+        9.14
+      ],
+      [
+        "ⲥⲁⲃⲟⲗ",
+        1,
+        8.885
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.754
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.495
+      ],
+      [
+        "ϩⲗⲓ",
+        1,
+        8.24
+      ],
+      [
+        "ⲛⲑⲟϥ",
+        1,
+        8.082
+      ],
+      [
+        "ϧⲁ",
+        1,
+        7.853
+      ],
+      [
+        "ⲓⲉ",
+        1,
+        7.706
+      ],
+      [
+        "ⲓⲣⲓ",
+        1,
+        7.685
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        7.454
+      ],
+      [
+        "ⲛ",
+        3,
+        7.346
+      ],
+      [
+        "ϭⲓ",
+        1,
+        7.267
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        6.8
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.603
+      ],
+      [
+        "ⲙ",
+        2,
+        6.583
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲧⲉⲧⲛⲓⲛⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ⲥⲉϩⲛ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲛⲧϣⲛⲁ",
+        1,
+        13.884
+      ],
+      [
+        "ϩⲓⲗⲁ",
+        1,
+        13.267
+      ],
+      [
+        "ⲫⲑⲟⲛⲟⲥ",
+        1,
+        13.267
+      ],
+      [
+        "ⲙⲏⲏⲧⲉ",
+        1,
+        11.09
+      ],
+      [
+        "ⲟⲩⲃⲉ",
+        1,
+        10.505
+      ],
+      [
+        "ⲛ",
+        8,
+        10.002
+      ],
+      [
+        "ⲙⲙⲟ",
+        3,
+        8.928
+      ],
+      [
+        "ⲟⲩⲱϣⲃ",
+        1,
+        8.291
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.027
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        7.523
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.168
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        7.128
+      ],
+      [
+        "ⲕ",
+        2,
+        7.045
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.837
+      ],
+      [
+        ".",
+        2,
+        6.75
+      ],
+      [
+        "ⲏ",
+        1,
+        6.672
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.431
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.103
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          4
+        ],
+        [
+          "ϧⲁ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲉ_3_post_ⲟⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          "ϧⲁ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲟⲩ_2_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲁ",
+          "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          "ⲁⲛ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲙ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ_2_post_ⲙ",
+          "ⲓⲉ_3_post_ⲟⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ϫⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          "ⲉⲧ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲛ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϫⲱ",
+          "ϫⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲱ_2_post_ⲉⲧ",
+          "ⲙⲙⲟ_3_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ϫⲱ",
+          "ⲟⲩ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲛⲉⲧⲛ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲩ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲏⲅⲟⲣⲓⲁ_0_node",
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲏⲅⲟⲣⲓⲁ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3486,
+      "count": 4
+    },
+    "S": {
+      "rate": 0.04,
+      "rank": 3760,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "1085",
+    "grl_lemma": "κατηγορία",
+    "grl_meaning": "accusation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 927a; Preisigke 1:777"
+  }
+}

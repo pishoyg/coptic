@@ -1,0 +1,189 @@
+{
+  "id": "C2335",
+  "forms": [
+    {
+      "id": "CF6408",
+      "orth": "ⲙϫⲱⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14475,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙϫⲱⲣ",
+      "dialect": "S",
+      "id": "1165.1"
+    },
+    {
+      "orth": "ⲉⲙϫⲱⲗ",
+      "dialect": "S",
+      "id": "1165.2"
+    },
+    {
+      "orth": "ⲙϫⲱⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9920,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲙϫⲱⲗ",
+      "dialect": "B",
+      "id": "1165.4"
+    },
+    {
+      "orth": "ⲙϫⲟⲩⲗ",
+      "dialect": "B",
+      "id": "1165.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2693",
+      "bibliography": "CD 213b; CED 101; KoptHWb 113; DELC 132; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲣⲡⲙⲉⲉⲩⲉ ⲛⲛⲧⲃⲧ ⲉⲛⲉⲛⲟⲩⲱⲙ ⲙⲙⲟⲟⲩ ϩⲛⲕⲏⲙⲉ ⲉⲛϫⲓ ⲙⲙⲟⲟⲩ ⲛϫⲓⲛϫⲏ ⲙⲛⲛϣⲱⲡⲉ ⲙⲛⲙⲙⲏⲗⲟⲡⲉⲡⲱⲛ ⲙⲛⲛⲏϭⲉ ⲙⲛⲛⲉ**ⲙϫⲱⲗ** ⲙⲛⲛⲉϣϫⲏⲛ",
+      "english": "We remember the fish, which we ate in Egypt freely; and the cucumbers, and the melons, and the leeks, and the garlic, and the onions.",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣϭⲏⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲏϫⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        10.973
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        1,
+        10.788
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        9.243
+      ]
+    ],
+    "S": [
+      [
+        "ϣϫⲏⲛ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲏϭⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        11.399
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        10.161
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙϫⲱⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲙϫⲱⲗ",
+          1
+        ],
+        [
+          "ⲙϫⲱⲗ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙϫⲱⲗ",
+          "ⲛⲓ_1_pre_ⲙϫⲱⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲙϫⲱⲗ",
+          "ⲙϫⲱⲗ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉ_1_pre_ⲙϫⲱⲗ",
+          1
+        ],
+        [
+          "ⲙϫⲱⲗ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲙϫⲱⲗ",
+          "ⲙϫⲱⲗ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14074,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 9378,
+      "count": 1
+    }
+  },
+  "type": "foreign",
+  "etym": {
+    "demo_num": "d2858",
+    "demo_lemma": "mḏl",
+    "english": "Onion",
+    "german": "Zwiebel",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2858"
+  }
+}

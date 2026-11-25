@@ -1,0 +1,179 @@
+{
+  "id": "C6146",
+  "forms": [
+    {
+      "id": "CF14297",
+      "orth": "ϣⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7093,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.58,
+        "rank": 1025,
+        "count": 91
+      }
+    },
+    {
+      "orth": "ϣⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1760,
+        "count": 38
+      }
+    },
+    {
+      "orth": "ⳉⲁⲩ",
+      "dialect": "A",
+      "id": "2003.3"
+    },
+    {
+      "orth": "ϣⲟⲩ-",
+      "dialect": "A",
+      "id": "2003.4"
+    },
+    {
+      "orth": "ϣⲟⲩ-",
+      "dialect": "F",
+      "id": "2003.5"
+    },
+    {
+      "orth": "ϣⲁⲩ",
+      "dialect": "L",
+      "id": "2003.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6833",
+      "bibliography": "CD 601a; CED 257; KoptHWb 335; DELC 274a; ChLCS 83a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲣϯ**ϣⲟⲟⲩ** , ⲁⲩⲱ ⲙⲉⲥⲟⲩⲁⲫⲓ ⲛⲟⲩⲗⲉⲗⲟⲩ ⲉⲥϩⲙⲡⲏⲓ ⲛⲙⲙⲉ",
+      "english": "because you gave perfume and mesouaphi to a maiden while she was in the house with you",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "—ⲡⲉⲓⲃⲓⲟⲥ ⲅⲁⲣ ⲧⲉⲛⲟⲩ ⲉⲧⲓⲛⲁϣⲁϫⲉ ⲛⲙⲙⲏⲧⲛ ⲉⲧⲃⲏⲏⲧϥ · ⲡⲁⲣⲁⲟⲩⲣⲱⲙⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ ⲁⲩⲱ ⲛ**ϣⲟⲩ**ⲣϣⲡⲏⲣⲉ ⲙⲙⲟϥ ⲛⲧⲁϥϣⲱⲡⲉ ϩⲙⲡⲉⲛⲟⲩⲟⲉⲓϣ ·",
+      "english": "This life which I will now describe unto you is that of a man of God, who lived in our time, and it must be regarded with wonder.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉϣⲡⲏⲣⲉ ⲇⲉ ⲛⲧⲁⲥϣⲱⲡⲉ ⲙⲡⲛⲁⲩ ⲉⲧⲙⲙⲁⲩ ⲛⲟⲩ**ϣⲟⲩ** ⲥⲁⲁⲧⲥ ⲁⲛ ⲧⲉ ·",
+      "english": "And the miracle that took place at that moment is one the mention of which must not be omitted.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲥⲟⲩⲁⲫⲓ",
+        2,
+        17.74
+      ],
+      [
+        "ⲁⲣ",
+        2,
+        11.232
+      ],
+      [
+        ",",
+        2,
+        10.009
+      ],
+      [
+        "ϯ",
+        2,
+        5.658
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        4.607
+      ],
+      [
+        "ϫⲉ",
+        2,
+        4.288
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        3.889
+      ],
+      [
+        "ⲛ",
+        2,
+        1.951
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲉⲥⲟⲩⲁⲫⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲥⲟⲩⲁⲫⲓ_1_post_ϣⲟⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲟⲟⲩ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲉⲥⲟⲩⲁⲫⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲉⲥⲟⲩⲁⲫⲓ",
+          "ⲙⲉⲥⲟⲩⲁⲫⲓ_1_post_ϣⲟⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1795,
+      "count": 29
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "113330",
+    "egy_lemma": "ḫꜣ.w",
+    "demo_num": "d4447",
+    "demo_lemma": "ḫw(j)",
+    "english": "ingredients (plants; flowers)",
+    "german": "Spezereien (bes. für Opfer); Weihrauch; Duft",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/113330",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4447"
+  }
+}

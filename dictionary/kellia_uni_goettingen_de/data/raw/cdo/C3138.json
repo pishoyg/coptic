@@ -1,0 +1,527 @@
+{
+  "id": "C3138",
+  "forms": [
+    {
+      "id": "CF8157",
+      "orth": "ⲣⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 14.32,
+        "rank": 89,
+        "count": 2259
+      }
+    },
+    {
+      "orth": "ⲟⲩⲣⲟ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 11.45,
+        "rank": 117,
+        "count": 971
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3588",
+      "bibliography": "CD 299ab; CED 138; KoptHWb 165-166; DELC 177; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁⲡⲓⲁⲗⲟⲩ ⲛⲁⲩ ⲉⲣⲟϥ ⲉⲣⲉⲡⲉϥϩⲟ ⲟⲕⲉⲙ ⲁϥⲉⲣⲟⲩⲱ ⲛⲁϩⲣⲁϥ ⲙⲫⲣⲏϯ ⲙⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲇⲁⲩⲓⲇ ⲛⲁϩⲣⲉⲛⲡ**ⲟⲩⲣⲟ** ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲉⲑⲃⲉⲟⲩ ⲡϩⲟ ⲙⲡⲁϭⲟⲉⲓⲥ ⲟⲕⲉⲙ ⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛⲏⲓ ϯⲛⲁⲥϧⲉϯⲉⲡⲓⲥⲧⲟⲗⲏ ⲙⲫⲣⲏϯ ⲉⲧⲉⲕⲟⲩⲱϣ .",
+      "english": "And when the little boy saw that his face was sad, he spoke to him as the holy David spoke to the king of Israel, saying: ‘Why is the face of my lord sad? command me, and I will write the letter as you wish.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲡⲉ ⲡ**ⲣⲣⲟ** ⲛⲁⲧⲙⲟⲩ ·",
+      "english": "for I am the Immortal King.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϣⲉ ⲉϧⲟⲩⲛ ⲉⲧⲡⲟⲗⲓⲥ ⲛⲧⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲁⲡⲉⲛⲓⲱⲧ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲓ ⲉϥⲙⲟϣⲓ ϧⲉⲛⲡⲓⲡⲁⲗⲗⲁⲧⲓⲟⲛ ⲛⲧⲉⲡ**ⲟⲩⲣⲟ** ⲁϥϫⲓⲙⲓ ⲛⲟⲩⲛⲁⲫⲣⲓ ⲛⲥⲟⲩⲟ ⲉⲥⲥⲏϯ ⲉⲃⲟⲗ",
+      "english": "After they arrived in the imperial capital, Apa Shenoute, our righteous father, was walking within the royal palace and noticed a discarded grain of wheat.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲙⲡⲕⲉϣⲃⲏⲣ ϫⲉϫⲓⲧ ϣⲁⲡ**ⲣⲣⲟ** .",
+      "english": "He said to another friend, “Take me to the king.”",
+      "source": "Apophthegmata Patrum Sahidic 097: Poemen 109",
+      "urn": "urn:cts:copticLit:ap.97.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟϥ ⲉϥⲉⲟⲩⲛⲟϥ ϧⲉⲛϩⲁⲛ**ⲟⲩⲣⲱⲟⲩ** ⲟⲩⲟϩ ⲛⲓⲧⲩⲣⲁⲛⲛⲟⲥ ϩⲁⲛⲥⲱⲃⲓ ⲛⲁϥ ⲛⲉ ⲟⲩⲟϩ ⲉϥⲉⲥⲱⲃⲓ ϧⲉⲛⲛⲓⲙⲁ ⲧⲏⲣⲟⲩ ⲉⲧⲧⲁϫⲣⲏⲟⲩⲧ ⲟⲩⲟϩ ⲉϥⲉϩⲓⲟⲩⲓ ⲛⲟⲩⲟⲩⲁⲛ ⲟⲩⲟϩ ⲉϥⲉⲁⲙⲟⲛⲓ ⲙⲙⲟϥ .",
+      "english": "And he shall be at his ease with kings, and princes are his toys, and he shall mock at every strong-hold, and shall cast a mound, and take possession of it.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲣⲣⲟ** ⲁϥⲁⲛⲁⲅⲕⲁⲍⲉ ⲛⲛⲇⲁⲓⲙⲱⲛ ·",
+      "english": "that the king compelled all the demons",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡ",
+        980,
+        35.429
+      ],
+      [
+        "ⲃⲁⲃⲩⲗⲱⲛ",
+        145,
+        33.657
+      ],
+      [
+        "ⲙ",
+        428,
+        31.807
+      ],
+      [
+        "ⲛⲧⲉ",
+        376,
+        31.73
+      ],
+      [
+        "ϥ",
+        532,
+        31.59
+      ],
+      [
+        "ⲁ",
+        420,
+        31.132
+      ],
+      [
+        "ⲓⲟⲩⲇⲁ",
+        87,
+        31.087
+      ],
+      [
+        ".",
+        341,
+        30.857
+      ],
+      [
+        "ⲛ",
+        373,
+        30.22
+      ],
+      [
+        "ⲛⲉⲙ",
+        251,
+        30.157
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        313,
+        29.95
+      ],
+      [
+        "ⲉ",
+        297,
+        29.66
+      ],
+      [
+        "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ",
+        34,
+        29.343
+      ],
+      [
+        "ⲥⲉⲇⲉⲕⲓⲁⲥ",
+        27,
+        29.102
+      ],
+      [
+        "ⲭⲏⲙⲓ",
+        69,
+        28.968
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        49,
+        28.687
+      ],
+      [
+        "ⲛϫⲉ",
+        163,
+        28.641
+      ],
+      [
+        "ⲛⲑⲃⲁⲥⲁⲛ",
+        15,
+        28.416
+      ],
+      [
+        "ⲛⲓ",
+        165,
+        28.317
+      ],
+      [
+        "ⲟⲩ",
+        228,
+        28.253
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        114,
+        29.774
+      ],
+      [
+        "ⲡ",
+        2555,
+        27.132
+      ],
+      [
+        "ⲛ",
+        2245,
+        25.884
+      ],
+      [
+        "ϥ",
+        1508,
+        24.874
+      ],
+      [
+        "ⲙ",
+        825,
+        23.093
+      ],
+      [
+        "ϫⲉ",
+        545,
+        22.094
+      ],
+      [
+        "ⲧ",
+        479,
+        21.46
+      ],
+      [
+        "ⲁ",
+        579,
+        21.254
+      ],
+      [
+        "ⲓⲟⲩⲇⲁ",
+        98,
+        20.94
+      ],
+      [
+        "ⲙⲛ",
+        329,
+        20.407
+      ],
+      [
+        "ⲉ",
+        498,
+        20.375
+      ],
+      [
+        "ⲛⲁ",
+        396,
+        20.254
+      ],
+      [
+        "ⲟⲩ",
+        421,
+        20.051
+      ],
+      [
+        "ⲁⲩⲱ",
+        367,
+        19.984
+      ],
+      [
+        "ⲃⲁⲃⲩⲗⲱⲛ",
+        60,
+        19.963
+      ],
+      [
+        "ⲇⲉ",
+        265,
+        19.813
+      ],
+      [
+        "ⲥⲩⲣⲓⲁ",
+        47,
+        19.564
+      ],
+      [
+        "ⲛϭⲓ",
+        199,
+        19.406
+      ],
+      [
+        "ⲁⲣⲇⲁⲝⲉⲣⲝⲏⲥ",
+        25,
+        19.207
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        151,
+        19.137
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲣⲟ_0_node",
+          1446
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲣⲟ",
+          748
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          174
+        ],
+        [
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          36
+        ],
+        [
+          "ⲙ_1_post_ⲣⲣⲟ",
+          55
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          46
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          46
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          65
+        ],
+        [
+          "ⲃⲁⲃⲩⲗⲱⲛ_3_post_ⲧ",
+          52
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲣⲣⲟ",
+          23
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          22
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          30
+        ],
+        [
+          "ⲁⲥⲥⲩⲣⲓⲟⲥ_3_post_ⲛ",
+          30
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_1_post_ⲣⲣⲟ",
+          26
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲣⲟ",
+          14
+        ],
+        [
+          "ⲥⲩⲣⲓⲁ_3_post_ⲧ",
+          13
+        ],
+        [
+          "ⲓⲟⲩⲇⲁⲥ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          9
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲣⲣⲟ",
+          9
+        ],
+        [
+          "ⲙⲱⲁⲃ_2_post_ⲙ",
+          9
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲣⲣⲟ",
+          8
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_0_node",
+          12
+        ],
+        [
+          "ⲣⲣⲟ_0_node",
+          "ⲛ_1_post_ⲣⲣⲟ",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_0_node",
+          "ⲙ_1_post_ⲣⲣⲟ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲣⲣⲟ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲃⲁⲃⲩⲗⲱⲛ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲥⲥⲩⲣⲓⲟⲥ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_0_node",
+          "ⲇⲁⲩⲉⲓⲇ_1_post_ⲣⲣⲟ",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲣⲟ",
+          "ⲡ_1_pre_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲩⲣⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲓⲟⲩⲇⲁⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲣⲟ",
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲣⲟ",
+          "ⲙⲱⲁⲃ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲣⲣⲟ",
+          "ⲣⲣⲟ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 16.14,
+      "rank": 72,
+      "count": 2561
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3143",
+      "label": "ⲉⲓⲣⲉ ⲛⲣⲣⲟ",
+      "pos": "V",
+      "gloss": "make king"
+    },
+    {
+      "target": "C3141",
+      "label": "ⲙⲛⲧⲣⲣⲟ",
+      "pos": "N",
+      "gloss": "kingdom, reign"
+    },
+    {
+      "target": "C3140",
+      "label": "ⲣⲣⲟ",
+      "pos": "N",
+      "gloss": "royal"
+    },
+    {
+      "target": "C3142",
+      "label": "ⲣⲣⲣⲟ",
+      "pos": "V",
+      "gloss": "be king, reign"
+    },
+    {
+      "target": "C3139",
+      "label": "ⲣⲣⲱ",
+      "pos": "N",
+      "gloss": "queen"
+    }
+  ],
+  "etym": {
+    "egy_num": "60430",
+    "egy_lemma": "pr-ꜥꜣ",
+    "demo_num": "d2002",
+    "demo_lemma": "pr-ꜥꜣ",
+    "english": "palace; pharaoh (lit. great house)",
+    "german": "Palast; Pharao (\"großes Haus\")",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2002"
+  }
+}

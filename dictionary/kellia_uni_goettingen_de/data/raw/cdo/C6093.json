@@ -1,0 +1,278 @@
+{
+  "id": "C6093",
+  "forms": [
+    {
+      "id": "CF14191",
+      "orth": "ⲣⲉϥϣⲱⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8867,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6780",
+      "bibliography": "CD 592a-b; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲙⲉⲛ ⲅⲁⲣ ⲁⲕⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲙⲟⲟⲩ ϩⲱⲥ ⲉⲓⲱⲧ ⲉⲕϯⲥⲃⲱ ⲛⲁⲩ ⲛⲏⲇⲉ ⲛⲧⲟⲟⲩ ⲛⲉⲕⲧϭⲁⲓⲟ ⲙⲙⲟⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩⲣⲣⲟ ⲛ**ⲣⲉϥϣⲱⲱⲧ** ⲉⲃⲟⲗ ⲉⲕϩⲉⲧⲁⲍⲉ ⲙⲙⲟⲟⲩ",
+      "english": "Whether they were absent or present, they were vexed alike.",
+      "source": "Wisdom 11",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲉⲛⲥⲏϥⲉ ⲛⲉⲛⲟⲃϩⲉ ⲙⲡϣⲏⲣⲉ ⲉⲧϩⲟⲟⲩ ⲁⲩⲱ ϩⲉⲛ**ⲣⲉϥϣⲱⲱⲧ** ⲛⲉ ⲛⲉϥⲛⲁϫϩⲉ ϩⲱⲥⲧⲉ ⲉⲧⲁⲕⲟ ⲛⲛⲉⲧⲑⲃⲃⲓⲏⲩ ⲙⲡⲕⲁϩ ⲁⲩⲱ ⲛⲉⲩϩⲏⲕⲉ ⲉⲃⲟⲗ ϩⲛⲛⲣⲱⲙⲉ",
+      "english": "A wicked generation have swords for teeth and jaw-teeth as knives, so as to destroy and devour the lowly from the earth, and the poor of them from among men.",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲧⲁⲍⲉ",
+        1,
+        16.139
+      ],
+      [
+        "ⲛⲁϫϩⲉ",
+        1,
+        16.013
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        11.327
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        8.457
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        7.516
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥϣⲱⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲛⲁϫϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϫϩⲉ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϩⲉⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲧⲁⲍⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ϩⲉⲧⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥϣⲱⲱⲧ",
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲉϥϣⲱⲱⲧ",
+          "ⲣⲉϥϣⲱⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϣⲱⲱⲧ_0_node",
+          "ⲛⲉϥ_2_post_ⲛⲁϫϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲛⲁϫϩⲉ",
+          "ⲛⲁϫϩⲉ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥϣⲱⲱⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          "ⲉ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥϣⲱⲱⲧ",
+          "ⲕ_3_post_ϩⲉⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ϩⲉⲧⲁⲍⲉ",
+          "ϩⲉⲧⲁⲍⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲧⲁⲍⲉ_2_post_ⲉ",
+          "ⲙⲙⲟ_3_post_ϩⲉⲧⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8418,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    }
+  ]
+}

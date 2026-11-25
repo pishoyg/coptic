@@ -1,0 +1,40 @@
+{
+  "id": "C3441",
+  "forms": [
+    {
+      "id": "CF8782",
+      "orth": "ϭⲓ ⲛⲥⲕⲉⲛϩⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3919",
+      "bibliography": "CD 329a; CED 150; KoptHWb 182; DELC 187"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3440",
+      "label": "ⲥⲕⲉⲛϩⲟ",
+      "pos": "N",
+      "gloss": "good appearance"
+    }
+  ]
+}

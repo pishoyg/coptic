@@ -1,0 +1,93 @@
+{
+  "id": "C6571",
+  "forms": [
+    {
+      "id": "CF32013",
+      "orth": "ϩⲗⲟⲡⲗⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7027,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF32012",
+      "orth": "ϩⲗⲟⲡⲗⲉⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11493,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7283",
+      "bibliography": "CD 671b; ChLCS 90a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲡⲗⲡ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ϩⲗⲟⲡⲗⲡ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6577,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6570",
+      "label": "ϩⲗⲟⲡⲗⲡ",
+      "pos": "V",
+      "gloss": "be weary, despondent"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "C3861",
+  "forms": [
+    {
+      "id": "CF9648",
+      "orth": "ⲥⲓⲟⲩ ⲥⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9649",
+      "orth": "ⲥⲟⲩⲥⲓⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4380",
+      "bibliography": "CD 368b; KoptHWb 203; ChLCS 52a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3860",
+      "label": "ⲥⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "star; spot, blot (of disease on eye)"
+    },
+    {
+      "target": "C12056",
+      "label": "ⲥⲟⲩⲣⲟⲧ",
+      "pos": "N",
+      "gloss": "Venus (planet)"
+    }
+  ]
+}

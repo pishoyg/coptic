@@ -1,0 +1,243 @@
+{
+  "id": "C4774",
+  "forms": [
+    {
+      "id": "CF11513",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5924,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5392",
+      "bibliography": "CD 454b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲥϩⲟⲩⲟⲣⲧ ⲛϭⲓⲡⲉⲧϫⲱ ⲙⲙⲟⲥ ϩⲛⲟⲩ**ⲙⲛⲧⲣⲉϥⲧⲱϩ** ϫⲉⲁⲓⲛⲁⲩ ⲉⲩⲣⲁⲥⲟⲩ ⲉⲣⲉⲛⲓⲙ ⲙⲛⲛⲓⲙ ϣⲱⲗ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲣⲁⲓ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲙⲡⲟⲛⲏⲣⲟⲛ ⲉϣⲱⲡⲉ ⲉⲩϩⲟⲟⲩⲧ ⲡⲉ ⲉϣⲱⲡⲉ ⲉⲩⲥϩⲓⲙⲉ ⲧⲉ ·",
+      "english": "He is accursed who says by way of confusion that he has seen in a dream how so-and-so and such-and-such destroy themselves with deeds of wickedness, whether man or woman.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲧⲛⲧⲁⲙⲟⲛ ⲉⲛⲉⲓ**ⲙⲛⲧⲣⲉϥⲧⲱϩ** ⲧⲏⲣⲟⲩ ⲉⲧϩⲁⲧⲛⲧⲏⲩⲧⲛ ·",
+      "english": "and you tell us all the disturbances that happen in your community",
+      "source": "Abraham Our Father YA 551-54",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:42-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲧⲛ",
+        1,
+        11.746
+      ],
+      [
+        "ⲧⲁⲙⲟ",
+        1,
+        10.436
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        10.232
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.635
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        8.882
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ⲓ",
+        2,
+        8.265
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.894
+      ],
+      [
+        "ⲥ",
+        2,
+        7.689
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.561
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.279
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲧⲱϩ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲛ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_2_post_ϩⲁⲧⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲧⲱϩ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          "ϩⲁⲧⲛ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲛ_1_post_ⲙⲛⲧⲣⲉϥⲧⲱϩ",
+          "ⲧⲏⲩⲧⲛ_2_post_ϩⲁⲧⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5482,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4770",
+      "label": "ⲁⲧⲧⲱϩ",
+      "pos": "N",
+      "gloss": "unmixed, not confused"
+    },
+    {
+      "target": "C4771",
+      "label": "ⲙⲁⲓⲧⲱϩ",
+      "pos": "N",
+      "gloss": "who loves to meddle"
+    },
+    {
+      "target": "C4775",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲑⲱϧ",
+      "pos": "N",
+      "gloss": "confusion, disturbance"
+    },
+    {
+      "target": "C4772",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "person interfering/poking the nose in sth"
+    },
+    {
+      "target": "C4773",
+      "label": "ⲣⲉϥⲧⲱϩ",
+      "pos": "N",
+      "gloss": "person interfering/poking the nose in sth"
+    },
+    {
+      "target": "C4776",
+      "label": "ⲧⲁϩⲥ",
+      "pos": "N",
+      "gloss": "confusion"
+    },
+    {
+      "target": "C4768",
+      "label": "ⲧⲱϩ",
+      "pos": "V",
+      "gloss": "be mixed, be disturbed, be clouded; mix, stir"
+    },
+    {
+      "target": "C4769",
+      "label": "ⲧⲱϩ",
+      "pos": "N",
+      "gloss": "mixture, disturbance"
+    }
+  ]
+}

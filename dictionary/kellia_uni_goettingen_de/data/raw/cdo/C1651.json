@@ -1,0 +1,124 @@
+{
+  "id": "C1651",
+  "forms": [
+    {
+      "id": "CF4782",
+      "orth": "ⲗⲁⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12192,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1915",
+      "bibliography": "CD 142a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉⲭⲱ ⲙⲡⲁⲣⲑⲉⲛⲟⲥ ϧⲉⲛⲉ**ⲗⲁⲙ** ⲟⲩⲟϩ ⲉⲓⲉϩⲓⲟⲩⲓ ⲉⲃⲟⲗ ⲙⲙⲁⲩ ⲛⲟⲩⲣⲟ ⲛⲉⲙⲟⲩⲉϩⲣⲏⲓ .",
+      "english": "And I will set my throne in Aelam, and will send forth thence king and rulers.",
+      "source": "24_Ieremias_25",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:25",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        1,
+        13.486
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        11.571
+      ],
+      [
+        "ⲉⲓⲉ",
+        1,
+        9.815
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲟ",
+        1,
+        11.797
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲁⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11625,
+      "count": 1
+    }
+  }
+}

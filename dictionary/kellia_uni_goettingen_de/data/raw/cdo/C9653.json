@@ -1,0 +1,195 @@
+{
+  "id": "C9653",
+  "forms": [
+    {
+      "id": "CF24728",
+      "orth": "ⲗⲟⲅⲭⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF24729",
+      "orth": "ⲗⲟⲅⲭⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7654,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF24730",
+      "orth": "ⲗⲱⲅⲭⲓⲍⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS12397",
+      "bibliography": "DDGLC",
+      "cu_ID": "3568"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϥⲉⲓⲱⲧ ⲇⲉ ⲁϥⲛⲟⲩϭⲥ ⲉⲙⲁⲧⲉ · ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩⲉⲓⲛⲉ ⲛⲛⲉϥϭⲓϫ ϩⲓⲡⲁϩⲟⲩ ⲙⲙⲟϥ · ⲛⲥⲉϫⲓⲧϥ ⲙⲡⲃⲟⲗ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲥⲉ**ⲗⲟⲅⲭⲓⲍⲉ** ⲙⲙⲟϥ ⲛϥⲙⲟⲩ ·",
+      "english": "And his father was exceedingly wroth, and he commanded them to bind his son's arms behind him, and to carry him outside the city, and to spear him there (until) he died.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡⲣⲱⲙⲉ ϩⲟⲙⲟⲗⲟⲅⲉ ⲛⲁⲩ · ϫⲉⲁⲓⲛⲁⲩ ⲉⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ · ⲉϥ**ⲗⲟⲅⲭⲓⲍⲉ** ⲙⲙⲟⲓ · ⲗⲟⲓⲡⲟⲛ ⲁϥⲙⲟⲩϣⲧ ⲙⲡⲥⲱⲙⲁ · ⲙⲡⲣⲱⲙⲉ ⲙⲡⲟⲩϩⲉ ⲉⲗⲁⲁⲩ · ⲙⲡⲱⲗϩ ⲛϩⲏⲧϥ ⲉⲡⲧⲏⲣϥ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 1",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:0-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲟⲓⲡⲟⲛ",
+        1,
+        12.926
+      ],
+      [
+        "ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ",
+        1,
+        12.331
+      ],
+      [
+        "ϥ",
+        5,
+        10.487
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        9.13
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.981
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲓⲍⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲟⲅⲭⲓⲍⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          "ⲥⲉ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          "ⲗⲟⲅⲭⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲓⲍⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲗⲟⲅⲭⲓⲍⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲟⲅⲭⲓⲍⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲛ_2_post_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟⲅⲭⲓⲍⲉ",
+          "ⲗⲟⲅⲭⲓⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲗⲟⲅⲭⲓⲍⲉ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7195,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5011",
+    "grl_lemma": "λογχίζω",
+    "grl_meaning": "to hit with a spear, pierce with a spear",
+    "grl_pos": "verb",
+    "grl_ref": "Sophocles 720b"
+  }
+}

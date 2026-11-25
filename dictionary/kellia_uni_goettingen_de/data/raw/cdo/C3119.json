@@ -1,0 +1,341 @@
+{
+  "id": "C3119",
+  "forms": [
+    {
+      "id": "CF8114",
+      "orth": "ⲣⲣⲙϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3304,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3569",
+      "bibliography": "CD 297ab; KoptHWb 165; ChLCS 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲧⲁϩⲙⲉⲕ ⲉⲕⲟ ⲛϩⲙϩⲁⲗ ⲙⲡⲣⲧⲣⲉϥⲣⲣⲟⲟⲩϣ ⲛⲁⲕ . ⲁⲗⲗⲁ ⲕⲁⲛ ⲉϣⲱⲡⲉ ⲟⲩⲛϭⲟⲙ ⲙⲙⲟⲕ ⲉ**ⲣⲣⲙϩⲉ** ⲭⲣⲱ ⲛϩⲟⲩⲟ .",
+      "english": "Were you called being a bondservant? Don&apos;t let that bother you, but if you get an opportunity to become free, use it.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛⲥⲡⲟⲩⲇⲁⲍⲉ ⲉ**ⲣⲣⲙϩⲉ** ⲉⲃⲟⲗ ϩⲛϩⲉⲛⲛⲟϭ ⲛⲃⲁⲥⲁⲛⲟⲥ ϩⲓⲧⲛϩⲉⲛⲕⲟⲩⲓ ⲛϩⲓⲥⲉ ⲙⲡⲉⲓⲙⲁ ·",
+      "english": "Let us put forth our utmost endeavour to free ourselves from this great torture through a few sufferings in this world.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁ ⲡϣⲏⲣⲉ ϭⲉ ⲣⲧⲏⲩⲧⲛ **ⲣⲣⲙϩⲉ** . ⲟⲛⲧⲱⲥ ⲧⲉⲧⲛⲁϣⲱⲡⲉ ⲛⲣⲙϩⲉ .",
+      "english": "If therefore the Son makes you free, you will be free indeed.",
+      "source": "43_John_7",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲣⲱ",
+        3,
+        16.724
+      ],
+      [
+        ".",
+        11,
+        13.476
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        11,
+        13.384
+      ],
+      [
+        "ⲛϩⲟⲩⲟ",
+        1,
+        12.554
+      ],
+      [
+        "ⲟⲛⲧⲱⲥ",
+        1,
+        12.384
+      ],
+      [
+        "ⲥⲡⲟⲩⲇⲁⲍⲉ",
+        1,
+        12.009
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        2,
+        11.639
+      ],
+      [
+        "ϭⲟⲙ",
+        3,
+        11.134
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        2,
+        10.655
+      ],
+      [
+        "ϩⲙ",
+        4,
+        9.954
+      ],
+      [
+        "ⲉ",
+        6,
+        9.113
+      ],
+      [
+        "ⲛ",
+        7,
+        8.772
+      ],
+      [
+        "ⲙⲙⲟ",
+        3,
+        8.276
+      ],
+      [
+        "ⲕ",
+        3,
+        8.148
+      ],
+      [
+        "ⲡ",
+        5,
+        8.003
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        7.989
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        7.772
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        7.667
+      ],
+      [
+        "ⲟⲩⲱϣⲃ",
+        1,
+        7.639
+      ],
+      [
+        "ⲁ",
+        4,
+        7.585
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲣⲙϩⲉ_0_node",
+          6
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲣⲙϩⲉ",
+          3
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲭⲣⲱ_1_post_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲟⲩⲟ_2_post_ⲭⲣⲱ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲣⲙϩⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲣⲣⲙϩⲉ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲣⲙϩⲉ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ϩⲉⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛⲟϭ",
+          "ⲛⲟϭ_1_post_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲟϭ_1_post_ⲣⲣⲙϩⲉ",
+          "ⲛ_2_post_ⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲣⲣⲙϩⲉ",
+          "ⲥ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲣⲙϩⲉ",
+          "ⲣⲣⲙϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲣⲙϩⲉ_0_node",
+          "ⲭⲣⲱ_1_post_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲭⲣⲱ_1_post_ⲣⲣⲙϩⲉ",
+          "ⲛϩⲟⲩⲟ_2_post_ⲭⲣⲱ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲣⲙϩⲉ",
+          "ⲣⲣⲙϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲣⲙϩⲉ",
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲙ_2_post_ⲉⲃⲟⲗ",
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉⲃⲟⲗ",
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲣⲣⲙϩⲉ",
+          "ⲟⲩ_1_pre_ⲣⲣⲙϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲣⲙϩⲉ",
+          "ⲣⲣⲙϩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2945,
+      "count": 11
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3118",
+      "label": "ⲕⲱ ⲛⲣⲙϩⲉ",
+      "pos": "V",
+      "gloss": "set free"
+    },
+    {
+      "target": "C3117",
+      "label": "ⲙⲛⲧⲣⲙϩⲉ",
+      "pos": "N",
+      "gloss": "freedom, (prayer of) Absolution"
+    },
+    {
+      "target": "C3115",
+      "label": "ⲣⲙϩⲉ",
+      "pos": "N",
+      "gloss": "free person"
+    },
+    {
+      "target": "C3116",
+      "label": "ⲣⲙϩⲏ",
+      "pos": "N",
+      "gloss": "free person"
+    }
+  ]
+}

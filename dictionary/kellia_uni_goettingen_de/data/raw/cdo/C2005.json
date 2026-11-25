@@ -1,0 +1,126 @@
+{
+  "id": "C2005",
+  "forms": [
+    {
+      "id": "CF5674",
+      "orth": "ⲙⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.72,
+        "rank": 496,
+        "count": 271
+      }
+    },
+    {
+      "id": "CF5675",
+      "orth": "ⲙⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.13,
+        "rank": 183,
+        "count": 967
+      }
+    },
+    {
+      "orth": "ⲙⲡⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.71,
+        "rank": 367,
+        "count": 230
+      }
+    },
+    {
+      "orth": "ⲙⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 10.24,
+        "rank": 117,
+        "count": 1615
+      }
+    },
+    {
+      "orth": "ⲙⲡⲁⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1326,
+        "count": 31
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Aorist neg. ⲙⲉ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2327",
+      "bibliography": "CD 182b; KoptHWb 99; DELC 119"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲙⲁ ⲉⲧⲉ**ⲙⲡⲁⲣⲉ**ⲡⲟⲩϥⲉⲛⲧ ⲙⲟⲩ ⲟⲩⲟϩ ⲡⲟⲩⲭⲣⲱⲙ ⲙⲡⲁϥϭⲉⲛⲟ .",
+      "english": "where their worm doesn't die, and the fire is not quenched.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϥⲉⲣⲭⲣⲉⲓⲁ ⲛⲟⲩⲟⲉⲓⲕ **ⲙⲉⲣⲉ**ⲗⲁⲁⲩ ϯ ⲛⲁϥ ⲉⲡⲉⲩϣⲁⲡ ⲻ",
+      "english": "And if he needed bread, no one would give him any.",
+      "source": "Apophthegmata Patrum Sahidic 045",
+      "urn": "urn:cts:copticLit:ap.45.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲡⲛⲁⲧⲓⲕⲱⲥ ⲇⲉ ⲛⲑⲟϥ ϣⲁϥϧⲉⲧϧⲉⲧ ⲛⲉⲛⲭⲁⲓ ⲛⲓⲃⲉⲛ ⲛⲑⲟϥ ⲇⲉ **ⲙⲡⲁⲣⲉ**ϩⲗⲓ ϣϧⲉⲧϧⲱⲧϥ .",
+      "english": "But he who is spiritual discerns all things, and he himself is judged by no one.",
+      "source": "Bohairic 1 Corinthians 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉ**ⲙⲁⲣⲉ**ⲛⲥⲉⲣⲁⲫⲓⲛ ⲅⲁⲣ ⲛⲁⲩ ⲉⲣⲟϥ ·",
+      "english": "The Seraphim would not be able to gaze upon Him",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲡⲓⲉϫⲱⲣϩ ⲇⲉ **ⲙⲡⲁ**ϥⲛⲕⲟⲧ ⲉⲡⲧⲏⲣϥ ϣⲁⲧⲉⲡⲓⲟⲩⲱⲓⲛⲓ ϣⲁⲓ .",
+      "english": "Through the night he remained awake until dawn.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩϩⲁⲣⲱϥ ⲙⲡϥⲛⲧ ⲉⲧⲉ**ⲙⲉ**ϥⲛⲕⲟⲧⲕ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲧⲁⲙⲓⲉⲡϥⲛⲧ ⲉⲧϩⲛⲁⲙⲛⲧⲉ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA [33]-[34]",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:15-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C6025",
+      "type": "cf",
+      "label": "prefix of aorist"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1692",
+    "demo_lemma": "bw-ı ͗r",
+    "english": "[Negation of the aorist]; not be able to; so that not or then it will not be (...)",
+    "german": "[Negation des Aorists]; nicht können; damit nicht bzw. dann wird nicht (...)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1692"
+  }
+}

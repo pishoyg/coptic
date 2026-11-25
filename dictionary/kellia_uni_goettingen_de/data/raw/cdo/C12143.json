@@ -1,0 +1,42 @@
+{
+  "id": "C12143",
+  "forms": [
+    {
+      "id": "CF33153",
+      "orth": "ⲃⲉⲝⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF33227",
+      "orth": "ⲃⲉⲝⲉⲩⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17144",
+      "bibliography": "KoptHWB 22; CED 28; DMT 95b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12211",
+      "label": "ⲃⲉϭⲥⲉ",
+      "pos": "N",
+      "gloss": "rebellion"
+    },
+    {
+      "target": "C12165",
+      "label": "ⲃⲱϭⲥ",
+      "pos": "V",
+      "gloss": "rebel; kämpfen"
+    }
+  ]
+}

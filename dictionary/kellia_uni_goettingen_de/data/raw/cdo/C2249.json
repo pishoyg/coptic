@@ -1,0 +1,310 @@
+{
+  "id": "C2249",
+  "forms": [
+    {
+      "id": "CF6219",
+      "orth": "ⲁⲧⲙⲟⲟϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17067,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2594",
+      "bibliography": "CD 205b; KoptHWb 108; ChLCS 30a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϣⲱⲣⲡ ⲙⲙⲟⲓ ⲉⲣⲟⲕ ⲡⲛⲟⲩⲧⲉ ⲡⲁⲛⲟⲩⲧⲉ ⲁⲧⲁⲯⲩⲭⲏ ⲉⲉⲓⲃ ⲙⲙⲟⲕ ⲁⲩⲱ ⲁⲧⲁⲥⲁⲣⲝ ⲃⲱⲗ ⲉⲃⲟⲗ ϩⲛⲟⲩⲕⲁϩ ⲛϫⲁⲓⲉ ⲛ**ⲁⲧⲙⲟⲟϣⲉ** ⲉⲙⲛⲙⲟⲟⲩ ⲛϩⲏⲧϥ",
+      "english": "O God, my God, I cry to thee early; my soul has thirsted for thee: how often has my flesh longed after thee, in a barren and trackless and dry land!",
+      "source": "Psalms 62",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:62",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        12.299
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        11.074
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        8.927
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        8.84
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲙⲟⲟϣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16671,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2253",
+      "label": "ϣⲫⲏⲣ ⲙⲙⲟϣⲓ",
+      "pos": "N",
+      "gloss": "fellow-traveller"
+    },
+    {
+      "target": "C2252",
+      "label": "ϩⲓⲏ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, path"
+    },
+    {
+      "target": "C2237",
+      "label": "ϫⲓⲛⲙⲟϣⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "going forth, departure"
+    },
+    {
+      "target": "C2255",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, gait, conduct"
+    },
+    {
+      "target": "C2244",
+      "label": "ϭⲓⲛⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ascent"
+    },
+    {
+      "target": "C2250",
+      "label": "ⲙⲁ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "place of walking, path"
+    },
+    {
+      "target": "C2239",
+      "label": "ⲙⲟϣⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2225",
+      "label": "ⲙⲟϣⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2226",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲙⲉⲛϩⲏ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2227",
+      "label": "ⲙⲟϣⲓ (ⲥⲁⲫⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2251",
+      "label": "ⲙⲟⲉⲓⲧ ⲙⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "road, journey"
+    },
+    {
+      "target": "C2219",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "V",
+      "gloss": "walk, go (on land or water)"
+    },
+    {
+      "target": "C2221",
+      "label": "ⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "going, pace, journey"
+    },
+    {
+      "target": "C2229",
+      "label": "ⲙⲟⲟϣⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2233",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁϫⲛ-)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2245",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲁⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before; go toward, accommodate (in documents)"
+    },
+    {
+      "target": "C2248",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲏⲧ⸗)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2230",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "walk on, in"
+    },
+    {
+      "target": "C2247",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϩⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2234",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "go upon"
+    },
+    {
+      "target": "C2246",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲑⲏ)",
+      "pos": "V",
+      "gloss": "go before"
+    },
+    {
+      "target": "C2228",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "go after, follow"
+    },
+    {
+      "target": "C2232",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit"
+    },
+    {
+      "target": "C2231",
+      "label": "ⲙⲟⲟϣⲉ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "go, walk in"
+    },
+    {
+      "target": "C2220",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be about to, proceed to"
+    },
+    {
+      "target": "C2222",
+      "label": "ⲙⲟⲟϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "go to"
+    },
+    {
+      "target": "C2241",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "go in, approach"
+    },
+    {
+      "target": "C2242",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go up"
+    },
+    {
+      "target": "C2243",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2223",
+      "label": "ⲙⲟⲟϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "walk upon, go toward"
+    },
+    {
+      "target": "C2236",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "go through, quit; pass (by, through)"
+    },
+    {
+      "target": "C2235",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "go forth"
+    },
+    {
+      "target": "C2240",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C2238",
+      "label": "ⲙⲟⲟϣⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "go down"
+    },
+    {
+      "target": "C2224",
+      "label": "ⲙⲟⲟϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "go, agree with, match"
+    },
+    {
+      "target": "C2254",
+      "label": "ⲣⲉϥⲙⲟⲟϣⲉ",
+      "pos": "N",
+      "gloss": "goer, walker"
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "id": "C3798",
+  "forms": [
+    {
+      "id": "CF9519",
+      "orth": "ⲥⲁⲧⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3404,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF9520",
+      "orth": "ⲥⲉⲧⲃⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9521",
+      "orth": "ⲥⲁⲑⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2029,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4311",
+      "bibliography": "CD 363a; CED 165; KoptHWb 200; DELC 198; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲓ ⲛⲛⲉⲧⲉⲛⲟⲩⲟⲙⲟⲩ ϧⲉⲛⲛⲏ ⲉⲧ**ⲥⲁⲑⲙⲓ** ⲛⲉⲙⲉⲃⲟⲗ ϧⲉⲛⲛⲏ ⲉⲧⲫⲟⲣϫ ⲉⲛⲉⲛϭⲟⲡ ⲛⲣⲁⲧⲟⲩ ⲛⲉⲙⲛⲟⲩⲓⲉⲃ ⲡⲓϫⲁⲙⲟⲩⲗ ⲛⲉⲙⲡⲓⲣⲁⲫⲁⲧ ⲛⲉⲙⲡⲓⲭⲩⲣⲟⲅⲗⲓⲗⲗⲓⲟⲛ ϫⲉⲥⲉⲥⲁⲑⲙⲓ ⲛϫⲉⲛⲁⲓ ⲥⲉⲫⲱⲣϫ ⲇⲉ ⲁⲛ ⲛⲛⲉⲛϭⲟⲡ ⲛⲣⲁⲧⲟⲩ ⲛⲁⲓ ϩⲁⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲱⲧⲉⲛ ⲛⲉ",
+      "english": "And these ye shall not eat of them that chew the cud, and of those that divide the hoofs, and make distinct claws; the camel, and the hare, and the rabbit; because they chew the cud, and do not divide the hoof, these are unclean to you.",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲛⲛⲉⲧⲛⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲁⲓ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧ**ⲥⲁⲧⲃⲉ** ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧⲉⲣⲉⲣⲁⲧⲟⲩ ⲡⲟⲧⲥ ⲁⲩⲱ ⲉⲩⲧⲁⲩⲉⲉⲓⲃ ⲉⲃⲟⲗ ⲡϭⲁⲙⲟⲩⲗ ϫⲉⲡⲁⲓ ⲙⲉⲛ ⲥⲁⲧⲃⲉ ⲣⲁⲧϥ ⲇⲉ ⲡⲟⲧⲥ ⲁⲛ ⲡⲁⲓ ⲟⲩⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲏⲧⲛ ⲡⲉ",
+      "english": "But of these ye shall not eat, of those that chew the cud, and of those that part the hoofs, and divide claws; the camel, because it chews the cud, but does not divide the hoof, this is unclean to you.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲛⲓⲧⲉⲃⲛⲱⲟⲩⲓ ⲧⲏⲣⲟⲩ ⲫⲏ ⲛⲓⲃⲉⲛ ⲉⲧⲉⲛⲓϭⲟⲡ ⲛⲧⲉⲣⲁⲧϥ ⲫⲟⲣϫ ⲟⲩⲟϩ ⲉϥⲉⲱⲗⲓ ⲛⲛⲉϥⲓⲉⲃ ⲟⲩⲟϩ ⲟⲩⲥⲁⲑⲙⲓ ⲉϥ**ⲥⲁⲑⲙⲓ** ⲙⲙⲟϥ ⲁⲛ ⲉⲩⲉϣⲱⲡⲓ ⲛⲱⲧⲉⲛ ⲉⲩϭⲁϧⲉⲙ ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲛⲁϭⲓ ⲛⲉⲙⲛⲏ ⲉⲧⲙⲱⲟⲩⲧ ⲛⲧⲱⲟⲩ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩϭⲁϧⲉⲙ",
+      "english": "And whichever among the beasts divides the hoof and makes claws, and does not chew the cud, shall be unclean to you; every one that touches their dead bodies shall be unclean till evening.",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲣⲓⲣ ⲛⲛⲉⲧⲛⲟⲩⲟⲙϥ ϫⲉⲡⲁⲓ ⲙⲉⲛ ⲛⲉϥⲉⲓⲉⲓⲃ ⲡⲟⲧⲥ ⲉⲣⲁⲧϥ ⲛϥ**ⲥⲁⲧⲃⲉ** ⲇⲉ ⲁⲛ ⲡⲁⲓ ϫⲁϩⲙ ⲛⲏⲧⲛ ⲛⲛⲉⲧⲛⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲉϥⲁϥ ⲁⲩⲱ ⲛⲛⲉⲧⲛϫⲱϩ ⲉⲛⲉⲛϣⲁⲩⲙⲟⲩ ⲛϩⲏⲧⲟⲩ",
+      "english": "And as for the swine, because he divides the hoof, and makes claws of the hoof, yet he chews not the cud, he is unclean to you; ye shall not eat of their flesh, ye shall not touch their dead bodies.",
+      "source": "Deuteronomy 14",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲣⲙⲉⲑⲣⲉ ⲛⲁⲛ ⲉⲑⲃⲏⲧϥ ⲛϫⲉⲁⲃⲃⲁ ⲁⲙⲙⲱⲛ ⲛⲉⲙⲁⲃⲃⲁ ⲑⲉⲟⲇⲱⲣⲉ ⲛⲉⲙⲁⲃⲃⲁ ⲓⲁⲕⲱⲃ ϫⲉⲉϣⲱⲡ ⲛⲧⲉⲛϣⲉⲛϥ ⲉⲟⲩⲥⲁϫⲓ ⲛⲧⲉϯⲅⲣⲁⲫⲏ ⲓⲉ ⲕⲉϩⲱⲃ ⲕⲉϩⲱⲃ ⲛⲁϥϯⲁⲡⲟⲗⲟⲅⲓⲁ ⲛⲁⲛ ⲥⲁⲧⲟⲧϥ ⲁⲛ ⲡⲉ ⲁⲗⲗⲁ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲡⲉ ϫⲉⲙⲛⲁϯⲧⲁϩⲉ ⲉϫⲟⲙ ⲙⲡⲓⲥⲁϫⲓ ⲭⲁⲉϩⲟⲟⲩ ⲃ ⲛⲏⲓ ⲓⲉ ⲅ ϣⲁϯ**ⲥⲁⲑⲙⲓ** ⲉϫⲉⲛⲡⲓⲥⲁϫⲓ ⲟⲩⲟϩ ϯⲛⲁϯⲁⲡⲟⲗⲟⲅⲓⲁ ⲛⲱⲧⲉⲛ . ϣⲁⲥϣⲱⲡⲓ ⲛⲧⲉϥⲉⲣⲉϩⲟⲟⲩ ⲃ ⲓⲉ ⲅ ⲓⲉ ⲟⲩⲥⲩⲛⲁⲝⲓⲥ ⲧⲏⲣⲥ ⲙⲡⲁⲧⲉϥϯⲁⲡⲟⲗⲟⲅⲓⲁ ⲛⲁⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲉϣⲱⲡ ⲁⲓϣⲧⲉⲛⲉⲙⲓ ⲉⲡⲓⲥⲁϫⲓ ϫⲉⲟⲩ ⲡⲉ ⲡⲓⲟⲩⲧⲁϩ ⲉⲧⲉϥⲛⲁⲙⲁⲥϥ ϫⲉⲁⲛ ⲫⲁⲫⲱⲛϧ ⲡⲉ ⲓⲉ ⲁⲛ ⲫⲁⲫⲱⲛϩ ⲡⲉ ϯⲛⲁϫⲟϥ ⲁⲛ . ⲡⲓⲥⲁϫⲓ ⲟⲩⲛ ⲉⲧⲉϥⲛⲁϫⲟϥ ϣⲟⲩϣⲟⲡϥ ⲉⲣⲱⲟⲩ ⲛϫⲉⲛⲓⲥⲛⲏⲟⲩ ϩⲱⲥ ϫⲉⲉⲧⲁϥⲓ ⲉⲃⲟⲗ ϧⲉⲛⲣⲱϥ ⲙⲫⲛⲟⲩϯ . ⲁⲓⲁⲕⲱⲃ ⲡⲉϥⲁⲗⲟⲩ ⲫⲏ ⲉⲧⲁϥϭⲓ ⲙⲡⲉϥⲓⲛⲓ ⲧⲏⲣϥ ⲛⲉⲙⲧⲉϥⲁⲥⲕⲩⲥⲓⲥ ⲉⲃⲏⲗ ⲉⲡⲉϥⲗⲁⲥ ⲙⲙⲁⲩⲁⲧϥ ⲁϥⲉⲣⲙⲉⲑⲣⲉ ⲛⲏⲓ ϫⲉⲁϥⲓ ϩⲁⲣⲟϥ ⲛⲟⲩⲥⲟⲡ ⲛϫⲉⲁⲛⲁⲧⲟⲗⲓⲟⲥ ⲡⲓⲣⲉⲙϯⲥⲡⲁⲛⲓⲁ ⲫⲏ ⲉⲛⲁϥⲟⲓ ⲛⲛⲟⲧⲁⲣⲓⲟⲥ ⲛϣⲟⲣⲡ ⲉⲟⲩⲥⲩⲛⲅⲉⲛⲏⲥ ⲡⲉ ⲛⲧⲉⲁⲗⲃⲓⲛⲉ ⲫⲏ ⲛⲧⲉⲣⲱⲙⲏ ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲣⲁⲡⲟⲧⲁⲍⲉⲥⲑⲉ ⲙⲡⲓⲕⲟⲥⲙⲟⲥ ⲁϥⲙⲟϩ ⲛⲟⲩⲁⲥⲟⲩⲓ ⲛⲛⲟⲩⲃ ⲉⲣⲉⲟⲩⲟⲛ ⲇ ⲛϣⲟ ⲛⲗⲟⲩⲕⲟϫⲓ ⲛϩⲏⲧⲥ ⲁϥⲭⲁⲥ ϧⲁⲣⲁⲧⲟⲩ ⲛⲛⲓϭⲁⲗⲁⲩϫ ⲛⲁⲃⲃⲁ ⲡⲁⲙⲱ ⲉϥⲙⲉⲩⲓ ⲛⲁϥ ⲡⲉ ϫⲉϥⲛⲁϯⲱⲟⲩ ⲛⲁϥ ⲓⲉ ⲛⲧⲉϥϣⲟⲩϣⲟⲩ ⲉϧⲣⲏⲓ ⲉϫⲱϥ ⲓⲉ ⲛⲧⲉϥϭⲁⲥϥ ⲉⲑⲃⲉⲛⲓⲭⲣⲏⲙⲁ . ⲁⲃⲃⲁ ⲡⲁⲙⲱ ⲇⲉ ⲛⲁϥⲓⲣⲓ ⲙⲡⲉϥϩⲱⲃ ⲛϫⲓϫ ⲡⲉ ϧⲉⲛⲟⲩⲭⲁⲣⲱϥ ⲙⲡⲉϥϯϩⲑⲏϥ ⲉⲣⲱⲟⲩ ⲟⲩⲇⲉ ⲙⲡⲉϥϫⲉⲟⲩⲥⲁϫⲓ ⲛⲁϥ ⲟⲩⲟϩ ⲡⲉϫⲉⲁⲛⲁⲧⲟⲗⲓ ⲛⲁϥ ϫⲉⲡⲁⲓⲱⲧ ⲛⲁⲓⲭⲣⲓⲁ ⲁⲓⲉⲛⲟⲩ ⲉⲧⲇⲓⲁⲕⲟⲛⲓⲁ ⲛⲛⲓϩⲏⲕⲓ . ⲡⲉϫⲉⲡⲓϩⲉⲗⲗⲟ ⲛⲁϥ ϫⲉϯⲉⲙⲓ ϩⲱ ⲡⲁϣⲏⲣⲓ . ⲡⲉϫⲉⲁⲛⲁⲧⲟⲗⲓ ⲛⲁϥ ϫⲉⲁⲗⲗⲁ ϩⲓⲛⲁ ⲛⲧⲉⲕⲉⲙⲓ ϫⲉⲟⲩⲟⲛ ⲟⲩⲏⲣ ⲛϧⲛⲧⲟⲩ . ⲡⲉϫⲉⲡⲓϧⲉⲗⲗⲟ ⲛⲁϥ ⲫⲏ ⲉⲧⲁⲕⲧⲏⲓⲧⲟⲩ ⲛⲁϥ ϥⲉⲣ ⲛⲭⲣⲓⲁ ⲁⲛ ⲉⲑⲣⲉⲕⲧⲁⲙⲟϥ ⲉⲧⲟⲩⲏⲡⲓ . ⲉⲧⲁϥⲭⲁⲩ ⲟⲩⲛ ⲉϧⲣⲏⲓ ⲁϥⲓ ⲉⲃⲟⲗ ⲛϫⲉⲁⲛⲁⲧⲟⲗⲓⲟⲥ ⲁϥϫⲟⲥ ⲛⲛⲓⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ϫⲉⲙⲡⲉⲧⲁⲯⲩⲭⲏ ϫⲉⲙϩⲏⲟⲩ ⲙⲡⲁϣⲁⲓ ⲛⲛⲓⲭⲣⲏⲙⲁ ⲉⲧⲁⲓⲉⲛⲟⲩ ⲙⲫⲣⲏϯ ⲛϯϩⲉⲝⲓⲥ ⲛⲉⲙⲡⲓⲁⲙⲟⲛⲓ ⲛⲧⲟⲧϥ ⲛⲧⲉⲡⲓϧⲉⲗⲗⲟ ⲁϥⲭⲁⲧ ⲛⲧⲟⲧϥ ⲙⲫⲣⲏϯ ϩⲱⲥ ϫⲉⲟⲩⲗⲟⲩⲕⲟⲩϫⲓ ⲛⲟⲩⲱⲧ ⲉⲧⲁⲓⲧⲏⲓⲥ ⲛⲁϥ .",
+      "english": "Concerning him, Abba Ammon, Abba Theodorus, and Abba Jacob testified: “If asked him about Scripture or any other matter, he did not answer immediately, but said: ‘Before I grasp the meaning of this word, give me two or three days, so that I may meditate on it and offer you an answer.’” After two or three days had passed, or even an entire week, he did not respond hastily, but said: “Unless I know whether this word produces the fruit of life or of death, I will not speak it.” The words that he did speak were received by the brothers as though they had proceeded from the mouth of God. His disciple Jacob, who modeled his life on Abba Pamo’s image and adopted his entire way of life, testified to one exception concerning him related to speech. He said that a certain Spanish man named Anatolius came to him one day. Anatolius had once been a Roman notary of Albinius, and after leaving the world behind, he filled a purse with gold containing four thousand gold denarii. He placed it at the feet of Abba Pamo, hoping, he said, to receive praise or to be admired and appointed as the steward of wealth. However, Abba Pamo remained silent, working with his hands and not paying any attention to him, nor did he utter a single word. Then Anatolius said: “My father,” he said, “I have brought this for the service of the poor.” The old man replied: “This I know, my son.” Anatolius then said: “I want to know how much is in it.” The old man replied: “He to whom you gave this has no need to know its quantity.”",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲛⲛⲧⲃⲛⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲡⲉⲧⲉⲣⲉⲣⲁⲧϥ ⲡⲟⲧⲥ ⲁⲩⲱ ⲉϥⲧⲁⲩⲉⲉⲓⲃ ⲉⲃⲟⲗ ⲉⲛϥ**ⲥⲁⲧⲃⲉ** ⲇⲉ ⲁⲛ ⲉⲩⲉϣⲱⲡⲉ ⲉⲩϫⲁϩⲙ ⲛⲏⲧⲛ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁϫⲱϩ ⲉⲛⲉⲧⲙⲟⲟⲩⲧ ⲛϩⲏⲧⲟⲩ ⲉϥⲉϣⲱⲡⲉ ⲉϥϫⲁϩⲙ ϣⲁⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ",
+      "english": "And whichever among the beasts divides the hoof and makes claws, and does not chew the cud, shall be unclean to you; every one that touches their dead bodies shall be unclean till evening.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+        2,
+        18.139
+      ],
+      [
+        "ⲉⲧⲛⲉⲧ",
+        1,
+        17.139
+      ],
+      [
+        "ⲡⲟⲧⲥ",
+        2,
+        16.438
+      ],
+      [
+        "ⲉⲓⲉⲓⲃ",
+        2,
+        16.139
+      ],
+      [
+        "ⲡⲇⲁⲥⲩⲡⲟⲩⲥ",
+        1,
+        16.139
+      ],
+      [
+        "ⲇⲉ",
+        11,
+        13.905
+      ],
+      [
+        "ⲙⲉⲛ",
+        3,
+        13.051
+      ],
+      [
+        "ⲧⲃⲛⲟⲟⲩⲉ",
+        2,
+        12.318
+      ],
+      [
+        "ⲡⲁⲓ",
+        5,
+        12.084
+      ],
+      [
+        "ϩⲛ",
+        8,
+        12.02
+      ],
+      [
+        "ⲣⲁⲧ",
+        3,
+        11.969
+      ],
+      [
+        "ⲉⲓⲃ",
+        1,
+        11.969
+      ],
+      [
+        "ϭⲁⲙⲟⲩⲗ",
+        1,
+        11.184
+      ],
+      [
+        "ⲛ",
+        11,
+        10.728
+      ],
+      [
+        "ϥ",
+        9,
+        10.572
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        9.972
+      ],
+      [
+        "ϫⲁϩⲙ",
+        1,
+        9.704
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        9.423
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.253
+      ],
+      [
+        "ϫⲉ",
+        4,
+        8.687
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲥⲁⲧⲃⲉ",
+          5
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          11
+        ],
+        [
+          "ϩⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲧⲃⲛⲟⲟⲩⲉ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲟⲧⲥ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ϫⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_3_pre_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_3_pre_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_pre_ⲡⲟⲧⲥ",
+          2
+        ],
+        [
+          "ⲡⲇⲁⲥⲩⲡⲟⲩⲥ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲥⲁⲧⲃⲉ",
+          3
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          3
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          3
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲉⲓⲃ_2_post_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ϫⲁϩⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ϥ_1_pre_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲥⲁⲧⲃⲉ_0_node",
+          5
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ϩⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          "ⲛ_2_post_ϩⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          "ⲧⲃⲛⲟⲟⲩⲉ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲡⲟⲧⲥ_1_post_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲡⲁⲓ_3_pre_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_3_pre_ⲡⲟⲧⲥ",
+          "ⲙⲉⲛ_3_pre_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_3_pre_ⲡⲟⲧⲥ",
+          "ⲥⲁⲧⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲣⲁⲧ_1_post_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲥⲁⲧⲃⲉ",
+          "ϥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_pre_ⲡⲟⲧⲥ",
+          "ⲡⲇⲁⲥⲩⲡⲟⲩⲥ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲇⲁⲥⲩⲡⲟⲩⲥ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲡⲁⲓ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲙⲉⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲥⲁⲧⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_pre_ⲡⲟⲧⲥ",
+          "ⲡⲁⲓ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲥⲁⲧⲃⲉ",
+          "ⲣⲁⲧ_1_post_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲇⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ϥ_1_pre_ⲥⲁⲧⲃⲉ",
+          3
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲁⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲇⲉ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲁⲧⲃⲉ",
+          "ⲁⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲁⲧⲃⲉ",
+          "ⲥⲁⲧⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁⲧⲃⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲟⲧⲥ",
+          "ⲛⲉⲩ_3_post_ⲉⲓⲃ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲉⲓⲃ",
+          "ⲉⲓⲃ_2_post_ⲡⲟⲧⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲃ_2_post_ⲡⲟⲧⲥ",
+          "ⲡⲟⲧⲥ_1_post_ⲥⲁⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲁⲧⲃⲉ",
+          "ⲡⲁⲓ_2_post_ϫⲁϩⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3039,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3799",
+      "label": "ⲥⲁⲑⲙⲓ",
+      "pos": "N",
+      "gloss": "cud"
+    }
+  ],
+  "etym": {
+    "egy_num": "149770",
+    "egy_lemma": "sdb",
+    "demo_num": "d8195",
+    "demo_lemma": "sdb",
+    "english": "to eat; to chew",
+    "german": "essen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/149770",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d8195"
+  }
+}

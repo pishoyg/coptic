@@ -1,0 +1,209 @@
+{
+  "id": "C5437",
+  "forms": [
+    {
+      "id": "CF12845",
+      "orth": "ⲟⲃϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7658,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6093",
+      "bibliography": "CD 519b; KoptHWb 290; DELC 249a; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓϣⲁⲛⲙⲟⲩ ⲙⲡⲣ**ⲟⲃϣⲉ** ⲉⲧⲁⲙⲛⲧϣⲏⲣⲉ ·",
+      "english": "If I die, be not forgetful of my youth.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣ**ⲟⲃϣⲉ** ⲉⲛⲉⲭⲏⲣⲁ ⲙⲛⲛⲟⲣⲫⲁⲛⲟⲥ · ϫⲉϫⲓⲛⲙⲡϩⲟⲟⲩ ⲉⲧϩⲏ · ⲉⲓⲛⲁϣⲱⲡⲉ ⲛⲟⲣⲫⲁⲛⲟⲥ · ⲛⲁⲧⲉⲓⲱⲧ ⲛⲁⲧⲙⲁⲁⲩ · ϫⲉⲕⲁⲥ ⲧⲙⲛⲧⲛⲁ ⲉⲧⲣⲉⲛⲁⲁⲥ ⲙⲡⲉⲓⲙⲁ · ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁⲥ ⲉⲡϩⲏⲧ ⲛⲟⲩⲁ ·",
+      "english": "Neglect neither the widows nor the orphans, for from this day forward I myself shall be an orphan, without father and without mother, so that the lovingkindness which thou shewest in this world will God also shew to some one else.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϣⲏⲣⲉ",
+        1,
+        14.644
+      ],
+      [
+        "ⲭⲏⲣⲁ",
+        1,
+        12.817
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        12.036
+      ],
+      [
+        "ⲉⲓϣⲁⲛ",
+        1,
+        11.685
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.743
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.95
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲟⲃϣⲉ",
+          2
+        ],
+        [
+          "ⲟⲃϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓϣⲁⲛ_2_pre_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_1_pre_ⲟⲃϣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲣ_1_pre_ⲟⲃϣⲉ",
+          "ⲟⲃϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓϣⲁⲛ_2_pre_ⲙⲟⲩ",
+          "ⲙⲟⲩ_1_pre_ⲟⲃϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_1_pre_ⲟⲃϣⲉ",
+          "ⲙⲡⲣ_1_pre_ⲟⲃϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7199,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5434",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5435",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5433",
+      "label": "ⲁⲧⲱⲃϣ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C5436",
+      "label": "ⲃϣⲉ",
+      "pos": "N",
+      "gloss": "forgetfulness, carelessness, sleep"
+    },
+    {
+      "target": "C5432",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5431",
+      "label": "ⲣⲉϥⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetter"
+    },
+    {
+      "target": "C5429",
+      "label": "ⲣⲡⲱⲃϣ",
+      "pos": "V",
+      "gloss": "be forgetful/forgotten"
+    },
+    {
+      "target": "C5430",
+      "label": "ⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5427",
+      "label": "ⲱⲃϣ",
+      "pos": "V",
+      "gloss": "forget; sleep"
+    },
+    {
+      "target": "C5428",
+      "label": "ⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness; sleep"
+    }
+  ]
+}

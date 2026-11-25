@@ -1,0 +1,373 @@
+{
+  "id": "C10156",
+  "forms": [
+    {
+      "id": "CF26740",
+      "orth": "ⲡⲉⲣⲥⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26741",
+      "orth": "ⲡⲉⲣⲥⲏⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26742",
+      "orth": "ⲡⲉⲣⲥⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5335,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF26743",
+      "orth": "ⲡⲉⲣⲥⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26744",
+      "orth": "ⲡⲉⲣⲥⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5833,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF26745",
+      "orth": "ⲡⲉⲣⲥⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2690,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13433",
+      "bibliography": "DDGLC",
+      "cu_ID": "1198"
+    },
+    {
+      "id": "CS13434",
+      "bibliography": "DDGLC",
+      "cu_ID": "8210"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲡⲟⲩⲣⲟ ⲉⲣϣⲫⲏⲣⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲗⲏⲑⲱⲥ ⲙⲡⲓϫⲉⲙⲣⲱⲙⲓ ⲛⲥⲟⲫⲟⲥ ⲙⲫⲣⲏϯ ⲙⲫⲁⲓ . ⲫⲛⲟⲩϯ ⲇⲉ ⲫⲏ ⲉⲧⲁϥϯⲱⲟⲩ ⲛⲉⲙϩⲙⲟⲧ ⲛⲇⲁⲛⲓⲏⲗ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲙⲡⲉⲙⲑⲟ ⲛⲛⲓⲟⲩⲣⲱⲟⲩ ⲛⲧⲉⲛⲓⲭⲁⲗⲇⲁⲓⲟⲥ ⲛⲉⲙⲛⲓ**ⲡⲉⲣⲥⲏⲥ** ⲛⲑⲟϥ ⲟⲛ ⲁϥϯⲱⲟⲩ ⲙⲡⲁⲓϩⲁⲅⲓⲟⲥ ⲙⲡⲉⲙⲑⲟ ⲛⲛⲓⲟⲩⲣⲱⲟⲩ ⲛⲧⲉⲛⲓⲥⲁⲣⲁⲕⲏⲛⲟⲥ ⲟⲩⲟϩ ⲛⲁϥϯⲱⲟⲩ ⲛⲁϥ ⲡⲉ ⲉϥⲙⲟⲩϯ ⲉⲣⲟϥ ⲛⲛⲁⲩ ⲛⲓⲃⲉⲛ ϫⲉⲡⲁⲧⲣⲓⲁⲣⲭⲥ ⲉⲑⲃⲉⲡⲓϩⲙⲟⲧ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲧⲉⲛϧⲏⲧϥ .",
+      "english": "Then the king was filled with admiration and said: “Truly I have not found a wise man as this one.” But God, who had given glory and grace to the prophet Daniel in the presence of the Chaldean and Persian kings, also gave glory to this saint in the presence of the kings of the Saracens. And the king honored him, called him patriarch at every moment because of the grace of God which was in him.",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲣⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲁⲓⲗⲁⲙ ⲙⲛⲛⲣⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲙ**ⲡⲉⲣⲥⲏⲥ**",
+      "english": "and all the kings of Aelam, and all the kings of the Persians,",
+      "source": "Jeremiah 32",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲙⲛⲓⲟⲩⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲉⲗⲁⲙ ⲛⲉⲙⲛⲓⲟⲩⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲛⲓ**ⲡⲉⲣⲥⲏⲥ** .",
+      "english": "and all the kings of Aelam, and all the kings of the Persians,",
+      "source": "24_Ieremias_32",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:32",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲩ ⲛϭⲓⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ ⲡⲣⲣⲟ ⲛⲛⲁⲥⲥⲩⲣⲓⲟⲥ ⲛⲥⲁⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲟⲩⲏϩ ϩⲙⲡⲉⲩⲫⲣⲁⲧⲏⲥ ⲙⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲟⲩⲏϩ ϩⲛⲙ**ⲡⲉⲣⲥⲏⲥ** ⲙⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧϣⲟⲟⲡ ϩⲙⲡⲉⲙⲛⲧ ⲙⲛⲛⲉⲧϣⲟⲟⲡ ϩⲛⲧⲕⲓⲗⲓⲕⲓⲁ ⲙⲛⲇⲁⲙⲁⲥⲕⲟⲥ ⲙⲛⲡⲗⲓⲃⲁⲛⲟⲥ ⲙⲛⲡⲁⲛⲧⲓⲗⲓⲃⲁⲛⲟⲥ ⲙⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲟⲩⲏϩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲧⲡⲁⲣϩⲁⲗⲓⲁ",
+      "english": "Then Nabuchodonosor king of the Assyrians sent unto all that dwelt in Persia, and to all that dwelt westward, and to those that dwelt in Cilicia, and Damascus, and Libanus, and Antilibanus, and to all that dwelt upon the sea coast,",
+      "source": "Judith 1",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲟⲣⲟⲙⲁ ⲟ ⲛϩⲟⲧⲉ ⲁⲩⲱ ⲁⲩϫⲱ ⲛⲁⲓ ⲛⲟⲩϩⲱⲃ ⲉϥⲛⲁϣⲧ ⲡⲉⲧⲁⲑⲉⲧⲉⲓ ϥⲛⲁⲁⲑⲁⲓⲧⲉⲓ ⲁⲩⲱ ⲡⲉⲧⲁⲛⲟⲙⲉⲓ ϥⲛⲁⲁⲛⲟⲙⲉⲓ ⲛϩⲏⲧ ⲛⲉⲗⲁⲙⲓⲧⲏⲥ ⲙⲛⲛⲃⲁⲓϣⲓⲛⲉ ⲙⲡⲣⲣⲟ ⲛⲙ**ⲡⲉⲣⲥⲏⲥ** ⲛⲏⲩ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲧⲉⲛⲟⲩ ϯⲛⲁⲁϣ ⲁϩⲟⲙ ⲧⲁⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲓ",
+      "english": "so a fearful and a grievous vision was declared to me: he that is treacherous deals treacherously, the transgressor transgresses. The Elamites are upon me, and the ambassadors of the Persians come against me: now will I groan and comfort myself.",
+      "source": "Isaiah 21",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲁⲗⲇⲁⲓⲟⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲟⲩⲣⲱⲟⲩ",
+        1,
+        11.457
+      ],
+      [
+        "ⲛⲓ",
+        4,
+        11.218
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.424
+      ],
+      [
+        "ⲛⲑⲟϥ",
+        1,
+        9.082
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        8.243
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.971
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲣⲓⲧⲏⲥ",
+        1,
+        12.139
+      ],
+      [
+        "ⲣⲣⲱⲟⲩ",
+        1,
+        10.884
+      ],
+      [
+        "ⲟⲩⲏϩ",
+        1,
+        9.492
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.399
+      ],
+      [
+        "ⲙ",
+        4,
+        9.351
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.864
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        8.81
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.618
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        8.56
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        7.746
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        7.457
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.238
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.231
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        6.296
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        6.287
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲣⲥⲏⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          "ⲛⲓ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          "ⲡⲉⲣⲥⲏⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲣⲥⲏⲥ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲕⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲕⲣⲓⲧⲏⲥ_1_post_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲗⲩⲇⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙ_1_pre_ⲡⲉⲣⲥⲏⲥ",
+          "ⲡⲉⲣⲥⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲣⲥⲏⲥ_0_node",
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          "ⲛⲉ_2_post_ⲕⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲕⲣⲓⲧⲏⲥ",
+          "ⲕⲣⲓⲧⲏⲥ_1_post_ⲡⲉⲣⲥⲏⲥ",
+          1
+        ],
+        [
+          "ⲕⲣⲓⲧⲏⲥ_1_post_ⲡⲉⲣⲥⲏⲥ",
+          "ⲁⲩⲱ_2_post_ⲛⲗⲩⲇⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4832,
+      "count": 2
+    },
+    "S": {
+      "rate": 0.03,
+      "rank": 5391,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "1728",
+    "grl_lemma": "Πέρσης",
+    "grl_meaning": "Persian",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1395b; Preisigke 2:302"
+  }
+}

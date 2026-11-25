@@ -1,0 +1,40 @@
+{
+  "id": "C637",
+  "forms": [
+    {
+      "id": "CF2421",
+      "orth": "ϩⲓⲉⲃⲣⲏϫ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS773",
+      "bibliography": "CD 53b; KoptHWb 33; ChLCS 10b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C636",
+      "label": "ⲉⲃⲣⲏϭⲉ",
+      "pos": "N",
+      "gloss": "lightning"
+    }
+  ]
+}

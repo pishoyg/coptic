@@ -1,0 +1,174 @@
+{
+  "id": "C3268",
+  "forms": [
+    {
+      "id": "CF8424",
+      "orth": "ⲛⲥⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 11.6,
+        "rank": 102,
+        "count": 1830
+      }
+    },
+    {
+      "orth": "ⲛⲥⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.57,
+        "rank": 151,
+        "count": 727
+      }
+    },
+    {
+      "orth": "ⲛⲥⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 9.0,
+        "rank": 135,
+        "count": 1420
+      }
+    },
+    {
+      "orth": "ⲥⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.24,
+        "rank": 156,
+        "count": 699
+      }
+    },
+    {
+      "orth": "ⲛⲥⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.92,
+        "rank": 162,
+        "count": 672
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3733",
+      "bibliography": "CD 314a; CED 144; KoptHWb 173; DELC 181; ChLCS 44a"
+    },
+    {
+      "id": "CS3734",
+      "bibliography": "CD 314a; KoptHWb 173; ChLCS 44a"
+    },
+    {
+      "id": "CS3735",
+      "bibliography": "CD 314b; KoptHWb 173; ChLCS 44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲉⲧⲁϥⲫⲟⲛϩϥ ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁϥⲉⲣⲉⲡⲓⲧⲓⲙⲁⲛ ⲙⲡⲉⲧⲣⲟⲥ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉⲙⲁϣⲉ ⲛⲁⲕ **ⲥⲁ**ⲫⲁϩⲟⲩ ⲙⲙⲟⲓ ⲡⲥⲁⲧⲁⲛⲁⲥ ϫⲉⲭⲙⲉⲩⲓ ⲁⲛ ⲉⲛⲁⲫⲛⲟⲩϯ ⲁⲗⲗⲁ ⲉⲛⲁⲛⲓⲣⲱⲙⲓ .",
+      "english": "But he, turning around, and seeing his disciples, rebuked Peter, and said, 'Get behind me, Satan! For you have in mind not the things of God, but the things of men.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲛⲓⲟⲩⲇⲁⲓ ϩⲉⲛⲙⲁⲉⲓⲛ ⲛⲉⲧⲟⲩⲁⲓⲧⲉⲓ ⲙⲙⲟⲟⲩ . ⲛϩⲉⲗⲗⲏⲛ ⲇⲉ ⲉⲩϣⲓⲛⲉ **ⲛⲥⲁ**ⲟⲩⲥⲟⲫⲓⲁ .",
+      "english": "For Jews ask for signs, Greeks seek after wisdom,",
+      "source": "1 Corinthians 1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲟⲩⲱϯ ⲛⲅ ϯⲙⲃⲁⲕⲓ ⲉⲃⲟⲗ ⲛϫⲉⲙⲱⲩⲥⲏⲥ ϩⲓⲙⲏⲣ ⲙⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ **ⲥⲁ**ⲛⲓⲙⲁⲛⲁϣⲁⲓ ⲛⲧⲉⲫⲣⲏ",
+      "english": "Then Moses separated three cities beyond Jordan on the east,",
+      "source": "05_Deuteronomium_04",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ ⲅⲁⲣ ⲉⲕⲱⲧⲉ **ⲛⲥⲁ**ⲟⲩϣⲏⲙ ⲛⲧⲃⲧ ⲛⲁⲩ ·",
+      "english": "and I ought to seek for some small fish for them.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲛϫⲉⲛⲓϭⲓⲏ ⲓⲥϫⲉⲛ ⲥⲏⲙⲫⲁⲙⲁⲣⲃⲏⲗⲁ ⲓⲥϫⲉⲛ **ⲥⲁ**ⲡⲉⲓⲉⲃⲧ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲛⲓⲙⲟⲩⲙⲓ ⲟⲩⲟϩ ⲉⲩⲉⲓ ⲛϫⲉⲛⲓϭⲓⲏ ⲛⲧⲉⲏⲗⲁ ϩⲓⲫⲁϩⲟⲩ ⲙⲫⲓⲟⲙ ⲛⲭⲉⲛⲁⲁⲣⲁ ⲓⲥϫⲉⲛ ⲛⲓⲙⲁⲛϣⲁⲓ",
+      "english": "And the border shall go down from Sepphamar to Bela eastward to the fountains, and the border shall go down from Bela behind the sea Chenereth eastward.",
+      "source": "04_Numeri_34",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:34",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲡⲃⲁⲣⲃⲁⲣⲟⲥ ⲡⲏⲧ **ⲛⲥⲱ**ⲟⲩ ⲛⲧⲟⲟⲩ ⲁⲛ .",
+      "english": "Or doesn&apos;t the barbarian chase after them?",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3266",
+      "label": "ⲉⲃⲟⲗ ⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "from the side, from"
+    },
+    {
+      "target": "C3264",
+      "label": "ⲉⲡⲉⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    },
+    {
+      "target": "C3267",
+      "label": "ⲕⲉⲥⲁ",
+      "pos": "ADV",
+      "gloss": "other part, apart, elsewhere"
+    },
+    {
+      "target": "C3269",
+      "label": "ⲙⲛⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "after (of time)"
+    },
+    {
+      "target": "C3270",
+      "label": "ⲙⲛⲛⲥⲱⲥ",
+      "pos": "ADV",
+      "gloss": "afterward"
+    },
+    {
+      "target": "C3263",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "side, part"
+    },
+    {
+      "target": "C3265",
+      "label": "ⲥⲁⲡⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    }
+  ],
+  "etym": {
+    "egy_num": "851454",
+    "egy_lemma": "m-sꜣ",
+    "demo_num": "d2250",
+    "demo_lemma": "m-sꜣ",
+    "english": "[Preposition]",
+    "german": "[Präposition]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851454",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2250"
+  }
+}

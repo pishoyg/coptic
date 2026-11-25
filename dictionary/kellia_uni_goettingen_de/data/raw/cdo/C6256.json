@@ -1,0 +1,134 @@
+{
+  "id": "C6256",
+  "forms": [
+    {
+      "id": "CF14522",
+      "orth": "ϣϭⲟⲣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϣϭⲟⲗ",
+      "dialect": "S",
+      "id": "2053.1"
+    },
+    {
+      "orth": "ⲥϭⲟⲗ",
+      "dialect": "S",
+      "id": "2053.2"
+    },
+    {
+      "orth": "ϣϭⲟⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8128,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣϭⲁⲣ",
+      "dialect": "F",
+      "id": "2053.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6943",
+      "bibliography": "CD 619a-b; CED 264; KoptHWb 344; DELC 279b; ChLCS 85a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲙⲓⲛ",
+        1,
+        14.11
+      ],
+      [
+        "ϭⲓⲧ",
+        1,
+        11.656
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        7.368
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ϣϭⲟⲣ",
+          1
+        ],
+        [
+          "ϣϭⲟⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϣϭⲟⲣ",
+          "ϣϭⲟⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7592,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6257",
+      "label": "ⲁⲧϣϭⲟⲣ",
+      "pos": "N",
+      "gloss": "rent-free"
+    },
+    {
+      "target": "C6258",
+      "label": "ⲣⲙⲛϣϭⲟⲣ",
+      "pos": "N",
+      "gloss": "tenant"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6181",
+    "demo_lemma": "škr",
+    "english": "tax, levy",
+    "german": "Steuer, Abgabe",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6181"
+  }
+}

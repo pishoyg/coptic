@@ -1,0 +1,62 @@
+{
+  "id": "C403",
+  "forms": [
+    {
+      "id": "CF1671",
+      "orth": "ⲙⲉⲧⲃⲁⲗⲙⲃⲱⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS451",
+      "bibliography": "CD 30b, 31b; KoptHWb 22"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C391",
+      "type": "cf",
+      "label": "servant, slave"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C13019",
+      "type": "syn",
+      "label": "eye-service"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C401",
+      "label": "ⲁⲧⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impertinent"
+    },
+    {
+      "target": "C400",
+      "label": "ⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "eye"
+    },
+    {
+      "target": "C402",
+      "label": "ⲙⲛⲧⲁⲧⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impertinence"
+    }
+  ]
+}

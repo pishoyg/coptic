@@ -1,0 +1,129 @@
+{
+  "id": "C2893",
+  "forms": [
+    {
+      "id": "CF7646",
+      "orth": "ⲡⲣⲉⲥⲣⲁⲥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13348,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3311",
+      "bibliography": "CD 269b; KoptHWb 152; DELC 164; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲉⲓⲛⲁⲛⲁⲩ ⲛⲁϣ ⲛϩⲉ · ⲉⲛⲃⲁⲗ ⲉⲛⲧⲁⲩⲥⲱⲧⲣ ϩⲁⲡⲉⲥⲧⲱⲧ · ⲙⲛⲛϭⲓϫ ⲛⲧⲁⲛⲉⲩⲕⲉⲉⲥ ⲃⲱⲗ ⲉⲃⲟⲗ · ⲙⲛⲡϥⲱ ⲉⲧ**ⲡⲣⲉⲥⲣⲁⲥⲧ** ϩⲁⲡϩⲓⲧⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧⲧⲁⲩⲉϩⲃⲏⲏⲧⲉ ⲉⲃⲟⲗ · ⲉⲣⲉⲡⲉⲧⲙⲓϣⲉ ⲛⲙⲙⲁⲥ ⲗⲏϭ ϩⲓϩⲟⲩⲛ ⲙⲙⲟⲥ ⲉⲛϥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲁⲛ ·",
+      "english": "In what condition shall I see (her on my return)? With her eyes starting from their sockets in terror, and her hands with the bones thereof protruding, and the hair torn out in frenzy, and the mouth dripping with foam, and meanwhile the devil which is contending with her is hidden inside her, and doth not appear.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲧⲉ",
+        1,
+        15.106
+      ],
+      [
+        "ϥⲱ",
+        1,
+        14.276
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲉⲥⲣⲁⲥⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲡⲣⲉⲥⲣⲁⲥⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲉⲥⲣⲁⲥⲧ_0_node",
+          "ϩⲁ_1_post_ⲡⲣⲉⲥⲣⲁⲥⲧ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲡⲣⲉⲥⲣⲁⲥⲧ",
+          "ⲡ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁ",
+          "ϩⲓⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12939,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2891",
+      "label": "*ⲡⲱⲣⲥ",
+      "pos": "V",
+      "gloss": "stretch, strain(?); contend, attack; glassy eyes, become stiff (of hair)"
+    },
+    {
+      "target": "C2892",
+      "label": "ⲡⲟⲣⲥ",
+      "pos": "N",
+      "gloss": "thing stretched, mat(?), curtain(?)"
+    }
+  ]
+}

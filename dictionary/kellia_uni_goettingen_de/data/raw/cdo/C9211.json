@@ -1,0 +1,56 @@
+{
+  "id": "C9211",
+  "forms": [
+    {
+      "id": "CF22996",
+      "orth": "ⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22999",
+      "orth": "ⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22997",
+      "orth": "ϩⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22998",
+      "orth": "ϩⲓⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23000",
+      "orth": "ⲓⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7591,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11462",
+      "bibliography": "DDGLC",
+      "cu_ID": "9732"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "957",
+    "grl_lemma": "ἰός",
+    "grl_meaning": "rust on iron, verdigris on copper and bronze",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 832a; Preisigke 1:696"
+  }
+}

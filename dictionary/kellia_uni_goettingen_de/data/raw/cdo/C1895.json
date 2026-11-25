@@ -1,0 +1,90 @@
+{
+  "id": "C1895",
+  "forms": [
+    {
+      "id": "CF5436",
+      "orth": "ϫⲛ ⲙⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1937,
+        "count": 32
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2206",
+      "bibliography": "CD 168b; ChLCS 25b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲥⲉⲛⲁⲃⲁⲥⲁⲛⲓⲍⲉ ⲙⲙⲟϥ ϩⲛⲛⲕⲟⲗⲁⲥⲓⲥ ⲙⲛⲛⲉⲕⲣⲓⲥⲓⲥ **ϫⲛⲙⲙⲟⲛ** · ⲏ ⲙⲙⲟⲛ ⲛⲧⲟϥ ⲡⲣⲱⲙⲉ ⲉⲧⲙⲙⲁⲩ ⲥⲉⲛⲁϥⲓⲧϥ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲛⲙⲡⲏⲩⲉ ϫⲛⲙⲙⲟⲛ ·",
+      "english": "“will such an one be tormented in the chastisements and judgments or not? Or will rather that man be brought into the kingdom of heaven or not?”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲟⲛ ⲁϥⲙⲉⲧⲁⲛⲟⲉⲓ ⲁⲩⲱ ⲁϥϣⲱⲡⲉ ϩⲛⲟⲩⲛⲟϭ ⲙⲙⲉⲧⲁⲛⲟⲓⲁ · ⲉⲝⲉⲥⲧⲓ ⲟⲛ ⲛⲁⲥⲛⲏⲩ ⲉⲟⲩⲁϩⲙⲉϥ ⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲁϥϫⲓⲧϥ · ⲏ ⲙⲙⲟⲛ ⲛⲧⲟϥ ⲉϯ ⲛⲁϥ ⲛⲟⲩⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϩⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲡⲉϥⲉⲥⲏⲧ · ⲉⲝⲉⲥⲧⲓ ⲟⲩⲛ **ϫⲛⲙⲙⲟⲛ** ·",
+      "english": "“thereafter he hath again repented and hath been in great repentance,--is it then lawful for my brethren to renew for him the mystery which he hath received, or | rather give him a mystery out of the lower mysteries,--is it lawful, or not?”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϫⲛⲙⲙⲟⲛ** ⲁⲛⲟⲕ ⲙⲁⲩⲁⲁⲧ ⲙⲛⲃⲁⲣⲛⲁⲃⲁⲥ ⲙⲛⲧⲁⲛⲧⲉⲝⲟⲩⲥⲓⲁ ⲙⲙⲁⲩ ⲉⲧⲙⲣϩⲱⲃ .",
+      "english": "Or have only Barnabas and I no right to not work?",
+      "source": "46_1 Corinthians_9",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1694,
+      "count": 32
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1894",
+      "label": "ⲉϣϫⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1893",
+      "label": "ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "if not, else"
+    },
+    {
+      "target": "C1890",
+      "label": "ⲙⲙⲛ-",
+      "pos": "EXIST",
+      "gloss": "not to be, there is not"
+    },
+    {
+      "target": "C1892",
+      "label": "ⲙⲙⲟⲛ",
+      "pos": "PTC",
+      "gloss": "no; if not, else"
+    },
+    {
+      "target": "C1891",
+      "label": "ⲙⲛⲧⲉ-",
+      "pos": "EXIST",
+      "gloss": "not to have"
+    }
+  ]
+}

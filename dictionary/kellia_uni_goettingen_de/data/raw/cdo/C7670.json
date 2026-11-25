@@ -1,0 +1,44 @@
+{
+  "id": "C7670",
+  "forms": [
+    {
+      "id": "CF17405",
+      "orth": "ⲁⲧϭⲱⲗⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8521",
+      "bibliography": "CD 812b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7668",
+      "label": "ϭⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "reveal, uncover, expose, manifest; uncover, unclothe; open"
+    },
+    {
+      "target": "C7669",
+      "label": "ϭⲱⲗⲡ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "uncovering, manifestation; nakedness; vision"
+    },
+    {
+      "target": "C7671",
+      "label": "ⲣⲉϥϭⲱⲗⲡ (ⲁⲃⲁⲗ)",
+      "pos": "N",
+      "gloss": "revealer"
+    }
+  ]
+}

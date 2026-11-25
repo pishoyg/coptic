@@ -1,0 +1,82 @@
+{
+  "id": "C5501",
+  "forms": [
+    {
+      "id": "CF12975",
+      "orth": "ⲱⲛⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲛⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3622,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲟⲙⲕ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2258,
+        "count": 24
+      }
+    },
+    {
+      "orth": "ⲟⲛⲅ⸗",
+      "dialect": "S",
+      "id": "1815.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6161",
+      "bibliography": "CD 524b; CED 228; KoptHWb 292; DELC 250a; ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲣⲟ ⲇⲉ ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ · ⲛⲧⲉⲣⲟⲩⲉⲓⲛⲉ ⲉϩⲟⲩⲛ ⲛⲛⲉϥⲛⲟⲩⲧⲉ ⲉⲡⲣⲡⲉ · ⲁϥ**ⲟⲛⲕ**ϥ ⲉϩⲣⲁⲓ ϩⲓⲡⲉϥⲑⲣⲟⲛⲟⲥ ·",
+      "english": "'And when they had brought his gods into the temple the Emperor Diocletian stood up on his throne,",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲁⲩ**ⲟⲛⲕ**ⲟⲩ ⲉϩⲣⲁⲓ ⲁⲩϯⲡⲏ ⲉⲣⲱϥ ·",
+      "english": "and straig-htway they rushed to him, and they kissed him,",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲉϥⲥⲱⲧⲙ ⲉⲣⲟⲟⲩ ⲛⲧⲟⲟⲧϥ ⲙⲡⲉϥⲛⲟϭ ⲛⲥⲟⲛ · ⲁϥ**ⲟⲛⲕ**ϥ ⲉϩⲣⲁⲓ ⲁϥⲣⲓⲙⲉ · ⲁⲩⲱ ⲡⲉϫⲁϥ ϫⲉⲛⲧⲟⲕ ⲡⲉ ⲡⲁⲥⲟⲛ ·",
+      "english": "When the younger brother heard these things from his elder brother he leaped up and wept, and he said, 'Thou art my brother.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4399,
+      "count": 5
+    }
+  },
+  "etym": {
+    "egy_num": "27880",
+    "egy_lemma": "jnq",
+    "english": "to encompass; to embrace; to unite",
+    "german": "umfassen; zusammenfügen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27880"
+  }
+}

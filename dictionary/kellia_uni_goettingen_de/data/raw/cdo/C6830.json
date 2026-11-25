@@ -1,0 +1,56 @@
+{
+  "id": "C6830",
+  "forms": [
+    {
+      "id": "CF15709",
+      "orth": "ϩⲣⲟϣ ⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6910,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7546",
+      "bibliography": "CD 707a; KoptHWb 389; ChLCS 94b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12052",
+      "label": "ϩⲁⲣϣϩⲏⲧ",
+      "pos": "N",
+      "gloss": "long-suffering"
+    },
+    {
+      "target": "C6831",
+      "label": "ϩⲣⲏϣⲉ",
+      "pos": "N",
+      "gloss": "weight"
+    },
+    {
+      "target": "C6828",
+      "label": "ϩⲣⲟϣ",
+      "pos": "V",
+      "gloss": "be heavy, slow, difficult; make heavy"
+    },
+    {
+      "target": "C6829",
+      "label": "ϩⲣⲟϣ",
+      "pos": "N",
+      "gloss": "weight, burden"
+    }
+  ]
+}

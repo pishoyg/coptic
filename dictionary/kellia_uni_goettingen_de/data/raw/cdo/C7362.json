@@ -1,0 +1,195 @@
+{
+  "id": "C7362",
+  "forms": [
+    {
+      "id": "CF16783",
+      "orth": "ⲣϫⲣⲟⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17050,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8144",
+      "bibliography": "CD 786b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧⲉⲩϩⲓⲏ ⲉⲥⲉ**ⲣϫⲣⲟⲡ** ⲛⲁⲩ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲥⲉⲛⲁⲥⲙⲟⲩ ϩⲛⲣⲱⲟⲩ ⲇⲓⲁⲯⲁⲗⲙⲁ",
+      "english": "This their way is an offence to them: yet afterwards men will commend their sayings. Pause.",
+      "source": "Psalms 48",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲥⲉ",
+        1,
+        13.258
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        10.983
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        10.438
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲥⲉ_1_pre_ⲣϫⲣⲟⲡ",
+          1
+        ],
+        [
+          "ⲣϫⲣⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣϫⲣⲟⲡ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲛⲥⲁ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_3_post_ⲙⲛⲛⲥⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲥⲉ_1_pre_ⲣϫⲣⲟⲡ",
+          "ⲣϫⲣⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲣϫⲣⲟⲡ_0_node",
+          "ⲛⲁ_1_post_ⲣϫⲣⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣϫⲣⲟⲡ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ⲙⲛⲛⲥⲁ_2_post_ⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲛⲥⲁ_2_post_ⲥⲙⲟⲩ",
+          "ⲛⲁⲓ_3_post_ⲙⲛⲛⲥⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16654,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7364",
+      "label": "ϫⲓϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "stumble, be impeded"
+    },
+    {
+      "target": "C7359",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "obstacle, impediment; mishap"
+    },
+    {
+      "target": "C7360",
+      "label": "ϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "impedient"
+    },
+    {
+      "target": "C7357",
+      "label": "ϫⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "stumble, trip; insult, offend"
+    },
+    {
+      "target": "C7358",
+      "label": "ϫⲱⲣⲡ (ⲉ)",
+      "pos": "V",
+      "gloss": "stumble against, touch"
+    },
+    {
+      "target": "C7363",
+      "label": "ϯϫⲣⲟⲡ",
+      "pos": "V",
+      "gloss": "give scandal, trip up"
+    },
+    {
+      "target": "C7361",
+      "label": "ⲁⲧϫⲣⲟⲡ",
+      "pos": "N",
+      "gloss": "unimpeded"
+    }
+  ]
+}

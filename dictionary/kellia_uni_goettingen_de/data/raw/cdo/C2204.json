@@ -1,0 +1,70 @@
+{
+  "id": "C2204",
+  "forms": [
+    {
+      "id": "CF6126",
+      "orth": "ⲙⲏⲏϣⲉ ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.24,
+        "rank": 616,
+        "count": 196
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2546",
+      "bibliography": "CD 202ab; KoptHWb 108"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲙⲉ ⲁⲓⲟⲩⲉϣ **ⲟⲩⲙⲏⲏϣⲉ **ⲛ**ϫⲱⲱⲙⲉ** ·",
+      "english": "Truly, I have read a multitude of books,",
+      "source": "Apophthegmata Patrum Sahidic 057: Euprepius 7",
+      "urn": "urn:cts:copticLit:ap.57.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "..... **ⲙⲏⲏϣⲉ **ⲛ**ⲧⲁⲅⲙⲁ** ⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲙⲛⲏⲡ .....",
+      "english": "... an army of angels, being without number ...",
+      "source": "Apophthegmata Patrum Sahidic 002: Anonymous Nau 136",
+      "urn": "urn:cts:copticLit:ap.2.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲇⲉ **ⲛⲟⲩⲙⲏⲏϣⲉ **ⲛ**ϩⲩⲡⲱⲣⲁ**",
+      "english": "And they brought a large number of plums,",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2203",
+      "label": "ⲙⲏⲏϣⲉ",
+      "pos": "N",
+      "gloss": "multitude (persons or things), crowd, troop"
+    },
+    {
+      "target": "C2206",
+      "label": "ⲛϩⲁⲛⲙⲏϣ",
+      "pos": "ADV",
+      "gloss": "greatly"
+    },
+    {
+      "target": "C2205",
+      "label": "ⲛⲟⲩⲙⲏϣ",
+      "pos": "ADV",
+      "gloss": "greatly"
+    }
+  ]
+}

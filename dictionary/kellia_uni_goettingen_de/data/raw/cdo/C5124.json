@@ -1,0 +1,110 @@
+{
+  "id": "C5124",
+  "forms": [
+    {
+      "id": "CF12213",
+      "orth": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2948,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5755",
+      "bibliography": "CD 489b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁϥⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ϧⲉⲛⲡϭⲓⲥⲓ ⲟⲩⲟϩ ⲁϥϭⲓⲧⲧ: ⲉⲁϥϣⲟⲡⲧ ⲉⲣⲟϥ ⲉⲃⲟⲗ ϧⲉⲛϩⲁⲛⲙⲱⲟⲩ ⲉⲩⲟϣ: ⲉϥⲉⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲁϫⲁϫⲓ ⲉⲧϫⲟⲣ: ⲛⲉⲙⲉⲃⲟⲗ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲏⲉⲑⲙⲟⲥϯ ⲙⲙⲟⲓ .",
+      "english": "He sent from on high and took me, he drew me to himself out of many waters.",
+      "source": "19_Psalmi_17",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉϥⲉⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ⲙⲡⲓⲉⲣϫ ⲉⲧⲟⲛϧ ⲥⲁⲃⲟⲗ ⲛϯⲃⲁⲕⲓ ⲉⲡⲓⲙⲉϣϣⲱⲧ ⲟⲩⲟϩ ⲉϥⲉⲧⲱⲃϩ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲓⲏⲓ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡⲓ ⲉϥⲧⲟⲩⲃⲏⲟⲩⲧ",
+      "english": "And he shall let the living bird go out of the city into the field, and shall make atonement for the house, and it shall be clean.",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲥⲟⲩⲱⲛϥ ⲛϫⲉⲛⲓⲣⲱⲙⲓ ⲛⲧⲉⲡⲓⲙⲁ ⲉⲧⲉⲙⲙⲁⲩ **ⲁⲩⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ϧⲉⲛϯⲡⲉⲣⲓⲭⲱⲣⲟⲥ ⲧⲏⲣⲥ ⲉⲧⲉⲙⲙⲁⲩ ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲛⲁϥ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲧϩⲉⲙⲕⲏⲟⲩⲧ .",
+      "english": "When the people of that place recognized him, they sent into all that surrounding region, and brought to him all who were sick,",
+      "source": "01_Matthew_14",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.08,
+      "rank": 2584,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5130",
+      "label": "ϭⲓⲛⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5122",
+      "label": "ⲟⲩⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "send"
+    },
+    {
+      "target": "C5127",
+      "label": "ⲟⲩⲱⲣⲡ ⲉϧⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "send in"
+    },
+    {
+      "target": "C5123",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C5126",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "send up"
+    },
+    {
+      "target": "C5125",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "send down"
+    },
+    {
+      "target": "C5129",
+      "label": "ⲣⲉϥⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "man sent, messenger"
+    },
+    {
+      "target": "C5128",
+      "label": "ⲣⲉⲙⲛⲃⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "messenger"
+    }
+  ]
+}

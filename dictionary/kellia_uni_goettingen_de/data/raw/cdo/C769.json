@@ -1,0 +1,368 @@
+{
+  "id": "C769",
+  "forms": [
+    {
+      "id": "CF2849",
+      "orth": "ⲉϣϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.28,
+        "rank": 208,
+        "count": 833
+      }
+    },
+    {
+      "id": "CF2850",
+      "orth": "ⲉϣϫⲉ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲓⲥϫⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.41,
+        "rank": 218,
+        "count": 459
+      }
+    },
+    {
+      "orth": "ⲉϣϫⲡⲉ",
+      "dialect": "S",
+      "id": "681.1"
+    },
+    {
+      "orth": "ⲓⲥϫⲉⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1904,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲉⲓⳉϫⲉ",
+      "dialect": "A",
+      "id": "681.3"
+    },
+    {
+      "orth": "ⳉϫⲉ",
+      "dialect": "A",
+      "id": "681.4"
+    },
+    {
+      "orth": "ⲉⲓⳉⲡⲉ",
+      "dialect": "A",
+      "id": "681.5"
+    },
+    {
+      "orth": "ⳉⲡⲉ",
+      "dialect": "A",
+      "id": "681.6"
+    },
+    {
+      "orth": "ⲉϣϫⲡⲉ",
+      "dialect": "F",
+      "id": "681.7"
+    },
+    {
+      "orth": "ⲉϣⲡⲉ",
+      "dialect": "L",
+      "id": "681.8"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS911",
+      "bibliography": "CD 63b; CED 41; KoptHWb 43, 501; DELC 50; ChLCS 12b"
+    },
+    {
+      "id": "CS912",
+      "bibliography": "CD 63b; KoptHWb 43; DELC 50"
+    },
+    {
+      "id": "CS913",
+      "bibliography": "CD 64a; KoptHWb 43; DELC 50"
+    },
+    {
+      "id": "CS914",
+      "bibliography": "CD 64a; ChLCS 12b"
+    },
+    {
+      "id": "CS915",
+      "bibliography": "CD 64a; KoptHWb 43"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲓⲥϫⲉ** ⲇⲉ ⲟⲩⲟⲛⲟⲩⲁⲓ ⲉϥⲟⲓ ⲛⲁⲧⲉⲙⲓ ⲥⲉⲟⲓ ⲛⲁⲧⲉⲙⲓ ⲉⲣⲟϥ .",
+      "english": "But if anyone is ignorant, let him be ignorant.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉϣϫⲉ** ⲁⲩⲙⲟⲩⲧⲉ ⲉ",
+      "english": "If they called ...",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲅⲁⲣ ⲡⲉⲧⲉⲣⲇⲓⲁⲕⲣⲓⲛⲓⲛ ⲙⲙⲟⲕ ⲟⲩ ⲇⲉ ⲡⲉⲧⲉⲛⲧⲟⲧⲕ ⲉⲧⲉⲙⲡⲉⲕϭⲓⲧϥ **ⲓⲥϫⲉ** ⲇⲉ ⲁⲕⲉⲣⲡⲕⲉϭⲓ ⲉⲑⲃⲉⲟⲩ ⲉⲕϣⲟⲩϣⲟⲩ ⲙⲙⲟⲕ ϩⲱⲥ ⲟⲩⲁⲓ ⲙⲡⲉⲕϭⲓ .",
+      "english": "For who makes you different? And what do you have that you didn't receive? But if you did receive it, why do you boast as if you had not received it?",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉϣϫⲉ** ⲟⲩⲛϩⲟⲓⲛⲉ ⲇⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲩⲣⲁϣⲉ ⲛⲛⲟⲩϫ ⲉⲩⲛ ϩⲣⲁⲓ ϩⲛⲛⲉⲩⲙⲛⲧϣⲁϥⲧⲉ · ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲙⲛⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲙⲟⲕϩ ⲛϩⲏⲧ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲉⲩϣⲟⲟⲡ ϩⲛⲛⲉⲩⲡⲁⲣⲁⲃⲁⲥⲓⲥ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲓⲥϫⲉ**ⲟⲩⲟⲛ ⲡⲉⲧⲕⲱⲧ ⲉϫⲉⲛⲧⲁⲓⲥⲉⲛϯ ⲛⲟⲩⲃ ϩⲁⲧ ⲁⲛⲁⲙⲏⲓ ⲣⲱⲕϩ ⲥⲱⲟⲩⲃⲉⲛ ⲣⲱⲟⲩⲓ .",
+      "english": "But if anyone builds on the foundation with gold, silver, costly stones, wood, hay, or stubble;",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉϣϫⲉ** ϣⲁⲣⲉⲡⲕⲱϩⲧ ⲉⲓ ⲉϫⲛⲛϣⲟⲛⲧⲉ ⲛϥⲟϫⲛⲟⲩ ·",
+      "english": "If fire cometh upon thorns it consumeth them :",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟⲛ",
+        111,
+        29.184
+      ],
+      [
+        ".",
+        219,
+        28.941
+      ],
+      [
+        "ⲁ",
+        228,
+        28.488
+      ],
+      [
+        "ⲅⲁⲣ",
+        82,
+        27.662
+      ],
+      [
+        "ⲇⲉ",
+        111,
+        27.432
+      ],
+      [
+        "ⲛ",
+        194,
+        27.39
+      ],
+      [
+        "ⲓ",
+        117,
+        27.187
+      ],
+      [
+        "ⲭ",
+        44,
+        27.007
+      ],
+      [
+        "ⲟⲩⲛ",
+        44,
+        26.837
+      ],
+      [
+        "ⲛⲁ",
+        107,
+        26.179
+      ],
+      [
+        "ϥ",
+        145,
+        25.964
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        47,
+        25.735
+      ],
+      [
+        "ⲧⲉⲛ",
+        67,
+        25.599
+      ],
+      [
+        "ⲕ",
+        70,
+        25.516
+      ],
+      [
+        "ⲟⲩ",
+        110,
+        25.098
+      ],
+      [
+        "ϩⲁⲣⲁ",
+        14,
+        24.594
+      ],
+      [
+        "ⲡⲓ",
+        77,
+        24.571
+      ],
+      [
+        "ϧⲉⲛ",
+        76,
+        24.507
+      ],
+      [
+        "ⲟⲩⲣⲉϥϭⲓⲙⲕⲁϩ",
+        3,
+        24.45
+      ],
+      [
+        "ⲡ",
+        74,
+        24.248
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        32,
+        25.896
+      ],
+      [
+        "ⲁ",
+        395,
+        21.219
+      ],
+      [
+        "ⲕ",
+        222,
+        20.534
+      ],
+      [
+        ".",
+        234,
+        20.466
+      ],
+      [
+        "ⲉ",
+        329,
+        20.201
+      ],
+      [
+        "ⲇⲉ",
+        186,
+        19.901
+      ],
+      [
+        "ⲡⲉ",
+        206,
+        19.865
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        128,
+        19.746
+      ],
+      [
+        "ⲛ",
+        363,
+        19.618
+      ],
+      [
+        "ⲓ",
+        157,
+        19.032
+      ],
+      [
+        "ⲡ",
+        244,
+        18.587
+      ],
+      [
+        "ϥ",
+        216,
+        18.084
+      ],
+      [
+        "ⲛⲁ",
+        155,
+        17.815
+      ],
+      [
+        "ϫⲉ",
+        139,
+        17.801
+      ],
+      [
+        "ⲟⲩⲛ",
+        51,
+        17.524
+      ],
+      [
+        "ⲟⲩ",
+        160,
+        17.484
+      ],
+      [
+        "ⲉⲧ",
+        120,
+        17.257
+      ],
+      [
+        "ⲩ",
+        127,
+        17.074
+      ],
+      [
+        "ⲁⲛ",
+        73,
+        16.995
+      ],
+      [
+        "ⲟⲩⲁ",
+        55,
+        16.971
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉϣϫⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.25,
+      "rank": 178,
+      "count": 833
+    }
+  }
+}

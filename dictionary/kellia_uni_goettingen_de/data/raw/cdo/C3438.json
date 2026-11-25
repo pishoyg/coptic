@@ -1,0 +1,65 @@
+{
+  "id": "C3438",
+  "forms": [
+    {
+      "id": "CF8776",
+      "orth": "ⲉⲥⲕⲉⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1504,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3916",
+      "bibliography": "CD 329a; CED 150; KoptHWb 182; DELC 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲗⲓⲛ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϯⲥⲃⲱ **ⲉⲥⲕⲉⲛ**ⲫⲓⲟⲙ ⲟⲩⲟϩ ⲁⲩⲑⲱⲟⲩϯ ⲉⲣⲟϥ ⲛϫⲉⲟⲩⲙⲏϣ ⲉϥⲟϣ ϩⲱⲥⲧⲉ ⲛⲧⲉϥⲁⲗⲏⲓ ⲉⲡⲓϫⲟⲓ ⲛⲧⲉϥϩⲉⲙⲥⲓ ϧⲉⲛⲫⲓⲟⲙ ϩⲓⲡⲓⲭⲣⲟ .",
+      "english": "Again he began to teach by the seaside. A great multitude was gathered to him, so that he entered into a boat in the sea, and sat down. All the multitude were on the land by the sea.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲣⲉⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲉⲣⲙⲉⲑⲣⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲛⲁⲩ ⲉⲡⲓⲓ ⲛⲧⲏⲃ ⲛⲧⲉⲡⲓⲕⲟⲩϫⲓ ⲛϣⲏⲣⲓ ⲉⲩⲟⲓ ⲙⲫⲣⲏϯ ⲙⲓ ⲛⲗⲁⲙⲡⲁⲥ ⲛⲭⲣⲱⲙ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ⲁⲓⲧⲁⲥⲑⲟⲓ ⲉⲫⲁϩⲟⲩ ⲁⲓϣⲉ ⲛⲏⲓ **ⲉⲥⲕⲉⲛ**ⲛⲁⲉⲥⲱⲟⲩ .",
+      "english": "And the shepherd was witness, saying “I saw the ten fingers of the little boy becoming as ten flaming lanterns, and so I turned back and went to my sheep.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓ ⲉⲓⲉⲣⲓⲭⲱ ⲟⲩⲟϩ ⲉϥⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲓⲉⲣⲓⲭⲱ ⲛⲉⲙⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲛⲉⲙⲟⲩⲙⲏϣ ⲉϥⲟϣ ⲃⲁⲣⲧⲓⲙⲉⲟⲥ ⲡϣⲏⲣⲓ ⲛⲧⲓⲙⲉⲟⲥ ⲉⲟⲩⲃⲉⲗⲗⲉ ⲡⲉ ⲛⲣⲉϥⲧⲱⲃϩ ⲛⲁϥϩⲉⲙⲥⲓ **ⲉⲥⲕⲉⲛ**ⲡⲓⲙⲱⲓⲧ .",
+      "english": "They came to Jericho. As he went out from Jericho, with his disciples and a great multitude, the son of Timaeus, Bartimaeus, a blind beggar, was sitting by the road.",
+      "source": "Bohairic Gospel of Mark 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:10",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3439",
+      "label": "ϩⲓⲥⲕⲉⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at the side of"
+    },
+    {
+      "target": "C3437",
+      "label": "ⲥⲕⲉⲛ-",
+      "pos": "N",
+      "gloss": "side(?) (read: ⲥⲕⲉ ⲛ- ?)"
+    }
+  ]
+}

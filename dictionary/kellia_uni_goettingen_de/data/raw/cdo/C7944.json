@@ -1,0 +1,192 @@
+{
+  "id": "C7944",
+  "forms": [
+    {
+      "id": "CF17954",
+      "orth": "ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10789,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8828",
+      "bibliography": "CD 834a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣϥⲛⲁⲩ ⲇⲉ ⲛϭⲓⲡⲣⲣⲟ ⲉⲧⲉⲩ**ⲙⲛⲧⲁⲧϭⲱⲧⲡ** ⲙⲛⲧⲉⲩⲡⲓⲥⲧⲓⲥ ⲉϩⲟⲩⲛ ⲉⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩϫⲓⲧⲟⲩ ⲉⲡⲉⲥⲧⲁⲇⲓⲟⲛ · ⲛⲥⲉⲕⲱ ⲉⲃⲟⲗ ⲉⲣⲟⲟⲩ ⲛⲟⲩⲛⲟϭ ⲙⲙⲟⲩⲓ ·",
+      "english": "And when the Emperor saw their unconcern and their faith in the Christ, he commanded them to be taken to the stadium, and to be put an end to by means of a mighty lion.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲩ",
+        2,
+        13.438
+      ],
+      [
+        "ⲡⲓⲥⲧⲓⲥ",
+        1,
+        11.278
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        9.457
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧϭⲱⲧⲡ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲓⲥ_1_post_ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+          "ⲙⲛⲧⲁⲧϭⲱⲧⲡ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧϭⲱⲧⲡ_0_node",
+          "ⲙⲛ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          "ⲧⲉⲩ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ⲡⲓⲥⲧⲓⲥ",
+          "ⲡⲓⲥⲧⲓⲥ_1_post_ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10380,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7946",
+      "label": "ϭⲟⲧⲡⲥ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7945",
+      "label": "ϭⲧⲟⲡ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7936",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "defeat, overcome; be defeated, overcome"
+    },
+    {
+      "target": "C7942",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "intimidation, discouragement"
+    },
+    {
+      "target": "C7938",
+      "label": "ϭⲱⲧⲡ (ϩⲁⲧϩⲏ⸗)",
+      "pos": "V",
+      "gloss": "beware of, watch out for, take care"
+    },
+    {
+      "target": "C7939",
+      "label": "ϭⲱⲧⲡ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "fail"
+    },
+    {
+      "target": "C7937",
+      "label": "ϭⲱⲧⲡ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be wearied of"
+    },
+    {
+      "target": "C7940",
+      "label": "ϭⲱⲧⲡ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "scare away"
+    },
+    {
+      "target": "C7941",
+      "label": "ϭⲱⲧⲡ (ⲛϩⲏⲧ)",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C7943",
+      "label": "ⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "without defeat, unconquered"
+    }
+  ]
+}

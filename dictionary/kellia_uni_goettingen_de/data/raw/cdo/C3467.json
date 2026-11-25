@@ -1,0 +1,74 @@
+{
+  "id": "C3467",
+  "forms": [
+    {
+      "id": "CF8834",
+      "orth": "ⲥⲱⲗⲡ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3947",
+      "bibliography": "CD 331a"
+    },
+    {
+      "id": "CS3948",
+      "bibliography": "CD 331a; KoptHWb 183; DELC 188; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧϩⲏⲇⲟⲛⲏ ⲅⲁⲣ ⲛⲧⲙⲛⲧⲁⲧⲥⲉⲓ ϣⲁⲥⲣⲡⲗⲟⲅⲓⲥⲙⲟⲥ ⲛⲥⲟϭ · ⲛⲥⲣⲧⲥⲩ ⲛⲏⲇⲏⲥⲓⲥ ⲛⲁⲧϣⲓⲡⲉ · **ⲛⲥⲥⲱⲗⲡ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲭⲁⲗⲓⲛⲟⲥ ⲙⲡⲗⲁⲥ ·",
+      "english": "For the pleasure which attendeth drinking in excess maketh a man of understanding- to become a fool, and it turneth the conscience into a shameless thing, and it setteth loose the bridle of the tongue.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3469",
+      "label": "ⲁⲧⲥⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unbroken"
+    },
+    {
+      "target": "C3471",
+      "label": "ⲥⲗⲉⲡⲗⲓⲡ",
+      "pos": "N",
+      "gloss": "part of a snake"
+    },
+    {
+      "target": "C3472",
+      "label": "ⲥⲗⲟⲡⲗⲉⲡ",
+      "pos": "V",
+      "gloss": "tear asunder"
+    },
+    {
+      "target": "C3470",
+      "label": "ⲥⲗⲡⲉ",
+      "pos": "N",
+      "gloss": "strip"
+    },
+    {
+      "target": "C3466",
+      "label": "ⲥⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "break, burst; break, cut off"
+    },
+    {
+      "target": "C3468",
+      "label": "ⲥⲱⲗⲡ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    }
+  ]
+}

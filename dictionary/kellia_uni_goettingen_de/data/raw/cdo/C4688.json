@@ -1,0 +1,64 @@
+{
+  "id": "C4688",
+  "forms": [
+    {
+      "id": "CF11339",
+      "orth": "ϫⲓⲛⲧⲟⲩⲛⲟⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5294",
+      "bibliography": "CD 447a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4686",
+      "label": "ⲣⲉϥⲧⲟⲩⲛⲟⲥ",
+      "pos": "N",
+      "gloss": "one who raises"
+    },
+    {
+      "target": "C4687",
+      "label": "ⲣⲉϥⲧⲟⲩⲛⲟⲥ",
+      "pos": "N",
+      "gloss": "one who raises"
+    },
+    {
+      "target": "C4683",
+      "label": "ⲧⲟⲩⲛⲟⲥ",
+      "pos": "V",
+      "gloss": "wake, raise, set up"
+    },
+    {
+      "target": "C4684",
+      "label": "ⲧⲟⲩⲛⲟⲥ",
+      "pos": "N",
+      "gloss": "raising"
+    },
+    {
+      "target": "C4685",
+      "label": "ⲧⲟⲩⲛⲟⲥ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "raise upon, incite against"
+    }
+  ]
+}

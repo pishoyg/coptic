@@ -1,0 +1,556 @@
+{
+  "id": "C2740",
+  "forms": [
+    {
+      "id": "CF7297",
+      "orth": "ⲟⲉⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.09,
+        "rank": 335,
+        "count": 487
+      }
+    },
+    {
+      "orth": "ⲱⲓⲕ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.24,
+        "rank": 259,
+        "count": 360
+      }
+    },
+    {
+      "orth": "ⲁⲉⲓⲕ",
+      "dialect": "A",
+      "id": "812.1"
+    },
+    {
+      "orth": "ⲁⲉⲓⲕ",
+      "dialect": "F",
+      "id": "812.2"
+    },
+    {
+      "orth": "ⲁⲓⲕ",
+      "dialect": "F",
+      "id": "812.3"
+    },
+    {
+      "orth": "ⲁⲉⲓⲕ",
+      "dialect": "L",
+      "id": "812.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3134",
+      "bibliography": "CD 254ab; CED 120; KoptHWb 140; DELC 154-155; ChLCS 35b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲏ ⲉⲛⲁⲩⲟⲩⲱⲙ ⲛⲛⲓ**ⲱⲓⲕ** ⲛⲁⲩⲉⲣⲛϣⲟ ⲛⲣⲱⲙⲓ .",
+      "english": "Those who ate the loaves were five thousand men.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲙⲛⲧϥ **ⲟⲉⲓⲕ** ϩⲛⲧⲉϥⲣⲓ ·",
+      "english": "and he didn’t have bread in his cell.",
+      "source": "Apophthegmata Patrum Sahidic 045",
+      "urn": "urn:cts:copticLit:ap.45.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲙⲟⲕⲙⲉⲕ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲟⲩ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲙⲟⲛ **ⲱⲓⲕ** ⲛⲧⲟⲧⲟⲩ .",
+      "english": "They reasoned with one another, saying, 'It's because we have no bread.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲭⲱⲣⲓⲥ**ⲟⲉⲓⲕ** ϩⲓⲏⲣⲡ , ϩⲓϭⲓⲛⲟⲩⲱⲙ , ϩⲓⲧⲱϩ .",
+      "english": "except for bread and wine, finding food and chaf.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲥ ϫⲉⲭⲁⲥ ⲛϣⲟⲣⲡ ⲛⲧⲟⲩⲥⲓ ⲛϫⲉⲛⲓϣⲏⲣⲓ ⲟⲩ ⲅⲁⲣ ⲛⲁⲛⲉⲥ ⲁⲛ ⲉⲉⲗⲡ**ⲱⲓⲕ** ⲛⲛⲓϣⲏⲣⲓ ⲉⲧⲏⲓϥ ⲛⲛⲓⲟⲩϩⲱⲣ .",
+      "english": "But Jesus said to her, 'Let the children be filled first, for it is not appropriate to take the children's bread and throw it to the dogs.'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲥⲟⲛ ⲇⲉ ⲁϥⲟⲩⲱⲙ ⲛⲛⲉϥ**ⲟⲉⲓⲕ** .",
+      "english": "But the brother ate his bread.",
+      "source": "Apophthegmata Patrum Sahidic 096: Anonymous Nau 281",
+      "urn": "urn:cts:copticLit:ap.96.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        247,
+        28.436
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        60,
+        27.942
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        186,
+        27.697
+      ],
+      [
+        "ⲡⲣⲟⲑⲉⲥⲓⲥ",
+        13,
+        27.626
+      ],
+      [
+        "ⲉ",
+        149,
+        26.675
+      ],
+      [
+        "ⲟⲩ",
+        137,
+        26.048
+      ],
+      [
+        "ⲙ",
+        113,
+        26.044
+      ],
+      [
+        ".",
+        103,
+        25.676
+      ],
+      [
+        "ⲛⲓ",
+        83,
+        25.343
+      ],
+      [
+        "ⲡⲏⲣⲁ",
+        7,
+        25.117
+      ],
+      [
+        "ⲡⲓ",
+        78,
+        24.627
+      ],
+      [
+        "ϥ",
+        106,
+        24.608
+      ],
+      [
+        "ϯ",
+        68,
+        24.553
+      ],
+      [
+        "ⲗⲟ",
+        3,
+        24.45
+      ],
+      [
+        "ⲛⲉⲙ",
+        67,
+        24.441
+      ],
+      [
+        "ⲧⲉⲃⲧ",
+        11,
+        24.215
+      ],
+      [
+        "ⲉⲧ",
+        62,
+        24.114
+      ],
+      [
+        "ⲁⲧϣⲉⲙⲏⲣ",
+        7,
+        23.795
+      ],
+      [
+        "ⲉⲣ",
+        25,
+        23.589
+      ],
+      [
+        "ⲁ",
+        72,
+        23.499
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        445,
+        21.274
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        83,
+        20.827
+      ],
+      [
+        "ⲙ",
+        230,
+        19.96
+      ],
+      [
+        "ⲡ",
+        272,
+        19.832
+      ],
+      [
+        "ⲁ",
+        182,
+        18.64
+      ],
+      [
+        "ⲙⲛ",
+        124,
+        18.579
+      ],
+      [
+        "ⲟⲩ",
+        160,
+        18.258
+      ],
+      [
+        "ⲡⲣⲟⲑⲉⲥⲓⲥ",
+        9,
+        18.18
+      ],
+      [
+        "ⲁⲩⲱ",
+        136,
+        18.082
+      ],
+      [
+        "ⲛⲁ",
+        135,
+        17.991
+      ],
+      [
+        "ϥ",
+        170,
+        17.822
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        17.67
+      ],
+      [
+        ".",
+        98,
+        17.474
+      ],
+      [
+        "ⲑⲁⲃ",
+        15,
+        17.414
+      ],
+      [
+        "ⲉ",
+        138,
+        17.215
+      ],
+      [
+        "ⲡⲉ",
+        87,
+        16.909
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        30,
+        16.829
+      ],
+      [
+        "ⲉⲧ",
+        84,
+        16.488
+      ],
+      [
+        "ϩⲛ",
+        79,
+        16.463
+      ],
+      [
+        "ⲥⲉⲡ",
+        9,
+        16.226
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲉⲓⲕ_0_node",
+          248
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲉⲓⲕ",
+          16
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲉⲓⲕ",
+          11
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲟⲉⲓⲕ",
+          11
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲟⲉⲓⲕ",
+          10
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲟⲉⲓⲕ",
+          10
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲉⲓⲕ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲉⲓⲕ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲟⲉⲓⲕ",
+          9
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲟⲉⲓⲕ",
+          4
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲉⲓⲕ",
+          3
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲛⲏⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲉⲓⲕ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          2
+        ],
+        [
+          "ⲟⲉⲓⲕ_0_node",
+          "ⲛ_1_post_ⲟⲉⲓⲕ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲉⲓⲕ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲉⲓⲕ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          2
+        ],
+        [
+          "ⲟⲉⲓⲕ_0_node",
+          "ⲉⲧ_1_post_ⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲉⲓⲕ",
+          "ⲛⲏⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲉⲓⲕ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲟⲉⲓⲕ",
+          "ⲟⲉⲓⲕ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.07,
+      "rank": 277,
+      "count": 487
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2741",
+      "label": "ⲁⲧⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "without bread"
+    },
+    {
+      "target": "C2742",
+      "label": "ⲥⲁ ⲛⲱⲓⲕ",
+      "pos": "N",
+      "gloss": "bread-seller"
+    }
+  ],
+  "etym": {
+    "egy_num": "41470",
+    "egy_lemma": "ꜥq.w",
+    "demo_num": "d1123",
+    "demo_lemma": "ꜥq",
+    "english": "loaves (of bread); income",
+    "german": "Einkünfte; Brot",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/41470",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1123"
+  }
+}

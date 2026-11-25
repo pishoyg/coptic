@@ -1,0 +1,56 @@
+{
+  "id": "C12176",
+  "forms": [
+    {
+      "id": "CF33188",
+      "orth": "ϩⲱⲧⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17180",
+      "bibliography": "KoptHWB 400"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6945",
+      "label": "ϩⲁⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "a doubled thing, twin"
+    },
+    {
+      "target": "C6947",
+      "label": "ϩⲁⲧⲣⲉⲥ",
+      "pos": "N",
+      "gloss": "yoke, pair (of mules)"
+    },
+    {
+      "target": "C6946",
+      "label": "ϩⲉⲧⲣⲉ",
+      "pos": "N",
+      "gloss": "navel(?)"
+    },
+    {
+      "target": "C6943",
+      "label": "ϩⲱⲧⲣ",
+      "pos": "V",
+      "gloss": "be joined, doubled"
+    },
+    {
+      "target": "C6944",
+      "label": "ϩⲱⲧⲣ",
+      "pos": "N",
+      "gloss": "joint yoke, union"
+    }
+  ]
+}

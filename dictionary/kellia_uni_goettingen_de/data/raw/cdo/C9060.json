@@ -1,0 +1,440 @@
+{
+  "id": "C9060",
+  "forms": [
+    {
+      "id": "CF22425",
+      "orth": "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22426",
+      "orth": "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2851,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF22427",
+      "orth": "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5328,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22428",
+      "orth": "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF22429",
+      "orth": "ⲉⲩⲁⲅⲅⲓⲥⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22430",
+      "orth": "ⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11160",
+      "bibliography": "DDGLC",
+      "cu_ID": "2291"
+    },
+    {
+      "id": "CS11161",
+      "bibliography": "DDGLC",
+      "cu_ID": "5978"
+    },
+    {
+      "id": "CS11162",
+      "bibliography": "DDGLC",
+      "cu_ID": "7542"
+    },
+    {
+      "id": "CS11163",
+      "bibliography": "DDGLC",
+      "cu_ID": "8322"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲡⲉϫⲁϥ ϩⲱⲥ ⲉϥⲥⲱⲟⲩⲛ ⲙⲫⲏ ⲉⲧⲟⲩⲧⲱϥ ⲛⲉⲙⲫⲛⲟⲩϯ ϫⲉⲫⲏ ⲉⲧⲁⲓϫⲟϥ ⲛⲱⲧⲉⲛ ⲁⲓϫⲟϥ ϧⲉⲛⲟⲩⲡⲁⲣⲣⲏⲥⲓⲁ ⲙⲡⲉⲙⲑⲟ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲡⲓϩⲁⲅⲓⲟⲥ ⲙⲁⲣⲕⲟⲥ ⲡⲓ**ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ** ⲉⲧⲟⲩⲁⲃ ⲡⲉ ⲉⲧⲟⲩⲁϩⲥⲁϩⲛⲓ ⲛⲱⲧⲉⲛ .",
+      "english": "The archbishop answered and said to him as one who knew what was between God and him: “What I have said to you, I have spoken truthfully in the presence of each one; it is the holy evangelist Mark who commands you.”",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ** ⲣϣⲡⲏⲣⲉ ·",
+      "english": "The Evangelist is stricken with wonder,",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲧϩⲉⲙⲥⲟϥ ϩⲓϫⲉⲛⲡⲓⲑⲣⲟⲛⲟⲥ ⲛⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲛ ⲛⲧⲉⲡⲓ**ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ** ⲉⲑⲟⲩⲁⲃ ⲙⲁⲣⲕⲟⲥ ⲡⲓϧⲏⲃⲥ ⲉⲧⲁϥⲉⲣⲟⲩⲱⲓⲛⲓ ⲉⲣⲟⲛ",
+      "english": "And he was seated on the apostolic throne of the holy evangelist Mark, a light that enlightens us",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲁⲧⲣⲉϥϫⲉⲛⲁⲓ ⲛϭⲓⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡ**ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ** · ⲁϥϫⲓ ⲛⲟⲩⲟⲉⲓⲕ · ⲁϥϣⲡϩⲙⲟⲧ ⲛⲧⲉⲓϩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲁϣ ⲡⲉ ⲡⲕⲉⲥⲙⲟⲩ · ⲏ ⲁϣ ⲡⲉ ⲡⲕⲉⲉⲓ ⲉⲃⲟⲗ ⲙⲡϣⲁϫⲉ · ⲏ ⲁϣ ⲧⲉ ⲧⲕⲉⲉⲩⲭⲁⲣⲓⲥⲧⲓⲁ ⲉⲛⲛⲁⲟⲛⲟⲙⲁⲍⲉ ⲙⲙⲟⲟⲩ ⲉϫⲙⲡⲉⲓⲟⲉⲓⲕ ⲉⲛⲡⲱϣ ⲙⲙⲟϥ · ⲉⲓⲙⲏⲧⲓ ⲛⲧⲟⲕ ⲙⲁⲩⲁⲁⲕ · ⲡϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "And when Saint John the Evangelist had made an end of saying these words, he took bread, and he gave thanks unto God in this manner, saying, ' What other blessing is there? Or what other word can be spoken? Or what other giving of thanks is there which we can pronounce over this bread [which] we break, except Thou alone, the Lord Jesus, the  Christ?",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉϣϫⲉ ⲕⲥⲱⲃⲉ ⲛⲥⲁⲡⲛⲟⲙⲟⲥ ⲱ ⲡⲓⲟⲩⲇⲁⲓ ⲁⲩⲱ ⲕⲟ ⲛⲁⲧⲥⲱⲧⲙ ⲛⲥⲁⲛⲉⲡⲣⲟⲫⲏⲧⲏⲥ · ⲁⲩⲱ ⲕⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲛⲛ**ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ** ⲁⲩⲱ ⲕⲡⲱⲱⲛⲉ ⲛⲛϣⲁϫⲉ ⲛⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ⲟⲩⲕ ⲟⲩⲛ ⲙⲁⲣⲛϫⲛⲉⲛⲉⲥⲧⲟⲓⲭⲓⲟⲛ ⲛⲧⲛⲉⲓⲙⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ · ϫⲉⲉⲩϩⲟⲙⲟⲗⲟⲅⲉⲓ ⲙⲡϫⲟⲉⲓⲥ ⲉⲛⲧⲁϥⲙⲟⲩ ϩⲛⲧⲥⲁⲣⲝ · ϫⲉⲛⲓⲙ ⲡⲉ ·",
+      "english": "But if thou deridest the Law, O Jew, and if thou wilt not hearken to the Prophets, and if thou wilt treat with contumely the Evangelists, and if thou wilt pervert the words of the Apostles, let us then enquire of the Elements, and let us learn from them what they have to confess concerning God Who died in the flesh, and Who He is.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲁⲣⲕⲟⲥ",
+        3,
+        19.643
+      ],
+      [
+        "ⲁⲡⲟⲥⲧⲟⲗⲓⲕⲟⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        12.023
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        2,
+        11.677
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        10.771
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        10.59
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.238
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.251
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        4,
+        22.691
+      ],
+      [
+        "ⲙⲁⲣⲕⲟⲥ",
+        4,
+        19.106
+      ],
+      [
+        "ⲡⲟⲗⲗⲁⲕⲓⲥ",
+        2,
+        17.106
+      ],
+      [
+        "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+        6,
+        16.142
+      ],
+      [
+        "ⲑⲉⲟⲗⲟⲅⲟⲥ",
+        2,
+        16.106
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        5,
+        14.84
+      ],
+      [
+        "ⲗⲟⲩⲕⲁⲥ",
+        1,
+        14.691
+      ],
+      [
+        "ⲡ",
+        21,
+        13.767
+      ],
+      [
+        "ⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ",
+        2,
+        13.647
+      ],
+      [
+        "ⲁⲩⲱ",
+        14,
+        13.262
+      ],
+      [
+        "ⲡⲱⲱⲛⲉ",
+        2,
+        12.224
+      ],
+      [
+        "ⲉⲓⲙⲏⲧⲓ",
+        2,
+        12.199
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        2,
+        11.749
+      ],
+      [
+        "ⲡⲉⲧⲟⲩⲁⲁⲃ",
+        2,
+        11.152
+      ],
+      [
+        "ⲕ",
+        5,
+        9.911
+      ],
+      [
+        "ϥ",
+        7,
+        9.037
+      ],
+      [
+        "ⲛ",
+        8,
+        8.902
+      ],
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        8.821
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        8.397
+      ],
+      [
+        "ϫⲓ",
+        2,
+        8.258
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲑ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲕⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲏⲃⲥ",
+          1
+        ],
+        [
+          "ϧⲏⲃⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          "ⲉⲑ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲉⲑ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          "ⲙⲁⲣⲕⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲣⲕⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲡⲓ_2_post_ϧⲏⲃⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲏⲃⲥ",
+          "ϧⲏⲃⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲡⲓ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_b",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_b",
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          "ⲉⲧ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          7
+        ],
+        [
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          9
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          "ⲡ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ_1_post_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲙ_2_post_ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲛ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ",
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲥⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2523,
+      "count": 15
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4827,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "810",
+    "grl_lemma": "εὐαγγελιστής",
+    "grl_meaning": "bringer of good news, evangelist",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 705a; Preisigke 1:607"
+  }
+}

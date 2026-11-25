@@ -1,0 +1,341 @@
+{
+  "id": "C9699",
+  "forms": [
+    {
+      "id": "CF24932",
+      "orth": "ⲙⲁⲗⲗⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24933",
+      "orth": "ⲙⲁⲗⲗⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1451,
+        "count": 53
+      }
+    },
+    {
+      "id": "CF24934",
+      "orth": "ⲙⲁⲗⲗⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.37,
+        "rank": 603,
+        "count": 116
+      }
+    },
+    {
+      "id": "CF24935",
+      "orth": "ⲙⲁⲗⲗⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24936",
+      "orth": "ⲙⲁⲗⲗⲟⲛ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS12508",
+      "bibliography": "DDGLC",
+      "cu_ID": "753"
+    },
+    {
+      "id": "CS12509",
+      "bibliography": "DDGLC",
+      "cu_ID": "846"
+    },
+    {
+      "id": "CS12510",
+      "bibliography": "DDGLC",
+      "cu_ID": "8922"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉⲣϯ ⲕⲉⲏⲓ ϫⲉ ⲛϯⲙⲉⲧⲣⲁⲙⲁⲟ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲛⲁⲕⲓⲣⲓ ⲙⲙⲟⲥ ⲛⲟⲩⲥⲏⲟⲩ ⲁⲗⲗⲁ **ⲙⲁⲗⲗⲟⲛ** ⲙⲁⲣⲉⲥⲙⲟⲩⲛⲕ ⲛⲧⲟⲧⲕ ⲛϫⲉϯⲙⲉⲧⲙⲁⲓϩⲁⲧ ⲟⲩⲟϩ ⲛⲑⲟⲕ ϩⲱⲕ ⲛⲧⲉⲕⲙⲟⲩⲛⲕ ⲛⲧⲟⲧⲥ",
+      "english": "Do not, as you once did, build yourself another house from wealth, but rather let the desire for silver abandon you, and you abandon it.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉ**ⲙⲁⲗⲗⲟⲛ** ⲉⲛⲉⲙⲡⲉⲕⲉⲗϩⲏⲙ ⲉϫⲛⲛϩⲏⲕⲉ ⲛⲧϩⲉ ⲛⲛⲉⲓⲙⲟⲩⲓ · ⲛⲉⲓⲛⲁⲉⲗϩⲏⲙ ⲁⲛ ⲡⲉ ·",
+      "english": "...",
+      "source": "Unknown Work 5-1: GF 381-88",
+      "urn": "urn:cts:copticLit:shenoute.unknown5_1.monbgf:131-139",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϭⲓ ⲛⲟⲩⲙⲏϣ ⲛϧⲓⲥⲓ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓⲙⲏϣ ⲛⲥⲏⲓⲛⲓ ⲟⲩⲟϩ ⲁⲥϭⲉ ⲛⲉⲧⲉⲛⲧⲁⲥ ⲛⲓⲃⲉⲛ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲙⲡⲉⲥϫⲉⲙϩⲏⲟⲩ ⲛϩⲗⲓ ⲁⲗⲗⲁ **ⲙⲁⲗⲗⲟⲛ** ⲁⲥⲧϩⲟ ⲛϩⲟⲩⲟ .",
+      "english": "and had suffered many things by many physicians, and had spent all that she had, and was no better, but rather grew worse,",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲙⲁⲗⲗⲟⲛ** ⲙⲁⲣⲛϣⲗⲏⲗ ⲉϩⲣⲁⲓ ⲉϫⲱϥ",
+      "english": "“Let us pray for him instead.",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲏⲇⲏ ⲙⲉⲛ ϩⲟⲗⲱⲥ ⲟⲩⲑⲉⲃⲓⲟ ⲛⲱⲧⲉⲛ ⲡⲉ ϫⲉⲟⲩⲟⲛⲧⲉⲧⲉⲛ ϩⲁⲡ ⲙⲙⲁⲩ ⲟⲩⲧⲱⲧⲉⲛ ⲛⲉⲙⲛⲉⲧⲉⲛⲉⲣⲏⲟⲩ ⲉⲑⲃⲉⲟⲩ ⲙⲁⲗⲗⲟⲛ ⲥⲉϭⲓ ⲙⲙⲱⲧⲉⲛ ⲛϫⲟⲛⲥ ⲁⲛ ⲉⲑⲃⲉⲟⲩ **ⲙⲁⲗⲗⲟⲛ** ⲥⲉϥⲱϫⲓ ⲙⲙⲱⲧⲉⲛ ⲁⲛ .",
+      "english": "Therefore it is already altogether a defect in you, that you have lawsuits one with another. Why not rather be wronged? Why not rather be defrauded?",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲁⲗⲗⲟⲛ** ⲇⲉ ϩⲛⲟⲩⲙϩⲁⲁⲩ ⲁⲛ ⲁⲗⲗⲁ ϩⲛⲟⲩⲛⲩⲙⲫⲱⲛ ·",
+      "english": "it was, however, no sepulchre, but rather a bridal bed.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲩⲟ",
+        18,
+        17.302
+      ],
+      [
+        "ⲛ",
+        80,
+        16.698
+      ],
+      [
+        "ⲩⲏⲣ",
+        5,
+        16.633
+      ],
+      [
+        "ⲧⲉⲛ",
+        41,
+        16.616
+      ],
+      [
+        "ⲇⲉ",
+        40,
+        16.156
+      ],
+      [
+        "ⲉϩⲟⲧⲉ",
+        12,
+        16.007
+      ],
+      [
+        "ϩⲟⲥⲇⲉ",
+        3,
+        16.007
+      ],
+      [
+        "ⲡⲟⲥⲱ",
+        3,
+        16.007
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        18,
+        15.162
+      ],
+      [
+        "ⲃⲁⲣⲃⲃⲁⲥ",
+        2,
+        14.837
+      ],
+      [
+        "ⲥ",
+        32,
+        14.57
+      ],
+      [
+        "ⲧϩⲟ",
+        3,
+        14.422
+      ],
+      [
+        "ⲉⲣⲣⲉⲙϩⲉ",
+        3,
+        14.422
+      ],
+      [
+        "ⲉⲣϩⲟⲩⲟ",
+        6,
+        14.402
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        15,
+        14.317
+      ],
+      [
+        "ϯ",
+        29,
+        14.006
+      ],
+      [
+        "ⲙⲙⲱ",
+        16,
+        13.948
+      ],
+      [
+        "ⲁⲟⲩⲏⲣ",
+        2,
+        13.837
+      ],
+      [
+        "ϥⲱϫⲓ",
+        3,
+        13.422
+      ],
+      [
+        "ⲛⲁ",
+        25,
+        13.028
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲟⲥⲟ",
+        12,
+        21.925
+      ],
+      [
+        "ⲟⲥⲟ",
+        6,
+        20.04
+      ],
+      [
+        "ⲡⲟⲥⲱ",
+        6,
+        20.04
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥϯⲱⲛϩ",
+        2,
+        16.87
+      ],
+      [
+        "ⲇⲉ",
+        24,
+        15.013
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        14.87
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲁⲥⲩⲛⲑⲉⲧⲟⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲧⲁϥⲟ",
+        1,
+        14.87
+      ],
+      [
+        "ⲉⲭⲣⲩⲥⲟⲥⲧⲱⲙⲟⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ϫⲓⲧⲛⲟⲩ",
+        1,
+        14.87
+      ],
+      [
+        "ⲡⲟⲗⲩ",
+        1,
+        14.87
+      ],
+      [
+        "ⲛ",
+        45,
+        14.557
+      ],
+      [
+        "ⲑⲉⲱⲣⲉⲓ",
+        3,
+        14.133
+      ],
+      [
+        "ⲡⲁⲛⲧⲟⲭⲓⲟⲛ",
+        1,
+        13.87
+      ],
+      [
+        "ⲁⲣⲕⲟⲛ",
+        1,
+        13.87
+      ],
+      [
+        "ϩⲓⲱⲧ",
+        2,
+        13.063
+      ],
+      [
+        "ⲛⲁ",
+        19,
+        12.704
+      ],
+      [
+        "ⲟⲩ",
+        21,
+        12.669
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲗⲗⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1254,
+      "count": 53
+    },
+    "B": {
+      "rate": 1.37,
+      "rank": 525,
+      "count": 116
+    }
+  },
+  "etym": {
+    "grl_ID": "1345",
+    "grl_lemma": "μᾶλλον",
+    "grl_meaning": "more",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1078a; Preisigke 2:49"
+  }
+}

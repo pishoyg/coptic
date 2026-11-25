@@ -1,0 +1,181 @@
+{
+  "id": "C1387",
+  "forms": [
+    {
+      "id": "CF4195",
+      "orth": "ⲣⲉϥⲕⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17640,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1609",
+      "bibliography": "CD 122b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲕⲱⲧ ⲛⲛⲉⲕⲙⲁ ⲛϫⲁⲓⲉ ϣⲁⲉⲛⲉϩ ⲁⲩⲱ ⲛⲉⲕⲥⲛⲧⲉ ⲛⲁϣⲱⲡⲉ ϣⲁⲉⲛⲉϩ ⲉϩⲉⲛϫⲱⲙ ⲛϫⲱⲙ ⲁⲩⲱ ⲥⲉⲛⲁⲙⲟⲩⲧⲉ ⲉⲣⲟⲕ ϫⲉⲡ**ⲣⲉϥⲕⲱⲧ** ⲛⲛϫⲟⲗϫⲗ ⲛⲅⲧⲁⲗϭⲟ ⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲧⲉⲧⲛⲧⲙⲏⲧⲉ",
+      "english": "And thy old waste desert places shall be built up, and thy foundations shall last through all generations; and thou shalt be called a repairer of breaches, and thou shalt cause thy paths between to be in peace.",
+      "source": "Isaiah 58",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲗϫⲗ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲕⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟⲗϫⲗ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲕⲱⲧ",
+          "ⲣⲉϥⲕⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲕⲱⲧ_0_node",
+          "ⲛ_1_post_ⲣⲉϥⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲕⲱⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϫⲟⲗϫⲗ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17253,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1389",
+      "label": "ϫⲓⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "receive edification"
+    },
+    {
+      "target": "C1390",
+      "label": "ϭⲓⲛⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building (process, act of)"
+    },
+    {
+      "target": "C1388",
+      "label": "ϯⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "edify"
+    },
+    {
+      "target": "C1391",
+      "label": "ⲉⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "builder, mason; potter"
+    },
+    {
+      "target": "C1383",
+      "label": "ⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "build, form; edify, encourage; be edified"
+    },
+    {
+      "target": "C1385",
+      "label": "ⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "act of building; thing built; edification; rule (for edification)"
+    },
+    {
+      "target": "C1384",
+      "label": "ⲕⲱⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "build"
+    },
+    {
+      "target": "C1386",
+      "label": "ⲙⲉⲧⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building"
+    },
+    {
+      "target": "C1392",
+      "label": "ⲥⲉⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "potter's place, workshop"
+    }
+  ]
+}

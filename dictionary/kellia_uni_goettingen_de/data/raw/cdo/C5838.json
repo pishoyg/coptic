@@ -1,0 +1,106 @@
+{
+  "id": "C5838",
+  "forms": [
+    {
+      "id": "CF13673",
+      "orth": "ϣⲗⲟⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7711,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6518",
+      "bibliography": "CD 560a; CED 241; KoptHWb 311; DELC 261a; ChLCS 77a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲇⲉⲕⲓⲟⲥ ⲇⲉ ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲉⲡⲙⲁⲣⲧⲩⲣⲟⲥ · ϫⲉϥϥⲓϩⲁ ⲛϯⲙⲱⲣⲓⲁ · ϩⲛⲟⲩⲙⲛⲧϫⲱⲱⲣⲉ · ⲁⲩⲱ ⲙⲡⲉⲗⲁⲁⲩ ⲛⲃⲁⲥⲁⲛⲟⲥ ϫⲱϩ ⲉⲣⲟϥ ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩϥⲓⲡⲱⲛⲉ ⲙⲙⲁⲩ ⲉⲃⲟⲗ ϩⲓⲡⲉϥⲙⲁⲕϥ ⲛⲥⲉⲉⲓⲛⲉ ⲛⲟⲩⲙⲁⲥϯⲅⲝ ⲛⲕⲱⲃϩ ⲉⲥⲟ ⲛϥⲧⲟⲟⲩ ⲛ**ϣⲗⲟⲡ** · ⲛⲥⲉϩⲓⲟⲩⲉ ⲉⲣⲟϥ ϣⲁⲧⲉⲡⲕⲁϩ · ϩⲱⲣⲡ ϩⲙⲡⲉϥⲥⲛⲟϥ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲉⲕⲓⲟⲥ ⲇⲉ ⲡⲣⲣⲟ · ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲉⲡⲙⲁⲣⲧⲩⲣⲟⲥ · ϫⲉⲉϥϥⲓ ϩⲁⲛϯⲙⲱⲣⲓⲁ · ϩⲛⲟⲩⲙⲛⲧϫⲱⲱⲣⲉ · ⲁⲩⲱ ⲙⲡⲉⲗⲁⲁⲩ ⲛⲃⲁⲥⲁⲛⲟⲥ ⲧⲁϩⲟϥ · ⲁϥⲕⲉⲗⲉⲩⲉ ⲉⲧⲣⲉⲩϥⲓⲡⲱⲛⲉ ⲙⲙⲁⲩ · ϩⲓⲡⲉϥⲙⲁⲕϩ · ⲛⲥⲉⲉⲓⲛⲉ ⲛⲟⲩⲙⲁⲥⲧⲓⲅⲝ ⲛⲕⲱⲃϩ · ⲉⲥⲟ ⲛϥⲧⲟⲟⲩ ⲛ**ϣⲗⲟⲡ** · ⲛⲥⲉϩⲓⲟⲩⲉ ⲉⲣⲟϥ · ϣⲁⲛⲧⲉⲡⲕⲁϩ ϩⲱⲣⲡϩⲁⲡⲉϥⲥⲛⲟϥ ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲟⲩⲉ",
+        2,
+        15.691
+      ],
+      [
+        "ϥⲧⲟⲟⲩ",
+        2,
+        15.369
+      ],
+      [
+        "ⲟ",
+        2,
+        11.805
+      ],
+      [
+        "ⲛ",
+        6,
+        10.564
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        10.083
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ϣⲗⲟⲡ",
+          1
+        ],
+        [
+          "ϣⲗⲟⲡ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϥⲧⲟⲟⲩ_1_pre_ϣⲗⲟⲡ",
+          "ϣⲗⲟⲡ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7251,
+      "count": 2
+    }
+  },
+  "etym": {
+    "demo_num": "d4595",
+    "demo_lemma": "ḫlp(e.t)",
+    "english": "[to dedicate]",
+    "german": "Zipfel(?); Blatt; Ohrläppchen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4595"
+  }
+}

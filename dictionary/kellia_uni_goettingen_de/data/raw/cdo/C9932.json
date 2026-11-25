@@ -1,0 +1,341 @@
+{
+  "id": "C9932",
+  "forms": [
+    {
+      "id": "CF25882",
+      "orth": "ⲟⲛⲧⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25884",
+      "orth": "ⲟⲛⲧⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2127,
+        "count": 27
+      }
+    },
+    {
+      "id": "CF25883",
+      "orth": "ⲟⲛⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13180,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25885",
+      "orth": "ⲟⲛⲧⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25886",
+      "orth": "ⲟⲛⲧⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 1984,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF25887",
+      "orth": "ⲟⲛⲧⲱⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25888",
+      "orth": "ⲱⲛⲧⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS12964",
+      "bibliography": "DDGLC",
+      "cu_ID": "509"
+    },
+    {
+      "id": "CS12965",
+      "bibliography": "DDGLC",
+      "cu_ID": "7171"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲭⲏⲣⲁ ⲙⲁⲧⲁⲓⲱⲟⲩ ⲛⲏ ⲉⲧⲉ**ⲟⲛⲧⲱⲥ** ϩⲁⲛⲭⲏⲣⲁ ⲛⲉ .",
+      "english": "Honor widows who are widows indeed.",
+      "source": "15_I Timothy_05",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲟⲛⲧⲱⲥ** ⲁⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ϯⲟⲥⲉ ⲙⲡϩⲟⲟⲩ ⲛⲟⲩⲛⲟϭ ⲛⲣⲉϥϯⲥⲃⲱ ⲛⲉⲥⲟⲩⲥⲁϣϥ ⲅⲁⲣ ⲛⲉⲡⲏⲡ ⲡⲉ ⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "Ⲧhe whole world is punished this day, for he was a very great teacher, and this day is the seventh of the month Epeph.'",
+      "source": "Life of Cyrus in Budge ed. part 2",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:10-17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏ ⲉⲧϩⲏⲡ ⲛⲧⲉⲡⲉϥϩⲏⲧ ⲥⲉⲛⲁⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ϥⲛⲁϩⲓⲧϥ ⲉϫⲉⲛⲡⲉϥϩⲟ ⲛⲧⲉϥⲟⲩⲱϣⲧ ⲙⲫⲛⲟⲩϯ ⲉϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϫⲉ**ⲟⲛⲧⲱⲥ** ⲫⲛⲟⲩϯ ϣⲟⲡ ϧⲉⲛⲑⲏⲛⲟⲩ .",
+      "english": "And thus the secrets of his heart are revealed. So he will fall down on his face and worship God, declaring that God is among you indeed.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϩⲏⲡ ⲙⲡⲉϥϩⲏⲧ ⲛⲁⲟⲩⲱⲛϩ ⲉⲃⲟⲗ . ⲁⲩⲱ ⲛⲧⲉⲓϩⲉ ϥⲛⲁⲡⲁϩⲧϥ ⲉϫⲙⲡⲉϥϩⲟ ⲛϥⲟⲩⲱϣⲧ ⲙⲡⲛⲟⲩⲧⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲟⲛⲧⲱⲥ** ⲡⲛⲟⲩⲧⲉ ϣⲟⲟⲡ ⲛϩⲏⲧⲧⲏⲩⲧⲛ .",
+      "english": "And thus the secrets of his heart are revealed. So he will fall down on his face and worship God, declaring that God is among you indeed.",
+      "source": "1 Corinthians 14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲉⲛϫⲟⲥ ϫⲉⲟⲩⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲣⲱⲙⲓ ⲧⲉⲛⲉⲣϩⲟϯ ϧⲁⲧϩⲏ ⲙⲡⲓⲙⲏϣ ⲛⲁⲣⲉⲓⲱⲁⲛⲛⲏⲥ ⲅⲁⲣ ⲛⲧⲟⲧⲟⲩ ⲧⲏⲣⲟⲩ ϫⲉ**ⲟⲛⲧⲱⲥ** ⲛⲉⲟⲩⲡⲣⲟⲫⲏⲧⲏⲥ ⲡⲉ .",
+      "english": "If we should say, 'From men''they feared the people, for all held John to really be a prophet.",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲟⲛⲧⲱⲥ** ⲟⲩⲛⲟϭ ⲡⲉ ⲡϣⲓⲡⲉ ⲙⲡⲛⲁⲩ ⲉⲧⲙⲙⲁⲩ ⲱ ⲛⲉⲥⲛⲏⲩ · ⲙⲁⲗⲓⲥⲧⲁ ⲟⲩⲛⲟϭ ⲛⲁⲅⲁⲡⲏ ⲧⲉ · ⲉⲙⲛⲧϩⲉ ⲛⲣⲃⲟⲗ ⲉⲣⲟⲥ",
+      "english": "O brethren, great indeed will be the shame of that moment, and it will be the greater because it must be submitted to, and there is no escape therefrom.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲏⲣⲁ",
+        3,
+        14.239
+      ],
+      [
+        "ⲟⲩ",
+        16,
+        12.847
+      ],
+      [
+        "ⲁϩⲁ",
+        1,
+        12.788
+      ],
+      [
+        "ⲉⲣⲣⲉⲙϩⲉ",
+        1,
+        12.618
+      ],
+      [
+        "ⲛⲉ",
+        6,
+        12.228
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        6,
+        11.597
+      ],
+      [
+        "ⲣⲱϣⲓ",
+        1,
+        11.329
+      ],
+      [
+        "ϫⲉ",
+        8,
+        11.23
+      ],
+      [
+        "ⲧⲁⲛϧⲟ",
+        1,
+        10.701
+      ],
+      [
+        "ⲣⲉⲙϩⲉ",
+        1,
+        10.579
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        2,
+        10.426
+      ],
+      [
+        "ⲡⲣⲟⲫⲏⲧⲏⲥ",
+        2,
+        10.349
+      ],
+      [
+        "ⲕⲁⲗⲁⲙⲫⲟ",
+        1,
+        9.93
+      ],
+      [
+        "ⲛ",
+        7,
+        9.106
+      ],
+      [
+        "ϥ",
+        7,
+        8.939
+      ],
+      [
+        "ⲉ",
+        6,
+        8.865
+      ],
+      [
+        "ⲉⲧⲉ",
+        3,
+        8.782
+      ],
+      [
+        "ϣⲟⲡ",
+        2,
+        8.632
+      ],
+      [
+        "ⲙⲙⲟ",
+        3,
+        8.216
+      ],
+      [
+        ".",
+        4,
+        7.71
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        15.843
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.843
+      ],
+      [
+        "ⲗⲟⲟⲧⲉ",
+        1,
+        15.843
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲓⲕⲟⲛ",
+        1,
+        14.258
+      ],
+      [
+        "ⲉⲓⲉ",
+        5,
+        13.787
+      ],
+      [
+        "ⲣⲙⲣⲁϣ",
+        2,
+        13.258
+      ],
+      [
+        "ϣⲉⲛⲟⲩⲧⲉ",
+        1,
+        12.521
+      ],
+      [
+        "ⲣⲣⲙϩⲉ",
+        1,
+        12.384
+      ],
+      [
+        "ⲣⲁⲧⲉ",
+        1,
+        12.258
+      ],
+      [
+        "ⲛⲁϩⲙⲟⲩ",
+        1,
+        12.036
+      ],
+      [
+        "ⲟⲩ",
+        14,
+        11.887
+      ],
+      [
+        "ⲙⲙⲟ",
+        9,
+        11.735
+      ],
+      [
+        "ϫⲉ",
+        10,
+        11.357
+      ],
+      [
+        "ⲟⲩⲱⲧⲃ",
+        1,
+        11.036
+      ],
+      [
+        "ⲡⲣⲉⲡⲉⲓ",
+        1,
+        10.936
+      ],
+      [
+        "ⲡⲁⲧ",
+        1,
+        10.714
+      ],
+      [
+        "ⲭⲉⲣⲟⲩⲃⲓⲛ",
+        1,
+        10.673
+      ],
+      [
+        "ϫⲱ",
+        5,
+        10.616
+      ],
+      [
+        "ⲥ",
+        8,
+        10.519
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        3,
+        9.791
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.17,
+      "rank": 1879,
+      "count": 27
+    },
+    "B": {
+      "rate": 0.18,
+      "rank": 1715,
+      "count": 15
+    }
+  },
+  "etym": {
+    "grl_ID": "1555",
+    "grl_lemma": "ὄντως",
+    "grl_meaning": "really, actually",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1234a; Preisigke 2:188"
+  }
+}

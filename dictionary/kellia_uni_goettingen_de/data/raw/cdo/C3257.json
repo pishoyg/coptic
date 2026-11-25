@@ -1,0 +1,62 @@
+{
+  "id": "C3257",
+  "forms": [
+    {
+      "id": "CF8400",
+      "orth": "ⲣⲱϫⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3721",
+      "bibliography": "CD 312b; KoptHWb 172"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲡⲧ ⲛⲉⲙⲛⲏ ⲉⲑⲛⲁ ⲉϧⲣⲏⲓ ⲉⲫⲗⲁⲕⲕⲟⲥ ⲁⲓⲉⲣ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲱⲙⲓ ⲛⲁⲧⲉⲣⲃⲟⲏⲑⲓⲛ ⲉⲣⲟϥ ⲉⲓⲟⲓ ⲛⲣⲉⲙϩⲉ ϧⲉⲛⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ ⲙⲫⲣⲏϯ ⲛϩⲁⲛϧⲱⲧⲉⲃ ⲉⲩ**ⲣⲟϫⲡ** ⲉⲩⲉⲛⲕⲟⲧ ϧⲉⲛⲛⲓⲙϩⲁⲩ ⲛⲏ ⲉⲧⲉⲙⲡⲉⲕⲉⲣⲡⲟⲩⲙⲉⲩⲓ ϫⲉⲟⲩⲟϩ ⲛⲑⲱⲟⲩ ⲁⲩϩⲓⲧⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉⲕϫⲓϫ",
+      "english": "For my soul is filled with troubles, and my life has drawn nigh to Hades.",
+      "source": "19_Psalmi_87",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:87",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲟⲥ ⲛϫⲉⲡϭⲟⲉⲓⲥ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲓⲱⲁⲕⲓⲙ ⲡⲟⲩⲣⲟ ⲛⲓⲟⲩⲇⲁ ϫⲉⲛⲛⲉϥϣⲱⲡⲓ ⲛⲁϥ ⲛϫⲉⲫⲏⲉⲧⲛⲁϩⲉⲙⲥⲓ ⲉϫⲉⲛⲡⲑⲣⲟⲛⲟⲥ ⲛⲇⲁⲩⲓⲇ ⲟⲩⲟϩ ⲡⲉϥⲣⲉϥⲙⲱⲟⲩⲧ ⲉϥⲉϣⲱⲡⲓ ⲉϥ**ⲣⲟϫⲡ** ϧⲉⲛⲡⲕⲁⲩⲙⲁ ⲛⲧⲉⲡⲓⲉϩⲟⲟⲩ ⲛⲉⲙϧⲉⲛⲡⲱϫⲉⲃ ⲛⲧⲉⲡⲓⲉϫⲱⲣϩ .",
+      "english": "Therefore thus saith the Lord concerning Joakim king of Juda; He shall not have a man to sit on the throne of David: and his carcass shall be cast forth in the heat by day, and in the frost by night.",
+      "source": "24_Ieremias_43",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:43",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲣⲟϫⲡ ⲛϫⲉⲛⲓⲉⲑⲛⲟⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩϣⲟⲛϯ ⲉⲥ**ⲣⲟϫⲡ** ϧⲉⲛⲧⲕⲟⲓ ⲟⲩⲟϩ ⲉⲥⲣⲟⲕϩ .",
+      "english": "And the nations shall be burnt up; as a thorn in the field cast out and burnt up.",
+      "source": "23_Isaias_33",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:33",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.13,
+      "rank": 2038,
+      "count": 11
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3256",
+      "label": "ⲣⲱϫⲡ",
+      "pos": "V",
+      "gloss": "be thrown down, sink down; throw down"
+    }
+  ]
+}

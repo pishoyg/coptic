@@ -1,0 +1,376 @@
+{
+  "id": "C10492",
+  "forms": [
+    {
+      "id": "CF28131",
+      "orth": "ⲥⲕⲩⲗⲗⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28134",
+      "orth": "ⲥⲕⲩⲗⲗⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1745,
+        "count": 39
+      }
+    },
+    {
+      "id": "CF28133",
+      "orth": "ⲥⲕⲩⲗⲗⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF28132",
+      "orth": "ⲥⲕⲩⲗⲉⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14212",
+      "bibliography": "DDGLC",
+      "cu_ID": "4219"
+    },
+    {
+      "id": "CS14213",
+      "bibliography": "DDGLC",
+      "cu_ID": "15390"
+    },
+    {
+      "id": "CS14214",
+      "bibliography": "DDGLC",
+      "cu_ID": "4307"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲟⲛ ⲡⲉϫⲁϥ ⲛϭⲓϩⲣⲱⲙⲁⲛⲟⲥ :— ϫⲉⲱ ⲡⲁϣⲏⲣⲉ ⲃⲓⲕⲧⲱⲣ · ⲥⲱⲧⲙ ⲛⲥⲱⲓ ⲛⲅⲣⲑⲩⲥⲓⲁ ⲛⲧⲛⲗⲟ ⲉⲛ**ⲥⲕⲩⲗⲗⲉⲓ** ⲙⲡⲉⲓⲙⲁ ·",
+      "english": "Then Romanus said, | 'O my son Victor, hearken unto me, and do thou offer up sacrifice, and let us bring to an end our trouble in this place.",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲡⲣ**ⲥⲕⲩⲗⲗⲉⲓ** ⲙⲙⲟⲕ · ⲟⲩⲇⲉ ⲙⲡⲣϣⲧⲟⲣⲧⲣ ⲡⲁⲝⲓⲱⲙⲁ ⲙⲙⲁⲧⲟⲓ · ϫⲉⲡⲛⲟⲩⲧⲉ ⲡⲉⲧⲙⲓϣⲉ ⲉϫⲱⲛ ⲛⲙⲙⲁⲕ ·",
+      "english": "Therefore give thyself no trouble, and do not let thy mind be disturbed, thou honour of the soldiers, for it is God who fighteth on our behalf with thee.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁⲉⲓⲱⲧ ⲧⲛⲛⲟⲟⲩ ⲛⲥⲱϥ ϫⲉⲙⲡⲉ**ⲥⲕⲩⲗⲗⲉⲓ** ⲙⲙⲟⲕ ⲛⲧⲁϭⲛⲧⲕ ⲛϯⲁⲡⲟⲕⲣⲏⲥⲓⲥ ⲛⲁⲛⲁⲅⲕⲁⲓⲟⲛ ·",
+      "english": "Then my father sent a message to him, saying, 'Trouble (not) thyself : I will find for thee the defence which is necessary.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩ",
+        70,
+        18.322
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        27,
+        17.759
+      ],
+      [
+        "ⲙⲙⲟ",
+        35,
+        17.083
+      ],
+      [
+        "ⲛϭⲓ",
+        26,
+        16.635
+      ],
+      [
+        "ⲛⲓϩⲩⲡⲉⲣⲃⲁⲑⲟⲥ",
+        1,
+        15.313
+      ],
+      [
+        "ϫⲉⲧⲃⲉ",
+        1,
+        15.313
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.313
+      ],
+      [
+        "ⲁ",
+        34,
+        15.021
+      ],
+      [
+        "ⲡ",
+        31,
+        14.074
+      ],
+      [
+        "ⲩ",
+        21,
+        13.701
+      ],
+      [
+        "ⲁⲭⲱⲣⲏⲧⲟⲥ",
+        1,
+        12.991
+      ],
+      [
+        "ⲙⲡⲉⲓϩⲉ",
+        1,
+        12.505
+      ],
+      [
+        "ⲛⲉ",
+        11,
+        12.406
+      ],
+      [
+        "ⲓ",
+        11,
+        11.943
+      ],
+      [
+        "ϥ",
+        16,
+        11.236
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        11.11
+      ],
+      [
+        "ⲙⲡⲣ",
+        4,
+        10.75
+      ],
+      [
+        "ⲕ",
+        7,
+        9.989
+      ],
+      [
+        "ⲁⲛⲁⲩ",
+        1,
+        8.805
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.585
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          19
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          18
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϭⲛⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          15
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          15
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          16
+        ],
+        [
+          "ϥ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          12
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲧⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          18
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲛ_2_post_ϭⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲛⲧ",
+          "ⲧⲁ_2_post_ϭⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          "ⲙ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          "ⲙⲁ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          15
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲧⲃⲉ",
+          "ⲁ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          15
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ϥ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲩ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          12
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲕⲩⲗⲗⲉⲓ",
+          "ⲥⲕⲩⲗⲗⲉⲓ_0_node",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛϭⲓ_1_post_ⲥⲕⲩⲗⲗⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.25,
+      "rank": 1517,
+      "count": 39
+    }
+  },
+  "etym": {
+    "grl_ID": "1998",
+    "grl_lemma": "σκύλλω",
+    "grl_meaning": "to maltreat, molest, trouble, annoy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1617a; Preisigke 2:471"
+  }
+}

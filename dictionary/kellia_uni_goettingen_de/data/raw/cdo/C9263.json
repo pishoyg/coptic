@@ -1,0 +1,152 @@
+{
+  "id": "C9263",
+  "forms": [
+    {
+      "id": "CF23219",
+      "orth": "ⲕⲁⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23220",
+      "orth": "ⲕⲁⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20822,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23221",
+      "orth": "ⲕⲁⲕⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23222",
+      "orth": "ⲕⲁⲕⲟⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11583",
+      "bibliography": "DDGLC",
+      "cu_ID": "751"
+    },
+    {
+      "id": "CS11584",
+      "bibliography": "DDGLC",
+      "cu_ID": "747"
+    },
+    {
+      "id": "CS11585",
+      "bibliography": "DDGLC",
+      "cu_ID": "5915"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲉⲧⲛϣⲁⲛϯⲉⲗⲉⲏⲙⲟⲥⲩⲛⲏ ⲉⲧⲉⲧⲛⲛⲁⲉⲓⲣⲉ ⲛⲟⲩ**ⲕⲁⲕⲟⲛ** ⲛⲛⲉⲧⲛⲡⲛⲉⲩⲙⲁ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        10.412
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        10.33
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        9.808
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲕⲟⲛ_0_node",
+          "ⲛ_1_post_ⲕⲁⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲕⲟⲛ",
+          "ⲛⲉⲧⲛ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20426,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2512",
+    "grl_lemma": "κακός",
+    "grl_meaning": "bad",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 863a; Preisigke 1:724"
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "id": "C3810",
+  "forms": [
+    {
+      "id": "CF9545",
+      "orth": "ⲥⲧⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5844,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲥⲧⲏⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10369,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲑⲏⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12782,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4325",
+      "bibliography": "CD 364b-365a; CED 166; KoptHWb 201; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟ ϩⲱⲱⲧⲉ ⲟⲩⲡⲉⲧⲉⲣⲁⲁⲁϥ ⲉϣⲱⲡⲉ ⲉⲣϣⲁⲛϯ ϩⲓⲱⲱⲧⲉ ⲛϩⲉⲛϩⲟⲓⲧⲉ ⲛⲕⲟⲕⲕⲟⲥ ⲁⲩⲱ ⲛⲧⲉⲕⲟⲥⲙⲉⲓ ⲙⲙⲟϩⲛⲟⲩⲕⲟⲥⲙⲟⲥ ⲛⲛⲟⲩⲃ ⲁⲩⲱ ⲉⲣϣⲁⲛϯ ⲛⲟⲩ**ⲥⲧⲏⲙ** ⲉⲛⲟⲩⲃⲁⲗ ⲟⲩⲡⲉⲧϣⲟⲩⲉⲓⲧ ⲡⲉ ⲡⲟⲩⲥⲁ ϫⲉⲁⲩⲕⲁⲁⲧⲉ ⲛⲥⲱⲟⲩ ⲛϭⲓⲛⲟⲩⲙⲉⲣⲁⲧⲉ ⲥⲉⲛⲁϣⲓⲛⲉ ⲛⲥⲁⲧⲟⲩⲯⲩⲭⲏ",
+      "english": "And what wilt thou do? Though thou clothe thyself with scarlet, and adorn thyself with golden ornaments; though thou adorn thine eyes with stibium, thy beauty will be in vain: thy lovers have rejected thee, they seek thy life.",
+      "source": "Jeremiah 4",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉⲛⲣⲱⲙⲉ ⲉⲧⲛⲏⲩ ⲛⲉ ⲙⲡⲟⲩⲉ ⲛⲁⲓ ⲉⲧⲉⲣⲉϫⲟⲟⲩ ⲛϩⲉⲛϥⲁⲓϣⲓⲛⲉ ⲛⲥⲱⲟⲩ ϩⲙⲡⲧⲣⲉⲩⲉⲓ ϣⲁⲣⲟⲛⲧⲉⲩⲛⲟⲩ ϣⲁⲣⲉϫⲟⲕⲙⲉ ⲛⲁⲩ ⲁⲩⲱ ⲛⲉϣⲁⲣⲉϯⲡⲟⲩ**ⲥⲧⲏⲙ** ⲉⲛⲟⲩⲃⲁⲗ ⲛⲉϣⲁⲣⲕⲟⲥⲙⲉⲓ ⲙⲙⲟϩⲛⲟⲩⲕⲟⲥⲙⲟⲥ",
+      "english": "and whereas they did thus to the men that came from afar, to whom they sent messengers, and as soon as they came, immediately thou didst wash thyself, and didst paint thine eyes and adorn thyself with ornaments,",
+      "source": "Ezekiel 23",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁϩⲣⲁⲓ ⲉⲡⲉ**ⲥⲧⲏⲙ** ⲁϥϣⲟⲩⲱ · ⲉⲃⲟⲗ ϩⲛⲛⲉϥϩⲛⲁⲁⲩ ⲁϥϥⲓⲧϥ ⲧⲙⲛⲧϣⲁⲩ ⲏ ⲡϣⲓⲡⲉ ⲉⲧⲛⲁⲛⲟⲩϥ ⲉⲧϩⲛⲛⲟⲩⲃⲁⲗ",
+      "english": "...",
+      "source": "I See Your Eagerness: XJ 65-76",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_65_76",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟϭⲛⲓ",
+        1,
+        10.927
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.009
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        8.104
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ]
+    ],
+    "S": [
+      [
+        "ϯⲡⲟⲩ",
+        1,
+        18.598
+      ],
+      [
+        "ϣⲟⲩⲱ",
+        2,
+        17.598
+      ],
+      [
+        "ϣⲁϩⲣⲁⲓ",
+        2,
+        12.983
+      ],
+      [
+        "ⲛⲟⲩ",
+        2,
+        12.664
+      ],
+      [
+        "ⲃⲁⲗ",
+        2,
+        12.036
+      ],
+      [
+        "ⲉ",
+        7,
+        11.239
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        8.987
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        8.313
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.508
+      ],
+      [
+        "ϥ",
+        3,
+        7.277
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ϯ",
+        1,
+        5.516
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        ".",
+        1,
+        4.557
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲥⲧⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛϧⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲧⲏⲙ",
+          "ⲥⲧⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲏⲙ_0_node",
+          "ⲓ_1_post_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲥⲧⲏⲙ",
+          "ⲛϧⲏⲧ_1_post_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲥⲧⲏⲙ",
+          "ⲟⲩ_2_post_ⲛϧⲏⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲧⲏⲙ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ϯⲡⲟⲩ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲏⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲧⲏⲙ",
+          "ⲛⲉ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲧⲏⲙ",
+          "ϣⲁⲣⲉ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲉ_1_pre_ⲥⲧⲏⲙ",
+          "ϯⲡⲟⲩ_1_pre_ⲥⲧⲏⲙ",
+          1
+        ],
+        [
+          "ϯⲡⲟⲩ_1_pre_ⲥⲧⲏⲙ",
+          "ⲥⲧⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲏⲙ_0_node",
+          "ⲉ_1_post_ⲥⲧⲏⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5400,
+      "count": 4
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5881,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "149840",
+    "egy_lemma": "sdm",
+    "demo_num": "d5742",
+    "demo_lemma": "st(e)m",
+    "english": "eye-paint",
+    "german": "Schminke; Schminkmittel, Mittel zum Auftragen (med.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/149840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5742"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "id": "C7684",
+  "forms": [
+    {
+      "id": "CF17433",
+      "orth": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14311,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲁⲗⲙⲃⲉϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9761,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲁⲗⲙⲃⲁϩ",
+      "dialect": "B",
+      "id": "2554.2"
+    },
+    {
+      "orth": "ⲁⲗⲟⲩⲃⲉϩ",
+      "dialect": "B",
+      "id": "2554.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8539",
+      "bibliography": "CD 813a; CED 329; ChLCS 107a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϥⲱ ⲇⲉ ⲛⲧⲉϥⲁⲡⲉ ϭⲱⲗ ⲉⲃⲟⲗ ϩⲓϩⲣⲁϥ ⲟⲩⲁⲛⲁⲫⲁⲗⲁⲅⲝ ⲡⲉ ⲉⲧⲉⲟⲩ**ϭⲁⲗⲟⲩⲃⲓϩ** ⲡⲉ ⲡⲁⲓ ⲟⲩⲕⲁⲑⲁⲣⲟⲥ ⲡⲉ",
+      "english": "And if his head should lose the hair in front, he is forehead bald: he is clean.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲁⲛⲁⲫⲁⲗⲁⲅⲝ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲁⲑⲁⲣⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁⲗⲟⲩⲃⲓϩ",
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          "ⲡⲁⲓ_1_post_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13910,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7685",
+      "label": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "bald-headed"
+    },
+    {
+      "target": "C7686",
+      "label": "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "baldness"
+    }
+  ]
+}

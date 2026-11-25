@@ -1,0 +1,307 @@
+{
+  "id": "C3808",
+  "forms": [
+    {
+      "id": "CF9541",
+      "orth": "ⲥϯⲃⲱⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4143,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4323",
+      "bibliography": "CD 363a; KoptHWb 201; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕⲛⲁⲉⲩⲫⲣⲁⲛⲉ ⲛⲁϣ ⲛϩⲉ · ⲉⲕⲟⲣⲃ ⲉϩⲟⲩⲛ ⲉⲡⲕⲁⲕⲉ ⲙⲛⲡⲉ**ⲥϯⲃⲱⲱⲛ** · ⲛⲅⲥⲟⲟⲩⲛ ⲁⲛ ⲙⲡⲉϩⲟⲟⲩ ⲟⲩⲇⲉ ⲧⲉⲩϣⲏ ·",
+      "english": "If so, what kind of enjoyment hadst tbou? Thou wast shut up in the darkness and in the humour of her body, and thou didst not know when it was day, or when it was night.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲓⲣⲡⲙⲉⲉⲩⲉ ⲛⲧⲙⲛⲧϭⲁⲓⲉ ⲛⲛⲥⲱⲙⲁ ϩⲛⲛⲧⲁⲫⲟⲥ · ⲙⲛⲡⲉⲩ**ⲥϯⲃⲱⲱⲛ** ·",
+      "english": "I used to remember how the flesh of men goeth to corruption in the tomb, and the foetid humour which it giveth forth.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲙⲟⲩ ⲅⲁⲣ ⲡⲱⲣϫ ⲛⲧⲉⲯⲩⲭⲏ ⲉⲃⲟⲗ ⲙⲡⲥⲱⲙⲁ ⲉⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲕⲱⲱⲛⲥ · ⲉϥⲟ ⲛ**ⲥϯⲃⲱⲱⲛ** ·",
+      "english": "Now when death hath separated the soul from the body they call the body a 'corpse', and it giveth forth foetidness.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏϣ",
+        1,
+        13.703
+      ],
+      [
+        "ⲕⲁⲕⲉ",
+        2,
+        11.793
+      ],
+      [
+        "ⲧⲁⲫⲟⲥ",
+        1,
+        11.161
+      ],
+      [
+        "ϩⲟⲩⲛ",
+        1,
+        10.433
+      ],
+      [
+        "ⲛ",
+        8,
+        10.002
+      ],
+      [
+        "ⲟ",
+        2,
+        9.998
+      ],
+      [
+        "ϫⲱϩⲙ",
+        1,
+        9.939
+      ],
+      [
+        "ⲙ",
+        5,
+        9.51
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.592
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        7.647
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        7.402
+      ],
+      [
+        "·",
+        1,
+        7.371
+      ],
+      [
+        "ⲙⲧⲟ",
+        1,
+        7.211
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.144
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        6.882
+      ],
+      [
+        "ⲉ",
+        3,
+        6.765
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.701
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.491
+      ],
+      [
+        "ϥ",
+        3,
+        6.469
+      ],
+      [
+        "ⲡ",
+        3,
+        6.445
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥϯⲃⲱⲱⲛ_0_node",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          3
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏϣ",
+          1
+        ],
+        [
+          "ϩⲏϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲙⲧⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          "ⲡⲉ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          "ⲥϯⲃⲱⲱⲛ_0_node",
+          2
+        ],
+        [
+          "ⲥϯⲃⲱⲱⲛ_0_node",
+          "ⲉ_1_post_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥϯⲃⲱⲱⲛ",
+          "ϥ_3_post_ϩⲏϣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏϣ",
+          "ϩⲏϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          "ⲡⲉⲩ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲥϯⲃⲱⲱⲛ",
+          "ⲥϯⲃⲱⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥϯⲃⲱⲱⲛ_0_node",
+          "ⲙ_1_post_ⲥϯⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥϯⲃⲱⲱⲛ",
+          "ⲡⲁ_3_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲙⲧⲟ",
+          "ⲙⲧⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_2_post_ⲙ",
+          "ⲉⲃⲟⲗ_3_post_ⲙⲧⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3750,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C470",
+      "type": "cf",
+      "label": "bad, evil"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3809",
+      "label": "ⲣⲥⲧⲟⲓ",
+      "pos": "V",
+      "gloss": "make smell"
+    },
+    {
+      "target": "C13002",
+      "label": "ⲥϯⲁⲛ",
+      "pos": "N",
+      "gloss": "perfume"
+    },
+    {
+      "target": "C12149",
+      "label": "ⲥϯⲕⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "black cumin"
+    },
+    {
+      "target": "C3807",
+      "label": "ⲥϯⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good smell, perfume"
+    },
+    {
+      "target": "C3806",
+      "label": "ⲥⲧⲟⲓ",
+      "pos": "N",
+      "gloss": "smell; fragrant plant; fragrant substance, incense"
+    }
+  ]
+}

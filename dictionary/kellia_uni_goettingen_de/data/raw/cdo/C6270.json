@@ -1,0 +1,56 @@
+{
+  "id": "C6270",
+  "forms": [
+    {
+      "id": "CF14550",
+      "orth": "ⲣⲁⲧϥⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF14551",
+      "orth": "ⲗⲁϥⲱⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6958",
+      "bibliography": "CD 623b; KoptHWb 345; DELC 280b; ChLCS 85b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3178",
+      "type": "cf",
+      "label": "grow, sprout, be covered with a growth (as vegetation, hair)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6269",
+      "label": "ϥⲱ",
+      "pos": "N",
+      "gloss": "hair"
+    },
+    {
+      "target": "C6272",
+      "label": "ⲟⲩⲉϩϥⲱ",
+      "pos": "V",
+      "gloss": "let hair grow"
+    },
+    {
+      "target": "C6271",
+      "label": "ⲥⲕϥⲱⲟⲩ",
+      "pos": "V",
+      "gloss": "comb hair"
+    }
+  ]
+}

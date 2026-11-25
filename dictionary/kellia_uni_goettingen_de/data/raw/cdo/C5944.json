@@ -1,0 +1,149 @@
+{
+  "id": "C5944",
+  "forms": [
+    {
+      "id": "CF13893",
+      "orth": "ⲣϣⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17246,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6628",
+      "bibliography": "CD 571b; KoptHWb 316"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲕⲁⲁϥ ϥⲛⲁ**ⲣϣⲛⲁ** ⲁⲩⲱ ⲛⲉϥⲣⲛⲧⲏϭ ⲧⲏⲣϥ ⲛϥⲣϫϩⲓⲙ ⲛⲥⲉⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛⲛϫⲟⲗϫⲗ ⲛⲛⲉϥⲱⲛⲉ",
+      "english": "If thou let him alone, he will altogether remain barren and covered with weeds; and he becomes destitute, and his stone walls are broken down.",
+      "source": "Proverbs 24",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲛⲧⲏϭ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        10.606
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲕϣⲁⲛ_2_pre_ⲕⲁⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲁ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_pre_ⲕⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ⲣϣⲛⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲕϣⲁⲛ_2_pre_ⲕⲁⲁ",
+          "ⲕⲁⲁ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲁ_1_pre_ⲣϣⲛⲁ",
+          "ϥ_2_pre_ⲕⲁⲁ",
+          1
+        ],
+        [
+          "ϥ_2_pre_ⲕⲁⲁ",
+          "ϥ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϣⲛⲁ",
+          "ⲛⲁ_1_pre_ⲣϣⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϣⲛⲁ",
+          "ⲣϣⲛⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16854,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5943",
+      "label": "ϣⲛⲁ",
+      "pos": "N",
+      "gloss": "waste land(?)"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "C1176",
+  "forms": [
+    {
+      "id": "CF3738",
+      "orth": "ϫⲓⲛϯⲭⲗⲟⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3739",
+      "orth": "ϫⲓⲛϯⲭⲗⲟⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1366",
+      "bibliography": "CD 105a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1177",
+      "label": "ϫⲓⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "receive, bear crown"
+    },
+    {
+      "target": "C1175",
+      "label": "ϯⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "crown, set a crown"
+    },
+    {
+      "target": "C1174",
+      "label": "ⲉⲓⲣⲉ ⲛⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "make a crown, circle"
+    },
+    {
+      "target": "C1173",
+      "label": "ⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown, wreath"
+    },
+    {
+      "target": "C1178",
+      "label": "ⲣⲉϥϫⲓⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown bearer"
+    }
+  ]
+}

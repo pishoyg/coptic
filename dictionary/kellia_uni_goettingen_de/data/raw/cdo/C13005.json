@@ -1,0 +1,72 @@
+{
+  "id": "C13005",
+  "forms": [
+    {
+      "id": "CF34018",
+      "orth": "ⲉϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1803,
+        "count": 37
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Satzkonverter + Aorist ⲉϣⲁ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18004",
+      "bibliography": "CD 583a; KoptHWb 43"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛ ⲙⲡⲣⲁⲛ ⲛⲧⲙⲟⲓⲣⲁ · ⲁⲩⲱ ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛ ⲙⲡⲣⲁⲛ ⲛⲙⲙⲣⲣⲉ ⲧⲏⲣⲟⲩ · ⲛⲁⲓ **ⲉϣⲁⲣⲉ**ⲛⲁⲣⲭⲱⲛ ⲙⲟⲩⲣ ⲙⲡⲁⲛⲧⲓⲙⲓⲙⲟⲛ ⲙⲡⲛⲉⲩⲙⲁ ⲛϩⲏⲧⲟⲩ ⲉϩⲟⲩⲛ ⲉⲧⲉⲯⲩⲭⲏ ·",
+      "english": "and I will tell you the name of the destiny. And I will tell you the name of all the bonds with which the rulers bind the counterfeiting spirit | to the soul.",
+      "source": "Pistis Sophia Book 3 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:109-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲟⲩⲙⲟⲩⲓ ϭⲱⲣϭ ⲉⲩⲡⲁϩⲥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ **ⲉϣⲁⲣⲉ**ⲡⲛⲟⲃⲉ ϭⲱⲣϭ ⲉⲛⲉϯⲣⲉ ⲙⲡϫⲓⲛϭⲟⲛⲥ",
+      "english": "As the lion lieth in wait for the prey; so sin for them that work iniquity.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛϩⲏⲧ ⲛⲛⲇⲓⲕⲁⲓⲟⲥ ⲙⲉⲗⲉⲧⲁ ⲛⲧⲡⲓⲥⲧⲓⲥ ⲉⲣⲉⲧⲧⲁⲡⲣⲟ ⲇⲉ ⲛⲛⲁⲥⲉⲃⲏⲥ ⲛⲁϫⲱ ⲛϩⲉⲛⲡⲉⲧϩⲟⲟⲩ ⲛⲉϩⲓⲟⲟⲩⲉ ⲙⲡⲣⲱⲙⲉ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲥⲟⲧⲡ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ **ⲉϣⲁⲣⲉ**ϩⲉⲛϫⲁϫⲉ ϩⲱⲧⲡ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ",
+      "english": "The hearts of the righteous meditate faithfulness; but the mouth of the ungodly answers evil things. The ways of righteous men are acceptable with the Lord; and through them even enemies become friends.",
+      "source": "Proverbs 15",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "lemma",
+  "superEntryReferences": [
+    {
+      "target": "C6025",
+      "label": "ϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "(habit, continuance)"
+    },
+    {
+      "target": "C13004",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "relative converter + aorist"
+    },
+    {
+      "target": "C13006",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "focalising converter (\"2nd tense\") + aorist"
+    }
+  ]
+}

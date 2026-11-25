@@ -1,0 +1,413 @@
+{
+  "id": "C189",
+  "forms": [
+    {
+      "id": "CF717",
+      "orth": "ⲁⲣⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2978,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF718",
+      "orth": "ⲁⲣⲓⲕⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF719",
+      "orth": "ⲁⲣⲓⲕⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF720",
+      "orth": "ⲁⲣⲓⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2610,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF721",
+      "orth": "ⲁⲗⲓⲕⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS212",
+      "bibliography": "CD 15a; KoptHWb 11; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲉⲟⲩⲟⲛ ϣⲟ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲉⲫⲙⲟⲩ ⲕⲱϯ ⲉⲣⲟϥ ⲛⲛⲉ ⲟⲩⲁⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ ϧⲟⲑⲃϥ : ⲉϣⲱⲡ ⲁϥϣⲁⲛⲕⲁϯ ϧⲉⲛⲡⲉϥϩⲏⲧ ⲉⲧⲁⲥⲑⲟ ϩⲁⲡϭⲥ ⲛⲧⲉϥⲧⲁⲙⲉ ⲟⲩⲣⲱⲙⲓ ⲇⲉ ⲉⲡⲉϥ**ⲁⲣⲓⲕⲓ** ⲟⲩⲟϩ ⲛⲧⲉϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲧⲉϥⲁⲛⲟⲙⲓⲁ .",
+      "english": "Though there should be a thousand messengers of death, not one of them shall wound him: if he should purpose in his heart to turn to the Lord, and declare to man his fault, and shew his folly;",
+      "source": "18_Iob_33",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:33",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲁ ⲇⲉ ⲛⲕⲟⲧⲕ ⲕⲁⲧⲁⲫⲩⲥⲓⲛ ⲙⲛ**ⲁⲣⲓⲕⲉ** ⲉⲣⲟϥ",
+      "english": "And if a man sleepeth sufficient to satisfy his natural want he is blameless ;",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧⲉⲛⲉⲣⲁⲛⲉⲭⲉⲥⲑⲉ ⲛⲛⲉⲧⲉⲛⲉⲣⲏⲩ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲭⲱ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲉⲛⲉⲣⲏⲩ ⲉϣⲱⲡ ⲉⲟⲩⲟⲛ ⲟⲩ**ⲁⲣⲓⲕⲓ** ⲟⲩⲧⲉ ⲟⲩⲁⲓ ⲛⲉⲙⲟⲩⲁⲓ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲭⲱ ⲛⲱⲧⲉⲛ ⲉⲃⲟⲗ ⲡⲁⲓⲣⲏϯ ⲛⲑⲱⲧⲉⲛ ϩⲱⲧⲉⲛ .",
+      "english": "bearing with one another, and forgiving each other, if any man has a complaint against any; even as Christ forgave you, so you also do.",
+      "source": "12_Colossians_03",
+      "urn": "urn:cts:copticLit:nt.col.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲣⲉ ϯϣⲟⲣⲡ ⲅⲁⲣ ϣⲟⲟⲡ ⲁϫⲛ**ⲁⲣⲓⲕⲉ** . ⲛⲉϥⲛⲁϣⲓⲛⲉ ⲁⲛ ⲡⲉ ⲛⲥⲁⲡⲙⲁ ⲛⲧⲙⲉϩⲥⲛⲧⲉ .",
+      "english": "For if that first covenant had been faultless, then no place would have been sought for a second.",
+      "source": "58_Hebrews_8",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁϥⲥⲱⲃⲓ ⲇⲉ ⲛⲥⲁⲟⲩⲙⲏϣ ⲉϥⲟϣ ⲛⲧⲉⲟⲩⲃⲁⲕⲓ: ⲡ**ⲁⲣⲓⲕⲓ** ⲇⲉ ⲛⲟⲩⲫⲟⲣⲟⲗⲟⲅⲟⲥ ⲙⲡⲁϥⲥⲱⲧⲉⲙ ⲉⲣⲟϥ .",
+      "english": "He laughs to scorn the multitude of the city, and hears not the chiding of the tax-gatherer.",
+      "source": "18_Iob_39",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:39",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲥⲱⲃⲉ ⲛⲥⲁⲡⲙⲏⲏϣⲉ ⲛⲟⲩⲡⲟⲗⲓⲥ ⲉⲛⲉϥⲥⲱⲧⲙ ⲁⲛ ⲉ**ⲁⲣⲓⲕⲉ** ⲛⲣⲉϥϫⲓϣⲱⲙ",
+      "english": "He laughs to scorn the multitude of the city, and hears not the chiding of the tax-gatherer.",
+      "source": "Job 39",
+      "urn": "urn:cts:copticLit:ot.job.coptot:39",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲩⲥⲓⲛ",
+        2,
+        17.469
+      ],
+      [
+        "ⲉϩⲕⲟ",
+        1,
+        15.791
+      ],
+      [
+        "ⲣⲉϥϫⲓϣⲱⲙ",
+        1,
+        15.791
+      ],
+      [
+        "ⲙⲛ",
+        12,
+        13.592
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        6,
+        13.257
+      ],
+      [
+        "ϥ",
+        17,
+        12.977
+      ],
+      [
+        "ⲉⲛⲟⲭⲟⲥ",
+        1,
+        12.884
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        3,
+        12.697
+      ],
+      [
+        "ⲟⲩⲁ",
+        5,
+        12.487
+      ],
+      [
+        "ⲁϫⲛ",
+        2,
+        12.161
+      ],
+      [
+        "ⲉ",
+        12,
+        11.765
+      ],
+      [
+        "ⲛⲧϥ",
+        1,
+        11.621
+      ],
+      [
+        "ⲟⲃⲉ",
+        1,
+        11.176
+      ],
+      [
+        "ⲛⲕⲟⲧⲕ",
+        2,
+        10.955
+      ],
+      [
+        "ⲡ",
+        10,
+        10.655
+      ],
+      [
+        "ⲕⲣⲙⲣⲙ",
+        1,
+        10.451
+      ],
+      [
+        "ⲙⲟⲕⲙⲉⲕ",
+        1,
+        10.381
+      ],
+      [
+        "ⲟⲩⲟϫ",
+        1,
+        10.348
+      ],
+      [
+        "ⲟⲩⲛⲧ",
+        1,
+        9.791
+      ],
+      [
+        "ⲅⲁⲣ",
+        3,
+        9.627
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          11
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲓϣⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          "ⲉ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲓⲕⲉ",
+          "ϥ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲏⲧ",
+          "ϩⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          "ⲙⲛ_2_post_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          "ⲛ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲓⲕⲉ",
+          "ⲣⲉϥϫⲓϣⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          "ⲛⲓⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ⲁ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ϥ_1_pre_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲁⲣⲓⲕⲉ",
+          "ⲁⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲕⲉ_0_node",
+          "ⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲣⲓⲕⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2640,
+      "count": 14
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3066",
+      "type": "cf",
+      "label": "bend, turn, incline"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C191",
+      "label": "ϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "blame, find fault"
+    },
+    {
+      "target": "C190",
+      "label": "ⲁⲧⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "blameless"
+    },
+    {
+      "target": "C193",
+      "label": "ⲙⲛⲧⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "fault-finding, criticism"
+    },
+    {
+      "target": "C192",
+      "label": "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "fault-finder, know-it-all"
+    }
+  ]
+}

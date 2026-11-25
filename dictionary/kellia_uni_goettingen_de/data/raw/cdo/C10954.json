@@ -1,0 +1,454 @@
+{
+  "id": "C10954",
+  "forms": [
+    {
+      "id": "CF29955",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29965",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1812,
+        "count": 36
+      }
+    },
+    {
+      "id": "CF29956",
+      "orth": "ⲭⲁⲓⲣⲟⲩⲃⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6143,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF29957",
+      "orth": "ⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1556,
+        "count": 48
+      }
+    },
+    {
+      "id": "CF29959",
+      "orth": "ⲭⲉⲣⲟⲃⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29958",
+      "orth": "ⲭⲉⲓⲣⲟⲩⲃⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29961",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲉⲓⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29960",
+      "orth": "ⲭⲉⲣⲟⲃⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29963",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲓⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.6,
+        "rank": 986,
+        "count": 51
+      }
+    },
+    {
+      "id": "CF29962",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9645,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29964",
+      "orth": "ⲭⲉⲣⲟⲩⲃⲓⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29966",
+      "orth": "ⲭⲉⲣⲱⲃⲓ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29967",
+      "orth": "ⲭⲉⲣⲱⲃⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29968",
+      "orth": "ⲭⲱⲣⲱⲃⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15177",
+      "bibliography": "DDGLC",
+      "cu_ID": "781"
+    },
+    {
+      "id": "CS15178",
+      "bibliography": "DDGLC",
+      "cu_ID": "8285"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϫⲟⲥ ⲟⲛ ⲉⲑⲃⲏⲧϥ ϫⲉⲟⲩⲙⲏϣ ⲛⲥⲟⲡ ⲉϥⲉⲛⲕⲟⲧ ϣⲁϥⲛⲁⲩ ⲉⲟⲩ**ⲭⲉⲣⲟⲩⲃⲓⲙ** ⲛⲟⲩⲱⲓⲛⲓ ⲉϥⲛⲏⲟⲩ ⲉϥϩⲱⲃⲥ ⲛⲛⲉϥⲧⲉⲛϩ ⲉⲃⲟⲗ ⲉϫⲱϥ ϣⲁⲧⲉϥⲧⲱⲛϥ ⲉⲃⲟⲗ ϧⲉⲛ ⲡⲓⲛⲕⲟⲧ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ϣⲁϥⲛⲁⲩ ⲉⲣⲟϥ ⲉϥϩⲱⲗ ⲉⲡϣⲱⲓ ⲉⲛⲓⲫⲏⲟⲩⲓ .",
+      "english": "It is reported of him that a multitude of times he saw a luminous cherub spreading his wings over him while he was sleeping, and he would see him ascend to heaven.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ**ⲭⲉⲣⲟⲩⲃⲓⲛ** ⲅⲁⲣ ⲁⲛ ⲙⲙⲟⲩⲛⲅ ⲛϭⲓϫ ⲛⲣⲱⲙⲉ ·",
+      "english": "It was not (the work of) the Cherubim, neither was it wrought by the hand of man;",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲑⲁⲙⲓⲟ ⲛ**ⲭⲉⲣⲟⲩⲃⲓⲙ** ⲃ ⲛⲛⲟⲩⲃ",
+      "english": "and the two cherubs of gold;",
+      "source": "02_Exodus_38",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲉⲣⲉⲛⲉ**ⲭⲉⲣⲟⲩⲃⲓⲛ** ⲥⲧⲱⲧ ϩⲏⲧϥ ϩⲣⲁⲓ ϩⲛⲙⲡⲏⲩⲉ ϫⲉⲉⲣⲉⲟⲩⲥϩⲓⲙⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲛⲁⲁϩⲉⲣⲁⲧⲥ ⲛⲥϣⲁϫⲉ ⲛⲙⲙⲁϥ ϩⲓϫⲙⲡⲕⲁϩ ·",
+      "english": "He before Whom the Cherubim in the heavens tremble in awe (permitted) a sinful woman to stand and to talk with Him upon the earth!",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲙⲱⲓⲛⲓ ⲁⲛⲁⲩ ⲉⲡⲧⲁⲓⲟ ⲙⲡⲁⲓⲣⲱⲙⲓ ⲉⲣⲉⲛⲓ**ⲭⲉⲣⲟⲩⲃⲓⲙ** ⲉⲣϧⲏⲓⲃⲓ ⲉϫⲱϥ",
+      "english": "Come, let us see the glory of the man whom the cherubim shaded.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓϣⲁⲛⲧⲛⲧⲱⲛⲅ ⲉⲏⲥⲁⲓⲁⲥ ⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ · ⲛⲧⲟⲕ ⲇⲉ ϩⲱⲱⲕ ⲁⲕⲑⲉⲱⲣⲉⲓ ⲙⲡⲉⲧϩⲙⲟⲟⲥ ϩⲓϫⲛⲛⲉ**ⲭⲉⲓⲣⲟⲩⲃⲉⲓⲛ** ⲙⲛⲛⲥⲉⲣⲁⲫⲉⲓⲛ ·",
+      "english": "I compare thee with Isaiah the Prophet, because thou thyself hast seen Him that sitteth above the Cherubim and Seraphim,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲗⲁⲕϩ",
+        1,
+        13.338
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.46
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        9.071
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        1,
+        8.414
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲉ",
+        30,
+        16.748
+      ],
+      [
+        "ⲛⲉⲍⲉⲣⲁⲫⲓⲛ",
+        2,
+        16.728
+      ],
+      [
+        "ⲥⲉⲣⲁⲫⲓⲛ",
+        3,
+        16.26
+      ],
+      [
+        "ϩⲏⲗⲏ",
+        2,
+        15.728
+      ],
+      [
+        "...........ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        15.313
+      ],
+      [
+        "ⲛⲁⲅⲅⲉⲗⲟⲥ..........ⲉ",
+        1,
+        15.313
+      ],
+      [
+        "ⲍⲉⲣⲁⲫⲓⲛ",
+        1,
+        15.313
+      ],
+      [
+        "ϫⲉⲛⲛⲉ",
+        1,
+        15.313
+      ],
+      [
+        "ⲁⲥⲁⲣⲱⲑ",
+        1,
+        15.313
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.313
+      ],
+      [
+        "ⲫⲁⲣⲙⲁ",
+        1,
+        15.313
+      ],
+      [
+        "ϩⲁⲣⲙⲁ",
+        3,
+        13.56
+      ],
+      [
+        "ⲭⲉⲣⲟⲩⲃⲓⲛ",
+        2,
+        13.143
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        5,
+        12.682
+      ],
+      [
+        "ⲙⲟⲩⲛⲅ",
+        2,
+        12.531
+      ],
+      [
+        "ⲁ",
+        19,
+        12.503
+      ],
+      [
+        "ϣⲉⲧϣⲱⲧ",
+        1,
+        12.143
+      ],
+      [
+        "ⲛ",
+        22,
+        11.902
+      ],
+      [
+        "ϫⲧⲟ",
+        1,
+        11.853
+      ],
+      [
+        "ϥ",
+        18,
+        11.746
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          15
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲟⲩⲧⲁϥⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲥⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          2
+        ],
+        [
+          "ⲟⲛⲧⲱⲥ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲍⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲍⲉⲣⲁⲫⲓⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲍⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          "ⲛⲉ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          2
+        ],
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          "ⲙⲛ_2_post_ϫⲟⲩⲧⲁϥⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲟⲩⲧⲁϥⲧⲉ",
+          "ⲛⲉ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          "ⲥⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲟⲛⲧⲱⲥ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          "ⲛⲉ_1_pre_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          "ⲙⲛ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          "ⲛⲉ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲍⲉⲣⲁⲫⲓⲛ",
+          "ⲍⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ],
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          "ⲙⲛ_2_post_ⲛⲉⲍⲉⲣⲁⲫⲓⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲍⲉⲣⲁⲫⲓⲛ",
+          "ⲛⲉⲍⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          2
+        ],
+        [
+          "ⲭⲉⲣⲟⲩⲃⲓⲛ_0_node",
+          "ⲙⲛ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲣⲁⲫⲓⲛ",
+          "ⲥⲉⲣⲁⲫⲓⲛ_1_post_ⲭⲉⲣⲟⲩⲃⲓⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.25,
+      "rank": 1507,
+      "count": 39
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 9145,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2642",
+    "grl_lemma": "χερουβίν",
+    "grl_meaning": "Cherub (type of angel)",
+    "grl_pos": "noun",
+    "grl_ref": "Lampe 1523b"
+  }
+}

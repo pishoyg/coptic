@@ -1,0 +1,168 @@
+{
+  "id": "C8988",
+  "forms": [
+    {
+      "id": "CF22105",
+      "orth": "ⲉⲡⲉⲛⲇⲩⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22106",
+      "orth": "ⲉⲙⲡⲏⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22107",
+      "orth": "ⲉⲡⲉⲛⲇⲩⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7818,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10989",
+      "bibliography": "DDGLC",
+      "cu_ID": "767"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉ ⲡⲓⲙⲁⲑⲏⲧⲏⲥ ⲫⲏ ⲉⲛⲁⲣⲉⲓⲏⲥⲟⲩⲥ ⲙⲉⲓ ⲙⲙⲟϥ ⲙⲡⲉⲧⲣⲟⲥ ϫⲉⲡϭⲟⲓⲥ ⲡⲉ ⲥⲓⲙⲱⲛ ⲟⲩⲛ ⲡⲉⲧⲣⲟⲥ ⲉⲧⲁϥⲥⲱⲧⲉⲙ ϫⲉⲡϭⲟⲓⲥ ⲡⲉ ⲁϥⲙⲟⲣϥ ⲙⲡⲉϥ**ⲉⲡⲉⲛⲇⲩⲧⲏⲥ** ⲛⲁϥⲃⲏϣ ⲅⲁⲣ ⲡⲉ ⲟⲩⲟϩ ⲁϥϩⲓⲧϥ ⲉⲫⲓⲟⲙ .",
+      "english": "That disciple therefore whom Jesus loved said to Peter, 'It's the Lord!' So when Simon Peter heard that it was the Lord, he wrapped his coat around him (for he was naked), and threw himself into the sea.",
+      "source": "04_John_21",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϭⲉ ⲙⲡⲉⲧⲣⲟⲥ ⲛϭⲓⲡⲙⲁⲑⲏⲧⲏⲥ ⲉⲛⲉⲣⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲉ ⲙⲙⲟϥ ϫⲉⲡϫⲟⲉⲓⲥ ⲡⲉ . ⲥⲓⲙⲱⲛ ϭⲉ ⲡⲉⲧⲣⲟⲥ ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ϫⲉⲡϫⲟⲉⲓⲥ ⲡⲉ ⲁϥⲙⲟⲣϥ ⲙⲡⲉϥ**ⲉⲡⲉⲛⲇⲩⲧⲏⲥ** ⲛⲉϥⲕⲏ ⲅⲁⲣ ⲕⲁϩⲏⲩ ⲡⲉ ⲁⲩⲱ ⲁϥϥⲟϭϥ ⲉⲑⲁⲗⲁⲥⲥⲁ .",
+      "english": "That disciple therefore whom Jesus loved said to Peter, 'It's the Lord!' So when Simon Peter heard that it was the Lord, he wrapped his coat around him (for he was naked), and threw himself into the sea.",
+      "source": "43_John_21",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲣ",
+        1,
+        14.995
+      ],
+      [
+        "ⲃⲏϣ",
+        1,
+        14.051
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.59
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲟⲣ",
+        1,
+        13.817
+      ],
+      [
+        "ⲕⲏ",
+        1,
+        13.18
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲉⲛⲇⲩⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲡⲉⲛⲇⲩⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲉⲛⲇⲩⲧⲏⲥ",
+          "ⲉⲡⲉⲛⲇⲩⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19055,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 7282,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "735",
+    "grl_lemma": "ἐπενδύτης",
+    "grl_meaning": "robe or garment worn over another",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 617a"
+  }
+}

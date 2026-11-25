@@ -1,0 +1,182 @@
+{
+  "id": "C3603",
+  "forms": [
+    {
+      "id": "CF9111",
+      "orth": "ⲥⲛⲁⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9074,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4101",
+      "bibliography": "CD 346b; CED 156; KoptHWb 190; DELC 191; ChLCS 49a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲉⲓⲕ",
+        1,
+        10.67
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        10.384
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        10.074
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        9.442
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        9.414
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        9.276
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.941
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        7.947
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲛⲁⲧ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ⲥⲛⲁⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲛⲁⲧ",
+          "ⲛⲛⲉ_1_pre_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲛⲉ_1_pre_ⲥⲛⲁⲧ",
+          "ⲕ_1_pre_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲛⲁⲧ",
+          "ⲥⲛⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲧ_0_node",
+          "ⲁⲛ_1_post_ⲥⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲛⲁⲧ",
+          "ϩⲏⲧ_1_post_ⲥⲛⲁⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8624,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3604",
+      "label": "ⲥⲁⲛⲟⲩⲑ",
+      "pos": "N",
+      "gloss": "coward"
+    }
+  ],
+  "etym": {
+    "egy_num": "138730",
+    "egy_lemma": "snḏ",
+    "demo_num": "d5361",
+    "demo_lemma": "snd",
+    "english": "to fear; to be afraid",
+    "german": "fürchten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138730",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5361"
+  }
+}

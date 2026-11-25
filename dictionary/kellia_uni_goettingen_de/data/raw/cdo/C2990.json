@@ -1,0 +1,209 @@
+{
+  "id": "C2990",
+  "forms": [
+    {
+      "id": "CF7846",
+      "orth": "ϯⲡⲁϩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10543,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3423",
+      "bibliography": "CD 283a; KoptHWb 157; ChLCS 39b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲡⲥⲁⲉⲓⲛ ⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲙⲙⲟϥ · ⲟⲩⲇⲉ ⲙⲉϥⲧⲱⲱⲃⲉ ⲛⲁϥ ⲉⲧⲃⲉⲛϣⲱⲥ · ⲁⲗⲗⲁ ϣⲁϥ**ϯⲡⲁϩⲣⲉ** ⲉⲣⲟϥ ϩⲛⲟⲩⲙⲛⲧⲣⲙⲣⲁϣ ·",
+      "english": "The physician doth not treat him with contempt, neither doth he award him the just retribution for his disgraceful state, but he administereth unto him the medicine with gentleness.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.304
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϯⲡⲁϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϯⲡⲁϩⲣⲉ",
+          "ϣⲁ_1_pre_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲡⲁϩⲣⲉ",
+          "ϥ_1_pre_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲡⲁϩⲣⲉ",
+          "ϯⲡⲁϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲡⲁϩⲣⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ϯⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϯⲡⲁϩⲣⲉ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10128,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2993",
+      "label": "ϫⲓⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "take drugs, be healed; take colour, be dyed"
+    },
+    {
+      "target": "C2994",
+      "label": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "place of healing, pharmacy"
+    },
+    {
+      "target": "C2992",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2983",
+      "label": "ⲡⲱϩⲣⲉ",
+      "pos": "V",
+      "gloss": "charm, bewitch"
+    },
+    {
+      "target": "C2991",
+      "label": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "drug-giver, magician"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ]
+}

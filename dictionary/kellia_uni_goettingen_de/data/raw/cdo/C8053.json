@@ -1,0 +1,51 @@
+{
+  "id": "C8053",
+  "forms": [
+    {
+      "id": "CF18212",
+      "orth": "ⲁⲅⲁⲡⲏⲧⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18213",
+      "orth": "ⲁⲅⲁⲡⲏⲧⲓⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18214",
+      "orth": "ⲁⲅⲁⲡⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11310,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8977",
+      "bibliography": "DDGLC",
+      "cu_ID": "6542"
+    },
+    {
+      "id": "CS8978",
+      "bibliography": "DDGLC",
+      "cu_ID": "10716"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3594",
+    "grl_lemma": "ἀγαπητικός",
+    "grl_meaning": "affectionate",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 6b"
+  }
+}

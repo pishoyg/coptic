@@ -1,0 +1,296 @@
+{
+  "id": "C9304",
+  "forms": [
+    {
+      "id": "CF23350",
+      "orth": "ⲕⲁⲣⲟⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23351",
+      "orth": "ⲕⲁⲣⲟⲓⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23355",
+      "orth": "ⲕⲁⲣⲟⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4471,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF23352",
+      "orth": "ⲕⲁⲓⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23353",
+      "orth": "ⲕⲁⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12335,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23354",
+      "orth": "ⲕⲁⲣⲟⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11657",
+      "bibliography": "DDGLC",
+      "cu_ID": "795"
+    },
+    {
+      "id": "CS11658",
+      "bibliography": "DDGLC",
+      "cu_ID": "3552"
+    },
+    {
+      "id": "CS11659",
+      "bibliography": "DDGLC",
+      "cu_ID": "8062"
+    },
+    {
+      "id": "CS11660",
+      "bibliography": "DDGLC",
+      "cu_ID": "7780"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯϩⲧⲏⲕ ⲅⲁⲣ ϫⲉⲟⲩϭⲉⲣⲟⲃ ⲛϣⲉ ⲛ**ⲕⲁⲣⲟⲓⲁ** ⲡⲉⲛⲧⲁⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲁⲩ ⲉⲣⲟϥ ⲛϣⲟⲣⲡ ·",
+      "english": "For observe that it was a staff of wood of the almond tree which the prophet saw at the beginning,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡⲕⲏⲡⲟⲥ ⲛ**ⲕⲁⲣⲟⲓⲁ** ⲉⲧⲣⲁⲛⲁⲩ ϩⲙⲡⲅⲉⲛⲏⲙⲁ ⲙⲡⲉⲭⲉⲓⲙⲁⲣⲣⲟⲥ ⲉⲛⲁⲩ ϫⲉⲛⲉⲁⲧⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ϯⲟⲩⲱ ⲁⲩⲱ ⲉⲛⲁⲩ ϫⲉⲁⲧⲃⲱ ⲛϩⲉⲣⲙⲁⲛ ϯⲟⲩⲱ ⲉⲃⲟⲗ ⲉⲓⲛⲁϯⲛⲁⲉⲕⲓⲃⲉ ⲛⲁⲕ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ",
+      "english": "There I will give thee my breasts: my soul knew it not: it made me as the chariots of Aminadab.",
+      "source": "Song of Solomon 6",
+      "urn": "urn:cts:copticLit:ot.song.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲁⲕⲱⲃ ⲇⲉ ϫⲓ ⲛⲟⲩϣⲉ ⲛⲥⲧⲩⲣⲁⲝ ⲉϥⲟⲩⲉⲧⲟⲩⲱⲧ ⲁⲩⲱ ⲕⲉⲟⲩⲁ ⲛϣⲉ ⲛ**ⲕⲁⲣⲟⲓⲁ** ⲙⲛⲕⲉⲟⲩⲁ ⲛϣⲉ ⲙⲡⲗⲁⲧⲁⲛⲟⲥ ⲁϥⲕⲱⲕ ⲙⲙⲟⲟⲩ ⲛϭⲓⲓⲁⲕⲱⲃ ⲛϩⲛⲧⲟ ⲉⲩⲟⲩⲟⲃϣ ⲉⲩⲥⲱⲕ ⲉⲡⲉⲧⲟⲩⲉⲧⲟⲩⲱⲧ ⲁⲡⲉⲧⲟⲩⲟⲃϣ ⲇⲉ ⲛⲧⲁϥⲕⲟⲕϥ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲛⲛϭⲉⲣⲱⲃ ⲛⲧⲟⲧⲟ",
+      "english": "And Jacob took to himself green rods of storax tree and walnut and plane-tree; and Jacob peeled in them white stripes; and as he drew off the green, the white stripe which he had made appeared alternate on the rods.",
+      "source": "Genesis 30",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲉⲣⲟⲃ",
+        1,
+        18.013
+      ],
+      [
+        "ⲧⲉⲣⲉⲙⲓⲛⲑⲟⲥ",
+        1,
+        15.428
+      ],
+      [
+        "ⲕⲏⲡⲟⲥ",
+        1,
+        13.428
+      ],
+      [
+        "ϣⲉ",
+        3,
+        13.352
+      ],
+      [
+        "ϭⲉⲣⲱⲃ",
+        1,
+        10.853
+      ],
+      [
+        "ⲛ",
+        9,
+        10.734
+      ],
+      [
+        "ⲛⲧⲉⲧⲛ",
+        1,
+        10.554
+      ],
+      [
+        "ⲡ",
+        7,
+        10.334
+      ],
+      [
+        "ⲟⲩⲁ",
+        2,
+        9.744
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        1,
+        9.723
+      ],
+      [
+        "ϩⲁⲧ",
+        1,
+        9.664
+      ],
+      [
+        "ⲧⲣ",
+        1,
+        9.447
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        9.232
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        8.814
+      ],
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        1,
+        8.321
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        7.919
+      ],
+      [
+        "ⲁ",
+        3,
+        7.214
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        6.941
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.162
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲣⲟⲓⲁ_0_node",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ_b",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁ",
+          "ⲟⲩⲁ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          "ⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          "ϣⲉ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_2_pre_ⲛ",
+          "ⲕⲁⲣⲟⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ_b",
+          "ϩⲉⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲁⲣⲟⲓⲁ",
+          "ⲕⲁⲣⲟⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4072,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2513",
+    "grl_lemma": "καρύα",
+    "grl_meaning": "nut-bearing tree",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 880b; Preisigke 1:739"
+  }
+}

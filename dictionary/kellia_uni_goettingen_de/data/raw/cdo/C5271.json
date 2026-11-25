@@ -1,0 +1,51 @@
+{
+  "id": "C5271",
+  "forms": [
+    {
+      "id": "CF12511",
+      "orth": "ϯϣⲉⲟⲩⲱϣⲉⲃ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5917",
+      "bibliography": "CDC 78a; KoptHWb 282; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4703",
+      "type": "cf",
+      "label": "increase"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5272",
+      "label": "ϭⲓⲛⲟⲩⲱϣⲃ",
+      "pos": "N",
+      "gloss": "answering"
+    },
+    {
+      "target": "C5269",
+      "label": "ⲟⲩⲱϣⲃ",
+      "pos": "V",
+      "gloss": "answer, respond, converse with"
+    },
+    {
+      "target": "C5270",
+      "label": "ⲟⲩⲱϣⲃ",
+      "pos": "N",
+      "gloss": "answer"
+    }
+  ]
+}

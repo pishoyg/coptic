@@ -1,0 +1,45 @@
+{
+  "id": "C5440",
+  "forms": [
+    {
+      "id": "CF12851",
+      "orth": "ⲱⲕ ⲛϩⲏⲧ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6096",
+      "bibliography": "CD 519b; ChLCS 72a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5438",
+      "label": "ⲱⲕ",
+      "pos": "V",
+      "gloss": "go in, sink (sun)"
+    },
+    {
+      "target": "C5439",
+      "label": "ⲱⲕ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be content"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "C102",
+  "forms": [
+    {
+      "id": "CF351",
+      "orth": "ⲁⲙⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.41,
+        "rank": 570,
+        "count": 223
+      }
+    },
+    {
+      "id": "CF352",
+      "orth": "ⲁⲙⲛⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF353",
+      "orth": "ⲁⲙⲛⲧⲉ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF354",
+      "orth": "ⲁⲙⲉⲛϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.86,
+        "rank": 791,
+        "count": 73
+      }
+    },
+    {
+      "id": "CF355",
+      "orth": "ⲁⲙⲉⲛϯ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF356",
+      "orth": "ⲉⲙⲛⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF357",
+      "orth": "ⲉⲙⲛⲧⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "immer ohne Artikel",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS120",
+      "bibliography": "CD 8b; CED 6; KoptHWb 6, 486; DELC 11; ChLCS 4a"
+    },
+    {
+      "id": "CS121",
+      "bibliography": "CD 8b; CED 6; KoptHWb 6; DELC 11; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲕⲁⲧⲁⲫⲣⲟⲛⲓⲧⲏⲥ ⲇⲉ ⲡⲣⲱⲙⲓ ⲛϭⲁⲥⲓϩⲏⲧ ⲉⲛⲁϣⲉⲡⲉϥⲟⲩⲟⲓ ⲛⲛⲉϥϫⲉⲕϩⲗⲓ ⲉⲃⲟⲗ ⲙⲫⲁⲓ ⲉⲧⲁϥⲟⲩⲟⲥⲑⲉⲛ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲛ**ⲁⲙⲉⲛϯ** ⲟⲩⲟϩ ⲛⲑⲟϥ ⲙⲡⲁϥⲥⲓ ⲙⲫⲣⲏϯ ⲙⲫⲙⲟⲩ ⲟⲩⲟϩ ⲉϥⲉⲑⲱⲟⲩϯ ϩⲁⲣⲟϥ ⲛⲛⲓⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲉϥⲉϣⲱⲡ ⲉⲣⲟϥ ⲛⲛⲓⲗⲁⲟⲥ ⲧⲏⲣⲟⲩ .",
+      "english": "But the arrogant man and the scorner, the boastful man, shall not finish anything; who has enlarged his desire as the grave, and like death he is never satisfied, and he will gather to himself all the nations, and will receive to himself all the peoples.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩⲕⲟⲗⲁⲍⲉ ⲙⲙⲱⲧⲛ ϩⲓⲟⲩⲥⲟⲡ ϩⲣⲁⲓ ϩⲛ**ⲁⲙⲛⲧⲉ** ·",
+      "english": "You are punished together down in hell.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲱϣ ⲉⲃⲟⲗ ϧⲉⲛⲡⲁϩⲟϫϩⲉϫ ⲟⲩⲃⲉⲡϭⲟⲉⲓⲥ ⲡⲁⲛⲟⲩϯ ⲟⲩⲟϩ ⲁϥⲥⲱⲧⲉⲙ ⲉⲣⲟⲓ ⲉⲃⲟⲗ ϧⲉⲛⲑⲛⲉϫⲓ ⲛ**ⲁⲙⲉⲛϯ** ⲁⲕⲥⲱⲧⲉⲙ ⲉⲧⲁⲥⲙⲏ .",
+      "english": "and said, I cried in my affliction to the Lord my God, and he hearkened to me, even to my cry out of the belly of hell: thou heardest my voice.",
+      "source": "Bohairic Jonah 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.Jonah.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥϯ ⲛⲁⲥ ⲛⲧⲉϥϭⲓϫ · ⲁⲩⲱ ⲁϥⲧⲟⲩϫⲟⲥ ⲉⲃⲟⲗ ϩⲛ**ⲁⲙⲛⲧⲉ** ·",
+      "english": "Who didst give it Thy hand and didst deliver it from Amente",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲧⲉⲧⲉⲛϫⲟⲥ ϫⲉⲁⲛⲑⲁⲙⲓⲟ ⲛⲟⲩⲇⲓⲁⲑⲏⲕⲏ ⲛⲉⲙ**ⲁⲙⲉⲛϯ** ⲟⲩⲟϩ ⲁⲛⲥⲉⲙⲛⲏ ⲛϩⲁⲛⲥⲩⲛⲑⲏⲕⲏ ⲛⲉⲙⲫⲙⲟⲩ : ⲟⲩⲥⲁⲣⲁⲑⲏⲟⲩ ⲉⲥⲛⲏⲟⲩ ⲁⲥϣⲁⲛⲓ ⲛⲛⲉⲥⲓ ⲉϫⲱⲛ ⲁⲛⲭⲱ ⲛⲧⲉⲛϩⲉⲗⲡⲓⲥ ⲉⲟⲩⲙⲉⲑⲛⲟⲩϫ ⲧⲉⲛⲛⲁⲉⲣⲥⲕⲉⲡⲏ ⲉϫⲱⲛ ⲛⲟⲩⲙⲉⲑⲛⲟⲩϫ .",
+      "english": "Because ye have said, We have made a covenant with Hades, and agreements with death; if the rushing storm should pass, it shall not come upon us: we have made falsehood our hope, and by falsehood shall we be protected:",
+      "source": "23_Isaias_28",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧϭⲓⲛϣⲱⲗ ⲛ**ⲁⲙⲛⲧⲉ** ·",
+      "english": "the destruction of Amente",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        240,
+        19.729
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        38,
+        19.037
+      ],
+      [
+        "ⲉ",
+        156,
+        18.872
+      ],
+      [
+        "ϩⲛ",
+        91,
+        18.202
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        17.552
+      ],
+      [
+        "ⲡ",
+        94,
+        16.36
+      ],
+      [
+        "ⲛϩⲣⲁⲓ",
+        7,
+        16.175
+      ],
+      [
+        "ϣⲓⲕ",
+        6,
+        15.508
+      ],
+      [
+        "ⲉⲧ",
+        50,
+        15.369
+      ],
+      [
+        "ⲁⲩⲱ",
+        54,
+        15.211
+      ],
+      [
+        "ⲧⲁⲣⲧⲁⲣⲟⲥ",
+        3,
+        14.967
+      ],
+      [
+        "ϥ",
+        64,
+        14.721
+      ],
+      [
+        "ⲩ",
+        46,
+        14.579
+      ],
+      [
+        "ⲁ",
+        49,
+        14.087
+      ],
+      [
+        "ⲁⲣⲓⲏⲗ",
+        3,
+        13.465
+      ],
+      [
+        "ⲙⲛ",
+        29,
+        13.417
+      ],
+      [
+        "ⲕ",
+        26,
+        13.153
+      ],
+      [
+        "ⲧⲱⲛ",
+        8,
+        13.128
+      ],
+      [
+        "ⲙⲟⲩ",
+        13,
+        13.044
+      ],
+      [
+        "ⲟⲩ",
+        36,
+        12.929
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲙⲛⲧⲉ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.41,
+      "rank": 502,
+      "count": 223
+    }
+  },
+  "etym": {
+    "egy_num": "26180",
+    "egy_lemma": "jmn.tjt",
+    "demo_num": "dm127",
+    "demo_lemma": "ı ͗mnt.t",
+    "english": "west",
+    "german": "Westen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/26180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm127"
+  }
+}

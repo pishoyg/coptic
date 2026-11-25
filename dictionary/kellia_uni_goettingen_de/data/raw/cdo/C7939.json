@@ -1,0 +1,108 @@
+{
+  "id": "C7939",
+  "forms": [
+    {
+      "id": "CF17944",
+      "orth": "ϭⲱⲧⲡ (ϩⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8823",
+      "bibliography": "CD 833b; KoptHWb 469"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲙⲡⲉϩⲣⲟⲟⲩ ⲅⲁⲣ ⲙⲡϫⲟⲉⲓⲥ ⲛⲁⲥⲥⲩⲣⲓⲟⲥ **ⲛⲁϭⲱⲧⲡ **ϩⲛ**ⲧⲉⲡⲗⲩⲅⲏ** ⲉⲧϥⲛⲁⲣⲁϩⲧⲟⲩ ⲙⲙⲟⲥ",
+      "english": "For by the voice of the Lord the Assyrians shall be overcome, even by the stroke wherewith he shall smite them.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ⲉⲣⲉⲛⲉⲧϯⲟⲩⲃⲉ ⲡⲉⲕϫⲟⲉⲓⲥ ⲛⲁⲛⲁⲩ ⲉⲣⲟⲕ **ⲛⲥⲉϭⲱⲧⲡ **ϩⲛ**ⲟⲩϭⲉⲡⲏ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:9-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ⲉⲣⲉⲛⲉⲧⲛⲁϯⲟⲩⲃⲉ ⲉⲡⲉⲕϫⲟⲉⲓⲥ ⲛⲁⲛⲁⲩ ⲉⲣⲟⲕ **ⲛⲥⲉϭⲱⲧⲡ **ϩⲛ**ⲟⲩϭⲉⲡⲏ** ⁖ⲻ",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7946",
+      "label": "ϭⲟⲧⲡⲥ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7945",
+      "label": "ϭⲧⲟⲡ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7936",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "defeat, overcome; be defeated, overcome"
+    },
+    {
+      "target": "C7942",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "intimidation, discouragement"
+    },
+    {
+      "target": "C7938",
+      "label": "ϭⲱⲧⲡ (ϩⲁⲧϩⲏ⸗)",
+      "pos": "V",
+      "gloss": "beware of, watch out for, take care"
+    },
+    {
+      "target": "C7937",
+      "label": "ϭⲱⲧⲡ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be wearied of"
+    },
+    {
+      "target": "C7940",
+      "label": "ϭⲱⲧⲡ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "scare away"
+    },
+    {
+      "target": "C7941",
+      "label": "ϭⲱⲧⲡ (ⲛϩⲏⲧ)",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C7943",
+      "label": "ⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "without defeat, unconquered"
+    },
+    {
+      "target": "C7944",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "unconcern, carefreeness"
+    }
+  ]
+}

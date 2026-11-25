@@ -1,0 +1,108 @@
+{
+  "id": "C12128",
+  "forms": [
+    {
+      "id": "CF33136",
+      "orth": "ⲥⲱϭ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲉϭ-",
+      "dialect": "S",
+      "id": "1549.1"
+    },
+    {
+      "orth": "ⲥⲟϭ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1225,
+        "count": 70
+      }
+    },
+    {
+      "orth": "ⲥⲏϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1461,
+        "count": 53
+      }
+    },
+    {
+      "orth": "ⲥⲏϣ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1566,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ⲥⲏϭ†",
+      "dialect": "F",
+      "id": "1549.5"
+    },
+    {
+      "orth": "ⲥⲏϭ†",
+      "dialect": "L",
+      "id": "1549.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17129",
+      "bibliography": "CD 388a-b; KoptHWB 215; CED 176; DELC 207a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲡⲣⲱⲙⲉ ⲉⲧ**ⲥⲏϭ** ⲉⲛⲧⲁⲕⲧⲣⲉϥϥⲓ ⲙⲡⲉϥϭⲗⲟϭ ⲁϥⲙⲟⲟϣⲉ ·",
+      "english": "And again (in the case of) the man who was paralysed, Thou didst make him take up his bed, and he walked",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲙⲟⲩⲣ ⲛⲛϭⲓϫ ⲙⲛⲛⲟⲩⲉⲣⲏⲧⲉ ⲙⲡⲉⲛⲧⲁϥⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲛⲉⲧ**ⲥⲏϭ** · ⲉⲩⲥⲟⲛϩ ⲛⲧⲟⲟⲧϥ ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲉⲃⲟⲗ ϫⲉⲁⲩⲉⲓⲣⲉ ⲙⲡⲉϥⲟⲩⲱϣ ·",
+      "english": "They bound the hands and the feet of Him that had unbound the limbs of those who were paralysed. They themselves were bound in the hand of the Devil because they performed His will;",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲇⲉ ⲉⲣⲁⲧϥ ⲛⲟⲩⲣⲱⲙⲉ ⲉϥ**ⲥⲏϭ** ⲉⲣⲉϥⲧⲟⲟⲩ ⲛⲣⲱⲙⲉ ϥⲓ ϩⲁⲣⲟϥ",
+      "english": "Four people came, carrying a paralytic to him.",
+      "source": "Mark Chapter 2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.2,
+      "rank": 1734,
+      "count": 31
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12248",
+      "label": "ⲥⲓϭⲉ",
+      "pos": "V",
+      "gloss": "become, be rigid, paralysed"
+    },
+    {
+      "target": "C12247",
+      "label": "ⲥⲱϭ",
+      "pos": "N",
+      "gloss": "paralysis"
+    }
+  ]
+}

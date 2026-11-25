@@ -1,0 +1,171 @@
+{
+  "id": "C2037",
+  "forms": [
+    {
+      "id": "CF5757",
+      "orth": "ⲙⲁⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1923,
+        "count": 33
+      }
+    },
+    {
+      "id": "CF5758",
+      "orth": "ⲙⲉⲥ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4155,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Participium conjunctum",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2364",
+      "bibliography": "CD 185b; KoptHWb 101"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲛⲁⲙⲟⲟϣⲉ ⲇⲉ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛⲅⲉⲓ ⲉϩⲣⲁⲓ ⲉⲡϣⲏⲛ ⲛⲑⲁⲃⲱⲣ ⲁⲩⲱ ⲕⲛⲁϩⲉ ⲉϣⲟⲙⲛⲧ ⲛⲣⲱⲙⲉ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲉⲩⲛⲁⲉⲣⲁⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲃⲉⲑⲏⲗ ⲉⲣⲉϣⲟⲙⲛⲧ ⲙ**ⲙⲁⲥ** ⲛⲃⲁⲁⲙⲡⲉ ϩⲓϫⲱϥ ⲛⲟⲩⲁ ⲁⲩⲱ ⲕⲉⲟⲩⲁ ⲉⲣⲉϣⲟⲙⲛⲧ ⲛϩⲛⲁⲁⲩ ⲛⲟⲉⲓⲕ ϩⲓϫⲱϥ ⲁⲩⲱ ⲡⲕⲉⲟⲩⲁ ⲉⲣⲉⲟⲩϩⲱⲧ ⲛⲏⲣⲡ ϩⲓϫⲱϥ",
+      "english": "And thou shalt depart thence, and shalt go beyond that as far as the oak of Thabor, and thou shalt find there three men going up to God to Baethel, one bearing three kids, and another bearing three vessels of bread, and another bearing a bottle of wine.",
+      "source": "I Samuel 10",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲛⲁⲣⲁⲛⲁϥ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲙⲁⲥ** ⲛⲃⲣⲣⲉ · ⲉϥⲛⲉϫⲧⲁⲡ ⲉⲃⲟⲗ ϩⲓⲉⲓⲃ ·",
+      "english": "and thou shalt please God like a new (i. e. young) bull which driveth away the sheep with (his) horns.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡϫⲟⲉⲓⲥ ⲁϥϥⲱϭⲉ ⲉϫⲱϥ ⲁϥⲡⲁϩⲡⲙⲁⲥ ⲙⲙⲟⲩⲓ ⲛⲧϩⲉ ⲛⲟⲩⲁ ⲉϥⲛⲁⲙⲟⲩⲟⲩⲧ ⲛⲟⲩ**ⲙⲁⲥ** ⲛⲃⲁⲁⲙⲡⲉ ⲁⲩⲱ ⲛⲉⲙⲛⲗⲁⲁⲩ ⲛⲧⲟⲟⲧϥ ϩⲛⲧⲉϥϭⲓϫ ⲙⲡⲉϥⲧⲁⲙⲉⲡⲉϥⲉⲓⲱⲧ ⲇⲉ ⲙⲛⲧⲉϥⲙⲁⲁⲩ ⲉⲡⲉⲛⲧⲁϥⲁⲁϥ",
+      "english": "And the spirit of the Lord came powerfully upon him, and he crushed him as he would have crushed a kid of the goats, and there was nothing in his hands: and he told not his father and his mother what he had done.",
+      "source": "Judges 14",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2040",
+      "label": "ⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2043",
+      "label": "ⲙⲉⲥⲓⲉ",
+      "pos": "V",
+      "gloss": "whom . . . bore"
+    },
+    {
+      "target": "C2052",
+      "label": "ⲙⲉⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "bring to birth, deliver sb (midwife)"
+    },
+    {
+      "target": "C2053",
+      "label": "ⲙⲉⲥⲓⲱ",
+      "pos": "N",
+      "gloss": "midwife, nurse"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2047",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring (of money), usury, interest"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ]
+}

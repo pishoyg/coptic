@@ -1,0 +1,161 @@
+{
+  "id": "C8010",
+  "forms": [
+    {
+      "id": "CF18086",
+      "orth": "ⲣⲉϥϭⲟϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13445,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8908",
+      "bibliography": "CD 841a"
+    },
+    {
+      "id": "CS8909",
+      "bibliography": "CD 841a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉⲧⲁⲕⲟ ⲛϫⲉⲟⲩⲫⲱⲧ ⲉⲃⲟⲗϧⲉⲛ ⲛⲟⲩ**ⲣⲉϥϭⲟϫⲓ** ⲟⲩⲟϩ ⲫⲏⲉⲧϫⲟⲣ ⲛⲛⲉϥϣⲁⲙⲁϩⲓ ⲛⲧⲉϥϫⲟⲙ ⲟⲩⲟϩ ⲡⲓⲣⲉϥϯ ⲛⲛⲉϥϣⲛⲟϩⲉⲙ ⲛⲧⲉϥⲯⲩⲭⲏ .",
+      "english": "And flight shall perish from the runner, and the strong shall not hold fast his strength, and the warrior shall not save his life:",
+      "source": "30_Amos_02",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲣ",
+        1,
+        12.133
+      ],
+      [
+        "ⲫⲏⲉⲧ",
+        1,
+        11.481
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        9.972
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥϭⲟϫⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ⲫⲏⲉⲧ_2_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ϫⲟⲣ_1_post_ⲣⲉϥϭⲟϫⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥϭⲟϫⲓ_0_node",
+          "ⲟⲩⲟϩ_2_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ϫⲟⲣ",
+          "ⲫⲏⲉⲧ_2_post_ϫⲟⲣ",
+          1
+        ],
+        [
+          "ⲫⲏⲉⲧ_2_post_ϫⲟⲣ",
+          "ϫⲟⲣ_1_post_ⲣⲉϥϭⲟϫⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12880,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C8011",
+      "label": "ϫⲓⲛϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "path"
+    },
+    {
+      "target": "C8006",
+      "label": "ϭⲟϫⲓ",
+      "pos": "V",
+      "gloss": "run; run away"
+    },
+    {
+      "target": "C8008",
+      "label": "ϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "course"
+    },
+    {
+      "target": "C8007",
+      "label": "ϭⲟϫⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "follow, pursue, drive out"
+    },
+    {
+      "target": "C8009",
+      "label": "ⲙⲁ ⲛϭⲟϫⲓ",
+      "pos": "N",
+      "gloss": "path"
+    }
+  ]
+}

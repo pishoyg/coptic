@@ -1,0 +1,349 @@
+{
+  "id": "C2052",
+  "forms": [
+    {
+      "id": "CF5792",
+      "orth": "ⲙⲉⲥⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3983,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2380",
+      "bibliography": "CD 186b; KoptHWb 102; ChLCS 28a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲃⲣⲁⲓⲟⲥ",
+        2,
+        18.598
+      ],
+      [
+        "ϩⲉⲃⲣⲁⲓⲁ",
+        1,
+        18.276
+      ],
+      [
+        "ⲕⲏⲙⲉ",
+        2,
+        14.615
+      ],
+      [
+        "ⲛ",
+        12,
+        14.564
+      ],
+      [
+        "ⲧⲁⲛϩⲟ",
+        1,
+        14.448
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        2,
+        14.12
+      ],
+      [
+        "ⲙⲓⲥⲉ",
+        1,
+        13.926
+      ],
+      [
+        "ⲙ",
+        7,
+        13.773
+      ],
+      [
+        "ⲇⲉ",
+        4,
+        12.986
+      ],
+      [
+        "ⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+        1,
+        12.961
+      ],
+      [
+        "ⲫⲁⲣⲁⲱ",
+        1,
+        12.753
+      ],
+      [
+        "ϩⲏⲧ",
+        2,
+        11.947
+      ],
+      [
+        "ⲛⲉⲣⲉ",
+        1,
+        11.919
+      ],
+      [
+        "ⲡ",
+        5,
+        11.463
+      ],
+      [
+        "ϣⲁⲣⲟ",
+        1,
+        11.418
+      ],
+      [
+        "ϫⲉ",
+        3,
+        10.901
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        10.819
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.925
+      ],
+      [
+        "ⲁ",
+        3,
+        9.799
+      ],
+      [
+        "ⲉ",
+        3,
+        9.572
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲥⲓⲟ_0_node",
+          8
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲥⲓⲟ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϩⲉⲃⲣⲁⲓⲟⲥ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ϩⲉⲃⲣⲁⲓⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲉⲥⲓⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲥⲓⲟ_0_node",
+          "ⲛ_1_post_ⲙⲉⲥⲓⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲥⲓⲟ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϩⲉⲃⲣⲁⲓⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲉⲥⲓⲟ",
+          "ⲙⲉⲥⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϩⲉⲃⲣⲁⲓⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲃⲣⲁⲓⲁ_3_post_ⲛ",
+          "ⲉ_1_post_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲉⲥⲓⲟ",
+          "ⲙⲉⲥⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲥⲓⲟ_0_node",
+          "ⲙ_1_post_ⲙⲉⲥⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲉⲥⲓⲟ",
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲉⲥⲓⲟ",
+          "ⲙⲉⲥⲓⲟ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4322",
+      "type": "cf",
+      "label": "bring to birth, deliver"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2040",
+      "label": "ⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2037",
+      "label": "ⲙⲁⲥ-",
+      "pos": "V",
+      "gloss": "bearing, producing"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2043",
+      "label": "ⲙⲉⲥⲓⲉ",
+      "pos": "V",
+      "gloss": "whom . . . bore"
+    },
+    {
+      "target": "C2053",
+      "label": "ⲙⲉⲥⲓⲱ",
+      "pos": "N",
+      "gloss": "midwife, nurse"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2047",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring (of money), usury, interest"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ]
+}

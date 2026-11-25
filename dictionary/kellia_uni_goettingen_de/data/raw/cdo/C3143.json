@@ -1,0 +1,64 @@
+{
+  "id": "C3143",
+  "forms": [
+    {
+      "id": "CF8167",
+      "orth": "ⲉⲓⲣⲉ ⲛⲣⲣⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3593",
+      "bibliography": "CD 299b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3141",
+      "label": "ⲙⲛⲧⲣⲣⲟ",
+      "pos": "N",
+      "gloss": "kingdom, reign"
+    },
+    {
+      "target": "C3138",
+      "label": "ⲣⲣⲟ",
+      "pos": "N",
+      "gloss": "king"
+    },
+    {
+      "target": "C3140",
+      "label": "ⲣⲣⲟ",
+      "pos": "N",
+      "gloss": "royal"
+    },
+    {
+      "target": "C3142",
+      "label": "ⲣⲣⲣⲟ",
+      "pos": "V",
+      "gloss": "be king, reign"
+    },
+    {
+      "target": "C3139",
+      "label": "ⲣⲣⲱ",
+      "pos": "N",
+      "gloss": "queen"
+    }
+  ]
+}

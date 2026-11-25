@@ -1,0 +1,114 @@
+{
+  "id": "C8469",
+  "forms": [
+    {
+      "id": "CF19834",
+      "orth": "ⲁⲣⲭⲏⲡⲗⲁⲥⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19835",
+      "orth": "ⲁⲣⲭⲏⲡⲗⲁⲥⲙⲁ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF19836",
+      "orth": "ⲁⲣⲭⲏⲡⲗⲁⲥⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13630,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF19837",
+      "orth": "ⲁⲣⲭⲏⲡⲗⲥⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9858",
+      "bibliography": "DDGLC",
+      "cu_ID": "3285"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲟⲣⲇⲓⲛⲟⲛ ϩⲱⲱϥ ⲙⲡ**ⲁⲣⲭⲏⲡⲗⲁⲥⲙⲁ** ⲧⲁϩⲟϥ ⲉⲧⲣⲉϥⲟⲩⲱϣⲧ ⲛⲁϥ ⲡⲉϫⲉⲡⲁⲉⲓⲱⲧ ⲛⲁϥ ϫⲉⲁⲙⲟⲩ ϩⲱⲱⲕ ⲛⲅⲟⲩⲱϣⲧ ⲙⲡⲁⲉⲓⲛⲉ ⲙⲛⲧⲁϩⲓⲕⲱⲛ ·",
+      "english": "And He intended that the order of angels who were fashioned [before Adam] should worship him, and My Father said to him (i.e. their chief), 'Come, thou thyself shalt worship my image and likeness.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        11.484
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        10.46
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲣⲭⲏⲡⲗⲁⲥⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13228,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3504",
+    "grl_lemma": "ἀρχίπλασμα",
+    "grl_meaning": "first creation",
+    "grl_pos": "noun",
+    "grl_ref": "LBG 210a"
+  }
+}

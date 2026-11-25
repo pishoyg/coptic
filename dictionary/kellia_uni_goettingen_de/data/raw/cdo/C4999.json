@@ -1,0 +1,51 @@
+{
+  "id": "C4999",
+  "forms": [
+    {
+      "id": "CF11963",
+      "orth": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5627",
+      "bibliography": "CD 478a; KoptHWb 270; ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5000",
+      "label": "ϩⲛ ⲟⲩⲟⲩⲱⲗⲥ",
+      "pos": "ADV",
+      "gloss": "discouragingly"
+    },
+    {
+      "target": "C4996",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "V",
+      "gloss": "lean, be bent, be confounded; bend, humiliate"
+    },
+    {
+      "target": "C4997",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "N",
+      "gloss": "humiliation"
+    },
+    {
+      "target": "C4998",
+      "label": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be bowed down in mind, be disheartened"
+    }
+  ]
+}

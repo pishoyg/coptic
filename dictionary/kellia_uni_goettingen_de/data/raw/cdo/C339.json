@@ -1,0 +1,578 @@
+{
+  "id": "C339",
+  "forms": [
+    {
+      "id": "CF1470",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3882,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF1471",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 1982,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF1472",
+      "orth": "ⲃⲁⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF1473",
+      "orth": "ⲃⲉⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS377",
+      "bibliography": "KoptHWb 21, 492; DELC 26; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛϯⲟⲩⲛⲟⲩ ⲁϥϭⲉⲛⲟⲩⲛⲓ ⲉⲃⲟⲗ ⲁϥϯⲟⲩⲱ ⲉⲡϣⲱⲓ ⲛϩⲁⲛ**ⲃⲁⲓ** ⲛⲉⲙϩⲁⲛⲥⲡⲁϯ ⲛⲃⲉⲛⲓ ⲟⲩⲟϩ ⲁⲛⲓⲣⲱⲙⲓ ⲉⲧⲉⲣϩⲱⲃ ⲟⲩⲱⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉⲥⲕⲁⲣⲡⲟⲥ ⲟⲩⲟϩ ⲁϯϣⲱϯ ϣⲱⲡⲓ ⲛⲁⲧⲕⲓⲙ ϣⲁⲉϧⲟⲩⲛ ⲉⲫⲟⲟⲩ ⲛⲉϩⲟⲟⲩ .",
+      "english": "Immediately, it took hold and began to sprout, producing shoots and leaves. The workers, sustained by the fruit it bore, ate of it. From that day forward, the well remained fixed in place and has never shifted.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲁⲧⲉϥⲥⲩⲡⲏⲑⲓⲁ ⲗⲟⲓⲡⲟⲛ ⲁⲡⲣⲣⲟ ⲧⲛⲛⲟⲟⲩ ⲛⲥⲱϥ ⲡⲉϫⲉⲛ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲛⲁϥ ϫⲉⲡⲣⲣⲟ ⲙⲟⲩⲧⲉ ⲉⲣⲟⲕ ⲱ ϩⲏⲗⲓⲁⲥ ·",
+      "english": "...",
+      "source": "Martyrdom of Helias (Sobhy ed.) Part 1",
+      "urn": "urn:cts:copticLit:helias.martyrdom.sobhy_ed:0-15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲡⲓⲣⲁⲥⲙⲟⲥ ⲧⲁϩⲉ ⲑⲏⲛⲟⲩ ⲉⲃⲏⲗ ⲉⲡⲓⲣⲁⲥⲙⲟⲥ ⲛⲣⲱⲙⲓ ϥⲉⲛϩⲟⲧ ⲛϫⲉⲫⲛⲟⲩϯ ⲫⲏ ⲉⲧⲉⲛϥⲛⲁⲭⲁ ⲑⲏⲛⲟⲩ ⲁⲛ ⲉⲑⲣⲟⲩⲉⲣⲡⲓⲣⲁⲍⲓⲛ ⲙⲙⲱⲧⲉⲛ ⲥⲁⲃⲟⲗ ⲙⲫⲏ ⲉⲧⲉⲟⲩⲟⲛϣϫⲟⲙ ⲙⲙⲱⲧⲉⲛ ⲉⲣⲟϥ ⲁⲗⲗⲁ ⲉϥⲉϯⲧⲟⲧϥ ⲛⲉⲙⲱⲧⲉⲛ ϧⲉⲛⲡⲓⲣⲁⲥⲙⲟⲥ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛϣϫⲉⲙϫⲟⲙ ⲛ**ϥⲁⲓ** ϣⲁⲧⲉⲧⲛⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧϥ .",
+      "english": "No temptation has taken you except what is common to man. God is faithful, who will not allow you to be tempted above what you are able, but will with the temptation also make the way of escape, that you may be able to endure it.",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲛⲉ**ⲃⲁⲓ**ϣⲓⲛⲉ ⲛⲧⲁⲩⲉⲓ ϫⲉⲛⲁⲓ ⲛⲉⲧⲉⲧⲛⲁϫⲟⲟⲩ ⲛⲛⲣⲱⲙⲉ ⲛⲓⲁⲃⲓⲥ ϫⲉⲣⲁⲥⲧⲉ ⲡⲟⲩϫⲁⲓ ⲛⲁϣⲱⲡⲉ ⲛⲏⲧⲛ ϩⲙⲡⲧⲣⲉⲡⲣⲏ ϯ ⲛⲧⲉϥϩⲙⲙⲉ ⲁⲩⲱ ⲛⲃⲁⲓϣⲓⲛⲉ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ⲉⲧⲉⲩⲡⲟⲗⲓⲥ ⲁⲩⲧⲁⲩⲉⲛϣⲁϫⲉ ⲉⲛⲉⲣⲱⲙⲉ ⲛⲓⲁⲃⲓⲥ ⲁⲩⲟⲩⲛⲟϥ",
+      "english": "And he said to the messengers that came, Thus shall ye say to the men of Jabis, To-morrow ye shall have deliverance when the sun is hot; and the messengers came to the city, and told the men of Jabis, and they rejoiced.",
+      "source": "I Samuel 11",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁ**ⲃⲁⲩ** ⲁϥϣⲉⲛⲁϥ ⲁϥϭⲓ ⲛⲅⲁⲑⲁⲛⲁⲁⲑ ⲛⲉⲙⲛⲉⲥϯⲙⲓ ⲟⲩⲟϩ ⲁϥϯⲣⲉⲛⲟⲩ ϫⲉⲛⲁⲃⲱⲑ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥⲣⲁⲛ",
+      "english": "And Nabau went and took Caath and her villages, and called them Naboth after his name.",
+      "source": "04_Numeri_32",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲡⲁϯ",
+        2,
+        16.303
+      ],
+      [
+        "ⲑⲟⲕⲥ",
+        2,
+        14.718
+      ],
+      [
+        "ϩⲏⲙⲏ",
+        1,
+        14.303
+      ],
+      [
+        "ϭⲟϫⲓ",
+        5,
+        13.263
+      ],
+      [
+        "ⲙⲟⲩⲗⲁϫ",
+        1,
+        12.718
+      ],
+      [
+        "ⲥⲱⲟⲩⲧⲉⲛ",
+        2,
+        11.215
+      ],
+      [
+        "ϥ",
+        15,
+        10.753
+      ],
+      [
+        "ⲡⲉϥ",
+        6,
+        10.403
+      ],
+      [
+        "ⲙ",
+        10,
+        10.157
+      ],
+      [
+        "ϩⲁⲛ",
+        6,
+        9.676
+      ],
+      [
+        "ϩⲓϫⲱ",
+        2,
+        9.535
+      ],
+      [
+        "ⲃⲉⲛⲓ",
+        1,
+        9.495
+      ],
+      [
+        "ⲑⲱϩⲉⲙ",
+        1,
+        9.495
+      ],
+      [
+        "ⲡⲓ",
+        8,
+        9.378
+      ],
+      [
+        "ⲁⲙⲟⲛⲓ",
+        2,
+        8.954
+      ],
+      [
+        "ϭⲓ",
+        3,
+        8.629
+      ],
+      [
+        "ⲛ",
+        8,
+        8.198
+      ],
+      [
+        "ⲓ",
+        5,
+        8.149
+      ],
+      [
+        "ϣⲱⲓ",
+        2,
+        8.11
+      ],
+      [
+        "ⲭⲱ",
+        2,
+        7.992
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲓⲛⲉ",
+        7,
+        15.877
+      ],
+      [
+        "ⲥⲟⲃⲧ",
+        1,
+        10.983
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        2,
+        10.014
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        9.715
+      ],
+      [
+        "ϥ",
+        6,
+        9.277
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.068
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        9.021
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.234
+      ],
+      [
+        "ϩⲏ",
+        1,
+        8.104
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.065
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        7.767
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.126
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        6.975
+      ],
+      [
+        "ϩⲁ",
+        1,
+        6.865
+      ],
+      [
+        "ⲁ",
+        3,
+        6.799
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        6.735
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.425
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.146
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        6.116
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          3
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          11
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲥⲡⲁϯ",
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲥⲡⲁϯ_1_post_ⲃⲁⲓ",
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲡⲁϯ",
+          "ⲃⲉⲛⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲟⲩ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲛ",
+          "ϣⲉ_3_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲉ_3_pre_ⲟⲩ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲁⲓ",
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲃⲁⲓ",
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϫⲓϫ",
+          "ϫⲓϫ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲃⲁⲓ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲑⲱϩⲉⲙ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲟⲩⲗⲁϫ",
+          "ⲙⲟⲩⲗⲁϫ_1_post_ⲃⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲓ_0_node",
+          7
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲁⲓ",
+          "ⲃⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲁⲓ_0_node",
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲃⲁⲓ",
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          "ⲩ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲓ",
+          "ⲉⲓ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲓ_2_post_ⲛⲧ",
+          "ϫⲉ_3_post_ⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3492,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.49,
+      "rank": 980,
+      "count": 42
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C13008",
+      "type": "cf",
+      "label": "thunder, voice of heaven"
+    },
+    {
+      "target": "C6815",
+      "type": "cf",
+      "label": "voice, sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13008",
+      "label": "ϩⲣⲟⲩⲃⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder, voice of heaven"
+    },
+    {
+      "target": "C337",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "night raven; screech-owl"
+    },
+    {
+      "target": "C338",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "spirit"
+    },
+    {
+      "target": "C340",
+      "label": "ⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "sky"
+    }
+  ]
+}

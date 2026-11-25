@@ -1,0 +1,198 @@
+{
+  "id": "C633",
+  "forms": [
+    {
+      "id": "CF2405",
+      "orth": "ⲉⲃⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13450,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2406",
+      "orth": "ⲉⲃⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2407",
+      "orth": "ⲉϥⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14024,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲣⲁ",
+      "dialect": "S",
+      "id": "636.1"
+    },
+    {
+      "orth": "ⲃⲣⲉ",
+      "dialect": "S",
+      "id": "636.2"
+    },
+    {
+      "orth": "ⲉⲃⲣⲏⲟⲩⲉ",
+      "dialect": "S",
+      "id": "636.3"
+    },
+    {
+      "orth": "ⲃⲣⲏⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14387,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲣⲏⲏⲩⲉ",
+      "dialect": "S",
+      "id": "636.5"
+    },
+    {
+      "orth": "ⲃⲣⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9261,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲃⲣⲁⲓ",
+      "dialect": "B",
+      "id": "636.7"
+    },
+    {
+      "orth": "ⲉⲫⲣⲁⲓ",
+      "dialect": "B",
+      "id": "636.8"
+    },
+    {
+      "orth": "ⲉⲙⲣⲁⲓ",
+      "dialect": "B",
+      "id": "636.9"
+    },
+    {
+      "orth": "ⲃⲣⲉ",
+      "dialect": "A",
+      "id": "636.10"
+    },
+    {
+      "orth": "ⲃⲣⲉⲉⲓ",
+      "dialect": "F",
+      "id": "636.11"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS769",
+      "bibliography": "CD 53ab; CED 32; KoptHWb 32, 497; DELC 39; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲓⲙⲟⲟϣⲉ ⲛⲙⲙⲁⲕ ⲡⲉ ⲉⲓⲥⲟⲃⲧⲉ ⲛⲛⲉⲕⲙⲁ ⲙⲙⲟⲟϣⲉ · ⲁⲩⲱ ⲉⲓϩⲓϯⲙⲁⲍⲉⲛⲙⲙⲁⲑⲏⲙⲁ ⲙⲡⲉⲕⲛⲟⲩⲥ · ⲙⲛⲡⲉⲕϩⲏⲧ · ⲛⲧϩⲉ ⲙⲡⲟⲩⲟⲉⲉⲓ ⲉⲧϣⲉⲣⲡⲥⲟⲃⲧⲉ ⲛⲛⲉϥ**ⲉⲃⲣⲁ** · ⲁⲩⲱ ⲉⲧϭⲱϫⲉ ⲙⲡⲙⲟⲟⲩ ⲉⲛⲉⲧⲗⲟⲙ · ⲧⲉⲛⲟⲩ ϭⲉ ϫⲣⲟ ⲛⲅϭⲙϭⲟⲙ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲉⲣⲡ",
+        1,
+        19.598
+      ],
+      [
+        "ϭⲱϫⲉ",
+        1,
+        16.691
+      ],
+      [
+        "ⲥⲟⲃⲧⲉ",
+        1,
+        13.36
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲃⲣⲁ",
+          1
+        ],
+        [
+          "ⲉⲃⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲃⲣⲁ",
+          "ⲉⲃⲣⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13044,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C634",
+      "label": "ⲉⲃⲣⲁⲥⲱϣⲉ",
+      "pos": "N",
+      "gloss": "seed-corn ('seed of the field')"
+    }
+  ],
+  "etym": {
+    "egy_num": "60310",
+    "egy_lemma": "pr.t",
+    "demo_num": "d1989",
+    "demo_lemma": "pr(.t)",
+    "english": "fruit; seed; posterity (metaph.)",
+    "german": "Frucht (einer Pflanze); Saatkorn; Nachkommenschaft (bildl.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60310",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1989"
+  }
+}

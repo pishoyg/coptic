@@ -1,0 +1,370 @@
+{
+  "id": "C5888",
+  "forms": [
+    {
+      "id": "CF13774",
+      "orth": "ϣⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14886,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲟⲟⲙⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9071,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲙⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16409,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲁⲙⲁ-",
+      "dialect": "S",
+      "id": "1922.3"
+    },
+    {
+      "orth": "ϣⲙⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3750,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϣⲁⲙ",
+      "dialect": "B",
+      "id": "1922.5"
+    },
+    {
+      "orth": "ϣⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13121,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲟⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1080,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ϣⲁⲙ-",
+      "dialect": "A",
+      "id": "1922.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6571",
+      "bibliography": "CD 565a; CED 244; KoptHWb 313; DELC 262a; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲛⲛⲟⲃⲉ ⲉⲛⲧⲁⲧⲉⲧⲛⲁⲁϥ ⲉⲧⲉⲡⲙⲁⲥⲉ ⲡⲉ ⲁⲓϫⲓⲧϥ ⲁⲓⲣⲟⲕϩϥ ϩⲛⲟⲩⲥⲁⲧⲉ ⲁⲓϭⲟϫϩϥ ⲁⲓⲁⲁϥ ⲛϣⲏⲙ ϣⲏⲙ ϣⲁⲛⲧⲉϥ**ϣⲙⲁ** ⲉⲙⲁⲧⲉ ⲁⲓⲁⲁϥ ⲛⲧϩⲉ ⲛⲟⲩϣⲟⲉⲓϣ ⲁⲓⲛⲟⲩϫⲉ ⲙⲡϣⲟⲉⲓϣ ⲉϩⲣⲁⲓ ⲉⲡⲉⲭⲉⲓⲙⲁⲣⲣⲟⲥ ⲡⲉⲧⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ⲉⲃⲟⲗ ϩⲙⲡⲧⲟⲟⲩ",
+      "english": "And your sin which ye had made, even the calf, I took, and burnt it with fire, and pounded it and ground it down till it became fine; and it became like dust, and I cast the dust into the brook that descended from the mountain.",
+      "source": "Deuteronomy 9",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲓⲟⲥ",
+        2,
+        14.023
+      ],
+      [
+        "ⲧⲉⲛⲛⲟ",
+        1,
+        13.525
+      ],
+      [
+        "ⲕⲁⲥ",
+        2,
+        11.701
+      ],
+      [
+        "ⲓⲁⲃⲓ",
+        1,
+        11.651
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        2,
+        10.431
+      ],
+      [
+        "ⲉⲙⲁϣⲱ",
+        2,
+        9.788
+      ],
+      [
+        "ⲥⲁⲧ",
+        1,
+        9.355
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        6.82
+      ],
+      [
+        "ϥ",
+        5,
+        6.805
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        6.455
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        5.25
+      ],
+      [
+        "ⲁ",
+        3,
+        5.159
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        4.405
+      ],
+      [
+        "ⲉ",
+        2,
+        3.432
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        3.293
+      ],
+      [
+        "ⲫ",
+        1,
+        1.979
+      ],
+      [
+        "ⲙ",
+        1,
+        0.998
+      ],
+      [
+        "ⲛ",
+        1,
+        0.006
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲏⲙ",
+        2,
+        14.32
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        12.094
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        10.965
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        10.022
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲁⲧⲉ_1_pre_ϣⲙⲁ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_pre_ⲥⲁⲣⲝ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϣⲙⲁ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲙⲁ",
+          2
+        ],
+        [
+          "ⲉⲙⲁϣⲱ_1_post_ϣⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲧⲉ_1_pre_ϣⲙⲁ",
+          "ⲧⲉϥ_2_pre_ⲥⲁⲣⲝ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_pre_ⲥⲁⲣⲝ",
+          "ⲥⲁⲣⲝ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_1_pre_ϣⲙⲁ",
+          "ϣⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲙⲁ",
+          "ϥ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲙⲁ",
+          "ϣⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ϣⲙⲁ_0_node",
+          "ⲉⲙⲁϣⲱ_1_post_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϣⲁⲧⲉ_1_pre_ϣⲙⲁ",
+          "ϥ_1_pre_ϣⲙⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϣⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ϣⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ϣⲙⲁ",
+          "ϥ_1_pre_ϣⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲙⲁ",
+          "ϣⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ϣⲙⲁ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ϣⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14484,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.28,
+      "rank": 1321,
+      "count": 24
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5889",
+      "label": "ϣⲙⲁ",
+      "pos": "N",
+      "gloss": "fineness, subtlety"
+    },
+    {
+      "target": "C5890",
+      "label": "ϣⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "light, fine"
+    }
+  ],
+  "etym": {
+    "egy_num": "154710",
+    "egy_lemma": "šmꜥ",
+    "demo_num": "d6025",
+    "demo_lemma": "šmꜥ",
+    "english": "to be slender",
+    "german": "schmal sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/154710",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6025"
+  }
+}

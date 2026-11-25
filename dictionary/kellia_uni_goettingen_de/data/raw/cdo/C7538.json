@@ -1,0 +1,56 @@
+{
+  "id": "C7538",
+  "forms": [
+    {
+      "id": "CF17135",
+      "orth": "ϭⲁϫⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8356",
+      "bibliography": "CD 800b; KoptHWb 444"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7534",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted person"
+    },
+    {
+      "target": "C7535",
+      "label": "ϫⲁϭⲉ",
+      "pos": "N",
+      "gloss": "lame, frail, stunted"
+    },
+    {
+      "target": "C7537",
+      "label": "ϭⲁϫⲏ",
+      "pos": "N",
+      "gloss": "left hand"
+    },
+    {
+      "target": "C7536",
+      "label": "ⲟⲓ ⲛϫⲁϭⲉ",
+      "pos": "VSTAT",
+      "gloss": "be lame"
+    },
+    {
+      "target": "C7539",
+      "label": "ⲣϭⲁϫⲏ",
+      "pos": "V",
+      "gloss": "be small, weak(?)"
+    }
+  ]
+}

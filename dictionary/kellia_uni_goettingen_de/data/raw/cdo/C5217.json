@@ -1,0 +1,131 @@
+{
+  "id": "C5217",
+  "forms": [
+    {
+      "id": "CF12401",
+      "orth": "ⲟⲩⲱⲧⲃ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13964,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5860",
+      "bibliography": "CD 497a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲁⲕⲱⲃ ⲇⲉ ⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲛⲟⲩⲥⲧⲩⲗⲏ ϩⲙⲡⲙⲁ ⲛⲧⲁϥϣⲁϫⲉ ⲛⲙⲙⲁϥ ⲛϩⲏⲧϥ ⲟⲩⲥⲧⲩⲗⲏ ⲛⲱⲛⲉ **ⲁϥⲟⲩⲱⲧⲃ **ⲉϩⲣⲁⲓ**** ⲉϫⲱⲥ ⲛⲟⲩⲱⲧⲛ ⲁϥⲡⲱϩⲧ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲟⲩⲛⲉϩ",
+      "english": "And Jacob set up a pillar in the place where God spoke with him, a pillar of stone; and offered a libation upon it, and poured oil upon it.",
+      "source": "Genesis 35",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13561,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5216",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉϧⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "mixture, blend (of wine)"
+    },
+    {
+      "target": "C5211",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "migration, death"
+    },
+    {
+      "target": "C5206",
+      "label": "ϭⲓⲛⲟⲩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "migration, changeableness"
+    },
+    {
+      "target": "C5205",
+      "label": "ⲁⲧⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "immutable"
+    },
+    {
+      "target": "C5203",
+      "label": "ⲟⲩⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "change/be changed, remove, pass through, transfer"
+    },
+    {
+      "target": "C5208",
+      "label": "ⲟⲩⲱⲧⲃ ϩⲛ-",
+      "pos": "V",
+      "gloss": "change from"
+    },
+    {
+      "target": "C5207",
+      "label": "ⲟⲩⲱⲧⲃ ⲉ-",
+      "pos": "V",
+      "gloss": "change to, change into, surpass"
+    },
+    {
+      "target": "C5214",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "pass within"
+    },
+    {
+      "target": "C5215",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ ⲉ-",
+      "pos": "V",
+      "gloss": "pass into, intrude into"
+    },
+    {
+      "target": "C5209",
+      "label": "ⲟⲩⲱⲧⲃ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cross over, change/be changed, remove, pass through"
+    },
+    {
+      "target": "C5204",
+      "label": "ⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "passing over, death"
+    },
+    {
+      "target": "C5210",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "overrun, crossing, death"
+    },
+    {
+      "target": "C5213",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "pass upward"
+    },
+    {
+      "target": "C5212",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲥⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "step over"
+    }
+  ]
+}

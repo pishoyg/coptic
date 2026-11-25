@@ -1,0 +1,62 @@
+{
+  "id": "C3003",
+  "forms": [
+    {
+      "id": "CF7872",
+      "orth": "ⲡⲁϩⲧⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3438",
+      "bibliography": "CD 283b; KoptHWb 158; ChLCS 40a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3000",
+      "label": "ⲁⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "not pouring (blood)"
+    },
+    {
+      "target": "C3001",
+      "label": "ⲙⲛⲧⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "pouring out, shedding (blood)"
+    },
+    {
+      "target": "C2997",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "V",
+      "gloss": "bend, bow down, fall; pour, flow"
+    },
+    {
+      "target": "C2999",
+      "label": "ⲡⲱϩⲧ",
+      "pos": "N",
+      "gloss": "effusion"
+    },
+    {
+      "target": "C2998",
+      "label": "ⲡⲱϩⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "pour (forth), shed"
+    },
+    {
+      "target": "C3002",
+      "label": "ⲣⲉϥⲡⲱϩⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "one who sheds (blood)"
+    }
+  ]
+}

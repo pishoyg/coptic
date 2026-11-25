@@ -1,0 +1,124 @@
+{
+  "id": "C6762",
+  "forms": [
+    {
+      "id": "CF15571",
+      "orth": "ϩⲱⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8363,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7476",
+      "bibliography": "CD 697b; ChLCS 93b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲃⲉⲥⲥⲁⲗⲱⲙ ⲡⲉⲥⲥⲟⲛ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲙⲏ ⲁⲙⲛⲱⲛ ⲡⲟⲩⲥⲟⲛ ⲡⲉ ⲛⲧⲁϥϣⲱⲡⲉ ⲛⲙⲙⲉ ⲧⲉⲛⲟⲩ ⲇⲉ ⲕⲁⲣⲱ ⲧⲁⲥⲱⲛⲉ ⲡⲟⲩⲥⲟⲛ ⲡⲉ ⲙⲡⲣⲕⲁⲡⲉⲓϣⲁϫⲉ ϩⲙⲡⲟⲩϩⲏⲧ ⲉⲕⲟⲧⲉ ⲉϫⲟⲟϥ ⲁⲩⲱ ⲑⲁⲙⲁⲣ ⲁⲥϩⲙⲟⲟⲥ ⲉⲥⲟ ⲛⲭⲏⲣⲁ ⲉⲥⲟ ⲛ**ϩⲱⲣⲁ** ϩⲙⲡⲏⲓ ⲛⲁⲃⲏⲥⲁⲗⲱⲙ ⲡⲉⲥⲥⲟⲛ",
+      "english": "And Abessalom her brother said to her, Has thy brother Amnon been with thee? now then, my sister, be silent, for he is thy brother: be not careful to mention this matter. So Themar dwelt as a widow in the house of her brother Abessalom.",
+      "source": "II Samuel 13",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϣⲏⲣⲉ ⲛⲓⲉⲥⲁⲭⲁⲣ ⲕⲁⲧⲁⲛⲉⲩⲇⲏⲙⲟⲥ ⲡⲇⲏⲙⲟⲥ ⲛⲧ**ϩⲱⲣⲁ** ⲡⲉ ⲑⲱⲣⲁⲉⲓ ⲡⲇⲏⲙⲟⲥ ⲙⲫⲟⲩⲁ ⲡⲉ ⲫⲟⲩⲁⲉⲓ",
+      "english": "And the sons of Issachar according to their families: to Thola, the family of the Tholaites; to Phua, the family of the Phuaites.",
+      "source": "Numbers 26",
+      "urn": "urn:cts:copticLit:ot.num.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲱⲣⲁⲉⲓ",
+        1,
+        19.598
+      ],
+      [
+        "ⲇⲏⲙⲟⲥ",
+        2,
+        15.013
+      ],
+      [
+        "ⲛⲁⲃⲏⲥⲁⲗⲱⲙ",
+        1,
+        14.843
+      ],
+      [
+        "ⲟ",
+        1,
+        8.805
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.735
+      ],
+      [
+        "ⲡ",
+        3,
+        8.252
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲱⲣⲁ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7919,
+      "count": 2
+    }
+  }
+}

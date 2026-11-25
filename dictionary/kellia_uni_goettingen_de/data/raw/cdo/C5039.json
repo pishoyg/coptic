@@ -1,0 +1,74 @@
+{
+  "id": "C5039",
+  "forms": [
+    {
+      "id": "CF12043",
+      "orth": "ⲟⲩⲛⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.26,
+        "rank": 1671,
+        "count": 41
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "EXIST",
+    "subc": "Hilfsverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5670",
+      "bibliography": "CD 481ab; CDC 74b; CED 213; KoptHWb 272; DELC 233b; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲧⲉⲯⲩⲭⲏ ⲇⲉ **ⲟⲩⲛⲧⲁ**ⲩ ⲙⲙⲁⲩ ⲛⲟⲩϩⲙⲟⲧ .",
+      "english": "but they have grace in their soul.",
+      "source": "Apophthegmata Patrum Sahidic 029",
+      "urn": "urn:cts:copticLit:ap.29.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲟⲩⲛⲧⲏ**ⲧⲛ ⲙⲙⲁⲩ ⲙⲡⲁⲣⲏⲃ ⲛⲧⲉϥⲙⲛⲧⲣⲣⲟ ·",
+      "english": "There is for you the pledge of His kingdom",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉϥϫⲱ ⲇⲉ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲡⲉⲧⲉ**ⲩⲛⲧ**ϥⲙⲁⲁϫⲉ ⲙⲙⲁⲩ ⲉⲥⲱⲧⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2532",
+      "type": "cf",
+      "label": "prep. indicating possession, ownership"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5038",
+      "label": "ⲟⲩⲛ-",
+      "pos": "EXIST",
+      "gloss": "be, exist; there is"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1363",
+    "demo_lemma": "wn-mtw",
+    "english": "to have, to belong (to someone) (cf. also wn-nꜣ.w-mtw); [absolute, without specifying ownership]",
+    "german": "haben, (jemandem) gehören (vgl. auch wn-nꜣ.w-mtw); [absolut, ohne Angabe des Besitzes]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1363"
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "id": "C5325",
+  "forms": [
+    {
+      "id": "CF12619",
+      "orth": "ⲟⲩⲁϩⲃⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17628,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲙⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4659,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟϩⲃⲉϥ",
+      "dialect": "S",
+      "id": "1768.2"
+    },
+    {
+      "orth": "ⲟⲩⲁϩⲃⲉϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11907,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁϩϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3496,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5977",
+      "bibliography": "CD 509a; CED 223; KoptHWb 285; DELC 242a; ChLCS 71a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲁⲩ ϫⲉⲁⲩⲣⲃⲗⲗⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲟⲩⲉⲓⲙⲉ ⲉϭⲛϩⲏⲧ ϩⲉⲛⲟⲩϩⲟⲟⲣ ⲧⲏⲣⲟⲩ ⲉⲩⲟⲛϣ ⲛⲉ ⲉⲙⲛϭⲟⲙ ⲙⲙⲟⲟⲩ ⲉ**ⲟⲩⲁϩⲃⲉϥ** ⲉⲩⲡⲱⲱⲣⲉ ⲛⲙⲙⲁⲛⲕⲟⲧⲕ ⲉⲩⲙⲉ ⲛϫⲓⲣⲉⲕⲣⲓⲕⲉ",
+      "english": "See how they are all blinded: they have not known; they are dumb dogs that will not bark; dreaming of rest, loving to slumber.",
+      "source": "Isaiah 56",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲉⲣⲣⲁⲥⲟⲩⲓ",
+        1,
+        15.11
+      ],
+      [
+        "ϣϫⲟⲙ",
+        1,
+        8.748
+      ],
+      [
+        "ϩⲓ",
+        1,
+        6.953
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        6.221
+      ],
+      [
+        "ⲉ",
+        2,
+        5.432
+      ],
+      [
+        "ⲩ",
+        1,
+        3.536
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.169
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲱⲱⲣⲉ",
+        1,
+        17.139
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        11.898
+      ],
+      [
+        "ϭⲟⲙ",
+        1,
+        9.839
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲁϩⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲫⲉⲣⲣⲁⲥⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲫⲉⲣⲣⲁⲥⲟⲩⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϩⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲁϩⲃⲉϥ_0_node",
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          "ⲩ_3_post_ⲫⲉⲣⲣⲁⲥⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲫⲉⲣⲣⲁⲥⲟⲩⲓ",
+          "ⲫⲉⲣⲣⲁⲥⲟⲩⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲫⲉⲣⲣⲁⲥⲟⲩⲓ_2_post_ⲉ",
+          "ϩⲓ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          "ⲡⲓ_2_post_ϩⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲁϩⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲙ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡⲱⲱⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲁϩⲃⲉϥ_0_node",
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲟⲩⲁϩⲃⲉϥ",
+          "ⲩ_3_post_ⲡⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲡⲱⲱⲣⲉ",
+          "ⲡⲱⲱⲣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲱⲱⲣⲉ_2_post_ⲉ",
+          "ⲛⲙ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙ_4_post_ⲙⲁ",
+          "ⲙⲁ_3_post_ⲡⲱⲱⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17240,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2812,
+      "count": 6
+    }
+  },
+  "etym": {
+    "egy_num": "48980",
+    "egy_lemma": "wḥwḥ",
+    "demo_num": "dm2140",
+    "demo_lemma": "wḥwḥ",
+    "english": "to bark (of a dog)",
+    "german": "bellen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48980",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm2140"
+  }
+}

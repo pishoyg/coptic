@@ -1,0 +1,123 @@
+{
+  "id": "C10865",
+  "forms": [
+    {
+      "id": "CF29630",
+      "orth": "ⲫⲓⲗⲟⲥⲟⲫⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF29631",
+      "orth": "ⲫⲓⲗⲟⲥⲟⲫⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10617,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14994",
+      "bibliography": "DDGLC",
+      "cu_ID": "10597"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲉⲩϣⲁⲛⲇⲓⲁⲃⲁⲗⲗⲉ ⲙⲙⲟⲕ ⲛⲧⲟⲕ ϩⲱⲱⲕ ⲛⲅ**ⲫⲓⲗⲟⲥⲟⲫⲓ** ·",
+      "english": "Whensoever men make false accusations against thee thou must continue to lead a well-ordered life.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲧⲁⲛ",
+        1,
+        13.479
+      ],
+      [
+        "ⲥⲁϩⲟⲩ",
+        1,
+        12.81
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        1,
+        12.063
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        10.46
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓ",
+          1
+        ],
+        [
+          "ⲫⲓⲗⲟⲥⲟⲫⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓ",
+          "ⲅ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓ",
+          "ⲫⲓⲗⲟⲥⲟⲫⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10205,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2310",
+    "grl_lemma": "φιλοσοφέω",
+    "grl_meaning": "to love knowledge, teach philosophy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1939b"
+  }
+}

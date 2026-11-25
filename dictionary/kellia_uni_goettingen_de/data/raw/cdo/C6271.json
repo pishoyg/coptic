@@ -1,0 +1,52 @@
+{
+  "id": "C6271",
+  "forms": [
+    {
+      "id": "CF14553",
+      "orth": "ⲥⲕϥⲱⲟⲩ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6959",
+      "bibliography": "CD 623b; KoptHWb 345; DELC 280b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3408",
+      "type": "cf",
+      "label": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be drawn"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6269",
+      "label": "ϥⲱ",
+      "pos": "N",
+      "gloss": "hair"
+    },
+    {
+      "target": "C6272",
+      "label": "ⲟⲩⲉϩϥⲱ",
+      "pos": "V",
+      "gloss": "let hair grow"
+    },
+    {
+      "target": "C6270",
+      "label": "ⲣⲁⲧϥⲱ",
+      "pos": "N",
+      "gloss": "hairy"
+    }
+  ]
+}

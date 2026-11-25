@@ -1,0 +1,69 @@
+{
+  "id": "C5594",
+  "forms": [
+    {
+      "id": "CF13163",
+      "orth": "ϯⲱⲟⲩ ⲛⲃⲁⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6260",
+      "bibliography": "CD 31b, 533a; DELC 251b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C400",
+      "type": "cf",
+      "label": "eye"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5592",
+      "label": "ⲙⲉⲧⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "patience"
+    },
+    {
+      "target": "C5591",
+      "label": "ⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "patient person"
+    },
+    {
+      "target": "C5589",
+      "label": "ⲱⲟⲩ",
+      "pos": "V",
+      "gloss": "be long"
+    },
+    {
+      "target": "C5593",
+      "label": "ⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "length (in ⲱⲟⲩ ⲛⲓⲁⲧ⸗, \"blessing ...\")"
+    },
+    {
+      "target": "C5590",
+      "label": "ⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be forbearing, patient"
+    }
+  ]
+}

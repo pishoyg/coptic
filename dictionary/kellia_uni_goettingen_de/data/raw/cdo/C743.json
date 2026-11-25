@@ -1,0 +1,58 @@
+{
+  "id": "C743",
+  "forms": [
+    {
+      "id": "CF2786",
+      "orth": "ⲉⲧⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2461,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Kausativer Infinitiv ⲧⲣⲉ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS885",
+      "bibliography": "KoptHWb 41, 501; DELC 48"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲡⲱⲱⲛⲉ ⲇⲉ ⲉⲃⲟⲗ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲛⲧⲟϣ ⲛⲧⲩⲣⲟⲥ ⲛⲙⲥⲓⲇⲱⲛ ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡϥⲟⲩⲱϣ **ⲉⲧⲣⲉ**ⲗⲁⲁⲩ ⲉⲓⲙⲉ . ⲁⲩⲱ ⲙⲡⲉϥⲉϣϩⲱⲡ",
+      "english": "From there he arose, and went away into the borders of Tyre and Sidon. He entered into a house, and didn&apos;t want anyone to know it, but he couldn&apos;t escape notice.",
+      "source": "41_Mark_7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ **ⲉⲧⲣⲉ**ⲛⲓⲙ ⲧϣⲉⲉⲣⲉ ⲛⲛⲓⲙ ⲣϩⲙⲉ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲉ ⲛⲟⲩϣⲏ ⲉⲥⲁϣⲉ ⲉⲃⲟⲗ ⲛⲥⲱⲓ ⲛⲧϩⲉ ⲛⲟⲩⲟⲩϩⲟⲣⲉ ϩⲁⲟⲩϩⲟⲣ ⲛⲧϩⲉ ⲛⲟⲩϣⲟⲩ ϩⲁⲟⲩⲕⲁⲡⲣⲥ",
+      "english": "I want to make NN, the daughter of NN, spend forty nights and forty days clinging to me like a female dog under a male dog, like a sow under a boar,",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲁϩⲉⲣⲁⲧ ϩⲓϫⲱϥ ⲁⲓⲙⲟⲟⲩⲧϥ ϫⲉⲛⲉⲓⲥⲟⲟⲩⲛ ϫⲉⲛϥⲛⲁⲱⲛϩ ⲁⲛ ⲙⲛⲛⲥⲁ**ⲉⲧⲣⲉ**ϥϩⲉ ⲁⲩⲱ ⲁⲓϥⲓ ⲛⲧⲉϭⲣⲏⲡⲉ ⲉⲧϩⲓϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲱ ⲡⲉⲕⲗⲁⲗ ⲉⲧⲉⲛϩⲟⲩⲛ ⲉⲡⲉϥϭⲃⲟⲓ ⲁⲓⲉⲛⲧⲟⲩ ⲉⲡⲉⲓⲙⲁ ⲉⲣⲁⲧϥ ⲙⲡⲁϫⲟⲉⲓⲥ",
+      "english": "So I stood over him and slew him, because I knew he would not live after he was fallen; and I took the crown that was upon his head, and the bracelet that was upon his arm, and I have brought them hither to my lord.",
+      "source": "II Samuel 1",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4438",
+      "type": "cf",
+      "label": "cause to do"
+    }
+  ]
+}

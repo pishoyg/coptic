@@ -1,0 +1,124 @@
+{
+  "id": "C9645",
+  "forms": [
+    {
+      "id": "CF24689",
+      "orth": "ⲗⲟⲅⲓⲕⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24692",
+      "orth": "ⲗⲟⲅⲓⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10582,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24691",
+      "orth": "ⲗⲟⲅⲓⲕⲏ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24690",
+      "orth": "ⲗⲟⲅⲉⲓⲕⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12352",
+      "bibliography": "DDGLC",
+      "cu_ID": "2814"
+    },
+    {
+      "id": "CS12353",
+      "bibliography": "DDGLC",
+      "cu_ID": "9575"
+    },
+    {
+      "id": "CS12354",
+      "bibliography": "DDGLC",
+      "cu_ID": "1907"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ϥϥⲓⲣⲟⲟⲩϣ ⲛⲧⲉⲓϩⲏ ⲧⲏⲣⲥ ϩⲁⲟⲩⲉⲥⲟⲟⲩ ⲛⲁⲗⲗⲟⲕⲟⲛ ⲉⲓⲉ ⲉⲛⲙⲡϣⲁ ⲛϥⲓⲣⲟⲟⲩϣ ⲛⲟⲩⲏⲣ ϩⲁⲧⲉⲛⲯⲩⲭⲏ ⲛ**ⲗⲟⲅⲓⲕⲏ** · ⲧⲁⲓ ⲉⲧⲧⲁⲓⲏⲩ ⲛϩⲟⲩⲉ ⲉⲛⲕⲁ ⲛⲓⲙ ·",
+      "english": "Now if he took all this care for the sake of a sheep which is without reason, it is meet that we should take far greater care of our soul which hath reason, and is far more precious than any other thing whatsoever",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲓⲏⲩ",
+        1,
+        13.223
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        11.587
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲟⲅⲓⲕⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10170,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1303",
+    "grl_lemma": "λογικός",
+    "grl_meaning": "oral, intellectual, logical",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1056a"
+  }
+}

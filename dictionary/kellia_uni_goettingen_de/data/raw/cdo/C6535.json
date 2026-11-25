@@ -1,0 +1,382 @@
+{
+  "id": "C6535",
+  "forms": [
+    {
+      "id": "CF15103",
+      "orth": "ϩⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 8.28,
+        "rank": 155,
+        "count": 702
+      }
+    },
+    {
+      "id": "CF15104",
+      "orth": "ⲉϩⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13233,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF15105",
+      "orth": "ϩⲗⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF15106",
+      "orth": "ϩⲓⲗ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF15107",
+      "orth": "ϩⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF15108",
+      "orth": "ϩⲓⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7247",
+      "bibliography": "CD 668a; KoptHWb 363"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟⲕ ⲇⲉ ϯⲛⲟⲩ ⲉⲕⲕⲱϯ ϫⲉⲛⲧⲟⲩϯⲥⲃⲱ ⲛⲁⲕ ϧⲉⲛⲛⲓⲥⲁϫⲓ ⲉⲑⲟⲩⲁⲃ ⲛⲧⲉⲡⲉⲕⲓⲱⲧ ⲛⲧⲁⲫⲙⲏⲓ ϫⲉⲟⲩⲏⲓ ⲙⲙⲟⲛ **ϩⲗⲓ** ⲉϥⲟⲓ ⲛⲁⲧϭⲓⲥⲃⲱ ⲉⲃⲏⲗ ⲉⲡⲓⲟⲩⲁⲓ ⲙⲙⲁⲩⲁⲧϥ ⲫⲛⲟⲩϯ ⲛⲧⲉⲡⲓⲉⲡⲧⲏⲣϥ ⲉⲧⲉϯⲧⲣⲓⲁⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲟⲙⲟⲟⲩⲥⲓⲟⲥ ⲧⲉ",
+      "english": "But you now desire to be taught the truly just words of your holy father. For no one is untaught, except for the one who is the God of all things, that is, the holy and consubstantial Trinity;",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲙⲡⲉⲛⲑⲣⲉ**ϩⲗⲓ** ϣⲟⲩϣⲟⲩ ⲙⲙⲟϥ ϧⲉⲛⲛⲓⲣⲱⲙⲓ ⲉⲛⲭⲁⲓ ⲅⲁⲣ ⲛⲓⲃⲉⲛ ⲛⲟⲩⲧⲉⲛ ⲛⲉ",
+      "english": "Therefore let no one boast in men. For all things are yours,",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϭⲓ ⲛⲟⲩⲙⲏϣ ⲛϧⲓⲥⲓ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓⲙⲏϣ ⲛⲥⲏⲓⲛⲓ ⲟⲩⲟϩ ⲁⲥϭⲉ ⲛⲉⲧⲉⲛⲧⲁⲥ ⲛⲓⲃⲉⲛ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲙⲡⲉⲥϫⲉⲙϩⲏⲟⲩ ⲛ**ϩⲗⲓ** ⲁⲗⲗⲁ ⲙⲁⲗⲗⲟⲛ ⲁⲥⲧϩⲟ ⲛϩⲟⲩⲟ .",
+      "english": "and had suffered many things by many physicians, and had spent all that she had, and was no better, but rather grew worse,",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲗⲓ_0_node",
+          441
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          41
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ϩⲱⲃ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲓ",
+          6
+        ],
+        [
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          15
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ϩⲱⲟⲩ_4_post_ⲉⲧ",
+          5
+        ],
+        [
+          "ⲡⲉⲧϩⲱⲟⲩ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲗⲓ",
+          5
+        ],
+        [
+          "ⲛⲟⲃⲓ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙⲉⲑⲛⲟⲩϫ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ϭⲣⲟⲡ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲗⲓ",
+          3
+        ],
+        [
+          "ϫⲟⲛⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲗⲱⲓϫⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲫⲁⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϩⲙⲟⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          2
+        ],
+        [
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          4
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          4
+        ],
+        [
+          "ⲕⲣⲓⲥⲡⲟⲥ_2_post_ⲉⲃⲏⲗ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          2
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          2
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲉⲃⲏⲗ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲛ_1_post_ϩⲗⲓ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϩⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲓ",
+          "ϩⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲙ_1_post_ϩⲗⲓ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲱⲟⲩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲡⲉⲧϩⲱⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲁⲛ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲛⲟⲃⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲙⲉⲑⲛⲟⲩϫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϭⲣⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲗⲓ",
+          "ϩⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϫⲟⲛⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲗⲱⲓϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϩⲙⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          2
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          "ⲕⲣⲓⲥⲡⲟⲥ_2_post_ⲉⲃⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲉⲃⲏⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 8.28,
+      "rank": 135,
+      "count": 703
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6534",
+      "label": "ϩⲗⲓ",
+      "pos": "N",
+      "gloss": "anyone, anything, something; no-one, nothing"
+    }
+  ],
+  "etym": {
+    "egy_num": "107760",
+    "egy_lemma": "ḥr.w",
+    "demo_num": "d4156",
+    "demo_lemma": "ḥr",
+    "english": "people",
+    "german": "Menschen (\"Gesichter\")",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/107760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4156"
+  }
+}

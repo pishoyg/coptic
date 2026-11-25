@@ -1,0 +1,158 @@
+{
+  "id": "C6904",
+  "forms": [
+    {
+      "id": "CF15857",
+      "orth": "ⲙⲛⲧⲁⲧϩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8854,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7624",
+      "bibliography": "CD 721a; ChLCS 96b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲛⲟⲩⲟⲩⲕⲟⲩⲓ ϩⲛⲧϩⲟⲧⲉ ⲙⲡϫⲟⲉⲓⲥ ⲉϩⲟⲩⲉⲟⲩⲛⲟϭ ⲛⲁϩⲟ ϩⲛⲟⲩ**ⲙⲛⲧⲁⲧϩⲟⲧⲉ**",
+      "english": "Better is a small portion with the fear of the Lord, than great treasures without the fear of the Lord.",
+      "source": "Proverbs 15",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣϫⲉ ⲛⲉⲧⲟⲩⲱϣ ⲉϫⲱⲕ ⲉⲃⲟⲗ ⲛⲛⲉⲩⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ϣⲁⲩⲣⲛⲟⲃⲉ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ϩⲛⲟⲩ**ⲙⲛⲧⲁⲧϩⲟⲧⲉ** ⲛⲧϩⲉ ⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲁⲩⲕⲱ ⲛⲥⲱⲟⲩ ⲛⲧⲉⲩⲁⲣⲭⲏ ⲉⲁⲩⲡⲟⲣⲛⲉⲩⲉ ⲙⲛⲛϣⲉⲉⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲛⲁⲣⲭⲁⲓⲟⲥ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲛⲕⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲉⲛⲧⲁⲩⲣⲛⲟⲃⲉ ϫⲓⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ϣⲁϩⲣⲁⲓ ⲉⲧⲉⲛⲟⲩ",
+      "english": "...",
+      "source": "Uncertain Canons XR 461-476",
+      "urn": "urn:cts:copticLit:shenoute.uncertain_xr.amelineau:1401-1410",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲛⲧⲙⲁⲓϣⲙⲙⲟ",
+        1,
+        16.791
+      ],
+      [
+        "ⲁϩⲟ",
+        1,
+        13.028
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        9.976
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲁⲧϩⲟⲧⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8407,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6907",
+      "label": "ϩⲓϩⲟϯ",
+      "pos": "V",
+      "gloss": "strike fear, frighten"
+    },
+    {
+      "target": "C6902",
+      "label": "ϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "fear"
+    },
+    {
+      "target": "C6908",
+      "label": "ϫⲓϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "strike fear, frighten"
+    },
+    {
+      "target": "C6906",
+      "label": "ϯϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "give fear, terrify"
+    },
+    {
+      "target": "C6903",
+      "label": "ⲁⲧϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "without fear, disrespectful"
+    },
+    {
+      "target": "C6905",
+      "label": "ⲣϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "be afraid"
+    }
+  ]
+}

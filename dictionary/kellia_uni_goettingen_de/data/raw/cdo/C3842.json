@@ -1,0 +1,102 @@
+{
+  "id": "C3842",
+  "forms": [
+    {
+      "id": "CF9610",
+      "orth": "ⲥⲧⲟⲩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13694,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4358",
+      "bibliography": "CD 366b; KoptHWb 202"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲕⲉⲧⲁⲙⲓⲟ ⲛⲧⲕⲓⲃⲟⲩⲧⲟⲥ ⲉ**ⲥⲧⲟⲩⲏⲧ** ⲉϩⲟⲩⲛ ⲉⲕⲉϫⲱⲕⲥ ⲛⲟⲩⲙⲁϩⲉ ⲥⲁ ⲧⲡⲉ ⲡⲣⲟ ⲇⲉ ⲉⲕⲉⲧⲁⲙⲓⲟϥ ⲥⲁ ⲥⲡⲓⲣ ⲛⲧⲕⲓⲃⲟⲩⲧⲟⲥ ϩⲙⲡⲉⲥⲛⲧⲉ ⲙⲛϣⲟⲙⲧⲉ ⲉⲕⲉⲧⲁⲙⲓⲟⲥ ⲟⲩⲉⲛⲧ ⲟⲩⲉⲛⲧ",
+      "english": "Thou shalt narrow the ark in making it, and in a cubit above thou shalt finish it, and the door of the ark thou shalt make on the side; with lower, second, and third stories thou shalt make it.",
+      "source": "Genesis 6",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲕⲓⲃⲟⲩⲧⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲕⲉ",
+        2,
+        14.294
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        11.453
+      ],
+      [
+        "ϫⲱⲕ",
+        1,
+        10.929
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲧⲟⲩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲥⲧⲟⲩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲧⲟⲩⲏⲧ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲥⲧⲟⲩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13291,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C7079",
+  "forms": [
+    {
+      "id": "CF16215",
+      "orth": "ϫⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3434,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7811",
+      "bibliography": "CD 753a; KoptHWb 412; ChLCS 100a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲁⲓ ⲇⲉ ⲁⲕⲧⲁⲙⲉⲛⲉⲛϫⲁϫⲉ ϫⲉⲛⲧⲟⲕ ⲡⲉ **ⲉϣⲁⲕⲧⲟⲩϫⲟ **ⲉⲃⲟⲗ**** ϩⲙⲡⲉⲧϩⲟⲟⲩ ⲛⲓⲙ",
+      "english": "And in this thou madest thine enemies confess, that it is thou who deliverest from all evil:",
+      "source": "Wisdom 16",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲛϫⲟ **ⲉⲃⲟⲗ**** ⲛⲛⲟⲉⲓⲕ ⲛⲙⲙⲟⲛⲁⲭⲟⲥ ⲙⲛⲡⲉⲩⲙⲧⲟⲛ ⲧⲏⲣϥ ·",
+      "english": "We sent bread to the monks with every relief.",
+      "source": "Apophthegmata Patrum Sahidic 020: Failings",
+      "urn": "urn:cts:copticLit:ap.20.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϣⲉⲡϩⲁϩ ⲛϩⲓⲥⲉ ⲛⲧⲟⲟⲧⲟⲩ ⲛϩⲁϩ ⲛⲥⲁⲉⲓⲛ ⲁⲩⲱ **ⲁⲥϫⲟ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲧⲉⲩⲛⲧⲁⲥⲥⲉ ⲧⲏⲣⲟⲩ ⲉⲙⲡⲥⲙⲧⲟⲛ ⲗⲁⲁⲩ . ⲁⲗⲗⲁ ⲛⲧⲁⲥⲉⲓ ⲛⲧϩⲟ .",
+      "english": "and had suffered many things by many physicians, and had spent all that she had, and was no better, but rather grew worse,",
+      "source": "Mark Chapter 5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3065,
+      "count": 10
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7078",
+      "label": "ϫⲟ",
+      "pos": "V",
+      "gloss": "put, send forth, spend"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C10978",
+  "forms": [
+    {
+      "id": "CF30050",
+      "orth": "ⲭⲟⲣⲩⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30051",
+      "orth": "ⲭⲟⲣⲩⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30052",
+      "orth": "ⲭⲱⲣⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.51,
+        "rank": 1111,
+        "count": 81
+      }
+    },
+    {
+      "id": "CF30053",
+      "orth": "ⲭⲱⲣⲩⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15215",
+      "bibliography": "DDGLC",
+      "cu_ID": "2144"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2415",
+    "grl_lemma": "χώρημα",
+    "grl_meaning": "space, room",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2015b; Preisigke 2:767"
+  }
+}

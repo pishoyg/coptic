@@ -1,0 +1,63 @@
+{
+  "id": "C7854",
+  "forms": [
+    {
+      "id": "CF17773",
+      "orth": "ϭⲣⲉ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ϭⲣⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2580,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8729",
+      "bibliography": "CD 828a; KoptHWb 464"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲟⲉⲓⲥ ϫⲉⲡⲓⲥⲟⲃⲧ ⲛⲧⲉⲃⲁⲃⲩⲗⲱⲛ ⲁϥⲟⲩⲱϣⲥ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩ**ϭⲣⲏ** ⲉⲩϭⲣⲏ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲛⲉⲥⲡⲩⲗⲏ ⲉⲧϭⲟⲥⲓ ⲉⲩⲉϩⲓⲥⲁϯ ⲉⲣⲱⲟⲩ ⲟⲩⲟϩ ⲛⲛⲟⲩϧⲓⲥⲓ ⲛϫⲉϩⲁⲛⲗⲁⲟⲥ ϧⲉⲛⲟⲩϣⲟⲩⲓⲧ ⲟⲩⲟϩ ϩⲁⲛⲉⲑⲛⲟⲥ ⲓⲥϫⲉⲛ ϩⲏ ⲉⲩⲉⲙⲟⲩⲛⲕ .",
+      "english": "Thus saith the Lord, The wall of Babylon was made broad, but it shall be completely broken down, and her high gates shall be burnt with fire; and the peoples shall not labour in vain, nor the nations fail in their rule.",
+      "source": "24_Ieremias_28",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:28",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲡⲁϭⲟⲓⲥ ⲭⲁⲥ ⲛⲧⲁⲓⲕⲉⲣⲟⲙⲡⲓ ϣⲁϯ**ϭⲣⲏ** ϧⲁⲣⲁⲧⲥ ⲟⲩⲟϩ ⲛⲧⲁϯⲙⲁϩⲣⲟ ⲛⲁⲥ",
+      "english": "He answered, 'Lord, leave it alone this year also, until I dig around it, and fertilize it.",
+      "source": "03_Luke_13",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲛⲉ ⲟⲩⲟⲛ ⲉⲛ ϥⲛⲁⲙⲓⲥⲓ ⲁⲛ ⲟⲩⲇⲉ ⲁ**ϭⲣⲏ**ⲛ ϣⲱⲡⲓ ϧⲉⲛⲡⲉⲕⲕⲁϩⲓ ⲧⲏⲡⲓ ⲛⲧⲉⲛⲉⲕⲉϩⲟⲟⲩ ϯⲛⲁⲙⲁϩⲥ ⲉⲃⲟⲗ",
+      "english": "There shall not be on thy land one that is impotent or barren. I will surely fulfil the number of thy days.",
+      "source": "02_Exodus_23",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3492,
+      "count": 4
+    }
+  },
+  "type": "hom"
+}

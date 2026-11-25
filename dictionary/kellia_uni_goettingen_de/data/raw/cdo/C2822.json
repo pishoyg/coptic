@@ -1,0 +1,105 @@
+{
+  "id": "C2822",
+  "forms": [
+    {
+      "id": "CF7491",
+      "orth": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3227",
+      "bibliography": "CD 262ab"
+    },
+    {
+      "id": "CS3228",
+      "bibliography": "CD 262b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉⲡⲉⲕϩⲏⲧ **ⲡⲱⲗϭ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲕⲥⲱⲙⲁ ⲁϥⲧⲁⲙⲓⲉϩⲉⲛⲛⲟϭ ⲅⲁⲣ ⲛⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ",
+      "english": "The Mighty One shall thunder wonderfully with his voice: for he has done great things which we knew not;",
+      "source": "Job 37",
+      "urn": "urn:cts:copticLit:ot.job.coptot:37",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲁⲩⲡⲱⲗϭ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲩⲉⲣⲏⲩ ϫⲉⲛⲥⲉⲙⲏⲣ ⲁⲛ ⲕⲉⲟⲩⲁ ⲁϥϩⲉ ϩⲁⲣⲓϩⲁⲣⲟϥ ϩⲟⲓⲛⲉ ⲁⲩϩⲉ ⲉϫⲛⲛⲉⲩⲉⲣⲏⲩ ⲁⲩⲣⲡⲓⲟⲩⲱϭⲡ ⲛⲟⲩⲱⲧ",
+      "english": "...",
+      "source": "This Great House MONB.XU 418-423 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:450-460",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2826",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2825",
+      "label": "ⲡⲟⲗϭⲥ",
+      "pos": "N",
+      "gloss": "clod, lump (of earth)"
+    },
+    {
+      "target": "C2820",
+      "label": "ⲡⲱⲗϭ",
+      "pos": "V",
+      "gloss": "agree with sb, decide, reach satisfaction; deliver, decide, settle (an affair)"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2829",
+      "label": "ⲣⲡⲉⲗϭⲉ",
+      "pos": "V",
+      "gloss": "become, be ragged, old"
+    },
+    {
+      "target": "C2823",
+      "label": "ⲫⲱⲗϫ",
+      "pos": "N",
+      "gloss": "ease, liberty"
+    }
+  ]
+}

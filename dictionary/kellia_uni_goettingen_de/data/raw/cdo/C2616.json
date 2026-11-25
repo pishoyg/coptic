@@ -1,0 +1,119 @@
+{
+  "id": "C2616",
+  "forms": [
+    {
+      "id": "CF7033",
+      "orth": "ⲛⲁϣⲧϩⲣⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7592,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3000",
+      "bibliography": "CD 237b; CED 115; KoptHWb 132; DELC 148; ChLCS 34a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛ**ⲛⲁϣⲧϩⲣⲁ**ϥ · ⲁⲩⲱ ⲛⲁⲧϣⲓⲡⲉ ϩⲙⲡⲉϥϩⲟ · ⲛⲁⲓ ⲉⲧⲛⲁϣⲓⲡⲉ ⲁⲛ ϩⲏⲧϥ ⲛⲟⲩϩⲗⲗⲟ · ⲙⲛⲟⲩϣⲓⲣⲉ ·",
+      "english": "(It is) a nation fierce of visage and cruel, and shameless in respect of its face; it shall neither spare, nor have compassion on old man or youth;",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϩⲉⲑⲛⲟⲥ ⲉϥⲟ ⲛ**ⲛⲁϣⲧϩⲣⲁ**ϥ ⲉⲛϥⲛⲁϣⲓⲡⲉ ⲁⲛ ϩⲏⲧϥ ⲛⲟⲩϩⲗⲗⲟ ⲁⲩⲱ ⲉⲛϥⲛⲁⲛⲁ ⲁⲛ ⲛⲟⲩϣⲏⲣⲉ ϣⲏⲙ",
+      "english": "a nation bold in countenance, which shall not respect the person of the aged and shall not pity the young.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6398",
+      "type": "cf",
+      "label": "face"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2615",
+      "label": "ϩⲛⲟⲩⲛϣⲟⲧ",
+      "pos": "ADV",
+      "gloss": "roughly, hardly"
+    },
+    {
+      "target": "C2618",
+      "label": "ϯⲛϣⲟⲧ",
+      "pos": "V",
+      "gloss": "make hard, encourage"
+    },
+    {
+      "target": "C2613",
+      "label": "ⲛϣⲟⲧ",
+      "pos": "V",
+      "gloss": "be hard, strong, difficult"
+    },
+    {
+      "target": "C2614",
+      "label": "ⲛϣⲟⲧ",
+      "pos": "N",
+      "gloss": "hardness, boldness"
+    },
+    {
+      "target": "C2617",
+      "label": "ⲛⲁϣⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "strong, hart of heart"
+    },
+    {
+      "target": "C2619",
+      "label": "ⲛⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "strength; strengthener, protector"
+    },
+    {
+      "target": "C2620",
+      "label": "ⲛⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "strength; strengthener, protector"
+    },
+    {
+      "target": "C2622",
+      "label": "ⲛⲉϣⲧⲉ",
+      "pos": "N",
+      "gloss": "hard, rough person"
+    },
+    {
+      "target": "C2611",
+      "label": "ⲛⲟⲩϣⲧ",
+      "pos": "V",
+      "gloss": "become heavy, hard; make hard, oppress, do violence"
+    },
+    {
+      "target": "C2612",
+      "label": "ⲛⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "strength, violence"
+    },
+    {
+      "target": "C2621",
+      "label": "ⲣⲛⲁϣⲧⲉ",
+      "pos": "V",
+      "gloss": "be protector"
+    }
+  ]
+}

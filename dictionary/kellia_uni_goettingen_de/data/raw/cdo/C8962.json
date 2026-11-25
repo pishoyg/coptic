@@ -1,0 +1,124 @@
+{
+  "id": "C8962",
+  "forms": [
+    {
+      "id": "CF21964",
+      "orth": "ⲉⲝⲉⲇⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21967",
+      "orth": "ⲉⲝⲉⲇⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7205,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21965",
+      "orth": "ⲉⲅⲅⲣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21966",
+      "orth": "ⲉⲝⲇⲣⲁⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21968",
+      "orth": "ⲉⲝⲣⲁⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10927",
+      "bibliography": "DDGLC",
+      "cu_ID": "4024"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲅⲉⲛⲛⲁⲓⲟⲥ ⲇⲉ ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ · ⲁϥⲕⲱ ⲛⲁϥ ⲛⲟⲩ**ⲉⲝⲉⲇⲣⲁ** ⲛϩⲟⲩⲛ ⲙⲡⲉϥⲏⲓ : — ⲉϥⲁⲛⲁⲭⲱⲣⲉⲓ ⲛϩⲏⲧⲥ ⲁϫⲛⲛⲉϥⲉⲓⲟⲧⲉ ·",
+      "english": "And the noble Victor made for himself a small chamber in his house, I and there he would retire to be free from the company of his parents.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛϩⲟⲩⲛ",
+        2,
+        15.998
+      ],
+      [
+        "ⲏⲓ",
+        2,
+        11.735
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        10.096
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲝⲉⲇⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6753,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "711",
+    "grl_lemma": "ἐξέδρα",
+    "grl_meaning": "veranda",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 589a; Preisigke 1:511"
+  }
+}

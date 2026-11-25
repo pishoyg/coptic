@@ -1,0 +1,40 @@
+{
+  "id": "C4223",
+  "forms": [
+    {
+      "id": "CF10394",
+      "orth": "ⲧⲱⲕⲙ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4789",
+      "bibliography": "CD 406b; CED 184; KoptHWb 228; ChLCS 57b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4222",
+      "label": "ⲧⲱⲕⲙ",
+      "pos": "V",
+      "gloss": "pluck, draw, drag"
+    }
+  ]
+}

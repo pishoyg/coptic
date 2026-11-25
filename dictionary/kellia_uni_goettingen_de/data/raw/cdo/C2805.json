@@ -1,0 +1,55 @@
+{
+  "id": "C2805",
+  "forms": [
+    {
+      "id": "CF7456",
+      "orth": "ⲡⲁⲓϣⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲡⲁϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.73,
+        "rank": 890,
+        "count": 115
+      }
+    },
+    {
+      "orth": "ⲡⲉϣⲉ",
+      "dialect": "S",
+      "id": "1300.2"
+    },
+    {
+      "orth": "ⲡⲓϣⲉ",
+      "dialect": "S",
+      "id": "1300.3"
+    },
+    {
+      "orth": "ⲫⲁⲓϣⲓ",
+      "dialect": "B",
+      "id": "1300.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3207",
+      "bibliography": "CD 278b; CED 129; KoptHWb 145, 530; DELC 159; ChLCS 36b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "62590",
+    "egy_lemma": "pšj",
+    "english": "[a skin disease]",
+    "german": "Pustel (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62590"
+  }
+}

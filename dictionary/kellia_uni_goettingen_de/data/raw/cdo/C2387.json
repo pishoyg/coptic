@@ -1,0 +1,304 @@
+{
+  "id": "C2387",
+  "forms": [
+    {
+      "id": "CF6534",
+      "orth": "ⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 63.26,
+        "rank": 24,
+        "count": 9981
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PDEM",
+    "subc": "Kopula",
+    "number": "pl.",
+    "tlapos": "Dem. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS2753",
+      "bibliography": "CD 260b; CED 105; KoptHWb 118; DELC 137; ChLCS 31b; LCG § 53"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ **ⲛⲉ** ⲛⲧⲁⲩⲥⲙⲛⲛⲟⲙⲟⲥ ⲛⲁⲛ ⲉⲣⲟⲟⲩ .",
+      "english": "These are the ones against which a law has been established for us.",
+      "source": "Apophthegmata Patrum Sahidic 040: Syncletica 8 (10)",
+      "urn": "urn:cts:copticLit:ap.40.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁϩ ⲅⲁⲣ **ⲛⲉ** ⲙⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲛⲁⲧⲉⲓⲙⲓⲛⲉ ⲙⲁⲗⲓⲥⲧⲁ ⲉⲩϣⲟⲟⲡ ϩⲛⲧⲙⲏⲧⲉ ⲛⲛⲣⲱⲙⲉ .",
+      "english": "For there are many trials, mostly of this kind, that happen in the midst of men",
+      "source": "Apophthegmata Patrum Sahidic 124: Orsisius 1",
+      "urn": "urn:cts:copticLit:ap.124.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ⲛⲉ**ⲉⲓϯϣⲓⲡⲉ ⲛⲏⲧⲛ ⲁⲛ ⲉⲓⲥϩⲁⲓ ⲛⲏⲧⲛ ⲛⲛⲁⲓ . ⲁⲗⲗⲁ ⲉⲓϯⲥⲃⲱ ⲛⲏⲧⲛ ϩⲱⲥ ϣⲏⲣⲉ ⲙⲙⲉⲣⲓⲧ .",
+      "english": "I don&apos;t write these things to shame you, but to admonish you as my beloved children.",
+      "source": "46_1 Corinthians_4",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲟⲩ",
+        549,
+        38.759
+      ],
+      [
+        "ⲛⲁⲓ",
+        696,
+        36.753
+      ],
+      [
+        "ⲟⲩ",
+        1170,
+        35.331
+      ],
+      [
+        "ⲛⲏⲉⲧⲉ",
+        221,
+        35.152
+      ],
+      [
+        "ⲙ",
+        855,
+        34.802
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        389,
+        34.611
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        812,
+        34.076
+      ],
+      [
+        "ⲡⲉ",
+        483,
+        33.986
+      ],
+      [
+        "ⲛ",
+        788,
+        33.457
+      ],
+      [
+        "ⲉ",
+        676,
+        33.22
+      ],
+      [
+        "ⲁ",
+        674,
+        33.179
+      ],
+      [
+        "ϩⲁⲛ",
+        388,
+        33.113
+      ],
+      [
+        ".",
+        565,
+        33.043
+      ],
+      [
+        "ϥ",
+        736,
+        32.995
+      ],
+      [
+        "ⲙⲙⲱ",
+        247,
+        32.651
+      ],
+      [
+        "ⲛⲧⲉ",
+        459,
+        32.593
+      ],
+      [
+        "ϫⲱ",
+        266,
+        32.534
+      ],
+      [
+        "ⲩ",
+        393,
+        31.976
+      ],
+      [
+        "ϧⲉⲛ",
+        413,
+        31.833
+      ],
+      [
+        "ϫⲉ",
+        367,
+        31.696
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        250,
+        39.366
+      ],
+      [
+        "ⲛ",
+        10186,
+        38.623
+      ],
+      [
+        "ⲩ",
+        3495,
+        35.994
+      ],
+      [
+        "ϥ",
+        4389,
+        35.691
+      ],
+      [
+        "ⲙ",
+        3007,
+        34.884
+      ],
+      [
+        "ⲡ",
+        3597,
+        34.806
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        759,
+        34.504
+      ],
+      [
+        "ⲁⲩⲱ",
+        2441,
+        34.378
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        754,
+        34.358
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1059,
+        33.532
+      ],
+      [
+        "ⲟⲩ",
+        2234,
+        33.467
+      ],
+      [
+        "ⲉⲧ",
+        1712,
+        33.333
+      ],
+      [
+        "ⲡⲉ",
+        1570,
+        33.228
+      ],
+      [
+        "ⲁ",
+        2178,
+        33.181
+      ],
+      [
+        "ⲙⲛ",
+        1477,
+        33.1
+      ],
+      [
+        "ⲉ",
+        2132,
+        32.862
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        320,
+        32.589
+      ],
+      [
+        "ϩⲛ",
+        1357,
+        32.568
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        318,
+        32.562
+      ],
+      [
+        "ⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ",
+        251,
+        32.501
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉ_0_node",
+          5
+        ],
+        [
+          "ⲅⲣⲁⲫⲏ_1_post_ⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_0_node",
+          "ⲅⲣⲁⲫⲏ_1_post_ⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.22,
+      "rank": 1605,
+      "count": 35
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2788",
+      "type": "cf",
+      "label": "copula sg. m."
+    },
+    {
+      "target": "C4007",
+      "type": "cf",
+      "label": "sg. f. copula"
+    }
+  ],
+  "etym": {
+    "demo_num": "d3009",
+    "demo_lemma": "nꜣ.w",
+    "english": "[copula plural]",
+    "german": "[Kopula Plural]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3009"
+  }
+}

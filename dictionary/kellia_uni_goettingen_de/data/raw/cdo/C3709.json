@@ -1,0 +1,149 @@
+{
+  "id": "C3709",
+  "forms": [
+    {
+      "id": "CF9332",
+      "orth": "ⲣⲉϥⲥⲱⲣⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18464,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4215",
+      "bibliography": "CD 355b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ ⲅⲁⲣ ⲛⲛⲉⲧϩⲟⲟⲩ ϣⲁⲥϣⲓⲃⲉ ⲛⲛⲉⲧⲛⲁⲛⲟⲩⲟⲩ ⲁⲩⲱ ⲧⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲛ**ⲣⲉϥⲥⲱⲣⲙ** ϣⲁⲥ...ⲡ ⲉⲡϩⲏⲧ ⲛⲛⲁ...",
+      "english": "For the bewitching of naughtiness doth obscure things that are honest; and the wandering of concupiscence doth undermine the simple mind.",
+      "source": "Wisdom 4",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲥ...ⲡ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲡⲓⲑⲩⲙⲓⲁ",
+        1,
+        13.912
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        8.947
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲱⲣⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18083,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3708",
+      "label": "ⲁⲧⲥⲱⲣⲉⲙ",
+      "pos": "N",
+      "gloss": "clear, unerring"
+    },
+    {
+      "target": "C3711",
+      "label": "ⲙⲛⲧⲥⲣⲙⲉ",
+      "pos": "N",
+      "gloss": "roving, vagrancy"
+    },
+    {
+      "target": "C3707",
+      "label": "ⲙⲟⲩ ⲛⲥⲱⲣⲉⲙ",
+      "pos": "N",
+      "gloss": "torrent"
+    },
+    {
+      "target": "C3712",
+      "label": "ⲥⲟⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "error, wandering"
+    },
+    {
+      "target": "C3710",
+      "label": "ⲥⲣⲙⲉ",
+      "pos": "N",
+      "gloss": "wanderer, vagrant"
+    },
+    {
+      "target": "C3713",
+      "label": "ⲥⲣⲟⲙ",
+      "pos": "N",
+      "gloss": "unconsciousness (moment of sleep)"
+    },
+    {
+      "target": "C3704",
+      "label": "ⲥⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "go astray, be lost, wander around; lead astray, lose"
+    },
+    {
+      "target": "C3706",
+      "label": "ⲥⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "error"
+    },
+    {
+      "target": "C3705",
+      "label": "ⲥⲱⲣⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wander forth, about, be idle"
+    }
+  ]
+}

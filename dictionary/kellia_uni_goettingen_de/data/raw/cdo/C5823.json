@@ -1,0 +1,44 @@
+{
+  "id": "C5823",
+  "forms": [
+    {
+      "id": "CF13643",
+      "orth": "ⲁⲧϣⲗⲏⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6503",
+      "bibliography": "CD 559b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5821",
+      "label": "ϣⲗⲏⲗ",
+      "pos": "V",
+      "gloss": "pray"
+    },
+    {
+      "target": "C5822",
+      "label": "ϣⲗⲏⲗ",
+      "pos": "N",
+      "gloss": "prayer"
+    },
+    {
+      "target": "C5824",
+      "label": "ϭⲓⲛϣⲗⲏⲗ",
+      "pos": "N",
+      "gloss": "manner of praying"
+    }
+  ]
+}

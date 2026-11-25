@@ -1,0 +1,381 @@
+{
+  "id": "C3867",
+  "forms": [
+    {
+      "id": "CF9663",
+      "orth": "ⲥⲱⲟⲩⲃⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1379,
+        "count": 29
+      }
+    },
+    {
+      "id": "CF9664",
+      "orth": "ⲥⲁⲩⲃⲟⲩ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4386",
+      "bibliography": "CD 369a; CED 167; KoptHWb 203, 541; DELC 200"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲥϫⲉⲟⲩⲟⲛ ⲡⲉⲧⲕⲱⲧ ⲉϫⲉⲛⲧⲁⲓⲥⲉⲛϯ ⲛⲟⲩⲃ ϩⲁⲧ ⲁⲛⲁⲙⲏⲓ ⲣⲱⲕϩ **ⲥⲱⲟⲩⲃⲉⲛ** ⲣⲱⲟⲩⲓ .",
+      "english": "But if anyone builds on the foundation with gold, silver, costly stones, wood, hay, or stubble;",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲡⲓϣⲟⲗ ⲛ**ⲥⲱⲟⲩⲃⲉⲛ** ⲫⲏ ⲉⲧⲧⲁⲗⲏⲟⲩⲧ ⲉⲡⲓⲁⲗⲟⲩ ⲉⲣⲉⲡⲧⲩⲡⲟⲥ ⲛⲟⲩⲥⲧⲁⲩⲣⲟⲥ ⲛⲟⲩⲱⲓⲛⲓ ⲭⲏ ϩⲓϫⲱϥ ⲉϥϩⲓ ⲉⲃⲣⲏϫ ⲛⲟⲩⲱⲓⲛⲓ ⲉⲃⲟⲗ .",
+      "english": "He saw the bundle placed on the young boy having the shape of luminous crosses, throwing flashes of light.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲡⲓⲁⲗⲟⲩ ⲁϥϩⲱⲗ ⲉⲡϣⲱⲓ ⲉϯϣⲉⲩⲛⲓ ⲛⲧⲉⲡⲓⲣⲱⲙⲓ ⲁϥⲱⲗⲓ ⲛⲟⲩϣⲟⲗ ⲛ**ⲥⲱⲟⲩⲃⲉⲛ** ⲁϥⲧⲁⲗⲟϥ ⲉϫⲱϥ ⲁϥⲛⲕⲟⲧ .",
+      "english": "Then the boy climbed into the man's hayloft, took a bundle of hay, placed it on him, and fell asleep.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲣⲏⲣⲓ",
+        5,
+        17.159
+      ],
+      [
+        "ϣⲟⲗ",
+        4,
+        16.445
+      ],
+      [
+        "ⲟⲩⲉⲙ",
+        6,
+        16.1
+      ],
+      [
+        "ⲣⲱⲟⲩⲓ",
+        3,
+        15.505
+      ],
+      [
+        "ⲛⲟⲩϩⲉ",
+        1,
+        14.837
+      ],
+      [
+        "ⲁⲛⲁⲙⲏⲓ",
+        2,
+        14.837
+      ],
+      [
+        "ⲣⲏϯ",
+        13,
+        14.121
+      ],
+      [
+        "ⲧϣⲟⲩⲓⲉ",
+        1,
+        13.837
+      ],
+      [
+        "ⲧⲟϩ",
+        2,
+        13.589
+      ],
+      [
+        "ϣⲱⲟⲩⲓ",
+        3,
+        13.463
+      ],
+      [
+        "ⲧⲁⲗⲏⲟⲩⲧ",
+        2,
+        13.252
+      ],
+      [
+        "ⲣⲱⲕϩ",
+        3,
+        13.252
+      ],
+      [
+        "ϥ",
+        23,
+        13.137
+      ],
+      [
+        "ⲫ",
+        13,
+        12.808
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        18,
+        12.732
+      ],
+      [
+        "ⲛ",
+        20,
+        12.698
+      ],
+      [
+        "ⲟⲩ",
+        18,
+        12.406
+      ],
+      [
+        "ⲁ",
+        16,
+        12.132
+      ],
+      [
+        "ⲙ",
+        13,
+        11.826
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        2,
+        11.056
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          26
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲁⲙⲁⲩⲗⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϫⲉⲛⲉⲫⲱⲣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲫⲏ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲟⲩⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_3_post_ϣⲟⲩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲫⲁϩⲟⲩ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          2
+        ],
+        [
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          "ⲛ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲛⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛ",
+          "ϫⲁⲙⲁⲩⲗⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲉ",
+          "ϫⲉⲛⲉⲫⲱⲣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϫⲉⲛⲉⲫⲱⲣ_3_post_ⲟⲩ",
+          "ⲫⲏ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲫⲏ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲉ_2_post_ⲫⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲟⲩ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          "ⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ϥ_3_post_ϣⲟⲩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲩⲱⲟⲩ",
+          "ϣⲟⲩⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲩⲱⲟⲩ_2_post_ⲉ",
+          "ϩⲓϫⲉⲛ_3_post_ϣⲟⲩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_3_post_ϣⲟⲩⲱⲟⲩ",
+          "ⲟⲩ_4_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲟⲩⲃⲉⲛ_0_node",
+          "ϩⲓ_2_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲫⲁϩⲟⲩ",
+          "ⲫⲁϩⲟⲩ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲫⲁϩⲟⲩ_1_post_ⲥⲱⲟⲩⲃⲉⲛ",
+          "ⲛⲧⲉ_2_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲫⲁϩⲟⲩ",
+          "ⲛ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛⲧⲉ",
+          "ⲉⲧ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.34,
+      "rank": 1204,
+      "count": 29
+    }
+  },
+  "etym": {
+    "egy_num": "136970",
+    "egy_lemma": "snb",
+    "demo_num": "dm5958",
+    "demo_lemma": "swb",
+    "english": "[a plant associated with Lower Egypt (papyrus?)]",
+    "german": "[eine Pflanze]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/136970",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm5958"
+  }
+}

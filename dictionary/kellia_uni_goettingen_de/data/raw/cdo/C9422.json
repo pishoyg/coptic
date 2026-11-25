@@ -1,0 +1,202 @@
+{
+  "id": "C9422",
+  "forms": [
+    {
+      "id": "CF23837",
+      "orth": "ⲕⲏⲣⲩⲅⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23842",
+      "orth": "ⲕⲏⲣⲩⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6008,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF23838",
+      "orth": "ⲅⲉⲣⲓⲅⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23840",
+      "orth": "ⲕⲏⲣⲩⲅⲙⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF23841",
+      "orth": "ⲕⲏⲣⲩⲅⲙⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23839",
+      "orth": "ⲕⲉⲣⲉϭⲙⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23843",
+      "orth": "ⲕⲩⲣⲓⲅⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11244,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23844",
+      "orth": "ⲕⲩⲣⲩⲅⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11911",
+      "bibliography": "DDGLC",
+      "cu_ID": "457"
+    },
+    {
+      "id": "CS11912",
+      "bibliography": "DDGLC",
+      "cu_ID": "2891"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲧⲱⲟⲩⲛ ⲛⲅⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲛⲓⲛⲉⲩⲏ ⲧⲛⲟϭ ⲙⲡⲟⲗⲓⲥ ⲛⲅⲕⲏⲣⲩⲥⲥⲉ ⲛⲁⲥ ⲕⲁⲧⲁⲡ**ⲕⲏⲣⲩⲅⲙⲁ** ⲛϣⲟⲣⲡ ⲡⲁⲓ ⲉⲛⲧⲁⲓϫⲟⲟϥ ⲉⲣⲟⲕ :",
+      "english": "Rise, go to Nineve, the great city, and preach in it according to the former preaching which I spoke to thee of.",
+      "source": "Jonah Chapter 3 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲱⲟⲩⲛ ⲛⲅⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲛⲓⲛⲉⲩⲏ ⲧⲛⲟϭ ⲙⲡⲟⲗⲓⲥ ⲛⲅⲕⲏⲣⲩⲥⲥⲉ ⲛⲁⲥ ⲕⲁⲧⲁⲡ**ⲕⲏⲣⲩⲅⲙⲁ** ⲛϣⲟⲣⲡ ⲡⲁⲓ ⲉⲛⲧⲁⲓϫⲟⲟϥ ⲉⲣⲟⲕ",
+      "english": "Rise, go to Nineve, the great city, and preach in it according to the former preaching which I spoke to thee of.",
+      "source": "Jonah 3",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲣⲡ",
+        3,
+        13.612
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        3,
+        12.48
+      ],
+      [
+        "ⲡⲁⲓ",
+        3,
+        11.747
+      ],
+      [
+        "ⲉⲛⲧ",
+        3,
+        11.363
+      ],
+      [
+        "ⲥ",
+        3,
+        9.444
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        8.858
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲏⲣⲩⲅⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          2
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          2
+        ],
+        [
+          "ⲁ_4_post_ϫⲟⲟ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲏⲣⲩⲅⲙⲁ_0_node",
+          "ⲛ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          "ⲡⲁⲓ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲕⲏⲣⲩⲅⲙⲁ",
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          "ⲁ_4_post_ϫⲟⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5571,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1121",
+    "grl_lemma": "κήρυγμα",
+    "grl_meaning": "proclamation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 949a; Preisigke 1:794"
+  }
+}

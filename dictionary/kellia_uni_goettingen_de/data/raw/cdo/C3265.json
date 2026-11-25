@@ -1,0 +1,173 @@
+{
+  "id": "C3265",
+  "forms": [
+    {
+      "id": "CF8418",
+      "orth": "ⲥⲁⲡⲓⲥⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14586,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3730",
+      "bibliography": "CD 313a; KoptHWb 173"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲅⲅⲉⲗⲟⲥ ⲇⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁϥⲁϩⲉⲣⲁⲧϥ ⲟⲩⲧⲉ ⲛⲉϫⲏ ⲛⲉⲛϭⲟⲟⲙ ⲉⲣⲉⲟⲩϫⲟⲗϫⲗ **ⲥⲁⲡⲓⲥⲁ** ⲙⲙⲟϥ ⲁⲩⲱ ⲟⲩϫⲟⲗϫⲉⲗ ⲛⲥⲁⲡⲁⲓ ⲙⲙⲟϥ",
+      "english": "And the angel of the Lord stood in the avenues of the vines, a fence being on this side and a fence on that.",
+      "source": "Numbers 22",
+      "urn": "urn:cts:copticLit:ot.num.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲟⲟⲙ",
+        1,
+        17.791
+      ],
+      [
+        "ϫⲟⲗϫⲗ",
+        1,
+        17.013
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_2_pre_ϫⲟⲗϫⲗ",
+          1
+        ],
+        [
+          "ϫⲟⲗϫⲗ_1_pre_ⲥⲁⲡⲓⲥⲁ",
+          1
+        ],
+        [
+          "ⲥⲁⲡⲓⲥⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲁⲡⲓⲥⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_2_pre_ϫⲟⲗϫⲗ",
+          "ϫⲟⲗϫⲗ_1_pre_ⲥⲁⲡⲓⲥⲁ",
+          1
+        ],
+        [
+          "ϫⲟⲗϫⲗ_1_pre_ⲥⲁⲡⲓⲥⲁ",
+          "ⲥⲁⲡⲓⲥⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁⲡⲓⲥⲁ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲁⲡⲓⲥⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲁⲡⲓⲥⲁ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14186,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3266",
+      "label": "ⲉⲃⲟⲗ ⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "from the side, from"
+    },
+    {
+      "target": "C3264",
+      "label": "ⲉⲡⲉⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    },
+    {
+      "target": "C3267",
+      "label": "ⲕⲉⲥⲁ",
+      "pos": "ADV",
+      "gloss": "other part, apart, elsewhere"
+    },
+    {
+      "target": "C3269",
+      "label": "ⲙⲛⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "after (of time)"
+    },
+    {
+      "target": "C3270",
+      "label": "ⲙⲛⲛⲥⲱⲥ",
+      "pos": "ADV",
+      "gloss": "afterward"
+    },
+    {
+      "target": "C3268",
+      "label": "ⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "behind, after; against, at, from; except, beyond"
+    },
+    {
+      "target": "C3263",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "side, part"
+    }
+  ]
+}

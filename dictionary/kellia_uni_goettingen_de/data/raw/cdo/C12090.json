@@ -1,0 +1,56 @@
+{
+  "id": "C12090",
+  "forms": [
+    {
+      "id": "CF33097",
+      "orth": "ϩⲙⲛⲓϥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17091",
+      "bibliography": "CD 239b; KoptHWB 133"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2630",
+      "label": "ϫⲓⲛⲛⲓϥⲓ",
+      "pos": "N",
+      "gloss": "blowing (of wind)"
+    },
+    {
+      "target": "C2631",
+      "label": "ⲛⲉϥⲟ",
+      "pos": "N",
+      "gloss": "tempest (\"great wind\")"
+    },
+    {
+      "target": "C2627",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "V",
+      "gloss": "blow, breathe (of wind, breath)"
+    },
+    {
+      "target": "C2628",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "N",
+      "gloss": "breath, mist"
+    },
+    {
+      "target": "C2629",
+      "label": "ⲣⲉϥⲛⲓϥⲓ",
+      "pos": "N",
+      "gloss": "wind player, blow-pipe"
+    }
+  ]
+}

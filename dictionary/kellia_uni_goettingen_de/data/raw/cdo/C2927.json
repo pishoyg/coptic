@@ -1,0 +1,90 @@
+{
+  "id": "C2927",
+  "forms": [
+    {
+      "id": "CF7718",
+      "orth": "ⲡⲱⲧ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3351",
+      "bibliography": "CD 275a; ChLCS 38b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲛⲁⲙⲉⲣⲁⲧⲉ **ⲡⲱⲧ **ⲉⲃⲟⲗ**** ⲛⲧⲙⲛⲧⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ .",
+      "english": "Therefore, my beloved, flee from idolatry.",
+      "source": "1 Corinthians 10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲁⲕϫⲉ **ⲕⲡⲱⲧ **ⲉⲃⲟⲗ****",
+      "english": "Verily thou didst effect thy escape,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲟⲩⲱⲛ ⲛⲛⲣⲟ **ⲁϥⲡⲱⲧ **ⲉⲃⲟⲗ**** ·",
+      "english": "and he opened the door and fled.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2932",
+      "label": "ϭⲓⲛⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "running, course"
+    },
+    {
+      "target": "C2929",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "place of refuge; race-course"
+    },
+    {
+      "target": "C2930",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outgoing, exit"
+    },
+    {
+      "target": "C2925",
+      "label": "ⲡⲱⲧ",
+      "pos": "V",
+      "gloss": "run, flee, go"
+    },
+    {
+      "target": "C2928",
+      "label": "ⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "course, flight"
+    },
+    {
+      "target": "C2926",
+      "label": "ⲡⲱⲧ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "run after, pursue"
+    },
+    {
+      "target": "C2931",
+      "label": "ⲣⲉϥⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "runner"
+    }
+  ]
+}

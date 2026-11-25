@@ -1,0 +1,351 @@
+{
+  "id": "C2067",
+  "forms": [
+    {
+      "id": "CF5829",
+      "orth": "ⲙⲥⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5242,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲙⲥⲟⲟϩ",
+      "dialect": "S",
+      "id": "1111.1"
+    },
+    {
+      "orth": "ⲙⲥⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9739,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲙⲥⲁϩ",
+      "dialect": "B",
+      "id": "1111.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2396",
+      "bibliography": "CD 187b; KoptHWb 103; ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲉⲓ ⲛϭⲓⲛⲉ**ⲙⲥⲁϩ**",
+      "english": "and the crocodiles came",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩϣⲟⲟⲡ ⲇⲉ ⲡⲉ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓϩⲉⲛ**ⲙⲥⲁϩ** ⲉⲛⲁϣⲱⲟⲩ .",
+      "english": "In that place, there were many crocodiles.",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲁⲓ ⲉⲩⲉϣⲱⲡⲉ ⲉⲩϫⲁϩⲙ ⲛⲧⲟⲟⲧⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ϩⲛⲛϫⲁⲧϥⲉ ⲉⲧⲙⲟⲟϣⲉ ϩⲓϫⲙⲡⲕⲁϩ ⲧⲅⲁⲗⲏ ⲙⲛⲡⲡⲓⲛ ⲁⲩⲱ ⲡⲉ**ⲙⲥⲁϩ** ⲡⲉϫⲡⲟ ⲙⲡⲕⲁϩ",
+      "english": "And these are unclean to you of reptiles upon the earth, the weasel, and the mouse, and the lizard,",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲫⲓⲛ",
+        1,
+        17.373
+      ],
+      [
+        "ⲛⲧⲱ",
+        1,
+        12.4
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        10.526
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        9.243
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲡⲓⲛ",
+        1,
+        18.598
+      ],
+      [
+        "ⲥⲁⲧ",
+        1,
+        16.276
+      ],
+      [
+        "ⲗⲱϫϩ",
+        1,
+        13.954
+      ],
+      [
+        "ⲧⲁⲙⲉⲓⲟⲛ",
+        1,
+        12.172
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        11.474
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        10.098
+      ],
+      [
+        "ϫⲡⲟ",
+        1,
+        9.369
+      ],
+      [
+        "ϩⲟ",
+        1,
+        8.831
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        8.819
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.975
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.102
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.973
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.408
+      ],
+      [
+        "ⲙ",
+        2,
+        6.351
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.096
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.074
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        ".",
+        1,
+        4.557
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲙⲥⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲱ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛⲧⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲥⲁϩ",
+          "ⲡⲓ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲙⲥⲁϩ",
+          "ⲙⲥⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲥⲁϩ_0_node",
+          "ⲛⲧⲱ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲱ_1_post_ⲙⲥⲁϩ",
+          "ⲟⲩ_2_post_ⲛⲧⲱ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲥⲁϩ_0_node",
+          4
+        ],
+        [
+          "ⲉ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ϫⲡⲟ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϫⲡⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲥⲁϩ_0_node",
+          "ⲉ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲥⲁϩ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲥⲁϩ",
+          "ⲡⲉ_1_pre_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲙⲥⲁϩ",
+          "ⲙⲥⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲥⲁϩ_0_node",
+          "ⲡⲉ_2_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϫⲡⲟ",
+          "ϫⲡⲟ_1_post_ⲙⲥⲁϩ",
+          1
+        ],
+        [
+          "ϫⲡⲟ_1_post_ⲙⲥⲁϩ",
+          "ⲙ_2_post_ϫⲡⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4822,
+      "count": 4
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 9198,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "75590",
+    "egy_lemma": "mzḥ",
+    "demo_num": "d2689",
+    "demo_lemma": "msḥ",
+    "english": "crocodile",
+    "german": "Krokodil",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/75590",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2689"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "C3012",
+  "forms": [
+    {
+      "id": "CF7890",
+      "orth": "ϩⲁⲡⲁϩⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3447",
+      "bibliography": "CD 285a; ChLCS 40a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3013",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after, before (in time)"
+    },
+    {
+      "target": "C3014",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3007",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "to back, backward"
+    },
+    {
+      "target": "C3008",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, backward"
+    },
+    {
+      "target": "C3015",
+      "label": "ⲉⲣϩⲓⲫⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "be behind, follow after"
+    },
+    {
+      "target": "C3011",
+      "label": "ⲛⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, from behind"
+    },
+    {
+      "target": "C3005",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "buttocks, hinder part, back"
+    },
+    {
+      "target": "C3006",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "hinder, past"
+    },
+    {
+      "target": "C3009",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3010",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    }
+  ]
+}

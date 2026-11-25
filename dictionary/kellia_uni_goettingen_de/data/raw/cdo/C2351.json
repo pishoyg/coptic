@@ -1,0 +1,104 @@
+{
+  "id": "C2351",
+  "forms": [
+    {
+      "id": "CF6444",
+      "orth": "ⲛ- (ⲁⲛ)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 415.36,
+        "rank": 2,
+        "count": 35227
+      }
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2716",
+      "bibliography": "CD 10b; CED 103; KoptHWb 115; DELC 135"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲧⲉⲡⲓⲣⲱⲙⲓ ⲛⲁⲧⲏⲓϥ **ⲛ**ⲧϣⲉⲃⲓⲱ ⲛⲧⲉϥⲯⲩⲭⲏ .",
+      "english": "For what will a man give in exchange for his life?",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉ**ⲛ**ϯⲛⲁⲙⲟⲩⲧⲉ ϭⲉ ⲁⲛ ⲉⲣⲱⲧⲛ ϫⲉⲛⲁϩⲙϩⲁⲗ ϫⲉⲙⲡϩⲙϩⲁⲗ ⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲟⲩ ⲡⲉⲧⲉⲣⲉⲡⲉϥϫⲟⲉⲓⲥ ⲉⲓⲣⲉ ⲙⲙⲟϥ ·",
+      "english": "For this reason he told them: 'I will not call you my servants, for a servant does not know what his master does",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲫⲛⲁⲩ **ⲛ**ⲁϫⲡⲋ ϣⲱⲡⲓ ⲁ ⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ ϣⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲑ .",
+      "english": "When the sixth hour",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩϫⲡⲟ ⲡⲉ **ⲛ**ⲟⲩⲧⲁⲙⲓⲟ ⲁⲛ ⲡⲉ ·",
+      "english": "He was produced and was not a creation.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱⲟⲩ ⲛⲓⲁⲧⲥ **ⲛ**ⲧⲉⲕⲡⲣⲟϩⲉⲣⲉⲥⲓⲥ",
+      "english": "Oh, how blessed is your purpose!",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲁⲓ ⲁⲛ ⲡⲉ ⲡϩⲁⲙϣⲉ ⲡϣⲏⲣⲉ ⲙⲙⲁⲣⲓⲁ . ⲁⲩⲱ ⲡⲥⲟⲛ ⲛⲓⲁⲕⲱⲃⲟⲥ ⲛⲙⲓⲱⲥⲏ ⲛⲙⲓⲟⲩⲇⲁ ⲛⲙⲥⲓⲙⲱⲛ . ⲁⲩⲱ ⲛⲉϥⲥⲱⲛⲉ ⲛⲉⲩ**ⲛ**ⲡⲉⲓⲙⲁ ⲁⲛ ϩⲁϩⲧⲏⲛ ⲁⲩⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ ϩⲣⲁⲓ ⲛϩⲏⲧϥ .",
+      "english": "Isn't this the carpenter, the son of Mary, and brother of James, Joses, Judah, and Simon? Aren't his sisters here with us?' They were offended at him.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C120",
+      "type": "cf",
+      "label": "negative particle"
+    }
+  ],
+  "etym": {
+    "egy_num": "55500",
+    "egy_lemma": "bn",
+    "demo_num": "d1705",
+    "demo_lemma": "bn",
+    "english": "[negative particle]",
+    "german": "[Negationspartikel]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/55500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1705"
+  }
+}

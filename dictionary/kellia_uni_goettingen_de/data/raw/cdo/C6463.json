@@ -1,0 +1,292 @@
+{
+  "id": "C6463",
+  "forms": [
+    {
+      "id": "CF14954",
+      "orth": "ϩⲃⲟⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4067,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϩⲃⲱⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.08,
+        "rank": 457,
+        "count": 176
+      }
+    },
+    {
+      "orth": "ϩⲃⲟⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.97,
+        "rank": 741,
+        "count": 82
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7172",
+      "bibliography": "CD 659b-660a; CED 276; KoptHWb 356; DELC 289b; ChLCS 88b"
+    },
+    {
+      "id": "CS7173",
+      "bibliography": "CD 660a; CED 276; KoptHWb 356; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲓ ⲇⲉ ϩⲱϥ ⲛϫⲉⲥⲓⲙⲱⲛ ⲡⲉⲧⲣⲟⲥ ⲉϥⲙⲟϣⲓ ⲛⲥⲱϥ ⲟⲩⲟϩ ⲁϥϩⲱⲗ ⲉϧⲟⲩⲛ ⲉⲡⲓⲙϩⲁⲩ ⲟⲩⲟϩ ⲁϥⲛⲁⲩ ⲉⲛⲓ**ϩⲃⲱⲥ** ⲉⲩⲭⲏ ⲉϧⲣⲏⲓ",
+      "english": "Then Simon Peter came, following him, and entered into the tomb. He saw the linen cloths lying,",
+      "source": "04_John_20",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣϥϫⲉⲛⲁⲓ ⲇⲉ · ⲁϥⲛⲕⲟⲧⲕ · ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ · ⲁⲛⲉ**ϩⲃⲟⲟⲥ** · ϭⲗⲟⲙⲗⲙ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲛⲕⲉⲥⲟⲡ",
+      "english": "When he said these things, he lay down, and his clothing immediately wrapped itself around him once more.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲥ ⲇⲉ ⲁϥⲧⲱⲛϥ ⲁϥϭⲟϫⲓ ⲉⲡⲓⲙϩⲁⲩ ⲟⲩⲟϩ ⲉⲧⲁϥⲥⲟⲙⲥ ⲉϧⲟⲩⲛ ⲁϥⲛⲁⲩ ⲉⲛⲓ**ϩⲃⲱⲥ** ⲙⲙⲁⲩⲁⲧⲟⲩ ⲟⲩⲟϩ ⲁϥϣⲉ ⲛⲁϥ ⲉⲡⲉϥⲏⲓ ⲉϥⲉⲣϣⲫⲏⲣⲓ ⲙⲫⲏ ⲉⲧⲁϥϣⲱⲡⲓ .",
+      "english": "But Peter got up and ran to the tomb. Stooping and looking in, he saw the strips of linen lying by themselves, and he departed to his home, wondering what had happened.",
+      "source": "03_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϯ ϩⲓⲱⲱϥ · ⲛⲟⲩⲕⲟⲩⲓ ⲛ**ϩⲃⲟⲟⲥ** ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ · ϫⲉⲛϥⲕⲏⲕⲁϩⲏⲩ ⲅⲁⲣ ⲡⲉ ⲛⲧⲉⲩϣⲏ ⲙⲛⲡⲉϩⲟⲟⲩ · ⲟⲩϩⲟⲟⲩ ⲇⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩϩⲟⲟⲩ ·",
+      "english": "And he gave him a little clothing to put on for God's sake, for he was naked by day and by night.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲥⲉⲣⲡⲟⲣⲛⲉⲩⲓⲛ ⲛϫⲉⲧⲟⲩⲙⲁⲩ ⲟⲩⲟϩ ⲁⲥϭⲓϣⲓⲡⲓ ⲛϫⲉⲑⲏⲉⲧⲁⲥⲙⲁⲥⲟⲩ ϫⲉⲁⲥϫⲟⲥ ϫⲉϯⲛⲁϣⲉⲛⲏⲓ ⲛⲧⲁⲙⲟϣⲓ ⲥⲁⲙⲉⲛϩⲉ ⲛⲛⲁⲙⲉⲛⲣⲁϯ ⲛⲏⲉⲧϯ ⲛⲏⲓ ⲙⲡⲁⲱⲓⲕ ⲛⲉⲙⲡⲁⲙⲱⲟⲩ ⲛⲉⲙⲛⲁ**ϩⲃⲱⲥ** ⲛⲉⲙⲛⲁϣⲉⲛⲧⲱ ⲛⲉⲙⲡⲁⲛⲉϩ ⲛⲉⲙϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉⲧⲑⲏϣ ⲛⲏⲓ .",
+      "english": "And their mother went a-whoring: she that bore them disgraced them: for she said, I will go after my lovers, that give me my bread and my water, and my garments, and my linen clothes, my oil and my necessaries.",
+      "source": "28_Osee_02",
+      "urn": "urn:cts:copticLit:ot.hos.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϥⲟϭϥ ⲇⲉ ⲉϩⲣⲁⲓ ⲛϭⲓⲡⲕⲟⲩⲓ ⲛⲥⲟⲛ ⲍⲁⲭⲁⲣⲓⲁⲥ · ⲛⲧⲁϥⲙⲟⲩ ⲁϥϩⲙⲟⲟⲥ ⲁⲩⲱ ⲁⲛⲉ**ϩⲃⲟⲟⲥ** ⲃⲟⲣⲃⲣ ⲉⲃⲟⲗ ⲙⲙⲟϥ ·",
+      "english": "And the young brother Zachariah, who had died, leapt up and sat down, and the clothing unravelled off him.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲟⲣⲃⲣ",
+        1,
+        17.791
+      ],
+      [
+        "ϣⲧⲏⲛ",
+        2,
+        13.714
+      ],
+      [
+        "ϭⲗⲟⲙⲗⲙ",
+        1,
+        13.469
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        2,
+        12.331
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        2,
+        12.066
+      ],
+      [
+        "ⲥⲧⲟⲗⲏ",
+        1,
+        11.661
+      ],
+      [
+        "ϥ",
+        9,
+        11.224
+      ],
+      [
+        "ϣⲟⲡ",
+        1,
+        10.315
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        9.295
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        1,
+        8.974
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        8.685
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        8.227
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        8.194
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        7.816
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        7.368
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.168
+      ],
+      [
+        "ⲁ",
+        3,
+        6.992
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        5.973
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲃⲟⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲃⲟⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_1_post_ϩⲃⲟⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ϩⲃⲟⲟⲥ",
+          "ϩⲃⲟⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲃⲟⲟⲥ_0_node",
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_1_post_ϩⲃⲟⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3678,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6462",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6464",
+      "label": "ϩⲃⲥⲱ",
+      "pos": "N",
+      "gloss": "garment"
+    },
+    {
+      "target": "C6459",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "V",
+      "gloss": "cover, be covered"
+    },
+    {
+      "target": "C6460",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "covering, lid"
+    },
+    {
+      "target": "C12093",
+      "label": "ϭⲓϩⲃⲟⲥ",
+      "pos": "N",
+      "gloss": "clothing"
+    },
+    {
+      "target": "C6461",
+      "label": "ⲣⲉϥϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "coverer, protector"
+    }
+  ],
+  "etym": {
+    "egy_num": "103750",
+    "egy_lemma": "ḥbs",
+    "demo_num": "d4031",
+    "demo_lemma": "ḥbs",
+    "english": "garment; clothing",
+    "german": "Kleid; Hülle; Tuch",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/103750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4031"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C4126",
+  "forms": [
+    {
+      "id": "CF10197",
+      "orth": "ⲙⲉⲧⲑⲓⲃⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4685",
+      "bibliography": "CD 401a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4123",
+      "label": "ϥⲓϯⲃⲥ",
+      "pos": "V",
+      "gloss": "step"
+    },
+    {
+      "target": "C4124",
+      "label": "ϫⲓϯⲃⲥ",
+      "pos": "V",
+      "gloss": "trip up"
+    },
+    {
+      "target": "C4122",
+      "label": "ϯⲃⲥ",
+      "pos": "N",
+      "gloss": "heel"
+    },
+    {
+      "target": "C4125",
+      "label": "ⲙⲛⲧϫⲓϯⲃⲥ",
+      "pos": "N",
+      "gloss": "act of tripping up"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "C6334",
+  "forms": [
+    {
+      "id": "CF14683",
+      "orth": "ⲉⲃⲟⲗ ϩⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 6.56,
+        "rank": 194,
+        "count": 556
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7029",
+      "bibliography": "CD 634b; KoptHWb 348; ChLCS 86a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ⲛⲁⲙⲉⲛⲣⲁϯ ⲫⲱⲧ **ⲉⲃⲟⲗ **ϩⲁ**ϯⲙⲉⲧϣⲁⲙϣⲉ** ⲓⲇⲱⲗⲟⲛ .",
+      "english": "Therefore, my beloved, flee from idolatry.",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧϯ ⲛⲟⲩⲑⲱⲗⲉⲃ ⲛⲥⲁϯⲛⲁⲓⲁⲧⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲕⲁⲑⲟⲗⲓⲕⲏ ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲑⲏ ⲉⲧⲟⲓ ⲛⲁⲧⲁϭⲛⲓ ϧⲉⲛⲡⲉⲥϫⲓⲛⲱⲛϧ ⲧⲏⲣϥ ⲉⲩⲥⲓϯ ⲛϩⲁⲛⲥⲁϫⲓ ⲉⲩϩⲱⲟⲩ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲡϩⲏⲧ ⲛⲛⲓⲣⲱⲙⲓ ⲛⲁⲧⲕⲁϯ ϫⲉϩⲓⲛⲁ ⲛⲧⲟⲩⲧⲁⲕⲟ ⲙⲡⲟⲩϫⲓⲛⲱⲛϧ **ⲉⲃⲟⲗ **ϩⲁ**ϯⲙⲉⲧⲥⲉⲙⲛⲟⲥ** .",
+      "english": "All those who have stained the happy and catholic Church, which remains free from blemish throughout its entire life, by injecting evil words of philosophy into the hearts of men without understanding, so that their lives might be destroyed far from purity.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲟⲧⲉ ⲉⲧⲁⲩⲓ ⲉϧⲟⲩⲛ ⲉⲡⲓⲏⲓ **ⲉⲃⲟⲗ **ϩⲁ**ⲡⲓⲙⲏϣ** ⲛⲁⲩϣⲓⲛⲓ ⲙⲙⲟϥ ⲛϫⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲉϯⲡⲁⲣⲁⲃⲟⲗⲏ",
+      "english": "When he had entered into a house away from the multitude, his disciples asked him about the parable.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 8.12,
+      "rank": 138,
+      "count": 689
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6333",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "to, toward"
+    },
+    {
+      "target": "C6335",
+      "label": "ⲉϧⲟⲩⲛ ϩⲁ",
+      "pos": "PREP",
+      "gloss": "into, unto"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "C6669",
+  "forms": [
+    {
+      "id": "CF15383",
+      "orth": "ⲉⲃⲟⲗ ϩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 23.12,
+        "rank": 58,
+        "count": 3647
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7383",
+      "bibliography": "CD 684a; KoptHWb 375; DELC 303a; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲁⲣⲣⲁ ⲛⲉⲥⲟⲩⲱϣ ⲡⲉ · ⲉⲧⲣⲉϩⲉⲛϣⲏⲣⲉ ϣⲱⲡⲉ ⲛⲁⲥ **ⲉⲃⲟⲗ **ϩⲛ**ⲁⲃⲣⲁϩⲁⲙ** ·",
+      "english": "And Sarah wished to have children with Abraham.",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲟⲩϫⲟϥ **ⲉⲃⲟⲗ **ϩⲛ**ⲑⲗⲓⲯⲓⲥ** ⲛⲓⲙ ·",
+      "english": "and saved him from every affliction.",
+      "source": "Apophthegmata Patrum Sahidic 125: Joseph",
+      "urn": "urn:cts:copticLit:ap.125.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲣⲱϩⲧ ⲛⲟⲩⲙⲟⲛⲁⲭⲟⲥ **ⲉⲃⲟⲗ **ϩⲛ**ⲛϩⲗⲗⲟ** ⲉϩⲟⲩⲛ ⲉⲧⲉϥⲟⲩⲟϭⲉ ·",
+      "english": "He struck a monk among the elders upon his cheek.",
+      "source": "Apophthegmata Patrum Sahidic 127: N 298",
+      "urn": "urn:cts:copticLit:ap.127.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6668",
+      "label": "ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, at, on; by, with (as agent)"
+    },
+    {
+      "target": "C6670",
+      "label": "ϩⲣⲁⲓ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in"
+    },
+    {
+      "target": "C6671",
+      "label": "ⲉϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, on"
+    }
+  ]
+}

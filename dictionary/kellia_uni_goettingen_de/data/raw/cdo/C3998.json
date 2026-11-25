@@ -1,0 +1,69 @@
+{
+  "id": "C3998",
+  "forms": [
+    {
+      "id": "CF9936",
+      "orth": "*ⲥⲁϩⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9937",
+      "orth": "ⲥⲁϩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14211,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4542",
+      "bibliography": "CD 386a; CED 174; KoptHWb 213; ChLCS 54a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲡⲉ ⲡⲁⲣⲭⲏⲥⲧⲣⲁⲧⲓⲅⲟⲥ ⲛⲧϭⲟⲙ ⲙⲡϫⲟⲉⲓⲥ ⲛⲧⲁⲓⲉⲓ ⲧⲉⲛⲟⲩ ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲓⲏⲥⲟⲩⲥ ⲁϥⲡⲁϩⲧϥ ⲉϫⲙⲡⲉϥϩⲟ ⲉϫⲙⲡⲕⲁϩ ⲁϥⲟⲩⲱϣⲧ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲡϫⲟⲉⲓⲥ ⲟⲩ ⲡⲉⲧⲕⲟⲩⲁϩ**ⲥⲁϩⲛⲉ** ⲙⲙⲟϥ ⲛⲁⲓ ⲡⲉⲕϩⲙϩⲁⲗ",
+      "english": "And he said to him, I am now come, the chief captain of the host of the Lord.",
+      "source": "Joshua 5",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲉⲧⲛⲧⲁⲗⲉ ϣⲟⲩϩⲏⲛⲉ ⲛⲁⲩ ⲉϩⲣⲁⲓ ⲙⲛⲛⲉⲛⲧⲁⲧⲉⲧⲛⲣⲛⲟⲃⲉ ⲉⲡϫⲟⲉⲓⲥ ⲛϩⲏⲧⲟⲩ ⲁⲩⲱ ⲙⲡⲉⲧⲛⲥⲱⲧⲙ ⲛⲥⲁⲡϫⲟⲉⲓⲥ ⲟⲩⲇⲉ ⲙⲡⲉⲧⲛⲙⲟⲟϣⲉ ϩⲛⲛⲉϥⲟⲩⲁϩ **ⲥⲁϩⲛⲉ** ⲙⲛⲡⲉϥⲛⲟⲙⲟⲥ ⲙⲛⲛⲉϥⲙⲛⲧⲙⲛⲧⲣⲉ ⲁⲛⲉⲓⲡⲉⲧϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲧⲛ",
+      "english": "because of your burning incense, and because of the things wherein ye sinned against the Lord: and ye have not hearkened to the voice of the Lord, and have not walked in his ordinances, and in his law, and in his testimonies; and so these evils have come upon you.",
+      "source": "Jeremiah 51",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲓⲙ ⲡⲉ ⲡⲁⲧϩⲏⲧ ⲉⲧⲛϩⲏⲧⲧⲏⲩⲧⲛ ⲙⲁⲣⲉϥⲣⲁⲕⲧϥ ϣⲁⲣⲟⲓ ϯⲟⲩⲁϩ**ⲥⲁϩⲛⲉ** ⲇⲉ ⲛⲛⲉⲧϣⲁⲁⲧ ⲛⲥⲃⲱ ⲉⲓϫⲱ ⲙⲙⲟⲥ",
+      "english": "saying, Whoso is most senseless of you, let him turn aside to me; and I exhort those that want prudence, saying,",
+      "source": "Proverbs 9",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C6686",
+      "type": "cf",
+      "label": "approach, be nigh, comply with"
+    }
+  ],
+  "etym": {
+    "egy_num": "851680",
+    "egy_lemma": "sḫni̯",
+    "english": "float; let float down",
+    "german": "schweben; niederschweben lassen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851680"
+  }
+}

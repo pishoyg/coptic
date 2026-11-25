@@ -1,0 +1,557 @@
+{
+  "id": "C5607",
+  "forms": [
+    {
+      "id": "CF13189",
+      "orth": "ⲁϣⲕⲁⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2354,
+        "count": 22
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6276",
+      "bibliography": "CD 556ab; CED 238, 264; KoptHWb 296, 308; DELC 251b; ChLCS 73b,\n                            76b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲛⲧⲉ **ⲁϣⲕⲁⲕ** ⲉⲃⲟⲗ ϫⲉⲟⲩⲣⲱⲙⲉ ⲁⲛ ⲉϥϣⲟⲩⲉⲓⲧ ⲡⲉⲛⲧⲁϥⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲉⲓⲙⲁ ·",
+      "english": "Amente cried out saying, ' It was not an ordinary man who came down into my domain",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲏ **ⲁϣⲕⲁⲕ** ⲉⲃⲟⲗ ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲡⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲛⲧⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ ϩⲛⲧⲥⲁⲣⲝ ·",
+      "english": "The Sun cried out saying, It is my Lord, the Jesus Whom they have crucified in the flesh.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲇⲉ ⲁⲩⲣⲱⲙⲉ ⲉⲃⲟⲗ ϩⲙⲡⲙⲏⲏϣⲉ **ⲁϣⲕⲁⲕ** ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ . ⲡⲥⲁϩ ϯⲥⲟⲡⲥ ⲙⲙⲟⲕ ϭⲱϣⲧ ⲉϫⲛⲡⲁϣⲏⲣⲉ ϫⲉⲟⲩϣⲣⲟⲩⲱⲧ ⲛⲁⲓ ⲡⲉ",
+      "english": "Behold, a man from the crowd called out, saying, 'Teacher, I beg you to look at my son, for he is my only child.",
+      "source": "42_Luke_9",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        19.074
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        27,
+        16.206
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        6,
+        15.045
+      ],
+      [
+        "ⲁⲣⲱ",
+        1,
+        14.489
+      ],
+      [
+        "ⲙⲉⲥ",
+        1,
+        13.267
+      ],
+      [
+        "ⲗϩⲏⲙ",
+        1,
+        12.615
+      ],
+      [
+        "ϣⲕⲁⲕ",
+        1,
+        12.374
+      ],
+      [
+        "ϣⲧⲏⲛ",
+        2,
+        11.998
+      ],
+      [
+        "ⲛ",
+        18,
+        11.795
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        11.451
+      ],
+      [
+        "ⲁⲙⲛⲧⲉ",
+        2,
+        11.274
+      ],
+      [
+        "ⲣⲙⲉⲓⲏ",
+        1,
+        11.216
+      ],
+      [
+        "ⲧⲏϩ",
+        1,
+        11.168
+      ],
+      [
+        "ϩⲛ",
+        8,
+        10.956
+      ],
+      [
+        "ⲣⲏ",
+        2,
+        10.789
+      ],
+      [
+        "ⲛⲟϭ",
+        4,
+        10.775
+      ],
+      [
+        "ϣⲥⲛⲉ",
+        1,
+        10.717
+      ],
+      [
+        "ϩⲓ",
+        4,
+        10.708
+      ],
+      [
+        "ⲛⲉϩⲡⲉ",
+        1,
+        10.682
+      ],
+      [
+        "ⲗⲟⲓϭⲉ",
+        1,
+        10.52
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϣⲕⲁⲕ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ",
+          2
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲛⲉϩⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲛⲥⲁ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲩⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ_b",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲑⲃⲃⲓⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁϣⲕⲁⲕ",
+          4
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲏ",
+          1
+        ],
+        [
+          "ⲣⲏ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲁⲙⲛⲧⲉ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϣⲕⲁⲕ_0_node",
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          "ⲁⲩⲱ_4_post_ⲛⲉϩⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲛⲉϩⲡⲉ",
+          "ⲙⲛⲛⲥⲁ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲙⲛⲛⲥⲁ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲡ_2_post_ⲙⲛⲛⲥⲁ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲁϣⲕⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ⲁϣⲕⲁⲕ_0_node",
+          "ⲙ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲡⲉⲩ_3_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_2_post_ⲙ",
+          "ⲙⲛ_2_post_ϩⲩⲙⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲣⲓⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_2_post_ⲛ",
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁϣⲕⲁⲕ_b",
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲟⲗⲥⲗ_2_post_ⲛ",
+          "ⲛ_3_post_ⲣⲉϥⲥⲟⲗⲥⲗ",
+          1
+        ],
+        [
+          "ⲁϣⲕⲁⲕ_0_node",
+          "ⲁⲩⲱ_4_post_ⲑⲃⲃⲓⲟ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲑⲃⲃⲓⲟ",
+          "ϩⲛ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲑⲃⲃⲓⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲁϣⲕⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ⲁϣⲕⲁⲕ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁϣⲕⲁⲕ",
+          4
+        ],
+        [
+          "ⲡ_2_pre_ⲣⲏ",
+          "ⲣⲏ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲣⲏ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲁϣⲕⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ⲁⲙⲛⲧⲉ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲁϣⲕⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲩ_1_pre_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁϣⲕⲁⲕ",
+          "ⲁϣⲕⲁⲕ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲙⲙⲟ_1_post_ⲁϣⲕⲁⲕ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁϣⲕⲁⲕ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2026,
+      "count": 23
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5787",
+      "type": "cf",
+      "label": "cry, shout"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

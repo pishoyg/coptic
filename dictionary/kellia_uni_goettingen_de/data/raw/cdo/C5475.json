@@ -1,0 +1,52 @@
+{
+  "id": "C5475",
+  "forms": [
+    {
+      "id": "CF12922",
+      "orth": "ⲙⲁ ⲛⲱⲙⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6134",
+      "bibliography": "CD 523a; KoptHWb 292; ChLCS 72a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5472",
+      "label": "ⲱⲙⲕ",
+      "pos": "V",
+      "gloss": "swallow"
+    },
+    {
+      "target": "C5474",
+      "label": "ⲱⲙⲕ ⲉϧⲣⲏⲓ",
+      "pos": "V",
+      "gloss": "swallow down, overwhelm"
+    },
+    {
+      "target": "C5473",
+      "label": "ⲱⲙⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "be engulfed"
+    }
+  ]
+}

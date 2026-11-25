@@ -1,0 +1,41 @@
+{
+  "id": "C10544",
+  "forms": [
+    {
+      "id": "CF28364",
+      "orth": "ⲥⲧⲉⲫⲁⲛⲟⲩⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28365",
+      "orth": "ⲥⲧⲉⲫⲁⲛⲟⲩⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28366",
+      "orth": "ⲥⲧⲉⲫⲁⲛⲟⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14326",
+      "bibliography": "DDGLC",
+      "cu_ID": "4534"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2031",
+    "grl_lemma": "στεφανοφόρος",
+    "grl_meaning": "wearing a crown or a wreath",
+    "grl_pos": "adjective",
+    "grl_ref": "cf. Lampe 1258b (στεφανοφορόω); cf. Preisigke 3:384a\n    (στεφανηφόρος)"
+  }
+}

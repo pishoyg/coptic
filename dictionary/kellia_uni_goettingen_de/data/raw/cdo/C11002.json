@@ -1,0 +1,94 @@
+{
+  "id": "C11002",
+  "forms": [
+    {
+      "id": "CF30190",
+      "orth": "ⲭⲣⲩⲥⲟⲥⲧⲟⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30192",
+      "orth": "ⲭⲣⲩⲥⲟⲥⲧⲟⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13396,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30191",
+      "orth": "ⲭⲣⲓⲥⲱⲥⲧⲱⲙⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15292",
+      "bibliography": "DDGLC",
+      "cu_ID": "4187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⁘ ⲭⲣⲓⲥⲧⲟⲥ ⁘ ⲁ ⁘ ⲱ ⁘ ⲟⲩⲗⲟⲅⲟⲥ ⲉⲁϥⲧⲁⲩⲟϥ ⲛϭⲓⲡϩⲁⲅⲓⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲕⲱⲛⲥⲧⲁⲛⲧⲓⲛⲟⲩⲡⲟⲗⲓⲥ · ⲁⲩⲱ ⲡⲉ**ⲭⲣⲩⲥⲟⲥⲧⲟⲙⲟⲥ** ⲁⲩⲱ ⲡⲁⲡⲗⲁⲥ ⲛⲛⲟⲩⲃ · ⲛⲧⲁϥⲧⲁⲩⲟϥ ⲇⲉ ⲉⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ϩⲣⲁⲫⲁⲏⲗ · ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡⲉϥⲣⲡⲙⲉⲉⲩⲉ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲧⲉⲥⲟⲩϥⲧⲟⲟⲩ ⲡⲉ ⲛⲁⲡⲁⲅⲟⲩⲙⲉⲛⲟⲛ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲗⲁⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲱⲛⲥⲧⲁⲛⲧⲓⲛⲟⲩⲡⲟⲗⲓⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        8.747
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12991,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6413",
+    "grl_lemma": "χρυσόστομος",
+    "grl_meaning": "golden-tongued one; epithet of John (Chrysostom), archbishop\n    of Constaninople",
+    "grl_pos": "noun",
+    "grl_ref": null
+  }
+}

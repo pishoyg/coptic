@@ -1,0 +1,43 @@
+{
+  "id": "C2206",
+  "forms": [
+    {
+      "id": "CF6130",
+      "orth": "ⲛϩⲁⲛⲙⲏϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2548",
+      "bibliography": "CD 202b; KoptHWb 108"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2203",
+      "label": "ⲙⲏⲏϣⲉ",
+      "pos": "N",
+      "gloss": "multitude (persons or things), crowd, troop"
+    },
+    {
+      "target": "C2204",
+      "label": "ⲙⲏⲏϣⲉ ⲛ-",
+      "pos": "N",
+      "gloss": "many, great"
+    },
+    {
+      "target": "C2205",
+      "label": "ⲛⲟⲩⲙⲏϣ",
+      "pos": "ADV",
+      "gloss": "greatly"
+    }
+  ]
+}

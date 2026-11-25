@@ -1,0 +1,180 @@
+{
+  "id": "C2053",
+  "forms": [
+    {
+      "id": "CF5794",
+      "orth": "ⲙⲉⲥⲓⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5795",
+      "orth": "ⲙⲉⲥⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3983,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2381",
+      "bibliography": "CD 186b; CED 91; KoptHWb 102; DELC 122; ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲇⲉ ϫⲉⲁⲙ**ⲙⲉⲥⲓⲟ** ⲣϩⲟⲧⲉ ϩⲏⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲧⲁⲙⲓⲟ ⲛⲁⲩ ⲛϩⲛⲏⲉⲓ",
+      "english": "And as the midwives feared God, they established for themselves families.",
+      "source": "Exodus 1",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ⲇⲉ ⲛϭⲓⲙⲙⲉⲥⲓⲟ ⲙⲫⲁⲣⲁⲱ ϫⲉⲛⲉⲣⲉⲛϩⲉⲃⲣⲁⲓⲁ ⲟ ⲁⲛ ⲛⲧϩⲉ ⲛⲛⲉϩⲓⲟⲙⲉ ⲛⲕⲏⲙⲉ ⲉϣⲁⲩⲙⲓⲥⲉ ϣⲁⲩⲙⲓⲥⲉ ⲛⲅⲁⲣ ⲙⲡⲁⲧⲟⲩⲃⲱⲕ ⲉϩⲟⲩⲛ ϣⲁⲣⲟⲟⲩ ⲛϭⲓⲙ**ⲙⲉⲥⲓⲟ** ⲁⲩⲱ ⲛⲉⲩⲙⲓⲥⲉ",
+      "english": "And the midwives said to Pharao, The Hebrew women are not as the women of Egypt, for they are delivered before the midwives go in to them. So they bore children.",
+      "source": "Exodus 1",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲙⲟⲩⲧⲉ ⲛϭⲓⲡⲣⲣⲟ ⲛⲕⲏⲙⲉ ⲉⲛ**ⲙⲉⲥⲓⲟ** ⲛⲛϩⲉⲃⲣⲁⲓⲟⲥ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲧⲉⲧⲛⲉⲓⲣⲉ ⲙⲡⲉⲓϩⲱⲃ ⲁⲧⲉⲧⲛⲧⲁⲛϩⲟ ⲛⲛϩⲟⲟⲩⲧ",
+      "english": "And the king of Egypt called the midwives, and said to them, Why is it that ye have done this thing, and saved the male children alive?",
+      "source": "Exodus 1",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3589,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2040",
+      "label": "ⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2037",
+      "label": "ⲙⲁⲥ-",
+      "pos": "V",
+      "gloss": "bearing, producing"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2043",
+      "label": "ⲙⲉⲥⲓⲉ",
+      "pos": "V",
+      "gloss": "whom . . . bore"
+    },
+    {
+      "target": "C2052",
+      "label": "ⲙⲉⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "bring to birth, deliver sb (midwife)"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2047",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring (of money), usury, interest"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ],
+  "etym": {
+    "demo_num": "d2676",
+    "demo_lemma": "ms-ꜥꜣ",
+    "english": "midwife",
+    "german": "Hebamme",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2676"
+  }
+}

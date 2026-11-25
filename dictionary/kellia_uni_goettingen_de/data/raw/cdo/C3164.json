@@ -1,0 +1,147 @@
+{
+  "id": "C3164",
+  "forms": [
+    {
+      "id": "CF8211",
+      "orth": "ⲕⲁⲣⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲕⲁ ⲣⲁⲧ⸗",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5620,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3617",
+      "bibliography": "CD 303a; CED 140; KoptHWb 167; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁ ⲛⲁⲓ ⲡⲉϫⲁⲥ ⲉⲧⲃⲉⲡⲁⲓ ⲛⲧⲁⲕϫⲓⲥⲁⲣⲝ · ⲁⲩⲱ ⲛⲧⲁⲕ**ⲕⲁⲣⲁⲧ**ⲕ ⲉⲃⲟⲗ ⲁⲕⲉⲓ ⲉⲡⲕⲟⲥⲙⲟⲥ ⲉⲧⲃⲉⲟⲩⲣⲉϥⲣⲛⲟⲃⲉ ⲛⲧⲁⲙⲓⲛⲉ ·",
+      "english": "She said: Have mercy upon me! for this reason hast Thou taken upon Thyself flesh, and hast come forth, and hast entered into the world for the sake of sinners like unto myself",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉϩⲟⲟⲩ ⲇⲉ ⲁⲩⲙⲟⲟϣⲉ ϩⲛⲧⲉϩⲓⲏ ⲁⲩⲧⲁⲁⲩ ⲉⲧⲉϩⲓⲏ ⲛⲃⲏⲑⲥⲁⲙⲏⲥ ⲛⲧⲁⲩ**ⲕⲁⲣⲁⲧ**ⲟⲩ ⲙⲙⲁⲧⲉ ϩⲛⲟⲩⲙⲟⲉⲓⲧ ⲛⲟⲩⲱⲧ ⲁⲩⲱ ⲛⲉⲩϩⲟ ⲙⲡⲟⲩⲡⲱϣⲥ ⲉⲟⲩⲛⲁⲙ ⲟⲩⲇⲉ ⲉϩⲃⲟⲩⲣ ⲁⲩⲱ ⲛⲥⲁⲧⲣⲁⲡⲏⲥ ⲛⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲛⲉⲩⲙⲟⲟϣⲉ ⲉⲩⲟⲩⲏϩ ⲛⲥⲱⲥ ϣⲁⲉϩⲣⲁⲓ ⲉⲛⲧⲟϣ ⲛⲃⲏⲑⲥⲁⲙⲏⲥ",
+      "english": "And the cows went straight on the way to the way of Baethsamys, they went along one track; and laboured, and turned not aside to the right hand or to the left, and the lords of the Philistines went after it as far as the coasts of Baethsamys.",
+      "source": "I Samuel 6",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲁⲃⲁ ⲧⲣⲣⲱ ⲛⲛⲉϭⲟⲟϣⲉ ⲁⲥⲥⲱⲧⲙ ⲉⲡⲣⲁⲛ ⲛⲥⲟⲗⲟⲙⲱⲛ ⲁⲩⲱ ⲉⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ⲁⲥ**ⲕⲁⲣⲁⲧ**ⲥ ⲉⲃⲟⲗ ⲁⲥⲉⲓ ⲉⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲟϥ ϩⲛϩⲉⲛⲥⲙⲟⲧ ⲛϣⲁϫⲉ",
+      "english": "And the queen of Saba heard of the name of Solomon, and the name of the Lord, and she came to try him with riddles.",
+      "source": "I Kings 10",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3174",
+      "label": "ϩⲁⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "under foot, beneath"
+    },
+    {
+      "target": "C3175",
+      "label": "ϩⲓⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "toward"
+    },
+    {
+      "target": "C3170",
+      "label": "ϫⲓⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "hold foot, impede"
+    },
+    {
+      "target": "C3171",
+      "label": "ϭⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "find foot, base, search"
+    },
+    {
+      "target": "C3169",
+      "label": "ϯ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "put on foot, shoe"
+    },
+    {
+      "target": "C3172",
+      "label": "ⲁⲧϭⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable, unattainable"
+    },
+    {
+      "target": "C3167",
+      "label": "ⲁⲧⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable"
+    },
+    {
+      "target": "C3173",
+      "label": "ⲉⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "to foot of, to (mostly of persons)"
+    },
+    {
+      "target": "C3165",
+      "label": "ⲕⲁⲣⲁⲧ⸗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "step, set forth"
+    },
+    {
+      "target": "C3166",
+      "label": "ⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "bring, follow foot, trace"
+    },
+    {
+      "target": "C3162",
+      "label": "ⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "foot; lowest part, bottom; limit; trace"
+    },
+    {
+      "target": "C3163",
+      "label": "ⲣⲙⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "footman"
+    },
+    {
+      "target": "C3168",
+      "label": "ⲥⲣⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "spread feet (pee)"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4396",
+    "demo_lemma": "ḫꜣꜥ rd.wj",
+    "english": "walk, march",
+    "german": "gehen, marschieren",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4396"
+  }
+}

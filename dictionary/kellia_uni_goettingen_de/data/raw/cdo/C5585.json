@@ -1,0 +1,118 @@
+{
+  "id": "C5585",
+  "forms": [
+    {
+      "id": "CF13145",
+      "orth": "ⲁⲧϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20097,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6251",
+      "bibliography": "CD 532b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲁⲓ ⲧ**ⲁⲧϩⲉ** ⲛⲧⲁⲓⲛⲁⲩ ⲉⲡⲉⲓⲛⲉ ⲛⲛⲉϩⲧⲱⲱⲣ ⲙⲛⲛⲉⲧⲁⲗⲉ ⲉⲣⲟⲟⲩ ⲉⲩⲛ ϩⲉⲛϩⲱⲕ ϩⲓⲱⲟⲩ ⲛⲁⲩⲁⲛ ⲛⲕⲱϩⲧ ϩⲓϩⲩⲁⲕⲓⲛⲑⲓⲛⲟⲛ ϩⲓⲧϩⲏⲛ ⲉⲣⲉⲛⲁⲡⲉⲩⲉ ⲛⲛⲉϩⲧⲱⲱⲣ ⲟ ⲛⲧϩⲉ ⲛⲛⲁⲡⲏⲩⲉ ⲛⲙⲙⲟⲩⲓ ⲉϥⲛⲏⲩ ⲉⲃⲟⲗ ϩⲛⲣⲣⲱⲟⲩ ⲛϭⲓⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩⲕⲁⲡⲛⲟⲥ ⲙⲛⲟⲩⲑⲏⲛ .",
+      "english": "Thus I saw the horses in the vision, and those who sat on them, having breastplates of fiery red, hyacinth blue, and sulfur yellow; and the heads of lions. Out of their mouths proceed fire, smoke, and sulfur.",
+      "source": "66_Revelation_9",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.817
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19707,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5588",
+      "label": "ⲁⲑⲁϩ",
+      "pos": "N",
+      "gloss": "burden"
+    },
+    {
+      "target": "C5587",
+      "label": "ⲁⲧϩⲥ",
+      "pos": "N",
+      "gloss": "tissue, material"
+    },
+    {
+      "target": "C5586",
+      "label": "ⲟⲩⲁⲧϩⲉ",
+      "pos": "N",
+      "gloss": "warp (on loom)"
+    },
+    {
+      "target": "C5583",
+      "label": "ⲱⲧϩ",
+      "pos": "V",
+      "gloss": "tie, sew, weave"
+    },
+    {
+      "target": "C5584",
+      "label": "ⲱⲧϩ",
+      "pos": "N",
+      "gloss": "fastened thing or place, lock"
+    }
+  ]
+}

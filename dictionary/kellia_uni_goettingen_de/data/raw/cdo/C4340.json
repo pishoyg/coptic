@@ -1,0 +1,150 @@
+{
+  "id": "C4340",
+  "forms": [
+    {
+      "id": "CF10632",
+      "orth": "ⲉⲧⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4916",
+      "bibliography": "CD 417b; KoptHWb 236"
+    },
+    {
+      "id": "CS4917",
+      "bibliography": "CD 417b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲟⲧ",
+        1,
+        13.718
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        1,
+        13.486
+      ],
+      [
+        "ⲟⲩⲧⲁϩ",
+        1,
+        11.673
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲉⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲧⲱⲛ_0_node",
+          "ϥ_1_post_ⲉⲧⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4343",
+      "label": "ϣⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where (to)?"
+    },
+    {
+      "target": "C4344",
+      "label": "ϩⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where?"
+    },
+    {
+      "target": "C4345",
+      "label": "ϫⲓⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where ... from?"
+    },
+    {
+      "target": "C4342",
+      "label": "ⲉⲃⲟⲗ ⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where ... from?"
+    },
+    {
+      "target": "C4341",
+      "label": "ⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    },
+    {
+      "target": "C4346",
+      "label": "ⲡⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4347",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4348",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4339",
+      "label": "ⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    }
+  ]
+}

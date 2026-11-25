@@ -1,0 +1,86 @@
+{
+  "id": "C4844",
+  "forms": [
+    {
+      "id": "CF11653",
+      "orth": "ϩⲛⲟⲩⲧⲁϫⲣⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5465",
+      "bibliography": "CD 463b; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7332",
+      "type": "cf",
+      "label": "be or become strong, firm"
+    },
+    {
+      "target": "C5560",
+      "type": "cf",
+      "label": "be firm, be secure, be fastened"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4850",
+      "label": "ϫⲓⲛⲧⲁϫⲣⲟ",
+      "pos": "N",
+      "gloss": "confirmation"
+    },
+    {
+      "target": "C4849",
+      "label": "ϫⲓⲧⲁϫⲣⲟ",
+      "pos": "V",
+      "gloss": "get a confirmation"
+    },
+    {
+      "target": "C4848",
+      "label": "ϯⲧⲁϫⲣⲟ",
+      "pos": "V",
+      "gloss": "give strength, confirm"
+    },
+    {
+      "target": "C4845",
+      "label": "ⲁⲧⲧⲁϫⲣⲟ",
+      "pos": "N",
+      "gloss": "unstable, infirm"
+    },
+    {
+      "target": "C4846",
+      "label": "ⲙⲁ ⲛⲧⲁϫⲣⲟ",
+      "pos": "N",
+      "gloss": "firm place"
+    },
+    {
+      "target": "C4847",
+      "label": "ⲣⲧⲁϫⲣⲟ",
+      "pos": "V",
+      "gloss": "be a strength, be a security"
+    },
+    {
+      "target": "C4842",
+      "label": "ⲧⲁϫⲣⲟ",
+      "pos": "V",
+      "gloss": "make strong, make firm, make fast; be strengthened, be decided"
+    },
+    {
+      "target": "C4843",
+      "label": "ⲧⲁϫⲣⲟ",
+      "pos": "N",
+      "gloss": "firmness, strength, solidity"
+    }
+  ]
+}

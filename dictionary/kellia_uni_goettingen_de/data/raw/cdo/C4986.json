@@ -1,0 +1,54 @@
+{
+  "id": "C4986",
+  "forms": [
+    {
+      "id": "CF31872",
+      "orth": "ⲟⲩⲟⲟⲗⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31871",
+      "orth": "ⲟⲩⲟⲟⲗⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5612",
+      "bibliography": "CD 477a; KoptHWb 269; ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4984",
+      "label": "ⲃⲗⲁⲗⲉ",
+      "pos": "V",
+      "gloss": "indulge, luxuriate"
+    },
+    {
+      "target": "C4985",
+      "label": "ⲟⲩⲗⲁⲓ",
+      "pos": "N",
+      "gloss": "curly hair"
+    },
+    {
+      "target": "C4982",
+      "label": "ⲟⲩⲱⲱⲗⲉ",
+      "pos": "V",
+      "gloss": "flow; be well off, flourish"
+    },
+    {
+      "target": "C4983",
+      "label": "ⲟⲩⲱⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "prosperity, plenty"
+    }
+  ]
+}

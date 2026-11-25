@@ -1,0 +1,109 @@
+{
+  "id": "C10892",
+  "forms": [
+    {
+      "id": "CF29703",
+      "orth": "ⲫⲣⲟⲛⲓⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29704",
+      "orth": "ⲫⲣⲟⲛⲓⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20846,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15039",
+      "bibliography": "DDGLC",
+      "cu_ID": "10188"
+    },
+    {
+      "id": "CS15040",
+      "bibliography": "DDGLC",
+      "cu_ID": "7095"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲇⲉ ϣⲱⲡⲉ ⲙ**ⲫⲣⲟⲛⲓⲙⲟⲥ** ⲛⲧϩⲉ ⲛⲛϩⲟϥ ⲁⲩⲱ ⲛⲁⲕⲉⲣⲁⲓⲟⲥ ⲛⲧϩⲉ ⲛⲛϭⲣⲟⲙⲡⲉ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        11.331
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲫⲣⲟⲛⲓⲙⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20447,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2325",
+    "grl_lemma": "φρόνιμος",
+    "grl_meaning": "mentally present, sensible, prudent",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1956b"
+  }
+}

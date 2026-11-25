@@ -1,0 +1,159 @@
+{
+  "id": "C7094",
+  "forms": [
+    {
+      "id": "CF16246",
+      "orth": "ϭⲓⲛϫⲟⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12072,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7827",
+      "bibliography": "CD 755b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲧⲥⲁⲃⲟϥ ⲉⲧ**ϭⲓⲛϫⲟⲟⲥ** ⲙⲛⲧϭⲓⲛⲟⲗⲥ ·",
+      "english": "And Michael shall teach him to sow it, and to gather it in at harvest.'",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛⲟⲗⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲥⲁⲃⲟ",
+        1,
+        12.891
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛϫⲟⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲓⲛⲟⲗⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϭⲓⲛⲟⲗⲥ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲟⲗⲥ_1_post_ϭⲓⲛϫⲟⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛϫⲟⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ϭⲓⲛⲟⲗⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲓⲛⲟⲗⲥ",
+          "ⲧ_2_post_ϭⲓⲛⲟⲗⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϭⲓⲛⲟⲗⲥ",
+          "ϭⲓⲛⲟⲗⲥ_1_post_ϭⲓⲛϫⲟⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11646,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7095",
+      "label": "ϫⲉⲣⲟ-",
+      "pos": "V",
+      "gloss": "mean"
+    },
+    {
+      "target": "C7096",
+      "label": "ϫⲟⲥ",
+      "pos": "N",
+      "gloss": "saying, speech, claim"
+    },
+    {
+      "target": "C7089",
+      "label": "ϫⲱ",
+      "pos": "V",
+      "gloss": "say, speak, tell; sing"
+    },
+    {
+      "target": "C7091",
+      "label": "ϫⲱ",
+      "pos": "N",
+      "gloss": "singing, song"
+    },
+    {
+      "target": "C7090",
+      "label": "ⲁⲧϫⲱ",
+      "pos": "N",
+      "gloss": "ineffable"
+    },
+    {
+      "target": "C7092",
+      "label": "ⲣⲉϥϫⲉ-",
+      "pos": "N",
+      "gloss": "sayer, speaker"
+    },
+    {
+      "target": "C7093",
+      "label": "ⲣⲉϥϫⲱ",
+      "pos": "N",
+      "gloss": "singer, minstrel"
+    }
+  ]
+}

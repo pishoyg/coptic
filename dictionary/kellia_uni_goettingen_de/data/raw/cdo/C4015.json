@@ -1,0 +1,133 @@
+{
+  "id": "C4015",
+  "forms": [
+    {
+      "id": "CF9973",
+      "orth": "ⲣⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19914,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4562",
+      "bibliography": "CD 391b; KoptHWb 218; ChLCS 55a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉⲩⲣⲡⲙⲉⲉⲩⲉ ⲇⲉ ⲛⲧⲉⲛⲧⲁⲩⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧⲥ . ⲛⲉⲁⲩ**ⲣⲧⲉ** ⲡⲉ ⲛⲕⲟⲧⲟⲩ ⲉⲣⲟⲥ .",
+      "english": "If indeed they had been thinking of that country from which they went out, they would have had enough time to return.",
+      "source": "58_Hebrews_11",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲩ",
+        1,
+        14.206
+      ],
+      [
+        "ⲕⲟⲧ",
+        1,
+        11.655
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19526,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4012",
+      "label": "ϩⲛⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4016",
+      "label": "ϫⲉⲧⲉ",
+      "pos": "V",
+      "gloss": "mature"
+    },
+    {
+      "target": "C4014",
+      "label": "ⲉⲓ ⲉⲡⲧⲉ",
+      "pos": "V",
+      "gloss": "age"
+    },
+    {
+      "target": "C4013",
+      "label": "ⲉⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4011",
+      "label": "ⲙⲡⲉϥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4010",
+      "label": "ⲧⲏ",
+      "pos": "N",
+      "gloss": "time, season"
+    }
+  ]
+}

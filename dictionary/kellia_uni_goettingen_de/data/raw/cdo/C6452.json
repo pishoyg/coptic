@@ -1,0 +1,39 @@
+{
+  "id": "C6452",
+  "forms": [
+    {
+      "id": "CF14932",
+      "orth": "ϩⲃⲟⲣⲃⲣ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7160",
+      "bibliography": "CD 657b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6451",
+      "label": "ϩⲃⲟⲣⲃⲣ",
+      "pos": "V",
+      "gloss": "be loosed, fall to pieces; throw down, push"
+    },
+    {
+      "target": "C6453",
+      "label": "ϩⲃⲟⲣⲃⲣ",
+      "pos": "N",
+      "gloss": "expulsion"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "C7518",
+  "forms": [
+    {
+      "id": "CF32142",
+      "orth": "ⲁⲧϫⲁϫⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32141",
+      "orth": "ⲁⲧϫⲁⲁϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8336",
+      "bibliography": "CD 799b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7515",
+      "label": "ϫⲁϫⲉ",
+      "pos": "V",
+      "gloss": "be hard, rough; be hoarse"
+    },
+    {
+      "target": "C7516",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "harshness"
+    },
+    {
+      "target": "C7517",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "hard, rough"
+    },
+    {
+      "target": "C7519",
+      "label": "ϫⲁϫⲣⲓⲙ",
+      "pos": "N",
+      "gloss": "cliff"
+    }
+  ]
+}

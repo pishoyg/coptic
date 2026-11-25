@@ -1,0 +1,128 @@
+{
+  "id": "C2752",
+  "forms": [
+    {
+      "id": "CF7325",
+      "orth": "ⲣⲟⲩⲁⲙⲟⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19852,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3147",
+      "bibliography": "CD 255a; KoptHWb 141; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲩϣⲁϫⲉ ⲛⲁ**ⲣⲟⲩⲁⲙⲟⲙⲉ** ⲛⲧϩⲉ ⲛⲟⲩⲅⲁⲅⲅⲣⲁⲓⲛⲁ . ⲛⲁⲓ ⲉⲟⲩⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲡⲉ ϩⲩⲙⲉⲛⲁⲓⲟⲥ ⲙⲛⲫⲓⲗⲏⲧⲟⲥ .",
+      "english": "and their word will consume like gangrene, of whom is Hymenaeus and Philetus;",
+      "source": "55_2 Timothy_2",
+      "urn": "urn:cts:copticLit:nt.2tim.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19462,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2749",
+      "label": "ⲁⲙϩⲁⲧ",
+      "pos": "N",
+      "gloss": "white clay"
+    },
+    {
+      "target": "C2748",
+      "label": "ⲁⲙⲡⲏⲣϣ",
+      "pos": "N",
+      "gloss": "red clay"
+    },
+    {
+      "target": "C2750",
+      "label": "ⲁⲙⲧⲱϩ",
+      "pos": "N",
+      "gloss": "clay mixed with straw"
+    },
+    {
+      "target": "C2746",
+      "label": "ⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "clay, mud"
+    },
+    {
+      "target": "C2747",
+      "label": "ⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "clay, mud"
+    },
+    {
+      "target": "C2751",
+      "label": "ⲟⲩⲁⲙⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "eartheater (a rodent or devouring animal, worm?); \"eartheater\": rodent ulcer, gangrene"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "C7188",
+  "forms": [
+    {
+      "id": "CF32106",
+      "orth": "ϫⲟⲗⲙⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32105",
+      "orth": "ϫⲟⲗⲙⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8033,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7935",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7186",
+      "label": "ϫⲱⲗⲙ",
+      "pos": "V",
+      "gloss": "amuse/enjoy oneself; be implicated, involved"
+    },
+    {
+      "target": "C7187",
+      "label": "ϫⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "festivity; dissipation; distraction; care, grief"
+    }
+  ]
+}

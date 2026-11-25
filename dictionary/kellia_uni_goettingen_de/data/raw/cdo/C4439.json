@@ -1,0 +1,120 @@
+{
+  "id": "C4439",
+  "forms": [
+    {
+      "id": "CF10830",
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.79,
+        "rank": 54,
+        "count": 3912
+      }
+    },
+    {
+      "orth": "ⲑⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.07,
+        "rank": 178,
+        "count": 600
+      }
+    },
+    {
+      "orth": "ⲑⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 4.24,
+        "rank": 258,
+        "count": 360
+      }
+    },
+    {
+      "orth": "ⲑⲣⲟ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.64,
+        "rank": 950,
+        "count": 54
+      }
+    },
+    {
+      "orth": "ⲧⲣ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.4,
+        "rank": 389,
+        "count": 379
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "tlapos": "Präfix"
+  },
+  "senses": [
+    {
+      "id": "CS5026",
+      "bibliography": "CD 430a; CDC 67ab; CED 194; KoptHWb 241; DELC 220a; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ϯⲙⲉⲧⲁⲥⲉⲃⲏⲥ ⲛⲧⲉⲡⲓⲗⲓⲃⲁⲛⲟⲥ ⲉⲥⲉϩⲟⲃⲥⲕ ⲟⲩⲟϩ ϯⲧⲁⲗⲉⲡⲱⲣⲓⲁ ⲛⲧⲉⲛⲓⲑⲏⲣⲓⲟⲛ ⲉⲥⲉ**ⲑⲣⲉ**ⲕⲛⲟⲩϣⲡ ⲉⲑⲃⲉϩⲁⲛⲥⲛⲟϥ ⲛⲧⲉϩⲁⲛⲣⲱⲙⲓ ⲛⲉⲙϯⲙⲉⲧⲁⲥⲉⲃⲏⲥ ⲛⲧⲉⲡⲕⲁϩⲓ ⲛⲧⲉϯⲃⲁⲕⲓ ⲛⲉⲙⲛⲏ ⲧⲏⲣⲟⲩ ⲉⲧϣⲟⲡ ⲛϧⲏⲧⲥ .",
+      "english": "For the ungodliness of Libanus shall cover thee, and distress because of wild beasts shall dismay thee, because of the blood of men, and the sins of the land and city, and of all that dwell in it.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲥⲉⲡⲥⲱⲡϥ ⲇⲉ ⲉ**ⲧⲣⲉ**ϥⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩⲧⲟϣ",
+      "english": "They began to beg him to depart from their region.",
+      "source": "41_Mark_5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓⲱⲧ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲏⲓ ϫⲉϥⲛⲁⲑⲱⲧ ⲙⲡⲉⲕϩⲏⲧ ⲡⲁϣⲏⲣⲓ ⲃⲏⲥⲁ ⲛⲧⲉϥ**ⲑⲣⲉ**ⲕⲥⲱⲧⲉⲙ ⲉⲧⲉϥⲥⲙⲏ ⲉⲧϩⲟⲗϫ .",
+      "english": "My father consoled me, saying, ‘He will bring peace to your heart, Besa, my child, and you will come to know his sweet voice.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϩⲱⲛ ⲇⲉ ⲉⲧⲟⲟⲧⲟⲩ ⲉⲙⲁⲧⲉ ϫⲉⲕⲁⲁⲥ ⲉⲛⲛⲉⲗⲁⲁⲩ ⲉⲓⲙⲉ ⲉⲡⲁⲓ ⲁⲩⲱ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲉ**ⲧⲣⲉ**ⲩⲧⲙⲙⲟⲥ .",
+      "english": "He strictly ordered them that no one should know this, and commanded that something should be given to her to eat.",
+      "source": "41_Mark_5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲛⲓⲡⲁⲣⲑⲉⲛⲟⲥ ⲇⲉ ⲙⲙⲟⲛⲧⲓ ⲟⲩⲁϩⲥⲁϩⲛⲓ ⲙⲙⲁⲩ ⲛⲧⲉⲛⲡϭⲟⲓⲥ ⲟⲩⲅⲛⲱⲙⲏ ⲇⲉ ⲡⲉⲧⲓϯ ⲙⲙⲟⲥ ϩⲱⲥ ⲉⲁⲩⲛⲁⲓ ⲛⲏⲓ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲡϭⲟⲓⲥ ⲉ**ⲑⲣ**ⲓϣⲱⲡⲓ ⲙⲡⲓⲥⲧⲟⲥ .",
+      "english": "Now concerning virgins, I have no commandment from the Lord, but I give my judgment as one who has obtained mercy from the Lord to be trustworthy.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲕⲁⲁⲩ ⲉ**ⲧⲣⲉ**ⲩⲃⲱⲕ ⲛⲧⲉⲣⲉⲛⲉⲡⲛⲉⲩⲙⲁ ⲇⲉ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲉⲓ ⲉⲃⲟⲗ ⲁⲩⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲛⲉϣⲁⲩ ⲁⲩⲱ ⲁⲥⲣⲱϩⲧ ⲛϭⲓⲧⲁⲅⲉⲗⲏ ⲛⲣⲓⲣ ϩⲓϫⲛ ⲧϣⲱⲙⲉ ⲉⲡⲉⲕϩⲏⲧ ⲉⲩⲛⲁⲣϫⲟⲩⲱⲧ ⲛϣⲉ ⲁⲩⲙⲟⲩ ϩⲛⲧⲉⲑⲁⲗⲁⲥⲥⲁ .",
+      "english": "At once Jesus gave them permission. The unclean spirits came out and entered into the pigs. The herd of about two thousand rushed down the steep bank into the sea, and they were drowned in the sea.",
+      "source": "41_Mark_5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4438",
+      "label": "ⲧⲣⲟ",
+      "pos": "V",
+      "gloss": "cause to do"
+    }
+  ]
+}

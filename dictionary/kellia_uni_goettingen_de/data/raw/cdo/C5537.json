@@ -1,0 +1,125 @@
+{
+  "id": "C5537",
+  "forms": [
+    {
+      "id": "CF31935",
+      "orth": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4826,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF31934",
+      "orth": "ⲱⲣⲉⲃ ⲉϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18224,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6200",
+      "bibliography": "CD 528b; KoptHWb 294; ChLCS 73a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲉϣϫⲉ ⲁⲓϫⲓ ⲡⲉϫⲁϥ ⲉⲡⲁϩⲁⲙⲏⲣ ⲛⲧⲉϥⲥⲁⲣⲝ ϩⲙⲡⲟⲩⲟⲙϥ · ⲁⲗⲗⲁ **ⲙⲡⲉⲓⲉϣⲱⲣⲃ **ⲉϩⲟⲩⲛ**** ⲙⲡⲁⲙⲁϩⲧⲉ ⲛⲧⲉϥⲙⲛⲧⲛⲟⲩⲧⲉ ·",
+      "english": "It saith also, 'Now though I took His flesh into my bosom when He was in the manger, I could not include within my dominion His Divinity.'",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ **ⲥⲉⲛⲁⲱⲣⲃ **ⲉϩⲟⲩⲛ**** ⲛⲧϣⲉⲉⲣⲉ ⲛⲉⲫⲣⲁⲓⲙ ⲁϥⲧⲉϣⲉⲟⲩⲙⲏⲏϣⲉ ⲉⲧⲣⲉϥⲉⲓ ⲉⲣⲱⲧⲛ ⲥⲉⲛⲁⲣⲱϩⲧ ϩⲛⲟⲩϭⲉⲣⲱⲃ ⲛⲛⲟⲩⲟϭⲉ ⲛⲛⲉⲫⲩⲗⲏ ⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "Now shall the daughter of Ephraim be completely hedged in: he has laid siege against us: they shall smite the tribes of Israel with a rod upon the cheek.",
+      "source": "Micah 4",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲱⲧ ⲉⲣⲟⲓ ⲁⲩⲱ **ⲁϥⲱⲣⲃ **ⲉϩⲟⲩⲛ**** ⲛⲧⲁⲁⲡⲉ",
+      "english": "BETH. He has built against me, and compassed my head, and brought travail upon me.",
+      "source": "Lamentations 3",
+      "urn": "urn:cts:copticLit:ot.lam.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3714,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5540",
+      "label": "ϧⲉⲛⲟⲩⲱⲣϥ",
+      "pos": "ADV",
+      "gloss": "quietly"
+    },
+    {
+      "target": "C5541",
+      "label": "ⲁⲧⲟⲣⲃ⸗",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5542",
+      "label": "ⲁⲧⲟⲣⲃ⸗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "unlimited, boundless"
+    },
+    {
+      "target": "C5543",
+      "label": "ⲟⲣⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "constraint"
+    },
+    {
+      "target": "C5544",
+      "label": "ⲣⲃⲉ",
+      "pos": "N",
+      "gloss": "enclosure, pen (for animals)"
+    },
+    {
+      "target": "C5539",
+      "label": "ⲱⲣϥ",
+      "pos": "N",
+      "gloss": "seclusion, quietude"
+    },
+    {
+      "target": "C5535",
+      "label": "ⲱⲣⲃ",
+      "pos": "V",
+      "gloss": "be enclosed, be apart, be quiet; restrict, surround"
+    },
+    {
+      "target": "C5538",
+      "label": "ⲱⲣⲃ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "surrounding, frame, siege"
+    },
+    {
+      "target": "C5536",
+      "label": "ⲱⲣⲃ ⲉⲡⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "reject"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "C5143",
+  "forms": [
+    {
+      "id": "CF12251",
+      "orth": "ⲟⲩⲟⲣϣϥ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲟⲣϣϥ",
+      "dialect": "B",
+      "id": "3152.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5775",
+      "bibliography": "CD 491b; CDC 76b; CED 216; KoptHWb 276"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5142",
+      "label": "ⲁⲛⲟⲩⲣϣⲉ",
+      "pos": "N",
+      "gloss": "watchman, guard"
+    },
+    {
+      "target": "C5141",
+      "label": "ⲟⲩⲣϣⲉ",
+      "pos": "N",
+      "gloss": "watch, watch tower"
+    }
+  ]
+}

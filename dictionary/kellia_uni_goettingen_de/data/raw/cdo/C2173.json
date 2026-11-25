@@ -1,0 +1,278 @@
+{
+  "id": "C2173",
+  "forms": [
+    {
+      "id": "CF6058",
+      "orth": "ϯⲙⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5337,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2513",
+      "bibliography": "CD 198b; KoptHWb 107; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ϯⲙⲟⲟⲩ** ⲉⲛⲉϥⲟⲩⲣⲏⲏⲧⲉ ϫⲉⲛⲛⲉⲕⲟⲃϣⲕ ⲉⲃⲟⲗ",
+      "english": "Set water for his feet. Forget not this.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲣϩⲟⲧⲉ ⲉϫⲱⲕⲙ · ⲉⲡⲉⲓⲇⲉ ⲛⲥⲁⲉⲓⲛ ϩⲱⲛ ⲉⲧⲟⲟⲧ ⲉⲧⲙ**ϯⲙⲟⲟⲩ** ⲉϫⲛⲧⲁⲁⲡⲉ ·",
+      "english": "The truth is that I am afraid to wash, for the physicians ordered me not to allow water to touch my head.'",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲟⲧϥ ⲇⲉ ⲉⲧⲉⲥϩⲓⲙⲉ ⲡⲉϫⲁϥ ⲛⲥⲓⲙⲱⲛ ϫⲉⲕⲛⲁⲩ ⲉⲧⲉⲓⲥϩⲓⲙⲉ . ⲁⲓⲉⲓ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲏⲓ ⲙⲡⲕ**ϯⲙⲟⲟⲩ** ⲛⲁⲓ ⲉⲓⲁⲣⲁⲧ ⲛⲧⲟⲥ ⲇⲉ ⲁⲥϩⲣⲡⲛⲁⲟⲩⲉⲣⲏⲧⲉ ⲛⲛⲉⲥⲣⲙⲓⲟⲟⲩⲉ ⲉⲁⲥϥⲟⲧⲟⲩ ⲙⲡⲉⲥϥⲱ .",
+      "english": "Turning to the woman, he said to Simon, 'Do you see this woman? I entered into your house, and you gave me no water for my feet, but she has wet my feet with her tears, and wiped them with the hair of her head.",
+      "source": "42_Luke_7",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲣⲏⲏⲧⲉ",
+        2,
+        15.983
+      ],
+      [
+        "ⲁⲥⲡⲁⲍⲉ",
+        2,
+        15.043
+      ],
+      [
+        "ⲉⲓⲁ",
+        1,
+        11.703
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        9.797
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        9.581
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        9.155
+      ],
+      [
+        "ⲉⲧⲟⲟⲧ",
+        1,
+        8.768
+      ],
+      [
+        "ⲣⲁⲧ",
+        1,
+        8.673
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.981
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        7.938
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        7.735
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.732
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.425
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.146
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        6.95
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.868
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲙ_1_pre_ϯⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϯⲙⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϯⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_2_post_ⲉϫⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲙ_1_pre_ϯⲙⲟⲟⲩ",
+          "ϯⲙⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϯⲙⲟⲟⲩ_0_node",
+          "ⲉϫⲛ_1_post_ϯⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϯⲙⲟⲟⲩ",
+          "ⲧⲁ_3_post_ⲁⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲁⲡⲉ",
+          "ⲁⲡⲉ_2_post_ⲉϫⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4917,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2168",
+      "label": "ⲕⲁⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "cease (to give) water"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2165",
+      "label": "ⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "water; inundation"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2170",
+      "label": "ⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "become water, liquify"
+    },
+    {
+      "target": "C2171",
+      "label": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2172",
+      "label": "ⲥⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "scatter, distribute water"
+    }
+  ]
+}

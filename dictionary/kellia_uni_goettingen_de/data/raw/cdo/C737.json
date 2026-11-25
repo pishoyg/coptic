@@ -1,0 +1,224 @@
+{
+  "id": "C737",
+  "forms": [
+    {
+      "id": "CF2752",
+      "orth": "ⲉⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 133.25,
+        "rank": 13,
+        "count": 21023
+      }
+    },
+    {
+      "id": "CF2753",
+      "orth": "ⲉⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 131.36,
+        "rank": 18,
+        "count": 11141
+      }
+    },
+    {
+      "id": "CF2754",
+      "orth": "ⲉⲧ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2755",
+      "orth": "ⲉⲧ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2756",
+      "orth": "ⲉⲧ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2757",
+      "orth": "ⲉⲧ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF2758",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 16.14,
+        "rank": 79,
+        "count": 2546
+      }
+    },
+    {
+      "id": "CF2759",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 40.93,
+        "rank": 36,
+        "count": 3471
+      }
+    },
+    {
+      "id": "CF2760",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2761",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2762",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2763",
+      "orth": "ⲉⲑ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 25.98,
+        "rank": 55,
+        "count": 2203
+      }
+    },
+    {
+      "id": "CF2764",
+      "orth": "ⲉⲧⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.25,
+        "rank": 181,
+        "count": 986
+      }
+    },
+    {
+      "id": "CF2765",
+      "orth": "ⲉⲧⲉⲣⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1683,
+        "count": 20
+      }
+    },
+    {
+      "id": "CF2766",
+      "orth": "ⲉⲧⲉⲣⲉ-",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2767",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 40.93,
+        "rank": 36,
+        "count": 3471
+      }
+    },
+    {
+      "id": "CF2768",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2769",
+      "orth": "ⲉⲧⲉ-",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2770",
+      "orth": "ⲉⲧⲉⲗⲉ-",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Relativkonverter",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS878",
+      "bibliography": "CD 61a; CED 38; KoptHWb 40, 41; DELC 47; ChLCS 12a; Till D § 356; LCG § 399"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲉⲧ**ⲁⲩⲭⲁϥ ⲁⲩⲫⲱⲧ ⲧⲏⲣⲟⲩ",
+      "english": "They all left him, and fled.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲛⲏⲩ ⲅⲁⲣ ⲉⲃⲟⲗ ϩⲓ ϩⲟⲩⲛ ⲙⲡϩⲏⲧ ⲛⲛⲣⲱⲙⲉ ⲛϭⲓⲙⲙⲉⲉⲩⲉ **ⲉⲧ**ϩⲟⲟⲩ ϩⲉⲛⲡⲟⲣⲛⲉⲓⲁ ϩⲉⲛϫⲓⲟⲩⲉ .",
+      "english": "For from within, out of the hearts of men, proceed evil thoughts, adulteries, sexual sins, murders, thefts,",
+      "source": "41_Mark_7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲉⲧ**ⲁⲩϭⲓⲧϥ ⲁⲩϩⲓⲟⲩⲓ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲁⲩⲟⲩⲟⲣⲡϥ ⲉϥϣⲟⲩⲓⲧ .",
+      "english": "They took him, beat him, and sent him away empty.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁϥϣⲁϫⲉ ⲛⲙⲙⲁⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲟⲕ ⲟⲩϩⲱⲃ ⲛⲟⲩⲱⲧ ⲡ**ⲉⲧ**ϯϩⲱⲛ ⲙⲙⲟϥ ⲉⲧⲟⲧⲧⲏⲩⲧⲛ ⲉⲧⲙⲧⲣⲉⲗⲁⲁⲩ ⲙⲙⲱⲧⲛ ⲉⲡⲓⲑⲩⲙⲉⲓ ⲉⲗⲁⲁⲩ ⲙⲙⲛⲧⲛⲟϭ",
+      "english": "He said to them: I only command one thing to you, that none of you desire any greatness.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲉⲧ**ⲁϥⲙⲟⲩϯ ⲉⲡⲓⲁⲗⲟⲩ ⲓⲥⲁⲁⲕ ⲁϥϣⲉⲛϥ ϫⲉⲉⲣⲉⲡⲉⲕⲥⲁϧ ⲑⲱⲛ .",
+      "english": "He asked the boy Isaac, 'Where is your master?'",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲓⲥⲱⲧⲙ ⲇⲉ ⲉⲣⲟⲟⲩ ⲁⲓⲣϣⲡⲏⲣⲉ ⲉⲙⲁⲧⲉ · ⲁⲩⲱ ⲡⲉϫⲁⲓ ⲛⲁϥ ϫⲉⲡⲁⲉⲓⲱⲧ · ⲉϣϫⲉ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ **ⲉⲧ**ⲣⲁⲛⲁϥ ⲙⲡϫⲟⲉⲓⲥ · ⲙⲁⲣⲛⲉⲓⲣⲉ ϩⲓⲛⲁⲓ ⲙⲁⲣⲛⲟⲩⲁϩⲛ ⲛⲥⲁⲡϫⲟⲉⲓⲥ · ⲛⲧⲛϩⲁⲣⲉϩ ⲉⲛⲉϥⲉⲛⲧⲟⲗⲏ ⲛⲁⲛⲟⲩⲛϭⲓⲛⲣϩⲱⲃ ⲧⲏⲣⲟⲩ ⲙⲡϫⲟⲉⲓⲥ · ⲁⲩⲱ ⲥⲉⲧⲁⲓⲏⲩ ⲉⲩⲥⲟⲧⲡ ⲉⲙⲁⲧⲉ · ⲁⲩⲱ ⲥⲉⲃⲏⲕ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡϫⲟⲉⲓⲥ ϩⲓⲟⲩⲥⲟⲡ",
+      "english": "When I heard these things, I was very amazed, and said to him, “My father, if this is how it pleases the Lord, let us act thusly. Let us follow the Lord, and keep his commandments. All laborings for the Lord are good. They are honorable and greatly favored, and they enter the Lord's house together.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C617",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C681",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C698",
+      "type": "cf",
+      "label": "archaic relative prefix with past tenses"
+    }
+  ],
+  "etym": {
+    "egy_num": "89850",
+    "egy_lemma": "n.tj",
+    "demo_num": "d3301",
+    "demo_lemma": "ntj",
+    "english": "the one who; which (relative pron.)",
+    "german": "der welcher (Relativpronomen)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89850",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3301"
+  }
+}

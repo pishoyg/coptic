@@ -1,0 +1,55 @@
+{
+  "id": "C1209",
+  "forms": [
+    {
+      "id": "CF3805",
+      "orth": "ⲕⲁⲗⲁϫⲧⲱⲣⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3806",
+      "orth": "ⲕⲁⲗϫⲧⲟⲣⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1402",
+      "bibliography": "CD 107b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1210",
+      "label": "ⲕⲗϫⲉ",
+      "pos": "N",
+      "gloss": "angle, corner"
+    },
+    {
+      "target": "C1207",
+      "label": "ⲕⲱⲗϫ",
+      "pos": "V",
+      "gloss": "bend, be bent; bend, twist"
+    },
+    {
+      "target": "C1208",
+      "label": "ⲕⲱⲗϫ",
+      "pos": "N",
+      "gloss": "bent state, perversion, depression"
+    },
+    {
+      "target": "C1211",
+      "label": "ⲙⲉⲧⲕⲗϫⲉ",
+      "pos": "N",
+      "gloss": "crookedness"
+    }
+  ]
+}

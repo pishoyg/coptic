@@ -1,0 +1,50 @@
+{
+  "id": "C1784",
+  "forms": [
+    {
+      "id": "CF5152",
+      "orth": "ϭⲓⲙⲁⲓⲏ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF5153",
+      "orth": "ϭⲓⲙⲁⲏ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2084",
+      "bibliography": "CD 156a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12186",
+      "label": "ⲁⲙⲁⲓⲏⲥ",
+      "pos": "N",
+      "gloss": "substance, form"
+    },
+    {
+      "target": "C1783",
+      "label": "ⲙⲁⲓⲏ",
+      "pos": "N",
+      "gloss": "size, age, kind"
+    }
+  ]
+}

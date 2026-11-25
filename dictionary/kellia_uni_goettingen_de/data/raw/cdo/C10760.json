@@ -1,0 +1,104 @@
+{
+  "id": "C10760",
+  "forms": [
+    {
+      "id": "CF29251",
+      "orth": "ⲧⲟⲗⲙⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29252",
+      "orth": "ⲧⲟⲗⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16806,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14802",
+      "bibliography": "DDGLC",
+      "cu_ID": "7384"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲱⲥ ⲇⲉ ϯⲥⲟⲟⲩⲛ ⲙⲙⲱⲧⲛ ϫⲉⲧⲉⲧⲛⲧⲱⲟⲩⲛ ⲉϫⲱⲓ ϩⲛⲟⲩ**ⲧⲟⲗⲙⲏ**",
+      "english": "So I know you, that ye presumptuously attack me:",
+      "source": "Job 21",
+      "urn": "urn:cts:copticLit:ot.job.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁϣ",
+        1,
+        11.051
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲟⲗⲙⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16408,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6508",
+    "grl_lemma": "τόλμη",
+    "grl_meaning": "courage, (over-)boldness, recklessness",
+    "grl_pos": "noun",
+    "grl_ref": "cf. τόλμα, s.v. LSJ 1803a; Preisigke 2:606"
+  }
+}

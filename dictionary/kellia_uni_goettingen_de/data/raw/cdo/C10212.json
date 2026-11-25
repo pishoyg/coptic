@@ -1,0 +1,131 @@
+{
+  "id": "C10212",
+  "forms": [
+    {
+      "id": "CF26975",
+      "orth": "ⲡⲗⲟⲩⲥⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26976",
+      "orth": "ⲡⲗⲟⲩⲥⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7758,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13598",
+      "bibliography": "DDGLC",
+      "cu_ID": "7130"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲛⲉⲩⲛⲟⲩⲣⲱⲙⲉ ⲙ**ⲡⲗⲟⲩⲥⲓⲟⲥ** ⲉⲩⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛϩⲁϩ ⲛⲭⲣⲏⲙⲁ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲁⲕⲉϩⲉⲃⲇⲟⲙⲁⲥ · ⲁⲩⲧⲱϩⲙ ⲛⲟⲩⲙⲏⲏϣⲉ : ⲙ**ⲡⲗⲟⲩⲥⲓⲟⲥ** · ⲙⲛⲟⲩⲙⲏⲏϣⲉ ⲛⲁⲣⲭⲱⲛ · ⲁⲩⲉⲓⲣⲉ ⲛⲧϣⲉⲗⲉⲉⲧ ϩⲛⲟⲩⲛⲟϭ ⲙⲙⲛⲧⲉⲡⲓⲅⲏⲥ · ⲁⲩⲱ ⲁⲩⲣⲁϣⲉ ⲉⲙⲁⲧⲉ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲩⲛⲧⲁ",
+        1,
+        14.644
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        2,
+        12.887
+      ],
+      [
+        "ⲩⲛ",
+        1,
+        12.576
+      ],
+      [
+        ":",
+        1,
+        10.406
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲟⲩⲥⲓⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7301,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5279",
+    "grl_lemma": "πλούσιος",
+    "grl_meaning": "wealthy, opulent",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1422b; Preisigke 2:325"
+  }
+}

@@ -1,0 +1,783 @@
+{
+  "id": "C4130",
+  "forms": [
+    {
+      "id": "CF10205",
+      "orth": "ⲧⲃⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 988,
+        "count": 97
+      }
+    },
+    {
+      "orth": "ⲧⲉⲃⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.68,
+        "rank": 920,
+        "count": 58
+      }
+    },
+    {
+      "orth": "ⲧⲏⲃⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4315,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲧⲏϥⲧ",
+      "dialect": "S",
+      "id": "52.2"
+    },
+    {
+      "orth": "ⲧⲃⲧ",
+      "dialect": "A",
+      "id": "52.3"
+    },
+    {
+      "orth": "ⲧⲩⲃⲧ",
+      "dialect": "F",
+      "id": "52.4"
+    },
+    {
+      "orth": "ⲧⲏⲃⲉⲧ",
+      "dialect": "F",
+      "id": "52.5"
+    },
+    {
+      "orth": "ⲧⲃⲧ",
+      "dialect": "L",
+      "id": "52.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4690",
+      "bibliography": "CD 401b; CDC 63a; CED 183; KoptHWb 223; DELC 211b; ChLCS 56b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϭⲓ ⲙⲡⲓⲉ ⲛⲱⲓⲕ ⲛⲉⲙⲛⲓ**ⲧⲉⲃⲧ** ⲃ ⲁϥϫⲟⲩϣⲧ ⲉⲧⲫⲉ ⲟⲩⲟϩ ⲁϥⲥⲙⲟⲩ ⲟⲩⲟϩ ⲁϥⲫⲱϣ ⲛⲛⲓⲱⲓⲕ ⲟⲩⲟϩ ⲁϥϯ ⲛⲛⲓⲙⲁⲑⲏⲧⲏⲥ ϩⲓⲛⲁ ⲛⲧⲟⲩⲭⲱ ⲛⲁϩⲣⲁⲩ ⲛⲉⲙⲛⲓⲕⲉⲧⲉⲃⲧ ⲃ ⲁϥⲫⲁϣⲟⲩ ⲉϩⲣⲁⲩ ⲧⲏⲣⲟⲩ",
+      "english": "He took the five loaves and the two fish, and looking up to heaven, he blessed and broke the loaves, and he gave to his disciples to set before them, and he divided the two fish among them all.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ ⲅⲁⲣ ⲉⲕⲱⲧⲉ ⲛⲥⲁⲟⲩϣⲏⲙ ⲛ**ⲧⲃⲧ** ⲛⲁⲩ ·",
+      "english": "and I ought to seek for some small fish for them.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉⲟⲩⲟⲛ ϩⲁⲛⲕⲉⲕⲟⲩϫⲓ ⲛ**ⲧⲉⲃⲧ** ⲛⲧⲟⲧⲟⲩ ⲟⲩⲟϩ ⲁϥⲥⲙⲟⲩ ⲉⲣⲱⲟⲩ ⲁϥϫⲟⲥ ⲉⲑⲣⲟⲩⲭⲱ ⲛⲛⲁⲓⲕⲉⲭⲱⲟⲩⲛⲓ ⲛⲁϩⲣⲁⲩ .",
+      "english": "They had a few small fish. Having blessed them, he said to serve these also.",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲡⲓⲥⲉ ⲙⲡⲕⲟⲩⲓ ⲛ**ⲧⲃⲧ**",
+      "english": "And he cooked the small fish.",
+      "source": "Apophthegmata Patrum Sahidic 115: Pistus 1",
+      "urn": "urn:cts:copticLit:ap.115.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁⲣⲝ ⲛⲓⲃⲉⲛ ⲧⲁⲓⲥⲁⲣⲝ ⲧⲁⲓⲥⲁⲣⲝ ⲁⲛ ⲧⲉ ⲁⲗⲗⲁ ⲟⲩⲉⲧⲥⲁⲣⲝ ⲙⲉⲛ ⲛⲧⲉⲛⲓⲣⲱⲙⲓ ⲟⲩⲉⲧⲥⲁⲣⲝ ⲛⲧⲉⲛⲓⲧⲉⲃⲛⲱⲟⲩⲓ ⲟⲩⲉⲧⲥⲁⲣⲝ ⲛⲧⲉⲛⲓϩⲁⲗⲁϯ ⲟⲩⲉⲧⲑⲁⲛⲓ**ⲧⲉⲃⲧ** .",
+      "english": "All flesh is not the same flesh, but there is one flesh of men, another flesh of animals, another of fish, and another of birds.",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥϫⲓ ⲇⲉ ⲙⲡϯⲟⲩ ⲛⲟⲉⲓⲕ ⲛⲙⲡⲧⲃⲧ ⲥⲛⲁⲩ ⲁϥϥⲓⲉⲓⲁⲧϥ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ⲁϥⲥⲙⲟⲩ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲁϥⲡⲉϣⲛⲟⲉⲓⲕ ⲁϥⲧⲁⲁⲩ ⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲉⲩⲉⲕⲁⲁⲩ ϩⲁⲣⲱⲟⲩ ⲡⲕⲉ**ⲧⲃⲧ** ⲥⲛⲁⲩ ⲁϥⲡⲟϣⲟⲩ ⲉϫⲱⲟⲩ ⲧⲏⲣⲟⲩ",
+      "english": "He took the five loaves and the two fish, and looking up to heaven, he blessed and broke the loaves, and he gave to his disciples to set before them, and he divided the two fish among them all.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲱⲓⲕ",
+        11,
+        21.582
+      ],
+      [
+        "ⲛⲓ",
+        33,
+        21.352
+      ],
+      [
+        "ⲃⲁ",
+        3,
+        21.28
+      ],
+      [
+        "ⲛⲉⲙ",
+        26,
+        20.344
+      ],
+      [
+        "ϥ",
+        39,
+        20.28
+      ],
+      [
+        "ⲃ",
+        9,
+        20.219
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        33,
+        20.213
+      ],
+      [
+        ".",
+        29,
+        20.19
+      ],
+      [
+        "ⲫ",
+        23,
+        20.135
+      ],
+      [
+        "ⲓⲟⲙ",
+        8,
+        20.009
+      ],
+      [
+        "ⲕⲉ",
+        11,
+        19.839
+      ],
+      [
+        "ⲟⲩ",
+        32,
+        19.754
+      ],
+      [
+        "ⲃⲉⲧⲁ",
+        1,
+        19.695
+      ],
+      [
+        "ⲣⲛⲅ",
+        1,
+        19.695
+      ],
+      [
+        "ⲍⲛⲉⲙ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛ",
+        32,
+        19.591
+      ],
+      [
+        "ⲉⲣⲥⲛⲟϥ",
+        2,
+        19.525
+      ],
+      [
+        "ⲛⲧⲟⲧ",
+        7,
+        19.038
+      ],
+      [
+        "ⲛⲧⲉ",
+        18,
+        18.576
+      ],
+      [
+        "ⲫⲁϣ",
+        3,
+        18.26
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        96,
+        16.964
+      ],
+      [
+        "ϥ",
+        72,
+        16.431
+      ],
+      [
+        "ϫⲓⲣ",
+        2,
+        15.998
+      ],
+      [
+        "ⲁ",
+        57,
+        15.943
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        13,
+        15.422
+      ],
+      [
+        "ⲓⲉⲣⲟ",
+        7,
+        15.322
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        9,
+        14.85
+      ],
+      [
+        "ⲡ",
+        42,
+        14.074
+      ],
+      [
+        "ⲡⲟⲥϣ",
+        1,
+        13.998
+      ],
+      [
+        "ⲙⲛⲙⲟⲟⲩ·",
+        1,
+        13.998
+      ],
+      [
+        "ⲥⲟⲩⲱⲙ",
+        1,
+        13.998
+      ],
+      [
+        "ⲛϣⲛ",
+        1,
+        13.998
+      ],
+      [
+        "ⲟⲩⲟⲙⲟϥ",
+        1,
+        13.998
+      ],
+      [
+        "ϣⲁⲁⲧⲉ",
+        1,
+        13.998
+      ],
+      [
+        "ⲁⲩⲱ",
+        29,
+        13.721
+      ],
+      [
+        "ⲟⲩ",
+        30,
+        13.341
+      ],
+      [
+        "ⲩ",
+        26,
+        13.311
+      ],
+      [
+        "ⲡⲟϣ",
+        3,
+        13.229
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        6,
+        13.191
+      ],
+      [
+        "ϣⲛⲉ",
+        2,
+        13.091
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲃⲧ_0_node",
+          64
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲃⲧ",
+          7
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          11
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲃⲧ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲃⲧ",
+          7
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲃⲧ",
+          7
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          4
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲧⲃⲧ",
+          7
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲟⲟϣⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲉⲓⲟⲟⲩⲉ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲉⲧⲉⲣⲉ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲥⲙⲟⲧ_2_post_ⲉⲧⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲛϩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲙⲟⲧ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲓⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲃⲧ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲃⲧ",
+          "ⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲃⲧ",
+          "ⲛ_1_pre_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲛ_1_post_ⲧⲃⲧ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲧⲃⲧ",
+          4
+        ],
+        [
+          "ⲛⲙ_1_pre_ⲧⲃⲧ",
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          "ⲕⲉ_1_pre_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲃⲧ",
+          "ⲧⲃⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲃⲧ",
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          "ⲙⲛ_2_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲁⲗⲁⲁⲧⲉ",
+          "ⲛ_2_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          "ⲁⲩⲱ_4_post_ϩⲁⲗⲁⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲁⲗⲁⲁⲧⲉ",
+          "ⲉϫⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲙ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲧⲃⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲉⲧ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲃⲧ",
+          "ϩⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲃⲧ",
+          "ⲡ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲛ",
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲧⲃⲧ",
+          "ⲡ_1_pre_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲧⲃⲧ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲃⲧ",
+          "ⲙⲟⲟϣⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲟⲟϣⲉ_2_post_ⲉⲧ",
+          "ϩⲛ_3_post_ⲙⲟⲟϣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲙⲟⲟϣⲉ",
+          "ⲙ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϩⲛ",
+          "ⲙⲟⲩⲉⲓⲟⲟⲩⲉ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲃⲧ_0_node",
+          "ⲛⲓⲙ_1_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲧⲃⲧ",
+          "ⲉⲧⲉⲣⲉ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲣⲉ_1_post_ⲧⲃⲧ",
+          "ⲥⲙⲟⲧ_2_post_ⲉⲧⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲙⲟⲧ_2_post_ⲉⲧⲉⲣⲉ",
+          "ⲛ_3_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲙⲟⲧ",
+          "ⲧⲛϩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲧⲃⲧ",
+          "ⲉⲧⲉ_1_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲧⲃⲧ",
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲧⲉ",
+          "ⲥⲙⲟⲧ_3_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲥⲙⲟⲧ_3_post_ⲙⲛ",
+          "ⲛ_4_post_ⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲃⲧ",
+          "ⲡⲉⲕ_3_post_ⲓⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲓⲉⲣⲟ",
+          "ⲓⲉⲣⲟ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.61,
+      "rank": 862,
+      "count": 97
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4132",
+      "label": "ϭⲉⲡⲧⲃⲧ",
+      "pos": "V",
+      "gloss": "catch fish"
+    },
+    {
+      "target": "C4134",
+      "label": "ⲣⲉϥϭⲡⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4135",
+      "label": "ⲣⲉϥϭⲡⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4136",
+      "label": "ⲣⲉϥⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4137",
+      "label": "ⲣⲉϥⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish catcher, fisherman"
+    },
+    {
+      "target": "C4131",
+      "label": "ⲥⲁ ⲛⲧⲃⲧ",
+      "pos": "N",
+      "gloss": "fish seller"
+    },
+    {
+      "target": "C4133",
+      "label": "ⲧⲁϩⲉⲧⲃⲧ",
+      "pos": "V",
+      "gloss": "catch fish"
+    }
+  ],
+  "etym": {
+    "egy_num": "170590",
+    "egy_lemma": "tb.t",
+    "demo_num": "d7228",
+    "demo_lemma": "tbṱ",
+    "english": "fish",
+    "german": "Fische",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/170590",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7228"
+  }
+}

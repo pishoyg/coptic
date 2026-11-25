@@ -1,0 +1,52 @@
+{
+  "id": "C3440",
+  "forms": [
+    {
+      "id": "CF8780",
+      "orth": "ⲥⲕⲉⲛϩⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3918",
+      "bibliography": "CD 329a; CED 150; KoptHWb 182; DELC 187"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3403",
+      "type": "cf",
+      "label": "appearance"
+    },
+    {
+      "target": "C6398",
+      "type": "cf",
+      "label": "face"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3441",
+      "label": "ϭⲓ ⲛⲥⲕⲉⲛϩⲟ",
+      "pos": "V",
+      "gloss": "make a good/handsome impression"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5639",
+    "demo_lemma": "sq-(n-)ḥr",
+    "english": "respected (or similar); [substantivized] reputation",
+    "german": "angesehen (o.ä.); [substantiviert] Ansehen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5639"
+  }
+}

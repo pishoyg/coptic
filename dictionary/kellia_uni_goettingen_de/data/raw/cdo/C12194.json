@@ -1,0 +1,43 @@
+{
+  "id": "C12194",
+  "forms": [
+    {
+      "id": "CF33209",
+      "orth": "ⲗⲁⲕⲙⲕⲙ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17198",
+      "bibliography": "KoptHWB 60; DMT 106a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1222",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "V",
+      "gloss": "strike, beat; make a repeated sound"
+    },
+    {
+      "target": "C1223",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "drum"
+    },
+    {
+      "target": "C1224",
+      "label": "ⲣⲉϥⲕⲉⲙⲕⲉⲙ",
+      "pos": "N",
+      "gloss": "drummer"
+    }
+  ]
+}

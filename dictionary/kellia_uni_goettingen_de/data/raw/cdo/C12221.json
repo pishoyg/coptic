@@ -1,0 +1,44 @@
+{
+  "id": "C12221",
+  "forms": [
+    {
+      "id": "CF33237",
+      "orth": "ⲙⲁϣⲉⲥⲱⲡ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17225",
+      "bibliography": "DMT 114b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2195",
+      "label": "ⲙⲁϣⲉ",
+      "pos": "N",
+      "gloss": "balance"
+    },
+    {
+      "target": "C2196",
+      "label": "ⲙⲁϣⲉ",
+      "pos": "N",
+      "gloss": "balance"
+    },
+    {
+      "target": "C2197",
+      "label": "ⲡⲓⲙⲁϣ ⲛⲧⲉⲡⲓⲕⲁⲡ",
+      "pos": "N",
+      "gloss": "plumb-line"
+    }
+  ]
+}

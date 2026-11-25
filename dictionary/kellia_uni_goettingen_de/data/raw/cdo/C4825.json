@@ -1,0 +1,63 @@
+{
+  "id": "C4825",
+  "forms": [
+    {
+      "id": "CF11615",
+      "orth": "ⲣⲉϥⲧⲱϩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5444",
+      "bibliography": "CD 461b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4826",
+      "label": "ϫⲓⲛⲑⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointing"
+    },
+    {
+      "target": "C4823",
+      "label": "ϫⲓⲧⲱϩⲥ",
+      "pos": "V",
+      "gloss": "get anointment"
+    },
+    {
+      "target": "C4824",
+      "label": "ⲣⲉϥⲧⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointer"
+    },
+    {
+      "target": "C4822",
+      "label": "ⲧⲁϩⲥ",
+      "pos": "N",
+      "gloss": "anointing, ointment"
+    },
+    {
+      "target": "C4820",
+      "label": "ⲧⲱϩⲥ",
+      "pos": "V",
+      "gloss": "anoint"
+    },
+    {
+      "target": "C4821",
+      "label": "ⲧⲱϩⲥ",
+      "pos": "N",
+      "gloss": "anointing"
+    }
+  ]
+}

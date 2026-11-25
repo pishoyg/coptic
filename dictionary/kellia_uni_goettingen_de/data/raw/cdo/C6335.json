@@ -1,0 +1,72 @@
+{
+  "id": "C6335",
+  "forms": [
+    {
+      "id": "CF14685",
+      "orth": "ⲉϧⲟⲩⲛ ϩⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.39,
+        "rank": 1286,
+        "count": 33
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7030",
+      "bibliography": "CD 634b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁϥⲓ ⲛϫⲉⲓⲱⲥⲏⲫ ⲡⲓⲉⲃⲟⲗ ϧⲉⲛⲁⲣⲓⲙⲁⲑⲉⲁⲥ ⲉⲟⲩⲉⲩⲥⲭⲏⲙⲱⲛ ⲡⲉ ⲙⲃⲟⲩⲗⲉⲩⲧⲏⲥ ⲫⲁⲓ ⲉⲧⲉⲛⲑⲟϥ ϩⲱϥ ⲛⲁϥϫⲟⲩϣⲧ ⲉⲃⲟⲗ ϧⲁⲧϩⲏ ⲛϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲁϥⲉⲣⲧⲟⲗⲙⲁⲛ ⲁϥϣⲉ **ⲉϧⲟⲩⲛ **ϩⲁ**ⲡⲓⲗⲁⲧⲟⲥ** ⲟⲩⲟϩ ⲁϥⲉⲣⲉⲧⲓⲛ ⲙⲡⲥⲱⲙⲁ ⲛⲓⲏⲥⲟⲩⲥ",
+      "english": "Joseph of Arimathaea, a prominent council member who also himself was looking for the Kingdom of God, came. He boldly went in to Pilate, and asked for Jesus' body.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓ **ⲉϧⲟⲩⲛ **ϩⲁ**ⲏⲥⲁⲏⲁⲥ** ⲛϫⲉⲛⲓⲁⲗⲱⲟⲩⲓ ⲛⲧⲉⲡⲟⲩⲣⲟ ⲉⲍⲉⲕⲓⲁⲥ .",
+      "english": "So the servants of king Ezekias came to Esaias.",
+      "source": "23_Isaias_37",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:37",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϣⲉⲛⲁϥ **ⲉϧⲟⲩⲛ **ϩⲁ**ⲣⲁⲭⲏⲗ** ⲁϥⲙⲉⲛⲣⲉ ⲣⲁⲭⲏⲗ ⲇⲉ ⲉϩⲟⲧⲉ ⲗⲓⲁ ⲟⲩⲟϩ ⲁϥⲉⲣⲃⲱⲕ ⲛⲁϥ ⲛⲕⲉⲍ ⲛⲣⲟⲙⲡⲓ",
+      "english": "And he went in to Rachel; and he loved Rachel more than Lea; and he served him seven other years.",
+      "source": "01_Genesis_29",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:29",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.78,
+      "rank": 750,
+      "count": 66
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6333",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "to, toward"
+    },
+    {
+      "target": "C6334",
+      "label": "ⲉⲃⲟⲗ ϩⲁ",
+      "pos": "PREP",
+      "gloss": "from"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C5265",
+  "forms": [
+    {
+      "id": "CF12499",
+      "orth": "ϯⲟⲩⲱϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5911",
+      "bibliography": "CD 501b; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5267",
+      "label": "ⲛⲟⲩⲉϣ ⲛ-",
+      "pos": "PREP",
+      "gloss": "with lack of, without"
+    },
+    {
+      "target": "C5263",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "cleft, gap; space, distance; interval, pause, holiday"
+    },
+    {
+      "target": "C5264",
+      "label": "ⲣⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "make a pause, wait (for)"
+    },
+    {
+      "target": "C5266",
+      "label": "ⲧⲁⲡⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "gap, chink"
+    }
+  ]
+}

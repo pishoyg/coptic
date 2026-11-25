@@ -1,0 +1,51 @@
+{
+  "id": "C10415",
+  "forms": [
+    {
+      "id": "CF27852",
+      "orth": "ⲥⲁⲣⲕⲁⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27855",
+      "orth": "ⲥⲁⲣⲕⲁⲛⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27853",
+      "orth": "ⲥⲁⲣⲅⲁⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19752,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27854",
+      "orth": "ⲥⲁⲣⲕⲁⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14059",
+      "bibliography": "DDGLC",
+      "cu_ID": "4039"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1934",
+    "grl_lemma": "σαργάνη",
+    "grl_meaning": "plait, basket",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1584a; Preisigke 2:450"
+  }
+}

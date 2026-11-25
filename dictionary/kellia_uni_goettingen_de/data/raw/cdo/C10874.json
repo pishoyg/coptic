@@ -1,0 +1,99 @@
+{
+  "id": "C10874",
+  "forms": [
+    {
+      "id": "CF29650",
+      "orth": "ⲫⲟⲃⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29651",
+      "orth": "ⲫⲟⲃⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12012,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15004",
+      "bibliography": "DDGLC",
+      "cu_ID": "1287"
+    },
+    {
+      "id": "CS15005",
+      "bibliography": "DDGLC",
+      "cu_ID": "7997"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱⲛϩ ⲉⲣⲟϥ ϩⲛⲟⲩⲛⲟϭ ⲙ**ⲫⲟⲃⲟⲥ** · ⲉⲣⲉⲧⲉϥⲥⲏϥⲉ ⲧⲱⲕⲙ ⲛⲧⲟⲟⲧϥ · ⲁϥϩⲓⲟⲩⲉ ⲉϫⲱϥ · ... ⲛⲧⲥⲏϥⲉ · ⲛϣⲟⲙⲛⲧ ⲛⲥⲟⲡ · ⲉϥϭⲱⲛⲧ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲏϥⲉ",
+        1,
+        11.929
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11586,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2316",
+    "grl_lemma": "φόβος",
+    "grl_meaning": "panic, fear",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1947a; Preisigke 2:698"
+  }
+}

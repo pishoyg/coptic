@@ -1,0 +1,505 @@
+{
+  "id": "C4301",
+  "forms": [
+    {
+      "id": "CF10553",
+      "orth": "ⲑⲱⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.45,
+        "rank": 1171,
+        "count": 38
+      }
+    },
+    {
+      "orth": "ⲧⲱⲙ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.43,
+        "rank": 1242,
+        "count": 68
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4872",
+      "bibliography": "CD 413a; KoptHWb 232; DELC 215a; ChLCS 58b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϫⲟⲩϣⲧ ⲉⲣⲱⲟⲩ ϧⲉⲛⲟⲩⲙⲃⲟⲛ ⲉϥⲙⲟⲕϩ ⲛϩⲏⲧ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲓ**ⲑⲱⲙ** ⲛⲧⲉⲡⲟⲩϩⲏⲧ ⲡⲉϫⲁϥ ⲙⲡⲓⲣⲱⲙⲓ ϫⲉ ⲥⲟⲩⲧⲉⲛⲧⲉⲕϫⲓϫ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲉⲧⲁϥⲥⲟⲩⲧⲱⲛⲥ ⲁⲥⲟⲩϫⲁⲓ ⲛϫⲉⲧⲉϥϫⲓϫ .",
+      "english": "When he had looked around at them with anger, being grieved at the hardening of their hearts, he said to the man, 'Stretch out your hand.' He stretched it out, and his hand was restored as healthy as the other.",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁ ⲓⲱⲥⲏⲫ ⲇⲉ ⲛⲟϩⲉⲃ ⲛⲛⲉϥⲃⲉⲣⲉϭⲱⲟⲩⲧⲥ ⲁϥⲓ ⲉⲃⲟⲗ ⲉϩⲣⲉⲛⲡⲓⲥⲣⲁⲏⲗ ⲡⲉϥⲉⲓⲱⲧ ⲉⲡⲥⲁ ⲙⲡⲉ**ⲑⲱⲙ** ϯⲃⲁⲕⲓ ⲟⲩⲟϩ ⲉⲧⲁϥⲟⲩⲟⲛϩϥ ⲉⲣⲟϥ ⲁϥϩⲓⲧϥ ⲉϧⲣⲏⲓ ⲉϫⲉⲛⲧⲉϥⲛⲁϩⲃⲓ ⲁϥⲣⲓⲙⲓ ⲛⲟⲩⲛⲓϣϯ ⲛⲣⲓⲙⲓ",
+      "english": "And Joseph having made ready his chariots, went up to meet Israel his father, at the city of Heroes; and having appeared to him, fell on his neck, and wept with abundant weeping.",
+      "source": "01_Genesis_46",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:46",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧⲥϣⲉ ⲛ**ⲑⲱⲙ** ⲉⲣⲱⲟⲩ ⲛⲏ ⲉⲧⲣⲓⲕⲓ ⲉⲃⲟⲗ ⲙⲡⲧⲏⲣϥ ⲛⲧⲉϩⲁⲛⲏⲓ ⲉⲩϯⲥⲃⲱ ⲛⲛⲏ ⲉⲧⲥϣⲉ ⲁⲛ ⲉⲑⲃⲉⲟⲩϩⲏⲟⲩ ⲉϥϣⲟϣϥ .",
+      "english": "whose mouths must be stopped; men who overthrow whole houses, teaching things which they ought not, for dishonest gain's sake.",
+      "source": "17_Titus_01",
+      "urn": "urn:cts:copticLit:nt.titus.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲑⲱⲙ_0_node",
+          22
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          4
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲑⲱⲙ",
+          9
+        ],
+        [
+          "ⲣⲱ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ⲕ_3_post_ⲣⲱ",
+          5
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲁⲙⲟⲩ",
+          3
+        ],
+        [
+          "ⲁⲙⲟⲩ_1_post_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          2
+        ],
+        [
+          "ⲃⲁⲕⲓ_1_post_ⲑⲱⲙ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲣⲁⲙⲉⲥⲥⲏ",
+          1
+        ],
+        [
+          "ⲣⲁⲙⲉⲥⲥⲏ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲑⲟϥ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲑⲱⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          8
+        ],
+        [
+          "ⲣⲱ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ϥ_2_pre_ⲣⲱ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲟⲩ_3_post_ⲣⲱ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲥⲉⲡⲓ",
+          1
+        ],
+        [
+          "ⲥⲉⲡⲓ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲭⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲭⲁⲕⲓ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲃⲁⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲛⲧⲉ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲑⲱⲙ",
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲛ_1_post_ⲑⲱⲙ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲑⲱⲙ",
+          "ⲣⲱ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲣⲱ_2_post_ⲛ",
+          "ⲕ_3_post_ⲣⲱ",
+          2
+        ],
+        [
+          "ⲕ_3_post_ⲣⲱ",
+          "ⲟⲩⲟϩ_2_post_ⲁⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲁⲙⲟⲩ",
+          "ⲁⲙⲟⲩ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲱⲙ",
+          "ϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲉⲣⲱ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲑⲱⲙ",
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_1_post_ⲑⲱⲙ",
+          2
+        ],
+        [
+          "ⲃⲁⲕⲓ_1_post_ⲑⲱⲙ",
+          "ϧⲉⲛ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲑⲱⲙ",
+          "ⲡ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϧⲉⲛ",
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲛⲉⲙ_2_post_ⲣⲁⲙⲉⲥⲥⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲣⲁⲙⲉⲥⲥⲏ",
+          "ⲣⲁⲙⲉⲥⲥⲏ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲑⲟϥ_1_pre_ⲑⲱⲙ",
+          "ⲇⲉ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲑⲱⲙ",
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          "ⲣⲱ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_pre_ⲑⲱⲙ",
+          "ϥ_2_pre_ⲣⲱ",
+          1
+        ],
+        [
+          "ϥ_2_pre_ⲣⲱ",
+          "ⲑⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          "ϥ_1_pre_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          3
+        ],
+        [
+          "ⲣⲱ_2_post_ⲛ",
+          "ⲟⲩ_3_post_ⲣⲱ",
+          2
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲟⲩⲟϩ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_2_post_ⲑⲱⲙ",
+          "ⲁ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲑⲱⲙ",
+          "ϥ_2_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲑⲱⲙ",
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲙ_1_post_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲑⲱⲙ",
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲥⲉⲡⲓ",
+          "ⲥⲉⲡⲓ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲥⲉⲡⲓ_1_pre_ⲑⲱⲙ",
+          "ⲇⲉ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          "ⲩ_1_pre_ⲑⲱⲙ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          3
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲑⲱⲙ",
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲑⲱⲙ_0_node",
+          "ⲅⲁⲣ_2_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_2_post_ⲭⲏ",
+          "ⲛⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲑⲱⲙ",
+          "ⲡⲓ_2_pre_ⲭⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲭⲁⲕⲓ",
+          "ⲭⲁⲕⲓ_1_pre_ⲑⲱⲙ",
+          1
+        ],
+        [
+          "ⲭⲁⲕⲓ_1_pre_ⲑⲱⲙ",
+          "ⲑⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲱⲙ",
+          "ⲛⲉϥ_3_post_ⲃⲁⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.77,
+      "rank": 756,
+      "count": 65
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4296",
+      "label": "ⲧⲱⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C4299",
+      "label": "ⲧⲱⲙ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bridle, curb"
+    },
+    {
+      "target": "C4300",
+      "label": "ⲧⲱⲙ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "close up?"
+    },
+    {
+      "target": "C4297",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "shut the heart, become hardened"
+    },
+    {
+      "target": "C4298",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "shutting of the heart, hardening of the heart"
+    }
+  ]
+}

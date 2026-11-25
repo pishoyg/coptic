@@ -1,0 +1,369 @@
+{
+  "id": "C503",
+  "forms": [
+    {
+      "id": "CF2005",
+      "orth": "ⲃⲱⲱⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4955,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲃⲉⲉⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7052,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲟⲟⲣ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4543,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲃⲟⲟⲣⲉ†",
+      "dialect": "S",
+      "id": "588.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS606",
+      "bibliography": "CD 42a; KoptHWb 26; ChLCS 9a"
+    },
+    {
+      "id": "CS607",
+      "bibliography": "CD 42a; ChLCS 9a"
+    },
+    {
+      "id": "CS608",
+      "bibliography": "CD 42a; KoptHWb 26; ChLCS 9a"
+    },
+    {
+      "id": "CS609",
+      "bibliography": "CD 42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲣⲓⲕⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲉⲧⲥⲟⲩⲧⲱⲛ ⲛϭⲓⲧⲉⲯⲩⲭⲏ · ⲉⲩ**ⲃⲱⲱⲣⲉ** ⲙⲙⲟⲥ ⲉⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲛⲥⲟⲟⲛⲉ ⲉⲧⲣⲉⲩⲧⲟⲣⲡⲥ ⲛϩⲏⲧⲟⲩ · ⲉⲧⲉⲛⲁⲓ ⲛⲉ ⲙⲙⲛⲧⲛⲟⲉⲓⲕ · ⲙⲛⲙⲡⲟⲣⲛⲉⲓⲁ · ⲙⲛⲙⲛⲧⲙⲁⲓⲕⲟⲥⲙⲉⲓ · ⲙⲛⲙⲙⲛⲧⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ · ⲙⲛⲙⲙⲛⲧⲣⲉϥϩⲉⲧⲃⲣⲱⲙⲉ · ⲙⲛⲙⲙⲟⲥⲧⲉ ·",
+      "english": "And the soul heeleth over into the waves which are ready for it, and it is driven on into the breakers of the thieves that engulf it, that is to say, adultery, and fornication, and the love of ornament, and the worship of idols, and the slaying of men, and hatred;",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉⲛⲉⲛⲧⲁⲛ**ⲃⲟⲟⲣ**ⲟⲩ ϩⲛⲟⲩⲑⲙⲕⲟ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ϫⲟⲟⲥ ⲛⲁⲛ ϫⲉⲉⲛⲧⲁⲛϫⲓⲧⲟⲩ ⲛϭⲟⲛⲥ ϩⲛⲟⲩ · ⲏ ϫⲉⲉⲛⲧⲁⲛⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲙⲙⲟⲟⲩ ϩⲛⲟⲩ · ϫⲉⲕⲁⲥ ϩⲱⲱⲛ ⲉⲛⲛⲁⲣϩⲙϩⲁⲗ ⲙⲡⲉⲛⲛⲟⲃⲉ · ϫⲉⲁⲛⲟⲛ ϩⲉⲛⲧⲁⲗⲁⲓⲡⲱⲣⲟⲥ ⲛⲉⲃⲓⲏⲛ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ · ϫⲉⲙⲡⲁⲓ ϩⲙⲡⲉⲛϩⲏⲧ ⲁⲛ ϩⲟⲗⲱⲥ ϩⲟⲗⲱⲥ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓ**ⲃⲟⲟⲣ**ⲟⲩ ϩⲙⲡⲣⲁⲛ ⲙⲡϫⲟⲉⲓⲥ ·",
+      "english": "in the Name of the Lord I will destroy them.'",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲟⲟⲃ",
+        1,
+        12.369
+      ],
+      [
+        "ϫⲉⲕ",
+        1,
+        11.341
+      ],
+      [
+        "ⲙⲙⲟ",
+        5,
+        10.361
+      ],
+      [
+        "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+        1,
+        8.936
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        8.483
+      ],
+      [
+        "ⲩ",
+        4,
+        8.225
+      ],
+      [
+        "ⲉ",
+        5,
+        8.198
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        6.917
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        6.384
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        6.343
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        5.88
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        4.863
+      ],
+      [
+        "ⲓ",
+        1,
+        3.265
+      ],
+      [
+        "ⲛ",
+        2,
+        3.224
+      ],
+      [
+        "ϩⲛ",
+        1,
+        2.894
+      ],
+      [
+        "ⲥ",
+        1,
+        2.689
+      ],
+      [
+        "ϫⲉ",
+        1,
+        2.561
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        1.635
+      ],
+      [
+        "ϥ",
+        1,
+        0.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲃⲱⲱⲣⲉ",
+          4
+        ],
+        [
+          "ⲃⲱⲱⲣⲉ_0_node",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲱⲱⲣⲉ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲱⲣⲉ",
+          3
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱⲛⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲕⲱⲛⲥ",
+          1
+        ],
+        [
+          "ϫⲉ_2_post_ⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲃⲱⲱⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲃⲱⲱⲣⲉ",
+          "ⲃⲱⲱⲣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲃⲱⲱⲣⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲃⲱⲱⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲱⲱⲣⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲱⲱⲣⲉ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲱⲱⲣⲉ",
+          "ⲛⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲱⲣⲉ",
+          "ⲛⲉ_1_pre_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲃⲱⲱⲣⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲃⲱⲱⲣⲉ",
+          "ⲃⲱⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲃⲱⲱⲣⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲱⲛⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲱⲛⲥ",
+          "ⲛⲉ_2_post_ⲕⲱⲛⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲱⲱⲣⲉ",
+          "ⲩ_1_pre_ⲃⲱⲱⲣⲉ",
+          2
+        ],
+        [
+          "ⲃⲱⲱⲣⲉ_0_node",
+          "ϫⲉ_2_post_ⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ϫⲉ_2_post_ⲧⲱⲗⲙ",
+          "ⲛ_2_post_ⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲱⲗⲙ",
+          "ⲛⲉⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲱⲱⲣⲉ_0_node",
+          "ⲓ_1_post_ⲃⲱⲱⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2800,
+      "count": 12
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C506",
+      "label": "ⲃⲉⲣⲱ",
+      "pos": "N",
+      "gloss": "whirlpool"
+    },
+    {
+      "target": "C504",
+      "label": "ⲃⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "protrude, be swollen; repel"
+    },
+    {
+      "target": "C505",
+      "label": "ⲃⲱⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "protuberance"
+    }
+  ],
+  "etym": {
+    "egy_num": "55820",
+    "egy_lemma": "bnn",
+    "english": "to overflow (of a granary); to swell",
+    "german": "überfließen (der Scheune); anschwellen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/55820"
+  }
+}

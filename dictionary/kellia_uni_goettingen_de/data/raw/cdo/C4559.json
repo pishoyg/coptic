@@ -1,0 +1,190 @@
+{
+  "id": "C4559",
+  "forms": [
+    {
+      "id": "CF11075",
+      "orth": "ⲣⲧⲁⲥⲃⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12143,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5148",
+      "bibliography": "CD 433b; KoptHWb 246; ChLCS 61b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲙⲁϩⲧⲉ ⲙⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ · ϩⲟⲙⲟⲓⲱⲥ ⲙⲡⲣ**ⲣⲧⲁⲥⲃⲁⲗ** ⲉϩⲟⲩⲛ · ⲉⲧϩⲉⲓⲕⲱⲛ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "Lay hold upon that which is good. Similarly, do not treat with contempt the image of God.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲙⲟⲓⲱⲥ",
+        1,
+        14.715
+      ],
+      [
+        "ⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+        1,
+        12.961
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        10.036
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲙⲟⲓⲱⲥ_1_pre_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲣⲧⲁⲥⲃⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲙⲟⲓⲱⲥ_1_pre_ⲣⲧⲁⲥⲃⲁⲗ",
+          "ⲙⲡⲣ_1_pre_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲣⲧⲁⲥⲃⲁⲗ",
+          "ⲣⲧⲁⲥⲃⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲣⲧⲁⲥⲃⲁⲗ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          "ⲉ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲧⲁⲥⲃⲁⲗ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11717,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C400",
+      "type": "cf",
+      "label": "eye"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4556",
+      "label": "ⲁⲧⲧⲱⲥ",
+      "pos": "N",
+      "gloss": "not stiff, limp"
+    },
+    {
+      "target": "C4557",
+      "label": "ⲙⲉⲧⲧⲱⲥⲓ",
+      "pos": "N",
+      "gloss": "dryness"
+    },
+    {
+      "target": "C4560",
+      "label": "ⲙⲛⲧⲧⲁⲥⲃⲁⲗ",
+      "pos": "N",
+      "gloss": "impudence"
+    },
+    {
+      "target": "C4558",
+      "label": "ⲧⲁⲥ-",
+      "pos": "N",
+      "gloss": "who hardens"
+    },
+    {
+      "target": "C4553",
+      "label": "ⲧⲱⲥ",
+      "pos": "V",
+      "gloss": "become/be hard, stiff, dry; fix"
+    },
+    {
+      "target": "C4554",
+      "label": "ⲧⲱⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "stretch out, stiffen"
+    },
+    {
+      "target": "C4555",
+      "label": "ⲧⲱⲥ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "stand up stiffly"
+    }
+  ]
+}

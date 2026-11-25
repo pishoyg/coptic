@@ -1,0 +1,90 @@
+{
+  "id": "C1919",
+  "forms": [
+    {
+      "id": "CF5488",
+      "orth": "ⲙⲟⲩⲛ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2230",
+      "bibliography": "CD 171b; KoptHWb 95"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲣⲟⲉⲓⲥ ⲉⲣⲟⲕ ⲙⲡⲣϫⲓⲥⲉ ⲛϩⲏⲧ ⲁⲗⲗⲁ **ⲙⲟⲩⲛ **ⲉⲃⲟⲗ**** ⲉⲕⲑⲃⲃⲓⲏⲩ · ⲧⲁⲣⲉⲕϭⲱ ϩⲙⲡⲉⲟⲟⲩ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲧⲁⲁϥ ⲛⲁⲕ ·",
+      "english": "Keep watch, and let not thy heart be puffed up, but continue in thy humility, and thou shalt remain in the glory which God giveth to thee.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϣⲁⲥⲙⲟⲩⲛ **ⲉⲃⲟⲗ**** ϩⲛⲟⲩⲕⲁⲣⲡⲟⲥ ⲉϥⲣⲟⲟⲩⲧ ⲉⲙⲉϥϩⲱϭⲃ ·",
+      "english": "It shall continue to bear fruit which nourisheth and decayeth not,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥϩⲉ ⲇⲉ ⲟⲛ ⲟⲩⲛⲧⲁϥ ⲙⲙⲁⲩ ⲛⲟⲩⲡⲁⲣⲁⲙⲩⲑⲓⲁ **ⲉⲧⲙⲧⲣⲉϥⲙⲟⲩⲛ **ⲉⲃⲟⲗ**** ϩⲙⲡⲉϥϩⲧⲟⲡ · ⲡⲉϫⲁϥ ϫⲉⲙⲏ ⲡⲉϣⲁϥϩⲉ ⲙⲉϥⲧⲱⲟⲩⲛ ·",
+      "english": "He who hath fallen hath, in these ensamples, an encouragement not to allow himself to remain | in his fallen state, and he (i.e., the Book) saith, ' Shall not he that is in the habit of falling rise up again?",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1917",
+      "label": "ϫⲓⲛⲙⲟⲩⲛⲓ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1918",
+      "label": "ϫⲓⲛⲙⲟⲩⲛⲓ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1914",
+      "label": "ⲙⲏⲛ",
+      "pos": "ADV",
+      "gloss": "constantly, continuously"
+    },
+    {
+      "target": "C1913",
+      "label": "ⲙⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "remain, continue"
+    },
+    {
+      "target": "C1916",
+      "label": "ⲙⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    },
+    {
+      "target": "C1915",
+      "label": "ⲙⲟⲩⲛ (ⲉ-)",
+      "pos": "V",
+      "gloss": "remain by, wait upon, continue in"
+    },
+    {
+      "target": "C1920",
+      "label": "ⲙⲟⲩⲛ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "perseverance, continuance"
+    }
+  ]
+}

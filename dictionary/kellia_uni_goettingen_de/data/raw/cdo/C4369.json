@@ -1,0 +1,64 @@
+{
+  "id": "C4369",
+  "forms": [
+    {
+      "id": "CF10690",
+      "orth": "ϯⲧⲟⲛⲧⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4950",
+      "bibliography": "CD 420b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4370",
+      "label": "ⲁⲧⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "incomparable"
+    },
+    {
+      "target": "C4371",
+      "label": "ⲣⲉϥⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "diviner"
+    },
+    {
+      "target": "C4372",
+      "label": "ⲣⲉϥⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "diviner"
+    },
+    {
+      "target": "C4367",
+      "label": "ⲧⲟⲛⲧⲛ",
+      "pos": "V",
+      "gloss": "be like, liken to; estimate, speculate; throw"
+    },
+    {
+      "target": "C4368",
+      "label": "ⲧⲟⲛⲧⲛ",
+      "pos": "N",
+      "gloss": "likeness, oracle"
+    }
+  ]
+}

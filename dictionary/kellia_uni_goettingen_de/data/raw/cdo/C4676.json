@@ -1,0 +1,100 @@
+{
+  "id": "C4676",
+  "forms": [
+    {
+      "id": "CF11315",
+      "orth": "ⲧⲱⲟⲩⲛ (ϩⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5281",
+      "bibliography": "CD 445b; ChLCS 63a"
+    },
+    {
+      "id": "CS5282",
+      "bibliography": "CD 445b-446a; KoptHWb 253; DELC 224a; ChLCS 63a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ⲁⲛ **ⲉⲕⲛⲁⲧⲱⲟⲩⲛ **ϩⲁ**ⲛⲑⲗⲓⲯⲓⲥ** ·",
+      "english": "Not in order to stand under afflictions?",
+      "source": "Apophthegmata Patrum Sahidic 034: Theodorus",
+      "urn": "urn:cts:copticLit:ap.34.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲇⲁⲓⲙⲱⲛ ⲇⲉ **ⲙⲡⲉϥⲧⲱⲟⲩⲛ **ϩⲁ**ⲡϫⲟϥϫϥ** ⲙⲡⲉⲑⲃⲃⲓⲟ",
+      "english": "And the demon could not bear the fire of his humility.",
+      "source": "Apophthegmata Patrum Sahidic 127: N 298",
+      "urn": "urn:cts:copticLit:ap.127.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲁⲓⲛⲁⲩ ⲉⲩⲣⲱⲙⲉ ⲉⲩⲛϭⲟⲙ ⲙⲙⲟϥ **ⲉⲧⲱⲟⲩⲛ **ϩⲁ**ⲡⲉϥⲙⲉⲉⲩⲉ** ⲙⲁⲩⲁⲁϥ ϩⲛⲟⲩϩⲓⲥⲉ · ⲻ",
+      "english": "However, I saw a man who had power to bear his own thought with difficulty.'",
+      "source": "Apophthegmata Patrum Sahidic 117: Sisoes 9",
+      "urn": "urn:cts:copticLit:ap.117.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4681",
+      "label": "ϭⲓⲛⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4682",
+      "label": "ϭⲓⲛⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4680",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "raising, supporting"
+    },
+    {
+      "target": "C4678",
+      "label": "ⲣⲉϥⲧⲱⲛϥ",
+      "pos": "N",
+      "gloss": "one who rises, incites"
+    },
+    {
+      "target": "C4679",
+      "label": "ⲣⲉϥⲧⲱⲛϥ",
+      "pos": "N",
+      "gloss": "one who rises, incites"
+    },
+    {
+      "target": "C4677",
+      "label": "ⲧⲱⲛϥ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4674",
+      "label": "ⲧⲱⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "arise; raise, carry"
+    },
+    {
+      "target": "C4675",
+      "label": "ⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "id": "C10517",
+  "forms": [
+    {
+      "id": "CF28222",
+      "orth": "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF28223",
+      "orth": "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3896,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF28224",
+      "orth": "ⲥⲡⲗⲁⲅⲭⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28225",
+      "orth": "ⲥⲡⲗⲁⲭⲁⲛⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28226",
+      "orth": "ⲥⲡⲗⲁⲭⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5423,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF28227",
+      "orth": "ⲥⲫⲗⲁⲅⲛⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14262",
+      "bibliography": "DDGLC",
+      "cu_ID": "2270"
+    },
+    {
+      "id": "CS14263",
+      "bibliography": "DDGLC",
+      "cu_ID": "1818"
+    },
+    {
+      "id": "CS14264",
+      "bibliography": "DDGLC",
+      "cu_ID": "10572"
+    },
+    {
+      "id": "CS14265",
+      "bibliography": "DDGLC",
+      "cu_ID": "9321"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲣⲱⲕϩ ⲛⲛⲉⲛ**ⲥⲡⲗⲁⲅⲭⲛⲟⲛ** ϩⲁⲧⲗⲩⲡⲏ ⲙⲡⲉⲛⲙⲉⲣⲓⲧ ⲛϣⲏⲣⲉ ·",
+      "english": "He hath burned up our bowels with grief for oar beloved son.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛϯϩⲓⲱⲱⲛ ⲛϩⲉⲛϩⲟⲓⲧⲉ ⲉⲛⲏⲩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲃⲓⲟⲥ ⲛⲁⲓ ⲉⲛⲧⲁⲡⲁⲩⲗⲟⲥ ⲥⲩⲙⲃⲟⲩⲗⲉⲩⲉ ⲙⲙⲟⲟⲩ ⲛⲁⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϯ ϩⲓⲱⲧⲧⲏⲩⲧⲛ ⲛϩⲉⲛ**ⲥⲡⲗⲁⲅⲭⲛⲟⲛ** ⲙⲙⲛⲧϣⲁⲛⲁϩⲧⲏϥ ⲛⲟⲩⲙⲛⲧⲭⲣⲏⲥⲧⲟⲥ ⲙⲛⲟⲩⲑⲃⲃⲓⲟ ·",
+      "english": "Let us array ourselves in the garments which appertain to this life, concerning which Paul counselled us, saying, 'Dress yourselves in the bowels of mercies, and in goodness, and in humility'",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲧⲟⲩϫⲉⲛⲁⲥⲁ ⲛϩⲟⲩⲛ ϫⲉⲥⲉⲣⲱⲕϩ ⲙⲙⲟⲓ ⲛⲁ**ⲥⲡⲗⲁⲅⲭⲛⲟⲛ** ϥⲓⲟⲩⲱϩ · ϣⲱⲡ ⲉⲣⲟⲓ ϩⲙⲡⲉⲓϩⲙⲟⲙ ·",
+      "english": "Heal thou my members which are within me, for I am being consumed; preserve my bowels, and take Thou me out of this burning heat of fever.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧϣⲁⲛⲁ",
+        1,
+        16.013
+      ],
+      [
+        "ⲣⲱⲕϩ",
+        2,
+        13.753
+      ],
+      [
+        "ϩⲓⲱⲧ",
+        1,
+        12.791
+      ],
+      [
+        "ⲗⲩⲡⲏ",
+        1,
+        10.791
+      ],
+      [
+        "ϣⲱⲡ",
+        1,
+        9.991
+      ],
+      [
+        "ⲛ",
+        8,
+        9.809
+      ],
+      [
+        "ϯⲉⲟⲟⲩ",
+        1,
+        9.403
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        1,
+        9.285
+      ],
+      [
+        "ϩⲧⲏ",
+        1,
+        8.983
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        8.688
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        8.644
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        8.577
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        8.565
+      ],
+      [
+        ".",
+        3,
+        8.312
+      ],
+      [
+        "ⲟⲩⲱϩ",
+        1,
+        8.267
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        7.629
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        7.573
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.467
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        7.412
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        7.318
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲛⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲛⲧϣⲁⲛⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲭⲣⲏⲥⲧⲟⲥ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          "ⲙ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲙⲛⲧϣⲁⲛⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϣⲁⲛⲁ_2_post_ⲙ",
+          "ⲛ_3_post_ⲙⲛⲧϣⲁⲛⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲛⲧϣⲁⲛⲁ",
+          "ⲟⲩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲛ",
+          "ⲙⲛⲧⲭⲣⲏⲥⲧⲟⲥ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          "ⲛ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲥⲁⲣⲝ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁⲣⲝ_2_post_ⲛ",
+          "ϩⲓ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲥⲛⲟϥ",
+          "ⲥⲛⲟϥ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_1_post_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲛ_2_post_ⲥⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲡⲗⲁⲅⲭⲛⲟⲛ",
+          "ⲥⲡⲗⲁⲅⲭⲛⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3506,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "2015",
+    "grl_lemma": "σπλάγχνον",
+    "grl_meaning": "innards; child",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1628a; Preisigke 2:476"
+  }
+}

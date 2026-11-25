@@ -1,0 +1,384 @@
+{
+  "id": "C9533",
+  "forms": [
+    {
+      "id": "CF24260",
+      "orth": "ⲕⲣⲁⲧⲏⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF24261",
+      "orth": "ⲕⲣⲁⲧⲏⲣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24262",
+      "orth": "ⲕⲣⲁⲧⲏⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4085,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF24263",
+      "orth": "ⲕⲣⲁⲧⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17340,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12138",
+      "bibliography": "DDGLC",
+      "cu_ID": "470"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉⲑⲁⲙⲓⲟ ⲛⲟⲩⲗⲩⲭⲛⲓⲁ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲛⲟⲩⲃ ⲛⲕⲁⲑⲁⲣⲟⲥ ϧⲉⲛⲟⲩⲛⲟⲩⲃ ⲙⲫⲱⲧϩ ⲉⲕⲉⲑⲁⲙⲓⲟ ⲛϯⲗⲩⲭⲛⲁⲓ ⲡⲉⲥⲕⲁⲩⲗⲟⲥ ⲛⲉⲙⲛⲓⲕⲁⲗⲁⲙⲓⲥⲕⲟⲥ ⲛⲉⲙⲛⲓ**ⲕⲣⲁⲧⲏⲣ** ⲛⲉⲙⲛⲓⲥⲫⲉⲣⲱⲧⲏⲣ ⲟⲩⲟϩ ⲛⲓϩⲣⲏⲣⲓ ⲉⲩⲉϣⲱⲡⲓ ⲉⲃⲟⲗ ⲙⲙⲟⲥ",
+      "english": "And thou shalt make a candlestick of pure gold; thou shalt make the candlestick of graven work: its stem and its branches, and its bowls and its knops and its lilies shall be of one piece.",
+      "source": "02_Exodus_25",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲩϩⲗⲡⲉ ⲉⲥⲟ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲣⲁⲧⲏⲣ** ⲉϥϣⲉⲧϣⲱⲧ ⲉϥⲙⲉϩ ⲛⲏⲣⲡ ⲉϥⲥⲟⲧⲡ ϩⲏⲧⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϫⲁⲧⲙⲉ ⲛⲥⲟⲩⲟ ⲉⲥⲧⲟⲟⲃⲉ ⲛϩⲉⲛⲕⲣⲓⲛⲟⲛ",
+      "english": "Thy two breasts are as two twin fawns.",
+      "source": "Song of Solomon 7",
+      "urn": "urn:cts:copticLit:ot.song.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϭⲓ ⲇⲉ ⲛϫⲉⲙⲱⲩⲥⲏⲥ ⲛⲧⲫⲁϣⲓ ⲙⲡⲓⲥⲛⲟϥ ⲁϥϫⲟϣϥ ⲉϧⲣⲏⲓ ⲉⲟⲩ**ⲕⲣⲁⲧⲏⲣ** ϯⲕⲉⲫⲁϣⲓ ⲇⲉ ⲛⲧⲉⲡⲓⲥⲛⲟϥ ⲁϥϫⲟϣϥ ϧⲁⲧⲉⲛⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ",
+      "english": "And Moses took half the blood and poured it into bowls, and half the blood he poured out upon the altar.",
+      "source": "02_Exodus_24",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲅ ⲛ**ⲕⲣⲁⲧⲏⲣ** ⲉⲩⲟⲓ ⲙⲡⲓⲥⲙⲟⲧ ⲛϩⲁⲛⲕⲁⲣⲓⲁ ϧⲉⲛⲡⲓⲟⲩⲁⲓ ⲛⲕⲁⲗⲁⲙⲓⲥⲕⲟⲥ ⲟⲩⲥⲫⲉⲣⲱⲧⲏⲣ ⲛⲉⲙⲟⲩⲕⲣⲓⲛⲟⲛ ⲡⲁⲓⲣⲏϯ ⲙⲡⲓⲙⲁϩⲋ ⲛⲕⲁⲗⲁⲙⲓⲥⲕⲟⲥ ⲛⲏ ⲉⲑⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛϯⲗⲩⲭⲛⲓⲁ",
+      "english": "And three bowls fashioned like almonds, on each branch a knop and a lily; so to the six branches proceeding from the candlestick,",
+      "source": "02_Exodus_25",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:25",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲫⲉⲣⲱⲧⲏⲣ",
+        1,
+        16.695
+      ],
+      [
+        "ⲕⲉⲫⲁϣⲓ",
+        1,
+        16.11
+      ],
+      [
+        "ⲕⲁⲗⲁⲙⲓⲥⲕⲟⲥ",
+        1,
+        14.236
+      ],
+      [
+        "ⲗⲩⲭⲛⲓⲁ",
+        1,
+        12.41
+      ],
+      [
+        "ⲙⲁϩⲃ",
+        1,
+        11.718
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.583
+      ],
+      [
+        "ⲇ",
+        1,
+        10.391
+      ],
+      [
+        "ⲅ",
+        1,
+        9.581
+      ],
+      [
+        "ϯ",
+        3,
+        9.045
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        8.973
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        8.099
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.835
+      ],
+      [
+        "ⲉ",
+        3,
+        7.772
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.243
+      ],
+      [
+        "ⲩ",
+        2,
+        7.121
+      ],
+      [
+        "ⲙ",
+        2,
+        6.583
+      ],
+      [
+        "ⲛ",
+        2,
+        5.591
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.049
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.066
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.754
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲉⲧϣⲱⲧ",
+        1,
+        17.428
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲇ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲟⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          "ⲛⲓ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          "ⲅ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲇ_1_pre_ⲕⲣⲁⲧⲏⲣ",
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          "ⲩ_3_post_ⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟⲓ",
+          "ⲟⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲓ_2_post_ⲉ",
+          "ⲙ_3_post_ⲟⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲉⲧϣⲱⲧ",
+          1
+        ],
+        [
+          "ϣⲉⲧϣⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲙⲉϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲣⲁⲧⲏⲣ_0_node",
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ",
+          "ϥ_3_post_ϣⲉⲧϣⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲉⲧϣⲱⲧ",
+          "ϣⲉⲧϣⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲉⲧϣⲱⲧ_2_post_ⲉ",
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ_b",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲣⲁⲧⲏⲣ_b",
+          "ϥ_3_post_ⲙⲉϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3634,
+      "count": 4
+    },
+    "S": {
+      "rate": 0.01,
+      "rank": 16953,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1213",
+    "grl_lemma": "κρατήρ",
+    "grl_meaning": "mixing vessel, bowl",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 991b"
+  }
+}

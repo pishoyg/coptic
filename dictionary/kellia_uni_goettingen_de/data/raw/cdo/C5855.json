@@ -1,0 +1,149 @@
+{
+  "id": "C5855",
+  "forms": [
+    {
+      "id": "CF13707",
+      "orth": "ϣⲗⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17019,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6536",
+      "bibliography": "CD 561b-562a; DELC 262a; KoptHWb 312; ChLCS 77a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲛ ⲉⲓϣⲁⲛⲙⲟⲟϣⲉ ⲛⲧⲙⲏⲧⲉ ⲛⲧϩⲁⲓⲃⲉⲥ ⲙⲡⲙⲟⲩ ⲛϯⲛⲁⲣϩⲟⲧⲉ ⲁⲛ ϩⲏⲧⲟⲩ ⲛⲙⲡⲉⲧϩⲟⲟⲩ ϫⲉⲛⲧⲟⲕ ⲕϣⲟⲟⲡ ⲛⲙⲙⲁⲓ ⲡⲉⲕ**ϣⲗⲉϩ** ⲙⲛⲡⲉⲕϭⲉⲣⲱⲃ ⲛⲧⲟⲟⲩ ⲛⲉⲛⲧⲁⲩⲥⲉⲡⲥⲱⲡⲧ",
+      "english": "Yea, even if I should walk in the midst of the shadow of death, I will not be afraid of evils: for thou art with me; thy rod and thy staff, these have comforted me.",
+      "source": "Psalms 22",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲉⲣⲱⲃ",
+        1,
+        13.438
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        11.868
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        11.278
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        9.791
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        9.47
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲗⲉϩ",
+          1
+        ],
+        [
+          "ϣⲗⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲉⲣⲱⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ϭⲉⲣⲱⲃ",
+          1
+        ],
+        [
+          "ϭⲉⲣⲱⲃ_1_post_ϣⲗⲉϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲗⲉϩ",
+          "ϣⲗⲉϩ_0_node",
+          1
+        ],
+        [
+          "ϣⲗⲉϩ_0_node",
+          "ⲙⲛ_2_post_ϭⲉⲣⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲉⲣⲱⲃ",
+          "ⲡⲉⲕ_2_post_ϭⲉⲣⲱⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ϭⲉⲣⲱⲃ",
+          "ϭⲉⲣⲱⲃ_1_post_ϣⲗⲉϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16623,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5853",
+      "label": "ϣⲗϩ",
+      "pos": "N",
+      "gloss": "twig, shoot"
+    },
+    {
+      "target": "C5854",
+      "label": "ϣⲗϩ",
+      "pos": "N",
+      "gloss": "stave, wand"
+    }
+  ],
+  "etym": {
+    "egy_num": "860883",
+    "egy_lemma": "srḥ.w",
+    "english": "Streams (?)",
+    "german": "Bäche (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/860883"
+  }
+}

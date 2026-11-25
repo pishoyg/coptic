@@ -1,0 +1,121 @@
+{
+  "id": "C3359",
+  "forms": [
+    {
+      "id": "CF8610",
+      "orth": "ⲥⲃⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18762,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3830",
+      "bibliography": "CD 322b; KoptHWb 177, 536; ChLCS 46a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲟⲩⲕⲱϩ ⲙⲛⲟⲩϭⲱⲛⲧ ⲧ**ⲥⲃⲕⲉ** ⲛⲉϩⲟⲟⲩ ⲁⲩⲱ ϣⲁⲣⲉⲡⲣⲟⲟⲩϣ ⲉⲓⲛⲉ ⲛⲧⲙⲛⲧϩⲗⲗⲟ ϩⲁⲧϩⲏ ⲙⲡⲉⲥⲟⲩⲟⲉⲓϣ",
+      "english": "Envy and wrath shorten the life, and carefulness bringeth age before the time.",
+      "source": "Sirach 30",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        11.492
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        8.516
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲥⲃⲕⲉ",
+          1
+        ],
+        [
+          "ⲥⲃⲕⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲥⲃⲕⲉ",
+          "ⲥⲃⲕⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18377,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3357",
+      "label": "ⲥⲃⲟⲕ",
+      "pos": "V",
+      "gloss": "become, be small, few"
+    },
+    {
+      "target": "C3358",
+      "label": "ⲥⲃⲟⲕ",
+      "pos": "N",
+      "gloss": "smallness, few"
+    }
+  ]
+}

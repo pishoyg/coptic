@@ -1,0 +1,211 @@
+{
+  "id": "C8027",
+  "forms": [
+    {
+      "id": "CF18120",
+      "orth": "ϭⲁϫⲓϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6594,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϭⲁϫⲓⲃ",
+      "dialect": "S",
+      "id": "2655.1"
+    },
+    {
+      "orth": "ⲕⲁϫⲓϥ",
+      "dialect": "S",
+      "id": "2655.2"
+    },
+    {
+      "orth": "ϫⲁϥϫⲓϥ",
+      "dialect": "B",
+      "id": "2655.3"
+    },
+    {
+      "orth": "ϫⲁⲡϫⲓⲡ",
+      "dialect": "B",
+      "id": "2655.4"
+    },
+    {
+      "orth": "ϫⲉϥϫⲓϥ",
+      "dialect": "B",
+      "id": "2655.5"
+    },
+    {
+      "orth": "ϫⲉⲃϫⲓⲡ",
+      "dialect": "B",
+      "id": "2655.6"
+    },
+    {
+      "orth": "ϭⲁϫⲓϥ",
+      "dialect": "A",
+      "id": "2655.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8927",
+      "bibliography": "CD 842b; CED 341; KoptHWb 474; DELC 351a; ChLCS 111a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲃⲱⲕ ϣⲁⲡ**ϭⲁϫⲓϥ** ⲱ ⲡⲣⲉϥϫⲛⲁⲁⲩ ⲛⲅⲕⲱϩ ⲉⲛϥϩⲓⲟⲩⲉ ⲛⲅⲣⲥⲁⲃⲉ ⲉϩⲟⲩⲉⲣⲟϥ",
+      "english": "Go to the ant, O sluggard; and see, and emulate his ways, and become wiser than he.",
+      "source": "Proverbs 6",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲙⲛⲧⲃⲗⲗⲉ ⲏ ⲉϥⲟⲩⲟϣϥ ⲏ ⲉϥⲟ ⲛϭⲁϫⲉⲗⲁⲥ ⲏ ⲉϥⲟ ⲛ**ϭⲁϫⲓϥ** ⲏ ⲉⲣⲉⲟⲩⲯⲱⲣⲁ ⲛⲁⲅⲣⲓⲟⲛ ϩⲓⲱⲱϥ ⲏ ⲉⲣⲉⲟⲩⲙⲉϫⲡⲱⲛⲉ ϩⲓⲱⲱϥ ⲛⲁⲓ ⲛⲛⲉⲧⲛⲛⲧⲟⲩ ⲉⲧⲁⲗⲟⲟⲩ ⲉϩⲣⲁⲓ ⲉⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛⲛⲉⲧⲛϯ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲉⲩϩⲟⲗⲟⲕⲁⲩⲧⲱⲙⲁ ⲉϫⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲙⲁϩ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "One that is blind, or broken, or has its tongue cut out, or is troubled with warts, or has a malignant ulcer, or tetters, they shall not offer these to the Lord; neither shall ye offer any of them for a burnt-offering on the altar of the Lord.",
+      "source": "Leviticus 22",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ϭⲁϫⲓϥ** ⲉⲧⲉⲙⲛⲧⲟⲩϭⲟⲙ ⲉⲧⲉϣⲁⲩⲥⲃⲧⲉⲛⲉⲩϩⲣⲏⲩⲉ ⲙⲡϣⲱⲙ",
+      "english": "the ants which are weak, and yet prepare their food in summer;",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲯⲱⲣⲁ",
+        1,
+        17.013
+      ],
+      [
+        "ⲣⲉϥϫⲛⲁⲁⲩ",
+        1,
+        15.013
+      ],
+      [
+        "ⲡⲁϣ",
+        1,
+        13.341
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        1,
+        11.521
+      ],
+      [
+        "ⲙⲛⲧ",
+        1,
+        11.513
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        10.974
+      ],
+      [
+        "ⲱ",
+        1,
+        8.977
+      ],
+      [
+        "ⲛ",
+        4,
+        8.224
+      ],
+      [
+        "ⲟ",
+        1,
+        8.22
+      ],
+      [
+        "ⲏ",
+        1,
+        7.894
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        7.359
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.761
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲁϫⲓϥ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6157,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C8028",
+      "label": "ⲣϭⲁϫⲓϥ",
+      "pos": "V",
+      "gloss": "suffer from warts or itch"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6323",
+    "demo_lemma": "qpqp(e)",
+    "english": "[to cover; to fumigate, smoke]",
+    "german": "Ameise(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6323"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "C150",
+  "forms": [
+    {
+      "id": "CF568",
+      "orth": "ⲁⲛⲧⲏⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15677,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF569",
+      "orth": "ⲁⲛⲧⲉⲗⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF570",
+      "orth": "ⲁⲛⲧⲏⲗⲙ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF571",
+      "orth": "ⲁⲛⲧⲉⲗⲙ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS170",
+      "bibliography": "CD 12a; KoptHWb 9, 487; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲥϩⲓⲙⲉ ⲁⲥⲛⲟⲩϫⲉ ⲛⲟⲩⲗⲁⲕⲙ ⲛⲱⲛⲉ ⲛⲥⲓⲕⲉ ⲉϫⲛⲧⲁⲡⲉ ⲛⲁⲃⲓⲙⲉⲗⲉⲭ ⲁⲥⲟⲩⲉϭⲡⲡⲉϥ**ⲁⲛⲧⲏⲗⲙ**",
+      "english": "And a woman cast a piece of a millstone upon the head of Abimelech, and broke his skull.",
+      "source": "Judges 9",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲉϭⲡ",
+        1,
+        18.013
+      ],
+      [
+        "ⲱϣ",
+        1,
+        11.411
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲛⲧⲏⲗⲙ",
+          1
+        ],
+        [
+          "ⲁⲛⲧⲏⲗⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲛⲧⲏⲗⲙ",
+          "ⲁⲛⲧⲏⲗⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15275,
+      "count": 1
+    }
+  }
+}

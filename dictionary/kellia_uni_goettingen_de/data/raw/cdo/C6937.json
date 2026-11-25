@@ -1,0 +1,51 @@
+{
+  "id": "C6937",
+  "forms": [
+    {
+      "id": "CF15925",
+      "orth": "ⲙⲁ ⲛϩⲱⲧⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7657",
+      "bibliography": "CD 725b; KoptHWb 399"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12027",
+      "label": "ϩⲟⲧⲡ",
+      "pos": "N",
+      "gloss": "thing joined (?), chain, rim"
+    },
+    {
+      "target": "C6935",
+      "label": "ϩⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "join, attune, be reconciled, sink (of sun, stars)"
+    },
+    {
+      "target": "C6936",
+      "label": "ϩⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "joint, joining, reconciliation"
+    },
+    {
+      "target": "C6938",
+      "label": "ϭⲓⲛϩⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "union, reconciliation"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "C331",
+  "forms": [
+    {
+      "id": "CF1441",
+      "orth": "ⲙⲉⲧⲣⲉϥⲃⲉⲃⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1442",
+      "orth": "ⲙⲉⲧⲣⲉϥⲃⲉⲃⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS367",
+      "bibliography": "CD 29a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C332",
+      "label": "ϫⲓⲛⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "pronouncing (of a name)"
+    },
+    {
+      "target": "C329",
+      "label": "ⲃⲉⲉⲃⲉ",
+      "pos": "V",
+      "gloss": "bubble, well up; pour forth, bring forth, rain down"
+    },
+    {
+      "target": "C330",
+      "label": "ⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "who brings forth sth, originator"
+    }
+  ]
+}

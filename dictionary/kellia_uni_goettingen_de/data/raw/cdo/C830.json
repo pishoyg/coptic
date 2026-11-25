@@ -1,0 +1,236 @@
+{
+  "id": "C830",
+  "forms": [
+    {
+      "id": "CF3002",
+      "orth": "ⲉⲓ (ⲉⲣⲁⲧ-)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.53,
+        "rank": 168,
+        "count": 639
+      }
+    },
+    {
+      "orth": "ⲛⲏⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 6.66,
+        "rank": 171,
+        "count": 1051
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉⲣⲁⲧ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS981",
+      "bibliography": "CD 70b; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲧⲉⲣⲟⲩⲉⲓ **ⲉⲣⲁⲧ**ⲟⲩ** ⲛⲙⲙⲁⲑⲏⲧⲏⲥ ⲁⲩⲛⲁⲩ ⲉⲩⲛⲟϭ ⲙⲙⲏⲏϣⲉ ϩⲙⲡⲉⲩⲕⲱⲧⲉ ⲁⲩⲱ ϩⲉⲛⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲉⲩϯⲧⲱⲛ ⲛⲙⲙⲁⲩ",
+      "english": "Coming to the disciples, he saw a great multitude around them, and scribes questioning them.",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲉⲓ ⲇⲉ ⲉⲃⲟⲗ ⲁϥⲁⲣⲭⲉⲥⲑⲁⲓ ⲛⲧⲁϣⲉⲟⲉⲓϣ ⲛϩⲁϩ ⲁⲩⲱ ⲉⲥⲣⲡϣⲁϫⲉ ϩⲱⲥⲧⲉ ⲛϥⲧⲙϭⲙϭⲟⲙ ⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲡⲟⲗⲓⲥ ⲛⲟⲩⲱⲛϩ ⲁⲗⲗⲁ ⲛⲉϥϩⲛϩⲉⲛⲙⲁ ⲛϫⲁⲓⲉ ⲁⲩⲱ **ⲛⲉⲩⲛⲏⲩ **ⲉⲣⲁⲧ**ϥ** ⲉⲃⲟⲗ ϩⲙⲙⲁ ⲛⲓⲙ .",
+      "english": "But he went out, and began to proclaim it much, and to spread about the matter, so that Jesus could no more openly enter into a city, but was outside in desert places: and they came to him from everywhere.",
+      "source": "41_Mark_1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲉⲡⲉⲛϣⲗⲏⲗ ⲉⲣⲉⲟⲩoⲛ ⲛⲓⲙ **ⲛⲏⲩ **ⲉⲣⲁⲧ**ⲕ**",
+      "english": "Hear my prayer; to thee all flesh shall come.",
+      "source": "Psalms 64",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:64",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C825",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "come, go"
+    },
+    {
+      "target": "C826",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "be about to"
+    },
+    {
+      "target": "C827",
+      "label": "ⲉⲓ",
+      "pos": "N",
+      "gloss": "coming, advent"
+    },
+    {
+      "target": "C837",
+      "label": "ⲉⲓ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "come to, approach"
+    },
+    {
+      "target": "C838",
+      "label": "ⲉⲓ (ϩⲁⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, near to"
+    },
+    {
+      "target": "C828",
+      "label": "ⲉⲓ (ⲉ-)",
+      "pos": "V",
+      "gloss": "come to"
+    },
+    {
+      "target": "C849",
+      "label": "ⲉⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "come in, enter"
+    },
+    {
+      "target": "C851",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come upon, up upon, reach"
+    },
+    {
+      "target": "C853",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come (down) upon, befall"
+    },
+    {
+      "target": "C850",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "come up"
+    },
+    {
+      "target": "C852",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "come down, descend"
+    },
+    {
+      "target": "C833",
+      "label": "ⲉⲓ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come upon, arrive at, be applicable to"
+    },
+    {
+      "target": "C843",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come through, forth from, leave"
+    },
+    {
+      "target": "C842",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "pos": "V",
+      "gloss": "come forth from"
+    },
+    {
+      "target": "C841",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "come forth to (places, things); sue, proceed against"
+    },
+    {
+      "target": "C840",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "come, go forth, be displayed, set forth"
+    },
+    {
+      "target": "C847",
+      "label": "ⲉⲓ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "come after, go back"
+    },
+    {
+      "target": "C845",
+      "label": "ⲉⲓ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "come down"
+    },
+    {
+      "target": "C829",
+      "label": "ⲉⲓ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come to, arrive at"
+    },
+    {
+      "target": "C848",
+      "label": "ⲉⲓ (ⲉⲧⲑⲏ)",
+      "pos": "V",
+      "gloss": "come forward, progress"
+    },
+    {
+      "target": "C831",
+      "label": "ⲉⲓ (ⲉⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come into the hand of (power of)"
+    },
+    {
+      "target": "C834",
+      "label": "ⲉⲓ (ⲛ-)",
+      "pos": "V",
+      "gloss": "come to (of persons)"
+    },
+    {
+      "target": "C836",
+      "label": "ⲉⲓ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come before, into presence of (superior)"
+    },
+    {
+      "target": "C835",
+      "label": "ⲉⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "come after, to fetch"
+    },
+    {
+      "target": "C844",
+      "label": "ⲉⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "coming forth, departure from"
+    },
+    {
+      "target": "C839",
+      "label": "ⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, upon"
+    },
+    {
+      "target": "C832",
+      "label": "ⲓ (ⲉϩⲣⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come against, to meet"
+    },
+    {
+      "target": "C846",
+      "label": "ⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "come, go up"
+    }
+  ]
+}

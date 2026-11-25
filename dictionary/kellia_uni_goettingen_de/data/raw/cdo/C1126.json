@@ -1,0 +1,75 @@
+{
+  "id": "C1126",
+  "forms": [
+    {
+      "id": "CF3620",
+      "orth": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7761,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1312",
+      "bibliography": "CD 101a; KoptHWb 18; ChLCS 16b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2663,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1128",
+      "label": "ⲕⲏⲕⲥ",
+      "pos": "N",
+      "gloss": "what is peeled off, strip, scale"
+    },
+    {
+      "target": "C1127",
+      "label": "ⲕⲟⲩⲕⲉ",
+      "pos": "N",
+      "gloss": "rind, skin"
+    },
+    {
+      "target": "C1122",
+      "label": "ⲕⲱⲕ",
+      "pos": "V",
+      "gloss": "peel, strip off, divest; peel off, become bare"
+    },
+    {
+      "target": "C1123",
+      "label": "ⲕⲱⲕ",
+      "pos": "N",
+      "gloss": "bareness, nakedness"
+    },
+    {
+      "target": "C1124",
+      "label": "ⲕⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "peel, strip off, divest"
+    },
+    {
+      "target": "C1125",
+      "label": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "pos": "V",
+      "gloss": "undress, make naked; be naked"
+    }
+  ]
+}

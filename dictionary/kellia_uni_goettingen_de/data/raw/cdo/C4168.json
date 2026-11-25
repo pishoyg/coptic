@@ -1,0 +1,144 @@
+{
+  "id": "C4168",
+  "forms": [
+    {
+      "id": "CF10281",
+      "orth": "ⲧⲟⲓⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12209,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓⲗⲉ",
+      "dialect": "L",
+      "id": "1585.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4730",
+      "bibliography": "CD 410a; CDC 64a; KoptHWb 225; DELC 212b; ChLCS 57a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲓⲏⲥⲟⲩⲥ **ⲧⲟⲓⲗⲉ** ⲏ ⲁϥϩⲱⲗ ⲉⲡϫⲓⲥⲉ ⲉⲁϥⲣⲟⲩⲟⲉⲓⲛ ⲉⲙⲁϣⲟ ⲉⲙⲁϣⲟ ϩⲛⲟⲩⲟⲉⲓⲛ ⲉⲙⲛϣⲓ ⲉⲣⲟϥ ·",
+      "english": "Then Jesus ascended or soared into the height, shining most exceedingly in an immeasurable light.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲗ",
+        1,
+        15.172
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        11.954
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.544
+      ],
+      [
+        "ⲏ",
+        1,
+        9.479
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲟⲧⲉ_1_pre_ⲧⲟⲓⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲟⲓⲗⲉ",
+          1
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_1_pre_ⲧⲟⲓⲗⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲓⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϩⲱⲗ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϩⲱⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲟⲧⲉ_1_pre_ⲧⲟⲓⲗⲉ",
+          "ⲁ_1_pre_ⲧⲟⲓⲗⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲧⲟⲓⲗⲉ",
+          "ⲓⲏⲥⲟⲩⲥ_1_pre_ⲧⲟⲓⲗⲉ",
+          1
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_1_pre_ⲧⲟⲓⲗⲉ",
+          "ⲧⲟⲓⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲓⲗⲉ_0_node",
+          "ⲏ_2_post_ϩⲱⲗ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϩⲱⲗ",
+          "ⲁ_2_post_ϩⲱⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11784,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4245",
+      "type": "cf",
+      "label": "lift"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "C1656",
+  "forms": [
+    {
+      "id": "CF4801",
+      "orth": "ⲗⲱⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20372,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4802",
+      "orth": "ⲗⲱⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4803",
+      "orth": "ⲗⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲟⲟⲙⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20326,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲟⲙⲉ†",
+      "dialect": "S",
+      "id": "972.2"
+    },
+    {
+      "orth": "ⲗⲁⲁⲙⲉ†",
+      "dialect": "S",
+      "id": "972.3"
+    },
+    {
+      "orth": "ⲗⲁⲁⲙ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3045,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲗⲱⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2501,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲗⲁⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12192,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲟⲟⲙⲉ†",
+      "dialect": "A",
+      "id": "972.7"
+    },
+    {
+      "orth": "ⲗⲟⲙⲉ†",
+      "dialect": "A",
+      "id": "972.8"
+    },
+    {
+      "orth": "ⲗⲁⲁⲙⲉ†",
+      "dialect": "A",
+      "id": "972.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1920",
+      "bibliography": "CD 142b; KoptHWb 79; ChLCS 21b"
+    },
+    {
+      "id": "CS1921",
+      "bibliography": "CD 142b; ChLCS 21b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϫⲉⲙⲟⲅⲓⲥ ⲁⲛⲉⲓ**ⲗⲱⲱⲙⲉ** ⲧⲏⲣⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲁⲩⲟⲩⲙⲟⲧ ϩⲓⲱⲱⲛ ⲗⲱⲕ ⲣⲱ ϩⲟⲗⲱⲥ ⲙⲛⲛⲥⲁⲛⲉⲓϣⲁϫⲉ ⲧⲏⲣⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩⲙⲟⲟⲩ ⲉϥⲟϣ ϫⲉⲉⲩⲛⲁⲉⲓⲱ ⲛⲥⲉϥⲓ ⲙⲙⲁⲩ ⲛϩⲏⲧⲛ",
+      "english": "...",
+      "source": "Whoever Seeks God Will Find CZ 129-137",
+      "urn": "urn:cts:copticLit:shenoute.seeks.monbcz:26-36",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲛⲧⲁⲛⲉⲛⲧⲁⲩϩⲉ ⲉϩⲣⲁⲓ ⲉⲣⲟϥ ⲥⲗϥⲧⲉ ⲛϩⲏⲧϥ ⲛⲧϩⲉ ⲛϩⲉⲛⲣⲓⲣ ϣⲁⲛⲧⲉϥⲡⲱϩ ⲁⲛ ϣⲁⲛⲉⲩⲙⲏⲣⲟⲥ ⲏ ϣⲁⲛⲧⲟⲩⲥⲱϩⲡ ⲁⲛ ϣⲁⲛⲉⲩⲙⲏⲣⲟⲥ ⲁⲗⲗⲁ ϣⲁⲛⲧⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲉⲩ**ⲗⲟⲟⲙⲉ** ⲁⲩⲱ ⲉⲩⲗⲁⲗⲱ ⲛϩⲏⲧϥ ϫⲓⲛⲛⲉⲓⲃ ⲛⲣⲁⲧⲟⲩ ϣⲁⲡϥⲱ ⲛⲧⲉⲩⲁⲡⲉ .",
+      "english": "...",
+      "source": "So Listen FL15-28",
+      "urn": "urn:cts:copticLit:shenoute.listen.amelineau:5-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲅⲓⲥ",
+        1,
+        14.691
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        9.467
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲱⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲱⲱⲙⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲱⲱⲙⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8960,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1657",
+      "label": "ⲁⲧⲗⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "unfading"
+    },
+    {
+      "target": "C1658",
+      "label": "ⲗⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "filth, witheredness"
+    }
+  ]
+}

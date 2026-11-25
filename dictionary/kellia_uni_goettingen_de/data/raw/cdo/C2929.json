@@ -1,0 +1,73 @@
+{
+  "id": "C2929",
+  "forms": [
+    {
+      "id": "CF7722",
+      "orth": "ⲙⲁ ⲙⲡⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3353",
+      "bibliography": "CD 275b; KoptHWb 154; ChLCS 39a"
+    },
+    {
+      "id": "CS3354",
+      "bibliography": "CD 275b; KoptHWb 154"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2932",
+      "label": "ϭⲓⲛⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "running, course"
+    },
+    {
+      "target": "C2930",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outgoing, exit"
+    },
+    {
+      "target": "C2925",
+      "label": "ⲡⲱⲧ",
+      "pos": "V",
+      "gloss": "run, flee, go"
+    },
+    {
+      "target": "C2928",
+      "label": "ⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "course, flight"
+    },
+    {
+      "target": "C2927",
+      "label": "ⲡⲱⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "run, go forth"
+    },
+    {
+      "target": "C2926",
+      "label": "ⲡⲱⲧ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "run after, pursue"
+    },
+    {
+      "target": "C2931",
+      "label": "ⲣⲉϥⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "runner"
+    }
+  ]
+}

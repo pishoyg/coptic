@@ -1,0 +1,200 @@
+{
+  "id": "C607",
+  "forms": [
+    {
+      "id": "CF2267",
+      "orth": "ⲃⲓϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5859,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2268",
+      "orth": "ⲃⲓϭⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS726",
+      "bibliography": "CD 48b; CED 30; KoptHWb 30, 497; DELC 34; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲩⲉϣⲟⲩⲱϣⲧ ⲙⲡϣⲃⲱⲧ ⲛⲅ ⲛⲥⲟⲡ ⲁⲩϩⲓⲱⲛⲓ ⲉϫⲱⲓ ⲛⲟⲩⲥⲟⲡ ⲁⲡϫⲟⲉⲓ **ⲃⲓϫⲓ** ϧⲁⲣⲟⲓ ⲛⲅ ⲛⲥⲟⲡ ⲁⲓⲉⲣ ⲟⲩⲉϩⲟⲟⲩ ⲛⲉⲙⲟⲩⲉϫⲱⲣϩ ϧⲉⲛⲡϣⲱⲕ ⲙⲫⲓⲟⲙ .",
+      "english": "Three times I was beaten with rods. Once I was stoned. Three times I suffered shipwreck. I have been a night and a day in the deep.",
+      "source": "08_II Corinthians_11",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲟⲩⲟⲛⲧⲁⲕ ⲙⲙⲁⲩ ⲛⲟⲩⲛⲁϩϯ ⲛⲉⲙⲟⲩⲥⲩⲛⲏⲇⲉⲥⲓⲥ ⲉⲛⲁⲛⲉⲥ ⲑⲏ ⲉⲧⲁ ϩⲁⲛⲟⲩⲟⲛ ⲭⲁⲥ ⲛⲥⲱⲟⲩ ⲁⲩ**ⲃⲓϫⲓ** ϧⲉⲛⲡⲓⲛⲁϩϯ .",
+      "english": "holding faith and a good conscience; which some having thrust away made a shipwreck concerning the faith;",
+      "source": "15_I Timothy_01",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲉⲓ",
+        1,
+        11.576
+      ],
+      [
+        "ϧⲁⲣⲟ",
+        1,
+        11.525
+      ],
+      [
+        "ⲅ",
+        1,
+        10.581
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        10.172
+      ],
+      [
+        "ⲛⲁϩϯ",
+        1,
+        9.369
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        9.189
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲃⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓ_1_pre_ⲃⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲃⲓϫⲓ_0_node",
+          1
+        ],
+        [
+          "ϧⲁⲣⲟ_1_post_ⲃⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ϧⲁⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲃⲓϫⲓ",
+          "ⲡ_2_pre_ϫⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓ",
+          "ϫⲟⲉⲓ_1_pre_ⲃⲓϫⲓ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓ_1_pre_ⲃⲓϫⲓ",
+          "ⲃⲓϫⲓ_0_node",
+          1
+        ],
+        [
+          "ⲃⲓϫⲓ_0_node",
+          "ϧⲁⲣⲟ_1_post_ⲃⲓϫⲓ",
+          1
+        ],
+        [
+          "ϧⲁⲣⲟ_1_post_ⲃⲓϫⲓ",
+          "ⲓ_2_post_ϧⲁⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5363,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "850481",
+    "egy_lemma": "bgꜣ",
+    "demo_num": "d1821",
+    "demo_lemma": "bkj",
+    "english": "to be shipwrecked",
+    "german": "schiffbrüchig sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850481",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1821"
+  }
+}

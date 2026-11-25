@@ -1,0 +1,65 @@
+{
+  "id": "C5576",
+  "forms": [
+    {
+      "id": "CF13127",
+      "orth": "ⲙⲁ ⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6241",
+      "bibliography": "CD 532a; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5577",
+      "label": "ϭⲓⲛⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "seclusion, imprisonment"
+    },
+    {
+      "target": "C5579",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "prison"
+    },
+    {
+      "target": "C5574",
+      "label": "ⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "shut, enclose, imprison"
+    },
+    {
+      "target": "C5578",
+      "label": "ⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "seclusion, imprisonment"
+    },
+    {
+      "target": "C5575",
+      "label": "ⲱⲧⲡ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "imprison"
+    }
+  ]
+}

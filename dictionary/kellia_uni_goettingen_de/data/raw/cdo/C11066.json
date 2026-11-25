@@ -1,0 +1,71 @@
+{
+  "id": "C11066",
+  "forms": [
+    {
+      "id": "CF30485",
+      "orth": "ϩⲁⲣⲙⲟⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF30486",
+      "orth": "ϩⲁⲣⲙⲟⲍⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30487",
+      "orth": "ϩⲁⲣⲙⲟⲥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30488",
+      "orth": "ϩⲟⲣⲙⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7943,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15461",
+      "bibliography": "DDGLC",
+      "cu_ID": "7319"
+    },
+    {
+      "id": "CS15462",
+      "bibliography": "DDGLC",
+      "cu_ID": "7324"
+    },
+    {
+      "id": "CS15463",
+      "bibliography": "DDGLC",
+      "cu_ID": "7323"
+    },
+    {
+      "id": "CS15464",
+      "bibliography": "DDGLC",
+      "cu_ID": "631"
+    },
+    {
+      "id": "CS15465",
+      "bibliography": "DDGLC",
+      "cu_ID": "7325"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3280",
+    "grl_lemma": "ἁρμόζω",
+    "grl_meaning": "to fit together, join, adapt, accommodate",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 243b; Preisigke 1:213"
+  }
+}

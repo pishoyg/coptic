@@ -1,0 +1,106 @@
+{
+  "id": "C7584",
+  "forms": [
+    {
+      "id": "CF17227",
+      "orth": "ϭⲏⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20088,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲏⲗ",
+      "dialect": "L",
+      "id": "2519.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8411",
+      "bibliography": "CD 806ab; KoptHWb 449; ChLCS 106b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲡⲉ ⲁⲥϭⲱⲗ ⲛⲧϩⲉ ⲛⲟⲩϫⲱⲱⲙⲉ ⲉϥ**ϭⲏⲗ** ⲧⲟⲟⲩ ⲛⲓⲙ ϩⲓⲛⲏⲥⲟⲥ ⲛⲓⲙ ⲁⲩⲕⲓⲙ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩⲙⲁ .",
+      "english": "The sky was removed like a scroll when it is rolled up. Every mountain and island were moved out of their places.",
+      "source": "66_Revelation_6",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲏⲥⲟⲥ",
+        1,
+        15.554
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        12.715
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        11.122
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19698,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7585",
+      "label": "ⲁϣϭⲏⲗ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C7586",
+      "label": "ⲁϣϭⲏⲗ",
+      "pos": "N",
+      "gloss": "cry"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C3072",
+  "forms": [
+    {
+      "id": "CF8017",
+      "orth": "ϭⲓⲛⲣⲓⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3520",
+      "bibliography": "CD 293a; ChLCS 41a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3069",
+      "label": "ⲁⲧⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "without turning, unwavering"
+    },
+    {
+      "target": "C3071",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "inclination"
+    },
+    {
+      "target": "C3073",
+      "label": "ⲣⲁⲕⲧⲥ",
+      "pos": "N",
+      "gloss": "bent, reversal, direction, deviation"
+    },
+    {
+      "target": "C3070",
+      "label": "ⲣⲉϥⲣⲓⲕⲓ",
+      "pos": "N",
+      "gloss": "turner, bender"
+    },
+    {
+      "target": "C3066",
+      "label": "ⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "bend, turn, incline"
+    },
+    {
+      "target": "C3068",
+      "label": "ⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "turning, inclination"
+    },
+    {
+      "target": "C3067",
+      "label": "ⲣⲓⲕⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "turn from, away"
+    }
+  ]
+}

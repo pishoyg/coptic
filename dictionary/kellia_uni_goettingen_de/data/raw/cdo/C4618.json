@@ -1,0 +1,119 @@
+{
+  "id": "C4618",
+  "forms": [
+    {
+      "id": "CF11194",
+      "orth": "ⲧⲟⲩⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4751,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲑⲟⲩⲱ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11362,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲟⲩⲱ⸗",
+      "dialect": "A",
+      "id": "1668.2"
+    },
+    {
+      "orth": "ⲧⲟⲩⲱ⸗",
+      "dialect": "F",
+      "id": "1668.3"
+    },
+    {
+      "orth": "ⲧⲟⲩⲱ⸗",
+      "dialect": "L",
+      "id": "1668.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5214",
+      "bibliography": "CD 444b; CDC 69a; CED 200; KoptHWb 251; DELC 223a; ChLCS 62a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲕⲁ ⲗⲁⲁⲩ ⲉⲣⲱⲧⲛ ⲛⲧⲛⲗⲁⲁⲩ ⲛⲥⲁⲡⲙⲉⲣⲉ ⲛⲉⲧⲛⲉⲣⲏⲩ . ⲡⲉⲧⲙⲉ ⲅⲁⲣ ⲙⲡⲉⲧϩⲓ **ⲧⲟⲩⲱ**ϥ ⲁϥϫⲉⲕ ⲡⲛⲟⲙⲟⲥ ⲉⲃⲟⲗ .",
+      "english": "Owe no one anything, except to love one another; for he who loves his neighbor has fulfilled the law.",
+      "source": "45_Romans_13",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϩⲓ **ⲧⲟⲩⲱ**ϥ ϭⲉ ⲁⲩⲱ ⲛⲉⲧⲛⲁⲩ ⲉⲣⲟϥ ⲛϣⲟⲣⲡ ϫⲉⲛⲉⲩⲣⲉϥⲧⲱⲃⲁϩ ⲡⲉ ⲛⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲏ ⲙⲡⲁⲓ ⲁⲛ ⲡⲉⲧϩⲙⲟⲟⲥ ⲁⲩⲱ ⲉⲧϣⲉⲧ ⲙⲛⲧⲛⲁⲁ .",
+      "english": "The neighbors therefore, and those who saw that he was blind before, said, 'Isn't this he who sat and begged?'",
+      "source": "43_John_9",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲟⲩⲟⲓ ⲛⲁⲛ ϫⲉⲁⲡⲟⲩⲁ ⲡⲟⲩⲁ ϣⲱⲡⲉ ⲛϫⲣⲟⲡ ⲉⲡⲉⲧϩⲓ**ⲧⲟⲩⲱ**ϥ ·",
+      "english": "...",
+      "source": "Unknown Work 5-1: GF 381-88",
+      "urn": "urn:cts:copticLit:shenoute.unknown5_1.monbgf:131-139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4622",
+      "label": "ϩⲁⲧⲟⲩⲱ⸗",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4623",
+      "label": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, next"
+    },
+    {
+      "target": "C4620",
+      "label": "ϯⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "turn away, move out?"
+    },
+    {
+      "target": "C4621",
+      "label": "ⲉⲧⲟⲩⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4619",
+      "label": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "sit (to eat)"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    }
+  ],
+  "etym": {
+    "demo_num": "d7125",
+    "demo_lemma": "tw(e)",
+    "english": "[to be shod, wearing shoes]",
+    "german": "Busen; Brust",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7125"
+  }
+}

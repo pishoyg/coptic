@@ -1,0 +1,192 @@
+{
+  "id": "C8701",
+  "forms": [
+    {
+      "id": "CF20694",
+      "orth": "ⲇⲁⲙⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF20695",
+      "orth": "ⲇⲁⲙⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7408,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10345",
+      "bibliography": "DDGLC",
+      "cu_ID": "9739"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲕⲉⲡⲏⲑⲩⲙⲉⲓ ⲉⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲧⲡⲉ ⲙⲛⲡⲥⲱⲙⲁ ⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ **ⲇⲁⲙⲁⲍⲉ** ⲛⲧⲥⲁⲣⲝ ϩⲓⲧⲛⲧⲛⲏⲥⲧⲉⲓⲁ · ⲛⲅⲧⲣⲉⲥⲁⲥⲱⲟⲩ ⲧⲁⲣⲉⲥϩⲱⲗ ⲉⲡϫⲓⲥⲉ ϩⲛⲟⲩⲙⲟⲧⲛⲉⲥ ·",
+      "english": "If thou wishest to enter into heaven with the body, from the earth, subdue thou the flesh by means of fasting, and then thou shalt be able to make it to enter into the height with ease.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲗⲁⲥ ⲇⲉ ⲉⲓ ⲙⲛϭⲟⲙ ⲛⲗⲁⲁⲩ ⲛⲣⲱⲙⲉ **ⲇⲁⲙⲁⲍⲉ** ⲙⲙⲟϥ ⲡⲁⲓ ⲉⲧϣⲧⲟⲣⲧⲣ ⲉⲧϩⲟⲟⲩ ⲉⲧⲙⲉϩ ⲙⲙⲁⲧⲟⲩ ⲛⲣⲉϥⲙⲟⲟⲩⲟⲩⲧ",
+      "english": "But nobody can tame the tongue. It is a restless evil, full of deadly poison.",
+      "source": "59_James_3",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        10.644
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.597
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        8.935
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        7.577
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲁⲙⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_1_post_ⲇⲁⲙⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲥⲱⲟⲩ_2_post_ⲧⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲁⲙⲁⲍⲉ_0_node",
+          "ⲛ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲣⲉ",
+          "ⲅ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲅ_2_post_ⲧⲣⲉ",
+          "ⲧⲣⲉ_1_post_ⲇⲁⲙⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲧⲣⲉ_1_post_ⲇⲁⲙⲁⲍⲉ",
+          "ⲥ_2_post_ⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲣⲉ",
+          "ⲁⲥⲱⲟⲩ_2_post_ⲧⲣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6954,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2933",
+    "grl_lemma": "δαμάζω",
+    "grl_meaning": "to overpower, subdue, tame",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 368a"
+  }
+}

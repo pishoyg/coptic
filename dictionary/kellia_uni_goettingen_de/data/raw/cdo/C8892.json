@@ -1,0 +1,427 @@
+{
+  "id": "C8892",
+  "forms": [
+    {
+      "id": "CF21628",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21633",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.58,
+        "rank": 370,
+        "count": 407
+      }
+    },
+    {
+      "id": "CF21629",
+      "orth": "ⲉⲇⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21631",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21632",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21630",
+      "orth": "ⲉⲓⲇⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21634",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21635",
+      "orth": "ⲉⲓⲧⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21636",
+      "orth": "ⲉⲓⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21637",
+      "orth": "ⲉⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 16.14,
+        "rank": 79,
+        "count": 2546
+      }
+    },
+    {
+      "id": "CF21638",
+      "orth": "ⲓⲧⲉ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF21639",
+      "orth": "ⲓⲧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.85,
+        "rank": 492,
+        "count": 157
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS10765",
+      "bibliography": "DDGLC",
+      "cu_ID": "3207"
+    },
+    {
+      "id": "CS10766",
+      "bibliography": "DDGLC",
+      "cu_ID": "9374"
+    },
+    {
+      "id": "CS10767",
+      "bibliography": "DDGLC",
+      "cu_ID": "15305"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡ ⲟⲩⲛ ⲉⲣⲉⲡⲓⲛⲁϩϯ ⲙⲟϣⲓ ⲛⲥⲁϩⲱⲃ ⲛⲓⲃⲉⲛ ⲉⲧⲉⲛⲛⲁⲁⲓⲧⲟⲩ ⲉⲑⲃⲉⲫϯ ⲓⲧⲉ ⲡⲓⲟⲩⲱⲙ **ⲓⲧⲉ** ⲡⲓⲥⲱ ⲓⲧⲉ ⲕⲉϩⲱⲃ ⲕⲉϩⲱⲃ ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲟⲓ ⲛⲁⲧϯϩⲁⲡ ⲉⲣⲱⲟⲩ ⲉⲑⲃⲉⲡⲓⲛⲁϩϯ ⲉⲧⲥⲟⲩⲧⲱⲛ .",
+      "english": "If, therefore, every good work we do for God is accompanied by faith—whether eating, drinking, or any other act—such works cannot be condemned because of right faith.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲧⲉⲛⲟⲩ ϫⲉⲁⲥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲟⲩⲏⲣ ⲛϭⲓⲧⲙⲛⲧⲁⲧⲥⲃⲱ ⲛⲛⲉⲧⲟ ⲛⲥⲁⲃⲉ ⲛⲁⲩ ⲟⲩⲁⲁⲩ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲓⲧⲉ ϩⲟⲟⲩⲧ ⲉⲓⲧⲉ ⲥϩⲓⲙⲉ ⲉⲓⲧⲉ ⲛⲟϭ **ⲉⲓⲧⲉ** ⲕⲟⲩⲓ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲧⲉ ⲡⲁⲩⲗⲟⲥ ⲓⲧⲉ ⲁⲡⲟⲗⲗⲱ ⲓⲧⲉ ⲕⲏⲫⲁ **ⲓⲧⲉ** ⲡⲓⲕⲟⲥⲙⲟⲥ ⲓⲧⲉ ⲡⲱⲛϧ ⲓⲧⲉ ⲫ ⲙⲟⲩ ⲓⲧⲉ ⲛⲏ ⲉⲧϣⲟⲡ ⲓⲧⲉ ⲛⲏ ⲉⲑⲛⲁϣⲱⲡⲓ ⲛⲟⲩⲧⲉⲛ ⲧⲏⲣⲟⲩ ⲛⲉ .",
+      "english": "whether Paul, or Apollos, or Cephas, or the world, or life, or death, or things present, or things to come. All are yours,",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲡⲣⲣⲟ · ϯⲕⲉⲗⲉⲩⲉ ϫⲓⲛⲧⲉϩⲣⲱⲙⲁⲛⲓⲁ ϣⲁⲣⲏⲥ ⲉⲡⲉⲗⲁⲕ · ϫⲉⲉⲓⲧⲉ ⲉⲡⲁⲣⲭⲟⲥ · ⲉⲓⲧⲉ ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲉⲓⲧⲉ ⲕⲟⲙⲉⲥ · ⲉⲓⲧⲉ ⲉⲡⲓⲥⲕⲟⲡⲟⲥ · ⲉⲓⲧⲉ ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ · ⲉⲓⲧⲉ ⲇⲓⲁⲕⲟⲛⲟⲥ · **ⲉⲓⲧⲉ** ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ · ⲉⲓⲧⲉ ϩⲙϩⲁⲗ · ⲉⲓⲧⲉ ⲣⲙϩⲉ · ⲉⲓⲧⲉ ⲙⲁⲧⲟⲓ · ⲉⲓⲧⲉ ⲡⲁⲅⲁⲛⲱⲥ ⲉⲩⲉϣⲙϣⲉ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "I, the Emperor Diocletian, [hereby] command that from Romania [in the north] to Pelak (Philac) in the south, every man, whether he be eparch, or general, or count, or bishop, or elder, or deacon, or reader, or servant, or free man, or soldier, or countryman, shall worship my gods.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲉ ⲅⲁⲣ ⲁⲛⲟⲛ ⲧⲏⲣⲉⲛ ⲉⲧⲁⲛϭⲓⲱⲙⲥ ϧⲉⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ ⲉⲩⲥⲱⲙⲁ ⲛⲟⲩⲱⲧ ⲓⲧⲉ ⲛⲓⲓⲟⲩⲇⲁⲓ ⲓⲧⲉ ⲛⲓⲟⲩⲉⲓⲛⲓⲛ **ⲓⲧⲉ** ⲃⲱⲕ ⲓⲧⲉ ⲣⲉⲙϩⲉ ⲟⲩⲟϩ ⲁⲛⲟⲛ ⲧⲏⲣⲉⲛ ⲁⲩⲧⲥⲟⲛ ⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ .",
+      "english": "For in one Spirit we were all baptized into one body, whether Jews or Greeks, whether bond or free; and were all given to drink into one Spirit.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲓⲧⲉ** ⲉⲃⲟⲗ ϩⲛⲛⲉϩⲛⲁⲁⲩ ⲛⲧⲇⲓⲁⲕⲟⲛⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ · ⲉⲓⲧⲉ ⲉⲃⲟⲗ ϩⲛⲛⲧⲟ ⲛⲛⲉⲧϩⲓⲧⲟⲩⲱⲟⲩ ·",
+      "english": "Whether out of the service of God or out of the shares of those next to them",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲧⲉ",
+        130,
+        31.468
+      ],
+      [
+        "ⲕⲏⲫⲁ",
+        18,
+        26.504
+      ],
+      [
+        "ⲁⲡⲟⲗⲗⲱ",
+        18,
+        25.813
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        10,
+        25.661
+      ],
+      [
+        "ⲛⲓⲙⲉⲧϭ",
+        5,
+        24.661
+      ],
+      [
+        "ⲛⲏ",
+        49,
+        22.901
+      ],
+      [
+        "ⲛⲓ",
+        69,
+        22.544
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        26,
+        22.323
+      ],
+      [
+        "ⲟⲩⲙⲁⲥⲓ",
+        6,
+        22.128
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        18,
+        22.123
+      ],
+      [
+        "ⲥⲏⲃⲓ",
+        6,
+        21.865
+      ],
+      [
+        "ⲟⲩⲉⲓⲛⲓⲛ",
+        8,
+        21.236
+      ],
+      [
+        "ⲡ",
+        58,
+        21.193
+      ],
+      [
+        "ⲱⲛϧ",
+        18,
+        21.133
+      ],
+      [
+        "ⲛⲟⲩⲧⲉⲛ",
+        4,
+        21.11
+      ],
+      [
+        "ⲉⲧ",
+        49,
+        21.096
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        12,
+        20.982
+      ],
+      [
+        "ⲟⲩⲛ",
+        18,
+        20.969
+      ],
+      [
+        "ⲡⲓⲣⲉⲙⲛ",
+        3,
+        20.865
+      ],
+      [
+        "ⲃⲱⲕ",
+        13,
+        20.774
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲓⲧⲉ",
+        448,
+        29.682
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        101,
+        23.719
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        133,
+        22.752
+      ],
+      [
+        "ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ",
+        15,
+        21.065
+      ],
+      [
+        "ⲕⲏⲫⲁⲥ",
+        18,
+        20.439
+      ],
+      [
+        "ⲣⲙϩⲉ",
+        22,
+        19.693
+      ],
+      [
+        "ⲁⲡⲟⲗⲗⲱ",
+        18,
+        19.351
+      ],
+      [
+        "ⲡⲁⲅⲁⲛⲟⲥ",
+        10,
+        19.31
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        18.895
+      ],
+      [
+        "ϩⲟⲩⲥ",
+        6,
+        18.684
+      ],
+      [
+        "ⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+        12,
+        18.436
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        40,
+        18.331
+      ],
+      [
+        "ϩⲛ",
+        113,
+        18.271
+      ],
+      [
+        "ⲉ",
+        155,
+        17.977
+      ],
+      [
+        "ⲛⲟϭ",
+        55,
+        17.973
+      ],
+      [
+        ".",
+        100,
+        17.82
+      ],
+      [
+        "ⲛ",
+        187,
+        17.781
+      ],
+      [
+        "ⲕⲟⲙⲉⲥ",
+        10,
+        17.647
+      ],
+      [
+        "ϩⲛⲁⲁⲩ",
+        19,
+        17.503
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        18,
+        17.373
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲧⲉ_0_node",
+          10
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲧⲉ",
+          "ⲛ_1_pre_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲧⲉ",
+          "ϥ_1_pre_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲧⲉ",
+          "ⲉⲓⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.56,
+      "rank": 317,
+      "count": 407
+    },
+    "B": {
+      "rate": 0.05,
+      "rank": 3352,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "630",
+    "grl_lemma": "εἴτε",
+    "grl_meaning": "either ... or, whether ... or",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 498b"
+  }
+}

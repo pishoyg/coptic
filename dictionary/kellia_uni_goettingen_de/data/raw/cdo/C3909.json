@@ -1,0 +1,70 @@
+{
+  "id": "C3909",
+  "forms": [
+    {
+      "id": "CF9749",
+      "orth": "ϫⲓⲥⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4436",
+      "bibliography": "CD 375a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3908",
+      "label": "ϯⲥⲁϣ",
+      "pos": "V",
+      "gloss": "give a blow"
+    },
+    {
+      "target": "C3904",
+      "label": "ⲣⲉϥⲥⲉϣⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "parricide"
+    },
+    {
+      "target": "C3907",
+      "label": "ⲣⲥⲁϣ",
+      "pos": "V",
+      "gloss": "cover with wounds, sores"
+    },
+    {
+      "target": "C3905",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3906",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3903",
+      "label": "ⲥⲱϣ",
+      "pos": "V",
+      "gloss": "strike"
+    }
+  ]
+}

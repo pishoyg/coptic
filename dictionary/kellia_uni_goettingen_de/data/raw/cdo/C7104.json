@@ -1,0 +1,51 @@
+{
+  "id": "C7104",
+  "forms": [
+    {
+      "id": "CF32092",
+      "orth": "ⲣϫⲃⲃⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32091",
+      "orth": "ⲣϫⲃⲃⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7838",
+      "bibliography": "CD 760a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7102",
+      "label": "ϫⲃⲃⲥ",
+      "pos": "N",
+      "gloss": "coal"
+    },
+    {
+      "target": "C7103",
+      "label": "ϫⲉⲃⲥ",
+      "pos": "N",
+      "gloss": "rust, verdigris"
+    }
+  ]
+}

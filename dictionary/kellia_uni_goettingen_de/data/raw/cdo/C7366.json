@@ -1,0 +1,137 @@
+{
+  "id": "C7366",
+  "forms": [
+    {
+      "id": "CF16791",
+      "orth": "ϫⲱⲣⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15925,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8148",
+      "bibliography": "CD 787a; KoptHWb 433; ChLCS 104a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϯϩⲓⲱⲱϥ ⲛⲟⲩϩⲱⲕ ⲁⲩⲱ ⲧⲉϥⲥⲏϥⲉ ⲁϥⲙⲟⲣⲥ ⲉϫⲛⲡϩⲱⲕ ⲛⲇⲁⲩⲉⲓⲇ ⲁϥ**ϫⲱⲣⲁϩ** ⲇⲉ ⲛϭⲓⲇⲁⲩⲉⲓⲇ ⲛⲧⲉⲣⲉϥϫⲱⲛⲧ ⲉⲙⲟⲟϣⲉ ⲛϩⲏⲧⲟⲩ ϫⲉⲛⲉϥϫⲟⲛⲧ ⲁⲛ ⲙⲙⲟⲟⲩ ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲙⲟⲟϣⲉ ⲛϩⲏⲧⲟⲩ ⲛⲟⲩⲥⲟⲡ ⲁⲩⲱ ⲥⲛⲁⲩ ⲁϥϩⲓⲥⲉ ⲡⲉϫⲉⲇⲁⲩⲉⲓⲇ ⲛⲥⲁⲟⲩⲗ ϫⲉⲛϯⲛⲁϣⲙⲟⲟϣⲉ ⲁⲛ ⲉⲣⲉⲛⲁⲓ ϩⲓⲱⲱⲧ ϫⲉⲛϯⲧⲏⲏⲡ ⲁⲛ ⲉⲣⲟⲟⲩ ⲇⲁⲩⲉⲓⲇ ⲇⲉ ⲁϥⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲙⲙⲟⲟⲩ",
+      "english": "And he girt David with his sword over his coat: and he made trial walking with them once and again: and David said to Saul, I shall not be able to go with these, for I have not proved them: so they remove them from him.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        2,
+        13.767
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        1,
+        9.928
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ϫⲱⲣⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛϭⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲱⲣⲁϩ",
+          "ϥ_1_pre_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲱⲣⲁϩ",
+          "ϫⲱⲣⲁϩ_0_node",
+          1
+        ],
+        [
+          "ϫⲱⲣⲁϩ_0_node",
+          "ⲇⲉ_1_post_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϫⲱⲣⲁϩ",
+          "ⲛϭⲓ_1_post_ϫⲱⲣⲁϩ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ϫⲱⲣⲁϩ",
+          "ⲇⲁⲩⲉⲓⲇ_2_post_ⲛϭⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15526,
+      "count": 1
+    }
+  }
+}

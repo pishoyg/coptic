@@ -1,0 +1,73 @@
+{
+  "id": "C13020",
+  "forms": [
+    {
+      "id": "CF34091",
+      "orth": "ϣⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.63,
+        "rank": 973,
+        "count": 99
+      }
+    },
+    {
+      "id": "CF34092",
+      "orth": "ϣⲉⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.06,
+        "rank": 459,
+        "count": 175
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "in Verbindungen",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18017",
+      "bibliography": "KoptHWb 316; DELC 265a-b; ChLCS 79a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲗⲓⲃⲉ ⲡⲉ ⲉϥⲟϣ ⲛⲛⲟⲃⲉ · ⲡⲉ**ϣⲛ**ⲁⲡⲉ · ⲙⲛⲡⲉⲥⲣⲟϥⲣⲉϥ ⲛⲛⲕⲁⲣⲡⲟⲥ ·",
+      "english": "it is a madness which produceth much sin, it splitteth the head, and it maketh the joints of the hands and arms helpless.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲁϩ ⲛⲥⲟⲡ ⲁϥⲛⲟϫϥ ⲉⲡⲕⲱϩⲧ ⲁⲩⲱ ⲉⲡⲙⲟⲟⲩ ϫⲉⲉϥⲉⲙⲟⲟⲩⲧϥ . ⲁⲗⲗⲁ ⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲛ ϩⲙⲡⲉⲧⲕⲛⲁϣⲁⲁϥ ⲉⲕ**ϣⲛ**ϩⲧⲏⲕ ϩⲁⲣⲟⲛ .",
+      "english": "Often it has cast him both into the fire and into the water, to destroy him. But if you can do anything, have compassion on us, and help us.&apos;",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲓⲟⲩⲇⲁⲓ ⲁⲁϩⲉⲣⲁⲧⲟⲩ ⲉⲣⲟϥ · ⲟⲩⲱϣ ⲉⲃⲟⲗ ϫⲉⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ · ⲁⲩⲱ ⲟⲛ ⲛⲉⲩϯⲁⲁⲥ ⲛⲁϥ ⲡⲉ · ⲛⲧⲟϥ ⲇⲉ ⲙⲡⲉϥⲧⲱⲱⲃⲉ ⲛⲟⲩⲡⲉⲧϩⲟⲟⲩ ⲉⲡⲙⲁ ⲛⲟⲩⲡⲉⲧϩⲟⲟⲩ · ⲁⲗⲗⲁ ⲁϥ**ϣⲛ**ϩⲧⲏϥ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ·",
+      "english": "For when, the Jews were standing before Him, and crying out 'Crucify Him', and were buffeting Him, He did not reward them with evil in place of evil, but He shewed compassion upon them.",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C490",
+      "type": "cf",
+      "label": "palm-fibre"
+    },
+    {
+      "target": "551",
+      "type": "cf",
+      "label": "palm-fibres (B)"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C7330",
+  "forms": [
+    {
+      "id": "CF16719",
+      "orth": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8102",
+      "bibliography": "CD 783a; KoptHWb 432; ChLCS 103b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡϫⲱⲕ ⲉⲃⲟⲗ ⲡⲉⲯⲁⲗⲙⲟⲥ ⲛⲇⲁⲩⲉⲓⲇ ⲡⲁⲍⲁⲭⲁⲣⲓⲁⲥ **ϩⲙⲡϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ⲡϫⲟⲉⲓⲥ ⲁⲕⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲙⲟⲓ ⲁⲕⲥⲟⲩⲱⲛⲧ",
+      "english": "O Lord, thou hast proved me, and known me.",
+      "source": "Psalms 138",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:138",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ⲡϫⲟⲉⲓⲥ ⲅⲁⲣ ⲛⲏⲩ ⲛⲧϩⲉ ⲛⲟⲩⲕⲱϩⲧ ⲁⲩⲱ ⲛⲉϥϩⲁⲣⲙⲁ ⲛⲧϩⲉ ⲛⲟⲩϩⲁⲧⲏⲩ ⲛϥⲧⲱⲱⲃⲉ ⲛⲟⲩⲕⲃⲁ ϩⲛⲟⲩϭⲱⲛⲧ ⲁⲩⲱ **ⲟⲩϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ϩⲛⲟⲩϣⲁϩ ⲛⲥⲁⲧⲉ",
+      "english": "For, behold, the Lord will come as fire, and his chariots as a storm, to render his vengeance with wrath, and his rebuke with a flame of fire.",
+      "source": "Isaiah 66",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲙⲁⲣⲉⲛⲉⲧⲛϭⲓϫ ⲧⲁϫⲣⲟ ⲛⲧⲉⲧⲛϣⲱⲡⲉ ⲛϩⲉⲛⲣⲱⲙⲉ **ⲛϫⲱⲱⲣⲉ **ⲉⲃⲟⲗ**** ϫⲉⲡⲉⲧⲛϫⲟⲉⲓⲥ ⲥⲁⲟⲩⲗ ⲁϥⲙⲟⲩ ⲁⲩⲱ ⲁⲛⲟⲕ ⲁⲡⲏⲓ ⲛⲓⲟⲩⲇⲁ ⲧⲁϩⲥⲧ ⲉⲧⲣⲁⲣⲣⲣⲟ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ",
+      "english": "And now let your hands be made strong, and be valiant; for your master Saul is dead, and moreover the house of Juda have anointed me to be king over them.",
+      "source": "II Samuel 2",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7331",
+      "label": "ϫⲓⲛϫⲱⲣ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "scattering, dispersion"
+    },
+    {
+      "target": "C7328",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "scatter, disperse"
+    },
+    {
+      "target": "C7329",
+      "label": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "scatter, disperse; bring to naught, hinder"
+    }
+  ]
+}

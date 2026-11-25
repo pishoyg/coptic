@@ -1,0 +1,238 @@
+{
+  "id": "C357",
+  "forms": [
+    {
+      "id": "CF31577",
+      "orth": "ⲣⲙⲃⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14909,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31576",
+      "orth": "ⲣⲙⲙⲃⲉⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1543",
+      "orth": "ⲣⲉⲙⲃⲉⲭⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2093,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF1544",
+      "orth": "ⲗⲉⲃⲉⲕⲏ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS395",
+      "bibliography": "CD 31a; CED 21; KoptHWb 22; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲣⲉⲙⲛϫⲱⲓⲗⲓ ⲛⲉⲙⲟⲩ**ⲣⲉⲙⲃⲉⲭⲉ** ⲛⲛⲉϥⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲙⲙⲟϥ",
+      "english": "A sojourner or hireling shall not eat of it.",
+      "source": "02_Exodus_12",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲉϣⲱⲡⲓ ϧⲁⲧⲟⲧⲕ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲣⲉⲙⲃⲉⲭⲉ** ⲛⲉⲙⲟⲩⲣⲉⲙⲛϫⲱⲓⲗⲓ ⲉϥⲉⲉⲣϩⲱⲃ ⲛⲁⲕ ϣⲁϯⲣⲟⲙⲡⲓ ⲛⲧⲉⲡⲓⲭⲱ ⲉⲃⲟⲗ",
+      "english": "He shall be with thee as a hireling or a sojourner, he shall work for thee till the year of release:",
+      "source": "03_Leviticus_25",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲉⲟⲩ**ⲣⲉⲙⲃⲉⲭⲉ** ⲡⲉ ⲉϥⲉϣⲱⲡⲓ ⲛⲁϥ ⲛⲧϣⲉⲃⲓⲱ ⲙⲡⲉϥⲃⲉⲭⲉ",
+      "english": "But if the owner be with it, he shall not make compensation: but if it be a hired thing, there shall be a compensation to him instead of his hire.",
+      "source": "02_Exodus_22",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲧⲣ",
+        1,
+        18.598
+      ],
+      [
+        "ϩⲟⲧⲣ",
+        1,
+        17.276
+      ],
+      [
+        "ϭⲓⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲙⲃⲉⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲙⲃⲉⲕⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲟⲧⲣ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_4_post_ⲣⲟⲙⲡⲉ",
+          1
+        ],
+        [
+          "ⲣⲟⲙⲡⲉ_3_post_ϩⲟⲧⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲙⲃⲉⲕⲉ_0_node",
+          "ⲉ_1_post_ⲣⲙⲃⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲙⲃⲉⲕⲉ",
+          "ϥ_3_post_ϩⲟⲧⲣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲟⲧⲣ",
+          "ϩⲟⲧⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲣ_2_post_ⲉ",
+          "ⲧⲉ_4_post_ⲣⲟⲙⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_4_post_ⲣⲟⲙⲡⲉ",
+          "ⲣⲟⲙⲡⲉ_3_post_ϩⲟⲧⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12347",
+      "type": "cf",
+      "label": "human being"
+    },
+    {
+      "target": "C391",
+      "type": "cf",
+      "label": "servant, slave"
+    },
+    {
+      "target": "C356",
+      "type": "syn",
+      "label": "wage-taker, hireling"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

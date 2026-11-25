@@ -1,0 +1,111 @@
+{
+  "id": "C3779",
+  "forms": [
+    {
+      "id": "CF31722",
+      "orth": "ⲣⲉϥⲧⲕⲥⲟⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31721",
+      "orth": "ⲣⲉϥⲧⲕⲥⲟⲟⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4290",
+      "bibliography": "CD 361b-362a; KoptHWb 199; ChLCS 51a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4204",
+      "type": "cf",
+      "label": "throw"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3780",
+      "label": "ϩⲛⲁⲁⲩ ⲛⲕⲁⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3772",
+      "label": "ϫⲓⲛⲥⲓϯ",
+      "pos": "N",
+      "gloss": "sowing"
+    },
+    {
+      "target": "C3773",
+      "label": "ϫⲓⲛⲥⲓϯ",
+      "pos": "N",
+      "gloss": "sowing"
+    },
+    {
+      "target": "C3777",
+      "label": "ⲛⲉϫⲥⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "shoot arrow, throw dart"
+    },
+    {
+      "target": "C3778",
+      "label": "ⲣⲉϥⲛⲉϫⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "shooter of arrows, archer"
+    },
+    {
+      "target": "C3774",
+      "label": "ⲥⲉⲧⲉⲃⲣⲏϫ",
+      "pos": "N",
+      "gloss": "lightning"
+    },
+    {
+      "target": "C3771",
+      "label": "ⲥⲓϯ",
+      "pos": "N",
+      "gloss": "thing thrown, seed"
+    },
+    {
+      "target": "C3768",
+      "label": "ⲥⲓⲧⲉ",
+      "pos": "V",
+      "gloss": "throw, sow, put"
+    },
+    {
+      "target": "C3770",
+      "label": "ⲥⲓⲧⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, vomit"
+    },
+    {
+      "target": "C3769",
+      "label": "ⲥⲓⲧⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "throw, cast out"
+    },
+    {
+      "target": "C3775",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    },
+    {
+      "target": "C3776",
+      "label": "ⲥⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "arrow, dart"
+    }
+  ]
+}

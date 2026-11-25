@@ -1,0 +1,152 @@
+{
+  "id": "C6991",
+  "forms": [
+    {
+      "id": "CF16037",
+      "orth": "ϩⲟⲩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18071,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲟⲩⲁⲧⲉ",
+      "dialect": "S",
+      "id": "2324.1"
+    },
+    {
+      "orth": "ϩⲟⲩⲏⲧ",
+      "dialect": "L",
+      "id": "2324.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7711",
+      "bibliography": "CD 738a; CED 305; KoptHWb 404; DELC 318b; ChLCS 98b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲧⲥⲱⲕ ⲧⲏⲣⲟⲩ ⲛⲛⲟⲩⲟⲥⲣ ⲥⲉⲛⲁⲡⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉϫⲏⲩ ⲁⲩⲱ ⲛⲉ**ϩⲟⲩⲏⲧ** ⲙⲛⲛⲛⲉⲉϥ ⲛⲧϩⲏ ⲛⲛⲉϫⲏⲩ ⲛⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲥⲉⲛⲁⲁϩⲉⲣⲁⲧⲟⲩ ϩⲓⲡⲉⲕⲣⲟ",
+      "english": "And all the rowers and the mariners shall come down from the ships, and the pilots of the sea shall stand on the land.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲉϥ",
+        1,
+        15.469
+      ],
+      [
+        "ⲉϫⲏⲩ",
+        1,
+        15.389
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲉⲉϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲉϥ_1_post_ϩⲟⲩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲩⲏⲧ",
+          "ⲛⲉ_1_pre_ϩⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲟⲩⲏⲧ",
+          "ϩⲟⲩⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲩⲏⲧ_0_node",
+          "ⲙⲛ_2_post_ⲛⲉⲉϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲉⲉϥ",
+          "ⲛ_2_post_ⲛⲉⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲉⲉϥ",
+          "ⲛⲉⲉϥ_1_post_ϩⲟⲩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17692,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "97980",
+    "egy_lemma": "hw.tj",
+    "demo_num": "d3755",
+    "demo_lemma": "hjt",
+    "english": "sailer; ship's hand",
+    "german": "[Berufsbez. (von der Schifffahrt)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/97980",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3755"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C88",
+  "forms": [
+    {
+      "id": "CF321",
+      "orth": "ϫⲓⲛⲁⲙⲁⲗⲏϫ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF322",
+      "orth": "ϫⲓⲛⲁⲙⲁⲗⲏϫ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS103",
+      "bibliography": "CD 7b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C86",
+      "label": "ⲁⲙⲁⲗⲏϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    },
+    {
+      "target": "C87",
+      "label": "ⲉⲣⲁⲙⲁⲗⲏϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ]
+}

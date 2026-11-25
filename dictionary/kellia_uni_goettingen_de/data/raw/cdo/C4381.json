@@ -1,0 +1,58 @@
+{
+  "id": "C4381",
+  "forms": [
+    {
+      "id": "CF10714",
+      "orth": "ⲧⲁⲁⲧⲉⲧⲛϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4962",
+      "bibliography": "CD 421a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4592",
+      "type": "cf",
+      "label": "throw back, spread"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4382",
+      "label": "ϫⲓⲧⲛϩ",
+      "pos": "V",
+      "gloss": "take wings"
+    },
+    {
+      "target": "C4380",
+      "label": "ⲣⲉⲧⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4379",
+      "label": "ⲣⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4378",
+      "label": "ⲧⲛϩ",
+      "pos": "N",
+      "gloss": "wing"
+    }
+  ]
+}

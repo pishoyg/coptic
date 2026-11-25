@@ -1,0 +1,536 @@
+{
+  "id": "C8684",
+  "forms": [
+    {
+      "id": "CF20590",
+      "orth": "ⲅⲛⲱⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20591",
+      "orth": "ⲅⲛⲟⲥⲓⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF20593",
+      "orth": "ⲅⲛⲱⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4523,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF20592",
+      "orth": "ⲅⲛⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20594",
+      "orth": "ⲅⲛⲱⲥⲓⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20595",
+      "orth": "ⲅⲛⲱⲥⲓⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20596",
+      "orth": "ⲅⲛⲱⲥⲓⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10300",
+      "bibliography": "DDGLC",
+      "cu_ID": "903"
+    },
+    {
+      "id": "CS10301",
+      "bibliography": "DDGLC",
+      "cu_ID": "3541"
+    },
+    {
+      "id": "CS10302",
+      "bibliography": "DDGLC",
+      "cu_ID": "2280"
+    },
+    {
+      "id": "CS10303",
+      "bibliography": "DDGLC",
+      "cu_ID": "8242"
+    },
+    {
+      "id": "CS10304",
+      "bibliography": "DDGLC",
+      "cu_ID": "4143"
+    },
+    {
+      "id": "CS10305",
+      "bibliography": "DDGLC",
+      "cu_ID": "2181"
+    },
+    {
+      "id": "CS10306",
+      "bibliography": "DDGLC",
+      "cu_ID": "3328"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉ**ⲅⲛⲱⲥⲓⲥ** ⲅⲁⲣ ⲙⲡⲥⲟⲟⲩⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟⲥ ⲛⲧⲁⲓϣⲁϫⲉ ⲛⲙⲙⲏⲧⲛ ⲛϩⲏⲧⲥ ⲙⲡϩⲟⲟⲩ : ⁛ · ⁛ · ⁛ · ⁛ · ⁛",
+      "english": "“For it is the gnosis of the gnosis of the Ineffable concerning which I have discoursed with you this day.”",
+      "source": "Pistis Sophia Book 2 Part 9",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:74-76",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲍ ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲉⲓⲏⲥⲟⲩⲥ ⲟⲩⲱ ⲉϥϫⲱ ⲛⲛⲉⲓϣⲁϫⲉ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ · ⲁϥⲟⲩⲱϩ ⲟⲛ ⲉⲧⲟⲟⲧϥ ϩⲙⲡϣⲁϫⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ · ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ϭⲉ ⲁⲓⲫⲟⲣⲉⲓ ⲙⲡⲁⲉⲛⲇⲩⲙⲁ · ⲁⲩⲱ ⲁⲩϯ ⲛⲁⲓ ⲛⲉⲝⲟⲩⲥⲓⲁ ⲛⲓⲙ ϩⲓⲧⲙⲡϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲉⲧⲓ ⲕⲉⲕⲟⲩⲓ ⲛⲟⲩⲟⲉⲓϣ ⲡⲉ ⲁⲩⲱ ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲧⲏⲣϥ · ⲙⲛⲡⲉⲡⲗⲏⲣⲱⲙⲁ ⲙⲡⲧⲏⲣϥ · ⲁⲩⲱ ϯⲛⲁϩⲉⲡⲗⲁⲁⲩ ⲉⲣⲱⲧⲛ ⲁⲛ ϫⲓⲛⲙⲡⲉⲓⲛⲁⲩ · ⲁⲗⲗⲁ ϩⲛⲟⲩϫⲱⲕⲙ ϯⲛⲁϫⲉⲕⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ϩⲙⲡⲗⲏⲣⲱⲙⲁ ⲛⲓⲙ · ⲁⲩⲱ ϩⲛϫⲱⲕ ⲛⲓⲙ ⲁⲩⲱ ϩⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲓⲙ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲡϫⲱⲕ ⲛⲛϫⲱⲕ ⲧⲏⲣⲟⲩ . ⲁⲩⲱ ⲡⲉⲡⲗⲏⲣⲱⲙⲁ ⲛⲛⲉⲡⲗⲏⲣⲱⲙⲁ ⲧⲏⲣⲟⲩ · ⲁⲩⲱ ⲧⲉ**ⲅⲛⲱⲥⲓⲥ** ⲛⲛⲉⲅⲛⲱⲥⲓⲥ ⲧⲏⲣⲟⲩ . ⲛⲁⲓ ⲉⲧϣⲟⲟⲡ ϩⲙⲡⲁⲉⲛⲇⲩⲙⲁ · ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ϫⲓⲛⲡⲥⲁ ⲛⲃⲟⲗ ⲛⲧⲉⲛⲓⲥⲁ ⲛⲃⲟⲗ ϣⲁⲡⲥⲁ ⲛϩⲟⲩⲛ ⲛⲧⲉⲛⲓⲥⲁ ⲛϩⲟⲩⲛ :",
+      "english": "“It came to pass then, when Jesus had finished saying these words to his disciples, that he continued again in the discourse, and said unto them: Lo, I have then put on my Vesture, and all authority hath been given me through the First Mystery. Yet a little while and I will tell you the mystery of the universe and the fulness of the universe; and I will hide nothing from you from this hour on, but in fulness will I perfect you in all fulness and | in all perfection and in all mysteries, which are the perfection of all perfections and the fulness of all fulnesses and the gnosis of all gnoses,--those which are in my Vesture. I will tell you all mysteries from the exteriors of the exteriors to the interiors of the interiors.”",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕϣⲱⲡⲉ ⲛⲁⲕ ⲁⲓⲣⲉⲟⲥ ϩⲙⲡⲉⲕϩⲏⲧ · ⲉⲧⲃⲉⲡⲁⲓ ⲁⲡⲛⲟⲩⲧⲉ ϯ ⲛⲁⲕ ⲙⲡⲥⲓⲟⲩ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉϥ**ⲅⲛⲱⲥⲓⲥ** ⁛—",
+      "english": "Thou wast eager to receive in thy heart, and therefore God gave thee the star of the light of the knowledge of Him.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲛⲱⲥⲓⲥ",
+        2,
+        17.525
+      ],
+      [
+        "ϯⲉⲅⲕⲣⲁⲧⲓⲁ",
+        1,
+        16.11
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        5,
+        15.128
+      ],
+      [
+        "ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+        1,
+        12.718
+      ],
+      [
+        "ϯ",
+        7,
+        12.127
+      ],
+      [
+        "ⲟⲩⲡⲛⲁ",
+        1,
+        11.277
+      ],
+      [
+        "ⲁⲣⲉⲧⲏ",
+        1,
+        11.252
+      ],
+      [
+        "ⲉϩⲣⲁ",
+        1,
+        10.382
+      ],
+      [
+        "ⲇⲁⲛⲓⲏⲗ",
+        1,
+        10.144
+      ],
+      [
+        "ⲁϣⲁⲓ",
+        1,
+        9.548
+      ],
+      [
+        "ϧⲉⲛ",
+        4,
+        9.178
+      ],
+      [
+        "ⲉⲩⲉ",
+        2,
+        8.75
+      ],
+      [
+        "ⲁⲣⲉϩ",
+        1,
+        8.322
+      ],
+      [
+        "ϫⲟⲙ",
+        1,
+        7.889
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        7.718
+      ],
+      [
+        "ⲕⲱϯ",
+        1,
+        7.501
+      ],
+      [
+        "ⲣⲁⲛ",
+        1,
+        7.287
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        6.924
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.481
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.364
+      ]
+    ],
+    "S": [
+      [
+        "ⲅⲛⲱⲥⲓⲥ",
+        2,
+        18.428
+      ],
+      [
+        "ϣⲁϣⲧ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲟⲡ",
+        1,
+        11.384
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        2,
+        10.28
+      ],
+      [
+        "⁛—",
+        1,
+        10.168
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        9.973
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.483
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.279
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        8.044
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.917
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        7.857
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        7.667
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.366
+      ],
+      [
+        "ⲛ",
+        4,
+        7.224
+      ],
+      [
+        "ⲡ",
+        3,
+        6.667
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.379
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.325
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.094
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          6
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲑⲛⲟⲩϫ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛϧⲣⲏⲓ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_pre_ⲛϧⲣⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲣⲁⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_3_post_ⲡⲓ",
+          "ⲙ_4_post_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲣⲁⲛ",
+          "ⲙⲉⲑⲛⲟⲩϫ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛϧⲣⲏⲓ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ϧⲉⲛ_2_pre_ⲛϧⲣⲏⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_pre_ⲛϧⲣⲏⲓ",
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          "ⲟⲩ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ",
+          "ⲙⲉⲧⲉⲩⲥⲉⲃⲏⲥ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          3
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ⲧⲉ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲛⲱⲥⲓⲥ",
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          "ϫⲓⲛ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          "ⲙ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲅⲛⲱⲥⲓⲥ_0_node",
+          "ⲅⲁⲣ_1_post_ⲅⲛⲱⲥⲓⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4122,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "438",
+    "grl_lemma": "γνῶσις",
+    "grl_meaning": "knowledge",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 355a; Preisigke 1:302"
+  }
+}

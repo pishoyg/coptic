@@ -1,0 +1,108 @@
+{
+  "id": "C4583",
+  "forms": [
+    {
+      "id": "CF31814",
+      "orth": "ⲥⲧⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4963,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF31813",
+      "orth": "ⲧⲥⲧⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2666,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5173",
+      "bibliography": "CD 436b-437a; ChLCS 61b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲥⲁⲃⲉ ⲡⲉ ⲡⲣⲉϥϫⲛⲁⲁⲩ ⲛⲁϥ ⲟⲩⲁⲁϥ ⲉϩⲟⲩⲉ ⲡⲉⲧⲧⲥⲓⲏⲩ **ⲉⲧⲥⲧⲟ **ⲉⲃⲟⲗ**** ⲛⲟⲩⲟⲩⲱ",
+      "english": "A sluggard seems to himself wiser than one who most satisfactorily brings back a message.",
+      "source": "Proverbs 26",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ **ϩⲛⲟⲩⲥⲧⲟ **ⲉⲃⲟⲗ**** ⲁⲕⲧⲥⲧⲟ ⲉⲃⲟⲗ ⲛⲓⲟⲩⲇⲁ ⲁⲩⲱ ⲁⲧⲉⲕⲯⲩⲭⲏ ⲟⲩⲉ ⲉⲃⲟⲗ ⲛⲥⲓⲱⲛ ⲉⲧⲃⲉⲟⲩ ⲁⲕⲑⲙⲕⲟⲛ ⲁⲩⲱ ⲙⲡⲉⲧⲁⲗϭⲟ ϣⲱⲡⲉ ⲛⲁⲛ ⲁⲛϩⲩⲡⲟⲙⲓⲛⲉ ⲉⲩⲉⲓⲣⲏⲛⲏ ⲁⲩⲱ",
+      "english": "Hast thou utterly rejected Juda? and has thy soul departed from Sion? wherefore has thou smitten us, and there is no healing for us? we waited for peace, but there was no prosperity; for a time of healing, and behold trouble!",
+      "source": "Jeremiah 14",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϣⲁⲩⲥⲧⲟ **ⲉⲃⲟⲗ**** ⲛⲧⲡⲁⲣⲁⲃⲟⲗⲏ ϩⲛⲣⲱϥ ⲙⲡⲥⲟϭ ⲛⲛⲉϥϫⲟⲟⲥ ⲅⲁⲣ ⲙⲡⲉⲥⲟⲩⲟⲉⲓϣ",
+      "english": "A wise sentence shall be rejected when it cometh out of a fool's mouth; for he will not speak it in due season.",
+      "source": "Sirach 20",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6399,
+      "count": 3
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3787",
+      "type": "cf",
+      "label": "return, repeat"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4586",
+      "label": "ϫⲓⲛⲧⲁⲥⲑⲟ",
+      "pos": "N",
+      "gloss": "return"
+    },
+    {
+      "target": "C4585",
+      "label": "ⲙⲁ ⲛⲥⲑⲟ",
+      "pos": "N",
+      "gloss": "sanctuary, abode"
+    },
+    {
+      "target": "C4581",
+      "label": "ⲥⲧⲟ",
+      "pos": "V",
+      "gloss": "bring back, pay back, repeat; return"
+    },
+    {
+      "target": "C4582",
+      "label": "ⲥⲧⲟ",
+      "pos": "N",
+      "gloss": "sending back"
+    },
+    {
+      "target": "C4584",
+      "label": "ⲥⲧⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "rejection"
+    }
+  ]
+}

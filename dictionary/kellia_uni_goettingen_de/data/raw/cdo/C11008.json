@@ -1,0 +1,124 @@
+{
+  "id": "C11008",
+  "forms": [
+    {
+      "id": "CF30220",
+      "orth": "ⲭⲱⲣⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30221",
+      "orth": "ⲭⲱⲣⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7821,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30222",
+      "orth": "ⲭⲱⲣⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15324",
+      "bibliography": "DDGLC",
+      "cu_ID": "7140"
+    },
+    {
+      "id": "CS15325",
+      "bibliography": "DDGLC",
+      "cu_ID": "7010"
+    },
+    {
+      "id": "CS15326",
+      "bibliography": "DDGLC",
+      "cu_ID": "7138"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲁⲛⲕⲉⲙⲏϣ ⲇⲉ ⲟⲛ ⲉⲁϥⲁⲓⲧⲟⲩ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ⲛⲁⲓ ⲉⲛⲉ ⲁⲩⲥϧⲏⲧⲟⲩ ⲡⲉ ⲕⲁⲧⲁⲟⲩⲁⲓ ⲟⲩⲁⲓ ϯⲉⲙⲓ ϫⲉⲛⲁⲣⲉⲡⲓⲕⲟⲥⲙⲟⲥ ⲛⲁϣⲉⲣ**ⲭⲱⲣⲓⲛ** ⲁⲛ ⲡⲉ ⲛⲛⲓϫⲱⲙ ⲉⲧⲟⲩⲛⲁⲥϧⲏ ⲧⲟⲩ .",
+      "english": "There are also many other things which Jesus did, which if they would all be written, I suppose that even the world itself wouldn't have room for the books that would be written.",
+      "source": "04_John_21",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲉⲣ",
+        1,
+        15.995
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        11.613
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲭⲱⲣⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7285,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2414",
+    "grl_lemma": "χωρέω",
+    "grl_meaning": "to contain, bound",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 2015a; Preisigke 2:766"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "C7144",
+  "forms": [
+    {
+      "id": "CF16346",
+      "orth": "ϫⲉⲕϫⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8222,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲓⲕϫⲓⲕ",
+      "dialect": "S",
+      "id": "2387.1"
+    },
+    {
+      "orth": "ϫⲉⲕϫⲓⲕ",
+      "dialect": "B",
+      "id": "2387.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7880",
+      "bibliography": "CD 765a; CED 312; KoptHWb 418; DELC 325b; ChLCS 100a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲁⲣⲱⲛ ⲇⲉ ⲥⲟⲟⲩⲧⲛ ⲙⲡϭⲉⲣⲱⲃ ⲉⲃⲟⲗ ϩⲛⲧⲉϥϭⲓϫ ⲁϥⲣⲱϩⲧ ⲙⲡⲧⲏⲛⲉ ⲙⲡⲕⲁϩ ⲁⲩϣⲱⲡⲉ ⲛϭⲓϩⲉⲛ**ϫⲉⲕϫⲓⲕ** ϩⲣⲁⲓ ϩⲙⲡⲣⲱⲙⲉ ⲁⲩⲱ ϩⲣⲁⲓ ϩⲛⲛⲧⲃⲛⲟⲟⲩⲉ ⲙⲛⲧⲏⲛⲉ ⲛⲓⲙ ⲛⲧⲉⲡⲕⲁϩ ⲁⲩϣⲱⲡⲉ ⲛϭⲓϩⲉⲛϫⲉⲕϫⲓⲕ ϩⲣⲁⲓ ϩⲙⲡⲕⲁϩ ⲧⲏⲣϥ ⲛⲕⲏⲙⲉ",
+      "english": "So Aaron stretched out his rod with his hand, and smote the dust of the earth; and the lice were on men and on quadrupeds, and in all the dust of the earth there were lice.",
+      "source": "Exodus 8",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲁⲓ",
+        2,
+        12.022
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        10.024
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        9.819
+      ],
+      [
+        "ϩⲙ",
+        2,
+        9.413
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲉⲕϫⲓⲕ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7780,
+      "count": 2
+    }
+  }
+}

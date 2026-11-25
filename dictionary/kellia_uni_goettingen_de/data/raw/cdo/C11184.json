@@ -1,0 +1,63 @@
+{
+  "id": "C11184",
+  "forms": [
+    {
+      "id": "CF31032",
+      "orth": "ϩⲣⲁⲃⲧⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31033",
+      "orth": "ϩⲣⲁϥⲧⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31034",
+      "orth": "ϩⲣⲁⲃⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15738",
+      "bibliography": "DDGLC",
+      "cu_ID": "8816"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲉⲓ ϣⲁⲣⲟⲥ ϩⲛⲟⲩϩⲟⲣⲟⲙⲁ · ⲉϥⲫⲟⲣⲉⲓ ⲛⲟⲩⲡⲟⲣⲫⲩⲣⲁ · ⲉϥⲛⲉϫⲁⲕⲧⲓⲛ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲃⲟⲗ · ⲉⲣⲉⲟⲩ**ϩⲣⲁⲃⲇⲟⲥ** ⲛⲟⲩⲟⲉⲓⲛ ϩⲛⲧⲉϥϭⲓϫ ·",
+      "english": "And Saint Victor came unto her in a vision, and he was clad in. purple, and he emitted rays of light, and there was a staff of light in his hand.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲥⲟⲟⲩⲧⲛ ⲉⲃⲟⲗ ⲙⲡⲉ**ϩⲣⲁⲃⲇⲟⲥ** ⲉⲧϩⲛⲧⲉϥϭⲓϫ ·",
+      "english": "And he stretched out the rod which was in his hand,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7576,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1903",
+    "grl_lemma": "ῥάβδος",
+    "grl_meaning": "rod, wand",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1562b; Preisigke 2:439"
+  }
+}

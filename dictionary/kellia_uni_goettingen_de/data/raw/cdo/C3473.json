@@ -1,0 +1,112 @@
+{
+  "id": "C3473",
+  "forms": [
+    {
+      "id": "CF8846",
+      "orth": "ⲥⲉⲗⲉⲡⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16047,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3954",
+      "bibliography": "CD 331b; CED 151; KoptHWb 184; DELC 188; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲡⲟⲗⲉⲙⲟⲥ ⲁϥⲛϣⲟⲧ ⲉϫⲛⲥⲁⲟⲩⲗ ⲁⲩϩⲉ ⲉⲣⲟϥ ⲛϭⲓⲛⲉⲧⲛⲉϫⲥⲟⲧⲉ ⲁⲩⲛⲉϫⲥⲟⲧⲉ ⲉⲣⲟϥ ⲁⲩⲣⲁϩⲧϥ ⲉⲡ**ⲥⲉⲗⲉⲡⲓⲛ** ⲛϩⲏⲧϥ",
+      "english": "And the battle prevails against Saul, and the shooters with arrows, even the archers find him, and he was wounded under the ribs.",
+      "source": "I Samuel 31",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲁϩⲧ",
+        1,
+        14.013
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        12.021
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        10.014
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        8.84
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲉⲗⲉⲡⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲗⲉⲡⲓⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉⲗⲉⲡⲓⲛ_0_node",
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲗⲉⲡⲓⲛ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥⲉⲗⲉⲡⲓⲛ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15649,
+      "count": 1
+    }
+  },
+  "type": "foreign"
+}

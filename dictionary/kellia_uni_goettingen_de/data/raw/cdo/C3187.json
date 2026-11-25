@@ -1,0 +1,78 @@
+{
+  "id": "C3187",
+  "forms": [
+    {
+      "id": "CF8257",
+      "orth": "ⲙⲫⲣⲏϯ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF8258",
+      "orth": "ⲙⲫⲣⲏϯ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF8259",
+      "orth": "ⲙⲡⲣⲏⲧⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3642",
+      "bibliography": "CD 304b; KoptHWb 168"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3192",
+      "label": "ϫⲉⲙⲣⲏϯ",
+      "pos": "V",
+      "gloss": "find means"
+    },
+    {
+      "target": "C3191",
+      "label": "ϯ ⲙⲫⲣⲏϯ",
+      "pos": "V",
+      "gloss": "give means"
+    },
+    {
+      "target": "C3190",
+      "label": "ⲓⲣⲓ ⲙⲫⲣⲏϯ",
+      "pos": "V",
+      "gloss": "be in manner, likeness, be as"
+    },
+    {
+      "target": "C3188",
+      "label": "ⲙⲡⲁⲓⲣⲏϯ",
+      "pos": "N",
+      "gloss": "of this sort, like this, thus"
+    },
+    {
+      "target": "C3189",
+      "label": "ⲙⲡⲁⲓⲣⲏϯ",
+      "pos": "ADV",
+      "gloss": "in this manner, thus"
+    },
+    {
+      "target": "C3186",
+      "label": "ⲡⲁⲓⲣⲏϯ",
+      "pos": "ADV",
+      "gloss": "(in) this manner, thus"
+    },
+    {
+      "target": "C3185",
+      "label": "ⲣⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "manner, fashion, likeness"
+    }
+  ]
+}

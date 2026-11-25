@@ -1,0 +1,630 @@
+{
+  "id": "C897",
+  "forms": [
+    {
+      "id": "CF3136",
+      "orth": "ⲉⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 7.24,
+        "rank": 162,
+        "count": 1142
+      }
+    },
+    {
+      "orth": "ⲉⲙⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 11.5,
+        "rank": 115,
+        "count": 975
+      }
+    },
+    {
+      "orth": "ⲉⲓⲙⲙⲉ",
+      "dialect": "S",
+      "id": "56.1"
+    },
+    {
+      "orth": "ⲙⲙⲉ",
+      "dialect": "A",
+      "id": "56.2"
+    },
+    {
+      "orth": "ⲉⲓⲙⲓ",
+      "dialect": "F",
+      "id": "56.3"
+    },
+    {
+      "orth": "ⲓⲙⲓ",
+      "dialect": "F",
+      "id": "56.4"
+    },
+    {
+      "orth": "ⲙⲙⲉ",
+      "dialect": "L",
+      "id": "56.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1053",
+      "bibliography": "CD 77b-78a; KoptHWb 49; ChLCS 13b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉϯ**ⲉⲙⲓ** ⲁⲛ .",
+      "english": "He answered, 'I don't know.'",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲣⲧⲣⲉⲗⲁⲁⲩ **ⲉⲓⲙⲉ** · ⲉⲡⲉⲛϫⲱⲕ ·",
+      "english": "and not to let any one know of our departure.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲱⲟⲩ ϫⲉⲧⲉⲛ**ⲉⲙⲓ** ⲁⲛ .",
+      "english": "They said to him, “We do not know.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲛⲧⲉⲣⲉϥ**ⲉⲓⲙⲉ**",
+      "english": "As for him, when he realized",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲟⲩⲙⲉⲣⲟⲥ ⲅⲁⲣ ⲧⲉⲛ**ⲉⲙⲓ** ⲟⲩⲟϩ ϧⲉⲛⲟⲩⲙⲉⲣⲟⲥ ⲧⲉⲛⲉⲣⲡⲣⲟⲫⲏⲧⲉⲩⲓⲛ .",
+      "english": "For we know in part, and we prophesy in part;",
+      "source": "Bohairic 1 Corinthians 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲥ ⲉⲛⲉ**ⲉⲓⲙⲉ** ⲛⲧϩⲉ ⲉⲛⲧⲁⲛⲃⲁⲗ ⲛⲛⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲙⲛⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲱϫⲛ ϩⲛϩⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ · ⲁⲩⲱ ⲛⲧⲛⲁⲓⲥⲑⲁⲛⲉ ⲛⲧⲛⲙⲉⲧⲁⲛⲟⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲛⲛⲉⲛⲛⲟⲃⲉ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲉ",
+        1061,
+        36.29
+      ],
+      [
+        "ⲁⲛ",
+        390,
+        33.837
+      ],
+      [
+        "ⲟⲩ",
+        455,
+        31.243
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        166,
+        31.075
+      ],
+      [
+        "ϥ",
+        448,
+        30.846
+      ],
+      [
+        "ⲉ",
+        308,
+        29.817
+      ],
+      [
+        "ⲡ",
+        256,
+        29.619
+      ],
+      [
+        "ⲁ",
+        279,
+        29.362
+      ],
+      [
+        "ⲡⲉ",
+        165,
+        29.337
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        96,
+        29.335
+      ],
+      [
+        "ⲧⲉⲛ",
+        146,
+        28.97
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        241,
+        28.819
+      ],
+      [
+        "ⲛⲁ",
+        194,
+        28.754
+      ],
+      [
+        ".",
+        195,
+        28.438
+      ],
+      [
+        "ⲛ",
+        237,
+        28.257
+      ],
+      [
+        "ϧⲉⲛ",
+        177,
+        28.166
+      ],
+      [
+        "ⲉⲧ",
+        157,
+        28.135
+      ],
+      [
+        "ⲛϫⲉ",
+        141,
+        28.013
+      ],
+      [
+        "ⲅⲁⲣ",
+        85,
+        27.818
+      ],
+      [
+        "ⲕ",
+        113,
+        27.588
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲉ",
+        1259,
+        26.883
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        41,
+        26.513
+      ],
+      [
+        "ⲉ",
+        879,
+        23.999
+      ],
+      [
+        "ⲁ",
+        521,
+        21.962
+      ],
+      [
+        "ⲡ",
+        582,
+        21.894
+      ],
+      [
+        "ⲛ",
+        549,
+        20.954
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        143,
+        20.834
+      ],
+      [
+        "ⲟⲩ",
+        306,
+        19.835
+      ],
+      [
+        "ϥ",
+        346,
+        19.668
+      ],
+      [
+        "ⲛⲁ",
+        244,
+        19.323
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        125,
+        19.188
+      ],
+      [
+        "ⲉⲣⲟ",
+        147,
+        18.926
+      ],
+      [
+        "ⲁⲩⲱ",
+        208,
+        18.691
+      ],
+      [
+        "ⲙⲡ",
+        81,
+        18.594
+      ],
+      [
+        "ⲛϭⲓ",
+        124,
+        18.524
+      ],
+      [
+        "ϭⲉ",
+        84,
+        18.47
+      ],
+      [
+        "ⲓ",
+        134,
+        17.891
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        47,
+        17.633
+      ],
+      [
+        "ⲉⲧ",
+        144,
+        17.591
+      ],
+      [
+        "ⲕ",
+        123,
+        17.523
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲙⲉ_0_node",
+          104
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          33
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲓⲙⲉ",
+          23
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲓⲙⲉ",
+          18
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          18
+        ],
+        [
+          "ⲡⲉ_1_post_ⲉⲓⲙⲉ",
+          18
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓⲙⲉ",
+          16
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲙⲉ",
+          13
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲙⲉ",
+          9
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲙⲉ",
+          9
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲓⲙⲉ",
+          7
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲉⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲉⲓⲙⲉ",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲙⲉ",
+          12
+        ],
+        [
+          "ϭⲉ_1_post_ⲉⲓⲙⲉ",
+          4
+        ],
+        [
+          "ⲱ_2_post_ⲙⲉⲣⲁⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲁ_2_post_ⲙⲉⲣⲁⲧⲉ",
+          4
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲓⲙⲉ",
+          7
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲉⲓⲙⲉ",
+          4
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲉⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          3
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲓⲙⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          5
+        ],
+        [
+          "ⲉⲓⲙⲉ_0_node",
+          "ϫⲉ_1_post_ⲉⲓⲙⲉ",
+          3
+        ],
+        [
+          "ϫⲉ_1_post_ⲉⲓⲙⲉ",
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          3
+        ],
+        [
+          "ⲁⲛⲟⲕ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲉⲓⲙⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          "ⲥⲉ_1_pre_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲙⲉ",
+          "ⲟⲩ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲙⲉ",
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲙⲉ",
+          "ⲥⲉ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲓⲙⲉ",
+          "ⲛⲁ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲉⲓⲙⲉ",
+          "ⲟⲩ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲙⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲓⲙⲉ_0_node",
+          "ϭⲉ_1_post_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϭⲉ_1_post_ⲉⲓⲙⲉ",
+          "ⲱ_2_post_ⲙⲉⲣⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲙⲉⲣⲁⲧⲉ",
+          "ⲛⲁ_2_post_ⲙⲉⲣⲁⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲙⲉ",
+          "ⲓ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲕⲉ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲕⲉ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲙⲉ",
+          "ⲓ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲙⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲉⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲉⲓⲙⲉ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣⲉ_1_pre_ⲉⲓⲙⲉ",
+          "ϥ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲙⲉ",
+          "ⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲙⲉ",
+          "ⲛⲁ_1_pre_ⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲉⲓⲙⲉ",
+          "ⲟⲩ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 7.2,
+      "rank": 139,
+      "count": 1142
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C902",
+      "label": "ϭⲓⲛⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C899",
+      "label": "ⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorant, innocent"
+    },
+    {
+      "target": "C898",
+      "label": "ⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C900",
+      "label": "ⲙⲛⲧⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorance, innocence"
+    },
+    {
+      "target": "C904",
+      "label": "ⲙⲛⲧⲛⲁϣⲧⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "presumption, stubbornness"
+    },
+    {
+      "target": "C903",
+      "label": "ⲛⲁϣⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "presumptuous, impudent, obdurate"
+    },
+    {
+      "target": "C901",
+      "label": "ⲣⲉϥⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "one that knows"
+    }
+  ],
+  "etym": {
+    "egy_num": "37500",
+    "egy_lemma": "ꜥm",
+    "demo_num": "d962",
+    "demo_lemma": "ꜥm",
+    "english": "to swallow; to devour; to absorb",
+    "german": "verschlucken; verschlingen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/37500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d962"
+  }
+}

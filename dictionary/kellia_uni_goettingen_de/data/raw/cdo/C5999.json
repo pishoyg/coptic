@@ -1,0 +1,63 @@
+{
+  "id": "C5999",
+  "forms": [
+    {
+      "id": "CF14003",
+      "orth": "ⲙⲁ ⲛϣⲱⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6683",
+      "bibliography": "CD 580a-b; KoptHWb 322; DELC 268b; ChLCS 80a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5995",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "V",
+      "gloss": "become, befall, be, exist"
+    },
+    {
+      "target": "C5996",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "being"
+    },
+    {
+      "target": "C6000",
+      "label": "ϭⲓⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "act, state of being"
+    },
+    {
+      "target": "C5997",
+      "label": "ⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "uninhabited, unoccupied"
+    },
+    {
+      "target": "C6001",
+      "label": "ⲉϣⲱⲡⲉ",
+      "pos": "CONJ",
+      "gloss": "if it happens that, if, when"
+    },
+    {
+      "target": "C5998",
+      "label": "ⲙⲛⲧⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "nothingness"
+    }
+  ]
+}

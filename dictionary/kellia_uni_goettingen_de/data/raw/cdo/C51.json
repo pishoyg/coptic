@@ -1,0 +1,183 @@
+{
+  "id": "C51",
+  "forms": [
+    {
+      "id": "CF188",
+      "orth": "ⲉⲣⲁⲗⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7270,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS60",
+      "bibliography": "CD 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲥⲛⲏⲩ ⲙⲡⲣ**ⲉⲣⲁⲗⲟⲩ** ϧⲉⲛⲛⲉⲧⲉⲛⲕⲁϯ ⲁⲗⲗⲁ ⲁⲣⲓⲁⲗⲟⲩ ϧⲉⲛϯⲕⲁⲕⲓⲁ ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛⲛⲉⲧⲉⲛⲕⲁϯ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛϫⲏϫ ⲉⲃⲟⲗ .",
+      "english": "Brothers, don't be children in thoughts, yet in malice be babies, but in thoughts be mature.",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲥⲛⲏⲟⲩ ⲙⲡⲉⲣⲉⲣⲁⲗⲟⲩ ϧⲉⲛⲛⲉⲧⲉⲛⲕⲁϯ ⲁⲗⲗⲁ **ⲁⲣⲓⲁⲗⲟⲩ** ϧⲉⲛϯⲕⲁⲕⲓⲁ ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛⲛⲉⲧⲉⲛⲕⲁϯ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛϫⲏ ϫⲉⲃⲟⲗ .",
+      "english": "Brothers, don't be children in thoughts, yet in malice be babies, but in thoughts be mature.",
+      "source": "07_I Corinthians_14",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic:14",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲣ",
+        1,
+        12.587
+      ],
+      [
+        "ⲕⲁϯ",
+        1,
+        10.012
+      ],
+      [
+        "ⲥⲛⲏⲟⲩ",
+        1,
+        9.237
+      ],
+      [
+        "ⲛⲉⲧⲉⲛ",
+        1,
+        8.479
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.925
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.369
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.178
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_2_pre_ⲥⲛⲏⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲛⲏⲟⲩ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ⲁⲣⲓⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲣⲓⲁⲗⲟⲩ_1_post_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_2_pre_ⲥⲛⲏⲟⲩ",
+          "ⲥⲛⲏⲟⲩ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲛⲏⲟⲩ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          "ⲙⲡⲣ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲉⲣⲁⲗⲟⲩ",
+          "ⲉⲣⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲁⲗⲟⲩ_0_node",
+          "ⲁⲗⲗⲁ_2_post_ⲁⲣⲓⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ⲁⲣⲓⲁⲗⲟⲩ",
+          "ⲁⲣⲓⲁⲗⲟⲩ_1_post_ⲉⲣⲁⲗⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3948,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C1056",
+      "type": "syn",
+      "label": "be young (S)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C48",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, girl; servant"
+    },
+    {
+      "target": "C49",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, boy; servant"
+    },
+    {
+      "target": "C50",
+      "label": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "time of youth, youthfulness"
+    }
+  ]
+}

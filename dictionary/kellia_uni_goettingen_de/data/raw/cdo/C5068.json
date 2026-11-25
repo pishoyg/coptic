@@ -1,0 +1,74 @@
+{
+  "id": "C5068",
+  "forms": [
+    {
+      "id": "CF12100",
+      "orth": "ⲟⲩⲱⲛ ⲛⲥⲁϫⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF12101",
+      "orth": "ⲟⲩⲱⲛ ⲛⲥⲁϫⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5699",
+      "bibliography": "CD 483a; KoptHWb 273"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C6217",
+      "type": "cf",
+      "label": "saying, word, affair"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5066",
+      "label": "ϫⲓⲛⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "act of opening"
+    },
+    {
+      "target": "C5069",
+      "label": "ⲟⲩⲁⲛ-",
+      "pos": "N",
+      "gloss": "opener"
+    },
+    {
+      "target": "C5070",
+      "label": "ⲟⲩⲁⲛⲧⲱ",
+      "pos": "N",
+      "gloss": "earth-opener"
+    },
+    {
+      "target": "C5067",
+      "label": "ⲟⲩⲛⲣⲟ",
+      "pos": "V",
+      "gloss": "shout"
+    },
+    {
+      "target": "C5064",
+      "label": "ⲟⲩⲱⲛ",
+      "pos": "V",
+      "gloss": "open, be open"
+    },
+    {
+      "target": "C5065",
+      "label": "ⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "opening"
+    }
+  ]
+}

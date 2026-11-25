@@ -1,0 +1,104 @@
+{
+  "id": "C11256",
+  "forms": [
+    {
+      "id": "CF31343",
+      "orth": "ϩⲩⲡⲱⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF31344",
+      "orth": "ϩⲩⲡⲱⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11066,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15893",
+      "bibliography": "DDGLC",
+      "cu_ID": "6607"
+    },
+    {
+      "id": "CS15894",
+      "bibliography": "DDGLC",
+      "cu_ID": "10827"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲇⲉ ⲛⲟⲩⲙⲏⲏϣⲉ ⲛ**ϩⲩⲡⲱⲣⲁ**",
+      "english": "And they brought a large number of plums,",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        10.887
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        10.629
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲩⲡⲱⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10656,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6199",
+    "grl_lemma": "ὑπώρα",
+    "grl_meaning": "the latter part of the summer, fruit, ripeness",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ Suppl. 146a"
+  }
+}

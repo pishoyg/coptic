@@ -1,0 +1,123 @@
+{
+  "id": "C2884",
+  "forms": [
+    {
+      "id": "CF7626",
+      "orth": "ⲡⲉⲣⲙⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5500,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF7627",
+      "orth": "ⲡⲉⲣⲉⲙⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3300",
+      "bibliography": "CD 269a; KoptHWb 151; DELC 163"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲁⲓ ϧⲁⲡⲁϣⲏ ⲣⲓ ϫⲉϥⲟⲓ ⲙ**ⲡⲉⲣⲙⲟⲩ** ⲟⲩⲟϩ ϥⲧϩⲉⲙⲕⲏ ⲟⲩⲧ ⲉⲙⲁϣⲱ ⲟⲩⲙⲏϣ ⲅⲁⲣ ⲛⲥⲟⲡ ϣⲁϥϩⲉⲓ ⲉⲡⲓⲭⲣⲱⲙ ⲟⲩⲟϩ ⲟⲩⲙⲏϣ ⲛⲥⲟⲡ ϣⲁϥϩⲉⲓ ⲉⲫⲙⲱⲟⲩ .",
+      "english": "'Lord, have mercy on my son, for he is epileptic, and suffers grievously; for he often falls into the fire, and often into the water.",
+      "source": "01_Matthew_17",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲧⲉϥⲥⲙⲏ ⲓⲉⲃⲟⲗ ϧⲉⲛϯⲥⲩⲣⲓⲁ ⲧⲏⲣⲥ ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲛⲁϥ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲧϩⲉⲙⲕⲏⲟⲩⲧ ϧⲉⲛⲛⲟⲩϣⲱⲛⲓ ⲛⲉⲙⲛⲟⲩⲙⲕⲁⲩϩ ⲛⲟⲩⲙⲏϣ ⲛⲣⲏϯ ⲛⲏ ⲉⲧⲉⲛⲓⲇⲁⲓⲙⲱⲛ ⲛⲉⲙⲱⲟⲩ ⲛⲉⲙⲛⲏ ⲉⲧⲟⲓ ⲙ**ⲡⲉⲣⲙⲟⲩ** ⲛⲉⲙⲛⲏ ⲉⲧϣⲏⲗ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲁϧⲣⲓ ⲉⲣⲱⲟⲩ .",
+      "english": "The report about him went out into all Syria. They brought to him all who were sick, afflicted with various diseases and torments, possessed with demons, epileptics, and paralytics; and he healed them.",
+      "source": "01_Matthew_04",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧϩⲉⲙⲕⲏ",
+        1,
+        16.695
+      ],
+      [
+        "ϣⲏⲗ",
+        1,
+        13.995
+      ],
+      [
+        "ⲟⲩⲧ",
+        1,
+        13.447
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        11.583
+      ],
+      [
+        "ⲛⲏ",
+        2,
+        10.057
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.251
+      ],
+      [
+        "ⲙ",
+        2,
+        7.583
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        5.243
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉⲣⲙⲟⲩ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5015,
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "C1345",
+  "forms": [
+    {
+      "id": "CF4099",
+      "orth": "ⲣⲉϥⲣⲕⲣⲟϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16791,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1556",
+      "bibliography": "CD 119a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲉϥⲙⲁⲛⲥⲟⲟⲛⲉ ⲇⲉ ⲉⲓ ⲉϫⲱⲓ ϩⲓⲟⲩⲥⲟⲡ ϩⲛⲛⲁϩⲓⲟⲟⲩⲉ ⲁⲛ**ⲣⲉϥⲣⲕⲣⲟϥ** ⲕⲱⲧⲉ ⲉⲣⲟⲓ",
+      "english": "His troops also came upon me with one accord, liars in wait compassed my ways.",
+      "source": "Job 19",
+      "urn": "urn:cts:copticLit:ot.job.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        12.172
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        11.157
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲣⲕⲣⲟϥ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲕⲣⲟϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲣⲕⲣⲟϥ",
+          "ⲣⲉϥⲣⲕⲣⲟϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16393,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1347",
+      "label": "ϫⲓⲕⲣⲟϥ",
+      "pos": "V",
+      "gloss": "use guile, lie in wait"
+    },
+    {
+      "target": "C1349",
+      "label": "ϫⲓⲛⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "snare"
+    },
+    {
+      "target": "C1348",
+      "label": "ϭⲁⲩⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "deceiver"
+    },
+    {
+      "target": "C1341",
+      "label": "ⲁⲧⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guileless"
+    },
+    {
+      "target": "C1339",
+      "label": "ⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guile, ambush; guileful person"
+    },
+    {
+      "target": "C1340",
+      "label": "ⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guileful, false"
+    },
+    {
+      "target": "C1342",
+      "label": "ⲙⲉⲧⲁⲧⲭⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guilelessness"
+    },
+    {
+      "target": "C1343",
+      "label": "ⲙⲛⲧⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "guile"
+    },
+    {
+      "target": "C1344",
+      "label": "ⲣⲕⲣⲟϥ",
+      "pos": "V",
+      "gloss": "be guileful, lie in wait"
+    },
+    {
+      "target": "C1346",
+      "label": "ⲥⲁ ⲛⲕⲣⲟϥ",
+      "pos": "N",
+      "gloss": "maker of guile, deceiver"
+    }
+  ]
+}

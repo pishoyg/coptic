@@ -1,0 +1,129 @@
+{
+  "id": "C3752",
+  "forms": [
+    {
+      "id": "CF9424",
+      "orth": "ⲥⲟⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8104,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4262",
+      "bibliography": "(CD 358a, unter ⲥⲱⲥ); CED 163 (unter ⲥⲁⲥⲉ) KoptHWb 197, 540; DELC 197"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲣⲧⲉⲙⲱⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙ",
+        2,
+        8.583
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲧ_1_pre_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲥⲟⲥⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲧ_1_pre_ⲥⲟⲥⲓ",
+          "ⲁ_1_pre_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲟⲥⲓ",
+          "ⲩ_1_pre_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲥⲓ",
+          "ⲥⲟⲥⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲥⲓ_0_node",
+          "ⲙ_1_post_ⲥⲟⲥⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲥⲓ",
+          "ⲡⲓ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "demo_num": "d5097",
+    "demo_lemma": "sꜥsꜥ",
+    "english": "[back]",
+    "german": "aufheben, aufsetzen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5097"
+  }
+}

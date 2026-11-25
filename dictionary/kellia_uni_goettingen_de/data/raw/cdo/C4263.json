@@ -1,0 +1,235 @@
+{
+  "id": "C4263",
+  "forms": [
+    {
+      "id": "CF10477",
+      "orth": "ϯⲧⲱⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9086,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4834",
+      "bibliography": "CD 411a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁϣⲏⲣⲉ ⲙⲡⲣ**ϯⲧⲱⲗⲙ** ⲛⲛⲉⲕⲡⲉⲧⲛⲁⲛⲟⲩⲟⲩ ⲁⲩⲱ ⲟⲩⲗⲩⲡⲏ ⲛϣⲁϫⲉ ϩⲙⲡⲉⲧⲕⲛⲁⲧⲁⲁϥ ⲧⲏⲣϥ",
+      "english": "My son, blemish not thy good deeds, neither use uncomfortable words when thou givest any thing.",
+      "source": "Sirach 18",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲱⲡⲉ ⲉⲕϫⲟⲥⲉ ⲉⲣⲟⲟⲩ ϩⲛⲛⲉⲕϩⲃⲏⲩⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲣ**ϯⲧⲱⲗⲙ** ⲙⲡⲉⲕⲉⲟⲟⲩ",
+      "english": "...",
+      "source": "Sirach 30",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲧⲛⲁⲛⲟⲩ",
+        1,
+        14.691
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        12.036
+      ],
+      [
+        "ϩⲁⲡ",
+        1,
+        10.635
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        9.812
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        1,
+        9.725
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        8.787
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        7.868
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        7.376
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        7.29
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϯⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϯⲧⲱⲗⲙ",
+          2
+        ],
+        [
+          "ϯⲧⲱⲗⲙ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲗⲩⲡⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲗⲩⲡⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲟⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_2_pre_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_pre_ϯⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϯⲧⲱⲗⲙ",
+          "ⲙⲡⲣ_1_pre_ϯⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϯⲧⲱⲗⲙ",
+          "ϯⲧⲱⲗⲙ_0_node",
+          2
+        ],
+        [
+          "ϯⲧⲱⲗⲙ_0_node",
+          "ⲁⲩⲱ_2_post_ⲗⲩⲡⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲗⲩⲡⲏ",
+          "ⲟⲩ_2_post_ⲗⲩⲡⲏ",
+          1
+        ],
+        [
+          "ϯⲧⲱⲗⲙ_0_node",
+          "ⲙ_1_post_ϯⲧⲱⲗⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲧⲱⲗⲙ",
+          "ⲡⲉⲕ_3_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8637,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4264",
+      "label": "ⲁⲧⲧⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "stainless, unpolluted"
+    },
+    {
+      "target": "C4261",
+      "label": "ⲧⲱⲗⲙ",
+      "pos": "V",
+      "gloss": "be defiled, be besmirched; defile, pollute"
+    },
+    {
+      "target": "C4262",
+      "label": "ⲧⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "stain, pollution"
+    }
+  ]
+}

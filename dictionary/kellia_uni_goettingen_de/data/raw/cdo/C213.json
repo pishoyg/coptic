@@ -1,0 +1,501 @@
+{
+  "id": "C213",
+  "forms": [
+    {
+      "id": "CF852",
+      "orth": "ⲁⲥⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1650,
+        "count": 42
+      }
+    },
+    {
+      "id": "CF853",
+      "orth": "ⲉⲥⲟⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF854",
+      "orth": "ⲉⲥⲟⲩ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS238",
+      "bibliography": "CD 18a; CED 13; KoptHWb 12; DELC 16-17; ChLCS 5b"
+    },
+    {
+      "id": "CS239",
+      "bibliography": "KoptHWb 12; DELC 16"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϣⲉⲡⲧⲏⲩⲧⲛ ϩⲁⲟⲩ**ⲁⲥⲟⲩ** ⲙⲡⲣϣⲱⲡⲉ ⲛϩⲙϩⲁⲗ ⲛⲣⲱⲙⲉ .",
+      "english": "You were bought with a price. Don&apos;t become bondservants of men.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲉⲡⲧⲏⲩⲧⲛ ⲅⲁⲣ ϩⲁⲟⲩ**ⲁⲥⲟⲩ** . ϯⲉⲟⲟⲩ ϭⲉ ⲙⲡⲛⲟⲩⲧⲉ ϩⲙⲡⲉⲧⲛⲥⲱⲙⲁ .",
+      "english": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God&apos;s.",
+      "source": "1 Corinthians 6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲓⲧⲉ ⲙⲙⲟⲟⲩ ⲛϩⲉⲛϩⲟⲙⲛⲧ ⲡⲁⲣⲁⲧⲉⲩ**ⲁⲥⲟⲩ** ϣⲁⲛⲧⲉⲧⲛⲥⲉⲩϩ ⲧⲉⲧⲓⲙⲏ ⲙⲡⲙⲁⲥⲉ ⲉϩⲟⲩⲛ ⲉⲥⲕⲏⲃ ϩⲁϩⲉⲛⲉⲗⲁⲭⲓⲥⲧⲟⲛ ⲛⲁϥ , ⲉϩⲉⲛⲕⲉⲉⲥⲛⲉ ϩⲓϩⲛⲁⲩ ⲛⲁⲧϣⲁⲩ .",
+      "english": "And you extort them for copper beyond its value until you collect the price of the calf doubled for ones least of flesh, while they are bones on something useless.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲉⲡ",
+        5,
+        15.712
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        8,
+        15.643
+      ],
+      [
+        "ⲧⲉϥ",
+        15,
+        15.292
+      ],
+      [
+        "ⲕⲟⲣⲃⲁⲛⲟⲥ",
+        1,
+        15.206
+      ],
+      [
+        "ⲛ",
+        45,
+        14.892
+      ],
+      [
+        "ⲡ",
+        33,
+        14.238
+      ],
+      [
+        "ϩⲁ",
+        9,
+        13.982
+      ],
+      [
+        "ⲙ",
+        24,
+        13.714
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        5,
+        13.668
+      ],
+      [
+        "ϣⲃⲃⲓⲱ",
+        2,
+        13.621
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        8,
+        13.554
+      ],
+      [
+        "ⲥⲉⲩϩ",
+        2,
+        13.251
+      ],
+      [
+        "ϩⲟⲙⲧ",
+        1,
+        12.621
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        4,
+        12.544
+      ],
+      [
+        "ⲇⲱⲣⲟⲑⲉⲟⲥ",
+        2,
+        12.036
+      ],
+      [
+        "ⲧ",
+        13,
+        11.78
+      ],
+      [
+        "ϯⲉⲟⲟⲩ",
+        3,
+        11.766
+      ],
+      [
+        "ⲅ",
+        6,
+        11.602
+      ],
+      [
+        "ⲧⲱϥ",
+        1,
+        11.505
+      ],
+      [
+        "ⲛⲥⲓⲕⲗⲟⲥ",
+        1,
+        11.505
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲥⲟⲩ",
+          11
+        ],
+        [
+          "ⲁⲥⲟⲩ_0_node",
+          33
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲁⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲟⲩ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲥⲟⲩ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲁⲥⲟⲩ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲥⲱⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲱϥ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲟⲩ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_5_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_5_post_ⲧⲁ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ⲧⲉⲃⲧ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ⲧⲉⲃⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲥⲟⲩ",
+          "ⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲥⲟⲩ",
+          "ⲅ_1_pre_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲁⲥⲟⲩ",
+          "ⲧⲉⲩ_1_pre_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲁⲥⲟⲩ",
+          "ⲁⲥⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲟⲩ",
+          "ⲧ_1_pre_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲥⲟⲩ",
+          "ⲁⲥⲟⲩ_0_node",
+          6
+        ],
+        [
+          "ⲁⲥⲟⲩ_0_node",
+          "ⲙ_1_post_ⲁⲥⲟⲩ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲁⲥⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲱⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲥⲟⲩ_0_node",
+          "ⲅⲁⲣ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲁⲥⲟⲩ",
+          "ⲧⲱϥ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲥⲟⲩ_0_node",
+          "ⲛ_1_post_ⲁⲥⲟⲩ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲟⲩ",
+          "ⲧⲉϥ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          "ⲙ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲯⲩⲭⲏ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲟⲩ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_3_post_ⲧⲉ",
+          "ⲧⲉⲥ_5_post_ⲧⲓⲙⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲥⲟⲩ",
+          "ⲁⲥⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲥⲟⲩ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲛⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲛ",
+          "ⲁ_5_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          "ⲙⲛ_5_post_ⲧⲁ",
+          1
+        ],
+        [
+          "ⲁⲥⲟⲩ_0_node",
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲁⲥⲟⲩ",
+          "ⲡ_3_post_ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ",
+          "ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          "ⲛ_3_post_ⲁⲣⲭⲓⲥⲧⲣⲁⲧⲏⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          "ⲙⲛ_5_post_ⲧⲉⲃⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ⲧⲉⲃⲧ",
+          "ⲡ_5_post_ⲧⲉⲃⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.26,
+      "rank": 1442,
+      "count": 42
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5756",
+      "type": "syn",
+      "label": "change, exchange, requital (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C214",
+      "label": "ϯⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "pay"
+    },
+    {
+      "target": "C215",
+      "label": "ⲣⲁⲥⲟⲩ",
+      "pos": "V",
+      "gloss": "set value on"
+    }
+  ],
+  "etym": {
+    "egy_num": "31330",
+    "egy_lemma": "jsw",
+    "demo_num": "d703",
+    "demo_lemma": "ı ͗sw(j.t)",
+    "english": "payment; equivalent",
+    "german": "Gegenleistung; Lohn",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/31330",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d703"
+  }
+}

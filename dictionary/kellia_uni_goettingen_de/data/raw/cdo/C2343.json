@@ -1,0 +1,51 @@
+{
+  "id": "C2343",
+  "forms": [
+    {
+      "id": "CF6424",
+      "orth": "ⲙⲉⲧⲁⲧⲙⲟⲩϫⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2702",
+      "bibliography": "CD 214b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2345",
+      "label": "ϭⲓⲛⲙⲟⲩϫϭ",
+      "pos": "N",
+      "gloss": "mixture, intercourse"
+    },
+    {
+      "target": "C2341",
+      "label": "ⲙⲟⲩϫϭ",
+      "pos": "V",
+      "gloss": "be mixed; mix"
+    },
+    {
+      "target": "C2342",
+      "label": "ⲙⲟⲩϫϭ",
+      "pos": "N",
+      "gloss": "mixture"
+    },
+    {
+      "target": "C2344",
+      "label": "ⲣⲉϥⲙⲟⲩϫ",
+      "pos": "N",
+      "gloss": "mixer, confuser, disturber"
+    }
+  ]
+}

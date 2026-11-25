@@ -1,0 +1,114 @@
+{
+  "id": "C1722",
+  "forms": [
+    {
+      "id": "CF4991",
+      "orth": "ϭⲓⲥⲗⲁⲩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19632,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4992",
+      "orth": "ϭⲓⲥⲗⲁⲃⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1997",
+      "bibliography": "CD 148a; KoptHWb 80; ChLCS 22b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲧⲉⲕⲙ ⲛϩⲁⲩϭⲁⲗ ⲁⲩⲕⲁⲁⲩ ⲉⲩⲁϣⲉ ϩⲛⲧϩⲁⲗⲁⲥⲥⲁ ϩⲁⲙⲁ ⲁⲩⲕⲁ ϫⲱⲟⲩ ⲉⲃⲟⲗ ⲛⲛϩⲓⲏⲩ ⲁⲩϥⲓ ⲉϩⲣⲁⲓ ⲛⲧ**ϭⲓⲥⲗⲁⲩⲟ** ⲁⲩⲣϩⲱⲧ ⲙⲡⲧⲏⲩ ⲉⲧⲛⲃⲟⲗ ⲉϩⲟⲩⲛ ⲉⲡⲉⲕⲣⲟ .",
+      "english": "Casting off the anchors, they left them in the sea, at the same time untying the rudder ropes. Hoisting up the foresail to the wind, they made for the beach.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϩⲱⲧ",
+        1,
+        16.013
+      ],
+      [
+        "ϥⲓ",
+        1,
+        10.211
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19245,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7917",
+      "type": "cf",
+      "label": "half"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1720",
+      "label": "ⲗⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "(ship's) sail; awning, curtain"
+    },
+    {
+      "target": "C1721",
+      "label": "ⲗⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "(ship's) sail; awning, curtain"
+    }
+  ]
+}

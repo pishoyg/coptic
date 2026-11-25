@@ -1,0 +1,807 @@
+{
+  "id": "C126",
+  "forms": [
+    {
+      "id": "CF454",
+      "orth": "ⲁⲛⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2303,
+        "count": 23
+      }
+    },
+    {
+      "id": "CF455",
+      "orth": "ⲁⲛⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3391,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF456",
+      "orth": "ⲁⲛⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF457",
+      "orth": "ⲁⲛⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5948,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF458",
+      "orth": "ⲁⲛⲓⲧ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS146",
+      "bibliography": "CD 11a; CED 8; KoptHWb 8; DELC 12; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛⲟⲩⲟⲩⲱⲣⲡ ⲉⲕⲉⲭⲁ ϯⲙⲁⲩ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲭⲱ ⲉⲃⲟⲗ ⲛⲓⲙⲁⲥ ⲇⲉ ⲉⲕⲉϭⲓⲧⲟⲩ ⲛⲁⲕ ϩⲓⲛⲁ ⲛⲧⲉⲕ**ⲁⲛⲁⲓ** ⲙⲙⲟⲥ ⲛⲧⲉⲛⲉⲕⲉϩⲟⲟⲩ ⲁϣⲁⲓ",
+      "english": "Thou shalt by all means let the mother go, but thou shalt take the young to thyself; that it may be well with thee, and that thou mayest live long.",
+      "source": "05_Deuteronomium_22",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:22",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲱ ⲡⲣⲱⲙⲉ ϣⲱⲡⲉ ⲉⲣⲟⲕ ⲛⲧⲁⲥⲩⲛⲃⲟⲩⲗⲉⲓⲁ · ⲁⲩⲱ ⲙⲁⲣⲉⲡⲁϣⲟϫⲛⲉ **ⲣⲁⲛⲁ**ⲕ · ⲛⲅⲥⲱⲧⲉ ⲛⲛⲉⲕⲛⲟⲃⲉ ϩⲛϩⲉⲛⲙⲛⲧⲛⲁ ·",
+      "english": "Now, therefore, O man, take advice, and let my counsel be pleasing unto thee.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲡⲓⲕⲟⲩϫⲓ ⲛⲁⲗⲟⲩ ϣⲉⲛⲟⲩϯ ⲛⲉⲁϥⲉⲣϩⲏⲧⲥ ⲛⲁⲓⲁⲓ ⲡⲉ ϧⲉⲛⲡⲓϩⲙⲟⲧ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲧϣⲟⲡ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲛⲁϥϯ ⲉⲡ**ⲁⲛⲁⲓ** ⲛⲕⲟⲩϫⲓ . ⲕⲟⲩϫⲓ .",
+      "english": "Then the little boy Shenote began to grow in the grace of God which dwelt inside him and bit by bit grew beautiful.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲱⲧⲛ ⲛⲁⲥⲛⲏⲩ ⲕⲁⲟⲩϣⲓ ⲛⲏⲧⲛ ⲙⲛⲟⲩⲕⲁⲛⲱⲛ ⲉϥⲧⲏϣ ϩⲛⲟⲩϩⲩⲡⲟⲙⲟⲛⲏ ⲙⲛⲟⲩⲙⲟⲩⲛ ⲉⲃⲟⲗ ϫⲉⲕⲁⲥ ⲉⲧⲉⲧⲛⲉⲉϣϭⲙϭⲟⲙ ⲛϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉⲧⲛⲃⲓⲟⲥ ⲉϥ**ⲣⲁⲛⲁ**ϥ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "I adjure you, O my brethren, to do none of these things, but make moderation your guide, and set a fixed measure to your patient endurance and to your perseverance, in order that ye may be able to fulfil your lives in the manner which is pleasing unto God,",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲟⲩ ⲡⲟⲩⲣⲟ ⲡⲁⲛⲏⲃ ⲙⲁⲣⲉϥϩⲉⲓ ⲛϫⲉⲡ**ⲁⲛⲁⲓ** ⲙⲡⲉⲕⲙⲑⲟ ⲟⲩⲟϩ ⲛⲛⲉⲕⲧⲁⲥⲑⲟⲓ ⲉϧⲣⲏⲓ ⲉⲡⲏⲓ ⲛⲓⲱⲛⲁⲑⲁⲛ ϫⲉⲛⲛⲁⲙⲟⲩ ⲙⲙⲁⲩ .",
+      "english": "And Jeremias said, They shall in no wise deliver thee up. Hear the word of the Lord which I speak to thee; and it shall be better for thee, and thy soul shall live.",
+      "source": "24_Ieremias_45",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:45",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲓϩⲉ ⲇⲉ ϩⲱⲱⲛ ϣⲟⲡⲛ ⲉⲣⲟⲕ · ϩⲙⲡⲉⲓⲕⲱϩⲧ ⲛⲧϩⲉ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲉⲥ**ⲣⲁⲛⲁ**ⲕ ϩⲙⲡⲧⲣⲛϣⲱⲡⲉ ⲟⲛ ⲛⲟⲩϭⲗⲓⲗ ϩⲙⲡⲕⲱϩⲧ ·",
+      "english": "In this manner do Thou receive us nnto Thyself, through this fire, as a sacrifice well pleasing unto Thee, and because we make ourselves to be also an offering by fire.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲩϫⲓ",
+        4,
+        13.432
+      ],
+      [
+        "ⲡ",
+        4,
+        8.16
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        7.72
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        7.362
+      ],
+      [
+        "ⲕ",
+        2,
+        6.668
+      ],
+      [
+        "ⲙⲑⲟ",
+        1,
+        6.358
+      ],
+      [
+        "ⲉ",
+        3,
+        6.313
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        6.156
+      ],
+      [
+        "ϫⲓϫ",
+        1,
+        6.053
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        5.995
+      ],
+      [
+        "ϯ",
+        2,
+        5.831
+      ],
+      [
+        "ϥ",
+        3,
+        5.72
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        5.276
+      ],
+      [
+        ".",
+        2,
+        5.157
+      ],
+      [
+        "ⲙ",
+        2,
+        5.124
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        4.92
+      ],
+      [
+        "ⲛ",
+        2,
+        4.131
+      ],
+      [
+        "ⲧ",
+        1,
+        4.065
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        3.909
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        3.135
+      ]
+    ],
+    "S": [
+      [
+        "ⲅⲁⲣ",
+        13,
+        12.397
+      ],
+      [
+        "ⲧⲛⲟϭ",
+        1,
+        12.214
+      ],
+      [
+        "ϣⲓ",
+        5,
+        11.779
+      ],
+      [
+        "ⲟⲩ",
+        23,
+        11.407
+      ],
+      [
+        "ⲉ",
+        17,
+        9.696
+      ],
+      [
+        "ⲥⲱⲙⲛⲧ",
+        1,
+        9.514
+      ],
+      [
+        "ⲡⲉϥ",
+        7,
+        9.135
+      ],
+      [
+        "ⲛ",
+        17,
+        8.688
+      ],
+      [
+        "ⲧ",
+        10,
+        8.653
+      ],
+      [
+        "ⲧⲟⲛⲧⲛ",
+        1,
+        7.966
+      ],
+      [
+        "ϩⲟⲧ",
+        1,
+        7.788
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        2,
+        7.755
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        7.682
+      ],
+      [
+        "ⲡⲁⲣϩⲏⲥⲓⲁ",
+        1,
+        7.486
+      ],
+      [
+        "ⲙ",
+        9,
+        7.477
+      ],
+      [
+        "ⲧⲏⲣ",
+        5,
+        7.446
+      ],
+      [
+        "ⲛⲁϩⲣⲙ",
+        1,
+        7.284
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        2,
+        7.173
+      ],
+      [
+        "ⲡ",
+        10,
+        7.079
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        4,
+        6.929
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_pre_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲁϣⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙ_1_pre_ⲁⲛⲁⲓ",
+          "ⲡ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲙ",
+          "ⲟⲩ_3_pre_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_pre_ⲡ",
+          "ⲁⲛⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          "ⲡⲉⲕ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲙⲑⲟ",
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲁⲛⲁⲓ",
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲛⲁⲓ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ⲛⲧⲉ_2_post_ⲁϣⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          17
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲛⲁⲓ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          3
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲣⲙ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲓⲁⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲁ",
+          1
+        ],
+        [
+          "ⲥⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲧⲛⲟϭ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲱⲛⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲧⲏⲣ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲁⲛⲁⲓ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲛⲁϩⲣⲙ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲣⲙ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲡ_4_post_ⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲁⲓ",
+          "ⲡⲉⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲛ_1_post_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲁⲓ",
+          "ⲓⲁⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲛⲁⲓ",
+          "ⲡⲉϥ_3_post_ⲥⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲁ",
+          "ⲥⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲙⲛ_2_post_ⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲛⲟϭ",
+          "ⲧⲛⲟϭ_1_post_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲛⲟϭ_1_post_ⲁⲛⲁⲓ",
+          "ⲙ_2_post_ⲧⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲧⲛⲟϭ",
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          "ⲣⲉϥⲥⲱⲛⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲛⲁⲓ",
+          "ϩⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲁⲛⲁⲓ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲁⲛⲁⲓ",
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲓ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲛⲁⲓ",
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲁⲛⲁⲓ",
+          "ⲡ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲛⲁⲓ",
+          "ⲥ_1_pre_ⲁⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲁⲛⲁⲓ",
+          "ⲁⲛⲁⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.05,
+      "rank": 599,
+      "count": 167
+    },
+    "B": {
+      "rate": 0.13,
+      "rank": 2011,
+      "count": 11
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2491",
+      "type": "cf",
+      "label": "be good"
+    },
+    {
+      "target": "C13002",
+      "type": "cf",
+      "label": "perfume"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C132",
+      "label": "ϭⲓⲛⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C127",
+      "label": "ⲁⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C129",
+      "label": "ⲙⲉⲧⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C131",
+      "label": "ⲙⲉⲧⲣⲉϥⲣⲁⲛⲁ⸗",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C128",
+      "label": "ⲣⲁⲛⲁ",
+      "pos": "V",
+      "gloss": "be pleasing, be pleased, please"
+    },
+    {
+      "target": "C130",
+      "label": "ⲣⲉϥⲣⲁⲛⲁ⸗",
+      "pos": "N",
+      "gloss": "one who pleases"
+    }
+  ],
+  "etym": {
+    "egy_num": "38070",
+    "egy_lemma": "ꜥni̯",
+    "english": "to be beautiful; to be kind; to be pleasing",
+    "german": "schön sein; freundlich sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/38070"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C3135",
+  "forms": [
+    {
+      "id": "CF8149",
+      "orth": "ⲙⲁⲛⲉⲣⲓⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3585",
+      "bibliography": "CD 299a; KoptHWb 166; ChLCS 42b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1925",
+      "type": "cf",
+      "label": "pasture, feed"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3137",
+      "label": "ⲣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "piglet"
+    },
+    {
+      "target": "C3132",
+      "label": "ⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "swine, pig"
+    },
+    {
+      "target": "C3134",
+      "label": "ⲣⲓⲣ ⲛϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild boar"
+    },
+    {
+      "target": "C3133",
+      "label": "ⲣⲓⲣ ⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "mountain, wild boar"
+    },
+    {
+      "target": "C3136",
+      "label": "ⲥⲁ ⲛⲣⲓⲣ",
+      "pos": "N",
+      "gloss": "pig dealer"
+    }
+  ]
+}

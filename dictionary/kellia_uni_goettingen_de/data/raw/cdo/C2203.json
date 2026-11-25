@@ -1,0 +1,582 @@
+{
+  "id": "C2203",
+  "forms": [
+    {
+      "id": "CF6124",
+      "orth": "ⲙⲏⲏϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.31,
+        "rank": 206,
+        "count": 838
+      }
+    },
+    {
+      "orth": "ⲙⲏϣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 11.58,
+        "rank": 113,
+        "count": 982
+      }
+    },
+    {
+      "orth": "ⲙⲓⲉⲓϣⲉ",
+      "dialect": "A",
+      "id": "1134.1"
+    },
+    {
+      "orth": "ⲙⲓϣⲉ",
+      "dialect": "A",
+      "id": "1134.2"
+    },
+    {
+      "orth": "ⲙⲏⲏϣⲉ",
+      "dialect": "F",
+      "id": "1134.3"
+    },
+    {
+      "orth": "ⲙⲏⲏϣⲓ",
+      "dialect": "F",
+      "id": "1134.4"
+    },
+    {
+      "orth": "ⲙⲉϣⲓ",
+      "dialect": "F",
+      "id": "1134.5"
+    },
+    {
+      "orth": "ⲙⲏⲏϣⲉ",
+      "dialect": "L",
+      "id": "1134.6"
+    },
+    {
+      "orth": "ⲙⲏϣⲉ",
+      "dialect": "L",
+      "id": "1134.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2545",
+      "bibliography": "CD 202a; KoptHWb 108; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲉⲣⲕⲁⲧⲏⲅⲟⲣⲓⲛ ⲛϩⲁⲛ**ⲙⲏϣ** ϧⲁⲣⲟϥ ⲛϫⲉⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ .",
+      "english": "The chief priests accused him of many things.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲙⲉ ⲁⲓⲟⲩⲉϣ ⲟⲩ**ⲙⲏⲏϣⲉ** ⲛϫⲱⲱⲙⲉ ·",
+      "english": "Truly, I have read a multitude of books,",
+      "source": "Apophthegmata Patrum Sahidic 057: Euprepius 7",
+      "urn": "urn:cts:copticLit:ap.57.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲟⲩ**ⲙⲏϣ** ⲙⲉⲛ ⲛⲉ ⲛⲓⲙⲉⲗⲟⲥ ⲟⲩⲁⲓ ⲇⲉ ⲡⲉ ⲡⲓⲥⲱⲙⲁ .",
+      "english": "But now they are many members, but one body.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "..... **ⲙⲏⲏϣⲉ** ⲛⲧⲁⲅⲙⲁ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲙⲛⲏⲡ .....",
+      "english": "... an army of angels, being without number ...",
+      "source": "Apophthegmata Patrum Sahidic 002: Anonymous Nau 136",
+      "urn": "urn:cts:copticLit:ap.2.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲱϣ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲉⲧⲁϥϣⲧⲉⲣⲑⲱⲣϥ ⲛⲟⲩ**ⲙⲏϣ** ⲁϥⲓ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲁϥⲉⲣⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲉϥⲙⲱⲟⲩⲧ ϩⲱⲥⲧⲉ ⲛⲧⲉⲟⲩⲙⲏϣ ϫⲟⲥ ϫⲉⲁϥⲙⲟⲩ .",
+      "english": "Having cried out, and convulsed greatly, it came out of him. The boy became like one dead; so much that most of them said, 'He is dead.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲅⲱⲙⲥ ⲙⲫⲁⲣⲁⲱ ⲙⲛⲡⲉϥ**ⲙⲏⲏϣⲉ** ·",
+      "english": "Thou shalt drown Pharaoh and his multitude.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        1004,
+        34.505
+      ],
+      [
+        "ⲟⲩ",
+        710,
+        33.169
+      ],
+      [
+        "ⲉ",
+        467,
+        31.619
+      ],
+      [
+        "ϥ",
+        413,
+        30.494
+      ],
+      [
+        "ϩⲁⲛ",
+        200,
+        30.245
+      ],
+      [
+        "ⲡⲓ",
+        239,
+        29.473
+      ],
+      [
+        "ⲩ",
+        193,
+        28.898
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        183,
+        28.851
+      ],
+      [
+        "ⲙ",
+        211,
+        28.746
+      ],
+      [
+        "ⲛⲉ",
+        110,
+        28.724
+      ],
+      [
+        "ⲁ",
+        234,
+        28.601
+      ],
+      [
+        "ⲟϣ",
+        48,
+        28.567
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        222,
+        28.463
+      ],
+      [
+        "ⲛⲧⲉ",
+        175,
+        28.42
+      ],
+      [
+        "ⲉⲑⲛⲟⲥ",
+        63,
+        28.18
+      ],
+      [
+        "ⲥⲟⲡ",
+        48,
+        27.926
+      ],
+      [
+        ".",
+        172,
+        27.895
+      ],
+      [
+        "ϧⲓⲥⲓ",
+        35,
+        27.752
+      ],
+      [
+        "ϧⲉⲛ",
+        156,
+        27.619
+      ],
+      [
+        "ⲧⲏⲣ",
+        90,
+        27.447
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩ",
+        481,
+        22.239
+      ],
+      [
+        "ⲉ",
+        502,
+        22.021
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        81,
+        21.407
+      ],
+      [
+        "ⲛ",
+        532,
+        21.264
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        10,
+        20.853
+      ],
+      [
+        "ϥ",
+        410,
+        20.849
+      ],
+      [
+        "ⲡ",
+        399,
+        20.707
+      ],
+      [
+        "ⲧⲏⲣ",
+        157,
+        20.037
+      ],
+      [
+        "ⲁⲩⲱ",
+        253,
+        19.985
+      ],
+      [
+        "ⲙ",
+        277,
+        19.982
+      ],
+      [
+        "ⲩ",
+        221,
+        19.463
+      ],
+      [
+        "ⲁ",
+        235,
+        18.963
+      ],
+      [
+        "ⲥⲱⲟⲩϩ",
+        48,
+        18.935
+      ],
+      [
+        ".",
+        136,
+        18.109
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        127,
+        17.721
+      ],
+      [
+        "ⲉⲧ",
+        118,
+        17.175
+      ],
+      [
+        "ⲇⲉ",
+        96,
+        17.03
+      ],
+      [
+        "ⲛⲟϭ",
+        56,
+        17.009
+      ],
+      [
+        "ⲛⲉ",
+        79,
+        16.514
+      ],
+      [
+        "ϫⲉ",
+        103,
+        16.495
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          283
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲏⲏϣⲉ",
+          38
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          27
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲏⲏϣⲉ",
+          26
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          26
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          38
+        ],
+        [
+          "ⲥⲟⲡ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          17
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲏⲏϣⲉ",
+          13
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲏⲏϣⲉ",
+          18
+        ],
+        [
+          "ⲉ_1_post_ⲙⲏⲏϣⲉ",
+          4
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          4
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲙⲏⲏϣⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲙⲏⲏϣⲉ",
+          3
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲛⲟⲃⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲏⲏϣⲉ",
+          3
+        ],
+        [
+          "ⲧⲏϩ_2_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ⲛⲙⲙ_3_post_ⲧⲏϩ",
+          3
+        ],
+        [
+          "ⲉ_4_post_ⲛⲙⲙ",
+          3
+        ],
+        [
+          "ⲁⲅⲅⲉⲗⲟⲥ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲙⲏⲏϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲙⲏⲏϣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲏⲏϣⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲏⲏϣⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲥⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          "ϩⲉⲑⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲡⲉϥ_1_pre_ⲙⲏⲏϣⲉ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲙⲏⲏϣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          "ⲉ_1_post_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲟⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          "ⲙ_1_post_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲯⲩⲭⲏ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲛⲟⲃⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲡⲉⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲏⲏϣⲉ",
+          "ⲙⲏⲏϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏⲏϣⲉ_0_node",
+          "ⲉⲧ_1_post_ⲙⲏⲏϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲧⲏϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲏϩ_2_post_ⲉⲧ",
+          "ⲛⲙⲙ_3_post_ⲧⲏϩ",
+          1
+        ],
+        [
+          "ⲛⲙⲙ_3_post_ⲧⲏϩ",
+          "ⲉ_4_post_ⲛⲙⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲏϣⲉ",
+          "ⲁⲅⲅⲉⲗⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.28,
+      "rank": 175,
+      "count": 838
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2204",
+      "label": "ⲙⲏⲏϣⲉ ⲛ-",
+      "pos": "N",
+      "gloss": "many, great"
+    },
+    {
+      "target": "C2206",
+      "label": "ⲛϩⲁⲛⲙⲏϣ",
+      "pos": "ADV",
+      "gloss": "greatly"
+    },
+    {
+      "target": "C2205",
+      "label": "ⲛⲟⲩⲙⲏϣ",
+      "pos": "ADV",
+      "gloss": "greatly"
+    }
+  ],
+  "etym": {
+    "egy_num": "76300",
+    "egy_lemma": "mšꜥ",
+    "demo_num": "d2702",
+    "demo_lemma": "mšꜥ",
+    "english": "army; workforce",
+    "german": "Truppe; Heer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/76300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2702"
+  }
+}

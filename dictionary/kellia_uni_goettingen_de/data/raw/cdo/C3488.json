@@ -1,0 +1,175 @@
+{
+  "id": "C3488",
+  "forms": [
+    {
+      "id": "CF8877",
+      "orth": "ⲥⲉⲗⲥⲓⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8533,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3970",
+      "bibliography": "CD 332b; KoptHWb 184, 537; DELC 188"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲛⲥⲁⲃⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+        1,
+        18.695
+      ],
+      [
+        "ⲣⲉϥϯⲥⲃⲱ",
+        1,
+        13.051
+      ],
+      [
+        "ⲣⲏ",
+        1,
+        12.608
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲗⲥⲓⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_3_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉⲗⲥⲓⲗ_0_node",
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          "ⲛⲁⲛⲉ_3_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8003,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3481",
+      "type": "cf",
+      "label": "order, adornment"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3485",
+      "label": "ϣⲱⲡⲉ ⲛⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "become, be comforted"
+    },
+    {
+      "target": "C3486",
+      "label": "ϫⲓⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "take comfort"
+    },
+    {
+      "target": "C3487",
+      "label": "ⲣⲉϥⲥⲟⲗⲥⲗ",
+      "pos": "N",
+      "gloss": "comforter"
+    },
+    {
+      "target": "C3484",
+      "label": "ⲣⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "make, have comfort"
+    },
+    {
+      "target": "C3482",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "V",
+      "gloss": "be comforted, encouraged; comfort, encourage"
+    },
+    {
+      "target": "C3483",
+      "label": "ⲥⲟⲗⲥⲗ",
+      "pos": "N",
+      "gloss": "consolation, amusement"
+    }
+  ]
+}

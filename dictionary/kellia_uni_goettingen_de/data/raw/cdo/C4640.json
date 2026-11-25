@@ -1,0 +1,187 @@
+{
+  "id": "C4640",
+  "forms": [
+    {
+      "id": "CF11243",
+      "orth": "ⲁⲛϣⲧⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16745,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5241",
+      "bibliography": "CD 440a; CED 198; KoptHWb 252; DELC 223b; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥⲛⲁⲕⲱ ⲁⲛ ⲙⲙⲟⲓ ⲉ**ⲁⲛϣⲧⲏⲩ** ⲁϥⲙⲁϩⲧ ⲅⲁⲣ ⲛⲛⲁϭⲥⲉ",
+      "english": "For he suffers me not to take breath, but he has filled me with bitterness.",
+      "source": "Job 9",
+      "urn": "urn:cts:copticLit:ot.job.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁϩⲧ",
+        1,
+        17.013
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16348,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5508",
+      "type": "cf",
+      "label": "live"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4648",
+      "label": "ϩⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "whirlwind"
+    },
+    {
+      "target": "C4647",
+      "label": "ϩⲏ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "breeze"
+    },
+    {
+      "target": "C4639",
+      "label": "ϩⲓⲡⲑⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "gasp, expire"
+    },
+    {
+      "target": "C4649",
+      "label": "ϫⲓⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "burning breath, drought"
+    },
+    {
+      "target": "C4637",
+      "label": "ⲕⲁⲡⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "leave breath, expire"
+    },
+    {
+      "target": "C4636",
+      "label": "ⲙⲁ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "place of breath, life"
+    },
+    {
+      "target": "C4643",
+      "label": "ⲛⲉϣⲡⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "fan"
+    },
+    {
+      "target": "C4638",
+      "label": "ⲛⲉϫⲧⲏⲩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out breath, expire"
+    },
+    {
+      "target": "C4650",
+      "label": "ⲣϫⲛⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "(to) wither, singe"
+    },
+    {
+      "target": "C4644",
+      "label": "ⲣⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "open-air space (on roof)"
+    },
+    {
+      "target": "C4642",
+      "label": "ⲣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "make wind, be windy"
+    },
+    {
+      "target": "C4646",
+      "label": "ⲥⲁⲣⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "storm"
+    },
+    {
+      "target": "C4641",
+      "label": "ⲥⲉⲕⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "draw breath, breathe stertorously"
+    },
+    {
+      "target": "C4635",
+      "label": "ⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "wind, breath"
+    },
+    {
+      "target": "C4645",
+      "label": "ⲭⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "window"
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "id": "C11060",
+  "forms": [
+    {
+      "id": "CF30438",
+      "orth": "ϩⲁⲙⲏⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30448",
+      "orth": "ϩⲁⲙⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.95,
+        "rank": 342,
+        "count": 465
+      }
+    },
+    {
+      "id": "CF30439",
+      "orth": "ϥⲑ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1904,
+        "count": 33
+      }
+    },
+    {
+      "id": "CF30440",
+      "orth": "ϥ︦ⲑ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30441",
+      "orth": "ϩⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.79,
+        "rank": 110,
+        "count": 1702
+      }
+    },
+    {
+      "id": "CF30442",
+      "orth": "ϩⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4217,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF30443",
+      "orth": "ϩⲁⲙⲉⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30449",
+      "orth": "ϩⲁⲙⲏⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30444",
+      "orth": "ϩⲁⲙⲏ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30447",
+      "orth": "ϩⲁⲙⲏⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF30446",
+      "orth": "ϩⲁⲙⲏϩⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30445",
+      "orth": "ϩⲁⲙⲏ⳯",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30450",
+      "orth": "ϩ︦ⲁ︦ⲙ︦ⲏ︦ⲛ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30451",
+      "orth": "ϩ︦ⲁ︦ⲙ︦ⲛ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30452",
+      "orth": "ⲁⲙⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4947,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF30453",
+      "orth": "ⲁⲙⲏⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.0,
+        "rank": 465,
+        "count": 170
+      }
+    },
+    {
+      "id": "CF30454",
+      "orth": "ⲍⲁⲙⲏⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30455",
+      "orth": "ⲫⲁⲙⲏⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS15441",
+      "bibliography": "DDGLC",
+      "cu_ID": "3447"
+    },
+    {
+      "id": "CS15442",
+      "bibliography": "DDGLC",
+      "cu_ID": "2688"
+    },
+    {
+      "id": "CS15443",
+      "bibliography": "DDGLC",
+      "cu_ID": "3490"
+    },
+    {
+      "id": "CS15444",
+      "bibliography": "DDGLC",
+      "cu_ID": "172"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϫⲁⲓ ϧⲉⲛⲡϭⲟⲉⲓⲥ **ⲁⲙⲏⲛ** .",
+      "english": "Farewell in the Lord: amen.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ **ϩⲁⲙⲏⲛ** ·",
+      "english": "IN THE PEACE OF GOD. AMEN.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲁⲅⲁⲡⲏ ⲛⲉⲙⲱⲧⲉⲛ ⲧⲏⲣⲟⲩ ϧⲉⲛⲡⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ **ⲁⲙⲏⲛ**",
+      "english": "My love to all of you in Christ Jesus. Amen.",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲙⲟⲩ ⲉⲣⲟⲛ **ϩⲁⲙⲏⲛ** : —",
+      "english": "BLESS US! AMEN.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲙⲟⲩϯ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉ**ⲁⲙⲏⲛ** ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲧⲁⲓⲭⲏⲣⲁ ⲛϩⲏⲕⲓ ⲁⲥϩⲓⲟⲩⲓ ⲉϩⲟⲧⲉⲛⲁⲓ ⲧⲏⲣⲟⲩ ⲉⲧϩⲓⲟⲩⲓ ⲉⲡⲓⲅⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ .",
+      "english": "He called his disciples to himself, and said to them, 'Most certainly I tell you, this poor widow gave more than all those who are giving into the treasury,",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϩⲁⲙⲏⲛ** ⲉⲥⲉϣⲱⲡⲉ ϥⲑ ·",
+      "english": "Amen. So let it be! Amen.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱ",
+        445,
+        25.93
+      ],
+      [
+        "ϯ",
+        450,
+        25.09
+      ],
+      [
+        "ⲙⲙⲟ",
+        446,
+        24.516
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        136,
+        24.132
+      ],
+      [
+        "ⲥ",
+        346,
+        22.711
+      ],
+      [
+        "ⲓⲁⲓ",
+        8,
+        19.731
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        67,
+        19.712
+      ],
+      [
+        "ⲇⲉⲣⲁⲁⲣⲁⲓ",
+        6,
+        19.486
+      ],
+      [
+        "ⲥⲁⲣⲥⲁⲣⲥⲁⲣⲧⲟⲩ",
+        6,
+        19.486
+      ],
+      [
+        "ⲕⲟⲩⲕⲓⲁⲙⲓⲛ",
+        6,
+        19.486
+      ],
+      [
+        "ⲙⲓⲁⲓ",
+        6,
+        19.486
+      ],
+      [
+        "—",
+        34,
+        18.774
+      ],
+      [
+        ".",
+        130,
+        18.757
+      ],
+      [
+        "ⲥⲟⲩⲃⲁⲓⲃⲁⲓ",
+        5,
+        18.697
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        48,
+        18.612
+      ],
+      [
+        "ⲉⲓⲣⲏⲛⲏ",
+        33,
+        17.972
+      ],
+      [
+        "ⲁⲡⲡⲁⲁⲡ",
+        4,
+        17.731
+      ],
+      [
+        "ϩⲁⲡⲁϩⲟⲩⲟ",
+        4,
+        17.731
+      ],
+      [
+        "ϫⲉ",
+        100,
+        17.211
+      ],
+      [
+        "ⲛ",
+        170,
+        17.17
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          19
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ϩⲁⲙⲏⲛ",
+          5
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ϩⲁⲙⲏⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_2_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϩⲁⲙⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_3_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ϣⲡϩⲙⲟⲧ_3_post_ⲡⲉⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲟⲙⲛⲧ_1_pre_ϩⲁⲙⲏⲛ",
+          "ϩⲁⲙⲏⲛ_0_node",
+          4
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲁⲙⲏⲛ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ϩⲁⲙⲏⲛ",
+          "ⲥⲁϣϥ_1_pre_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ϩⲁⲙⲏⲛ",
+          "ϩⲁⲙⲏⲛ_0_node",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲙⲏⲛ",
+          "ⲡ_2_pre_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϣⲟⲙⲛⲧ",
+          "ϣⲟⲙⲛⲧ_1_pre_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲙⲛ_5_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϩⲁⲙⲏⲛ",
+          "ⲡ_3_post_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϯⲟⲩ",
+          "ϯⲟⲩ_2_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_2_post_ϣⲏⲛ",
+          "ϣⲏⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_1_post_ϩⲁⲙⲏⲛ",
+          "ⲙⲛ_5_post_ϩⲁⲙⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ",
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ_b",
+          "ϣⲟⲙⲛⲧ_1_pre_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          "ⲡ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_post_ϩⲁⲙⲏⲛ",
+          "ⲁⲩⲱ_2_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲟⲩⲛ",
+          "ⲡ_2_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲩⲥⲧⲏⲣⲓⲟⲛ_1_post_ϩⲁⲙⲏⲛ",
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲙⲙⲁⲩ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲙⲛ_3_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ϣⲏⲛ",
+          "ⲡ_4_post_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϯⲟⲩ",
+          "ϯⲟⲩ_3_post_ϣⲏⲛ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_3_post_ϣⲏⲛ",
+          "ⲛ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲁⲙⲏⲛ",
+          "ϩⲁⲙⲏⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲛ_0_node",
+          "ⲉϫⲙ_1_post_ϩⲁⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ϩⲁⲙⲏⲛ",
+          "ⲡⲉⲕ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲉϫⲙ",
+          "ϣⲡϩⲙⲟⲧ_3_post_ⲡⲉⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.94,
+      "rank": 283,
+      "count": 467
+    }
+  },
+  "etym": {
+    "grl_ID": "114",
+    "grl_lemma": "ἀμήν",
+    "grl_meaning": "amen",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 82b; Preisigke 1:68"
+  }
+}

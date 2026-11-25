@@ -1,0 +1,114 @@
+{
+  "id": "C2217",
+  "forms": [
+    {
+      "id": "CF6152",
+      "orth": "ⲙⲓϣⲉ (ⲟⲩⲃⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲟⲩⲃⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2560",
+      "bibliography": "CD 203a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉϣⲡⲏⲣⲉ ⲧⲉ **ϫⲉⲉⲛⲉⲥⲙⲓϣⲉ **ⲟⲩⲃⲉ**ⲛⲁⲓ** · ϩⲛⲟⲩⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲡⲛⲉⲩⲙⲁ ⲉⲛⲧⲁⲡϩⲟϥ ϭⲙϭⲟⲙ ⲉⲁⲡⲁⲧⲁ ⲛⲉⲩϩⲁ ⲛϩⲏⲧϥ ·",
+      "english": "And it is a matter whereat to marvel that she contended against these (men) in a garden — the place wherein the Serpent succeeded in leading Eve astray.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓϣⲁⲛⲧⲛⲧⲱⲛⲅ ⲉⲓⲱⲥⲏⲫ **ⲁⲕⲙⲓϣⲉ **ⲟⲩⲃⲉ**ⲙⲡⲁⲑⲟⲥ** ⲛⲧⲉϥϩⲉ ·",
+      "english": "I compare thee unto Joseph, because thou didst fight against passion, even as did he.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁϫⲱⲣ ⲛⲧⲥⲏϥⲉ ⲛⲧⲉϥⲟⲣⲅⲏ ⲉⲧϣⲱⲱⲧ ⲉⲃⲟⲗ ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ⲛⲙⲙⲁϥ **ⲙⲓϣⲉ **ⲟⲩⲃⲉ**** ⲛⲁⲧϩⲏⲧ",
+      "english": "Then shall the right aiming thunderbolts go abroad; and from the clouds, as from a well drawn bow, shall they fly to the mark.",
+      "source": "Wisdom 5",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2213",
+      "label": "ϭⲓⲛⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "art of fighting"
+    },
+    {
+      "target": "C2210",
+      "label": "ⲁⲧⲙⲓϣⲓ",
+      "pos": "N",
+      "gloss": "not attacked, unhurt"
+    },
+    {
+      "target": "C2207",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "V",
+      "gloss": "fight"
+    },
+    {
+      "target": "C2208",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "V",
+      "gloss": "strike"
+    },
+    {
+      "target": "C2209",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fight, quarrel"
+    },
+    {
+      "target": "C2214",
+      "label": "ⲙⲓϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "fight for, fight bravely; fight against, attack"
+    },
+    {
+      "target": "C2215",
+      "label": "ⲙⲓϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "fight for, on behalf of"
+    },
+    {
+      "target": "C2216",
+      "label": "ⲙⲓϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "fight with, against, chide"
+    },
+    {
+      "target": "C2218",
+      "label": "ⲙⲓϣⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "fight on behalf of"
+    },
+    {
+      "target": "C2211",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fighter"
+    },
+    {
+      "target": "C2212",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "hostile, quarrelsome"
+    }
+  ]
+}

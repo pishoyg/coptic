@@ -1,0 +1,260 @@
+{
+  "id": "C1113",
+  "forms": [
+    {
+      "id": "CF3590",
+      "orth": "ⲕⲃⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6404,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF3591",
+      "orth": "ⲕⲃⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1373,
+        "count": 59
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1297",
+      "bibliography": "CD 100a; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲥⲟⲡⲥ ⲙⲙⲱⲧⲛ ⲉⲧⲣⲉⲧⲛϥⲓⲡⲣⲟⲟⲩϣ ⲛⲛⲉⲧⲛⲉⲣⲏⲩ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲉⲧⲡⲣⲉⲡⲉⲓ ⲛⲧⲉⲧⲛϯⲟⲩ**ⲕⲃⲟ** ⲙⲡⲁϩⲏⲧ .",
+      "english": "I entreat you to take care in every matter that is fitting, giving refreshment to my heart.",
+      "source": "So Concerning the Little Place BV 277-278",
+      "urn": "urn:cts:copticLit:shenoute.place.amelineau:55-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲭⲣⲓⲥⲧⲟⲥ ⲛⲁⲧⲁⲁⲩ ⲛⲁⲛ ⲧⲏⲣⲟⲩ ⲉⲩ**ⲕⲏⲃ** ·",
+      "english": "the Lord will give unto us twofold.'",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲧⲛϣⲓⲧⲉ ⲙⲙⲟⲟⲩ ⲛϩⲉⲛϩⲟⲙⲛⲧ ⲡⲁⲣⲁⲧⲉⲩⲁⲥⲟⲩ ϣⲁⲛⲧⲉⲧⲛⲥⲉⲩϩ ⲧⲉⲧⲓⲙⲏ ⲙⲡⲙⲁⲥⲉ ⲉϩⲟⲩⲛ ⲉⲥ**ⲕⲏⲃ** ϩⲁϩⲉⲛⲉⲗⲁⲭⲓⲥⲧⲟⲛ ⲛⲁϥ , ⲉϩⲉⲛⲕⲉⲉⲥⲛⲉ ϩⲓϩⲛⲁⲩ ⲛⲁⲧϣⲁⲩ .",
+      "english": "And you extort them for copper beyond its value until you collect the price of the calf doubled for ones least of flesh, while they are bones on something useless.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲗϭ",
+        1,
+        9.703
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        6.646
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.215
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        5.168
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        4.924
+      ],
+      [
+        "ⲉ",
+        3,
+        4.765
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        4.139
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        4.009
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        3.641
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        3.568
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        3.217
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        3.011
+      ],
+      [
+        "ϯ",
+        1,
+        2.709
+      ],
+      [
+        ".",
+        1,
+        1.75
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        1.701
+      ],
+      [
+        "ϩⲛ",
+        1,
+        1.672
+      ],
+      [
+        "ⲧ",
+        1,
+        1.264
+      ],
+      [
+        "ⲙ",
+        1,
+        0.544
+      ],
+      [
+        "ϥ",
+        1,
+        -0.286
+      ],
+      [
+        "ⲡ",
+        1,
+        -0.31
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲡⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲃⲟ",
+          "ⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲕⲃⲟ_0_node",
+          "ⲙ_1_post_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲃⲟ",
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          "ϩⲏⲧ_3_post_ⲡⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1829,
+      "count": 28
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1115",
+      "label": "ϫⲓⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "get cooling, refreshment"
+    },
+    {
+      "target": "C1114",
+      "label": "ϯⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "make cool"
+    },
+    {
+      "target": "C12192",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "cold"
+    },
+    {
+      "target": "C1112",
+      "label": "ⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "be, become cool; make cool"
+    },
+    {
+      "target": "C1116",
+      "label": "ⲕⲃⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "cool wind, coolness"
+    }
+  ],
+  "etym": {
+    "egy_num": "160180",
+    "egy_lemma": "qbb",
+    "demo_num": "d6299",
+    "demo_lemma": "qbꜥꜣ",
+    "english": "coolness; calmness",
+    "german": "Kühle",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6299"
+  }
+}

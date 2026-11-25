@@ -1,0 +1,290 @@
+{
+  "id": "C7713",
+  "forms": [
+    {
+      "id": "CF17491",
+      "orth": "ⲣϭⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6807,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8575",
+      "bibliography": "CD 816a"
+    },
+    {
+      "id": "CS8576",
+      "bibliography": "CD 816a; KoptHWb 456; ChLCS 107b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲉⲩⲛⲁⲣⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁⲣⲡⲣⲟⲫⲏⲧⲏⲥ ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁⲣⲥⲁϩ ⲧⲏⲣⲟⲩ ⲙⲏ ⲉⲩⲛⲁ**ⲣϭⲟⲙ** ⲧⲏⲣⲟⲩ .",
+      "english": "Are all apostles? Are all prophets? Are all teachers? Are all miracle workers?",
+      "source": "1 Corinthians 12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧⲟⲩⲛⲁⲙ ⲙⲡϫⲟⲉⲓⲥ **ⲣϭⲟⲙ**",
+      "english": "The right hand of the Lord has exalted me: the right hand of the Lord has wrought powerfully.",
+      "source": "Psalms 117",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:117",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲙⲏ",
+        4,
+        15.519
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        1,
+        10.612
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        10.103
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.279
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.158
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ϯ",
+        1,
+        5.931
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏ_1_pre_ⲣϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲣϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲣϭⲟⲙ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣϭⲟⲙ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲏ_1_pre_ⲣϭⲟⲙ",
+          "ⲩ_1_pre_ⲣϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣϭⲟⲙ",
+          "ⲛⲁ_1_pre_ⲣϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣϭⲟⲙ",
+          "ⲣϭⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ⲣϭⲟⲙ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣϭⲟⲙ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6375,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7722",
+      "label": "ϣϭⲙϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find strength, be able (to do)"
+    },
+    {
+      "target": "C7719",
+      "label": "ϩⲉϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find power"
+    },
+    {
+      "target": "C7720",
+      "label": "ϭⲓϭⲟⲙ",
+      "pos": "V",
+      "gloss": "get strength"
+    },
+    {
+      "target": "C7721",
+      "label": "ϭⲙϭⲟⲙ",
+      "pos": "V",
+      "gloss": "find strength, be able (to do)"
+    },
+    {
+      "target": "C7706",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "power, strength, might, authority"
+    },
+    {
+      "target": "C7707",
+      "label": "ϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerful, mighty, strong"
+    },
+    {
+      "target": "C7714",
+      "label": "ϯϭⲟⲙ",
+      "pos": "V",
+      "gloss": "give power"
+    },
+    {
+      "target": "C7708",
+      "label": "ⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "powerless, unable"
+    },
+    {
+      "target": "C7712",
+      "label": "ⲕⲁϭⲟⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "abandon strength, lose strength"
+    },
+    {
+      "target": "C7718",
+      "label": "ⲙⲙⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7717",
+      "label": "ⲙⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has not the strength, power, ability (to do), (one) is unable (to\n              do)"
+    },
+    {
+      "target": "C7709",
+      "label": "ⲙⲛⲧⲁⲧϭⲟⲙ",
+      "pos": "N",
+      "gloss": "impotence, incapacity, powerlessness, inability"
+    },
+    {
+      "target": "C7716",
+      "label": "ⲟⲩⲛϣϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7715",
+      "label": "ⲟⲩⲛϭⲟⲙ (ⲙⲙⲟ⸗)",
+      "pos": "V",
+      "gloss": "(one) has the strength, power, ability (to do), (one) is able (to do)"
+    },
+    {
+      "target": "C7710",
+      "label": "ⲣⲁⲧϭⲟⲙ",
+      "pos": "V",
+      "gloss": "lack strength, to be unable, impossible"
+    },
+    {
+      "target": "C7711",
+      "label": "ⲣⲙⲛϭⲟⲙ",
+      "pos": "N",
+      "gloss": "mighty man, ruler"
+    }
+  ]
+}

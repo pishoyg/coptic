@@ -1,0 +1,177 @@
+{
+  "id": "C941",
+  "forms": [
+    {
+      "id": "CF3226",
+      "orth": "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14967,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1098",
+      "bibliography": "CD 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲥϩⲟⲩⲟⲣⲧ ⲛϭⲓⲡⲣⲱⲙⲉ ⲡⲁⲓ ⲉⲧⲛⲁⲧⲁⲙⲓⲟ ⲛⲁϥ ⲛⲟⲩⲅⲗⲩⲡⲧⲟⲛ ⲙⲛⲟⲩⲭⲱⲛⲉⲩⲧⲟⲛ ϫⲉⲟⲩⲃⲟⲧⲉ ⲡⲉ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉ ⲟⲩϩⲱⲃ ⲛϭⲓϫ ⲙ**ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ** ⲛϯⲙⲓⲛⲉ ⲛϥⲕⲁⲁϥ ϩⲛⲟⲩⲙⲁ ⲉϥϩⲏⲡ ⲁⲩⲱ ⲉⲣⲉⲡⲗⲁⲟⲥ ⲟⲩⲱϣⲃ ⲛϥϫⲟⲟⲥ ϫⲉⲉϥⲉϣⲱⲡⲉ",
+      "english": "Cursed is the man whosoever shall make a graven or molten image, an abomination to the Lord, the work of the hands of craftsmen, and shall put it in a secret place: and all the people shall answer and say, So be it.",
+      "source": "Deuteronomy 27",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        12.139
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        10.087
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        9.974
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+          "ϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ϯ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14565,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C935",
+      "label": "ⲉⲓⲉⲡ-",
+      "pos": "N",
+      "gloss": "(with or without ⲛ-) + name of craft, its material or product"
+    },
+    {
+      "target": "C936",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trade; merchandise"
+    },
+    {
+      "target": "C934",
+      "label": "ⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art, occupation"
+    },
+    {
+      "target": "C939",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C940",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C937",
+      "label": "ⲣⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "V",
+      "gloss": "trade"
+    },
+    {
+      "target": "C938",
+      "label": "ⲣⲉⲓⲟⲡⲉ",
+      "pos": "V",
+      "gloss": "spin"
+    }
+  ]
+}

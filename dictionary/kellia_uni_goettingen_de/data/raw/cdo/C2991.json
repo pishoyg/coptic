@@ -1,0 +1,241 @@
+{
+  "id": "C2991",
+  "forms": [
+    {
+      "id": "CF7848",
+      "orth": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6381,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3424",
+      "bibliography": "CD 283a; KoptHWb 157; ChLCS 39b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϫⲟⲥ ⲛϫⲉⲡⲟⲩⲣⲟ ⲉⲙⲟⲩϯ ⲉⲛⲓⲣⲉϥϭⲓϣⲏⲙ ⲛⲉⲙⲛⲓⲁⲭⲱⲟⲩⲓ ⲛⲉⲙⲛⲓ**ⲣⲉϥϯⲫⲁϧⲣⲓ** ⲛϩⲓⲕ ⲛⲉⲙⲛⲓⲭⲁⲗⲇⲉⲟⲥ ⲉⲡϫⲓⲛⲧⲁⲙⲉ ⲡⲟⲩⲣⲟ ⲉⲧⲉϥⲣⲁⲥⲟⲩⲓ ⲟⲩⲟϩ ⲁⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩⲙⲡⲉⲙⲑⲟ ⲙⲡⲟⲩⲣⲟ .",
+      "english": "And the king gave orders to call the enchanters, and the magicians, and the sorcerers, and the Chaldeans, to declare to the king his dreams. And they came and stood before the king.",
+      "source": "27_Daniel_02",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲛⲟⲩϫⲓⲙⲓ ⲛϧⲏⲧⲕ ⲉϥⲑⲣⲟ ⲙⲡⲉϥϣⲏⲣⲓ ⲓⲉ ⲧⲉϥϣⲉⲣⲓ ⲉⲥⲓⲛⲓ ϧⲉⲛⲟⲩⲭⲣⲱⲙ ⲓⲉ ⲉϥϣⲓⲛⲓ ϧⲉⲛⲛⲓϣⲉⲛϩⲓⲛ ⲉϥⲉⲣⲕⲗⲏⲇⲟⲛⲓⲍⲉⲥⲑⲉ ⲉϥϫⲉⲙⲧⲁⲩ ⲟⲩⲇⲉ **ⲣⲉϥϯⲫⲁϧⲣⲓ** ⲛϩⲓⲕ",
+      "english": "There shall not be found in thee one who purges his son or his daughter with fire, one who uses divination, who deals with omens, and augury,",
+      "source": "05_Deuteronomium_18",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲓⲕ",
+        2,
+        19.373
+      ],
+      [
+        "ⲁϣⲉⲃⲉⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ϫⲉⲙⲧⲁⲩ",
+        1,
+        18.695
+      ],
+      [
+        "ⲁⲭⲱⲟⲩⲓ",
+        1,
+        15.888
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        11.76
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        9.973
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        8.243
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          2
+        ],
+        [
+          "ϩⲓⲕ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ϩⲓⲕ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲛⲓ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5867,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2993",
+      "label": "ϫⲓⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "take drugs, be healed; take colour, be dyed"
+    },
+    {
+      "target": "C2990",
+      "label": "ϯⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give drugs, heal"
+    },
+    {
+      "target": "C2994",
+      "label": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "place of healing, pharmacy"
+    },
+    {
+      "target": "C2992",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2983",
+      "label": "ⲡⲱϩⲣⲉ",
+      "pos": "V",
+      "gloss": "charm, bewitch"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ]
+}

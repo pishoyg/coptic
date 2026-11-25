@@ -1,0 +1,86 @@
+{
+  "id": "C1932",
+  "forms": [
+    {
+      "id": "CF5514",
+      "orth": "ⲙⲟⲟⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2246",
+      "bibliography": "CD 174a; ChLCS 26a"
+    },
+    {
+      "id": "CS2247",
+      "bibliography": "CD 174a; ChLCS 26a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲅⲙⲟⲟⲛⲉ **ⲉϩⲟⲩⲛ**** ⲉⲡⲗⲓⲙⲏⲛ ⲉⲧⲛⲁⲛⲟⲩϥ · ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧⲉⲙⲣⲱ ⲛⲓⲏⲥⲟⲩⲥ ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲧⲡⲉ ·",
+      "english": "Thou shalt arrive in port, in a haven which is fair, that is to say, the harbour of Jesus, which is the heavenly Jerusalem.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1926",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "place of pasture"
+    },
+    {
+      "target": "C1933",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "harbour"
+    },
+    {
+      "target": "C1929",
+      "label": "ⲙⲁⲛⲉ",
+      "pos": "N",
+      "gloss": "herdsman, pastor"
+    },
+    {
+      "target": "C1930",
+      "label": "ⲙⲁⲛⲏⲩ",
+      "pos": "N",
+      "gloss": "herdsman"
+    },
+    {
+      "target": "C1928",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "part, function of shepherd"
+    },
+    {
+      "target": "C1925",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "pasture, feed; feed, tend cattle; feed on, devour"
+    },
+    {
+      "target": "C1931",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be made fast, come to land, into port (of ship); bring to land, into port"
+    },
+    {
+      "target": "C1927",
+      "label": "ⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who pastures"
+    }
+  ]
+}

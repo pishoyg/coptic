@@ -1,0 +1,514 @@
+{
+  "id": "C10072",
+  "forms": [
+    {
+      "id": "CF26415",
+      "orth": "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF26416",
+      "orth": "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2939,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF26417",
+      "orth": "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26418",
+      "orth": "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26419",
+      "orth": "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3969,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13242",
+      "bibliography": "DDGLC",
+      "cu_ID": "622"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲏⲇⲏ ⲉⲧⲁⲣⲟⲩϩⲓ ϣⲱⲡⲓ ⲉⲡⲉⲓⲇⲏ ⲛⲉϯ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ⲧⲉ ⲉⲧϧⲁϫⲱϥ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ",
+      "english": "When evening had now come, because it was the Preparation Day, that is, the day before the Sabbath,",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓ ⲇⲉ ⲉϩⲟⲩⲛ ⲉⲣⲁⲕⲟⲧⲉ ϩⲓⲧⲛⲧⲃⲟⲏⲑⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛⲧ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ϩⲛⲧⲙⲉϩϥⲧⲟⲉ ⲛϩⲃⲇⲱⲙⲁⲥ · ⲙⲡⲡⲁⲥⲭⲁ ⲧⲁⲓ ⲉϣⲁⲩⲃⲁⲡⲧⲓⲍⲉ ⲛϩⲏⲧⲥ ⲛⲛϣⲏⲣⲉ ϣⲏⲙ ⲕⲁⲧⲁⲧⲡⲁⲣⲁⲇⲟⲥⲓⲥ ⲛⲛⲣⲙⲛⲕⲏⲙⲉ ·",
+      "english": "And by the help of God they came into Rakote on the day of preparation, on the fourth day of the week, on the Passover, whereon they are wont to baptize children according to the tradition of the Egyptians.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲓⲟⲩⲇⲁⲓ ⲟⲩⲛ ⲉⲡⲓⲇⲏ ⲛⲉϯ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ⲧⲉ ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲧⲉⲙⲟϩⲓ ⲛϫⲉⲛⲓⲥⲱⲙⲁ ϩⲓϫⲉⲛⲡⲓⲥⲧⲁⲩⲣⲟⲥ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲛⲉⲟⲩⲛⲓϣϯ ⲅⲁⲣ ⲡⲉ ⲡⲓⲉϩⲟⲟⲩ ⲛⲧⲉⲡⲓⲥⲁⲃⲃⲁⲧⲟⲛ ⲉⲧⲉⲙⲙⲁⲩ ⲁⲩϯϩⲟ ⲉⲡⲓⲗⲁⲧⲟⲥ ϩⲓⲛⲁ ⲛⲧⲟⲩⲕⲱϣ ⲛⲛⲟⲩⲕⲉⲗⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩⲟⲗⲟⲩ .",
+      "english": "Therefore the Jews, because it was the Preparation Day, so that the bodies wouldn't remain on the cross on the Sabbath (for that Sabbath was a special one), asked of Pilate that their legs might be broken, and that they might be taken away.",
+      "source": "04_John_19",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉⲣⲟⲩϩⲉ ϣⲱⲡⲉ ⲉⲃⲟⲗ ϫⲉⲧ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ⲧⲉ ⲉⲧⲉⲡⲁⲓ ⲡⲉ ϩⲁⲧⲉϩⲏ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ",
+      "english": "When evening had now come, because it was the Preparation Day, that is, the day before the Sabbath,",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉⲟⲩⲉϩⲟⲟⲩ ⲡⲉ ⲙ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ⲟⲩⲟϩ ⲛⲉⲁ ϣⲱⲣⲡ ϣⲱⲡⲓ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ .",
+      "english": "It was the day of the Preparation, and the Sabbath was drawing near.",
+      "source": "03_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲧ**ⲡⲁⲣⲁⲥⲕⲉⲩⲏ** ⲇⲉ ⲛⲓⲟⲩⲇⲁⲓ ϫⲉⲛⲉⲣⲉⲡⲧⲁⲫⲟⲥ ϩⲏⲛ ⲉϩⲟⲩⲛ ⲁⲩⲕⲁ ⲓⲏⲥⲟⲩⲥ ⲛϩⲟⲩⲛ ⲛϩⲏⲧϥ .",
+      "english": "Then because of the Jews' Preparation Day (for the tomb was near at hand) they laid Jesus there.",
+      "source": "43_John_19",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲁⲃⲃⲁⲑⲁ",
+        1,
+        16.888
+      ],
+      [
+        "ⲧⲉ",
+        6,
+        14.934
+      ],
+      [
+        "ⲉⲡⲓⲇⲏ",
+        2,
+        14.133
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        13.303
+      ],
+      [
+        "ⲛⲉ",
+        5,
+        12.538
+      ],
+      [
+        "ϧⲁϫⲱ",
+        2,
+        12.295
+      ],
+      [
+        "ϯ",
+        5,
+        10.449
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        1,
+        9.036
+      ],
+      [
+        "ⲑⲱⲟⲩϯ",
+        1,
+        8.854
+      ],
+      [
+        "ⲙⲉⲛⲉⲛⲥⲁ",
+        1,
+        8.491
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        2,
+        7.827
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.688
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        7.652
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.241
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        6.647
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.444
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        6.322
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.259
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        6.049
+      ],
+      [
+        "ⲁ",
+        2,
+        5.182
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲉϩϥⲧⲟⲉ",
+        1,
+        16.013
+      ],
+      [
+        "ⲉⲧⲉ",
+        5,
+        13.25
+      ],
+      [
+        "ⲡⲉ",
+        8,
+        12.508
+      ],
+      [
+        "ⲧ",
+        8,
+        12.071
+      ],
+      [
+        "ⲡⲁⲥⲭⲁ",
+        1,
+        11.469
+      ],
+      [
+        "ⲥⲟⲟ",
+        1,
+        11.408
+      ],
+      [
+        ".",
+        5,
+        10.523
+      ],
+      [
+        "ⲛ",
+        9,
+        10.319
+      ],
+      [
+        "ϫⲉ",
+        5,
+        10.112
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        1,
+        9.587
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        9.558
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        1,
+        9.303
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        8.741
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        8.577
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        8.22
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        8.126
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        8.024
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        7.573
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.479
+      ],
+      [
+        "ⲡ",
+        3,
+        6.252
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          4
+        ],
+        [
+          "ϯ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          3
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          6
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ϧⲁϫⲱ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϧⲁϫⲱ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_pre_ⲓⲟⲩⲇⲁⲓ",
+          1
+        ],
+        [
+          "ⲓⲟⲩⲇⲁⲓ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲓⲟⲩⲇⲁⲓ_3_post_ⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ϯ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          2
+        ],
+        [
+          "ϯ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          3
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ϧⲁϫⲱ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ϧⲁϫⲱ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ϥ_2_post_ϧⲁϫⲱ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          "ⲇⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_pre_ⲓⲟⲩⲇⲁⲓ",
+          "ⲓⲟⲩⲇⲁⲓ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲓⲟⲩⲇⲁⲓ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲟⲩⲛ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲛⲉ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          "ⲛⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲓⲟⲩⲇⲁⲓ_3_post_ⲛⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          2
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          2
+        ],
+        [
+          "ϩⲁ_3_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          "ⲉⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          2
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲡⲉ",
+          "ⲡⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ϩⲁ_3_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲥⲕⲉⲩⲏ_0_node",
+          "ⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          "ⲉⲧⲉ_1_post_ⲡⲁⲣⲁⲥⲕⲉⲩⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.08,
+      "rank": 2575,
+      "count": 7
+    },
+    "S": {
+      "rate": 0.05,
+      "rank": 3574,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "1667",
+    "grl_lemma": "παρασκευή",
+    "grl_meaning": "preparation: Day of preparation (before the Sabbath)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1324b; Preisigke 2:256"
+  }
+}

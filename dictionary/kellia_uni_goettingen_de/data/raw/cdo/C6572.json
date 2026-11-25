@@ -1,0 +1,281 @@
+{
+  "id": "C6572",
+  "forms": [
+    {
+      "id": "CF15187",
+      "orth": "ϩⲁⲗⲟⲩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3903,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϩⲁⲗⲗⲟⲩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8748,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲁⲗⲗⲟⲩⲥ",
+      "dialect": "B",
+      "id": "2172.2"
+    },
+    {
+      "orth": "ϩⲁⲗⲟⲩⲥ",
+      "dialect": "L",
+      "id": "2172.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7284",
+      "bibliography": "CD 671b; CED 280; KoptHWb 367; DELC 297b; ChLCS 90a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲁⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ϫⲟⲟⲥ · ϫⲉⲟⲩϩⲉⲗⲡⲓⲍ ⲉⲩⲛⲁⲩ ⲉⲣⲟⲥ ⲛⲟⲩϩⲉⲗⲡⲓⲍ ⲁⲛ ⲧⲉ ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧⲙⲛⲧⲣⲙⲙⲁⲟ ⲙⲡⲉⲓⲕⲟⲥⲙⲟⲥ ⲉⲧⲛⲁⲡⲁⲣⲁⲅⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ϩⲁⲗⲟⲩⲥ** ·",
+      "english": "for the Apostle saith, 'The hope which is seen is not hope,' that is to say, the riches of this world which shall pass away like the snow (or, frost).",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲁⲡⲁⲝ ϩⲁⲡⲗⲱⲥ ϩⲱⲃ ⲛⲓⲙ ⲉⲧⲙⲡⲉⲓⲙⲁ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲉⲓ**ϩⲁⲗⲟⲩⲥ** ⲙⲛϩⲉⲛⲣⲁⲥⲟⲩ ·",
+      "english": "And in short, everything which is in this world becometh like unto the web of the spider, and like unto dreams.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲟⲩⲛⲟⲩⲃ ⲏ ⲟⲩϩⲁⲧ ⲛⲁⲓ ⲧⲏⲣⲟⲩ ϩⲉⲛ**ϩⲁⲗⲟⲩⲥ** ⲛⲉ ·",
+      "english": "or to gold or silver, for all these things afterwards become fetters to thee;",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲟⲙⲉ",
+        1,
+        16.598
+      ],
+      [
+        "ⲛⲁⲧ",
+        1,
+        15.598
+      ],
+      [
+        "ϩⲉ",
+        5,
+        11.693
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        11.641
+      ],
+      [
+        "ⲣⲁⲥⲟⲩ",
+        1,
+        11.155
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        1,
+        10.043
+      ],
+      [
+        "ⲧ",
+        5,
+        10.037
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        9.857
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        9.829
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.22
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.467
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.313
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        7.036
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.238
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        5.91
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.679
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        5.516
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        5.287
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲗⲟⲩⲥ_0_node",
+          8
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲣⲁⲥⲟⲩ_1_post_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲙⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϣⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲑⲗⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲓ_1_pre_ϩⲁⲗⲟⲩⲥ",
+          "ϩⲁⲗⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲗⲟⲩⲥ_0_node",
+          "ⲙⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          "ϩⲉⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲣⲁⲥⲟⲩ",
+          "ⲣⲁⲥⲟⲩ_1_post_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲁⲗⲟⲩⲥ",
+          "ϩⲁⲗⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲗⲟⲩⲥ_0_node",
+          "ⲉ_1_post_ϩⲁⲗⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲁⲗⲟⲩⲥ",
+          "ϥ_3_post_ϣⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲟⲙⲉ",
+          "ϣⲟⲟⲙⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲙⲉ_2_post_ⲉ",
+          "ⲉ_3_post_ϣⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϣⲟⲟⲙⲉ",
+          "ⲁ_5_post_ⲑⲗⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3513,
+      "count": 8
+    }
+  }
+}

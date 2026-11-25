@@ -1,0 +1,45 @@
+{
+  "id": "C2448",
+  "forms": [
+    {
+      "id": "CF6678",
+      "orth": "ⲣⲉϥⲉⲣⲛⲱⲓⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2815",
+      "bibliography": "CD 223a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2449",
+      "label": "ⲙⲛⲧⲛⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "adultery"
+    },
+    {
+      "target": "C2446",
+      "label": "ⲛⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "adulterer"
+    },
+    {
+      "target": "C2447",
+      "label": "ⲣⲛⲟⲉⲓⲕ",
+      "pos": "V",
+      "gloss": "commit adultery"
+    }
+  ]
+}

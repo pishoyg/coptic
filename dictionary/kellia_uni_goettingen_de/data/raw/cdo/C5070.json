@@ -1,0 +1,75 @@
+{
+  "id": "C5070",
+  "forms": [
+    {
+      "id": "CF12104",
+      "orth": "ⲟⲩⲁⲛⲧⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF12105",
+      "orth": "ⲟⲩⲁⲛⲧⲱ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5701",
+      "bibliography": "CD 483a; DELC 234a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4065",
+      "type": "cf",
+      "label": "land, earth"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5066",
+      "label": "ϫⲓⲛⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "act of opening"
+    },
+    {
+      "target": "C5069",
+      "label": "ⲟⲩⲁⲛ-",
+      "pos": "N",
+      "gloss": "opener"
+    },
+    {
+      "target": "C5067",
+      "label": "ⲟⲩⲛⲣⲟ",
+      "pos": "V",
+      "gloss": "shout"
+    },
+    {
+      "target": "C5064",
+      "label": "ⲟⲩⲱⲛ",
+      "pos": "V",
+      "gloss": "open, be open"
+    },
+    {
+      "target": "C5065",
+      "label": "ⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "opening"
+    },
+    {
+      "target": "C5068",
+      "label": "ⲟⲩⲱⲛ ⲛⲥⲁϫⲓ",
+      "pos": "N",
+      "gloss": "problem, riddle"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C534",
+  "forms": [
+    {
+      "id": "CF2087",
+      "orth": "ⲃⲁⲣⲱϩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃⲁⲣⲟϩ",
+      "dialect": "B",
+      "id": "597.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS644",
+      "bibliography": "CD 44b; CED 26; KoptHWb 27; DELC 31; ChLCS 9b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C533",
+      "label": "ⲃⲁⲣⲱϩ",
+      "pos": "N",
+      "gloss": "a transport animal, camel(?)"
+    },
+    {
+      "target": "C535",
+      "label": "ⲃⲁⲣⲱϩ",
+      "pos": "N",
+      "gloss": "in list of metal utensils, vessel or container?"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1749",
+    "demo_lemma": "brḥ",
+    "english": "[to feed]",
+    "german": "Fütterer(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1749"
+  }
+}

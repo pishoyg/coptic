@@ -1,0 +1,56 @@
+{
+  "id": "C9241",
+  "forms": [
+    {
+      "id": "CF23116",
+      "orth": "ⲕⲁⲑⲏⲕⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23119",
+      "orth": "ⲕⲁⲑⲏⲕⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23117",
+      "orth": "ⲕⲁⲑⲏⲅⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5054,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF23118",
+      "orth": "ⲕⲁⲑⲏⲕⲉⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11523",
+      "bibliography": "DDGLC",
+      "cu_ID": "3496"
+    },
+    {
+      "id": "CS11524",
+      "bibliography": "DDGLC",
+      "cu_ID": "6072"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "986",
+    "grl_lemma": "καθήγησις",
+    "grl_meaning": "rule, principle",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 852b"
+  }
+}

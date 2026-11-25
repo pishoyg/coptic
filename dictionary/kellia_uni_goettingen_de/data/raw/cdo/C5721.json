@@ -1,0 +1,193 @@
+{
+  "id": "C5721",
+  "forms": [
+    {
+      "id": "CF13421",
+      "orth": "ϫⲓϣⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20329,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6399",
+      "bibliography": "CD 548b; KoptHWb 301; ChLCS 75a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉⲟⲩⲛⲟⲩⲁ ⲇⲉ ϣⲓⲛⲉ ϫⲉⲟⲩ ⲛⲉ ⲛⲉⲓϣⲓ ⲏ ϫⲉ**ϫⲓϣⲓ** ⲏ ⲛⲓⲙ ⲛⲉ ⲛⲉⲛⲧⲁⲩϫⲓϣⲓ ⲏ ϫⲉⲉⲛⲧⲁⲩϣⲓ ⲟⲩ ⲙⲁⲣⲉϥⲧⲁⲙⲟⲛ ⲏ ⲙⲁⲣⲉϥϫⲟⲟⲥ ⲛⲁⲓ ϫⲓ ϩⲓⲧⲛⲟⲩ ⲟⲩ ϣⲓ ⲙⲡⲏⲓ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ϩⲛⲟⲩⲕⲁϣ . ⲁⲩⲱ ⲛⲓⲙ ⲡⲉⲛⲧⲁϥϣⲓⲧϥ ⲁⲩⲱ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩϣⲓⲧϥ ⲏ ⲁⲩϯⲧⲱϣ ⲉⲣⲟϥ ϫⲉϩⲛⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ ϭⲉ",
+      "english": "...",
+      "source": "So Listen FL15-28",
+      "urn": "urn:cts:copticLit:shenoute.listen.amelineau:5-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏ",
+        2,
+        12.479
+      ],
+      [
+        "ϣⲓ",
+        1,
+        12.197
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        10.467
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ϫⲓϣⲓ",
+          1
+        ],
+        [
+          "ϫⲓϣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_post_ϫⲓϣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ϫⲓϣⲓ",
+          "ϫⲓϣⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲓϣⲓ_0_node",
+          "ⲏ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛⲉ",
+          "ⲛⲉ_1_post_ϫⲓϣⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19945,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5713",
+      "label": "ϣⲓ",
+      "pos": "V",
+      "gloss": "measure, weigh"
+    },
+    {
+      "target": "C5714",
+      "label": "ϣⲓ",
+      "pos": "N",
+      "gloss": "measure, weight"
+    },
+    {
+      "target": "C5722",
+      "label": "ϣⲓⲧⲉϥ",
+      "pos": "N",
+      "gloss": "measuring, weighing(?)"
+    },
+    {
+      "target": "C5719",
+      "label": "ϯϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, restrict"
+    },
+    {
+      "target": "C5715",
+      "label": "ⲁⲧϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured, immeasurable"
+    },
+    {
+      "target": "C5720",
+      "label": "ⲁⲧϯϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured"
+    },
+    {
+      "target": "C5717",
+      "label": "ⲕⲁϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, limit"
+    },
+    {
+      "target": "C5718",
+      "label": "ⲣϣⲓ",
+      "pos": "V",
+      "gloss": "make, amount to weight"
+    },
+    {
+      "target": "C5716",
+      "label": "ⲣⲉϥϣⲓ",
+      "pos": "N",
+      "gloss": "measurer"
+    }
+  ]
+}

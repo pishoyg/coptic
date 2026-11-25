@@ -1,0 +1,102 @@
+{
+  "id": "C145",
+  "forms": [
+    {
+      "id": "CF553",
+      "orth": "ⲁⲛⲟⲩⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11145,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF554",
+      "orth": "ⲁⲛⲟⲩⲡ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF555",
+      "orth": "ⲁⲛⲟⲩⲡ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS165",
+      "bibliography": "KoptHWb 8, 487; DELC 13"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲧⲟⲡⲟⲥ ϭⲉ · ⲛⲧⲁⲓⲭⲁⲣⲓⲍⲉ ⲙⲙⲟϥ ⲛⲁⲕ ⲡⲉ ⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ · ⲁⲩⲱ ⲧⲉⲥⲧⲩⲗⲏ ⲡⲉ ⲡⲥⲱⲙⲁ ⲙⲡⲁϩⲙϩⲁⲗ **ⲁⲛⲟⲩⲡ** ⲉⲓⲥ ϩⲏⲏⲧⲉ · ⲁⲓⲧⲁⲙⲟⲕ ⲉⲛⲉⲧⲛⲁϣⲱⲡⲉ ⲧⲏⲣⲟⲩ ⲙⲙⲟⲕ ϩⲙⲡϣⲟϫⲛⲉ ⲧⲏⲣϥ ⲙⲡⲁⲉⲓⲱⲧ · ϣⲱⲡⲉ ⲉⲕⲧⲁϫⲣⲏⲩ ⲛⲧⲟⲕ ⲉϫⲛⲛⲉⲛⲧⲁⲓϫⲟⲟⲩ ⲛⲁⲕ · ⲛⲅⲧⲙⲣϩⲏⲧ ⲥⲛⲁⲩ",
+      "english": "So the shrine I have granted to you is the altar, and the stele is the body of my servant, Anoup. Behold, I have told you all the things that will happen to you, through the full counsel of my father. Be diligent in the things I have told you, and do not doubt.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        10.929
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        10.624
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        1,
+        10.307
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        10.046
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10733,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "27360",
+    "egy_lemma": "Jnp.w",
+    "demo_num": "d579",
+    "demo_lemma": "I ͗np",
+    "english": "Anubis",
+    "german": "Anubis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27360",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d579"
+  }
+}

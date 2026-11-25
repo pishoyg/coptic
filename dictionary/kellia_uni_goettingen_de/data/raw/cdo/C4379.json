@@ -1,0 +1,194 @@
+{
+  "id": "C4379",
+  "forms": [
+    {
+      "id": "CF10710",
+      "orth": "ⲣⲧⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7918,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4960",
+      "bibliography": "CD 421a; KoptHWb 238"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲙⲙⲁⲩ ϣⲁⲣⲉⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ ϣⲁⲥⲣⲟⲩⲛⲟϭ ⲛⲁⲡⲟⲣⲣⲟⲓⲁ ⲛⲟⲩⲟⲉⲓⲛ · ⲁⲩⲱ ϣⲁⲥ**ⲣⲧⲛϩ** ⲛⲟⲩⲟⲉⲓⲛ ⲧⲏⲣⲥ · ⲁⲩⲱ ⲛⲥϫⲱⲧⲉ ⲛⲧⲟⲡⲟⲥ ⲛⲓⲙ ⲛⲧⲉⲛⲁⲣⲭⲱⲛ · ⲙⲛⲛⲧⲁⲝⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲡⲟⲩⲟⲉⲓⲛ · ϩⲉⲱⲥ ϣⲁⲛⲧⲥⲃⲱⲕ ⲉⲡⲧⲟⲡⲟⲥ ⲛⲧⲉⲥⲙⲛⲧⲣⲣⲟ ⲛⲧⲁⲥϫⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϣⲁⲣⲟϥ ·",
+      "english": "And in that moment that soul becometh a great light-stream, it becometh entirely wings of light, and penetrateth all the regions of the rulers and all the orders of the Light, until it reacheth the region of its kingdom up to which it hath received mysteries.",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁⲣⲉⲙⲡⲁⲣⲁⲗⲏⲙⲧⲏⲥ ϩⲱⲱϥ ⲛⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ · ⲛⲁⲓ ⲉⲧⲏⲡ ⲉⲡⲟⲩⲟⲉⲓⲛ ϣⲁⲩ**ⲣⲧⲛϩ** ⲛⲟⲩⲟⲉⲓⲛ ⲉⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ · ⲁⲩⲱ ⲛⲥⲉⲣⲉⲛⲇⲩⲙⲁ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲣⲟⲥ ·",
+      "english": "“And the receivers of that soul on the other hand who belong to the Light, become wings of light for that soul and become vestures of light for it”",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        5,
+        15.831
+      ],
+      [
+        "ϣⲁ",
+        2,
+        10.346
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲣⲧⲛϩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲧⲛϩ",
+          "ϣⲁ_1_pre_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲧⲛϩ",
+          "ⲥ_1_pre_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲧⲛϩ",
+          "ⲣⲧⲛϩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲧⲛϩ_0_node",
+          "ⲛ_1_post_ⲣⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲧⲛϩ",
+          "ⲟⲩⲟⲉⲓⲛ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7467,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4382",
+      "label": "ϫⲓⲧⲛϩ",
+      "pos": "V",
+      "gloss": "take wings"
+    },
+    {
+      "target": "C4380",
+      "label": "ⲣⲉⲧⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4381",
+      "label": "ⲧⲁⲁⲧⲉⲧⲛϩ",
+      "pos": "V",
+      "gloss": "flap(?) wings"
+    },
+    {
+      "target": "C4378",
+      "label": "ⲧⲛϩ",
+      "pos": "N",
+      "gloss": "wing"
+    }
+  ]
+}

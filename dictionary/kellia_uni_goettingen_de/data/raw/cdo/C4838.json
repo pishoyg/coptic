@@ -1,0 +1,167 @@
+{
+  "id": "C4838",
+  "forms": [
+    {
+      "id": "CF11641",
+      "orth": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13186,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5458",
+      "bibliography": "CD 449b; ChLCS 63a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲉⲣϣⲁⲛⲡⲧⲉⲭⲛⲓⲧⲏⲥ ⲙⲁⲩⲁⲁϥ · ⲁⲩⲱ ⲡ**ⲣⲉϥⲧⲟⲩϫⲟ** ⲙⲡⲉϥⲡⲗⲁⲥⲙⲁ · ⲁⲩⲱ ⲡⲁⲛⲁϩⲱⲣ ⲉⲧⲙⲉϩ ⲙⲙⲛⲧϣⲁⲛϩⲧⲏϥ ⲛⲓⲙ · ⲣϩⲛⲁϥ ϩⲛⲧⲉϥⲙⲛⲧϣⲁⲛϩⲧⲏϥ · ⲣⲡⲙⲉⲉⲩⲉ ⲙⲡϩⲱⲃ ⲛⲛⲉϥϭⲓϫ · ⲛϥϯ ⲛⲁⲩ ⲛⲧⲉϩⲣⲉ ⲙⲡⲉⲥⲟⲩⲟⲉⲓϣ · ⲛϥⲟⲩⲱⲛ ⲉⲧⲉϥϭⲓϫ ⲉⲧⲙⲉϩ ⲛⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲛⲓⲙ · ⲛϥⲧⲣⲉⲧⲡⲉ ϣⲟⲩⲟ ⲛⲟⲩⲙⲟⲩ ⲛϩⲱⲟⲩ ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲉϣϣⲉ ·",
+      "english": "When He Who is alone the Handicraftsman, and the Deliverer of His day, and the Storehouse Who is filled with, compassion of every kind, is pleased in His loving-kindness to call to remembrance the work of His hand, He giveth to His creatures food in its season, He openeth His hand which is filled wath. righteousness of every kind, and He maketh the sky to pour out rain at the time that is fitting.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲗⲁⲥⲙⲁ",
+        1,
+        15.013
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12772,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5349",
+      "type": "cf",
+      "label": "be whole, be intact, be safe, be sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4837",
+      "label": "ϩⲛⲟⲩⲧⲟⲩϫⲟ",
+      "pos": "ADV",
+      "gloss": "securely, safely"
+    },
+    {
+      "target": "C4839",
+      "label": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "health-giver, saver"
+    },
+    {
+      "target": "C4835",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "V",
+      "gloss": "make whole, make safe; be safe, be safed"
+    },
+    {
+      "target": "C4836",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "safety, salvation"
+    }
+  ]
+}

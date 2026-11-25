@@ -1,0 +1,52 @@
+{
+  "id": "C4164",
+  "forms": [
+    {
+      "id": "CF10273",
+      "orth": "ϫⲱⲱⲙⲉ ⲛⲧⲟⲩⲉⲓⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4726",
+      "bibliography": "CD 444a; KoptHWb 225"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7219",
+      "type": "cf",
+      "label": "book"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4165",
+      "label": "ϫⲁⲉⲓⲧⲟⲩⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C4163",
+      "label": "ⲧⲟⲩⲓⲟ",
+      "pos": "N",
+      "gloss": "repayment"
+    },
+    {
+      "target": "C4162",
+      "label": "ⲧⲟⲩⲓⲟⲩ",
+      "pos": "V",
+      "gloss": "remove, wean, repay, return"
+    }
+  ]
+}

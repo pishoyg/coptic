@@ -1,0 +1,522 @@
+{
+  "id": "C8984",
+  "forms": [
+    {
+      "id": "CF22060",
+      "orth": "ⲉⲡⲁⲣⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22061",
+      "orth": "ⲉⲡⲁⲣⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3479,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF22062",
+      "orth": "ⲉⲡⲁⲣⲭⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3098,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10980",
+      "bibliography": "DDGLC",
+      "cu_ID": "2603"
+    },
+    {
+      "id": "CS10981",
+      "bibliography": "DDGLC",
+      "cu_ID": "11031"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲛⲁⲓ ϣⲟⲡ ⲙⲡⲁⲓⲣⲏϯ ⲁϥⲓ ⲉⲃⲟⲗ ϧⲉⲛⲥⲱⲙⲁ ⲛϫⲉⲅⲉⲱⲣⲅⲓⲟⲥ ⲡⲓ**ⲉⲡⲁⲣⲭⲟⲥ** ⲫⲁⲓ ⲉⲣⲉⲡⲓⲁⲗⲟⲩ ⲟⲓ ⲛⲛⲟⲧⲁⲣⲓⲟⲥ ⲛⲁϥ .",
+      "english": "This being as it was, Georgios, the eparch whose notary the young boy had been, died.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲧⲟⲟⲩⲉ ⲇⲉ ⲛⲥⲟⲩⲟⲩⲁ ⲙⲡⲁⲣⲙⲟⲩⲧⲉ · ⲁⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲡⲣⲣⲟ ⲙⲛⲡⲉϥⲥⲧⲣⲁⲧⲉⲩⲙⲁ ⲧⲏⲣϥ · ⲙⲛⲛ**ⲉⲡⲁⲣⲭⲟⲥ** ⲙⲛⲛⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲁⲩⲃⲱⲕ ⲉⲡⲣⲡⲉ : —",
+      "english": "And it came to pass at dawn, on the first day of the month Parmoute, that the Emperor Diocletian, and all his army, and the eparchs, and the generals went into the temple.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲁϯⲕⲉⲥϩⲓⲙⲓ ⲅⲁⲣ ϩⲱⲥ ⲡⲉ ⲙⲉⲛⲣⲓⲧϥ ⲉⲙⲁϣⲱ ⲛⲁϥⲉⲣϩⲟϯ ⲅⲁⲣ ⲡⲉ ⲛϫⲉⲉⲩⲁⲅⲣⲓ ϧⲁⲧϩⲏ ⲙⲫⲛⲟⲩϯ ⲙⲡⲉϥⲉⲣⲛⲟⲃⲓ ⲛⲉⲙⲁⲥ ϫⲉⲟⲩⲏⲓ ⲅⲁⲣ ϯⲥϩⲓⲙⲓ ⲟⲩⲥϩⲓⲙⲓ ϧⲁϩⲁⲓ ⲧⲉ ⲟⲩⲟϩ ⲛⲑⲟϥ ϩⲱϥ ⲁϥⲁⲣⲉϩ ⲉⲧⲉϥⲥⲩⲛⲏⲇⲏⲥⲓⲥ ⲉⲑⲃⲉϫⲉⲛⲉⲫⲁⲟⲩⲛⲓϣϯ ⲛⲅⲉⲛⲟⲥ ⲡⲉ ⲉϥⲧⲁⲓⲏⲟⲩⲧ ⲉⲙⲁϣⲱ ⲟⲩⲟϩ ⲟⲛ ⲁϥⲙⲟⲕⲙⲉⲕ ⲛϧⲣⲏⲓ ⲛϧⲏⲧϥ ⲉⲑⲃⲉⲑⲙⲁⲓⲏ ⲙⲡⲓϣⲓⲡⲓ ⲛⲉⲙⲡⲓⲛⲟⲃⲓ ⲛⲉⲙⲡⲓϩⲁⲡ ⲟⲩⲟϩ ϫⲉⲥⲉⲛⲁⲣⲁϣⲓ ⲙⲙⲟϥ ⲛϫⲉⲛⲓϩⲉⲣⲉⲥⲓⲥ ⲧⲏⲣⲟⲩ ⲉⲧⲁϥⲑⲉⲃⲓⲱⲟⲩ ⲁϥϯϩⲟ ⲇⲉ ⲉⲫⲛⲟⲩϯ ϧⲉⲛⲟⲩϭⲱⲗⲕ ⲉϥⲧⲱⲃϩ ϫⲉⲛⲧⲉϥⲉⲣⲃⲟⲏⲑⲓⲛ ⲉⲣⲟϥ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲛⲁⲑⲟⲥ ⲛⲉⲙⲡⲓⲡⲟⲗⲉⲙⲟⲥ ⲉⲧⲭⲏ ϩⲓϫⲱϥ ϫⲉⲟⲩⲏⲓ ⲅⲁⲣ ⲛⲉⲁϯⲥϩⲓⲙⲓ ϣⲱⲡⲓ ⲉⲥⲙⲏⲛ ⲉⲣⲟϥ ⲡⲉ ϧⲉⲛⲡⲉϥⲗⲓⲃⲓ ϣⲁⲧⲉⲥⲉⲣⲥⲣⲟϩ ⲛⲁϥⲟⲩⲱϣ ⲉⲫⲱⲧ ⲛⲧⲟⲧⲥ ⲡⲉ ⲟⲩⲟϩ ⲛⲁϥϫⲓⲛⲓ ⲙⲡⲓⲥⲁⲕ ⲁⲛ ⲡⲉ ϫⲉⲟⲩⲏⲓ ⲛⲁⲣⲉⲛⲉϥⲙⲉⲩⲓ ⲥⲟⲛϩ ⲡⲉ ⲉϯϩⲩⲇⲟⲛⲏ ϩⲱⲥ ⲁⲗⲟⲩ . ⲙⲡⲉϥⲱⲥⲕ ⲇⲉ ⲛϫⲉⲡⲓⲛⲁⲓ ⲛⲧⲉⲫⲛⲟⲩϯ ⲉⲧⲁϩⲟϥ ⲁⲗⲗⲁ ϩⲓⲧⲉⲛⲛⲉϥϯϩⲟ ⲛⲉⲙⲧⲉϥⲧⲱⲃϩ ⲁϥⲓ ϣⲁⲣⲟϥ ⲛⲭⲱⲗⲉⲙ ⲁϥϯⲛⲟⲙϯ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲟⲩϭⲱⲣⲡ ⲉⲃⲟⲗ ⲙⲡⲁⲧⲉϩⲗⲓ ⲙⲡⲉⲧϩⲱⲟⲩ ⲧⲁϩⲟϥ ⲛⲉⲙϯⲥϩⲓⲙⲓ . ⲁⲡⲑⲉⲟⲥ ⲟⲩⲱⲣⲡ ⲛϩⲁⲛⲁⲅⲅⲉⲗⲟⲥ ϣⲁⲣⲟϥ ϧⲉⲛⲟⲩϫⲓⲛⲛⲁⲩ ⲛⲧⲉⲛⲓⲉϫⲱⲣϩ ⲉⲩⲭⲏ ϧⲉⲛϩⲁⲛⲥⲃⲱ ⲉⲩⲫⲉⲣⲓⲱⲟⲩ ⲙⲡⲓⲥⲙⲟⲧ ⲛϩⲁⲛⲙⲁⲧⲟⲓ ⲛⲧⲉⲡⲓⲉⲡⲁⲣⲭⲟⲥ ⲟⲩⲟϩ ⲁⲩⲧⲁϩⲟϥ ⲁⲩϩⲟⲗⲙⲉϥ ⲙⲫⲣⲏϯ ϫⲉⲉⲩⲱⲗⲓ ⲙⲙⲟϥ ⲉⲫⲙⲁ ⲙⲡⲓⲇⲓⲕⲁⲥⲧⲏⲥ ϩⲱⲥ ϫⲉⲁⲩⲥⲟⲛϩϥ ⲛⲉⲙϩⲁⲛⲕⲉⲥⲓⲛⲱⲟⲩⲓ ϧⲉⲛϩⲁⲛⲥⲓⲣⲁ ⲉⲁⲩϯⲕⲟⲗⲗⲁⲣⲓⲟⲛ ⲉϧⲏⲧϥ ⲛⲉⲙϩⲁⲛⲡⲉⲇⲏⲥ ⲉⲩⲟⲓ ⲙⲫⲣⲏϯ ϫⲉⲉⲧⲁⲩⲓ ⲛⲥⲱϥ ⲁⲗⲗⲁ ⲙⲡⲟⲩⲧⲁⲙⲟϥ ⲉϯⲉⲧⲓⲁ ϫⲉⲟⲩⲧⲉ ⲓⲉ ϫⲉⲉⲩⲁⲙⲟⲛⲓ ⲙⲙⲟϥ ⲉⲑⲃⲉⲁϣ ⲛϩⲱⲃ . ⲛⲑⲟϥ ⲇⲉ ⲁϥⲙⲉⲩⲓ ϧⲉⲛⲡⲉϥϩⲏⲧ ϫⲉⲉⲧⲁⲩⲓ ⲛⲥⲱϥ ⲉⲑⲃⲉⲡⲓϩⲱⲃ ⲉⲧⲧⲏ ⲉϥⲙⲉⲩⲓ ϫⲉⲉⲧⲁⲡⲉⲥⲣⲱⲙⲓ ⲥⲉⲙⲓ ⲉⲣⲟϥ ⲉⲡⲓ**ⲉⲡⲁⲣⲭⲟⲥ** .",
+      "english": "For a certain woman greatly loved him. But since Evagrius truly feared God, he did not sin with her, for the woman was married, and he guarded his own conscience, because the woman's husband was a man of great and most honorable lineage. Evagrius thought about his immunity to disgrace, about sin, judgment, and the joy with which heretics rejoiced after being confounded by him. He therefore prayed to God, ceaselessly imploring Him to aid him in his struggle against his passions in the battle imposed upon him. When the woman’s desire clung to him and persisted until he might succumb, he wished to flee her, but he could not find the strength. For his thoughts, like those of a child, were bound by pleasure. But divine mercy did not delay in seizing him; the grace of his prayers and supplications quickly came to him and gave him strength through a vision. Before anything evil happened with the woman, the Lord sent angels to him in a nighttime vision, dressed in splendid garments like the guards of an eparch. They seized him and dragged him away like one being led to judgment. They bound him, as with thieves, in a prison with other criminals, placing collars and shackles on him, though he knew not why they had taken him or what the cause was. He then realized that this was happening to him because he had considered, even in thought, standing before the eparch—the husband of the woman.",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲱϣ ⲇⲉ ⲛⲧⲉⲡⲓⲥⲧⲟⲗⲏ · ⲛⲧⲉⲩⲛⲟⲩ ⲁϥⲥϩⲁⲓ ⲛⲛ**ⲉⲡⲁⲣⲭⲟⲥ** ϫⲉⲙⲡⲣⲣϩⲟⲧⲉ ϯⲛⲏⲩ ⲉϩⲧⲟⲟⲩⲉ ⲛⲣⲁⲥⲧⲉ ⲙⲛⲡⲇⲏⲙⲟⲥ ⲧⲏⲣϥ ⲛⲛⲉϩⲣⲱⲙⲁⲓⲟⲥ ·",
+      "english": "And when he had read the dispatch, straightaway he wrote to the eparch, saying, 'Fear thou not, I will come in f the morning of the morrow, and all the Roman folk with me.'",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲙⲟϩ ⲇⲉ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲉⲙⲓ ⲛⲉⲙϯⲥⲟⲫⲓⲁ ⲁⲩⲧⲏⲓϥ ⲛϫⲉⲛⲉϥⲓⲟϯ ⲉⲧⲟⲧϥ ⲛⲟⲩⲥⲩⲅⲅⲉⲛⲏⲥ ⲛⲧⲱⲟⲩ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲙⲉⲛⲉⲥⲱⲛ ⲉϥⲟⲓ ⲛⲭⲁⲣⲧⲟⲗⲁⲣⲓⲟⲥ ϧⲁⲣⲁⲧϥ ⲛⲅⲉⲱⲣⲅⲓⲟⲥ ⲉϥⲟⲓ ⲛ**ⲉⲡⲁⲣⲭⲟⲥ** ⲉϯⲭⲱⲣⲁ ⲛⲧⲉⲭⲏⲙⲓ ϫⲉϩⲓⲛⲁ ⲛⲧⲉⲡⲓⲁⲗⲟⲩ ⲓⲥⲁⲁⲕ ϣⲱⲡⲓ ⲛⲛⲟⲧⲁⲣⲓⲟⲥ ϧⲁⲣⲁⲧϥ .",
+      "english": "And when he was full of knowledge and wisdom, his parents entrusted him to one of their relatives, named Meneson, secretary to Georgios, eparch of the land of Egypt: the little boy Isaac was to be a notary under his direction.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲱ ⲧⲁⲙⲁⲁⲩ · ϫⲉⲛⲧϩⲉ ⲉⲧⲉϣⲁⲓⲧⲱⲟⲩⲛ ϩⲁϫⲱϥ ⲛⲟⲩⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ ⲙⲛⲟⲩ**ⲉⲡⲁⲣⲭⲟⲥ** · ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲉϣⲁⲓⲧⲱⲟⲩⲛ ϩⲁϫⲱϥ ⲛⲟⲩϩⲏⲕⲉ ⲙⲛⲟⲩⲉⲃⲓⲏⲛ · ⲉⲓϯⲉⲟⲟⲩ ⲛⲁⲩ ⲛⲧϩⲉ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "Verily, O my mother, with the very same treatment which I have meted out to the general and the eparoh, have I treated the man who was poor and him who was wretched, and I have paid honour unto them as unto God",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲅⲉⲱⲣⲅⲓⲟⲥ",
+        2,
+        16.41
+      ],
+      [
+        "ⲭⲱⲣⲁ",
+        2,
+        12.92
+      ],
+      [
+        "ⲗⲟⲓⲡⲟⲛ",
+        1,
+        12.156
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        2,
+        11.766
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        1,
+        11.753
+      ],
+      [
+        "ⲁⲗⲟⲩ",
+        2,
+        11.473
+      ],
+      [
+        "ⲡⲓ",
+        6,
+        10.941
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        9.998
+      ],
+      [
+        "ⲉ",
+        5,
+        9.398
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        9.306
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        9.252
+      ],
+      [
+        "ⲫⲁⲓ",
+        2,
+        9.073
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        8.236
+      ],
+      [
+        "ϥ",
+        4,
+        7.839
+      ],
+      [
+        "ⲛϫⲉ",
+        2,
+        7.009
+      ],
+      [
+        "ϯ",
+        2,
+        6.705
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.532
+      ],
+      [
+        "ⲁ",
+        2,
+        5.405
+      ],
+      [
+        "ⲛ",
+        2,
+        5.006
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        4.728
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+        9,
+        20.763
+      ],
+      [
+        "ⲡⲉⲗⲁⲕ",
+        2,
+        19.276
+      ],
+      [
+        "ⲃⲉⲗⲉⲧⲁⲣⲓⲟⲥ",
+        1,
+        14.691
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        4,
+        14.607
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        2,
+        14.106
+      ],
+      [
+        "ⲙⲛ",
+        7,
+        11.744
+      ],
+      [
+        "ⲛ",
+        13,
+        11.588
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        2,
+        10.331
+      ],
+      [
+        "ⲧⲁⲁ",
+        2,
+        9.853
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        1,
+        8.714
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        8.453
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        1,
+        7.798
+      ],
+      [
+        "ϫⲉ",
+        3,
+        7.579
+      ],
+      [
+        "ϥ",
+        4,
+        7.2
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        7.12
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        6.991
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        6.757
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        6.714
+      ],
+      [
+        "ⲧ",
+        2,
+        5.749
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        5.588
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲉ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲭⲱⲣⲁ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲭⲏⲙⲓ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          "ⲉ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ϯ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲉ",
+          "ⲭⲱⲣⲁ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲭⲱⲣⲁ_3_post_ϯ",
+          "ⲛⲧⲉ_4_post_ⲭⲱⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ⲭⲱⲣⲁ",
+          "ⲭⲏⲙⲓ_5_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          7
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          2
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲕⲟⲙⲉⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲟⲣⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          "ⲉⲓⲧⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲉⲓⲧⲉ_2_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲕⲟⲙⲉⲥ",
+          "ⲕⲟⲙⲉⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          "ⲛⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+          "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲟⲩ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲁⲣⲭⲟⲥ_0_node",
+          "ⲛ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲡⲁⲣⲭⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_3_post_ⲧ",
+          "ⲛ_4_post_ϣⲟⲣⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3111,
+      "count": 10
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2720,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "731",
+    "grl_lemma": "ἔπαρχος",
+    "grl_meaning": "commander, governor (of a district)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 611a; Preisigke 1:,532"
+  }
+}

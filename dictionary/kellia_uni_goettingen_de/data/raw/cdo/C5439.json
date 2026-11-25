@@ -1,0 +1,65 @@
+{
+  "id": "C5439",
+  "forms": [
+    {
+      "id": "CF12849",
+      "orth": "ⲱⲕ ⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9121,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6095",
+      "bibliography": "CD 519b; CED 227; KoptHWb 290; DELC 249a; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲡⲉⲡⲛⲟⲩⲧⲉ **ⲱⲕ **ⲛϩⲏⲧ**** ⲙⲛⲡⲉⲩϩⲟⲩⲟ . ⲁⲩⲡⲟⲣϣⲟⲩ ⲅⲁⲣ ϩⲙⲡϫⲁⲓⲉ .",
+      "english": "However with most of them, God was not well pleased, for they were overthrown in the wilderness.",
+      "source": "1 Corinthians 10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8676,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5438",
+      "label": "ⲱⲕ",
+      "pos": "V",
+      "gloss": "go in, sink (sun)"
+    },
+    {
+      "target": "C5440",
+      "label": "ⲱⲕ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "pleasure"
+    }
+  ]
+}

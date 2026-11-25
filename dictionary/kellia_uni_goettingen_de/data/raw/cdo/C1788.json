@@ -1,0 +1,513 @@
+{
+  "id": "C1788",
+  "forms": [
+    {
+      "id": "CF5162",
+      "orth": "ⲙⲉⲣⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.35,
+        "rank": 399,
+        "count": 371
+      }
+    },
+    {
+      "orth": "ⲙⲉⲛⲣⲓⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.51,
+        "rank": 560,
+        "count": 128
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2088",
+      "bibliography": "CD 156b; KoptHWb 86; ChLCS 24a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ⲛϫⲉⲟⲩϭⲏⲡⲓ ⲉⲥⲉⲣϧⲏⲓⲃⲓ ⲉⲣⲱⲟⲩ ⲟⲩⲟϩ ⲁⲥϣⲱⲡⲓ ⲛϫⲉⲟⲩⲥⲙⲏ ⲉⲃⲟⲗ ϧⲉⲛϯϭⲏⲡⲓ ϫⲉⲫⲁⲓ ⲡⲉ ⲡⲁϣⲏⲣⲓ ⲡⲁ**ⲙⲉⲛⲣⲓⲧ** ⲥⲱⲧⲉⲙ ⲛⲥⲱϥ .",
+      "english": "A cloud came, overshadowing them, and a voice came out of the cloud, 'This is my beloved Son. Listen to him.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲁϣⲏⲣⲉ ⲙ**ⲙⲉⲣⲓⲧ** ·",
+      "english": "O John, my beloved son!",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲡⲁ**ⲙⲉⲛⲣⲓⲧ** ⲛⲥⲟⲛ ⲙⲁⲣⲉⲛⲉⲣϩⲩⲡⲟⲙⲉⲛⲉⲓⲛ ⲙⲡⲁⲓⲕⲟⲩϫⲓ ⲛⲥⲏⲟⲩ ϫⲉⲟⲩⲏⲓ ⲥⲥϧⲏⲟⲩⲧ ϫⲉⲫⲏ ⲉⲧⲉⲡϭⲟⲉⲓⲥ ⲙⲉⲓ ⲙⲙⲟϥ ϣⲁϥϯⲥⲃⲱ ⲛⲁϥ",
+      "english": "Now, therefore, my beloved brother, let us endure (our trials) during this short time, for it is written, ‘The Lord instructs him whom he loves’;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲁⲁⲥ ⲡⲁ**ⲙⲉⲣⲓⲧ** ⲛⲥⲟⲛ ⲭⲁⲏⲗ ⲓⲱⲁⲛⲛⲏⲥ",
+      "english": "Give it to my beloved brother Chael Iohannes.",
+      "source": "Letter of Zaleh",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82127.cpr_2_237",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩⲥⲙⲏ ⲛⲁⲥϣⲱⲡⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲫⲏⲟⲩⲓ ϫⲉⲛⲑⲟⲕ ⲡⲉ ⲡⲁϣⲏⲣⲓ ⲡⲁ**ⲙⲉⲛⲣⲓⲧ** ⲉⲧⲁⲓϯⲙⲁϯ ⲛϧⲏⲧϥ",
+      "english": "A voice came out of the sky, &apos;You are my beloved Son, in whom I am well pleased.&apos;",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ⲛⲧⲉⲧⲛⲣϣⲡⲏⲣⲉ ⲛⲙⲙⲁⲓ ⲱ ⲛⲁ**ⲙⲉⲣⲁⲧⲉ** ·",
+      "english": "Hearken ye now unto me.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        25,
+        25.937
+      ],
+      [
+        "ⲡⲁ",
+        140,
+        21.171
+      ],
+      [
+        "ϥ",
+        267,
+        20.111
+      ],
+      [
+        "ⲥⲟⲛ",
+        47,
+        18.804
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        77,
+        18.498
+      ],
+      [
+        "ⲛ",
+        213,
+        18.421
+      ],
+      [
+        "ⲁ",
+        153,
+        18.224
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        49,
+        17.877
+      ],
+      [
+        "ⲱ",
+        37,
+        17.598
+      ],
+      [
+        "ⲙ",
+        122,
+        17.551
+      ],
+      [
+        "ⲡ",
+        145,
+        17.444
+      ],
+      [
+        "ⲁⲩⲱ",
+        106,
+        17.338
+      ],
+      [
+        "ⲉⲛⲧ",
+        59,
+        17.248
+      ],
+      [
+        ".",
+        79,
+        16.876
+      ],
+      [
+        "ⲡⲁⲙⲃⲱ",
+        11,
+        16.769
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        20,
+        16.154
+      ],
+      [
+        "ⲕ",
+        62,
+        16.123
+      ],
+      [
+        "ⲛⲁ",
+        80,
+        16.062
+      ],
+      [
+        "ϫⲉ",
+        70,
+        15.942
+      ],
+      [
+        "ϩⲙ",
+        52,
+        15.922
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          135
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          44
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲉⲣⲓⲧ",
+          14
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲣⲓⲧ",
+          19
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲛ",
+          8
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲉⲣⲓⲧ",
+          15
+        ],
+        [
+          "ϩⲙ_1_post_ⲙⲉⲣⲓⲧ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          5
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          10
+        ],
+        [
+          "ϥ_1_pre_ⲙⲉⲣⲓⲧ",
+          4
+        ],
+        [
+          "ϥ_1_post_ⲙⲉⲣⲓⲧ",
+          10
+        ],
+        [
+          "ⲧⲁ_2_pre_ⲯⲩⲭⲏ",
+          4
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲙⲉⲣⲓⲧ",
+          4
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          7
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲉⲣⲓⲧ",
+          4
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲡⲁⲙⲃⲱ_2_post_ⲁⲡⲁ",
+          2
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲓⲥⲧⲟⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ϩⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          2
+        ],
+        [
+          "ⲡ_3_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          "ⲛ_1_post_ⲙⲉⲣⲓⲧ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲣⲓⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲡⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          "ϩⲙ_1_post_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲙⲉⲣⲓⲧ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲡ_1_pre_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ϥ_1_pre_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          "ϥ_1_post_ⲙⲉⲣⲓⲧ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲧⲁ_2_pre_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_pre_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_1_pre_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲣⲓⲧ",
+          "ⲥⲟⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          2
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲛ",
+          "ⲁⲡⲁ_1_post_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲙⲉⲣⲓⲧ",
+          "ⲡⲁⲙⲃⲱ_2_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲉⲣⲓⲧ",
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲓⲧ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          "ⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          "ⲡⲓⲥⲧⲟⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲡⲓⲥⲧⲟⲥ_1_post_ⲙⲉⲣⲓⲧ",
+          "ϩⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_2_post_ⲡⲓⲥⲧⲟⲥ",
+          "ⲡ_3_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲩ_1_pre_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲥⲉ_1_pre_ⲙⲉⲣⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲙⲉⲣⲓⲧ",
+          "ⲙⲉⲣⲓⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.43,
+      "rank": 330,
+      "count": 386
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1787",
+      "label": "ϯⲙⲉⲓ",
+      "pos": "V",
+      "gloss": "make love"
+    },
+    {
+      "target": "C1785",
+      "label": "ⲙⲉ",
+      "pos": "V",
+      "gloss": "love"
+    },
+    {
+      "target": "C1786",
+      "label": "ⲙⲉ",
+      "pos": "N",
+      "gloss": "love"
+    }
+  ],
+  "etym": {
+    "egy_num": "72660",
+    "egy_lemma": "mrw.tj",
+    "demo_num": "d2534",
+    "demo_lemma": "mrṱ",
+    "english": "beloved",
+    "german": "Geliebter; Liebling",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72660",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2534"
+  }
+}

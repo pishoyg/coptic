@@ -1,0 +1,734 @@
+{
+  "id": "C2165",
+  "forms": [
+    {
+      "id": "CF6042",
+      "orth": "ⲙⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.66,
+        "rank": 238,
+        "count": 736
+      }
+    },
+    {
+      "orth": "ⲙⲟⲩ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 10.21,
+        "rank": 128,
+        "count": 866
+      }
+    },
+    {
+      "orth": "ⲙⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 6.72,
+        "rank": 191,
+        "count": 570
+      }
+    },
+    {
+      "orth": "ⲙⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 11.74,
+        "rank": 100,
+        "count": 1852
+      }
+    },
+    {
+      "orth": "ⲙⲟⲩⲉⲓⲏ",
+      "dialect": "S",
+      "id": "238.2"
+    },
+    {
+      "orth": "ⲙⲟⲩⲏⲉⲓⲉ",
+      "dialect": "S",
+      "id": "238.3"
+    },
+    {
+      "orth": "ⲙⲟⲩⲉⲓⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2895,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ⲙⲟⲩⲛⲉⲓⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3972,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲙⲟⲩⲛⲓⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": "238.6"
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "A",
+      "id": "238.7"
+    },
+    {
+      "orth": "ⲙⲟⲩⲓⲉⲩⲉ",
+      "dialect": "A",
+      "id": "238.8"
+    },
+    {
+      "orth": "ⲙⲟⲩⲉⲓⲁⲩⲉⲓⲉ",
+      "dialect": "A",
+      "id": "238.9"
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "F",
+      "id": "238.10"
+    },
+    {
+      "orth": "ⲙⲟⲩ-",
+      "dialect": "F",
+      "id": "238.11"
+    },
+    {
+      "orth": "ⲙⲁⲩ",
+      "dialect": "L",
+      "id": "238.12"
+    },
+    {
+      "orth": "ⲙⲁⲟⲩ",
+      "dialect": "L",
+      "id": "238.13"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2504",
+      "bibliography": "CD 197b; KoptHWb 106f; ChLCS 29b"
+    },
+    {
+      "id": "CS2505",
+      "bibliography": "CD 197b-198a; KoptHWb 106-107; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁ ϩⲱⲃ ⲁⲃ ⲉⲩϩⲱⲟⲩ ⲁϥⲁⲓⲧⲟⲩ ⲛϫⲉⲡⲁⲗⲁⲟⲥ ⲁⲩⲭⲁⲧ ⲛⲥⲱⲟⲩ ϯ**ⲙⲟⲩ**ⲙⲓ ⲙⲙⲱⲟⲩ ⲛⲱⲛϧ ⲟⲩⲟϩ ⲁⲩϣⲱⲕ ⲛⲱⲟⲩ ⲛϩⲁⲛⲗⲁⲕⲕⲟⲥ ⲉⲩϧⲟⲙϧⲉⲙ ⲛⲥⲉⲛⲁϣⲁⲙⲁϩⲓ ⲙⲙⲱⲟⲩ ⲁⲛ .",
+      "english": "For my people has committed two faults, and evil ones: they have forsaken me, the fountain of water of life, and hewn out for themselves broken cisterns, which will not be able to hold water.",
+      "source": "24_Ieremias_02",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛϣⲁⲛⲉⲓⲃⲉ · ⲧⲛϩⲏⲩ ⲉ**ⲙⲟⲟⲩ** ⲉⲥⲱ ·",
+      "english": "When we are thirsty we take water to drink.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲛ . ⲉϩⲣⲏ ⲉϫⲉⲛⲛⲁⲓ ⲁⲛⲟⲕ ϯⲛⲁⲣⲓⲙⲓ ⲡⲁⲃⲁⲗ ⲁϥⲓⲛⲓ ⲛⲟⲩ**ⲙⲟⲩ** ⲉⲡⲉⲥⲏⲧ ϫⲉⲁϥⲟⲩⲉⲓ ⲙⲙⲟⲓ ⲛϫⲉⲫⲏⲉⲧϯⲛⲟⲙϯ ⲛⲏⲓ ⲫⲏⲉⲧⲧⲁⲥⲑⲟ ⲛⲧⲁⲩⲭⲏ ⲁⲩϣⲱⲡⲓ ⲛϫⲉⲛⲁϣⲏⲣⲓ ⲉⲩⲧⲁⲕⲏⲟⲩⲧ ϫⲉⲁϥⲁⲙⲁϩⲓ ⲛϫⲉⲡⲓϫⲁϫⲓ .",
+      "english": "AIN. Mine eye has poured out water, because he that should comfort me, that should restore my soul, has been removed far from me: my sons have been destroyed, because the enemy has prevailed.",
+      "source": "25_Lamentationes_01",
+      "urn": "urn:cts:copticLit:ot.lam.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲉⲓⲉⲣⲟ ⲡⲛⲟⲩⲧⲉ ⲙⲟⲩϩ ⲙ**ⲙⲟⲟⲩ**",
+      "english": "The river of God is full of water.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲫⲱⲛ ⲉⲃⲟⲗ ⲙⲫⲣⲏϯ ⲛⲟⲩⲙⲱⲟⲩ: ⲁⲩϫⲱⲣ ⲉⲃⲟⲗ ⲛϫⲉⲛⲁⲕⲁⲥ ⲧⲏⲣⲟⲩ: ⲁⲡⲁϩⲏⲧ ⲉⲣ ⲙⲫⲣⲏϯ ⲛⲟⲩⲙⲟⲩⲗϩ ⲉϥⲃⲏⲗ ⲉⲃⲟⲗ ϧⲉⲛⲧⲙⲏϯ ⲛⲧⲁⲛⲉϫⲓ: ⲧⲁⲛⲟⲙϯ ⲁⲥϣⲱⲟⲩⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲃⲉⲗϫ: ⲟⲩⲟϩ ⲡⲁⲗⲁⲥ ⲁⲫϫⲱⲗϫ ⲉⲧⲁϣⲃⲱⲃⲓ: ⲁⲕⲉⲛⲧ ⲉϧⲣⲏⲓ ⲉⲡⲕⲁϩⲓ ⲙⲫ**ⲙⲟⲩ** .",
+      "english": "I am poured out like water, and all my bones are loosened: my heart in the midst of my belly is become like melting wax.",
+      "source": "19_Psalmi_21",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲁⲉⲓ ⲧⲁϭⲱ ϩⲁϩⲧⲙ ⲡ**ⲙⲟⲟⲩ** ·",
+      "english": "I will go and I will remain near the water.",
+      "source": "Apophthegmata Patrum Sahidic 046",
+      "urn": "urn:cts:copticLit:ap.46.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟϩ",
+        355,
+        30.495
+      ],
+      [
+        "ⲉ",
+        340,
+        30.245
+      ],
+      [
+        "ϥ",
+        339,
+        29.64
+      ],
+      [
+        "ⲟⲩ",
+        301,
+        29.455
+      ],
+      [
+        "ⲟϣ",
+        55,
+        29.157
+      ],
+      [
+        "ⲡⲓ",
+        192,
+        28.526
+      ],
+      [
+        "ⲁ",
+        223,
+        28.392
+      ],
+      [
+        "ⲉϥⲉ",
+        95,
+        27.93
+      ],
+      [
+        "ϧⲉⲛ",
+        161,
+        27.756
+      ],
+      [
+        "ⲕⲁⲧⲁⲕⲗⲩⲥⲙⲟⲥ",
+        17,
+        27.636
+      ],
+      [
+        "ⲛⲧⲉ",
+        144,
+        27.576
+      ],
+      [
+        ".",
+        153,
+        27.389
+      ],
+      [
+        "ⲙ",
+        133,
+        26.749
+      ],
+      [
+        "ⲛ",
+        167,
+        26.742
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        81,
+        26.654
+      ],
+      [
+        "ⲉⲧ",
+        102,
+        26.269
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        99,
+        26.192
+      ],
+      [
+        "ⲩ",
+        97,
+        25.921
+      ],
+      [
+        "ⲛⲓ",
+        93,
+        25.836
+      ],
+      [
+        "ⲥⲱ",
+        25,
+        25.714
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        16,
+        23.045
+      ],
+      [
+        "ⲉ",
+        508,
+        22.231
+      ],
+      [
+        "ϥ",
+        530,
+        22.119
+      ],
+      [
+        "ⲡ",
+        427,
+        21.159
+      ],
+      [
+        "ⲟⲩ",
+        352,
+        21.046
+      ],
+      [
+        "ⲛ",
+        385,
+        20.022
+      ],
+      [
+        "ⲙ",
+        256,
+        19.798
+      ],
+      [
+        "ⲁⲩⲱ",
+        221,
+        19.558
+      ],
+      [
+        "ϩⲛ",
+        168,
+        19.103
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        159,
+        18.851
+      ],
+      [
+        "ⲙⲛ",
+        147,
+        18.69
+      ],
+      [
+        "ⲛⲁ",
+        149,
+        17.793
+      ],
+      [
+        "ⲁ",
+        168,
+        17.668
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        69,
+        17.613
+      ],
+      [
+        "ϣⲟⲩⲟ",
+        17,
+        17.33
+      ],
+      [
+        "ⲩ",
+        128,
+        17.257
+      ],
+      [
+        "ⲥⲱ",
+        29,
+        17.168
+      ],
+      [
+        "ⲡⲏⲅⲏ",
+        18,
+        17.146
+      ],
+      [
+        "ⲡⲩⲅⲏ",
+        14,
+        16.853
+      ],
+      [
+        "ⲧ",
+        109,
+        16.823
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲟⲩ_0_node",
+          435
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲟⲟⲩ",
+          49
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲟⲩ",
+          12
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲟⲟⲩ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲟⲟⲩ",
+          11
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          20
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          10
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          6
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲟⲟⲩ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲟⲩ",
+          10
+        ],
+        [
+          "ⲱⲛϩ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϥ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          4
+        ],
+        [
+          "ϩⲁⲡⲉⲥⲏⲧ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲛ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          4
+        ],
+        [
+          "ⲧⲉ_4_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲟⲩ",
+          4
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲱ",
+          4
+        ],
+        [
+          "ⲉⲓⲟⲟⲩⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲟⲩ",
+          9
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          9
+        ],
+        [
+          "ⲕⲁⲧⲁⲕⲗⲩⲥⲙⲟⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ϥ_3_post_ⲟⲛϩ",
+          3
+        ],
+        [
+          "ⲟⲛϩ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ϥ_3_post_ⲟϣ",
+          3
+        ],
+        [
+          "ⲟϣ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲧⲃⲃⲟ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲛⲧⲓⲗⲟⲅⲓⲁ_3_post_ⲧ",
+          3
+        ],
+        [
+          "ⲓⲟⲣⲇⲁⲛⲏⲥ_3_post_ⲡ",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲟⲟⲩ",
+          "ⲡ_1_pre_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_0_node",
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲟⲟⲩ",
+          "ⲟⲩ_1_pre_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_0_node",
+          "ⲛ_1_post_ⲙⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲟⲩ",
+          "ⲱⲛϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          "ϥ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          "ϩⲁⲡⲉⲥⲏⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲡⲉⲥⲏⲧ_2_post_ⲉ",
+          "ⲛ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϩⲁⲡⲉⲥⲏⲧ",
+          "ⲧⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ϥ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲟⲩ",
+          "ⲉⲓⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_0_node",
+          "ⲙ_1_post_ⲙⲟⲟⲩ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁⲧⲁⲕⲗⲩⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          "ϥ_3_post_ⲟⲛϩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲛϩ",
+          "ⲟⲛϩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲟⲟⲩ",
+          "ϥ_3_post_ⲟϣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟϣ",
+          "ⲟϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲃⲃⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲟⲩ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲁⲛⲧⲓⲗⲟⲅⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲟⲣⲇⲁⲛⲏⲥ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.73,
+      "rank": 199,
+      "count": 751
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2173",
+      "label": "ϯⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give water, irrigate"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2168",
+      "label": "ⲕⲁⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "cease (to give) water"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2170",
+      "label": "ⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "become water, liquify"
+    },
+    {
+      "target": "C2171",
+      "label": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2172",
+      "label": "ⲥⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "scatter, distribute water"
+    }
+  ],
+  "etym": {
+    "egy_num": "69000",
+    "egy_lemma": "mw",
+    "demo_num": "d2378",
+    "demo_lemma": "mw",
+    "english": "water",
+    "german": "Wasser",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/69000",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2378"
+  }
+}

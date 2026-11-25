@@ -1,0 +1,97 @@
+{
+  "id": "C779",
+  "forms": [
+    {
+      "id": "CF2883",
+      "orth": "ⲍ︦",
+      "dialect": "B"
+    },
+    {
+      "id": "CF2884",
+      "orth": "ⲍ︦",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2885",
+      "orth": "ⲍ︦",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲍ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.5,
+        "rank": 302,
+        "count": 297
+      }
+    },
+    {
+      "orth": "ⲍ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.63,
+        "rank": 966,
+        "count": 100
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "sechster Buchstabe des Alphabeths ⲍⲏⲧⲁ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS927",
+      "bibliography": "CD 65a; KoptHWb 46; DELC 51; ChLCS 12b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲍ ⲉϩⲣⲉⲛⲡⲓⲇ ⲛϣⲟ ϫⲉⲁⲧⲉⲧⲉⲛⲉⲗⲟⲩⲏⲣ ⲙⲃⲓⲣ ⲉⲩⲙⲉϩ ⲛⲗⲁⲕϩ ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉ**ⲍ** .",
+      "english": "When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?' They told him, 'Seven.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲕⲧⲟⲕ ⲛⲅⲁϩⲉⲣⲁⲧⲕ ⲛⲅⲧⲟⲕ ⲥⲁϣϥ ⲛⲗⲁⲥ ⲉⲃⲟⲗ ϫⲉⲑⲏⲧϥ · **ⲍ** ⲡⲛⲟϭ ⲉϩⲛⲛⲉⲡⲛⲉⲩⲙⲁ",
+      "english": "‹why› did you not fortify yourself and stand up and cast out seven tongues, saying ‘Thētf’ (seven ‹times›), O great one among the spirits,",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲟⲩⲟⲛ **ⲍ** ⲇⲉ ⲛⲥⲟⲛ ϧⲁⲧⲟⲧⲉⲛ ⲡⲉ ⲟⲩⲟϩ ⲡⲓϩⲟⲩⲓⲧ ϭⲓⲥϩⲓⲙⲓ ⲛⲁϥⲙⲟⲩ ⲙⲡⲉϥⲭⲁϫⲣⲟϫ .",
+      "english": "There were seven brothers. The first took a wife, and dying left no offspring.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲍ** ⲡⲉϫⲁⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ .",
+      "english": "“She said: My Lord,”",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲧⲱⲛϥ ⲇⲉ ⲛϣⲟⲣⲡ ⲙⲡⲓⲉϩⲟⲟⲩ ⲛϩⲟⲩⲓⲧ ⲛⲧⲉⲛⲓⲥⲁⲃⲃⲁⲧⲟⲛ ⲁϥⲟⲩⲟⲛϩϥ ⲛϣⲟⲣⲡ ⲙⲙⲁⲣⲓⲁ ϯⲙⲁⲅⲇⲁⲗⲓⲛⲏ ⲑⲏ ⲉⲧⲁϥϩⲓ ⲡⲓ**ⲍ** ⲛⲇⲁⲓⲙⲱⲛ ⲉⲃⲟⲗ ϩⲓⲱⲧⲥ",
+      "english": "Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲍ** ⲛⲁⲓ ϭⲉ ⲉⲩϫⲱ ⲙⲙⲟⲟⲩ ⲉⲩⲣⲓⲙⲉ ⲉϩⲟⲩⲛ ⲉⲛⲉⲩⲉⲣⲏⲩ ·",
+      "english": "Thus saying, they wept together.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

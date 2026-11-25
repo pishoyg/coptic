@@ -1,0 +1,241 @@
+{
+  "id": "C1963",
+  "forms": [
+    {
+      "id": "CF5581",
+      "orth": "ϭⲓⲙⲛⲟⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6061,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2280",
+      "bibliography": "CD 176b; KoptHWb 96"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲁⲛⲉϣ ⲑⲏⲛⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉⲧⲉⲛⲥⲓ ⲉⲃⲟⲗϧⲉⲛ ⲡⲓϩⲙⲟⲧ ⲛⲧⲉⲡϭⲥ ϯϩⲟ ϩⲓⲛⲁ ⲉⲁⲣⲉⲧⲉⲛ**ϭⲓⲙⲛⲟⲧ** ⲛⲧⲉⲧⲉⲛⲟⲩⲛⲟϥ ϧⲉⲛⲡⲓⲙⲱⲓⲧ ⲉϧⲟⲩⲛ ⲛⲧⲉⲡⲉⲥⲱⲟⲩ .",
+      "english": "that ye may suck, and be satisfied with the breast of her consolation; that ye may milk out, and delight yourselves with the influx of her glory.",
+      "source": "23_Isaias_66",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:66",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲗ ⲛϫⲁⲙⲁⲩⲗⲓ ⲛⲉⲙⲛⲟⲩϧⲣⲟϯ ⲉⲩ**ϭⲓⲙⲛⲟⲧ** ⲗ ⲛⲉϩⲉ ⲓ ⲙⲙⲁⲥⲓ ⲕ ⲛⲓⲱ ⲓ ⲛⲥⲏϫ",
+      "english": "milch camels, and their foals, thirty, forty kine, ten bulls, twenty asses, and ten colts.",
+      "source": "01_Genesis_32",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲗ",
+        1,
+        14.172
+      ],
+      [
+        "ϧⲣⲟϯ",
+        1,
+        13.995
+      ],
+      [
+        "ⲉϩⲉ",
+        1,
+        13.41
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        1,
+        10.812
+      ],
+      [
+        "ⲁⲣⲉ",
+        1,
+        9.223
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        1,
+        8.58
+      ],
+      [
+        "ϩⲓⲛⲁ",
+        1,
+        8.454
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.903
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        6.401
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲩ",
+        1,
+        5.121
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ϭⲓⲙⲛⲟⲧ_0_node",
+          2
+        ],
+        [
+          "ⲗ_3_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲟϥ_1_post_ϭⲓⲙⲛⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          "ϭⲓⲙⲛⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲙⲛⲟⲧ_0_node",
+          "ⲗ_3_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲗ_3_post_ⲉϩⲉ",
+          "ⲛ_1_post_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲙⲛⲟⲧ",
+          "ⲉϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲛ",
+          "ⲓ_3_post_ⲉϩⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲉ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          "ⲧⲉⲛ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲙⲛⲟⲧ",
+          "ϭⲓⲙⲛⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲙⲛⲟⲧ_0_node",
+          "ⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲛⲟϥ",
+          "ⲧⲉⲧⲉⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_2_post_ⲟⲩⲛⲟϥ",
+          "ⲟⲩⲛⲟϥ_1_post_ϭⲓⲙⲛⲟⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5558,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1962",
+      "label": "ⲙⲛⲟⲧ",
+      "pos": "N",
+      "gloss": "breast"
+    }
+  ]
+}

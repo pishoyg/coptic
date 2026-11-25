@@ -1,0 +1,377 @@
+{
+  "id": "C4963",
+  "forms": [
+    {
+      "id": "CF11891",
+      "orth": "ⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2583,
+        "count": 19
+      }
+    },
+    {
+      "orth": "ⲟⲩⲉⲉⲓⲛⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9051,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲉⲓⲉⲛⲓⲛ",
+      "dialect": "S",
+      "id": "3146.2"
+    },
+    {
+      "orth": "ⲟⲩⲟⲉⲓⲉⲛⲓⲛ",
+      "dialect": "S",
+      "id": "3146.3"
+    },
+    {
+      "orth": "ⲟⲩⲉⲓⲉⲛⲓⲛ",
+      "dialect": "S",
+      "id": "3146.4"
+    },
+    {
+      "orth": "ⲟⲩⲉⲉⲛⲓⲛ",
+      "dialect": "S",
+      "id": "3146.5"
+    },
+    {
+      "orth": "ⲟⲩⲉⲓⲛⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1085,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲓⲁⲛⲓⲛ",
+      "dialect": "A",
+      "id": "3146.7"
+    },
+    {
+      "orth": "ⲟⲩⲁⲉⲓⲁⲛⲓⲛ",
+      "dialect": "A",
+      "id": "3146.8"
+    },
+    {
+      "orth": "ⲟⲩⲉⲓⲉⲛⲓⲛ",
+      "dialect": "F",
+      "id": "3146.9"
+    },
+    {
+      "orth": "ⲟⲩⲉⲉⲛⲓⲛ",
+      "dialect": "F",
+      "id": "3146.10"
+    },
+    {
+      "orth": "ⲟⲩⲓⲉⲛⲓⲛ",
+      "dialect": "F",
+      "id": "3146.11"
+    },
+    {
+      "orth": "ⲟⲩⲁⲓⲁⲛⲓⲛ",
+      "dialect": "L",
+      "id": "3146.12"
+    },
+    {
+      "orth": "ⲟⲩⲁⲉⲓⲁⲛⲓⲛ",
+      "dialect": "L",
+      "id": "3146.13"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5588",
+      "bibliography": "CD 484a; CED 213; KoptHWb 268; DELC 231b; ChLCS 66b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲟⲟⲩ ⲇⲉ ⲙⲛⲡⲧⲁⲉⲓⲟ ⲙⲛⲧⲉⲓⲣⲏⲛⲏ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲣϩⲱⲃ ⲉⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲙⲡⲓⲟⲩⲇⲁⲓ ⲛϣⲟⲣⲡ ⲙⲛⲡ**ⲟⲩⲉⲉⲓⲉⲛⲓⲛ** .",
+      "english": "But glory, honor, and peace go to every man who works good, to the Jew first, and also to the Greek.",
+      "source": "45_Romans_2",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲡⲱⲣϫ ⲅⲁⲣ ϣⲟⲟⲡ ⲙⲡⲓⲟⲩⲇⲁⲓ ⲙⲛⲡ**ⲟⲩⲉⲉⲓⲉⲛⲓⲛ** . ⲡⲓϫⲟⲉⲓⲥ ⲅⲁⲣ ⲛⲟⲩⲱⲧ ⲡⲉ ⲙⲙⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲉϥⲟ ⲛⲣⲙⲙⲁⲟ ⲉⲟⲩⲟⲛ ⲛⲓⲙ . ⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲁⲉⲡⲓⲕⲁⲗⲉⲓ ⲙⲙⲟϥ .",
+      "english": "For there is no distinction between Jew and Greek; for the same Lord is Lord of all, and is rich to all who call on him.",
+      "source": "45_Romans_10",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲕⲁⲧⲁⲛⲧⲁ ⲉⲇⲉⲣⲃⲏ ⲙⲛⲗⲩⲥⲧⲣⲁ . ⲛⲉⲩⲛ ⲟⲩⲙⲁⲑⲏⲧⲏⲥ ⲇⲉ ⲙⲙⲁⲩ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲧⲓⲙⲟⲑⲉⲟⲥ ⲉⲡϣⲏⲣⲉ ⲡⲉ ⲛⲟⲩⲥϩⲓ ⲙⲉ ⲛⲓⲟⲩⲇⲁⲓ ⲙⲡⲓⲥⲧⲏ . ⲡⲉϥⲉⲓⲱⲧ ⲇⲉ **ⲟⲩⲉⲉⲓⲉⲛⲓⲛ** ⲡⲉ .",
+      "english": "He came to Derbe and Lystra: and behold, a certain disciple was there, named Timothy, the son of a Jewess who believed; but his father was a Greek.",
+      "source": "44_Acts of the Apostles_16",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        15,
+        23.564
+      ],
+      [
+        "ⲛⲓ",
+        47,
+        22.882
+      ],
+      [
+        "ⲓⲧⲉ",
+        6,
+        20.155
+      ],
+      [
+        "ⲙⲉⲧⲣⲉϥϭⲓϩⲟ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲉⲙ",
+        22,
+        19.621
+      ],
+      [
+        "ⲥⲩⲣⲓⲁ",
+        3,
+        19.406
+      ],
+      [
+        "ⲛⲧⲉ",
+        21,
+        19.243
+      ],
+      [
+        "ⲣⲉⲙϩⲉ",
+        3,
+        19.241
+      ],
+      [
+        ".",
+        21,
+        18.793
+      ],
+      [
+        "ϯ",
+        17,
+        18.553
+      ],
+      [
+        "ⲛⲓⲙⲁⲛϩⲱⲧⲡ",
+        1,
+        18.11
+      ],
+      [
+        "ⲅⲉⲛⲟⲥ",
+        3,
+        18.024
+      ],
+      [
+        "ⲟⲩ",
+        20,
+        17.72
+      ],
+      [
+        "ⲉⲩⲥⲭⲏⲙⲱⲛ",
+        1,
+        17.695
+      ],
+      [
+        "ⲇⲉ",
+        11,
+        17.427
+      ],
+      [
+        "ⲛⲧⲉⲛ",
+        3,
+        16.821
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        5,
+        16.78
+      ],
+      [
+        "ϯⲥⲃⲱ",
+        3,
+        16.682
+      ],
+      [
+        "ⲙⲏⲓⲛⲓ",
+        3,
+        16.592
+      ],
+      [
+        "ⲃⲱⲕ",
+        3,
+        16.428
+      ]
+    ],
+    "S": [
+      [
+        "ⲉⲓⲧⲉ",
+        8,
+        16.681
+      ],
+      [
+        "ⲓⲟⲩⲇⲁⲓ",
+        7,
+        16.478
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.35
+      ],
+      [
+        ".",
+        17,
+        14.572
+      ],
+      [
+        "ⲣⲙϩⲉ",
+        2,
+        13.735
+      ],
+      [
+        "ⲛ",
+        25,
+        13.493
+      ],
+      [
+        "ⲙⲛ",
+        10,
+        12.362
+      ],
+      [
+        "ⲧⲉⲧⲛⲁ",
+        1,
+        11.827
+      ],
+      [
+        "ⲇⲉ",
+        8,
+        11.738
+      ],
+      [
+        "ϫⲓϩⲟ",
+        1,
+        11.595
+      ],
+      [
+        "ϩⲉⲃⲣⲁⲓⲟⲥ",
+        1,
+        11.35
+      ],
+      [
+        "ⲡ",
+        12,
+        11.004
+      ],
+      [
+        "ⲅⲁⲣ",
+        4,
+        10.431
+      ],
+      [
+        "ⲕⲣⲙⲣⲙ",
+        1,
+        10.01
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        2,
+        9.788
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        1,
+        9.721
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        2,
+        9.194
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        2,
+        9.059
+      ],
+      [
+        "ⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ",
+        1,
+        8.866
+      ],
+      [
+        "ϫⲉ",
+        5,
+        8.864
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲉⲉⲓⲉⲛⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+          "ⲟⲩⲉⲉⲓⲉⲛⲓⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2290,
+      "count": 19
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4965",
+      "label": "ⲙⲛⲧⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+      "pos": "N",
+      "gloss": "Greek language"
+    },
+    {
+      "target": "C4964",
+      "label": "ⲟⲩⲉⲉⲓⲉⲛⲓⲛ",
+      "pos": "N",
+      "gloss": "Ionian, Greek"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1241",
+    "demo_lemma": "Wjnn",
+    "english": "Ionian, Greek",
+    "german": "Ionier, Grieche",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1241"
+  }
+}

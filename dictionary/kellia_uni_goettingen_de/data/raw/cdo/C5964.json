@@ -1,0 +1,332 @@
+{
+  "id": "C5964",
+  "forms": [
+    {
+      "id": "CF13933",
+      "orth": "ϣⲱⲛϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5942,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϣⲱⲛⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3452,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ϣⲉⲛϥ-",
+      "dialect": "S",
+      "id": "1944.2"
+    },
+    {
+      "orth": "ϣⲉⲛⲃ-",
+      "dialect": "S",
+      "id": "1944.3"
+    },
+    {
+      "orth": "ϣⲟⲛϥ⸗",
+      "dialect": "S",
+      "id": "1944.4"
+    },
+    {
+      "orth": "ϣⲟⲛⲃ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7249,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲛϥ†",
+      "dialect": "S",
+      "id": "1944.6"
+    },
+    {
+      "orth": "ϣⲟⲛⲃ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7249,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲱⲛϥ",
+      "dialect": "F",
+      "id": "1944.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6648",
+      "bibliography": "CD 573b-574a; CED 247; KoptHWb 320; DELC 267b; ChLCS 79b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲩ**ϣⲱⲛϥ** [...] ⲧⲏⲩ ⲛⲟⲩⲛⲁⲙ .",
+      "english": "They meet with a favorable wind",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲕϭⲣⲱϭ ϫⲟϥ ⲙⲡⲛⲁⲩ ⲛϩⲧⲟⲟⲩⲉ ⲁⲩⲱ ⲙⲡⲣⲧⲣⲉⲧⲉⲕϭⲓϫ ⲕⲁⲁϥ ⲙⲡⲛⲁⲩ ⲛⲣⲟⲩϩⲉ ϫⲉⲛⲅⲛⲁⲉⲓⲙⲉ ⲁⲛ ϫⲉⲁϣ ⲡⲉⲧⲛⲁⲥⲙⲓⲛⲉ ϫⲉⲡⲁⲓ ⲡⲉ ⲏ ⲡⲁⲓ ⲡⲉ ⲁⲩⲱ ⲉⲩϣⲁⲛ**ϣⲱⲛϥ** ⲙⲡⲉⲥⲛⲁⲩ ⲟⲩⲁⲅⲁⲑⲟⲛ ⲡⲉ",
+      "english": "In the morning sow thy seed, and in the evening let not thine hand be slack: for thou knowest not what sort shall prosper, whether this or that, or whether both shall be good alike.",
+      "source": "Ecclesiastes 11",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϥⲉϭⲛⲉⲧⲛⲉⲣⲏⲩ ⲉⲓⲙⲏⲧⲓ ϩⲛⲟⲩ**ϣⲱⲛⲃ** ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ ϫⲉⲉⲧⲉⲧⲛⲉⲥⲣϥⲉ ⲉⲡⲉϣⲗⲏⲗ . ⲁⲩⲱ ⲟⲛ ⲛⲧⲉⲧⲛⲉⲓ ⲉⲧⲟⲩⲉⲛⲛⲉⲧⲛⲉⲣⲏⲩ ϫⲉⲛⲛⲉⲡⲥⲁⲧⲁⲛⲁⲥ ⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲱⲧⲛ ⲉⲧⲃⲉⲧⲉⲧⲛⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ .",
+      "english": "Don&apos;t deprive one another, unless it is by consent for a season, that you may give yourselves to fasting and prayer, and may be together again, that Satan doesn&apos;t tempt you because of your lack of self-control.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "[....]",
+        1,
+        13.469
+      ],
+      [
+        "[...]",
+        1,
+        12.954
+      ],
+      [
+        "ⲡⲁⲓ",
+        3,
+        10.01
+      ],
+      [
+        "ⲧⲏⲩ",
+        1,
+        9.954
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        1,
+        8.875
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        1,
+        8.741
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        7.598
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.186
+      ],
+      [
+        "ϣⲁ",
+        1,
+        5.024
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        4.898
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        4.457
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        3.991
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.157
+      ],
+      [
+        "ⲩ",
+        1,
+        2.488
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        2.425
+      ],
+      [
+        "ⲙ",
+        1,
+        2.029
+      ],
+      [
+        "ⲁ",
+        1,
+        1.722
+      ],
+      [
+        "ⲉ",
+        1,
+        1.495
+      ],
+      [
+        "ⲡ",
+        1,
+        1.175
+      ],
+      [
+        "ⲛ",
+        1,
+        0.487
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲱⲛϥ_0_node",
+          3
+        ],
+        [
+          "ϣⲁ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "[...]_2_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_1_post_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲉⲩϣⲁⲛ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ϣⲱⲛϥ",
+          "ⲩ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛϥ",
+          "ϣⲱⲛϥ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲛϥ_0_node",
+          "[...]_2_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "[...]_2_post_ⲧⲏⲩ",
+          "ⲧⲏⲩ_1_post_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲧⲏⲩ_1_post_ϣⲱⲛϥ",
+          "ⲛ_2_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲱⲛϥ",
+          "ⲉⲩϣⲁⲛ_1_pre_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲉⲩϣⲁⲛ_1_pre_ϣⲱⲛϥ",
+          "ϣⲱⲛϥ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲛϥ_0_node",
+          "ⲙ_1_post_ϣⲱⲛϥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲛϥ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲥⲛⲁⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3067,
+      "count": 10
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5965",
+      "label": "ϣⲱⲛϥ",
+      "pos": "N",
+      "gloss": "union, unity"
+    }
+  ],
+  "etym": {
+    "egy_num": "153490",
+    "egy_lemma": "šbn",
+    "demo_num": "d5926",
+    "demo_lemma": "šbn",
+    "english": "to mix; to mingle",
+    "german": "mischen; sich mischen (unter)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/153490",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5926"
+  }
+}

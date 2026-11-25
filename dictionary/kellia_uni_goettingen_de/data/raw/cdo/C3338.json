@@ -1,0 +1,270 @@
+{
+  "id": "C3338",
+  "forms": [
+    {
+      "id": "CF8567",
+      "orth": "ⲙⲛⲧⲥⲃⲟⲩⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13552,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3806",
+      "bibliography": "CD 319b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲉⲧⲛⲁⲅⲁⲡⲏ ⲕⲁⲧⲁⲡϣⲓ ⲛⲧⲛ**ⲙⲛⲧⲥⲃⲟⲩⲓ** · ⲉⲁⲛⲟⲛ ⲅⲁⲣ ⲁⲛⲟⲛ ϩⲉⲛⲥⲃⲟⲩⲓ ⲛⲧⲉⲡⲛⲟϭ ⲛⲥⲁϩ ⲙⲙⲉ ⲡⲉⲛϫⲟⲉⲓⲥ ⲡⲉⲛⲥⲱⲧⲏⲣ · ⲡⲁⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ ⲡⲉⲟⲟⲩ ⲙⲡⲉⲓⲱⲧ ⲛⲙⲙⲁϥ ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲣⲉϥⲧⲁⲛϩⲟ ⲁⲩⲱ ⲛϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ ⲧⲉⲛⲟⲩ ⲁⲩⲱ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ϣⲁⲉⲛⲉϩ ⲁⲙⲏⲛ · — ··· — ··· — ··· — ··· — ··· —",
+      "english": "Ye have shewn love according to the measure of discipleship, for we are all disciples of the great, True Master, our Lord and Saviour, to Whom be glory, and to the Father with Him, and to the Holy Spirit, life-giving and consubstantial, now, and always, for ever. Amen.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓ",
+        1,
+        12.197
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        11.503
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲙⲛⲧⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲙⲛⲧⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲃⲟⲩⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲙⲛⲧⲥⲃⲟⲩⲓ",
+          "ⲧⲛ_1_pre_ⲙⲛⲧⲥⲃⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲙⲛⲧⲥⲃⲟⲩⲓ",
+          "ⲙⲛⲧⲥⲃⲟⲩⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13151,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3326",
+      "label": "ϫⲉⲙⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "outwit (by sophisms or fallacies), falsify"
+    },
+    {
+      "target": "C3334",
+      "label": "ϫⲓⲛⲉⲣⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "becoming wise, instruction"
+    },
+    {
+      "target": "C3323",
+      "label": "ϫⲓⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "get teaching, be taught"
+    },
+    {
+      "target": "C3319",
+      "label": "ϯⲥⲃⲱ",
+      "pos": "V",
+      "gloss": "teach, chastise"
+    },
+    {
+      "target": "C3315",
+      "label": "ⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "without teaching, ignorant"
+    },
+    {
+      "target": "C3325",
+      "label": "ⲙⲁ ⲛϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "learning place, school"
+    },
+    {
+      "target": "C3320",
+      "label": "ⲙⲁ ⲛϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching place, school"
+    },
+    {
+      "target": "C3317",
+      "label": "ⲙⲁⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "loving instruction, docile"
+    },
+    {
+      "target": "C3336",
+      "label": "ⲙⲉⲧⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "craftiness, guile"
+    },
+    {
+      "target": "C3316",
+      "label": "ⲙⲛⲧⲁⲧⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "want of education, stupidity"
+    },
+    {
+      "target": "C3322",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teaching"
+    },
+    {
+      "target": "C3332",
+      "label": "ⲙⲛⲧⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wisdom"
+    },
+    {
+      "target": "C3324",
+      "label": "ⲣⲉϥϫⲓⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "one taught, instructed"
+    },
+    {
+      "target": "C3321",
+      "label": "ⲣⲉϥϯⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "teacher"
+    },
+    {
+      "target": "C3318",
+      "label": "ⲣⲙⲛⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "instructed, knowledgeable person"
+    },
+    {
+      "target": "C3333",
+      "label": "ⲣⲥⲁⲃⲉ",
+      "pos": "V",
+      "gloss": "become, be wise"
+    },
+    {
+      "target": "C3327",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3330",
+      "label": "ⲥⲁⲃⲉ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3328",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3329",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise person"
+    },
+    {
+      "target": "C3331",
+      "label": "ⲥⲁⲃⲏ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C12125",
+      "label": "ⲥⲃⲁ",
+      "pos": "N",
+      "gloss": "wise"
+    },
+    {
+      "target": "C3313",
+      "label": "ⲥⲃⲟ",
+      "pos": "V",
+      "gloss": "learn; teach"
+    },
+    {
+      "target": "C3337",
+      "label": "ⲥⲃⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "disciple, apprentice"
+    },
+    {
+      "target": "C3314",
+      "label": "ⲥⲃⲱ",
+      "pos": "N",
+      "gloss": "doctrine, teaching"
+    },
+    {
+      "target": "C3335",
+      "label": "ⲥⲉⲃ",
+      "pos": "N",
+      "gloss": "knowing, cunning person"
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "id": "C3095",
+  "forms": [
+    {
+      "id": "CF8064",
+      "orth": "ⲣⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 31.63,
+        "rank": 44,
+        "count": 4990
+      }
+    },
+    {
+      "orth": "ⲣⲱⲙⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 27.89,
+        "rank": 53,
+        "count": 2365
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3545",
+      "bibliography": "CD 294b; KoptHWb 163; DELC 172; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲟⲩⲱϣ ⲇⲉ ⲛⲧⲉ**ⲣⲱⲙⲓ** ⲛⲓⲃⲉⲛ ϣⲱⲡⲓ ⲙⲡⲁⲣⲏϯ ⲁⲗⲗⲁ ⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲟⲩⲟⲛⲧⲉϥ ⲟⲩϩⲙⲟⲧ ⲙⲙⲁⲩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲫⲛⲟⲩϯ ⲡⲓⲟⲩⲁⲓ ⲙⲉⲛ ⲙⲡⲁⲓⲣⲏϯ ⲕⲉⲟⲩⲁⲓ ⲇⲉ ⲙⲡⲁⲓⲕⲉⲣⲏϯ .",
+      "english": "Yet I wish that all men were like me. However each man has his own gift from God, one of this kind, and another of that kind.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲣⲉⲡⲉϥⲣⲁⲛ ⲙⲉⲛ ϩⲛⲛ**ⲣⲱⲙⲉ** ⲡⲉ ⲁⲫⲟⲩ",
+      "english": "The one whose name among men is Aphou",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲅⲁⲣ ⲛⲧⲉⲟⲩⲁⲓ ϫⲟⲥ ϫⲉⲁⲛⲟⲕ ⲙⲉⲛ ⲁⲛⲟⲕ ⲫⲁⲡⲁⲩⲗⲟⲥ ⲕⲉⲟⲩⲁⲓ ⲇⲉ ϫⲉⲁⲛⲟⲕ ⲫⲁⲁⲡⲟⲗⲗⲱ ⲟⲩⲭⲓ ⲛⲑⲱⲧⲉⲛ ϩⲁⲛ**ⲣⲱⲙⲓ** .",
+      "english": "For when one says, 'I follow Paul,' and another, 'I follow Apollos,' aren't you fleshly?",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲅⲁⲣ ⲛ**ⲣⲱⲙⲉ** ⲡⲉⲧⲥⲟⲟⲩⲛ ⲛⲛⲁⲡⲣⲱⲙⲉ ⲉⲓⲙⲏⲧⲓ ⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡⲣⲱⲙⲉ ⲉⲧⲛϩⲏⲧϥ . ⲧⲁⲓ ⲟⲛ ⲧⲉ ⲧϩⲉ ⲛⲛⲁⲡⲛⲟⲩⲧⲉ ⲙⲡⲉⲗⲁⲁⲩ ⲥⲟⲩⲱⲛⲟⲩ ⲛⲥⲁⲡⲉⲡⲛⲉⲩⲙⲁ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "For who among men knows the things of a man, except the spirit of the man, which is in him? Even so, no one knows the things of God, except God&apos;s Spirit.",
+      "source": "46_1 Corinthians_2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲣⲱⲙⲓ** ⲉⲁϥⲙⲟϣⲓ ⲉⲡϣⲉⲙⲙⲟ ⲉⲁϥⲭⲱ ⲙⲡⲉϥⲏⲓ ⲟⲩⲟϩ ⲁϥϯ ⲛⲛⲉϥⲉⲃⲓⲁⲓⲕ ⲙⲡⲓⲉⲣϣⲓϣⲓ ⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ⲙⲡⲉϥϩⲱⲃ ⲟⲩⲟϩ ⲁϥϩⲟⲛϩⲉⲛ ⲉⲧⲟⲧϥ ⲙⲡⲓⲉⲙⲛⲟⲩⲧ ϩⲓⲛⲁ ⲛⲧⲉϥⲣⲱⲓⲥ",
+      "english": "It is like a man, traveling to another country, having left his house, and given authority to his servants, and to each one his work, and also commanded the doorkeeper to keep watch.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲅⲁⲣ ⲉⲣϣⲁⲛⲟⲩ**ⲣⲱⲙⲉ** ⲕⲱ ⲛⲥⲱϥ ⲛⲟⲩⲁ ϩⲛⲛⲁⲓ · ϥⲣⲱϣⲉ ⲁⲛ ⲛϭⲓⲡⲕⲉⲟⲩⲁ ⲉⲧⲁϩⲉ ⲡⲣⲱⲙⲉ ⲉⲣⲁⲧϥ ·",
+      "english": "Now if it happen that a man omitteth (to keep) one of those precepts, it will not be sufficient for him to put another in its place;",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        1244,
+        35.596
+      ],
+      [
+        "ϥ",
+        1298,
+        35.45
+      ],
+      [
+        "ⲉ",
+        1081,
+        35.252
+      ],
+      [
+        "ⲛ",
+        1095,
+        34.881
+      ],
+      [
+        "ⲛⲓ",
+        688,
+        34.497
+      ],
+      [
+        "ⲫ",
+        600,
+        34.251
+      ],
+      [
+        "ⲙ",
+        720,
+        34.059
+      ],
+      [
+        "ⲁ",
+        698,
+        33.331
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        668,
+        33.231
+      ],
+      [
+        "ⲡⲓ",
+        569,
+        33.228
+      ],
+      [
+        "ϧⲉⲛ",
+        556,
+        33.12
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        440,
+        32.648
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        271,
+        32.544
+      ],
+      [
+        "ⲛⲉⲙ",
+        433,
+        32.517
+      ],
+      [
+        "ϫⲉ",
+        412,
+        32.196
+      ],
+      [
+        "ⲡ",
+        420,
+        31.762
+      ],
+      [
+        "ⲉⲧⲉ",
+        240,
+        31.655
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        201,
+        31.468
+      ],
+      [
+        "ⲛⲧⲉ",
+        323,
+        31.072
+      ],
+      [
+        ".",
+        339,
+        30.832
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        124,
+        29.165
+      ],
+      [
+        "ⲛ",
+        4646,
+        28.059
+      ],
+      [
+        "ⲉ",
+        2689,
+        26.7
+      ],
+      [
+        "ⲡ",
+        2835,
+        26.609
+      ],
+      [
+        "ⲟⲩ",
+        1566,
+        24.763
+      ],
+      [
+        "ⲉⲧ",
+        1217,
+        24.69
+      ],
+      [
+        "ⲁ",
+        1524,
+        24.47
+      ],
+      [
+        "ϥ",
+        1537,
+        23.984
+      ],
+      [
+        "ⲛⲁ",
+        1150,
+        23.895
+      ],
+      [
+        "ⲙ",
+        1191,
+        23.71
+      ],
+      [
+        "ⲩ",
+        1056,
+        23.647
+      ],
+      [
+        "ⲁⲩⲱ",
+        1065,
+        23.622
+      ],
+      [
+        "ⲇⲉ",
+        673,
+        22.874
+      ],
+      [
+        "ⲡⲉ",
+        747,
+        22.847
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        703,
+        22.542
+      ],
+      [
+        ".",
+        616,
+        22.062
+      ],
+      [
+        "ϫⲉ",
+        626,
+        21.721
+      ],
+      [
+        "ⲛⲉ",
+        467,
+        21.619
+      ],
+      [
+        "ⲛⲓⲙ",
+        335,
+        21.155
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        279,
+        21.05
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          2220
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          395
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          140
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲱⲙⲉ",
+          81
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          57
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          57
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          43
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲣⲱⲙⲉ",
+          24
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲱⲙⲉ",
+          20
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲱⲙⲉ",
+          16
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          16
+        ],
+        [
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          35
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          35
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          25
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          57
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          13
+        ],
+        [
+          "ϫⲱⲱⲣⲉ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲱⲙⲉ",
+          10
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          10
+        ],
+        [
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          10
+        ],
+        [
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          10
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲱⲙⲉ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲛ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲛⲓⲙ_1_post_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲣⲱⲙⲉ",
+          "ⲡ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲱⲙⲉ",
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲣⲱⲙⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲣⲱⲙⲉ_0_node",
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ϫⲱⲱⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲇⲓⲕⲁⲓⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲣⲱⲙⲉ",
+          "ⲣⲱⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ϩⲏⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲱⲙⲉ",
+          "ⲓⲟⲩⲇⲁ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 31.67,
+      "rank": 43,
+      "count": 5027
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    }
+  ],
+  "etym": {
+    "egy_num": "94530",
+    "egy_lemma": "rmṯ",
+    "demo_num": "d3491",
+    "demo_lemma": "rmṯ",
+    "english": "human being; man",
+    "german": "Mensch; Mann",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94530",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3491"
+  }
+}

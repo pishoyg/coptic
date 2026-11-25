@@ -1,0 +1,51 @@
+{
+  "id": "C10476",
+  "forms": [
+    {
+      "id": "CF28063",
+      "orth": "ⲥⲕⲉⲩⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF28065",
+      "orth": "ⲥⲕⲉⲩⲁⲍⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28064",
+      "orth": "ⲥⲕⲉⲡⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2251,
+        "count": 24
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14181",
+      "bibliography": "DDGLC",
+      "cu_ID": "9926"
+    },
+    {
+      "id": "CS14182",
+      "bibliography": "DDGLC",
+      "cu_ID": "4015"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "5399",
+    "grl_lemma": "σκευάζω",
+    "grl_meaning": "to prepare, make ready, arrange",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1607a; Preisigke 2:468"
+  }
+}

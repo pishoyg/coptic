@@ -1,0 +1,57 @@
+{
+  "id": "C332",
+  "forms": [
+    {
+      "id": "CF1443",
+      "orth": "ϫⲓⲛⲃⲉⲃⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1444",
+      "orth": "ϫⲓⲛⲃⲉⲃⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS368",
+      "bibliography": "CD 29a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C329",
+      "label": "ⲃⲉⲉⲃⲉ",
+      "pos": "V",
+      "gloss": "bubble, well up; pour forth, bring forth, rain down"
+    },
+    {
+      "target": "C331",
+      "label": "ⲙⲉⲧⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "outpouring"
+    },
+    {
+      "target": "C330",
+      "label": "ⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "who brings forth sth, originator"
+    }
+  ]
+}

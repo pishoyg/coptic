@@ -1,0 +1,99 @@
+{
+  "id": "C10565",
+  "forms": [
+    {
+      "id": "CF28483",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF28484",
+      "orth": "ⲥⲧⲣⲁⲧⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19951,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14370",
+      "bibliography": "DDGLC",
+      "cu_ID": "1244"
+    },
+    {
+      "id": "CS14371",
+      "bibliography": "DDGLC",
+      "cu_ID": "10793"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲉⲛⲛⲉⲃⲟⲗ ⲧⲱⲛ ⲛⲉ ⲙⲡⲟⲗⲏⲙⲟⲥ ⲙⲛⲙⲙⲓϣⲉ ⲉⲧⲉⲛϩⲧ ⲧⲏⲩⲧⲛ ⲙⲏ ⲛϩⲉⲛⲛⲉⲃⲟⲗ ⲁⲛ ⲛⲉ ϩⲛⲛⲉⲧⲉⲛϩⲏⲇⲟⲛⲏ ⲛⲁⲓ ⲉⲧ**ⲥⲧⲣⲁⲧⲉⲩⲉ** ϩⲛⲛⲉⲧⲉⲛⲙⲉⲗⲟⲥ",
+      "english": "Where do wars and fightings among you come from? Don't they come from your pleasures that war in your members?",
+      "source": "59_James_4",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲇⲟⲛⲏ",
+        1,
+        15.469
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19561,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3110",
+    "grl_lemma": "στρατεύω",
+    "grl_meaning": "to advance with an army or fleet, wage war, serve in the\n    army",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1651b"
+  }
+}

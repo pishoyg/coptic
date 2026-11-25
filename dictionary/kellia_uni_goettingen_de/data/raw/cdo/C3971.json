@@ -1,0 +1,150 @@
+{
+  "id": "C3971",
+  "forms": [
+    {
+      "id": "CF9882",
+      "orth": "ⲥϩⲃⲏⲏⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7076,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF18174",
+      "orth": "ⲥϩⲃⲏⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18181",
+      "orth": "ⲥϩⲃⲉⲉⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31416",
+      "orth": "ⲥϩⲃⲏⲓⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31417",
+      "orth": "ϩⲃⲏⲏⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13349,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31418",
+      "orth": "ⲥϩⲃⲏⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31419",
+      "orth": "ⲥⲫⲏⲓϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5593,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4507",
+      "bibliography": "CD 384b; CED 173; KoptHWb 211, 542; ChLCS 53b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲟϥ ⲛϫⲉⲡⲓⲡⲛⲉⲩⲙⲁⲥⲁⲧⲟⲧϥ ⲁϥϣⲧⲉⲣⲑⲱⲣϥ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲉⲓ ⲉϫⲉⲛⲡⲕⲁϩⲓ ⲛⲁϥⲥⲑⲉⲣⲧⲉⲣ ⲡⲉ ⲉⲣⲉⲣⲱϥ ϫⲉϣ **ⲥⲫⲏⲓϯ** ⲉⲃⲟⲗ .",
+      "english": "They brought him to him, and when he saw him, immediately the spirit convulsed him, and he fell on the ground, wallowing and foaming at the mouth.",
+      "source": "02_Mark_09",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲣⲱⲙⲉ ⲉϥⲟ ⲛⲇⲁⲓⲙⲱⲛⲓⲟⲛ · ⲁⲩⲱ ⲉϥⲙⲟⲕϩ ⲙⲙⲁⲧⲉ · ⲉϥⲧⲁⲩⲉ**ⲥϩⲃⲏⲏⲧⲉ** ⲉⲃⲟⲗ ·",
+      "english": "A man became a demon, and was greatly afflicted, and was spitting out foam.",
+      "source": "Apophthegmata Patrum Sahidic 127: N 298",
+      "urn": "urn:cts:copticLit:ap.127.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ϥⲛⲏⲟⲩ ⲉϫⲱϥ ⲛϫⲉⲟⲩⲡⲛⲉⲩⲙⲁⲟⲩⲟϩ ⲛⲟⲩϩⲟϯ ϧⲉⲛⲟⲩϩⲟϯ ϥⲱϣ ⲉⲃⲟⲗ ⲟⲩⲟϩ ϥϣⲑⲟⲣⲧⲉⲣ ⲙⲙⲟϥ ⲟⲩⲟϩ ϥⲣⲱϧⲧ ⲙⲙⲟϥ ⲉϧⲣⲏⲓ ⲟⲩⲟϩ ⲣⲱϥ ϫⲉϣ **ⲥⲫⲏⲓϯ** ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲙⲟⲅⲓⲥ ϣⲁϥϣⲉ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲁⲣⲟϥ ⲉϥϧⲟⲙϧⲉⲙ ⲙⲙⲟϥ .",
+      "english": "Behold, a spirit takes him, he suddenly cries out, and it convulses him so that he foams, and it hardly departs from him, bruising him severely.",
+      "source": "03_Luke_09",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲓⲛⲁⲛⲁⲩ ⲛⲁϣ ⲛϩⲉ · ⲉⲛⲃⲁⲗ ⲉⲛⲧⲁⲩⲥⲱⲧⲣ ϩⲁⲡⲉⲥⲧⲱⲧ · ⲙⲛⲛϭⲓϫ ⲛⲧⲁⲛⲉⲩⲕⲉⲉⲥ ⲃⲱⲗ ⲉⲃⲟⲗ · ⲙⲛⲡϥⲱ ⲉⲧⲡⲣⲉⲥⲣⲁⲥⲧ ϩⲁⲡϩⲓⲧⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧⲧⲁⲩⲉ**ϩⲃⲏⲏⲧⲉ** ⲉⲃⲟⲗ · ⲉⲣⲉⲡⲉⲧⲙⲓϣⲉ ⲛⲙⲙⲁⲥ ⲗⲏϭ ϩⲓϩⲟⲩⲛ ⲙⲙⲟⲥ ⲉⲛϥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲁⲛ ·",
+      "english": "In what condition shall I see (her on my return)? With her eyes starting from their sockets in terror, and her hands with the bones thereof protruding, and the hair torn out in frenzy, and the mouth dripping with foam, and meanwhile the devil which is contending with her is hidden inside her, and doth not appear.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲩⲉ",
+        2,
+        14.529
+      ],
+      [
+        "ϥ",
+        4,
+        8.937
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        7.88
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥϩⲃⲏⲏⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5515,
+      "count": 3
+    }
+  },
+  "etym": {
+    "demo_num": "d5737",
+    "demo_lemma": "stp-p.t",
+    "english": "Foam(?)",
+    "german": "Schaum(?)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5737"
+  }
+}

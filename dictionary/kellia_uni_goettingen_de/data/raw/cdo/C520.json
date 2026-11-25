@@ -1,0 +1,86 @@
+{
+  "id": "C520",
+  "forms": [
+    {
+      "id": "CF2052",
+      "orth": "ⲙⲉⲧⲉⲙⲃⲉⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2053",
+      "orth": "ⲙⲉⲧⲉⲙⲃⲉⲣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS629",
+      "bibliography": "CDC 8b; KoptHWb 495"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C521",
+      "type": "cf",
+      "label": "newly, recently"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C516",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "new, young"
+    },
+    {
+      "target": "C517",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "new thing; young person"
+    },
+    {
+      "target": "C518",
+      "label": "ⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "uncultivated land"
+    },
+    {
+      "target": "C522",
+      "label": "ⲉⲓⲣⲉ ⲛⲃⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "make new, renew"
+    },
+    {
+      "target": "C519",
+      "label": "ⲙⲛⲧⲃⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "newness, youth"
+    },
+    {
+      "target": "C521",
+      "label": "ⲛⲃⲣⲣⲉ",
+      "pos": "ADV",
+      "gloss": "newly, recently; afresh"
+    },
+    {
+      "target": "C523",
+      "label": "ⲣⲃⲣⲣⲉ",
+      "pos": "V",
+      "gloss": "become new"
+    }
+  ]
+}

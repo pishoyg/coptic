@@ -1,0 +1,64 @@
+{
+  "id": "C760",
+  "forms": [
+    {
+      "id": "CF2825",
+      "orth": "ϫⲓ ⲛⲉⲩⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS902",
+      "bibliography": "CD 62b; KoptHWb 42; ChLCS 12a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C756",
+      "label": "ϯ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "give as pledge"
+    },
+    {
+      "target": "C755",
+      "label": "ⲉⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "pledge, surety"
+    },
+    {
+      "target": "C759",
+      "label": "ⲕⲁⲉⲟⲩⲱ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "curse"
+    },
+    {
+      "target": "C758",
+      "label": "ⲕⲱ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    },
+    {
+      "target": "C757",
+      "label": "ⲟⲩⲱϩ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    }
+  ]
+}

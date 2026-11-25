@@ -1,0 +1,104 @@
+{
+  "id": "C8110",
+  "forms": [
+    {
+      "id": "CF18446",
+      "orth": "ⲁⲑⲗⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18447",
+      "orth": "ⲁⲑⲗⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10032,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9098",
+      "bibliography": "DDGLC",
+      "cu_ID": "1769"
+    },
+    {
+      "id": "CS9099",
+      "bibliography": "DDGLC",
+      "cu_ID": "7360"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϥⲟ ⲛϣⲃⲏⲣ ⲉⲡⲣⲣⲟ ⲛⲧⲡⲉ ⲙⲛⲡⲕⲁϩ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲁⲩⲧⲁⲥⲥⲉ ⲙⲙⲟϥ ⲉⲧⲙⲛⲧⲙⲁⲧⲟⲓ ⲉⲡⲛⲟⲩⲙⲉⲣⲟⲛ ⲛⲛⲁⲡⲕⲁϩ ⲁⲩⲧⲁⲥⲥⲉ ⲙⲙⲟϥ ϩⲱⲱϥ ⲉⲧⲙⲁⲛⲇⲣⲓⲕⲏ ⲛⲙⲡⲏⲩⲉ ϩⲓⲧⲛⲡ**ⲁⲑⲗⲟⲛ** ⲛⲧϩⲟⲙⲟⲗⲟⲅⲓⲁ . ⲛⲉϥ",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲙⲟⲗⲟⲅⲓⲁ",
+        1,
+        16.139
+      ],
+      [
+        "ⲡⲏⲩⲉ",
+        1,
+        11.703
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9608,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3596",
+    "grl_lemma": "ἆθλον",
+    "grl_meaning": "prize of contest",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 32b; Preisigke 1:30"
+  }
+}

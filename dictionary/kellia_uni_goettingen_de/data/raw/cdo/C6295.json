@@ -1,0 +1,58 @@
+{
+  "id": "C6295",
+  "forms": [
+    {
+      "id": "CF14601",
+      "orth": "ⳉⲟ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ⳉⲱⲟⲩ",
+      "dialect": "A",
+      "id": "2066.1"
+    },
+    {
+      "orth": "ⳉⲱⲟⲩⲉ",
+      "dialect": "A",
+      "id": "2066.2"
+    },
+    {
+      "orth": "ⳉⲟⲟⲩ",
+      "dialect": "A",
+      "id": "2066.3"
+    },
+    {
+      "orth": "ⳉⲟⲟⲩⲉ",
+      "dialect": "A",
+      "id": "2066.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6984",
+      "bibliography": "CD 628a; CED 267; KoptHWb 352; DELC 321a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C6394",
+      "type": "cf",
+      "label": "road, path"
+    }
+  ],
+  "etym": {
+    "egy_num": "113230",
+    "egy_lemma": "ḫꜣ",
+    "english": "road; path",
+    "german": "Weg",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/113230"
+  }
+}

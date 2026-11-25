@@ -1,0 +1,74 @@
+{
+  "id": "C11280",
+  "forms": [
+    {
+      "id": "CF31735",
+      "orth": "ⲧⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 45.04,
+        "rank": 30,
+        "count": 7107
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS4551",
+      "bibliography": "CD 390a; CED 176; KoptHWb 217; DELC 208; ChLCS  55a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛ**ⲧⲉ**ⲥⲱⲧⲙ ⲛⲥⲱⲟⲩ ϩⲛϩⲱⲃ ⲛⲓⲙ ·",
+      "english": "And that you obey them in every action.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ϩⲏⲏⲧⲉ **ⲧⲉ** ⲧⲉⲧⲛⲛⲁⲙⲟⲩ ⲛⲧϩⲉ ⲛⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲧⲉⲧⲛⲛⲁϩⲉ ⲛⲧϩⲉ ⲛⲟⲩⲁ ⲛⲛⲁⲣⲭⲱⲛ",
+      "english": "But ye die as men, and fall as one of the princes.",
+      "source": "Psalms 81",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲣⲟⲩⲑ ⲇⲉ ⲡⲉϫⲁⲥ ⲛⲁⲥ ϫⲉⲛⲛⲉⲡⲁⲓ ⲧⲁϩⲟⲓ ⲉⲧⲣⲁⲕⲁⲁ**ⲧⲉ** ⲛⲥⲱⲓ ⲛⲧⲁⲃⲱⲕ ⲛⲧⲁⲗⲟ ϩⲁⲣⲟ ϫⲉⲛⲧⲟ ⲡⲙⲁ ⲉⲧⲉⲣⲁⲃⲱⲕ ⲣⲟϥ ϯⲛⲏⲩ ⲛⲙⲙⲉ ⲁⲩⲱ ⲡⲙⲁ ⲉⲧⲉⲣⲁⲟⲩⲱϩ ⲛϩⲏⲧϥ ϯⲛⲁϭⲱ ⲛϩⲏⲧϥ ⲛⲙⲙⲉ ⲡⲟⲩⲗⲁⲟⲥ ⲡⲉ ⲡⲁⲗⲁⲟⲥ ⲁⲩⲱ ⲡⲟⲩⲛⲟⲩⲧⲉ ⲡⲉ ⲡⲁⲛⲟⲩⲧⲉ",
+      "english": "And Ruth said, Intreat me not to leave thee, or to return from following thee; for whithersoever thou goest, I will go, and wheresoever thou lodgest, I will lodge; thy people shall be my people, and thy God my God.",
+      "source": "Ruth Chapter 1",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2384",
+      "type": "cf",
+      "label": "possessive article pl."
+    },
+    {
+      "target": "C2786",
+      "type": "cf",
+      "label": "possessive article sg. m."
+    }
+  ],
+  "etym": {
+    "egy_num": "550046",
+    "egy_lemma": "tꜣy=",
+    "demo_num": "d7044",
+    "demo_lemma": "tꜣj=",
+    "english": "[poss. adj., fem. sing.]",
+    "german": "[Poss.artikel sg.f.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550046",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7044"
+  }
+}

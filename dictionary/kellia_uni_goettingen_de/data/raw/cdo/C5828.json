@@ -1,0 +1,45 @@
+{
+  "id": "C5828",
+  "forms": [
+    {
+      "id": "CF13653",
+      "orth": "ⲙⲁ ⲛϣⲱⲗⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6508",
+      "bibliography": "CD 560a; ChLCS 77a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5826",
+      "label": "ϣⲱⲗⲙ",
+      "pos": "V",
+      "gloss": "smell"
+    },
+    {
+      "target": "C5827",
+      "label": "ϣⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "sense of smell"
+    },
+    {
+      "target": "C5829",
+      "label": "ϭⲓⲛϣⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "sense, power of smell"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C5116",
+  "forms": [
+    {
+      "id": "CF12197",
+      "orth": "ⲉⲡⲁⲩⲏⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5747",
+      "bibliography": "CD 489a; KoptHWb 275"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5112",
+      "label": "*ⲑⲟⲩⲏⲣⲓ",
+      "pos": "N",
+      "gloss": "the Great one (Thoeris)"
+    },
+    {
+      "target": "C5115",
+      "label": "ⲁⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "About how great? About how many? About how much?"
+    },
+    {
+      "target": "C5111",
+      "label": "ⲉⲥⲟⲩⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "Isis the Great"
+    },
+    {
+      "target": "C5117",
+      "label": "ⲙⲉϩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "how many ...?"
+    },
+    {
+      "target": "C5114",
+      "label": "ⲛⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "By how much?"
+    },
+    {
+      "target": "C5113",
+      "label": "ⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "How great? How many? How much?"
+    },
+    {
+      "target": "C5110",
+      "label": "ⲟⲩⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "great"
+    },
+    {
+      "target": "C5118",
+      "label": "ⲥⲟⲩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "day such-and-such"
+    }
+  ]
+}

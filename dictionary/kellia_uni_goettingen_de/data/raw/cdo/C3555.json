@@ -1,0 +1,51 @@
+{
+  "id": "C3555",
+  "forms": [
+    {
+      "id": "CF9015",
+      "orth": "ϫⲓⲛⲥⲟⲙⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4048",
+      "bibliography": "CD 340b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3554",
+      "label": "ϫⲓⲛⲥⲟⲙⲥ",
+      "pos": "N",
+      "gloss": "looking, look"
+    },
+    {
+      "target": "C3551",
+      "label": "ⲥⲟⲙⲥ",
+      "pos": "V",
+      "gloss": "look, behold, consider"
+    },
+    {
+      "target": "C3553",
+      "label": "ⲥⲟⲙⲥ",
+      "pos": "N",
+      "gloss": "looking"
+    },
+    {
+      "target": "C3552",
+      "label": "ⲥⲟⲙⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "look forth, expect"
+    }
+  ]
+}

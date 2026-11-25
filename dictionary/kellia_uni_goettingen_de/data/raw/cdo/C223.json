@@ -1,0 +1,109 @@
+{
+  "id": "C223",
+  "forms": [
+    {
+      "id": "CF896",
+      "orth": "ⲁⲥⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11492,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF897",
+      "orth": "ⲥⲓⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF898",
+      "orth": "ⲥⲓⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS251",
+      "bibliography": "CD 18a; KoptHWb 13, 488; ChLCS 5b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲅⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲟⲩϩⲓⲥⲉ ⲙⲛⲟⲩϣⲱⲛⲉ ⲙⲉⲛⲟⲩⲗⲟϭⲗⲉϭ ⲙⲛⲟⲩϩⲣⲉⲩⲙⲁ ⲙⲛⲟⲩ**ⲁⲥⲓⲕ** ⲙⲛⲟⲩⲧⲕⲁⲥ ⲙⲛⲟⲩϩⲗⲟⲡⲗⲉⲡ ⲙⲛⲟⲩⲙⲉⲧⲕⲟⲩⲓ ⲛϩⲏⲧ ⲙⲛⲟⲩⲉⲣⲙⲟⲉⲧ ⲙⲛⲟⲩϣⲉⲃⲉ ⲙⲛⲟⲩⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲛⲗⲓⲃⲉ ⲙⲛϣⲃⲉ ⲛϭⲓⲛϣⲱⲛⲉ ⲉⲣⲉⲛⲁⲓ ϣⲟⲃⲉ ⲉⲩⲉⲓ",
+      "english": "and you have brought upon him suffering and disease and sickness and a discharge and a fever and a pain and a weariness and a dejection and a shivering and a swelling and a demon of madness and seventy diseases, each one being different,",
+      "source": "Curse to bring suffering, pain, and disease",
+      "urn": "urn:cts:copticMag:kyprianos.tm99993.kypt483",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲉⲩⲙⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲕⲁⲥ",
+        1,
+        16.074
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        11.399
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲓⲕ",
+          1
+        ],
+        [
+          "ⲁⲥⲓⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲁⲥⲓⲕ",
+          "ⲁⲥⲓⲕ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11062,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C201",
+      "type": "cf",
+      "label": "fever (ague)"
+    },
+    {
+      "target": "C6631",
+      "type": "cf",
+      "label": "heat, fever"
+    }
+  ]
+}

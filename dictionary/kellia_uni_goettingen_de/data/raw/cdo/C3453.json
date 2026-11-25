@@ -1,0 +1,163 @@
+{
+  "id": "C3453",
+  "forms": [
+    {
+      "id": "CF8806",
+      "orth": "ⲥⲗⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4509,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3931",
+      "bibliography": "CD 330a; CED 151; KoptHWb 183; DELC 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲁⲩϭⲓⲧϥ ⲉϩⲁⲛⲙϩⲁⲩ ⲟⲩⲟϩ ⲁϥⲉⲣϣⲣⲱⲓⲥ ϩⲓϫⲉⲛⲛⲟⲩ**ⲥⲗⲏ** .",
+      "english": "And he has been led away to the tombs, and he has watched over the heaps.",
+      "source": "18_Iob_21",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲓ ⲁϥϭⲓ ⲛⲉⲙϯ**ⲥⲗⲏ** ⲛⲏ ⲇⲉ ⲉⲧϥⲁⲓ ⲁⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉⲡⲓϧⲉⲗϣⲓⲣⲓ ⲛⲑⲟⲕ ⲡⲉϯϫⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ⲧⲱⲛⲕ .",
+      "english": "He came near and touched the coffin, and the bearers stood still. He said, 'Young man, I tell you, arise!'",
+      "source": "03_Luke_07",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩ ⲛϫⲉⲓⲱⲥⲏⲫ ⲉϥ ϧⲉⲛⲣⲓ ⲛⲣⲟⲙⲡⲓ ⲟⲩⲟϩ ⲁⲩⲕⲟⲥϥ ⲟⲩⲟϩ ⲁⲩⲭⲁϥ ϧⲉⲛϯ**ⲥⲗⲏ** ϧⲉⲛⲭⲏⲙⲓ",
+      "english": "And Joseph died, aged an hundred and ten years; and they prepared his corpse, and put him in a coffin in Egypt.",
+      "source": "01_Genesis_50",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:50",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣϣⲣⲱⲓⲥ",
+        1,
+        16.525
+      ],
+      [
+        "ϩⲗⲟϫ",
+        1,
+        15.303
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        7.886
+      ],
+      [
+        "ϭⲓ",
+        1,
+        7.682
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.318
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        6.472
+      ],
+      [
+        "ⲧ",
+        1,
+        5.94
+      ],
+      [
+        "ϥ",
+        2,
+        5.839
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.464
+      ],
+      [
+        "ϯ",
+        1,
+        4.705
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        4.658
+      ],
+      [
+        "ⲩ",
+        1,
+        4.536
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲗⲏ_0_node",
+          3
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲥⲗⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲥⲗⲏ",
+          "ⲥⲗⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4039,
+      "count": 3
+    }
+  },
+  "etym": {
+    "demo_num": "d5425",
+    "demo_lemma": "slꜣ(.t)",
+    "english": "coffin",
+    "german": "Sarg",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5425"
+  }
+}

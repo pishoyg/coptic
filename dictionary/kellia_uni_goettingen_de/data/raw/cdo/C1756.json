@@ -1,0 +1,216 @@
+{
+  "id": "C1756",
+  "forms": [
+    {
+      "id": "CF5081",
+      "orth": "ⲗⲟϫⲗϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4515,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2038",
+      "bibliography": "CD 150b; ChLCS 23a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲉⲍⲉⲕⲓⲁⲥ ⲇⲉ ⲡⲣⲣⲟ ⲛⲧⲉⲣϥϣⲱⲛⲉ ⲁϥ**ⲗⲟϫⲗϫ** ⲙⲡϥϩⲉ ⲉⲙⲡⲁϩⲣⲉ ⲉⲧⲁⲗϭⲉⲡⲉϥϣⲱⲛⲉ ·",
+      "english": "Now when Hezekiah the king had fallen sick, and was sick unto death, he could not find the prescription whereby to heal his sickness,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲇⲁⲛⲓⲏⲗ ⲁⲓⲉⲛⲕⲟⲧⲕ ⲁⲓ**ⲗⲟϭⲗⲉϫ** ⲁⲩⲱ ⲁⲓⲧⲱⲟⲩⲛ ⲁⲓⲉⲓⲣⲉ ⲛⲛⲉϩⲃⲏⲩⲉ ⲙⲡⲣⲣⲟ ⲛⲉⲓⲣϣⲡⲏⲣⲉ ⲇⲉ ⲛⲧϩⲟⲣⲁⲥⲓⲥ ⲙⲛⲡⲉⲧⲉⲓⲙⲉ ⲉⲣⲟⲥ",
+      "english": "And I Daniel fell asleep, and was sick: then I arose, and did the king's business; and I wondered at the vision, and there was none that understood it.",
+      "source": "Daniel 8",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲟⲩⲛϩⲁϩ ϣⲱⲛⲉ ⲛϩⲏⲧⲧⲏⲩⲧⲛ . ⲁⲩⲱ ⲥⲉ**ⲗⲉϫⲗⲱϫ** . ⲁⲩⲱ ⲥⲉⲛⲕⲟⲧⲕ ⲛϭⲓⲟⲩⲙⲏⲏϣⲉ .",
+      "english": "For this cause many among you are weak and sickly, and not a few sleep.",
+      "source": "1 Corinthians 11",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲛⲉ",
+        3,
+        13.394
+      ],
+      [
+        "ⲧⲁⲛϩⲉⲧ",
+        1,
+        13.051
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        2,
+        12.781
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        2,
+        11.025
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        9.746
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.912
+      ],
+      [
+        "ϥ",
+        6,
+        8.817
+      ],
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        1,
+        8.717
+      ],
+      [
+        "ⲉ",
+        5,
+        8.324
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        8.29
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        7.827
+      ],
+      [
+        "ⲱⲛϩ",
+        1,
+        7.257
+      ],
+      [
+        "ϩⲙ",
+        2,
+        6.954
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        6.762
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.272
+      ],
+      [
+        "ⲡ",
+        3,
+        5.793
+      ],
+      [
+        "ϩⲓ",
+        1,
+        5.772
+      ],
+      [
+        "ϫⲉ",
+        2,
+        5.687
+      ],
+      [
+        "ⲙ",
+        2,
+        4.892
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        4.761
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲗⲟϫⲗϫ",
+          2
+        ],
+        [
+          "ⲗⲟϫⲗϫ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲗⲟϫⲗϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲗⲟϫⲗϫ",
+          "ⲗⲟϫⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟϫⲗϫ_0_node",
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲗⲟϫⲗϫ",
+          "ⲗⲟϫⲗϫ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2990,
+      "count": 11
+    }
+  }
+}

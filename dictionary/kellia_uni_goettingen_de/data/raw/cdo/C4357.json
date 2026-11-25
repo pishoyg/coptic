@@ -1,0 +1,218 @@
+{
+  "id": "C4357",
+  "forms": [
+    {
+      "id": "CF10666",
+      "orth": "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7358,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4935",
+      "bibliography": "CD 418b; ChLCS 59a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲙⲛⲧⲣⲉϥϣⲙϣⲉ ⲉⲓⲇⲱⲗⲟⲛ ⲙⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ ⲙⲙⲛⲧϫⲁϫⲉ ⲛϯⲧⲱⲛ ⲛⲕⲱϩ ⲛϭⲱⲛⲧ ⲙ**ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ** ⲙⲡⲱⲣϫ ⲛϩⲁⲓⲣⲉⲥⲓⲥ .",
+      "english": "idolatry, sorcery, hatred, strife, jealousies, outbursts of anger, rivalries, divisions, heresies,",
+      "source": "48_Galatians_5",
+      "urn": "urn:cts:copticLit:nt.gal.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲣϥⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉϩⲃⲏⲩⲉ ⲛⲧⲥⲁⲣⲝ · ⲉⲧⲉⲛⲁⲓ ⲛⲉ ⲧⲡⲟⲣⲛⲉⲓⲁ ⲧⲙⲛⲧⲣⲉϥϣⲙϣⲉⲉⲓⲇⲱⲗⲟⲛ ⲧⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ ⲙⲙⲛⲧϫⲁϫⲉ ⲛϯⲧⲱⲛ ⲛⲕⲱϩ ⲙ**ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ** ⲙⲡⲱⲣϫ · ⲛϩⲁⲓⲣⲉⲥⲓⲥ · ⲛⲗⲁ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA143-158",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:308-330",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲱⲣϫ",
+        2,
+        15.804
+      ],
+      [
+        "ⲕⲱϩ",
+        2,
+        14.912
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        1,
+        12.969
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        10.492
+      ],
+      [
+        "ⲙ",
+        4,
+        10.351
+      ],
+      [
+        "·",
+        1,
+        9.178
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲱⲣϫ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲓⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲓⲣⲉⲥⲓⲥ_1_post_ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ_0_node",
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲱⲣϫ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱⲣϫ_3_post_ⲡ",
+          "ⲛ_2_post_ϩⲁⲓⲣⲉⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲁⲓⲣⲉⲥⲓⲥ",
+          "ϩⲁⲓⲣⲉⲥⲓⲥ_1_post_ⲙⲛⲧⲣⲉϥϯⲧⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6906,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4350",
+      "label": "ϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, strife"
+    },
+    {
+      "target": "C4352",
+      "label": "ⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "without strife"
+    },
+    {
+      "target": "C4351",
+      "label": "ⲙⲁⲓϯⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "strife-loving"
+    },
+    {
+      "target": "C4354",
+      "label": "ⲙⲛⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarrelling"
+    },
+    {
+      "target": "C4353",
+      "label": "ⲙⲛⲧⲁⲧϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "lack of strife"
+    },
+    {
+      "target": "C4355",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4356",
+      "label": "ⲣⲉϥϯⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "quarreller"
+    },
+    {
+      "target": "C4349",
+      "label": "ⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "dispute, quarrel (in ϯⲧⲱⲛ, \"to dispute\", \"to quarrel\")"
+    }
+  ]
+}

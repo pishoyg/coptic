@@ -1,0 +1,44 @@
+{
+  "id": "C5157",
+  "forms": [
+    {
+      "id": "CF12280",
+      "orth": "ⲣⲉϥⲟⲩⲉⲓⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5791",
+      "bibliography": "CD 492a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5154",
+      "label": "ⲟⲩⲉⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "saw"
+    },
+    {
+      "target": "C5156",
+      "label": "ⲟⲩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "swelling"
+    },
+    {
+      "target": "C5155",
+      "label": "ⲟⲩⲓⲥⲓ",
+      "pos": "V",
+      "gloss": "saw; swell(?)"
+    }
+  ]
+}

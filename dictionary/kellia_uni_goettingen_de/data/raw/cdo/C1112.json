@@ -1,0 +1,318 @@
+{
+  "id": "C1112",
+  "forms": [
+    {
+      "id": "CF3587",
+      "orth": "ⲕⲃⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6404,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF3588",
+      "orth": "ⲕⲃⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1373,
+        "count": 59
+      }
+    },
+    {
+      "orth": "ⲕⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6274,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2111,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ⲕⲏⲡ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5627,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲭⲃⲟⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4577,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1365,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲕⲏⲃ†",
+      "dialect": "A",
+      "id": "767.6"
+    },
+    {
+      "orth": "ⲕⲃⲁⲃ",
+      "dialect": "F",
+      "id": "767.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1295",
+      "bibliography": "CD 100a; KoptHWb 57"
+    },
+    {
+      "id": "CS1296",
+      "bibliography": "CD 100a; KoptHWb 57; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲛⲟϫⲧ ⲉϫⲙⲡⲕⲁϩ · ⲁⲓⲥⲱⲕ ⲙⲡϣⲟ ⲉⲧ**ⲕⲏⲃ** · ⲉϫⲙⲡⲁϩⲏⲧ ⲉⲓⲛⲏϫ ⲉⲃⲟⲗ ⲉⲓⲛⲕⲟⲧⲕ · ⲉⲓⲣⲟⲕϩ ⲉⲙⲁⲧⲉ ϩⲁⲡⲕⲁⲩⲥⲟⲛ · ⲙⲛⲡⲉⲓⲃⲉ ⲙⲙⲟⲟⲩ ·",
+      "english": "As for me I cast myself down on the ground, I heaped up the cool sand over my breast, I stretched myself out and lay at full length, and I was burning consumedly with heat, and the want of water.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲡⲉⲓⲛⲉϩ ⲛⲧⲁⲕⲡⲁϩⲧϥ ⲉϫⲱⲓ · ⲉϥⲟ ⲙⲡⲉⲥⲙⲟⲧ ⲛⲟⲩⲙⲟⲩ ⲉϥ**ⲕⲏⲃ** · ⲉϣⲁⲣⲉ ⲟⲩⲣⲱⲙⲉ ϫⲓⲧⲥ ϩⲛⲟⲩⲕⲁⲩⲙⲁ · ⲛϥⲉⲓⲁⲁϥ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ · ⲛⲧⲉⲟⲩⲙⲟⲧⲛⲉⲥ ϣⲱⲡⲉ ⲙⲡⲥⲱⲙⲁ ⲧⲏⲣϥ ⲉⲧⲃⲉⲧϩⲙⲙⲉ ·",
+      "english": "This oil which thou hast poured upon me is like unto the cool water which a man is wont to drink during the hot w^eather, and in which he washeth himself so that he may feel the relief thereof from the heat in his whole body.'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲏⲧⲛ ⲛⲉⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲙⲛⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ⲛϩⲩⲡⲟⲕⲣⲓⲧⲏⲥ . ϫⲉⲧⲉⲧⲛⲙⲟⲩϣⲧ ⲛⲧⲉⲑⲁⲗⲁⲥⲥⲁ ⲙⲛⲡⲉⲧϣⲟⲩⲱⲟⲩ ⲉⲣⲟⲩⲁ ⲙⲡⲣⲟⲥⲩⲗⲏⲧⲟⲥ . ⲁⲩⲱ ⲉϥϣⲁⲛⲉⲓⲣⲉ ϣⲁⲧⲉⲧⲛⲁⲁϥ ⲛϣⲏⲣⲉ ⲛⲧⲅⲉϩⲉⲛⲛⲁ ⲉϥ**ⲕⲏⲃ** ⲉⲣⲱⲧⲛ .",
+      "english": "Woe to you, scribes and Pharisees, hypocrites! For you travel around by sea and land to make one proselyte; and when he becomes one, you make him twice as much of a son of Gehenna as yourselves.",
+      "source": "40_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲗϭ",
+        1,
+        9.703
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        6.646
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.215
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        5.168
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        4.924
+      ],
+      [
+        "ⲉ",
+        3,
+        4.765
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        4.139
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        4.009
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        3.641
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        3.568
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        3.217
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        3.011
+      ],
+      [
+        "ϯ",
+        1,
+        2.709
+      ],
+      [
+        ".",
+        1,
+        1.75
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        1.701
+      ],
+      [
+        "ϩⲛ",
+        1,
+        1.672
+      ],
+      [
+        "ⲧ",
+        1,
+        1.264
+      ],
+      [
+        "ⲙ",
+        1,
+        0.544
+      ],
+      [
+        "ϥ",
+        1,
+        -0.286
+      ],
+      [
+        "ⲡ",
+        1,
+        -0.31
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲡⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲃⲟ",
+          "ⲕⲃⲟ_0_node",
+          1
+        ],
+        [
+          "ⲕⲃⲟ_0_node",
+          "ⲙ_1_post_ⲕⲃⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲃⲟ",
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          "ϩⲏⲧ_3_post_ⲡⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.18,
+      "rank": 1829,
+      "count": 28
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1115",
+      "label": "ϫⲓⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "get cooling, refreshment"
+    },
+    {
+      "target": "C1114",
+      "label": "ϯⲕⲃⲟ",
+      "pos": "V",
+      "gloss": "make cool"
+    },
+    {
+      "target": "C12192",
+      "label": "ⲕⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "cold"
+    },
+    {
+      "target": "C1113",
+      "label": "ⲕⲃⲟ",
+      "pos": "N",
+      "gloss": "coolness"
+    },
+    {
+      "target": "C1116",
+      "label": "ⲕⲃⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "cool wind, coolness"
+    }
+  ],
+  "etym": {
+    "egy_num": "160170",
+    "egy_lemma": "qbb",
+    "demo_num": "dm5933",
+    "demo_lemma": "qbj",
+    "english": "to be cool; to be calm",
+    "german": "kühl sein; kühlen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160170",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm5933"
+  }
+}

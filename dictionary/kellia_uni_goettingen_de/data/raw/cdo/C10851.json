@@ -1,0 +1,114 @@
+{
+  "id": "C10851",
+  "forms": [
+    {
+      "id": "CF29589",
+      "orth": "ⲫⲑⲟⲛⲏⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29590",
+      "orth": "ⲫⲑⲟⲛⲏⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20357,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14973",
+      "bibliography": "DDGLC",
+      "cu_ID": "1847"
+    },
+    {
+      "id": "CS14974",
+      "bibliography": "DDGLC",
+      "cu_ID": "10487"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲉⲛⲁⲧⲉⲕⲁⲣⲭⲏ . ⲙⲛⲛⲁⲧⲉⲕ ϩⲁⲏ ϫⲉϩⲉⲛⲡⲟⲛⲏⲣⲟⲛ ⲧⲏⲣⲟⲩ ⲛⲉ ϩⲓⲕⲁⲕⲓⲁ ϩⲓ**ⲫⲑⲟⲛⲏⲣⲓⲁ** ·",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 195-204",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:28-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲣⲁⲡⲉⲧⲏⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲁⲙⲉ",
+        1,
+        13.587
+      ],
+      [
+        "ⲕⲁⲕⲓⲁ",
+        1,
+        13.18
+      ],
+      [
+        "ϩⲓ",
+        2,
+        12.231
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓ_1_pre_ⲫⲑⲟⲛⲏⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲫⲑⲟⲛⲏⲣⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓ_1_pre_ⲫⲑⲟⲛⲏⲣⲓⲁ",
+          "ⲫⲑⲟⲛⲏⲣⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19971,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5525",
+    "grl_lemma": "φθονερία",
+    "grl_meaning": "envy",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1929b"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "C6863",
+  "forms": [
+    {
+      "id": "CF15775",
+      "orth": "ϩⲟⲥⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8052,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟⲥⲏⲙ",
+      "dialect": "S",
+      "id": "2287.1"
+    },
+    {
+      "orth": "ϩⲟⲥⲙⲉ",
+      "dialect": "S",
+      "id": "2287.2"
+    },
+    {
+      "orth": "ϩⲁⲥⲙ",
+      "dialect": "S",
+      "id": "2287.3"
+    },
+    {
+      "orth": "ϩⲱⲥⲉⲙ",
+      "dialect": "S",
+      "id": "2287.4"
+    },
+    {
+      "orth": "ϩⲟⲥⲉⲙ",
+      "dialect": "B",
+      "id": "2287.5"
+    },
+    {
+      "orth": "ϩⲁⲥⲙ",
+      "dialect": "F",
+      "id": "2287.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7580",
+      "bibliography": "CD 713a; CED 298; KoptHWb 393; DELC 314a; ChLCS 95b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϫⲟⲟⲩ ⲉⲃⲟⲗ ⲛⲛⲉⲥϩⲙϩⲁⲗ ⲉⲧⲣⲉⲩⲉⲓⲛⲉ ⲛⲁⲥ ⲛⲟⲩ**ϩⲟⲥⲙ** ⲙⲛⲟⲩⲁⲛϫⲓⲣ ·",
+      "english": "and she sent away her servants to bring to her the soda and soap (wherewith to wash herself).",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲉⲣϣⲁⲛⲉⲓⲁⲁⲧⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩ**ϩⲟⲥⲙ** ⲁⲩⲱ ⲛⲧⲉⲧⲁϣⲱ ⲛⲉ ⲛⲟⲩⲥⲙⲣⲱϩⲉ ⲁϫⲱϩⲙ ⲉⲙⲁⲧⲉ ϩⲛⲟⲩϫⲓⲛϭⲟⲛⲥ ⲙⲡⲁⲙⲧⲟ ⲉⲃⲟⲗ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ",
+      "english": "Though thou shouldest wash thyself with nitre, and multiply to thyself soap, still thou art stained by thine iniquities before me, saith the Lord.",
+      "source": "Jeremiah 2",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ϩⲁⲥⲃ** ⲛⲡⲉⲓⲛⲉ ⲛⲧⲁⲣⲁⲃⲓⲁ ⲛⲧϩⲉ ⲉⲧⲕⲛⲁⲓⲱ ⲛϩⲛⲟ ⲛⲓⲙ ⲉⲃⲟⲗ ⲉⲕⲉⲓⲱ ⲙⲡⲟⲩⲱϣ ⲉⲧⲟⲩⲧⲱⲟⲩ ϣⲁⲛⲟⲩⲉⲣⲏⲩ",
+      "english": "O natron in the likeness(?) of Arabia, just as you will wash away all things, may you wash ‹away› their desire that they have for one another!",
+      "source": "Separation spell",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁϣⲱ",
+        1,
+        19.013
+      ],
+      [
+        "ⲉⲓⲁⲁⲧⲉ",
+        1,
+        19.013
+      ],
+      [
+        "ⲁⲛϫⲓⲣ",
+        1,
+        18.013
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        7.787
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.88
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲥⲙ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲁⲛϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲁⲛϫⲓⲣ_1_post_ϩⲟⲥⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲥⲙ_0_node",
+          "ⲙⲛ_2_post_ⲁⲛϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛϫⲓⲣ",
+          "ⲟⲩ_2_post_ⲁⲛϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲁⲛϫⲓⲣ",
+          "ⲁⲛϫⲓⲣ_1_post_ϩⲟⲥⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5864,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "110020",
+    "egy_lemma": "ḥzmn",
+    "demo_num": "d4284",
+    "demo_lemma": "ḥsmn",
+    "english": "natron",
+    "german": "Natron",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/110020",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4284"
+  }
+}

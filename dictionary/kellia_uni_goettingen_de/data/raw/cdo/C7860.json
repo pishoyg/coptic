@@ -1,0 +1,45 @@
+{
+  "id": "C7860",
+  "forms": [
+    {
+      "id": "CF17785",
+      "orth": "ϣⲥϭⲉⲣⲱⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8737",
+      "bibliography": "CD 828b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3903",
+      "type": "cf",
+      "label": "strike"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7858",
+      "label": "ϭⲉⲣⲱⲃ",
+      "pos": "N",
+      "gloss": "staff, rod; power, authority"
+    },
+    {
+      "target": "C7859",
+      "label": "ϯϭⲉⲣⲱⲃ",
+      "pos": "V",
+      "gloss": "smite with rod"
+    }
+  ]
+}

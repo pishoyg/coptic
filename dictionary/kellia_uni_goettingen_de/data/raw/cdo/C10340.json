@@ -1,0 +1,113 @@
+{
+  "id": "C10340",
+  "forms": [
+    {
+      "id": "CF27543",
+      "orth": "ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF27544",
+      "orth": "ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11505,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13918",
+      "bibliography": "DDGLC",
+      "cu_ID": "9750"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲉⲡⲉⲕⲟⲩϫⲁⲓ ⲱ ⲡⲁϣⲏⲣⲉ ⲃⲓⲕⲧⲱⲣ · ⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲩϫⲡⲟⲕ ⲛⲁⲓ · ⲁⲓ**ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ** ⲛϫⲟⲩⲱⲧ ⲛⲕⲉⲇⲉⲛⲁⲣⲓⲟⲛ ⲛⲛⲟⲩⲃ ⲉⲡⲣⲡⲉ ⲙⲡⲁⲡⲟⲗⲗⲱⲛ · ⲉⲓⲙⲏⲣ ⲉⲓⲥⲱϩⲣ ⲉⲓⲛⲟⲩϫⲕ ·",
+      "english": "O my son Victor, I swear by mine own health, that on the day whereon thou wast born to me I made an offering of twenty centenarii of gold to the temple of Apollo. I was bound, deaf,",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲩⲱⲧ",
+        1,
+        14.511
+      ],
+      [
+        "ⲓ",
+        2,
+        9.85
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.526
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+          "ⲓ_1_pre_ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ",
+          "ⲡⲣⲟⲥⲭⲁⲣⲓⲍⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11072,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1874",
+    "grl_lemma": "προσχαρίζομαι",
+    "grl_meaning": "to gratify, satisfy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1531b; Preisigke 2:420"
+  }
+}

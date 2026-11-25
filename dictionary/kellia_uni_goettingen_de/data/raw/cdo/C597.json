@@ -1,0 +1,258 @@
+{
+  "id": "C597",
+  "forms": [
+    {
+      "id": "CF2243",
+      "orth": "ⲃⲟⲩϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3161,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲃⲱϩⲉ",
+      "dialect": "S",
+      "id": "619.1"
+    },
+    {
+      "orth": "ⲃⲟⲩϩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4928,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲃⲱϩⲉ",
+      "dialect": "A",
+      "id": "619.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS715",
+      "bibliography": "CD 48a; CED 30; KoptHWb 30, 496; DELC 34"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ϩⲣⲉⲕⲣⲓⲕⲉ ⲛⲛⲉⲕ**ⲃⲟⲩϩⲉ** ·",
+      "english": "nor slumber to thine eyelids,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲁϥⲧⲣⲉⲡⲕⲁϩ ⲡⲱⲱⲛⲉ ⲁϥⲣⲥⲁⲣⲝ ⲛⲧϩⲉ ⲛⲙⲙⲟⲩⲧⲉ ⲙⲛⲛⲕⲉⲉⲥ ⲙⲛⲡϥⲱ ⲙⲛⲛ**ⲃⲟⲩϩⲉ** ⲙⲛⲛⲃⲁⲗ · ⲙⲛⲛⲛϩ ⲙⲛⲧⲙⲉⲥⲑⲏⲧ ⲙⲛⲛϭⲓϫ ⲙⲛⲛⲟⲩⲉⲣⲏⲧⲉ ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲧⲏⲣϥ ·",
+      "english": "but He hath made the earth (and) the clay, to become flesh, similar to that which hath ligaments (or, nerves), and bones, and hair, and eyelids, and eyes, and the shoulders (?), and the breast, and the hands, and the feet, and all the other members.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲧⲉ ⲣⲉⲕⲣⲓⲕⲉ ⲛⲛⲉⲛ**ⲃⲟⲩϩⲉ** · ϣⲁⲛⲧⲉⲡϫⲟⲉⲓⲥ ⲛⲁϩⲙⲛ ⲉⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲓⲙ ⲛⲧⲉⲡϫⲁϫⲉ ·",
+      "english": "We will not allow our eyes sleep and our eyelids slumber until the Lord saves us from any temptation by the enemy.",
+      "source": "On Vigilance",
+      "urn": "urn:cts:copticLit:besa.vigilance.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉⲕⲣⲓⲕⲉ",
+        5,
+        21.394
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        20.013
+      ],
+      [
+        "ϩⲣⲉⲕⲣⲓⲕⲉ",
+        2,
+        18.428
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        17.013
+      ],
+      [
+        "ⲥⲙⲁⲩ",
+        1,
+        14.428
+      ],
+      [
+        "ⲣⲉϩ",
+        1,
+        14.013
+      ],
+      [
+        "ⲱⲣⲙ",
+        1,
+        13.554
+      ],
+      [
+        "ⲟⲩⲧⲉ",
+        2,
+        12.212
+      ],
+      [
+        "ⲃⲁⲗ",
+        3,
+        12.206
+      ],
+      [
+        "ⲛⲉⲛ",
+        3,
+        11.743
+      ],
+      [
+        "ⲧⲟⲣⲡ",
+        1,
+        11.728
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        2,
+        11.7
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        2,
+        11.509
+      ],
+      [
+        ",",
+        2,
+        11.282
+      ],
+      [
+        "ⲛ",
+        12,
+        10.979
+      ],
+      [
+        "ⲛⲉⲕ",
+        3,
+        10.957
+      ],
+      [
+        "ⲛⲉⲥ",
+        2,
+        10.799
+      ],
+      [
+        "ⲉⲕⲉ",
+        2,
+        10.709
+      ],
+      [
+        "ϥⲱ",
+        1,
+        10.691
+      ],
+      [
+        "ϩⲓ",
+        3,
+        10.401
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲟⲩϩⲉ",
+          3
+        ],
+        [
+          "ⲃⲟⲩϩⲉ_0_node",
+          11
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲃⲟⲩϩⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲃⲟⲩϩⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲃⲟⲩϩⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲟⲩϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2807,
+      "count": 12
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3700",
+      "type": "syn",
+      "label": "eyelids"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C598",
+      "label": "ⲣⲃⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "grow, develop eyelids (abnormally?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "56690",
+    "egy_lemma": "bhꜣ",
+    "english": "fan",
+    "german": "Wedel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/56690"
+  }
+}

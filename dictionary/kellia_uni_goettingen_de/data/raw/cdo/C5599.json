@@ -1,0 +1,192 @@
+{
+  "id": "C5599",
+  "forms": [
+    {
+      "id": "CF13173",
+      "orth": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.59,
+        "rank": 1021,
+        "count": 93
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6267",
+      "bibliography": "CD 533b-534a; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ · ϫⲉⲁϩⲉ ⲁⲓϩⲓⲥⲉ ⲧⲱⲛⲟⲩ · ⲱ ⲡⲁϣⲏⲣⲉ · ϩⲱⲥⲧⲉ ⲛⲛⲁϣⲛⲟϫⲧ · ⲉⲡⲕⲁϩ ⲉⲧⲃⲉⲡⲙⲕⲁϩ ⲛϩⲏⲧ · ϩⲱⲥⲧⲉ ⲛⲛⲁⲉϣⲛⲟϫⲧ · ⲉⲡⲕⲁϩ ⲉⲧⲃⲉⲡⲙⲕⲁϩ ⲛϩⲏⲧ · **ⲉⲓⲱϣ **ⲉϩⲣⲁⲓ**** ⲉⲡϫⲟⲉⲓⲥ ⲉⲧⲃⲉⲛⲁⲛⲟⲃⲉ ⲉⲧⲟϣ ·",
+      "english": "And he said unto me, 'Yea, I did suffer greatly, so much so in fact that sometimes through the intensity of my sorrow I used to throw myself on the ground, and cry up to God because of my manifold sins.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉⲡⲉⲧⲱⲃϣ ⲙⲙⲟϥ ⲉⲧⲙϯ ϯⲧⲉⲟⲩⲱ ⲙⲡϩⲏⲕⲉ ⲛⲛⲁⲏⲧ ⲡⲁⲓ **ϥⲛⲁⲱϣ **ⲉϩⲣⲁⲓ**** ⲉⲡⲛⲟⲩⲧⲉ ⲛϥⲧⲙⲥⲱⲧⲙ ⲉⲣⲟϥ ·",
+      "english": "for He saith, 'He who forgetteth to give a pledge to the poor shall cry out to God, and He will not hearken unto him.'",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ ⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲩⲩⲭⲏ ⲉⲥϩⲉϫϩⲱϫ ⲙⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲉϥϩⲛ ⲟⲩⲙⲕⲁϩ ⲛϩⲏⲧ **ⲁϥⲱϣ **ⲉϩⲣⲁⲓ**** ⲉⲣⲟⲕ",
+      "english": "The stars shined in their watches, and rejoiced:",
+      "source": "Baruch 3",
+      "urn": "urn:cts:copticLit:ot.bar.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.59,
+      "rank": 888,
+      "count": 93
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

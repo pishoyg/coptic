@@ -1,0 +1,101 @@
+{
+  "id": "C1758",
+  "forms": [
+    {
+      "id": "CF5085",
+      "orth": "ⲗⲱϫⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5086",
+      "orth": "ⲗⲱϫϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8409,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF5087",
+      "orth": "ⲗⲱϫⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲟϫⲕ⸗",
+      "dialect": "S",
+      "id": "1023.1"
+    },
+    {
+      "orth": "ⲗⲟϫϭ⸗",
+      "dialect": "S",
+      "id": "1023.2"
+    },
+    {
+      "orth": "ⲗⲟϫⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6413,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲗⲟϭⲕ⸗",
+      "dialect": "S",
+      "id": "1023.4"
+    },
+    {
+      "orth": "ⲗⲟϫⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6413,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2040",
+      "bibliography": "CD 150b; ChLCS 23a"
+    },
+    {
+      "id": "CS2041",
+      "bibliography": "CD 150b; ChLCS 22a"
+    },
+    {
+      "id": "CS2042",
+      "bibliography": "CD 150b; KoptHWb 83; ChLCS 23a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲩϥⲱⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲉⲩϩⲟ ⲉⲧⲃⲉⲡϣⲟⲉⲓϣ ⲙⲡⲏⲓ ⲉⲛⲧⲁϥ**ⲗⲱϫϭ** ⲉⲣⲟⲟⲩ ⲉⲛⲁϣⲱⲟⲩ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ",
+      "english": "They wipe their faces because of the dust of the temple, when there is much upon them.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲗⲁⲁⲩ **ⲗⲱϫϭ** ⲉⲛⲉⲕϭⲓϫ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲁⲛⲁⲑⲉⲙⲁ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲕⲧⲟϥ ⲉⲃⲟⲗ ϩⲙⲡϭⲱⲛⲧ ⲛⲧⲉϥⲟⲣⲅⲏ ⲛϥϯ ⲛⲁⲕ ⲛⲟⲩⲛⲁ ⲛϥⲛⲁ ⲛⲁⲕ ⲛϥⲧⲁϣⲟⲕ ⲙⲡⲉⲥⲙⲟⲧ ⲛⲧⲁⲡϫⲟⲉⲓⲥ ⲱⲣⲕ ⲛⲛⲉⲕⲉⲓⲟⲧⲉ",
+      "english": "And there shall nothing of the cursed thing cleave to thy hand, that the Lord may turn from his fierce anger, and shew thee mercy, and pity thee, and multiply thee, as he sware to thy fathers;",
+      "source": "Deuteronomy 13",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7966,
+      "count": 2
+    }
+  }
+}

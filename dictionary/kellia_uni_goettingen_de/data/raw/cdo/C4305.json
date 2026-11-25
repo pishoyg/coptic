@@ -1,0 +1,51 @@
+{
+  "id": "C4305",
+  "forms": [
+    {
+      "id": "CF10561",
+      "orth": "ⲣⲁⲧⲱⲙⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4878",
+      "bibliography": "CD 415a; KoptHWb 232"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3029",
+      "type": "cf",
+      "label": "state, condition, position"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4306",
+      "label": "ϫⲓⲛⲧⲱⲙⲓ",
+      "pos": "N",
+      "gloss": "joining"
+    },
+    {
+      "target": "C4304",
+      "label": "ⲧⲱⲙⲓ",
+      "pos": "N",
+      "gloss": "joint, joining"
+    },
+    {
+      "target": "C4303",
+      "label": "ⲧⲱⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "join, be fitting, be appropriate; join"
+    }
+  ]
+}

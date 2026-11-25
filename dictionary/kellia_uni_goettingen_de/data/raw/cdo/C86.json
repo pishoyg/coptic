@@ -1,0 +1,195 @@
+{
+  "id": "C86",
+  "forms": [
+    {
+      "id": "CF318",
+      "orth": "ⲁⲙⲁⲗⲏϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6056,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS101",
+      "bibliography": "CD 7b; KoptHWb 6, 485; DELC 9"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉ ⲁⲩϩⲣⲟϣ ⲇⲉ ⲡⲉ ⲛϫⲉⲛⲉⲛⲃⲁⲗ ⲛⲓⲁⲕⲱⲃ ⲉⲃⲟⲗ ϧⲉⲛϯⲙⲉⲧϧⲉⲗⲗⲟ ⲟⲩⲟϩ ⲛⲁϥϫⲉⲙϫⲟⲙ ⲛⲛⲁⲩ ⲙⲃⲟⲗ ⲁⲛ ⲡⲉ ⲟⲩⲟϩ ⲁϥⲑⲣⲟⲩϧⲱⲛⲧ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲁϥϯⲫⲓ ⲉⲣⲱⲟⲩ ⲟⲩⲟϩ ⲁϥ**ⲁⲙⲁⲗⲏϫ** ⲉⲣⲱⲟⲩ",
+      "english": "Now the eyes of Israel were dim through age, and he could not see; and he brought them near to him, and he kissed them, and embraced them.",
+      "source": "01_Genesis_48",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁϥⲥⲱⲧⲉⲙ ⲛϫⲉⲗⲁⲃⲁⲛ ⲉⲫⲣⲁⲛ ⲛⲓⲁⲕⲱⲃ ⲡϣⲏⲣⲓ ⲛⲧⲉϥⲥⲱⲛⲓ ⲁϥϭⲟϫⲓ ⲉⲃⲟⲗ ⲉϩⲣⲁϥ ⲟⲩⲟϩ ⲁϥ**ⲁⲙⲁⲗⲏϫ** ⲉⲣⲟϥ ⲁϥϯⲫⲓ ⲉⲣⲱϥ ⲟⲩⲟϩ ⲁϥⲉⲛϥ ⲉϧⲟⲩⲛ ⲉⲡⲉϥⲏⲓ ⲁϥⲥⲁϫⲓ ⲇⲉ ⲛϫⲉⲓⲁⲕⲱⲃ ⲛⲛⲁⲓⲥⲁϫⲓ ⲧⲏⲣⲟⲩ ϧⲁⲧⲉⲛⲗⲁⲃⲁⲛ",
+      "english": "And it came to pass when Laban heard the name of Jacob, his sister's son, he ran to meet him, and embraced and kissed him, and brought him into his house; and he told Laban all these sayings.",
+      "source": "01_Genesis_29",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:29",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        5,
+        10.39
+      ],
+      [
+        "ⲁ",
+        3,
+        8.744
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        8.445
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        8.395
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.117
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          2
+        ],
+        [
+          "ⲁⲙⲁⲗⲏϫ_0_node",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲙⲁⲗⲏϫ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲁⲙⲁⲗⲏϫ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          "ⲁ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          "ϥ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲁⲙⲁⲗⲏϫ",
+          "ⲁⲙⲁⲗⲏϫ_0_node",
+          2
+        ],
+        [
+          "ⲁⲙⲁⲗⲏϫ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲙⲁⲗⲏϫ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲙⲁⲗⲏϫ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁⲙⲁⲗⲏϫ_0_node",
+          "ⲉⲣⲱ_1_post_ⲁⲙⲁⲗⲏϫ",
+          1
+        ],
+        [
+          "ⲉⲣⲱ_1_post_ⲁⲙⲁⲗⲏϫ",
+          "ⲟⲩ_2_post_ⲉⲣⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5553,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1887",
+      "type": "cf",
+      "label": "clasp, embrace"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C88",
+      "label": "ϫⲓⲛⲁⲙⲁⲗⲏϫ",
+      "pos": "N",
+      "gloss": "act of embracing"
+    },
+    {
+      "target": "C87",
+      "label": "ⲉⲣⲁⲙⲁⲗⲏϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ],
+  "etym": {
+    "egy_num": "164780",
+    "egy_lemma": "knm",
+    "english": "to wrap in",
+    "german": "einhüllen (in ein Gewand)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164780"
+  }
+}

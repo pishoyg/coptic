@@ -1,0 +1,127 @@
+{
+  "id": "C6411",
+  "forms": [
+    {
+      "id": "CF14848",
+      "orth": "ϩⲓϩⲣⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20255,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7115",
+      "bibliography": "CD 650a; KoptHWb 352"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲧⲛⲛⲁⲩ ϫⲉⲉⲣⲉⲡⲉⲭⲣⲏⲙⲁ ⲧⲏⲣϥ ⲉⲧⲉⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲡⲉ · ϩⲏⲡ ⲛϩⲏⲧⲛ · ⲡⲁⲣⲁⲧⲣⲉⲛⲕⲓⲙⲕⲓⲙ ⲧⲉⲛⲟⲩ ⲉⲣⲟϥ ⲡⲉ · ⲡⲁⲣⲁⲧⲣⲉⲛϭⲉⲗⲡ**ϩⲓϩⲣⲁ**ϥ ⲉⲃⲟⲗ ⲧⲉⲛⲟⲩ ⲡⲉ ⲙⲁⲗⲓⲥⲧⲁ ⲛϥⲟⲩⲏⲏⲩ ⲉϩⲣⲁⲓ ⲁⲛ",
+      "english": "...",
+      "source": "Some Kinds of People Sift Dirt: GL71-74",
+      "urn": "urn:cts:copticLit:shenoute.dirt.monbgl:0-5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6402",
+      "label": "ϣⲡϩⲟ",
+      "pos": "V",
+      "gloss": "receive, accept"
+    },
+    {
+      "target": "C6403",
+      "label": "ϥⲓϩⲟ",
+      "pos": "V",
+      "gloss": "raise face"
+    },
+    {
+      "target": "C6398",
+      "label": "ϩⲟ",
+      "pos": "N",
+      "gloss": "face; side, edge"
+    },
+    {
+      "target": "C6399",
+      "label": "ϩⲟ ⲙⲛϩⲟ",
+      "pos": "ADV",
+      "gloss": "face to face"
+    },
+    {
+      "target": "C6407",
+      "label": "ϫⲉⲙϩⲟ",
+      "pos": "V",
+      "gloss": "be sufficient, able (\"find face\")"
+    },
+    {
+      "target": "C6406",
+      "label": "ϫⲓ ϩⲣⲁ⸗",
+      "pos": "V",
+      "gloss": "disport, amuse, occupy self, converse"
+    },
+    {
+      "target": "C6404",
+      "label": "ϫⲓϩⲟ",
+      "pos": "V",
+      "gloss": "\"take face\", respect person, favour"
+    },
+    {
+      "target": "C6405",
+      "label": "ϫⲓϩⲟ",
+      "pos": "N",
+      "gloss": "favoritism"
+    },
+    {
+      "target": "C6400",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "turn face, look"
+    },
+    {
+      "target": "C6401",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "\"give face\", beg, encourage"
+    },
+    {
+      "target": "C6409",
+      "label": "ⲉϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "toward, to"
+    },
+    {
+      "target": "C6410",
+      "label": "ⲛⲁϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "in presence of, before"
+    },
+    {
+      "target": "C6408",
+      "label": "ⲣⲉⲙϩⲣⲁ⸗",
+      "pos": "N",
+      "gloss": "respected person"
+    }
+  ],
+  "etym": {
+    "egy_num": "885728",
+    "egy_lemma": "ḥr-ḥr",
+    "demo_num": "d4188",
+    "demo_lemma": "ḥr-ḥr (n)",
+    "english": "face; sight",
+    "german": "im Angesicht von; vor",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/885728",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4188"
+  }
+}

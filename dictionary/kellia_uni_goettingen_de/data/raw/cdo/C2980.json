@@ -1,0 +1,73 @@
+{
+  "id": "C2980",
+  "forms": [
+    {
+      "id": "CF7825",
+      "orth": "ⲡⲱϩ (ⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31665",
+      "orth": "ⲡⲱϩ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛ-",
+    "note": "als Hilsverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3411",
+      "bibliography": "CD 282a; KoptHWb 157; ChLCS 39b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲕⲁⲣⲡⲟⲥ ⲇⲉ **ⲡⲱϩ **ⲛ**ⲧⲉⲩⲛⲟⲩ** ϣⲁϥⲛⲡⲟϩⲥ ϫⲉⲁⲡⲧⲏ ⲙⲡⲱϩⲥ ϣⲱⲡⲉ",
+      "english": "But when the fruit is ripe, immediately he puts forth the sickle, because the harvest has come.'",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉⲥⲥⲱⲧⲙ ⲇⲉ ⲉⲛⲁⲓ ⲛϭⲓⲧⲉϥⲙⲁⲁⲩ **ⲁⲥⲡⲱϩ **ⲛ**ⲛⲉⲥϩⲟⲓⲧⲉ** ·",
+      "english": "And it came to pass that when his mother heard these things she rent her garments,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲣⲉⲗⲁⲁⲩ ⲛⲉϫⲧⲟⲉⲓⲥ ⲛϣⲁⲉⲓ ⲉⲣⲛϣⲧⲏⲛ ⲙⲡⲗϭⲉ ⲉϣⲱⲡⲉ ⲙⲙⲟⲛ ⲧⲧⲟⲉⲓⲥ ⲛϣⲁⲓ ⲛⲁϥⲓⲡⲕⲱⲧⲉ ⲙⲙⲁⲩ ⲛⲧⲉϣⲧⲏⲛ ⲙⲡⲗϭⲉ **ⲛⲥⲡⲱϩ **ⲛ**ϩⲟⲩⲟ** .",
+      "english": "No one sews a piece of unshrunk cloth on an old garment, or else the patch shrinks and the new tears away from the old, and a worse hole is made.",
+      "source": "Mark Chapter 2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2982",
+      "label": "ⲙⲁ ⲛⲫⲟϩ",
+      "pos": "N",
+      "gloss": "goal"
+    },
+    {
+      "target": "C2979",
+      "label": "ⲡⲱϩ",
+      "pos": "V",
+      "gloss": "reach, reach maturity, attain, arrive"
+    },
+    {
+      "target": "C2981",
+      "label": "ⲡⲱϩ",
+      "pos": "N",
+      "gloss": "maturity"
+    }
+  ]
+}

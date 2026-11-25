@@ -1,0 +1,330 @@
+{
+  "id": "C9343",
+  "forms": [
+    {
+      "id": "CF23506",
+      "orth": "ⲕⲁⲧⲁⲝⲓⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF23507",
+      "orth": "ⲕⲁⲧⲁⲕⲝⲓⲓⲟⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23508",
+      "orth": "ⲕⲁⲧⲁⲝⲓⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3918,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11732",
+      "bibliography": "DDGLC",
+      "cu_ID": "3194"
+    },
+    {
+      "id": "CS11733",
+      "bibliography": "DDGLC",
+      "cu_ID": "5353"
+    },
+    {
+      "id": "CS11734",
+      "bibliography": "DDGLC",
+      "cu_ID": "9612"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉⲡⲁⲉⲓⲱⲧ **ⲕⲁⲧⲁⲝⲓⲟⲩ** ⲉϣⲁϫⲉ ⲛⲙⲙⲁⲕ · ⲁⲕⲉⲓ ⲁⲕⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲓ ϩⲛⲟⲩϩⲱⲡ",
+      "english": "And my father did not consider thee of sufficient honour for the position, and would not discuss the matter with thee. Then thou didst make entreaty to me secretly, and didst say",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲡⲉⲛϫⲟⲉⲓⲥ ⲁϥ**ⲕⲁⲧⲁⲝⲓⲟⲩ** ⲛⲧⲟϥ ⲁϥⲟⲩⲱⲙ ⲙⲛⲛⲧⲉⲗⲱⲛⲏⲥ · ⲁⲩⲱ ⲁϥⲥⲱ ⲙⲛⲓⲟⲩⲇⲁⲥ ⲡⲁⲛⲟⲙⲟⲥ · ⲁⲩⲣⲱⲙⲉ ⲛⲗⲟⲓⲙⲟⲥ ⲥⲟⲩⲧ ⲛⲧⲟⲟⲧϥ ⲉⲃⲟⲗ ⲙⲛⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and Jesus, our Lord, considered him to be worthy to do so. He ate with the tax-gatherers, and He drank with Judas the lawless man, and a pestilent man reached out his hand with (that of) God.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉⲁⲡⲛⲟⲩⲧⲉ **ⲕⲁⲧⲁⲝⲓⲟⲩ** ⲙⲙⲟϥ · ⲁϥⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲕⲟⲥⲙⲟⲥ · ⲁϥϣⲁϫⲉ ⲙⲛⲡⲉϥⲡⲗⲁⲥⲙⲁ ⲉⲧⲃⲉⲡⲧⲁϩⲟ ⲉⲣⲁⲧϥ · ⲙⲡⲟⲩϫⲁⲓ ⲛⲧⲉⲩⲯⲩⲭⲏ ⲡⲟⲥⲟ ⲙⲁⲗⲗⲟⲛ ⲛϥⲛⲁⲧⲛⲛⲟⲟⲩ ⲁⲛ · ⲛⲛⲉϥⲡⲉⲧⲟⲩⲁⲁⲃ ⲛϥⲥⲗⲥⲱⲗⲟⲩ ϩⲛⲛⲉⲩϩⲓⲥⲉ ·",
+      "english": "If God deemed him worthy thereof, and came down into the world, and spake unto the creature which He had fashioned concerning his restoration with salvation of soul, how very much more will He not send His saints to comfort (His servants) in their sufferings?",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ϥ",
+        15,
+        13.242
+      ],
+      [
+        "ⲁⲇⲁⲙ",
+        2,
+        13.051
+      ],
+      [
+        "ⲙⲟⲅⲓⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲁ",
+        9,
+        11.554
+      ],
+      [
+        "ⲙⲙⲟ",
+        5,
+        10.946
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        3,
+        10.045
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        7.896
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        7.779
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        7.629
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.101
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        7.081
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        6.626
+      ],
+      [
+        "ⲉ",
+        3,
+        6.572
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        6.47
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.372
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        6.329
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.679
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        5.664
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          3
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          4
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲕⲁⲗⲉⲓ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_pre_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          "ⲉ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ϣⲁϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ϥ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲕⲁⲧⲁⲝⲓⲟⲩ_0_node",
+          "ⲁ_2_post_ⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲕⲁⲗⲉⲓ",
+          "ϥ_2_post_ⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲕⲁⲗⲉⲓ",
+          "ⲕⲁⲗⲉⲓ_1_post_ⲕⲁⲧⲁⲝⲓⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3530,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "1070",
+    "grl_lemma": "καταξιόω",
+    "grl_meaning": "to deem worthy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 903b; Preisigke 1:761"
+  }
+}

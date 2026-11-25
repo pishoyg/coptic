@@ -1,0 +1,120 @@
+{
+  "id": "C3902",
+  "forms": [
+    {
+      "id": "CF9735",
+      "orth": "ϯⲥⲓϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6094,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4429",
+      "bibliography": "CD 376b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁⲥ ⲛⲁⲩ ϫⲉⲙⲡⲣⲙⲟⲩⲧⲉ ⲉⲣⲟⲓ ϫⲉⲛⲟⲉⲙⲓⲛ ⲙⲟⲩⲧⲉ ⲉⲣⲟⲓ ϫⲉⲧⲉⲧⲥⲁϣⲉ ⲏ ⲧⲉⲛⲧⲁⲥⲥⲓϣⲉ ϫⲉⲁⲡϩⲓⲕⲁⲛⲟⲥ ⲙⲡⲇⲩⲛⲁⲧⲟⲥ ⲁϥ**ϯⲥⲓϣⲉ** ⲛⲁⲓ ⲉⲙⲁⲧⲉ",
+      "english": "And she said to them, Nay, do not call me Noemin; call me 'Bitter,' for the Mighty One has dealt very bitterly with me.",
+      "source": "Ruth Chapter 1",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲩⲛⲁⲧⲟⲥ",
+        3,
+        17.598
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        3,
+        14.135
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        3,
+        12.682
+      ],
+      [
+        "ⲓ",
+        3,
+        10.02
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        8.858
+      ],
+      [
+        "ⲁ",
+        3,
+        8.214
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5650,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3901",
+      "label": "ⲉⲣⲉⲛϣⲁϣⲓ",
+      "pos": "V",
+      "gloss": "be bitter"
+    },
+    {
+      "target": "C3899",
+      "label": "ⲥⲓϣⲉ",
+      "pos": "V",
+      "gloss": "be like gall, bitter"
+    },
+    {
+      "target": "C3900",
+      "label": "ⲥⲓϣⲉ",
+      "pos": "N",
+      "gloss": "bitterness; gall"
+    }
+  ]
+}

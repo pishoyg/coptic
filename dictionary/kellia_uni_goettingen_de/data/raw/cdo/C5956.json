@@ -1,0 +1,423 @@
+{
+  "id": "C5956",
+  "forms": [
+    {
+      "id": "CF13916",
+      "orth": "ϣⲁⲛⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.3,
+        "rank": 405,
+        "count": 363
+      }
+    },
+    {
+      "orth": "ϣⲁⲧⲉ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.42,
+        "rank": 398,
+        "count": 205
+      }
+    },
+    {
+      "orth": "ϣⲁⲧ⸗",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.17,
+        "rank": 666,
+        "count": 99
+      }
+    },
+    {
+      "orth": "ϣⲉⲧ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4540,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲛϣⲁⲛⲧⲉ",
+      "dialect": "S",
+      "id": "1936.1"
+    },
+    {
+      "orth": "ϣⲁⲛⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.22,
+        "rank": 320,
+        "count": 508
+      }
+    },
+    {
+      "orth": "ϣⲁⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11798,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2326,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲁⲧⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11798,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲁⲛⲧⲉ-",
+      "dialect": "A",
+      "id": "1936.7"
+    },
+    {
+      "orth": "ϣⲁⲧⲉ-",
+      "dialect": "A",
+      "id": "1936.6"
+    },
+    {
+      "orth": "ϣⲁⲧ⸗",
+      "dialect": "A",
+      "id": "1936.8"
+    },
+    {
+      "orth": "ϣⲁⲛⲧ⸗",
+      "dialect": "A",
+      "id": "1936.9"
+    },
+    {
+      "orth": "ϣⲁⲛⲧⲉ-",
+      "dialect": "F",
+      "id": "1936.10"
+    },
+    {
+      "orth": "ϣⲁⲛⲧ⸗",
+      "dialect": "F",
+      "id": "1936.11"
+    },
+    {
+      "orth": "ϣⲁⲛ⸗",
+      "dialect": "F",
+      "id": "1936.12"
+    },
+    {
+      "orth": "ϣⲁⲛⲧⲉ-",
+      "dialect": "L",
+      "id": "1936.13"
+    },
+    {
+      "orth": "ϣⲁⲛⲧ⸗",
+      "dialect": "L",
+      "id": "1936.14"
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS6640",
+      "bibliography": "CD 573a; CED 247; KoptHWb 318; DELC 266b-267a; ChLCS 79a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ⲁϥⲉⲣⲁⲅⲱⲛⲓⲍⲉⲥⲑⲉ **ϣⲁⲧⲉ**ϥⲛⲁⲩ ⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "For this reason he strove until he saw Peter.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϣⲁⲛⲧⲉ**ϥ.. ⲙⲙⲟⲓ ⲉⲃⲟⲗ ⲙⲡⲣⲙⲛⲁⲥ .",
+      "english": "that he might not … the old man from me.",
+      "source": "Apophthegmata Patrum Sahidic 136",
+      "urn": "urn:cts:copticLit:ap.136.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲡⲓⲉϫⲱⲣϩ ⲇⲉ ⲙⲡⲁϥⲛⲕⲟⲧ ⲉⲡⲧⲏⲣϥ **ϣⲁⲧⲉ**ⲡⲓⲟⲩⲱⲓⲛⲓ ϣⲁⲓ .",
+      "english": "Through the night he remained awake until dawn.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϣⲁⲩⲧⲣⲉⲩⲕⲱⲧⲉ ϩⲛⲟⲩϫⲛⲁϩ **ϣⲁⲛⲧ**ⲟⲩⲟⲩⲃⲁϣ ·",
+      "english": "until it turns white,",
+      "source": "Apophthegmata Patrum Sahidic 029",
+      "urn": "urn:cts:copticLit:ap.29.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲱⲧⲉⲛ ϫⲉⲟⲩⲟⲛ ϩⲁⲛⲟⲩⲟⲛ ϧⲉⲛⲛⲏ ⲉⲧⲟϩⲓ ⲉⲣⲁⲧⲟⲩ ⲙⲡⲁⲓⲙⲁ ⲛⲥⲉⲛⲁϫⲉⲙϯⲡⲓ ⲙⲫⲙⲟⲩ ⲁⲛ **ϣⲁⲧ**ⲟⲩⲛⲁⲩ ⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲁⲥⲓ ϧⲉⲛⲟⲩϫⲟⲙ .",
+      "english": "He said to them, 'Most certainly I tell you, there are some standing here who will in no way taste death until they see the Kingdom of God come with power.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲣⲱⲕ ϩⲱⲱⲕ **ϣⲁⲛⲧ**ⲟⲩϫⲛⲟⲩⲕ ·",
+      "english": "Hold thy peace until thou art asked a question.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        312,
+        27.696
+      ],
+      [
+        "ⲓ",
+        90,
+        24.466
+      ],
+      [
+        "ⲕ",
+        69,
+        23.868
+      ],
+      [
+        "ⲧⲛ",
+        8,
+        23.788
+      ],
+      [
+        "ϥⲟⲧ",
+        15,
+        23.602
+      ],
+      [
+        "ⲡⲓ",
+        78,
+        23.042
+      ],
+      [
+        "ⲉ",
+        85,
+        22.66
+      ],
+      [
+        "ⲛϫⲉ",
+        52,
+        22.111
+      ],
+      [
+        "ⲉⲅⲉⲣⲁⲣⲁ",
+        3,
+        21.865
+      ],
+      [
+        "ⲕⲉⲕ",
+        4,
+        21.788
+      ],
+      [
+        "ⲡ",
+        54,
+        21.299
+      ],
+      [
+        "ⲫⲟϩ",
+        8,
+        20.862
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        41,
+        20.791
+      ],
+      [
+        "ⲛ",
+        59,
+        20.654
+      ],
+      [
+        "ⲙ",
+        45,
+        20.474
+      ],
+      [
+        "ⲟⲩⲇⲉⲁ",
+        2,
+        20.11
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        23,
+        19.62
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        41,
+        19.568
+      ],
+      [
+        "ⲟⲩ",
+        44,
+        19.547
+      ],
+      [
+        "ⲃⲏⲑⲥⲁⲓⲇⲁ",
+        3,
+        19.543
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        25,
+        24.766
+      ],
+      [
+        "ϥ",
+        355,
+        20.173
+      ],
+      [
+        "ⲉⲓ",
+        112,
+        19.067
+      ],
+      [
+        "ⲛ",
+        266,
+        18.212
+      ],
+      [
+        "ⲡ",
+        223,
+        18.137
+      ],
+      [
+        "ⲕ",
+        104,
+        17.191
+      ],
+      [
+        "ⲧⲛ",
+        67,
+        16.599
+      ],
+      [
+        "ⲉ",
+        141,
+        16.473
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        53,
+        15.445
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        47,
+        15.196
+      ],
+      [
+        "ⲙ",
+        89,
+        15.015
+      ],
+      [
+        "ϩⲉⲱⲥ",
+        10,
+        14.968
+      ],
+      [
+        "ⲟⲩ",
+        85,
+        14.685
+      ],
+      [
+        "ⲥ",
+        63,
+        14.443
+      ],
+      [
+        "ⲃⲏⲑⲥⲁⲓⲇⲁ",
+        3,
+        14.005
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        50,
+        13.634
+      ],
+      [
+        "ⲥⲱⲧⲉ",
+        9,
+        13.175
+      ],
+      [
+        "ⲙⲟⲩ",
+        21,
+        13.157
+      ],
+      [
+        "ⲁⲩⲱ",
+        52,
+        13.085
+      ],
+      [
+        "ⲧⲉϥ",
+        24,
+        12.956
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲧⲉ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁⲛⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.48,
+      "rank": 169,
+      "count": 869
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4613,
+      "count": 3
+    }
+  }
+}

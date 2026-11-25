@@ -1,0 +1,104 @@
+{
+  "id": "C8228",
+  "forms": [
+    {
+      "id": "CF18952",
+      "orth": "ⲁⲛⲁⲅⲕⲁⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18954",
+      "orth": "ⲁⲛⲁⲅⲕⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19496,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18953",
+      "orth": "ⲁⲛⲁⲅⲅⲉⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9330",
+      "bibliography": "DDGLC",
+      "cu_ID": "3494"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉϥⲣⲁⲥⲧⲉ ⲇⲉ ⲁϥⲃⲱⲕ ⲉⲕⲁⲓⲥⲁⲣⲓⲁ ⲕⲟⲣⲛⲏⲗⲓⲟⲥ ϭⲉ ⲛⲉϥϭⲱϣⲧ ϩⲏⲧⲟⲩ ⲡⲉ ⲉⲁϥⲙⲟⲩⲧⲉ ⲉⲛⲉϥⲥⲩⲅⲅⲉⲛⲏⲥ ⲙⲛⲛⲉϥϣⲃⲏⲣ **ⲁⲛⲁⲅⲕⲁⲓⲟⲥ** .",
+      "english": "On the next day they entered into Caesarea. Cornelius was waiting for them, having called together his relatives and his near friends.",
+      "source": "44_Acts of the Apostles_10",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲩⲅⲅⲉⲛⲏⲥ",
+        1,
+        15.428
+      ],
+      [
+        "ϣⲃⲏⲣ",
+        1,
+        12.685
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19107,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "127",
+    "grl_lemma": "ἀναγκαῖος",
+    "grl_meaning": "indispensable, valuable, necessary",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 100b; Preisigke 1:79"
+  }
+}

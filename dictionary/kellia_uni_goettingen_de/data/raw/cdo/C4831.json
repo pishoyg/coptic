@@ -1,0 +1,56 @@
+{
+  "id": "C4831",
+  "forms": [
+    {
+      "id": "CF11627",
+      "orth": "ⲧϩϯϩ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5450",
+      "bibliography": "KoptHWb 261; DELC 226b; ChLCS 64b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4768",
+      "type": "cf",
+      "label": "be mixed, be disturbed, mix, stir"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4830",
+      "label": "ⲙⲉⲧⲑⲟϧⲧⲉϧ",
+      "pos": "N",
+      "gloss": "intercourse, society"
+    },
+    {
+      "target": "C4832",
+      "label": "ⲙⲛⲧⲧⲉϩϯϩ",
+      "pos": "N",
+      "gloss": "confusion?"
+    },
+    {
+      "target": "C4828",
+      "label": "ⲧⲁϩⲧϩ",
+      "pos": "V",
+      "gloss": "mix, confuse"
+    },
+    {
+      "target": "C4829",
+      "label": "ⲧⲁϩⲧϩ",
+      "pos": "N",
+      "gloss": "mixture, confusion"
+    }
+  ]
+}

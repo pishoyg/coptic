@@ -1,0 +1,150 @@
+{
+  "id": "C8761",
+  "forms": [
+    {
+      "id": "CF20995",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF20996",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20997",
+      "orth": "ⲇⲓⲁⲧⲁⲅⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7980,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10479",
+      "bibliography": "DDGLC",
+      "cu_ID": "1031"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲁⲩϫⲓ ϩⲱⲟⲩ ⲙⲡⲛⲟⲙⲟⲥ ⲉϩⲉⲛ**ⲇⲓⲁⲧⲁⲅⲏ** ⲛⲁⲅⲅⲉⲗⲟⲥ ⲁⲗⲗⲁ ⲙⲡⲟⲩϩⲁⲣⲉϩ ⲉⲣⲟϥ · ⲁⲩⲱ ⲉⲛⲉⲩⲕⲣⲙⲣⲙ ⲉϩⲟⲩⲛ ⲉⲡϫⲟⲉⲓⲥ · ⲉⲧⲃⲉ ⲙⲙⲁⲑⲏⲧⲏⲥ ⲛⲓⲱϩⲁⲛⲛⲏⲥ ⲙⲛⲛⲁⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ϫⲉⲥⲉⲛⲏⲥⲧⲉⲩⲉ · ⲛⲟⲩⲕ ⲇⲉ ⲥⲉⲛⲏⲥⲧⲉⲩⲉ ⲁⲛ ·",
+      "english": "For they themselves received the Law as the commands of angels, but they did not keep it, and they murmured against the Lord saying, 'The disciples of John and the disciples of the Pharisees fast, but Thy disciples do not fast.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲧⲁⲧⲉⲧⲛϫⲓ ⲙⲡⲛⲟⲙⲟⲥ ⲉϩⲉⲛ**ⲇⲓⲁⲧⲁⲅⲏ** ⲛⲁⲅⲅⲉⲗⲟⲥ . ⲁⲩⲱ ⲙⲡⲉⲧⲛϩⲁⲣⲉϩ ⲉⲣⲟϥ .",
+      "english": "You received the law as it was ordained by angels, and didn't keep it!'",
+      "source": "44_Acts of the Apostles_7",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲙⲟⲥ",
+        2,
+        13.632
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        2,
+        13.019
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        8.732
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲧⲁⲅⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲏ",
+          1
+        ],
+        [
+          "ⲁⲅⲅⲉⲗⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲁⲧⲁⲅⲏ_0_node",
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲧⲁⲅⲏ",
+          "ⲁⲅⲅⲉⲗⲟⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7532,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "520",
+    "grl_lemma": "διαταγή",
+    "grl_meaning": "ordinance, decree",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 414b; Preisigke 1:363"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C6773",
+  "forms": [
+    {
+      "id": "CF15593",
+      "orth": "ϩⲓϩⲣⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7487",
+      "bibliography": "CD 699b-700a; CED 292; KoptHWb 386"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6772",
+      "label": "ϣⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C6768",
+      "label": "ϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "upper part"
+    },
+    {
+      "target": "C6769",
+      "label": "ⲉϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "to above, upward"
+    },
+    {
+      "target": "C6770",
+      "label": "ⲛϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "above, upward"
+    },
+    {
+      "target": "C6771",
+      "label": "ⲥⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "on upper side, above"
+    }
+  ]
+}

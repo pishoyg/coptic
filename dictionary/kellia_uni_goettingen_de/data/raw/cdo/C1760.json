@@ -1,0 +1,284 @@
+{
+  "id": "C1760",
+  "forms": [
+    {
+      "id": "CF5091",
+      "orth": "ⲗⲟϫⲗϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4515,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF5092",
+      "orth": "ⲗⲟϭⲗⲉϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18153,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲉϫⲗⲱϫ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5431,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲗⲉϭⲗⲱϭ⸗",
+      "dialect": "S",
+      "id": "1024.2"
+    },
+    {
+      "orth": "ⲗⲉϫⲗⲱϫ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5431,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲗⲉϭⲗⲱϭ†",
+      "dialect": "S",
+      "id": "1024.4"
+    },
+    {
+      "orth": "ⲗⲟϫⲗⲉϫ",
+      "dialect": "B",
+      "id": "1024.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2044",
+      "bibliography": "CD 150b-151a"
+    },
+    {
+      "id": "CS2045",
+      "bibliography": "CD 151a; KoptHWb 83; ChLCS 23a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϣⲁⲛ**ⲗⲟϫⲗϫ** ⲙⲡⲣⲧⲣⲉϥⲙⲉⲉⲩⲉ ⲉⲗⲟ ⲁⲗⲗⲁ ϥⲛⲁϩⲉ ϩⲙⲡϣⲱⲛⲉ",
+      "english": "When he has fallen sick, let him not hope to recover: but let him perish by disease.",
+      "source": "Job 24",
+      "urn": "urn:cts:copticLit:ot.job.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁⲩϣⲟⲟϭϥ ⲉⲧⲃⲉⲛⲉⲛⲁⲛⲟⲙⲓⲁ ⲁⲩⲱ ⲁⲩ**ⲗⲉϫⲗⲱϫ**ϥ ⲉⲧⲃⲉⲛⲉⲛⲛⲟⲃⲉ ⲛϣⲏⲣⲉ ⲛⲧⲉⲛⲉⲓⲣⲏⲛⲏ ⲉϫⲱϥ ϩⲣⲁⲓ ϩⲙⲡⲉϥⲥⲁϣ ⲁⲛⲧⲁⲗϭⲟ",
+      "english": "But he was wounded on account of our sins, and was bruised because of our iniquities: the chastisement of our peace was upon him; and by his bruises we were healed.",
+      "source": "Isaiah 53",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:53",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧ**ⲗⲉϫⲗⲱϫ** ϩⲛⲛⲉⲩⲥⲱⲙⲁ . ⲉϥⲁϩⲉⲣⲁⲧϥ ⲛϭⲓⲡⲣⲣⲟ ⲉϥⲙⲣⲣⲉ ⲉϥⲇⲓⲁⲕⲟⲛⲉⲓ ⲉⲣⲟⲟⲩ ⲉⲁϥϯ ⲛⲟⲩⲕⲣⲁⲥⲓⲥ ⲛⲕⲱⲛⲧⲓⲧⲱⲛ ⲉⲡⲟⲩⲁ ⲉⲡⲟⲩⲁ ϩⲛⲛⲉϥϭⲓϫ ⲙⲙⲓⲛ ⲙⲙⲟϥ",
+      "english": "...",
+      "source": "Life of Hilaria BN 132.1 ff. 19-20 (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.clm1791:33-43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲛⲉ",
+        3,
+        13.394
+      ],
+      [
+        "ⲧⲁⲛϩⲉⲧ",
+        1,
+        13.051
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        2,
+        12.781
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        2,
+        11.025
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        9.746
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.912
+      ],
+      [
+        "ϥ",
+        6,
+        8.817
+      ],
+      [
+        "ⲙⲡⲣⲧⲣⲉ",
+        1,
+        8.717
+      ],
+      [
+        "ⲉ",
+        5,
+        8.324
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        8.29
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        7.827
+      ],
+      [
+        "ⲱⲛϩ",
+        1,
+        7.257
+      ],
+      [
+        "ϩⲙ",
+        2,
+        6.954
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        6.762
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.272
+      ],
+      [
+        "ⲡ",
+        3,
+        5.793
+      ],
+      [
+        "ϩⲓ",
+        1,
+        5.772
+      ],
+      [
+        "ϫⲉ",
+        2,
+        5.687
+      ],
+      [
+        "ⲙ",
+        2,
+        4.892
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        4.761
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲗⲟϫⲗϫ",
+          2
+        ],
+        [
+          "ⲗⲟϫⲗϫ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲗⲟϫⲗϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲗⲟϫⲗϫ",
+          "ⲗⲟϫⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟϫⲗϫ_0_node",
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟϫⲗϫ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲱⲛⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉϥϣⲁⲛ_1_pre_ⲗⲟϫⲗϫ",
+          "ⲗⲟϫⲗϫ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2990,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1761",
+      "label": "ⲗⲟϭⲗⲉϭ",
+      "pos": "N",
+      "gloss": "sickness"
+    },
+    {
+      "target": "C1762",
+      "label": "ⲗⲟϭⲗⲉϭ",
+      "pos": "N",
+      "gloss": "sick"
+    }
+  ],
+  "etym": {
+    "demo_num": "d3717",
+    "demo_lemma": "lḏlḏ",
+    "english": "be sick",
+    "german": "krank sein",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3717"
+  }
+}

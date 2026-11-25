@@ -1,0 +1,46 @@
+{
+  "id": "C7562",
+  "forms": [
+    {
+      "id": "CF17183",
+      "orth": "ϫⲓϭⲱⲱⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8388",
+      "bibliography": "CD 805a; KoptHWb 446; ChLCS 106a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7560",
+      "label": "ϭⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "leaf (of a plant); page (of a book); leaf (of paper); slice"
+    },
+    {
+      "target": "C7561",
+      "label": "ⲁⲧϭⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "without leaves"
+    }
+  ]
+}

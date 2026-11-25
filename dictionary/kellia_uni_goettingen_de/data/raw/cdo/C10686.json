@@ -1,0 +1,119 @@
+{
+  "id": "C10686",
+  "forms": [
+    {
+      "id": "CF28987",
+      "orth": "ⲧⲁⲙⲓⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28988",
+      "orth": "ⲧⲁⲙⲓⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17452,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14660",
+      "bibliography": "DDGLC",
+      "cu_ID": "9233"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲓ ϫⲉⲃⲱⲕ ⲉⲡⲡⲁⲥⲧⲟⲫⲟⲣⲓⲟⲛ ϣⲁⲥⲱⲙⲛⲁⲥ ⲡ**ⲧⲁⲙⲓⲁⲥ** ⲛⲅϫⲟⲟⲥ ⲛⲁϥ ϫⲉ",
+      "english": "Thus saith the Lord of hosts, Go into the chamber, to Somnas the treasurer, and say to him, Why art thou here?",
+      "source": "Isaiah 22",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲥⲧⲟⲫⲟⲣⲓⲟⲛ",
+        1,
+        19.598
+      ],
+      [
+        "ⲥⲱⲙⲛⲁⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        9.116
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲧⲁⲙⲓⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲁⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲧⲁⲙⲓⲁⲥ",
+          "ⲧⲁⲙⲓⲁⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17063,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6701",
+    "grl_lemma": "τάμιας",
+    "grl_meaning": "controller of receipts and expenditure, treasurer,\n    paymaster",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1754b"
+  }
+}

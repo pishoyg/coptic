@@ -1,0 +1,350 @@
+{
+  "id": "C3992",
+  "forms": [
+    {
+      "id": "CF9924",
+      "orth": "ⲥⲱϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5419,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲥⲁϩⲙ⸗",
+      "dialect": "S",
+      "id": "1537.1"
+    },
+    {
+      "orth": "ⲥⲁϩⲙ†",
+      "dialect": "S",
+      "id": "1537.2"
+    },
+    {
+      "orth": "ⲥⲟϩⲙ†",
+      "dialect": "S",
+      "id": "1537.3"
+    },
+    {
+      "orth": "ⲥⲱϧⲉⲙ",
+      "dialect": "B",
+      "id": "1537.4"
+    },
+    {
+      "orth": "ⲥⲁϧⲙ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8881,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲁϧⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4045,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲥⲁϩⲉⲙ",
+      "dialect": "B",
+      "id": "1537.7"
+    },
+    {
+      "orth": "ⲥⲱϧⲙ⸗",
+      "dialect": "B",
+      "id": "1538.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4534",
+      "bibliography": "CD 384b; KoptHWb 212-213; DELC 206; ChLCS 54a"
+    },
+    {
+      "id": "CS4535",
+      "bibliography": "CD 384b; CED 173; KoptHWb 212-213; DELC 206; ChLCS 54a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡⲧⲟⲟⲩ ⲛⲁ**ⲥⲱϩⲙ** ϩⲁⲣⲟⲛ ⁛—",
+      "english": "The mountain is crumbling away under us.'",
+      "source": "Life of Cyrus in Budge ed. part 2",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:10-17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲥⲱϩⲙ** · ⲉϫⲙⲡⲥⲱⲙⲁ ⲙⲡⲙⲁⲕⲁⲣⲓⲟⲥ ·",
+      "english": "and He was dragging the body of the blessed man",
+      "source": "Life of Cyrus in Budge ed. part 2",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:10-17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲉⲣⲉⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ ⲛⲁ**ⲥⲱϩⲙ**ⲡⲁⲡⲟⲧ · ϣⲁⲥⲣⲡⲱⲃϣ ⲛⲧⲟⲡⲟⲥ ⲛⲓⲙ ⲛⲧⲁⲥⲃⲱⲕ ⲉⲣⲟⲟⲩ · ⲙⲛⲛⲕⲟⲗⲁⲥⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲧⲁϣⲉ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "And straightway, when that soul shall drink out of the cup, it forgetteth all the regions to which it hath gone, | and all the chastisements in which it hath travelled.",
+      "source": "Pistis Sophia Book 3 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:109-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲁⲅⲓⲟⲛ",
+        1,
+        15.791
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        1,
+        12.294
+      ],
+      [
+        "ⲁⲡⲟⲧ",
+        1,
+        12.122
+      ],
+      [
+        "⁛—",
+        1,
+        10.753
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        9.446
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        9.292
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        9.122
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        8.624
+      ],
+      [
+        "ⲡ",
+        4,
+        8.497
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        8.207
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.969
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        7.857
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.102
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.973
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.745
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.688
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.346
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_2_pre_ⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱϩⲙ",
+          2
+        ],
+        [
+          "ⲥⲱϩⲙ_0_node",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_pre_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_3_pre_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲛⲓⲡⲉ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲱϩⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ⲧⲟⲟⲩ",
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_1_pre_ⲥⲱϩⲙ",
+          "ⲛⲁ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱϩⲙ",
+          "ⲥⲱϩⲙ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲱϩⲙ",
+          "ϥ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲱϩⲙ",
+          "ⲥⲱϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉ_2_pre_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_1_pre_ⲥⲱϩⲙ",
+          "ⲉⲧ_2_pre_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_pre_ⲯⲩⲭⲏ",
+          "ⲙⲙⲁⲩ_3_pre_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_3_pre_ⲉⲧ",
+          "ⲛⲁ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲥⲱϩⲙ",
+          "ⲡ_2_pre_ⲡⲉⲛⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲛⲓⲡⲉ",
+          "ⲡⲉⲛⲓⲡⲉ_1_pre_ⲥⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲛⲓⲡⲉ_1_pre_ⲥⲱϩⲙ",
+          "ⲥⲱϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱϩⲙ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲱϩⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4991,
+      "count": 4
+    }
+  },
+  "etym": {
+    "egy_num": "143540",
+    "egy_lemma": "sẖm",
+    "demo_num": "d5578",
+    "demo_lemma": "sẖm",
+    "english": "to be hasty; to be impetuous",
+    "german": "schroff vorgehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/143540",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5578"
+  }
+}

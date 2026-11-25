@@ -1,0 +1,107 @@
+{
+  "id": "C5062",
+  "forms": [
+    {
+      "id": "CF31878",
+      "orth": "ⲙⲛ ⲟⲩⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.69,
+        "rank": 915,
+        "count": 109
+      }
+    },
+    {
+      "id": "CF31877",
+      "orth": "ⲙⲙⲛ ⲟⲩⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5814,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5693",
+      "bibliography": "CD 482b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ϫⲉ**ⲙⲛⲟⲩⲟⲛ** ϣⲟⲟⲡ ⲁⲡⲁ .",
+      "english": "But he said, “There isn't any, Father.”",
+      "source": "Apophthegmata Patrum Sahidic 096: Anonymous Nau 281",
+      "urn": "urn:cts:copticLit:ap.96.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲙⲟⲟϣⲉ ⲙⲛⲟⲩⲥⲟⲛ ⲉⲣⲉⲟⲩⲥⲁⲛⲇⲁⲗⲓⲟⲛ ϩⲛⲛⲉⲕⲟⲩⲣⲏⲏⲧⲉ · ⲉ**ⲙⲛⲟⲩⲟⲛ** ⲙⲡⲉⲧⲙⲟⲟϣⲉ ⲛⲙⲙⲁⲕ · ⲁⲛⲓ ⲡⲱⲕ ϩⲱⲱⲕ ⲉⲃⲟⲗ ⲛⲅⲙⲟⲟϣⲉ ⲛⲧⲉϥϩⲉ ·",
+      "english": "If thou art wearing sandals on thy feet, and he who is walking with thee hath none, take off thy sandals, and walk as he is doing,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲛⲧⲁϥⲛ..ⲁ ⲡϣⲙⲙⲟ · ⲙⲛⲡⲣⲙⲛϯⲙⲉ · **ⲙⲛⲟⲩⲟⲛ** ⲛⲓⲙ ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.72,
+      "rank": 767,
+      "count": 114
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5058",
+      "label": "ⲕⲉⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone else, something else"
+    },
+    {
+      "target": "C5059",
+      "label": "ⲗⲁⲁⲩ ⲛⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "any one"
+    },
+    {
+      "target": "C5061",
+      "label": "ⲟⲩⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is someone"
+    },
+    {
+      "target": "C5057",
+      "label": "ⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone, something"
+    },
+    {
+      "target": "C5060",
+      "label": "ⲟⲩⲟⲛ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "every one"
+    },
+    {
+      "target": "C5063",
+      "label": "ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ",
+      "pos": "EXIST",
+      "gloss": "one after another"
+    }
+  ]
+}

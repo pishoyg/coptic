@@ -1,0 +1,46 @@
+{
+  "id": "C2944",
+  "forms": [
+    {
+      "id": "CF7752",
+      "orth": "ⲡⲁⲩⲣⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF7753",
+      "orth": "ⲡⲁⲩⲣⲏ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3371",
+      "bibliography": "CD 277a; KoptHWb 155, 532; DELC 166"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2945",
+      "label": "ⲡⲁⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "growth"
+    }
+  ],
+  "etym": {
+    "egy_num": "61140",
+    "egy_lemma": "pr.w",
+    "demo_num": "d1990",
+    "demo_lemma": "pr",
+    "english": "motion; procession",
+    "german": "Herausgehen; Auszug; Prozession",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/61140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1990"
+  }
+}

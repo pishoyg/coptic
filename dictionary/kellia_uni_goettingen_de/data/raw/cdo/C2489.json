@@ -1,0 +1,45 @@
+{
+  "id": "C2489",
+  "forms": [
+    {
+      "id": "CF6760",
+      "orth": "ϭⲓⲛⲛⲟⲉⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2867",
+      "bibliography": "CD 226b; ChLCS 32a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2488",
+      "label": "ⲁⲧⲛⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "unshaken"
+    },
+    {
+      "target": "C2486",
+      "label": "ⲛⲟⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "shake, tremble"
+    },
+    {
+      "target": "C2487",
+      "label": "ⲛⲟⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "shaking"
+    }
+  ]
+}

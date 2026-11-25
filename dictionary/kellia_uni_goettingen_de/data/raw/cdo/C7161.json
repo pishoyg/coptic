@@ -1,0 +1,55 @@
+{
+  "id": "C7161",
+  "forms": [
+    {
+      "id": "CF32102",
+      "orth": "ϫⲱⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32101",
+      "orth": "ϫⲱⲱⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2059,
+        "count": 29
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7900",
+      "bibliography": "CD 766ab; KoptHWb 419; ChLCS 101b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7163",
+      "label": "ϫⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "grapes of gleaning"
+    },
+    {
+      "target": "C7160",
+      "label": "ϫⲱⲗⲉ",
+      "pos": "V",
+      "gloss": "gather, harvest (fruits, corn, flowers); collect (taxes)"
+    },
+    {
+      "target": "C7162",
+      "label": "ⲣⲉϥϫⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "harvester"
+    }
+  ]
+}

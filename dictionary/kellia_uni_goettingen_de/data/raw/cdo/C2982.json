@@ -1,0 +1,45 @@
+{
+  "id": "C2982",
+  "forms": [
+    {
+      "id": "CF7829",
+      "orth": "ⲙⲁ ⲛⲫⲟϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3413",
+      "bibliography": "CD 282a; KoptHWb 157"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2979",
+      "label": "ⲡⲱϩ",
+      "pos": "V",
+      "gloss": "reach, reach maturity, attain, arrive"
+    },
+    {
+      "target": "C2981",
+      "label": "ⲡⲱϩ",
+      "pos": "N",
+      "gloss": "maturity"
+    },
+    {
+      "target": "C2980",
+      "label": "ⲡⲱϩ (ⲛ-)",
+      "pos": "V",
+      "gloss": "attain to, succeed (in doing), just do, do for once"
+    }
+  ]
+}

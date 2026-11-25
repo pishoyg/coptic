@@ -1,0 +1,110 @@
+{
+  "id": "C480",
+  "forms": [
+    {
+      "id": "CF1948",
+      "orth": "ⲙⲛⲧⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS581",
+      "bibliography": "CD 40a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C855",
+      "type": "cf",
+      "label": "eye"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C481",
+      "label": "ϫⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "take, receive evil eye; envy"
+    },
+    {
+      "target": "C471",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C472",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil, misfortune"
+    },
+    {
+      "target": "C470",
+      "label": "ⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C475",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil eye"
+    },
+    {
+      "target": "C476",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envious, wretched"
+    },
+    {
+      "target": "C477",
+      "label": "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envy, greed"
+    },
+    {
+      "target": "C474",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil doing"
+    },
+    {
+      "target": "C473",
+      "label": "ⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be evil, hurtful"
+    },
+    {
+      "target": "C479",
+      "label": "ⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who casts an evil eye, enchanter"
+    },
+    {
+      "target": "C478",
+      "label": "ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be envious"
+    }
+  ]
+}

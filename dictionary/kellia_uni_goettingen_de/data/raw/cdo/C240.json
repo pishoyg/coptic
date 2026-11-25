@@ -1,0 +1,392 @@
+{
+  "id": "C240",
+  "forms": [
+    {
+      "id": "CF965",
+      "orth": "ⲁⲩⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 187.29,
+        "rank": 9,
+        "count": 29550
+      }
+    },
+    {
+      "id": "CF966",
+      "orth": "ⲁⲩⲱ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF967",
+      "orth": "ⲁⲩⲱ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF968",
+      "orth": "ⲁⲟⲩⲱ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF969",
+      "orth": "ⲁⲟⲩⲱ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF970",
+      "orth": "ⲁⲩⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11484,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF971",
+      "orth": "ⲁⲟⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF972",
+      "orth": "ⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1076,
+        "count": 84
+      }
+    },
+    {
+      "id": "CF973",
+      "orth": "ⲁⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF974",
+      "orth": "ⲁⲩⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF975",
+      "orth": "ⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1076,
+        "count": 84
+      }
+    },
+    {
+      "id": "CF976",
+      "orth": "ⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.66,
+        "rank": 172,
+        "count": 1050
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟϩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 295.88,
+        "rank": 6,
+        "count": 25094
+      }
+    },
+    {
+      "orth": "ⲁⲩⲟ",
+      "dialect": "S",
+      "id": "536.1"
+    },
+    {
+      "orth": "ⲱ",
+      "dialect": "F",
+      "id": "536.2"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS269",
+      "bibliography": "CD 19b-20b; CED 14; KoptHWb 14, 490; DELC 18-19; ChLCS 6a"
+    },
+    {
+      "id": "CS270",
+      "bibliography": "Kasser CDC 5a; KoptHWb 490"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲟⲩⲟϩ** ⲁⲩⲟⲩⲱⲙ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲁⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲩⲱ** ⲁⲩⲟⲩⲱⲙ ⲧⲏⲣⲟⲩ ⲁⲩⲥⲓ .",
+      "english": "They all ate, and were filled.",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲟⲩⲟϩ** ⲉⲧⲁⲩⲭⲁϥ ⲁⲩⲫⲱⲧ ⲧⲏⲣⲟⲩ",
+      "english": "They all left him, and fled.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲩⲱ** ⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ · ⲻ",
+      "english": "and they called him back.",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲫⲛⲁⲩ ⲇⲉ ⲛⲁϫⲡⲅ ⲡⲉ **ⲟⲩⲟϩ** ⲁⲩⲁϣϥ",
+      "english": "It was the third hour, and they crucified him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲁⲩⲱ** ⲡⲉⲧⲉϥⲛⲁϫⲟⲟϥ ⲛⲁⲕ ⲁⲣⲓϥ ·",
+      "english": "and do whatever he tells you.'",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁ",
+        17103,
+        47.175
+      ],
+      [
+        "ϥ",
+        19079,
+        47.083
+      ],
+      [
+        "ⲛ",
+        12826,
+        45.531
+      ],
+      [
+        "ⲟⲩ",
+        7299,
+        43.254
+      ],
+      [
+        "ⲡⲓ",
+        5033,
+        42.662
+      ],
+      [
+        "ⲉϥⲉ",
+        2801,
+        42.576
+      ],
+      [
+        "ⲉⲩⲉ",
+        2542,
+        42.27
+      ],
+      [
+        "ⲡ",
+        4697,
+        42.212
+      ],
+      [
+        "ϧⲉⲛ",
+        4529,
+        42.198
+      ],
+      [
+        "ⲉ",
+        5217,
+        42.064
+      ],
+      [
+        "ⲥ",
+        3763,
+        42.061
+      ],
+      [
+        "ⲛⲧⲉ",
+        4010,
+        41.974
+      ],
+      [
+        ".",
+        4443,
+        41.968
+      ],
+      [
+        "ⲩ",
+        3917,
+        41.927
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        2677,
+        41.794
+      ],
+      [
+        "ⲙ",
+        3937,
+        41.412
+      ],
+      [
+        "ⲛⲁ",
+        3606,
+        41.403
+      ],
+      [
+        "ⲉⲕⲉ",
+        1305,
+        40.636
+      ],
+      [
+        "ⲛϫⲉ",
+        2374,
+        40.234
+      ],
+      [
+        "ⲕ",
+        2072,
+        40.178
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1422,
+        37.168
+      ],
+      [
+        "ⲁ",
+        15881,
+        32.058
+      ],
+      [
+        "ⲛ",
+        17406,
+        31.22
+      ],
+      [
+        "ϥ",
+        11094,
+        29.983
+      ],
+      [
+        "ⲡ",
+        10217,
+        29.602
+      ],
+      [
+        "ⲟⲩ",
+        6504,
+        28.37
+      ],
+      [
+        "ⲉ",
+        6999,
+        28.285
+      ],
+      [
+        "ⲧ",
+        4999,
+        28.082
+      ],
+      [
+        "ⲉⲧ",
+        4800,
+        28.074
+      ],
+      [
+        "ⲛⲁ",
+        5343,
+        27.988
+      ],
+      [
+        "ⲙ",
+        5722,
+        27.947
+      ],
+      [
+        "ⲥ",
+        4348,
+        27.682
+      ],
+      [
+        "ⲩ",
+        4638,
+        27.497
+      ],
+      [
+        "ⲙⲛ",
+        3733,
+        27.392
+      ],
+      [
+        "ⲥⲉ",
+        2510,
+        27.112
+      ],
+      [
+        "ϯ",
+        2859,
+        27.109
+      ],
+      [
+        "ϩⲛ",
+        2948,
+        26.205
+      ],
+      [
+        "ⲓ",
+        2677,
+        26.159
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2752,
+        25.893
+      ],
+      [
+        ".",
+        2565,
+        25.681
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 186.18,
+      "rank": 10,
+      "count": 29550
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "C1781",
+  "forms": [
+    {
+      "id": "CF5144",
+      "orth": "ⲙⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 26.16,
+        "rank": 53,
+        "count": 4128
+      }
+    },
+    {
+      "orth": "ⲙⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 18.7,
+        "rank": 75,
+        "count": 1586
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VIMP",
+    "subc": "Imperativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2081",
+      "bibliography": "CD 155b; KoptHWb 85"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡⲉⲣϯ **ⲙⲁ** ⲙⲡⲓⲇⲓⲁⲃⲟⲗⲟⲥ .",
+      "english": "neither give place to the devil.",
+      "source": "10_Ephesians_04",
+      "urn": "urn:cts:copticLit:nt.eph.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲧⲣⲉⲗⲁⲁⲩ ϭⲉ ⲥⲟϣϥ . **ⲙⲁ**ⲧϩⲡⲟϥ ⲇⲉ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ϫⲉⲉϥⲉⲉⲓ ϣⲁⲣⲟⲓ . ϯϭⲱϣⲧ ⲅⲁⲣ ⲉⲃⲟⲗ ϩⲏⲧϥ ⲙⲛⲛⲉⲥⲛⲏⲩ .",
+      "english": "Therefore let no one despise him. But set him forward on his journey in peace, that he may come to me; for I expect him with the brothers.",
+      "source": "1 Corinthians 16",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲛⲟⲩϯ **ⲙⲁ**ϩⲑⲏⲕ ⲉⲧⲁⲃⲟⲏⲑⲓⲁ ⲭⲱⲗⲉⲙ . ⲡϭⲟⲓⲥ ⲁⲣⲓⲃⲟⲏⲑⲓⲛ ⲉⲣⲟⲓ . ⲙⲁⲣⲟⲩϭⲓϣⲓⲡⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩϭⲓϣⲱϣ ⲛϫⲉⲛⲏⲉⲧⲕⲱϯ ⲛⲥⲁⲧⲁ\\'ⲩⲭⲏ .",
+      "english": "Draw nigh, O God, to my help.",
+      "source": "19_Psalmi_69",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:69",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲙⲟⲩⲧⲉ ⲉⲣⲟⲓ ϫⲉⲟⲩϩⲟⲣ **ⲙⲁ** ⲛⲁⲓ ⲛⲛⲉⲥⲣⲉϥⲣⲉϥ ·",
+      "english": "Thou hast called me a dog, give me, then, the crumbs.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲟⲩϣⲧ ⲉⲡϣⲱⲓ ⲉⲧⲫⲉ ⲟⲩⲟϩ ⲁⲛⲁⲩ : **ⲙⲁ**ⲓⲁⲧⲕ ⲇⲉ ⲛⲛⲓϭⲏⲡⲓ ϫⲉⲁⲩϭⲟⲥⲓ ⲉⲣⲟⲕ ⲛⲁϣ ⲛⲣⲏϯ .",
+      "english": "If thou hast sinned, what wilt thou do?",
+      "source": "18_Iob_35",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:35",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ **ⲙⲁ** ⲛⲁⲓ ϩⲱⲥ ⲟⲩϩⲟⲣ ϯⲡⲁⲣⲉⲧⲉⲓ ⲁⲛ ⲙⲡⲛⲟϭⲛⲉϭ ·",
+      "english": "I do not excuse myself from derision.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "etym": {
+    "egy_num": "851706",
+    "egy_lemma": "jmi̯",
+    "demo_num": "d2324",
+    "demo_lemma": "mj",
+    "english": "give!; give!; cause (that)!",
+    "german": "gib!; gebt!; veranlasse (dass)!",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851706",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2324"
+  }
+}

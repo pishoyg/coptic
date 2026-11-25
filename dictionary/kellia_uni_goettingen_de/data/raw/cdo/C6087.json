@@ -1,0 +1,58 @@
+{
+  "id": "C6087",
+  "forms": [
+    {
+      "id": "CF14179",
+      "orth": "ⲣⲉϣⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6772",
+      "bibliography": "CD 590b; CED 254; ChLCS 81b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6084",
+      "label": "ϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trader, merchant"
+    },
+    {
+      "target": "C6088",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "merchandise"
+    },
+    {
+      "target": "C6085",
+      "label": "ⲙⲁ ⲛⲉϣⲱⲧ",
+      "pos": "N",
+      "gloss": "place of traders"
+    },
+    {
+      "target": "C6086",
+      "label": "ⲙⲛⲧⲉϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trading, commerce"
+    }
+  ]
+}

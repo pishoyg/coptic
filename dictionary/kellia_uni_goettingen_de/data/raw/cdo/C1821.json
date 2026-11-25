@@ -1,0 +1,51 @@
+{
+  "id": "C1821",
+  "forms": [
+    {
+      "id": "CF5239",
+      "orth": "ϫⲓⲛϯⲙⲟⲩⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2124",
+      "bibliography": "CD 160b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1820",
+      "label": "ϯⲙⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "shine, be bright"
+    },
+    {
+      "target": "C1819",
+      "label": "ⲙⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "light, brightness"
+    }
+  ]
+}

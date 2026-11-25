@@ -1,0 +1,104 @@
+{
+  "id": "C5646",
+  "forms": [
+    {
+      "id": "CF13268",
+      "orth": "ⲙⲁ ⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31948",
+      "orth": "ⲙⲁ ⲛⲁϩⲉⲣⲁⲧ⸗",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocPrep": "ⲉⲣⲁⲧ⸗",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6318",
+      "bibliography": "CD 538b; ChLCS 74b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5640",
+      "type": "cf",
+      "label": "stand, stay, wait"
+    },
+    {
+      "target": "C3162",
+      "type": "cf",
+      "label": "foot"
+    },
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5643",
+      "label": "ϭⲓⲛⲁϩⲉ (ⲉϫⲛ-)",
+      "pos": "N",
+      "gloss": "act of remaining on"
+    },
+    {
+      "target": "C5648",
+      "label": "ϭⲓⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "standing"
+    },
+    {
+      "target": "C5647",
+      "label": "ϯⲙⲉⲧⲣⲉϥⲟϩⲉ ⲉⲣⲁⲧϥ ⲛⲧⲉⲡⲭⲟⲣⲟⲥ",
+      "pos": "N",
+      "gloss": "chorus, institution of choruses (χοροστασία)"
+    },
+    {
+      "target": "C5649",
+      "label": "ⲁϩⲉ (ⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "need"
+    },
+    {
+      "target": "C5640",
+      "label": "ⲱϩⲉ",
+      "pos": "V",
+      "gloss": "stand, stay, wait"
+    },
+    {
+      "target": "C5641",
+      "label": "ⲱϩⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "abide by, wait for"
+    },
+    {
+      "target": "C5645",
+      "label": "ⲱϩⲉ (ⲉⲣⲁⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "stand before, stand against, attend on"
+    },
+    {
+      "target": "C5642",
+      "label": "ⲱϩⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "wait for, attend to"
+    },
+    {
+      "target": "C5644",
+      "label": "ⲱϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "stand on foot, stand"
+    }
+  ]
+}

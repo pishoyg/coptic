@@ -1,0 +1,151 @@
+{
+  "id": "C5316",
+  "forms": [
+    {
+      "id": "CF12601",
+      "orth": "ⲟⲩⲱϩ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2810,
+        "count": 16
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5967",
+      "bibliography": "CD 507b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲉ ⲙⲡⲉⲕⲉⲩⲫⲣⲁⲛⲉ · ⲁⲗⲗⲁ ⲛⲧⲁⲕⲉⲣⲟⲟⲩϣ ⲛϩⲟⲩⲟ **ⲟⲩⲱϩ **ⲉϩⲣⲁⲓ**** ⲉϫⲱⲕ ·",
+      "english": "Nay, nay, thou couldst not enjoy thyself, for thou didst burden thyself with heavy cares.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲧⲃⲛⲟⲟⲩⲉ ⲇⲉ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉⲩϩⲏⲡⲁⲣⲭⲟⲛⲧⲁ ⲧⲏⲣⲟⲩ ⲉⲩⲛⲁϣⲱⲡⲉ ⲛⲁⲩ (sic! leg ⲛⲁⲛ) ⲙⲟⲛⲟⲛ ϩⲙⲡⲁⲓ ⲉⲛⲛⲁⲉⲓⲛⲉ ⲙⲙⲟⲟⲩ **ⲛⲥⲉⲟⲩⲱϩ **ⲉϩⲣⲁⲓ**** ⲛϩⲏⲧⲛ",
+      "english": "And shall not their cattle and their herds, and their possessions, be ours? only in this let us conform to them, and they will dwell with us.",
+      "source": "Genesis 34",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲣⲙⲛⲧⲣⲉ ⲁⲛⲅ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲥⲱⲧⲙ ⲉⲛϣⲁϫⲉ ⲛⲧⲉⲓⲡⲣⲟⲫⲏⲧⲉⲓⲁ ⲙⲡⲉⲓϫⲱⲱⲙⲉ **ϫⲉⲡⲉⲧⲛⲁⲟⲩⲱϩ **ⲉϩⲣⲁⲓ**** ⲉϫⲱϥ ⲡⲛⲟⲩⲧⲉ ⲛⲁⲟⲩⲱϩ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲛⲉⲡⲗⲏⲅⲏ ⲉⲧⲥⲏϩ ⲉⲡⲉⲓϫⲱⲱⲙⲉ",
+      "english": "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book.",
+      "source": "66_Revelation_22",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2275,
+      "count": 19
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5318",
+      "label": "ϭⲓⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "act of dwelling; manner of life"
+    },
+    {
+      "target": "C5317",
+      "label": "ⲙⲁ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "house, habitation, cell"
+    },
+    {
+      "target": "C5319",
+      "label": "ⲟⲩⲁϩϥ",
+      "pos": "N",
+      "gloss": "liturgical functionary (acolyte?)"
+    },
+    {
+      "target": "C5304",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "V",
+      "gloss": "put, place, add; be placed, stay, dwell"
+    },
+    {
+      "target": "C5305",
+      "label": "ⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "standing-place, dwelling-place"
+    },
+    {
+      "target": "C5306",
+      "label": "ⲟⲩⲱϩ (ⲉ-)",
+      "pos": "V",
+      "gloss": "set on, add to, attribute to, dwell by/with"
+    },
+    {
+      "target": "C5312",
+      "label": "ⲟⲩⲱϩ ϩⲁ-",
+      "pos": "V",
+      "gloss": "lie by, in return for; deposit (money)"
+    },
+    {
+      "target": "C5315",
+      "label": "ⲟⲩⲱϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "put in, bring in"
+    },
+    {
+      "target": "C5308",
+      "label": "ⲟⲩⲱϩ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "add to, increase"
+    },
+    {
+      "target": "C5313",
+      "label": "ⲟⲩⲱϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "set down, pause; let, bring down"
+    },
+    {
+      "target": "C5314",
+      "label": "ⲟⲩⲱϩ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "descend, alight; set down"
+    },
+    {
+      "target": "C5307",
+      "label": "ⲟⲩⲱϩ ⲉⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "add, repeat"
+    },
+    {
+      "target": "C5309",
+      "label": "ⲟⲩⲱϩ ⲛⲁ⸗",
+      "pos": "V",
+      "gloss": "set down, make pause"
+    },
+    {
+      "target": "C5310",
+      "label": "ⲟⲩⲱϩ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "follow"
+    },
+    {
+      "target": "C5311",
+      "label": "ⲟⲩⲱϩ ⲛⲧⲛ-",
+      "pos": "V",
+      "gloss": "place with, pledge to, pawn, mortgage"
+    }
+  ]
+}

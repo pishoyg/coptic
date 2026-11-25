@@ -1,0 +1,54 @@
+{
+  "id": "C1223",
+  "forms": [
+    {
+      "id": "CF3834",
+      "orth": "ⲕⲙⲕⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1418",
+      "bibliography": "CD 109b; ChLCS 17b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1222",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "V",
+      "gloss": "strike, beat; make a repeated sound"
+    },
+    {
+      "target": "C12194",
+      "label": "ⲗⲁⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "kettledrum"
+    },
+    {
+      "target": "C1224",
+      "label": "ⲣⲉϥⲕⲉⲙⲕⲉⲙ",
+      "pos": "N",
+      "gloss": "drummer"
+    }
+  ],
+  "etym": {
+    "egy_num": "160850",
+    "egy_lemma": "qmqm",
+    "demo_num": "d6343",
+    "demo_lemma": "qmqm",
+    "english": "[a kettledrum]",
+    "german": "[eine Pauke]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/160850",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6343"
+  }
+}

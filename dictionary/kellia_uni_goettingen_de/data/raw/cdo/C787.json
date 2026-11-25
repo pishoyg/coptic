@@ -1,0 +1,171 @@
+{
+  "id": "C787",
+  "forms": [
+    {
+      "id": "CF2903",
+      "orth": "ⲣⲣⲙⲛⲏⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10744,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS937",
+      "bibliography": "CD 66b; KoptHWb 46; DELC 53; ChLCS 12b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲙⲡⲁⲓ ⲅⲁⲣ ⲉϣⲁⲩ**ⲣⲣⲙⲛⲏⲓ** ⲛⲁϥ ⲛϭⲓⲛⲉⲧⲡⲓⲥⲧⲉⲩⲉ ⲉⲣⲟϥ ·",
+      "english": "for by this do those who believe in Him become members of his household.'",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲅⲁⲣ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          1
+        ],
+        [
+          "ⲣⲣⲙⲛⲏⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅⲁⲣ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          "ϣⲁ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          "ⲩ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲣⲙⲛⲏⲓ",
+          "ⲣⲣⲙⲛⲏⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10336,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C788",
+      "label": "ϫⲙⲡⲏⲓ",
+      "pos": "N",
+      "gloss": "roof"
+    },
+    {
+      "target": "C783",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "house; household, family"
+    },
+    {
+      "target": "C789",
+      "label": "ⲏⲓ",
+      "pos": "N",
+      "gloss": "pair, couple"
+    },
+    {
+      "target": "C784",
+      "label": "ⲙⲉⲥϩⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "born in the house"
+    },
+    {
+      "target": "C786",
+      "label": "ⲙⲉⲧⲣⲉⲙϧⲉⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "kinship"
+    },
+    {
+      "target": "C785",
+      "label": "ⲣⲙⲛⲏⲓ",
+      "pos": "N",
+      "gloss": "member of household, domestic, kinsman; monastic superintendent, warden"
+    }
+  ]
+}

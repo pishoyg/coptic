@@ -1,0 +1,274 @@
+{
+  "id": "C3836",
+  "forms": [
+    {
+      "id": "CF9597",
+      "orth": "ⲥⲱⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6449,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲟⲧⲣ†",
+      "dialect": "S",
+      "id": "1502.1"
+    },
+    {
+      "orth": "ⲥⲱⲧⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13561,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲱⲧⲏⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.72,
+        "rank": 885,
+        "count": 61
+      }
+    },
+    {
+      "orth": "ⲥⲟⲧⲉⲣ†",
+      "dialect": "B",
+      "id": "1502.4"
+    },
+    {
+      "orth": "ⲥⲟⲧⲏⲣ†",
+      "dialect": "B",
+      "id": "1502.5"
+    },
+    {
+      "orth": "ⲥⲁⲧⲏⲣ†",
+      "dialect": "B",
+      "id": "1502.6"
+    },
+    {
+      "orth": "ⲥⲱⲧⲣⲉ",
+      "dialect": "A",
+      "id": "1502.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4352",
+      "bibliography": "CD 366a; KoptHWb 201; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲉⲓⲛⲁⲛⲁⲩ ⲛⲁϣ ⲛϩⲉ · ⲉⲛⲃⲁⲗ ⲉⲛⲧⲁⲩ**ⲥⲱⲧⲣ** ϩⲁⲡⲉⲥⲧⲱⲧ · ⲙⲛⲛϭⲓϫ ⲛⲧⲁⲛⲉⲩⲕⲉⲉⲥ ⲃⲱⲗ ⲉⲃⲟⲗ · ⲙⲛⲡϥⲱ ⲉⲧⲡⲣⲉⲥⲣⲁⲥⲧ ϩⲁⲡϩⲓⲧⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧⲧⲁⲩⲉϩⲃⲏⲏⲧⲉ ⲉⲃⲟⲗ · ⲉⲣⲉⲡⲉⲧⲙⲓϣⲉ ⲛⲙⲙⲁⲥ ⲗⲏϭ ϩⲓϩⲟⲩⲛ ⲙⲙⲟⲥ ⲉⲛϥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲁⲛ ·",
+      "english": "In what condition shall I see (her on my return)? With her eyes starting from their sockets in terror, and her hands with the bones thereof protruding, and the hair torn out in frenzy, and the mouth dripping with foam, and meanwhile the devil which is contending with her is hidden inside her, and doth not appear.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲟ ϣⲁϥⲟⲩⲟⲧⲟⲩⲉⲓⲧ ϩⲙⲡⲉⲥⲭⲏⲙⲁ ⲙⲡⲙⲟⲩ · ⲙⲛⲡⲥⲱⲙⲁ ⲛⲧⲁϥϭⲃⲃⲉ · ⲙⲛⲧⲧⲁⲡⲣⲟ ⲉⲧϣⲟⲧⲙ · ⲙⲛⲡϥⲱ ⲉⲛⲧⲁϥⲗⲱϭϫ · ⲙⲛⲛⲃⲁⲗ ⲉⲛⲧⲁⲩ**ⲥⲱⲧⲣ** · ⲁⲩϣⲧⲁⲙ · ⲙⲛⲙⲙⲉⲗⲟⲥ ⲉⲧⲉⲛⲥⲉⲕⲓⲙ ⲁⲛ ·",
+      "english": "The face hath become ghastly pallid in the garb of death, and the body hath become shrivelled up, and the mouth is shut up, and the hair hath become lustreless (?), and the eyes have become sightless and are shut, and the limbs are motionless.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲧⲉⲕϣⲟⲩⲱⲃⲉ ⲱⲣϫ · ⲛⲧⲉⲧⲙⲗⲁⲁⲩ ⲛⲧⲣⲟⲫⲏ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲣⲟⲥ · ⲛⲧⲉⲡⲟⲩⲟⲉⲓⲛ ⲛⲛⲉⲕⲃⲁⲗ ⲱϫⲛ ⲕⲟⲩⲓ ⲕⲟⲩⲓ · ⲛⲧⲉⲧϥⲱⲧⲉ ⲕⲱⲧⲉ ⲉⲧⲉⲕⲧⲉϩⲛⲉ · ⲛⲧⲉⲟⲩⲛⲟϭ ⲛⲥⲓϣⲉ ⲙⲉϩⲡⲉⲕϩⲏⲧ · ⲛⲧⲉⲧⲙⲛⲧⲥⲁⲉⲓⲛ ⲛⲃⲁⲗ ⲗⲟ ⲉⲩⲕⲱⲧⲉ ⲛⲥⲉ**ⲥⲱⲧⲣ** ϫⲉⲁⲡⲟⲩⲟⲉⲓⲛ ⲕⲁⲁⲩ ⲕⲟⲩⲓ ⲕⲟⲩⲓ :—",
+      "english": "and thy throat shall close up, and no nourishment whatsoever shall be able to pass through it. And the light in thine eyes shall become less and less, and the sweat shall break out and cover thy face, and very great and bitter bile shall fill thy body, and the treatment of thine eyes by the physician shall cease to be effective, for they shall turn round, and become crooked, and little by little they shall become blind to the light.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲧⲁⲙ",
+        1,
+        12.655
+      ],
+      [
+        "ⲃⲁⲗ",
+        2,
+        12.451
+      ],
+      [
+        "ⲥⲧⲱⲧ",
+        1,
+        12.369
+      ],
+      [
+        "ⲩ",
+        4,
+        10.225
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        9.608
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        9.572
+      ],
+      [
+        "ⲁ",
+        4,
+        9.459
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        1,
+        8.28
+      ],
+      [
+        "ϩⲁ",
+        1,
+        8.28
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.498
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲱⲧⲣ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲱⲧⲣ",
+          2
+        ],
+        [
+          "ⲥⲱⲧⲣ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲕⲁⲁ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲥⲧⲱⲧ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲱⲧⲣ",
+          "ⲩ_1_pre_ⲥⲱⲧⲣ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲱⲧⲣ",
+          "ⲥⲱⲧⲣ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱⲧⲣ",
+          "ⲥⲉ_1_pre_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲱⲧⲣ",
+          "ⲥⲱⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲣ_0_node",
+          "ϫⲉ_1_post_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲥⲱⲧⲣ",
+          "ⲁ_3_post_ⲕⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲕⲁⲁ",
+          "ⲡ_4_post_ⲟⲩⲟⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲣ_0_node",
+          "ϩⲁ_1_post_ⲥⲱⲧⲣ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲥⲱⲧⲣ",
+          "ⲡⲉ_2_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲁ",
+          "ⲥⲧⲱⲧ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6011,
+      "count": 3
+    }
+  }
+}

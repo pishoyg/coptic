@@ -1,0 +1,133 @@
+{
+  "id": "C3269",
+  "forms": [
+    {
+      "id": "CF8426",
+      "orth": "ⲙⲛⲛⲥⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.5,
+        "rank": 252,
+        "count": 710
+      }
+    },
+    {
+      "orth": "ⲙⲉⲛⲉⲛⲥⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.97,
+        "rank": 271,
+        "count": 337
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3736",
+      "bibliography": "CD 314b; CED 144; KoptHWb 95, 173; DELC 116; ChLCS 44b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϭⲟⲓⲥ ⲟⲩⲛ ⲓⲏⲥⲟⲩⲥ **ⲙⲉⲛⲉⲛⲥⲁ**ⲑⲣⲉϥⲥⲁϫⲓ ⲛⲉⲙⲱⲟⲩ ⲁⲩⲟⲗϥ ⲉⲡϣⲱⲓ ⲉⲧⲫⲉ ⲟⲩⲟϩ ⲁϥϩⲉⲙⲥⲓ ⲥⲁⲟⲩⲓⲛⲁⲙ ⲙⲫⲓⲱⲧ .",
+      "english": "So then the Lord Jesus, after he had spoken to them, was received up into heaven, and sat down at the right hand of God.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲛⲛⲥⲁ**ⲛⲁⲓ ⲁⲟⲩⲁ ϫⲛⲟⲩϥ",
+      "english": "After this, one (of them) asked him,",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲉⲣϩⲏⲧⲥ ⲛϯⲥⲃⲱ ⲛⲱⲟⲩ ϫⲉϩⲱϯ ⲛⲧⲉⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ϭⲓⲟⲩⲙⲏϣ ⲛϧⲓⲥⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲟϣϥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲟⲩ ⲛⲛⲓⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲉⲙⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲛⲉⲙⲛⲓⲥⲁϧ ⲟⲩⲟϩ ⲛⲧⲟⲩϧⲟⲑⲃϥ ⲟⲩⲟϩ **ⲙⲉⲛⲉⲛⲥⲁ**ⲅ ⲛⲉϩⲟⲟⲩ ⲛⲧⲉϥⲧⲱⲛϥ .",
+      "english": "He began to teach them that the Son of Man must suffer many things, and be rejected by the elders, the chief priests, and the scribes, and be killed, and after three days rise again.",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲛⲛⲥⲱ**ⲥ ⲁⲥⲕⲁⲁϥ ⲉⲃⲟⲗ .",
+      "english": "Afterwards, she left him.",
+      "source": "Apophthegmata Patrum Sahidic 001: Anonymous Nau 135",
+      "urn": "urn:cts:copticLit:ap.1.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲉⲛⲉⲛⲥⲱ**ⲥ ⲁϥⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧϥ ⲙⲡⲓⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲟⲩⲟϩ ⲁϥⲓ ⲉⲡⲉϥⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ .",
+      "english": "After this, my father, apa Shenoute, took his leave and made his way back to the monastery.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲙⲛⲛⲥⲱ**ⲥ ⲁϥⲉⲓ ⲛϭⲓⲡⲁⲅⲅⲉⲗⲟⲥ",
+      "english": "And afterwards the angel came,",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3266",
+      "label": "ⲉⲃⲟⲗ ⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "from the side, from"
+    },
+    {
+      "target": "C3264",
+      "label": "ⲉⲡⲉⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    },
+    {
+      "target": "C3267",
+      "label": "ⲕⲉⲥⲁ",
+      "pos": "ADV",
+      "gloss": "other part, apart, elsewhere"
+    },
+    {
+      "target": "C3270",
+      "label": "ⲙⲛⲛⲥⲱⲥ",
+      "pos": "ADV",
+      "gloss": "afterward"
+    },
+    {
+      "target": "C3268",
+      "label": "ⲛⲥⲁ-",
+      "pos": "PREP",
+      "gloss": "behind, after; against, at, from; except, beyond"
+    },
+    {
+      "target": "C3263",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "side, part"
+    },
+    {
+      "target": "C3265",
+      "label": "ⲥⲁⲡⲓⲥⲁ",
+      "pos": "ADV",
+      "gloss": "there"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1711",
+    "demo_lemma": "bn m-sꜣ",
+    "english": "after (in time)",
+    "german": "nach (zeitlich)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1711"
+  }
+}

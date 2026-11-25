@@ -1,0 +1,426 @@
+{
+  "id": "C3398",
+  "forms": [
+    {
+      "id": "CF8691",
+      "orth": "ⲥⲟⲉⲓϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3402,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲥⲟⲉⲓϩ",
+      "dialect": "S",
+      "id": "363.1"
+    },
+    {
+      "orth": "ϣⲱⲓϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1653,
+        "count": 21
+      }
+    },
+    {
+      "orth": "ⲥⲁⲓⳉ",
+      "dialect": "A",
+      "id": "363.3"
+    },
+    {
+      "orth": "ϣⲁⲓϣ",
+      "dialect": "F",
+      "id": "363.4"
+    },
+    {
+      "orth": "ⲥⲁⲓϣ",
+      "dialect": "L",
+      "id": "363.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3870",
+      "bibliography": "CD 374b; CED 169; KoptHWb 180, 536; DELC 186; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉϯ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲕⲁⲧⲁⲡⲉⲛⲧⲁⲩϫⲟⲟϥ ϩⲙⲡⲛⲟⲙⲟⲥ ⲙⲡϫⲟⲉⲓⲥ . ϫⲉⲟⲩ**ⲥⲟⲉⲓϣ** ⲛϭⲣⲙⲡϣⲁⲛ ⲏⲙⲁⲥ ⲥⲛⲁⲩ ⲛϭⲣⲟⲟⲙⲡⲉ .",
+      "english": "and to offer a sacrifice according to that which is said in the law of the Lord, 'A pair of turtledoves, or two young pigeons.'",
+      "source": "42_Luke_2",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡ**ⲥⲟⲉⲓϣ** ⲛϭⲗⲱⲧ ⲙⲛⲡⲱⲧ ⲉⲧϩⲓϫⲱⲟⲩ ⲉⲧϩⲓϫⲛⲙⲙⲏⲣⲟⲥ ⲁⲩⲱ ⲡⲗⲟⲃⲟⲥ ⲉⲧϩⲓϫⲙⲡϩⲏⲡⲁⲣ ⲙⲛⲛⲉϭⲗⲟⲟⲧⲉ ⲉϥⲉϥⲓⲧⲟⲩ ⲙⲙⲁⲩ",
+      "english": "And the two kidneys and the fat that is upon them; he shall take away that which is on the thighs, and the caul above the liver together with the kidneys.",
+      "source": "Leviticus 3",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁ ⲅⲁⲣ ⲉⲧⲉⲣⲉⲙⲏⲧ ⲛ**ⲥⲟⲉⲓϣ** ⲛⲉϩⲉ ⲛⲁⲣϩⲱⲃ ⲛϩⲏⲧϥ ⲉϥⲛⲁⲣⲟⲩⲏⲣⲡ ⲛⲟⲩⲱⲧ ⲁⲩⲱ ⲡⲉⲧϫⲟ ⲛⲥⲟⲟⲩ ⲛⲉⲣⲧⲟϥ ⲥⲉⲛⲁⲣϣⲱⲙⲛⲧ ⲛϣⲓ",
+      "english": "For where ten yoke of oxen plough the land shall yield one jar-full, and he that sows six homers shall produce three measures.",
+      "source": "Isaiah 5",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲗⲱⲧ",
+        5,
+        21.297
+      ],
+      [
+        "ⲉϩⲉ",
+        4,
+        17.184
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ⲕⲟⲓⲗⲓⲁ",
+        2,
+        16.969
+      ],
+      [
+        "ⲛⲓⲱ",
+        1,
+        15.139
+      ],
+      [
+        "ⲡⲱⲧ",
+        5,
+        14.542
+      ],
+      [
+        "ⲛ",
+        26,
+        14.451
+      ],
+      [
+        "ϭⲣⲙⲡϣⲁⲛ",
+        1,
+        13.139
+      ],
+      [
+        "ϩⲏⲕ",
+        1,
+        13.051
+      ],
+      [
+        "ϩⲟⲩⲛ",
+        2,
+        12.781
+      ],
+      [
+        "ⲥⲕⲁⲓ",
+        1,
+        12.679
+      ],
+      [
+        "ϯⲟⲩ",
+        2,
+        12.397
+      ],
+      [
+        "ⲙⲛ",
+        8,
+        12.185
+      ],
+      [
+        "ⲙⲁⲥ",
+        1,
+        12.094
+      ],
+      [
+        "ϣⲟ",
+        2,
+        12.004
+      ],
+      [
+        "ϣⲏⲧ",
+        1,
+        11.647
+      ],
+      [
+        "ⲁⲩⲱ",
+        8,
+        11.288
+      ],
+      [
+        "ϭⲁⲙⲟⲩⲗ",
+        1,
+        11.184
+      ],
+      [
+        "ⲓⲱⲃ",
+        1,
+        10.835
+      ],
+      [
+        "ⲙⲏⲧ",
+        1,
+        9.91
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲉⲓϣ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲥⲟⲉⲓϣ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲉⲓϣ",
+          4
+        ],
+        [
+          "ϭⲗⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          3
+        ],
+        [
+          "ⲡⲱⲧ_1_post_ⲥⲟⲉⲓϣ",
+          4
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡⲱⲧ",
+          3
+        ],
+        [
+          "ϩⲓϫⲱ_2_post_ⲡⲱⲧ",
+          3
+        ],
+        [
+          "ⲟⲩ_3_post_ϩⲓϫⲱ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲱⲧ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲡⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛⲓⲱ_1_post_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ϩⲏⲕ_1_post_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϣⲟ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲉⲓⲁⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϣⲟ_3_post_ⲉⲓⲁⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲡ_1_pre_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲉⲓϣ_0_node",
+          "ⲛ_1_post_ⲥⲟⲉⲓϣ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲉⲓϣ",
+          "ϭⲗⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲗⲱⲧ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲥⲟⲉⲓϣ_0_node",
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲱⲧ",
+          "ⲡⲱⲧ_1_post_ⲥⲟⲉⲓϣ",
+          2
+        ],
+        [
+          "ⲡⲱⲧ_1_post_ⲥⲟⲉⲓϣ",
+          "ⲉⲧ_2_post_ⲡⲱⲧ",
+          3
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡⲱⲧ",
+          "ϩⲓϫⲱ_2_post_ⲡⲱⲧ",
+          3
+        ],
+        [
+          "ϩⲓϫⲱ_2_post_ⲡⲱⲧ",
+          "ⲟⲩ_3_post_ϩⲓϫⲱ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          2
+        ],
+        [
+          "ⲥⲟⲉⲓϣ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲱⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲱⲧ",
+          "ⲡⲱⲧ_1_post_ⲥⲟⲉⲓϣ",
+          2
+        ],
+        [
+          "ⲡⲱⲧ_1_post_ⲥⲟⲉⲓϣ",
+          "ⲧⲏⲣ_2_post_ⲡⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲡⲱⲧ",
+          "ϥ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲉⲓϣ_0_node",
+          "ⲛⲓⲱ_1_post_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛⲓⲱ_1_post_ⲥⲟⲉⲓϣ",
+          "ϩⲏⲕ_1_post_ⲥⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲉⲓϣ",
+          "ⲉϩⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϣⲟ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲉ_2_post_ⲛ",
+          "ⲁⲩⲱ_3_post_ⲉⲓⲁⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲉⲓⲁⲥϩⲓⲙⲉ",
+          "ϣⲟ_3_post_ⲉⲓⲁⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲥⲟⲉⲓϣ",
+          "ⲥⲟⲉⲓϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3037,
+      "count": 11
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3399",
+      "label": "ⲥⲁⲉⲓϣ",
+      "pos": "N",
+      "gloss": "double, shadow(?)"
+    },
+    {
+      "target": "C3400",
+      "label": "ⲥⲟⲉⲓϣ",
+      "pos": "V",
+      "gloss": "pair, copulate, fertilise"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5052",
+    "demo_lemma": "sjḫ",
+    "english": "[to even out, make level]",
+    "german": "Paar; Stück; Partner",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5052"
+  }
+}

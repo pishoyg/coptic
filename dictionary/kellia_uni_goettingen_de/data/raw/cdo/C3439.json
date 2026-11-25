@@ -1,0 +1,65 @@
+{
+  "id": "C3439",
+  "forms": [
+    {
+      "id": "CF8778",
+      "orth": "ϩⲓⲥⲕⲉⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3815,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3917",
+      "bibliography": "CD 329a; CED 150; KoptHWb 182; DELC 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉ ⲛⲏ ⲉⲧ**ϩⲓⲥⲕⲉⲛ**ⲡⲓⲙⲱⲓⲧ ⲡⲓⲙⲁ ⲉⲧⲁⲩⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲟⲩⲥⲱⲧⲉⲙ ⲥⲁⲧⲟⲧϥ ⲇⲉ ϣⲁϥⲓ ⲛϫⲉⲡⲥⲁⲧⲁⲛⲁⲥ ⲟⲩⲟϩ ⲛⲧⲉϥⲱⲗⲓ ⲙⲡⲓⲥⲁϫⲓ ⲉⲧⲁⲩⲥⲁⲧϥ ⲛϧⲏⲧⲟⲩ",
+      "english": "The ones by the road are the ones where the word is sown; and when they have heard, immediately Satan comes, and takes away the word which has been sown in them.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲭⲱ ⲛⲛⲁⲍⲁⲣⲉⲑ ⲛⲥⲱϥ ⲁϥⲓ ⲁϥϣⲱⲡⲓ ϧⲉⲛⲕⲁⲫⲁⲣⲛⲁⲟⲩⲙ ⲑⲏ ⲉⲧ**ϩⲓⲥⲕⲉⲛ** ⲡⲓⲟⲙ ϧⲉⲛⲛⲓϭⲓⲏ ⲛⲧⲉⲍⲁⲃⲟⲩⲗⲱⲛ ⲛⲉⲙⲛⲉⲫⲑⲁⲗⲓⲙ .",
+      "english": "Leaving Nazareth, he came and lived in Capernaum, which is by the sea, in the region of Zebulun and Naphtali,",
+      "source": "01_Matthew_04",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉⲛⲏ ⲉⲧ**ϩⲓⲥⲕⲉⲛ** ⲡⲓⲙⲱⲓⲧ ⲡⲓⲙⲁ ⲉⲧⲁⲩⲥⲓϯ ⲙⲡⲓⲥⲁϫⲓ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉϣⲱⲡ ⲛⲧⲟⲩⲥⲱⲧⲉⲙ ⲥⲁⲧⲟⲧϥ ⲇⲉ ϣⲁϥⲓ ⲛϫⲉⲡⲥⲁⲧⲁⲛⲁⲥ ⲟⲩⲟϩ ⲛⲧⲉϥⲱⲗⲓ ⲙⲡⲓⲥⲁϫⲓ ⲉⲧⲁⲩⲥⲁⲧϥ ⲛϧⲏⲧⲟⲩ",
+      "english": "The ones by the road are the ones where the word is sown; and when they have heard, immediately Satan comes, and takes away the word which has been sown in them.",
+      "source": "02_Mark_04",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3438",
+      "label": "ⲉⲥⲕⲉⲛ-",
+      "pos": "PREP",
+      "gloss": "beside"
+    },
+    {
+      "target": "C3437",
+      "label": "ⲥⲕⲉⲛ-",
+      "pos": "N",
+      "gloss": "side(?) (read: ⲥⲕⲉ ⲛ- ?)"
+    }
+  ]
+}

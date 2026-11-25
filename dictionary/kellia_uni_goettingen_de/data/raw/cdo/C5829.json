@@ -1,0 +1,113 @@
+{
+  "id": "C5829",
+  "forms": [
+    {
+      "id": "CF13655",
+      "orth": "ϭⲓⲛϣⲱⲗⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7024,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6509",
+      "bibliography": "CD 560a; ChLCS 77a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛⲁϥ ⲛϭⲓⲡϩⲗⲗⲟ ϫⲉⲉⲃⲟⲗ ϫⲉⲥⲉϣⲱⲛⲉ ⲛϭⲓⲛⲉⲕⲉⲥⲑⲏⲧⲏⲣⲓⲟⲛ ⲉⲧϩⲓⲃⲟⲗ , ⲧϭⲓⲛⲛⲁⲩ , ⲧϭⲓⲛⲥⲱⲧⲙ , ⲧ**ϭⲓⲛϣⲱⲗⲙ** , ⲧϭⲓⲛϣⲁϫⲉ .",
+      "english": "The old man answered him: that&apos;s because those of your senses are sick which are exterior, your sight, your hearing, your scent, your speech.",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛⲥⲱⲧⲙ",
+        2,
+        21.598
+      ],
+      [
+        "ϭⲓⲛϣⲁϫⲉ",
+        2,
+        17.74
+      ],
+      [
+        ",",
+        4,
+        16.867
+      ],
+      [
+        "ⲧ",
+        6,
+        12.826
+      ],
+      [
+        ".",
+        2,
+        8.557
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛϣⲱⲗⲙ",
+          1
+        ],
+        [
+          "ϭⲓⲛϣⲱⲗⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϭⲓⲛϣⲱⲗⲙ",
+          "ϭⲓⲛϣⲱⲗⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6575,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5826",
+      "label": "ϣⲱⲗⲙ",
+      "pos": "V",
+      "gloss": "smell"
+    },
+    {
+      "target": "C5827",
+      "label": "ϣⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "sense of smell"
+    },
+    {
+      "target": "C5828",
+      "label": "ⲙⲁ ⲛϣⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "place, organ of smell, nostril"
+    }
+  ]
+}

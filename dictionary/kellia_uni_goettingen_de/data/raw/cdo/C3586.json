@@ -1,0 +1,76 @@
+{
+  "id": "C3586",
+  "forms": [
+    {
+      "id": "CF9077",
+      "orth": "ϣⲛⲥⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4084",
+      "bibliography": "CD 342b; KoptHWb 188; ChLCS 48b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6032",
+      "type": "cf",
+      "label": "son, child"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3590",
+      "label": "ⲙⲛⲧⲙⲁⲓⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherly love"
+    },
+    {
+      "target": "C3589",
+      "label": "ⲙⲛⲧⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherhood, brotherliness"
+    },
+    {
+      "target": "C3583",
+      "label": "ⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brother"
+    },
+    {
+      "target": "C3584",
+      "label": "ⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brother (monk)"
+    },
+    {
+      "target": "C3585",
+      "label": "ⲥⲟⲛ ⲛⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "uncle"
+    },
+    {
+      "target": "C3587",
+      "label": "ⲥⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "sister"
+    },
+    {
+      "target": "C3588",
+      "label": "ⲥⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "sister (nun)"
+    }
+  ]
+}

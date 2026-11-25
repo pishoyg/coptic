@@ -1,0 +1,52 @@
+{
+  "id": "C7370",
+  "forms": [
+    {
+      "id": "CF16799",
+      "orth": "ϫⲟⲣϫⲣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϭⲣϭⲱⲣ⸗",
+      "dialect": "S",
+      "id": "702.1"
+    },
+    {
+      "orth": "ϫⲉⲣϫⲱⲣ†",
+      "dialect": "S",
+      "id": "702.2"
+    },
+    {
+      "orth": "ϫⲁⲗϫⲉⲗ",
+      "dialect": "F",
+      "id": "702.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8152",
+      "bibliography": "CD 787a; CED 320; KoptHWb 434; ChLCS 104a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7371",
+      "label": "ϫⲉⲣϫⲱⲣ",
+      "pos": "VSTAT",
+      "gloss": "be hard"
+    },
+    {
+      "target": "C7372",
+      "label": "ϫⲟⲣϫⲣ",
+      "pos": "N",
+      "gloss": "strength"
+    }
+  ]
+}

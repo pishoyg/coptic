@@ -1,0 +1,84 @@
+{
+  "id": "C3733",
+  "forms": [
+    {
+      "id": "CF9383",
+      "orth": "ⲥⲣϥⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4241",
+      "bibliography": "CD 357a; KoptHWb 196; DELC 197; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲣⲉⲛⲉⲧⲥⲟⲟⲩⲛ ⲙⲙⲟⲕ **ⲥⲣϥⲉ **ⲉ**ⲣϩⲙϩⲁⲗ** ⲛⲁⲕ ·",
+      "english": "those who know you shall be at ease to serve you.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲉⲓ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲁⲡⲙⲏⲏϣⲉ ⲟⲛ ⲥⲱⲟⲩϩ ⲉⲣⲟϥ ϩⲱⲥⲧⲉ **ⲛⲥⲉⲧⲙⲥⲣϥⲉ **ⲉ**ⲟⲩⲉⲙⲡⲉⲩⲟⲉⲓⲕ**",
+      "english": "He came into a house. The multitude came together again, so that they could not so much as eat bread.",
+      "source": "41_Mark_3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϥⲉϭⲛⲉⲧⲛⲉⲣⲏⲩ ⲉⲓⲙⲏⲧⲓ ϩⲛⲟⲩϣⲱⲛⲃ ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ **ϫⲉⲉⲧⲉⲧⲛⲉⲥⲣϥⲉ **ⲉ**ⲡⲉϣⲗⲏⲗ** . ⲁⲩⲱ ⲟⲛ ⲛⲧⲉⲧⲛⲉⲓ ⲉⲧⲟⲩⲉⲛⲛⲉⲧⲛⲉⲣⲏⲩ ϫⲉⲛⲛⲉⲡⲥⲁⲧⲁⲛⲁⲥ ⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲱⲧⲛ ⲉⲧⲃⲉⲧⲉⲧⲛⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ .",
+      "english": "Don&apos;t deprive one another, unless it is by consent for a season, that you may give yourselves to fasting and prayer, and may be together again, that Satan doesn&apos;t tempt you because of your lack of self-control.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3738",
+      "label": "ϭⲓⲛⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure"
+    },
+    {
+      "target": "C3736",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "lack of leisure"
+    },
+    {
+      "target": "C3737",
+      "label": "ⲣⲉϥⲥⲣⲱϥⲧ",
+      "pos": "N",
+      "gloss": "idler"
+    },
+    {
+      "target": "C3732",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "V",
+      "gloss": "be at leisure, unoccupied"
+    },
+    {
+      "target": "C3735",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure, perseverance"
+    },
+    {
+      "target": "C3734",
+      "label": "ⲥⲣϥⲉ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "have leisure, let go of sth, desist from sth"
+    }
+  ]
+}

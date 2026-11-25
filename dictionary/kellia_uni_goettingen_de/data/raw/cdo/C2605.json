@@ -1,0 +1,51 @@
+{
+  "id": "C2605",
+  "forms": [
+    {
+      "id": "CF7009",
+      "orth": "ⲛⲁϣⲡⲏⲣⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF7010",
+      "orth": "ⲛⲁϣⲡⲏⲣⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2987",
+      "bibliography": "CD 236b-237a; KoptHWb 131; DELC 148"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2868",
+      "type": "cf",
+      "label": "quail"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2603",
+      "label": "ⲛⲟⲩϣⲡ",
+      "pos": "V",
+      "gloss": "blow (of wind); agitate, frighten, overawe"
+    },
+    {
+      "target": "C2604",
+      "label": "ⲛⲟⲩϣⲡ",
+      "pos": "N",
+      "gloss": "fright"
+    }
+  ]
+}

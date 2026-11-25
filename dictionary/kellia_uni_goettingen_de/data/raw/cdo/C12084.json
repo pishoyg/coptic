@@ -1,0 +1,125 @@
+{
+  "id": "C12084",
+  "forms": [
+    {
+      "id": "CF33091",
+      "orth": "ϣⲉⲩⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5280,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17085",
+      "bibliography": "CD 603b; KoptHWB 335; CED 258; DELC 274b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲡⲓⲁⲗⲟⲩ ⲁϥϩⲱⲗ ⲉⲡϣⲱⲓ ⲉϯ**ϣⲉⲩⲛⲓ** ⲛⲧⲉⲡⲓⲣⲱⲙⲓ ⲁϥⲱⲗⲓ ⲛⲟⲩϣⲟⲗ ⲛⲥⲱⲟⲩⲃⲉⲛ ⲁϥⲧⲁⲗⲟϥ ⲉϫⲱϥ ⲁϥⲛⲕⲟⲧ .",
+      "english": "Then the boy climbed into the man's hayloft, took a bundle of hay, placed it on him, and fell asleep.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲱⲓ",
+        2,
+        12.503
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        2,
+        10.487
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.066
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ],
+      [
+        "ⲡ",
+        2,
+        7.619
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϣⲉⲩⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲉⲩⲛⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲓ_3_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲉⲩⲛⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ϣⲉⲩⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲉⲩⲛⲓ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲣⲱⲙⲓ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4788,
+      "count": 2
+    }
+  }
+}

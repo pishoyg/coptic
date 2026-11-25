@@ -1,0 +1,111 @@
+{
+  "id": "C5296",
+  "forms": [
+    {
+      "id": "CF12561",
+      "orth": "ⲟⲩⲁϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19940,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 802,
+        "count": 72
+      }
+    },
+    {
+      "orth": "ⲃⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9564,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲉϩⲓ",
+      "dialect": "F",
+      "id": "1766.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5944",
+      "bibliography": "CD 508b; CED 222; KoptHWb 284; DELC 241a; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲟⲩⲁ ⲇⲉ ϫⲟⲟⲥ ⲛⲁⲩ ⲉⲃⲟⲗ ⲛϩⲏⲧ ⲧⲏⲩⲧⲛ ϫⲉⲃⲱⲕ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ⲛⲧⲉⲧⲛϩⲙⲟⲙ ⲁⲩⲱ ⲛⲧⲉⲧⲛⲥⲉⲓ ⲛϥⲧⲙϯ ⲇⲉ ⲛⲁⲩ ⲛⲛⲉⲧ**ⲟⲩⲁϩⲉ** ⲛⲁⲩ ⲛⲧⲉⲡⲥⲱⲙⲁ ⲟⲩ ⲡⲉ ⲡϩⲏⲩ",
+      "english": "and one of you tells them, 'Go in peace, be warmed and filled;' and yet you didn't give them the things the body needs, what good is it?",
+      "source": "59_James_2",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲛⲉ",
+        1,
+        10.414
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        8.688
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19550,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "48700",
+    "egy_lemma": "wḥꜣ.t",
+    "demo_num": "d1480",
+    "demo_lemma": "Wḥj",
+    "english": "oasis",
+    "german": "Oase",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48700",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1480"
+  }
+}

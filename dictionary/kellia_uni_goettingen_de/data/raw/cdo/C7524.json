@@ -1,0 +1,57 @@
+{
+  "id": "C7524",
+  "forms": [
+    {
+      "id": "CF17107",
+      "orth": "ⲙⲁⲓϫⲁϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8342",
+      "bibliography": "CD 799b; KoptHWb 441; ChLCS 105b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7521",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enemy"
+    },
+    {
+      "target": "C7522",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enemy"
+    },
+    {
+      "target": "C7523",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "hostile"
+    },
+    {
+      "target": "C7525",
+      "label": "ⲙⲛⲧϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enmity"
+    },
+    {
+      "target": "C7526",
+      "label": "ⲣϫⲁϫⲉ",
+      "pos": "V",
+      "gloss": "be at enmity, quarrel, argue"
+    }
+  ]
+}

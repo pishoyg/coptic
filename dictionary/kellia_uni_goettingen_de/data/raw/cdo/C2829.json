@@ -1,0 +1,104 @@
+{
+  "id": "C2829",
+  "forms": [
+    {
+      "id": "CF7505",
+      "orth": "ⲣⲡⲉⲗϭⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34013",
+      "orth": "ⲣⲡⲗϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5746,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3235",
+      "bibliography": "CD 262b-263a; KoptHWb 147; ChLCS 37a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2826",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2827",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "split, torn cloth, rag"
+    },
+    {
+      "target": "C2828",
+      "label": "ⲡⲉⲗϭⲉ",
+      "pos": "N",
+      "gloss": "worn, old"
+    },
+    {
+      "target": "C2830",
+      "label": "ⲡⲉⲗⲏⲕ",
+      "pos": "N",
+      "gloss": "worn (?), old(?), dilapidated(?)"
+    },
+    {
+      "target": "C2824",
+      "label": "ⲡⲗⲟϭ",
+      "pos": "N",
+      "gloss": "portion, part"
+    },
+    {
+      "target": "C2825",
+      "label": "ⲡⲟⲗϭⲥ",
+      "pos": "N",
+      "gloss": "clod, lump (of earth)"
+    },
+    {
+      "target": "C2820",
+      "label": "ⲡⲱⲗϭ",
+      "pos": "V",
+      "gloss": "agree with sb, decide, reach satisfaction; deliver, decide, settle (an affair)"
+    },
+    {
+      "target": "C2822",
+      "label": "ⲡⲱⲗϭ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "reach conclusion, make an end, be freed (from), be transferred, relieved; settle, make an end of, take off/out, bring to terms with, relieve from,\n              satisfy"
+    },
+    {
+      "target": "C2821",
+      "label": "ⲡⲱⲗϭ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with, settle"
+    },
+    {
+      "target": "C2823",
+      "label": "ⲫⲱⲗϫ",
+      "pos": "N",
+      "gloss": "ease, liberty"
+    }
+  ]
+}

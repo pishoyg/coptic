@@ -1,0 +1,48 @@
+{
+  "id": "C12142",
+  "forms": [
+    {
+      "id": "CF33151",
+      "orth": "ⲁⲛⲉⲧⲱⲣⲧ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF33152",
+      "orth": "ⲁⲛⲉⲧⲱⲣ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17143",
+      "bibliography": "KoptHWB 244; DMT 142b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4524",
+      "label": "ⲁⲛⲧⲱⲧⲉⲣ",
+      "pos": "N",
+      "gloss": "threshold"
+    },
+    {
+      "target": "C4522",
+      "label": "ⲧⲱⲣⲧ",
+      "pos": "N",
+      "gloss": "staircase"
+    },
+    {
+      "target": "C4523",
+      "label": "ⲧⲱⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "ladder, step, stair, degree (of sundial)"
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "id": "C1742",
+  "forms": [
+    {
+      "id": "CF5043",
+      "orth": "ⲗϩⲱⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4310,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF5044",
+      "orth": "ⲗϩⲱⲱϥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5045",
+      "orth": "ⲁⲗϩⲱⲃ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉⲗϩⲱⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6457,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲉⲗϩⲱⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7200,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗϩⲱⲃ",
+      "dialect": "A",
+      "id": "1016.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2020",
+      "bibliography": "CD 149b; KoptHWb 82; ChLCS 22b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁϯ ⲛϩⲉⲛⲙⲁⲉⲓⲛ ϩⲣⲁⲓ ϩⲛⲧⲡⲉ ⲁⲩⲱ ϩⲉⲛϣⲡⲏⲣⲉ ⲙⲡⲉⲥⲏⲧ ϩⲓϫⲙⲡⲕⲁϩ ⲟⲩⲥⲛⲟϥ ⲙⲛⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩ**ⲗϩⲱⲃ** ⲛⲕⲁⲡⲛⲟⲥ .",
+      "english": "I will show wonders in the sky above, and signs on the earth beneath; blood, and fire, and billows of smoke.",
+      "source": "44_Acts of the Apostles_2",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩϭⲓⲛⲁⲙⲱⲙⲟⲛ ⲁⲩⲱ ⲟⲩϣⲉ ⲛⲥⲱⲧϥ ⲙⲛⲟⲩⲁⲥⲡⲁⲗⲁⲑⲟⲥ ⲛⲁⲣⲱⲙⲁⲧⲁ ⲁⲓϯ ⲙⲡⲁⲥⲧⲟⲓ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲭⲁⲗⲃⲁⲛⲏ ⲙⲛⲟⲩⲉⲓⲃ ⲙⲛⲟⲩⲥⲧⲁⲕⲧⲏ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩ**ⲗϩⲱⲃ** ⲛⲗⲓⲃⲁⲛⲟⲥ ϩⲛⲟⲩⲥⲕⲏⲛⲏ",
+      "english": "I gave a sweet smell like cinnamon and aspalathus, and I yielded a pleasant odour like the best myrrh, as galbanum, and onyx, and sweet storax, and as the fume of frankincense in the tabernacle.",
+      "source": "Sirach 24",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁϯ ⲛϩⲉⲛϣⲡⲏⲣⲉ ϩⲛⲧⲡⲉ ⲛⲧⲡⲉ ⲁⲩⲱ ϩⲉⲛⲙⲁⲉⲓⲛ ⲙⲡⲉⲥⲏⲧ ϩⲓϫⲙⲡⲕⲁϩ ⲉⲟⲩⲥⲛⲟϥ ⲙⲛⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩ**ⲗϩⲱⲃ** ⲛⲕⲁⲡⲛⲟⲥ",
+      "english": "and cast lots over my people, and have given their boys to harlots, and sold their girls for wine, and have drunk.",
+      "source": "Joel 3",
+      "urn": "urn:cts:copticLit:ot.joel.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲃⲗ",
+        1,
+        17.791
+      ],
+      [
+        "ⲕⲁⲡⲛⲟⲥ",
+        3,
+        16.873
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        3,
+        13.588
+      ],
+      [
+        "ⲟⲩ",
+        10,
+        12.378
+      ],
+      [
+        "ⲛ",
+        13,
+        12.103
+      ],
+      [
+        "ϩⲣⲱ",
+        1,
+        11.983
+      ],
+      [
+        "ⲱϩⲧ",
+        1,
+        11.958
+      ],
+      [
+        "ⲛⲓϥⲉ",
+        1,
+        11.543
+      ],
+      [
+        "ⲗⲓⲃⲁⲛⲟⲥ",
+        1,
+        11.524
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        1,
+        11.487
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        10.803
+      ],
+      [
+        "ⲡ",
+        8,
+        10.69
+      ],
+      [
+        "ⲣⲏ",
+        1,
+        9.505
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.427
+      ],
+      [
+        "ϩⲉ",
+        2,
+        7.92
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        7.845
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.491
+      ],
+      [
+        "ⲧ",
+        2,
+        6.264
+      ],
+      [
+        "ⲙ",
+        2,
+        5.544
+      ],
+      [
+        "ⲕ",
+        1,
+        4.045
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗϩⲱⲃ_0_node",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗϩⲱⲃ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗϩⲱⲃ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲗϩⲱⲃ",
+          3
+        ],
+        [
+          "ⲕⲁⲡⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲗⲓⲃⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲥⲕⲏⲛⲏ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲗϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲗϩⲱⲃ",
+          "ⲙⲛ_1_pre_ⲗϩⲱⲃ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗϩⲱⲃ_b",
+          "ⲟⲩ_1_pre_ⲗϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗϩⲱⲃ",
+          "ⲗϩⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲗϩⲱⲃ_0_node",
+          "ⲛ_1_post_ⲗϩⲱⲃ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲗϩⲱⲃ",
+          "ⲕⲁⲡⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗϩⲱⲃ",
+          "ϩⲣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲱ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          "ⲟⲩ_2_post_ⲕⲁⲡⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗϩⲱⲃ",
+          "ⲗⲓⲃⲁⲛⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲗⲓⲃⲁⲛⲟⲥ_2_post_ⲛ",
+          "ϩⲛ_3_post_ⲗⲓⲃⲁⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ⲗⲓⲃⲁⲛⲟⲥ",
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          "ⲥⲕⲏⲛⲏ_5_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲗϩⲱⲃ",
+          "ⲗϩⲱⲃ_0_node",
+          1
+        ],
+        [
+          "ⲗϩⲱⲃ_0_node",
+          "ⲙ_1_post_ⲗϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗϩⲱⲃ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲱϩⲧ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3910,
+      "count": 7
+    }
+  },
+  "etym": {
+    "egy_num": "95420",
+    "egy_lemma": "rhb",
+    "demo_num": "d3682",
+    "demo_lemma": "lhb",
+    "english": "embers",
+    "german": "Glut",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3682"
+  }
+}

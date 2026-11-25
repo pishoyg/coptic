@@ -1,0 +1,75 @@
+{
+  "id": "C11281",
+  "forms": [
+    {
+      "id": "CF31738",
+      "orth": "ⲧⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.43,
+        "rank": 385,
+        "count": 383
+      }
+    },
+    {
+      "orth": "ⲧⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.87,
+        "rank": 132,
+        "count": 837
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "gen": "f.",
+    "number": "sg.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS4556",
+      "bibliography": "CD 390a; CED 177; KoptHWb 216; DELC 208; ChLCS 55a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧⲟⲩ** ⲁⲩⲧⲟⲩ :",
+      "english": "Of the same:",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲅⲱ ⲧⲁⲗⲁⲥ ⲁⲙⲁⲣⲧⲱⲗⲟⲩⲥ ⲃⲓⲕⲧⲱⲣ ⲉⲗⲁⲭⲓⲥⲧⲟⲥ ⲇⲓⲁⲕⲟⲛⲟⲥ ⲡⲁⲓⲥ ⲧⲟⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲙⲉⲣ ⲇⲓⲁⲕⲟⲛⲟⲥ ⲩⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲉⲡⲱⲛⲩⲭⲟⲥ ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ **ⲧⲟⲩ** ⲁⲅⲓⲟⲩ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲩ ⲙⲉⲅⲁ ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲁ ⲁⲡⲟ ⲧⲏⲥ ⲡⲟⲗⲗⲁⲧⲱⲛ ⲉⲅⲣⲁⲯⲁⲥ ⲃⲓⲃⲗⲟⲥ ⲙⲛⲏⲥⲑⲓϯ ⲙⲟⲩ ⲕⲉⲟⲧⲁⲛ ⲏⲗⲑⲉⲥ ⲛ ⲧⲏ ⲃⲁⲥⲓⲗⲓⲁ ⲥⲟⲩϥⲑ .",
+      "english": "I, the wretched sinner, the least of all men, Victor the deacon, the son of the blessed Mercurius the deacon, the son of the blessed Eponuchos, archdeacon of the church of Saint Mercurius, the general-in-chief, of the city of Latopolis (i. e. Esna, or Asna), wrote [this] book. Remember Thou me, O Lord, when Thou eomest into Thy kingdom ! Amen.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲅⲱ ⲃⲓⲕⲧⲟⲣ ⲉⲗⲁⲭⲓⲥⲧⲟⲥ ⲇⲓⲁⲕⲟⲛⲟⲥ ⲩⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲇⲓⲁⲕⲟⲛⲟⲥ **ⲧⲟⲩ** ⲁⲅⲓⲟⲩ ⲙⲉⲣⲕⲩⲣⲓⲟⲩ ⲙⲉⲅⲁⲥⲧⲣⲁⲧⲏⲗⲁⲧⲁ ⲁⲡⲟ ⲧⲏⲥ ⲡⲟⲗⲉⲟⲥ ⲗⲁⲧⲱⲛ ⲉⲅⲣⲁⲯⲁⲥ ⲃⲓⲃⲗⲟⲥ",
+      "english": "I, Victor, the least of all men, the deacon, the son of the blessed Mercurius, the deacon of [the church of] Saint Mercurius, the general-in-chief, of the city of Latopolis, wrote this book.",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2388",
+      "type": "cf",
+      "label": "possessive article pl. (2 p. sg. f.)"
+    },
+    {
+      "target": "C2787",
+      "type": "cf",
+      "label": "possessive article sg. m. (2 p. sg. f.)"
+    }
+  ]
+}

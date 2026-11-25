@@ -1,0 +1,44 @@
+{
+  "id": "C1171",
+  "forms": [
+    {
+      "id": "CF3729",
+      "orth": "ⲛⲕⲱⲗⲉⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS1361",
+      "bibliography": "CD 104b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1168",
+      "label": "ⲕⲱⲗⲉⲙ",
+      "pos": "V",
+      "gloss": "hasten; hasten"
+    },
+    {
+      "target": "C1169",
+      "label": "ⲕⲱⲗⲉⲙ",
+      "pos": "N",
+      "gloss": "haste"
+    },
+    {
+      "target": "C1170",
+      "label": "ⲣⲉϥⲭⲱⲗⲉⲙ",
+      "pos": "N",
+      "gloss": "hasty man"
+    }
+  ]
+}

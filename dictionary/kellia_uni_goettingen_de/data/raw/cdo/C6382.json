@@ -1,0 +1,63 @@
+{
+  "id": "C6382",
+  "forms": [
+    {
+      "id": "CF14779",
+      "orth": "ⲛϩⲏⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 21.96,
+        "rank": 63,
+        "count": 3464
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status pronominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7078",
+      "bibliography": "CD 643a; CED 271; KoptHWb 350; DELC 285b; ChLCS 87a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲡⲉⲡⲛⲟⲩⲧⲉ ⲱⲕ **ⲛϩⲏⲧ** ⲙⲛⲡⲉⲩϩⲟⲩⲟ . ⲁⲩⲡⲟⲣϣⲟⲩ ⲅⲁⲣ ϩⲙⲡϫⲁⲓⲉ .",
+      "english": "However with most of them, God was not well pleased, for they were overthrown in the wilderness.",
+      "source": "46_1 Corinthians_10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣⲱⲡⲉ ⲟⲩⲛⲧⲁⲓ ⲛⲟⲩⲡⲣⲟⲫⲏⲧⲓⲁ .ⲧⲁ ⲉⲓⲙⲉ ⲉⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲙⲛⲡⲥⲟⲟⲩⲛ ⲧⲏⲣϥ . ⲕⲁⲛ ⲉⲟⲩⲛⲧⲁⲓⲧⲡⲓⲥⲧⲓⲥ ⲧⲏⲣⲥ ϩⲱⲥⲧⲉ ⲉⲡⲉⲛⲉⲧⲟⲟⲩ ⲉⲃⲟⲗ ⲉⲙⲛⲁⲅⲁⲡⲏ ⲇⲉ **ⲛϩⲏⲧ** ⲁⲛⲅⲟⲩⲗⲁⲁⲩ .",
+      "english": "If I have the gift of prophecy, and know all mysteries and all knowledge; and if I have all faith, so as to remove mountains, but don&apos;t have love, I am nothing.",
+      "source": "1 Corinthians 13",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6381",
+      "label": "ϩⲏ",
+      "pos": "N",
+      "gloss": "belly, womb"
+    }
+  ],
+  "etym": {
+    "egy_num": "857315",
+    "egy_lemma": "m-ẖ.t",
+    "demo_num": "d2903",
+    "demo_lemma": "n-ẖ.t-n",
+    "english": "in",
+    "german": "in",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/857315",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2903"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "C3145",
+  "forms": [
+    {
+      "id": "CF8171",
+      "orth": "ⲣⲥⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19450,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉⲣⲥⲱ",
+      "dialect": "S",
+      "id": "907.1"
+    },
+    {
+      "orth": "ⲣⲥⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4636,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲉⲣⲥⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": "907.3"
+    },
+    {
+      "orth": "ⲉⲣⲥⲱⲟⲩ",
+      "dialect": "B",
+      "id": "907.4"
+    },
+    {
+      "orth": "ⲣⲥⲟⲩ",
+      "dialect": "A",
+      "id": "907.5"
+    },
+    {
+      "orth": "ⲉⲣⲥⲱ",
+      "dialect": "F",
+      "id": "907.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3595",
+      "bibliography": "CD 302a; CED 139; KoptHWb 166; DELC 177; ChLCS 42b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲥⲏϩ ⲅⲁⲣ ϩⲙⲡϫⲱⲱⲙⲉ ⲛⲛⲉⲯⲁⲗⲙⲟⲥ ϫⲉⲙⲁⲣⲉⲧⲉϥ**ⲣⲥⲱ** ϣⲱⲡⲉ ⲛϫⲁⲓⲉ . ⲁⲩⲱ ⲙⲡⲣⲧⲣⲉϥϣⲱⲡⲉ ⲛϭⲓⲡⲉⲧⲟⲩⲏϩ ϩⲛⲛⲉϥⲙⲁ ⲛϣⲱⲡⲉ . ⲁⲩⲱ ⲧⲉϥⲙⲛⲧⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲙⲁⲣⲉⲕⲉⲟⲩⲁ ϫⲓⲧⲥ .",
+      "english": "For it is written in the book of Psalms, 'Let his habitation be made desolate. Let no one dwell therein;'",
+      "source": "44_Acts of the Apostles_1",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲯⲁⲗⲙⲟⲥ",
+        1,
+        13.479
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        12.299
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        10.681
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19062,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d3563",
+    "demo_lemma": "rs.t",
+    "english": "hurdle, dwelling, farmstead",
+    "german": "Hürde, Wohnung, Gehöft",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3563"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "C1674",
+  "forms": [
+    {
+      "id": "CF4857",
+      "orth": "ⲗⲉⲛⲧⲏⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4858",
+      "orth": "ⲗⲉⲛⲑⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20729,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4859",
+      "orth": "ⲗⲁⲛⲑⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20551,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4860",
+      "orth": "ⲗⲁⲛⲑⲉⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1939",
+      "bibliography": "CD 143b-144a; ChLCS 21a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲟⲩ**ⲗⲁⲛⲑⲏⲛ** ⲛϣⲉ ⲉⲧⲃⲉⲡⲁⲓ ϯⲣⲁϣⲉ ⲙⲡϩⲟⲟⲩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟϥ ⲡⲉⲛⲧⲁϥϯϭⲟⲙ ⲛⲁⲓ ϣⲁⲛⲧⲟⲩⲁⲥⲧ ϩⲛⲧⲁⲙⲏⲧⲉ ϩⲛⲟⲩ**ⲗⲉⲛⲑⲏⲛ** ⲛϣⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8975,
+      "count": 2
+    }
+  }
+}

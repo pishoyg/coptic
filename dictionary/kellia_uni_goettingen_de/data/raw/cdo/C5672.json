@@ -1,0 +1,219 @@
+{
+  "id": "C5672",
+  "forms": [
+    {
+      "id": "CF13320",
+      "orth": "ⲱϫϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2132,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6345",
+      "bibliography": "CD 540b; ChLCS 74b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲑⲃⲉⲛⲓⲉⲑⲛⲟⲥ ⲇⲉ ⲉⲧⲁⲩⲛⲁϩϯ ⲁⲛⲟⲛ ⲁⲛⲟⲩⲱⲣⲡ ⲉⲁⲛϯϩⲁⲡ ⲉⲑⲣⲟⲩⲁⲣⲉϩ ⲉⲣⲱⲟⲩ ⲉⲃⲟⲗ ϩⲁⲛⲓϣⲱⲧ ⲛⲓⲇⲱⲗⲟⲛ ⲛⲉⲙⲛⲓⲥⲛⲟϥ ⲛⲉⲙⲛⲓ**ⲱϫϩ** ⲛⲉⲙϯⲡⲟⲣⲛⲉⲓⲁ .",
+      "english": "But concerning the Gentiles who believe, we have written our decision that they should observe no such thing, except that they should keep themselves from food offered to idols, from blood, from strangled things, and from sexual immorality.'",
+      "source": "05_Acts_21",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲉϩ ⲉⲣⲱⲧⲉⲛ ⲥⲁⲃⲟⲗ ⲙⲙⲱⲟⲩ ⲛⲓϣⲱⲧ ⲛⲓⲇⲱⲗⲟⲛ ⲛⲉⲙⲛⲓⲥⲛⲟϥ ⲉⲧⲙⲱⲟⲩⲧ ⲛⲉⲙⲛⲓ**ⲱϫϩ** ⲛⲉⲙⲛⲓⲡⲟⲣⲛⲉⲓⲁ ⲛⲁⲓ ⲉⲣⲉⲧⲉⲛⲁⲣⲉϩ ⲉⲣⲱⲧⲉⲛ ⲥⲁⲃⲟⲗ ⲙⲙⲱⲟⲩ ⲛⲧⲉⲧⲉⲛⲉⲣϩⲱⲃ ⲛⲕⲁⲗⲱⲥ ⲟⲩϫⲁⲓ .",
+      "english": "that you abstain from things sacrificed to idols, from blood, from things strangled, and from sexual immorality, from which if you keep yourselves, it will be well with you. Farewell.'",
+      "source": "05_Acts_15",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲟⲩⲱⲣⲡ ⲛⲱⲟⲩ ⲉⲑⲣⲟⲩϩⲉⲛⲟⲩ ⲥⲁⲃⲟⲗ ⲛⲛⲓϣⲱⲧ ⲛⲓⲇⲱⲗⲟⲛ ⲛⲉⲙϯⲡⲟⲣⲛⲉⲓⲁ ⲛⲉⲙⲛⲓ**ⲱϫϩ** ⲛⲉⲙⲛⲓⲥⲛⲟϥ ⲉⲧⲙⲱⲟⲩⲧ .",
+      "english": "but that we write to them that they abstain from the pollution of idols, from sexual immorality, from what is strangled, and from blood.",
+      "source": "05_Acts_15",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲱϫϩ",
+          3
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲱϫϩ",
+          3
+        ],
+        [
+          "ⲱϫϩ_0_node",
+          7
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲉⲓⲁ_1_post_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲱϫϩ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲱϫϩ",
+          3
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲱ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲙⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲓ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱϫϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲱϫϩ",
+          "ⲛⲓ_1_pre_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲱϫϩ",
+          "ⲱϫϩ_0_node",
+          2
+        ],
+        [
+          "ⲱϫϩ_0_node",
+          "ⲛⲉⲙ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          "ⲛⲓ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲡⲟⲣⲛⲉⲓⲁ",
+          "ⲡⲟⲣⲛⲉⲓⲁ_1_post_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲱϫϩ",
+          "ⲛⲁ_1_pre_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲱϫϩ",
+          "ⲩ_1_pre_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲱϫϩ",
+          "ⲱϫϩ_0_node",
+          3
+        ],
+        [
+          "ⲱϫϩ_0_node",
+          "ⲙⲙⲱ_1_post_ⲱϫϩ",
+          2
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲱϫϩ",
+          "ⲟⲩ_2_post_ⲙⲙⲱ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲱϫϩ",
+          "ⲁ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱϫϩ",
+          "ⲩ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲱϫϩ",
+          "ⲛⲉϥ_2_pre_ⲙⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲙⲟⲩⲓ",
+          "ⲙⲟⲩⲓ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲓ_1_pre_ⲱϫϩ",
+          "ⲁ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲱϫϩ",
+          "ϥ_1_pre_ⲱϫϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲱϫϩ",
+          "ⲱϫϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.24,
+      "rank": 1460,
+      "count": 20
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5671",
+      "label": "ⲱϭⲧ",
+      "pos": "V",
+      "gloss": "choke, throttle"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "id": "C8814",
+  "forms": [
+    {
+      "id": "CF21223",
+      "orth": "ⲇⲟⲕⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF21224",
+      "orth": "ⲇⲟϭⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21225",
+      "orth": "ⲇⲟⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4023,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF21226",
+      "orth": "ⲇⲟⲕⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21227",
+      "orth": "ⲇⲟⲝⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21228",
+      "orth": "ⲇⲟⲝⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21229",
+      "orth": "ⲇⲟⲝⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21230",
+      "orth": "ⲛⲇⲟⲕⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5901,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10584",
+      "bibliography": "DDGLC",
+      "cu_ID": "464"
+    },
+    {
+      "id": "CS10585",
+      "bibliography": "DDGLC",
+      "cu_ID": "5408"
+    },
+    {
+      "id": "CS10586",
+      "bibliography": "DDGLC",
+      "cu_ID": "8453"
+    },
+    {
+      "id": "CS10587",
+      "bibliography": "DDGLC",
+      "cu_ID": "5409"
+    },
+    {
+      "id": "CS10588",
+      "bibliography": "DDGLC",
+      "cu_ID": "8390"
+    },
+    {
+      "id": "CS10589",
+      "bibliography": "DDGLC",
+      "cu_ID": "3035"
+    },
+    {
+      "id": "CS10590",
+      "bibliography": "DDGLC",
+      "cu_ID": "5410"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲉⲧⲛⲥⲱⲧⲙ ⲉⲡⲟⲩⲁ ⲛⲧⲁϥϫⲟⲟϥ . ⲉⲥ**ⲇⲟⲕⲉⲓ** ⲛⲏⲧⲛ ⲉⲟⲩ . ⲛⲧⲟⲟⲩ ⲇⲉ ⲧⲏⲣⲟⲩ ⲁⲩⲧϭⲁⲓⲟϥ ϫⲉ ϥⲙⲡϣⲁ ⲙⲡⲙⲟⲩ .",
+      "english": "You have heard the blasphemy! What do you think?&apos; They all condemned him to be worthy of death.",
+      "source": "Mark Chapter 14",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϫⲓⲥ ϭⲉ ⲛⲁⲛ ϫⲉⲟⲩ ⲡⲉⲧⲥ**ⲇⲟⲕⲉⲓ** ⲛⲁⲕ . ⲉⲝⲉⲥⲧⲉⲓ ⲉϯⲕⲩⲛⲥⲟⲥ ⲙⲡⲣⲣⲟ ϫⲛⲟⲩⲕ ⲉⲝⲉⲥⲧⲉⲓ .",
+      "english": "Tell us therefore, what do you think? Is it lawful to pay taxes to Caesar, or not?'",
+      "source": "40_Matthew_22",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉⲧⲥ**ⲇⲟⲕⲉⲓ** ⲛⲏⲧⲛ . ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲟⲩⲱϣⲃ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲟ ⲛⲉⲛⲟⲭⲟⲥ ⲉⲡⲙⲟⲩ .",
+      "english": "What do you think?' They answered, 'He is worthy of death!'",
+      "source": "40_Matthew_26",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲏ",
+        6,
+        14.815
+      ],
+      [
+        "ⲟⲩ",
+        14,
+        13.642
+      ],
+      [
+        "ⲉⲝⲉⲥⲧⲉⲓ",
+        1,
+        13.074
+      ],
+      [
+        "ⲧⲛ",
+        6,
+        12.919
+      ],
+      [
+        "ⲥ",
+        8,
+        12.274
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        10.993
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        1,
+        10.912
+      ],
+      [
+        ".",
+        5,
+        10.523
+      ],
+      [
+        "ⲡ",
+        6,
+        9.252
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        8.278
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        7.894
+      ],
+      [
+        "ⲉ",
+        4,
+        7.817
+      ],
+      [
+        "ⲕ",
+        2,
+        6.853
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        5.78
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        5.688
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ϥ",
+        2,
+        4.522
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        3.508
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥ_1_pre_ⲇⲟⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲇⲟⲕⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛⲏ_1_post_ⲇⲟⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲇⲟⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥ_1_pre_ⲇⲟⲕⲉⲓ",
+          "ⲇⲟⲕⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲇⲟⲕⲉⲓ_0_node",
+          "ⲛⲏ_1_post_ⲇⲟⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲏ_1_post_ⲇⲟⲕⲉⲓ",
+          "ⲧⲛ_2_post_ⲛⲏ",
+          2
+        ],
+        [
+          "ⲧⲛ_2_post_ⲛⲏ",
+          "ⲉ_1_post_ⲇⲟⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲇⲟⲕⲉⲓ",
+          "ⲟⲩ_2_post_ⲉ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3627,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "564",
+    "grl_lemma": "δοκέω",
+    "grl_meaning": "to expect, think, seem",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 441b; Preisigke 1:394"
+  }
+}

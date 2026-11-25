@@ -1,0 +1,163 @@
+{
+  "id": "C7867",
+  "forms": [
+    {
+      "id": "CF32206",
+      "orth": "ϭⲣⲟⲙⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7454,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF32205",
+      "orth": "ϭⲣⲟⲟⲙⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1588,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8744",
+      "bibliography": "CD 828b-829a; KoptHWb 465; ChLCS 109b"
+    },
+    {
+      "id": "CS8745",
+      "bibliography": "CD 829a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ⲇⲉ ϣⲱⲡⲉ ⲙⲫⲣⲟⲛⲓⲙⲟⲥ ⲛⲧϩⲉ ⲛⲛϩⲟϥ ⲁⲩⲱ ⲛⲁⲕⲉⲣⲁⲓⲟⲥ ⲛⲧϩⲉ ⲛⲛ**ϭⲣⲟⲙⲡⲉ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲁ",
+        1,
+        18.013
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        10.014
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.544
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        8.29
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲣⲟⲙⲡⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20448,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7868",
+      "label": "ϩⲟϭⲣⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "a kind of dove(?)"
+    },
+    {
+      "target": "C7866",
+      "label": "ϭⲣⲁⲙⲡϩⲉⲧ",
+      "pos": "N",
+      "gloss": "white dove"
+    },
+    {
+      "target": "C7865",
+      "label": "ϭⲣⲙⲡϣⲁⲛ",
+      "pos": "N",
+      "gloss": "turtledove"
+    },
+    {
+      "target": "C7863",
+      "label": "ϭⲣⲟⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "dove, pigeon"
+    },
+    {
+      "target": "C7864",
+      "label": "ϭⲣⲟⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "dove, pigeon"
+    }
+  ]
+}

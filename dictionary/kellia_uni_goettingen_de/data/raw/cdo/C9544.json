@@ -1,0 +1,99 @@
+{
+  "id": "C9544",
+  "forms": [
+    {
+      "id": "CF24311",
+      "orth": "ⲕⲣⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24312",
+      "orth": "ⲕⲣⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13657,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12176",
+      "bibliography": "DDGLC",
+      "cu_ID": "10084"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛⲓⲉⲣⲟ ⲡⲉ ⲧⲉ**ⲕⲣⲓⲥ** ⲡⲁⲓ ⲡⲉⲧⲛⲏⲩ ⲉⲃⲟⲗ ⲛⲛⲁⲥⲥⲏⲣⲓⲟⲥ ⲡⲙⲉϩϥⲧⲟⲟⲩ ⲇⲉ ⲛⲓⲉⲣⲟ ⲡⲁⲓ ⲡⲉ ⲡⲉⲩⲫⲣⲁⲧⲏⲥ ⲡⲛⲟϭ ⲛⲓⲉⲣⲟ",
+      "english": "And the third river is Tigris, this is that which flows forth over against the Assyrians. And the fourth river is Euphrates.",
+      "source": "Genesis 2",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲉⲣⲟ",
+        1,
+        13.5
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        10.56
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13255,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2361",
+    "grl_lemma": "χειρίς",
+    "grl_meaning": "glove, sleeve",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1984b; Preisigke 2:729"
+  }
+}

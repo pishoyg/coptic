@@ -1,0 +1,75 @@
+{
+  "id": "C7050",
+  "forms": [
+    {
+      "id": "CF32080",
+      "orth": "ⲕⲱ ⲛϫⲁⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32079",
+      "orth": "ⲕⲱ ⲛϫⲁⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7771",
+      "bibliography": "CD 746a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7052",
+      "label": "ϣⲱⲡⲉ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "become desert"
+    },
+    {
+      "target": "C7047",
+      "label": "ϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "desert"
+    },
+    {
+      "target": "C7051",
+      "label": "ϯ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "make desert"
+    },
+    {
+      "target": "C7048",
+      "label": "ⲙⲁⲓϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "loving desert, solitude (hermit, ascetic)"
+    },
+    {
+      "target": "C7049",
+      "label": "ⲙⲛⲧϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "solitude, desolation"
+    },
+    {
+      "target": "C7053",
+      "label": "ⲣϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be desert, abandoned"
+    }
+  ]
+}

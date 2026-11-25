@@ -1,0 +1,165 @@
+{
+  "id": "C8610",
+  "forms": [
+    {
+      "id": "CF20317",
+      "orth": "ⲃⲓⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF20318",
+      "orth": "ⲃⲓⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12719,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20319",
+      "orth": "ⲃⲓⲁⲍⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10153",
+      "bibliography": "DDGLC",
+      "cu_ID": "424"
+    },
+    {
+      "id": "CS10154",
+      "bibliography": "DDGLC",
+      "cu_ID": "7616"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲛⲉⲯⲩⲭⲟⲟⲩⲉ ⲉⲣϫⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲟⲩⲕ ⲉⲝⲉⲥⲧⲓ ⲉⲧⲣⲉⲩ**ⲃⲓⲁⲍⲉ** ⲙⲙⲟⲟⲩ ⲛⲥⲉϫⲓⲧⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉⲭⲁⲟⲥ · ϫⲉⲉⲩⲉⲥⲟⲟϩⲉ ⲙⲙⲟⲟⲩ ⲛϭⲓⲛⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ ⲛⲉⲣⲓⲛⲁⲓⲟⲥ · ⲁⲗⲗⲁ ϣⲁⲣⲉⲛⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ ⲛⲉⲣⲓⲛⲁⲓⲟⲥ ϣⲁⲩⲥⲟⲟϩⲉ ⲛⲛⲉⲯⲩⲭⲟⲟⲩⲉ ⲉⲛⲣⲣⲉϥⲣⲛⲟⲃⲉ · ⲛⲥⲉⲁⲙⲁϩⲧⲉ ⲛⲛⲁⲓ ⲉⲧⲉⲙⲡⲟⲩϫⲓ ⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲁⲓ ⲉϣⲁⲩⲛⲧⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉⲭⲁⲟⲥ ·",
+      "english": "Now then it is not lawful to use force on the souls which receive mysteries, and lead them into the chaos, so that the retributive servitors may convict them. But the retributive servitors convict the | souls of the sinners and they keep fast those who have received no mysteries which may lead them out of the chaos.",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲝⲉⲥⲧⲓ",
+        1,
+        15.791
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        8.664
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲓⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ϫⲓⲧ_1_post_ⲃⲓⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲓⲁⲍⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲃⲓⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲃⲓⲁⲍⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲛ_2_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲧ",
+          "ⲥⲉ_2_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϫⲓⲧ",
+          "ϫⲓⲧ_1_post_ⲃⲓⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12296,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2660",
+    "grl_lemma": "βιάζω",
+    "grl_meaning": "to constrain, force, press hard",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 314b; Preisigke 1:266"
+  }
+}

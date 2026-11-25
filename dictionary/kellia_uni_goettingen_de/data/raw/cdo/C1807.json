@@ -1,0 +1,85 @@
+{
+  "id": "C1807",
+  "forms": [
+    {
+      "id": "CF5207",
+      "orth": "ⲙⲓⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6247,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲙⲓⲱ",
+      "dialect": "S",
+      "id": "1038.1"
+    },
+    {
+      "orth": "ⲙⲓⲱⲧⲛ",
+      "dialect": "S",
+      "id": "1038.2"
+    },
+    {
+      "orth": "ⲙⲓⲟⲟⲩ",
+      "dialect": "S",
+      "id": "1038.3"
+    },
+    {
+      "orth": "ⲙⲓⲟ⸗",
+      "dialect": "B",
+      "id": "1038.4"
+    },
+    {
+      "orth": "ⲙⲓⲱⲧⲉⲛ",
+      "dialect": "B",
+      "id": "1038.5"
+    },
+    {
+      "orth": "ⲙⲓⲱⲟⲩ",
+      "dialect": "B",
+      "id": "1038.6"
+    },
+    {
+      "orth": "ⲙⲓⲁⲕ",
+      "dialect": "F",
+      "id": "1038.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2110",
+      "bibliography": "CD 158b-159a; KoptHWb 88; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉ**ⲙⲓⲟ**ⲕⲧⲱⲛⲟⲩ ⲱ ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ·",
+      "english": "Greatly distinguished art thou, O Apa Victor.'",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲟⲩⲱϣⲃ ⲛⲁϥ ϫⲉ**ⲙⲓⲟ**ⲕ ⲧⲱⲛⲟⲩ ... ⲧⲟⲩ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉ**ⲙⲓⲟ**ⲕⲡⲁϣⲏⲣⲉ ⲉⲧⲧⲁⲉⲓⲏⲩ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

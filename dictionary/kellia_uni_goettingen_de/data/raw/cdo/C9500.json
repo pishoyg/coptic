@@ -1,0 +1,456 @@
+{
+  "id": "C9500",
+  "forms": [
+    {
+      "id": "CF24158",
+      "orth": "ⲕⲟⲛⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24159",
+      "orth": "ⲕⲟⲛⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24160",
+      "orth": "ⲕⲟⲛⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24161",
+      "orth": "ⲕⲟⲛⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4438,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF24162",
+      "orth": "ⲕⲱⲛⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4512,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12071",
+      "bibliography": "DDGLC",
+      "cu_ID": "829"
+    },
+    {
+      "id": "CS12072",
+      "bibliography": "DDGLC",
+      "cu_ID": "6154"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲛⲧⲉⲣⲉⲥⲱⲗⲟⲙⲱⲛ ⲡⲣⲣⲟ ⲙⲟⲩ ⲁⲓⲉⲍⲉⲕⲓⲁⲥ ϫⲉϩⲛϫⲟ ⲙⲡⲣⲡⲉ ⲛ**ⲕⲟⲛⲓⲁ** ⲙⲡⲟⲩϩⲉ ⲉⲣⲟⲟⲩ ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "And it came to pass that, after Solomon the king was dead, Hezekiah plastered over the walls of the temple with lime, and the prescriptions for the relief of sickness could no longer be found.",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲙⲉⲥⲥⲓⲁⲥ ⲇⲉ ⲡϣⲏⲣⲉ ⲛⲓⲱⲁⲥ ⲡⲣⲣⲟ ⲛⲓⲟⲩⲇⲁⲥ ⲁϥϭⲟⲧⲡϥ ⲛϭⲓⲓⲱⲁⲥ ⲡⲣⲣⲟ ⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲛⲃⲉⲑⲥⲁⲙⲩⲥ ⲁϥⲉⲓ ⲉϩⲣⲁⲓ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲁϥϣⲟⲣϣⲣ ϩⲙⲡⲥⲟⲃⲧ ⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲙⲡⲥⲁ ⲛⲧⲡⲩⲗⲏ ⲛⲉⲫⲣⲁⲓⲙ ϣⲁϩⲣⲁⲓ ⲉⲧⲡⲩⲗⲏ ⲛ**ⲕⲟⲛⲓⲁ** ⲉⲧⲉⲧⲉⲧⲛⲟ ⲛⲕⲟⲟϩ ⲧⲉ ⲛⲁϣⲉ ⲙⲙⲁϩⲉ",
+      "english": "And Joas king of Israel took Amessias the son of Joas the son of Ochozias, in Baethsamys; and he came to Jerusalem, and broke down the wall of Jerusalem, beginning at the gate of Ephraim as far as the gate of the corner, four hundred cubits.",
+      "source": "II Kings 14",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲉⲧⲛⲁϫⲓⲟⲟⲣ ⲙⲡⲓⲟⲣⲇⲁⲛⲏⲥ ⲉϩⲟⲩⲛ ⲉⲡⲕⲁϩ ⲡⲁⲓ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁϥ ⲛⲁⲕ ⲉⲕⲉⲧⲁϩⲟ ⲛⲁⲓ ⲉⲣⲁⲧⲟⲩ ⲛⲛⲟϭ ⲥⲛⲁⲩ ⲛⲱⲛⲉ ⲁⲩⲱ ⲉⲕⲉϫⲁϩⲟⲩ ⲛ**ⲕⲟⲛⲓⲁ**",
+      "english": "And it shall come to pass in the day when ye shall cross over Jordan into the land which the Lord thy God gives thee, that thou shalt set up for thyself great stones, and shalt plaster them with plaster.",
+      "source": "Deuteronomy 27",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟϣϫ",
+        4,
+        19.428
+      ],
+      [
+        "ⲕⲉⲣⲡⲕⲉ",
+        1,
+        15.888
+      ],
+      [
+        "ϫⲏϣ",
+        1,
+        14.566
+      ],
+      [
+        "ⲉⲕⲉ",
+        4,
+        12.779
+      ],
+      [
+        "ϩⲩⲇⲟⲩⲙⲉⲁ",
+        1,
+        12.718
+      ],
+      [
+        "ⲧⲟⲙ",
+        1,
+        12.03
+      ],
+      [
+        "ϣⲟⲙ",
+        1,
+        11.428
+      ],
+      [
+        "ϫⲟⲉⲓ",
+        1,
+        9.769
+      ],
+      [
+        "ⲛ",
+        6,
+        9.538
+      ],
+      [
+        "ⲥϧⲁⲓ",
+        1,
+        9.388
+      ],
+      [
+        "ⲕⲱⲧ",
+        1,
+        9.333
+      ],
+      [
+        "ⲉ",
+        5,
+        9.176
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.912
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        8.79
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        8.273
+      ],
+      [
+        "ϩⲉⲙⲥⲓ",
+        1,
+        8.153
+      ],
+      [
+        "ⲥⲁⲃⲟⲗ",
+        1,
+        8.077
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        1,
+        7.939
+      ],
+      [
+        ":",
+        1,
+        7.308
+      ],
+      [
+        "ϯ",
+        2,
+        6.483
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲁϩⲟⲩ",
+        2,
+        20.013
+      ],
+      [
+        "ⲧⲛⲛⲏⲩ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲙϫϩⲓⲕⲟⲛⲓⲁ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉⲕⲓⲃⲉ",
+        1,
+        12.369
+      ],
+      [
+        "ⲛ",
+        9,
+        10.734
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        9.941
+      ],
+      [
+        "ⲡⲩⲗⲏ",
+        1,
+        9.926
+      ],
+      [
+        "ⲣⲡⲉ",
+        1,
+        9.92
+      ],
+      [
+        "ϩⲉ",
+        3,
+        9.897
+      ],
+      [
+        "ⲕⲱⲧ",
+        1,
+        9.751
+      ],
+      [
+        "ⲉ",
+        5,
+        9.198
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        9.19
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        8.899
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        8.709
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.39
+      ],
+      [
+        "ⲟ",
+        1,
+        7.22
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.147
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.699
+      ],
+      [
+        "ⲅ",
+        1,
+        6.654
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.517
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲟⲛⲓⲁ_0_node",
+          7
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_4_post_ⲟⲩⲟϩⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲛⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲟⲛⲓⲁ_0_node",
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          "ϥ_3_post_ϣⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲟⲙ",
+          "ϣⲟⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲙ_2_post_ⲉ",
+          "ⲟⲩⲟϩ_4_post_ⲟⲩⲟϩⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_4_post_ⲟⲩⲟϩⲓ",
+          "ⲛ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲟⲛⲓⲁ",
+          "ⲕⲟⲛⲓⲁ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲛⲓⲁ_0_node",
+          6
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲕⲟⲟϩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲛⲛⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲛⲛⲏⲩ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲛⲓⲁ",
+          "ⲕⲟⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲛⲓⲁ_0_node",
+          "ⲉⲧⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          "ⲧⲉⲧⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲟ",
+          "ⲟ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲧⲉ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ⲕⲟⲟϩ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲛⲓⲁ_0_node",
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲛⲓⲁ",
+          "ϥ_3_post_ⲧⲛⲛⲏⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲛⲛⲏⲩ",
+          "ⲧⲛⲛⲏⲩ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4041,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1178",
+    "grl_lemma": "κονία",
+    "grl_meaning": "dusk, sand, ashes",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 977b; Preisigke 1:823"
+  }
+}

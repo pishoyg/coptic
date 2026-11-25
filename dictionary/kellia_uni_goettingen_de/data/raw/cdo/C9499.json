@@ -1,0 +1,161 @@
+{
+  "id": "C9499",
+  "forms": [
+    {
+      "id": "CF24156",
+      "orth": "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24157",
+      "orth": "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19045,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12070",
+      "bibliography": "DDGLC",
+      "cu_ID": "4130"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲛⲁⲕ ϫⲉⲛⲛⲉⲕⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ϣⲁⲛⲧⲉⲕϯ ⲙⲡϩⲁⲉ ⲛ**ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ** .",
+      "english": "Most certainly I tell you, you shall by no means get out of there, until you have paid the last penny.",
+      "source": "40_Matthew_5",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲃⲓ",
+        2,
+        18.695
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        2,
+        15.037
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        9.934
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.238
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.251
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲁ",
+        2,
+        6.989
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲁⲉ",
+        1,
+        13.83
+      ],
+      [
+        "ⲥⲱⲧⲙ",
+        1,
+        9.27
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+          "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18656,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "4948",
+    "grl_lemma": "κονδράντης",
+    "grl_meaning": "penny, dime",
+    "grl_pos": "noun",
+    "grl_ref": "cf. κοδράτης (LSJ 966b)"
+  }
+}

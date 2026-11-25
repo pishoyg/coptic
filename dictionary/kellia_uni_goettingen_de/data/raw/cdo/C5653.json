@@ -1,0 +1,76 @@
+{
+  "id": "C5653",
+  "forms": [
+    {
+      "id": "CF13282",
+      "orth": "ⲣⲁⲱϩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6325",
+      "bibliography": "CD 539a; ChLCS 74a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3029",
+      "type": "cf",
+      "label": "state, condition, position"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5657",
+      "label": "ϫⲁⲓⲟϩⲥ",
+      "pos": "N",
+      "gloss": "sickle-bearer, reaper"
+    },
+    {
+      "target": "C5656",
+      "label": "ϫⲓⲟϩⲥ",
+      "pos": "V",
+      "gloss": "swing the sickle"
+    },
+    {
+      "target": "C5655",
+      "label": "ⲟϩⲥ",
+      "pos": "N",
+      "gloss": "sickle"
+    },
+    {
+      "target": "C5658",
+      "label": "ⲟⲥϩϥ",
+      "pos": "N",
+      "gloss": "sickle, knife"
+    },
+    {
+      "target": "C5654",
+      "label": "ⲣⲉϥⲱϧⲥ",
+      "pos": "N",
+      "gloss": "reaper"
+    },
+    {
+      "target": "C5651",
+      "label": "ⲱϩⲥ",
+      "pos": "V",
+      "gloss": "reap, mow"
+    },
+    {
+      "target": "C5652",
+      "label": "ⲱϩⲥ",
+      "pos": "N",
+      "gloss": "reaping, harvest"
+    }
+  ]
+}

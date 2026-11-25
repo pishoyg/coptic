@@ -1,0 +1,161 @@
+{
+  "id": "C10647",
+  "forms": [
+    {
+      "id": "CF28808",
+      "orth": "ⲥⲩⲣⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF28810",
+      "orth": "ⲥⲩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9470,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28809",
+      "orth": "ⲥⲩⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4749,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14540",
+      "bibliography": "DDGLC",
+      "cu_ID": "10891"
+    },
+    {
+      "id": "CS14541",
+      "bibliography": "DDGLC",
+      "cu_ID": "3409"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲩϣⲗⲏⲗ ⲉϩⲣⲁⲓ ⲉⲡⲛⲟⲩⲧⲉ ⲧⲙⲧⲣⲉϥⲧⲱⲱⲃⲉ ⲛⲛⲉⲧⲙⲟⲩⲟⲩⲧ , ⲙⲙⲟⲟⲩ . ⲁⲩⲱ ⲉⲧⲙⲁⲥⲧⲓⲅⲟⲩ ⲙⲙⲟⲟⲩ · ⲛⲧϩⲉ ⲉϣⲁⲩ**ⲥⲩⲣⲉ** ⲙⲙⲟⲟⲩ",
+      "english": "and praying to God that he will not take vengeance on those who kill them and whip them even as they [drag?] them",
+      "source": "Abraham Our Father: ZH fragments 1a-d",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbzh:18-22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ⲥⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ⲥⲩⲣⲉ",
+          "ⲩ_1_pre_ⲥⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲩⲣⲉ",
+          "ⲥⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲣⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲩⲣⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9048,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2846",
+    "grl_lemma": "σύρω",
+    "grl_meaning": "to draw, drag, trail along",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1733a; Preisigke 2:556"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "C5850",
+  "forms": [
+    {
+      "id": "CF13697",
+      "orth": "ϣⲟⲗϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8653,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6531",
+      "bibliography": "CD 561b; KoptHWb 312"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ⲡⲗⲁⲟⲥ ⲁⲩ**ϣⲟⲗϥ** ⲁⲩⲱ ⲁⲩⲧⲟⲣϥ ⲧϭⲟⲣϭⲥ ⲅⲁⲣ ϩⲛⲛⲧⲁⲙⲉⲓⲟⲛ ϩⲙⲙⲁ ⲛⲓⲙ ⲁⲩⲱ ϩⲛⲛⲏⲓ ϩⲓⲟⲩⲥⲟⲡ ϩⲙⲡⲙⲁ ⲛⲧⲁⲩϩⲟⲡⲟⲩ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲁⲩϣⲱⲡⲉ ⲉⲩϣⲱⲗ ⲉⲙⲛⲡⲉⲧⲛⲟⲩϩⲙ ⲙⲙⲟⲟⲩ ⲛⲧⲱⲣⲡ ⲁⲩⲱ ⲙⲛⲡⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲕⲁⲁⲩ ⲉϩⲣⲁⲓ",
+      "english": "And I beheld, and the people were spoiled and plundered: for there is a snare in the secret chambers everywhere, and in the houses also, where they have hidden them: they became a spoil, and there was no one that delivered the prey, and there was none who said, Restore.",
+      "source": "Isaiah 42",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲧⲉⲓϩⲉ ϩⲛⲟⲩⲙⲟⲩ ⲧⲛⲛⲁⲙⲟⲩ ⲡⲉ ⲁⲩⲱ ⲛⲧϩⲉ ⲙⲡⲙⲟⲟⲩ ⲉϣⲁϥⲡⲱⲛ ⲉϫⲙⲡⲕⲁϩ ⲛⲥⲉⲛⲁ**ϣⲟⲗϥ** ⲁⲛ ⲉϩⲟⲩⲛ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲁϫⲓ ⲁⲛ ⲛⲧⲉⲯⲩⲭⲏ ⲙⲡⲉⲧⲙⲟⲕⲙⲉⲕ ⲉⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲙⲡⲉⲛⲧⲁϥⲣⲡⲉϥⲃⲟⲗ",
+      "english": "For we shall surely die, and be as water poured upon the earth, which shall not be gathered up, and God shall take the life, even as he devises to thrust forth from him his outcast.",
+      "source": "II Samuel 14",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲣϥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        9.079
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        8.925
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        7.678
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8206,
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "id": "C209",
+  "forms": [
+    {
+      "id": "CF835",
+      "orth": "ⲣⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3121,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF836",
+      "orth": "ⲉⲗⲉⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF837",
+      "orth": "ⲉⲗⲁⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF838",
+      "orth": "ⲉⲣⲁⲡⲁⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2155,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS234",
+      "bibliography": "CD 17a; KoptHWb 12; ChLCS 5b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲥⲉϩⲧ ⲡⲉ ⲉϥⲛⲁ**ⲉⲣⲁⲡⲁⲥ** ϧⲉⲛⲡϣⲁⲣ ⲛⲧⲉⲡⲉϥⲟⲩⲁⲛ ⲟⲩⲟϩ ⲉϥⲉϭⲁϧⲙⲉϥ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲟⲩⲟϩ ⲛⲧⲉϥⲫⲟⲣϫϥ ⲉⲃⲟⲗ ϥϭⲁϧⲉⲙ",
+      "english": "it is a leprosy waxing old in the skin of the flesh; and the priest shall pronounce him unclean, and shall separate him, because he is unclean.",
+      "source": "03_Leviticus_13",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲛⲉⲧⲛⲛⲕⲁ ⲉⲃⲟⲗ ⲧⲁⲁⲩ ⲙⲙⲛⲧⲛⲁ ⲙⲁⲧⲁⲙⲓⲟ ⲛⲏⲧⲛ ⲛϩⲉⲛⲧⲱⲱⲙⲉ ⲉⲛⲥⲉⲛⲁ**ⲣⲁⲥ** ⲁⲛ ⲛⲙⲟⲩⲁϩⲟ ⲛⲁⲧⲱϫⲛ ϩⲛⲙⲡⲏⲩⲉ ⲡⲙⲁ ⲉⲧⲉⲙⲉⲣⲉ ⲡⲉϥϫⲓⲟⲩⲉ ϩⲱⲛ ⲉⲣⲟϥ ⲁⲩⲱ ⲙⲉⲣⲉϫⲟⲟⲗⲉⲥ ⲧⲁⲕⲟϥ .",
+      "english": "Sell that which you have, and give gifts to the needy. Make for yourselves purses which don't grow old, a treasure in the heavens that doesn't fail, where no thief approaches, neither moth destroys.",
+      "source": "42_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁ ⲛⲉⲧⲉⲛϩⲩⲡⲁⲣⲭⲟⲛⲧⲁ ⲉⲃⲟⲗ ⲙⲏⲓⲧⲟⲩ ⲉⲑⲙⲉⲧⲛⲁⲏⲧ ⲙⲁⲑⲁⲙⲓⲟ ⲛⲱⲧⲉⲛ ⲛϩⲁⲛⲁⲥⲟⲩⲓ ⲙⲡⲁⲩ**ⲉⲣⲁⲡⲁⲥ** ⲛⲟⲩⲁϩⲟ ⲛⲁⲑⲙⲟⲩⲛⲕ ϧⲉⲛⲛⲓⲫⲏⲟⲩⲓ ⲡⲓⲙⲁ ⲉⲧⲉⲙⲡⲁⲣⲉ ⲣⲉϥϭⲓⲟⲩⲓ ϧⲱⲛⲧ ⲉⲣⲟϥ ⲟⲩⲇⲉ ⲙⲡⲁⲣⲉ ϩⲟⲗⲓ ⲧⲁⲕⲟϥ .",
+      "english": "Sell that which you have, and give gifts to the needy. Make for yourselves purses which don't grow old, a treasure in the heavens that doesn't fail, where no thief approaches, neither moth destroys.",
+      "source": "03_Luke_12",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲕⲁⲣⲱⲓ ϫⲉⲁⲛⲁⲕⲉⲉⲥ **ⲣⲁⲥ** ϩⲙⲡⲧⲣⲁϫⲓϣⲕⲁⲕ ⲉⲃⲟⲗ ⲙⲡⲉϩⲟⲟⲩ ⲧⲏⲣϥ",
+      "english": "Because I kept silence, my bones waxed old, from my crying all the day.",
+      "source": "Psalms 31",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲥⲉⲛⲁⲧⲁⲕⲟ ⲛⲑⲟⲕ ⲇⲉ ⲕϣⲟⲡ ⲟⲩⲟϩ ⲥⲉⲛⲁ**ⲉⲣⲁⲡⲁⲥ** ⲧⲏⲣⲟⲩ ⲙⲫⲣⲏϯ ⲛⲟⲩϩⲃⲟⲥ .",
+      "english": "They will perish, but you continue. They all will grow old like a garment does.",
+      "source": "19_Hebrews_01",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲧⲣⲉϥϫⲟⲟⲥ ϫⲉⲟⲩⲃⲣⲣⲉ ⲁϥⲣⲧϣⲟⲣⲡ ⲛⲁⲥ . ⲡⲉⲛⲧϥ**ⲣⲁⲥ** ⲇⲉ ⲁⲩⲱ ⲁϥⲣϩⲗⲗⲟ ϥϩⲏⲛ ⲉϩⲟⲩⲛ ⲉⲡⲧⲁⲕⲟ .",
+      "english": "In that he says, 'A new covenant,' he has made the first old. But that which is becoming old and grows aged is near to vanishing away.",
+      "source": "58_Hebrews_8",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉⲥⲅⲉⲑ",
+        1,
+        16.898
+      ],
+      [
+        "ⲡⲉⲑⲉⲅⲱⲛⲓⲧⲏⲥ",
+        1,
+        16.898
+      ],
+      [
+        "ⲡⲕⲉⲣⲱⲑⲉⲓ",
+        1,
+        16.898
+      ],
+      [
+        "ⲡⲉⲣⲉ",
+        1,
+        15.898
+      ],
+      [
+        "ⲣϭⲁⲗⲉ",
+        1,
+        15.313
+      ],
+      [
+        "ⲥⲉⲗⲗⲏⲙ",
+        1,
+        14.898
+      ],
+      [
+        "ϯⲙⲁⲉⲓⲛ",
+        1,
+        12.991
+      ],
+      [
+        "ⲟⲩ",
+        13,
+        12.621
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        5,
+        11.555
+      ],
+      [
+        "ⲁ",
+        10,
+        11.31
+      ],
+      [
+        "ⲧⲣⲁ",
+        1,
+        10.875
+      ],
+      [
+        "ϫⲓϫⲉⲉⲩⲉ",
+        1,
+        10.594
+      ],
+      [
+        "ⲁϩⲟ",
+        1,
+        10.328
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        1,
+        10.143
+      ],
+      [
+        "ⲛ",
+        10,
+        10.074
+      ],
+      [
+        "ⲩ",
+        6,
+        9.864
+      ],
+      [
+        "ⲡⲗⲁⲛⲁ",
+        1,
+        9.842
+      ],
+      [
+        "ϫⲓϣⲕⲁⲕ",
+        1,
+        9.382
+      ],
+      [
+        "ⲧⲁϫⲣⲟ",
+        1,
+        9.211
+      ],
+      [
+        "ⲥⲉ",
+        3,
+        9.137
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲣⲁⲥ_0_node",
+          9
+        ],
+        [
+          "ⲟⲩ_1_post_ⲣⲁⲥ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲥ",
+          3
+        ],
+        [
+          "ⲛ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ϣⲙⲙⲟ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲁⲥ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲥⲅⲉⲑ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_pre_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲕⲉⲉⲥ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁⲥ",
+          "ⲛⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲁⲥ",
+          "ⲩ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥ_0_node",
+          "ⲟⲩ_1_post_ⲣⲁⲥ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲥ",
+          "ⲛ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ⲣⲁⲥ",
+          "ⲛ_2_pre_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ϣⲏⲣⲉ_b",
+          "ϣⲙⲙⲟ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ϣⲙⲙⲟ_3_pre_ⲛ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲁⲥ",
+          "ⲥⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥ_0_node",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲣⲁⲥ",
+          "ⲛⲉⲥⲅⲉⲑ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲣⲁⲥ",
+          "ⲥⲉ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲁⲥ",
+          "ⲛⲁ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲁⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲥ",
+          "ⲛⲁ_2_pre_ⲕⲉⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_pre_ⲕⲉⲉⲥ",
+          "ⲕⲉⲉⲥ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲕⲉⲉⲥ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁⲥ_0_node",
+          "ϩⲙ_1_post_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲁⲥ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲁⲥ",
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲣⲁⲥ",
+          "ⲣⲁⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2773,
+      "count": 13
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2829",
+      "type": "syn",
+      "label": "become, be ragged, old"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C210",
+      "label": "ϫⲓⲛⲉⲣⲁⲡⲁⲥ",
+      "pos": "N",
+      "gloss": "a growing old"
+    },
+    {
+      "target": "C212",
+      "label": "ϯⲁⲥ",
+      "pos": "V",
+      "gloss": "give someone a blow"
+    },
+    {
+      "target": "C211",
+      "label": "ⲁⲁⲥ",
+      "pos": "N",
+      "gloss": "blow with hand, stroke"
+    },
+    {
+      "target": "C207",
+      "label": "ⲁⲥ",
+      "pos": "N",
+      "gloss": "old"
+    },
+    {
+      "target": "C208",
+      "label": "ⲙⲛⲧⲁⲥ",
+      "pos": "N",
+      "gloss": "oldness"
+    }
+  ]
+}

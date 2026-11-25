@@ -1,0 +1,204 @@
+{
+  "id": "C1576",
+  "forms": [
+    {
+      "id": "CF4604",
+      "orth": "ⲙⲛⲧⲗⲁⲃⲙⲁϩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12176,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1836",
+      "bibliography": "CD 137a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲁϣⲁⲓ ⲛϭⲓⲧ**ⲙⲛⲧⲗⲁⲃⲙⲁϩⲧ** · ⲁⲥⲣⲣⲣⲟ ⲛϭⲓⲧⲡⲟⲣⲛⲉⲓⲁ ϩⲓⲧⲙⲡⲥⲉⲓ ⲛⲧⲥⲁⲣⲝ · ⲁⲥⲁⲣⲭⲉⲓ ⲛϭⲓⲧⲙⲛⲧϫⲁⲥⲓϩⲏⲧ · ⲁⲛⲕⲟⲩⲓ ⲗⲟ ⲉⲩⲥⲱⲧⲙ ⲛⲥⲁⲛⲛⲟϭ · ⲁⲛⲛⲟϭ ⲕⲁⲧⲟⲟⲧⲟⲩ ⲉⲃⲟⲗ ⲉⲩϥⲓⲣⲟⲟⲩϣ ϩⲁⲛⲕⲟⲩⲓ · ⲁⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲟⲟϣⲉ ϩⲛⲛⲉϥⲟⲩⲱϣ ⲛϩⲏⲧ ·",
+      "english": "When gluttony increaseth, fornication reigneth through the drinking of the body, (and) pride hath rule, and the novices cease to listen to the elders, and the elders cease to trouble in any way about the novices, and each one walketh according to the desire of his own heart.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲣⲣⲟ",
+        1,
+        13.074
+      ],
+      [
+        "ⲁϣⲁⲓ",
+        1,
+        12.85
+      ],
+      [
+        "ⲥ",
+        2,
+        9.274
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲗⲁⲃⲙⲁϩⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11751,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1574",
+      "label": "ϭⲓⲛⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madness"
+    },
+    {
+      "target": "C1579",
+      "label": "ⲗⲁⲃϩⲏ",
+      "pos": "N",
+      "gloss": "gluttonous, greedy person"
+    },
+    {
+      "target": "C1575",
+      "label": "ⲗⲁⲃⲙⲁϩⲧ",
+      "pos": "N",
+      "gloss": "gluttonous"
+    },
+    {
+      "target": "C1578",
+      "label": "ⲗⲁⲃⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "woman-mad, lecherous"
+    },
+    {
+      "target": "C1577",
+      "label": "ⲗⲁⲙⲁⲭⲓⲧⲏⲥ",
+      "pos": "N",
+      "gloss": "glutton"
+    },
+    {
+      "target": "C1562",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "be mad"
+    },
+    {
+      "target": "C1563",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madness"
+    },
+    {
+      "target": "C1572",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "make mad"
+    },
+    {
+      "target": "C1569",
+      "label": "ⲗⲓⲃⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1571",
+      "label": "ⲗⲓⲃⲉ (ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1570",
+      "label": "ⲗⲓⲃⲉ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1564",
+      "label": "ⲗⲓⲃⲉ (ⲉϩⲟⲩⲛ-)",
+      "pos": "EXIST",
+      "gloss": "be mad toward, concerning"
+    },
+    {
+      "target": "C1565",
+      "label": "ⲗⲓⲃⲉ (ⲉϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1566",
+      "label": "ⲗⲓⲃⲉ (ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1567",
+      "label": "ⲗⲓⲃⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1568",
+      "label": "ⲗⲓⲃⲉ (ⲛⲧⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1580",
+      "label": "ⲙⲛⲧⲗⲁⲃϩⲏ",
+      "pos": "N",
+      "gloss": "greed, hunger"
+    },
+    {
+      "target": "C1573",
+      "label": "ⲣⲉϥⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madman"
+    },
+    {
+      "target": "C1581",
+      "label": "ⲣⲗⲁⲃϩⲏ",
+      "pos": "V",
+      "gloss": "be hungry, greedy"
+    }
+  ]
+}

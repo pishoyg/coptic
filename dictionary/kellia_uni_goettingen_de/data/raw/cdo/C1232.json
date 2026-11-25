@@ -1,0 +1,249 @@
+{
+  "id": "C1232",
+  "forms": [
+    {
+      "id": "CF3864",
+      "orth": "ⲕⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.21,
+        "rank": 321,
+        "count": 506
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1427",
+      "bibliography": "CD 110a; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲛⲧⲛ ⲉϩⲣⲁⲓ ϩⲙⲡⲕⲁϩ ⲛ**ⲕⲏⲙⲉ** ·",
+      "english": "Thou hast brought us forth from the land of Egypt.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲇⲉ ⲉⲛⲉⲡⲉϣⲃⲏⲣ ⲡⲉ ⲛⲁⲡⲁⲧⲏⲣ ⲡⲉ · ⲛⲧⲁϥⲃⲱⲕ ⲉ**ⲕⲏⲙⲉ** ⲁϥⲣⲙⲁⲣⲧⲩⲣⲟⲥ ·",
+      "english": "who went to Egypt and became a martyr.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲉⲓ ⲉϣⲓⲏⲧ ⲛϭⲓϩⲉⲛⲙⲟⲛⲁⲭⲟⲥ ⲉⲃⲟⲗ ϩⲛ**ⲕⲏⲙⲉ** ·",
+      "english": "Some monks from Egypt came to Scetis.",
+      "source": "Apophthegmata Patrum Sahidic 069",
+      "urn": "urn:cts:copticLit:ap.69.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        17,
+        23.877
+      ],
+      [
+        "ⲕⲁϩ",
+        197,
+        22.81
+      ],
+      [
+        "ⲛ",
+        476,
+        21.51
+      ],
+      [
+        "ϩⲙ",
+        161,
+        20.423
+      ],
+      [
+        "ⲡ",
+        310,
+        20.342
+      ],
+      [
+        "ⲁ",
+        258,
+        20.095
+      ],
+      [
+        "ϩⲛ",
+        168,
+        19.673
+      ],
+      [
+        "ⲁⲩⲱ",
+        196,
+        19.608
+      ],
+      [
+        "ⲫⲁⲣⲁⲱ",
+        36,
+        19.279
+      ],
+      [
+        "ϥ",
+        223,
+        18.941
+      ],
+      [
+        "ⲉ",
+        199,
+        18.744
+      ],
+      [
+        "ⲩ",
+        114,
+        17.325
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        61,
+        17.105
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        93,
+        17.1
+      ],
+      [
+        "ⲣⲣⲟ",
+        37,
+        16.102
+      ],
+      [
+        "ⲧⲏⲣ",
+        53,
+        16.065
+      ],
+      [
+        "ⲙ",
+        93,
+        15.986
+      ],
+      [
+        "ⲟⲩ",
+        90,
+        15.713
+      ],
+      [
+        "ⲉⲓ",
+        40,
+        15.391
+      ],
+      [
+        "ⲛⲣⲙⲛⲕⲏⲙⲉ",
+        3,
+        15.37
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲏⲙⲉ_0_node",
+          4
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.19,
+      "rank": 268,
+      "count": 506
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1227",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black"
+    },
+    {
+      "target": "C1228",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, female; black thing"
+    },
+    {
+      "target": "C1229",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, male; black thing"
+    },
+    {
+      "target": "C1231",
+      "label": "ⲕⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1236",
+      "label": "ⲕⲙⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1225",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "V",
+      "gloss": "be, become black"
+    },
+    {
+      "target": "C1226",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "N",
+      "gloss": "blackness"
+    },
+    {
+      "target": "C1234",
+      "label": "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian nationality, speech"
+    },
+    {
+      "target": "C1230",
+      "label": "ⲣⲕⲁⲙⲉ",
+      "pos": "V",
+      "gloss": "be black"
+    },
+    {
+      "target": "C1233",
+      "label": "ⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian"
+    },
+    {
+      "target": "C1235",
+      "label": "ⲭⲏⲙⲓ",
+      "pos": "N",
+      "gloss": "brazier, hearth"
+    }
+  ],
+  "etym": {
+    "egy_num": "164430",
+    "egy_lemma": "Km.t",
+    "demo_num": "d6581",
+    "demo_lemma": "Km(j)",
+    "english": "Black-land (Egypt)",
+    "german": "Das Schwarze Land (Ägypten)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6581"
+  }
+}

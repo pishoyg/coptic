@@ -1,0 +1,173 @@
+{
+  "id": "C4865",
+  "forms": [
+    {
+      "id": "CF11695",
+      "orth": "ⲙⲛⲧϭⲁⲉⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20289,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5490",
+      "bibliography": "CD 466a; ChLCS 65a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲛⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛⲛⲉⲛϭⲓϫ ϩⲛⲟⲩⲙⲛⲧⲛⲟⲩϫ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙ ⲡⲉⲧⲉⲣⲉⲧ**ⲙⲛⲧϭⲁⲉⲓⲉ** ⲛⲛⲉⲛϩⲃⲏⲩⲉ ϩⲏⲡ ⲉⲣⲟϥ ⲁⲛ ·",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 77-86",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_77_86",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲡ",
+        1,
+        13.114
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        10.812
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        10.573
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϭⲁⲉⲓⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϭⲁⲉⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧϭⲁⲉⲓⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϭⲁⲉⲓⲉ",
+          "ⲙⲛⲧϭⲁⲉⲓⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧϭⲁⲉⲓⲉ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧϭⲁⲉⲓⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧϭⲁⲉⲓⲉ",
+          "ⲛⲉⲛ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ϩⲃⲏⲩⲉ",
+          "ϩⲃⲏⲩⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19903,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4864",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly one, ugliness, disgrace"
+    },
+    {
+      "target": "C13015",
+      "label": "ϭⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "ugly, disgraced, condemned"
+    },
+    {
+      "target": "C4866",
+      "label": "ⲣϭⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be ugly, be disgraceful"
+    },
+    {
+      "target": "C4862",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "make ugly, disgrace, condemn; be disgraced, be condemned"
+    },
+    {
+      "target": "C4863",
+      "label": "ⲧϭⲁⲓⲟ",
+      "pos": "N",
+      "gloss": "disgrace, condemnation"
+    }
+  ]
+}

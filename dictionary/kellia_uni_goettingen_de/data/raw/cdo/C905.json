@@ -1,0 +1,900 @@
+{
+  "id": "C905",
+  "forms": [
+    {
+      "id": "CF3153",
+      "orth": "ⲉⲓⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 6.93,
+        "rank": 168,
+        "count": 1093
+      }
+    },
+    {
+      "orth": "ⲉⲛ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 8.91,
+        "rank": 147,
+        "count": 756
+      }
+    },
+    {
+      "orth": "ⲉⲛ-",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4407,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲓⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 9.14,
+        "rank": 142,
+        "count": 775
+      }
+    },
+    {
+      "orth": "ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    },
+    {
+      "orth": "ⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 246.44,
+        "rank": 7,
+        "count": 38883
+      }
+    },
+    {
+      "orth": "ⲛⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 33.5,
+        "rank": 40,
+        "count": 5285
+      }
+    },
+    {
+      "orth": "ⲁⲛⲉⲓⲛⲉ",
+      "dialect": "S",
+      "id": "124.4"
+    },
+    {
+      "orth": "ⲁⲛⲓⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6437,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲁⲛⲓ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1499,
+        "count": 50
+      }
+    },
+    {
+      "orth": "ⲁⲛⲓ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1499,
+        "count": 50
+      }
+    },
+    {
+      "orth": "ⲁⲛⲓⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1357,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲁⲛⲓ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.38,
+        "rank": 1305,
+        "count": 32
+      }
+    },
+    {
+      "orth": "ⲁⲛⲓⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1191,
+        "count": 37
+      }
+    },
+    {
+      "orth": "ⲉⲓⲛⲉ",
+      "dialect": "A",
+      "id": "124.11"
+    },
+    {
+      "orth": "ⲓⲛⲉ",
+      "dialect": "A",
+      "id": "124.12"
+    },
+    {
+      "orth": "ⲛ-",
+      "dialect": "A",
+      "id": "124.13"
+    },
+    {
+      "orth": "ⲙ-",
+      "dialect": "A",
+      "id": "124.14"
+    },
+    {
+      "orth": "ⲛⲧ⸗",
+      "dialect": "A",
+      "id": "124.15"
+    },
+    {
+      "orth": "ⲁⲛⲓ⸗",
+      "dialect": "A",
+      "id": "124.16"
+    },
+    {
+      "orth": "ⲓⲛⲓ",
+      "dialect": "F",
+      "id": "124.17"
+    },
+    {
+      "orth": "ⲛⲓ",
+      "dialect": "F",
+      "id": "124.18"
+    },
+    {
+      "orth": "ⲉⲛ-",
+      "dialect": "F",
+      "id": "124.19"
+    },
+    {
+      "orth": "ⲉⲛⲧ⸗",
+      "dialect": "F",
+      "id": "124.20"
+    },
+    {
+      "orth": "ⲓⲛⲧ⸗",
+      "dialect": "F",
+      "id": "124.21"
+    },
+    {
+      "orth": "ⲛⲓⲧ⸗",
+      "dialect": "F",
+      "id": "124.22"
+    },
+    {
+      "orth": "ⲁⲛⲓ-",
+      "dialect": "F",
+      "id": "124.23"
+    },
+    {
+      "orth": "ⲁⲛⲓⲧ⸗",
+      "dialect": "F",
+      "id": "124.24"
+    },
+    {
+      "orth": "ⲁⲛⲉⲛⲧ⸗",
+      "dialect": "F",
+      "id": "124.25"
+    },
+    {
+      "orth": "ⲓⲛⲉ",
+      "dialect": "L",
+      "id": "124.26"
+    },
+    {
+      "orth": "ⲛ-",
+      "dialect": "L",
+      "id": "124.27"
+    },
+    {
+      "orth": "ⲙ-",
+      "dialect": "L",
+      "id": "124.28"
+    },
+    {
+      "orth": "ⲛⲧ⸗",
+      "dialect": "L",
+      "id": "124.29"
+    },
+    {
+      "orth": "ⲉⲛⲓ⸗",
+      "dialect": "L",
+      "id": "124.30"
+    },
+    {
+      "orth": "ⲟⲛⲓ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.23,
+        "rank": 646,
+        "count": 104
+      }
+    },
+    {
+      "orth": "ⲉⲓⲛⲓ",
+      "dialect": "F",
+      "id": "125.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1061",
+      "bibliography": "CD 78b; KoptHWb 50; ChLCS 13b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩ**ⲓⲛⲓ** ⲛⲁϥ ⲛⲟⲩⲁⲓ ⲉϥϣⲏⲗ ⲉⲃⲟⲗ ⲉⲩϥⲁⲓ ⲙⲙⲟϥ ⲛϫⲉⲇ ⲛⲣⲱⲙⲓ",
+      "english": "Four people came, carrying a paralytic to him.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲉⲗⲉⲩⲉ ⲛϭⲓⲡⲇⲟⲩⲝ ⲁϥ**ⲉⲓⲛⲉ** ⲙⲡⲙⲁⲅⲟⲥ ·",
+      "english": "And the Duke commandcd them to bring a magician.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲇⲉ ⲁⲩ**ⲉⲛ**ⲛⲟⲩϫⲓϫ ⲉϫⲱϥ ⲟⲩⲟϩ ⲁⲩⲁⲙⲟⲛⲓ ⲙⲙⲟϥ .",
+      "english": "They laid their hands on him, and seized him.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲡⲣⲣⲟ ⲁϥϫⲟⲟⲩ ⲛⲟⲩⲥⲡⲉⲕⲟⲩⲗⲁⲧⲱⲣ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁϥ ⲉⲧⲣⲉϥ**ⲛ**ⲧⲉϥⲁⲡⲉ . ⲁϥⲃⲱⲕ ⲇⲉ ⲁϥϥⲓⲧⲉϥⲁⲡⲉ ϩⲙⲡⲉϣⲧⲉⲕⲟ .",
+      "english": "Immediately the king sent out a soldier of his guard, and commanded to bring John's head, and he went and beheaded him in the prison,",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲑⲟⲩⲁⲃ ⲇⲉ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲡⲉϫⲁϥ ϫⲉ**ⲁⲛⲓⲧ**ϥ ⲛⲏⲓ ⲉϧⲟⲩⲛ .",
+      "english": "Then Apa Shenoute said, ‘Bring him to me.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲓⲱϩⲁⲛⲛⲏⲥ · ϫⲉⲃⲱⲕ **ⲁⲛⲓ**ⲡⲉⲕϣⲃⲏⲣ ⲛⲅⲉⲓ ·",
+      "english": "and he said unto John, 'Go and bring thy companion, and come [back];",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        1071,
+        34.785
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        215,
+        32.159
+      ],
+      [
+        "ⲟⲩ",
+        482,
+        31.493
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        161,
+        31.203
+      ],
+      [
+        "ⲙ",
+        303,
+        30.313
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        149,
+        30.072
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        227,
+        29.783
+      ],
+      [
+        "ⲉϫⲱ",
+        95,
+        29.292
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        259,
+        29.13
+      ],
+      [
+        "ϩⲁⲛ",
+        149,
+        28.97
+      ],
+      [
+        "ⲁ",
+        245,
+        28.799
+      ],
+      [
+        "ⲉ",
+        229,
+        28.535
+      ],
+      [
+        "ϥ",
+        254,
+        28.39
+      ],
+      [
+        "ⲛⲁ",
+        170,
+        28.183
+      ],
+      [
+        "ⲡⲓ",
+        176,
+        28.149
+      ],
+      [
+        "ⲛⲓ",
+        140,
+        27.606
+      ],
+      [
+        "ⲇⲱⲣⲟⲛ",
+        32,
+        27.566
+      ],
+      [
+        "ϭⲗⲓⲗ",
+        36,
+        27.532
+      ],
+      [
+        "ⲩ",
+        128,
+        27.121
+      ],
+      [
+        "ϫⲓϫ",
+        58,
+        27.087
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        46,
+        26.437
+      ],
+      [
+        "ⲛ",
+        1002,
+        22.984
+      ],
+      [
+        "ⲙ",
+        565,
+        22.046
+      ],
+      [
+        "ⲟⲩ",
+        567,
+        21.93
+      ],
+      [
+        "ⲙⲙⲟ",
+        329,
+        21.335
+      ],
+      [
+        "ⲡ",
+        554,
+        21.107
+      ],
+      [
+        "ⲛⲁ",
+        385,
+        20.723
+      ],
+      [
+        "ϥ",
+        500,
+        20.688
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        204,
+        20.582
+      ],
+      [
+        "ⲉϫⲱ",
+        137,
+        20.309
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        280,
+        20.122
+      ],
+      [
+        "ⲁ",
+        366,
+        19.86
+      ],
+      [
+        "ϩⲓⲕⲱⲛ",
+        43,
+        19.027
+      ],
+      [
+        "ⲉ",
+        299,
+        18.758
+      ],
+      [
+        "ⲩ",
+        230,
+        18.615
+      ],
+      [
+        "ⲇⲱⲣⲟⲛ",
+        43,
+        18.411
+      ],
+      [
+        "ⲉⲧ",
+        168,
+        17.684
+      ],
+      [
+        "ϩⲉⲛ",
+        109,
+        17.647
+      ],
+      [
+        "ⲁⲩⲱ",
+        177,
+        17.419
+      ],
+      [
+        "ⲉϫⲛ",
+        75,
+        17.38
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲓⲛⲉ",
+          21
+        ],
+        [
+          "ⲉⲓⲛⲉ_0_node",
+          104
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          19
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲓⲕⲱⲛ",
+          9
+        ],
+        [
+          "ϩⲓⲕⲱⲛ_1_post_ⲉⲓⲛⲉ",
+          19
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲛⲉ",
+          23
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓⲛⲉ",
+          13
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲛⲉ",
+          17
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲛⲉ",
+          17
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          14
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲛⲉ",
+          11
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲛⲉ",
+          12
+        ],
+        [
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ⲉⲓⲛⲉ",
+          6
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲓⲛⲉ",
+          8
+        ],
+        [
+          "ⲧⲁ_2_post_ϩⲓⲕⲱⲛ",
+          5
+        ],
+        [
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲉⲓⲛⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ϩⲓⲕⲱⲛ",
+          3
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲓⲛⲉ",
+          3
+        ],
+        [
+          "ⲇⲉ_1_post_ⲉⲓⲛⲉ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ϩⲓⲕⲱⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲛⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          "ⲧⲉϥ_2_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲓⲕⲱⲛ",
+          "ϩⲓⲕⲱⲛ_1_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲛⲉ",
+          "ⲩ_1_pre_ⲉⲓⲛⲉ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉⲓⲛⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲓⲛⲉ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲛⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲛⲉ",
+          "ϥ_1_pre_ⲉⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲉⲓⲛⲉ_0_node",
+          "ⲛ_1_post_ⲉⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲛⲉ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲧⲛⲉ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          "ⲧⲁ_2_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϩⲓⲕⲱⲛ",
+          "ϩⲓⲕⲱⲛ_1_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲛⲉ",
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          "ⲧⲉⲛ_2_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ϩⲓⲕⲱⲛ",
+          "ϩⲓⲕⲱⲛ_1_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲛⲉ",
+          "ⲁ_1_pre_ⲉⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲉⲓⲛⲉ_0_node",
+          "ⲇⲉ_1_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲓⲛⲉ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲓⲛⲉ",
+          "ⲉⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲓⲕⲱⲛ",
+          "ⲧⲉⲕ_2_post_ϩⲓⲕⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ϩⲓⲕⲱⲛ",
+          "ϩⲓⲕⲱⲛ_1_post_ⲉⲓⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 10.71,
+      "rank": 98,
+      "count": 1700
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C927",
+      "label": "ϫⲓⲛⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "bringing"
+    },
+    {
+      "target": "C914",
+      "label": "ⲉⲓⲛⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C915",
+      "label": "ⲉⲓⲛⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C916",
+      "label": "ⲉⲓⲛⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring, carry upon"
+    },
+    {
+      "target": "C906",
+      "label": "ⲉⲓⲛⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "bring to, for"
+    },
+    {
+      "target": "C923",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bring, put in; insert"
+    },
+    {
+      "target": "C924",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "N",
+      "gloss": "reception, receipt"
+    },
+    {
+      "target": "C925",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring up"
+    },
+    {
+      "target": "C926",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C910",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ- ⲧⲟⲟⲧ⸗)",
+      "pos": "V",
+      "gloss": "lay hands on, seize"
+    },
+    {
+      "target": "C909",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring upon; liken to, compare with"
+    },
+    {
+      "target": "C917",
+      "label": "ⲉⲓⲛⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "bring, put out, publish; take off (sandals); produce, extend"
+    },
+    {
+      "target": "C922",
+      "label": "ⲉⲓⲛⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "bring forward"
+    },
+    {
+      "target": "C920",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "bring back"
+    },
+    {
+      "target": "C918",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C908",
+      "label": "ⲉⲓⲛⲉ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "bring to, before"
+    },
+    {
+      "target": "C921",
+      "label": "ⲉⲓⲛⲉ (ⲉⲧⲙⲏⲧⲉ)",
+      "pos": "V",
+      "gloss": "bring into midst, recall"
+    },
+    {
+      "target": "C911",
+      "label": "ⲉⲓⲛⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C913",
+      "label": "ⲉⲓⲛⲉ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bring before"
+    },
+    {
+      "target": "C912",
+      "label": "ⲉⲓⲛⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "bring sth against sb, accuse sb of"
+    },
+    {
+      "target": "C907",
+      "label": "ⲉⲓⲛⲉ (ⲛⲧⲟⲟⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "set free, release, withdraw"
+    },
+    {
+      "target": "C919",
+      "label": "ⲓⲛⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "bring, raise up"
+    }
+  ],
+  "etym": {
+    "egy_num": "26870",
+    "egy_lemma": "jni̯",
+    "demo_num": "dm21",
+    "demo_lemma": "ı ͗n",
+    "english": "to bring; to bring away; to buy",
+    "german": "bringen; holen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/26870",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm21"
+  }
+}

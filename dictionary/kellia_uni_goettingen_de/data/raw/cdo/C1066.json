@@ -1,0 +1,266 @@
+{
+  "id": "C1066",
+  "forms": [
+    {
+      "id": "CF3491",
+      "orth": "ⲕⲱ ⲛⲥⲁ-",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲭⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.49,
+        "rank": 169,
+        "count": 635
+      }
+    },
+    {
+      "orth": "ⲕⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 8.34,
+        "rank": 145,
+        "count": 1316
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1235",
+      "bibliography": "CD 96a; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲇⲉ ⲉⲑⲛⲁϫⲉⲟⲩⲁ ⲉⲡⲓⲡⲛⲉⲩⲙⲁ ⲉⲑⲟⲩⲁⲃ ⲙⲙⲟⲛ **ⲭⲱ** ⲉⲃⲟⲗ ⲛⲧⲁϥ ϣⲁ ⲉⲛⲉϩ ⲁⲗⲗⲁ ϥⲟⲓ ⲛⲉⲛⲟⲭⲟⲥ ⲛⲟⲩⲛⲟⲃⲓ ⲛⲉⲛⲉϩ .",
+      "english": "but whoever may blaspheme against the Holy Spirit never has forgiveness, but is guilty of an eternal sin'",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϣⲱⲡⲓ ⲇⲉ ⲛϫⲉⲓⲱⲁⲛⲛⲏⲥ ⲡⲓⲣⲉϥϯⲱⲙⲥ ϩⲓⲡϣⲁϥⲉ ⲟⲩⲟϩ ⲉϥϩⲓⲱⲓϣ ⲛⲟⲩⲱⲙⲥ ⲙⲙⲉⲧⲁⲛⲟⲓⲁ ϧⲉⲛⲟⲩ**ⲭⲱ** ⲉⲃⲟⲗ ⲛⲧⲉϩⲁⲛⲛⲟⲃⲓ .",
+      "english": "John came baptizing in the wilderness and preaching the baptism of repentance for forgiveness of sins.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲁⲍ ⲛⲣⲟⲙⲡⲓ ⲉⲕⲉⲓⲣⲓ ⲛⲟⲩ**ⲭⲱ** ⲉⲃⲟⲗ",
+      "english": "Every seven years thou shalt make a release.",
+      "source": "05_Deuteronomium_15",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1060",
+      "label": "ϫⲓⲛⲭⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1089",
+      "label": "ϫⲓⲛⲭⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1080",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1081",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1061",
+      "label": "ϭⲓⲛⲕⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1085",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "entrance"
+    },
+    {
+      "target": "C1088",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1079",
+      "label": "ϭⲓⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1075",
+      "label": "ⲁⲧⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "without forgiveness"
+    },
+    {
+      "target": "C1059",
+      "label": "ⲕⲏ",
+      "pos": "VSTAT",
+      "gloss": "be loose, unrestrained; permitted; limp; be, exist, lie"
+    },
+    {
+      "target": "C1058",
+      "label": "ⲕⲱ",
+      "pos": "V",
+      "gloss": "place, appoint, set down, make; esteem; have, get, keep; preserve; permit, set free, let loose; admit, concede, suppose that; bequeath; quit, abandon, fail; leave, omit; go to, reach, enter"
+    },
+    {
+      "target": "C1062",
+      "label": "ⲕⲱ",
+      "pos": "N",
+      "gloss": "loosening, slackness"
+    },
+    {
+      "target": "C1068",
+      "label": "ⲕⲱ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "place under, on behalf of, renounce for"
+    },
+    {
+      "target": "C1071",
+      "label": "ⲕⲱ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "place before, commit to"
+    },
+    {
+      "target": "C1070",
+      "label": "ⲕⲱ (ϩⲁⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "place at feet of, before"
+    },
+    {
+      "target": "C1069",
+      "label": "ⲕⲱ (ϩⲁⲣⲛ-)",
+      "pos": "V",
+      "gloss": "place before (of food)"
+    },
+    {
+      "target": "C1072",
+      "label": "ⲕⲱ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "place, let loose upon"
+    },
+    {
+      "target": "C1091",
+      "label": "ⲕⲱ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude, excommunicate; lay out, distribute"
+    },
+    {
+      "target": "C1063",
+      "label": "ⲕⲱ (ⲉ-)",
+      "pos": "V",
+      "gloss": "rely upon"
+    },
+    {
+      "target": "C1084",
+      "label": "ⲕⲱ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "put in, admit"
+    },
+    {
+      "target": "C1086",
+      "label": "ⲕⲱ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "put, lay down, aside; lay down, publish; expose, set forth; leave behind; lay down, abandon"
+    },
+    {
+      "target": "C1064",
+      "label": "ⲕⲱ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "put, lay upon"
+    },
+    {
+      "target": "C1073",
+      "label": "ⲕⲱ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "release, loosen, dismiss; dispatch, send out; remit, forgive; quit, abandon; omit; desist from; publish; become loose, dissolved, be at ease"
+    },
+    {
+      "target": "C1083",
+      "label": "ⲕⲱ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "leave behind, over"
+    },
+    {
+      "target": "C1082",
+      "label": "ⲕⲱ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "put, let down"
+    },
+    {
+      "target": "C1065",
+      "label": "ⲕⲱ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "put, leave behind, renounce"
+    },
+    {
+      "target": "C1067",
+      "label": "ⲕⲱ (ⲛⲧⲛ-)",
+      "pos": "V",
+      "gloss": "put, keep in hand, have, entrust to, esteem"
+    },
+    {
+      "target": "C1087",
+      "label": "ⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, provision"
+    },
+    {
+      "target": "C1074",
+      "label": "ⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "freedom, remission, forgiveness"
+    },
+    {
+      "target": "C1076",
+      "label": "ⲙⲁ ⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "place of forgiveness, mercy-seat"
+    },
+    {
+      "target": "C1078",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1077",
+      "label": "ⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiver"
+    },
+    {
+      "target": "C1090",
+      "label": "ⲭⲱ (ⲥⲁⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude"
+    }
+  ]
+}

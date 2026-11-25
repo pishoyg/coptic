@@ -1,0 +1,132 @@
+{
+  "id": "C8081",
+  "forms": [
+    {
+      "id": "CF18350",
+      "orth": "ⲁⲅⲱⲛⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF18351",
+      "orth": "ⲁⲅⲱⲛⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13258,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9041",
+      "bibliography": "DDGLC",
+      "cu_ID": "1513"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕⲕⲱⲧ ⲛϩⲉⲛⲏⲓ · ⲙⲛϩⲉⲛⲡⲣⲟⲃⲁⲥⲧⲓⲟⲛ · ⲙⲛϩⲉⲛⲥⲓⲟⲟⲩⲛ · ⲉⲕⲧⲱϭⲉ ⲛϩⲉⲛⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ · ⲙⲛϩⲉⲛⲕⲏⲡⲟⲥ · ⲙⲛϩⲉⲛⲙⲁ ⲛ ⲥⲱ · ⲉⲕⲟ ⲛⲉϣⲱⲧ ⲉⲕⲡⲗⲉⲁ ϩⲛⲧϩⲁⲗⲁⲥⲥⲁ · ⲉⲕⲟ ⲛⲧϩⲉ ⲛⲛⲉⲧϩⲛⲧ**ⲁⲅⲱⲛⲓⲁ** ⲙⲡⲙⲟⲩ ⲛⲛⲁⲩ ⲛⲓⲙ :",
+      "english": "Thou buildest houses, and stalls for sheep and cattle, and baths, thou plantest vineyards, thou becomest a merchant, and sailest the seas with thy wares, and yet thou art at all times like unto the man who is in his death agony.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲩ",
+        1,
+        9.743
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲅⲱⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲅⲱⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲅⲱⲛⲓⲁ_0_node",
+          "ⲙ_1_post_ⲁⲅⲱⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲅⲱⲛⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12849,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5734",
+    "grl_lemma": "ἀγωνία",
+    "grl_meaning": "contest, struggle, anguish",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 19a; Preisigke 1:17"
+  }
+}

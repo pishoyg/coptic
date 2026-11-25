@@ -1,0 +1,46 @@
+{
+  "id": "C8103",
+  "forms": [
+    {
+      "id": "CF18422",
+      "orth": "ⲁⲑⲁⲛⲁⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18423",
+      "orth": "ⲁⲑⲁⲛⲁⲧⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF18424",
+      "orth": "ⲁⲑⲁⲛⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7118,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9084",
+      "bibliography": "DDGLC",
+      "cu_ID": "2496"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3267",
+    "grl_lemma": "ἀθάνατος",
+    "grl_meaning": "undying, immortal, everlasting, perpetual",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 30b; Preisigke 1:28"
+  }
+}

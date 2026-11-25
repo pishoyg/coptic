@@ -1,0 +1,74 @@
+{
+  "id": "C1827",
+  "forms": [
+    {
+      "id": "CF5260",
+      "orth": "ⲙⲟⲩⲓⲏ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF5261",
+      "orth": "ⲙⲓⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5643,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF5262",
+      "orth": "ⲙⲩⲏ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF5263",
+      "orth": "ⲙⲓⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2130",
+      "bibliography": "CD 160b; KoptHWb 88"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1828",
+      "label": "ⲙⲁⲥ ⲙⲙⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "young of lion, whelp"
+    },
+    {
+      "target": "C1825",
+      "label": "ⲙⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "lioness"
+    },
+    {
+      "target": "C1826",
+      "label": "ⲙⲟⲩⲓ",
+      "pos": "N",
+      "gloss": "lion"
+    }
+  ],
+  "etym": {
+    "egy_num": "66420",
+    "egy_lemma": "mꜣj.t",
+    "demo_num": "d2302",
+    "demo_lemma": "mꜣw.t",
+    "english": "lioness (of goddesses)",
+    "german": "Löwin",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/66420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2302"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "C3283",
+  "forms": [
+    {
+      "id": "CF8454",
+      "orth": "ⲥⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 37.11,
+        "rank": 35,
+        "count": 5855
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPER",
+    "subc": "3. Pers.",
+    "number": "pl.",
+    "tlapos": "Präfixpronomen (Präsens I)"
+  },
+  "senses": [
+    {
+      "id": "CS3750",
+      "bibliography": "CED 144; KoptHWb 173; DELC 182"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉⲁⲛⲟⲕ ϯⲙⲉⲧⲉⲭⲉ ⲉⲩⲭⲁⲣⲓⲥ . ϫⲉⲟⲩ **ⲥⲉ**ϫⲓⲟⲩⲁ ⲉⲣⲟⲓ ϩⲙⲡⲉϯϣⲡϩⲙⲟⲧ ⲁⲛⲟⲕ ϩⲁⲣⲟϥ .",
+      "english": "If I partake with thankfulness, why am I denounced for that for which I give thanks?",
+      "source": "1 Corinthians 10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛⲁϥ ⲛϭⲓⲡϩⲗⲗⲟ ϫⲉⲉⲃⲟⲗ ϫⲉ**ⲥⲉ**ϣⲱⲛⲉ ⲛϭⲓⲛⲉⲕⲉⲥⲑⲏⲧⲏⲣⲓⲟⲛ ⲉⲧϩⲓⲃⲟⲗ , ⲧϭⲓⲛⲛⲁⲩ , ⲧϭⲓⲛⲥⲱⲧⲙ , ⲧϭⲓⲛϣⲱⲗⲙ , ⲧϭⲓⲛϣⲁϫⲉ .",
+      "english": "The old man answered him: that&apos;s because those of your senses are sick which are exterior, your sight, your hearing, your scent, your speech.",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁ ⲟⲩⲁ ⲛⲛⲉⲥⲛⲏⲩ ϫⲛⲉⲁⲡⲁ ⲡⲁⲥⲧⲁⲙⲱⲛ ϫⲉⲟⲩ ⲡⲉ ϯⲛⲁⲁⲁϥ ϫⲉ**ⲥⲉ**ⲑⲗⲓⲃⲉ ⲙⲙⲟⲓ ⲉⲓϯ ⲙⲡⲁϩⲱⲃ ⲛϭⲓϫ ⲉⲃⲟⲗ .",
+      "english": "One of the brothers asked Apa Pistamon, 'What should I do? For it worries me when I sell my handiwork.'",
+      "source": "Apophthegmata Patrum Sahidic 027: Pistamon 1",
+      "urn": "urn:cts:copticLit:ap.27.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "400960",
+    "egy_lemma": "st",
+    "demo_num": "d5705",
+    "demo_lemma": "st",
+    "english": "they; them (depen. pron., 3rd per. pl.)",
+    "german": "sie [Enkl. Pron. pl.3.c.]; sich [Enkl. Pron. pl.3.c.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/400960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5705"
+  }
+}

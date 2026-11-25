@@ -1,0 +1,327 @@
+{
+  "id": "C2511",
+  "forms": [
+    {
+      "id": "CF6812",
+      "orth": "ⲛⲟⲩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3923,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2890",
+      "bibliography": "CD 228b; CED 110; KoptHWb 125; DELC 144; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲩϫⲡⲟ ⲙⲡⲣⲱⲙⲉ ⲉⲡϩⲓⲥⲉ ⲉⲣⲉⲙⲙⲁⲥ ⲇⲉ ⲛ**ⲛⲟⲩⲣⲉ** ϩⲏⲗ ϩⲛⲛⲉⲧϫⲟⲥⲉ",
+      "english": "yet man is born to labour, and even so the vulture's young seek the high places.",
+      "source": "Job 5",
+      "urn": "urn:cts:copticLit:ot.job.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲍⲁⲣⲉ ⲡⲕⲁⲣⲙⲏⲗⲓⲟⲥ ⲡϣⲏⲣⲉ **ⲛⲟⲩⲣⲉ** ⲉⲧⲉⲉⲣⲭⲣⲓ ⲡⲉ",
+      "english": "Asarai the Carmelite the son of Uraeoerchi.",
+      "source": "II Samuel 23",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϥⲟϭϥ ⲉⲃⲟⲗ ϩⲛⲛⲉⲥⲉⲕⲓⲃⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲛⲟⲩⲣⲉ** ⲉⲣⲉⲡⲗⲁⲟⲥ ⲑⲉⲱⲣⲉⲓ ⲙⲙⲟϥ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϣⲁϩ ⲛⲕⲱϩⲧ · ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲛⲉⲥⲉⲕⲓⲃⲉ ⲣⲧⲉⲩϩⲉ ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "and he leaped out of her breasts in the form of a gryphon, and all the people saw him, and he was like unto a flame of fire. And straightway her breasts assumed their usual shape,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲉⲉⲣⲭⲣⲓ",
+        1,
+        17.598
+      ],
+      [
+        "ⲕⲁⲣⲙⲏⲗⲓⲟⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ⲡⲁⲗⲓⲁⲉⲧⲟⲥ",
+        1,
+        16.598
+      ],
+      [
+        "ⲉⲧⲣⲉ",
+        2,
+        16.276
+      ],
+      [
+        "ⲙⲙⲁⲥ",
+        1,
+        16.013
+      ],
+      [
+        "ⲁⲩⲑⲉⲛⲧⲏⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ϩⲏⲗ",
+        1,
+        12.276
+      ],
+      [
+        "ⲅⲁⲗⲁⲁⲇ",
+        1,
+        12.24
+      ],
+      [
+        "ϩⲁⲗⲏⲧ",
+        1,
+        12.139
+      ],
+      [
+        "ⲑⲉⲱⲣⲉⲓ",
+        1,
+        12.106
+      ],
+      [
+        "ⲡ",
+        9,
+        11.007
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        10.857
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ϩⲣⲉ",
+        1,
+        10.765
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        10.61
+      ],
+      [
+        "ⲧⲛⲧⲱⲛ",
+        1,
+        9.998
+      ],
+      [
+        "ⲟⲩⲏϩ",
+        1,
+        8.492
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.831
+      ],
+      [
+        "ⲧ",
+        3,
+        7.826
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        6.986
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩⲣⲉ_0_node",
+          8
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲑⲉⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲑⲉⲱⲣⲉⲓ_2_post_ⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲑⲉⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩⲣⲉ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ_b",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ϩⲉⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ⲛⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲣⲉ_0_node",
+          "ⲉⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          "ⲡ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲗⲁⲟⲥ",
+          "ⲗⲁⲟⲥ_3_post_ⲑⲉⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲑⲉⲱⲣⲉⲓ",
+          "ⲑⲉⲱⲣⲉⲓ_2_post_ⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲑⲉⲱⲣⲉⲓ_2_post_ⲉⲣⲉ",
+          "ⲙⲙⲟ_3_post_ⲑⲉⲱⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ⲧ_1_pre_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ⲛⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ⲛⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          "ⲡ_2_post_ⲉⲧⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲧⲣⲉ",
+          "ⲉⲧⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲣⲉ_1_post_ⲛⲟⲩⲣⲉ",
+          "ⲙⲛ_2_post_ⲛ_b",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲛⲟⲩⲣⲉ",
+          "ⲛⲟⲩⲣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3535,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2510",
+      "label": "ⲛⲟⲩⲣⲉ",
+      "pos": "N",
+      "gloss": "vulture"
+    },
+    {
+      "target": "C2512",
+      "label": "ⲛⲟⲩⲣⲓ",
+      "pos": "N",
+      "gloss": "griffon"
+    }
+  ],
+  "etym": {
+    "egy_num": "85040",
+    "egy_lemma": "nr.t",
+    "demo_num": "d3205",
+    "demo_lemma": "nrj.t",
+    "english": "vulture",
+    "german": "Geier",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/85040",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3205"
+  }
+}

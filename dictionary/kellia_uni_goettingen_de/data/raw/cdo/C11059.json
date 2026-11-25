@@ -1,0 +1,198 @@
+{
+  "id": "C11059",
+  "forms": [
+    {
+      "id": "CF30435",
+      "orth": "ϩⲁⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30436",
+      "orth": "ϩⲁⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5238,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF30437",
+      "orth": "ϩⲁⲙⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS15440",
+      "bibliography": "DDGLC",
+      "cu_ID": "3614"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ϩⲁⲙⲁ** ⲇⲉ ⲟⲛ ϣⲁϥϣⲁϫⲉ ⲉⲧⲃⲉⲡϣⲱⲙ ·",
+      "english": "And at the same time [you are talking], he can talk about the summer.",
+      "source": "Apophthegmata Patrum Sahidic 092: Anonymous Nau 278",
+      "urn": "urn:cts:copticLit:ap.92.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϩⲁⲙⲁ** ⲇⲉ ⲟⲛ ⲥⲉⲥⲟⲟⲩⲛ ⲧⲏⲣⲟⲩ ϫⲉⲟⲩϣⲉ ⲧⲉ ⲙⲛϩⲉⲛⲡⲁϩⲣⲉ",
+      "english": "while at the same time they all know that it is wood and some paint",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ⲛϭⲓⲡⲣⲣⲟ ⲁϥⲣϣⲡⲏⲣⲉ **ϩⲁⲙⲁ** ⲇⲉ ⲛⲉⲣⲉⲛⲇⲓⲁⲃⲟⲗⲟⲥ ⲥⲱⲣⲙ ⲙⲡⲉϥϩⲏⲧ",
+      "english": "...",
+      "source": "Martyrdom of Helias (Sobhy ed.) Part 3",
+      "urn": "urn:cts:copticLit:helias.martyrdom.sobhy_ed:21-25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲡⲏⲣⲉ",
+        1,
+        10.728
+      ],
+      [
+        "ⲇⲓⲁⲃⲟⲗⲟⲥ",
+        1,
+        10.516
+      ],
+      [
+        "ⲣⲣⲟ",
+        2,
+        10.457
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        10.227
+      ],
+      [
+        "ⲛⲉⲣⲉ",
+        1,
+        9.919
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        9.741
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        8.13
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        8.022
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        7.951
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.526
+      ],
+      [
+        "ϥ",
+        3,
+        7.277
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.587
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.346
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.083
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.644
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ϩⲁⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ϩⲁⲙⲁ",
+          "ϩⲁⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4819,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "107",
+    "grl_lemma": "ἅμα",
+    "grl_meaning": "at once, at the same time",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 75b; Preisigke 1:63"
+  }
+}

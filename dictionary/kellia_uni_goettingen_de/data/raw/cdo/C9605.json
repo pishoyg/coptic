@@ -1,0 +1,66 @@
+{
+  "id": "C9605",
+  "forms": [
+    {
+      "id": "CF24529",
+      "orth": "ⲗⲉⲅⲉⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24530",
+      "orth": "ⲗⲉⲅⲉⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24531",
+      "orth": "ⲗⲉⲅⲓⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF24532",
+      "orth": "ⲗⲉⲅⲓⲱⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24533",
+      "orth": "ⲗⲉⲅⲓⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3474,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF24534",
+      "orth": "ⲗⲉⲕⲓⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF24535",
+      "orth": "ⲗⲟⲅⲓⲱⲛ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12288",
+      "bibliography": "DDGLC",
+      "cu_ID": "597"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2740",
+    "grl_lemma": "λεγεών",
+    "grl_meaning": "legion",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1033b; Preisigke 2:8; Sophocles 707b"
+  }
+}

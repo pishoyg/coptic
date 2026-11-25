@@ -1,0 +1,385 @@
+{
+  "id": "C9412",
+  "forms": [
+    {
+      "id": "CF23800",
+      "orth": "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23803",
+      "orth": "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3446,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF23801",
+      "orth": "ⲕⲁⲓⲫⲁⲗⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23802",
+      "orth": "ⲕⲉⲫⲁⲗⲁⲓⲟ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23804",
+      "orth": "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23805",
+      "orth": "ⲕⲉⲫⲁⲗⲉⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23806",
+      "orth": "ⲕⲉⲫⲁⲗⲉⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8375,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23807",
+      "orth": "ⲕⲉⲫⲁⲗⲉⲱⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23808",
+      "orth": "ⲕⲉⲫⲁⲗⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4027,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11893",
+      "bibliography": "DDGLC",
+      "cu_ID": "2318"
+    },
+    {
+      "id": "CS11894",
+      "bibliography": "DDGLC",
+      "cu_ID": "3995"
+    },
+    {
+      "id": "CS11895",
+      "bibliography": "DDGLC",
+      "cu_ID": "1451"
+    },
+    {
+      "id": "CS11896",
+      "bibliography": "DDGLC",
+      "cu_ID": "7963"
+    },
+    {
+      "id": "CS11897",
+      "bibliography": "DDGLC",
+      "cu_ID": "10726"
+    },
+    {
+      "id": "CS11898",
+      "bibliography": "DDGLC",
+      "cu_ID": "9809"
+    },
+    {
+      "id": "CS11899",
+      "bibliography": "DDGLC",
+      "cu_ID": "11005"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡ**ⲕⲉⲫⲁⲗⲁⲓⲟⲛ** ⲛⲛⲁⲓ ⲧⲏⲣⲟⲩ · ⲧⲉϥⲉⲡⲏⲧⲏⲙⲓⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲛⲧⲁϥⲁⲁⲥ ϣⲁⲁⲣⲟⲛ · ⲙⲛⲡϩⲓⲥⲉ ⲧⲏⲣϥ ⲛⲛⲉϥⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ⲁⲩⲱ ⲧⲉⲭⲟⲣⲏⲅⲓⲁ ⲧⲏⲣⲥ ⲛⲧⲉⲭⲣⲉⲓⲁ ⲛⲛⲣⲱⲙⲉ · ⲙⲛⲡⲉⲧⲣⲟⲙⲟⲥ ⲛⲛⲉⲫⲱⲥⲧⲏⲣ ·",
+      "english": "And of all these the principal things are, His holy desire which He hath shewn (or, made) towards us, and all the sufferings of His Apostles, and all the supplies which have been needed by men, and by the courses of the luminaries.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲛⲧⲁϥⲱⲣⲕ ⲉⲧⲃⲏⲏⲧⲟⲩ ⲁⲇⲓⲕⲱⲥ ⲉϥⲉϯ ⲙⲡ**ⲕⲉⲫⲁⲗⲁⲓⲟⲛ** ⲁⲩⲱ ⲡⲟⲩⲱⲛ ⲛϯⲟⲩ ⲉϥⲉⲧⲁⲁϥ ⲉϫⲱϥ ⲡⲉⲧⲉⲡⲱϥ ⲡⲉ ⲉϥⲉⲧⲁⲁϥ ⲛⲁϥ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲟⲩⲛⲁϫⲡⲓⲟϥ ⲛϩⲏⲧϥ",
+      "english": "about which he swore unjustly, he shall even restore it in full; and he shall add to it a fifth part besides; he shall restore it to him whose it is in the day in which he happens to be convicted.",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ⲕⲉⲫⲁⲗⲁⲓⲟⲛ** ⲇⲉ ⲡⲉ ⲛⲛⲉⲧⲛϫⲱ ⲙⲙⲟⲟⲩ . ⲟⲩⲛⲧⲁⲛ ⲙⲙⲁⲩ ⲛⲟⲩⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲛⲧⲉⲓⲙⲓⲛⲉ . ⲡⲁⲓ ⲉⲛⲧⲁϥϩⲙⲟⲟⲥ ϩⲓⲧⲟⲩⲛⲁⲙ ⲙⲡⲉⲑⲣⲟⲛⲟⲥ ⲛⲧⲙⲛⲧⲛⲟϭ ϩⲛⲙⲡⲏⲩⲉ .",
+      "english": "Now in the things which we are saying, the main point is this. We have such a high priest, who sat down on the right hand of the throne of the Majesty in the heavens,",
+      "source": "58_Hebrews_8",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟϭ",
+        4,
+        11.976
+      ],
+      [
+        "ⲡ",
+        9,
+        10.685
+      ],
+      [
+        "ⲛ",
+        10,
+        10.453
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        10.152
+      ],
+      [
+        "ϯⲟⲩ",
+        1,
+        9.535
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        9.535
+      ],
+      [
+        "ⲡⲁⲣⲁ",
+        1,
+        9.316
+      ],
+      [
+        "ⲡⲉⲓ",
+        2,
+        9.005
+      ],
+      [
+        "ⲧⲏⲣϥ",
+        1,
+        8.867
+      ],
+      [
+        "ⲟⲩⲱⲛ",
+        1,
+        8.687
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        8.415
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        1,
+        8.412
+      ],
+      [
+        "ⲧⲃⲃⲟ",
+        1,
+        8.387
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        1,
+        8.234
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        8.089
+      ],
+      [
+        "ⲙ",
+        4,
+        8.029
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        7.467
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        7.409
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        1,
+        7.403
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.18
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          9
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲏⲣϥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_3_pre_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ϩⲁϩ_4_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ϩⲁϩ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_6_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲡⲏⲧⲏⲙⲓⲁ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          "ⲙ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲏⲣϥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_3_pre_ϣⲁϫⲉ",
+          "ϩⲁϩ_4_pre_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁϩ_4_pre_ⲛ",
+          "ⲛ_5_pre_ϩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_5_pre_ϩⲁϩ",
+          "ⲥⲟⲡ_6_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲡ_6_pre_ⲛ",
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲫⲁⲗⲁⲓⲟⲛ_0_node",
+          "ⲧⲉϥ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          "ⲉⲡⲏⲧⲏⲙⲓⲁ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲡⲏⲧⲏⲙⲓⲁ_1_post_ⲕⲉⲫⲁⲗⲁⲓⲟⲛ",
+          "ⲉⲧ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲉⲡⲏⲧⲏⲙⲓⲁ",
+          "ⲟⲩⲁⲁⲃ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3080,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "1114",
+    "grl_lemma": "κεφάλαιον",
+    "grl_meaning": "head, parts about the head, chief or main point",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 944b; Preisigke 1:789"
+  }
+}

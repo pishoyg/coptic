@@ -1,0 +1,283 @@
+{
+  "id": "C8795",
+  "forms": [
+    {
+      "id": "CF21135",
+      "orth": "ⲇⲓⲟⲓⲕⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF21141",
+      "orth": "ⲇⲓⲟⲓⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7715,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21136",
+      "orth": "ϯⲕⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21137",
+      "orth": "ϯⲟⲓⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21138",
+      "orth": "ⲇⲓⲉⲕⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21139",
+      "orth": "ⲇⲓⲏⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21140",
+      "orth": "ⲇⲓⲏⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10813,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21142",
+      "orth": "ⲇⲓⲟⲕⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21143",
+      "orth": "ⲧⲉⲉⲓⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21144",
+      "orth": "ⲧⲓⲏⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10540",
+      "bibliography": "DDGLC",
+      "cu_ID": "3709"
+    },
+    {
+      "id": "CS10541",
+      "bibliography": "DDGLC",
+      "cu_ID": "8708"
+    },
+    {
+      "id": "CS10542",
+      "bibliography": "DDGLC",
+      "cu_ID": "5413"
+    },
+    {
+      "id": "CS10543",
+      "bibliography": "DDGLC",
+      "cu_ID": "2166"
+    },
+    {
+      "id": "CS10544",
+      "bibliography": "DDGLC",
+      "cu_ID": "5412"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ⲡϫⲟⲉⲓⲥ ⲙⲡⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲡⲉ ⲡⲛⲟⲩⲧⲉ ⲡⲉⲓⲱⲧ · ⲡⲁⲓ ⲉⲧ**ⲇⲓⲟⲓⲕⲉⲓ** ⲛⲛⲉϥⲥⲱⲛⲧ ϫⲓⲛⲛϣⲟⲣⲡ ·",
+      "english": "In the first place, the Master in this vineyard is God the Father, Who hath governed His creatures",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲉⲕⲓⲟⲥ ⲇⲉ ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲉⲡⲡⲟⲗⲉⲙⲟⲥ · ⲟⲩⲁⲗⲉⲣⲓⲁⲛⲟⲥ ⲇⲉ ⲁϥϭⲱ ϩⲛϩⲣⲱⲙⲏ · ⲉϥ**ⲇⲓⲟⲓⲕⲉⲓ** ⲛⲛⲉϩⲃⲏⲩⲉ ⲛⲧⲙⲛⲧⲣⲣⲟ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲱⲙⲏ",
+        1,
+        14.644
+      ],
+      [
+        "ⲥⲱⲛⲧ",
+        1,
+        12.303
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        9.812
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        9.251
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        8.626
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        7.577
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲇⲓⲟⲓⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲇⲓⲟⲓⲕⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲇⲓⲟⲓⲕⲉⲓ",
+          "ⲇⲓⲟⲓⲕⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲟⲓⲕⲉⲓ_0_node",
+          "ⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ϩⲃⲏⲩⲉ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_3_post_ⲛⲉ",
+          "ⲛ_4_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          "ⲛⲉϥ_3_post_ⲥⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲱⲛⲧ",
+          "ⲥⲱⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲧ_2_post_ⲛ",
+          "ϫⲓⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ⲇⲓⲟⲓⲕⲉⲓ",
+          "ⲛ_2_post_ϫⲓⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7256,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "547",
+    "grl_lemma": "διοικέω",
+    "grl_meaning": "to keep house, manage, administer",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 432b; Preisigke 1:386"
+  }
+}

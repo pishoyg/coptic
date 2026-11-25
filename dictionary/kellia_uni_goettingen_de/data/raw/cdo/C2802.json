@@ -1,0 +1,66 @@
+{
+  "id": "C2802",
+  "forms": [
+    {
+      "id": "CF7446",
+      "orth": "ⲡⲟⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF7447",
+      "orth": "ⲫⲟⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4750,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3204",
+      "bibliography": "CD 260b; CED 124; KoptHWb 145; DELC 158-159; ChLCS 36b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉⲙⲡⲉⲣⲧⲁϩⲛⲟ ⲙⲙⲟⲓ ⲁ ⲡϭⲟⲓⲥ ⲥⲟⲩⲧⲱⲛ ⲡⲁⲙⲱⲓⲧ ⲙⲁⲧ**ⲫⲟⲓ** ϩⲓⲛⲁ ⲛⲧⲁϣⲉⲛⲏⲓ ϩⲁⲡϭⲟⲓⲥ",
+      "english": "But he said to them, Hinder me not, for the Lord has prospered my journey for me; send me away, that I may depart to my master.",
+      "source": "01_Genesis_24",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛⲡϫⲓⲛⲑⲣⲉ ⲡⲓⲁⲣⲭⲱⲛ ϣⲉ ⲉϧⲟⲩⲛ ϧⲉⲛⲡⲓⲉⲗⲁⲙ ⲛⲧⲉϯⲡⲩⲗⲏ ⲉⲧⲥⲁⲃⲟⲗ ⲉϥⲉⲟϩⲓ ⲉⲣⲁⲧϥ ϩⲓϫⲉⲛϯ**ⲫⲟⲓ** ⲛⲧⲉϯⲡⲩⲗⲏ ⲟⲩⲟϩ ⲛⲓⲟⲩⲏⲃ ⲉⲩⲓⲣⲓ ⲙⲡⲓϭⲗⲓⲗ ⲛⲉⲙⲛⲁⲡⲉϥⲟⲩϫⲁⲓ ⲉϥⲉⲟⲩⲱϣⲧ ⲙⲡϩⲟ ⲙⲡⲓⲥⲃⲉ ⲛⲧⲉⲡⲓⲏⲓ ⲉϥⲉⲓ ⲉⲃⲟⲗ ⲟⲩⲟϩ ϯⲡⲩⲗⲏ ⲉϥⲉϣⲟⲧⲉⲙ ⲙⲙⲟⲥ ϣⲁⲫⲛⲁⲩ ⲛⲧⲉϩⲁⲛⲁⲣⲟⲩϩⲓ .",
+      "english": "And the prince shall enter by the way of the porch of the inner gate, and shall stand at the entrance of the gate, and the priests shall prepare his whole-burnt-offerings and his peace-offerings, and he shall worship at the entrance of the gate: then shall he come forth; but the gate shall not be shut till evening.",
+      "source": "26_Ezechiel_46",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:46",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲩⲱⲙ ⲟⲩⲟϩ ⲁⲩⲥⲱ ⲛⲑⲟϥ ⲛⲉⲙⲛⲓⲣⲱⲙⲓ ⲉⲑⲛⲉⲙⲁϥ ⲟⲩⲟϩ ⲁⲩⲛⲕⲟⲧ ⲟⲩⲟϩ ⲉⲧⲁϥⲧⲱⲛϥ ⲛⲧⲟⲟⲩⲓ ⲡⲉϫⲁϥ ϫⲉⲙⲁⲧ**ⲫⲟⲓ** ϩⲓⲛⲁ ⲛⲧⲁϣⲉⲛⲏⲓ ϩⲁⲡⲁϭⲟⲓⲥ",
+      "english": "And both he and the men with him ate and drank and went to sleep. And he arose in the morning and said, Send me away, that I may go to my master.",
+      "source": "01_Genesis_24",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "58650",
+    "egy_lemma": "pj",
+    "demo_num": "d1941",
+    "demo_lemma": "pj",
+    "english": "base",
+    "german": "Untersatz; Sockel; Thron",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/58650",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1941"
+  }
+}

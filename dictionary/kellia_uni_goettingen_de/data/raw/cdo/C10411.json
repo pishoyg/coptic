@@ -1,0 +1,116 @@
+{
+  "id": "C10411",
+  "forms": [
+    {
+      "id": "CF27835",
+      "orth": "ⲥⲁⲣⲁⲫⲉⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27839",
+      "orth": "ⲥⲁⲣⲁⲫⲉⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27837",
+      "orth": "ⲍⲉⲣⲁⲫⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27836",
+      "orth": "ⲍⲉⲣⲁⲫⲓ⳯",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27838",
+      "orth": "ⲍⲉⲣⲁⲫⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13471,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27840",
+      "orth": "ⲥⲁⲣⲁⲫⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13132,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27841",
+      "orth": "ⲥⲉⲣⲁⲫⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3930,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF27842",
+      "orth": "ⲥⲉⲣⲁⲫⲓⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6655,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF27843",
+      "orth": "ⲥⲉⲣⲁⲫⲓⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27844",
+      "orth": "ⲥⲉⲣⲁⲫⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2935,
+        "count": 14
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14053",
+      "bibliography": "DDGLC",
+      "cu_ID": "1296"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲟⲩⲱⲣⲡ ϩⲁⲣⲟⲓ ⲛⲟⲩⲁⲓ ⲛⲛⲓ**ⲥⲉⲣⲁⲫⲓⲙ** ⲟⲩⲟϩ ⲛⲉⲣⲉ ⲟⲩⲟⲛ ⲟⲩϫⲉⲃⲥ ϧⲉⲛⲧⲉϥϫⲓϫ ⲑⲏⲉⲧⲁϥϭⲓⲧⲥ ϧⲉⲛϯⲉϭⲟⲩ ⲉⲃⲟⲗϩⲓϫⲉⲛ ⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ .",
+      "english": "And there was sent to me one of the seraphs, and he had in his hand a coal, which he had taken off the altar with the tongs:",
+      "source": "23_Isaias_06",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:06",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲁⲛ**ⲥⲉⲣⲁⲫⲓⲙ** ⲛⲁⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩⲙⲡⲉϥⲕⲱϯ ⲉⲣⲉⲟⲩⲟⲛ ⲋ ⲛⲧⲉⲛϩ ⲉⲡⲓⲟⲩⲁⲓ ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲕⲉⲋ ⲛⲧⲉⲛϩ ⲉⲡⲓⲟⲩⲁⲓ ⲟⲩⲟϩ ϧⲉⲛⲃ ⲙⲉⲛ ⲛⲁⲩϩⲱⲃⲥ ⲙⲡⲟⲩϩⲟ ⲟⲩⲟϩ ϧⲉⲛⲃ ⲛⲁⲩϩⲱⲃⲥ ⲛⲛⲓϭⲁⲗⲁⲩϫ ⲟⲩⲟϩ ⲛⲁⲩϩⲏⲗ ϧⲉⲛⲡⲓⲕⲉⲃ .",
+      "english": "And seraphs stood round about him: each one had six wings: and with two they covered their face, and with two they covered their feet, and with two they flew.",
+      "source": "23_Isaias_06",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3788",
+    "grl_lemma": "σεραφίμ",
+    "grl_meaning": "Seraphim",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1591b; Sophocles 984b; Lampe 1230a"
+  }
+}

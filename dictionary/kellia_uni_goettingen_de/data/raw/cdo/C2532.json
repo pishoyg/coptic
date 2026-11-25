@@ -1,0 +1,99 @@
+{
+  "id": "C2532",
+  "forms": [
+    {
+      "id": "CF6855",
+      "orth": "ⲛⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 15.19,
+        "rank": 85,
+        "count": 2396
+      }
+    },
+    {
+      "orth": "ⲛⲧⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.28,
+        "rank": 318,
+        "count": 278
+      }
+    },
+    {
+      "orth": "ⲛⲧⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 611,
+        "count": 199
+      }
+    },
+    {
+      "orth": "ⲛⲧⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.85,
+        "rank": 491,
+        "count": 157
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS2912",
+      "bibliography": "CD 230ab; KoptHWb 126; DELC 145; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϩⲱⲥ ϣⲃⲣⲣϩⲱⲃ **ⲛⲧⲉ**ⲡⲛⲟⲩⲧⲉ .",
+      "english": "But as fellow-laborers of God,",
+      "source": "Abraham Our Father: ZH fragments 1a-d",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbzh:18-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ **ⲛⲧⲉ**ⲡⲛⲟⲩⲧⲉ ϩⲁⲙⲏⲛ ·",
+      "english": "IN THE PEACE OF GOD. AMEN.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁϥ ⲙⲡⲉϥⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲕⲟⲩⲱϣ ⲉⲃⲱⲕ **ⲛ**ⲅⲙⲟⲩⲧⲉ ⲉⲡⲉⲧⲇⲓⲁⲕⲟⲛⲉⲓ ⲛⲁⲛ .",
+      "english": "And he said to his disciple, “Do you want to go and summon the one who serves us?”",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2533",
+      "label": "ⲛⲧⲉ-",
+      "pos": "PTC",
+      "gloss": "particle of genitive"
+    }
+  ],
+  "etym": {
+    "egy_num": "600056",
+    "egy_lemma": "m-dj",
+    "demo_num": "d2781",
+    "demo_lemma": "mtw",
+    "english": "with; from; in possession of",
+    "german": "bei; mit; (fort) von; im Besitz von",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600056",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2781"
+  }
+}

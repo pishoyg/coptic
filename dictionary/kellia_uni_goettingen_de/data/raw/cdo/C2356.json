@@ -1,0 +1,744 @@
+{
+  "id": "C2356",
+  "forms": [
+    {
+      "id": "CF6466",
+      "orth": "ⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    },
+    {
+      "orth": "ⲛⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 29.14,
+        "rank": 52,
+        "count": 2471
+      }
+    },
+    {
+      "orth": "ⲛⲁⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1756,
+        "count": 38
+      }
+    },
+    {
+      "orth": "ⲛⲁⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3774,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲛⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 20.91,
+        "rank": 65,
+        "count": 3299
+      }
+    },
+    {
+      "orth": "ⲛⲁⲉⲓⲏ",
+      "dialect": "S",
+      "id": "3.4"
+    },
+    {
+      "orth": "ⲛⲁⲉ",
+      "dialect": "A",
+      "id": "3.5"
+    },
+    {
+      "orth": "ⲛⲉⲓ",
+      "dialect": "F",
+      "id": "3.6"
+    },
+    {
+      "orth": "ⲛⲉⲉⲓ",
+      "dialect": "F",
+      "id": "3.7"
+    },
+    {
+      "orth": "ⲛⲁⲉ",
+      "dialect": "L",
+      "id": "3.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2721",
+      "bibliography": "CD 216b; KoptHWb 116; DELC 136; ChLCS 31a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲉϥⲭⲁϥ ⲁⲗⲗⲁ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲙⲁϣⲉ ⲛⲁⲕ ⲉϧⲟⲩⲛ ⲉⲡⲉⲕⲏⲓ ϩⲁⲛⲏ ⲉⲧⲉⲛⲟⲩⲕ ⲟⲩⲟϩ ⲙⲁⲧⲁⲙⲱⲟⲩ ⲉⲛⲏ ⲉⲧⲁⲡϭⲟⲓⲥ ⲁⲓⲧⲟⲩ ⲛⲁⲕ ⲉⲁϥ**ⲛⲁⲓ** ⲛⲁⲕ",
+      "english": "He didn't allow him, but said to him, 'Go to your house, to your friends, and tell them what great things the Lord has done for you, and how he had mercy on you.'",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉⲓⲛⲁ ⲇⲉⲓⲛⲁ ϣⲁⲛⲧⲓ**ⲛⲁ** ⲛⲁϥ",
+      "english": "until I have mercy upon him!",
+      "source": "Curse to bring suffering, pain, and disease",
+      "urn": "urn:cts:copticMag:kyprianos.tm99993.kypt483",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲛⲓⲡⲁⲣⲑⲉⲛⲟⲥ ⲇⲉ ⲙⲙⲟⲛⲧⲓ ⲟⲩⲁϩⲥⲁϩⲛⲓ ⲙⲙⲁⲩ ⲛⲧⲉⲛⲡϭⲟⲓⲥ ⲟⲩⲅⲛⲱⲙⲏ ⲇⲉ ⲡⲉⲧⲓϯ ⲙⲙⲟⲥ ϩⲱⲥ ⲉⲁⲩ**ⲛⲁⲓ** ⲛⲏⲓ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲡϭⲟⲓⲥ ⲉⲑⲣⲓϣⲱⲡⲓ ⲙⲡⲓⲥⲧⲟⲥ .",
+      "english": "Now concerning virgins, I have no commandment from the Lord, but I give my judgment as one who has obtained mercy from the Lord to be trustworthy.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲡⲉϫⲁⲥ ϫⲉⲛⲁ **ⲛⲁ**ⲓ ·",
+      "english": "And again, she said (unto Him), 'Have mercy on me!",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩϩⲏⲕⲓ ⲛⲛⲉⲕ**ⲛⲁⲓ** ⲛⲁϥ ϧⲉⲛⲡϩⲁⲡ",
+      "english": "And thou shalt not spare a poor man in judgment.",
+      "source": "02_Exodus_23",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁ **ⲛⲁ**ⲛ ⲛⲁⲅⲁⲡⲏ ‧ ⲡϫⲟⲉⲓⲥ : ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⁝",
+      "english": "Have mercy on us in love, O Lord, Jesus Christ!",
+      "source": "Amulet by Frange for the protection of the monastery's monks and animals",
+      "urn": "urn:cts:copticMag:kyprianos.ocrum_st_18.kypt344",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1448,
+        37.216
+      ],
+      [
+        "ϥ",
+        15378,
+        31.366
+      ],
+      [
+        "ϫⲉ",
+        10540,
+        31.355
+      ],
+      [
+        "ⲩ",
+        10038,
+        30.807
+      ],
+      [
+        "ⲕ",
+        7840,
+        30.781
+      ],
+      [
+        "ⲛ",
+        15810,
+        30.773
+      ],
+      [
+        "ⲡ",
+        13237,
+        30.692
+      ],
+      [
+        "ⲟⲩ",
+        10193,
+        30.284
+      ],
+      [
+        "ϯ",
+        5760,
+        30.11
+      ],
+      [
+        "ⲁⲩⲱ",
+        7011,
+        29.192
+      ],
+      [
+        "ⲉ",
+        8042,
+        28.855
+      ],
+      [
+        "ⲥ",
+        5738,
+        28.851
+      ],
+      [
+        "ⲁⲛ",
+        3606,
+        28.695
+      ],
+      [
+        "ⲓ",
+        4657,
+        28.524
+      ],
+      [
+        "ⲙ",
+        5944,
+        28.081
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4407,
+        27.9
+      ],
+      [
+        "ⲉⲧ",
+        4633,
+        27.89
+      ],
+      [
+        ".",
+        3890,
+        27.452
+      ],
+      [
+        "ⲥⲉ",
+        2515,
+        27.09
+      ],
+      [
+        "ⲧ",
+        3989,
+        27.075
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲁ_0_node",
+          3423
+        ],
+        [
+          "ϥ_1_post_ⲛⲁ",
+          1857
+        ],
+        [
+          "ⲕ_1_post_ⲛⲁ",
+          824
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁ",
+          307
+        ],
+        [
+          "ⲥ_1_post_ⲛⲁ",
+          225
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          58
+        ],
+        [
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          28
+        ],
+        [
+          "ⲙⲱⲟⲩ_2_post_ⲧ",
+          11
+        ],
+        [
+          "ⲛⲟⲃⲓ_2_post_ⲧ",
+          9
+        ],
+        [
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          7
+        ],
+        [
+          "ⲁ_5_post_ⲉⲣ",
+          7
+        ],
+        [
+          "ⲩ_5_post_ⲉⲣ",
+          7
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          6
+        ],
+        [
+          "ⲟⲩⲣⲟ_1_post_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲟⲩ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲛⲁϩϯ_2_post_ⲧ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲥⲙⲏ_2_post_ⲧ",
+          3
+        ],
+        [
+          "ⲓ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲗⲱⲓϫⲓ_2_post_ⲧ",
+          3
+        ],
+        [
+          "ⲙⲱⲓⲧ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          3
+        ],
+        [
+          "ϭⲟⲓⲥ_1_post_ⲛⲁ",
+          3
+        ],
+        [
+          "ⲩ_1_post_ⲛⲁ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_0_node",
+          "ϥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲕ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲛ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲧ_1_post_ⲛⲁ",
+          7
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲙⲱⲟⲩ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲛⲟⲃⲓ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁϭⲛⲓ_2_post_ⲧ",
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲁϭⲛⲓ",
+          "ⲁ_5_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲁ_5_post_ⲉⲣ",
+          "ⲩ_5_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲣⲟ",
+          "ⲟⲩⲣⲟ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲟⲩ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲛⲁϩϯ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲥⲙⲏ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲓ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲛⲁ",
+          "ⲗⲱⲓϫⲓ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲱⲓⲧ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲟⲓⲥ",
+          "ϭⲟⲓⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲩ_1_post_ⲛⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_0_node",
+          9556
+        ],
+        [
+          "ϥ_1_post_ⲛⲁ",
+          2970
+        ],
+        [
+          "ⲩ_1_post_ⲛⲁ",
+          1815
+        ],
+        [
+          "ⲓ_1_post_ⲛⲁ",
+          1793
+        ],
+        [
+          "ⲕ_1_post_ⲛⲁ",
+          1275
+        ],
+        [
+          "ⲛ_1_post_ⲛⲁ",
+          664
+        ],
+        [
+          "ⲥ_1_post_ⲛⲁ",
+          445
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲁ",
+          64
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁ",
+          47
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲁ",
+          28
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          18
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲁ",
+          6
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          5
+        ],
+        [
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          5
+        ],
+        [
+          "ⲁⲅⲁⲡⲏ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲑⲁⲃ_1_post_ⲛⲁ",
+          5
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉ",
+          4
+        ],
+        [
+          "ⲧ_2_post_ⲙⲉ",
+          4
+        ],
+        [
+          "ⲙⲉ_1_post_ⲛⲁ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_0_node",
+          "ϥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲩ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲓ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲕ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲛ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲥ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲁ",
+          "ⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲁ",
+          "ⲟⲩ_1_pre_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲅⲁⲡⲏ",
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲁⲅⲁⲡⲏ",
+          "ⲁⲅⲁⲡⲏ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲑⲁⲃ_1_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_0_node",
+          "ⲙⲛ_2_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲉ",
+          "ⲧ_2_post_ⲙⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲉ",
+          "ⲙⲉ_1_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 190.22,
+      "rank": 9,
+      "count": 30191
+    },
+    "B": {
+      "rate": 149.45,
+      "rank": 14,
+      "count": 12685
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2359",
+      "label": "ϣⲡⲛⲁ",
+      "pos": "V",
+      "gloss": "receive charity"
+    },
+    {
+      "target": "C2366",
+      "label": "ϫⲓⲛⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "pity, act of pitying"
+    },
+    {
+      "target": "C2370",
+      "label": "ϯⲙⲉⲧⲛⲁϩⲏⲧ",
+      "pos": "V",
+      "gloss": "give charity"
+    },
+    {
+      "target": "C2360",
+      "label": "ⲁⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pitiless"
+    },
+    {
+      "target": "C2362",
+      "label": "ⲙⲛⲧⲁⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pitilessness"
+    },
+    {
+      "target": "C2363",
+      "label": "ⲙⲛⲧⲛⲁ",
+      "pos": "N",
+      "gloss": "pity, charity, alms"
+    },
+    {
+      "target": "C2368",
+      "label": "ⲙⲛⲧⲛⲁⲏⲧ",
+      "pos": "N",
+      "gloss": "pity, charity"
+    },
+    {
+      "target": "C2357",
+      "label": "ⲛⲁ",
+      "pos": "N",
+      "gloss": "pity, charity"
+    },
+    {
+      "target": "C2367",
+      "label": "ⲛⲁⲏⲧ",
+      "pos": "N",
+      "gloss": "pitiful of heart, compassionate"
+    },
+    {
+      "target": "C2361",
+      "label": "ⲣⲁⲧⲛⲁ",
+      "pos": "V",
+      "gloss": "be pitiless"
+    },
+    {
+      "target": "C2365",
+      "label": "ⲣⲉϥⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "charitable person"
+    },
+    {
+      "target": "C2364",
+      "label": "ⲣⲉⲙⲛⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "charitable person"
+    },
+    {
+      "target": "C2369",
+      "label": "ⲣⲙⲛⲧⲛⲁⲏⲧ",
+      "pos": "V",
+      "gloss": "do charity, have pity"
+    },
+    {
+      "target": "C2358",
+      "label": "ⲣⲡⲛⲁ",
+      "pos": "V",
+      "gloss": "do charity, kindness"
+    }
+  ],
+  "etym": {
+    "egy_num": "80340",
+    "egy_lemma": "nꜥi̯",
+    "demo_num": "d3069",
+    "demo_lemma": "nꜥ",
+    "english": "to be mild; to pity",
+    "german": "gütig sein; mitleidig sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/80340",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3069"
+  }
+}

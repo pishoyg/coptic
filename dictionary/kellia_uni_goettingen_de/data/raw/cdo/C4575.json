@@ -1,0 +1,50 @@
+{
+  "id": "C4575",
+  "forms": [
+    {
+      "id": "CF11107",
+      "orth": "ϩⲛⲟⲩⲧⲥⲁⲛⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5164",
+      "bibliography": "CD 435b; ChLCS 61b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4577",
+      "label": "ⲙⲁⲓⲧⲥⲁⲛⲟ",
+      "pos": "N",
+      "gloss": "adornment-loving"
+    },
+    {
+      "target": "C4576",
+      "label": "ⲡⲣⲟⲥⲟⲩⲧⲥⲁⲛⲟ",
+      "pos": "ADV",
+      "gloss": "properly"
+    },
+    {
+      "target": "C4573",
+      "label": "ⲧⲥⲁⲛⲟ",
+      "pos": "V",
+      "gloss": "adorn, set in order, provide"
+    },
+    {
+      "target": "C4574",
+      "label": "ⲧⲥⲁⲛⲟ",
+      "pos": "N",
+      "gloss": "propriety"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "C7520",
+  "forms": [
+    {
+      "id": "CF17099",
+      "orth": "ϫⲁⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16738,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϫⲁⲁϫⲉ",
+      "dialect": "A",
+      "id": "2497.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8338",
+      "bibliography": "CD 799b; KoptHWb 442; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲥⲁⲃⲉ ⲉⲓⲁⲁⲧⲥ ⲉⲃⲟⲗ ⲉⲛⲉⲥ**ϫⲁϫⲉ** ·",
+      "english": "Who didst teach it to escape from its enemy",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁⲩⲥⲟⲟⲩⲧⲛ ⲙⲛⲡⲉⲧⲥⲟⲩⲧⲱⲛ ⲉⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ · ⲉⲧⲃⲉⲡⲁⲓ ⲁϥⲁⲁⲩ ⲛⲁⲡⲉ ⲉϫⲛⲛⲉⲩ**ϫⲁϫⲉ** ·",
+      "english": "but they were upright before Him that is upright, that is to say, God; and for this reason He made them chiefs over their enemies.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲛⲁⲙⲉⲣⲁⲧⲉ ϫⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲙⲏϩ ⲛⲕⲱϩ ϩⲓⲡⲑⲟⲛⲟⲥ ϩⲓⲁⲡⲓⲥⲧⲓⲁ · ⲥⲉⲟ ⲛϫⲁϫⲉ ⲉⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ · ⲣⲟⲉⲓⲥ ϭⲉ ⲉⲣⲱⲧⲛ ⲉⲛⲉⲧⲟ ⲛ**ϫⲁϫⲉ** ⲉⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ·",
+      "english": "For we know, O my beloved, that all those who are filled with envy, and ill-will, and unbelief, are the enemies of righteousness; take good heed to yourselves, therefore, that ye may not become the enemies of righteousness.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲱⲟ",
+        1,
+        15.843
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        5.967
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        5.032
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        4.347
+      ],
+      [
+        "ϯ",
+        1,
+        2.761
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        2.231
+      ],
+      [
+        "ⲩ",
+        1,
+        1.055
+      ],
+      [
+        "ⲛ",
+        1,
+        -0.946
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ϫⲁⲁϫⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁⲁϫⲉ",
+          "ϫⲁⲁϫⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.17,
+      "rank": 1873,
+      "count": 27
+    }
+  }
+}

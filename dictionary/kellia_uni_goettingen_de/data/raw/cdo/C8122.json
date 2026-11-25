@@ -1,0 +1,146 @@
+{
+  "id": "C8122",
+  "forms": [
+    {
+      "id": "CF18490",
+      "orth": "ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18491",
+      "orth": "ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8091,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9123",
+      "bibliography": "DDGLC",
+      "cu_ID": "1231"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲛⲓⲧⲉⲗⲓⲟⲥ ⲇⲉ ⲧⲉϩⲣⲉ ⲉⲧϫⲟⲟⲣ . ⲛⲁⲓ ⲉⲧⲃⲉⲧϩⲉⲝⲓⲥ ⲉⲟⲩⲛⲧⲁⲩ ⲙⲙⲁⲩ ⲛⲛⲉⲩ**ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ** ⲉⲩⲅⲩⲙⲛⲁⲍⲉ ⲉⲇⲓⲁⲕⲣⲓⲛⲉ ⲛⲧⲙⲏ ⲧⲉ ⲙⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲙⲛⲡⲡⲉⲧϩⲟⲟⲩ .",
+      "english": "But solid food is for those who are full grown, who by reason of use have their senses exercised to discern good and evil.",
+      "source": "58_Hebrews_5",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ⲱ ⲛⲁⲕⲣⲱⲁⲧⲏⲥ . ⲟⲩⲱϣⲥ ⲉⲃⲟⲗ ⲛⲛⲉⲧⲛ**ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ** ⲛⲧⲉⲧⲛϫⲓⲥⲙⲏ ϩⲛⲟⲩⲉⲍⲉⲭⲓⲁ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲅⲩⲙⲛⲁⲍⲉ",
+        1,
+        17.013
+      ],
+      [
+        "ϫⲓⲥⲙⲏ",
+        1,
+        14.511
+      ],
+      [
+        "ⲟⲩⲱϣⲥ",
+        1,
+        13.028
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        9.33
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        7.973
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        7.448
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ",
+          "ⲁⲓⲥⲑⲏⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7646,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2895",
+    "grl_lemma": "αἰσθητήριον",
+    "grl_meaning": "sense, sense-organ",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 42b"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C4998",
+  "forms": [
+    {
+      "id": "CF11961",
+      "orth": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5626",
+      "bibliography": "CD 478a; KoptHWb 270; ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5000",
+      "label": "ϩⲛ ⲟⲩⲟⲩⲱⲗⲥ",
+      "pos": "ADV",
+      "gloss": "discouragingly"
+    },
+    {
+      "target": "C4996",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "V",
+      "gloss": "lean, be bent, be confounded; bend, humiliate"
+    },
+    {
+      "target": "C4997",
+      "label": "ⲟⲩⲱⲗⲥ",
+      "pos": "N",
+      "gloss": "humiliation"
+    },
+    {
+      "target": "C4999",
+      "label": "ⲟⲩⲱⲗⲥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "humiliation"
+    }
+  ]
+}

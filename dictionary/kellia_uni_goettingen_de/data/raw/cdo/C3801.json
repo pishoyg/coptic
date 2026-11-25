@@ -1,0 +1,457 @@
+{
+  "id": "C3801",
+  "forms": [
+    {
+      "id": "CF9527",
+      "orth": "ⲥⲟⲧⲃⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 3008,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ⲥⲁⲧⲃⲉϥ",
+      "dialect": "S",
+      "id": "1499.1"
+    },
+    {
+      "orth": "ⲥⲟⲧϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1987,
+        "count": 31
+      }
+    },
+    {
+      "orth": "ⲥⲟⲧϩϥ",
+      "dialect": "S",
+      "id": "1499.3"
+    },
+    {
+      "orth": "ⲥⲟⲑⲛⲉϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1077,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ⲥⲁⲧⲃⲉϥ",
+      "dialect": "A",
+      "id": "1499.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4314",
+      "bibliography": "CD 363b; CED 165; KoptHWb 200, 541; DELC 198-99; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲛⲉϩⲟⲟⲩ ⲇⲉ ⲛⲧⲁⲥⲟⲗⲟⲙⲱⲛ ⲕⲱⲧ ⲙⲡⲣⲡⲉ ⲙⲡϫⲟⲉⲓⲥ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ · ⲉⲛⲉϥⲥⲏϩ ⲅⲁⲣ ⲛⲧⲉⲓϩⲉ ϫⲉⲙⲡⲟⲩⲥⲱⲧⲙ ⲉϩⲣⲟⲟⲩ ⲛϩⲏⲧϥ · ⲟⲩⲇⲉ ⲕⲉⲗⲉⲃⲓⲛ · ⲟⲩⲇⲉ **ⲥⲟⲧⲃⲉϥ** ⲙⲡⲉⲛⲓⲡⲉ ·",
+      "english": "Now it is written that (as no sound was heard at the creation), so in the days in which Solomon was building the temple of God in Jerusalem, there was no sound heard therein, neither the sound of an axe, nor that of an iron hammer.'",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲧⲁⲩⲟⲥ ⲉϩⲣⲁⲓ ϩⲛⲟⲩⲕⲉⲗⲉⲃⲓⲛ ⲙⲛⲟⲩ**ⲥⲟⲧⲃⲉϥ** ϩⲓⲟⲩⲥⲟⲡ",
+      "english": "they cut down its doors at once with axes as in a wood of trees; they have broken it down with hatchet and stone cutter.",
+      "source": "Psalms 73",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:73",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲛⲁϣⲱⲡⲉ ⲉⲣϣⲁⲛϩⲧⲟⲟⲩⲉ ϣⲱⲡⲉ ⲛⲧⲉⲡⲣⲏ ⲉⲓ ⲉⲃⲟⲗ ⲉϫⲙⲡⲕⲁϩ ⲙⲁⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲱⲧⲛ ϫⲓ ⲛⲛⲉϥ**ⲥⲟⲧⲃⲉϥ** ⲙⲙⲓϣⲉ ⲛⲧⲉⲧⲛⲉⲓ ⲉⲃⲟⲗ ⲣⲱⲙⲉ ⲛⲓⲙ ⲉⲧϭⲙϭⲟⲙ ⲡⲃⲟⲗ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲧⲉⲧⲛⲕⲁⲟⲩⲁ ϩⲓϩⲏ ⲙⲙⲱⲧⲛ ϩⲱⲥ ⲉⲧⲉⲧⲛⲁⲛⲁⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲧⲥⲱϣⲉ ⲉⲣⲁⲧϥ ⲙⲡϣⲟⲣⲡ ⲙⲙⲁⲛⲣⲟⲉⲓⲥ ⲛⲛϣⲏⲣⲉ ⲛⲛⲁⲥⲥⲟⲩⲣ ⲁⲩⲱ ⲛⲉⲧⲛⲁⲃⲱⲕ",
+      "english": "And so soon as the morning shall appear, and the sun shall come forth upon the earth, take ye every one his weapons, and go forth every valiant man out of the city, and set ye a captain over them, as though ye would go down into the field toward the watch of the Assyrians; but go not down.",
+      "source": "Judith 14",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉⲗⲕⲟⲩ",
+        1,
+        16.691
+      ],
+      [
+        "ⲉⲡⲓⲇⲏ",
+        1,
+        15.691
+      ],
+      [
+        "ⲕⲉⲗⲉⲃⲓⲛ",
+        2,
+        15.299
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        5,
+        15.165
+      ],
+      [
+        "ⲙⲡⲟⲩ",
+        1,
+        14.106
+      ],
+      [
+        "ⲡⲉⲛⲓⲡⲉ",
+        2,
+        13.387
+      ],
+      [
+        "ϩⲁⲙϣⲉ",
+        1,
+        12.884
+      ],
+      [
+        "ⲃⲉⲛⲓⲡⲉ",
+        1,
+        12.369
+      ],
+      [
+        "ⲣⲙⲛⲛⲟⲩⲧⲉ",
+        1,
+        12.299
+      ],
+      [
+        "ⲙ",
+        12,
+        12.199
+      ],
+      [
+        "ⲙⲉⲣⲉϩ",
+        1,
+        11.991
+      ],
+      [
+        "ⲛ",
+        16,
+        11.902
+      ],
+      [
+        "ϫⲱⲱⲗⲉ",
+        1,
+        11.833
+      ],
+      [
+        "ⲣϩⲱⲃ",
+        2,
+        11.462
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        2,
+        11.137
+      ],
+      [
+        "ⲙⲟⲩⲛⲅ",
+        1,
+        10.91
+      ],
+      [
+        "ⲧⲱⲙ",
+        1,
+        10.604
+      ],
+      [
+        "ⲟⲩⲟϫ",
+        1,
+        10.248
+      ],
+      [
+        "ϩⲁⲣⲙⲁ",
+        1,
+        10.183
+      ],
+      [
+        "ⲛⲉϥ",
+        3,
+        9.645
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          14
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲧⲃⲉϥ",
+          6
+        ],
+        [
+          "ⲙⲓϣⲉ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲡⲉⲛⲓⲡⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲧⲃⲉϥ",
+          3
+        ],
+        [
+          "ⲃⲉⲛⲓⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          2
+        ],
+        [
+          "ⲣϩⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          "ⲙ_1_post_ⲥⲟⲧⲃⲉϥ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲙⲓϣⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲡⲉⲛⲓⲡⲉ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          "ⲛ_1_post_ⲥⲟⲧⲃⲉϥ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲃⲉⲛⲓⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲛⲉϥ_3_post_ϩⲁⲣⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲁⲣⲙⲁ",
+          "ϩⲁⲣⲙⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲡⲉϥ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲣϩⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲟⲩ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_3_post_ⲡ",
+          "ⲉⲧⲉ_1_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲛⲉⲩ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲕⲉ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2574,
+      "count": 15
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3800",
+      "type": "cf",
+      "label": "tool, utensil, weapon"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3804",
+      "label": "ϩⲓⲥⲟⲑⲛⲉϥ",
+      "pos": "N",
+      "gloss": "cast darts, shoot arrows"
+    },
+    {
+      "target": "C3805",
+      "label": "ⲙⲟⲕⲓ ⲛⲭⲁⲥⲟⲑⲛⲉϥ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3803",
+      "label": "ⲥⲟⲑⲛⲉϥ ⲛϯ",
+      "pos": "N",
+      "gloss": "weapon for fighting"
+    },
+    {
+      "target": "C3802",
+      "label": "ⲥⲟⲧⲃⲉϥ ⲙⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "weapon for fighting"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5734",
+    "demo_lemma": "stbḥ=f",
+    "english": "equipment",
+    "german": "Waffe",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5734"
+  }
+}

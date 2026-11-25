@@ -1,0 +1,89 @@
+{
+  "id": "C8727",
+  "forms": [
+    {
+      "id": "CF20824",
+      "orth": "ⲇⲏⲛⲁⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20825",
+      "orth": "ⲇⲏⲛⲁⲣⲓⲟⲛ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10392",
+      "bibliography": "DDGLC",
+      "cu_ID": "840"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲁⲥϯ",
+        1,
+        13.252
+      ],
+      [
+        "ⲃ",
+        1,
+        10.709
+      ],
+      [
+        "ⲉⲛ",
+        1,
+        10.133
+      ],
+      [
+        "ⲁ",
+        2,
+        7.989
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲇⲏⲛⲁⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲃ_1_post_ⲇⲏⲛⲁⲣⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲏⲛⲁⲣⲓⲟⲛ_0_node",
+          "ⲃ_1_post_ⲇⲏⲛⲁⲣⲓⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "grl_ID": "2679",
+    "grl_lemma": "δηνάριον",
+    "grl_meaning": "denarius (Roman silver coin)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 388a"
+  }
+}

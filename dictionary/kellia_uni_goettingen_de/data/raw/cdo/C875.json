@@ -1,0 +1,58 @@
+{
+  "id": "C875",
+  "forms": [
+    {
+      "id": "CF3092",
+      "orth": "ⲉⲓⲁⲧⲟⲟⲧ⸗ ⲛⲥⲁ-",
+      "dialect": "S",
+      "oRef": "ⲉⲓⲁ ⲧⲟⲟⲧ⸗ ⲛⲥⲁ-"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲧⲟⲟⲧ⸗ ⲛⲥⲁ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1027",
+      "bibliography": "CD 75b; KoptHWb 48; ChLCS 13a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12117",
+      "label": "ⲁⲑⲓⲱⲟⲩ",
+      "pos": "VSTAT",
+      "gloss": "be unwashed, filthy, dirty"
+    },
+    {
+      "target": "C871",
+      "label": "ⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "wash"
+    },
+    {
+      "target": "C872",
+      "label": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "wash"
+    },
+    {
+      "target": "C873",
+      "label": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "washing"
+    },
+    {
+      "target": "C874",
+      "label": "ⲣⲉϥⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "washer (in baths)"
+    }
+  ]
+}

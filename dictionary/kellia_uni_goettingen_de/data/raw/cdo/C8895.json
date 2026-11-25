@@ -1,0 +1,264 @@
+{
+  "id": "C8895",
+  "forms": [
+    {
+      "id": "CF21648",
+      "orth": "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21649",
+      "orth": "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21650",
+      "orth": "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4717,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF21651",
+      "orth": "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF21652",
+      "orth": "ⲉⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8873,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21653",
+      "orth": "ⲉⲕⲗⲏⲥⲓⲥⲁⲥⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21654",
+      "orth": "ⲉⲕⲗⲩⲥⲓⲁⲥⲧⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10771",
+      "bibliography": "DDGLC",
+      "cu_ID": "813"
+    },
+    {
+      "id": "CS10772",
+      "bibliography": "DDGLC",
+      "cu_ID": "4134"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲡ**ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ** ⲁⲓⲣⲣⲣⲟ ⲉϫⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "I the Preacher was king over Israel in Jerusalem.",
+      "source": "Ecclesiastes 1",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ** ⲁϥϣⲓⲛⲉ ⲛⲥⲁϩⲉⲛⲣⲟⲙⲡⲉ ⲉⲛⲁϣⲱⲟⲩ ⲉⲧⲣⲉϥϩⲉ ⲉⲛϣⲁϫⲉ ⲙⲡⲟⲩⲱϣ ⲁⲩⲱ ⲡⲁⲡⲥⲟⲟⲩⲧⲛ ⲉⲧⲥⲏϩ ⲉϩⲉⲛϣⲁϫⲉ ⲛⲧⲙⲉ",
+      "english": "The Preacher sought diligently to find out acceptable words, and a correct writing, even words of truth.",
+      "source": "Ecclesiastes 12",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲛⲉ ⲛϣⲁϫⲉ ⲙⲡ**ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ** ⲡϣⲏⲣⲉ ⲛⲇⲁⲩⲉⲓⲇ ⲉⲁϥⲣⲣⲣⲟ ⲉϫⲙⲙⲡⲓⲥⲣⲁⲏⲗ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+      "english": "The words of the Preacher, the son of David, king of Israel in Jerusalem.",
+      "source": "Ecclesiastes 1",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲧϣⲟⲩⲉⲓⲧ",
+        3,
+        16.229
+      ],
+      [
+        "ⲣⲥⲟⲫⲟⲥ",
+        1,
+        14.313
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        3,
+        11.961
+      ],
+      [
+        "ⲡⲁⲣⲁⲃⲟⲗⲏ",
+        1,
+        10.926
+      ],
+      [
+        "ⲁ",
+        7,
+        10.881
+      ],
+      [
+        "ⲣⲣⲣⲟ",
+        1,
+        10.489
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        2,
+        10.429
+      ],
+      [
+        "ϩⲁⲏ",
+        1,
+        10.384
+      ],
+      [
+        "ⲡ",
+        7,
+        10.334
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        9.313
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        8.182
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        7.87
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.622
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        7.502
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        7.175
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        6.927
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.653
+      ],
+      [
+        "ⲛ",
+        3,
+        5.979
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        5.886
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+          5
+        ],
+        [
+          "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ_0_node",
+          6
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+          "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ_0_node",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲉⲕⲕⲗⲏⲥⲓⲁⲥⲧⲏⲥ",
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          "ⲇⲁⲩⲉⲓⲇ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4302,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "637",
+    "grl_lemma": "ἐκκλησιαστής",
+    "grl_meaning": "member of an assembly; the Biblical book\n    \"Ecclesiastes\"",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 509a"
+  }
+}

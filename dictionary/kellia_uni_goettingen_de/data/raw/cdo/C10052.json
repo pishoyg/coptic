@@ -1,0 +1,89 @@
+{
+  "id": "C10052",
+  "forms": [
+    {
+      "id": "CF26349",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF26350",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13211",
+      "bibliography": "DDGLC",
+      "cu_ID": "3115"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲁⲧⲉⲛ",
+        1,
+        11.51
+      ],
+      [
+        "ⲓⲱⲧ",
+        1,
+        9.767
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.489
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        9.054
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲧⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "1653",
+    "grl_lemma": "παράκλητος",
+    "grl_meaning": "advocate, intercessor, Paraclete",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1313a"
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "id": "C9027",
+  "forms": [
+    {
+      "id": "CF22285",
+      "orth": "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22286",
+      "orth": "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22287",
+      "orth": "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF22288",
+      "orth": "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3713,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF22289",
+      "orth": "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4471,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11096",
+      "bibliography": "DDGLC",
+      "cu_ID": "530"
+    },
+    {
+      "id": "CS11097",
+      "bibliography": "DDGLC",
+      "cu_ID": "5974"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲓⲱⲁⲛⲛⲁ ⲧⲥϩⲓⲙⲓ ⲛⲭⲟⲩⲍⲁ ⲡⲓ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** ⲛⲧⲉⲏⲣⲱⲇⲏⲥ ⲛⲉⲙⲥⲟⲩⲥⲁⲛⲛⲁ ⲛⲉⲙϩⲁⲛⲕⲉⲭⲱⲟⲩⲛⲓ ⲉⲩⲟϣ ⲛⲏ ⲉⲛⲁⲩϣⲉⲙϣⲓ ⲙⲙⲟϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩϩⲩⲡⲁⲣⲭⲟⲛⲧⲁ .",
+      "english": "and Joanna, the wife of Chuzas, Herod's steward; Susanna; and many others; who served them from their possessions.",
+      "source": "03_Luke_08",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ϩⲱⲱϥ ⲡⲉ ⲡⲉⲓ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** ·",
+      "english": "Who is this Governor?",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁ ⲣⲟⲩϩⲓ ⲇⲉ ϣⲱⲡⲓ ⲡⲉϫⲉ ⲡϭⲟⲓⲥ ⲙⲡⲓⲁϩⲁⲗⲟⲗⲓ ⲙⲡⲉϥ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** ϫⲉⲙⲟⲩϯ ⲉⲛⲓⲉⲣⲅⲁⲧⲏⲥ ⲙⲁ ⲡⲟⲩⲃⲉⲭⲉ ⲛⲱⲟⲩ ⲉⲁⲕⲉⲣϩⲏ ⲧⲥ ⲓⲥϫⲉⲛ ⲛⲓϧⲁⲉⲩ ϣⲁⲛⲓϩⲟⲩⲁϯ .",
+      "english": "When evening had come, the lord of the vineyard said to his manager, 'Call the laborers and pay them their wages, beginning from the last to the first.'",
+      "source": "01_Matthew_20",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϥϣⲟⲟⲡ ϩⲁϩⲉⲛ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** . ⲙⲛϩⲉⲛⲟⲓⲕⲟⲛⲟⲙⲟⲥ ϣⲁⲧⲉ ⲡⲣⲟⲑⲉⲥⲙⲓⲁ ⲙⲡⲉⲓⲱⲧ",
+      "english": "but is under guardians and stewards until the day appointed by the father.",
+      "source": "48_Galatians_4",
+      "urn": "urn:cts:copticLit:nt.gal.sahidica:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁϥⲭⲏ ϧⲁϩⲁⲛ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** ⲛⲉⲙϩⲁⲛⲟⲓⲕⲟⲛⲟⲙⲟⲥ ϣⲁϯⲛⲉⲓ ⲛⲧⲉⲡⲉϥⲉⲓⲱⲧ",
+      "english": "but is under guardians and stewards until the day appointed by the father.",
+      "source": "09_Galathians_04",
+      "urn": "urn:cts:copticLit:nt.gal.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲙⲓⲱϩⲁⲛⲛⲁ ⲧϩⲓⲙⲉ ⲛⲭⲟⲩⲍⲁ ⲡ**ⲉⲡⲓⲧⲣⲟⲡⲟⲥ** ⲛϩⲏⲣⲱⲇⲏⲥ ⲛⲙⲥⲟⲩⲥⲁⲛⲛⲁ ⲁⲩⲱ ϩⲉⲛⲕⲟⲟⲩⲉ ⲉⲛⲁϣⲱⲟⲩ ⲛⲁⲓ ⲉⲛⲉⲩⲇⲓⲁⲕⲟⲛⲉⲓ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩϩⲩⲡⲁⲣⲭⲟⲛⲧⲁ .",
+      "english": "and Joanna, the wife of Chuzas, Herod's steward; Susanna; and many others; who served them from their possessions.",
+      "source": "42_Luke_8",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲟⲩⲍⲁ",
+        1,
+        18.11
+      ],
+      [
+        "ⲁϩⲁⲗⲟⲗⲓ",
+        1,
+        15.11
+      ],
+      [
+        "ⲥⲟⲩⲥⲁⲛⲛⲁ",
+        1,
+        14.303
+      ],
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+        1,
+        13.788
+      ],
+      [
+        "ⲏⲣⲱⲇⲏⲥ",
+        1,
+        12.277
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        1,
+        8.889
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        1,
+        8.777
+      ],
+      [
+        "ϩⲁⲛ",
+        2,
+        8.728
+      ],
+      [
+        "ⲭⲏ",
+        1,
+        8.293
+      ],
+      [
+        "ϧⲁ",
+        1,
+        8.268
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        7.658
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.081
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.455
+      ],
+      [
+        "ⲓ",
+        1,
+        4.991
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.552
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        4.481
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲙ",
+        1,
+        3.998
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ]
+    ],
+    "S": [
+      [
+        "ⲭⲟⲩⲍⲁ",
+        1,
+        17.428
+      ],
+      [
+        "ⲉⲗⲟⲟⲗⲉ",
+        2,
+        12.583
+      ],
+      [
+        "ⲥⲟⲩⲥⲁⲛⲛⲁ",
+        1,
+        12.219
+      ],
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+        1,
+        12.106
+      ],
+      [
+        "ϩⲏⲣⲱⲇⲏⲥ",
+        1,
+        11.57
+      ],
+      [
+        "ϩⲓⲙⲉ",
+        1,
+        11.341
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        2,
+        10.428
+      ],
+      [
+        "ⲁⲙⲟⲩ",
+        1,
+        9.993
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        9.681
+      ],
+      [
+        "ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+        1,
+        9.278
+      ],
+      [
+        "ϫⲉ",
+        4,
+        8.976
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        8.946
+      ],
+      [
+        "ⲛⲙ",
+        1,
+        8.728
+      ],
+      [
+        "ⲙⲓⲭⲁⲏⲗ",
+        1,
+        8.367
+      ],
+      [
+        "ϥ",
+        5,
+        8.317
+      ],
+      [
+        "ϫⲱ",
+        2,
+        8.235
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        8.093
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        7.904
+      ],
+      [
+        "ⲛ",
+        5,
+        7.605
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        7.29
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ϩⲁⲛ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲟⲓⲕⲟⲛⲟⲙⲟⲥ",
+          "ⲟⲓⲕⲟⲛⲟⲙⲟⲥ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲓⲧⲣⲟⲡⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲉⲡⲓⲧⲣⲟⲡⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3337,
+      "count": 9
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4001,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "779",
+    "grl_lemma": "ἐπίτροπος",
+    "grl_meaning": "steward, trustee, administrator",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 669a; Preisigke 1:584"
+  }
+}

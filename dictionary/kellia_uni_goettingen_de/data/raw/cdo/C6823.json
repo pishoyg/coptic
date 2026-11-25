@@ -1,0 +1,154 @@
+{
+  "id": "C6823",
+  "forms": [
+    {
+      "id": "CF15695",
+      "orth": "ϩⲣⲟⲩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17997,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7538",
+      "bibliography": "CD 705b; CED 295; KoptHWb 389; ChLCS 94b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲩϫⲓⲥⲉ ⲙⲙⲟⲟⲩ ⲉⲩϫⲉ ⲙⲛⲧ**ϩⲣⲟⲩⲟ** ⲁⲩⲱ ⲉⲩⲉⲓⲣⲉ ⲛϩⲉⲛⲁⲛⲟⲙⲓⲁ ⲙⲡⲁⲙⲧⲟ ⲉⲃⲟⲗ ⲁⲓϥⲓⲧⲟⲩ ⲙⲙⲁⲩ ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲓⲛⲁⲩ ⲉⲣⲟⲟⲩ",
+      "english": "And they boasted, and wrought iniquities before me: so I cut them off as I saw fit.",
+      "source": "Ezekiel 16",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        9.808
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲣⲟⲩⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17617,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6821",
+      "label": "ϥⲓϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "raise voice"
+    },
+    {
+      "target": "C6815",
+      "label": "ϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voice, sound"
+    },
+    {
+      "target": "C12091",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C12092",
+      "label": "ϩⲣⲟⲩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "thunder"
+    },
+    {
+      "target": "C6822",
+      "label": "ϩⲣⲟⲩⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "voice of sky, thunder"
+    },
+    {
+      "target": "C6820",
+      "label": "ϯϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give, utter voice"
+    },
+    {
+      "target": "C6816",
+      "label": "ⲁⲧϩⲣⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "voiceless"
+    },
+    {
+      "target": "C6817",
+      "label": "ⲛⲟⲩϫⲉϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "allow a cry (\"throw voice\")"
+    },
+    {
+      "target": "C6818",
+      "label": "ⲣϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "make noise"
+    },
+    {
+      "target": "C6819",
+      "label": "ⲥⲉⲕϩⲣⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw sound, snort"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C11091",
+  "forms": [
+    {
+      "id": "CF30599",
+      "orth": "ϩⲉⲙⲏⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30600",
+      "orth": "ϩⲉⲙⲏⲣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30601",
+      "orth": "ϩⲏⲙⲉⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20860,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30602",
+      "orth": "ⲑⲩⲙⲉⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15517",
+      "bibliography": "DDGLC",
+      "cu_ID": "3896"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "887",
+    "grl_lemma": "ἡμέρα",
+    "grl_meaning": "day",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 770b; Preisigke 1:655"
+  }
+}

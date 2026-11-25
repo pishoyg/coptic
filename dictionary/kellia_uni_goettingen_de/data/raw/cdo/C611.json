@@ -1,0 +1,119 @@
+{
+  "id": "C611",
+  "forms": [
+    {
+      "id": "CF2281",
+      "orth": "ϣⲗⲱⲙⲃⲏϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9731,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS730",
+      "bibliography": "CD 48b; KoptHWb 30"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲡⲓ**ϣⲗⲱⲙⲃⲏϫ** ⲛⲉⲙϩⲓⲡ",
+      "english": "and the night-raven and the cormorant and the stork,",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲟⲣⲫⲩⲣⲱⲛⲁ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲟⲩⲗⲁϫ",
+        1,
+        18.11
+      ],
+      [
+        "ϩⲓⲡ",
+        1,
+        16.236
+      ],
+      [
+        "ⲛⲉⲙ",
+        4,
+        12.243
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ϣⲗⲱⲙⲃⲏϫ",
+          1
+        ],
+        [
+          "ϣⲗⲱⲙⲃⲏϫ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲓⲡ",
+          1
+        ],
+        [
+          "ϩⲓⲡ_1_post_ϣⲗⲱⲙⲃⲏϫ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ϣⲗⲱⲙⲃⲏϫ",
+          "ϣⲗⲱⲙⲃⲏϫ_0_node",
+          1
+        ],
+        [
+          "ϣⲗⲱⲙⲃⲏϫ_0_node",
+          "ⲛⲉⲙ_2_post_ϩⲓⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϩⲓⲡ",
+          "ϩⲓⲡ_1_post_ϣⲗⲱⲙⲃⲏϫ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9191,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C610",
+      "label": "ⲃⲏϭ",
+      "pos": "N",
+      "gloss": "falcon"
+    }
+  ]
+}

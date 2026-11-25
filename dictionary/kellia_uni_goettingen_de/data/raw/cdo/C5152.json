@@ -1,0 +1,58 @@
+{
+  "id": "C5152",
+  "forms": [
+    {
+      "id": "CF12270",
+      "orth": "ⲥⲓⲙⲟⲩⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5785",
+      "bibliography": "CD 334a; KoptHWb 276"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3525",
+      "type": "cf",
+      "label": "grass, fodder, herbs"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5153",
+      "label": "ⲁⲡⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "bald man"
+    },
+    {
+      "target": "C5150",
+      "label": "ⲙⲛⲧⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "baldness"
+    },
+    {
+      "target": "C5151",
+      "label": "ⲙⲛⲧⲟⲩⲥⲏ",
+      "pos": "N",
+      "gloss": "cauterized/cicatrized wound"
+    },
+    {
+      "target": "C5149",
+      "label": "ⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "bald person"
+    }
+  ]
+}

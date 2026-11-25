@@ -1,0 +1,77 @@
+{
+  "id": "C3552",
+  "forms": [
+    {
+      "id": "CF9008",
+      "orth": "ⲥⲟⲙⲥ (ⲉⲃⲟⲗ)",
+      "dialect": "B"
+    },
+    {
+      "id": "CF9009",
+      "orth": "ⲥⲟⲙⲥ (ⲉⲃⲟⲗ)",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4045",
+      "bibliography": "CD 340a; KoptHWb 187"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϣⲁⲥⲟⲙⲥ ⲅⲁⲣ ⲛⲧⲉⲡⲓⲥⲱⲛⲧ **ⲁϥⲥⲟⲙⲥ **ⲉⲃⲟⲗ**** ϧⲁⲧϩⲏ ⲙⲡⲓϭⲱⲣⲡ ⲉⲃⲟⲗ ⲛⲧⲉⲛⲓϣⲏⲣⲓ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "For the creation waits with eager expectation for the children of God to be revealed.",
+      "source": "06_Romans_08",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲉⲣⲉⲧⲉⲛⲥⲟⲙⲥ **ⲉⲃⲟⲗ**** ⲙⲏⲡⲱⲥ ⲟⲩⲟⲛ ⲟⲩⲁⲓ ⲉϥϣⲁⲧ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓϩⲙⲟⲧ ⲙⲏⲡⲱⲥ ⲟⲩⲟⲛ ⲟⲩⲛⲟⲩⲛⲓ ⲛϣⲁϣⲓ ⲉⲥⲣⲏⲧ ⲉⲡϣⲱⲓ ⲉⲥϯⲙⲕⲁϩ ⲟⲩⲟϩ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲥ ⲛⲧⲉⲟⲩⲙⲏϣ ϭⲱϧⲉⲙ .",
+      "english": "looking carefully lest there be any man who falls short of the grace of God; lest any root of bitterness springing up trouble you, and many be defiled by it;",
+      "source": "19_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϥⲣⲁⲥϯ ⲇⲉ ⲁⲩⲓ ⲉϧⲟⲩⲛ ⲉⲕⲉⲥⲁⲣⲓⲁ ⲕⲟⲣⲛⲏⲗⲓⲟⲥ ⲇⲉ **ⲛⲁϥⲥⲟⲙⲥ **ⲉⲃⲟⲗ**** ϧⲁϫⲱⲟⲩ ⲉⲧⲁϥⲙⲟⲩϯ ⲇⲉ ⲉⲛⲉϥⲥⲩⲅⲅⲉⲛⲏⲥ ⲛⲉⲙⲛⲉϥϣⲫⲏ ⲣⲛⲁⲛⲁⲅⲕⲉⲟⲛ .",
+      "english": "On the next day they entered into Caesarea. Cornelius was waiting for them, having called together his relatives and his near friends.",
+      "source": "05_Acts_10",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:10",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3554",
+      "label": "ϫⲓⲛⲥⲟⲙⲥ",
+      "pos": "N",
+      "gloss": "looking, look"
+    },
+    {
+      "target": "C3555",
+      "label": "ϫⲓⲛⲥⲟⲙⲥ",
+      "pos": "N",
+      "gloss": "looking, look"
+    },
+    {
+      "target": "C3551",
+      "label": "ⲥⲟⲙⲥ",
+      "pos": "V",
+      "gloss": "look, behold, consider"
+    },
+    {
+      "target": "C3553",
+      "label": "ⲥⲟⲙⲥ",
+      "pos": "N",
+      "gloss": "looking"
+    }
+  ]
+}

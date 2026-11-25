@@ -1,0 +1,756 @@
+{
+  "id": "C9306",
+  "forms": [
+    {
+      "id": "CF23358",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23362",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.82,
+        "rank": 480,
+        "count": 287
+      }
+    },
+    {
+      "id": "CF23359",
+      "orth": "ⲅⲁⲣⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5526,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF23360",
+      "orth": "ⲅⲁⲣⲡⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23361",
+      "orth": "ⲕⲁⲣⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23363",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23364",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23365",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3110,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF23366",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23367",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23368",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF23369",
+      "orth": "ⲕⲁⲣⲡⲟⲥ",
+      "dialect": "W"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11662",
+      "bibliography": "DDGLC",
+      "cu_ID": "1894"
+    },
+    {
+      "id": "CS11663",
+      "bibliography": "DDGLC",
+      "cu_ID": "6090"
+    },
+    {
+      "id": "CS11664",
+      "bibliography": "DDGLC",
+      "cu_ID": "11653"
+    },
+    {
+      "id": "CS11665",
+      "bibliography": "DDGLC",
+      "cu_ID": "1868"
+    },
+    {
+      "id": "CS11666",
+      "bibliography": "DDGLC",
+      "cu_ID": "2572"
+    },
+    {
+      "id": "CS11667",
+      "bibliography": "DDGLC",
+      "cu_ID": "3876"
+    },
+    {
+      "id": "CS11668",
+      "bibliography": "DDGLC",
+      "cu_ID": "109"
+    },
+    {
+      "id": "CS11669",
+      "bibliography": "DDGLC",
+      "cu_ID": "8799"
+    },
+    {
+      "id": "CS11670",
+      "bibliography": "DDGLC",
+      "cu_ID": "6590"
+    },
+    {
+      "id": "CS11671",
+      "bibliography": "DDGLC",
+      "cu_ID": "6107"
+    },
+    {
+      "id": "CS11672",
+      "bibliography": "DDGLC",
+      "cu_ID": "2007"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϧⲉⲛϯⲟⲩⲛⲟⲩ ⲁϥϭⲉⲛⲟⲩⲛⲓ ⲉⲃⲟⲗ ⲁϥϯⲟⲩⲱ ⲉⲡϣⲱⲓ ⲛϩⲁⲛⲃⲁⲓ ⲛⲉⲙϩⲁⲛⲥⲡⲁϯ ⲛⲃⲉⲛⲓ ⲟⲩⲟϩ ⲁⲛⲓⲣⲱⲙⲓ ⲉⲧⲉⲣϩⲱⲃ ⲟⲩⲱⲙ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉⲥ**ⲕⲁⲣⲡⲟⲥ** ⲟⲩⲟϩ ⲁϯϣⲱϯ ϣⲱⲡⲓ ⲛⲁⲧⲕⲓⲙ ϣⲁⲉϧⲟⲩⲛ ⲉⲫⲟⲟⲩ ⲛⲉϩⲟⲟⲩ .",
+      "english": "Immediately, it took hold and began to sprout, producing shoots and leaves. The workers, sustained by the fruit it bore, ate of it. From that day forward, the well remained fixed in place and has never shifted.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲟⲛϩ ⲉⲡⲉⲥ**ⲕⲁⲣⲡⲟⲥ** ·",
+      "english": "and he lived upon the fruit thereof.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲁϥϣⲱⲡⲓ ϧⲁⲧⲟⲧϥ ⲙⲡⲓϧⲉⲗⲗⲟ ⲁⲃⲃⲁ ⲍⲁⲭⲁⲣⲓⲁⲥ ⲉϥϯ ⲛⲧⲟⲧϥ ϧⲉⲛⲛⲉϥϩⲃⲏⲟⲩⲓ ⲧⲏⲣⲟⲩ ⲙⲫⲣⲏϯ ⲛⲓⲏⲥⲟⲩ ⲉϥϣⲉⲙϣⲓ ⲙⲙⲱⲩⲥⲏⲥ ⲉϥⲛⲁⲩ ⲇⲉ ⲉⲧⲡⲟⲗⲓⲧⲉⲓⲁ ⲛⲛⲓⲥⲛⲏⲟⲩ ⲉⲧϣⲟⲡ ϧⲉⲛⲡⲓⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲩⲙⲟϣⲓ ϧⲉⲛⲟⲩⲕⲱⲧ ⲛⲉⲙⲟⲩⲁⲣⲉϩ ⲉⲩⲟⲩⲟⲧⲉⲃ ⲉⲛⲟⲩⲉⲣⲏⲩ ϧⲉⲛⲧⲁⲣⲉⲧⲏ ⲙⲫⲣⲏϯ ⲛϩⲁⲛϣϣⲏⲛ ⲉⲩⲟⲡⲧ ⲛ**ⲕⲁⲣⲡⲟⲥ** .",
+      "english": "Moreover, he remained near the old man Abba Zacharias, assisting him in all his works, as Joshua had served Moses, considering the way of life of the brethren who were in the monastery, walked in rule and observance, and prevailed over each other in virtue, like trees laden with fruit.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϣ ϭⲉ ⲧⲉⲛⲟⲩ ⲛⲉ ⲛ**ⲕⲁⲣⲡⲟⲥ** ⲉⲧⲙⲙⲁⲩ",
+      "english": "Of what kind now are these fruits?",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϯⲛⲁⲁϣϥ ϧⲉⲛⲟⲩⲧⲱⲟⲩ ⲉϥϭⲟⲥⲓ ⲛⲧⲉⲡⲏⲓ ⲙⲡⲓⲥⲗ ⲟⲩⲟϩ ⲉⲓⲉⲧⲱϫϥ ⲉϥⲉϯⲟⲩⲱ ⲉϥⲉⲓⲣⲓ ⲛϩⲁⲛϫⲁⲗ ⲟⲩⲟϩ ⲉϥⲉⲓⲛⲓ ⲛⲟⲩ**ⲕⲁⲣⲡⲟⲥ** ⲉϥⲉϣⲱⲡⲓ ⲛⲟⲩⲛⲓϣϯ ⲛⲕⲉⲇⲣⲟⲥ ⲟⲩⲟϩ ⲉⲩⲉⲙⲧⲟⲛ ⲙⲙⲱⲟⲩ ϧⲁⲣⲟϥ ⲛϫⲉⲑⲏⲣⲓⲟⲛ ⲛⲓⲃⲉⲛ ⲛⲉⲙϩⲁⲗⲁϯ ⲛⲓⲃⲉⲛ ⲉⲩⲉϣⲱⲡⲓ ϧⲁⲧⲉϥϧⲏⲓⲃⲓ ⲛϫⲉⲛⲓϩⲁⲗⲁϯ ⲧⲏⲣⲟⲩ ⲛⲉϥϫⲁⲗ ⲉⲩⲉⲑⲱⲟⲩϯ ⲉϧⲟⲩⲛ .",
+      "english": "and I will hang it on a lofty mountain of Israel: yea, I will plant it, and it shall put forth shoots, and shall bear fruit, and it shall be a great cedar: and every bird shall rest beneath it, even every fowl shall rest under its shadow: its branches shall be restored.",
+      "source": "26_Ezechiel_17",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲙ ϩⲙⲡⲉⲥ**ⲕⲁⲣⲡⲟⲥ** ·",
+      "english": "(and) they ate its fruit,",
+      "source": "Apophthegmata Patrum Sahidic 177: Ephraim",
+      "urn": "urn:cts:copticLit:ap.177.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲡⲧ",
+        2,
+        16.525
+      ],
+      [
+        "ϣⲱϯ",
+        2,
+        13.862
+      ],
+      [
+        "ⲡⲉⲥ",
+        2,
+        11.284
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        2,
+        10.636
+      ],
+      [
+        "ⲉϥⲉ",
+        3,
+        10.39
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        2,
+        10.092
+      ],
+      [
+        "ⲕⲟⲓ",
+        1,
+        9.77
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        9.005
+      ],
+      [
+        "ⲛ",
+        5,
+        8.971
+      ],
+      [
+        "ⲫⲏ",
+        2,
+        8.773
+      ],
+      [
+        "ⲓⲛⲓ",
+        1,
+        7.512
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.25
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.719
+      ],
+      [
+        "ϯ",
+        2,
+        6.705
+      ],
+      [
+        "ⲩ",
+        2,
+        6.536
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        6.318
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.178
+      ],
+      [
+        ".",
+        2,
+        6.031
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        5.838
+      ],
+      [
+        "ⲉ",
+        2,
+        5.432
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        442,
+        22.008
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        19.399
+      ],
+      [
+        "ⲡ",
+        177,
+        18.735
+      ],
+      [
+        "ϣⲏⲛ",
+        28,
+        18.529
+      ],
+      [
+        "ⲙ",
+        117,
+        17.797
+      ],
+      [
+        "ⲉ",
+        91,
+        16.176
+      ],
+      [
+        "ⲛⲟⲩϥ",
+        9,
+        15.921
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        58,
+        15.874
+      ],
+      [
+        "ⲡⲉϥ",
+        38,
+        15.675
+      ],
+      [
+        "ϥ",
+        84,
+        15.534
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        2,
+        15.433
+      ],
+      [
+        "ⲁⲩⲱ",
+        58,
+        15.156
+      ],
+      [
+        ".",
+        48,
+        15.147
+      ],
+      [
+        "ϯ",
+        35,
+        14.739
+      ],
+      [
+        "ⲉⲧ",
+        47,
+        14.737
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        17,
+        14.727
+      ],
+      [
+        "ⲟⲩ",
+        58,
+        14.629
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        13,
+        14.619
+      ],
+      [
+        "ⲛⲁ",
+        51,
+        14.541
+      ],
+      [
+        "ⲥⲉ",
+        28,
+        14.34
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          127
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          24
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          10
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          9
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          9
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          6
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          5
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          17
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_3_post_ⲧ",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          5
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ϣⲏⲛ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          6
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲃⲏⲩⲉ",
+          2
+        ],
+        [
+          "ϩⲃⲏⲩⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲡⲟⲧⲟⲩ",
+          2
+        ],
+        [
+          "ⲥⲡⲟⲧⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲓⲥⲉ",
+          2
+        ],
+        [
+          "ϩⲓⲥⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉⲥ_3_post_ϭⲓϫ",
+          2
+        ],
+        [
+          "ϭⲓϫ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ⲙⲁ",
+          2
+        ],
+        [
+          "ⲉⲗⲟⲟⲗⲉ_5_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          "ⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲛⲉϥ_3_post_ϩⲃⲏⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲃⲏⲩⲉ",
+          "ϩⲃⲏⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲛⲉϥ_3_post_ⲥⲡⲟⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲥⲡⲟⲧⲟⲩ",
+          "ⲥⲡⲟⲧⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲛⲉⲕ_3_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲛⲉⲥ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲧⲉⲩ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲡ",
+          "ⲛ_4_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲁ",
+          "ⲉⲗⲟⲟⲗⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_0_node",
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲙ_1_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲛⲁϩⲣⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲩⲟⲉⲓⲛ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.81,
+      "rank": 410,
+      "count": 287
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2730,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "1042",
+    "grl_lemma": "καρπός",
+    "grl_meaning": "fruit",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 879b; Preisigke 1:738"
+  }
+}

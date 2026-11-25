@@ -1,0 +1,240 @@
+{
+  "id": "C7416",
+  "forms": [
+    {
+      "id": "CF16891",
+      "orth": "ϫⲁⲧⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6790,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϫⲉⲧⲙⲉ",
+      "dialect": "A",
+      "id": "2466.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8209",
+      "bibliography": "CD 792b; CED 321; KoptHWb 437; DELC 332b; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲩϩⲗⲡⲉ ⲉⲥⲟ ⲛⲧϩⲉ ⲛⲟⲩⲕⲣⲁⲧⲏⲣ ⲉϥϣⲉⲧϣⲱⲧ ⲉϥⲙⲉϩ ⲛⲏⲣⲡ ⲉϥⲥⲟⲧⲡ ϩⲏⲧⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩ**ϫⲁⲧⲙⲉ** ⲛⲥⲟⲩⲟ ⲉⲥⲧⲟⲟⲃⲉ ⲛϩⲉⲛⲕⲣⲓⲛⲟⲛ",
+      "english": "Thy two breasts are as two twin fawns.",
+      "source": "Song of Solomon 7",
+      "urn": "urn:cts:copticLit:ot.song.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕⲉϣϫⲟⲟⲥ ϫⲉⲟⲩ ⲡⲉ ⲡⲁⲓ ⲁⲩⲱ ⲉⲩⲛⲁⲣⲟⲩ ⲙⲡⲁⲓ ⲥⲉⲛⲁϣⲓⲛⲉ ⲅⲁⲣ ⲛⲥⲱⲟⲩ ⲧⲏⲣⲟⲩ ϩⲙⲡⲉⲩⲟⲩⲟⲉⲓϣ ϩⲙⲡⲉϥϣⲁϫⲉ ⲁⲡⲙⲟⲟⲩ ⲁϩⲉⲣⲁⲧϥ ⲛⲧϩⲉ ⲛⲟⲩ**ϫⲁⲧⲙⲉ** ⲛϫⲛⲟⲟⲩ ⲁⲩⲱ ⲛⲛⲟⲩⲧⲉ ⲙⲙⲟⲟⲩ ϩⲛⲛϣⲁϫⲉ ⲛⲣⲱϥ",
+      "english": "And none may say, What is this? wherefore is that? for at time convenient they shall all be sought out: at his commandment the waters stood as an heap, and at the words of his mouth the receptacles of waters.",
+      "source": "Sirach 39",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:39",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲛⲏⲩ ⲇⲉ ⲉⲡⲧⲁⲫⲟⲥ ⲛⲧϩⲉ ⲛⲟⲩⲥⲟⲩⲟ ϩⲙⲡⲉϥⲇⲉ ⲉⲁⲩⲟϩⲥϥ ϩⲙⲡⲉϥⲟⲩⲟⲉⲓϣ ⲏ ⲛⲧϩⲉ ⲛⲟⲩ**ϫⲁⲧⲙⲉ** ⲛϫⲛⲟⲟⲩ ⲉⲁⲩϫⲓⲧⲥ ⲉϩⲟⲩⲛ ⲛⲧⲉⲥⲟⲩⲛⲟⲩ",
+      "english": "And thou shalt come to the grave like ripe corn reaped in its season, or as a heap of the corn-flour collected in proper time.",
+      "source": "Job 5",
+      "urn": "urn:cts:copticLit:ot.job.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲛⲟⲟⲩ",
+        2,
+        16.926
+      ],
+      [
+        "ⲥⲟⲩⲟ",
+        1,
+        12.219
+      ],
+      [
+        "ϩⲉ",
+        3,
+        10.897
+      ],
+      [
+        "ⲛ",
+        7,
+        10.646
+      ],
+      [
+        "ⲧ",
+        3,
+        9.241
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲁⲧⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲁⲧⲙⲉ",
+          3
+        ],
+        [
+          "ϫⲛⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϫⲁⲧⲙⲉ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲟⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲃⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_1_post_ϫⲁⲧⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲁⲧⲙⲉ_0_node",
+          "ⲛ_1_post_ϫⲁⲧⲙⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲁⲧⲙⲉ",
+          "ϫⲛⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϫⲛⲟⲟⲩ_2_post_ⲛ",
+          "ⲉ_1_post_ϫⲁⲧⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲁⲧⲙⲉ",
+          "ⲁ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϫⲓⲧ",
+          "ⲩ_3_post_ϫⲓⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲁⲧⲙⲉ",
+          "ⲥⲟⲩⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲟ_2_post_ⲛ",
+          "ⲉ_1_post_ϫⲁⲧⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲁⲧⲙⲉ",
+          "ⲥ_3_post_ⲧⲟⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲧⲟⲟⲃⲉ",
+          "ⲧⲟⲟⲃⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲛⲟⲟⲩ_2_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲛⲟⲩⲧⲉ",
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_1_post_ϫⲁⲧⲙⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6356,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "186290",
+    "egy_lemma": "ḏdm.t",
+    "demo_num": "dm3268",
+    "demo_lemma": "ḏtm(.t)",
+    "english": "heaps",
+    "german": "Haufen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/186290",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3268"
+  }
+}

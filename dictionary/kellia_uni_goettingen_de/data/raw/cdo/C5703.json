@@ -1,0 +1,129 @@
+{
+  "id": "C5703",
+  "forms": [
+    {
+      "id": "CF13384",
+      "orth": "ⲙⲛⲧϩⲁⲙϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11554,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6381",
+      "bibliography": "CD 546b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲁϥϫⲓⲥⲃⲱ ⲅⲁⲣ ⲉⲧ**ⲙⲛⲧϩⲁⲙϣⲉ** ⲡⲉ · ⲁⲩⲱ ⲛⲉϣⲁϥⲧⲁⲙⲓⲉⲧⲟⲟⲧⲥ ϩⲓⲗⲩⲭⲛⲓⲁ · ⲛⲉϥϩⲙⲡⲕⲁⲥⲧⲣⲟⲛ ⲙⲁⲩⲁⲁϥ ·",
+      "english": "Now he had learned the trade of an artisan, and whilst he was living by himself in the Camp he used to make seats and lamp-stands.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲓⲥⲃⲱ",
+        1,
+        14.621
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϩⲁⲙϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϩⲁⲙϣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧϩⲁⲙϣⲉ",
+          "ⲙⲛⲧϩⲁⲙϣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11122,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5699",
+      "label": "ϣⲉ",
+      "pos": "N",
+      "gloss": "wood"
+    },
+    {
+      "target": "C5700",
+      "label": "ϣⲉ ⲛⲛⲟϩ",
+      "pos": "N",
+      "gloss": "a land measure (100 cubits)"
+    },
+    {
+      "target": "C5701",
+      "label": "ϩⲁⲙϣⲉ",
+      "pos": "N",
+      "gloss": "carpenter"
+    },
+    {
+      "target": "C5702",
+      "label": "ⲉⲣϩⲁⲙϣⲉ",
+      "pos": "V",
+      "gloss": "be carpenter"
+    }
+  ]
+}

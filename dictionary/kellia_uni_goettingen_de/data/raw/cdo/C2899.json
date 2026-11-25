@@ -1,0 +1,187 @@
+{
+  "id": "C2899",
+  "forms": [
+    {
+      "id": "CF7658",
+      "orth": "ⲡⲟⲣϣⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5336,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF7659",
+      "orth": "ⲫⲟⲣϣⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF7660",
+      "orth": "ⲡⲁⲣϣⲥ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3319",
+      "bibliography": "CD 271a; KoptHWb 153; ChLCS 38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲱ ⲉϩⲣⲁⲓ ⲛⲧⲉⲕ**ⲡⲟⲣϣⲥ** · ⲛⲅⲟⲩⲱⲙ ⲛⲙⲙⲁϥ · ⲕⲁⲛ ⲉⲕϩⲛⲟⲩⲙⲣⲣⲉ ⲛⲛⲏⲥⲧⲉⲓⲁ ⲃⲟⲗⲕ ⲉⲃⲟⲗ ·",
+      "english": "Put away thy food, and eat with him. And if thou art in the bond of fasting break it,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲣϩⲁⲉ ⲉⲩⲗⲁⲁⲩ ϩⲛⲧ**ⲡⲟⲣϣⲥ** · ⲙⲡⲣϫⲟⲟⲥ ϫⲉⲁⲩⲉⲓⲥ ⲉⲣⲉⲛⲟϭ ⲉⲣⲟⲕ ϩⲙⲟⲟⲥ ·",
+      "english": "If thou shouldst happen to be the last man served say not, 'Bring it here', where there sitteth a greater than thou.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱⲙ",
+        2,
+        11.629
+      ],
+      [
+        "ⲕⲱ",
+        2,
+        11.236
+      ],
+      [
+        "ⲙⲡⲣ",
+        2,
+        11.036
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        2,
+        10.935
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        10.87
+      ],
+      [
+        "ⲅ",
+        2,
+        10.239
+      ],
+      [
+        "ϫⲟⲟ",
+        2,
+        10.116
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        9.296
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.479
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ⲧ",
+        2,
+        7.071
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟⲣϣⲥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲟⲣϣⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲟⲣϣⲥ",
+          "ⲡⲟⲣϣⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4916,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2898",
+      "label": "ϫⲓⲛⲫⲱⲣϣ",
+      "pos": "N",
+      "gloss": "act of, place of spreading"
+    },
+    {
+      "target": "C2897",
+      "label": "ⲙⲁ ⲙⲡⲱⲣϣ",
+      "pos": "N",
+      "gloss": "place spread, couch"
+    },
+    {
+      "target": "C2901",
+      "label": "ⲡⲣⲁϣ",
+      "pos": "N",
+      "gloss": "division, branch (of canal)"
+    },
+    {
+      "target": "C2900",
+      "label": "ⲡⲣⲏϣ",
+      "pos": "N",
+      "gloss": "thing spread (mat, cloak)"
+    },
+    {
+      "target": "C2895",
+      "label": "ⲡⲱⲣϣ",
+      "pos": "V",
+      "gloss": "be spread; spread, stretch"
+    },
+    {
+      "target": "C2896",
+      "label": "ⲡⲱⲣϣ",
+      "pos": "N",
+      "gloss": "thing spread (mat, coverlet)"
+    }
+  ]
+}

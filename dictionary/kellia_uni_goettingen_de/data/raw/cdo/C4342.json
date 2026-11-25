@@ -1,0 +1,122 @@
+{
+  "id": "C4342",
+  "forms": [
+    {
+      "id": "CF10636",
+      "orth": "ⲉⲃⲟⲗ ⲧⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1472,
+        "count": 52
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4920",
+      "bibliography": "CD 417b-418a; KoptHWb 236; ChLCS 59a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲩ **ϫⲉⲉⲃⲟⲗ **ⲧⲱⲛ**** ·",
+      "english": "He said to them, 'Where (would this come) from?",
+      "source": "Apophthegmata Patrum Sahidic 117: Sisoes 9",
+      "urn": "urn:cts:copticLit:ap.117.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲃⲟⲗ **ⲧⲱⲛ**** ϫⲉⲉⲣⲉⲛⲟⲩⲉⲓⲟⲧⲉ ⲛⲃⲟⲗ ϩⲙⲡⲕⲟⲥⲙⲟⲥ ⲛⲁⲥⲱⲧⲙ ⲉⲡⲟⲩϣⲁϫⲉ ⲛϩⲟⲩⲛ ϩⲙⲡⲉⲓⲙⲁ · ⲛⲧⲛⲧⲙⲉⲓⲙⲉ ⲁⲛⲟⲛ ϩⲛⲧϩⲉⲛⲉⲉⲧⲏ ·",
+      "english": "Where is it that your parents from the world will hear of your action inside this place, without us knowing in the monastery?",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲃⲁⲡⲧⲓⲥⲙⲁ ⲛⲓⲱϩⲁⲛⲛⲏⲥ **ⲟⲩⲉⲃⲟⲗ **ⲧⲱⲛ**** ⲡⲉ ⲟⲩⲉⲃⲟⲗ ϩⲛⲧⲡⲉ ⲡⲉ . ϫⲛⲟⲩⲉⲃⲟⲗ ϩⲙⲡⲣⲱⲙⲉ ⲁϫⲓⲥ ⲛⲁⲓ",
+      "english": "The baptism of John--was it from heaven, or from men? Answer me.&apos;",
+      "source": "41_Mark_11",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.33,
+      "rank": 1275,
+      "count": 52
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C417",
+      "type": "cf",
+      "label": "out, forth, outward"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4343",
+      "label": "ϣⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where (to)?"
+    },
+    {
+      "target": "C4344",
+      "label": "ϩⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where?"
+    },
+    {
+      "target": "C4345",
+      "label": "ϫⲓⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "where ... from?"
+    },
+    {
+      "target": "C4340",
+      "label": "ⲉⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where (to)?; where ... from?"
+    },
+    {
+      "target": "C4341",
+      "label": "ⲛⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    },
+    {
+      "target": "C4346",
+      "label": "ⲡⲁⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4347",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4348",
+      "label": "ⲣⲙⲛⲧⲱⲛ",
+      "pos": "N",
+      "gloss": "One from where?"
+    },
+    {
+      "target": "C4339",
+      "label": "ⲧⲱⲛ",
+      "pos": "ADV",
+      "gloss": "Where?; where ... from? How?"
+    }
+  ]
+}

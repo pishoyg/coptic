@@ -1,0 +1,39 @@
+{
+  "id": "C7557",
+  "forms": [
+    {
+      "id": "CF17173",
+      "orth": "ϭⲓⲛϭⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8381",
+      "bibliography": "CD 804b; KoptHWb 445; CHLCS 106a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7555",
+      "label": "ϭⲱ",
+      "pos": "V",
+      "gloss": "remain; continue, persist (in doing); desist, stop, cease; remain silent, keep quiet"
+    },
+    {
+      "target": "C7556",
+      "label": "ϭⲱ (ⲉ-)",
+      "pos": "V",
+      "gloss": "wait for"
+    }
+  ]
+}

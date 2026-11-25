@@ -1,0 +1,173 @@
+{
+  "id": "C8095",
+  "forms": [
+    {
+      "id": "CF18393",
+      "orth": "ⲁⲇⲓⲕⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18394",
+      "orth": "ⲁⲇⲓⲕⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6276,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS9066",
+      "bibliography": "DDGLC",
+      "cu_ID": "1821"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣⲱⲡⲉ ⲟⲩⲛⲟⲩⲕⲟⲩⲓ ⲛⲉⲗⲁⲭⲉⲓⲥⲧⲟⲛ ϣⲟⲟⲡ ⲛⲁϥ · ϣⲁⲕϣⲁⲁⲧϥ ⲙⲙⲟϥ **ⲁⲇⲓⲕⲱⲥ** ·",
+      "english": "if there by chance remained to him the smallest amount of any possession, thou wast in the habit of demanding- it from him unjustly.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲛⲧⲁϥⲱⲣⲕ ⲉⲧⲃⲏⲏⲧⲟⲩ **ⲁⲇⲓⲕⲱⲥ** ⲉϥⲉϯ ⲙⲡⲕⲉⲫⲁⲗⲁⲓⲟⲛ ⲁⲩⲱ ⲡⲟⲩⲱⲛ ⲛϯⲟⲩ ⲉϥⲉⲧⲁⲁϥ ⲉϫⲱϥ ⲡⲉⲧⲉⲡⲱϥ ⲡⲉ ⲉϥⲉⲧⲁⲁϥ ⲛⲁϥ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲟⲩⲛⲁϫⲡⲓⲟϥ ⲛϩⲏⲧϥ",
+      "english": "about which he swore unjustly, he shall even restore it in full; and he shall add to it a fifth part besides; he shall restore it to him whose it is in the day in which he happens to be convicted.",
+      "source": "Leviticus 5",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲛⲕⲉⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲛⲃⲗⲗⲁⲕ ⲉϥϥⲓⲣⲟⲟⲩϣ ϩⲁⲡⲧⲏⲣϥ ϫⲉⲕⲁⲥ ⲉⲕⲉⲧⲥⲁⲃⲟⲟⲩ ϫⲉⲛⲧⲁⲕⲕⲣⲓⲛⲉ ⲙⲙⲟⲟⲩ ⲁⲛ **ⲁⲇⲓⲕⲱⲥ**",
+      "english": "For neither is there any God but thou that careth for all, to whom thou mightest shew that thy judgment is not unright.",
+      "source": "Wisdom 12",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲁⲧ",
+        1,
+        11.728
+      ],
+      [
+        "ⲱⲣⲕ",
+        1,
+        11.57
+      ],
+      [
+        "ⲕⲣⲓⲛⲉ",
+        1,
+        10.578
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        1,
+        9.971
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        9.311
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        9.204
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        8.691
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.39
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        7.872
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲅ",
+        1,
+        7.654
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        6.543
+      ],
+      [
+        "ϯ",
+        1,
+        5.931
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲇⲓⲕⲱⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5837,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3414",
+    "grl_lemma": "ἀδίκως",
+    "grl_meaning": "unrightously, unjustly",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 23b; Preisigke 1:23"
+  }
+}

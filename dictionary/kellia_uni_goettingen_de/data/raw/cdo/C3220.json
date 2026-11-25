@@ -1,0 +1,56 @@
+{
+  "id": "C3220",
+  "forms": [
+    {
+      "id": "CF8325",
+      "orth": "ⲣⲣⲙⲣⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3677",
+      "bibliography": "CD 308a; ChLCS 43b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C12347",
+      "type": "cf",
+      "label": "human being"
+    },
+    {
+      "target": "C3101",
+      "type": "cf",
+      "label": "man of, from . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3219",
+      "label": "ⲙⲛⲧⲣⲙⲣⲁϣ",
+      "pos": "N",
+      "gloss": "gentleness"
+    },
+    {
+      "target": "C3218",
+      "label": "ⲣⲙⲣⲁϣ",
+      "pos": "N",
+      "gloss": "mild, gentle person"
+    }
+  ]
+}

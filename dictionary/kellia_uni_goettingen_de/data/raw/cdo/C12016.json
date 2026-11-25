@@ -1,0 +1,76 @@
+{
+  "id": "C12016",
+  "forms": [
+    {
+      "id": "CF33016",
+      "orth": "ⲛⲉϩϥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF33017",
+      "orth": "ⲛⲉϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.11,
+        "rank": 448,
+        "count": 179
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17016",
+      "bibliography": "CD 242b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϩⲓⲟⲩⲙⲏϣ ⲛⲇⲁⲓⲙⲱⲛ ⲉⲃⲟⲗ ⲟⲩⲙⲏϣ ⲛⲣⲉϥϣⲱⲛⲓ ⲛⲁⲩⲑⲱϩⲥ ⲙⲙⲱⲟⲩ ⲛ**ⲛⲉϩ** ⲟⲩⲟϩ ⲛⲁⲩⲉⲣⲫⲁϧⲣⲓ ⲉⲣⲱⲟⲩ .",
+      "english": "They cast out many demons, and anointed many with oil who were sick, and healed them.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲉϥⲛⲁⲉⲛϥ ⲉϧⲟⲩⲛ ⲉⲑⲃⲉⲟⲩⲥⲙⲟⲩ ⲉϥⲉⲓⲛⲓ ⲉϫⲉⲛⲡⲓϣⲟⲩϣⲱⲟⲩϣⲓ ⲛⲥⲙⲟⲩ ⲛϩⲁⲛⲱⲓⲕ ⲉⲃⲟⲗ ϧⲉⲛⲥⲉⲙⲓⲇⲁⲗⲓⲟⲛ ⲉⲩⲟⲩⲟϣⲉⲙ ϧⲉⲛⲟⲩⲛⲉϩ ⲛⲉⲙϩⲁⲛⲗⲁⲕϩ ⲛⲁⲧⲕⲱⲃ ⲉⲁⲩⲑⲁϩⲥⲟⲩ ϧⲉⲛⲟⲩ**ⲛⲉϩ** ⲛⲉⲙⲟⲩⲥⲉⲙⲓⲇⲁⲗⲓⲟⲛ ⲉϥⲟⲩⲟϣⲉⲙ ϧⲉⲛⲟⲩⲛⲉϩ",
+      "english": "And the Lord spoke to Moses, saying,",
+      "source": "03_Leviticus_07",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲉϭⲓⲥⲓ ⲛϫⲉⲡⲁⲧⲁⲛ ⲙⲫⲣⲏϯ ⲙⲫⲁ ⲡⲓⲧⲁⲡ ⲛⲟⲩⲱⲧ ⲟⲩⲟϩ ⲧⲁⲙⲉⲧϧⲉⲗⲗⲟ ϧⲉⲛⲟⲩ**ⲛⲉϩ** ⲉϥⲕⲉⲛⲓⲱⲟⲩⲧ",
+      "english": "But thou, O Lord, art most high for ever.",
+      "source": "19_Psalmi_91",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:91",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2652",
+      "label": "ⲛⲉϩⲙⲁⲕϩ",
+      "pos": "V",
+      "gloss": "resist, be stiff-necked"
+    },
+    {
+      "target": "C2651",
+      "label": "ⲛⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "shake, cast off, set apart, separate; separate self, turn, return"
+    },
+    {
+      "target": "C2653",
+      "label": "ⲛⲟⲩϩⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "shake off, cast out, set apart, assign; come apart, be loosed"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "id": "C9135",
+  "forms": [
+    {
+      "id": "CF22708",
+      "orth": "ⲑⲁⲣⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF22712",
+      "orth": "ⲑⲁⲣⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7428,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22709",
+      "orth": "ⲑⲁⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20556,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22710",
+      "orth": "ⲑⲁⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3094,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF22711",
+      "orth": "ⲑⲁⲣⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7341,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11301",
+      "bibliography": "DDGLC",
+      "cu_ID": "11655"
+    },
+    {
+      "id": "CS11302",
+      "bibliography": "DDGLC",
+      "cu_ID": "2114"
+    },
+    {
+      "id": "CS11303",
+      "bibliography": "DDGLC",
+      "cu_ID": "3462"
+    },
+    {
+      "id": "CS11304",
+      "bibliography": "DDGLC",
+      "cu_ID": "4402"
+    },
+    {
+      "id": "CS11305",
+      "bibliography": "DDGLC",
+      "cu_ID": "2063"
+    },
+    {
+      "id": "CS11306",
+      "bibliography": "DDGLC",
+      "cu_ID": "15523"
+    },
+    {
+      "id": "CS11307",
+      "bibliography": "DDGLC",
+      "cu_ID": "4696"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲫⲟⲩ ϫⲉϯⲥⲟⲟⲩⲛ ⲛⲧⲙⲛⲧⲭⲣⲓⲥⲧⲟⲥ ⲛⲧⲉⲕⲯⲩⲭⲏ ϫⲉⲛⲧⲕⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥϫⲓϣⲟϫⲛⲉ ⲉⲧⲃⲉⲡⲁⲓ ⲁⲓϯⲡⲁⲟⲩⲟⲓ ⲉϩⲟⲩⲛ ⲉⲧⲉⲕⲙⲛⲧⲛⲟϭ ⲉⲓ**ⲑⲁⲣⲣⲉⲓ** ϫⲉⲛⲅⲛⲁϣⲉⲥⲡϣⲁϫⲉ ⲁⲛ ⲛⲧⲙⲛⲧⲉⲩⲥⲉⲃⲏⲥ",
+      "english": "The blessed Apa Aphou answered: I know the Christian nature of your soul for you are a man of (good)-counsel; because of this I directed myself to your greatness with confidence that you will not disdain a pious word.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϣⲱⲡⲉ ⲛⲧⲉⲣⲉϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲉϥⲃⲓⲟⲥ ⲁⲛⲉⲥⲛⲏⲩ ϯ ⲙⲡⲉⲩⲟⲩⲟⲓ ⲉⲣⲟϥ ⲉϥⲛⲁⲙⲟⲩ ϩⲱⲥ ⲉⲩ**ⲑⲁⲣⲣⲉⲓ** ⲛⲧⲕⲁⲧⲟⲣⲑⲱⲉⲓ ⲙⲡⲉϥⲗⲁⲟⲥ ⲙⲛⲧⲙⲛⲧⲕⲁⲑⲁⲣⲟⲥ ⲛⲧⲉϥⲉⲡⲓⲥⲕⲟⲡⲏ ⲛⲧⲁⲩⲣⲙⲛⲧⲣⲉ ⲙⲙⲟⲥ ⲁⲩⲱ ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉⲡⲉⲛⲉⲓⲱⲧ ⲧⲁⲩⲉⲟⲩϣⲁϫⲉ ⲉⲣⲟⲛ ⲙⲡⲁⲧⲕⲃⲱⲕ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲛ",
+      "english": "And it happened when he had completed his life that the brothers grieved for him, as he was about to pass so that putting their trust in the success of his people and the purity of his episcopate that they had witnessed they said to him: our father, speak a word to us before you go from us.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲙ ϫⲉⲣⲟⲩϩⲉ · ⲉⲧⲉⲡⲁⲓ ⲡⲉ ϫⲉⲥⲉⲛⲁⲕⲟⲧⲟⲩ ϩⲙⲡⲉⲩⲙⲉⲉⲩⲉ ⲛⲕⲁⲕⲉ · ⲛⲥⲉⲕⲱⲧⲉ ⲛⲥⲩⲛⲁⲅⲱⲅⲏ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲉϣⲱⲡⲉ ⲇⲉ ⲉⲩϣⲁⲛⲧⲙϫⲓⲧⲟⲩ ⲉϩⲟⲩⲛ ⲥⲉⲛⲁϫⲱ ⲛⲛⲉⲓϣⲁϫⲉ ⲉⲩⲕⲣⲙⲣⲙ ⲉⲩϫⲱⲙⲙⲟⲥ · ϫⲉⲙⲁⲣⲉϥⲉⲓⲛⲉ ⲛⲁⲛ ⲛⲛⲉⲅⲣⲁⲫⲏ · ϫⲉⲟⲩⲙⲟⲛⲟⲛ ϫⲉⲛϥϫⲓ ⲙⲙⲟⲛ ⲁⲛ · ⲁⲗⲗⲁ ⲛϥϫⲓ ⲁⲛ ⲟⲛ ⲛⲛⲉⲛⲕⲉϩⲓⲟⲙⲉ ⲙⲛⲛⲉⲛⲕⲉϣⲏⲣⲉ ⲉⲩ**ⲑⲁⲣⲉⲓ** ϩⲙⲡⲉⲩⲥⲟⲟⲩⲛ ⲛⲛⲟⲩϫ · ϫⲉⲥⲉⲛⲁϫⲣⲟ ϩⲛⲛⲉⲓϣⲁϫⲉ · ϫⲉⲡϣⲏⲣⲉ ⲛⲁ ϫⲓ ⲁⲛ ⲙⲡϫⲓ ⲛϭⲟⲛⲥ ⲙⲡⲉϥⲉⲓⲱⲧ ·",
+      "english": "...",
+      "source": "Unknown Work 5-1: GF 381-88",
+      "urn": "urn:cts:copticLit:shenoute.unknown5_1.monbgf:131-139",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲟⲣⲑⲱⲉⲓ",
+        1,
+        19.013
+      ],
+      [
+        "ⲙⲛⲧⲛⲟϭ",
+        1,
+        12.118
+      ],
+      [
+        "ϩⲱⲥ",
+        1,
+        10.299
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.285
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        8.158
+      ],
+      [
+        "ⲅ",
+        1,
+        7.654
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲓ_1_pre_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲑⲁⲣⲣⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲅ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲟⲣⲑⲱⲉⲓ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲕⲁⲧⲟⲣⲑⲱⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓ_1_pre_ⲑⲁⲣⲣⲉⲓ",
+          "ⲑⲁⲣⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲑⲁⲣⲣⲉⲓ_0_node",
+          "ϫⲉ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          "ⲛ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲉⲥ",
+          "ⲅ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲅ_3_post_ϣⲉⲥ",
+          "ⲛⲁ_3_post_ϣⲉⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲑⲁⲣⲣⲉⲓ",
+          "ⲑⲁⲣⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲑⲁⲣⲣⲉⲓ_0_node",
+          "ⲛ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲑⲁⲣⲣⲉⲓ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲕⲁⲧⲟⲣⲑⲱⲉⲓ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲟⲣⲑⲱⲉⲓ_3_post_ⲧ",
+          "ⲙ_4_post_ⲕⲁⲧⲟⲣⲑⲱⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5750,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "896",
+    "grl_lemma": "θαρρέω",
+    "grl_meaning": "to be of good courage",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 784b; Preisigke 1:665"
+  }
+}

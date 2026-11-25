@@ -1,0 +1,396 @@
+{
+  "id": "C9781",
+  "forms": [
+    {
+      "id": "CF25267",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25276",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.03,
+        "rank": 717,
+        "count": 87
+      }
+    },
+    {
+      "id": "CF25273",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1274,
+        "count": 65
+      }
+    },
+    {
+      "id": "CF25269",
+      "orth": "ⲙⲉⲡⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25270",
+      "orth": "ⲙⲉⲡⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25272",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF25271",
+      "orth": "ⲙⲏⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10112,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25274",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF25275",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25268",
+      "orth": "ⲙⲙⲏⲡⲱⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF25277",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF25278",
+      "orth": "ⲙⲏⲡⲱⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS12684",
+      "bibliography": "DDGLC",
+      "cu_ID": "466"
+    },
+    {
+      "id": "CS12685",
+      "bibliography": "DDGLC",
+      "cu_ID": "3842"
+    },
+    {
+      "id": "CS12686",
+      "bibliography": "DDGLC",
+      "cu_ID": "11410"
+    },
+    {
+      "id": "CS12687",
+      "bibliography": "DDGLC",
+      "cu_ID": "5443"
+    },
+    {
+      "id": "CS12688",
+      "bibliography": "DDGLC",
+      "cu_ID": "214"
+    },
+    {
+      "id": "CS12689",
+      "bibliography": "DDGLC",
+      "cu_ID": "11229"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲙⲏⲡⲱⲥ** ⲛⲧⲉϥⲓ ⲛⲟⲩϩⲟϯ ϧⲉⲛⲟⲩϩⲟϯ ⲛⲧⲉϥϫⲉⲙⲑⲏⲛⲟⲩ ⲉⲣⲉⲧⲉⲛⲛⲕⲟⲧ .",
+      "english": "lest coming suddenly he might find you sleeping.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲁⲥ ⲉⲩⲛⲁⲩ ⲉⲩⲉⲛⲁⲩ ⲁⲩⲱ ⲛⲥⲉⲧⲙⲛⲁⲩ ⲁⲩⲱ ⲉⲩⲥⲱⲧⲙ ⲉⲩⲉⲥⲱⲧⲙ ⲛⲥⲉⲧⲙⲛⲟⲉⲓ . **ⲙⲏⲡⲱⲥ** ⲛⲥⲉⲕⲟⲧⲟⲩ ⲛⲥⲉⲕⲱ ⲛⲁⲩ ⲉⲃⲟⲗ .",
+      "english": "that 'seeing they may see, and not perceive; and hearing they may hear, and not understand; lest perhaps they should turn again, and their sins should be forgiven them.''",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲟⲩ ⲇⲉ ⲛⲁⲩⲉⲣⲁⲅⲁⲡⲁⲛ ⲙⲙⲟϥ ⲡⲉ ⲉⲩϯⲛⲟⲙϯ ⲛⲁϥ ⲉⲩⲉⲣϩⲟϯ ϫⲉ**ⲙⲏⲡⲱⲥ** ⲛⲧⲉϥⲉⲣⲁⲑⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲁⲣⲱⲟⲩ ⲉⲩⲛⲁⲩ ⲉⲡⲓⲛⲓϣϯ ⲛϧⲙⲟⲙ ⲉⲧϣⲟⲡ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲡⲓⲁⲅⲁⲑⲟⲛ .",
+      "english": "As for them, they loved and encouraged him, fearing that he would disappear from their house because they saw the great fervor he had for good.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲱϥⲉ ⲙⲡⲁⲥⲱⲙⲁ ϯⲉⲓⲣⲉ ⲙⲙⲟϥ ⲛϩⲙϩⲁⲗ . **ⲙⲏⲡⲱⲥ** ⲉⲓⲧⲁϣⲉⲟⲉⲓϣ ⲛϩⲉⲛⲕⲟⲟⲩⲉ ⲧⲁϣⲱⲡⲉ ⲁⲛⲟⲕ ⲛϫⲟⲟⲩⲧ .",
+      "english": "but I beat my body and bring it into submission, lest by any means, after I have preached to others, I myself should be rejected.",
+      "source": "46_1 Corinthians_9",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲥ ⲟⲩⲙⲏϣ ⲅⲁⲣ ⲛⲉϩⲟⲟⲩ ϯϧⲟⲥⲓ ⲟⲩⲟϩ ϯϣⲧⲉⲣⲧⲱⲣ ⲉⲓⲉⲣϩⲟϯ ⲉϯ ⲙⲡⲁⲟⲩⲟⲓ ⲉϧⲟⲩⲛ ⲉⲛⲓϩⲃⲏⲟⲩⲓ ⲛϣⲫⲏⲣⲓ ⲛⲧⲉⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ϫⲉⲁⲛⲟⲕ ⲟⲩⲁⲥⲑⲉⲛⲏⲥ ⲟⲩⲟϩ ⲛϩⲓⲇⲓⲱⲧⲏⲥ ϧⲉⲛⲡⲥⲁϫⲓ **ⲙⲏⲡⲱⲥ** ⲛⲧⲁⲱⲙⲥ ϧⲉⲛⲡⲓⲡⲉⲗⲁⲅⲟⲥ ⲛⲧⲉⲛⲓⲙⲱⲟⲩ ⲉⲑⲃⲉϫⲉϯⲉⲙⲓ ⲛⲛⲏⲃⲓ ⲁⲛ .",
+      "english": "For many days I have been troubled and disturbed, fearing to go forward into the miraculous deeds of my father Apa Shenoute, as I am weak and unskilled in speaking, for fear that I should drown in a sea of water because I don't know how to swim.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲡⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉϯⲁϩⲉⲣⲁⲧ ⲙⲁⲣⲉϥϭⲱϣⲧ **ⲙⲏⲡⲱⲥ** ⲛϥϩⲉ .",
+      "english": "Therefore let him who thinks he stands be careful that he doesn&apos;t fall.",
+      "source": "1 Corinthians 10",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        81,
+        17.167
+      ],
+      [
+        "ϥ",
+        63,
+        15.913
+      ],
+      [
+        "ⲛⲧⲉ",
+        38,
+        15.367
+      ],
+      [
+        "ϩⲓⲇⲓⲱⲧⲏⲥ",
+        2,
+        15.252
+      ],
+      [
+        "ⲛⲧ",
+        13,
+        15.154
+      ],
+      [
+        "ⲉⲣϩⲟϯ",
+        11,
+        14.983
+      ],
+      [
+        "ⲉⲣⲁⲑⲟⲩⲱⲛϩ",
+        2,
+        14.252
+      ],
+      [
+        "ϩⲉⲓ",
+        8,
+        13.736
+      ],
+      [
+        "ⲁⲛⲁⲩ",
+        6,
+        13.703
+      ],
+      [
+        "ϧⲉⲛ",
+        27,
+        13.585
+      ],
+      [
+        "ⲉ",
+        32,
+        13.574
+      ],
+      [
+        "ⲕ",
+        18,
+        13.195
+      ],
+      [
+        "ϥⲓ",
+        4,
+        13.186
+      ],
+      [
+        "ⲟⲩ",
+        27,
+        12.576
+      ],
+      [
+        "ⲙⲉⲩⲓ",
+        7,
+        12.441
+      ],
+      [
+        "ϥⲟⲧⲧ",
+        1,
+        12.252
+      ],
+      [
+        "ⲟⲩⲧⲟⲩⲃⲱⲟⲩ",
+        1,
+        12.252
+      ],
+      [
+        "ⲁⲓϣⲁⲛ",
+        4,
+        12.123
+      ],
+      [
+        "ⲧⲉ",
+        7,
+        11.965
+      ],
+      [
+        "ⲙⲟⲩ",
+        7,
+        11.916
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        101,
+        17.761
+      ],
+      [
+        "ϭⲱϣⲧ",
+        13,
+        16.146
+      ],
+      [
+        "ⲛⲧⲉ",
+        16,
+        15.349
+      ],
+      [
+        "ⲥⲉ",
+        19,
+        14.804
+      ],
+      [
+        "ⲣⲟⲕϩⲉ",
+        1,
+        14.576
+      ],
+      [
+        "ϣⲉϭ",
+        1,
+        14.576
+      ],
+      [
+        "ⲧⲁϣⲟⲟⲉⲓϣ",
+        1,
+        14.576
+      ],
+      [
+        "ⲧⲉϭⲟⲩ",
+        1,
+        14.576
+      ],
+      [
+        "ⲙⲙⲡⲉϥ",
+        1,
+        14.576
+      ],
+      [
+        "ⲣϩⲟⲧⲉ",
+        7,
+        13.52
+      ],
+      [
+        "ⲟⲩ",
+        27,
+        13.462
+      ],
+      [
+        "ϥ",
+        30,
+        13.22
+      ],
+      [
+        "ⲣⲙⲛⲥⲃⲱ",
+        1,
+        12.991
+      ],
+      [
+        "ⲧⲛ",
+        12,
+        12.896
+      ],
+      [
+        ".",
+        17,
+        12.797
+      ],
+      [
+        "ⲡⲱⲗϭ",
+        1,
+        12.576
+      ],
+      [
+        "ⲡⲟⲣⲛⲟⲥ",
+        2,
+        12.218
+      ],
+      [
+        "ⲛⲏⲏⲃⲉ",
+        1,
+        11.768
+      ],
+      [
+        "ⲛⲟⲉⲓ",
+        3,
+        11.768
+      ],
+      [
+        "ⲅ",
+        7,
+        11.639
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏⲡⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 1.02,
+      "rank": 621,
+      "count": 87
+    },
+    "S": {
+      "rate": 0.41,
+      "rank": 1106,
+      "count": 65
+    }
+  },
+  "etym": {
+    "grl_ID": "1414",
+    "grl_lemma": "μήπως",
+    "grl_meaning": "lest",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 1129b"
+  }
+}

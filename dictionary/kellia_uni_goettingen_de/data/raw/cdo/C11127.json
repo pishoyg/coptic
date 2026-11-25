@@ -1,0 +1,104 @@
+{
+  "id": "C11127",
+  "forms": [
+    {
+      "id": "CF30735",
+      "orth": "ϩⲓⲉⲣⲟⲫⲁⲛⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30736",
+      "orth": "ϩⲓⲉⲣⲟⲫⲁⲛⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11227,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15577",
+      "bibliography": "DDGLC",
+      "cu_ID": "10589"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕϣⲱⲡⲉ ⲛ**ϩⲓⲉⲣⲟⲫⲁⲛⲧⲏⲥ** ⲛⲧϩⲉ ⲙⲙⲱⲩⲥⲏⲥ · ⲁⲩⲱ ⲛϩⲓⲉⲣⲟϩⲩⲙⲛⲟⲥ ⲛⲧϩⲉ ⲛⲇⲁⲩⲉⲓⲇ ·",
+      "english": "Thou wast a teacher of rites and sacrifices like unto Moses, and a master of the art of making hymns like unto David.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲉⲣⲟⲫⲁⲛⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10813,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "947",
+    "grl_lemma": "ἱεροφάντης",
+    "grl_meaning": "hierophant, one who teaches sacrifice and worship",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 823a"
+  }
+}

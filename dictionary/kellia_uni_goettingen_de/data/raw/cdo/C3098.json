@@ -1,0 +1,199 @@
+{
+  "id": "C3098",
+  "forms": [
+    {
+      "id": "CF8070",
+      "orth": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11164,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3548",
+      "bibliography": "CD 295a; KoptHWb 164; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ⲉⲧⲁⲙⲛⲧⲁⲥⲑⲉⲛⲏⲥ ⲙⲛⲧⲁ**ⲙⲛⲧⲁⲧⲣⲱⲙⲉ** · ⲁϥⲧⲛⲛⲟⲟⲩ ⲟⲩⲁ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ϣⲁⲣⲟⲓ · ⲁϥⲭⲁⲣⲓⲍⲉ ⲙⲡⲧⲁⲗϭⲟ ⲙⲡⲁⲥⲱⲙⲁ ·",
+      "english": "Now when He had seen my very weak condition, and my want of manhood, He sent one of the Saints unto me, and was graciously pleased to grant me the healing of my body.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲥⲑⲉⲛⲏⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        1,
+        12.036
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        11.95
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+          "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10751,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3101",
+      "label": "ⲣⲙ-",
+      "pos": "N",
+      "gloss": "man of, from . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ]
+}

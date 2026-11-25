@@ -1,0 +1,119 @@
+{
+  "id": "C658",
+  "forms": [
+    {
+      "id": "CF2470",
+      "orth": "ⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17349,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2471",
+      "orth": "ⲙⲁ ⲛⲁⲗⲟⲗⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS794",
+      "bibliography": "CD 55a; KoptHWb 34; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲁϥϣⲱⲡⲉ ⲛⲥⲟⲗⲟⲙⲱⲛ ϩⲛⲟⲩⲙⲁ ϫⲉⲃⲉⲉⲗⲁⲙⲱⲛ ⲁϥϯ ⲙⲡⲉϥ**ⲙⲁⲛⲉⲗⲟⲟⲗⲉ** ⲛⲛⲉⲧⲛⲁϩⲁⲣⲉϩ ⲉⲣⲟϥ ⲡⲣⲱⲙⲉ ⲛⲁⲉⲓⲛⲉ ϩⲁⲡⲉϥⲕⲁⲣⲡⲟⲥ ⲙⲙⲏⲧ ⲛϣⲉ ⲛϩⲁⲧ",
+      "english": "Solomon had a vineyard in Beelamon; he let his vineyard to keepers; every one was to bring for its fruit a thousand pieces of silver.",
+      "source": "Song of Solomon 8",
+      "urn": "urn:cts:copticLit:ot.song.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16962,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C661",
+      "label": "ϣⲉⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine-branch, vine-wood"
+    },
+    {
+      "target": "C652",
+      "label": "ⲁⲗⲟⲗⲓ",
+      "pos": "N",
+      "gloss": "vine, vineyard (elliptic)"
+    },
+    {
+      "target": "C657",
+      "label": "ⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vine"
+    },
+    {
+      "target": "C659",
+      "label": "ⲉⲓⲉϩⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "vineyard"
+    },
+    {
+      "target": "C656",
+      "label": "ⲉⲗⲉⲗϣⲟⲩⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "dried grapes, raisins"
+    },
+    {
+      "target": "C655",
+      "label": "ⲉⲗⲉⲗϩⲙϫ",
+      "pos": "N",
+      "gloss": "unripe, sour grape"
+    },
+    {
+      "target": "C660",
+      "label": "ⲉⲗⲉⲗⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "bruise (dark coloured like grapes, \"grape of Egypt\")"
+    },
+    {
+      "target": "C651",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "grape"
+    },
+    {
+      "target": "C653",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "tonsil"
+    },
+    {
+      "target": "C654",
+      "label": "ⲉⲗⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "C2665",
+  "forms": [
+    {
+      "id": "CF7136",
+      "orth": "ϫⲓⲛⲛⲟϩⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11368,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3055",
+      "bibliography": "CD 244b; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁϥⲟϩⲓ ⲉⲣⲁⲧϥ ⲥⲁⲟⲩⲓⲛⲁⲙ ⲙⲡⲓϩⲏⲕⲓ ⲉⲡ**ϫⲓⲛⲛⲟϩⲉⲙ** ⲛⲧⲁⲩⲭⲏ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲏ ⲉⲧϭⲟϫⲓ ⲛⲥⲱⲓ",
+      "english": "I became also a reproach to them: when they saw me they shook their heads.",
+      "source": "19_Psalmi_108",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:108",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲏⲕⲓ",
+        1,
+        12.476
+      ],
+      [
+        "ⲭⲏ",
+        1,
+        9.878
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        9.271
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲛⲟϩⲉⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10811,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2662",
+      "label": "ⲛⲟⲩϩⲙ",
+      "pos": "V",
+      "gloss": "be saved, safe; escape; save, preserve"
+    },
+    {
+      "target": "C2663",
+      "label": "ⲛⲟⲩϩⲙ",
+      "pos": "N",
+      "gloss": "safety"
+    },
+    {
+      "target": "C2664",
+      "label": "ⲣⲉϥⲛⲟⲩϩⲙ",
+      "pos": "N",
+      "gloss": "saviour"
+    }
+  ]
+}

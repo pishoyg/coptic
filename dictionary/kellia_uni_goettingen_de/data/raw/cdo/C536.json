@@ -1,0 +1,123 @@
+{
+  "id": "C536",
+  "forms": [
+    {
+      "id": "CF2091",
+      "orth": "ⲃⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17964,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS646",
+      "bibliography": "CD 44b; CED 27; KoptHWb 495; DELC 31; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ⲛⲛⲁϩⲣⲙⲡⲉⲧϫⲱϩ ⲙⲙⲟⲥ ϫⲉⲥⲛⲁϩⲉ ⲉϩⲣⲁⲓ ⲁⲩⲱ ϥⲛⲁϣⲱⲡⲉ ⲛϭⲓⲟⲩⲙⲟⲩⲛϩⲱⲟⲩ ⲛϥⲱⲙⲥ ⲁⲩⲱ ϩⲉⲛⲱⲛⲉ ⲙⲡⲉⲧⲣⲁ ϯⲛⲁⲧⲁⲁⲩ ⲉϩⲣⲁⲓ ⲉⲛⲉⲩⲟⲩⲱϣ ⲛⲥⲉϩⲉ ⲉϩⲣⲁⲓ ⲁⲩⲱ ⲟⲩⲡⲛⲉⲩⲙⲁ ⲛϩⲁⲧⲏⲩ ϯⲛⲁⲧⲁⲁϥ ⲛⲥⲉ**ⲃⲱⲣϭ**",
+      "english": "Say to them that plaster it, It shall fall; and there shall be a flooding rain; and I will send great stones upon their joinings, and they shall fall; and there shall be a sweeping wind, and it shall be broken.",
+      "source": "Ezekiel 13",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        10.929
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        10.175
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        10.046
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲃⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲃⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲃⲱⲣϭ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲱⲣϭ",
+          "ⲥⲉ_1_pre_ⲃⲱⲣϭ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲃⲱⲣϭ",
+          "ⲃⲱⲣϭ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17583,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "56580",
+    "egy_lemma": "brg",
+    "english": "to be open",
+    "german": "geöffnet sein (von Türen)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/56580"
+  }
+}

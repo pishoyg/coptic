@@ -1,0 +1,90 @@
+{
+  "id": "C6708",
+  "forms": [
+    {
+      "id": "CF15461",
+      "orth": "ϩⲛⲉ-",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉϩⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7268,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲛⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.85,
+        "rank": 813,
+        "count": 134
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7422",
+      "bibliography": "CD 690a-b; CED 288; KoptHWb 375; DELC 303b; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲓⲟⲩⲱϣ ⲇⲉ ⲉⲣⲗⲁⲁⲩ ⲁϫⲛⲧⲉⲕⲅⲛⲱⲙⲏ ϫⲉⲛⲛⲉⲡⲉⲕⲁⲅⲁⲑⲟⲛ ϣⲱⲡⲉ ⲕⲁⲧⲁⲟⲩϩⲧⲟⲣ . ⲁⲗⲗⲁ ⲉ**ϩⲛⲁ**ⲕ .",
+      "english": "But I was willing to do nothing without your consent, that your goodness would not be as of necessity, but of free will.",
+      "source": "57_Philemon_1",
+      "urn": "urn:cts:copticLit:nt.phlm.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲙⲟⲛ ⲇⲉ ⲁⲗⲗⲁ ϯⲛⲁϣⲁϫⲉ ⲙⲛⲡϫⲟⲉⲓⲥ ϯⲛⲁϫⲡⲓⲟ ⲇⲉ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲉϣⲱⲡⲉ ⲉ**ϩⲛⲁ**ϥ",
+      "english": "Nevertheless I will speak to the Lord, and I will reason before him, if he will.",
+      "source": "Job 13",
+      "urn": "urn:cts:copticLit:ot.job.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲛⲧⲉⲣⲉⲧⲉⲧⲛϫⲉⲛⲁⲓ ⲛⲁⲓ ⲁⲓϫⲟⲟⲥ ⲛⲏⲧⲛ ϫⲉⲁϥⲉⲓ ⲙⲉⲛ ⲛϭⲓϩⲏⲗⲓⲁⲥ · ⲁⲩⲱ ⲁϥⲥⲟⲃⲧⲉ ⲛϩⲱⲃ ⲛⲓⲙ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ · ⲁⲩⲱ ⲁⲩⲉⲓⲣⲉ ⲛⲁϥ ⲛⲧϩⲉ ⲉⲧⲉ**ϩⲛⲁ**ⲩ ·",
+      "english": "But when ye said this unto me, I said unto you: 'Elias verily is come and hath made ready all things, as it standeth written, and they have done unto him as they would.'",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6707",
+      "label": "ϩⲛⲉ-",
+      "pos": "N",
+      "gloss": "will, desire"
+    },
+    {
+      "target": "C6709",
+      "label": "ⲣϩⲛⲁ⸗",
+      "pos": "V",
+      "gloss": "desire, be willing"
+    }
+  ],
+  "etym": {
+    "egy_num": "105900",
+    "egy_lemma": "ḥn",
+    "demo_num": "d4104",
+    "demo_lemma": "ḥn",
+    "english": "to equip; to protect; to command",
+    "german": "ordnen; anordnen; versehen (mit etwas); schützen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/105900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4104"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "C1234",
+  "forms": [
+    {
+      "id": "CF3868",
+      "orth": "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10855,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1429",
+      "bibliography": "CD 110a; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϣⲁϫⲉ ⲉⲧⲉⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲡⲁⲙⲃⲱ ⲛⲁϫⲟⲟⲩ ⲛⲁⲥ ⲉⲧⲃⲉⲧⲛⲟⲩϥⲣⲉ ⲛⲧⲉⲥⲯⲩⲭⲏ ⲛⲉϣⲁⲣⲉⲁⲡⲁ ⲙⲁⲣⲧⲩⲣⲟⲥ ⲧⲁⲩⲟⲩⲟⲟⲩ ⲉⲣⲟⲥ ⲙⲙⲛⲧⲟⲩⲉⲛⲓⲛ ⲉⲧⲃⲉⲡⲁⲓ ⲁⲧϣⲉⲉⲣⲉ ϣⲏⲙ ⲧⲥⲁⲃⲟⲗ ⲉⲧ**ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ** .",
+      "english": "...",
+      "source": "Life of Hilaria: Rylands Crawford 35 (Giron)",
+      "urn": "urn:cts:copticLit:lives.hilaria.monbec:23-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲙⲧⲉ",
+        1,
+        13.587
+      ],
+      [
+        "ⲃⲟⲗ",
+        1,
+        11.535
+      ],
+      [
+        "ⲥⲁ",
+        1,
+        11.258
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲙⲛⲕⲏⲙⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10445,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1227",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black"
+    },
+    {
+      "target": "C1228",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, female; black thing"
+    },
+    {
+      "target": "C1229",
+      "label": "ⲕⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "black person, male; black thing"
+    },
+    {
+      "target": "C1232",
+      "label": "ⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "the black (land), Egypt"
+    },
+    {
+      "target": "C1231",
+      "label": "ⲕⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1236",
+      "label": "ⲕⲙⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1225",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "V",
+      "gloss": "be, become black"
+    },
+    {
+      "target": "C1226",
+      "label": "ⲕⲙⲟⲙ",
+      "pos": "N",
+      "gloss": "blackness"
+    },
+    {
+      "target": "C1230",
+      "label": "ⲣⲕⲁⲙⲉ",
+      "pos": "V",
+      "gloss": "be black"
+    },
+    {
+      "target": "C1233",
+      "label": "ⲣⲙⲛⲕⲏⲙⲉ",
+      "pos": "N",
+      "gloss": "Egyptian"
+    },
+    {
+      "target": "C1235",
+      "label": "ⲭⲏⲙⲓ",
+      "pos": "N",
+      "gloss": "brazier, hearth"
+    }
+  ]
+}

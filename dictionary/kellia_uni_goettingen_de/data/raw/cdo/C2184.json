@@ -1,0 +1,288 @@
+{
+  "id": "C2184",
+  "forms": [
+    {
+      "id": "CF6082",
+      "orth": "ⲣⲉϥⲙⲉⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5823,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2526",
+      "bibliography": "CD 200a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡⲱⲛϩ ϩⲓⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲉⲣⲉⲛⲉϩⲓⲟⲟⲩⲉ ⲇⲉ ⲛ**ⲣⲉϥⲙⲉⲉⲩⲉ** ⲉⲡⲡⲉⲧϩⲟⲟⲩ ϣⲟⲟⲡ ⲉⲡⲙⲟⲩ",
+      "english": "In the ways of righteousness is life; but the ways of those that remember injuries lead to death.",
+      "source": "Proverbs 12",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲛⲉⲧⲉⲛⲥⲉⲧⲁⲉⲓⲟ ⲁⲛ ⲛϩⲉⲛⲥⲟⲟⲩϩⲥ ⲕⲱ ⲛⲥⲱⲟⲩ ⲛϩⲉⲛϣⲟϫⲛⲉ ϣⲁⲣⲉⲡϣⲟϫⲛⲉ ⲇⲉ ⲙⲟⲩⲛ ⲉⲃⲟⲗ ϩⲛⲛϩⲏⲧ ⲛⲛ**ⲣⲉϥⲙⲉⲉⲩⲉ**",
+      "english": "They that honour not councils put off deliberation; but counsel abides in the hearts of counsellors.",
+      "source": "Proverbs 15",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ⲣⲉϥⲙⲉⲉⲩⲉ** ⲉⲡⲉⲧϩⲟⲟⲩ ϥⲛⲁϯⲟⲥⲉ ⲉⲙⲁⲧⲉ ⲉϥϣⲁⲛϫⲱϩⲙ ⲇⲉ ⲉϥⲛⲁⲟⲩⲉϩⲙⲧⲉϥⲯⲩⲭⲏ",
+      "english": "A malicious man shall be severely punished, and if he commit injury, he shall also lose his life.",
+      "source": "Proverbs 19",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲣⲁⲛⲟⲙⲉⲓ",
+        1,
+        15.791
+      ],
+      [
+        "ⲥⲱϣ",
+        1,
+        11.18
+      ],
+      [
+        "ⲡ",
+        7,
+        10.919
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        10.172
+      ],
+      [
+        "ⲡⲉⲧϩⲟⲟⲩ",
+        1,
+        10.147
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        2,
+        9.516
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        8.414
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.238
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        6.947
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲩ",
+        1,
+        3.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲣⲉϥⲙⲉⲉⲩⲉ_0_node",
+          4
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          "ⲣⲉϥⲙⲉⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          "ⲣⲉϥⲙⲉⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲙⲉⲉⲩⲉ_0_node",
+          "ⲉ_1_post_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲙⲉⲉⲩⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5382,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2189",
+      "label": "ϣⲉⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "pos": "N",
+      "gloss": "remembrance"
+    },
+    {
+      "target": "C2190",
+      "label": "ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "pos": "N",
+      "gloss": "remembrance"
+    },
+    {
+      "target": "C2185",
+      "label": "ϯⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "cause thought, suggest, remind"
+    },
+    {
+      "target": "C2178",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think"
+    },
+    {
+      "target": "C2181",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2179",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉϩⲟⲩⲛ ⲉ-)",
+      "pos": "V",
+      "gloss": "think, design against"
+    },
+    {
+      "target": "C2180",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "think upon, consider"
+    },
+    {
+      "target": "C2182",
+      "label": "ⲙⲉⲉⲩⲉ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2183",
+      "label": "ⲙⲛⲧⲁⲧⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "absence of thought"
+    },
+    {
+      "target": "C2186",
+      "label": "ⲣⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think, esteem"
+    },
+    {
+      "target": "C2187",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "have mind of, remember"
+    },
+    {
+      "target": "C2188",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "remembrance, commemoration"
+    }
+  ]
+}

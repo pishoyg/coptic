@@ -1,0 +1,136 @@
+{
+  "id": "C6668",
+  "forms": [
+    {
+      "id": "CF15380",
+      "orth": "ϩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 112.76,
+        "rank": 16,
+        "count": 17791
+      }
+    },
+    {
+      "id": "CF15381",
+      "orth": "ⲛϩⲏⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 21.96,
+        "rank": 63,
+        "count": 3464
+      }
+    },
+    {
+      "orth": "ϧⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 184.3,
+        "rank": 10,
+        "count": 15631
+      }
+    },
+    {
+      "orth": "ⲛϧⲏⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 18.19,
+        "rank": 78,
+        "count": 1543
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7381",
+      "bibliography": "CD 683a-685a; CED 285; KoptHWb 375; DELC 303a; ChLCS 92a"
+    },
+    {
+      "id": "CS7382",
+      "bibliography": "CD 683b-684a; KoptHWb 375; DELC 303a; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϫⲁⲓ **ϧⲉⲛ**ⲡϭⲟⲉⲓⲥ ⲁⲙⲏⲛ .",
+      "english": "Farewell in the Lord: amen.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲁϥⲉⲓ ⲉⲃⲟⲗ **ϩⲛ**ⲛⲉϥⲙⲉⲣⲟⲥ ·",
+      "english": "which came from his part.",
+      "source": "Abraham Our Father: YA 518-20",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:1-4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϧⲉⲛ**ϯⲟⲩⲛⲟⲩ ⲁⲡⲓⲥⲱⲧⲏⲣ ⲉⲣⲁⲛⲁⲭⲱⲣⲓⲛ ⲛⲁϥ .",
+      "english": "At once the Savior withdrew.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ϩⲙ**ⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲓⲙ",
+      "english": "In every temptation,",
+      "source": "Apophthegmata Patrum Sahidic 135: N 305",
+      "urn": "urn:cts:copticLit:ap.135.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲇⲉ ϩⲓⲛⲁ ⲛⲧⲉϥϣⲧⲉⲙϣⲱⲡⲓ **ϧⲉⲛ**ⲧⲫⲣⲱ ⲛϫⲉⲡⲉⲧⲉⲛⲫⲱⲧ .",
+      "english": "Pray that your flight won't be in the winter.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲕⲛⲁϭⲱ ⲉϩⲣⲁⲓ **ⲛϩⲏⲧ**ⲟⲩ ⲡⲉ",
+      "english": "you would stay among them,",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6670",
+      "label": "ϩⲣⲁⲓ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in"
+    },
+    {
+      "target": "C6671",
+      "label": "ⲉϩⲛ-",
+      "pos": "PREP",
+      "gloss": "in, on"
+    },
+    {
+      "target": "C6669",
+      "label": "ⲉⲃⲟⲗ ϩⲛ-",
+      "pos": "PREP",
+      "gloss": "from in, from"
+    }
+  ],
+  "etym": {
+    "egy_num": "65370",
+    "egy_lemma": "m-ẖnw",
+    "demo_num": "d4768",
+    "demo_lemma": "ẖn",
+    "english": "in the interior of; within; out of (spatial)",
+    "german": "im Inneren; innerhalb; in; aus (lokal)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/65370",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4768"
+  }
+}

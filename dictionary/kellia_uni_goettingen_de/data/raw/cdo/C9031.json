@@ -1,0 +1,148 @@
+{
+  "id": "C9031",
+  "forms": [
+    {
+      "id": "CF22296",
+      "orth": "ⲉⲡⲟⲓⲕⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF22300",
+      "orth": "ⲉⲡⲟⲓⲕⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7268,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF22297",
+      "orth": "ⲉⲡⲉⲅⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22298",
+      "orth": "ⲉⲡⲏⲅⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22299",
+      "orth": "ⲉⲡⲟⲓⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22301",
+      "orth": "ⲓⲡⲏⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11101",
+      "bibliography": "DDGLC",
+      "cu_ID": "1929"
+    },
+    {
+      "id": "CS11102",
+      "bibliography": "DDGLC",
+      "cu_ID": "8228"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲏ ϩⲉⲛ**ⲉⲡⲟⲓⲕⲓⲟⲛ** ⲟⲛ ⲛⲉ ⲛϯⲙⲉ ·",
+      "english": "Or it&apos;s also farmsteads of a village.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲙⲉ",
+        2,
+        16.554
+      ],
+      [
+        "ⲏ",
+        2,
+        11.479
+      ],
+      [
+        "ⲟⲛ",
+        2,
+        11.227
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲉⲡⲟⲓⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲡⲟⲓⲕⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲟⲛ_1_post_ⲉⲡⲟⲓⲕⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲉⲡⲟⲓⲕⲓⲟⲛ",
+          "ⲉⲡⲟⲓⲕⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲉⲡⲟⲓⲕⲓⲟⲛ_0_node",
+          "ⲟⲛ_1_post_ⲉⲡⲟⲓⲕⲓⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6817,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "785",
+    "grl_lemma": "ἐποίκιον",
+    "grl_meaning": "outhouse, farmstead",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 675a; Preisigke 1:589"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C969",
+  "forms": [
+    {
+      "id": "CF3287",
+      "orth": "ⲉⲓⲱⲣⲙ (ⲉϩⲣⲁⲓ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1129",
+      "bibliography": "CD 84b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϫⲏⲕ ⲇⲉ ⲉⲃⲟⲗ ⲙⲡⲛⲉⲩⲙⲁ ⲉϥⲟⲩⲁⲁⲃ **ⲁϥⲉⲓⲱⲣⲙ **ⲉϩⲣⲁⲓ**** ⲉⲧⲡⲉ ⲁϥⲛⲁⲩ ⲉⲡⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ . ⲁⲩⲱ ⲓⲏⲥⲟⲩⲥ ⲉϥⲁϩⲉⲣⲁⲧϥ ⲛⲥⲁⲟⲩⲛⲁⲙ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "But he, being full of the Holy Spirit, looked up steadfastly into heaven, and saw the glory of God, and Jesus standing on the right hand of God,",
+      "source": "44_Acts of the Apostles_7",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C971",
+      "label": "ⲉⲓⲁⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C964",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "stare, be astonished, dumbfounded"
+    },
+    {
+      "target": "C970",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "look"
+    },
+    {
+      "target": "C965",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉ-)",
+      "pos": "V",
+      "gloss": "follow (with the eyes), look intently"
+    },
+    {
+      "target": "C968",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "look intently"
+    },
+    {
+      "target": "C967",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wonder, expect"
+    },
+    {
+      "target": "C966",
+      "label": "ⲉⲓⲱⲣⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "stare after"
+    }
+  ]
+}

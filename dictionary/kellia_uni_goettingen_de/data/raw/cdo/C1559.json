@@ -1,0 +1,131 @@
+{
+  "id": "C1559",
+  "forms": [
+    {
+      "id": "CF4566",
+      "orth": "ⲗⲟ (ⲙⲙⲁⲩ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4567",
+      "orth": "ⲗⲁ (ⲙⲙⲁⲩ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲙⲙⲁⲩ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1818",
+      "bibliography": "CD 136ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲙⲏⲛ ϯϫⲱⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲛⲛⲉⲧⲉⲓⲅⲉⲛⲉⲁ **ⲗⲟ **ⲙⲙⲁⲩ**** ϣⲁⲛⲧⲉⲛⲁⲓ ⲧⲏⲣⲟⲩ ϣⲱⲡⲉ .",
+      "english": "Most certainly I say to you, this generation will not pass away until all these things happen.",
+      "source": "41_Mark_13",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲟⲩⲱϣ ⲉⲧⲣⲉⲧⲛⲧⲁⲙⲟⲛ ϫⲉⲉⲧⲃⲉⲟⲩ **ⲁⲥⲗⲟ **ⲙⲙⲁⲩ**** ϩⲙⲡⲧⲱϣ ⲛⲧⲁⲧⲉⲧⲛⲧⲟϣⲥ ⲉⲣⲟϥ ·",
+      "english": "I want you to tell me why she refused the post that was assigned.",
+      "source": "Abraham Our Father YA 551-54",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:42-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲡⲉ ⲛⲙⲡⲕⲁϩ ⲥⲉⲛⲁⲗⲟ ⲙⲙⲁⲩ ⲛⲁϣⲁϫⲉ ⲇⲉ **ⲛⲥⲉⲛⲁⲗⲟ **ⲙⲙⲁⲩ**** ⲁⲛ .",
+      "english": "Heaven and earth will pass away, but my words will not pass away.",
+      "source": "Mark Chapter 13",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1547",
+      "label": "ⲗⲟ",
+      "pos": "V",
+      "gloss": "cease, stop; cease, be ended, healed"
+    },
+    {
+      "target": "C1552",
+      "label": "ⲗⲟ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "cease from, leave, allow"
+    },
+    {
+      "target": "C1553",
+      "label": "ⲗⲟ (ϩⲁⲃⲟⲗ-)",
+      "pos": "V",
+      "gloss": "depart from"
+    },
+    {
+      "target": "C1554",
+      "label": "ⲗⲟ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "cease, depart from"
+    },
+    {
+      "target": "C1557",
+      "label": "ⲗⲟ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "cease from"
+    },
+    {
+      "target": "C1556",
+      "label": "ⲗⲟ (ϩⲓⲣⲛ-)",
+      "pos": "V",
+      "gloss": "depart from above, upon"
+    },
+    {
+      "target": "C1555",
+      "label": "ⲗⲟ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "cease from, quit"
+    },
+    {
+      "target": "C1558",
+      "label": "ⲗⲟ (ⲁⲃⲁⲗ)",
+      "pos": "V",
+      "gloss": "cease (from sickness), be healed"
+    },
+    {
+      "target": "C1548",
+      "label": "ⲗⲟ (ⲉ-)",
+      "pos": "V",
+      "gloss": "cease from, leave"
+    },
+    {
+      "target": "C1549",
+      "label": "ⲗⲟ (ⲛ-)",
+      "pos": "V",
+      "gloss": "cease, recede from"
+    },
+    {
+      "target": "C1560",
+      "label": "ⲗⲟ (ⲛⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "cease"
+    },
+    {
+      "target": "C1550",
+      "label": "ⲗⲟ (ⲟⲩⲃⲉ-)",
+      "pos": "V",
+      "gloss": "cease from opposing"
+    },
+    {
+      "target": "C1551",
+      "label": "ⲗⲟ (ⲟⲩⲧⲉ-)",
+      "pos": "V",
+      "gloss": "cease from among"
+    }
+  ]
+}

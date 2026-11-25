@@ -1,0 +1,82 @@
+{
+  "id": "C1203",
+  "forms": [
+    {
+      "id": "CF3793",
+      "orth": "ⲕⲱⲗϩ (ⲉϩⲟⲩⲛ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲟⲩⲛ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1394",
+      "bibliography": "CD 107a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲁϩⲉⲣⲁⲧϥ **ⲁϥⲕⲱⲗϩ **ⲉϩⲟⲩⲛ**** ⲉⲡⲣⲟ ⲛⲁⲧϣⲁⲩ ⲛⲟⲩⲟⲩⲛⲟⲩ",
+      "english": "and he stood still and knocked at the door for a considerable space of time,",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1205",
+      "label": "ⲕⲗϩⲉ",
+      "pos": "N",
+      "gloss": "blow"
+    },
+    {
+      "target": "C1197",
+      "label": "ⲕⲱⲗϩ",
+      "pos": "V",
+      "gloss": "strike, knock; strike, clap"
+    },
+    {
+      "target": "C1204",
+      "label": "ⲕⲱⲗϩ",
+      "pos": "N",
+      "gloss": "blow, knock"
+    },
+    {
+      "target": "C1200",
+      "label": "ⲕⲱⲗϩ (ϧⲉⲛ-)",
+      "pos": "V",
+      "gloss": "strike upon, in"
+    },
+    {
+      "target": "C1201",
+      "label": "ⲕⲱⲗϩ (ϩⲓⲣⲉⲛ-)",
+      "pos": "V",
+      "gloss": "knock on, at"
+    },
+    {
+      "target": "C1198",
+      "label": "ⲕⲱⲗϩ (ⲉϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "strike upon"
+    },
+    {
+      "target": "C1202",
+      "label": "ⲕⲱⲗϩ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "knock outwards"
+    },
+    {
+      "target": "C1199",
+      "label": "ⲕⲱⲗϩ (ⲛ-)",
+      "pos": "V",
+      "gloss": "knock for"
+    }
+  ]
+}

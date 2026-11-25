@@ -1,0 +1,104 @@
+{
+  "id": "C10219",
+  "forms": [
+    {
+      "id": "CF27009",
+      "orth": "ⲡⲛⲉⲩⲙⲁⲧⲟⲫⲟⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27012",
+      "orth": "ⲡⲛⲉⲩⲙⲁⲧⲟⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27010",
+      "orth": "ⲡ︦ⲛ︦ⲁ︦ⲧⲟⲫⲟⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27011",
+      "orth": "ⲡⲛⲉⲩⲙⲁⲧⲟⲫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13619",
+      "bibliography": "DDGLC",
+      "cu_ID": "5421"
+    },
+    {
+      "id": "CS13620",
+      "bibliography": "DDGLC",
+      "cu_ID": "3050"
+    },
+    {
+      "id": "CS13621",
+      "bibliography": "DDGLC",
+      "cu_ID": "10784"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲉ",
+        4,
+        12.238
+      ],
+      [
+        "ⲫⲁⲓ",
+        2,
+        10.658
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        2,
+        10.487
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        9.049
+      ],
+      [
+        ".",
+        2,
+        7.616
+      ],
+      [
+        "ⲙ",
+        2,
+        7.583
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲛⲉⲩⲙⲁⲧⲟⲫⲟⲣⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "1777",
+    "grl_lemma": "πνευματοφόρος",
+    "grl_meaning": "bearing the spirit, inspired",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1424b"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "C5716",
+  "forms": [
+    {
+      "id": "CF13410",
+      "orth": "ⲣⲉϥϣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6394",
+      "bibliography": "CD 548b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5713",
+      "label": "ϣⲓ",
+      "pos": "V",
+      "gloss": "measure, weigh"
+    },
+    {
+      "target": "C5714",
+      "label": "ϣⲓ",
+      "pos": "N",
+      "gloss": "measure, weight"
+    },
+    {
+      "target": "C5722",
+      "label": "ϣⲓⲧⲉϥ",
+      "pos": "N",
+      "gloss": "measuring, weighing(?)"
+    },
+    {
+      "target": "C5721",
+      "label": "ϫⲓϣⲓ",
+      "pos": "V",
+      "gloss": "take measure, estimate"
+    },
+    {
+      "target": "C5719",
+      "label": "ϯϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, restrict"
+    },
+    {
+      "target": "C5715",
+      "label": "ⲁⲧϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured, immeasurable"
+    },
+    {
+      "target": "C5720",
+      "label": "ⲁⲧϯϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured"
+    },
+    {
+      "target": "C5717",
+      "label": "ⲕⲁϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, limit"
+    },
+    {
+      "target": "C5718",
+      "label": "ⲣϣⲓ",
+      "pos": "V",
+      "gloss": "make, amount to weight"
+    }
+  ]
+}

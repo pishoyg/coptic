@@ -1,0 +1,62 @@
+{
+  "id": "C1878",
+  "forms": [
+    {
+      "id": "CF5395",
+      "orth": "ⲣⲉϥϫⲓⲙⲗⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2185",
+      "bibliography": "CD 165b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1877",
+      "label": "ϫⲓⲙⲗⲁϩ",
+      "pos": "V",
+      "gloss": "fight"
+    },
+    {
+      "target": "C1874",
+      "label": "ⲙⲗⲁϧ",
+      "pos": "V",
+      "gloss": "fight, quarrel"
+    },
+    {
+      "target": "C1875",
+      "label": "ⲙⲗⲁϩ",
+      "pos": "N",
+      "gloss": "battle, battle-array, quarrel"
+    },
+    {
+      "target": "C1876",
+      "label": "ⲣⲉϥⲙⲗⲁϧ",
+      "pos": "N",
+      "gloss": "fighter"
+    }
+  ]
+}

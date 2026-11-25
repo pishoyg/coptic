@@ -1,0 +1,255 @@
+{
+  "id": "C3804",
+  "forms": [
+    {
+      "id": "CF9533",
+      "orth": "ϩⲓⲥⲟⲑⲛⲉϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6284,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4317",
+      "bibliography": "CD 363b; ChLCS 51a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϩⲱⲃ ⲉϥⲉⲛϣⲁϣⲓ ⲡⲉ ⲉϩⲓⲥⲟⲑⲛⲉϥ ϧⲉⲛⲡⲉⲧϩⲏⲡ ⲛⲥⲁⲟⲩⲁⲧⲁϭⲛⲓ ⲉⲩⲉ**ϩⲓⲥⲟⲑⲛⲉϥ** ⲉⲣⲟϥ ϧⲉⲛⲟⲩⲉⲁⲡⲓⲛⲁ ⲛⲛⲟⲩⲉⲣϩⲟϯ .",
+      "english": "who have sharpened their tongues as a sword; they have bent their bow maliciously;",
+      "source": "19_Psalmi_63",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:63",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲫⲛⲟⲩϯ ⲫⲏ ⲉⲧⲁϥϭⲓⲙⲱⲓⲧ ϧⲁϫⲱⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲭⲏⲙⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲱⲟⲩ ⲛⲧⲉⲟⲩⲧⲁⲡ ⲛⲟⲩⲱⲧ ⲛⲧⲁϥ ⲉϥⲉⲟⲩⲱⲙ ⲛⲛⲓⲉⲑⲛⲟⲥ ⲛⲧⲉⲛⲉϥϫⲁϫⲓ ⲟⲩⲟϩ ⲉϥⲉⲟⲩⲱⲙ ⲙⲡⲱⲧ ⲛⲧⲉⲛⲏ ⲉⲧϧⲟⲧ ⲛⲧⲱⲟⲩ ⲟⲩⲟϩ ⲛϧⲣⲏⲓ ϧⲉⲛⲛⲉϥⲃⲟⲗⲓⲥ ⲉϥⲉ**ϩⲓⲥⲟⲑⲛⲉϥ** ⲉⲛⲉϥϫⲁϫⲓ",
+      "english": "God led him out of Egypt; he has as it were the glory of a unicorn: he shall consume the nations of his enemies, and he shall drain their marrow, and with his darts he shall shoot through the enemy.",
+      "source": "04_Numeri_24",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:24",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲁⲧⲁϭⲛⲓ",
+        1,
+        17.695
+      ],
+      [
+        "ⲃⲟⲗⲓⲥ",
+        1,
+        17.11
+      ],
+      [
+        "ϩⲏⲡ",
+        1,
+        12.236
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        10.666
+      ],
+      [
+        "ϫⲁϫⲓ",
+        1,
+        10.651
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        9.303
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        7.335
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        7.22
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.117
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ⲁ",
+        1,
+        3.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲟⲧⲉ",
+        1,
+        13.884
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        10.843
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲩⲉ_1_pre_ϩⲓⲥⲟⲑⲛⲉϥ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲑⲛⲉϥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲩⲉ_1_pre_ϩⲓⲥⲟⲑⲛⲉϥ",
+          "ϩⲓⲥⲟⲑⲛⲉϥ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲥⲟⲑⲛⲉϥ_0_node",
+          "ⲉⲣⲟ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          "ϧⲉⲛ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲓⲥⲟⲑⲛⲉϥ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲥⲟⲑⲛⲉϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5771,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3805",
+      "label": "ⲙⲟⲕⲓ ⲛⲭⲁⲥⲟⲑⲛⲉϥ",
+      "pos": "N",
+      "gloss": "quiver"
+    },
+    {
+      "target": "C3803",
+      "label": "ⲥⲟⲑⲛⲉϥ ⲛϯ",
+      "pos": "N",
+      "gloss": "weapon for fighting"
+    },
+    {
+      "target": "C3801",
+      "label": "ⲥⲟⲧⲃⲉϥ",
+      "pos": "N",
+      "gloss": "tool, weapon"
+    },
+    {
+      "target": "C3802",
+      "label": "ⲥⲟⲧⲃⲉϥ ⲙⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "weapon for fighting"
+    }
+  ]
+}

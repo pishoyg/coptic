@@ -1,0 +1,224 @@
+{
+  "id": "C5753",
+  "forms": [
+    {
+      "id": "CF13491",
+      "orth": "ⲁⲧϣⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7977,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6431",
+      "bibliography": "CD 552a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉϥⲟⲓⲕⲟⲛⲟⲙⲓⲁ ⲅⲁⲣ ⲟⲩⲁⲧⲥⲙⲟⲧ ⲧⲉ · ⲁⲩⲱ ⲟⲩ**ⲁⲧϣⲓⲃⲉ** ⲧⲉ ⲧⲉⲫⲩⲥⲓⲥ ·",
+      "english": "For His administration (or, economy) is beyond compare, and His Nature is unchangeable.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲧⲡⲟⲣϣ ⲛⲁⲛ ⲉⲃⲟⲗ ⲙⲡϩⲟⲟⲩ ϩⲛⲙⲡⲏⲩⲉ · ⲙⲛⲡ · ⲕⲁⲧⲁⲡⲟⲩϩⲉⲥⲁϩⲛⲉ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲟⲩⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲛⲟⲩⲱⲧ ⲡⲉ · ⲟⲩϫⲟⲉⲓⲥ ⲛⲟⲩⲱⲧ ⲡⲉ · ⲟⲩⲙⲛⲧⲣⲣⲟ ⲛⲟⲩⲱⲧ ⲧⲉ ⲉⲥⲙⲏⲛ ⲉⲃⲟⲗ · ⲉⲥϣⲟⲟⲡ ⲛⲧⲩⲡⲟⲥ ⲛⲧⲉⲧⲣⲓⲁⲥ ⲉⲧⲟⲩⲁⲁⲃ · ⲟⲩⲟⲩⲥⲓⲁ ⲛⲟⲩⲱⲧ ⲧⲉ · ⲙⲛⲡⲉⲓⲱⲧ · ⲙⲛⲡϣⲏⲣⲉ · ⲙⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲛⲁⲧⲡⲱⲣϫ · ⲛ**ⲁⲧϣⲓⲃⲉ** · ⲛⲁⲧⲡⲱϣ · ⲛⲁⲧϭⲛⲣⲁⲧⲥ · ⲛⲁⲧϩⲉϩϩⲱⲧⲥ · ⲛⲁⲧⲟⲣⲃⲥ ⲉϩⲟⲩⲛ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲧⲡⲱϣ",
+        1,
+        19.598
+      ],
+      [
+        "ⲫⲩⲥⲓⲥ",
+        1,
+        13.276
+      ],
+      [
+        "ⲡⲱⲣϫ",
+        1,
+        12.276
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        11.558
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲓⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉ_2_post_ⲫⲩⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲫⲩⲥⲓⲥ_1_post_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲧⲡⲱϣ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          "ⲟⲩ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          "ⲁⲧϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧϣⲓⲃⲉ_0_node",
+          "ⲧⲉ_2_post_ⲫⲩⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲫⲩⲥⲓⲥ",
+          "ⲫⲩⲥⲓⲥ_1_post_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϣⲓⲃⲉ",
+          "ⲁⲧϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧϣⲓⲃⲉ_0_node",
+          "ⲛ_1_post_ⲁⲧϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧϣⲓⲃⲉ",
+          "ⲁⲧⲡⲱϣ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7528,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5756",
+      "label": "ϣⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "change, exchange, requital"
+    },
+    {
+      "target": "C5755",
+      "label": "ϣⲃⲧⲥ",
+      "pos": "N",
+      "gloss": "change"
+    },
+    {
+      "target": "C12101",
+      "label": "ϣⲉⲃⲓⲟ",
+      "pos": "V",
+      "gloss": "change"
+    },
+    {
+      "target": "C5751",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "change, be changed, separate"
+    },
+    {
+      "target": "C5752",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "change, difference"
+    },
+    {
+      "target": "C5754",
+      "label": "ϣⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "changed, disguised person, hypocrite, actor"
+    },
+    {
+      "target": "C5758",
+      "label": "ϯϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "reward, requite"
+    },
+    {
+      "target": "C5759",
+      "label": "ⲇⲓϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "take requital, be repaid"
+    },
+    {
+      "target": "C5757",
+      "label": "ⲣϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "be instead, replace"
+    }
+  ]
+}

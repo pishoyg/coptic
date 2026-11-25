@@ -1,0 +1,139 @@
+{
+  "id": "C1159",
+  "forms": [
+    {
+      "id": "CF3704",
+      "orth": "ⲕⲉⲗⲉⲛⲕⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16845,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1347",
+      "bibliography": "CD 104a; KoptHWb 61"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲧⲁⲛⲁϩⲃ ⲡⲉ ⲛⲟⲩϩⲉ ⲉⲃⲟⲗ ⲛⲧⲁⲕⲗⲓⲥ ⲁⲩⲱ ⲉⲣⲉⲡⲁϭⲃⲟⲓ ⲟⲩⲱϣⲃ ⲉⲃⲟⲗ ϩⲙⲡⲁ**ⲕⲉⲗⲉⲛⲕⲉϩ**",
+      "english": "let them my shoulder start from the blade-bone, and my arm be crushed off from the elbow.",
+      "source": "Job 31",
+      "urn": "urn:cts:copticLit:ot.job.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧϩⲟⲧⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ⲛⲉⲣⲉ",
+        1,
+        11.919
+      ],
+      [
+        "ⲟⲩⲱϣⲃ",
+        1,
+        11.098
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_1_pre_ⲕⲉⲗⲉⲛⲕⲉϩ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲉⲛⲕⲉϩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲕⲉⲗⲉⲛⲕⲉϩ",
+          "ⲕⲉⲗⲉⲛⲕⲉϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16447,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1161",
+      "label": "ϩⲁⲙⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt-smith, smith"
+    },
+    {
+      "target": "C1158",
+      "label": "ⲕⲉⲗⲓ",
+      "pos": "N",
+      "gloss": "limb, trunk"
+    },
+    {
+      "target": "C1160",
+      "label": "ⲕⲉⲗⲟⲩⲛϫϥ",
+      "pos": "N",
+      "gloss": "jawbone"
+    },
+    {
+      "target": "C1156",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    },
+    {
+      "target": "C1157",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "C7177",
+  "forms": [
+    {
+      "id": "CF16413",
+      "orth": "ϯϫⲗⲁⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7920",
+      "bibliography": "CD 767b; KoptHWb 420; ChLCS 101b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7172",
+      "label": "ϩⲛ ⲟⲩϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "ADV",
+      "gloss": "continuously; strenuously"
+    },
+    {
+      "target": "C7173",
+      "label": "ϫⲓⲛϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "persistence"
+    },
+    {
+      "target": "C7176",
+      "label": "ϫⲗⲁⲕ",
+      "pos": "N",
+      "gloss": "stretching, strain, punishment"
+    },
+    {
+      "target": "C7178",
+      "label": "ϫⲟⲗⲕⲥ",
+      "pos": "N",
+      "gloss": "strain (cord), stringency (exercise)"
+    },
+    {
+      "target": "C7170",
+      "label": "ϫⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "stretch, extend; sew"
+    },
+    {
+      "target": "C7171",
+      "label": "ϫⲱⲗⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "stretching, extent; endurance"
+    },
+    {
+      "target": "C7174",
+      "label": "ϭⲱⲗⲕ",
+      "pos": "N",
+      "gloss": "strain, tension"
+    },
+    {
+      "target": "C7175",
+      "label": "ⲟ ⲛϫⲱⲗⲕ",
+      "pos": "VSTAT",
+      "gloss": "be in anxiety(?)"
+    }
+  ]
+}

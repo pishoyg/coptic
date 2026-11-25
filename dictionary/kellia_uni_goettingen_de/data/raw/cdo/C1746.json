@@ -1,0 +1,245 @@
+{
+  "id": "C1746",
+  "forms": [
+    {
+      "id": "CF5053",
+      "orth": "ⲗⲱϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8561,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲉϩⲙ-",
+      "dialect": "S",
+      "id": "1018.1"
+    },
+    {
+      "orth": "ⲗⲟϩⲙ⸗",
+      "dialect": "S",
+      "id": "1018.2"
+    },
+    {
+      "orth": "ⲗⲁϩⲙ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15065,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲁϩⲉⲙ†",
+      "dialect": "S",
+      "id": "1018.4"
+    },
+    {
+      "orth": "ⲗⲟϩⲙ†",
+      "dialect": "S",
+      "id": "1018.5"
+    },
+    {
+      "orth": "ⲗⲱϧⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6466,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲁϧⲉⲙ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2813,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲗⲉϩⲙ⸗",
+      "dialect": "F",
+      "id": "1018.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2024",
+      "bibliography": "CD 149b; KoptHWb 82"
+    },
+    {
+      "id": "CS2025",
+      "bibliography": "CD 149b; KoptHWb 82"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲟⲩϣⲏⲣⲉ ⲉⲧⲛⲕⲟⲧⲕ ϩⲓⲧϩⲏ ⲛϩⲓⲏ ⲛⲓⲙ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲟⲩϫⲛⲏ ⲉϥⲟ ⲙⲡϣ**ⲗⲱϩⲙ** ⲛⲁⲓ ⲉⲧⲙⲉϩ ⲉⲃⲟⲗ ϩⲙⲡϭⲱⲛⲧ ⲙⲡϫⲟⲉⲓⲥ ⲁⲩⲱ ⲛⲉⲧϣⲟⲥⲙ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ",
+      "english": "Thy sons are the perplexed ones, that sleep at the top of every street as a half-boiled beet; they that are full of the anger of the Lord, caused to faint by the Lord God.",
+      "source": "Isaiah 51",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲁⲧⲉⲧⲉⲑⲩⲥⲓⲁ ϣⲱⲡⲉ ϣⲁⲣⲉⲡϣⲏⲣⲉ ⲙⲡⲟⲩⲏⲏⲃ ⲉⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲙⲡⲣⲱⲙⲉ ⲡⲉⲧⲉⲓⲣⲉ ⲛⲧⲉⲑⲩⲥⲓⲁ ϫⲉⲁⲩⲉⲁϥⲡⲓⲥⲉ ⲙⲡⲟⲩⲏⲏⲃ ⲁⲩⲱ ⲛϯⲛⲁϫⲓ ⲁⲛ ⲛⲧⲟⲟⲧⲕ ⲉⲃⲟⲗ ϩⲙⲡⲉⲭⲁⲗⲕⲓⲟⲛ ⲉⲧⲟ ⲛⲡⲉϣ**ⲗⲱϩⲙ**",
+      "english": "And before the fat was burnt for a sweet savour, the servant of the priest would come, and say to the man that sacrificed, Give flesh to roast for the priest, and I will by no means take of thee sodden flesh out of the caldron.",
+      "source": "I Samuel 2",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉϣ",
+        1,
+        15.139
+      ],
+      [
+        "ⲟ",
+        2,
+        11.805
+      ],
+      [
+        "ⲙⲉϩ",
+        1,
+        11.102
+      ],
+      [
+        "ϣ",
+        1,
+        10.661
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        9.993
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        8.732
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲱϩⲙ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲗⲱϩⲙ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲗⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲗⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲉϩ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡ_1_pre_ⲗⲱϩⲙ",
+          "ϣ_1_pre_ⲗⲱϩⲙ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲗⲱϩⲙ",
+          "ⲗⲱϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲗⲱϩⲙ_0_node",
+          "ⲛⲁⲓ_1_post_ⲗⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲗⲱϩⲙ",
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          "ⲙⲉϩ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8118,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1747",
+      "label": "ⲗⲁϩⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "boiled food"
+    }
+  ],
+  "etym": {
+    "demo_num": "d3693",
+    "demo_lemma": "lẖm",
+    "english": "[to cook]",
+    "german": "zerreiben(?); kochen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3693"
+  }
+}

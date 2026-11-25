@@ -1,0 +1,104 @@
+{
+  "id": "C8351",
+  "forms": [
+    {
+      "id": "CF19386",
+      "orth": "ⲁⲡⲓⲥⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF19387",
+      "orth": "ⲁⲡⲓⲥⲧⲉⲓ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF19388",
+      "orth": "ⲁⲡⲉⲓⲥⲧⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19389",
+      "orth": "ⲁⲡⲓⲥⲧⲓ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9585",
+      "bibliography": "DDGLC",
+      "cu_ID": "2526"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲓ ⲇⲉ ⲉⲩ**ⲁⲡⲓⲥⲧⲉⲓ** ⲉⲃⲟⲗ ⲙⲡⲣⲁϣⲉ ⲁⲩⲱ ⲉⲩⲣϣⲡⲏⲣⲉ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲟⲩⲛⲧⲏⲧⲛ ⲗⲁⲁⲩ ⲛϭⲓⲛⲟⲩⲱⲙ ⲙⲡⲉⲓⲙⲁ .",
+      "english": "While they still didn't believe for joy, and wondered, he said to them, 'Do you have anything here to eat?'",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲓ",
+        1,
+        12.791
+      ],
+      [
+        "ⲣⲁϣⲉ",
+        1,
+        11.071
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18978,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2910",
+    "grl_lemma": "ἀπιστέω",
+    "grl_meaning": "disbelieve, distrust",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 189b"
+  }
+}

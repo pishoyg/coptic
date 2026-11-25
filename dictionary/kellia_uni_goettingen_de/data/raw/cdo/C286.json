@@ -1,0 +1,80 @@
+{
+  "id": "C286",
+  "forms": [
+    {
+      "id": "CF1201",
+      "orth": "ⲙⲉⲧⲛⲉⲃⲁϩⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1202",
+      "orth": "ⲙⲉⲧⲛⲉⲃⲁϩⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS318",
+      "bibliography": "CD 24a; KoptHWb 17"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C12326",
+      "type": "cf",
+      "label": "lord, master; lady, mistress"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C288",
+      "label": "ϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short-lived, ephemeral"
+    },
+    {
+      "target": "C284",
+      "label": "ⲁϩⲉ",
+      "pos": "N",
+      "gloss": "length, limit of life"
+    },
+    {
+      "target": "C287",
+      "label": "ⲉⲣⲛⲉⲃⲁϩⲓ",
+      "pos": "V",
+      "gloss": "live a long life, be long-lived"
+    },
+    {
+      "target": "C289",
+      "label": "ⲙⲛⲧϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short life"
+    },
+    {
+      "target": "C290",
+      "label": "ⲣϣⲁⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "be short-lived"
+    },
+    {
+      "target": "C285",
+      "label": "ⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "pass/spend one's life"
+    }
+  ]
+}

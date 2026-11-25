@@ -1,0 +1,558 @@
+{
+  "id": "C9425",
+  "forms": [
+    {
+      "id": "CF23858",
+      "orth": "ⲕⲏⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23859",
+      "orth": "ⲕⲏⲧⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3448,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF23860",
+      "orth": "ⲕⲏⲧⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23861",
+      "orth": "ⲕⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2599,
+        "count": 18
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11925",
+      "bibliography": "DDGLC",
+      "cu_ID": "455"
+    },
+    {
+      "id": "CS11926",
+      "bibliography": "DDGLC",
+      "cu_ID": "9681"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲅⲁⲣ ⲛⲓⲱⲛⲁ ⲉⲛⲁϥϧⲉⲛ ⲧⲛⲉϫⲓ ⲙⲡⲓ**ⲕⲏⲧⲟⲥ** ⲛⲅ ⲛⲉϩⲟⲟⲩ ⲛⲉⲙⲅⲛⲉϫⲱⲣϩ ⲡⲁⲓⲣⲏϯ ϩⲱϥ ⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ⲉϥⲉⲉⲣ ⲅⲛⲉϩⲟⲟⲩ ⲛⲉⲙⲅⲛⲉϫⲱⲣϩ ϧⲉⲛⲡϩⲏⲧ ⲙⲡⲕⲁϩⲓ .",
+      "english": "For as Jonah was three days and three nights in the belly of the whale, so will the Son of Man be three days and three nights in the heart of the earth.",
+      "source": "01_Matthew_12",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲟⲩⲛⲟϭ ⲛ**ⲕⲏⲧⲟⲥ** ⲁϥⲟⲩⲱⲙⲕ ⲛⲓⲱⲛⲁⲥ : ⲁⲩⲱ ⲛⲉⲣⲉⲓⲱⲛⲁ ⲛϩⲏⲧϥ ⲛⲡⲕⲏⲧⲟⲥ ⲛϣⲟⲙⲛⲧ ⲛϩⲟⲟⲩ ⲙⲛϣⲟⲙⲧⲉ ⲛⲟⲩϣⲏ :",
+      "english": "Now the Lord had commanded a great whale to swallow up Jonas: and Jonas was in the belly of the whale three days and three nights.",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲟⲩϫⲟⲙ ⲁϥⲑⲣⲉ ⲡⲓⲟⲙ ϩⲉⲣⲓ : ϧⲉⲛⲟⲩⲕⲁϯ ⲇⲉ ⲁϥϣⲧⲟ ⲙⲡⲓ**ⲕⲏⲧⲟⲥ** .",
+      "english": "He has calmed the sea with his might, and by his wisdom the whale has been overthrown.",
+      "source": "18_Iob_26",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲣⲉϩⲏⲧϥ ⲙⲡ**ⲕⲏⲧⲟⲥ** ⲉⲧϩⲛⲧϩⲁⲗⲁⲥⲥⲁ ϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲟⲩⲛⲩⲙⲫⲟⲛ ⲙⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ·",
+      "english": "He made the belly of the whale in the sea to become like the bridal bed of the prophet. (Jonah 2:1)",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲑⲁⲙⲓⲟ ⲛϫⲉⲫⲛⲟⲩϯ ⲛⲛⲓⲛⲓϣϯ ⲛ**ⲕⲏⲧⲟⲥ** ⲛⲉⲙⲯⲩⲭⲏ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲛϧ ⲉⲧⲁ ⲛⲓϭⲁⲧϥⲓ ⲛⲧⲉⲛⲓⲙⲱⲟⲩ ⲉⲛⲟⲩ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲅⲉⲛⲟⲥ ⲛⲉⲙϩⲁⲗⲏⲧ ⲛⲓⲃⲉⲛ ⲉⲧϩⲏⲗ ⲕⲁⲧⲁⲅⲉⲛⲟⲥ ⲟⲩⲟϩ ⲁϥⲛⲁⲩ ⲛϫⲉⲫⲛⲟⲩϯ ϫⲉⲛⲁⲛⲉⲩ",
+      "english": "And God made great whales, and every living reptile, which the waters brought forth according to their kinds, and every creature that flies with wings according to its kind, and God saw that they were good.",
+      "source": "01_Genesis_01",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϣⲗⲏⲗ ⲛϭⲓⲓⲱⲛⲁ ⲉⲡϫⲟⲉⲓⲥ ⲡⲉϥⲛⲟⲩⲧⲉ ⲉϥⲛϩⲏⲧϥ ⲙⲡ**ⲕⲏⲧⲟⲥ** :",
+      "english": "And Jonas prayed to the Lord his God out of the belly of the whale,",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓⲱⲧϩ",
+        1,
+        17.373
+      ],
+      [
+        "ϣⲧⲟ",
+        1,
+        14.566
+      ],
+      [
+        "ⲥⲁⲡ",
+        1,
+        12.466
+      ],
+      [
+        "ⲉⲛⲭⲁⲓ",
+        1,
+        10.85
+      ],
+      [
+        "ⲛⲉϫⲓ",
+        1,
+        10.318
+      ],
+      [
+        "ⲛ",
+        6,
+        10.024
+      ],
+      [
+        "ⲅ",
+        1,
+        9.259
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        2,
+        9.193
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        9.135
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        1,
+        8.826
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.684
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        8.651
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        8.254
+      ],
+      [
+        "ⲛⲓϣϯ",
+        1,
+        7.483
+      ],
+      [
+        "ϭⲟⲉⲓⲥ",
+        1,
+        6.966
+      ],
+      [
+        "ⲛⲉⲙ",
+        2,
+        6.921
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        6.449
+      ],
+      [
+        "ⲙ",
+        2,
+        6.261
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.058
+      ],
+      [
+        "ⲧ",
+        1,
+        5.203
+      ]
+    ],
+    "S": [
+      [
+        "ⲱⲙⲕ",
+        2,
+        16.843
+      ],
+      [
+        "ϥ",
+        30,
+        15.072
+      ],
+      [
+        "ⲛ",
+        27,
+        13.904
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        4,
+        13.533
+      ],
+      [
+        "ⲕⲗϫ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        7,
+        13.092
+      ],
+      [
+        "ⲟⲩⲉϩⲥⲁϩⲛⲉ",
+        3,
+        12.621
+      ],
+      [
+        "ⲁ",
+        11,
+        11.253
+      ],
+      [
+        "ⲛⲟϭ",
+        4,
+        11.128
+      ],
+      [
+        "ⲡ",
+        12,
+        11.082
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        2,
+        10.897
+      ],
+      [
+        "ⲓⲱⲛⲁⲥ",
+        1,
+        10.7
+      ],
+      [
+        "ⲙ",
+        9,
+        10.691
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        4,
+        10.346
+      ],
+      [
+        ":",
+        2,
+        10.236
+      ],
+      [
+        "ⲥⲓⲟⲩ",
+        1,
+        9.784
+      ],
+      [
+        "ϩⲁⲗⲁⲥⲥⲁ",
+        1,
+        9.608
+      ],
+      [
+        "ϫⲱ",
+        3,
+        8.99
+      ],
+      [
+        "ⲕⲓⲙ",
+        1,
+        8.48
+      ],
+      [
+        "ϩⲏⲧ",
+        2,
+        7.777
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲅ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_4_post_ⲅⲛⲉϫⲱⲣϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲁⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲭⲁⲓ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲃⲉⲛ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲅ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲅ_3_post_ϩⲟⲟⲩ",
+          "ⲛⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          "ⲛⲉⲙ_4_post_ⲅⲛⲉϫⲱⲣϩ",
+          1
+        ],
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲥⲁⲡ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥⲁⲡ_2_post_ⲉⲧ",
+          "ⲉⲥⲏⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲛ_2_post_ⲉⲥⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲥⲏⲧ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲏⲧⲟⲥ",
+          "ⲕⲏⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲛⲭⲁⲓ",
+          "ⲉⲛⲭⲁⲓ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲛⲭⲁⲓ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲛⲓⲃⲉⲛ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲓⲃⲉⲛ_2_post_ⲉⲛⲭⲁⲓ",
+          "ⲉⲧ_2_post_ⲉⲛⲭⲁⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          13
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲓⲙ_3_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲏⲧⲟⲥ",
+          "ϩⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ϩⲁⲗⲁⲥⲥⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲏⲧⲟⲥ",
+          "ⲕⲏⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲏⲧⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛ",
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲏⲧⲟⲥ",
+          "ⲉⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛ",
+          "ⲕⲓⲙ_3_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 3032,
+      "count": 5
+    },
+    "S": {
+      "rate": 0.11,
+      "rank": 2308,
+      "count": 18
+    }
+  },
+  "etym": {
+    "grl_ID": "2522",
+    "grl_lemma": "κῆτος",
+    "grl_meaning": "any sea-monster or huge fish",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 949b"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "C3496",
+  "forms": [
+    {
+      "id": "CF8893",
+      "orth": "ⲥⲟⲗϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18738,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲟⲣϥ",
+      "dialect": "S",
+      "id": "1413.1"
+    },
+    {
+      "orth": "ⲥⲟⲗⲓⲃ",
+      "dialect": "S",
+      "id": "1413.2"
+    },
+    {
+      "orth": "ⲥⲱⲗϥ",
+      "dialect": "S",
+      "id": "1413.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3978",
+      "bibliography": "CD 333a; KoptHWb 184, 537; ChLCS 47b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲉϣⲁⲣⲉϩⲛⲉⲓⲧⲛ ϣⲱϫⲡ ϩⲙⲡϣⲟⲗϣⲗ ⲛⲟⲩ**ⲥⲟⲗϥ** ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲣⲉⲙⲡⲉⲧϩⲟⲟⲩ ⲙⲡⲣⲱⲙⲉ ϩⲙⲡⲉϥϩⲏⲧ",
+      "english": "As when one sifteth with a sieve, the refuse remaineth; so the filth of man in his talk.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲟⲗϣⲗ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲗϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18356,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3455",
+      "type": "cf",
+      "label": "dissipate, pervert"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12150",
+      "label": "ⲙⲉϣⲥⲱⲗϥ",
+      "pos": "N",
+      "gloss": "sieve"
+    }
+  ]
+}

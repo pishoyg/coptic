@@ -1,0 +1,52 @@
+{
+  "id": "C4067",
+  "forms": [
+    {
+      "id": "CF10077",
+      "orth": "ϫⲓⲧⲟⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4621",
+      "bibliography": "CD 396b; KoptHWb 219; ChLCS 55b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4068",
+      "label": "ⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "avaricious, covetus"
+    },
+    {
+      "target": "C4069",
+      "label": "ⲙⲛⲧⲙⲁⲓⲧⲟⲛϩⲟⲩⲟ",
+      "pos": "N",
+      "gloss": "covetousness"
+    },
+    {
+      "target": "C4066",
+      "label": "ⲧⲟⲉ",
+      "pos": "N",
+      "gloss": "part, share"
+    }
+  ]
+}

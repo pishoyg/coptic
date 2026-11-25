@@ -1,0 +1,388 @@
+{
+  "id": "C7413",
+  "forms": [
+    {
+      "id": "CF16885",
+      "orth": "ϫⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3323,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8204",
+      "bibliography": "CD 792ab; CED 321; KoptHWb 435; DELC 332ab; ChLCS 104b"
+    },
+    {
+      "id": "CS8205",
+      "bibliography": "CD 792ab; KoptHWb 435; DELC 332ab; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲕⲁϩ ⲛⲃⲣⲣⲉ · ⲡⲁⲓ ⲉⲛⲧⲁⲡⲉⲛⲧⲁⲩⲕⲁⲁϥ ϩⲛⲟⲩⲟⲙϥ ⲧⲃⲃⲟϥ ϩⲓⲧⲛⲧⲥⲁⲣⲝ ⲉⲛⲧⲁⲩ**ϫⲧⲟ**ⲥ ⲛϩⲏⲧϥ ·",
+      "english": "The new earth: He Who was laid in a manger. He purified it through the flesh wherein He was placed.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩ**ϫⲧⲟ**ϥ ϩⲓϫⲛⲟⲩⲙⲁ ⲛⲛⲕⲟⲧⲕ ϩⲓⲧⲟⲩⲱϥ ⲙⲡⲉⲧⲥⲟⲃϩ ·",
+      "english": "and they laid him on a bed which was near that of the leper.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲟⲩⲟ ⲇⲉ ⲛⲉⲧⲉⲣⲉⲛⲉⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ϩⲓⲱⲟⲩ , ⲉⲩ**ϫⲧⲟ** ⲙⲙⲟⲟⲩ ϩⲙⲕⲟⲓⲙⲏⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "Those possessed by unclean spirits, especially, were laid down in the burial ground which was there,",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲟⲓⲙⲏⲧⲏⲣⲓⲟⲛ",
+        1,
+        16.691
+      ],
+      [
+        "ⲙⲙⲁⲛ",
+        1,
+        14.691
+      ],
+      [
+        "ⲟⲙϥ",
+        1,
+        14.369
+      ],
+      [
+        "ⲛⲁⲭⲱⲣ",
+        1,
+        13.106
+      ],
+      [
+        "ϥ",
+        15,
+        12.335
+      ],
+      [
+        "ⲧⲟⲉⲓⲥ",
+        1,
+        12.232
+      ],
+      [
+        "ⲕⲁⲥ",
+        1,
+        11.936
+      ],
+      [
+        "ⲟⲩⲟⲙϥ",
+        1,
+        11.784
+      ],
+      [
+        "ⲭⲉⲣⲟⲩⲃⲓⲛ",
+        1,
+        11.521
+      ],
+      [
+        "ⲩ",
+        8,
+        10.903
+      ],
+      [
+        "ϭⲁⲙⲟⲩⲗ",
+        1,
+        10.737
+      ],
+      [
+        "ⲕⲏⲕⲁϩⲏⲩ",
+        1,
+        10.737
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        2,
+        10.737
+      ],
+      [
+        "ⲟϩⲉ",
+        1,
+        10.482
+      ],
+      [
+        "ϭⲃⲟⲓ",
+        1,
+        10.137
+      ],
+      [
+        "ⲁ",
+        8,
+        10.137
+      ],
+      [
+        "ϩⲣⲉ",
+        1,
+        9.858
+      ],
+      [
+        "ⲥ",
+        5,
+        9.333
+      ],
+      [
+        "ⲁⲣ",
+        1,
+        9.183
+      ],
+      [
+        "ⲛ",
+        8,
+        8.902
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϫⲧⲟ",
+          6
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          8
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϫⲧⲟ",
+          2
+        ],
+        [
+          "ⲕⲟⲓⲙⲏⲧⲏⲣⲓⲟⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲧⲟ",
+          5
+        ],
+        [
+          "ⲥ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϫⲧⲟ",
+          2
+        ],
+        [
+          "ⲁⲣ_1_pre_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ϭⲃⲟⲓ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϥⲓ",
+          2
+        ],
+        [
+          "ⲩ_2_post_ϥⲓ",
+          2
+        ],
+        [
+          "ϥⲓ_1_post_ϫⲧⲟ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϫⲧⲟ",
+          "ϫⲧⲟ_0_node",
+          6
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          "ⲙⲙⲟ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϫⲧⲟ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲙ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϫⲧⲟ",
+          "ⲕⲟⲓⲙⲏⲧⲏⲣⲓⲟⲛ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲧⲟ",
+          "ⲩ_1_pre_ϫⲧⲟ",
+          4
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          "ⲥ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲥ_1_post_ϫⲧⲟ",
+          "ⲛϩⲏⲧ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ϫⲧⲟ",
+          "ϥ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          "ϥ_1_post_ϫⲧⲟ",
+          2
+        ],
+        [
+          "ⲁⲣ_1_pre_ϫⲧⲟ",
+          "ϫⲧⲟ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ϫⲧⲟ",
+          "ϩⲙ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϫⲧⲟ",
+          "ⲡⲟⲩ_3_post_ϭⲃⲟⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϭⲃⲟⲓ",
+          "ϭⲃⲟⲓ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϫⲧⲟ",
+          "ϥ_1_pre_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲧⲟ",
+          "ϫⲧⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          "ⲁ_2_post_ϥⲓ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ϥⲓ",
+          "ⲩ_2_post_ϥⲓ",
+          2
+        ],
+        [
+          "ⲩ_2_post_ϥⲓ",
+          "ϥⲓ_1_post_ϫⲧⲟ",
+          2
+        ],
+        [
+          "ϫⲧⲟ_0_node",
+          "ⲛ_1_post_ϫⲧⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲧⲟ",
+          "ⲛⲉⲩ_3_post_ⲟϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲟϩⲉ",
+          "ⲟϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟϩⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲟϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2535,
+      "count": 15
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7414",
+      "label": "ϣⲧⲟ",
+      "pos": "N",
+      "gloss": "prostration(?) (liturgical rubric); weakness (symptom of illness)"
+    },
+    {
+      "target": "C7415",
+      "label": "ⲣⲉϥϫⲧⲟ",
+      "pos": "N",
+      "gloss": "sb who knocks down"
+    }
+  ]
+}

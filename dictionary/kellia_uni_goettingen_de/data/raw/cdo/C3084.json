@@ -1,0 +1,175 @@
+{
+  "id": "C3084",
+  "forms": [
+    {
+      "id": "CF8042",
+      "orth": "ⲣⲟⲕϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15725,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3532",
+      "bibliography": "CD 294a; KoptHWb 163; DELC 172; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ϩⲙⲡⲙⲉϩϥⲧⲟⲟⲩ ⲛϩⲟⲟⲩ ⲡⲉϫⲁⲩ ⲛⲧϩⲓⲙⲉ ⲛⲥⲁⲙⲯⲱⲛ ϫⲉⲁⲣⲓϩⲁⲗ ⲙⲡⲟⲩϩⲁⲓ ⲁⲩⲱ ⲙⲁⲣⲉϥⲧⲁⲩⲟ ⲉⲣⲟⲙⲙⲡⲉϥⲡⲣⲟⲃⲗⲏⲙⲁ ⲙⲏⲡⲱⲥ ⲛⲧⲛ**ⲣⲟⲕϩⲉ** ⲙⲛⲡⲏⲓ ⲙⲡⲟⲩⲉⲓⲱⲧ ϩⲛⲟⲩⲥⲁⲧⲉ ⲏ ⲉⲛⲧⲁⲧⲉⲧⲛⲧⲁϩⲙⲛ ⲉⲁⲁⲛ ⲛϩⲏⲕⲉ",
+      "english": "And it came to pass on the fourth day, that they said to the wife of Sampson, Deceive now thy husband, and let him tell thee the riddle, lest we burn thee and thy father's house with fire: did ye invite us to do us violence?",
+      "source": "Judges 14",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲟⲃⲗⲏⲙⲁ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲏⲡⲱⲥ",
+        1,
+        14.576
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏⲡⲱⲥ_1_pre_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲣⲟⲕϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲏⲡⲱⲥ_1_pre_ⲣⲟⲕϩⲉ",
+          "ⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          "ⲧⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲟⲕϩⲉ",
+          "ⲣⲟⲕϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲟⲕϩⲉ_0_node",
+          "ⲙⲛ_1_post_ⲣⲟⲕϩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲣⲟⲕϩⲉ",
+          "ⲡ_2_post_ⲙⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15323,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3082",
+      "label": "ⲣⲉϥⲣⲱⲕϩ",
+      "pos": "N",
+      "gloss": "who burns, burning"
+    },
+    {
+      "target": "C3083",
+      "label": "ⲣⲟⲕϩ",
+      "pos": "N",
+      "gloss": "fuel, firewood"
+    },
+    {
+      "target": "C3085",
+      "label": "ⲣⲟⲭⲏ",
+      "pos": "N",
+      "gloss": "baked cake"
+    },
+    {
+      "target": "C3080",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "V",
+      "gloss": "burn"
+    },
+    {
+      "target": "C3081",
+      "label": "ⲣⲱⲕϩ",
+      "pos": "N",
+      "gloss": "burning, fervour"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "C2831",
+  "forms": [
+    {
+      "id": "CF7510",
+      "orth": "ⲡⲟⲙⲡⲉⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13197,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3237",
+      "bibliography": "CD 263a; CED 125; KoptHWb 147; DELC 159; ChLCS 37a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϣⲓϥⲉ ⲁⲩⲱ ⲁⲩ**ⲡⲟⲙⲡⲉⲙ** ⲉⲙⲁⲧⲉ ·",
+      "english": "and they swelled up (?) and throbbed (?) violently,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓϥⲉ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        10.965
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲡⲟⲙⲡⲉⲙ_0_node",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          "ⲁ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          "ⲩ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲟⲙⲡⲉⲙ",
+          "ⲡⲟⲙⲡⲉⲙ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲙⲡⲉⲙ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲡⲟⲙⲡⲉⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12783,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "55770",
+    "egy_lemma": "bnbn",
+    "english": "to make flow (of the Nile); to swell",
+    "german": "ausfließen (vom Nil); anschwellen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/55770"
+  }
+}

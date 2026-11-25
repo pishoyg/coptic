@@ -1,0 +1,50 @@
+{
+  "id": "C12261",
+  "forms": [
+    {
+      "id": "CF33278",
+      "orth": "ϫⲓⲥϭⲣⲁϩⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17265",
+      "bibliography": "CD 389b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12259",
+      "label": "ϩⲛⲟⲩⲥϭⲣⲁϩⲧ",
+      "pos": "ADV",
+      "gloss": "quietly, at rest"
+    },
+    {
+      "target": "C12260",
+      "label": "ⲕⲱ ⲛⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "leave be"
+    },
+    {
+      "target": "C12161",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "V",
+      "gloss": "rest, pause, be quiet; rest oneself (refl.)"
+    },
+    {
+      "target": "C12258",
+      "label": "ⲥϭⲣⲁϩⲧ",
+      "pos": "N",
+      "gloss": "quiet, rest"
+    }
+  ]
+}

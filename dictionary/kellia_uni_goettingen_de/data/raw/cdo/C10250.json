@@ -1,0 +1,791 @@
+{
+  "id": "C10250",
+  "forms": [
+    {
+      "id": "CF27174",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27175",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27176",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1188,
+        "count": 37
+      }
+    },
+    {
+      "id": "CF27177",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF27178",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.39,
+        "rank": 1340,
+        "count": 61
+      }
+    },
+    {
+      "id": "CF27179",
+      "orth": "ⲡⲟⲣⲛⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27180",
+      "orth": "ⲡⲟⲣⲛⲓ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27181",
+      "orth": "ⲡⲱⲣⲛⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13728",
+      "bibliography": "DDGLC",
+      "cu_ID": "137"
+    },
+    {
+      "id": "CS13729",
+      "bibliography": "DDGLC",
+      "cu_ID": "7501"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ ϫⲉⲛⲉⲧⲉⲛⲥⲱⲙⲁ ϩⲁⲛⲙⲉⲗⲟⲥ ⲛⲧⲉⲡⲭⲣⲓⲥⲧⲟⲥ ⲛⲉ ⲛⲧⲁⲱⲗⲓ ⲟⲩⲛ ⲛⲛⲓⲙⲉⲗⲟⲥ ⲛⲧⲉⲡⲭⲣⲓⲥⲧⲟⲥ ⲛⲧⲁⲁⲓⲧⲟⲩ ⲙⲙⲉⲗⲟⲥ ⲙ**ⲡⲟⲣⲛⲏ** ⲛⲛⲉⲥϣⲱⲡⲓ",
+      "english": "Don't you know that your bodies are members of Christ? Shall I then take the members of Christ, and make them members of a prostitute? May it never be!",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲡⲉⲧⲧⲱϭⲉ ⲙⲙⲟϥ ⲉⲧ**ⲡⲟⲣⲛⲏ** ⲟⲩⲥⲱⲙⲁ ⲛⲟⲩⲱⲧ ⲡⲉ . ⲡⲉϫⲁϥ ⲅⲁⲣ ϫⲉⲥⲉⲛⲁϣⲱⲡⲉ ⲙⲡⲉⲥⲛⲁⲩ ⲉⲩⲥⲁⲣⲝ ⲛⲟⲩⲱⲧ .",
+      "english": "Or don&apos;t you know that he who is joined to a prostitute is one body? For, &apos;The two,&apos; says he, &apos;will become one flesh.&apos;",
+      "source": "46_1 Corinthians_6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ϯ**ⲡⲟⲣⲛⲏ** ⲥⲱⲧⲉⲙ ⲉⲡⲥⲁϫⲓ ⲙⲡϭⲟⲉⲓⲥ ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲥ .",
+      "english": "Therefore, harlot, hear the word of the Lord:",
+      "source": "26_Ezechiel_16",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲛⲉⲧⲛⲥⲱⲙⲁ ⲙⲙⲉⲗⲟⲥ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲛⲉ . ⲧⲁϥⲓ ϭⲉ ⲛⲙⲙⲉⲗⲟⲥ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲧⲁⲁⲁⲩ ⲙⲙⲉⲗⲟⲥ ⲙ**ⲡⲟⲣⲛⲏ** ⲛⲛⲉⲥϣⲱⲡⲉ",
+      "english": "Don&apos;t you know that your bodies are members of Christ? Shall I then take the members of Christ, and make them members of a prostitute? May it never be!",
+      "source": "1 Corinthians 6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲃⲃⲁ ⲡⲁⲙⲱ ⲇⲉ ⲛⲁϥⲟⲓ ⲛϣⲫⲛⲣⲓ ϧⲉⲛϯⲙⲉⲧⲥⲟⲛ ⲧⲏⲣⲥ ⲉⲑⲃⲉⲛⲉϥϩⲃⲏⲟⲩⲓ ⲉⲑⲛⲁⲛⲉⲩ ⲛⲉⲙⲡⲁϣⲁⲓ ⲛⲧⲉⲡⲉϥⲑⲉⲃⲓⲟ . ⲁⲩϫⲟⲥ ⲟⲛ ⲉⲑⲃⲏⲧϥ ϫⲉⲉⲧⲁⲁⲃⲃⲁ ⲁⲑⲁⲛⲁⲥⲓⲟⲥ ⲟⲩⲱⲣⲡ ⲛⲥⲱϥ ⲛⲟⲩⲥⲟⲡ ⲁϥⲟⲗϥ ⲉϧⲟⲩⲛ ⲉⲣⲁⲕⲟϯ . ϧⲉⲛⲡϫⲓⲛⲑⲣⲉϥϩⲱⲗ ⲉϧⲟⲩⲛ ⲉϯⲃⲁⲕⲓ ⲁϥⲛⲁⲩ ⲉⲟⲩⲥϩⲓⲙⲓ ⲛⲧⲉⲡⲓⲑⲉⲁⲧⲣⲟⲛ ⲉⲥⲥⲉⲗⲥⲱⲗ ⲉⲃⲟⲗ . ⲥⲁⲧⲟⲧϥ ⲇⲉ ⲁⲛⲉϥⲃⲁⲗ ϯⲉⲣⲙⲏ ⲉⲧⲁⲩⲛⲁⲩ ⲟⲩⲛ ⲉⲣⲟϥ ⲛϫⲉⲛⲓⲥⲛⲏⲟⲩ ⲉⲑⲛⲉⲙⲁϥ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲡⲉⲛⲓⲱⲧ ⲧⲉⲛϯϩⲟ ⲉⲣⲟⲕ ⲙⲁⲧⲁⲙⲟⲛ ⲉⲛⲁⲓⲉⲣⲙⲱⲟⲩⲓ ϫⲉⲛⲁⲟⲩ ⲛϩⲱⲃ ⲛⲉ . ⲛⲑⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ⲛⲱⲟⲩ ϫⲉϩⲱⲃ ⲃ ⲛⲉ ⲉⲧⲁⲩⲕⲓⲙ ⲉⲣⲟⲓ ϯⲛⲟⲩ ⲡⲓⲟⲩⲁⲓ ⲙⲉⲛ ⲫⲁⲛⲧⲁⲕⲟ ⲛⲧⲁⲓⲯⲩⲭⲏ ⲡⲉ ⲉϯⲛⲁⲩ ⲉⲣⲟⲥ ϯⲛⲟⲩ ⲡⲓⲕⲉⲟⲩⲁⲓ ⲫⲁⲧⲁⲯⲩⲭⲏ ϩⲱ ⲡⲉ ⲉⲧⲟⲓ ⲛⲁⲧϣⲉⲡϩⲙⲟⲧ ϫⲉⲟⲩⲇⲉ ⲥϭⲓ ⲙⲡⲓⲛⲓ ⲛⲉⲙⲡⲥⲟⲗⲥⲉⲗ ⲛⲧⲁⲓ**ⲡⲟⲣⲛⲏ** ⲁⲛ ϧⲉⲛⲡⲥⲟⲗⲥⲉⲗ ⲛⲛⲓⲁⲣⲉⲧⲏ ⲛⲉ ϯϫⲓ ⲛⲣⲁⲛⲁϥ ⲙⲡⲑⲉⲟⲥ ⲛⲉ ⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ .",
+      "english": "Abba Pambo, because of his good works and the greatness of his humility, was admired by all the brothers. They also recount about him that one day he was summoned to Alexandria by Abba Athanasius. When he entered the city, he saw a woman devoted to theatrical spectacles, magnificently adorned. Immediately, tears flowed from his eyes. When the brothers accompanying him saw this, they said: “Father, we beseech you, tell us why these tears are falling.” He replied: “I am moved for two reasons: first, because of the soul I now see being destroyed; second, because my own ungrateful soul has not taken up such adornment as hers—not the adornment of a harlot, but of virtue. It has not clothed itself in that adornment, nor has it sought to please God and the angels.”",
+      "source": "Bohairic Lausiac History - Part 2",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲧ**ⲡⲟⲣⲛⲏ** ⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ",
+      "english": "Therefore, harlot, hear the word of the Lord:",
+      "source": "Ezekiel 16",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲁⲁⲃ",
+        2,
+        15.901
+      ],
+      [
+        "ⲥ",
+        22,
+        14.597
+      ],
+      [
+        "ⲛⲛⲉ",
+        9,
+        14.273
+      ],
+      [
+        "ⲥⲟϥ",
+        3,
+        14.071
+      ],
+      [
+        "ⲟⲩ",
+        26,
+        13.646
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        3,
+        13.286
+      ],
+      [
+        "ⲙ",
+        19,
+        13.117
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        11,
+        12.803
+      ],
+      [
+        "ϯ",
+        15,
+        12.802
+      ],
+      [
+        "ϭⲗⲉⲙⲗⲱⲙ",
+        1,
+        12.486
+      ],
+      [
+        "ⲛ",
+        20,
+        12.347
+      ],
+      [
+        "ϣⲁⲛ",
+        3,
+        11.773
+      ],
+      [
+        "ⲥⲟⲗⲥⲉⲗ",
+        2,
+        11.555
+      ],
+      [
+        "ⲥϩⲓⲙⲓ",
+        4,
+        11.152
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        3,
+        11.106
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        3,
+        10.896
+      ],
+      [
+        "ⲁ",
+        13,
+        10.881
+      ],
+      [
+        "ⲙⲁ",
+        5,
+        10.82
+      ],
+      [
+        "ⲧⲉⲛⲑⲱⲛⲧ",
+        1,
+        10.316
+      ],
+      [
+        "ⲃⲁⲕⲓ",
+        3,
+        9.775
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲣⲁⲁⲃ",
+        5,
+        18.048
+      ],
+      [
+        "ⲙ",
+        42,
+        15.597
+      ],
+      [
+        "ⲥ",
+        33,
+        15.477
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        13,
+        15.425
+      ],
+      [
+        "ⲛ",
+        51,
+        14.895
+      ],
+      [
+        "ϩⲙⲉⲥ",
+        1,
+        14.667
+      ],
+      [
+        "ⲡⲉⲥⲓⲉⲱⲧ",
+        1,
+        14.667
+      ],
+      [
+        "ϫⲡⲉⲓⲉⲫⲑⲁⲉ",
+        1,
+        14.667
+      ],
+      [
+        "ϣⲙⲛⲧⲥⲟⲡ",
+        1,
+        14.667
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.667
+      ],
+      [
+        "ⲃⲏⲕⲩⲉ",
+        1,
+        14.667
+      ],
+      [
+        "ⲧ",
+        28,
+        14.562
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        5,
+        14.463
+      ],
+      [
+        "ⲟⲩ",
+        33,
+        14.422
+      ],
+      [
+        "ϯⲧⲉⲗⲟⲥ",
+        1,
+        13.667
+      ],
+      [
+        "ϩⲉⲧⲡ",
+        1,
+        13.082
+      ],
+      [
+        "ⲧⲛⲧ",
+        1,
+        13.082
+      ],
+      [
+        "ⲁⲩⲱ",
+        20,
+        12.782
+      ],
+      [
+        "ⲃⲉⲕⲏⲩⲉ",
+        1,
+        12.345
+      ],
+      [
+        "ⲡⲟⲣⲛⲟⲥ",
+        2,
+        12.31
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          35
+        ],
+        [
+          "ϯ_1_pre_ⲡⲟⲣⲛⲏ",
+          7
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          3
+        ],
+        [
+          "ⲑⲏ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲉⲣ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲑⲟⲩⲏⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲣⲏϯ",
+          1
+        ],
+        [
+          "ⲣⲏϯ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲣⲏϯ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_4_post_ϩⲙⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          2
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲑⲏ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲑⲏ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲉⲧ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲑⲏ",
+          "ⲁ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲁ_4_post_ϣⲱⲡⲓ",
+          "ⲥ_4_post_ϣⲱⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲛ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲛⲉϥ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϣⲉ",
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲉⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲁ_3_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲣ",
+          "ⲩ_3_post_ⲉⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲣ",
+          "ⲉⲣ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲥ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲑⲟⲩⲏⲧ",
+          "ⲑⲟⲩⲏⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲑⲟⲩⲏⲧ_2_post_ⲉ",
+          "ⲉϧⲟⲩⲛ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_3_post_ⲑⲟⲩⲏⲧ",
+          "ⲛ_3_post_ⲑⲟⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲡⲁⲓ_2_post_ⲣⲏϯ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_post_ⲣⲏϯ",
+          "ⲣⲏϯ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲣⲏϯ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲉ_2_post_ⲣⲏϯ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲣⲏϯ",
+          "ϣⲁ_4_post_ϣⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ϣⲉ",
+          "ⲩ_4_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲛⲓ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲉⲑ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_2_post_ⲉⲑ",
+          "ⲥ_3_post_ⲛⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁⲛⲉ",
+          "ⲉⲧⲉ_4_post_ϩⲙⲟⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          52
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲟⲣⲛⲏ",
+          9
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ",
+          4
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲧⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲛⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲣ_2_post_ⲉⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲧ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          2
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲛⲏ",
+          "ϣⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ϣⲱⲡⲉ",
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲏ_2_post_ⲧⲛⲧ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲧⲛⲧ",
+          "ⲧⲛⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ_b",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲟⲣⲛⲏ_b",
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲟⲣⲛⲏ",
+          "ⲡⲟⲣⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲛⲁ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_0_node",
+          "ⲉⲛⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲡⲟⲣⲛⲏ",
+          "ⲁ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲣ",
+          "ⲩ_3_post_ⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲣ",
+          "ⲣ_2_post_ⲉⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.44,
+      "rank": 1060,
+      "count": 37
+    },
+    "S": {
+      "rate": 0.38,
+      "rank": 1158,
+      "count": 61
+    }
+  },
+  "etym": {
+    "grl_ID": "1798",
+    "grl_lemma": "πόρνη",
+    "grl_meaning": "harlot, prostitute",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1450b; Preisigke 2:342"
+  }
+}

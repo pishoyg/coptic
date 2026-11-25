@@ -1,0 +1,50 @@
+{
+  "id": "C3924",
+  "forms": [
+    {
+      "id": "CF9779",
+      "orth": "ⲥⲱϣⲙ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲥⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4453",
+      "bibliography": "CD 377a; KoptHWb 207; DELC 203; ChLCS 53a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3926",
+      "label": "ϣⲟⲥⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "fatigue"
+    },
+    {
+      "target": "C3922",
+      "label": "ⲥⲱϣⲙ",
+      "pos": "V",
+      "gloss": "burn, be hot; be faint, undone, disheartened"
+    },
+    {
+      "target": "C3925",
+      "label": "ⲥⲱϣⲙ",
+      "pos": "N",
+      "gloss": "faintness, exhaustion"
+    },
+    {
+      "target": "C3923",
+      "label": "ⲥⲱϣⲙ (ⲉ-)",
+      "pos": "V",
+      "gloss": "fatigue, annoy"
+    }
+  ]
+}

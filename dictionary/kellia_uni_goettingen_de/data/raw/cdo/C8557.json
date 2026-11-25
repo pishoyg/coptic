@@ -1,0 +1,109 @@
+{
+  "id": "C8557",
+  "forms": [
+    {
+      "id": "CF20142",
+      "orth": "ⲁⲫⲑⲁⲣⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20143",
+      "orth": "ⲁⲫⲑⲁⲣⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13578,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF20144",
+      "orth": "ⲁⲫⲑⲁⲣⲥⲡⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10044",
+      "bibliography": "DDGLC",
+      "cu_ID": "2404"
+    },
+    {
+      "id": "CS10045",
+      "bibliography": "DDGLC",
+      "cu_ID": "7651"
+    },
+    {
+      "id": "CS10046",
+      "bibliography": "DDGLC",
+      "cu_ID": "6385"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϣⲉ ⲛⲧ**ⲁⲫⲑⲁⲣⲥⲓⲁ** .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲉ",
+        2,
+        14.182
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲫⲑⲁⲣⲥⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13175,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3521",
+    "grl_lemma": "ἀφθαρσία",
+    "grl_meaning": "incorruption, immortality, integrity",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 289a"
+  }
+}

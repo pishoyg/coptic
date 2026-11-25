@@ -1,0 +1,208 @@
+{
+  "id": "C5231",
+  "forms": [
+    {
+      "id": "CF12429",
+      "orth": "ⲉⲣⲟⲩⲧⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5512,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF12430",
+      "orth": "ⲉⲣⲟⲩⲧⲁϩ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5875",
+      "bibliography": "CD 498a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲙⲟⲛ ϣϫⲟⲙ ⲛⲟⲩϣϣⲏⲛ ⲉⲛⲁⲛⲉϥ ⲉ**ⲉⲣⲟⲩⲧⲁϩ** ⲉϥϩⲱⲟⲩ ⲟⲩⲇⲉ ⲟⲩϣϣⲏⲛ ⲉϥϩⲱⲟⲩ ⲉⲉⲣⲟⲩⲧⲁϩ ⲉⲛⲁⲛⲉϥ .",
+      "english": "A good tree can't produce evil fruit, neither can a corrupt tree produce good fruit.",
+      "source": "01_Matthew_07",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:07",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲱⲟⲩ",
+        3,
+        15.053
+      ],
+      [
+        "ⲛⲁⲛⲉ",
+        2,
+        13.277
+      ],
+      [
+        "ⲉ",
+        6,
+        11.772
+      ],
+      [
+        "ϥ",
+        4,
+        9.424
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        8.76
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲣⲟⲩⲧⲁϩ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ϣϣⲏⲛ_1_post_ⲉⲣⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ϥ_4_post_ϩⲱⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲣⲟⲩⲧⲁϩ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ϣϣⲏⲛ",
+          "ⲟⲩ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣϣⲏⲛ",
+          "ϣϣⲏⲛ_1_post_ⲉⲣⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ϣϣⲏⲛ_1_post_ⲉⲣⲟⲩⲧⲁϩ",
+          "ⲉ_2_post_ϣϣⲏⲛ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣϣⲏⲛ",
+          "ϥ_4_post_ϩⲱⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5027,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5239",
+      "label": "ϥⲁⲓⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-carrier"
+    },
+    {
+      "target": "C5237",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5238",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5234",
+      "label": "ϯⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "give fruit"
+    },
+    {
+      "target": "C5230",
+      "label": "ⲁⲧⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruitless"
+    },
+    {
+      "target": "C5232",
+      "label": "ⲉⲛⲟⲩⲧⲁϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "bring forth fruit"
+    },
+    {
+      "target": "C5233",
+      "label": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-bearer"
+    },
+    {
+      "target": "C5236",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "quality of the fruit-giver"
+    },
+    {
+      "target": "C5229",
+      "label": "ⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit"
+    },
+    {
+      "target": "C5235",
+      "label": "ⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-giver"
+    }
+  ]
+}

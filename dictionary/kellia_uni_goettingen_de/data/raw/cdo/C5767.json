@@ -1,0 +1,175 @@
+{
+  "id": "C5767",
+  "forms": [
+    {
+      "id": "CF13523",
+      "orth": "ϣⲓⲃⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13524",
+      "orth": "ϣⲓϥⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6445",
+      "bibliography": "CD 553b-554a; KoptHWb 305; DELC 258a; ChLCS 75b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲙ",
+        31,
+        20.446
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        32,
+        20.08
+      ],
+      [
+        "ⲡⲓⲁⲑⲛⲉϩ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲁⲣⲁⲃⲁⲣⲁ",
+        1,
+        19.695
+      ],
+      [
+        "ⲟⲩⲉⲛⲧⲉⲗⲉⲭⲓⲥⲙⲟⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ϣⲱϩⲡ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        4,
+        18.812
+      ],
+      [
+        "ⲡⲉϥ",
+        12,
+        18.795
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        8,
+        18.76
+      ],
+      [
+        "ⲛⲑⲟⲩⲓⲛⲁⲙ",
+        1,
+        18.695
+      ],
+      [
+        "ϫⲓⲛⲉⲙⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲕⲩⲑⲁⲣⲁ",
+        2,
+        18.525
+      ],
+      [
+        "ⲛ",
+        25,
+        18.522
+      ],
+      [
+        "ⲟⲩ",
+        24,
+        18.509
+      ],
+      [
+        "ⲛⲧⲉ",
+        17,
+        18.329
+      ],
+      [
+        "ⲡ",
+        18,
+        18.129
+      ],
+      [
+        "ϥⲧⲉⲫⲁⲧ",
+        1,
+        18.11
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        6,
+        17.813
+      ],
+      [
+        "ϥ",
+        22,
+        17.803
+      ],
+      [
+        "ϣⲉⲃⲓⲏⲧ",
+        1,
+        17.695
+      ]
+    ]
+  },
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C5751",
+      "type": "cf",
+      "label": "change, be changed, separate"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5768",
+      "label": "ϣⲓⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "change"
+    },
+    {
+      "target": "C5771",
+      "label": "ϭⲓⲛϣⲓⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "changeableness, difference"
+    },
+    {
+      "target": "C5769",
+      "label": "ⲁⲧϣⲓⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "unchangeable"
+    },
+    {
+      "target": "C5770",
+      "label": "ⲣⲉϥϣⲓⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "one who changes"
+    }
+  ],
+  "etym": {
+    "egy_num": "153350",
+    "egy_lemma": "šbi̯",
+    "demo_num": "d5914",
+    "demo_lemma": "šb(e)",
+    "english": "to mix; to mingle; to replace",
+    "german": "mischen; sich mischen (unter); ersetzen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/153350",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5914"
+  }
+}

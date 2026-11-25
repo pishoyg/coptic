@@ -1,0 +1,106 @@
+{
+  "id": "C983",
+  "forms": [
+    {
+      "id": "CF3315",
+      "orth": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11371,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1143",
+      "bibliography": "CD 85b; KoptHWb 52"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ ⲡⲉϫⲁⲥ ⲛⲁϥ ϫⲉ**ⲉⲓⲥϩⲏⲏⲡⲉ** ϥϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲉϥⲣⲟⲩ .",
+      "english": "...",
+      "source": "Dialogue of Eve and the Serpent (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.eve_serpent.giron_ed:100-101",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10957,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12184",
+      "label": "ϩⲉⲓ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C987",
+      "label": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs mostly = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C982",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before pl. nouns or pronouns)"
+    },
+    {
+      "target": "C980",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C981",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before nouns)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "id": "C3550",
+  "forms": [
+    {
+      "id": "CF9004",
+      "orth": "ⲥⲙⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5737,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4043",
+      "bibliography": "CD 339b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲁ ⲛⲧⲉⲛⲉ**ⲥⲙⲁⲥ** ⲙⲙⲟⲩⲓ ⲁϥⲡⲱⲧ ⲉⲃⲟⲗ ⲁϥⲣⲟⲩⲙⲟⲩⲓ ⲁϥⲧⲥⲁⲃⲟ ⲉⲧⲱⲣⲡ ⲛϩⲉⲛⲧⲱⲣⲡ ⲁϥⲟⲩⲉⲙⲣⲱⲙⲉ",
+      "english": "And one of her whelps sprang forth; he became a lion, and learned to take prey, he devoured men.",
+      "source": "Ezekiel 19",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲉⲓ ⲇⲉ ⲉϫⲛⲟⲩⲙⲁϩ ⲛϩⲁⲗⲏⲧ ⲉϥϩⲓϩⲏ ⲙⲙⲟⲕ ϩⲓⲧⲉϩⲓⲏ ⲉϥϩⲓϫⲛ ϣⲏⲛ ⲛⲓⲙ ⲏ ϩⲓϫⲙⲡⲕⲁϩ ⲏ ϩⲉⲛⲙⲁⲥ ⲏ ϩⲉⲛⲥⲟⲟⲩϩⲉ ⲁⲩⲱ ⲉⲣⲉⲧⲙⲁⲁⲩ ⲑⲁⲗⲡⲉⲓ ϩⲓϫⲛⲛⲉ**ⲥⲙⲁⲥ** ⲏ ϩⲓϫⲛⲛⲥⲟⲟⲩϩⲉ ⲛⲛⲉⲕϫⲓ ⲛⲧⲙⲁⲁⲩ ⲙⲛⲛϣⲏⲣⲉ",
+      "english": "And if thou shouldest come upon a brood of birds before thy face in the way or upon any tree, or upon the earth, young or eggs, and the mother be brooding on the young or the eggs, thou shalt not take the dam with the young ones.",
+      "source": "Deuteronomy 22",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲕϫⲟⲟⲥ ϫⲉⲉⲧⲃⲉⲟⲩ ⲧⲉⲕⲙⲁⲁⲩ ⲁⲥⲣⲟⲩⲙⲁⲥ ⲙⲙⲟⲩⲓ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲙⲟⲩⲓ ⲁⲥⲧⲁϣⲉ ⲛⲉ**ⲥⲙⲁⲥ** ⲙⲙⲟⲩⲓ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲙⲟⲩⲓ",
+      "english": "and say, Why is thy mother become a whelp in the midst of lions? in the midst of lions she has multiplied her whelps.",
+      "source": "Ezekiel 19",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲁⲗⲡⲉⲓ",
+        1,
+        16.013
+      ],
+      [
+        "ⲙⲟⲩⲓ",
+        3,
+        15.746
+      ],
+      [
+        "ⲥⲟⲟⲩϩⲉ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲁϣⲉ",
+        1,
+        12.74
+      ],
+      [
+        "ϩⲓϫⲛ",
+        2,
+        12.413
+      ],
+      [
+        "ⲛⲉ",
+        4,
+        11.313
+      ],
+      [
+        "ⲟⲩⲁ",
+        2,
+        10.329
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        1,
+        9.592
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.234
+      ],
+      [
+        "ⲙ",
+        3,
+        8.106
+      ],
+      [
+        "ⲁ",
+        3,
+        7.799
+      ],
+      [
+        "ⲏ",
+        1,
+        7.479
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        7.372
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.465
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ],
+      [
+        "ⲛ",
+        1,
+        1.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲙⲁⲥ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲥⲙⲁⲥ",
+          3
+        ],
+        [
+          "ⲙⲟⲩⲓ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲏ_4_post_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲛ_1_post_ⲥⲙⲁⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓϫⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩϩⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲙⲁⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲙⲁⲥ_0_node",
+          "ⲙ_1_post_ⲥⲙⲁⲥ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲙⲁⲥ",
+          "ⲙⲟⲩⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲙⲁⲥ_0_node",
+          "ⲏ_4_post_ⲥⲟⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲥⲟⲟⲩϩⲉ",
+          "ϩⲓϫⲛ_1_post_ⲥⲙⲁⲥ",
+          1
+        ],
+        [
+          "ϩⲓϫⲛ_1_post_ⲥⲙⲁⲥ",
+          "ⲛ_2_post_ϩⲓϫⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲓϫⲛ",
+          "ⲥⲟⲟⲩϩⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲥⲙⲁⲥ",
+          "ⲥⲙⲁⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5299,
+      "count": 4
+    }
+  }
+}

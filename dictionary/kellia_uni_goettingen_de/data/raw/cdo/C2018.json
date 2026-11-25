@@ -1,0 +1,155 @@
+{
+  "id": "C2018",
+  "forms": [
+    {
+      "id": "CF5709",
+      "orth": "ⲙⲏⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15908,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF5710",
+      "orth": "ⲙⲉⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11767,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF5711",
+      "orth": "ⲙⲣϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2341",
+      "bibliography": "CD 183b; KoptHWb 100; ChLCS 27b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥϫⲟⲟⲩ ⲁϥⲛⲧϥ ⲉϩⲣⲁⲓ ⲡⲁⲓ ⲇⲉ ⲛⲉⲩ**ⲙⲏⲣϣ** ⲡⲉ ⲉϥⲟ ⲛⲥⲁⲓⲏ ⲛⲃⲁⲗ ⲉⲛⲁⲛⲟⲩϥ ⲉⲛⲁⲩ ⲉⲣⲟϥ ⲛⲁϩⲣⲁϥ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲥⲁⲙⲟⲩⲏⲗ ϫⲉⲧⲱⲟⲩⲛ ⲛⲅⲧⲱϩⲥ ⲛⲇⲁⲩⲉⲓⲇ ⲡⲁⲓ ⲅⲁⲣ ⲟⲩⲁⲅⲁⲑⲟⲥ ⲡⲉ",
+      "english": "And he sent and fetched him: and he was ruddy, with beauty of eyes, and very goodly to behold. And the Lord said to Samuel, Arise, and anoint David, for he is good.",
+      "source": "I Samuel 16",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲇⲉ ⲛⲉⲛⲉⲥⲱϥ ⲉⲙⲁⲧⲉ ϩⲙⲡⲉϥⲉⲓⲛⲉ ⲉϥⲧⲣⲉϣⲣⲱϣ ⲉⲙⲁⲧⲉ ϩⲙⲡⲉϥⲁⲩⲉⲓⲛ · ⲉϥⲟ ⲙ**ⲙⲉⲣϣ** ϩⲙⲡⲉϥϥⲱ ⲉϥⲕⲟⲥⲙⲉⲓ ϩⲙⲙⲛⲧⲥⲁⲉⲓ ⲛⲓⲙ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟ",
+        1,
+        8.805
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        7.577
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        7.296
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲉ_1_pre_ⲙⲏⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲏⲣϣ",
+          1
+        ],
+        [
+          "ⲙⲏⲣϣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲉ_1_pre_ⲙⲏⲣϣ",
+          "ⲛⲉⲩ_1_pre_ⲙⲏⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲏⲣϣ",
+          "ⲙⲏⲣϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7263,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2017",
+      "label": "ⲙⲣⲟϣ",
+      "pos": "V",
+      "gloss": "be red or yellow"
+    }
+  ],
+  "etym": {
+    "egy_num": "72960",
+    "egy_lemma": "mrš",
+    "demo_num": "d2581",
+    "demo_lemma": "mlš",
+    "english": "bright red",
+    "german": "lichtrot sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2581"
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "id": "C3871",
+  "forms": [
+    {
+      "id": "CF9673",
+      "orth": "ⲥⲟⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.16,
+        "rank": 119,
+        "count": 1603
+      }
+    },
+    {
+      "orth": "ⲥⲱⲟⲩⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.14,
+        "rank": 230,
+        "count": 436
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ-",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 635,
+        "count": 107
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ-",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9451,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.36,
+        "rank": 584,
+        "count": 214
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲙ-",
+      "dialect": "S",
+      "id": "55.2"
+    },
+    {
+      "orth": "ⲥⲟⲩⲉⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7074,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲱⲟⲩⲛⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6365,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲉⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.38,
+        "rank": 596,
+        "count": 117
+      }
+    },
+    {
+      "orth": "ⲥⲁⲩⲛⲉ",
+      "dialect": "A",
+      "id": "55.6"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ-",
+      "dialect": "A",
+      "id": "55.7"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ⸗",
+      "dialect": "A",
+      "id": "55.8"
+    },
+    {
+      "orth": "ⲥⲟⲟⲩⲛ",
+      "dialect": "F",
+      "id": "55.9"
+    },
+    {
+      "orth": "ⲥⲁⲟⲩⲛ",
+      "dialect": "F",
+      "id": "55.10"
+    },
+    {
+      "orth": "ⲥⲁⲟⲩ",
+      "dialect": "F",
+      "id": "55.11"
+    },
+    {
+      "orth": "ⲥⲟⲩⲉⲓ",
+      "dialect": "F",
+      "id": "55.12"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ-",
+      "dialect": "F",
+      "id": "55.13"
+    },
+    {
+      "orth": "ⲥⲟⲩⲉⲛ-",
+      "dialect": "F",
+      "id": "55.14"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ⸗",
+      "dialect": "F",
+      "id": "55.15"
+    },
+    {
+      "orth": "ⲥⲁⲩⲛⲉ",
+      "dialect": "L",
+      "id": "55.16"
+    },
+    {
+      "orth": "ⲥⲛⲟⲩⲱⲛ⸗",
+      "dialect": "L",
+      "id": "55.17"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ-",
+      "dialect": "L",
+      "id": "55.18"
+    },
+    {
+      "orth": "ⲥⲟⲩⲱⲛ⸗",
+      "dialect": "L",
+      "id": "55.19"
+    },
+    {
+      "orth": "ⲥⲉⲟⲩⲱⲛ⸗",
+      "dialect": "L",
+      "id": "55.20"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4390",
+      "bibliography": "CD 369b-370a; CED 168; KoptHWb 204, 541; DELC 201-202; ChLCS 52a"
+    },
+    {
+      "id": "CS4391",
+      "bibliography": "CD 370ab; CED 168; KoptHWb 204; ChLCS 52a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲩ**ⲥⲱⲟⲩⲛ** ⲅⲁⲣ ⲙⲙⲟϥ ⲁⲛ ⲡⲉ .",
+      "english": "For the junior attendants did not recognize him.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯ**ⲥⲟⲟⲩⲛ** ⲉⲡⲁⲓ ϩⲛⲟⲩⲱⲣϫ ·",
+      "english": "This I know of a certainty,",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲣⲱⲓⲥ ⲟⲩⲛ ⲛⲧⲉⲧⲉⲛ**ⲥⲱⲟⲩⲛ** ⲅⲁⲣ ⲁⲛ ϫⲉⲁⲣⲉⲡϭⲟⲓⲥ ⲙⲡⲓⲏⲓ ⲛⲏⲟⲩ ⲛⲧⲛⲁⲩ ⲓⲉ ϩⲁⲛⲁⲣⲟⲩϩⲓ ⲓⲉ ⲧⲫⲁϣⲓ ⲙⲡⲓⲉϫⲱⲣϩ ⲓⲉ ⲉⲣⲉⲡⲓⲁⲗⲉⲕⲧⲱⲣ ⲙⲟⲩϯ ⲓⲉ ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+      "english": "Watch therefore, for you don't know when the lord of the house is coming, whether at evening, or at midnight, or when the rooster crows, or in the morning;",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϯ**ⲥⲟⲟⲩⲛ** ⲁⲛ ⲉⲡⲉⲛⲧⲁϥϣⲱⲡⲉ ⲙⲙⲟⲕ ϩⲛⲟⲩϭⲉⲡⲏ ·",
+      "english": "I know not what hath happened unto thee suddenly.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϣⲟⲡⲟⲩ ⲇⲉ ⲉⲣⲟϥ ϧⲉⲛⲟⲩⲣⲁϣⲓ ⲙⲉⲛⲧⲟⲓ ⲙⲡⲉϥ**ⲥⲟⲩⲱⲛ**ⲟⲩ .",
+      "english": "The old man received them with joy, but he did not recognize them.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯ**ⲥⲟⲟⲩⲛ** ϫⲉⲛⲅⲟⲃϣ ⲁⲛ ⲉⲗⲁⲁⲩ ·",
+      "english": "I know that you do not forget anything.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲛ",
+        296,
+        32.644
+      ],
+      [
+        "ⲙⲙⲟ",
+        238,
+        31.053
+      ],
+      [
+        "ⲛ",
+        305,
+        29.349
+      ],
+      [
+        "ϫⲉ",
+        160,
+        28.102
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        64,
+        27.58
+      ],
+      [
+        "ⲙⲙⲱ",
+        76,
+        27.549
+      ],
+      [
+        "ⲅⲁⲣ",
+        79,
+        27.501
+      ],
+      [
+        "ⲙ",
+        140,
+        26.971
+      ],
+      [
+        ".",
+        134,
+        26.815
+      ],
+      [
+        "ϥ",
+        172,
+        26.703
+      ],
+      [
+        "ⲧⲉⲛ",
+        77,
+        26.201
+      ],
+      [
+        "ϯ",
+        98,
+        26.134
+      ],
+      [
+        "ⲉⲧ",
+        95,
+        25.961
+      ],
+      [
+        "ⲟⲩ",
+        121,
+        25.511
+      ],
+      [
+        "ⲛⲑⲟⲕ",
+        36,
+        25.467
+      ],
+      [
+        "ⲉ",
+        112,
+        25.439
+      ],
+      [
+        "ⲛⲏ",
+        54,
+        25.322
+      ],
+      [
+        "ⲕ",
+        61,
+        24.92
+      ],
+      [
+        "ⲣⲱⲙⲓ",
+        44,
+        24.866
+      ],
+      [
+        "ⲫⲏ",
+        38,
+        24.102
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        60,
+        27.342
+      ],
+      [
+        "ⲁⲛ",
+        972,
+        26.926
+      ],
+      [
+        "ϫⲉ",
+        871,
+        24.469
+      ],
+      [
+        "ⲛ",
+        1082,
+        23.071
+      ],
+      [
+        "ⲟⲩ",
+        757,
+        22.936
+      ],
+      [
+        "ⲙⲙⲟ",
+        486,
+        22.778
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        259,
+        21.854
+      ],
+      [
+        "ⲡ",
+        687,
+        21.793
+      ],
+      [
+        "ϥ",
+        643,
+        21.531
+      ],
+      [
+        "ⲅⲁⲣ",
+        230,
+        21.239
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        174,
+        21.209
+      ],
+      [
+        "ϯ",
+        277,
+        20.881
+      ],
+      [
+        "ⲉ",
+        516,
+        20.874
+      ],
+      [
+        "ⲁ",
+        476,
+        20.752
+      ],
+      [
+        "ⲉⲧ",
+        339,
+        20.477
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        192,
+        20.226
+      ],
+      [
+        ".",
+        246,
+        19.408
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        131,
+        19.096
+      ],
+      [
+        "ⲙ",
+        290,
+        18.914
+      ],
+      [
+        "ⲕ",
+        204,
+        18.893
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          149
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲟⲟⲩⲛ",
+          15
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          35
+        ],
+        [
+          "ϯ_1_pre_ⲥⲟⲟⲩⲛ",
+          25
+        ],
+        [
+          "ⲁⲛ_1_post_ⲥⲟⲟⲩⲛ",
+          35
+        ],
+        [
+          "ⲅⲁⲣ_1_post_ⲥⲟⲟⲩⲛ",
+          19
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟⲟⲩⲛ",
+          18
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          6
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          6
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲟⲟⲩⲛ",
+          6
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          6
+        ],
+        [
+          "ϥ_1_pre_ⲥⲟⲟⲩⲛ",
+          9
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          14
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲟⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲅ_1_pre_ⲥⲟⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲟⲩⲛ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲟⲩⲛ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲧⲏⲣϥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲥⲟⲟⲩⲛ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ϯ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          3
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          "ⲁⲛ_1_post_ⲥⲟⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          "ⲅⲁⲣ_1_post_ⲥⲟⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲧⲉⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          "ⲙⲙⲟ_1_post_ⲥⲟⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟⲟⲩⲛ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟⲟⲩⲛ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲉ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲥⲟⲟⲩⲛ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲁⲛ_1_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          3
+        ],
+        [
+          "ⲕ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲅ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          "ⲙ_1_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲟⲩⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲏⲣϥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲥⲟⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲟⲩⲛ_0_node",
+          "ⲛⲓⲙ_1_post_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ϥ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          "ⲧⲛ_1_pre_ⲥⲟⲟⲩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 12.7,
+      "rank": 87,
+      "count": 2015
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3879",
+      "label": "ϫⲓⲥⲟⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "get knowledge"
+    },
+    {
+      "target": "C3880",
+      "label": "ϭⲓⲛⲥⲟⲩⲛ-",
+      "pos": "N",
+      "gloss": "knowing, knowledge"
+    },
+    {
+      "target": "C3874",
+      "label": "ⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "without knowledge"
+    },
+    {
+      "target": "C3875",
+      "label": "ⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C3878",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲟⲩⲉⲛ-",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3877",
+      "label": "ⲣⲉϥⲥⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one who knows"
+    },
+    {
+      "target": "C3876",
+      "label": "ⲣⲙⲛⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "one known, acquaintance"
+    },
+    {
+      "target": "C3872",
+      "label": "ⲥⲟⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C3873",
+      "label": "ⲥⲟⲩⲏⲛ",
+      "pos": "N",
+      "gloss": "well known, famous person"
+    }
+  ],
+  "etym": {
+    "egy_num": "130150",
+    "egy_lemma": "swn",
+    "demo_num": "d5121",
+    "demo_lemma": "swn(e)",
+    "english": "to recognize",
+    "german": "erkennen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/130150",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5121"
+  }
+}

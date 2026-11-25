@@ -1,0 +1,290 @@
+{
+  "id": "C9606",
+  "forms": [
+    {
+      "id": "CF24536",
+      "orth": "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24537",
+      "orth": "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF24538",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲉⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24539",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲉⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24540",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2659,
+        "count": 17
+      }
+    },
+    {
+      "id": "CF24541",
+      "orth": "ⲗⲓⲧⲟⲩⲣⲅⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24542",
+      "orth": "ⲗⲟⲓⲧⲟⲩⲣⲅⲉⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24543",
+      "orth": "ⲗⲩⲧⲟⲣⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12091,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12289",
+      "bibliography": "DDGLC",
+      "cu_ID": "2275"
+    },
+    {
+      "id": "CS12290",
+      "bibliography": "DDGLC",
+      "cu_ID": "1626"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲧⲁ ⲙⲛⲛⲥⲁⲡϫⲓ ⲉⲃⲟⲗ ϩⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲟⲩⲁⲁⲃ ⲛϥϫⲱⲕ ⲉⲃⲟⲗ ⲛⲧⲉϥ**ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ** ·",
+      "english": "and after the people had received the Holy Mysteries he would complete the Liturgy.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟⲕ ⲙⲛⲛⲉⲕϣⲏⲣⲉ ⲛⲙⲙⲁⲕ ⲉⲧⲉⲧⲛⲉϩⲁⲣⲉϩ ⲉⲧⲉⲧⲛⲙⲛⲧⲟⲩⲏⲏⲃ ⲕⲁⲧⲁⲥⲙⲟⲧ ⲛⲓⲙ ⲛⲧⲉⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲛⲛⲉⲧⲙⲡϩⲟⲩⲛ ⲙⲡⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉⲗⲓⲧⲟⲩⲣⲅⲉⲓ ⲛⲛ**ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ** ⲙⲡϯ ⲛⲧⲉⲧⲛⲙⲛⲧⲟⲩⲏⲏⲃ ⲡϣⲙⲙⲟ ⲇⲉ ⲉⲧⲛⲁⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ ⲉⲣⲟⲟⲩ ϥⲛⲁⲙⲟⲩ",
+      "english": "And thou and thy sons after thee shall keep up your priestly ministration, according to the whole manner of the altar, and that which is within the veil; and ye shall minister in the services as the office of your priesthood; and the stranger that comes near shall die.",
+      "source": "Numbers 18",
+      "urn": "urn:cts:copticLit:ot.num.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲉⲧⲛⲉⲟⲩⲱⲙ ⲙⲙⲟϥ ϩⲣⲁⲓ ϩⲙⲙⲁ ⲛⲓⲙ ⲛⲧⲱⲧⲛ ⲙⲛⲛⲉⲧⲛϣⲏⲣⲉ ϫⲉⲟⲩⲃⲉⲕⲉ ⲡⲉ ⲡⲁⲓ ⲛⲏⲧⲛ ⲉⲡⲙⲁ ⲛⲛⲉⲧⲛ**ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ** ⲛⲁⲓ ⲉⲧϩⲣⲁⲓ ϩⲛⲧⲉⲥⲕⲏⲛⲏ ⲙⲡⲙⲛⲧⲣⲉ",
+      "english": "And ye shall eat it in any place, ye and your families; for this is your reward for your services in the tabernacle of witness.",
+      "source": "Numbers 18",
+      "urn": "urn:cts:copticLit:ot.num.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲓⲧⲟⲩⲣⲅⲉⲓ",
+        1,
+        15.428
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        2,
+        15.24
+      ],
+      [
+        "ϫⲱⲕ",
+        2,
+        11.929
+      ],
+      [
+        "ⲡ",
+        7,
+        10.919
+      ],
+      [
+        "ⲉⲧⲉⲧⲛⲉ",
+        1,
+        10.051
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        9.964
+      ],
+      [
+        "ⲛ",
+        6,
+        9.564
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        8.33
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        7.465
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.587
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ϯ",
+        1,
+        5.516
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.688
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_4_post_ⲥⲕⲏⲛⲏ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ_0_node",
+          "ⲙ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϯ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ_0_node",
+          "ⲉ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ϩⲣⲁⲓ_4_post_ⲥⲕⲏⲛⲏ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_4_post_ⲥⲕⲏⲛⲏ",
+          "ϩⲛ_1_post_ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4921,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "1279",
+    "grl_lemma": "λειτουργία",
+    "grl_meaning": "public service, liturgies, ministration",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1036b; Preisigke 2:12"
+  }
+}

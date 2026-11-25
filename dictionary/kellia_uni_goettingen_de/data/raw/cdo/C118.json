@@ -1,0 +1,151 @@
+{
+  "id": "C118",
+  "forms": [
+    {
+      "id": "CF420",
+      "orth": "ⲣⲉϥⲁⲙⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18731,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS138",
+      "bibliography": "CD 10b; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲭⲁⲣⲓⲥ ⲉϫⲛⲟⲩⲭⲁⲣⲓⲥ ⲡⲉ ⲟⲩⲥϩⲓⲙⲉ ⲛϣⲡⲓⲉⲉⲧⲉ ⲁⲩⲱ ⲙⲛϣⲓ ⲛⲓⲙ ⲙⲡϣⲁ ⲛⲧⲉⲥⲯⲩⲭⲏ ⲛ**ⲣⲉϥⲁⲙⲁϩⲧⲉ**",
+      "english": "A shamefaced and faithful woman is a double grace, and her continent mind cannot be valued.",
+      "source": "Sirach 26",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲥ",
+        1,
+        11.529
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲁⲙⲁϩⲧⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18349,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C119",
+      "label": "ϭⲓⲛⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "control, restraint"
+    },
+    {
+      "target": "C110",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "prevail, rule, be in possession, valid, lay hold on; grasp, embrace, possess, restrict, detain"
+    },
+    {
+      "target": "C115",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "power, possession"
+    },
+    {
+      "target": "C114",
+      "label": "ⲁⲙⲁϩⲧⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "possess, master"
+    },
+    {
+      "target": "C111",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule, have power over"
+    },
+    {
+      "target": "C112",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "hold with, support"
+    },
+    {
+      "target": "C113",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hold, abide by"
+    },
+    {
+      "target": "C116",
+      "label": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unrestrained, uncontrollable"
+    },
+    {
+      "target": "C117",
+      "label": "ⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "uncontrolledness, incontinence"
+    }
+  ]
+}

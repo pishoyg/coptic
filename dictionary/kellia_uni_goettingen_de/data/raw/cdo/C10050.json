@@ -1,0 +1,180 @@
+{
+  "id": "C10050",
+  "forms": [
+    {
+      "id": "CF26342",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26344",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13176,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26343",
+      "orth": "ⲡⲁⲣⲁⲅⲗⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26345",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲓⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26346",
+      "orth": "ⲡⲁⲣⲁⲕⲗⲩⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13207",
+      "bibliography": "DDGLC",
+      "cu_ID": "3202"
+    },
+    {
+      "id": "CS13208",
+      "bibliography": "DDGLC",
+      "cu_ID": "10687"
+    },
+    {
+      "id": "CS13209",
+      "bibliography": "DDGLC",
+      "cu_ID": "4458"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲁⲡⲗⲱⲥ ⲙⲛⲛⲥⲁⲧⲉϥ**ⲡⲁⲣⲁⲕⲗⲏⲥⲓⲥ** · ⲁⲡϫⲟⲉⲓⲥ ϣⲁϫⲉ ⲛⲙⲙⲁϥ ϩⲓϫⲙⲡⲉⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲥⲱⲧⲙ ⲉⲡⲉⲕϣⲗⲏⲗ ⲉⲛⲧⲁⲕⲁⲁϥ ⲉϩⲣⲁⲓ ⲉⲣⲟⲓ ·",
+      "english": "And, in short, after hearing these words God spake unto him over the altar saying, 'I have heard thy prayer which thou hast made to Me.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲃϯ",
+        1,
+        12.825
+      ],
+      [
+        "ⲑⲱⲛ",
+        1,
+        12.08
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        10.303
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲁⲡⲗⲱⲥ",
+        1,
+        14.621
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲁⲕⲗⲏⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12762,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1651",
+    "grl_lemma": "παράκλησις",
+    "grl_meaning": "calling, summoning, invocation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1313a; Preisigke 2:247"
+  }
+}

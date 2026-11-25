@@ -1,0 +1,56 @@
+{
+  "id": "C7121",
+  "forms": [
+    {
+      "id": "CF16300",
+      "orth": "ⲁⲧϫⲱⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7856",
+      "bibliography": "CD 762a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7119",
+      "label": "ϫⲱⲕ",
+      "pos": "V",
+      "gloss": "be completed, full, end (life); complete, finish"
+    },
+    {
+      "target": "C7120",
+      "label": "ϫⲱⲕ",
+      "pos": "N",
+      "gloss": "completion, end, total"
+    },
+    {
+      "target": "C12164",
+      "label": "ϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be completed, full, end (life); complete, finish"
+    },
+    {
+      "target": "C7123",
+      "label": "ϭⲓⲛϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "completion, death"
+    },
+    {
+      "target": "C7122",
+      "label": "ⲣⲉϥϫⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "perfect person"
+    }
+  ]
+}

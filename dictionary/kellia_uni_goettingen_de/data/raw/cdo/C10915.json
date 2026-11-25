@@ -1,0 +1,234 @@
+{
+  "id": "C10915",
+  "forms": [
+    {
+      "id": "CF29789",
+      "orth": "ⲭⲁⲓⲣⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF29790",
+      "orth": "ⲭⲁⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1292,
+        "count": 64
+      }
+    },
+    {
+      "id": "CF29791",
+      "orth": "ⲭⲁⲓⲣⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29792",
+      "orth": "ⲭⲁⲓⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29793",
+      "orth": "ⲭⲉⲣⲁⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29794",
+      "orth": "ⲭⲉⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29795",
+      "orth": "ⲭⲉⲣⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2345,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF29796",
+      "orth": "ⲭⲉⲣⲉ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS15094",
+      "bibliography": "DDGLC",
+      "cu_ID": "596"
+    },
+    {
+      "id": "CS15095",
+      "bibliography": "DDGLC",
+      "cu_ID": "8818"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲏⲧⲥ ⲛⲉⲣⲁⲥⲡⲁⲍⲉⲥⲑⲉ ⲙⲙⲟϥ ϫⲉ**ⲭⲉⲣⲉ** ⲡⲟⲩⲣⲟ ⲛⲧⲉⲛⲓⲓⲟⲩⲇⲁⲓ .",
+      "english": "They began to salute him, 'Hail, King of the Jews!'",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉ**ⲭⲁⲓⲣⲉ** ⲡⲁⲥⲟⲛ",
+      "english": "And John said unto him, ' Hail, my brother!",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲁⲕⲱⲃⲟⲥ ⲫⲃⲱⲕ ⲙⲫⲛⲟⲩϯ ⲛⲉⲙⲡⲉⲛϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲛϯⲓⲃ ⲙⲫⲩⲗⲏ ⲉⲧⲭⲏ ϧⲉⲛⲡⲓϫⲱⲣ ⲉⲃⲟⲗ **ⲭⲉⲣⲉ**",
+      "english": "James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are in the Dispersion: Greetings.",
+      "source": "20_James_01",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲭⲁⲓⲣⲉ** ⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ·",
+      "english": "Hail, Apa Victor.",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲁⲩⲥϧⲁⲓ ⲉⲃⲟⲗ ϩⲓⲧⲟⲧⲟⲩ ⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲛⲉⲙⲛⲓⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲛⲓⲥⲛⲏⲟⲩ ⲛⲏ ⲉⲧⲭⲏ ϧⲉⲛⲧⲁⲛⲧⲓⲟⲭⲓⲁ ⲛⲉⲙϯⲕⲩⲗⲓⲕⲓⲁ ⲛⲉⲙϯⲥⲩⲣⲓⲁ ⲛⲓⲥⲛⲏⲟⲩ ⲛⲓⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲉⲑⲛⲟⲥ **ⲭⲉⲣⲉ** .",
+      "english": "They wrote these things by their hand: 'The apostles, the elders, and the brothers, to the brothers who are of the Gentiles in Antioch, Syria, and Cilicia: greetings.",
+      "source": "05_Acts_15",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲁⲡⲁ ⲡⲁⲙⲃⲱ · ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲭⲁⲓⲣⲉ** · ⲁⲡⲁ ϩⲓⲉⲣⲁⲝ · ⲡⲉⲛⲧⲁϥⲣϣⲃⲏⲣ ⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲧⲃⲉⲡⲉϥⲧⲃⲃⲟ ·",
+      "english": "And Apa Pambo answered, saying, 'Hail thou, Apa Hierax, who hast become a companion of the angels of God by reason of thy purity.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲩⲣⲓⲟⲥ",
+        8,
+        20.276
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        19.353
+      ],
+      [
+        "ⲡⲁⲙⲃⲱ",
+        6,
+        16.738
+      ],
+      [
+        "ⲡⲁ",
+        26,
+        16.477
+      ],
+      [
+        "ϫⲉ",
+        38,
+        15.89
+      ],
+      [
+        "--",
+        2,
+        15.598
+      ],
+      [
+        "ϩⲛⲧⲟⲩ",
+        2,
+        15.276
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        9,
+        15.102
+      ],
+      [
+        "ϩⲣⲁⲃⲃⲉⲓ",
+        3,
+        14.961
+      ],
+      [
+        "ⲥ",
+        29,
+        14.848
+      ],
+      [
+        "ϩⲓⲉⲣⲁⲝ",
+        2,
+        14.791
+      ],
+      [
+        "ⲧⲁ",
+        15,
+        14.671
+      ],
+      [
+        "ⲧⲁⲥⲧⲟⲗⲏ",
+        1,
+        14.598
+      ],
+      [
+        "ϣⲃⲣ..",
+        1,
+        14.598
+      ],
+      [
+        "ⲡⲁⲗⲗⲁⲇⲓⲟⲛ",
+        1,
+        14.598
+      ],
+      [
+        "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        14.598
+      ],
+      [
+        "ⲧⲁⲓⲑⲓⲟⲡⲓⲁ",
+        1,
+        14.598
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        12,
+        14.349
+      ],
+      [
+        "ⲁⲡⲁ",
+        7,
+        13.77
+      ],
+      [
+        "ⲙⲙⲟ",
+        19,
+        13.724
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.4,
+      "rank": 1116,
+      "count": 64
+    }
+  },
+  "etym": {
+    "grl_ID": "2339",
+    "grl_lemma": "χαίρω",
+    "grl_meaning": "to rejoice, be glad, greet",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1969b; Preisigke 2:713"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "C8955",
+  "forms": [
+    {
+      "id": "CF21946",
+      "orth": "ⲉⲛⲧⲟⲗⲟⲟⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21948",
+      "orth": "ⲉⲛⲧⲟⲗⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12701,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21947",
+      "orth": "ⲉⲛⲧⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10917",
+      "bibliography": "DDGLC",
+      "cu_ID": "15366"
+    },
+    {
+      "id": "CS10918",
+      "bibliography": "DDGLC",
+      "cu_ID": "15357"
+    },
+    {
+      "id": "CS10919",
+      "bibliography": "DDGLC",
+      "cu_ID": "10371"
+    },
+    {
+      "id": "CS10920",
+      "bibliography": "DDGLC",
+      "cu_ID": "10505"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁϥⲕⲱ ⲉⲃⲟⲗ ⲛⲧⲉⲯⲩⲭⲏ ⲕⲁⲧⲁ ⲛ**ⲉⲛⲧⲟⲗⲟⲟⲩⲉ** ⲛⲧⲁⲩϩⲟⲛⲟⲩ ⲉⲧⲟⲟⲧϥ ⲛϭⲓⲛⲁⲣⲭⲱⲛ ⲛⲧⲛⲟϭ ⲛϩⲓⲙⲁⲣⲙⲉⲛⲏ · ⲉⲩϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲙⲡⲣⲕⲱ ⲉⲃⲟⲗ ⲛⲧⲉⲓⲯⲩⲭⲏ · ⲉⲓⲙⲏⲧⲓ ⲛⲥϫⲱ ⲉⲣⲟⲕ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲃⲱⲗ ⲛⲥⲫⲣⲁⲅⲓⲥ ⲛⲓⲙ ⲛⲁⲓ ⲛⲧⲁⲛⲙⲟⲣⲕ ⲛϩⲏⲧⲟⲩ ⲉϩⲟⲩⲛ ⲉⲧⲉⲯⲩⲭⲏ ·",
+      "english": "and releaseth the soul according to the commandments which | the rulers of the great Fate have commanded it, saying: 'Release not this soul until it tell thee the mystery of the undoing of all the seals with which we have bound thee to the soul.'",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲛ",
+        1,
+        15.554
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲛⲧⲟⲗⲟⲟⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲉⲛⲧⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲟⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲛ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ϩⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲛⲧⲟⲗⲟⲟⲩⲉ_0_node",
+          "ⲛⲧ_1_post_ⲉⲛⲧⲟⲗⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲉⲛⲧⲟⲗⲟⲟⲩⲉ",
+          "ⲁ_3_post_ϩⲟⲛ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϩⲟⲛ",
+          "ⲩ_3_post_ϩⲟⲛ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲛ",
+          "ϩⲟⲛ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲛ_2_post_ⲛⲧ",
+          "ⲟⲩ_3_post_ϩⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12278,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "693",
+    "grl_lemma": "ἐντολή",
+    "grl_meaning": "injunction, order, command",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 576b; Preisigke 1:500"
+  }
+}

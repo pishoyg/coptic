@@ -1,0 +1,70 @@
+{
+  "id": "C4014",
+  "forms": [
+    {
+      "id": "CF9971",
+      "orth": "ⲉⲓ ⲉⲡⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4561",
+      "bibliography": "CD 391b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C825",
+      "type": "cf",
+      "label": "come, go"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4012",
+      "label": "ϩⲛⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4016",
+      "label": "ϫⲉⲧⲉ",
+      "pos": "V",
+      "gloss": "mature"
+    },
+    {
+      "target": "C4013",
+      "label": "ⲉⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4011",
+      "label": "ⲙⲡⲉϥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4015",
+      "label": "ⲣⲧⲉ",
+      "pos": "V",
+      "gloss": "be of age"
+    },
+    {
+      "target": "C4010",
+      "label": "ⲧⲏ",
+      "pos": "N",
+      "gloss": "time, season"
+    }
+  ]
+}

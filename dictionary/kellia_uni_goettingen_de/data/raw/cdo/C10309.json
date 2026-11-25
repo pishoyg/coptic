@@ -1,0 +1,145 @@
+{
+  "id": "C10309",
+  "forms": [
+    {
+      "id": "CF27410",
+      "orth": "ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27411",
+      "orth": "ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12898,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13844",
+      "bibliography": "DDGLC",
+      "cu_ID": "3264"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ⲉⲧⲉⲁⲃⲉⲣⲁⲛⲉⲛⲑⲱ ⲡⲉ · ϫⲉⲉⲡⲉⲓⲇⲏ ⲡⲉⲓⲱⲧ ⲙⲡⲁⲉⲓⲱⲧ · ⲉⲧⲉⲡⲁⲓ ⲡⲉ ⲓⲉⲟⲩ ⲛⲧⲟϥ ⲡⲉ ⲡⲉ**ⲡⲣⲟⲛⲟⲏⲧⲟⲥ** ⲛⲛⲁⲣⲭⲱⲛ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲛⲟⲩⲧⲉ ⲙⲛⲛⲇⲩⲛⲁⲙⲓⲥ ⲛⲁⲓ ⲉⲛⲧⲁⲩϣⲱⲡⲉ ϩⲛⲧϩⲩⲗⲏ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲙⲡⲉⲑⲏⲥⲁⲩⲣⲟⲥ · ⲁⲩⲱ ⲍⲟⲣⲟⲕⲟⲑⲟⲣⲁ ⲙⲉⲗϫⲓⲥⲉⲇⲉⲕ ·",
+      "english": "“Jesus,--that is Aberamenthō,--said: Since indeed the father of my father,--that is Yew,--is the fore-minder of all the rulers, gods and powers who have arisen out of the matter of the Light of the Treasury, and Zorokothora Melchisedec”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲉⲟⲩ",
+        1,
+        15.598
+      ],
+      [
+        "ⲁⲣⲭⲱⲛ",
+        1,
+        10.841
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        9.857
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲏⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_4_post_ⲁⲣⲭⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+          "ⲡⲣⲟⲛⲟⲏⲧⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲏⲧⲟⲥ_0_node",
+          "ⲛ_1_post_ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲛⲟⲏⲧⲟⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          "ⲧⲏⲣ_4_post_ⲁⲣⲭⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12478,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6360",
+    "grl_lemma": "προνόητος (II)",
+    "grl_meaning": "administrator, overseer",
+    "grl_pos": "noun",
+    "grl_ref": "cf. LSJ 1491a, s.v. προνοητής"
+  }
+}

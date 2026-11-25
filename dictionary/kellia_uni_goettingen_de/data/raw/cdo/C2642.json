@@ -1,0 +1,46 @@
+{
+  "id": "C2642",
+  "forms": [
+    {
+      "id": "CF7087",
+      "orth": "ⲥⲁ ⲛⲛⲉϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3028",
+      "bibliography": "CD 241a; CED 117; KoptHWb 134; ChLCS 34a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13000",
+      "type": "cf",
+      "label": "man (woman)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2641",
+      "label": "ⲁⲧⲛⲉϩ",
+      "pos": "N",
+      "gloss": "oilless"
+    },
+    {
+      "target": "C2640",
+      "label": "ⲛⲉϩ",
+      "pos": "N",
+      "gloss": "oil"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C9051",
+  "forms": [
+    {
+      "id": "CF22372",
+      "orth": "ⲉⲥⲑⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22373",
+      "orth": "ⲁⲓⲥⲑⲏⲥⲓⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF22377",
+      "orth": "ⲉⲥⲑⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18449,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22374",
+      "orth": "ⲁⲥⲑⲏⲥⲉⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22375",
+      "orth": "ⲁⲥⲑⲏⲥⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22376",
+      "orth": "ⲁⲥⲑⲏⲥⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11140",
+      "bibliography": "DDGLC",
+      "cu_ID": "2763"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "... ⲉⲧⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲁⲅⲉⲛⲟⲥ ⲡϫⲟⲉⲓⲥ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲇⲱⲣ ⲛⲁϫⲓⲕⲃⲁ ⲙⲙⲟⲟⲩ ϩⲙⲡⲉϩⲟⲟⲩ ⲙⲡϩⲁⲡ ⲉϯ ⲛⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩϥⲛⲧ ⲉϩⲣⲁⲓ ⲉϫⲛⲛⲉⲩⲥⲁⲣⲝ ⲁⲩⲱ ⲥⲉⲛⲁⲣⲓⲙⲉ ϩⲛⲟⲩ**ⲉⲥⲑⲏⲥⲓⲥ** ϣⲁⲉⲛⲉϩ",
+      "english": "Woe to the nations that rise up against my kindred! the Lord Almighty will take vengeance of them in the day of judgment, in putting fire and worms in their flesh; and they shall feel them, and weep for ever.",
+      "source": "Judith 16",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲓⲙⲉ",
+        1,
+        11.813
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        10.835
+      ],
+      [
+        "ⲉⲛⲉϩ",
+        1,
+        10.381
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲥⲑⲏⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18067,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "53",
+    "grl_lemma": "αἴσθησις",
+    "grl_meaning": "sense-perception",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 42b; Preisigke 1:36"
+  }
+}

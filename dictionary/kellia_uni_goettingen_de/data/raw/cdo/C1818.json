@@ -1,0 +1,274 @@
+{
+  "id": "C1818",
+  "forms": [
+    {
+      "id": "CF5232",
+      "orth": "ⲙⲛⲧⲁⲧⲙⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3043,
+        "count": 13
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2121",
+      "bibliography": "CD 160a; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲕ ⲅⲁⲣ ⲡⲉ ⲡϫⲟⲉⲓⲥ · ⲧⲛⲟⲩⲛⲉ ⲛⲧ**ⲙⲛⲧⲁⲧⲙⲟⲩ** · ⲁⲩⲱ ⲧⲡⲏⲅⲏ ⲛⲧⲙⲛⲧⲁⲧⲧⲁⲕⲟ · ⲁⲩⲱ ⲡⲧⲁϫⲣⲟ ⲛⲛⲁⲓⲱⲛ ·",
+      "english": "For Thou art the Lord, the Root of immortality. Thou art the Fountain which cannot be destroyed. Thou art the Strength which endureth throughout the Ages.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧϣⲉⲡϩⲓⲥⲉ ϣⲁϥⲧⲱϭⲉ ⲛⲟⲩ**ⲙⲛⲧⲁⲧⲙⲟⲩ** · ⲁⲩⲱ ⲟⲩⲙⲛⲧⲛⲟⲩⲧⲉ ϩⲛⲧⲉϥⲙⲛⲧⲣⲱⲙⲉ ·",
+      "english": "He Who suffered planted immortality and Godhead in His manhood.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲧⲁⲛ ⲇⲉ ⲉⲣϣⲁⲛⲡⲁⲓ ⲉϣⲁϥⲙⲟⲩ ϯ ϩⲓⲱⲱϥ ⲛⲧ**ⲙⲛⲧⲁⲧⲙⲟⲩ** . ⲧⲟⲧⲉ ϥⲛⲁϣⲱⲡⲉ ⲛϭⲓⲡϣⲁϫⲉ ⲉⲧⲥⲏϩ ϫⲉⲁⲩⲉⲙⲕⲡⲙⲟⲩ ⲉⲩϫⲣⲟ .",
+      "english": "But when this corruptible will have put on incorruption, and this mortal will have put on immortality, then what is written will happen: &apos;Death is swallowed up in victory.&apos;",
+      "source": "1 Corinthians 15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲱⲱ",
+        4,
+        14.438
+      ],
+      [
+        "ⲧ",
+        14,
+        13.793
+      ],
+      [
+        "ϫⲣⲁⲉⲓⲧ",
+        1,
+        13.728
+      ],
+      [
+        "ⲡⲏⲅⲏ",
+        2,
+        13.488
+      ],
+      [
+        "ⲛⲟⲩⲛⲉ",
+        2,
+        13.488
+      ],
+      [
+        "ϩⲟⲧⲁⲛ",
+        2,
+        12.779
+      ],
+      [
+        "ⲛ",
+        14,
+        11.531
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        2,
+        11.254
+      ],
+      [
+        "ⲙⲟⲩⲛ",
+        1,
+        10.943
+      ],
+      [
+        "ⲙⲛⲧⲛⲟⲩⲧⲉ",
+        1,
+        10.898
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        2,
+        10.592
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ",
+        1,
+        10.438
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        2,
+        10.416
+      ],
+      [
+        "ϥ",
+        9,
+        10.331
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        9.886
+      ],
+      [
+        ".",
+        5,
+        9.823
+      ],
+      [
+        "ⲉϣ",
+        1,
+        9.058
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.485
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        8.173
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        8.055
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲁⲧⲙⲟⲩ_0_node",
+          11
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟⲩⲧⲉ_1_post_ⲙⲛⲧⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_4_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛⲧⲁⲧⲙⲟⲩ_0_node",
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          "ⲙⲛⲧⲛⲟⲩⲧⲉ_1_post_ⲙⲛⲧⲁⲧⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟⲩⲧⲉ_1_post_ⲙⲛⲧⲁⲧⲙⲟⲩ",
+          "ϩⲛ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲙⲛⲧⲛⲟⲩⲧⲉ",
+          "ⲧⲉϥ_4_post_ⲙⲛⲧⲣⲱⲙⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2702,
+      "count": 13
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1814",
+      "label": "ϭⲓⲛⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "manner of dying, death"
+    },
+    {
+      "target": "C1817",
+      "label": "ⲁⲧⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "immortal"
+    },
+    {
+      "target": "C1809",
+      "label": "ⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "die"
+    },
+    {
+      "target": "C1810",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "death"
+    },
+    {
+      "target": "C1811",
+      "label": "ⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1816",
+      "label": "ⲡⲁϣⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "half-dead"
+    },
+    {
+      "target": "C1815",
+      "label": "ⲣⲉϥⲓⲣⲓ ⲙⲫⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "deadly"
+    },
+    {
+      "target": "C1813",
+      "label": "ⲣⲉϥⲙⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "dead person, thing"
+    },
+    {
+      "target": "C1812",
+      "label": "ⲣⲉϥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "dead, mortal"
+    }
+  ]
+}

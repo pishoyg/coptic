@@ -1,0 +1,728 @@
+{
+  "id": "C670",
+  "forms": [
+    {
+      "id": "CF2513",
+      "orth": "ⲉⲙⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1372,
+        "count": 59
+      }
+    },
+    {
+      "id": "CF31618",
+      "orth": "ⲉⲓⲙⲛⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31619",
+      "orth": "ⲉⲓⲙⲛⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2514",
+      "orth": "ⲉⲙⲛⲧ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2515",
+      "orth": "ⲉⲙⲛⲧ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2516",
+      "orth": "ⲉⲙⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18012,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2518",
+      "orth": "ⲉⲙⲉⲛⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1380,
+        "count": 29
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS807",
+      "bibliography": "CD 56a; DELC 43; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟ ϩⲱⲓ ϯⲛⲟⲩ ⲉⲓⲉϯⲛⲟⲙϯ ⲛⲉ ⲥⲓⲱⲛ ⲟⲩⲟϩ ⲉⲓⲉϯⲛⲟⲙϯ ⲛⲛⲉⲥϣⲁϥⲉⲩ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲉⲓⲉⲭⲱ ⲛⲛⲉⲥϣⲁϥⲉⲩ ⲙⲫⲣⲏϯ ⲛⲟⲩⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲛⲧⲉⲡϭⲥ ⲛⲉⲙⲥⲁ ⲡ**ⲉⲙⲉⲛⲧ** ⲙⲙⲟⲥ ⲙⲫⲣⲏϯ ⲙⲡⲓⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲛⲧⲉⲡϭⲥ ⲟⲩⲟⲩⲛⲟϥ ⲛⲉⲙⲟⲩⲑⲉⲗⲏⲗ ⲉⲩⲉϫⲉⲙⲟⲩ ⲛϧⲏⲧⲥ ⲟⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲉⲙⲧⲥⲙⲏ ⲛⲟⲩⲥⲙⲟⲩ .",
+      "english": "And now I will comfort thee, O Sion: and I have comforted all her desert places; and I will make her desert places as a garden, and her western places as the garden of the Lord; they shall find in her gladness and exultation, thanksgiving and the voice of praise.",
+      "source": "23_Isaias_51",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:51",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲕⲧⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓⲛⲧⲟϣ ⲉⲗⲟⲩⲍⲁ ⲛⲥⲁⲥⲡⲓⲣ ⲛⲗⲟⲩⲍⲁ ϫⲓⲛⲡⲉⲥⲉⲙⲛⲧ ⲧⲁⲓ ⲧⲉ ⲃⲁⲓⲑⲏⲗ ⲁⲩⲱ ⲛⲧⲟϣ ⲥⲁⲛⲁⲓ ⲉϩⲣⲁⲓ ⲉⲡⲙⲁ ⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉ... ⲉⲁⲣⲱⲑⲟⲣⲉⲕ ⲉϩⲣⲁⲓ ⲉⲧⲟⲣⲓⲛⲏ ⲧⲁⲓ ⲉⲧϩⲙⲡⲥⲁ ⲙⲡ**ⲉⲙⲛⲧ** ⲛⲃⲁⲓⲑⲟⲣⲱⲛ ⲧⲉ ⲧⲉⲧⲛϩⲙ ⲡϩⲃⲃⲉ",
+      "english": "And the borders will go forth thence to Luz, behind Luz, from the south of it; this is Baethel: and the borders shall go down to Maatarob Orech, to the hill country, which is southward of Baethoron the lower.",
+      "source": "Joshua 18",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϫⲟⲥ ⲙⲡⲓⲓⲁϩϣϣⲏⲛ ⲛⲁⲅⲏⲃ ϫⲉⲥⲱⲧⲉⲙ ⲙⲡⲥⲁϫⲓ ⲙⲡϭⲟⲉⲓⲥ ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲥ ⲫⲛⲟⲩϯ ⲙⲡⲓⲥⲗ ϫⲉϯⲛⲁϭⲉⲣⲉ ⲟⲩⲭⲣⲱⲙ ⲛϧⲏⲧⲕ ⲟⲩⲟϩ ⲉϥⲉⲟⲩⲱⲙ ⲛϣϣⲏⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲩⲉⲧⲟⲩⲟⲧ ⲛϧⲣⲏⲓ ⲛϧⲏⲧⲕ ⲛⲉⲙϣϣⲏⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲓ ⲛϣⲱⲟⲩⲓ ⲟⲩⲟϩ ⲛⲛⲉϥⲟϣⲉⲙ ⲛϫⲉⲡⲓϣⲁϩ ⲉⲧϭⲉⲣⲏⲟⲩⲧ ⲉϥⲉⲣⲱⲕϩ ⲛϧⲣⲏⲓ ⲛϧⲏⲧϥ ⲛϫⲉϩⲟ ⲛⲓⲃⲉⲛ ⲓⲥϫⲉⲛ ⲡⲉⲓⲉⲃⲧ ϣⲁⲡ**ⲉⲙⲉⲛⲧ** .",
+      "english": "and thou shalt say to the forest of Nageb, Hear the word of the Lord; thus saith the Lord, even the Lord; Behold, I will kindle a fire in thee, and it shall devour in thee every green tree, and every dry tree: the flame that is kindled shall not be quenched, and every face shall be scorched with it from the south to the north.",
+      "source": "26_Ezechiel_20",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩⲧⲟϣ ⲁⲩϣⲱⲡⲉ ϫⲓⲛⲡⲉⲙⲛⲧ ϣⲁϩⲣⲁⲓ ⲉⲩⲙⲉⲣⲟⲥ ⲛⲧⲑⲁⲗⲁⲥⲥⲁ ⲙⲙⲗϩ ϫⲓⲛⲙⲡⲕⲟⲟϩ ⲙⲡⲧⲟⲟⲩ ⲉⲧⲛⲏⲩ ⲉϩⲣⲁⲓ ⲉⲡ**ⲉⲙⲛⲧ**",
+      "english": "And their borders were from the south as far as a part of the salt sea from the high country that extends southward.",
+      "source": "Joshua 15",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁϫⲟⲥ ⲙⲡⲉⲙϩⲓⲧ ϫⲉⲁⲛⲓⲟⲩⲓ ⲟⲩⲟϩ ⲡ**ⲉⲙⲉⲛⲧ** ϫⲉⲙⲡⲉⲣⲧⲁϩⲛⲟ ⲁⲛⲓⲟⲩⲓ ⲛⲛⲁϣⲏⲣⲓ ⲉⲃⲟⲗϧⲉⲛ ⲟⲩⲕⲁϩⲓ ⲉϥⲟⲩⲏⲟⲩ ⲛⲉⲙⲛⲁϣⲉⲣⲓ ⲉⲃⲟⲗϧⲉⲛ ⲁⲩⲣⲏϫϥ ⲙⲡⲕⲁϩⲓ .",
+      "english": "I will say to the north, Bring; and to the south, Keep not back; bring my sons from the land afar off, and my daughters from the ends of the earth;",
+      "source": "23_Isaias_43",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:43",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲙⲓⲭⲁⲓⲁⲥ ⲛⲁϥ ϫⲉⲛⲧⲉⲓϩⲉ ⲁⲛ ϫⲉⲁⲛⲟⲕ ⲁⲛ ⲡⲉⲧϫⲱ ⲙⲙⲟⲟⲩ ⲁⲗⲗⲁ ⲡϫⲟⲉⲓⲥ ⲡⲉ ⲥⲱⲧⲙ ϭⲉ ⲉⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲁⲓⲛⲁⲩ ⲉⲡϫⲟⲉⲓⲥ ⲉϥϩⲙⲟⲟⲥ ϩⲓϫⲙⲡⲉϥⲑⲣⲟⲛⲟⲥ ⲉⲣⲉⲧⲉⲥⲧⲣⲁⲧⲉⲓⲁ ⲧⲏⲣⲥ ⲛⲧⲡⲉ ⲁϩⲉⲣⲁⲧⲥ ϩⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ϩⲓⲥⲁ ⲡⲉⲓⲉ ⲁⲩⲱ ϩⲓⲥⲁ ⲡ**ⲉⲙⲛⲧ** ⲛⲁϩⲣⲙ ⲡⲛⲟⲩⲧⲉ",
+      "english": "And Michaias said, Not so, it is not I: hear the word of the Lord; it is not so. I saw the God of Israel sitting on his throne, and all the host of heaven stood about him on his right hand and on his left.",
+      "source": "I Kings 22",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡ",
+        78,
+        17.471
+      ],
+      [
+        "ⲉⲙϩⲓⲧ",
+        8,
+        17.43
+      ],
+      [
+        "ⲡⲉⲉⲓⲃⲧ",
+        3,
+        16.885
+      ],
+      [
+        "ϫⲓⲛ",
+        16,
+        16.369
+      ],
+      [
+        "ⲥⲁ",
+        12,
+        16.13
+      ],
+      [
+        "ⲁⲩⲱ",
+        39,
+        15.721
+      ],
+      [
+        "ⲉⲅⲟⲗⲅⲟⲗ",
+        1,
+        14.715
+      ],
+      [
+        "ⲃⲧ",
+        1,
+        14.715
+      ],
+      [
+        "ⲛⲑⲁⲗⲁⲥⲥⲥⲁ",
+        1,
+        14.715
+      ],
+      [
+        "ⲛⲁⲇⲁⲙⲓⲛ",
+        1,
+        14.715
+      ],
+      [
+        "ⲙⲡⲓⲉⲃⲟⲩⲥ",
+        1,
+        14.715
+      ],
+      [
+        "ⲛⲗⲟⲩⲍⲁ",
+        1,
+        14.715
+      ],
+      [
+        "ⲡⲥⲥⲁ",
+        1,
+        14.715
+      ],
+      [
+        "ⲧⲉ",
+        18,
+        14.43
+      ],
+      [
+        "ⲃⲁⲣ",
+        2,
+        14.256
+      ],
+      [
+        "ⲧⲟϣ",
+        6,
+        14.036
+      ],
+      [
+        "ⲛ",
+        39,
+        13.783
+      ],
+      [
+        "ϥⲏ",
+        1,
+        13.715
+      ],
+      [
+        "ⲛⲃⲁⲓⲑⲟⲣⲱⲛ",
+        1,
+        13.715
+      ],
+      [
+        "ⲙⲛ",
+        19,
+        13.505
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          55
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲙⲛⲧ",
+          11
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲛⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          5
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲣⲁ_3_post_ⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲓⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲏ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲁⲇⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲁⲣ_3_post_ⲕⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲅⲟⲗⲅⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲧⲛ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ϩⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲃⲁⲓⲑⲟⲣⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲩϣⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲩϣⲏ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲣⲙ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲙ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲉⲙⲛⲧ",
+          "ⲉⲙⲛⲧ_0_node",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲛⲧ",
+          "ⲡ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧ",
+          "ⲉⲧ_4_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲙⲛⲧ",
+          "ⲛ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲉⲙⲛⲧ",
+          "ⲩ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲙⲛⲧ",
+          "ⲡ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲉⲣⲉ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ⲉⲙⲛⲧ",
+          "ϩⲣⲁ_3_post_ⲕⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲙⲛ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲓⲱⲛ",
+          "ⲛ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲁⲓⲱⲛ",
+          "ⲁⲓⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲓⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲧⲏⲣ_2_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_2_post_ⲁⲓⲱⲛ",
+          "ⲟⲩ_3_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϭⲟⲙ",
+          "ⲧⲉⲩ_2_post_ϭⲟⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ϭⲟⲙ",
+          "ϭⲟⲙ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϩⲓⲏ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲕⲁⲇⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲇⲏⲥ_2_post_ⲛ",
+          "ⲃⲁⲣ_3_post_ⲕⲁⲇⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲉⲧ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲙⲛⲧ",
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          "ⲉⲅⲟⲗⲅⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲅⲟⲗⲅⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          "ϩⲁⲧⲛ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲙⲛⲧ",
+          "ⲉⲙⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲇⲉ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲇⲉ_2_post_ϩⲱⲛ",
+          "ⲁⲩⲱ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲱⲛ",
+          "ⲥⲉ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϩⲱⲛ",
+          "ⲛⲁ_2_post_ϩⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ϩⲱⲛ",
+          "ϩⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲙⲛⲧ",
+          "ⲉⲙⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲛⲃⲁⲓⲑⲟⲣⲱⲛ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲉⲙⲛⲧ",
+          "ⲉⲙⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲩϣⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲩϣⲏ_3_post_ⲧⲉ",
+          "ⲉⲧ_4_post_ⲩϣⲏ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲛⲁϩⲣⲙ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲣⲙ_1_post_ⲉⲙⲛⲧ",
+          "ⲡ_2_post_ⲛⲁϩⲣⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲁϩⲣⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲙ_1_pre_ⲉⲙⲛⲧ",
+          "ⲡ_2_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲛ",
+          "ⲉⲙⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲛⲧ",
+          "ⲉⲃⲟⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲧ_3_post_ⲡ",
+          "ⲛ_4_post_ⲉⲃⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲙⲛⲧ_0_node",
+          "ⲟⲩⲇⲉ_4_post_ⲧⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲧⲟⲟⲩ",
+          "ⲉⲃⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲙⲛⲧ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲙⲛⲧ",
+          "ⲡ_1_pre_ⲉⲙⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.37,
+      "rank": 1179,
+      "count": 59
+    }
+  },
+  "etym": {
+    "egy_num": "26150",
+    "egy_lemma": "jmn.tj",
+    "demo_num": "d520",
+    "demo_lemma": "ı ͗mnṱ",
+    "english": "western",
+    "german": "westlich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/26150",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d520"
+  }
+}

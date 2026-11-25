@@ -1,0 +1,231 @@
+{
+  "id": "C3647",
+  "forms": [
+    {
+      "id": "CF9199",
+      "orth": "ⲥⲛⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3822,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF9200",
+      "orth": "ⲥⲛⲁϩ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF9201",
+      "orth": "ⲥⲛⲁⲩϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3249,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF9202",
+      "orth": "ⲥⲛⲁⲩϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.58,
+        "rank": 1002,
+        "count": 49
+      }
+    },
+    {
+      "id": "CF9203",
+      "orth": "ⲥⲛⲁⲩϩ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4150",
+      "bibliography": "CD 349a; CED 157; KoptHWb 191; DELC 193; ChLCS 49b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲩⲱⲛ ⲛϫⲉⲛⲉϥⲙⲁϣϫ ⲟⲩⲟϩ ⲁϥϯⲟⲩⲱ ⲛϫⲉⲡⲓ**ⲥⲛⲁϩ** ⲛⲧⲉⲡⲉϥⲗⲁⲥ ⲟⲩⲟϩ ⲛⲁϥⲥⲁϫⲓ ⲡⲉ ⲉϥⲥⲟⲩⲧⲱⲛ",
+      "english": "Immediately his ears were opened, and the impediment of his tongue was released, and he spoke clearly.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲑⲁⲓ ⲇⲉ ⲛⲑⲟⲥ ⲟⲩϣⲉⲣⲓ ⲛⲧⲉⲁⲃⲣⲁⲁⲙ ⲧⲉ ⲉⲁ ⲡⲥⲁⲧⲁⲛⲁⲥ ⲥⲟⲛϩⲥ ⲓⲥ ⲓⲏ ⲛⲣⲟⲙⲡⲓ ⲛⲉⲡⲉⲧⲥϣⲉ ⲁⲛ ⲡⲉ ⲉⲃⲟⲗⲥ ⲉⲃⲟⲗ ϧⲉⲛⲡⲁⲓ**ⲥⲛⲁϩ** ϧⲉⲛⲡⲉϩⲟⲟⲩ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ .",
+      "english": "Ought not this woman, being a daughter of Abraham, whom Satan had bound eighteen long years, be freed from this bondage on the Sabbath day?'",
+      "source": "03_Luke_13",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:13",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϯⲟⲩⲱ",
+        3,
+        16.567
+      ],
+      [
+        "ⲗⲁⲥ",
+        3,
+        15.066
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        10.795
+      ],
+      [
+        "ⲛϫⲉ",
+        3,
+        9.349
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        8.821
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        8.526
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.835
+      ],
+      [
+        "ϥ",
+        3,
+        7.179
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        7.129
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.763
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.633
+      ],
+      [
+        "ⲥ",
+        1,
+        4.428
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.304
+      ],
+      [
+        "ⲡ",
+        1,
+        3.619
+      ],
+      [
+        "ⲙ",
+        1,
+        3.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲛⲁϩ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲛⲁϩ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲗⲁⲥ",
+          2
+        ],
+        [
+          "ⲗⲁⲥ_2_post_ⲛⲧⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲛⲁϩ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲛⲁϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲛⲁϩ",
+          "ⲡⲉϥ_3_post_ⲗⲁⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲗⲁⲥ",
+          "ⲗⲁⲥ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.05,
+      "rank": 3401,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3646",
+      "label": "ϫⲓⲛⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "binding"
+    },
+    {
+      "target": "C3645",
+      "label": "ⲙⲁ ⲛⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C3643",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "V",
+      "gloss": "be bound, fettered; bind, fetter"
+    },
+    {
+      "target": "C3644",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "bound, fetter"
+    }
+  ],
+  "etym": {
+    "egy_num": "500330",
+    "egy_lemma": "snḥ",
+    "english": "fetter(s)",
+    "german": "Fessel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/500330"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "C3204",
+  "forms": [
+    {
+      "id": "CF8293",
+      "orth": "ⲣⲟⲟⲩⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9573,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3660",
+      "bibliography": "CD 306b; ChLCS 43a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲟⲩⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        11.587
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        1,
+        11.065
+      ],
+      [
+        "ϫⲓ",
+        1,
+        9.164
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲟⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲟⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲟⲟⲩⲛⲉ_0_node",
+          "ⲛ_1_post_ⲣⲟⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲟⲟⲩⲛⲉ",
+          "ⲧⲉⲛ_3_post_ϣⲉⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_3_post_ϣⲉⲉⲣⲉ",
+          "ϣⲉⲉⲣⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9143,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3205",
+      "label": "ⲙⲛⲧⲣⲟⲟⲩⲛⲉ",
+      "pos": "N",
+      "gloss": "virginity"
+    },
+    {
+      "target": "C3203",
+      "label": "ⲣⲟⲟⲩⲛⲉ",
+      "pos": "N",
+      "gloss": "virgin, virginity"
+    }
+  ],
+  "etym": {
+    "egy_num": "95130",
+    "egy_lemma": "rnn.t",
+    "demo_num": "d3517",
+    "demo_lemma": "rn.t",
+    "english": "maiden",
+    "german": "junges Mädchen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3517"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "C3671",
+  "forms": [
+    {
+      "id": "CF9251",
+      "orth": "ⲥⲱⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4175",
+      "bibliography": "CD 321b; CED 159; KoptHWb 192; DELC 194; ChLCS 49b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲕⲁⲑⲁⲣⲥⲓⲁ",
+        1,
+        16.236
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.616
+      ],
+      [
+        "ⲕⲁϩⲓ",
+        1,
+        8.423
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲕⲁϩⲓ",
+          1
+        ],
+        [
+          "ⲕⲁϩⲓ_1_pre_ⲥⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓ_3_post_ϧⲉⲗⲗⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲥⲱⲡⲉ",
+          "ⲡⲓ_2_pre_ⲕⲁϩⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_pre_ⲕⲁϩⲓ",
+          "ⲕⲁϩⲓ_1_pre_ⲥⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁϩⲓ_1_pre_ⲥⲱⲡⲉ",
+          "ⲛⲁ_1_pre_ⲥⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲱⲡⲉ",
+          "ⲥⲱⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲡⲉ_0_node",
+          "ⲛⲓ_3_post_ϧⲉⲗⲗⲟⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3683",
+      "type": "cf",
+      "label": "lips (dual), edge, shore"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3672",
+      "label": "ⲥⲱⲡ",
+      "pos": "N",
+      "gloss": "eyelid"
+    }
+  ],
+  "etym": {
+    "egy_num": "132440",
+    "egy_lemma": "sp.t",
+    "demo_num": "d5252",
+    "demo_lemma": "spꜥ",
+    "english": "lip; edge; bank; shore",
+    "german": "Lippe; Rand; Ufer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/132440",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5252"
+  }
+}

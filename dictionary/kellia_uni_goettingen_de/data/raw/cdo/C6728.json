@@ -1,0 +1,51 @@
+{
+  "id": "C6728",
+  "forms": [
+    {
+      "id": "CF15501",
+      "orth": "ϩⲛⲱⲱϩⲉ",
+      "dialect": "A"
+    },
+    {
+      "orth": "ϩⲛⲱϩⲉ",
+      "dialect": "A",
+      "id": "488.1"
+    },
+    {
+      "orth": "ϩⲛⲟϩⲉ",
+      "dialect": "A",
+      "id": "488.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7442",
+      "bibliography": "CD 693a; CED 289; KoptHWb 381; DELC 306b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C6902",
+      "type": "cf",
+      "label": "fear"
+    }
+  ],
+  "etym": {
+    "egy_num": "108010",
+    "egy_lemma": "ḥr-n-ḥr",
+    "demo_num": "d4137",
+    "demo_lemma": "ḥnwḥ(j.t)",
+    "english": "panic; misfortune",
+    "german": "Unglück",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/108010",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4137"
+  }
+}

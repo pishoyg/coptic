@@ -1,0 +1,99 @@
+{
+  "id": "C2775",
+  "forms": [
+    {
+      "id": "CF7380",
+      "orth": "ϫⲓⲛϩⲓⲱⲓϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3172",
+      "bibliography": "CD 257b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    },
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2772",
+      "label": "ϩⲓⲱⲓϣ",
+      "pos": "V",
+      "gloss": "call out, proclaim, preach"
+    },
+    {
+      "target": "C2773",
+      "label": "ϩⲓⲱⲓϣ",
+      "pos": "N",
+      "gloss": "preaching, announcement"
+    },
+    {
+      "target": "C2767",
+      "label": "ⲁϣⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "talkative, loquacious"
+    },
+    {
+      "target": "C12222",
+      "label": "ⲁⲓϣⲉ",
+      "pos": "N",
+      "gloss": "cry"
+    },
+    {
+      "target": "C2771",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "proclamation"
+    },
+    {
+      "target": "C2766",
+      "label": "ⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "cry"
+    },
+    {
+      "target": "C2774",
+      "label": "ⲣⲉϥϩⲓⲱⲓϣ",
+      "pos": "N",
+      "gloss": "preacher"
+    },
+    {
+      "target": "C2770",
+      "label": "ⲣⲉϥⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "preacher, herald"
+    },
+    {
+      "target": "C2768",
+      "label": "ⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "V",
+      "gloss": "call out, proclaim, preach"
+    },
+    {
+      "target": "C2769",
+      "label": "ⲧⲁϣⲉⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "preaching, proclamation"
+    }
+  ]
+}

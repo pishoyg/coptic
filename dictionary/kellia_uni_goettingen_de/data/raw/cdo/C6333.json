@@ -1,0 +1,104 @@
+{
+  "id": "C6333",
+  "forms": [
+    {
+      "id": "CF14678",
+      "orth": "ϩⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 13.49,
+        "rank": 97,
+        "count": 1144
+      }
+    },
+    {
+      "id": "CF14679",
+      "orth": "ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.79,
+        "rank": 110,
+        "count": 1702
+      }
+    },
+    {
+      "id": "CF14680",
+      "orth": "ϩⲁⲣⲟ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 7.31,
+        "rank": 173,
+        "count": 620
+      }
+    },
+    {
+      "id": "CF14681",
+      "orth": "ϩⲁⲣⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.61,
+        "rank": 293,
+        "count": 569
+      }
+    },
+    {
+      "orth": "ϩⲁⲣⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.11,
+        "rank": 446,
+        "count": 179
+      }
+    },
+    {
+      "orth": "ϩⲁⲣⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.83,
+        "rank": 831,
+        "count": 131
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7028",
+      "bibliography": "CD 634b; CED 269; KoptHWb 348; DELC 284a; ChLCS 86a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6335",
+      "label": "ⲉϧⲟⲩⲛ ϩⲁ",
+      "pos": "PREP",
+      "gloss": "into, unto"
+    },
+    {
+      "target": "C6334",
+      "label": "ⲉⲃⲟⲗ ϩⲁ",
+      "pos": "PREP",
+      "gloss": "from"
+    }
+  ],
+  "etym": {
+    "egy_num": "850795",
+    "egy_lemma": "ḫr",
+    "demo_num": "dm3108",
+    "demo_lemma": "h̭ꜣ",
+    "english": "with",
+    "german": "[Präposition]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850795",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3108"
+  }
+}

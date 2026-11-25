@@ -1,0 +1,292 @@
+{
+  "id": "C4890",
+  "forms": [
+    {
+      "id": "CF11745",
+      "orth": "ⲣⲉϥϫⲓⲟⲩⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5025,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5515",
+      "bibliography": "CD 468b; ChLCS 65b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲁϥ ⲡ**ⲣⲉϥϫⲓⲟⲩⲁ** ⲡⲉ · ⲡϩⲟⲟⲩ ⲇⲉ ⲡⲣⲉϥⲥⲱⲧⲙ ⲡⲉ ·",
+      "english": "Yesterday it was the blasphemer, to-day it is the man of obedience.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲗⲱⲛⲏⲥ ⲅⲁⲣ ⲙⲛⲛ**ⲣⲉϥϫⲓⲟⲩⲁ** ⲛⲉ ⲛⲁⲛϫⲱϫ ⲙⲡⲕⲁϩ ·",
+      "english": "Now the tax-gatherers and the blasphemers are the masters of the earth.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲡⲉⲡⲣⲉϥϫⲓⲟⲩⲁ ϭⲱ ⲉϥⲟ ⲛ**ⲣⲉϥϫⲓⲟⲩⲁ** · ⲁⲗⲗⲁ ⲁϥϣⲱⲡⲉ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ·",
+      "english": "The blasphemer, however, did not continue to be a blasphemer, but became an Apostle ;",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲛϫⲱϫ",
+        1,
+        15.469
+      ],
+      [
+        "ⲧⲉⲗⲱⲛⲏⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲥⲁϥ",
+        1,
+        12.443
+      ],
+      [
+        "ⲟ",
+        3,
+        12.238
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        9.982
+      ],
+      [
+        "ⲛ",
+        6,
+        9.242
+      ],
+      [
+        "ϥ",
+        5,
+        9.165
+      ],
+      [
+        "ϭⲱ",
+        1,
+        8.932
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.647
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        7.469
+      ],
+      [
+        "ⲉ",
+        3,
+        7.25
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.186
+      ],
+      [
+        "ⲡ",
+        3,
+        6.93
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        6.357
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.194
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.481
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        4.991
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.322
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥϫⲓⲟⲩⲁ_0_node",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          "ⲣⲉϥϫⲓⲟⲩⲁ_0_node",
+          2
+        ],
+        [
+          "ⲣⲉϥϫⲓⲟⲩⲁ_0_node",
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲇⲉ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          "ⲡ_3_post_ⲣⲉϥⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          "ⲛ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥϫⲓⲟⲩⲁ",
+          "ⲣⲉϥϫⲓⲟⲩⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4605,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "say, speak, tell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4888",
+      "label": "ϫⲁⲧⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    },
+    {
+      "target": "C4889",
+      "label": "ϫⲁⲧⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    },
+    {
+      "target": "C4885",
+      "label": "ϫⲓⲟⲩⲁ",
+      "pos": "V",
+      "gloss": "speak blasphemy"
+    },
+    {
+      "target": "C4886",
+      "label": "ϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "act of blaspheming"
+    },
+    {
+      "target": "C4887",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "act of blaspheming"
+    },
+    {
+      "target": "C4884",
+      "label": "ⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "blasphemy"
+    },
+    {
+      "target": "C4891",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "speaker of blasphemy"
+    }
+  ]
+}

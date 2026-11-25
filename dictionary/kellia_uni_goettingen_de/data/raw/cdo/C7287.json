@@ -1,0 +1,50 @@
+{
+  "id": "C7287",
+  "forms": [
+    {
+      "id": "CF16633",
+      "orth": "ⲙⲡⲛⲁⲩ ⲛ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS8049",
+      "bibliography": "CD 778a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2589",
+      "type": "cf",
+      "label": "hour, time"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7285",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C7286",
+      "label": "ϫⲡ-",
+      "pos": "N",
+      "gloss": "hour"
+    },
+    {
+      "target": "C12185",
+      "label": "ⲁϫⲡⲓⲁ",
+      "pos": "N",
+      "gloss": "book of hours"
+    }
+  ]
+}

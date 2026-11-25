@@ -1,0 +1,109 @@
+{
+  "id": "C10562",
+  "forms": [
+    {
+      "id": "CF28470",
+      "orth": "ⲥⲧⲟⲙⲁⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28471",
+      "orth": "ⲥⲧⲟⲙⲁⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19846,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28472",
+      "orth": "ⲧⲙⲟⲛⲁⲭⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14364",
+      "bibliography": "DDGLC",
+      "cu_ID": "1496"
+    },
+    {
+      "id": "CS14365",
+      "bibliography": "DDGLC",
+      "cu_ID": "10903"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲥⲉ ⲙⲙⲟⲟⲩ ϭⲉ . ⲁⲗⲗⲁ ⲥⲉⲟⲩⲕⲟⲩⲓ ⲛⲏⲣⲡ ⲉⲧⲃⲉⲡⲉⲕ**ⲥⲧⲟⲙⲁⲭⲟⲥ** ⲙⲛⲛⲉⲕϣⲱⲛⲉ ⲉⲧⲟϣ .",
+      "english": "Be no longer a drinker of water only, but use a little wine for your stomach's sake and your frequent infirmities.",
+      "source": "54_1 Timothy_5",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲣⲡ",
+        1,
+        12.403
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        12.098
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.787
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19456,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3061",
+    "grl_lemma": "στόμαχος",
+    "grl_meaning": "throat, gullet; stomach",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1649a; Preisigke 2:491"
+  }
+}

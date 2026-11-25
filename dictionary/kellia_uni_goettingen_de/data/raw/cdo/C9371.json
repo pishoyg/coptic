@@ -1,0 +1,134 @@
+{
+  "id": "C9371",
+  "forms": [
+    {
+      "id": "CF23629",
+      "orth": "ⲕⲁⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23630",
+      "orth": "ⲕⲁⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17551,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23631",
+      "orth": "ⲕⲉⲧⲟⲩⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23632",
+      "orth": "ⲕⲉⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11809",
+      "bibliography": "DDGLC",
+      "cu_ID": "6943"
+    },
+    {
+      "id": "CS11810",
+      "bibliography": "DDGLC",
+      "cu_ID": "4122"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲛϩⲉⲑⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲉⲩⲟ ⲛⲧϩⲉ ⲛⲟⲩⲧⲉⲗϯⲗⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩ**ⲕⲁⲧⲟⲥ** ⲁⲩⲱ ⲉⲩⲏⲡ ⲛⲧϩⲉ ⲙⲡⲣⲓⲕⲉ ⲛⲟⲩⲙⲁϣⲉ ⲁⲩⲱ ⲁⲩⲧⲛⲧⲱⲛⲟⲩ ⲉⲩϫⲓϩ",
+      "english": "since all the nations are counted as a drop from a bucket, and as the turning of a balance, and shall be counted as spittle?",
+      "source": "Isaiah 40",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲗϯⲗⲉ",
+        1,
+        19.013
+      ],
+      [
+        "ⲏⲡ",
+        1,
+        12.991
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲁⲧⲟⲥ",
+          "ⲕⲁⲧⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17163,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "975",
+    "grl_lemma": "κάδος",
+    "grl_meaning": "jar or vessel for water or wine (also as measure)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 848b; Preisigke 1:707"
+  }
+}

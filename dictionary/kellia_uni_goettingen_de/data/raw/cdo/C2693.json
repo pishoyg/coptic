@@ -1,0 +1,118 @@
+{
+  "id": "C2693",
+  "forms": [
+    {
+      "id": "CF7192",
+      "orth": "ⲛⲟⲩϫⲉ (ⲉϫⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϫⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3085",
+      "bibliography": "CD 247b; KoptHWb 137"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲉⲓ ⲉⲃⲟⲗ ⲉⲃⲁⲓⲑⲏⲗ ⲁⲩⲱ **ⲥⲉⲛⲁⲛⲟⲩϫⲉ **ⲉϫⲛ**ⲛⲧⲟϣ** ⲛⲁⲕⲕⲁⲣⲱⲛ",
+      "english": "And they will go out to Baethel, and will proceed to the borders of Achatarothi.",
+      "source": "Joshua 16",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2705",
+      "label": "ⲛⲁϫϥ",
+      "pos": "N",
+      "gloss": "storeroom (in a ship)"
+    },
+    {
+      "target": "C2691",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "V",
+      "gloss": "throw, cast"
+    },
+    {
+      "target": "C2704",
+      "label": "ⲛⲟⲩϫⲉ",
+      "pos": "N",
+      "gloss": "throw, cast (of stone, arrow)"
+    },
+    {
+      "target": "C2696",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "cast, put beneath"
+    },
+    {
+      "target": "C2697",
+      "label": "ⲛⲟⲩϫⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "throw (self) upon"
+    },
+    {
+      "target": "C2692",
+      "label": "ⲛⲟⲩϫⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "throw at, put into"
+    },
+    {
+      "target": "C2701",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "cast, put in, introduce"
+    },
+    {
+      "target": "C2702",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw up, put forth"
+    },
+    {
+      "target": "C2703",
+      "label": "ⲛⲟⲩϫⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "throw down"
+    },
+    {
+      "target": "C2698",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "cast forth, discard, put down sth"
+    },
+    {
+      "target": "C2700",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "cast behind; postpone"
+    },
+    {
+      "target": "C2699",
+      "label": "ⲛⲟⲩϫⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "cast down, discard"
+    },
+    {
+      "target": "C2694",
+      "label": "ⲛⲟⲩϫⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "throw to"
+    },
+    {
+      "target": "C2695",
+      "label": "ⲛⲟⲩϫⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "throw after, cast upon"
+    }
+  ]
+}

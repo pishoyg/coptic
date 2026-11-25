@@ -1,0 +1,77 @@
+{
+  "id": "C2347",
+  "forms": [
+    {
+      "id": "CF6432",
+      "orth": "ⲛ︦",
+      "dialect": "B"
+    },
+    {
+      "id": "CF6433",
+      "orth": "ⲛ︦",
+      "dialect": "F"
+    },
+    {
+      "id": "CF6434",
+      "orth": "ⲛ︦",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "note": "13. Buchstabe des Alphabeths ⲛⲉ",
+    "tlapos": "Zahlzeichen"
+  },
+  "senses": [
+    {
+      "id": "CS2706",
+      "bibliography": "CD 214a; KoptHWb 115; DELC 133; ChLCS 31a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲣⲱⲧⲉⲃ ⲧⲏⲣⲟⲩ ⲙⲙⲁ ⲙⲁ ⲕⲁⲧⲁⲣ ⲣ ⲛⲉⲙⲕⲁⲧⲁ**ⲛ** ⲛ .",
+      "english": "They sat down in ranks, by hundreds and by fifties.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲥϩⲓⲙⲉ ⲉⲧⲉⲧⲛⲛⲁⲩ ⲉⲣⲟⲥ ⲧⲁϣ**ⲛ** ⲟⲩⲁ ⲧⲉ ·",
+      "english": "and the woman whom ye see is more than fifty-one.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲉϯ ⲛϫⲉⲡⲓⲣⲱⲙⲓ ⲉⲧⲁϥⲉⲛⲕⲟⲧ ⲛⲉⲙⲁⲥ ⲙⲫⲓⲱⲧ ⲛϯϧⲉⲗϣⲁⲓⲣⲓ ⲛ**ⲛ** ⲛⲕⲓϯ ⲛϩⲁⲧ ⲟⲩⲟϩ ⲉⲥⲉⲉⲣⲥϩⲓⲙⲓ ⲛⲁϥ ⲛⲧϣⲉⲃⲓⲱ ϫⲉⲁϥⲑⲉⲃⲓⲟⲥ ⲛⲛⲉϥϣϫⲉⲙϫⲟⲙ ⲛϩⲓⲧⲥ ⲉⲃⲟⲗ ⲙⲡⲉϥⲭⲣⲟⲛⲟⲥ ⲧⲏⲣϥ",
+      "english": "the man who lay with her shall give to the father of the damsel fifty silver didrachms, and she shall be his wife, because he has humbled her; he shall never be able to put her away.",
+      "source": "05_Deuteronomium_22",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:22",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ **ⲛ**ⲟⲩⲟⲥⲉ ⲁⲛ ⲡⲉ .",
+      "english": "This is not damaging.",
+      "source": "Apophthegmata Patrum Sahidic 027: Pistamon 1",
+      "urn": "urn:cts:copticLit:ap.27.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉⲑⲁⲙⲓⲟ ⲛ**ⲛ** ⲛⲕⲣⲓⲕⲟⲥ ⲛϩⲟⲙⲧ ⲟⲩⲟϩ ⲉⲕⲉⲧⲱⲙⲓ ⲛⲛⲓⲕⲣⲓⲕⲟⲥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲁⲅⲑⲩⲗⲏ ⲟⲩⲟϩ ⲛⲛⲓⲉⲣϣⲱⲛ ⲟⲩⲟϩ ⲉϥⲉⲉⲣⲟⲩⲁⲓ ⲛⲟⲩⲱⲧ",
+      "english": "And thou shalt make fifty brazen rings; and thou shalt join the rings by the loops, and thou shalt join the skins, and they shall be one.",
+      "source": "02_Exodus_26",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲉϥϫⲱ **ⲙⲙⲟ**ⲥ ϫⲉⲕⲱ ⲛⲁⲓ ⲉⲃⲟⲗ ⲻ",
+      "english": "But he said, 'Forgive me.'",
+      "source": "Apophthegmata Patrum Sahidic 119: Sisoes 16",
+      "urn": "urn:cts:copticLit:ap.119.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

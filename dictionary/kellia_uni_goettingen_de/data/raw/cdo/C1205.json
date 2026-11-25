@@ -1,0 +1,81 @@
+{
+  "id": "C1205",
+  "forms": [
+    {
+      "id": "CF3797",
+      "orth": "ⲕⲗϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1396",
+      "bibliography": "CD 107a; KoptHWb 63; ChLCS 17a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1197",
+      "label": "ⲕⲱⲗϩ",
+      "pos": "V",
+      "gloss": "strike, knock; strike, clap"
+    },
+    {
+      "target": "C1204",
+      "label": "ⲕⲱⲗϩ",
+      "pos": "N",
+      "gloss": "blow, knock"
+    },
+    {
+      "target": "C1200",
+      "label": "ⲕⲱⲗϩ (ϧⲉⲛ-)",
+      "pos": "V",
+      "gloss": "strike upon, in"
+    },
+    {
+      "target": "C1201",
+      "label": "ⲕⲱⲗϩ (ϩⲓⲣⲉⲛ-)",
+      "pos": "V",
+      "gloss": "knock on, at"
+    },
+    {
+      "target": "C1203",
+      "label": "ⲕⲱⲗϩ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "knock inwards"
+    },
+    {
+      "target": "C1198",
+      "label": "ⲕⲱⲗϩ (ⲉϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "strike upon"
+    },
+    {
+      "target": "C1202",
+      "label": "ⲕⲱⲗϩ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "knock outwards"
+    },
+    {
+      "target": "C1199",
+      "label": "ⲕⲱⲗϩ (ⲛ-)",
+      "pos": "V",
+      "gloss": "knock for"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm779",
+    "demo_lemma": "qrḥj",
+    "english": "[to strike, beat]",
+    "german": "Schlag",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm779"
+  }
+}

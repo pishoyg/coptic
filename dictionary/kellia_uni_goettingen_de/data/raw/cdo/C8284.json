@@ -1,0 +1,225 @@
+{
+  "id": "C8284",
+  "forms": [
+    {
+      "id": "CF19147",
+      "orth": "ⲁⲛⲛⲱⲛⲛⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19148",
+      "orth": "ⲁⲛⲛⲱⲛⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4170,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9451",
+      "bibliography": "DDGLC",
+      "cu_ID": "9820"
+    },
+    {
+      "id": "CS9452",
+      "bibliography": "DDGLC",
+      "cu_ID": "15195"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϭⲱⲛⲧ ⲇⲉ ⲛϭⲓⲡⲣⲣⲟ · ⲁϥⲕⲉⲗⲉⲩⲉ ⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲣⲉⲩⲕⲟⲩⲛⲫⲓⲍⲉ ⲙⲙⲟϥ ϩⲛⲛⲉϥ**ⲁⲛⲛⲱⲛⲛⲁ** · ⲉⲛⲉϥϫⲓ ⲅⲁⲣ ⲛⲥⲉⲛⲁⲛⲛⲱⲛⲛⲁ · ⲁϥⲧⲣⲉⲩϯⲟⲩⲉⲓ ⲛⲁϥ ⲙⲙⲁⲧⲉ · ϫⲉⲕⲁⲥ ⲛⲛⲉϥⲙⲟⲩ ϩⲁⲡⲉϩⲕⲟ ·",
+      "english": "And the Emperor was wroth, and he commanded immediately that (his servants) should reduce his supply of food, hut he did not cut off his rations altogether, and the Emperor allowed him sufficient food to keep him alive lest he should die of hunger.",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ϯⲥⲟⲟⲩⲛ ⲙⲙⲟⲓ ⲉⲓϫⲓ ⲛⲥⲉ ⲛ**ⲁⲛⲛⲱⲛⲛⲁ** · ⲉⲣⲉⲡⲁⲉⲓⲱⲧ ⲟ ⲛⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲁⲩⲱ ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲙⲟⲥⲧⲉ ⲙⲙⲟⲓ ϫⲉⲉⲓϫⲓ ⲙⲙⲟⲟⲩ ϩⲛⲟⲩϫⲓ ⲛϭⲟⲛⲥ ·",
+      "english": "Verily, I know well that I did receive a salary of sixty from my father, who is a general, and that God hated me because I received these things wickedly.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲧⲃⲉⲟⲩ ⲛⲅϫⲓ**ⲁⲛⲛⲱⲛⲛⲁ** ⲁⲛ · ⲟⲩⲇⲉ ⲛⲅϥⲓ ⲙⲡⲣⲟⲟⲩϣ ⲁⲛ ⲛⲛⲉⲕϩⲁⲣⲙⲁ ⲙⲛⲛⲉⲕϩⲟⲡⲗⲟⲛ ·",
+      "english": "Why dost thou not go on taking thy salary? Why dost thou take no pleasure in thy chariot and in thine armour?'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲓ",
+        5,
+        13.323
+      ],
+      [
+        "ⲙⲉϩϥⲧⲟⲟⲩ",
+        1,
+        12.469
+      ],
+      [
+        "ⲧⲁⲓⲟ",
+        1,
+        11.884
+      ],
+      [
+        "ⲛ",
+        12,
+        11.756
+      ],
+      [
+        "ⲥⲉ",
+        4,
+        11.275
+      ],
+      [
+        "ⲁⲛⲅ",
+        1,
+        9.429
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        8.99
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        1,
+        8.257
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        7.469
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        7.215
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        1,
+        6.818
+      ],
+      [
+        "ⲅ",
+        1,
+        6.432
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.295
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        6.143
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.872
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        5.857
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        5.568
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.321
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.267
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲛⲛⲱⲛⲛⲁ_0_node",
+          7
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          "ⲁⲛⲛⲱⲛⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          "ϩⲉⲛ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          "ⲁⲛⲛⲱⲛⲛⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲁⲛⲛⲱⲛⲛⲁ",
+          "ⲁⲛⲛⲱⲛⲛⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3776,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "164",
+    "grl_lemma": "ἀννῶνα",
+    "grl_meaning": "income, tax",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 172b; Preisigke 1:127"
+  }
+}

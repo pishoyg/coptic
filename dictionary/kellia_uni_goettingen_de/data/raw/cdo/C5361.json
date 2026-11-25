@@ -1,0 +1,51 @@
+{
+  "id": "C5361",
+  "forms": [
+    {
+      "id": "CF12691",
+      "orth": "ⲁⲧⲟⲩⲱϭⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6014",
+      "bibliography": "CD 513b; CDC 79b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5362",
+      "label": "ϭⲓⲛⲟⲩⲱϭⲡ",
+      "pos": "N",
+      "gloss": "breaking"
+    },
+    {
+      "target": "C5359",
+      "label": "ⲟⲩⲱϭⲡ",
+      "pos": "V",
+      "gloss": "break, be broken"
+    },
+    {
+      "target": "C5360",
+      "label": "ⲟⲩⲱϭⲡ",
+      "pos": "N",
+      "gloss": "breakage, collapse"
+    }
+  ]
+}

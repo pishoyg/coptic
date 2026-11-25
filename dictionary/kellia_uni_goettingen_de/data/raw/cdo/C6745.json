@@ -1,0 +1,44 @@
+{
+  "id": "C6745",
+  "forms": [
+    {
+      "id": "CF15537",
+      "orth": "ϩⲁⲡⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲁⲡⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12201,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7459",
+      "bibliography": "CD 696a; CED 290; KoptHWb 381; DELC 306b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "104000",
+    "egy_lemma": "Ḥp",
+    "demo_num": "d4038",
+    "demo_lemma": "Ḥp",
+    "english": "Apis",
+    "german": "Apis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/104000",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4038"
+  }
+}

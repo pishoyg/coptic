@@ -1,0 +1,110 @@
+{
+  "id": "C5683",
+  "forms": [
+    {
+      "id": "CF13342",
+      "orth": "ⲣⲁ ⲛϣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31953",
+      "orth": "ⲣⲁϣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19294,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6360",
+      "bibliography": "CD 543a; KoptHWb 300; ChLCS 74b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3029",
+      "type": "cf",
+      "label": "state, condition, position"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5679",
+      "label": "ϣⲁ",
+      "pos": "V",
+      "gloss": "rise (of sun)"
+    },
+    {
+      "target": "C5680",
+      "label": "ϣⲁ",
+      "pos": "N",
+      "gloss": "rising"
+    },
+    {
+      "target": "C5684",
+      "label": "ϣⲁ",
+      "pos": "N",
+      "gloss": "festival; divine communion, service"
+    },
+    {
+      "target": "C5690",
+      "label": "ϣⲁ",
+      "pos": "V",
+      "gloss": "make a festival (rare)"
+    },
+    {
+      "target": "C5685",
+      "label": "ϣⲁ ⲱ",
+      "pos": "N",
+      "gloss": "great festival"
+    },
+    {
+      "target": "C5681",
+      "label": "ϭⲓⲛϣⲁ",
+      "pos": "N",
+      "gloss": "rising"
+    },
+    {
+      "target": "C5688",
+      "label": "ϭⲓⲛⲣϣⲁ",
+      "pos": "N",
+      "gloss": "celebration of festival"
+    },
+    {
+      "target": "C5689",
+      "label": "ϯϣⲁ",
+      "pos": "V",
+      "gloss": "give communion"
+    },
+    {
+      "target": "C5682",
+      "label": "ⲙⲁ ⲛϣⲁ",
+      "pos": "N",
+      "gloss": "place of rising, east"
+    },
+    {
+      "target": "C5687",
+      "label": "ⲙⲛⲧⲣⲉϥⲣϣⲁ",
+      "pos": "N",
+      "gloss": "occasion of festival, performance of rites"
+    },
+    {
+      "target": "C5686",
+      "label": "ⲣϣⲁ",
+      "pos": "V",
+      "gloss": "make, celebrate a festival"
+    }
+  ]
+}

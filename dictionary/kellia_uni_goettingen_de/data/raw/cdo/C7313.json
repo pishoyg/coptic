@@ -1,0 +1,148 @@
+{
+  "id": "C7313",
+  "forms": [
+    {
+      "id": "CF16685",
+      "orth": "ⲁⲛϫⲓⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8053,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8080",
+      "bibliography": "CD 781a; CED 318; KoptHWb 432; ChLCS 103b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϫⲟⲟⲩ ⲉⲃⲟⲗ ⲛⲛⲉⲥϩⲙϩⲁⲗ ⲉⲧⲣⲉⲩⲉⲓⲛⲉ ⲛⲁⲥ ⲛⲟⲩϩⲟⲥⲙ ⲙⲛⲟⲩ**ⲁⲛϫⲓⲣ** ·",
+      "english": "and she sent away her servants to bring to her the soda and soap (wherewith to wash herself).",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲥ ⲛⲛⲉⲥϩⲙϩⲁⲗ ϫⲉⲁⲛⲓⲛⲉ ⲛⲁⲓ ⲛⲟⲩⲛⲉϩ ⲙⲛⲟⲩ**ⲁⲛϫⲓⲣ** ⲛⲧⲉⲧⲛϣⲧⲁⲙ ⲛⲛⲣⲟ ⲛⲧⲉϣⲛⲏ ϫⲉⲕⲁⲥ ⲉⲓⲉϫⲱⲕⲙ",
+      "english": "Then she said to her maids, Bring me oil and washing balls, and shut the garden doors, that I may wash me.",
+      "source": "Susanna 1",
+      "urn": "urn:cts:copticLit:ot.sus.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲥⲙ",
+        1,
+        18.598
+      ],
+      [
+        "ϣⲧⲁⲙ",
+        1,
+        13.24
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        1,
+        11.753
+      ],
+      [
+        "ⲛⲉϩ",
+        1,
+        11.74
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        10.22
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        7.448
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲛϫⲓⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲛϫⲓⲣ",
+          2
+        ],
+        [
+          "ⲁⲛϫⲓⲣ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲛϫⲓⲣ",
+          "ⲟⲩ_1_pre_ⲁⲛϫⲓⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲛϫⲓⲣ",
+          "ⲁⲛϫⲓⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7606,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7312",
+      "label": "ϫⲓⲣ",
+      "pos": "N",
+      "gloss": "brine; small salted fish"
+    }
+  ],
+  "etym": {
+    "demo_num": "d132",
+    "demo_lemma": "ꜣnḏjr",
+    "english": "piece of salt (for soap); pigment",
+    "german": "Stück Salz (für Seife); Pigment",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d132"
+  }
+}

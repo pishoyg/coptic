@@ -1,0 +1,376 @@
+{
+  "id": "C8657",
+  "forms": [
+    {
+      "id": "CF20474",
+      "orth": "ⲅⲁⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF20475",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20476",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20477",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20478",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.54,
+        "rank": 56,
+        "count": 3872
+      }
+    },
+    {
+      "id": "CF20479",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 25.98,
+        "rank": 56,
+        "count": 2203
+      }
+    },
+    {
+      "id": "CF20480",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF20481",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF20482",
+      "orth": "ⲅⲁⲣ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF20483",
+      "orth": "ⲕⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13823,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS10231",
+      "bibliography": "DDGLC",
+      "cu_ID": "59"
+    },
+    {
+      "id": "CS10232",
+      "bibliography": "DDGLC",
+      "cu_ID": "2854"
+    },
+    {
+      "id": "CS10233",
+      "bibliography": "DDGLC",
+      "cu_ID": "3012"
+    },
+    {
+      "id": "CS10234",
+      "bibliography": "DDGLC",
+      "cu_ID": "450"
+    },
+    {
+      "id": "CS10235",
+      "bibliography": "DDGLC",
+      "cu_ID": "10674"
+    },
+    {
+      "id": "CS10236",
+      "bibliography": "DDGLC",
+      "cu_ID": "15542"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ **ⲅⲁⲣ** ⲉⲣⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲣⲉⲣⲱⲟⲩ ⲟⲩⲏⲛ ϧⲉⲛⲛⲓⲙⲉⲧⲉⲫⲗⲏⲟⲩ",
+      "english": "for the mouths of all are open to vain things",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲥⲏϩ **ⲅⲁⲣ** ϫⲉϣⲡϩⲓⲥⲉ ·",
+      "english": "for it is written, 'Suffer.'",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ **ⲅⲁⲣ** ⲉⲧⲉⲛϥⲟⲩⲃⲏⲛ ⲁⲛ ⲁϥϯ ⲉϫⲱⲛ .",
+      "english": "For whoever is not against us is on our side.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲟⲩⲱϣ **ⲅⲁⲣ** ⲉⲕⲱⲧⲉ ⲛⲥⲁⲟⲩϣⲏⲙ ⲛⲧⲃⲧ ⲛⲁⲩ ·",
+      "english": "and I ought to seek for some small fish for them.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲡⲥⲏⲟⲩ **ⲅⲁⲣ** ⲙⲡⲓϣⲱⲙ ⲛⲉ ⲛⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ .",
+      "english": "For it was the summer at that time.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲥⲧⲱⲧ **ⲅⲁⲣ** ϩⲏⲧϥ ⲙⲡⲣⲉϥⲥⲱⲛⲧ ·",
+      "english": "for he would quake before the Creator.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        ".",
+        919,
+        24.043
+      ],
+      [
+        "ⲡⲉ",
+        594,
+        23.776
+      ],
+      [
+        "ⲛ",
+        1013,
+        23.439
+      ],
+      [
+        "ⲟⲩ",
+        944,
+        23.297
+      ],
+      [
+        "ⲁ",
+        845,
+        23.053
+      ],
+      [
+        "ⲉ",
+        740,
+        22.506
+      ],
+      [
+        "ϥ",
+        767,
+        22.068
+      ],
+      [
+        "ⲁⲛ",
+        308,
+        21.71
+      ],
+      [
+        "ⲡⲓ",
+        475,
+        21.341
+      ],
+      [
+        "ⲉⲧ",
+        419,
+        21.279
+      ],
+      [
+        "ⲛⲁ",
+        413,
+        20.919
+      ],
+      [
+        "ⲧⲉⲛ",
+        282,
+        20.714
+      ],
+      [
+        "ⲫ",
+        342,
+        20.712
+      ],
+      [
+        "ⲛⲧⲉ",
+        371,
+        20.567
+      ],
+      [
+        "ⲛϫⲉ",
+        326,
+        20.535
+      ],
+      [
+        "ϧⲉⲛ",
+        383,
+        20.401
+      ],
+      [
+        "ϯ",
+        290,
+        19.725
+      ],
+      [
+        "ⲙⲙⲟ",
+        217,
+        19.547
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        277,
+        19.54
+      ],
+      [
+        "ⲓ",
+        259,
+        19.521
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        244,
+        32.471
+      ],
+      [
+        "ⲡ",
+        2237,
+        25.96
+      ],
+      [
+        "ⲉ",
+        1813,
+        25.371
+      ],
+      [
+        ".",
+        1028,
+        24.655
+      ],
+      [
+        "ⲛ",
+        1888,
+        24.538
+      ],
+      [
+        "ⲡⲉ",
+        998,
+        24.478
+      ],
+      [
+        "ⲛⲁ",
+        1158,
+        24.302
+      ],
+      [
+        "ⲕⲁⲓ",
+        198,
+        23.826
+      ],
+      [
+        "ⲙ",
+        1073,
+        23.635
+      ],
+      [
+        "ⲁⲛ",
+        526,
+        23.326
+      ],
+      [
+        "ϥ",
+        1104,
+        22.928
+      ],
+      [
+        "ⲁ",
+        975,
+        22.913
+      ],
+      [
+        "ⲟⲩ",
+        931,
+        22.889
+      ],
+      [
+        "ⲉⲧ",
+        719,
+        22.789
+      ],
+      [
+        "ⲛⲉ",
+        380,
+        21.104
+      ],
+      [
+        "ϯ",
+        362,
+        21.097
+      ],
+      [
+        "ⲧⲉ",
+        335,
+        21.048
+      ],
+      [
+        "ϩⲛ",
+        440,
+        20.904
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        440,
+        20.89
+      ],
+      [
+        "ⲛⲓⲙ",
+        288,
+        20.878
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 24.4,
+      "rank": 51,
+      "count": 3872
+    },
+    "B": {
+      "rate": 25.95,
+      "rank": 56,
+      "count": 2203
+    }
+  },
+  "etym": {
+    "grl_ID": "415",
+    "grl_lemma": "γάρ",
+    "grl_meaning": "for, then, because",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 338b"
+  }
+}

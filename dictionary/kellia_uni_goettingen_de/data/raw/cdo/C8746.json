@@ -1,0 +1,116 @@
+{
+  "id": "C8746",
+  "forms": [
+    {
+      "id": "CF20940",
+      "orth": "ⲇⲓⲁⲕⳇ",
+      "dialect": null
+    },
+    {
+      "id": "CF20941",
+      "orth": "ⲇⲓⲁⲕⳇ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20942",
+      "orth": "ⲇ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3924,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF20943",
+      "orth": "ⲇ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20944",
+      "orth": "ⲇⲁⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20945",
+      "orth": "ⲇⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20946",
+      "orth": "ⲇ︦ⲓ︦",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20947",
+      "orth": "ⲇⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7541,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF20948",
+      "orth": "ⲇⲓⲁⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20949",
+      "orth": "ⲇⲓⲁⲕⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7475,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF20950",
+      "orth": "ⲇⲓⲁⲕⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20951",
+      "orth": "ⲇⲓⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20952",
+      "orth": "ⲇⲓⲟⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20953",
+      "orth": "ⲧⲓⲁⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10455",
+      "bibliography": "DDGLC",
+      "cu_ID": "2237"
+    },
+    {
+      "id": "CS10456",
+      "bibliography": "DDGLC",
+      "cu_ID": "10349"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "498",
+    "grl_lemma": "διάκονος",
+    "grl_meaning": "servant, agent, deacon",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 398a; Preisigke 1:351"
+  }
+}

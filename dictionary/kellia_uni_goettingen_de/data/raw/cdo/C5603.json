@@ -1,0 +1,285 @@
+{
+  "id": "C5603",
+  "forms": [
+    {
+      "id": "CF13181",
+      "orth": "ⲁϣⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17329,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6272",
+      "bibliography": "CD 4a; CED 4; KoptHWb 16; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲁⲕⲏⲡⲟⲥ ⲧⲁⲥⲱⲛⲉ ⲧⲁϣⲉⲗⲉⲉⲧ ⲁⲓϫⲱⲱⲗⲉ ⲙⲡ**ⲁϣⲁⲗ** ⲙⲛⲡⲁϣⲟⲩϩⲏⲛⲉ ⲁⲓⲟⲩⲱⲙ ⲙⲡⲁⲟⲉⲓⲕ ⲙⲛⲡⲁⲉⲃⲓⲱ ⲁⲓⲥⲱ ⲙⲡⲁⲏⲣⲡ ⲙⲛⲡⲁⲉⲣⲱⲧⲉ ⲟⲩⲱⲙ ϩⲱⲧⲧⲏⲩⲧⲛ ⲛⲁϣⲃⲏⲣ ⲛⲧⲉⲧⲛⲥⲱ ⲛⲧⲉⲧⲛϯϩⲉ ⲛⲁⲥⲛⲏⲩ",
+      "english": "Let my kinsman come down into his garden, and eat the fruit of his choice berries. I am come into my garden, my sister, my spouse: I have gathered my myrrh with my spices; I have eaten my bread with my honey; I have drunk my wine with my milk. Eat, O friends, and drink; yea, brethren, drink abundantly.",
+      "source": "Song of Solomon 5",
+      "urn": "urn:cts:copticLit:ot.song.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲱⲗⲉ",
+        1,
+        15.74
+      ],
+      [
+        "ϣⲟⲩϩⲏⲛⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϣⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲩϩⲏⲛⲉ_1_post_ⲁϣⲁⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ_b",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲉⲃⲓⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϣⲁⲗ_0_node",
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ",
+          "ⲡⲁ_2_post_ϣⲟⲩϩⲏⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ϣⲟⲩϩⲏⲛⲉ",
+          "ϣⲟⲩϩⲏⲛⲉ_1_post_ⲁϣⲁⲗ",
+          1
+        ],
+        [
+          "ϣⲟⲩϩⲏⲛⲉ_1_post_ⲁϣⲁⲗ",
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲉⲃⲓⲱ_b",
+          "ⲡⲁ_2_post_ⲉⲃⲓⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16940,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7584",
+      "type": "cf",
+      "label": "cry"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

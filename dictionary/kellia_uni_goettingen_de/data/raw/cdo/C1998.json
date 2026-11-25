@@ -1,0 +1,200 @@
+{
+  "id": "C1998",
+  "forms": [
+    {
+      "id": "CF5655",
+      "orth": "ϭⲓⲛⲙⲟⲩⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12240,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2319",
+      "bibliography": "CD 182a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲱⲱⲛⲉ",
+        1,
+        13.13
+      ],
+      [
+        "ⲁⲣⲭⲱⲛ",
+        1,
+        10.841
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲙⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲙⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲫⲁⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲁⲓⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛⲙⲟⲩⲣ_0_node",
+          "ⲛ_1_post_ϭⲓⲛⲙⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲓⲛⲙⲟⲩⲣ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲱⲛ_3_post_ⲛ",
+          "ⲙⲛ_2_post_ⲥⲫⲁⲓⲣⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲫⲁⲓⲣⲁ",
+          "ⲛⲉⲩ_2_post_ⲁⲓⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11813,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1997",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1996",
+      "label": "ⲙⲁ ⲙⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C2000",
+      "label": "ⲙⲁⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C1999",
+      "label": "ⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C2001",
+      "label": "ⲙⲁⲣⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bandage(?)"
+    },
+    {
+      "target": "C2003",
+      "label": "ⲙⲟⲣⲥ",
+      "pos": "N",
+      "gloss": "binding, restriction (of fast); bundle, girdle (used as) purse"
+    },
+    {
+      "target": "C1991",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "bind, gird, tie; bind, oblige (by oath), adjure; bind"
+    },
+    {
+      "target": "C1992",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "band, girth, strap"
+    },
+    {
+      "target": "C1993",
+      "label": "ⲙⲟⲩⲣ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bind, join to, of fast which binds"
+    },
+    {
+      "target": "C1995",
+      "label": "ⲙⲟⲩⲣ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "to be spoiling for a fight, be at enmity with"
+    },
+    {
+      "target": "C1994",
+      "label": "ⲙⲟⲩⲣ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "obligation, fast"
+    },
+    {
+      "target": "C2002",
+      "label": "ⲙⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "chain, bond, joint"
+    }
+  ]
+}

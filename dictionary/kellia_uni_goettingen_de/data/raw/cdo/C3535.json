@@ -1,0 +1,57 @@
+{
+  "id": "C3535",
+  "forms": [
+    {
+      "id": "CF8973",
+      "orth": "ⲣⲉϥⲥⲉⲙⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4023",
+      "bibliography": "CD 337a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3536",
+      "label": "ϭⲓⲛⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "accusation"
+    },
+    {
+      "target": "C3534",
+      "label": "ⲁⲛⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "ordinance"
+    },
+    {
+      "target": "C3531",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "V",
+      "gloss": "appeal, make application (ⲛ- of person, to whom)"
+    },
+    {
+      "target": "C3533",
+      "label": "ⲥⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "petition, accusation"
+    },
+    {
+      "target": "C3532",
+      "label": "ⲥⲙⲙⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "appeal against, accuse"
+    }
+  ]
+}

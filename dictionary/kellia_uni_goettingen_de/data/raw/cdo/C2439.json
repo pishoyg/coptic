@@ -1,0 +1,190 @@
+{
+  "id": "C2439",
+  "forms": [
+    {
+      "id": "CF6659",
+      "orth": "ϫⲓⲛⲟⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14346,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2806",
+      "bibliography": "CD 222b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉⲕⲙⲉⲥⲧⲉⲡⲉⲕⲥⲟⲛ ϩⲙⲡⲉⲕϩⲏⲧ ϩⲛⲟⲩϫⲡⲓⲟ ⲉⲕⲉϫⲡⲓⲉⲡⲉⲧϩⲓⲧⲟⲩⲱⲕ ⲛⲅⲧⲙ**ϫⲓⲛⲟⲃⲉ** ⲉϫⲱⲕ ⲉⲧⲃⲏⲏⲧϥ",
+      "english": "Thou shalt not hate thy brother in thine heart: thou shalt in any wise rebuke thy neighbour, so thou shalt not bear sin on his account.",
+      "source": "Leviticus 19",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        1,
+        11.556
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        9.938
+      ],
+      [
+        "ⲕ",
+        2,
+        9.853
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲅ",
+        1,
+        9.239
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          "ⲅ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          "ⲧⲙ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϫⲓⲛⲟⲃⲉ",
+          "ϫⲓⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛⲟⲃⲉ_0_node",
+          "ⲉϫⲱ_1_post_ϫⲓⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϫⲓⲛⲟⲃⲉ",
+          "ⲕ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13945,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2433",
+      "label": "ⲁⲧⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinless, innocent"
+    },
+    {
+      "target": "C2435",
+      "label": "ⲙⲁⲓⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sin-loving"
+    },
+    {
+      "target": "C2434",
+      "label": "ⲙⲉⲧⲁⲧⲛⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "sinlessness"
+    },
+    {
+      "target": "C2438",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinfulness"
+    },
+    {
+      "target": "C2432",
+      "label": "ⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sin"
+    },
+    {
+      "target": "C2437",
+      "label": "ⲣⲉϥⲣⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinner"
+    },
+    {
+      "target": "C2436",
+      "label": "ⲣⲛⲟⲃⲉ",
+      "pos": "V",
+      "gloss": "commit sin"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "C7324",
+  "forms": [
+    {
+      "id": "CF16707",
+      "orth": "ϫⲏⲣⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϫⲉⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4650,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϫⲏⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6149,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲏⲣⲉ",
+      "dialect": "F",
+      "id": "2444.3"
+    },
+    {
+      "orth": "ϫⲉⲣⲉ",
+      "dialect": "F",
+      "id": "2444.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8092",
+      "bibliography": "CD 782a; CED 318; KoptHWb 431; ChLCS 103b"
+    },
+    {
+      "id": "CS8093",
+      "bibliography": "KoptHWb 431"
+    },
+    {
+      "id": "CS8094",
+      "bibliography": "CD 782a; KoptHWb 431"
+    },
+    {
+      "id": "CS8095",
+      "bibliography": "CD 782a; KoptHWb 431; ChLCS 103b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "demo_num": "d7782",
+    "demo_lemma": "ḏrj(.t)",
+    "english": "barn",
+    "german": "Tenne",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7782"
+  }
+}

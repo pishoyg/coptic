@@ -1,0 +1,52 @@
+{
+  "id": "C6642",
+  "forms": [
+    {
+      "id": "CF15328",
+      "orth": "ⲥⲁ ⲛϩⲟⲙⲛⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7355",
+      "bibliography": "CD 678b; ChLCS 91a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3273",
+      "type": "cf",
+      "label": "man of, maker of, dealer in"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6639",
+      "label": "ϩⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "copper, bronze; money"
+    },
+    {
+      "target": "C6640",
+      "label": "ϫⲓϩⲟⲙⲛⲧ",
+      "pos": "V",
+      "gloss": "take bribe"
+    },
+    {
+      "target": "C6641",
+      "label": "ⲙⲁⲓϩⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "money-loving, greedy, stingy"
+    }
+  ]
+}

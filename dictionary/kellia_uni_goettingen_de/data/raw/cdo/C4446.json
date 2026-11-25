@@ -1,0 +1,126 @@
+{
+  "id": "C4446",
+  "forms": [
+    {
+      "id": "CF10845",
+      "orth": "ⲡⲧⲏⲣϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10496,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5034",
+      "bibliography": "CD 424a; KoptHWb 242; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲧⲣⲉⲩⲱϫⲛ ⲙⲡⲉⲓⲕⲁⲛⲱⲛ ⲙⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲓⲱⲁⲛⲛⲏⲥ ϩⲛϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲧⲏⲣⲥ ⲛⲥⲉⲗⲟ ⲉⲩⲥⲟⲟⲩⲛ ϫⲉϥⲙⲙⲁⲩ ⲉⲡ**ⲡⲧⲏⲣϥ**",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA253-255",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:514-516",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        10.175
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲧⲏⲣϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10078,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2783",
+      "type": "cf",
+      "label": "masc. sg. definite article"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4448",
+      "label": "ⲉⲡⲧⲏⲣϥ",
+      "pos": "ADV",
+      "gloss": "wholly, at all"
+    },
+    {
+      "target": "C4447",
+      "label": "ⲛⲓⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the wholeness"
+    },
+    {
+      "target": "C4449",
+      "label": "ⲡⲓⲉⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole"
+    },
+    {
+      "target": "C4445",
+      "label": "ⲧⲏⲣ⸗",
+      "pos": "IMOD",
+      "gloss": "all, whole, every"
+    }
+  ]
+}

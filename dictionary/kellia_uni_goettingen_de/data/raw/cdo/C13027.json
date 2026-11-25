@@ -1,0 +1,107 @@
+{
+  "id": "C13027",
+  "forms": [
+    {
+      "id": "CF34110",
+      "orth": "ⲗⲁϫⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10257,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS18024",
+      "bibliography": "CD 135a; KoptHWb 418; DELC 93b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛⲟⲩⲧⲁⲕⲟ ⲉⲣⲉⲧⲉⲛⲉⲧⲁⲕⲟ ⲛⲛⲟⲩⲙⲁ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲩϣⲉⲙϣⲓ ⲛⲛⲟⲩⲛⲟⲩϯ ⲙⲙⲁⲩ ⲛϫⲉⲛⲓⲉⲑⲛⲟⲥ ⲛⲏ ⲛⲑⲱⲧⲉⲛ ⲉⲧⲉⲧⲉⲛⲛⲁⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ ⲙⲙⲱⲟⲩ ϩⲓϫⲉⲛⲛⲓⲧⲱⲟⲩ ⲉⲧϭⲟⲥⲓ ⲛⲉⲙϩⲓϫⲉⲛⲛⲓⲑⲁⲗ ⲛⲉⲙⲥⲁⲡⲉⲥⲏⲧ ⲛϣϣⲏⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲟⲓ ⲛ**ⲗⲁϫⲁⲗ**",
+      "english": "Ye shall utterly destroy all the places in which they served their gods, whose land ye inherit, on the high mountains and on the hills, and under the thick tree.",
+      "source": "05_Deuteronomium_12",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:12",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱϫⲡ",
+        1,
+        14.373
+      ],
+      [
+        "ⲧⲉⲛⲉ",
+        1,
+        12.133
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        1,
+        8.515
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲁϫⲁⲗ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9714,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7148",
+      "type": "cf",
+      "label": "branch"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7148",
+      "label": "ϫⲁⲗ",
+      "pos": "N",
+      "gloss": "branch"
+    }
+  ]
+}

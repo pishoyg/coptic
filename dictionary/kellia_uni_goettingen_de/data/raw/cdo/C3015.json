@@ -1,0 +1,94 @@
+{
+  "id": "C3015",
+  "forms": [
+    {
+      "id": "CF7896",
+      "orth": "ⲉⲣϩⲓⲫⲁϩⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3450",
+      "bibliography": "CD 285a; KoptHWb 156; ChLCS 40a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3012",
+      "label": "ϩⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "at back, formerly"
+    },
+    {
+      "target": "C3013",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after, before (in time)"
+    },
+    {
+      "target": "C3014",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3007",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "to back, backward"
+    },
+    {
+      "target": "C3008",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, backward"
+    },
+    {
+      "target": "C3011",
+      "label": "ⲛⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, from behind"
+    },
+    {
+      "target": "C3005",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "buttocks, hinder part, back"
+    },
+    {
+      "target": "C3006",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "hinder, past"
+    },
+    {
+      "target": "C3009",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3010",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "C10813",
+  "forms": [
+    {
+      "id": "CF29476",
+      "orth": "ⲧⲱⲕⲓⲙⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29478",
+      "orth": "ⲧⲱⲕⲓⲙⲁⲥⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29477",
+      "orth": "ⲇⲟⲕⲓⲙⲁⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19893,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14915",
+      "bibliography": "DDGLC",
+      "cu_ID": "2213"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "566",
+    "grl_lemma": "δοκιμασία",
+    "grl_meaning": "examination, scrutiny",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 442b; Preisigke 1:395"
+  }
+}

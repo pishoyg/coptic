@@ -1,0 +1,115 @@
+{
+  "id": "C2784",
+  "forms": [
+    {
+      "id": "CF7400",
+      "orth": "ⲡⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 30.28,
+        "rank": 46,
+        "count": 4778
+      }
+    },
+    {
+      "orth": "ⲡⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 25.74,
+        "rank": 57,
+        "count": 2183
+      }
+    },
+    {
+      "orth": "ⲧⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 16.2,
+        "rank": 85,
+        "count": 1374
+      }
+    },
+    {
+      "orth": "ⲧⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 20.34,
+        "rank": 69,
+        "count": 3209
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "number": "sg.",
+    "gen": "m.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS3184",
+      "bibliography": "CD 258b; CED 123; KoptHWb 143; DELC 157; ChLCS 36b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲏⲓ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲟⲩⲣⲉϥⲉⲣⲛⲟⲃⲓ **ⲡⲁ**ⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ .",
+      "english": "I said, ‘I am a sinner, my holy father.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲱ ⲓⲱϩⲁⲛⲛⲏⲥ **ⲡⲁ**ϣⲏⲣⲉ ⲙⲙⲉⲣⲓⲧ ·",
+      "english": "O John, my beloved son!",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲁ**ⲁⲥⲡⲁⲥⲙⲟⲥ ϧⲉⲛⲧⲁϫⲓϫ ⲁⲛⲟⲕ ⲡⲁⲩⲗⲟⲥ .",
+      "english": "This greeting is by me, Paul, with my own hand.",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲁ**ϩⲏⲧ ⲕⲱⲧⲉ ⲥⲁⲥⲁ ⲛⲓⲙ .",
+      "english": "my heart wanders about?",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ **ⲛⲁ**ⲙⲉⲛⲣⲁϯ ⲫⲱⲧ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧϣⲁⲙϣⲉ ⲓⲇⲱⲗⲟⲛ .",
+      "english": "Therefore, my beloved, flee from idolatry.",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲧⲃⲉⲟⲩ ⲉⲓϩⲙⲟⲟⲥ ϩⲙ**ⲡⲁ**ⲙⲁⲛϣⲱⲱⲡⲉ",
+      "english": "why is it that when I sit in my dwelling",
+      "source": "Apophthegmata Patrum Sahidic 005",
+      "urn": "urn:cts:copticLit:ap.5.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2353",
+      "type": "cf",
+      "label": "possessive article pl."
+    },
+    {
+      "target": "C4005",
+      "type": "cf",
+      "label": "possessive article sg. f."
+    }
+  ]
+}

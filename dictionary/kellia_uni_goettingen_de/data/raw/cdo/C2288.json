@@ -1,0 +1,120 @@
+{
+  "id": "C2288",
+  "forms": [
+    {
+      "id": "CF6309",
+      "orth": "ⲙⲉϩϩⲏⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲙⲉϩ ϩⲏⲧ⸗",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8816,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2642",
+      "bibliography": "CD 209a; KoptHWb 111; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ϥⲱⲧⲉ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲓϫⲙⲡⲕⲁϩ ⲡⲟϣⲟⲩ ϩⲙⲡⲉⲩⲱⲛϩ ⲙⲁⲣⲉϩⲏⲧⲟⲩ ⲥⲉⲓ ⲛⲛⲉⲕⲡⲉⲧϩⲏⲡ ⲁⲩ**ⲙⲉϩϩⲏⲧ**ⲟⲩ ⲛⲁϥ ⲛϣⲉ ⲁⲩⲕⲁⲡⲥⲉⲉⲡⲉ ⲛⲛⲉⲩϣⲏⲣⲉ",
+      "english": "because of the enemies of thine hand: O Lord, destroy them from the earth; scatter them in their life, though their belly has been filled with thy hidden treasures: they have been satisfied with uncleanness, and have left the remnant of their possessions to their babes.",
+      "source": "Psalms 16",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡⲣⲱⲙⲉ ⲛⲁ**ⲙⲉϩϩⲏⲧ**ϥ ⲉⲃⲟⲗ ϩⲛⲛⲕⲁⲣⲡⲟⲥ ⲛⲣⲱϥ ⲁⲩⲱ ⲉϥⲛⲁⲥⲉⲓ ⲛⲛⲕⲁⲣⲡⲟⲥ ⲛⲛⲉϥⲥⲡⲟⲧⲟⲩ",
+      "english": "A man fills his belly with the fruits of his mouth; and he shall be satisfied with the fruits of his lips.",
+      "source": "Proverbs 18",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2292",
+      "label": "ϫⲓⲛⲙⲟϩ ⲉϧⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "completion"
+    },
+    {
+      "target": "C2295",
+      "label": "ϭⲓⲛⲙⲟⲩϩ",
+      "pos": "N",
+      "gloss": "filling, completion"
+    },
+    {
+      "target": "C12209",
+      "label": "ⲙⲁϩⲓⲁⲧϥ",
+      "pos": "N",
+      "gloss": "watcher"
+    },
+    {
+      "target": "C2296",
+      "label": "ⲙⲉϩ-",
+      "pos": "NUM",
+      "gloss": "pref. to ordinal numbers"
+    },
+    {
+      "target": "C2286",
+      "label": "ⲙⲉϩⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "fill mouth; seize, bite"
+    },
+    {
+      "target": "C2287",
+      "label": "ⲙⲉϩⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "fill hands, lay hold on"
+    },
+    {
+      "target": "C2285",
+      "label": "ⲙⲟⲩϩ",
+      "pos": "V",
+      "gloss": "fill; fulfil, complete; amount to, reach; pay; be full; be paid"
+    },
+    {
+      "target": "C2294",
+      "label": "ⲙⲟⲩϩ",
+      "pos": "N",
+      "gloss": "fullness, contents"
+    },
+    {
+      "target": "C2291",
+      "label": "ⲙⲟⲩϩ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "fill up, supplement"
+    },
+    {
+      "target": "C2293",
+      "label": "ⲙⲟⲩϩ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "fill up"
+    },
+    {
+      "target": "C2289",
+      "label": "ⲙⲟⲩϩ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "fill; pay; be full, filled, paid"
+    },
+    {
+      "target": "C2290",
+      "label": "ⲙⲟⲩϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "fulfilment, limit"
+    }
+  ]
+}

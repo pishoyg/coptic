@@ -1,0 +1,119 @@
+{
+  "id": "C10221",
+  "forms": [
+    {
+      "id": "CF27032",
+      "orth": "ⲡⲛⲉⲩⲙⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27034",
+      "orth": "ⲡⲛⲉⲩⲙⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16422,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27033",
+      "orth": "ⲡⲛⲉⲩⲙⲟⲛⲓⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13652",
+      "bibliography": "DDGLC",
+      "cu_ID": "1497"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲁ ⲇⲉ ⲁϥϫⲱⲗⲕ ⲛⲧⲉϥⲡⲓⲧⲉ ⲉⲡϣⲱϣ ⲁϥⲛⲉϫⲥⲟⲧⲉ ⲉⲡⲣⲣⲟ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲧⲙⲏⲧⲉ ⲙⲡⲉϥ**ⲡⲛⲉⲩⲙⲱⲛ** ⲉⲧⲉⲡⲉϥⲟⲩⲟϥ ⲡⲉ ⲟⲩⲧⲉ ⲧⲉϥⲙⲉⲥⲧϩⲏⲧ ⲡⲉϫⲁϥ ⲇⲉ ⲙⲡⲏⲛⲓⲟⲭⲟⲥ ⲉⲧϫⲱⲣⲙ ⲉⲡⲉϥϩⲁⲣⲙⲁ ϫⲉⲥⲉⲕⲧⲟⲟⲧⲕ ⲉⲣⲟⲕ ⲛⲅⲛⲧ ⲉⲃⲟⲗ ϩⲛⲧⲙⲏⲧⲉ ⲙⲡⲡⲟⲗⲉⲙⲟⲥ ⲡⲥ...... ⲉⲙⲁ...",
+      "english": "And one drew a bow with a good aim, and smote the king of Israel between the lungs and the breast-plate: and he said to his charioteer, Turn thine hands, and carry me away out of the battle, for I am wounded.",
+      "source": "I Kings 22",
+      "urn": "urn:cts:copticLit:ot.1kgs.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟϥ",
+        1,
+        18.276
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        11.096
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        10.72
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲡⲛⲉⲩⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲱⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲡⲛⲉⲩⲙⲱⲛ",
+          "ⲡⲛⲉⲩⲙⲱⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16028,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6250",
+    "grl_lemma": "πνεύμων",
+    "grl_meaning": "lungs",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1416b"
+  }
+}

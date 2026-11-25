@@ -1,0 +1,40 @@
+{
+  "id": "C6757",
+  "forms": [
+    {
+      "id": "CF15561",
+      "orth": "ϩⲓⲣϩⲓⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7471",
+      "bibliography": "CD 697a; CED 291; KoptHWb 384; ChLCS 93b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6756",
+      "label": "ϩⲓⲣ",
+      "pos": "N",
+      "gloss": "road, street, quarter"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4724",
+    "demo_lemma": "ẖjrẖr",
+    "english": "[road]",
+    "german": "Straßen (o.ä.)",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4724"
+  }
+}

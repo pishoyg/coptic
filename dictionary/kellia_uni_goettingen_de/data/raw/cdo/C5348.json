@@ -1,0 +1,63 @@
+{
+  "id": "C5348",
+  "forms": [
+    {
+      "id": "CF31917",
+      "orth": "ϭⲓⲛⲟⲩⲱϫⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31916",
+      "orth": "ϭⲓⲛⲟⲩⲱⲱϫⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6001",
+      "bibliography": "CD 511a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5347",
+      "label": "*ⲟⲩⲏϫⲉ",
+      "pos": "N",
+      "gloss": "hurtful word"
+    },
+    {
+      "target": "C5346",
+      "label": "ⲟⲩⲁϭⲉ",
+      "pos": "N",
+      "gloss": "blow"
+    },
+    {
+      "target": "C5345",
+      "label": "ⲟⲩⲉⲓϫⲉ",
+      "pos": "N",
+      "gloss": "slash, injury, wound"
+    },
+    {
+      "target": "C5344",
+      "label": "ⲟⲩⲱϫⲉ",
+      "pos": "V",
+      "gloss": "cut (out, off), separate, hurt"
+    }
+  ]
+}

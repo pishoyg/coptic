@@ -1,0 +1,138 @@
+{
+  "id": "C7264",
+  "forms": [
+    {
+      "id": "CF16587",
+      "orth": "ϭⲉⲛⲛⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7386,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8020",
+      "bibliography": "CD 776b; KoptHWb 427, DELC 328b-329a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲉϥϭⲟⲓⲥ ⲡⲉϫⲁϥ ϫⲉⲡⲓⲃⲱⲕ ⲉⲧϩⲱⲟⲩ ⲟⲩⲟϩ ⲛ**ϭⲉⲛⲛⲉ** ⲓⲥϫⲉ ⲕⲉⲙⲓ ϫⲉϣⲁⲓⲱⲥϧ ⲙⲫⲏ ⲉⲧⲉⲙⲡⲓⲥⲁⲧϥ ⲟⲩⲟϩ ϣⲁⲓⲑⲱⲟⲩϯ ⲉϧⲟⲩⲛ ⲙⲫⲏ ⲉⲧⲉⲙⲡⲓϫⲟⲣϥ ⲉⲃⲟⲗ .",
+      "english": "'But his lord answered him, 'You wicked and slothful servant. You knew that I reap where I didn't sow, and gather where I didn't scatter.",
+      "source": "01_Matthew_25",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:25",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        11.298
+      ],
+      [
+        "ⲓⲥϫⲉ",
+        1,
+        10.853
+      ],
+      [
+        "ⲉⲙⲓ",
+        1,
+        9.766
+      ],
+      [
+        "ⲕ",
+        1,
+        7.128
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲉⲛⲛⲉ",
+          1
+        ],
+        [
+          "ϭⲉⲛⲛⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲉⲛⲛⲉ",
+          "ϭⲉⲛⲛⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6855,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7259",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "delay, hesitate; laze, be sluggish"
+    },
+    {
+      "target": "C7260",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sloth"
+    },
+    {
+      "target": "C7261",
+      "label": "ⲁⲧϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "without delay, immediate"
+    },
+    {
+      "target": "C7263",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "delay; sloth"
+    },
+    {
+      "target": "C7262",
+      "label": "ⲣⲉϥϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sluggard"
+    }
+  ]
+}

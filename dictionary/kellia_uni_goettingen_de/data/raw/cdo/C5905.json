@@ -1,0 +1,302 @@
+{
+  "id": "C5905",
+  "forms": [
+    {
+      "id": "CF13808",
+      "orth": "ϣⲟⲙⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.02,
+        "rank": 338,
+        "count": 476
+      }
+    },
+    {
+      "orth": "ϣⲙⲛⲧ-",
+      "dialect": "S",
+      "id": "132.1"
+    },
+    {
+      "orth": "ϣⲉⲙⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15944,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲟⲙⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1508,
+        "count": 50
+      }
+    },
+    {
+      "orth": "ϣⲙⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2355,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲟⲙⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.82,
+        "rank": 843,
+        "count": 129
+      }
+    },
+    {
+      "orth": "ϣⲟⲙⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9037,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲙⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3000,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϣⲟⲙϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10385,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⳉⲁⲙⲧ",
+      "dialect": "A",
+      "id": "132.9"
+    },
+    {
+      "orth": "ⳉⲛⲧ-",
+      "dialect": "A",
+      "id": "132.10"
+    },
+    {
+      "orth": "ⳉⲛⲧⲉ-",
+      "dialect": "A",
+      "id": "132.11"
+    },
+    {
+      "orth": "ⳉⲁⲙⲧⲉ",
+      "dialect": "A",
+      "id": "132.12"
+    },
+    {
+      "orth": "ϣⲁⲙⲧ",
+      "dialect": "F",
+      "id": "132.13"
+    },
+    {
+      "orth": "ϣⲁⲙⲛⲧ",
+      "dialect": "L",
+      "id": "132.14"
+    },
+    {
+      "orth": "ϣⲁⲙⲧ",
+      "dialect": "L",
+      "id": "132.15"
+    },
+    {
+      "orth": "ϣⲙⲧ-",
+      "dialect": "L",
+      "id": "132.16"
+    },
+    {
+      "orth": "ϣⲁⲙⲧⲉ",
+      "dialect": "L",
+      "id": "132.17"
+    },
+    {
+      "orth": "ϩⲟⲙⲧⲉ",
+      "dialect": "L",
+      "id": "132.18"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS6588",
+      "bibliography": "CD 566b-567a; CED 244; KoptHWb 315; DELC 264b; ChLCS 78a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲛⲉⲣⲉ**ϣⲟⲙⲛⲧ** ⲛϣⲏⲣⲉ ϣⲟⲟⲡ ⲛⲁⲩ ·",
+      "english": "And they had three children.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲱⲧⲛ ϩⲱⲧⲧⲏⲩⲧⲛ ⲁⲓϫⲟⲟⲥ ⲛⲏⲧⲛ ϩⲛⲧⲁⲧⲁⲡⲣⲟ ϩⲙⲡⲧⲣⲁⲉⲓ ϣⲁⲣⲱⲧⲛ ⲛ**ϣⲟⲙⲛⲧ** ⲛⲥⲟⲡ ⲉⲧⲃⲉⲙⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲉⲛⲧⲁϥⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲛ ⲉⲓϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ⲉⲧⲉⲧⲛⲥⲱⲧⲙ ⲧⲏⲣⲧⲛ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲝⲉⲧⲁⲍⲉ ⲙⲙⲟϥ ⲛ**ϣⲟⲙⲛⲧ** ⲛⲥⲟⲡ ·",
+      "english": "thou shalt examine him carefully three times",
+      "source": "Martyrdom of Victor part 3",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:13-22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        638,
+        22.86
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        212,
+        22.799
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        11,
+        22.075
+      ],
+      [
+        "ⲥⲟⲡ",
+        89,
+        21.336
+      ],
+      [
+        "ⲁⲩⲱ",
+        168,
+        19.023
+      ],
+      [
+        "ⲙ",
+        181,
+        18.95
+      ],
+      [
+        "ⲡ",
+        192,
+        18.351
+      ],
+      [
+        "ⲉ",
+        175,
+        18.27
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        33,
+        17.153
+      ],
+      [
+        "ⲁ",
+        125,
+        17.041
+      ],
+      [
+        ".",
+        83,
+        16.782
+      ],
+      [
+        "ϥ",
+        127,
+        16.587
+      ],
+      [
+        "ⲙⲛ",
+        76,
+        16.487
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        16.452
+      ],
+      [
+        "ϣⲉ",
+        25,
+        16.213
+      ],
+      [
+        "ϥⲱⲉⲓ",
+        4,
+        16.112
+      ],
+      [
+        "ⲧⲣⲓⲇⲩⲛⲁⲙⲓⲥ",
+        6,
+        15.993
+      ],
+      [
+        "ⲙⲛⲛⲥⲁ",
+        24,
+        15.98
+      ],
+      [
+        "ⲩ",
+        76,
+        15.653
+      ],
+      [
+        "ϣⲃⲏⲣ",
+        15,
+        15.505
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.01,
+      "rank": 280,
+      "count": 478
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5907",
+      "label": "ⲙⲡϣⲟⲙⲛⲧ",
+      "pos": "ADV",
+      "gloss": "three together, all three"
+    },
+    {
+      "target": "C5906",
+      "label": "ⲡϣⲟⲙⲛⲧ",
+      "pos": "N",
+      "gloss": "Tuesday"
+    }
+  ],
+  "etym": {
+    "egy_num": "117280",
+    "egy_lemma": "ḫmt.w",
+    "demo_num": "d4512",
+    "demo_lemma": "ḫmt",
+    "english": "three",
+    "german": "drei",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/117280",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4512"
+  }
+}

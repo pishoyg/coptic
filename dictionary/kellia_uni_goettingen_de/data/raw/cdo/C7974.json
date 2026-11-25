@@ -1,0 +1,321 @@
+{
+  "id": "C7974",
+  "forms": [
+    {
+      "id": "CF18014",
+      "orth": "ϭⲱⲟⲩϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6234,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϭⲟⲟⲩϭ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5128,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϫⲱⲟⲩϫ",
+      "dialect": "B",
+      "id": "2643.2"
+    },
+    {
+      "orth": "ϭⲱⲟⲩϭ",
+      "dialect": "A",
+      "id": "2643.3"
+    },
+    {
+      "orth": "ϭⲁⲩϭ†",
+      "dialect": "A",
+      "id": "2643.4"
+    },
+    {
+      "orth": "ϭⲁⲩϭ†",
+      "dialect": "L",
+      "id": "2643.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8861",
+      "bibliography": "CD 836ab; CED 339; KoptHWb 471; DELC 249b; ChLCS 110b"
+    },
+    {
+      "id": "CS8862",
+      "bibliography": "CD 836b; KoptHWb 471; DELC 249b; ChLCS 110b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲙⲟⲟϣⲉ ϩⲛⲟⲩⲥⲟⲟⲩⲧⲛ ⲣϩⲟⲧⲉ ϩⲏⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉⲧ**ϭⲱⲟⲩϭ** ⲇⲉ ⲛⲛⲉϥϩⲓⲟⲟⲩⲉ ⲛⲛⲁϫⲓⲥⲱϣ",
+      "english": "He that walks uprightly fears the Lord; but he that is perverse in his ways shall be dishonoured.",
+      "source": "Proverbs 14",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲕ**ϭⲱⲟⲩϭ** ⲙⲡϩⲁⲡ ⲛⲟⲩϩⲏⲕⲉ ⲉϥϫⲓ ⲙⲡⲉϥϩⲁⲡ",
+      "english": "Thou shalt not wrest the sentence of the poor in his judgment.",
+      "source": "Exodus 23",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲛⲟⲩϩⲟⲟⲩ ⲁⲩⲥϩⲓⲙⲉ ⲉⲓⲛⲉ ϣⲁⲣⲟϥ ⲙⲡⲉⲥϣⲏⲣⲉ ⲉⲣⲉⲟⲩⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲛⲙⲙⲁϥ , ⲉⲁⲡⲉϥϩⲟ **ϭⲱⲟⲩϭ** ⲛⲥⲁⲡⲁϩⲟⲩⲟ ϩⲓⲧⲛⲧⲉⲛⲉⲣⲅⲉⲓⲁ ⲙⲡⲇⲁⲓⲙⲱⲛ ⲁⲩⲱ ⲛⲉϥϩⲓⲧⲉ ⲙⲙⲟϥ ⲙⲙⲏⲛⲉ ⲉϥⲑⲗⲓⲃⲉ ⲙⲙⲟϥ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 4",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:24-29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        10.587
+      ],
+      [
+        "ϩⲁⲡ",
+        1,
+        10.05
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        9.529
+      ],
+      [
+        "ϩⲟ",
+        1,
+        9.247
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.012
+      ],
+      [
+        "ⲡ",
+        4,
+        8.912
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        8.202
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        8.175
+      ],
+      [
+        "ⲛⲙⲙⲁ",
+        1,
+        7.885
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.212
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.791
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.194
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ϭⲱⲟⲩϭ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_pre_ϩⲟ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϭⲱⲟⲩϭ",
+          "ⲛⲉⲕ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϭⲱⲟⲩϭ",
+          "ϭⲱⲟⲩϭ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱⲟⲩϭ",
+          "ⲡⲉϥ_2_pre_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_pre_ϩⲟ",
+          "ϩⲟ_1_pre_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ϩⲟ_1_pre_ϭⲱⲟⲩϭ",
+          "ϭⲱⲟⲩϭ_0_node",
+          1
+        ],
+        [
+          "ϭⲱⲟⲩϭ_0_node",
+          "ⲛⲥⲁ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_1_post_ϭⲱⲟⲩϭ",
+          "ⲡⲁ_3_post_ϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ϭⲱⲟⲩϭ_0_node",
+          "ⲇⲉ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ϭⲱⲟⲩϭ",
+          "ⲛ_1_post_ϭⲱⲟⲩϭ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲟⲩϭ",
+          "ⲛⲉϥ_3_post_ϩⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲓⲟⲟⲩⲉ",
+          "ϩⲓⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5796,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7975",
+      "label": "ϭⲱⲟⲩϭ",
+      "pos": "N",
+      "gloss": "crookedness, twist"
+    }
+  ],
+  "etym": {
+    "egy_num": "166820",
+    "egy_lemma": "gwš",
+    "demo_num": "dm550",
+    "demo_lemma": "gwš",
+    "english": "to be crooked; to turn away (Sem. loan word)",
+    "german": "schief sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/166820",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm550"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "C509",
+  "forms": [
+    {
+      "id": "CF2018",
+      "orth": "ⲃⲣⲃⲣ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2019",
+      "orth": "ⲃⲣⲃⲣ (ⲉⲃⲟⲗ)",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS616",
+      "bibliography": "CD 42b; ChLCS 9a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C508",
+      "label": "ⲃⲣⲃⲣ",
+      "pos": "V",
+      "gloss": "boil, boil up/over, blaze (fire)"
+    },
+    {
+      "target": "C511",
+      "label": "ⲃⲣⲃⲣ",
+      "pos": "N",
+      "gloss": "boiling heat, eruption"
+    },
+    {
+      "target": "C510",
+      "label": "ⲃⲣⲃⲣ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "cast up; boil up, over"
+    }
+  ]
+}

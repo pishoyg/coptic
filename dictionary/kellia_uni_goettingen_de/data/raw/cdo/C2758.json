@@ -1,0 +1,485 @@
+{
+  "id": "C2758",
+  "forms": [
+    {
+      "id": "CF7344",
+      "orth": "ⲟⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1870,
+        "count": 34
+      }
+    },
+    {
+      "orth": "ⲟⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3220,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲁⲥⲉ",
+      "dialect": "A",
+      "id": "1244.2"
+    },
+    {
+      "orth": "ⲁⲥⲓ",
+      "dialect": "F",
+      "id": "1244.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3155",
+      "bibliography": "CD 256b; CED 122; KoptHWb 141, 529; DELC 155-156; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲛⲟⲩ**ⲟⲥⲉ** ⲁⲛ ⲡⲉ .",
+      "english": "This is not damaging.",
+      "source": "Apophthegmata Patrum Sahidic 027: Pistamon 1",
+      "urn": "urn:cts:copticLit:ap.27.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϣⲁϫⲉ ⲉⲩϣⲁⲛϫⲉϩⲉⲛϣⲁϫⲉ ⲛ**ⲟⲥⲉ** ⲛⲟϫⲕ ⲛⲅⲱⲃϣ · ⲡⲉⲕⲙⲉⲉⲩⲉ ϫⲉⲙⲡⲉⲓⲥⲱⲧⲙ ϣⲁϫⲉ ⲛⲓⲙ · ϩⲱⲱϥ ⲛϩⲏⲩ ·",
+      "english": "Speak not when others are speaking words of depreciation ; compel thyself, thou shalt not forget, [and let] thy thoughts [be] 'I have not heard [them].'",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲧⲉⲯⲩⲭⲏ ϭⲱ ϩⲁⲣⲓϩⲁⲣⲟⲥ ⲉⲥⲟⲩⲟϫ ⲉϯ**ⲟⲥⲉ** ·",
+      "english": "it remaineth alone, and suffereth no injury whatsoever.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲫⲟⲣⲙⲉ",
+        1,
+        15.511
+      ],
+      [
+        "ϥⲓⲧⲉⲕ",
+        1,
+        15.511
+      ],
+      [
+        "ϣⲧⲏⲁ",
+        1,
+        15.511
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.511
+      ],
+      [
+        "ⲛ",
+        36,
+        14.231
+      ],
+      [
+        "ⲡⲉ",
+        17,
+        13.683
+      ],
+      [
+        "ⲧⲉⲛ",
+        4,
+        12.499
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲛⲟⲩⲧⲉ",
+        1,
+        12.189
+      ],
+      [
+        "ⲕⲱⲱⲛⲥ",
+        1,
+        12.051
+      ],
+      [
+        "ⲣⲉϥⲥⲱϣ",
+        1,
+        11.926
+      ],
+      [
+        "ⲁⲛⲁⲅⲕⲏ",
+        2,
+        11.703
+      ],
+      [
+        "ⲁⲩⲉⲓⲛ",
+        1,
+        11.341
+      ],
+      [
+        "ⲟⲩ",
+        13,
+        11.234
+      ],
+      [
+        "ϩⲱⲃ",
+        4,
+        11.0
+      ],
+      [
+        "ⲙⲙⲛ",
+        2,
+        10.971
+      ],
+      [
+        "ⲥⲓⲕⲗⲟⲥ",
+        1,
+        10.926
+      ],
+      [
+        "ϯ",
+        7,
+        10.851
+      ],
+      [
+        "ⲡ",
+        14,
+        10.832
+      ],
+      [
+        "ϩⲉⲛ",
+        6,
+        10.742
+      ],
+      [
+        "ⲧⲁⲗⲁⲓⲡⲱⲣⲟⲥ",
+        1,
+        10.556
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲥⲉ_0_node",
+          27
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲥⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲥⲉ",
+          5
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          5
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲛ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲙⲁ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲕⲁϩⲛϩⲏⲧ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ_b",
+          1
+        ],
+        [
+          "ⲥⲓⲕⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲧⲉ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲟⲥⲉ",
+          "ⲡ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲟⲥⲉ",
+          "ⲟⲥⲉ_0_node",
+          4
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲟⲥⲉ",
+          "ⲛ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲥⲉ",
+          "ⲟⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲥⲉ_0_node",
+          "ⲁⲛ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲥⲉ_0_node",
+          "ⲛ_1_post_ⲟⲥⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          "ⲛ_4_post_ⲙⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲙⲓⲛⲉ",
+          "ⲣⲱⲙⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲥⲉ",
+          "ⲡ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲯⲩⲭⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲓ_1_pre_ⲟⲥⲉ",
+          "ⲅⲁⲣ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲟⲥⲉ",
+          "ⲙⲙⲛ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲛ_1_pre_ⲟⲥⲉ",
+          "ⲟⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲟⲥⲉ",
+          "ⲡ_1_pre_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲭⲣⲏⲙⲁ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲟⲥⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲥⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙⲛ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          "ⲛⲉⲓ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲙⲕⲁϩⲛϩⲏⲧ",
+          "ⲙⲕⲁϩⲛϩⲏⲧ_1_post_ⲟⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          "ϣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲛ",
+          "ⲛ_1_post_ⲟⲥⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ_b",
+          "ⲥⲓⲕⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲥⲉ",
+          "ⲟⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲥⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲓⲟⲧⲉ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1632,
+      "count": 34
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2759",
+      "label": "ϯⲟⲥⲉ",
+      "pos": "V",
+      "gloss": "suffer loss, hurt, be fined"
+    },
+    {
+      "target": "C2760",
+      "label": "ⲙⲛⲧⲟⲥⲉ",
+      "pos": "N",
+      "gloss": "loss"
+    }
+  ],
+  "etym": {
+    "egy_num": "31250",
+    "egy_lemma": "js",
+    "demo_num": "d212",
+    "demo_lemma": "ꜣsj",
+    "english": "indisposition",
+    "german": "ruinieren; schlecht ergehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/31250",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d212"
+  }
+}

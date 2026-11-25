@@ -1,0 +1,162 @@
+{
+  "id": "C5239",
+  "forms": [
+    {
+      "id": "CF12447",
+      "orth": "ϥⲁⲓⲟⲩⲧⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17669,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5883",
+      "bibliography": "CD 498b; ChLCS 69b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲧⲟϭⲕ ⲛⲟⲩⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲛ**ϥⲁⲓⲟⲩⲧⲁϩ** ⲧⲏⲣⲥ ⲙⲙⲉ ⲛⲁϣ ⲛϩⲉ ⲁⲣⲕⲧⲟ ⲉⲩⲥⲓϣⲉ ⲧⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲉⲛⲧⲁⲥⲣ ϣⲙⲙⲱ",
+      "english": "Yet I planted thee a fruitful vine, entirely of the right sort: how art thou a strange vine turned to bitterness!",
+      "source": "Jeremiah 2",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲱ",
+        1,
+        13.036
+      ],
+      [
+        "ⲉⲗⲟⲟⲗⲉ",
+        1,
+        12.753
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        9.941
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥⲁⲓⲟⲩⲧⲁϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17283,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5237",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5238",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5234",
+      "label": "ϯⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "give fruit"
+    },
+    {
+      "target": "C5230",
+      "label": "ⲁⲧⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruitless"
+    },
+    {
+      "target": "C5232",
+      "label": "ⲉⲛⲟⲩⲧⲁϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "bring forth fruit"
+    },
+    {
+      "target": "C5231",
+      "label": "ⲉⲣⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "bear fruits"
+    },
+    {
+      "target": "C5233",
+      "label": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-bearer"
+    },
+    {
+      "target": "C5236",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "quality of the fruit-giver"
+    },
+    {
+      "target": "C5229",
+      "label": "ⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit"
+    },
+    {
+      "target": "C5235",
+      "label": "ⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-giver"
+    }
+  ]
+}

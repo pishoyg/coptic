@@ -1,0 +1,202 @@
+{
+  "id": "C10972",
+  "forms": [
+    {
+      "id": "CF30029",
+      "orth": "ⲭⲟⲣⲏⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30030",
+      "orth": "ⲭⲟⲣⲏⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8003,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF30031",
+      "orth": "ⲭⲟⲣⲏⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8003,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15204",
+      "bibliography": "DDGLC",
+      "cu_ID": "2881"
+    },
+    {
+      "id": "CS15205",
+      "bibliography": "DDGLC",
+      "cu_ID": "3834"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲕⲉⲫⲁⲗⲁⲓⲟⲛ ⲛⲛⲁⲓ ⲧⲏⲣⲟⲩ · ⲧⲉϥⲉⲡⲏⲧⲏⲙⲓⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲉⲛⲧⲁϥⲁⲁⲥ ϣⲁⲁⲣⲟⲛ · ⲙⲛⲡϩⲓⲥⲉ ⲧⲏⲣϥ ⲛⲛⲉϥⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ⲁⲩⲱ ⲧⲉ**ⲭⲟⲣⲏⲅⲓⲁ** ⲧⲏⲣⲥ ⲛⲧⲉⲭⲣⲉⲓⲁ ⲛⲛⲣⲱⲙⲉ · ⲙⲛⲡⲉⲧⲣⲟⲙⲟⲥ ⲛⲛⲉⲫⲱⲥⲧⲏⲣ ·",
+      "english": "And of all these the principal things are, His holy desire which He hath shewn (or, made) towards us, and all the sufferings of His Apostles, and all the supplies which have been needed by men, and by the courses of the luminaries.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲥⲟⲟⲩⲛ ⲇⲉ ϫⲉⲡⲁⲓ ⲛⲁϣⲱⲡⲉ ⲛⲁⲓ ⲉⲩⲟⲩϫⲁⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲧⲛⲥⲟⲡⲥ ⲙⲛⲧ**ⲭⲟⲣⲏⲅⲓⲁ** ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲛⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "For I know that this will turn out to my salvation, through your supplication and the supply of the Spirit of Jesus Christ,",
+      "source": "50_Philippians_1",
+      "urn": "urn:cts:copticLit:nt.phil.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲡⲥ",
+        1,
+        11.703
+      ],
+      [
+        "ⲁⲡⲟⲥⲧⲟⲗⲟⲥ",
+        1,
+        11.294
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        10.026
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        9.412
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲭⲟⲣⲏⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲭⲟⲣⲏⲅⲓⲁ",
+          "ⲧⲉ_1_pre_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲭⲟⲣⲏⲅⲓⲁ",
+          "ⲭⲟⲣⲏⲅⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲭⲟⲣⲏⲅⲓⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲭⲟⲣⲏⲅⲓⲁ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲭⲟⲣⲏⲅⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7559,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2387",
+    "grl_lemma": "χορηγία",
+    "grl_meaning": "abundance, fortune",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1998b; Preisigke 2:741"
+  }
+}

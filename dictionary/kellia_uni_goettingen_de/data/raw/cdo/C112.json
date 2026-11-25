@@ -1,0 +1,107 @@
+{
+  "id": "C112",
+  "forms": [
+    {
+      "id": "CF403",
+      "orth": "ⲁⲙⲁϩⲧⲉ (ⲙⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31444",
+      "orth": "ⲁⲙⲁϩⲧⲉ (ⲛⲉⲙ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲙⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS132",
+      "bibliography": "CD 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲁⲉⲓⲱⲧ **ⲁⲙⲁϩⲧⲉ **ⲙⲛ**ϥⲱ** ⲛⲧⲉϥⲁⲡⲉ",
+      "english": "And my father laid hold upon the hair of his head,",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡϥϯ ⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲛⲁϥ ϩⲣⲁⲓ ⲛϩⲏⲧϥ ⲟⲩⲇⲉ ⲟⲩⲧⲁϭⲥⲉ ⲛⲟⲩⲉⲣⲏⲧⲉ . ⲁⲗⲗⲁ ⲁϥⲉⲣⲏⲧ ⲉⲧⲁⲁϥ ⲛⲁϥ **ⲉⲩⲁⲙⲁϩⲧⲉ **ⲙⲛ**ⲡⲉϥⲥⲡⲉⲣⲙⲁ** . ⲙⲛⲛⲥⲱⲥ ⲉⲙⲛⲧϥ ϣⲏⲣⲉ ⲙⲙⲁⲩ .",
+      "english": "He gave him no inheritance in it, no, not so much as to set his foot on. He promised that he would give it to him for a possession, and to his seed after him, when he still had no child.",
+      "source": "44_Acts of the Apostles_7",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲛⲓⲥⲁⲁⲕ ϫⲉⲧⲱⲟⲩⲛ ⲧⲁϭⲟⲙ ⲛⲙⲙⲁⲕ **ⲛⲅⲁⲙⲁϩⲧⲉ **ⲙⲛ**ⲡⲉⲕⲉⲓⲱⲧ** ⲙⲡⲉⲥⲟⲟⲩ .",
+      "english": "...",
+      "source": "Life of John Chrysostom (Giron Sacr of Abraham)",
+      "urn": "urn:cts:copticLit:lives.chrysostom.giron_ed:400-405",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C119",
+      "label": "ϭⲓⲛⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "control, restraint"
+    },
+    {
+      "target": "C110",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "prevail, rule, be in possession, valid, lay hold on; grasp, embrace, possess, restrict, detain"
+    },
+    {
+      "target": "C115",
+      "label": "ⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "power, possession"
+    },
+    {
+      "target": "C114",
+      "label": "ⲁⲙⲁϩⲧⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "possess, master"
+    },
+    {
+      "target": "C111",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule, have power over"
+    },
+    {
+      "target": "C113",
+      "label": "ⲁⲙⲁϩⲧⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "hold, abide by"
+    },
+    {
+      "target": "C116",
+      "label": "ⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unrestrained, uncontrollable"
+    },
+    {
+      "target": "C117",
+      "label": "ⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "uncontrolledness, incontinence"
+    },
+    {
+      "target": "C118",
+      "label": "ⲣⲉϥⲁⲙⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "self-controlled person"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "C5506",
+  "forms": [
+    {
+      "id": "CF12985",
+      "orth": "ⲱⲛϣ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6196,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6168",
+      "bibliography": "CD 525a; ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲥϣⲱⲡⲉ ⲇⲉ ⲟⲛ ⲛϩⲁϩ ⲛⲥⲟⲡ **ⲛϥⲱⲛϣ **ⲉⲃⲟⲗ**** ⲁⲩⲱ ⲛⲉϣⲁⲩϫⲱ ⲉⲣⲟϥ ⲡⲉ ⲛⲛⲉⲧϣⲟⲟⲡ ϩⲛⲧⲡⲟⲗⲓⲥ",
+      "english": "It happened though many times that he was in a trance and they talked to him about those who lived in the city.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡⲣⲣⲟ **ⲱⲛϣ **ⲉⲃⲟⲗ**** ⲛⲁⲟⲩⲟⲩⲛⲟⲩ ⲙⲛⲛⲥⲱⲥ ⲁϥⲡⲱϩ ⲛⲧⲉϥⲡⲟⲣⲫⲩⲣⲁ ⲛⲣⲣⲟ",
+      "english": "...",
+      "source": "History of the Emperor's Daughter Fragment 2 (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.empdaughter.giron_ed:100",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲣⲣⲟ ⲇⲉ ⲛⲧⲉⲣⲉϥⲥⲱⲧⲙ ⲉⲛⲁⲓ · **ⲁϥⲱⲛϣ **ⲉⲃⲟⲗ**** ⲛⲟⲩⲛⲟϭ ⲛⲁⲡⲣⲏⲧⲉ ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5756,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5507",
+      "label": "ⲟⲛϣⲥ",
+      "pos": "N",
+      "gloss": "astonishment, derangement of mind"
+    },
+    {
+      "target": "C5503",
+      "label": "ⲱⲛϣ",
+      "pos": "V",
+      "gloss": "be astonished, be dazed; be dumb"
+    },
+    {
+      "target": "C5504",
+      "label": "ⲱⲛϣ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C5505",
+      "label": "ⲱⲛϣ (ⲛⲥⲁ)-",
+      "pos": "V",
+      "gloss": "gape after"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "C5111",
+  "forms": [
+    {
+      "id": "CF12187",
+      "orth": "ⲉⲥⲟⲩⲏⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5742",
+      "bibliography": "DELC 236b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5112",
+      "label": "*ⲑⲟⲩⲏⲣⲓ",
+      "pos": "N",
+      "gloss": "the Great one (Thoeris)"
+    },
+    {
+      "target": "C5115",
+      "label": "ⲁⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "About how great? About how many? About how much?"
+    },
+    {
+      "target": "C5116",
+      "label": "ⲉⲡⲁⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "To what extent?; in vain"
+    },
+    {
+      "target": "C5117",
+      "label": "ⲙⲉϩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "how many ...?"
+    },
+    {
+      "target": "C5114",
+      "label": "ⲛⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "By how much?"
+    },
+    {
+      "target": "C5113",
+      "label": "ⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "How great? How many? How much?"
+    },
+    {
+      "target": "C5110",
+      "label": "ⲟⲩⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "great"
+    },
+    {
+      "target": "C5118",
+      "label": "ⲥⲟⲩⲟⲩⲏⲣ",
+      "pos": "ADV",
+      "gloss": "day such-and-such"
+    }
+  ]
+}

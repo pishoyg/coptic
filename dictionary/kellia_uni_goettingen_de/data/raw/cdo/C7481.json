@@ -1,0 +1,149 @@
+{
+  "id": "C7481",
+  "forms": [
+    {
+      "id": "CF17021",
+      "orth": "ⲣϫϩⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17248,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8283",
+      "bibliography": "CD 797b; KoptHWb 440; ChLCS 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲕϣⲁⲛⲕⲁⲁϥ ϥⲛⲁⲣϣⲛⲁ ⲁⲩⲱ ⲛⲉϥⲣⲛⲧⲏϭ ⲧⲏⲣϥ ⲛϥ**ⲣϫϩⲓⲙ** ⲛⲥⲉⲧⲁⲩⲟ ⲉϩⲣⲁⲓ ⲛⲛϫⲟⲗϫⲗ ⲛⲛⲉϥⲱⲛⲉ",
+      "english": "If thou let him alone, he will altogether remain barren and covered with weeds; and he becomes destitute, and his stone walls are broken down.",
+      "source": "Proverbs 24",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲩⲟ",
+        1,
+        12.308
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.083
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣϫϩⲓⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϫϩⲓⲙ",
+          1
+        ],
+        [
+          "ⲣϫϩⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲩⲟ_1_post_ⲣϫϩⲓⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣϫϩⲓⲙ",
+          "ϥ_1_pre_ⲣϫϩⲓⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣϫϩⲓⲙ",
+          "ⲣϫϩⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲣϫϩⲓⲙ_0_node",
+          "ⲛ_2_post_ⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲁⲩⲟ",
+          "ⲥⲉ_2_post_ⲧⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ⲧⲁⲩⲟ",
+          "ⲧⲁⲩⲟ_1_post_ⲣϫϩⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16856,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7480",
+      "label": "ϫϩⲓⲙ",
+      "pos": "N",
+      "gloss": "meaning unknown"
+    }
+  ]
+}

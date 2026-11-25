@@ -1,0 +1,149 @@
+{
+  "id": "C3276",
+  "forms": [
+    {
+      "id": "CF8440",
+      "orth": "ⲥⲁⲉⲓⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17987,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3743",
+      "bibliography": "CD 315b; KoptHWb 178; DELC 182; ChLCS 44b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲱⲧ ⲛⲉ ⲛⲟⲩⲙⲁ ⲙⲡⲟⲣⲛⲏ ⲁⲩⲱ ⲁⲧⲁⲙⲓⲟ ⲛⲉ ⲛⲟⲩⲧⲟⲡⲟⲥ ⲛ**ⲥⲁⲉⲓⲉ** ⲉϥⲛⲉϩ ⲉⲃⲟⲗ ϩⲙⲡⲗⲁϯⲁ ⲛⲓⲙ",
+      "english": "that thou didst build thyself a house of fornication, and didst make thyself a public place in every street;",
+      "source": "Ezekiel 16",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉϩ",
+        1,
+        12.74
+      ],
+      [
+        "ⲧⲟⲡⲟⲥ",
+        1,
+        11.116
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲉⲓⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17607,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3282",
+      "label": "ϯⲥⲁ",
+      "pos": "V",
+      "gloss": "beautify, become beautiful"
+    },
+    {
+      "target": "C3279",
+      "label": "ⲙⲛⲧⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3281",
+      "label": "ⲟ ⲛⲥⲁⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3280",
+      "label": "ⲣⲥⲁⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "become beautiful"
+    },
+    {
+      "target": "C3274",
+      "label": "ⲥⲁ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3275",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3277",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful person"
+    },
+    {
+      "target": "C3278",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful"
+    }
+  ],
+  "etym": {
+    "egy_num": "128660",
+    "egy_lemma": "sꜥꜣi̯",
+    "english": "to make great; to increase",
+    "german": "groß machen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/128660"
+  }
+}

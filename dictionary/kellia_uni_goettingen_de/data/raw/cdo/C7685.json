@@ -1,0 +1,112 @@
+{
+  "id": "C7685",
+  "forms": [
+    {
+      "id": "CF17435",
+      "orth": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14311,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8540",
+      "bibliography": "KoptHWb 453, 573; DELC 338a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲁⲛⲁⲫⲁⲗⲁⲅⲝ",
+        1,
+        20.598
+      ],
+      [
+        "ⲕⲁⲑⲁⲣⲟⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        9.508
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϭⲁⲗⲟⲩⲃⲓϩ",
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ],
+        [
+          "ϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          "ⲡⲁⲓ_1_post_ϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13910,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7684",
+      "label": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "bald-headed person"
+    },
+    {
+      "target": "C7686",
+      "label": "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "baldness"
+    }
+  ]
+}

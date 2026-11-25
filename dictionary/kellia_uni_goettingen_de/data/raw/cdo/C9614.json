@@ -1,0 +1,291 @@
+{
+  "id": "C9614",
+  "forms": [
+    {
+      "id": "CF24573",
+      "orth": "ⲗⲉⲡⲧⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24575",
+      "orth": "ⲗⲉⲡⲧⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5044,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF24574",
+      "orth": "ⲗⲉⲡⲇⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12305",
+      "bibliography": "DDGLC",
+      "cu_ID": "2727"
+    },
+    {
+      "id": "CS12306",
+      "bibliography": "DDGLC",
+      "cu_ID": "10938"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲙⲡⲉⲧⲥⲏϩ ϩⲙⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲧⲁⲡⲉⲛⲥⲱⲧⲏⲣ ⲙⲁⲕⲁⲣⲓⲍⲉ ⲛⲧⲉⲥϩⲓⲙⲉ ⲛϩⲏⲕⲉ ⲛⲧⲁⲥⲛⲟⲩϫⲉ ⲙⲡ**ⲗⲉⲡⲧⲟⲛ** ⲥⲛⲁⲩ ⲡⲁⲣⲁⲛⲉⲛⲧⲁⲩⲛⲟⲩϫⲉ ⲧⲏⲣⲟⲩ ⲉⲡⲅⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ · ⲛⲁⲓ ⲡⲉϫⲁϥ ⲛⲧⲁⲩⲛⲟⲩϫⲉ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲧⲣϩⲟⲩⲟ ⲉⲣⲟⲟⲩ · ⲧⲁⲓ ⲇⲉ ϩⲱⲱⲥ ⲡⲉⲥϣⲱⲱⲧ ⲧⲏⲣϥ ⲁⲥⲧⲁⲁϥ",
+      "english": "Remember what is written in the Gospel wherein our Saviour ascribed more blessing to the poor woman who cast two mites into the treasury than to all the other folk who had cast in [their offerings], and how He said, 'All these have cast in gifts from their superabundance, but she hath given out of her absolute poverty.'",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲡⲟⲇⲏⲝⲓⲥ ϭⲉ ⲛⲛⲁⲓ ⲙⲁⲣⲉⲥϣⲱⲡⲉ ⲛⲏⲧⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡϣⲁϫⲉ ⲛⲧⲉⲭⲏⲣⲁ ⲛϩⲏⲕⲉ · ⲧⲁⲓ ⲉⲛⲧⲁⲥⲛⲟⲩϫⲉ ⲙⲡ**ⲗⲉⲡⲧⲟⲛ** ⲥⲛⲁⲩ ⲉⲡⲕⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ ·",
+      "english": "Let the proof of these words, moreover, be to you through the words of the poor widow, who threw two lepta into the treasury,",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲛⲧⲉⲭⲏⲣⲁ ⲛϩⲏⲕⲉ ⲛⲧⲁⲥⲛⲟⲩϫⲉ ⲛ**ⲗⲉⲡⲧⲟⲛ** ⲥⲛⲁⲩ ⲉⲡⲕⲁⲍⲟⲫⲩⲗⲁⲅⲓⲟⲛ ·",
+      "english": "Remember the poor widow woman who cast the two mites into the treasury,",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        10.571
+      ],
+      [
+        "ⲃ",
+        1,
+        9.709
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.216
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.054
+      ],
+      [
+        "ⲥ",
+        1,
+        5.428
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲁⲍⲟⲫⲩⲗⲁⲅⲓⲟⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲕⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ",
+        1,
+        16.276
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        4,
+        14.598
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        3,
+        14.5
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        10.954
+      ],
+      [
+        "ⲡ",
+        7,
+        10.597
+      ],
+      [
+        "ⲡⲁⲣⲁ",
+        1,
+        10.316
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        1,
+        9.162
+      ],
+      [
+        "ⲥ",
+        3,
+        8.707
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.643
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        8.008
+      ],
+      [
+        "ⲙ",
+        3,
+        7.784
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        7.652
+      ],
+      [
+        "ⲛ",
+        4,
+        7.487
+      ],
+      [
+        "ⲧ",
+        2,
+        6.749
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.871
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ϩⲉ",
+        1,
+        5.405
+      ],
+      [
+        "ⲕ",
+        1,
+        4.531
+      ],
+      [
+        "ⲁ",
+        1,
+        2.722
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲉⲡⲧⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲃ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲡⲧⲟⲛ_0_node",
+          "ⲃ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲉⲡⲧⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          3
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲡⲧⲟⲛ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          2
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲗⲉⲡⲧⲟⲛ",
+          "ⲕ_1_pre_ⲗⲉⲡⲧⲟⲛ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲗⲉⲡⲧⲟⲛ",
+          "ⲗⲉⲡⲧⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4622,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "1287",
+    "grl_lemma": "λεπτόν",
+    "grl_meaning": "small intestine; a very small coin",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1040a"
+  }
+}

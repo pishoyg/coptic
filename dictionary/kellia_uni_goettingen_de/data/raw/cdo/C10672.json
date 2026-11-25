@@ -1,0 +1,241 @@
+{
+  "id": "C10672",
+  "forms": [
+    {
+      "id": "CF28900",
+      "orth": "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF28904",
+      "orth": "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3634,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF28901",
+      "orth": "ⲥⲱⲙⲁϯⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8014,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF28903",
+      "orth": "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28902",
+      "orth": "ⲥⲱⲙⲁⲧⲓⲕⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14608",
+      "bibliography": "DDGLC",
+      "cu_ID": "2929"
+    },
+    {
+      "id": "CS14609",
+      "bibliography": "DDGLC",
+      "cu_ID": "3881"
+    },
+    {
+      "id": "CS14610",
+      "bibliography": "DDGLC",
+      "cu_ID": "6792"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲟⲓⲕⲟⲛⲟⲙⲉⲓ ⲙⲡⲁⲥⲱⲙⲁ ⲛⲟⲩⲉϣ ⲛϣⲱⲛⲉ ⲛ**ⲥⲱⲙⲁⲧⲓⲕⲟⲛ** ·",
+      "english": "as the steward of my body, when the desires caused by the sicknesses of the body arose",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲛϣⲱⲛⲉ ⲛ**ⲥⲱⲙⲁⲧⲓⲕⲟⲛ** ⲕⲑⲉⲣⲁⲡⲉⲩⲉ ⲙⲙⲟⲟⲩ · ϩⲓⲧⲛⲧⲉⲭⲁⲣⲓⲥ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲧⲁⲁⲥ ⲛⲁⲕ · ⲛϣⲱⲛⲉ ⲇⲉ ⲟⲛ ⲙⲯⲩⲭⲓⲕⲟⲛ ⲉⲧⲉⲛⲛⲟⲃⲉ ⲛⲉ · ⲕⲧⲃⲃⲟ ⲙⲙⲟⲟⲩ ϩⲓⲧⲛⲙⲙⲁⲉⲓⲛ ⲙⲛⲛⲉϣⲡⲏⲣⲉ ⲉⲧⲕⲟⲩⲱⲛϩ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ ϩⲙⲡⲉϥⲧⲟⲩⲥⲁ ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "Although thou healest the diseases of the body by means of the grace which God hath given unto thee, yet thou dost also cleanse the diseases of the soul, which are sins, through the signs I and the miracles which thou dost make manifest in thy martyrium in the four quarters of the world.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉϣϣⲉ ⲉⲣⲱⲙⲉ ⲛⲓⲙ ⲛⲭⲣⲓⲥⲧⲓⲁⲛⲟⲥ ⲉⲙⲉϩ ϩⲏⲧϥ ⲉⲃⲟⲗ ϩⲛⲛⲕⲁⲣⲡⲟⲥ ⲛⲛⲉϥⲥⲡⲟⲧⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩϩⲣⲉ ⲛ**ⲥⲱⲙⲁⲧⲓⲕⲟⲛ** ·",
+      "english": "And again, 'It is. meet that every man who is a Christian should fill his body with the fruits of his lips, as if it were corporeal food.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲣⲓⲁ",
+        1,
+        14.843
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        3,
+        13.683
+      ],
+      [
+        "ⲛ",
+        15,
+        12.36
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        2,
+        12.346
+      ],
+      [
+        "ⲑⲉⲣⲁⲡⲉⲩⲉ",
+        1,
+        12.341
+      ],
+      [
+        "ⲧⲣⲟⲫⲏ",
+        1,
+        12.071
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        2,
+        11.759
+      ],
+      [
+        "ⲣϩⲟⲩⲟ",
+        1,
+        10.813
+      ],
+      [
+        "ϩⲣⲉ",
+        1,
+        10.595
+      ],
+      [
+        "ϣϭⲟⲙ",
+        1,
+        10.362
+      ],
+      [
+        "ⲛⲧⲟⲕ",
+        2,
+        10.214
+      ],
+      [
+        "ⲉⲡⲉⲓⲇⲏ",
+        1,
+        9.687
+      ],
+      [
+        "ⲥⲃⲱ",
+        1,
+        9.439
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        8.885
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        2,
+        8.61
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        8.023
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        7.904
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        7.642
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        7.633
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        7.285
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ_0_node",
+          8
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲣϩⲟⲩⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+          "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁⲧⲓⲕⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲱⲙⲁⲧⲓⲕⲟⲛ",
+          "ⲣϩⲟⲩⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3259,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "2137",
+    "grl_lemma": "σωματικός",
+    "grl_meaning": "of or for the body, bodily",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1749b; Preisigke 2:567"
+  }
+}

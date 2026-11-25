@@ -1,0 +1,216 @@
+{
+  "id": "C9439",
+  "forms": [
+    {
+      "id": "CF23918",
+      "orth": "ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF23919",
+      "orth": "ϭⲓⲛⲁⲙⲱⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18708,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF23920",
+      "orth": "ⲕⲓⲛⲁⲙⲱⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7600,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23921",
+      "orth": "ⲕⲓⲛⲁⲙⲱⲙⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7600,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23922",
+      "orth": "ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11955",
+      "bibliography": "DDGLC",
+      "cu_ID": "4324"
+    },
+    {
+      "id": "CS11956",
+      "bibliography": "DDGLC",
+      "cu_ID": "181"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛⲁⲣⲇⲟⲥ ⲙⲛⲟⲩⲕⲣⲟⲕⲟⲥ ⲁⲩⲱ ⲟⲩⲕⲁϣ ⲙⲛⲟⲩ**ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ** ⲙⲛⲛϣⲏⲛ ⲧⲏⲣⲟⲩ ⲙⲡⲗⲓⲃⲁⲛⲟⲥ ⲟⲩϣⲁⲗ ⲙⲛⲟⲩⲁⲗⲗⲱⲓ ⲙⲛⲛϩⲏⲛⲉ ⲧⲏⲣⲟⲩ ⲉⲧⲥⲟⲧⲡ",
+      "english": "spikenard and saffron, calamus and cinnamon; with all woods of Libanus, myrrh, aloes, with all chief spices:",
+      "source": "Song of Solomon 4",
+      "urn": "urn:cts:copticLit:ot.song.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲧⲉⲧⲛⲉⲓⲛⲉ ⲛⲟⲩⲗⲓⲃⲁⲛⲟⲥ ⲉⲃⲟⲗ ϩⲛⲥⲁⲃⲁ ⲁⲩⲱ ⲟⲩ**ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ** ⲉⲃⲟⲗ ϩⲛⲟⲩⲕⲁϩ ⲉϥⲟⲩⲏⲩ ⲛⲉⲧⲛϣⲟⲩⲥⲟⲟⲩϣⲉ ⲛⲥⲉⲥⲟⲧⲡ ⲁⲛ ⲁⲩⲱ ⲛⲉⲧⲛⲑⲩⲥⲓⲁ ⲛⲥⲉⲣⲁⲛⲁⲓ ⲁⲛ",
+      "english": "Wherefore do ye bring me frankincense from Saba, and cinnamon from a land afar off? your whole-burnt-offerings are not acceptable, and your sacrifices have not been pleasant to me.",
+      "source": "Jeremiah 6",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲃⲁ",
+        1,
+        16.791
+      ],
+      [
+        "ⲕⲁϣ",
+        1,
+        14.24
+      ],
+      [
+        "ϣⲏⲛ",
+        1,
+        11.272
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        10.22
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.927
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          2
+        ],
+        [
+          "ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          "ⲟⲩ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          "ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          "ⲟⲩ_1_pre_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲓⲛⲛⲁⲙⲱⲙⲟⲛ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8429,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2523",
+    "grl_lemma": "κιννάμωμον",
+    "grl_meaning": "cinnamon (Cinnamonum cassia)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 953a; Preisigke 1:798"
+  }
+}

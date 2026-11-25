@@ -1,0 +1,631 @@
+{
+  "id": "C7521",
+  "forms": [
+    {
+      "id": "CF17101",
+      "orth": "ϫⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.12,
+        "rank": 331,
+        "count": 493
+      }
+    },
+    {
+      "orth": "ϫⲁϫⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.11,
+        "rank": 331,
+        "count": 264
+      }
+    },
+    {
+      "orth": "ϫⲓϫⲉⲉⲩ",
+      "dialect": "S",
+      "id": "2498.1"
+    },
+    {
+      "orth": "ϫⲓϫⲉⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.5,
+        "rank": 1126,
+        "count": 79
+      }
+    },
+    {
+      "orth": "ϫⲓϫⲉⲟⲩ",
+      "dialect": "S",
+      "id": "2498.3"
+    },
+    {
+      "orth": "ϫⲓⲛϫⲉⲉⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8314,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϫⲓⲛϫⲉⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 3017,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϫⲓⲛϫⲉⲩⲉ",
+      "dialect": "S",
+      "id": "2498.6"
+    },
+    {
+      "orth": "ϫⲓϫⲉⲟⲩⲉ",
+      "dialect": "S",
+      "id": "2498.7"
+    },
+    {
+      "orth": "ϫⲁϫⲉ",
+      "dialect": "A",
+      "id": "2498.8"
+    },
+    {
+      "orth": "ϫⲓϫⲉⲩⲉ",
+      "dialect": "A",
+      "id": "2498.9"
+    },
+    {
+      "orth": "ϫⲓϫⲉⲟⲩⲉ",
+      "dialect": "A",
+      "id": "2498.10"
+    },
+    {
+      "orth": "ϫⲉϫⲓ",
+      "dialect": "F",
+      "id": "2498.11"
+    },
+    {
+      "orth": "ϫⲁϫⲉ",
+      "dialect": "L",
+      "id": "2498.12"
+    },
+    {
+      "orth": "ϫⲓϫⲉⲩⲉ",
+      "dialect": "L",
+      "id": "2498.13"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8339",
+      "bibliography": "CD 799b; CED 323-324; KoptHWb 441; DELC 333-334; ChLCS 105b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲛⲱⲓⲕ ⲛⲧⲉⲧⲉⲛⲉⲙⲓ ⲁⲛ ϫⲉϯⲙⲉⲧϣⲫⲏⲣ ⲛⲧⲉⲡⲓⲕⲟⲥⲙⲟⲥ ⲟⲩⲙⲉⲧϫⲁϫⲓ ⲧⲉ ⲛⲧⲉⲫⲛⲟⲩϯ ⲫⲏ ⲇⲉ ⲉⲑⲟⲩⲱϣ ⲉⲉⲣϣⲫⲏⲣ ⲉⲡⲓⲕⲟⲥⲙⲟⲥ ϥⲛⲁϣⲱⲡⲓ ⲉϥⲟⲓ ⲛ**ϫⲁϫⲓ** ⲉⲫⲛⲟⲩϯ",
+      "english": "You adulterers and adulteresses, don't you know that friendship with the world is enmity with God? Whoever therefore wants to be a friend of the world makes himself an enemy of God.",
+      "source": "20_James_04",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϫⲟⲟⲥ ⲛⲁⲓ ⲟⲛ ⲉⲧⲃⲉϩⲉⲛⲕⲟⲟⲩⲉ · ⲁⲩⲱ ⲛⲧⲉⲣⲉⲧⲥⲩⲛⲏⲑⲓⲁ ϣⲱⲡⲉ · ⲉⲧⲣⲛⲁⲡⲁⲛⲧⲁ ⲉⲛⲉⲛⲉⲣⲏⲩ · ⲁⲡ**ϫⲁϫⲉ** ⲧⲁⲁⲥ ⲉⲡⲁϩⲏⲧ · ⲉⲧⲣⲁϫⲓϩⲱⲃ ⲛϭⲓϫ ⲛⲧⲟⲟⲧⲥ ·",
+      "english": "and she talked to me about further work. And it became a customary thing for us to meet each other, and the Enemy put it into my heart to take work of the hands from her.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉϣⲱⲡ ⲁⲣⲉϣⲁⲛ ⲡⲉⲕ**ϫⲁϫⲓ** ϩⲕⲟ ⲙⲁⲧⲉⲙⲙⲟϥ ⲁϥϣⲁⲛⲓⲃⲓ ⲙⲁⲧⲥⲟϥ ⲫⲁⲓ ⲅⲁⲣ ⲉⲕⲣⲁ ⲙⲙⲟϥ ⲉⲕⲉⲑⲱⲟⲩϯ ⲛϩⲁⲛϫⲉⲃⲥ ⲛⲭⲣⲱⲙ ϩⲓϫⲉⲛⲧⲉϥⲁⲫⲉ .",
+      "english": "Therefore 'If your enemy is hungry, feed him. If he is thirsty, give him a drink; for in doing so, you will heap coals of fire on his head.'",
+      "source": "06_Romans_12",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲓϯⲉⲝⲟⲩⲥⲓⲁ ⲛⲁⲕ ⲉϩⲱⲙ ⲉϫⲛⲛϩⲟϥ ⲙⲛⲛⲟⲩⲟⲟϩⲉ · ⲁⲩⲱ ⲉϫⲛⲧϭⲟⲙ ⲧⲏⲣⲥ ⲙⲡ**ϫⲁϫⲉ** ⁛—",
+      "english": "Did I not give unto thee the power to trample under thy feet vipers and scorpions, and all the might of the Enemy?",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲉⲙ ⲫⲛⲟⲩϯ ⲉⲧⲁⲡⲣⲟⲥⲉⲩⲭⲏ ϧⲉⲛⲡϫⲓⲛⲧⲁⲧⲱⲃϩ: ⲛⲟϩⲉⲙ ⲛⲧⲁ\\'ⲩⲭⲏ ⲉⲃⲟⲗ ϧⲉⲛⲧϩⲟϯ ⲛⲟⲩ**ϫⲁϫⲓ** ⲁⲕⲉⲣⲥⲕⲉⲡⲁⲍⲓⲛ ⲙⲙⲟⲓ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲥⲁⲛⲕⲟⲧⲥ ⲛⲧⲉⲛⲓⲣⲉϥⲉⲣⲡⲉⲧϩⲱⲟⲩ .",
+      "english": "Hear my prayer, O God, when I make my petition to thee; deliver my soul from fear of the enemy.",
+      "source": "19_Psalmi_63",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:63",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩϣⲁⲛⲣϫⲟⲉⲓⲥ ⲇⲉ ⲟⲛ ⲉⲣⲟϥ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲉⲭⲙⲁⲗⲱⲥⲓⲁ ⲙⲡ**ϫⲁϫⲉ** · ϣⲁⲣⲉⲡⲉⲡⲛⲉⲩⲙⲁ ⲟⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲃⲱⲕ ϣⲁⲣⲟϥ ⲛϩⲛⲥⲟⲡ ⲥⲟⲡ ·",
+      "english": "Ⲓf, on the contrary, the captivity of the enemy rules them, then the spirit of God will still visit them on occasion.",
+      "source": "Apophthegmata Patrum Sahidic 067",
+      "urn": "urn:cts:copticLit:ap.67.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲕ",
+        45,
+        26.091
+      ],
+      [
+        "ⲟⲩ",
+        134,
+        25.952
+      ],
+      [
+        "ⲛ",
+        131,
+        25.691
+      ],
+      [
+        "ⲁ",
+        119,
+        25.674
+      ],
+      [
+        ".",
+        99,
+        25.504
+      ],
+      [
+        "ⲡ",
+        88,
+        24.998
+      ],
+      [
+        "ϭⲟϫⲓ",
+        20,
+        24.655
+      ],
+      [
+        "ⲛⲁ",
+        75,
+        24.641
+      ],
+      [
+        "ϫⲓⲛϯⲟⲩⲱ",
+        3,
+        24.45
+      ],
+      [
+        "ⲧⲏⲣ",
+        44,
+        24.35
+      ],
+      [
+        "ⲛⲉⲛ",
+        28,
+        23.502
+      ],
+      [
+        "ⲉⲥⲏⲧ",
+        17,
+        23.411
+      ],
+      [
+        "ⲛϫⲉ",
+        46,
+        23.165
+      ],
+      [
+        "ⲛⲉϥ",
+        28,
+        23.089
+      ],
+      [
+        "ϫⲓϫ",
+        22,
+        22.891
+      ],
+      [
+        "ϣⲟⲩⲓⲧ:",
+        3,
+        22.865
+      ],
+      [
+        "ⲛⲟⲩ",
+        25,
+        22.835
+      ],
+      [
+        "ⲙ",
+        53,
+        22.767
+      ],
+      [
+        "ⲉⲧ",
+        43,
+        22.53
+      ],
+      [
+        "ⲛⲉⲙ",
+        42,
+        22.42
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        17,
+        23.741
+      ],
+      [
+        "ⲛ",
+        393,
+        20.545
+      ],
+      [
+        "ⲛⲁ",
+        181,
+        19.069
+      ],
+      [
+        "ⲉ",
+        207,
+        18.779
+      ],
+      [
+        "ⲡ",
+        216,
+        18.643
+      ],
+      [
+        "ϥ",
+        193,
+        18.18
+      ],
+      [
+        "ⲁⲩⲱ",
+        131,
+        17.728
+      ],
+      [
+        "ⲕ",
+        87,
+        17.062
+      ],
+      [
+        "ⲙ",
+        120,
+        16.953
+      ],
+      [
+        "ⲁ",
+        125,
+        16.823
+      ],
+      [
+        "ⲟⲩ",
+        120,
+        16.822
+      ],
+      [
+        "ⲓ",
+        72,
+        16.241
+      ],
+      [
+        "ⲉⲧ",
+        82,
+        16.192
+      ],
+      [
+        "ⲛⲉⲕ",
+        36,
+        16.177
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        70,
+        15.734
+      ],
+      [
+        "ⲛⲉⲩ",
+        40,
+        15.663
+      ],
+      [
+        "ⲙⲙⲟ",
+        61,
+        15.654
+      ],
+      [
+        "ⲛⲉϥ",
+        40,
+        15.644
+      ],
+      [
+        "ϩⲛ",
+        67,
+        15.558
+      ],
+      [
+        "ϩⲙ",
+        46,
+        14.865
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲁϫⲉ_0_node",
+          355
+        ],
+        [
+          "ⲛⲁ_1_pre_ϫⲁϫⲉ",
+          55
+        ],
+        [
+          "ⲡ_1_pre_ϫⲁϫⲉ",
+          37
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϫⲁϫⲉ",
+          27
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁϫⲉ",
+          25
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          26
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲁϫⲉ",
+          16
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲁϫⲉ",
+          15
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲁϫⲉ",
+          11
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϫⲁϫⲉ",
+          7
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          14
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          14
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϫⲁϫⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫⲉ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          2
+        ],
+        [
+          "ⲁⲛⲧⲓⲇⲓⲕⲟⲥ_1_post_ϫⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          2
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲁϫⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϫⲁϫⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲁϫⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϫⲁϫⲉ",
+          "ϫⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_post_ⲁⲛⲧⲓⲇⲓⲕⲟⲥ",
+          "ⲁⲛⲧⲓⲇⲓⲕⲟⲥ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϫⲁϫⲉ",
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϫⲁϫⲉ",
+          "ⲛⲉϥ_1_pre_ϫⲁϫⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.5,
+      "rank": 255,
+      "count": 556
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7522",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enemy"
+    },
+    {
+      "target": "C7523",
+      "label": "ϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "hostile"
+    },
+    {
+      "target": "C7524",
+      "label": "ⲙⲁⲓϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "loving enmity, quarrelsome"
+    },
+    {
+      "target": "C7525",
+      "label": "ⲙⲛⲧϫⲁϫⲉ",
+      "pos": "N",
+      "gloss": "enmity"
+    },
+    {
+      "target": "C7526",
+      "label": "ⲣϫⲁϫⲉ",
+      "pos": "V",
+      "gloss": "be at enmity, quarrel, argue"
+    }
+  ],
+  "etym": {
+    "egy_num": "650046",
+    "egy_lemma": "ḏrḏr",
+    "demo_num": "d7866",
+    "demo_lemma": "ḏḏ(j)",
+    "english": "stranger; foreigner",
+    "german": "Fremder",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/650046",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7866"
+  }
+}

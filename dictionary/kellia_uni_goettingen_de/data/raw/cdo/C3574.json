@@ -1,0 +1,621 @@
+{
+  "id": "C3574",
+  "forms": [
+    {
+      "id": "CF9053",
+      "orth": "ⲥⲓⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3037,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲥⲓⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.77,
+        "rank": 360,
+        "count": 235
+      }
+    },
+    {
+      "orth": "ⲥⲓⲛⲓⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2053,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ⲥⲏⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1734,
+        "count": 19
+      }
+    },
+    {
+      "orth": "ⲥⲓⲛⲉ",
+      "dialect": "A",
+      "id": "1437.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4070",
+      "bibliography": "CD 343b; CED 155; KoptHWb 188; DELC 190; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲃⲃⲁ ⲫⲓⲱⲧ ⲟⲩⲟⲛ ϣϫⲟⲙ ⲉϩⲱⲃ ⲛⲓⲃⲉⲛ ϧⲁⲧⲟⲧⲕ ⲙⲁⲣⲉⲡⲓⲁⲫⲟⲧ **ⲥⲓⲛⲓ** ⲉⲃⲟⲗ ϩⲁⲣⲟⲓ ⲁⲗⲗⲁ ⲙⲫⲣⲏϯ ⲉⲧⲉϩⲛⲏⲓ ⲁⲛⲟⲕ ⲁⲛ ⲁⲗⲗⲁ ⲙⲫⲣⲏϯ ⲉⲧⲉϩⲛⲁⲕ ⲛⲑⲟⲕ .",
+      "english": "He said, 'Abba, Father, all things are possible to you. Please remove this cup from me. However, not what I desire, but what you desire.'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱϥ ⲇⲉ ⲁϥⲛⲉϩⲥⲉ ⲛϭⲓⲥⲁⲙⲉⲅⲁⲣ ⲡϣⲏⲣⲉ ⲛⲁⲛⲁⲧⲉ ⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲛⲛⲁⲗⲗⲟⲫⲩⲗⲗⲟⲥ ⲉⲩⲛⲁⲣⲥⲉⲩϣⲉ ⲛⲣⲱⲙⲉ ϩⲛⲧ**ⲥⲓⲛⲉ** ⲛⲥⲕⲁⲓ ⲛⲛⲉϩⲟⲟⲩ ⲛⲧⲟϥ ϩⲱⲱϥ ⲁϥⲧⲟⲩϫ ⲉⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲁϥⲙⲟⲩ ⲛϭⲓⲥⲁⲙⲉⲅⲁⲣ",
+      "english": "And after him rose up Samegar the son of Dinach, and smote the Philistines to the number of six hundred men with a ploughshare such as is drawn by oxen; and he too delivered Israel.",
+      "source": "Judges 3",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲱⲟⲩ ⲉⲩⲧϩⲉⲙⲕⲏⲟⲩⲧ ϧⲉⲛⲡⲓϫⲓⲛⲥⲱⲕ ⲛⲁⲣⲉⲡⲓⲑⲏⲟⲩ ⲅⲁⲣ ⲉϧⲟⲩⲛ ⲉϩⲣⲁⲩ ⲡⲉ ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛϯⲙⲁϩⲇ ⲛⲟⲩⲉⲣϣⲓ ⲛⲧⲉⲡⲓⲉϫⲱⲣϩ ⲁϥⲓ ϩⲁⲣⲱⲟⲩ ⲉϥⲙⲟϣⲓ ϩⲓϫⲉⲛⲫⲓⲟⲙ ⲟⲩⲟϩ ⲛⲁϥⲟⲩⲱϣ ⲉ**ⲥⲉⲛ**ⲟⲩ ⲡⲉ .",
+      "english": "Seeing them distressed in rowing, for the wind was contrary to them, about the fourth watch of the night he came to them, walking on the sea, and he would have passed by them,",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϥⲕⲣⲓⲛⲉ ⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲗⲁⲟⲥ ⲉⲛⲁϣⲱⲟⲩ ⲛϥϫⲡⲓⲟ ⲛϩⲉⲛϩⲉⲑⲛⲟⲥ ⲉⲩϫⲟⲟⲣ ϣⲁⲁⲣⲏϫϥ ⲙⲡⲕⲁϩ ⲁⲩⲱ ⲥⲉⲛⲁⲟⲩⲱⲧϩ ⲛⲛⲉⲩⲥⲏϥⲉ ⲉϩⲉⲛ**ⲥⲓⲛⲉ** ⲛⲥⲕⲁⲓ ⲁⲩⲱ ⲛⲉⲩⲙⲉⲣⲉϩ ⲉϩⲉⲛⲟϩⲥ ⲛⲧⲉⲧⲙϩⲉⲑⲛⲟⲥ ϭⲉ ϥⲓ ⲥⲏϥⲉ ⲉϫⲛϩⲉⲑⲛⲟⲥ ⲁⲩⲱ ⲛⲥⲉϭⲉ ⲉⲙⲓϣⲉ",
+      "english": "And he shall judge among many peoples, and shall rebuke strong nations afar off; and they shall beat their swords into ploughshares, and their spears into sickles; and nation shall no more lift up sword against nation, neither shall they learn to war any more.",
+      "source": "Micah 4",
+      "urn": "urn:cts:copticLit:ot.mic.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϭⲓ ⲛⲟⲩⲁⲓ ⲛⲭⲃⲁ ⲉϥ**ⲥⲓⲛⲓⲱⲟⲩ** ⲥⲓⲙⲱⲛ ⲡⲓⲕⲩⲣⲓⲛⲛⲉⲟⲥ ⲉϥⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲧⲕⲟⲓ ⲫⲓⲱⲧ ⲛⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ ⲛⲉⲙⲣⲟⲩⲫⲟⲥ ϩⲓⲛⲁ ⲛⲧⲉϥⲱⲗⲓ ⲙⲡⲉϥⲥⲧⲁⲩⲣⲟⲥ",
+      "english": "They compelled one passing by, coming from the country, Simon of Cyrene, the father of Alexander and Rufus, to go with them, that he might bear his cross.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲱⲧϩ ⲛⲛⲉⲧⲛ**ⲥⲓⲛⲉ** ⲛⲥⲕⲁⲓ ⲉϩⲉⲛⲥⲏϥⲉ ⲁⲩⲱ ⲛⲉⲧⲛⲟϩⲥ ⲉϩⲉⲛⲙⲉⲣⲉϩ ⲡⲉⲧⲉⲙⲛϭⲟⲙ ⲙⲙⲟϥ ⲙⲁⲣⲉϥϫⲟⲟⲥ ϫⲉϯϭⲙϭⲟⲙ ⲁⲛⲟⲕ",
+      "english": "Beat your ploughshares into swords, and your sickles into spears: let the weak say, I am strong.",
+      "source": "Joel 4",
+      "urn": "urn:cts:copticLit:ot.joel.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲃⲟⲗ",
+        152,
+        28.047
+      ],
+      [
+        "ⲛϫⲉ",
+        78,
+        25.451
+      ],
+      [
+        "ⲁ",
+        90,
+        24.465
+      ],
+      [
+        "ⲟⲩϣⲱⲗϩ",
+        3,
+        24.45
+      ],
+      [
+        "ⲙⲉⲙⲁⲑⲣⲁⲃⲁ",
+        3,
+        24.45
+      ],
+      [
+        "ϩⲓⲧⲉⲛ",
+        26,
+        24.387
+      ],
+      [
+        "ϥ",
+        99,
+        24.312
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        77,
+        23.88
+      ],
+      [
+        "ⲛ",
+        84,
+        23.768
+      ],
+      [
+        "ϧⲉⲛ",
+        62,
+        23.626
+      ],
+      [
+        "ⲛⲁ",
+        59,
+        23.602
+      ],
+      [
+        ".",
+        62,
+        23.479
+      ],
+      [
+        "ⲩ",
+        51,
+        23.138
+      ],
+      [
+        "ⲉⲣⲕⲁⲧⲁⲭⲣⲁⲥⲑⲉ",
+        3,
+        22.865
+      ],
+      [
+        "ⲇⲉ",
+        38,
+        22.792
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        12,
+        22.77
+      ],
+      [
+        "ⲧ",
+        33,
+        22.658
+      ],
+      [
+        "ⲉⲧ",
+        43,
+        22.53
+      ],
+      [
+        "ⲟⲩ",
+        60,
+        22.475
+      ],
+      [
+        "ⲛⲛ",
+        12,
+        22.444
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        19.691
+      ],
+      [
+        "ⲥⲕⲁⲓ",
+        3,
+        16.987
+      ],
+      [
+        "ⲛⲉⲥⲧⲉϣⲉⲉⲩ",
+        1,
+        16.691
+      ],
+      [
+        "ϩⲩⲡⲟⲙⲓⲛⲏ",
+        1,
+        13.521
+      ],
+      [
+        "ⲟⲩⲉⲓⲛ",
+        1,
+        13.106
+      ],
+      [
+        "ⲕⲗⲟⲟⲗⲉ",
+        2,
+        12.299
+      ],
+      [
+        "ⲟⲩⲱⲧϩ",
+        1,
+        11.936
+      ],
+      [
+        "ⲇⲁⲙⲁⲥⲕⲟⲥ",
+        1,
+        11.562
+      ],
+      [
+        "ⲥⲱϣϥ",
+        1,
+        11.047
+      ],
+      [
+        "ⲣⲉϥⲙⲓϣⲉ",
+        1,
+        10.884
+      ],
+      [
+        "ⲡⲗⲏⲅⲏ",
+        1,
+        10.76
+      ],
+      [
+        "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+        1,
+        10.351
+      ],
+      [
+        "ⲛ",
+        11,
+        10.28
+      ],
+      [
+        "ϯϩⲧⲏ",
+        1,
+        10.152
+      ],
+      [
+        "ⲉ",
+        8,
+        9.91
+      ],
+      [
+        "ⲙ",
+        6,
+        9.199
+      ],
+      [
+        "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ",
+        1,
+        9.144
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        8.963
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        8.922
+      ],
+      [
+        "ⲛⲁ",
+        5,
+        8.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲛⲉ",
+          5
+        ],
+        [
+          "ⲥⲕⲁⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛ_3_post_ⲥⲕⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_5_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲥⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲙⲡⲉ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲭⲁⲗⲁⲍⲁ",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲁⲍⲁ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲧⲟⲟⲩⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲇⲁⲙⲁⲥⲕⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ⲛⲉⲥⲧⲉϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          "ⲛ_1_post_ⲥⲓⲛⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲛⲉ",
+          "ⲥⲕⲁⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲥⲕⲁⲓ_2_post_ⲛ",
+          "ⲛ_3_post_ⲥⲕⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲕⲁⲓ",
+          "ⲛⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_4_post_ⲛ",
+          "ϩⲟⲟⲩ_5_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲥⲓⲛⲉ",
+          "ⲥⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲁⲓ_2_post_ⲛ",
+          "ⲁⲩⲱ_2_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲉⲣⲉϩ",
+          "ⲛⲉⲩ_2_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_2_post_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲥⲓⲛⲉ",
+          "ⲡ_2_pre_ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲡⲉⲓⲣⲁⲥⲙⲟⲥ",
+          "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲣⲁⲥⲙⲟⲥ_1_pre_ⲥⲓⲛⲉ",
+          "ⲥⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲓⲛⲉ",
+          "ⲁ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲓⲛⲉ",
+          "ⲛⲉ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_2_pre_ⲕⲗⲟⲟⲗⲉ",
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲥⲓⲛⲉ",
+          2
+        ],
+        [
+          "ⲕⲗⲟⲟⲗⲉ_1_pre_ⲥⲓⲛⲉ",
+          "ⲥⲓⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          "ⲙⲡⲉ_2_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          "ⲟⲩ_2_post_ⲭⲁⲗⲁⲍⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲭⲁⲗⲁⲍⲁ",
+          "ⲭⲁⲗⲁⲍⲁ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲥⲓⲛⲉ",
+          "ⲛⲁ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲓⲛⲉ",
+          "ⲥⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          "ⲉ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲓⲛⲉ",
+          "ϩⲧⲟⲟⲩⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲧⲟⲟⲩⲉ_2_post_ⲉ",
+          "ⲛ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_1_pre_ⲥⲓⲛⲉ",
+          "ⲟⲩ_1_pre_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲓⲛⲉ",
+          "ⲥⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲓⲛⲉ",
+          "ⲇⲁⲙⲁⲥⲕⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲁⲙⲁⲥⲕⲟⲥ_2_post_ⲛ",
+          "ⲙⲛ_4_post_ⲛⲉⲥⲧⲉϣⲉⲉⲩ",
+          1
+        ],
+        [
+          "ⲥⲓⲛⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲓⲛⲉ",
+          "ⲙ_1_post_ⲥⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲓⲛⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2507,
+      "count": 15
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "136140",
+    "egy_lemma": "zn",
+    "english": "plowshare",
+    "german": "Pflugschar",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/136140"
+  }
+}

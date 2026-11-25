@@ -1,0 +1,76 @@
+{
+  "id": "C3855",
+  "forms": [
+    {
+      "id": "CF9636",
+      "orth": "ⲉⲣⲥⲏⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4373",
+      "bibliography": "CD 368a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3856",
+      "label": "ϫⲓⲥⲏⲩ",
+      "pos": "V",
+      "gloss": "take time, occasion"
+    },
+    {
+      "target": "C3854",
+      "label": "ⲁⲧⲥⲏⲩ",
+      "pos": "N",
+      "gloss": "timeless"
+    },
+    {
+      "target": "C3851",
+      "label": "ⲙⲡⲓⲥⲏⲩ",
+      "pos": "ADV",
+      "gloss": "at this time"
+    },
+    {
+      "target": "C3852",
+      "label": "ⲛⲟⲩⲥⲏⲩ",
+      "pos": "ADV",
+      "gloss": "on a time, once, at times"
+    },
+    {
+      "target": "C3853",
+      "label": "ⲛⲥⲏⲩ ⲛⲓⲙ",
+      "pos": "ADV",
+      "gloss": "at all times, always"
+    },
+    {
+      "target": "C3850",
+      "label": "ⲥⲏⲩ",
+      "pos": "N",
+      "gloss": "time, season"
+    },
+    {
+      "target": "C3857",
+      "label": "ⲥⲟⲩ-",
+      "pos": "N",
+      "gloss": "day x (of month or festival)"
+    }
+  ]
+}

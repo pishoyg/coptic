@@ -1,0 +1,104 @@
+{
+  "id": "C9115",
+  "forms": [
+    {
+      "id": "CF22598",
+      "orth": "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22599",
+      "orth": "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF22600",
+      "orth": "ⲍⲱⲕⲣⲁⲫⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11256",
+      "bibliography": "DDGLC",
+      "cu_ID": "4510"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛϩⲁⲙϣⲉ ⲛⲓⲙ ϩⲓⲁⲣⲭⲓⲧⲉⲕⲧⲱⲛ ⲛⲓⲙ ⲡⲁⲓ ⲉϯⲣⲉ ⲛⲧⲉⲩϣⲏ ⲛⲧϩⲉ ⲙⲡⲉϩⲟⲟⲩ ⲛⲉⲧϣⲟϫⲧ ⲛϩⲛⲕⲗⲩⲙⲁ ⲛⲥⲫⲣⲁⲅⲓⲥ ⲁⲩⲱ ⲧⲉϥϩⲩⲡⲟⲙⲟⲛⲏ ⲡⲉ ϣⲓⲃⲉ ⲛⲁⲩⲁⲛ ϥⲛⲁϯ ⲙⲡⲉϥϩⲏⲧ ⲉⲩⲉⲓⲛⲉ ⲛ**ⲍⲱⲅⲣⲁⲫⲉⲓⲁ** ⲁⲩⲱ ⲧⲉϥⲟⲩϣⲏ ⲛⲣⲟⲉⲓⲥ ⲡⲉ ϫⲉⲕⲡⲉϥϩⲱⲃ ⲉⲃⲟⲗ",
+      "english": "So every carpenter and workmaster, that laboureth night and day: and they that cut and grave seals, and are diligent to make great variety, and give themselves to counterfeit imagery, and watch to finish a work:",
+      "source": "Sirach 38",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:38",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϣⲏ",
+        1,
+        12.947
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        10.504
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18418,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "872",
+    "grl_lemma": "ζωγραφία",
+    "grl_meaning": "painting, work of art",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 758b; Preisigke 1:649"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "C7186",
+  "forms": [
+    {
+      "id": "CF16431",
+      "orth": "ϫⲱⲗⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϫⲱⲣⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2206,
+        "count": 25
+      }
+    },
+    {
+      "orth": "ϫⲟⲗⲙ†",
+      "dialect": "S",
+      "id": "2402.2"
+    },
+    {
+      "orth": "ϫⲟⲣⲙ†",
+      "dialect": "S",
+      "id": "2402.3"
+    },
+    {
+      "orth": "ϭⲱⲗⲉⲙ",
+      "dialect": "B",
+      "id": "2402.4"
+    },
+    {
+      "orth": "ϫⲱⲗⲙⲉ",
+      "dialect": "L",
+      "id": "2402.5"
+    },
+    {
+      "orth": "ϫⲁⲗⲙⲉ†",
+      "dialect": "L",
+      "id": "2402.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7929",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    },
+    {
+      "id": "CS7930",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7188",
+      "label": "ϫⲟⲗⲙⲥ",
+      "pos": "N",
+      "gloss": "distraction, care"
+    },
+    {
+      "target": "C7187",
+      "label": "ϫⲱⲗⲙ",
+      "pos": "N",
+      "gloss": "festivity; dissipation; distraction; care, grief"
+    }
+  ]
+}

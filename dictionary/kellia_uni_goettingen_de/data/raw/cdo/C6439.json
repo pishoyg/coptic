@@ -1,0 +1,190 @@
+{
+  "id": "C6439",
+  "forms": [
+    {
+      "id": "CF14906",
+      "orth": "ϩⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9386,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟⲃⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16922,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲃⲉ†",
+      "dialect": "S",
+      "id": "2122.2"
+    },
+    {
+      "orth": "ϩⲉⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2488,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ϩⲁⲃⲉ†",
+      "dialect": "L",
+      "id": "2122.4"
+    }
+  ],
+  "grammar": {
+    "note": "once",
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7146",
+      "bibliography": "CD 655b; CED 274; KoptHWb 353; DELC 288b; ChLCS 87b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲓϩⲉ ⲟⲛ ⲉⲥⲟⲩⲉϣ ⲟⲩⲱϣⲥ ⲉⲃⲟⲗ ϣⲁⲥⲟⲩⲱϣ ⲉⲥⲟⲩⲉϣ ϭⲱⲟⲩ ⲉϩⲟⲩⲛ ϣⲁⲥϭⲱⲟⲩ ⲉⲥⲟⲩⲉϣ ϩⲓⲃⲉ ϣⲁⲥ**ϩⲓⲃⲉ** ⲉϣⲁⲥⲟⲩⲱⲛϩ ⲁⲛ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲛⲉⲥϣⲓ",
+      "english": "...",
+      "source": "If Everyone Errs MONB.XG 336-343 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.errs.amelineau:1-20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲃⲉ",
+        2,
+        21.598
+      ],
+      [
+        "ϭⲱⲟⲩ",
+        1,
+        16.598
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        2,
+        14.516
+      ],
+      [
+        "ϣⲁ",
+        5,
+        14.311
+      ],
+      [
+        "ⲥ",
+        4,
+        11.274
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        10.411
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲁ_1_pre_ϩⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲟⲩⲱⲛϩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟⲩⲱⲛϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲁ_1_pre_ϩⲓⲃⲉ",
+          "ⲥ_1_pre_ϩⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲓⲃⲉ",
+          "ϩⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲃⲉ_0_node",
+          "ⲉ_1_post_ϩⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲃⲉ",
+          "ϣⲁ_3_post_ⲟⲩⲱⲛϩ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ⲟⲩⲱⲛϩ",
+          "ⲥ_3_post_ⲟⲩⲱⲛϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8958,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6441",
+      "label": "ϩⲃⲁⲓ",
+      "pos": "N",
+      "gloss": "shortness"
+    },
+    {
+      "target": "C6440",
+      "label": "ϩⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "low part, place"
+    }
+  ],
+  "etym": {
+    "egy_num": "98020",
+    "egy_lemma": "hbu̯",
+    "demo_num": "d3786",
+    "demo_lemma": "hb(e)",
+    "english": "to tread; to traverse; to trample",
+    "german": "eintreten; betreten; durchziehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/98020",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3786"
+  }
+}

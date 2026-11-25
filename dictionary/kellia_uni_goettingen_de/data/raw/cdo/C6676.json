@@ -1,0 +1,595 @@
+{
+  "id": "C6676",
+  "forms": [
+    {
+      "id": "CF15397",
+      "orth": "ϩⲟⲩⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.04,
+        "rank": 700,
+        "count": 164
+      }
+    },
+    {
+      "orth": "ϧⲟⲩⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5596,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⳉⲟⲩⲛ",
+      "dialect": "A",
+      "id": "53.2"
+    },
+    {
+      "orth": "ϩⲟⲩⲛ",
+      "dialect": "F",
+      "id": "53.3"
+    },
+    {
+      "orth": "ϩⲟⲩⲛ",
+      "dialect": "L",
+      "id": "53.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7390",
+      "bibliography": "CD 685b-687a; CED 286; KoptHWb 377-378; DELC 303a-b; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁϥⲧⲱⲕ ⲉ·**ϩⲟⲩⲛ** ϫⲉⲧⲁⲓ ⲧⲉ ⲧϩⲉ ·",
+      "english": "He was confident that it was this way.",
+      "source": "Apophthegmata Patrum Sahidic 072",
+      "urn": "urn:cts:copticLit:ap.72.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲡⲁⲙⲃⲱ ⲡⲉϫⲁⲓ ⲛⲁϥ ϫⲉⲡⲁⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ⲁⲣⲁ ⲟⲩⲛⲥⲟⲛ ⲙⲡⲉⲕ**ϩⲟⲩⲛ** ·",
+      "english": "And I, Pambo, said unto him, 'My beloved father, are there any brethren living beyond thee in the desert?'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϩⲏⲇⲟⲛⲉ ⲅⲁⲣ ⲙⲡⲛⲟⲙⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲕⲁⲧⲁⲡⲣⲱⲙⲉ ⲉⲧϩⲓ **ϩⲟⲩⲛ** .",
+      "english": "For I delight in God's law after the inward man,",
+      "source": "45_Romans_7",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁ",
+        51,
+        20.918
+      ],
+      [
+        "ⲛⲓ",
+        37,
+        19.912
+      ],
+      [
+        "ⲛ",
+        225,
+        19.893
+      ],
+      [
+        "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+        15,
+        18.984
+      ],
+      [
+        "ⲛⲧⲉ",
+        40,
+        17.98
+      ],
+      [
+        "ⲡ",
+        121,
+        17.896
+      ],
+      [
+        "ⲙ",
+        91,
+        17.517
+      ],
+      [
+        "ⲉ",
+        62,
+        15.322
+      ],
+      [
+        "ϣⲁ",
+        24,
+        14.743
+      ],
+      [
+        "ϫⲓⲛ",
+        14,
+        14.316
+      ],
+      [
+        "ⲧ",
+        35,
+        14.101
+      ],
+      [
+        "ⲡⲩⲗⲏ",
+        7,
+        13.575
+      ],
+      [
+        "ϩⲉⲱⲥ",
+        4,
+        13.408
+      ],
+      [
+        "ϣⲉϣⲥϯⲃⲱⲱⲛ",
+        1,
+        13.24
+      ],
+      [
+        "ⲟⲩⲥⲁⲉⲓⲛ",
+        1,
+        13.24
+      ],
+      [
+        "ⲛⲣⲙ",
+        1,
+        13.24
+      ],
+      [
+        "ⲣⲙⲟⲩⲟⲉⲓⲛ",
+        1,
+        13.24
+      ],
+      [
+        "□ⲯⲩⲭⲏ",
+        1,
+        13.24
+      ],
+      [
+        "ⲣϩⲏⲛ",
+        1,
+        13.24
+      ],
+      [
+        "ⲃⲟⲗ",
+        8,
+        13.177
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲩⲛ_0_node",
+          96
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲟⲩⲛ",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲩⲛ",
+          10
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲟⲩⲛ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲩⲛ",
+          9
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          9
+        ],
+        [
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲟⲩⲛ",
+          6
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲟⲩⲛ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          3
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          8
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_3_post_ϩⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ_b",
+          2
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          4
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲛ_5_post_ⲛ",
+          2
+        ],
+        [
+          "ϫⲉ_1_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ϩⲉ_3_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲥⲟⲃⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲉⲓⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙ_4_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲩⲛ_b",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲩⲛ_0_node",
+          "ⲙ_1_post_ϩⲟⲩⲛ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲩⲛ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          2
+        ],
+        [
+          "ϩⲟⲩⲛ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲟⲩⲛ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲩⲛ_0_node",
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          "ϣⲟⲙⲛⲧ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_3_post_ϩⲟⲟⲩ",
+          "ⲛ_1_post_ϩⲟⲩⲛ_b",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ_b",
+          "ϩⲟⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲡ",
+          "ⲛ_4_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲏⲧ",
+          "ⲛ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲛ_0_node",
+          "ϫⲉ_1_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ϩⲟⲩⲛ",
+          "ⲧⲁⲓ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_2_post_ⲧⲉ",
+          "ⲧⲉ_1_post_ϩⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_post_ϩⲟⲩⲛ",
+          "ⲧ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ϩⲉ",
+          "ϩⲉ_3_post_ⲧⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲟⲃⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          "ⲧⲉϥ_3_post_ϩⲟⲉⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϩⲟⲉⲓⲧⲉ",
+          "ϩⲟⲉⲓⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲣⲟ_3_post_ⲡ",
+          "ⲙ_4_post_ⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲟⲩⲛ",
+          "ϩⲟⲩⲛ_0_node",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲡ",
+          "ⲙ_1_post_ϩⲟⲩⲛ_b",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲩⲛ_b",
+          "ⲡⲉⲕ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲩⲛ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲕⲟⲩⲓ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲓ_3_post_ϩⲉⲛ",
+          "ⲛ_4_post_ⲕⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_3_post_ⲧ",
+          "ⲙ_4_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲡⲩⲗⲏ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.03,
+      "rank": 608,
+      "count": 164
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6683",
+      "label": "ϣⲁϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "inward"
+    },
+    {
+      "target": "C6684",
+      "label": "ϩⲓϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    },
+    {
+      "target": "C6679",
+      "label": "ⲉϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "to inside, inward"
+    },
+    {
+      "target": "C6677",
+      "label": "ⲙⲡϩⲟⲩⲛ",
+      "pos": "PREP",
+      "gloss": "inside, within"
+    },
+    {
+      "target": "C6680",
+      "label": "ⲛϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    },
+    {
+      "target": "C6685",
+      "label": "ⲣⲙⲛϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "ecclesiastical official(?)"
+    },
+    {
+      "target": "C6678",
+      "label": "ⲣⲡϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "go within"
+    },
+    {
+      "target": "C6682",
+      "label": "ⲥⲁ ⲛϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "inner part"
+    },
+    {
+      "target": "C6681",
+      "label": "ⲥⲁϩⲟⲩⲛ",
+      "pos": "ADV",
+      "gloss": "within"
+    }
+  ],
+  "etym": {
+    "egy_num": "854537",
+    "egy_lemma": "ẖnw",
+    "demo_num": "dm755",
+    "demo_lemma": "ẖn",
+    "english": "Interior; Residence; Residence",
+    "german": "Inneres; Wohnort; Residenz",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854537",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm755"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "id": "C5210",
+  "forms": [
+    {
+      "id": "CF12387",
+      "orth": "ⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.34,
+        "rank": 615,
+        "count": 114
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5853",
+      "bibliography": "CD 497a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϧⲉⲛϯⲙⲁϩⲕⲉ ⲛⲣⲟⲙⲡⲓ **ⲛⲧⲉⲡⲉⲛⲟⲩⲱⲧⲉⲃ **ⲉⲃⲟⲗ**** ϧⲉⲛⲧⲁⲣⲭⲏ ⲛϯⲣⲟⲙⲡⲓ ϧⲉⲛⲥⲟⲩⲁ ⲙⲡⲓⲁⲃⲟⲧ ϧⲉⲛϯⲙⲁϩⲓⲇ ⲛⲣⲟⲙⲡⲓ ⲙⲉⲛⲉⲛⲥⲁⲧⲣⲉ ϯⲃⲁⲕⲓ ϧⲉⲙϧⲟⲙ ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲧϫⲓϫ ⲙⲡϭⲟⲉⲓⲥ ⲁⲥϣⲱⲡⲓ ϩⲓϫⲱⲓ .",
+      "english": "And it came to pass in the twenty-fifth year of our captivity, in the first month, on the tenth day of the month, in the fourteenth year after the taking of the city, in that day the hand of the Lord was upon me, and brought me",
+      "source": "26_Ezechiel_40",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:40",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϫⲟⲥ ⲛⲱⲟⲩ ϫⲉϩⲁⲛⲙⲏⲓⲛⲓ ⲛⲏⲉϯⲣⲁ ⲙⲙⲱⲟⲩ ⲁⲛⲟⲕ ⲙⲫⲣⲏϯ ⲉⲧⲁⲓⲁⲓⲥ ⲡⲁⲓⲣⲏϯ ⲡⲉⲑⲛⲁϣⲱⲡⲓ ⲛⲱⲟⲩ **ϧⲉⲛⲡⲓⲟⲩⲱⲧⲉⲃ **ⲉⲃⲟⲗ**** ⲟⲩⲟϩ ⲥⲉⲛⲁϣⲉⲛⲱⲟⲩ ⲉⲟⲩⲉⲭⲙⲁⲗⲱⲥⲓⲁ .",
+      "english": "And the prince in the midst of them shall be borne upon shoulders, and shall go forth in secret through the wall, and shall dig so that he may go forth thereby: he shall cover his face, that he may not be seen by any eye, and he himself shall not see the ground.",
+      "source": "26_Ezechiel_12",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲡⲁⲓⲣⲏϯ ⲁϥϫⲟⲥ ⲛϫⲉⲡϭⲥ ⲫⲛⲟⲩϯ ⲙⲡⲓⲥⲗ **ⲉϫⲉⲛⲡⲓⲟⲩⲱⲧⲉⲃ **ⲉⲃⲟⲗ**** ⲫⲏⲉⲧⲁⲓⲟⲩⲟⲧⲃⲉϥ ⲉⲃⲟⲗϧⲉⲛ ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ .",
+      "english": "Thus said the Lord God of Israel concerning the captivity which I caused to be carried away from Jerusalem;",
+      "source": "24_Ieremias_36",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:36",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 1.34,
+      "rank": 537,
+      "count": 114
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5216",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉϧⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "mixture, blend (of wine)"
+    },
+    {
+      "target": "C5211",
+      "label": "ϫⲓⲛⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "migration, death"
+    },
+    {
+      "target": "C5206",
+      "label": "ϭⲓⲛⲟⲩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "migration, changeableness"
+    },
+    {
+      "target": "C5205",
+      "label": "ⲁⲧⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "immutable"
+    },
+    {
+      "target": "C5203",
+      "label": "ⲟⲩⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "change/be changed, remove, pass through, transfer"
+    },
+    {
+      "target": "C5208",
+      "label": "ⲟⲩⲱⲧⲃ ϩⲛ-",
+      "pos": "V",
+      "gloss": "change from"
+    },
+    {
+      "target": "C5207",
+      "label": "ⲟⲩⲱⲧⲃ ⲉ-",
+      "pos": "V",
+      "gloss": "change to, change into, surpass"
+    },
+    {
+      "target": "C5214",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "pass within"
+    },
+    {
+      "target": "C5215",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲟⲩⲛ ⲉ-",
+      "pos": "V",
+      "gloss": "pass into, intrude into"
+    },
+    {
+      "target": "C5217",
+      "label": "ⲟⲩⲱⲧⲃ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "pass beyond"
+    },
+    {
+      "target": "C5209",
+      "label": "ⲟⲩⲱⲧⲃ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cross over, change/be changed, remove, pass through"
+    },
+    {
+      "target": "C5204",
+      "label": "ⲟⲩⲱⲧⲉⲃ",
+      "pos": "N",
+      "gloss": "passing over, death"
+    },
+    {
+      "target": "C5213",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "pass upward"
+    },
+    {
+      "target": "C5212",
+      "label": "ⲟⲩⲱⲧⲉⲃ ⲥⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "step over"
+    }
+  ]
+}

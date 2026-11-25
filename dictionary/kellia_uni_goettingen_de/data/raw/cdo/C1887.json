@@ -1,0 +1,256 @@
+{
+  "id": "C1887",
+  "forms": [
+    {
+      "id": "CF5418",
+      "orth": "ⲙⲟⲩⲗϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6626,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF5419",
+      "orth": "ⲙⲟⲗϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3965,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2197",
+      "bibliography": "CD 166b; KoptHWb 92"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲁⲛⲥⲛⲁⲩϩ ⲛⲧⲉϩⲁⲛⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲡⲉⲧⲁⲩ**ⲙⲟⲩⲗϫ** ⲉⲣⲟⲓ ⲟⲩⲟϩ ⲙⲡⲓⲉⲣⲡⲱⲃϣ ⲙⲡⲉⲕⲛⲟⲙⲟⲥ",
+      "english": "And let thy mercy come upon me, O Lord; even thy salvation, according to thy word.",
+      "source": "19_Psalmi_118",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:118",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥⲥⲟⲩⲧⲉⲛ ⲛⲛⲉⲥⲕⲗⲏⲙⲁ ⲉⲃⲟⲗ ϣⲁⲫⲓⲟⲙ ⲟⲩⲟϩ ⲛⲉⲥ**ⲙⲟⲩⲗϫ** ϣⲁⲫⲓⲁⲣⲟ",
+      "english": "Its shadow covered the mountains, and its shoots equalled the goodly cedars.",
+      "source": "19_Psalmi_79",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:79",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲥⲉⲛⲁⲉⲣⲭⲉⲣⲉⲟⲥ ϣⲁⲉϧⲣⲏⲓ ⲉⲛⲟⲩⲥⲉⲛϯ ⲟⲩⲟϩ ⲉⲩⲉⲟⲩⲟⲙⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩⲥⲙⲓⲗⲁⲝ ⲉϥ**ⲙⲟⲗϫ** ⲛⲉⲙⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲱⲟⲩⲓ ⲉϥϣⲟⲩⲱⲟⲩ .",
+      "english": "For the enemy shall be laid bare even to the foundation, and shall be devoured as twisted yew, and as stubble fully dry.",
+      "source": "34_Nahum_01",
+      "urn": "urn:cts:copticLit:ot.nah.bohairic_ed:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲓⲁⲣⲟ",
+        1,
+        10.525
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        8.766
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        8.424
+      ],
+      [
+        "ⲫ",
+        2,
+        6.979
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        6.272
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.081
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        5.532
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        5.495
+      ],
+      [
+        "ⲓ",
+        1,
+        3.991
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.667
+      ],
+      [
+        "ⲩ",
+        1,
+        3.536
+      ],
+      [
+        "ⲡ",
+        1,
+        3.034
+      ],
+      [
+        "ⲙ",
+        1,
+        2.998
+      ],
+      [
+        "ⲁ",
+        1,
+        2.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗϫ_0_node",
+          2
+        ],
+        [
+          "ϣⲁ_1_post_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲓⲁⲣⲟ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_4_post_ⲉⲣⲡⲱⲃϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲙⲟⲩⲗϫ",
+          "ⲛⲉⲥ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲙⲟⲩⲗϫ",
+          "ⲙⲟⲩⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗϫ_0_node",
+          "ϣⲁ_1_post_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ⲙⲟⲩⲗϫ",
+          "ⲫ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ϣⲁ",
+          "ⲓⲁⲣⲟ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲟⲩⲗϫ",
+          "ⲩ_1_pre_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲟⲩⲗϫ",
+          "ⲙⲟⲩⲗϫ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲗϫ_0_node",
+          "ⲉⲣⲟ_1_post_ⲙⲟⲩⲗϫ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲙⲟⲩⲗϫ",
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          "ⲟⲩⲟϩ_4_post_ⲉⲣⲡⲱⲃϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.07,
+      "rank": 2824,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1888",
+      "label": "ⲙⲟⲩⲗϫ",
+      "pos": "N",
+      "gloss": "embrace"
+    }
+  ],
+  "etym": {
+    "egy_num": "164780",
+    "egy_lemma": "knm",
+    "english": "to wrap in",
+    "german": "einhüllen (in ein Gewand)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164780"
+  }
+}

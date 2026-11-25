@@ -1,0 +1,73 @@
+{
+  "id": "C2453",
+  "forms": [
+    {
+      "id": "CF6688",
+      "orth": "ⲛⲕⲁ ⲛⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.56,
+        "rank": 1042,
+        "count": 89
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2823",
+      "bibliography": "CD 223b; KoptHWb 121; DELC 141; ChLCS 32a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲅⲁⲣ ϭⲟⲗⲡⲟⲩ ⲛⲁⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲡⲛⲉⲩⲙⲁ . ⲡⲉⲡⲛⲉⲩⲙⲁ ⲅⲁⲣ ϩⲟⲧϩⲧ **ⲛⲛⲕⲁ **ⲛⲓⲙ**** ⲁⲩⲱ ⲛⲉⲧϩⲏⲡ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ .",
+      "english": "But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.",
+      "source": "46_1 Corinthians_2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲛⲧⲟⲕ ϩⲱⲱⲕ ⲕⲟⲩⲱϣⲧ ⲁⲩⲱ ⲕϣⲙϣⲉ ⲙⲡⲥⲱⲛⲧ ⲡⲁⲣⲁⲡⲉⲛⲧⲁϥⲥⲱⲛⲧ **ⲛⲛⲕⲁ **ⲛⲓⲙ**** ⲓⲏⲥⲟⲩⲥ ⲡⲉⲧⲥⲙⲁⲙⲁⲁⲧ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ ·",
+      "english": "because you also worship and serve the creation rather than he who created all things, Jesus, who is blessed for all eternity,",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲁⲛⲕⲁ ⲅⲁⲣ ⲛⲓⲙ ϩⲁⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ . ϩⲟⲧⲁⲛ ⲇⲉ ⲉϥϣⲁⲛϫⲟⲟⲥ **ϫⲉⲛⲕⲁ **ⲛⲓⲙ**** ⲁⲩϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲛⲁϥ . ⲉⲓⲉ ⲡⲃⲟⲗ ⲙⲡⲉⲛⲧⲁϥⲧⲣⲉⲛⲕⲁ ⲛⲓⲙ ϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲛⲁϥ .",
+      "english": "For, &apos;He put all things in subjection under his feet.&apos; But when he says, &apos;All things are put in subjection,&apos; it is evident that he is excepted who subjected all things to him.",
+      "source": "46_1 Corinthians_15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.56,
+      "rank": 909,
+      "count": 89
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2475",
+      "type": "cf",
+      "label": "every"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2452",
+      "label": "ⲛⲕⲁ",
+      "pos": "N",
+      "gloss": "thing (in general); as vessel; property, belongings"
+    }
+  ]
+}

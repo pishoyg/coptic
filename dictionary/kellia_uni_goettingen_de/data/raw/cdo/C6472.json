@@ -1,0 +1,140 @@
+{
+  "id": "C6472",
+  "forms": [
+    {
+      "id": "CF14972",
+      "orth": "ⲣϩⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8416,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7182",
+      "bibliography": "CD 661a; CED 276; KoptHWb 361; ChLCS 89a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲩⲛ ⲟⲩⲣⲱⲙⲉ ⲇⲉ ϩⲛⲧⲡⲟⲗⲓⲥ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲉϥ**ⲣϩⲓⲕ** . ⲁⲩⲱ ⲉϥⲡⲱϣⲥ ⲙⲡϩⲉⲑⲛⲟⲥ ⲛⲧⲥⲁⲙⲁⲣⲓⲁ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲉⲣⲟϥ ϫⲉⲁⲛⲟⲕ ⲡⲉ .",
+      "english": "But there was a certain man, Simon by name, who used to practice sorcery in the city, and amazed the people of Samaria, making himself out to be some great one,",
+      "source": "44_Acts of the Apostles_8",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲩϩⲉ ⲉⲣⲉϥⲉϣⲉⲓⲉⲣⲃⲟⲟⲛⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲕ ⲉϥϩⲱⲛⲅ ⲙⲡⲉϥϣⲏⲣⲉ ⲏ ⲧⲉϥϣⲉⲉⲣⲉ ϩⲛⲟⲩⲥⲁⲧⲉ ⲁⲩⲱ ⲉϥϣⲓⲛⲉ ϩⲛⲟⲩϣⲓⲛⲉ ⲉϥϫⲓϣⲏⲙ ⲁⲩⲱ ⲉϥϫⲓⲙⲁⲉⲓⲛ ⲛⲣⲉϥⲉ**ⲣϩⲓⲕ** ⲁⲩⲱ ⲛⲣⲉϥⲙⲟⲩⲧⲉ ϩⲛⲟⲩⲙⲟⲩⲧⲉ",
+      "english": "There shall not be found in thee one who purges his son or his daughter with fire, one who uses divination, who deals with omens, and augury,",
+      "source": "Deuteronomy 18",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ϫⲓⲙⲁⲉⲓⲛ",
+        1,
+        17.276
+      ],
+      [
+        "ⲣⲉϥⲙⲟⲩⲧⲉ",
+        1,
+        15.35
+      ],
+      [
+        "ⲥⲓⲙⲱⲛ",
+        1,
+        12.912
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣϩⲓⲕ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7974,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6471",
+      "label": "ϩⲓⲕ",
+      "pos": "N",
+      "gloss": "magic"
+    },
+    {
+      "target": "C6473",
+      "label": "ⲣⲉϥⲣϩⲓⲕ",
+      "pos": "N",
+      "gloss": "wizard, enchanter"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "C5974",
+  "forms": [
+    {
+      "id": "CF13953",
+      "orth": "ϣⲱⲡ ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2122,
+        "count": 27
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6658",
+      "bibliography": "CD 575b; ChLCS 79b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲇⲉ ⲉⲣⲟⲟⲩ ⲉⲩϩⲟⲥⲉ ϩⲙⲡⲧⲣⲉⲩⲥϭⲏⲣ ⲡⲧⲏⲩ ⲅⲁⲣ ⲛⲉϥϯ ⲟⲩⲃⲏⲩ ϩⲙⲡⲙⲉϩϥⲧⲟⲟⲩ **ⲛϣⲱⲡ **ⲛ**ⲧⲉⲩϣⲏ** ⲁϥⲉⲓ ϣⲁⲣⲟⲟⲩ ⲉϥⲙⲟⲟϣⲉ ϩⲓϫⲛⲧϩⲁⲗⲁⲥⲥⲁ ⲁⲩⲱ ⲛⲉϥⲟⲩⲱϣ ⲉⲡⲁⲣⲁⲅⲉ ⲙⲙⲟⲟⲩ .",
+      "english": "Seeing them distressed in rowing, for the wind was contrary to them, about the fourth watch of the night he came to them, walking on the sea, and he would have passed by them,",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲡϥⲛⲁⲩ ⲉⲣⲟϥ **ⲉϥϣⲱⲡ **ⲛ**ⲧⲉⲛⲫⲩⲥⲓⲥ** ϩⲁⲡⲥⲁϩⲟⲩ ·",
+      "english": "Never before did the sun see any one purchasing our nature under a curse.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉϩⲙⲡⲣⲁⲛ ⲙⲡⲁⲛⲟⲩⲧⲉ ⲡⲁⲓ ⲁⲛⲟⲕ **ⲉϯϣⲱⲡ **ⲛ**ⲛⲉⲓϩⲓⲥⲉ** ⲧⲏⲣⲟⲩ ⲉⲧⲃⲏⲏⲧϥ · ⲉⲧⲉⲧⲛⲁⲛⲁⲩ ⲉⲃⲟⲗ ϩⲛⲧⲉϥϭⲟⲙ ⲉⲧⲟⲩⲁⲁⲃ · ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲩⲛⲁⲩ ⲉⲃⲟⲗ ·",
+      "english": "In the Name of my God, for Whose sake I am suffering all these sufferings, receive ye your sight through (His) power, which is holy; and straightway they received their sight.",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5979",
+      "label": "ϣⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "reception, entertainment"
+    },
+    {
+      "target": "C5971",
+      "label": "ϣⲱⲡ",
+      "pos": "V",
+      "gloss": "receive, contain, take, suffer"
+    },
+    {
+      "target": "C5975",
+      "label": "ϣⲱⲡ",
+      "pos": "N",
+      "gloss": "acceptance, purchase"
+    },
+    {
+      "target": "C5972",
+      "label": "ϣⲱⲡ ⲉ-",
+      "pos": "V",
+      "gloss": "accept, take to self"
+    },
+    {
+      "target": "C5973",
+      "label": "ϣⲱⲡ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "on behalf of"
+    },
+    {
+      "target": "C5980",
+      "label": "ϣⲱⲡⲥ",
+      "pos": "N",
+      "gloss": "seizing, impressing"
+    },
+    {
+      "target": "C5978",
+      "label": "ϭⲓⲛϣⲱⲡ",
+      "pos": "N",
+      "gloss": "receiving, acceptance"
+    },
+    {
+      "target": "C5976",
+      "label": "ⲁⲧϣⲱⲡ",
+      "pos": "N",
+      "gloss": "uncontainable, illimitable"
+    },
+    {
+      "target": "C5977",
+      "label": "ⲣⲉϥϣⲱⲡ",
+      "pos": "N",
+      "gloss": "receiver"
+    }
+  ]
+}

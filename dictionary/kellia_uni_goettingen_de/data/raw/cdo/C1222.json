@@ -1,0 +1,75 @@
+{
+  "id": "C1222",
+  "forms": [
+    {
+      "id": "CF3832",
+      "orth": "ⲕⲙⲕⲙ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲩⲙⲕⲙ",
+      "dialect": "S",
+      "id": "806.1"
+    },
+    {
+      "orth": "ⲕⲟⲩⲕⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3987,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲕⲉⲙⲕⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2374,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲕⲟⲩⲕⲉⲙ",
+      "dialect": "F",
+      "id": "806.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1416",
+      "bibliography": "CD 109ab"
+    },
+    {
+      "id": "CS1417",
+      "bibliography": "CD 109b; ChLCS 17b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1223",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "drum"
+    },
+    {
+      "target": "C12194",
+      "label": "ⲗⲁⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "kettledrum"
+    },
+    {
+      "target": "C1224",
+      "label": "ⲣⲉϥⲕⲉⲙⲕⲉⲙ",
+      "pos": "N",
+      "gloss": "drummer"
+    }
+  ]
+}

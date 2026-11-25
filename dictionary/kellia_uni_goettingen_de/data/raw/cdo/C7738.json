@@ -1,0 +1,38 @@
+{
+  "id": "C7738",
+  "forms": [
+    {
+      "id": "CF17541",
+      "orth": "ϭⲁⲙⲁⲩⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8605",
+      "bibliography": "CD 818b; KoptHWb 457; DELC 341a; ChLCS 108a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7737",
+      "label": "ϭⲁⲙⲟⲩⲗ",
+      "pos": "N",
+      "gloss": "he-camel"
+    },
+    {
+      "target": "C7739",
+      "label": "ⲙⲁⲛϭⲁⲙⲟⲩⲗ",
+      "pos": "N",
+      "gloss": "camel herder, camel driver"
+    }
+  ]
+}

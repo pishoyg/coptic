@@ -1,0 +1,60 @@
+{
+  "id": "C4791",
+  "forms": [
+    {
+      "id": "CF11547",
+      "orth": "ⲑⲗⲟ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19118,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5410",
+      "bibliography": "CD 458ab; CDC 71a; CED 204; KoptHWb 258; DELC 57a; ChLCS 64a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲃⲗⲗⲉ ⲛϫⲁⲩⲙⲟⲉⲓⲧ **ⲛⲉⲧⲑⲗⲟ **ⲉⲃⲟⲗ**** ⲛⲧϣⲟⲗⲙⲉⲥ ⲉⲧⲱⲙⲕ ⲙⲡϭⲁⲙⲟⲩⲗ .",
+      "english": "You blind guides, who strain out a gnat, and swallow a camel!",
+      "source": "40_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18729,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C6512",
+      "type": "cf",
+      "label": "fly, go, hurry"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4792",
+      "label": "ⲑⲗⲟ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "scattering"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "C966",
+  "forms": [
+    {
+      "id": "CF3281",
+      "orth": "ⲉⲓⲱⲣⲙ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲥⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1126",
+      "bibliography": "CD 84b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱⲛⲁⲑⲁⲛ ⲁϥⲃⲱⲕ ⲛⲁⲩ ⲉϩⲣⲁⲓ ⲉⲣⲉⲧⲟⲟⲧϥ ⲙⲛⲣⲁⲧϥ ⲧⲁϫⲣⲏⲩ ⲉⲣⲉⲡⲉⲧϥⲓ ⲛⲛⲉϥⲥⲕⲉⲩⲏ ⲟⲩⲏϩ ⲛⲥⲱϥ ⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ **ⲁⲩⲉⲓⲱⲣⲙ **ⲛⲥⲁ**ⲡϩⲟ** ⲛⲓⲱⲛⲁⲑⲁⲛ ⲓⲱⲛⲁⲑⲁⲛ ⲇⲉ ⲁϥϩⲓⲟⲩⲉ ⲛⲥⲱⲟⲩ ⲡⲉⲧϥⲓ ⲛⲛⲉⲥⲕⲉⲩⲏ ⲛⲉϥϯ ⲉⲧⲟⲟⲧϥ",
+      "english": "And Jonathan went up on his hands and feet, and his armour-bearer with him; and they looked on the face of Jonathan, and he smote them, and his armour-bearer did smite them after him.",
+      "source": "I Samuel 14",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲡⲣⲉⲓⲱⲣⲙ **ⲛⲥⲁ**ⲣⲱⲙⲉ** ⲛⲓⲙ ⲉⲛⲉⲥⲱϥ ⲁⲩⲱ ⲙⲡⲣⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲛⲥϩⲓⲙⲉ",
+      "english": "Behold not every body's beauty, and sit not in the midst of women.",
+      "source": "Sirach 42",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C971",
+      "label": "ⲉⲓⲁⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C964",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "stare, be astonished, dumbfounded"
+    },
+    {
+      "target": "C970",
+      "label": "ⲉⲓⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "look"
+    },
+    {
+      "target": "C965",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉ-)",
+      "pos": "V",
+      "gloss": "follow (with the eyes), look intently"
+    },
+    {
+      "target": "C968",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "look intently"
+    },
+    {
+      "target": "C969",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "look intently"
+    },
+    {
+      "target": "C967",
+      "label": "ⲉⲓⲱⲣⲙ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wonder, expect"
+    }
+  ]
+}

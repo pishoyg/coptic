@@ -1,0 +1,115 @@
+{
+  "id": "C6090",
+  "forms": [
+    {
+      "id": "CF14185",
+      "orth": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2440,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6776",
+      "bibliography": "CD 591b; KoptHWb 330; ChLCS 82a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲛⲣⲓⲙⲉ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲧⲉⲩϣⲏ ⲙⲛⲡⲉϩⲟⲟⲩ ϩⲛϩⲉⲛϣⲗⲏⲗ ⲙⲛϩⲉⲛⲥⲙⲟⲩ ⲙⲛϩⲉⲛⲯⲁⲗⲙⲟⲥ · ϫⲉⲕⲁⲥ ⲛⲛⲉⲛϩⲉ ⲉϩⲣⲁⲓ ⲉⲡⲙⲁ ⲙⲡⲣⲓⲙⲉ ⲙⲛⲡϭⲁϩϭϩ ⲛⲛⲟⲃϩⲉ ⲙⲛⲡϥⲛⲧ · ⲛⲁⲧⲛⲕⲟⲧⲕ · ⲙⲛⲡϣⲓⲡⲉ ⲙⲛⲡⲉϫⲡⲓⲟ ⲙⲛⲛⲟϭ ⲛϩⲁⲡ **ⲉⲧϣⲱⲱⲧ **ⲉⲃⲟⲗ**** ⲁⲣⲏⲩ",
+      "english": "let us weep before Ilim day and night, with prayers and psalms, in order that we may not fall into the place of weeping and gnashing- of teeth, and the sleepless worm, and the shame, and the disgrace, and the Great Judgement, which shall decide [everything],",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲛⲧⲁⲩϣⲱⲱⲧ **ⲉⲃⲟⲗ**** ⲙⲙⲟⲟⲩ ⲛⲛϣⲏⲣⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ·",
+      "english": "but they cut off the sinful children",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲛⲟϭ ⲅⲁⲣ ⲙⲙⲛⲧⲧⲉⲗⲓⲟⲥ ⲧⲉ ⲉⲧⲣⲉⲡⲣⲱⲙⲉ **ϣⲱⲱⲧ **ⲉⲃⲟⲗ**** ⲙⲙⲟϥ ⲙⲡⲉϥⲥⲟⲛ ⲏ ⲡⲉϥϣⲏⲣⲉ ⲏ ⲧⲉϥϣⲉⲉⲣⲉ ⲏ ⲡⲉϥⲉⲓⲱⲧ ⲏ ⲧⲉϥⲙⲁⲁⲩ ⲏ ϭⲉⲗⲁⲁⲩ ⲛⲣⲱⲙⲉ ⲛⲧⲁϥ ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ · ϩⲟⲧⲁⲛ ⲉⲩϣⲁⲛⲣⲛⲟⲃⲉ ⲉⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲟⲟⲩ ⲉⲧⲉⲡⲛⲟⲩⲧⲉ ⲡⲉ ·",
+      "english": "For it is a great perfection for a man to cut himself off from his brother or his son or his daughter or his father or his mother or any other person of his for the sake of God, when they sin against the One who created them, God.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2154,
+      "count": 20
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6096",
+      "label": "ϣⲧⲁ",
+      "pos": "V",
+      "gloss": "be faulty, have need"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ]
+}

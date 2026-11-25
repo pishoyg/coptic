@@ -1,0 +1,218 @@
+{
+  "id": "C5235",
+  "forms": [
+    {
+      "id": "CF12439",
+      "orth": "ⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10300,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5879",
+      "bibliography": "CD 498b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲡⲓϣⲉ ⲉⲧⲉⲕⲥⲱⲟⲩⲛ ⲙⲙⲟϥ ϫⲉⲟⲩ**ⲣⲉϥϯⲟⲩⲧⲁϩ** ⲛⲟⲩⲱⲙ ⲁⲛ ⲡⲉ ⲫⲁⲓ ⲉⲕⲉϧⲟⲣϥ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲑⲟϥ ⲉⲧⲉⲕⲉⲕⲟⲣϫϥ ⲟⲩⲟϩ ⲉⲕⲉⲕⲱⲧ ⲛⲟⲩⲥⲟⲃⲧⲉ ϯⲃⲁⲕⲓ ⲑⲏ ⲉⲧⲛⲁⲃⲱⲧⲥ ⲟⲩⲃⲏⲕ ϣⲁⲧⲟⲩⲧⲏⲓⲥ ⲉϧⲣⲏⲓ ⲉⲛⲉⲕϫⲓϫ",
+      "english": "But the tree which thou knowest to be not fruit-bearing, this thou shalt destroy and cut down; and thou shalt construct a mound against the city, which makes war against thee, until it be delivered up.",
+      "source": "05_Deuteronomium_20",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:20",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        10.221
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        7.368
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.137
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲟⲩⲧⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲫⲁⲓ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          "ⲣⲉϥϯⲟⲩⲧⲁϩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲟⲩⲧⲁϩ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          "ⲟⲩⲱⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲙ_2_post_ⲛ",
+          "ⲁⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          "ⲫⲁⲓ_1_post_ⲣⲉϥϯⲟⲩⲧⲁϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9756,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5239",
+      "label": "ϥⲁⲓⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-carrier"
+    },
+    {
+      "target": "C5237",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5238",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5234",
+      "label": "ϯⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "give fruit"
+    },
+    {
+      "target": "C5230",
+      "label": "ⲁⲧⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruitless"
+    },
+    {
+      "target": "C5232",
+      "label": "ⲉⲛⲟⲩⲧⲁϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "bring forth fruit"
+    },
+    {
+      "target": "C5231",
+      "label": "ⲉⲣⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "bear fruits"
+    },
+    {
+      "target": "C5233",
+      "label": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-bearer"
+    },
+    {
+      "target": "C5236",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "quality of the fruit-giver"
+    },
+    {
+      "target": "C5229",
+      "label": "ⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit"
+    }
+  ]
+}

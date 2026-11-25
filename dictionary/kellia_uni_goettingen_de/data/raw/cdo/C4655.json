@@ -1,0 +1,179 @@
+{
+  "id": "C4655",
+  "forms": [
+    {
+      "id": "CF31835",
+      "orth": "ⲧⲁⲓⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7045,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31834",
+      "orth": "ⲧⲁⲉⲓⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.45,
+        "rank": 1213,
+        "count": 71
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS5256",
+      "bibliography": "CD 440b; KoptHWb 253; DELC 223b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲉⲧⲃⲉⲁⲡⲁ ⲑⲉⲱⲇⲱⲣⲟⲥ · ⲙⲛ ⲁⲡⲁ ⲗⲟⲩⲕⲓⲁⲛⲟⲥ ⲛⲁⲡϩⲉⲛⲁⲧⲟⲛ . ϫⲉⲁⲩⲣ**ⲧⲁⲓⲟⲩ** ⲛⲣⲟⲙⲡⲉ ⲉⲩⲣϩⲁⲗ ⲙⲡⲉⲩⲙⲉⲉⲩⲉ ⲙⲙⲓⲛⲙⲙⲟⲟⲩ , ϫⲉⲉⲣϣⲁⲛⲧⲉⲡⲣⲱ ⲟⲩⲉⲓⲛⲉ ⲧⲛⲛⲁⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ·",
+      "english": "They said about Apa Theodoros and Apa Lucius of Enaton that they spent fifty years tricking their thoughts,saying, 'When winter has passed, we will flee this place.'",
+      "source": "Apophthegmata Patrum Sahidic 036",
+      "urn": "urn:cts:copticLit:ap.36.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲁⲉⲓⲱⲧ ⲡⲉϫⲁϥ ⲛⲛⲉⲥⲛⲏⲩ ϫⲉϯϫⲱ ⲙⲙⲟⲥ ⲛⲏⲧⲛ ϫⲉⲉⲓⲥ **ⲧⲁⲓⲟⲩ** ⲙⲛϥⲧⲟ ⲛⲣⲟⲙⲡⲉ ϫⲓⲛⲉⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲩϣⲉϥϫⲱⲓ ϩⲓⲡⲧⲟⲟⲩ ϩⲓⲧⲛⲡⲁⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ⲁⲡⲁ ϩⲩⲡⲉⲣⲓⲭⲟⲥ ϣⲁⲉϩⲟⲩⲛ ⲉⲧⲉⲛⲟⲩ ⲟⲩⲟⲉⲓⲕ ⲛⲟⲩⲱⲧ ⲡⲉⲧⲧⲏϣ ⲛⲁⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ ⲕⲁⲧⲁϩⲙⲏ ⲛϩⲟⲟⲩ ⲁⲩⲱ ⲟⲩⲝⲉⲥⲧⲏⲥ ⲙⲙⲟⲟⲩ ⲉⲛϯⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲉϣⲁⲩⲉⲓ ⲛⲧⲱⲛ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥⲧⲟ",
+        1,
+        15.139
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        2,
+        13.017
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        9.06
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲣ",
+        1,
+        8.413
+      ],
+      [
+        "ϫⲉ",
+        2,
+        8.146
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6597,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4654",
+      "label": "ϫⲟⲩⲧⲏ",
+      "pos": "NUM",
+      "gloss": "twenty-five"
+    },
+    {
+      "target": "C4651",
+      "label": "ϯⲟⲩ",
+      "pos": "NUM",
+      "gloss": "five"
+    },
+    {
+      "target": "C4657",
+      "label": "ϯⲟⲩ ⲛϣⲉ",
+      "pos": "NUM",
+      "gloss": "five hundred"
+    },
+    {
+      "target": "C4658",
+      "label": "ϯⲟⲩ ⲛϣⲟ",
+      "pos": "NUM",
+      "gloss": "five thousand"
+    },
+    {
+      "target": "C4659",
+      "label": "ⲙⲉϩϯⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fifth"
+    },
+    {
+      "target": "C4660",
+      "label": "ⲙⲉϩⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fiftieth"
+    },
+    {
+      "target": "C4653",
+      "label": "ⲙⲛⲧⲏ",
+      "pos": "NUM",
+      "gloss": "fifteen"
+    },
+    {
+      "target": "C4652",
+      "label": "ⲡϯⲟⲩ",
+      "pos": "N",
+      "gloss": "Thursday"
+    },
+    {
+      "target": "C4656",
+      "label": "ⲧⲁⲓⲟⲩⲙⲁϥ",
+      "pos": "NUM",
+      "gloss": "eighty"
+    }
+  ]
+}

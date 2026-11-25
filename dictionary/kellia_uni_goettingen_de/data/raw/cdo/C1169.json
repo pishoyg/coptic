@@ -1,0 +1,44 @@
+{
+  "id": "C1169",
+  "forms": [
+    {
+      "id": "CF3725",
+      "orth": "ⲕⲱⲗⲉⲙ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1359",
+      "bibliography": "CD 104b; KoptHWb 62"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1168",
+      "label": "ⲕⲱⲗⲉⲙ",
+      "pos": "V",
+      "gloss": "hasten; hasten"
+    },
+    {
+      "target": "C1171",
+      "label": "ⲛⲕⲱⲗⲉⲙ",
+      "pos": "ADV",
+      "gloss": "in haste, quickly, soon"
+    },
+    {
+      "target": "C1170",
+      "label": "ⲣⲉϥⲭⲱⲗⲉⲙ",
+      "pos": "N",
+      "gloss": "hasty man"
+    }
+  ]
+}

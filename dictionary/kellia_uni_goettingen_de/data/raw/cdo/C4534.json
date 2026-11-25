@@ -1,0 +1,118 @@
+{
+  "id": "C4534",
+  "forms": [
+    {
+      "id": "CF11025",
+      "orth": "ⲧϣⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13828,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5122",
+      "bibliography": "CD 432b; KoptHWb 245; ChLCS 61a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓϫⲛⲟⲩⲥ ⲇⲉ ⲉⲓϫ ⲙⲙⲟⲥ ϫⲉⲛⲧⲟ **ⲧϣⲣⲉ** ⲛⲛⲓⲙ",
+      "english": "And I asked her, and said, Whose daughter art thou? tell me; and she said, I am daughter of Bathuel the son of Nachor, whom Melcha bore to him; and I put on her the ear-rings, and the bracelets on her hands.",
+      "source": "Genesis 24",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲟ",
+        1,
+        13.379
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13425,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4531",
+      "label": "ⲧⲣⲟϣ",
+      "pos": "V",
+      "gloss": "be red"
+    },
+    {
+      "target": "C4532",
+      "label": "ⲧⲣⲟϣⲣϣ",
+      "pos": "V",
+      "gloss": "be red, become red"
+    },
+    {
+      "target": "C4533",
+      "label": "ⲧⲣⲟϣⲣϣ",
+      "pos": "N",
+      "gloss": "redness"
+    },
+    {
+      "target": "C4529",
+      "label": "ⲧⲱⲣϣ",
+      "pos": "V",
+      "gloss": "be red"
+    },
+    {
+      "target": "C4530",
+      "label": "ⲧⲱⲣϣ",
+      "pos": "N",
+      "gloss": "red"
+    }
+  ]
+}

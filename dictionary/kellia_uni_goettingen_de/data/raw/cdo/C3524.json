@@ -1,0 +1,57 @@
+{
+  "id": "C3524",
+  "forms": [
+    {
+      "id": "CF8951",
+      "orth": "ϫⲓⲛⲥⲙⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4010",
+      "bibliography": "CD 336b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3523",
+      "label": "ϫⲓⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "take blessing, sacrament, salute (a superior)"
+    },
+    {
+      "target": "C3522",
+      "label": "ϯⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "give blessing, sacrament"
+    },
+    {
+      "target": "C3521",
+      "label": "ⲁⲧⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "without blessing"
+    },
+    {
+      "target": "C3519",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "bless, praise, thank"
+    },
+    {
+      "target": "C3520",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "blessing, praise; gift, benevolence, alms; abundance, treasure"
+    }
+  ]
+}

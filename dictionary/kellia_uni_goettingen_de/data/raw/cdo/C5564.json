@@ -1,0 +1,58 @@
+{
+  "id": "C5564",
+  "forms": [
+    {
+      "id": "CF13103",
+      "orth": "ⲙⲁ ⲛⲱⲣϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6229",
+      "bibliography": "CD 530b; ChLCS 73a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5563",
+      "label": "ϩⲛⲟⲩⲱⲣϫ",
+      "pos": "ADV",
+      "gloss": "with assurance, with certainty"
+    },
+    {
+      "target": "C5560",
+      "label": "ⲱⲣϫ",
+      "pos": "V",
+      "gloss": "be firm, be secure, be fastened; confirm, fasten, imprison"
+    },
+    {
+      "target": "C5561",
+      "label": "ⲱⲣϫ",
+      "pos": "N",
+      "gloss": "firmness, assurance, deed of security"
+    },
+    {
+      "target": "C5562",
+      "label": "ⲱⲣϫ",
+      "pos": "N",
+      "gloss": "firm, secure"
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "id": "C37",
+  "forms": [
+    {
+      "id": "CF138",
+      "orth": "ⲁⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.79,
+        "rank": 855,
+        "count": 125
+      }
+    },
+    {
+      "id": "CF139",
+      "orth": "ⲁⲗⲏⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.74,
+        "rank": 867,
+        "count": 63
+      }
+    },
+    {
+      "id": "CF140",
+      "orth": "ⲁⲗⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF141",
+      "orth": "ⲁⲗⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4800,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF142",
+      "orth": "ⲁⲗⲓ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1842,
+        "count": 17
+      }
+    },
+    {
+      "id": "CF143",
+      "orth": "ⲁⲗⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10302,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲁⲗⲱⲧⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2831,
+        "count": 15
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Status pronominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS42",
+      "bibliography": "CD 4a; CED 4; KoptHWb 3, 484; DELC 6; ChLCS 3b"
+    },
+    {
+      "id": "CS43",
+      "bibliography": "CD 4a; DELC 6; ChLCS 3b"
+    },
+    {
+      "id": "CS44",
+      "bibliography": "CD 4a; DELC 6; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲭⲛⲁϫⲱⲛⲧ ⲡϭⲟⲉⲓⲥ ϧⲉⲛϩⲁⲛⲓⲁⲣⲱⲟⲩ ⲓⲉ ⲁⲣⲉⲡⲉⲕⲙⲃⲟⲛ ϧⲉⲛϩⲁⲛⲓⲁⲣⲱⲟⲩ ⲓⲉ ⲁⲣⲉⲡⲉⲕⲟⲩⲟⲓ ϧⲉⲛⲫⲓⲟⲙ ϫⲉⲭⲛⲁ**ⲁⲗⲏⲓ** ⲉϫⲉⲛⲛⲉⲕϩⲑⲱⲣ ⲟⲩⲟϩ ⲫⲟⲩⲟⲓ ⲙⲫⲱⲧ ⲛⲧⲉⲛⲉⲕϩⲑⲱⲣ ⲟⲩⲟϩ ⲟⲩⲟⲩϫⲁⲓ ⲡⲉ .",
+      "english": "Wast thou angry, O Lord, with the rivers? or was thy wrath against the rivers, or thine anger against the sea? for thou wilt mount on thine horses, and thy chariots are salvation.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲉϥ**ⲁⲗⲉ** ⲉϩⲧⲟⲟⲩ ⲇⲉ ϩⲁⲣⲙⲁ ·",
+      "english": "He did not mount the horse which was used in a chariot (i. e. a war-horse).",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥ**ⲁⲗⲏⲓ** ⲉⲡⲓϫⲟⲉⲓ ϩⲁⲣⲱⲟⲩ ⲟⲩⲟϩ ⲁϥϩⲉⲣⲓ ⲛϫⲉⲡⲓⲑⲏⲟⲩ ⲟⲩⲟϩ ⲛⲁⲩⲧⲱⲙⲧ ⲉⲙⲁϣⲱ ⲡⲉ ⲛϧⲣⲏⲓ ⲛϧⲏⲧⲟⲩ",
+      "english": "He got into the boat with them; and the wind ceased, and they were very amazed among themselves, and marveled;",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲙⲛⲙⲁⲥϯⲅⲍ ⲛⲁϣϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲛⲉⲕⲙⲁ ⲛϣⲱⲡⲉ ⲕⲛⲁ**ⲁⲗⲉ** ⲉϩⲣⲁⲓ ⲉϫⲛⲟⲩϩⲟϥ ⲙⲛⲟⲩⲥⲓⲧ · ⲛⲅϩⲱⲙⲉ ϩⲣⲁⲓ ⲉϫⲛⲟⲩⲙⲟⲩⲓ ⲙⲛⲟⲩⲇⲣⲁⲕⲱⲛ · ϫⲉⲁϥⲛⲁϩⲧⲉ ⲉⲣⲟⲓ · ϯⲛⲁⲧⲟⲩϫⲟϥ · ϯⲛⲁⲣϩⲁⲓⲃⲥ ⲉⲣⲟϥ ϫⲉⲁϥⲥⲟⲩⲛⲡⲁⲣⲁⲛ ·",
+      "english": "neither shall the evil draw nigh to thy habitation; Thou shalt go up upon the adder and the scorpion, thou shalt tread upon the lion and the serpent; Because he hath believed in Me I will deliver him, and I will protect him because he hath known My Name;",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥ**ⲁⲗⲏⲓ** ⲉⲡⲓϫⲟⲓ ⲛⲁϥϯϩⲟ ⲉⲣⲟϥ ⲛϫⲉⲫⲏ ⲉⲛⲁϥⲟⲓ ⲛⲇⲁⲓⲙⲱⲛ ϩⲓⲛⲁ ⲛⲧⲉϥⲟϩⲓ ⲛⲉⲙⲁϥ",
+      "english": "As he was entering into the boat, he who had been possessed by demons begged him that he might be with him.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲙⲡϫⲟⲉⲓⲥ · ⲁⲩⲱ ⲧϩⲓⲉⲗⲏⲙ ⲛⲧⲡⲉ · ⲙⲁⲣⲉⲥ**ⲁⲗⲉ** ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲉⲕϩⲏⲧ · ⲁⲩⲱ ⲕⲛⲁϣⲱⲡⲉ ϩⲙⲡⲉⲥⲙⲟⲩ ⲛⲧⲡⲉ ⲛⲧⲉⲡⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ⲟⲗⲕ ·",
+      "english": "Remember thou the Lord and the Jerusalem of heaven; let (the memorial thereof) go up in thy heart, and thou shalt be under the blessing of heaven, and the glory of God shall support thee.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲟⲉⲓ",
+        24,
+        26.331
+      ],
+      [
+        "ⲉ",
+        90,
+        24.493
+      ],
+      [
+        "ϩⲑⲱⲣ",
+        11,
+        23.566
+      ],
+      [
+        "ⲡⲓ",
+        47,
+        22.434
+      ],
+      [
+        "ϯϩⲏⲙⲓ",
+        2,
+        21.695
+      ],
+      [
+        "ⲁ",
+        46,
+        21.56
+      ],
+      [
+        "ϥ",
+        50,
+        21.356
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        35,
+        20.468
+      ],
+      [
+        "ϫⲟⲓ",
+        4,
+        20.41
+      ],
+      [
+        "ⲛⲓⲓⲡⲡⲉⲩⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲏϥⲓⲉⲥϯⲙⲟⲩⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥⲁⲃⲁⲥⲧⲏ",
+        1,
+        19.695
+      ],
+      [
+        "ⲑⲟϣ",
+        3,
+        19.024
+      ],
+      [
+        "ⲛⲁⲙⲟϯ",
+        1,
+        18.695
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        10,
+        18.38
+      ],
+      [
+        "ⲛ",
+        24,
+        18.346
+      ],
+      [
+        "ⲧⲱⲧⲉⲣ",
+        1,
+        18.11
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        18.11
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        4,
+        18.051
+      ],
+      [
+        "ⲧⲉⲫⲁⲧ",
+        1,
+        17.373
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓ",
+        49,
+        22.6
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        52,
+        18.431
+      ],
+      [
+        "ⲉϫⲙ",
+        28,
+        17.663
+      ],
+      [
+        "ⲡ",
+        98,
+        17.375
+      ],
+      [
+        "ⲉϩⲧⲱⲱⲣ",
+        6,
+        17.065
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.632
+      ],
+      [
+        "ϥ",
+        76,
+        16.3
+      ],
+      [
+        "ⲁ",
+        64,
+        16.078
+      ],
+      [
+        "ⲉ",
+        66,
+        15.985
+      ],
+      [
+        "ⲉϫⲛ",
+        21,
+        15.636
+      ],
+      [
+        "ⲉⲣⲟ",
+        29,
+        15.092
+      ],
+      [
+        "ⲣϩⲗⲗⲟ",
+        4,
+        15.047
+      ],
+      [
+        "[..]",
+        3,
+        14.217
+      ],
+      [
+        "ϩⲁⲣⲙⲁ",
+        5,
+        14.09
+      ],
+      [
+        "ⲕⲗⲟⲟⲗⲉ",
+        6,
+        13.995
+      ],
+      [
+        "ⲁⲩⲱ",
+        32,
+        13.781
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        9,
+        13.666
+      ],
+      [
+        "ⲃⲁⲓⲑⲟⲕ",
+        1,
+        13.632
+      ],
+      [
+        "ⲡⲁⲙⲁⲭϩ",
+        1,
+        13.632
+      ],
+      [
+        "ⲙⲛⲧⲣϥϫⲓⲟⲩⲁ",
+        1,
+        13.632
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡ_1_pre_ⲁⲗⲉ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉ",
+          4
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          20
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          8
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲁⲗⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲗⲉ",
+          8
+        ],
+        [
+          "ϥ_1_pre_ⲁⲗⲉ",
+          7
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_3_post_ϩⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲗⲟ",
+          2
+        ],
+        [
+          "ⲡ_3_post_ⲧⲏⲩ",
+          2
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲉ",
+          5
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲟⲩⲏⲗ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲧⲁⲩⲣⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲛ",
+          2
+        ],
+        [
+          "ⲃⲛⲛⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲓⲥⲙⲟⲥ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣϥϫⲓⲟⲩⲁ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲁⲗⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡ_1_pre_ⲁⲗⲉ",
+          "ⲟⲩ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲉ",
+          "ⲁⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          5
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          "ⲉϫⲙ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲁⲗⲉ",
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲗⲉ",
+          "ϥ_1_pre_ⲁⲗⲉ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ⲁⲗⲉ",
+          "ⲁⲗⲉ_0_node",
+          5
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          "ϩⲛ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲗⲉ",
+          "ⲛⲉϥ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲗⲉ",
+          "ⲁ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲁ_2_post_ⲗⲟ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲗⲟ",
+          "ⲡ_3_post_ⲧⲏⲩ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          "ϩⲓϫⲙ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲓϫⲙ_1_post_ⲁⲗⲉ",
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲓϫⲙ",
+          "ϣⲏⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_3_post_ⲡ",
+          "ⲛ_2_post_ⲛⲟⲩϩⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲗⲉ",
+          "ⲩ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲁⲗⲉ",
+          "ⲁⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲉ_1_post_ⲁⲗⲉ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲉ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          "ϭⲓⲛⲟⲩⲏⲗ_3_post_ⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲉ",
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          "ⲥⲧⲁⲩⲣⲟⲥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲉ",
+          "ⲛⲁ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲁⲗⲉ",
+          "ⲁⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲉϫⲛ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ⲁⲗⲉ",
+          "ⲟⲩ_2_post_ⲉϫⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉϫⲛ",
+          "ⲃⲛⲛⲉ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲁⲗⲉ",
+          "ⲟⲩ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          "ⲗⲟⲅⲓⲥⲙⲟⲥ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲓⲥⲙⲟⲥ_1_pre_ⲁⲗⲉ",
+          "ⲙ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ⲗⲟⲅⲓⲥⲙⲟⲥ",
+          "ⲙⲛⲧⲣϥϫⲓⲟⲩⲁ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲣϥϫⲓⲟⲩⲁ_3_pre_ⲙ",
+          "ⲁⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲉ",
+          "ⲡ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲁⲗⲉ",
+          "ⲟⲩ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ϫⲓⲥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲗⲉ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲁⲗⲉ",
+          "ⲓ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲁⲗⲉ",
+          "ⲁⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲁⲗⲉ",
+          "ⲛⲁ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ⲁⲗⲉ",
+          "ⲉϫⲛ_1_post_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁⲗⲉ",
+          "ⲙⲉ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲙⲉ_1_pre_ⲁⲗⲉ",
+          "ϥ_1_pre_ⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲉ_0_node",
+          "ⲇⲉ_1_post_ⲁⲗⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.79,
+      "rank": 737,
+      "count": 125
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C44",
+      "label": "ϭⲓⲛⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "ascent, mounting up"
+    },
+    {
+      "target": "C42",
+      "label": "ⲁⲗⲉ (ϣⲟⲩϩⲏⲛⲉ)",
+      "pos": "V",
+      "gloss": "burn incense"
+    },
+    {
+      "target": "C41",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "mount up upon"
+    },
+    {
+      "target": "C39",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉ-)",
+      "pos": "V",
+      "gloss": "mount, climb up"
+    },
+    {
+      "target": "C40",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "ascend, go up"
+    },
+    {
+      "target": "C38",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "mount up; ascend (in years)"
+    },
+    {
+      "target": "C43",
+      "label": "ⲣⲉϥⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "mounted man, rider"
+    }
+  ],
+  "etym": {
+    "egy_num": "21770",
+    "egy_lemma": "jꜥr",
+    "demo_num": "d1051",
+    "demo_lemma": "ꜥl",
+    "english": "to mount up; to touch; to bring up",
+    "german": "aufsteigen; berühren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/21770",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1051"
+  }
+}

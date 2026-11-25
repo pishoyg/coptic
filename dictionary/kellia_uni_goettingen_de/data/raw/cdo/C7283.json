@@ -1,0 +1,37 @@
+{
+  "id": "C7283",
+  "forms": [
+    {
+      "id": "CF16625",
+      "orth": "ⲛϫⲓⲛϫⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS8045",
+      "bibliography": "CD 747b; KoptHWb 428; DELC 329b; ChLCS 103a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7281",
+      "label": "ϫⲓⲛϫⲏ",
+      "pos": "N",
+      "gloss": "emptiness, naught, vanity(?)"
+    },
+    {
+      "target": "C7282",
+      "label": "ⲉⲡϫⲓⲛϫⲏ",
+      "pos": "ADV",
+      "gloss": "for naught, in vain"
+    }
+  ]
+}

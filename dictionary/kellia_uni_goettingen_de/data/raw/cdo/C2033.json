@@ -1,0 +1,627 @@
+{
+  "id": "C2033",
+  "forms": [
+    {
+      "id": "CF5745",
+      "orth": "ⲙⲟⲩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2336,
+        "count": 22
+      }
+    },
+    {
+      "id": "CF5746",
+      "orth": "ⲙⲟⲩⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF5747",
+      "orth": "ⲙⲟⲩⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF5748",
+      "orth": "ⲙⲟⲩⲥⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2909,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF5749",
+      "orth": "ⲙⲟⲩⲥⲏⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9167,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2356",
+      "bibliography": "CD 184b; KoptHWb 102; ChLCS 28a"
+    },
+    {
+      "id": "CS2357",
+      "bibliography": "CD 184b; KoptHWb 102; ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϩⲓⲱⲓϣ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲛⲏⲟⲩ ⲙⲉⲛⲉⲛⲥⲱⲓ ⲛϫⲉⲫⲏ ⲉⲧϫⲟⲣ ⲉϩⲟⲧⲉⲣⲟⲓ ⲫⲏ ⲉⲧⲉⲛϯⲙⲡϣⲁ ⲁⲛ ⲉϫⲟⲃⲥⲧ ⲉϧⲣⲏⲓ ⲉϯⲟⲩⲱ ⲛⲟⲩ**ⲙⲟⲩⲥⲉⲣ** ⲛⲧⲉⲡⲉϥⲑⲱⲟⲩⲓ .",
+      "english": "He preached, saying, &apos;After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲛϥϫⲓⲟⲩⲉ ϩⲛⲗⲁⲁⲩ ⲛϩⲛⲟ · ϫⲓⲛⲟⲩϩⲱⲥ ⲙⲛⲟⲩ**ⲙⲟⲩⲥ** ·",
+      "english": "or steal anything, from a string to a lace.”",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϩⲓⲱⲓϣ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲛⲏ ⲟⲩ ⲙⲉⲛⲉⲛⲥⲱⲓ ⲛϫⲉⲫⲏ ⲉⲧϫⲟⲣ ⲉϩⲟⲧⲉⲣⲟⲓ ⲫⲏ ⲉⲧⲉⲛϯⲙⲡϣⲁ ⲁⲛ ⲉϫⲟⲃⲥⲧ ⲉϧⲣⲏⲓ ⲉϯⲟⲩⲱ ⲛⲟⲩ**ⲙⲟⲩⲥⲉⲣ** ⲛⲧⲉⲡⲉϥⲑⲱⲟⲩⲓ .",
+      "english": "He preached, saying, 'After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen.",
+      "source": "02_Mark_01",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:01",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲧⲁϣⲉⲟⲉⲓϣ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲛⲏⲩ ⲙⲛⲛⲥⲱⲓ ⲛϭⲓⲡⲉⲧϫⲟⲟⲣ ⲉⲣⲟⲓ ⲉⲁⲛⲅⲟⲩϩⲓⲕⲁⲛⲟⲥ ⲁⲛ ⲉⲡⲁϩⲧ ⲉⲃⲱⲗ ⲉⲃⲟⲗ ⲙⲡ**ⲙⲟⲩⲥ** ⲙⲡⲉϥⲧⲟⲟⲩⲉ .",
+      "english": "He preached, saying, &apos;After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen.",
+      "source": "Mark Chapter 1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲓⲥϫⲉⲛ ⲟⲩϩⲃⲱⲥ ϣⲁⲟⲩ**ⲙⲟⲩⲥⲏⲣ** ⲛⲧⲉⲟⲩⲑⲱⲟⲩⲓ ⲁⲛ ⲉⲓⲉϭⲓ ϩⲗⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲏ ⲉⲧⲉⲛⲧⲁⲕ ⲧⲏⲣⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲕϣⲧⲉⲙϫⲟⲥ ϫⲉⲁⲛⲟⲕ ⲁⲓⲉⲣ ⲁⲃⲣⲁⲙ ⲛⲣⲁⲙⲁⲟ",
+      "english": "I will not take from all thy goods from a string to a shoe-latchet, lest thou shouldest say, I have made Abram rich.",
+      "source": "01_Genesis_14",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲓⲧⲛⲟⲩⲉⲩⲕⲁⲓⲣⲓⲁ ⲇⲉ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ · ⲛⲧⲉⲣϥⲥⲉⲕⲡ**ⲙⲟⲩⲥ** ⲇⲉ ⲙⲡⲣⲟ ⲁϥⲙⲟⲩⲧⲉ ⲉϩⲟⲩⲛ ⲕⲁⲧⲁⲡⲕⲁⲛⲱⲛ ⲛⲛⲉⲥⲛⲏⲩ ϫⲉⲥⲙⲟⲩ ⲉⲣⲟⲓ ·",
+      "english": "And through the opportunity (afforded) by God, as soon as he had pulled the thong (or, latch-cord) of the door, he cried out (to the dweller) inside, according to the canon of the brethren, 'Bless me.'",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲑⲱⲟⲩⲓ",
+        6,
+        22.362
+      ],
+      [
+        "ϯⲟⲩⲱ",
+        5,
+        20.778
+      ],
+      [
+        "ⲥⲱⲗⲡ",
+        1,
+        15.788
+      ],
+      [
+        "ⲡⲉϥ",
+        5,
+        15.006
+      ],
+      [
+        "ⲛⲧⲉ",
+        7,
+        14.488
+      ],
+      [
+        "ϩⲁⲣⲙⲁ",
+        1,
+        14.203
+      ],
+      [
+        "ⲛⲟⲩ",
+        3,
+        13.658
+      ],
+      [
+        "ⲟⲩ",
+        7,
+        13.176
+      ],
+      [
+        ".",
+        5,
+        12.582
+      ],
+      [
+        "ⲛ",
+        5,
+        11.556
+      ],
+      [
+        "ⲉ",
+        4,
+        11.017
+      ],
+      [
+        "ⲭⲣⲱⲙ",
+        1,
+        10.897
+      ],
+      [
+        "ⲛⲑⲟϥ",
+        1,
+        10.082
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        9.271
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲟⲟⲩⲉ",
+        8,
+        19.495
+      ],
+      [
+        "ⲥⲱⲗⲡ",
+        3,
+        15.987
+      ],
+      [
+        "ⲛⲁϩⲃ",
+        3,
+        15.25
+      ],
+      [
+        "ϩⲃⲉϥ",
+        1,
+        15.139
+      ],
+      [
+        "ϩⲟⲩⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ϩⲱⲥ",
+        5,
+        14.39
+      ],
+      [
+        "ⲃⲱⲗ",
+        5,
+        14.373
+      ],
+      [
+        "ⲙⲁⲗⲓⲥⲧⲁ",
+        3,
+        14.166
+      ],
+      [
+        "ⲡⲉϥ",
+        11,
+        14.015
+      ],
+      [
+        "ⲛ",
+        25,
+        13.281
+      ],
+      [
+        "ⲙ",
+        17,
+        13.154
+      ],
+      [
+        "ⲕⲗϫ",
+        1,
+        12.817
+      ],
+      [
+        "ⲟⲩ",
+        15,
+        12.481
+      ],
+      [
+        "ϩⲟⲉⲓⲧⲉ",
+        2,
+        12.397
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        3,
+        12.225
+      ],
+      [
+        "ⲥⲉⲕ",
+        1,
+        10.781
+      ],
+      [
+        "ⲛⲛⲉ",
+        3,
+        10.71
+      ],
+      [
+        "ⲡ",
+        11,
+        10.416
+      ],
+      [
+        "ϯⲡⲉ",
+        1,
+        10.094
+      ],
+      [
+        "ⲙⲁⲕϩ",
+        1,
+        9.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲟⲩⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲥ",
+          2
+        ],
+        [
+          "ⲙⲟⲩⲥ_0_node",
+          17
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲟⲩⲥ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ϩⲱⲥ_2_pre_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          5
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲛⲁϩⲃ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲃ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ϩⲃⲉϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲃⲁϩⲥⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩⲉ_3_post_ⲡⲉϥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲟⲩⲥ",
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲟⲩⲥ",
+          "ⲛⲉϥ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲥ_0_node",
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲟⲩⲥ",
+          "ⲡⲁ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲟⲩⲥ",
+          "ⲕⲉ_1_pre_ⲙⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_pre_ⲙⲟⲩⲥ",
+          "ϩⲱⲥ_2_pre_ϫⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲱⲥ_2_pre_ϫⲓⲛ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲥ_0_node",
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          "ⲛⲟⲩⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          "ⲥⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲛ",
+          "ⲛ_3_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲥⲟⲛ",
+          "ϣⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          "ⲡⲉⲧⲛ_3_post_ⲛⲁϩⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲛⲁϩⲃ",
+          "ⲛⲁϩⲃ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          "ⲛⲁ_3_post_ϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϩⲃⲉϥ",
+          "ϩⲃⲉϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲃⲉϥ_2_post_ⲛ",
+          "ⲛ_3_post_ϩⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϩⲃⲉϥ",
+          "ⲃⲁϩⲥⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲟⲩⲥ",
+          "ⲛⲉⲩ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲧⲟⲟⲩⲉ",
+          "ⲧⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          "ⲡⲉϥ_3_post_ⲧⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲧⲟⲟⲩⲉ",
+          "ⲧⲟⲟⲩⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲟⲩⲥ",
+          "ⲡⲉϥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_2_post_ⲙ",
+          "ⲧⲟⲟⲩⲉ_3_post_ⲡⲉϥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲙⲟⲩⲥ",
+          "ⲙⲟⲩⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.14,
+      "rank": 2058,
+      "count": 22
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2034",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲉⲙⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "girdle-maker"
+    }
+  ],
+  "etym": {
+    "egy_num": "75810",
+    "egy_lemma": "mss",
+    "english": "band (?); belt (?)",
+    "german": "Band (?); Gürtel (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/75810"
+  }
+}

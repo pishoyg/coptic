@@ -1,0 +1,311 @@
+{
+  "id": "C1286",
+  "forms": [
+    {
+      "id": "CF3977",
+      "orth": "ⲕⲟⲩⲣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲩⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1371,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ⲕⲁⲩⲣⲓ",
+      "dialect": "B",
+      "id": "837.1"
+    },
+    {
+      "orth": "ⲕⲟⲩⲣ",
+      "dialect": "F",
+      "id": "837.2"
+    },
+    {
+      "orth": "ⲕⲟⲩⲗ",
+      "dialect": "F",
+      "id": "837.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1491",
+      "bibliography": "CD 114b; ChLCS 18a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲩⲉⲣϣⲫⲏⲣⲓ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲕⲁⲗⲱⲥ ⲁϥⲁⲓⲧⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲧⲁϥⲑⲣⲉⲛⲓ**ⲕⲟⲩⲣ** ⲥⲱⲧⲉⲙ ⲟⲩⲟϩ ⲛⲓⲁⲧⲥⲁϫⲓ ⲛⲧⲟⲩⲥⲁϫⲓ .",
+      "english": "They were astonished beyond measure, saying, 'He has done all things well. He makes even the deaf hear, and the mute speak!'",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲡⲓⲙⲏϣ ϭⲟϫⲓ ⲁϥⲉⲣⲉⲡⲓⲧⲓⲙⲁⲛ ⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲛⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲡⲓⲁⲧⲥⲁϫⲓ ⲟⲩⲟϩ ⲛ**ⲕⲟⲩⲣ** ⲙⲡⲛⲉⲩⲙⲁ ⲁⲛⲟⲕ ⲡⲉⲧⲓⲟⲩⲁϩⲥⲁϩⲛⲓ ⲙⲙⲟⲕ ⲁⲙⲟⲩ ⲉⲃⲟⲗ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲙⲡⲣϣⲉ ϫⲉ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ .",
+      "english": "When Jesus saw that a multitude came running together, he rebuked the unclean spirit, saying to him, 'You mute and deaf spirit, I command you, come out of him, and never enter him again!'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲓ**ⲕⲟⲩⲣ** ⲥⲱⲧⲉⲙ ⲟⲩⲟϩ ⲛⲓⲃⲉⲗⲗⲉⲩ ϫⲟⲩϣⲧ ⲛⲧⲉⲧⲉⲛⲛⲁⲩ .",
+      "english": "Hear, ye deaf, and look up, ye blind, to see.",
+      "source": "23_Isaias_42",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:42",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲃⲟ",
+        7,
+        19.937
+      ],
+      [
+        "ⲁⲧⲥⲁϫⲓ",
+        3,
+        15.27
+      ],
+      [
+        "ϫⲁϭ",
+        1,
+        14.837
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲁⲛⲟⲕ",
+        1,
+        14.837
+      ],
+      [
+        "ⲕⲁⲕⲥⲉϩⲧ",
+        2,
+        13.75
+      ],
+      [
+        "ⲛ",
+        25,
+        13.664
+      ],
+      [
+        "ⲩⲉⲣϣⲫⲏ",
+        1,
+        13.252
+      ],
+      [
+        "ⲃⲉⲗⲗⲉⲩ",
+        2,
+        13.252
+      ],
+      [
+        "ⲓⲇⲱⲗⲟⲛ",
+        3,
+        13.149
+      ],
+      [
+        "ⲙ",
+        15,
+        12.446
+      ],
+      [
+        "ⲟⲩⲟⲓ",
+        3,
+        12.307
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        16,
+        12.222
+      ],
+      [
+        "ⲥⲱⲧⲉⲙ",
+        6,
+        12.096
+      ],
+      [
+        "ϩⲁⲛ",
+        9,
+        11.965
+      ],
+      [
+        "ⲛⲓ",
+        11,
+        11.739
+      ],
+      [
+        "ⲁ",
+        13,
+        11.233
+      ],
+      [
+        ".",
+        11,
+        11.137
+      ],
+      [
+        "ⲁⲛ:",
+        1,
+        11.137
+      ],
+      [
+        "ⲉⲧⲟⲓ",
+        1,
+        11.137
+      ],
+      [
+        "ⲣⲉϥⲙⲱⲟⲩⲧ",
+        2,
+        10.992
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          25
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          3
+        ],
+        [
+          "ⲉⲃⲟ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲟⲩⲣ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          3
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          1
+        ],
+        [
+          "ⲥⲱⲧⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          2
+        ],
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          "ⲉⲃⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ⲛⲓ_1_pre_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲣ_0_node",
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲩⲣ",
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲱⲧⲉⲙ",
+          "ⲥⲱⲧⲉⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲣ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲟⲩⲣ",
+          "ⲕⲟⲩⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.34,
+      "rank": 1201,
+      "count": 29
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1288",
+      "label": "ⲉⲣⲕⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "become deaf"
+    },
+    {
+      "target": "C1287",
+      "label": "ⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deaf"
+    },
+    {
+      "target": "C1289",
+      "label": "ⲙⲉⲧⲕⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "deafness"
+    }
+  ]
+}

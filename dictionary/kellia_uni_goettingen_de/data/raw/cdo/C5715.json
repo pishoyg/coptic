@@ -1,0 +1,194 @@
+{
+  "id": "C5715",
+  "forms": [
+    {
+      "id": "CF13408",
+      "orth": "ⲁⲧϣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6393",
+      "bibliography": "CD 548b; ChLCS 75a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϣⲓ ⲙⲡⲉⲓ**ⲁⲧϣⲓⲧ**ϥ · ⲡⲁⲧϣⲡϩⲓⲥⲉ ⲁϥϣⲡϩⲓⲥⲉ · ⲡⲁⲧⲙⲟⲩ ⲁϥⲙⲟⲩ · ⲡⲁⲙⲡⲏⲩⲉ ⲁⲩⲧⲟⲙⲥϥ ·",
+      "english": "and He Who was infinite had been measured, and He Who was impassible had endured sufferings, and He Who was immortal had died, and He Who was in the heavens had been buried.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲓ",
+        1,
+        12.11
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        9.814
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.51
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.228
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧϣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ϣⲓ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲁⲧϣⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ϣⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_4_post_ϣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧϣⲓ_0_node",
+          "ⲁⲗⲗⲁ_4_post_ϣⲓ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ϣⲓ",
+          "ⲕⲁⲧⲁ_1_post_ⲁⲧϣⲓ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁ_1_post_ⲁⲧϣⲓ",
+          "ⲡⲓ_2_post_ⲕⲁⲧⲁ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲕⲁⲧⲁ",
+          "ϣⲓ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϣⲓ_3_post_ⲡⲓ",
+          "ⲛⲧⲉ_4_post_ϣⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12732,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5713",
+      "label": "ϣⲓ",
+      "pos": "V",
+      "gloss": "measure, weigh"
+    },
+    {
+      "target": "C5714",
+      "label": "ϣⲓ",
+      "pos": "N",
+      "gloss": "measure, weight"
+    },
+    {
+      "target": "C5722",
+      "label": "ϣⲓⲧⲉϥ",
+      "pos": "N",
+      "gloss": "measuring, weighing(?)"
+    },
+    {
+      "target": "C5721",
+      "label": "ϫⲓϣⲓ",
+      "pos": "V",
+      "gloss": "take measure, estimate"
+    },
+    {
+      "target": "C5719",
+      "label": "ϯϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, restrict"
+    },
+    {
+      "target": "C5720",
+      "label": "ⲁⲧϯϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured"
+    },
+    {
+      "target": "C5717",
+      "label": "ⲕⲁϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, limit"
+    },
+    {
+      "target": "C5718",
+      "label": "ⲣϣⲓ",
+      "pos": "V",
+      "gloss": "make, amount to weight"
+    },
+    {
+      "target": "C5716",
+      "label": "ⲣⲉϥϣⲓ",
+      "pos": "N",
+      "gloss": "measurer"
+    }
+  ]
+}

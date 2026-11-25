@@ -1,0 +1,49 @@
+{
+  "id": "C1224",
+  "forms": [
+    {
+      "id": "CF3835",
+      "orth": "ⲣⲉϥⲕⲉⲙⲕⲉⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3836",
+      "orth": "ⲣⲉϥⲕⲉⲙⲕⲉⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1419",
+      "bibliography": "CD 109b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1222",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "V",
+      "gloss": "strike, beat; make a repeated sound"
+    },
+    {
+      "target": "C1223",
+      "label": "ⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "drum"
+    },
+    {
+      "target": "C12194",
+      "label": "ⲗⲁⲕⲙⲕⲙ",
+      "pos": "N",
+      "gloss": "kettledrum"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "C3521",
+  "forms": [
+    {
+      "id": "CF8945",
+      "orth": "ⲁⲧⲥⲙⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5300,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4007",
+      "bibliography": "CD 336a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲟⲩⲁⲓ ⲇⲉ ⲟⲛ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲓⲁⲛⲛⲏ ⲫⲁⲓ ⲇⲉ ⲟⲩⲅⲉⲛⲟⲥ ⲉⲧϭⲟⲥⲓ ⲡⲉ ⲉϥⲟⲓ ⲛϣⲏⲣⲓ ⲙⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲛⲉⲟⲩⲉⲃⲟⲗ ⲡⲉ ϧⲉⲛⲧϩⲁⲓⲣⲉⲥⲓⲥ ⲛⲛⲓ**ⲁⲧⲥⲙⲟⲩ** ⲛⲁⲓ ⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲓⲥϫⲉⲛ ⲡⲓϩⲁⲅⲓⲟⲥ ⲇⲓⲟⲥⲕⲟⲣⲟⲥ ⲙⲡⲉⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϣⲱⲡⲓ ⲉϫⲱⲟⲩ ϧⲉⲛⲫⲁⲓ ⲁⲩⲡⲱⲣϫ ⲥⲁⲃⲟⲗ ⲛⲛⲓⲉⲕⲕⲗⲏⲥⲓⲁ ⲁⲩϣⲱⲡⲓ ⲛϩⲁⲓⲣⲉⲧⲓⲕⲟⲥ .",
+      "english": "And another whose name was Ianni, who came from a high family and became the son of the saint, and belonged to the heresy of the accursed ones who say that, since the time of the holy Dioscorus, there has been no patriarch for them: in this they have divided the churches and become heretics.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲁⲓⲣⲉⲥⲓⲥ",
+        2,
+        19.373
+      ],
+      [
+        "ⲛⲁⲓ",
+        2,
+        10.424
+      ],
+      [
+        "ϫⲱ",
+        2,
+        10.369
+      ],
+      [
+        "ⲧ",
+        2,
+        9.525
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        9.368
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        8.251
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        8.218
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲥⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲁⲧⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ϫⲱ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_4_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲥ_5_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲥⲙⲟⲩ_0_node",
+          "ⲛⲁⲓ_1_post_ⲁⲧⲥⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲁⲧⲥⲙⲟⲩ",
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲛⲁⲓ",
+          "ϫⲱ_3_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲱ_3_post_ⲉⲧ",
+          "ⲙⲙⲟ_4_post_ϫⲱ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_4_post_ϫⲱ",
+          "ⲥ_5_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4805,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3524",
+      "label": "ϫⲓⲛⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "act of blessing"
+    },
+    {
+      "target": "C3523",
+      "label": "ϫⲓⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "take blessing, sacrament, salute (a superior)"
+    },
+    {
+      "target": "C3522",
+      "label": "ϯⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "give blessing, sacrament"
+    },
+    {
+      "target": "C3519",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "V",
+      "gloss": "bless, praise, thank"
+    },
+    {
+      "target": "C3520",
+      "label": "ⲥⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "blessing, praise; gift, benevolence, alms; abundance, treasure"
+    }
+  ]
+}

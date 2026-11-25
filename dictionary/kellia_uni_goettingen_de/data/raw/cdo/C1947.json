@@ -1,0 +1,57 @@
+{
+  "id": "C1947",
+  "forms": [
+    {
+      "id": "CF5546",
+      "orth": "ⲣⲉϥⲙⲉⲛⲕ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2262",
+      "bibliography": "CD 175a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1946",
+      "label": "ⲙⲁⲛⲕ-",
+      "pos": "N",
+      "gloss": "maker"
+    },
+    {
+      "target": "C1949",
+      "label": "ⲙⲟⲛⲕⲥ",
+      "pos": "N",
+      "gloss": "place for making?, mould?, crucible?"
+    },
+    {
+      "target": "C1945",
+      "label": "ⲙⲟⲩⲛⲕ",
+      "pos": "V",
+      "gloss": "make, form"
+    },
+    {
+      "target": "C1948",
+      "label": "ⲙⲟⲩⲛⲕ",
+      "pos": "N",
+      "gloss": "thing made, formation, fashion"
+    }
+  ]
+}

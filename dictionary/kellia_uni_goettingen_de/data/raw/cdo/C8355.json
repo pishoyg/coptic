@@ -1,0 +1,46 @@
+{
+  "id": "C8355",
+  "forms": [
+    {
+      "id": "CF19399",
+      "orth": "ⲁⲡⲟⲃⲁⲣⲥⲓⲙⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF19400",
+      "orth": "ⲁⲡⲟⲃⲁⲣⲥⲓⲙⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19401",
+      "orth": "ⲁⲡⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18321,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9592",
+      "bibliography": "DDGLC",
+      "cu_ID": "7596"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1563",
+    "grl_lemma": "ὀποβάλσαμον",
+    "grl_meaning": "the juice of the balsam-tree, the Balsam-tree\n    (Balsamodendron Opobalsamum)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1240b; Preisigke 2:191"
+  }
+}

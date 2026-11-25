@@ -1,0 +1,358 @@
+{
+  "id": "C6616",
+  "forms": [
+    {
+      "id": "CF15276",
+      "orth": "ϩⲏⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2405,
+        "count": 21
+      }
+    },
+    {
+      "orth": "ϩⲉⲙⲉ",
+      "dialect": "S",
+      "id": "2190.1"
+    },
+    {
+      "orth": "ϩⲙⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3055,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϩⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.43,
+        "rank": 1250,
+        "count": 68
+      }
+    },
+    {
+      "orth": "ϩⲏⲙⲓ",
+      "dialect": "B",
+      "id": "2190.4"
+    },
+    {
+      "orth": "ϩⲉⲙⲓ",
+      "dialect": "B",
+      "id": "2190.5"
+    },
+    {
+      "orth": "ϩⲓⲙⲏ",
+      "dialect": "B",
+      "id": "2190.6"
+    },
+    {
+      "orth": "ϩⲏⲙⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10277,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲏⲙⲉ",
+      "dialect": "A",
+      "id": "2190.8"
+    },
+    {
+      "orth": "ϩⲏⲙⲓ",
+      "dialect": "F",
+      "id": "2190.9"
+    },
+    {
+      "orth": "ϩⲏⲙⲙⲓ",
+      "dialect": "F",
+      "id": "2190.10"
+    },
+    {
+      "orth": "ϩⲓⲙⲏ",
+      "dialect": "F",
+      "id": "2190.11"
+    },
+    {
+      "orth": "ϩⲏⲙⲏ",
+      "dialect": "F",
+      "id": "2190.12"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7328",
+      "bibliography": "CD 675b-676a; CED 282; KoptHWb 371; DELC 300a; ChLCS 91a"
+    },
+    {
+      "id": "CS7329",
+      "bibliography": "CD 676a; CED 282; KoptHWb 371; DELC 300a; ChLCS 91a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ⲁϥϣⲁϫⲉ ⲙⲛⲡⲛⲉⲉϥ ⲙⲡϫⲟⲉⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉϯⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲕ ⲡⲁⲥⲟⲛ ⲉⲧⲣⲕⲡⲉⲗⲕⲧ**ϩⲏⲙⲉ** ⲛⲙⲙⲁⲛ · ϫⲉⲕⲁⲥ ⲉⲕⲉϫⲓ ⲙⲙⲟⲛ ⲙⲡⲉⲥⲛⲁⲩ ⲉⲧⲙⲟⲛⲏ ⲛⲛⲉⲧⲉⲙⲉⲩⲛⲕⲟⲧⲕ ·",
+      "english": "And John spake unto the captain of a ship, saying, 'I charge thee, my brother, to halve the fare in our case, for then thou wilt be able to take the two of us to the Monastery of the Sleepless Ones.'",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲧⲱⲟⲩⲛ ⲛϭⲓⲓⲱⲛⲁⲥ ⲉⲡⲱⲧ ⲉⲑⲁⲣⲥⲉⲓⲥ ⲛⲛⲁϩⲣⲛⲡϩⲟ ⲙⲡϫⲟⲉⲓⲥ : ⲁⲩⲱ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲓⲟⲡⲏ : ⲁϥϭⲛⲟⲩϫⲟⲉⲓ ⲉϥⲛⲁⲥϭⲏⲣ ⲉⲑⲁⲣⲥⲉⲓⲥ ⲁϥϯⲧⲉϥ**ϩⲏⲙⲉ** ⲁϥⲧⲁⲗⲉ ⲉⲣⲟϥ : ⲉⲥϭⲏⲣ ⲛⲙⲙⲁϥ ⲉⲑⲁⲣⲥⲉⲓⲥ ⲛⲛⲁϩⲣⲛⲡϩⲟ ⲙⲡϫⲟⲉⲓⲥ :",
+      "english": "But Jonas rose up to flee to Tharsis from the presence of the Lord. And he went down to Joppa, and found a ship going to Tharsis: and he paid his fare, and went up into it, to sail with them to Tharsis from the presence of the Lord.",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲡⲱϩ ⲇⲉ ⲉⲡⲉⲕⲣⲟ ⲛⲧϩⲁⲗⲁⲥⲁ · ⲁϥϣⲓⲛⲉ ⲛⲥⲁⲧⲉϥ**ϩⲏⲙⲉ** ⲛⲧⲟⲟⲧϥ ⲉⲙⲛⲧⲁϥ ⲇⲉ ⲙⲙⲁⲩ ⲉϯ ·",
+      "english": "And when the captain arrived at the shore of the sea he asked Eustathius for his passage money, but he had it not to give to him;",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲗⲕ",
+        2,
+        18.206
+      ],
+      [
+        "ϫⲟⲉⲓ",
+        6,
+        16.084
+      ],
+      [
+        "ⲁⲓϯⲁ",
+        1,
+        15.206
+      ],
+      [
+        "ϩⲟⲗⲟⲕⲟⲧⲧⲓⲛⲟⲥ",
+        2,
+        14.958
+      ],
+      [
+        "ⲛⲉⲉϥ",
+        2,
+        14.076
+      ],
+      [
+        "ⲡⲁ",
+        10,
+        13.949
+      ],
+      [
+        "ⲧⲁⲗⲉ",
+        3,
+        13.863
+      ],
+      [
+        "ⲧ",
+        14,
+        13.101
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        2,
+        12.026
+      ],
+      [
+        "⁛—",
+        2,
+        11.36
+      ],
+      [
+        "ⲟⲩ",
+        10,
+        10.793
+      ],
+      [
+        "ⲧⲣ",
+        2,
+        10.64
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        10.572
+      ],
+      [
+        "ⲛⲁ",
+        8,
+        10.296
+      ],
+      [
+        "ϥ",
+        10,
+        10.095
+      ],
+      [
+        "ϯ",
+        5,
+        10.09
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        2,
+        9.734
+      ],
+      [
+        "ⲙⲛⲧⲁ",
+        1,
+        9.519
+      ],
+      [
+        "ϫⲉ",
+        6,
+        9.509
+      ],
+      [
+        "ⲥⲟⲡ",
+        2,
+        9.418
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏⲙⲉ",
+          3
+        ],
+        [
+          "ϩⲏⲙⲉ_0_node",
+          14
+        ],
+        [
+          "ⲧ_1_pre_ϩⲏⲙⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲙⲉ",
+          3
+        ],
+        [
+          "ⲡⲁ_3_post_ϫⲟⲉⲓ",
+          2
+        ],
+        [
+          "ϫⲟⲉⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ϩⲏⲙⲉ",
+          "ϩⲏⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ϩⲏⲙⲉ",
+          "ϩⲏⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ϩⲏⲙⲉ_0_node",
+          "ⲙ_1_post_ϩⲏⲙⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲙⲉ",
+          "ⲡⲁ_3_post_ϫⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϫⲟⲉⲓ",
+          "ϫⲟⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲏⲙⲉ",
+          "ϩⲏⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲏⲙⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲏⲙⲉ",
+          "ϩⲏⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲏⲙⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲏⲙⲉ",
+          "ϩⲏⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2122,
+      "count": 21
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "98420",
+    "egy_lemma": "hm.t",
+    "demo_num": "d3807",
+    "demo_lemma": "hm(e.t)",
+    "english": "fare (for conveyance)",
+    "german": "Fährlohn; Vergütung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/98420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3807"
+  }
+}

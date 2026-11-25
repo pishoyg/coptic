@@ -1,0 +1,178 @@
+{
+  "id": "C7686",
+  "forms": [
+    {
+      "id": "CF17437",
+      "orth": "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6586,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8541",
+      "bibliography": "CD 813ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲛⲁⲩ ⲉⲣⲟϥ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ ⲡⲙⲁⲉⲓⲛ ⲙⲡⲉϥϩⲣⲃ ⲉϥⲟⲩⲟⲃϣ ⲏ ⲉϥⲙⲟⲣϣ ϩⲛⲧⲉϥⲙⲛⲧⲟⲩⲥ ⲏ ϩⲛⲧⲉϥ**ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ** ⲛⲧϩⲉ ⲛⲟⲩⲉⲓⲛⲉ ⲛⲥⲱⲃϩ ϩⲙⲡϣⲁⲁⲣ ⲙⲡⲉϥⲥⲱⲙⲁ",
+      "english": "And the priest shall look upon him, and, behold, if the appearance of the plague be white or inflamed in his baldness of head or baldness in front, as the appearance of leprosy in the skin of his flesh,",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛϣⲱⲡⲉ ⲇⲉ ϩⲛⲧⲙⲛⲧⲟⲩⲥ ⲏ ϩⲛⲧⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ ⲛϭⲓⲟⲩⲙⲁⲉⲓⲛ ⲉϥⲟⲩⲟⲃϣ ⲏ ⲉϥⲧⲣϣⲣⲱϣ ⲏ ⲉϥⲥⲱⲃϩ ⲉϥⲙⲟⲣϣ ϩⲛⲧⲉϥⲙⲛⲧⲟⲩⲥ ⲏ ϩⲛⲧⲉϥ**ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ**",
+      "english": "And if there should be in his baldness of head, or his baldness of forehead, a white or fiery plague, it is leprosy in his baldness of head, or baldness of forehead.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲟⲩⲥ",
+        3,
+        21.768
+      ],
+      [
+        "ⲏ",
+        3,
+        12.649
+      ],
+      [
+        "ϩⲓⲉⲣⲉⲩⲥ",
+        1,
+        12.313
+      ],
+      [
+        "ⲙⲁⲉⲓⲛ",
+        1,
+        10.98
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        10.379
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.649
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.234
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.142
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲏ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          2
+        ],
+        [
+          "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲏ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ",
+          "ⲙⲛⲧϭⲁⲗⲟⲩⲃⲓϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6149,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7684",
+      "label": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "bald-headed person"
+    },
+    {
+      "target": "C7685",
+      "label": "ϭⲁⲗⲟⲩⲃⲓϩ",
+      "pos": "N",
+      "gloss": "bald-headed"
+    }
+  ]
+}

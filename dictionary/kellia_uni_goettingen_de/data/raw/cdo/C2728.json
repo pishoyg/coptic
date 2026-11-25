@@ -1,0 +1,162 @@
+{
+  "id": "C2728",
+  "forms": [
+    {
+      "id": "CF7264",
+      "orth": "ⲣⲉϥⲛⲟⲩϭⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8817,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3122",
+      "bibliography": "CD 253a; ChLCS 35a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲣⲉϥⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲛⲛⲁϫⲁϫⲉ ⲛ**ⲣⲉϥⲛⲟⲩϭⲥ** ⲕⲛⲁϫⲁⲥⲧ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲕⲛⲁⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲓⲧⲛⲟⲩⲣⲱⲙⲉ ⲛϫⲓⲛϭⲟⲛⲥ",
+      "english": "Therefore will I confess to thee, O Lord, among the Gentiles, and sing to thy name.",
+      "source": "Psalms 17",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲣϣⲃⲏⲣ ⲉⲩⲣⲱⲙⲉ ⲛⲣⲉϥϭⲱⲛⲧ ⲙⲡⲣϣⲱⲡⲉ ⲙⲛⲟⲩϣⲃⲏⲣ ⲛ**ⲣⲉϥⲛⲟⲩϭⲥ**",
+      "english": "Be not companion to a furious man; neither lodge with a passionate man:",
+      "source": "Proverbs 22",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲁⲥⲧ",
+        1,
+        14.172
+      ],
+      [
+        "ϫⲓⲥⲃⲱ",
+        1,
+        13.621
+      ],
+      [
+        "ⲙⲏⲡⲟⲧⲉ",
+        1,
+        12.24
+      ],
+      [
+        "ϣⲃⲏⲣ",
+        1,
+        11.685
+      ],
+      [
+        "ϫⲁϫⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲛⲟⲩϭⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8369,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2729",
+      "label": "ϯⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "give, cause wrath"
+    },
+    {
+      "target": "C2730",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "incitement to wrath"
+    },
+    {
+      "target": "C2731",
+      "label": "ⲛⲁϭⲥⲉ",
+      "pos": "N",
+      "gloss": "wrath, bitterness"
+    },
+    {
+      "target": "C2726",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "V",
+      "gloss": "be wroth; make wroth"
+    },
+    {
+      "target": "C2727",
+      "label": "ⲛⲟⲩϭⲥ",
+      "pos": "N",
+      "gloss": "wrath"
+    }
+  ]
+}

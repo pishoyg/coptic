@@ -1,0 +1,70 @@
+{
+  "id": "C309",
+  "forms": [
+    {
+      "id": "CF1335",
+      "orth": "ⲉⲣⲁⲧⲁϭⲛⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS342",
+      "bibliography": "CD 26b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C311",
+      "label": "ϩⲓⲁϭⲛⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "stain sb"
+    },
+    {
+      "target": "C305",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C306",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C307",
+      "label": "ⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainless"
+    },
+    {
+      "target": "C310",
+      "label": "ⲉⲣⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stained"
+    },
+    {
+      "target": "C308",
+      "label": "ⲙⲉⲧⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainlessness"
+    }
+  ]
+}

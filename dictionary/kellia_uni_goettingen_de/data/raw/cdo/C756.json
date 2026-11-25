@@ -1,0 +1,64 @@
+{
+  "id": "C756",
+  "forms": [
+    {
+      "id": "CF2816",
+      "orth": "ϯ ⲛⲉⲩⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS898",
+      "bibliography": "CD 62b; KoptHWb 42; ChLCS 12a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C760",
+      "label": "ϫⲓ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "take as pledge"
+    },
+    {
+      "target": "C755",
+      "label": "ⲉⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "pledge, surety"
+    },
+    {
+      "target": "C759",
+      "label": "ⲕⲁⲉⲟⲩⲱ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "curse"
+    },
+    {
+      "target": "C758",
+      "label": "ⲕⲱ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    },
+    {
+      "target": "C757",
+      "label": "ⲟⲩⲱϩ ⲛⲉⲩⲱ",
+      "pos": "V",
+      "gloss": "deposit as pledge"
+    }
+  ]
+}

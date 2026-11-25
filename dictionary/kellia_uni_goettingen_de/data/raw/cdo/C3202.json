@@ -1,0 +1,222 @@
+{
+  "id": "C3202",
+  "forms": [
+    {
+      "id": "CF8289",
+      "orth": "ⲥⲃⲣⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6545,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3658",
+      "bibliography": "CD 306b; KoptHWb 169; ChLCS 43a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲛⲁⲩ ⲟⲛ ϩⲛⲧⲣⲁⲥⲟⲩ ⲉϣϫⲉ ⲉⲣⲉⲥⲁϣϥ ⲛϩⲏⲙⲥ ⲛⲏⲩ ⲉϩⲣⲁⲓ ϩⲛⲟⲩ**ⲥⲃⲣⲟⲟⲩⲉ** ⲛⲟⲩⲱⲧ ⲉⲩϫⲟⲧⲉ",
+      "english": "and saw again in my sleep, and as it were seven ears came up on one stem, full and good.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲉϥϫⲓⲥⲉ ⲅⲁⲣ ⲧⲁⲕⲉ ϩⲁϩ ⲁϥϩⲱϭⲃ ⲇⲉ ⲛⲧϩⲉ ⲛⲟⲩⲙⲟⲗⲟⲭⲏ ϩⲛⲟⲩⲕⲁⲩⲙⲁ ⲏ ⲛⲧϩⲉ ⲛⲟⲩϩⲙⲥ ⲉⲁϥϩⲉ ⲙⲁⲩⲁⲁϥ ϩⲛⲧⲉϥ**ⲥⲃⲣⲟⲟⲩⲉ**",
+      "english": "For his exaltation has hurt many; but he has withered as mallows in the heat, or as an ear of corn falling off of itself from the stalk.",
+      "source": "Job 24",
+      "urn": "urn:cts:copticLit:ot.job.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲟⲛ ⲁϥⲡⲱ ⲛⲧⲙⲉϩⲥⲛⲧⲉ ⲛ ⲁⲩⲱ ⲡⲥⲁϣ ⲛϩⲙⲥ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ϩⲛⲟⲩ**ⲥⲃⲣⲟⲟⲩⲉ** ⲛⲟⲩⲱⲧ ⲉⲩⲥⲟⲧⲡ ⲁⲩⲱ ⲉⲛⲁⲛⲟⲩⲟⲩ",
+      "english": "And he dreamed again. And, behold, seven ears came up on one stalk, choice and good.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲱⲧ",
+        2,
+        12.451
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        11.238
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        1,
+        10.289
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        9.711
+      ],
+      [
+        "ϩⲛ",
+        3,
+        9.649
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        9.309
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        8.976
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.379
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.823
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        6.702
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲃⲣⲟⲟⲩⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲧⲡ",
+          1
+        ],
+        [
+          "ⲥⲟⲧⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲃⲣⲟⲟⲩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲃⲣⲟⲟⲩⲉ_0_node",
+          "ⲛ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          "ⲉ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲃⲣⲟⲟⲩⲉ",
+          "ⲩ_3_post_ⲥⲟⲧⲡ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲥⲟⲧⲡ",
+          "ⲥⲟⲧⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲃⲣⲟⲟⲩⲉ",
+          "ⲥⲃⲣⲟⲟⲩⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6109,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3340",
+      "type": "cf",
+      "label": "reed"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3201",
+      "label": "ⲣⲟⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "stubble"
+    }
+  ]
+}

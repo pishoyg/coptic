@@ -1,0 +1,63 @@
+{
+  "id": "C4377",
+  "forms": [
+    {
+      "id": "CF10706",
+      "orth": "ⲣⲉϥϯⲧⲱⲛϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4958",
+      "bibliography": "CD 421a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4373",
+      "label": "*ⲧⲱⲛϣ",
+      "pos": "V",
+      "gloss": "threaten"
+    },
+    {
+      "target": "C4375",
+      "label": "ϯⲧⲉⲛϣⲓ",
+      "pos": "V",
+      "gloss": "threaten, give a blow"
+    },
+    {
+      "target": "C4376",
+      "label": "ⲣⲉϥϯⲧⲱⲛϣ",
+      "pos": "N",
+      "gloss": "striker"
+    },
+    {
+      "target": "C4374",
+      "label": "ⲧⲉⲛϣⲓ",
+      "pos": "N",
+      "gloss": "blow"
+    }
+  ]
+}

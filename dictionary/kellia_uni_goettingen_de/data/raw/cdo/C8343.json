@@ -1,0 +1,99 @@
+{
+  "id": "C8343",
+  "forms": [
+    {
+      "id": "CF19360",
+      "orth": "ⲁⲡⲉⲇⲉⲩⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19361",
+      "orth": "ⲁⲡⲉⲇⲉⲩⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11523,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9571",
+      "bibliography": "DDGLC",
+      "cu_ID": "9979"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϯⲟ ⲁⲛ ⲛⲧϩⲉ ⲙⲡⲕⲉⲥⲉⲉⲡⲉ · ⲛⲛϣⲏⲣⲉ ϣⲏⲙ ⲛ**ⲁⲡⲉⲇⲉⲩⲧⲟⲥ** · ⲟⲩⲇⲉ ⲙⲡⲓϫⲉⲟⲩϣⲁϫⲉ ⲙⲡⲉϥⲙⲁ ⲁⲛ ⲡⲉ · ⲁⲗⲗⲁ ⲉⲓϯⲉⲟⲟⲩ ⲙⲡⲕⲟⲩⲓ ⲕⲁⲧⲁⲧⲉϥⲙⲛⲧⲕⲟⲩⲓ · ⲁⲩⲱ ⲡⲛⲟϭ ⲕⲁⲧⲁⲧⲉϥϭⲟⲧ ·",
+      "english": "I am not like unto other young men who are uninstructed, and I have never spoken a word out of place, but I have paid to the humble man the respect that was due to his humble estate, and to the noble the honour that was due to his exalted degree.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲙ",
+        1,
+        11.32
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        10.276
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.732
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        8.29
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲉⲇⲉⲩⲧⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11090,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5197",
+    "grl_lemma": "ἀπαίδευτος",
+    "grl_meaning": "uneducated, boorish, rude",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 175a; Preisigke 1:150"
+  }
+}

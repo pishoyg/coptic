@@ -1,0 +1,68 @@
+{
+  "id": "C4927",
+  "forms": [
+    {
+      "id": "CF11819",
+      "orth": "ⲟⲩⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.99,
+        "rank": 722,
+        "count": 156
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5552",
+      "bibliography": "CD 476a; CDC 74a; CED 210; KoptHWb 267; DELC 230ab; ChLCS 66a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϯⲥⲟⲡⲥ ⲙⲙⲱⲧⲛ ⲛⲉⲥⲛⲏⲩ ⲉⲧⲣⲉⲧⲉⲧⲛⲥⲁϩⲉⲧⲏⲩⲧⲛ ⲉⲃⲟⲗ ⲙⲙⲓϣⲉ ⲛⲓⲙ ϩⲓϯⲧⲱⲛ ⲛⲓⲙ · ⲙⲛϩⲱⲃ ⲛⲓⲙ ⲉϥϩⲟⲟⲩ ⲙⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲓⲙ ⲛⲥⲁⲣⲕⲓⲕⲟⲛ · ⲛⲁⲓ ⲉⲧϯ **ⲟⲩⲃⲉ**ⲛⲉⲧⲛⲯⲩⲭⲏ ⲉⲧⲣⲉⲛⲥⲃⲃⲉ ⲛⲧⲙⲛⲧⲁⲧⲥⲃⲃⲉ ⲙⲡⲉⲛϩⲏⲧ ⲉⲧⲛⲁϣⲧ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲁⲩⲝⲁⲛⲉ ⲙⲙⲱⲧⲛ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲛⲁⲅⲁⲑⲟⲛ ⲉⲧⲣⲉⲧⲛⲉⲓⲣⲉ ⲙⲡⲉϥⲟⲩⲱϣ ⲛⲁϥ ⲉϥⲉⲓⲣⲉ ⲙⲡⲉⲧⲣⲁⲛⲁϥ ⲛϩⲏⲧⲛ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ",
+      "english": ". . .",
+      "source": "Acephalous Work 22: YA 293-300",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:901-914",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲥⲟⲟⲩⲛ ϫⲉⲉⲕϯⲟⲩⲃⲏⲓ ⲁⲛ , ⲁⲗⲗⲁ ⲉⲕϯ**ⲟⲩⲃⲉ**ⲓⲏⲥⲟⲩⲥ ⲉⲧⲟⲩⲏϩ ϩⲛⲛⲉⲭⲣⲉⲓⲥⲧⲓⲁⲛⲟⲥ .",
+      "english": "I know it’s not against me you fight, but against Jesus who dwells inside the Christians.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ϣⲁⲣⲉⲡⲧⲏⲩ ⲉⲧϯ**ⲟⲩⲃⲏ**ⲩ ⲧⲱⲙⲛⲧ ⲉⲣⲟⲟⲩ .",
+      "english": "Later, the opposing wind meets them,",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12037",
+      "label": "ⲛⲟⲩⲉ-",
+      "pos": "PREP",
+      "gloss": "opposite, toward, against"
+    }
+  ],
+  "etym": {
+    "egy_num": "44940",
+    "egy_lemma": "wbꜣ",
+    "demo_num": "d1305",
+    "demo_lemma": "wbꜣ",
+    "english": "opposite",
+    "german": "gegen; gegenüber; vor",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/44940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1305"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "id": "C705",
+  "forms": [
+    {
+      "id": "CF2664",
+      "orth": "ⲉⲣⲡⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17498,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2665",
+      "orth": "ⲉⲣⲡⲱ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS843",
+      "bibliography": "CD 298b-299a; KoptHWb 39, 500; DELC 46"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲧⲡⲉ ϭⲱⲗ ⲛⲧϩⲉ ⲛⲟⲩϫⲱⲱⲙⲉ ⲁⲩⲱ ⲛⲥⲓⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲁϩⲉ ⲛⲧϩⲉ ⲛϩⲉⲛϭⲱⲃⲉ ⲛ**ⲉⲣⲡⲱ** ⲉⲃⲟⲗ ϩⲛⲟⲩⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲁⲩⲱ ⲛⲧϩⲉ ⲉϣⲁⲣⲉϩⲉⲛϭⲱⲃⲉ ϩⲉ ϩⲛⲟⲩⲃⲱ ⲛⲕⲛⲧⲉ",
+      "english": "And all the powers of the heavens shall melt, and the sky shall be rolled up like a scroll: and all the stars shall fall like leaves from a vine, and as leaves fall from a fig-tree.",
+      "source": "Isaiah 34",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱⲃⲉ",
+        1,
+        15.691
+      ],
+      [
+        "ⲃⲱ",
+        1,
+        13.036
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲣⲡⲱ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲣⲡⲱ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲃⲱ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲃⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲣⲡⲱ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲉⲣⲡⲱ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲣⲡⲱ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          "ⲃⲱ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲃⲱ_3_post_ⲟⲩ",
+          "ⲛ_4_post_ⲃⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17109,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C12507",
+      "type": "cf",
+      "label": "wine"
+    }
+  ],
+  "etym": {
+    "egy_num": "29750",
+    "egy_lemma": "jrp",
+    "english": "grape vine",
+    "german": "Weinstock",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/29750"
+  }
+}

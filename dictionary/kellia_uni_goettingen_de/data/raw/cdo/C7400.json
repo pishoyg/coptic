@@ -1,0 +1,619 @@
+{
+  "id": "C7400",
+  "forms": [
+    {
+      "id": "CF16859",
+      "orth": "ϫⲟⲉⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1275,
+        "count": 65
+      }
+    },
+    {
+      "orth": "ϫⲱⲓⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1079,
+        "count": 44
+      }
+    },
+    {
+      "orth": "ϫⲁⲉⲓⲧ",
+      "dialect": "S",
+      "id": "2460.1"
+    },
+    {
+      "orth": "ϫⲓⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.71,
+        "rank": 194,
+        "count": 901
+      }
+    },
+    {
+      "orth": "ϫⲁⲉⲓⲧ",
+      "dialect": "A",
+      "id": "2460.3"
+    },
+    {
+      "orth": "ϫⲓⲧ-",
+      "dialect": "A",
+      "id": "2460.4"
+    },
+    {
+      "orth": "ϫⲁⲓⲧ",
+      "dialect": "F",
+      "id": "2460.5"
+    },
+    {
+      "orth": "ϫⲓⲧ-",
+      "dialect": "F",
+      "id": "2460.6"
+    },
+    {
+      "orth": "ϫⲁⲓⲧ",
+      "dialect": "L",
+      "id": "2460.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8186",
+      "bibliography": "CD 790b-791a; CED 320; KoptHWb 416; DELC 325a; ChLCS 101a"
+    },
+    {
+      "id": "CS8187",
+      "bibliography": "CD 790b-791a; CED 320; KoptHWb 416; DELC 325a; ChLCS 101a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥϩⲉⲙⲥⲓ ϩⲓϫⲉⲛⲡⲓⲧⲱⲟⲩ ⲛⲧⲉⲛⲓ**ϫⲱⲓⲧ** ⲙⲡⲉⲙⲑⲟ ⲙⲡⲓⲉⲣⲫⲉⲓ ⲁⲩϣⲉⲛϥ ⲛⲥⲁⲡⲥⲁ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲛⲉⲙⲓⲁⲕⲱⲃⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲛⲉⲙⲁⲛⲇⲣⲉⲁⲥ",
+      "english": "As he sat on the Mount of Olives opposite the temple, Peter, James, John, and Andrew asked him privately,",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩϩⲟⲧⲉ ⲅⲁⲣ ⲁⲩⲱ ⲟⲩϩⲱⲃ ⲡⲉ ⲡⲁⲣⲁⲡⲛⲟⲙⲟⲥ ⲡⲉ ⲉⲧⲣⲉⲕⲕⲟⲧⲕ ⲉⲥⲣⲓⲧ ⲙⲡⲉⲕⲱϩⲥ · ⲁⲩⲱ ⲡⲉⲕⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲉⲧⲣⲉⲕⲕⲟⲧⲕ ⲉϫⲟⲟⲗⲉϥ ⲛⲕⲉⲥⲟⲡ · ⲁⲩⲱ ⲡⲉⲕⲙⲁ ⲛ**ϫⲟⲉⲓⲧ** ⲉⲥⲣⲁⲧϥ ⲛⲕⲉⲥⲟⲡ · ⲉⲃⲟⲗ ϫⲉϣϣⲉ ⲉⲕⲁⲛⲁⲓ ⲛⲛϩⲏⲕⲉ ·",
+      "english": "Now, it is a terrible thing, and a matter wholly outside the Law, for thee to come back and reap thy fields a second time, or for thee to come back and gather grapes a second time from thy vineyard, or for thee to come back and gather fruit a second time from thine olive trees; for it is meet that thou shouldst leave these for the poor.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ϯⲃⲱ ⲛⲕⲉⲛⲧⲉ ⲥⲛⲁϯⲟⲩⲧⲁϩ ⲁⲛ ⲟⲩⲟϩ ⲛⲛⲉⲟⲩⲧⲁϩ ϣⲱⲡⲓ ϧⲉⲛϯⲃⲱ ⲛⲁⲗⲟⲗⲓ ⲉϥⲉϫⲉⲙⲉⲑⲛⲟⲩϫ ⲛϫⲉⲡϩⲱⲃ ⲛϯⲃⲱ ⲛ**ϫⲱⲓⲧ** ⲟⲩⲟϩ ⲛⲓⲙⲉϣϣⲟϯ ⲛⲛⲟⲩⲉⲣϧⲣⲉ ⲁⲩⲙⲟⲩⲛⲕ ⲛϫⲉⲛⲓⲉⲥⲱⲟⲩ ϫⲉⲙⲙⲟⲛϧⲣⲉ ⲛⲧⲱⲟⲩ ⲟⲩⲟϩ ⲙⲙⲟⲛⲉϩⲉ ϣⲟⲡ ϧⲉⲛⲡⲓⲟⲩⲛϩϥ ⲛⲧⲉⲡⲟⲩⲭⲱ ⲉⲃⲟⲗ .",
+      "english": "For though the fig-tree shall bear no fruit, and there shall be no produce on the vines; the labour of the olive shall fail, and the fields shall produce no food: the sheep have failed from the pasture, and there are no oxen at the cribs;",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲙⲁⲣⲟⲩϫⲓ ⲛⲁⲕ ⲛⲟⲩⲛⲉϩ ⲛ**ϫⲟⲉⲓⲧ** ⲉϥⲧⲃⲃⲏⲩ ⲉϥⲥⲟⲕⲉ ⲉⲧⲁⲁϥ ⲉⲡϩⲏⲃⲥ ⲉϫⲉⲣⲱϥ ⲉⲧⲣⲉϥⲣⲟⲩⲟⲉⲓⲛ ⲛⲛⲁⲩ ⲛⲓⲙ",
+      "english": "Charge the children of Israel, and let them take for thee pure olive oil beaten for the light, to burn a lamp continually,",
+      "source": "Leviticus 24",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲥⲙⲟⲩ ⲁⲩⲓ ⲉⲃⲟⲗ ⲉⲡⲓⲧⲱⲟⲩ ⲛⲧⲉⲛⲓ**ϫⲱⲓⲧ**",
+      "english": "When they had sung a hymn, they went out to the Mount of Olives.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓϫⲛⲟⲩϥ ⲟⲛ ⲙⲡⲙⲉϩⲥⲉⲡⲥⲛⲁⲩ ⲉⲓϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲟⲩ ⲛⲉ ⲡⲉⲓⲕⲗⲁⲇⲟⲥ ⲥⲛⲁⲩ ⲛⲃⲱ ⲛ**ϫⲟⲉⲓⲧ** ⲛⲉⲧϩⲛ ⲧⲟⲟⲧⲟⲩ ⲙⲡⲙⲁ ⲛϯⲥⲟⲗ ⲥⲛⲁⲩ ⲛⲛⲟⲩⲃ ⲛⲉⲧⲟⲩⲱⲧⲃ ⲁⲩⲱ ⲛⲉⲧⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲛⲛϫⲟⲗϩⲥ ⲛⲛⲟⲩⲃ",
+      "english": "And I asked the second time, and said to him, What are the two branches of the olive-trees that are by the side of the two golden pipes that pour into and communicate with the golden oil funnels?",
+      "source": "Zechariah 4",
+      "urn": "urn:cts:copticLit:ot.zech.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲱ",
+        12,
+        23.63
+      ],
+      [
+        "ⲧⲱⲟⲩ",
+        14,
+        22.131
+      ],
+      [
+        "ⲛ",
+        37,
+        20.219
+      ],
+      [
+        "ⲡⲱⲥⲟ",
+        1,
+        19.695
+      ],
+      [
+        "ⲑⲁϩⲥⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲓ",
+        21,
+        19.395
+      ],
+      [
+        "ⲟⲡⲧ",
+        2,
+        19.11
+      ],
+      [
+        "ⲕⲁⲧⲁⲫⲩⲥⲓⲥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲛⲧⲉ",
+        18,
+        18.576
+      ],
+      [
+        "ⲙⲉϣϣⲟϯ",
+        2,
+        18.447
+      ],
+      [
+        "ⲡⲓ",
+        18,
+        18.28
+      ],
+      [
+        "ⲱϥⲓ",
+        1,
+        18.11
+      ],
+      [
+        "ⲉ",
+        20,
+        17.983
+      ],
+      [
+        "ⲙ",
+        17,
+        17.845
+      ],
+      [
+        "ⲥⲁϧⲉⲙ",
+        1,
+        17.695
+      ],
+      [
+        "ϣⲁϣⲓ",
+        2,
+        17.651
+      ],
+      [
+        "ⲟⲩⲱⲣⲡ",
+        4,
+        17.175
+      ],
+      [
+        "ⲛⲉϩ",
+        3,
+        16.966
+      ],
+      [
+        "ϣⲉⲛⲁⲥ",
+        1,
+        16.888
+      ],
+      [
+        "ϩⲁⲛ",
+        9,
+        16.823
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲱ",
+        21,
+        20.19
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        26,
+        19.201
+      ],
+      [
+        "ⲛ",
+        117,
+        18.398
+      ],
+      [
+        "ⲟⲩⲧⲁϩ",
+        2,
+        15.991
+      ],
+      [
+        "ϣⲛⲏ",
+        4,
+        15.821
+      ],
+      [
+        "ⲥⲣⲁⲧ",
+        2,
+        15.576
+      ],
+      [
+        "ⲉ",
+        43,
+        15.074
+      ],
+      [
+        "ⲡⲧⲟⲟⲩⲛ",
+        1,
+        14.576
+      ],
+      [
+        "ⲙⲙⲟⲛⲟⲣⲭⲓⲥ",
+        1,
+        14.576
+      ],
+      [
+        "ϥ",
+        38,
+        14.243
+      ],
+      [
+        "ϩⲉⲣⲙⲁⲛ",
+        2,
+        13.576
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        7,
+        13.32
+      ],
+      [
+        "ⲡ",
+        30,
+        13.195
+      ],
+      [
+        "ⲛⲉⲥⲱ",
+        3,
+        12.938
+      ],
+      [
+        "ϫⲉⲩ",
+        2,
+        12.576
+      ],
+      [
+        "ⲧ",
+        17,
+        12.311
+      ],
+      [
+        "ⲥⲉⲛⲁ",
+        1,
+        12.254
+      ],
+      [
+        "ⲁⲙⲏ",
+        1,
+        11.768
+      ],
+      [
+        "ⲥ",
+        13,
+        11.353
+      ],
+      [
+        "ⲥⲛⲧⲉ",
+        3,
+        11.054
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          52
+        ],
+        [
+          "ⲥⲛⲧⲉ_1_post_ϫⲟⲉⲓⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲉⲓⲧ",
+          3
+        ],
+        [
+          "ⲣⲉϥϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_3_post_ⲣⲉϥϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲛⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲉϩ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲉⲃⲓⲱ",
+          1
+        ],
+        [
+          "ⲉⲃⲓⲱ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_pre_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲧⲱϭⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲙⲧⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ⲥⲛⲧⲉ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ⲛ_1_post_ϫⲟⲉⲓⲧ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲣⲉϥϯ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯ_2_post_ⲛ",
+          "ⲕⲁⲣⲡⲟⲥ_3_post_ⲣⲉϥϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲉⲓⲧ",
+          "ϫⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ϩⲓ_2_post_ⲛⲉϩ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲛⲉϩ",
+          "ⲛⲉϩ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉϩ_1_post_ϫⲟⲉⲓⲧ",
+          "ϩⲓ_2_post_ⲉⲃⲓⲱ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲉⲃⲓⲱ",
+          "ⲉⲃⲓⲱ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ⲉⲧ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_pre_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_pre_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_pre_ϫⲟⲉⲓⲧ",
+          "ϫⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲧⲱϭⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲱϭⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ⲧⲱϭⲉ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲏ_2_post_ϣⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ϣⲟⲙⲛⲧ",
+          "ϣⲟⲙⲛⲧ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ϫⲟⲉⲓⲧ",
+          "ϫⲟⲉⲓⲧ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲧ_0_node",
+          "ⲙ_1_post_ϫⲟⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲟⲉⲓⲧ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲙⲧⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲧⲟ_3_post_ⲡⲉ",
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_4_post_ⲙⲧⲟ",
+          "ⲙ_4_post_ⲙⲧⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.41,
+      "rank": 1107,
+      "count": 65
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C7401",
+      "label": "ϫⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "testicle"
+    },
+    {
+      "target": "C7402",
+      "label": "ϫⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "testicle"
+    },
+    {
+      "target": "C7403",
+      "label": "ϫⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "of olive-wood"
+    },
+    {
+      "target": "C7404",
+      "label": "ⲓⲟϩⲓ ⲛϫⲱⲓⲧ",
+      "pos": "N",
+      "gloss": "olive garden"
+    }
+  ],
+  "etym": {
+    "egy_num": "185770",
+    "egy_lemma": "ḏt",
+    "demo_num": "d7691",
+    "demo_lemma": "ḏjṱ",
+    "english": "olive tree; olives; olive oil (Sem. loan word)",
+    "german": "Ölbaum; Olive",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/185770",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7691"
+  }
+}

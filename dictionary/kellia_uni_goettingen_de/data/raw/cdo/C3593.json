@@ -1,0 +1,170 @@
+{
+  "id": "C3593",
+  "forms": [
+    {
+      "id": "CF9091",
+      "orth": "ⲥⲛⲏⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5239,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4091",
+      "bibliography": "CD 345a; CED 155; KoptHWb 189; DELC 191"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲓ",
+        1,
+        11.355
+      ],
+      [
+        "ⲓⲥⲁⲁⲕ",
+        1,
+        11.058
+      ],
+      [
+        "ⲉ",
+        3,
+        8.772
+      ],
+      [
+        "ϥ",
+        3,
+        8.179
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        8.104
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.971
+      ],
+      [
+        "ⲧ",
+        1,
+        6.525
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲥ",
+        1,
+        5.428
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.304
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.763
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ⲥⲛⲏⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲥⲛⲏⲓⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϧⲏⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲉⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲥⲛⲏⲓⲛⲓ",
+          "ⲥⲛⲏⲓⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲛⲏⲓⲛⲓ_0_node",
+          "ⲛϧⲏⲧ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          "ϥ_2_post_ⲛϧⲏⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛϧⲏⲧ",
+          "ⲉ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲛⲏⲓⲛⲓ",
+          "ϥ_3_post_ⲉⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4751,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3591",
+      "type": "cf",
+      "label": "skip, stroll, wander"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5341",
+    "demo_lemma": "snjn.t",
+    "english": "water, source",
+    "german": "Wasser, Quelle",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5341"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C7600",
+  "forms": [
+    {
+      "id": "CF17259",
+      "orth": "ϭⲱⲗ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8432",
+      "bibliography": "CD 807ab; KoptHWb 450; ChLCS 106b-107a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡϥⲱ ⲇⲉ ⲛⲧⲉϥⲁⲡⲉ **ϭⲱⲗ **ⲉⲃⲟⲗ**** ϩⲓϩⲣⲁϥ ⲟⲩⲁⲛⲁⲫⲁⲗⲁⲅⲝ ⲡⲉ ⲉⲧⲉⲟⲩϭⲁⲗⲟⲩⲃⲓϩ ⲡⲉ ⲡⲁⲓ ⲟⲩⲕⲁⲑⲁⲣⲟⲥ ⲡⲉ",
+      "english": "And if his head should lose the hair in front, he is forehead bald: he is clean.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7603",
+      "label": "ϫⲓⲛϫⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "apostasy"
+    },
+    {
+      "target": "C7601",
+      "label": "ϫⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "deny, reject"
+    },
+    {
+      "target": "C7602",
+      "label": "ϫⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "denial"
+    },
+    {
+      "target": "C7599",
+      "label": "ϭⲱⲗ",
+      "pos": "V",
+      "gloss": "return, roll back; curl up; separate, set apart, turn away"
+    },
+    {
+      "target": "C7604",
+      "label": "ⲣⲁϭⲱⲗ",
+      "pos": "N",
+      "gloss": "rolling up, return, end"
+    }
+  ]
+}

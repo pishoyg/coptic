@@ -1,0 +1,85 @@
+{
+  "id": "C4619",
+  "forms": [
+    {
+      "id": "CF11195",
+      "orth": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF11196",
+      "orth": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "dialect": "A"
+    },
+    {
+      "id": "CF11197",
+      "orth": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "dialect": "F"
+    },
+    {
+      "id": "CF11198",
+      "orth": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5215",
+      "bibliography": "CDC 69a; KoptHWb 251"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2596",
+      "type": "cf",
+      "label": "turn, return (L)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4622",
+      "label": "ϩⲁⲧⲟⲩⲱ⸗",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4623",
+      "label": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, next"
+    },
+    {
+      "target": "C4620",
+      "label": "ϯⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "turn away, move out?"
+    },
+    {
+      "target": "C4621",
+      "label": "ⲉⲧⲟⲩⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    },
+    {
+      "target": "C4618",
+      "label": "ⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "bosom"
+    }
+  ]
+}

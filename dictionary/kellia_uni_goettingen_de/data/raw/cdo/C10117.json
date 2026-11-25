@@ -1,0 +1,46 @@
+{
+  "id": "C10117",
+  "forms": [
+    {
+      "id": "CF26611",
+      "orth": "ⲡⲉⲇⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF26612",
+      "orth": "ⲡⲁⲓⲇⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3318,
+        "count": 11
+      }
+    },
+    {
+      "id": "CF26613",
+      "orth": "ⲡⲉⲇⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13351",
+      "bibliography": "DDGLC",
+      "cu_ID": "1380"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "2772",
+    "grl_lemma": "πέδη",
+    "grl_meaning": "fetter, anklet, angle",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1352a; Preisigke 2:280"
+  }
+}

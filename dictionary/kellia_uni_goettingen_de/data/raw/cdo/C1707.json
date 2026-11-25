@@ -1,0 +1,49 @@
+{
+  "id": "C1707",
+  "forms": [
+    {
+      "id": "CF4935",
+      "orth": "ⲗⲁⲧⲃⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4936",
+      "orth": "ⲗⲁⲧⲃⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17561,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1975",
+      "bibliography": "CD 145b; KoptHWb 80"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲣⲱⲙⲉ ⲛϩⲁⲙϣⲉ ϭⲙϭⲟⲙ ⲁⲩⲱ ⲟⲩϩⲁⲙⲕⲗⲗⲉ ⲉϥϩⲓⲟⲩⲉ ⲙⲡϩⲁⲧⲏⲣ ϩⲓⲟⲩⲥⲟⲡ ⲉϥⲡⲱϫϭ ⲙⲙⲟϥ ⲟⲩⲥⲟⲡ ⲙⲉⲛ ϣⲁϥϫⲟⲟⲥ ϫⲉⲟⲩ**ⲗⲁⲧⲃⲉⲥ** ⲉⲛⲁⲛⲟⲩⲥ ⲧⲉ ⲁϥⲧⲁϫⲣⲟⲟⲩ ϩⲛϩⲉⲛⲉⲓⲃⲧ ⲥⲉⲛⲁⲥⲙⲛⲧⲟⲩ ⲛⲥⲉⲧⲙⲕⲓⲙ",
+      "english": "The artificer has become strong, and the coppersmith that smites with the hammer, and forges also: sometimes he will say, It is a piece well joined: they have fastened them with nails; they will fix them, and they shall not be moved.",
+      "source": "Isaiah 41",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17173,
+      "count": 1
+    }
+  }
+}

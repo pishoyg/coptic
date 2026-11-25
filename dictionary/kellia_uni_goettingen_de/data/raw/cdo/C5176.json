@@ -1,0 +1,60 @@
+{
+  "id": "C5176",
+  "forms": [
+    {
+      "id": "CF12319",
+      "orth": "ⲉⲃⲟⲗ ⲟⲩⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3477,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5814",
+      "bibliography": "CD 494b-495a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲛⲧϥ ⲇⲉ **ⲉⲃⲟⲗ **ⲟⲩⲧⲉ**ⲡⲙⲏⲏϣⲉ** . ⲁϥϫⲓⲧϥ ⲉⲩⲥⲁ ⲁϥⲛⲉϫⲛⲉϥⲧⲏⲏⲃⲉ ⲉϩⲟⲩⲛ ⲉⲛⲉϥⲙⲁⲁϫⲉ . ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲛⲉϫⲧⲁϥ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ ⲁϥϫⲱϩ ⲉⲡⲉϥⲗⲁⲥ",
+      "english": "He took him aside from the multitude, privately, and put his fingers into his ears, and he spat, and touched his tongue.",
+      "source": "Mark Chapter 7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲥⲙⲟⲧ ⲙⲡⲁⲥⲟⲛ ⲡⲉ ⲡⲁⲓ ⲉϥⲟⲩⲟⲃϣ ⲁⲩⲱ ⲉϥⲧⲣⲉϣⲣⲱϣ ⲉϥⲣⲁϩⲉ ⲧⲏⲣϥ **ⲉⲃⲟⲗ **ⲟⲩⲧⲉ**** ⲟⲩⲧⲃⲁ",
+      "english": "My kinsman is white and ruddy, chosen out from myriads.",
+      "source": "Song of Solomon 5",
+      "urn": "urn:cts:copticLit:ot.song.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲥⲛⲏⲩ ⲙⲏ ⲟⲩⲛ ϭⲟⲙ ⲉⲧⲣⲉⲟⲩⲃⲱ ⲛⲕⲛⲧⲉ ⲧⲁⲩⲉ ϫⲟⲉⲓⲧ ⲉⲃⲟⲗ ⲏⲧⲉ ⲟⲩⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲧⲁⲩⲉ ⲕⲛⲧⲉ **ⲉⲃⲟⲗ **ⲟⲩⲧⲉ**** ⲛⲛⲉϣ ⲙⲗϩ ⲣ ⲙⲙⲟⲟⲩ ⲉϥϩⲟⲗϭ",
+      "english": "Can a fig tree, my brothers, yield olives, or a vine figs? Thus no spring yields both salt water and fresh water.",
+      "source": "59_James_3",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5175",
+      "label": "ⲟⲩⲧⲉ-",
+      "pos": "PREP",
+      "gloss": "between, among"
+    }
+  ]
+}

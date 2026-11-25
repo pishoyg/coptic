@@ -1,0 +1,196 @@
+{
+  "id": "C664",
+  "forms": [
+    {
+      "id": "CF2488",
+      "orth": "ⲉⲗϭⲱⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8410,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2489",
+      "orth": "ⲉⲗϫⲱⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4108,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS800",
+      "bibliography": "CD 55b; KoptHWb 35, 498; DELC 42; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲥⲧⲣⲟⲩⲑⲟⲥ ⲛⲉⲙ**ⲉⲗϫⲱⲃ** ⲛⲉⲙⲗⲁⲣⲟⲛ",
+      "english": "and the sparrow, and the owl, and the seamew,",
+      "source": "05_Deuteronomium_14",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲡ**ⲉⲗϭⲱⲃ** ⲁⲩⲱ ⲡⲃⲏϭ ⲙⲛⲡⲉⲧⲉⲓⲛⲉ ⲙⲙⲟϥ",
+      "english": "and the heron, and the swan, and the stork,",
+      "source": "Deuteronomy 14",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲓϥⲁⲓ ⲛⲛⲁⲃⲁⲗ ⲉⲡϣⲱⲓ ⲟⲩⲟϩ ϩⲏⲡⲡⲉ ⲓⲥ ⲥϩⲓⲙⲓ ⲥⲛⲟⲩϯ ⲛⲁⲩⲛⲏⲟⲩ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲛⲉ ⲟⲩⲟⲛ ⲡⲛⲉⲩⲙⲁ ϧⲉⲛⲛⲟⲩⲧⲉⲛϩ ⲟⲩⲟϩ ⲛⲉ ⲟⲩⲟⲛ ϩⲁⲛⲧⲉⲛϩ ⲉⲣⲱⲟⲩ ⲙⲫⲣⲏϯ ⲛϩⲁⲛⲧⲉⲛϩ ⲛⲧⲉⲟⲩ**ⲉⲗϫⲱⲃ** ⲟⲩⲟϩ ⲁⲩⲱⲗⲓ ⲙⲡⲓϣⲓ ⲟⲩⲧⲉ ⲧⲙⲏϯ ⲙⲡⲕⲁϩⲓ ⲛⲉⲙⲟⲩⲧⲉ ⲧⲙⲏϯ ⲛⲧⲫⲉ .",
+      "english": "And I lifted up mine eyes, and saw, and, behold, two women coming forth, and the wind was in their wings; and they had stork's wings: and they lifted up the measure between the earth and the sky.",
+      "source": "38_Zacharias_05",
+      "urn": "urn:cts:copticLit:ot.zach.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛϫⲁϫ ⲙⲙⲟⲥⲉ ⲛϩⲏⲧⲟⲩ ⲡⲏⲓ ⲙⲡ**ⲉⲗϭⲱⲃ** ϫⲟⲥⲉ ⲉⲣⲟⲟⲩ",
+      "english": "There the sparrows will build their nests; and the house of the heron takes the lead among them.",
+      "source": "Psalms 103",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲙ**ⲉⲗϫⲱⲃ** ⲛⲉⲙⲭⲁⲣⲁⲧⲣⲓⲟⲛ ⲛⲉⲙⲛⲏ ⲉⲧⲟⲛⲓ ⲙⲙⲟϥ ⲛⲉⲙϩⲏⲡⲡⲟⲥ ⲛⲉⲙϫⲉⲗϫⲟⲩ",
+      "english": "and the heron, and the lapwing, and the like to it, and the hoopoe and the bat.",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲃⲏϭ",
+        1,
+        18.598
+      ],
+      [
+        "ⲡⲗⲁⲣⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲟ",
+        1,
+        11.126
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲡ",
+        4,
+        9.497
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.735
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲗϭⲱⲃ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲃⲏϭ",
+          1
+        ],
+        [
+          "ⲡⲃⲏϭ_1_post_ⲉⲗϭⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲉⲗϭⲱⲃ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲗϭⲱⲃ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲃⲏϭ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲃⲏϭ",
+          "ⲡⲃⲏϭ_1_post_ⲉⲗϭⲱⲃ",
+          1
+        ],
+        [
+          "ⲡⲃⲏϭ_1_post_ⲉⲗϭⲱⲃ",
+          "ⲙⲛ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡ",
+          "ⲡ_1_post_ⲉⲗϭⲱⲃ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲉⲗϭⲱⲃ",
+          "ⲉⲧ_2_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7968,
+      "count": 2
+    }
+  }
+}

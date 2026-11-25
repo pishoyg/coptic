@@ -1,0 +1,70 @@
+{
+  "id": "C6908",
+  "forms": [
+    {
+      "id": "CF15865",
+      "orth": "ϫⲓϩⲟⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7628",
+      "bibliography": "CD 721b; KoptHWb 396"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6907",
+      "label": "ϩⲓϩⲟϯ",
+      "pos": "V",
+      "gloss": "strike fear, frighten"
+    },
+    {
+      "target": "C6902",
+      "label": "ϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "fear"
+    },
+    {
+      "target": "C6906",
+      "label": "ϯϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "give fear, terrify"
+    },
+    {
+      "target": "C6903",
+      "label": "ⲁⲧϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "without fear, disrespectful"
+    },
+    {
+      "target": "C6904",
+      "label": "ⲙⲛⲧⲁⲧϩⲟⲧⲉ",
+      "pos": "N",
+      "gloss": "fearlessness, impudence"
+    },
+    {
+      "target": "C6905",
+      "label": "ⲣϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "be afraid"
+    }
+  ]
+}

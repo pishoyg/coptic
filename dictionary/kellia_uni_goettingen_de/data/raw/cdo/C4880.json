@@ -1,0 +1,132 @@
+{
+  "id": "C4880",
+  "forms": [
+    {
+      "id": "CF11725",
+      "orth": "ⲟⲩ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 269.9,
+        "rank": 6,
+        "count": 42583
+      }
+    },
+    {
+      "id": "CF33242",
+      "orth": "ϩⲉⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 37.33,
+        "rank": 34,
+        "count": 5889
+      }
+    },
+    {
+      "orth": "ⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 370.89,
+        "rank": 3,
+        "count": 31456
+      }
+    },
+    {
+      "orth": "ⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 143.81,
+        "rank": 14,
+        "count": 12197
+      }
+    },
+    {
+      "orth": "ⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 179.34,
+        "rank": 10,
+        "count": 28296
+      }
+    },
+    {
+      "orth": "ϩⲁⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 62.94,
+        "rank": 28,
+        "count": 5338
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ART",
+    "num": "sg.",
+    "tlapos": "unbestimmter Artikel"
+  },
+  "senses": [
+    {
+      "id": "CS5505",
+      "bibliography": "CD 467b, 470a; CED 209; KoptHWb 264; DELC 228a; ChLCS 65b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲡⲣⲟⲥⲉⲩⲭⲏ ⲛⲧⲉⲁⲃⲃⲁⲕⲟⲩⲙ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲉⲙ**ⲟⲩ**ϩⲱⲇⲏ .",
+      "english": "A PRAYER OF THE PROPHET AMBACUM, WITH A SONG.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϩⲉⲛ**ⲕⲉⲛⲟⲇⲟⲝⲓⲁ ⲛⲉ ·",
+      "english": "they are works of vanity.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲟⲩ**ⲑⲉⲣⲙⲏⲥⲓ ⲛⲟⲩⲱⲧ ⲡⲉ ⲉⲧⲁⲓϫⲉⲙϥ ⲛϧⲏⲧⲥ .",
+      "english": "But there was only a single coin inside.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲡⲉⲓⲇⲏ ⲁ**ϩⲉⲛ**ⲉⲃⲓⲁⲧⲉ ⲉⲓ ⲁⲩⲟⲩⲱϩ ϩⲙⲡⲁⲣⲓⲅⲟⲣⲓ",
+      "english": "that since beekeepers came and stayed at Parigori,",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲣⲉ**ϩⲁⲛ**ⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲧⲟⲓ ⲉⲣⲁⲧ ⲉⲛⲑⲏⲛⲟⲩ ⲟⲩⲟϩ ⲙⲡⲉⲣϯϣⲑⲏⲛ ⲥⲛⲟⲩϯ ϩⲓⲑⲏⲛⲟⲩ",
+      "english": "but to wear sandals, and not put on two tunics.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉ**ⲩ**ⲱⲣϫ ⲟⲩⲛ ⲛⲏⲧⲛ",
+      "english": "as a security to you",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "600041",
+    "egy_lemma": "wꜥ",
+    "demo_num": "d1256",
+    "demo_lemma": "wꜥ",
+    "english": "one (of many); sole",
+    "german": "einer (von mehreren); etwas (von e. Material)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600041",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1256"
+  }
+}

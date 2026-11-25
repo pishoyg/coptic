@@ -1,0 +1,124 @@
+{
+  "id": "C6610",
+  "forms": [
+    {
+      "id": "CF15264",
+      "orth": "ϩⲟⲩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13134,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7322",
+      "bibliography": "CD 674b; KoptHWb 371; ChLCS 91a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲧⲛⲛⲟⲟⲩⲛⲟⲩ ⲙϩⲟⲟⲩ ⲉⲧⲣⲉϥϩⲁⲧⲉ ϩⲛⲛⲁⲓⲉⲣⲱⲟⲩ · ⲁⲩⲱ ⲡ**ϩⲟⲩⲙ** ⲡⲉ ⲙⲛϯⲱⲧⲉ · ⲉϥⲧⲛⲛⲟⲟⲩ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲛⲧⲡⲉ · ⲁϥϫⲓⲃⲁⲡⲧⲓⲥⲙⲁ ϩⲙⲡⲓⲟⲣⲇⲁⲛⲏⲥ ϩⲓⲧⲛⲟⲩⲣⲱⲙⲉ ⲉϣⲁϥⲙⲟⲩ ·",
+      "english": "He Who sent forth waters to flow in the rivers, and the rains, and the dews, and Who sent forth waters from heaven, received baptism in the Jordan by a mortal man.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲱⲧⲉ",
+        1,
+        16.428
+      ],
+      [
+        "ⲓⲉⲣⲱⲟⲩ",
+        1,
+        15.389
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲩⲙ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲩⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϯⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϯⲱⲧⲉ_1_post_ϩⲟⲩⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲩⲙ",
+          "ⲡ_1_pre_ϩⲟⲩⲙ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲟⲩⲙ",
+          "ϩⲟⲩⲙ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲩⲙ_0_node",
+          "ⲙⲛ_2_post_ϯⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϯⲱⲧⲉ",
+          "ϯⲱⲧⲉ_1_post_ϩⲟⲩⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12720,
+      "count": 1
+    }
+  }
+}

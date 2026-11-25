@@ -1,0 +1,69 @@
+{
+  "id": "C549",
+  "forms": [
+    {
+      "id": "CF2124",
+      "orth": "ⲃⲁⲓⲃⲏⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2125",
+      "orth": "ⲃⲁⲓⲃⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS659",
+      "bibliography": "CD 45a; KoptHWb 28; ChLCS 9b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C319",
+      "type": "cf",
+      "label": "branch of date-palm"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C551",
+      "label": "ϣⲉⲛⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-fibres"
+    },
+    {
+      "target": "C547",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C548",
+      "label": "ⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "palm-leaf"
+    },
+    {
+      "target": "C550",
+      "label": "ⲃⲏⲧϩⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "palm frond"
+    },
+    {
+      "target": "C552",
+      "label": "ⲃⲏⲧⲥⲡⲓⲣ",
+      "pos": "N",
+      "gloss": "rib"
+    }
+  ]
+}

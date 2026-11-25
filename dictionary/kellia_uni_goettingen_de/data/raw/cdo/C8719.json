@@ -1,0 +1,401 @@
+{
+  "id": "C8719",
+  "forms": [
+    {
+      "id": "CF20757",
+      "orth": "ⲇⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF20758",
+      "orth": "ⲇⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 79.37,
+        "rank": 23,
+        "count": 12523
+      }
+    },
+    {
+      "id": "CF20759",
+      "orth": "ⲇⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20760",
+      "orth": "ⲇⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 75.6,
+        "rank": 25,
+        "count": 6412
+      }
+    },
+    {
+      "id": "CF20761",
+      "orth": "ⲇⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF20762",
+      "orth": "ⲇⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20763",
+      "orth": "ⲇⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20764",
+      "orth": "ⲇⲉ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF20765",
+      "orth": "ⲇⲉ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF20766",
+      "orth": "ⲧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 9.87,
+        "rank": 132,
+        "count": 837
+      }
+    },
+    {
+      "id": "CF20767",
+      "orth": "ⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 45.04,
+        "rank": 30,
+        "count": 7107
+      }
+    },
+    {
+      "id": "CF20768",
+      "orth": "ⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20769",
+      "orth": "ⲧⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS10371",
+      "bibliography": "DDGLC",
+      "cu_ID": "70"
+    },
+    {
+      "id": "CS10372",
+      "bibliography": "DDGLC",
+      "cu_ID": "283"
+    },
+    {
+      "id": "CS10373",
+      "bibliography": "DDGLC",
+      "cu_ID": "1371"
+    },
+    {
+      "id": "CS10374",
+      "bibliography": "DDGLC",
+      "cu_ID": "3813"
+    },
+    {
+      "id": "CS10375",
+      "bibliography": "DDGLC",
+      "cu_ID": "1425"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉϥⲓⲟϯ **ⲇⲉ** ⲛⲉϩⲁⲛⲙⲁⲓⲛⲟⲩϯ ⲛⲉ ⲉⲙⲁϣⲱ .",
+      "english": "His parents were very God loving.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϩⲉⲛⲕⲟⲟⲩⲉ **ⲇⲉ** ⲙⲕⲁϩ ⲛϩⲏⲧ ·",
+      "english": "But some others were troubled,",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲱⲃ **ⲇⲉ** ⲛⲓⲃⲉⲛ ⲉⲧⲥⲁⲃⲟⲗ ⲙⲫⲛⲁϩϯ ⲫⲛⲟⲃⲓ ⲡⲉ .",
+      "english": "However, any work done apart from faith is sin.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲡⲛⲉⲩⲙⲁ **ⲇⲉ** ⲡⲉ ⲧⲉⲥⲫⲣⲁⲅⲓⲥ ·",
+      "english": "The Spirit is the seal.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ **ⲇⲉ** ⲡⲉϫⲁϥ ϫⲉⲁϩⲏ .",
+      "english": "‘Yes, I heard it,’ Shenoute affirmed.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲛⲟⲩϥ **ⲇⲉ** ⲟⲛ ⲛϭⲓⲡⲥⲟⲛ ·",
+      "english": "The brother asked him again,",
+      "source": "Apophthegmata Patrum Sahidic 118: Sisoes 11",
+      "urn": "urn:cts:copticLit:ap.118.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁ",
+        4136,
+        28.385
+      ],
+      [
+        "ϥ",
+        3200,
+        26.709
+      ],
+      [
+        ".",
+        2417,
+        26.687
+      ],
+      [
+        "ⲛ",
+        2794,
+        26.288
+      ],
+      [
+        "ⲉ",
+        2346,
+        25.958
+      ],
+      [
+        "ⲛⲁ",
+        1791,
+        25.728
+      ],
+      [
+        "ⲉⲧ",
+        1546,
+        25.388
+      ],
+      [
+        "ⲩ",
+        1473,
+        25.048
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        655,
+        24.636
+      ],
+      [
+        "ⲟⲩ",
+        1634,
+        24.13
+      ],
+      [
+        "ϫⲉ",
+        1148,
+        23.985
+      ],
+      [
+        "ϧⲉⲛ",
+        1198,
+        23.796
+      ],
+      [
+        "ⲙ",
+        1180,
+        23.55
+      ],
+      [
+        "ϯ",
+        1001,
+        23.545
+      ],
+      [
+        "ⲓ",
+        919,
+        23.461
+      ],
+      [
+        "ⲛϫⲉ",
+        820,
+        22.986
+      ],
+      [
+        "ⲡ",
+        1013,
+        22.926
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        831,
+        22.753
+      ],
+      [
+        "ⲛⲑⲟϥ",
+        343,
+        22.702
+      ],
+      [
+        "ⲡⲓ",
+        928,
+        22.698
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        567,
+        34.427
+      ],
+      [
+        "ⲛ",
+        8930,
+        29.57
+      ],
+      [
+        "ϥ",
+        6663,
+        29.015
+      ],
+      [
+        "ⲁ",
+        5329,
+        28.571
+      ],
+      [
+        ".",
+        3589,
+        28.373
+      ],
+      [
+        "ⲩ",
+        3547,
+        27.575
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1635,
+        27.158
+      ],
+      [
+        "ⲛϭⲓ",
+        1971,
+        27.041
+      ],
+      [
+        "ⲡ",
+        4099,
+        26.888
+      ],
+      [
+        "ⲛⲉ",
+        1903,
+        26.383
+      ],
+      [
+        "ⲥ",
+        2267,
+        26.102
+      ],
+      [
+        "ⲙ",
+        2735,
+        25.991
+      ],
+      [
+        "ⲉ",
+        2869,
+        25.664
+      ],
+      [
+        "ⲟⲩ",
+        2527,
+        25.517
+      ],
+      [
+        "ⲛⲧⲉⲣⲉ",
+        811,
+        25.307
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1639,
+        24.889
+      ],
+      [
+        "ⲛⲁ",
+        1904,
+        24.76
+      ],
+      [
+        "ϫⲉ",
+        1695,
+        24.715
+      ],
+      [
+        "ⲡⲉ",
+        1526,
+        24.622
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        539,
+        24.445
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 78.9,
+      "rank": 21,
+      "count": 12523
+    },
+    "B": {
+      "rate": 75.54,
+      "rank": 26,
+      "count": 6412
+    }
+  },
+  "etym": {
+    "grl_ID": "458",
+    "grl_lemma": "δέ",
+    "grl_meaning": "but, and, so, then",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 371b"
+  }
+}

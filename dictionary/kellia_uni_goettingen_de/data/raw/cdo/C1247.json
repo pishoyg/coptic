@@ -1,0 +1,120 @@
+{
+  "id": "C1247",
+  "forms": [
+    {
+      "id": "CF3895",
+      "orth": "ⲕⲛⲓⲕⲓϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13061,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1445",
+      "bibliography": "CD 111b; KoptHWb 65"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩϣⲟⲩϣⲱⲟⲩϣⲓ ⲉϥⲉⲁⲓϥ ⲉϫⲱϥ ⲛϩⲁⲛⲁⲧⲟⲟⲩⲓ ⲟⲩⲟⲛ ⲋ ⲛⲧⲉⲡϣⲓ ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲅ ⲛ**ⲕⲛⲓⲕⲓϫⲓ** ⲛⲛⲉϩ ⲟⲩⲱϣⲉⲙ ⲙⲙⲱⲟⲩ ⲛϧⲏⲧϥ ⲛⲥⲁⲙⲓⲧ ⲛⲉⲙⲟⲩⲑⲩⲥⲓⲁ ⲛⲧⲉⲡϭⲥ .",
+      "english": "And he shall prepare a freewill-offering for it in the morning, the sixth part of a measure of flour, and a third part of a hin of oil to mix therewith the fine flour, as a freewill-offering to the Lord, a perpetual ordinance.",
+      "source": "26_Ezechiel_46",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:46",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲱϣⲉⲙ",
+        1,
+        15.608
+      ],
+      [
+        "ⲛⲉϩ",
+        1,
+        12.211
+      ],
+      [
+        "ⲅ",
+        1,
+        11.581
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        8.806
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        8.8
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲅ_1_pre_ⲕⲛⲓⲕⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲕⲛⲓⲕⲓϫⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲛⲓⲕⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϩ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅ_1_pre_ⲕⲛⲓⲕⲓϫⲓ",
+          "ⲕⲛⲓⲕⲓϫⲓ_0_node",
+          1
+        ],
+        [
+          "ⲕⲛⲓⲕⲓϫⲓ_0_node",
+          "ⲛ_1_post_ⲕⲛⲓⲕⲓϫⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲛⲓⲕⲓϫⲓ",
+          "ⲛⲉϩ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12500,
+      "count": 1
+    }
+  }
+}

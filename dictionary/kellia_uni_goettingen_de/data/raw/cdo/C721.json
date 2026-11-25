@@ -1,0 +1,58 @@
+{
+  "id": "C721",
+  "forms": [
+    {
+      "id": "CF2712",
+      "orth": "ϭⲓⲉⲣϣⲓϣⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS861",
+      "bibliography": "CD 59b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13024",
+      "label": "ϣⲓϣⲓ",
+      "pos": "N",
+      "gloss": "power, authority"
+    },
+    {
+      "target": "C720",
+      "label": "ϯⲉⲣϣⲓϣⲓ",
+      "pos": "V",
+      "gloss": "give authority"
+    },
+    {
+      "target": "C718",
+      "label": "ⲉⲣϣⲓϣⲓ",
+      "pos": "V",
+      "gloss": "have power, authority"
+    },
+    {
+      "target": "C719",
+      "label": "ⲉⲣϣⲓϣⲓ",
+      "pos": "N",
+      "gloss": "power, authority"
+    }
+  ]
+}

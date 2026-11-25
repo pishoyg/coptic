@@ -1,0 +1,127 @@
+{
+  "id": "C2020",
+  "forms": [
+    {
+      "id": "CF5715",
+      "orth": "ⲙⲣⲱϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14177,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2343",
+      "bibliography": "CD 184a; CED 89; KoptHWb 101; DELC 121; ChLCS 27b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲥⲉⲥⲟⲃⲉⲕ ϩⲙⲡⲏⲓ ϩⲱⲥⲧⲉ ⲉⲧ**ⲙⲣⲱϣⲉ** ⲉⲡⲉⲥⲟⲟⲩ ⲉϥⲉϫⲓ ⲛⲙⲙⲁϥ ⲙⲡⲉϥⲧⲉϣⲉ ⲉⲧϩⲓⲧⲟⲩⲱϥ ⲕⲁⲧⲁⲧⲏⲡⲉ ⲛⲛⲣⲱⲙⲉ ⲡⲣⲱϣⲉ ⲇⲉ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲛϥⲱⲡ ⲉϩⲟⲩⲛ ⲉⲩⲉⲥⲟⲟⲩ",
+      "english": "And if they be few in a household, so that there are not enough for the lamb, he shall take with himself his neighbour that lives near to him, as to the number of souls, every one according to that which suffices him shall make a reckoning for the lamb.",
+      "source": "Exodus 12",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        12.327
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        1,
+        11.936
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        10.789
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲣⲱϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲣⲱϣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲣⲱϣⲉ_0_node",
+          "ⲉ_1_post_ⲙⲣⲱϣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲣⲱϣⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲉⲥⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13776,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2028",
+      "type": "cf",
+      "label": "a vessel"
+    }
+  ]
+}

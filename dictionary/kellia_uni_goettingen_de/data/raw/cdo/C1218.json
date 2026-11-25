@@ -1,0 +1,153 @@
+{
+  "id": "C1218",
+  "forms": [
+    {
+      "id": "CF3824",
+      "orth": "ϭⲓⲛⲕⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10608,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1412",
+      "bibliography": "CD 109a; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲛⲧⲁⲛⲁⲁⲩ ϩⲛⲙⲙⲉⲗⲟⲥ ⲙⲡⲥⲱⲙⲁ · ⲙⲛⲛⲉⲛⲧⲁⲛϫⲟⲕⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛ**ϭⲓⲛⲕⲓⲙ** ⲙⲡⲉⲛϩⲏⲧ ·",
+      "english": "and those which we have done with the members in the body, and those which we have performed at the dictates of our hearts ;",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲛ",
+        1,
+        10.081
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        8.947
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲕⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛⲕⲓⲙ_0_node",
+          "ⲙ_1_post_ϭⲓⲛⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲕⲓⲙ",
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10197,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1219",
+      "label": "ϫⲓⲛⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C1217",
+      "label": "ⲁⲧⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "immovable"
+    },
+    {
+      "target": "C1215",
+      "label": "ⲕⲓⲙ",
+      "pos": "V",
+      "gloss": "move, be moved; move"
+    },
+    {
+      "target": "C1216",
+      "label": "ⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C1220",
+      "label": "ⲕⲙⲧⲟ",
+      "pos": "N",
+      "gloss": "moving of the earth, earthquake"
+    }
+  ]
+}

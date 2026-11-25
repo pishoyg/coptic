@@ -1,0 +1,342 @@
+{
+  "id": "C4651",
+  "forms": [
+    {
+      "id": "CF11265",
+      "orth": "ϯⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.36,
+        "rank": 586,
+        "count": 214
+      }
+    },
+    {
+      "orth": "ϯⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4472,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϯ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 54.95,
+        "rank": 27,
+        "count": 8669
+      }
+    },
+    {
+      "orth": "ⲧⲓⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2519,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ϯⲟⲩ",
+      "dialect": "A",
+      "id": "1664.4"
+    },
+    {
+      "orth": "ϯⲉ",
+      "dialect": "A",
+      "id": "1664.5"
+    },
+    {
+      "orth": "ϯ",
+      "dialect": "A",
+      "id": "1664.6"
+    },
+    {
+      "orth": "ϯⲟⲩ",
+      "dialect": "F",
+      "id": "1664.7"
+    },
+    {
+      "orth": "ϯⲉ",
+      "dialect": "F",
+      "id": "1664.8"
+    },
+    {
+      "orth": "ϯⲟⲩ",
+      "dialect": "L",
+      "id": "1664.9"
+    },
+    {
+      "orth": "ϯⲉ",
+      "dialect": "L",
+      "id": "1664.10"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS5252",
+      "bibliography": "CD 440b; CDC 68b; CED 199; KoptHWb 252; DELC 223b; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲉϩ ⲕⲉ**ϯⲟⲩ** ⲙⲙⲓⲗⲓⲟⲛ ⲉϫⲱϥ ⲉϩⲟⲩⲛ ⲉⲡϫⲁⲓⲉ ·",
+      "english": "He added another five miles into the desert.",
+      "source": "Apophthegmata Patrum Sahidic 046",
+      "urn": "urn:cts:copticLit:ap.46.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲛⲉⲙⲡϥϫⲱ ⲉⲣⲟⲟⲩ ⲡⲉ ⲙⲡ**ϯⲟⲩ** ⲛⲭⲁⲣⲁⲅⲙⲏ",
+      "english": "nor had he told them of the five Impressions,",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲛⲧⲏⲧⲛ ⲟⲩⲏⲣ ⲛⲟⲉⲓⲕ ⲃⲱⲕ ⲛⲧⲉⲧⲛⲛⲁⲩ . ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲉⲓⲙⲉ ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉ**ϯⲟⲩ** ⲙⲛⲧⲃⲧ ⲥⲛⲁⲩ .",
+      "english": "He said to them, 'How many loaves do you have? Go see.' When they knew, they said, 'Five, and two fish.'",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲉⲗⲗⲟⲧ",
+        1,
+        13.651
+      ],
+      [
+        "ⲟⲩⲃⲉ",
+        1,
+        12.103
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        1,
+        9.772
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        7.049
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲉⲓⲗⲉ",
+        36,
+        21.405
+      ],
+      [
+        "ϣⲉ",
+        57,
+        20.933
+      ],
+      [
+        "ⲛ",
+        300,
+        20.747
+      ],
+      [
+        "ϯⲟⲩ",
+        30,
+        19.829
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        19.816
+      ],
+      [
+        "ⲙⲁϩⲉ",
+        21,
+        18.887
+      ],
+      [
+        "ⲃⲁϩⲥⲉ",
+        12,
+        18.56
+      ],
+      [
+        "ⲥⲛⲧⲉ",
+        24,
+        18.329
+      ],
+      [
+        "ⲟⲉⲓⲕ",
+        26,
+        18.023
+      ],
+      [
+        "ϣⲟ",
+        21,
+        17.892
+      ],
+      [
+        "ⲡ",
+        101,
+        16.724
+      ],
+      [
+        "ⲉⲃⲟⲧ",
+        15,
+        16.24
+      ],
+      [
+        "ⲁⲩⲱ",
+        66,
+        16.132
+      ],
+      [
+        "ⲙ",
+        68,
+        15.865
+      ],
+      [
+        "ⲭⲁⲣⲁⲅⲙⲏ",
+        3,
+        15.605
+      ],
+      [
+        "ⲙⲛ",
+        46,
+        15.467
+      ],
+      [
+        "ⲁⲣⲭⲱⲛ",
+        17,
+        15.356
+      ],
+      [
+        "ϭⲓⲛϭⲱⲣ",
+        5,
+        15.356
+      ],
+      [
+        "ⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ",
+        5,
+        15.231
+      ],
+      [
+        "ⲛϭⲓ",
+        33,
+        15.204
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.35,
+      "rank": 514,
+      "count": 215
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 8629,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4654",
+      "label": "ϫⲟⲩⲧⲏ",
+      "pos": "NUM",
+      "gloss": "twenty-five"
+    },
+    {
+      "target": "C4657",
+      "label": "ϯⲟⲩ ⲛϣⲉ",
+      "pos": "NUM",
+      "gloss": "five hundred"
+    },
+    {
+      "target": "C4658",
+      "label": "ϯⲟⲩ ⲛϣⲟ",
+      "pos": "NUM",
+      "gloss": "five thousand"
+    },
+    {
+      "target": "C4659",
+      "label": "ⲙⲉϩϯⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fifth"
+    },
+    {
+      "target": "C4660",
+      "label": "ⲙⲉϩⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fiftieth"
+    },
+    {
+      "target": "C4653",
+      "label": "ⲙⲛⲧⲏ",
+      "pos": "NUM",
+      "gloss": "fifteen"
+    },
+    {
+      "target": "C4652",
+      "label": "ⲡϯⲟⲩ",
+      "pos": "N",
+      "gloss": "Thursday"
+    },
+    {
+      "target": "C4655",
+      "label": "ⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "fifty"
+    },
+    {
+      "target": "C4656",
+      "label": "ⲧⲁⲓⲟⲩⲙⲁϥ",
+      "pos": "NUM",
+      "gloss": "eighty"
+    }
+  ],
+  "etym": {
+    "egy_num": "177840",
+    "egy_lemma": "dj.w",
+    "english": "five",
+    "german": "fünf",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/177840"
+  }
+}

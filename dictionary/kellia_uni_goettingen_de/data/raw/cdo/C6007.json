@@ -1,0 +1,672 @@
+{
+  "id": "C6007",
+  "forms": [
+    {
+      "id": "CF14019",
+      "orth": "ϣⲡⲏⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.21,
+        "rank": 421,
+        "count": 349
+      }
+    },
+    {
+      "orth": "ϣⲫⲏⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.99,
+        "rank": 466,
+        "count": 169
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "mostly f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6691",
+      "bibliography": "CD 581a-b; CED 250; KoptHWb 323; DELC 268b; ChLCS 80a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩⲧⲱⲙⲧ ⲁϥϭⲓ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲟⲩⲟϩ ⲛⲁⲩϯⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ⲟⲩⲟϩ ⲁⲩⲙⲟϩ ⲛϩⲟϯ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲛⲁⲩ ⲉϩⲁⲛ**ϣⲫⲏⲣⲓ** ⲙⲫⲟⲟⲩ .",
+      "english": "Amazement took hold on all, and they glorified God. They were filled with fear, saying, 'We have seen strange things today.'",
+      "source": "03_Luke_05",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲉⲓⲣⲉ ⲇⲉ ⲛϩⲛϣⲏⲙ ⲛϩⲟⲟⲩ ϩⲁϩⲧⲏⲓ ⲉⲓϯⲛⲉϩⲧⲏⲓ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲁⲓⲛⲁⲩ ⲉⲩⲛⲟϭ ⲛ**ϣⲡⲏⲣⲉ** ⲉⲁϥⲁⲁⲥ ⲛϭⲓⲁⲡⲁ ϩⲁⲧⲣⲉ ·",
+      "english": "I spent a few days beside them observing them, and I saw him, namely Apa Hatre, perform a great wonder.",
+      "source": "Apophthegmata Patrum Sahidic 115: Pistus 1",
+      "urn": "urn:cts:copticLit:ap.115.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲧⲉϥⲓ ⲛϫⲉⲡⲓⲙⲏⲓⲛⲓ ⲓⲉ ϯ**ϣⲫⲏⲣⲓ** ⲛⲏ ⲉⲧⲁϥⲥⲁϫⲓ ⲙⲙⲱⲟⲩ ⲛⲉⲙⲁⲕ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲁⲣⲉⲛϣⲉⲛⲁⲛ ⲛⲧⲉⲛϣⲉⲙϣⲓ ⲛϩⲁⲛⲕⲉⲛⲟⲩϯ ⲛⲏ ⲉⲧⲉⲕⲥⲱⲟⲩⲛ ⲙⲙⲱⲟⲩ ⲁⲛ",
+      "english": "and the sign or the wonder come to pass which he spoke to thee, saying, Let us go and serve other gods, which ye know not;",
+      "source": "05_Deuteronomium_13",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϣ ⲟⲩⲛ ⲛⲉ ⲛⲉ**ϣⲡⲏⲣⲉ** ⲉⲧⲟ ⲛⲛⲟϭ ⲉⲧⲕⲛⲁⲡⲗⲏⲥⲥⲉ ⲉϫⲱⲟⲩ ⲧⲡⲉ ⲧⲉ · ⲉⲛⲧⲡⲉ ⲧⲉ ⲉⲛⲧⲁⲥϩⲱⲟⲩ ⲙⲡⲟⲉⲓⲕ · ϫⲉⲉⲛⲉ ⲡⲛⲟⲩⲧⲉ ⲡⲉ ⲛⲧⲁϥϫⲓ ⲥⲁⲣⲝ ·",
+      "english": "Which of these miracles is greater? Which of them make thee to wonder most concerning them? Which is the greater miracle? The heavens raining down bread, or God taking upon Himself flesh? Which is the greater miracle?",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲟⲩ**ϣⲫⲏⲣⲓ** ⲁⲛ ⲧⲉ ⲛⲑⲟϥ ϩⲱϥ ⲡⲥⲁⲧⲁⲛⲁⲥ ϥϣⲓⲃϯ ⲙⲙⲟϥ ⲙⲡⲥⲙⲟⲧ ⲛⲟⲩⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲉⲫⲟⲩⲱⲓⲛⲓ .",
+      "english": "And no wonder, for even Satan masquerades as an angel of light.",
+      "source": "08_II Corinthians_11",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲁ ⲙⲡⲉⲡⲉⲧⲛϩⲏⲧ ⲕⲓⲙ ⲉⲣⲱⲧⲛ ⲉⲧⲉⲧⲛⲥⲱⲧⲙ ⲉⲛⲉ**ϣⲡⲏⲣⲉ** ⲛⲧⲉⲓϭⲟⲧ ⲁⲣⲁ ⲙⲡⲉⲧⲉⲧⲛⲑⲁⲩⲙⲁⲍⲉ ⲙⲡⲉⲓⲡⲉⲧⲟⲩⲁⲁⲃ · ⲛⲧⲁϥⲣⲡⲉϥⲟⲩⲟⲉⲓϣ ⲧⲏⲣϥ ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ · ⲉϥⲉⲅⲕⲣⲁⲧⲉⲩⲉ · ⲙⲙⲟϥ ⲉⲣⲟⲥ ·",
+      "english": "Now do not your hearts leap when ye hear of miracles of this kind? And do ye not wonder at this holy man, who passed his whole life with his wife, and restrained himself from union with her?",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲏⲓⲛⲓ",
+        32,
+        26.837
+      ],
+      [
+        "ϩⲁⲛ",
+        71,
+        25.762
+      ],
+      [
+        "ⲁ",
+        101,
+        24.964
+      ],
+      [
+        "ⲉⲧ",
+        73,
+        24.821
+      ],
+      [
+        "ⲛⲉⲙ",
+        68,
+        24.505
+      ],
+      [
+        "ⲛ",
+        94,
+        24.254
+      ],
+      [
+        "ϥ",
+        93,
+        24.042
+      ],
+      [
+        "ⲛⲓ",
+        57,
+        23.717
+      ],
+      [
+        "ⲛϭⲓ",
+        4,
+        23.373
+      ],
+      [
+        "ⲉ",
+        64,
+        23.017
+      ],
+      [
+        "ⲟⲓ",
+        20,
+        22.548
+      ],
+      [
+        "ϧⲉⲛ",
+        46,
+        22.334
+      ],
+      [
+        "ⲛⲉϥ",
+        23,
+        22.237
+      ],
+      [
+        "ⲛⲉⲕ",
+        18,
+        22.125
+      ],
+      [
+        "ⲁⲓⲧ",
+        12,
+        21.995
+      ],
+      [
+        "ⲛⲧⲉ",
+        37,
+        21.695
+      ],
+      [
+        "ϫⲓⲛⲥⲱⲣⲉⲙ",
+        2,
+        21.695
+      ],
+      [
+        "ⲁⲣⲓϣⲫⲏⲣⲓ",
+        2,
+        21.695
+      ],
+      [
+        "ⲟⲡⲧⲁⲥⲓⲁ",
+        2,
+        21.695
+      ],
+      [
+        "ⲕⲁⲧⲟⲣⲑⲱⲙⲁ",
+        2,
+        21.695
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        19,
+        24.895
+      ],
+      [
+        "ⲙⲁⲉⲓⲛ",
+        41,
+        20.19
+      ],
+      [
+        "ⲛⲧ",
+        99,
+        19.671
+      ],
+      [
+        "ⲛ",
+        273,
+        19.64
+      ],
+      [
+        "ⲁ",
+        195,
+        19.419
+      ],
+      [
+        "ϩⲉⲛ",
+        87,
+        18.956
+      ],
+      [
+        "ⲛⲉ",
+        85,
+        18.094
+      ],
+      [
+        "ⲛⲟϭ",
+        50,
+        17.783
+      ],
+      [
+        "ⲙⲛ",
+        85,
+        17.425
+      ],
+      [
+        "ⲡ",
+        136,
+        17.312
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        58,
+        17.151
+      ],
+      [
+        "ⲟⲩ",
+        103,
+        16.832
+      ],
+      [
+        "ⲁⲩⲱ",
+        87,
+        16.629
+      ],
+      [
+        "ⲙ",
+        85,
+        16.132
+      ],
+      [
+        "ⲧⲉ",
+        48,
+        16.111
+      ],
+      [
+        "ϥ",
+        97,
+        15.874
+      ],
+      [
+        "ⲉ",
+        89,
+        15.797
+      ],
+      [
+        "ⲡⲉ",
+        60,
+        15.782
+      ],
+      [
+        "ϭⲟⲙ",
+        27,
+        15.657
+      ],
+      [
+        "ⲛⲉϥ",
+        33,
+        15.483
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          180
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          23
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          16
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲡⲏⲣⲉ",
+          19
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲡⲏⲣⲉ",
+          16
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣⲡⲏⲣⲉ",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲡⲏⲣⲉ",
+          16
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϣⲡⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          3
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲁⲁ",
+          4
+        ],
+        [
+          "ⲓ_3_post_ⲁⲁ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲕ_3_post_ⲁⲁ",
+          2
+        ],
+        [
+          "ⲁⲁ_2_post_ⲛⲧ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲁⲁ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲡⲏⲣⲉ",
+          4
+        ],
+        [
+          "ⲏ_1_pre_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲟⲩ_2_post_ⲉⲧⲉ",
+          2
+        ],
+        [
+          "ⲏⲡⲉ_3_post_ⲙⲛⲧⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϩⲉⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛⲉ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛⲉϥ_1_pre_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲛ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲉ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛⲁ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛⲉⲕ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲁ",
+          "ⲓ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲁ",
+          "ⲕ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲁⲁ",
+          "ⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲁ_2_post_ⲛⲧ",
+          "ⲩ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲏ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲟⲩ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲡⲏⲣⲉ",
+          "ⲛⲉⲓ_1_pre_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_0_node",
+          "ⲉⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϣⲡⲏⲣⲉ",
+          "ⲙⲛⲧⲟⲩ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲟⲩ_2_post_ⲉⲧⲉ",
+          "ⲏⲡⲉ_3_post_ⲙⲛⲧⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.2,
+      "rank": 357,
+      "count": 349
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6006",
+      "label": "ϣⲡⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "wonder, amazement"
+    },
+    {
+      "target": "C6008",
+      "label": "ϩⲛⲟⲩϣⲡⲏⲣⲉ",
+      "pos": "ADV",
+      "gloss": "marvellously"
+    },
+    {
+      "target": "C6009",
+      "label": "ⲣϣⲡⲏⲣⲉ",
+      "pos": "V",
+      "gloss": "be amazed, marvel at, admire"
+    }
+  ],
+  "etym": {
+    "egy_num": "116270",
+    "egy_lemma": "ḫpr.t",
+    "demo_num": "d4471",
+    "demo_lemma": "ḫprj(.t)",
+    "english": "event (lit. that which happens); that which comes into being",
+    "german": "Ereignis; Werdendes; Gewordenes",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/116270",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4471"
+  }
+}

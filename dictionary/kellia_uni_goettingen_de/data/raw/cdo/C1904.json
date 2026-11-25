@@ -1,0 +1,782 @@
+{
+  "id": "C1904",
+  "forms": [
+    {
+      "id": "CF5457",
+      "orth": "ⲙⲁⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.66,
+        "rank": 515,
+        "count": 262
+      }
+    },
+    {
+      "orth": "ⲙⲏⲓⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.74,
+        "rank": 364,
+        "count": 232
+      }
+    },
+    {
+      "orth": "ⲙⲉⲉⲓⲛⲉ",
+      "dialect": "A",
+      "id": "285.1"
+    },
+    {
+      "orth": "ⲙⲉⲓⲛⲉ",
+      "dialect": "A",
+      "id": "285.2"
+    },
+    {
+      "orth": "ⲙⲏⲉⲓⲛ",
+      "dialect": "F",
+      "id": "285.3"
+    },
+    {
+      "orth": "ⲙⲏⲓⲛ",
+      "dialect": "F",
+      "id": "285.4"
+    },
+    {
+      "orth": "ⲙⲁⲉⲓⲛ",
+      "dialect": "L",
+      "id": "285.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2215",
+      "bibliography": "CD 170b-171a; KoptHWb 89; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲓⲇⲏ ⲛⲓⲓⲟⲩⲇⲁⲓ ⲥⲉⲉⲣⲉⲧⲓⲛ ⲛϩⲁⲛ**ⲙⲏⲓⲛⲓ** ⲟⲩⲟϩ ⲛⲓⲟⲩⲉⲓⲛⲓⲛ ⲥⲉⲕⲱϯ ⲛⲥⲁϯⲥⲟⲫⲓⲁ .",
+      "english": "For Jews ask for signs, Greeks seek after wisdom,",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲛⲓⲟⲩⲇⲁⲓ ϩⲉⲛ**ⲙⲁⲉⲓⲛ** ⲛⲉⲧⲟⲩⲁⲓⲧⲉⲓ ⲙⲙⲟⲟⲩ . ⲛϩⲉⲗⲗⲏⲛ ⲇⲉ ⲉⲩϣⲓⲛⲉ ⲛⲥⲁⲟⲩⲥⲟⲫⲓⲁ .",
+      "english": "For Jews ask for signs, Greeks seek after wisdom,",
+      "source": "46_1 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏ ⲇⲉ ⲉⲧⲁⲩⲓ ⲉⲃⲟⲗ ⲁⲩϩⲓⲱⲓϣ ϧⲉⲛⲙⲁⲓ ⲛⲓⲃⲉⲛ ⲟⲩⲟϩ ⲛⲁⲣⲉⲡϭⲟⲓⲥ ⲉⲣϩⲱⲃ ⲛⲉⲙⲱⲟⲩ ⲡⲉ ⲟⲩⲟϩ ⲉϥⲧⲁϫⲣⲟ ⲙⲡⲓⲥⲁϫⲓ ⲛⲧⲉⲛⲓ**ⲙⲏⲓⲛⲓ** ⲉⲧⲙⲟϣⲓ ⲛⲥⲱⲟⲩ ϣⲁⲉⲛⲉϩ ⲛⲧⲉⲛⲓⲉⲛⲉϩ ⲧⲏⲣⲟⲩ ⲁⲙⲏⲛ",
+      "english": "They went out, and preached everywhere, the Lord working with them, and confirming the word by the signs that followed. Amen.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲡⲉ ⲡ**ⲙⲁⲉⲓⲛ** ⲉⲧϩⲛ ⲛϣⲏⲣⲉ ⲛⲁⲇⲁⲙ ·",
+      "english": "what is the sign which is in the sons of Adam?'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲧⲉⲛⲛⲁⲩ ⲱ ⲛⲁⲙⲉⲛⲣⲁϯ ϫⲉⲁⲡⲁⲓϩⲁⲅⲓⲟⲥ ⲛⲁⲗⲟⲩ ϣⲱⲡⲓ ⲉϥⲧⲉⲛⲑⲱⲛⲧ ⲉⲛⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲉϥⲟⲛⲓ ⲙⲙⲱⲟⲩ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲁⲡϭⲟⲉⲓⲥ ϫⲟⲥ ⲛⲛⲉϥⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲉϥⲟⲛⲓ ⲙⲙⲱⲟⲩ ϫⲉⲫⲏ ⲉⲧⲁⲣⲉϩ ⲉⲛⲁⲉⲛⲧⲟⲗⲏ ⲛⲓ**ⲙⲏⲓⲛⲓ** ⲧⲏⲣⲟⲩ ⲉⲧⲁⲓⲁⲓⲧⲟⲩ ⲉϥⲉⲁⲓⲧⲟⲩ ϩⲱⲟⲩ .",
+      "english": "You see, my dearly beloved, a holy young man imitated the apostles and became like them, according to what the Lord said to his apostles, whom he resembled, ‘He who keeps my commandments will make all the signs that I have made.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲥⲫⲣⲁⲅⲓⲍⲉ ⲙⲙⲟⲥ ϩⲓⲃⲟⲗ ⲉⲥⲟ ⲙ**ⲙⲁⲉⲓⲛ** ϩⲛϩⲏⲧϥ ⲙⲡⲕⲟⲩⲓ ⲛⲕⲧⲏⲣ ⲙⲡⲉⲥⲙⲟⲧ ⲛⲟⲩⲥⲟⲣⲧ ⲛⲟⲩⲱⲃϣ · ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲭⲓⲱⲛ ·",
+      "english": "Now the holy man made the Sign of the Cross on the outside of the ewe, and it appeared on the body of the lamb in the form of a piece of white wool, which was like unto snow.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        187,
+        27.395
+      ],
+      [
+        "ϣⲫⲏⲣⲓ",
+        32,
+        27.294
+      ],
+      [
+        "ϩⲁⲛ",
+        71,
+        25.762
+      ],
+      [
+        "ⲛ",
+        126,
+        25.523
+      ],
+      [
+        "ϧⲉⲛ",
+        81,
+        24.782
+      ],
+      [
+        "ⲙ",
+        82,
+        24.656
+      ],
+      [
+        "ⲛⲉⲙ",
+        66,
+        24.376
+      ],
+      [
+        "ⲛⲓ",
+        60,
+        23.939
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        77,
+        23.88
+      ],
+      [
+        "ⲉ",
+        71,
+        23.466
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲟⲝⲟⲛ",
+        4,
+        23.373
+      ],
+      [
+        "ϥ",
+        76,
+        23.168
+      ],
+      [
+        "ⲓⲱⲛⲁ",
+        7,
+        22.988
+      ],
+      [
+        "ⲁⲓⲧ",
+        15,
+        22.96
+      ],
+      [
+        "ⲉⲣⲥⲁⲗⲡⲓⲍⲓⲛ",
+        6,
+        22.926
+      ],
+      [
+        "ⲁ",
+        57,
+        22.488
+      ],
+      [
+        "ⲉⲧ",
+        41,
+        22.324
+      ],
+      [
+        "ϯ",
+        40,
+        22.256
+      ],
+      [
+        "ⲓⲣⲓ",
+        18,
+        22.195
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        36,
+        21.813
+      ]
+    ],
+    "S": [
+      [
+        "ϣⲡⲏⲣⲉ",
+        80,
+        23.083
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        8,
+        21.565
+      ],
+      [
+        "ⲙⲛ",
+        106,
+        18.794
+      ],
+      [
+        "ⲙ",
+        139,
+        18.675
+      ],
+      [
+        "ⲟⲩ",
+        129,
+        18.22
+      ],
+      [
+        "ⲛ",
+        176,
+        18.154
+      ],
+      [
+        "ϩⲉⲛ",
+        65,
+        18.108
+      ],
+      [
+        "ϩⲛ",
+        66,
+        16.579
+      ],
+      [
+        "ⲉ",
+        90,
+        16.259
+      ],
+      [
+        "ⲟⲩⲟⲃϣ",
+        9,
+        15.789
+      ],
+      [
+        "ϥ",
+        86,
+        15.767
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        54,
+        15.697
+      ],
+      [
+        "ⲡ",
+        83,
+        15.589
+      ],
+      [
+        "ⲩ",
+        57,
+        15.275
+      ],
+      [
+        "ⲓⲱⲛⲁⲥ",
+        7,
+        15.259
+      ],
+      [
+        "ⲉⲧ",
+        49,
+        15.049
+      ],
+      [
+        "ⲁⲩⲱ",
+        54,
+        14.978
+      ],
+      [
+        "ⲛⲁ",
+        53,
+        14.839
+      ],
+      [
+        "ⲉϫⲛ",
+        20,
+        14.357
+      ],
+      [
+        "ⲡⲉϥ",
+        27,
+        14.327
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          102
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲁⲉⲓⲛ",
+          12
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲉⲓⲛ",
+          4
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲙⲁⲉⲓⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϣⲡⲏⲣⲉ",
+          6
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          5
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲁⲉⲓⲛ",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          3
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          2
+        ],
+        [
+          "ⲟⲩⲟⲃϣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲟⲩⲏϩ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲛⲥⲱ_3_post_ⲟⲩⲏϩ",
+          2
+        ],
+        [
+          "ⲟⲩ_4_post_ⲛⲥⲱ",
+          2
+        ],
+        [
+          "ϩⲓⲧⲉ_1_pre_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲙⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲅⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲧⲁⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲧⲁⲩⲣⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲙⲛ_2_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲡⲏⲣⲉ",
+          "ϩⲉⲛ_2_post_ϣⲡⲏⲣⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϣⲡⲏⲣⲉ",
+          "ϣⲡⲏⲣⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ϩⲉⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲧⲏⲣ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲟⲃϣ",
+          "ⲟⲩⲟⲃϣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲉⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲟⲩⲏϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲏϩ_2_post_ⲉⲧ",
+          "ⲛⲥⲱ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ⲛⲥⲱ_3_post_ⲟⲩⲏϩ",
+          "ⲟⲩ_4_post_ⲛⲥⲱ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲉ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲙⲛ_3_post_ϣⲡⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ϣⲡⲏⲣⲉ",
+          "ϩⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          "ϣⲡⲏⲣⲉ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲙⲁⲉⲓⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲙⲁⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲙⲁⲅⲟⲥ",
+          "ⲙⲛⲧⲙⲁⲅⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲛⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲁ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲁⲁ",
+          "ⲕ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲁⲁ",
+          "ⲁⲁ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲁ_2_post_ⲛⲧ",
+          "ϥ_3_post_ⲁⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲉⲓⲛ",
+          "ⲡ_1_pre_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲉⲓⲛ_0_node",
+          "ⲙ_1_post_ⲙⲁⲉⲓⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲡⲉϥ_3_post_ⲥⲧⲁⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲥⲧⲁⲩⲣⲟⲥ",
+          "ⲥⲧⲁⲩⲣⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲡⲉⲩ_3_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_2_post_ⲙ",
+          "ⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲁⲉⲓⲛ",
+          "ϥ_3_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲉⲓⲛ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.65,
+      "rank": 446,
+      "count": 262
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1910",
+      "label": "ϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "take sign, augury"
+    },
+    {
+      "target": "C1908",
+      "label": "ϯⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "give sign, signify"
+    },
+    {
+      "target": "C1905",
+      "label": "ⲁⲧⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "without mark"
+    },
+    {
+      "target": "C1912",
+      "label": "ⲙⲛⲧⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "augury, divination"
+    },
+    {
+      "target": "C1911",
+      "label": "ⲣⲉϥϫⲓⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "augur, diviner"
+    },
+    {
+      "target": "C1909",
+      "label": "ⲣⲉϥϯⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "one who points out, gives augury"
+    },
+    {
+      "target": "C1907",
+      "label": "ⲣⲉϥⲉⲓⲣⲉ ⲙⲡⲙⲁⲉⲓⲛ",
+      "pos": "N",
+      "gloss": "wonder-doer, miracle worker"
+    },
+    {
+      "target": "C1906",
+      "label": "ⲣⲙⲁⲉⲓⲛ",
+      "pos": "V",
+      "gloss": "be marked, remarkable"
+    }
+  ],
+  "etym": {
+    "egy_num": "70420",
+    "egy_lemma": "mn.w",
+    "demo_num": "d2420",
+    "demo_lemma": "mn",
+    "english": "monument(s)",
+    "german": "Denkmal; Denkmäler",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/70420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2420"
+  }
+}

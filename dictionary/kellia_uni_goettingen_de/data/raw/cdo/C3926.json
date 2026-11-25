@@ -1,0 +1,50 @@
+{
+  "id": "C3926",
+  "forms": [
+    {
+      "id": "CF9783",
+      "orth": "ϣⲟⲥⲙⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4455",
+      "bibliography": "CD 589b; KoptHWb 207; ChLCS 53a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3922",
+      "label": "ⲥⲱϣⲙ",
+      "pos": "V",
+      "gloss": "burn, be hot; be faint, undone, disheartened"
+    },
+    {
+      "target": "C3925",
+      "label": "ⲥⲱϣⲙ",
+      "pos": "N",
+      "gloss": "faintness, exhaustion"
+    },
+    {
+      "target": "C3923",
+      "label": "ⲥⲱϣⲙ (ⲉ-)",
+      "pos": "V",
+      "gloss": "fatigue, annoy"
+    },
+    {
+      "target": "C3924",
+      "label": "ⲥⲱϣⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "faint for, yearn for"
+    }
+  ]
+}

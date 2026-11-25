@@ -1,0 +1,790 @@
+{
+  "id": "C5751",
+  "forms": [
+    {
+      "id": "CF13487",
+      "orth": "ϣⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.8,
+        "rank": 852,
+        "count": 126
+      }
+    },
+    {
+      "orth": "ϣⲃ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3180,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϣⲃⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2333,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲉⲃⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16027,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉϥⲧ-",
+      "dialect": "S",
+      "id": "254.4"
+    },
+    {
+      "orth": "ϣⲃⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2333,
+        "count": 22
+      }
+    },
+    {
+      "orth": "ϣⲉⲃⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16027,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉϥⲧ⸗",
+      "dialect": "S",
+      "id": "254.7"
+    },
+    {
+      "orth": "ϣⲟⲃⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1182,
+        "count": 73
+      }
+    },
+    {
+      "orth": "ϣⲟⲟⲃⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13496,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲟϥⲉ†",
+      "dialect": "S",
+      "id": "254.10"
+    },
+    {
+      "orth": "ϣⲟⲟϥⲉ†",
+      "dialect": "S",
+      "id": "254.11"
+    },
+    {
+      "orth": "ϣⲁⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13249,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲁϥⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8487,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲉⲃⲓ-",
+      "dialect": "B",
+      "id": "254.14"
+    },
+    {
+      "orth": "ϣⲓⲃⲉ",
+      "dialect": "A",
+      "id": "254.15"
+    },
+    {
+      "orth": "ϣⲃⲧ⸗",
+      "dialect": "A",
+      "id": "254.16"
+    },
+    {
+      "orth": "ϣⲁⲃⲉ†",
+      "dialect": "A",
+      "id": "254.17"
+    },
+    {
+      "orth": "ϣⲁⲃⲓ-",
+      "dialect": "A",
+      "id": "254.18"
+    },
+    {
+      "orth": "ϣⲓⲃⲓ",
+      "dialect": "F",
+      "id": "254.19"
+    },
+    {
+      "orth": "ϣⲁⲃⲓ†",
+      "dialect": "F",
+      "id": "254.20"
+    },
+    {
+      "orth": "ϣⲓⲃⲉ",
+      "dialect": "L",
+      "id": "254.21"
+    },
+    {
+      "orth": "ϣⲃ-",
+      "dialect": "L",
+      "id": "254.22"
+    },
+    {
+      "orth": "ϣⲁⲃⲓ-",
+      "dialect": "L",
+      "id": "254.23"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6429",
+      "bibliography": "CD 551a; CED 237; KoptHWb 303; DELC 256a-b; ChLCS 75b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁⲧⲉⲧⲛ**ϣⲓⲃⲉ** ⲙⲡⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛϩⲉⲛϩⲃⲏⲩⲉ ⲉⲙⲉϣϣⲉ .",
+      "english": "While you have changed the honor of God in your actions which are unworthy.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩϣⲡⲛϣⲱⲡ ϩⲛⲟⲩⲣⲓⲕⲉ ⲛⲃⲁⲗ ϩⲛⲧϩⲁⲏ ⲛⲥⲁⲗⲡⲓⲅⲝ ϥⲛⲁⲥⲁⲗⲡⲓⲍⲉ ⲅⲁⲣ ⲛⲧⲉⲛⲉⲧⲙⲟⲟⲩⲧ ⲧⲱⲟⲩⲛ ⲉⲩⲟ ⲛⲁⲧⲧⲁⲕⲟ ⲁⲩⲱ ⲁⲛⲟⲛ ⲧⲛⲛⲁ**ϣⲓⲃⲉ** .",
+      "english": "in a moment, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, and the dead will be raised incorruptible, and we will be changed.",
+      "source": "1 Corinthians 15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲥⲟⲟⲩ ⲛϩⲟⲟⲩ ⲁϥϫⲓ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲙⲡⲉⲧⲣⲟⲥ ⲛⲙⲓⲁⲕⲱⲃⲟⲥ ⲛⲙⲓⲱϩⲁⲛⲛⲏⲥ ⲁϥϫⲓⲧⲟⲩ ⲙⲙⲁⲩⲁⲁⲩ ⲉϫⲛ ⲟⲩⲧⲟⲟⲩ ⲉϥϫⲟⲥⲉ ⲁⲩⲱ ⲁϥ**ϣⲃⲧ**ϥ ϩⲓϩⲏ ⲙⲙⲟⲟⲩ",
+      "english": "After six days Jesus took with him Peter, James, and John, and brought them up onto a high mountain privately by themselves, and he was changed into another form in front of them.",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛ",
+        156,
+        17.864
+      ],
+      [
+        "ⲙ",
+        88,
+        16.929
+      ],
+      [
+        "ϩⲟ",
+        20,
+        15.996
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        15.797
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        14,
+        15.265
+      ],
+      [
+        "ⲡⲉϥ",
+        25,
+        14.227
+      ],
+      [
+        "ⲁ",
+        50,
+        14.175
+      ],
+      [
+        "ⲡ",
+        56,
+        14.118
+      ],
+      [
+        "ϥ",
+        50,
+        13.652
+      ],
+      [
+        "ϣⲓⲃⲉ",
+        6,
+        13.575
+      ],
+      [
+        "ⲁⲩⲱ",
+        36,
+        13.456
+      ],
+      [
+        "ⲡⲉⲥⲧⲉⲣⲱⲙⲁ",
+        1,
+        12.797
+      ],
+      [
+        "ⲃⲟⲩ",
+        1,
+        12.797
+      ],
+      [
+        "ϣⲡⲛϣⲱⲡ",
+        2,
+        12.797
+      ],
+      [
+        "ϩⲟⲩⲣⲱⲱⲧⲉ",
+        1,
+        12.797
+      ],
+      [
+        "ϣⲁⲓⲛⲁϩⲃ",
+        1,
+        12.797
+      ],
+      [
+        "ⲫⲓⲛⲏⲃ",
+        1,
+        12.797
+      ],
+      [
+        "ϩⲣⲃ",
+        4,
+        12.512
+      ],
+      [
+        "ϩⲛ",
+        23,
+        12.249
+      ],
+      [
+        "ⲉⲧ",
+        22,
+        11.816
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲓⲃⲉ_0_node",
+          25
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϣⲓⲃⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϣⲓⲃⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          5
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲉⲅⲕⲣⲁⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲉⲅⲕⲣⲁⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϣⲱⲡⲉ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲇⲟⲅⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲇⲟⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲏⲣ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲓⲃⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_pre_ⲁⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲏⲣ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϣⲓⲃⲉ",
+          "ⲁⲛⲟⲛ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲛⲟⲛ_1_pre_ϣⲓⲃⲉ",
+          "ⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          "ⲛⲁ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          4
+        ],
+        [
+          "ϣⲓⲃⲉ_0_node",
+          "ⲙ_1_post_ϣⲓⲃⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ϣⲓⲃⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          "ⲙⲛ_2_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϣⲓⲃⲉ",
+          "ϩⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_0_node",
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          "ⲧⲉⲩ_3_post_ⲉⲅⲕⲣⲁⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_3_post_ⲉⲅⲕⲣⲁⲧⲓⲁ",
+          "ⲉⲅⲕⲣⲁⲧⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲓⲁ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲉⲅⲕⲣⲁⲧⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϣⲓⲃⲉ",
+          "ⲛⲉⲕ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_0_node",
+          "ⲉϣⲱⲡⲉ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲉϣⲱⲡⲉ_3_post_ϣⲓⲃⲉ",
+          "ϩⲛ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_3_post_ϣⲓⲃⲉ",
+          "ⲟⲩ_4_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲟⲩⲛⲁⲙ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_3_post_ⲧ",
+          "ⲙ_4_post_ⲟⲩⲛⲁⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_0_node",
+          "ⲛϭⲓ_1_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ϣⲓⲃⲉ",
+          "ⲡ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛϭⲓ",
+          "ⲇⲟⲅⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲇⲟⲅⲙⲁ_3_post_ⲡ",
+          "ⲛ_4_post_ⲇⲟⲅⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲏⲣ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲱⲛⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣⲓⲃⲉ",
+          "ϥ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_0_node",
+          "ϩⲙ_1_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲓⲃⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲉⲧⲉⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲃⲉ",
+          "ⲁⲩⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲓⲃⲉ",
+          "ⲡ_2_pre_ⲁⲏⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲁⲏⲣ",
+          "ⲁⲏⲣ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲏⲣ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲓⲃⲉ",
+          "ⲧⲉⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.41,
+      "rank": 505,
+      "count": 223
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5756",
+      "label": "ϣⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "change, exchange, requital"
+    },
+    {
+      "target": "C5755",
+      "label": "ϣⲃⲧⲥ",
+      "pos": "N",
+      "gloss": "change"
+    },
+    {
+      "target": "C12101",
+      "label": "ϣⲉⲃⲓⲟ",
+      "pos": "V",
+      "gloss": "change"
+    },
+    {
+      "target": "C5752",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "change, difference"
+    },
+    {
+      "target": "C5754",
+      "label": "ϣⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "changed, disguised person, hypocrite, actor"
+    },
+    {
+      "target": "C5758",
+      "label": "ϯϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "reward, requite"
+    },
+    {
+      "target": "C5753",
+      "label": "ⲁⲧϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "unchanging, unaltered"
+    },
+    {
+      "target": "C5759",
+      "label": "ⲇⲓϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "take requital, be repaid"
+    },
+    {
+      "target": "C5757",
+      "label": "ⲣϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "be instead, replace"
+    }
+  ],
+  "etym": {
+    "egy_num": "153350",
+    "egy_lemma": "šbi̯",
+    "demo_num": "d5914",
+    "demo_lemma": "šb(e)",
+    "english": "to mix; to mingle; to replace",
+    "german": "mischen; sich mischen (unter); ersetzen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/153350",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5914"
+  }
+}

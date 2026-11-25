@@ -1,0 +1,211 @@
+{
+  "id": "C4167",
+  "forms": [
+    {
+      "id": "CF10279",
+      "orth": "ⲧⲁⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4957,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4729",
+      "bibliography": "CD 397a; CDC 62b; CED 180; KoptHWb 225; DELC 212a; ChLCS 57a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲟⲩⲱⲛ ⲉⲣⲟⲥ ⲁⲥⲛⲁⲩ ⲉⲡϣⲏⲣⲉ ϣⲏⲙ ⲉϥⲣⲓⲙⲉ ϩⲛⲧ**ⲧⲁⲓⲃⲉ** ⲁⲥϯⲥⲟ ⲇⲉ ⲉⲣⲟϥ ⲛϭⲓⲧϣⲉⲉⲣⲉ ⲙⲫⲁⲣⲁⲱ ⲉⲥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛϣⲏⲣⲉ ⲛⲛϩⲉⲃⲣⲁⲓⲟⲥ ⲡⲉ ⲡⲁⲓ",
+      "english": "And having opened it, she sees the babe weeping in the ark: and the daughter of Pharao had compassion on it, and said, This is one of the Hebrew's children.",
+      "source": "Exodus 2",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧϣⲉⲉⲣⲉ ⲇⲉ ⲙⲫⲁⲣⲁⲱ ⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉϫⲙⲡⲓⲉⲣⲟ ⲉϫⲱⲕⲙ ⲁⲩⲱ ⲛⲉⲥϩⲙϩⲁⲗ ⲛⲉⲩⲙⲟⲟϣⲉ ϩⲁⲧⲛⲡⲓⲉⲣⲟ ⲁⲥⲛⲁⲩ ⲇⲉ ⲉⲧ**ⲧⲁⲓⲃⲉ** ϩⲛⲡϩⲉⲗⲟⲥ ⲁⲥϫⲟⲟⲩ ⲛⲧⲉⲥϩⲙϩⲁⲗ ⲁⲥⲛⲧⲥ",
+      "english": "And the daughter of Pharao came down to the river to bathe; and her maids walked by the river's side, and having seen the ark in the ooze, she sent her maid, and took it up.",
+      "source": "Exodus 2",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲁϩⲥ",
+        1,
+        16.691
+      ],
+      [
+        "ϩⲉⲗⲟⲥ",
+        1,
+        15.276
+      ],
+      [
+        "ⲕⲁⲥⲧⲣⲟⲛ",
+        1,
+        14.189
+      ],
+      [
+        "ⲕⲁⲓⲥⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ⲇⲉ",
+        5,
+        11.63
+      ],
+      [
+        "ϯⲥⲟ",
+        1,
+        11.199
+      ],
+      [
+        "ⲧⲉϥ",
+        2,
+        9.642
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        1,
+        9.491
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.912
+      ],
+      [
+        "ⲁ",
+        3,
+        7.477
+      ],
+      [
+        "ⲥ",
+        2,
+        6.952
+      ],
+      [
+        "ⲧ",
+        2,
+        6.749
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        6.495
+      ],
+      [
+        "ϥ",
+        2,
+        5.2
+      ],
+      [
+        "ⲡ",
+        2,
+        5.175
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.322
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.366
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        2.898
+      ],
+      [
+        "ⲉ",
+        1,
+        2.495
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲓⲃⲉ_0_node",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ϩⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲧⲁⲓⲃⲉ",
+          "ⲧⲉϥ_1_pre_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲧⲁⲓⲃⲉ",
+          "ⲧⲁⲓⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁⲓⲃⲉ_0_node",
+          "ϩⲛ_1_post_ⲧⲁⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲁⲓⲃⲉ",
+          "ⲕⲏⲙⲉ_2_post_ϩⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4540,
+      "count": 5
+    }
+  },
+  "etym": {
+    "egy_num": "175070",
+    "egy_lemma": "ṯb",
+    "demo_num": "d7194",
+    "demo_lemma": "tbj(.t)",
+    "english": "crate (for fowl)",
+    "german": "[ein Kasten (für Vögel)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/175070",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7194"
+  }
+}

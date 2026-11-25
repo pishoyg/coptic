@@ -1,0 +1,103 @@
+{
+  "id": "C4946",
+  "forms": [
+    {
+      "id": "CF31865",
+      "orth": "ϫⲓ ⲙⲡⲟⲩⲟⲉⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31866",
+      "orth": "ϫⲓⲟⲩⲟⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31867",
+      "orth": "ϫⲓⲟⲩⲟⲉⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31868",
+      "orth": "ϫⲓ ⲙⲡⲟⲩⲟⲓ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5571",
+      "bibliography": "CD 472b; KoptHWb 268"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4945",
+      "label": "ϫⲓⲛϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "onrush, attack"
+    },
+    {
+      "target": "C4947",
+      "label": "ϭⲓⲛϯⲡⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "act of going"
+    },
+    {
+      "target": "C4943",
+      "label": "ϯ ⲙⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4940",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "walk around, seek, proceed"
+    },
+    {
+      "target": "C4941",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "progress, impetuosity"
+    },
+    {
+      "target": "C4944",
+      "label": "ϯⲡⲉϥⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4942",
+      "label": "ϯⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4939",
+      "label": "ⲛⲟⲩⲟⲉⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    },
+    {
+      "target": "C4938",
+      "label": "ⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    }
+  ]
+}

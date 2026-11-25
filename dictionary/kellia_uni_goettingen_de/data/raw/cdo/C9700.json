@@ -1,0 +1,99 @@
+{
+  "id": "C9700",
+  "forms": [
+    {
+      "id": "CF24937",
+      "orth": "ⲙⲁⲙⲱⲛⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24938",
+      "orth": "ⲙⲁⲙⲱⲛⲁⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF24939",
+      "orth": "ⲁⲙⲙⲱⲛⲁⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24940",
+      "orth": "ⲁⲙⲙⲱⲛⲁⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12511",
+      "bibliography": "DDGLC",
+      "cu_ID": "362"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛϭⲟⲙ ⲛⲗⲁⲁⲩ ⲉⲣϩⲙϩⲁⲗ ⲛϫⲟⲉⲓⲥ ⲥⲛⲁⲩ ⲏⲅⲁⲣ ϥⲛⲁⲙⲉⲥⲧⲉ ⲟⲩⲁ ⲛϥⲙⲉⲣⲉ ⲟⲩⲁ ⲏⲛϥϭⲟⲗϫϥ ⲛⲟⲩⲁ ⲛϥⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲙⲡⲕⲉⲟⲩⲁ ⲙⲛϭⲟⲙ ⲙⲙⲱⲧⲛ ⲉⲣϩⲙϩⲁⲗ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲛⲡ**ⲙⲁⲙⲱⲛⲁⲥ** .",
+      "english": "'No one can serve two masters, for either he will hate the one and love the other; or else he will be devoted to one and despise the other. You can't serve both God and Mammon.",
+      "source": "40_Matthew_6",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18661,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2746",
+    "grl_lemma": "μαμωνᾶς",
+    "grl_meaning": "wealth",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1078b; Bauer 994; Sophocles 731a"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "C2533",
+  "forms": [
+    {
+      "id": "CF6857",
+      "orth": "ⲛⲧⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 15.19,
+        "rank": 85,
+        "count": 2396
+      }
+    },
+    {
+      "orth": "ⲛⲧⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 149.37,
+        "rank": 13,
+        "count": 12668
+      }
+    },
+    {
+      "orth": "ⲛⲧⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.28,
+        "rank": 318,
+        "count": 278
+      }
+    },
+    {
+      "orth": "ⲛⲧⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 1.26,
+        "rank": 611,
+        "count": 199
+      }
+    },
+    {
+      "orth": "ⲛⲧⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.85,
+        "rank": 491,
+        "count": 157
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "subc": "Genitivpartikel",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2913",
+      "bibliography": "CD 230a; CED 111; KoptHWb 126; DELC 145"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲡⲣⲟⲥⲉⲩⲭⲏ **ⲛⲧⲉ**ⲁⲃⲃⲁⲕⲟⲩⲙ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲉⲙⲟⲩϩⲱⲇⲏ .",
+      "english": "A PRAYER OF THE PROPHET AMBACUM, WITH A SONG.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϫⲱ **ⲛⲧⲉ**ⲛⲓϫⲱ ⲉⲧⲉⲡⲁⲥⲟⲗⲟⲙⲱⲛ ⲡⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ",
+      "english": "The Song of songs, which is Solomon's.",
+      "source": "Song of Solomon 1",
+      "urn": "urn:cts:copticLit:ot.song.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲁⲙⲟϥ ⲉϯⲁⲓⲧⲓⲁ **ⲛⲧⲉ**ⲡⲓϩⲱⲃ .",
+      "english": "Isaac informed him of the reason.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲓ ϫⲉⲡⲁⲓ ⲡⲉ ⲡϣⲁϫⲉ **ⲛⲧⲉ**ⲡϫⲟⲉⲓⲥ ⲛⲛⲁϩⲣⲛⲍⲟⲣⲟⲃⲁⲃⲉⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϩⲛⲟⲩⲛⲟϭ ⲁⲛ ⲛϭⲟⲙ ⲟⲩⲧⲉ ϩⲛⲟⲩⲛⲟϭ ⲁⲛ ⲛⲛⲟⲙⲧⲉ ⲁⲗⲗⲁ ϩⲙⲡⲁⲡⲛⲉⲩⲙⲁ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+      "english": "And he answered and spoke to me, saying, This is the word of the Lord to Zorobabel, saying, Not by mighty power, nor by strength, but by my Spirit, saith the Lord Almighty.",
+      "source": "Zechariah 4",
+      "urn": "urn:cts:copticLit:ot.zech.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲡⲉ ⲛⲟⲩⲧⲁϩ **ⲛⲧⲉ**ⲡⲓⲡⲛⲉⲩⲙⲁ",
+      "english": "These are the fruits of the Spirit.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲕⲥⲛⲏⲩ ⲧⲉⲫⲩⲗⲏ ⲛⲗⲉⲩⲉⲓ ⲡⲇⲏⲙⲟⲥ ⲛⲧⲉⲡⲉⲕⲉⲓⲱⲧ ⲥⲁϩⲱⲟⲩ ⲉϩⲟⲩⲛ ⲉⲣⲟⲕ ⲙⲁⲣⲟⲩⲟⲩⲁϩⲟⲩ ⲉⲣⲟⲕ **ⲛ**ⲥⲉⲗⲓⲧⲟⲩⲣⲅⲉⲓ ⲛⲁⲕ ⲁⲩⲱ ⲛⲧⲟⲕ ⲙⲛⲛⲉⲕϣⲏⲣⲉ ⲛⲙⲙⲁⲕ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲧⲉⲥⲕⲏⲛⲏ ⲙⲡⲙⲛⲧⲣⲉ",
+      "english": "And take to thyself thy brethren the tribe of Levi, the family of thy father, and let them be joined to thee, and let them minister to thee; and thou and thy sons with thee shall minister before the tabernacle of witness.",
+      "source": "Numbers 18",
+      "urn": "urn:cts:copticLit:ot.num.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2532",
+      "label": "ⲛⲧⲉ-",
+      "pos": "PREP",
+      "gloss": "indicating possession, ownership"
+    }
+  ],
+  "etym": {
+    "egy_num": "860665",
+    "egy_lemma": "m-dj",
+    "demo_num": "d3302",
+    "demo_lemma": "ntj",
+    "english": "[Genitive]",
+    "german": "[Genitiv]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/860665",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3302"
+  }
+}

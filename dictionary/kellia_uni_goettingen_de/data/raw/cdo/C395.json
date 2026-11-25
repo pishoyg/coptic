@@ -1,0 +1,56 @@
+{
+  "id": "C395",
+  "forms": [
+    {
+      "id": "CF1644",
+      "orth": "ⲃⲱⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃⲁⲕ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18400,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲁⲕ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3446,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS442",
+      "bibliography": "CD 31a; CED 22; KoptHWB 22; DELC 27"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C11274",
+      "label": "ⲃⲁⲕ-",
+      "pos": "N",
+      "gloss": "tanner"
+    },
+    {
+      "target": "C396",
+      "label": "ⲃⲁⲕϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "tanner"
+    }
+  ]
+}

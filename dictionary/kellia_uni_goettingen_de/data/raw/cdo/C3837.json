@@ -1,0 +1,362 @@
+{
+  "id": "C3837",
+  "forms": [
+    {
+      "id": "CF9599",
+      "orth": "ⲥⲧⲣⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8039,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲑⲉⲣⲧⲉⲣ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.79,
+        "rank": 837,
+        "count": 67
+      }
+    },
+    {
+      "orth": "ⲥⲧⲣⲧⲣⲉ",
+      "dialect": "A",
+      "id": "1504.1"
+    },
+    {
+      "orth": "ⲥⲧⲣⲧⲣ",
+      "dialect": "L",
+      "id": "1504.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4353",
+      "bibliography": "CD 366a; KoptHWb 202, 541; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲱⲧⲉⲙ ⲉⲡⲥⲁϫⲓ ⲙⲡϭⲟⲉⲓⲥ ⲛⲏⲉⲧ**ⲥⲑⲉⲣⲧⲉⲣ** ϧⲁⲧϩⲏ ⲛⲛⲉϥⲥⲁϫⲓ ⲁϫⲟⲥ ⲛⲛⲏⲉⲑⲙⲟⲥϯ ⲙⲙⲱⲧⲉⲛ ⲟⲩⲟϩ ⲉⲧⲱⲣⲉⲃ ⲙⲙⲱⲧⲉⲛ ϫⲉⲛⲑⲱⲧⲉⲛ ⲛⲉⲛⲥⲛⲏⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲫⲣⲁⲛ ⲙⲡϭⲟⲉⲓⲥ : ϭⲓⲱⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϥⲟⲩⲟⲛϩϥ ϧⲉⲛⲡⲟⲩⲟⲩⲛⲟϥ ⲟⲩⲟϩ ⲛⲏⲉⲧⲉⲙⲙⲁⲩ ⲛⲧⲟⲩϭⲓϣⲓⲡⲓ .",
+      "english": "Hear the words of the Lord, ye that tremble at his word; speak ye, our brethren, to them that hate you and abominate you, that the name of the Lord may be glorified, and may appear their joy; but they shall be ashamed.",
+      "source": "23_Isaias_66",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:66",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁⲥϣⲓⲃⲉ ⲛϭⲓⲧⲙⲟⲣⲫⲏ ⲙⲡⲣⲣⲟ ⲁⲩⲱ ⲁⲩϣⲧⲣⲧⲱⲣϥ ⲛϭⲓⲛⲉϥⲙⲉⲉⲩⲉ ⲁⲩⲃⲱⲗ ⲉⲃⲟⲗ ⲛϭⲓⲛⲙⲣⲣⲉ ⲛⲧⲉϥϯⲡⲉ ⲁⲛⲉϥⲡⲁⲧ **ⲥⲧⲣⲧⲣ**",
+      "english": "Then the king's countenance changed, and his thoughts troubled him, and the joints of his loins were loosed, and his knees smote one another.",
+      "source": "Daniel 5",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲟϥ ⲛϫⲉⲡⲓⲡⲛⲉⲩⲙⲁ ⲥⲁⲧⲟⲧϥ ⲁϥϣⲧⲉⲣⲑⲱⲣϥ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲉⲓ ⲉϫⲉⲛⲡⲕⲁϩⲓ ⲛⲁϥ**ⲥⲑⲉⲣⲧⲉⲣ** ⲡⲉ ⲉⲣⲉⲣⲱϥ ϫⲉϣⲥⲫⲏⲓϯ ⲉⲃⲟⲗ .",
+      "english": "They brought him to him, and when he saw him, immediately the spirit convulsed him, and he fell on the ground, wallowing and foaming at the mouth.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛϯϩⲓⲱⲟⲩ ⲛⲛⲉⲧⲕⲏⲕⲁϩⲏⲩ ϫⲉⲕⲁⲥ ⲉⲛⲉⲣⲃⲟⲗ ⲉⲡⲉ**ⲥⲧⲣⲧⲣ** ⲙⲡϭⲁϩϭⲉϩ ⲛⲛⲟⲃϩⲉ ·",
+      "english": "Let us put clothing on the naked, in order that we may escape from the trouble and the gnashing of teeth.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲥϩⲓⲙⲓ ⲇⲉ ⲉⲧⲁⲥⲉⲣϩⲟϯ ⲟⲩⲟϩ ⲁⲥ**ⲥⲑⲉⲣⲧⲉⲣ** ⲉⲥⲉⲙⲓ ⲉⲫⲏ ⲉⲧⲁϥϣⲱⲡⲓ ⲙⲙⲟⲥ ⲁⲥⲓ ⲟⲩⲟϩ ⲁⲥϩⲓⲧⲥ ⲉϧⲣⲏⲓ ϧⲁⲣⲁⲧϥ ⲟⲩⲟϩ ⲁⲥϫⲉϯⲙⲉⲑⲙⲏⲓ ⲧⲏⲣⲥ ⲛⲁϥ",
+      "english": "But the woman, fearing and trembling, knowing what had been done to her, came and fell down before him, and told him all the truth.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲁϫϩⲓ",
+        6,
+        21.865
+      ],
+      [
+        "ⲟⲩ",
+        49,
+        21.598
+      ],
+      [
+        "ϩⲟϯ",
+        10,
+        21.501
+      ],
+      [
+        "ⲁ",
+        38,
+        20.733
+      ],
+      [
+        "ϥ",
+        43,
+        20.703
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        32,
+        20.08
+      ],
+      [
+        "ⲉ",
+        32,
+        20.017
+      ],
+      [
+        "ϣⲑⲟⲣⲧⲉⲣ",
+        6,
+        19.974
+      ],
+      [
+        "ⲛⲓ",
+        24,
+        19.973
+      ],
+      [
+        ".",
+        27,
+        19.881
+      ],
+      [
+        "ⲛⲏⲉⲧⲁⲥⲁⲓⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲉⲧⲁⲩⲑⲁⲧⲏⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲕϥⲓⲁϩⲟⲙ",
+        1,
+        19.695
+      ],
+      [
+        "ⲟⲩⲛϩⲟⲩⲣ",
+        1,
+        19.695
+      ],
+      [
+        "ϩϯ",
+        1,
+        19.695
+      ],
+      [
+        "ⲥ",
+        20,
+        19.394
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        3,
+        19.321
+      ],
+      [
+        "ⲡⲉ",
+        16,
+        19.238
+      ],
+      [
+        "ϩⲏ",
+        7,
+        18.96
+      ],
+      [
+        "ⲛ",
+        27,
+        18.855
+      ]
+    ],
+    "S": [
+      [
+        "ϭⲁϩϭⲉϩ",
+        1,
+        17.276
+      ],
+      [
+        "ⲡⲁⲧ",
+        1,
+        14.469
+      ],
+      [
+        "ϯⲡⲉ",
+        1,
+        13.554
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        13.09
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        1,
+        12.106
+      ],
+      [
+        "ⲉⲛⲉ",
+        1,
+        10.965
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲧⲣⲧⲣ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϭⲁϩϭⲉϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϭⲁϩϭⲉϩ",
+          1
+        ],
+        [
+          "ⲛ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲧⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_1_pre_ⲥⲧⲣⲧⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲧⲣⲧⲣ_0_node",
+          "ⲙ_1_post_ⲥⲧⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲧⲣⲧⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲁϩϭⲉϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϭⲁϩϭⲉϩ_3_post_ⲡ",
+          "ⲛ_4_post_ϭⲁϩϭⲉϩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϭⲁϩϭⲉϩ",
+          "ⲛ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲥⲧⲣⲧⲣ",
+          "ⲛⲉϥ_2_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_1_pre_ⲥⲧⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_1_pre_ⲥⲧⲣⲧⲣ",
+          "ⲥⲧⲣⲧⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7594,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3838",
+      "label": "ⲥⲧⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "trembling"
+    }
+  ]
+}

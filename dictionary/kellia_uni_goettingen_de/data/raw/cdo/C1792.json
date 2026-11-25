@@ -1,0 +1,229 @@
+{
+  "id": "C1792",
+  "forms": [
+    {
+      "id": "CF5174",
+      "orth": "ⲛⲁⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.82,
+        "rank": 840,
+        "count": 129
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2093",
+      "bibliography": "CD 157ab; KoptHWb 86; ChLCS 24b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲁⲙⲉ** ⲁⲓⲟⲩⲉϣ ⲟⲩⲙⲏⲏϣⲉ ⲛϫⲱⲱⲙⲉ ·",
+      "english": "Truly, I have read a multitude of books,",
+      "source": "Apophthegmata Patrum Sahidic 057: Euprepius 7",
+      "urn": "urn:cts:copticLit:ap.57.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲉ ⲛⲁⲓ **ⲛⲁⲙⲉ** ⲛⲉ ⲛⲣⲉϥⲣⲛⲟⲃⲉ ⲉⲧⲣⲟⲟⲩⲧ ⲉⲩϭⲟⲟⲗⲉ ⲙⲡⲉⲩϫⲓⲛϭⲟⲛⲥ ⲙⲛⲧⲉⲩⲙⲛⲧϣⲁϥⲧⲉ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣⲱⲡⲉ ⲙⲡⲥⲣϩⲛⲁⲥ **ⲛⲁⲙⲉ** ·",
+      "english": "And if she did not truly desire it",
+      "source": "Acephalous 22: YA 517-518",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1451-1453",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        3,
+        18.342
+      ],
+      [
+        "ϥⲁⲓⲕⲗⲟⲙ",
+        5,
+        17.745
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.587
+      ],
+      [
+        "ⲁ",
+        71,
+        16.482
+      ],
+      [
+        "ⲛ",
+        81,
+        15.817
+      ],
+      [
+        "ϫⲟⲡϫⲡ",
+        2,
+        15.587
+      ],
+      [
+        "ⲃⲗⲗⲏ",
+        2,
+        15.587
+      ],
+      [
+        "ⲉ",
+        54,
+        15.071
+      ],
+      [
+        "ϩⲓⲥⲧⲟⲣⲓⲍⲉ",
+        2,
+        15.002
+      ],
+      [
+        "ⲡⲁⲓ",
+        20,
+        14.532
+      ],
+      [
+        "ⲡⲓⲥⲧⲟⲥ",
+        6,
+        14.172
+      ],
+      [
+        "ⲡ",
+        46,
+        14.057
+      ],
+      [
+        "ⲟⲛⲟⲣⲓⲟⲥ",
+        2,
+        14.002
+      ],
+      [
+        "ⲛⲧ",
+        19,
+        13.963
+      ],
+      [
+        "ⲕⲁⲣⲱⲙⲉ",
+        2,
+        13.779
+      ],
+      [
+        "ϫⲓⲧⲉ",
+        2,
+        13.779
+      ],
+      [
+        "ⲡⲣⲩⲙⲏⲕⲓⲣⲓⲟⲥ",
+        1,
+        13.587
+      ],
+      [
+        "ϣⲡⲓⲏⲧ",
+        1,
+        13.587
+      ],
+      [
+        "ⲧⲥⲁⲃⲏⲩ",
+        1,
+        13.587
+      ],
+      [
+        "ⲉⲛⲛⲟⲕⲉⲛϯⲟⲥ",
+        1,
+        13.587
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.81,
+      "rank": 723,
+      "count": 129
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1793",
+      "label": "ϩⲛⲟⲩⲙⲉ",
+      "pos": "ADV",
+      "gloss": "truly"
+    },
+    {
+      "target": "C1795",
+      "label": "ⲑⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "true, honest person"
+    },
+    {
+      "target": "C1796",
+      "label": "ⲑⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "true"
+    },
+    {
+      "target": "C1789",
+      "label": "ⲙⲉ",
+      "pos": "N",
+      "gloss": "truth, justice, true person"
+    },
+    {
+      "target": "C1790",
+      "label": "ⲙⲉ",
+      "pos": "N",
+      "gloss": "truthful, righteous; real, genuine"
+    },
+    {
+      "target": "C1800",
+      "label": "ⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "true, real"
+    },
+    {
+      "target": "C1791",
+      "label": "ⲙⲛⲧⲙⲉ",
+      "pos": "N",
+      "gloss": "truth, righteousness"
+    },
+    {
+      "target": "C1794",
+      "label": "ⲣⲙⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "true, honest person"
+    },
+    {
+      "target": "C1798",
+      "label": "ⲧⲁⲫⲙⲏ",
+      "pos": "N",
+      "gloss": "true"
+    },
+    {
+      "target": "C1797",
+      "label": "ⲧⲁⲫⲙⲏⲓ",
+      "pos": "N",
+      "gloss": "truth"
+    },
+    {
+      "target": "C1799",
+      "label": "ⲧⲁⲫⲙⲏⲓ",
+      "pos": "ADV",
+      "gloss": "truly, indeed"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "C3209",
+  "forms": [
+    {
+      "id": "CF8303",
+      "orth": "ⲕⲁⲣⲟⲟⲩϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3666",
+      "bibliography": "CD 307a; KoptHWb 170; ChLCS 43a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3213",
+      "label": "ϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-taker, guardian"
+    },
+    {
+      "target": "C3211",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "take care, thought"
+    },
+    {
+      "target": "C3212",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, anxiety"
+    },
+    {
+      "target": "C3215",
+      "label": "ⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-free, not liable"
+    },
+    {
+      "target": "C3214",
+      "label": "ⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, providence"
+    },
+    {
+      "target": "C3216",
+      "label": "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "freedom from care"
+    },
+    {
+      "target": "C3207",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "have care for, be intent on"
+    },
+    {
+      "target": "C3208",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, concern; cause of anxiety"
+    },
+    {
+      "target": "C3210",
+      "label": "ⲣⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "make care, be anxious, take care of, give heed to"
+    }
+  ]
+}

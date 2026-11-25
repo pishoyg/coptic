@@ -1,0 +1,62 @@
+{
+  "id": "C7379",
+  "forms": [
+    {
+      "id": "CF16817",
+      "orth": "ⲣⲉϥⲣϫⲟⲉⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8161",
+      "bibliography": "CD 788a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7376",
+      "label": "ϫⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "lord, master, owner"
+    },
+    {
+      "target": "C7377",
+      "label": "ϫⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "mistress, owner"
+    },
+    {
+      "target": "C7380",
+      "label": "ⲙⲛⲧϫⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "reign, dominion, lordship"
+    },
+    {
+      "target": "C7378",
+      "label": "ⲣϫⲟⲉⲓⲥ",
+      "pos": "V",
+      "gloss": "be lord, rule"
+    }
+  ]
+}

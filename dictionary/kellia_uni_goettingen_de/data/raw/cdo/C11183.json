@@ -1,0 +1,553 @@
+{
+  "id": "C11183",
+  "forms": [
+    {
+      "id": "CF31029",
+      "orth": "ϩⲟⲧⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF31030",
+      "orth": "ϩⲟⲧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.44,
+        "rank": 583,
+        "count": 122
+      }
+    },
+    {
+      "id": "CF31031",
+      "orth": "ϩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.37,
+        "rank": 308,
+        "count": 531
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS15736",
+      "bibliography": "DDGLC",
+      "cu_ID": "427"
+    },
+    {
+      "id": "CS15737",
+      "bibliography": "DDGLC",
+      "cu_ID": "5455"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲁⲓϫⲟⲧⲟⲩ ⲛⲱⲧⲉⲛ ϧⲉⲛϩⲁⲛⲡⲁⲣⲟⲓⲙⲓⲁ ⲥⲛⲏⲟⲩ ⲇⲉ ⲛϫⲉⲟⲩⲟⲩⲛⲟⲩ **ϩⲟⲧⲉ** ⲉⲓⲛⲁⲥⲁϫⲓ ⲛⲉⲙⲱⲧⲉⲛ ⲁⲛ ϫⲉϧⲉⲛϩⲁⲛⲡⲁⲣⲟⲓⲙⲓⲁ ⲁⲗⲗⲁ ϧⲉⲛⲟⲩⲡⲁⲣⲣⲏⲥⲓⲁ ϯⲛⲁⲧⲁⲙⲱⲧⲉⲛ ⲉⲑⲃⲉⲫⲓⲱⲧ",
+      "english": "I have spoken these things to you in figures of speech. But the time is coming when I will no more speak to you in figures of speech, but will tell you plainly about the Father.",
+      "source": "04_John_16",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ**ϩⲟⲧⲉ** ⲅⲁⲣ ⲁⲩⲱ ⲟⲩϩⲱⲃ ⲡⲉ ⲡⲁⲣⲁⲡⲛⲟⲙⲟⲥ ⲡⲉ ⲉⲧⲣⲉⲕⲕⲟⲧⲕ ⲉⲥⲣⲓⲧ ⲙⲡⲉⲕⲱϩⲥ · ⲁⲩⲱ ⲡⲉⲕⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ ⲉⲧⲣⲉⲕⲕⲟⲧⲕ ⲉϫⲟⲟⲗⲉϥ ⲛⲕⲉⲥⲟⲡ · ⲁⲩⲱ ⲡⲉⲕⲙⲁ ⲛϫⲟⲉⲓⲧ ⲉⲥⲣⲁⲧϥ ⲛⲕⲉⲥⲟⲡ · ⲉⲃⲟⲗ ϫⲉϣϣⲉ ⲉⲕⲁⲛⲁⲓ ⲛⲛϩⲏⲕⲉ ·",
+      "english": "Now, it is a terrible thing, and a matter wholly outside the Law, for thee to come back and reap thy fields a second time, or for thee to come back and gather grapes a second time from thy vineyard, or for thee to come back and gather fruit a second time from thine olive trees; for it is meet that thou shouldst leave these for the poor.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϩⲟⲧⲉ** ⲇⲉ ⲉⲧⲁϥⲓ ⲛϫⲉⲫⲙⲟϩ ⲛⲧⲉⲡⲓⲥⲏⲟⲩ ⲁⲫⲛⲟⲩϯ ⲟⲩⲱⲣⲡ ⲙⲡⲉϥϣⲏⲣⲓ ⲉⲁϥϣⲱⲡⲓ ϧⲁⲟⲩⲥϩⲓⲙⲓ ⲉⲁϥϣⲱⲡⲓ ϧⲁⲡⲓⲛⲟⲙⲟⲥ .",
+      "english": "But when the fullness of the time came, God sent out his Son, born to a woman, born under the law,",
+      "source": "09_Galathians_04",
+      "urn": "urn:cts:copticLit:nt.gal.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲡⲙⲉϩⲥⲛⲁⲩ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲁϥϫⲟⲟⲩϥ ϣⲁⲣⲟϥ · ⲙⲛⲡⲙⲉϩϣⲟⲙⲛⲧ ϣⲁϩⲣⲁⲓ ⲉⲡⲙⲉϩⲥⲁϣϥ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲟⲩⲉϣ ϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ · ⲉⲃⲟⲗ ϫⲉⲛⲉϥⲱⲣⲕ ⲉⲣⲟⲟⲩ ⲛϩⲉⲛⲛⲟϭ ⲛⲁⲛⲁϣ ⲛ**ϩⲟⲧⲉ** ·",
+      "english": "And straightaway My Father commanded an angel a second time to go to it, and then a third angel, and so on even unto seven angels, and not one of them wished to approach the earth because it took awful oaths by mighty [names].",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲉϣⲱⲡⲓ ⲅⲁⲣ ⲛϫⲉⲟⲩⲥⲏⲟⲩ **ϩⲟⲧⲉ** ⲛⲛⲟⲩϣⲉⲡ ϯⲥⲃⲱ ⲉⲑⲟⲩⲟϫ ⲉⲣⲱⲟⲩ ⲁⲗⲗⲁ ⲕⲁⲧⲁⲛⲟⲩⲉⲡⲓⲑⲩⲙⲓⲁ ⲙⲙⲁⲩⲁⲧⲟⲩ ⲉⲩⲥⲱⲕ ⲛⲱⲟⲩ ⲛϩⲁⲛⲣⲉϥϯⲥⲃⲱ ⲉⲩϧⲱϧ ⲛⲛⲟⲩⲙⲁϣϫ .",
+      "english": "For the time will come when they will not listen to the sound doctrine, but, having itching ears, will heap up for themselves teachers after their own lusts;",
+      "source": "16_II Timothy_04",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓϩⲩⲙⲛⲉⲩⲉ ⲉϩⲣⲁⲓ ⲉⲣⲟⲕ ⲡⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲧⲁⲙⲉⲧⲁⲛⲟⲓⲁ ⲛⲁⲧⲁϩⲟⲕ ⲉϩⲣⲁⲓ ⲉⲡϫⲓⲥⲉ · ⲙⲁⲣⲉⲡⲉⲕⲟⲩⲟⲉⲓⲛ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ . ϫⲉⲁⲩϥⲓ ⲡⲁⲟⲩⲟⲉⲓⲛ ϩⲣⲁⲓ ⲛϩⲏⲧ · ⲁⲩⲱ ϯϣⲟⲟⲡ ϩⲛϩⲉⲛϩⲓⲥⲉ ⲉⲧⲃⲉ ⲡⲟⲩⲟⲉⲓⲛ · ϫⲓⲛⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲛⲧⲁⲩⲡⲣⲟⲃⲁⲗⲉ ⲙⲙⲟⲓ ⲉⲃⲟⲗ · ⲁⲩⲱ ⲛⲧⲉⲣⲓϭⲱϣⲧ ⲉⲡϫⲓⲥⲉ ⲉⲡⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲁⲓϭⲱϣⲧ ⲉⲡⲉⲥⲏⲧ ⲉϯϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲧϩⲙⲡⲉⲭⲁⲟⲥ . ⲁⲓⲧⲱⲟⲩⲛ ⲁⲓⲉⲓ ⲉⲡⲉⲥⲏⲧ . ⲁⲡⲉⲕⲧⲱϣ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲁⲩⲱ ⲛ**ϩⲟⲧⲉ** ⲉⲛⲧⲁⲕⲧⲟϣⲟⲩ ⲉⲉⲣⲟⲓ ⲁⲩϣⲧⲣⲧⲱⲣⲧ · ⲁⲩⲱ ⲁⲩⲕⲱⲧⲉ ⲉⲣⲟⲓ ⲉⲩⲟϣ ⲛⲧϩⲉ ⲛⲟⲩ ⲙⲙⲟⲟⲩ ⲁⲩⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲓ ϩⲓⲟⲩⲥⲟⲡ ⲙⲡⲁⲟⲩⲟⲉⲓϣ ⲧⲏⲣϥ · ⲁⲩⲱ ϩⲓⲧⲙⲡⲉⲕⲧⲱϣ ⲙⲡⲕⲕⲁ ⲛⲁϣⲃⲣⲡⲣⲟⲃⲟⲗⲏ ⲉⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲓ · ⲁⲩⲱ ⲙⲡⲕⲕⲁⲡⲁⲥⲩⲛⲍⲩⲅⲟⲥ ⲉⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲛⲛⲁⲑⲗⲓⲯⲓⲥ ·",
+      "english": "“13. But I have sung praises unto thee, O Light, and my repentance will reach unto thee | in the height. “14. Let thy light come upon me, “15. For they have taken my light, and I am in pain on account of the Light from the time when I was emanated. And when I had looked into the height to the Light, then I looked down below at the light-power in the chaos; I rose up and went down. “16. Thy commandment came upon me, and the terrors, which thou didst decree for me, have brought me into delusion. 17. And they have surrounded me, in numbers as water, they have laid hold on me together all my time. 18. And by thy commandment thou hast not suffered my fellow-emanations to help me, nor hast thou suffered my pair to save me out of my afflictions.”",
+      "source": "Pistis Sophia Book 1 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:50-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟϯ",
+        60,
+        22.325
+      ],
+      [
+        "ⲟⲩ",
+        244,
+        21.615
+      ],
+      [
+        "ⲉⲧ",
+        172,
+        21.6
+      ],
+      [
+        "ϧⲉⲛ",
+        160,
+        20.798
+      ],
+      [
+        "ⲁ",
+        180,
+        20.534
+      ],
+      [
+        "ⲛ",
+        158,
+        19.571
+      ],
+      [
+        "ⲥⲑⲉⲣⲧⲉⲣ",
+        18,
+        19.208
+      ],
+      [
+        "ⲁ",
+        119,
+        18.743
+      ],
+      [
+        "ϥ",
+        129,
+        18.527
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        106,
+        18.333
+      ],
+      [
+        "ⲩ",
+        76,
+        17.934
+      ],
+      [
+        "ⲟⲓ",
+        33,
+        17.785
+      ],
+      [
+        "ⲛⲉⲙ",
+        69,
+        17.637
+      ],
+      [
+        "ⲧⲉⲛⲉⲥⲟⲑⲙⲉⲥ",
+        3,
+        17.519
+      ],
+      [
+        ".",
+        68,
+        16.948
+      ],
+      [
+        "ⲩ",
+        58,
+        16.764
+      ],
+      [
+        "ϯ",
+        53,
+        16.543
+      ],
+      [
+        "ⲥϣⲧⲉⲣⲑⲱⲣⲧ",
+        3,
+        16.519
+      ],
+      [
+        "ⲉ",
+        69,
+        16.412
+      ],
+      [
+        "ⲥ",
+        49,
+        16.341
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        96,
+        31.3
+      ],
+      [
+        "ⲥⲧⲱⲧ",
+        51,
+        21.919
+      ],
+      [
+        "ⲙ",
+        316,
+        21.21
+      ],
+      [
+        "ⲡ",
+        368,
+        21.015
+      ],
+      [
+        "ⲛ",
+        338,
+        19.959
+      ],
+      [
+        "ⲧ",
+        198,
+        19.906
+      ],
+      [
+        "ⲟⲩ",
+        241,
+        19.906
+      ],
+      [
+        "ϩⲏⲧ",
+        95,
+        19.604
+      ],
+      [
+        "ⲙⲛ",
+        153,
+        19.364
+      ],
+      [
+        "ϩⲛ",
+        130,
+        18.494
+      ],
+      [
+        "ⲁⲩⲱ",
+        140,
+        18.082
+      ],
+      [
+        "ⲁ",
+        161,
+        17.984
+      ],
+      [
+        "ⲛⲟϭ",
+        56,
+        17.668
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        76,
+        17.47
+      ],
+      [
+        "ⲁⲣⲓ",
+        26,
+        17.307
+      ],
+      [
+        "ⲩ",
+        114,
+        17.256
+      ],
+      [
+        ".",
+        92,
+        17.075
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        54,
+        16.508
+      ],
+      [
+        "ϣⲧⲟⲣⲧⲣ",
+        22,
+        16.35
+      ],
+      [
+        "ⲡⲉⲣⲣ",
+        3,
+        16.3
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲧⲉ_0_node",
+          290
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          69
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          69
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          39
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          30
+        ],
+        [
+          "ⲧ_1_pre_ϩⲟⲧⲉ",
+          30
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          17
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          8
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          10
+        ],
+        [
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          12
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲟⲧⲉ",
+          7
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲧⲉ",
+          6
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲙⲟⲩ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          3
+        ],
+        [
+          "ϣⲧⲟⲣⲧⲣ_1_post_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲟⲧⲉ",
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          "ϣⲧⲟⲣⲧⲣ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          "ⲓⲥⲁⲁⲕ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 1.44,
+      "rank": 505,
+      "count": 122
+    },
+    "S": {
+      "rate": 3.35,
+      "rank": 261,
+      "count": 531
+    }
+  },
+  "etym": {
+    "grl_ID": "2551",
+    "grl_lemma": "ὅτε",
+    "grl_meaning": "when, at the time when, even when",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 1265a"
+  }
+}

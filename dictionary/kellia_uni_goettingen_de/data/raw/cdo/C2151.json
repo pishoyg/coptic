@@ -1,0 +1,108 @@
+{
+  "id": "C2151",
+  "forms": [
+    {
+      "id": "CF6012",
+      "orth": "ⲃⲁⲕⲙⲁⲧⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18541,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2490",
+      "bibliography": "CD 196a; KoptHWb 104; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲕϣⲏⲣⲉ ⲇⲉ ⲛⲧⲟⲟⲩ ⲙⲡⲟⲩϫⲣⲟ ⲉⲣⲟⲟⲩ ⲛϭⲓⲛⲟⲃϩⲉ ⲛⲛϩⲟϥ ⲛ**ⲃⲁⲕⲙⲁⲧⲟⲩ** ⲡⲉⲕⲛⲁ ⲅⲁⲣ ⲁϥⲉⲓ ⲉϫⲱⲟⲩ ⲁϥⲧⲁⲗϭⲟⲟⲩ",
+      "english": "But thy sons not the very teeth of venomous dragons overcame: for thy mercy was ever by them, and healed them.",
+      "source": "Wisdom 16",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟϥ",
+        1,
+        13.576
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        8.868
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲕⲙⲁⲧⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18159,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2153",
+      "label": "ϫⲓⲙⲁⲧⲟⲩ",
+      "pos": "V",
+      "gloss": "receive poison, be poisoned"
+    },
+    {
+      "target": "C2150",
+      "label": "ⲙⲁⲧⲟⲩ",
+      "pos": "N",
+      "gloss": "poison"
+    },
+    {
+      "target": "C2152",
+      "label": "ⲛⲉϫⲙⲁⲧⲟⲩ",
+      "pos": "V",
+      "gloss": "throw poison (of reptiles)"
+    }
+  ]
+}

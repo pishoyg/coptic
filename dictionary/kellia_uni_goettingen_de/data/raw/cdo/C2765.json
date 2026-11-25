@@ -1,0 +1,97 @@
+{
+  "id": "C2765",
+  "forms": [
+    {
+      "id": "CF7359",
+      "orth": "ⲟⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19998,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲱⲟⲩϣ",
+      "dialect": "B",
+      "id": "1247.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3162",
+      "bibliography": "CD 257a; CED 122; KoptHWb 142, 529; DELC 156; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϯⲛⲁϥⲓ ⲣ**ⲟⲟⲩϣ** ⲛⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲉⲧⲉⲣⲉⲧⲉⲛⲣ ⲡⲙⲉⲉⲩⲉ ⲉⲧⲃⲉⲛⲁⲓ ⲕⲁⲓⲡⲉⲣ ⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲩⲱ ⲛⲛⲉⲧⲉⲧⲛⲧⲁϫⲣⲏⲩ ⲏⲛ ⲧⲙⲉ ⲉⲧϣⲟⲟⲡ",
+      "english": "Therefore I will not be negligent to remind you of these things, though you know them, and are established in the present truth.",
+      "source": "61_2 Peter_1",
+      "urn": "urn:cts:copticLit:nt.2pet.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        10.532
+      ],
+      [
+        "ϥⲓ",
+        1,
+        10.211
+      ],
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19607,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "23110",
+    "egy_lemma": "jwšš",
+    "demo_num": "dm4346",
+    "demo_lemma": "ꜥwš",
+    "english": "[mash (med.)]; [dough (med.)]",
+    "german": "[Teig]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/23110",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm4346"
+  }
+}

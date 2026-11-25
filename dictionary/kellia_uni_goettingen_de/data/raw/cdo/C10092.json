@@ -1,0 +1,474 @@
+{
+  "id": "C10092",
+  "forms": [
+    {
+      "id": "CF26486",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26490",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2752,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF26488",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26489",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12755,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26487",
+      "orth": "ⲡⲁⲣⲑⲉⲛⲉⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13280",
+      "bibliography": "DDGLC",
+      "cu_ID": "3015"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥⲛⲁⲩ ⲛϫⲉⲧⲉⲥⲥⲱⲛⲓ ⲟⲟⲗⲓⲃⲁ ⲁⲥϭⲱϧⲉⲙ ⲛⲧⲉⲥ**ⲡⲁⲣⲑⲉⲛⲓⲁ** ⲉϩⲟⲧⲉⲣⲟⲥ ⲟⲩⲟϩ ⲧⲉⲥⲡⲟⲣⲛⲉⲓⲁ ⲁⲥⲁϣⲁⲓ ⲉϩⲟⲧⲉ ⲧⲡⲟⲣⲛⲉⲓⲁ ⲛⲧⲉⲥⲥⲱⲛⲓ .",
+      "english": "And her sister Ooliba saw it, and she indulged in her fondness more corruptly than she, and in her fornication more than the fornication of her sister.",
+      "source": "26_Ezechiel_23",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩ**ⲡⲁⲣⲑⲉⲛⲓⲁ** ϩⲛⲛⲉⲕⲙⲉⲉⲩⲉ ·",
+      "english": "(let) virginity be in thy thoughts (or, mind)",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϣⲱⲥ ⲛⲣⲉϥⲙⲟⲟⲛⲉ ⲕⲁⲗⲱⲥ ⲡⲉ ⲉϥⲫⲟⲣⲉⲓ ⲛⲧⲥⲛⲧⲉ ⲛⲁⲣⲉⲧⲏ · ⲧ**ⲡⲁⲣⲑⲉⲛⲓⲁ** · ⲁⲩⲱ ⲡⲅⲁⲙⲟⲥ ⲛⲥⲉⲙⲛⲟⲛ ·",
+      "english": "and a shepherd who pastured his sheep wisely. He was clothed with the foundation of virtue, virginity, and holy matrimony.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲓⲙⲁⲛⲧⲁⲩⲕⲩⲣⲏⲥⲥⲉ ϩⲛⲟⲩⲛⲟϭ ⲛⲥⲙⲏ ⲙⲡⲡⲁϩⲣⲉ ⲛⲭⲣⲏⲥⲓⲙⲟⲛ ⲛⲧⲛⲏⲥⲧⲉⲓⲁ · ⲡⲉϩⲙⲉ ⲛϩⲟⲟⲩ ⲉⲧⲟⲩⲁⲁⲃ · ⲡⲃⲉⲕⲉ ⲉⲧⲛⲁϣⲱϥ ⲛⲧⲉⲕⲣⲁⲧⲓⲁ · ⲡϩⲓⲥⲁⲅⲅⲉⲗⲟⲥ ⲛⲧ**ⲡⲁⲣⲑⲉⲛⲓⲁ** · ⲧⲙⲛⲧⲛⲁⲏⲧ ⲉⲧϣⲏⲡⲧⲙⲛⲧⲣⲙⲣⲁϣ · ⲧⲙⲛⲧⲙⲁⲅⲁⲣⲓⲟⲥ · ⲧⲙⲛⲧⲥⲁⲃⲉ ⲉⲧⲉⲙⲛⲧⲥϣⲓ · ⲧⲙⲛⲧϩⲁⲣϣ ϩⲏⲧⲧⲉⲧⲧⲛⲧⲱⲛ ⲉⲡⲛⲟⲩⲧⲉ · ⲧⲙⲛⲧⲁⲧϣⲉ ⲛϩⲁⲥⲓⲉ ⲛⲧϩⲩⲡⲟⲙⲓⲛⲏ ·",
+      "english": "In this world are preached with a loud voice the useful medicines of the fast of the holy Forty Days, and the great reward of continence, and the angelic character of virginity, and the almsgiving which is accepted, and the gentle disposition, and the quantity of blessing, and the meekness which is without limit, and the longsuffering which is like unto that of God, and the immeasurable patience which cannot be submerged",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲟⲧⲉⲣⲟ",
+        1,
+        14.837
+      ],
+      [
+        "ⲧⲉⲥ",
+        2,
+        14.556
+      ],
+      [
+        "ϭⲱϧⲉⲙ",
+        1,
+        12.64
+      ],
+      [
+        "ⲥ",
+        2,
+        9.428
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧⲛⲁⲏⲧ",
+        3,
+        16.829
+      ],
+      [
+        "ϩⲁⲣⲙⲟⲥⲓⲏⲗ..ⲥⲁⲗⲡⲓⲅⲝ",
+        1,
+        16.598
+      ],
+      [
+        "ⲕⲉϩⲉⲗⲗⲟ",
+        1,
+        16.598
+      ],
+      [
+        ".....ⲙⲛⲧⲉϥ",
+        1,
+        16.598
+      ],
+      [
+        "ⲅⲁⲙⲟⲥ",
+        2,
+        15.013
+      ],
+      [
+        "ϩⲓⲥⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        15.013
+      ],
+      [
+        "ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+        1,
+        14.598
+      ],
+      [
+        "ⲁⲣⲉⲧⲏ",
+        2,
+        13.106
+      ],
+      [
+        "ⲧ",
+        12,
+        12.826
+      ],
+      [
+        "ⲕⲁⲧⲟⲣⲑⲟⲩ",
+        1,
+        12.791
+      ],
+      [
+        "ⲧⲟⲟⲃⲉ",
+        1,
+        12.206
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        3,
+        11.378
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        2,
+        10.737
+      ],
+      [
+        "ⲧⲃⲃⲟ",
+        2,
+        10.709
+      ],
+      [
+        "ⲥⲧⲟⲗⲏ",
+        1,
+        10.469
+      ],
+      [
+        "ϣⲧⲁⲙ",
+        1,
+        10.24
+      ],
+      [
+        "ⲛ",
+        11,
+        10.187
+      ],
+      [
+        "ⲕ",
+        5,
+        9.818
+      ],
+      [
+        ":—",
+        1,
+        9.778
+      ],
+      [
+        "ⲙⲉⲗⲟⲥ",
+        1,
+        9.428
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          13
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲧⲉ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_2_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲥⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲱⲱ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲅⲁⲙⲟⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          "ⲁⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲙⲙⲁⲧⲉ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲧⲉ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲛ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲁⲗⲗⲁ_2_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲟⲩ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲥⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁ_2_post_ⲛ",
+          "ϩⲱⲱ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          "ⲁⲩⲱ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲅⲁⲙⲟⲥ",
+          "ⲡ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲅⲁⲙⲟⲥ",
+          "ⲅⲁⲙⲟⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲅⲁⲙⲟⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲛ_2_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          "ⲧ_2_post_ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ",
+          "ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲣⲭⲓⲉⲣⲉⲩⲥ_1_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲁⲩⲱ_3_post_ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+          "ⲧ_3_post_ⲙⲛⲧⲙⲁⲣⲧⲩⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲧⲉϥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2437,
+      "count": 16
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 12192,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5229",
+    "grl_lemma": "παρθενεία",
+    "grl_meaning": "virginity",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1339a; Preisigke 2:268"
+  }
+}

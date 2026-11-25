@@ -1,0 +1,283 @@
+{
+  "id": "C3282",
+  "forms": [
+    {
+      "id": "CF8452",
+      "orth": "ϯⲥⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8668,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3749",
+      "bibliography": "CD 315b; KoptHWb 178; DELC 182; ChLCS 44b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲛⲟⲩⲃ ⲅⲁⲣ ⲉⲧⲟⲩϭⲟⲟⲗⲉ ⲙⲙⲟϥ ⲉⲩⲥⲁ ⲛⲁⲩ ⲉⲩⲧⲙϥⲱⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲉϥϣⲏⲃⲉ ⲉⲙⲉⲩ**ϯⲥⲁ** ϩⲁⲣⲟⲟⲩ ⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲅⲁⲣ ⲉⲩⲟⲩⲱⲧϩ ⲙⲙⲟⲟⲩ ⲙⲉⲩⲁⲓⲥⲑⲁⲛⲉ",
+      "english": "Notwithstanding the gold that is about them to make them beautiful, except they wipe off the rust, they will not shine: for neither when they were molten did they feel it.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱⲁⲃ ⲁϥⲥⲁⲗⲡⲓⲍⲉ ϩⲛⲧⲥⲁⲗⲡⲓⲅⲝ ⲛⲁϣⲧⲁⲡ ⲡⲗⲁⲟⲥ ⲁϥⲟⲗϥ ⲉⲃⲟⲗ ⲁⲩⲗⲟ ⲉⲩⲡⲏⲧ ⲛⲥⲁⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲓⲱⲁⲃ ⲛⲉϥ**ϯⲥⲁ** ⲉⲡⲗⲁⲟⲥ",
+      "english": "And Joab blew the trumpet, and the people returned from pursuing Israel, for Joab spared the people.",
+      "source": "II Samuel 18",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲃⲉ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲉⲩ",
+        1,
+        16.428
+      ],
+      [
+        "ⲓⲱⲁⲃ",
+        1,
+        12.765
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        10.446
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        8.925
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲓⲱⲁⲃ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ϯⲥⲁ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲙⲉⲩ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲱⲧϩ",
+          1
+        ],
+        [
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϯⲥⲁ",
+          "ⲓⲱⲁⲃ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲓⲱⲁⲃ_1_pre_ϯⲥⲁ",
+          "ⲛⲉ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϯⲥⲁ",
+          "ϥ_1_pre_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲥⲁ",
+          "ϯⲥⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲥⲁ_0_node",
+          "ⲉ_1_post_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ⲙⲉⲩ_1_pre_ϯⲥⲁ",
+          "ϯⲥⲁ_0_node",
+          1
+        ],
+        [
+          "ϯⲥⲁ_0_node",
+          "ϩⲁⲣⲟ_1_post_ϯⲥⲁ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ϯⲥⲁ",
+          "ⲟⲩ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲁⲣⲟ",
+          "ⲙ_3_post_ⲟⲩⲱⲧϩ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲟⲩⲱⲧϩ",
+          "ⲡⲉ_4_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8221,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3279",
+      "label": "ⲙⲛⲧⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3281",
+      "label": "ⲟ ⲛⲥⲁⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3280",
+      "label": "ⲣⲥⲁⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "become beautiful"
+    },
+    {
+      "target": "C3274",
+      "label": "ⲥⲁ",
+      "pos": "V",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C3275",
+      "label": "ⲥⲁ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C3276",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful person"
+    },
+    {
+      "target": "C3277",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful person"
+    },
+    {
+      "target": "C3278",
+      "label": "ⲥⲁⲉⲓⲉ",
+      "pos": "N",
+      "gloss": "beautiful"
+    }
+  ]
+}

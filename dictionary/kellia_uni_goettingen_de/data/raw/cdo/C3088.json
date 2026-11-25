@@ -1,0 +1,638 @@
+{
+  "id": "C3088",
+  "forms": [
+    {
+      "id": "CF8050",
+      "orth": "ⲣⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.8,
+        "rank": 356,
+        "count": 441
+      }
+    },
+    {
+      "orth": "ⲣⲓⲙⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.95,
+        "rank": 477,
+        "count": 165
+      }
+    },
+    {
+      "orth": "ⲣⲓⲙⲉ",
+      "dialect": "A",
+      "id": "356.1"
+    },
+    {
+      "orth": "ⲣⲓⲙⲓ",
+      "dialect": "F",
+      "id": "356.2"
+    },
+    {
+      "orth": "ⲗⲓⲙⲓ",
+      "dialect": "F",
+      "id": "356.3"
+    },
+    {
+      "orth": "ⲣⲓⲙⲉ",
+      "dialect": "L",
+      "id": "356.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3536",
+      "bibliography": "CD 294a; CED 136; KoptHWb 163; DELC 172; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲏ ⲉⲧⲣⲓⲙⲓ ϩⲱⲥ ⲛⲥⲉ**ⲣⲓⲙⲓ** ⲁⲛ ⲛⲏ ⲉⲧⲣⲁϣⲓ ϩⲱⲥ ⲛⲥⲉⲣⲁϣⲓ ⲁⲛ ⲛⲏ ⲉⲧϣⲱⲡ ϩⲱⲥ ⲛⲥⲉⲁⲙⲟⲛⲓ ⲁⲛ .",
+      "english": "and those who weep, as though they didn't weep; and those who rejoice, as though they didn't rejoice; and those who buy, as though they didn't possess;",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲕⲟⲧⲕ ⲛⲅ**ⲣⲓⲙⲉ** ϩⲁⲛⲉⲕⲛⲟⲃⲉ ·",
+      "english": "Moreover, turn thyself, weep for thy sins.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓ ⲉⲡⲏⲓ ⲙⲡⲓⲁⲣⲭⲏⲥⲩⲛⲁⲅⲱⲅⲟⲥ ⲟⲩⲟϩ ⲁⲩⲛⲁⲩ ⲉⲣⲱⲟⲩ ⲉⲩϣⲑⲉⲣⲑⲱⲣ ⲟⲩⲟϩ ⲉⲩ**ⲣⲓⲙⲓ** ⲟⲩⲟϩ ⲉⲩϣⲗⲏⲗⲟⲩⲓ ⲛⲟⲩⲙⲏϣ .",
+      "english": "He came to the synagogue ruler's house, and he saw an uproar, weeping, and great wailing.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛ**ⲣⲓⲙⲉ** ⲟⲛ ⲛⲧϩⲉ ⲛⲇⲁⲩⲉⲓⲇ ·",
+      "english": "'Moreover, let us weep even as did David",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲙⲟⲩϯ ⲛϫⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲫⲙⲁϩⲥⲟⲡ ⲃ ⲟⲩⲟϩ ⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲙⲡⲓⲥⲁϫⲓ ⲙⲫⲣⲏϯ ⲉⲧⲁϥϫⲟⲥ ⲛⲁϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲙⲡⲁⲧⲉⲟⲩⲁⲗⲉⲕⲧⲱⲣ ⲙⲟⲩϯ ⲛⲥⲟⲡ ⲃ ⲭⲛⲁϫⲟⲗⲧ ⲉⲃⲟⲗ ⲛⲅ ⲛⲥⲟⲡ ⲟⲩⲟϩ ⲉⲧⲁϥϩⲓⲧⲟⲧϥ ⲁϥ**ⲣⲓⲙⲓ** .",
+      "english": "The rooster crowed the second time. Peter remembered the word, how that Jesus said to him, 'Before the rooster crows twice, you will deny me three times.' When he thought about that, he wept.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩ**ⲣⲓⲙⲉ** ϫⲉⲛⲧⲛⲟⲩⲉϣϫⲱⲕⲙ ⲁⲛ ,",
+      "english": "as they weep, &apos;We don&apos;t want to to bathe.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁ",
+        101,
+        24.964
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        94,
+        24.744
+      ],
+      [
+        "ⲉ",
+        95,
+        24.727
+      ],
+      [
+        "ⲣⲓⲙⲓ",
+        16,
+        24.329
+      ],
+      [
+        "ϩⲏⲃⲓ",
+        8,
+        23.14
+      ],
+      [
+        "ⲟⲩ",
+        64,
+        22.754
+      ],
+      [
+        "ⲩ",
+        46,
+        22.692
+      ],
+      [
+        "ⲥ",
+        41,
+        22.501
+      ],
+      [
+        "ϧⲉⲛ",
+        46,
+        22.334
+      ],
+      [
+        "ϥ",
+        60,
+        22.145
+      ],
+      [
+        "ⲛⲉϩⲡ",
+        5,
+        22.017
+      ],
+      [
+        "ⲛⲉϩⲡⲓ",
+        5,
+        21.96
+      ],
+      [
+        "ϩⲱⲥ",
+        12,
+        21.911
+      ],
+      [
+        "ⲉⲣϩⲏⲃⲓ",
+        6,
+        21.778
+      ],
+      [
+        "ϣⲑⲉⲣⲑⲱⲣ",
+        3,
+        21.643
+      ],
+      [
+        "ⲛⲉⲙ",
+        35,
+        21.63
+      ],
+      [
+        "ⲉϫⲱ",
+        15,
+        21.303
+      ],
+      [
+        "ⲙ",
+        37,
+        21.211
+      ],
+      [
+        "ⲉϩⲣⲏⲓ",
+        16,
+        21.21
+      ],
+      [
+        "ⲛⲁ",
+        33,
+        21.088
+      ]
+    ],
+    "S": [
+      [
+        "ⲁ",
+        283,
+        20.69
+      ],
+      [
+        "ⲁϣⲁϩⲟⲙ",
+        36,
+        20.366
+      ],
+      [
+        "ⲛ",
+        331,
+        20.133
+      ],
+      [
+        "ⲉ",
+        222,
+        19.413
+      ],
+      [
+        "ϥ",
+        199,
+        18.644
+      ],
+      [
+        "ⲉϫⲛ",
+        60,
+        18.358
+      ],
+      [
+        "ⲙⲛ",
+        95,
+        17.566
+      ],
+      [
+        "ⲩ",
+        112,
+        17.444
+      ],
+      [
+        "ⲡ",
+        140,
+        17.097
+      ],
+      [
+        "ϩⲛ",
+        88,
+        17.07
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        31,
+        17.04
+      ],
+      [
+        "ⲟⲩ",
+        115,
+        16.969
+      ],
+      [
+        "ⲁⲩⲱ",
+        98,
+        16.803
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        16.565
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        22,
+        16.404
+      ],
+      [
+        "ϭⲁϩϭϩ",
+        6,
+        16.243
+      ],
+      [
+        "ϫⲁϩϫϩ",
+        7,
+        16.232
+      ],
+      [
+        "ⲥ",
+        75,
+        16.173
+      ],
+      [
+        "ⲛⲉϩⲡⲉ",
+        9,
+        15.928
+      ],
+      [
+        "ϭⲁϩϭⲉϩ",
+        4,
+        15.488
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          123
+        ],
+        [
+          "ϥ_1_pre_ⲣⲓⲙⲉ",
+          27
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲓⲙⲉ",
+          22
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲓⲙⲉ",
+          15
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲓⲙⲉ",
+          9
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲓⲙⲉ",
+          7
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲓⲙⲉ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲓⲙⲉ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲓⲙⲉ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲁϩϫϩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϫⲁϩϫϩ",
+          2
+        ],
+        [
+          "ϫⲁϩϫϩ_1_post_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϫⲁϩϫϩ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϭⲁϩϭⲉϩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϭⲁϩϭⲉϩ",
+          2
+        ],
+        [
+          "ϭⲁϩϭⲉϩ_1_post_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ϭⲁϩϭⲉϩ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          2
+        ],
+        [
+          "ⲟⲣⲫⲁ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲓⲙⲉ",
+          "ϥ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          4
+        ],
+        [
+          "ⲥ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲓⲙⲉ",
+          "ⲩ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲓⲙⲉ",
+          "ⲩ_1_pre_ⲣⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲓⲙⲉ",
+          "ⲥ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲓⲙⲉ",
+          "ⲟⲩ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          "ⲙⲛ_2_post_ϫⲁϩϫϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲁϩϫϩ",
+          "ⲡ_2_post_ϫⲁϩϫϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲁϩϫϩ",
+          "ϫⲁϩϫϩ_1_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϫⲁϩϫϩ_1_post_ⲣⲓⲙⲉ",
+          "ⲛ_2_post_ϫⲁϩϫϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲁϩϫϩ",
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ϭⲁϩϭⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϭⲁϩϭⲉϩ",
+          "ⲡ_2_post_ϭⲁϩϭⲉϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϭⲁϩϭⲉϩ",
+          "ϭⲁϩϭⲉϩ_1_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϭⲁϩϭⲉϩ_1_post_ⲣⲓⲙⲉ",
+          "ⲛ_2_post_ϭⲁϩϭⲉϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲁϩϭⲉϩ",
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          "ⲛ_1_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲓⲙⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲓⲙⲉ",
+          "ⲓ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲓⲙⲉ",
+          "ⲣⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲓⲙⲉ",
+          "ϥ_1_pre_ⲣⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          "ⲟⲣⲫⲁ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲣⲫⲁ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          "ⲁ_2_post_ⲁⲥⲡⲁⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.78,
+      "rank": 297,
+      "count": 442
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C4495",
+      "type": "cf",
+      "label": "make cry (L)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3091",
+      "label": "ϯⲣⲙⲉⲓⲏ",
+      "pos": "V",
+      "gloss": "give tears, weep"
+    },
+    {
+      "target": "C3089",
+      "label": "ⲣⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "weeping"
+    },
+    {
+      "target": "C3090",
+      "label": "ⲣⲙⲉⲓⲏ",
+      "pos": "N",
+      "gloss": "tear"
+    }
+  ],
+  "etym": {
+    "egy_num": "94180",
+    "egy_lemma": "rmi̯",
+    "demo_num": "d3484",
+    "demo_lemma": "rmj",
+    "english": "to weep; to beweep",
+    "german": "weinen; beweinen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3484"
+  }
+}

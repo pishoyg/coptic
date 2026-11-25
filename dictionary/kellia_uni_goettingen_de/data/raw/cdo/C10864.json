@@ -1,0 +1,202 @@
+{
+  "id": "C10864",
+  "forms": [
+    {
+      "id": "CF29628",
+      "orth": "ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29629",
+      "orth": "ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7508,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14992",
+      "bibliography": "DDGLC",
+      "cu_ID": "3755"
+    },
+    {
+      "id": "CS14993",
+      "bibliography": "DDGLC",
+      "cu_ID": "4385"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲧⲉⲓ ⲇⲉ ⲉϥⲟ ⲛϣⲏⲣⲉ ϣⲏⲙ ⲁϥⲙⲉⲣⲉⲧⲉ**ⲫⲓⲗⲟⲥⲟⲫⲓⲁ** ⲙⲡⲃⲓⲟⲥ ⲛⲧⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ ⲁϥϯ ⲙⲡⲉϥⲟⲩⲟⲓ ⲉⲩⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲡⲁⲧⲉϥⲭⲱⲣⲁ ⲡⲉ ⲛⲧⲉⲧⲗⲩⲕⲓⲁ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲙⲁ ⲛⲁⲡⲁ ϩⲓⲉⲣⲟⲛⲓⲕⲟⲥ ·",
+      "english": "While still a child, he loved the philosophy of monastic life, and made his way to a monastery in his home country of Lycia called “Apa Hieronikos's Place”.",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲱϣⲧ ⲙⲏⲡⲱⲥ ⲛⲧⲉⲟⲩⲁ ϣⲱⲡⲉ ⲉϥϣⲱⲗ ⲙⲙⲱⲧⲛ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲉ**ⲫⲓⲗⲟⲥⲟⲫⲓⲁ** ⲙⲛⲧⲁⲡⲁⲧⲏ ⲉⲧϣⲟⲩⲉⲓⲧ ⲕⲁⲧⲁⲙⲡⲁⲣⲁⲇⲟⲥⲓⲥ ⲛⲛⲣⲱⲙⲉ ⲕⲁⲧⲁⲛⲉⲥⲧⲟⲓⲭⲓⲟⲛ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲉⲛⲕⲁⲧⲁ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲁⲛ .",
+      "english": "Be careful that you don't let anyone rob you through his philosophy and vain deceit, after the tradition of men, after the elements of the world, and not after Christ.",
+      "source": "51_Colossians_2",
+      "urn": "urn:cts:copticLit:nt.col.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲡⲁⲧⲏ",
+        1,
+        15.074
+      ],
+      [
+        "ⲃⲓⲟⲥ",
+        1,
+        12.448
+      ],
+      [
+        "ⲙⲉⲣⲉ",
+        1,
+        11.516
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        9.597
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+          1
+        ],
+        [
+          "ⲫⲓⲗⲟⲥⲟⲫⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲃⲓⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲃⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+          "ⲫⲓⲗⲟⲥⲟⲫⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲫⲓⲗⲟⲥⲟⲫⲓⲁ_0_node",
+          "ⲙ_1_post_ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲫⲓⲗⲟⲥⲟⲫⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲃⲓⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲃⲓⲟⲥ_3_post_ⲡ",
+          "ⲛ_4_post_ⲃⲓⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7048,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2311",
+    "grl_lemma": "φιλοσοφία",
+    "grl_meaning": "loving of knowledge, philosophy",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1940a"
+  }
+}

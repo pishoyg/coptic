@@ -1,0 +1,128 @@
+{
+  "id": "C3573",
+  "forms": [
+    {
+      "id": "CF9051",
+      "orth": "ⲥⲏⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9211,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲥⲉⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19213,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲉⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12992,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲥⲏⲓⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1734,
+        "count": 19
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4068",
+      "bibliography": "CD 343b; CED 155; KoptHWb 188; DELC 190; ChLCS 48b"
+    },
+    {
+      "id": "CS4069",
+      "bibliography": "CD 343b; KoptHWb 188; DELC 190; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲩⲛⲁⲣⲁⲧⲓⲟⲩ ⲅⲁⲣ ⲛϣⲟ ⲛⲣⲱⲙⲉ ⲡⲉ . ⲡⲉϫⲁϥ ⲇⲉ ⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲙⲁⲣⲟⲩⲛⲟϫⲟⲩ **ⲥⲏⲛⲉ** ⲥⲏⲛⲉ ⲛⲁⲛⲧⲁⲉⲓⲟⲩ .",
+      "english": "For they were about five thousand men. He said to his disciples, 'Make them sit down in groups of about fifty each.'",
+      "source": "42_Luke_9",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲏⲛⲉ",
+        2,
+        21.598
+      ],
+      [
+        "ⲧⲁⲉⲓⲟⲩ",
+        2,
+        16.448
+      ],
+      [
+        "ⲛⲟϫ",
+        2,
+        13.413
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        10.232
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        10.22
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8776,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "138640",
+    "egy_lemma": "snṯ.y",
+    "demo_num": "dm3579",
+    "demo_lemma": "snꜣ",
+    "english": "deckhouse; cabin (of a divine bark)",
+    "german": "Kajüte (auf dem Boot)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138640",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3579"
+  }
+}

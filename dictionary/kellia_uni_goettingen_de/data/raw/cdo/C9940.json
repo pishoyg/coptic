@@ -1,0 +1,326 @@
+{
+  "id": "C9940",
+  "forms": [
+    {
+      "id": "CF25904",
+      "orth": "ⲟⲡⲧⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF25905",
+      "orth": "ⲟⲡⲧⲁⲥⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5424,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12973",
+      "bibliography": "DDGLC",
+      "cu_ID": "3871"
+    },
+    {
+      "id": "CS12974",
+      "bibliography": "DDGLC",
+      "cu_ID": "10553"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩ ⲁⲣⲁ ⲧⲉ ⲧⲉⲓ**ⲟⲡⲧⲁⲥⲓⲁ** ⲛⲧⲁⲓⲛⲁⲩ ⲉⲣⲟⲥ ·",
+      "english": "And he said, 'What then is the sight which I have seen?",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲟⲩϩⲉ ⲉⲡⲉϥⲥⲱⲙⲁ ⲁⲩⲉⲓ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲛⲁⲩ ⲉⲩ**ⲟⲡⲧⲁⲥⲓⲁ** ⲛⲁⲅⲅⲉⲗⲟⲥ ⲛⲁⲓ ⲉⲩϫⲱ ⲙⲙⲟⲥ",
+      "english": "and when they didn't find his body, they came saying that they had also seen a vision of angels, who said that he was alive.",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲉⲡⲧⲟⲟⲩ ⲁϥϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲡⲙⲁ ⲛⲧⲁϥⲛⲁⲩ ⲉⲧ**ⲟⲡⲧⲁⲥⲓⲁ** ⲛϩⲏⲧϥ ·",
+      "english": "and he departed to the mountain, and went toward the spot wherein he had seen the vision.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲫⲏⲣⲓ",
+        2,
+        14.294
+      ],
+      [
+        "ⲧⲁⲓ",
+        2,
+        13.012
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        10.712
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        9.049
+      ],
+      [
+        "ⲛϫⲉ",
+        2,
+        8.594
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲁⲩ",
+        4,
+        12.817
+      ],
+      [
+        "ⲁⲣⲁ",
+        1,
+        11.331
+      ],
+      [
+        "ⲛⲧ",
+        2,
+        9.23
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        9.019
+      ],
+      [
+        "ⲉ",
+        4,
+        8.817
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        8.144
+      ],
+      [
+        "ⲁ",
+        3,
+        7.799
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        7.298
+      ],
+      [
+        "ⲧ",
+        2,
+        7.071
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        6.91
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        6.84
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.024
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.803
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ⲓ",
+        1,
+        4.85
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲩ",
+        1,
+        3.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲡⲧⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ϣⲫⲏⲣⲓ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲡⲧⲁⲥⲓⲁ_0_node",
+          "ⲛ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          "ϣⲫⲏⲣⲓ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲓ_1_pre_ⲟⲡⲧⲁⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲡⲧⲁⲥⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲓ_1_pre_ⲟⲡⲧⲁⲥⲓⲁ",
+          "ⲟⲡⲧⲁⲥⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲟⲡⲧⲁⲥⲓⲁ_0_node",
+          "ⲛⲧ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          "ⲁ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲛⲁⲩ",
+          "ⲓ_3_post_ⲛⲁⲩ",
+          1
+        ],
+        [
+          "ⲓ_3_post_ⲛⲁⲩ",
+          "ⲛⲁⲩ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲟⲡⲧⲁⲥⲓⲁ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4994,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "3018",
+    "grl_lemma": "ὀπτασία",
+    "grl_meaning": "sight, appearance, vision",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1242a; Sophocles 813b"
+  }
+}

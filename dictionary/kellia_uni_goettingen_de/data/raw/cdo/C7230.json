@@ -1,0 +1,44 @@
+{
+  "id": "C7230",
+  "forms": [
+    {
+      "id": "CF16519",
+      "orth": "ϫⲛ- (ⲙⲡⲉ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "collocPartikel": "ⲙⲡⲉ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS7980",
+      "bibliography": "CD 772a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7228",
+      "label": "ϫⲛ-",
+      "pos": "CONJ",
+      "gloss": "or"
+    },
+    {
+      "target": "C7229",
+      "label": "ϫⲛ- (ⲙⲙⲟⲛ)",
+      "pos": "CONJ",
+      "gloss": "or not"
+    },
+    {
+      "target": "C7231",
+      "label": "ϫⲛ- (ⲙⲡⲱⲣ)",
+      "pos": "CONJ",
+      "gloss": "or rather, respectively"
+    }
+  ]
+}

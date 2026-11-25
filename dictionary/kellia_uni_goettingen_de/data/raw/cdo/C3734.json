@@ -1,0 +1,67 @@
+{
+  "id": "C3734",
+  "forms": [
+    {
+      "id": "CF9385",
+      "orth": "ⲥⲣϥⲉ (ⲉⲃⲟⲗ ⲛ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31702",
+      "orth": "ⲥⲣϥⲉ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉⲃⲟⲗ ⲛ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4242",
+      "bibliography": "CD 357a; KoptHWb 196; DELC 197; ChLCS 50a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3738",
+      "label": "ϭⲓⲛⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure"
+    },
+    {
+      "target": "C3736",
+      "label": "ⲙⲛⲧⲁⲧⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "lack of leisure"
+    },
+    {
+      "target": "C3737",
+      "label": "ⲣⲉϥⲥⲣⲱϥⲧ",
+      "pos": "N",
+      "gloss": "idler"
+    },
+    {
+      "target": "C3732",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "V",
+      "gloss": "be at leisure, unoccupied"
+    },
+    {
+      "target": "C3735",
+      "label": "ⲥⲣϥⲉ",
+      "pos": "N",
+      "gloss": "leisure, perseverance"
+    },
+    {
+      "target": "C3733",
+      "label": "ⲥⲣϥⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "have leisure for, be occupied with"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "id": "C2168",
+  "forms": [
+    {
+      "id": "CF6048",
+      "orth": "ⲕⲁⲙⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17639,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2508",
+      "bibliography": "CD 198a; KoptHWb 107; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁϣⲱⲡⲉ ⲛⲙⲙⲁⲕ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ ⲁⲩⲱ ⲕⲛⲁⲥⲉⲓ ⲛⲧϩⲉ ⲉⲧⲉⲣⲉⲧⲉⲕⲯⲩⲭⲏ ⲟⲩⲁϣⲥ ⲁⲩⲱ ⲛⲉⲕⲕⲉⲉⲥ ⲛⲁⲕⲛⲛⲉ ⲁⲩⲱ ⲛⲥⲉⲣⲧϩⲉ ⲛⲟⲩϣⲛⲏ ⲉⲥⲧⲥⲏⲩ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲡⲏⲅⲏ ⲉⲙⲡⲉⲥ**ⲕⲁⲙⲟⲟⲩ** ⲁⲩⲱ ⲛⲉⲕⲕⲉⲉⲥ ⲛⲁϯⲟⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲛⲧⲏϭ ⲛⲥⲉⲕⲛⲛⲉ ⲁⲩⲱ ⲛⲥⲉⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛϩⲉⲛⲅⲉⲛⲉⲁ ⲉⲃⲟⲗ ϩⲛϩⲉⲛⲅⲉⲛⲉⲁ",
+      "english": "and thy God shall be with thee continually, and thou shalt be satisfied according as thy soul desires; and thy bones shall be made fat, and shall be as a well-watered garden, and as a fountain from which the water has not failed.",
+      "source": "Isaiah 58",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲏⲅⲏ",
+        1,
+        14.189
+      ],
+      [
+        "ⲕⲉⲉⲥ",
+        1,
+        13.843
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        10.101
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.787
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲁⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲁⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲁⲙⲟⲟⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲁⲙⲟⲟⲩ",
+          "ⲥ_1_pre_ⲕⲁⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲁⲙⲟⲟⲩ",
+          "ⲕⲁⲙⲟⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17252,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2173",
+      "label": "ϯⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give water, irrigate"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2165",
+      "label": "ⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "water; inundation"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2170",
+      "label": "ⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "become water, liquify"
+    },
+    {
+      "target": "C2171",
+      "label": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2172",
+      "label": "ⲥⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "scatter, distribute water"
+    }
+  ]
+}

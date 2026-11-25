@@ -1,0 +1,219 @@
+{
+  "id": "C2992",
+  "forms": [
+    {
+      "id": "CF7850",
+      "orth": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8403,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3425",
+      "bibliography": "CD 283a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲙⲉⲧϣⲁⲙϣⲉ ⲓⲇⲱⲗⲟⲛ ϯ**ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ** ⲛⲓⲙⲉⲧϫⲁϫⲓ ⲛⲓϣϭⲛⲏⲛ ⲛⲓⲭⲟϩ ⲛⲓⲙⲃⲟⲛ ⲛⲓϫⲉⲣϫⲉⲣ ⲛⲓⲫⲱⲣϫ ⲛⲓⲙⲉⲧϩⲉⲣⲉⲥⲓⲥ .",
+      "english": "idolatry, sorcery, hatred, strife, jealousies, outbursts of anger, rivalries, divisions, heresies,",
+      "source": "09_Galathians_05",
+      "urn": "urn:cts:copticLit:nt.gal.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓⲙⲉⲧϫⲁϫⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲉⲧϣⲁⲙϣⲉ",
+        1,
+        16.888
+      ],
+      [
+        "ϣϭⲛⲏⲛ",
+        1,
+        15.373
+      ],
+      [
+        "ⲓⲇⲱⲗⲟⲛ",
+        1,
+        13.252
+      ],
+      [
+        "ϯ",
+        2,
+        9.29
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        9.218
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓⲙⲉⲧϫⲁϫⲓ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϣϭⲛⲏⲛ",
+          1
+        ],
+        [
+          "ϣϭⲛⲏⲛ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲭⲟϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ_0_node",
+          "ⲛⲓⲙⲉⲧϫⲁϫⲓ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ⲛⲓⲙⲉⲧϫⲁϫⲓ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲛⲓ_2_post_ϣϭⲛⲏⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ϣϭⲛⲏⲛ",
+          "ϣϭⲛⲏⲛ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          1
+        ],
+        [
+          "ϣϭⲛⲏⲛ_1_post_ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+          "ⲛⲓ_2_post_ⲭⲟϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7873,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2993",
+      "label": "ϫⲓⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "take drugs, be healed; take colour, be dyed"
+    },
+    {
+      "target": "C2990",
+      "label": "ϯⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give drugs, heal"
+    },
+    {
+      "target": "C2994",
+      "label": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "place of healing, pharmacy"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2983",
+      "label": "ⲡⲱϩⲣⲉ",
+      "pos": "V",
+      "gloss": "charm, bewitch"
+    },
+    {
+      "target": "C2991",
+      "label": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "drug-giver, magician"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ]
+}

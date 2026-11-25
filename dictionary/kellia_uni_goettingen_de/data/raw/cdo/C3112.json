@@ -1,0 +1,52 @@
+{
+  "id": "C3112",
+  "forms": [
+    {
+      "id": "CF8100",
+      "orth": "ⲣⲣⲟⲙⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3562",
+      "bibliography": "CD 297a; ChLCS 42a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3109",
+      "label": "ⲣⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "year"
+    },
+    {
+      "target": "C3111",
+      "label": "ⲧⲛⲣⲟⲙⲡⲉ",
+      "pos": "ADV",
+      "gloss": "each year, annually"
+    },
+    {
+      "target": "C3110",
+      "label": "ⲧⲣⲟⲙⲡⲉ",
+      "pos": "ADV",
+      "gloss": "this year"
+    }
+  ]
+}

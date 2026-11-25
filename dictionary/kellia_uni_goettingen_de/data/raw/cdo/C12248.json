@@ -1,0 +1,100 @@
+{
+  "id": "C12248",
+  "forms": [
+    {
+      "id": "CF33265",
+      "orth": "ⲥⲓϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16207,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17252",
+      "bibliography": "CD 388b; KoptHWB 215; CED 176; DELC 207a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲃⲏⲥⲁⲗⲱⲙ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲓⲙ ⲡⲉⲧⲛⲁⲧⲁϩⲟⲓ ⲉⲣⲁⲧⲛⲕⲣⲓⲧⲏⲥ ϩⲓϫⲙⲡⲕⲁϩ ⲛⲥⲉⲉⲓ ⲉⲣⲁⲧⲛϭⲓⲣⲱⲙⲉ ⲛⲓⲙ ⲉⲟⲩⲛⲧϥ**ⲥⲓϭⲉ** ⲙⲙⲁⲩ ⲁⲩⲱ ⲉⲟⲩⲛⲧϥϩⲁⲡ ⲙⲙⲁⲩ ⲛⲧⲁⲧⲙⲁⲓⲟϥ",
+      "english": "And Abessalom said, O that one would make me a judge in the land; then every man who had a dispute or a cause would come to me, and I would judge him!",
+      "source": "II Samuel 15",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲛⲧ",
+        2,
+        16.598
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲓϭⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15810,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12128",
+      "label": "ⲥⲱϭ",
+      "pos": "V",
+      "gloss": "become, be rigid, paralysed; stiffen, paralyse"
+    },
+    {
+      "target": "C12247",
+      "label": "ⲥⲱϭ",
+      "pos": "N",
+      "gloss": "paralysis"
+    }
+  ]
+}

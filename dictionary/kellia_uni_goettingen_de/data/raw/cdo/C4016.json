@@ -1,0 +1,133 @@
+{
+  "id": "C4016",
+  "forms": [
+    {
+      "id": "CF9975",
+      "orth": "ϫⲉⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19754,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4563",
+      "bibliography": "KoptHWb 218"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲛⲧ ⲧⲏⲩⲧⲛ **ϫⲉⲧⲉ**ⲧⲛϩⲛ ⲧⲡⲓⲥⲧⲓⲥ ⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲙⲱⲧⲛ ⲏⲛⲧⲉⲧⲛ ⲉⲓⲙⲉ ⲉⲣⲱⲧⲛ ⲁⲛ ϫⲉⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲛϩⲏⲧ ⲧⲏⲩⲧⲛ ⲉⲓⲙⲏⲧⲓ ϫⲉⲙⲉϣⲁⲕ ⲛⲧⲉⲧⲛϩⲉⲛϫⲟⲟⲩⲧ .",
+      "english": "Test your own selves, whether you are in the faith. Test your own selves. Or don't you know as to your own selves, that Jesus Christ is in you?--unless indeed you are disqualified.",
+      "source": "47_2 Corinthians_13",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲛⲧ",
+        1,
+        19.013
+      ],
+      [
+        "ⲧⲛϩ",
+        1,
+        14.189
+      ],
+      [
+        "ⲡⲓⲥⲧⲓⲥ",
+        1,
+        11.278
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        1,
+        9.946
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19368,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4012",
+      "label": "ϩⲛⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4014",
+      "label": "ⲉⲓ ⲉⲡⲧⲉ",
+      "pos": "V",
+      "gloss": "age"
+    },
+    {
+      "target": "C4013",
+      "label": "ⲉⲡⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4011",
+      "label": "ⲙⲡⲉϥⲧⲉ",
+      "pos": "ADV",
+      "gloss": "at the right time"
+    },
+    {
+      "target": "C4015",
+      "label": "ⲣⲧⲉ",
+      "pos": "V",
+      "gloss": "be of age"
+    },
+    {
+      "target": "C4010",
+      "label": "ⲧⲏ",
+      "pos": "N",
+      "gloss": "time, season"
+    }
+  ]
+}

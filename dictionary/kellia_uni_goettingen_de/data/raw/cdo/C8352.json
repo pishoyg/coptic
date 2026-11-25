@@ -1,0 +1,151 @@
+{
+  "id": "C8352",
+  "forms": [
+    {
+      "id": "CF19390",
+      "orth": "ⲁⲡⲓⲥⲧⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19392",
+      "orth": "ⲁⲡⲓⲥⲧⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7992,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19391",
+      "orth": "ⲁⲡⲓⲥⲧⲉⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9586",
+      "bibliography": "DDGLC",
+      "cu_ID": "1857"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲛⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲛⲁⲙⲉⲣⲁⲧⲉ ϫⲉⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲙⲏϩ ⲛⲕⲱϩ ϩⲓⲡⲑⲟⲛⲟⲥ ϩⲓ**ⲁⲡⲓⲥⲧⲓⲁ** · ⲥⲉⲟ ⲛϫⲁϫⲉ ⲉⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ · ⲣⲟⲉⲓⲥ ϭⲉ ⲉⲣⲱⲧⲛ ⲉⲛⲉⲧⲟ ⲛϫⲁϫⲉ ⲉⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ·",
+      "english": "For we know, O my beloved, that all those who are filled with envy, and ill-will, and unbelief, are the enemies of righteousness; take good heed to yourselves, therefore, that ye may not become the enemies of righteousness.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲙⲁ ⲛⲓⲙ ⲙⲟⲩϩ ⲛⲕⲣⲟϥ ϩⲓϩⲱⲧⲃ ϩⲓⲥⲛⲟϥ ϩⲓϫⲓⲟⲩⲉ ⲧⲁⲕⲟ ϩⲓ**ⲁⲡⲓⲥⲧⲓⲁ** ϣⲧⲟⲣⲧⲣ ⲱⲣⲕ ⲛⲛⲟⲩϫ ⲡⲣⲡⲱⲃϣ ⲛⲛⲁⲅⲁⲑⲟⲛ",
+      "english": "So that there reigned in all men without exception blood, manslaughter, theft, and dissimulation, corruption, unfaithfulness, tumults, perjury,",
+      "source": "Wisdom 14",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲑⲟⲛⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ϩⲓ",
+        4,
+        14.231
+      ],
+      [
+        "ϫⲓⲟⲩⲉ",
+        1,
+        12.418
+      ],
+      [
+        "ϣⲧⲟⲣⲧⲣ",
+        1,
+        11.024
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        1,
+        9.738
+      ],
+      [
+        "ⲱ",
+        1,
+        9.562
+      ],
+      [
+        "ⲟ",
+        1,
+        8.805
+      ],
+      [
+        "ⲣ",
+        1,
+        8.413
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓ_1_pre_ⲁⲡⲓⲥⲧⲓⲁ",
+          2
+        ],
+        [
+          "ⲁⲡⲓⲥⲧⲓⲁ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓ_1_pre_ⲁⲡⲓⲥⲧⲓⲁ",
+          "ⲁⲡⲓⲥⲧⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7545,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3693",
+    "grl_lemma": "ἀπιστία",
+    "grl_meaning": "disbelief, distrust",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 189b; Preisigke 1:164"
+  }
+}

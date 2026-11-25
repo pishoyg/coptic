@@ -1,0 +1,94 @@
+{
+  "id": "C10363",
+  "forms": [
+    {
+      "id": "CF27643",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27644",
+      "orth": "ⲡⲣⲟⲫⲏⲧⲓⲕⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27645",
+      "orth": "ⲡⲣⲱⲫⲩⲧⲓⲕⲟⲛ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13976",
+      "bibliography": "DDGLC",
+      "cu_ID": "3282"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲙⲏ",
+        2,
+        12.535
+      ],
+      [
+        "ϫⲱ",
+        2,
+        10.369
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        9.368
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲙ",
+        2,
+        7.583
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲫⲏⲧⲓⲕⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "3042",
+    "grl_lemma": "προφητικός",
+    "grl_meaning": "oracular, prophetic",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1540a"
+  }
+}

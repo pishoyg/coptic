@@ -1,0 +1,109 @@
+{
+  "id": "C5123",
+  "forms": [
+    {
+      "id": "CF12211",
+      "orth": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2948,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5754",
+      "bibliography": "CD 489b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ **ⲁϥⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ⲛⲛⲓϧⲉⲗϣⲓⲣⲓ ⲛⲧⲉⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲉⲡϣⲱⲓ ⲛϩⲁⲛϭⲗⲓⲗ ⲟⲩⲟϩ ⲁⲩϣⲱⲧ ⲛϩⲁⲛⲙⲁⲥⲓ ⲛⲟⲩϣⲟⲩϣⲱⲟⲩϣⲓ ⲛⲟⲩϫⲁⲓ ⲙⲫⲛⲟⲩϯ",
+      "english": "And he sent forth the young men of the children of Israel, and they offered whole burnt-offerings, and they sacrificed young calves as a peace-offering to God.",
+      "source": "02_Exodus_24",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲱⲟⲩⲛϩⲏⲧ ⲛⲕⲉⲍ ⲛⲉϩⲟⲟⲩ ⲡⲁⲗⲓⲛ **ⲁϥⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ⲛϯϭⲣⲟⲙⲡⲓ ⲉⲃⲟⲗ ϧⲉⲛϯⲕⲩⲃⲱⲧⲟⲥ",
+      "english": "And having waited yet seven other days, he again sent forth the dove from the ark.",
+      "source": "01_Genesis_08",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ **ⲁⲩⲟⲩⲱⲣⲡ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲕⲙⲑⲟ ⲙⲡⲉϩⲟ ⲛⲟⲩⲧⲱⲣⲓ ⲛϫⲓϫ ⲁⲥⲥⲉⲙⲛⲓ ⲛⲧⲁⲓⲅⲣⲁⲫⲏ .",
+      "english": "And his ten horns are ten kings that shall arise: and after them shall arise another, who shall exceed all the former ones in wickedness and he shall subdue three kings.",
+      "source": "27_Daniel_07",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:07",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.08,
+      "rank": 2584,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5130",
+      "label": "ϭⲓⲛⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5122",
+      "label": "ⲟⲩⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "send"
+    },
+    {
+      "target": "C5127",
+      "label": "ⲟⲩⲱⲣⲡ ⲉϧⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "send in"
+    },
+    {
+      "target": "C5124",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5126",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "send up"
+    },
+    {
+      "target": "C5125",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "send down"
+    },
+    {
+      "target": "C5129",
+      "label": "ⲣⲉϥⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "man sent, messenger"
+    },
+    {
+      "target": "C5128",
+      "label": "ⲣⲉⲙⲛⲃⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "messenger"
+    }
+  ]
+}

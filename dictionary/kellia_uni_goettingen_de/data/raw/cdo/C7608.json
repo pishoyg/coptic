@@ -1,0 +1,116 @@
+{
+  "id": "C7608",
+  "forms": [
+    {
+      "id": "CF17278",
+      "orth": "ϭⲁⲗⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8440",
+      "bibliography": "CD 807b; KoptHWb 449; DELC 337b; ChLCS 106b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲓⲫⲉⲓ",
+        1,
+        15.525
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        8.22
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲁⲗⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7605",
+      "label": "ϭⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "lame, crippled person"
+    },
+    {
+      "target": "C7607",
+      "label": "ϭⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "lame, crippled"
+    },
+    {
+      "target": "C7606",
+      "label": "ϭⲁⲗⲏ",
+      "pos": "N",
+      "gloss": "lame, crippled person"
+    },
+    {
+      "target": "C7609",
+      "label": "ⲙⲛⲧϭⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "lameness"
+    },
+    {
+      "target": "C7610",
+      "label": "ⲣϭⲁⲗⲉ",
+      "pos": "V",
+      "gloss": "be, make lame"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6880",
+    "demo_lemma": "gl(e)",
+    "english": "[to be lame]",
+    "german": "lahm; Gelähmter",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6880"
+  }
+}

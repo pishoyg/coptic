@@ -1,0 +1,50 @@
+{
+  "id": "C6203",
+  "forms": [
+    {
+      "id": "CF14416",
+      "orth": "ϣⲟϥⲧⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6890",
+      "bibliography": "CD 611b; KoptHWb 340; DELC 277a; ChLCS 84a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6202",
+      "label": "ϣⲁϥⲧⲉ",
+      "pos": "N",
+      "gloss": "iniquitous, impious (person)"
+    },
+    {
+      "target": "C6200",
+      "label": "ϣⲟϥⲧ",
+      "pos": "N",
+      "gloss": "error, fault"
+    },
+    {
+      "target": "C6199",
+      "label": "ϣⲱϥⲧ",
+      "pos": "V",
+      "gloss": "stumble, err, commit error"
+    },
+    {
+      "target": "C6201",
+      "label": "ⲁⲧϣⲟϥⲧ",
+      "pos": "N",
+      "gloss": "unerring"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "C4510",
+  "forms": [
+    {
+      "id": "CF10976",
+      "orth": "ⲙⲁ ⲛⲑⲱⲣⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5098",
+      "bibliography": "CD 431a; KoptHWb 243; DELC 220b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1771",
+      "type": "cf",
+      "label": "place"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4509",
+      "label": "ⲁⲧⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "unsewn"
+    },
+    {
+      "target": "C4515",
+      "label": "ⲑⲣⲁⲡⲥ",
+      "pos": "N",
+      "gloss": "awl, spike"
+    },
+    {
+      "target": "C4511",
+      "label": "ⲙⲉϩⲧⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "darning needle"
+    },
+    {
+      "target": "C4512",
+      "label": "ⲛⲕⲁ ⲛⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "needle"
+    },
+    {
+      "target": "C4513",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4514",
+      "label": "ⲣⲉϥⲧⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "tailor"
+    },
+    {
+      "target": "C4508",
+      "label": "ⲧⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "sew, stitch"
+    }
+  ]
+}

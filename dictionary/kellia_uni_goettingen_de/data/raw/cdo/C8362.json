@@ -1,0 +1,301 @@
+{
+  "id": "C8362",
+  "forms": [
+    {
+      "id": "CF19426",
+      "orth": "ⲁⲡⲟⲇⲓⲝⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19427",
+      "orth": "ⲁⲡⲟⲇⲓⲝⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4406,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9606",
+      "bibliography": "DDGLC",
+      "cu_ID": "4077"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲭⲱⲣⲓⲥ ⲕⲁⲧⲏⲅⲟⲣⲟⲥ ⲭⲱⲣⲓⲥ **ⲁⲡⲟⲇⲓⲝⲓⲥ** ·",
+      "english": "and without an advocate, and without proofs,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲡⲉⲧⲙⲙⲁⲩ ⲥⲱⲧⲙ ⲁⲛⲟⲕ ϯⲛⲁϯ ⲛⲁϥ ⲛⲟⲩ**ⲁⲡⲟⲇⲓⲝⲓⲥ** ⲉⲃⲟⲗ ϩⲛⲛⲉⲅⲣⲁⲫⲏ ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "let that someone hearken, and I will give him an absolute proof that this is possible from Holy Scripture.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲕⲛⲁϯ ⲛⲧ**ⲁⲡⲟⲇⲓⲝⲓⲥ** ⲛⲧⲙⲛⲧⲥⲧⲙⲏⲧ ⲙⲛⲧϩⲟⲧⲉ ⲉⲧϣⲟⲟⲡ ⲛⲁⲕ ⲉϩⲟⲩⲛ ⲉⲡⲛⲟⲩⲧⲉ · ⲁⲗⲗⲁ ϩⲙⲡⲉⲧⲉⲩⲛϣϭⲟⲙ ⲙⲙⲟⲕ ⲉⲡⲁⲣⲁⲃⲁ ⲛϩⲏⲧϥ ⲛⲅⲧⲙⲡⲁⲣⲁⲃⲁ ·",
+      "english": "Thou art obliged to give a proof of the obedience and fear which are in thee in respect of God, but in that wherein thou hast the power to transgress, thou shalt not transgress.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+        2,
+        16.258
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        2,
+        14.843
+      ],
+      [
+        "ⲕⲁⲧⲏⲅⲟⲣⲟⲥ",
+        1,
+        14.554
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        2,
+        13.168
+      ],
+      [
+        "ⲧ",
+        5,
+        10.452
+      ],
+      [
+        "ⲛ",
+        7,
+        9.646
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        9.103
+      ],
+      [
+        "ⲁϣ",
+        1,
+        8.466
+      ],
+      [
+        "ϯ",
+        2,
+        7.931
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        7.882
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.728
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.059
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.894
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.079
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        5.886
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        5.218
+      ],
+      [
+        "ϥ",
+        2,
+        4.937
+      ],
+      [
+        "ϩⲙ",
+        1,
+        4.828
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲟⲇⲓⲝⲓⲥ_0_node",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲛⲉⲓ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲧⲙⲏⲧ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲅⲣⲁⲫⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲅⲣⲁⲫⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          "ⲁⲡⲟⲇⲓⲝⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲇⲓⲝⲓⲥ_0_node",
+          "ⲛ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          "ⲛⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_2_post_ⲛ",
+          "ϣⲁϫⲉ_3_post_ⲛⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧⲥⲧⲙⲏⲧ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲧⲙⲏⲧ_3_post_ⲧ",
+          "ⲙⲛ_2_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲟⲧⲉ",
+          "ⲧ_2_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲇⲓⲝⲓⲥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲁⲡⲟⲇⲓⲝⲓⲥ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲉⲃⲟⲗ",
+          "ⲅⲣⲁⲫⲏ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲅⲣⲁⲫⲏ_3_post_ⲛⲉ",
+          "ⲉⲧ_4_post_ⲅⲣⲁⲫⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4008,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "218",
+    "grl_lemma": "ἀπόδειξις",
+    "grl_meaning": "showing forth, making known, receipt",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 195b; Preisigke 1:174"
+  }
+}

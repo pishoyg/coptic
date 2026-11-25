@@ -1,0 +1,160 @@
+{
+  "id": "C1654",
+  "forms": [
+    {
+      "id": "CF4791",
+      "orth": "ⲗⲟⲟⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20326,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4792",
+      "orth": "ⲗⲟⲩⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4793",
+      "orth": "ⲙⲟⲟⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7794,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF4794",
+      "orth": "ⲗⲁⲁⲙⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1918",
+      "bibliography": "CD 142b; KoptHWb 78; ChLCS 21b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲕⲟⲩⲱϣ ⲉϫⲡⲟ ⲛⲁⲕ ⲛϩⲉⲛⲭⲣⲏⲙⲁ ⲛⲁⲓ ⲉⲧⲟ ⲙ**ⲙⲟⲟⲗⲉ** · ⲛⲧⲟⲉⲓⲙⲉ ⲙⲡⲕⲱϩⲧ ϩⲛⲟⲩⲙⲛⲧⲙⲁⲓⲧⲟ ⲛϩⲟⲩⲟ · ⲏ ϩⲛⲟⲩⲙⲛⲧⲉϣⲱⲱⲧ ⲏ ϩⲛⲟⲩϫⲓ ⲛϭⲟⲛⲥ · ⲏ ϩⲛⲟⲩⲉⲓⲣⲃⲟⲛⲉ · ⲏ ϩⲛⲟⲩϩⲱⲃ ⲛϭⲓϫ ⲉϥⲟϣ · ⲉⲙⲉⲕⲥⲣϥⲉ ⲉϣⲙϣⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲡⲗⲏⲛ ϩⲛⲥⲙⲟⲧ ⲛⲓⲙ",
+      "english": "If thou wishest to gain for thyself these things (or, possessions) which are transient, and can be destroyed by fire, by great avariciousness, or by trafficking, or by violence, or by evil design, or by excessive manual labour, thou art not free to serve God, at least certainly not in every way.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲡⲗⲱⲥ ⲛⲉⲙⲉⲥⲥⲩⲛⲭⲱⲣⲉⲓ ⲛⲗⲁⲁⲩ ⲛⲛⲉⲥⲁⲓⲥⲑⲏⲥⲓⲥ ⲉⲧⲣⲉⲩⲃⲱϣ ϫⲉⲕⲁⲥ ⲉⲛⲉⲧⲙⲛⲧϩⲁⲕ ⲉⲧⲟⲩϩⲁⲣⲉⲥ ⲉⲣⲟⲥ ϩⲙⲡⲉⲥϩⲏⲧ ⲧⲁⲕⲟ ⲛⲧⲉⲥⲯⲩⲭⲏ ⲛⲥⲥⲗⲁⲁⲧⲉ ⲉⲡⲉⲥⲏⲧ ⲉⲩϩⲏⲇⲟⲛⲏ ⲛϣⲗⲟϥ ϩⲓⲧⲛⲙ**ⲙⲟⲟⲗⲉ** ⲛⲧⲁⲡⲁⲧⲏ ·",
+      "english": "In short, she did not permit any one of her senses to carry her away with sudden swiftness, lest the chastity which she had set firmly in her heart should be destroyed, and her soul glide downwards into obscene pleasures through the deceit of apathy.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲁⲗⲱ",
+        1,
+        18.598
+      ],
+      [
+        "ⲱⲛϩ",
+        1,
+        9.717
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲁ_3_pre_ⲗⲁⲗⲱ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲗⲟⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲗⲁⲗⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲗⲁⲗⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_3_pre_ⲗⲁⲗⲱ",
+          "ⲩ_1_pre_ⲗⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟⲟⲙⲉ",
+          "ⲗⲟⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲟⲙⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ⲗⲁⲗⲱ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲗⲁⲗⲱ",
+          "ⲉ_1_post_ⲗⲟⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲟⲟⲙⲉ",
+          "ⲩ_3_post_ⲗⲁⲗⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7342,
+      "count": 2
+    }
+  }
+}

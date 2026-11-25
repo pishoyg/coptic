@@ -1,0 +1,136 @@
+{
+  "id": "C10621",
+  "forms": [
+    {
+      "id": "CF28721",
+      "orth": "ⲥⲩⲛⲍⲏⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28722",
+      "orth": "ⲥⲩⲛⲍⲏⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9223,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14482",
+      "bibliography": "DDGLC",
+      "cu_ID": "4613"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ϩⲙⲡⲧⲣⲉⲩϣⲁϫⲉ ⲁⲩⲱ ⲛⲥⲉ**ⲥⲩⲛⲍⲏⲧⲉⲓ** ⲁⲓⲏⲥⲟⲩⲥ ϩⲱⲛ ⲉϩⲟⲩⲛ ⲉⲣⲟⲟⲩ ⲁϥⲙⲟⲟϣⲉ ⲛⲙⲙⲁⲩ .",
+      "english": "It happened, while they talked and questioned together, that Jesus himself came near, and went with them.",
+      "source": "42_Luke_24",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲁⲣⲭⲉⲓ ⲛ**ⲥⲩⲛⲍⲏⲧⲉⲓ** ⲙⲛⲛⲉⲩⲉⲣⲏⲩ ϫⲉⲛⲓⲙ ⲛϩⲏⲧⲟⲩ ⲡⲉⲧⲛⲁⲣ ⲡⲁⲓ .",
+      "english": "They began to question among themselves, which of them it was who would do this thing.",
+      "source": "42_Luke_22",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲭⲉⲓ",
+        1,
+        11.933
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        10.155
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        10.08
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        8.544
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        7.678
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        7.471
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8788,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2107",
+    "grl_lemma": "συζητέω",
+    "grl_meaning": "to seek to obtain s.th. ; search or examine together\n    with",
+    "grl_pos": "verb",
+    "grl_ref": "Sophocles 1048a; LSJ 1670a; Preisigke 2:503"
+  }
+}

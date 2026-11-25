@@ -1,0 +1,159 @@
+{
+  "id": "C4839",
+  "forms": [
+    {
+      "id": "CF11643",
+      "orth": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13186,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5459",
+      "bibliography": "CD 449b; ChLCS 63a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲗⲁⲥⲙⲁ",
+        1,
+        15.013
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲧⲟⲩϫⲟ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲧⲟⲩϫⲟ",
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12772,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5349",
+      "type": "cf",
+      "label": "be whole, be intact, be safe, be sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4837",
+      "label": "ϩⲛⲟⲩⲧⲟⲩϫⲟ",
+      "pos": "ADV",
+      "gloss": "securely, safely"
+    },
+    {
+      "target": "C4838",
+      "label": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "health-giver, saver"
+    },
+    {
+      "target": "C4835",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "V",
+      "gloss": "make whole, make safe; be safe, be safed"
+    },
+    {
+      "target": "C4836",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "safety, salvation"
+    }
+  ]
+}

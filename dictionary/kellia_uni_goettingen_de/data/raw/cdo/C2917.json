@@ -1,0 +1,55 @@
+{
+  "id": "C2917",
+  "forms": [
+    {
+      "id": "CF7696",
+      "orth": "ⲡⲁⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3339",
+      "bibliography": "CD 273a; KoptHWb 153; DELC 165; ChLCS 38b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2916",
+      "label": "ϭⲓⲛⲡⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "boiling, melting"
+    },
+    {
+      "target": "C2914",
+      "label": "ⲁⲧⲫⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "unmolten"
+    },
+    {
+      "target": "C2912",
+      "label": "ⲡⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "be cooked, melted; boil, bake, melt"
+    },
+    {
+      "target": "C2913",
+      "label": "ⲡⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "thing cooked"
+    },
+    {
+      "target": "C2915",
+      "label": "ⲣⲉϥⲫⲟⲥⲓ",
+      "pos": "N",
+      "gloss": "metal-founder"
+    }
+  ]
+}

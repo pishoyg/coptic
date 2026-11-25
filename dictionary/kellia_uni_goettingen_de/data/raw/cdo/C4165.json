@@ -1,0 +1,52 @@
+{
+  "id": "C4165",
+  "forms": [
+    {
+      "id": "CF10275",
+      "orth": "ϫⲁⲉⲓⲧⲟⲩⲉⲓⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4727",
+      "bibliography": "CD 444b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4164",
+      "label": "ϫⲱⲱⲙⲉ ⲛⲧⲟⲩⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "deed of divorce"
+    },
+    {
+      "target": "C4163",
+      "label": "ⲧⲟⲩⲓⲟ",
+      "pos": "N",
+      "gloss": "repayment"
+    },
+    {
+      "target": "C4162",
+      "label": "ⲧⲟⲩⲓⲟⲩ",
+      "pos": "V",
+      "gloss": "remove, wean, repay, return"
+    }
+  ]
+}

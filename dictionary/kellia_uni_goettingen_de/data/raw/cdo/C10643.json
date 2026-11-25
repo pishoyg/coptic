@@ -1,0 +1,170 @@
+{
+  "id": "C10643",
+  "forms": [
+    {
+      "id": "CF28791",
+      "orth": "ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28792",
+      "orth": "ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7762,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14524",
+      "bibliography": "DDGLC",
+      "cu_ID": "4382"
+    },
+    {
+      "id": "CS14525",
+      "bibliography": "DDGLC",
+      "cu_ID": "3384"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲁⲩ**ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ** ϣⲱⲡⲉ ϣⲁⲛⲧⲉⲁⲇⲁⲙ ⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲙⲡϣⲏⲛ ·",
+      "english": "but an agreement took place [that they should remain outside it] until Adam had eaten of the tree.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲛ ⲅⲁⲣ ⲛⲓⲙ ⲉⲧⲉⲙⲡⲁⲧⲟⲩⲥⲟⲩⲱⲛⲅ ⲙⲛⲛⲉⲕⲙⲁⲅⲓⲁ · ⲟⲩⲛⲧⲁⲩⲟⲩ**ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ** ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ·",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 195-204",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:28-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲇⲁⲙ",
+        1,
+        12.051
+      ],
+      [
+        "⁛—",
+        1,
+        11.753
+      ],
+      [
+        "ⲟⲩⲛⲧⲁ",
+        1,
+        11.143
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        11.094
+      ],
+      [
+        "ⲟⲩⲱⲙ",
+        1,
+        9.629
+      ],
+      [
+        "ⲙⲧⲟ",
+        1,
+        9.019
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        8.304
+      ],
+      [
+        "ⲩ",
+        2,
+        7.81
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ",
+          "ⲥⲩⲛⲭⲱⲣⲏⲥⲓⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7304,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2065",
+    "grl_lemma": "συγχώρησις",
+    "grl_meaning": "agreement, consent",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1669b; Preisigke 2:503"
+  }
+}

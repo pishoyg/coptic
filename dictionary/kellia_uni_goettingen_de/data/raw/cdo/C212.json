@@ -1,0 +1,74 @@
+{
+  "id": "C212",
+  "forms": [
+    {
+      "id": "CF31492",
+      "orth": "ϯⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31491",
+      "orth": "ϯⲁⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3369,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS237",
+      "bibliography": "CD 17a; ChLCS 5b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C210",
+      "label": "ϫⲓⲛⲉⲣⲁⲡⲁⲥ",
+      "pos": "N",
+      "gloss": "a growing old"
+    },
+    {
+      "target": "C211",
+      "label": "ⲁⲁⲥ",
+      "pos": "N",
+      "gloss": "blow with hand, stroke"
+    },
+    {
+      "target": "C207",
+      "label": "ⲁⲥ",
+      "pos": "N",
+      "gloss": "old"
+    },
+    {
+      "target": "C208",
+      "label": "ⲙⲛⲧⲁⲥ",
+      "pos": "N",
+      "gloss": "oldness"
+    },
+    {
+      "target": "C209",
+      "label": "ⲣⲁⲥ",
+      "pos": "V",
+      "gloss": "become old"
+    }
+  ]
+}

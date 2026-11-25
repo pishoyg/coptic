@@ -1,0 +1,72 @@
+{
+  "id": "C7241",
+  "forms": [
+    {
+      "id": "CF16541",
+      "orth": "ϫⲛⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4880,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϫⲉⲛⲉ⸗",
+      "dialect": "A",
+      "id": "2423.1"
+    },
+    {
+      "orth": "ϭⲁⲛⲛⲁ-",
+      "dialect": "F",
+      "id": "2423.2"
+    },
+    {
+      "orth": "ϭⲉⲛⲁ⸗",
+      "dialect": "F",
+      "id": "2423.3"
+    },
+    {
+      "orth": "ϭⲁⲛⲛⲁ⸗",
+      "dialect": "F",
+      "id": "2423.4"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "note": "status pronominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7991",
+      "bibliography": "CD 774a; CDC 107b; CED 315; KoptHWb 424; ChLCS 102a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲕⲧⲟϥ ⲇⲉ ⲛϭⲓⲙⲱⲩⲥⲏⲥ ϣⲁⲡϫⲟⲉⲓⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡϫⲟⲉⲓⲥ ⲉⲧⲃⲉⲟⲩ ⲁⲕⲧϩⲙⲕⲟ ⲙⲡⲉⲕⲗⲁⲟⲥ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲕ**ϫⲛⲁ**ⲉⲓ ϣⲁⲡⲉⲕⲗⲁⲟⲥ",
+      "english": "And Moses turned to the Lord, and said, I pray, Lord, why hast thou afflicted this people? and wherefore hast thou sent me?",
+      "source": "Exodus 5",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲇⲉ ⲛⲛⲕⲁⲣⲡⲟⲥ ⲁϥϫⲉⲩ ⲟⲩϩⲙϩⲁⲗ ⲛⲟⲩⲉⲓⲏ ϫⲉⲉⲩⲉϯ ⲛⲁϥ ϩⲙⲡⲕⲁⲣⲡⲟⲥ ⲙⲡⲙⲁ ⲛⲉⲗⲟⲟⲗⲉ . ⲛⲟⲩⲉⲓⲏ ⲇⲉ ⲁⲩϩⲓⲟⲩⲉ ⲉⲣⲟϥ ⲁⲩ**ϫⲛⲁ**ϥ ⲉϥϣⲟⲩⲉⲓⲧ",
+      "english": "At the proper season, he sent a servant to the farmers to collect his share of the fruit of the vineyard. But the farmers beat him, and sent him away empty.",
+      "source": "42_Luke_20",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ⲛϭⲓⲙⲱⲩⲥⲏⲥ ϫⲉϯⲥⲟⲡⲥ ⲙⲙⲟⲕ ⲡϫⲟⲉⲓⲥ ⲁⲛⲁⲩ ⲛⲁⲕ ⲉⲕⲉⲩⲁ ⲉⲩⲛϭⲟⲙ ⲙⲙⲟϥ ⲛⲅ**ϫⲛⲁ**ϥ",
+      "english": "And Moses said, I pray thee, Lord, appoint another able person whom thou shalt send.",
+      "source": "Exodus 4",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom"
+}

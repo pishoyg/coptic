@@ -1,0 +1,288 @@
+{
+  "id": "C11148",
+  "forms": [
+    {
+      "id": "CF30814",
+      "orth": "ϩⲟⲃⲟⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30815",
+      "orth": "ϩⲟⲃⲟⲗⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30816",
+      "orth": "ϩⲟⲃⲟⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3364,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15621",
+      "bibliography": "DDGLC",
+      "cu_ID": "368"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲙⲡⲣⲧⲣⲉⲗⲁⲁⲩ ⲣⲁⲡⲓⲥⲧⲟⲥ ⲉⲧⲉϣⲡⲏⲣⲉ ⲛⲧⲁⲥϣⲱⲡⲉ · ϫⲉⲛⲛⲉⲡϣⲁϫⲉ ⲉⲧⲥⲏϩ ϫⲱⲕ ⲉⲃⲟⲗ ⲉϫⲱϥ · ϫⲉⲙⲛⲧⲏⲡⲁⲡⲓⲥⲧⲟⲥ ⲟⲩ**ϩⲟⲃⲟⲗⲟⲥ** ⲛⲟⲩⲱⲧ ·",
+      "english": "But let no man become an unbeliever concerning the miracle which took place, lest there be fulfilled in him the proverb which is written, 'The unbeliever is not (worth) an obolus.'",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲩϫⲡⲟⲕ · ⲁⲩϫⲡⲟⲟⲩ **ϩⲟⲃⲟⲗⲟⲥ** ⲛⲟⲩⲱⲧ ⲛⲙⲙⲁⲕ ·",
+      "english": "In the day on which thou wast brought into the world, was not an obolus also made with thee?",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ϫⲉⲙⲡⲣϣⲱⲡⲉ ⲉⲧⲉⲧⲛⲙⲟⲟϣⲉ ⲙⲛⲛⲁⲡⲓⲥⲧⲟⲥ · ⲁⲩⲱ ⲟⲛ ϫⲉⲙⲛⲧⲏⲡⲁⲡⲓⲥⲧⲟⲥ ⲟⲩ**ϩⲟⲃⲟⲗⲟⲥ** ⲛⲟⲩⲱⲧ ·",
+      "english": "And again, 'Walk ye not with unbelievers'; and again, 'The unbeliever is not (worth) one obolus.'",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲙⲛⲁ",
+        1,
+        17.139
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.139
+      ],
+      [
+        "ϫⲟⲩⲱⲧ",
+        4,
+        17.051
+      ],
+      [
+        "ⲙⲛⲧⲏ",
+        2,
+        14.466
+      ],
+      [
+        "ⲁⲡⲓⲥⲧⲟⲥ",
+        2,
+        14.256
+      ],
+      [
+        "ⲛ",
+        24,
+        14.104
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        4,
+        13.576
+      ],
+      [
+        "ⲡⲥⲓⲕⲗⲟⲥ",
+        1,
+        13.438
+      ],
+      [
+        "ϫⲁϫ",
+        1,
+        12.891
+      ],
+      [
+        "ϩⲁ",
+        4,
+        12.406
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.515
+      ],
+      [
+        "ϯⲟⲩ",
+        1,
+        9.397
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        9.253
+      ],
+      [
+        "ⲁⲁⲣⲱⲛ",
+        1,
+        8.919
+      ],
+      [
+        "ϩⲁⲧ",
+        1,
+        8.79
+      ],
+      [
+        "ϣⲓ",
+        1,
+        8.738
+      ],
+      [
+        "ϫⲡⲟ",
+        1,
+        7.91
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        7.565
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        7.563
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        7.461
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲃⲟⲗⲟⲥ",
+          3
+        ],
+        [
+          "ϩⲟⲃⲟⲗⲟⲥ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          6
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ϫⲟⲩⲱⲧ_1_pre_ϩⲟⲃⲟⲗⲟⲥ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ϣⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲃⲟⲗⲟⲥ",
+          "ϩⲟⲃⲟⲗⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲃⲟⲗⲟⲥ_0_node",
+          "ⲛ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϫⲟⲩⲱⲧ_1_pre_ϩⲟⲃⲟⲗⲟⲥ",
+          "ϩⲟⲃⲟⲗⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲓ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲓ_3_post_ⲛ",
+          "ⲉⲧ_4_post_ϣⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          "ϩⲁⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲧ_2_post_ⲛ",
+          "ⲁⲩⲱ_4_post_ⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲟⲉⲓⲕ",
+          "ϩⲁ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ϩⲟⲃⲟⲗⲟⲥ",
+          "ⲟⲩ_2_post_ϩⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 2997,
+      "count": 11
+    }
+  },
+  "etym": {
+    "grl_ID": "1503",
+    "grl_lemma": "ὀβολός",
+    "grl_meaning": "obol (a weight and a coin)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1196a; Preisigke 2:150"
+  }
+}

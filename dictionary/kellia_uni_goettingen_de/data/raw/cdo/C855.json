@@ -1,0 +1,674 @@
+{
+  "id": "C855",
+  "forms": [
+    {
+      "id": "CF3052",
+      "orth": "ⲉⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.75,
+        "rank": 873,
+        "count": 119
+      }
+    },
+    {
+      "orth": "ⲉⲓⲉⲣ-",
+      "dialect": "S",
+      "id": "93.1"
+    },
+    {
+      "orth": "ⲉⲓⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1199,
+        "count": 72
+      }
+    },
+    {
+      "orth": "ⲉⲓⲁⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7151,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲓⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2260,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ⲓⲁⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1892,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲉⲓⲉⲧ⸗",
+      "dialect": "A",
+      "id": "93.6"
+    },
+    {
+      "orth": "ⲓⲉⲣ-",
+      "dialect": "F",
+      "id": "93.7"
+    },
+    {
+      "orth": "ⲓⲏⲧ⸗",
+      "dialect": "F",
+      "id": "93.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1007",
+      "bibliography": "CD 73b; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲕⲧⲟⲩϫⲟⲓ ⲉⲃⲟⲗ ϩⲛⲑⲗⲓⲯⲓⲥ ⲛⲓⲙ ⲁⲩⲱ ⲁⲡⲁⲃⲁⲗ ⲙⲉϩ**ⲉⲓⲁⲧ**ϥ ⲛⲛⲁϫⲁϫⲉ",
+      "english": "For thou hast delivered me out of all affliction, and mine eye has seen my desire upon mine enemies.",
+      "source": "Psalms 53",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:53",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲡⲁⲃⲁⲗ ⲙⲉϩ**ⲉⲓⲁⲧ**ϥ ⲛⲛⲁϫⲁϫⲉ ⲁⲩⲱ ⲡⲁⲙⲁⲁϫⲉ ⲛⲁⲥⲱⲧⲙ ϩⲁⲛⲉⲧⲧⲱⲟⲩⲛ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲁⲩⲱ ⲉⲧⲣⲡⲉⲧϩⲟⲟⲩ",
+      "english": "And mine eye has seen mine enemies, and mine ear shall hear the wicked that rise up against me.",
+      "source": "Psalms 91",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲟⲩⲱϣ ⲉⲃⲟⲗ ⲛⲧⲉⲩⲧⲁⲡⲣⲟ ⲉⲣϩⲁⲓ ⲉϫⲱⲓ · ⲁⲩⲱ ⲁⲩϫⲟⲟⲥ ϫⲉⲉⲩⲅⲉ ⲁⲛⲉⲛⲃⲁⲗ · ⲙⲉϩ**ⲉⲓⲁⲧ**ⲛ ⲙⲙⲟϥ · ⲁⲕⲛⲁⲩ ⲡϫⲟⲉⲓⲥ ⲙⲡⲣⲕⲁⲣⲱⲕ ⲡϫⲟⲉⲓⲥ ⲙⲡⲣⲥⲁϩⲱⲕ ⲥⲁⲃⲟⲗ ⲙⲙⲟⲓ · ⲧⲱⲟⲩⲛ ⲡϫⲟⲉⲓⲥ",
+      "english": "“21. They opened their chops wide against me and said: Well indeed, our eyes have filled our sight with him. 22. Thou hast seen, O Lord. Keep not silence, O Lord, withdraw not thyself from me. 23. Arise, O Lord, |”",
+      "source": "Pistis Sophia Book 1 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:66-75",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲱⲥⲁⲫⲁⲧ",
+        9,
+        17.892
+      ],
+      [
+        "ⲛ",
+        96,
+        16.206
+      ],
+      [
+        "ⲡ",
+        75,
+        15.826
+      ],
+      [
+        "ⲟⲩ",
+        59,
+        15.51
+      ],
+      [
+        "ⲧⲟⲟⲧ",
+        10,
+        14.648
+      ],
+      [
+        "ϣⲕⲟⲗ",
+        3,
+        14.41
+      ],
+      [
+        "ⲛⲉϩⲣⲁⲫⲁⲉⲓⲛ",
+        2,
+        14.24
+      ],
+      [
+        "ⲛⲉ",
+        27,
+        14.22
+      ],
+      [
+        "ⲙ",
+        40,
+        13.959
+      ],
+      [
+        "ⲉ",
+        40,
+        13.425
+      ],
+      [
+        "ⲛⲥⲁⲣⲉⲇ",
+        1,
+        13.24
+      ],
+      [
+        "ϩⲣⲏⲭⲁⲁⲃ",
+        1,
+        13.24
+      ],
+      [
+        "ⲁⲅⲅⲉ",
+        1,
+        13.24
+      ],
+      [
+        "ⲡⲟⲣⲣⲓ",
+        1,
+        13.24
+      ],
+      [
+        "ⲣϩⲧⲏⲕ",
+        1,
+        13.24
+      ],
+      [
+        "ϩⲁⲃⲁⲍⲁⲛⲟⲥ",
+        1,
+        13.24
+      ],
+      [
+        "ⲃⲗⲛⲉⲥ",
+        1,
+        13.24
+      ],
+      [
+        "ϣⲉⲕϣⲱⲕϥ",
+        1,
+        13.24
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        13.24
+      ],
+      [
+        "ⲫⲉⲑ",
+        1,
+        13.24
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲁ_0_node",
+          58
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁ",
+          14
+        ],
+        [
+          "ⲓⲱⲥⲁⲫⲁⲧ_2_post_ⲛ",
+          9
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲁ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲁ",
+          7
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲁ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ϩⲁⲡ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲁ",
+          2
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          2
+        ],
+        [
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲉϩⲣⲁⲫⲁⲉⲓⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲁ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲁ",
+          3
+        ],
+        [
+          "ⲧⲟⲟⲧ_1_post_ⲉⲓⲁ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲟⲟⲧ",
+          2
+        ],
+        [
+          "ⲧⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲭⲉⲃⲣⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲉϣⲁⲕ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲓⲱⲥⲁⲫⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲙⲁϩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲛ_1_post_ⲉⲓⲁ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁ",
+          "ⲓⲱⲥⲁⲫⲁⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲁ",
+          "ⲛ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲁ",
+          "ⲉⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲙ_1_post_ⲉⲓⲁ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϩⲁⲡ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲉ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲓⲁ",
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲧ",
+          "ⲛⲁϣⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁ",
+          "ⲛⲉϩⲣⲁⲫⲁⲉⲓⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲉⲓⲁ",
+          "ⲟⲩ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲁ",
+          "ⲉⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲧⲟⲟⲧ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲧ_1_post_ⲉⲓⲁ",
+          "ⲟⲩ_2_post_ⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁ",
+          "ⲧⲟⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲁ",
+          "ⲛⲉ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲉⲓⲁ",
+          "ⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁ",
+          "ⲭⲉⲃⲣⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲉϣⲁⲕ_1_pre_ⲉⲓⲁ",
+          "ⲟⲩ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲓⲙⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲣⲓⲙⲉ_3_post_ⲡ",
+          "ⲡ_2_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲁ",
+          "ⲙⲁ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲛⲧⲟⲟⲩ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲩ_1_post_ⲉⲓⲁ",
+          "ⲁⲗⲗⲁ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_3_post_ϯⲧⲟⲟⲧ",
+          "ⲁ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϯⲧⲟⲟⲧ",
+          "ⲡ_4_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_3_post_ϯⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲓⲱⲥⲁⲫⲁⲧ_2_post_ⲛ",
+          "ⲉⲧⲉ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲉⲓⲁ",
+          "ⲡ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙⲁ",
+          "ⲙⲁ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲓⲱⲥⲁⲫⲁⲧ_2_post_ⲛ",
+          "ⲛⲧⲉ_3_post_ⲓⲱⲥⲁⲫⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲓⲱⲥⲁⲫⲁⲧ",
+          "ⲛ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲧⲉ",
+          "ⲉⲧ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲁ",
+          "ⲛ_1_pre_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲗ_1_pre_ⲉⲓⲁ",
+          "ⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲇⲉ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲁ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲥⲙⲁϩ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲓⲁ",
+          "ⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲁ_0_node",
+          "ⲉⲧ_1_post_ⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲁ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.03,
+      "rank": 605,
+      "count": 164
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C862",
+      "label": "ϥⲓ ⲛⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "raise eye"
+    },
+    {
+      "target": "C859",
+      "label": "ϯ ⲛⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "see, observe"
+    },
+    {
+      "target": "C856",
+      "label": "ⲕⲧⲉⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look round, turn eye"
+    },
+    {
+      "target": "C863",
+      "label": "ⲕⲱ ϩⲁⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "intend to do"
+    },
+    {
+      "target": "C865",
+      "label": "ⲙⲛⲧⲛⲁⲓⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "blessedness"
+    },
+    {
+      "target": "C857",
+      "label": "ⲙⲟⲩϩ ⲛⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look intensely"
+    },
+    {
+      "target": "C864",
+      "label": "ⲛⲁⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "blessed is . . ., (great is the eye of . . .)"
+    },
+    {
+      "target": "C858",
+      "label": "ⲥⲙⲛⲉⲓⲁⲧ⸗ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "fix eyes upon"
+    },
+    {
+      "target": "C861",
+      "label": "ⲧⲟⲩⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    },
+    {
+      "target": "C860",
+      "label": "ⲧⲥⲁⲃⲟ ⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    }
+  ],
+  "etym": {
+    "egy_num": "28250",
+    "egy_lemma": "jr.t",
+    "demo_num": "d624",
+    "demo_lemma": "ı ͗r.t",
+    "english": "eye",
+    "german": "Auge",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/28250",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d624"
+  }
+}

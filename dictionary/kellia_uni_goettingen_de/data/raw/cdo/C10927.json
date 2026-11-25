@@ -1,0 +1,627 @@
+{
+  "id": "C10927",
+  "forms": [
+    {
+      "id": "CF29835",
+      "orth": "ⲭⲁⲗⲕⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29841",
+      "orth": "ⲭⲁⲗⲕⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2421,
+        "count": 21
+      }
+    },
+    {
+      "id": "CF29838",
+      "orth": "ⲭⲁⲗⲕⲓⲟⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29837",
+      "orth": "ⲭⲁⲗⲕⲓⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29839",
+      "orth": "ⲭⲁⲗⲕⲓⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3676,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF29840",
+      "orth": "ⲭⲁⲗⲕⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF29836",
+      "orth": "ⲕⲁⲗⲕⲓⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15114",
+      "bibliography": "DDGLC",
+      "cu_ID": "871"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲙⲏ ⲉⲁⲩⲕⲱⲧ ⲛⲉⲥⲏⲓ ⲁⲛ ⲙⲃⲉⲣⲓ ⲛⲑⲟⲥ ⲡⲉ ⲡⲓ**ⲭⲁⲗⲕⲓⲟⲛ** ⲁⲛⲟⲛ ⲇⲉ ϧⲁⲛⲓⲁϥ .",
+      "english": "who say, Have not the houses been newly built? This is the caldron, and we are the flesh.",
+      "source": "26_Ezechiel_11",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲟⲩ**ⲭⲁⲗⲕⲓⲟⲛ** ⲉⲩⲥⲁϩⲧⲉ ϩⲁⲣⲟϥ ⲡⲉ · ⲉϥⲟⲩⲱⲛϩ ⲙⲡϩⲱⲃ ⲉⲃⲟⲗ ϫⲉⲡⲉⲧⲛⲁⲁⲛⲉⲭⲉ ⲁⲛ ⲙⲡϭⲉⲣⲱϥ ⲛⲧⲉⲥⲃⲱ ⲙⲡⲉⲓⲙⲁ · ⲡⲕⲱϩⲧ ⲛⲧⲕⲉϩⲉⲛⲛⲁ ⲡⲉⲧⲛⲁⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲙⲟϥ ϩⲙⲡⲕⲉⲙⲁ ·",
+      "english": "but afterwards it was a brazen vessel of fire which actually appeared to him, which indicated that he who will not lay hold on the rod",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ⲛⲁⲓ ⲛⲉ ⲛⲏⲉⲧⲉϥϫⲱ ⲙⲙⲱⲟⲩ ⲛϫⲉⲡϭⲥ ϫⲉⲱ ⲧⲃⲁⲕⲓ ⲛⲧⲉⲛⲓⲥⲛⲟϥ ⲡⲓ**ⲭⲁⲗⲕⲓⲟⲛ** ⲉⲧⲉⲣⲉ ⲡⲓϫⲉⲃⲥ ⲭⲏ ⲉϧⲣⲏⲓ ⲛϧⲏⲧϥ ⲟⲩⲟϩ ⲙⲡⲁϥⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧⲥ ⲁⲥⲓⲛⲓ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲫⲁϫⲓ ⲫⲁϫⲓ ⲛⲧⲁⲥ ⲟⲩⲟϩ ⲙⲡⲁϥⲓ ⲉϧⲣⲏⲓ ⲉϫⲱⲥ ⲛϫⲉⲟⲩⲕⲗⲏⲣⲟⲥ .",
+      "english": "Therefore thus saith the Lord; O bloody city, the caldron in which there is scum, and the scum has not gone out of, she has brought it forth piece by piece, no lot has fallen upon it.",
+      "source": "26_Ezechiel_24",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲛϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲉϫⲛⲛⲉ**ⲭⲁⲗⲕⲓⲟⲛ** ⲛⲁⲁϥ · ⲁⲩⲱ ⲉⲛⲟⲩⲉⲙⲟⲉⲓⲕ · ⲉⲩⲥⲉⲓ ⲧⲉⲛⲟⲩ ⲙⲁⲛⲁⲛ ⲛϩⲉⲛⲟⲉⲓⲕ ⲙⲛϩⲉⲛⲁⲁϥ ·",
+      "english": "We used to sit down by the brazen pots of flesh, and we ate bread, and now the people have to be satisfied with manna instead of with loaves of bread and pieces of flesh.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁϥⲑⲣⲉ ⲫⲛⲟⲩⲛ ⲃⲉⲣⲃⲉⲣ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲭⲁⲗⲕⲓⲟⲛ** ⲁⲣⲉ ⲡⲓⲟⲙ ⲇⲉ ϧⲁⲧⲟⲧϥ ⲙⲫⲣⲏϯ ⲛⲟⲩⲧⲁⲕⲟ .",
+      "english": "He makes the deep boil like a brazen caldron; and he regards the sea as a pot of ointment,",
+      "source": "18_Iob_41",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲕⲉϫⲱ ⲛⲧⲉⲓⲡⲁⲣⲁⲃⲟⲗⲏ ⲉϫⲙⲡⲏⲓ ⲉⲧϯϭⲱⲛⲧ ⲉⲕϫⲱ ⲙⲙⲟⲥ ⲛⲁⲩ ⲛⲁⲓ ⲛⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ϫⲱ ⲙⲙⲟⲟⲩ ϫⲓⲥⲉ ⲉϩⲣⲁⲓ ⲛⲟⲩ**ⲭⲁⲗⲕⲓⲟⲛ** ⲛⲕⲡⲉϩⲧ ⲙⲟⲟⲩ ⲉⲣⲟϥ",
+      "english": "And speak a parable to the provoking house, and thou shalt say to them, Thus saith the Lord; Set on the caldron, and pour water into it:",
+      "source": "Ezekiel 24",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲑⲟⲥ",
+        2,
+        14.088
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        13.051
+      ],
+      [
+        "ϫⲉⲃⲥ",
+        1,
+        12.729
+      ],
+      [
+        "ⲫⲱⲛ",
+        1,
+        11.729
+      ],
+      [
+        "ⲁϥ",
+        1,
+        10.419
+      ],
+      [
+        "ⲃⲉⲣⲓ",
+        1,
+        10.173
+      ],
+      [
+        "ⲡⲓ",
+        4,
+        9.449
+      ],
+      [
+        "ⲁⲛⲟⲛ",
+        1,
+        9.047
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        8.796
+      ],
+      [
+        "ⲓⲟⲙ",
+        1,
+        8.687
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        8.651
+      ],
+      [
+        "ⲛⲑⲱⲧⲉⲛ",
+        1,
+        8.259
+      ],
+      [
+        "ϣⲱⲓ",
+        1,
+        8.181
+      ],
+      [
+        "ϩⲱ",
+        1,
+        8.164
+      ],
+      [
+        "ⲡ",
+        3,
+        8.052
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.916
+      ],
+      [
+        "ⲁⲣⲉ",
+        1,
+        7.901
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.727
+      ],
+      [
+        "ⲭⲏ",
+        1,
+        7.556
+      ],
+      [
+        "ϧⲁ",
+        1,
+        7.531
+      ]
+    ],
+    "S": [
+      [
+        "ϭⲁⲗⲁϩⲧ",
+        3,
+        18.639
+      ],
+      [
+        "ⲥⲁϩⲧⲉ",
+        4,
+        17.813
+      ],
+      [
+        "ϩⲓⲗⲁⲭⲁⲛⲟⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+        1,
+        15.206
+      ],
+      [
+        "ⲁⲁϥ",
+        1,
+        14.206
+      ],
+      [
+        "ⲛ",
+        29,
+        13.991
+      ],
+      [
+        "ⲁⲣⲟⲩ",
+        1,
+        13.621
+      ],
+      [
+        "ϣⲏⲃⲉ",
+        1,
+        13.398
+      ],
+      [
+        "ϩⲉⲛ",
+        9,
+        13.192
+      ],
+      [
+        "ⲗⲁⲕⲛⲧ",
+        1,
+        12.884
+      ],
+      [
+        "ⲙⲉϩ",
+        3,
+        12.465
+      ],
+      [
+        "ⲥⲛⲱⲱϥ",
+        1,
+        12.299
+      ],
+      [
+        "ⲏ",
+        5,
+        12.053
+      ],
+      [
+        "ϫⲱⲣⲡ",
+        1,
+        11.958
+      ],
+      [
+        "ⲥⲙⲓⲛⲉ",
+        2,
+        11.958
+      ],
+      [
+        "ⲉ",
+        14,
+        11.847
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        3,
+        11.808
+      ],
+      [
+        "ⲡⲉϣ",
+        1,
+        11.746
+      ],
+      [
+        "ⲡⲉϩⲧ",
+        1,
+        11.562
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        3,
+        11.396
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          5
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          3
+        ],
+        [
+          "ⲉⲧⲉⲣⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ϫⲉⲃⲥ_3_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ⲭⲏ_2_post_ⲉⲧⲉⲣⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲉⲧⲉⲣⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲣⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲡⲓ_4_post_ϫⲉⲃⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ϫⲉⲃⲥ",
+          "ϫⲉⲃⲥ_3_post_ⲭⲏ",
+          1
+        ],
+        [
+          "ϫⲉⲃⲥ_3_post_ⲭⲏ",
+          "ⲭⲏ_2_post_ⲉⲧⲉⲣⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          19
+        ],
+        [
+          "ⲛ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲁϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲡⲉϣ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲗⲱϩⲙ_5_post_ⲡⲉϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲩⲏ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲥⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲥⲁϩⲧⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϩⲁⲣⲟ_3_post_ⲥⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲛ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲁⲁϥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ⲡⲉϣ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϣ_4_post_ⲛ",
+          "ⲗⲱϩⲙ_5_post_ⲡⲉϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲙⲏⲧ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲏⲧ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          "ϩⲉⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲥⲕⲉⲩⲏ",
+          "ⲥⲕⲉⲩⲏ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲩ_3_post_ⲥⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ⲥⲁϩⲧⲉ",
+          "ⲥⲁϩⲧⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲥⲁϩⲧⲉ_2_post_ⲉ",
+          "ϩⲁⲣⲟ_3_post_ⲥⲁϩⲧⲉ",
+          2
+        ],
+        [
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          "ⲁⲩⲱ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲓ",
+          "ⲡⲉⲥ_3_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_3_post_ϣⲓⲃⲉ",
+          "ϣⲓⲃⲉ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ϣⲓⲃⲉ_2_post_ⲓ",
+          "ⲙⲡⲉ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_2_post_ⲓ",
+          "ϥ_2_post_ⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_3_post_ⲥⲁϩⲧⲉ",
+          "ⲟⲩ_4_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲟⲩ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ϩⲉⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲭⲁⲗⲕⲓⲟⲛ",
+          "ⲭⲁⲗⲕⲓⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.13,
+      "rank": 2132,
+      "count": 21
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3248,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2347",
+    "grl_lemma": "χάλκιον",
+    "grl_meaning": "copper vessel, cauldron",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1973b; Preisigke 2:716"
+  }
+}

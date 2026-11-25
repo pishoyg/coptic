@@ -1,0 +1,218 @@
+{
+  "id": "C2972",
+  "forms": [
+    {
+      "id": "CF7809",
+      "orth": "ⲡⲁϣⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7682,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3402",
+      "bibliography": "(CD 280a); KoptHWb 156; ChLCS 39b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ϩⲙⲡ**ⲡⲁϣⲥ** · ϥⲛⲁⲡⲱϣⲥ ⲛⲧⲉⲡⲙⲟⲛⲟⲃⲟⲗⲓⲥ ⲃⲱⲕ ⲉϩⲣⲁⲓ ϩⲛⲧⲉϥⲟⲩⲣⲏⲏⲧⲉ · ⲛⲥⲣⲟⲩⲟⲙⲟⲙⲉ ⲉⲣⲟϥ ⲛϥⲙⲟⲩ ϩⲙⲡϫⲱⲕ ⲙⲡⲁϫⲟⲩⲧⲁϥⲧⲉ ·",
+      "english": "And as he is coming down from the boat by the landing plank he shall trip up, and the monobolis shall penetrate his foot, and the foot shall mortify, and he shall die in the twenty-fourth year after my death.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲃⲉⲛⲛⲏⲣ ⲇⲉ ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲉϣⲁϫⲉ ⲙⲛⲁⲍⲁⲏⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲡⲁϣⲥ**ⲕ ⲉⲃⲟⲗ ⲙⲙⲟⲓ ⲙⲡⲣⲧⲁⲕⲁⲧ ⲛⲧⲁⲣⲁϩⲧⲕ ⲉⲡⲕⲁϩ ⲁⲩⲱ ⲉⲓⲛⲁⲉϣϥⲓⲉⲓⲁⲧ ⲉϩⲣⲁⲓ ⲛⲁϣ ⲛϩⲉ ⲟⲩⲃⲉ ⲡⲉⲕⲥⲟⲛ ⲓⲱⲁⲃ ⲉⲕⲣⲣⲟⲩ ϩⲓⲛⲁⲓ ⲕⲁⲣⲁⲧⲕ ⲉⲣⲁⲧϥ ⲙⲡⲉⲕⲥⲟⲛ ⲓⲱⲁⲃ",
+      "english": "And Abenner said yet again to Asael, Stand aloof from me, lest I smite thee to the ground? and how should I lift up my face to Joab?",
+      "source": "II Samuel 2",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲡⲉⲥⲏⲧ",
+        1,
+        18.598
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        13.644
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        9.56
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.981
+      ],
+      [
+        "ϫⲱ",
+        1,
+        7.405
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁϣⲥ_0_node",
+          2
+        ],
+        [
+          "ⲕ_1_post_ⲡⲁϣⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲁϣⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲧⲁⲕⲁⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁϣⲥ_0_node",
+          "ⲕ_1_post_ⲡⲁϣⲥ",
+          1
+        ],
+        [
+          "ⲕ_1_post_ⲡⲁϣⲥ",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲁϣⲥ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲁϣⲥ",
+          "ⲙⲙⲟ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_2_post_ⲉⲃⲟⲗ",
+          "ⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲉⲃⲟⲗ",
+          "ⲙⲡⲣ_2_post_ⲧⲁⲕⲁⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7223,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2966",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "V",
+      "gloss": "be amazed, beside oneself; amaze, turn aside"
+    },
+    {
+      "target": "C2969",
+      "label": "ⲡⲱϣⲥ",
+      "pos": "N",
+      "gloss": "amazement"
+    },
+    {
+      "target": "C2968",
+      "label": "ⲡⲱϣⲥ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "be dazed, bemused"
+    },
+    {
+      "target": "C2967",
+      "label": "ⲡⲱϣⲥ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "to be obsessed with"
+    },
+    {
+      "target": "C2970",
+      "label": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be disturbed in mind, amazed"
+    },
+    {
+      "target": "C2971",
+      "label": "ⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "amazement"
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "id": "C329",
+  "forms": [
+    {
+      "id": "CF1432",
+      "orth": "ⲃⲉⲉⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4223,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF1433",
+      "orth": "ⲃⲉⲉⲃⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1434",
+      "orth": "ⲃⲉⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13276,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1435",
+      "orth": "ⲃⲉⲃⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1436",
+      "orth": "ⲃⲉⲃⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1437",
+      "orth": "ⲃⲉⲃⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1438",
+      "orth": "ⲃⲉⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2991,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲃⲉⲉⲃⲉⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13373,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Infinitiv",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS364",
+      "bibliography": "CD 28b; CED 20; KoptHWb 20, 492; DELC 25; ChLCS 7a"
+    },
+    {
+      "id": "CS365",
+      "bibliography": "CD 28b-29a; KoptHWb 20; DELC 25; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲫⲓⲁⲣⲟ **ⲃⲉⲃⲓ** ⲉⲡϣⲱⲓ ⲛⲁϩⲛⲭⲣⲟⲩⲣ ⲟⲩⲟϩ ⲁⲩϣⲁⲛⲓ ⲉⲡϣⲱⲓ ⲉⲩⲉϣⲉⲛⲱⲟⲩ ⲉϧⲟⲩⲛ ⲉⲛⲉⲕⲏⲟⲩ ⲛⲉⲙⲉϧⲟⲩⲛ ⲉⲛⲓⲧⲁⲙⲓⲟⲛ ⲛⲧⲉⲛⲉⲕⲕⲟⲓⲧⲱⲛ ⲉϫⲉⲛⲛⲉⲕϭⲗⲟϫ ⲛⲉⲛ ⲛⲉⲛⲏⲟⲩ ⲛⲛⲉⲕⲁⲗⲱⲟⲩⲓ ⲛⲉⲙⲡⲉⲕⲗⲁⲟⲥ ⲛⲉⲙⲛϧⲣⲏⲓ ϧⲉⲛⲛⲉⲕⲟⲩⲱϣⲉⲙ ⲛⲉⲙⲛϧⲣⲏⲓ ϧⲉⲛⲛⲉⲕⲑⲣⲓⲣ",
+      "english": "and the river shall teem with frogs, and they shall go up and enter into thy houses, and into thy bed-chambers, and upon thy beds, and upon the houses of thy servants, and of thy people and on thy dough, and on thine ovens.",
+      "source": "02_Exodus_08",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲙⲡϫⲓⲟⲩⲉ ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲛϩⲁⲗⲁⲥⲥⲁ ⲉⲧ**ⲃⲉⲉⲃⲉ** ⲛⲛⲉϩⲁⲛⲉⲇⲣⲁⲕⲱⲛ ·",
+      "english": "“Say unto them: Renounce thieving, that ye may be worthy of the mysteries of the Light and be saved from the bubbling seas of the dragon-faced [ones]. |”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁ ⲡⲁϩⲏⲧ ⲁϥ**ⲃⲉⲃⲓ** ⲛⲟⲩⲥⲁϫⲓ ⲛⲁⲅⲁⲑⲟⲛ ϯⲛⲁϫⲱ ⲛⲛⲁϩⲃⲏⲟⲩⲓ ⲁⲛⲟⲕ ⲙⲡⲓⲟⲩⲣⲟ .",
+      "english": "My heart has uttered a good matter: I declare my works to the king: my tongue is the pen of a quick writer.",
+      "source": "19_Psalmi_44",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:44",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲥⲃⲱ ⲛⲧⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲙⲛⲧⲙⲛⲧⲥⲁⲃⲉ ⲁⲓⲥϩⲁⲓⲥⲟⲩ ϩⲓⲡⲉⲓϫⲱⲱⲙⲉ ⲓⲏⲥⲟⲩⲥ ⲡϣⲏⲣⲉ ⲛⲥⲉⲓⲣⲁⲭ ⲉⲗⲉⲁⲍⲁⲣ ⲡϩⲓⲉⲣⲟⲥⲟⲗⲩⲙⲉⲓⲧⲏⲥ ⲡⲁⲓ ⲛⲧⲁϥ**ⲃⲉⲉⲃⲉ** ⲛⲧⲥⲟⲫⲓⲁ ϩⲙⲡⲉϥϩⲏⲧ",
+      "english": "Jesus the son of Sirach of Jerusalem hath written in this book the instruction of understanding and knowledge, who out of his heart poured forth wisdom.",
+      "source": "Sirach 50",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:50",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲟⲩⲧⲁⲙⲓⲟⲛ ⲥⲉⲙⲉϩ ⲉⲩ**ⲃⲉⲃⲓ** ⲉⲃⲟⲗ ϧⲉⲛⲫⲁⲓ ⲉⲫⲁⲓ ⲛⲟⲩⲉⲥⲱⲟⲩ ⲛⲁϣⲉ ⲛⲟⲩⲙⲁⲥ ⲉⲩⲟϣ ϩⲓⲛⲟⲩⲙⲱⲓⲧ ⲉⲃⲟⲗ ⲛⲟⲩⲉϩⲱⲟⲩ ⲥⲉϧⲟⲧ ⲛϥϣⲟⲡ ⲁⲛ ⲛϫⲉⲟⲩⲱϫⲡ ⲛⲧⲉⲛⲟⲩⲥⲟⲃⲧ ⲟⲩⲇⲉ ⲟⲩⲙⲱⲓⲧ ⲉⲃⲟⲗ ⲟⲩⲇⲉ ⲙⲙⲟⲛ ⲱϣ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲉⲣⲃⲓ",
+      "english": "Their oxen are fat: there is no falling down of a hedge, nor going out, nor cry in their folds.",
+      "source": "19_Psalmi_143",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:143",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲙⲟⲟⲩ ⲉϥϣⲏⲕ ⲡⲉ ⲡϣⲁϫⲉ ϩⲙⲡϩⲏⲧ ⲙⲡⲣⲱⲙⲉ ϣⲁⲣⲉⲧⲡⲏⲅⲏ ⲇⲉ ⲛⲧⲥⲟⲫⲓⲁ **ⲃⲉⲉⲃⲉ** ⲛⲥϥⲱϭⲉ ⲉϩⲣⲁⲓ ⲙⲛϭⲟⲙ ⲙⲙⲟⲥ ⲉϩⲱⲡ",
+      "english": "A word in the heart of a man is a deep water, and a river and fountain of life spring forth.",
+      "source": "Proverbs 18",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉϩⲁⲛⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ⲣⲥⲁⲃⲉ",
+        1,
+        14.206
+      ],
+      [
+        "ⲡⲁⲣϩⲟⲓⲙⲓⲁ",
+        1,
+        13.983
+      ],
+      [
+        "ϥⲱϭⲉ",
+        1,
+        12.176
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        2,
+        11.576
+      ],
+      [
+        "ⲇⲣⲁⲕⲱⲛ",
+        1,
+        11.009
+      ],
+      [
+        "ϩⲁⲗⲁⲥⲥⲁ",
+        1,
+        10.97
+      ],
+      [
+        "ⲛ",
+        9,
+        10.511
+      ],
+      [
+        "ⲃⲟⲧⲉ",
+        1,
+        10.433
+      ],
+      [
+        "ⲥⲱ",
+        1,
+        9.339
+      ],
+      [
+        "ⲧ",
+        4,
+        9.264
+      ],
+      [
+        "ⲉⲓⲣⲏⲛⲏ",
+        1,
+        8.899
+      ],
+      [
+        "ⲁⲙⲁϩⲧⲉ",
+        1,
+        8.752
+      ],
+      [
+        "ϫⲓⲥⲉ",
+        1,
+        8.411
+      ],
+      [
+        "ⲥ",
+        3,
+        8.222
+      ],
+      [
+        "ⲁ",
+        3,
+        6.992
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        6.936
+      ],
+      [
+        "ϥ",
+        3,
+        6.469
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.008
+      ],
+      [
+        "ⲩ",
+        2,
+        6.002
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲉⲉⲃⲉ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲃⲉⲉⲃⲉ",
+          3
+        ],
+        [
+          "ⲛⲉϩⲁⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲣⲁⲕⲱⲛ_3_post_ⲛⲉϩⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲃⲉⲉⲃⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲃⲉⲉⲃⲉ",
+          2
+        ],
+        [
+          "ⲁ_2_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲥⲉ_1_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲓⲁ_3_post_ⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲃⲉⲉⲃⲉ_0_node",
+          "ⲛ_1_post_ⲃⲉⲉⲃⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲃⲉⲉⲃⲉ",
+          "ⲛⲉϩⲁⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϩⲁⲛⲉ_2_post_ⲛ",
+          "ⲇⲣⲁⲕⲱⲛ_3_post_ⲛⲉϩⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲃⲉⲉⲃⲉ",
+          "ϥ_1_pre_ⲃⲉⲉⲃⲉ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲃⲉⲉⲃⲉ",
+          "ⲃⲉⲉⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲃⲉⲉⲃⲉ_0_node",
+          "ⲁ_2_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϫⲓⲥⲉ",
+          "ϥ_2_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϫⲓⲥⲉ",
+          "ϫⲓⲥⲉ_1_post_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲃⲉⲉⲃⲉ",
+          "ϣⲁ_1_pre_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲃⲉⲉⲃⲉ",
+          "ⲩ_1_pre_ⲃⲉⲉⲃⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲃⲉⲉⲃⲉ",
+          "ⲃⲉⲉⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲉⲉⲃⲉ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲃⲉⲉⲃⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲟⲫⲓⲁ_3_post_ⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3827,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C332",
+      "label": "ϫⲓⲛⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "pronouncing (of a name)"
+    },
+    {
+      "target": "C331",
+      "label": "ⲙⲉⲧⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "outpouring"
+    },
+    {
+      "target": "C330",
+      "label": "ⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "who brings forth sth, originator"
+    }
+  ],
+  "etym": {
+    "egy_num": "54900",
+    "egy_lemma": "bꜥbꜥ",
+    "english": "to bathe; to bubble",
+    "german": "blubbern; sprudeln; baden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54900"
+  }
+}

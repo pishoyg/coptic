@@ -1,0 +1,114 @@
+{
+  "id": "C8138",
+  "forms": [
+    {
+      "id": "CF18614",
+      "orth": "ⲁⲓⲡⲉⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18615",
+      "orth": "ⲁⲓⲡⲉⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13403,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF18616",
+      "orth": "ⲉⲡⲁⲓⲛⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9180",
+      "bibliography": "DDGLC",
+      "cu_ID": "4195"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲁⲩⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲡⲛⲟϭ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲉⲭⲣⲩⲥⲟⲥⲧⲱⲙⲟⲥ · ⲉⲧⲁⲩⲉϩⲉⲛⲕⲟⲩⲓ ⲛ**ⲁⲓⲡⲉⲛⲟⲥ** ⲉⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ϩⲣⲁⲫⲁⲏⲗ · ⲛⲧⲟϥ ⲇⲉ ϩⲱⲱϥ ⲡⲉⲭⲣⲩⲥⲟⲥⲧⲱⲙⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        13.114
+      ],
+      [
+        "ⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        12.13
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        11.034
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲓⲡⲉⲛⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12998,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3142",
+    "grl_lemma": "ἔπαινος",
+    "grl_meaning": "praise, applause, compliment",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke 1:525; Bauer 570"
+  }
+}

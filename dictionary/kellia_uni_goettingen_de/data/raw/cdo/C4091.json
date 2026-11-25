@@ -1,0 +1,70 @@
+{
+  "id": "C4091",
+  "forms": [
+    {
+      "id": "CF10127",
+      "orth": "ϩⲓⲧⲟⲟⲃⲉⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4649",
+      "bibliography": "CD 398b; KoptHWb 221; ChLCS 56a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4087",
+      "label": "ⲣⲉϥⲧⲱⲃⲓ",
+      "pos": "N",
+      "gloss": "sealer"
+    },
+    {
+      "target": "C4092",
+      "label": "ⲧⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "seal"
+    },
+    {
+      "target": "C4089",
+      "label": "ⲧⲟⲟⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "seal's impress"
+    },
+    {
+      "target": "C4090",
+      "label": "ⲧⲟⲟⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "seal's impress"
+    },
+    {
+      "target": "C4086",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "V",
+      "gloss": "seal"
+    },
+    {
+      "target": "C4088",
+      "label": "ⲧⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "seal"
+    }
+  ]
+}

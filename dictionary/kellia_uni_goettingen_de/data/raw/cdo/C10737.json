@@ -1,0 +1,66 @@
+{
+  "id": "C10737",
+  "forms": [
+    {
+      "id": "CF29165",
+      "orth": "ⲧⲏⲣⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF29167",
+      "orth": "ⲧⲏⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29166",
+      "orth": "ⲧⲏⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20836,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29168",
+      "orth": "ⲧⲏⲣⲓ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14755",
+      "bibliography": "DDGLC",
+      "cu_ID": "2722"
+    },
+    {
+      "id": "CS14756",
+      "bibliography": "DDGLC",
+      "cu_ID": "7515"
+    },
+    {
+      "id": "CS14757",
+      "bibliography": "DDGLC",
+      "cu_ID": "5787"
+    },
+    {
+      "id": "CS14758",
+      "bibliography": "DDGLC",
+      "cu_ID": "5786"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3565",
+    "grl_lemma": "τηρέω",
+    "grl_meaning": "to watch over, take care of, guard",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1789a; Preisigke 2:597"
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "id": "C5609",
+  "forms": [
+    {
+      "id": "CF13193",
+      "orth": "ⲁϣϭⲁⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7645,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6278",
+      "bibliography": "CD 619a; CED 264; KoptHWb 296, 343; DELC 251b, 279b; ChLCS 73b,\n                            76b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲟⲛ ⲉϣⲁⲕⲣⲛⲧⲩⲡⲟⲥ ⲛⲛⲉⲧⲛⲁϣⲱⲡⲉ ϩⲛⲧϩⲁⲏ ϩⲛⲟⲩⲕⲱϩⲧ ⲙⲛⲟⲩⲕⲙⲧⲟ . ⲙⲛⲟⲩⲛⲟϭ ⲛⲗϩⲱⲃ · ⲙⲛⲟⲩⲕⲁⲡⲛⲟⲥ ⲉⲩⲡⲏⲧ ϩⲙⲡⲕⲁϩ ϩⲱⲥ ⲉϣϫⲉ ⲉⲣⲉⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ⲧⲏⲣⲥ ⲛⲁⲧⲁⲕⲟ ϩⲓⲧⲙⲡⲕⲁⲕⲉ ⲛⲛⲟⲩϫ ⲉⲧⲡⲱⲣϣ ⲉⲃⲟⲗ ⲉϫⲙ ⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ · ⲉⲕⲣⲡⲕⲉϫⲓ ⲙⲡϩⲣⲃ ⲛϩⲉⲛⲙⲏⲏϣⲉ ⲛⲣⲱⲙⲉ ⲙⲛⲛⲉⲕⲇⲁⲓⲙⲱⲛ · ⲉⲕⲡⲏⲧ ⲉⲕ**ⲁϣϭⲁⲡ** ϫⲉⲧϩⲁⲏ ⲧⲉ · ⲉⲕϣⲧⲣⲧⲱⲣ · ⲉⲕϩⲉ ⲉⲕⲧⲱⲟⲩⲛ . ⲉⲕⲣⲱϩⲧⲉⲡⲕⲁϩ · ⲛⲁⲓ ⲧⲏⲣⲟⲩ ϫⲉⲕⲁⲥ ⲉⲕⲛⲁⲁⲡⲁⲧⲁ ⲛⲛⲉⲧⲛⲁⲩ ⲉⲛⲉⲕⲫⲁⲛⲧⲁⲥⲓⲁ ⲙⲙⲛⲧⲁⲥⲉⲃⲏⲥ ϩⲛϩⲉⲛⲣⲁⲥⲟⲩ .",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 185-194",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:1-28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁϭ",
+        1,
+        19.598
+      ],
+      [
+        "ϩⲁⲏ",
+        1,
+        12.969
+      ],
+      [
+        "ⲡⲏⲧ",
+        1,
+        12.771
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        11.413
+      ],
+      [
+        "ⲕ",
+        2,
+        9.853
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁϣϭⲁⲡ_0_node",
+          2
+        ],
+        [
+          "ⲕ_1_pre_ⲁϣϭⲁⲡ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲁϣϭⲁⲡ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ϩⲁⲏ",
+          1
+        ],
+        [
+          "ϩⲁⲏ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_post_ⲁϣϭⲁⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕ_1_pre_ⲁϣϭⲁⲡ",
+          "ⲁϣϭⲁⲡ_0_node",
+          1
+        ],
+        [
+          "ⲁϣϭⲁⲡ_0_node",
+          "ϫⲉ_1_post_ⲁϣϭⲁⲡ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲁϣϭⲁⲡ",
+          "ⲧ_3_post_ϩⲁⲏ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ϩⲁⲏ",
+          "ϩⲁⲏ_2_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲏ_2_post_ⲧⲉ",
+          "ⲧⲉ_1_post_ⲁϣϭⲁⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19960,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6254",
+      "type": "cf",
+      "label": "cry, sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5614",
+      "label": "ⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "lector, reader"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

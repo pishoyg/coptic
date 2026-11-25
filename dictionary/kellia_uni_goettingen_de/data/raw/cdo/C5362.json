@@ -1,0 +1,52 @@
+{
+  "id": "C5362",
+  "forms": [
+    {
+      "id": "CF12693",
+      "orth": "ϭⲓⲛⲟⲩⲱϭⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6015",
+      "bibliography": "CD 513b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5361",
+      "label": "ⲁⲧⲟⲩⲱϭⲡ",
+      "pos": "N",
+      "gloss": "unbroken"
+    },
+    {
+      "target": "C5359",
+      "label": "ⲟⲩⲱϭⲡ",
+      "pos": "V",
+      "gloss": "break, be broken"
+    },
+    {
+      "target": "C5360",
+      "label": "ⲟⲩⲱϭⲡ",
+      "pos": "N",
+      "gloss": "breakage, collapse"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "C649",
+  "forms": [
+    {
+      "id": "CF2450",
+      "orth": "ⲉⲗⲕⲱ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲉⲗⲕⲟ",
+      "dialect": "S",
+      "id": "643.1"
+    },
+    {
+      "orth": "ⲉⲗⲕⲟ",
+      "dialect": "B",
+      "id": "643.2"
+    },
+    {
+      "orth": "ⲉⲗⲕⲟⲩ",
+      "dialect": "B",
+      "id": "643.3"
+    },
+    {
+      "orth": "ⲁⲗⲕⲟⲩ",
+      "dialect": "B",
+      "id": "643.4"
+    },
+    {
+      "orth": "ⲗⲕⲟⲩ",
+      "dialect": "A",
+      "id": "643.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS785",
+      "bibliography": "CD 54b; CED 33; KoptHWb 34; DELC 95-96; ChLCS 11a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟⲩⲕⲉⲣ",
+        1,
+        19.695
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲓ",
+        1,
+        6.575
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲗⲕⲱ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12921,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "89040",
+    "egy_lemma": "nqꜥ.wt",
+    "demo_num": "d181",
+    "demo_lemma": "ꜣlqw",
+    "english": "notched sycamore fig",
+    "german": "geritze (reife) Sykomorenfrüchte",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/89040",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d181"
+  }
+}

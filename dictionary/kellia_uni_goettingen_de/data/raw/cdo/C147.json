@@ -1,0 +1,80 @@
+{
+  "id": "C147",
+  "forms": [
+    {
+      "id": "CF559",
+      "orth": "ⲁⲛⲣⲟ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF560",
+      "orth": "ϩⲁⲛⲣⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5863,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF561",
+      "orth": "ϩⲁⲛⲣⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS167",
+      "bibliography": "CD 289b; KoptHWb 9; DELC 13"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡ**ϩⲁⲛⲣⲟ** ⲛⲧⲡⲩⲗⲏ ⲉⲧϩⲏⲛ ⲉⲧⲡⲁⲣⲁⲥⲧⲁⲥ ⲡϩⲟⲩⲛ ⲛⲧⲡⲩⲗⲏ ⲉϥⲛⲁⲣⲟⲩⲕⲁϣ ⲛⲟⲩⲱⲧ ⲁⲩⲱ ⲁϥϣⲓ ⲧⲡⲁⲣⲁⲥⲧⲁⲥ ⲛⲧⲡⲩⲗⲏ ⲉⲥⲛⲁⲣϣⲙⲟⲩⲛ ⲙⲙⲁϩⲉ ⲁⲩⲱ ⲡⲉⲥⲟⲩⲱϣⲥ ⲉϥⲛⲁⲣⲙⲁϩⲉ ⲥⲛⲁⲩ",
+      "english": "And the porch of the gateway (near the porch of the gate) eight cubits; and the posts there of two cubits; and the porch of the gate was inward:",
+      "source": "Ezekiel 40",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲟⲩⲉϭⲣⲟ ⲙⲛⲛϣⲟⲩϣⲧ ⲛⲧⲁⲩϣⲟⲟⲣⲟⲩ ⲁⲩⲱ ⲛⲉⲭⲑⲉⲧⲏⲥ ⲉⲧⲕⲱⲧⲉ ⲉⲡϣⲟⲙⲛⲧ ⲛⲥⲡⲓⲣ ⲉⲧⲉⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡ**ϩⲁⲛⲣⲟ** ⲉⲩϭⲟⲟⲗⲉ ⲛϣⲉ ⲉϥⲕⲱⲧⲉ ⲁⲩⲱ ⲡⲙⲁ ⲙⲡⲉⲥⲏⲧ ϣⲁϩⲣⲁⲓ ⲉⲛϣⲟⲩϣⲧ ⲁⲩⲱ ⲛϣⲟⲩϣⲧ ⲉⲩϩⲱⲃⲥ ⲛⲛⲟⲩⲱϭ ϩⲓⲧⲡⲉ ⲙⲡⲣⲟ",
+      "english": "And the windows were latticed, giving light round about to the three stories, so as to look through: and the house and the parts adjoining were planked round about, and so was the floor, and from the floor up to the windows, and the window shutters folded back in three parts for one to look through.",
+      "source": "Ezekiel 41",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲛⲧ ⲉϩⲣⲁⲓ ⲉⲧⲡⲩⲗⲏ ⲉⲧϭⲱϣⲧ ⲉⲡⲥⲁ ⲙⲡⲉⲓⲏⲃⲧ ⲁⲩⲱ ⲁϥⲙⲟⲟϣⲉ ϩⲣⲁⲓ ϩⲛⲛⲉⲥⲧⲱⲣⲧⲣ ⲁϥϣⲓ ⲙⲡ**ϩⲁⲛⲣⲟ** ⲛⲧⲡⲩⲗⲏ ⲡⲉϥⲟⲩⲱϣⲥ ⲉϥⲛⲁⲣⲟⲩⲕⲁϣ ⲛⲟⲩⲱⲧ",
+      "english": "And he entered by seven steps into the gate that looks eastward, and he measured across the porch of the gate equal to the reed.",
+      "source": "Ezekiel 40",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5421,
+      "count": 4
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C123",
+      "type": "cf",
+      "label": "prefix of words with geographical meaning"
+    },
+    {
+      "target": "C3038",
+      "type": "cf",
+      "label": "door, gate"
+    }
+  ]
+}

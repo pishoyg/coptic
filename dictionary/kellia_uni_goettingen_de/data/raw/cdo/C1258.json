@@ -1,0 +1,547 @@
+{
+  "id": "C1258",
+  "forms": [
+    {
+      "id": "CF3921",
+      "orth": "ⲕⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.39,
+        "rank": 1327,
+        "count": 62
+      }
+    },
+    {
+      "orth": "ⲕⲉⲛⲧⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.55,
+        "rank": 1025,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ⲕⲛⲧⲉ",
+      "dialect": "A",
+      "id": "726.1"
+    },
+    {
+      "orth": "ⲕⲉⲛⲧⲏ",
+      "dialect": "F",
+      "id": "726.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1457",
+      "bibliography": "CD 112b; KoptHWb 66; ChLCS 18a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ϯⲃⲱ ⲛ**ⲕⲉⲛⲧⲉ** ⲥⲛⲁϯⲟⲩⲧⲁϩ ⲁⲛ ⲟⲩⲟϩ ⲛⲛⲉⲟⲩⲧⲁϩ ϣⲱⲡⲓ ϧⲉⲛϯⲃⲱ ⲛⲁⲗⲟⲗⲓ ⲉϥⲉϫⲉⲙⲉⲑⲛⲟⲩϫ ⲛϫⲉⲡϩⲱⲃ ⲛϯⲃⲱ ⲛϫⲱⲓⲧ ⲟⲩⲟϩ ⲛⲓⲙⲉϣϣⲟϯ ⲛⲛⲟⲩⲉⲣϧⲣⲉ ⲁⲩⲙⲟⲩⲛⲕ ⲛϫⲉⲛⲓⲉⲥⲱⲟⲩ ϫⲉⲙⲙⲟⲛϧⲣⲉ ⲛⲧⲱⲟⲩ ⲟⲩⲟϩ ⲙⲙⲟⲛⲉϩⲉ ϣⲟⲡ ϧⲉⲛⲡⲓⲟⲩⲛϩϥ ⲛⲧⲉⲡⲟⲩⲭⲱ ⲉⲃⲟⲗ .",
+      "english": "For though the fig-tree shall bear no fruit, and there shall be no produce on the vines; the labour of the olive shall fail, and the fields shall produce no food: the sheep have failed from the pasture, and there are no oxen at the cribs;",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲁⲣⲉⲡⲉⲓϣⲏⲛ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲣⲁⲛⲁϥ ⲉⲛⲉϩ ⲙⲡⲟⲩⲟⲉⲓⲉ ⲉⲧⲏⲡ ⲉⲧⲡⲉ · ⲡⲁⲓ ⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲓⲉⲓ ⲉⲓϣⲓⲛⲉ ⲛⲥⲁⲕⲁⲣⲡⲟⲥ ⲛⲧⲉⲓⲃⲱ ⲛ**ⲕⲛⲧⲉ** · ⲁⲩⲱ ⲙⲡⲉⲓϩⲉ ⲉⲟⲩⲟⲛ ·",
+      "english": "In this manner this tree will never give pleasure to the Husbandman Who appertaineth to heaven, Who spake saying, 'I came seeking for fruit on this fig-tree, and I have found none",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲇⲉ ϧⲉⲛϯⲃⲱ ⲛ**ⲕⲉⲛⲧⲉ** ⲁⲣⲓⲉⲙⲓ ⲉϯⲡⲁⲣⲟⲃⲟⲗⲏ ⲉϣⲱⲡ ϩⲏⲇⲏ ⲛⲧⲉⲛⲉⲥϫⲁⲗ ϭⲛⲟⲛ ⲟⲩⲟϩ ⲛⲧⲉⲥϩⲓϫⲱⲃⲓ ⲉⲃⲟⲗ ϣⲁⲣⲉⲧⲉⲛⲉⲙⲓ ϫⲉϥϧⲉⲛⲧ ⲛϫⲉⲡⲓϣⲱⲙ .",
+      "english": "Now from the fig tree, learn this parable. When the branch has now become tender, and puts forth its leaves, you know that the summer is near;",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲣⲡⲙⲉⲉⲩⲉ ⲛϭⲓⲡⲉⲧⲣⲟⲥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉϩⲣⲁⲃⲃⲉⲓ . ⲁⲛⲁⲩ ⲉⲧⲃⲱ ⲛ**ⲕⲛⲧⲉ** ⲛⲧⲁⲕⲥϩⲟⲩⲱⲣⲥ ⲛⲧⲁⲥϣⲟⲟⲩⲉ .",
+      "english": "Peter, remembering, said to him, &apos;Rabbi, look! The fig tree which you cursed has withered away.&apos;",
+      "source": "Mark Chaper 11",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲉⲣⲫⲙⲉⲩⲓ ⲛϫⲉⲡⲉⲧⲣⲟⲥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲣⲁⲃⲃⲓ ⲓⲥ ϯⲃⲱ ⲛ**ⲕⲉⲛⲧⲉ** ⲉⲧⲁⲕⲥⲁϩⲟⲩⲓ ⲉⲣⲟⲥ ⲁⲥϣⲱⲟⲩⲓ .",
+      "english": "Peter, remembering, said to him, 'Rabbi, look! The fig tree which you cursed has withered away.'",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲉⲩⲃⲱ ⲛⲕⲛⲧⲉ ⲙⲡⲟⲩⲉ ⲉⲣⲉϩⲉⲛϭⲱⲃⲉ ϩⲓⲱⲱⲥ ⲁϥⲃⲱⲕ ⲉⲣⲁⲧⲥ ϫⲉⲙⲉϣⲁⲕ ⲉϥⲉϭⲛⲗⲁⲁⲩ ⲛϩⲏⲧⲥ ⲁⲩⲱ ⲛⲧⲉⲣⲉϥⲉⲓ ⲙⲡϥϭⲛⲗⲁⲁⲩ ϩⲓⲱⲱⲥ ⲛⲥⲁϭⲱⲃⲉ ⲙⲙⲁⲧⲉ ⲛⲉⲡⲥⲏⲩ ⲅⲁⲣ ⲁⲛ ⲡⲉ ⲙⲡ**ⲕⲛⲧⲉ** .",
+      "english": "Seeing a fig tree afar off having leaves, he came to see if perhaps he might find anything on it. When he came to it, he found nothing but leaves, for it was not the season for figs.",
+      "source": "41_Mark_11",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲱ",
+        29,
+        27.449
+      ],
+      [
+        "ϩⲟⲗϫ",
+        7,
+        23.259
+      ],
+      [
+        "ⲡⲁⲣⲟⲃⲟⲗⲏ",
+        2,
+        21.695
+      ],
+      [
+        "ⲛ",
+        50,
+        21.522
+      ],
+      [
+        "ⲉⲙⲁϣⲱ",
+        7,
+        19.795
+      ],
+      [
+        "ⲥⲉⲣⲟϫⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲁⲧⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲩⲉⲣϣⲱⲣⲡ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲁⲗⲁⲑⲏ",
+        1,
+        19.695
+      ],
+      [
+        "ϯ",
+        20,
+        19.256
+      ],
+      [
+        "ⲉⲣⲙⲁⲛ",
+        2,
+        18.995
+      ],
+      [
+        "ⲁⲣⲓⲉⲙⲓ",
+        3,
+        18.865
+      ],
+      [
+        "ϭⲏⲟⲩⲧ",
+        1,
+        18.695
+      ],
+      [
+        "ϯⲟⲩⲧⲁϩ",
+        2,
+        18.447
+      ],
+      [
+        "ⲉ",
+        22,
+        18.395
+      ],
+      [
+        "ϣⲱⲟⲩⲓ",
+        3,
+        18.321
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        21,
+        18.257
+      ],
+      [
+        "ⲥ",
+        15,
+        18.149
+      ],
+      [
+        "ϩⲁⲛ",
+        12,
+        18.068
+      ],
+      [
+        "ⲥⲉⲕ",
+        2,
+        17.995
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲱ",
+        40,
+        23.047
+      ],
+      [
+        "ⲛ",
+        82,
+        16.927
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        14.644
+      ],
+      [
+        "ϫⲏⲟⲩ",
+        1,
+        14.644
+      ],
+      [
+        "ⲟⲩⲟⲩⲕⲉ",
+        1,
+        14.644
+      ],
+      [
+        "ⲁⲧⲃⲱ",
+        1,
+        14.644
+      ],
+      [
+        "ⲕⲉⲧϥ",
+        1,
+        14.644
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        9,
+        14.521
+      ],
+      [
+        "ϭⲱⲱⲃⲉ",
+        2,
+        14.322
+      ],
+      [
+        "ⲗⲁⲗⲱⲱ",
+        1,
+        13.644
+      ],
+      [
+        "ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+        1,
+        13.644
+      ],
+      [
+        "ⲟⲩⲧⲁϭ",
+        1,
+        13.644
+      ],
+      [
+        "ⲧⲃ",
+        1,
+        13.644
+      ],
+      [
+        "ⲧ",
+        22,
+        13.495
+      ],
+      [
+        "ⲉ",
+        28,
+        13.285
+      ],
+      [
+        "ⲥϩⲟⲩⲱⲣ",
+        2,
+        13.184
+      ],
+      [
+        "ϩⲣⲙⲁⲛ",
+        1,
+        13.059
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        18,
+        13.021
+      ],
+      [
+        "ϩⲉⲛ",
+        12,
+        12.875
+      ],
+      [
+        "ⲟⲩⲧⲉ",
+        4,
+        12.843
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲛⲧⲉ_0_node",
+          46
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲛⲧⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲟⲩ",
+          2
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲓⲟⲩⲇⲁ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲟⲩⲟⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲕⲛⲧⲉ",
+          "ϩⲉⲛ_1_pre_ⲕⲛⲧⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲛⲧⲉ",
+          "ⲕⲛⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲕⲛⲧⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲛⲧⲉ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲛⲧⲉ",
+          "ⲕⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲛⲧⲉ_0_node",
+          "ⲉ_1_post_ⲕⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲕⲛⲧⲉ",
+          "ⲩ_3_post_ϩⲟⲟⲩ",
+          2
+        ],
+        [
+          "ⲩ_3_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲉ",
+          "ⲉⲙⲁⲧⲉ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲛⲧⲉ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲕⲛⲧⲉ",
+          "ϩⲉⲛ_1_pre_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲛⲧⲉ",
+          "ⲕⲉ_1_pre_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲕⲛⲧⲉ",
+          "ⲕⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲛⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ⲕⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲛⲧⲉ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ⲟⲩ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲓⲟⲩⲇⲁ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲛⲧⲉ",
+          "ϩⲟⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲉⲧ",
+          "ⲛⲁⲓ_1_post_ⲕⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲕⲛⲧⲉ",
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲛⲁⲓ",
+          "ⲛ_4_post_ϣⲟⲩⲟⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.39,
+      "rank": 1145,
+      "count": 62
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1259",
+      "label": "ⲃⲱ ⲛⲕⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "fig tree"
+    },
+    {
+      "target": "C1260",
+      "label": "ⲓⲁϩ ⲛⲕⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "fig-garden"
+    }
+  ],
+  "etym": {
+    "egy_num": "163910",
+    "egy_lemma": "kwnt",
+    "demo_num": "d6379",
+    "demo_lemma": "qnṱ(e)",
+    "english": "fig tree",
+    "german": "Feigenbaum",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163910",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6379"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "C5085",
+  "forms": [
+    {
+      "id": "CF12135",
+      "orth": "ϫⲓⲟⲩⲛⲁϥ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5716",
+      "bibliography": "CD 486a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5084",
+      "label": "ϯⲟⲩⲛⲟϥ",
+      "pos": "V",
+      "gloss": "make joy, rejoice"
+    },
+    {
+      "target": "C5083",
+      "label": "ⲉⲣⲟⲩⲛⲟϥ",
+      "pos": "V",
+      "gloss": "make joy, rejoice"
+    },
+    {
+      "target": "C5082",
+      "label": "ⲙⲁⲓⲟⲩⲛⲟϥ",
+      "pos": "N",
+      "gloss": "pleasure-loving, joy-loving"
+    },
+    {
+      "target": "C5080",
+      "label": "ⲟⲩⲛⲟϥ",
+      "pos": "V",
+      "gloss": "rejoice"
+    },
+    {
+      "target": "C5081",
+      "label": "ⲟⲩⲛⲟϥ",
+      "pos": "N",
+      "gloss": "joy, gladness"
+    }
+  ]
+}

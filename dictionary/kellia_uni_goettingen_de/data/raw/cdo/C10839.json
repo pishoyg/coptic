@@ -1,0 +1,56 @@
+{
+  "id": "C10839",
+  "forms": [
+    {
+      "id": "CF29559",
+      "orth": "ⲫⲁⲣⲙⲁⲕⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29561",
+      "orth": "ⲫⲁⲣⲙⲁⲕⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29560",
+      "orth": "ⲫⲁⲣⲙⲁⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12620,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14954",
+      "bibliography": "DDGLC",
+      "cu_ID": "2308"
+    },
+    {
+      "id": "CS14955",
+      "bibliography": "DDGLC",
+      "cu_ID": "3532"
+    },
+    {
+      "id": "CS14956",
+      "bibliography": "DDGLC",
+      "cu_ID": "11091"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3340",
+    "grl_lemma": "φαρμακεία",
+    "grl_meaning": "use of drugs (esp. of purgatives); witchcraft",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1917a; Preisigke 2:686"
+  }
+}

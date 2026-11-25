@@ -1,0 +1,51 @@
+{
+  "id": "C3434",
+  "forms": [
+    {
+      "id": "CF8767",
+      "orth": "ⲣⲙⲥⲕⲓⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3912",
+      "bibliography": "CD 329a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3433",
+      "label": "ⲣⲥⲕⲓⲙ",
+      "pos": "V",
+      "gloss": "become grey-haired and old"
+    },
+    {
+      "target": "C3431",
+      "label": "ⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "discoloured, grey hair"
+    },
+    {
+      "target": "C3432",
+      "label": "ⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "grey-haired"
+    },
+    {
+      "target": "C3435",
+      "label": "ⲥⲕⲙⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "spotted(?) with bald spots(?)"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "C297",
+  "forms": [
+    {
+      "id": "CF1255",
+      "orth": "ⲁϩⲁⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1256",
+      "orth": "ⲁϩⲉⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1257",
+      "orth": "ⲁϩⲁⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1258",
+      "orth": "ⲁϩⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1259",
+      "orth": "ⲁϩⲛ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "note": "auch Präposition",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS330",
+      "bibliography": "CD XVI; CED 18; KoptHWb 17, 491; DELC 23; ChLCS 6b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲟⲓ",
+        1,
+        12.41
+      ],
+      [
+        "ⲡⲉⲧϩⲱⲟⲩ",
+        1,
+        11.758
+      ],
+      [
+        "ϩⲃⲏⲟⲩⲓ",
+        1,
+        10.91
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.228
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁϩⲁⲛ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲧϩⲱⲟⲩ_1_post_ⲁϩⲁⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁϩⲁⲛ_0_node",
+          "ⲡⲉⲧϩⲱⲟⲩ_1_post_ⲁϩⲁⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C283",
+      "type": "syn",
+      "label": "and"
+    },
+    {
+      "target": "ⲟⲩⲁϩⲛ",
+      "type": "syn",
+      "label": "und"
+    },
+    {
+      "target": "C240",
+      "type": "syn",
+      "label": "and"
+    }
+  ],
+  "etym": {
+    "egy_num": "98590",
+    "egy_lemma": "r-hn-r",
+    "demo_num": "d3378",
+    "demo_lemma": "(r-)hn-(r)",
+    "english": "extending to; up to",
+    "german": "sich erstreckend nach; bis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/98590",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3378"
+  }
+}

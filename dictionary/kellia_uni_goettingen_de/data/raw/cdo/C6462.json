@@ -1,0 +1,292 @@
+{
+  "id": "C6462",
+  "forms": [
+    {
+      "id": "CF14952",
+      "orth": "ϩⲃⲟⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4067,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϩⲃⲱⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.08,
+        "rank": 457,
+        "count": 176
+      }
+    },
+    {
+      "orth": "ϩⲃⲟⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.97,
+        "rank": 741,
+        "count": 82
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7170",
+      "bibliography": "CD 659b-660a; CED 276; KoptHWb 356; DELC 289b; ChLCS 88b"
+    },
+    {
+      "id": "CS7171",
+      "bibliography": "CD 660a; CED 276; KoptHWb 356; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲙⲁ ⲉϣⲁϥϣⲉ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲣⲟϥ ⲉⲛⲓϯⲙⲓ ⲓⲉ ⲛⲓⲃⲁⲕⲓ ⲓⲉ ⲛⲓⲓⲟϩⲓ ⲛⲁⲩⲭⲱ ⲛⲛⲏ ⲉⲧϣⲱⲛⲓ ϩⲓⲛⲓⲁⲅⲟⲣⲁ ⲟⲩⲟϩ ⲛⲁⲩϯϩⲟ ⲉⲣⲟϥ ϩⲓⲛⲁ ⲕⲁⲛ ⲛⲧⲟⲩϭⲓ ⲛⲉⲙⲡⲓϣⲧⲁϯ ⲛⲧⲉⲛⲉϥ**ϩⲃⲱⲥ** ⲟⲩⲟϩ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉϣⲁⲩϭⲓ ⲛⲉⲙⲁϥ ϣⲁⲩⲟⲩϫⲁⲓ .",
+      "english": "Wherever he entered, into villages, or into cities, or into the country, they laid the sick in the marketplaces, and begged him that they might touch just the fringe of his garment; and as many as touched him were made well.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲉⲛⲉϥⲁϩⲉⲣⲁⲧϥ · ⲉⲣⲉⲟⲩϣⲧⲏⲛ ⲛ**ϩⲃⲟⲟⲥ** ϩⲓⲱⲱϥ · ⲙⲁⲩⲁⲁⲥ · ⲉⲥϫⲓ ⲧⲟⲧⲉ ⲉⲡⲥⲁ ⲥⲛⲁⲩ ·",
+      "english": "Then John stood on his feet — now the only garment which he had on him was a tunic which came down on both sides",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲙⲟⲩⲥⲉϩⲧ ϧⲉⲛⲟⲩ**ϩⲃⲱⲥ** ⲛⲉⲙⲟⲩⲏⲓ",
+      "english": "and of the leprosy of a garment, and of a house,",
+      "source": "03_Leviticus_14",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲟⲕ ⲇⲉ ⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ϣⲟⲡϥ ⲛ**ϩⲃⲟⲟⲥ** ⲡⲁⲥⲱⲙⲁ · ⲁⲩⲱ ⲙⲡⲣⲛⲉϫⲕⲉⲗⲁⲁⲩ ⲉⲣⲟⲓ · ⲉⲓⲙⲏⲧⲓ ⲧⲗⲉⲃⲓⲧⲟⲛ ⲛⲧⲁⲩⲙⲟⲣⲧ ⲙⲙⲟⲥ ⲙⲛⲡⲁⲥⲭⲏⲙⲁ ⲙⲛⲧⲁⲕⲟⲩⲕⲗⲉ · ⲙⲛⲡⲁⲙⲟϫⲕϥ · ⲙⲛⲧⲁϭⲟⲟⲗⲉⲥ · ⲙⲙⲁⲧⲉ · ⲛⲧⲉⲧⲛⲕⲟⲥⲧ ⲛⲧⲉⲧⲛⲧⲟⲙⲥⲧ ·",
+      "english": "Do thou then, O John, buy a covering for my body, and do not put on me anything except the shroud wherein I am wrapped, and my monk's dress, and my skull-cap, and my girdle, and my tunic—only these—and ye shall prepare me for burial and ye shall bury me.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲟⲩⲕⲁⲕⲥⲉϩⲧ ⲫⲏ ⲉⲧⲉⲡⲓϭⲟϩ ϩⲓϫⲱϥ ⲛⲉϥ**ϩⲃⲱⲥ** ⲉⲩⲉϣⲱⲡⲓ ⲉⲩⲫⲉⲣⲫⲱⲣ ⲟⲩⲟϩ ⲛⲧⲉϥⲁⲫⲉ ⲉⲥϩⲟⲃⲥ ⲁⲛ ⲟⲩⲟϩ ⲉϥⲉϩⲱⲃⲥ ⲙⲡⲕⲱϯ ⲛⲣⲱϥ ⲟⲩⲟϩ ⲉⲩⲉⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉϥϭⲁϧⲉⲙ",
+      "english": "And the leper in whom the plague is, let his garments be ungirt, and his head uncovered; and let him have a covering put upon his mouth, and he shall be called unclean.",
+      "source": "03_Leviticus_13",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲁⲁⲣⲱⲛ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲉⲥⲕⲏⲛⲏ ⲙⲡⲙⲁⲣⲧⲩⲣⲓⲟⲛ ⲛϥⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲛⲧⲉⲥⲧⲟⲗⲏ ⲛ**ϩⲃⲟⲟⲥ** ⲉⲛⲧⲁϥⲧⲁⲁⲥ ϩⲓⲱⲱϥ ⲉϥⲛⲁⲉⲓ ⲉϩⲟⲩⲛ ⲉⲡⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲛϥⲕⲁⲁⲥ ⲉϩⲣⲁⲓ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ",
+      "english": "And Aaron shall enter into the tabernacle of witness, and shall put off the linen garment, which he had put on, as he entered into the holy place, and shall lay it by there.",
+      "source": "Leviticus 16",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲟⲣⲃⲣ",
+        1,
+        17.791
+      ],
+      [
+        "ϣⲧⲏⲛ",
+        2,
+        13.714
+      ],
+      [
+        "ϭⲗⲟⲙⲗⲙ",
+        1,
+        13.469
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        2,
+        12.331
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        2,
+        12.066
+      ],
+      [
+        "ⲥⲧⲟⲗⲏ",
+        1,
+        11.661
+      ],
+      [
+        "ϥ",
+        9,
+        11.224
+      ],
+      [
+        "ϣⲟⲡ",
+        1,
+        10.315
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ⲉⲣⲉ",
+        2,
+        9.295
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        1,
+        8.974
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        8.685
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        8.227
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        8.194
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        1,
+        7.816
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        7.368
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.168
+      ],
+      [
+        "ⲁ",
+        3,
+        6.992
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        5.973
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲃⲟⲟⲥ_0_node",
+          6
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲃⲟⲟⲥ",
+          2
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲱⲙⲁ_1_post_ϩⲃⲟⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ϩⲃⲟⲟⲥ",
+          "ϩⲃⲟⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲃⲟⲟⲥ_0_node",
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲥⲱⲙⲁ",
+          "ⲥⲱⲙⲁ_1_post_ϩⲃⲟⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3678,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6463",
+      "label": "ϩⲃⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "covering, garment; linen"
+    },
+    {
+      "target": "C6464",
+      "label": "ϩⲃⲥⲱ",
+      "pos": "N",
+      "gloss": "garment"
+    },
+    {
+      "target": "C6459",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "V",
+      "gloss": "cover, be covered"
+    },
+    {
+      "target": "C6460",
+      "label": "ϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "covering, lid"
+    },
+    {
+      "target": "C12093",
+      "label": "ϭⲓϩⲃⲟⲥ",
+      "pos": "N",
+      "gloss": "clothing"
+    },
+    {
+      "target": "C6461",
+      "label": "ⲣⲉϥϩⲱⲃⲥ",
+      "pos": "N",
+      "gloss": "coverer, protector"
+    }
+  ],
+  "etym": {
+    "egy_num": "103750",
+    "egy_lemma": "ḥbs",
+    "demo_num": "d4031",
+    "demo_lemma": "ḥbs",
+    "english": "garment; clothing",
+    "german": "Kleid; Hülle; Tuch",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/103750",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4031"
+  }
+}

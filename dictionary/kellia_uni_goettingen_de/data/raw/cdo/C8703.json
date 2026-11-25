@@ -1,0 +1,383 @@
+{
+  "id": "C8703",
+  "forms": [
+    {
+      "id": "CF20698",
+      "orth": "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20699",
+      "orth": "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3390,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF20700",
+      "orth": "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20701",
+      "orth": "ⲇⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4498,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF20702",
+      "orth": "ⲧⲁⲛⲓⲥⲧⲏⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10347",
+      "bibliography": "DDGLC",
+      "cu_ID": "1433"
+    },
+    {
+      "id": "CS10348",
+      "bibliography": "DDGLC",
+      "cu_ID": "7528"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲉⲣⲭⲣⲉⲱⲥⲧⲓⲛ ⲅⲁⲣ ϧⲉⲛⲟⲩⲛⲓϣϯ ⲛⲭⲣⲉⲟⲥ ⲁⲗⲗⲁ ⲡⲓ**ⲇⲁⲛⲓⲥⲧⲏⲥ** ϣⲑⲟⲣⲧⲉⲣ ⲁⲛ ϧⲉⲛⲛⲉϥϩⲃⲏⲟⲩⲓ .",
+      "english": "I owe a great debt, but the creditor is not disturbed in his deeds.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲟⲩⲛⲟϫⲟⲩ ⲉⲃⲟⲗ ϩⲛⲛⲉⲩⲏⲓ · ⲙⲁⲣⲉⲡ**ⲇⲁⲛⲓⲥⲧⲏⲥ** ⲙⲉϣⲧ ⲛⲉⲧϣⲟⲟⲡ ⲛⲁϥ ⲧⲏⲣⲟⲩ · ⲁⲩⲱ ⲙⲁⲣⲉϩⲉⲛϣⲙⲙⲟ ⲧⲱⲣⲡ ⲛⲛⲉϥϩⲓⲥⲉ ⲧⲏⲣⲟⲩ · ⲙⲡⲣⲧⲣⲉϥ ϣⲱⲡⲉ ⲛϭⲓⲡⲉⲧⲛⲁϯⲧⲟⲟⲧϥ · ⲟⲩⲇⲉ ⲙⲡⲣⲧⲣⲉϣⲁⲛϩⲧⲏϥ ϣⲱⲡⲉ ⲛⲛⲉϥⲟⲣⲫⲁⲛⲟⲥ ·",
+      "english": "“may they be thrown out of their houses. 11. May the money-lender sift out all that he hath, | and may strangers plunder all his best efforts. 12. Let there be no man to back him, and no one to take pity on his orphans.”",
+      "source": "Pistis Sophia Book 1 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:75-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲇⲉ ϫⲉⲛⲉⲟⲩⲟⲛ ⲭⲣⲉⲱⲥⲧⲏⲥ ⲃⲉⲟⲩⲟⲛⲧⲉ ⲟⲩ**ⲇⲁⲛⲓⲥⲧⲏⲥ** ⲉⲣⲱⲟⲩ ⲡⲓⲟⲩⲁⲓ ⲛⲉⲟⲩⲟⲛ ⲫⲛⲥⲁⲑⲉⲣⲓ ⲉⲣⲟϥ ⲡⲓⲕⲉⲟⲩⲁⲓ ⲇⲉ ⲛⲉⲟⲩⲟⲛ ⲛⲉⲣⲟϥ .",
+      "english": "'A certain lender had two debtors. The one owed five hundred denarii, and the other fifty.",
+      "source": "03_Luke_07",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ϩⲟⲣϣ ⲛⲛⲁϩⲣⲛⲟⲩⲣⲱⲙⲉ ⲛⲥⲁⲃⲉ ⲧⲉⲡⲓⲧⲓⲙⲓⲁ ⲛⲟⲩⲏⲓ ⲙⲛⲡⲛⲟϭⲛⲉϭ ⲛⲟⲩ**ⲇⲁⲛⲓⲥⲧⲏⲥ**",
+      "english": "These things are grievous to a man of understanding; the upbraiding of houseroom, and reproaching of the lender.",
+      "source": "Sirach 29",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲟⲩⲕⲓⲙ ⲟⲩⲟϩ ⲛⲥⲉⲟⲩⲱⲧⲉⲃ ⲉⲃⲟⲗ ⲛϫⲉⲛⲉϥϣⲏⲣⲓ ⲟⲩⲟϩ ⲛⲥⲉϣⲁⲧ ⲙⲉⲑⲛⲁⲓ ⲉⲩⲉϩⲓⲧⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲙⲁⲛϣⲱⲡⲓ ⲉⲣⲉⲡⲓ**ⲇⲁⲛⲓⲥⲧⲏⲥ** ϧⲉⲧϧⲉⲧ ⲉⲛⲭⲁⲓ ⲛⲓⲃⲉⲛ ⲉⲧϣⲟⲡ ⲛⲁϥ",
+      "english": "Let his days be few: and let another take his office of overseer.",
+      "source": "19_Psalmi_108",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:108",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲛⲧⲉ ⲟⲩ**ⲇⲁⲛⲓⲥⲧⲏⲥ** ⲉⲣⲱⲙⲉ ⲥⲛⲁⲩ ⲡⲉ . ⲛⲉⲩⲛⲧϥϯⲟⲩ ⲛϣⲉ ⲛⲥⲁⲧⲉⲉⲣⲉ ⲉⲩⲁ ⲉⲩⲛⲧϥⲧⲁⲉⲓⲟⲩ ⲉⲩⲁ .",
+      "english": "'A certain lender had two debtors. The one owed five hundred denarii, and the other fifty.",
+      "source": "42_Luke_7",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲣⲉⲟⲥ",
+        2,
+        18.788
+      ],
+      [
+        "ⲭⲣⲉⲱⲥⲧⲏⲥ",
+        1,
+        17.373
+      ],
+      [
+        "ⲃⲉ",
+        1,
+        15.788
+      ],
+      [
+        "ϧⲉⲧϧⲉⲧ",
+        1,
+        15.051
+      ],
+      [
+        "ϣⲑⲟⲣⲧⲉⲣ",
+        2,
+        12.897
+      ],
+      [
+        "ⲟⲩⲟⲛⲧⲉ",
+        1,
+        11.645
+      ],
+      [
+        "ⲉⲛⲭⲁⲓ",
+        1,
+        10.85
+      ],
+      [
+        "ⲙⲁⲛϣⲱⲡⲓ",
+        1,
+        10.503
+      ],
+      [
+        "ⲡⲓ",
+        5,
+        10.415
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        10.188
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        9.345
+      ],
+      [
+        "ⲧⲏⲓⲧ",
+        1,
+        9.249
+      ],
+      [
+        "ϩⲓⲧ",
+        1,
+        8.964
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.693
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        7.492
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.187
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        7.073
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        6.749
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        6.581
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.569
+      ]
+    ],
+    "S": [
+      [
+        "ⲣϩⲟⲩⲉⲙⲉϣⲧ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲉϣⲧ",
+        2,
+        15.765
+      ],
+      [
+        "ⲧⲁϥ",
+        1,
+        12.621
+      ],
+      [
+        "ⲁⲛⲁⲅⲕⲏ",
+        1,
+        11.206
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        2,
+        11.096
+      ],
+      [
+        "ⲧⲱⲃϩ",
+        1,
+        10.936
+      ],
+      [
+        "ⲛⲧⲁ",
+        1,
+        10.376
+      ],
+      [
+        "ⲏⲓ",
+        2,
+        10.15
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        9.787
+      ],
+      [
+        "ϩⲏⲕⲉ",
+        1,
+        9.451
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        8.441
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        8.335
+      ],
+      [
+        "ⲓ",
+        2,
+        7.265
+      ],
+      [
+        "ϣⲟⲟⲡ",
+        1,
+        7.206
+      ],
+      [
+        "ⲡ",
+        3,
+        6.667
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.653
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.517
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        6.231
+      ],
+      [
+        "ⲛ",
+        3,
+        5.979
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.728
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲓ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          5
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲁⲛⲓⲥⲧⲏⲥ",
+          "ⲇⲁⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 2988,
+      "count": 5
+    },
+    "S": {
+      "rate": 0.04,
+      "rank": 4098,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "4797",
+    "grl_lemma": "δανειστής",
+    "grl_meaning": "money-lender, creditor, borrower",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 369a; Preisigke 1:318; Bauer 341"
+  }
+}

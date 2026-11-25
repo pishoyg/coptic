@@ -1,0 +1,576 @@
+{
+  "id": "C4453",
+  "forms": [
+    {
+      "id": "CF10859",
+      "orth": "ⲧⲱⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3457,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲧⲟⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.74,
+        "rank": 870,
+        "count": 63
+      }
+    },
+    {
+      "orth": "ⲧⲟⲣⲉ",
+      "dialect": "S",
+      "id": "369.1"
+    },
+    {
+      "orth": "ⲧⲱⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6899,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲧⲱⲣⲉ",
+      "dialect": "A",
+      "id": "369.3"
+    },
+    {
+      "orth": "ⲧⲱⲣⲓ",
+      "dialect": "F",
+      "id": "369.4"
+    },
+    {
+      "orth": "ⲧⲱⲣⲉⲓ",
+      "dialect": "F",
+      "id": "369.5"
+    },
+    {
+      "orth": "ⲧⲱⲗⲓ",
+      "dialect": "F",
+      "id": "369.6"
+    },
+    {
+      "orth": "ⲧⲟⲗⲓ",
+      "dialect": "F",
+      "id": "369.7"
+    },
+    {
+      "orth": "ⲧⲟⲣⲓ",
+      "dialect": "F",
+      "id": "369.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5041",
+      "bibliography": "CD 425a; CDC 67a; CED 193; KoptHWb 242; DELC 219b-220a; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲛ . ⲡϩⲟ ⲙⲡϭⲟⲉⲓⲥ ⲡⲉ ⲧⲟⲩⲧⲟⲓ ⲛⲛⲉϥⲟⲩⲧⲁϩ **ⲧⲟⲧ**ϥ ⲉϫⲟⲩϣⲧ ⲉϫⲱⲟⲩ ⲡϩⲟ ⲛⲟⲩⲟⲩⲏⲃ ⲙⲡⲟⲩϭⲓⲧϥ ⲟⲩϧⲉⲗⲗⲟ ⲙⲡⲟⲩⲛⲁⲓ ⲛⲁϥ .",
+      "english": "AIN. The presence of the Lord was their portion; but he will not again look upon them: they regarded not the person of the priests, they pitied not the prophets.",
+      "source": "25_Lamentationes_04",
+      "urn": "urn:cts:copticLit:ot.lam.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲧⲣⲉϥⲥⲉⲕ **ⲧⲟⲟⲧ**ϥ ⲉⲣⲟϥ ϩⲛⲟⲩⲥⲙⲏ ·",
+      "english": "God made him to hold his hand.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲉⲙ ⲉⲡⲥⲁϫⲓ ⲙⲡϭⲟⲉⲓⲥ ⲫⲁⲓ ⲉϯⲛⲁϭⲓⲧϥ ⲛϩⲏⲃⲓ ⲉϫⲉⲛⲑⲏⲛⲟⲩ ⲡⲏⲓ ⲙⲡⲓⲥⲗ ⲁϥϩⲉⲓ ⲛⲛⲉϥⲟⲩⲧⲁϩ **ⲧⲟⲧ**ϥ ϫⲉⲉⲧⲱⲛϥ .",
+      "english": "Hear ye this word of the Lord, even a lamentation, which I take up against you. The house of Israel is fallen; it shall no more rise.",
+      "source": "30_Amos_05",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϣⲛϩⲧⲏϥ ⲁϥⲥⲟⲩⲧⲛ**ⲧⲟⲟⲧ**ϥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲁϥⲕⲱϩ ⲉⲣⲟϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉϯⲟⲩⲱϣ ⲧⲃⲃⲟ .",
+      "english": "Being moved with compassion, he stretched out his hand, and touched him, and said to him, &apos;I want to. Be made clean.&apos;",
+      "source": "Mark Chapter 1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲉ ϯϯϩⲟ ⲉⲣⲟⲕ ϩⲱⲕ ⲡⲓⲥⲱⲧⲡ ⲥⲩⲛⲍⲩⲅⲉ ⲙⲁ**ⲧⲟⲧ**ⲕ ⲛⲉⲙⲱⲟⲩ ⲛⲁⲓ ⲉⲧⲁⲩϭⲓϧⲓⲥⲓ ⲛⲉⲙⲏⲓ ϧⲉⲛⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲉⲙⲡⲕⲉⲕⲗⲏ ⲙⲉⲛⲧⲟⲥ ⲛⲉⲙⲡⲥⲉⲡⲓ ⲛⲛⲁϣⲫⲏⲣ ⲛⲣⲉϥⲉⲣϩⲱⲃ ⲛⲁⲓ ⲉⲧⲉⲡⲟⲩⲣⲁⲛ ⲥϧⲏⲟⲩⲧ ϩⲓⲡϫⲱⲙ ⲛⲧⲉⲡⲱⲛϧ .",
+      "english": "Yes, I beg you also, true yokefellow, help these women, for they labored with me in the Good News, with Clement also, and the rest of my fellow workers, whose names are in the book of life.",
+      "source": "11_Philippians_04",
+      "urn": "urn:cts:copticLit:nt.phil.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲙⲉⲛ ⲙⲉϥⲥⲱⲧⲙ ⲉⲣⲟϥ ⲉⲕⲱ ⲉⲃⲟⲗ ⲛⲛⲉϥⲛⲟⲃⲉ · ⲁⲗⲗⲁ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧϫⲟⲥⲉ ⲉⲡⲉⲛⲧⲁϥϫⲓⲧϥ ⲛⲧⲟϥ ⲡⲉ ⲉϣⲁϥⲕⲱ ⲉⲃⲟⲗ ⲛⲛⲉϥⲛⲟⲃⲉ · ⲁⲗⲗⲁ ⲉϣⲱⲡⲉ ⲛⲧⲟϥ ⲉⲁϥϫⲓ ϣⲟⲙⲛⲧ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ϩⲙⲡⲉⲭⲱⲣⲏⲙⲁ ⲥⲛⲁⲩ · ⲏ ϩⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲉϩⲟⲩⲛ · ⲁⲩⲱ ⲡⲁⲓ ⲁϥⲕⲟⲧϥ ⲁϥⲡⲁⲣⲁⲃⲁ · ⲙⲉⲣⲉⲗⲁⲁⲩ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲥⲱⲧⲙ ⲉⲣⲟϥ ⲉⲧⲣⲉⲩϯ**ⲧⲟⲟⲧ**ϥ ϩⲛⲧⲉϥⲙⲉⲧⲁⲛⲟⲓⲁ · ⲟⲩⲇⲉ ⲛⲉⲧϫⲟⲥⲉ · ⲟⲩⲇⲉ ⲛⲉⲧϩⲁⲡⲉⲥⲏⲧ ⲙⲙⲟϥ · ⲉⲓⲙⲏⲧⲓ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲙⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲙⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ ·",
+      "english": "--the latter indeed hearkeneth not unto him to forgive his sin; but it is the mystery which is higher than that which he hath received, that forgiveth his sins. But if on the other hand he hath received the three mysteries in the two spaces or in the third from within, and he hath turned and transgressed, no mystery hearkeneth unto him to help him in his repentance, neither the higher nor the lower, save the mystery of the First Mystery and the mysteries of the Ineffable,",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲱⲣϭ",
+        1,
+        12.067
+      ],
+      [
+        "ϣⲏⲧⲥ",
+        1,
+        11.067
+      ],
+      [
+        "ⲟⲩⲉϩ",
+        2,
+        8.607
+      ],
+      [
+        "ⲉⲅⲗⲱⲙ",
+        1,
+        8.607
+      ],
+      [
+        "ⲛ",
+        18,
+        7.787
+      ],
+      [
+        "ⲧⲉⲥ",
+        3,
+        7.753
+      ],
+      [
+        "ⲃⲱ",
+        2,
+        7.504
+      ],
+      [
+        "ⲟⲙⲥ",
+        1,
+        7.482
+      ],
+      [
+        "ⲛⲟⲩϩⲉ",
+        1,
+        7.112
+      ],
+      [
+        "ⲕⲗⲁⲇⲟⲥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲥⲏϥⲉ",
+        2,
+        6.398
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        1,
+        5.482
+      ],
+      [
+        "ⲥⲟⲧⲉ",
+        1,
+        5.352
+      ],
+      [
+        "ⲧ",
+        6,
+        5.294
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        5.055
+      ],
+      [
+        "ⲥⲃⲱ",
+        1,
+        4.078
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        3.654
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        3.147
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        2.917
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        2.882
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.33,
+      "rank": 339,
+      "count": 370
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4695,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4480",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "grasp hand, greet, promise, engage"
+    },
+    {
+      "target": "C4481",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "engagement gift"
+    },
+    {
+      "target": "C4455",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4456",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4463",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4464",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4487",
+      "label": "ϩⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "under the hand of, beside, with"
+    },
+    {
+      "target": "C4488",
+      "label": "ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4459",
+      "label": "ϫⲓϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4467",
+      "label": "ϫⲓϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4482",
+      "label": "ϫⲓⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "receive a promise"
+    },
+    {
+      "target": "C4475",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "give a hand, help"
+    },
+    {
+      "target": "C4476",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "hand, assistance, help"
+    },
+    {
+      "target": "C4458",
+      "label": "ϯϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4466",
+      "label": "ϯϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4474",
+      "label": "ⲁⲧⲕⲁ ⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "continuous, incessant"
+    },
+    {
+      "target": "C4465",
+      "label": "ⲃⲱⲗϣⲧⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "dissolve a guarantee"
+    },
+    {
+      "target": "C4489",
+      "label": "ⲉⲃⲟⲗ ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4486",
+      "label": "ⲉⲃⲟⲗ ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "from"
+    },
+    {
+      "target": "C4472",
+      "label": "ⲉⲓⲛⲉ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "put a hand on"
+    },
+    {
+      "target": "C4471",
+      "label": "ⲉⲓⲣⲉ ⲛⲁⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "endeavour"
+    },
+    {
+      "target": "C4457",
+      "label": "ⲉⲣⲡϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee"
+    },
+    {
+      "target": "C4484",
+      "label": "ⲉⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "to hand of, to"
+    },
+    {
+      "target": "C4473",
+      "label": "ⲕⲱ ⲛⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "\"loosen hand\", cease, despair, renounce"
+    },
+    {
+      "target": "C4468",
+      "label": "ⲙⲉⲧϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4479",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "help"
+    },
+    {
+      "target": "C4462",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4483",
+      "label": "ⲛⲥⲁⲧⲟⲟⲧ⸗",
+      "pos": "ADV",
+      "gloss": "immediately"
+    },
+    {
+      "target": "C4485",
+      "label": "ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "in, by the hand of, by, with, beside, from"
+    },
+    {
+      "target": "C4460",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4461",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4477",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4478",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4469",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4470",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4454",
+      "label": "ⲣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "clap hands, beat time, stamp, make music"
+    },
+    {
+      "target": "C12173",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "strike (instrument), clap (hands)"
+    }
+  ],
+  "etym": {
+    "egy_num": "184630",
+    "egy_lemma": "ḏr.t",
+    "demo_num": "d6975",
+    "demo_lemma": "ḏr.t",
+    "english": "hand; handful (as a measure of volume)",
+    "german": "Hand; Handvoll (als Maß)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/184630",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6975"
+  }
+}

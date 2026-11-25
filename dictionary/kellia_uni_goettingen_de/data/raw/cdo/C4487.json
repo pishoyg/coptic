@@ -1,0 +1,286 @@
+{
+  "id": "C4487",
+  "forms": [
+    {
+      "id": "CF10928",
+      "orth": "ϩⲁⲧⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.98,
+        "rank": 728,
+        "count": 154
+      }
+    },
+    {
+      "id": "CF10929",
+      "orth": "ϩⲁⲧⲟⲟⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3217,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5075",
+      "bibliography": "CD 428b; KoptHWb 249; ChLCS 60b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲇⲁⲙ ⲇⲉ ⲁϥϣⲱⲡⲉ **ϩⲁⲧⲟⲟⲧ**ϥ ⲙⲡⲙⲟⲩ · ⲉⲧⲃⲉⲧⲉϥⲡⲁⲣⲁⲃⲁⲥⲓⲥ · ⲁⲩⲱ ⲁⲡⲉⲡⲗⲁⲥⲙⲁ ⲛⲁⲇⲁⲙ ⲣⲭⲣⲉⲓⲁ ⲉⲧⲣⲉⲩⲡⲗⲁⲥⲥⲉ ⲙⲙⲟϥ ⲛⲕⲉⲥⲟⲡ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲇⲏⲙⲓⲟⲩⲣⲅⲟⲥ · ϫⲉⲕⲁⲥ ⲉϥⲉⲟⲩϫⲁⲓ ·",
+      "english": "Now when Adam was nigh unto death because of his transgression, the material body of Adam needed to be fashioned a second time by the hand of God, the Fabricator, in order that he might receive salvation.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲓϥⲧⲟⲟⲩ ⲁⲩϫⲡⲟⲟⲩ ⲉϩⲉⲛⲉⲃⲟⲗ ⲛⲉ ϩⲛⲛϣⲏⲣⲉ ⲛⲛⲉⲅⲓⲅⲁⲥ ϩⲛⲅⲉⲑ ⲙⲡⲏⲓ ⲛϩⲣⲁⲫⲁ ⲁⲩϩⲉ ⲇⲉ ϩⲁⲧⲟⲟⲧϥ ⲛⲇⲁⲩⲉⲓⲇ ⲁⲩⲱ **ϩⲁⲧⲟⲟⲧ**ⲟⲩ ⲛⲛⲉϥϩⲙϩⲁⲗ",
+      "english": "These four were born descendants of the giants in Geth, the family of Rapha; and they fell by the hand of David, and by the hand of his servants.",
+      "source": "II Samuel 21",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "ϩⲁⲧⲛ-",
+      "type": "cf",
+      "label": "unter"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4480",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "grasp hand, greet, promise, engage"
+    },
+    {
+      "target": "C4481",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "engagement gift"
+    },
+    {
+      "target": "C4455",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4456",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4463",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4464",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4488",
+      "label": "ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4459",
+      "label": "ϫⲓϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4467",
+      "label": "ϫⲓϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4482",
+      "label": "ϫⲓⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "receive a promise"
+    },
+    {
+      "target": "C4475",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "give a hand, help"
+    },
+    {
+      "target": "C4476",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "hand, assistance, help"
+    },
+    {
+      "target": "C4458",
+      "label": "ϯϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4466",
+      "label": "ϯϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4474",
+      "label": "ⲁⲧⲕⲁ ⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "continuous, incessant"
+    },
+    {
+      "target": "C4465",
+      "label": "ⲃⲱⲗϣⲧⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "dissolve a guarantee"
+    },
+    {
+      "target": "C4489",
+      "label": "ⲉⲃⲟⲗ ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4486",
+      "label": "ⲉⲃⲟⲗ ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "from"
+    },
+    {
+      "target": "C4472",
+      "label": "ⲉⲓⲛⲉ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "put a hand on"
+    },
+    {
+      "target": "C4471",
+      "label": "ⲉⲓⲣⲉ ⲛⲁⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "endeavour"
+    },
+    {
+      "target": "C4457",
+      "label": "ⲉⲣⲡϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee"
+    },
+    {
+      "target": "C4484",
+      "label": "ⲉⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "to hand of, to"
+    },
+    {
+      "target": "C4473",
+      "label": "ⲕⲱ ⲛⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "\"loosen hand\", cease, despair, renounce"
+    },
+    {
+      "target": "C4468",
+      "label": "ⲙⲉⲧϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4479",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "help"
+    },
+    {
+      "target": "C4462",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4483",
+      "label": "ⲛⲥⲁⲧⲟⲟⲧ⸗",
+      "pos": "ADV",
+      "gloss": "immediately"
+    },
+    {
+      "target": "C4485",
+      "label": "ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "in, by the hand of, by, with, beside, from"
+    },
+    {
+      "target": "C4460",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4461",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4477",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4478",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4469",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4470",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4454",
+      "label": "ⲣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "clap hands, beat time, stamp, make music"
+    },
+    {
+      "target": "C4453",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "hand"
+    },
+    {
+      "target": "C12173",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "strike (instrument), clap (hands)"
+    }
+  ]
+}

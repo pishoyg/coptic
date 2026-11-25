@@ -1,0 +1,56 @@
+{
+  "id": "C736",
+  "forms": [
+    {
+      "id": "CF2749",
+      "orth": "ⲙⲁⲛⲉⲥⲟⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2750",
+      "orth": "ⲙⲁⲛⲉⲥⲟⲟⲩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS877",
+      "bibliography": "CD 61a; CED 38; KoptHWb 94; ChLCS 12a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1929",
+      "type": "cf",
+      "label": "herdsman, pastor"
+    },
+    {
+      "target": "C6074",
+      "type": "syn",
+      "label": "herd, sheperd"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C734",
+      "label": "ⲉⲥⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "sheep"
+    },
+    {
+      "target": "C735",
+      "label": "ⲉⲥⲱ",
+      "pos": "N",
+      "gloss": "sheep"
+    }
+  ]
+}

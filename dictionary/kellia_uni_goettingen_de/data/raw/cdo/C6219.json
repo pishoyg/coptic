@@ -1,0 +1,168 @@
+{
+  "id": "C6219",
+  "forms": [
+    {
+      "id": "CF14448",
+      "orth": "ⲣϣⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10779,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6906",
+      "bibliography": "CD 614a; ChLCS 84b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲱⲟⲩⲛ · ⲛⲧⲉⲩⲛⲟⲩ ⲁϥϩⲱⲗϭ ⲉⲣⲟⲥ ⲡⲉϫⲁϥ ⲛⲁⲥ ϫⲉⲁⲛⲟⲕ ⲡⲉ ⲉⲩⲥⲧⲁⲑⲓⲟⲥ ⲡⲉⲧ**ⲣϣⲁϫⲉ** ⲉⲣⲟϥ ⲁⲩⲱ ⲁⲩϯⲡⲏ ⲉⲣⲛⲛⲉⲩⲉⲣⲏⲩ ϩⲛⲟⲩϯⲡⲏ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+      "english": "And he rose up straightway, and embraced her, and said unto her, 'I am Eustathius of whom thou speakest.' And they kissed each other with a spiritual kiss,",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲩⲥⲧⲁⲑⲓⲟⲥ",
+        1,
+        15.276
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣϣⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣϣⲁϫⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲣϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣϣⲁϫⲉ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10371,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6216",
+      "label": "ϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "speak, say"
+    },
+    {
+      "target": "C6217",
+      "label": "ϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "saying, word, affair"
+    },
+    {
+      "target": "C6223",
+      "label": "ϭⲓⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speech, saying, tale"
+    },
+    {
+      "target": "C6220",
+      "label": "ⲁⲧϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speechless, unspeakable"
+    },
+    {
+      "target": "C6218",
+      "label": "ⲛⲉϫϣⲁϫⲉ",
+      "pos": "V",
+      "gloss": "cast in word, make mention"
+    },
+    {
+      "target": "C6221",
+      "label": "ⲣⲉϥϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "speaker"
+    },
+    {
+      "target": "C6222",
+      "label": "ⲥⲁ ⲛϣⲁϫⲉ",
+      "pos": "N",
+      "gloss": "man of words, babbler"
+    }
+  ]
+}

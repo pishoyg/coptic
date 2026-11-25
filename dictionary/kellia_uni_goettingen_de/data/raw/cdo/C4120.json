@@ -1,0 +1,65 @@
+{
+  "id": "C4120",
+  "forms": [
+    {
+      "id": "CF10185",
+      "orth": "ϩⲓⲑⲃⲏⲣ ⲉⲃⲟⲗ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4679",
+      "bibliography": "CD 401a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4117",
+      "label": "ϯⲧⲃⲏⲣ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4116",
+      "label": "ⲛⲉϫⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4118",
+      "label": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "kicker"
+    },
+    {
+      "target": "C4119",
+      "label": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "kicker"
+    },
+    {
+      "target": "C4115",
+      "label": "ⲧⲃⲏⲣ",
+      "pos": "N",
+      "gloss": "blow with foot"
+    }
+  ]
+}

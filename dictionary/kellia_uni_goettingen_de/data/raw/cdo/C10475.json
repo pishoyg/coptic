@@ -1,0 +1,56 @@
+{
+  "id": "C10475",
+  "forms": [
+    {
+      "id": "CF28059",
+      "orth": "ⲥⲕⲉⲡⲱⲗⲁⲧⲱⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF28060",
+      "orth": "ⲥⲕⲉⲡⲟⲗⲗⲁⲧⲱⲣ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF28061",
+      "orth": "ⲥⲕⲉⲡⲱⲗⲁⲧⲱⲣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF28062",
+      "orth": "ⲥⲡⲉⲕⲟⲩⲗⲁⲧⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6040,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14179",
+      "bibliography": "DDGLC",
+      "cu_ID": "4667"
+    },
+    {
+      "id": "CS14180",
+      "bibliography": "DDGLC",
+      "cu_ID": "2798"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3056",
+    "grl_lemma": "σπεκουλάτωρ",
+    "grl_meaning": "investigator, examiner; executioner; scout (of the Roman\n    army)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1626a; Preisigke 2:475; Sophocles 1003b"
+  }
+}

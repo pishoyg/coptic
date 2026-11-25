@@ -1,0 +1,184 @@
+{
+  "id": "C2554",
+  "forms": [
+    {
+      "id": "CF6900",
+      "orth": "ⲙⲛⲧⲣⲉϥϣⲉⲙϣⲉ ⲛⲟⲩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19995,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2934",
+      "bibliography": "CD 231b; ChLCS 33a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲙⲛⲧⲙⲁⲓ ⲥⲟⲛ ⲇⲉ **ϩⲛⲧⲙⲛⲧⲣⲉϥϣⲉⲙϣⲉ **ⲛⲟⲩⲧⲉ**** ⲧⲁⲅⲁⲡⲏ ϩⲣⲁⲓ ⲏⲛ ⲧⲙⲛⲧⲙⲁⲓ ⲥⲟⲛ",
+      "english": "and in godliness brotherly affection; and in brotherly affection, love.",
+      "source": "61_2 Peter_1",
+      "urn": "urn:cts:copticLit:nt.2pet.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19604,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C5910",
+      "type": "cf",
+      "label": "service, worship"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2551",
+      "label": "ϣⲁⲙϣⲉⲛⲟⲩϯ",
+      "pos": "N",
+      "gloss": "serving God, God-server"
+    },
+    {
+      "target": "C2550",
+      "label": "ϩⲁⲧⲃⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god-slaying"
+    },
+    {
+      "target": "C2555",
+      "label": "ϫⲡⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godbearing"
+    },
+    {
+      "target": "C2539",
+      "label": "ⲁⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godless"
+    },
+    {
+      "target": "C2542",
+      "label": "ⲙⲁⲓⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god loving"
+    },
+    {
+      "target": "C2544",
+      "label": "ⲙⲁⲥⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godbearing (of Virgin Mary)"
+    },
+    {
+      "target": "C2545",
+      "label": "ⲙⲁⲥⲧⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god-hater"
+    },
+    {
+      "target": "C2552",
+      "label": "ⲙⲉⲧϣⲁⲙϣⲉⲛⲟⲩϯ",
+      "pos": "N",
+      "gloss": "God-service, piety"
+    },
+    {
+      "target": "C2540",
+      "label": "ⲙⲛⲧⲁⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godlessness"
+    },
+    {
+      "target": "C2543",
+      "label": "ⲙⲛⲧⲙⲁⲓⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godliness, piety"
+    },
+    {
+      "target": "C2541",
+      "label": "ⲙⲛⲧⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "divinity"
+    },
+    {
+      "target": "C2548",
+      "label": "ⲙⲛⲧⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godliness"
+    },
+    {
+      "target": "C2537",
+      "label": "ⲛⲉⲧⲟ",
+      "pos": "N",
+      "gloss": "the great god"
+    },
+    {
+      "target": "C2535",
+      "label": "ⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "god"
+    },
+    {
+      "target": "C2538",
+      "label": "ⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "godly, divine"
+    },
+    {
+      "target": "C2536",
+      "label": "ⲛⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "goddess"
+    },
+    {
+      "target": "C2553",
+      "label": "ⲣⲉϥϣⲉⲙϣⲉⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "God-serving, pious person"
+    },
+    {
+      "target": "C2547",
+      "label": "ⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "man of god, godly person"
+    },
+    {
+      "target": "C2546",
+      "label": "ⲣⲛⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "be god"
+    },
+    {
+      "target": "C2549",
+      "label": "ⲣⲣⲙⲛⲛⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "be godly"
+    }
+  ]
+}

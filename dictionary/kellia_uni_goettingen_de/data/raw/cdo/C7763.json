@@ -1,0 +1,203 @@
+{
+  "id": "C7763",
+  "forms": [
+    {
+      "id": "CF17591",
+      "orth": "ϭⲓⲛⲙⲟⲩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16742,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲓⲙⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.1"
+    },
+    {
+      "orth": "ϭⲓⲛⲙⲟⲧ",
+      "dialect": "S",
+      "id": "2576.2"
+    },
+    {
+      "orth": "ⲕⲛⲙⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.3"
+    },
+    {
+      "orth": "ϭⲙⲙⲟⲩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12858,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲓⲛϩⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.5"
+    },
+    {
+      "orth": "ϭⲓⲙϩⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.6"
+    },
+    {
+      "orth": "ϭⲙϩⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.7"
+    },
+    {
+      "orth": "ϭⲉⲙϩⲟⲩⲧ",
+      "dialect": "S",
+      "id": "2576.8"
+    },
+    {
+      "orth": "ϭⲓⲙⲟⲩⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6426,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8631",
+      "bibliography": "CD 821a; CED 332; KoptHWb 459; DELC 342a; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲉⲧ**ϭⲓⲛⲙⲟⲩⲧ** ⲙⲛⲡⲥⲟⲩⲛⲣⲟⲩϩⲉ ⲙⲛⲡϣⲱⲡϣ ⲙⲛⲛⲧⲁⲙⲉⲓⲟⲛ ⲙⲡⲣⲏⲥ",
+      "english": "Who makes Pleias, and Hesperus, and Arcturus, and the chambers of the south.",
+      "source": "Job 9",
+      "urn": "urn:cts:copticLit:ot.job.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁⲙⲓⲉⲧ",
+        1,
+        20.598
+      ],
+      [
+        "ⲣⲟⲩϩⲉ",
+        1,
+        13.18
+      ],
+      [
+        "ⲥⲟⲩⲛ",
+        1,
+        12.857
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲙⲟⲩⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲛ_1_post_ϭⲓⲛⲙⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲣⲟⲩϩⲉ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲱⲡϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛⲙⲟⲩⲧ_0_node",
+          "ⲙⲛ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲟⲩⲛ",
+          "ⲡ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲟⲩⲛ",
+          "ⲥⲟⲩⲛ_1_post_ϭⲓⲛⲙⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲛ_1_post_ϭⲓⲛⲙⲟⲩⲧ",
+          "ⲣⲟⲩϩⲉ_2_post_ⲥⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲣⲟⲩϩⲉ_2_post_ⲥⲟⲩⲛ",
+          "ⲙⲛ_2_post_ϣⲱⲡϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16345,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "164870",
+    "egy_lemma": "knm.tj",
+    "english": "belonging to the darkness",
+    "german": "zur Finsternis Gehöriger",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/164870"
+  }
+}

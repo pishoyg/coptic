@@ -1,0 +1,346 @@
+{
+  "id": "C10767",
+  "forms": [
+    {
+      "id": "CF29281",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF29282",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF29283",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29284",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.54,
+        "rank": 375,
+        "count": 400
+      }
+    },
+    {
+      "id": "CF29285",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29286",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.87,
+        "rank": 278,
+        "count": 328
+      }
+    },
+    {
+      "id": "CF29287",
+      "orth": "ⲧⲟⲧⲉ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29288",
+      "orth": "ⲧⲟⲧⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS14819",
+      "bibliography": "DDGLC",
+      "cu_ID": "5845"
+    },
+    {
+      "id": "CS14820",
+      "bibliography": "DDGLC",
+      "cu_ID": "5842"
+    },
+    {
+      "id": "CS14821",
+      "bibliography": "DDGLC",
+      "cu_ID": "5924"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲧⲟⲧⲉ** ⲁϥⲉⲣⲟⲩⲱ ⲡⲉϫⲁϥ ϫⲉⲁⲛⲟⲕ ⲡⲉ ⲓⲥⲁⲁⲕ .",
+      "english": "Then Isaac said, ‘I am Isaac.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲙⲡⲣⲕⲣⲓⲛⲉ ⲛⲗⲁⲁⲩ ϩⲁⲧϩⲏ ⲙⲡⲉⲩⲟⲉⲓϣ ϣⲁⲛⲧⲉⲡϫⲟⲉⲓⲥ ⲉⲓ . ⲡⲁⲓ ⲉⲧⲛⲁⲣⲟⲩⲟⲉⲓⲛ ⲉⲛⲉⲧϩⲏⲡ ϩⲙⲡⲕⲁⲕⲉ ⲁⲩⲱ ⲛϥⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲛϣⲟϫⲛⲉ ⲛⲛϩⲏⲧ . **ⲧⲟⲧⲉ** ⲡⲧⲁⲉⲓⲟ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲛⲁϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "Therefore judge nothing before the time, until the Lord comes, who will both bring to light the hidden things of darkness, and reveal the counsels of the hearts. Then each man will get his praise from God.",
+      "source": "1 Corinthians 4",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲧⲟⲧⲉ** ⲁⲡⲓⲣⲱⲙⲓ ⲧⲁⲙⲟϥ ⲉϯⲁⲓⲧⲓⲁ ⲛⲧⲉⲡⲓϩⲱⲃ .",
+      "english": "Then the man told him the cause (of his sadness).",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲧⲟⲧⲉ** ⲙⲡⲛⲁⲩ ⲉⲧⲙⲙⲁⲩ · ϣⲁⲣⲉⲡⲉⲕⲣⲓⲧⲏⲥ ⲱϣ ⲉⲃⲟⲗ · ϫⲉⲛⲟⲩϫⲉ ⲙⲙⲟϥ ⲉⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ · ϥⲛⲁϣⲱⲡⲉ ⲙⲙⲁⲩ ⲛϭⲓⲡⲣⲓⲙⲉ ⲁⲩⲱ ⲡϭⲁϩϭⲉϩ ⲛⲛⲟⲃϩⲉ ·",
+      "english": "Then, at that moment, the Judge shall cry out, 'Cast him into the outer darkness, where there is weeping and gnashing of teeth.'",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϫⲟⲥ ⲛⲁϥ ϫⲉⲑⲙⲏⲓ ⲧⲉ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ϥⲛⲁϧⲟⲑⲃⲕ ⲛⲉⲙⲱⲟⲩ **ⲧⲟⲧⲉ** ⲭⲛⲁϩⲱⲗ ⲉϧⲟⲩⲛ ⲉⲡⲓⲱⲛϧ ⲛⲉⲛⲉϩ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "Join them, and when they say to the duke, ‘This man was among us,’ and he questions you, respond, ‘Yes, it is true.’ He will order your death with the others, and in this way, you will enter the everlasting life of God.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲧⲟⲧⲉ** ⲁⲩⲡⲁϩⲧⲟⲩ ⲉϫⲛⲧⲉϥⲙⲉⲥⲑⲏⲧ ⲁⲩⲱⲗⲙ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲛⲟⲩⲛⲟϭ ⲛⲛⲁⲩ ϫⲓⲛⲧϣⲟⲣⲡ ⲛⲟⲩⲣϣⲉ ⲛⲧⲉⲩϣⲏ · ϣⲁϫⲡⲥⲟ ϩⲱⲥⲧⲉ ⲛⲥⲉⲉⲓ ⲧⲏⲣⲟⲩ ⲛϭⲓⲛⲛⲟϭ ⲙⲡⲡⲁⲗⲗⲁϯⲟⲛ · ⲛⲥⲉⲣⲓⲙⲉ ⲧⲏⲣⲟⲩ ⲛⲙⲙⲁⲩ · ⲉⲧⲃⲉϫⲉⲛⲧⲁⲩϭⲛⲓⲱϩⲁⲛⲛⲏⲥ ϩⲛϩⲛⲟⲩⲛⲟϭ ⲛⲑⲃⲃⲓⲟ ·",
+      "english": "Then they threw themselves on his breast, and they mourned over him for a very long time, from the first watch of the night until the sixth hour. And at length all the nobles of the palace a came and wept with them because John had been found in such a miserable condition.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁ",
+        343,
+        21.898
+      ],
+      [
+        ".",
+        203,
+        20.255
+      ],
+      [
+        "ϥ",
+        197,
+        18.933
+      ],
+      [
+        "ⲉⲣⲟⲩⲱ",
+        37,
+        18.083
+      ],
+      [
+        "ⲛϫⲉ",
+        90,
+        17.712
+      ],
+      [
+        "ⲟⲩ",
+        125,
+        17.294
+      ],
+      [
+        "ⲩ",
+        85,
+        16.991
+      ],
+      [
+        "ⲉϥⲉ",
+        50,
+        16.794
+      ],
+      [
+        "ⲡⲓ",
+        82,
+        16.486
+      ],
+      [
+        "ⲟⲩⲣⲟ",
+        31,
+        16.277
+      ],
+      [
+        "ⲙ",
+        81,
+        16.245
+      ],
+      [
+        "ⲛ",
+        96,
+        15.988
+      ],
+      [
+        "ⲉⲕⲉ",
+        25,
+        15.161
+      ],
+      [
+        "ⲡ",
+        62,
+        15.124
+      ],
+      [
+        "ϧⲉⲛ",
+        57,
+        14.904
+      ],
+      [
+        "ⲥ",
+        47,
+        14.734
+      ],
+      [
+        "ⲛⲁⲩ",
+        27,
+        14.619
+      ],
+      [
+        "ⲓ",
+        42,
+        14.395
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        44,
+        14.324
+      ],
+      [
+        "ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ",
+        7,
+        14.145
+      ]
+    ],
+    "S": [
+      [
+        "ⲁ",
+        401,
+        22.343
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        10,
+        21.92
+      ],
+      [
+        "ϥ",
+        388,
+        21.678
+      ],
+      [
+        "ⲛⲁ",
+        222,
+        20.428
+      ],
+      [
+        ".",
+        140,
+        19.301
+      ],
+      [
+        "ⲡ",
+        194,
+        18.653
+      ],
+      [
+        "ⲛϭⲓ",
+        78,
+        18.031
+      ],
+      [
+        "ⲩ",
+        111,
+        17.549
+      ],
+      [
+        "ⲛ",
+        171,
+        17.419
+      ],
+      [
+        "ⲥⲉ",
+        55,
+        16.783
+      ],
+      [
+        "ⲟⲩⲱϣⲃ",
+        25,
+        16.386
+      ],
+      [
+        "ⲙ",
+        84,
+        15.884
+      ],
+      [
+        "ⲉⲓ",
+        38,
+        15.508
+      ],
+      [
+        "ⲛⲁⲩ",
+        34,
+        15.435
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        2,
+        14.954
+      ],
+      [
+        "ⲉ",
+        70,
+        14.561
+      ],
+      [
+        "ⲉⲧ",
+        50,
+        14.526
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        11,
+        14.355
+      ],
+      [
+        "ⲣⲣⲟ",
+        22,
+        14.191
+      ],
+      [
+        "ⲕ",
+        40,
+        14.174
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.52,
+      "rank": 321,
+      "count": 400
+    },
+    "B": {
+      "rate": 3.86,
+      "rank": 240,
+      "count": 328
+    }
+  },
+  "etym": {
+    "grl_ID": "2202",
+    "grl_lemma": "τότε",
+    "grl_meaning": "at that time, then",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1808a; Preisigke 2:612"
+  }
+}

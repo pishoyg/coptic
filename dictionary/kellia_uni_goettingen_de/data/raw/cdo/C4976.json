@@ -1,0 +1,172 @@
+{
+  "id": "C4976",
+  "forms": [
+    {
+      "id": "CF11917",
+      "orth": "ϭⲙⲡⲟⲩⲟⲉⲓϣ",
+      "dialect": "S",
+      "oRef": "ϭⲙ ⲡ ⲟⲩⲟⲉⲓϣ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17087,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5601",
+      "bibliography": "CD 500a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁϫⲱ ⲛⲛⲉⲕϣⲡⲏⲣⲉ ⲉⲓϣⲁⲛ**ϭⲙⲡⲟⲩⲟⲉⲓϣ** ⲡϫⲟⲉⲓⲥ ⲁⲛⲟⲕ ϯⲛⲁⲕⲣⲓⲛⲉ ⲙⲡⲥⲟⲟⲩⲧⲛ",
+      "english": "When I shall take a set time, I will judge righteously.",
+      "source": "Psalms 74",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:74",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲓϣⲁⲛ",
+        1,
+        12.685
+      ],
+      [
+        "ϣⲡⲏⲣⲉ",
+        1,
+        12.151
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        9.787
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        9.512
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓϣⲁⲛ_1_pre_ϭⲙⲡⲟⲩⲟⲉⲓϣ",
+          1
+        ],
+        [
+          "ϭⲙⲡⲟⲩⲟⲉⲓϣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓϣⲁⲛ_1_pre_ϭⲙⲡⲟⲩⲟⲉⲓϣ",
+          "ϭⲙⲡⲟⲩⲟⲉⲓϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16692,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7750",
+      "type": "cf",
+      "label": "find"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4975",
+      "label": "ϩⲉ ⲉⲡⲟⲩⲟⲉⲓϣ",
+      "pos": "V",
+      "gloss": "find time"
+    },
+    {
+      "target": "C4969",
+      "label": "ⲁⲧⲟⲩⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "without time, ill-timed"
+    },
+    {
+      "target": "C4970",
+      "label": "ⲕⲁⲧⲁ ⲟⲩⲟⲉⲓϣ",
+      "pos": "ADV",
+      "gloss": "from time to time"
+    },
+    {
+      "target": "C4971",
+      "label": "ⲙⲡⲓⲟⲩⲟⲉⲓϣ",
+      "pos": "ADV",
+      "gloss": "at this time, now, at that time, formerly"
+    },
+    {
+      "target": "C4972",
+      "label": "ⲛⲟⲩⲟⲉⲓϣ",
+      "pos": "ADV",
+      "gloss": "on a time"
+    },
+    {
+      "target": "C4973",
+      "label": "ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ",
+      "pos": "ADV",
+      "gloss": "every time, always"
+    },
+    {
+      "target": "C4967",
+      "label": "ⲟⲩⲟⲉⲓϣ",
+      "pos": "N",
+      "gloss": "time, occasion"
+    },
+    {
+      "target": "C4968",
+      "label": "ⲟⲩⲟⲉⲓϣⲉ",
+      "pos": "N",
+      "gloss": "time, occasion"
+    },
+    {
+      "target": "C4974",
+      "label": "ⲣⲟⲩⲟⲉⲓϣ",
+      "pos": "V",
+      "gloss": "spend time"
+    }
+  ]
+}

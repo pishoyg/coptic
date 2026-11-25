@@ -1,0 +1,132 @@
+{
+  "id": "C9527",
+  "forms": [
+    {
+      "id": "CF24245",
+      "orth": "ⲕⲟⲩⲫⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24246",
+      "orth": "ⲕⲟⲩⲫⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17302,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12131",
+      "bibliography": "DDGLC",
+      "cu_ID": "9977"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲕⲧⲟⲓ ⲁⲓⲛⲁⲩ ϩⲁⲣⲟϥ ⲙⲡⲣⲏ ϫⲉⲡⲡⲱⲧ ⲙⲡⲁⲧⲛ**ⲕⲟⲩⲫⲟⲥ** ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲡⲡⲟⲗⲉⲙⲟⲥ ⲙⲡⲁⲧⲛϫⲱⲱⲣⲉ ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲡⲟⲉⲓⲕ ⲙⲡⲁⲛⲥⲟⲫⲟⲥ ⲁⲛ ⲡⲉ ⲁⲩⲱ ⲧⲙⲛⲧⲣⲙⲙⲁⲟ ⲛⲧⲁⲛⲣⲙⲛϩⲏⲧ ⲁⲛ ⲧⲉ ⲁⲩⲱ ⲧⲉⲭⲁⲣⲓⲥ ⲛⲧⲁⲛⲣⲉϥⲛⲟⲓ ⲁⲛ ⲧⲉ ⲡⲉⲩⲟⲩⲟⲉⲓϣ ⲙⲛⲟⲩⲁⲡⲁⲛⲧⲏⲙⲁ ⲡⲉⲧⲛⲁⲧⲁϩⲟⲟⲩ ⲧⲏⲣⲟⲩ",
+      "english": "I returned, and saw under the sun, that the race is not to the swift, nor the battle to the strong, nor yet bread to the wise, nor yet wealth to men of understanding, nor yet favour to men of knowledge; for time and chance will happen to them all.",
+      "source": "Ecclesiastes 9",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲡⲁⲧ",
+        1,
+        12.464
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡⲁⲧ_1_pre_ⲕⲟⲩⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲩⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲕⲟⲩⲫⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡⲁⲧ_1_pre_ⲕⲟⲩⲫⲟⲥ",
+          "ⲛ_1_pre_ⲕⲟⲩⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲟⲩⲫⲟⲥ",
+          "ⲕⲟⲩⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲫⲟⲥ_0_node",
+          "ⲁⲛ_1_post_ⲕⲟⲩⲫⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16913,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6750",
+    "grl_lemma": "κοῦφος (II)",
+    "grl_meaning": "light, nimble; unsubstantial, airy, vain",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 987b-988a"
+  }
+}

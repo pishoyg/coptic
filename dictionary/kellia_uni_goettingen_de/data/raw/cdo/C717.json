@@ -1,0 +1,200 @@
+{
+  "id": "C717",
+  "forms": [
+    {
+      "id": "CF2704",
+      "orth": "ⲉⲣϣⲓϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5329,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS857",
+      "bibliography": "CD 59b; CED 38; KoptHWb 500; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϭⲓ ⲙⲡⲓ**ⲉⲣϣⲓϣ** ϩⲓⲧⲉⲛⲫⲛⲟⲩϯ ⲉⲥⲱⲛϩ ⲛⲉⲙⲉⲃⲱⲗ ⲉⲃⲟⲗ ⲁϥⲉⲣⲟⲩⲱⲓⲛⲓ ϧⲉⲛⲡⲓⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ",
+      "english": "And when he had received the power of God to bind and loose, he shone in all the world;",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁⲓ ⲇⲉ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲡⲁϭⲟⲓⲥ ⲙⲁ**ⲉⲣϣⲓϣ**ⲓ ⲛⲏⲓ ⲛϣⲟⲣⲡ ⲛⲧⲁϣⲉ ⲛⲏⲓ ⲛⲧⲁⲑⲱⲙⲥ ⲙⲡⲁⲓⲱⲧ .",
+      "english": "Another of his disciples said to him, 'Lord, allow me first to go and bury my father.'",
+      "source": "01_Matthew_08",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:08",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲓⲧⲉⲛ",
+        1,
+        9.286
+      ],
+      [
+        "ϭⲓ",
+        1,
+        8.267
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        8.064
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        7.609
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        7.603
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        6.897
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        1,
+        6.749
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ],
+      [
+        "ⲓ",
+        1,
+        5.575
+      ],
+      [
+        "ⲫ",
+        1,
+        5.564
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.137
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.771
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲣϣⲓϣ_0_node",
+          2
+        ],
+        [
+          "ⲓ_1_post_ⲉⲣϣⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣϣⲓϣ",
+          1
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲣϣⲓϣ_0_node",
+          "ⲓ_1_post_ⲉⲣϣⲓϣ",
+          1
+        ],
+        [
+          "ⲓ_1_post_ⲉⲣϣⲓϣ",
+          "ⲛ_1_post_ⲉⲣϣⲓϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣϣⲓϣ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          "ⲛ_3_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲏⲓ",
+          "ϣⲟⲣⲡ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4828,
+      "count": 2
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C13023",
+      "type": "cf",
+      "label": "chickpea"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C13023",
+      "label": "ϣⲓϣ",
+      "pos": "N",
+      "gloss": "chickpea"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "C6733",
+  "forms": [
+    {
+      "id": "CF15511",
+      "orth": "ⲣϩⲁⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF15512",
+      "orth": "ⲉⲓⲣⲉ ⲙⲡϩⲁⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7447",
+      "bibliography": "CD 694a; KoptHWb 381; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6732",
+      "label": "ϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judgement, inquest"
+    },
+    {
+      "target": "C6737",
+      "label": "ϩⲓⲟⲩⲓ ⲉⲡϩⲁⲡ",
+      "pos": "V",
+      "gloss": "condemn"
+    },
+    {
+      "target": "C6738",
+      "label": "ϫⲓϩⲁⲡ",
+      "pos": "V",
+      "gloss": "receive judgement"
+    },
+    {
+      "target": "C6734",
+      "label": "ϯϩⲁⲡ",
+      "pos": "V",
+      "gloss": "give judgement"
+    },
+    {
+      "target": "C6735",
+      "label": "ⲙⲁ ⲛϯϩⲁⲡ",
+      "pos": "N",
+      "gloss": "place of judgement"
+    },
+    {
+      "target": "C6736",
+      "label": "ⲣⲉϥϯϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judge"
+    }
+  ]
+}

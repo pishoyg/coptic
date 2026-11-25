@@ -1,0 +1,144 @@
+{
+  "id": "C4114",
+  "forms": [
+    {
+      "id": "CF10173",
+      "orth": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14089,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4673",
+      "bibliography": "CD 400b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        10.504
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+          "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13687,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3629",
+      "type": "cf",
+      "label": "make live, be alive, nourish"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4111",
+      "label": "ⲙⲁ ⲛⲧⲉⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle-herd"
+    },
+    {
+      "target": "C4112",
+      "label": "ⲙⲛⲧⲧⲉⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "bestiality"
+    },
+    {
+      "target": "C4110",
+      "label": "ⲡⲁⲛⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattleman, cattle rancher"
+    },
+    {
+      "target": "C4113",
+      "label": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle breeder"
+    },
+    {
+      "target": "C4109",
+      "label": "ⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "beast, domestic animal"
+    }
+  ]
+}

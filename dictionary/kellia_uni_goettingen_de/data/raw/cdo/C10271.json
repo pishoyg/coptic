@@ -1,0 +1,134 @@
+{
+  "id": "C10271",
+  "forms": [
+    {
+      "id": "CF27248",
+      "orth": "ⲡⲣⲁⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27250",
+      "orth": "ⲡⲣⲁⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14382,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27249",
+      "orth": "ⲡⲣⲁⲥⲉⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27251",
+      "orth": "ⲡⲣⲓⲧⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27252",
+      "orth": "ⲡⲣⲥⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13760",
+      "bibliography": "DDGLC",
+      "cu_ID": "2099"
+    },
+    {
+      "id": "CS13761",
+      "bibliography": "DDGLC",
+      "cu_ID": "7857"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲧⲙⲧⲟⲟⲧϥ ⲇⲉ ϭⲓⲛⲉ ⲙⲡⲣⲱϣⲉ ⲉⲧⲁⲁϥ ⲛⲁϥ ⲧⲉϥ**ⲡⲣⲁⲥⲓⲥ** ⲉⲥⲉϣⲱⲡⲉ ⲙⲡⲉⲛⲧⲁϥⲧⲟⲟⲩⲥⲟⲩ ϣⲁⲧⲉⲣⲟⲙⲡⲉ ⲙⲡⲕⲱ ⲉⲃⲟⲗ ⲁⲩⲱ ⲉϥⲉⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲕⲱ ⲉⲃⲟⲗ ⲛϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲧⲉϥⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ",
+      "english": "But if his hand have not prospered sufficiently, so as that he should restore the money to him, then he that bought the possessions shall have them till the sixth year of the release; and it shall go out in the release, and the owner shall return to his possession.",
+      "source": "Leviticus 25",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲛⲧ",
+        1,
+        15.172
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        13.258
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲁⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲁⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲁⲥⲓⲥ",
+          "ⲡⲣⲁⲥⲓⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13980,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1816",
+    "grl_lemma": "πρᾶσις",
+    "grl_meaning": "sale, contract (for sale)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1460a; Preisigke 2:353"
+  }
+}

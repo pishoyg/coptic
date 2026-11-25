@@ -1,0 +1,236 @@
+{
+  "id": "C850",
+  "forms": [
+    {
+      "id": "CF3042",
+      "orth": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲛⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.53,
+        "rank": 168,
+        "count": 639
+      }
+    },
+    {
+      "orth": "ⲛⲏⲩ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 6.66,
+        "rank": 171,
+        "count": 1051
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1002",
+      "bibliography": "CD 72b; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲧⲣⲉⲧⲁⲯⲩⲭⲏ ϣⲱⲛⲉ ⲛⲧⲟⲟⲧ ⲁⲓⲣⲡⲙⲉⲉⲩⲉ ⲙⲡϫⲟⲉⲓⲥ : ⲁⲩⲱ ⲙⲁⲣⲉⲡⲁϣⲗⲏⲗ **ⲉⲓ **ⲉϩⲣⲁⲓ**** ϣⲁⲣⲟⲕ ⲛⲛⲁϩⲣⲛⲡⲉⲕⲣⲡⲉ ⲉⲧⲟⲩⲁⲁⲃ :",
+      "english": "When my soul was failing me, I remembered the Lord; and may my prayer come to thee into thy holy temple.",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲛⲉϥⲥⲙⲟⲩ ⲉⲧⲟⲩⲁⲁⲃ **ⲛⲁⲉⲓ **ⲉϩⲣⲁⲓ**** ⲉϫⲱⲛ ⲛⲧⲛⲟⲩϫⲁⲓ ϩⲁⲙⲏⲛ ⁛ —",
+      "english": "MAY HIS HOLY BLESSING COME UPON US, AND MAY WE BE SAVED! AMEN.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲛ ⲇⲉ ⲛⲓⲙ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ ⲉⲧⲛⲁⲛⲁⲩ ⲉⲩϩⲱⲃ ⲛⲕⲣⲟϥ ϩⲛⲟⲩϫⲱϩⲙ · ⲏ ϩⲛⲟⲩϫⲓⲟⲩⲉ ⲏ ϩⲛϭⲉⲗⲁⲁⲩ ⲛⲛⲟⲃⲉ ⲉϥϫⲓ ⲉϩⲟⲩⲛ ⲉⲡⲙⲟⲩ ⲁⲩⲱ ⲛⲧⲟⲟⲩ ⲛⲥⲉⲧⲙⲧⲁⲙⲟⲓ ϫⲉⲛⲓⲙ ⲡⲉ ⲏ ϫⲉⲟⲩ ⲛⲉ ⲛⲉϩⲃⲏⲩⲉ ⲛⲡⲟⲛⲏⲣⲟⲛ ⲉⲧⲙⲙⲁⲩ · **ⲉⲩⲉⲉⲓ **ⲉϩⲣⲁⲓ**** ⲉϫⲱⲟⲩ ⲛϭⲓⲛⲉⲓⲥⲁϩⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲛⲡⲛⲟⲩⲧⲉ ⲉϣⲱⲡⲉ ⲉⲩϩⲟⲟⲩⲧ ⲡⲉ ⲉϣⲱⲡⲉ ⲉⲩⲥϩⲓⲙⲉ ⲧⲉ ·",
+      "english": "All those of us who see a deceitful thing in defilement or blasphemy or any other sort of sin leading to death and do not tell me who or what those wicked deeds are, all these curses will come down upon them from God, whether man or woman.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C825",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "come, go"
+    },
+    {
+      "target": "C826",
+      "label": "ⲉⲓ",
+      "pos": "V",
+      "gloss": "be about to"
+    },
+    {
+      "target": "C827",
+      "label": "ⲉⲓ",
+      "pos": "N",
+      "gloss": "coming, advent"
+    },
+    {
+      "target": "C837",
+      "label": "ⲉⲓ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "come to, approach"
+    },
+    {
+      "target": "C838",
+      "label": "ⲉⲓ (ϩⲁⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, near to"
+    },
+    {
+      "target": "C828",
+      "label": "ⲉⲓ (ⲉ-)",
+      "pos": "V",
+      "gloss": "come to"
+    },
+    {
+      "target": "C849",
+      "label": "ⲉⲓ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "come in, enter"
+    },
+    {
+      "target": "C851",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come upon, up upon, reach"
+    },
+    {
+      "target": "C853",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come (down) upon, befall"
+    },
+    {
+      "target": "C852",
+      "label": "ⲉⲓ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "come down, descend"
+    },
+    {
+      "target": "C833",
+      "label": "ⲉⲓ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "come upon, arrive at, be applicable to"
+    },
+    {
+      "target": "C843",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come through, forth from, leave"
+    },
+    {
+      "target": "C842",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ϩⲛ-)",
+      "pos": "V",
+      "gloss": "come forth from"
+    },
+    {
+      "target": "C841",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "come forth to (places, things); sue, proceed against"
+    },
+    {
+      "target": "C840",
+      "label": "ⲉⲓ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "come, go forth, be displayed, set forth"
+    },
+    {
+      "target": "C847",
+      "label": "ⲉⲓ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "come after, go back"
+    },
+    {
+      "target": "C845",
+      "label": "ⲉⲓ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "come down"
+    },
+    {
+      "target": "C830",
+      "label": "ⲉⲓ (ⲉⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "come to (superior or dignitary)"
+    },
+    {
+      "target": "C829",
+      "label": "ⲉⲓ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come to, arrive at"
+    },
+    {
+      "target": "C848",
+      "label": "ⲉⲓ (ⲉⲧⲑⲏ)",
+      "pos": "V",
+      "gloss": "come forward, progress"
+    },
+    {
+      "target": "C831",
+      "label": "ⲉⲓ (ⲉⲧⲛ-)",
+      "pos": "V",
+      "gloss": "come into the hand of (power of)"
+    },
+    {
+      "target": "C834",
+      "label": "ⲉⲓ (ⲛ-)",
+      "pos": "V",
+      "gloss": "come to (of persons)"
+    },
+    {
+      "target": "C836",
+      "label": "ⲉⲓ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "come before, into presence of (superior)"
+    },
+    {
+      "target": "C835",
+      "label": "ⲉⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "come after, to fetch"
+    },
+    {
+      "target": "C844",
+      "label": "ⲉⲓ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "coming forth, departure from"
+    },
+    {
+      "target": "C839",
+      "label": "ⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come up to, upon"
+    },
+    {
+      "target": "C832",
+      "label": "ⲓ (ⲉϩⲣⲉⲛ-)",
+      "pos": "V",
+      "gloss": "come against, to meet"
+    },
+    {
+      "target": "C846",
+      "label": "ⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "come, go up"
+    }
+  ]
+}

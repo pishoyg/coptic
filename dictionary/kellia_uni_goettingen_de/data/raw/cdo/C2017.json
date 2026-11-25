@@ -1,0 +1,60 @@
+{
+  "id": "C2017",
+  "forms": [
+    {
+      "id": "CF5706",
+      "orth": "ⲙⲣⲟϣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5707",
+      "orth": "ⲙⲣⲁϣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲙⲟⲣϣ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4646,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲙⲁⲣϣ†",
+      "dialect": "A",
+      "id": "1100.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2340",
+      "bibliography": "CD 183b; KoptHWb 100; ChLCS 27a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2018",
+      "label": "ⲙⲏⲣϣ",
+      "pos": "N",
+      "gloss": "red, ruddy"
+    }
+  ],
+  "etym": {
+    "egy_num": "72960",
+    "egy_lemma": "mrš",
+    "demo_num": "d2581",
+    "demo_lemma": "mlš",
+    "english": "bright red",
+    "german": "lichtrot sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72960",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2581"
+  }
+}

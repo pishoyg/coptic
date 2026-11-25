@@ -1,0 +1,217 @@
+{
+  "id": "C8851",
+  "forms": [
+    {
+      "id": "CF21398",
+      "orth": "ⲇⲱⲣⲓⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21400",
+      "orth": "ⲇⲱⲣⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5546,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF21399",
+      "orth": "ⲇⲟⲣⲓⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10895,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21401",
+      "orth": "ⲧⲱⲣⲉⲥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21402",
+      "orth": "ⲧⲱⲣⲓⲍⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21403",
+      "orth": "ⲧⲱⲣⲓⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10681",
+      "bibliography": "DDGLC",
+      "cu_ID": "2299"
+    },
+    {
+      "id": "CS10682",
+      "bibliography": "DDGLC",
+      "cu_ID": "6497"
+    },
+    {
+      "id": "CS10683",
+      "bibliography": "DDGLC",
+      "cu_ID": "10932"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϥⲓⲡⲣⲟⲟⲩϣ ⲙⲡⲉⲓϫⲱⲱⲙⲉ · ⲁϥ**ⲇⲱⲣⲓⲍⲉ** ⲙⲙⲟϥ ⲉϩⲟⲩⲛ ⲉⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲛⲧⲃⲱ · ⲧⲁⲡⲟⲗⲗⲱⲛⲓⲁ ⲕⲁⲧⲁⲧⲁⲥⲡⲉ ⲛⲁⲗⲉⲝⲁⲛⲇ ·",
+      "english": "He undertook the preparation thereof, and he presented it to the church of Saint Victor of Tebo, that is of Apollinopolis, according to the speech of the Alexandrians.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲓⲧⲛⲧⲉⲥⲡⲟⲩⲇⲏ ⲙⲛⲧⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ ⲙⲡⲉⲛⲙⲁⲓⲛⲟⲩⲧⲉ ⲛⲥⲟⲛ ⲉⲧⲟⲩⲧ ⲭⲁⲏⲗ ⲡϣⲏⲣⲉ ⲙⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲥⲧⲉⲫⲁⲛⲟⲥ ⲡⲟⲩⲟⲓ ⲙⲙⲟⲩⲓ ⲛϥϥⲓ ⲡⲣⲟⲟⲩϣ ⲙⲡⲉⲓⲕⲟⲩⲓ ⲛϫⲱⲱⲙⲉ ϩⲛⲛϥϩⲓⲥⲉ ⲙⲙⲓⲛ ⲙⲙⲟϥ ⲁϥ**ⲇⲱⲣⲓⲍⲉ** ⲙⲙⲟϥ ⲉϩⲟⲩⲛ ⲉⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲛⲧⲡⲟⲗⲓⲥ ⲧⲃⲱ ϩⲁⲡⲟⲩϫⲁⲓ ⲛⲧⲉϥⲯⲩⲭⲏ ϫⲉⲕⲁⲥ ⲉⲧⲣⲉⲩⲱϣ ⲛϩⲏⲧϥ ⲉⲡⲣⲁⲛ ⲛⲁⲃⲃⲁⲧⲱⲛ ⲡⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲙⲟⲩ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲛⲁⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ⲉϫⲱϥ ⲛϥⲥⲙⲟⲩ ⲉⲣⲟϥ ϩⲛⲡⲉⲓⲕⲟⲥⲙⲟⲥ ⲛϥⲧⲟⲩϫⲟϥ ⲉⲛϭⲟⲣϭⲥ ⲧⲏⲣⲟⲩ ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲙⲛⲛⲣⲱⲙⲉ ⲛⲡⲟⲛⲏⲣⲟⲥ ⲛϥϯⲓ ⲧⲟⲟⲧϥ ϩⲛϩⲱⲃ ⲛⲓⲙ ⲉⲡⲁⲅⲁⲑⲟⲛ ⲁⲩⲱ ⲉϥϣⲁⲛⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲃⲓⲟⲥ ⲛⲧⲉⲡⲁⲣⲭⲁⲅⲅⲉⲗⲟⲥ ⲁⲃⲃⲁⲧⲱⲛ ϫⲓϩⲙⲟⲗⲧ ⲉϫⲱϥ ⲛⲛⲁϩⲣⲛ ⲡⲛⲟⲩⲧⲉ ⲛϥⲕⲱ ⲛⲁϥ ⲉⲃⲟⲗ ⲛⲉϥⲛⲟⲃⲉ",
+      "english": "With God! This little book was made by the zeal and care of the God-loving brother, Etout Khael, the son of the blessed Stephen, the lion hunter, who undertook [the writing thereof] at his own expense, and gave it to the Monastery of St. Mercurius of the City of Tbo (Apollinopolis, or Utfu, or Udfu), for the salvation of his soul, in order that [the monks might] read therein the name of Abbaton, the Angel of Death, and that Saint Mercurius might invoke Christ on his behalf, and bless him in this world, and deliver him from all the wiles of the Devil and of wicked men, and might help him to bring every work to a successful issue, and that when he cometh forth from this life the Archangel Abbaton may shew kindness on his behalf before God, and may forgive him his sins.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲇⲱⲣⲓⲍⲉ** ⲙⲙⲟϥ ⲉϩⲟⲩⲛ ⲉⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲙⲡⲧⲟⲟⲩ ⲛⲧⲡⲟⲗⲓⲥ ⲧⲃⲱ ⲉⲧⲃⲉⲡⲟⲩϫⲁⲓ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉⲧⲣⲉⲩⲱϣ ⲛϩⲏⲧϥ ⲉⲡⲣⲁⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ⲙⲛⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲁⲡⲁ ⲡⲁϩⲱⲙⲱ ϫⲉⲕⲁⲥ ⲉⲣⲉⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲡⲉⲥⲧⲣⲁϯⲗⲁⲧⲏⲥ ⲁⲩⲱ ⲡⲙⲁⲣⲧⲩⲣⲟⲥ ⲛϫⲱⲱⲣⲉ ⲙⲛⲡϩⲁⲅⲓⲟⲥ ⲓⲱⲥ ⲡⲃⲁⲡⲧⲓⲥⲧⲏⲥ ⲁⲩⲱ ⲡⲉⲡⲣⲟⲇⲣⲟⲙⲟⲥ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲙⲛⲡϩⲁⲅⲓⲟⲥ ⲁⲡⲁ ⲡⲁϩⲟⲙⲱ ⲡⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ ⲛⲁⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲡⲭⲣⲓⲥⲧⲟⲥ ⲉϩⲣⲁⲓ ⲉϫⲱϥ",
+      "english": "He presented it to the monastery of the Holy Macarius of the mountain of the city, Tbow, for the salvation of his soul in order for them to read in it the name of the Holy John, and the Holy Apa Pahmon so that the Holy Macarius, the soldier and courageous martyr and the Holy John the Baptist, the forerunner of Christ and the Holy Apa Pahmon, the Archimandrite will intercede to Christ for him.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥ",
+        11,
+        12.9
+      ],
+      [
+        "ⲙⲙⲟ",
+        6,
+        12.735
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        4,
+        12.678
+      ],
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        10.715
+      ],
+      [
+        "ⲁ",
+        4,
+        9.044
+      ],
+      [
+        "ⲉ",
+        3,
+        7.572
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲇⲱⲣⲓⲍⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲇⲱⲣⲓⲍⲉ",
+          3
+        ],
+        [
+          "ⲇⲱⲣⲓⲍⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          3
+        ],
+        [
+          "ⲡ_3_post_ⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ_2_post_ⲡⲁⲣⲁⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲇⲱⲣⲓⲍⲉ",
+          "ϥ_1_pre_ⲇⲱⲣⲓⲍⲉ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲇⲱⲣⲓⲍⲉ",
+          "ⲇⲱⲣⲓⲍⲉ_0_node",
+          3
+        ],
+        [
+          "ⲇⲱⲣⲓⲍⲉ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          2
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          "ⲡ_3_post_ⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ",
+          "ⲁⲣⲭⲏⲙⲁⲛⲧⲣⲓⲧⲏⲥ_2_post_ⲡⲁⲣⲁⲕⲁⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲇⲱⲣⲓⲍⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉϩⲟⲩⲛ_1_post_ⲇⲱⲣⲓⲍⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5109,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "590",
+    "grl_lemma": "δωρίζω",
+    "grl_meaning": "to give, present, donate",
+    "grl_pos": "verb",
+    "grl_ref": "cf. Sophocles 408b (\"δωριάζω = δωρίζω\")"
+  }
+}

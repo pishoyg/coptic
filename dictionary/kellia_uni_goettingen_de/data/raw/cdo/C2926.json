@@ -1,0 +1,90 @@
+{
+  "id": "C2926",
+  "forms": [
+    {
+      "id": "CF7716",
+      "orth": "ⲡⲱⲧ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲥⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3350",
+      "bibliography": "CD 274b; KoptHWb 154; ChLCS 39a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲁⲩⲡⲱⲧ ⲛⲥⲱⲓ **ⲥⲉⲛⲁⲡⲱⲧ **ⲛⲥⲁ**ⲧⲏⲩⲧⲛ** ·",
+      "english": "If they have persecuted me they will persecute you.",
+      "source": "Abraham Our Father XL 93-94",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbxl:23-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲱⲧ **ⲛⲥⲁ**ⲧⲁⲅⲁⲡⲏ** . ⲕⲱϩ ⲇⲉ ⲉⲛⲉⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ . ⲛϩⲟⲩⲟ ⲇⲉ ϫⲉⲉⲧⲉⲧⲛⲉⲡⲣⲟⲫⲏⲧⲉⲩⲉ .",
+      "english": "Follow after love, and earnestly desire spiritual gifts, but especially that you may prophesy.",
+      "source": "1 Corinthians 14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥⲥⲱⲧⲙ ⲉⲥⲙⲉⲉⲩⲉ ϫⲉⲧⲙⲉ ⲧⲉ **ⲁⲥⲡⲱⲧ **ⲛⲥⲁ**ⲡⲉⲟⲟⲩ** ⲛⲧⲙⲛⲧⲛⲟⲩⲧⲉ ·",
+      "english": "She hearkened and she thought that it was true ; she fled from the glory which was divine,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2932",
+      "label": "ϭⲓⲛⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "running, course"
+    },
+    {
+      "target": "C2929",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "place of refuge; race-course"
+    },
+    {
+      "target": "C2930",
+      "label": "ⲙⲁ ⲙⲡⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outgoing, exit"
+    },
+    {
+      "target": "C2925",
+      "label": "ⲡⲱⲧ",
+      "pos": "V",
+      "gloss": "run, flee, go"
+    },
+    {
+      "target": "C2928",
+      "label": "ⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "course, flight"
+    },
+    {
+      "target": "C2927",
+      "label": "ⲡⲱⲧ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "run, go forth"
+    },
+    {
+      "target": "C2931",
+      "label": "ⲣⲉϥⲡⲱⲧ",
+      "pos": "N",
+      "gloss": "runner"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "C1242",
+  "forms": [
+    {
+      "id": "CF3884",
+      "orth": "ⲕⲟⲟⲙϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17094,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF3885",
+      "orth": "ⲕⲟⲙϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1438",
+      "bibliography": "CD 110b; KoptHWb 65"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϯ ⲙⲡⲉⲩⲕⲁⲣⲡⲟⲥ ⲙⲡ**ⲕⲟⲟⲙϥ** ⲁⲩⲱ ⲛⲉⲩϩⲓⲥⲉ ⲙⲡⲉϣϫⲉ",
+      "english": "And he gave their fruit to the canker worm, and their labours to the locust.",
+      "source": "Psalms 77",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:77",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲣⲡⲟⲥ",
+        1,
+        12.433
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        1,
+        11.554
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲟⲙϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16699,
+      "count": 1
+    }
+  }
+}

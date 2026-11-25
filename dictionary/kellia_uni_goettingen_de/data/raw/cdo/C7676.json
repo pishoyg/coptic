@@ -1,0 +1,130 @@
+{
+  "id": "C7676",
+  "forms": [
+    {
+      "id": "CF17417",
+      "orth": "ϭⲗⲁⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10681,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲗⲡ",
+      "dialect": "B",
+      "id": "2549.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8527",
+      "bibliography": "CD 813a; KoptHWb 452, 574; DELC 339a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲓⲙ ⲇⲉ ⲡⲉ ⲫⲓⲱⲧ ⲙⲡⲓⲙⲟⲩⲛϩⲱⲟⲩ : ⲛⲓⲙ ⲇⲉ ⲡⲉ ⲉⲧⲁϥⲙⲉⲥ ⲛⲓ**ϭⲗⲁⲡ** ⲛⲓⲱϯ .",
+      "english": "Who is the rain's father? and who has generated the drops of dew?",
+      "source": "18_Iob_38",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:38",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲉⲥ",
+        1,
+        15.11
+      ],
+      [
+        "ⲓⲱϯ",
+        1,
+        14.837
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲓ_1_pre_ϭⲗⲁⲡ",
+          1
+        ],
+        [
+          "ϭⲗⲁⲡ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲗⲁⲡ",
+          1
+        ],
+        [
+          "ⲓⲱϯ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ϭⲗⲁⲡ",
+          "ϭⲗⲁⲡ_0_node",
+          1
+        ],
+        [
+          "ϭⲗⲁⲡ_0_node",
+          "ⲛ_1_post_ϭⲗⲁⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲗⲁⲡ",
+          "ⲓⲱϯ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10134,
+      "count": 1
+    }
+  }
+}

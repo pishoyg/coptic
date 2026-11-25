@@ -1,0 +1,562 @@
+{
+  "id": "C6909",
+  "forms": [
+    {
+      "id": "CF15867",
+      "orth": "ϩⲟⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.37,
+        "rank": 308,
+        "count": 531
+      }
+    },
+    {
+      "orth": "ϩⲟϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.37,
+        "rank": 307,
+        "count": 286
+      }
+    },
+    {
+      "orth": "ϩⲁⲧⲉ",
+      "dialect": "A",
+      "id": "2295.1"
+    },
+    {
+      "orth": "ϩⲁⲧⲉ",
+      "dialect": "L",
+      "id": "2295.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7629",
+      "bibliography": "CD 721b-722a; CED 299; KoptHWb 396; DELC 315b; ChLCS 97a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏⲡⲱⲥ ⲛⲧⲉϥⲓ ⲛⲟⲩϩⲟϯ ϧⲉⲛⲟⲩ**ϩⲟϯ** ⲛⲧⲉϥϫⲉⲙⲑⲏⲛⲟⲩ ⲉⲣⲉⲧⲉⲛⲛⲕⲟⲧ .",
+      "english": "lest coming suddenly he might find you sleeping.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲉⲧⲙⲙⲁⲩ ϣⲁⲣⲉⲧⲉⲯⲩⲭⲏ ϣⲁⲥϫⲱ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲉⲩⲁⲡⲟⲗⲟⲅⲓⲁ · ⲁⲩⲱ ϣⲁⲩⲣϩⲟⲧⲉ ⲉⲙⲁϣⲟ ⲛⲥⲉϩⲉ ⲉϫⲙⲡⲉⲩϩⲟ · ⲉⲩⲟ ⲛ**ϩⲟⲧⲉ** ϩⲏⲧϥ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲁⲥϫⲟⲟϥ · ⲁⲩⲱ ⲙⲛⲧⲉⲩⲁⲡⲟⲗⲟⲅⲓⲁ ·",
+      "english": "“And in that moment the soul uttereth the mystery of their apology. And they are exceedingly afraid and fall on their faces, being in fear of the mystery which it hath uttered, and of their apology. |”",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲟⲓ ⲛ**ϩⲟϯ** ⲟⲩⲟϩ ϥⲟⲩⲟⲛϩ ⲉⲃⲟⲗ ⲡⲉϥϩⲁⲡ ⲉϥⲉϣⲱⲡⲓ ⲉⲃⲟⲗ ⲛϧⲏⲧϥ .",
+      "english": "He is terrible and famous; his judgment shall proceed of himself, and his dignity shall come out of himself.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲟⲛⲟⲛ ⲙⲡⲣⲁⲙⲉⲗⲉⲓ ⲉⲧⲁⲙⲟⲓ ϫⲉⲧ**ϩⲟⲧⲉ** ⲙⲡⲛⲟⲩⲧⲉ ⲙⲡⲁⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲁⲩ ⲛⲓⲙ ⲉⲧⲃⲉⲧⲏⲩⲧⲛ .",
+      "english": "Just don't be negligent, and tell me, for the fear of God is in my presence for you at every moment.",
+      "source": "So Concerning the Little Place BV 277-278",
+      "urn": "urn:cts:copticLit:shenoute.place.amelineau:55-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁϥⲉⲙⲓ ⲅⲁⲣ ⲁⲛ ⲡⲉ ϫⲉⲟⲩ ⲡⲉⲧⲉϥⲛⲁⲉⲣⲟⲩⲱ ⲙⲙⲟϥ ⲁⲩϣⲱⲡⲓ ⲅⲁⲣ ⲉⲩⲙⲉϩ ⲛ**ϩⲟϯ** .",
+      "english": "For he didn't know what to say, for they were very afraid.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϣⲁϫⲉ ⲇⲉ ⲟⲛ ⲉⲧⲃⲉⲡⲉⲧⲥⲏϩ ϩⲙⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ · ϫⲉⲟⲩ**ϩⲟⲧⲉ** ⲛⲉ ϩⲉ ⲉϩⲣⲁⲓ ⲉⲛϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ · ⲁⲩⲱ ⲉⲧⲃⲉⲧⲛⲟϭ ⲙⲙⲛⲧⲉⲃⲓⲏⲛ ⲛⲡⲣⲱⲙⲉ · ⲙⲡⲛⲁⲩ ⲉⲧϥⲛⲁϯ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲉⲛϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "AND HE SPAKE ALSO CONCERNING THAT WHICH IS WRITTEN IN THE (BOOK OF THE) APOSTLE, 'IT IS A FEARFUL THING TO FALL INTO THE HANDS OF GOD.' ' AND (HE SPAKE ALSO) CONCERNING THE MISERABLE STATE OF A MAN AT THE MOMENT WHEN HE IS ABOUT TO YIELD UP HIS SPIRIT INTO THE HANDS OF GOD.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟϯ",
+        60,
+        22.325
+      ],
+      [
+        "ⲟⲩ",
+        244,
+        21.615
+      ],
+      [
+        "ⲉⲧ",
+        172,
+        21.6
+      ],
+      [
+        "ϧⲉⲛ",
+        160,
+        20.798
+      ],
+      [
+        "ⲁ",
+        180,
+        20.534
+      ],
+      [
+        "ⲛ",
+        158,
+        19.571
+      ],
+      [
+        "ⲥⲑⲉⲣⲧⲉⲣ",
+        18,
+        19.208
+      ],
+      [
+        "ⲁ",
+        119,
+        18.743
+      ],
+      [
+        "ϥ",
+        129,
+        18.527
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        106,
+        18.333
+      ],
+      [
+        "ⲩ",
+        76,
+        17.934
+      ],
+      [
+        "ⲟⲓ",
+        33,
+        17.785
+      ],
+      [
+        "ⲛⲉⲙ",
+        69,
+        17.637
+      ],
+      [
+        "ⲧⲉⲛⲉⲥⲟⲑⲙⲉⲥ",
+        3,
+        17.519
+      ],
+      [
+        ".",
+        68,
+        16.948
+      ],
+      [
+        "ⲩ",
+        58,
+        16.764
+      ],
+      [
+        "ϯ",
+        53,
+        16.543
+      ],
+      [
+        "ⲥϣⲧⲉⲣⲑⲱⲣⲧ",
+        3,
+        16.519
+      ],
+      [
+        "ⲉ",
+        69,
+        16.412
+      ],
+      [
+        "ⲥ",
+        49,
+        16.341
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        96,
+        31.3
+      ],
+      [
+        "ⲥⲧⲱⲧ",
+        51,
+        21.919
+      ],
+      [
+        "ⲙ",
+        316,
+        21.21
+      ],
+      [
+        "ⲡ",
+        368,
+        21.015
+      ],
+      [
+        "ⲛ",
+        338,
+        19.959
+      ],
+      [
+        "ⲧ",
+        198,
+        19.906
+      ],
+      [
+        "ⲟⲩ",
+        241,
+        19.906
+      ],
+      [
+        "ϩⲏⲧ",
+        95,
+        19.604
+      ],
+      [
+        "ⲙⲛ",
+        153,
+        19.364
+      ],
+      [
+        "ϩⲛ",
+        130,
+        18.494
+      ],
+      [
+        "ⲁⲩⲱ",
+        140,
+        18.082
+      ],
+      [
+        "ⲁ",
+        161,
+        17.984
+      ],
+      [
+        "ⲛⲟϭ",
+        56,
+        17.668
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        76,
+        17.47
+      ],
+      [
+        "ⲁⲣⲓ",
+        26,
+        17.307
+      ],
+      [
+        "ⲩ",
+        114,
+        17.256
+      ],
+      [
+        ".",
+        92,
+        17.075
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        54,
+        16.508
+      ],
+      [
+        "ϣⲧⲟⲣⲧⲣ",
+        22,
+        16.35
+      ],
+      [
+        "ⲡⲉⲣⲣ",
+        3,
+        16.3
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲧⲉ_0_node",
+          290
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          69
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          69
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          39
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          30
+        ],
+        [
+          "ⲧ_1_pre_ϩⲟⲧⲉ",
+          30
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          17
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          8
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          12
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          10
+        ],
+        [
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          12
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲟⲧⲉ",
+          7
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲧⲉ",
+          6
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲟⲧⲉ",
+          4
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲙⲟⲩ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          3
+        ],
+        [
+          "ϣⲧⲟⲣⲧⲣ_1_post_ϩⲟⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_2_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲥⲧⲱⲧ",
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲟⲧⲉ",
+          "ⲟⲩ_1_pre_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲟⲧⲉ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ϣⲧⲟⲣⲧⲣ",
+          "ϣⲧⲟⲣⲧⲣ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϩⲟⲧⲉ",
+          "ϩⲟⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_2_post_ⲥⲧⲱⲧ",
+          "ⲥⲧⲱⲧ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲧⲉ_0_node",
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲧⲉ",
+          "ⲓⲥⲁⲁⲕ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.35,
+      "rank": 261,
+      "count": 531
+    },
+    "B": {
+      "rate": 1.44,
+      "rank": 505,
+      "count": 122
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6910",
+      "label": "ⲣϩⲟⲧⲉ",
+      "pos": "V",
+      "gloss": "spend time"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4326",
+    "demo_lemma": "ḥtj(.t)",
+    "english": "moment, time",
+    "german": "Augenblick, Zeit",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4326"
+  }
+}

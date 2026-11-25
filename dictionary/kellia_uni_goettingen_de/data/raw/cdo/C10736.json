@@ -1,0 +1,104 @@
+{
+  "id": "C10736",
+  "forms": [
+    {
+      "id": "CF29163",
+      "orth": "ⲧⲏⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF29164",
+      "orth": "ⲧⲏⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20836,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14754",
+      "bibliography": "DDGLC",
+      "cu_ID": "2287"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓ**ⲧⲏⲣⲉⲓ** ⲙⲙⲟϥ ⲛⲧϩⲉ ⲛⲧⲉⲗⲟⲩ ⲙⲡⲉⲕⲃⲁⲗ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲓ",
+        1,
+        12.258
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲏⲣⲉⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20438,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3565",
+    "grl_lemma": "τηρέω",
+    "grl_meaning": "to watch over, take care of, guard",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1789a; Preisigke 2:597"
+  }
+}

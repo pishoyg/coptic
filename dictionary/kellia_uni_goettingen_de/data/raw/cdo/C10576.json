@@ -1,0 +1,246 @@
+{
+  "id": "C10576",
+  "forms": [
+    {
+      "id": "CF28532",
+      "orth": "ⲥⲧⲩⲣⲁⲝ",
+      "dialect": null
+    },
+    {
+      "id": "CF28541",
+      "orth": "ⲥⲧⲩⲣⲁⲝ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13905,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28533",
+      "orth": "ⲥⲧⲉⲣⲝ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28534",
+      "orth": "ⲥⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28535",
+      "orth": "ⲥⲧⲏⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28536",
+      "orth": "ⲥⲧⲏⲣⲁⲝ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28537",
+      "orth": "ⲥⲧⲏⲣⲝ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28538",
+      "orth": "ⲥⲧⲏⲣⲟⲝ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28539",
+      "orth": "ⲥⲧⲓⲣⲏⳅ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28540",
+      "orth": "ⲥⲧⲩⲣⲁⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28542",
+      "orth": "ⲥⲧⲩⲣⲝ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14388",
+      "bibliography": "DDGLC",
+      "cu_ID": "3476"
+    },
+    {
+      "id": "CS14389",
+      "bibliography": "DDGLC",
+      "cu_ID": "7774"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲁⲕⲱⲃ ⲇⲉ ϫⲓ ⲛⲟⲩϣⲉ ⲛ**ⲥⲧⲩⲣⲁⲝ** ⲉϥⲟⲩⲉⲧⲟⲩⲱⲧ ⲁⲩⲱ ⲕⲉⲟⲩⲁ ⲛϣⲉ ⲛⲕⲁⲣⲟⲓⲁ ⲙⲛⲕⲉⲟⲩⲁ ⲛϣⲉ ⲙⲡⲗⲁⲧⲁⲛⲟⲥ ⲁϥⲕⲱⲕ ⲙⲙⲟⲟⲩ ⲛϭⲓⲓⲁⲕⲱⲃ ⲛϩⲛⲧⲟ ⲉⲩⲟⲩⲟⲃϣ ⲉⲩⲥⲱⲕ ⲉⲡⲉⲧⲟⲩⲉⲧⲟⲩⲱⲧ ⲁⲡⲉⲧⲟⲩⲟⲃϣ ⲇⲉ ⲛⲧⲁϥⲕⲟⲕϥ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ϩⲛⲛϭⲉⲣⲱⲃ ⲛⲧⲟⲧⲟ",
+      "english": "And Jacob took to himself green rods of storax tree and walnut and plane-tree; and Jacob peeled in them white stripes; and as he drew off the green, the white stripe which he had made appeared alternate on the rods.",
+      "source": "Genesis 30",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲉⲧ",
+        1,
+        13.995
+      ],
+      [
+        "ϣⲃⲱⲧ",
+        1,
+        13.037
+      ],
+      [
+        "ϣⲉ",
+        1,
+        9.857
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲉⲧⲟⲩⲱⲧ",
+        1,
+        16.898
+      ],
+      [
+        "ϣⲉ",
+        1,
+        11.182
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲧⲩⲣⲁⲝ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϣⲉ_1_pre_ⲥⲧⲩⲣⲁⲝ",
+          1
+        ],
+        [
+          "ⲥⲧⲩⲣⲁⲝ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲩⲣⲁⲝ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲉⲧⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲧⲟⲩⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲉ_1_pre_ⲥⲧⲩⲣⲁⲝ",
+          "ⲥⲧⲩⲣⲁⲝ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲩⲣⲁⲝ_0_node",
+          "ⲉ_1_post_ⲥⲧⲩⲣⲁⲝ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲩⲣⲁⲝ",
+          "ϥ_3_post_ⲟⲩⲉⲧⲟⲩⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲟⲩⲉⲧⲟⲩⲱⲧ",
+          "ⲟⲩⲉⲧⲟⲩⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲧⲟⲩⲱⲧ_2_post_ⲉ",
+          "ⲁⲩⲱ_3_post_ⲕⲁⲣⲟⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13502,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2055",
+    "grl_lemma": "στύραξ",
+    "grl_meaning": "storax",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1658a; Preisigke 2:493"
+  }
+}

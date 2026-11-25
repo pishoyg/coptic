@@ -1,0 +1,379 @@
+{
+  "id": "C3418",
+  "forms": [
+    {
+      "id": "CF8735",
+      "orth": "ⲣⲉϥⲥⲱⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8414,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3896",
+      "bibliography": "CD 328a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲟⲩⲁⲣⲭⲱⲛ ⲛⲉⲧⲟⲩⲏϩ ⲛⲉ ϩⲛⲥⲓⲇⲱⲛ ⲁⲩⲱ ⲛⲁⲣⲁⲇⲓⲟⲥ ⲁⲩϣⲱⲡⲉ ⲛⲉ ⲛ**ⲣⲉϥⲥⲱⲕ** ⲛⲛⲟⲩⲟⲥⲣ ⲛⲟⲩⲥⲁⲃⲉⲉⲩ ⲥⲟⲣ ⲛⲉⲧϣⲟⲟⲡ ⲛϩⲏⲧⲉ ⲛⲁⲓ ⲛⲉ ⲛⲟⲩⲣⲉϥⲣϩⲙⲙⲉ",
+      "english": "And thy princes were the dwellers in Sidon, and the Aradians were thy rowers: thy wise men, O Sor, who were in thee, these were thy pilots.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉⲧⲛⲣⲣⲉϥϯϩⲁⲡ ⲙⲛⲛ**ⲣⲉϥⲥⲱⲕ** ϩⲏⲧⲧⲏⲩⲧⲛ ϩⲛⲧⲉⲥⲃⲱ ⲉⲕⲉⲕⲁⲑⲓⲥⲧⲁ ⲙⲙⲟⲟⲩ ⲉϫⲱⲕ ϩⲛⲛⲉⲕⲡⲟⲗⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲁⲓ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁⲩ ⲛⲁⲕ ⲕⲁⲧⲁⲛⲉⲕⲫⲩⲗⲏ ⲁⲩⲱ ⲉⲩⲉϯϩⲁⲡ ⲉⲡⲗⲁⲟⲥ ϩⲛⲟⲩϩⲁⲡ ⲙⲙⲉ",
+      "english": "Thou shalt make for thyself judges and officers in thy cities, which the Lord thy God gives thee in thy tribes, and they shall judge the people with righteous judgment:",
+      "source": "Deuteronomy 16",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲟⲥⲉⲣ",
+        1,
+        17.695
+      ],
+      [
+        "ⲛⲏⲉⲧ",
+        1,
+        11.091
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        1,
+        7.634
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲣⲉϥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲟⲩⲟⲥⲣ",
+        1,
+        17.013
+      ],
+      [
+        "ϯϩⲁⲡ",
+        1,
+        13.09
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲧⲏⲩⲧⲛ",
+        1,
+        8.946
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        7.947
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲃⲟⲥⲉⲣ_3_post_ⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲃⲟⲥⲉⲣ_3_post_ⲛⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          2
+        ],
+        [
+          "ϩⲏⲧ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲧⲏⲩⲧⲛ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲥⲣ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          "ϩⲏⲧ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ⲣⲉϥⲥⲱⲕ",
+          "ⲧⲏⲩⲧⲛ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲉϥⲥⲱⲕ",
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲱⲕ",
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲱⲕ_0_node",
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲥⲱⲕ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲟⲩⲟⲥⲣ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7972,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3419",
+      "label": "ϭⲓⲛⲥⲱⲕ",
+      "pos": "N",
+      "gloss": "drawing, flowing"
+    },
+    {
+      "target": "C3406",
+      "label": "ϭⲓⲥⲁⲕ",
+      "pos": "V",
+      "gloss": "take opportunity, give occasion"
+    },
+    {
+      "target": "C3405",
+      "label": "ϯⲥⲁⲕ",
+      "pos": "V",
+      "gloss": "make a show, give appearance; make wise, instruct, devise, deceive"
+    },
+    {
+      "target": "C3404",
+      "label": "ⲁⲧⲥⲟⲕ",
+      "pos": "N",
+      "gloss": "shapeless, unrestraint"
+    },
+    {
+      "target": "C3403",
+      "label": "ⲥⲁⲕ",
+      "pos": "N",
+      "gloss": "adornment, appearance, capacity"
+    },
+    {
+      "target": "C3421",
+      "label": "ⲥⲁⲭⲟ",
+      "pos": "N",
+      "gloss": "dignified, esteemed person"
+    },
+    {
+      "target": "C3422",
+      "label": "ⲥⲁⲭⲟ",
+      "pos": "N",
+      "gloss": "dignified, esteemed person"
+    },
+    {
+      "target": "C3407",
+      "label": "ⲥⲟⲕ",
+      "pos": "N",
+      "gloss": "sack, sackcloth, bag"
+    },
+    {
+      "target": "C3420",
+      "label": "ⲥⲟⲕ",
+      "pos": "V",
+      "gloss": "be content, satisfied"
+    },
+    {
+      "target": "C3409",
+      "label": "ⲥⲟⲕⲥ",
+      "pos": "PTC",
+      "gloss": "continue, start (here), cease, pause (here)"
+    },
+    {
+      "target": "C3408",
+      "label": "ⲥⲱⲕ",
+      "pos": "V",
+      "gloss": "flow (as water, hair), blow (as wind, smoke), move on swiftly, glide, draw, be\n              drawn; draw, beguile, gather, impel; protract the fast, fast"
+    },
+    {
+      "target": "C3417",
+      "label": "ⲥⲱⲕ",
+      "pos": "N",
+      "gloss": "drawing, attraction"
+    },
+    {
+      "target": "C3413",
+      "label": "ⲥⲱⲕ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "flow, draw before, beneath, submit to"
+    },
+    {
+      "target": "C3414",
+      "label": "ⲥⲱⲕ (ϩⲏⲧ⸗)",
+      "pos": "V",
+      "gloss": "lead on, go before; tempt, seduce, go before"
+    },
+    {
+      "target": "C3411",
+      "label": "ⲥⲱⲕ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "flow, drag upon, approach; bring upon, to"
+    },
+    {
+      "target": "C3415",
+      "label": "ⲥⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "be drawn, come forth, draw forth; pass out, die"
+    },
+    {
+      "target": "C3416",
+      "label": "ⲥⲱⲕ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "flow down, bring down"
+    },
+    {
+      "target": "C3410",
+      "label": "ⲥⲱⲕ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "follow after"
+    },
+    {
+      "target": "C3412",
+      "label": "ⲥⲱⲕ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "draw, follow after"
+    }
+  ]
+}

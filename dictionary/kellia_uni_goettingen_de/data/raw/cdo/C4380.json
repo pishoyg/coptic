@@ -1,0 +1,284 @@
+{
+  "id": "C4380",
+  "forms": [
+    {
+      "id": "CF10712",
+      "orth": "ⲣⲉⲧⲧⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5457,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4961",
+      "bibliography": "CD 421a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲛⲁ**ⲣⲉⲧⲧⲛϩ** ⲛⲧϩⲉ ⲛⲛⲓⲁⲉⲧⲟⲥ ·",
+      "english": "They shall spread out their wings like the eagles in flight.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕ**ⲣⲉⲧⲧⲛϩ** ⲛⲧϩⲉ ⲛⲟⲩⲁⲉⲧⲟⲥ ⁛— ⲁⲩⲱ ⲁⲕϣⲓⲃⲉ ϩⲛⲧϭⲟⲙ ⲛⲧⲙⲛⲧⲣⲉϥϣⲙϣⲉⲛⲟⲩⲧⲉ · ⲛⲧϩⲉ ⲛⲟⲩⲁϩⲱⲙ ·",
+      "english": "Thou didst spread out thy wing like the eagle, and thou wast transformed in the strength of the service of God like a young, strong eagle.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϩⲩⲡⲟⲙⲓⲛⲉ ⲇⲉ ⲉⲡⲛⲟⲩⲧⲉ ⲛⲁϣⲓⲃⲉ ⲛⲧⲉⲩϭⲟⲙ ⲥⲉⲛⲁ**ⲣⲉⲧⲧⲛϩ** ⲛⲧϩⲉ ⲛϩⲉⲛⲁϩⲱⲙⲉ ⲥⲉⲛⲁⲡⲱⲧ ⲛⲥⲉⲧⲙϩⲓⲥⲉ ⲥⲉⲛⲁⲙⲟⲟϣⲉ ⲛⲥⲉⲧⲙϩⲕⲟ",
+      "english": "but they that wait on God shall renew their strength; they shall put forth new feathers like eagles; they shall run, and not be weary; they shall walk, and not hunger.",
+      "source": "Isaiah 40",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲉ",
+        4,
+        11.727
+      ],
+      [
+        "ⲟϣ",
+        1,
+        10.926
+      ],
+      [
+        "ϭⲟⲙ",
+        2,
+        10.839
+      ],
+      [
+        "ⲛ",
+        8,
+        10.809
+      ],
+      [
+        "ⲧ",
+        4,
+        10.071
+      ],
+      [
+        "ⲥⲉ",
+        2,
+        9.083
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        8.438
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.688
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.664
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲥ",
+        1,
+        4.274
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲉ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲣⲉⲧⲧⲛϩ_0_node",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉⲧⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          "ⲛⲁ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          "ⲣⲉⲧⲧⲛϩ_0_node",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          "ⲕ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲣⲉⲧⲧⲛϩ",
+          "ⲣⲉⲧⲧⲛϩ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉⲧⲧⲛϩ_0_node",
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲓⲃⲉ",
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϣⲓⲃⲉ",
+          "ⲕ_2_post_ϣⲓⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲉⲧⲧⲛϩ_0_node",
+          "ⲛ_1_post_ⲣⲉⲧⲧⲛϩ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉⲧⲧⲛϩ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ϩⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ϩⲉ_3_post_ⲧ",
+          "ⲛ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲉ",
+          "ⲟⲩ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5026,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3178",
+      "type": "cf",
+      "label": "grow, sprout, be covered with a growth (as vegetation, hair)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4382",
+      "label": "ϫⲓⲧⲛϩ",
+      "pos": "V",
+      "gloss": "take wings"
+    },
+    {
+      "target": "C4379",
+      "label": "ⲣⲧⲛϩ",
+      "pos": "V",
+      "gloss": "develop/form wings, be winged"
+    },
+    {
+      "target": "C4381",
+      "label": "ⲧⲁⲁⲧⲉⲧⲛϩ",
+      "pos": "V",
+      "gloss": "flap(?) wings"
+    },
+    {
+      "target": "C4378",
+      "label": "ⲧⲛϩ",
+      "pos": "N",
+      "gloss": "wing"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "C1184",
+  "forms": [
+    {
+      "id": "CF3754",
+      "orth": "ϫⲓⲛⲕⲱⲗⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3755",
+      "orth": "ϫⲓⲛⲕⲱⲗⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1374",
+      "bibliography": "CD 105b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1185",
+      "label": "ⲁⲧⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "unstolen, inviolate"
+    },
+    {
+      "target": "C1186",
+      "label": "ⲕⲟⲗⲡⲥ",
+      "pos": "N",
+      "gloss": "theft"
+    },
+    {
+      "target": "C1182",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "V",
+      "gloss": "steal, rob"
+    },
+    {
+      "target": "C1183",
+      "label": "ⲕⲱⲗⲡ",
+      "pos": "N",
+      "gloss": "theft, thing stolen"
+    },
+    {
+      "target": "C12274",
+      "label": "ⲛⲕⲱⲗⲡ",
+      "pos": "ADV",
+      "gloss": "thievishly"
+    }
+  ]
+}

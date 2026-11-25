@@ -1,0 +1,64 @@
+{
+  "id": "C4110",
+  "forms": [
+    {
+      "id": "CF10165",
+      "orth": "ⲡⲁⲛⲧⲃⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4669",
+      "bibliography": "CD 400b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2785",
+      "type": "cf",
+      "label": "possessive prefix sg. m."
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4111",
+      "label": "ⲙⲁ ⲛⲧⲉⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle-herd"
+    },
+    {
+      "target": "C4112",
+      "label": "ⲙⲛⲧⲧⲉⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "bestiality"
+    },
+    {
+      "target": "C4113",
+      "label": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle breeder"
+    },
+    {
+      "target": "C4114",
+      "label": "ⲣⲉϥⲥⲁⲛϣⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "cattle breeder"
+    },
+    {
+      "target": "C4109",
+      "label": "ⲧⲃⲛⲏ",
+      "pos": "N",
+      "gloss": "beast, domestic animal"
+    }
+  ]
+}

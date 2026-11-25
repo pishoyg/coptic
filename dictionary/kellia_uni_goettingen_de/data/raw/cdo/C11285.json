@@ -1,0 +1,113 @@
+{
+  "id": "C11285",
+  "forms": [
+    {
+      "id": "CF32243",
+      "orth": "ⲁⲧⲗⲟⲓϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11502,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2060",
+      "bibliography": "CD 152a; ChLCS 21a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲁⲁϥ ⲛ**ⲁⲧⲗⲟⲓϭⲉ** ϩⲛⲧⲙⲏⲏⲧⲉ ⲛⲛⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲙⲛⲛⲓⲟⲩⲇⲁⲓ ·",
+      "english": "and made himself free from the liability (for His death) among the high priests and the Jews,",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲏⲏⲧⲉ",
+        1,
+        13.898
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        10.022
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲗⲟⲓϭⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11069,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C11287",
+      "label": "ϭⲛⲗⲟⲓϭⲉ",
+      "pos": "V",
+      "gloss": "find occasion, excuse"
+    },
+    {
+      "target": "C11288",
+      "label": "ϭⲡⲗⲟⲓϭⲉ",
+      "pos": "V",
+      "gloss": "seize occasion, excuse"
+    },
+    {
+      "target": "C11286",
+      "label": "ϯⲗⲟⲓϭⲉ",
+      "pos": "V",
+      "gloss": "give occasion, excuse"
+    },
+    {
+      "target": "C11284",
+      "label": "ⲗⲟⲓϭⲉ",
+      "pos": "N",
+      "gloss": "cause, excuse, motive, accusation, fault"
+    }
+  ]
+}

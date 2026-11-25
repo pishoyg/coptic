@@ -1,0 +1,52 @@
+{
+  "id": "C626",
+  "forms": [
+    {
+      "id": "CF2378",
+      "orth": "ⲥⲁ ⲛⲉⲃⲓⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS762",
+      "bibliography": "CD 52b; ChLCS 10b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C13000",
+      "type": "cf",
+      "label": "man (woman)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C625",
+      "label": "ⲉⲃⲓⲉϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild honey"
+    },
+    {
+      "target": "C627",
+      "label": "ⲉⲃⲓⲧ",
+      "pos": "N",
+      "gloss": "apiarist, honey seller"
+    },
+    {
+      "target": "C624",
+      "label": "ⲉⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "honey"
+    }
+  ]
+}

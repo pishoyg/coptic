@@ -1,0 +1,301 @@
+{
+  "id": "C5720",
+  "forms": [
+    {
+      "id": "CF13419",
+      "orth": "ⲁⲧϯϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11641,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6398",
+      "bibliography": "CD 548b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉϥⲉⲃⲉⲣⲃⲱⲣⲕ ⲉⲃⲟⲗ ⲉⲟⲩⲭⲱⲣⲁ ⲉⲥⲟⲓ ⲛⲛⲓϣϯ ⲟⲩⲟϩ ⲛ**ⲁⲧϯϣⲓ** ⲉⲣⲟⲥ ⲟⲩⲟϩ ⲉⲕⲉⲙⲟⲩ ⲙⲙⲁⲩ ⲟⲩⲟϩ ⲉϥⲉⲭⲱ ⲙⲡⲉⲕϩⲁⲣⲙⲁ ⲉⲑⲛⲁⲛⲉϥ ⲉⲩϣⲱϣ ⲟⲩⲟϩ ⲡⲏⲓ ⲙⲡⲉⲕⲁⲣⲭⲱⲛ ⲉⲑⲣⲟⲩϩⲱⲙⲓ ⲉϫⲱϥ .",
+      "english": "and will cast thee into a great and unmeasured land, and there thou shalt die: and he will bring thy fair chariot to shame, and the house of thy prince to be trodden down.",
+      "source": "23_Isaias_22",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:22",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲓϣϯ",
+        1,
+        9.805
+      ],
+      [
+        "ⲉⲕⲉ",
+        1,
+        9.587
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        8.117
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        8.08
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲉⲓⲛ",
+        1,
+        15.428
+      ],
+      [
+        "ϭⲟⲧ",
+        1,
+        12.521
+      ],
+      [
+        "ⲙⲛⲧⲛⲟϭ",
+        1,
+        12.118
+      ],
+      [
+        "ⲉⲣⲟ",
+        3,
+        10.654
+      ],
+      [
+        "ⲣⲉϥⲣⲛⲟⲃⲉ",
+        1,
+        10.612
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲉⲟⲟⲩ",
+        1,
+        9.14
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.84
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.195
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.728
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲧϯϣⲓ",
+          1
+        ],
+        [
+          "ⲁⲧϯϣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲁⲧϯϣⲓ",
+          "ⲁⲧϯϣⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧϯϣⲓ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧϯϣⲓ_0_node",
+          3
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϯϣⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧϯϣⲓ_0_node",
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          "ϥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲁⲧϯϣⲓ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧϯϣⲓ",
+          "ⲁⲧϯϣⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11081,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5713",
+      "label": "ϣⲓ",
+      "pos": "V",
+      "gloss": "measure, weigh"
+    },
+    {
+      "target": "C5714",
+      "label": "ϣⲓ",
+      "pos": "N",
+      "gloss": "measure, weight"
+    },
+    {
+      "target": "C5722",
+      "label": "ϣⲓⲧⲉϥ",
+      "pos": "N",
+      "gloss": "measuring, weighing(?)"
+    },
+    {
+      "target": "C5721",
+      "label": "ϫⲓϣⲓ",
+      "pos": "V",
+      "gloss": "take measure, estimate"
+    },
+    {
+      "target": "C5719",
+      "label": "ϯϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, restrict"
+    },
+    {
+      "target": "C5715",
+      "label": "ⲁⲧϣⲓ",
+      "pos": "N",
+      "gloss": "unmeasured, immeasurable"
+    },
+    {
+      "target": "C5717",
+      "label": "ⲕⲁϣⲓ",
+      "pos": "V",
+      "gloss": "set measure, limit"
+    },
+    {
+      "target": "C5718",
+      "label": "ⲣϣⲓ",
+      "pos": "V",
+      "gloss": "make, amount to weight"
+    },
+    {
+      "target": "C5716",
+      "label": "ⲣⲉϥϣⲓ",
+      "pos": "N",
+      "gloss": "measurer"
+    }
+  ]
+}

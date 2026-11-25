@@ -1,0 +1,99 @@
+{
+  "id": "C3795",
+  "forms": [
+    {
+      "id": "CF9512",
+      "orth": "ϯ ⲉⲡⲥⲱⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9513",
+      "orth": "ϯ ⲙⲡⲥⲱⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4308",
+      "bibliography": "CD 362b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3796",
+      "label": "ϫⲓⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "get ransom"
+    },
+    {
+      "target": "C3794",
+      "label": "ϯⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem"
+    },
+    {
+      "target": "C3790",
+      "label": "ⲣⲉϥⲥⲏⲧ",
+      "pos": "N",
+      "gloss": "spinner"
+    },
+    {
+      "target": "C3797",
+      "label": "ⲣⲉϥⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redeemer"
+    },
+    {
+      "target": "C3791",
+      "label": "ⲥⲏⲧⲉ",
+      "pos": "N",
+      "gloss": "spun (fabric)"
+    },
+    {
+      "target": "C3787",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "return, repeat, not . . . again (in neg. clause)"
+    },
+    {
+      "target": "C3789",
+      "label": "ⲥⲱⲧ",
+      "pos": "V",
+      "gloss": "stretch, reach; spin"
+    },
+    {
+      "target": "C3788",
+      "label": "ⲥⲱⲧ (ⲉ-)",
+      "pos": "V",
+      "gloss": "repeat (to do sth)"
+    },
+    {
+      "target": "C3792",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "redeem, rescue, save"
+    },
+    {
+      "target": "C3793",
+      "label": "ⲥⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "redemption, rescue; ransom, price"
+    }
+  ]
+}

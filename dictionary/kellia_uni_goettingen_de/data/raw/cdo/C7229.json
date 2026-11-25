@@ -1,0 +1,66 @@
+{
+  "id": "C7229",
+  "forms": [
+    {
+      "id": "CF16517",
+      "orth": "ϫⲛ- (ⲙⲙⲟⲛ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "collocPartikel": "ⲙⲙⲟⲛ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS7979",
+      "bibliography": "CD 772a; KoptHWb 424; ChLCS 102a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁⲣⲛⲉⲓⲙⲉ ϫⲉⲉⲣⲉϫⲉⲙⲉ · **ϫⲛ **ⲙⲙⲟⲛ**** ·",
+      "english": "I tell you we’ll know if it’s the truth you’re telling or not.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩϯ ⲡⲉⲩⲟⲩⲟⲉⲓ ⲉⲣⲟϥ ⲡⲉϫⲁⲩ ⲛⲁϥ ϫⲉⲡⲥⲁϩ ⲧⲛⲥⲟⲟⲩⲛ ϫⲉⲛⲧⲕⲟⲩⲣⲙⲙⲙⲉ ⲁⲩⲱ ⲛⲅϩⲏϭⲉ ⲁⲛ ϩⲏⲧϥ ⲛⲗⲁⲁⲩ ⲛⲅϫⲓϩⲟ ⲅⲁⲣ ⲁⲛ ⲛⲣⲱⲙⲉ ⲁⲗⲗⲁ ϩⲛⲟⲩⲙⲉ ⲉⲕϯⲥⲃⲱ ⲛⲧⲉϩⲓⲏ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲝⲉⲥⲧⲓ ⲉϯⲕⲏⲛⲥⲟⲥ ⲙⲡⲣⲣⲟ **ϫⲛⲙⲙⲟⲛ** ⲧⲁⲣⲛϯ ϫⲛⲙⲡⲱⲣ .",
+      "english": "When they had come, they asked him, &apos;Teacher, we know that you are honest, and don&apos;t defer to anyone; for you aren&apos;t partial to anyone, but truly teach the way of God. Is it lawful to pay taxes to Caesar, or not?",
+      "source": "41_Mark_12",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲉⲧⲉⲙⲛⲧⲏⲧⲛⲏⲓ ⲙⲙⲁⲩ ⲉⲟⲩⲱⲙ ⲁⲩⲱ ⲉⲥⲱ **ϫⲛⲙⲙⲟⲛ** ⲉⲧⲉⲧⲛⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲉⲧⲉⲧⲛϯϣⲓⲡⲉ ⲛⲛⲉⲧⲉⲙⲛⲧⲁⲩ ⲧⲁϫⲟⲟⲥ ⲛⲏⲧⲛ ϫⲉⲟⲩ ⲧⲁⲉⲡⲁⲓⲛⲟⲩ ⲙⲙⲱⲧⲛ ϩⲙⲡⲁⲓ ⲛϯⲉⲡⲁⲓⲛⲟⲩ ⲁⲛ .",
+      "english": "What, don&apos;t you have houses to eat and to drink in? Or do you despise God&apos;s assembly, and put them to shame who don&apos;t have? What shall I tell you? Shall I praise you? In this I don&apos;t praise you.",
+      "source": "1 Corinthians 11",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7228",
+      "label": "ϫⲛ-",
+      "pos": "CONJ",
+      "gloss": "or"
+    },
+    {
+      "target": "C7230",
+      "label": "ϫⲛ- (ⲙⲡⲉ)",
+      "pos": "CONJ",
+      "gloss": "or not"
+    },
+    {
+      "target": "C7231",
+      "label": "ϫⲛ- (ⲙⲡⲱⲣ)",
+      "pos": "CONJ",
+      "gloss": "or rather, respectively"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C104",
+  "forms": [
+    {
+      "id": "CF366",
+      "orth": "ⲙⲛⲧⲁⲙⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14043,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF367",
+      "orth": "ⲙⲉⲧⲁⲙⲣⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS123",
+      "bibliography": "CD 8b-9a; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲣⲁⲓ ⲇⲉ ϩⲙⲡⲕⲁⲛⲟⲩⲛ ⲉⲧⲛⲧⲡⲉ ⲙⲙⲟⲟⲩ ⲛⲉⲩϣⲟⲟⲡ ϩⲓϫⲱϥ ⲉⲃⲟⲗ ϩⲛⲅⲉⲛⲟⲥ ⲛⲓⲙ ⲛϩⲱⲃ ⲙ**ⲙⲛⲧⲁⲙⲣⲉ** ⲛⲁⲓ ⲉϣⲁⲣⲉⲡⲣⲣⲟ ⲫⲁⲣⲁⲱ ⲟⲩⲟⲙⲟⲩ ⲁⲩⲱ ⲛϩⲁⲗⲁⲧⲉ ⲛⲧⲡⲉ ⲛⲉⲩⲟⲩⲱⲙ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁⲛⲟⲩⲛ ⲉⲧϩⲓϫⲛ ⲧⲁⲁⲡⲉ",
+      "english": "And in the upper basket there was the work of the baker of every kind which Pharao eats; and the fowls of the air ate them out of the basket that was on my head.",
+      "source": "Genesis 40",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        10.087
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲁⲙⲣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13640,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C103",
+      "label": "ⲁⲙⲣⲉ",
+      "pos": "N",
+      "gloss": "baker"
+    },
+    {
+      "target": "C105",
+      "label": "ⲁⲙⲣⲉ",
+      "pos": "N",
+      "gloss": "cleansed, winnowed corn(?)"
+    }
+  ]
+}

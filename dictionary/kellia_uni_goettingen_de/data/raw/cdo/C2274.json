@@ -1,0 +1,69 @@
+{
+  "id": "C2274",
+  "forms": [
+    {
+      "id": "CF6277",
+      "orth": "ⲓⲣⲓ ⲙϣⲓϣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF6278",
+      "orth": "ⲉⲣⲡⲙϣⲓϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2622",
+      "bibliography": "CD 207b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2275",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "take vengeance, be avenged"
+    },
+    {
+      "target": "C2276",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taking vengeance, retribution"
+    },
+    {
+      "target": "C2277",
+      "label": "ϯ ⲛⲟⲩϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "give requital, take vengeance"
+    },
+    {
+      "target": "C2273",
+      "label": "ⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "vengeance"
+    },
+    {
+      "target": "C2278",
+      "label": "ⲣⲉϥϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taker of vengeance, avenger"
+    }
+  ]
+}

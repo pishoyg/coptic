@@ -1,0 +1,51 @@
+{
+  "id": "C11214",
+  "forms": [
+    {
+      "id": "CF31139",
+      "orth": "ϩⲩⲙⲛⲱⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31140",
+      "orth": "ϩⲩⲙⲛⲱⲧⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15790",
+      "bibliography": "DDGLC",
+      "cu_ID": "4432"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲟⲩⲙⲉ ⲡⲉ ⲡϣⲁϫⲉ ⲙⲡ**ϩⲩⲙⲛⲟⲇⲟⲥ** ⲉⲧⲟⲩⲁⲁⲃ ⲇⲁⲩⲉⲓⲇ ⲉϥⲱϣ ⲉⲃⲟⲗ · ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉ ⲡⲇⲓⲕⲁⲓⲟⲥ ⲛⲁϣⲱⲡⲉ ⲛⲣⲡⲙⲉⲉⲩⲉ ϣⲁⲉⲛⲉϩ · ⲁⲩⲱ ⲟⲛ ϫⲉ",
+      "english": "Truly the word of David the holy psalmist, who proclaims “The righteous one will be remembered forever!” is true, as is:",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10726,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3371",
+    "grl_lemma": "ὑμνῳδός",
+    "grl_meaning": "singer/composer of songs of praise; psalmist",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1849b; Lampe 1432a"
+  }
+}

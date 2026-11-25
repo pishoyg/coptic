@@ -1,0 +1,282 @@
+{
+  "id": "C2753",
+  "forms": [
+    {
+      "id": "CF7327",
+      "orth": "ⲟⲉⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4447,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲓⲙⲉ",
+      "dialect": "S",
+      "id": "1241.1"
+    },
+    {
+      "orth": "ⲟⲉⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8046,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲱⲓⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3074,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲁⲉⲓⲙⲉ",
+      "dialect": "A",
+      "id": "1241.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3148",
+      "bibliography": "CD 255ab; CED 121; KoptHWb 140; DELC 155; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲕⲟⲩⲱϣ ⲉϫⲡⲟ ⲛⲁⲕ ⲛϩⲉⲛⲭⲣⲏⲙⲁ ⲛⲁⲓ ⲉⲧⲟ ⲙⲙⲟⲟⲗⲉ · ⲛⲧ**ⲟⲉⲓⲙⲉ** ⲙⲡⲕⲱϩⲧ ϩⲛⲟⲩⲙⲛⲧⲙⲁⲓⲧⲟ ⲛϩⲟⲩⲟ · ⲏ ϩⲛⲟⲩⲙⲛⲧⲉϣⲱⲱⲧ ⲏ ϩⲛⲟⲩϫⲓ ⲛϭⲟⲛⲥ · ⲏ ϩⲛⲟⲩⲉⲓⲣⲃⲟⲛⲉ · ⲏ ϩⲛⲟⲩϩⲱⲃ ⲛϭⲓϫ ⲉϥⲟϣ · ⲉⲙⲉⲕⲥⲣϥⲉ ⲉϣⲙϣⲉ ⲙⲡⲛⲟⲩⲧⲉ · ⲡⲗⲏⲛ ϩⲛⲥⲙⲟⲧ ⲛⲓⲙ",
+      "english": "If thou wishest to gain for thyself these things (or, possessions) which are transient, and can be destroyed by fire, by great avariciousness, or by trafficking, or by violence, or by evil design, or by excessive manual labour, thou art not free to serve God, at least certainly not in every way.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲛⲁⲉⲓⲛⲉ ⲇⲉ ⲙⲡⲉⲇⲣⲁⲕⲱⲛ ϩⲛⲟⲩ**ⲟⲉⲓⲙⲉ** ⲕⲛⲁϯ ⲇⲉ ⲛⲟⲩϣⲧⲟⲃ ⲉⲣⲛ ϣⲁⲁⲛⲧϥ",
+      "english": "But wilt thou catch the serpent with a hook, and put a halter about his nose?",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲕⲁⲁⲥ ⲇⲉ ⲛⲛⲉⲛⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ ⲙⲙⲟⲟⲩ ⲃⲱⲕ ⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲅⲛⲟⲩϫⲉ ⲛⲟⲩ**ⲟⲉⲓⲙⲉ** ⲛⲅϥⲓ ⲙⲡⲧⲏⲃⲧ ⲉⲧⲛⲏⲩ ⲉϩⲣⲁⲓ ⲛϣⲟⲣⲡ ⲁⲩⲱ ⲉⲕϣⲁⲛⲟⲩⲱⲛ ⲉⲣⲱϥ ⲕⲛⲁϩⲉ ⲉⲩⲥⲁⲧⲉⲉⲣⲉ ϥⲓ ⲛⲧⲉⲧⲙⲙⲁⲩ ⲛⲅⲧⲁⲁⲥ ϩⲁⲣⲟⲓ ⲛⲙⲙⲁⲕ .",
+      "english": "But, lest we cause them to stumble, go to the sea, cast a hook, and take up the first fish that comes up. When you have opened its mouth, you will find a stater coin. Take that, and give it to them for me and you.'",
+      "source": "40_Matthew_17",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲟⲗⲉ",
+        1,
+        17.013
+      ],
+      [
+        "ϭⲉⲡ",
+        1,
+        13.926
+      ],
+      [
+        "ϩⲟⲥⲉ",
+        1,
+        12.458
+      ],
+      [
+        "ⲇⲣⲁⲕⲱⲛ",
+        1,
+        11.232
+      ],
+      [
+        "ⲟⲩⲏⲣ",
+        1,
+        10.833
+      ],
+      [
+        "ⲧⲁⲓ",
+        2,
+        10.494
+      ],
+      [
+        "ϩⲛ",
+        4,
+        9.894
+      ],
+      [
+        "ⲅ",
+        2,
+        9.654
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        9.509
+      ],
+      [
+        "ⲛⲟⲩϫⲉ",
+        1,
+        9.482
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        1,
+        9.056
+      ],
+      [
+        "ⲛ",
+        6,
+        8.979
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.635
+      ],
+      [
+        "ⲧ",
+        3,
+        8.241
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        8.022
+      ],
+      [
+        "ϥⲓ",
+        1,
+        7.626
+      ],
+      [
+        "·",
+        1,
+        7.593
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        7.559
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.202
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        6.719
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲓ_1_pre_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲉⲓⲙⲉ_0_node",
+          5
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲉⲓⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲓ_1_pre_ⲟⲉⲓⲙⲉ",
+          "ⲟⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲟⲉⲓⲙⲉ",
+          "ⲟⲉⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲉⲓⲙⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲉⲓⲙⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲉⲓⲙⲉ_0_node",
+          "ⲙ_1_post_ⲟⲉⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲉⲓⲙⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲱϩⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲟⲉⲓⲙⲉ",
+          "ⲟⲉⲓⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4050,
+      "count": 6
+    }
+  },
+  "etym": {
+    "egy_num": "101440",
+    "egy_lemma": "ḥꜣm.t",
+    "demo_num": "dm475",
+    "demo_lemma": "ḥm",
+    "english": "fishnet",
+    "german": "[Bez. für das Fischernetz]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/101440",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm475"
+  }
+}

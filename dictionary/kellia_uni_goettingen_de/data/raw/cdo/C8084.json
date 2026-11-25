@@ -1,0 +1,227 @@
+{
+  "id": "C8084",
+  "forms": [
+    {
+      "id": "CF18359",
+      "orth": "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18360",
+      "orth": "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7289,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9051",
+      "bibliography": "DDGLC",
+      "cu_ID": "3523"
+    },
+    {
+      "id": "CS9052",
+      "bibliography": "DDGLC",
+      "cu_ID": "4538"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉϩⲉⲛⲙⲁⲓⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲛⲉ ⲛⲉⲥⲛⲏⲩ · ⲉⲧⲙⲙⲁⲩ · ⲁⲩⲱ ⲛⲉϩⲉⲛ**ⲁⲅⲱⲛⲓⲥⲧⲏⲥ** ⲛⲉ · ⲛⲣⲉϥϣⲙϣⲉ ⲙⲡⲛⲟⲩⲧⲉ ϩⲙⲡⲉⲩϩⲏⲧ ⲧⲏⲣϥ · ⲁⲩⲱ ⲡⲉⲩⲙⲁ ⲛϣⲱⲡⲉ ⲡⲉ ϣⲓⲏⲧ ·",
+      "english": "Now those brethren were lovers of God, and they contended strenuously in the ascetic life, and they were worshippers of God with their whole hearts; and their place of abode was Shiet (Scete).",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡ**ⲁⲅⲱⲛⲓⲥⲧⲏⲥ** ⲛⲣⲉϥϫⲣⲟ ⲡϩⲁⲅⲓⲟⲥ ϩⲏⲗⲓⲁⲥ ⲁⲕⲁϩⲉⲣⲁⲧⲕ ϩⲓⲧϩⲏ ⲛⲛⲁⲡⲉⲓⲗⲏ ⲛⲛⲣⲣⲱⲟⲩ",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲛⲁⲧⲻϭⲱⲧⲡ",
+        1,
+        19.598
+      ],
+      [
+        "ⲁⲑⲗⲏⲧⲏⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲣⲉϥϫⲣⲟ",
+        1,
+        16.276
+      ],
+      [
+        "ⲣⲉϥϣⲙϣⲉ",
+        1,
+        15.598
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        9.313
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲅⲓⲟⲥ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥϣⲙϣⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥϣⲙϣⲉ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ_0_node",
+          "ⲛ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          "ⲣⲉϥϫⲣⲟ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϫⲣⲟ_2_post_ⲛ",
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲁⲅⲓⲟⲥ",
+          "ϩⲁⲅⲓⲟⲥ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          "ⲛⲉ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          "ϩⲉⲛ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁⲅⲱⲛⲓⲥⲧⲏⲥ_0_node",
+          "ⲛ_2_post_ⲣⲉϥϣⲙϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥϣⲙϣⲉ",
+          "ⲣⲉϥϣⲙϣⲉ_1_post_ⲁⲅⲱⲛⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6838,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "31",
+    "grl_lemma": "ἀγωνιστής",
+    "grl_meaning": "combatant",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 19b"
+  }
+}

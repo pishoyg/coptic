@@ -1,0 +1,302 @@
+{
+  "id": "C2508",
+  "forms": [
+    {
+      "id": "CF6805",
+      "orth": "ⲛⲁⲡⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18931,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF34111",
+      "orth": "ⲛⲁⲫⲣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1909,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF34112",
+      "orth": "ⲛⲉⲡⲣⲓ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲛⲁⲡⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3725,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ⲛⲉⲡⲣⲉ",
+      "dialect": "S",
+      "id": "1195.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2887",
+      "bibliography": "CD 228ab; CED 110; KoptHWb 124; DELC 144; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲥⲓⲕⲓ ⲙⲡⲓⲱⲓⲕ ⲛϫⲉⲛⲓⲥⲛⲏⲟⲩ ⲁϥⲱⲗⲓ ⲛϯ**ⲛⲁⲫⲣⲓ** ⲛⲥⲟⲩⲟ ⲉⲧⲁϥⲉⲛⲥ ⲉϥⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲡⲁⲗⲗⲁⲧⲓⲟⲛ ⲛⲧⲉⲡⲟⲩⲣⲟ",
+      "english": "As the brethren were milling wheat for bread, one of them cast under the stone the grain he had brought back from the royal court and placed it beneath the millstone.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉϩⲓⲟⲙⲉ ⲇⲉ ϣⲁⲩⲙⲟⲣⲟⲩ ⲛϩⲉⲛⲛⲟⲩϩ ⲛⲥⲉϩⲙⲟⲟⲥ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲉⲩϯ ⲉϩⲣⲁⲓ ⲛⲛⲧⲁⲗⲟ ⲛ**ⲛⲁⲡⲣⲉ** ⲉⲛⲧⲁⲩⲟϣⲙⲟⲩ",
+      "english": "The women also with cords about them, sitting in the ways, burn bran for perfume: but if any of them, drawn by some that passeth by, lie with him, she reproacheth her fellow, that she was not thought as worthy as herself, nor her cord broken.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲛⲁⲫⲣⲓ** ⲛϣⲉⲗⲧⲁⲙ ⲑⲏ ⲉⲧⲁⲩϣⲁⲛⲥⲁⲧⲥ ⲉϫⲉⲛⲡⲓⲕⲁϩⲓ ⲉⲟⲩⲕⲟⲩϫⲓ ⲧⲉ ⲉⲛⲓϫⲣⲟϫ ⲧⲏⲣⲟⲩ ⲛⲏ ⲉⲧϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ",
+      "english": "It's like a grain of mustard seed, which, when it is sown in the earth, though it is less than all the seeds that are on the earth,",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉⲧⲉⲕⲥⲓϯ ⲙⲙⲟϥ ⲡⲓⲥⲱⲙⲁ ⲉⲧⲛⲁϣⲱⲡⲓ ⲛⲑⲟϥ ⲁⲛ ⲡⲉⲧⲉⲕⲥⲓϯ ⲙⲙⲟϥ ⲁⲗⲗⲁ ⲟⲩ**ⲛⲁⲫⲣⲓ** ⲧⲉ ⲉⲥⲃⲏϣ ⲓⲧⲉ ⲟⲩⲥⲟⲩⲟ ⲓⲧⲉ ⲕⲉⲟⲩⲁⲓ ⲙⲡⲥⲉⲡⲓ ⲛⲛⲓϫⲱⲣϫ .",
+      "english": "That which you sow, you don't sow the body that will be, but a bare grain, maybe of wheat, or of some other kind.",
+      "source": "Bohairic 1 Corinthians 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲉⲗⲧⲁⲙ",
+        7,
+        25.31
+      ],
+      [
+        "ⲥⲟⲩⲟ",
+        5,
+        20.153
+      ],
+      [
+        "ⲛ",
+        24,
+        18.346
+      ],
+      [
+        "ⲁⲣⲉϣⲧⲉⲙ",
+        1,
+        18.11
+      ],
+      [
+        "ⲑⲏ",
+        4,
+        17.405
+      ],
+      [
+        "ⲃⲏϣ",
+        2,
+        17.051
+      ],
+      [
+        "ⲥ",
+        11,
+        16.806
+      ],
+      [
+        "ⲣⲏϯ",
+        6,
+        15.633
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        15.509
+      ],
+      [
+        "ϫⲓⲙⲓ",
+        2,
+        15.08
+      ],
+      [
+        "ⲧⲉⲛ",
+        5,
+        14.367
+      ],
+      [
+        "ⲫ",
+        6,
+        14.319
+      ],
+      [
+        "ⲱⲗⲓ",
+        2,
+        14.144
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        14.006
+      ],
+      [
+        "ⲓⲁϩⲁⲗⲟⲗⲓ",
+        1,
+        13.718
+      ],
+      [
+        "ⲟⲛⲓ",
+        1,
+        12.995
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        12.986
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        12.51
+      ],
+      [
+        "ⲁⲩϣⲁⲛ",
+        1,
+        12.505
+      ],
+      [
+        "ⲫⲏⲟⲩⲓ",
+        1,
+        12.419
+      ]
+    ],
+    "S": [
+      [
+        "ⲟϣⲙ",
+        1,
+        18.013
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        12.09
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        8.193
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁⲡⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲛⲁⲡⲣⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲟϣⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟϣⲙ",
+          1
+        ],
+        [
+          "ⲟϣⲙ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲟϣⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁⲡⲣⲉ_0_node",
+          "ⲉⲛⲧ_1_post_ⲛⲁⲡⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲛⲁⲡⲣⲉ",
+          "ⲁ_3_post_ⲟϣⲙ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲟϣⲙ",
+          "ⲩ_3_post_ⲟϣⲙ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲟϣⲙ",
+          "ⲟϣⲙ_2_post_ⲉⲛⲧ",
+          1
+        ],
+        [
+          "ⲟϣⲙ_2_post_ⲉⲛⲧ",
+          "ⲟⲩ_3_post_ⲟϣⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18544,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2507",
+      "type": "cf",
+      "label": "grain, seed"
+    }
+  ],
+  "etym": {
+    "egy_num": "83140",
+    "egy_lemma": "npr",
+    "demo_num": "d3148",
+    "demo_lemma": "npy",
+    "english": "grain",
+    "german": "Getreide",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/83140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3148"
+  }
+}

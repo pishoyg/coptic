@@ -1,0 +1,325 @@
+{
+  "id": "C6498",
+  "forms": [
+    {
+      "id": "CF15023",
+      "orth": "ϩⲁⲗ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14171,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3537,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲉⲗ",
+      "dialect": "F",
+      "id": "2141.2"
+    },
+    {
+      "orth": "ϩⲉⲗ",
+      "dialect": "L",
+      "id": "2141.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7209",
+      "bibliography": "CD 664b; KoptHWb 363; DELC 295a; ChLCS 89b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲇⲉ ⲛϭⲓⲫⲁⲣⲁⲱ ϫⲉⲁϥⲗⲟ ⲛϭⲓⲡϩⲱⲟⲩ ⲁⲩⲱ ⲛ**ϩⲁⲗ** ⲙⲡⲉⲙⲛⲛⲉϩⲣⲟⲟⲩ ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲣⲛⲟⲃⲉ ⲁϥϩⲣⲟϣ ⲙⲡⲉϥϩⲏⲧ ⲁⲩⲱ ⲡϩⲏⲧ ⲛⲛⲉϥϩⲙϩⲁⲗ",
+      "english": "And when Pharao saw that the rain and the hail and the thunders ceased, he continued to sin; and he hardened his heart, and the heart of his servants.",
+      "source": "Exodus 9",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉⲩⲁ",
+        1,
+        17.373
+      ],
+      [
+        "ⲟⲩⲉⲩⲉ",
+        1,
+        16.373
+      ],
+      [
+        "ⲍⲱⲟⲛ",
+        2,
+        15.164
+      ],
+      [
+        "ⲙⲉⲧⲥⲉⲃ",
+        1,
+        14.373
+      ],
+      [
+        "ⲁⲓ",
+        3,
+        13.156
+      ],
+      [
+        "ⲉϫⲏⲟⲩ",
+        1,
+        12.566
+      ],
+      [
+        "ϩⲱⲗ",
+        1,
+        10.881
+      ],
+      [
+        "ⲉⲣ",
+        2,
+        10.336
+      ],
+      [
+        "ⲉ",
+        5,
+        9.661
+      ],
+      [
+        "ⲫⲁⲣⲁⲱ",
+        1,
+        9.384
+      ],
+      [
+        "ⲟⲩⲱⲣⲡ",
+        1,
+        8.854
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        8.649
+      ],
+      [
+        "ⲧ",
+        2,
+        8.203
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        1,
+        7.737
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        6.896
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.668
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        6.441
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.432
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        4.991
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.93
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        14.189
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲗ_0_node",
+          5
+        ],
+        [
+          "ⲛⲉⲩⲁ_1_post_ϩⲁⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲗ_0_node",
+          "ⲛⲉⲩⲁ_1_post_ϩⲁⲗ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲗ",
+          1
+        ],
+        [
+          "ϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_4_post_ϩⲣⲟⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲁⲗ",
+          "ⲛ_1_pre_ϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲗ",
+          "ϩⲁⲗ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲗ_0_node",
+          "ⲙ_1_post_ϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲗ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲙⲛ_4_post_ϩⲣⲟⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13769,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3124,
+      "count": 5
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6501",
+      "label": "ϩⲁⲗϩⲟ",
+      "pos": "N",
+      "gloss": "deceptive person, deceiving (face)"
+    },
+    {
+      "target": "C6502",
+      "label": "ϯϩⲁⲗϩⲟ",
+      "pos": "V",
+      "gloss": "deceive"
+    },
+    {
+      "target": "C6499",
+      "label": "ⲣϩⲁⲗ",
+      "pos": "V",
+      "gloss": "deceive"
+    },
+    {
+      "target": "C6500",
+      "label": "ⲣⲉϥⲣϩⲁⲗ",
+      "pos": "N",
+      "gloss": "mocker, deceiver"
+    }
+  ],
+  "etym": {
+    "egy_num": "106860",
+    "egy_lemma": "ḥnr",
+    "demo_num": "d4252",
+    "demo_lemma": "ḥll(e)",
+    "english": "to squint (?) (Sem. loan word)",
+    "german": "verdunkeln; eintrüben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/106860",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4252"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "id": "C1578",
+  "forms": [
+    {
+      "id": "CF4608",
+      "orth": "ⲗⲁⲃⲥϩⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7028,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1838",
+      "bibliography": "CD 137a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲛⲟⲩϫⲉ ⲛⲧⲁⲓ ⲥⲁⲃⲟⲗ ⲙⲙⲟϥ . ⲟⲩϩⲧⲟ ⲛ**ⲗⲁⲃⲥϩⲓⲙⲉ** ⲡⲉ ·",
+      "english": "The one who casts this away from himself is like a lustful horse.”",
+      "source": "Apopthegmata Patrum Sahidic 009: Hyperechius 2",
+      "urn": "urn:cts:copticLit:ap.9.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲱⲡⲉ ⲛⲧϩⲉ ⲛϩⲉⲛϩⲧⲟ ⲛ**ⲗⲁⲃⲥϩⲓⲙⲉ** ⲉⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ϩⲙϩⲙ ⲉϫⲛⲧⲉⲥϩⲓⲙⲉ ⲙⲡⲉⲧϩⲓⲧⲟⲩⲱⲱϥ",
+      "english": "They became as wanton horses: they neighed each one after his neighbour's wife.",
+      "source": "Jeremiah 5",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲧⲟ",
+        1,
+        13.667
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        8.329
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.102
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲃⲥϩⲓⲙⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6578,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1574",
+      "label": "ϭⲓⲛⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madness"
+    },
+    {
+      "target": "C1579",
+      "label": "ⲗⲁⲃϩⲏ",
+      "pos": "N",
+      "gloss": "gluttonous, greedy person"
+    },
+    {
+      "target": "C1575",
+      "label": "ⲗⲁⲃⲙⲁϩⲧ",
+      "pos": "N",
+      "gloss": "gluttonous"
+    },
+    {
+      "target": "C1577",
+      "label": "ⲗⲁⲙⲁⲭⲓⲧⲏⲥ",
+      "pos": "N",
+      "gloss": "glutton"
+    },
+    {
+      "target": "C1562",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "be mad"
+    },
+    {
+      "target": "C1563",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madness"
+    },
+    {
+      "target": "C1572",
+      "label": "ⲗⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "make mad"
+    },
+    {
+      "target": "C1569",
+      "label": "ⲗⲓⲃⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1571",
+      "label": "ⲗⲓⲃⲉ (ϩⲓⲧⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1570",
+      "label": "ⲗⲓⲃⲉ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1564",
+      "label": "ⲗⲓⲃⲉ (ⲉϩⲟⲩⲛ-)",
+      "pos": "EXIST",
+      "gloss": "be mad toward, concerning"
+    },
+    {
+      "target": "C1565",
+      "label": "ⲗⲓⲃⲉ (ⲉϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1566",
+      "label": "ⲗⲓⲃⲉ (ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1567",
+      "label": "ⲗⲓⲃⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "be mad after"
+    },
+    {
+      "target": "C1568",
+      "label": "ⲗⲓⲃⲉ (ⲛⲧⲛ-)",
+      "pos": "V",
+      "gloss": "be mad through, made mad by"
+    },
+    {
+      "target": "C1580",
+      "label": "ⲙⲛⲧⲗⲁⲃϩⲏ",
+      "pos": "N",
+      "gloss": "greed, hunger"
+    },
+    {
+      "target": "C1576",
+      "label": "ⲙⲛⲧⲗⲁⲃⲙⲁϩⲧ",
+      "pos": "N",
+      "gloss": "gluttony"
+    },
+    {
+      "target": "C1573",
+      "label": "ⲣⲉϥⲗⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "madman"
+    },
+    {
+      "target": "C1581",
+      "label": "ⲣⲗⲁⲃϩⲏ",
+      "pos": "V",
+      "gloss": "be hungry, greedy"
+    }
+  ]
+}

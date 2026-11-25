@@ -1,0 +1,89 @@
+{
+  "id": "C9284",
+  "forms": [
+    {
+      "id": "CF23290",
+      "orth": "ⲕⲁⲙⲁⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23291",
+      "orth": "ⲕⲁⲙⲁⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11625",
+      "bibliography": "DDGLC",
+      "cu_ID": "8736"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲟⲗⲕ",
+        1,
+        16.373
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲙⲁⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "1015",
+    "grl_lemma": "καμάρα",
+    "grl_meaning": "carriage, chamber",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 871b; Preisigke 1:732"
+  }
+}

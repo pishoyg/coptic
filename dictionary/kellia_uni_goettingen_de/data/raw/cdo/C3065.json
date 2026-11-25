@@ -1,0 +1,287 @@
+{
+  "id": "C3065",
+  "forms": [
+    {
+      "id": "CF8003",
+      "orth": "ⲉⲣϣⲣⲱⲓⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4513,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3513",
+      "bibliography": "CD 301b; KoptHWb 162"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲑⲟϥ ⲁⲩϭⲓⲧϥ ⲉϩⲁⲛⲙϩⲁⲩ ⲟⲩⲟϩ ⲁϥ**ⲉⲣϣⲣⲱⲓⲥ** ϩⲓϫⲉⲛⲛⲟⲩⲥⲗⲏ .",
+      "english": "And he has been led away to the tombs, and he has watched over the heaps.",
+      "source": "18_Iob_21",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲣⲟⲥ ⲇⲉ ⲛⲉⲙⲛⲏ ⲉⲑⲛⲉⲙⲁϥ ⲛⲉⲁⲩϩⲣⲟϣ ⲛϩⲓⲛⲓⲙ ⲡⲉ ⲉⲧⲁⲩ**ⲉⲣϣⲣⲱⲓⲥ** ⲇⲉ ⲁⲩⲛⲁⲩ ⲉⲡⲉϥⲱⲟⲩ ⲛⲉⲙⲡⲓⲣⲱⲙⲓ ⲃⲛⲏ ⲉⲛⲁⲩⲟϩⲓ ⲉⲣⲁⲧⲟⲩⲛⲉⲙⲁϥ .",
+      "english": "Now Peter and those who were with him were heavy with sleep, but when they were fully awake, they saw his glory, and the two men who stood with him.",
+      "source": "03_Luke_09",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲉϣⲧⲉⲙ ⲡϭⲟⲓⲥ ⲕⲱϯ ⲛⲟⲩⲏⲓ ⲁⲩϭⲓϧⲓⲥⲓ ⲉⲫⲗⲏⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧⲕⲱⲧ ⲙⲙⲟϥ ⲁⲣⲉϣⲧⲉⲙ ⲡϭⲟⲓⲥ ⲣⲱⲓⲥ ⲉⲟⲩⲡⲟⲗⲓⲥ ⲁⲩ**ⲉⲣϣⲣⲱⲓⲥ** ⲉⲫⲗⲏⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧⲁⲣⲉϩ",
+      "english": "Except the Lord build the house, they that build labour in vain: except the Lord keep the city, the watchman watches in vain.",
+      "source": "19_Psalmi_126",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:126",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲗⲏ",
+        1,
+        16.525
+      ],
+      [
+        "ⲗⲏⲟⲩ",
+        1,
+        14.11
+      ],
+      [
+        "ⲙϩⲁⲩ",
+        1,
+        11.277
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        10.93
+      ],
+      [
+        "ⲁ",
+        4,
+        9.405
+      ],
+      [
+        "ⲩ",
+        3,
+        9.291
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        1,
+        7.886
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.318
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        7.127
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.653
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.464
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.009
+      ],
+      [
+        "ⲫ",
+        1,
+        4.979
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.667
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        3.495
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲧ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲣϣⲣⲱⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_3_post_ⲥⲗⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲧ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲁ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲩ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲉⲣϣⲣⲱⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲁ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ϥ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲉⲣϣⲣⲱⲓⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣϣⲣⲱⲓⲥ_0_node",
+          "ϩⲓϫⲉⲛ_1_post_ⲉⲣϣⲣⲱⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲉⲣϣⲣⲱⲓⲥ",
+          "ⲛⲟⲩ_3_post_ⲥⲗⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4044,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3063",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "V",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3064",
+      "label": "ϣⲣⲱⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3062",
+      "label": "ⲙⲁ ⲛⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "place of watching"
+    },
+    {
+      "target": "C3061",
+      "label": "ⲣⲉϥⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "watchman, guardian"
+    },
+    {
+      "target": "C3058",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "V",
+      "gloss": "be awake, watch; keep, observe"
+    },
+    {
+      "target": "C3060",
+      "label": "ⲣⲟⲉⲓⲥ",
+      "pos": "N",
+      "gloss": "watch, guard"
+    },
+    {
+      "target": "C3059",
+      "label": "ⲣⲟⲉⲓⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "wake up"
+    }
+  ]
+}

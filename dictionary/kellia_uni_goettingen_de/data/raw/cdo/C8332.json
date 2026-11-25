@@ -1,0 +1,129 @@
+{
+  "id": "C8332",
+  "forms": [
+    {
+      "id": "CF19322",
+      "orth": "ⲁⲡⲁⲛⲧⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF19323",
+      "orth": "ⲁⲡⲁⲛⲧⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10785,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF19324",
+      "orth": "ⲁⲡⲁⲧⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2299,
+        "count": 23
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9552",
+      "bibliography": "DDGLC",
+      "cu_ID": "4449"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲙⲡⲧⲣϥⲕⲧⲟϥ ⲇⲉ ⲛϭⲓⲉⲩⲥⲧⲁⲑⲓⲟⲥ ϩⲙⲡⲡⲟⲗⲉⲙⲟⲥ ⲁⲡⲣⲣⲟ ⲉⲓ ⲉⲃⲟⲗ ⲉⲧⲉϥ**ⲁⲡⲁⲛⲧⲏ** ⲕⲁⲧⲁⲧⲥⲩⲛⲏⲑⲓⲁ ⲛⲛⲣⲣⲱⲟⲩ ⲛⲛⲉϩⲣⲱⲙⲁⲓⲟⲥ ·",
+      "english": "And when Eustathius was returning from the war the Emperor went out to meet him, according to the custom of the Roman Emperors,",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲩⲛⲏⲑⲓⲁ",
+        1,
+        15.598
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲁⲛⲧⲏ",
+          1
+        ],
+        [
+          "ⲁⲡⲁⲛⲧⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲁⲛⲧⲏ",
+          "ⲁⲡⲁⲛⲧⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10376,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5213",
+    "grl_lemma": "ἀπαντή",
+    "grl_meaning": "meeting, chance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 178a; Lampe 173b"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "C4448",
+  "forms": [
+    {
+      "id": "CF10849",
+      "orth": "ⲉⲡⲧⲏⲣϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5036",
+      "bibliography": "CD 424b; KoptHWb 242; ChLCS 60a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲣⲓⲁⲥ",
+        2,
+        19.11
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        10.59
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        9.934
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        2,
+        9.749
+      ],
+      [
+        "ⲫ",
+        2,
+        8.564
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        8.066
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉⲡⲧⲏⲣϥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    },
+    {
+      "target": "C2783",
+      "type": "cf",
+      "label": "masc. sg. definite article"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4447",
+      "label": "ⲛⲓⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the wholeness"
+    },
+    {
+      "target": "C4449",
+      "label": "ⲡⲓⲉⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole"
+    },
+    {
+      "target": "C4446",
+      "label": "ⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole, the creation, the world"
+    },
+    {
+      "target": "C4445",
+      "label": "ⲧⲏⲣ⸗",
+      "pos": "IMOD",
+      "gloss": "all, whole, every"
+    }
+  ]
+}

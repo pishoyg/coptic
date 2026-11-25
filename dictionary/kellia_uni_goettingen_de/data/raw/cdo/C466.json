@@ -1,0 +1,186 @@
+{
+  "id": "C466",
+  "forms": [
+    {
+      "id": "CF1910",
+      "orth": "ⲃⲏⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8922,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲏⲛⲛⲉ",
+      "dialect": "S",
+      "id": "2720.1"
+    },
+    {
+      "orth": "ⲃⲏⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12059,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲃⲉⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1417,
+        "count": 28
+      }
+    },
+    {
+      "orth": "ⲃⲏⲛⲓ",
+      "dialect": "F",
+      "id": "2720.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS567",
+      "bibliography": "CD 40a; CED 24; KoptHWb 24, 494; DELC 28; ChLCS 8b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲁⲙⲟⲩⲧⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲃⲏⲛⲉ** ⲁⲩⲱ ϯⲛⲁⲙⲉⲗⲉⲧⲁ ⲛⲧϩⲉ ⲛⲟⲩϭⲣⲟⲟⲙⲡⲉ ⲁⲛⲁⲃⲁⲗ ⲅⲁⲣ ⲱϫⲛ ⲉⲓϭⲱϣⲧ ⲉⲡϫⲓⲥⲉ ⲛⲧⲡⲉ ⲉⲡϫⲟⲉⲓⲥ ⲡⲁⲓ ⲉⲛⲧⲁϥⲛⲁϩⲙⲉⲧ ⲁⲩⲱ ⲁϥϥⲓ",
+      "english": "As a swallow, so will I cry, and as a dove, so do I mourn: for mine eyes have failed with looking to the height of heaven to the Lord, who has delivered me, and removed",
+      "source": "Isaiah 38",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:38",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲕⲉϭⲓⲛϭⲗⲱ ⲙⲛⲛ**ⲃⲏⲛⲉ** ⲙⲛⲛϩⲁⲗⲁⲧⲉ ⲙⲛⲛⲕⲉⲉⲙⲟⲩ ⲉϣⲁⲩⲟⲩⲱϩ ⲉϫⲙⲡⲉⲩⲥⲱⲙⲁ ⲙⲛⲡⲉⲩⲁⲡⲉ",
+      "english": "Upon their bodies and heads sit bats, swallows, and birds, and the cats also.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛϭⲗⲱ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲉⲗⲉⲧⲁ",
+        1,
+        13.74
+      ],
+      [
+        "ϩⲁⲗⲁⲧⲉ",
+        1,
+        13.074
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        8.526
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϩⲉ",
+        1,
+        6.727
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲏⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲏⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲏⲛⲉ",
+          "ⲃⲏⲛⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8471,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C467",
+      "label": "ⲃⲏⲛⲉ",
+      "pos": "N",
+      "gloss": "swallow"
+    },
+    {
+      "target": "C468",
+      "label": "ⲃⲏⲛⲉ",
+      "pos": "N",
+      "gloss": "a part of a cart"
+    }
+  ],
+  "etym": {
+    "egy_num": "69780",
+    "egy_lemma": "mn.t",
+    "demo_num": "d1723",
+    "demo_lemma": "bnj(.t)",
+    "english": "swallow",
+    "german": "Schwalbe; Taube (?)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/69780",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1723"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "id": "C1929",
+  "forms": [
+    {
+      "id": "CF5508",
+      "orth": "ⲙⲁⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9215,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "part. conj. von ⲙⲟⲟⲛⲉ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2242",
+      "bibliography": "CD 173b; KoptHWb 94; ChLCS 26a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲏⲧⲛ ⲛⲉⲫⲁⲣⲓⲥⲥⲁⲓⲟⲥ ϫⲉⲧⲉⲧⲛⲙⲉ ⲛⲙ**ⲙⲁⲛⲉ**ϩⲙⲟⲟⲥ ⲛϣⲟⲣⲡ ϩⲛⲛⲥⲩⲛⲁⲅⲱⲅⲏ ⲁⲩⲱ ⲛⲁⲥⲡⲁⲥⲙⲟⲥ ϩⲛⲛⲁⲅⲟⲣⲁ .",
+      "english": "Woe to you Pharisees! For you love the best seats in the synagogues, and the greetings in the marketplaces.",
+      "source": "42_Luke_11",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲧⲱⲙⲛⲧ ⲇⲉ ⲉⲩⲙⲁ ⲉϥⲟ ⲛϩⲱⲛ ϩⲛⲧϩⲁⲗⲁⲥⲥⲁ ⲁⲩ**ⲙⲁⲛⲉ** ⲡϫⲟⲉⲓ ⲉⲣⲟϥ ⲁⲡⲉϥⲧϩⲏ ⲙⲉⲛ ⲧⲁϫⲣⲟ ⲁϥϭⲱ ⲉⲛϥⲕⲓⲙ ⲁⲛ ⲡⲉϥⲡⲁϩⲟⲩ ⲇⲉ ⲁϥⲃⲱⲗ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲉⲛϣⲟⲧ ⲙⲡⲧⲏⲩ .",
+      "english": "But coming to a place where two seas met, they ran the vessel aground. The bow struck and remained immovable, but the stern began to break up by the violence of the waves.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲗⲁⲥⲥⲁ",
+        1,
+        12.778
+      ],
+      [
+        "ϫⲟⲉⲓ",
+        1,
+        11.721
+      ],
+      [
+        "ϩⲙⲟⲟⲥ",
+        1,
+        10.002
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        9.442
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        8.941
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        7.448
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8780,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1926",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "place of pasture"
+    },
+    {
+      "target": "C1933",
+      "label": "ⲙⲁ ⲙⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "harbour"
+    },
+    {
+      "target": "C1930",
+      "label": "ⲙⲁⲛⲏⲩ",
+      "pos": "N",
+      "gloss": "herdsman"
+    },
+    {
+      "target": "C1928",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "part, function of shepherd"
+    },
+    {
+      "target": "C1925",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "pasture, feed; feed, tend cattle; feed on, devour"
+    },
+    {
+      "target": "C1931",
+      "label": "ⲙⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be made fast, come to land, into port (of ship); bring to land, into port"
+    },
+    {
+      "target": "C1932",
+      "label": "ⲙⲟⲟⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "come in to shore, lie in port; bring into shore, port"
+    },
+    {
+      "target": "C1927",
+      "label": "ⲣⲉϥⲙⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who pastures"
+    }
+  ],
+  "etym": {
+    "egy_num": "70310",
+    "egy_lemma": "mnj.w",
+    "demo_num": "d2425",
+    "demo_lemma": "mnj",
+    "english": "herdsman",
+    "german": "Hirt",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/70310",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2425"
+  }
+}

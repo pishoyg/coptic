@@ -1,0 +1,94 @@
+{
+  "id": "C5775",
+  "forms": [
+    {
+      "id": "CF13542",
+      "orth": "ϣⲃϣⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18735,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6453",
+      "bibliography": "CD 554b; KoptHWb 305; DELC 258a; ChLCS 75b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡ**ϣⲃϣⲓ** ⲅⲁⲣ ⲁϩⲁϩ ⲣⲛⲟⲃⲉ ⲁⲩⲱ ⲡⲉⲧϣⲓⲛⲉ ⲛⲥⲁϫⲡⲉϩⲁϩ ⲛⲁⲕⲧⲟ ⲉⲃⲟⲗ ⲛⲛⲉϥⲃⲁⲗ",
+      "english": "Many have sinned for a small matter; and he that seeketh for abundance will turn his eyes away.",
+      "source": "Sirach 27",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲛⲟⲃⲉ",
+        1,
+        11.804
+      ],
+      [
+        "ϩⲁϩ",
+        1,
+        11.381
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲃϣⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18353,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "153880",
+    "egy_lemma": "šps.w",
+    "english": "costly offerings",
+    "german": "Herrlichkeit; Reichtümer; Opfergaben",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/153880"
+  }
+}

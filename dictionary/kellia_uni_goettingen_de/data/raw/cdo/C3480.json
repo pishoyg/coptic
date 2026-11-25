@@ -1,0 +1,175 @@
+{
+  "id": "C3480",
+  "forms": [
+    {
+      "id": "CF8861",
+      "orth": "ⲥⲉⲗⲥⲓⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8533,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3961",
+      "bibliography": "CD 332a; KoptHWb 537; DELC 188"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲙⲡϣⲁ ⲟⲩⲛ ⲛⲧⲉⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϣⲱⲡⲓ ⲛⲁⲧⲗⲱⲓϫⲓ ⲉⲁϥⲉⲣϩⲁⲓ ⲛⲟⲩⲥϩⲓⲙⲓ ⲛⲟⲩⲱⲧ ⲉϥⲣⲏ ⲥⲛⲥⲁⲃⲉ ⲛ**ⲥⲉⲗⲥⲓⲗ** ⲙⲙⲁⲓϣⲉⲙⲙⲟ ⲛⲣⲉϥϯⲥⲃⲱ ⲉⲛⲁⲛⲉϥ .",
+      "english": "The overseer therefore must be without reproach, the husband of one wife, temperate, sensible, modest, hospitable, good at teaching;",
+      "source": "15_I Timothy_03",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲛⲥⲁⲃⲉ",
+        1,
+        19.695
+      ],
+      [
+        "ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+        1,
+        18.695
+      ],
+      [
+        "ⲣⲉϥϯⲥⲃⲱ",
+        1,
+        13.051
+      ],
+      [
+        "ⲣⲏ",
+        1,
+        12.608
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲗⲥⲓⲗ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲉ_3_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲉⲗⲥⲓⲗ_0_node",
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲓϣⲉⲙⲙⲟ_1_post_ⲥⲉⲗⲥⲓⲗ",
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲥⲃⲱ_3_post_ⲛ",
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲙⲙⲁⲓϣⲉⲙⲙⲟ",
+          "ⲛⲁⲛⲉ_3_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8003,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3477",
+      "label": "ⲁⲧⲥⲟⲗⲥⲉⲗ",
+      "pos": "N",
+      "gloss": "unadorned"
+    },
+    {
+      "target": "C3478",
+      "label": "ⲙⲁⲓⲥⲟⲗⲥⲉⲗ",
+      "pos": "N",
+      "gloss": "adorner"
+    },
+    {
+      "target": "C3479",
+      "label": "ⲣⲉϥⲥⲟⲗⲥⲉⲗ",
+      "pos": "N",
+      "gloss": "fond of adornment"
+    },
+    {
+      "target": "C3481",
+      "label": "ⲥⲗⲥⲓⲗ",
+      "pos": "N",
+      "gloss": "order, adornment"
+    },
+    {
+      "target": "C3475",
+      "label": "ⲥⲟⲗⲥⲉⲗ",
+      "pos": "V",
+      "gloss": "adorn"
+    },
+    {
+      "target": "C3476",
+      "label": "ⲥⲟⲗⲥⲉⲗ",
+      "pos": "N",
+      "gloss": "adornment"
+    }
+  ]
+}

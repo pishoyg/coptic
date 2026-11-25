@@ -1,0 +1,275 @@
+{
+  "id": "C2200",
+  "forms": [
+    {
+      "id": "CF6118",
+      "orth": "ⲙⲉϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4334,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲙⲉϣⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20188,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲉⳉⲉ⸗",
+      "dialect": "A",
+      "id": "1133.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2542",
+      "bibliography": "CD 201b; KoptHWb 108; DELC 128"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲃⲱⲕ ϣⲁ**ⲙⲉϣⲉ** ⲛⲓⲙ ⲛⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ ·",
+      "english": "He said to him, 'Go to this particular archimandrite,",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲙⲉϣⲉ**ⲛⲓⲙ ⲡⲉ ⲛϣⲏⲣⲉϣⲏⲙ .",
+      "english": "But it was some other youth.”",
+      "source": "Apophthegmata Patrum Sahidic 101: Macarius 1",
+      "urn": "urn:cts:copticLit:ap.101.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲇⲉ ϭⲱⲗⲡ ⲉⲃⲟⲗ ⲙⲡⲓⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲉⲓⲥ**ⲙⲉϣⲉ** ⲛⲓⲙ ⲁⲛⲁⲭⲱⲣⲏⲧⲏⲥ ⲛⲏⲩ ϣⲁⲣⲟⲕ",
+      "english": "And God revealed this to the archimandrite, saying, 'Behold, this particular anchorite is coming to you.",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ",
+        2,
+        16.621
+      ],
+      [
+        "ⲁⲛⲁⲭⲱⲣⲏⲧⲏⲥ",
+        2,
+        16.313
+      ],
+      [
+        "ⲛⲓⲙ",
+        6,
+        13.457
+      ],
+      [
+        "ϣⲁⲣⲟ",
+        2,
+        11.833
+      ],
+      [
+        "ⲃⲱⲕ",
+        3,
+        11.114
+      ],
+      [
+        "ⲛⲏⲩ",
+        2,
+        10.976
+      ],
+      [
+        "ϫⲉ",
+        5,
+        10.527
+      ],
+      [
+        "ϣⲁ",
+        3,
+        10.516
+      ],
+      [
+        "ⲉⲓⲥ",
+        2,
+        10.461
+      ],
+      [
+        "ϩⲗⲗⲟ",
+        1,
+        9.718
+      ],
+      [
+        "ⲛ",
+        4,
+        7.224
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        6.719
+      ],
+      [
+        "ⲥ",
+        2,
+        6.689
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        5.705
+      ],
+      [
+        "ϥ",
+        2,
+        4.937
+      ],
+      [
+        "ⲓ",
+        1,
+        4.265
+      ],
+      [
+        ".",
+        1,
+        3.972
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        3.923
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        3.103
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉϣⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲉϣⲉ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ϩⲗⲗⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲉϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲭⲱⲣⲏⲧⲏⲥ_2_post_ⲛⲓⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉϣⲉ_0_node",
+          "ⲛⲓⲙ_1_post_ⲙⲉϣⲉ",
+          4
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲉϣⲉ",
+          "ⲛ_2_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛⲓⲙ",
+          "ϩⲗⲗⲟ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲉϣⲉ",
+          "ⲙⲉϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲉϣⲉ",
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_2_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛⲓⲙ",
+          "ϣⲏⲙ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲓⲙ",
+          "ⲁⲣⲭⲓⲙⲁⲛⲇⲣⲓⲧⲏⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲉϣⲉ",
+          "ⲁⲛⲁⲭⲱⲣⲏⲧⲏⲥ_2_post_ⲛⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3939,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2202",
+      "label": "ⲙⲉϣⲁⲕ",
+      "pos": "PTC",
+      "gloss": "(\"thou knowest not\") perhaps"
+    },
+    {
+      "target": "C2201",
+      "label": "ⲙⲉϣⲉ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "anyone, such and such, so and so"
+    }
+  ]
+}

@@ -1,0 +1,669 @@
+{
+  "id": "C48",
+  "forms": [
+    {
+      "id": "CF167",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 4.69,
+        "rank": 239,
+        "count": 398
+      }
+    },
+    {
+      "id": "CF168",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF169",
+      "orth": "ⲁⲗⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3941,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF170",
+      "orth": "ⲁⲗⲁⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF171",
+      "orth": "ⲁⲗⲁⲩ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF172",
+      "orth": "ⲁⲗⲱⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.42,
+        "rank": 400,
+        "count": 205
+      }
+    },
+    {
+      "id": "CF173",
+      "orth": "ⲁⲗⲁⲩⲓ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲙⲉⲧⲁⲗⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1413,
+        "count": 28
+      }
+    },
+    {
+      "orth": "ⲁⲉⲓⲗⲟⲩ",
+      "dialect": "F",
+      "id": "171.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "(selten)",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS55",
+      "bibliography": "CD 5a; CED 4; KoptHWb 3; DELC 7; ChLCS 3b"
+    },
+    {
+      "id": "CS56",
+      "bibliography": "CD 5a; KoptHWb 3; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲥⲱⲃⲓ ⲙⲙⲟϥ ⲛⲑⲟϥ ⲇⲉ ⲉⲧⲁϥϩⲓ ⲡⲧⲏⲣϥ ⲉⲃⲟⲗ ⲁϥⲱⲗⲓ ⲛⲉⲙⲁϥ ⲙⲫⲓⲱⲧ ⲛϯⲁⲗⲟⲩ ⲛⲉⲙⲧⲉⲥⲙⲁⲩ ⲛⲉⲙⲛⲏ ⲉⲑⲛⲉⲙⲁϥ ⲟⲩⲟϩ ⲁϥϣⲉ ⲛⲁϥ ⲉϧⲟⲩⲛ ⲉⲡⲓⲙⲁ ⲉⲛⲁⲣⲉϯ**ⲁⲗⲟⲩ** ⲭⲏ ⲙⲙⲟϥ .",
+      "english": "They ridiculed him. But he, having put them all out, took the father of the child, her mother, and those who were with him, and went in where the child was lying.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲉⲛⲧⲟϥ ⲡⲉ ⲡ**ⲁⲗⲟⲩ** ⲙⲡⲁⲗⲟⲩ ·",
+      "english": "who is the Child of the Child;",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁϥⲛⲁⲩ ⲇⲉ ⲛϫⲉⲡⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲁⲃⲃⲁ ⲍⲁⲭⲁⲣⲓⲁⲥ ⲉⲛⲓϫⲟⲣϫⲥ ⲛⲧⲉⲡⲓⲇⲓⲁⲃⲟⲗⲟⲥ ⲁϥⲥⲟⲧⲡⲥ ⲛⲁϥ ⲉϣⲉⲡϩⲁⲛⲑⲃⲁ ⲛⲕⲓⲛⲇⲩⲛⲟⲥ ⲉⲑⲃⲏⲧϥ ⲉϩⲟⲧⲉ ⲉⲧⲏⲓϥ ⲛⲛⲉϥⲕⲁⲧⲁⲥⲁⲣⲝ ⲛⲕⲉⲥⲟⲡ ⲉϥϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲥⲁϫⲓ ⲙⲡⲓⲥⲱⲧⲏⲣ ϫⲉⲫⲏ ⲉⲑⲛⲁϣⲉⲡⲟⲩ**ⲁⲗⲟⲩ** ⲉⲣⲟϥ ⲙⲡⲁⲓⲣⲏϯ ϧⲉⲛⲡⲁⲣⲁⲛ ⲁⲛⲟⲕ ⲡⲉ ⲉⲧⲉϥϣⲱⲡ ⲙⲙⲟⲓ .",
+      "english": "When the holy old man Abba Zacharias saw the snares of the devil, he resolved to face tens of thousands of dangers on his own rather than deliver him up again to his parents according to the flesh, fulfilling the Savior's words: ‘He who receives a child in my name will receive me myself.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϯⲟⲩ ⲛⲭⲁⲣⲁⲅⲙⲏ ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲛⲟϭ ⲙⲡⲣⲉⲥⲃⲉⲩⲧⲏⲥ ⲛⲧⲉⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ ⲉⲧⲉⲛⲧⲟϥ ⲡⲉ ⲡⲓⲛⲟϭ ⲛⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲙⲛⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϯⲟⲩ ⲙⲡⲣⲟϩⲏⲅⲟⲩⲙⲉⲛⲟⲥ ⲛⲁⲓ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲡϯⲟⲩ ⲙⲡⲁⲣⲁⲥⲧⲁⲧⲏⲥ ⲁⲩⲱ ⲟⲛ ϥϣⲟⲟⲡ ϩⲙⲡⲉⲛⲇⲩⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓⲡⲉⲟⲟⲩ ⲙⲡⲣⲁⲛ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲛⲧⲁⲝⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲛⲉⲡⲣⲟⲃⲟⲩⲗⲟⲟⲩⲉ ⲙⲡⲉⲑⲏⲥⲁⲩⲣⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ . ⲁⲩⲱ ⲙⲛⲛⲉⲩⲥⲱⲧⲏⲣ · ⲁⲩⲱ ⲙⲛⲛⲧⲁⲝⲓⲥ ⲛⲛⲧⲁⲝⲓⲥ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲡⲥⲁϣϥ ⲛϩⲁⲙⲏⲛ ⲁⲩⲱ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲡⲥⲁϣϥ ⲛⲡⲱⲛⲏ ⲁⲩⲱ ⲙⲛⲡϯⲟⲩ ⲛϣⲏⲙ · ⲁⲩⲱ ⲙⲛⲡϣⲟⲙⲛⲧ ⲛϩⲁⲙⲏⲛ ⲁⲩⲱ ⲙⲛⲡⲥⲱⲧⲏⲣ ⲛϩⲁⲧⲣⲉⲉⲩ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲛⲉ ⲡ**ⲁⲗⲟⲩ** ⲙⲡⲁⲗⲟⲩ · ⲁⲩⲱ ⲙⲛⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲉⲯⲓⲧ ⲙⲫⲩⲗⲁⲝ ⲛⲧϣⲟⲙⲧⲉ ⲙⲡⲩⲗⲏ ⲙⲡⲉⲑⲏⲥⲁⲩⲣⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "and of the mystery of the five Impressions, and of the mystery of the great Envoy of the Ineffable, who is the great Light, and of the mystery of the five Leaders, who are the five Helpers. There is further in this vesture the glory of the name of the mystery of all orders of the emanations of the Treasury of the Light and of their saviours, and [of the mystery] of the orders of the orders, which are the seven Amēns and the seven Voices and the five Trees and the three Amēns and the Twin-saviour, that is the Child of the Child, and of the mystery of the nine guards of the three gates of the Treasury of the Light.",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲫⲏ ⲉⲧⲛⲁϣⲉⲡⲟⲩⲁⲓ ⲛⲛⲁⲓ**ⲁⲗⲱⲟⲩⲓ** ⲙⲡⲁⲓⲣⲏϯ ⲉⲡⲁⲣⲁⲛ ⲁⲛⲟⲕ ⲡⲉⲧⲉϥϣⲱⲡ ⲙⲙⲟⲓ ⲟⲩⲟϩ ⲫⲏ ⲉⲧϣⲱⲡ ⲙⲙⲟⲓ ⲁⲛⲟⲕ ⲁⲛ ⲡⲉⲧⲉϥϣⲱⲡ ⲙⲙⲟⲓ ⲁⲗⲗⲁ ⲁϥϣⲱⲡ ⲙⲫⲏ ⲉⲧⲁϥⲧⲁⲟⲩⲟⲓ .",
+      "english": "Whoever receives one such little child in my name, receives me, and whoever receives me, doesn't receive me, but him who sent me.'",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲥⲱⲧⲏⲣ ⲛϩⲁⲧⲣⲉⲉⲩ ⲉⲧⲉⲛⲧⲟⲟⲩ ⲡⲉ ⲡ**ⲁⲗⲟⲩ** ⲙⲡⲁⲗⲟⲩ · ⲁⲩⲱ ⲙⲛⲛⲉⲯⲓⲥ ⲙⲫⲩⲗⲁⲝ ⲥⲉⲛⲁϭⲱ ϩⲱⲟⲩ ⲟⲛ ϩⲓϩⲃⲟⲩⲣ ⲙⲙⲟⲓ ⲉⲩⲟ ⲛⲣⲣⲟ ϩⲣⲁ ϩⲛⲛⲉⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲛⲛⲥⲱⲧⲏⲣ ϥⲛⲁⲣⲣⲟ ⲉϫⲛⲛⲧⲁⲝⲓⲥ ⲛⲛⲉϥⲡⲣⲟⲃⲟⲗⲟⲟⲩⲉ ϩⲣⲁⲓ ϩⲛⲛⲉⲕⲗⲏⲣⲟⲛⲟⲙⲓⲁ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“And the Twin-saviours, that is the Child of the Child, and the nine guards will bide also at my left, being kings in the inheritances of the Light. And every one of the saviours will rule over the orders of his emanations in the inheritances of the Light”",
+      "source": "Pistis Sophia Book 2 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:49-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        322,
+        20.181
+      ],
+      [
+        "ⲡⲓ",
+        185,
+        19.129
+      ],
+      [
+        "ⲛ",
+        197,
+        18.221
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        142,
+        17.293
+      ],
+      [
+        "ⲁ",
+        135,
+        16.984
+      ],
+      [
+        "ⲙ",
+        111,
+        16.73
+      ],
+      [
+        "ⲓ",
+        86,
+        16.618
+      ],
+      [
+        "ⲥ",
+        80,
+        16.158
+      ],
+      [
+        "ⲉ",
+        106,
+        15.965
+      ],
+      [
+        "ⲙⲁⲩ",
+        22,
+        15.837
+      ],
+      [
+        "ⲟⲩ",
+        107,
+        15.742
+      ],
+      [
+        "ⲛⲁ",
+        78,
+        15.575
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        33,
+        15.574
+      ],
+      [
+        "ⲓⲥⲁⲁⲕ",
+        19,
+        15.566
+      ],
+      [
+        "ⲧⲉⲥ",
+        21,
+        15.496
+      ],
+      [
+        "ϯ",
+        70,
+        15.442
+      ],
+      [
+        "ⲡⲉ",
+        56,
+        15.424
+      ],
+      [
+        "ⲡⲁ",
+        40,
+        15.333
+      ],
+      [
+        "ϣⲉⲛⲟⲩϯ",
+        16,
+        15.192
+      ],
+      [
+        "ⲧⲁⲙⲉ",
+        14,
+        15.074
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲗⲟⲩ",
+        8,
+        23.598
+      ],
+      [
+        "ⲡ",
+        17,
+        13.759
+      ],
+      [
+        "ⲙ",
+        12,
+        13.106
+      ],
+      [
+        "ⲛⲉ",
+        5,
+        11.279
+      ],
+      [
+        "ⲧⲟⲟⲩ",
+        2,
+        11.122
+      ],
+      [
+        "ⲛⲧⲟⲟⲩ",
+        1,
+        8.278
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.502
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.207
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲟ",
+        1,
+        6.805
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        6.732
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        6.644
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.508
+      ],
+      [
+        "ⲣⲣⲟ",
+        1,
+        6.457
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.284
+      ],
+      [
+        "ⲛ",
+        3,
+        5.564
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.238
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          268
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          39
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          23
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲗⲟⲩ",
+          12
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲗⲟⲩ",
+          11
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲩ",
+          9
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲟⲩ",
+          8
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲩ",
+          7
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          6
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          6
+        ],
+        [
+          "ⲓⲱⲃ_1_post_ⲁⲗⲟⲩ",
+          5
+        ],
+        [
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲗⲟⲩ",
+          6
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲙⲁⲩ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲃⲱⲕⲓ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲁⲗⲟⲩ",
+          2
+        ],
+        [
+          "ϣⲉⲛⲟⲩϯ_1_post_ⲁⲗⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲗⲟⲩ",
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲓⲱⲃ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲓⲥⲁⲁⲕ_1_post_ⲁⲗⲟⲩ",
+          2
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲙⲁⲩ",
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ⲙⲁⲩ",
+          "ⲙⲁⲩ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡⲓ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          "ⲃⲱⲕⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲉⲛ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲗⲟⲩ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡⲁ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ϣⲉⲛⲟⲩϯ_1_post_ⲁⲗⲟⲩ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          "ⲁⲗⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲁⲗⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲥⲁϣϥ_1_pre_ⲁⲗⲟⲩ",
+          "ⲡ_1_pre_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          "ⲙⲛ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲁⲗⲟⲩ",
+          "ⲟ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲟⲩ_0_node",
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲗⲟⲩ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 7.1,
+      "rank": 154,
+      "count": 603
+    },
+    "S": {
+      "rate": 0.05,
+      "rank": 3550,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C49",
+      "label": "ⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "child, boy; servant"
+    },
+    {
+      "target": "C51",
+      "label": "ⲉⲣⲁⲗⲟⲩ",
+      "pos": "V",
+      "gloss": "be young"
+    },
+    {
+      "target": "C50",
+      "label": "ⲙⲛⲧⲁⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "time of youth, youthfulness"
+    }
+  ]
+}

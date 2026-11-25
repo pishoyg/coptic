@@ -1,0 +1,648 @@
+{
+  "id": "C6852",
+  "forms": [
+    {
+      "id": "CF15753",
+      "orth": "ϩⲓⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.35,
+        "rank": 310,
+        "count": 528
+      }
+    },
+    {
+      "orth": "ϧⲓⲥⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.9,
+        "rank": 483,
+        "count": 161
+      }
+    },
+    {
+      "orth": "ϩⲁⲥⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8871,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟⲥⲧ⸗",
+      "dialect": "S",
+      "id": "90.2"
+    },
+    {
+      "orth": "ϩⲓⲥⲧ⸗",
+      "dialect": "S",
+      "id": "90.3"
+    },
+    {
+      "orth": "ϩⲟⲥⲉ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1571,
+        "count": 47
+      }
+    },
+    {
+      "orth": "ϩⲁⲥⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8871,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϧⲁⲥ⸗",
+      "dialect": "B",
+      "id": "90.6"
+    },
+    {
+      "orth": "ϧⲟⲥⲓ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1441,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ⳉⲓⲥⲉ",
+      "dialect": "A",
+      "id": "90.8"
+    },
+    {
+      "orth": "ⳉⲁⲥⲉ†",
+      "dialect": "A",
+      "id": "90.9"
+    },
+    {
+      "orth": "ϩⲓⲥⲓ",
+      "dialect": "F",
+      "id": "90.10"
+    },
+    {
+      "orth": "ϩⲁⲥⲧ⸗",
+      "dialect": "F",
+      "id": "90.11"
+    },
+    {
+      "orth": "ϩⲁⲥⲓ†",
+      "dialect": "F",
+      "id": "90.12"
+    },
+    {
+      "orth": "ϩⲓⲥⲉ",
+      "dialect": "L",
+      "id": "90.13"
+    },
+    {
+      "orth": "ϩⲉⲥⲧ⸗",
+      "dialect": "L",
+      "id": "90.14"
+    },
+    {
+      "orth": "ϩⲁⲥⲉ†",
+      "dialect": "L",
+      "id": "90.15"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7568",
+      "bibliography": "CD 710b-713a; CED 297; KoptHWb 391; DELC 313a; ChLCS 95a"
+    },
+    {
+      "id": "CS7569",
+      "bibliography": "CD 710b-713a; CED 297; KoptHWb 391; DELC 313a; ChLCS 95a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲛⲓⲥⲛⲏⲟⲩ ⲭⲣⲉⲙⲣⲉⲙ ⲉⲑⲃⲉϫⲉⲁⲩ**ϧⲓⲥⲓ** ⲙⲡⲟⲩϣϫⲉⲙϫⲟⲙ ⲛⲕⲟⲗϥ ⲉⲃⲟⲗ .",
+      "english": "Worn out and unable to keep pace with the abundance, they began to voice their frustration.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϥⲉⲓⲱⲧ ⲇⲉ ⲁϥ**ϩⲓⲥⲉ** ⲛⲙⲙⲁϥ · ϫⲉⲉⲓⲛⲁϫⲓ ⲛⲁⲕ ⲛⲧϣⲉⲉⲣⲉ ⲛⲃⲁⲥⲓⲗⲉⲓⲧⲏⲥ ⲡⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ ·",
+      "english": "And his father wearied him exceedingly, saying, 'I shall take the daughter of Basileides the general for thee to wife,'",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲥϭⲓ ⲛⲟⲩⲙⲏϣ ⲛ**ϧⲓⲥⲓ** ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓⲙⲏϣ ⲛⲥⲏⲓⲛⲓ ⲟⲩⲟϩ ⲁⲥϭⲉ ⲛⲉⲧⲉⲛⲧⲁⲥ ⲛⲓⲃⲉⲛ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲙⲡⲉⲥϫⲉⲙϩⲏⲟⲩ ⲛϩⲗⲓ ⲁⲗⲗⲁ ⲙⲁⲗⲗⲟⲛ ⲁⲥⲧϩⲟ ⲛϩⲟⲩⲟ .",
+      "english": "and had suffered many things by many physicians, and had spent all that she had, and was no better, but rather grew worse,",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲡⲉⲕⲛⲁ ⲧⲁϩⲟⲓ ⲛⲅⲭⲁⲣⲓⲍⲉ ⲛⲁⲓ ⲙⲡⲧⲁⲗϭⲟ · ϫⲉⲁⲓ**ϩⲓⲥⲉ** ⲉⲙⲁⲧⲉ ·",
+      "english": "Let thy mercy come upon me, and do thou graciously grant healing unto me, for I am suffering very greatly.'",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛ**ϧⲟⲥⲓ** ⲉⲛⲉⲣϩⲱⲃ ⲛⲛⲉⲛϫⲓϫ ⲙⲙⲓⲛⲙⲙⲟⲛ ⲥⲉϩⲱⲟⲩϣ ⲉⲣⲟⲛ ⲟⲩⲟϩ ⲧⲉⲛⲥⲙⲟⲩ ⲉⲣⲱⲟⲩ ⲉⲩϭⲟϫⲓ ⲛⲥⲱⲛ ⲧⲉⲛⲱⲟⲩ ⲛϩⲏⲧ .",
+      "english": "We toil, working with our own hands. When people curse us, we bless. Being persecuted, we endure.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲛ**ϩⲟⲥⲉ** ⲉⲛⲣϩⲱⲃ ϩⲛⲛⲉⲛϭⲓϫ ⲙⲙⲓⲛⲙⲙⲟ ⲛ ⲉⲩⲥⲁϩⲟⲩ ⲙⲙⲟⲛ ⲧⲛⲥⲙⲟⲩ ⲉⲣⲟⲟⲩ ⲉⲩⲡⲏⲧ ⲛⲥⲱⲛ ⲧⲛⲁⲛⲉⲭⲉ ⲙⲙⲟⲟⲩ .",
+      "english": "We toil, working with our own hands. When people curse us, we bless. Being persecuted, we endure.",
+      "source": "46_1 Corinthians_4",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        124,
+        25.453
+      ],
+      [
+        "ⲛⲉⲙ",
+        84,
+        25.42
+      ],
+      [
+        "ϩⲁⲛ",
+        47,
+        23.977
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        67,
+        23.278
+      ],
+      [
+        "ⲟⲩ",
+        72,
+        23.264
+      ],
+      [
+        "ϧⲉⲛ",
+        54,
+        23.028
+      ],
+      [
+        "ϣⲟϣ",
+        7,
+        22.594
+      ],
+      [
+        "ⲙⲏϣ",
+        18,
+        22.265
+      ],
+      [
+        "ⲛⲟⲩ",
+        21,
+        22.08
+      ],
+      [
+        "ⲙⲕⲁⲩϩ",
+        5,
+        22.017
+      ],
+      [
+        ".",
+        44,
+        21.995
+      ],
+      [
+        "ϧⲓⲧⲉⲛ",
+        2,
+        21.695
+      ],
+      [
+        "ⲉ",
+        45,
+        21.493
+      ],
+      [
+        "ⲛⲧⲉ",
+        35,
+        21.454
+      ],
+      [
+        "ⲁ",
+        42,
+        21.166
+      ],
+      [
+        "ⲙⲕⲁϩ",
+        7,
+        20.768
+      ],
+      [
+        "ⲙ",
+        33,
+        20.716
+      ],
+      [
+        "ⲉⲩⲉ",
+        17,
+        20.597
+      ],
+      [
+        "ⲛⲉⲕ",
+        12,
+        20.37
+      ],
+      [
+        "ϭⲓ",
+        13,
+        20.368
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        368,
+        20.217
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        19.858
+      ],
+      [
+        "ⲟⲩ",
+        193,
+        18.835
+      ],
+      [
+        "ⲡ",
+        222,
+        18.718
+      ],
+      [
+        "ϩⲉⲛ",
+        96,
+        18.667
+      ],
+      [
+        "ⲙⲛ",
+        133,
+        18.648
+      ],
+      [
+        "ϩⲛ",
+        135,
+        18.547
+      ],
+      [
+        "ϣⲉⲡ",
+        23,
+        18.547
+      ],
+      [
+        "ⲧⲏⲣ",
+        93,
+        18.319
+      ],
+      [
+        "ϥ",
+        178,
+        17.786
+      ],
+      [
+        "ⲁ",
+        148,
+        17.51
+      ],
+      [
+        "ⲉ",
+        141,
+        17.073
+      ],
+      [
+        "ⲁⲩⲱ",
+        111,
+        16.968
+      ],
+      [
+        "ⲙ",
+        115,
+        16.725
+      ],
+      [
+        "ϣⲡ",
+        12,
+        16.213
+      ],
+      [
+        "ⲛⲉⲓ",
+        29,
+        15.879
+      ],
+      [
+        "ⲛⲁ",
+        79,
+        15.437
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        66,
+        15.436
+      ],
+      [
+        "ϩⲁϩ",
+        21,
+        15.396
+      ],
+      [
+        "ϩⲙ",
+        52,
+        15.352
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲥⲉ_0_node",
+          225
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲓⲥⲉ",
+          16
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϩⲓⲥⲉ",
+          13
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲓⲥⲉ",
+          14
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲥⲉ",
+          8
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲓⲥⲉ",
+          8
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲓⲥⲉ",
+          7
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ϩⲓⲥⲉ",
+          10
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϩⲓⲥⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_pre_ϩⲓⲥⲉ",
+          5
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲓⲥⲉ",
+          13
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲥⲉ",
+          7
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲥⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲓⲥⲉ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲕⲟⲟⲩⲉ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲓⲥⲉ",
+          6
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲓⲥⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲓⲥⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϩⲓⲥⲉ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲓ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ϩⲓⲥⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲓⲥⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲥⲉ",
+          "ⲟⲩ_1_pre_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_0_node",
+          "ⲛ_1_post_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲓⲥⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲕⲟⲟⲩⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲓⲥⲉ",
+          "ⲡⲁ_1_pre_ϩⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϩⲓⲥⲉ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ϩⲓⲥⲉ",
+          "ϩⲓⲥⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.61,
+      "rank": 247,
+      "count": 573
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6857",
+      "label": "ϣⲡϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "take trouble, suffer"
+    },
+    {
+      "target": "C6853",
+      "label": "ϩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "labour, weariness, suffering"
+    },
+    {
+      "target": "C6858",
+      "label": "ϩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "labour"
+    },
+    {
+      "target": "C6859",
+      "label": "ϭⲓϧⲓⲥⲓ",
+      "pos": "V",
+      "gloss": "labour, suffer"
+    },
+    {
+      "target": "C6855",
+      "label": "ϯϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "give trouble"
+    },
+    {
+      "target": "C6856",
+      "label": "ⲟⲩⲉϩϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "give trouble"
+    },
+    {
+      "target": "C6854",
+      "label": "ⲣϩⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "take, make trouble; suffer"
+    }
+  ],
+  "etym": {
+    "egy_num": "124600",
+    "egy_lemma": "ẖzi̯",
+    "demo_num": "d4907",
+    "demo_lemma": "ẖs(j)",
+    "english": "to be weak",
+    "german": "schwach sein; elend sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/124600",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4907"
+  }
+}

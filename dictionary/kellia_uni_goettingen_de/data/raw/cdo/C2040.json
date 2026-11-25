@@ -1,0 +1,270 @@
+{
+  "id": "C2040",
+  "forms": [
+    {
+      "id": "CF5764",
+      "orth": "ⲁⲧⲙⲓⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7449,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2367",
+      "bibliography": "CD 185b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲡⲙⲁ ⲛⲓⲥⲁⲁⲕ ⲡⲉⲕϣⲏⲣⲉ ⲉⲓⲥⲟⲩⲉⲥⲟⲟⲩ ⲛ**ⲁⲧⲙⲓⲥⲉ** ⲙⲙⲟϥ ϩⲛⲟⲩⲙⲁⲁⲩ ⲉϥⲙⲉⲣ ⲉϩⲟⲩⲛ ⲉⲩϣⲏⲛ ϫⲉⲥⲁⲃⲉⲕ .",
+      "english": "...",
+      "source": "Life of John Chrysostom (Giron Sacr of Abraham)",
+      "urn": "urn:cts:copticLit:lives.chrysostom.giron_ed:400-405",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲛⲁⲩ ⲉⲩⲉⲥⲟⲟⲩ ⲛ**ⲁⲧⲙⲓⲥⲉ** ⲙⲙⲟϥ ⲉϥⲙⲏⲣ ⲉϩⲟⲩⲛ ⲉⲩϣⲏⲛ ⲉϥⲟ ⲛⲛⲟϭ ⲡⲁⲣⲁⲛⲉⲥⲟⲟⲩ ⲧⲏⲣⲟⲩ .",
+      "english": "...",
+      "source": "Life of John Chrysostom (Giron Sacr of Abraham)",
+      "urn": "urn:cts:copticLit:lives.chrysostom.giron_ed:400-405",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟ",
+        1,
+        12.912
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        1,
+        10.936
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        10.022
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.981
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲙⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲙⲓⲥⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲁⲧⲙⲓⲥⲉ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲙⲁⲁⲩ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6995,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2037",
+      "label": "ⲙⲁⲥ-",
+      "pos": "V",
+      "gloss": "bearing, producing"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2043",
+      "label": "ⲙⲉⲥⲓⲉ",
+      "pos": "V",
+      "gloss": "whom . . . bore"
+    },
+    {
+      "target": "C2052",
+      "label": "ⲙⲉⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "bring to birth, deliver sb (midwife)"
+    },
+    {
+      "target": "C2053",
+      "label": "ⲙⲉⲥⲓⲱ",
+      "pos": "N",
+      "gloss": "midwife, nurse"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2047",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring (of money), usury, interest"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ]
+}

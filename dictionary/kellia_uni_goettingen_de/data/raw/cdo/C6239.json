@@ -1,0 +1,58 @@
+{
+  "id": "C6239",
+  "forms": [
+    {
+      "id": "CF14488",
+      "orth": "ⲣϣⲟϫⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6926",
+      "bibliography": "CD 616a-b; ChLCS 84b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6236",
+      "label": "ϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "take counsel, consider"
+    },
+    {
+      "target": "C6237",
+      "label": "ϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "counsel, design"
+    },
+    {
+      "target": "C6240",
+      "label": "ϫⲓϣⲟϫⲛⲉ",
+      "pos": "V",
+      "gloss": "take counsel, reflect, advice"
+    },
+    {
+      "target": "C6238",
+      "label": "ⲁⲧϣⲟϫⲛⲉ",
+      "pos": "N",
+      "gloss": "imprudent, ill-considered"
+    }
+  ]
+}

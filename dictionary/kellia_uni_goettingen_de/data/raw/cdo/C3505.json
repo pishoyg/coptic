@@ -1,0 +1,83 @@
+{
+  "id": "C3505",
+  "forms": [
+    {
+      "id": "CF8911",
+      "orth": "ⲥⲗⲓϫ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31678",
+      "orth": "ⲥⲗⲏⲓϫⲓ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31679",
+      "orth": "ⲥⲗⲏϫⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3989",
+      "bibliography": "CD 333b; KoptHWb 185"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3501",
+      "label": "ⲁⲧⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "unobliterated"
+    },
+    {
+      "target": "C3507",
+      "label": "ⲉⲣⲥⲗⲓϫ",
+      "pos": "V",
+      "gloss": "blunt"
+    },
+    {
+      "target": "C3502",
+      "label": "ⲣⲉϥⲥⲱⲗϫ",
+      "pos": "N",
+      "gloss": "one who wipes out"
+    },
+    {
+      "target": "C3506",
+      "label": "ⲥⲗⲓϫ",
+      "pos": "N",
+      "gloss": "bluntness"
+    },
+    {
+      "target": "C3503",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "V",
+      "gloss": "be, make smooth"
+    },
+    {
+      "target": "C3504",
+      "label": "ⲥⲗⲟϭⲗϭ",
+      "pos": "N",
+      "gloss": "smoothness"
+    },
+    {
+      "target": "C3499",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "V",
+      "gloss": "smooth, smear, anoint; wipe (out), obliterate; cleave, adhere, make cleave, join"
+    },
+    {
+      "target": "C3500",
+      "label": "ⲥⲱⲗϭ",
+      "pos": "N",
+      "gloss": "obliteration"
+    }
+  ]
+}

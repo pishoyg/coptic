@@ -1,0 +1,77 @@
+{
+  "id": "C242",
+  "forms": [
+    {
+      "id": "CF989",
+      "orth": "ⲁⲩⲁⲛ ⲁⲩⲁⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5292,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "distributiv",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS273",
+      "bibliography": "CD 21a; KoptHWb 14; ChLCS 6a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲭⲁⲓⲣⲉ ⲡⲁⲙⲉⲣⲓⲧ ⲛⲥⲟⲛ ⲡⲁⲧⲉϣⲧⲏⲛ **ⲛⲁⲩⲁⲛ **ⲁⲩⲁⲛ**** ⲛⲧϩⲉ ⲛⲧⲉϣⲧⲏⲛ · ⲛⲓⲱⲥⲏⲫ ⲡⲇⲓⲕⲁⲓⲟⲥ ·",
+      "english": "Hail, my beloved brother, unto whom belongeth the coat of many colours, which is like unto the coat of Joseph the righteous man.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϥⲥⲁ ⲅⲁⲣ ⲟⲩ ⲉⲃⲟⲗ ⲡⲉ **ϩⲛϩⲉⲛⲁⲩⲁⲛ **ⲁⲩⲁⲛ**** ·",
+      "english": "for its beauty was not due to a mixture of many colours.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4873,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C244",
+      "label": "ⲁⲟⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "jaundice"
+    },
+    {
+      "target": "C241",
+      "label": "ⲁⲩⲁⲛ",
+      "pos": "N",
+      "gloss": "colour; appearance"
+    },
+    {
+      "target": "C243",
+      "label": "ⲁⲩⲁⲛⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "linen (\"colour of the sky\")"
+    },
+    {
+      "target": "C245",
+      "label": "ⲁⲩⲓⲛ",
+      "pos": "N",
+      "gloss": "ship's cargo, load"
+    }
+  ]
+}

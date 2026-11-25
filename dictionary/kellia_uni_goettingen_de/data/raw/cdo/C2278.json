@@ -1,0 +1,69 @@
+{
+  "id": "C2278",
+  "forms": [
+    {
+      "id": "CF6286",
+      "orth": "ⲣⲉϥϭⲓⲙϣⲓϣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2626",
+      "bibliography": "CD 207b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2275",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "take vengeance, be avenged"
+    },
+    {
+      "target": "C2276",
+      "label": "ϭⲓⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "taking vengeance, retribution"
+    },
+    {
+      "target": "C2277",
+      "label": "ϯ ⲛⲟⲩϭⲓⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "give requital, take vengeance"
+    },
+    {
+      "target": "C2274",
+      "label": "ⲓⲣⲓ ⲙϣⲓϣ",
+      "pos": "V",
+      "gloss": "do vengeance for, requite"
+    },
+    {
+      "target": "C2273",
+      "label": "ⲙϣⲓϣ",
+      "pos": "N",
+      "gloss": "vengeance"
+    }
+  ]
+}

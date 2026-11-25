@@ -1,0 +1,51 @@
+{
+  "id": "C4568",
+  "forms": [
+    {
+      "id": "CF31800",
+      "orth": "ⲣⲉϥⲧⲥⲓⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31799",
+      "orth": "ⲣⲉϥⲧⲥⲉⲓⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5157",
+      "bibliography": "CD 434a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3288",
+      "type": "cf",
+      "label": "be filled, satisfied, enjoy"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4569",
+      "label": "ϭⲓⲛⲧⲥⲓⲟ",
+      "pos": "N",
+      "gloss": "satisfaction, repletion"
+    },
+    {
+      "target": "C4567",
+      "label": "ⲧⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "make satisfied, sate"
+    }
+  ]
+}

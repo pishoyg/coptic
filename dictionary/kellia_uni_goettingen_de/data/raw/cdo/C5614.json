@@ -1,0 +1,269 @@
+{
+  "id": "C5614",
+  "forms": [
+    {
+      "id": "CF13204",
+      "orth": "ⲣⲉϥⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7726,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6283",
+      "bibliography": "CD 534b; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲣⲉϥϯϩⲟⲧⲉ ϩⲛⲧⲉϥⲡⲟⲗⲓⲥ ⲡⲉ ⲟⲩⲣⲱⲙⲉ ⲛ**ⲣⲉϥⲱϣ** ⲉⲃⲟⲗ ⲁⲩⲱ ϣⲁⲩⲙⲉⲥⲧⲉⲡⲣⲉϥϥⲟϭϥ ⲉⲃⲟⲗ ϩⲙⲡⲉϥϣⲁϫⲉ",
+      "english": "A man of an ill tongue is dangerous in his city; and he that is rash in his talk shall be hated.",
+      "source": "Sirach 9",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲃⲁⲥⲓⲗⲉⲓⲟⲥ ⲛⲁϥ ⲙⲡⲉⲕⲫⲓⲗⲟⲥⲟⲫⲉⲓ · ⲉⲛⲉⲛⲧⲁⲕⲫⲓⲗⲟⲥⲟⲫⲉⲓ ⲅⲁⲣ ⲛⲉⲕⲛⲁⲕⲁ ⲛⲥⲱⲕ ⲁⲛ ⲡⲉ ⲛⲧⲥⲟⲫⲓⲁ · ⲛⲧⲁⲩⲧⲥⲁⲃⲟⲕ ⲉⲣⲟⲥ · ⲉⲕⲱ ⲛ**ⲣⲉϥⲱϣ** ϩⲛⲛϫⲱⲱⲙⲉ ⲛⲧⲥⲟⲫⲓⲁ ⲙⲙⲉ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲱⲱⲙⲉ",
+        1,
+        11.715
+      ],
+      [
+        "ⲕⲱ",
+        1,
+        9.236
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲱϣ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉϥⲱϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲱϣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉϥⲱϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7270,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5602",
+      "label": "ϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "be jubilant"
+    },
+    {
+      "target": "C5616",
+      "label": "ϭⲓⲛⲱϣ",
+      "pos": "N",
+      "gloss": "act, art of reading"
+    },
+    {
+      "target": "C5609",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5610",
+      "label": "ⲁϣϭⲁⲡ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5604",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "V",
+      "gloss": "sigh"
+    },
+    {
+      "target": "C5605",
+      "label": "ⲁϣⲁϩⲟⲙ",
+      "pos": "N",
+      "gloss": "groan, yawn, roar"
+    },
+    {
+      "target": "C5603",
+      "label": "ⲁϣⲁⲗ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5607",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "V",
+      "gloss": "cry"
+    },
+    {
+      "target": "C5608",
+      "label": "ⲁϣⲕⲁⲕ",
+      "pos": "N",
+      "gloss": "shouting"
+    },
+    {
+      "target": "C5606",
+      "label": "ⲁϣⲧⲁⲡ",
+      "pos": "V",
+      "gloss": "blow trumpet"
+    },
+    {
+      "target": "C5611",
+      "label": "ⲉϣϣⲙϣⲏϭⲉ",
+      "pos": "V",
+      "gloss": "whisper"
+    },
+    {
+      "target": "C5613",
+      "label": "ⲙⲁ ⲛⲱϣ",
+      "pos": "N",
+      "gloss": "place of, passage for reading"
+    },
+    {
+      "target": "C5612",
+      "label": "ⲙⲁⲓⲱϣ",
+      "pos": "N",
+      "gloss": "one fond of reading"
+    },
+    {
+      "target": "C5615",
+      "label": "ⲙⲉⲧⲣⲉϥⲱϣ",
+      "pos": "N",
+      "gloss": "readership"
+    },
+    {
+      "target": "C5617",
+      "label": "ⲙⲉⲧⲱϣ",
+      "pos": "N",
+      "gloss": "promise, threat"
+    },
+    {
+      "target": "C5600",
+      "label": "ⲣⲉϥⲉϣ-",
+      "pos": "N",
+      "gloss": "one who calls, utters"
+    },
+    {
+      "target": "C5595",
+      "label": "ⲱϣ",
+      "pos": "V",
+      "gloss": "cry, announce, sound; read; promise, vow"
+    },
+    {
+      "target": "C5601",
+      "label": "ⲱϣ",
+      "pos": "N",
+      "gloss": "reading; promise, vow"
+    },
+    {
+      "target": "C5599",
+      "label": "ⲱϣ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    },
+    {
+      "target": "C5596",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cry out, shout"
+    },
+    {
+      "target": "C5597",
+      "label": "ⲱϣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cry, exclamation"
+    },
+    {
+      "target": "C5598",
+      "label": "ⲱϣ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "cry up, implore"
+    }
+  ]
+}

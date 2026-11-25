@@ -1,0 +1,125 @@
+{
+  "id": "C6017",
+  "forms": [
+    {
+      "id": "CF14039",
+      "orth": "ⲃⲁⲕϣⲁⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6957,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6702",
+      "bibliography": "CD 582b; KoptHWb 324; ChLCS 80b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲓⲙⲱⲛ",
+        2,
+        15.327
+      ],
+      [
+        "ϩⲁⲧⲛ",
+        1,
+        11.746
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        10.355
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.15
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        7.744
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6518,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6015",
+      "label": "ϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "skin, leather; parchment(?)"
+    },
+    {
+      "target": "C6018",
+      "label": "ⲟⲩⲁⲙϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "skin-eater, ulcer"
+    },
+    {
+      "target": "C6016",
+      "label": "ⲣⲙⲛϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "\"man of skin\"(?)"
+    }
+  ]
+}

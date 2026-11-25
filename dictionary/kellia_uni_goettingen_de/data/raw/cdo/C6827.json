@@ -1,0 +1,137 @@
+{
+  "id": "C6827",
+  "forms": [
+    {
+      "id": "CF15703",
+      "orth": "ϩⲱⲣϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17570,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7542",
+      "bibliography": "CD 706a; CED 295; KoptHWb 389; ChLCS 94b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϥⲛⲁ**ϩⲱⲣϣ** ⲁⲛ ⲛⲟⲩⲕⲁϣ ⲉϥⲡⲟⲧⲥ ⲁⲩⲱ ⲛϥⲛⲁϫⲉⲛⲁ ⲁⲛ ⲛⲟⲩⲥⲟⲗ ⲉϥϩⲧⲙⲧⲱⲙ ⲁⲗⲗⲁ ϥⲛⲁⲉⲓⲛⲉ ⲉⲃⲟⲗ ⲙⲡⲉϥϩⲁⲡ ϩⲛⲟⲩⲙⲉ",
+      "english": "A bruised reed shall he not break, and smoking flax shall he not quench; but he shall bring forth judgment to truth.",
+      "source": "Isaiah 42",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁϣ",
+        1,
+        15.24
+      ],
+      [
+        "ⲃⲟⲗ",
+        1,
+        11.535
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ϩⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϫⲉⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲱⲣϣ",
+          "ϥ_1_pre_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲣϣ",
+          "ⲛⲁ_1_pre_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱⲣϣ",
+          "ϩⲱⲣϣ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲣϣ_0_node",
+          "ⲁⲛ_1_post_ϩⲱⲣϣ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲱⲣϣ",
+          "ⲁⲩⲱ_2_post_ϫⲉⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17182,
+      "count": 1
+    }
+  }
+}

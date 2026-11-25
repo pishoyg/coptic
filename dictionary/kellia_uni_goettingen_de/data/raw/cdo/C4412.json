@@ -1,0 +1,45 @@
+{
+  "id": "C4412",
+  "forms": [
+    {
+      "id": "CF10776",
+      "orth": "ϩⲁⲙⲧⲱⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4997",
+      "bibliography": "CD 422b; CED 191; KoptHWb 239; ChLCS 60a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4411",
+      "label": "ⲙⲉϩⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "needle, peg"
+    },
+    {
+      "target": "C4413",
+      "label": "ⲧⲁⲡⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "joint"
+    },
+    {
+      "target": "C4410",
+      "label": "ⲧⲱⲡ",
+      "pos": "V",
+      "gloss": "stitch, stop, caulk"
+    }
+  ]
+}

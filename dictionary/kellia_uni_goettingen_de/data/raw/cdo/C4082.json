@@ -1,0 +1,132 @@
+{
+  "id": "C4082",
+  "forms": [
+    {
+      "id": "CF10107",
+      "orth": "ϯⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10870,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4640",
+      "bibliography": "CD 397b; KoptHWb 221"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲉⲥϩⲏⲧ **ϯⲃⲉ** ⲁⲩⲱ ⲁⲥⲕⲁⲃⲟⲗ ⲉⲧⲃⲉϯⲁⲃⲉ ⲙⲡⲉϥⲥⲱⲙⲁ ·",
+      "english": "and her stomach turned, and she vomited because of the loathsomeness of his body.",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲃⲟⲗ",
+        1,
+        16.276
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        10.731
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        8.947
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϯⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ϯⲃⲉ",
+          1
+        ],
+        [
+          "ϯⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲕⲁⲃⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϯⲃⲉ",
+          "ⲡⲉⲥ_2_pre_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_2_pre_ϩⲏⲧ",
+          "ϩⲏⲧ_1_pre_ϯⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_pre_ϯⲃⲉ",
+          "ϯⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲃⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲕⲁⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲕⲁⲃⲟⲗ",
+          "ⲁ_2_post_ⲕⲁⲃⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10460,
+      "count": 1
+    }
+  }
+}

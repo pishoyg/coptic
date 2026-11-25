@@ -1,0 +1,102 @@
+{
+  "id": "C5872",
+  "forms": [
+    {
+      "id": "CF13742",
+      "orth": "ϣⲏⲙ ϣⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2834,
+        "count": 15
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS6554",
+      "bibliography": "CD 563b; CED 242; KoptHWb 313; DELC 262b; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡⲉϫⲁϥ ϫⲉⲙⲁⲣⲛⲣϩⲱⲃ **ϣⲏⲙ **ϣⲏⲙ**** ϩⲛⲟⲩⲥⲡⲟⲩⲇⲏ · ⲧⲛⲛⲁⲟⲩϫⲁⲓ ·",
+      "english": "And he responded, 'Let us work diligently little by little (and) we will be saved.'",
+      "source": "Apophthegmata Patrum Sahidic 068",
+      "urn": "urn:cts:copticLit:ap.68.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲍ ⲁⲥϣⲱⲡⲉ ϭⲉ ⲛⲧⲉⲣⲉⲧϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲧⲙⲙⲁⲩ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲛⲓⲏⲥⲟⲩⲥ ⲁⲥⲕⲱⲧⲉ ⲉⲣⲟϥ ⲧⲏⲣϥ **ϣⲏⲙ **ϣⲏⲙ**** ·",
+      "english": "It came to pass then, when that light-power had come down over Jesus, that it gradually surrounded him entirely.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁϥⲱⲧⲉ ⲉⲃⲟⲗ ⲛⲛⲉⲓϩⲉⲑⲛⲟⲥ ϩⲓϩⲏ ⲙⲙⲟⲕ **ϣⲏⲙ **ϣⲏⲙ**** ⲛⲅⲛⲁϣϥⲟⲧⲟⲩ ⲁⲛ ⲉⲃⲟⲗ ⲛⲧⲉⲩⲛⲟⲩ ϫⲉⲛⲛⲉⲡⲕⲁϩ ⲣϫⲁⲓⲉ ⲉⲣⲟⲕ ⲛⲧⲉⲛⲉⲑⲏⲣⲓⲟⲛ ⲛⲁⲅⲣⲓⲟⲛ ⲁϣⲁⲓ ⲉϩⲣⲁⲓ ⲉⲣⲟⲕ",
+      "english": "And the Lord thy God shall consume these nations before thee by little and little: thou shalt not be able to consume them speedily, lest the land become desert, and the wild beasts of the field be multiplied against thee.",
+      "source": "Deuteronomy 7",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2508,
+      "count": 15
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5867",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small person, thing, quantity"
+    },
+    {
+      "target": "C5869",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small, few, young, humble"
+    },
+    {
+      "target": "C5871",
+      "label": "ⲕⲟⲩⲓ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "little child"
+    },
+    {
+      "target": "C5874",
+      "label": "ⲙⲛⲧⳉⲏⲙ",
+      "pos": "N",
+      "gloss": "smallness, childhood"
+    },
+    {
+      "target": "C5868",
+      "label": "ⲛⲟⲩϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "a little"
+    },
+    {
+      "target": "C5873",
+      "label": "ⲣϣⲏⲙ ϣⲏⲙ",
+      "pos": "V",
+      "gloss": "make little"
+    },
+    {
+      "target": "C5870",
+      "label": "ⲥⲁⲃⲃⲁⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "Saturday before Passion week"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "C2859",
+  "forms": [
+    {
+      "id": "CF7570",
+      "orth": "ⲡⲱⲱⲡⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲡⲁⲡⲉ-",
+      "dialect": "S",
+      "id": "1273.1"
+    },
+    {
+      "orth": "ⲡⲁⲡ-",
+      "dialect": "S",
+      "id": "1273.2"
+    },
+    {
+      "orth": "ⲡⲁⲡⲱ⸗",
+      "dialect": "S",
+      "id": "1273.3"
+    },
+    {
+      "orth": "ⲫⲁⲡⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9473,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲡⲁⲡⲉ-",
+      "dialect": "A",
+      "id": "1273.5"
+    },
+    {
+      "orth": "ⲡⲁⲡⲓ",
+      "dialect": "F",
+      "id": "1273.6"
+    },
+    {
+      "orth": "ⲡⲁⲡⲱ-",
+      "dialect": "F",
+      "id": "1273.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3270",
+      "bibliography": "CD 266b; CED 126; KoptHWb 149; DELC 161; ChLCS 37b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2860",
+      "label": "ⲡⲁⲡⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "brick-maker"
+    },
+    {
+      "target": "C2861",
+      "label": "ⲣⲉϥⲡⲁⲡⲉⲧⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "brick-maker"
+    }
+  ],
+  "etym": {
+    "egy_num": "59540",
+    "egy_lemma": "pjpj",
+    "demo_num": "d1972",
+    "demo_lemma": "ppj",
+    "english": "to make (bricks)",
+    "german": "(Lehm) kneten",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/59540",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1972"
+  }
+}

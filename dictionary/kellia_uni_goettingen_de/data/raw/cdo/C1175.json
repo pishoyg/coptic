@@ -1,0 +1,365 @@
+{
+  "id": "C1175",
+  "forms": [
+    {
+      "id": "CF3737",
+      "orth": "ϯⲕⲗⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4330,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1365",
+      "bibliography": "CD 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲩ**ϯⲕⲗⲟⲙ** ϭⲉ ⲉϫⲙⲡⲁⲓ ⲛϯⲙⲓⲛⲉ ⲛⲥⲉϯⲧⲁⲓⲟ ⲛⲁϥ ·",
+      "english": "They shall give him a crown for this, and at the same time pay him honours ;",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲟⲛ ϫⲉⲡⲙⲟⲛⲁⲭⲟⲥ ⲛϩⲁⲕ ϣⲁⲩϯⲕⲗⲟⲙ ⲉϫⲱϥ ϩⲙⲡⲕⲁϩ ⲁⲩⲱ ⲟⲛ ϩⲛⲙⲡⲏⲩⲉ ϣⲁⲩ**ϯⲕⲗⲟⲙ** ⲉϫⲱϥ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "Again, he said, “The prudent monk shall be crowned on earth and also shall be crowned in heaven in the presence of God.”",
+      "source": "Apophthegmata Patrum Sahidic 011",
+      "urn": "urn:cts:copticLit:ap.11.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥⲥⲁϣⲙ ⲁⲛ ⲟⲩⲇⲉ ⲛϥϣⲧⲣⲧⲱⲣ ⲁⲛ . ⲟⲩⲇⲉ ⲛϥϭⲟⲛⲧ ⲁⲛ ⲉⲩϯⲉⲓⲃⲧ ⲛⲁϥ . ⲟⲩⲇⲉ ⲛϥⲁⲕⲁⲛⲁⲕⲧⲉⲓ ⲁⲛ . ⲉⲩ**ϯⲕⲗⲟⲙ** ⲛϣⲟⲛⲧⲉ ⲉϫⲱϥ .",
+      "english": "...",
+      "source": "Pseudo-Theophilus On the Cross and the Thief: MICH.BR 291-294",
+      "urn": "urn:cts:copticLit:pstheophilus.cross.michbr:9.3-15.15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲕ",
+        1,
+        13.369
+      ],
+      [
+        "ⲉϫⲱ",
+        4,
+        13.161
+      ],
+      [
+        "ϣⲟⲛⲧⲉ",
+        1,
+        11.823
+      ],
+      [
+        "ϣⲁ",
+        4,
+        11.761
+      ],
+      [
+        "ⲙⲛⲧϫⲱⲱⲣⲉ",
+        1,
+        11.655
+      ],
+      [
+        "ϥ",
+        8,
+        10.937
+      ],
+      [
+        "ϫⲣⲟ",
+        1,
+        10.664
+      ],
+      [
+        "ⲩ",
+        5,
+        10.191
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        9.513
+      ],
+      [
+        "ⲡⲏⲩⲉ",
+        1,
+        9.118
+      ],
+      [
+        "ϩⲓⲧⲙ",
+        1,
+        8.675
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        7.622
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.865
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.84
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        5.992
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.543
+      ],
+      [
+        "ⲡ",
+        2,
+        4.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓϣⲁⲛ_2_pre_ϫⲣⲟ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲕⲗⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϯⲕⲗⲟⲙ",
+          3
+        ],
+        [
+          "ϯⲕⲗⲟⲙ_0_node",
+          4
+        ],
+        [
+          "ϭⲉ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϯⲧⲁⲓⲟ",
+          1
+        ],
+        [
+          "ⲥⲉ_2_post_ϯⲧⲁⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲟⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓϣⲁⲛ_2_pre_ϫⲣⲟ",
+          "ϫⲣⲟ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϫⲣⲟ_1_pre_ϯⲕⲗⲟⲙ",
+          "ⲇⲉ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϯⲕⲗⲟⲙ",
+          "ϣⲁ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϯⲕⲗⲟⲙ",
+          "ⲩ_1_pre_ϯⲕⲗⲟⲙ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϯⲕⲗⲟⲙ",
+          "ϯⲕⲗⲟⲙ_0_node",
+          3
+        ],
+        [
+          "ϯⲕⲗⲟⲙ_0_node",
+          "ϭⲉ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϭⲉ_1_post_ϯⲕⲗⲟⲙ",
+          "ⲛ_2_post_ϯⲧⲁⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϯⲧⲁⲓⲟ",
+          "ⲥⲉ_2_post_ϯⲧⲁⲓⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϯⲕⲗⲟⲙ",
+          "ϥ_1_pre_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲕⲗⲟⲙ",
+          "ϯⲕⲗⲟⲙ_0_node",
+          1
+        ],
+        [
+          "ϯⲕⲗⲟⲙ_0_node",
+          "ⲉϫⲛ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϯⲕⲗⲟⲙ",
+          "ⲛ_2_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉϫⲛ",
+          "ⲉⲛⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϯⲕⲗⲟⲙ_0_node",
+          "ⲛ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲕⲗⲟⲙ",
+          "ϣⲟⲛⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲛⲧⲉ_2_post_ⲛ",
+          "ⲉϫⲱ_1_post_ϯⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϯⲕⲗⲟⲙ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3936,
+      "count": 6
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1177",
+      "label": "ϫⲓⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "receive, bear crown"
+    },
+    {
+      "target": "C1176",
+      "label": "ϫⲓⲛϯⲭⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crowning"
+    },
+    {
+      "target": "C1174",
+      "label": "ⲉⲓⲣⲉ ⲛⲕⲗⲟⲙ",
+      "pos": "V",
+      "gloss": "make a crown, circle"
+    },
+    {
+      "target": "C1173",
+      "label": "ⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown, wreath"
+    },
+    {
+      "target": "C1178",
+      "label": "ⲣⲉϥϫⲓⲕⲗⲟⲙ",
+      "pos": "N",
+      "gloss": "crown bearer"
+    }
+  ]
+}

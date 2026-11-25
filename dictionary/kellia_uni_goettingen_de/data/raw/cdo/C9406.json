@@ -1,0 +1,217 @@
+{
+  "id": "C9406",
+  "forms": [
+    {
+      "id": "CF23782",
+      "orth": "ⲕⲉⲣⲉⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23783",
+      "orth": "ⲕⲉⲣⲉⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8840,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF23784",
+      "orth": "ⲕⲉⲣⲉⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23785",
+      "orth": "ⲕⲉⲣⲉⲁ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11887",
+      "bibliography": "DDGLC",
+      "cu_ID": "178"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓⲡⲉⲛⲧⲁϥⲙⲟⲩ ⲉϥⲙⲏⲣ ⲛⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲙⲛⲛⲉϥϭⲓϫ ϩⲛϩⲉⲛ**ⲕⲉⲣⲉⲁ** ⲁⲩⲱ ⲉⲣⲉⲡⲉϥϩⲟ ⲙⲏⲣ ϩⲛⲟⲩⲥⲟⲩⲇⲁⲣⲓⲟⲛ . ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ⲛⲁⲩ . ϫⲉⲃⲟⲗϥ ⲉⲃⲟⲗ ⲛⲧⲉⲧⲛⲕⲁⲁϥ ⲛϥⲃⲱⲕ .",
+      "english": "He who was dead came out, bound hand and foot with wrappings, and his face was wrapped around with a cloth. Jesus said to them, 'Free him, and let him go.'",
+      "source": "43_John_11",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲥⲱⲙⲛⲧ ⲙⲡⲁϭⲗⲟϭ ϩⲛϩⲉⲛ**ⲕⲉⲣⲉⲁ** ⲁⲓⲡⲟⲣϣϥ ⲇⲉ ⲛⲁⲙⲫⲓⲧⲁⲡⲟⲥ ⲛⲧⲉⲕⲏⲙⲉ",
+      "english": "I have spread my bed with sheets, and I have covered it with double tapestry from Egypt.",
+      "source": "Proverbs 7",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲟⲧⲉ",
+        1,
+        12.11
+      ],
+      [
+        "ⲥⲓⲛⲓ",
+        1,
+        11.819
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ⲡⲟⲣϣ",
+        1,
+        13.644
+      ],
+      [
+        "ϭⲗⲟϭ",
+        1,
+        13.106
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ϩⲟ",
+        1,
+        9.831
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        8.974
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.102
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        7.376
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        7.096
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲣⲉⲁ",
+          1
+        ],
+        [
+          "ⲕⲉⲣⲉⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲕⲉⲣⲉⲁ",
+          "ⲕⲉⲣⲉⲁ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉⲣⲉⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8392,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1097",
+    "grl_lemma": "κειρία",
+    "grl_meaning": "bandage",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 935a; Preisigke 1:798"
+  }
+}

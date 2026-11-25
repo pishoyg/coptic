@@ -1,0 +1,143 @@
+{
+  "id": "C617",
+  "forms": [
+    {
+      "id": "CF2329",
+      "orth": "ⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 356.84,
+        "rank": 4,
+        "count": 56300
+      }
+    },
+    {
+      "id": "CF2330",
+      "orth": "ⲉ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 309.07,
+        "rank": 5,
+        "count": 26213
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Relativkonverter",
+    "note": "unveränderlich vor Aorist (aff. + neg.), Präteritum, Nominalsatz, neg. Kompletiv\n                (ⲙ︦ⲡⲁⲧⲉ-)",
+    "tlapos": "Satzkonverter"
+  },
+  "senses": [
+    {
+      "id": "CS751",
+      "bibliography": "CD 52b; KoptHWb 31; DELC 37-38; LCG § 399"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲫⲏ ⲉⲧⲉⲟⲩⲟⲛ ⲟⲩⲙⲁϣϫ ⲙⲙⲟϥ **ⲉ**ⲥⲱⲧⲉⲙ ⲙⲁⲣⲉϥⲥⲱⲧⲉⲙ .",
+      "english": "He said, 'Whoever has ears to hear, let him hear.'",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲡⲁⲉⲓⲱⲧ ϯⲉⲟⲟⲩ ⲛⲁⲓ ϩⲁϩⲧⲏⲕ ϩⲣⲁⲓ ϩⲙⲡⲉⲟⲟⲩ **ⲉ**ⲛⲉⲩⲛⲧⲁⲓϥ ϩⲁϩⲧⲏⲕ ⲉⲙⲡⲁⲧⲉ ⲡⲕⲟⲥⲙⲟⲥ ϣⲱⲡⲉ .",
+      "english": "Now, Father, glorify me with your own self with the glory which I had with you before the world existed.",
+      "source": "43_John_17",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲣⲉϩⲁⲛⲥⲁⲛⲇⲁⲗⲓⲟⲛ ⲧⲟⲓ **ⲉ**ⲣⲁⲧ ⲉⲛⲑⲏⲛⲟⲩ ⲟⲩⲟϩ ⲙⲡⲉⲣϯϣⲑⲏⲛ ⲥⲛⲟⲩϯ ϩⲓⲑⲏⲛⲟⲩ",
+      "english": "but to wear sandals, and not put on two tunics.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲓⲅⲁⲣ ⲁⲛⲟⲕ ⲙⲛⲛⲥⲁⲧⲉ ⲛⲧⲁⲓⲡⲱⲧ ⲙⲙⲟⲥ ⲙⲟⲅⲓⲥ **ⲉ**ⲁⲓⲉϣϭⲙϭⲟⲙ ⲉϩⲁⲣⲉϩ ⲉⲛⲉⲛⲧⲁⲓϫⲡⲟⲟⲩ ϩⲛⲧⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ",
+      "english": "For after the manner in which I fled it, I had barely been able to maintain that which I generated as a monk",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲧⲁⲙⲉⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ **ⲉ**ⲛⲏ ⲧⲏⲣⲟⲩ ⲉⲧⲁⲡⲓⲣⲱⲙⲓ ϫⲟⲧⲟⲩ .",
+      "english": "Apa Shenoute was informed of the man’s words.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲙⲉϥⲣϣⲁⲩ ⲉⲡⲕⲁϩ ⲟⲩⲇⲉ ⲧⲕⲟⲡⲣⲓⲁ · ⲕⲉ ⲧⲟⲓ ⲅⲉ ϫⲉϩⲛⲁⲁⲩ ⲛⲓⲙ ⲉⲧϩⲟⲟⲩ · ⲏ ⲛⲉ ϣⲁⲩⲧⲁⲕⲟ **ⲉ**ϣⲁⲩⲛⲟϫⲟⲩ ⲉⲣⲟⲥ · ⲛⲧϩⲉ ⲟⲛ ⲉⲧⲉⲁⲙⲛⲧⲉ ⲡⲉⲧⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲛⲉⲧⲛⲁⲙⲟⲩ ϩⲣⲁⲓ ϩⲛⲛⲉⲩⲛⲟⲃⲉ ·",
+      "english": "...",
+      "source": "Some Kinds of People Sift Dirt: GF 121-128",
+      "urn": "urn:cts:copticLit:shenoute.dirt.monbgf:51-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C737",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C681",
+      "type": "cf",
+      "label": "relative converter"
+    },
+    {
+      "target": "C698",
+      "type": "cf",
+      "label": "archaic relative prefix with past tenses"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C615",
+      "label": "ⲉ-",
+      "pos": "PREP",
+      "gloss": "to, for, according to, as regards; for, in order to; about, because of; from, by means of; towards, to; against; indicating debt or responsibility; ethic dative; distance of time (Past or Fut.): until, since; distance of place, separation, freedom from; distributive; comparison; elliptic; in adverbial expressions; indicating direct obj.; co-ordinating a second verb"
+    },
+    {
+      "target": "C616",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C618",
+      "label": "ⲉ-",
+      "pos": "C",
+      "gloss": ""
+    },
+    {
+      "target": "C11277",
+      "label": "ⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": "if (verbal prefix of the conditional)"
+    },
+    {
+      "target": "C619",
+      "label": "ⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": ""
+    }
+  ],
+  "etym": {
+    "egy_num": "20030",
+    "egy_lemma": "j",
+    "demo_num": "d297",
+    "demo_lemma": "ı ͗",
+    "english": "oh! (vocative interjection)",
+    "german": "oh!; [Interjektion]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/20030",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d297"
+  }
+}

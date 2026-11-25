@@ -1,0 +1,98 @@
+{
+  "id": "C1384",
+  "forms": [
+    {
+      "id": "CF4189",
+      "orth": "ⲕⲱⲧ (ⲉⲃⲟⲗ)",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1603",
+      "bibliography": "CD 122a; ChLCS 15b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲥⲱⲟⲩⲛ ⲅⲁⲣ ϫⲉⲉϣⲱⲡ ⲁϥϣⲁⲛⲃⲱⲗ ⲉⲃⲟⲗ ⲛϫⲉⲡⲉⲛⲏⲓ ⲛⲧⲉⲡⲉⲛⲙⲁⲛϣⲱⲡⲓ ⲉⲧϩⲓϫⲉⲛ ⲡⲕⲁϩⲓ ⲟⲩⲟⲛⲧⲁⲛ **ⲛⲟⲩⲕⲱⲧ **ⲉⲃⲟⲗ**** ϩⲓⲧⲉⲛⲫⲛⲟⲩϯ ⲟⲩⲏⲓ ⲛⲁⲑⲙⲟⲩⲛⲕ ⲛϫⲓϫ ⲛⲉⲛⲉϩ ϧⲉⲛⲛⲓⲫⲏⲟⲩⲓ .",
+      "english": "For we know that if the earthly house of our tent is dissolved, we have a building from God, a house not made with hands, eternal, in the heavens.",
+      "source": "08_II Corinthians_05",
+      "urn": "urn:cts:copticLit:nt.2cor.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1389",
+      "label": "ϫⲓⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "receive edification"
+    },
+    {
+      "target": "C1390",
+      "label": "ϭⲓⲛⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building (process, act of)"
+    },
+    {
+      "target": "C1388",
+      "label": "ϯⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "edify"
+    },
+    {
+      "target": "C1391",
+      "label": "ⲉⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "builder, mason; potter"
+    },
+    {
+      "target": "C1383",
+      "label": "ⲕⲱⲧ",
+      "pos": "V",
+      "gloss": "build, form; edify, encourage; be edified"
+    },
+    {
+      "target": "C1385",
+      "label": "ⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "act of building; thing built; edification; rule (for edification)"
+    },
+    {
+      "target": "C1386",
+      "label": "ⲙⲉⲧⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "building"
+    },
+    {
+      "target": "C1387",
+      "label": "ⲣⲉϥⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "builder"
+    },
+    {
+      "target": "C1392",
+      "label": "ⲥⲉⲕⲱⲧ",
+      "pos": "N",
+      "gloss": "potter's place, workshop"
+    }
+  ],
+  "etym": {
+    "egy_num": "162420",
+    "egy_lemma": "qd",
+    "demo_num": "d6475",
+    "demo_lemma": "qd",
+    "english": "to form; to fashion; to build",
+    "german": "formen; bauen; schaffen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6475"
+  }
+}

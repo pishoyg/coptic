@@ -1,0 +1,91 @@
+{
+  "id": "C2940",
+  "forms": [
+    {
+      "id": "CF7744",
+      "orth": "ⲡⲱⲧϩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲡⲟⲧϩ⸗",
+      "dialect": "S",
+      "id": "1297.1"
+    },
+    {
+      "orth": "ⲡⲟϩⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8740,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲫⲱⲧϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.65,
+        "rank": 945,
+        "count": 55
+      }
+    },
+    {
+      "orth": "ⲫⲟⲧϩ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1955,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲫⲟⲧϩ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1955,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲫⲟⲧϩ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1955,
+        "count": 16
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3366",
+      "bibliography": "CD 276b; CED 130; KoptHWb 155; DELC 166; ChLCS 39a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2941",
+      "label": "ⲡⲱⲧϩ",
+      "pos": "N",
+      "gloss": "thing carved, graven, wrought; thing molten, cast"
+    }
+  ],
+  "etym": {
+    "egy_num": "63000",
+    "egy_lemma": "ptḥ",
+    "demo_num": "d2186",
+    "demo_lemma": "ptḥ",
+    "english": "to form; to create",
+    "german": "bilden; schaffen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/63000",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2186"
+  }
+}

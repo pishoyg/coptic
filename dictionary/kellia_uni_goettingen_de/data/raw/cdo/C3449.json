@@ -1,0 +1,39 @@
+{
+  "id": "C3449",
+  "forms": [
+    {
+      "id": "CF8798",
+      "orth": "ⲥⲟⲕⲥⲉⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3927",
+      "bibliography": "CD 330a; KoptHWb 182; ChLCS 47a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C3450",
+      "label": "ⲣⲉϥⲥⲟⲕⲥⲉⲕ",
+      "pos": "N",
+      "gloss": "collector"
+    },
+    {
+      "target": "C3448",
+      "label": "ⲥⲟⲕⲥⲉⲕ",
+      "pos": "V",
+      "gloss": "pull, gather"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "id": "C2637",
+  "forms": [
+    {
+      "id": "CF7077",
+      "orth": "ⲛⲟⲩϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4356,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3023",
+      "bibliography": "CD 240a; CED 116; KoptHWb 133; DELC 150; ChLCS 34b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲙⲁ ⲉⲧⲉⲙⲛ**ⲛⲟⲩϥⲉ** ⲛϩⲏⲧϥ ⲟⲩⲇⲉ ⲭⲣⲏⲙⲁ ⲉϥⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲛⲧⲙⲉ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GF 31-32",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgf_31_32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲣⲁⲫⲉⲁⲏⲗ",
+        1,
+        18.013
+      ],
+      [
+        "........ϩ",
+        1,
+        17.013
+      ],
+      [
+        "ⲭⲣⲏⲙⲁ",
+        2,
+        14.193
+      ],
+      [
+        "ⲙⲁⲛⲛⲁ",
+        1,
+        13.765
+      ],
+      [
+        "........",
+        1,
+        13.258
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        10.691
+      ],
+      [
+        "ϩⲏⲡ",
+        1,
+        10.529
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        9.974
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        9.699
+      ],
+      [
+        "ⲛ",
+        7,
+        9.646
+      ],
+      [
+        "ⲙⲓϣⲉ",
+        1,
+        9.521
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        2,
+        9.255
+      ],
+      [
+        "ⲑⲩⲥⲓⲁ",
+        1,
+        9.183
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        9.152
+      ],
+      [
+        "ϣ",
+        1,
+        9.076
+      ],
+      [
+        "ϫⲁϫⲉ",
+        1,
+        9.068
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        9.002
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        8.146
+      ],
+      [
+        "ϯ",
+        2,
+        7.931
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩϥⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩϥⲉ",
+          2
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲩⲥⲓⲁ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲱϩⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲙⲁ_1_post_ⲛⲟⲩϥⲉ",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲡ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩϥⲉ_0_node",
+          "ⲛ_1_post_ⲛⲟⲩϥⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩϥⲉ",
+          "ⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲛ",
+          "ⲑⲩⲥⲓⲁ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲑⲩⲥⲓⲁ_3_post_ⲧⲉ",
+          "ⲛ_4_post_ⲑⲩⲥⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲑⲩⲥⲓⲁ",
+          "ⲛⲱϩⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϥⲉ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          "ⲭⲣⲏⲙⲁ_1_post_ⲛⲟⲩϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩϥⲉ",
+          "ϫⲁϫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲁϫⲉ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ϫⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ϫⲁϫⲉ",
+          "ϩⲏⲡ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3961,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2632",
+      "label": "*ⲛⲟⲩϥⲣ",
+      "pos": "VBD",
+      "gloss": "be good, profitable"
+    },
+    {
+      "target": "C2635",
+      "label": "ⲙⲉⲧⲛⲟϥⲣⲓ",
+      "pos": "N",
+      "gloss": "good things"
+    },
+    {
+      "target": "C2636",
+      "label": "ⲙⲛⲧⲁⲧⲛⲟϥⲣⲉ",
+      "pos": "N",
+      "gloss": "unprofitableness"
+    },
+    {
+      "target": "C2633",
+      "label": "ⲛⲟϥⲣⲉ",
+      "pos": "N",
+      "gloss": "good, profit, advantage"
+    },
+    {
+      "target": "C2634",
+      "label": "ⲣⲛⲟϥⲣⲉ",
+      "pos": "V",
+      "gloss": "be profitable"
+    }
+  ],
+  "etym": {
+    "egy_num": "550034",
+    "egy_lemma": "nfr",
+    "demo_num": "d3156",
+    "demo_lemma": "nfr",
+    "english": "good; beautiful; perfect; finished",
+    "german": "gut; schön; vollkommen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550034",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3156"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "C5623",
+  "forms": [
+    {
+      "id": "CF13222",
+      "orth": "ⲁϣⲙⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6293",
+      "bibliography": "CD 535b; KoptHWb 296; DELC 251b"
+    },
+    {
+      "id": "CS6294",
+      "bibliography": "CED 231; KoptHWb 296; DELC 251b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5621",
+      "label": "ⲁⲧⲱϣⲙ",
+      "pos": "N",
+      "gloss": "unquenched, unquenchable, unslaked"
+    },
+    {
+      "target": "C5624",
+      "label": "ⲟϣⲙϥ",
+      "pos": "N",
+      "gloss": "dipping, tempering, quenching (of metal)"
+    },
+    {
+      "target": "C5622",
+      "label": "ⲣⲉϥⲱϣⲙ",
+      "pos": "N",
+      "gloss": "quencher"
+    },
+    {
+      "target": "C5620",
+      "label": "ⲱϣⲙ",
+      "pos": "V",
+      "gloss": "be quenched, be dried up; quench, slake (one's thirst)"
+    }
+  ],
+  "etym": {
+    "egy_num": "40640",
+    "egy_lemma": "ꜥḫm",
+    "english": "[a combustible material (wick?)]",
+    "german": "[ein Brennmaterial (Docht)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/40640"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C5153",
+  "forms": [
+    {
+      "id": "CF12272",
+      "orth": "ⲁⲡⲟⲩⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5786",
+      "bibliography": "CD 14b; CED 216; KoptHWb 277; DELC 237b; ChLCS 68b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5150",
+      "label": "ⲙⲛⲧⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "baldness"
+    },
+    {
+      "target": "C5151",
+      "label": "ⲙⲛⲧⲟⲩⲥⲏ",
+      "pos": "N",
+      "gloss": "cauterized/cicatrized wound"
+    },
+    {
+      "target": "C5149",
+      "label": "ⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "bald person"
+    },
+    {
+      "target": "C5152",
+      "label": "ⲥⲓⲙⲟⲩⲥ",
+      "pos": "N",
+      "gloss": "a plant or a fruit"
+    }
+  ]
+}

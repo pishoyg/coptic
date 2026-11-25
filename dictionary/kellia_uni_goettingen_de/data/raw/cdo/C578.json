@@ -1,0 +1,102 @@
+{
+  "id": "C578",
+  "forms": [
+    {
+      "id": "CF2189",
+      "orth": "ⲃⲉⲉϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17317,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2190",
+      "orth": "ⲃⲏⲏϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS689",
+      "bibliography": "CD 46b; CED 29; KoptHWb 29; DELC 33; ChLCS 10a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲃⲱ ⲛⲕⲛⲧⲉ ⲁⲥⲧⲁⲩⲟ ⲉⲃⲟⲗ ⲛⲛⲉⲥ**ⲃⲉⲉϣ** ⲛⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ ⲁⲩⲛⲉϫⲕⲟⲩⲡⲣ ⲁⲩϯ ⲙⲡⲉⲩⲥⲧⲟⲓ ⲧⲱⲟⲩⲛⲉ ⲁⲙⲏ ⲧⲉⲧϩⲓⲧⲟⲩⲱⲓ",
+      "english": "The fig-tree has put forth its young figs, the vines put forth the tender grape, they yield a smell: arise, come, my companion, my fair one, my dove; yea, come.",
+      "source": "Song of Solomon 2",
+      "urn": "urn:cts:copticLit:ot.song.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲱ",
+        1,
+        13.036
+      ],
+      [
+        "ⲉⲗⲟⲟⲗⲉ",
+        1,
+        12.753
+      ],
+      [
+        "ⲧⲁⲩⲟ",
+        1,
+        12.308
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        11.384
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲥ_1_pre_ⲃⲉⲉϣ",
+          1
+        ],
+        [
+          "ⲃⲉⲉϣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲥ_1_pre_ⲃⲉⲉϣ",
+          "ⲃⲉⲉϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16928,
+      "count": 1
+    }
+  }
+}

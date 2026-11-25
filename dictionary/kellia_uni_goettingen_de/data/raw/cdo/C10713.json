@@ -1,0 +1,678 @@
+{
+  "id": "C10713",
+  "forms": [
+    {
+      "id": "CF29085",
+      "orth": "ⲧⲉⲗⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29088",
+      "orth": "ⲧⲉⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2994,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF29087",
+      "orth": "ⲧⲉⲗⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2651,
+        "count": 9
+      }
+    },
+    {
+      "id": "CF29086",
+      "orth": "ⲧⲁⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14270,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF29089",
+      "orth": "ⲧⲉⲗⲟⲥ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF29090",
+      "orth": "ⲧⲉⲗⲟⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14721",
+      "bibliography": "DDGLC",
+      "cu_ID": "576"
+    },
+    {
+      "id": "CS14722",
+      "bibliography": "DDGLC",
+      "cu_ID": "3636"
+    },
+    {
+      "id": "CS14723",
+      "bibliography": "DDGLC",
+      "cu_ID": "517"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲓⲉϩⲉⲩ ⲗ ⲛϣⲟ ⲛⲉⲙⲫ ⲟⲩⲟϩ ⲡⲓ**ⲧⲉⲗⲟⲥ** ⲛⲧⲉⲡϭⲟⲓⲥ ⲝⲁ",
+      "english": "And asses, thirty thousand and five hundred, and the tribute to the Lord, sixty-one:",
+      "source": "04_Numeri_31",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:31",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲉⲓϣⲁϫⲉ ⲡⲁϫⲟⲉⲓⲥ ⲉⲛⲧⲁⲕϫⲟⲟϥ ϩⲓⲧⲛⲧⲧⲁⲡⲣⲟ ⲙⲡⲁⲩⲗⲟⲥ ⲡⲉⲛⲥⲟⲛ ⲙⲡⲓⲟⲩⲟⲉⲓϣ ϫⲉⲙⲁ ⲡⲧⲉⲗⲟⲥ ⲙⲡⲁⲡ**ⲧⲉⲗⲟⲥ** ·",
+      "english": "--concerning this word, my Lord, thou hast spoken aforetime through the mouth of our brother Paul: 'Give tax to whom tax is due,",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁ ⲛⲉⲧⲉⲣⲱⲧⲉⲛ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲙⲁ ⲡⲓϩⲱϯ ⲙⲫⲁ ⲡⲓϩⲱϯ ⲙⲁ ⲡⲓ**ⲧⲉⲗⲟⲥ** ⲙⲫⲁ ⲡⲓⲧⲉⲗⲟⲥ ⲙⲁϯϩⲟϯ ⲙⲫⲁ ϯϩⲟϯ ⲙⲁ ⲡⲓⲧⲁⲓⲟ ⲙⲫⲁ ⲡⲓⲧⲁⲓⲟ .",
+      "english": "Give therefore to everyone what you owe: taxes to whom taxes are due; customs to whom customs; respect to whom respect; honor to whom honor.",
+      "source": "06_Romans_13",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲁⲣⲛⲥⲱⲧⲙ ⲛⲥⲁⲧⲛⲟⲙⲟⲑⲉⲥⲓⲁ ⲙⲡⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲡⲁⲓ ⲉⲧⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁⲛ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉϯ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲛⲛⲉⲧⲉⲣⲱⲧⲛ · ⲡϣⲱⲙ ⲙⲡⲁⲡϣⲱⲙ ⲡ**ⲧⲉⲗⲟⲥ** ⲙⲡⲁⲡⲧⲉⲗⲟⲥ · ⲧϩⲟⲧⲉ ⲙⲡⲁⲧϩⲟⲧⲉ · ⲡⲧⲁⲉⲓⲟ ⲙⲡⲁⲡⲧⲁⲓⲟ ⁘ⲻ",
+      "english": "But let us hearken to the following commandment with which the Apostle commanded us, saying, ' Give ye unto every one such things as ye have, tribute to whom tribute is due, tax to whom tax is due, fear to whom fear is due, honour to whom honour is due/",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲉϥⲓⲱⲡ ⲛⲉⲙⲁϥ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲉⲡⲓ**ⲧⲉⲗⲟⲥ** ⲛⲧⲉϯⲧⲓⲙⲏ ⲉⲃⲟⲗ ϧⲉⲛϯⲣⲟⲙⲡⲓ ⲛⲧⲉⲡⲓⲭⲱ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲉϥⲉϯ ⲛϯⲧⲓⲙⲏ ϧⲉⲛϯⲣⲟⲙⲡⲓ ⲉⲧⲉⲙⲙⲁⲩ ⲉⲥⲟⲩⲁⲃ ⲙⲡϭⲟⲓⲥ",
+      "english": "the priest shall reckon to him the full valuation from the year of release, and he shall pay the valuation in that day as holy to the Lord.",
+      "source": "03_Leviticus_27",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲙⲱⲩⲥⲏⲥ ϯ ⲙⲡ**ⲧⲉⲗⲟⲥ** ⲙⲡϫⲟⲉⲓⲥ ⲧⲧⲟ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲉⲗⲉⲁⲍⲁⲣ ⲡⲟⲩⲏⲏⲃ ⲕⲁⲧⲁⲧϩⲉ ⲛⲧⲁⲡϫⲟⲉⲓⲥ ϩⲱⲛ ⲉⲧⲟⲟⲧϥ ⲙⲙⲱⲩⲥⲏⲥ",
+      "english": "And Moses gave the tribute to the Lord, the heave-offering of God, to Eleazar the priest, as the Lord commanded Moses;",
+      "source": "Numbers 31",
+      "urn": "urn:cts:copticLit:ot.num.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉⲗⲟⲥ",
+        2,
+        16.355
+      ],
+      [
+        "ⲟⲃ",
+        1,
+        15.525
+      ],
+      [
+        "ⲝⲁ",
+        1,
+        15.525
+      ],
+      [
+        "ⲫⲁ",
+        5,
+        15.09
+      ],
+      [
+        "ϯϩⲟϯ",
+        1,
+        14.203
+      ],
+      [
+        "ⲗⲃ",
+        1,
+        14.203
+      ],
+      [
+        "ⲙ",
+        12,
+        13.168
+      ],
+      [
+        "ⲡⲓ",
+        11,
+        12.979
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        6,
+        12.482
+      ],
+      [
+        "ⲧⲓⲙⲏ",
+        1,
+        11.033
+      ],
+      [
+        "ϩⲱϯ",
+        1,
+        10.296
+      ],
+      [
+        "ⲡ",
+        6,
+        10.204
+      ],
+      [
+        "ⲧⲉⲛⲉ",
+        1,
+        8.963
+      ],
+      [
+        "ⲛⲧⲉ",
+        4,
+        8.896
+      ],
+      [
+        "ⲛⲧⲉⲛ",
+        1,
+        8.896
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        8.894
+      ],
+      [
+        "ϣⲟ",
+        1,
+        8.889
+      ],
+      [
+        "ⲱⲗⲓ",
+        1,
+        7.974
+      ],
+      [
+        "ϯ",
+        3,
+        7.875
+      ],
+      [
+        "ⲟⲩⲏⲃ",
+        1,
+        7.705
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        23.756
+      ],
+      [
+        "ⲧⲉⲗⲟⲥ",
+        6,
+        20.738
+      ],
+      [
+        "ⲙ",
+        23,
+        15.114
+      ],
+      [
+        "ⲡ",
+        25,
+        14.621
+      ],
+      [
+        "ϣⲱⲙ",
+        2,
+        14.09
+      ],
+      [
+        "ⲙⲡⲁⲧ",
+        3,
+        13.411
+      ],
+      [
+        "ⲡⲁ",
+        6,
+        12.323
+      ],
+      [
+        "ϣⲟ",
+        2,
+        11.656
+      ],
+      [
+        "ⲧⲓⲙⲏ",
+        1,
+        10.86
+      ],
+      [
+        "ϩⲟⲧⲉ",
+        2,
+        10.738
+      ],
+      [
+        "ϣⲉ",
+        2,
+        10.375
+      ],
+      [
+        "ⲧ",
+        6,
+        10.018
+      ],
+      [
+        "ⲁⲩⲱ",
+        6,
+        9.695
+      ],
+      [
+        "ⲛ",
+        8,
+        9.002
+      ],
+      [
+        "ϣⲁϩⲣⲁⲓ",
+        1,
+        8.176
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        7.779
+      ],
+      [
+        "ⲙⲱⲩⲥⲏⲥ",
+        1,
+        7.099
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        6.725
+      ],
+      [
+        "ϥ",
+        4,
+        6.714
+      ],
+      [
+        "ⲏ",
+        1,
+        5.672
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          9
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          6
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲧⲉⲗⲟⲥ",
+          4
+        ],
+        [
+          "ⲫⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_3_post_ⲫⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲟⲥ",
+          4
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲟⲃ_4_post_ϭⲟⲓⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_5_post_ⲁⲫⲉⲣⲉⲙⲁ",
+          1
+        ],
+        [
+          "ⲁⲫⲉⲣⲉⲙⲁ_4_post_ϭⲟⲓⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲧⲉⲗⲟⲥ",
+          "ⲧⲉⲗⲟⲥ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲫⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫⲁ_2_post_ⲙ",
+          "ⲡⲓ_4_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ⲧⲉⲗⲟⲥ",
+          "ⲧⲉⲗⲟⲥ_3_post_ⲫⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲟⲥ",
+          4
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲟⲥ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲧⲓⲙⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          "ⲟⲃ_4_post_ϭⲟⲓⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲧⲉⲗⲟⲥ",
+          "ⲡⲟⲩ_1_pre_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲧⲉⲗⲟⲥ",
+          "ⲧⲉⲗⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ϭⲟⲓⲥ_3_post_ⲡ",
+          "ⲡⲓ_5_post_ⲁⲫⲉⲣⲉⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲓ_5_post_ⲁⲫⲉⲣⲉⲙⲁ",
+          "ⲁⲫⲉⲣⲉⲙⲁ_4_post_ϭⲟⲓⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲧⲉⲗⲟⲥ",
+          8
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          11
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          6
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_3_post_ⲡⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲉⲗⲟⲥ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲓⲙⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ⲧⲟ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲧⲉⲗⲟⲥ",
+          "ⲧⲉⲗⲟⲥ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲡⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁ_2_post_ⲙ",
+          "ⲡ_4_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲧⲉⲗⲟⲥ",
+          "ⲧⲉⲗⲟⲥ_3_post_ⲡⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          "ⲛ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲧⲓⲙⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲛ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲗⲟⲥ_0_node",
+          "ⲛⲧ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲧⲉⲗⲟⲥ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲉⲗⲟⲥ",
+          "ⲡ_1_pre_ⲧⲉⲗⲟⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲧ_2_post_ⲧⲟ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲧⲟ",
+          "ⲧⲟ_1_post_ⲧⲉⲗⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2656,
+      "count": 14
+    },
+    "B": {
+      "rate": 0.11,
+      "rank": 2306,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "2168",
+    "grl_lemma": "τέλος",
+    "grl_meaning": "end, goal; tax",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1772b; Preisigke 2:590"
+  }
+}

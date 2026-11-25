@@ -1,0 +1,77 @@
+{
+  "id": "C6329",
+  "forms": [
+    {
+      "id": "CF14670",
+      "orth": "ⲉⲃⲟⲗ ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.5,
+        "rank": 1129,
+        "count": 79
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS7024",
+      "bibliography": "CD 633b-634a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉⲛϣⲁϫⲉ ⲛⲟⲩⲥⲟⲫⲓⲁ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ϩⲛⲟⲩⲙⲩⲥⲧⲏⲣⲓⲟⲛ . ⲧⲁⲓ ⲉⲧϩⲏⲡ ⲧⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲡⲟⲣϫⲥ **ⲉⲃⲟⲗ **ϩⲁ**ⲧϩⲏ** ⲛⲛⲁⲓⲱⲛ ⲉⲡⲉⲛⲉⲟⲟⲩ .",
+      "english": "But we speak God&apos;s wisdom in a mystery, the wisdom that has been hidden, which God foreordained before the worlds for our glory,",
+      "source": "1 Corinthians 2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲙⲉϩⲥⲛⲁⲩ ϩⲱⲱϥ ⲛⲛⲟⲏⲙⲁ ⲛⲧⲁⲕⲟⲩⲱ ⲉⲕϫⲱ ⲙⲙⲟϥ ⲛⲁⲛ ⲧⲉⲛⲟⲩ ⲉⲧⲃⲉⲧⲉⲯⲩⲭⲏ ⲉⲣϫⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ϫⲉⲉⲥϣⲁⲛⲉⲓ ⲉⲡⲧⲟⲡⲟⲥ ⲛⲛⲁⲣⲭⲱⲛ ⲛⲧⲉϩⲓⲏ ⲛⲧⲙⲏⲧⲉ · ⲁⲩⲱ ϣⲁⲩⲉⲓ **ⲉⲃⲟⲗ **ϩⲁ**ⲧⲉⲩϩⲏ** ϩⲛⲟⲩⲛⲟϭ ⲛϩⲟⲧⲉ ⲉⲙⲁϣⲟ ⲉⲙⲁϣⲟ ·",
+      "english": "“The second thought is on the other hand that which thou hast just said unto us concerning the soul which receiveth the mysteries: 'If it cometh into the region of the rulers of the way of the midst, they come forth to meet it in exceedingly great fear and they are afraid of it.”",
+      "source": "Pistis Sophia Book 3 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:87-88",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲛⲟⲛ ϩⲉⲛⲁⲥⲱⲙⲁⲧⲟⲥ ⲁⲛⲃⲱⲗ **ⲉⲃⲟⲗ **ϩⲁ**ⲧϩⲟⲧⲉ** ·",
+      "english": "For behold, even we who are incorporeal shall perish through terror.'",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6328",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, in, at; from; by reason of; for, in respect of, on behalf of; for (of price); against"
+    },
+    {
+      "target": "C6332",
+      "label": "ϩⲁⲣⲓϩⲁⲣⲟ⸗",
+      "pos": "PREP",
+      "gloss": "of oneself, alone, apart"
+    },
+    {
+      "target": "C6330",
+      "label": "ⲉϩⲟⲩⲛ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "in beneath"
+    },
+    {
+      "target": "C6331",
+      "label": "ⲉϩⲣⲁⲓ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, up to"
+    }
+  ]
+}

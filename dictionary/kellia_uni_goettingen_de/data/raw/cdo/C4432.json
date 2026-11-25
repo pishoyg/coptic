@@ -1,0 +1,44 @@
+{
+  "id": "C4432",
+  "forms": [
+    {
+      "id": "CF10816",
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.79,
+        "rank": 54,
+        "count": 3912
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5019",
+      "bibliography": "CD 289b; KoptHWb 241; ChLCS 60a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3049",
+      "type": "cf",
+      "label": "part, fraction"
+    }
+  ],
+  "etym": {
+    "egy_num": "184990",
+    "egy_lemma": "ḏr.w",
+    "english": "end; limit; boundary",
+    "german": "Ende; Grenze; Bereich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/184990"
+  }
+}

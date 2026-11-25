@@ -1,0 +1,170 @@
+{
+  "id": "C878",
+  "forms": [
+    {
+      "id": "CF3098",
+      "orth": "ⲉⲓⲁϩⲟⲟⲩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8787,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1030",
+      "bibliography": "CD 76a; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲥⲉⲧⲥⲟ ⲛⲛⲉⲑⲏⲣⲓⲟⲛ ⲧⲏⲣⲟⲩ ⲛⲧⲥⲱϣⲉ ⲛ**ⲉⲓⲁϩⲟⲟⲩⲧ** ϣⲁⲩϫⲓⲧⲟⲩ ⲉⲡⲉⲩⲉⲓⲃⲉ",
+      "english": "They shall give drink to all the wild beasts of the field: the wild asses shall take of them to quench their thirst.",
+      "source": "Psalms 103",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲁⲕⲟⲥ ⲛϭⲓⲟⲩⲣⲓⲣ ϩⲟⲟⲩⲧ ⲉⲃⲟⲗ ϩⲛⲧⲥⲱϣⲉ ⲁⲩⲱ ⲟⲩ**ⲉⲓⲁϩⲟⲟⲩⲧ** ⲁϥⲙⲁⲛⲟⲩⲟⲩⲥ",
+      "english": "The boar out of the wood has laid it waste, and the wild beast has devoured it.",
+      "source": "Psalms 79",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:79",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲛⲟⲩⲟⲩⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲁⲕⲧⲟ",
+        1,
+        18.013
+      ],
+      [
+        "ⲥⲱϣⲉ",
+        2,
+        13.958
+      ],
+      [
+        "ϫⲓⲧ",
+        1,
+        9.783
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲁϩⲟⲟⲩⲧ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲁϩⲟⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲁϩⲟⲟⲩⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲁϩⲟⲟⲩⲧ",
+          "ⲟⲩ_1_pre_ⲉⲓⲁϩⲟⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲁϩⲟⲟⲩⲧ",
+          "ⲉⲓⲁϩⲟⲟⲩⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8340,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C879",
+      "label": "ⲉⲓⲁ ⲛⲧⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "desert, wild ass"
+    },
+    {
+      "target": "C880",
+      "label": "ⲉⲓⲁⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "she ass"
+    },
+    {
+      "target": "C876",
+      "label": "ⲉⲓⲱ",
+      "pos": "N",
+      "gloss": "ass"
+    },
+    {
+      "target": "C877",
+      "label": "ⲉⲓⲱ",
+      "pos": "N",
+      "gloss": "ass"
+    }
+  ]
+}

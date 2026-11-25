@@ -1,0 +1,45 @@
+{
+  "id": "C7244",
+  "forms": [
+    {
+      "id": "CF16547",
+      "orth": "ⲟ ⲛϫⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7994",
+      "bibliography": "CD 774a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7242",
+      "label": "ϫⲛⲁ",
+      "pos": "V",
+      "gloss": "be quenched, quench, make cease"
+    },
+    {
+      "target": "C7243",
+      "label": "ⲁⲧϫⲛⲁ",
+      "pos": "N",
+      "gloss": "unquenchable"
+    }
+  ]
+}

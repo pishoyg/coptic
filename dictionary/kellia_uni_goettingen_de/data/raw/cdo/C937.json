@@ -1,0 +1,264 @@
+{
+  "id": "C937",
+  "forms": [
+    {
+      "id": "CF3218",
+      "orth": "ⲣⲉⲓⲉⲡϣⲱⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9017,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1094",
+      "bibliography": "CD 81b; ChLCS 14a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲣⲉⲛⲕⲱ ⲛⲁⲛ ⲛⲛⲉⲧⲙⲟⲕϩ ϩⲁⲟⲩϩⲁⲧ ⲁⲩⲱ ⲛϩⲏⲕⲉ ⲉⲡⲙⲁ ⲛϩⲉⲛⲧⲟⲟⲩⲉ ⲛⲧⲛ**ⲣⲉⲓⲉⲡϣⲱⲧ** ⲉⲃⲟⲗ ϩⲛⲅⲉⲛⲏⲙⲁ ⲛⲓⲙ",
+      "english": "That we may buy the poor for silver, and the needy for shoes; and we will trade in every kind of fruit.",
+      "source": "Amos 8",
+      "urn": "urn:cts:copticLit:ot.amos.coptot:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲣⲁⲃⲓⲁ ⲙⲛⲛⲁⲣⲭⲱⲛ ⲧⲏⲣⲟⲩ ⲛⲕⲏⲇⲁⲣ ⲛⲁⲓ ⲛⲉⲩⲟ ⲛⲉϣⲱⲧ ⲛⲉ ϩⲛⲧⲟⲟⲧⲉ ϩⲉⲛϭⲁⲙⲟⲩⲗ ⲙⲛϩⲉⲛⲟⲉⲓⲗⲉ ⲁⲩⲱ ϩⲉⲛϩⲓⲉⲓⲃ ⲛⲁⲓ ⲉⲧⲟⲩ**ⲣⲉⲓⲉⲡϣⲱⲧ** ⲙⲙⲟⲟⲩ ⲛⲉ",
+      "english": "Arabia and all the princes of Kedar, these were thy traders with thee, bringing camels, and lambs, and rams, in which they trade with thee.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲟⲩⲉ",
+        1,
+        13.954
+      ],
+      [
+        "ⲅⲉⲛⲏⲙⲁ",
+        1,
+        13.74
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        7.287
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲣⲉⲓⲉⲡϣⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲅⲉⲛⲏⲙⲁ_3_post_ⲛⲓⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          "ⲣⲉⲓⲉⲡϣⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉⲓⲉⲡϣⲱⲧ_0_node",
+          "ⲙⲙⲟ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          "ⲧⲛ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          "ⲣⲉⲓⲉⲡϣⲱⲧ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉⲓⲉⲡϣⲱⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲣⲉⲓⲉⲡϣⲱⲧ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲅⲉⲛⲏⲙⲁ_3_post_ⲛⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8563,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C935",
+      "label": "ⲉⲓⲉⲡ-",
+      "pos": "N",
+      "gloss": "(with or without ⲛ-) + name of craft, its material or product"
+    },
+    {
+      "target": "C936",
+      "label": "ⲉⲓⲉⲡϣⲱⲧ",
+      "pos": "N",
+      "gloss": "trade; merchandise"
+    },
+    {
+      "target": "C934",
+      "label": "ⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art, occupation"
+    },
+    {
+      "target": "C941",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craft, art"
+    },
+    {
+      "target": "C939",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C940",
+      "label": "ⲣⲉϥⲣⲉⲓⲟⲡⲉ",
+      "pos": "N",
+      "gloss": "craftsman"
+    },
+    {
+      "target": "C938",
+      "label": "ⲣⲉⲓⲟⲡⲉ",
+      "pos": "V",
+      "gloss": "spin"
+    }
+  ]
+}

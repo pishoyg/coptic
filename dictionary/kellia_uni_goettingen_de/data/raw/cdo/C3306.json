@@ -1,0 +1,68 @@
+{
+  "id": "C3306",
+  "forms": [
+    {
+      "id": "CF8500",
+      "orth": "ⲙⲁ ⲛⲥⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6882,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3773",
+      "bibliography": "CD 318b; ChLCS 45b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3309",
+      "label": "ϭⲓⲛⲥⲱ",
+      "pos": "N",
+      "gloss": "drink"
+    },
+    {
+      "target": "C3308",
+      "label": "ⲁⲧⲥⲱ",
+      "pos": "N",
+      "gloss": "without drinking"
+    },
+    {
+      "target": "C3307",
+      "label": "ⲣⲉϥⲥⲱ",
+      "pos": "N",
+      "gloss": "drinker"
+    },
+    {
+      "target": "C3304",
+      "label": "ⲥⲱ",
+      "pos": "V",
+      "gloss": "drink"
+    },
+    {
+      "target": "C3305",
+      "label": "ⲥⲱ",
+      "pos": "N",
+      "gloss": "drinking, potation"
+    },
+    {
+      "target": "C3310",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "N",
+      "gloss": "drinking bout, carousal"
+    }
+  ]
+}

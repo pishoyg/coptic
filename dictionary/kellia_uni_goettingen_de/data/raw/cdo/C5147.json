@@ -1,0 +1,57 @@
+{
+  "id": "C5147",
+  "forms": [
+    {
+      "id": "CF12259",
+      "orth": "ⲁⲧⲟⲩⲱⲣϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5780",
+      "bibliography": "CD 492a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5148",
+      "label": "ⲟⲩⲣⲉϩ",
+      "pos": "N",
+      "gloss": "free space"
+    },
+    {
+      "target": "C5144",
+      "label": "ⲟⲩⲱⲣϩ",
+      "pos": "V",
+      "gloss": "be open, be free; set open, set free, renounce"
+    },
+    {
+      "target": "C5146",
+      "label": "ⲟⲩⲱⲣϩ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "allow in, admit"
+    },
+    {
+      "target": "C5145",
+      "label": "ⲟⲩⲱⲣϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "set free, dismiss"
+    }
+  ]
+}

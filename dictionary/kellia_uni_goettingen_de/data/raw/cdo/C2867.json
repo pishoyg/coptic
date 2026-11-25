@@ -1,0 +1,169 @@
+{
+  "id": "C2867",
+  "forms": [
+    {
+      "id": "CF7590",
+      "orth": "ⲡⲉⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8456,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3278",
+      "bibliography": "CD 267a; KoptHWb 150; DELC 162; ChLCS 37b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲧⲟⲩⲏϩ ϩⲛⲅⲁⲃⲁⲱⲛ ⲁⲩϫⲟⲟⲩ ⲉⲣⲁⲧϥ ⲛⲓⲏⲥⲟⲩⲥ ⲉϩⲣⲁⲓ ⲉⲧ**ⲡⲉⲣⲉ**ⲙⲃⲟⲗⲏ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲅⲁⲗⲅⲁⲗⲁ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲡⲣⲛⲧⲟⲟⲧⲕ ⲉⲣⲟⲕ ⲉⲛⲉⲕϩⲙϩⲁⲗ ⲉⲧⲉⲁⲛⲟⲛ ⲛⲉ ⲧⲱⲟⲩⲛ ⲁⲙⲟⲩ ⲛⲁⲛ ⲉϩⲣⲁⲓ ⲧⲁⲭⲏ ⲛⲅⲛⲁϩⲙⲉⲛ ⲛⲅⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲛ ⲉⲃⲟⲗ ϫⲉⲁⲩⲥⲟⲩⲱϩ ⲉⲣⲟⲛ ⲛϭⲓⲛⲣⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲙⲟⲣⲣⲁⲓⲟⲥ ⲉⲧⲟⲩⲏϩ ϩⲙⲡⲧⲟⲟⲩ",
+      "english": "And the inhabitants of Gabaon sent to Joshua into the camp to Galgala, saying, Slack not thy hands from thy servants: come up quickly to us, and help us, and rescue us; for all the kings of the Amorites who dwell in the hill country are gathered together against us.",
+      "source": "Joshua 10",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲃⲟⲗⲏ",
+        1,
+        20.598
+      ],
+      [
+        "ⲣⲁⲥ",
+        1,
+        16.898
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        12.055
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        1,
+        11.644
+      ],
+      [
+        "ⲓⲥⲣⲁⲏⲗ",
+        1,
+        9.771
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.544
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.526
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲃⲟⲗⲏ_1_post_ⲡⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲣⲉ_0_node",
+          "ⲙⲃⲟⲗⲏ_1_post_ⲡⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲃⲟⲗⲏ_1_post_ⲡⲉⲣⲉ",
+          "ⲙ_1_post_ⲡⲉⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲉⲣⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲥⲣⲁⲏⲗ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14675,
+      "count": 1
+    }
+  }
+}

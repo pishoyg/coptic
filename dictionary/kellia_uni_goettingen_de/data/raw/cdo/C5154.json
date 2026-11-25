@@ -1,0 +1,239 @@
+{
+  "id": "C5154",
+  "forms": [
+    {
+      "id": "CF12274",
+      "orth": "ⲟⲩⲉⲓⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7234,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲓⲥⲉ",
+      "dialect": "S",
+      "id": "1741.1"
+    },
+    {
+      "orth": "ⲟⲩⲁⲥⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4538,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲩⲓⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4870,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲃⲓⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13434,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲟⲩⲁⲥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6138,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲁⲥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3211,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲩⲓⲉⲓⲥⲉ",
+      "dialect": "A",
+      "id": "1741.7"
+    },
+    {
+      "orth": "ⲟⲩⲉⲥⲧ⸗",
+      "dialect": "F",
+      "id": "1741.8"
+    },
+    {
+      "orth": "ⲟⲩⲓⲥⲉ",
+      "dialect": "L",
+      "id": "1741.9"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5787",
+      "bibliography": "CD 492a; CDC 76b; CED 216; KoptHWb 277; DELC 237b; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲙⲡⲕⲥⲧⲱⲧ ⲉⲕⲛⲁⲩ ⲉⲏⲥⲁⲓⲁⲥ ⲉⲩ**ⲟⲩⲉⲓⲥⲉ** ⲙⲙⲟϥ ϩⲓⲧⲛⲙⲁⲛⲁⲥⲥⲏ ·",
+      "english": "If He was, why didst thou not quake when they sawed Isaiah asunder by (the command of) Manasseh?",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡϫⲁϫⲉ ⲕⲱϩ ⲉⲣⲟⲕ ⲉⲣⲟⲕ ⲛⲧϩⲉ ⲛⲏⲥⲁⲓⲁⲥ ⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ · ⲡⲁⲓ ⲛⲧⲁⲩ**ⲟⲩⲁⲥⲧ**ϥ ϩⲛⲟⲩⲃⲁϣⲟⲩⲣ ⲛϣⲉ · ⲁⲩⲱ ⲙⲡⲉⲡⲕⲱϩⲧ ϫⲱϩ ⲉⲣⲟⲕ ⲛⲧϩⲉ ⲙⲡϣⲟⲙⲛⲧ ⲛϩⲁⲅⲓⲟⲥ · ⲉⲧⲉⲙⲡⲉⲡⲕⲱϩⲧ ⲛⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ ϫⲱϩ ⲉⲣⲟⲟⲩ ·",
+      "english": "The Enemy hath been envious of thee as he was of Isaiah the Prophet, whose body they sawed in twain lengthwise with a wood saw. And the fire hath not touched thee, even as the fire of Nebuchadnezzar touched not the Three Holy (Children).",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲥⲁⲓⲁⲥ",
+        2,
+        15.843
+      ],
+      [
+        "ⲙⲁⲛⲁⲥⲥⲏ",
+        2,
+        15.327
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        2,
+        12.012
+      ],
+      [
+        "ⲉ",
+        4,
+        9.232
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲟⲩⲉⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲛⲁⲥⲥⲏ_2_post_ϩⲓⲧⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲟⲩⲉⲓⲥⲉ",
+          "ⲟⲩⲉⲓⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲉⲓⲥⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ϩⲓⲧⲛ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲟⲩⲉⲓⲥⲉ",
+          "ⲙⲁⲛⲁⲥⲥⲏ_2_post_ϩⲓⲧⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5637,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5156",
+      "label": "ⲟⲩⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "swelling"
+    },
+    {
+      "target": "C5155",
+      "label": "ⲟⲩⲓⲥⲓ",
+      "pos": "V",
+      "gloss": "saw; swell(?)"
+    },
+    {
+      "target": "C5157",
+      "label": "ⲣⲉϥⲟⲩⲉⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "sawyer"
+    }
+  ],
+  "etym": {
+    "egy_num": "49470",
+    "egy_lemma": "wsi̯",
+    "demo_num": "d1506",
+    "demo_lemma": "ws",
+    "english": "to saw; to cut",
+    "german": "sägen; zerschneiden",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/49470",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1506"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "C1620",
+  "forms": [
+    {
+      "id": "CF4707",
+      "orth": "ⲗⲓⲕⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17001,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗⲓⲝ",
+      "dialect": "B",
+      "id": "960.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1883",
+      "bibliography": "CD 140a; KoptHWb 77; ChLCS 21b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲕⲱ ⲛⲟⲩⲕⲁⲕⲉ ⲛ**ⲗⲓⲕⲧ**ϥ ⲉⲣⲉⲧⲉϥⲥⲕⲏⲛⲏ ⲕⲱⲧⲉ ⲉⲣⲟϥ ⲟⲩⲙⲟⲟⲩ ⲉϥϩⲏⲡ ϩⲛⲛⲉⲕⲗⲟⲟⲗⲉ ⲛⲁⲏⲣ",
+      "english": "At the brightness before him the clouds passed, hail and coals of fire.",
+      "source": "Psalms 17",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲕⲏⲛⲏ",
+        1,
+        12.464
+      ],
+      [
+        "ⲕⲁⲕⲉ",
+        1,
+        11.601
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲓⲕⲧ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲗⲓⲕⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲓⲕⲧ_0_node",
+          "ϥ_1_post_ⲗⲓⲕⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16605,
+      "count": 1
+    }
+  }
+}

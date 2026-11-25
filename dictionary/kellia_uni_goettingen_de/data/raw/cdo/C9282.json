@@ -1,0 +1,424 @@
+{
+  "id": "C9282",
+  "forms": [
+    {
+      "id": "CF23276",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23283",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.55,
+        "rank": 535,
+        "count": 244
+      }
+    },
+    {
+      "id": "CF23277",
+      "orth": "ⲕⲁⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23278",
+      "orth": "ⲕⲁⲗⲟⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23280",
+      "orth": "ⲕⲁⲗⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF23279",
+      "orth": "ⲕⲁⲗⲟⲟⲥⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23282",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF23281",
+      "orth": "ⲕⲁⲗⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3223,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF23284",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.07,
+        "rank": 697,
+        "count": 91
+      }
+    },
+    {
+      "id": "CF23285",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF23286",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF23287",
+      "orth": "ⲕⲁⲗⲱⲥ",
+      "dialect": "V"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS11618",
+      "bibliography": "DDGLC",
+      "cu_ID": "46"
+    },
+    {
+      "id": "CS11619",
+      "bibliography": "DDGLC",
+      "cu_ID": "8594"
+    },
+    {
+      "id": "CS11620",
+      "bibliography": "DDGLC",
+      "cu_ID": "6127"
+    },
+    {
+      "id": "CS11621",
+      "bibliography": "DDGLC",
+      "cu_ID": "9721"
+    },
+    {
+      "id": "CS11622",
+      "bibliography": "DDGLC",
+      "cu_ID": "9722"
+    },
+    {
+      "id": "CS11623",
+      "bibliography": "DDGLC",
+      "cu_ID": "583"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲱⲥⲧⲉ ⲫⲏ ⲉⲧϯ ⲛⲧⲉϥⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲩⲅⲁⲙⲟⲥ **ⲕⲁⲗⲱⲥ** ϥⲣⲁ ⲙⲙⲟⲥ ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲉⲛϥϯ ⲛⲑⲱϥ ⲁⲛ ⲟⲩϩⲟⲩⲟ ⲕⲁⲗⲱⲥ ⲡⲉⲧⲉϥⲛⲁⲁⲓϥ .",
+      "english": "So then both he who gives his own virgin in marriage does well, and he who doesn't give her in marriage does better.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "☧ ϯϣⲓⲛⲉ ⲉⲣⲟⲕ **ⲕⲁⲗⲱⲥ** ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲕⲁⲁⲕ ·",
+      "english": "I greet you well, may the Lord keep you.",
+      "source": "Letter about wheat",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_31_14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏ ⲉⲧϭⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲓϧⲣⲏⲟⲩⲓ ⲛ**ⲕⲁⲗⲱⲥ** ϯⲓⲣⲓ ⲙⲙⲱⲟⲩ ⲛϫⲱⲃ ⲟⲩⲟϩ ⲛⲁⲧⲉⲙⲓ .",
+      "english": "Those who receive good food I consider weak and ignorant.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲕⲁⲗⲱⲥ** ⲁⲡⲁⲓ ϣⲱⲡⲉ ⲙⲙⲟⲕ ⲻ",
+      "english": "It is well that this happened to you.”",
+      "source": "Apophthegmata Patrum Sahidic 017",
+      "urn": "urn:cts:copticLit:ap.17.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲉⲣⲟⲩⲱ ⲛϫⲉⲡⲓⲁⲗⲟⲩ ⲉⲑⲟⲩⲁⲃ ⲓⲥⲁⲁⲕ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲕⲁⲗⲱⲥ** ⲙⲉⲛ ⲁⲕϯⲥⲃⲱ ⲛⲏⲓ ⲱ ⲡⲁⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ ⲟⲩ ⲙⲟⲛⲟⲛ ⲉϭⲟϫⲓ ⲛⲥⲱⲕ ⲁⲗⲗⲁ ϯⲥⲉⲃⲧⲱⲧ ⲉⲙⲟⲩ ⲉϫⲉⲛⲫⲣⲁⲛ ⲙⲡⲉⲛϭⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲫⲁⲓ ⲉⲧⲁⲓⲭⲁϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛⲥⲱⲓ ⲟⲩⲟϩ ⲁⲓⲟⲩⲁϩⲅ ⲛⲥⲱϥ ⲉϣⲱⲡ ϯⲛⲁⲉⲣⲡⲉⲙⲡϣⲁ ⲙⲡⲓⲱⲛϧ ⲛⲉⲛⲉϩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲧⲉϥⲙⲉⲧⲁⲅⲁⲑⲟⲥ .",
+      "english": "The young and holy boy Isaac answered him and said to him, ‘Truly you give me excellent teachings, O my holy father; not only will I follow you, but I am also ready to die for the name of my Lord Jesus the Messiah, for whom I have left everything behind, in order to make myself worthy of eternal life, thanks to his goodness.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲇⲓⲟⲣⲑⲉⲟⲩ ⲙⲡⲉⲕⲃⲓⲟⲥ **ⲕⲁⲗⲱⲥ** ·",
+      "english": "Be careful to make thy life exceedingly correct.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲗⲱⲥ",
+        10,
+        16.645
+      ],
+      [
+        "ϫⲉ",
+        42,
+        15.806
+      ],
+      [
+        "ⲥ",
+        38,
+        15.664
+      ],
+      [
+        "ⲅⲁⲙⲟⲥ",
+        3,
+        15.357
+      ],
+      [
+        "ⲁ",
+        49,
+        15.326
+      ],
+      [
+        "ⲑⲱϥ",
+        3,
+        15.135
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        6,
+        14.733
+      ],
+      [
+        "ⲕ",
+        26,
+        14.721
+      ],
+      [
+        "ⲧⲉⲛ\\'ⲩⲭⲏ",
+        2,
+        14.602
+      ],
+      [
+        "ⲙⲙⲟ",
+        23,
+        14.431
+      ],
+      [
+        "ⲛ",
+        43,
+        14.362
+      ],
+      [
+        "ⲉⲣⲁⲑⲉⲧⲓⲛ",
+        3,
+        14.357
+      ],
+      [
+        "ⲣⲁ",
+        6,
+        14.27
+      ],
+      [
+        "ⲙⲉⲛ",
+        8,
+        14.089
+      ],
+      [
+        ".",
+        29,
+        13.683
+      ],
+      [
+        "ⲛⲁ",
+        26,
+        13.548
+      ],
+      [
+        "ⲟⲩ",
+        34,
+        13.509
+      ],
+      [
+        "ⲣⲉϥϯⲥⲃⲱ",
+        5,
+        13.509
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        11,
+        13.451
+      ],
+      [
+        "ϥ",
+        36,
+        13.426
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        23,
+        26.22
+      ],
+      [
+        "ⲁ",
+        172,
+        19.375
+      ],
+      [
+        "ⲕ",
+        73,
+        17.474
+      ],
+      [
+        "ⲉⲩⲅⲉ",
+        11,
+        17.473
+      ],
+      [
+        "ϥ",
+        125,
+        17.471
+      ],
+      [
+        "ⲥ",
+        82,
+        17.399
+      ],
+      [
+        "ϫⲉ",
+        72,
+        16.708
+      ],
+      [
+        "ⲛ",
+        118,
+        16.509
+      ],
+      [
+        "ϫⲟⲟ",
+        29,
+        15.742
+      ],
+      [
+        "ⲩⲅⲉ",
+        3,
+        15.405
+      ],
+      [
+        "ⲁⲩⲱ",
+        57,
+        15.297
+      ],
+      [
+        "ⲡⲁⲓ",
+        28,
+        15.051
+      ],
+      [
+        "ⲛⲁ",
+        54,
+        15.005
+      ],
+      [
+        "ϭⲓⲛⲁϩⲉⲣⲁⲧⲕ",
+        2,
+        14.65
+      ],
+      [
+        "ϩⲛ",
+        41,
+        14.603
+      ],
+      [
+        "ⲉ",
+        60,
+        14.589
+      ],
+      [
+        "ⲕⲟⲥⲙⲉⲓ",
+        5,
+        14.258
+      ],
+      [
+        "ⲕⲱⲛⲥ",
+        6,
+        14.215
+      ],
+      [
+        "ⲡⲉ",
+        37,
+        14.188
+      ],
+      [
+        "ⲙⲙⲟ",
+        33,
+        14.165
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁⲗⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_1_post_ⲕⲁⲗⲱⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲁⲗⲱⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲏⲓ",
+          "ⲡⲟⲩ_2_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_2_post_ⲏⲓ",
+          "ⲏⲓ_1_post_ⲕⲁⲗⲱⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.56,
+      "rank": 463,
+      "count": 247
+    },
+    "B": {
+      "rate": 1.07,
+      "rank": 609,
+      "count": 91
+    }
+  },
+  "etym": {
+    "grl_ID": "1014",
+    "grl_lemma": "καλῶς",
+    "grl_meaning": "well, rightly",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 870a; Preisigke 1:731"
+  }
+}

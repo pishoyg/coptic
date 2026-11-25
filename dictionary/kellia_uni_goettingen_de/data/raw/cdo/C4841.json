@@ -1,0 +1,92 @@
+{
+  "id": "C4841",
+  "forms": [
+    {
+      "id": "CF31852",
+      "orth": "ⲧϫⲁⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19721,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31851",
+      "orth": "ⲧϫⲁⲉⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19811,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5461",
+      "bibliography": "CD 462b; DELC 324b; ChLCS 64b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲡ",
+        1,
+        14.691
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C5679",
+      "type": "cf",
+      "label": "rise"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4840",
+      "label": "ⲧϫⲁⲓⲟ",
+      "pos": "V",
+      "gloss": "make to rise, make appear, triumph"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "C5866",
+  "forms": [
+    {
+      "id": "CF13730",
+      "orth": "ϣⲗϭⲟⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11452,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6548",
+      "bibliography": "CD 563a; CED 242; KoptHWb 313; ChLCS 77b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲡϫⲱ",
+        1,
+        20.598
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲗϭⲟⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11034,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d6129",
+    "demo_lemma": "šlgm",
+    "english": "[rapeseed]",
+    "german": "Raps",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6129"
+  }
+}

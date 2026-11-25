@@ -1,0 +1,298 @@
+{
+  "id": "C1127",
+  "forms": [
+    {
+      "id": "CF3622",
+      "orth": "ⲕⲟⲩⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4433,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1313",
+      "bibliography": "CD 101a; KoptHWb 59; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲧⲉϥⲁⲡⲉ ⲉⲓⲛⲥⲁⲧ**ⲕⲟⲩⲕⲉ** ·",
+      "english": "And his head hung by the skin of his neck.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲉⲓⲣⲉ ⲇⲉ ⲛⲛⲁⲓ ⲛⲁϥ ϣⲁϣⲟⲙⲛⲧ ⲛⲥⲟⲡ :— ϣⲁⲛⲧⲉⲛⲉϥ**ⲕⲟⲩⲕⲉ** ϭⲱⲗ ·",
+      "english": "And they did these things three times to him until his skin peeled off him.",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲉⲧⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲕⲉⲕⲧⲉϥ",
+        1,
+        19.598
+      ],
+      [
+        "ϩⲣⲙⲁⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ϭⲱⲗ",
+        1,
+        16.428
+      ],
+      [
+        "ϩⲉⲣⲙⲁⲛ",
+        1,
+        15.598
+      ],
+      [
+        "ⲃⲟⲗ",
+        2,
+        13.535
+      ],
+      [
+        ":—",
+        1,
+        12.778
+      ],
+      [
+        "ⲙⲙⲁⲧⲉ",
+        1,
+        11.559
+      ],
+      [
+        "ⲙⲛⲛⲥⲱ",
+        1,
+        11.299
+      ],
+      [
+        "ⲥⲙⲟⲧ",
+        1,
+        11.263
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        11.094
+      ],
+      [
+        "ⲧ",
+        3,
+        9.826
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        9.81
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ϩⲉ",
+        2,
+        9.727
+      ],
+      [
+        "ϥ",
+        4,
+        9.522
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        9.079
+      ],
+      [
+        "ⲁ",
+        3,
+        8.799
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        8.76
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲩⲕⲉ_0_node",
+          6
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲕⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲣⲙⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲃⲟⲗ_1_post_ⲕⲟⲩⲕⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲣⲙⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲕⲟⲩⲕⲉ",
+          "ⲕⲟⲩⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲟⲩⲕⲉ",
+          "ⲕⲟⲩⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲕⲉ_0_node",
+          "ⲛ_1_post_ⲕⲟⲩⲕⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲕⲉ",
+          "ϩⲉⲣⲙⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲣⲙⲁⲛ_2_post_ⲛ",
+          "ⲡ_2_post_ⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲃⲟⲗ",
+          "ⲃⲟⲗ_1_post_ⲕⲟⲩⲕⲉ",
+          2
+        ],
+        [
+          "ⲃⲟⲗ_1_post_ⲕⲟⲩⲕⲉ",
+          "ⲛ_2_post_ⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲩⲕⲉ",
+          "ϩⲣⲙⲁⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲙⲁⲛ_2_post_ⲛ",
+          "ⲡ_2_post_ⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲕⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲕⲟⲩⲕⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲟⲩⲕⲉ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7205,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1128",
+      "label": "ⲕⲏⲕⲥ",
+      "pos": "N",
+      "gloss": "what is peeled off, strip, scale"
+    },
+    {
+      "target": "C1122",
+      "label": "ⲕⲱⲕ",
+      "pos": "V",
+      "gloss": "peel, strip off, divest; peel off, become bare"
+    },
+    {
+      "target": "C1123",
+      "label": "ⲕⲱⲕ",
+      "pos": "N",
+      "gloss": "bareness, nakedness"
+    },
+    {
+      "target": "C1124",
+      "label": "ⲕⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "peel, strip off, divest"
+    },
+    {
+      "target": "C1125",
+      "label": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "pos": "V",
+      "gloss": "undress, make naked; be naked"
+    },
+    {
+      "target": "C1126",
+      "label": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "pos": "N",
+      "gloss": "nakedness"
+    }
+  ]
+}

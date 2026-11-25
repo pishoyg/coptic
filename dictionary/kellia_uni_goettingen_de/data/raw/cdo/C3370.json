@@ -1,0 +1,63 @@
+{
+  "id": "C3370",
+  "forms": [
+    {
+      "id": "CF8632",
+      "orth": "ⲙⲁ ⲛⲥⲟⲃϯ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3841",
+      "bibliography": "CD 324a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3372",
+      "label": "ϫⲓⲛⲥⲟⲃϯ",
+      "pos": "N",
+      "gloss": "preparation"
+    },
+    {
+      "target": "C3369",
+      "label": "ⲁⲧⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "unprovided"
+    },
+    {
+      "target": "C3371",
+      "label": "ⲣⲉϥⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "preparer"
+    },
+    {
+      "target": "C3368",
+      "label": "ⲣⲥⲟⲃⲧⲉ",
+      "pos": "V",
+      "gloss": "make preparation"
+    },
+    {
+      "target": "C3366",
+      "label": "ⲥⲟⲃⲧⲉ",
+      "pos": "V",
+      "gloss": "become, be ready, prepare, set in order"
+    },
+    {
+      "target": "C3367",
+      "label": "ⲥⲟⲃⲧⲉ",
+      "pos": "N",
+      "gloss": "preparation, things prepared, furniture"
+    }
+  ]
+}

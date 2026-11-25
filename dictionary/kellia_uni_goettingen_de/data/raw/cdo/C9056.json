@@ -1,0 +1,376 @@
+{
+  "id": "C9056",
+  "forms": [
+    {
+      "id": "CF22386",
+      "orth": "ⲉⲧⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF22390",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.42,
+        "rank": 569,
+        "count": 224
+      }
+    },
+    {
+      "id": "CF22387",
+      "orth": "ⲁⲓⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.31,
+        "rank": 598,
+        "count": 207
+      }
+    },
+    {
+      "id": "CF22388",
+      "orth": "ⲁⲓⲧⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13568,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22389",
+      "orth": "ⲉⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22391",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF22392",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.1,
+        "rank": 450,
+        "count": 178
+      }
+    },
+    {
+      "id": "CF22393",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF22394",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF22395",
+      "orth": "ⲉⲧⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS11145",
+      "bibliography": "DDGLC",
+      "cu_ID": "213"
+    },
+    {
+      "id": "CS11146",
+      "bibliography": "DDGLC",
+      "cu_ID": "6952"
+    },
+    {
+      "id": "CS11147",
+      "bibliography": "DDGLC",
+      "cu_ID": "2107"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲉⲧⲓ** ⲅⲁⲣ ⲛⲑⲱⲧⲉⲛ ϩⲁⲛⲥⲁⲣⲕⲓⲕⲟⲥ ϩⲱⲥ ⲅⲁⲣ ⲉⲟⲩⲟⲛⲟⲩⲭⲟϩ ⲛⲉⲙⲟⲩϣϭⲛⲏⲛ ϧⲉⲛⲑⲏⲛⲟⲩ ⲙⲏ ⲛⲑⲱⲧⲉⲛ ϩⲁⲛⲥⲁⲣⲕⲓⲕⲟⲥ ⲁⲛ ⲟⲩⲟϩ ⲁⲧⲉⲧⲉⲛⲙⲟϣⲓ ⲕⲁⲧⲁⲣⲱⲙⲓ .",
+      "english": "for you are still fleshly. For insofar as there is jealousy, strife, and factions among you, aren't you fleshly, and don't you walk in the ways of men?",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ **ⲉⲧⲓ**ϥⲟⲛϩ · ϥⲙⲏⲣ ⲇⲉ ⲻ",
+      "english": "it is still alive but it is bound.",
+      "source": "Apophthegmata Patrum Sahidic 052",
+      "urn": "urn:cts:copticLit:ap.52.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲥⲁⲧⲟⲧϥ **ⲉⲧⲓ** ⲉϥⲥⲁϫⲓ ⲁϥⲓ ⲛϫⲉⲓⲟⲩⲇⲁⲥ ⲟⲩⲁⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲓⲃ ⲟⲩⲟϩ ⲉⲣⲉⲟⲩⲟⲛ ⲟⲩⲙⲏϣ ⲛⲉⲙⲁϥ ⲛⲉⲙϩⲁⲛⲥⲏϥⲓ ⲛⲉⲙϩⲁⲛϣⲉ ⲉⲃⲟⲗ ϩⲁⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲛⲉⲙⲛⲓⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲉⲙⲛⲓⲥⲁϧ .",
+      "english": "Immediately, while he was still speaking, Judas, one of the twelve, came--and with him a multitude with swords and clubs, from the chief priests, the scribes, and the elders.",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ⲉⲧⲓ** ⲉϥⲡⲁϩⲧ ⲉϫⲙⲡⲉϥϩⲟ ·",
+      "english": "when he was still lying face-down,",
+      "source": "Apophthegmata Patrum Sahidic 131: N 301",
+      "urn": "urn:cts:copticLit:ap.131.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉⲧⲓ** ⲟⲩϣⲏⲣⲓ ⲙⲙⲉⲛⲣⲓⲧ ⲉⲛⲁϥⲛⲧⲁϥ ⲁϥⲟⲩⲟⲣⲡϥ ⲉⲡϧⲁⲉ ϩⲁⲣⲱⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲉⲛⲁϣⲫⲓⲧ ϧⲁⲧϩⲏ ⲙⲡⲁϣⲏⲣⲓ .",
+      "english": "Therefore still having one, his beloved son, he sent him last to them, saying, 'They will respect my son.'",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲛⲟⲩⲡⲓⲥⲧⲓⲥ ⲁⲁⲃⲉⲗ ⲧⲁⲗⲉϩⲟⲩⲉ ⲑⲩⲥⲓⲁ ⲉϩⲣⲁⲓ ⲡⲁⲣⲁⲕⲁⲉⲓⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲥ ⲛⲧⲁⲩⲣⲙⲛⲧⲣⲉ ϩⲁⲣⲟϥ ϫⲉⲟⲩⲇⲓⲕⲁⲓⲟⲥ ⲡⲉ ⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲣⲙⲛⲧⲣⲉ ⲛⲁϥ ⲉϫⲛⲛⲉϥⲇⲱⲣⲟⲛ ⲁⲩⲱ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲥ ⲛⲧⲉⲣⲉϥⲙⲟⲩ **ⲉⲧⲓ** ⲟⲛ ϥϣⲁϫⲉ .",
+      "english": "By faith, Abel offered to God a more excellent sacrifice than Cain, through which he had testimony given to him that he was righteous, God testifying with respect to his gifts; and through it he, being dead, still speaks.",
+      "source": "58_Hebrews_11",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲉ",
+        66,
+        20.118
+      ],
+      [
+        "ⲉ",
+        138,
+        18.867
+      ],
+      [
+        "ⲕⲟⲩϫⲓ",
+        30,
+        18.136
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        43,
+        17.087
+      ],
+      [
+        "ϥ",
+        88,
+        16.327
+      ],
+      [
+        "ⲛϫⲉ",
+        48,
+        15.874
+      ],
+      [
+        ".",
+        57,
+        15.639
+      ],
+      [
+        "ⲅⲁⲣ",
+        27,
+        15.379
+      ],
+      [
+        "ⲇⲉ",
+        32,
+        14.573
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        50,
+        14.536
+      ],
+      [
+        "ϫⲉ",
+        39,
+        14.517
+      ],
+      [
+        "ⲁ",
+        50,
+        14.445
+      ],
+      [
+        "ⲛ",
+        53,
+        14.299
+      ],
+      [
+        "ⲥⲁⲣⲕⲓⲕⲟⲥ",
+        3,
+        14.167
+      ],
+      [
+        "ⲅ",
+        10,
+        14.071
+      ],
+      [
+        "ⲟⲩⲁϩⲧⲟⲧ",
+        5,
+        13.937
+      ],
+      [
+        "ⲭⲏ",
+        14,
+        13.824
+      ],
+      [
+        "ϧⲉⲛ",
+        35,
+        13.675
+      ],
+      [
+        "ⲩ",
+        31,
+        13.508
+      ],
+      [
+        "ϯ",
+        29,
+        13.389
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        10,
+        22.75
+      ],
+      [
+        "ⲉ",
+        203,
+        19.999
+      ],
+      [
+        "ⲕⲉ",
+        64,
+        19.712
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        44,
+        19.598
+      ],
+      [
+        "ϥ",
+        156,
+        18.564
+      ],
+      [
+        "ⲇⲉ",
+        78,
+        18.028
+      ],
+      [
+        "ⲟⲛϩ",
+        23,
+        17.506
+      ],
+      [
+        "ⲛⲁ",
+        77,
+        16.675
+      ],
+      [
+        "ⲛ",
+        109,
+        16.3
+      ],
+      [
+        "ⲅⲁⲣ",
+        31,
+        15.728
+      ],
+      [
+        "ϣⲁϫⲉ",
+        29,
+        15.231
+      ],
+      [
+        "ⲓ",
+        39,
+        14.893
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        12,
+        14.644
+      ],
+      [
+        "ϫⲉ",
+        43,
+        14.611
+      ],
+      [
+        ".",
+        37,
+        14.372
+      ],
+      [
+        "ⲁⲙⲟⲕ",
+        3,
+        14.369
+      ],
+      [
+        "ⲟⲩ",
+        49,
+        14.25
+      ],
+      [
+        "ⲉⲧⲓ",
+        8,
+        13.977
+      ],
+      [
+        "ⲥⲁⲣⲕⲓⲕⲟⲥ",
+        3,
+        13.732
+      ],
+      [
+        "ⲥⲉ",
+        22,
+        13.647
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲧⲓ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.42,
+      "rank": 500,
+      "count": 225
+    },
+    "B": {
+      "rate": 2.1,
+      "rank": 382,
+      "count": 178
+    }
+  },
+  "etym": {
+    "grl_ID": "805",
+    "grl_lemma": "ἔτι",
+    "grl_meaning": "yet, still",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 703b"
+  }
+}

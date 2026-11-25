@@ -1,0 +1,52 @@
+{
+  "id": "C5193",
+  "forms": [
+    {
+      "id": "CF12353",
+      "orth": "ⲣⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5835",
+      "bibliography": "CD 494a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5192",
+      "label": "ⲙⲛⲧⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "unity"
+    },
+    {
+      "target": "C5191",
+      "label": "ⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single one; each one"
+    },
+    {
+      "target": "C5190",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single, alone, any, one and same"
+    }
+  ]
+}

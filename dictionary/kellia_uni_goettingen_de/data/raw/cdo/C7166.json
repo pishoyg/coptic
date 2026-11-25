@@ -1,0 +1,45 @@
+{
+  "id": "C7166",
+  "forms": [
+    {
+      "id": "CF16391",
+      "orth": "ϫⲗⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7906",
+      "bibliography": "KoptHWb 572"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C7642",
+      "type": "cf",
+      "label": "surround"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7165",
+      "label": "ϫⲗⲉ",
+      "pos": "N",
+      "gloss": "hindrance(?)"
+    },
+    {
+      "target": "C7164",
+      "label": "ϫⲱⲱⲗⲉ",
+      "pos": "V",
+      "gloss": "be hindered(?); stop, make cease"
+    }
+  ]
+}

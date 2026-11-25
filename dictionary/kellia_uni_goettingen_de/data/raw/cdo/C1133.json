@@ -1,0 +1,249 @@
+{
+  "id": "C1133",
+  "forms": [
+    {
+      "id": "CF3636",
+      "orth": "ⲕⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5738,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF3637",
+      "orth": "ⲕⲁⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.24,
+        "rank": 319,
+        "count": 511
+      }
+    },
+    {
+      "id": "CF3638",
+      "orth": "ⲕⲁⲁⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16771,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1319",
+      "bibliography": "CD 101b; KoptHWb 59; ChLCS 16a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲣⲱϣⲉ ⲉⲣⲟϥ ϩⲛⲧⲉⲣⲏⲙⲟⲥ ϩⲛⲟⲩⲉⲓⲃⲉ ⲛⲕⲁⲩⲙⲁ ⲁϥⲕⲱⲧⲉ ⲛⲙⲙⲁϥ ϩⲛⲟⲩⲙⲁ ⲉⲙⲛⲙⲟⲟⲩ ⲛϩⲏⲧϥ ⲁⲩⲱ ⲁϥϯⲥⲃⲱ ⲛⲁϥ ⲁϥϩⲁⲣⲉϩ ⲉⲣⲟϥ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲉⲕⲉ** ⲛⲃⲁⲗ",
+      "english": "He maintained him in the wilderness, in burning thirst and a dry land: he led him about and instructed him, and kept him as the apple of an eye.",
+      "source": "Deuteronomy 32",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲣⲉϩ ⲇⲉ ⲉⲛⲁⲉⲛⲧⲟⲗⲏ ⲛⲧⲁⲣⲉⲕⲱⲛϩ ϯ ⲛⲛⲁϣⲁϫⲉ ⲉⲛⲉⲕⲧⲏⲏⲃⲉ ⲛⲧϩⲉ ⲛϩⲉⲛ**ⲕⲉⲕⲉ** ⲛⲃⲁⲗ",
+      "english": "keep my commandments, and thou shalt live; and keep my words as the pupils of thine eyes.",
+      "source": "Proverbs 7",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲣⲉϩ ⲉⲣⲟⲓ ⲛⲧϩⲉ ⲛⲟⲩ**ⲕⲉⲕⲉ** ⲛⲃⲁⲗ ⲕⲛⲁⲣϩⲁⲓⲃⲉⲥ ⲉⲣⲟⲓ ϩⲛⲧϩⲁⲓⲃⲉⲥ ⲛⲛⲉⲕⲧⲛϩ",
+      "english": "Keep me as the apple of the eye from those that resist thy right hand: thou shalt screen me by the covering of thy wings,",
+      "source": "Psalms 16",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϩⲁⲓⲥ",
+        1,
+        15.106
+      ],
+      [
+        "ⲙⲏⲣⲟⲥ",
+        1,
+        13.521
+      ],
+      [
+        "ⲃⲁⲗ",
+        3,
+        13.469
+      ],
+      [
+        "ϩⲉ",
+        3,
+        10.16
+      ],
+      [
+        "ⲛ",
+        7,
+        9.909
+      ],
+      [
+        "ⲧ",
+        4,
+        9.749
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        9.062
+      ],
+      [
+        "ϫⲡⲟ",
+        1,
+        9.047
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.653
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ⲕ",
+        1,
+        4.531
+      ],
+      [
+        "ⲥ",
+        1,
+        3.952
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.425
+      ],
+      [
+        "ⲡ",
+        1,
+        2.175
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉⲕⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲕⲉⲕⲉ",
+          3
+        ],
+        [
+          "ⲃⲁⲗ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ϫⲡⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲉⲕⲉ_0_node",
+          "ⲛ_1_post_ⲕⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲉⲕⲉ",
+          "ⲃⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲉⲕⲉ",
+          "ⲕⲉⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉⲕⲉ_0_node",
+          "ⲉⲧ_1_post_ⲕⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲉⲕⲉ",
+          "ⲥ_3_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϫⲡⲟ",
+          "ⲛⲁ_3_post_ϫⲡⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϫⲡⲟ",
+          "ϫⲡⲟ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4704,
+      "count": 5
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1132",
+      "label": "ⲕⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "child"
+    },
+    {
+      "target": "C1134",
+      "label": "ⲕⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "pupil (of eye)"
+    }
+  ]
+}

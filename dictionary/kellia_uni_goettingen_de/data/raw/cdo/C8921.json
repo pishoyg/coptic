@@ -1,0 +1,252 @@
+{
+  "id": "C8921",
+  "forms": [
+    {
+      "id": "CF21788",
+      "orth": "ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+      "dialect": null
+    },
+    {
+      "id": "CF21789",
+      "orth": "ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4349,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10834",
+      "bibliography": "DDGLC",
+      "cu_ID": "2977"
+    },
+    {
+      "id": "CS10835",
+      "bibliography": "DDGLC",
+      "cu_ID": "5146"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥ**ⲉⲗⲉⲩⲑⲉⲣⲟⲩ** ⲛⲛⲉⲛⲧⲁⲩⲁⲓⲭⲙⲁⲗⲱⲧⲓⲍⲉ ⲙⲙⲟⲟⲩ ⲛϩⲏⲧⲥ ·",
+      "english": "and in which he had set free those who had been kept in captivity therein.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲇⲓⲁ ⲧⲟⲩⲧⲟ · ⲁⲡⲗⲟⲅⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲓⲁϥϫⲓⲥⲁⲣⲝ ⲉⲃⲟⲗ ϩⲙⲙⲁⲣⲓⲁ ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ϣⲁⲛⲧⲉϥ**ⲉⲗⲉⲩⲑⲉⲣⲟⲩ** ⲙⲡⲅⲉⲛⲟⲥ ⲛⲉⲩϩⲁ ·",
+      "english": "Therefore did the Word of God come, and take upon Itself flesh of the Virgin Mary, in order that it might secure the freedom of the race of Eve.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲉⲗⲉⲩⲑⲉⲣⲟⲩ** ⲙⲡⲥⲱⲛⲧ ⲧⲏⲣϥ ⲙⲛⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲅⲉⲛⲟⲥ",
+        2,
+        13.376
+      ],
+      [
+        "ⲙ",
+        7,
+        11.188
+      ],
+      [
+        "ⲡ",
+        8,
+        10.912
+      ],
+      [
+        "ϩⲓⲕⲱⲛ",
+        1,
+        10.894
+      ],
+      [
+        "ⲥⲱⲛⲧ",
+        1,
+        10.718
+      ],
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        1,
+        10.071
+      ],
+      [
+        "ϣⲁⲛⲧⲉ",
+        1,
+        9.509
+      ],
+      [
+        "ⲁ",
+        5,
+        9.425
+      ],
+      [
+        "ϩⲁⲙⲏⲛ",
+        1,
+        9.152
+      ],
+      [
+        "ϥ",
+        5,
+        8.902
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        2,
+        8.705
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.396
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.699
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.388
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.283
+      ],
+      [
+        "ϣⲁ",
+        1,
+        5.761
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.608
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        5.279
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        5.194
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          4
+        ],
+        [
+          "ⲉⲗⲉⲩⲑⲉⲣⲟⲩ_0_node",
+          4
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲅⲉⲛⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          "ϥ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          "ⲉⲗⲉⲩⲑⲉⲣⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ϣⲁⲛⲧⲉ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          "ϥ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲩⲑⲉⲣⲟⲩ_0_node",
+          "ⲙ_1_post_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲅⲉⲛⲟⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϣⲁ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          "ϥ_1_pre_ⲉⲗⲉⲩⲑⲉⲣⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3953,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "659",
+    "grl_lemma": "ἐλευθερόω",
+    "grl_meaning": "to set free",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 532b; Preisigke 1:469"
+  }
+}

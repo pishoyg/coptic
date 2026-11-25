@@ -1,0 +1,364 @@
+{
+  "id": "C11176",
+  "forms": [
+    {
+      "id": "CF30982",
+      "orth": "ϩⲟⲣⲙⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF30983",
+      "orth": "ϩⲟⲣⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3179,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF30984",
+      "orth": "ϩⲟⲣⲙⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF30985",
+      "orth": "ϩⲟⲣⲙⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30986",
+      "orth": "ⲑⲟⲣⲙⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30987",
+      "orth": "ⲱⲣⲙⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15713",
+      "bibliography": "DDGLC",
+      "cu_ID": "2713"
+    },
+    {
+      "id": "CS15714",
+      "bibliography": "DDGLC",
+      "cu_ID": "15186"
+    },
+    {
+      "id": "CS15715",
+      "bibliography": "DDGLC",
+      "cu_ID": "1506"
+    },
+    {
+      "id": "CS15716",
+      "bibliography": "DDGLC",
+      "cu_ID": "1160"
+    },
+    {
+      "id": "CS15717",
+      "bibliography": "DDGLC",
+      "cu_ID": "3894"
+    },
+    {
+      "id": "CS15718",
+      "bibliography": "DDGLC",
+      "cu_ID": "7742"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉⲛⲧⲉⲕϭⲟⲙ ⲁⲛ ⲧⲉ ⲉⲧⲱⲟⲩⲛ ϩⲁⲧ**ϩⲟⲣⲙⲏ** ⲛⲛⲇⲁⲓⲙⲱⲛ ⲁⲩⲱ ⲁⲓϭⲱⲣϣ ⲉⲣⲟϥ ⲉⲧⲣⲉϥϫⲱ ⲉⲣⲟⲓ ⲙⲡⲉϥⲣⲁⲛ ·",
+      "english": "and he said unto me, 'Thy strength is not sufficient to enable thee to resist the attacks of the devils.' And I urged him to tell me his name,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲟⲛ ⲡⲉⲛⲧⲁϥⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲓ ϩⲛⲧ**ϩⲟⲣⲙⲏ** ⲙⲡⲉⲡⲛⲉⲩⲙⲁ ⲁϥⲉⲓⲛⲉ ⲙⲙⲟⲓ ⲉϫⲙⲡⲕⲁⲧⲁⲅⲉⲓⲟⲛ ⲙⲡⲥⲟⲛ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "this same being, I say, seized me under the impulse of the Spirit, and brought me to the little habitation of that brother.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲉⲙⲱⲩⲥⲏⲥ ⲛⲛⲁϩⲣⲙⲡϫⲟⲉⲓⲥ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲕⲑⲙⲕⲟ ⲙⲡⲉⲕϩⲙϩⲁⲗ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲙⲡⲓϩⲉ ⲉⲩϩⲙⲟⲧ ⲙⲡⲉⲕⲙⲧⲟ ⲉⲃⲟⲗ ⲉⲧⲣⲉⲕⲕⲱ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲛⲧ**ϩⲟⲣⲙⲏ** ⲙⲡⲉⲓⲗⲁⲟⲥ",
+      "english": "And Moses said to the Lord, Why hast thou afflicted thy servant, and why have I not found grace in thy sight, that thou shouldest lay the weight of this people upon me?",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲁⲓⲙⲱⲛ",
+        2,
+        14.013
+      ],
+      [
+        "ⲧ",
+        10,
+        12.452
+      ],
+      [
+        "ϩⲁ",
+        4,
+        12.28
+      ],
+      [
+        "ⲙ",
+        10,
+        11.732
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        3,
+        11.582
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        2,
+        11.458
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        3,
+        11.442
+      ],
+      [
+        "ⲡⲉ",
+        7,
+        11.345
+      ],
+      [
+        "ⲛ",
+        13,
+        11.325
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        3,
+        11.095
+      ],
+      [
+        "ⲡⲉⲓ",
+        3,
+        10.496
+      ],
+      [
+        "ⲡ",
+        7,
+        9.334
+      ],
+      [
+        "ⲓ",
+        4,
+        9.265
+      ],
+      [
+        "ⲉϣ",
+        1,
+        9.174
+      ],
+      [
+        "ⲉϫⲱ",
+        2,
+        9.161
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        8.162
+      ],
+      [
+        "ϩⲛ",
+        3,
+        7.649
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        7.519
+      ],
+      [
+        "ⲙⲏⲏϣⲉ",
+        1,
+        7.302
+      ],
+      [
+        "ϯ",
+        2,
+        6.931
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲣⲙⲏ_0_node",
+          8
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          6
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡⲉⲓ",
+          3
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲇⲁⲓⲙⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲓⲁ_7_pre_ⲟ",
+          1
+        ],
+        [
+          "ⲉ_10_pre_ⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_7_pre_ⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲛⲉⲩⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲟⲣⲙⲏ_0_node",
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          "ⲡⲉⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲡⲛⲉⲩⲙⲁ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲣⲙⲏ_0_node",
+          "ⲛ_1_post_ϩⲟⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲟⲣⲙⲏ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲇⲁⲓⲙⲱⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲓⲁ_7_pre_ⲟ",
+          "ⲉ_10_pre_ⲕⲗⲟⲙ",
+          1
+        ],
+        [
+          "ⲉ_10_pre_ⲕⲗⲟⲙ",
+          "ⲁⲡⲉ_7_pre_ⲟ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_7_pre_ⲟ",
+          "ϩⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲟⲣⲙⲏ",
+          "ϩⲟⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲟⲣⲙⲏ",
+          "ⲡⲁ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲡⲛⲉⲩⲙⲁ",
+          "ⲡⲛⲉⲩⲙⲁ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2824,
+      "count": 12
+    }
+  },
+  "etym": {
+    "grl_ID": "1574",
+    "grl_lemma": "ὁρμή",
+    "grl_meaning": "onrush, onset, assault",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1253a; Preisigke 2:201"
+  }
+}

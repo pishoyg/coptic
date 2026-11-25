@@ -1,0 +1,116 @@
+{
+  "id": "C7850",
+  "forms": [
+    {
+      "id": "CF17765",
+      "orth": "ϭⲱⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11472,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲟⲩⲣ",
+      "dialect": "B",
+      "id": "2602.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8725",
+      "bibliography": "CD 827b; KoptHWb 464; ChLCS 109a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲥⲉϣⲱⲡⲓ ⲛϫⲉⲧⲟⲩϫⲟⲙ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲱⲟⲩⲓ ⲙⲙⲁϩⲓ ⲟⲩⲟϩ ⲛⲟⲩϩⲃⲏⲟⲩⲓ ⲙⲫⲣⲏϯ ⲛϩⲁⲛ**ϭⲱⲣ** ⲛⲭⲣⲱⲙ ⲟⲩⲟϩ ⲉⲩⲉⲣⲱⲕϩ ⲛϫⲉⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲛⲉⲙⲛⲓⲁⲛⲟⲙⲟⲥ ⲉⲩⲥⲟⲡ ⲛⲏⲉⲧⲁⲩⲭⲁ ⲡϭⲟⲉⲓⲥ ⲛⲥⲱⲟⲩ ⲟⲩⲟϩ ⲛⲛⲉϥϣⲱⲡⲓ ⲛϫⲉⲫⲏⲉⲑⲛⲁϭⲉⲛⲱⲟⲩ .",
+      "english": "And their strength shall be as a thread of tow, and their works as sparks, and the transgressors and the sinners shall be burnt up together, and there shall be none to quench them.",
+      "source": "23_Isaias_01",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:01",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲣⲱⲙ",
+        1,
+        10.897
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        8.335
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        7.878
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲣ",
+          1
+        ],
+        [
+          "ⲭⲣⲱⲙ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱⲣ_0_node",
+          "ⲛ_1_post_ϭⲱⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϭⲱⲣ",
+          "ⲭⲣⲱⲙ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10914,
+      "count": 1
+    }
+  }
+}

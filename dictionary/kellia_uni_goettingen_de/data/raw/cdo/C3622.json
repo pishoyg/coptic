@@ -1,0 +1,126 @@
+{
+  "id": "C3622",
+  "forms": [
+    {
+      "id": "CF9149",
+      "orth": "-ⲥⲛⲟⲟⲩⲥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "NUM",
+    "gen": "f.",
+    "tlapos": "Zahlwort"
+  },
+  "senses": [
+    {
+      "id": "CS4123",
+      "bibliography": "CD 347a; CED 157; KoptHWb 190; DELC 192; ChLCS 49a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲱⲛϩ ⲛϭⲓϩⲣⲁⲅⲁⲩ ⲛϣⲉ ⲙⲁⲁⲃ **ⲥⲛⲟⲟⲩⲥⲉ** ⲛⲣⲟⲙⲡⲉ ⲁϥϫⲡⲟ ⲛⲥⲉⲣⲟⲩⲭ",
+      "english": "And Ragau lived and hundred thirty and two years, and begot Seruch.",
+      "source": "Genesis 11",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲱⲛϩ ⲛϭⲓⲓⲁⲣⲉⲇ ⲛϣⲉ ⲥⲉ**ⲥⲛⲟⲟⲩⲥⲉ** ⲛⲣⲟⲙⲡⲉ ⲁϥϫⲡⲟ ⲛⲉⲛⲱⲭ",
+      "english": "And Jared lived an hundred and sixty and two years, and begot Enoch:",
+      "source": "Genesis 5",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲇⲁⲣⲓⲟⲥ ⲡⲙⲏⲧⲟⲥ ϫⲓ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲉϥϩⲛⲥⲉ**ⲥⲛⲟⲟⲩⲥⲉ** ⲛⲣⲟⲙⲡⲉ",
+      "english": "And Darius the Mede succeeded to the kingdom, being sixty-two years old.",
+      "source": "Daniel 5",
+      "urn": "urn:cts:copticLit:ot.dan.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3620",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3621",
+      "label": "-ⲥⲛⲟⲟⲩⲥ",
+      "pos": "NUM",
+      "gloss": "two (in combination with tens)"
+    },
+    {
+      "target": "C3627",
+      "label": "ⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "second, deputy (monastic title)"
+    },
+    {
+      "target": "C3626",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "duality"
+    },
+    {
+      "target": "C3623",
+      "label": "ⲙⲡⲉⲥⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C3624",
+      "label": "ⲛⲧⲥⲛⲧⲉ",
+      "pos": "ADV",
+      "gloss": "both together"
+    },
+    {
+      "target": "C12018",
+      "label": "ⲡⲉⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "Monday"
+    },
+    {
+      "target": "C3628",
+      "label": "ⲣⲙⲉϩⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "be second"
+    },
+    {
+      "target": "C3625",
+      "label": "ⲣⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "become, be two"
+    },
+    {
+      "target": "C3616",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3618",
+      "label": "ⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "two"
+    },
+    {
+      "target": "C3617",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "NUM",
+      "gloss": "two"
+    },
+    {
+      "target": "C3619",
+      "label": "ⲥⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "two"
+    }
+  ]
+}

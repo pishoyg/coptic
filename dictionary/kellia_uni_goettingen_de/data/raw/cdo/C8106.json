@@ -1,0 +1,68 @@
+{
+  "id": "C8106",
+  "forms": [
+    {
+      "id": "CF18434",
+      "orth": "ⲁⲑⲉⲧⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF18435",
+      "orth": "ⲁⲑⲉⲧⲓⲛ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF18436",
+      "orth": "ⲉⲣⲁⲑⲉⲧⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2222,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9093",
+      "bibliography": "DDGLC",
+      "cu_ID": "5006"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲕⲁⲗⲱⲥ ⲧⲉⲧⲛ**ⲉⲣⲁⲑⲉⲧⲓⲛ** ⲛϯⲉⲛⲧⲟⲗⲏ ⲛⲧⲉⲫⲛⲟⲩϯ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲁⲣⲉϩ ⲉⲧⲉⲧⲉⲛⲡⲁⲣⲁⲇⲟⲥⲓⲥ",
+      "english": "He said to them, 'Full well do you reject the commandment of God, that you may keep your tradition.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲑⲟϥ ⲟⲩⲥⲁⲃⲉ ⲡⲉ ⲟⲩⲟϩ ⲁϥⲓⲛⲓ ⲉϩⲣⲏⲓ ⲉϫⲱⲟⲩ ⲛϩⲁⲛⲡⲉⲧϩⲱⲟⲩ ⲟⲩⲟϩ ⲡⲉϥⲥⲁϫⲓ ⲛⲛⲟⲩ**ⲉⲣⲁⲑⲉⲧⲓⲛ** ⲙⲙⲟϥ ⲉϥⲉⲧⲱⲛϥ ⲉϫⲉⲛⲛⲓⲏⲓ ⲛⲧⲉⲛⲓⲣⲱⲙⲓ ⲙⲡⲟⲛⲏⲣⲟⲥ ⲛⲉⲙⲉϫⲉⲛⲧⲟⲩϩⲉⲗⲡⲓⲥ ⲛⲉⲫⲗⲏⲟⲩ .",
+      "english": "Therefore he has wisely brought evils upon them, and his word shall not be frustrated; and he shall rise up against the houses of wicked men, and against their vain hope,",
+      "source": "23_Isaias_31",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:31",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲫⲏⲉⲧⲉⲣⲁⲑⲉⲧⲓⲛ ϥ**ⲉⲣⲁⲑⲉⲧⲓⲛ** ⲟⲩⲟϩ ⲫⲏⲉⲧⲉⲣⲁⲛⲟⲙⲓⲛ ϥⲉⲣⲁⲛⲟⲙⲓⲛ ⲛⲓⲉⲗⲁⲙⲓⲧⲏⲥ ⲛⲁϩⲣⲁⲓ ⲟⲩⲟϩ ⲛⲓⲡⲣⲉⲥⲃⲩⲧⲏⲥ ⲛⲧⲉⲛⲓⲡⲉⲣⲥⲓⲥ ⲥⲉⲛⲏⲟⲩ ⲉϩⲣⲏⲓ ⲉϫⲱⲓ ϯⲛⲟⲩ ϯⲛⲁϥⲓⲁⲁϩⲟⲙ ⲟⲩⲟϩ ϯⲛⲁϯⲛⲟⲙϯ ⲛⲏⲓ .",
+      "english": "so a fearful and a grievous vision was declared to me: he that is treacherous deals treacherously, the transgressor transgresses. The Elamites are upon me, and the ambassadors of the Persians come against me: now will I groan and comfort myself.",
+      "source": "23_Isaias_21",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:21",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "40",
+    "grl_lemma": "ἀθετέω",
+    "grl_meaning": "to set at naught",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 31b; Preisigke 1:28"
+  }
+}

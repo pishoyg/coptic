@@ -1,0 +1,206 @@
+{
+  "id": "C1772",
+  "forms": [
+    {
+      "id": "CF5123",
+      "orth": "ⲡⲉⲓⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11110,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2072",
+      "bibliography": "CD 153a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲁⲉⲓⲱⲧ ⲛⲁϥ ϫⲉⲉⲓⲥⲟⲩⲏⲣ ⲛⲣⲟⲙⲡⲉ ⲕϩⲙ**ⲡⲉⲓⲙⲁ**",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲙⲡⲉ",
+        1,
+        11.017
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        10.046
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲥ_1_pre_ⲡⲉⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲣ_1_pre_ⲡⲉⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲟⲩⲏⲣ",
+          1
+        ],
+        [
+          "ⲣⲟⲙⲡⲉ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲉⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲓⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲥ_1_pre_ⲡⲉⲓⲙⲁ",
+          "ⲟⲩⲏⲣ_1_pre_ⲡⲉⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲣ_1_pre_ⲡⲉⲓⲙⲁ",
+          "ⲛ_2_pre_ⲟⲩⲏⲣ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ⲟⲩⲏⲣ",
+          "ⲣⲟⲙⲡⲉ_3_pre_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲟⲙⲡⲉ_3_pre_ⲛ",
+          "ⲕ_1_pre_ⲡⲉⲓⲙⲁ",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ⲡⲉⲓⲙⲁ",
+          "ⲡⲉⲓⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10700,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1777",
+      "label": "ϫⲓⲙⲁ",
+      "pos": "V",
+      "gloss": "take place, usurp place"
+    },
+    {
+      "target": "C1776",
+      "label": "ϯⲙⲁ",
+      "pos": "V",
+      "gloss": "give place, permit"
+    },
+    {
+      "target": "C12270",
+      "label": "ⲉⲩⲙⲁ",
+      "pos": "ADV",
+      "gloss": "to/in one place, together"
+    },
+    {
+      "target": "C1774",
+      "label": "ⲕⲁⲙⲁ",
+      "pos": "V",
+      "gloss": "allow place, give opportunity"
+    },
+    {
+      "target": "C1771",
+      "label": "ⲙⲁ",
+      "pos": "N",
+      "gloss": "place; dwelling place; chamber (monk's cell); temple, shrine, monastery; part, district; part, duty"
+    },
+    {
+      "target": "C12107",
+      "label": "ⲙⲁ ⲛ-",
+      "pos": "N",
+      "gloss": "place of ..."
+    },
+    {
+      "target": "C1775",
+      "label": "ⲟⲓ ⲛⲕⲉⲙⲁ",
+      "pos": "V",
+      "gloss": "be elsewhere, separated; unclean"
+    },
+    {
+      "target": "C1779",
+      "label": "ⲣⲉϥⲙⲁ",
+      "pos": "N",
+      "gloss": "one set over a place, house-guard"
+    },
+    {
+      "target": "C1773",
+      "label": "ⲣⲉⲙⲫⲙⲁ",
+      "pos": "N",
+      "gloss": "man of the place, native"
+    },
+    {
+      "target": "C1778",
+      "label": "ⲧⲉϣⲙⲁ",
+      "pos": "N",
+      "gloss": "one set over a place, house-guard"
+    }
+  ]
+}

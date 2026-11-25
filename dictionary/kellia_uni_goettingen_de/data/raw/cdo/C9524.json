@@ -1,0 +1,124 @@
+{
+  "id": "C9524",
+  "forms": [
+    {
+      "id": "CF24239",
+      "orth": "ⲕⲟⲩⲣⲥⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24240",
+      "orth": "ⲕⲟⲩⲣⲥⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11594,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12126",
+      "bibliography": "DDGLC",
+      "cu_ID": "11315"
+    },
+    {
+      "id": "CS12127",
+      "bibliography": "DDGLC",
+      "cu_ID": "10055"
+    },
+    {
+      "id": "CS12128",
+      "bibliography": "DDGLC",
+      "cu_ID": "9972"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϭⲱϣⲧ ⲁϥⲛⲁⲩ ⲉϩⲟⲣⲓⲟⲛ ⲡ**ⲕⲟⲩⲣⲥⲟⲛ** ·",
+      "english": "And he looked up and saw Horian the Kourson,",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲣⲓⲟⲛ",
+        1,
+        18.276
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        8.817
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲩⲣⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲕⲟⲩⲣⲥⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲩⲣⲥⲟⲛ",
+          "ⲕⲟⲩⲣⲥⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11162,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1199",
+    "grl_lemma": "κοῦρσωρ",
+    "grl_meaning": "nautical attack, raid",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke 1:831"
+  }
+}

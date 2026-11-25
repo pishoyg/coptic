@@ -1,0 +1,715 @@
+{
+  "id": "C6780",
+  "forms": [
+    {
+      "id": "CF15607",
+      "orth": "ϩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.72,
+        "rank": 893,
+        "count": 114
+      }
+    },
+    {
+      "orth": "ϧⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.32,
+        "rank": 620,
+        "count": 112
+      }
+    },
+    {
+      "orth": "ϧⲣⲏⲟⲩⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.74,
+        "rank": 866,
+        "count": 63
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7494",
+      "bibliography": "CD 701a-b; CED 292; KoptHWb 383; DELC 307a; ChLCS 93b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲁ ⲡⲟⲩϩⲏⲧ ⲇⲉ ⲟⲩⲛⲟϥ ⲧⲏⲣⲟⲩ ⲛⲑⲱⲟⲩ ϩⲱⲟⲩ ⲁⲩϭⲓ ⲛⲧⲟⲩ**ϧⲣⲉ** .",
+      "english": "Then they all cheered up, and they also took food.",
+      "source": "05_Acts_27",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲕϣⲱⲡⲉ ⲛ**ϩⲣⲉ** ⲛⲛⲉⲧϩⲕⲟⲉⲓⲧ · ⲁⲩⲱ ⲙⲙⲟⲟⲩ ⲛⲛⲉⲧⲟⲃⲉ ·",
+      "english": "Thou wast food to those who suffered hunger, and water to those who were athirst.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲙⲙⲁⲩ ⲇⲉ ⲁϥⲕⲱϯ ⲛⲥⲁⲧⲉϥ**ϧⲣⲉ** : ⲛⲉϥⲃⲁⲗ ⲇⲉ ⲥⲉϫⲟⲩϣⲧ ⲓⲥϫⲉⲛ ϩⲓⲫⲟⲩⲉⲓ .",
+      "english": "Thence he seeks food, his eyes observe from far.",
+      "source": "18_Iob_39",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:39",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲇⲓⲁⲥⲧⲏⲙⲁ ⲅⲁⲣ ⲉⲧⲟⲩⲧⲱⲟⲩ ϣⲁϥⲣϩⲙⲉⲧⲏ ⲙⲙⲟⲛⲏ · ⲙⲁⲗⲓⲥⲧⲁ ⲇⲁⲛⲓⲏⲗ ⲉϥⲙⲡⲉⲥⲏⲧ ⲙⲡϣⲏⲓ ⲉϥⲟ ⲛ**ϩⲣⲉ** ⲛⲛⲉⲑⲏⲣⲓⲟⲛ ·",
+      "english": "though there was a difference between them—for one used to rule in the palace—especially the case of Daniel; when he was down in the pit (and was intended) to become food for the wild beasts,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲧⲁⲙⲟⲓ ⲟⲩⲛ ⲡⲉϫⲁϥ ϫⲉⲁⲛ ⲟⲩⲟⲛ ϣϫⲟⲙ ⲛⲟⲩⲇⲁⲓⲙⲱⲛ ⲉⲉⲣⲟⲩϩⲱⲃ ⲙⲡⲁⲓⲣⲏϯ . ⲡⲉϫⲉⲁⲡⲁ ⲉⲩⲁⲅⲣⲓ ⲛⲁϥ ϫⲉⲟⲩϩⲱⲃ ⲙⲡⲁⲓⲣⲏϯ ⲡⲉ ⲉⲧⲁⲛϯⲙⲁϯ ⲉⲣⲟϥ ⲙⲡⲃ ⲁⲛⲟⲕ ⲛⲉⲙⲁⲕ ⲕⲉ ⲅⲁⲣ ϧⲁϫⲉⲛϩⲁⲛⲕⲟⲩϫⲓ ⲛⲉϩⲟⲟⲩ ⲛⲁⲓϩⲏⲗ ϩⲱ ⲡⲉ ⲉϫⲉⲙⲡϣⲓⲛⲓ ⲛⲛⲓⲥⲛⲏⲟⲩ ⲁⲓϫⲓⲙⲓ ⲛⲟⲩⲁⲥⲟⲩⲓ ϩⲓⲡⲓⲙⲱⲓⲧ ⲉⲓⲥⲓⲛⲓ ⲉⲣⲉⲟⲩⲟⲛ ⲅ ϯ ⲛⲗⲟⲩⲕⲟⲩϫⲓ ⲛϧⲏⲧⲥ ⲉⲧⲁⲓⲉⲣⲟⲩⲉϩⲟⲟⲩ ⲉⲓϩⲉⲙⲥⲓ ⲙⲡⲉⲟⲩⲟⲛ ⲓ ⲉϥⲕⲱϯ ⲛⲥⲱⲟⲩ ⲙⲡⲓⲉⲙⲓ ϫⲉⲁⲓⲛⲁⲟⲩⲟⲣⲡⲟⲩ ⲉⲑⲱⲛ ϫⲉⲟⲩⲏⲓ ⲛⲁⲓⲉⲙⲓ ⲁⲛ ⲡⲉ ϫⲉⲛⲁⲛⲓⲙ ⲛⲉ . ⲁⲓⲟⲩⲱⲣⲡ ⲉⲛⲓⲧⲓⲙⲓ ⲉⲧϧⲱⲛⲧ ⲉⲣⲟⲓ ϫⲉⲁⲛ ⲟⲩⲟⲛ ⲧⲁⲕⲉⲁⲥⲟⲩⲉ ϧⲉⲛⲛⲁⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲡⲓϫⲓⲙⲓ ⲁⲓϯ ϣⲁⲣⲟⲥ ⲉⲡⲟⲓⲕⲟⲛⲟⲙⲟⲥ ⲛⲧⲏⲓ ⲉϭⲱⲟⲩ ⲉⲃⲟⲗ ⲉⲛⲓϣⲉⲙⲙⲱⲟⲩ ⲓⲧⲉ ⲟⲩⲛ ⲟⲩⲁⲅⲅⲉⲗⲟⲥ ⲡⲉ ⲓⲧⲉ ⲟⲩⲇⲉⲱⲛ ⲡⲉ ⲁⲛϭⲱⲟⲩ ⲉⲃⲟⲗ ⲉⲛⲓⲭⲏⲣⲁ ⲡⲉ . ⲟⲩⲛ ⲁⲛⲟⲕ ⲓⲧⲉ ⲛⲑⲟⲕ ⲙⲁⲣⲉⲛϯⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ⲛⲁⲓϩⲱⲃ ⲅⲁⲣ ⲙⲡⲁⲓⲣⲏϯ ⲙⲡⲁⲩⲉⲣⲛⲟϥⲣⲓ ⲛϯⲯⲩⲭⲏ ⲛϩⲗⲓ ⲉⲃⲏⲗ ⲉⲡⲉⲥⲧⲟⲩⲃⲟ ⲡⲗⲏⲛ ϯϯⲱⲟⲩ ⲛⲁⲕ ϫⲉⲁⲕϭⲓ ⲛⲟⲩϧⲣⲉ ϩⲓⲧⲉⲛⲟⲩⲁⲅⲅⲉⲗⲟⲥ ⲟⲩⲟⲛ ϣϫⲟⲙ ⲙⲉⲛ ⲛⲛⲓⲕⲉⲇⲁⲓⲙⲱⲛ ⲉⲕⲱⲗⲛ ⲛϩⲁⲛⲱⲓⲕ ⲉⲉⲛⲟⲩ ⲁⲗⲗⲁ ⲥⲉⲟⲓ ⲛϧⲣⲉ ⲙⲡⲓⲥⲱⲙⲁ ⲁⲛ ⲉⲡⲥⲓ ⲛⲁⲛⲓⲇⲁⲓⲙⲱⲛ ⲅⲁⲣ ⲥⲉⲙⲣⲟϣⲧ ⲟⲩⲟϩ ⲉϣⲱⲡ ⲫⲁⲛⲓⲇⲉⲙⲱⲛ ⲡⲉ ϯⲯⲩⲭⲏ ⲑⲉϧⲑⲱϧ ⲁⲥϣⲁⲛⲛⲁⲩ ⲉⲣⲟϥ ⲉϣⲱⲡ ⲇⲉ ⲫⲁⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲡⲉ ϯⲯⲩⲭⲏ ⲑⲉϧⲑⲱϧ ⲁⲛ ⲁⲗⲗⲁ ⲉⲥⲭⲏ ϧⲉⲛⲟⲩⲥⲉⲙⲛⲏ ⲛⲉⲙⲟⲩϩⲓⲣⲏⲛⲏ ⲙⲡⲓⲛⲁⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲫⲏ ⲟⲩⲛ ⲉⲧⲁϥⲉⲣⲡⲉⲙⲡϣⲁⲛϭⲓϧⲣⲉ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓⲁⲅⲅⲉⲗⲟⲥ ⲛϣⲟⲣⲡ ⲙⲉⲛ ϣⲁⲣⲉⲟⲩⲇⲓⲁⲕⲣⲓⲥⲓⲥ ϣⲱⲡⲓ ⲛϧⲏⲧϥ ⲉϥⲓⲣⲓ ⲙⲫⲙⲉⲩⲓ ⲙⲡⲓⲥⲁϫⲓ ⲙⲡⲓⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉϯ**ϧⲣⲉ** ⲉⲧϫⲟⲣⲑⲁⲛⲓⲧⲉⲗⲓⲟⲥ ⲧⲉ ⲛⲁⲓ ⲉⲑⲃⲉⲧⲟⲩϩⲉⲝⲓⲥ ⲥⲉⲉⲣⲅⲩⲙⲛⲁⲍⲓⲛ ⲛⲛⲟⲩⲉⲥⲑⲏⲧⲏⲣⲓⲟⲛ ⲉⲡϫⲓⲛⲉⲙⲓ ⲉⲡⲓⲡⲉⲧϩⲱⲟⲩ ⲛⲉⲙⲛⲓⲡⲉⲑⲛⲁⲛⲉϥ .",
+      "english": "As I sat, he said: ‘Tell me, then, do you think that demons can accomplish these things?’ Apa Evagrius replied: ‘The same thing happened to both of us—you and I are witnesses. A few days ago, I also set out to visit the brothers, and as I walked along the road, I found a purse in which were three gold coins.’ After I sat down for a day, no one came to search for it, and because I did not know who it belonged to, I sent someone to the nearby villages, saying: 'Has anyone lost a purse in recent days?' When no one came forward, I gave an order to my steward and said: 'Distribute it among the pilgrims, whether it comes from angels or from the devil.' And we distributed it accordingly. Therefore, I give thanks to God, for such works do not pertain to the soul unless they lead it to be purified, are useful. However, I congratulate you for having received food from an angel; for demons, too, can bring bread, even steal it and offer it. But this bread does not nourish the body, for the bread of demons stinks, and if bread is from the devil, the soul is disturbed when it sees it. But if the bread is from an angel, the soul is not disturbed but remains in peace and tranquility. At that moment when someone is worthy to receive bread from the hands of angels, reason first provides discernment, if we recall the words of the Apostle, saying: ‘The food of the mature is for those who, because of their perfection, have trained their senses to discern what is good and what is evil.’",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛⲧⲁⲩⲉⲓ ϣⲁⲣⲟⲓ ⲉⲡⲉⲓⲙⲁ ϯϭⲉⲛⲁⲓ ⲛⲟⲩ**ϩⲣⲉ** ⲙⲛⲟⲩⲏⲣⲡ ⲛⲥⲉⲙⲧⲟⲛ ⲙⲙⲟⲟⲩ ϩⲁϩⲧⲏⲓ ⲙⲡⲉⲓⲙⲁ · ⲁⲩⲱ ϯⲛⲁϯ ⲛⲁⲕ ⲛⲧⲉⲩϯⲙⲏ ϩⲙⲡⲕⲁⲓⲣⲟⲥ ⲙⲡⲁⲃⲉⲉⲕⲉ ·",
+      "english": "They have come to me here that I may supply them with food and wine ; and they would rest (i.e. lodge) with me in this place. (Give me food and wine) and I will repay thee the price of the same at the time when my wages (are paid)",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        93,
+        24.372
+      ],
+      [
+        "ⲛ",
+        82,
+        23.663
+      ],
+      [
+        "ⲛⲱ",
+        25,
+        22.268
+      ],
+      [
+        "ϩⲁⲗⲁϯ",
+        6,
+        20.778
+      ],
+      [
+        "ⲁⲛ",
+        19,
+        20.759
+      ],
+      [
+        "ⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲓⲛ",
+        2,
+        20.695
+      ],
+      [
+        "ⲙⲏⲥⲓ",
+        2,
+        20.695
+      ],
+      [
+        "ⲛⲁ",
+        30,
+        20.675
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        36,
+        20.59
+      ],
+      [
+        "ⲇⲉ",
+        22,
+        20.427
+      ],
+      [
+        "ⲉ",
+        34,
+        20.279
+      ],
+      [
+        "ϯ",
+        25,
+        20.222
+      ],
+      [
+        "ⲉⲣⲱϯ",
+        4,
+        20.203
+      ],
+      [
+        "ⲛⲧⲉ",
+        25,
+        19.998
+      ],
+      [
+        "ϧⲉⲛ",
+        25,
+        19.695
+      ],
+      [
+        "ⲁⲃⲱⲕ:",
+        1,
+        19.695
+      ],
+      [
+        "ⲧⲥⲱⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲧⲁⲥⲁⲝ",
+        1,
+        19.695
+      ],
+      [
+        "ⲧⲉⲧⲉⲛϭ",
+        1,
+        19.695
+      ],
+      [
+        "ⲓⲛⲧⲉⲧⲉⲛ",
+        1,
+        19.695
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        115,
+        17.415
+      ],
+      [
+        "ϩⲃⲥⲱ",
+        9,
+        16.079
+      ],
+      [
+        "ⲧⲉ",
+        28,
+        15.294
+      ],
+      [
+        "ⲛⲁ",
+        38,
+        14.501
+      ],
+      [
+        "ⲟⲩ",
+        40,
+        14.255
+      ],
+      [
+        "ⲟⲩⲟⲟⲧ",
+        2,
+        14.082
+      ],
+      [
+        ".",
+        28,
+        14.049
+      ],
+      [
+        "ⲙ",
+        36,
+        13.93
+      ],
+      [
+        "ⲉⲣⲱⲧⲉ",
+        4,
+        13.912
+      ],
+      [
+        "ⲧ",
+        30,
+        13.861
+      ],
+      [
+        "ⲉⲧ",
+        28,
+        13.73
+      ],
+      [
+        "ⲙⲡⲣⲙⲉⲩⲧⲡⲏ",
+        1,
+        13.667
+      ],
+      [
+        "ⲕⲁⲧⲧⲟⲩ",
+        1,
+        13.667
+      ],
+      [
+        "ⲥⲑⲙⲕⲉ",
+        1,
+        13.667
+      ],
+      [
+        "ⲧⲁϣϥ",
+        1,
+        13.667
+      ],
+      [
+        "ⲥⲃⲧⲉⲧⲉ",
+        1,
+        13.667
+      ],
+      [
+        "ⲥⲃⲧⲉⲧⲉϥ",
+        1,
+        13.667
+      ],
+      [
+        "ⲧⲁⲛⲓⲧⲉⲗⲓⲟⲥ",
+        1,
+        13.667
+      ],
+      [
+        "ⲁ",
+        35,
+        13.501
+      ],
+      [
+        "ϩⲁⲗⲁⲧⲉ",
+        4,
+        13.144
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲣⲉ_0_node",
+          57
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲣⲉ",
+          6
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲣⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ϩⲣⲉ",
+          7
+        ],
+        [
+          "ⲟⲉⲓⲕ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲣⲉ",
+          5
+        ],
+        [
+          "ⲧⲉ_1_pre_ϩⲣⲉ",
+          4
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲑⲏⲣⲓⲟⲛ_3_post_ⲛⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲁⲧⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲥⲱ",
+          4
+        ],
+        [
+          "ⲧ_2_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ϩⲃⲥⲱ_1_post_ϩⲣⲉ",
+          4
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲣⲉ",
+          3
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲏⲣⲡ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲛⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲧⲣⲁⲡⲉⲍⲁ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲥⲃⲧⲱⲧ",
+          1
+        ],
+        [
+          "ⲥⲃⲧⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲥⲃⲧⲱⲧ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲩ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲛ_1_post_ϩⲣⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲣⲉ",
+          "ⲟⲉⲓⲕ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲣⲉ",
+          "ⲛⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲛ",
+          "ⲑⲏⲣⲓⲟⲛ_3_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲣⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲁⲧⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲁⲛ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲣⲉ",
+          "ⲧⲉ_1_pre_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲉⲧ_1_post_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲣⲉ",
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲣⲉ",
+          "ⲛⲁ_3_post_ⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲙⲟⲩⲛ",
+          "ⲙⲟⲩⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲟⲩⲛ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ⲙⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲃⲥⲱ",
+          4
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲥⲱ",
+          "ⲧ_2_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲥⲱ",
+          "ⲧⲉⲩ_2_post_ϩⲃⲥⲱ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_2_post_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲃⲥⲱ_1_post_ϩⲣⲉ",
+          "ⲉ_1_post_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲃⲥⲱ",
+          "ⲧⲉϥ_2_post_ϩⲃⲥⲱ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲃⲥⲱ",
+          "ϩⲃⲥⲱ_1_post_ϩⲣⲉ",
+          2
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲏⲣⲡ",
+          "ⲟⲩ_2_post_ⲏⲣⲡ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲏⲣⲡ",
+          "ⲏⲣⲡ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲣⲉ",
+          "ϩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲙ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲣⲉ",
+          "ⲙⲏⲛⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲏⲛⲉ_2_post_ⲙ",
+          "ϩⲛ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲣⲉ",
+          "ⲧⲉϥ_3_post_ⲧⲣⲁⲡⲉⲍⲁ",
+          1
+        ],
+        [
+          "ϩⲣⲉ_0_node",
+          "ⲉ_1_post_ϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲣⲉ",
+          "ϥ_3_post_ⲥⲃⲧⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲥⲃⲧⲱⲧ",
+          "ⲥⲃⲧⲱⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲃⲧⲱⲧ_2_post_ⲉ",
+          "ⲛⲁ_3_post_ⲥⲃⲧⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲥⲃⲧⲱⲧ",
+          "ⲛ_4_post_ⲛⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.77,
+      "rank": 745,
+      "count": 122
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6779",
+      "label": "ϩⲣⲉ",
+      "pos": "N",
+      "gloss": "food, fodder; need"
+    },
+    {
+      "target": "C6781",
+      "label": "ϩⲣⲉⲃⲟⲧ",
+      "pos": "ADV",
+      "gloss": "per month"
+    },
+    {
+      "target": "C6784",
+      "label": "ϫⲓϩⲣⲉ",
+      "pos": "V",
+      "gloss": "get fodder"
+    },
+    {
+      "target": "C6783",
+      "label": "ϯϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give food"
+    },
+    {
+      "target": "C6782",
+      "label": "ⲣϩⲣⲉ",
+      "pos": "V",
+      "gloss": "become, be food"
+    }
+  ],
+  "etym": {
+    "egy_num": "123940",
+    "egy_lemma": "ẖr.t",
+    "demo_num": "d4834",
+    "demo_lemma": "ẖr(e.t)",
+    "english": "belongings; share; requirements",
+    "german": "Bedarf; Anteil; Pflicht; Verlauf",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/123940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4834"
+  }
+}

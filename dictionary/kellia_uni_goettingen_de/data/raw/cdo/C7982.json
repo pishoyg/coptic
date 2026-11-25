@@ -1,0 +1,737 @@
+{
+  "id": "C7982",
+  "forms": [
+    {
+      "id": "CF18030",
+      "orth": "ϭⲱϣⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.69,
+        "rank": 236,
+        "count": 740
+      }
+    },
+    {
+      "orth": "ϫⲟⲩϣⲧ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.8,
+        "rank": 286,
+        "count": 322
+      }
+    },
+    {
+      "orth": "ϣⲱϣⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5226,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϣⲟⲩϣⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.38,
+        "rank": 1298,
+        "count": 32
+      }
+    },
+    {
+      "orth": "ϫⲱϣⲧ",
+      "dialect": "F",
+      "id": "223.3"
+    },
+    {
+      "orth": "ϭⲱϣⲧ",
+      "dialect": "L",
+      "id": "223.4"
+    },
+    {
+      "orth": "ϭⲁϣⲧ†",
+      "dialect": "L",
+      "id": "223.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8872",
+      "bibliography": "CD 837a-838b; CED 339; KoptHWb 471; DELC 349b; ChLCS 110b"
+    },
+    {
+      "id": "CS8873",
+      "bibliography": "CD 837a-838b; KoptHWb 471; DELC 349b; ChLCS 110b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲥⲛⲁⲩ ⲉⲡⲉⲧⲣⲟⲥ ⲉϥⲧϧⲙⲟⲙ ⲙⲙⲟϥ ⲟⲩⲟϩ ⲉⲧⲁⲥ**ϫⲟⲩϣⲧ** ⲉⲣⲟϥ ⲡⲉϫⲁⲥ ⲛⲁϥ ϫⲉⲛⲑⲟⲕ ϩⲱⲕ ⲛⲁⲕⲭⲏ ⲛⲉⲙⲓⲏⲥⲟⲩⲥ ⲡⲓⲛⲁⲍⲱⲣⲉⲟⲥ .",
+      "english": "and seeing Peter warming himself, she looked at him, and said, 'You were also with the Nazarene, Jesus!'",
+      "source": "Bohairic Gospel of Mark 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲥϩⲏⲏⲧⲉ ϯ**ϭⲱϣⲧ** ⲉⲃⲟⲗ ϩⲏⲧⲕ ·",
+      "english": "behold, I will wait for thee here';",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁⲟϩⲓ ⲉⲣⲁⲧ ⲉϫⲉⲛⲡⲁⲙⲁ ⲛⲁⲣⲉϩ ⲟⲩⲟϩ ϯⲛⲁϣⲉ ⲛⲏⲓ ⲉϫⲉⲛⲟⲩⲡⲉⲧⲣⲁ ⲟⲩⲟϩ ϯⲛⲁ**ϫⲟⲩϣⲧ** ⲉⲑⲣⲓⲛⲁⲩ ϫⲉⲟⲩ ⲡⲉ ⲉⲧⲉϥⲛⲁⲥⲁϫⲓ ⲙⲙⲟϥ ⲛϧⲏⲧ ⲟⲩⲟϩ ϫⲉⲟⲩ ⲡⲉⲧⲓⲛⲁⲉⲣⲟⲩⲱ ⲙⲙⲟϥ ⲉϫⲉⲛⲡⲁⲥⲟϩⲓ .",
+      "english": "I will stand upon my watch, and mount upon the rock, and watch to see what he will say by me, and what I shall answer when I am reproved.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉ**ϭⲱϣⲧ** ⲉⲣⲟⲓ ⲱ ⲡⲁϣⲏⲣⲉ ⲃⲓⲕⲧⲱⲣ ·",
+      "english": "Look at me, O my son Victor.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥ**ϫⲟⲩϣⲧ** ⲉⲛⲏ ⲉⲧϩⲉⲙⲥⲓ ⲙⲡⲉϥⲕⲱϯ ⲡⲉϫⲁϥ ϫⲉⲓⲥ ⲧⲁⲙⲁⲩ ⲛⲉⲙⲛⲁⲥⲛⲏⲟⲩ .",
+      "english": "Looking around at those who sat around him, he said, 'Behold, my mother and my brothers!",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛϣϭⲟⲙ ⲙⲙⲟⲓ ⲛⲛⲁⲩ ⲉⲣⲟϥ ⲉⲡⲧⲏⲣϥ · ⲏ ⲉ**ϭⲱϣⲧ** ⲉⲣⲟϥ ϩⲱⲗⲟⲥ ·",
+      "english": "I cannot bear to look upon him or to see him.'",
+      "source": "The Life of John the Kalybites part 2",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:46-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϫⲉⲛ",
+        107,
+        28.639
+      ],
+      [
+        "ϩⲏ",
+        65,
+        28.605
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        169,
+        28.506
+      ],
+      [
+        "ϥ",
+        197,
+        27.29
+      ],
+      [
+        "ⲉ",
+        166,
+        27.142
+      ],
+      [
+        "ⲧ",
+        93,
+        27.142
+      ],
+      [
+        "ϧⲁϫⲱ",
+        26,
+        26.204
+      ],
+      [
+        "ϩⲟ",
+        37,
+        26.024
+      ],
+      [
+        "ⲡ",
+        111,
+        26.003
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        125,
+        25.977
+      ],
+      [
+        "ⲁ",
+        125,
+        25.887
+      ],
+      [
+        "ϧⲁ",
+        33,
+        24.986
+      ],
+      [
+        "ⲛ",
+        111,
+        24.974
+      ],
+      [
+        "ⲟⲩ",
+        102,
+        24.771
+      ],
+      [
+        ".",
+        83,
+        24.742
+      ],
+      [
+        "ⲉⲧ",
+        60,
+        23.972
+      ],
+      [
+        "ⲃⲁⲗ",
+        20,
+        23.748
+      ],
+      [
+        "ⲫⲉ",
+        21,
+        23.643
+      ],
+      [
+        "ⲛϫⲉ",
+        47,
+        23.258
+      ],
+      [
+        "ϧⲉⲛ",
+        55,
+        23.107
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        38,
+        26.81
+      ],
+      [
+        "ϩⲏⲧ",
+        213,
+        22.619
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        352,
+        22.312
+      ],
+      [
+        "ⲛ",
+        568,
+        21.727
+      ],
+      [
+        "ⲉ",
+        448,
+        21.708
+      ],
+      [
+        "ⲡ",
+        397,
+        20.865
+      ],
+      [
+        "ϥ",
+        365,
+        20.526
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        108,
+        19.029
+      ],
+      [
+        "ⲁ",
+        220,
+        18.857
+      ],
+      [
+        "ⲓ",
+        142,
+        18.768
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        91,
+        18.67
+      ],
+      [
+        "ⲉϫⲱ",
+        71,
+        18.664
+      ],
+      [
+        "ⲉⲧ",
+        157,
+        18.591
+      ],
+      [
+        "ⲙ",
+        190,
+        18.529
+      ],
+      [
+        "ⲡⲉ",
+        136,
+        18.239
+      ],
+      [
+        "ϫⲓⲥⲉ",
+        43,
+        17.966
+      ],
+      [
+        "ⲛⲥⲱ",
+        55,
+        17.939
+      ],
+      [
+        "ⲛⲁⲩ",
+        72,
+        17.795
+      ],
+      [
+        "ⲛⲥⲁ",
+        56,
+        17.651
+      ],
+      [
+        "ⲉϫⲛ",
+        59,
+        17.542
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲱϣⲧ_0_node",
+          62
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ϭⲱϣⲧ",
+          6
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲱϣⲧ",
+          20
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϣⲧ",
+          9
+        ],
+        [
+          "ϥ_1_pre_ϭⲱϣⲧ",
+          9
+        ],
+        [
+          "ⲩ_1_pre_ϭⲱϣⲧ",
+          6
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϣⲧ",
+          8
+        ],
+        [
+          "ⲟⲩⲛⲁⲙ_2_post_ⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϭⲱϣⲧ",
+          3
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϭⲱϣⲧ",
+          9
+        ],
+        [
+          "ϥ_2_post_ϩⲏⲧ",
+          7
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲙⲏⲡⲱⲥ_1_post_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ϩⲉ",
+          2
+        ],
+        [
+          "ϥ_3_post_ϩⲉ",
+          2
+        ],
+        [
+          "ⲓ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ϩⲃⲟⲩⲣ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲧ_2_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          2
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_pre_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲣⲡⲉ",
+          2
+        ],
+        [
+          "ⲣⲡⲉ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲣⲡⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_4_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ϣⲁⲛⲧ_2_post_ⲣⲛⲟϭ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲣⲛⲟϭ",
+          2
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϭⲱϣⲧ",
+          2
+        ],
+        [
+          "ⲙⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁ",
+          2
+        ],
+        [
+          "ϣⲁ_4_post_ⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϭⲱϣⲧ",
+          7
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϣⲧ",
+          "ϥ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          2
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲉ_1_post_ϭⲱϣⲧ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϣⲧ",
+          "ⲟⲩⲛⲁⲙ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲱϣⲧ",
+          "ϩⲏⲧ_1_post_ϭⲱϣⲧ",
+          3
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϭⲱϣⲧ",
+          "ϥ_2_post_ϩⲏⲧ",
+          3
+        ],
+        [
+          "ⲙⲁⲣⲉ_1_pre_ϭⲱϣⲧ",
+          "ϥ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲙⲏⲡⲱⲥ_1_post_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲙⲏⲡⲱⲥ_1_post_ϭⲱϣⲧ",
+          "ⲛ_3_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϩⲉ",
+          "ϥ_3_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϣⲧ",
+          "ϩⲃⲟⲩⲣ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϣⲧ",
+          "ⲥ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲱϣⲧ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲱϣⲧ",
+          "ⲁ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϭⲱϣⲧ",
+          "ⲧ_2_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_pre_ϩⲉⲑⲛⲟⲥ",
+          "ϩⲉⲑⲛⲟⲥ_1_pre_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϭⲱϣⲧ",
+          "ⲡⲉⲕ_3_post_ⲣⲡⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲣⲡⲉ",
+          "ⲣⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲣⲡⲉ_2_post_ⲉ",
+          "ⲉⲧ_3_post_ⲣⲡⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲣⲡⲉ",
+          "ⲟⲩⲁⲁⲃ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ϩⲏⲧ_1_post_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_1_post_ϭⲱϣⲧ",
+          "ⲟⲩ_2_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲏⲧ",
+          "ϣⲁⲛⲧ_2_post_ⲣⲛⲟϭ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲧ_2_post_ⲣⲛⲟϭ",
+          "ⲟⲩ_2_post_ⲣⲛⲟϭ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ϭⲱϣⲧ",
+          "ϭⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲱϣⲧ_0_node",
+          "ⲙ_1_post_ϭⲱϣⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲱϣⲧ",
+          "ⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁ_2_post_ⲙ",
+          "ⲛ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲁ",
+          "ϣⲁ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.66,
+      "rank": 202,
+      "count": 740
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7987",
+      "label": "ϭⲓⲛϭⲱϣⲧ",
+      "pos": "N",
+      "gloss": "viewing, beholding; expectation"
+    },
+    {
+      "target": "C7983",
+      "label": "ϭⲱϣⲧ",
+      "pos": "N",
+      "gloss": "look, glance"
+    },
+    {
+      "target": "C7984",
+      "label": "ⲁⲧϫⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "unreasonable(?)"
+    },
+    {
+      "target": "C7985",
+      "label": "ⲙⲁ ⲛϭⲱϣⲧ",
+      "pos": "N",
+      "gloss": "lookout place"
+    },
+    {
+      "target": "C7986",
+      "label": "ⲣⲉϥϭⲱϣⲧ",
+      "pos": "N",
+      "gloss": "beholder, one who sees"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6946",
+    "demo_lemma": "gšp(e)",
+    "english": "[to look, glimpse]",
+    "german": "sehen, blicken",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6946"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "C11009",
+  "forms": [
+    {
+      "id": "CF30223",
+      "orth": "ⲭⲱⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30224",
+      "orth": "ⲭⲱⲣⲓⲟⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF30225",
+      "orth": "ⲭⲱⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11983,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15327",
+      "bibliography": "DDGLC",
+      "cu_ID": "2837"
+    },
+    {
+      "id": "CS15328",
+      "bibliography": "DDGLC",
+      "cu_ID": "10671"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲩⲛⲟⲩⲁⲣⲭⲱⲛ ⲇⲉ · ϩⲛⲟⲩ**ⲭⲱⲣⲓⲟⲛ** ϩⲓⲧⲟⲩⲱϥ · ⲙⲡⲙⲁⲓ ⲟⲩⲙⲁ ⲉⲩⲙⲟⲩⲧⲉ · ⲉⲡⲣⲁⲛ ⲙⲡⲁⲣⲭⲱⲛ ⲉⲧⲙⲙⲁⲩ · ϫⲉⲕⲩⲣⲓⲥ ϩⲉⲣⲙⲁⲡⲟⲗⲗⲱⲛ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲧⲟⲩⲱ",
+        1,
+        12.5
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲱⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲩⲱ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓⲧⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲭⲱⲣⲓⲟⲛ_0_node",
+          "ϩⲓⲧⲟⲩⲱ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲩⲱ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          "ϥ_2_post_ϩⲓⲧⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲓⲧⲟⲩⲱ",
+          "ⲙ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲭⲱⲣⲓⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲁⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11557,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2416",
+    "grl_lemma": "χωρίον",
+    "grl_meaning": "place, spot, district, town, estate, space, room",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2016a; Preisigke 2:767"
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "id": "C2207",
+  "forms": [
+    {
+      "id": "CF6132",
+      "orth": "ⲙⲓϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.28,
+        "rank": 409,
+        "count": 360
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2549",
+      "bibliography": "CD 202b; KoptHWb 108; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϫⲓϭⲟⲗ ⲉⲙⲡⲟⲩ**ⲙⲓϣⲉ** ⲛⲙⲙⲉ ⲟⲩⲧⲉ ⲙⲡⲟⲩϩⲟⲟⲩϣ ⲉⲣⲟ ·",
+      "english": "It’s you lying, as they didn’t fight with you nor did they abuse you.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲛⲉⲑⲏⲣⲓⲟⲛ · ⲟⲩⲱⲙ ⲙⲡⲣⲱⲙⲉ ⲙⲉⲩϩⲉ ⲉⲣⲟϥ ⲛⲕⲉⲥⲟⲡ ⲉⲧⲣⲉϥ**ⲙⲓϣⲉ** ⲛⲙⲙⲁϥ ·",
+      "english": "When the wild beast devoureth a man the man is no longer forthcoming to fight with him again.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲛⲁϣϯ ⲙⲡⲉϥⲛⲟⲩⲟⲓ ⲉⲣⲟϥ ⲁⲛ ⲉ**ⲙⲓϣⲉ** ⲛⲙⲙⲁϥ ·",
+      "english": "the mighty Devil would not be able to go against Him to fight with Him.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲙⲙⲁ",
+        179,
+        23.43
+      ],
+      [
+        "ⲙⲛ",
+        227,
+        21.632
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        20.528
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        27,
+        19.741
+      ],
+      [
+        "ⲉϫⲱ",
+        59,
+        18.902
+      ],
+      [
+        "ⲛ",
+        211,
+        18.48
+      ],
+      [
+        "ⲉ",
+        161,
+        18.318
+      ],
+      [
+        "ⲡ",
+        161,
+        17.998
+      ],
+      [
+        "ⲁⲩⲱ",
+        114,
+        17.754
+      ],
+      [
+        "ⲩ",
+        109,
+        17.622
+      ],
+      [
+        "ⲕ",
+        71,
+        16.81
+      ],
+      [
+        "ⲁ",
+        103,
+        16.612
+      ],
+      [
+        "ϥ",
+        105,
+        16.173
+      ],
+      [
+        "ⲡⲉϩⲧⲥⲛⲟϥ",
+        3,
+        15.861
+      ],
+      [
+        "ⲟⲩ",
+        71,
+        15.177
+      ],
+      [
+        "ⲛⲉ",
+        42,
+        14.998
+      ],
+      [
+        "ⲧ",
+        55,
+        14.923
+      ],
+      [
+        "ⲉⲧ",
+        52,
+        14.848
+      ],
+      [
+        "ϩⲛ",
+        46,
+        14.558
+      ],
+      [
+        "ⲓ",
+        40,
+        14.324
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲓϣⲉ_0_node",
+          94
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          27
+        ],
+        [
+          "ⲩ_2_post_ⲛⲙⲙⲁ",
+          9
+        ],
+        [
+          "ϥ_2_post_ⲛⲙⲙⲁ",
+          5
+        ],
+        [
+          "ⲥ_2_post_ⲛⲙⲙⲁ",
+          5
+        ],
+        [
+          "ⲓ_2_post_ⲛⲙⲙⲁ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲛⲙⲙⲁ",
+          4
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲓϣⲉ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲓϣⲉ",
+          5
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲓϣⲉ",
+          7
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲓϣⲉ",
+          5
+        ],
+        [
+          "ⲙⲛ_1_post_ⲙⲓϣⲉ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛ",
+          3
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲛ_4_post_ϣⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲁⲙⲙⲱⲛ_5_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲓϣⲉ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ⲙⲓϣⲉ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲓϣⲉ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲓϣⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          2
+        ],
+        [
+          "ϯ_4_post_ⲉⲧ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲓϣⲉ_0_node",
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          5
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          "ⲩ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          "ϥ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          "ⲥ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          "ⲓ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_1_post_ⲙⲓϣⲉ",
+          "ⲛ_2_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲓϣⲉ",
+          "ⲡ_1_pre_ⲙⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲓϣⲉ_0_node",
+          "ⲙⲛ_1_post_ⲙⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲙⲓϣⲉ",
+          "ⲛ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          "ⲛ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϣⲏⲣⲉ",
+          "ⲁⲙⲙⲱⲛ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲓϣⲉ",
+          "ϥ_1_pre_ⲙⲓϣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲓϣⲉ",
+          "ϩⲉⲛ_1_pre_ⲙⲓϣⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲓϣⲉ",
+          "ⲙⲓϣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲓϣⲉ_0_node",
+          "ⲛ_1_post_ⲙⲓϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲓϣⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ϯ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲙⲓϣⲉ",
+          "ⲩ_1_pre_ⲙⲓϣⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.27,
+      "rank": 349,
+      "count": 360
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2213",
+      "label": "ϭⲓⲛⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "art of fighting"
+    },
+    {
+      "target": "C2210",
+      "label": "ⲁⲧⲙⲓϣⲓ",
+      "pos": "N",
+      "gloss": "not attacked, unhurt"
+    },
+    {
+      "target": "C2208",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "V",
+      "gloss": "strike"
+    },
+    {
+      "target": "C2209",
+      "label": "ⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fight, quarrel"
+    },
+    {
+      "target": "C2214",
+      "label": "ⲙⲓϣⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "fight for, fight bravely; fight against, attack"
+    },
+    {
+      "target": "C2215",
+      "label": "ⲙⲓϣⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "fight for, on behalf of"
+    },
+    {
+      "target": "C2216",
+      "label": "ⲙⲓϣⲉ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "fight with, against, chide"
+    },
+    {
+      "target": "C2217",
+      "label": "ⲙⲓϣⲉ (ⲟⲩⲃⲉ-)",
+      "pos": "V",
+      "gloss": "fight against"
+    },
+    {
+      "target": "C2218",
+      "label": "ⲙⲓϣⲓ (ϩⲓϫⲉⲛ-)",
+      "pos": "V",
+      "gloss": "fight on behalf of"
+    },
+    {
+      "target": "C2211",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "fighter"
+    },
+    {
+      "target": "C2212",
+      "label": "ⲣⲉϥⲙⲓϣⲉ",
+      "pos": "N",
+      "gloss": "hostile, quarrelsome"
+    }
+  ],
+  "etym": {
+    "egy_num": "74290",
+    "egy_lemma": "mḫꜣ",
+    "demo_num": "d2644",
+    "demo_lemma": "mh̭j",
+    "english": "to skewer",
+    "german": "durchstoßen (mit dem Speer)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/74290",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2644"
+  }
+}

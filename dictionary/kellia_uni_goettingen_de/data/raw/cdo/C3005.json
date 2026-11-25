@@ -1,0 +1,721 @@
+{
+  "id": "C3005",
+  "forms": [
+    {
+      "id": "CF7876",
+      "orth": "ⲡⲁϩⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.77,
+        "rank": 487,
+        "count": 280
+      }
+    },
+    {
+      "orth": "ⲫⲁϩⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.86,
+        "rank": 490,
+        "count": 158
+      }
+    },
+    {
+      "orth": "ⲡⲁϩⲟⲩ",
+      "dialect": "A",
+      "id": "1306.1"
+    },
+    {
+      "orth": "ⲡⲉϩⲟⲩ",
+      "dialect": "F",
+      "id": "1306.2"
+    },
+    {
+      "orth": "ⲡⲁϩⲁⲩ",
+      "dialect": "F",
+      "id": "1306.3"
+    },
+    {
+      "orth": "ⲡⲁϩⲟⲩ",
+      "dialect": "L",
+      "id": "1306.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3440",
+      "bibliography": "CD 284b; CED 132; KoptHWb 156; DELC 167; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲫⲏ ⲉⲧϧⲉⲛⲧⲕⲟⲓ ⲙⲡⲉⲛⲑⲣⲉϥⲓ ⲉ**ⲫⲁϩⲟⲩ** ⲉⲉⲗⲡⲉϥϩⲃⲟⲥ .",
+      "english": "Let him who is in the field not return back to take his cloak.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲕⲱ ⲉ**ⲡⲁϩⲟⲩ** ⲛϩⲏⲧϥ ·",
+      "english": "and put back some of it;",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲟⲙ ⲁϥⲛⲁⲩ ⲟⲩⲟϩ ⲁϥⲫⲱⲧ ⲟⲩⲟϩ ⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ ⲁϥⲕⲟⲧϥ ⲉ**ⲫⲁϩⲟⲩ**",
+      "english": "The sea saw and fled: Jordan was turned back.",
+      "source": "19_Psalmi_113",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:113",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲉⲓ ⲉ**ⲡⲁϩⲟⲩ** .",
+      "english": "don't go back.",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϧⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲇⲉ ⲉⲧⲉⲙⲙⲁⲩ ⲫⲏ ⲉⲧⲭⲏ ϩⲓϫⲉⲛⲡϫⲉⲛⲉⲫⲱⲣ ⲟⲩⲟϩ ⲉⲣⲉⲛⲉϥⲥⲕⲉⲩⲟⲥ ϧⲉⲛⲡⲓⲏⲓ ⲙⲡⲉⲛⲑⲣⲉϥⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲟⲗⲟⲩ ⲟⲩⲟϩ ⲫⲏ ⲉⲧⲭⲏ ϧⲉⲛⲧⲕⲟⲓ ⲡⲁⲓⲣⲏϯ ⲟⲛ ⲙⲡⲉⲛⲑⲣⲉϥⲕⲟⲧϥ ⲉ**ⲫⲁϩⲟⲩ** .",
+      "english": "In that day, he who will be on the housetop, and his goods in the house, let him not go down to take them away. Let him who is in the field likewise not turn back.",
+      "source": "03_Luke_17",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲡⲁⲗⲓⲛ ⲟⲛ ⲛⲧⲉⲧⲛⲕⲉⲧⲧⲏⲩⲧⲛ ⲉ**ⲡⲁϩⲟⲩ** ϩⲓⲛⲓⲙⲛⲧⲣⲉϥϯϭⲱⲛⲧ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲧⲉⲧⲛϩⲉ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲥ ⲛⲧⲥⲏϥⲉ ⲙⲡⲡⲟⲛⲏⲣⲟⲥ ⲡⲉⲛⲧⲁϥⲧⲁⲕⲟ ⲛⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ⲧⲏⲣⲥ ϩⲛⲛⲉϥⲛⲟⲃⲉ ⲙⲛⲛⲉϥⲁⲛⲟⲙⲓⲁ ·",
+      "english": "That still again you return back to these provocations of God you fall down by the sword of the wicked one who has destroyed all of civilization in his sins and acts of lawlessness.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲁ",
+        62,
+        28.109
+      ],
+      [
+        "ϩⲓ",
+        50,
+        26.469
+      ],
+      [
+        "ⲙⲙⲟ",
+        62,
+        25.231
+      ],
+      [
+        "ⲉ",
+        95,
+        24.727
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        92,
+        24.651
+      ],
+      [
+        "ϥ",
+        85,
+        23.652
+      ],
+      [
+        "ⲟⲩ",
+        73,
+        23.323
+      ],
+      [
+        "ⲁ",
+        64,
+        22.989
+      ],
+      [
+        "ϣϣⲟⲧ",
+        3,
+        22.865
+      ],
+      [
+        "ⲙ",
+        53,
+        22.767
+      ],
+      [
+        "ⲛ",
+        65,
+        22.658
+      ],
+      [
+        "ⲙⲟϣⲓ",
+        17,
+        22.292
+      ],
+      [
+        ".",
+        39,
+        21.473
+      ],
+      [
+        "ⲛⲁ",
+        36,
+        21.464
+      ],
+      [
+        "ⲕⲟⲧ",
+        9,
+        21.233
+      ],
+      [
+        "ⲕⲉ",
+        15,
+        21.181
+      ],
+      [
+        "ⲉⲣⲡⲟⲣⲛⲉⲩⲓⲛ",
+        5,
+        21.076
+      ],
+      [
+        "ⲓ",
+        27,
+        20.84
+      ],
+      [
+        "ⲥ",
+        27,
+        20.693
+      ],
+      [
+        "ⲡⲓ",
+        31,
+        20.633
+      ]
+    ],
+    "S": [
+      [
+        "ϩⲓ",
+        96,
+        20.857
+      ],
+      [
+        "ⲉ",
+        237,
+        20.354
+      ],
+      [
+        "ϥ",
+        220,
+        19.736
+      ],
+      [
+        "ⲙⲙⲟ",
+        116,
+        19.425
+      ],
+      [
+        "ⲁ",
+        152,
+        18.659
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        18.469
+      ],
+      [
+        "ⲕⲟⲧ",
+        31,
+        18.389
+      ],
+      [
+        "ⲛ",
+        172,
+        17.958
+      ],
+      [
+        "ϫⲁⲓⲟϩⲥ",
+        6,
+        16.764
+      ],
+      [
+        "ⲙ",
+        90,
+        16.697
+      ],
+      [
+        "ⲁⲩⲱ",
+        81,
+        16.637
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        36,
+        16.22
+      ],
+      [
+        "ⲡ",
+        92,
+        15.938
+      ],
+      [
+        "ⲟⲩ",
+        62,
+        14.953
+      ],
+      [
+        "ⲕⲧⲟ",
+        15,
+        14.716
+      ],
+      [
+        "ⲡⲟⲣⲛⲉⲩⲉ",
+        7,
+        14.533
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥϯϭⲱⲛⲧ",
+        2,
+        14.469
+      ],
+      [
+        "ⲩ",
+        46,
+        14.251
+      ],
+      [
+        "ⲕⲱ",
+        16,
+        14.107
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        15,
+        13.527
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          182
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          34
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          11
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          10
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          16
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ϫⲁⲓⲟϩⲥ_3_post_ⲛ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲡⲁϩⲟⲩ",
+          3
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          3
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          3
+        ],
+        [
+          "ⲡ_5_post_ⲙ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲛⲟⲩⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲕⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲕⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲡⲁϩⲟⲩ",
+          2
+        ],
+        [
+          "ⲥ_3_post_ϣⲟⲩⲉⲓⲧ",
+          2
+        ],
+        [
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ϩⲉⲛ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ⲛⲟⲩⲧⲉ",
+          2
+        ],
+        [
+          "ϣⲙⲙⲟ_5_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲡⲁϩⲟⲩ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϫⲁⲓⲟϩⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲡⲁϩⲟⲩ",
+          "ⲡⲁϩⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_3_post_ⲛ",
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ϣⲏⲣⲉ",
+          "ⲡ_5_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲛⲉⲩ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲛ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲡⲁϩⲟⲩ",
+          "ⲡⲁϩⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          "ⲛϩⲏⲧ_1_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲟⲩ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲁϩⲟⲩ",
+          "ϥ_1_pre_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲁϩⲟⲩ",
+          "ⲡⲁϩⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁϩⲟⲩ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲕⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲛ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          "ⲙ_1_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲉⲉⲡⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁϩⲟⲩ_0_node",
+          "ⲉ_1_post_ⲡⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲁϩⲟⲩ",
+          "ⲥ_3_post_ϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲟⲩⲉⲓⲧ",
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ⲛⲟⲩⲧⲉ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ϩⲉⲛ",
+          "ⲛ_4_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛⲟⲩⲧⲉ",
+          "ϣⲙⲙⲟ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲡⲁϩⲟⲩ",
+          "ⲡⲁϩⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.76,
+      "rank": 418,
+      "count": 280
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3012",
+      "label": "ϩⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "at back, formerly"
+    },
+    {
+      "target": "C3013",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after, before (in time)"
+    },
+    {
+      "target": "C3014",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3007",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "to back, backward"
+    },
+    {
+      "target": "C3008",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, backward"
+    },
+    {
+      "target": "C3015",
+      "label": "ⲉⲣϩⲓⲫⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "be behind, follow after"
+    },
+    {
+      "target": "C3011",
+      "label": "ⲛⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, from behind"
+    },
+    {
+      "target": "C3006",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "hinder, past"
+    },
+    {
+      "target": "C3009",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3010",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    }
+  ],
+  "etym": {
+    "egy_num": "61490",
+    "egy_lemma": "pḥ.wj",
+    "demo_num": "d2126",
+    "demo_lemma": "pḥ(w)",
+    "english": "end; back",
+    "german": "Hinterteil; Ende",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/61490",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2126"
+  }
+}

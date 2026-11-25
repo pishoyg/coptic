@@ -1,0 +1,174 @@
+{
+  "id": "C2202",
+  "forms": [
+    {
+      "id": "CF6122",
+      "orth": "ⲙⲉϣⲁⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.47,
+        "rank": 1175,
+        "count": 74
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2544",
+      "bibliography": "CD 202a; KoptHWb 108; DELC 128; ChLCS 29b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲙⲉϣⲁⲕ** ϥⲛⲁⲧⲱⲟⲩⲛ",
+      "english": "Perhaps he will arise.”",
+      "source": "Apophthegmata Patrum Sahidic 100: Anonymous N 294",
+      "urn": "urn:cts:copticLit:ap.100.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲉϣⲁⲕ** ⲛⲧⲟⲕ ϣⲁⲕⲱⲃϣ ⲛⲟⲩⲕⲟⲩⲓ",
+      "english": "Thou mayest perhaps forget for a short time",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉϫⲛⲟⲩⲕⲱϩ ⲛⲧⲟⲟⲩ · ϫⲉ**ⲙⲉϣⲁⲕ** ⲟⲩⲉⲓⲁ ⲛⲧⲟⲟⲩ ⲡⲉ ·",
+      "english": "and I went up on a pinnacle of the mountain, [thinking that] perhaps he was a man in delirium.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        6,
+        22.143
+      ],
+      [
+        "ⲛⲧⲉ",
+        23,
+        16.733
+      ],
+      [
+        "ⲥⲉⲙⲛⲟⲛ",
+        2,
+        15.067
+      ],
+      [
+        "ⲛⲁ",
+        36,
+        14.989
+      ],
+      [
+        "ⲛ",
+        55,
+        14.944
+      ],
+      [
+        "ϭⲗⲡⲕⲟⲥⲙⲟⲥ",
+        1,
+        14.389
+      ],
+      [
+        "ⲧⲗⲱϭⲉ",
+        1,
+        14.389
+      ],
+      [
+        "ⲥⲟⲩⲱⲛ",
+        1,
+        14.389
+      ],
+      [
+        "ⲡⲉⲭⲟⲣⲁⲓⲟⲥ",
+        1,
+        14.389
+      ],
+      [
+        "ⲧⲱⲛ⳿",
+        1,
+        14.389
+      ],
+      [
+        "ⲛⲟⲓⲛⲛⲏⲏⲃⲉ",
+        1,
+        14.389
+      ],
+      [
+        "ϫⲟⲟ",
+        14,
+        14.329
+      ],
+      [
+        "ϫⲉ",
+        27,
+        14.202
+      ],
+      [
+        "ⲡ",
+        32,
+        13.288
+      ],
+      [
+        "ϭⲛ",
+        4,
+        13.27
+      ],
+      [
+        "ⲓⲛⲉ",
+        2,
+        13.067
+      ],
+      [
+        "ⲛⲁϩⲙ",
+        3,
+        12.804
+      ],
+      [
+        "ⲟⲩ",
+        24,
+        12.765
+      ],
+      [
+        "ⲙⲁⲕⲉⲇⲟⲛⲓⲁ",
+        2,
+        12.745
+      ],
+      [
+        "ⲁⲛ",
+        12,
+        12.673
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.47,
+      "rank": 1018,
+      "count": 74
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2200",
+      "label": "ⲙⲉϣⲉ",
+      "pos": "V",
+      "gloss": "not know"
+    },
+    {
+      "target": "C2201",
+      "label": "ⲙⲉϣⲉ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "anyone, such and such, so and so"
+    }
+  ]
+}

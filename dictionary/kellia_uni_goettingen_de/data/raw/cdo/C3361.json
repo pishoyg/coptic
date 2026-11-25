@@ -1,0 +1,108 @@
+{
+  "id": "C3361",
+  "forms": [
+    {
+      "id": "CF8614",
+      "orth": "ⲥⲉⲃⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7769,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3832",
+      "bibliography": "CD 322b; CED 148; KoptHWb 177; DELC 184"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲓ ⲇⲉ ⲉⲃⲟⲗ ⲛϫⲉⲫⲏ ⲉⲧⲁϥⲙⲟⲩ ⲉϥⲙⲏⲣ ⲛⲛⲉϥϭⲁⲗⲁⲩϫ ⲛⲉⲙⲛⲉϥϫⲓϫ ⲛϩⲁⲛ**ⲥⲉⲃⲉⲛ** ⲟⲩⲟϩ ⲡⲉϥϩⲟ ⲙⲏⲣ ⲛⲟⲩⲥⲟⲇⲁⲣⲓⲟⲛ ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲛⲱⲟⲩ ϫⲉⲙⲁϯⲟⲩⲱ ⲙⲙⲟϥ ⲭⲁϥ ⲉⲃⲟⲗ ⲙⲁⲣⲉϥϣⲉ ⲛⲁϥ .",
+      "english": "He who was dead came out, bound hand and foot with wrappings, and his face was wrapped around with a cloth. Jesus said to them, 'Free him, and let him go.'",
+      "source": "04_John_11",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲏⲣ",
+        1,
+        13.066
+      ],
+      [
+        "ϩⲟ",
+        1,
+        10.396
+      ],
+      [
+        "ϫⲓϫ",
+        1,
+        9.513
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.666
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲉⲃⲉⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7235,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "131770",
+    "egy_lemma": "sbn",
+    "demo_num": "d5197",
+    "demo_lemma": "sbn(ꜣ)",
+    "english": "bandage (especially of mummies)",
+    "german": "Binde",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/131770",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5197"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "id": "C3540",
+  "forms": [
+    {
+      "id": "CF8983",
+      "orth": "ⲁⲧⲥⲉⲙⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5913,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4033",
+      "bibliography": "CD 339a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲧϣⲉⲛϩⲏⲧ ⲛ**ⲁⲧⲥⲉⲙⲛⲓ** ⲛⲇⲓⲁⲃⲟⲗⲟⲥ ⲛⲁⲧϣⲁⲙⲟⲛⲓ ⲛⲧⲟⲧⲟⲩ ⲛⲥⲉϣⲉⲡⲥⲃⲱ ⲉⲣⲱⲟⲩ ⲁⲛ ⲛⲥⲉⲙⲉⲓ ⲙⲡⲓⲡⲉⲑⲛⲁⲛⲉϥ ⲁⲛ .",
+      "english": "without natural affection, unforgiving, slanderers, without self-control, fierce, no lovers of good,",
+      "source": "16_II Timothy_03",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:03",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲓⲗⲁⲥ ⲇⲉ ⲛⲑⲟϥ ⲙⲙⲟⲛ ϩⲗⲓ ⲛⲣⲱⲙⲓ ϣⲑⲣⲟ ⲙⲙⲟϥ ⲉϭⲛⲉϫⲱϥ ⲟⲩ**ⲁⲧⲥⲉⲙⲛⲓ** ⲡⲉ ⲉϥϩⲱⲟⲩ ⲉϥⲙⲉϩ ⲙⲙⲁⲑⲟⲩⲓ ⲛⲧⲉⲫⲙⲟⲩ",
+      "english": "But nobody can tame the tongue. It is a restless evil, full of deadly poison.",
+      "source": "20_James_03",
+      "urn": "urn:cts:copticLit:nt.jas.bohairic:03",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧϣⲁⲙⲟⲛⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲁⲧϣⲉⲛϩⲏⲧ",
+        1,
+        17.695
+      ],
+      [
+        "ϭⲛⲉϫⲱ",
+        1,
+        13.788
+      ],
+      [
+        "ⲇⲓⲁⲃⲟⲗⲟⲥ",
+        1,
+        12.651
+      ],
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        10.298
+      ],
+      [
+        "ⲛ",
+        3,
+        8.346
+      ],
+      [
+        "ⲉ",
+        2,
+        7.017
+      ],
+      [
+        "ϥ",
+        2,
+        6.424
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.954
+      ],
+      [
+        ".",
+        1,
+        4.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲥⲉⲙⲛⲓ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧⲥⲉⲙⲛⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲉⲙⲛⲓ_b",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲧⲥⲉⲙⲛⲓ_0_node",
+          "ⲛ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲧⲥⲉⲙⲛⲓ",
+          "ⲁⲧⲥⲉⲙⲛⲓ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲉⲙⲛⲓ_0_node",
+          "ⲉ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲧⲥⲉⲙⲛⲓ",
+          "ϥ_3_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲱⲟⲩ",
+          "ϩⲱⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲟⲩ_2_post_ⲉ",
+          "ⲉ_1_post_ⲁⲧⲥⲉⲙⲛⲓ_b",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 5418,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3543",
+      "label": "ϭⲓⲛⲥⲙⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "setting up, depositing"
+    },
+    {
+      "target": "C3541",
+      "label": "ⲙⲉⲧⲁⲧⲥⲉⲙⲛⲓ",
+      "pos": "N",
+      "gloss": "instablity"
+    },
+    {
+      "target": "C3542",
+      "label": "ⲣⲉϥⲥⲙⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "one who sets up, prepares"
+    },
+    {
+      "target": "C3537",
+      "label": "ⲥⲙⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "be established, set right, in order; establish, construct, set right; compose, write (book); provide, pay for (book, mostly in colophons); draw up (deeds); set up, construct (building etc.)"
+    },
+    {
+      "target": "C3539",
+      "label": "ⲥⲙⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "confirmation, agreement, putting together, adornment, repose,\n              tranquillity"
+    },
+    {
+      "target": "C3538",
+      "label": "ⲥⲙⲛⲧⲟⲟⲧ⸗ ⲙⲛ-",
+      "pos": "V",
+      "gloss": "join hands, agree with"
+    }
+  ]
+}

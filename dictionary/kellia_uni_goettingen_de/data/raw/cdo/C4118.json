@@ -1,0 +1,70 @@
+{
+  "id": "C4118",
+  "forms": [
+    {
+      "id": "CF10181",
+      "orth": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4677",
+      "bibliography": "CD 401a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4120",
+      "label": "ϩⲓⲑⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4117",
+      "label": "ϯⲧⲃⲏⲣ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4116",
+      "label": "ⲛⲉϫⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4119",
+      "label": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "kicker"
+    },
+    {
+      "target": "C4115",
+      "label": "ⲧⲃⲏⲣ",
+      "pos": "N",
+      "gloss": "blow with foot"
+    }
+  ]
+}

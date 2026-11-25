@@ -1,0 +1,535 @@
+{
+  "id": "C1394",
+  "forms": [
+    {
+      "id": "CF4209",
+      "orth": "ⲕⲁϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.23,
+        "rank": 322,
+        "count": 274
+      }
+    },
+    {
+      "orth": "ⲕⲁϯ",
+      "dialect": "S",
+      "id": null
+    },
+    {
+      "orth": "ⲕⲁⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2767,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1617",
+      "bibliography": "CD 123a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲡⲱⲥ ⲧⲉⲧⲉⲛ**ⲕⲁϯ** ⲁⲛ .",
+      "english": "He asked them, 'Don't you understand, yet?'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡ ⲇⲉ ⲛⲧⲉⲧⲉⲛⲛⲁⲩ ⲉⲡⲓⲥⲱϥ ⲛⲧⲉⲡⲓϣⲱϥ ⲉϥⲟϩⲓ ⲉⲣⲁⲧϥ ⲙⲡⲓⲙⲁ ⲉⲧⲉⲥϣⲉ ⲁⲛ ⲫⲏ ⲉⲧⲱϣ ⲙⲁⲣⲉϥ**ⲕⲁϯ** ⲧⲟⲧⲉ ⲛⲏ ⲉⲧⲭⲏ ϧⲉⲛϯⲓⲟⲩⲇⲉⲁ ⲙⲁⲣⲟⲩⲫⲱⲧ ⲉϫⲉⲛⲛⲓⲧⲱⲟⲩ",
+      "english": "But when you see the abomination of desolation, spoken of by Daniel the prophet, standing where it ought not (let the reader understand), then let those who are in Judea flee to the mountains,",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲓⲛⲁ ⲉⲩⲛⲁⲩ ⲛⲧⲟⲩⲛⲁⲩ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲧⲉⲙⲛⲁⲩ ⲟⲩⲟϩ ⲉⲩⲥⲱⲧⲉⲙ ⲛⲧⲟⲩⲥⲱⲧⲉⲙ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲧⲉⲙ**ⲕⲁϯ** ⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩⲕⲟⲧⲟⲩ ⲟⲩⲟϩ ⲛⲧⲟⲩⲭⲱ ⲛⲱⲟⲩ ⲉⲃⲟⲗ .",
+      "english": "that 'seeing they may see, and not perceive; and hearing they may hear, and not understand; lest perhaps they should turn again, and their sins should be forgiven them.''",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉ",
+        175,
+        19.247
+      ],
+      [
+        "ⲉⲡⲓⲥⲧⲏⲙⲏ",
+        10,
+        18.077
+      ],
+      [
+        "ⲟⲩ",
+        131,
+        17.73
+      ],
+      [
+        "ⲛ",
+        124,
+        17.329
+      ],
+      [
+        ".",
+        97,
+        17.292
+      ],
+      [
+        "ϥ",
+        112,
+        16.722
+      ],
+      [
+        "ϧⲉⲛ",
+        80,
+        16.605
+      ],
+      [
+        "ⲛⲉⲙ",
+        63,
+        16.05
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        81,
+        15.975
+      ],
+      [
+        "ⲁⲛ",
+        41,
+        15.964
+      ],
+      [
+        "ⲁ",
+        79,
+        15.777
+      ],
+      [
+        "ⲥⲃⲱ",
+        14,
+        15.601
+      ],
+      [
+        "ⲛⲧⲉ",
+        54,
+        15.207
+      ],
+      [
+        "ⲉⲧ",
+        49,
+        14.971
+      ],
+      [
+        "ϫⲉ",
+        50,
+        14.944
+      ],
+      [
+        "ⲡⲓ",
+        48,
+        14.401
+      ],
+      [
+        "ⲙⲡ",
+        18,
+        14.394
+      ],
+      [
+        "ⲇⲁⲩⲓⲇ",
+        11,
+        14.249
+      ],
+      [
+        "ϯ",
+        41,
+        14.239
+      ],
+      [
+        "ⲛⲓⲃⲉⲛ",
+        24,
+        14.145
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲁϯ_0_node",
+          99
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁϯ",
+          12
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁϯ",
+          12
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          10
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁϯ",
+          7
+        ],
+        [
+          "ⲏⲓ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲁϯ",
+          7
+        ],
+        [
+          "ⲡⲱⲥ_1_pre_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲁⲛ_1_post_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲁϯ",
+          3
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          2
+        ],
+        [
+          "ⲉⲡⲓⲥⲧⲏⲙⲏ_1_post_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ϣⲧⲉⲙ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ_b",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁϯ",
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          2
+        ],
+        [
+          "ⲕⲁϯ_0_node",
+          "ⲛ_1_post_ⲕⲁϯ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁϯ",
+          "ⲏⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲁϯ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲡⲱⲥ_1_pre_ⲕⲁϯ",
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁϯ_0_node",
+          "ⲁⲛ_1_post_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁϯ",
+          "ⲡⲉϥ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          2
+        ],
+        [
+          "ⲕⲁϯ_0_node",
+          "ⲧⲏⲣ_1_post_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲁϯ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲁϯ",
+          "ⲛ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲕⲁϯ",
+          "ⲛⲉⲧⲉⲛ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲕⲁϯ_0_node",
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          "ⲟⲩ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲡⲓⲥⲧⲏⲙⲏ",
+          "ⲉⲡⲓⲥⲧⲏⲙⲏ_1_post_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲕⲁϯ",
+          "ⲛⲧ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_pre_ⲕⲁϯ",
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          "ϣⲧⲉⲙ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ϣⲧⲉⲙ_1_pre_ⲕⲁϯ",
+          "ⲕⲁϯ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ",
+          "ⲅⲁⲣ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲕⲁϯ",
+          "ⲙⲡ_1_pre_ⲕⲁϯ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲕⲁϯ",
+          "ⲟⲩ_1_pre_ⲕⲁϯ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲕⲁϯ_b",
+          "ⲕⲁϯ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 3.29,
+      "rank": 266,
+      "count": 279
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1403",
+      "label": "ϫⲉⲙⲕⲁϯ",
+      "pos": "V",
+      "gloss": "find understanding"
+    },
+    {
+      "target": "C1404",
+      "label": "ϫⲓⲛⲕⲁϯ",
+      "pos": "N",
+      "gloss": "understanding"
+    },
+    {
+      "target": "C1402",
+      "label": "ϯⲕⲁϯ",
+      "pos": "V",
+      "gloss": "instruct"
+    },
+    {
+      "target": "C1396",
+      "label": "ⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorant person"
+    },
+    {
+      "target": "C1397",
+      "label": "ⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorant"
+    },
+    {
+      "target": "C1398",
+      "label": "ⲉⲣⲁⲧⲕⲁϯ",
+      "pos": "V",
+      "gloss": "be ignorant"
+    },
+    {
+      "target": "C1407",
+      "label": "ⲉⲣⲕⲁⲧϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be wise"
+    },
+    {
+      "target": "C1395",
+      "label": "ⲕⲁϯ",
+      "pos": "N",
+      "gloss": "knowledge, understanding"
+    },
+    {
+      "target": "C1405",
+      "label": "ⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "knowledgeable, wise person"
+    },
+    {
+      "target": "C1406",
+      "label": "ⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "knowledgeable"
+    },
+    {
+      "target": "C1399",
+      "label": "ⲙⲉⲧⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C1408",
+      "label": "ⲙⲉⲧⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "understanding"
+    },
+    {
+      "target": "C1401",
+      "label": "ⲣⲉϥⲕⲁϯ",
+      "pos": "N",
+      "gloss": "man of understanding"
+    },
+    {
+      "target": "C1400",
+      "label": "ⲣⲉⲙⲛⲕⲁϯ",
+      "pos": "N",
+      "gloss": "man of understanding"
+    }
+  ]
+}

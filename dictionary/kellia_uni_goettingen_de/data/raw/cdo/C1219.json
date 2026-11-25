@@ -1,0 +1,236 @@
+{
+  "id": "C1219",
+  "forms": [
+    {
+      "id": "CF3825",
+      "orth": "ϫⲓⲛⲕⲓⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3826",
+      "orth": "ϫⲓⲛⲕⲓⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4287,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1413",
+      "bibliography": "CD 109a; KoptHWb 64; ChLCS 17b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲓ**ϫⲓⲛⲕⲓⲙ** ⲛⲧⲉϯⲕⲁⲕⲓⲁ ⲉⲧⲟⲓ ⲙⲫⲣⲏϯ ⲛⲛⲓϩⲱⲓⲙⲓ ⲛⲧⲉⲫⲓⲟⲙ ⲉⲩϩⲓⲥⲫⲏⲓϯ ⲉⲧⲧⲱⲟⲩⲛⲟⲩ ⲙⲙⲱⲟⲩ ⲉϩⲣⲏⲓ ⲉϫⲱⲛ ⲙⲁⲣⲉⲛⲛⲟϣⲡⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛϯⲡⲣⲟⲥⲉⲩⲭⲏ ⲛⲉⲙⲛⲓϥⲓⲣⲱⲟⲩϣ ⲛⲧⲉϯⲙⲉⲧⲣⲉϥϯϩⲑⲏϥ ⲉⲣⲟⲛ",
+      "english": "The movements of depravity, which are like the waves of the sea foaming and rising against us, should be cast far away from us through prayer and attentiveness.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲓϫⲟⲥ ϫⲉⲙⲏⲡⲟⲧⲉ ⲛⲧⲟⲩⲣⲁϣⲓ ⲙⲙⲟⲓ ⲛϫⲉⲛⲁϫⲁϫⲓ ϧⲉⲛⲡ**ϫⲓⲛⲕⲓⲙ** ⲛⲧⲉⲛⲁⲫⲁⲧ ⲁⲩϫⲉ ⲙⲉⲧϧⲉⲣⲟⲩⲱ ⲉϩⲣⲏⲓ ⲉϫⲱⲓ .",
+      "english": "For I said, Lest mine enemies rejoice against me: for when my feet were moved, they spoke boastingly against me.",
+      "source": "19_Psalmi_37",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:37",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲕⲓⲁ",
+        2,
+        14.96
+      ],
+      [
+        "ⲫⲁⲧ",
+        1,
+        12.355
+      ],
+      [
+        "ϫⲁϫⲓ",
+        1,
+        10.066
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        9.532
+      ],
+      [
+        "ⲛⲧⲉ",
+        3,
+        9.236
+      ],
+      [
+        "ⲕ",
+        2,
+        8.543
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.667
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        7.633
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.369
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        6.495
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        4.178
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲓ_1_pre_ϫⲓⲛⲕⲓⲙ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲕⲓⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲓⲛⲕⲓⲙ",
+          2
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲓⲁ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲕⲁⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲫⲁⲧ",
+          1
+        ],
+        [
+          "ⲫⲁⲧ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲓ_1_pre_ϫⲓⲛⲕⲓⲙ",
+          "ϫⲓⲛⲕⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛⲕⲓⲙ_0_node",
+          "ⲛⲧⲉ_1_post_ϫⲓⲛⲕⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲓⲛⲕⲓⲙ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲕⲁⲕⲓⲁ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲓⲁ_3_post_ϯ",
+          "ⲉⲧ_4_post_ⲕⲁⲕⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲓⲛⲕⲓⲙ",
+          "ⲛⲁ_3_post_ⲫⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲫⲁⲧ",
+          "ⲫⲁⲧ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3823,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1218",
+      "label": "ϭⲓⲛⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C1217",
+      "label": "ⲁⲧⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "immovable"
+    },
+    {
+      "target": "C1215",
+      "label": "ⲕⲓⲙ",
+      "pos": "V",
+      "gloss": "move, be moved; move"
+    },
+    {
+      "target": "C1216",
+      "label": "ⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C1220",
+      "label": "ⲕⲙⲧⲟ",
+      "pos": "N",
+      "gloss": "moving of the earth, earthquake"
+    }
+  ]
+}

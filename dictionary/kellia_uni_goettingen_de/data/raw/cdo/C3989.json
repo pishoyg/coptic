@@ -1,0 +1,179 @@
+{
+  "id": "C3989",
+  "forms": [
+    {
+      "id": "CF9918",
+      "orth": "ⲙⲛⲧⲥϩⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9067,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4531",
+      "bibliography": "CD 385a; ChLCS 54a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲥⲥⲟⲡⲥⲡ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲟⲟⲩ ϩⲛⲧⲉⲥⲁⲥⲡⲉ ⲉⲥϫⲏⲕ ⲉⲃⲟⲗ ϩⲛⲟⲩⲙⲛⲧϫⲱⲣⲉ ⲉⲁⲥⲧⲟⲩⲛⲉⲥⲡⲉⲥⲙⲉⲉⲩⲉ ⲛⲧⲉⲥ**ⲙⲛⲧⲥϩⲓⲙⲉ** ϩⲛⲟⲩϭⲱⲛⲧ ⲙⲙⲛⲧϩⲟⲟⲩⲧ ⲉⲥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲩ",
+      "english": "Yea, she exhorted every one of them in her own language, filled with courageous spirits; and stirring up her womanish thoughts with a manly stomach, she said unto them,",
+      "source": "II Maccabees 7",
+      "urn": "urn:cts:copticLit:ot.2macc.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥⲧⲱⲛⲥ ⲇⲉ ⲁⲥⲕⲟⲥⲙⲉⲓ ⲙⲙⲟⲥ ϩⲛⲧⲉⲥϩⲃⲥⲱ ⲁⲩⲱ ϩⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ⲛⲧⲉⲥ**ⲙⲛⲧⲥϩⲓⲙⲉ** ⲁⲧⲉⲥϩⲙϩⲁⲗ ⲙⲟⲟϣⲉ ϩⲏⲧⲥ ⲁⲩⲡⲱⲣϣ ϩⲁⲣⲟⲥ ⲉϫⲙⲡⲕⲁϩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲟⲗⲟⲫⲉⲣⲛⲏⲥ ⲛⲛⲉⲡⲣⲏϣ ⲛⲁⲓ ⲉⲛⲧⲁⲩϫⲓⲧⲟⲩ ⲛⲧⲛⲃⲁⲅⲱⲁⲥ ⲉⲡⲉⲥⲙⲁ ⲉϣⲁⲥϭⲱ ⲛϩⲏⲧϥ ⲙⲙⲏⲛⲉ ⲉⲧⲣⲉⲥⲛⲟϫⲥ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲉⲛⲥⲟⲩⲱⲙ",
+      "english": "So she arose, and decked herself with her apparel and all her woman's attire, and her maid went and laid soft skins on the ground for her over against Holofernes, which she had received of Bagoas for her daily use, that she might sit and eat upon them.",
+      "source": "Judith 12",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲙⲛⲧϩⲟⲟⲩⲧ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲉⲥ",
+        3,
+        15.284
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        10.492
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        9.731
+      ],
+      [
+        "ϩⲙϩⲁⲗ",
+        1,
+        9.307
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        9.236
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        9.222
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲛⲧⲥϩⲓⲙⲉ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲥϩⲓⲙⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲥ_1_pre_ⲙⲛⲧⲥϩⲓⲙⲉ",
+          "ⲙⲛⲧⲥϩⲓⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8616,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3991",
+      "label": "ϫⲓⲥϩⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "take wife"
+    },
+    {
+      "target": "C3987",
+      "label": "ⲁⲧⲥϩⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "wifeless"
+    },
+    {
+      "target": "C3988",
+      "label": "ⲙⲛⲧⲁⲧⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "wifelessness"
+    },
+    {
+      "target": "C3990",
+      "label": "ⲣⲥϩⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "become, be wife"
+    },
+    {
+      "target": "C3986",
+      "label": "ⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "woman; wife; female (of animals)"
+    }
+  ]
+}

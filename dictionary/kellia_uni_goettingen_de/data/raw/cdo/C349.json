@@ -1,0 +1,51 @@
+{
+  "id": "C349",
+  "forms": [
+    {
+      "id": "CF1501",
+      "orth": "ⲙⲉⲧⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1502",
+      "orth": "ⲙⲉⲧⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS387",
+      "bibliography": "CD 30b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C347",
+      "label": "ⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "city, town"
+    },
+    {
+      "target": "C348",
+      "label": "ⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "citizen"
+    }
+  ]
+}

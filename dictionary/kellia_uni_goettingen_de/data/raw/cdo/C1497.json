@@ -1,0 +1,157 @@
+{
+  "id": "C1497",
+  "forms": [
+    {
+      "id": "CF4422",
+      "orth": "ⲣⲕⲁϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7185,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF4423",
+      "orth": "ⲉⲣⲕⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1746",
+      "bibliography": "CD 131b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲓϭⲟⲙϭⲙ ⲉⲡⲉⲓⲕⲉⲧ ⲁϥⲃⲱⲗ ⲉⲃⲟⲗ ⲁϥ**ⲣⲕⲁϩ** ·",
+      "english": "and when I felt it with my hands, it also fell to pieces and became dust.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲱⲗ",
+        2,
+        13.867
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        2,
+        11.512
+      ],
+      [
+        "ⲁ",
+        4,
+        10.044
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        8.986
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        8.465
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣⲕⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲕⲁϩ",
+          1
+        ],
+        [
+          "ⲣⲕⲁϩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣⲕⲁϩ",
+          "ϥ_1_pre_ⲣⲕⲁϩ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲕⲁϩ",
+          "ⲣⲕⲁϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6732,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1496",
+      "label": "ⲁⲧⲕⲁϩⲓ",
+      "pos": "N",
+      "gloss": "without ground"
+    },
+    {
+      "target": "C1500",
+      "label": "ⲃⲁⲓⲕⲁϩ",
+      "pos": "N",
+      "gloss": "earth-carrier"
+    },
+    {
+      "target": "C1494",
+      "label": "ⲕⲁϩ",
+      "pos": "N",
+      "gloss": "earth, soil; earth, land, country; measures of land"
+    },
+    {
+      "target": "C1495",
+      "label": "ⲕⲁϩ",
+      "pos": "N",
+      "gloss": "district, province"
+    },
+    {
+      "target": "C1499",
+      "label": "ⲟⲩⲁⲙⲕⲁϩ",
+      "pos": "N",
+      "gloss": "earth-eater"
+    },
+    {
+      "target": "C1498",
+      "label": "ⲣⲙⲛⲕⲁϩ",
+      "pos": "N",
+      "gloss": "man of earth"
+    }
+  ]
+}

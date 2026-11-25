@@ -1,0 +1,525 @@
+{
+  "id": "C8742",
+  "forms": [
+    {
+      "id": "CF20912",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20916",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1617,
+        "count": 44
+      }
+    },
+    {
+      "id": "CF20913",
+      "orth": "ϯⲁⲕⲟⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20914",
+      "orth": "ϯⲁⲕⲱⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20915",
+      "orth": "ⲇⲓⲁⲕⲟⲙⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20917",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20918",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF20919",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20920",
+      "orth": "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF20921",
+      "orth": "ⲇⲓⲁⲕⲱⲛⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF20922",
+      "orth": "ⲇⲓⲁⲕⲱⲛⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5443,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF20923",
+      "orth": "ⲧⲓⲁⲕⲟⲛⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10432",
+      "bibliography": "DDGLC",
+      "cu_ID": "827"
+    },
+    {
+      "id": "CS10433",
+      "bibliography": "DDGLC",
+      "cu_ID": "5439"
+    },
+    {
+      "id": "CS10434",
+      "bibliography": "DDGLC",
+      "cu_ID": "8213"
+    },
+    {
+      "id": "CS10435",
+      "bibliography": "DDGLC",
+      "cu_ID": "4463"
+    },
+    {
+      "id": "CS10436",
+      "bibliography": "DDGLC",
+      "cu_ID": "5440"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲡⲣⲣⲟ · ϯⲕⲉⲗⲉⲩⲉ ϫⲓⲛⲧⲉϩⲣⲱⲙⲁⲛⲓⲁ ϣⲁⲣⲏⲥ ⲉⲡⲉⲗⲁⲕ · ϫⲉⲉⲓⲧⲉ ⲉⲡⲁⲣⲭⲟⲥ · ⲉⲓⲧⲉ ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲉⲓⲧⲉ ⲕⲟⲙⲉⲥ · ⲉⲓⲧⲉ ⲉⲡⲓⲥⲕⲟⲡⲟⲥ · ⲉⲓⲧⲉ ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ · ⲉⲓⲧⲉ **ⲇⲓⲁⲕⲟⲛⲟⲥ** · ⲉⲓⲧⲉ ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ · ⲉⲓⲧⲉ ϩⲙϩⲁⲗ · ⲉⲓⲧⲉ ⲣⲙϩⲉ · ⲉⲓⲧⲉ ⲙⲁⲧⲟⲓ · ⲉⲓⲧⲉ ⲡⲁⲅⲁⲛⲱⲥ ⲉⲩⲉϣⲙϣⲉ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "I, the Emperor Diocletian, [hereby] command that from Romania [in the north] to Pelak (Philac) in the south, every man, whether he be eparch, or general, or count, or bishop, or elder, or deacon, or reader, or servant, or free man, or soldier, or countryman, shall worship my gods.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉϯϣⲡϩⲙⲟⲧ ⲛⲧⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲁⲗⲗⲁ ⲛϯⲙⲡϣⲁ ⲁⲛ ⲙⲡⲉⲓⲛⲟϭ ⲛϩⲙⲟⲧ ⲛⲧⲉⲓϭⲟⲧ · ⲉⲧⲣⲉⲩⲁⲁⲧ ⲛ**ⲇⲓⲁⲕⲟⲛⲟⲥ** ϩⲓⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ · ⲁⲗⲗⲁ ⲡⲉϩⲙⲟⲧ ⲙⲡⲛⲟⲩⲧⲉ ϣⲏⲡ ϩⲓⲧⲛⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲡⲁⲓ ⲉⲧϯ ⲛⲟⲩⲙⲛⲧⲥⲁⲃⲉ ⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲉⲣⲉⲡⲉⲩϩⲏⲧ ⲥⲟⲩⲧⲱⲛ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ · ⲉⲃⲟⲗ ϫⲉⲟⲩⲣⲉϥϯ ⲙⲛⲧⲣⲙⲙⲁⲟ ⲡⲉ · ⲉⲣⲉⲛⲉϥⲁϩⲱⲣ ⲙⲉϩⲛⲥⲟⲫⲓⲁ · ⲉϥϯ ⲛⲟⲩⲟⲛ ⲛⲓⲙ · ϫⲉⲉⲩⲛⲁϯϩⲏⲩ ⲛϩⲏⲧϥ · ⲛϩⲉⲛⲁⲅⲁⲑⲟⲛ ·",
+      "english": "I would give thanks unto the Christ (if I were), only I am not worthy of so great a gift as this — to be made a deacon or a reader. The grace of God is received through Jesus the Christ, Who giveth wisdom unto every man whose heart is right with Him, because He is the giver of riches and His treasury is filled with wisdom (which) He giveth unto every one who shall profit through Him in respect of good things.",
+      "source": "Martyrdom of Victor part 6",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:49-66",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲓⲧⲛⲇⲉⲥⲡⲟⲇⲏ ⲙⲛⲧⲙⲛⲧⲃⲁⲓⲣⲟⲟⲩϣ ⲛⲛⲉⲛⲉⲓⲟⲟⲧⲉ ⲙⲛⲙⲙⲉⲣⲁⲧⲉ ⲛⲥⲛⲏⲩ ⲁⲃⲃⲁ ⲁⲃⲣⲁϩⲁⲙ ⲡⲉⲡⲣⲁⲉⲓⲥⲧⲟⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲛⲡⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ ⲁⲃⲃⲁⲭⲁⲏⲗ ⲙⲛⲡⲇⲉⲩⲇⲉⲗⲁⲣⲏⲥ ⲍⲁⲭⲁⲣⲓⲁⲥ ⲡ**ⲇⲓⲁⲕⲟⲛⲟⲥ** ⲁⲩⲱ ⲡⲙⲟⲛⲁⲭⲟⲥ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲙⲡϩⲁⲅⲓⲟⲥ ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ ⲡⲉⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ ⲡⲁⲓ ⲉⲧϣⲟⲟⲡ ϩⲙⲡⲧⲟⲟⲩ ⲛⲧⲃⲱ ·",
+      "english": ". . . by the zeal and care of our fathers and beloved brethren, Abba Abraham, the governor, and Abba Khael, the archdeacon, and the warden Zacharias, deacon and monk of the Monastery of Saint Mercurius, the general-in-chief, which is in the Mountain of Tbo (Edfu, or Utfu).",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲩⲩ",
+        6,
+        21.309
+      ],
+      [
+        "ⲡⲁⲓⲥ",
+        3,
+        19.893
+      ],
+      [
+        "ⲡⲱⲛⲩⲭⲟⲥ",
+        3,
+        19.893
+      ],
+      [
+        "ⲙⲁⲕⲁⲣⲓⲟⲥ",
+        14,
+        18.983
+      ],
+      [
+        "ⲇⲓⲁⲕⲟⲛⲟⲥ",
+        6,
+        17.434
+      ],
+      [
+        "ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ",
+        3,
+        17.309
+      ],
+      [
+        "ϫⲓϩⲣⲃ",
+        3,
+        17.309
+      ],
+      [
+        "ⲁⲅⲓⲟⲩ",
+        2,
+        16.139
+      ],
+      [
+        "ⲉⲅⲱ",
+        2,
+        16.139
+      ],
+      [
+        "ⲙⲉⲣⲕⲟⲩⲣⲓⲟⲥ",
+        6,
+        15.627
+      ],
+      [
+        "ⲙⲉⲣ",
+        3,
+        15.25
+      ],
+      [
+        "ⲉⲗⲁⲭⲓⲥⲧⲟⲥ",
+        3,
+        15.193
+      ],
+      [
+        "ⲉⲡⲱⲛⲩⲭⲟⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲙⲉⲣⲕⲩⲣⲓⲟⲩ",
+        1,
+        15.139
+      ],
+      [
+        "ⲙⲉⲅⲁⲥⲧⲣⲁⲧⲏⲗⲁⲧⲁ",
+        1,
+        15.139
+      ],
+      [
+        "ⲡⲁⲓⲥⲧⲟⲩ",
+        1,
+        15.139
+      ],
+      [
+        "ⲙⲉⲣⲙⲉⲅⲁⲥⲧⲣⲁⲧⲏⲗⲁⲧⲁ",
+        1,
+        15.139
+      ],
+      [
+        "ⲧⲁⲗⲁⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲁⲙⲁⲣⲧⲱⲗⲟⲩⲥ",
+        1,
+        15.139
+      ],
+      [
+        "ⲃⲓⲕⲧⲟⲣ",
+        1,
+        15.139
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          15
+        ],
+        [
+          "ⲩ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲕⲁⲣⲓⲟⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲡⲱⲛⲩⲭⲟⲥ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲙⲟⲛⲁⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲁⲭⲟⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲉⲩⲏⲣⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲥⲟⲥ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ⲩ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲩ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          "ⲙⲁⲕⲁⲣⲓⲟⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲕⲁⲣⲓⲟⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲉⲡⲱⲛⲩⲭⲟⲥ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲡⲱⲛⲩⲭⲟⲥ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          "ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ_2_post_ⲙⲁⲕⲁⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ϩⲓ_2_post_ⲙⲟⲛⲁⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲙⲟⲛⲁⲭⲟⲥ",
+          "ⲙⲟⲛⲁⲭⲟⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ϩⲓ_2_post_ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ",
+          "ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          "ⲥⲉⲩⲏⲣⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲉⲩⲏⲣⲟⲥ_3_post_ⲛ",
+          "ⲡ_2_post_ⲁⲣⲭⲏⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲛⲟⲟⲩⲥ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ϩⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲙⲉⲥⲟⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲉⲥⲟⲥ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          "ⲙ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ϩⲉⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲇⲓⲁⲕⲟⲛⲟⲥ",
+          "ⲇⲓⲁⲕⲟⲛⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.28,
+      "rank": 1405,
+      "count": 44
+    }
+  },
+  "etym": {
+    "grl_ID": "498",
+    "grl_lemma": "διάκονος",
+    "grl_meaning": "servant, agent, deacon",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 398a; Preisigke 1:351"
+  }
+}

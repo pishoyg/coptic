@@ -1,0 +1,67 @@
+{
+  "id": "C2386",
+  "forms": [
+    {
+      "id": "CF6532",
+      "orth": "ⲛⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 63.26,
+        "rank": 24,
+        "count": 9981
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Imperfekt ⲛⲉ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2752",
+      "bibliography": "CD 219a; KoptHWb 117; DELC 135; ChLCS 31b; LCG §§ 434-439"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉϫⲉⲁⲓⲕⲁⲁⲧⲉ ⲛⲥⲱⲓ ⲡⲉ ⲁⲩⲱ ⲁⲓⲙⲉⲥⲧⲱ ⲁⲩⲱ **ⲛⲉ**ⲙⲛⲡⲉⲧⲃⲟⲏⲑⲉⲓ ⲛⲉ ⲡⲉ ⲁⲩⲱ ϯⲛⲁⲕⲁⲁⲧⲉ ⲛⲧⲉⲗⲏⲗ ϣⲁⲉⲛⲉϩ ⲁⲩⲱ ⲛⲟⲩⲛⲟϥ ⲛϩⲉⲛϫⲱⲙ ⲛϫⲱⲙ",
+      "english": "Because thou has become desolate and hated, and there was no helper, therefore I will make thee a perpetual gladness, a joy of many generations.",
+      "source": "Isaiah 60",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:60",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲯⲁⲗⲙⲟⲥ ⲛⲇⲁⲩⲉⲓⲇ ⲡⲉⲓⲯⲁⲗⲙⲟⲥ ⲛⲧⲁⲇⲁⲩⲉⲓⲇ ⲥⲁϩϥ ⲉⲧⲟⲟⲧϥ ⲉϥⲙⲡⲃⲟⲗ ⲛⲧⲏⲡⲉ ⲛⲧⲉⲣⲉϥⲙⲓϣⲉ ⲙⲛⲅⲟⲗⲓⲁⲑ **ⲛⲉ**ⲁⲛⲅ ⲟⲩⲕⲟⲩⲓ ϩⲛⲛⲁⲥⲛⲏⲩ ⲉⲓⲥⲟⲃⲕ ϩⲙⲡⲏⲓ ⲙⲡⲁⲉⲓⲱⲧ ⲉⲓⲙⲟⲟⲛⲉ ⲛⲛⲉⲥⲟⲟⲩ ⲙⲡⲁⲉⲓⲱⲧ",
+      "english": "I was small among my brethren, and youngest in my father's house: I tended my father's sheep.",
+      "source": "Psalms 151",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:151",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲉ**ⲟⲩⲛ ⲟⲩⲁⲅⲉⲗⲏ ⲇⲉ ⲛⲣⲓⲣ ⲙⲙⲁⲩ ⲡⲉ ⲉⲛⲁϣⲱⲥ ⲉⲩⲙⲟⲟⲛ ⲙⲙⲟⲥ ϩⲓⲡⲧⲟⲟⲩ ⲁⲩⲥⲉⲡⲥⲱⲡϥ ⲇⲉ ϫⲉⲉϥⲉⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁⲩ ⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲛⲉⲧⲙⲙⲁⲩ . ⲁⲩⲱ ⲁϥⲕⲁⲁⲩ .",
+      "english": "Now there was there a herd of many pigs feeding on the mountain, and they begged him that he would allow them to enter into those. He allowed them.",
+      "source": "42_Luke_8",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2385",
+      "label": "ⲛⲉⲣⲉ-",
+      "pos": "A",
+      "gloss": "mutable Preterite converter"
+    }
+  ],
+  "etym": {
+    "demo_num": "d1368",
+    "demo_lemma": "wn-nꜣ.w",
+    "english": "[Imperfect converter]",
+    "german": "[Imperfektkonverter]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1368"
+  }
+}

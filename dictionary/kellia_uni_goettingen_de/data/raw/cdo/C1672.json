@@ -1,0 +1,126 @@
+{
+  "id": "C1672",
+  "forms": [
+    {
+      "id": "CF4850",
+      "orth": "ⲗⲁⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18782,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4851",
+      "orth": "ⲗⲁⲉⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4852",
+      "orth": "ⲗⲉⲉⲓⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12149,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF4853",
+      "orth": "ⲗⲁⲓⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1937",
+      "bibliography": "CD 143b; ChLCS 21a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁϣ ⲡⲉϣⲁϥⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲡ**ⲗⲁⲓⲛ** ϩⲛⲡⲟϣⲙⲉϥ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲙⲡⲏⲣⲡ ⲉϣⲁϥⲇⲟⲕⲓⲙⲁⲍⲉ ⲙⲡϩⲏⲧ ⲙⲡϫⲁⲥⲓϩⲏⲧ ϩⲛⲡⲙⲓϣⲉ",
+      "english": "So is it with a man that fasteth for his sins, and goeth again, and doeth the same: who will hear his prayer? or what doth his humbling profit him?",
+      "source": "Sirach 34",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲡⲱⲧ ⲉϩⲟⲩⲛ ⲉⲗⲁⲁⲩ ⲛⲥⲁⲣⲝ ⲉⲃⲟⲗ ϫⲉⲉⲣϣⲁⲛⲡⲱⲛⲉ ϩⲓϩⲓⲡ**ⲗⲉⲉⲓⲛ** · ϣⲁⲣⲉⲡⲕⲱϩⲧ ⲙⲟⲩϩ · ⲛϥⲣⲉⲕϩⲟⲩⲙⲏⲏϣⲉ ⲛϩⲩⲗⲏ ·",
+      "english": "Flee not unto any being of flesh whatsoever, because when the stone striketh upon the fire breaketh out, and it burneth up very much substance.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟϣⲙⲉϥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲇⲟⲕⲓⲙⲁⲍⲉ",
+        1,
+        13.35
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        9.079
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲓⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7331,
+      "count": 2
+    }
+  },
+  "etym": {
+    "demo_num": "d3628",
+    "demo_lemma": "ljn",
+    "english": "[steel]",
+    "german": "Stahl",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3628"
+  }
+}

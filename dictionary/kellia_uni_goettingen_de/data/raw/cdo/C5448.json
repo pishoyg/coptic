@@ -1,0 +1,161 @@
+{
+  "id": "C5448",
+  "forms": [
+    {
+      "id": "CF12867",
+      "orth": "ⲁⲗ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1578,
+        "count": 47
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6106",
+      "bibliography": "CD 520b; KoptHWb 291"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲗ**ⲟⲩⲁ ⲁⲩⲱ ⲃⲁⲓⲑⲥⲟⲩⲣ ⲙⲛⲅⲉⲇⲇⲱⲣ",
+      "english": "Aelua, and Bethsur, and Geddon,",
+      "source": "Joshua 15",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϥⲛⲁⲉⲓⲣⲉ ⲛⲟⲩⲙⲏⲏϣⲉ ⲛϭⲟⲙ ϩⲓϣⲡⲏⲣⲉ ⲉⲙⲛⲏⲡⲉ ⲉⲣⲟⲟⲩ · ϥⲛⲁⲧⲟⲩⲛⲟⲥ ⲛⲛⲉⲧⲙⲟⲟⲩⲧ ⲛϥⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲛⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ · ϥⲛⲁⲧⲁⲗϭⲉ ⲛⲉⲧⲥⲏϭ ⲛϥⲧⲣⲉⲛϭⲁⲗⲉ ⲙⲟⲟϣⲉ ⲛ**ⲁⲗ** · ϥⲛⲁⲧⲣⲉⲥⲱⲧⲙ ⲛⲙⲡⲟ ϥⲛⲁⲧⲣⲉⲩϣⲁϫⲉ · ϥⲛⲁⲧⲃⲃⲟ ⲛⲛⲉⲧⲥⲟⲃϩ ⲙⲛⲛϭⲓϫ ⲉⲧϣⲟⲩⲱⲟⲩ · ϥⲛⲁⲟⲩⲱⲛ ⲛⲛⲃⲁⲗ ⲛⲛⲃⲗⲗⲉ ϩⲙⲡϣⲁϫⲉ ⲛⲧⲉϥϭⲟⲙ ·",
+      "english": "He shall perform innumberable mighty deeds and wonders, He shall raise the dead, He shall drive out the devils, He shall heal those who are sick of the palsy, He shall make the lame to walk, the deaf He shall make to hear, and the dumb He shall make to speak, He shall cleanse the lepers, and [restore] the arms that are withered, and He shall open the eyes of the blind by the word of His power.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩⲣϣⲡⲏⲣⲉ ⲉⲙⲁⲧⲉ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲕⲁⲗⲱⲥ ϩⲱⲃ ⲛⲓⲙ ⲁϥⲁⲁⲩ ϩⲱⲥⲧⲉ ⲛϥⲧⲉⲛⲕⲉ**ⲁⲗ** ⲥⲱⲧⲙ ⲁⲩⲱ ⲛⲉⲙⲡⲟ ⲛϥⲧⲣⲉⲩϣⲁϫⲉ .",
+      "english": "They were astonished beyond measure, saying, &apos;He has done all things well. He makes even the deaf hear, and the mute speak!&apos;",
+      "source": "Mark Chapter 7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5461",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5462",
+      "label": "ϭⲓⲛⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering"
+    },
+    {
+      "target": "C5446",
+      "label": "ⲁⲗⲓ",
+      "pos": "VIMP",
+      "gloss": "Take!"
+    },
+    {
+      "target": "C5447",
+      "label": "ⲁⲗⲓⲟⲩⲓ",
+      "pos": "VIMP",
+      "gloss": "lift! Pick ... up!"
+    },
+    {
+      "target": "C5463",
+      "label": "ⲟⲗⲥ",
+      "pos": "N",
+      "gloss": "what is collected"
+    },
+    {
+      "target": "C5460",
+      "label": "ⲣⲉϥⲱⲗ",
+      "pos": "N",
+      "gloss": "gatherer"
+    },
+    {
+      "target": "C5445",
+      "label": "ⲱⲗ",
+      "pos": "V",
+      "gloss": "hold, contain, enclose; take, lay hold of, gather"
+    },
+    {
+      "target": "C5459",
+      "label": "ⲱⲗ",
+      "pos": "N",
+      "gloss": "gathering, harvest"
+    },
+    {
+      "target": "C5449",
+      "label": "ⲱⲗ (ⲉ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5454",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "bring in, enclose"
+    },
+    {
+      "target": "C5455",
+      "label": "ⲱⲗ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "enclosure, siege"
+    },
+    {
+      "target": "C5456",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "take, lift up, withdraw"
+    },
+    {
+      "target": "C5457",
+      "label": "ⲱⲗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "withdrawal"
+    },
+    {
+      "target": "C5452",
+      "label": "ⲱⲗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "take away"
+    },
+    {
+      "target": "C5450",
+      "label": "ⲱⲗⲓ (ⲉϫⲉⲛ)-",
+      "pos": "V",
+      "gloss": "bring up(on)"
+    },
+    {
+      "target": "C5451",
+      "label": "ⲱⲗⲓ (ⲛ)-",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C5453",
+      "label": "ⲱⲗⲓ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "take upward"
+    },
+    {
+      "target": "C5458",
+      "label": "ⲱⲗⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "take/carry away"
+    }
+  ]
+}

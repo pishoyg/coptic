@@ -1,0 +1,141 @@
+{
+  "id": "C9684",
+  "forms": [
+    {
+      "id": "CF24854",
+      "orth": "ⲙⲁⲑⲏⲧⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24855",
+      "orth": "ⲙⲁⲑⲏⲧⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12872,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12463",
+      "bibliography": "DDGLC",
+      "cu_ID": "10338"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲕⲉϣⲱϫⲡ ⲇⲉ ⲙⲙⲁⲑⲏⲧⲏⲥ ⲙⲛⲙ**ⲙⲁⲑⲏⲧⲣⲓⲁ** ⲛⲥϩⲓⲙⲉ ⲛⲉⲩⲁϩⲉⲣⲁⲧⲟⲩ ⲡⲉ ϩⲓⲡⲁϩⲟⲩ ⲛⲓⲏⲥⲟⲩⲥ ·",
+      "english": "and the rest of the disciples and the women-disciples stood back of Jesus.",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲑⲏⲧⲏⲥ",
+        1,
+        11.451
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        10.255
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_1_post_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          "ⲙ_1_pre_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          "ⲙⲁⲑⲏⲧⲣⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲑⲏⲧⲣⲓⲁ_0_node",
+          "ⲛ_2_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_1_post_ⲙⲁⲑⲏⲧⲣⲓⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12452,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3304",
+    "grl_lemma": "μαθήτρια",
+    "grl_meaning": "female pupil, disciple+M2595",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1072b"
+  }
+}

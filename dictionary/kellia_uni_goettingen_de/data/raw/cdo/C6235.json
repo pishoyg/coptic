@@ -1,0 +1,139 @@
+{
+  "id": "C6235",
+  "forms": [
+    {
+      "id": "CF14480",
+      "orth": "ϣϫⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14476,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣϭⲏⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9921,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6922",
+      "bibliography": "CD 615b; CED 263; KoptHWb 342; DELC 278b; ChLCS 84b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲣⲡⲙⲉⲉⲩⲉ ⲛⲛⲧⲃⲧ ⲉⲛⲉⲛⲟⲩⲱⲙ ⲙⲙⲟⲟⲩ ϩⲛⲕⲏⲙⲉ ⲉⲛϫⲓ ⲙⲙⲟⲟⲩ ⲛϫⲓⲛϫⲏ ⲙⲛⲛϣⲱⲡⲉ ⲙⲛⲙⲙⲏⲗⲟⲡⲉⲡⲱⲛ ⲙⲛⲛⲏϭⲉ ⲙⲛⲛⲉⲙϫⲱⲗ ⲙⲛⲛⲉ**ϣϫⲏⲛ**",
+      "english": "We remember the fish, which we ate in Egypt freely; and the cucumbers, and the melons, and the leeks, and the garlic, and the onions.",
+      "source": "Numbers 11",
+      "urn": "urn:cts:copticLit:ot.num.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙϫⲱⲗ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        11.587
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        10.161
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϣϫⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣϫⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣϫⲏⲛ",
+          1
+        ],
+        [
+          "ϣϫⲏⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϣϫⲏⲛ",
+          "ⲙⲛ_1_pre_ϣϫⲏⲛ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣϫⲏⲛ_b",
+          "ⲛⲉ_1_pre_ϣϫⲏⲛ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϣϫⲏⲛ",
+          "ϣϫⲏⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14075,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "121920",
+    "egy_lemma": "ḫṯn",
+    "demo_num": "d4646",
+    "demo_lemma": "ḫḏn",
+    "english": "[a vegetable (lettuce? garlic?) (Sem. loan word)]",
+    "german": "Knoblauch",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/121920",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4646"
+  }
+}

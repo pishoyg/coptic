@@ -1,0 +1,161 @@
+{
+  "id": "C10629",
+  "forms": [
+    {
+      "id": "CF28745",
+      "orth": "ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28746",
+      "orth": "ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11537,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28747",
+      "orth": "ⲥⲩⲛⲕⲁⲑⲉⲇⲟⲣⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14497",
+      "bibliography": "DDGLC",
+      "cu_ID": "3309"
+    },
+    {
+      "id": "CS14498",
+      "bibliography": "DDGLC",
+      "cu_ID": "10929"
+    },
+    {
+      "id": "CS14499",
+      "bibliography": "DDGLC",
+      "cu_ID": "10934"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ ⲡⲉϫⲉⲡⲇⲟⲩⲝ ⲙⲡⲉϥ**ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ** ⲙⲛⲛⲣⲙⲣⲁⲕⲟⲧⲉ",
+      "english": "And after [these things] the Duke said unto those who were sitting with him, and unto the men of Rakote",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲙⲣⲁⲕⲟⲧⲉ",
+        1,
+        18.598
+      ],
+      [
+        "ⲇⲟⲩⲝ",
+        1,
+        14.189
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲙⲣⲁⲕⲟⲧⲉ_1_post_ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+          "ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          "ⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲙⲣⲁⲕⲟⲧⲉ",
+          "ⲣⲙⲣⲁⲕⲟⲧⲉ_1_post_ⲥⲩⲛⲕⲁⲑⲉⲇⲣⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11105,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2061",
+    "grl_lemma": "συγκάθεδρος",
+    "grl_meaning": "assessor, colleague (an office)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1661b; Preisigke 2:496"
+  }
+}

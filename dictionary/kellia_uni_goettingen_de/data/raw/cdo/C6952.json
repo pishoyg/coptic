@@ -1,0 +1,60 @@
+{
+  "id": "C6952",
+  "forms": [
+    {
+      "id": "CF15955",
+      "orth": "ϩϯⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲧⲓⲧ",
+      "dialect": "S",
+      "id": "2314.1"
+    },
+    {
+      "orth": "ϩϯⲧ",
+      "dialect": "B",
+      "id": "2314.2"
+    },
+    {
+      "orth": "ϩⲧⲓⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11881,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7672",
+      "bibliography": "CD 727a-b; KoptHWb 400; DELC 317a; ChLCS 97b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11320,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "111990",
+    "egy_lemma": "ḥtt",
+    "demo_num": "d4356",
+    "demo_lemma": "ḥtt",
+    "english": "[a plant]",
+    "german": "[eine Pflanze]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/111990",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4356"
+  }
+}

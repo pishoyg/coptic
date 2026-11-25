@@ -1,0 +1,45 @@
+{
+  "id": "C7474",
+  "forms": [
+    {
+      "id": "CF17007",
+      "orth": "ϫⲱϩ ⲛϫⲱϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8276",
+      "bibliography": "CD 797a; KoptHWb 440; DELC 333a; ChLCS 105a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7472",
+      "label": "ϫⲱϩ",
+      "pos": "V",
+      "gloss": "touch; approach, reach; wound, injure; consort, associate with"
+    },
+    {
+      "target": "C7473",
+      "label": "ϫⲱϩ",
+      "pos": "N",
+      "gloss": "touch; contagion; near kinsman, close relative"
+    },
+    {
+      "target": "C7475",
+      "label": "ⲁⲧϫⲱϩ",
+      "pos": "N",
+      "gloss": "untouchable"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": "C1720",
+  "forms": [
+    {
+      "id": "CF4985",
+      "orth": "ⲗⲁⲩⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4039,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF4986",
+      "orth": "ⲗⲁⲃⲱ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲁⲟⲩⲟ",
+      "dialect": "B",
+      "id": "1008.1"
+    },
+    {
+      "orth": "ⲗⲁⲃⲟ",
+      "dialect": "B",
+      "id": "1008.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1993",
+      "bibliography": "CD 147b-148a; KoptHWb 80; ChLCS 22b"
+    },
+    {
+      "id": "CS1994",
+      "bibliography": "CD 148a; KoptHWb 80"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲩⲡⲱⲣϣ ⲉⲃⲟⲗ ⲛⲧⲉⲩ**ⲗⲁⲩⲟ** .",
+      "english": "and they spread out their sail.",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲛⲡⲱⲣϣ ⲉⲃⲟⲗ ⲙⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲉⲡⲙⲁ ⲛⲧ**ⲗⲁⲩⲟ** ⲻ",
+      "english": "let us spread out the cross in place of the sail,",
+      "source": "Apophthegmata Patrum Sahidic 041: Syncletica 9 (11)",
+      "urn": "urn:cts:copticLit:ap.41.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧ**ⲗⲁⲩⲟ** ⲙⲙⲟϥ ⲉⲧⲥⲱⲕ ⲙⲙⲟϥ ⲉⲧⲉⲧⲁⲓ ⲧⲉⲧⲉⲝⲟⲩⲥⲓⲁ ⲙⲡϫⲟⲉⲓⲥ ⲉⲧⲛⲁϫⲓⲙⲟⲉⲓⲧ ϩⲏⲧⲕ ⲉϩⲓⲏ ⲛⲓⲙ ⲉⲛⲁⲛⲟⲩϥ ·",
+      "english": "It hath a sail which beareth it onwards, that is the Power of God, which directeth thee into every good course.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲓⲃⲧ",
+        1,
+        12.933
+      ],
+      [
+        "ⲣⲓⲕⲉ",
+        1,
+        11.076
+      ],
+      [
+        "ⲡⲱⲣϣ",
+        1,
+        10.996
+      ],
+      [
+        "ⲁⲩⲗⲏ",
+        1,
+        10.791
+      ],
+      [
+        "ⲻ",
+        1,
+        10.714
+      ],
+      [
+        "ⲥⲱⲕ",
+        1,
+        10.661
+      ],
+      [
+        "ⲛ",
+        8,
+        10.002
+      ],
+      [
+        "ⲥⲕⲏⲛⲏ",
+        1,
+        9.656
+      ],
+      [
+        "ⲙⲛⲛⲥⲱ",
+        1,
+        9.491
+      ],
+      [
+        "ⲧ",
+        4,
+        9.264
+      ],
+      [
+        "ⲥⲱϣⲉ",
+        1,
+        9.15
+      ],
+      [
+        "ϩⲱⲥ",
+        1,
+        9.076
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        8.857
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        8.18
+      ],
+      [
+        "ϫⲱⲕ",
+        1,
+        8.122
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        7.914
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        7.913
+      ],
+      [
+        "ϥ",
+        4,
+        7.714
+      ],
+      [
+        "ⲧⲉⲩ",
+        1,
+        7.631
+      ],
+      [
+        "ϥⲓ",
+        1,
+        7.404
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲁⲩⲟ_0_node",
+          7
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_1_post_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲉⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲁⲩⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲁⲩⲟ",
+          "ⲗⲁⲩⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲗⲁⲩⲟ",
+          "ⲗⲁⲩⲟ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲩⲟ_0_node",
+          "ⲙⲛ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          "ⲡ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ",
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_1_post_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲕⲁⲧⲁⲡⲉⲧⲁⲥⲙⲁ_1_post_ⲗⲁⲩⲟ",
+          "ⲡⲁⲓ_1_post_ⲗⲁⲩⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲗⲁⲩⲟ",
+          "ⲉⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲁⲩⲟ",
+          "ⲗⲁⲩⲟ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3642,
+      "count": 7
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1722",
+      "label": "ϭⲓⲥⲗⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "half-sail, foresail"
+    },
+    {
+      "target": "C1721",
+      "label": "ⲗⲁⲩⲟ",
+      "pos": "N",
+      "gloss": "(ship's) sail; awning, curtain"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "C3526",
+  "forms": [
+    {
+      "id": "CF8955",
+      "orth": "ⲥⲙⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4013",
+      "bibliography": "KoptHWb 185; DELC 188"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3527",
+      "label": "ⲛⲉϩ ⲛⲥⲓⲙ",
+      "pos": "N",
+      "gloss": "radish oil"
+    },
+    {
+      "target": "C3525",
+      "label": "ⲥⲓⲙ",
+      "pos": "N",
+      "gloss": "grass, fodder, herbs (in general); radish"
+    }
+  ],
+  "etym": {
+    "egy_num": "134140",
+    "egy_lemma": "sm.w",
+    "demo_num": "d5275",
+    "demo_lemma": "sm",
+    "english": "plants; vegetables; pasture",
+    "german": "Kraut; Futterkraut; Gemüse",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/134140",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5275"
+  }
+}

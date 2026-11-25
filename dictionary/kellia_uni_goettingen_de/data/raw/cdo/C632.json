@@ -1,0 +1,58 @@
+{
+  "id": "C632",
+  "forms": [
+    {
+      "id": "CF2403",
+      "orth": "ⲣⲉⲃⲓⲏⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS768",
+      "bibliography": "CD 53a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C628",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "a poor, wretched person"
+    },
+    {
+      "target": "C629",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "a poor, wretched person"
+    },
+    {
+      "target": "C630",
+      "label": "ⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "miserable, wretched"
+    },
+    {
+      "target": "C631",
+      "label": "ⲙⲛⲧⲉⲃⲓⲏⲛ",
+      "pos": "N",
+      "gloss": "misery"
+    }
+  ]
+}

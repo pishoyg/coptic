@@ -1,0 +1,308 @@
+{
+  "id": "C7796",
+  "forms": [
+    {
+      "id": "CF17657",
+      "orth": "ϭⲛⲁⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4275,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8665",
+      "bibliography": "CD 823b; KoptHWb 460; ChLCS 108b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲏⲥⲟⲩⲥ ⲇⲉ ⲛⲧⲉⲣⲉϥⲛⲁⲩ ⲁϥ**ϭⲛⲁⲧ** ⲁⲩⲱ ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲕⲁⲛϣⲏⲣⲉ ⲕⲟⲩⲓ ⲉⲧⲣⲉⲩⲉⲓ ⲛⲁⲓ ⲁⲩⲱ ⲙⲡⲣⲛⲟϣⲡⲟⲩ ⲧⲁϩⲟⲓⲛⲉ ⲅⲁⲣ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲧⲉ ⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ",
+      "english": "But when Jesus saw it, he was moved with indignation, and said to them, &apos;Allow the little children to come to me! Don&apos;t forbid them, for the Kingdom of God belongs to such as these.",
+      "source": "Mark Chapter 10",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲭⲓ",
+        2,
+        18.206
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        2,
+        14.524
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        2,
+        12.73
+      ],
+      [
+        "ⲛⲙ",
+        2,
+        12.09
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲏⲥ",
+        2,
+        11.974
+      ],
+      [
+        "ϥ",
+        10,
+        11.68
+      ],
+      [
+        "ⲁ",
+        8,
+        11.237
+      ],
+      [
+        "ⲛⲁⲩ",
+        2,
+        9.009
+      ],
+      [
+        "ⲩ",
+        4,
+        9.002
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        2,
+        8.973
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        2,
+        8.937
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        8.606
+      ],
+      [
+        "ϫⲱ",
+        2,
+        8.597
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        8.158
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        7.178
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        7.173
+      ],
+      [
+        ".",
+        2,
+        6.75
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.491
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        5.94
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        5.881
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲛⲁⲧ_0_node",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ϭⲛⲁⲧ",
+          2
+        ],
+        [
+          "ϩⲟⲓⲛⲉ_1_pre_ϭⲛⲁⲧ",
+          2
+        ],
+        [
+          "ⲇⲉ_1_pre_ϭⲛⲁⲧ",
+          2
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_post_ϭⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲙ_4_post_ⲓⲱϩⲁⲛⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_3_post_ⲓⲁⲕⲱⲃⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϭⲛⲁⲧ",
+          "ϩⲟⲓⲛⲉ_1_pre_ϭⲛⲁⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲓⲛⲉ_1_pre_ϭⲛⲁⲧ",
+          "ⲇⲉ_1_pre_ϭⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ϭⲛⲁⲧ",
+          "ϭⲛⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ϭⲛⲁⲧ_0_node",
+          "ⲉⲧⲃⲉ_1_post_ϭⲛⲁⲧ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_post_ϭⲛⲁⲧ",
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲓⲁⲕⲱⲃⲟⲥ_2_post_ⲉⲧⲃⲉ",
+          "ⲛⲙ_4_post_ⲓⲱϩⲁⲛⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲙ_4_post_ⲓⲱϩⲁⲛⲛⲏⲥ",
+          "ⲓⲱϩⲁⲛⲛⲏⲥ_3_post_ⲓⲁⲕⲱⲃⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3875,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7801",
+      "label": "ϫⲓⲛϯ",
+      "pos": "N",
+      "gloss": "anger, wrath"
+    },
+    {
+      "target": "C7795",
+      "label": "ϭⲛⲁⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7787",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "be angry"
+    },
+    {
+      "target": "C7788",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "anger, rage, wrath"
+    },
+    {
+      "target": "C7789",
+      "label": "ϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "angry, enraged"
+    },
+    {
+      "target": "C7798",
+      "label": "ϯϭⲛⲁⲧ",
+      "pos": "V",
+      "gloss": "embitter, provoke"
+    },
+    {
+      "target": "C7799",
+      "label": "ϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocation"
+    },
+    {
+      "target": "C7793",
+      "label": "ϯϭⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "cause anger, provoke"
+    },
+    {
+      "target": "C7790",
+      "label": "ⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "not angry"
+    },
+    {
+      "target": "C7791",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "lenience"
+    },
+    {
+      "target": "C7797",
+      "label": "ⲣⲉϥϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "choleric person"
+    },
+    {
+      "target": "C7792",
+      "label": "ⲣⲉϥϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "angry, furious person"
+    },
+    {
+      "target": "C7800",
+      "label": "ⲣⲉϥϯϭⲛⲁⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    },
+    {
+      "target": "C7794",
+      "label": "ⲣⲉϥϯϭⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "provocateur"
+    }
+  ]
+}

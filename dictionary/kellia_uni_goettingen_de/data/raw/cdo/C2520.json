@@ -1,0 +1,176 @@
+{
+  "id": "C2520",
+  "forms": [
+    {
+      "id": "CF6831",
+      "orth": "ⲛⲟⲩⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6303,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2899",
+      "bibliography": "CD 229a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲓϩⲓⲥⲉ ⲟⲩⲟⲑ ⲉⲥⲁϣϥⲉ ⲛ**ⲛⲟⲩⲥⲉ** ϫⲓⲛ ⲉⲡϣⲟⲙⲧⲉ ⲙⲡⲉϩⲟⲟⲩ ϣⲁϫⲡϥⲧⲟ ⲛⲧⲉⲩϣⲏ",
+      "english": "'I have suffered, melting for seven women(?) from the third ‹hour› of the day until the fourth hour of the night.",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲏⲥⲉ ⲧⲉϥⲙⲁⲁⲩ ⲣⲟⲩⲱ ⲛⲁϥ ⲛϩⲟⲩⲛ ⲉⲡⲣⲡⲉ ⲛϩⲁⲃⲓⲛ · ⲉⲣⲉⲡⲉⲥϩⲟ ⲕⲉⲧ ⲉϩⲟⲩⲛ ⲉϫⲛⲥⲁϣϥⲉ ⲛⲟⲩⲥⲉ ⲉⲣⲉⲥⲁϣϥⲉ **ⲛⲟⲩⲥⲉ** ⲕⲏⲧ ⲉϩⲟⲩⲛ ⲉϫⲙⲡⲉⲥϩⲟ ·",
+      "english": "Isis, his mother, replied to him from within the temple of Habin, her face turned towards seven women(?), seven women(?) turned towards her face:",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩⲥⲉ",
+        2,
+        20.428
+      ],
+      [
+        "ⲟⲩⲟⲑ",
+        1,
+        19.013
+      ],
+      [
+        "ⲥⲁϣϥⲉ",
+        5,
+        18.913
+      ],
+      [
+        "ⲕⲏⲧ",
+        2,
+        16.843
+      ],
+      [
+        "ⲕⲉⲧ",
+        1,
+        12.638
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        12.272
+      ],
+      [
+        "ϣⲟⲙⲧⲉ",
+        1,
+        12.002
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        10.093
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        9.146
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        8.667
+      ],
+      [
+        "ⲉϫⲙ",
+        1,
+        8.622
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        7.84
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁϣϥⲉ_1_pre_ⲛⲟⲩⲥⲉ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲥⲉ_0_node",
+          3
+        ],
+        [
+          "ϣⲟⲙⲧⲉ_1_post_ⲛⲟⲩⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_pre_ⲛⲟⲩⲥⲉ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥⲉ_2_pre_ⲉϫⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲁϣϥⲉ_1_pre_ⲛⲟⲩⲥⲉ",
+          "ⲛⲟⲩⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲥⲉ_0_node",
+          "ϣⲟⲙⲧⲉ_1_post_ⲛⲟⲩⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_pre_ⲛⲟⲩⲥⲉ",
+          "ⲥⲁϣϥⲉ_2_pre_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥⲉ_2_pre_ⲉϫⲛ",
+          "ⲛⲟⲩⲥⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5865,
+      "count": 3
+    }
+  }
+}

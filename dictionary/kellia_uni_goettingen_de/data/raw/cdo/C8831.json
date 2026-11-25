@@ -1,0 +1,104 @@
+{
+  "id": "C8831",
+  "forms": [
+    {
+      "id": "CF21289",
+      "orth": "ⲇⲟϭⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF21290",
+      "orth": "ⲇⲟϭⲓ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21291",
+      "orth": "ⲇⲟϭⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19272,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10627",
+      "bibliography": "DDGLC",
+      "cu_ID": "11108"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲉⲧⲉⲧⲛⲣ ⲙⲛⲧⲣⲉ ⲁⲩⲱ ⲧⲉⲧⲛⲥⲩⲛⲉⲩ**ⲇⲟϭⲓ** ⲉⲛⲉϩⲃⲏⲩⲉ ⲛⲛⲉⲧⲛⲉⲓⲟⲧⲉ ϫⲉⲛⲧⲟⲟⲩ ⲙⲉⲛ ⲁⲩⲙⲟⲟⲩⲧⲟⲩ ⲛⲧⲱⲧⲛ ⲇⲉ ⲧⲉⲧⲛⲕⲱⲧ .",
+      "english": "So you testify and consent to the works of your fathers. For they killed them, and you build their tombs.",
+      "source": "42_Luke_11",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲩⲛⲉⲩ",
+        1,
+        20.598
+      ],
+      [
+        "ⲙⲛⲧⲣⲉ",
+        1,
+        12.644
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        10.812
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18885,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "564",
+    "grl_lemma": "δοκέω",
+    "grl_meaning": "to expect, think, seem",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 441b; Preisigke 1:394"
+  }
+}

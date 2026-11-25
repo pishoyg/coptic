@@ -1,0 +1,293 @@
+{
+  "id": "C6644",
+  "forms": [
+    {
+      "id": "CF15332",
+      "orth": "ϩⲁⲙⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4825,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲁⲙⲏⲣ",
+      "dialect": "B",
+      "id": "2199.1"
+    },
+    {
+      "orth": "ϩⲁⲙⲏⲗ",
+      "dialect": "F",
+      "id": "2199.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7357",
+      "bibliography": "CD 679a; CED 284; KoptHWb 373; DELC 301b; ChLCS 91b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲉϣϫⲉ ⲁⲓϫⲓ ⲡⲉϫⲁϥ ⲉⲡⲁ**ϩⲁⲙⲏⲣ** ⲛⲧⲉϥⲥⲁⲣⲝ ϩⲙⲡⲟⲩⲟⲙϥ · ⲁⲗⲗⲁ ⲙⲡⲉⲓⲉϣⲱⲣⲃ ⲉϩⲟⲩⲛ ⲙⲡⲁⲙⲁϩⲧⲉ ⲛⲧⲉϥⲙⲛⲧⲛⲟⲩⲧⲉ ·",
+      "english": "It saith also, 'Now though I took His flesh into my bosom when He was in the manger, I could not include within my dominion His Divinity.'",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓ ⲙⲡⲉϥϣⲏⲣⲉ ⲕⲟⲩⲓ ⲉⲡⲉϥ**ϩⲁⲙⲏⲣ** · ⲉⲣⲉⲧⲉϥⲙⲁⲁⲩ ⲙⲛⲛⲉϥϩⲙϩⲁⲗ ⲟⲩⲏϩ ⲛⲥⲱϥ ·",
+      "english": "He took up his little child in his arms, and the mother and his servants followed him,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲁϥϫⲓⲧϥ ⲉⲡⲉϥ**ϩⲁⲙⲏⲣ** ⲁϥⲥⲙⲟⲩ ⲉⲡⲛⲟⲩⲧⲉ ⲡⲉϫⲁϥ",
+      "english": "then he received him into his arms, and blessed God, and said,",
+      "source": "42_Luke_2",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲧ",
+        1,
+        13.147
+      ],
+      [
+        "ⲥⲁⲣⲝ",
+        2,
+        12.322
+      ],
+      [
+        "ϩⲙ",
+        5,
+        12.057
+      ],
+      [
+        "ⲧⲉϥ",
+        3,
+        11.397
+      ],
+      [
+        "ⲣⲟ",
+        1,
+        9.475
+      ],
+      [
+        "ⲉ",
+        5,
+        9.461
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        2,
+        9.423
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        9.342
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        9.307
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        1,
+        9.27
+      ],
+      [
+        "ϥ",
+        5,
+        9.165
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        9.054
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        8.774
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        8.712
+      ],
+      [
+        "ϫⲓⲧ",
+        1,
+        8.461
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        1,
+        8.4
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.78
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        5.968
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        4.322
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_1_pre_ϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲣ_0_node",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_4_post_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_2_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_1_post_ϩⲁⲙⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ϩⲁⲙⲏⲣ",
+          "ϩⲁⲙⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲁⲙⲏⲣ",
+          "ϩⲁⲙⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲣ_0_node",
+          "ⲉⲣⲉ_1_post_ϩⲁⲙⲏⲣ",
+          1
+        ],
+        [
+          "ⲉⲣⲉ_1_post_ϩⲁⲙⲏⲣ",
+          "ⲧⲉϥ_4_post_ⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_4_post_ⲙⲁⲁⲩ",
+          "ⲙⲁⲁⲩ_3_post_ⲟⲩⲏϩ",
+          1
+        ],
+        [
+          "ⲙⲁⲁⲩ_3_post_ⲟⲩⲏϩ",
+          "ⲙⲛ_5_post_ϩⲙϩⲁⲗ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ϩⲁⲙⲏⲣ",
+          "ϩⲁⲙⲏⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲙⲏⲣ_0_node",
+          "ⲙⲛ_2_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲁⲧ",
+          "ⲛⲟⲩ_2_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_2_post_ⲡⲁⲧ",
+          "ⲡⲁⲧ_1_post_ϩⲁⲙⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4412,
+      "count": 5
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6646",
+      "label": "ϯϩⲁⲙⲏⲣ",
+      "pos": "V",
+      "gloss": "embrace"
+    },
+    {
+      "target": "C6645",
+      "label": "ⲣϩⲁⲙⲏⲣ",
+      "pos": "V",
+      "gloss": "embrace"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4091",
+    "demo_lemma": "ḥmwl",
+    "english": "armful",
+    "german": "Armvoll",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4091"
+  }
+}

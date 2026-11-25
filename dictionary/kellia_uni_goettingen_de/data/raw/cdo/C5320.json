@@ -1,0 +1,56 @@
+{
+  "id": "C5320",
+  "forms": [
+    {
+      "id": "CF12609",
+      "orth": "*ⲟⲩⲱϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5972",
+      "bibliography": "CD 508b; CED 222; KoptHWb 285; DELC 241b-242a; ChLCS 71a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲉⲡⲉⲓⲇⲏ ⲁϩⲉⲛⲉⲃⲓⲁⲧⲉ ⲉⲓ ⲁⲩ**ⲟⲩⲱϩ** ϩⲙⲡⲁⲣⲓⲅⲟⲣⲓ",
+      "english": "that since beekeepers came and stayed at Parigori,",
+      "source": "Honey Delivery",
+      "urn": "urn:cts:copticDoc:papyri_info.tm82149.cpr_4_16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲧⲱⲟⲩⲛ ⲛⲅ**ⲟⲩⲁϩ**ⲕ ⲛⲥⲱⲓ ⲛⲧⲁⲧⲁⲙⲟⲕ ⲉϩⲱⲃ ⲛⲓⲙ · ⲁⲩⲱ ⲛⲧⲁⲧⲁⲙⲟⲕ ⲉⲡϣⲏⲛ ⲛⲧⲁⲁⲇⲁⲙ ⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ·",
+      "english": "Now therefore, rise up, set thyself behind me, and I will explain to thee everything, and I will shew thee the tree (of the fruit) of which Adam ate.",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥ**ⲟⲩⲉϩ** ⲕⲉϯⲟⲩ ⲙⲙⲓⲗⲓⲟⲛ ⲉϫⲱϥ ⲉϩⲟⲩⲛ ⲉⲡϫⲁⲓⲉ ·",
+      "english": "He added another five miles into the desert.",
+      "source": "Apophthegmata Patrum Sahidic 046",
+      "urn": "urn:cts:copticLit:ap.46.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "etym": {
+    "egy_num": "48760",
+    "egy_lemma": "wḥꜥ",
+    "demo_num": "d1197",
+    "demo_lemma": "wꜣḥ",
+    "english": "to loosen; to explain",
+    "german": "(etwas) ablösen; heraussondern; erklären; gründen; heimkehren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/48760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1197"
+  }
+}

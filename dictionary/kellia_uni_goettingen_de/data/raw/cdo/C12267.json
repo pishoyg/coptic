@@ -1,0 +1,215 @@
+{
+  "id": "C12267",
+  "forms": [
+    {
+      "id": "CF33284",
+      "orth": "ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1084,
+        "count": 44
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17271",
+      "bibliography": "CD 727b; KoptHWB 376"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲧⲱⲛϥ ⲛ**ϩⲁⲛⲁⲧⲟⲟⲩⲓ** ⲛϣⲟⲣⲡ ⲉⲙⲁϣⲱ ⲁϥⲓ ⲉⲃⲟⲗ ⲉⲩⲙⲁ ⲛϣⲁϥⲉ ⲟⲩⲟϩ ⲛⲁϥⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲙⲙⲁⲩ",
+      "english": "Early in the morning, while it was still dark, he rose up and went out, and departed into a deserted place, and prayed there.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛ**ϩⲁⲛⲁⲧⲟⲟⲩⲓ** ⲉⲙⲁϣⲱ ⲙⲫⲟⲩⲁⲓ ⲛⲛⲓⲥⲁⲃⲃⲁⲧⲟⲛ ⲁⲩⲓ ⲉⲡⲓⲙϩⲁⲩ ⲉⲧⲁⲫⲣⲏ ϣⲁⲓ .",
+      "english": "Very early on the first day of the week, they came to the tomb when the sun had risen.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲧⲱⲟⲩⲛⲟⲩ ⲛ**ϩⲁⲛⲁⲧⲟⲟⲩⲓ** ⲁⲩϫⲉⲙⲡⲓⲁⲗⲟⲩ ⲉϥⲉⲛⲕⲟⲧ ⲉϥⲥⲏⲧ ⲙⲫⲣⲏϯ ⲛⲟⲩⲣⲉϥⲙⲱⲟⲩⲧ .",
+      "english": "And when they got up in the morning, they found the child lying like a dead man.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲛⲁⲧⲟⲟⲩⲓ_0_node",
+          43
+        ],
+        [
+          "ⲛ_1_pre_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          2
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲓ_3_post_ⲫ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ⲟⲩⲁⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          2
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲙⲁϣⲱ_3_post_ϣⲟⲣⲡ",
+          1
+        ],
+        [
+          "ϣⲱⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϣⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲙⲏⲛⲓ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟⲩϩⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲁⲣⲟⲩϩⲓ",
+          1
+        ],
+        [
+          "ⲁⲣⲟⲩϩⲓ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          "ϩⲁⲛⲁⲧⲟⲟⲩⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲁⲛⲁⲧⲟⲟⲩⲓ_0_node",
+          "ⲙ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          "ⲫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙ",
+          "ⲟⲩⲁⲓ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_3_post_ⲫ",
+          "ⲛ_4_post_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛⲁⲧⲟⲟⲩⲓ_0_node",
+          "ⲛ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          "ⲉⲙⲁϣⲱ_3_post_ϣⲟⲣⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          "ϣⲱⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲱⲣⲡ_2_post_ⲛ",
+          "ⲙ_3_post_ϣⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϣⲱⲣⲡ",
+          "ⲙⲏⲛⲓ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲛⲁⲧⲟⲟⲩⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟⲩϩⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲣⲟⲩϩⲓ",
+          "ϩⲁⲛ_2_post_ⲁⲣⲟⲩϩⲓ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ⲁⲣⲟⲩϩⲓ",
+          "ⲁⲣⲟⲩϩⲓ_1_post_ϩⲁⲛⲁⲧⲟⲟⲩⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.49,
+      "rank": 978,
+      "count": 42
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12264",
+      "label": "ϩⲁⲛⲁ-",
+      "pos": "N",
+      "gloss": "time of ..."
+    },
+    {
+      "target": "C12266",
+      "label": "ϩⲁⲛⲁⲙⲉⲣⲓ",
+      "pos": "N",
+      "gloss": "midday"
+    },
+    {
+      "target": "C12265",
+      "label": "ϩⲁⲛⲁⲣⲟⲩϩⲓ",
+      "pos": "N",
+      "gloss": "evening"
+    }
+  ]
+}

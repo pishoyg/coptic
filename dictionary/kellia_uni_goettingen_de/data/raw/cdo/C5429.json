@@ -1,0 +1,214 @@
+{
+  "id": "C5429",
+  "forms": [
+    {
+      "id": "CF12829",
+      "orth": "ⲣⲡⲱⲃϣ",
+      "dialect": "S",
+      "oRef": "ⲣ ⲡ ⲱⲃϣ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18856,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6085",
+      "bibliography": "CD 519a; ChLCS 71b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲁⲓ ϩⲛⲣⲱⲙⲉ ⲛⲛⲁⲁ ⲛⲉ ⲛⲁⲓ ⲉⲧⲉⲙⲡⲟⲩ**ⲣⲡⲱⲃϣ** ⲛⲛⲉⲩⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+      "english": "But these were merciful men, whose righteousness hath not been forgotten.",
+      "source": "Sirach 44",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:44",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+        1,
+        11.682
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.732
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲡ_1_pre_ⲣⲡⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲡⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲣⲡⲱⲃϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲡⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲡ_1_pre_ⲣⲡⲱⲃϣ",
+          "ⲟⲩ_1_pre_ⲣⲡⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲡⲱⲃϣ",
+          "ⲣⲡⲱⲃϣ_0_node",
+          1
+        ],
+        [
+          "ⲣⲡⲱⲃϣ_0_node",
+          "ⲛ_1_post_ⲣⲡⲱⲃϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲡⲱⲃϣ",
+          "ⲛⲉⲩ_3_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ",
+          "ⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18467,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5434",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5435",
+      "label": "ϭⲓⲛⲱⲃϣ",
+      "pos": "N",
+      "gloss": "state of sleep"
+    },
+    {
+      "target": "C5433",
+      "label": "ⲁⲧⲱⲃϣ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C5436",
+      "label": "ⲃϣⲉ",
+      "pos": "N",
+      "gloss": "forgetfulness, carelessness, sleep"
+    },
+    {
+      "target": "C5432",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5437",
+      "label": "ⲟⲃϣⲉ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5431",
+      "label": "ⲣⲉϥⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetter"
+    },
+    {
+      "target": "C5430",
+      "label": "ⲣⲡⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness"
+    },
+    {
+      "target": "C5427",
+      "label": "ⲱⲃϣ",
+      "pos": "V",
+      "gloss": "forget; sleep"
+    },
+    {
+      "target": "C5428",
+      "label": "ⲱⲃϣ",
+      "pos": "N",
+      "gloss": "forgetfulness; sleep"
+    }
+  ]
+}

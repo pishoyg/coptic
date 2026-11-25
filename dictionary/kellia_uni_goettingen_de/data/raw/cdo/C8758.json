@@ -1,0 +1,237 @@
+{
+  "id": "C8758",
+  "forms": [
+    {
+      "id": "CF20988",
+      "orth": "ⲇⲓⲁⲥⲧⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20989",
+      "orth": "ⲇⲓⲁⲥⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7516,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10476",
+      "bibliography": "DDGLC",
+      "cu_ID": "9564"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡ**ⲇⲓⲁⲥⲧⲏⲙⲁ** ⲅⲁⲣ ⲉⲧⲟⲩⲧⲱⲟⲩ ϣⲁϥⲣϩⲙⲉⲧⲏ ⲙⲙⲟⲛⲏ · ⲙⲁⲗⲓⲥⲧⲁ ⲇⲁⲛⲓⲏⲗ ⲉϥⲙⲡⲉⲥⲏⲧ ⲙⲡϣⲏⲓ ⲉϥⲟ ⲛϩⲣⲉ ⲛⲛⲉⲑⲏⲣⲓⲟⲛ ·",
+      "english": "though there was a difference between them—for one used to rule in the palace—especially the case of Daniel; when he was down in the pit (and was intended) to become food for the wild beasts,",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲁⲡⲉϥⲃⲱ ⲅⲁⲣ ⲣⲱⲧ ⲛⲟⲩⲕⲟⲩⲓ ϩⲓⲧⲛⲧⲁϣⲏ ⲛⲛⲉϩⲟⲟⲩ ⲛⲧⲁϥⲁⲁⲩ ϩⲙⲡ**ⲇⲓⲁⲥⲧⲏⲙⲁ** ⲛⲧⲉϩⲓⲏ ⲛⲧⲁϥⲉⲓ ⲛϩⲏⲧⲥ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 2",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:10-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲭⲁⲗⲇⲁⲓⲁ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲱ",
+        1,
+        13.843
+      ],
+      [
+        "ϩⲓⲏ",
+        1,
+        9.983
+      ],
+      [
+        "ⲁⲁ",
+        1,
+        9.022
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ϩⲙ",
+        1,
+        6.413
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲁⲥⲧⲏⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲓⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲱ",
+          1
+        ],
+        [
+          "ⲧⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲱ_b",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲁⲥⲧⲏⲙⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          "ϩⲓⲏ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲏ_2_post_ⲛⲧⲉ",
+          "ⲛⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          "ⲁ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲓ",
+          "ϥ_3_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          "ⲇⲓⲁⲥⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲥⲧⲏⲙⲁ_0_node",
+          "ⲉⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲇⲓⲁⲥⲧⲏⲙⲁ",
+          "ⲟⲩ_3_post_ⲧⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲧⲱ",
+          "ⲧⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲱ_2_post_ⲉⲧ",
+          "ⲟⲩ_3_post_ⲧⲱ_b",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7058,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "5675",
+    "grl_lemma": "διάστημα",
+    "grl_meaning": "interval; radius; ratio; dimension",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 413a; Preisigke 1:362"
+  }
+}

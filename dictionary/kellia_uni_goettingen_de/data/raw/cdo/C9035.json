@@ -1,0 +1,165 @@
+{
+  "id": "C9035",
+  "forms": [
+    {
+      "id": "CF22312",
+      "orth": "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF22314",
+      "orth": "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13478,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF22313",
+      "orth": "ⲁⲗⲕⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22315",
+      "orth": "ⲉⲣⲕⲁⲥⲧⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22316",
+      "orth": "ⲉⲣⲕⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22317",
+      "orth": "ⲏⲣⲕⲁⲥⲧⲏⲣⲓⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11111",
+      "bibliography": "DDGLC",
+      "cu_ID": "3843"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲭⲁⲓⲣⲉ ⲡ**ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ** ⲙⲡⲥⲁⲉⲓⲛ ⲙⲙⲉ ·",
+      "english": "...",
+      "source": "Homily on the Virgin Mary (Budge ed.)",
+      "urn": "urn:cts:copticLit:pscyrila.mary.budge:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲉⲓⲛ",
+        1,
+        14.644
+      ],
+      [
+        "ⲭⲁⲓⲣⲉ",
+        1,
+        14.598
+      ],
+      [
+        ":",
+        1,
+        11.406
+      ],
+      [
+        "ⲙⲉ",
+        1,
+        9.941
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲁⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲥⲁⲉⲓⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ_0_node",
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲁⲉⲓⲛ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥⲁⲉⲓⲛ_3_post_ⲡ",
+          "ⲙ_4_post_ⲥⲁⲉⲓⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13074,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "790",
+    "grl_lemma": "ἐργαστήριον",
+    "grl_meaning": "workshop, manufactory",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 682a; Preisigke 1:594"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "id": "C424",
+  "forms": [
+    {
+      "id": "CF1762",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1763",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1764",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "collocConj": "ϫⲉ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS512",
+      "bibliography": "CD 35b; KoptHWb 23; ChLCS 8a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲥⲁⲃⲏⲗ **ϫⲉ**ⲁⲩϫⲟⲟⲥ** ⲛⲉ ϫⲉⲙⲡⲣⲡⲁⲣⲁⲃⲁ ⲛⲧⲉⲛⲧⲟⲗⲏ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "except that they told you “don’t violate the command of God,”",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲓⲥⲧⲉⲩⲉ ⲛⲁⲓ ⲱ ⲡⲗⲁⲟⲥ ⲙⲙⲁⲓⲛⲟⲩⲧⲉ · ϫⲉⲙⲡⲉⲓⲟⲩⲱϣ ⲉⲕⲓⲙ ⲉⲡⲉⲓⲗⲟⲅⲟⲥ ⲉⲧⲙⲉϩ ⲛⲙⲕⲁϩ ⲛϩⲏⲧ · ϩⲙⲡⲉⲓⲛⲟϭ ⲛϣⲁ ⲙⲡϩⲟⲟⲩ :— ϫⲉⲛⲛⲉⲓϯ ⲛⲟⲩⲱⲕⲙ ⲙⲡϣⲁ ⲙⲡⲉⲧⲧⲁⲓⲏⲩ ϩⲛⲙⲙⲁⲣⲧⲩⲣⲟⲥ ⲧⲏⲣⲟⲩ ⲡϩⲁⲅⲓⲟⲥ ⲃⲓⲕⲧⲱⲣ · **ⲛⲥⲁⲃⲏⲗ **ϫⲉ**ⲁⲩⲧⲟⲣⲡⲧ** ϩⲙⲡⲁⲙⲉⲉⲩⲉ ·",
+      "english": "Believe me, O ye Godloving congregation, I have no wish to set in motion this word which is full of tribulation, during this great festival this day, and I would not introduce sadness into the festival of Saint Victor, the most glorious of all martyrs, had it not been that my mind was carried away by my thoughts,",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲛⲥⲁⲃⲏⲗ **ϫⲉ**ⲡⲣⲣⲟ** ⲡⲉ · ⲁⲡⲁⲉⲓⲱⲧ ϥⲓ ⲛⲧⲁⲁⲡⲉ ·",
+      "english": "Had it not been for the Emperor my father would have cut off my head.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C423",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

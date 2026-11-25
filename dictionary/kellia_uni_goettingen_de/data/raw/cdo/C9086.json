@@ -1,0 +1,252 @@
+{
+  "id": "C9086",
+  "forms": [
+    {
+      "id": "CF22498",
+      "orth": "ⲉⲩⲡⲟⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF22499",
+      "orth": "ⲉⲩⲡⲟⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7593,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS11198",
+      "bibliography": "DDGLC",
+      "cu_ID": "2427"
+    },
+    {
+      "id": "CS11199",
+      "bibliography": "DDGLC",
+      "cu_ID": "11006"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲏⲑⲱⲥ ⲉⲓϣⲁⲛϣⲱⲡⲉ · ⲉⲓⲣⲏⲧ ⲛⲗⲁⲥ ⲧⲏⲣⲧ ⲛϯⲛⲁⲉϣϭⲙϭⲟⲙ ⲁⲛ ⲉⲧⲁⲓⲟⲕ ⲕⲁⲧⲁⲡⲟⲩ ⲛⲧⲃⲁ ⲛⲛⲉⲕⲁⲣⲉⲧⲏ · ⲁⲩⲱ ⲡⲕⲉⲕⲟⲩⲓ ⲛⲧⲁⲛ**ⲉⲩⲡⲟⲣⲉⲓ** ⲙⲙⲟϥ ⲉⲕⲁⲧⲁⲃⲁⲗⲉ ⲙⲙⲟϥ · ⲉⲡⲕⲁⲍⲱⲫⲩⲗⲁⲕⲓⲟⲛ · ⲧⲉⲕⲭⲁⲣⲓⲥ ⲧⲉ ⲛⲧⲁⲥⲥⲃⲧⲱⲧϥ ⲛⲁⲛ ⁛",
+      "english": "Verily if every part of me was to become a tongue I should not be able to do honour to thee in a manner suitable to the ten thousands of virtues which thou dost possess ; and moreover, as for the mite which we are able to cast into the treasury, it is thy grace alone which hath prepared it for us.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲛⲥⲟⲟⲩⲛ ⲅⲁⲣ ⲧⲏⲣⲧⲛ · ⲛⲧⲁⲙⲛⲧϩⲏⲕⲉ ϫⲉϯ**ⲉⲩⲡⲟⲣⲉⲓ** ⲁⲛ ⲉⲙⲁⲧⲉ ϩⲛⲛⲁⲡⲟⲑⲩⲕⲏ ϫⲉⲕⲁⲥ ⲉⲓⲧⲁⲗⲉ ⲉⲩⲛⲟϭ ⲛϫⲟⲉⲓ ⲉⲩⲟⲩⲛϭⲟⲙ · ⲙⲙⲟϥ ⲉⲡⲗⲉⲁϩⲙⲡⲉⲗⲁⲅⲟⲥ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲁⲃⲁⲗⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲛⲧϩⲏⲕⲉ",
+        1,
+        13.489
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        1,
+        10.034
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        9.965
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.95
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        7.23
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲡⲟⲣⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲡⲟⲑⲩⲕⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ⲛ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ⲉⲩⲡⲟⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲩⲡⲟⲣⲉⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ⲉⲩⲡⲟⲣⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲩⲡⲟⲣⲉⲓ_0_node",
+          "ⲁⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ⲉⲙⲁⲧⲉ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ϩⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲉⲩⲡⲟⲣⲉⲓ",
+          "ⲛⲁ_3_post_ⲡⲟⲑⲩⲕⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7137,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "834",
+    "grl_lemma": "εὐπορέω",
+    "grl_meaning": "to prosper, thrive",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 727b; Preisigke 1:617"
+  }
+}

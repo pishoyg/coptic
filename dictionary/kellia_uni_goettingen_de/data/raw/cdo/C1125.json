@@ -1,0 +1,94 @@
+{
+  "id": "C1125",
+  "forms": [
+    {
+      "id": "CF3618",
+      "orth": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7761,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1310",
+      "bibliography": "CD 101a; KoptHWb 59; ChLCS 16b"
+    },
+    {
+      "id": "CS1311",
+      "bibliography": "CD 101a; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉⲡⲁⲓ ⲡⲉ ⲡϣⲏⲛ ⲛⲧⲁⲁⲇⲁⲙ ⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ **ⲁϥⲕⲱⲕ **ⲁϩⲏⲩ**** ·",
+      "english": "And the Cherubim said unto me, 'This is the tree [of the fruit] of which Adam ate and became naked.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲛⲁϣⲙϣⲉ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲛⲛⲉⲕϫⲓϫⲉⲉⲩⲉ ⲛⲁⲓ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲛⲧⲟⲩ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ϩⲛⲟⲩϩⲉⲃⲱⲱⲛ ⲁⲩⲱ ϩⲛⲟⲩⲉⲓⲃⲉ ⲁⲩⲱ **ϩⲛⲟⲩⲕⲱⲕ **ⲁϩⲏⲩ**** ⲁⲩⲱ ϩⲛⲟⲩϭⲣⲱϩ ⲛⲛⲕⲁ ⲛⲓⲙ ⲁⲩⲱ ϥⲛⲁⲛⲟⲩϫⲉ ⲛⲟⲩⲕⲗⲁⲗ ⲛⲃⲉⲛⲓⲡⲉ ⲉⲡⲉⲕⲙⲁⲕϩ ϣⲁⲛⲧⲉϥϥⲟⲧⲕ ⲉⲃⲟⲗ",
+      "english": "And thou shalt serve thine enemies, which the Lord will send forth against thee, in hunger, and in thirst, and in nakedness, and in the want of all things; and thou shalt wear upon thy neck a yoke of iron until he shall have destroyed thee.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2663,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1128",
+      "label": "ⲕⲏⲕⲥ",
+      "pos": "N",
+      "gloss": "what is peeled off, strip, scale"
+    },
+    {
+      "target": "C1127",
+      "label": "ⲕⲟⲩⲕⲉ",
+      "pos": "N",
+      "gloss": "rind, skin"
+    },
+    {
+      "target": "C1122",
+      "label": "ⲕⲱⲕ",
+      "pos": "V",
+      "gloss": "peel, strip off, divest; peel off, become bare"
+    },
+    {
+      "target": "C1123",
+      "label": "ⲕⲱⲕ",
+      "pos": "N",
+      "gloss": "bareness, nakedness"
+    },
+    {
+      "target": "C1124",
+      "label": "ⲕⲱⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "peel, strip off, divest"
+    },
+    {
+      "target": "C1126",
+      "label": "ⲕⲱⲕ ⲁϩⲏⲩ",
+      "pos": "N",
+      "gloss": "nakedness"
+    }
+  ]
+}

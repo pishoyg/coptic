@@ -1,0 +1,142 @@
+{
+  "id": "C8942",
+  "forms": [
+    {
+      "id": "CF21881",
+      "orth": "ⲉⲛⲉⲭⲉⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF21882",
+      "orth": "ⲉⲛⲉⲭⲉⲣⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7145,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21883",
+      "orth": "ⲉⲛⲉⲭⲏⲣⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21884",
+      "orth": "ⲉⲛⲉⲭⲩⲣⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21885",
+      "orth": "ⲉⲛⲏⲭⲉⲣⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10892",
+      "bibliography": "DDGLC",
+      "cu_ID": "3041"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϣ ⲅⲁⲣ ⲡⲉ ⲡⲕⲉϣⲁϫⲉ · ⲉⲧⲓⲛⲁϫⲟⲟϥ ⲉⲣⲱⲧⲛ ⲉⲟⲩⲛⲧⲏⲧⲛ ⲙⲙⲁⲩ ⲙⲡ**ⲉⲛⲉⲭⲉⲣⲟⲛ** ⲙⲡⲉⲧⲛⲛⲟⲩⲧⲉ ·",
+      "english": "For of what kind is the other matter which I shall say unto you, there being for you the pledge of your God?",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲧⲛ",
+        2,
+        13.026
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        2,
+        10.973
+      ],
+      [
+        "ⲙ",
+        4,
+        10.351
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        9.779
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲛⲉⲭⲉⲣⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲛⲉⲭⲉⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲛⲉⲭⲉⲣⲟⲛ_0_node",
+          "ⲙ_1_post_ⲉⲛⲉⲭⲉⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲛⲉⲭⲉⲣⲟⲛ",
+          "ⲡⲉⲧⲛ_3_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_3_post_ⲛⲟⲩⲧⲉ",
+          "ⲛⲟⲩⲧⲉ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6692,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "686",
+    "grl_lemma": "ἐνέχυρον",
+    "grl_meaning": "pledge, security",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 565a; Preisigke 1:489"
+  }
+}

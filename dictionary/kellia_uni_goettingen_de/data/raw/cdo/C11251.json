@@ -1,0 +1,255 @@
+{
+  "id": "C11251",
+  "forms": [
+    {
+      "id": "CF31328",
+      "orth": "ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF31332",
+      "orth": "ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7911,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31329",
+      "orth": "ϩⲉⲡⲟⲣⲅⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31330",
+      "orth": "ϩⲓⲡⲟⲣⲅⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31331",
+      "orth": "ϩⲩⲡⲟⲣⲅⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31333",
+      "orth": "ϩⲩⲡⲟⲩⲣⲅⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS15882",
+      "bibliography": "DDGLC",
+      "cu_ID": "9921"
+    },
+    {
+      "id": "CS15883",
+      "bibliography": "DDGLC",
+      "cu_ID": "1526"
+    },
+    {
+      "id": "CS15884",
+      "bibliography": "DDGLC",
+      "cu_ID": "10204"
+    },
+    {
+      "id": "CS15885",
+      "bibliography": "DDGLC",
+      "cu_ID": "9903"
+    },
+    {
+      "id": "CS15886",
+      "bibliography": "DDGLC",
+      "cu_ID": "10640"
+    },
+    {
+      "id": "CS15887",
+      "bibliography": "DDGLC",
+      "cu_ID": "9822"
+    },
+    {
+      "id": "CS15888",
+      "bibliography": "DDGLC",
+      "cu_ID": "10638"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁⲧⲉⲛⲟⲩ ⲥⲉ**ϩⲩⲡⲟⲩⲣⲅⲉⲓ** ⲙⲙⲟϥ · ϩⲛⲛⲉϥⲡⲉⲧϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:0-8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲉⲧⲉⲧⲛϣⲁⲛϫⲟⲟⲩ ϩⲁⲙⲏⲛ ϯϫⲱ ⲙⲙⲟⲥ ⲉⲣⲱⲧⲛ · ϫⲉϣⲁⲩⲥⲡⲟⲩⲇⲁⲍⲉ ⲛϭⲓⲛⲉⲧ**ϩⲩⲡⲟⲩⲣⲅⲉⲓ** ⲧⲏⲣⲟⲩ ϩⲛⲛⲧⲁⲝⲓⲥ ⲧⲏⲣⲟⲩ ⲛⲕⲉⲕⲣⲓⲥⲓⲥ ⲛⲧⲉⲛⲁⲣⲭⲱⲛ ⲛⲥⲉϯ ⲛⲧⲉⲯⲩⲭⲏ ⲉⲧⲙⲙⲁⲩ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲩⲉⲣⲏⲩ ϩⲉⲱⲥ ϣⲁⲛⲧⲟⲩϫⲓⲧⲥ ⲉⲣⲁⲧⲥ ⲛⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“And if ye say this, amēn, I say unto you: All who serve in all the orders of the judgments of the rulers, hasten to hand over that soul from one to the other, until they lead it before the Virgin of Light.”",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲡⲟⲩⲇⲁⲍⲉ",
+        1,
+        14.469
+      ],
+      [
+        "ⲧⲉⲛⲟⲩ",
+        1,
+        9.161
+      ],
+      [
+        "ϩⲛ",
+        2,
+        8.479
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.864
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲩⲡⲟⲩⲣⲅⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲝⲓⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲧⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲩⲡⲟⲩⲣⲅⲉⲓ_0_node",
+          "ϩⲛ_1_post_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          "ⲛ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲛ",
+          "ⲧⲁⲝⲓⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲝⲓⲥ_3_post_ⲛ",
+          "ⲛ_4_post_ⲧⲁⲝⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲧⲁⲝⲓⲥ",
+          "ⲕⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          "ⲥⲉ_1_pre_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϩⲩⲡⲟⲩⲣⲅⲉⲓ",
+          "ϩⲩⲡⲟⲩⲣⲅⲉⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7460,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "2281",
+    "grl_lemma": "ὑπουργέω",
+    "grl_meaning": "to render service, assist",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1900b; Preisigke 2:677"
+  }
+}

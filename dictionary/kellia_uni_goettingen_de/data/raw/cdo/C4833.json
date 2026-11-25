@@ -1,0 +1,356 @@
+{
+  "id": "C4833",
+  "forms": [
+    {
+      "id": "CF11630",
+      "orth": "ⲧⲁϫⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4202,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲧⲁϫⲉ-",
+      "dialect": "A",
+      "id": "402.1"
+    },
+    {
+      "orth": "ⲧⲁϫⲁ⸗",
+      "dialect": "A",
+      "id": "402.2"
+    },
+    {
+      "orth": "ⲧⲁϫⲟ",
+      "dialect": "L",
+      "id": "402.3"
+    },
+    {
+      "orth": "ⲧⲁϫⲁ⸗",
+      "dialect": "L",
+      "id": "402.4"
+    },
+    {
+      "orth": "ⲧⲁϫⲁⲓⲧ†",
+      "dialect": "L",
+      "id": "402.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5452",
+      "bibliography": "CD 462b; CDC 71b-72a; CED 206; KoptHWb 261; DELC 226b; ChLCS 64b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲱⲧⲙ ϭⲉ **ⲧⲁϫⲟ**ⲟⲩ ϩⲛⲟⲩⲡⲁⲣϩⲏⲥⲓⲁ ·",
+      "english": "Hearken therefore, that I may say it in openness.",
+      "source": "Pistis Sophia Book 2 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:10-19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛ**ⲧⲁϫⲟ**ⲟⲩ ⲛⲧⲁⲉⲓⲛⲉ ⲛⲟⲩⲙⲁⲅⲟⲥ ⲉϥⲟⲩⲟⲟⲧⲃ ⲉⲣⲟⲕ · ⲛϥⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲛⲉⲕⲙⲁⲅⲓⲁ ·",
+      "english": "I will Send and bring a magician who is more powerful than thou, (and) he shall make an end of thy magic'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ϩⲱ ϯⲛⲁⲣⲉϩⲧ ⲧⲟⲟⲧⲉϫⲛⲧⲟⲟⲧⲁⲩⲱ ⲛ**ⲧⲁϫⲟ**ⲟⲩ ⲙⲡⲁϭⲱⲛⲧ ⲁⲛⲟⲕ ⲡϫⲟⲉⲓⲥ ⲁⲓϣⲁϫⲉ",
+      "english": "And I also will clap my hands, and let loose my fury: I the Lord have spoken it.",
+      "source": "Ezekiel 21",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.791
+      ],
+      [
+        "ⲟⲩ",
+        21,
+        15.59
+      ],
+      [
+        "ϩⲉⲃⲱⲱⲛ",
+        1,
+        12.09
+      ],
+      [
+        "ⲡⲁⲣϩⲏⲥⲓⲁ",
+        1,
+        12.063
+      ],
+      [
+        "ⲉϩⲉ",
+        1,
+        11.836
+      ],
+      [
+        "ⲧⲁ",
+        3,
+        10.898
+      ],
+      [
+        "ⲥⲟⲡⲥ",
+        1,
+        9.896
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ⲧⲟⲟⲧ",
+        1,
+        9.232
+      ],
+      [
+        "ⲃⲱⲕ",
+        2,
+        9.137
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        8.685
+      ],
+      [
+        "ϫⲟⲟⲩ",
+        1,
+        8.271
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        7.753
+      ],
+      [
+        "ϯ",
+        2,
+        7.709
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        7.697
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        7.207
+      ],
+      [
+        "ϩⲛ",
+        2,
+        6.672
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.658
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        6.618
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁϫⲟ_0_node",
+          6
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          6
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁϫⲟ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϭⲱⲛⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲃⲱⲱⲛ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_4_post_ϩⲉⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁϫⲟ_0_node",
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          5
+        ],
+        [
+          "ϣⲁ_1_pre_ⲧⲁϫⲟ",
+          "ⲛ_1_pre_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲧⲁϫⲟ",
+          "ⲧⲁϫⲟ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          "ⲛ_2_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲓⲛⲉ",
+          "ⲧⲁ_2_post_ⲉⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲧⲁϫⲟ",
+          "ⲧⲁϫⲟ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          "ⲙ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲁϫⲟ",
+          "ⲡⲁ_3_post_ϭⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϭⲱⲛⲧ",
+          "ϭⲱⲛⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          "ⲛ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁϫⲟ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ϩⲉⲃⲱⲱⲛ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲉⲃⲱⲱⲛ_3_post_ⲟⲩ",
+          "ⲉϫⲙ_4_post_ϩⲉⲃⲱⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲧⲁϫⲟ",
+          "ϩⲛ_1_post_ⲧⲁϫⲟ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲧⲁϫⲟ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ϩⲏⲧ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3804,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2780",
+      "type": "cf",
+      "label": "iniquitous person"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4834",
+      "label": "ⲧⲁϫⲟ",
+      "pos": "N",
+      "gloss": "judgement"
+    }
+  ]
+}

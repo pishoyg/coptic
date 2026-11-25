@@ -1,0 +1,183 @@
+{
+  "id": "C1401",
+  "forms": [
+    {
+      "id": "CF4223",
+      "orth": "ⲣⲉϥⲕⲁϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13360,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1624",
+      "bibliography": "CD 123b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲛⲁϫⲉⲙⲡϣⲓⲛⲓ ⲛⲛⲉⲧⲉⲛϣⲉⲣⲓ ⲁⲩϣⲁⲛⲉⲣⲡⲟⲣⲛⲉⲩⲓⲛ ⲛⲉⲙⲉϫⲉⲛⲛⲉⲧⲉⲛϣⲉⲗⲉⲧ ⲛⲉⲙⲛⲟⲩϣⲏⲣⲓ ⲉⲑⲃⲉⲫⲁⲓ ⲥⲉϩⲱⲟⲩ ⲛⲁⲩⲙⲟⲩϫⲧ ⲛⲉⲙⲛⲓⲉⲑⲛⲟⲥ ⲟⲩⲟϩ ⲛⲁⲩϯ ⲥⲑⲟⲓⲛⲟⲩϥⲓ ⲉϩⲣⲏⲓ ⲛⲉⲙⲛⲏⲉⲧⲥⲱϥ ⲟⲩⲟϩ ⲡⲓⲗⲁⲟⲥ ⲛ**ⲣⲉϥⲕⲁϯ** ⲛⲁϥϭⲗⲉⲙⲗⲱⲙ ⲡⲉ ⲛⲉⲙⲛⲓⲡⲟⲣⲛⲏ .",
+      "english": "And I will not visit upon your daughters when they shall commit fornication, nor your daughters-in-law when they shall commit adultery: for they themselves mingled themselves with harlots, and sacrificed with polluted ones, and the people that understood not entangled itself with a harlot.",
+      "source": "28_Osee_04",
+      "urn": "urn:cts:copticLit:ot.hos.bohairic_ed:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲗⲉⲙⲗⲱⲙ",
+        1,
+        17.695
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.579
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲕⲁϯ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 12798,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1403",
+      "label": "ϫⲉⲙⲕⲁϯ",
+      "pos": "V",
+      "gloss": "find understanding"
+    },
+    {
+      "target": "C1404",
+      "label": "ϫⲓⲛⲕⲁϯ",
+      "pos": "N",
+      "gloss": "understanding"
+    },
+    {
+      "target": "C1402",
+      "label": "ϯⲕⲁϯ",
+      "pos": "V",
+      "gloss": "instruct"
+    },
+    {
+      "target": "C1396",
+      "label": "ⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorant person"
+    },
+    {
+      "target": "C1397",
+      "label": "ⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorant"
+    },
+    {
+      "target": "C1398",
+      "label": "ⲉⲣⲁⲧⲕⲁϯ",
+      "pos": "V",
+      "gloss": "be ignorant"
+    },
+    {
+      "target": "C1407",
+      "label": "ⲉⲣⲕⲁⲧϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be wise"
+    },
+    {
+      "target": "C1394",
+      "label": "ⲕⲁϯ",
+      "pos": "V",
+      "gloss": "know, understand"
+    },
+    {
+      "target": "C1395",
+      "label": "ⲕⲁϯ",
+      "pos": "N",
+      "gloss": "knowledge, understanding"
+    },
+    {
+      "target": "C1405",
+      "label": "ⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "knowledgeable, wise person"
+    },
+    {
+      "target": "C1406",
+      "label": "ⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "knowledgeable"
+    },
+    {
+      "target": "C1399",
+      "label": "ⲙⲉⲧⲁⲧⲕⲁϯ",
+      "pos": "N",
+      "gloss": "ignorance"
+    },
+    {
+      "target": "C1408",
+      "label": "ⲙⲉⲧⲕⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "understanding"
+    },
+    {
+      "target": "C1400",
+      "label": "ⲣⲉⲙⲛⲕⲁϯ",
+      "pos": "N",
+      "gloss": "man of understanding"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "C4805",
+  "forms": [
+    {
+      "id": "CF11575",
+      "orth": "ⲣⲉϥⲧϩⲉⲙⲕⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7362,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5424",
+      "bibliography": "CD 459a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥϫⲱⲛⲧ ⲛϫⲉⲡⲉϥϭⲟⲓⲥ ⲁϥⲧⲏ ⲓϥ ⲉⲧⲟⲧⲟⲩ ⲛⲛⲓ**ⲣⲉϥⲧϩⲉⲙⲕⲟ** ϣⲁⲧⲉϥϯ ⲙⲡⲉⲧⲉⲣⲟϥ ⲧⲏⲣϥ .",
+      "english": "His lord was angry, and delivered him to the tormentors, until he should pay all that was due to him.",
+      "source": "01_Matthew_18",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲧⲟⲧ",
+        1,
+        12.211
+      ],
+      [
+        "ϣⲁⲧⲉ",
+        1,
+        12.016
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧϩⲉⲙⲕⲟ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6832,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1857",
+      "type": "cf",
+      "label": "be painful, difficult, be grieved"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4803",
+      "label": "ⲑⲙⲕⲟ",
+      "pos": "V",
+      "gloss": "maltreat, afflict, humiliate"
+    },
+    {
+      "target": "C4804",
+      "label": "ⲑⲙⲕⲟ",
+      "pos": "N",
+      "gloss": "maltreatment, affliction"
+    }
+  ]
+}

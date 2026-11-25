@@ -1,0 +1,49 @@
+{
+  "id": "C12062",
+  "forms": [
+    {
+      "id": "CF34046",
+      "orth": "ϣϣⲏⲟⲩ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF34047",
+      "orth": "ϣⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2930,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17063",
+      "bibliography": "CD 609a; KoptHWB 338; CED 261; DELC 274a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲥϩⲓⲙⲓ ⲇⲉ ⲛⲑⲟⲥ ⲉϣⲱⲡ ⲉⲣⲉϫⲱⲥ **ϣⲏⲟⲩ** ⲟⲩⲱⲟⲩ ⲛⲁⲥ ⲡⲉ ϫⲉⲉⲧⲁⲩϯ ⲙⲡⲓϥⲱⲓ ⲛⲁⲥ ⲛⲧϣⲉⲃⲓⲱ ⲛⲟⲩⲉⲣϣⲱⲛ .",
+      "english": "But if a woman has long hair, it is a glory to her, for her hair is given to her for a covering.",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6735,
+      "count": 1
+    }
+  }
+}

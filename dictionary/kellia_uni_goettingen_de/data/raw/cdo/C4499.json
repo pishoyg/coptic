@@ -1,0 +1,113 @@
+{
+  "id": "C4499",
+  "forms": [
+    {
+      "id": "CF10954",
+      "orth": "ⲧⲣⲟⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20322,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5087",
+      "bibliography": "CD 431b; CDC 67b; KoptHWb 243; ChLCS 61a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲁⲉⲓⲟⲟⲩ ⲟⲛ ⲛⲛⲁϩⲣⲙⲡⲁⲓ ⲧⲉⲛⲟⲩ ⲉⲧⲙⲟⲕϩ ⲛϩⲏⲧ ⲡⲉ ϯ ⲛⲁⲩ ⲛⲟⲩ**ⲧⲣⲟⲡ** ⲛⲟⲩⲱⲧ ⲙⲁⲗⲓⲥⲧⲁ ⲟⲩϣⲥ ⲛϭⲉⲣⲱⲃ ϩⲛⲧⲉϥϭⲓϫ ϫⲓⲛⲙⲡⲟⲟⲩ ⲉϩⲣⲁⲓ ⲉⲩⲥⲱϣ ⲛⲁϥ ϩⲱⲱϥ ⲡⲉ .",
+      "english": "...",
+      "source": "So Listen FL15-28",
+      "urn": "urn:cts:copticLit:shenoute.listen.amelineau:5-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲗⲓⲥⲧⲁ",
+        1,
+        13.87
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        11.036
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲟⲡ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡ",
+          1
+        ],
+        [
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲣⲟⲡ_0_node",
+          "ⲛ_1_post_ⲧⲣⲟⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲟⲡ",
+          "ⲟⲩⲱⲧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19941,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4500",
+      "label": "ⲧⲣⲡ ⲛⲥⲓⲟⲩ",
+      "pos": "N",
+      "gloss": "heatstroke, sunstroke"
+    }
+  ]
+}

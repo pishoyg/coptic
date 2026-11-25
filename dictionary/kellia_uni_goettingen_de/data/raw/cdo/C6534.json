@@ -1,0 +1,387 @@
+{
+  "id": "C6534",
+  "forms": [
+    {
+      "id": "CF15096",
+      "orth": "ϩⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 8.28,
+        "rank": 155,
+        "count": 702
+      }
+    },
+    {
+      "id": "CF15097",
+      "orth": "ⲉϩⲗⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13233,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF15098",
+      "orth": "ϩⲗⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF15099",
+      "orth": "ϩⲓⲗ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF15100",
+      "orth": "ϩⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF15101",
+      "orth": "ϩⲓⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "note": "(once)",
+    "pos": "N",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS7245",
+      "bibliography": "CD 667b; KoptHWb 363"
+    },
+    {
+      "id": "CS7246",
+      "bibliography": "CD 667b-668a; KoptHWb 363"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϩⲟⲛϩⲉⲛ ⲉⲧⲟⲧⲟⲩ ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲧⲉⲙϫⲟⲥ ⲛ**ϩⲗⲓ** ϩⲟⲥⲇⲉ ⲙⲁⲗⲗⲟⲛ ⲛⲁⲩϩⲓⲱⲓϣ ⲛϩⲟⲩⲟ",
+      "english": "He commanded them that they should tell no one, but the more he commanded them, so much the more widely they proclaimed it.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲛⲁⲩ ⲉⲣⲟϥ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲁϥⲉⲣⲟⲩⲱ ⲉⲟⲩⲟⲛ ϩⲏⲧ ⲙⲙⲟϥ ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲭⲟⲩⲏⲟⲩ ⲁⲛ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲟⲩⲟϩ ⲙⲡⲉ**ϩⲗⲓ** ϣⲉⲣⲧⲟⲗⲙⲁⲛ ⲉϣⲉⲛϥ .",
+      "english": "When Jesus saw that he answered wisely, he said to him, 'You are not far from the Kingdom of God.' No one dared ask him any question after that.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲙⲟⲛ ϣϫⲟⲙ ⲛⲧⲉ**ϩⲗⲓ** ϣⲉ ⲉϧⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡⲓϫⲱⲣⲓ ⲛⲧⲉϥϩⲱⲗⲉⲙ ⲛⲛⲉϥⲥⲕⲉⲩⲟⲥ ⲉⲃⲏⲗ ⲛⲧⲉϥⲥⲱⲛϩ ⲙⲡⲓϫⲱⲣⲓ ⲛϣⲟⲣⲡ ⲟⲩⲟϩ ⲧⲟⲧⲉ ⲛⲧⲉϥϩⲱⲗⲉⲙ ⲙⲡⲉϥⲏⲓ .",
+      "english": "But no one can enter into the house of the strong man to plunder, unless he first binds the strong man; and then he will plunder his house.",
+      "source": "Bohairic Gospel of Mark 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:3",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲗⲓ_0_node",
+          441
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          41
+        ],
+        [
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          7
+        ],
+        [
+          "ϩⲱⲃ_2_post_ⲛ",
+          6
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲓ",
+          6
+        ],
+        [
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          15
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ϩⲱⲟⲩ_4_post_ⲉⲧ",
+          5
+        ],
+        [
+          "ⲡⲉⲧϩⲱⲟⲩ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛ",
+          5
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲗⲓ",
+          5
+        ],
+        [
+          "ⲛⲟⲃⲓ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲙⲉⲑⲛⲟⲩϫ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ϭⲣⲟⲡ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲗⲓ",
+          3
+        ],
+        [
+          "ϫⲟⲛⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲗⲱⲓϫⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲫⲁⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ϩⲙⲟⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          2
+        ],
+        [
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          4
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          4
+        ],
+        [
+          "ⲕⲣⲓⲥⲡⲟⲥ_2_post_ⲉⲃⲏⲗ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          2
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          2
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲉⲃⲏⲗ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲛ_1_post_ϩⲗⲓ",
+          10
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲣⲱⲙⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϩⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲓ",
+          "ϩⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲙ_1_post_ϩⲗⲓ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲱⲟⲩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲡⲉⲧϩⲱⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲛⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲁⲛ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲛⲟⲃⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲙⲉⲑⲛⲟⲩϫ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϭⲣⲟⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲁⲅⲁⲑⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϩⲗⲓ",
+          "ϩⲗⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϫⲟⲛⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ⲗⲱⲓϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲗⲓ",
+          "ⲫⲁⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲗⲓ",
+          "ϩⲙⲟⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ϩⲗⲓ",
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          2
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          "ⲕⲣⲓⲥⲡⲟⲥ_2_post_ⲉⲃⲏⲗ",
+          1
+        ],
+        [
+          "ϩⲗⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲗⲓ",
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲑⲏⲛⲟⲩ_2_post_ϧⲉⲛ",
+          "ⲉⲃⲏⲗ_1_post_ϩⲗⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲉⲃⲏⲗ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲉⲃⲏⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 8.28,
+      "rank": 135,
+      "count": 703
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6535",
+      "label": "ϩⲗⲓ",
+      "pos": "ADV",
+      "gloss": "at all"
+    }
+  ],
+  "etym": {
+    "egy_num": "107760",
+    "egy_lemma": "ḥr.w",
+    "demo_num": "d4156",
+    "demo_lemma": "ḥr",
+    "english": "people",
+    "german": "Menschen (\"Gesichter\")",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/107760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4156"
+  }
+}

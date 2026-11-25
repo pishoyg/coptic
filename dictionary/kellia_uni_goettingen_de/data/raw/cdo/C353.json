@@ -1,0 +1,206 @@
+{
+  "id": "C353",
+  "forms": [
+    {
+      "id": "CF1530",
+      "orth": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13070,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS391",
+      "bibliography": "CD 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲉⲡⲓⲧⲣⲟⲡⲟⲥ ⲡⲉ ϫⲉⲛⲧⲟϥ ⲡⲉ ⲡ**ⲣⲉϥϯⲃⲉⲕⲉ** ⲛⲛⲉⲧⲣϩⲱⲃ · ⲁⲩⲱ ⲉⲣⲉⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ϣⲟⲟⲡ ϩⲁⲧⲉϥⲉⲝⲟⲩⲥⲓⲁ ·",
+      "english": "The Governor saith, 'It is He Who giveth wages unto those who labour, and the whole world is under His rule.'",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϩⲱⲃ",
+        1,
+        12.369
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        9.857
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥϯⲃⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲃⲉⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲃⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣϩⲱⲃ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲉϥϯⲃⲉⲕⲉ",
+          "ⲣⲉϥϯⲃⲉⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥϯⲃⲉⲕⲉ_0_node",
+          "ⲛ_1_post_ⲣⲉϥϯⲃⲉⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥϯⲃⲉⲕⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲣϩⲱⲃ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12653,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C352",
+      "type": "syn",
+      "label": "wage giver, hirer"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

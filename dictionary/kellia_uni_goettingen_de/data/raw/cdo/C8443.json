@@ -1,0 +1,61 @@
+{
+  "id": "C8443",
+  "forms": [
+    {
+      "id": "CF19701",
+      "orth": "ⲁⲣⲣⲏⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19702",
+      "orth": "ⲁⲣⲣⲏⲧⲟⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF19703",
+      "orth": "ⲁϩⲣⲏⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12549,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9795",
+      "bibliography": "DDGLC",
+      "cu_ID": "4291"
+    },
+    {
+      "id": "CS9796",
+      "bibliography": "DDGLC",
+      "cu_ID": "5201"
+    },
+    {
+      "id": "CS9797",
+      "bibliography": "DDGLC",
+      "cu_ID": "5200"
+    },
+    {
+      "id": "CS9798",
+      "bibliography": "DDGLC",
+      "cu_ID": "4270"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3281",
+    "grl_lemma": "ἄρρητος",
+    "grl_meaning": "unspoken, unintelligible, unaudible",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 247a"
+  }
+}

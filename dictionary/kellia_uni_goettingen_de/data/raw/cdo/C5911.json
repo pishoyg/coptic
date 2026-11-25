@@ -1,0 +1,64 @@
+{
+  "id": "C5911",
+  "forms": [
+    {
+      "id": "CF13820",
+      "orth": "ⲣϣⲙϣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6594",
+      "bibliography": "CD 568a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5909",
+      "label": "ϣⲙϣⲉ",
+      "pos": "V",
+      "gloss": "serve, worship"
+    },
+    {
+      "target": "C5910",
+      "label": "ϣⲙϣⲉ",
+      "pos": "N",
+      "gloss": "service, worship"
+    },
+    {
+      "target": "C5914",
+      "label": "ϣⲙϣⲓⲧ",
+      "pos": "N",
+      "gloss": "servant"
+    },
+    {
+      "target": "C5913",
+      "label": "ϭⲓⲛϣⲙϣⲉ",
+      "pos": "N",
+      "gloss": "service, religion"
+    },
+    {
+      "target": "C5912",
+      "label": "ⲣⲉϥϣⲙϣⲉ",
+      "pos": "N",
+      "gloss": "server, worshipper"
+    }
+  ]
+}

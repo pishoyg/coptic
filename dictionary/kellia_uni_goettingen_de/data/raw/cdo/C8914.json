@@ -1,0 +1,321 @@
+{
+  "id": "C8914",
+  "forms": [
+    {
+      "id": "CF21768",
+      "orth": "ⲉⲗⲉⲅⲭⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21769",
+      "orth": "ⲉⲗⲉⲅⲭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6463,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF21770",
+      "orth": "ⲉⲗⲉⲭⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10819",
+      "bibliography": "DDGLC",
+      "cu_ID": "10900"
+    },
+    {
+      "id": "CS10820",
+      "bibliography": "DDGLC",
+      "cu_ID": "10356"
+    },
+    {
+      "id": "CS10821",
+      "bibliography": "DDGLC",
+      "cu_ID": "10220"
+    },
+    {
+      "id": "CS10822",
+      "bibliography": "DDGLC",
+      "cu_ID": "3619"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲉⲛϩⲓⲕⲱⲛ ⲉⲩ**ⲉⲗⲉⲅⲭⲉ** ⲛⲧⲉⲕⲙⲛⲧⲁⲧϩⲏⲧ · ⲛⲏⲓ ⲛⲧⲁⲕⲕⲟⲧⲟⲩ · ϩⲉⲛⲕⲟⲟⲩⲉ ⲛⲁⲟⲩⲱϩ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "And the images shall provide the proofs of thy folly, and the houses which thou hast built others shall dwell in.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲟⲛ ⲛⲉⲧⲕⲁⲥ · ⲙⲡⲁϩⲏⲧ ⲃⲁⲥⲁⲛⲓⲍⲉ ⲙⲙⲟⲓ ⲉⲧⲣⲁϣⲁϫⲉ · ⲁⲩⲱ ⲛⲁⲛⲟⲃⲉ **ⲉⲗⲉⲅⲭⲉ** ⲉⲧⲣⲁϭⲱ ·",
+      "english": "Again the grief which is in my heart tortureth me to make me speak, and my sins lay on me the charge to keep silence.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧϩⲟⲧⲉ ⲙⲡⲙⲟⲩ ⲧϩⲣϣⲟ ⲙⲙⲟⲟⲩ · ⲡⲙⲉⲉⲩⲉ ⲛⲛⲉⲩⲛⲟⲃⲉ ⲕⲱⲧⲉ ⲉⲣⲟⲟⲩ · ⲡⲉϫⲡⲓⲟ ⲙⲡϩⲁⲡ **ⲉⲗⲉⲅⲭⲉ** ⲙⲙⲟⲟⲩ ·",
+      "english": "The fear of death shall stupefy them, and the thought of their sins shall encircle them, and the punishment of the Judgement shall put them to shame.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲧϩⲏⲧ",
+        1,
+        12.843
+      ],
+      [
+        "ϩⲓⲕⲱⲛ",
+        1,
+        11.894
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        11.621
+      ],
+      [
+        "ⲧⲣ",
+        1,
+        10.447
+      ],
+      [
+        "ϩⲁⲡ",
+        1,
+        10.05
+      ],
+      [
+        "ϭⲱ",
+        1,
+        9.669
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        8.702
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        8.494
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.285
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲅⲭⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲧϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_pre_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_pre_ϫⲡⲓⲟ",
+          1
+        ],
+        [
+          "ϫⲡⲓⲟ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ϫⲡⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ϩⲁⲡ_4_pre_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          "ⲉⲗⲉⲅⲭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲗⲉⲅⲭⲉ_0_node",
+          "ⲛ_1_post_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲗⲉⲅⲭⲉ",
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲧϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲙⲛⲧⲁⲧϩⲏⲧ",
+          "ⲙⲛⲧⲁⲧϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧϩⲏⲧ_2_post_ⲛ",
+          "ⲛ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          "ⲛⲁ_2_pre_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_2_pre_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          "ⲉⲗⲉⲅⲭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_2_pre_ϫⲡⲓⲟ",
+          "ϫⲡⲓⲟ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          1
+        ],
+        [
+          "ϫⲡⲓⲟ_1_pre_ⲉⲗⲉⲅⲭⲉ",
+          "ⲙ_2_pre_ϫⲡⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_2_pre_ϫⲡⲓⲟ",
+          "ⲡ_3_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_pre_ⲙ",
+          "ϩⲁⲡ_4_pre_ⲡ",
+          1
+        ],
+        [
+          "ϩⲁⲡ_4_pre_ⲡ",
+          "ⲉⲗⲉⲅⲭⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6026,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "655",
+    "grl_lemma": "ἐλέγχω",
+    "grl_meaning": "to cross-examine, question",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 531a; Preisigke 1:467"
+  }
+}

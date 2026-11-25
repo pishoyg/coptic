@@ -1,0 +1,66 @@
+{
+  "id": "C4433",
+  "forms": [
+    {
+      "id": "CF10818",
+      "orth": "ⲧⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 24.79,
+        "rank": 54,
+        "count": 3912
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5020",
+      "bibliography": "CD 289b; KoptHWb 241; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲁ**ⲧⲣⲉ**ⲛⲁⲃⲟⲩⲭⲟⲇⲟⲛⲟⲥⲟⲣ ⲡⲣⲣⲟ ⲛⲧⲃⲁⲃⲩⲗⲱⲛ ⲡⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ⲛⲓⲉⲭⲟⲛⲓⲁⲥ ⲙⲛⲛⲁⲣⲭⲱⲛ ⲙⲛⲛⲉⲧⲙⲏⲣ ⲙⲛⲛⲇⲩⲛⲁⲧⲟⲥ ⲙⲛⲡⲗⲁⲟⲥ ⲧⲏⲣϥ ⲙⲡⲕⲁϩ ϫⲓⲛⲑⲓⲏⲙ ⲁⲩⲱ ⲁϥⲉⲓⲛⲉ ⲙⲙⲟϥ ⲉⲧⲃⲁⲃⲩⲗⲱⲛ",
+      "english": "After that Nabuchodonosor king of Babylon had carried away Jechonias, and the princes, and the captives, and the mighty men, and the people of the land, from Jerusalem, and brought them unto Babylon.",
+      "source": "Baruch 1",
+      "urn": "urn:cts:copticLit:ot.bar.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲛⲉⲕϩⲟⲓⲧⲉ **ⲧⲣⲉ**ϣⲣⲱϣ ⲁⲩⲱ ⲛⲉⲕϩⲃⲥⲱ ⲛⲧϩⲉ ⲉⲃⲟⲗ ϩⲛⲟⲩⲙⲣⲓⲥ ⲛϩⲣⲱⲧ",
+      "english": "Wherefore are thy garments red, and thy raiment as if fresh from a trodden winepress?",
+      "source": "Isaiah 63",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡ**ⲧⲣⲉ**ⲛⲣⲉϥⲣⲛⲟⲃⲉ ϯⲟⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲭⲟⲣⲧⲟⲥ ⲁⲩⲱ ⲁⲩⲣⲓⲕⲉ ⲧⲏⲣⲟⲩ ⲛϭⲓⲛⲉⲧⲣϩⲱⲃ ⲉⲧⲁⲛⲟⲙⲓⲁ ϫⲉⲉⲩⲉϥⲟⲧⲟⲩ ⲉⲃⲟⲗ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ",
+      "english": "When the sinners spring up as the grass, and all the workers of iniquity have watched; it is that they may be utterly destroyed for ever.",
+      "source": "Psalms 91",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:91",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C3049",
+      "type": "cf",
+      "label": "part, fraction"
+    }
+  ],
+  "etym": {
+    "egy_num": "184990",
+    "egy_lemma": "ḏr.w",
+    "english": "end; limit; boundary",
+    "german": "Ende; Grenze; Bereich",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/184990"
+  }
+}

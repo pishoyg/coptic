@@ -1,0 +1,101 @@
+{
+  "id": "C3402",
+  "forms": [
+    {
+      "id": "CF8701",
+      "orth": "ⲥⲟⲉⲓϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18930,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF8702",
+      "orth": "ⲥⲱⲓϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS3874",
+      "bibliography": "CD 378b; KoptHWb 180; ChLCS 46b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲕⲉⲭⲁⲗⲇⲁⲓⲟⲥ ϩⲱⲟⲩ ⲉⲩⲥⲱϣ ⲙⲙⲟⲟⲩ ⲉⲣϣⲁⲛⲟⲩ**ⲥⲟⲉⲓϥ** ⲉⲓ ⲉⲣⲁⲧⲟⲩ ⲉⲛϥϣ ϣⲁϫⲉ ⲁⲛ ϣⲁⲩⲁⲝⲓⲟⲩ ⲛⲃⲏⲗ ⲉⲩⲱϣ ⲉϩⲣⲁⲓ ⲉⲣⲟϥ ⲉⲧⲣⲉϥⲧⲁⲗϭⲟⲟⲩ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲟⲩⲛϭⲟⲙ ⲙⲙⲟϥ ⲉⲁⲓⲥⲑⲁⲛⲉ",
+      "english": "Who if they shall see one dumb that cannot speak, they bring him, and intreat Bel that he may speak, as though he were able to understand.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        11.292
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        1,
+        10.812
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲉⲓϥ",
+          1
+        ],
+        [
+          "ⲥⲟⲉⲓϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲉⲓϥ",
+          "ⲥⲟⲉⲓϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18543,
+      "count": 1
+    }
+  }
+}

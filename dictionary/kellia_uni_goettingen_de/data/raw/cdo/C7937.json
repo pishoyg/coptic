@@ -1,0 +1,94 @@
+{
+  "id": "C7937",
+  "forms": [
+    {
+      "id": "CF17940",
+      "orth": "ϭⲱⲧⲡ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8821",
+      "bibliography": "CD 833b; KoptHWb 469"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧⲟⲩⲁⲁⲃ ⲇⲉ ⲙⲡⲉⲥⲙⲉⲗⲉⲓ ⲛⲁⲩ ⲟⲩⲇⲉ **ⲙⲡⲟⲩϭⲱⲧⲡ **ⲉ**ⲡⲧⲏⲣϥ** ·",
+      "english": "And the saints neither regarded them nor were they frightened at all.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7946",
+      "label": "ϭⲟⲧⲡⲥ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7945",
+      "label": "ϭⲧⲟⲡ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7936",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "defeat, overcome; be defeated, overcome"
+    },
+    {
+      "target": "C7942",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "intimidation, discouragement"
+    },
+    {
+      "target": "C7938",
+      "label": "ϭⲱⲧⲡ (ϩⲁⲧϩⲏ⸗)",
+      "pos": "V",
+      "gloss": "beware of, watch out for, take care"
+    },
+    {
+      "target": "C7939",
+      "label": "ϭⲱⲧⲡ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "fail"
+    },
+    {
+      "target": "C7940",
+      "label": "ϭⲱⲧⲡ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "scare away"
+    },
+    {
+      "target": "C7941",
+      "label": "ϭⲱⲧⲡ (ⲛϩⲏⲧ)",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C7943",
+      "label": "ⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "without defeat, unconquered"
+    },
+    {
+      "target": "C7944",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "unconcern, carefreeness"
+    }
+  ]
+}

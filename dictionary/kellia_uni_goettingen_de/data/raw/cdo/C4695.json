@@ -1,0 +1,70 @@
+{
+  "id": "C4695",
+  "forms": [
+    {
+      "id": "CF11353",
+      "orth": "ⲑⲱⲟⲩϯ ⲙⲡⲓϣⲉ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5304",
+      "bibliography": "CD 447b; KoptHWb 254; DELC 224a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5699",
+      "type": "cf",
+      "label": "wood"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4696",
+      "label": "ϣⲉ ⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "gong, bell"
+    },
+    {
+      "target": "C4698",
+      "label": "ϫⲓⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "assemblage"
+    },
+    {
+      "target": "C4699",
+      "label": "ⲑⲱⲟⲩⲧⲥ",
+      "pos": "N",
+      "gloss": "collection, assembly"
+    },
+    {
+      "target": "C4697",
+      "label": "ⲙⲁ ⲛⲑⲱⲟⲩϯ",
+      "pos": "N",
+      "gloss": "place of meeting"
+    },
+    {
+      "target": "C4693",
+      "label": "ⲧⲟⲟⲩⲧⲉ",
+      "pos": "V",
+      "gloss": "be gathered, be collected, assemble; gather, collect"
+    },
+    {
+      "target": "C4694",
+      "label": "ⲧⲟⲟⲩⲧⲉ",
+      "pos": "N",
+      "gloss": "gathering, congregation"
+    }
+  ]
+}

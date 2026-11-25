@@ -1,0 +1,204 @@
+{
+  "id": "C2751",
+  "forms": [
+    {
+      "id": "CF7323",
+      "orth": "ⲟⲩⲁⲙⲟⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5304,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3145",
+      "bibliography": "KoptHWb 141; DELC 155; ChLCS 36a"
+    },
+    {
+      "id": "CS3146",
+      "bibliography": "CD 255a; KoptHWb 141; ChLCS 36a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲥⲁⲃⲟⲓ ⲇⲉ ⲉⲧⲧⲟⲉⲓⲥ ⲉⲧⲉⲣⲉⲛ**ⲟⲩⲁⲙⲟⲙⲉ** ϩⲓⲱⲱⲥ ·",
+      "english": "And he taught me what the medicament was wherewith he treated my liver.'",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϩⲟⲕⲟⲩ ⲁϥϯ ⲛⲛⲉⲩ**ⲟⲩⲁⲙⲟⲙⲉ** ⲉⲩⲧⲟⲉⲓⲥ · ⲁϥϯ ⲟⲛ ⲙⲡⲁϩⲏⲡⲁⲣ · ⲉⲡⲉϥⲙⲁ ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "and he relieved the pains in them, and bound the wounds up, and he put my liver back into its place again.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲉⲓⲥ",
+        6,
+        21.893
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        2,
+        13.139
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        2,
+        11.653
+      ],
+      [
+        "ⲛⲉⲩ",
+        2,
+        9.816
+      ],
+      [
+        "ϯ",
+        2,
+        8.516
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ⲥ",
+        2,
+        7.274
+      ],
+      [
+        "ⲧ",
+        2,
+        7.071
+      ],
+      [
+        "ⲩ",
+        2,
+        6.81
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲉ",
+        2,
+        5.817
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲟⲩⲁⲙⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲙⲟⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲁⲙⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_1_post_ⲟⲩⲁⲙⲟⲙⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲟⲩⲁⲙⲟⲙⲉ",
+          "ⲟⲩⲁⲙⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲁⲙⲟⲙⲉ",
+          "ⲟⲩⲁⲙⲟⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲙⲟⲙⲉ_0_node",
+          "ϩⲓⲱⲱ_1_post_ⲟⲩⲁⲙⲟⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_1_post_ⲟⲩⲁⲙⲟⲙⲉ",
+          "ⲥ_2_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4884,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2749",
+      "label": "ⲁⲙϩⲁⲧ",
+      "pos": "N",
+      "gloss": "white clay"
+    },
+    {
+      "target": "C2748",
+      "label": "ⲁⲙⲡⲏⲣϣ",
+      "pos": "N",
+      "gloss": "red clay"
+    },
+    {
+      "target": "C2750",
+      "label": "ⲁⲙⲧⲱϩ",
+      "pos": "N",
+      "gloss": "clay mixed with straw"
+    },
+    {
+      "target": "C2746",
+      "label": "ⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "clay, mud"
+    },
+    {
+      "target": "C2747",
+      "label": "ⲟⲙⲉ",
+      "pos": "N",
+      "gloss": "clay, mud"
+    },
+    {
+      "target": "C2752",
+      "label": "ⲣⲟⲩⲁⲙⲟⲙⲉ",
+      "pos": "V",
+      "gloss": "eat, spread (as gangrene)"
+    }
+  ]
+}

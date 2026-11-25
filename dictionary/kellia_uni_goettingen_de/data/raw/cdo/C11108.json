@@ -1,0 +1,109 @@
+{
+  "id": "C11108",
+  "forms": [
+    {
+      "id": "CF30654",
+      "orth": "ϩⲏⲅⲉⲙⲱⲛⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30656",
+      "orth": "ϩⲏⲅⲉⲙⲱⲛⲓⲕⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30655",
+      "orth": "ϩⲏⲅⲉⲙⲟⲛⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17056,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15541",
+      "bibliography": "DDGLC",
+      "cu_ID": "1525"
+    },
+    {
+      "id": "CS15542",
+      "bibliography": "DDGLC",
+      "cu_ID": "5913"
+    },
+    {
+      "id": "CS15543",
+      "bibliography": "DDGLC",
+      "cu_ID": "2882"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲁⲧⲁϫⲣⲟⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲧⲥⲁⲃⲉ",
+        1,
+        15.525
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        11.505
+      ],
+      [
+        "ⲉⲓⲉ",
+        1,
+        9.815
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲏⲅⲉⲙⲱⲛⲓⲕⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "2501",
+    "grl_lemma": "ἡγεμονικός",
+    "grl_meaning": "of or for a leader, capable of command, authoritative",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 763a; Preisigke 1:651"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "C124",
+  "forms": [
+    {
+      "id": "CF442",
+      "orth": "ⲁⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 35.96,
+        "rank": 37,
+        "count": 5674
+      }
+    },
+    {
+      "id": "CF443",
+      "orth": "ⲁⲛ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 38.69,
+        "rank": 38,
+        "count": 3281
+      }
+    },
+    {
+      "id": "CF444",
+      "orth": "ⲁⲛⲁⲛ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS144",
+      "bibliography": "CD10b; CED 8; KoptHWb 7; DELC 12; ChLCS 4a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉϯⲉⲙⲓ **ⲁⲛ** .",
+      "english": "He answered, 'I don't know.'",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲛⲛⲉⲧⲛⲉⲓⲟⲧⲉ ⲉϥⲉⲟⲩⲱϩ ⲟⲛ ⲉϫⲛⲧⲏⲩⲧⲛ ⲉⲧⲣⲉⲧⲉⲧⲛⲁϣⲁⲓ ⲛⲧⲉⲧⲛϣⲱⲡⲉ ⲛϩⲉⲛ**ⲁⲛ**ϣⲟ ⲛⲕⲱⲃ ⲁⲩⲱ ⲉϥⲉⲥⲙⲟⲩ ⲉⲣⲱⲧⲛ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁϥϣⲁϫⲉ ⲛⲙⲙⲏⲧⲛ",
+      "english": "The Lord God of your fathers add to you a thousand-fold more than you are, and bless you as he has spoken to you.",
+      "source": "Deuteronomy 1",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲱⲟⲩ ϫⲉⲧⲉⲛⲉⲙⲓ **ⲁⲛ** .",
+      "english": "They said to him, “We do not know.”",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛϯⲣϩⲟⲧⲉ **ⲁⲛ** ⲛϩⲏⲧϥ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "I do not fear God.'",
+      "source": "Apophthegmata Patrum Sahidic 004: Poemen",
+      "urn": "urn:cts:copticLit:ap.4.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧⲁⲩⲉⲛⲡⲓⲣⲱⲙⲓ ⲅⲁⲣ **ⲁⲛ** ⲉⲃⲟⲗ ϧⲉⲛϯⲥϩⲓⲙⲓ ⲁⲗⲗⲁ ϯⲥϩⲓⲙⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲣⲱⲙⲓ .",
+      "english": "For man is not from woman, but woman from man;",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩϣⲟⲟⲡ **ⲁⲛ** ⲉⲧⲃⲉⲡⲧⲁⲉⲓⲟ ⲡⲉ ⲉⲃⲟⲗ ϩⲓⲧⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and not for the approbation which is from God.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C120",
+      "label": "ⲁⲛ",
+      "pos": "PTC",
+      "gloss": ""
+    },
+    {
+      "target": "C121",
+      "label": "ⲁⲛ-",
+      "pos": "N",
+      "gloss": "great one (of . . .)"
+    },
+    {
+      "target": "C123",
+      "label": "ⲁⲛ-",
+      "pos": "N",
+      "gloss": ""
+    },
+    {
+      "target": "C122",
+      "label": "ⲙⲛⲧⲁⲛϣⲟ",
+      "pos": "N",
+      "gloss": "unit under the command of a χιλίαρχος"
+    }
+  ]
+}

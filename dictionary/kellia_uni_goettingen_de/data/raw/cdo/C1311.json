@@ -1,0 +1,112 @@
+{
+  "id": "C1311",
+  "forms": [
+    {
+      "id": "CF4028",
+      "orth": "ⲁⲧⲭⲣⲉⲙⲣⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8818,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1517",
+      "bibliography": "CD 116b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲙⲙⲁⲓϣⲉⲙⲙⲟ ⲉϧⲟⲩⲛ ⲉⲛⲉⲧⲉⲛⲉⲣⲏⲩ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛ**ⲁⲧⲭⲣⲉⲙⲣⲉⲙ** .",
+      "english": "Be hospitable to one another without grumbling.",
+      "source": "21_I Peter_04",
+      "urn": "urn:cts:copticLit:nt.1pet.bohairic:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        9.071
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲧⲉⲛ",
+        1,
+        7.401
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲭⲣⲉⲙⲣⲉⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8289,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1309",
+      "label": "ⲕⲣⲙⲣⲙ",
+      "pos": "V",
+      "gloss": "murmur, be vexed"
+    },
+    {
+      "target": "C1310",
+      "label": "ⲕⲣⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "murmuring, complaint"
+    },
+    {
+      "target": "C1312",
+      "label": "ⲣⲉϥⲕⲣⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "murmurer"
+    }
+  ]
+}

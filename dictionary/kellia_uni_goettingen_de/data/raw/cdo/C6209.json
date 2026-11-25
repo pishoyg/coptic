@@ -1,0 +1,99 @@
+{
+  "id": "C6209",
+  "forms": [
+    {
+      "id": "CF14428",
+      "orth": "ϣⲱϩⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19637,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲉϩⲃ-",
+      "dialect": "S",
+      "id": "2037.1"
+    },
+    {
+      "orth": "ϣⲟϩⲃ⸗",
+      "dialect": "S",
+      "id": "2037.2"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6896",
+      "bibliography": "CD 612b; CED 262; KoptHWb 340; DELC 277b; ChLCS 84a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲇⲉ ⲛⲉⲩϭⲱϣⲧ ⲛⲥⲱϥ ⲡⲉ ϩⲱⲥ ⲉϥⲛⲁ**ϣⲱϩⲃ** ⲏⲛϥϩⲉ ⲉϩⲣⲁⲓ ϩⲛⲟⲩϣⲥⲛⲉ ⲛϥⲙⲟⲩ ⲉⲩⲉⲓⲟⲣⲙ ⲇⲉ ⲛⲥⲱϥ ⲛⲟⲩⲛⲟϭ ⲛⲕⲟⲟⲩ ⲁⲩⲱ ⲉⲩⲛⲁⲩ ϫⲉⲙⲡⲉⲗⲁⲁⲩ ⲙⲡⲉⲧϩⲟⲟⲩ ⲧⲁϩⲟϥ ⲁⲩⲕⲧⲟⲟⲩ ⲡⲉϫⲁⲩ ϫⲉⲟⲩⲛⲟⲩⲧⲉ ⲡⲉ .",
+      "english": "But they expected that he would have swollen or fallen down dead suddenly, but when they watched for a long time and saw nothing bad happen to him, they changed their minds, and said that he was a god.",
+      "source": "44_Acts of the Apostles_28",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲥ",
+        1,
+        11.884
+      ],
+      [
+        "ⲏ",
+        1,
+        9.479
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19251,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5776",
+      "type": "cf",
+      "label": "be scorched, withered"
+    }
+  ]
+}

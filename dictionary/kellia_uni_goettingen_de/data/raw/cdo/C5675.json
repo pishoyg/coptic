@@ -1,0 +1,108 @@
+{
+  "id": "C5675",
+  "forms": [
+    {
+      "id": "CF13326",
+      "orth": "ϣⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 30.92,
+        "rank": 45,
+        "count": 4879
+      }
+    },
+    {
+      "orth": "ϣⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 24.64,
+        "rank": 61,
+        "count": 2090
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS6348",
+      "bibliography": "CD 541b; CED 233; KoptHWb 299; DELC 253ab; ChLCS 74b"
+    },
+    {
+      "id": "CS6349",
+      "bibliography": "CD 542a"
+    },
+    {
+      "id": "CS6350",
+      "bibliography": "CD 542a"
+    },
+    {
+      "id": "CS6351",
+      "bibliography": "CD 542b"
+    },
+    {
+      "id": "CS6352",
+      "bibliography": "CD 542b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲋ ϣⲱⲡⲓ ⲁ ⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ **ϣⲁ**ⲫⲛⲁⲩ ⲛⲁϫⲡⲑ .",
+      "english": "When the sixth hour",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ϣⲁ**ⲛⲧⲟⲡⲟⲥ ⲙⲡϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ",
+      "english": "and up to the regions of the First Mystery,",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁϣⲱⲡⲓ ϧⲉⲛⲉⲫⲉⲥⲟⲥ **ϣⲁ**ϯⲡⲉⲛⲧⲏⲕⲟⲥⲧⲏ .",
+      "english": "But I will stay at Ephesus until Pentecost,",
+      "source": "Bohairic 1 Corinthians 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲁϫⲓⲟⲩⲁ ⲇⲉ ⲉⲡⲉⲡⲛⲉⲩⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ ⲙⲙⲛⲧϥ ⲕⲱ ⲉⲃⲟⲗ ϣⲁⲉⲛⲉϩ ⲁⲗⲗⲁ ϥϭⲏⲡ ⲉⲩⲛⲟⲃⲉ **ϣⲁ**ⲉⲛⲉϩ .",
+      "english": "but whoever may blaspheme against the Holy Spirit never has forgiveness, but is guilty of an eternal sin'",
+      "source": "Mark Chapter 3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲟϥ ⲇⲉ ⲁⲫⲛⲟⲩϯ ⲕⲏⲛ ⲉⲧⲁⲙⲟϥ ⲙⲡⲁⲧⲟⲩⲓ **ϣⲁⲣⲟ**ϥ .",
+      "english": "But God had just told him before they arrived.",
+      "source": "Life of Isaac of Alexandria - part 2",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:20-41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲧⲉⲧⲛϯⲛⲟⲩϭⲥ ⲅⲁⲣ ⲙⲡⲉⲛⲧⲁϥⲧⲁⲙⲓⲉⲧⲏⲩⲧⲛ · ⲁⲩⲱ ⲁϥⲥⲁⲛϣⲧⲏⲩⲧⲛ ⲡⲛⲟⲩⲧⲉ ⲡ**ϣⲁ**ⲉⲛⲉϩ ·",
+      "english": "For you have angered him who has created you, and who has nourished you, God who is forever.",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "etym": {
+    "egy_num": "151540",
+    "egy_lemma": "šꜣꜥ-r",
+    "demo_num": "d5830",
+    "demo_lemma": "šꜥ",
+    "english": "from ... until; until after",
+    "german": "von ... an bis; bis nach",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/151540",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5830"
+  }
+}

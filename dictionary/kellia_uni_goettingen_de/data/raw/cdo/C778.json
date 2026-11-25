@@ -1,0 +1,89 @@
+{
+  "id": "C778",
+  "forms": [
+    {
+      "id": "CF2879",
+      "orth": "ⲉϭⲟϣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2880",
+      "orth": "ⲉϭⲟⲟϣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3560,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF2881",
+      "orth": "ⲉⲑⲟϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6260,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "subc": "Völkername",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS926",
+      "bibliography": "CD 65b; KoptHWb 45; DELC 50-51; ChLCS 12b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϯⲛⲁⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ⲁⲩⲱ ⲉϫⲛⲛⲉⲕⲓⲉⲣⲱⲟⲩ ⲧⲏⲣⲟⲩ ⲁⲩⲱ ϯⲛⲁϯ ⲙⲡⲕⲁϩ ⲛⲕⲏⲙⲉ ⲉⲧⲣⲉϥⲣϫⲁⲓⲉ ⲟⲩⲥⲏϥⲉ ⲙⲛⲟⲩⲧⲁⲕⲟ ϯⲛⲁⲧⲁⲁⲩ ϫⲓⲛⲙⲉϫⲧⲱⲗ ⲙⲛⲥⲟⲩⲁⲛ ϣⲁϩⲣⲁⲓ ⲉⲛⲧⲟϣ ⲛⲛ**ⲉϭⲟⲟϣⲉ**",
+      "english": "Therefore, behold, I am against thee, and against all thy rivers, and I will give up the land of Egypt to desolation, and the sword, and destruction, from Magdol and Syene even to the borders of the Ethiopians.",
+      "source": "Ezekiel 29",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲙⲁ ⲛⲛⲉϩⲓⲥⲉ ⲁⲓⲛⲁⲩ ⲉⲛⲉⲥⲕⲩⲛⲏ ⲛⲛ**ⲉϭⲟⲟϣⲉ**",
+      "english": "Because of troubles I looked upon the tents of the Ethiopians: the tabernacles also of the land of Madiam shall be dismayed.",
+      "source": "Habakkuk 3",
+      "urn": "urn:cts:copticLit:ot.hab.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲥⲉⲛⲁⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓϩⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲩⲡⲏⲧ ⲉⲧⲁⲕⲉⲡⲕⲁϩ ⲛⲛ**ⲉϭⲟⲟϣⲉ** ⲁⲩⲱ ⲟⲩⲛ ⲟⲩϣⲧⲟⲣⲧⲣ ⲛⲁϣⲱⲡⲉ ⲛϩⲏⲧⲟⲩ ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ϩⲛⲕⲏⲙⲉ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲁϥⲉⲓ",
+      "english": "In that day shall messengers go forth hasting to destroy Ethiopia utterly, and there shall be tumult among them in the day of Egypt: for, behold it comes.",
+      "source": "Ezekiel 30",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3578,
+      "count": 8
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C777",
+      "label": "ⲉϭⲱϣ",
+      "pos": "N",
+      "gloss": "an Ethiopian, a Nubian"
+    }
+  ],
+  "etym": {
+    "demo_num": "d725",
+    "demo_lemma": "ı ͗kšj.t",
+    "english": "[Kush]",
+    "german": "Kuschitin",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d725"
+  }
+}

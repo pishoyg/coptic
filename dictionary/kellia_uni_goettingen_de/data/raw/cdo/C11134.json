@@ -1,0 +1,351 @@
+{
+  "id": "C11134",
+  "forms": [
+    {
+      "id": "CF30773",
+      "orth": "ϩⲓⲛⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30778",
+      "orth": "ϩⲓⲛⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2920,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF30775",
+      "orth": "ϣⲓⲛⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF30776",
+      "orth": "ϩⲓⲛⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 14.27,
+        "rank": 91,
+        "count": 1210
+      }
+    },
+    {
+      "id": "CF30777",
+      "orth": "ϩⲓⲛⲁ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF30774",
+      "orth": "ϣⲓⲛⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30779",
+      "orth": "ϩⲓⲛⲁⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30780",
+      "orth": "ⲓⲛⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1241,
+        "count": 35
+      }
+    },
+    {
+      "id": "CF30781",
+      "orth": "ⲓⲛⲁ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS15600",
+      "bibliography": "DDGLC",
+      "cu_ID": "47"
+    },
+    {
+      "id": "CS15601",
+      "bibliography": "DDGLC",
+      "cu_ID": "11629"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ ⲇⲉ **ϩⲓⲛⲁ** ⲛⲧⲉϥϣⲧⲉⲙϣⲱⲡⲓ ϧⲉⲛⲧⲫⲣⲱ ⲛϫⲉⲡⲉⲧⲉⲛⲫⲱⲧ .",
+      "english": "Pray that your flight won't be in the winter.",
+      "source": "Bohairic Gospel of Mark 13 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉϫⲓⲛⲁⲇⲁⲙ ϣⲁⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲃⲁⲡⲧⲓⲥⲧⲏⲥ ϩⲛⲛϫⲡⲟ ⲛⲛϩⲓⲟⲙⲉ ⲙⲛⲡⲉⲧϫⲟⲥⲉ ⲉⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲃⲁⲡⲧⲓⲥⲧⲏⲥ **ϩⲓⲛⲁ** ϫⲉⲛⲛⲉⲩⲟⲩⲱϭⲡ · ⲛϭⲓⲛⲉϥⲃⲁⲗ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲇⲉ ⲁⲩⲕⲓⲙ ⲙⲡⲓⲙⲏϣ **ϩⲓⲛⲁ** ⲙⲁⲗⲗⲟⲛ ⲛⲧⲉϥⲭⲁⲃⲁⲣⲃⲃⲁⲥ ⲛⲱⲟⲩ ⲉⲃⲟⲗ .",
+      "english": "But the chief priests stirred up the multitude, that he should release Barabbas to them instead.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉϯⲛⲁⲣⲭⲣⲱ ⲛⲛⲁⲭⲣⲏⲙⲁ ϫⲉⲕⲁⲁⲥ ⲉⲓⲛⲁϫⲟ ⲛⲧⲁⲱϩⲥ ⲛⲧⲁⲧⲱϭⲉ ⲛⲧⲁⲙⲟⲩϩ ⲛⲛⲁⲉϩⲱⲣ ⲛⲕⲁⲣⲡⲟⲥ **ϩⲓⲛⲁ** ϫⲉⲛⲛⲁⲣϭⲣⲱϩ ⲛⲗⲁⲁⲩ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲙⲏⲧⲓ ϣⲁⲩϭⲉⲣⲉⲟⲩϧⲏⲃⲥ **ϩⲓⲛⲁ** ⲛⲥⲉⲭⲁϥ ϧⲁⲡⲓⲙⲉⲛⲧ ⲓⲉ ϧⲁⲡⲓϭⲗⲟϫ ⲟⲩⲭⲓ ϩⲓⲛⲁ ⲛⲥⲉⲭⲁϥ ϩⲓϫⲉⲛϯⲗⲩⲭⲛⲓⲁ .",
+      "english": "He said to them, 'Is the lamp brought to be put under a basket or under a bed? Isn't it put on a stand?",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲉⲩⲛⲉϫⲏⲣⲡ ⲛⲁⲥ ⲉⲁⲥⲕⲟⲥ ⲛⲃⲣⲣⲉ **ϩⲓⲛⲁ** ϫⲉⲛⲉϥⲧⲁⲕⲉϥ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲧⲉ",
+        1151,
+        26.331
+      ],
+      [
+        "ϣⲧⲉⲙ",
+        348,
+        25.146
+      ],
+      [
+        "ⲛ",
+        778,
+        23.161
+      ],
+      [
+        "ϥ",
+        781,
+        23.011
+      ],
+      [
+        "ⲧⲁ",
+        227,
+        22.51
+      ],
+      [
+        "ⲛⲧ",
+        156,
+        22.111
+      ],
+      [
+        "ⲥⲉ",
+        226,
+        21.956
+      ],
+      [
+        "ⲧⲉⲛ",
+        255,
+        21.143
+      ],
+      [
+        "ⲧⲉⲧⲉⲛ",
+        133,
+        20.505
+      ],
+      [
+        "ⲟⲩ",
+        405,
+        20.499
+      ],
+      [
+        "ⲉⲙⲓ",
+        98,
+        19.369
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        197,
+        18.929
+      ],
+      [
+        "ⲧⲉ",
+        84,
+        18.922
+      ],
+      [
+        "ⲙ",
+        199,
+        18.252
+      ],
+      [
+        "ⲡⲓ",
+        190,
+        18.239
+      ],
+      [
+        "ϭⲓ",
+        81,
+        18.045
+      ],
+      [
+        "ⲉ",
+        197,
+        17.642
+      ],
+      [
+        "ϫⲱⲕ",
+        43,
+        17.194
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        97,
+        17.193
+      ],
+      [
+        "ⲉⲣⲟ",
+        85,
+        17.104
+      ]
+    ],
+    "S": [
+      [
+        "ⲗⲏⲥⲧⲏⲥ",
+        3,
+        16.746
+      ],
+      [
+        "ⲡⲱϣⲉ",
+        1,
+        16.691
+      ],
+      [
+        "ⲣⲡⲓⲥⲧⲉⲩⲉ",
+        1,
+        16.691
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ/",
+        1,
+        16.691
+      ],
+      [
+        "ⲓⲧⲛ",
+        1,
+        16.691
+      ],
+      [
+        "ⲉϩⲱⲣ",
+        1,
+        16.691
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.691
+      ],
+      [
+        "ⲛⲁ",
+        20,
+        14.747
+      ],
+      [
+        "ⲉ",
+        21,
+        14.087
+      ],
+      [
+        "ϫⲉ",
+        13,
+        13.341
+      ],
+      [
+        "ⲁⲥⲕⲟⲥ",
+        1,
+        13.232
+      ],
+      [
+        "ⲟⲩⲟⲉⲓⲉ",
+        1,
+        12.991
+      ],
+      [
+        "ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ",
+        1,
+        12.691
+      ],
+      [
+        "ⲉϣⲁⲩ",
+        1,
+        12.691
+      ],
+      [
+        "ⲟⲩⲱϭⲡ",
+        1,
+        12.047
+      ],
+      [
+        "ⲧⲥⲓⲟ",
+        1,
+        11.737
+      ],
+      [
+        "ⲃⲁⲡⲧⲓⲥⲧⲏⲥ",
+        1,
+        11.647
+      ],
+      [
+        "ϩⲕⲁⲉⲓⲧ",
+        1,
+        11.521
+      ],
+      [
+        "ⲣϭⲣⲱϩ",
+        1,
+        11.369
+      ],
+      [
+        "ⲛ",
+        14,
+        11.324
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2593,
+      "count": 15
+    },
+    "B": {
+      "rate": 14.26,
+      "rank": 83,
+      "count": 1210
+    }
+  },
+  "etym": {
+    "grl_ID": "953",
+    "grl_lemma": "ἵνα",
+    "grl_meaning": "that, so that",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 830a"
+  }
+}

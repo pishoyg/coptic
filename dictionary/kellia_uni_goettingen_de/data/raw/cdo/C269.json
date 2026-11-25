@@ -1,0 +1,52 @@
+{
+  "id": "C269",
+  "forms": [
+    {
+      "id": "CF1132",
+      "orth": "ⲉⲣⲁϥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS301",
+      "bibliography": "CD 23b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C268",
+      "label": "ϣⲁⲧⲁϥ",
+      "pos": "N",
+      "gloss": "butcher"
+    },
+    {
+      "target": "C266",
+      "label": "ⲁϥ",
+      "pos": "N",
+      "gloss": "flesh"
+    },
+    {
+      "target": "C267",
+      "label": "ⲥⲁ ⲛⲁϥ",
+      "pos": "N",
+      "gloss": "meat seller"
+    }
+  ]
+}

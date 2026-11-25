@@ -1,0 +1,176 @@
+{
+  "id": "C3007",
+  "forms": [
+    {
+      "id": "CF7880",
+      "orth": "ⲉⲡⲁϩⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6076,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3442",
+      "bibliography": "CD 284b; KoptHWb 156; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ⲛⲧⲛϭⲱϣⲧ ⲉⲃⲟⲗ ϩⲏⲧϥ ⲙⲡⲉⲧⲛⲏⲩ ⲙⲏⲡⲟⲧⲉ ϩⲙⲡⲧⲣⲉⲛϭⲱϣⲧ ⲉⲃⲟⲗ · ⲁⲩⲱ ⲉⲛⲛⲟⲩϫⲉ ⲙⲡϩⲱⲃ **ⲉⲡⲁϩⲟⲩ** · ⲛⲥⲧⲁϩⲟⲛ ⲛϭⲓⲧⲉⲛϩⲁⲏ ·",
+      "english": "Now let us await after them that which is to come, lest through our expectation we thrust the matter behind us, and there come upon us our end.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲟⲩⲙⲁⲁϫⲉ ⲛⲁⲥⲱⲧⲙ ⲁⲛ ⲉⲛϣⲁϫⲉ ⲛⲛⲉⲧⲡⲗⲁⲛⲁ ⲙⲙⲟⲁⲩⲱ ⲉⲛϣⲁϫⲉ ⲛⲛⲉⲛⲧⲁⲩⲡⲗⲁⲛⲁ ⲙⲙⲟ**ⲉⲡⲁϩⲟⲩ** ⲛⲉⲛⲧⲁⲩϫⲟⲟⲥ ϫⲉⲧⲁⲓ ⲧⲉ ⲧⲉϩⲓⲏ ⲙⲁⲣⲉⲛⲃⲱⲕ ⲉϩⲣⲁⲓ ⲛϩⲏⲧⲥ ⲉⲓⲧⲉ ⲉⲟⲩⲛⲁⲙ ⲉⲓⲧⲉ ⲉϩⲃⲟⲩⲣ",
+      "english": "and thine ears shall hear the words of them that went after thee to lead thee astray, who say, This is the way, let us walk in it, whether to the right or to the left.",
+      "source": "Isaiah 30",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩϫⲉ",
+        2,
+        13.482
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        2,
+        12.899
+      ],
+      [
+        "ⲡⲗⲁⲛⲁ",
+        1,
+        11.958
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        11.502
+      ],
+      [
+        "ⲥ",
+        2,
+        7.689
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲙ",
+        2,
+        6.766
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        6.608
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.396
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5629,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3012",
+      "label": "ϩⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "at back, formerly"
+    },
+    {
+      "target": "C3013",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after, before (in time)"
+    },
+    {
+      "target": "C3014",
+      "label": "ϩⲓⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3008",
+      "label": "ⲉⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, backward"
+    },
+    {
+      "target": "C3015",
+      "label": "ⲉⲣϩⲓⲫⲁϩⲟⲩ",
+      "pos": "V",
+      "gloss": "be behind, follow after"
+    },
+    {
+      "target": "C3011",
+      "label": "ⲛⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, from behind"
+    },
+    {
+      "target": "C3005",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "buttocks, hinder part, back"
+    },
+    {
+      "target": "C3006",
+      "label": "ⲡⲁϩⲟⲩ",
+      "pos": "N",
+      "gloss": "hinder, past"
+    },
+    {
+      "target": "C3009",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "PREP",
+      "gloss": "behind, after"
+    },
+    {
+      "target": "C3010",
+      "label": "ⲥⲁⲡⲁϩⲟⲩ",
+      "pos": "ADV",
+      "gloss": "behind, after"
+    }
+  ]
+}

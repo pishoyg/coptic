@@ -1,0 +1,353 @@
+{
+  "id": "C944",
+  "forms": [
+    {
+      "id": "CF3232",
+      "orth": "ⲉⲓⲟⲟⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5837,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲉⲓⲟⲟⲣⲉ",
+      "dialect": "S",
+      "id": "732.1"
+    },
+    {
+      "orth": "ⲓⲟⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3610,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲓⲟⲟⲣⲉ",
+      "dialect": "A",
+      "id": "732.3"
+    },
+    {
+      "orth": "ⲓⲱⲱⲣⲉ",
+      "dialect": "A",
+      "id": "732.4"
+    },
+    {
+      "orth": "ⲓⲁⲁⲣ",
+      "dialect": "F",
+      "id": "732.5"
+    },
+    {
+      "orth": "ⲓⲁⲁⲗ",
+      "dialect": "F",
+      "id": "732.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1101",
+      "bibliography": "CD 82a; KoptHWb 51; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕⲛⲟϫⲧ ⲉϩⲣⲁⲓ ⲉⲛϣⲓⲕ ⲙⲫⲏⲧ ⲛⲧϩⲁⲗⲁⲥⲥⲁ : ⲁⲩⲱ ϩⲉⲛ**ⲓⲉⲣⲱⲟⲩ** ⲁⲩⲕⲱⲧⲉ ⲉⲣⲟⲓ ⲛⲉⲕϩⲟⲧⲉ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉⲕϩⲟⲉⲓⲙ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ :",
+      "english": "Thou didst cast me into the depths of the heart of the sea, and the floods compassed me: all thy billows and thy waves have passed upon me.",
+      "source": "Jonah Chapter 2 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲛ**ⲓⲉⲣⲱⲟⲩ** ⲇⲉ ⲟⲛ ⲟⲙⲥϥ · ϣⲁⲩⲟⲩⲟⲙϥ ⲇⲉ ⲟⲛ ϩⲓⲧⲛⲛⲛⲉⲑⲏⲣⲓⲟⲛ ϣⲁⲩⲣⲟⲕϩϥ ⲇⲉ ⲟⲛ ϩⲓⲧⲙⲡⲕⲱϩⲧ · ⲁⲩⲱ ϣⲁϥⲧⲁⲕⲟ ϩⲓⲧⲙⲡⲙⲟⲩ ·",
+      "english": "The rivers drown him, the wild beasts devour him, and he is destroyed by death.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲧⲕⲁⲧⲁⲗⲁⲗⲓⲁ ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲛ**ⲓⲉⲣⲱⲟⲩ** ⲛⲕⲱϩⲧ ⲙⲡⲓϩⲟ ⲙⲙⲟⲩⲓ ·",
+      "english": "“Say unto them: Renounce slandering, that ye may be worthy of the mysteries of the Light and be saved from the fire-rivers of the lion-faced [one].”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯϣⲧⲟⲣⲧⲣ",
+        1,
+        15.24
+      ],
+      [
+        "ⲓⲉⲣⲟ",
+        2,
+        11.142
+      ],
+      [
+        "ⲓⲉⲣⲱⲟⲩ",
+        1,
+        10.031
+      ],
+      [
+        "ⲟⲩⲱϣⲥ",
+        1,
+        8.671
+      ],
+      [
+        "ϩⲏⲏⲧⲉ",
+        1,
+        5.572
+      ],
+      [
+        "ⲛ",
+        5,
+        5.417
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        3.331
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        3.018
+      ],
+      [
+        "ⲙ",
+        2,
+        2.994
+      ],
+      [
+        "ϣⲁ",
+        1,
+        2.988
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        2.862
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        2.725
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        2.667
+      ],
+      [
+        "ϩⲉ",
+        1,
+        2.37
+      ],
+      [
+        "ⲡ",
+        2,
+        2.14
+      ],
+      [
+        "ⲓ",
+        1,
+        1.493
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        1.287
+      ],
+      [
+        "ϩⲛ",
+        1,
+        1.122
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲟⲟⲣ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲓⲟⲟⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲟⲟⲣ_0_node",
+          "ⲙ_1_post_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲟⲣ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲓⲉⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲟⲟⲣ",
+          "ⲛ_1_pre_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲟⲟⲣ",
+          "ⲉⲓⲟⲟⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲟⲟⲣ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲉⲓⲟⲟⲣ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲉⲓⲟⲟⲣ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉⲃⲟⲗ",
+          "ⲓⲉⲣⲟ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲓⲉⲣⲟ_3_post_ⲟⲩ",
+          "ⲁⲩⲱ_4_post_ϩⲉ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲓⲟⲟⲣ",
+          "ⲉⲓⲟⲟⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.26,
+      "rank": 1462,
+      "count": 41
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C945",
+      "label": "ϧⲁⲓⲟⲣ",
+      "pos": "N",
+      "gloss": "canal (river?) bank"
+    },
+    {
+      "target": "C946",
+      "label": "ϫⲓⲟⲟⲣ",
+      "pos": "V",
+      "gloss": "ferry over, ford a river; cross (sea or land)"
+    },
+    {
+      "target": "C949",
+      "label": "ϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "place of ferry, ford; ferry-boat; ferryman"
+    },
+    {
+      "target": "C948",
+      "label": "ϭⲓⲛϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "crossing, transit"
+    },
+    {
+      "target": "C947",
+      "label": "ⲁⲧϫⲓⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "not to be crossed, inaccessible"
+    },
+    {
+      "target": "C950",
+      "label": "ⲉⲓⲉⲣⲟ",
+      "pos": "N",
+      "gloss": "river (\"great canal\"), stream, Nile"
+    }
+  ],
+  "etym": {
+    "egy_num": "33370",
+    "egy_lemma": "jtr.w",
+    "demo_num": "d774",
+    "demo_lemma": "jr",
+    "english": "river; the Nile; canal",
+    "german": "Fluss; Kanal; Nil",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/33370",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d774"
+  }
+}

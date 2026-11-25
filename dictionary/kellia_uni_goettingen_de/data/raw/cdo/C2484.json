@@ -1,0 +1,189 @@
+{
+  "id": "C2484",
+  "forms": [
+    {
+      "id": "CF6750",
+      "orth": "ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8221,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2862",
+      "bibliography": "CD 226a; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲱⲃ ⲅⲁⲣ ⲛⲓⲃⲉⲛ ⲉⲧⲁⲩⲉⲣϣⲟⲣⲡ ⲛⲥϧⲏ ⲧⲟⲩ ⲁⲩⲥϧⲏⲧⲟⲩ ⲉⲧⲉⲛⲥⲃⲱ ϩⲓⲛⲁ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛϯϩⲩⲡⲟⲙⲟⲛⲏ ⲛⲉⲙϯ**ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ** ⲛⲧⲉⲛⲓⲅⲣⲁⲫⲏ ⲛⲧⲉϯϩⲉⲗⲡⲓⲥ ϣⲱⲡⲓ ⲛⲁⲛ .",
+      "english": "For whatever things were written before were written for our learning, that through patience and through encouragement of the Scriptures we might have hope.",
+      "source": "06_Romans_15",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲩⲡⲟⲙⲟⲛⲏ",
+        1,
+        14.608
+      ],
+      [
+        "ⲅⲣⲁⲫⲏ",
+        1,
+        13.286
+      ],
+      [
+        "ϯ",
+        2,
+        9.29
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        9.066
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲅⲣⲁⲫⲏ_3_post_ⲛⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          "ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ_0_node",
+          "ⲛⲧⲉ_1_post_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲙⲉⲧⲣⲉϥϯⲛⲟⲙϯ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲅⲣⲁⲫⲏ_3_post_ⲛⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 7686,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2485",
+      "label": "ϫⲉⲙⲛⲟⲙϯ",
+      "pos": "V",
+      "gloss": "find strength, comfort"
+    },
+    {
+      "target": "C2480",
+      "label": "ϯⲛⲟⲙϯ",
+      "pos": "V",
+      "gloss": "fortify, comfort"
+    },
+    {
+      "target": "C2481",
+      "label": "ϯⲛⲟⲙϯ",
+      "pos": "N",
+      "gloss": "consolation"
+    },
+    {
+      "target": "C2482",
+      "label": "ⲁⲧⲛⲟⲙϯ",
+      "pos": "N",
+      "gloss": "without strength"
+    },
+    {
+      "target": "C2479",
+      "label": "ⲛⲟⲙⲧⲉ",
+      "pos": "N",
+      "gloss": "strength, power; encouragement, comfort"
+    },
+    {
+      "target": "C2483",
+      "label": "ⲣⲉϥϯⲛⲟⲙϯ",
+      "pos": "N",
+      "gloss": "comforter"
+    }
+  ]
+}

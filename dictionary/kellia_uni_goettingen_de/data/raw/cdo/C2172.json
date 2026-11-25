@@ -1,0 +1,94 @@
+{
+  "id": "C2172",
+  "forms": [
+    {
+      "id": "CF6056",
+      "orth": "ⲥⲣⲙⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2512",
+      "bibliography": "CD 198b; ChLCS 29b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3694",
+      "type": "cf",
+      "label": "scatter, spread"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2174",
+      "label": "ϩⲓⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "rain"
+    },
+    {
+      "target": "C2173",
+      "label": "ϯⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give water, irrigate"
+    },
+    {
+      "target": "C2166",
+      "label": "ⲁⲧⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "waterless"
+    },
+    {
+      "target": "C2168",
+      "label": "ⲕⲁⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "cease (to give) water"
+    },
+    {
+      "target": "C2169",
+      "label": "ⲙⲉϩⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    },
+    {
+      "target": "C2167",
+      "label": "ⲙⲉⲧⲁⲑⲙⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "drought"
+    },
+    {
+      "target": "C2165",
+      "label": "ⲙⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "water; inundation"
+    },
+    {
+      "target": "C2175",
+      "label": "ⲙⲟⲩⲙⲉ",
+      "pos": "N",
+      "gloss": "spring, fountain"
+    },
+    {
+      "target": "C2170",
+      "label": "ⲣⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "become water, liquify"
+    },
+    {
+      "target": "C2171",
+      "label": "ⲥⲉⲕⲙⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "draw water"
+    }
+  ]
+}

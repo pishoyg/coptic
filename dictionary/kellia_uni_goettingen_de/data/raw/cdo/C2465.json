@@ -1,0 +1,125 @@
+{
+  "id": "C2465",
+  "forms": [
+    {
+      "id": "CF6712",
+      "orth": "ⲛⲕⲟⲧⲕ (ϩⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ϩⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2839",
+      "bibliography": "CD 224b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲛⲉⲩⲛⲕⲟⲧⲕ **ϩⲁ**ⲛⲁⲓ** ⲛϭⲓⲡⲙⲏⲏϣⲉ ⲛⲛⲉⲧϣⲱⲛⲉ ⲛϭⲁⲗⲉ ⲛⲙⲛⲃⲗⲗⲉ ⲙⲛⲛⲉⲧϣⲟⲩⲱⲟⲩ .",
+      "english": "In these lay a great multitude of those who were sick, blind, lame, or paralyzed, waiting for the moving of the water;",
+      "source": "43_John_5",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲉϥⲛⲕⲟⲧⲕ **ϩⲁ**ϣⲏⲛ** ⲛⲓⲙ ϩⲁⲧⲛⲟⲩϫⲟⲟⲩϥ ⲙⲛⲟⲩⲕⲁϣ ⲙⲛⲟⲩⲧⲣⲃⲏⲓⲛ",
+      "english": "He lies under trees of every kind, by the papyrus, and reed, and bulrush.",
+      "source": "Job 40",
+      "urn": "urn:cts:copticLit:ot.job.coptot:40",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2472",
+      "label": "ϭⲓⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "act of lying, sleeping"
+    },
+    {
+      "target": "C2469",
+      "label": "ⲁⲧⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C2470",
+      "label": "ⲙⲁ ⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "place of lying, couch; (sexual) cohabitation, intercourse; sleeping room"
+    },
+    {
+      "target": "C2458",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "V",
+      "gloss": "sleep; lie down; die"
+    },
+    {
+      "target": "C2459",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleep; sexual intercourse; death"
+    },
+    {
+      "target": "C2466",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "lie, stay by, with"
+    },
+    {
+      "target": "C2463",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2464",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "lie in, on"
+    },
+    {
+      "target": "C2460",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉ-)",
+      "pos": "V",
+      "gloss": "sleep, lie upon"
+    },
+    {
+      "target": "C2461",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2462",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉⲃⲟⲗ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2468",
+      "label": "ⲛⲕⲟⲧⲕ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "lie with"
+    },
+    {
+      "target": "C2467",
+      "label": "ⲛⲕⲟⲧⲕ (ⲛ-)",
+      "pos": "V",
+      "gloss": "lie in"
+    },
+    {
+      "target": "C2471",
+      "label": "ⲣⲉϥⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "one who lies"
+    }
+  ]
+}

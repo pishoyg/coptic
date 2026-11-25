@@ -1,0 +1,136 @@
+{
+  "id": "C11038",
+  "forms": [
+    {
+      "id": "CF30352",
+      "orth": "ⲱⲕⲉⲁⲛⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30353",
+      "orth": "ⲟⲅⲉⲁⲛⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF30354",
+      "orth": "ⲱⲅⲉⲁⲛⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30355",
+      "orth": "ⲱⲕⲉⲁⲛⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15409",
+      "bibliography": "DDGLC",
+      "cu_ID": "1547"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϩⲟⲣⲟⲙⲁ ϭⲱⲗⲡ ⲛⲁϥ ⲉⲃⲟⲗ · ϫⲉⲧⲱⲟⲩⲛ ⲛⲅⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ ϩⲙⲡⲥⲁ ⲙⲡ**ⲱⲕⲉⲁⲛⲟⲥ** ·",
+      "english": "A vision was shewn to him, [and a voice said unto him,] 'Rise up, and go thou into the district which is on the sea-coast,",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲓⲏⲥⲟⲩⲥ ⲁϥⲁϩⲉⲣⲁⲧϥ ⲙⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϩⲓϫⲛⲡⲙⲟⲟⲩ ⲙⲡ**ⲱⲕⲉⲁⲛⲟⲥ** ⲁϥⲉⲡⲓⲕⲁⲗⲉⲓ ⲛⲧⲉⲓⲡⲣⲟⲥⲉⲩⲭⲏ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲱⲧⲙ ⲉⲣⲟⲓ ⲡⲁⲉⲓⲱⲧ ⲡⲉⲓⲱⲧ ⲙⲙⲛⲧⲉⲓⲱⲧ ⲛⲓⲙ ⲡⲁⲡⲉⲣⲁⲛⲧⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ · ⲁⲉⲏⲓⲟⲩⲱ . ⲓⲁⲱ · ⲁⲱⲓ · ⲱⲓⲁⲯⲓⲛⲱⲑⲉⲣ ·",
+      "english": "“At that time Jesus stood with his disciples on the water of the Ocean and made invocation with this prayer, saying: Hear me, my Father, father of all fatherhood, boundless Light: aeēiouō iaō aōi ōia psinōther”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛⲉ",
+        2,
+        14.915
+      ],
+      [
+        "ⲥⲁ",
+        2,
+        12.673
+      ],
+      [
+        "ⲉⲡⲓⲕⲁⲗⲉⲓ",
+        1,
+        12.13
+      ],
+      [
+        "ⲡ",
+        6,
+        10.667
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        9.489
+      ],
+      [
+        "ⲙ",
+        3,
+        8.521
+      ],
+      [
+        "ⲕ",
+        2,
+        8.268
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.103
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲱⲕⲉⲁⲛⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5572,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2667",
+    "grl_lemma": "ὠκεανός",
+    "grl_meaning": "ocean",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2031b"
+  }
+}

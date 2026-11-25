@@ -1,0 +1,60 @@
+{
+  "id": "C4364",
+  "forms": [
+    {
+      "id": "CF10680",
+      "orth": "ⲧⲛⲛⲟⲟⲩ (ⲛⲥⲁ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲛⲥⲁ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4943",
+      "bibliography": "CD 419b-420a; KoptHWb 237; DELC 217b; ChLCS 59b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲁⲙⲟⲛ ⲉⲧϩⲉ ⲛⲧⲁϥⲛⲁⲩ ⲉⲡⲁⲅⲅⲉⲗⲟⲥ ⲉϥⲁϩⲉⲣⲁⲧϥ ϩⲙⲡⲉϥⲏⲓ . ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲙⲁϫⲟⲟⲩ ⲉⲉⲓⲟⲡⲡⲏ **ⲛⲅⲧⲛⲛⲟⲟⲩ **ⲛⲥⲁ**ⲥⲓⲙⲱⲛ** ⲡⲉⲧⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "He told us how he had seen the angel standing in his house, and saying to him, 'Send to Joppa, and get Simon, whose surname is Peter,",
+      "source": "44_Acts of the Apostles_11",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϣⲏⲣⲉ ⲇⲉ ⲛⲛⲁⲥⲥⲟⲩⲣ ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲉⲣⲟⲟⲩ **ⲁⲩⲧⲛⲛⲟⲟⲩ **ⲛⲥⲁ**ⲛⲉⲩⲁⲛϫⲱϫ** ⲛⲧⲟⲟⲩ ⲇⲉ ⲁⲩⲉⲓ ⲉϫⲛⲛⲉⲩⲥⲧⲣⲁⲧⲏⲅⲟⲥ ⲙⲛⲛⲉⲩⲭⲓⲗⲓⲁⲣⲭⲟⲥ ⲁⲩⲱ ⲉϫⲛⲁⲣⲭⲱⲛ ⲛⲓⲙ ⲛⲧⲟⲟⲧⲟⲩ",
+      "english": "But when the Assyrians saw them, they sent to their leaders, which came to their captains and tribunes, and to every one of their rulers.",
+      "source": "Judith 14",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ϭⲉ ⲙⲁϫⲟⲟⲩ ⲛϩⲉⲛⲣⲱⲙⲉ ⲉϩⲣⲁⲓ ⲉⲓⲟⲡⲡⲏ **ⲛⲅⲧⲛⲛⲟⲟⲩ **ⲛⲥⲁ**ⲥⲓⲙⲱⲛ** ⲡⲉⲧⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲉⲧⲣⲟⲥ .",
+      "english": "Now send men to Joppa, and get Simon, who is surnamed Peter.",
+      "source": "44_Acts of the Apostles_10",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4365",
+      "label": "ϭⲓⲛⲧⲛⲛⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "sending, mission"
+    },
+    {
+      "target": "C4363",
+      "label": "ⲧⲛⲛⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "send"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "C4837",
+  "forms": [
+    {
+      "id": "CF11639",
+      "orth": "ϩⲛⲟⲩⲧⲟⲩϫⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5457",
+      "bibliography": "CD 449b; ChLCS 63a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5349",
+      "type": "cf",
+      "label": "be whole, be intact, be safe, be sound"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4838",
+      "label": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "health-giver, saver"
+    },
+    {
+      "target": "C4839",
+      "label": "ⲣⲉϥⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "health-giver, saver"
+    },
+    {
+      "target": "C4835",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "V",
+      "gloss": "make whole, make safe; be safe, be safed"
+    },
+    {
+      "target": "C4836",
+      "label": "ⲧⲟⲩϫⲟ",
+      "pos": "N",
+      "gloss": "safety, salvation"
+    }
+  ]
+}

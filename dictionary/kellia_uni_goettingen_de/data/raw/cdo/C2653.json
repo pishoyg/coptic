@@ -1,0 +1,70 @@
+{
+  "id": "C2653",
+  "forms": [
+    {
+      "id": "CF7109",
+      "orth": "ⲛⲟⲩϩⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3040",
+      "bibliography": "CD 242ab"
+    },
+    {
+      "id": "CS3041",
+      "bibliography": "CD 242b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲁ ⲉⲧⲉⲛϥⲛⲁϣⲉⲡⲧⲏⲩⲧⲛ ⲉⲣⲟϥ ⲁⲛ ⲟⲩⲇⲉ ⲛⲥⲉⲧⲙⲥⲱⲧⲙ ⲉⲣⲱⲧⲛ ⲉⲧⲉⲧⲛⲛⲁⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ **ⲛⲟⲩϩⲉ **ⲉⲃⲟⲗ**** ⲙⲡϣⲟⲉⲓϣ ⲉⲧϩⲁⲣⲟⲟⲩ ⲛⲛⲉⲧⲛⲟⲩⲉⲣⲏⲧⲉ ⲉⲩⲙⲛⲧⲙⲛⲧⲣⲉ ⲉⲣⲟⲟⲩ .",
+      "english": "Whoever will not receive you nor hear you, as you depart from there, shake off the dust that is under your feet for a testimony against them.'",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ **ⲛⲟⲩϩⲉ **ⲉⲃⲟⲗ**** ⲙⲡϣⲟⲉⲓϣ ⲛⲛⲉⲧⲛⲟⲩⲉⲣⲏⲧⲉ ⲉⲩⲙⲛⲧⲙⲛⲧⲣⲉ ⲛⲁⲩ ⲉⲧⲉⲧⲛϫⲱ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲉⲣⲉⲛⲉⲧⲛⲯⲩⲭⲟⲟⲩⲉⲣⲟ ⲉⲙⲡϣⲟⲉⲓϣ ⲙⲡⲉⲧⲛⲏⲓ ·",
+      "english": "And shake ye off the dust of your feet as a witness against them, saying: May your souls be as the dust of your house.",
+      "source": "Pistis Sophia Book 3 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:82-86",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲧⲁⲛⲁϩⲃ ⲡⲉ **ⲛⲟⲩϩⲉ **ⲉⲃⲟⲗ**** ⲛⲧⲁⲕⲗⲓⲥ ⲁⲩⲱ ⲉⲣⲉⲡⲁϭⲃⲟⲓ ⲟⲩⲱϣⲃ ⲉⲃⲟⲗ ϩⲙⲡⲁⲕⲉⲗⲉⲛⲕⲉϩ",
+      "english": "let them my shoulder start from the blade-bone, and my arm be crushed off from the elbow.",
+      "source": "Job 31",
+      "urn": "urn:cts:copticLit:ot.job.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12016",
+      "label": "ⲛⲉϩϥ",
+      "pos": "N",
+      "gloss": "what is shaken; that wherewith is shaken (of dust, chaff) (?)"
+    },
+    {
+      "target": "C2652",
+      "label": "ⲛⲉϩⲙⲁⲕϩ",
+      "pos": "V",
+      "gloss": "resist, be stiff-necked"
+    },
+    {
+      "target": "C2651",
+      "label": "ⲛⲟⲩϩⲉ",
+      "pos": "V",
+      "gloss": "shake, cast off, set apart, separate; separate self, turn, return"
+    }
+  ]
+}

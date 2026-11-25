@@ -1,0 +1,52 @@
+{
+  "id": "C2153",
+  "forms": [
+    {
+      "id": "CF6016",
+      "orth": "ϫⲓⲙⲁⲧⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2492",
+      "bibliography": "CD 196b; DELC 125; ChLCS 29a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2151",
+      "label": "ⲃⲁⲕⲙⲁⲧⲟⲩ",
+      "pos": "N",
+      "gloss": "sending, casting poison"
+    },
+    {
+      "target": "C2150",
+      "label": "ⲙⲁⲧⲟⲩ",
+      "pos": "N",
+      "gloss": "poison"
+    },
+    {
+      "target": "C2152",
+      "label": "ⲛⲉϫⲙⲁⲧⲟⲩ",
+      "pos": "V",
+      "gloss": "throw poison (of reptiles)"
+    }
+  ]
+}

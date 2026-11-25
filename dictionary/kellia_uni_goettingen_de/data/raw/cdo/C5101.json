@@ -1,0 +1,82 @@
+{
+  "id": "C5101",
+  "forms": [
+    {
+      "id": "CF12167",
+      "orth": "ⲙⲛⲧⲟⲩⲁⲁⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5732",
+      "bibliography": "CD 488a; CDC 76a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5104",
+      "label": "ⲙⲛⲧⲟⲩⲏⲏⲃ",
+      "pos": "N",
+      "gloss": "priesthood"
+    },
+    {
+      "target": "C5098",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "VSTAT",
+      "gloss": "be pure, holy"
+    },
+    {
+      "target": "C5099",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "holy one, saint"
+    },
+    {
+      "target": "C5102",
+      "label": "ⲟⲩⲏⲏⲃ",
+      "pos": "N",
+      "gloss": "priest"
+    },
+    {
+      "target": "C5096",
+      "label": "ⲟⲩⲟⲡ",
+      "pos": "V",
+      "gloss": "be pure, be innocent"
+    },
+    {
+      "target": "C5097",
+      "label": "ⲟⲩⲟⲡ",
+      "pos": "N",
+      "gloss": "purity"
+    },
+    {
+      "target": "C5100",
+      "label": "ⲡⲉⲧⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "pure, saint"
+    },
+    {
+      "target": "C5103",
+      "label": "ⲣⲟⲩⲏⲏⲃ",
+      "pos": "V",
+      "gloss": "be priest"
+    }
+  ]
+}

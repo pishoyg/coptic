@@ -1,0 +1,92 @@
+{
+  "id": "C130",
+  "forms": [
+    {
+      "id": "CF475",
+      "orth": "ⲣⲉϥⲣⲁⲛⲁ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF476",
+      "orth": "ⲣⲉϥⲣⲁⲛⲁ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11099,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS150",
+      "bibliography": "CD 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲉⲣϩⲟϯ ⲙⲙⲁⲩ ϧⲉⲛⲟⲩϩⲟϯ . ⲡⲓⲙⲁ ⲉⲧⲉⲙⲙⲟⲛ ϩⲟϯ ⲛϧⲏⲧϥ ϫⲉⲫⲛⲟⲩϯ ⲛⲁϫⲉⲣ: ⲛⲓⲕⲁⲥ ⲛⲧⲉⲛⲓ**ⲣⲉϥⲣⲁⲛⲁ**ϥ ⲛⲣⲱⲙⲓ ⲉⲃⲟⲗ .",
+      "english": "or God has scattered the bones of the men-pleasers; they were ashamed, for God despised them.",
+      "source": "19_Psalmi_52",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:52",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C132",
+      "label": "ϭⲓⲛⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C126",
+      "label": "ⲁⲛⲁⲓ",
+      "pos": "V",
+      "gloss": "be pleasing, pleasant, grow better"
+    },
+    {
+      "target": "C127",
+      "label": "ⲁⲛⲁⲓ",
+      "pos": "N",
+      "gloss": "beauty"
+    },
+    {
+      "target": "C129",
+      "label": "ⲙⲉⲧⲣⲁⲛⲁϥ",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C131",
+      "label": "ⲙⲉⲧⲣⲉϥⲣⲁⲛⲁ⸗",
+      "pos": "N",
+      "gloss": "act of pleasing"
+    },
+    {
+      "target": "C128",
+      "label": "ⲣⲁⲛⲁ",
+      "pos": "V",
+      "gloss": "be pleasing, be pleased, please"
+    }
+  ]
+}

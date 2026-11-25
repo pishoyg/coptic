@@ -1,0 +1,573 @@
+{
+  "id": "C988",
+  "forms": [
+    {
+      "id": "CF3325",
+      "orth": "ⲓⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1778,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF3326",
+      "orth": "ⲓⲱⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF3327",
+      "orth": "ⲓⲱⲥ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲉⲓⲉⲥ†",
+      "dialect": "F",
+      "id": "743.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1148",
+      "bibliography": "CD 86a; KoptHWb 52; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥⲁⲓ ⲛⲱⲧⲉⲛ ⲟⲩⲟϩ ⲫⲱⲧ ⲉϧⲟⲩⲛ ⲉⲥⲓⲱⲛ ⲟⲩⲟϩ **ⲓⲱⲥ** ⲙⲙⲱⲧⲉⲛ ⲙⲡⲉⲣⲟϩⲓ ⲉⲣⲁⲧⲉⲛ ⲑⲏⲛⲟⲩ ϫⲉⲁⲛⲟⲕ ϯⲛⲁⲓⲛⲓ ⲛϩⲁⲛⲡⲉⲧϩⲱⲟⲩ ⲉⲃⲟⲗ ⲥⲁⲡⲉⲙϩⲓⲧ ⲛⲉⲙⲟⲩⲛⲓϣϯ ⲛϧⲟⲙϧⲉⲙ .",
+      "english": "Gather up your wares and flee to Sion: hasten, stay not: for I will bring evils from the north, and great destruction.",
+      "source": "24_Ieremias_04",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲥⲉϣⲱⲡⲓ ⲉⲡϧⲁⲉ ⲛⲧⲉⲛⲓⲉϩⲟⲟⲩ ⲉϥⲉⲟⲩⲟⲛϩϥ ⲉⲃⲟⲗ ⲛϫⲉⲡⲧⲱⲟⲩ ⲙⲡϭⲟⲉⲓⲥ ⲉϥⲥⲉⲃⲧⲱⲧ ϩⲓϫⲉⲛⲛⲓϭⲓⲥⲓ ⲛⲧⲉⲛⲓⲧⲱⲟⲩ ⲟⲩⲟϩ ⲉϥⲉϭⲓⲥⲓ ⲥⲁⲡϣⲱⲓ ⲛⲛⲓⲑⲁⲗ ⲉⲩⲉ**ⲓⲱⲥ** ϩⲁⲣⲟϥ ⲛϫⲉⲛⲓⲗⲁⲟⲥ .",
+      "english": "And at the last days the mountain of the Lord shall be manifest, established on the tops of the mountains, and it shall be exalted above the hills; and the peoples shall hasten to it.",
+      "source": "33_Michaeas_04",
+      "urn": "urn:cts:copticLit:ot.mic.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲛⲁⲓⲥⲃⲱⲟⲩⲓ ⲛⲉⲙⲛⲓⲥⲁϫⲓ ⲛⲧⲉⲛⲁⲓⲁⲥⲕⲏⲧⲏⲥ ⲉⲧⲉⲛϧⲉⲗⲗⲟⲓ ⲉⲑⲟⲩⲁⲃ ⲛⲉ ϩⲓⲛⲁ ⲛⲥⲉ**ⲓⲏⲥ** ⲙⲙⲱⲟⲩ ⲛϫⲉⲛⲏ ⲉⲧⲟⲓ ⲙⲙⲁⲓⲭⲣⲓⲥⲧⲟⲥ ⲉⲉⲣⲟⲩⲁⲓ ⲛⲉⲙⲫϯ ⲕⲁⲧⲁⲛⲓⲁⲣⲉⲧⲏ ⲛⲉⲙϯⲁⲅⲁⲡⲏ ⲛⲁⲧⲫⲱⲣϫ ⲉⲩⲥⲟⲡ ⲟⲩⲟϩ ⲉϫⲟⲩϣⲧ ⲉⲃⲟⲗ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ ϧⲁⲧϩⲏ ⲙⲡⲓϫⲓⲛⲓ ⲉⲃⲟⲗ ϧⲉⲛⲥⲱⲙⲁ ⲉϣⲱⲡⲓ ⲛⲉⲙⲁϥ ⲕⲁⲧⲁⲫⲣⲏϯ ⲉⲧⲥϧⲏⲟⲩⲧ ϫⲉⲛⲁⲛⲉⲥ ⲛⲏⲓ ⲉⲃⲱⲗ ⲉⲃⲟⲗ ϧⲉⲛⲧⲁⲓⲥⲁⲣⲝ ⲉϣⲱⲡⲓ ⲛⲉⲙ ⲡⲭⲣⲓⲥⲧⲟⲥ",
+      "english": "From the teachings and words of these ascetics, that is, the holy elders, let those who love Christ hasten to unite themselves to God according to virtue and undivided love, expecting at all times the departure of their souls from their bodies, as it is written: “It is better for me to be dissolved from this flesh so that I may be with Christ.”",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲓⲝⲓⲟⲛ",
+        3,
+        18.406
+      ],
+      [
+        "ⲫⲏⲉⲧⲟϣ",
+        1,
+        15.236
+      ],
+      [
+        "ϩⲟⲡⲱⲥ",
+        3,
+        13.332
+      ],
+      [
+        "ⲕⲁⲓⲥⲓ",
+        1,
+        13.236
+      ],
+      [
+        "ⲟⲩ",
+        15,
+        12.015
+      ],
+      [
+        "ⲁⲙⲟⲩ",
+        2,
+        11.666
+      ],
+      [
+        "ⲭⲱⲗⲉⲙ",
+        2,
+        11.577
+      ],
+      [
+        "ⲑⲁⲗ",
+        1,
+        11.535
+      ],
+      [
+        "ⲟϣ",
+        2,
+        10.353
+      ],
+      [
+        "ϧⲉⲛ",
+        8,
+        10.304
+      ],
+      [
+        "ϫⲓⲛⲙⲟϣⲓ",
+        1,
+        10.236
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        9,
+        10.13
+      ],
+      [
+        "ϥ",
+        10,
+        9.931
+      ],
+      [
+        "ⲕ",
+        5,
+        9.634
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        9.547
+      ],
+      [
+        "ⲡⲁⲥⲭⲁ",
+        1,
+        9.428
+      ],
+      [
+        "ⲡⲉϫⲏⲓ",
+        1,
+        9.403
+      ],
+      [
+        "ϣⲱⲗ",
+        1,
+        9.353
+      ],
+      [
+        "ϣⲁⲣⲟ",
+        1,
+        8.826
+      ],
+      [
+        "ⲥⲟⲃⲧ",
+        1,
+        8.776
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲱⲥⲧⲁⲛϯⲛⲟⲩⲡⲟⲗⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        1,
+        13.24
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        8.298
+      ],
+      [
+        "ⲛⲁⲩ",
+        1,
+        7.817
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        7.471
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲓ",
+        1,
+        5.85
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲓⲱⲥ_0_node",
+          17
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲱⲗⲉⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲭⲱⲗⲉⲙ",
+          1
+        ],
+        [
+          "ⲭⲱⲗⲉⲙ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ϩⲟⲡⲱⲥ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          3
+        ],
+        [
+          "ⲫⲏ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲁⲙⲟⲩ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲟ_2_post_ⲁⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲙⲡⲉⲣ_2_post_ⲟϩⲓ",
+          1
+        ],
+        [
+          "ⲟϩⲓ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲃⲧ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲫⲏⲉⲧⲟϣ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_3_post_ⲫⲏⲉⲧⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲱⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲭⲱⲗⲉⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲭⲱⲗⲉⲙ",
+          "ⲟⲩ_2_post_ⲭⲱⲗⲉⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲭⲱⲗⲉⲙ",
+          "ⲭⲱⲗⲉⲙ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲓⲱⲥ",
+          "ⲟⲩ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲓⲱⲥ",
+          "ⲓⲱⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲟⲡⲱⲥ_1_pre_ⲓⲱⲥ",
+          "ⲛⲧⲉ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲓⲱⲥ",
+          "ϥ_1_pre_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲓⲱⲥ",
+          "ⲓⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲓⲱⲥ_0_node",
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          "ⲫⲏ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲓⲱⲥ_0_node",
+          "ⲙⲙⲟ_1_post_ⲓⲱⲥ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲓⲱⲥ",
+          "ⲕ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲙⲙⲟ",
+          "ⲁⲙⲟⲩ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲁⲙⲟⲩ_1_post_ⲓⲱⲥ",
+          "ϣⲁⲣⲟ_2_post_ⲁⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲁⲣⲟ_2_post_ⲁⲙⲟⲩ",
+          "ⲛ_3_post_ϣⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲓⲱⲥ",
+          "ⲓⲱⲥ_0_node",
+          1
+        ],
+        [
+          "ⲓⲱⲥ_0_node",
+          "ⲙⲙⲱ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲙⲙⲱ_1_post_ⲓⲱⲥ",
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲙⲙⲱ",
+          "ⲙⲡⲉⲣ_2_post_ⲟϩⲓ",
+          1
+        ],
+        [
+          "ⲙⲡⲉⲣ_2_post_ⲟϩⲓ",
+          "ⲟϩⲓ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ⲓⲱⲥ",
+          "ⲓⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲓⲱⲥ_0_node",
+          "ϩⲁⲣⲟ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ϩⲁⲣⲟ_1_post_ⲓⲱⲥ",
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ϩⲁⲣⲟ",
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          "ⲛⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲓⲱⲥ",
+          "ⲉⲩⲉ_1_pre_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲓⲱⲥ_0_node",
+          "ⲉϫⲉⲛ_1_post_ⲓⲱⲥ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲓⲱⲥ",
+          "ⲛⲓ_2_post_ⲉϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉϫⲉⲛ",
+          "ⲥⲟⲃⲧ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ⲓⲱⲥ",
+          "ⲫⲏⲉⲧⲟϣ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲫⲏⲉⲧⲟϣ_2_post_ⲛϫⲉ",
+          "ⲙⲙⲱ_3_post_ⲫⲏⲉⲧⲟϣ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲓⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.26,
+      "rank": 1381,
+      "count": 22
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C991",
+      "label": "ⲓⲱⲥ",
+      "pos": "N",
+      "gloss": "speed, diligence"
+    },
+    {
+      "target": "C989",
+      "label": "ⲓⲱⲥ (ⲛ-)",
+      "pos": "V",
+      "gloss": "hasten, be urgent (refl. meaning)"
+    },
+    {
+      "target": "C990",
+      "label": "ⲣⲉϥⲓⲏⲥ",
+      "pos": "N",
+      "gloss": "one that hastens"
+    }
+  ],
+  "etym": {
+    "egy_num": "266",
+    "egy_lemma": "ꜣs",
+    "demo_num": "d782",
+    "demo_lemma": "js",
+    "english": "to rush; to make rush",
+    "german": "eilen; fließen; (jmdn.) eilen lassen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/266",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d782"
+  }
+}

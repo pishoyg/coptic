@@ -1,0 +1,494 @@
+{
+  "id": "C1156",
+  "forms": [
+    {
+      "id": "CF3697",
+      "orth": "ⲕⲗⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4342,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲕⲉⲗⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.44,
+        "rank": 1199,
+        "count": 37
+      }
+    },
+    {
+      "orth": "ⲕⲗ",
+      "dialect": "S",
+      "id": "791.1"
+    },
+    {
+      "orth": "ⲕⲉⲗ-",
+      "dialect": "S",
+      "id": "791.2"
+    },
+    {
+      "orth": "ⲕⲁⲗ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6206,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲕⲉⲗ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3473,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ⲕⲗ",
+      "dialect": "A",
+      "id": "791.5"
+    },
+    {
+      "orth": "ⲕⲏⲗⲗⲓ",
+      "dialect": "F",
+      "id": "791.6"
+    },
+    {
+      "orth": "ⲕⲩⲗⲓ",
+      "dialect": "F",
+      "id": "791.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "meist pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1342",
+      "bibliography": "CD 103b; KoptHWb 61; ChLCS 16b"
+    },
+    {
+      "id": "CS1343",
+      "bibliography": "CD 103b; KoptHWb 61; ChLCS 16b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϩⲓⲟⲩⲓ ϧⲉⲛⲧⲉϥⲁⲫⲉ ⲛⲟⲩⲕⲁϣ ⲟⲩⲟϩ ⲛⲁⲩϩⲓⲑⲁϥ ϧⲉⲛⲡⲉϥϩⲟ ⲟⲩⲟϩ ⲉⲩϩⲓⲟⲩⲓ ⲙⲙⲱⲟⲩ ⲉϫⲉⲛⲛⲟⲩ**ⲕⲉⲗⲓ** ⲉⲟⲩⲱϣⲧ ⲙⲙⲟϥ .",
+      "english": "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉϯⲁⲓⲥⲑⲁⲛⲉ ϫⲉⲡⲙⲟⲟⲩ ⲛⲏⲩ ϣⲁⲛ**ⲕⲗⲗⲉ** ⲛⲣⲁⲧ . ⲡⲉⲥⲏⲧ ⲇⲉ ⲡⲉⲧⲧⲁϫⲣⲏⲩ ⲡⲉ .",
+      "english": "“I feel that the water comes up to the ankles of my foot, but the bottom is firm.”",
+      "source": "Apophthegmata Patrum Sahidic 217: Besarion",
+      "urn": "urn:cts:copticLit:ap.217.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲓ ϩⲁⲣⲟϥ ⲛϫⲉⲟⲩⲕⲁⲕⲥⲉϩⲧ ⲉϥϯϩⲟ ⲉⲣⲟϥ ⲟⲩⲟϩ ⲉϥϩⲓⲟⲩⲓ ⲙⲙⲟϥ ⲉϫⲉⲛⲛⲉϥ**ⲕⲉⲗⲓ** ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲉϣⲱⲡ ⲛⲧⲉⲕⲟⲩⲱϣ ⲟⲩⲟⲛϣϫⲟⲙ ⲙⲙⲟⲕ ⲉⲧⲟⲩⲃⲟⲓ",
+      "english": "A leper came to him, begging him, kneeling down to him, and saying to him, 'If you want to, you can make me clean.'",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲕⲱ ⲇⲉ ⲛⲁⲥ ⲛϩⲉⲛⲧⲟϣ ⲁⲓϯ ⲛϩⲉⲛ**ⲕⲗⲗⲉ** ⲉⲣⲱⲥ ⲙⲛϩⲉⲛⲡⲩⲗⲏ",
+      "english": "And I set bounds to it, surrounding it with bars and gates.",
+      "source": "Job 38",
+      "urn": "urn:cts:copticLit:ot.job.coptot:38",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲉⲧⲉⲛ**ⲕⲉⲗⲓ** ⲉⲩⲉϩⲉⲓ ϩⲓⲡϣⲁϥⲉ",
+      "english": "And your carcases shall fall in this wilderness.",
+      "source": "04_Numeri_14",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲧⲱⲟⲩⲛ ⲁⲛⲟⲕ ⲉⲓⲛⲁⲟⲩⲱⲛ ⲙⲡⲁⲥⲟⲛ ⲁⲩⲱ ⲛⲁϭⲓϫ ⲁⲩϣⲟⲩⲉϣⲁⲗ ⲉⲡⲉⲥⲏⲧ ⲛⲁⲧⲏⲏⲃⲉ ⲁⲩϣⲟⲩⲉϣⲁⲗ ⲉϥⲥⲟⲧⲡ ⲁⲓⲥⲟⲩⲧⲛⲧⲟⲟⲧ ⲉⲃⲟⲗ ⲉⲧ**ⲕⲗⲗⲉ**",
+      "english": "I rose up to open to my kinsman; my hands dropped myrrh, my fingers choice myrrh, on the handles of the lock.",
+      "source": "Song of Solomon 5",
+      "urn": "urn:cts:copticLit:ot.song.coptot:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲱϣ",
+        4,
+        21.608
+      ],
+      [
+        "ⲛⲉϥ",
+        16,
+        20.666
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        15,
+        20.135
+      ],
+      [
+        "ϩⲓⲧ",
+        6,
+        19.041
+      ],
+      [
+        "ϩⲉⲓ",
+        6,
+        18.934
+      ],
+      [
+        "ⲛⲉⲧⲉⲛⲓⲇⲱⲗⲟⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ⲉ",
+        22,
+        18.395
+      ],
+      [
+        "ϥ",
+        22,
+        17.803
+      ],
+      [
+        "ⲙⲙⲟ",
+        11,
+        17.746
+      ],
+      [
+        "ⲁ",
+        19,
+        17.733
+      ],
+      [
+        "ⲕⲉⲗⲓ",
+        2,
+        17.486
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        17,
+        17.342
+      ],
+      [
+        "ϣϫⲏⲟⲩ",
+        1,
+        16.695
+      ],
+      [
+        "ⲟⲩ",
+        15,
+        16.475
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        5,
+        16.437
+      ],
+      [
+        "ⲛⲁ",
+        11,
+        16.333
+      ],
+      [
+        "ⲛⲉⲧⲉⲛ",
+        4,
+        16.064
+      ],
+      [
+        "ⲛⲟⲩ",
+        5,
+        15.869
+      ],
+      [
+        "ⲭⲣⲟ",
+        1,
+        15.608
+      ],
+      [
+        "ϩⲓ",
+        4,
+        15.538
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲟⲩⲧⲛⲧⲟⲟⲧ",
+        1,
+        18.013
+      ],
+      [
+        "ⲙⲟⲭⲗⲟⲥ",
+        1,
+        13.313
+      ],
+      [
+        "ⲡⲱϩ",
+        2,
+        12.969
+      ],
+      [
+        "ⲡⲁⲧ",
+        1,
+        12.884
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        12.455
+      ],
+      [
+        "ϣⲁ",
+        4,
+        11.761
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        11.025
+      ],
+      [
+        "ⲟⲩⲱⲛ",
+        1,
+        9.424
+      ],
+      [
+        "ⲣⲟ",
+        1,
+        9.212
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        8.756
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        8.627
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        8.489
+      ],
+      [
+        "ⲛ",
+        5,
+        8.19
+      ],
+      [
+        "ⲣⲁⲧ",
+        1,
+        8.088
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        7.976
+      ],
+      [
+        "...",
+        1,
+        7.72
+      ],
+      [
+        "ⲓ",
+        2,
+        7.265
+      ],
+      [
+        "ⲏ",
+        1,
+        6.894
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.388
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.162
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲗⲗⲉ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲡⲩⲗⲏ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲙⲏⲣⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲗⲗⲉ_0_node",
+          "ⲛ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲗⲗⲉ",
+          "ⲣⲁⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲗⲗⲉ_0_node",
+          "ⲙⲛ_2_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲡⲩⲗⲏ",
+          "ϩⲉⲛ_2_post_ⲡⲩⲗⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲡⲩⲗⲏ",
+          "ⲡⲩⲗⲏ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲗⲗⲉ",
+          "ⲕⲗⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲗⲗⲉ_0_node",
+          "ⲏ_4_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ⲡⲁⲧ",
+          "ϣⲁ_1_post_ⲕⲗⲗⲉ",
+          1
+        ],
+        [
+          "ϣⲁ_1_post_ⲕⲗⲗⲉ",
+          "ⲙ_2_post_ϣⲁ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϣⲁ",
+          "ⲡⲁⲧ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_3_post_ⲙ",
+          "ⲏ_4_post_ⲙⲏⲣⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3947,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1161",
+      "label": "ϩⲁⲙⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt-smith, smith"
+    },
+    {
+      "target": "C1159",
+      "label": "ⲕⲉⲗⲉⲛⲕⲉϩ",
+      "pos": "N",
+      "gloss": "elbow"
+    },
+    {
+      "target": "C1158",
+      "label": "ⲕⲉⲗⲓ",
+      "pos": "N",
+      "gloss": "limb, trunk"
+    },
+    {
+      "target": "C1160",
+      "label": "ⲕⲉⲗⲟⲩⲛϫϥ",
+      "pos": "N",
+      "gloss": "jawbone"
+    },
+    {
+      "target": "C1157",
+      "label": "ⲕⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "bolt; knee"
+    }
+  ],
+  "etym": {
+    "egy_num": "159380",
+    "egy_lemma": "qꜣr.t",
+    "demo_num": "d6418",
+    "demo_lemma": "qlꜣ(.t)",
+    "english": "door bolt",
+    "german": "Riegel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/159380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6418"
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "id": "C999",
+  "forms": [
+    {
+      "id": "CF3352",
+      "orth": "ⲉⲓⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.25,
+        "rank": 1692,
+        "count": 40
+      }
+    },
+    {
+      "orth": "ⲓⲱϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1398,
+        "count": 29
+      }
+    },
+    {
+      "orth": "ⲉⲓⲱⲧⲉ",
+      "dialect": "A",
+      "id": "745.2"
+    },
+    {
+      "orth": "ⲓⲱϯ",
+      "dialect": "F",
+      "id": "745.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1160",
+      "bibliography": "CD 87b; KoptHWb 53; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲉⲛⲧⲁⲙⲓⲭⲁⲏⲗ · ⲁⲛⲉⲭⲉ ⲉϥⲱⲧⲉ ⲛⲛⲉϥⲣⲙⲉⲓⲟⲟⲩⲉ · ⲉⲛⲉⲛⲧⲁϥⲕⲁⲁⲩ ⲛⲥⲉⲃⲱⲕ ⲉⲡⲉⲥⲏⲧ ⲉⲧⲡⲩⲅⲏ ⲛⲥⲉⲧⲱϣ ⲙⲛϯ**ⲉⲓⲱⲧⲉ** ⲉⲧⲃⲏⲕ ⲉⲡⲉⲥⲏⲧ ⲉϫⲙⲡⲕⲁϩ ⲛⲧⲉⲡϣⲟⲉⲓϣ ⲙⲛⲡⲡⲏⲣϣ ϣⲱⲡⲉ ⲛⲧⲉⲡⲕⲁϩ ⲣϩⲉⲃⲱⲱⲛ ·",
+      "english": "If Michael were to cease from the wiping away of his tears (of blood) which he letteth drop, and were to allow them to enter the fountain, the (water thereof) would come to an end and the dew which falleth down upon the earth, and diseases and dissensions would break out, and the land would be smitten with famine'",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲧⲁⲡⲩⲗⲏ ⲙⲡⲕⲱϩⲧ ⲉⲧⲕⲱⲧⲉ ⲉⲣⲟⲛ ϣⲱⲡⲉ ⲛⲁⲛ ⲉⲟⲩ**ⲉⲓⲱⲧⲉ** ⲛⲙⲧⲟⲛ ϫⲉⲕⲁⲥ ⲡϫⲟⲉⲓⲥ ⲛⲛⲉⲛⲉⲛⲥⲱⲙⲁ · ϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ·",
+      "english": "Let the threat of the fire which is round about us become unto us the dew of refreshing, so that our bodies, O Lord, may gain strength thereby.'",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲥⲁⲣⲝ ϭⲱϭ ⲉⲃⲟⲗ ϩⲛⲧ**ⲉⲓⲱⲧⲉ** ⲛⲧⲡⲉ ·",
+      "english": "and my flesh was wasted away by the dews of heaven.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        18.276
+      ],
+      [
+        "ⲛ",
+        61,
+        16.279
+      ],
+      [
+        "ⲡⲩⲅⲏ",
+        3,
+        14.416
+      ],
+      [
+        "ⲛⲛⲓϥ",
+        1,
+        14.276
+      ],
+      [
+        "ϭⲟⲗϭⲗ",
+        1,
+        14.276
+      ],
+      [
+        "ⲟⲩϣⲏⲛⲣⲟⲉⲓⲥ",
+        1,
+        14.276
+      ],
+      [
+        "ⲡⲛⲓϥ",
+        1,
+        14.276
+      ],
+      [
+        "ⲧ",
+        22,
+        14.127
+      ],
+      [
+        "ϫⲱϭⲉ",
+        1,
+        13.691
+      ],
+      [
+        "ⲙⲁϩⲉ",
+        3,
+        12.891
+      ],
+      [
+        "ⲙⲉϩ",
+        4,
+        12.78
+      ],
+      [
+        "ⲡ",
+        23,
+        12.746
+      ],
+      [
+        "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ",
+        3,
+        12.484
+      ],
+      [
+        "ϭⲱϭ",
+        1,
+        12.469
+      ],
+      [
+        "ϩⲉⲃⲥ",
+        1,
+        12.276
+      ],
+      [
+        "ⲁⲩⲱ",
+        14,
+        11.847
+      ],
+      [
+        "ⲧⲗϯⲗⲉ",
+        1,
+        11.691
+      ],
+      [
+        "ⲟⲩ",
+        15,
+        11.619
+      ],
+      [
+        "ⲡⲉⲕ",
+        6,
+        11.301
+      ],
+      [
+        "ϩⲁϫⲱ",
+        1,
+        11.028
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          40
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          7
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲧⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲃⲏⲕ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲃⲏⲕ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲓⲱⲧⲉ",
+          6
+        ],
+        [
+          "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲱⲧⲉ",
+          4
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲟⲃϩⲉ",
+          1
+        ],
+        [
+          "ⲟⲃϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_3_post_ⲛⲁϩⲃ",
+          1
+        ],
+        [
+          "ⲛⲁϩⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲱϩⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϫⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲛⲓϥ",
+          1
+        ],
+        [
+          "ⲛⲛⲓϥ_1_post_ⲉⲓⲱⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ϯ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ_2_post_ⲙ",
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲡⲉⲥ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲙⲧⲟⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ⲉⲓⲱⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲃⲏⲕ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲃⲏⲕ_2_post_ⲉⲧ",
+          "ⲉ_3_post_ⲃⲏⲕ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ⲃⲏⲕ",
+          "ⲡ_4_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲉ",
+          "ⲉⲥⲏⲧ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          6
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲁⲣⲉⲙⲃⲟⲗⲏ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲡⲉϥ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲛⲉϥ_3_post_ⲟⲃϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲟⲃϩⲉ",
+          "ⲟⲃϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲡⲉⲕ_1_pre_ⲉⲓⲱⲧⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲛⲉⲥ_3_post_ⲛⲁϩⲃ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_3_post_ⲛⲁϩⲃ",
+          "ⲛⲁϩⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲡⲉⲩ_3_post_ⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_3_post_ⲙⲁ",
+          "ⲙⲁ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          "ϩⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲓⲱⲧⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲱϩⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲱϩⲥ_3_post_ⲡ",
+          "ⲁⲩⲱ_2_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲱⲟⲩ",
+          "ⲟⲩ_2_post_ϩⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲓⲱⲧⲉ",
+          "ϫⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϫⲓ_2_post_ⲉⲧ",
+          "ⲉ_3_post_ϫⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲛ_1_pre_ⲉⲓⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲓⲱⲧⲉ",
+          "ⲉⲓⲱⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲓⲱⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲛⲛⲓϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲛⲓϥ",
+          "ⲛⲛⲓϥ_1_post_ⲉⲓⲱⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.25,
+      "rank": 1473,
+      "count": 40
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1000",
+      "label": "ⲙⲉⲧϣⲁⲣⲓⲱϯ",
+      "pos": "N",
+      "gloss": "poverty of dew"
+    }
+  ],
+  "etym": {
+    "egy_num": "21180",
+    "egy_lemma": "jꜣd.t",
+    "demo_num": "d762",
+    "demo_lemma": "jꜥṱꜣ.t",
+    "english": "dew; (pleasant) scent; (pouring) rain",
+    "german": "Tau; Duft; Wasser",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/21180",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d762"
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "id": "C10196",
+  "forms": [
+    {
+      "id": "CF26914",
+      "orth": "ⲡⲗⲁⲧⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26915",
+      "orth": "ⲡⲗⲁϯⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1775,
+        "count": 38
+      }
+    },
+    {
+      "id": "CF26916",
+      "orth": "ⲡⲗⲁⲧⲉⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26917",
+      "orth": "ⲡⲗⲁⲧⲉⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26918",
+      "orth": "ⲡⲗⲁⲧⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26919",
+      "orth": "ⲡⲗⲁⲧⲓⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26920",
+      "orth": "ⲡⲗⲁⲧⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6145,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF26921",
+      "orth": "ⲡⲗⲁⲧⲓⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1544,
+        "count": 24
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13556",
+      "bibliography": "DDGLC",
+      "cu_ID": "99"
+    },
+    {
+      "id": "CS13557",
+      "bibliography": "DDGLC",
+      "cu_ID": "6262"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩⲉϩⲓⲟⲩⲓ ⲙⲡⲟⲩϩⲁⲧ ϧⲉⲛⲛⲓ**ⲡⲗⲁⲧⲓⲁ** ⲟⲩⲟϩ ⲡⲟⲩⲛⲟⲩⲃ ⲛⲥⲉⲥⲟⲙⲥ ⲉⲣⲟϥ ⲁⲛ ⲟⲩⲟϩ ⲛⲟⲩⲯⲩⲭⲏ ⲛⲁⲥⲓ ⲁⲛ ⲟⲩⲟϩ ϧⲏⲧⲟⲩ ⲛⲁⲙⲟϩ ⲁⲛ ϫⲉϯⲃⲁⲥⲁⲛⲟⲥ ⲛⲛⲟⲩϭⲓⲛϫⲟⲛⲥ ⲛⲁϣⲱⲡⲓ ⲛⲱⲟⲩ .",
+      "english": "Their silver shall be cast forth in the streets, and their gold shall be despised: their souls shall not be satisfied, and their bellies shall not be filled: for it was the punishment of their iniquities.",
+      "source": "26_Ezechiel_07",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲱⲧ ϩⲛⲛⲉϩⲓⲟⲟⲩⲉ ⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲧⲉⲧⲛⲛⲁⲩ ⲁⲩⲱ ⲛⲧⲉⲧⲛⲉⲓⲙⲉ ⲛⲧⲉⲧⲛⲕⲱⲧⲉ ϩⲛⲛⲉⲥ**ⲡⲗⲁⲧⲉⲓⲁ** ⲉϣⲱⲡⲉ ⲉⲣϣⲁⲛⲉⲧⲉⲧⲛϭⲛⲟⲩⲣⲱⲙⲉ ⲉϥⲉⲓⲣⲉ ⲛⲟⲩϩⲁⲡ ⲁⲩⲱ ⲉϥϣⲓⲛⲉ ⲛⲥⲁⲧⲡⲓⲥⲧⲓⲥ ϯⲛⲁⲕⲱ ⲛⲁⲩ ⲉⲃⲟⲗ ⲡⲉϫⲉⲡϫⲟⲉⲓⲥ",
+      "english": "Run ye about in the streets of Jerusalem, and see, and know, and seek in her broad places, if ye can find one, if there is any one that does judgment, and seeks faithfulness; and I will pardon them, saith the Lord.",
+      "source": "Jeremiah 5",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲃⲁⲕⲓ ⲇⲉ ⲉⲧⲉⲧⲛⲛⲁϣⲉ ⲛⲱⲧⲉⲛ ⲉϧⲟⲩⲛ ⲉⲣⲟⲥ ⲟⲩⲟϩ ⲛⲧⲟⲩϣⲧⲉⲙϣⲉⲡ ⲑⲏⲛⲟⲩ ⲉⲣⲱⲟⲩ ⲁⲙⲱⲓⲛⲓ ⲉⲃⲟⲗ ϧⲉⲛⲛⲉⲥ**ⲡⲗⲁⲧⲓⲁ** ⲁϫⲟⲥ",
+      "english": "But into whatever city you enter, and they don't receive you, go out into its streets and say,",
+      "source": "03_Luke_10",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧⲉⲧⲛⲧⲙⲏⲏⲧⲉ ⲛⲧⲉ**ⲡⲗⲁⲧⲉⲓⲁ** ⲛⲧⲡⲟⲗⲓⲥ ⲉⲣⲉⲟⲩϣⲏⲛ ⲛⲱⲛϩ ϩⲓⲡⲉⲓⲥⲁ ⲙⲛⲡⲁⲓ ⲙⲡⲓⲉⲣⲟ ⲉϥⲉⲓⲣⲉ ⲙⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲕⲁⲣⲡⲟⲥ ⲉϥϯ ⲙⲡⲉϥⲕⲁⲣⲡⲟⲥ ϩⲣⲉⲉⲃⲟⲧ ⲉⲣⲉⲛⲉϥϭⲱⲱⲃⲉ ϣⲟⲟⲡ ⲉⲩⲑⲉⲣⲁⲡⲓⲁ ⲛⲉⲛϩⲉⲑⲛⲟⲥ .",
+      "english": "in the middle of its street. On this side of the river and on that was the tree of life, bearing twelve kinds of fruits, yielding its fruit every month. The leaves of the tree were for the healing of the nations.",
+      "source": "66_Revelation_22",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲕⲉⲉⲙⲓ ⲟⲩⲟϩ ⲉⲕⲉⲕⲁϯ ⲉⲃⲟⲗϧⲉⲛ ⲡϫⲓⲛⲓ ⲉⲃⲟⲗ ⲛⲧⲉⲟⲩⲥⲁϫⲓ ⲉⲡϫⲓⲛⲉⲣⲟⲩⲱ ⲛⲉⲙⲉⲡϫⲓⲛⲕⲱⲧ ⲛⲓⲗⲏⲙ ϣⲁⲡⲭⲣⲓⲥⲧⲟⲥ ⲡⲓϩⲩⲅⲟⲩⲙⲉⲛⲟⲥ ⲍ ⲛⲉⲃⲇⲟⲙⲁⲥ ⲛⲉⲙⲝⲃ ⲛⲉⲃⲇⲟⲙⲁⲥ ⲉϥⲉⲧⲁⲥⲑⲟ ⲉϥⲉⲕⲱⲧ ⲛⲟⲩ**ⲡⲗⲁⲧⲓⲁ** ⲛⲉⲙⲟⲩⲥⲟⲃⲧ ⲟⲩⲟϩ ⲉϥⲉϣⲟⲩⲟ ⲉⲃⲟⲗ ⲛϫⲉⲛⲓⲥⲏⲟⲩ .",
+      "english": "And his strength and his heart shall be stirred up against the king of the south with a great force; and the king of the south shall engage in war with a great and very strong force; but his forces shall not stand, for they shall devise plans against him:",
+      "source": "27_Daniel_11",
+      "urn": "urn:cts:copticLit:ot.dan.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲛⲉⲩⲥⲱⲙⲁ ϣⲱⲡⲉ ⲉⲩⲛⲏϫ ⲉⲃⲟⲗ ϩⲛⲛⲉ**ⲡⲗⲁⲧⲉⲓⲁ** ⲛⲧⲛⲟϭ ⲙⲡⲟⲗⲓⲥ ⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲥ ϫⲉⲥⲟⲇⲟⲙⲁ ⲁⲩⲱ ⲕⲏⲙⲉ ⲡⲙⲁ ⲟⲛ ⲉⲧⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲡⲉⲩϫⲟⲉⲓⲥ ⲛϩⲏⲧϥ .",
+      "english": "Their dead bodies will be in the street of the great city, which spiritually is called Sodom and Egypt, where also their Lord was crucified.",
+      "source": "66_Revelation_11",
+      "urn": "urn:cts:copticLit:nt.rev.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲁⲃⲩⲗⲱⲛ",
+        1,
+        12.118
+      ],
+      [
+        "ⲙⲟϣⲓ",
+        1,
+        10.03
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        6.066
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        5.771
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲁϣⲉ",
+        1,
+        12.753
+      ],
+      [
+        "ⲉⲧⲉⲧⲛ",
+        1,
+        12.548
+      ],
+      [
+        "ⲙⲏⲏⲧⲉ",
+        1,
+        11.576
+      ],
+      [
+        "ⲛⲏϫ",
+        1,
+        11.548
+      ],
+      [
+        "ϭⲛ",
+        1,
+        11.157
+      ],
+      [
+        "ⲧ",
+        5,
+        10.715
+      ],
+      [
+        "ϩⲛ",
+        4,
+        10.157
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        9.062
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        8.97
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        8.835
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        8.572
+      ],
+      [
+        "ⲛ",
+        5,
+        8.453
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        8.18
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.991
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        7.808
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.976
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.78
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.126
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲃⲁⲃⲩⲗⲱⲛ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          "ⲃⲁⲃⲩⲗⲱⲛ_2_post_ⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲥ_1_pre_ⲡⲗⲁⲧⲉⲓⲁ",
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲗⲁⲧⲉⲓⲁ",
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲧⲉⲓⲁ_0_node",
+          "ⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲗⲁⲧⲉⲓⲁ",
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲉ_2_post_ⲉ",
+          "ⲛ_3_post_ⲛⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛⲁϣⲉ",
+          "ⲉⲧ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4599,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 6640,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1758",
+    "grl_lemma": "πλατεῖα",
+    "grl_meaning": "street",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1413a; Preisigke 2:313"
+  }
+}

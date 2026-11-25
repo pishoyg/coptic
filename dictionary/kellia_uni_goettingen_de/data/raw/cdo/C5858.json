@@ -1,0 +1,52 @@
+{
+  "id": "C5858",
+  "forms": [
+    {
+      "id": "CF13713",
+      "orth": "ϯϣⲱⲗϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6539",
+      "bibliography": "CD 562a; KoptHWb 312; ChLCS 77a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5856",
+      "label": "ϣⲱⲗϩ",
+      "pos": "V",
+      "gloss": "set mark, trace line"
+    },
+    {
+      "target": "C5857",
+      "label": "ϣⲱⲗϩ",
+      "pos": "N",
+      "gloss": "mark, impression"
+    },
+    {
+      "target": "C12077",
+      "label": "ϣⲱⲗϩⲥ",
+      "pos": "N",
+      "gloss": "line traced"
+    }
+  ]
+}

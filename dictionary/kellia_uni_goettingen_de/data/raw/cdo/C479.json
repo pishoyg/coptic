@@ -1,0 +1,120 @@
+{
+  "id": "C479",
+  "forms": [
+    {
+      "id": "CF1945",
+      "orth": "ⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1946",
+      "orth": "ⲣⲉϥⲉϣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14923,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS580",
+      "bibliography": "CD 39b; KoptHWb 25"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C855",
+      "type": "cf",
+      "label": "eye"
+    },
+    {
+      "target": "C5673",
+      "type": "cf",
+      "label": "know, be able (?)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C481",
+      "label": "ϫⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "take, receive evil eye; envy"
+    },
+    {
+      "target": "C471",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C472",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil, misfortune"
+    },
+    {
+      "target": "C470",
+      "label": "ⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C475",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil eye"
+    },
+    {
+      "target": "C476",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envious, wretched"
+    },
+    {
+      "target": "C477",
+      "label": "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envy, greed"
+    },
+    {
+      "target": "C480",
+      "label": "ⲙⲛⲧⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "greed, concupiscence"
+    },
+    {
+      "target": "C474",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil doing"
+    },
+    {
+      "target": "C473",
+      "label": "ⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be evil, hurtful"
+    },
+    {
+      "target": "C478",
+      "label": "ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be envious"
+    }
+  ]
+}

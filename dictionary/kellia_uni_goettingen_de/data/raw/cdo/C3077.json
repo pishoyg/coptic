@@ -1,0 +1,267 @@
+{
+  "id": "C3077",
+  "forms": [
+    {
+      "id": "CF8028",
+      "orth": "ⲣⲉⲕⲣⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4343,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϩⲣⲉⲕⲣⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6158,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲣⲉⲕⲣⲓⲕⲓ",
+      "dialect": "B",
+      "id": "1323.2"
+    },
+    {
+      "orth": "ⲣⲉⲕⲣⲓⲕⲉ",
+      "dialect": "A",
+      "id": "1323.3"
+    },
+    {
+      "orth": "ⲣⲉⲕⲣⲓⲕⲓ",
+      "dialect": "F",
+      "id": "1323.4"
+    },
+    {
+      "orth": "ⲗⲉⲕⲗⲓⲕⲓ",
+      "dialect": "F",
+      "id": "1323.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3525",
+      "bibliography": "CD 293a; CED 136; KoptHWb 162; DELC 172; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲣⲉⲡⲣⲟⲟⲩϣ ⲛⲟⲩⲟⲩϣⲏ ⲛⲣⲟⲉⲓⲥ ⲁⲡⲁⲓⲧⲉⲓ ⲛⲟⲩ**ⲣⲉⲕⲣⲓⲕⲉ** ⲁⲩⲱ ϣⲁⲣⲉⲟⲩϩⲓⲛⲏⲃ ⲧⲁⲗϭⲉⲟⲩϣⲱⲛⲉ ⲉϥⲛⲁϣⲧ",
+      "english": "Whoso regardeth dreams is like him that catcheth at a shadow, and followeth after the wind.",
+      "source": "Sirach 34",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:34",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣϯϩⲓⲛⲏⲃ ⲛⲛⲉⲕⲃⲁⲗ ⲁⲩⲱ ⲙⲡⲣϯ**ⲣⲉⲕⲣⲓⲕⲉ** ⲛⲛⲉⲕⲃⲟⲩϩⲉ",
+      "english": "Give not sleep to thine eyes, nor slumber with thine eyelids;",
+      "source": "Proverbs 6",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲧⲉ **ⲣⲉⲕⲣⲓⲕⲉ** ⲛⲛⲉⲛⲛⲟⲩϩⲉ · ϣⲁⲛⲧⲉⲡϫⲟⲉⲓⲥ ⲛⲁϩⲙⲛ ⲉⲡⲉⲓⲣⲁⲥⲙⲟⲥ ⲛⲓⲙ ⲛⲧⲉⲡϫⲁϫⲉ ·",
+      "english": "We will not allow our eyes sleep and our eyelids slumber until the Lord saves us from any temptation by the enemy.",
+      "source": "On Vigilance",
+      "urn": "urn:cts:copticLit:besa.vigilance.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲟⲩϩⲉ",
+        5,
+        21.394
+      ],
+      [
+        "ⲃⲁⲗ",
+        5,
+        15.417
+      ],
+      [
+        "ϯϩⲓⲛⲏⲃ",
+        1,
+        15.206
+      ],
+      [
+        "ⲛⲉⲛ",
+        4,
+        13.988
+      ],
+      [
+        "ⲟⲩⲧⲉ",
+        2,
+        13.212
+      ],
+      [
+        "ϩⲓⲛⲏⲃ",
+        1,
+        12.458
+      ],
+      [
+        "ⲛ",
+        13,
+        12.325
+      ],
+      [
+        ",",
+        2,
+        12.282
+      ],
+      [
+        "ⲁⲓⲧⲉⲓ",
+        1,
+        10.32
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        1,
+        9.7
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        9.103
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        8.402
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        7.451
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.202
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.162
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ],
+      [
+        "ϯ",
+        1,
+        4.931
+      ],
+      [
+        "ϫⲉ",
+        1,
+        3.561
+      ],
+      [
+        "ⲡ",
+        1,
+        1.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉⲕⲣⲓⲕⲉ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩⲧⲉ_1_pre_ⲣⲉⲕⲣⲓⲕⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉⲕⲣⲓⲕⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ⲃⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲃⲟⲩϩⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲁ_3_post_ⲃⲟⲩϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲧⲉ_1_pre_ⲣⲉⲕⲣⲓⲕⲉ",
+          "ⲣⲉⲕⲣⲓⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉⲕⲣⲓⲕⲉ_0_node",
+          "ⲛ_1_post_ⲣⲉⲕⲣⲓⲕⲉ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉⲕⲣⲓⲕⲉ",
+          "ⲛⲉⲛ_3_post_ⲃⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_3_post_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉⲕⲣⲓⲕⲉ",
+          "ⲛⲁ_3_post_ⲃⲟⲩϩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ⲃⲟⲩϩⲉ",
+          "ⲃⲟⲩϩⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3948,
+      "count": 6
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C3066",
+      "type": "cf",
+      "label": "bend, turn, incline"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3079",
+      "label": "ϫⲓⲣⲉⲕⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "take to nodding, doze"
+    },
+    {
+      "target": "C3078",
+      "label": "ϯⲣⲉⲕⲣⲓⲕⲉ ⲛ-",
+      "pos": "V",
+      "gloss": "give sleep to"
+    }
+  ]
+}

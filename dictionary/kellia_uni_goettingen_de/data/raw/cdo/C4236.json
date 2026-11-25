@@ -1,0 +1,101 @@
+{
+  "id": "C4236",
+  "forms": [
+    {
+      "id": "CF34073",
+      "orth": "ⲧⲗⲏ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF10423",
+      "orth": "ⲑⲗⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3612,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4804",
+      "bibliography": "CD 410a; KoptHWb 229; DELC 213a; ChLCS 57b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲛⲟⲩϯ ϧⲉⲛⲡϫⲓⲛⲑⲣⲉⲕⲥⲓⲛⲓ ⲉⲃⲟⲗ ⲙⲡⲉⲙⲑⲟ ⲙⲡⲉⲕⲗⲁⲟⲥ: ϧⲉⲛⲡϫⲓⲛⲑⲣⲉⲕⲥⲓⲛⲓ ϩⲓⲡϣⲁϥⲉ ⲡⲕⲁϩⲓ ⲁϥⲙⲟⲛⲙⲉⲛ: ⲕⲉ ⲅⲁⲣ ⲛⲓⲫⲏⲟⲩⲓ ⲁⲩ**ⲑⲗⲏ** ⲉⲃⲟⲗ ϩⲁⲡϩⲟ ⲙⲫⲛⲟⲩϯ .",
+      "english": "Thy creatures dwell in it: thou hast in thy goodness prepared for the poor.",
+      "source": "19_Psalmi_67",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:67",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲓ ⲇⲉ ⲛϫⲉⲙⲱⲩⲥⲏⲥ ⲉⲃⲟⲗ ϧⲁⲧⲉⲛⲫⲁⲣⲁⲱ ⲥⲁⲃⲟⲗ ⲛϯⲃⲁⲕⲓ ⲟⲩⲟϩ ⲁϥⲫⲱⲣϣ ⲛⲛⲉϥϫⲓϫ ⲉⲃⲟⲗ ⲟⲩⲃⲉ ⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲁⲩⲗⲟϫⲟⲩ ⲛⲉⲙⲛⲓⲥⲙⲏ ⲟⲩⲟϩ ⲡⲓⲙⲟⲩⲛϩⲱⲟⲩ ⲛⲉⲙⲡⲓⲁⲗ ⲙⲡⲉϥ**ⲑⲗⲏ** ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ",
+      "english": "And Moses went forth from Pharao out of the city, and stretched out his hands to the Lord, and the thunders ceased and the hail, and the rain did not drop on the earth.",
+      "source": "02_Exodus_09",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:09",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲣⲉⲧⲉⲛⲫⲱⲧ ⲙⲙⲟⲛ ⲫⲏⲉⲧϭⲟϫⲓ ⲛⲥⲁⲑⲏⲛⲟⲩ ⲁϥⲟϩⲓ ⲉⲣⲁⲧϥ ⲛϫⲉⲟⲩⲡⲛⲁ ⲙⲙⲉⲑⲛⲟⲩϫ ⲁϥ**ⲑⲗⲏ** ⲛⲁⲕ ⲛⲟⲩⲏⲣⲡ ⲛⲉⲙⲟⲩⲑⲓϧⲓ .",
+      "english": "ye have fled, no one pursuing you: thy spirit has framed falsehood, it has dropped on thee for wine and strong drink. But it shall come to pass, that out of the dropping of this people,",
+      "source": "33_Michaeas_02",
+      "urn": "urn:cts:copticLit:ot.mic.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4266",
+      "type": "cf",
+      "label": "drip, let drop"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4238",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4239",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4240",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4241",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4237",
+      "label": "ⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "filtration"
+    }
+  ],
+  "etym": {
+    "egy_num": "179640",
+    "egy_lemma": "dnʾ",
+    "english": "refill (with water)",
+    "german": "nachfüllen (mit Wasser)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/179640"
+  }
+}

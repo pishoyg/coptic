@@ -1,0 +1,44 @@
+{
+  "id": "C6008",
+  "forms": [
+    {
+      "id": "CF14021",
+      "orth": "ϩⲛⲟⲩϣⲡⲏⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS6692",
+      "bibliography": "CD 581b; ChLCS 80a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6006",
+      "label": "ϣⲡⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "wonder, amazement"
+    },
+    {
+      "target": "C6007",
+      "label": "ϣⲡⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "wonder, amazement"
+    },
+    {
+      "target": "C6009",
+      "label": "ⲣϣⲡⲏⲣⲉ",
+      "pos": "V",
+      "gloss": "be amazed, marvel at, admire"
+    }
+  ]
+}

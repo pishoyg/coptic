@@ -1,0 +1,130 @@
+{
+  "id": "C539",
+  "forms": [
+    {
+      "id": "CF2099",
+      "orth": "ⲃⲏⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11178,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS649",
+      "bibliography": "CD 44b; CED 27; KoptHWb 27, 495; DELC 31-32; ChLCS 9b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲃⲱⲕ ⲇⲉ ⲟⲛ ⲉϫⲛⲧϣⲱⲱⲧⲉ ⲁϥⲣⲡⲱⲃϣ ⲙⲡⲛⲟⲩϩ ⲙⲛⲧ**ⲃⲏⲥⲉ** ⲙⲡϥϥⲓⲧⲟⲩ ⲛⲙⲙⲁϥ ·",
+      "english": "Now when he had come to the mouth of the well, he (found that he) had forgotten the rope and the leather bucket, and had not brought them with him.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩϩ",
+        1,
+        15.276
+      ],
+      [
+        "ϥⲓⲧ",
+        1,
+        12.223
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        9.732
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲃⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲃⲏⲥⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲃⲏⲥⲉ",
+          "ⲧ_1_pre_ⲃⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲃⲏⲥⲉ",
+          "ⲃⲏⲥⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10764,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C538",
+      "type": "cf",
+      "label": "a utensil of bronze"
+    }
+  ],
+  "etym": {
+    "egy_num": "53650",
+    "egy_lemma": "bꜣs.t",
+    "english": "beaker; pail",
+    "german": "Becher; Eimer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/53650"
+  }
+}

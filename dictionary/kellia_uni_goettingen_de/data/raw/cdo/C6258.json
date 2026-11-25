@@ -1,0 +1,163 @@
+{
+  "id": "C6258",
+  "forms": [
+    {
+      "id": "CF14526",
+      "orth": "ⲣⲙⲛϣϭⲟⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9102,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6945",
+      "bibliography": "CD 619b; KoptHWb 344; DELC 279b; ChLCS 85a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲙⲟⲩ ⲡ**ⲣⲙⲛϣϭⲟⲣ** ⲙⲁⲧⲁⲙⲓⲉⲟⲩⲧⲣⲁⲡⲉⲍⲁ ⲁⲩⲱ ⲙⲁⲧⲙⲙⲟⲓ ⲙⲡⲉⲧⲉⲟⲩⲛⲧⲁⲕϥ",
+      "english": "Come, thou stranger, and furnish a table, and feed me of that thou hast ready.",
+      "source": "Sirach 29",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲃⲱⲕ ⲉⲃⲟⲗ ⲡ**ⲣⲙⲛϣϭⲟⲣ** ϩⲁⲧϩⲏ ⲙⲡⲁⲓ ⲉⲧⲧⲁⲉⲓⲏⲩ ⲁⲡⲁⲥⲟⲛ ϭⲟⲉⲓⲗⲉ ⲉⲣⲟⲓ ϯⲣⲭⲣⲉⲓⲁ ⲙⲡⲁⲏⲓ",
+      "english": "Give place, thou stranger, to an honourable man; my brother cometh to be lodged, and I have need of mine house.",
+      "source": "Sirach 29",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲧⲁⲙⲓⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲣⲁⲡⲉⲍⲁ",
+        1,
+        12.843
+      ],
+      [
+        "ⲁⲙⲟⲩ",
+        1,
+        12.163
+      ],
+      [
+        "ⲛⲁϣⲧ",
+        1,
+        11.87
+      ],
+      [
+        "ϩⲏ",
+        1,
+        10.104
+      ],
+      [
+        "ϩⲁ",
+        1,
+        8.865
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        7.944
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲣⲙⲛϣϭⲟⲣ",
+          2
+        ],
+        [
+          "ⲣⲙⲛϣϭⲟⲣ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲣⲙⲛϣϭⲟⲣ",
+          "ⲣⲙⲛϣϭⲟⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8653,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C6256",
+      "label": "ϣϭⲟⲣ",
+      "pos": "N",
+      "gloss": "rent, hire"
+    },
+    {
+      "target": "C6257",
+      "label": "ⲁⲧϣϭⲟⲣ",
+      "pos": "N",
+      "gloss": "rent-free"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C7049",
+  "forms": [
+    {
+      "id": "CF32078",
+      "orth": "ⲙⲛⲧϫⲁⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32077",
+      "orth": "ⲙⲛⲧϫⲁⲉⲓⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7770",
+      "bibliography": "CD 746a; KoptHWb 414; ChLCS 100b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7052",
+      "label": "ϣⲱⲡⲉ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "become desert"
+    },
+    {
+      "target": "C7047",
+      "label": "ϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "desert"
+    },
+    {
+      "target": "C7051",
+      "label": "ϯ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "make desert"
+    },
+    {
+      "target": "C7050",
+      "label": "ⲕⲱ ⲛϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "make desert"
+    },
+    {
+      "target": "C7048",
+      "label": "ⲙⲁⲓϫⲁⲓⲉ",
+      "pos": "N",
+      "gloss": "loving desert, solitude (hermit, ascetic)"
+    },
+    {
+      "target": "C7053",
+      "label": "ⲣϫⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be desert, abandoned"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "C1316",
+  "forms": [
+    {
+      "id": "CF4038",
+      "orth": "ⲣⲕⲣⲙⲧⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4039",
+      "orth": "ⲉⲣⲭⲣⲉⲙⲧⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3981,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1525",
+      "bibliography": "CD 116b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱⲣⲡ ⲛⲟⲩⲭⲁⲕⲓ ⲁϥ**ⲉⲣⲭⲣⲉⲙⲧⲥ** ⲟⲩⲟϩ ⲁⲩϯϫⲱⲛⲧ ⲛⲛⲉϥⲥⲁϫⲓ",
+      "english": "And they went from nation to nation, and from one kingdom to another people.",
+      "source": "19_Psalmi_104",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:104",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲭⲁⲕⲓ ⲛⲛⲉϥ**ⲉⲣⲭⲣⲉⲙⲧⲥ** ⲉⲃⲟⲗ ⲙⲙⲟⲕ ⲟⲩⲟϩ ⲡⲓⲉϫⲱⲣϩ ⲉϥⲉⲉⲣⲟⲩⲱⲓⲛⲓ ⲙⲫⲣⲏϯ ⲙⲡⲓⲉϩⲟⲟⲩ",
+      "english": "If I should spread my wings to fly straight forward, and sojourn at the extremity of the sea, it would be vain,",
+      "source": "19_Psalmi_138",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:138",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲟⲩⲃⲁⲗ ⲙⲁⲣⲟⲩ**ⲉⲣⲭⲣⲉⲙⲧⲥ** ⲉϣⲧⲉⲙⲛⲁⲩ ⲙⲃⲟⲗ: ⲟⲩⲟϩ ⲧⲟⲩϭⲓⲥⲓ ⲙⲁⲣⲉⲥⲕⲱⲗϫ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ .",
+      "english": "My soul has waited for reproach and misery; and I waited for one to grieve with me, but there was none; and for one to comfort me, but I found none.",
+      "source": "19_Psalmi_68",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:68",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1315",
+      "label": "ⲕⲣⲙⲧⲥ",
+      "pos": "N",
+      "gloss": "smoke, mist; obscurity, darkness; rust; fire"
+    },
+    {
+      "target": "C1313",
+      "label": "ⲕⲣⲟⲙⲣⲙ",
+      "pos": "V",
+      "gloss": "be dark"
+    },
+    {
+      "target": "C1314",
+      "label": "ⲕⲣⲟⲙⲣⲙ",
+      "pos": "N",
+      "gloss": "darkness"
+    },
+    {
+      "target": "C1317",
+      "label": "ⲭⲣⲉⲙⲥ",
+      "pos": "N",
+      "gloss": "darkness"
+    }
+  ]
+}

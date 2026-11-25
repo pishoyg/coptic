@@ -1,0 +1,106 @@
+{
+  "id": "C2983",
+  "forms": [
+    {
+      "id": "CF7831",
+      "orth": "ⲡⲱϩⲣⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF7832",
+      "orth": "ⲡⲟⲭⲣⲓ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3414",
+      "bibliography": "CD 282b; CED 131; KoptHWb 157; DELC 167; ChLCS 39b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2993",
+      "label": "ϫⲓⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "take drugs, be healed; take colour, be dyed"
+    },
+    {
+      "target": "C2990",
+      "label": "ϯⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give drugs, heal"
+    },
+    {
+      "target": "C2994",
+      "label": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "place of healing, pharmacy"
+    },
+    {
+      "target": "C2992",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2991",
+      "label": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "drug-giver, magician"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ],
+  "etym": {
+    "egy_num": "61900",
+    "egy_lemma": "pẖr",
+    "demo_num": "d2138",
+    "demo_lemma": "pẖr",
+    "english": "to turn round; to go around",
+    "german": "umhergehen; umwenden; zirkulieren; umgeben; durchziehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/61900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2138"
+  }
+}

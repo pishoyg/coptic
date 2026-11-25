@@ -1,0 +1,291 @@
+{
+  "id": "C247",
+  "forms": [
+    {
+      "id": "CF31528",
+      "orth": "ⲁⲩⲏⲧ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31527",
+      "orth": "ⲁⲟⲩⲏⲧ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31530",
+      "orth": "ⲁⲩⲏⲧ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31529",
+      "orth": "ⲁⲟⲩⲏⲧ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31532",
+      "orth": "ⲁⲩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2763,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF31531",
+      "orth": "ⲁⲟⲩⲏⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1019",
+      "orth": "ⲁⲟⲩⲃⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7030,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1020",
+      "orth": "ⲁⲃⲏⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4327,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS278",
+      "bibliography": "CD 21b; Kasser CDC 5a; KoptHWb 490; DELC 19; ChLCS 6a"
+    },
+    {
+      "id": "CS279",
+      "bibliography": "CD 21b; KoptHWb 15; DELC 19; ChLCS 6a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁⲩ ⲉⲧⲣⲉⲩⲛⲟϫⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲩⲟ ⲛ**ⲁⲩⲏⲧ** ⲁⲩⲏⲧ ⲉϫⲙⲡⲉⲭⲟⲣⲧⲟⲥ ⲉⲧⲟⲩⲉⲧⲟⲩⲱⲧ",
+      "english": "He commanded them that everyone should sit down in groups on the green grass.",
+      "source": "41_Mark_6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:6",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲓⲉⲓ ⲇⲉ ⲉⲃⲟⲗ ϩⲙⲡ**ⲁⲩⲏⲧ** ⲙⲙⲟⲛⲁⲭⲟⲥ · ⲁⲓⲕⲱⲧ ⲛⲁⲓ ⲛⲟⲩⲙⲁ ⲛϣⲱⲡⲉ ⲙⲁⲩⲁⲁⲧ ⲁⲓⲟⲩⲱϩ ⲛϩⲏⲧϥ ·",
+      "english": "I came away from the house of the monks, I built myself a habitation in a place apart, and I took up my abode therein.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲛⲟϫⲟⲩ ⲉⲩⲟ ⲛⲁⲩⲏⲧ **ⲁⲩⲏⲧ** ϣⲉ ϣⲉ ⲁⲩⲱ ⲧⲁⲉⲓⲟⲩ ⲧⲁⲉⲓⲟⲩ .",
+      "english": "They sat down in ranks, by hundreds and by fifties.",
+      "source": "Mark Chapter 6",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲩⲏⲧ",
+        12,
+        23.353
+      ],
+      [
+        "ⲭⲟⲣⲧⲟⲥ",
+        6,
+        18.331
+      ],
+      [
+        "ϣⲉ",
+        12,
+        17.937
+      ],
+      [
+        "ⲟ",
+        12,
+        16.56
+      ],
+      [
+        "ⲑⲏⲃⲁⲓⲥ",
+        2,
+        16.276
+      ],
+      [
+        "ⲙⲟⲛⲁⲭⲟⲥ",
+        4,
+        15.428
+      ],
+      [
+        "ⲧⲁⲉⲓⲟⲩ",
+        3,
+        15.203
+      ],
+      [
+        "ⲉϫⲙ",
+        6,
+        13.962
+      ],
+      [
+        "ⲩ",
+        12,
+        12.565
+      ],
+      [
+        "ⲛ",
+        14,
+        11.231
+      ],
+      [
+        "ⲡⲉ",
+        6,
+        10.263
+      ],
+      [
+        "ⲁⲩⲱ",
+        6,
+        9.502
+      ],
+      [
+        "ⲉ",
+        6,
+        8.572
+      ],
+      [
+        "ⲙ",
+        4,
+        7.351
+      ],
+      [
+        "ⲁ",
+        4,
+        7.044
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        6.993
+      ],
+      [
+        "ϩⲙ",
+        2,
+        6.413
+      ],
+      [
+        "ⲇⲉ",
+        2,
+        5.986
+      ],
+      [
+        "ϩⲛ",
+        2,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        5.465
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲏⲧ_0_node",
+          10
+        ],
+        [
+          "ⲁⲩⲏⲧ_1_post_ⲁⲩⲏⲧ",
+          4
+        ],
+        [
+          "ϣⲉ_1_post_ⲁⲩⲏⲧ",
+          2
+        ],
+        [
+          "ϣⲉ_2_post_ϣⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲧⲁⲉⲓⲟⲩ",
+          2
+        ],
+        [
+          "ⲧⲁⲉⲓⲟⲩ_2_post_ϣⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲁⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲁⲭⲟⲥ_2_post_ⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲏⲧ_0_node",
+          "ⲁⲩⲏⲧ_1_post_ⲁⲩⲏⲧ",
+          2
+        ],
+        [
+          "ⲁⲩⲏⲧ_1_post_ⲁⲩⲏⲧ",
+          "ϣⲉ_1_post_ⲁⲩⲏⲧ",
+          1
+        ],
+        [
+          "ϣⲉ_1_post_ⲁⲩⲏⲧ",
+          "ϣⲉ_2_post_ϣⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ϣⲉ",
+          "ⲁⲩⲱ_3_post_ⲧⲁⲉⲓⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲧⲁⲉⲓⲟⲩ",
+          "ⲧⲁⲉⲓⲟⲩ_2_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲏⲧ_0_node",
+          "ⲙ_1_post_ⲁⲩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲩⲏⲧ",
+          "ⲙⲟⲛⲁⲭⲟⲥ_2_post_ⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2445,
+      "count": 16
+    }
+  },
+  "etym": {
+    "egy_num": "23240",
+    "egy_lemma": "jwd.t",
+    "english": "parting (?)",
+    "german": "Trennung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/23240"
+  }
+}

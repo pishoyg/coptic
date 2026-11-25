@@ -1,0 +1,120 @@
+{
+  "id": "C981",
+  "forms": [
+    {
+      "id": "CF3311",
+      "orth": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1776,
+        "count": 38
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1141",
+      "bibliography": "CD 85b; KoptHWb 52; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲁⲉⲓⲱⲧ ⲙⲙⲟⲩⲣⲓⲏⲗ ⲡⲁⲅⲅⲉⲗⲟⲥ **ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ **ⲉⲓⲥ**** ⲡⲣⲱⲙⲉ ⲛⲧⲁⲓⲧⲁⲙⲓⲟϥ ⲕⲁⲧⲁⲡⲁⲉⲓⲛⲉ · ⲁϥⲡⲁⲣⲁⲃⲁ ⲛⲧⲉⲛⲧⲟⲗⲏ · ⲛⲧⲁⲓⲧⲁⲁⲥ ⲉⲧⲟⲟⲧϥ ·",
+      "english": "And My Father said unto Mouriel the angel, 'Behold, the man whom I created in My image hath transgressed the commandment which I gave him.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉϥϫⲱ ⲙⲙⲟⲟⲩ ⲛⲁⲩ ⲉⲓⲥ **ϩⲏⲏⲧⲉ **ⲉⲓⲥ**ⲟⲩⲁⲣⲭⲱⲛ** ⲁϥϯⲡⲉϥⲟⲩⲟⲓ ⲉⲣⲟϥ ⲁϥⲟⲩⲱϣⲧ ⲛⲁϥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲧⲁϣⲉⲉⲣⲉ ⲙⲟⲩ ⲧⲉⲛⲟⲩ ⲁⲗⲗⲁ ⲁⲙⲟⲩ ⲛⲅⲧⲁⲗⲟ ⲛⲧⲉⲕϭⲓϫ ⲉϩⲣⲁⲓ ⲉϫⲱⲥ ⲁⲩⲱ ⲥⲛⲁⲱⲛϩ .",
+      "english": "While he told these things to them, behold, a ruler came and worshiped him, saying, 'My daughter has just died, but come and lay your hand on her, and she will live.'",
+      "source": "40_Matthew_9",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲩ ⲛⲁⲥ **ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ **ⲉⲓⲥ**** ⲛⲣⲟ ⲛⲧⲉϣⲛⲏ ϣⲟⲧⲙ ⲁⲩⲱ ⲙⲛⲗⲁⲁⲩ ⲛⲁⲩ ⲉⲣⲟⲛ ⲧⲛϣⲟⲟⲡ ⲇⲉ ϩⲛⲧⲟⲩⲉⲡⲓⲑⲩⲙⲓⲁ ⲉⲧⲃⲉⲡⲁⲓ ϭⲉ ⲡⲉⲓⲑⲉ ⲛⲁⲛ ⲛⲧⲉϣⲱⲡⲉ ⲛⲙⲙⲁⲛ",
+      "english": "Behold, the garden doors are shut, that no man can see us, and we are in love with thee; therefore consent unto us, and lie with us.",
+      "source": "Susanna 1",
+      "urn": "urn:cts:copticLit:ot.sus.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.24,
+      "rank": 1551,
+      "count": 38
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12184",
+      "label": "ϩⲉⲓ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C987",
+      "label": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs mostly = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C982",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before pl. nouns or pronouns)"
+    },
+    {
+      "target": "C983",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C980",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

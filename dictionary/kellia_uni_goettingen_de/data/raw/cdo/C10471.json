@@ -1,0 +1,175 @@
+{
+  "id": "C10471",
+  "forms": [
+    {
+      "id": "CF28048",
+      "orth": "ⲥⲕⲉⲡⲧⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28049",
+      "orth": "ⲥⲕⲉⲡⲧⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10759,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28050",
+      "orth": "ⲥⲕⲏⲡⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28051",
+      "orth": "ⲥⲕⲩⲡⲧⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14171",
+      "bibliography": "DDGLC",
+      "cu_ID": "2999"
+    },
+    {
+      "id": "CS14172",
+      "bibliography": "DDGLC",
+      "cu_ID": "9818"
+    },
+    {
+      "id": "CS14173",
+      "bibliography": "DDGLC",
+      "cu_ID": "10588"
+    },
+    {
+      "id": "CS14174",
+      "bibliography": "DDGLC",
+      "cu_ID": "10177"
+    },
+    {
+      "id": "CS14175",
+      "bibliography": "DDGLC",
+      "cu_ID": "10294"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥ**ⲥⲕⲉⲡⲧⲉⲓ** ⲟⲩⲛ ⲙⲙⲟϥ ⲙⲛⲛⲉϥⲙⲁⲧⲟⲓ ⲉⲧϩⲛⲧⲉϥⲙⲛⲧⲣⲟ · ⲉⲧⲃⲉⲡⲡⲟⲗⲉⲙⲟⲥ ·",
+      "english": "Then he prepared himself and the soldiers who were in his kingdom for the war.",
+      "source": "History of Eustathius and Theopiste part 2",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:31-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲱⲡ",
+        1,
+        12.991
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        10.209
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲥⲕⲉⲡⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲕⲉⲡⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲡⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_post_ⲥⲕⲉⲡⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲁⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲙⲁⲧⲟⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲥⲕⲉⲡⲧⲉⲓ",
+          "ϥ_1_pre_ⲥⲕⲉⲡⲧⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲕⲉⲡⲧⲉⲓ",
+          "ⲥⲕⲉⲡⲧⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲡⲧⲉⲓ_0_node",
+          "ⲟⲩⲛ_1_post_ⲥⲕⲉⲡⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲛ_1_post_ⲥⲕⲉⲡⲧⲉⲓ",
+          "ⲙⲛ_2_post_ⲙⲁⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲁⲧⲟⲓ",
+          "ⲛⲉϥ_2_post_ⲙⲁⲧⲟⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10352,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5758",
+    "grl_lemma": "σκέπτομαι",
+    "grl_meaning": "to look about carefully, examine, consider",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1606b; Preisigke 2:468"
+  }
+}

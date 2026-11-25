@@ -1,0 +1,89 @@
+{
+  "id": "C4238",
+  "forms": [
+    {
+      "id": "CF10427",
+      "orth": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14441,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4806",
+      "bibliography": "CD 410a; KoptHWb 229"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲉϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲡⲉϥⲉⲣⲏⲧ ⲗⲁⲁⲩ ⲛⲛⲕⲁ ⲉϣⲁϥϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲛⲧⲃⲱ ⲛⲉⲗⲟⲟⲗⲉ **ⲏⲣⲡ **ⲛⲧⲗⲏ**** ϣⲁϩⲣⲁⲓ ⲉⲏⲣⲡ ⲛⲁⲃⲉ ϩⲓⲕⲁⲥ ⲛⲉⲗⲟⲟⲗⲉ ⲛⲛⲉϥⲟⲩⲱⲙ",
+      "english": "all the days of his vow: he shall eat no one of all the things that come from the vine, wine from the grape-stones to the husk,",
+      "source": "Numbers 6",
+      "urn": "urn:cts:copticLit:ot.num.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14040,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12507",
+      "type": "cf",
+      "label": "wine"
+    },
+    {
+      "target": "C4237",
+      "type": "cf",
+      "label": "filtration"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4239",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4240",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4241",
+      "label": "ⲏⲣⲡ ⲛⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "must"
+    },
+    {
+      "target": "C4236",
+      "label": "ⲧⲗⲏ",
+      "pos": "V",
+      "gloss": "drip, let drop"
+    },
+    {
+      "target": "C4237",
+      "label": "ⲧⲗⲏ",
+      "pos": "N",
+      "gloss": "filtration"
+    }
+  ]
+}

@@ -1,0 +1,683 @@
+{
+  "id": "C1624",
+  "forms": [
+    {
+      "id": "CF4718",
+      "orth": "ⲗⲁⲕϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7949,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲁⲕϩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.97,
+        "rank": 739,
+        "count": 82
+      }
+    },
+    {
+      "orth": "ⲗⲉⲕϩ",
+      "dialect": "F",
+      "id": "962.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1887",
+      "bibliography": "CD 140b; KoptHWb 77; ChLCS 21b"
+    },
+    {
+      "id": "CS1888",
+      "bibliography": "CD 140b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓⲍ ⲉϩⲣⲉⲛⲡⲓⲇ ⲛϣⲟ ϫⲉⲁⲧⲉⲧⲉⲛⲉⲗⲟⲩⲏⲣ ⲙⲃⲓⲣ ⲉⲩⲙⲉϩ ⲛ**ⲗⲁⲕϩ** ⲟⲩⲟϩ ⲡⲉϫⲱⲟⲩ ⲛⲁϥ ϫⲉⲍ .",
+      "english": "When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?' They told him, 'Seven.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲕⲟⲧϥ ⲉⲡⲉϥⲧⲉⲩ**ⲗⲁⲕϩ** ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ⲁϥϫⲱ ⲙⲡⲛⲟϭ ⲛⲣⲁⲛ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲉⲩⲁⲡⲉ ⲁϥⲥⲙⲟⲩ ⲉⲣⲟⲟⲩ ⲁϥⲛⲓϥⲉ ⲉϩⲟⲩⲛ ⲉϩⲣⲁⲩ ⲛⲛⲉⲩⲃⲁⲗ ·",
+      "english": "He turned himself towards the four corners of the world, said the great name over their heads, blessed them and breathed into their eyes.",
+      "source": "Pistis Sophia Book 4 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:129-139",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲟⲛ ⲛⲟⲩⲉϩⲟⲟⲩ ⲉϥϩⲉⲙⲥⲓ ⲛϫⲉⲡⲉⲛⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ϧⲁⲧⲉⲛⲡⲓ**ⲗⲁⲕϩ** ⲙⲡⲉⲧⲣⲁ ⲛⲑⲟϥ ⲛⲉⲙⲡⲉⲛϭⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ ⲉⲩⲥⲁϫⲓ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲟⲩ ⲧⲟⲧⲉ ⲡⲉϫⲉⲡⲁⲓⲱⲧ ⲙⲡⲣⲟⲫⲏⲧⲏⲥ ⲛⲁϥ ϫⲉⲡⲁϭⲟⲉⲓⲥ ⲉⲓⲉⲣⲉⲡⲓⲑⲩⲙⲓⲛ ⲉⲛⲁⲩ ⲉⲟⲩϫⲟⲓ ⲉϥⲉⲣϩⲱⲧ ⲙⲡⲁⲓⲙⲁ .",
+      "english": "On one occasion, our father apa Shenoute was seated beside a rocky ledge, speaking with our Lord Jesus Christ. As they conversed, my father the prophet expressed a wish: ‘My Lord, I would like to witness a ship passing through this place.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲉϥⲕⲱⲧⲉ ⲙⲙⲟϥ ⲉⲡⲉϥⲧⲉⲩ**ⲗⲁⲕϩ** ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ⲙⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲉⲩϭⲟⲟⲗⲉ ⲧⲏⲣⲟⲩ ⲛϩⲉⲛϩⲃⲟⲥ ⲛⲛⲉⲓⲁⲁⲩ · ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲓⲁⲱ · * ⲓⲁⲱ · ⲧⲁⲓ ⲧⲉ ⲧⲉϥϩⲉⲣⲙⲏⲛⲉⲓⲁ · ⲓⲱⲧⲁ · ϫⲉⲁⲡⲧⲏⲣϥ ⲉⲓ ⲉⲃⲟⲗ · ⲁⲗⲫⲁ ϫⲉⲥⲉⲛⲁⲕⲧⲟⲟⲩ ⲉϩⲟⲩⲛ · ⲱⲱ ϫⲉϥⲛⲁϣⲱⲡⲉ ⲛϭⲓⲡϫⲱⲕ ⲛⲛϫⲱⲕ ⲧⲏⲣⲟⲩ ·",
+      "english": "“And Jesus made invocation, turning himself towards the four corners of the world with his disciples, who were all clad in linen garments, and saying: iaō iaō iaō.” This is its interpretation: iōta, because the universe hath gone forth; alpha, because it will turn itself back again; ōmega, because the completion of all the completeness will take place.”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲱⲗⲓ ⲙⲓⲃ ⲛⲕⲟⲧ ⲛ**ⲗⲁⲕϩ** ⲉⲩⲙⲉϩ ⲛⲉⲙⲉⲃⲟⲗ ϧⲉⲛⲛⲓⲕⲉⲧⲉⲃⲧ .",
+      "english": "They took up twelve baskets full of broken pieces and also of the fish.",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲱϫ",
+        10,
+        18.718
+      ],
+      [
+        "ⲙⲉϩ",
+        15,
+        17.829
+      ],
+      [
+        "ⲛ",
+        64,
+        16.233
+      ],
+      [
+        "ⲍⲙⲃⲓⲣ",
+        2,
+        15.338
+      ],
+      [
+        "ϥⲧⲟⲩ",
+        4,
+        15.338
+      ],
+      [
+        "ⲛⲧⲉ",
+        35,
+        15.096
+      ],
+      [
+        "ⲩ",
+        33,
+        14.896
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        41,
+        14.795
+      ],
+      [
+        "ⲡⲓ",
+        32,
+        14.413
+      ],
+      [
+        "ⲡⲓⲇ",
+        3,
+        14.392
+      ],
+      [
+        "ⲕⲟⲧ",
+        8,
+        14.366
+      ],
+      [
+        "ⲗⲟⲅⲓⲟⲛ",
+        3,
+        14.092
+      ],
+      [
+        "ⲓⲃ",
+        6,
+        14.048
+      ],
+      [
+        "ϩⲃⲟⲥ",
+        5,
+        13.946
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        12,
+        13.868
+      ],
+      [
+        "ⲛⲓ",
+        24,
+        13.616
+      ],
+      [
+        "ⲟⲩ",
+        33,
+        13.53
+      ],
+      [
+        "ⲃⲓⲣ",
+        2,
+        13.53
+      ],
+      [
+        "ⲛⲉⲙ",
+        23,
+        13.456
+      ],
+      [
+        "ⲡⲓϥⲧⲟⲩ",
+        1,
+        13.338
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        2,
+        12.853
+      ],
+      [
+        "ⲧⲉⲩ",
+        2,
+        12.438
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        11.372
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        10.096
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲁⲕϩ_0_node",
+          58
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          12
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲱⲟⲩ_3_post_ⲛⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          4
+        ],
+        [
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲣⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲁ_3_post_ϣⲓ",
+          1
+        ],
+        [
+          "ϣⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ϣⲑⲉϩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲉⲣϩⲟⲩⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲓϥⲧⲟⲩ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲅⲱⲅ_4_post_ⲕⲁϩⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲃ_1_post_ⲗⲁⲕϩ",
+          3
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲕⲩⲛⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲧⲱⲟⲩ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲓⲟⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲫⲁϩⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲗⲁⲙⲡⲁⲥ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ϯ_2_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲁⲧⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲁⲕϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲟⲩ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          9
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ⲧⲱⲟⲩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲙ_1_post_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲗⲁⲕϩ",
+          "ⲡⲉⲧⲣⲁ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡⲉⲧⲣⲁ_2_post_ⲙ",
+          "ⲉⲧ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲁⲕϩ",
+          "ⲁ_3_post_ϣⲓ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲓ",
+          "ϣⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲁⲕϩ",
+          "ⲛⲓ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛⲓ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲛⲧⲉ",
+          "ϣⲑⲉϩ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲉⲧ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲁⲕϩ",
+          "ⲁ_3_post_ⲉⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲉⲣϩⲟⲩⲟ",
+          "ⲩ_3_post_ⲉⲣϩⲟⲩⲟ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲉⲣϩⲟⲩⲟ",
+          "ⲉⲣϩⲟⲩⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲓϥⲧⲟⲩ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲕⲁϩⲓ_3_post_ⲡ",
+          "ⲅⲱⲅ_4_post_ⲕⲁϩⲓ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲃ_1_post_ⲗⲁⲕϩ",
+          3
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ⲥⲕⲩⲛⲏ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲧⲱⲟⲩ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲗⲟⲅⲓⲟⲛ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲃ_1_post_ⲗⲁⲕϩ",
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ϩⲓ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲗⲁⲕϩ",
+          "ⲫⲁϩⲟⲩ_2_post_ϩⲓ",
+          1
+        ],
+        [
+          "ⲫⲁϩⲟⲩ_2_post_ϩⲓ",
+          "ⲛⲧⲉ_3_post_ⲫⲁϩⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲧⲉ",
+          "ⲗⲁⲙⲡⲁⲥ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲗⲁⲙⲡⲁⲥ_3_post_ⲡⲓ",
+          "ϩⲓϫⲉⲛ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ⲗⲁⲕϩ",
+          "ϯ_2_post_ϩⲓϫⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲁⲕϩ",
+          "ϩⲁⲛ_1_pre_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          1
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲛ_1_post_ⲗⲁⲕϩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲗⲁⲕϩ",
+          "ⲁⲧⲕⲱⲃ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲧⲕⲱⲃ_2_post_ⲛ",
+          "ⲉ_1_post_ⲗⲁⲕϩ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲁⲕϩ",
+          "ⲧⲉⲩ_1_pre_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲗⲁⲕϩ",
+          "ⲗⲁⲕϩ_0_node",
+          2
+        ],
+        [
+          "ⲗⲁⲕϩ_0_node",
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲗⲁⲕϩ",
+          "ⲡ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲛⲧⲉ",
+          "ⲕⲟⲥⲙⲟⲥ_3_post_ⲡ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7499,
+      "count": 2
+    },
+    "B": {
+      "rate": 0.97,
+      "rank": 646,
+      "count": 82
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1625",
+      "label": "ϫⲁϫⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "hard-cornered"
+    },
+    {
+      "target": "C1626",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "chief-corner (stone)"
+    }
+  ]
+}

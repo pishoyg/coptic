@@ -1,0 +1,201 @@
+{
+  "id": "C7825",
+  "forms": [
+    {
+      "id": "CF17715",
+      "orth": "ⲣⲉϥϭⲉⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6816,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8696",
+      "bibliography": "CD 825b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲣⲱⲙⲉ ⲛⲣⲉϥϯϩⲧⲏϥ ⲛ**ⲣⲉϥϭⲉⲡⲏ** ϩⲛⲛⲉϥϩⲃⲏⲩⲉ ϩⲁⲡⲥ ⲉⲧⲣⲉϥⲁϩⲉⲣⲁⲧϥ ⲉϩⲉⲛⲉⲣⲱⲟⲩ ⲛϥⲧⲙⲁϩⲉⲣⲁⲧϥ ⲉϩⲉⲛⲣⲱⲙⲉ ⲛϭⲱⲃ",
+      "english": "It is fit that an observant man and one diligent in his business should attend on kings, and not attend on slothful men.",
+      "source": "Proverbs 22",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲁⲣⲉⲡ**ⲣⲉϥϭⲉⲡⲏ** ϩⲱⲛ ⲉϩⲟⲩⲛ ⲛⲛⲉⲧϥⲛⲁⲁⲁⲩ ϫⲉⲉⲛⲉⲛⲁⲩ ⲉⲣⲟⲟⲩ ⲁⲩⲱ ⲙⲁⲣⲉⲡϣⲟϫⲛⲉ ⲉⲓ ⲙⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲙⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲉⲛⲉⲥⲟⲩⲱⲛϥ",
+      "english": "who say, Let him speedily hasten what he will do, that we may see it: and let the counsel of the Holy One of Israel come, that we may know it.",
+      "source": "Isaiah 5",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲁϩⲏⲧ ⲧⲁⲩⲟ ⲉⲃⲟⲗ ⲛⲟⲩϣⲁϫⲉ ⲉⲛⲁⲛⲟⲩϥ ϯⲛⲁϫⲱ ⲁⲛⲟⲕ ⲛⲛⲁϩⲃⲏⲩⲉ ⲙⲡⲣⲣⲟ ⲡⲁⲗⲁⲥ ⲟⲩⲕⲁϣ ⲛⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲡⲉ ⲛ**ⲣⲉϥϭⲉⲡⲏ** ⲉϥⲥϩⲁⲓ",
+      "english": "My heart has uttered a good matter: I declare my works to the king: my tongue is the pen of a quick writer.",
+      "source": "Psalms 44",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:44",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥϯϩⲧⲏ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲁⲡⲥ",
+        1,
+        12.863
+      ],
+      [
+        "ⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ",
+        1,
+        11.905
+      ],
+      [
+        "ⲥϩⲁⲓ",
+        1,
+        10.19
+      ],
+      [
+        "ⲛ",
+        6,
+        9.979
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        9.57
+      ],
+      [
+        "ϩⲃⲏⲩⲉ",
+        1,
+        9.227
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        9.096
+      ],
+      [
+        "ϥ",
+        3,
+        7.692
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.212
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        7.093
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲉⲡⲏ",
+          1
+        ],
+        [
+          "ⲣⲉϥϭⲉⲡⲏ_0_node",
+          3
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϭⲉⲡⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥϭⲉⲡⲏ",
+          "ⲣⲉϥϭⲉⲡⲏ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥϭⲉⲡⲏ",
+          "ⲣⲉϥϭⲉⲡⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6384,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7824",
+      "label": "ϩⲛ ⲟⲩϭⲉⲡⲏ",
+      "pos": "ADV",
+      "gloss": "forthwith, immediately, quickly"
+    },
+    {
+      "target": "C7822",
+      "label": "ϭⲉⲡⲏ",
+      "pos": "V",
+      "gloss": "hasten; hurry, to make haste"
+    },
+    {
+      "target": "C7823",
+      "label": "ϭⲉⲡⲏ",
+      "pos": "ADV",
+      "gloss": "quickly"
+    },
+    {
+      "target": "C7826",
+      "label": "ⲙⲛⲧⲣⲉϥϭⲉⲡⲏ",
+      "pos": "N",
+      "gloss": "quickness"
+    }
+  ]
+}

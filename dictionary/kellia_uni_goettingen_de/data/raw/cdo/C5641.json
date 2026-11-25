@@ -1,0 +1,95 @@
+{
+  "id": "C5641",
+  "forms": [
+    {
+      "id": "CF13258",
+      "orth": "ⲱϩⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6313",
+      "bibliography": "CD 537a; ChLCS 74a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲙⲁⲕⲁⲣⲓⲟⲥ **ⲡⲉⲧⲛⲁϩⲱϩⲉ **ⲉ**ⲣⲁⲧϥ** ϩⲛⲧⲁⲣⲭⲏ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ **ϫⲉⲁⲓⲱϩⲉ **ⲉ**ⲣⲁⲧ** ϩⲛ̄ⲧⲙⲏⲧⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5643",
+      "label": "ϭⲓⲛⲁϩⲉ (ⲉϫⲛ-)",
+      "pos": "N",
+      "gloss": "act of remaining on"
+    },
+    {
+      "target": "C5648",
+      "label": "ϭⲓⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "standing"
+    },
+    {
+      "target": "C5647",
+      "label": "ϯⲙⲉⲧⲣⲉϥⲟϩⲉ ⲉⲣⲁⲧϥ ⲛⲧⲉⲡⲭⲟⲣⲟⲥ",
+      "pos": "N",
+      "gloss": "chorus, institution of choruses (χοροστασία)"
+    },
+    {
+      "target": "C5649",
+      "label": "ⲁϩⲉ (ⲛ-)",
+      "pos": "VSTAT",
+      "gloss": "need"
+    },
+    {
+      "target": "C5646",
+      "label": "ⲙⲁ ⲛⲁϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "place of standing"
+    },
+    {
+      "target": "C5640",
+      "label": "ⲱϩⲉ",
+      "pos": "V",
+      "gloss": "stand, stay, wait"
+    },
+    {
+      "target": "C5645",
+      "label": "ⲱϩⲉ (ⲉⲣⲁⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "stand before, stand against, attend on"
+    },
+    {
+      "target": "C5642",
+      "label": "ⲱϩⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "wait for, attend to"
+    },
+    {
+      "target": "C5644",
+      "label": "ⲱϩⲉ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "stand on foot, stand"
+    }
+  ]
+}

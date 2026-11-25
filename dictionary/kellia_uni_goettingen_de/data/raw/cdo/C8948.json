@@ -1,0 +1,170 @@
+{
+  "id": "C8948",
+  "forms": [
+    {
+      "id": "CF21904",
+      "orth": "ⲉⲛⲟⲭⲗⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF21905",
+      "orth": "ⲉⲛⲟⲭⲗⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10928,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21906",
+      "orth": "ⲉⲛⲟⲭⲗⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21907",
+      "orth": "ⲉⲛⲱⲭⲗⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2446,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10904",
+      "bibliography": "DDGLC",
+      "cu_ID": "1117"
+    },
+    {
+      "id": "CS10905",
+      "bibliography": "DDGLC",
+      "cu_ID": "11452"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥⲁⲡⲉⲓⲗⲉ ⲇⲉ ⲛⲁⲩ ϩⲛⲟⲩⲛⲟϭ ⲛϭⲱⲛⲧ ϩⲱⲥⲧⲉ ⲛⲥⲁⲁⲩ ⲛⲁⲥ ⲛϩⲙϩⲁⲗ · ⲛⲧⲉⲣⲟⲩⲥⲱⲧⲙ ⲉⲛⲁⲓ ⲛϭⲓⲛⲉⲓⲙⲁⲕⲁⲣⲓⲟⲥ ⲉⲩϣⲁⲛⲧⲙⲁⲡⲟⲕⲁⲑⲓⲥⲧⲁ ⲛⲁⲥ ⲙⲡⲉⲥⲅⲣⲁⲙⲙⲁⲧⲓⲟⲛ · ⲧⲟⲧⲉ ⲛⲉⲓⲟⲧⲉ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ ⲛⲧⲉⲣⲟⲩϭⲱ ⲉⲩ**ⲉⲛⲟⲭⲗⲉⲓ** ⲛⲁⲩ ϩⲓⲧⲛⲧⲉⲥϩⲓⲙⲉ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲕⲱ ⲙⲡⲉⲩϣⲏⲣⲉ ⲛⲟⲩⲉϣ ⲛⲧⲟⲙⲥϥ ⲁⲩϯ ⲙⲡⲉⲩⲟⲩⲟⲓ ϩⲛⲟⲩϭⲉⲡⲏ ⲉⲡⲧⲟⲡⲟⲥ ⲉⲧⲉⲣⲉⲛⲉⲧⲟⲩⲁⲁⲃ ⲛϩⲏⲧϥ ⲙⲛϩⲉⲛⲕⲉⲛⲟϭ ⲙⲙⲏⲏϣⲉ ⲉⲩⲟⲩⲏϩ ⲛⲥⲱⲟⲩ · ⲉⲧⲉⲛⲉⲩⲥⲩⲅⲅⲉⲛⲏⲥ ⲛⲉ ⲙⲛⲛⲉⲩⲣⲙⲣⲁⲩⲏ · ⲁⲩⲡⲁϩⲧⲟⲩ ϩⲁⲣⲁⲧⲟⲩ ⲛⲛⲉⲟⲩⲉⲣⲏⲧⲉ ⲛⲁⲡⲁ ⲗⲟⲩⲕⲓⲟⲥ ⲙⲛⲁⲡⲁ ⲗⲟⲅⲅⲓⲛⲟⲥ · ⲉⲩⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲟⲩ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉ",
+      "english": "she very angrily threatened to make them slaves to her ⟦When these blessed ones heard these things⟧ if they didn't hand her back her document. Then the boy's parents, after continuing to be pestered by that woman, left their son without burying him, and they quickly made their way to the sanctuary where the saints were, with other large crowds—their relatives and their neighbors—following them. They bowed at the feet of Apa Lucius and Apa Longinus, begging them, saying,",
+      "source": "Life of Longinus and Lucius part 2",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:10-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱ",
+        1,
+        11.254
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ⲉⲛⲟⲭⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲟⲭⲗⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ϩⲓⲧⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ⲉⲛⲟⲭⲗⲉⲓ",
+          "ⲉⲛⲟⲭⲗⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲉⲛⲟⲭⲗⲉⲓ_0_node",
+          "ⲛⲁ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ϩⲓⲧⲛ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲛ_1_post_ⲉⲛⲟⲭⲗⲉⲓ",
+          "ⲧⲉ_2_post_ϩⲓⲧⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10517,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "689",
+    "grl_lemma": "ἐνοχλέω",
+    "grl_meaning": "to trouble, annoy",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 572b; Preisigke 1:495"
+  }
+}

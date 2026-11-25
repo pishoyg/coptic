@@ -1,0 +1,307 @@
+{
+  "id": "C6720",
+  "forms": [
+    {
+      "id": "CF15485",
+      "orth": "ϩⲉⲛⲉⲉⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3156,
+        "count": 12
+      }
+    },
+    {
+      "orth": "ϩⲉⲛⲉⲉⲧⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5250,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϩⲉⲛⲉⲧⲉ",
+      "dialect": "S",
+      "id": "2223.2"
+    },
+    {
+      "orth": "ϩⲉⲛⲏⲧⲉ",
+      "dialect": "S",
+      "id": "2223.3"
+    },
+    {
+      "orth": "ϩⲉⲛⲉⲧⲏ",
+      "dialect": "S",
+      "id": "2223.4"
+    },
+    {
+      "orth": "ϩⲉⲛⲏⲧⲏ",
+      "dialect": "S",
+      "id": "2223.5"
+    },
+    {
+      "orth": "ϩⲏⲛⲉⲧⲉ",
+      "dialect": "S",
+      "id": "2223.6"
+    },
+    {
+      "orth": "ϩⲏⲛⲏⲧⲉ",
+      "dialect": "S",
+      "id": "2223.7"
+    },
+    {
+      "orth": "ϩⲏⲛⲏⲛⲧⲉ",
+      "dialect": "S",
+      "id": "2223.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7434",
+      "bibliography": "CD 692a; CED 289; KoptHWb 379; DELC 306a; ChLCS 93a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲁⲛ ⲇⲉ ⲛⲧ**ϩⲉⲛⲉⲉⲧⲉ** ⲉⲧⲙⲙⲁⲁⲩ ⲡⲉ ⲉⲣⲏⲧⲉ ·",
+      "english": "And the name of that monastery was Erete.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣϥⲟⲩⲱ ⲇⲉ ⲉϥⲙⲟⲩϣⲧ ⲙⲙⲟⲟⲩ · ⲉϥⲛⲁⲕⲧⲟϥ ⲇⲉ ⲉϩⲟⲩⲛ ⲉⲧ**ϩⲉⲛⲉⲉⲧⲉ** ⲁϥⲡⲁⲣⲁⲅⲉ ϩⲓⲧⲉϩⲓⲏ ⲙⲡϩⲱⲧ ⲉⲃⲟⲗ ⲙⲡϩⲟⲓ ⲁⲩⲣⲱⲙⲉ ⲛⲟⲩⲟⲓ · ⲉⲓⲛⲉ ϣⲁⲣⲟϥ ⲛⲟⲩⲉϩⲉ · ⲉⲧⲱϥ ⲧⲉ · ϫⲉⲉϥⲛⲁⲥⲫⲣⲁⲅⲓⲍⲉ ⲙⲙⲟⲥ ·",
+      "english": "Now when he had finished he looked on them (i. e. the people), and when he was returning to the monastery, and was passing along the way by the canal, a certain husbandman brought to him an ewe which belonged to him in order that he might make the Sign of the Cross over her.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲃⲱⲕ ⲉⲧ**ϩⲉⲛⲉⲉⲧⲉ** ⲛⲁⲡⲁ ⲁⲃⲣⲁϩⲁⲙ · ⲛⲧⲁϭⲙⲡϣⲓⲛⲉ · ⲙⲡⲉⲓⲥⲟⲛ ⲉⲧϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ",
+      "english": "I am going to the monastery of Apa Abraham to visit the brethren who are in that place.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲣⲏⲧⲉ",
+        2,
+        18.428
+      ],
+      [
+        "ⲙⲙⲁⲁⲩ",
+        2,
+        17.691
+      ],
+      [
+        "ⲁⲃⲣⲁϩⲁⲙ",
+        2,
+        11.833
+      ],
+      [
+        "ⲧ",
+        7,
+        10.908
+      ],
+      [
+        "ⲁⲡⲁ",
+        2,
+        10.763
+      ],
+      [
+        "ⲡⲁⲣⲁⲅⲉ",
+        1,
+        10.285
+      ],
+      [
+        "ⲉ",
+        8,
+        10.232
+      ],
+      [
+        "ⲛ",
+        10,
+        10.19
+      ],
+      [
+        "ⲥⲙⲟⲩ",
+        2,
+        10.137
+      ],
+      [
+        "ⲃⲏⲕ",
+        1,
+        9.873
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.619
+      ],
+      [
+        "ⲣⲁⲛ",
+        2,
+        9.408
+      ],
+      [
+        "ⲇⲉ",
+        4,
+        9.401
+      ],
+      [
+        "ⲧⲃⲛⲟⲟⲩⲉ",
+        1,
+        9.193
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        8.941
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        8.365
+      ],
+      [
+        "ⲃⲱⲕ",
+        2,
+        8.359
+      ],
+      [
+        "ⲩ",
+        4,
+        8.225
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        8.093
+      ],
+      [
+        "ⲉⲓⲟⲧⲉ",
+        1,
+        7.841
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲛⲉⲉⲧⲉ_0_node",
+          11
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲡⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲃⲣⲁϩⲁⲙ_3_post_ⲁⲡⲁ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲃⲛⲟⲟⲩⲉ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛⲉⲉⲧⲉ_0_node",
+          "ⲛ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          "ⲁⲡⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_2_post_ⲛ",
+          "ⲁⲃⲣⲁϩⲁⲙ_3_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛⲉⲉⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          "ⲙⲙⲁⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ϩⲉⲛⲉⲉⲧⲉ",
+          "ϩⲉⲛⲉⲉⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛⲉⲉⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          "ⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲃⲛⲟⲟⲩⲉ",
+          "ⲧⲃⲛⲟⲟⲩⲉ_1_post_ϩⲉⲛⲉⲉⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2803,
+      "count": 12
+    }
+  },
+  "etym": {
+    "egy_num": "99940",
+    "egy_lemma": "ḥw.t-nṯr",
+    "demo_num": "d3914",
+    "demo_lemma": "ḥ.t-nṯr",
+    "english": "temple",
+    "german": "Tempel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/99940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3914"
+  }
+}

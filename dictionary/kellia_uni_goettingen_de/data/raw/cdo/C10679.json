@@ -1,0 +1,118 @@
+{
+  "id": "C10679",
+  "forms": [
+    {
+      "id": "CF28947",
+      "orth": "ⲥϯⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28948",
+      "orth": "ⲥϯⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13360,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14647",
+      "bibliography": "DDGLC",
+      "cu_ID": "3661"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲥϣⲱⲡⲉ ⲅⲁⲣ ⲛϩⲟⲓⲛⲉ ⲉⲩϣⲁⲛⲃⲱⲕ ⲉⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲥⲉⲧⲁⲩⲉϩⲉⲛⲧⲃⲁ ⲛ**ⲥϯⲭⲟⲥ** ⲛϣⲁϫⲉ · ⲡⲛⲟⲩⲧⲉ ⲅⲁⲣ ⲣⲭⲣⲉⲓⲁ ⲁⲛ ⲛϩⲁϩ ⲛϣⲁϫⲉ · ⲉϥⲣⲭⲣⲉⲓⲁ ⲙⲙⲁⲧⲉ ⲙⲡⲉⲕϣⲗⲏⲗ · ⲉⲧⲣⲉⲕⲧⲛⲧⲱⲛⲅ ⲉⲧⲉⲓⲭⲁⲛⲁⲛⲁⲓⲁ",
+      "english": "Now certain folk are wont to go into the church and pour forth tens of thousands of strings of words ; but God hath no need of a multitude of words, though He hath very great need of thy prayer. Make thou thyself to be like unto this Canaanitish woman;",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲃⲁ",
+        1,
+        13.294
+      ],
+      [
+        "ⲧⲁⲩⲉ",
+        1,
+        13.114
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥϯⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥϯⲭⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥϯⲭⲟⲥ_0_node",
+          "ⲛ_1_post_ⲥϯⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥϯⲭⲟⲥ",
+          "ϣⲁϫⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12953,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2040",
+    "grl_lemma": "στίχος",
+    "grl_meaning": "a row or file (of soldiers), line, verse",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1646b; Preisigke 2:489"
+  }
+}

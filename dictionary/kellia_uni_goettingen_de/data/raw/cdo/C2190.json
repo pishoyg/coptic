@@ -1,0 +1,177 @@
+{
+  "id": "C2190",
+  "forms": [
+    {
+      "id": "CF6096",
+      "orth": "ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9706,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2532",
+      "bibliography": "CD 201a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲉⲱⲗⲓ ⲛϫⲉⲡⲓⲟⲩⲏⲃ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓϣⲟⲩϣⲱⲟⲩϣⲓ ⲙⲡⲉϥ**ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ** ⲟⲩⲟϩ ⲉⲣⲉⲡⲓⲟⲩⲏⲃ ⲉϥⲉⲧⲁⲗⲟ ⲉϫⲉⲛⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ ⲛⲟⲩⲟⲩⲧⲁϩ ⲉϥϣⲏⲡ ⲟⲩⲥⲑⲟⲓ ⲛⲥⲑⲩⲛⲟⲩϥⲓ ⲙⲡϭⲟⲓⲥ ⲡⲉ",
+      "english": "And the priest shall approach the altar, and shall take away from the sacrifice a memorial of it, and the priest shall place it on the altar: a burnt offering, a smell of sweet savour to the Lord.",
+      "source": "03_Leviticus_02",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲟⲩϣⲱⲟⲩϣⲓ",
+        1,
+        11.4
+      ],
+      [
+        "ⲟⲩⲏⲃ",
+        1,
+        10.875
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        8.891
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ",
+          1
+        ],
+        [
+          "ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ",
+          "ϫⲓⲛⲉⲣⲫⲙⲉⲩⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9167,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2189",
+      "label": "ϣⲉⲛⲉⲣⲫⲙⲉⲩⲓ",
+      "pos": "N",
+      "gloss": "remembrance"
+    },
+    {
+      "target": "C2185",
+      "label": "ϯⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "cause thought, suggest, remind"
+    },
+    {
+      "target": "C2178",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think"
+    },
+    {
+      "target": "C2181",
+      "label": "ⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2179",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉϩⲟⲩⲛ ⲉ-)",
+      "pos": "V",
+      "gloss": "think, design against"
+    },
+    {
+      "target": "C2180",
+      "label": "ⲙⲉⲉⲩⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "think upon, consider"
+    },
+    {
+      "target": "C2182",
+      "label": "ⲙⲉⲉⲩⲉ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "thought, mind"
+    },
+    {
+      "target": "C2183",
+      "label": "ⲙⲛⲧⲁⲧⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "absence of thought"
+    },
+    {
+      "target": "C2184",
+      "label": "ⲣⲉϥⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "one who thinks"
+    },
+    {
+      "target": "C2186",
+      "label": "ⲣⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "think, esteem"
+    },
+    {
+      "target": "C2187",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "V",
+      "gloss": "have mind of, remember"
+    },
+    {
+      "target": "C2188",
+      "label": "ⲣⲡⲙⲉⲉⲩⲉ",
+      "pos": "N",
+      "gloss": "remembrance, commemoration"
+    }
+  ]
+}

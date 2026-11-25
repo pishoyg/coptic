@@ -1,0 +1,243 @@
+{
+  "id": "C8200",
+  "forms": [
+    {
+      "id": "CF18853",
+      "orth": "ⲁⲙⲉⲗⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18854",
+      "orth": "ⲁⲙⲉⲗⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4331,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9283",
+      "bibliography": "DDGLC",
+      "cu_ID": "5108"
+    },
+    {
+      "id": "CS9284",
+      "bibliography": "DDGLC",
+      "cu_ID": "1360"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲕⲁⲓⲣⲟⲥ ⲛⲧⲙⲉⲧⲁⲛⲟⲓⲁ ⲕⲏ ⲛⲁⲕ ⲉϩⲣⲁⲓ ⲕⲟ ⲛ**ⲁⲙⲉⲗⲏⲥ** ⲕϭⲙⲁⲣⲓⲕⲉ ⲉⲡⲛⲟⲙⲟⲑⲉⲧⲏⲥ ·",
+      "english": "The season for repentance hath been set before thee, [but] thou art careless, and wilt be accused before the Lawgivcr.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϭⲱϣⲧ ⲙⲏⲡⲱⲥ ⲁⲕⲥⲱⲧⲙ ⲉⲧⲙⲛⲧⲁⲅⲁⲑⲟⲥ ⲙⲡϫⲟⲉⲓⲥ ⲛⲅϣⲱⲡⲉ ⲛ**ⲁⲙⲉⲗⲏⲥ** ·",
+      "english": "Watch, however, lest having heard of the goodness of God, thou becomest careless.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲛⲟ ⲛ**ⲁⲙⲉⲗⲏⲥ** · ⲛⲥⲱⲃⲉ ϩⲛⲛⲉⲛⲣⲟⲟⲩϣ ·",
+      "english": "and we remain in a state of carelessness, and we laugh at our anxieties.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲙⲁⲣⲓⲕⲉ",
+        1,
+        16.691
+      ],
+      [
+        "ⲟ",
+        4,
+        13.483
+      ],
+      [
+        "ⲉⲃⲓⲏⲛ",
+        1,
+        11.972
+      ],
+      [
+        "ⲛ",
+        9,
+        10.997
+      ],
+      [
+        "ⲥⲱⲃⲉ",
+        1,
+        10.632
+      ],
+      [
+        "ⲕⲁⲛ",
+        1,
+        10.475
+      ],
+      [
+        "ⲁⲛⲅ",
+        1,
+        9.914
+      ],
+      [
+        "ⲥⲏϩ",
+        1,
+        9.299
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        1,
+        8.792
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.653
+      ],
+      [
+        "ⲕ",
+        2,
+        7.531
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.186
+      ],
+      [
+        "ⲅ",
+        1,
+        6.917
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.916
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        6.905
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        5.974
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        5.842
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        5.702
+      ],
+      [
+        "ⲉ",
+        2,
+        5.495
+      ],
+      [
+        "ϯ",
+        1,
+        5.194
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲙⲉⲗⲏⲥ_0_node",
+          6
+        ],
+        [
+          "ⲉ_1_post_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲩⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲛ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲙⲉⲗⲏⲥ_0_node",
+          "ⲉ_1_post_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲙⲉⲗⲏⲥ",
+          "ⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲉ",
+          "ϩⲟⲩⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲛ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          "ⲁⲛⲅ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          "ⲟⲩ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲁⲙⲉⲗⲏⲥ",
+          "ⲁⲙⲉⲗⲏⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4344,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "111",
+    "grl_lemma": "ἀμελής",
+    "grl_meaning": "careless, negligent",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 81a; Preisigke 1:65"
+  }
+}

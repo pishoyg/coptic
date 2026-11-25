@@ -1,0 +1,193 @@
+{
+  "id": "C8881",
+  "forms": [
+    {
+      "id": "CF21556",
+      "orth": "ⲉⲓⲙⲏⲧⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF21557",
+      "orth": "ⲉⲓⲙⲏⲧⲉⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21560",
+      "orth": "ⲉⲓⲙⲏⲧⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.14,
+        "rank": 659,
+        "count": 180
+      }
+    },
+    {
+      "id": "CF21559",
+      "orth": "ⲓⲉⲙⲏϯ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21558",
+      "orth": "ⲉⲓⲙⲏⲧⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21561",
+      "orth": "ⲉⲙⲏⲧⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS10744",
+      "bibliography": "DDGLC",
+      "cu_ID": "1806"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲛϩⲙϩⲁⲗ ⲇⲉ ϩⲁⲧⲏⲥ ⲟⲩⲇⲉ ⲣⲙⲣⲁⲩⲏ · ⲟⲩⲇⲉ ⲣⲙⲛⲥⲟⲟⲩⲛ ⲟⲩⲇⲉ ϣⲉⲉⲣⲉ ϣⲏⲙ · ⲛⲉⲙⲛⲡⲉⲧⲛⲁⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲥ ⲉⲁⲗⲁⲁⲩ ⲛⲥⲁ · **ⲉⲓⲙⲏⲧⲓ** ⲉⲡⲛⲟⲩⲧⲉ ⲙⲁⲩⲁⲁϥ ⲡⲁⲓ ⲉⲧϭⲱϣⲧ ⲉϫⲱⲥ · ⲉⲃⲟⲗ ϩⲛⲧⲡⲉ ·",
+      "english": "There was neither a servant with her, nor a neighbour, nor any person of her acquaintance, nor any young maiden, and there was no one there to render her help in any way whatsoever, God Himself alone excepted, Who was watching her from heaven.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲡⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲕⲁⲁⲩ ⲉⲡⲁϩⲟⲩ ⲉⲧⲙⲃⲁⲡⲧⲓⲍⲉ ⲙⲙⲟⲟⲩ **ⲉⲓⲙⲏⲧⲓ** ⲉⲧⲉⲩⲭⲏ ⲙⲙⲁⲧⲉ ⲁϥⲧⲁⲩⲟⲟⲥ ⲉϫⲱⲥ ⲙⲛⲛⲉⲥϣⲏⲣⲉ",
+      "english": "And straightway the Archbishop set the children back so that he might not baptize them, and he only prayed over the woman and her children.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϥⲱϣ ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲉ ϣⲱⲡⲉ ⲁⲛⲟⲕ ⲉⲧⲣⲁϣⲟⲩ ⲙⲙⲟⲓ **ⲉⲓⲙⲏⲧⲓ** ϩⲙⲡⲉⲥⲥⲧⲁⲩⲣⲟⲥ ⲙⲡⲉⲛϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ : ⲡⲁⲓ ⲛⲧⲉⲩⲥⲧⲁⲩⲣⲟⲩ ⲛⲁⲓ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ ⲁⲩⲱ ⲁⲛⲟⲕ ϩⲱⲱⲧ ⲟⲛ ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "...",
+      "source": "On Repentance and Continence (Budge ed.)",
+      "urn": "urn:cts:copticLit:pstheophilus.repentance.budge_ed:1-59",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        5,
+        20.072
+      ],
+      [
+        "ⲙⲁⲩⲁⲁ",
+        35,
+        19.769
+      ],
+      [
+        "ⲉ",
+        136,
+        18.588
+      ],
+      [
+        "ⲛ",
+        116,
+        16.891
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        26,
+        16.545
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        2,
+        16.106
+      ],
+      [
+        "ⲡ",
+        82,
+        16.078
+      ],
+      [
+        "ⲡⲉ",
+        43,
+        15.295
+      ],
+      [
+        "ϣⲱⲛⲃ",
+        3,
+        14.539
+      ],
+      [
+        "ϥⲉϭ",
+        3,
+        14.539
+      ],
+      [
+        "ϥ",
+        56,
+        14.452
+      ],
+      [
+        "ⲧ",
+        36,
+        14.089
+      ],
+      [
+        "ⲙⲙⲁⲧⲉ",
+        8,
+        14.067
+      ],
+      [
+        "ⲙ",
+        40,
+        13.825
+      ],
+      [
+        "ϩⲛ",
+        30,
+        13.708
+      ],
+      [
+        "ϫⲓⲕⲗⲟⲙ",
+        2,
+        13.521
+      ],
+      [
+        "ⲉⲧ",
+        29,
+        13.32
+      ],
+      [
+        "ϩⲟ",
+        10,
+        13.305
+      ],
+      [
+        "ⲟⲩⲁⲁ",
+        4,
+        13.199
+      ],
+      [
+        "ⲁⲡⲟⲥⲧⲏⲑⲓⲍⲉ",
+        1,
+        13.106
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.13,
+      "rank": 576,
+      "count": 180
+    }
+  },
+  "etym": {
+    "grl_ID": "622",
+    "grl_lemma": "εἰ μή τι",
+    "grl_meaning": "if not",
+    "grl_pos": "conjunction",
+    "grl_ref": "LSJ 481b"
+  }
+}

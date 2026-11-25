@@ -1,0 +1,64 @@
+{
+  "id": "C4298",
+  "forms": [
+    {
+      "id": "CF10547",
+      "orth": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4869",
+      "bibliography": "CD 412b; ChLCS 58b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4301",
+      "label": "ⲑⲱⲙ",
+      "pos": "N",
+      "gloss": "that which shuts, fence"
+    },
+    {
+      "target": "C4296",
+      "label": "ⲧⲱⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C4299",
+      "label": "ⲧⲱⲙ (ⲉⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bridle, curb"
+    },
+    {
+      "target": "C4300",
+      "label": "ⲧⲱⲙ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "close up?"
+    },
+    {
+      "target": "C4297",
+      "label": "ⲧⲱⲙ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "shut the heart, become hardened"
+    }
+  ]
+}

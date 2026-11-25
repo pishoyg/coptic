@@ -1,0 +1,51 @@
+{
+  "id": "C4859",
+  "forms": [
+    {
+      "id": "CF11683",
+      "orth": "ⲧⲱⲱϭⲉ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5483",
+      "bibliography": "CD 465a; KoptHWb 262; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7271,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4860",
+      "label": "ⲣⲉϥⲧⲱⲱϭⲉ",
+      "pos": "N",
+      "gloss": "planter"
+    },
+    {
+      "target": "C4861",
+      "label": "ⲣⲉϥⲧⲱⲱϭⲉ",
+      "pos": "N",
+      "gloss": "planter"
+    },
+    {
+      "target": "C4858",
+      "label": "ⲧⲱⲱϭⲉ",
+      "pos": "V",
+      "gloss": "be fixed, be joined; join, attain; plant"
+    }
+  ]
+}

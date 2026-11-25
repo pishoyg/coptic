@@ -1,0 +1,96 @@
+{
+  "id": "C2141",
+  "forms": [
+    {
+      "id": "CF5990",
+      "orth": "ⲙⲁⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17581,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁⲧⲉⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11814,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2480",
+      "bibliography": "CD 196a; KoptHWb 105; DELC 125; ChLCS 29a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲟⲩϩⲁⲙϣⲉ ⲁϥⲥⲱⲗⲡ ⲛⲟⲩϣⲉ ⲁϥⲧⲁϩⲟϥ ⲉⲣⲁⲧϥ ϩⲛⲟⲩϣⲓ ⲁⲩⲱ ⲁϥⲧⲟϭϥ ϩⲛⲟⲩ**ⲙⲁⲧⲣ** ⲁϥⲧⲁⲙⲓⲟϥ ⲛⲧϩⲉ ⲛⲟⲩⲥⲙⲟⲧ ⲛⲣⲱⲙⲉ ⲉⲧⲁϩⲟϥ ⲉⲣⲁⲧϥ ϩⲛⲟⲩⲏⲓ ⲛⲧϩⲉ ⲙⲡⲥⲁ ⲛⲟⲩⲣⲱⲙⲉ",
+      "english": "The artificer having chosen a piece of wood, marks it out with a rule, and fits it with glue, and makes it as the form of a man, and as the beauty of a man, to set it up in the house.",
+      "source": "Isaiah 44",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:44",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟϭ",
+        1,
+        14.043
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        11.453
+      ],
+      [
+        "ϥ",
+        3,
+        9.277
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲁⲧⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17194,
+      "count": 1
+    }
+  },
+  "type": "foreign"
+}

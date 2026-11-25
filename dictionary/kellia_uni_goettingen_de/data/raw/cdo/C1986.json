@@ -1,0 +1,141 @@
+{
+  "id": "C1986",
+  "forms": [
+    {
+      "id": "CF5630",
+      "orth": "ⲙⲛⲧⲁⲧⲙⲡϣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13485,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2305",
+      "bibliography": "CD 179b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϩⲓⲥⲉ ⲁⲛⲁⲅⲕⲁⲍⲉ ⲙⲙⲟⲓ ⲉϣⲁϫⲉ ⲁⲩⲱ ⲧ**ⲙⲛⲧⲁⲧⲙⲡϣⲁ** ⲉⲡⲉⲓⲧⲏⲙⲁ ⲛⲁⲓ ⲉⲧⲣⲁⲕⲁⲣⲱⲓ ·",
+      "english": "Suffering compelleth me to speak, and unworthiness for undertaking the task urgeth me to hold my peace.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲡⲉⲓⲧⲏⲙⲁ",
+        1,
+        19.013
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁⲧⲙⲡϣⲁ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲙⲡϣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁⲧⲙⲡϣⲁ",
+          "ⲙⲛⲧⲁⲧⲙⲡϣⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13081,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1985",
+      "label": "ⲁⲧⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "worthless, unworthy"
+    },
+    {
+      "target": "C1982",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "be worthy, worth; be entitled, obliged"
+    },
+    {
+      "target": "C1987",
+      "label": "ⲙⲡϣⲁ",
+      "pos": "N",
+      "gloss": "worth, desert, fate"
+    },
+    {
+      "target": "C1983",
+      "label": "ⲙⲡϣⲁ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be worthy to"
+    },
+    {
+      "target": "C1988",
+      "label": "ⲣⲙⲡϣⲁ",
+      "pos": "V",
+      "gloss": "become, be worthy, deserve"
+    },
+    {
+      "target": "C1984",
+      "label": "ⲥⲙⲡϣⲁ (ⲛ-)",
+      "pos": "V",
+      "gloss": "it is right, needful"
+    }
+  ]
+}

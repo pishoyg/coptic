@@ -1,0 +1,58 @@
+{
+  "id": "C74",
+  "forms": [
+    {
+      "id": "CF255",
+      "orth": "ⲁⲗⲱⲟⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF256",
+      "orth": "ⲁⲗⲱⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF257",
+      "orth": "ⲁⲗⲱⲟⲩⲓ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲁⲗⲱⲟⲩ",
+      "dialect": "B",
+      "id": "436.1"
+    },
+    {
+      "orth": "ⲁⲗⲱⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.42,
+        "rank": 400,
+        "count": 205
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS85",
+      "bibliography": "CD 6b; KoptHWb 4, 485; ChLCS 3b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "39210",
+    "egy_lemma": "ꜥr.t",
+    "demo_num": "dm1427",
+    "demo_lemma": "ꜥrwe.t",
+    "english": "(lotus) stalk; stem",
+    "german": "Stängel (Lotos, Schilf)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/39210",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1427"
+  }
+}

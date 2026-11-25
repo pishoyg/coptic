@@ -1,0 +1,214 @@
+{
+  "id": "C477",
+  "forms": [
+    {
+      "id": "CF1941",
+      "orth": "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18463,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS578",
+      "bibliography": "CD 39b; KoptHWb 25; ChLCS 8b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧ**ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ** ⲅⲁⲣ ⲛⲛⲉⲧϩⲟⲟⲩ ϣⲁⲥϣⲓⲃⲉ ⲛⲛⲉⲧⲛⲁⲛⲟⲩⲟⲩ ⲁⲩⲱ ⲧⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲛⲣⲉϥⲥⲱⲣⲙ ϣⲁⲥ...ⲡ ⲉⲡϩⲏⲧ ⲛⲛⲁ...",
+      "english": "For the bewitching of naughtiness doth obscure things that are honest; and the wandering of concupiscence doth undermine the simple mind.",
+      "source": "Wisdom 4",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+          "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18082,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C855",
+      "type": "cf",
+      "label": "eye"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C481",
+      "label": "ϫⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "take, receive evil eye; envy"
+    },
+    {
+      "target": "C471",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C472",
+      "label": "ⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil, misfortune"
+    },
+    {
+      "target": "C470",
+      "label": "ⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad, evil"
+    },
+    {
+      "target": "C475",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil eye"
+    },
+    {
+      "target": "C476",
+      "label": "ⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "envious, wretched"
+    },
+    {
+      "target": "C480",
+      "label": "ⲙⲛⲧⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "greed, concupiscence"
+    },
+    {
+      "target": "C474",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "evil doing"
+    },
+    {
+      "target": "C473",
+      "label": "ⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be evil, hurtful"
+    },
+    {
+      "target": "C479",
+      "label": "ⲣⲉϥⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "one who casts an evil eye, enchanter"
+    },
+    {
+      "target": "C478",
+      "label": "ⲣⲉⲓⲉⲣⲃⲟⲟⲛⲉ",
+      "pos": "V",
+      "gloss": "be envious"
+    }
+  ]
+}

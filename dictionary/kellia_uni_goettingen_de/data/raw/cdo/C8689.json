@@ -1,0 +1,184 @@
+{
+  "id": "C8689",
+  "forms": [
+    {
+      "id": "CF20617",
+      "orth": "ⲅⲣⲁⲙⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF20619",
+      "orth": "ⲅⲣⲁⲙⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8715,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF20618",
+      "orth": "ⲅⲣⲁⲙⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10314",
+      "bibliography": "DDGLC",
+      "cu_ID": "8269"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲗⲓⲁⲕⲓⲙ ⲡϣⲏⲣ ⲛⲭⲉⲗⲕⲓⲟⲥ ⲡⲟⲓⲕⲟ ⲙⲛⲥⲟⲙⲛⲁⲥ ⲡⲉ**ⲅⲣⲁⲙⲙⲁ** ⲙⲛⲓⲱⲁⲥ ⲡϣⲏⲣⲉ ⲛⲁⲥ ⲡⲉⲧⲣⲡⲙⲉⲉⲩⲉ ⲁ ⲉⲉⲍⲉⲕⲓⲁⲥ ⲉⲩⲡⲱϩ ⲛⲛⲉⲩⲁⲩⲱ ⲁⲩⲛⲁϥ ⲛⲛϣⲁ ⲛϩⲣⲁⲯⲁⲕⲟⲥ",
+      "english": "And Heliakim the son of Chelcias, the steward, and Somnas the scribe, and Joas the son of Saphat the recorder came in to Ezekias, having rent their garments; and they reported to him the words of Rapsakes.",
+      "source": "II Kings 18",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϭⲓⲛⲉϣⲟⲧⲉ ⲛⲥⲁⲃⲁ ⲁⲩⲱ ⲛⲁ**ⲅⲣⲁⲙⲙⲁ** ⲛⲁⲓ ⲉⲛⲉⲩⲟ ⲛⲉϣⲱⲧ ⲛⲉ ϩⲛϩⲉⲛϩⲏⲛⲉ ⲛⲥⲱⲧⲡ ⲁⲩⲱ ⲛⲱⲛⲉ ⲉⲧⲉⲛⲁϣⲉ ⲥⲟⲩⲛⲧⲟⲩ ⲕⲉⲛⲟⲩⲃ ⲁⲩⲧⲁⲁⲩ ⲉⲧⲟⲩⲁⲅⲟⲣⲁ",
+      "english": "The merchants of Sabba and Ramma, these were thy merchants, with choice spices, and precious stones: and they brought gold to thy market.",
+      "source": "Ezekiel 27",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲟⲓⲕⲟ",
+        1,
+        19.598
+      ],
+      [
+        "ⲥⲟⲙⲛⲁⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲓⲱⲁⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲥⲁⲃⲁ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        1,
+        7.29
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲅⲣⲁⲙⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          "ⲅⲣⲁⲙⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          "ⲛⲁ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲅⲣⲁⲙⲙⲁ",
+          "ⲅⲣⲁⲙⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8266,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "439",
+    "grl_lemma": "γράμμα",
+    "grl_meaning": "picture, letter; (also:) a coin / measure of weight",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 358b; Preisigke 1:304"
+  }
+}

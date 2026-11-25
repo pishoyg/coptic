@@ -1,0 +1,167 @@
+{
+  "id": "C799",
+  "forms": [
+    {
+      "id": "CF2930",
+      "orth": "ⲏⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6304,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Göttername",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS949",
+      "bibliography": "KoptHWb 46; DELC 55"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲛⲥⲁⲟⲩ **ⲏⲥⲉ** ⲛⲧⲉⲟⲩⲱϣ ⲧⲁⲣⲓⲙⲉ ⲁⲛ ·",
+      "english": "“Why, Isis, do you not want me to cry?",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁ**ⲏⲥⲉ** ⲧⲉϥⲙⲁⲁⲩ ⲣⲟⲩⲱ ⲛⲁϥ ⲛϩⲟⲩⲛ ⲉⲡⲣⲡⲉ ⲛϩⲁⲃⲓⲛ · ⲉⲣⲉⲡⲉⲥϩⲟ ⲕⲉⲧ ⲉϩⲟⲩⲛ ⲉϫⲛⲥⲁϣϥⲉ ⲛⲟⲩⲥⲉ ⲉⲣⲉⲥⲁϣϥⲉ ⲛⲟⲩⲥⲉ ⲕⲏⲧ ⲉϩⲟⲩⲛ ⲉϫⲙⲡⲉⲥϩⲟ ·",
+      "english": "Isis, his mother, replied to him from within the temple of Habin, her face turned towards seven women(?), seven women(?) turned towards her face:",
+      "source": "PCM 1.6: Horus-Isis narrative charm for sleep or love",
+      "urn": "urn:cts:copticMag:kyprianos.tm98043.kypt74",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁ**ⲏⲥⲉ** ⲣⲟⲩⲱ ϫⲉⲁϩⲣⲟⲕ ⲡⲣⲱⲙⲉ ⲡϣⲏⲣⲉ ⲙⲡⲣⲏ · ⲉⲕⲣⲓⲙⲉ ⲉⲕⲁϣⲁϩⲟⲙ ϣⲁⲛⲧⲉⲛⲣⲙⲉⲓⲟⲟⲩⲉ ⲛⲛⲉⲕⲃⲁⲗ ϩⲱⲃⲥ ⲛⲛϭⲟⲡ ⲛⲣⲁⲧⲕ ·",
+      "english": "Isis replied, “What is wrong with you, O man, O child of the sun, crying and groaning until the tears of your eyes cover the soles of your feet?”",
+      "source": "PCM 1.7: Love spell using Horus-Isis narrative charm",
+      "urn": "urn:cts:copticMag:kyprianos.tm98063.kypt340",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲩⲱ",
+        2,
+        16.728
+      ],
+      [
+        "ϫⲓⲣⲉⲕⲣⲓⲕⲉ",
+        1,
+        15.554
+      ],
+      [
+        "ϭⲟⲡ",
+        1,
+        12.804
+      ],
+      [
+        "ⲁϩⲣⲟ",
+        1,
+        12.143
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        1,
+        10.228
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        1,
+        10.007
+      ],
+      [
+        "ϫⲉ",
+        3,
+        9.316
+      ],
+      [
+        "ⲣⲁⲧ",
+        1,
+        9.088
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        8.828
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        8.175
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        7.787
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.379
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.365
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5866,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "271",
+    "egy_lemma": "Ꜣs.t",
+    "demo_num": "d209",
+    "demo_lemma": "Ꜣs.t",
+    "english": "Isis",
+    "german": "Isis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/271",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d209"
+  }
+}

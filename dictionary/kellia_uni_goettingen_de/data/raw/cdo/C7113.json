@@ -1,0 +1,38 @@
+{
+  "id": "C7113",
+  "forms": [
+    {
+      "id": "CF16284",
+      "orth": "ⲣⲉϥϫⲁⲕ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7847",
+      "bibliography": "CD 761a; ChLCS 101a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7111",
+      "label": "ϫⲁⲕ",
+      "pos": "V",
+      "gloss": "clap (hands), flap (wings)"
+    },
+    {
+      "target": "C7112",
+      "label": "ϫⲁⲕ",
+      "pos": "N",
+      "gloss": "palm of hand, clapping, flapping"
+    }
+  ]
+}

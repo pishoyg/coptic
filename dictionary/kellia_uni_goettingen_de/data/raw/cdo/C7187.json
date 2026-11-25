@@ -1,0 +1,51 @@
+{
+  "id": "C7187",
+  "forms": [
+    {
+      "id": "CF16433",
+      "orth": "ϫⲱⲗⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7931",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    },
+    {
+      "id": "CS7932",
+      "bibliography": "CD 768b; ChLCS 101b"
+    },
+    {
+      "id": "CS7933",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    },
+    {
+      "id": "CS7934",
+      "bibliography": "CD 768b; KoptHWb 420; ChLCS 101b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7188",
+      "label": "ϫⲟⲗⲙⲥ",
+      "pos": "N",
+      "gloss": "distraction, care"
+    },
+    {
+      "target": "C7186",
+      "label": "ϫⲱⲗⲙ",
+      "pos": "V",
+      "gloss": "amuse/enjoy oneself; be implicated, involved"
+    }
+  ]
+}

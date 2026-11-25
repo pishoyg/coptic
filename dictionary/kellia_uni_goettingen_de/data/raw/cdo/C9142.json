@@ -1,0 +1,56 @@
+{
+  "id": "C9142",
+  "forms": [
+    {
+      "id": "CF22727",
+      "orth": "ⲑⲉⲃⲇⲟⲙⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF22729",
+      "orth": "ⲑⲉⲃⲇⲟⲙⲁⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF22728",
+      "orth": "ϩⲉⲃⲇⲟⲙⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2655,
+        "count": 17
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11320",
+      "bibliography": "DDGLC",
+      "cu_ID": "4575"
+    },
+    {
+      "id": "CS11321",
+      "bibliography": "DDGLC",
+      "cu_ID": "4457"
+    },
+    {
+      "id": "CS11322",
+      "bibliography": "DDGLC",
+      "cu_ID": "3712"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "592",
+    "grl_lemma": "ἑβδομάς",
+    "grl_meaning": "week",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 466b; Preisigke 1:406"
+  }
+}

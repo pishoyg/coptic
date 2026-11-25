@@ -1,0 +1,224 @@
+{
+  "id": "C3430",
+  "forms": [
+    {
+      "id": "CF8759",
+      "orth": "ⲣⲉϥⲥⲕⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6208,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3908",
+      "bibliography": "CD 328b; ChLCS 47a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲛⲁⲩ ⲇⲉ ⲛϭⲓϩⲉⲛⲣⲱⲙⲉ ⲛ**ⲣⲉϥⲥⲕⲁⲓ** ⲁⲩⲡⲱⲧ ⲁⲩϥⲓⲧϥ ⲛⲧⲟⲟⲧϥ ⲙⲡⲱⲛϣ ⲙⲡϥϫⲓⲧϥ ⲛϭⲟⲛⲥ ⲗⲁⲁⲩ ·",
+      "english": "For when certain men who were ploughing the land saw him (being carried off) they gave chase to the wolf, and took him from the beast; and the child had received no injury whatsoever.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲏⲩ ⲛϭⲓϩⲉⲛϣⲙⲙⲟ ⲉⲩⲙⲟⲟⲛⲉ ⲛⲛⲟⲩⲉⲥⲟⲟⲩ ⲁⲩⲱ ⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ ⲛ**ⲣⲉϥⲥⲕⲁⲓ** ⲁⲩⲱ ⲛϭⲙⲉ",
+      "english": "And strangers shall come and feed thy flocks, and aliens shall be thy ploughmen and vine-dressers.",
+      "source": "Isaiah 61",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛ**ⲣⲉϥⲥⲕⲁⲓ** ⲇⲉ ⲙⲛⲛϣⲟⲟⲥ · ⲛⲉⲩϣⲟⲟⲡ ϩⲛⲟⲩⲕⲱⲙⲏ ⲛⲟⲩⲱⲧ ·",
+      "english": "And the ploughmen and the shepherds were living together in the same village,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲙⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ϣⲟⲟⲥ",
+        1,
+        13.765
+      ],
+      [
+        "ⲁⲗⲗⲟⲫⲩⲗⲟⲥ",
+        1,
+        11.299
+      ],
+      [
+        "ϭⲟⲛⲥ",
+        1,
+        10.926
+      ],
+      [
+        "ⲛ",
+        6,
+        9.979
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        9.746
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        9.451
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        8.35
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        6.728
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ⲁ",
+        2,
+        6.459
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.234
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲕⲁⲓ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲕⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲟⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲥ_1_post_ⲣⲉϥⲥⲕⲁⲓ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ϭⲙⲉ_1_post_ⲣⲉϥⲥⲕⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲥⲕⲁⲓ",
+          "ⲣⲉϥⲥⲕⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲕⲁⲓ_0_node",
+          "ⲙⲛ_2_post_ϣⲟⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟⲟⲥ",
+          "ⲛ_2_post_ϣⲟⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲟⲟⲥ",
+          "ϣⲟⲟⲥ_1_post_ⲣⲉϥⲥⲕⲁⲓ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲕⲁⲓ_0_node",
+          "ⲁⲩⲱ_2_post_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϭⲙⲉ",
+          "ⲛ_2_post_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϭⲙⲉ",
+          "ϭⲙⲉ_1_post_ⲣⲉϥⲥⲕⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5768,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3429",
+      "label": "ⲥⲕⲁⲓ",
+      "pos": "V",
+      "gloss": "plough"
+    }
+  ]
+}

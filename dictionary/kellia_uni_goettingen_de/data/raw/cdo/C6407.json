@@ -1,0 +1,226 @@
+{
+  "id": "C6407",
+  "forms": [
+    {
+      "id": "CF14840",
+      "orth": "ϫⲉⲙϩⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9492,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7111",
+      "bibliography": "CD 648b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉ ⲙⲱⲩⲥⲏⲥ ⲙⲡϭⲟⲓⲥ ϫⲉϯϯϩⲟ ⲉⲣⲟⲕ ⲡⲁϭⲟⲓⲥ ⲛϯ**ϫⲉⲙϩⲟ** ⲛⲥⲁϫⲓ ⲁⲛ ϧⲁϫⲉⲛ ⲥⲁϥ ⲟⲩⲇⲉ ϧⲁϫⲉⲛ ⲅ ⲙⲫⲟⲟⲩ ⲟⲩⲇⲉ ⲓⲥϫⲉⲛ ⲉⲧⲁⲕⲉⲣϩⲏⲧⲥ ⲛⲥⲁϫⲓ ⲛⲉⲙⲡⲉⲕⲃⲱⲕ ⲥϣⲟⲙ ⲛϫⲉⲧⲁⲥⲙⲏ ⲟⲩⲟϩ ϥⲥⲁⲓⲱⲟⲩ ⲁⲛ ⲛϫⲉⲡⲁⲗⲁⲥ ⲁⲛⲟⲕ",
+      "english": "And Moses said to the Lord, I pray, Lord, I have not been sufficient in former times, neither from the time that thou hast begun to speak to thy servant: I am weak in speech, and slow-tongued.",
+      "source": "02_Exodus_04",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:04",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲁϫⲉⲛ",
+        1,
+        14.837
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.603
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        1,
+        8.284
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        7.897
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϫⲉⲙϩⲟ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϫⲉⲙϩⲟ",
+          1
+        ],
+        [
+          "ϫⲉⲙϩⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲉⲙϩⲟ",
+          1
+        ],
+        [
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϫⲉⲙϩⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϫⲉⲙϩⲟ",
+          "ϯ_1_pre_ϫⲉⲙϩⲟ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ϫⲉⲙϩⲟ",
+          "ϫⲉⲙϩⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲉⲙϩⲟ_0_node",
+          "ⲛ_1_post_ϫⲉⲙϩⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲉⲙϩⲟ",
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϫⲓ_2_post_ⲛ",
+          "ⲁⲛ_1_post_ϫⲉⲙϩⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8957,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7750",
+      "type": "cf",
+      "label": "find"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6402",
+      "label": "ϣⲡϩⲟ",
+      "pos": "V",
+      "gloss": "receive, accept"
+    },
+    {
+      "target": "C6403",
+      "label": "ϥⲓϩⲟ",
+      "pos": "V",
+      "gloss": "raise face"
+    },
+    {
+      "target": "C6411",
+      "label": "ϩⲓϩⲣⲁ⸗",
+      "pos": "ADV",
+      "gloss": "towards, \"on face of\""
+    },
+    {
+      "target": "C6398",
+      "label": "ϩⲟ",
+      "pos": "N",
+      "gloss": "face; side, edge"
+    },
+    {
+      "target": "C6399",
+      "label": "ϩⲟ ⲙⲛϩⲟ",
+      "pos": "ADV",
+      "gloss": "face to face"
+    },
+    {
+      "target": "C6406",
+      "label": "ϫⲓ ϩⲣⲁ⸗",
+      "pos": "V",
+      "gloss": "disport, amuse, occupy self, converse"
+    },
+    {
+      "target": "C6404",
+      "label": "ϫⲓϩⲟ",
+      "pos": "V",
+      "gloss": "\"take face\", respect person, favour"
+    },
+    {
+      "target": "C6405",
+      "label": "ϫⲓϩⲟ",
+      "pos": "N",
+      "gloss": "favoritism"
+    },
+    {
+      "target": "C6400",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "turn face, look"
+    },
+    {
+      "target": "C6401",
+      "label": "ϯϩⲟ",
+      "pos": "V",
+      "gloss": "\"give face\", beg, encourage"
+    },
+    {
+      "target": "C6409",
+      "label": "ⲉϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "toward, to"
+    },
+    {
+      "target": "C6410",
+      "label": "ⲛⲁϩⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "in presence of, before"
+    },
+    {
+      "target": "C6408",
+      "label": "ⲣⲉⲙϩⲣⲁ⸗",
+      "pos": "N",
+      "gloss": "respected person"
+    }
+  ]
+}

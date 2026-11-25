@@ -1,0 +1,158 @@
+{
+  "id": "C7396",
+  "forms": [
+    {
+      "id": "CF16851",
+      "orth": "ϫⲓϫⲁⲥϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18886,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8182",
+      "bibliography": "CD 790b; CED 320; KoptHWb 435; DELC 332a; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲓⲙⲱⲛ ⲡϣⲏⲣⲉ ⲛⲓⲉⲭⲟⲛⲓⲁⲥ ⲡⲛⲟϭ ⲛⲟⲩⲏⲏⲃ ⲡⲁⲓ ⲛⲧⲁϥ**ϫⲓϫⲁⲥϥⲉ** ⲙⲡⲏⲓ ϩⲙⲡⲉϥⲱⲛϩ ⲁⲩⲱ ⲁϥⲧⲁϫⲣⲉⲡⲉⲣⲡⲉ ϩⲛⲛⲉϥϩⲟⲟⲩ",
+      "english": "Simon the high priest, the son of Onias, who in his life repaired the house again, and in his days fortified the temple:",
+      "source": "Sirach 50",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:50",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ϩⲙ",
+        1,
+        7.413
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϫⲓϫⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓϫⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ϫⲓϫⲁⲥϥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲓϫⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϫⲓϫⲁⲥϥⲉ",
+          "ϥ_1_pre_ϫⲓϫⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϫⲓϫⲁⲥϥⲉ",
+          "ϫⲓϫⲁⲥϥⲉ_0_node",
+          1
+        ],
+        [
+          "ϫⲓϫⲁⲥϥⲉ_0_node",
+          "ⲙ_1_post_ϫⲓϫⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϫⲓϫⲁⲥϥⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18498,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7395",
+      "label": "ϫⲁⲥϥⲉ",
+      "pos": "N",
+      "gloss": "meaning unknown"
+    }
+  ]
+}

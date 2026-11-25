@@ -1,0 +1,729 @@
+{
+  "id": "C8464",
+  "forms": [
+    {
+      "id": "CF19812",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19813",
+      "orth": "ⲁⲣⲭⲉⲉⲡⲓⲥⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19814",
+      "orth": "ⲁⲣⲭⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19815",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲕⲟⲡⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19816",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19817",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1902,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF19818",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF19819",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF19820",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲱⲡⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19821",
+      "orth": "ⲁⲣⲭⲏⲉⲡⲓⲥⲡⲟⲕⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19822",
+      "orth": "ⲁⲣⲭⲓⲉⲡⲓⲥⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19823",
+      "orth": "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19824",
+      "orth": "ⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2552,
+        "count": 19
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9852",
+      "bibliography": "DDGLC",
+      "cu_ID": "2203"
+    },
+    {
+      "id": "CS9853",
+      "bibliography": "DDGLC",
+      "cu_ID": "7537"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁⲡⲟⲩⲣⲟ ⲭⲁⲩ ⲉⲃⲟⲗ ⲉⲑⲣⲟⲩϣⲉ ⲛⲱⲟⲩ ⲉⲛⲟⲩⲧⲟⲡⲟⲥ ⲧⲟⲧⲉ ⲁⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲓ ϫⲉϥⲛⲁⲧⲁⲗⲟϥ ⲉⲡⲓϫⲟⲓ ⲛⲉⲙⲛⲉⲛⲓⲟϯ ⲉⲑⲟⲩⲁⲃ ⲁⲃⲃⲁ ⲕⲩⲣⲓⲗⲗⲟⲥ ⲡⲓ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ⲛⲉⲙⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲡⲓⲁⲣⲭⲏⲙⲁⲛⲇⲣⲓⲧⲏⲥ ⲁⲛⲓⲕⲟⲩϫⲓ ⲛⲣⲉϥϣⲉⲙϣⲓ ϫⲟⲥ ⲛⲁϥ ϫⲉⲭⲛⲁϣⲧⲁⲗⲟⲕ ⲁⲛ ⲛⲉⲙⲡⲓⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ .",
+      "english": "Once the king had granted them leave to return to their respective homes, my father, Apa Shenoute, went to board a ship with the holy bishops—Abba Cyril and Apa Victor. However, told him he could not board alongside the archbishop.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲛⲉⲕⲗⲏⲣⲓⲕⲟⲥ ⲙⲡ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ϫⲉⲧⲛⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲛⲧⲉⲕⲙⲛⲧⲡⲉⲧⲟⲩⲁⲁⲃ ⲉⲧⲣⲉⲕⲧⲁⲙⲟⲛ ϫⲉⲟⲩ ⲡⲉ ⲡⲉⲓⲧⲩⲡⲟⲥ ⲛⲧⲁⲕⲁⲁϥ ϫⲉⲁⲛⲣϣⲡⲏⲣⲉ ⲧⲏⲣⲛ ⲉϩⲣⲁⲓ ⲉϫⲙⲡϩⲱⲃ ·",
+      "english": "the clergy said unto the Archbishop, 'We entreat thee and the holy woman to explain unto us the meaning of this symbolic act which thou hast performed, for we are all wondering about the matter, and what it meaneth.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲣⲉⲛⲓⲥⲛⲏⲟⲩ ⲑⲱⲟⲩϯ ϩⲁⲣⲟϥ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲛⲉⲙⲧⲕⲩⲣⲓⲁⲕⲏ ⲉⲩϩⲓⲟⲓ ⲛⲛⲟⲩⲙⲉⲩⲓ ϧⲁⲧⲟⲧϥ ⲙⲡⲓⲉϫⲱⲣϩ ⲧⲏⲣϥ ⲉⲩⲥⲱⲧⲉⲙ ⲉⲛⲉϥⲥⲁϫⲓ ⲛⲛⲟⲙϯ ϣⲁⲧⲉⲡⲓⲟⲩⲱⲓⲛⲓ ϣⲁⲓ ⲟⲩⲟϩ ⲡⲁⲓⲣⲏϯ ϣⲁⲩϣⲉ ⲛⲱⲟⲩ ϧⲉⲛⲟⲩⲣⲁϣⲓ ⲉⲩϯⲱⲟⲩ ⲙⲫⲛⲟⲩϯ ϫⲉⲟⲩⲏⲓ ⲅⲁⲣ ⲛⲁⲥϩⲟⲗϫ ⲛϫⲉⲧⲉϥⲥⲃⲱ ⲉⲙⲁϣⲱ ⲡⲉ ⲉϣⲱⲡ ⲇⲉ ⲛⲧⲟⲩⲓ ϣⲁⲣⲟϥ ⲛⲉϣⲁϥϯϩⲟ ⲉⲣⲱⲟⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ϫⲉⲛⲁⲥⲛⲏⲟⲩ ⲉϣⲱⲡ ⲟⲩⲟⲛ ⲟⲩⲙⲉⲩⲓ ⲉϥϣⲏⲕ ⲓⲉ ⲉϥϧⲟⲥⲓ ⲛⲧⲉⲛⲟⲩⲁⲓ ⲙⲙⲱⲧⲉⲛ ⲙⲁⲣⲉϥⲭⲁⲣⲱϥ ϣⲁⲧⲉⲛⲓⲥⲛⲏⲟⲩ ⲉⲣⲁⲛⲁⲭⲱⲣⲓⲛ ⲙⲙⲱⲟⲩ ⲟⲩⲟϩ ⲛⲧⲉϥϣⲓⲛⲓ ϧⲉⲛⲟⲩⲥⲁⲕ ⲥⲁⲡⲥⲁ ⲟⲩⲧⲱϥ ⲛⲉⲙⲏⲓ ⲙⲡⲉⲛⲑⲣⲉϥϫⲟⲥ ϧⲁⲧⲉⲛⲛⲓⲥⲛⲏⲟⲩ ⲙⲏⲡⲟⲧⲉ ⲛⲧⲉⲡⲓⲕⲟⲩϫⲓ ⲧⲁⲕⲟ ϧⲉⲛⲡⲉϥⲙⲉⲩⲓ ⲟⲩⲟϩ ⲛⲧⲉⲡⲓⲙⲕⲁϩ ⲛϩⲏⲧ ⲟⲙⲕϥ ⲉⲩⲥⲟⲡ . ⲛⲁϥⲟⲓ ⲇⲉ ⲟⲛ ⲙⲙⲁⲓϣⲉⲙⲙⲟ ⲙⲡⲁⲓⲣⲏϯ ϩⲱⲥ ⲇⲉ ⲛⲧⲉϥϣⲧⲉⲙⲧⲉϥⲣⲓ ⲥⲉⲛⲉ ⲓⲉ ⲋ ⲛϣⲉⲙⲙⲟ ⲉⲃⲟⲗ ⲙⲙⲏⲛⲓ ⲉⲩⲛⲏⲟⲩ ⲉⲃⲟⲗ ϧⲉⲛϯⲭⲱⲣⲁ ⲉⲧⲥⲁⲃⲟⲗ ⲉⲥⲱⲧⲉⲙⲧⲉϥⲥⲃⲱ ⲛⲉⲙⲡⲉϥⲕⲁϯ ⲛⲉⲙⲧⲉϥⲁⲥⲕⲩⲥⲓⲥ ⲉⲡⲓⲇⲏ ⲛⲁⲣⲉⲛⲓⲭⲣⲓⲁ ⲛⲧⲟⲧϥ ⲡⲉ ϫⲉⲟⲩⲏⲓ ⲛⲁⲣⲉⲟⲩⲟⲛ ⲟⲩⲙⲏϣ ⲟⲩⲱⲣⲡ ⲛⲁϥ ⲡⲉ ⲛⲉϣⲁⲕϫⲉⲙϩⲟⲩⲟ ⲥ ⲛⲭⲣⲓⲁ ⲛⲧⲁϥ ⲡⲉ ⲉⲩⲭⲏ ⲛⲧⲟⲧϥ ⲙⲡⲉϥⲟⲓⲕⲟⲛⲟⲙⲟⲥ ⲉⲧϣⲉⲙϣⲓ ϧⲉⲛⲡⲉϥⲏⲓ ⲛⲥⲏⲟⲩ ⲛⲓⲃⲉⲛ . ⲟⲩⲙⲏϣ ⲅⲁⲣ ⲛⲥⲟⲡ ⲁ ⲁⲡⲁ ⲑⲉⲟⲫⲓⲗⲟⲥ ⲡⲓ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ⲟⲩⲱϣ ⲉⲧⲁϩⲟϥ ⲛⲧⲉϥⲁⲓϥ ⲛⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲉⲑⲙⲟⲩⲓ ⲙⲡⲉϥⲑⲱⲧ ⲁⲗⲗⲁ ⲁϥⲫⲱⲧ ⲛⲧⲟⲧϥ ⲉϣⲧⲉⲙⲉⲣⲡⲁⲓϩⲱⲃ .",
+      "english": "The brothers would gather with him on the Sabbath and on Sunday. Throughout the entire night, they would share their thoughts with him, listening to his strong words until dawn. When they left him, they gave glory to God, for his teaching was very sweet to them. If they came to him and he noticed any deep or grave thought troubling them, he would beseech them, saying: ‘My brothers, if any one of you is troubled by a deep or serious thought, let him remain silent until the other brothers have gone, and then let him ask me privately, in secret, between the two of us. Let him not speak before his brothers, lest perhaps he lose the little one through his own thoughts and be overcome at the same time by pain of heart.’ He so loved strangers that in his cell he would admit five or six strangers daily who came from distant regions to hear his wisdom, understanding, and ascetic practices. For he possessed spiritual gifts and to him everyone would send offerings such that he had more than two hundred charismata. All of these were managed by the steward, who at all times served in his house. Often Apa Theophilus sought to apprehend him and make him bishop of Thmouis, but he fled so that this would not happen.",
+      "source": "Bohairic Lausiac History - Part 3",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:38",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲛⲟⲩⲟⲉⲓϣ ⲉϣⲓⲏⲧ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲑⲉⲱⲫⲓⲗⲟⲥ ⲡ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ·",
+      "english": "One time, the blessed Abba Theophilus the archbishop went to Scetis.",
+      "source": "Apophthegmata Patrum Sahidic 114: Theophilus Beta",
+      "urn": "urn:cts:copticLit:ap.114.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲫⲟϩ ⲇⲉ ⲉⲡⲓⲡⲉⲗⲁⲅⲟⲥ ⲛⲧⲉⲫⲓⲟⲙ ⲁϥϫⲟⲩϣⲧ ⲉⲡϣⲱⲓ ⲛϫⲉⲁⲃⲃⲁ ⲕⲩⲣⲓⲗⲗⲟⲥ ⲡⲓ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ⲁϥⲛⲁⲩ ⲉⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲉϥϧⲉⲛⲑⲙⲏϯ ⲛϯϭⲏⲡⲓ ⲛⲉⲙⲡⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁϥⲱϣ ⲉⲃⲟⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲥⲙⲟⲩ ⲉⲣⲟⲛ ⲡⲉⲛⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ ⲏⲗⲓⲁⲥ ⲛⲃⲉⲣⲓ .",
+      "english": "As the bishops’ ship reached the open sea, Abba Cyril looked up and saw Apa Shenoute and his disciple being borne aloft in the midst of the cloud. He exclaimed, ‘Bless us, holy father, you are the new Elijah!’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲛⲟⲩⲟⲉⲓϣ ⲛϭⲓⲡⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛϣⲓⲏⲧ ϣⲁⲡ**ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ** ⲛⲣⲁⲕⲟⲧⲉ .",
+      "english": "He went once, that is the presbyter of Scetis, to the archbishop of Alexandria",
+      "source": "Apophthegmata Patrum Sahidic 019: Presbyter",
+      "urn": "urn:cts:copticLit:ap.19.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲩⲣⲓⲗⲗⲟⲥ",
+        8,
+        20.888
+      ],
+      [
+        "ⲃⲓⲕⲧⲱⲣ",
+        2,
+        16.11
+      ],
+      [
+        "ⲁⲃⲃⲁ",
+        4,
+        15.505
+      ],
+      [
+        "ⲁⲡⲁ",
+        5,
+        14.96
+      ],
+      [
+        "ⲑⲉⲟⲫⲓⲗⲟⲥ",
+        1,
+        14.695
+      ],
+      [
+        "ⲉⲣⲡⲣⲟⲥⲕⲩⲛⲓⲛ",
+        1,
+        14.695
+      ],
+      [
+        "ⲡⲓ",
+        18,
+        14.28
+      ],
+      [
+        "ⲗⲟⲓⲡⲟⲛ",
+        2,
+        13.741
+      ],
+      [
+        "ⲟⲩⲁⲃ",
+        6,
+        13.432
+      ],
+      [
+        "ϥ",
+        16,
+        12.424
+      ],
+      [
+        "ⲛⲉⲙ",
+        10,
+        12.208
+      ],
+      [
+        "ϩⲱⲗ",
+        2,
+        12.203
+      ],
+      [
+        "ϣⲉⲛⲟⲩϯ",
+        2,
+        11.428
+      ],
+      [
+        "ⲥⲁⲧⲟⲧ",
+        2,
+        11.002
+      ],
+      [
+        "ⲉⲑ",
+        4,
+        10.59
+      ],
+      [
+        "ϩⲓⲧⲟⲧ",
+        2,
+        10.324
+      ],
+      [
+        "ⲁ",
+        8,
+        9.989
+      ],
+      [
+        "ⲥⲱⲟⲩⲛ",
+        2,
+        9.927
+      ],
+      [
+        "ⲉ",
+        7,
+        9.439
+      ],
+      [
+        "ⲭⲱ",
+        2,
+        9.384
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲁⲕⲟⲧⲉ",
+        17,
+        20.424
+      ],
+      [
+        "ⲡ",
+        98,
+        17.949
+      ],
+      [
+        "ⲁⲅⲓⲟⲥ",
+        4,
+        17.398
+      ],
+      [
+        "ⲇⲏⲙⲏⲧⲣⲓⲟⲥ",
+        6,
+        17.317
+      ],
+      [
+        "ϩⲁⲅⲓⲟⲥ",
+        2,
+        17.206
+      ],
+      [
+        "ⲁⲡⲁ",
+        14,
+        16.377
+      ],
+      [
+        "ⲑⲉⲱⲫⲓⲗⲟⲥ",
+        2,
+        16.206
+      ],
+      [
+        "ⲁⲑⲁⲛⲁⲥⲓⲟⲥ",
+        4,
+        16.036
+      ],
+      [
+        "ϥ",
+        60,
+        15.85
+      ],
+      [
+        "ⲇⲓⲁⲧⲣⲉⲡⲉ",
+        2,
+        15.621
+      ],
+      [
+        "ⲗⲉⲓⲧⲟⲩⲣⲅⲓⲁ",
+        2,
+        15.206
+      ],
+      [
+        "ⲑⲉⲟⲇⲱⲥⲓⲟⲥ",
+        2,
+        15.206
+      ],
+      [
+        "ⲁ",
+        43,
+        14.931
+      ],
+      [
+        "ⲕⲗⲏⲣⲓⲕⲟⲥ",
+        3,
+        14.437
+      ],
+      [
+        "ⲑⲉⲟⲫⲓⲗⲟⲥ",
+        2,
+        14.398
+      ],
+      [
+        "ⲉ",
+        40,
+        14.391
+      ],
+      [
+        "ⲁⲣⲭⲏⲇⲓⲁⲕⲟⲛⲟⲥ",
+        2,
+        14.206
+      ],
+      [
+        "ⲕⲱⲥⲧⲁⲛϯⲛⲟⲩⲡⲟⲗⲓⲥ",
+        1,
+        14.206
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲓⲁⲛⲏ",
+        1,
+        14.206
+      ],
+      [
+        "ⲕⲉϩⲉⲗⲗⲟ",
+        1,
+        14.206
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          9
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          4
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          2
+        ],
+        [
+          "ⲕⲩⲣⲓⲗⲗⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲉⲑ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲉⲑ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲃ_2_post_ⲉⲑ",
+          "ⲕⲩⲣⲓⲗⲗⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲕⲩⲣⲓⲗⲗⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲛⲉⲙ_2_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲁⲡⲁ",
+          "ⲁⲡⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          45
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          62
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          19
+        ],
+        [
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲛ",
+          13
+        ],
+        [
+          "ⲕⲱⲛⲥⲧⲁⲛⲧⲓⲛⲟⲩⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          4
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          2
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲕⲱⲥⲧⲁⲛϯⲛⲟⲩⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲉⲩⲏⲣⲟⲥ_2_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲁⲛⲧⲓⲟⲭⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲉⲩⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲏ_3_post_ⲕⲉⲗⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲧⲛ_4_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲣⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲟⲩⲁⲁⲃ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          11
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          7
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲕⲱⲛⲥⲧⲁⲛⲧⲓⲛⲟⲩⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲡ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ϥ_2_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲕⲱⲥⲧⲁⲛϯⲛⲟⲩⲡⲟⲗⲓⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟⲩⲁⲁⲃ",
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          "ⲙ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ",
+          "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲧⲣⲓⲁⲣⲭⲏⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲁⲡⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲥⲉⲩⲏⲣⲟⲥ_2_post_ⲁⲡⲁ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲁⲛⲧⲓⲟⲭⲓⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲉ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲩ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          "ϩⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲁ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲡⲉϥ_3_post_ⲑⲣⲟⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲟⲗⲓⲥ_3_post_ⲧⲉⲓ",
+          "ⲛ_4_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲕⲉⲗⲉⲩⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲕⲉⲗⲉⲩⲉ_2_post_ⲉⲧ",
+          "ⲛⲏ_3_post_ⲕⲉⲗⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲏ_3_post_ⲕⲉⲗⲉⲩⲉ",
+          "ⲧⲛ_4_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ_0_node",
+          "ⲡⲉⲧⲣⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲣⲟⲥ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          "ⲡ_2_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲡⲉⲧⲟⲩⲁⲁⲃ",
+          "ⲡⲉⲧⲟⲩⲁⲁⲃ_1_post_ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.53,
+      "rank": 941,
+      "count": 84
+    },
+    "B": {
+      "rate": 0.19,
+      "rank": 1644,
+      "count": 16
+    }
+  },
+  "etym": {
+    "grl_ID": "294",
+    "grl_lemma": "ἀρχιεπίσκοπος",
+    "grl_meaning": "archbishop",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 252b; Preisigke 1:220"
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "id": "C2800",
+  "forms": [
+    {
+      "id": "CF7441",
+      "orth": "ⲡⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 26.33,
+        "rank": 52,
+        "count": 4155
+      }
+    },
+    {
+      "orth": "ⲡⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 25.21,
+        "rank": 59,
+        "count": 2138
+      }
+    },
+    {
+      "orth": "ⲛⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 29.14,
+        "rank": 52,
+        "count": 2471
+      }
+    },
+    {
+      "orth": "ⲛⲁⲓ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 20.91,
+        "rank": 65,
+        "count": 3299
+      }
+    },
+    {
+      "orth": "ⲑⲁⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.55,
+        "rank": 384,
+        "count": 216
+      }
+    },
+    {
+      "orth": "ⲧⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.3,
+        "rank": 130,
+        "count": 1467
+      }
+    },
+    {
+      "orth": "ⲫⲁⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 24.78,
+        "rank": 60,
+        "count": 2102
+      }
+    },
+    {
+      "orth": "ⲡⲉⲓ",
+      "dialect": "A",
+      "id": "1254.3"
+    },
+    {
+      "orth": "ⲧⲉⲓ",
+      "dialect": "A",
+      "id": "1254.4"
+    },
+    {
+      "orth": "ⲛⲉⲓ",
+      "dialect": "A",
+      "id": "1254.5"
+    },
+    {
+      "orth": "ⲡⲉⲉⲓ",
+      "dialect": "A",
+      "id": "1254.6"
+    },
+    {
+      "orth": "ⲧⲉⲉⲓ",
+      "dialect": "A",
+      "id": "1254.7"
+    },
+    {
+      "orth": "ⲛⲉⲉⲓ",
+      "dialect": "A",
+      "id": "1254.8"
+    },
+    {
+      "orth": "ⲡⲉⲓ",
+      "dialect": "F",
+      "id": "1254.9"
+    },
+    {
+      "orth": "ⲧⲉⲓ",
+      "dialect": "F",
+      "id": "1254.10"
+    },
+    {
+      "orth": "ⲛⲉⲓ",
+      "dialect": "F",
+      "id": "1254.11"
+    },
+    {
+      "orth": "ⲡⲉⲉⲓ",
+      "dialect": "L",
+      "id": "1254.12"
+    },
+    {
+      "orth": "ⲧⲉⲉⲓ",
+      "dialect": "L",
+      "id": "1254.13"
+    },
+    {
+      "orth": "ⲛⲉⲉⲓ",
+      "dialect": "L",
+      "id": "1254.14"
+    }
+  ],
+  "grammar": {
+    "pos": "PDEM",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Dem. Pron."
+  },
+  "senses": [
+    {
+      "id": "CS3202",
+      "bibliography": "CD 259a; CED 124; KoptHWb 145; DELC 158; ChLCS 36b; LCG § 56"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲡⲁⲓ** ⲣⲏϯ ⲁϥⲓ ⲉⲃⲟⲗ ϩⲓⲧⲉⲛⲛⲉϥⲓⲟϯ ⲁϥϩⲱⲗ ⲉⲡϣⲁϥⲉ .",
+      "english": "Thus he left his parents and went into the desert.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲡⲁⲓ** ⲛⲟⲩⲟⲥⲉ ⲁⲛ ⲡⲉ .",
+      "english": "This is not damaging.",
+      "source": "Apophthegmata Patrum Sahidic 027: Pistamon 1",
+      "urn": "urn:cts:copticLit:ap.27.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱⲧⲉⲙ ⲛⲧⲁϫⲱ ⲉⲣⲱⲧⲉⲛ ⲙ**ⲡⲁⲓ**ⲕⲉϩⲱⲃ ⲛϣⲫⲏⲣⲓ .",
+      "english": "Listen, let me tell you also this wonderful thing.",
+      "source": "Life of Isaac of Alexandria - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:42-48",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲛⲁⲓ** ⲇⲉ ⲛⲉⲣⲉϣⲟⲙⲛⲧ ⲛϣⲏⲣⲉ ϣⲟⲟⲡ ⲛⲁⲩ ·",
+      "english": "And they had three children.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩϭⲛⲟⲩϥ ϫⲉⲁⲛ ⲁⲕⲥⲱⲧⲉⲙ ⲉ**ⲧⲁⲓ**ⲥⲙⲏ ⲉⲧⲁⲥⲓ ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲉ ϯⲛⲟⲩ ;",
+      "english": "They turned to him and asked, ‘Did you hear the same voice from heaven?’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲧⲁⲓ** ⲧⲉ ⲧⲙⲛⲧϣⲙⲙⲟ · ⲻ",
+      "english": "This is being a stranger.'",
+      "source": "Apophthegmata Patrum Sahidic 116: Pistus 01",
+      "urn": "urn:cts:copticLit:ap.116.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲉ",
+        607,
+        26.026
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        525,
+        25.875
+      ],
+      [
+        "ϥ",
+        1325,
+        25.449
+      ],
+      [
+        "ⲛⲏⲉⲧⲉ",
+        229,
+        25.216
+      ],
+      [
+        "ⲡⲉ",
+        646,
+        25.154
+      ],
+      [
+        "ⲁ",
+        981,
+        24.714
+      ],
+      [
+        "ⲁ",
+        978,
+        24.7
+      ],
+      [
+        "ⲉⲧ",
+        649,
+        24.188
+      ],
+      [
+        ".",
+        697,
+        23.861
+      ],
+      [
+        "ⲛ",
+        869,
+        23.79
+      ],
+      [
+        "ⲉ",
+        739,
+        23.515
+      ],
+      [
+        "ⲟⲩ",
+        775,
+        23.458
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        341,
+        23.435
+      ],
+      [
+        "ϥ",
+        828,
+        23.415
+      ],
+      [
+        ".",
+        620,
+        23.355
+      ],
+      [
+        "ⲛ",
+        765,
+        23.239
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        645,
+        22.989
+      ],
+      [
+        "ⲫ",
+        451,
+        22.925
+      ],
+      [
+        "ⲙ",
+        556,
+        22.85
+      ],
+      [
+        "ϫⲱ",
+        290,
+        22.818
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        278,
+        31.838
+      ],
+      [
+        "ⲁ",
+        2319,
+        25.465
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        899,
+        25.099
+      ],
+      [
+        "ϥ",
+        2112,
+        24.537
+      ],
+      [
+        "ⲡⲉ",
+        1267,
+        24.312
+      ],
+      [
+        "ⲉ",
+        1741,
+        23.997
+      ],
+      [
+        "ⲡ",
+        1729,
+        23.647
+      ],
+      [
+        "ⲉⲧ",
+        1124,
+        23.524
+      ],
+      [
+        "ⲉⲛⲧ",
+        699,
+        23.423
+      ],
+      [
+        "ⲛⲧ",
+        686,
+        23.379
+      ],
+      [
+        "ⲛⲁ",
+        1210,
+        23.293
+      ],
+      [
+        "ⲛ",
+        1632,
+        22.709
+      ],
+      [
+        "ⲉⲧⲉ",
+        371,
+        21.773
+      ],
+      [
+        ".",
+        626,
+        21.31
+      ],
+      [
+        "ⲙ",
+        805,
+        21.192
+      ],
+      [
+        "ⲟⲩ",
+        802,
+        21.045
+      ],
+      [
+        "ϫⲉ",
+        626,
+        20.899
+      ],
+      [
+        "ϭⲉ",
+        284,
+        20.782
+      ],
+      [
+        "ⲩ",
+        647,
+        20.705
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        206,
+        20.595
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲓ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁⲓ_0_node",
+          "ⲛ_1_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲓ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 55.99,
+      "rank": 25,
+      "count": 8886
+    },
+    "B": {
+      "rate": 12.84,
+      "rank": 93,
+      "count": 1090
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2445",
+      "type": "cf",
+      "label": "Dem. Pron. pl."
+    },
+    {
+      "target": "C4150",
+      "type": "cf",
+      "label": "Dem. Pron. sg. f."
+    }
+  ],
+  "etym": {
+    "egy_num": "851661",
+    "egy_lemma": "pꜣj",
+    "demo_num": "d1920",
+    "demo_lemma": "pꜣj",
+    "english": "[Dem.Pron. sg.m.]",
+    "german": "[Dem.Pron. sg.m.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/851661",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1920"
+  }
+}

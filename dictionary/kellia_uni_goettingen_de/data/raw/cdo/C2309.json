@@ -1,0 +1,154 @@
+{
+  "id": "C2309",
+  "forms": [
+    {
+      "id": "CF6355",
+      "orth": "ⲣⲙⲟⲉⲓϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20387,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2666",
+      "bibliography": "CD 211b; KoptHWb 89; ChLCS 25a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲉⲟⲩⲇⲟⲩⲝ ⲅⲉⲛⲏⲥⲉⲛ ⲟⲩⲇⲟⲩⲝ ⲛϩⲉⲗⲗⲏⲛ ⲧⲟⲗⲙⲁ ⲉϫⲟⲟⲥ · ϩⲙⲡⲧⲣⲉϥⲉⲓ ⲉⲡⲉⲓⲙⲁ · ϫⲉⲁⲓ**ⲣⲙⲟⲉⲓϩⲉ** ⲣⲱ ϫⲉⲕⲣⲟⲟⲩⲧ",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 263-267",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:11-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟⲟⲩⲧ",
+        1,
+        14.511
+      ],
+      [
+        "ⲣⲱ",
+        1,
+        11.389
+      ],
+      [
+        "ϫⲉ",
+        2,
+        9.146
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲣⲙⲟⲉⲓϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲱ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲕ_3_post_ⲣⲟⲟⲩⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣⲙⲟⲉⲓϩⲉ",
+          "ⲓ_1_pre_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲣⲙⲟⲉⲓϩⲉ",
+          "ⲣⲙⲟⲉⲓϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲙⲟⲉⲓϩⲉ_0_node",
+          "ⲣⲱ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          "ϫⲉ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲣⲙⲟⲉⲓϩⲉ",
+          "ⲕ_3_post_ⲣⲟⲟⲩⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20001,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2307",
+      "label": "ⲙⲟⲉⲓϩⲉ",
+      "pos": "N",
+      "gloss": "wonder"
+    },
+    {
+      "target": "C2308",
+      "label": "ⲙⲟⲉⲓϩⲉ",
+      "pos": "N",
+      "gloss": "wonder"
+    }
+  ]
+}

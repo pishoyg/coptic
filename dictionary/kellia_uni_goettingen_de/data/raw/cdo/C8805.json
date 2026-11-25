@@ -1,0 +1,323 @@
+{
+  "id": "C8805",
+  "forms": [
+    {
+      "id": "CF21186",
+      "orth": "ⲇⲓⲥⲧⲁⲍⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21188",
+      "orth": "ⲇⲓⲥⲧⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4831,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF21187",
+      "orth": "ⲇⲓⲥⲇⲁⲍⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7361,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF21189",
+      "orth": "ⲇⲓⲥⲧⲁⲍⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21190",
+      "orth": "ⲇⲓⲥⲧⲁⲍⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21191",
+      "orth": "ⲇⲓⲥⲧⲁⲍⲏ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10558",
+      "bibliography": "DDGLC",
+      "cu_ID": "626"
+    },
+    {
+      "id": "CS10559",
+      "bibliography": "DDGLC",
+      "cu_ID": "5083"
+    },
+    {
+      "id": "CS10560",
+      "bibliography": "DDGLC",
+      "cu_ID": "5084"
+    },
+    {
+      "id": "CS10561",
+      "bibliography": "DDGLC",
+      "cu_ID": "3777"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲙⲟⲛⲟⲛ ⲙⲡⲣ**ⲇⲓⲥⲧⲁⲍⲉ** ⲟⲩⲇⲉ ⲙⲡⲣⲕⲣⲙⲣⲙ",
+      "english": "only ye must neither feel any doubt [about what I say], nor must ye murmur.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲓⲛⲉ ⲇⲉ ⲛⲛⲉⲥⲛⲏⲩ ⲁⲩ**ⲇⲓⲥⲧⲁⲍⲉ** · ϩⲉⲛⲕⲟⲟⲩⲉ ⲇⲉ ⲁⲩⲡⲓⲥⲧⲉⲩⲉ ⲛⲁϥ",
+      "english": "Some of the brothers were doubtful, but others believed him.",
+      "source": "Life of Apa Phib part 2",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:11-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϭⲱϣⲧ ⲛϭⲓⲡⲉⲡⲣⲁⲅⲙⲁⲧⲉⲩⲧⲏⲥ ⲁϥⲛⲁⲩ ⲉⲁⲡⲁ ⲗⲟⲅⲅⲓⲛⲟⲥ ⲡⲉⲛⲧⲁϥⲧⲟⲩⲛⲉⲥ ⲡⲉⲧⲙⲟⲟⲩⲧ ⲁⲩⲱ ⲁϥⲉⲓⲣⲉ ⲛϩⲁϩ ⲛϣⲡⲏⲣⲉ ϩⲛⲧⲉⲭⲱⲣⲁ ⲛⲧⲗⲩⲕⲓⲁ ⲟⲛ ⲁϥ**ⲇⲓⲥⲧⲁⲍⲉ** ϫⲉⲛⲧⲟϥ ⲁⲛ ⲡⲉ ⲁⲗⲗⲁ ⲟⲩⲁ ⲡⲉ ⲉϥⲉⲓⲛⲉ ⲙⲙⲟϥ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 3",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:17-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲩⲕⲓⲁ",
+        1,
+        15.106
+      ],
+      [
+        "ⲕⲣⲙⲣⲙ",
+        2,
+        14.936
+      ],
+      [
+        "ⲙⲟⲛⲟⲛ",
+        2,
+        14.076
+      ],
+      [
+        "ⲙⲡⲣ",
+        4,
+        13.714
+      ],
+      [
+        "ⲙⲉϣⲁⲕ",
+        1,
+        12.067
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        10.954
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        10.561
+      ],
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        9.733
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.898
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        8.607
+      ],
+      [
+        "ⲛⲧⲟϥ",
+        1,
+        7.535
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        6.905
+      ],
+      [
+        "ϫⲉ",
+        2,
+        6.824
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        5.842
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ⲁ",
+        2,
+        5.722
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        4.991
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.664
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.186
+      ],
+      [
+        "ⲩ",
+        1,
+        3.488
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲛ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          3
+        ],
+        [
+          "ϫⲉ_1_post_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲟⲛ_2_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲕⲣⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_2_post_ⲕⲣⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲛ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲁ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ϥ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          "ϫⲉ_1_post_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_1_post_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲛⲧⲟϥ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲙⲟⲛⲟⲛ_2_pre_ⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲟⲛⲟⲛ_2_pre_ⲟⲩ",
+          "ⲙⲡⲣ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          1
+        ],
+        [
+          "ⲙⲡⲣ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲕⲣⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲕⲣⲙⲣⲙ",
+          "ⲙⲡⲣ_2_post_ⲕⲣⲙⲣⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲓⲥⲧⲁⲍⲉ",
+          "ⲇⲓⲥⲧⲁⲍⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4417,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "558",
+    "grl_lemma": "διστάζω",
+    "grl_meaning": "be uncertain, be doubtful",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 437b; Preisigke 1:391"
+  }
+}

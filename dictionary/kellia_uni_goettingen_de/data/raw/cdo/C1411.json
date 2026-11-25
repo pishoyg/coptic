@@ -1,0 +1,262 @@
+{
+  "id": "C1411",
+  "forms": [
+    {
+      "id": "CF4243",
+      "orth": "ⲕⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6607,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲕⲓϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1826,
+        "count": 18
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1634",
+      "bibliography": "CD 123b; KoptHWb 71; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲉⲓⲛⲉ ⲙⲙⲏⲧⲉ ⲛ**ⲕⲓⲧⲉ** ⲙⲛϩⲉⲛⲁⲙⲫⲓⲧⲁⲡⲟⲥ ⲁⲩⲱ ⲙⲏⲧ ⲛⲭⲁⲗⲕⲓⲟⲛ ⲙⲛϩⲉⲛⲥⲕⲉⲩⲏ ⲛϣⲁϣⲟⲩ ⲛⲏⲣⲡ ⲁⲩⲱ ϩⲉⲛⲥⲟⲩⲟ ⲙⲛⲟⲩⲉⲓⲱⲧ ⲙⲛⲟⲩⲛⲟⲉⲓⲧ ⲙⲛⲟⲩϩⲛⲁⲁⲩ ⲛⲉⲗⲉⲗϣⲱⲟⲩⲉ ⲙⲛϩⲉⲛⲕⲉⲁⲙⲟⲥ ⲁⲩⲱ ⲟⲩⲁⲣϣⲓⲛ",
+      "english": "brought ten embroidered beds, (with double coverings,) and ten caldrons, and earthenware, and wheat, and barley, and flour, and meal, and beans, and pulse,",
+      "source": "II Samuel 17",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲉⲓ ⲇⲉ ⲉϩⲣⲁⲓ ⲉⲕⲁⲫⲁⲣⲛⲁⲟⲩⲙ ⲁⲛⲉⲧϫⲓⲕⲓⲧⲉ ϯⲡⲉⲩⲟⲩⲟⲓ ⲉⲡⲉⲧⲣⲟⲥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲉⲣⲉ ⲡⲉⲧⲛⲥⲁϩ ϯⲧⲉϥ**ⲕⲓⲧⲉ** .",
+      "english": "When they had come to Capernaum, those who collected the didrachma coins came to Peter, and said, 'Doesn't your teacher pay the didrachma?'",
+      "source": "40_Matthew_17",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲅϫⲓϯⲟⲩ ⲛⲥⲓⲕⲗⲟⲥ ⲕⲁⲧⲁⲁⲡⲉ ⲕⲁⲧⲁⲧ**ⲕⲓⲧⲉ** ⲉⲧⲟⲩⲁⲁⲃ ⲁⲩⲱ ⲛⲅϫⲓ ⲛϫⲟⲩⲱⲧ ⲛϩⲟⲃⲟⲗⲟⲥ ⲉⲡⲥⲓⲕⲗⲟⲥ",
+      "english": "thou shalt even take five shekels a head; thou shalt take them according to the holy didrachm, twenty oboli to the shekel.",
+      "source": "Numbers 3",
+      "urn": "urn:cts:copticLit:ot.num.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲥⲁϩ",
+        1,
+        11.638
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        9.996
+      ],
+      [
+        "ⲡⲉⲧⲛ",
+        1,
+        9.441
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        9.135
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        8.919
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        8.009
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        7.725
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.379
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        7.365
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        7.16
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ϯ",
+        1,
+        5.931
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.653
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲓⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲏⲧⲉ_1_pre_ⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_1_post_ⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲓⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲓⲧⲉ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲏⲧⲉ_1_pre_ⲕⲓⲧⲉ",
+          "ⲕⲓⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲓⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ϩⲉⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲙⲫⲓⲧⲁⲡⲟⲥ",
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_1_post_ⲕⲓⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲙⲫⲓⲧⲁⲡⲟⲥ_1_post_ⲕⲓⲧⲉ",
+          "ⲁⲩⲱ_3_post_ⲭⲁⲗⲕⲓⲟⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6169,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1412",
+      "label": "ϭⲓⲥⲕⲓⲧⲉ",
+      "pos": "N",
+      "gloss": "half of kite, drachma"
+    }
+  ],
+  "etym": {
+    "egy_num": "162490",
+    "egy_lemma": "qd.t",
+    "demo_num": "d6478",
+    "demo_lemma": "qd.t",
+    "english": "kite (a measure of weight)",
+    "german": "Kite (Gewicht)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/162490",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6478"
+  }
+}

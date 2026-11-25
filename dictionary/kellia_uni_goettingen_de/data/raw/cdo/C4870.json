@@ -1,0 +1,91 @@
+{
+  "id": "C4870",
+  "forms": [
+    {
+      "id": "CF31862",
+      "orth": "ⲧⲱϭⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31861",
+      "orth": "ⲧⲱϭⲉⲣ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲱⲕⲣ",
+      "dialect": "S",
+      "id": "1702.1"
+    },
+    {
+      "orth": "ⲧⲱⲣϭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11750,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲱⲣⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11583,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲟϭⲣ†",
+      "dialect": "S",
+      "id": "1702.4"
+    },
+    {
+      "orth": "ⲧⲟⲣⲕ†",
+      "dialect": "S",
+      "id": "1702.5"
+    },
+    {
+      "orth": "ⲧⲁⲕⲣ†",
+      "dialect": "S",
+      "id": "1702.6"
+    },
+    {
+      "orth": "ⲧⲁⲣⲕ†",
+      "dialect": "S",
+      "id": "1702.7"
+    },
+    {
+      "orth": "ⲧⲁⲣϭ†",
+      "dialect": "A",
+      "id": "1702.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5495",
+      "bibliography": "CD 466b; CDC 72b; CED 207; KoptHWb 263; DELC 227b; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4871",
+      "label": "ⲧⲣⲟϭ",
+      "pos": "N",
+      "gloss": "bandage? band? fixing?"
+    }
+  ],
+  "etym": {
+    "egy_num": "854588",
+    "egy_lemma": "dqr",
+    "english": "pin; banish (or similar)",
+    "german": "anheften; verbannen (o. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854588"
+  }
+}

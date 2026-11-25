@@ -1,0 +1,124 @@
+{
+  "id": "C3646",
+  "forms": [
+    {
+      "id": "CF9197",
+      "orth": "ϫⲓⲛⲥⲱⲛϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11449,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4149",
+      "bibliography": "CD 349a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡ**ϫⲓⲛⲥⲱⲛϩ** ⲛϩⲁⲛⲟⲩⲣⲱⲟⲩ ϧⲉⲛϩⲁⲛⲡⲉⲇⲏⲥ ⲛⲉⲙⲛⲏ ⲉⲧⲧⲁⲓⲏⲟⲩⲧ ⲛⲧⲱⲟⲩ ϧⲉⲛϩⲁⲛⲡⲉⲇⲏⲥ ⲛϫⲓϫ ⲙⲃⲉⲛⲓⲡⲓ",
+      "english": "to execute vengeance on the nations, and punishments among the peoples;",
+      "source": "19_Psalmi_149",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:149",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲣⲱⲟⲩ",
+        1,
+        12.457
+      ],
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.579
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ⲡ",
+        1,
+        5.619
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲓⲛⲥⲱⲛϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 10891,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3645",
+      "label": "ⲙⲁ ⲛⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C3647",
+      "label": "ⲥⲛⲁϩ",
+      "pos": "N",
+      "gloss": "bond, fetter"
+    },
+    {
+      "target": "C3643",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "V",
+      "gloss": "be bound, fettered; bind, fetter"
+    },
+    {
+      "target": "C3644",
+      "label": "ⲥⲱⲛϩ",
+      "pos": "N",
+      "gloss": "bound, fetter"
+    }
+  ]
+}

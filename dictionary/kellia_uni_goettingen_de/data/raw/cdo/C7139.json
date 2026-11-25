@@ -1,0 +1,53 @@
+{
+  "id": "C7139",
+  "forms": [
+    {
+      "id": "CF16336",
+      "orth": "ϫⲟⲩⲕⲉⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7875",
+      "bibliography": "CD 764a; ChLCS 101a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲥⲉⲙⲛⲓ ⲛϩⲁⲛⲕⲁⲛⲱⲛ ⲛⲛⲓⲙⲟⲩⲛⲁⲭⲟⲥ ⲛⲉⲙϩⲁⲛⲉⲡⲓⲥⲧⲟⲗⲏ ⲉⲩ**ϫⲟⲕⲉⲣ** ⲟⲩⲟϩ ⲉⲩⲟⲓ ⲛϩⲟϯ ⲛⲉⲙⲥⲟⲗⲥⲉⲗ ⲛⲛⲓⲯⲩⲭⲏ ⲛⲧⲉⲛⲓⲣⲱⲙⲓ",
+      "english": "He crafted monastic guidelines and composed letters, instilling both fear and encouragement in his listeners.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4858,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7137",
+      "label": "ϫⲱⲕⲣ",
+      "pos": "V",
+      "gloss": "salt, season, cure"
+    },
+    {
+      "target": "C7138",
+      "label": "ⲣⲉϥϫⲱⲕⲣ",
+      "pos": "N",
+      "gloss": "cleanser"
+    }
+  ]
+}

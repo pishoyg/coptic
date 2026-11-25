@@ -1,0 +1,151 @@
+{
+  "id": "C3101",
+  "forms": [
+    {
+      "id": "CF31667",
+      "orth": "ⲣⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1577,
+        "count": 47
+      }
+    },
+    {
+      "id": "CF31666",
+      "orth": "ⲣⲙⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1950,
+        "count": 32
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "zur Bildung von Nomina der Zugehörigkeit oder Herkunft",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3551",
+      "bibliography": "CD 295ab; CED 136-137; KoptHWb 164; DELC 172-173; ChLCS 41b-42a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲥϩⲓⲙⲉ ⲇⲉ ⲛⲉⲩϩⲉⲗⲗⲏⲛ ⲧⲉ ⲛ**ⲣⲙ** ⲧⲉ ⲫⲟⲓⲛⲓⲕⲏ ⲛⲧⲥⲩⲣⲓⲁ . ⲁⲩⲱ ⲁⲥⲥⲉⲡⲥⲱⲡϥ ϫⲉⲕⲁⲁⲥ ⲉϥⲉⲛⲉϫⲡⲇⲁⲓⲙⲱⲛⲓⲟⲛ ⲉⲃⲟⲗ ϩⲓⲧⲉⲥϣⲉⲉⲣⲉ",
+      "english": "Now the woman was a Greek, a Syrophoenician by race. She begged him that he would cast the demon out of her daughter.",
+      "source": "Mark Chapter 7",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲅⲁⲣ ⲁⲛⲟⲛ ⲛ**ⲣⲙ** ⲟⲩⲡⲟⲗⲓⲥ ⲛⲧⲉⲕⲏⲙⲉ ϫⲉⲡⲙϫⲉ ·",
+      "english": "For we are natives of a city of Egypt called Pemdje (Oxyrhynchus).",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲁϩⲣⲛⲛ**ⲣⲙ**ⲛⲛⲟⲩⲧⲉ ⲛⲁⲙⲉ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲧⲟⲩϫⲱ ⲙⲙⲟⲥ ⲉϩⲉⲛⲇⲓⲕⲁⲥⲧⲏⲥ ⲛⲥⲉⲥⲟⲩⲧⲱⲛ ⲁⲛ ·",
+      "english": "...",
+      "source": "I See Your Eagerness: GL 45-53",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbgl_45_53",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3097",
+      "label": "ⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "without man, friendless"
+    },
+    {
+      "target": "C3098",
+      "label": "ⲙⲛⲧⲁⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "friendlessness"
+    },
+    {
+      "target": "C3104",
+      "label": "ⲙⲛⲧⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "riches, wealth"
+    },
+    {
+      "target": "C3099",
+      "label": "ⲙⲛⲧⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "humanity, company of men"
+    },
+    {
+      "target": "C3096",
+      "label": "ⲡⲣⲱⲙⲉ ⲡⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "every one"
+    },
+    {
+      "target": "C3102",
+      "label": "ⲣⲉϥ-",
+      "pos": "N",
+      "gloss": "man who . . ."
+    },
+    {
+      "target": "C3103",
+      "label": "ⲣⲙⲙⲁⲟ",
+      "pos": "N",
+      "gloss": "rich man (\"great man\")"
+    },
+    {
+      "target": "C3105",
+      "label": "ⲣⲣⲙⲙⲁⲟ",
+      "pos": "V",
+      "gloss": "become, make rich"
+    },
+    {
+      "target": "C3100",
+      "label": "ⲣⲣⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "become man"
+    },
+    {
+      "target": "C3092",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3093",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "man, human being; kinsman, friend, serving-man"
+    },
+    {
+      "target": "C3094",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "human"
+    },
+    {
+      "target": "C3095",
+      "label": "ⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "any one, no one (after negation)"
+    }
+  ],
+  "etym": {
+    "egy_num": "94530",
+    "egy_lemma": "rmṯ",
+    "demo_num": "d3491",
+    "demo_lemma": "rmṯ",
+    "english": "human being; man",
+    "german": "Mensch; Mann",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94530",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3491"
+  }
+}

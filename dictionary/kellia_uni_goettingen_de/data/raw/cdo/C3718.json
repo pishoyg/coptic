@@ -1,0 +1,81 @@
+{
+  "id": "C3718",
+  "forms": [
+    {
+      "id": "CF9350",
+      "orth": "ⲥⲉⲣⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19220,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4226",
+      "bibliography": "CD 356a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲉⲣⲉⲗⲁⲁⲩ ⲇⲉ ⲟⲩⲉϣⲏⲣⲡ ⲛⲃⲣⲣⲉ ⲉϥ**ⲥⲉⲣⲡ** ⲁⲥ . ϣⲁϥϫⲟⲟⲥ ⲅⲁⲣ ϫⲉⲛⲉϥⲣⲡⲉⲣⲡ ⲁⲥ .",
+      "english": "No man having drunk old wine immediately desires new, for he says, 'The old is better.''",
+      "source": "42_Luke_5",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        1,
+        12.804
+      ],
+      [
+        "ϣⲁ",
+        1,
+        8.346
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18834,
+      "count": 1
+    }
+  }
+}

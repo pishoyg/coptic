@@ -1,0 +1,54 @@
+{
+  "id": "C627",
+  "forms": [
+    {
+      "id": "CF2380",
+      "orth": "ⲉⲃⲓⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS763",
+      "bibliography": "CD 52b; CED 32; KoptHWb 32; DELC 38; ChLCS 10b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C625",
+      "label": "ⲉⲃⲓⲉϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild honey"
+    },
+    {
+      "target": "C624",
+      "label": "ⲉⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "honey"
+    },
+    {
+      "target": "C626",
+      "label": "ⲥⲁ ⲛⲉⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "apiarist, honey seller"
+    }
+  ],
+  "etym": {
+    "egy_num": "54230",
+    "egy_lemma": "bj.tj",
+    "demo_num": "d443",
+    "demo_lemma": "ı ͗bjṱ",
+    "english": "beekeeper",
+    "german": "Bienenzüchter; Honigsammler",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54230",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d443"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "C683",
+  "forms": [
+    {
+      "id": "CF2570",
+      "orth": "ⲙϫⲛϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14319,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2571",
+      "orth": "ⲉⲙϫⲛϩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2572",
+      "orth": "ⲙⲉϫⲉⲛϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9767,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2573",
+      "orth": "ⲙⲁⲛϫⲉⲛϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS820",
+      "bibliography": "CD 57a; CED 36; KoptHWb 37; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϩⲙⲡⲙⲉϩⲥⲁϣϥ ⲛϩⲟⲟⲩ ⲉϥⲉϩⲱⲱⲕⲉ ⲙⲡⲉϥϥⲱ ⲧⲏⲣϥ ⲧⲉϥⲁⲡⲉ ⲙⲛⲧⲉϥⲙⲟⲣⲧ ⲙⲛⲛⲉϥ**ⲙϫⲛϩ** ⲁⲩⲱ ϥⲱ ⲛⲓⲙ ⲉⲧϩⲓⲱⲱϥ ⲉϥⲉϩⲟⲟⲕⲟⲩ ⲉⲃⲟⲗ ⲛⲉϥϣⲱⲙ ⲛⲛⲉϥϩⲟⲓⲧⲉ ⲛϥϫⲉⲕⲙⲡⲉϥⲥⲱⲙⲁ ϩⲛⲟⲩⲙⲟⲟⲩ ⲛϥϣⲱⲡⲉ ⲉϥⲟ ⲛⲕⲁⲑⲁⲣⲟⲥ",
+      "english": "And it shall come to pass on the seventh day, he shall shave off all his hair, his head and his beard, and his eye-brows, even all his hair shall he shave; and he shall wash his garments, and wash his body with water, and shall be clean.",
+      "source": "Leviticus 14",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲣⲧ",
+        1,
+        15.791
+      ],
+      [
+        "ⲱ",
+        1,
+        10.562
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        8.797
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙϫⲛϩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙϫⲛϩ",
+          1
+        ],
+        [
+          "ⲙϫⲛϩ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙϫⲛϩ",
+          "ⲛⲉϥ_1_pre_ⲙϫⲛϩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲙϫⲛϩ",
+          "ⲙϫⲛϩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13919,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2339",
+      "type": "cf",
+      "label": "girdle (?)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C682",
+      "label": "ⲉⲛϩ",
+      "pos": "N",
+      "gloss": "eyebrow"
+    }
+  ]
+}

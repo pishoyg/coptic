@@ -1,0 +1,153 @@
+{
+  "id": "C7485",
+  "forms": [
+    {
+      "id": "CF17029",
+      "orth": "ⲁⲧϫⲱϩⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13047,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8289",
+      "bibliography": "CD 798a; ChLCS 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲡⲁⲣⲑⲉⲛⲟⲥ ⲉⲥⲟⲩⲁⲁⲃ · ⲁⲩⲱ ⲛ**ⲁⲧϫⲱϩⲙ**ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲁⲩⲱ ⲧⲙⲁⲁⲩ ⲁⲩⲱ ⲧⲡⲁⲣⲑⲉⲛⲟⲥ ⲟⲛ ·",
+      "english": "the Virgin who was holy and undefiled, who was both virgin and mother at the same time, and was still a virgin;",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲣⲑⲉⲛⲟⲥ",
+        1,
+        12.655
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        9.594
+      ],
+      [
+        "ⲧ",
+        2,
+        9.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        8.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϫⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϫⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲁⲧϫⲱϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲁⲧϫⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲙⲁⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϫⲱϩⲙ",
+          "ⲛ_1_pre_ⲁⲧϫⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϫⲱϩⲙ",
+          "ⲁⲧϫⲱϩⲙ_0_node",
+          1
+        ],
+        [
+          "ⲁⲧϫⲱϩⲙ_0_node",
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲟⲥ",
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲁⲧϫⲱϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲟⲥ_1_post_ⲁⲧϫⲱϩⲙ",
+          "ⲁⲩⲱ_2_post_ⲙⲁⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12630,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7482",
+      "label": "ϫⲱϩⲙ",
+      "pos": "V",
+      "gloss": "be defiled; defile, pollute; profane"
+    },
+    {
+      "target": "C7483",
+      "label": "ϫⲱϩⲙ",
+      "pos": "N",
+      "gloss": "uncleanness, pollution"
+    },
+    {
+      "target": "C7484",
+      "label": "ϫⲱϩⲙ",
+      "pos": "N",
+      "gloss": "dirty, defiled, polluted"
+    },
+    {
+      "target": "C7486",
+      "label": "ⲣⲉϥϭⲱϧⲉⲙ",
+      "pos": "N",
+      "gloss": "defiled person"
+    }
+  ]
+}

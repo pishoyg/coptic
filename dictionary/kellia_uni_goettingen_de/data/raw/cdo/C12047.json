@@ -1,0 +1,55 @@
+{
+  "id": "C12047",
+  "forms": [
+    {
+      "id": "CF33054",
+      "orth": "ⳉⲱⲧⲙⲉ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17048",
+      "bibliography": "CD 596a; KoptHWB 398"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6113",
+      "label": "ϣⲧⲁⲙ",
+      "pos": "V",
+      "gloss": "shut"
+    },
+    {
+      "target": "C6115",
+      "label": "ϣⲧⲁⲙⲉ",
+      "pos": "N",
+      "gloss": "closing"
+    },
+    {
+      "target": "C6116",
+      "label": "ϣⲧⲙⲟⲩⲱⲛ",
+      "pos": "N",
+      "gloss": "joints"
+    },
+    {
+      "target": "C6114",
+      "label": "ϣⲧⲟⲙ",
+      "pos": "N",
+      "gloss": "thing shutting or shut, gate"
+    },
+    {
+      "target": "C6112",
+      "label": "ϣⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "shut, be shut"
+    }
+  ]
+}

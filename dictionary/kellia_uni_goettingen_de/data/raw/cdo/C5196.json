@@ -1,0 +1,89 @@
+{
+  "id": "C5196",
+  "forms": [
+    {
+      "id": "CF31903",
+      "orth": "ⲟⲩⲱⲧⲉ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31902",
+      "orth": "ⲟⲩⲱⲱⲧⲉ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14335,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5838",
+      "bibliography": "CD 495b; KoptHWb 279"
+    },
+    {
+      "id": "CS5839",
+      "bibliography": "CD 495b; KoptHWb 279"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5198",
+      "label": "ϫⲓⲛⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5202",
+      "label": "ⲟⲩⲉⲧ ... ⲟⲩⲉⲧ ...",
+      "pos": "V",
+      "gloss": "one thing is ..., another is ..."
+    },
+    {
+      "target": "C5197",
+      "label": "ⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5199",
+      "label": "ⲟⲩⲱϯ ⲟⲩⲧⲉ-",
+      "pos": "V",
+      "gloss": "separate between"
+    },
+    {
+      "target": "C5201",
+      "label": "ⲟⲩⲱⲧ-",
+      "pos": "V",
+      "gloss": "it is different"
+    },
+    {
+      "target": "C5194",
+      "label": "ⲟⲩⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "send; separated (qual.)"
+    },
+    {
+      "target": "C5195",
+      "label": "ⲟⲩⲱⲧⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "be different from, surpass"
+    },
+    {
+      "target": "C5200",
+      "label": "ⲣⲙⲟⲩⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "messenger?"
+    }
+  ]
+}

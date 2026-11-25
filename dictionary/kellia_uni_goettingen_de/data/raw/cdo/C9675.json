@@ -1,0 +1,219 @@
+{
+  "id": "C9675",
+  "forms": [
+    {
+      "id": "CF24812",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲏⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24813",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲏⲛⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF24814",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲏⲛⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24815",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲏⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2134,
+        "count": 27
+      }
+    },
+    {
+      "id": "CF24816",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲓⲛⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1929,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF24817",
+      "orth": "ⲙⲁⲅⲇⲁⲗⲓⲛⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12444",
+      "bibliography": "DDGLC",
+      "cu_ID": "761"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲧⲱⲛϥ ⲇⲉ ⲛϣⲟⲣⲡ ⲙⲡⲓⲉϩⲟⲟⲩ ⲛϩⲟⲩⲓⲧ ⲛⲧⲉⲛⲓⲥⲁⲃⲃⲁⲧⲟⲛ ⲁϥⲟⲩⲟⲛϩϥ ⲛϣⲟⲣⲡ ⲙⲙⲁⲣⲓⲁ ϯ**ⲙⲁⲅⲇⲁⲗⲓⲛⲏ** ⲑⲏ ⲉⲧⲁϥϩⲓ ⲡⲓⲍ ⲛⲇⲁⲓⲙⲱⲛ ⲉⲃⲟⲗ ϩⲓⲱⲧⲥ",
+      "english": "Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲓⲁ ⲇⲉ ⲧ**ⲙⲁⲅⲇⲁⲗⲏⲛⲏ** ⲁⲩⲱ ⲙⲁⲣⲓⲁ ⲧⲁⲓⲱⲥⲏ ⲛⲉⲩⲛⲁⲩ ⲉⲡⲙⲁ ⲛⲧⲁⲩⲕⲁⲁϥ ⲛϩⲏⲧϥ .",
+      "english": "Mary Magdalene and Mary, the mother of Joses, saw where he was laid.",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲟⲩⲟⲛ ϩⲁⲛⲕⲉϩⲓⲟⲙⲓ ⲇⲉ ⲡⲉ ⲉⲩⲛⲁⲩ ϩⲓⲫⲟⲩⲉⲓ ⲛⲉ ⲉⲛⲁⲣⲉⲙⲁⲣⲓⲁ ⲛϧⲏⲧⲟⲩ ⲡⲉ ϯ**ⲙⲁⲅⲇⲁⲗⲓⲛⲏ** ⲛⲉⲙⲙⲁⲣⲓⲁ ⲛⲧⲉⲓⲁⲕⲱⲃⲟⲥ ⲡⲓⲕⲟⲩϫⲓ ⲛⲉⲙⲧⲙⲁⲩ ⲛⲓⲱⲥⲏⲧⲟⲥ ⲛⲉⲙⲥⲁⲗⲱⲙⲏ .",
+      "english": "There were also women watching from afar, among whom were both Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲛⲧⲉⲣⲉⲓⲏⲥⲟⲩⲥ ⲟⲩⲱ ⲉϥϫⲱ ⲛⲛⲉⲓϣⲁϫⲉ ⲉⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁⲥⲉⲓ ⲉⲧϩⲏ ⲛϭⲓⲙⲁⲣⲓⲁ ⲧ**ⲙⲁⲅⲇⲁⲗⲏⲛⲏ** ⲡⲉϫⲁⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲟⲩⲏⲣ ⲛⲣⲟⲙⲡⲉ ϩⲛⲣⲣⲟⲙⲡⲉ ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ⲡⲉ ⲟⲩⲣⲟⲙⲡⲉ ⲛⲧⲉⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“It came to pass, when Jesus had finished speaking these words unto his disciples, that Mary Magdalene came forward and said: My Lord, how many years of the years of the world is a year of the Light?”",
+      "source": "Pistis Sophia Book 2 Part 8",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:70-73",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲓⲁ ⲇⲉ ϯ**ⲙⲁⲅⲇⲁⲗⲓⲛⲏ** ⲛⲉⲙⲙⲁⲣⲓⲁ ⲛⲧⲉⲓⲱⲥⲏⲧⲟⲥ ⲛⲁⲩⲛⲁⲩ ⲡⲉ ϫⲉⲉⲧⲁⲩⲭⲁϥ ⲑⲱⲛ .",
+      "english": "Mary Magdalene and Mary, the mother of Joses, saw where he was laid.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲧⲱⲟⲩⲛ ⲇⲉ ⲛϩⲧⲟⲟⲩⲉ ⲛⲥⲟⲩⲁ ⲙⲡⲥⲁⲃⲃⲁⲧⲟⲛ ⲁϥⲟⲩⲱⲛϩ ⲛϣⲟⲣⲡ ⲉⲙⲁⲣⲓⲁ ⲧ**ⲙⲁⲅⲇⲁⲗⲏⲛⲏ** ⲧⲁⲓ ⲛⲧⲁϥⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ⲛϩⲏⲧⲥ ⲛⲥⲁϣϥ ⲛⲇⲁⲓⲙⲱⲛⲓⲟⲛ",
+      "english": "Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons.",
+      "source": "Mark Chapter 16",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲣⲓⲁ",
+        33,
+        22.705
+      ],
+      [
+        "ⲕⲗⲱⲡⲁ",
+        1,
+        15.843
+      ],
+      [
+        "ⲧ",
+        28,
+        15.738
+      ],
+      [
+        "ⲓⲱⲥⲏ",
+        2,
+        15.521
+      ],
+      [
+        "ⲥ",
+        25,
+        15.451
+      ],
+      [
+        "ⲓⲱϩⲁⲛⲛⲁ",
+        1,
+        14.843
+      ],
+      [
+        "ⲛϭⲓ",
+        15,
+        14.784
+      ],
+      [
+        "ⲓⲁⲕⲱⲃⲟⲥ",
+        3,
+        14.331
+      ],
+      [
+        "ϩⲏ",
+        5,
+        13.315
+      ],
+      [
+        "ⲧⲁ",
+        8,
+        13.195
+      ],
+      [
+        "ⲟⲩⲉⲓⲛⲉ",
+        2,
+        12.889
+      ],
+      [
+        "ⲁⲩⲱ",
+        13,
+        12.094
+      ],
+      [
+        "ϫⲉ",
+        11,
+        11.77
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        6,
+        11.745
+      ],
+      [
+        "ⲥⲁⲃⲃⲁⲧⲟⲛ",
+        2,
+        11.258
+      ],
+      [
+        "ⲕⲩⲣⲓⲁⲕⲏ",
+        1,
+        10.936
+      ],
+      [
+        "ⲙⲁⲣⲓϩⲁⲙ",
+        1,
+        10.258
+      ],
+      [
+        "ⲧⲁⲓ",
+        3,
+        10.079
+      ],
+      [
+        "ⲇⲉ",
+        6,
+        9.986
+      ],
+      [
+        "ϯⲡⲓ",
+        1,
+        9.821
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.17,
+      "rank": 1884,
+      "count": 27
+    }
+  },
+  "etym": {
+    "grl_ID": "3812",
+    "grl_lemma": "Μαγδαληνή",
+    "grl_meaning": "Magdalene, woman from Magdala",
+    "grl_pos": "noun",
+    "grl_ref": "BDAG 983"
+  }
+}

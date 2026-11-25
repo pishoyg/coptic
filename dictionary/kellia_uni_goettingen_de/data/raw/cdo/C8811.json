@@ -1,0 +1,273 @@
+{
+  "id": "C8811",
+  "forms": [
+    {
+      "id": "CF21212",
+      "orth": "ⲇⲓⲱⲕⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21215",
+      "orth": "ⲇⲓⲱⲕⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6248,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF21214",
+      "orth": "ⲇⲓⲱⲕⲧⲏⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21213",
+      "orth": "ⲇⲓⲱⲅⲧⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10578",
+      "bibliography": "DDGLC",
+      "cu_ID": "3973"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲁϥ ⲡ**ⲇⲓⲱⲕⲧⲏⲥ** ⲡⲉ · ⲡϩⲟⲟⲩ ⲇⲉ ⲡⲙⲁⲓⲧⲟⲉ ⲛϩⲟⲩⲟ ⲡⲉ ·",
+      "english": "Yesterday it was the pursuer, to-day it is the man of avarice.",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲉⲓⲟ ⲛϫⲁⲧ ⲟⲩⲁ ⲛϣⲟⲣⲡ ⲁⲩⲱ ⲛ**ⲇⲓⲱⲕⲧⲏⲥ** ⲁⲩⲱ ⲛⲣⲉϥⲥⲱϣ ⲁⲗⲗⲁ ⲁⲩⲛⲁ ⲛⲁⲓ ϫⲉⲛⲧⲁⲓⲁⲁⲩ ⲉⲓⲟ ⲛⲁⲧⲥⲟⲟⲩⲛ ϩⲛⲟⲩⲙⲛⲧⲁⲧⲡⲓⲥⲧⲟⲥ .",
+      "english": "although I was before a blasphemer, a persecutor, and insolent. However, I obtained mercy, because I did it ignorantly in unbelief.",
+      "source": "54_1 Timothy_1",
+      "urn": "urn:cts:copticLit:nt.1tim.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲱⲟⲩⲛ ϩⲱⲱϥ ⲛϭⲓⲡⲁⲩⲗⲟⲥ ⲁϥϣⲗⲏⲗ ⲛⲧⲉⲓϩⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲡⲉⲛⲧⲁϥⲧⲁϩⲙⲉⲧ ⲉⲡⲉⲕⲗⲏⲣⲟⲥ ⲛⲛⲉϩⲁⲅⲓⲟⲥ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲉⲓⲟ ⲛ**ⲇⲓⲱⲕⲧⲏⲥ** ⲛϣⲟⲣⲡ ⲉⲓⲇⲓⲱⲕⲉⲓ ⲛⲥⲁⲧⲉϥⲛⲉⲙⲫⲏ ⲉⲧⲟⲩⲁⲁⲃ ⲧⲉⲕⲕⲗⲏⲥⲓⲁ",
+      "english": "...",
+      "source": "Life of Paul of Tamma part 1",
+      "urn": "urn:cts:copticLit:lives.paul_tamma.paths_ed:1-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥϯϣⲱϣ",
+        1,
+        16.888
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        11.062
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.51
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲉϥⲥⲱϣ",
+        1,
+        15.428
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        3,
+        13.612
+      ],
+      [
+        "ⲥⲁϥ",
+        1,
+        13.18
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲓ",
+        2,
+        8.265
+      ],
+      [
+        "ⲟ",
+        1,
+        8.22
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.923
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.719
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.162
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.931
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲇⲓⲱⲕⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲇⲓⲱⲕⲧⲏⲥ",
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲱⲕⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲱⲕⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          "ⲛ_1_post_ⲇⲓⲱⲕⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲓⲱⲕⲧⲏⲥ",
+          "ϣⲟⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲇⲓⲱⲕⲧⲏⲥ",
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲓⲱⲕⲧⲏⲥ_0_node",
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          "ⲇⲉ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          "ⲡ_3_post_ⲙⲁⲓⲧⲟⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5809,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2937",
+    "grl_lemma": "διώκτης",
+    "grl_meaning": "pursuer",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 440b; Preisigke 1:392"
+  }
+}

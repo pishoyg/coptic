@@ -1,0 +1,92 @@
+{
+  "id": "C2852",
+  "forms": [
+    {
+      "id": "CF7552",
+      "orth": "ⲫⲱⲛⲕ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3263",
+      "bibliography": "CD 266a; KoptHWb 148; DELC 160"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲧⲉ ⲉⲣⲉⲧⲉⲛϩⲓⲟⲩⲓ ⲛⲕ ⲛⲥⲁⲧⲁ ⲛⲓⲱⲧ ⲉϧⲣⲏⲓ ⲉⲟⲩⲕⲓⲯⲉⲗⲏ ⲟⲩⲟϩ ϣⲁⲩⲉⲣ ⲓ ⲛⲥⲁⲧⲁ ⲛⲓⲱⲧ ⲟⲩⲟϩ ϣⲁⲣⲉⲧⲉⲛϣⲉⲛⲱⲧⲉⲛ ⲉϧⲟⲩⲛ ⲉⲡⲓⲓⲟⲙ ⲉ**ⲫⲉⲛⲕ** ⲛⲙⲙⲉⲧⲣⲓⲧⲏⲥ ⲛⲛⲉϩ ⲟⲩⲟϩ ϣⲁⲩⲉⲣⲕ .",
+      "english": "When ye cast into the corn-bin twenty measures of barley, and there were only ten measures of barley: and ye went to the vat to draw out fifty measures, and there were but twenty.",
+      "source": "37_Aggaeus_02",
+      "urn": "urn:cts:copticLit:ot.hag.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 13071,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2854",
+      "label": "ⲡⲟⲛⲕϥ",
+      "pos": "N",
+      "gloss": "bottle, tube(?)"
+    },
+    {
+      "target": "C2847",
+      "label": "ⲡⲱⲛⲕ",
+      "pos": "V",
+      "gloss": "draw, bail, empty out (water etc.); transfer, carry over"
+    },
+    {
+      "target": "C2850",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "transfer into"
+    },
+    {
+      "target": "C2851",
+      "label": "ⲡⲱⲛⲕ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "transfer, bring up"
+    },
+    {
+      "target": "C2848",
+      "label": "ⲡⲱⲛⲕ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "pile upon"
+    },
+    {
+      "target": "C2849",
+      "label": "ⲡⲱⲛⲕ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "empty, remove"
+    },
+    {
+      "target": "C2853",
+      "label": "ⲣⲉϥⲫⲱⲛⲕ",
+      "pos": "N",
+      "gloss": "sculptor"
+    }
+  ],
+  "etym": {
+    "egy_num": "60130",
+    "egy_lemma": "pnq",
+    "demo_num": "d1983",
+    "demo_lemma": "pnq",
+    "english": "to empty",
+    "german": "schöpfen; ausschöpfen; gießen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60130",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1983"
+  }
+}

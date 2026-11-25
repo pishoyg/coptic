@@ -1,0 +1,57 @@
+{
+  "id": "C4989",
+  "forms": [
+    {
+      "id": "CF31874",
+      "orth": "ⲣϥⲥⲉϩⲟⲩⲉⲗⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31873",
+      "orth": "ⲣϥⲥⲉⲩϩⲟⲩⲉⲗⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5615",
+      "bibliography": "KoptHWb 270"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3890",
+      "type": "cf",
+      "label": "gather, collect"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4988",
+      "label": "ⲟⲩⲗⲗⲉ",
+      "pos": "N",
+      "gloss": "melody, music"
+    },
+    {
+      "target": "C4990",
+      "label": "ⲥⲉⲕⲟⲩⲉⲗⲗⲓ",
+      "pos": "V",
+      "gloss": "make music, play music"
+    },
+    {
+      "target": "C4991",
+      "label": "ⲥⲓⲧⲉ ⲛⲉϥⲟⲩⲉⲗⲗⲉ",
+      "pos": "V",
+      "gloss": "recite one's poetry"
+    }
+  ]
+}

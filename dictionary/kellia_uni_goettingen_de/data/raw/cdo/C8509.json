@@ -1,0 +1,104 @@
+{
+  "id": "C8509",
+  "forms": [
+    {
+      "id": "CF20003",
+      "orth": "ⲁⲥⲧⲏⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF20004",
+      "orth": "ⲁⲥⲧⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12852,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9965",
+      "bibliography": "DDGLC",
+      "cu_ID": "4142"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲛϩⲟⲓⲛⲉ ϭⲉ ⲧⲉⲛⲟⲩ ⲉⲓ ⲉⲣⲁⲧⲧⲏⲩⲧⲛ ⲛⲥⲉⲕⲏⲣⲩⲥⲥⲉ ⲛⲏⲧⲛ ⲛⲟⲩⲙⲛⲧⲛⲟⲩⲧⲉ ⲛⲧⲉⲧⲛⲉⲓⲙⲉ ϩⲛⲟⲩⲱⲣϫ ϫⲉⲁⲛⲉⲩϣⲁϫⲉ ⲥⲩⲙⲫⲱⲛⲉⲓ ⲁⲩⲱ ⲁⲩϩⲟⲣⲙⲁⲍⲉ ⲉϩⲛⲛⲧⲉⲧⲛϣⲁϫⲉ ⲧⲏⲣⲟⲩ ⲛⲁⲓ ⲉⲛⲧⲁⲓϫⲟⲟⲩ ⲉⲣⲱⲧⲛ ϩⲓⲧⲛⲙⲙⲁⲣⲧⲩⲣⲓⲁ ⲥⲛⲧⲉ ϣⲁϣⲟⲙⲧⲉ · ⲁⲩⲱ ⲉⲁⲩⲥⲩⲙⲫⲱⲛⲉⲓ ϩⲙⲡⲧⲁϩⲟ ⲉⲣⲁⲧϥ ⲙⲡⲁⲏⲣ ⲙⲛⲙⲡⲏⲩⲉ ⲙⲛⲛⲕⲩⲕⲗⲟⲥ ⲙⲛⲛ**ⲁⲥⲧⲏⲣ** ⲙⲛⲙⲫⲱⲥⲧⲏⲣ ⲙⲛⲡⲕⲁϩ ⲧⲏⲣϥ ⲙⲛⲛⲉⲧⲛϩⲏⲧϥ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲕⲉⲙⲟⲩⲉⲓⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉⲧⲛϩⲏⲧⲟⲩ ⲧⲏⲣⲟⲩ ·",
+      "english": "then know ye exactly, if then any come now unto you and proclaim unto you a godhead, whether their words have harmonized and fitted with all your words which I have spoken unto you through two up to three witnesses, and whether they have harmonized in the setting of the air and of the heavens and of the circuits and of the stars and of the light-givers and of the whole earth and all on it and of all waters and all in them.'",
+      "source": "Pistis Sophia Book 3 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:115-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲱⲥⲧⲏⲣ",
+        1,
+        17.139
+      ],
+      [
+        "ⲕⲩⲕⲗⲟⲥ",
+        1,
+        15.554
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        11.399
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲁⲥⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲁⲥⲧⲏⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲁⲥⲧⲏⲣ",
+          "ⲁⲥⲧⲏⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12429,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3283",
+    "grl_lemma": "ἀστήρ",
+    "grl_meaning": "star, starlight",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 261b; Preisigke 1:227"
+  }
+}

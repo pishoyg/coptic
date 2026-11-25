@@ -1,0 +1,57 @@
+{
+  "id": "C673",
+  "forms": [
+    {
+      "id": "CF2526",
+      "orth": "ⲉⲙⲓⲥⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2527",
+      "orth": "ⲉⲙⲓⲥⲉ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF2528",
+      "orth": "ⲁⲙⲓⲥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7376,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS810",
+      "bibliography": "CD 56a; CED 35; KoptHWb 36, 499; DELC 43; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟⲓ ⲛⲱⲧⲉⲛ ⲛⲓⲥⲁϧ ⲛⲉⲛⲛⲓⲫⲁⲣⲓⲥⲉⲟⲥ ⲛⲓϣⲟⲃⲓ ϫⲉⲧⲉⲧⲉⲛϯ ⲙⲫⲣⲉⲙⲏⲧ ⲙⲡⲓⲁϭⲓⲛⲛⲥⲑⲟⲓ ⲛⲉⲙⲡⲓ**ⲁⲙⲓⲥⲓ** ⲛⲉⲙⲡⲓⲑⲁⲡⲉⲛ ⲟⲩⲟϩ ⲁⲧⲉⲧⲉⲛⲭⲱ ⲛⲛⲏ ⲉⲧϩⲟⲣϣ ⲛⲧⲉⲡⲓⲛⲟⲙⲟⲥ ⲛⲥⲁⲑⲏⲛⲟⲩ ⲡⲓϩⲁⲡ ⲛⲉⲙⲡⲓⲛⲁⲓ ⲛⲉⲙⲡⲓⲛⲁϩϯ ⲛⲁⲓ ⲛⲁⲥⲙⲡϣⲁ ⲛⲧⲉⲧⲉⲛⲁⲓⲧⲟⲩ ⲛⲓⲕⲉⲭⲱⲟⲩⲛⲓ ⲇⲉ ⲛⲧⲉⲧⲉⲛϣⲧⲉⲙⲭⲁⲩ ⲛⲥⲁⲑⲏⲛⲟⲩ .",
+      "english": "'Woe to you, scribes and Pharisees, hypocrites! For you tithe mint, dill, and cumin, and have left undone the weightier matters of the law: justice, mercy, and faith. But you ought to have done these, and not to have left the other undone.",
+      "source": "01_Matthew_23",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:23",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "26440",
+    "egy_lemma": "jms.t",
+    "demo_num": "d105",
+    "demo_lemma": "ꜣmjs",
+    "english": "dill",
+    "german": "Dill",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/26440",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d105"
+  }
+}

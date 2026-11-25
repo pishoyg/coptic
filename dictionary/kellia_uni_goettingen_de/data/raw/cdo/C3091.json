@@ -1,0 +1,281 @@
+{
+  "id": "C3091",
+  "forms": [
+    {
+      "id": "CF8056",
+      "orth": "ϯⲣⲙⲉⲓⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4828,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3539",
+      "bibliography": "CD 294b; KoptHWb 163; ChLCS 41b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩⲥⲟⲛ ⲥⲱⲕ ⲉⲃⲟⲗ ϩⲙⲡⲧⲟⲟⲩ ⲉⲧⲕⲛϩⲏⲧϥ · ⲙⲡⲣϩⲙⲟⲟⲥ ϩⲛⲧⲉⲕⲣⲓ ⲙⲡⲛⲁⲩ ⲉⲧⲕⲛⲁⲥⲱⲧⲙ ⲃⲱⲕ ⲛⲅϩⲙⲟⲟⲥ ϩⲁϩⲧⲏϥ ⲛⲅ**ϯⲣⲙⲉⲓⲏ** ⲉϫⲱϥ ·",
+      "english": "When a brother dieth on the mountain whereon thou art do not sit in thy cell when thou hearest thereof, but go and sit with him, and weep over him.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯⲛⲁϣⲁϫⲉ ϫⲉⲕⲁⲥ ⲉⲓⲉⲙⲧⲟⲛ ⲉⲃⲟⲗ ϩⲛⲛⲉⲧⲕⲁⲥ ⲙⲡⲁϩⲏⲧ · ⲧⲁⲯⲩⲭⲏ ⲙⲟⲕϩ ⲉⲣⲟⲓ ⲁⲩⲱ ⲛⲁⲃⲁⲗ · **ϯⲣⲙⲉⲓⲏ**",
+      "english": "I will speak so that I may obtain respite from the pain which is in my heart ; my soul causeth me tribulation, and my eyes shed tears.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ϫⲉⲡⲃⲁⲗ ⲙⲡⲡⲟⲛⲏⲣⲟⲥ ϩⲟⲟⲩ ⲁⲩⲱ ⲟⲩ ⲡⲉⲧⲥⲟⲛⲧ ⲉϥϩⲟⲟⲩ ⲉⲡⲃⲁⲗ ⲉⲧⲃⲉⲡⲁⲓ ϥ**ϯⲣⲙⲉⲓⲏ** ⲛⲛⲁϩⲣⲛϩⲟ ⲛⲓⲙ",
+      "english": "The spirit of those that fear the Lord shall live; for their hope is in him that saveth them.",
+      "source": "Sirach 34",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁϩⲧⲏ",
+        2,
+        13.85
+      ],
+      [
+        "ⲃⲁⲗ",
+        3,
+        13.469
+      ],
+      [
+        "ⲙⲁⲕϩ",
+        1,
+        11.954
+      ],
+      [
+        "ⲁϣⲁϩⲟⲙ",
+        1,
+        11.322
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲛ",
+        1,
+        10.808
+      ],
+      [
+        "ϥ",
+        7,
+        10.622
+      ],
+      [
+        "ⲉϫⲱ",
+        2,
+        10.424
+      ],
+      [
+        "ⲅ",
+        2,
+        9.917
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        8.965
+      ],
+      [
+        "ϩⲟ",
+        1,
+        8.51
+      ],
+      [
+        "ⲱ",
+        1,
+        8.24
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁ",
+        1,
+        8.09
+      ],
+      [
+        "...",
+        1,
+        7.983
+      ],
+      [
+        ".",
+        2,
+        7.235
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        6.458
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.255
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        6.054
+      ],
+      [
+        "ⲛ",
+        2,
+        4.487
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        3.916
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϯⲣⲙⲉⲓⲏ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲛ_1_post_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ϩⲟ_3_post_ⲛⲓⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          "ⲅ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          "ϯⲣⲙⲉⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ϯⲣⲙⲉⲓⲏ_0_node",
+          "ⲉϫⲱ_1_post_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϯⲣⲙⲉⲓⲏ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ⲉⲧⲃⲉ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_2_pre_ⲉⲧⲃⲉ",
+          "ϥ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲣⲙⲉⲓⲏ",
+          "ϯⲣⲙⲉⲓⲏ_0_node",
+          1
+        ],
+        [
+          "ϯⲣⲙⲉⲓⲏ_0_node",
+          "ⲛⲛⲁϩⲣⲛ_1_post_ϯⲣⲙⲉⲓⲏ",
+          1
+        ],
+        [
+          "ⲛⲛⲁϩⲣⲛ_1_post_ϯⲣⲙⲉⲓⲏ",
+          "ϩⲟ_3_post_ⲛⲓⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4414,
+      "count": 5
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3088",
+      "label": "ⲣⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "weep"
+    },
+    {
+      "target": "C3089",
+      "label": "ⲣⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "weeping"
+    },
+    {
+      "target": "C3090",
+      "label": "ⲣⲙⲉⲓⲏ",
+      "pos": "N",
+      "gloss": "tear"
+    }
+  ]
+}

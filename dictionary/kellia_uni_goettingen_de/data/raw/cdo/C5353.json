@@ -1,0 +1,63 @@
+{
+  "id": "C5353",
+  "forms": [
+    {
+      "id": "CF12675",
+      "orth": "ⲁⲧⲟⲩϫⲁⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6006",
+      "bibliography": "CD 512b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5354",
+      "label": "ⲙⲛⲧⲁⲧⲟⲩϫⲁⲓ",
+      "pos": "N",
+      "gloss": "unsoundness"
+    },
+    {
+      "target": "C5349",
+      "label": "ⲟⲩϫⲁⲓ",
+      "pos": "V",
+      "gloss": "be whole, be intact, be safe, be sound"
+    },
+    {
+      "target": "C5350",
+      "label": "ⲟⲩϫⲁⲓ",
+      "pos": "N",
+      "gloss": "health, safety, weal"
+    },
+    {
+      "target": "C5351",
+      "label": "ⲟⲩϫⲁⲓ",
+      "pos": "N",
+      "gloss": "health giving"
+    },
+    {
+      "target": "C5352",
+      "label": "ⲟⲩϫⲁⲓ",
+      "pos": "VIMP",
+      "gloss": "Farewell!"
+    }
+  ]
+}

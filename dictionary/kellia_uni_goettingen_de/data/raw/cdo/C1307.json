@@ -1,0 +1,156 @@
+{
+  "id": "C1307",
+  "forms": [
+    {
+      "id": "CF4020",
+      "orth": "ϭⲓⲭⲣⲱⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4370,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1513",
+      "bibliography": "CD 116a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲥϫⲉ ⲇⲉ ⲥⲉⲛⲁϣⲉⲣⲉⲅⲕⲣⲁⲧⲉⲩⲉⲥⲑⲉ ⲁⲛ ⲙⲁⲣⲟⲩϭⲓ ⲛⲁⲛⲉⲥ ⲅⲁⲣ ⲉϭⲓ ⲉϩⲟⲧⲉ ⲛⲥⲉ**ϭⲓⲭⲣⲱⲙ** .",
+      "english": "But if they don't have self-control, let them marry. For it's better to marry than to burn.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϩⲟⲧⲉ",
+        3,
+        15.28
+      ],
+      [
+        "ϭⲓ",
+        3,
+        12.437
+      ],
+      [
+        "ⲥⲉ",
+        3,
+        11.906
+      ],
+      [
+        "ⲛⲏ",
+        3,
+        11.227
+      ],
+      [
+        "ⲇⲉ",
+        3,
+        10.218
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        9.421
+      ],
+      [
+        ".",
+        3,
+        8.786
+      ],
+      [
+        "ⲛ",
+        3,
+        7.761
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϭⲓⲭⲣⲱⲙ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲓⲭⲣⲱⲙ",
+          2
+        ],
+        [
+          "ϭⲓⲭⲣⲱⲙ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϭⲓⲭⲣⲱⲙ",
+          "ⲥⲉ_1_pre_ϭⲓⲭⲣⲱⲙ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲓⲭⲣⲱⲙ",
+          "ϭⲓⲭⲣⲱⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3907,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1306",
+      "label": "ϩⲓⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1305",
+      "label": "ϯⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "put fire (to), set alight"
+    },
+    {
+      "target": "C1304",
+      "label": "ⲉⲣⲭⲣⲱⲙ",
+      "pos": "V",
+      "gloss": "be on fire, burn"
+    },
+    {
+      "target": "C1302",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "fire"
+    },
+    {
+      "target": "C1303",
+      "label": "ⲕⲣⲱⲙ",
+      "pos": "N",
+      "gloss": "of fire, fiery"
+    }
+  ]
+}

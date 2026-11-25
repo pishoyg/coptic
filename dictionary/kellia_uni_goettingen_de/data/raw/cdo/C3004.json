@@ -1,0 +1,128 @@
+{
+  "id": "C3004",
+  "forms": [
+    {
+      "id": "CF7874",
+      "orth": "ⲡⲁϩⲧⲉ",
+      "dialect": "Ak"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3439",
+      "bibliography": "CD 284b; CED 132; KoptHWb 157, 533; DELC 167"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲩ",
+        1,
+        12.017
+      ],
+      [
+        "ⲉⲛⲉ",
+        1,
+        11.965
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ϫⲉ",
+        2,
+        9.146
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲛⲉ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲓ_1_post_ⲡⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉ_3_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁϩⲧⲉ_0_node",
+          "ⲉⲛⲉ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲛⲉ_2_post_ⲉⲓ",
+          "ⲉⲓ_1_post_ⲡⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲓ_1_post_ⲡⲁϩⲧⲉ",
+          "ⲉⲃⲟⲗ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ⲉⲓ",
+          "ϩⲓⲱⲱ_2_post_ⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲓⲱⲱ_2_post_ⲉⲓ",
+          "ⲧⲉ_3_post_ϩⲓⲱⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "egy_num": "61400",
+    "egy_lemma": "pḥ.tj",
+    "demo_num": "d2124",
+    "demo_lemma": "pḥṱ(.t)",
+    "english": "physical strength",
+    "german": "körperliche Kraft",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/61400",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2124"
+  }
+}

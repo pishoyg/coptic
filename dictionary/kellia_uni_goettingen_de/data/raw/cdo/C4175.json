@@ -1,0 +1,118 @@
+{
+  "id": "C4175",
+  "forms": [
+    {
+      "id": "CF10297",
+      "orth": "ⲣⲉϥⲧⲟⲉⲓⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17703,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4737",
+      "bibliography": "CD 437b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲟⲩⲧⲉ ⲉⲛⲉϩⲓⲟⲙⲉ ⲛ**ⲣⲉϥⲧⲟⲉⲓⲧ** ⲙⲁⲣⲟⲩⲉⲓ ϫⲟⲟⲩ ⲛⲥⲁⲛⲥⲁⲃⲏ ⲙⲁⲣⲟⲩⲟⲩⲱⲛ ⲛⲣⲱⲟⲩ",
+      "english": "Thus saith the Lord, Call ye the mourning women, and let them come; and send to the wise women, and let them utter their voice;",
+      "source": "Jeremiah 9",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲓⲟⲙⲉ",
+        1,
+        12.857
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        11.232
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        9.116
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        8.408
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲧⲟⲉⲓⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17317,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4176",
+      "label": "ⲣⲉϥⲧⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "mourner"
+    },
+    {
+      "target": "C4173",
+      "label": "ⲧⲟⲉⲓⲧ",
+      "pos": "V",
+      "gloss": "mourn"
+    },
+    {
+      "target": "C4174",
+      "label": "ⲧⲟⲉⲓⲧ",
+      "pos": "N",
+      "gloss": "lament, dirge"
+    }
+  ]
+}

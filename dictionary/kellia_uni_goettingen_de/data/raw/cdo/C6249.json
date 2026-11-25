@@ -1,0 +1,163 @@
+{
+  "id": "C6249",
+  "forms": [
+    {
+      "id": "CF14508",
+      "orth": "ϣϭⲁϭⲓϫ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17921,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6936",
+      "bibliography": "CD 618b; CED 264; KoptHWb 343; DELC 278b; ChLCS 85a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩ**ϣϭⲁϭⲓϫ** ⲉϩⲣⲁⲓ ⲉϫⲱ ⲛϭⲓⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲙⲟⲟϣⲉ ϩⲓⲧⲉϩⲓⲏ ⲁⲩϥⲓ ϣⲙϣⲏϭⲉ ⲁⲩⲱ ⲁⲩⲕⲓⲙ ⲛⲧⲉⲩⲁⲡⲉ ⲉϫⲛⲧϣⲉⲉⲣⲉ ⲛⲧϩⲓⲏⲙ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲧⲁⲓ ⲧⲉ ⲧⲡⲟⲗⲓⲥ ⲛⲧⲟⲥ ⲡⲉ ⲡⲉⲕⲗⲟⲙ ⲙⲡⲉⲟⲟⲩ ⲙⲡⲟⲩⲛⲟϥ ⲙⲡⲕⲁϩ ⲧⲏⲣϥ",
+      "english": "SAMECH. All that go by the way have clapped their hands at thee; they have hissed and shaken their head at the daughter of Jerusalem. Is this the city, they say, the crown of joy of all the earth?",
+      "source": "Lamentations 2",
+      "urn": "urn:cts:copticLit:ot.lam.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲥⲧⲏⲩ",
+        1,
+        17.139
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        10.618
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        9.746
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ϣϭⲁϭⲓϫ_0_node",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϥⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϣϭⲁϭⲓϫ",
+          "ⲩ_1_pre_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣϭⲁϭⲓϫ",
+          "ϣϭⲁϭⲓϫ_0_node",
+          1
+        ],
+        [
+          "ϣϭⲁϭⲓϫ_0_node",
+          "ⲉϩⲣⲁⲓ_1_post_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_1_post_ϣϭⲁϭⲓϫ",
+          "ⲉϫⲱ_1_post_ϣϭⲁϭⲓϫ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϣϭⲁϭⲓϫ",
+          "ⲁ_2_post_ϥⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17539,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6248",
+      "label": "ϣϭⲁ",
+      "pos": "N",
+      "gloss": "blow, wound"
+    },
+    {
+      "target": "C6246",
+      "label": "ϣⲱⲱϭⲉ",
+      "pos": "V",
+      "gloss": "smite, wound, be wounded"
+    },
+    {
+      "target": "C6247",
+      "label": "ϣⲱⲱϭⲉ",
+      "pos": "N",
+      "gloss": "blow, wound"
+    }
+  ]
+}

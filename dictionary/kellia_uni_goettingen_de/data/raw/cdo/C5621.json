@@ -1,0 +1,147 @@
+{
+  "id": "C5621",
+  "forms": [
+    {
+      "id": "CF13218",
+      "orth": "ⲁⲧⲱϣⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6019,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6291",
+      "bibliography": "CD 535a; ChLCS 73b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲙⲉⲉⲩⲉ ⲉⲃⲟⲗ ϩⲙⲡⲁϩⲏⲧ · ⲙⲁⲩⲁⲁⲧ ϫⲉⲕⲁⲛ ⲡϩⲟⲟⲩ ⲕⲁⲛ ⲣⲁⲥⲧⲉ ⲧⲛⲁⲙⲟⲩ ⲁⲩⲱ ⲥⲉⲛⲁⲕⲟⲗⲁⲍⲉ ⲙⲙⲟⲛ ϩⲛⲕⲟⲗⲁⲥⲓⲥ ⲉⲩⲛⲁϣⲧ · ⲡϭⲁϩϭϩ ⲛⲛⲟⲃϩⲉ ⲁⲩⲱ ⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ · ⲡⲕⲱϩⲧ ⲛ**ⲁⲧⲱϣⲙ** · ⲙⲛⲡϥⲛⲧ ⲛⲁⲧⲛⲕⲟⲧⲕ · ⲉⲧⲟⲩⲱⲙ ⲛⲥⲁⲧⲉⲯⲩⲭⲏ ·",
+      "english": "And I thought in my heart when I was alone, saying, ‘If I were to die to-day or to-morrow they would punish us with a severe punishment, with the gnashing of teeth, and with outer darkness, and with the fire that cannot be quenched, and with the worm that never sleepeth, and that devoureth the soul.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ϩⲱⲱϥ ⲙⲡⲕⲱϩⲧ ⲛ**ⲁⲧⲱϣⲙ** ⲉⲧⲣⲉϥϫⲓⲕⲃⲁ ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲙⲛⲛⲉϥⲇⲁⲓⲙⲱⲛ ⲛϩⲣⲁⲓ ϩⲛⲁⲙⲛⲧⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧⲟⲩ ⲙⲡⲕⲱϩⲧ ⲉⲧⲉⲙⲉϥⲱϣⲙ",
+      "english": "...",
+      "source": "Apa Johannes Canons: MONB.FA [33]-[34]",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:15-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥⲛⲧ",
+        2,
+        16.691
+      ],
+      [
+        "ⲕⲱϩⲧ",
+        3,
+        14.811
+      ],
+      [
+        "ϫⲓⲕⲃⲁ",
+        1,
+        12.398
+      ],
+      [
+        "ⲡ",
+        5,
+        9.878
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        7.079
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲱϣⲙ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5580,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5623",
+      "label": "ⲁϣⲙⲓ",
+      "pos": "N",
+      "gloss": "soot; wick"
+    },
+    {
+      "target": "C5624",
+      "label": "ⲟϣⲙϥ",
+      "pos": "N",
+      "gloss": "dipping, tempering, quenching (of metal)"
+    },
+    {
+      "target": "C5622",
+      "label": "ⲣⲉϥⲱϣⲙ",
+      "pos": "N",
+      "gloss": "quencher"
+    },
+    {
+      "target": "C5620",
+      "label": "ⲱϣⲙ",
+      "pos": "V",
+      "gloss": "be quenched, be dried up; quench, slake (one's thirst)"
+    }
+  ]
+}

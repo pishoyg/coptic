@@ -1,0 +1,154 @@
+{
+  "id": "C7946",
+  "forms": [
+    {
+      "id": "CF17958",
+      "orth": "ϭⲟⲧⲡⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16224,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8830",
+      "bibliography": "CD 834a; KoptHWb 469; DELC 348b; ChLCS 110a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϩ ⲉⲧⲟⲟⲧϥ ⲟⲛ ⲛϭⲓⲭⲟⲩⲥⲉⲓ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲟⲛ ϫⲉⲛⲧⲟⲕ ⲕⲥⲟⲟⲩⲛ ⲙⲡⲉⲕⲉⲓⲱⲧ ⲙⲛⲛⲉϥⲕⲉⲣⲱⲙⲉ ϫⲉϩⲛϫⲱⲱⲣⲉ ⲛⲉ ⲉⲙⲁⲧⲉ ⲁⲩⲱ ⲥⲉⲛⲁϣⲧ ϩⲛⲧⲉⲩⲯⲩⲭⲏ ⲛⲧϩⲉ ⲛⲟⲩⲁⲣⲝ ⲉⲁⲩϥⲓ ⲛⲛⲉⲥϣⲏⲣⲉ ϩⲛⲧⲥⲱϣⲉ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲟⲩⲣⲓⲣ ⲛϩⲟⲟⲩⲧ ⲉϥⲛⲁϣⲧ ϩⲛⲟⲩⲙⲁ ⲛϣⲏⲛ ⲁⲩⲱ ⲡⲉⲕⲉⲓⲱⲧ ⲟⲩⲣⲉϥⲙⲓϣⲉ ⲡⲉ ⲉϥⲛⲁϯ**ϭⲟⲧⲡⲥ** ⲁⲛ ⲉⲡⲗⲁⲟⲥ",
+      "english": "And Chusi said, Thou knowest thy father and his men, that they are very mighty, and bitter in their spirit, as a bereaved bear in the field, and as a wild boar in the plain: and thy father is a man of war, and will not give the people rest.",
+      "source": "II Samuel 17",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:17",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲁⲟⲥ",
+        1,
+        9.925
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.128
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲟⲧⲡⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15827,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7945",
+      "label": "ϭⲧⲟⲡ",
+      "pos": "N",
+      "gloss": "defeat"
+    },
+    {
+      "target": "C7936",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "V",
+      "gloss": "defeat, overcome; be defeated, overcome"
+    },
+    {
+      "target": "C7942",
+      "label": "ϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "intimidation, discouragement"
+    },
+    {
+      "target": "C7938",
+      "label": "ϭⲱⲧⲡ (ϩⲁⲧϩⲏ⸗)",
+      "pos": "V",
+      "gloss": "beware of, watch out for, take care"
+    },
+    {
+      "target": "C7939",
+      "label": "ϭⲱⲧⲡ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "fail"
+    },
+    {
+      "target": "C7937",
+      "label": "ϭⲱⲧⲡ (ⲉ-)",
+      "pos": "V",
+      "gloss": "be wearied of"
+    },
+    {
+      "target": "C7940",
+      "label": "ϭⲱⲧⲡ (ⲉⲃⲟⲗ ⲛ-)",
+      "pos": "V",
+      "gloss": "scare away"
+    },
+    {
+      "target": "C7941",
+      "label": "ϭⲱⲧⲡ (ⲛϩⲏⲧ)",
+      "pos": "V",
+      "gloss": "be afraid"
+    },
+    {
+      "target": "C7943",
+      "label": "ⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "without defeat, unconquered"
+    },
+    {
+      "target": "C7944",
+      "label": "ⲙⲛⲧⲁⲧϭⲱⲧⲡ",
+      "pos": "N",
+      "gloss": "unconcern, carefreeness"
+    }
+  ]
+}

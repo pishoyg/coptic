@@ -1,0 +1,156 @@
+{
+  "id": "C190",
+  "forms": [
+    {
+      "id": "CF723",
+      "orth": "ⲁⲧⲁⲣⲓⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17224,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF724",
+      "orth": "ⲁⲧⲁⲣⲓⲕⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1678,
+        "count": 20
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS213",
+      "bibliography": "CD 15ab; ChLCS 5a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲁⲓ ⲉⲧⲉⲉϥⲉⲧⲁϫⲣⲉⲑⲏⲛⲟⲩ ϣⲁⲉⲃⲟⲗ ⲛ**ⲁⲧⲁⲣⲓⲕⲓ** ϧⲉⲛⲡⲉϩⲟⲟⲩ ⲙⲡⲉⲛϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "who will also confirm you until the end, blameless in the day of our Lord Jesus Christ.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲅⲁⲣ ⲛⲁⲕⲣⲓⲛⲉ ⲙⲡⲉϥϩⲁⲡ ⲁⲩⲱ ⲕⲛⲁⲧⲟⲩϫⲟ ⲛⲧⲉⲕⲯⲩⲭⲏ ⲛ**ⲁⲧⲁⲣⲓⲕⲉ**",
+      "english": "For the Lord will plead his cause, and thou shalt deliver thy soul in safety.",
+      "source": "Proverbs 22",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲙⲉⲛ ϩⲱ ⲟⲩⲟⲛ ϩⲏⲧ ⲙⲙⲟⲓ ⲙⲡⲉⲧⲉⲛⲣⲏϯ: ⲟⲩⲟϩ ⲟⲩⲣⲱⲙⲓ ⲛⲧⲙⲏⲓ ⲛ**ⲁⲧⲁⲣⲓⲕⲓ** ⲁϥϣⲱⲡⲓ ⲉⲡⲥⲱⲃⲓ .",
+      "english": "But I also have a heart as well as you.",
+      "source": "18_Iob_12",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩⲏⲓ ⲁⲕϫⲟⲥ ϫⲉϯⲧⲟⲩⲃⲏⲟⲩⲧ ⲙⲡⲓⲉⲣⲛⲟⲃⲓ : ⲁⲛⲟⲕ ⲟⲩ**ⲁⲧⲁⲣⲓⲕⲓ** ⲇⲉ ⲙⲡⲓⲉⲣⲁⲛⲟⲙⲓⲛ ⲅⲁⲣ .",
+      "english": "I am blameless, for I have not transgressed.",
+      "source": "18_Iob_33",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:33",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϣⲃⲏⲣ",
+        1,
+        16.511
+      ],
+      [
+        "ⲙⲡⲣ",
+        1,
+        10.036
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        9.969
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        9.87
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲧⲁⲣⲓⲕⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16831,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C191",
+      "label": "ϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "blame, find fault"
+    },
+    {
+      "target": "C189",
+      "label": "ⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "blame, fault"
+    },
+    {
+      "target": "C193",
+      "label": "ⲙⲛⲧⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "fault-finding, criticism"
+    },
+    {
+      "target": "C192",
+      "label": "ⲣⲉϥϭⲛⲁⲣⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "fault-finder, know-it-all"
+    }
+  ]
+}

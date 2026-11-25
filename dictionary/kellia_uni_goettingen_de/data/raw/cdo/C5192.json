@@ -1,0 +1,56 @@
+{
+  "id": "C5192",
+  "forms": [
+    {
+      "id": "CF12351",
+      "orth": "ⲙⲛⲧⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5834",
+      "bibliography": "CD 494a; KoptHWb 279; ChLCS 69a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C12406",
+      "type": "cf",
+      "label": "one, someone"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5191",
+      "label": "ⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single one; each one"
+    },
+    {
+      "target": "C5190",
+      "label": "ⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "single, alone, any, one and same"
+    },
+    {
+      "target": "C5193",
+      "label": "ⲣⲟⲩⲁ ⲛⲟⲩⲱⲧ",
+      "pos": "V",
+      "gloss": "make one"
+    }
+  ]
+}

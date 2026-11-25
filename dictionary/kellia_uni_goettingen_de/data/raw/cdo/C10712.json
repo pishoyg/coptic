@@ -1,0 +1,89 @@
+{
+  "id": "C10712",
+  "forms": [
+    {
+      "id": "CF29083",
+      "orth": "ⲧⲉⲗⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF29084",
+      "orth": "ⲧⲉⲗⲓ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14720",
+      "bibliography": "DDGLC",
+      "cu_ID": "789"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲁⲗⲟ",
+        1,
+        12.914
+      ],
+      [
+        "ⲉⲥⲱⲟⲩ",
+        1,
+        11.244
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        10.424
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        8.38
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        8.335
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        7.313
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲗⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "2803",
+    "grl_lemma": "τελέω",
+    "grl_meaning": "to fulfill, accomplish, execute, perform",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1771b; Preisigke 2:589"
+  }
+}

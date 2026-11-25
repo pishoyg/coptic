@@ -1,0 +1,451 @@
+{
+  "id": "C12184",
+  "forms": [
+    {
+      "id": "CF33199",
+      "orth": "ϩⲉⲓ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS17188",
+      "bibliography": "CD 86a; KoptHWB 52"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲉⲓ_0_node",
+          52
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲉⲓ",
+          3
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲉⲓ",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲉⲓ",
+          17
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ϩⲉⲓ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ϣⲑⲟⲣⲧⲉⲣ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲁ_3_post_ϫⲁϫⲓ",
+          2
+        ],
+        [
+          "ϫⲁϫⲓ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϩⲉⲓ",
+          18
+        ],
+        [
+          "ϥ_1_pre_ϩⲉⲓ",
+          16
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϩⲉⲓ",
+          4
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲓ",
+          4
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_pre_ϩⲉⲓ",
+          4
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁⲓ",
+          2
+        ],
+        [
+          "ⲥ_1_pre_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲉϧⲣⲏⲓ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_pre_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲉⲛ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲉⲓ",
+          4
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲉϫⲱ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲱⲥϧ",
+          2
+        ],
+        [
+          "ⲱⲥϧ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲧⲱⲛ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲉⲓ",
+          "ⲉⲩⲉ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲩⲉ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲛ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲓ",
+          "ϣⲑⲟⲣⲧⲉⲣ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲙ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲉⲓ",
+          "ⲡⲁ_3_post_ϫⲁϫⲓ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ϫⲁϫⲓ",
+          "ϫⲁϫⲓ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲉⲓ",
+          "ⲁ_1_pre_ϩⲉⲓ",
+          5
+        ],
+        [
+          "ⲁ_1_pre_ϩⲉⲓ",
+          "ϥ_1_pre_ϩⲉⲓ",
+          6
+        ],
+        [
+          "ϥ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          7
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲛϫⲉ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϩⲉⲓ",
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲉⲓ",
+          "ⲩ_1_pre_ϩⲉⲓ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ϧⲉⲛ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲉⲓ",
+          "ⲟⲩ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ϩⲉⲓ",
+          "ϥ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲉⲓ",
+          "ⲟⲩⲁⲓ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_pre_ϩⲉⲓ",
+          "ⲙⲉⲛ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ϩⲉⲓ",
+          "ⲁ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲉⲓ",
+          "ⲕⲉ_2_pre_ⲟⲩⲁⲓ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_pre_ⲟⲩⲁⲓ",
+          "ⲟⲩⲁⲓ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲓ_1_pre_ϩⲉⲓ",
+          "ⲁ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲉⲓ",
+          "ⲥ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲉϧⲣⲏⲓ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϧⲣⲏⲓ_1_post_ϩⲉⲓ",
+          "ⲛϫⲉ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϩⲉⲓ",
+          "ⲁ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲉϫⲉⲛ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ϩⲉⲓ",
+          "ⲡ_2_post_ⲉϫⲉⲛ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲉⲓ",
+          "ⲛⲁ_1_pre_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲉⲓ",
+          "ϩⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲉϫⲱ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲉϫⲱ_1_post_ϩⲉⲓ",
+          "ϥ_2_post_ⲉϫⲱ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϩⲉⲓ",
+          "ⲡⲉⲕ_3_post_ⲱⲥϧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲱⲥϧ",
+          "ⲱⲥϧ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲓ_0_node",
+          "ⲛⲉⲙ_2_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲧⲱⲛ",
+          "ⲟⲩ_2_post_ⲧⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲱⲛ",
+          "ⲧⲱⲛ_1_post_ϩⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲱⲛ_1_post_ϩⲉⲓ",
+          "ϥ_2_post_ⲧⲱⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C987",
+      "label": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs mostly = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C982",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before pl. nouns or pronouns)"
+    },
+    {
+      "target": "C983",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C980",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C981",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before nouns)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

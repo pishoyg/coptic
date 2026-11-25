@@ -1,0 +1,616 @@
+{
+  "id": "C2437",
+  "forms": [
+    {
+      "id": "CF6655",
+      "orth": "ⲣⲉϥⲣⲛⲟⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.14,
+        "rank": 428,
+        "count": 338
+      }
+    },
+    {
+      "orth": "ⲣⲉϥⲉⲣⲛⲟⲃⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.78,
+        "rank": 505,
+        "count": 151
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2804",
+      "bibliography": "CD 222b; ChLCS 31b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲏⲓ ⲛⲁϥ ϫⲉⲁⲛⲟⲕ ⲟⲩ**ⲣⲉϥⲉⲣⲛⲟⲃⲓ** ⲡⲁⲓⲱⲧ ⲉⲑⲟⲩⲁⲃ .",
+      "english": "I said, ‘I am a sinner, my holy father.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲧⲉⲓ**ⲣⲉϥⲣⲛⲟⲃⲉ** ·",
+      "english": "I am a sinful woman.'",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲛⲁⲩ ϫⲉϥⲟⲩⲱⲙ ⲛⲉⲙⲛⲓⲧⲉⲗⲱⲛⲏⲥ ⲛⲉⲙⲛⲓ**ⲣⲉϥⲉⲣⲛⲟⲃⲓ** ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ⲛⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ϫⲉⲉⲑⲃⲉⲟⲩ ϥⲟⲩⲱⲙ ⲟⲩⲟϩ ϥⲥⲱ ⲛⲉⲙⲛⲓⲧⲉⲗⲱⲛⲏⲥ ⲛⲉⲙⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲛϫⲉⲡⲉⲧⲉⲛⲣⲉϥϯⲥⲃⲱ",
+      "english": "The scribes and the Pharisees, when they saw that he was eating with the sinners and tax collectors, said to his disciples, 'Why is it that he eats and drinks with tax collectors and sinners?'",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲉ ⲛⲁⲓ ⲛⲁⲙⲉ ⲛⲉ ⲛ**ⲣⲉϥⲣⲛⲟⲃⲉ** ⲉⲧⲣⲟⲟⲩⲧ ⲉⲩϭⲟⲟⲗⲉ ⲙⲡⲉⲩϫⲓⲛϭⲟⲛⲥ ⲙⲛⲧⲉⲩⲙⲛⲧϣⲁϥⲧⲉ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲅⲁⲣ ⲉⲑⲛⲁϣⲓⲡⲓ ⲉⲟⲩⲟⲛϩⲧ ⲉⲃⲟⲗ ⲛⲉⲙⲛⲁⲥⲁϫⲓ ϧⲉⲛⲡⲁⲓϫⲱⲟⲩ ⲛⲛⲱⲓⲕ ⲟⲩⲟϩ ⲛ**ⲣⲉϥⲉⲣⲛⲟⲃⲓ** ⲡϣⲏⲣⲓ ϩⲱϥ ⲙⲫⲣⲱⲙⲓ ⲛⲁϯϣⲓⲡⲓ ⲛⲁϥ ϩⲟⲧⲁⲛ ⲁϥϣⲁⲛⲓ ϧⲉⲛⲡⲱⲟⲩ ⲛⲧⲉⲡⲉϥⲉⲓⲱⲧ ⲛⲉⲙⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ ⲉⲑⲟⲩⲁⲃ .",
+      "english": "For whoever will be ashamed of me and of my words in this adulterous and sinful generation, the Son of Man also will be ashamed of him, when he comes in the glory of his Father with the holy angels.'",
+      "source": "Bohairic Gospel of Mark 8 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:8",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲁⲩϣⲱⲱⲧ ⲉⲃⲟⲗ ⲙⲙⲟⲟⲩ ⲛⲛϣⲏⲣⲉ ⲛ**ⲣⲉϥⲣⲛⲟⲃⲉ** ·",
+      "english": "but they cut off the sinful children",
+      "source": "Abraham Our Father: YA 547-50",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:37-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        18,
+        24.711
+      ],
+      [
+        "ⲛ",
+        431,
+        21.667
+      ],
+      [
+        "ⲡ",
+        202,
+        19.075
+      ],
+      [
+        "ⲟⲩ",
+        153,
+        18.596
+      ],
+      [
+        "ⲧⲉⲗⲱⲛⲏⲥ",
+        14,
+        18.039
+      ],
+      [
+        ".",
+        72,
+        16.67
+      ],
+      [
+        "ⲁ",
+        97,
+        16.447
+      ],
+      [
+        "ⲙ",
+        89,
+        16.382
+      ],
+      [
+        "ⲛⲁ",
+        78,
+        16.148
+      ],
+      [
+        "ⲩ",
+        72,
+        15.923
+      ],
+      [
+        "ⲉ",
+        90,
+        15.896
+      ],
+      [
+        "ⲙⲉⲧⲁⲛⲟⲓⲁ",
+        13,
+        15.582
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        36,
+        15.426
+      ],
+      [
+        "ⲁⲩⲱ",
+        60,
+        15.071
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        16,
+        15.059
+      ],
+      [
+        "ⲧ",
+        53,
+        14.858
+      ],
+      [
+        "ϯ",
+        35,
+        14.508
+      ],
+      [
+        "ⲟⲩⲟϣϥ",
+        5,
+        14.412
+      ],
+      [
+        "ⲙⲛ",
+        39,
+        14.104
+      ],
+      [
+        "ϫⲉ",
+        43,
+        14.029
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          244
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          46
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          20
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          8
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          6
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          4
+        ],
+        [
+          "ⲧⲉⲗⲱⲛⲏⲥ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          7
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          7
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          3
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉⲧⲁⲛⲟⲓⲁ",
+          2
+        ],
+        [
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_5_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ϫⲉ_3_pre_ⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲇⲁⲓⲙⲱⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲟⲩⲁ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          "ⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          "ⲧⲉⲗⲱⲛⲏⲥ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲩ_3_post_ⲙⲉⲧⲁⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲉⲧⲁⲛⲟⲓⲁ",
+          "ⲙⲉⲧⲁⲛⲟⲓⲁ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          "ⲟⲩ_3_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ⲃⲣⲣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲃⲣⲣⲉ",
+          "ⲛ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲃⲣⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲙ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲡⲁⲣⲁ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲟⲩⲟⲛ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲃⲟⲗⲟⲥ_3_post_ⲡ",
+          "ⲙⲛ_5_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_5_post_ⲇⲁⲓⲙⲱⲛ",
+          "ⲛⲉϥ_5_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ϫⲉ_3_pre_ⲙⲟⲩ",
+          "ⲛ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲛⲧ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲛ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          "ⲇⲁⲓⲙⲱⲛ_2_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲁⲓⲙⲱⲛ_2_post_ⲉⲧⲉ",
+          "ⲛⲉ_3_post_ⲇⲁⲓⲙⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲣⲉϥⲣⲛⲟⲃⲉ_0_node",
+          "ⲟⲩⲁ_1_post_ⲣⲉϥⲣⲛⲟⲃⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.12,
+      "rank": 368,
+      "count": 337
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2439",
+      "label": "ϫⲓⲛⲟⲃⲉ",
+      "pos": "V",
+      "gloss": "bear sin"
+    },
+    {
+      "target": "C2433",
+      "label": "ⲁⲧⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinless, innocent"
+    },
+    {
+      "target": "C2435",
+      "label": "ⲙⲁⲓⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sin-loving"
+    },
+    {
+      "target": "C2434",
+      "label": "ⲙⲉⲧⲁⲧⲛⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "sinlessness"
+    },
+    {
+      "target": "C2438",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sinfulness"
+    },
+    {
+      "target": "C2432",
+      "label": "ⲛⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "sin"
+    },
+    {
+      "target": "C2436",
+      "label": "ⲣⲛⲟⲃⲉ",
+      "pos": "V",
+      "gloss": "commit sin"
+    }
+  ]
+}

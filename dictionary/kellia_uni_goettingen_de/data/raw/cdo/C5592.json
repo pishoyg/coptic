@@ -1,0 +1,64 @@
+{
+  "id": "C5592",
+  "forms": [
+    {
+      "id": "CF13159",
+      "orth": "ⲙⲉⲧⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6258",
+      "bibliography": "CD 533a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5594",
+      "label": "ϯⲱⲟⲩ ⲛⲃⲁⲗ",
+      "pos": "V",
+      "gloss": "deem happy"
+    },
+    {
+      "target": "C5591",
+      "label": "ⲣⲉϥⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "patient person"
+    },
+    {
+      "target": "C5589",
+      "label": "ⲱⲟⲩ",
+      "pos": "V",
+      "gloss": "be long"
+    },
+    {
+      "target": "C5593",
+      "label": "ⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "length (in ⲱⲟⲩ ⲛⲓⲁⲧ⸗, \"blessing ...\")"
+    },
+    {
+      "target": "C5590",
+      "label": "ⲱⲟⲩ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "be forbearing, patient"
+    }
+  ]
+}

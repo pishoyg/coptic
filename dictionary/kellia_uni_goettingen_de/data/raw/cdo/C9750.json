@@ -1,0 +1,390 @@
+{
+  "id": "C9750",
+  "forms": [
+    {
+      "id": "CF25145",
+      "orth": "ⲙⲉⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25153",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.91,
+        "rank": 346,
+        "count": 459
+      }
+    },
+    {
+      "id": "CF25148",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25147",
+      "orth": "ⲙⲉ⳯",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25149",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 3.23,
+        "rank": 323,
+        "count": 274
+      }
+    },
+    {
+      "id": "CF25150",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF25151",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25152",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF25146",
+      "orth": "ⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.24,
+        "rank": 117,
+        "count": 1615
+      }
+    },
+    {
+      "id": "CF25154",
+      "orth": "ⲙⲉⲛ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF25155",
+      "orth": "ⲙⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 100.58,
+        "rank": 19,
+        "count": 15869
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS12610",
+      "bibliography": "DDGLC",
+      "cu_ID": "119"
+    },
+    {
+      "id": "CS12611",
+      "bibliography": "DDGLC",
+      "cu_ID": "1322"
+    },
+    {
+      "id": "CS12612",
+      "bibliography": "DDGLC",
+      "cu_ID": "2316"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲛⲟⲩ ⲇⲉ ⲟⲩⲙⲏϣ **ⲙⲉⲛ** ⲛⲉ ⲛⲓⲙⲉⲗⲟⲥ ⲟⲩⲁⲓ ⲇⲉ ⲡⲉ ⲡⲓⲥⲱⲙⲁ .",
+      "english": "But now they are many members, but one body.",
+      "source": "Bohairic 1 Corinthians 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲓⲙⲉⲉⲩⲉ **ⲙⲉⲛ** ⲡⲉ ⲉⲉⲓ ϣⲁⲣⲱⲧⲛ ϩⲛⲟⲩⲧⲱⲧ ⲛϩⲏⲧ ·",
+      "english": "I actually thought to come to you in good faith,",
+      "source": "To Thieving Nuns",
+      "urn": "urn:cts:copticLit:besa.thieving.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲇⲉ ϯϫⲱ ⲙⲙⲟϥ ϫⲉⲡⲓⲟⲩⲁⲓ ⲡⲓⲟⲩⲁⲓ ⲙⲙⲱⲧⲉⲛ ϫⲱ ⲙⲙⲟⲥ ϫⲉⲁⲛⲟⲕ **ⲙⲉⲛ** ⲁⲛⲟⲕ ⲫⲁⲡⲁⲩⲗⲟⲥ ⲁⲛⲟⲕ ⲇⲉ ⲁⲛⲟⲕ ⲫⲁⲁⲡⲟⲗⲗⲱ ⲁⲛⲟⲕ ⲇⲉ ⲁⲛⲟⲕ ⲫⲁⲕⲏⲫⲁ ⲁⲛⲟⲕ ⲇⲉ ⲁⲛⲟⲕ ⲫⲁⲡⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "Now I mean this, that each one of you says, 'I follow Paul,' 'I follow Apollos,' 'I follow Cephas,' and, 'I follow Christ.'",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ **ⲙⲉⲛ** ϣⲁϥϩⲱⲥ ⲙⲙⲟⲓ ϩⲙⲡⲉϥⲧⲛϩ ⲛⲟⲩⲛⲁⲙ ·",
+      "english": "and me he used to place under his right wing,",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲏⲇⲏ **ⲙⲉⲛ** ϩⲟⲗⲱⲥ ⲟⲩⲑⲉⲃⲓⲟ ⲛⲱⲧⲉⲛ ⲡⲉ ϫⲉⲟⲩⲟⲛⲧⲉⲧⲉⲛ ϩⲁⲡ ⲙⲙⲁⲩ ⲟⲩⲧⲱⲧⲉⲛ ⲛⲉⲙⲛⲉⲧⲉⲛⲉⲣⲏⲟⲩ ⲉⲑⲃⲉⲟⲩ ⲙⲁⲗⲗⲟⲛ ⲥⲉϭⲓ ⲙⲙⲱⲧⲉⲛ ⲛϫⲟⲛⲥ ⲁⲛ ⲉⲑⲃⲉⲟⲩ ⲙⲁⲗⲗⲟⲛ ⲥⲉϥⲱϫⲓ ⲙⲙⲱⲧⲉⲛ ⲁⲛ .",
+      "english": "Therefore it is already altogether a defect in you, that you have lawsuits one with another. Why not rather be wronged? Why not rather be defrauded?",
+      "source": "Bohairic 1 Corinthians 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲇⲉ ⲧⲉϥⲥⲁⲣⲝ **ⲙⲉⲛ** ⲡⲉ ⲡⲱⲛϩ ·",
+      "english": "now this was His flesh, the life.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲛ",
+        14,
+        19.212
+      ],
+      [
+        "ⲁ",
+        146,
+        18.461
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        53,
+        18.035
+      ],
+      [
+        "ⲅⲁⲣ",
+        56,
+        17.914
+      ],
+      [
+        "ⲟⲩⲛ",
+        33,
+        17.494
+      ],
+      [
+        ".",
+        100,
+        17.45
+      ],
+      [
+        "ⲩ",
+        83,
+        17.148
+      ],
+      [
+        "ⲛ",
+        99,
+        16.381
+      ],
+      [
+        "ϫⲓⲛⲑⲣⲉϥⲥⲓϯ",
+        5,
+        16.241
+      ],
+      [
+        "ⲟⲩ",
+        90,
+        16.132
+      ],
+      [
+        "ⲉ",
+        81,
+        15.939
+      ],
+      [
+        "ϯ",
+        59,
+        15.84
+      ],
+      [
+        "ϫⲉ",
+        59,
+        15.687
+      ],
+      [
+        "ⲙ",
+        66,
+        15.618
+      ],
+      [
+        "ϥ",
+        84,
+        15.503
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        28,
+        15.124
+      ],
+      [
+        "ⲕⲉ",
+        23,
+        14.933
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        24,
+        14.728
+      ],
+      [
+        "ⲡⲓ",
+        45,
+        14.148
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        13,
+        14.065
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        7,
+        20.181
+      ],
+      [
+        "ⲛ",
+        329,
+        20.056
+      ],
+      [
+        "ⲉ",
+        220,
+        19.322
+      ],
+      [
+        "ⲁ",
+        193,
+        18.982
+      ],
+      [
+        "ⲩ",
+        157,
+        18.854
+      ],
+      [
+        "ϫⲉ",
+        127,
+        18.273
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        29,
+        18.272
+      ],
+      [
+        ".",
+        102,
+        17.735
+      ],
+      [
+        "ⲡⲉ",
+        103,
+        17.728
+      ],
+      [
+        "ϥ",
+        150,
+        17.369
+      ],
+      [
+        "ⲡ",
+        140,
+        17.046
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        30,
+        16.323
+      ],
+      [
+        "ⲟⲩ",
+        98,
+        16.225
+      ],
+      [
+        "ⲁⲛⲅ",
+        19,
+        16.141
+      ],
+      [
+        "ⲛⲁ",
+        82,
+        15.922
+      ],
+      [
+        "ⲙ",
+        86,
+        15.791
+      ],
+      [
+        "ⲡⲁⲩⲗⲟⲥ",
+        16,
+        15.782
+      ],
+      [
+        "ⲉⲧ",
+        66,
+        15.532
+      ],
+      [
+        "ⲉⲣⲟ",
+        44,
+        15.023
+      ],
+      [
+        "ϩⲙ",
+        44,
+        14.952
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.89,
+      "rank": 290,
+      "count": 458
+    },
+    "B": {
+      "rate": 3.23,
+      "rank": 272,
+      "count": 274
+    }
+  },
+  "etym": {
+    "grl_ID": "1385",
+    "grl_lemma": "μέν",
+    "grl_meaning": "indeed",
+    "grl_pos": "particle",
+    "grl_ref": "LSJ 1101b"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "C7651",
+  "forms": [
+    {
+      "id": "CF17367",
+      "orth": "ϭⲉⲗⲃⲉⲥⲓ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ϫⲉⲗⲃⲉⲥⲓ",
+      "dialect": "F",
+      "id": "2536.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8494",
+      "bibliography": "CD 810b; CED 328; KoptHWb 451; DELC 338a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲃⲁϣ",
+        1,
+        15.598
+      ],
+      [
+        "ⲁϣⲉ",
+        1,
+        14.87
+      ],
+      [
+        "ⲩ",
+        2,
+        8.81
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C7652",
+      "label": "ⲥⲁ ⲛϭⲉⲗⲃⲉⲥⲓ",
+      "pos": "N",
+      "gloss": "dealer in purple"
+    }
+  ],
+  "etym": {
+    "demo_num": "dm754",
+    "demo_lemma": "krbsj",
+    "english": "purple",
+    "german": "Purpur",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm754"
+  }
+}

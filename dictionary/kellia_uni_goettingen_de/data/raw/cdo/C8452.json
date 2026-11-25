@@ -1,0 +1,121 @@
+{
+  "id": "C8452",
+  "forms": [
+    {
+      "id": "CF19731",
+      "orth": "ⲁⲣⲧⲩⲙⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19732",
+      "orth": "ⲁⲣⲧⲩⲙⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9270,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9809",
+      "bibliography": "DDGLC",
+      "cu_ID": "3279"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲇⲉ ⲛⲧⲉⲣⲉϥⲕⲁⲧⲁⲥⲧⲓⲗⲉ ⲙⲡⲙⲏⲏϣⲉ . ⲡⲉϫⲁϥ ⲛⲁⲩ ϫⲉⲛⲣⲱⲙⲉ ⲛⲣⲙⲛⲉⲫⲉⲥⲟⲥ . ⲛⲓⲙ ⲅⲁⲣ ⲛⲣⲱⲙⲉ ⲡⲉⲧⲉⲛϥⲥⲟⲟⲩⲛ ⲁⲛ ⲛⲧⲡⲟⲗⲓⲥ ⲛⲉⲫⲉⲥⲟⲥ ⲉⲥϣⲙϣⲉ ⲛⲧⲛⲟϭ ⲛ**ⲁⲣⲧⲩⲙⲓⲥ** ⲙⲛⲡⲍⲉⲩⲥ .",
+      "english": "When the town clerk had quieted the multitude, he said, 'You men of Ephesus, what man is there who doesn't know that the city of the Ephesians is temple keeper of the great goddess Artemis, and of the image which fell down from Zeus?",
+      "source": "44_Acts of the Apostles_19",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩ ⲙⲟⲛⲟⲛ ⲇⲉ ⲡⲉⲓⲙⲉⲣⲟⲥ ⲕⲓⲛⲇⲩⲛⲉⲩⲉ ⲉⲧⲣⲉϥϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ⲛⲧⲟⲟⲧⲛ ⲁⲗⲗⲁ ⲡⲕⲉⲣⲡⲉ ⲛⲧⲛⲟϭ ⲛ**ⲁⲣⲧⲩⲙⲓⲥ** ⲥⲉⲛⲁⲗⲟ ⲉⲩⲱⲡ ⲙⲙⲟϥ ⲁⲩⲱ ⲛⲥⲉⲛⲧⲥ ⲉⲡⲉⲥⲏⲧ ⲉⲃⲟⲗ ϩⲛⲧⲉⲥⲙⲛⲧⲛⲟϭ ⲧⲁⲓ ⲉⲧⲉⲣⲉⲧⲁⲥⲓⲁ ⲧⲏⲣⲥ ⲁⲩⲱ ⲧⲟⲓⲕⲟⲩⲙⲉⲛⲏ ϣⲙϣⲉ ⲛⲁⲥ .",
+      "english": "Not only is there danger that this our trade come into disrepute, but also that the temple of the great goddess Artemis will be counted as nothing, and her majesty destroyed, whom all Asia and the world worships.'",
+      "source": "44_Acts of the Apostles_19",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲍⲉⲩⲥ",
+        1,
+        15.598
+      ],
+      [
+        "ⲛⲟϭ",
+        2,
+        11.298
+      ],
+      [
+        "ⲗⲟ",
+        1,
+        11.267
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        7.083
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8839,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "6341",
+    "grl_lemma": "Ἄρτεμις",
+    "grl_meaning": "Artemis (the Greek goddess)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 248b"
+  }
+}

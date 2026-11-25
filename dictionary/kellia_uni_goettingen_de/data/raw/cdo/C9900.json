@@ -1,0 +1,203 @@
+{
+  "id": "C9900",
+  "forms": [
+    {
+      "id": "CF25722",
+      "orth": "ⲛⲩⲙⲫⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25725",
+      "orth": "ⲛⲩⲙⲫⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4104,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF25724",
+      "orth": "ⲛⲩⲙⲫⲱⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF25723",
+      "orth": "ⲛⲩⲙⲫⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12895",
+      "bibliography": "DDGLC",
+      "cu_ID": "726"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ϣⲁⲩϫⲟⲟⲥ ⲛⲛⲣⲱⲙⲉ ⲉⲧϩⲛⲡ**ⲛⲩⲙⲫⲱⲛ** ⲉⲧⲣⲉⲩⲉⲓⲛⲉ ⲙⲡⲉⲥⲙⲟⲧ ⲛⲧⲙⲛⲧⲣⲟⲟⲩⲛⲉ ⲛⲧϣⲉⲗⲉⲉⲧ ⲕⲁⲧⲁⲧϩⲉ ⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲉⲛⲉϩⲃⲏⲩⲉ ⲉϣⲁⲣⲉⲛⲣⲱⲙⲉ ⲁⲁⲩ ·",
+      "english": "but they told the men who were in the bride-chamber to bring to them the tokens of the virginity of the bride, according to the custom which, as ye well know, men observe in this matter.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲗⲗⲟⲛ ⲇⲉ ϩⲛⲟⲩⲙϩⲁⲁⲩ ⲁⲛ ⲁⲗⲗⲁ ϩⲛⲟⲩ**ⲛⲩⲙⲫⲱⲛ** ·",
+      "english": "it was, however, no sepulchre, but rather a bridal bed.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϩⲟⲧⲁⲛ ⲉⲣϣⲁⲛⲡⲛⲩⲙⲫⲓⲟⲥ ⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡ**ⲛⲩⲙⲫⲱⲛ** ⲧⲟⲧⲉ ⲙⲁⲣⲟⲩⲛⲏⲥⲧⲉⲩⲉ ⲁⲩⲱ ⲙⲁⲣⲟⲩϣⲗⲏⲗ ·",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲟ",
+        2,
+        11.99
+      ],
+      [
+        "ⲛⲏⲥⲧⲉⲩⲉ",
+        1,
+        11.331
+      ],
+      [
+        "ⲧⲁⲕⲟ",
+        2,
+        10.931
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        2,
+        10.697
+      ],
+      [
+        "ⲡ",
+        7,
+        10.112
+      ],
+      [
+        "ⲙⲡ",
+        2,
+        9.924
+      ],
+      [
+        "ϩⲛ",
+        4,
+        9.672
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        9.497
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        9.477
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        1,
+        9.147
+      ],
+      [
+        "ⲧⲣⲉ",
+        2,
+        8.857
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        8.506
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        8.424
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        8.321
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.168
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.431
+      ],
+      [
+        "ⲩ",
+        2,
+        6.002
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        5.94
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        5.601
+      ],
+      [
+        "ⲙ",
+        2,
+        5.544
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲩⲙⲫⲱⲛ_0_node",
+          5
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲛⲩⲙⲫⲱⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲛⲩⲙⲫⲱⲛ",
+          "ⲛⲩⲙⲫⲱⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3712,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "2756",
+    "grl_lemma": "νυμφών",
+    "grl_meaning": "bridechamber",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1185a; Preisigke 2:141"
+  }
+}

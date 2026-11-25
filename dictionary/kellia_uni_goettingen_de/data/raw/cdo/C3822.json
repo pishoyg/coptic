@@ -1,0 +1,180 @@
+{
+  "id": "C3822",
+  "forms": [
+    {
+      "id": "CF9569",
+      "orth": "ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19742,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4337",
+      "bibliography": "CD 364b; ChLCS 51b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲛⲥⲃⲧⲱⲧ ⲉϫⲓ ⲙⲡⲉⲕⲃⲁ ⲙⲙⲛⲧⲁⲧⲥⲱⲧⲙ ⲛⲓⲙ . ⲉⲥϣⲁⲛϫⲱⲕ ⲉⲃⲟⲗ ⲛϭⲓⲧⲉⲧⲛ**ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ** .",
+      "english": "and being in readiness to avenge all disobedience, when your obedience will be made full.",
+      "source": "47_2 Corinthians_10",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲛⲉ",
+        1,
+        11.965
+      ],
+      [
+        "ϭⲱϣⲧ",
+        1,
+        11.067
+      ],
+      [
+        "ϫⲱⲕ",
+        1,
+        10.929
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        9.938
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19356,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3823",
+      "label": "ϭⲓⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, report"
+    },
+    {
+      "target": "C3825",
+      "label": "ⲁⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "disobedient"
+    },
+    {
+      "target": "C3816",
+      "label": "ⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "unhearing, disobedient"
+    },
+    {
+      "target": "C3819",
+      "label": "ⲙⲁⲓⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "loving to hear, to obey"
+    },
+    {
+      "target": "C3817",
+      "label": "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "disobedience"
+    },
+    {
+      "target": "C3826",
+      "label": "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3820",
+      "label": "ⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "place of hearing, music room"
+    },
+    {
+      "target": "C3818",
+      "label": "ⲣⲁⲧⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "be disobedient"
+    },
+    {
+      "target": "C3821",
+      "label": "ⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearer"
+    },
+    {
+      "target": "C3827",
+      "label": "ⲣⲥⲧⲙⲏⲧ",
+      "pos": "V",
+      "gloss": "be obedient"
+    },
+    {
+      "target": "C3824",
+      "label": "ⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedient"
+    },
+    {
+      "target": "C3812",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "hear"
+    },
+    {
+      "target": "C3815",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, obedience"
+    },
+    {
+      "target": "C3813",
+      "label": "ⲥⲱⲧⲙ (ⲛ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    },
+    {
+      "target": "C3814",
+      "label": "ⲥⲱⲧⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    }
+  ]
+}

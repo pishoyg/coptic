@@ -1,0 +1,122 @@
+{
+  "id": "C351",
+  "forms": [
+    {
+      "id": "CF1523",
+      "orth": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1524",
+      "orth": "ϯⲃⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5604,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF1525",
+      "orth": "ϯ ⲙⲡⲃⲉⲭⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1526",
+      "orth": "ϯⲃⲉⲭⲉ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4300,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS389",
+      "bibliography": "CD 30b; KoptHWb 21; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲙⲡⲉⲗⲁⲁⲩ ⲉϣⲑⲛⲟⲩ ϩⲓϫⲙⲡⲕⲁϩ ⲉⲧⲣⲉⲩⲣϩⲱⲃ ⲛⲁϥ · ⲛϥ**ϯⲃⲉⲕⲉ** ⲛⲁⲩ ⲕⲁⲧⲁⲡⲉⲩⲙⲡϣⲁ ·",
+      "english": "Therefore could no one hire them on earth to make them to work for him, and to give them wages according to what they were worth.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12652,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    },
+    {
+      "target": "C352",
+      "label": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    }
+  ]
+}

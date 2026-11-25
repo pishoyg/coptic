@@ -1,0 +1,133 @@
+{
+  "id": "C6570",
+  "forms": [
+    {
+      "id": "CF32011",
+      "orth": "ϩⲗⲟⲡⲗⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7027,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF32010",
+      "orth": "ϩⲗⲟⲡⲗⲉⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11493,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲗⲡⲗⲱⲡ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7025,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲗⲉⲡⲗⲱⲡ†",
+      "dialect": "S",
+      "id": "2171.2"
+    },
+    {
+      "orth": "ⲗⲁⲡⲗⲉⲡ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12111,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲁⲗⲁⲡⲗⲉⲡ",
+      "dialect": "B",
+      "id": "2171.4"
+    },
+    {
+      "orth": "ⲁⲗⲁⲃⲗⲉⲃ",
+      "dialect": "B",
+      "id": "2171.5"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7282",
+      "bibliography": "CD 671a-b; KoptHWb 367; DELC 298b; ChLCS 90a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲅϥⲓ ϩⲁⲣⲟⲟⲩ ⲛⲅⲧⲙ**ϩⲗⲟⲡⲗⲡ** ·",
+      "english": "and you would put up with them and not be distressed.",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲡⲗⲡ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ϩⲗⲟⲡⲗⲡ",
+          "ϩⲗⲟⲡⲗⲡ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6577,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6571",
+      "label": "ϩⲗⲟⲡⲗⲡ",
+      "pos": "N",
+      "gloss": "weariness, distress"
+    }
+  ]
+}

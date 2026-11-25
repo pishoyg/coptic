@@ -1,0 +1,84 @@
+{
+  "id": "C9114",
+  "forms": [
+    {
+      "id": "CF22596",
+      "orth": "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF22597",
+      "orth": "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11255",
+      "bibliography": "DDGLC",
+      "cu_ID": "3993"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϣⲏ",
+        1,
+        12.947
+      ],
+      [
+        "ⲉⲓⲛⲉ",
+        1,
+        10.504
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲍⲱⲅⲣⲁⲫⲉⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "872",
+    "grl_lemma": "ζωγραφία",
+    "grl_meaning": "painting, work of art",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 758b; Preisigke 1:649"
+  }
+}

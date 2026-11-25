@@ -1,0 +1,257 @@
+{
+  "id": "C7596",
+  "forms": [
+    {
+      "id": "CF17251",
+      "orth": "ⲣⲣⲉϥϫⲓϭⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8866,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8426",
+      "bibliography": "CD 806b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲛⲛⲁⲥⲉⲓ ⲛⲧⲁ**ⲣⲣⲉϥϫⲓϭⲟⲗ** ⲛⲧⲁϫⲟⲟⲥ ϫⲉⲛⲓⲙ ⲡⲉⲧⲛⲁⲩ ⲉⲣⲟⲓ ⲏ ⲧⲁⲣϩⲏⲕⲉ ⲛⲧⲁϫⲓⲟⲩⲉ ⲛⲧⲁⲱⲣⲕ ⲙⲡⲣⲁⲛ ⲙⲡⲁⲛⲟⲩⲧⲉ",
+      "english": "lest I be filled and become false, and say, Who sees me? or be poor and steal, and swear vainly by the name of God.",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲟⲩⲱϩ ⲉⲛⲉϥϣⲁϫⲉ ϫⲉⲛⲛⲉϥϫⲡⲓⲟⲕ ⲛⲅ**ⲣⲣⲉϥϫⲓϭⲟⲗ**",
+      "english": "Add not unto his words, lest he reprove thee, and thou be made a liar.",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲓ",
+        1,
+        12.511
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        1,
+        12.206
+      ],
+      [
+        "ⲧⲁ",
+        2,
+        10.95
+      ],
+      [
+        "ⲥⲛⲁⲩ",
+        1,
+        9.92
+      ],
+      [
+        "ϩⲱⲃ",
+        1,
+        9.087
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        8.116
+      ],
+      [
+        "ⲕ",
+        1,
+        5.853
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        5.238
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          2
+        ],
+        [
+          "ⲅ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲣⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ϫⲟⲟ_1_post_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲅ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲧⲁ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          "ⲣⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          1
+        ],
+        [
+          "ⲣⲣⲉϥϫⲓϭⲟⲗ_0_node",
+          "ⲛ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϫⲟⲟ",
+          "ⲧⲁ_2_post_ϫⲟⲟ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϫⲟⲟ",
+          "ϫⲟⲟ_1_post_ⲣⲣⲉϥϫⲓϭⲟⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8417,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C7089",
+      "type": "cf",
+      "label": "say, speak, tell"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7591",
+      "label": "ϫⲓϭⲟⲗ",
+      "pos": "V",
+      "gloss": "tell lie, lie"
+    },
+    {
+      "target": "C7592",
+      "label": "ϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie, falsehood"
+    },
+    {
+      "target": "C7587",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie; liar"
+    },
+    {
+      "target": "C7588",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lie; liar"
+    },
+    {
+      "target": "C7589",
+      "label": "ϭⲟⲗ",
+      "pos": "N",
+      "gloss": "lying, untrue, false"
+    },
+    {
+      "target": "C7593",
+      "label": "ⲁⲧϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "unlying, honest"
+    },
+    {
+      "target": "C7594",
+      "label": "ⲙⲛⲧⲁⲧϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "truthfulness, sincerity"
+    },
+    {
+      "target": "C7590",
+      "label": "ⲣϭⲟⲗ",
+      "pos": "V",
+      "gloss": "be lie, false; make liar, stultify"
+    },
+    {
+      "target": "C7595",
+      "label": "ⲣⲉϥϫⲓϭⲟⲗ",
+      "pos": "N",
+      "gloss": "liar"
+    }
+  ]
+}

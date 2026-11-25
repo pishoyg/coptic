@@ -1,0 +1,79 @@
+{
+  "id": "C1755",
+  "forms": [
+    {
+      "id": "CF5079",
+      "orth": "ⲗⲱϫ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲉϫ-",
+      "dialect": "S",
+      "id": "1022.1"
+    },
+    {
+      "orth": "ⲗⲟϫ⸗",
+      "dialect": "S",
+      "id": "1022.2"
+    },
+    {
+      "orth": "ⲗⲟϫ†",
+      "dialect": "S",
+      "id": "1022.3"
+    },
+    {
+      "orth": "ⲗⲱϫ",
+      "dialect": "B",
+      "id": "1022.4"
+    },
+    {
+      "orth": "ⲗⲉϫ-",
+      "dialect": "B",
+      "id": "1022.5"
+    },
+    {
+      "orth": "ⲗⲟϫ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.35,
+        "rank": 1360,
+        "count": 30
+      }
+    },
+    {
+      "orth": "ⲗⲱϫ",
+      "dialect": "A",
+      "id": "1022.7"
+    },
+    {
+      "orth": "ⲗⲁϫ†",
+      "dialect": "F",
+      "id": "1022.8"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2034",
+      "bibliography": "CD 150a; ChLCS 23a"
+    },
+    {
+      "id": "CS2035",
+      "bibliography": "CD 150ab; KoptHWb 83; ChLCS 23a"
+    },
+    {
+      "id": "CS2036",
+      "bibliography": "CD 150b; KoptHWb 83; ChLCS 23a"
+    },
+    {
+      "id": "CS2037",
+      "bibliography": "CD 150b; KoptHWb 83; ChLCS 23a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {}
+}

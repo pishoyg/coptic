@@ -1,0 +1,60 @@
+{
+  "id": "C7556",
+  "forms": [
+    {
+      "id": "CF17171",
+      "orth": "ϭⲱ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8380",
+      "bibliography": "CD 803b; KoptHWb 445; CHLCS 106a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲧⲛⲛⲉⲓϣⲁϫⲉ ⲇⲉ ⲁⲛⲉⲛⲉⲓⲟⲟⲧⲉ **ϭⲱ **ⲉ**ⲧⲙϣⲓⲛⲉ** ⲛⲥⲱⲛ ·",
+      "english": "and by reason of these words our parents ceased to make enquiries concerning our affairs.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲕ ⲟⲩⲛ ϥⲓ ⲉⲣⲟⲕ **ⲛⲅϭⲱ **ⲉ**ⲧⲁⲡⲟⲫⲁⲥⲓⲥ** ⲙⲡⲁⲣⲭⲱⲛ ·",
+      "english": "but thou hadst only to wait for the decision of the governor.",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲕⲛⲁϫⲟⲟⲥ **ϫⲉϯⲛⲁϭⲱ **ⲉ**ⲡⲛⲟⲩⲧⲉ** ⲡⲉⲛⲧⲁϥⲕⲧⲉⲡⲉϥϩⲟ ⲉⲃⲟⲗ ⲙⲡⲏⲓ ⲛⲓⲁⲕⲱⲃ ⲁⲩⲱ ϯⲛⲁϣⲱⲡⲉ ⲉⲓⲛⲁϩⲧⲉ ⲉⲣⲟϥ",
+      "english": "And one shall say, I will wait for God, who has turned away his face from the house of Jacob, and I will trust in him.",
+      "source": "Isaiah 8",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7557",
+      "label": "ϭⲓⲛϭⲱ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C7555",
+      "label": "ϭⲱ",
+      "pos": "V",
+      "gloss": "remain; continue, persist (in doing); desist, stop, cease; remain silent, keep quiet"
+    }
+  ]
+}

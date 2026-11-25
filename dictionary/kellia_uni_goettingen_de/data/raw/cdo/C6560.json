@@ -1,0 +1,156 @@
+{
+  "id": "C6560",
+  "forms": [
+    {
+      "id": "CF15163",
+      "orth": "ϩⲗⲱⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16925,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲗϩⲱⲙ",
+      "dialect": "S",
+      "id": "2163.1"
+    },
+    {
+      "orth": "ϩⲗⲟⲙ",
+      "dialect": "S",
+      "id": "2163.2"
+    },
+    {
+      "orth": "ⲗⲉϩⲗⲏⲙ",
+      "dialect": "B",
+      "id": "2163.3"
+    },
+    {
+      "orth": "ⲗⲉⲗⲏⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4074,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲗⲉϩⲗⲉⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11353,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7272",
+      "bibliography": "CD 670b; CED 280; KoptHWb 367; DELC 298a; ChLCS 90a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲁϥⲉⲓ ⲛϭⲓⲡⲁϥ ⲛⲟⲩϩⲟⲣ ⲁⲩⲱ ⲡⲉ**ϩⲗⲱⲙ** ϩⲛⲛⲉⲩⲧⲟϣ ⲧⲏⲣⲟⲩ",
+      "english": "He spoke, and the dog-fly came, and lice in all their coasts.",
+      "source": "Psalms 104",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:104",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩϩⲟⲣ",
+        1,
+        15.172
+      ],
+      [
+        "ⲧⲟϣ",
+        1,
+        12.163
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲗⲱⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲱⲙ",
+          1
+        ],
+        [
+          "ϩⲗⲱⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲗⲱⲙ",
+          "ⲡⲉ_1_pre_ϩⲗⲱⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ϩⲗⲱⲙ",
+          "ϩⲗⲱⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16527,
+      "count": 1
+    }
+  },
+  "etym": {
+    "demo_num": "d3764",
+    "demo_lemma": "hꜥlꜥmꜥtꜥ(.t)",
+    "english": "[a parasite, synonymous with sjb]",
+    "german": "[ein Parasit, gleichbedeutend mit sjb]",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3764"
+  }
+}

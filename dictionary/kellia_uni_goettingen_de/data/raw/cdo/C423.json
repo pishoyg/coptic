@@ -1,0 +1,201 @@
+{
+  "id": "C423",
+  "forms": [
+    {
+      "id": "CF1756",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1757",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1758",
+      "orth": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "dialect": "F"
+    },
+    {
+      "id": "CF1759",
+      "orth": "ⲉⲃⲏⲗ (ⲉ-)",
+      "dialect": "B"
+    },
+    {
+      "id": "CF1760",
+      "orth": "ⲉⲃⲏⲗ (ⲉ-)",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS511",
+      "bibliography": "CD 35ab; KoptHWb 23"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁ ⲡϭⲟⲓⲥ ϫⲟⲥ ⲛⲱⲟⲩ ϫⲉϧⲉⲛⲟⲩⲙⲟⲩ ⲉⲩⲉⲙⲟⲩ ϩⲓⲡϣⲁϥⲉ ⲟⲩⲟϩ ⲙⲡⲉ ϩⲗⲓ ⲥⲱϫⲡ ⲉⲃⲟⲗ ⲛϧⲏⲧⲟⲩ **ⲉⲃⲏⲗ **ⲉ**ⲭⲁⲗⲉⲃ** ⲡϣⲏⲣⲓ ⲛⲓⲉⲫⲱⲛⲏ ⲛⲉⲙⲓⲏⲥⲟⲩ ⲡϣⲏⲣⲓ ⲛⲛⲁⲩⲏ",
+      "english": "For the Lord said to them, They shall surely die in the wilderness; and there was not left even one of them, except Chaleb the son of Jephonne, and Joshua the son of Naue.",
+      "source": "04_Numeri_26",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲉϥⲭⲁϩⲗⲓ ⲛⲉⲙⲁϥ ⲉϥⲙⲟϣⲓ ⲛⲥⲱϥ **ⲉⲃⲏⲗ **ⲉ**ⲡⲉⲧⲣⲟⲥ** ⲛⲉⲙⲓⲁⲕⲱⲃⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲡⲥⲟⲛ ⲛⲓⲁⲕⲱⲃⲟⲥ",
+      "english": "He allowed no one to follow him, except Peter, James, and John the brother of James.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥϩⲟⲛϩⲉⲛ ⲛⲱⲟⲩ ⲉϣⲧⲉⲙⲉⲗϩⲗⲓ ⲛⲉⲙⲱⲟⲩ ϩⲓⲫⲙⲱⲓⲧ **ⲉⲃⲏⲗ **ⲉ**ⲟⲩϣⲃⲱⲧ** ⲙⲙⲁⲩⲁⲧϥ ⲟⲩⲇⲉ ⲱⲓⲕ ⲟⲩⲇⲉ ⲡⲏⲣⲁ ⲟⲩⲇⲉ ϩⲟⲙⲧ ϧⲉⲛⲛⲉⲧⲉⲛⲙⲟϫϧ",
+      "english": "He commanded them that they should take nothing for their journey, except a staff only: no bread, no wallet, no money in their purse,",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C427",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "to the outside of, out of"
+    },
+    {
+      "target": "C428",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outwards, henceforth, to the end, for ever, utterly, finally, at\n                            all"
+    },
+    {
+      "target": "C429",
+      "label": "ϣⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the uttermost"
+    },
+    {
+      "target": "C430",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "from, away from"
+    },
+    {
+      "target": "C431",
+      "label": "ϩⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "far, distant"
+    },
+    {
+      "target": "C432",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; beyond, excepting; before, in presence of"
+    },
+    {
+      "target": "C433",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "on the outside, from without; to the outside, to the end, forth"
+    },
+    {
+      "target": "C434",
+      "label": "ϩⲓⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, outward"
+    },
+    {
+      "target": "C415",
+      "label": "ⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "the outside"
+    },
+    {
+      "target": "C417",
+      "label": "ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "out, forth, outward"
+    },
+    {
+      "target": "C418",
+      "label": "ⲉⲃⲟⲗ ϫⲉ-",
+      "pos": "CONJ",
+      "gloss": "because, for"
+    },
+    {
+      "target": "C436",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "vomit, throw up"
+    },
+    {
+      "target": "C437",
+      "label": "ⲕⲁⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "vomit"
+    },
+    {
+      "target": "C421",
+      "label": "ⲛⲃⲗ-",
+      "pos": "PREP",
+      "gloss": "beyond, except"
+    },
+    {
+      "target": "C419",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "outer, on outside, outwards"
+    },
+    {
+      "target": "C420",
+      "label": "ⲛⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without; spread abroad, famed; extant, in existence"
+    },
+    {
+      "target": "C424",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ϫⲉ)",
+      "pos": "CONJ",
+      "gloss": "except"
+    },
+    {
+      "target": "C422",
+      "label": "ⲛⲥⲁⲃⲏⲗ (ⲉ-)",
+      "pos": "PREP",
+      "gloss": "outside of, except"
+    },
+    {
+      "target": "C416",
+      "label": "ⲡⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside; outwards; outside, independent of, beyond; out of, beyond"
+    },
+    {
+      "target": "C435",
+      "label": "ⲣⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "become loosened, become free, avoid, escape"
+    },
+    {
+      "target": "C425",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "PREP",
+      "gloss": "outside of, beyond, away from"
+    },
+    {
+      "target": "C426",
+      "label": "ⲥⲁⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "outside, without"
+    }
+  ]
+}

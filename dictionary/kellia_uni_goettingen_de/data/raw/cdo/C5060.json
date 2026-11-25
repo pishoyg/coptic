@@ -1,0 +1,97 @@
+{
+  "id": "C5060",
+  "forms": [
+    {
+      "id": "CF12085",
+      "orth": "ⲟⲩⲟⲛ ⲛⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.23,
+        "rank": 210,
+        "count": 825
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Indefinitpronomen",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS5691",
+      "bibliography": "CD 482a; KoptHWb 273; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ⲇⲉ ϩⲱⲱϥ ⲉϥϥⲓ ⲙⲙⲟϥ ⲉⲃⲟⲗ ϩⲓϫⲱϥ ⲉϥⲕⲧⲟ ⲙⲙⲟϥ ⲉϩⲣⲁⲓ **ⲉϫⲛⲟⲩⲟⲛ **ⲛⲓⲙ**** ⲉⲧⲉⲓⲣⲉ ⲏ ⲉⲧⲛⲁⲉⲓⲣⲉ ⲛϩⲉⲛⲃⲟⲧⲉ ϩⲛⲟⲩⲕⲣⲟϥ ⲏ ⲛϩⲱⲡ ⲉⲓⲧⲉ ϩⲟⲟⲩⲧ ⲉⲓⲧⲉ ⲥϩⲓⲙⲉ",
+      "english": "...",
+      "source": "So Listen FL15-28",
+      "urn": "urn:cts:copticLit:shenoute.listen.amelineau:5-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲛⲧⲁϥⲛ..ⲁ ⲡϣⲙⲙⲟ · ⲙⲛⲡⲣⲙⲛϯⲙⲉ · **ⲙⲛⲟⲩⲟⲛ **ⲛⲓⲙ**** ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲗⲗⲟ ⲇⲉ ⲛⲉϥϯⲟⲉⲓⲕ **ⲛⲟⲩⲟⲛ **ⲛⲓⲙ**** ⲉⲧⲛⲏⲩ .",
+      "english": "The elder gave bread to everyone who came.",
+      "source": "Apophthegmata Patrum Sahidic 096: Anonymous Nau 281",
+      "urn": "urn:cts:copticLit:ap.96.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.2,
+      "rank": 181,
+      "count": 825
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5058",
+      "label": "ⲕⲉⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone else, something else"
+    },
+    {
+      "target": "C5059",
+      "label": "ⲗⲁⲁⲩ ⲛⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "any one"
+    },
+    {
+      "target": "C5062",
+      "label": "ⲙⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is not one, any"
+    },
+    {
+      "target": "C5061",
+      "label": "ⲟⲩⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is someone"
+    },
+    {
+      "target": "C5057",
+      "label": "ⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone, something"
+    },
+    {
+      "target": "C5063",
+      "label": "ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ",
+      "pos": "EXIST",
+      "gloss": "one after another"
+    }
+  ]
+}

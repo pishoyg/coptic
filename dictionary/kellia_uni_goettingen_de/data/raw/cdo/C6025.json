@@ -1,0 +1,132 @@
+{
+  "id": "C6025",
+  "forms": [
+    {
+      "id": "CF14055",
+      "orth": "ϣⲁⲣⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.96,
+        "rank": 221,
+        "count": 782
+      }
+    },
+    {
+      "orth": "ϣⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 24.64,
+        "rank": 61,
+        "count": 2090
+      }
+    },
+    {
+      "orth": "ϣⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 30.92,
+        "rank": 45,
+        "count": 4879
+      }
+    },
+    {
+      "orth": "ϣⲁⲣⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.27,
+        "rank": 631,
+        "count": 108
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Aorist ϣⲁ(ⲣⲉ)-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS6710",
+      "bibliography": "CD 583a-b; CED 251; KoptHWb 324; DELC 269a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲗⲟⲓⲡⲟⲛ ⲁⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ϭⲓ ⲙⲡⲓⲁⲗⲟⲩ ϣⲉⲛⲟⲩϯ ⲟⲩⲟϩ ⲁϥⲁⲙⲟⲛⲓ ⲛⲛⲓⲉⲥⲱⲟⲩ ⲛⲉⲙⲁϥ ⲟⲩⲟϩ ⲁⲣⲉϣⲁⲛⲣⲟⲩϩⲓ ϣⲱⲡⲓ ⲙⲙⲏⲛⲓ **ϣⲁⲣⲉ**ⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲟⲩⲱⲣⲡ ⲙⲡⲓⲁⲗⲟⲩ ϣⲉⲛⲟⲩϯ ⲛⲛⲉϥⲓⲟϯ ⲉⲡⲓϯⲙⲓ .",
+      "english": "Then finally the shepherd took the boy Shenoute and he watched over the sheep with him, and when evening came every day the shepherd would send the boy Shenoute to his parents to the village.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲓⲛ ⲟⲛ **ϣⲁⲣⲉ**ⲛⲁⲅⲅⲉⲗⲟⲥ ϯⲉⲟⲟⲩ ⲛⲁϥ ·",
+      "english": "Moreover, when the angels glorify him,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥϫⲱ ⲙⲙⲟⲥ ⲛⲱⲟⲩ ⲡⲉ ϫⲉⲛⲑⲱⲧⲉⲛ ⲉⲧⲉⲛⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲧⲟⲓ ⲛⲱⲧⲉⲛ ⲛⲧⲉϯⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ⲛⲏ ⲇⲉ ⲛⲑⲱⲟⲩ ⲉⲧⲥⲁⲃⲟⲗ **ϣⲁⲣⲉ**ⲡⲧⲏⲣϥ ϣⲱⲡⲓ ⲛⲱⲟⲩ ϧⲉⲛϩⲁⲛⲡⲁⲣⲁⲃⲟⲗⲏ",
+      "english": "He said to them, 'To you is given the mystery of the Kingdom of God, but to those who are outside, all things are done in parables,",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲩϣⲁⲛⲛⲟϫϥ ⲉⲃⲟⲗ **ϣⲁ**ϥⲃⲱⲕ",
+      "english": "which leaves it if it cast out",
+      "source": "Apophthegmata Patrum Sahidic 139: N 306",
+      "urn": "urn:cts:copticLit:ap.139.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲁⲩϩⲓⲏⲣⲡ ⲙⲃⲉⲣⲓ ⲉⲁⲥⲕⲟⲥ ⲛⲁⲡⲁⲥ ⲙⲙⲟⲛ ϣⲁⲣⲉⲡⲓⲏⲣⲡ ⲫⲉϧ ⲛⲓⲁⲥⲕⲟⲥ ⲟⲩⲟϩ ϣⲁⲣⲉⲡⲓⲏⲣⲡ ⲧⲁⲕⲟ ⲛⲉⲙⲛⲓⲁⲥⲕⲟⲥ ⲁⲗⲗⲁ **ϣⲁ**ⲩϩⲓⲏⲣⲡ ⲙⲃⲉⲣⲓ ⲉⲁⲥⲕⲟⲥ ⲙⲃⲉⲣⲓ .",
+      "english": "No one puts new wine into old wineskins, or else the new wine will burst the skins, and the wine pours out, and the skins will be destroyed; but they put new wine into fresh wineskins.'",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϣⲁ**ⲩⲧⲣⲉⲩⲕⲱⲧⲉ ϩⲛⲟⲩϫⲛⲁϩ ϣⲁⲛⲧⲟⲩⲟⲩⲃⲁϣ ·",
+      "english": "until it turns white,",
+      "source": "Apophthegmata Patrum Sahidic 029",
+      "urn": "urn:cts:copticLit:ap.29.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C13004",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "relative converter + aorist"
+    },
+    {
+      "target": "C13005",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "circumstantial converter + aorist"
+    },
+    {
+      "target": "C13006",
+      "label": "ⲉϣⲁⲣⲉ-",
+      "pos": "A",
+      "gloss": "focalising converter (\"2nd tense\") + aorist"
+    }
+  ],
+  "etym": {
+    "egy_num": "400037",
+    "egy_lemma": "ḫr",
+    "demo_num": "d4549",
+    "demo_lemma": "ḫr",
+    "english": "[Formation element of verb forms]",
+    "german": "[Bildungselement von Verbformen]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/400037",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4549"
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "id": "C10555",
+  "forms": [
+    {
+      "id": "CF28403",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28404",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF28405",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3198,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF28406",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF28407",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": "W"
+    },
+    {
+      "id": "CF28408",
+      "orth": "ⲥⲧⲟⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF28409",
+      "orth": "ⲥⲧⲟⲩⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14345",
+      "bibliography": "DDGLC",
+      "cu_ID": "232"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉϩⲁⲛ**ⲥⲧⲟⲁ** ⲛϧⲏⲧⲟⲩ ⲉϯⲇ ⲉⲩⲕⲱϯ ⲉⲣⲟϥ ⲟⲩⲟϩ ϩⲁⲛⲙⲁ ⲛⲑⲱⲕ ⲁⲩⲑⲁⲙⲓⲱⲟⲩ ϧⲉⲛⲛⲓⲥⲧⲟⲁ ⲉⲩⲕⲱϯ .",
+      "english": "And there were chambers in them round about, round about the four, and cooking-places formed under the chambers round about.",
+      "source": "26_Ezechiel_46",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:46",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲩⲛ ⲟⲩⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ ⲇⲉ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ϩⲓϫⲛⲧⲉⲡⲣⲟⲃⲁⲧⲓⲕⲏ . ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟⲥ ⲙⲙⲛⲧϩⲉⲃⲣⲁⲓⲟⲥ ϫⲉⲃⲏⲇⲥⲁⲓⲇⲁ ⲉⲣⲉϯ ⲛ**ⲥⲧⲟⲁ** ϩⲓϫⲱⲥ .",
+      "english": "Now in Jerusalem by the sheep gate, there is a pool, which is called in Hebrew, 'Bethesda,' having five porches.",
+      "source": "43_John_5",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϩⲣⲏⲓ ⲇⲉ ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ ϩⲓϫⲉⲛϯⲡⲣⲟⲃⲁⲧⲓⲕⲏ ⲛⲉⲟⲩⲟⲛ ⲟⲩⲕⲟⲗⲩⲙⲃⲏⲑⲣⲁ ⲑⲏ ⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟⲥ ⲙⲙⲉⲧϩⲉⲃⲣⲉⲟⲥ ϫⲉⲃⲏⲑⲥⲁⲓⲇⲁ ⲉⲟⲩⲟⲛ ⲛⲧⲁⲥ ⲙⲙⲁⲩ ⲛⲉⲛ**ⲥⲧⲟⲁ** .",
+      "english": "Now in Jerusalem by the sheep gate, there is a pool, which is called in Hebrew, 'Bethesda,' having five porches.",
+      "source": "04_John_05",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:05",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥⲙⲟⲟϣⲉ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϩⲙⲡⲉⲣⲡⲉ ϩⲁⲧⲉ**ⲥⲧⲟⲁ** ⲛⲥⲟⲗⲟⲙⲱⲛ .",
+      "english": "It was winter, and Jesus was walking in the temple, in Solomon's porch.",
+      "source": "43_John_10",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁϥⲙⲟϣⲓ ⲡⲉ ⲛϫⲉⲓⲏⲥⲟⲩⲥ ϧⲉⲛⲡⲓⲉⲣⲫⲉⲓ ϧⲁϯ**ⲥⲧⲟⲁ** ⲛⲧⲉⲥⲟⲗⲟⲙⲱⲛ .",
+      "english": "It was winter, and Jesus was walking in the temple, in Solomon's porch.",
+      "source": "04_John_10",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲉⲛⲙⲁ ⲛⲥⲁϩⲧⲉ ⲁⲩⲧⲁⲙⲓⲟⲟⲩ ϩⲁⲛⲉ**ⲥⲧⲟⲁ** ⲉⲩⲕⲱⲧⲉ",
+      "english": "And there were chambers in them round about, round about the four, and cooking-places formed under the chambers round about.",
+      "source": "Ezekiel 46",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥⲟⲗⲟⲙⲱⲛ",
+        2,
+        16.023
+      ],
+      [
+        ".",
+        9,
+        12.541
+      ],
+      [
+        "ⲩ",
+        8,
+        12.536
+      ],
+      [
+        "ϧⲁⲧⲉⲛ",
+        2,
+        11.925
+      ],
+      [
+        "ⲑⲁⲙⲓⲱⲟⲩ",
+        1,
+        11.023
+      ],
+      [
+        "ϯ",
+        4,
+        9.705
+      ],
+      [
+        "ⲉⲣⲫⲉⲓ",
+        1,
+        9.643
+      ],
+      [
+        "ⲛⲧⲁ",
+        1,
+        8.991
+      ],
+      [
+        "ⲑⲏ",
+        1,
+        8.82
+      ],
+      [
+        "ⲥⲟⲡ",
+        1,
+        8.587
+      ],
+      [
+        "ⲛϧⲣⲏⲓ",
+        1,
+        8.162
+      ],
+      [
+        "ⲕⲱϯ",
+        1,
+        7.501
+      ],
+      [
+        "ϧⲁ",
+        1,
+        7.268
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.25
+      ],
+      [
+        "ⲉ",
+        3,
+        7.187
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        6.519
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        6.494
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        6.481
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.469
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.306
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲏⲇⲥⲁⲓⲇⲁ",
+        1,
+        15.691
+      ],
+      [
+        "ⲥⲟⲗⲟⲙⲱⲛ",
+        2,
+        14.398
+      ],
+      [
+        "ϩⲁ",
+        4,
+        13.28
+      ],
+      [
+        "ⲣⲡⲉ",
+        2,
+        12.92
+      ],
+      [
+        ".",
+        7,
+        12.394
+      ],
+      [
+        "ⲛⲏϫ",
+        1,
+        11.285
+      ],
+      [
+        "ⲧⲉ",
+        3,
+        9.973
+      ],
+      [
+        "ⲛⲉ",
+        3,
+        9.483
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        9.432
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        9.225
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        8.868
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        8.572
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        1,
+        8.013
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        7.009
+      ],
+      [
+        "ⲉ",
+        3,
+        6.987
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        6.517
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.162
+      ],
+      [
+        "ⲛ",
+        3,
+        5.979
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.635
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          6
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲧⲟⲁ",
+          2
+        ],
+        [
+          "ⲥⲟⲗⲟⲙⲱⲛ_2_post_ⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲑⲏ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ⲙⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ⲙⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲙⲟⲩϯ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲱϯ",
+          1
+        ],
+        [
+          "ⲕⲱϯ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲥⲧⲟⲁ",
+          "ⲥⲟⲗⲟⲙⲱⲛ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲥⲧⲟⲁ",
+          "ⲥⲧⲟⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          "ⲑⲏ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲑⲏ_1_post_ⲥⲧⲟⲁ",
+          "ⲉ_2_post_ⲑⲏ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲑⲏ",
+          "ϣⲁ_4_post_ⲙⲟⲩϯ",
+          1
+        ],
+        [
+          "ϣⲁ_4_post_ⲙⲟⲩϯ",
+          "ⲩ_4_post_ⲙⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ⲙⲟⲩϯ",
+          "ⲙⲟⲩϯ_3_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ⲥⲧⲟⲁ",
+          "ⲥⲧⲟⲁ_0_node",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          "ⲩ_3_post_ⲕⲱϯ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲱϯ",
+          "ⲕⲱϯ_2_post_ⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲱⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥⲧⲟⲁ",
+          "ⲩ_3_post_ⲕⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲕⲱⲧⲉ",
+          "ⲕⲱⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥⲧⲟⲁ_0_node",
+          "ⲉⲧ_1_post_ⲥⲧⲟⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲧⲟⲁ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.07,
+      "rank": 2809,
+      "count": 6
+    },
+    "S": {
+      "rate": 0.04,
+      "rank": 4306,
+      "count": 6
+    }
+  },
+  "etym": {
+    "grl_ID": "2592",
+    "grl_lemma": "στοά",
+    "grl_meaning": "roofed colonade, cloister",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1647a; Preisigke 2:489"
+  }
+}

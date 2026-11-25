@@ -1,0 +1,662 @@
+{
+  "id": "C2502",
+  "forms": [
+    {
+      "id": "CF6791",
+      "orth": "ⲛⲟⲩⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1073,
+        "count": 85
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.75,
+        "rank": 865,
+        "count": 64
+      }
+    },
+    {
+      "orth": "ⲛⲟⲩⲛⲉ",
+      "dialect": "A",
+      "id": "110.1"
+    },
+    {
+      "orth": "ⲛⲟⲩⲛⲓ",
+      "dialect": "F",
+      "id": "110.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2881",
+      "bibliography": "CD 227b-228a; CED 109; KoptHWb 124; DELC 143-144; ChLCS 32b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲙⲟⲛ**ⲛⲟⲩⲛⲓ** ⲛϧⲏⲧⲟⲩ ⲁⲗⲗⲁ ϩⲁⲛⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ ⲛⲉ ⲓⲧⲁ ⲁⲣⲉϣⲁⲛⲟⲩϩⲟϫϩⲉϫ ϣⲱⲡⲓ ⲓⲉ ⲟⲩⲇⲓⲱⲅⲙⲟⲥ ⲉⲑⲃⲉⲡⲓⲥⲁϫⲓ ⲥⲁⲧⲟⲧⲟⲩ ϣⲁⲩⲉⲣⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉⲥⲑⲉ .",
+      "english": "They have no root in themselves, but are short-lived. When oppression or persecution arises because of the word, immediately they stumble.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲓⲛⲁⲩ ⲉⲧ**ⲛⲟⲩⲛⲉ** ⲛⲛϣⲏⲛ ·",
+      "english": "I saw the root of a tree",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲟⲧⲉ ⲉⲧⲁϥϣⲁⲓ ⲛϫⲉⲫⲣⲏ ⲁϥⲉⲣⲕⲁⲩⲙⲁ ⲟⲩⲟϩ ⲉⲑⲃⲉϫⲉⲙⲙⲟⲛⲧⲉϥ **ⲛⲟⲩⲛⲓ** ⲁϥϣⲱⲟⲩⲓ",
+      "english": "When the sun had risen, it was scorched; and because it had no root, it withered away.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲉⲡⲉϥⲧⲁⲓⲟ ϫⲓϣⲓⲡⲉ · ⲛⲧⲉⲧⲉϥⲟⲣⲅⲏ ⲟⲩⲱϣϥ · ⲙⲁⲣⲟⲩⲥⲉⲕⲛⲉϥϣⲏⲣⲉ ⲉⲡⲉⲥⲏⲧ ⲛⲥⲉⲡⲉⲣⲕⲧⲉⲩ**ⲛⲟⲩⲛⲉ** ⲧⲏⲣⲥ ·",
+      "english": "May his honour be disgraced, and his pride wounded; may his sons be dragged downwards, and may all their roots be pulled out.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲣϣⲟⲩϣⲟⲩ ⲙⲙⲟⲕ ⲉϫⲉⲛⲛⲓϫⲁⲗ ⲓⲥϫⲉ ⲇⲉ ⲛⲑⲟⲕ ⲕϣⲟⲩϣⲟⲩ ⲙⲙⲟⲕ ⲛⲑⲟⲕ ⲁⲛ ⲉⲧϥⲁⲓ ϧⲁϯ**ⲛⲟⲩⲛⲓ** ⲁⲗⲗⲁ ϯⲛⲟⲩⲛⲓ ⲉⲧⲧⲱⲟⲩⲛ ϧⲁⲣⲟⲕ",
+      "english": "don't boast over the branches. But if you boast, it is not you who support the root, but the root supports you.",
+      "source": "06_Romans_11",
+      "urn": "urn:cts:copticLit:nt.rom.bohairic:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲙⲛ**ⲛⲟⲩⲛⲉ** ⲇⲉ ϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ ⲁⲗⲗⲁ ϩⲉⲛⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ ⲛⲉ ⲉⲣϣⲁⲛⲟⲩⲑⲗⲓⲯⲓⲥ ⲇⲉ ϣⲱⲡⲉ ⲏ ⲟⲩⲇⲓⲱⲅⲙⲟⲥ ⲉⲧⲃⲉⲡϣⲁϫⲉ ⲛⲧⲉⲩⲛⲟⲩ ϣⲁⲩⲥⲕⲁⲛⲇⲁⲗⲓⲍⲉ .",
+      "english": "They have no root in themselves, but are short-lived. When oppression or persecution arises because of the word, immediately they stumble.",
+      "source": "Mark Chapter 4",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲱⲟⲩⲓ",
+        14,
+        24.988
+      ],
+      [
+        "ⲛⲓⲉⲥⲥⲉ",
+        3,
+        22.45
+      ],
+      [
+        "ⲫⲓⲏ",
+        3,
+        22.45
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        46,
+        21.651
+      ],
+      [
+        "ϣϣⲏⲛ",
+        6,
+        20.165
+      ],
+      [
+        "ⲙⲙⲟⲛⲧⲉ",
+        4,
+        20.023
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        11,
+        19.888
+      ],
+      [
+        "ⲁ",
+        31,
+        19.852
+      ],
+      [
+        "ϩⲣⲏⲣⲓ",
+        3,
+        19.806
+      ],
+      [
+        "ⲛⲛⲟⲩⲟⲥϧ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛ",
+        27,
+        18.855
+      ],
+      [
+        "ⲣⲟⲕϩⲟⲩ",
+        1,
+        18.695
+      ],
+      [
+        "ϭⲉ",
+        2,
+        18.695
+      ],
+      [
+        "ⲟⲩⲟϫⲟⲩⲉϫ",
+        1,
+        18.695
+      ],
+      [
+        "ⲣⲉⲧ",
+        1,
+        18.695
+      ],
+      [
+        ".",
+        20,
+        18.582
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        17,
+        18.566
+      ],
+      [
+        "ⲟⲩ",
+        24,
+        18.509
+      ],
+      [
+        "ⲧ",
+        11,
+        17.903
+      ],
+      [
+        "ϥ",
+        22,
+        17.803
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        105,
+        17.542
+      ],
+      [
+        "ⲡⲉⲣⲕ",
+        3,
+        17.359
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        17.189
+      ],
+      [
+        "ⲁⲧⲃⲉⲥ",
+        2,
+        16.189
+      ],
+      [
+        "ⲧ",
+        45,
+        16.137
+      ],
+      [
+        "ⲃⲟⲗⲃⲗ",
+        2,
+        15.189
+      ],
+      [
+        "ⲓⲉⲥⲥⲁⲓ",
+        4,
+        14.867
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        30,
+        14.777
+      ],
+      [
+        "ⲩⲉϩⲥ",
+        1,
+        14.189
+      ],
+      [
+        "ⲣϩⲗⲟ",
+        1,
+        14.189
+      ],
+      [
+        "ϭⲓⲙⲙⲓⲥⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲛⲉⲛⲉ",
+        1,
+        14.189
+      ],
+      [
+        "ⲡⲓⲕⲣⲓⲁ",
+        1,
+        14.189
+      ],
+      [
+        "ⲟⲩⲟϭⲟⲩⲏϭ",
+        1,
+        14.189
+      ],
+      [
+        "ϭⲛⲉⲥ",
+        1,
+        14.189
+      ],
+      [
+        "ⲡⲥⲟⲩⲱⲛ",
+        1,
+        14.189
+      ],
+      [
+        "ⲧⲉⲫⲩⲗⲗⲏ",
+        1,
+        14.189
+      ],
+      [
+        "ⲛⲟⲩⲛⲉ",
+        4,
+        13.779
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        13,
+        13.532
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲙⲟⲩ",
+        2,
+        13.488
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲟⲩⲛⲉ_0_node",
+          45
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲛⲟⲩⲛⲉ",
+          6
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲟⲩⲛⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲛⲟⲩⲛⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          7
+        ],
+        [
+          "ⲓⲉⲥⲥⲁⲓ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          4
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲛⲟⲩⲛⲉ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          3
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲩⲛⲉ",
+          6
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲙⲟⲩ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲛⲟⲩⲛⲉ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ϫⲉ_5_pre_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲩⲛⲉ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩⲛⲉ",
+          2
+        ],
+        [
+          "ⲥ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲧϩⲟⲟⲩ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϯⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϯⲟⲩⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲥⲁ_3_post_ϯⲟⲩⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲛⲉ_0_node",
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲓⲉⲥⲥⲁⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          6
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲙⲛⲧⲁⲧⲙⲟⲩ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲛⲉ_0_node",
+          "ⲧⲏⲣ_1_post_ⲛⲟⲩⲛⲉ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ϫⲉ_5_pre_ϩⲟⲟⲩ",
+          "ⲧ_1_pre_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲛⲉ_0_node",
+          "ⲙ_1_post_ⲛⲟⲩⲛⲉ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϩⲟⲟⲩ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲛⲉ_0_node",
+          "ⲉ_1_post_ⲛⲟⲩⲛⲉ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲥ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲟⲟⲡ",
+          "ϣⲟⲟⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲟⲡ_2_post_ⲉ",
+          "ⲛⲙⲙⲁ_3_post_ϣⲟⲟⲡ",
+          1
+        ],
+        [
+          "ⲛⲙⲙⲁ_3_post_ϣⲟⲟⲡ",
+          "ϥ_4_post_ⲛⲙⲙⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲛ",
+          "ⲡⲉⲧϩⲟⲟⲩ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϣⲏⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲡ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲛⲓⲙ",
+          "ⲉⲧ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲡ",
+          "ϩⲟⲟⲩ_5_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲉⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲛⲟⲩⲛⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲛⲟⲩⲛⲉ",
+          "ⲛⲟⲩⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩⲛⲉ",
+          "ⲥ_3_post_ϯⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϯⲟⲩⲱ",
+          "ϯⲟⲩⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯⲟⲩⲱ_2_post_ⲉ",
+          "ⲛⲥⲁ_3_post_ϯⲟⲩⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.54,
+      "rank": 939,
+      "count": 85
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2503",
+      "label": "ⲛⲟⲩⲛⲓ",
+      "pos": "N",
+      "gloss": "radish"
+    }
+  ],
+  "etym": {
+    "egy_num": "70220",
+    "egy_lemma": "mny.t",
+    "demo_num": "dm4361",
+    "demo_lemma": "nn.t",
+    "english": "root (med.)",
+    "german": "Wurzel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/70220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm4361"
+  }
+}

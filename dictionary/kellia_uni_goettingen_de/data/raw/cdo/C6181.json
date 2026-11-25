@@ -1,0 +1,44 @@
+{
+  "id": "C6181",
+  "forms": [
+    {
+      "id": "CF14370",
+      "orth": "ϯϣⲟϣⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6868",
+      "bibliography": "CD 608b; ChLCS 83b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6180",
+      "label": "ϣⲟϣⲧ",
+      "pos": "N",
+      "gloss": "hindrance, impediment"
+    },
+    {
+      "target": "C6182",
+      "label": "ⲣϣⲟϣⲧ",
+      "pos": "V",
+      "gloss": "act as key, shut"
+    }
+  ]
+}

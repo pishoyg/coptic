@@ -1,0 +1,51 @@
+{
+  "id": "C6318",
+  "forms": [
+    {
+      "id": "CF14647",
+      "orth": "ϧⲱⲣ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ϧⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10299,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϧⲟⲣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10301,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7008",
+      "bibliography": "CD 631a; CED 268; KoptHWb 385; DELC 283a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "119610",
+    "egy_lemma": "ḫr",
+    "demo_num": "d4807",
+    "demo_lemma": "ẖr",
+    "english": "to fall; to fell",
+    "german": "fallen; fällen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/119610",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4807"
+  }
+}

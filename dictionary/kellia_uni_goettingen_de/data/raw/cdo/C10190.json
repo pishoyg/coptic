@@ -1,0 +1,109 @@
+{
+  "id": "C10190",
+  "forms": [
+    {
+      "id": "CF26892",
+      "orth": "ⲡⲗⲁⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26893",
+      "orth": "ⲡⲗⲁⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13154,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13536",
+      "bibliography": "DDGLC",
+      "cu_ID": "1545"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲙⲛⲛⲥⲁⲧⲉ**ⲡⲗⲁⲥⲓⲥ** ⲙⲡϣⲟⲣⲡ ⲛⲣⲱⲙⲉ ⲉⲧϩⲛⲧⲅⲉⲛⲉⲥⲓⲥ ·",
+      "english": "Therefore, after the fashioning of the first man which is (related) in Genesis....?",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲛⲥⲁ",
+        1,
+        11.126
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        1,
+        10.442
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        8.577
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲁⲥⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12740,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3723",
+    "grl_lemma": "πλάσις",
+    "grl_meaning": "molding, conformation, fiction, invention",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1412a; Preisigke 2:312"
+  }
+}

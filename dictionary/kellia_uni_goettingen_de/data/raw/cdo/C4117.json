@@ -1,0 +1,64 @@
+{
+  "id": "C4117",
+  "forms": [
+    {
+      "id": "CF10179",
+      "orth": "ϯⲧⲃⲏⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4676",
+      "bibliography": "CD 401a; ChLCS 56b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4120",
+      "label": "ϩⲓⲑⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4116",
+      "label": "ⲛⲉϫⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "kick"
+    },
+    {
+      "target": "C4118",
+      "label": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "kicker"
+    },
+    {
+      "target": "C4119",
+      "label": "ⲣⲉϥϯⲧⲃⲏⲣ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "kicker"
+    },
+    {
+      "target": "C4115",
+      "label": "ⲧⲃⲏⲣ",
+      "pos": "N",
+      "gloss": "blow with foot"
+    }
+  ]
+}

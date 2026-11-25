@@ -1,0 +1,52 @@
+{
+  "id": "C3424",
+  "forms": [
+    {
+      "id": "CF8747",
+      "orth": "ⲕⲟⲧ ⲛⲥⲓⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3902",
+      "bibliography": "CD 328b; KoptHWb 180"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1442",
+      "type": "cf",
+      "label": "wheel"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3423",
+      "label": "ⲥⲓⲕⲉ",
+      "pos": "V",
+      "gloss": "grind, pound"
+    },
+    {
+      "target": "C3426",
+      "label": "ⲥⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "grinding"
+    },
+    {
+      "target": "C3425",
+      "label": "ⲱⲛⲉ ⲛⲥⲓⲕⲉ",
+      "pos": "N",
+      "gloss": "grinding stone"
+    }
+  ]
+}

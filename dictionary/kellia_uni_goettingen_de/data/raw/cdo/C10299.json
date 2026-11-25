@@ -1,0 +1,171 @@
+{
+  "id": "C10299",
+  "forms": [
+    {
+      "id": "CF27375",
+      "orth": "ⲡⲣⲟⲉⲥⲧⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF27379",
+      "orth": "ⲡⲣⲟⲉⲥⲧⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27376",
+      "orth": "ⲡⲣⲟⲉⲓⲥⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5299,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF27377",
+      "orth": "ⲡⲣⲟⲉⲥⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27378",
+      "orth": "ⲡⲣⲟⲉⲥⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4912,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF27380",
+      "orth": "ⲡⲣⲟⲱⲉⲥⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27381",
+      "orth": "ⲡⲣⲱⲉⲓⲥⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27382",
+      "orth": "ⲡⲣⲱⲉⲓⲥⲧⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27383",
+      "orth": "ⲡⲣⲱⲉⲥⲧⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27384",
+      "orth": "ⲡⲣⲱⲉⲥⲧⲱⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13824",
+      "bibliography": "DDGLC",
+      "cu_ID": "3215"
+    },
+    {
+      "id": "CS13825",
+      "bibliography": "DDGLC",
+      "cu_ID": "10933"
+    },
+    {
+      "id": "CS13826",
+      "bibliography": "DDGLC",
+      "cu_ID": "10958"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲁⲙⲉ**ⲡⲣⲟⲉⲓⲥⲧⲟⲥ** ⲉϩⲱⲃ ⲛⲓⲙ · ⲛⲧⲁϥϣⲱⲡⲉ ⲙⲡϣⲏⲣⲉ ϣⲏⲙ ⲓⲱϩⲁⲛⲛⲏⲥ · ⲙⲛⲧⲉϥⲛⲟϭ ⲙⲡⲓⲥⲧⲓⲥ ⲉϩⲟⲩⲛ ⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "and he (i.e., the monk) informed the head of the monastery of everything which had happened to the young man John, and about his great belief in God.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥⲟⲩⲟⲉⲓϣ ⲉϥⲡⲟⲗⲓⲧⲉⲩⲉ ϩⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ϩⲛⲛⲁⲣⲉⲧⲏ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ˽ ⲉⲧⲉⲡⲉⲑⲃⲃⲓⲟ ⲡⲉ ⲙⲛⲧⲙⲛⲧⲣⲙⲣϣ ⲙⲛⲧⲙⲛⲧⲁⲡⲟⲧⲁⲕⲧⲓⲕⲟⲥ ⲙⲛⲡⲕⲉⲥⲉⲉⲡⲉ ⲛⲛⲁⲣⲉⲧⲏ – ⲉⲧⲉⲓⲛⲉ ⲛⲛⲁⲓ – ⲁϥⲙⲧⲟⲛ ⲙⲙⲟϥ ⲛϭⲓⲡⲉ**ⲡⲣⲟⲉⲥⲧⲟⲥ** ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ , ⲉⲩⲣⲱⲙⲉ ⲡⲉ ⲛⲛⲉⲥⲩⲭⲟⲥ ⲁⲩⲱ ⲛⲉⲓⲣⲏⲛⲓⲕⲟⲥ , ⲉⲁⲩⲕⲁⲑⲓⲥⲧⲁ ⲛⲕⲉⲟⲩⲁ ⲉⲡⲉϥⲙⲁ · ⲧⲟⲧⲉ ⲁⲩⲧⲁⲣⲁⲭⲏ ϣⲱⲡⲉ ϩⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲡⲙⲟⲛⲁⲥⲧⲏⲣⲓⲟⲛ ⲧⲁⲓ ⲧⲁⲓⲧⲓⲁ ·",
+      "english": "After he'd spent time in the monastery living his life through Christ's virtues, i.e., humility, meekness, renunciation, and the rest of the virtues resembling these, the abbot—a quiet and peaceful man—passed away in that monastery, with someone else appointed in his stead. Then, disorder arose amongst the monastery's congregation, for this reason:",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲁⲗⲱⲥ",
+        1,
+        13.187
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        1,
+        12.535
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        11.329
+      ],
+      [
+        "ⲟⲓ",
+        1,
+        9.583
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.251
+      ],
+      [
+        "ⲙ",
+        1,
+        5.583
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲉⲥⲧⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5576,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1832",
+    "grl_lemma": "προεστώς",
+    "grl_meaning": "chief, director, headman",
+    "grl_pos": "noun",
+    "grl_ref": "Preisigke 2:370"
+  }
+}

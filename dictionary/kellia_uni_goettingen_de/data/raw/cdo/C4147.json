@@ -1,0 +1,64 @@
+{
+  "id": "C4147",
+  "forms": [
+    {
+      "id": "CF10239",
+      "orth": "ⲙⲛⲧⲣⲉϥⲧⲱⲃϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4708",
+      "bibliography": "CD 402b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4148",
+      "label": "ϫⲓⲛⲧⲱⲃϩ",
+      "pos": "N",
+      "gloss": "entreaty"
+    },
+    {
+      "target": "C4145",
+      "label": "ⲣⲉϥⲧⲱⲃϩ",
+      "pos": "N",
+      "gloss": "one who prays, suppliant, beggar"
+    },
+    {
+      "target": "C4146",
+      "label": "ⲣⲉϥⲧⲱⲃϩ",
+      "pos": "N",
+      "gloss": "one who prays, suppliant, beggar"
+    },
+    {
+      "target": "C4143",
+      "label": "ⲧⲱⲃϩ",
+      "pos": "V",
+      "gloss": "pray, entreat; entreat, console"
+    },
+    {
+      "target": "C4144",
+      "label": "ⲧⲱⲃϩ",
+      "pos": "N",
+      "gloss": "prayer"
+    }
+  ]
+}

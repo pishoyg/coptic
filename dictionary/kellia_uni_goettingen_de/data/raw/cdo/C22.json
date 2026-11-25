@@ -1,0 +1,50 @@
+{
+  "id": "C22",
+  "forms": [
+    {
+      "id": "CF95",
+      "orth": "ⲁⲉⲓⲏⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS22",
+      "bibliography": "CD 2a; CED 12; KoptHWb 2; ChLCS 3a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C23",
+      "label": "ϫⲓⲛⲁⲓⲁⲓ",
+      "pos": "N",
+      "gloss": "increase"
+    },
+    {
+      "target": "C19",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "V",
+      "gloss": "increase (in size), advance (in age)"
+    },
+    {
+      "target": "C20",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "VSTAT",
+      "gloss": "be great, goodly, honoured"
+    },
+    {
+      "target": "C21",
+      "label": "ⲁⲓⲁⲓ",
+      "pos": "N",
+      "gloss": "increase, growth"
+    }
+  ]
+}

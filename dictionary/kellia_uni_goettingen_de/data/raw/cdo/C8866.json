@@ -1,0 +1,421 @@
+{
+  "id": "C8866",
+  "forms": [
+    {
+      "id": "CF21468",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF21469",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3426,
+        "count": 10
+      }
+    },
+    {
+      "id": "CF21470",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21471",
+      "orth": "ⲉⲛⲅⲣⲁⲧⲉⲩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21472",
+      "orth": "ⲉⲛⲕⲣⲁⲧⲉⲩⲉ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS10708",
+      "bibliography": "DDGLC",
+      "cu_ID": "4173"
+    },
+    {
+      "id": "CS10709",
+      "bibliography": "DDGLC",
+      "cu_ID": "5557"
+    },
+    {
+      "id": "CS10710",
+      "bibliography": "DDGLC",
+      "cu_ID": "11389"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲉⲛⲥⲉⲛⲁϣ**ⲉⲅⲕⲣⲁⲧⲉⲩⲉ** ⲁⲛ ⲙⲙⲟⲟⲩ ⲙⲁⲣⲟⲩϫⲓ . ⲛⲁⲛⲟⲩϫⲓ ⲅⲁⲣ ⲉϩⲟⲩⲉⲣⲱⲕϩ .",
+      "english": "But if they don&apos;t have self-control, let them marry. For it&apos;s better to marry than to burn.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲣⲁ ⲙⲡⲉⲡⲉⲧⲛϩⲏⲧ ⲕⲓⲙ ⲉⲣⲱⲧⲛ ⲉⲧⲉⲧⲛⲥⲱⲧⲙ ⲉⲛⲉϣⲡⲏⲣⲉ ⲛⲧⲉⲓϭⲟⲧ ⲁⲣⲁ ⲙⲡⲉⲧⲉⲧⲛⲑⲁⲩⲙⲁⲍⲉ ⲙⲡⲉⲓⲡⲉⲧⲟⲩⲁⲁⲃ · ⲛⲧⲁϥⲣⲡⲉϥⲟⲩⲟⲉⲓϣ ⲧⲏⲣϥ ⲙⲛⲧⲉϥⲥϩⲓⲙⲉ · ⲉϥ**ⲉⲅⲕⲣⲁⲧⲉⲩⲉ** · ⲙⲙⲟϥ ⲉⲣⲟⲥ ·",
+      "english": "Now do not your hearts leap when ye hear of miracles of this kind? And do ye not wonder at this holy man, who passed his whole life with his wife, and restrained himself from union with her?",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲧⲟⲩⲉϣ**ⲉⲅⲕⲣⲁⲧⲉⲩⲉ** ⲙⲙⲟϥ ⲉϣⲡϩⲓⲥⲉ ⲛϩⲟⲩⲟ ⲛⲓⲙ ⲡⲉⲧⲣⲁϣⲉ ⲁⲛ ⲛⲙⲙⲁϥ ϩⲛⲧⲡⲉ ⲁⲩⲱ ϩⲓϫⲙⲡⲕⲁϩ ϩⲛⲛⲣⲱⲙⲉ ⲧⲏⲣⲟⲩ ⲉⲧⲟⲩⲉϣⲡⲉⲟⲟⲩ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲡⲧⲁⲉⲓⲟ ⲛⲛⲉϥⲧⲟⲡⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ .",
+      "english": "And whoever wants to strengthen themselves, to suffer more, who would not rejoice with them in heaven and on earth among all people who want the glory of God and the honor of his holy places?",
+      "source": "So Concerning the Little Place BV 277-278",
+      "urn": "urn:cts:copticLit:shenoute.place.amelineau:55-56",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲁⲅⲱⲛⲓⲍⲉ",
+        2,
+        14.548
+      ],
+      [
+        "ⲙⲙⲟ",
+        10,
+        13.624
+      ],
+      [
+        "ϣ",
+        3,
+        13.094
+      ],
+      [
+        "ⲙⲁⲣ",
+        3,
+        12.665
+      ],
+      [
+        "ϣⲡϩⲓⲥⲉ",
+        1,
+        10.919
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        2,
+        10.296
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        9.882
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        9.765
+      ],
+      [
+        "ϥ",
+        7,
+        9.622
+      ],
+      [
+        "ⲁⲛ",
+        3,
+        9.561
+      ],
+      [
+        "ⲥⲉ",
+        3,
+        9.516
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        1,
+        9.194
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        8.864
+      ],
+      [
+        "ⲓ",
+        3,
+        8.283
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        8.265
+      ],
+      [
+        "ϣⲁ",
+        2,
+        8.024
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        7.965
+      ],
+      [
+        "ⲉ",
+        4,
+        7.495
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        7.121
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          2
+        ],
+        [
+          "ϣ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          7
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          5
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲛⲓⲙ",
+          2
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲉϣ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϣⲡϩⲓⲥⲉ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲥⲉ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲛⲁ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ϣ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          "ⲁⲛ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          5
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲛ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲙⲁ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ϩⲙ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲙⲁ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲙⲁ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉⲣⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲓ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ⲁ_2_post_ⲧⲁⲗⲟ",
+          1
+        ],
+        [
+          "ⲟⲩⲉϣ_1_pre_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ⲉⲅⲕⲣⲁⲧⲉⲩⲉ_0_node",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲅⲕⲣⲁⲧⲉⲩⲉ",
+          "ϣⲡϩⲓⲥⲉ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3056,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "2488",
+    "grl_lemma": "ἐγκρατεύομαι",
+    "grl_meaning": "to exercise self-control, to force oneself to do",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 473b"
+  }
+}

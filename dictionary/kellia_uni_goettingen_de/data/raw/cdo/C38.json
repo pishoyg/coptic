@@ -1,0 +1,91 @@
+{
+  "id": "C38",
+  "forms": [
+    {
+      "id": "CF145",
+      "orth": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS45",
+      "bibliography": "CD 4ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲓⲁⲗⲉ **ⲉϩⲣⲁⲓ**** ⲉϫⲛⲟⲩⲕⲱϩ ⲛⲧⲟⲟⲩ · ϫⲉⲙⲉϣⲁⲕ ⲟⲩⲉⲓⲁ ⲛⲧⲟⲟⲩ ⲡⲉ ·",
+      "english": "and I went up on a pinnacle of the mountain, [thinking that] perhaps he was a man in delirium.",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲕⲁⲧⲁⲧϩⲉ ⲉⲧⲥⲏϩ ϫⲉⲛⲉⲧⲉⲙⲡⲉⲃⲁⲗ ⲛⲁⲩ ⲉⲣⲟⲟⲩ . ⲛⲉⲧⲉⲙⲡⲉⲙⲁⲁϫⲉ ⲥⲟⲧⲙⲟⲩ . **ⲛⲉⲧⲉⲙⲡⲟⲩⲁⲗⲉ **ⲉϩⲣⲁⲓ**** ⲉϫⲙⲡϩⲏⲧ ⲛⲣⲱⲙⲉ ⲛⲁⲓ ⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲥⲃⲧⲱⲧⲟⲩ ⲛⲛⲉⲧⲙⲉ ⲙⲙⲟϥ .",
+      "english": "But as it is written, &apos;Things which an eye didn&apos;t see, and an ear didn&apos;t hear, which didn&apos;t enter into the heart of man, these God has prepared for those who love him.&apos;",
+      "source": "1 Corinthians 2",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ϭⲉ ⲡⲉ ⲡⲣⲉϥⲣⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲛⲧⲉϥϩⲉ · ⲉⲁϥⲥⲟⲃⲧⲉ ⲛⲛⲉⲧⲙⲉ ⲙⲙⲟϥ ⲛⲛⲁⲅⲁⲑⲟⲛ ⲉⲧⲉⲙⲡⲉⲃⲁⲗ ⲛⲁⲩ ⲉⲣⲟⲟⲩ · ⲙⲡⲉⲙⲁⲁϫⲉ ⲥⲟⲧⲙⲟⲩ · **ⲙⲡⲟⲩⲁⲗⲉ **ⲉϩⲣⲁⲓ**** ⲉϫⲙⲡϩⲏⲧ ⲛⲣⲱⲙⲉ ·",
+      "english": "Moreover, who is there that doeth such good that he will prepare for those who love him the good things which the eye hath not seen, nor the ear heard of, nor hath the conception thereof entered into the hearts of men?",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C44",
+      "label": "ϭⲓⲛⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "ascent, mounting up"
+    },
+    {
+      "target": "C37",
+      "label": "ⲁⲗⲉ",
+      "pos": "V",
+      "gloss": "mount, go up; go on board; mount a horse"
+    },
+    {
+      "target": "C42",
+      "label": "ⲁⲗⲉ (ϣⲟⲩϩⲏⲛⲉ)",
+      "pos": "V",
+      "gloss": "burn incense"
+    },
+    {
+      "target": "C41",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "mount up upon"
+    },
+    {
+      "target": "C39",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉ-)",
+      "pos": "V",
+      "gloss": "mount, climb up"
+    },
+    {
+      "target": "C40",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "ascend, go up"
+    },
+    {
+      "target": "C43",
+      "label": "ⲣⲉϥⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "mounted man, rider"
+    }
+  ]
+}

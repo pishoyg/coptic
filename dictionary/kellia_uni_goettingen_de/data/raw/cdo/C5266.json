@@ -1,0 +1,140 @@
+{
+  "id": "C5266",
+  "forms": [
+    {
+      "id": "CF12501",
+      "orth": "ⲧⲁⲡⲟⲩⲱϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18736,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5912",
+      "bibliography": "CD 501b; KoptHWb 282; ChLCS 70a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲙⲟⲩ",
+        1,
+        16.691
+      ],
+      [
+        "ⲱⲛⲉ",
+        1,
+        11.926
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        1,
+        10.987
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁⲡⲟⲩⲱϣ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁⲡⲟⲩⲱϣ_0_node",
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲁⲡⲟⲩⲱϣ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲱⲛⲉ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18354,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4410",
+      "type": "cf",
+      "label": "stitch, stop, caulk"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5265",
+      "label": "ϯⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "set a distance, separate"
+    },
+    {
+      "target": "C5267",
+      "label": "ⲛⲟⲩⲉϣ ⲛ-",
+      "pos": "PREP",
+      "gloss": "with lack of, without"
+    },
+    {
+      "target": "C5263",
+      "label": "ⲟⲩⲱϣ",
+      "pos": "N",
+      "gloss": "cleft, gap; space, distance; interval, pause, holiday"
+    },
+    {
+      "target": "C5264",
+      "label": "ⲣⲟⲩⲱϣ",
+      "pos": "V",
+      "gloss": "make a pause, wait (for)"
+    }
+  ]
+}

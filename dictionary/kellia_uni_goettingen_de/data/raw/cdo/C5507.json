@@ -1,0 +1,113 @@
+{
+  "id": "C5507",
+  "forms": [
+    {
+      "id": "CF12987",
+      "orth": "ⲟⲛϣⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14973,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6169",
+      "bibliography": "CD 525a; KoptHWb 293; ChLCS 72b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡϫⲟⲉⲓⲥ ⲉϥⲉⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ⲛⲟⲩⲛⲟϭ ⲛ**ⲟⲛϣⲥ** ⲙⲛⲟⲩⲕⲣⲟⲙⲣⲙ ϩⲛⲟⲩⲡⲱϣⲥ ⲛϩⲏⲧ",
+      "english": "The Lord smite thee with insanity, and blindness, and astonishment of mind.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲣⲟⲙⲣⲙ",
+        1,
+        18.013
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲛϣⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14571,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5503",
+      "label": "ⲱⲛϣ",
+      "pos": "V",
+      "gloss": "be astonished, be dazed; be dumb"
+    },
+    {
+      "target": "C5504",
+      "label": "ⲱⲛϣ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C5505",
+      "label": "ⲱⲛϣ (ⲛⲥⲁ)-",
+      "pos": "V",
+      "gloss": "gape after"
+    },
+    {
+      "target": "C5506",
+      "label": "ⲱⲛϣ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "gape, muse, be in trance"
+    }
+  ]
+}

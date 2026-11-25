@@ -1,0 +1,192 @@
+{
+  "id": "C8867",
+  "forms": [
+    {
+      "id": "CF21473",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21474",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲏⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF21475",
+      "orth": "ⲉⲅⲕⲣⲁⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6086,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10711",
+      "bibliography": "DDGLC",
+      "cu_ID": "2742"
+    },
+    {
+      "id": "CS10712",
+      "bibliography": "DDGLC",
+      "cu_ID": "3967"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲥⲟⲟⲩⲛ ⲙⲡⲁⲓ ⲛϭⲓⲛⲥⲟⲫⲟⲥ ⲛ**ⲉⲅⲕⲣⲁⲧⲏⲥ** ⲉⲧⲃⲉⲡⲁⲓ ⲣⲱ ⲉⲩⲡⲏⲧ ⲉⲡϫⲁⲓⲉ ·",
+      "english": "And the wise men who were continent knew that this is so, and it was because of this very thing that they fled into the desert.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲉϥⲟ ⲙⲙⲁⲓϣⲙⲙⲟ ⲙⲙⲁⲓ ⲡⲉⲧⲛⲁⲛⲟⲩϥ ⲛϩⲁⲕ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲉϥⲟⲩⲁⲁⲃ ⲛ**ⲉⲅⲕⲣⲁⲧⲏⲥ** .",
+      "english": "but given to hospitality, as a lover of good, sober minded, fair, holy, self-controlled;",
+      "source": "56_Titus_1",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲟⲩⲃⲏⲟⲩⲧ",
+        1,
+        12.525
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ϭⲟⲗϫ",
+        1,
+        14.765
+      ],
+      [
+        "ⲥⲟⲫⲟⲥ",
+        2,
+        14.521
+      ],
+      [
+        "ⲣⲱ",
+        2,
+        12.804
+      ],
+      [
+        "ⲉ",
+        7,
+        11.654
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        2,
+        10.195
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        9.992
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        9.234
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        8.009
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲉⲅⲕⲣⲁⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲅⲕⲣⲁⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲉⲅⲕⲣⲁⲧⲏⲥ",
+          "ⲉⲅⲕⲣⲁⲧⲏⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲅⲕⲣⲁⲧⲏⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5641,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2871",
+    "grl_lemma": "ἐγκρατής",
+    "grl_meaning": "in possession of power, holding fast, having possession\n    of",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 473b; Preisigke 1:414"
+  }
+}

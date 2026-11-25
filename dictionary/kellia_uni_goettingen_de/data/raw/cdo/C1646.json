@@ -1,0 +1,240 @@
+{
+  "id": "C1646",
+  "forms": [
+    {
+      "id": "CF4768",
+      "orth": "ϯⲗⲟⲩⲗⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8834,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1910",
+      "bibliography": "CD 142a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲥⲙⲟⲩ ⲛⲧⲱⲇⲏ ⲛⲇⲁⲩⲉⲓⲇ ⲁⲙⲏⲓⲧⲛ ⲛⲧⲛⲧⲉⲗⲏⲗ ⲙⲡϫⲟⲉⲓⲥ ⲛⲧⲛ**ϯⲗⲟⲩⲗⲁⲓ** ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉⲛⲟⲩϫⲁⲓ",
+      "english": "Come, let us exult in the Lord; let us make a joyful noise to God our Saviour.",
+      "source": "Psalms 94",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:94",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲁⲣⲛⲉⲓ ⲃⲟⲗ ϩⲏⲧϥ ϩⲛⲟⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲧⲛ**ϯⲗⲟⲩⲗⲁⲓ** ⲛⲁϥ ϩⲛϩⲉⲛⲯⲁⲗⲙⲟⲥ",
+      "english": "Let us come before his presence with thanksgiving, and make a joyful noise to him with psalms.",
+      "source": "Psalms 94",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:94",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        10.411
+      ],
+      [
+        "ⲧⲛ",
+        2,
+        10.164
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        9.081
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        7.074
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        6.779
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϯⲗⲟⲩⲗⲁⲓ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ϯⲗⲟⲩⲗⲁⲓ",
+          2
+        ],
+        [
+          "ϯⲗⲟⲩⲗⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϯⲗⲟⲩⲗⲁⲓ",
+          "ⲧⲛ_1_pre_ϯⲗⲟⲩⲗⲁⲓ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ϯⲗⲟⲩⲗⲁⲓ",
+          "ϯⲗⲟⲩⲗⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ϯⲗⲟⲩⲗⲁⲓ_0_node",
+          "ⲙ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϯⲗⲟⲩⲗⲁⲓ_0_node",
+          "ⲛⲁ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ϩⲛ_1_post_ϯⲗⲟⲩⲗⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8386,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1645",
+      "label": "ϯⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "utter shout"
+    },
+    {
+      "target": "C1643",
+      "label": "ⲉϣⲗⲟⲩⲗⲁⲓ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "cry against"
+    },
+    {
+      "target": "C1640",
+      "label": "ⲗⲟⲩⲗⲁⲓ",
+      "pos": "N",
+      "gloss": "shout"
+    },
+    {
+      "target": "C1644",
+      "label": "ⲛⲉϫⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "utter shout"
+    },
+    {
+      "target": "C1641",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    },
+    {
+      "target": "C1642",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    }
+  ]
+}

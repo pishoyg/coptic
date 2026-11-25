@@ -1,0 +1,323 @@
+{
+  "id": "C9555",
+  "forms": [
+    {
+      "id": "CF24349",
+      "orth": "ⲕⲧⲓⲥⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24353",
+      "orth": "ⲕⲧⲓⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4227,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF24351",
+      "orth": "ⲕⲧⲏⲥⲓⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3606,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF24350",
+      "orth": "ⲕϯⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10949,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24352",
+      "orth": "ⲕⲧⲏⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2209,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12192",
+      "bibliography": "DDGLC",
+      "cu_ID": "1299"
+    },
+    {
+      "id": "CS12193",
+      "bibliography": "DDGLC",
+      "cu_ID": "1379"
+    },
+    {
+      "id": "CS12194",
+      "bibliography": "DDGLC",
+      "cu_ID": "1886"
+    },
+    {
+      "id": "CS12195",
+      "bibliography": "DDGLC",
+      "cu_ID": "3605"
+    },
+    {
+      "id": "CS12196",
+      "bibliography": "DDGLC",
+      "cu_ID": "1527"
+    },
+    {
+      "id": "CS12197",
+      "bibliography": "DDGLC",
+      "cu_ID": "10720"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉⲧⲟⲩⲃⲟ ⲛϯⲣⲟⲙⲡⲓ ⲙⲙⲁϩ ⲛⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛⲉϩⲓⲱⲓϣ ⲛⲟⲩⲭⲱ ⲉⲃⲟⲗ ⲛϩⲣⲏⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧϣⲟⲡ ϩⲓⲱⲧϥ ⲟⲩⲣⲟⲙⲡⲓ ⲛⲧⲉⲡⲭⲱ ⲉⲃⲟⲗ ⲧⲉ ⲉⲥⲉϣⲱⲡⲓ ⲉⲥϯⲙⲏⲓⲛⲓ ⲛⲱⲧⲉⲛ ⲛϫⲉⲑⲁⲓ ⲟⲩⲟϩ ⲉϥⲉⲕⲟⲧϥ ⲛϫⲉⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ⲉⲑⲏ ⲉⲧⲉⲑⲱϥ ⲛ**ⲕⲧⲏⲥⲓⲥ** ⲟⲩⲟϩ ⲫⲟⲩⲁⲓ ⲫⲟⲩⲁⲓ ⲉⲣⲉⲧⲉⲛⲉϣⲉⲛⲱⲧⲉⲛ ⲉⲑⲏ ⲉⲧⲉⲑⲱⲧⲉⲛ ⲙⲡⲁⲧⲣⲓⲥ",
+      "english": "And ye shall sanctify the year, the fiftieth year, and ye shall proclaim a release upon the land to all that inhabit it; it shall be given a year of release, a jubilee for you; and each one shall depart to his possession, and ye shall go each to his family.",
+      "source": "03_Leviticus_25",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:25",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧϭⲓⲛⲥⲧⲱⲧ ⲛⲧⲉ**ⲕⲧⲓⲥⲓⲥ** ·",
+      "english": "the terror-stricken state of created things",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲟⲗϥ ⲉⲡⲕⲁϩⲓ ⲛⲭⲁⲛⲁⲁⲛ ⲟⲩⲟϩ ⲁⲩⲑⲟⲙⲥϥ ϧⲉⲛⲡⲓⲙϩⲁⲩ ⲉⲧⲟⲓ ⲛⲇⲓⲡⲗⲟⲩⲛ ⲡⲓⲙϩⲁⲩ ⲉⲧⲁϥϣⲟⲡϥ ⲛϫⲉⲁⲃⲣⲁⲁⲙ ϧⲉⲛⲟⲩ**ⲕⲧⲏⲥⲓⲥ** ⲛⲉⲙϩⲁⲩ ⲛⲧⲟⲧϥ ⲛⲉⲫⲣⲱⲛ ⲡⲓⲭⲉⲧⲧⲉⲟⲥ ⲙⲡⲉⲙⲑⲟ ⲙⲙⲁⲙⲃⲣⲏ",
+      "english": "So his sons carried him up into the land of Chanaan, and buried him in the double cave, which cave Abraam bought for possession of a burying place, of Ephrom the Chettite, before Mambre.",
+      "source": "01_Genesis_50",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:50",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲧϭⲓϫ ⲅⲁⲣ ⲙⲛⲧⲉⲛⲉⲣⲅⲉⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ ⲧⲉ ⲛⲧⲁⲥⲧⲁⲙⲓⲟ ⲛⲧⲉ**ⲕⲧⲓⲥⲓⲥ** ⲧⲏⲣⲥ · ⲛⲧⲟⲥ ⲟⲛ ⲧⲉⲛⲧⲁⲥⲧⲁⲙⲓⲟ ⲙⲡⲣⲱⲙⲉ ·",
+      "english": "The hand and the power of God are the things which made all created things, and moreover, it is they which have made man.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϧⲣⲏⲓ ϧⲉⲛϯ**ⲕⲧⲏⲥⲓⲥ** ⲛⲧⲉⲡⲓⲓⲟϩⲓ ⲛⲉⲙⲡⲓⲙϩⲁⲩ ⲉⲧⲉⲛϧⲏⲧϥ ⲛⲧⲉⲛⲉⲛϧⲣⲟϯ ⲛⲭⲉⲧ",
+      "english": "in the portion of the field, and of the cave that was in it, of the sons of Chet.",
+      "source": "01_Genesis_49",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:49",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲙⲏⲉⲓⲧⲛ ϭⲉ ⲛⲧⲛⲧⲥⲓⲟⲛ ⲛⲛⲁⲅⲁⲑⲟⲛ ⲉⲧϣⲟⲟⲡ ⲛⲧⲛⲭⲣⲱ ⲛⲧⲉ**ⲕⲧⲓⲥⲓⲥ** ϩⲛⲟⲩϭⲉⲡⲏ ⲛⲧϩⲉ ⲛⲟⲩⲙⲛⲧⲃⲣⲣⲉ",
+      "english": "Come on therefore, let us enjoy the good things that are present: and let us speedily use the creatures like as in youth.",
+      "source": "Wisdom 2",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲓⲛⲣϩⲏⲃⲉ",
+        1,
+        17.791
+      ],
+      [
+        "ϭⲓⲛⲥⲧⲱⲧ",
+        1,
+        17.791
+      ],
+      [
+        "ⲥⲁⲁⲛϣ",
+        1,
+        13.621
+      ],
+      [
+        "ϩⲟⲕ",
+        1,
+        13.206
+      ],
+      [
+        "ⲧⲉ",
+        6,
+        12.751
+      ],
+      [
+        "ⲭⲣⲱ",
+        1,
+        12.621
+      ],
+      [
+        "ϣⲓⲕⲉ",
+        1,
+        12.621
+      ],
+      [
+        "ϣⲟⲃⲉ",
+        1,
+        11.601
+      ],
+      [
+        "ϣϭⲙϭⲟⲙ",
+        1,
+        11.487
+      ],
+      [
+        "ⲡⲟⲣϫ",
+        1,
+        11.348
+      ],
+      [
+        "ϫⲓⲕⲃⲁ",
+        1,
+        11.176
+      ],
+      [
+        "ⲉ",
+        7,
+        10.432
+      ],
+      [
+        "ⲛ",
+        8,
+        10.002
+      ],
+      [
+        "ⲛⲧⲟⲥ",
+        1,
+        9.933
+      ],
+      [
+        "ϭⲉⲡⲏ",
+        1,
+        9.591
+      ],
+      [
+        "ⲥ",
+        4,
+        9.467
+      ],
+      [
+        "ϣⲙϣⲉ",
+        1,
+        9.464
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        8.872
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        1,
+        8.649
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        8.646
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲧⲓⲥⲓⲥ_0_node",
+          6
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲕⲧⲓⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_2_post_ⲉⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲧⲓⲥⲓⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          "ⲥ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲕⲧⲓⲥⲓⲥ",
+          "ⲕⲧⲓⲥⲓⲥ_0_node",
+          2
+        ],
+        [
+          "ⲕⲧⲓⲥⲓⲥ_0_node",
+          "ⲉⲛⲧ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_1_post_ⲕⲧⲓⲥⲓⲥ",
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_2_post_ⲉⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3832,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "2987",
+    "grl_lemma": "κτίσις",
+    "grl_meaning": "founding, settling, creation",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1003a; Preisigke 1:844"
+  }
+}

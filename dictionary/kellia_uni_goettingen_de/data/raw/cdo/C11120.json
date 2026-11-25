@@ -1,0 +1,119 @@
+{
+  "id": "C11120",
+  "forms": [
+    {
+      "id": "CF30714",
+      "orth": "ϩⲓⲁⲧⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30715",
+      "orth": "ϩⲓⲁⲧⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13437,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30716",
+      "orth": "ϩⲩⲁⲧⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF30717",
+      "orth": "ⲓⲁⲧⲣⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15566",
+      "bibliography": "DDGLC",
+      "cu_ID": "3290"
+    },
+    {
+      "id": "CS15567",
+      "bibliography": "DDGLC",
+      "cu_ID": "7632"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩ**ϩⲓⲁⲧⲣⲟⲥ** ⲡⲉ ⲉⲧⲃⲉϫⲉ ⲁϥⲑⲉⲣⲁⲡⲉⲩⲉ ⲛⲛⲃⲁⲗ ⲛⲧⲱⲃⲏⲇ ⲡⲣⲱⲙⲉ ⲛⲛⲁⲏⲧ ⲡⲉ ⲛⲧⲁϥϫⲟⲟⲥ ⲙⲡⲉϥϣⲏⲣⲉ · ϫⲉⲛⲧϩⲉ ⲉⲧⲉⲟⲩⲛⲧⲁⲕ · ⲕⲁⲧⲁⲡⲉⲕϩⲟⲩⲟ ⲁⲣⲓⲙⲛⲧⲛⲁ · ⲡⲛⲉⲩⲙⲁ ⲅⲁⲣ ϣⲁϥⲛⲉϩ ⲙⲡⲣⲱⲙⲉ ⲉⲡⲙⲟⲩ ·",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲧ",
+        1,
+        12.249
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲁⲧⲣⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13032,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "940",
+    "grl_lemma": "ἰατρός",
+    "grl_meaning": "physician, surgeon",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 816a; Preisigke 1:683"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "C12147",
+  "forms": [
+    {
+      "id": "CF33157",
+      "orth": "ϩⲁⲙⲏⲧ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF33158",
+      "orth": "ϩⲁⲙⲉⲧⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17148",
+      "bibliography": "CD 675a; KoptHWB 371; DELC 300b; DMT 166a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6611",
+      "label": "ϩⲱⲙ",
+      "pos": "V",
+      "gloss": "tread, trample, beat"
+    },
+    {
+      "target": "C6612",
+      "label": "ϩⲱⲙ",
+      "pos": "N",
+      "gloss": "treading, trampling"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "C3050",
+  "forms": [
+    {
+      "id": "CF7972",
+      "orth": "ⲉⲣⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.34,
+        "rank": 1439,
+        "count": 54
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3492",
+      "bibliography": "CD 289b; CED 135; KoptHWb 39; DELC 171; ChLCS 41a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲱⲙ ϭⲉ **ⲉⲣⲛ**ⲁⲛⲟⲙⲓⲁ ⲛⲓⲙ ·",
+      "english": "Therefore, curb every lawlessness.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲃⲟⲉⲥ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ **ⲉⲣⲛ**ⲧⲡⲩⲗⲏ ⲁϥϩⲙⲟⲟⲥ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲁⲩⲱ ⲉⲓⲥⲡⲉⲧϩⲏⲛ ⲉϩⲟⲩⲛ ⲉⲡⲅⲉⲛⲟⲥ ⲛϩⲟⲩⲟ ⲛⲉϥⲙⲟⲟϣⲉ ⲡⲁⲓ ⲉⲛⲧⲁⲃⲟⲉⲥ ϫⲟⲟⲥ ⲉⲧⲃⲏⲏⲧϥ ⲡⲉϫⲁϥ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ ⲛϭⲓⲃⲟⲉⲥ ϫⲉⲁⲙⲟⲩ ⲛⲅϩⲙⲟⲟⲥ ⲙⲡⲉⲓⲙⲁ ⲡⲉⲧϩⲏⲡ ⲏ ⲡⲉⲧⲉⲛⲥⲉⲉⲓⲙⲉ ⲉⲣⲟϥ ⲁⲛ ⲁϥⲃⲱⲕ ⲁϥϩⲙⲟⲟⲥ",
+      "english": "And Booz went up to the gate, and sat there; and behold, the relative passed by, of whom Booz spoke: and Booz said to him, Turn aside, sit down here, such a one: and he turned aside and sat down.",
+      "source": "Ruth Chapter 4",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲁⲧϩⲉ ⲉⲧϥϫⲱ ⲙⲙⲟⲥ ϩⲓⲧⲙⲡⲉⲡⲣⲟⲫⲏⲧⲏⲥ ⲙⲁⲗⲁⲭⲓⲁⲥ · ϫⲉⲛⲁⲡⲁⲣⲭⲏ ⲁⲩⲱ ⲛⲣⲉⲙⲏⲧ ⲥⲉ **ⲁⲣⲱ**ⲧⲛ · ⲁⲩⲱ ⲡⲧⲱⲣⲡ ⲛⲁϣⲱⲡⲉ ϩⲛⲛⲉⲧⲛⲏⲓ :",
+      "english": "according to that which He spake by the prophet Malachi saying, 'The firstfruits and tithes are stolen by you, and the plunder shall be in your houses.’",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3052",
+      "label": "ϩⲁⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "beneath, before (\"under mouth of\")"
+    },
+    {
+      "target": "C3053",
+      "label": "ϩⲓⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "at door of, at, upon (\"at mouth of\")"
+    },
+    {
+      "target": "C3046",
+      "label": "ϫⲉⲕⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "fill mouth, satisfy"
+    },
+    {
+      "target": "C3045",
+      "label": "ϫⲓⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "deprive, prevent, anticipate (\"take the word\")"
+    },
+    {
+      "target": "C3044",
+      "label": "ϯⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "give sb one's word, promise"
+    },
+    {
+      "target": "C3043",
+      "label": "ⲁⲧⲕⲁⲣⲱ⸗",
+      "pos": "N",
+      "gloss": "without keeping one's mouth shut, never silent"
+    },
+    {
+      "target": "C3047",
+      "label": "ⲁⲧⲣⲟ",
+      "pos": "N",
+      "gloss": "doorless"
+    },
+    {
+      "target": "C3039",
+      "label": "ⲁⲧⲣⲱϥ",
+      "pos": "N",
+      "gloss": "mouthless (not speaking the language)"
+    },
+    {
+      "target": "C12191",
+      "label": "ⲕⲁⲣⲁⲓⲧϥ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C3042",
+      "label": "ⲕⲁⲣⲱϥ",
+      "pos": "N",
+      "gloss": "silence"
+    },
+    {
+      "target": "C3040",
+      "label": "ⲕⲱ ⲛⲣⲱ⸗",
+      "pos": "V",
+      "gloss": "keep one's mouth shut, be silent"
+    },
+    {
+      "target": "C3051",
+      "label": "ⲛⲣⲛ-",
+      "pos": "PREP",
+      "gloss": "to, upon, against (\"to mouth of\")"
+    },
+    {
+      "target": "C3048",
+      "label": "ⲡⲁⲡⲣⲟ",
+      "pos": "N",
+      "gloss": "he of the door, doorkeeper"
+    },
+    {
+      "target": "C3049",
+      "label": "ⲣⲁ-",
+      "pos": "N",
+      "gloss": "part, fraction"
+    },
+    {
+      "target": "C3038",
+      "label": "ⲣⲟ",
+      "pos": "N",
+      "gloss": "mouth; edge of weapon; door, gate"
+    },
+    {
+      "target": "C3041",
+      "label": "ⲭⲁⲣⲱϥ ⲉⲡϣⲱⲓ",
+      "pos": "V",
+      "gloss": "open mouth upward, lift up voice"
+    }
+  ]
+}

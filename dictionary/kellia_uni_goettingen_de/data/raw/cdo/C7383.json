@@ -1,0 +1,99 @@
+{
+  "id": "C7383",
+  "forms": [
+    {
+      "id": "CF16825",
+      "orth": "ϫⲁⲥⲓ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19986,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Participium conjunctum",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8167",
+      "bibliography": "CD 789b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϣⲏⲣⲉ ϣⲏⲙ ⲟⲛ ⲛⲧⲉⲓϩⲉ ⲥⲱⲧⲙ ⲛⲥⲁⲛⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲧⲱⲧⲛ ⲇⲉ ⲧⲏⲣⲧⲛ ⲑⲃⲃⲓⲉ ⲧⲏⲩⲧⲛ ⲛⲛⲉⲧⲛⲉⲣⲏⲩ ϫⲉⲡⲛⲟⲩⲧⲉ ϯ ⲟⲩⲃⲉ ⲛⲛ**ϫⲁⲥⲓ** ϩⲏⲧ ϥϯ ⲇⲉ ⲛⲟⲩϩⲙⲟⲧ ⲛⲛⲉⲧⲑⲃⲃⲓⲏⲩ .",
+      "english": "Likewise, you younger ones, be subject to the elder. Yes, all of you gird yourselves with humility, to subject yourselves to one another; for 'God resists the proud, but gives grace to the humble.'",
+      "source": "60_1 Peter_5",
+      "urn": "urn:cts:copticLit:nt.1pet.sahidica:5",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7384",
+      "label": "ϫⲁⲥⲓϩⲏⲧ",
+      "pos": "N",
+      "gloss": "arrogant, vain"
+    },
+    {
+      "target": "C7382",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "become, be high; exalt, raise"
+    },
+    {
+      "target": "C7385",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "high, upraised"
+    },
+    {
+      "target": "C7387",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "height, top"
+    },
+    {
+      "target": "C7389",
+      "label": "ϫⲓⲥⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "\"high-hearted\", arrogant, vain"
+    },
+    {
+      "target": "C7390",
+      "label": "ϫⲓⲥⲉ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "pride"
+    },
+    {
+      "target": "C7391",
+      "label": "ϫⲟⲥⲉ",
+      "pos": "N",
+      "gloss": "exalted person, place"
+    },
+    {
+      "target": "C7392",
+      "label": "ϫⲟⲥⲉ",
+      "pos": "N",
+      "gloss": "exalted person, place"
+    },
+    {
+      "target": "C7388",
+      "label": "ⲙⲁⲓϭⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "loving a high rank"
+    },
+    {
+      "target": "C7386",
+      "label": "ⲙⲛⲧϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "height; arrogance"
+    }
+  ]
+}

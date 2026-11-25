@@ -1,0 +1,125 @@
+{
+  "id": "C2629",
+  "forms": [
+    {
+      "id": "CF7060",
+      "orth": "ⲣⲉϥⲛⲓϥⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12043,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3015",
+      "bibliography": "CD 239b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲙⲟⲩⲛⲕ ⲛϫⲉⲡⲓ**ⲣⲉϥⲛⲓϥⲓ** ⲉⲃⲟⲗϩⲁ ⲡⲓⲭⲣⲱⲙ ⲁϥⲙⲟⲩⲛⲕ ⲛϫⲉⲡⲓⲧⲁⲧϩ ϧⲉⲛⲟⲩⲡⲉⲧϣⲟⲩⲓⲧ ⲉϥⲙⲉⲛⲕ ϩⲁⲧ ⲛϫⲉⲡⲓⲣⲉϥⲙⲉⲛⲕϩⲁⲧ ⲙⲡⲉϥϯⲟⲩⲱ ⲉⲃⲟⲗ ⲛϫⲉⲡⲟⲩⲡⲉⲧϩⲱⲟⲩ .",
+      "english": "The bellows have failed from the fire, the lead has failed: the silversmith works at his trade in vain; their wickedness is not consumed.",
+      "source": "24_Ieremias_06",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:06",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲟⲩⲛⲕ",
+        1,
+        12.03
+      ],
+      [
+        "ⲭⲣⲱⲙ",
+        1,
+        10.897
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.535
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        6.594
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲛⲓϥⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11480,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12090",
+      "label": "ϩⲙⲛⲓϥⲉ",
+      "pos": "N",
+      "gloss": "difficult breathing"
+    },
+    {
+      "target": "C2630",
+      "label": "ϫⲓⲛⲛⲓϥⲓ",
+      "pos": "N",
+      "gloss": "blowing (of wind)"
+    },
+    {
+      "target": "C2631",
+      "label": "ⲛⲉϥⲟ",
+      "pos": "N",
+      "gloss": "tempest (\"great wind\")"
+    },
+    {
+      "target": "C2627",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "V",
+      "gloss": "blow, breathe (of wind, breath)"
+    },
+    {
+      "target": "C2628",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "N",
+      "gloss": "breath, mist"
+    }
+  ]
+}

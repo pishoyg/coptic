@@ -1,0 +1,48 @@
+{
+  "id": "C1657",
+  "forms": [
+    {
+      "id": "CF4805",
+      "orth": "ⲁⲧⲗⲱⲱⲙⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4806",
+      "orth": "ⲁⲧⲗⲱⲱⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4807",
+      "orth": "ⲁⲧⲗⲱⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS1922",
+      "bibliography": "CD 142b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1656",
+      "label": "ⲗⲱⲱⲙⲉ",
+      "pos": "V",
+      "gloss": "wither, fade; be filthy"
+    },
+    {
+      "target": "C1658",
+      "label": "ⲗⲱⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "filth, witheredness"
+    }
+  ]
+}

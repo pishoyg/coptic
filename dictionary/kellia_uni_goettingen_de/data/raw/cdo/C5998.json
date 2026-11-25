@@ -1,0 +1,63 @@
+{
+  "id": "C5998",
+  "forms": [
+    {
+      "id": "CF14001",
+      "orth": "ⲙⲛⲧⲁⲧϣⲱⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6682",
+      "bibliography": "CD 580a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5995",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "V",
+      "gloss": "become, befall, be, exist"
+    },
+    {
+      "target": "C5996",
+      "label": "ϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "being"
+    },
+    {
+      "target": "C6000",
+      "label": "ϭⲓⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "act, state of being"
+    },
+    {
+      "target": "C5997",
+      "label": "ⲁⲧϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "uninhabited, unoccupied"
+    },
+    {
+      "target": "C6001",
+      "label": "ⲉϣⲱⲡⲉ",
+      "pos": "CONJ",
+      "gloss": "if it happens that, if, when"
+    },
+    {
+      "target": "C5999",
+      "label": "ⲙⲁ ⲛϣⲱⲡⲉ",
+      "pos": "N",
+      "gloss": "dwelling place, monk's cell, monastery"
+    }
+  ]
+}

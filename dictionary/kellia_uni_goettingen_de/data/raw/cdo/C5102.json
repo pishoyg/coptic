@@ -1,0 +1,539 @@
+{
+  "id": "C5102",
+  "forms": [
+    {
+      "id": "CF12169",
+      "orth": "ⲟⲩⲏⲏⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.95,
+        "rank": 341,
+        "count": 466
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5733",
+      "bibliography": "CD 488a; CDC 76a; CED 214; KoptHWb 267; ChLCS 68b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉϭⲱϣⲧ ⲙⲡⲣϫⲟⲟⲥ ⲛⲗⲁⲁⲩ . ⲁⲗⲗⲁ ⲃⲱⲕ ⲛⲅⲧⲥⲁⲃⲟⲕ ⲉⲡ**ⲟⲩⲏⲏⲃ** ⲛⲅϫⲓ ⲉϩⲣⲁⲓ ⲉⲧⲃⲉⲡⲉⲕⲧⲃⲃⲟ ⲛⲛⲉⲛⲧⲁⲙⲱⲩⲥⲏⲥ ⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲙⲟⲟⲩ ⲉⲩⲙⲛⲧⲙⲛⲧⲣⲉ ⲛⲁⲩ .",
+      "english": "and said to him, &apos;See you say nothing to anybody, but go show yourself to the priest, and offer for your cleansing the things which Moses commanded, for a testimony to them.&apos;",
+      "source": "41_Mark_1",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲁϣ ⲛϩⲉ ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡⲛⲟⲩⲧⲉ ϩⲓⲁⲃⲓⲁⲑⲁⲣ ⲡⲁⲣⲭⲓⲉⲣⲉⲩⲥ ⲁⲩⲱ ⲛⲟⲉⲓⲕ ⲛⲧⲉⲡⲣⲟⲑⲉⲥⲓⲥ ⲁϥⲟⲩⲟⲙⲟⲩ ⲉⲟⲩⲕ ⲉⲝⲉⲥⲧⲓ ⲛⲁϥ ⲉⲟⲩⲟⲙⲟⲩ ⲛⲥⲁⲛ**ⲟⲩⲏⲏⲃ** ⲁⲩⲱ ⲁϥϯ ⲛⲛⲕⲟⲟⲩⲉ ⲉⲧⲛⲙⲙⲁϥ .",
+      "english": "How he entered into the house of God when Abiathar was high priest, and ate the show bread, which is not lawful to eat except for the priests, and gave also to those who were with him?'",
+      "source": "41_Mark_2",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲛⲟϭ ⲛ**ⲟⲩⲏⲏⲃ** ⲉϫⲙⲡⲏⲓ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "and having a great priest over the house of God,",
+      "source": "58_Hebrews_10",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        21,
+        24.911
+      ],
+      [
+        "ⲡ",
+        381,
+        21.354
+      ],
+      [
+        "ⲛ",
+        411,
+        20.994
+      ],
+      [
+        "ⲁⲩⲱ",
+        205,
+        19.921
+      ],
+      [
+        "ϥ",
+        260,
+        19.725
+      ],
+      [
+        "ⲙ",
+        206,
+        19.546
+      ],
+      [
+        "ⲉⲗⲉⲁⲍⲁⲣ",
+        23,
+        19.497
+      ],
+      [
+        "ⲁⲁⲣⲱⲛ",
+        36,
+        19.024
+      ],
+      [
+        "ⲉⲣⲉ",
+        50,
+        17.17
+      ],
+      [
+        "ⲉⲧ",
+        95,
+        17.084
+      ],
+      [
+        "ⲁ",
+        124,
+        17.043
+      ],
+      [
+        "ⲙⲛ",
+        85,
+        17.008
+      ],
+      [
+        "ⲥⲁⲇⲱⲕ",
+        8,
+        16.564
+      ],
+      [
+        "ⲟⲩ",
+        102,
+        16.373
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        50,
+        16.357
+      ],
+      [
+        "ⲥⲩⲛⲧⲓⲙⲁⲍⲉ",
+        4,
+        16.149
+      ],
+      [
+        "ϫⲓ",
+        37,
+        15.929
+      ],
+      [
+        "ⲉⲩⲉ",
+        24,
+        15.913
+      ],
+      [
+        "ⲟⲩⲏⲏⲃ",
+        20,
+        15.835
+      ],
+      [
+        "ⲧⲱⲃϩ",
+        13,
+        15.758
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ⲟⲩⲏⲏⲃ",
+          145
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_0_node",
+          340
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          27
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲟⲩⲏⲏⲃ",
+          6
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲏⲏⲃ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲩⲏⲏⲃ",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲏⲏⲃ",
+          8
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲏⲏⲃ",
+          7
+        ],
+        [
+          "ⲙⲁⲇⲓϩⲁⲙ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲏⲃ",
+          5
+        ],
+        [
+          "ⲗⲉⲩⲓⲧⲏⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲟⲩⲏⲏⲃ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          8
+        ],
+        [
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          2
+        ],
+        [
+          "ⲉ_3_post_ϩⲏⲛ",
+          2
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          2
+        ],
+        [
+          "ⲁⲁⲣⲱⲛ_4_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲱⲟⲩⲛ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϩⲁ_3_post_ⲧⲱⲟⲩⲛ",
+          2
+        ],
+        [
+          "ⲧ_4_post_ϩⲁ",
+          2
+        ],
+        [
+          "ϭⲓⲃⲱⲧⲟⲥ_5_post_ⲧ",
+          2
+        ],
+        [
+          "ⲣϩⲟⲧⲉ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲣϩⲟⲧⲉ",
+          2
+        ],
+        [
+          "ϥ_4_post_ϩⲏⲧ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          2
+        ],
+        [
+          "ⲡⲗⲁⲛⲁ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲃⲁϩⲁⲗ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          5
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_0_node",
+          "ⲙ_1_post_ⲟⲩⲏⲏⲃ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲙⲁⲇⲓϩⲁⲙ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_0_node",
+          "ⲛ_1_post_ⲟⲩⲏⲏⲃ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲗⲉⲩⲓⲧⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩⲏⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_0_node",
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲛ_2_post_ⲉⲧ",
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_3_post_ϩⲏⲛ",
+          "ⲉ_3_post_ϩⲏⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲏⲏⲃ",
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲛ",
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲏⲣⲉ",
+          "ⲁⲁⲣⲱⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲧⲱⲟⲩⲛ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲱⲟⲩⲛ_2_post_ⲉⲧ",
+          "ϩⲁ_3_post_ⲧⲱⲟⲩⲛ",
+          1
+        ],
+        [
+          "ϩⲁ_3_post_ⲧⲱⲟⲩⲛ",
+          "ⲧ_4_post_ϩⲁ",
+          1
+        ],
+        [
+          "ⲧ_4_post_ϩⲁ",
+          "ϭⲓⲃⲱⲧⲟⲥ_5_post_ⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲣϩⲟⲧⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣϩⲟⲧⲉ_2_post_ⲉⲧ",
+          "ϩⲏⲧ_3_post_ⲣϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_3_post_ⲣϩⲟⲧⲉ",
+          "ϥ_4_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          "ⲛ_1_pre_ⲟⲩⲏⲏⲃ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲡⲗⲁⲛⲁ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲏⲏⲃ_0_node",
+          "ⲧⲏⲣ_1_post_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲟⲩⲏⲏⲃ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲉⲧ_1_post_ⲟⲩⲏⲏⲃ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲃⲁϩⲁⲗ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.94,
+      "rank": 284,
+      "count": 466
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5101",
+      "label": "ⲙⲛⲧⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "purity, holiness"
+    },
+    {
+      "target": "C5104",
+      "label": "ⲙⲛⲧⲟⲩⲏⲏⲃ",
+      "pos": "N",
+      "gloss": "priesthood"
+    },
+    {
+      "target": "C5098",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "VSTAT",
+      "gloss": "be pure, holy"
+    },
+    {
+      "target": "C5099",
+      "label": "ⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "holy one, saint"
+    },
+    {
+      "target": "C5096",
+      "label": "ⲟⲩⲟⲡ",
+      "pos": "V",
+      "gloss": "be pure, be innocent"
+    },
+    {
+      "target": "C5097",
+      "label": "ⲟⲩⲟⲡ",
+      "pos": "N",
+      "gloss": "purity"
+    },
+    {
+      "target": "C5100",
+      "label": "ⲡⲉⲧⲟⲩⲁⲁⲃ",
+      "pos": "N",
+      "gloss": "pure, saint"
+    },
+    {
+      "target": "C5103",
+      "label": "ⲣⲟⲩⲏⲏⲃ",
+      "pos": "V",
+      "gloss": "be priest"
+    }
+  ],
+  "etym": {
+    "egy_num": "44460",
+    "egy_lemma": "wꜥb",
+    "demo_num": "d1276",
+    "demo_lemma": "wꜥb",
+    "english": "wab-priest",
+    "german": "Wab-Priester",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/44460",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1276"
+  }
+}

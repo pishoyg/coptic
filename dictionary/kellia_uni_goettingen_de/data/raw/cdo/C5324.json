@@ -1,0 +1,52 @@
+{
+  "id": "C5324",
+  "forms": [
+    {
+      "id": "CF12617",
+      "orth": "ϭⲓⲛⲟⲩⲱϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5976",
+      "bibliography": "CD 509a; KoptHWb 285"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5322",
+      "label": "ⲙⲛⲧⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "fisher's craft"
+    },
+    {
+      "target": "C5323",
+      "label": "ⲙⲛⲧⲣⲉϥⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "fisher's craft"
+    },
+    {
+      "target": "C5321",
+      "label": "ⲟⲩⲱϩⲉ",
+      "pos": "N",
+      "gloss": "fisher"
+    }
+  ]
+}

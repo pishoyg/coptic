@@ -1,0 +1,71 @@
+{
+  "id": "C10678",
+  "forms": [
+    {
+      "id": "CF28939",
+      "orth": "ⲥⲱϯⲟⲩⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF28940",
+      "orth": "ⲍⲟⲧⲓⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF28945",
+      "orth": "ⲥⲱϯⲟⲩⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28941",
+      "orth": "ⲥⲓⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28942",
+      "orth": "ⲥⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14092,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28943",
+      "orth": "ⲥ︦ⲩ︥",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28944",
+      "orth": "ⲥⲱϯⲓⲟⲩⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28946",
+      "orth": "ⲥⲱⲧⲓⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14646",
+      "bibliography": "DDGLC",
+      "cu_ID": "9049"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3701",
+    "grl_lemma": "ζῴδιον",
+    "grl_meaning": "small figure, painted or carved; sign of the Zodiac",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 758b; Preisigke 1:649"
+  }
+}

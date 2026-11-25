@@ -1,0 +1,157 @@
+{
+  "id": "C5470",
+  "forms": [
+    {
+      "id": "CF12912",
+      "orth": "ⲟⲗⲕⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15998,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6129",
+      "bibliography": "CD 522b; KoptHWb 291; ChLCS 72a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲥ ⲇⲉ ⲉⲥⲧⲁⲗⲏⲩ ⲉⲧⲉⲥⲉⲱ ⲁⲩⲱ ⲛⲉⲥⲛⲏⲩ ⲉϩⲣⲁⲓ ϩⲁⲧ**ⲟⲗⲕⲥ** ⲙⲡⲧⲟⲟⲩ ⲉⲓⲥ ⲇⲁⲩⲉⲓⲇ ⲙⲛⲛⲉϥⲣⲱⲙⲉ ⲛⲉⲩⲙⲟⲟϣⲉ ⲉⲩⲛⲏⲩ ⲉϩⲟⲩⲛ ⲉϩⲣⲁⲥ ⲁⲥⲉⲓⲟⲣϩϥ",
+      "english": "And it came to pass when she had mounted her ass and was going down by the covert of the mountain, behold, David and his men came down to meet her, and she met them.",
+      "source": "I Samuel 25",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲟⲟⲩ",
+        1,
+        11.122
+      ],
+      [
+        "ⲥⲛⲏⲩ",
+        1,
+        10.929
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        10.046
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        1,
+        8.296
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲗⲕⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲗⲕⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲗⲕⲥ_0_node",
+          "ⲙ_1_post_ⲟⲗⲕⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲗⲕⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15598,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5469",
+      "label": "ⲗⲕⲉ",
+      "pos": "N",
+      "gloss": "bend, crease, corner"
+    },
+    {
+      "target": "C5465",
+      "label": "ⲱⲗⲕ",
+      "pos": "V",
+      "gloss": "become, be bent, be distorted; bend"
+    },
+    {
+      "target": "C5466",
+      "label": "ⲱⲗⲕ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "lean, bow down"
+    },
+    {
+      "target": "C5467",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "V",
+      "gloss": "turn up one's nose, sneer"
+    },
+    {
+      "target": "C5468",
+      "label": "ⲱⲗⲕϣⲁ",
+      "pos": "N",
+      "gloss": "jeer, mockery"
+    }
+  ]
+}

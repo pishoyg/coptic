@@ -1,0 +1,98 @@
+{
+  "id": "C6029",
+  "forms": [
+    {
+      "id": "CF14063",
+      "orth": "ⲙⲛⲧⲣⲉϥϣⲟⲟⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19949,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6714",
+      "bibliography": "CD 584a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲓ ⲁⲛ ⲧⲉ ⲧⲥⲟⲫⲓⲁ ⲉⲧⲛⲏⲩ ⲉⲡⲉⲥⲏⲧ ⲉⲃⲟⲗ ϩⲛⲧⲡⲉ ⲁⲗⲗⲁ ⲟⲩⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ ⲧⲉ ⲙⲡⲯⲩⲭⲓⲕⲟⲛ ⲙ**ⲙⲛⲧⲣⲉϥϣⲟⲟⲣ**",
+      "english": "This wisdom is not that which comes down from above, but is earthly, sensual, and demonic.",
+      "source": "59_James_3",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲯⲩⲭⲓⲕⲟⲛ",
+        1,
+        17.428
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        1,
+        10.653
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        8.587
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19559,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6026",
+      "label": "ϣⲁⲁⲣⲉ",
+      "pos": "V",
+      "gloss": "smite"
+    },
+    {
+      "target": "C6027",
+      "label": "ϣⲁⲁⲣⲉ",
+      "pos": "N",
+      "gloss": "blow, stroke"
+    },
+    {
+      "target": "C6028",
+      "label": "ⲣⲉϥϣⲁⲁⲣⲉ",
+      "pos": "N",
+      "gloss": "smiter, demon"
+    }
+  ]
+}

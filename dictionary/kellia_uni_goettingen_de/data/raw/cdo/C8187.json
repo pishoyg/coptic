@@ -1,0 +1,229 @@
+{
+  "id": "C8187",
+  "forms": [
+    {
+      "id": "CF18808",
+      "orth": "ⲁⲗⲗⲟ",
+      "dialect": null
+    },
+    {
+      "id": "CF18809",
+      "orth": "ⲁⲗⲗⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3596,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9262",
+      "bibliography": "DDGLC",
+      "cu_ID": "8460"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲁⲗⲗⲟ** ϯⲧⲱⲛ ⲁⲗⲗⲟ ⲉⲓⲣⲉ ⲕⲁⲧⲁⲧⲁⲝⲓⲥ",
+      "english": "One thing is to fight, another thing is to go according to rank.",
+      "source": "God Who Alone Is True BV 119-122",
+      "urn": "urn:cts:copticLit:shenoute.true.amelineau:201-207",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲗⲗⲟ** ⲅⲁⲣ ⲛⲉⲧⲟⲩⲁⲁⲃ ⲉⲧϩⲙⲡⲏⲓ ⲙⲡⲛⲟⲩⲧⲉ ⲉⲧⲙⲟⲕϩ ⲛϩⲏⲧ",
+      "english": "…",
+      "source": "I See Your Eagerness: XJ 52-62",
+      "urn": "urn:cts:copticLit:shenoute.eagerness.monbxj_52_62",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲓ ⲧⲱϩⲙ ⲙⲡⲟⲩⲟⲩⲱⲛ ⲛⲁⲩ ⲛⲉⲩⲟ ⲛⲁⲧⲥⲟⲟⲩⲛ ϫⲉⲁⲗⲗⲟ ⲉϫⲉϩⲁϩ ⲛϣⲁϫⲉ ⲉⲩⲁϩⲉⲣⲁⲧⲟⲩ ϩⲓⲣⲙⲡⲣⲟ ⲉⲡⲇⲱⲣⲟⲛ ⲙⲡϫⲟⲉⲓⲥ ⲙⲡⲏⲓ ⲛⲧⲟⲟⲧⲟⲩ ⲁⲛ **ⲁⲗⲗⲟ** ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲙⲛⲡⲇⲱⲣⲟⲛ ⲉⲁⲡⲇⲱⲣⲟⲛ ⲣϣⲟⲣⲡ ⲉⲣⲟⲟⲩ .",
+      "english": "...",
+      "source": "This Great House MONB.XU 418-423 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:450-460",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲗⲗⲟ",
+        2,
+        16.954
+      ],
+      [
+        "ϯⲧⲱⲛ",
+        3,
+        15.402
+      ],
+      [
+        "ⲛ",
+        20,
+        13.453
+      ],
+      [
+        "ⲁⲧⲥⲟⲟⲩⲛ",
+        1,
+        12.106
+      ],
+      [
+        "ⲉⲥⲟⲟⲩ",
+        2,
+        11.614
+      ],
+      [
+        "ϫⲁϫⲉ",
+        2,
+        11.331
+      ],
+      [
+        "ⲙⲛⲧⲁⲧϩⲏⲧ",
+        1,
+        11.106
+      ],
+      [
+        "ⲉⲧⲉⲣⲉ",
+        2,
+        10.331
+      ],
+      [
+        "ϩⲉⲛ",
+        3,
+        9.507
+      ],
+      [
+        "ⲥⲁϩⲟⲩ",
+        1,
+        9.488
+      ],
+      [
+        "ⲧⲁⲝⲓⲥ",
+        1,
+        9.488
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        2,
+        9.487
+      ],
+      [
+        "ⲡⲉⲩ",
+        2,
+        9.367
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        2,
+        9.272
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        2,
+        8.988
+      ],
+      [
+        "ϩⲏⲧ",
+        2,
+        8.625
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        8.357
+      ],
+      [
+        "ϩⲁⲡ",
+        1,
+        8.313
+      ],
+      [
+        "ϫⲱ",
+        2,
+        8.083
+      ],
+      [
+        "ϩⲁϩ",
+        1,
+        8.059
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲗⲗⲟ_0_node",
+          6
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲗⲟ",
+          1
+        ],
+        [
+          "ϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲁϩ_3_post_ϫⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲁϩ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_5_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲟ_0_node",
+          "ⲉ_1_post_ⲁⲗⲗⲟ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲗⲗⲟ",
+          "ϫⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲉ_2_post_ⲉ",
+          "ϩⲁϩ_3_post_ϫⲉ",
+          1
+        ],
+        [
+          "ϩⲁϩ_3_post_ϫⲉ",
+          "ⲛ_4_post_ϩⲁϩ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ϩⲁϩ",
+          "ϣⲁϫⲉ_5_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3224,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "6552",
+    "grl_lemma": "ἄλλος",
+    "grl_meaning": "another, i.e. one besides what has been mentioned",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 70a"
+  }
+}

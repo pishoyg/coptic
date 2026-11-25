@@ -1,0 +1,70 @@
+{
+  "id": "C2649",
+  "forms": [
+    {
+      "id": "CF7101",
+      "orth": "ϣⲉ ⲛⲛⲟϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3035",
+      "bibliography": "CD 241b; CED 117; KoptHWb 134"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5699",
+      "type": "cf",
+      "label": "wood"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2647",
+      "label": "ⲛⲟϩ ⲛⲣⲱϣ",
+      "pos": "N",
+      "gloss": "land measure"
+    },
+    {
+      "target": "C2650",
+      "label": "ⲛⲟϩⲓ",
+      "pos": "N",
+      "gloss": "rope-maker"
+    },
+    {
+      "target": "C2644",
+      "label": "ⲛⲟⲩϩ",
+      "pos": "N",
+      "gloss": "rope, cord"
+    },
+    {
+      "target": "C2645",
+      "label": "ⲛⲟⲩϩ ⲛϣⲓⲉⲓⲱϩⲉ",
+      "pos": "N",
+      "gloss": "rope for measuring (land)"
+    },
+    {
+      "target": "C2646",
+      "label": "ⲛⲱϩ ⲛⲕⲁϩ",
+      "pos": "N",
+      "gloss": "measuring-line (agricultural measure)"
+    },
+    {
+      "target": "C2648",
+      "label": "ⲥⲕⲛⲟⲩϩ",
+      "pos": "N",
+      "gloss": "land measure (\"stretching of cord\"), portion so bounded"
+    }
+  ]
+}

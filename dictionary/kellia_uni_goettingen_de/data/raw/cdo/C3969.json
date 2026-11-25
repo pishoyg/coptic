@@ -1,0 +1,57 @@
+{
+  "id": "C3969",
+  "forms": [
+    {
+      "id": "CF9877",
+      "orth": "ϭⲓⲛⲥⲱϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4505",
+      "bibliography": "CD 381a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3968",
+      "label": "ⲙⲉⲧⲣⲉϥⲥⲱϧⲓ",
+      "pos": "N",
+      "gloss": "weaving"
+    },
+    {
+      "target": "C3967",
+      "label": "ⲣⲉϥⲥⲟⲟϩⲉ",
+      "pos": "N",
+      "gloss": "weaver"
+    },
+    {
+      "target": "C3970",
+      "label": "ⲥⲁϩⲧ",
+      "pos": "N",
+      "gloss": "weaver"
+    },
+    {
+      "target": "C3965",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "V",
+      "gloss": "weave"
+    },
+    {
+      "target": "C3966",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "N",
+      "gloss": "weaving, weaver's craft, weaver"
+    }
+  ]
+}

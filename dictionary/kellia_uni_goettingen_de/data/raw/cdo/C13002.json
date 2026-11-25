@@ -1,0 +1,79 @@
+{
+  "id": "C13002",
+  "forms": [
+    {
+      "id": "CF34007",
+      "orth": "ⲥϯⲁⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34008",
+      "orth": "ⲥϯⲉⲓⲁⲁⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34009",
+      "orth": "ⲥϯⲉⲛⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF34010",
+      "orth": "ⲥⲑⲉⲓⲛⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS18001",
+      "bibliography": "CD 11b; KoptHWb 201; DELC 199; ChLCS 51b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C126",
+      "type": "cf",
+      "label": "pleasant"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3809",
+      "label": "ⲣⲥⲧⲟⲓ",
+      "pos": "V",
+      "gloss": "make smell"
+    },
+    {
+      "target": "C3808",
+      "label": "ⲥϯⲃⲱⲱⲛ",
+      "pos": "N",
+      "gloss": "bad smell"
+    },
+    {
+      "target": "C12149",
+      "label": "ⲥϯⲕⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "black cumin"
+    },
+    {
+      "target": "C3807",
+      "label": "ⲥϯⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good smell, perfume"
+    },
+    {
+      "target": "C3806",
+      "label": "ⲥⲧⲟⲓ",
+      "pos": "N",
+      "gloss": "smell; fragrant plant; fragrant substance, incense"
+    }
+  ]
+}

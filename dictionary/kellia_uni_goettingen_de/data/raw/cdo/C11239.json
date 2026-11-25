@@ -1,0 +1,114 @@
+{
+  "id": "C11239",
+  "forms": [
+    {
+      "id": "CF31248",
+      "orth": "ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31249",
+      "orth": "ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF31250",
+      "orth": "ⲑⲩⲡⲟⲗⲩⲙⲯⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15833",
+      "bibliography": "DDGLC",
+      "cu_ID": "3270"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲓⲙ ⲕⲁⲧⲁⲗⲩ ⲛⲛⲁ**ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ** ·",
+      "english": "Who is he that will destroy my reputation ?",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲧⲁⲗⲩ",
+        1,
+        17.598
+      ],
+      [
+        "ϩⲱ",
+        1,
+        11.364
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        1,
+        9.512
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ",
+          1
+        ],
+        [
+          "ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ",
+          "ϩⲩⲡⲟⲗⲩⲙⲯⲓⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10146,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5290",
+    "grl_lemma": "ὑπόλημψις",
+    "grl_meaning": "taking up (esp. the cue or the matter), assumption,\n    notion",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1887b; Preisigke 2:665"
+  }
+}

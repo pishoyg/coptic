@@ -1,0 +1,70 @@
+{
+  "id": "C7897",
+  "forms": [
+    {
+      "id": "CF17860",
+      "orth": "ⲣϭⲟⲣϭⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8777",
+      "bibliography": "CD 831a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7898",
+      "label": "ϭⲉⲣⲏϭ",
+      "pos": "N",
+      "gloss": "hunter"
+    },
+    {
+      "target": "C7896",
+      "label": "ϭⲟⲣϭⲥ",
+      "pos": "N",
+      "gloss": "ambush, snare, pit"
+    },
+    {
+      "target": "C7893",
+      "label": "ϭⲱⲣϭ",
+      "pos": "V",
+      "gloss": "hunt, waylay"
+    },
+    {
+      "target": "C7894",
+      "label": "ϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "snare"
+    },
+    {
+      "target": "C7899",
+      "label": "ⲙⲉⲧϫⲉⲣⲏϫ",
+      "pos": "N",
+      "gloss": "hunt, chase"
+    },
+    {
+      "target": "C7895",
+      "label": "ⲣⲉϥϭⲱⲣϭ",
+      "pos": "N",
+      "gloss": "hunter"
+    }
+  ]
+}

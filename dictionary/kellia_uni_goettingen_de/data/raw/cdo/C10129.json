@@ -1,0 +1,104 @@
+{
+  "id": "C10129",
+  "forms": [
+    {
+      "id": "CF26672",
+      "orth": "ⲡⲉⲛⲧⲁⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF26673",
+      "orth": "ⲡⲉⲛⲧⲁⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11226,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13403",
+      "bibliography": "DDGLC",
+      "cu_ID": "4577"
+    },
+    {
+      "id": "CS13404",
+      "bibliography": "DDGLC",
+      "cu_ID": "1416"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲕϣⲱⲡⲉ ⲙ**ⲡⲉⲛⲧⲁⲥ**ⲡⲟⲗⲓⲥ ϩⲛⲧⲇⲱⲣⲉⲁ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲁⲩⲱ ⲛⲉⲩⲙⲉⲗⲏⲧⲁ ⲛⲛⲉⲕϣⲡⲏⲣⲉ ⲧⲏⲣⲟⲩ ϩⲛⲙⲡⲟⲗⲓⲥ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲧⲏⲣϥ ·",
+      "english": "Thou wast like unto the five cities in the gift of Christ, and the reports of all thy marvellous works were in the city of the whole world.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲱⲣⲉⲁ",
+        1,
+        14.983
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        10.13
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10812,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3556",
+    "grl_lemma": "πεντάς",
+    "grl_meaning": "the number five, group of five",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1361b"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "C4249",
+  "forms": [
+    {
+      "id": "CF10449",
+      "orth": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.56,
+        "rank": 1048,
+        "count": 88
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉϩⲣⲁⲓ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4819",
+      "bibliography": "CD 409b; ChLCS 58a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲃⲱⲕ ⲛϣⲟⲣⲡ ⲛⲅϩⲱⲧⲡ ⲙⲛⲡⲉⲕⲥⲟⲛ ⲧⲟⲧⲉ ⲛⲕⲉⲓ **ⲛⲅⲧⲁⲗⲟ **ⲉϩⲣⲁⲓ**** ⲙⲡⲉⲕⲇⲱⲣⲟⲛ ·",
+      "english": "(If he hath), go forth first of all and make thyself to be at peace with thy brother, and then come in and offer up thy gift.'",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲡⲉⲛⲧⲁϥⲧⲁⲗⲟ **ⲉϩⲣⲁⲓ**** ⲙⲡⲉϥⲥⲱⲙⲁ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲉⲥⲟⲩⲁⲁⲃ ⲙⲡⲛⲟⲩⲧⲉ ·",
+      "english": "who has offered up his body in holy sacrifice to God,",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲉⲕⲉⲓⲣⲉ ⲛⲧⲉⲕⲡⲣⲟⲥⲫⲟⲣⲁ ⲛⲃⲟⲧⲉ · ⲉⲕⲉⲡⲓⲭⲓⲣⲉ **ⲉⲧⲁⲗⲟ **ⲉϩⲣⲁⲓ**** ϩⲛⲟⲩϫⲓⲛϭⲟⲛⲥ · ϩⲙⲡⲉⲧⲕⲙⲉⲉⲩⲉ ⲉⲛⲁ ⲛⲕⲉϩⲏⲕⲉ ⲛϩⲏⲧϥ ·",
+      "english": "Why shouldst thou make thine offering to be an abomination (to God) by undertaking to offer up an offering of injustice, because thou thinkest to do a kindness to other poor men with it?",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.57,
+      "rank": 903,
+      "count": 90
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4252",
+      "label": "ϫⲓⲛⲧⲁⲗⲟ",
+      "pos": "N",
+      "gloss": "raising"
+    },
+    {
+      "target": "C4251",
+      "label": "ⲙⲁ ⲛⲧⲁⲗⲟ",
+      "pos": "N",
+      "gloss": "place whereon to mount, vehicle"
+    },
+    {
+      "target": "C4245",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "lift, offer up, set on (beast or ship); set up (on loom), weave; go up, mount (beast), go aboard"
+    },
+    {
+      "target": "C4246",
+      "label": "ⲧⲁⲗⲟ",
+      "pos": "V",
+      "gloss": "raising up, offering"
+    },
+    {
+      "target": "C4247",
+      "label": "ⲧⲁⲗⲟ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "enclose, add"
+    },
+    {
+      "target": "C4248",
+      "label": "ⲧⲁⲗⲟ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "load with"
+    },
+    {
+      "target": "C4250",
+      "label": "ⲧⲁⲗⲟ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "addition"
+    }
+  ]
+}

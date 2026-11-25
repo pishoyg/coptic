@@ -1,0 +1,196 @@
+{
+  "id": "C43",
+  "forms": [
+    {
+      "id": "CF155",
+      "orth": "ⲣⲉϥⲁⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8234,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF156",
+      "orth": "ⲣⲉϥⲁⲗⲉ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF157",
+      "orth": "ⲣⲉϥⲁⲗⲉ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS50",
+      "bibliography": "CD 4b; KoptHWb 3; ChLCS 3b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛϩⲁⲣⲙⲁ ⲙⲫⲁⲣⲁⲱ ⲙⲛⲡⲉϥⲙⲏⲏϣⲉ ⲁϥⲛⲟϫⲟⲩ ⲉϩⲣⲁⲓ ⲉⲑⲁⲗⲁⲥⲥⲁ ⲛⲥⲱⲧⲡ ⲛ**ⲣⲉϥⲁⲗⲉ** ⲙⲛⲛⲉⲧⲣⲓⲥⲧⲁⲧⲏⲥ ⲁⲩⲱⲙⲥ ϩⲣⲁⲓ ϩⲛⲧⲉⲣⲩⲑⲣⲁ ⲑⲁⲗⲁⲥⲥⲁ",
+      "english": "He has cast the chariots of Pharao and his host into the sea, the chosen mounted captains: they were swallowed up in the Red Sea.",
+      "source": "Exodus 15",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲟⲩ ⲧⲱϩ ⲙⲛⲡⲉⲛϫⲟⲉⲓⲥ ⲡⲣⲣⲟ ⲛⲛⲁⲥⲥⲩⲣⲓⲟⲥ ⲛⲧⲁϯ ⲛⲏⲧⲛ ⲛϣⲟ ⲛϩⲧⲟ ⲉϣϫⲉ ⲟⲩⲛϣϭⲟⲙ ⲙⲙⲱⲧⲛ ⲉϯ**ⲣⲉϥⲁⲗⲉ** ⲉϫⲱⲟⲩ",
+      "english": "yet now make an agreement with my lord the king of the Assyrians, and I will give you two thousand horses, if ye shall be able to set riders upon them.",
+      "source": "Isaiah 36",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲣⲓⲥⲧⲁⲧⲏⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲥⲱⲧⲡ",
+        1,
+        12.059
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        10.94
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        10.551
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        8.746
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        7.164
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲁⲗⲉ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7791,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    },
+    {
+      "target": "C6922",
+      "type": "syn",
+      "label": "Rider (B)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C44",
+      "label": "ϭⲓⲛⲁⲗⲉ",
+      "pos": "N",
+      "gloss": "ascent, mounting up"
+    },
+    {
+      "target": "C37",
+      "label": "ⲁⲗⲉ",
+      "pos": "V",
+      "gloss": "mount, go up; go on board; mount a horse"
+    },
+    {
+      "target": "C42",
+      "label": "ⲁⲗⲉ (ϣⲟⲩϩⲏⲛⲉ)",
+      "pos": "V",
+      "gloss": "burn incense"
+    },
+    {
+      "target": "C41",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "mount up upon"
+    },
+    {
+      "target": "C39",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉ-)",
+      "pos": "V",
+      "gloss": "mount, climb up"
+    },
+    {
+      "target": "C40",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "ascend, go up"
+    },
+    {
+      "target": "C38",
+      "label": "ⲁⲗⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "mount up; ascend (in years)"
+    }
+  ]
+}

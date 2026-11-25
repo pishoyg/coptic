@@ -1,0 +1,184 @@
+{
+  "id": "C6125",
+  "forms": [
+    {
+      "id": "CF14255",
+      "orth": "ϯϣⲧⲟⲣⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17465,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6812",
+      "bibliography": "CD 598b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲛⲁϣⲱⲡⲉ ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲡϫⲟⲉⲓⲥ ⲛⲁ**ϯϣⲧⲟⲣⲧⲣ** ϫⲓⲛⲙⲡⲉⲓⲟⲟⲣ ⲙⲡⲓⲉⲣⲟ ϣⲁϩⲣⲁⲓ ⲉϩⲣⲓ ⲛⲟⲩⲕⲟⲩⲣⲟⲩⲣⲁ ⲛⲧⲱⲧⲛ ⲇⲉ ⲥⲱⲟⲩϩ ⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲟⲩⲁ ⲟⲩⲁ",
+      "english": "And it shall come to pass in that day that God shall fence men off from the channel of the river as far as Rhinocorura; but do ye gather one by one the children of Israel.",
+      "source": "Isaiah 27",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲉⲓⲟⲟⲣ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲓⲛ",
+        1,
+        10.251
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϯϣⲧⲟⲣⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          "ⲛⲁ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϯϣⲧⲟⲣⲧⲣ",
+          "ϯϣⲧⲟⲣⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ϯϣⲧⲟⲣⲧⲣ_0_node",
+          "ϫⲓⲛ_1_post_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ϫⲓⲛ_1_post_ϯϣⲧⲟⲣⲧⲣ",
+          "ⲙ_1_post_ϯϣⲧⲟⲣⲧⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17076,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6120",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "V",
+      "gloss": "be disturbed, in haste, disturb"
+    },
+    {
+      "target": "C6121",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "disturbance, trouble, haste"
+    },
+    {
+      "target": "C6126",
+      "label": "ϣⲧⲣⲧⲓⲣ",
+      "pos": "N",
+      "gloss": "hasty, rash person"
+    },
+    {
+      "target": "C6122",
+      "label": "ⲁⲧϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "unperturbed"
+    },
+    {
+      "target": "C6123",
+      "label": "ⲙⲛⲧϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "tranquillity"
+    },
+    {
+      "target": "C6124",
+      "label": "ⲣϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "make disturbance"
+    }
+  ]
+}

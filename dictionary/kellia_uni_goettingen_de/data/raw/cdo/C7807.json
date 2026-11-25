@@ -1,0 +1,52 @@
+{
+  "id": "C7807",
+  "forms": [
+    {
+      "id": "CF17679",
+      "orth": "ⲣϭⲁⲛⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8677",
+      "bibliography": "CD 824a; KoptHWb 461; DELC 343a; ChLCS 108a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7805",
+      "label": "ϭⲁⲛⲁϩ",
+      "pos": "N",
+      "gloss": "lame, frail person, cripple"
+    },
+    {
+      "target": "C7806",
+      "label": "ϭⲁⲛⲁϩ",
+      "pos": "N",
+      "gloss": "lame, crooked, crippled, weak; left"
+    },
+    {
+      "target": "C7808",
+      "label": "ϭⲁⲛⲟϩⲉ",
+      "pos": "N",
+      "gloss": "left"
+    }
+  ]
+}

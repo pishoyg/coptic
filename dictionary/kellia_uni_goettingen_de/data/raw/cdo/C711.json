@@ -1,0 +1,238 @@
+{
+  "id": "C711",
+  "forms": [
+    {
+      "id": "CF2688",
+      "orth": "ϯⲉⲣⲱⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8521,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS849",
+      "bibliography": "CD 58b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁϥⲁⲓⲧⲉⲓ ⲛⲟⲩⲙⲟⲟⲩ ⲁⲥ**ϯⲉⲣⲱⲧⲉ** ⲛⲁϥ ϩⲛⲟⲩⲗⲁⲕⲁⲛⲏ ⲛⲛⲇⲩⲛⲁⲧⲟⲥ ⲉⲁⲥⲡⲣⲟⲥⲉⲅⲉⲅⲉ ⲛⲁϥ ⲛⲟⲩⲥⲁⲓⲣⲉ",
+      "english": "He asked for water, she gave him milk in a dish; she brought butter of princes.",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲛϩⲉⲛϩⲟⲟⲩ ⲅⲁⲣ ⲛⲁϣⲱⲡⲉ ⲛⲧⲉⲧⲛϫⲟⲟⲥ ϫⲉⲛⲉⲉⲓⲁⲧϥ ⲛⲧϩⲏ ⲧⲁⲓ ⲉⲧⲉⲙⲡⲥⲱ ⲁⲩⲱ ⲛⲕⲓⲃⲉ ⲛⲁⲓ ⲉⲙⲡⲟⲩ**ϯⲉⲣⲱⲧⲉ**",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        10.074
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        9.014
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        8.975
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        8.732
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        8.544
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        7.91
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲥ",
+        1,
+        5.274
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϯⲉⲣⲱⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          "ⲥ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          "ϯⲉⲣⲱⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ϯⲉⲣⲱⲧⲉ_0_node",
+          "ⲛⲁ_1_post_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲉⲣⲱⲧⲉ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ϩⲛ_1_post_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲡ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          "ⲟⲩ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϯⲉⲣⲱⲧⲉ",
+          "ϯⲉⲣⲱⲧⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8079,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C712",
+      "label": "ϭⲓⲉⲣⲱϯ",
+      "pos": "V",
+      "gloss": "get milk, suck"
+    },
+    {
+      "target": "C708",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C709",
+      "label": "ⲉⲣⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "milk"
+    },
+    {
+      "target": "C713",
+      "label": "ⲟⲩⲉⲙⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "feeding on milk"
+    },
+    {
+      "target": "C710",
+      "label": "ⲣⲉⲣⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "make, give forth milk"
+    }
+  ]
+}

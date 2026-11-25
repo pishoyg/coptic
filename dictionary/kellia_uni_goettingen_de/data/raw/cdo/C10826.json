@@ -1,0 +1,109 @@
+{
+  "id": "C10826",
+  "forms": [
+    {
+      "id": "CF29508",
+      "orth": "ⲫⲁⲛⲉⲣⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29509",
+      "orth": "ⲫⲁⲛⲉⲣⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20359,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14930",
+      "bibliography": "DDGLC",
+      "cu_ID": "2906"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲇⲉ ϫⲉⲛⲧⲕ ⲟⲩ ⲧⲓⲙⲓⲛⲉ **ⲫⲁⲛⲉⲣⲟⲛ**",
+      "english": "...",
+      "source": "Because of You Too O Prince of Evil XH 195-204",
+      "urn": "urn:cts:copticLit:shenoute.prince.chassinat_ed:28-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲓ",
+        1,
+        19.013
+      ],
+      [
+        "ϩⲱⲕ",
+        1,
+        15.139
+      ],
+      [
+        "ⲟⲩⲕ",
+        1,
+        14.621
+      ],
+      [
+        "ⲉⲧⲓ",
+        1,
+        12.791
+      ],
+      [
+        "ⲛⲧⲕ",
+        1,
+        12.587
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        12.139
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲫⲁⲛⲉⲣⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19973,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3570",
+    "grl_lemma": "φανερός",
+    "grl_meaning": "visible, manifest",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1915a; Preisigke 2:685"
+  }
+}

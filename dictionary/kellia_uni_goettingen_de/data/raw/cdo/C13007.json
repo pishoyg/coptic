@@ -1,0 +1,68 @@
+{
+  "id": "C13007",
+  "forms": [
+    {
+      "id": "CF34022",
+      "orth": "ⲉϩⲁ-",
+      "dialect": "M"
+    },
+    {
+      "id": "CF34023",
+      "orth": "ⲉϩⲁ⸗",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "C",
+    "subc": "Perfekt II ⲉⲛⲧⲁ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS18006",
+      "bibliography": "KoptHWb 126, 502"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "crossReferences": [
+    {
+      "target": "C2530",
+      "type": "syn",
+      "label": "verbal prefix Perfect II"
+    },
+    {
+      "target": "C281",
+      "type": "syn",
+      "label": "verbal prefix Perfect II"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C280",
+      "label": "ⲁϩ-",
+      "pos": "A",
+      "gloss": ""
+    },
+    {
+      "target": "C282",
+      "label": "ⲁϩ-",
+      "pos": "PTC",
+      "gloss": ""
+    },
+    {
+      "target": "C283",
+      "label": "ⲁϩⲁ",
+      "pos": "CONJ",
+      "gloss": "and"
+    },
+    {
+      "target": "C281",
+      "label": "ⲁϩⲁ-",
+      "pos": "C",
+      "gloss": ""
+    }
+  ]
+}

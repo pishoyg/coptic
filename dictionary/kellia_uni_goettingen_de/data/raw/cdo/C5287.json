@@ -1,0 +1,203 @@
+{
+  "id": "C5287",
+  "forms": [
+    {
+      "id": "CF12543",
+      "orth": "ⲣⲉϥⲟⲩⲱϣⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19382,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5934",
+      "bibliography": "CD 504b; ChLCS 70b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲥⲛⲏⲩ ⲛϭⲓⲟⲩⲟⲩⲛⲟⲩ ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲉⲣⲉⲛ**ⲣⲉϥⲟⲩⲱϣⲧ** ⲙⲉⲛ ⲛⲁⲟⲩⲱϣⲧ ⲙⲡⲉⲓⲱⲧ ϩⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲙⲟⲩⲙⲉ . ⲉⲣⲉⲡⲉⲓⲱⲧ ⲅⲁⲣ ϣⲓⲛⲉ ⲛⲥⲁϩⲟⲓⲛⲉ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲉⲩⲛⲁⲟⲩⲱϣⲧ ⲛⲁϥ .",
+      "english": "But the hour comes, and now is, when the true worshippers will worship the Father in spirit and truth, for the Father seeks such to be his worshippers.",
+      "source": "43_John_4",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲟⲧⲉ",
+        1,
+        12.764
+      ],
+      [
+        "ⲙⲏⲓ",
+        1,
+        11.881
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        9.986
+      ],
+      [
+        "ⲧⲁ",
+        1,
+        9.271
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        8.903
+      ],
+      [
+        "ⲫ",
+        1,
+        6.564
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲱϣⲧ",
+        1,
+        12.139
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        11.756
+      ],
+      [
+        "ⲧⲁⲓ",
+        1,
+        10.079
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲟⲩⲱϣⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲙⲏⲓ_1_post_ⲣⲉϥⲟⲩⲱϣⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲣⲉϥⲟⲩⲱϣⲧ_0_node",
+          "ⲛ_2_post_ⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙⲏⲓ",
+          "ⲧⲁ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲛ",
+          "ⲫ_2_post_ⲙⲏⲓ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲙⲏⲓ",
+          "ⲙⲏⲓ_1_post_ⲣⲉϥⲟⲩⲱϣⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18994,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5288",
+      "label": "ϫⲓⲛⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "worship"
+    },
+    {
+      "target": "C5289",
+      "label": "ⲟⲩⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "worship"
+    },
+    {
+      "target": "C5285",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "V",
+      "gloss": "worship, greet, kiss"
+    },
+    {
+      "target": "C5286",
+      "label": "ⲟⲩⲱϣⲧ",
+      "pos": "N",
+      "gloss": "salutation, obeisance"
+    }
+  ]
+}

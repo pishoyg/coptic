@@ -1,0 +1,46 @@
+{
+  "id": "C2577",
+  "forms": [
+    {
+      "id": "CF6946",
+      "orth": "ϫⲓⲛⲧⲏϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2958",
+      "bibliography": "CD 233b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2575",
+      "label": "ⲛⲧⲏϭ",
+      "pos": "N",
+      "gloss": "plant, herb, weed"
+    },
+    {
+      "target": "C2576",
+      "label": "ⲣⲛⲧⲏϭ",
+      "pos": "V",
+      "gloss": "become weedy (of ground)"
+    }
+  ]
+}

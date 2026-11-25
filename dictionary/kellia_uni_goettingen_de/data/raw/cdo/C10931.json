@@ -1,0 +1,74 @@
+{
+  "id": "C10931",
+  "forms": [
+    {
+      "id": "CF29862",
+      "orth": "ⲭⲁⲙⲁⲓⲗⲉⲱⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF29863",
+      "orth": "ⲭⲁⲙⲁⲓⲗⲉⲱⲛ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15118",
+      "bibliography": "DDGLC",
+      "cu_ID": "1004"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲩⲅⲁⲗⲏ",
+        1,
+        20.598
+      ],
+      [
+        "ϩⲁⲕⲗϥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        9.938
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        9.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "etym": {
+    "grl_ID": "4706",
+    "grl_lemma": "χαμαιλέων",
+    "grl_meaning": "chameleon",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1975b; Muraoka 2009, 728a"
+  }
+}

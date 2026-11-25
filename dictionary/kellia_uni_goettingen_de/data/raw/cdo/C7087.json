@@ -1,0 +1,720 @@
+{
+  "id": "C7087",
+  "forms": [
+    {
+      "id": "CF16232",
+      "orth": "ϫⲟⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2931,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϫⲟⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.46,
+        "rank": 1147,
+        "count": 39
+      }
+    },
+    {
+      "orth": "ϫⲟⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.49,
+        "rank": 548,
+        "count": 235
+      }
+    },
+    {
+      "orth": "ⲉϫⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1793,
+        "count": 37
+      }
+    },
+    {
+      "orth": "ⲉϫⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.33,
+        "rank": 1420,
+        "count": 28
+      }
+    },
+    {
+      "orth": "ϫⲁⲓ",
+      "dialect": "A",
+      "id": "2363.4"
+    },
+    {
+      "orth": "ϫⲁⲉⲓ",
+      "dialect": "A",
+      "id": "2363.5"
+    },
+    {
+      "orth": "ϫⲁⲓ",
+      "dialect": "F",
+      "id": "2363.6"
+    },
+    {
+      "orth": "ⲉϫⲏⲩ",
+      "dialect": "F",
+      "id": "2363.7"
+    },
+    {
+      "orth": "ϫⲁⲓ",
+      "dialect": "L",
+      "id": "2363.8"
+    },
+    {
+      "orth": "ϫⲁⲉⲓ",
+      "dialect": "L",
+      "id": "2363.9"
+    },
+    {
+      "orth": "ⲉϫⲏⲩ",
+      "dialect": "L",
+      "id": "2363.10"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7819",
+      "bibliography": "CD 754a; CED 310; KoptHWb 425; DELC 324b; ChLCS 100b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲓ ⲇⲉ ⲉⲧⲁⲡⲟⲩⲣⲟ ⲭⲁⲩ ⲉⲃⲟⲗ ⲉⲑⲣⲟⲩϣⲉ ⲛⲱⲟⲩ ⲉⲛⲟⲩⲧⲟⲡⲟⲥ ⲧⲟⲧⲉ ⲁⲡⲁⲓⲱⲧ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲓ ϫⲉϥⲛⲁⲧⲁⲗⲟϥ ⲉⲡⲓ**ϫⲟⲓ** ⲛⲉⲙⲛⲉⲛⲓⲟϯ ⲉⲑⲟⲩⲁⲃ ⲁⲃⲃⲁ ⲕⲩⲣⲓⲗⲗⲟⲥ ⲡⲓⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲉⲙⲁⲡⲁ ⲃⲓⲕⲧⲱⲣ ⲡⲓⲁⲣⲭⲏⲙⲁⲛⲇⲣⲓⲧⲏⲥ ⲁⲛⲓⲕⲟⲩϫⲓ ⲛⲣⲉϥϣⲉⲙϣⲓ ϫⲟⲥ ⲛⲁϥ ϫⲉⲭⲛⲁϣⲧⲁⲗⲟⲕ ⲁⲛ ⲛⲉⲙⲡⲓⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ .",
+      "english": "Once the king had granted them leave to return to their respective homes, my father, Apa Shenoute, went to board a ship with the holy bishops—Abba Cyril and Apa Victor. However, told him he could not board alongside the archbishop.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲧϩⲉ ⲉⲧⲉⲙⲛϭⲟⲙ ⲛ**ϫⲟⲓ** ⲉⲧⲁϩⲟⲉⲣⲁⲧϥ ⲁϫⲛⲉⲓϥⲧ .",
+      "english": "'Just as a boat cannot be built without nails,",
+      "source": "Apophthegmata Patrum Sahidic 121: Syncletica 26",
+      "urn": "urn:cts:copticLit:ap.121.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁϥⲥⲓⲛⲓ ⲉⲧϩⲏ ⲛⲕⲉⲕⲟⲩϫⲓ ⲁϥⲛⲁⲩ ⲉⲓⲁⲕⲱⲃⲟⲥ ⲡϣⲏⲣⲓ ⲛⲍⲉⲃⲉⲇⲉⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲡⲉϥⲥⲟⲛ ⲟⲩⲟϩ ⲛⲑⲱⲟⲩ ϩⲱⲟⲩ ⲉⲩϩⲓⲡⲓ**ϫⲟⲓ** ⲉⲩⲥⲟⲃϯ ⲛⲛⲟⲩϣⲛⲏⲟⲩ",
+      "english": "Going on a little further from there, he saw James the son of Zebedee, and John his brother, who were also in the boat mending the nets.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲁⲡⲥⲟⲛ ⲣⲟⲩⲱ ⲛⲁⲓ ϩⲙⲡⲥⲁ ⲛϩⲟⲩⲛ · ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲭⲁⲓⲣⲉ ⲁⲡⲁ ⲡⲁⲙⲃⲱ ⲡⲉⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ ⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ · ⲛϣⲓⲏⲧ ⲁⲩⲱ ⲡⲛⲟϭ ⲛ**ϫⲟⲓ** ⲉⲧⲣϩⲱⲧ ϩⲙⲡϫⲁⲓⲉ ⲛⲁⲧⲙⲟⲟⲩ ·",
+      "english": "And after these things the brother answered me from within, saying, 'Hail, Apa Pambo, thou elder of the church of Shiet, thou mighty ship that sailest over the desert that is without water.",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁⲡⲓⲙⲏϣ ⲛⲥⲱⲟⲩ ⲁⲩⲟⲗϥ ⲛⲉⲙⲱⲟⲩ ϩⲱϥ ϩⲓⲡⲓϫⲟⲓ ⲟⲩⲟϩ ⲛⲁⲣⲉϩⲁⲛⲕⲉ**ⲉϫⲏⲟⲩ** ⲛⲉⲙⲁϥ .",
+      "english": "Leaving the multitude, they took him with them, even as he was, in the boat. Other small boats were also with him.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲛⲉⲉϥ ⲣϩⲟⲧⲉ ϩⲛⲟⲩⲛⲟϭ ⲛϩⲟⲧⲉ ⲁⲩⲱ ⲁⲩⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲉϩⲣⲁⲓ ⲉⲡⲉϥⲛⲟⲩⲧⲉ : ⲁⲩⲱ ⲁⲩⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉⲥⲕⲉⲩⲏ ⲉⲧϩⲛⲡϫⲟⲉⲓ ⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ : ⲉⲧⲣⲉⲡ**ϫⲟⲉⲓ** ⲁⲥⲁⲓ ⲉⲣⲟⲟⲩ : ⲓⲱⲛⲁⲥ ⲇⲉ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡⲟⲩⲛⲧ ⲙⲡϫⲟⲉⲓ ⲁϥⲛⲕⲟⲧⲕ ⲁϥϩⲣϩⲣ :",
+      "english": "And the sailors were alarmed, and cried every one to his god, and cast out the wares that were in the ship into the sea, that it might be lightened of them. But Jonas was gone down into the hold of the ship, and was asleep, and snored.",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣϩⲱⲧ",
+        5,
+        16.295
+      ],
+      [
+        "ⲉ",
+        46,
+        15.543
+      ],
+      [
+        "ⲙⲓⲥⲑⲱⲧⲏⲥ",
+        2,
+        15.066
+      ],
+      [
+        "ⲡⲓ",
+        30,
+        14.447
+      ],
+      [
+        "ⲑⲟⲕⲥ",
+        2,
+        14.066
+      ],
+      [
+        "ϥ",
+        36,
+        13.89
+      ],
+      [
+        "ⲁⲗⲏⲓ",
+        4,
+        13.673
+      ],
+      [
+        "ⲭⲟⲗ",
+        2,
+        12.95
+      ],
+      [
+        "ⲍⲉⲃⲉⲇⲉⲟⲥ",
+        2,
+        12.329
+      ],
+      [
+        "ⲛⲁ",
+        15,
+        11.631
+      ],
+      [
+        "ⲙⲟⲩⲛ",
+        2,
+        11.563
+      ],
+      [
+        "ⲁ",
+        18,
+        11.455
+      ],
+      [
+        "ϩⲓ",
+        6,
+        11.248
+      ],
+      [
+        "ⲉⲣⲕⲩⲛⲇⲓⲛⲉⲩⲓⲛ",
+        1,
+        11.066
+      ],
+      [
+        "ϩⲏⲇⲏ",
+        2,
+        10.563
+      ],
+      [
+        "ϣⲱϯ",
+        2,
+        10.403
+      ],
+      [
+        "ⲙⲏⲣ",
+        2,
+        10.021
+      ],
+      [
+        "ⲛⲧⲉ",
+        10,
+        9.988
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        2,
+        9.869
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        12,
+        9.791
+      ]
+    ],
+    "S": [
+      [
+        "ⲣϩⲱⲧ",
+        6,
+        19.768
+      ],
+      [
+        "ⲙⲉⲛⲉ",
+        1,
+        15.598
+      ],
+      [
+        "ϣⲓⲏⲧ",
+        2,
+        14.043
+      ],
+      [
+        "ⲛⲟϭ",
+        6,
+        13.053
+      ],
+      [
+        "ⲁⲗⲉ",
+        2,
+        12.632
+      ],
+      [
+        "ⲡ",
+        14,
+        11.919
+      ],
+      [
+        "ⲃⲣⲣⲉ",
+        2,
+        11.804
+      ],
+      [
+        "ϣⲱⲧ",
+        1,
+        11.74
+      ],
+      [
+        "ⲧⲣⲉ",
+        5,
+        11.63
+      ],
+      [
+        "ⲱⲙⲥ",
+        1,
+        11.35
+      ],
+      [
+        "ⲛ",
+        14,
+        11.231
+      ],
+      [
+        "ⲉ",
+        11,
+        11.195
+      ],
+      [
+        "ϩⲙ",
+        6,
+        11.168
+      ],
+      [
+        "ⲧⲁϩⲟ",
+        2,
+        10.484
+      ],
+      [
+        "ⲉⲧ",
+        6,
+        9.993
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        2,
+        9.812
+      ],
+      [
+        "ϣⲓⲛⲉ",
+        2,
+        9.455
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        2,
+        9.022
+      ],
+      [
+        "ϭⲟⲙ",
+        2,
+        8.839
+      ],
+      [
+        "ⲛⲥⲁ",
+        2,
+        8.76
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϫⲟⲓ_0_node",
+          23
+        ],
+        [
+          "ⲉ_1_post_ϫⲟⲓ",
+          2
+        ],
+        [
+          "ϥ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲉ_b",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_4_post_ϭⲏⲡⲓ",
+          1
+        ],
+        [
+          "ⲓ_4_post_ϭⲏⲡⲓ",
+          1
+        ],
+        [
+          "ϩⲓϫⲉⲛ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲣϩⲱⲧ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲱϯ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲑⲱⲟⲩ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲱ_2_pre_ⲛⲑⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_pre_ϩⲱ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲉ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲟⲓ",
+          "ϥ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϣⲉ",
+          "ⲛⲁ_3_post_ϣⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_3_post_ϣⲉ",
+          "ϣⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲉ_2_post_ⲉ",
+          "ⲛⲁ_3_post_ϣⲉ_b",
+          1
+        ],
+        [
+          "ⲕ_1_pre_ϫⲟⲓ",
+          "ϫⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲟⲩⲟϩ_4_post_ϭⲏⲡⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_4_post_ϭⲏⲡⲓ",
+          "ⲉ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϫⲟⲓ",
+          "ⲓ_4_post_ϭⲏⲡⲓ",
+          1
+        ],
+        [
+          "ⲓ_4_post_ϭⲏⲡⲓ",
+          "ϩⲓϫⲉⲛ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲉ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲉⲣϩⲱⲧ",
+          "ϥ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲣϩⲱⲧ",
+          "ⲉⲣϩⲱⲧ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲉⲣϩⲱⲧ_1_post_ϫⲟⲓ",
+          "ⲙ_2_post_ⲉⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲉⲣϩⲱⲧ",
+          "ⲡⲁⲓ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ϫⲟⲓ",
+          "ϫⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲛⲧⲉ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ϫⲟⲓ",
+          "ϯ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲛⲧⲉ",
+          "ϣⲱϯ_3_post_ϯ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϫⲟⲓ",
+          "ⲛⲑⲱⲟⲩ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲑⲱⲟⲩ_1_pre_ϫⲟⲓ",
+          "ϩⲱ_2_pre_ⲛⲑⲱⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲱ_2_pre_ⲛⲑⲱⲟⲩ",
+          "ⲟⲩ_3_pre_ϩⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_pre_ϩⲱ",
+          "ⲩ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϫⲟⲓ",
+          "ϫⲟⲓ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϫⲟⲓ",
+          "ϫⲟⲓ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϫⲟⲓ_0_node",
+          8
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲟⲓ",
+          2
+        ],
+        [
+          "ⲣϩⲱⲧ_2_post_ⲉⲧ",
+          2
+        ],
+        [
+          "ϩⲙ_3_post_ⲣϩⲱⲧ",
+          2
+        ],
+        [
+          "ⲡ_4_post_ϩⲙ",
+          2
+        ],
+        [
+          "ϫⲁⲓⲉ_5_post_ⲡ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ϫⲟⲓ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_2_pre_ϣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲉⲧ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϫⲟⲓ",
+          "ⲣϩⲱⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣϩⲱⲧ_2_post_ⲉⲧ",
+          "ϩⲙ_3_post_ⲣϩⲱⲧ",
+          1
+        ],
+        [
+          "ϩⲙ_3_post_ⲣϩⲱⲧ",
+          "ⲡ_4_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ϩⲙ",
+          "ϫⲁⲓⲉ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϫⲟⲓ",
+          "ϫⲟⲓ_0_node",
+          2
+        ],
+        [
+          "ϫⲟⲓ_0_node",
+          "ⲛ_1_post_ϫⲟⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϫⲟⲓ",
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϫⲟⲓ",
+          "ϩⲣⲁⲓ_2_pre_ϣⲁ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_2_pre_ϣⲁ",
+          "ϫⲟⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2426,
+      "count": 16
+    },
+    "B": {
+      "rate": 0.78,
+      "rank": 747,
+      "count": 66
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7088",
+      "label": "ⲣϫⲟⲓ",
+      "pos": "V",
+      "gloss": "transport(?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "181770",
+    "egy_lemma": "ḏꜣ.y",
+    "demo_num": "d7681",
+    "demo_lemma": "ḏj",
+    "english": "[a large riverboat]",
+    "german": "[ein Flussschiff]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/181770",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7681"
+  }
+}

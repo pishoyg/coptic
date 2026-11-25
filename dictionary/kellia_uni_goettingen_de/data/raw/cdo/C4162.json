@@ -1,0 +1,49 @@
+{
+  "id": "C4162",
+  "forms": [
+    {
+      "id": "CF31742",
+      "orth": "ⲧⲟⲩⲓⲟⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31741",
+      "orth": "ⲧⲟⲩⲉⲓⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4724",
+      "bibliography": "CD 444a; CDC 69a; CED 200; KoptHWb 225; DELC 212a; ChLCS 57a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4165",
+      "label": "ϫⲁⲉⲓⲧⲟⲩⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C4164",
+      "label": "ϫⲱⲱⲙⲉ ⲛⲧⲟⲩⲉⲓⲟ",
+      "pos": "N",
+      "gloss": "deed of divorce"
+    },
+    {
+      "target": "C4163",
+      "label": "ⲧⲟⲩⲓⲟ",
+      "pos": "N",
+      "gloss": "repayment"
+    }
+  ]
+}

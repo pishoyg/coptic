@@ -1,0 +1,124 @@
+{
+  "id": "C8488",
+  "forms": [
+    {
+      "id": "CF19931",
+      "orth": "ⲁⲥⲁⲗⲉⲩⲧⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19932",
+      "orth": "ⲁⲥⲁⲗⲉⲩⲧⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12540,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9918",
+      "bibliography": "DDGLC",
+      "cu_ID": "5211"
+    },
+    {
+      "id": "CS9919",
+      "bibliography": "DDGLC",
+      "cu_ID": "4467"
+    },
+    {
+      "id": "CS9920",
+      "bibliography": "DDGLC",
+      "cu_ID": "5212"
+    },
+    {
+      "id": "CS9921",
+      "bibliography": "DDGLC",
+      "cu_ID": "4285"
+    },
+    {
+      "id": "CS9922",
+      "bibliography": "DDGLC",
+      "cu_ID": "10920"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩⲥⲕⲩⲗⲗⲉⲓ ⲙⲙⲟⲟⲩ ⲛϭⲓⲛⲉ**ⲁⲥⲁⲗⲉⲩⲧⲟⲥ** ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲩⲧⲁϩⲟⲟⲩ ⲉⲣⲁⲧⲟⲩ ⲉⲩⲡⲟⲣϫ ⲉⲃⲟⲗ ⲉⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲛⲧⲁⲝⲓⲥ ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲩⲡⲣⲟⲉⲗⲑⲉ ⲉⲃⲟⲗ ϩⲛⲛⲓⲁⲡⲁⲧⲱⲣ ⲛⲁⲓ ⲉⲧⲏⲡ ⲉⲛⲧⲁⲝⲓⲥ ⲙⲡⲉⲭⲱⲣⲏⲙⲁ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ :",
+      "english": "“And that mystery knoweth wherefor the Unwaverables have rent themselves asunder and wherefor they have set themselves up, divided into twelve orders, and wherefor they have come forth from the Fatherless, which belong to the orders of the space of the Ineffable.”",
+      "source": "Pistis Sophia Book 2 Part 7",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:66-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥⲁⲗⲉⲩⲧⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12113,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "307",
+    "grl_lemma": "ἀσάλευτος",
+    "grl_meaning": "unmoved, unshaken",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 254b; Preisigke 1:222"
+  }
+}

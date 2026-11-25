@@ -1,0 +1,71 @@
+{
+  "id": "C1780",
+  "forms": [
+    {
+      "id": "CF5140",
+      "orth": "ⲙⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 26.16,
+        "rank": 53,
+        "count": 4128
+      }
+    },
+    {
+      "id": "CF5141",
+      "orth": "ⲙⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 26.16,
+        "rank": 53,
+        "count": 4128
+      }
+    },
+    {
+      "id": "CF5142",
+      "orth": "ⲙⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.24,
+        "rank": 117,
+        "count": 1615
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "A",
+    "subc": "Status nominalis",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2080",
+      "bibliography": "CD 155b; KoptHWb 84; ChLCS 24a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲣϣⲁⲛⲡⲛⲟⲩⲧⲉ ⲣϩⲛⲁϥ ⲉⲓⲟⲩⲱϣ ⲉⲃⲱⲕ ⲉⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲧⲁϣⲗⲏⲗ ⲙⲙⲁⲩ ϩⲙⲡⲙⲁ ⲉⲧⲟⲩⲁⲁⲃ · ⲁⲩⲱ ϩⲙⲡⲟⲩⲱϣ ⲙⲡⲛⲟⲩⲧⲉ · ϯⲛⲁⲕⲧⲟⲓ ⲉⲡⲁ**ⲙⲁ** ⲛⲕⲉⲥⲟⲡ ·",
+      "english": "And if God pleaseth I wish to go to Jerusalem so that I may pray there in the Holy Place, and, by the will of God, I will return again to my place.",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛⲉⲙⲡⲉⲡⲟⲩϩⲏⲧ ⲧⲁⲕⲟ . ⲛⲉⲣⲁⲥⲱϣⲡ**ⲙⲁ** ⲁⲛ ⲉⲧⲉⲛϩⲏⲧϥ . ⲏ ⲛⲉⲣⲁⲧϭⲁⲓⲉⲛⲉⲥⲛⲏⲩ ⲉⲧϩⲙⲡⲙⲁ ⲛⲙⲙⲉ ·",
+      "english": "If your heart hadn’t corrupted, you would not despise the place you are in, or shame the sisters who are in the place with you.",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲏ ⲛⲧⲉⲧⲛⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉⲛⲉⲧⲟⲩⲁⲁⲃ ⲛⲉⲧⲛⲁⲕⲣⲓⲛⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ . ⲁⲩⲱ ⲉϣϫⲉⲉⲩⲛⲁⲕⲣⲓⲛⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ ϩⲓⲱⲧⲧⲏⲩⲧⲛ ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲁⲛ ⲛϩⲉⲛⲕⲟⲩⲓ ⲙ**ⲙⲁ** ⲛϯϩⲁⲡ .",
+      "english": "Don&apos;t you know that the saints will judge the world? And if the world is judged by you, are you unworthy to judge the smallest matters?",
+      "source": "46_1 Corinthians_6",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {}
+}

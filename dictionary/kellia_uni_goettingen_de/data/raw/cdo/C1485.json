@@ -1,0 +1,205 @@
+{
+  "id": "C1485",
+  "forms": [
+    {
+      "id": "CF4395",
+      "orth": "ⲕⲱⲱϣⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF4396",
+      "orth": "ⲕⲱϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.2,
+        "rank": 1853,
+        "count": 17
+      }
+    },
+    {
+      "id": "CF4397",
+      "orth": "ⲕⲱϣⲓ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲕⲟⲟϣⲉ†",
+      "dialect": "S",
+      "id": "895.1"
+    },
+    {
+      "orth": "ⲕⲁϣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.48,
+        "rank": 1130,
+        "count": 41
+      }
+    },
+    {
+      "orth": "ⲕⲁϣ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.48,
+        "rank": 1130,
+        "count": 41
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1730",
+      "bibliography": "CD 130b; ChLCS 20a"
+    },
+    {
+      "id": "CS1731",
+      "bibliography": "CD 130b; KoptHWb 72; ChLCS 20a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲱⲥ ⲁϥ**ⲕⲱϣ** ⲟⲩⲟϩ ⲁϥϧⲟⲙϧⲉⲙ ⲛϫⲉⲡⲓⲁⲑⲏⲣ ⲛⲧⲉⲡⲕⲁϩⲓ ⲧⲏⲣϥ ⲡⲱⲥ ⲁⲥϣⲱⲡⲓ ⲉⲡⲧⲁⲕⲟ ⲛϫⲉⲃⲁⲃⲩⲗⲱⲛ ϧⲉⲛⲛⲓⲉⲑⲛⲟⲥ .",
+      "english": "How is the hammer of the whole earth broken and crushed! How is Babylon become a desolation among the nations!",
+      "source": "24_Ieremias_27",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:27",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥⲉϧⲟⲙϧⲉⲙ ⲛⲛⲟⲩⲫⲓϯ ⲟⲩⲟϩ ⲉϥⲉ**ⲕⲱϣ** ⲛⲛⲟⲩϩⲟⲡⲗⲟⲛ ⲛⲟⲩⲕⲉϣⲉⲃϣⲓ: ⲉϥⲉⲣⲟⲕϩⲟⲩ ϧⲉⲛⲡⲓⲭⲣⲱⲙ .",
+      "english": "Putting an end to wars as for the ends of the earth; he will crush the bow, and break in pieces the weapon, and burn the bucklers with fire.",
+      "source": "19_Psalmi_45",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:45",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲉⲓⲉⲙⲟϣⲓ ϧⲁϫⲱϥ ⲟⲩⲟϩ ϩⲁⲛⲧⲱⲟⲩ ⲉⲓⲉϣⲁϣⲟⲩ ϩⲁⲛⲣⲱⲟⲩ ⲛϩⲟⲙⲧ ⲉⲓⲉϧⲉⲙϧⲱⲙⲟⲩ ⲟⲩⲟϩ ϩⲁⲛⲙⲟⲭⲗⲟⲩⲥ ⲙⲃⲉⲛⲓⲡⲓ ⲉⲓⲉ**ⲕⲁϣ**ⲟⲩ .",
+      "english": "I will go before thee, and will level mountains: I will break to pieces brazen doors, and burst iron bars.",
+      "source": "23_Isaias_45",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:45",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϣⲓ",
+        11,
+        22.488
+      ],
+      [
+        "ϧⲉⲙϧⲱⲙ",
+        6,
+        22.45
+      ],
+      [
+        "ⲟⲩ",
+        40,
+        20.72
+      ],
+      [
+        "ⲥⲟⲗ",
+        2,
+        20.695
+      ],
+      [
+        "ϥ",
+        40,
+        20.39
+      ],
+      [
+        "ⲧⲥⲟ",
+        3,
+        19.092
+      ],
+      [
+        "ⲃⲉϫⲏⲛ",
+        1,
+        18.695
+      ],
+      [
+        "ⲥⲁⲥⲁ",
+        1,
+        18.695
+      ],
+      [
+        "ϭⲟⲛϥ",
+        1,
+        18.695
+      ],
+      [
+        "ⲩ",
+        18,
+        18.631
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        5,
+        18.526
+      ],
+      [
+        "ϩⲓⲑⲁϥ",
+        2,
+        18.525
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        22,
+        18.458
+      ],
+      [
+        "ⲛⲟⲩⲃ",
+        5,
+        18.371
+      ],
+      [
+        "ⲙⲉⲗⲁ",
+        1,
+        18.11
+      ],
+      [
+        "ⲕⲁⲥ",
+        3,
+        18.041
+      ],
+      [
+        "ⲁ",
+        20,
+        17.955
+      ],
+      [
+        "ⲛⲛⲉ",
+        6,
+        17.727
+      ],
+      [
+        "ⲛ",
+        20,
+        17.556
+      ],
+      [
+        "ⲑⲟⲕⲥ",
+        1,
+        17.11
+      ]
+    ]
+  },
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1486",
+      "label": "ⲕⲱϣ",
+      "pos": "N",
+      "gloss": "a breaking; a malady"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4576",
+    "demo_lemma": "ḫrš",
+    "english": "[to press together]",
+    "german": "zerbrechen, zusammendrücken",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4576"
+  }
+}

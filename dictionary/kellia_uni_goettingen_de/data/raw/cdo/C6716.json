@@ -1,0 +1,187 @@
+{
+  "id": "C6716",
+  "forms": [
+    {
+      "id": "CF15477",
+      "orth": "ϩⲟⲛⲧ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲱⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6238,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ϩⲟⲛⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4780,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7430",
+      "bibliography": "CD 691b; CED 288; KoptHWb 380; DELC 306a; ChLCS 93a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲉⲧⲉⲫ",
+        3,
+        20.865
+      ],
+      [
+        "ⲣⲏ",
+        3,
+        15.778
+      ],
+      [
+        "ⲙⲁⲛⲁⲥⲥⲏ",
+        1,
+        13.862
+      ],
+      [
+        "ⲃⲁⲕⲓ",
+        2,
+        11.645
+      ],
+      [
+        "ⲛⲱ",
+        3,
+        11.506
+      ],
+      [
+        "ⲡ",
+        3,
+        8.789
+      ],
+      [
+        "ⲙ",
+        3,
+        8.753
+      ],
+      [
+        "ⲛ",
+        3,
+        7.761
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        4.658
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡ_1_pre_ϩⲟⲛⲧ",
+          3
+        ],
+        [
+          "ϩⲟⲛⲧ_0_node",
+          3
+        ],
+        [
+          "ⲛⲱ_1_post_ϩⲟⲛⲧ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛⲱ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϩⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_1_post_ϩⲟⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ϩⲟⲛⲧ",
+          "ϩⲟⲛⲧ_0_node",
+          3
+        ],
+        [
+          "ϩⲟⲛⲧ_0_node",
+          "ⲛⲱ_1_post_ϩⲟⲛⲧ",
+          3
+        ],
+        [
+          "ⲛⲱ_1_post_ϩⲟⲛⲧ",
+          "ⲛ_2_post_ⲛⲱ",
+          3
+        ],
+        [
+          "ⲛ_2_post_ⲛⲱ",
+          "ⲉ_1_post_ϩⲟⲛⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲟⲛⲧ",
+          "ⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲱ",
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_1_post_ϩⲟⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4300,
+      "count": 3
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "104940",
+    "egy_lemma": "ḥm-nṯr",
+    "demo_num": "d4069",
+    "demo_lemma": "ḥm-nṯr",
+    "english": "priest",
+    "german": "Priester",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/104940",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4069"
+  }
+}

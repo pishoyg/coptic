@@ -1,0 +1,213 @@
+{
+  "id": "C4677",
+  "forms": [
+    {
+      "id": "CF11317",
+      "orth": "ⲧⲱⲛϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4407,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5283",
+      "bibliography": "CD 446b; KoptHWb 254"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲁⲙⲟⲛⲓ ⲙⲡⲓⲥⲁϫⲓ ⲛϧⲏⲧⲟⲩ ⲉⲩⲕⲱϯ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲟⲩ ϫⲉⲟⲩ ⲡⲉ ⲡⲓ**ⲧⲱⲛϥ** ⲉⲃⲟⲗ ϧⲉⲛⲛⲏ ⲉⲑⲙⲱⲟⲩⲧ .",
+      "english": "They kept this saying to themselves, questioning what the 'rising from the dead' meant.",
+      "source": "Bohairic Gospel of Mark 9 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:9",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲁⲙⲟⲛⲓ ⲙⲡⲓⲥⲁϫⲓ ⲛϧⲏⲧⲟⲩ ⲉⲩⲕⲱϯ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲩ ϫⲉⲟⲩ ⲡⲉ ⲡⲓ**ⲧⲱⲛϥ** ⲉⲃⲟⲗ ϧⲉⲛⲛⲏ ⲉⲧⲙⲱⲟⲩⲧ",
+      "english": "They kept this saying to themselves, questioning what the 'rising from the dead' meant.",
+      "source": "02_Mark_09",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic:09",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲏ",
+        3,
+        11.227
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        10.408
+      ],
+      [
+        "ⲉⲑ",
+        2,
+        10.005
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        9.474
+      ],
+      [
+        "ϫⲉ",
+        3,
+        9.307
+      ],
+      [
+        "ⲡⲓ",
+        3,
+        8.941
+      ],
+      [
+        "ϧⲉⲛ",
+        3,
+        8.933
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.924
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.667
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲓ_1_pre_ⲧⲱⲛϥ",
+          2
+        ],
+        [
+          "ⲧⲱⲛϥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧⲱⲛϥ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲉⲑ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲓ_1_pre_ⲧⲱⲛϥ",
+          "ⲧⲱⲛϥ_0_node",
+          2
+        ],
+        [
+          "ⲧⲱⲛϥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲧⲱⲛϥ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲧⲱⲛϥ",
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          "ⲉⲑ_3_post_ⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲏ_2_post_ⲉⲃⲟⲗ",
+          "ⲉⲧ_3_post_ⲛⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3940,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4681",
+      "label": "ϭⲓⲛⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4682",
+      "label": "ϭⲓⲛⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4680",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "raising, supporting"
+    },
+    {
+      "target": "C4678",
+      "label": "ⲣⲉϥⲧⲱⲛϥ",
+      "pos": "N",
+      "gloss": "one who rises, incites"
+    },
+    {
+      "target": "C4679",
+      "label": "ⲣⲉϥⲧⲱⲛϥ",
+      "pos": "N",
+      "gloss": "one who rises, incites"
+    },
+    {
+      "target": "C4674",
+      "label": "ⲧⲱⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "arise; raise, carry"
+    },
+    {
+      "target": "C4675",
+      "label": "ⲧⲱⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "rising, resurrection"
+    },
+    {
+      "target": "C4676",
+      "label": "ⲧⲱⲟⲩⲛ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "rise from; carry"
+    }
+  ]
+}

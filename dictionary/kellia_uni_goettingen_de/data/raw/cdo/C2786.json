@@ -1,0 +1,115 @@
+{
+  "id": "C2786",
+  "forms": [
+    {
+      "id": "CF7404",
+      "orth": "ⲡⲉ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 110.52,
+        "rank": 17,
+        "count": 17438
+      }
+    },
+    {
+      "orth": "ⲡ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 203.59,
+        "rank": 9,
+        "count": 17267
+      }
+    },
+    {
+      "orth": "ⲡ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 445.48,
+        "rank": 2,
+        "count": 70286
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PPOS",
+    "gen": "m.",
+    "number": "sg.",
+    "tlapos": "Possessivartikel"
+  },
+  "senses": [
+    {
+      "id": "CS3186",
+      "bibliography": "CD 258b; CED 123; KoptHWb 143; DELC 157; ChLCS 36b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲁⲓ ⲡⲉ ⲫⲛⲟⲙⲟⲥ ⲛⲧⲉⲟⲩϭⲟϩ ⲛⲧⲉⲟⲩⲥⲉϩⲧ ⲓⲉ ⲛⲧⲉⲟⲩϩⲃⲟⲥ ⲛⲥⲟⲣⲧ ⲓⲉ ⲟⲩⲓⲁⲩ ⲓⲉ ⲟⲩⲟⲩⲁⲑⲓ ⲓⲉ ⲟⲩϧⲉ ⲓⲉ ⲥⲕⲉⲩⲟⲥ ⲛⲓⲃⲉⲛ ⲛϣⲁⲣ ⲉ**ⲡ**ϫⲓⲛⲧⲟⲩⲃⲟϥ ⲓⲉ ⲉϭⲁϧⲙⲉϥ",
+      "english": "This is the law of the plague of leprosy of a woollen or linen garment, either of the warp, or woof, or any leathern article, to pronounce it clean or unclean.",
+      "source": "03_Leviticus_13",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲕⲛⲁϭⲱ ⲉϩⲣⲁⲓ ⲛϩⲏⲧⲟⲩ **ⲡⲉ**",
+      "english": "you would stay among them,",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲛϫⲉⲛⲓⲣⲱⲙⲓ ⲉⲃⲟⲗ ⲛⲧⲟⲧⲟⲩ ⲛⲛⲓϩⲓⲟⲙⲓ ⲛⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲁϥⲑⲱⲧ ϧⲉⲛⲡⲉϥⲙⲉⲩⲓ ⲁⲩⲓⲛⲓ ⲛϩⲁⲛⲥⲫⲣⲁⲅⲓⲥ ⲛⲉⲙϩⲁⲛⲗⲉⲟⲛ ⲛⲉⲙϩⲁⲛϣϭⲟⲩⲣ ⲛⲉⲙϩⲁⲛⲉⲙⲡⲗⲟⲅⲓⲟⲛ ⲛⲉⲙϩⲁⲛⲡⲉⲣⲓⲇⲉⲝⲓⲟⲛ ⲥⲕⲉⲩⲟⲥ ⲛⲓⲃⲉⲛ ⲛⲛⲟⲩⲃ ⲛⲉⲙⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲛⲁⲩⲓⲛⲓ ⲛⲟⲩⲁⲫⲉⲣⲉⲙⲁ ⲛⲛⲟⲩⲃ ⲙ**ⲡ**ϭⲟⲓⲥ",
+      "english": "And the men, even every one to whom it seemed good in his heart, brought from the women, even brought seals and ear-rings, and finger-rings, and necklaces, and bracelets, every article of gold.",
+      "source": "02_Exodus_35",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:35",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϥϣⲁⲛⲟⲩⲱⲛϩ ⲇⲉ ⲉⲃⲟⲗ ⲟⲛ ϩⲙⲡϩⲟⲓⲧⲉ ⲏ ϩⲙⲡⲉϣⲧⲓⲧ ⲏ ϩⲙⲡⲃⲏⲕⲉ ⲏ ϩⲛⲥⲕⲉⲩⲟⲥ ⲛⲓⲙ ⲛϣⲁⲁⲣ ⲟⲩⲥⲱⲃϩ **ⲡⲉ** ⲉⲁϥⲡⲓⲣⲉ ⲉⲩⲉⲣⲟⲕϩⲟⲩ ϩⲛⲟⲩⲥⲁⲧⲉ ⲡⲉⲧⲉⲣⲉⲡϩⲣⲃ ⲉⲧⲙⲙⲁⲩ ⲛϩⲏⲧϥ",
+      "english": "And if it should still appear in the garment, either in the warp or in the woof, or in any article of skin, it is a leprosy bursting forth: that wherein is the plague shall be burnt with fire.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲛⲓⲛⲓ ⲉϧⲟⲩⲛ ⲙⲡⲓⲇⲱⲣⲟⲛ ⲛⲧⲉⲡϭⲟⲓⲥ ⲟⲩⲟϩ ⲫⲣⲱⲙⲓ ⲉⲧⲁϥϭⲓ ⲛⲟⲩⲥⲕⲉⲩⲟⲥ ⲛⲛⲟⲩⲃ ⲛⲉⲙⲟⲩⲕⲗⲓⲧⲱⲛ ⲛⲉⲙⲟⲩⲯⲉⲗⲓⲱⲛ ⲛⲉⲙⲟⲩϣϭⲟⲩⲣ ⲛⲉⲙⲟⲩⲡⲉⲣⲉⲇⲉⲝⲓⲟⲛ ⲛⲉⲙⲟⲩⲉⲙ ⲡⲓⲗⲟⲅⲓⲟⲛ ⲉⲧⲱⲃϩ ⲉϩⲣⲏⲓ ⲉϫⲱⲛ ⲙ**ⲡⲉ**ⲙⲑⲟ ⲙⲡϭⲟⲓⲥ",
+      "english": "And we have brought our gift to the Lord, every man who has found an article of gold, whether an armlet, or a chain, or a ring, or a bracelet, or a clasp for hair, to make atonement for us before the Lord.",
+      "source": "04_Numeri_31",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:31",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ **ⲡⲉ** ⲡⲛⲟⲙⲟⲥ ⲙⲡϩⲣⲃ ⲙⲡⲥⲱⲃϩ ⲛϩⲟⲉⲓⲧⲉ ⲛⲣⲱⲧ ⲏ ϩⲉⲛϩⲟⲓⲧⲉ ⲛⲥⲓⲡⲡⲟⲛ ⲏ ⲟⲩϣⲧⲓⲧ ⲏ ⲟⲩⲃⲏⲕⲉ ⲏ ⲥⲕⲉⲩⲟⲥ ⲛⲓⲙ ⲛϣⲁⲁⲣ ⲉⲕⲁⲑⲁⲣⲓⲍⲉ ⲙⲙⲟϥ ⲏ ⲉϫⲁϩⲙⲉϥ",
+      "english": "This is the law of the plague of leprosy of a woollen or linen garment, either of the warp, or woof, or any leathern article, to pronounce it clean or unclean.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C2384",
+      "type": "cf",
+      "label": "possessive article pl."
+    },
+    {
+      "target": "C11280",
+      "type": "cf",
+      "label": "possessive article sg. f."
+    }
+  ],
+  "etym": {
+    "egy_num": "550021",
+    "egy_lemma": "pꜣy=",
+    "demo_num": "d1925",
+    "demo_lemma": "pꜣj=",
+    "english": "[poss. adj., masc. sing.]",
+    "german": "[Poss.artikel sg.m.]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550021",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1925"
+  }
+}

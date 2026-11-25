@@ -1,0 +1,106 @@
+{
+  "id": "C7875",
+  "forms": [
+    {
+      "id": "CF17815",
+      "orth": "ϭⲉⲣⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12120,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8754",
+      "bibliography": "CD 829a; CED 335; KoptHWb 466, 574; ChLCS 109b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲣⲟⲉⲓⲥ ⲉⲣⲟⲕ ⲉⲧⲉⲃϣⲉ ϫⲉⲛⲧⲟⲥ ⲧⲉ ⲧⲙⲁⲁⲩ ⲛⲛ**ϭⲉⲣⲏⲧ** ⲧⲏⲣⲟⲩ ·",
+      "english": "Keep thou watch against sloth, for she is the mother of all vices.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲁⲩ",
+        1,
+        11.592
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲉⲣⲏⲧ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲉⲣⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲉⲣⲏⲧ_0_node",
+          "ⲧⲏⲣ_1_post_ϭⲉⲣⲏⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ϭⲉⲣⲏⲧ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11694,
+      "count": 1
+    }
+  }
+}

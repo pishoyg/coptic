@@ -1,0 +1,109 @@
+{
+  "id": "C10368",
+  "forms": [
+    {
+      "id": "CF27673",
+      "orth": "ⲡⲣⲟϩⲟⲓⲙⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27674",
+      "orth": "ⲡⲣⲟϩⲟⲓⲙⲓⲟⲛ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF27675",
+      "orth": "ⲡⲣⲟϩⲟⲓⲙⲓⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13989",
+      "bibliography": "DDGLC",
+      "cu_ID": "3051"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲉⲓⲣⲉ ⲇⲉ ⲙⲡⲙⲉⲉⲩⲉ ⲱ ⲡⲥⲩⲛϩⲉⲇⲣⲓⲟⲛ ⲙⲙⲁⲓⲛⲟⲩⲧⲉ ϫⲉⲁⲓϫⲟⲟⲥ ϩⲛⲧⲁⲣⲭⲏ ⲙⲡⲉ**ⲡⲣⲟϩⲟⲓⲙⲓⲟⲛ** ϫⲉϥⲥⲟⲧⲡ ⲛϭⲓⲛⲉⲓⲡⲉⲧⲟⲩⲁⲁⲃ ⲛϩⲟⲩⲟ · ⲉⲡⲉⲧⲛⲁⲡⲁⲧⲁⲥⲥⲉⲓ ⲛⲟⲩⲙⲟⲩⲓ ⲙⲛⲟⲩⲁⲣⲝ ⁛—",
+      "english": "And I make mention, O God-loving Council, of what I said in the opening paragraphs [of this discourse], namely, this pure man of this kind is far more excellent than he who slayeth a lion and a bear.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲣⲭⲏ",
+        1,
+        12.797
+      ],
+      [
+        "ⲥⲟⲧⲡ",
+        1,
+        12.303
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟϩⲟⲓⲙⲓⲟⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13133,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1846",
+    "grl_lemma": "προοίμιον",
+    "grl_meaning": "opening, introduction, prelude",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1492b; Preisigke 2:380"
+  }
+}

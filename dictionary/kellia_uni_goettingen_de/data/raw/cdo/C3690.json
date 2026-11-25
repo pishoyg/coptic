@@ -1,0 +1,640 @@
+{
+  "id": "C3690",
+  "forms": [
+    {
+      "id": "CF9294",
+      "orth": "ⲥⲟⲩⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2754,
+        "count": 16
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲣⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.57,
+        "rank": 1019,
+        "count": 48
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4243,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲥⲁⲣ-",
+      "dialect": "S",
+      "id": "1461.2"
+    },
+    {
+      "orth": "ⲥⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2402,
+        "count": 21
+      }
+    },
+    {
+      "orth": "ⲥⲉⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4042,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲥⲉⲣ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.32,
+        "rank": 1449,
+        "count": 27
+      }
+    },
+    {
+      "orth": "ⲥⲟⲩⲣⲉ",
+      "dialect": "A",
+      "id": "1461.6"
+    },
+    {
+      "orth": "ⲥⲟⲩⲣⲓ",
+      "dialect": "F",
+      "id": "1461.7"
+    },
+    {
+      "orth": "ⲥⲟⲩⲣⲉ",
+      "dialect": "L",
+      "id": "1461.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4194",
+      "bibliography": "CD 354a; CED 161; KoptHWb 194; DELC 195; ChLCS 50a"
+    },
+    {
+      "id": "CS4195",
+      "bibliography": "CD 354b; KoptHWb 194; DELC 195; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲕⲉⲟⲩⲁⲓ ⲁϥϩⲉⲓ ⲉϫⲉⲛⲛⲓⲥⲟⲩⲣⲓ ⲟⲩⲟϩ ⲉⲧⲁⲩⲓ ⲉϩⲣⲏⲓ ⲛϫⲉⲛⲓ**ⲥⲟⲩⲣⲓ** ⲁⲩⲟϫϩϥ ⲟⲩⲟϩ ⲙⲡⲉϥϯⲟⲩⲧⲁϩ",
+      "english": "Others fell among the thorns, and the thorns grew up, and choked it, and it yielded no fruit.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲣⲏⲧ ⲛ**ⲥⲟⲩⲣⲉ** ·",
+      "english": "and which is grown over with thorns.'",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϯ ϩⲓⲱⲧϥ ⲛⲟⲩϩⲃⲟⲥ ⲛϭⲏϫⲓ ⲟⲩⲟϩ ⲁⲩϣⲱⲛⲧ ⲛⲟⲩⲭⲗⲟⲙ ⲉⲃⲟⲗ ϧⲉⲛϩⲁⲛ**ⲥⲟⲩⲣⲓ** ⲁⲩⲭⲁϥ ϩⲓϫⲱϥ",
+      "english": "They clothed him with purple, and weaving a crown of thorns, they put it on him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ⲉⲣⲉⲛⲉⲧⲙⲙⲁⲩ ϩⲛⲧⲙⲏⲏⲧⲉ ⲛϩⲉⲛ**ⲥⲟⲩⲣⲉ** · ⲙⲛϩⲉⲛⲁⲣⲟⲟⲩⲉ ⲉⲓϣⲁϫⲉ ⲉⲛϩⲗⲗⲏⲛ ⲙⲛⲛϩⲁⲓⲣⲉϯⲕⲟⲥ ⲉⲧϣⲟⲟⲡ ϩⲛⲛⲉⲩⲟⲩⲟⲉⲓϣ ·",
+      "english": "and this notwithstanding the fact that there were among them thorns and tares (I mean the Greeks and the heretics who lived in their times),",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲑⲱⲛ ⲡⲉⲕϭⲣⲟ ⲫⲙⲟⲩ ⲁⲥⲑⲱⲛ ⲧⲉⲕ**ⲥⲟⲩⲣⲓ** ⲫⲙⲟⲩ .",
+      "english": "'Death, where is your sting? Hades",
+      "source": "07_I Corinthians_15",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯϩⲧⲏⲕ ϫⲉⲟⲩⲛⲧⲉⲧⲃⲛⲛⲉ ϩⲉⲛ**ⲥⲟⲩⲣⲉ** ⲙⲙⲁⲩ ⲉⲧⲉⲛⲉϫⲡⲓⲟ ⲛⲉ ⲉϣⲁⲩⲇⲓⲱⲕⲉ ⲛⲥⲁⲡⲛⲟⲃⲉ ·",
+      "english": "Take thou, however, good heed unto thyself, lest there be thorns in the palm tree, that is to say, admonishings, when thou art driven to follow after sin,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟϫϩ",
+        5,
+        23.854
+      ],
+      [
+        "ⲣⲱⲧ",
+        6,
+        22.362
+      ],
+      [
+        "ⲙⲁⲑⲟⲩⲓ",
+        3,
+        21.45
+      ],
+      [
+        "ⲩ",
+        32,
+        21.121
+      ],
+      [
+        "ⲭⲉⲣⲥⲟⲥ",
+        2,
+        21.11
+      ],
+      [
+        "ⲭⲗⲟⲙ",
+        5,
+        20.879
+      ],
+      [
+        "ⲁ",
+        38,
+        20.733
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        33,
+        20.213
+      ],
+      [
+        "ⲡⲉⲣⲓⲭⲱⲣⲟⲥ",
+        3,
+        20.202
+      ],
+      [
+        "ⲥⲁⲧ",
+        4,
+        19.94
+      ],
+      [
+        "ⲙⲟⲩ",
+        10,
+        19.903
+      ],
+      [
+        "ϣⲟⲛϯ",
+        2,
+        19.888
+      ],
+      [
+        "ϩⲁⲛ",
+        18,
+        19.823
+      ],
+      [
+        "ⲟⲩⲁⲧϣⲁⲩ",
+        1,
+        19.695
+      ],
+      [
+        "ϣⲉⲛⲫⲁⲧ",
+        1,
+        19.695
+      ],
+      [
+        "ϫⲓⲛⲧⲟⲩⲧⲱⲧⲥ",
+        1,
+        19.695
+      ],
+      [
+        "ⲡⲓⲓⲥⲗ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲏⲥⲱⲥ",
+        1,
+        18.695
+      ],
+      [
+        ".",
+        20,
+        18.582
+      ],
+      [
+        "ⲁⲗⲟⲗⲓ",
+        3,
+        18.567
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲟⲣⲧⲣ",
+        1,
+        15.598
+      ],
+      [
+        "ϣⲥ",
+        2,
+        15.511
+      ],
+      [
+        "ⲧⲃⲏⲣ",
+        1,
+        15.013
+      ],
+      [
+        "ⲣⲏⲧ",
+        2,
+        14.389
+      ],
+      [
+        "ϣⲟⲕϩ",
+        1,
+        12.898
+      ],
+      [
+        "ⲟⲩⲉⲣⲏⲧⲉ",
+        3,
+        12.825
+      ],
+      [
+        "ⲁⲣⲟⲟⲩⲉ",
+        1,
+        12.791
+      ],
+      [
+        "ⲛ",
+        19,
+        12.553
+      ],
+      [
+        "ⲙⲛⲧⲁⲧⲥⲃⲱ",
+        1,
+        12.428
+      ],
+      [
+        "ⲕⲗⲟⲙ",
+        2,
+        12.398
+      ],
+      [
+        "ϩⲛ",
+        9,
+        11.989
+      ],
+      [
+        "ⲙⲁⲧⲟⲩ",
+        1,
+        11.954
+      ],
+      [
+        "ⲕⲁⲧⲁⲗⲁⲗⲓⲁ",
+        1,
+        11.843
+      ],
+      [
+        "ⲃⲛⲛⲉ",
+        1,
+        11.469
+      ],
+      [
+        "ⲟⲩⲛⲧⲉ",
+        1,
+        11.24
+      ],
+      [
+        "ⲙⲏϩ",
+        1,
+        10.843
+      ],
+      [
+        "ⲉⲙϩⲓⲧ",
+        1,
+        10.313
+      ],
+      [
+        "ϩⲉⲛ",
+        4,
+        10.074
+      ],
+      [
+        "ⲙⲏⲏⲧⲉ",
+        1,
+        9.898
+      ],
+      [
+        "ⲥⲱⲕ",
+        1,
+        9.469
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          14
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ϫⲡⲓⲟ",
+          1
+        ],
+        [
+          "ϫⲡⲓⲟ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲁⲣⲟⲟⲩⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲟⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲟⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲛⲧⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲩⲣⲉ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲟⲩⲣⲉ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲧⲉϥ_3_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲙⲛⲧⲁⲧⲥⲃⲱ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲥⲃⲱ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ_2_post_ⲙⲛⲧⲁⲧⲥⲃⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲛ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲥⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          "ⲙⲙⲁⲩ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲥⲟⲩⲣⲉ",
+          "ⲉⲧⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          "ⲛⲉ_3_post_ϫⲡⲓⲟ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ϫⲡⲓⲟ",
+          "ϫⲡⲓⲟ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          "ϩⲉⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲣⲟⲟⲩⲉ",
+          "ⲁⲣⲟⲟⲩⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          "ⲙ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲩⲣⲉ",
+          "ⲙⲁⲧⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲟⲩ_2_post_ⲙ",
+          "ⲁⲩⲱ_2_post_ϣⲟⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϣⲟⲛⲧⲉ",
+          "ⲟⲩ_2_post_ϣⲟⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲟⲛⲧⲉ",
+          "ϣⲟⲛⲧⲉ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲥⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲩ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲥⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲟⲩⲣⲉ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲟⲩⲣⲉ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧⲉϥ_3_post_ⲟⲩⲉⲣⲏⲧⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲛⲧⲟϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲥⲟⲩⲣⲉ",
+          "ⲥⲟⲩⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲩⲣⲉ_0_node",
+          "ⲙ_2_post_ⲙⲛⲧⲁⲧⲥⲃⲱ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲙⲛⲧⲁⲧⲥⲃⲱ",
+          "ⲙⲛⲧⲁⲧⲥⲃⲱ_1_post_ⲥⲟⲩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲥⲃⲱ_1_post_ⲥⲟⲩⲣⲉ",
+          "ⲙⲛ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          "ⲙ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+          "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ_2_post_ⲙⲛⲧⲁⲧⲥⲃⲱ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2438,
+      "count": 16
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3692",
+      "label": "ⲥⲉⲣϭⲁⲙⲟⲩⲗ",
+      "pos": "N",
+      "gloss": "leucacanthus (\"thorn of camel\")"
+    },
+    {
+      "target": "C3693",
+      "label": "ⲥⲉⲣⲟϫⲓ",
+      "pos": "N",
+      "gloss": "thistle (\"fake thorn\")"
+    },
+    {
+      "target": "C12141",
+      "label": "ⲥⲣⲁⲣⲟⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "briar, thorn, thistle"
+    },
+    {
+      "target": "C3691",
+      "label": "ⲥⲣⲃⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "thorn of datepalm"
+    }
+  ],
+  "etym": {
+    "egy_num": "139070",
+    "egy_lemma": "sr.t",
+    "demo_num": "d5390",
+    "demo_lemma": "sr.t",
+    "english": "thorn; spine",
+    "german": "Dorn; Stachel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/139070",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5390"
+  }
+}

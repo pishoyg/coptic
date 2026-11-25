@@ -1,0 +1,283 @@
+{
+  "id": "C2607",
+  "forms": [
+    {
+      "id": "CF7014",
+      "orth": "ⲛⲟⲩϣⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5471,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲛⲟϣⲥ⸗",
+      "dialect": "S",
+      "id": "1216.1"
+    },
+    {
+      "orth": "ⲛⲟⲩϣⲥ",
+      "dialect": "F",
+      "id": "1216.2"
+    },
+    {
+      "orth": "ⲛⲟⲩⲥϩ",
+      "dialect": "L",
+      "id": "1216.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2989",
+      "bibliography": "CD 237a; KoptHWb 132; ChLCS 34a"
+    },
+    {
+      "id": "CS2990",
+      "bibliography": "CD 237a; KoptHWb 132; ChLCS 34a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϫⲱϩ ⲇⲉ ⲉⲡⲡⲱϫⲕ ⲙⲡⲙⲉⲣⲟⲥ ⲛⲓⲁⲕⲱⲃ ⲁϥ**ⲛⲟⲩϣⲥ** ⲛϭⲓⲡⲉϥⲙⲉⲣⲟⲥ ·",
+      "english": "And the man touched the side of a member of Jacob, and that member became without feeling.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲁϥⲱϣ ⲉⲃⲟⲗ · ϫⲉⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲓ · ⲡⲁⲥⲟⲛ ⲙⲙⲉⲣⲓⲧ · ϫⲉⲛϩⲟⲥⲟⲛ ⲉⲓϣⲁϫⲉ ⲛⲙⲙⲁⲕ · ⲁⲡⲉⲧⲟⲩⲁⲁⲃ ϯ **ⲛⲟⲩϣⲥ**ⲛⲁⲁⲥ ⲉϩⲟⲩⲛ ϩⲛⲡⲁϩⲟ · ⲁⲓⲁⲥⲭⲩⲙⲟⲛⲉⲓ ⲉⲙⲁⲧⲉ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛⲛⲉⲩⲟⲩⲱⲙ ⲛϭⲓⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲙⲡⲙⲟⲩⲧⲉ ⲛⲧⲁϥⲛⲟⲩϣⲥ ⲡⲁⲓ ⲉⲧϩⲓϫⲙ ⲡⲡⲱϫϭ ⲙⲡⲙⲏⲣⲟⲥ ϣⲁϩⲣⲁⲓ ⲉⲡϩⲟⲟⲩ ⲛϩⲟⲟⲩ ϫⲉⲁϥϫⲱϩ ⲉⲡⲡⲱϫϭ ⲙⲡⲙⲏⲣⲟⲥ ⲛⲓⲁⲕⲱⲃ ⲉⲡⲙⲟⲩⲧⲉ ⲛⲧⲁϥ**ⲛⲟⲩϣⲥ**",
+      "english": "Therefore the children of Israel will by no means eat of the sinew which was benumbed, which is on the broad part of the thigh, until this day, because touched the broad part of the thigh of Jacob the sinew which was benumbed.",
+      "source": "Genesis 32",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲁⲥ",
+        1,
+        13.013
+      ],
+      [
+        "ⲙⲉⲣⲟⲥ",
+        1,
+        11.565
+      ],
+      [
+        "ⲓⲁⲕⲱⲃ",
+        1,
+        9.867
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        9.004
+      ],
+      [
+        "ⲙⲟⲩⲧⲉ",
+        1,
+        8.598
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        7.594
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.678
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        6.23
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.096
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.819
+      ],
+      [
+        "ϥ",
+        2,
+        5.522
+      ],
+      [
+        "ϯ",
+        1,
+        5.516
+      ],
+      [
+        "ⲛ",
+        2,
+        4.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.238
+      ],
+      [
+        "ⲧ",
+        1,
+        4.071
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ],
+      [
+        "ⲡ",
+        1,
+        2.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲛⲟⲩϣⲥ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲛⲟⲩϣⲥ",
+          3
+        ],
+        [
+          "ⲛⲟⲩϣⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲟⲥ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲓϫⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲛⲟⲩϣⲥ",
+          "ϥ_1_pre_ⲛⲟⲩϣⲥ",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲛⲟⲩϣⲥ",
+          "ⲛⲟⲩϣⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛⲟⲩϣⲥ_0_node",
+          "ⲛϭⲓ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲛⲟⲩϣⲥ",
+          "ⲡⲉϥ_3_post_ⲙⲉⲣⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲙⲉⲣⲟⲥ",
+          "ⲙⲉⲣⲟⲥ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩϣⲥ_0_node",
+          "ⲡⲁⲓ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲛⲟⲩϣⲥ",
+          "ⲉ_1_post_ⲛⲟⲩϣⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲛⲟⲩϣⲥ",
+          "ⲧ_2_post_ϩⲓϫⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5036,
+      "count": 4
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2609",
+      "label": "ⲛⲟϣⲥϥ",
+      "pos": "N",
+      "gloss": "striker"
+    },
+    {
+      "target": "C2608",
+      "label": "ⲛⲟⲩϣⲥ",
+      "pos": "N",
+      "gloss": "numbness"
+    }
+  ],
+  "etym": {
+    "egy_num": "138010",
+    "egy_lemma": "snḫt",
+    "english": "to make strong; to strengthen",
+    "german": "stark machen; bereichern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138010"
+  }
+}

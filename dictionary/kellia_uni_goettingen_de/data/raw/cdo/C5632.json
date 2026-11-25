@@ -1,0 +1,126 @@
+{
+  "id": "C5632",
+  "forms": [
+    {
+      "id": "CF13240",
+      "orth": "ϭⲓⲛⲱϥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13057,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6304",
+      "bibliography": "CD 536b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧ**ϭⲓⲛⲱϥⲧ** ⲉⲡⲉⲥⲧⲁⲩⲣⲟⲥ ⲙⲡⲉⲭⲉⲓⲣⲟⲕⲣⲁⲫⲟⲥ ⲉⲧⲁⲣⲟ ⲛⲡϣⲟⲣϣⲣ ⲛⲛⲉⲕⲥⲩⲛⲁⲅⲱⲅⲏ ·",
+      "english": "the affixing to the cross of the handwriting, and the bill of debt for which we were liable, the overthrow of thy synagogue",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲏⲥⲧⲏⲥ",
+        1,
+        15.898
+      ],
+      [
+        "ⲥⲧⲁⲩⲣⲟⲥ",
+        1,
+        13.35
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲱϥⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12640,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5634",
+      "label": "ϣⲥ ⲛⲓϥⲧ",
+      "pos": "N",
+      "gloss": "blow/wound of nail"
+    },
+    {
+      "target": "C5635",
+      "label": "ϯⲓϥⲧ",
+      "pos": "V",
+      "gloss": "put/fix a nail"
+    },
+    {
+      "target": "C5633",
+      "label": "ⲓϥⲧ",
+      "pos": "N",
+      "gloss": "nail, spike"
+    },
+    {
+      "target": "C5631",
+      "label": "ⲱϥⲧ",
+      "pos": "V",
+      "gloss": "nail, fix"
+    }
+  ]
+}

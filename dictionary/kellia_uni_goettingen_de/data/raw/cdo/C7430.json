@@ -1,0 +1,76 @@
+{
+  "id": "C7430",
+  "forms": [
+    {
+      "id": "CF16919",
+      "orth": "ϥⲓ ⲛϫⲓⲟⲩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8223",
+      "bibliography": "CD 794a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6260",
+      "type": "cf",
+      "label": "bear, carry, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7425",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "V",
+      "gloss": "steal"
+    },
+    {
+      "target": "C7426",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "theft, fraud"
+    },
+    {
+      "target": "C7427",
+      "label": "ϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "stolen, secret"
+    },
+    {
+      "target": "C12096",
+      "label": "ϭⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "theft, fraud"
+    },
+    {
+      "target": "C7428",
+      "label": "ⲛϫⲓⲟⲩⲉ",
+      "pos": "ADV",
+      "gloss": "stealthily"
+    },
+    {
+      "target": "C7429",
+      "label": "ⲛϫⲓⲟⲩⲉ (ⲉ-)",
+      "pos": "ADV",
+      "gloss": "unbeknown to"
+    },
+    {
+      "target": "C7431",
+      "label": "ⲣⲉϥϫⲓⲟⲩⲉ",
+      "pos": "N",
+      "gloss": "thief"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "C1003",
+  "forms": [
+    {
+      "id": "CF3360",
+      "orth": "ⲙⲡⲉⲓⲧⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS1164",
+      "bibliography": "CD 87b-88a; KoptHWb 53; ChLCS 14b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1001",
+      "label": "ⲉⲓⲧⲛ",
+      "pos": "N",
+      "gloss": "ground, earth, dust, rubbish"
+    },
+    {
+      "target": "C1002",
+      "label": "ⲉⲡⲉⲓⲧⲛ",
+      "pos": "ADV",
+      "gloss": "to the ground, downwards"
+    },
+    {
+      "target": "C1004",
+      "label": "ⲉⲡⲓⲧⲛ",
+      "pos": "N",
+      "gloss": "space leading downward, hole"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": "C1660",
+  "forms": [
+    {
+      "id": "CF4814",
+      "orth": "ⲗⲓⲙⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4969,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF4815",
+      "orth": "ⲗⲓⲙⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6343,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲗⲓⲙⲏⲛ",
+      "dialect": "B",
+      "id": "987.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1925",
+      "bibliography": "CD 143a; KoptHWb 79; ChLCS 22a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲅⲙⲟⲟⲛⲉ ⲉϩⲟⲩⲛ ⲉⲡ**ⲗⲓⲙⲏⲛ** ⲉⲧⲛⲁⲛⲟⲩϥ · ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧⲉⲙⲣⲱ ⲛⲓⲏⲥⲟⲩⲥ ⲉⲧⲉⲧⲁⲓ ⲧⲉ ⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲧⲡⲉ ·",
+      "english": "Thou shalt arrive in port, in a haven which is fair, that is to say, the harbour of Jesus, which is the heavenly Jerusalem.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲗⲓⲙⲏⲛ ⲇⲉ ⲙⲙⲟⲧⲛ ⲁⲛ ⲉⲙⲟⲟⲛⲉ ⲉⲣⲟϥ ⲁⲡⲉⲩϩⲟⲩⲟ ϫⲓϣⲟϫⲛⲉ ⲉⲕⲱ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲉⲛⲁⲩ ϫⲉⲧⲛⲛⲁϣϭⲙϭⲟⲙ ⲉⲧⲁϩⲉ ⲟⲩ**ⲗⲓⲙⲏⲛ** ϫⲉⲡϩⲏⲛⲓⲝ ⲛⲧⲉⲧⲉⲕⲣⲓⲧⲏ ⲛⲥⲉⲙⲟⲟⲛⲉ ⲉⲣⲟϥ ⲉϥϭⲱϣⲧ ⲉⲡⲉⲙⲛⲧ ⲁⲩⲱ ⲉⲧⲉⲭⲱⲣⲁ .",
+      "english": "Because the haven was not suitable to winter in, the majority advised going to sea from there, if by any means they could reach Phoenix, and winter there, which is a port of Crete, looking northeast and southeast.",
+      "source": "44_Acts of the Apostles_27",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲧⲛⲛⲟⲟⲩ ⲙⲡⲉϥⲁⲅⲅⲉⲗⲟⲥ · ⲁϥⲉⲛⲧ ⲉⲃⲟⲗ ϩⲙⲡⲏⲓ ⲙⲡⲁⲉⲓⲱⲧ ⲁϥϫⲓⲙⲟⲉⲓⲧ ϩⲏⲧ ϩⲓⲛⲉϩⲓⲟⲟⲩⲉ · ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ · ⲁϥⲉⲛⲧ ⲉⲣⲁⲧϥ ⲙⲡϣⲱⲥ ⲉⲧⲛⲁⲛⲟⲩϥ · ⲛⲣⲉϥⲧⲟⲩϫⲉⲯⲩⲭⲏ · ⲁⲓⲙⲟⲟⲛⲉ · ⲉⲡ**ⲗⲩⲙⲏⲛ** · ⲙⲡⲟⲩϫⲁⲓ ⲉⲧⲉⲙⲛⲥⲟⲟⲛⲉ ⲛϩⲏⲧϥ ⲉⲧⲉⲡⲉⲛⲙⲉⲣⲓⲧ ⲛⲉⲓⲱⲧ ⲡⲉ · ⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲡⲟⲗⲗⲱ · ⲡⲓⲥⲣⲁⲏⲗⲓⲧⲏⲥ ⲛⲁⲙⲉ ⲉⲧⲉⲙⲛⲕⲣⲟϥ ⲛϩⲏⲧϥ",
+      "english": "God sent his messenger, and brought me out of the house of my father, and guided me on the ways of righteousness, and brought me to the good life-saving shepherd, and I moored at the harbor of salvation, in which there was no robber, which was truly our beloved father, Apa Apollo the Israelite, in whom there was no deception.",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲛⲓⲝ",
+        1,
+        17.428
+      ],
+      [
+        "ϣϭⲙϭⲟⲙ",
+        1,
+        11.124
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        2,
+        10.806
+      ],
+      [
+        "ⲥⲙⲓⲛⲉ",
+        1,
+        10.18
+      ],
+      [
+        "ⲉⲧ",
+        5,
+        10.034
+      ],
+      [
+        "ⲙⲟⲟⲛⲉ",
+        1,
+        9.985
+      ],
+      [
+        "ϥ",
+        5,
+        8.317
+      ],
+      [
+        "ϩⲱ",
+        1,
+        8.194
+      ],
+      [
+        ".",
+        3,
+        8.142
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.05
+      ],
+      [
+        "ⲛ",
+        5,
+        7.605
+      ],
+      [
+        "ⲁϩⲉ",
+        1,
+        7.477
+      ],
+      [
+        "ⲡ",
+        3,
+        6.082
+      ],
+      [
+        "ϫⲉ",
+        2,
+        5.976
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        5.508
+      ],
+      [
+        "ⲙ",
+        2,
+        5.181
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        4.994
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        4.958
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        4.926
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        4.314
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲗⲓⲙⲏⲛ_0_node",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲱⲛⲉ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_2_post_ⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲓⲙⲏⲛ",
+          "ⲗⲓⲙⲏⲛ_0_node",
+          1
+        ],
+        [
+          "ⲗⲓⲙⲏⲛ_0_node",
+          "ⲛ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲱⲛⲉ",
+          "ⲛⲟⲩⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲃ_3_post_ⲛ",
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ⲱⲛⲉ",
+          "ⲱⲛⲉ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲗⲓⲙⲏⲛ_0_node",
+          "ⲉⲧ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲙⲏⲛ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉⲧ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲉⲧⲉ_1_post_ⲗⲓⲙⲏⲛ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲗⲓⲙⲏⲛ",
+          "ⲧⲁⲓ_2_post_ⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3319,
+      "count": 9
+    }
+  }
+}

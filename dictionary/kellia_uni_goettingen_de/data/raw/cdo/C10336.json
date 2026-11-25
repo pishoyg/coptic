@@ -1,0 +1,265 @@
+{
+  "id": "C10336",
+  "forms": [
+    {
+      "id": "CF27527",
+      "orth": "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF27528",
+      "orth": "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6579,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF27529",
+      "orth": "ⲡⲣⲟⲥⲫⲉⲣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13907",
+      "bibliography": "DDGLC",
+      "cu_ID": "5692"
+    },
+    {
+      "id": "CS13908",
+      "bibliography": "DDGLC",
+      "cu_ID": "2626"
+    },
+    {
+      "id": "CS13909",
+      "bibliography": "DDGLC",
+      "cu_ID": "5693"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲛⲟⲩⲱⲙ ⲇⲉ ⲉϥϣⲁⲛⲟⲩⲱⲙ ⲉⲃⲟⲗ ϩⲛⲛⲁϥ ϩⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛϩⲟⲟⲩ ⲛⲛⲉⲩϣⲟⲡⲥ ⲛⲥϣⲏⲡ ⲁⲛ ⲙⲡⲉⲧⲛⲁ**ⲡⲣⲟⲥⲫⲉⲣⲉⲓ** ⲙⲙⲟⲥ ⲛⲛⲉⲩⲟⲡⲥ ⲉⲣⲟϥ ⲟⲩϫⲱϩⲙ ⲛⲁϥ ⲧⲉ ⲧⲉⲯⲩⲭⲏ ⲇⲉ ⲉⲧⲛⲁⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⲥⲛⲁϫⲓ ⲙⲡⲉⲥⲛⲟⲃⲉ",
+      "english": "And if he do at all eat of the flesh on the third day, it shall not be accepted for him that offers: it shall not be reckoned to him, it is pollution; and whatsoever soul shall eat of it, shall bear his iniquity.",
+      "source": "Leviticus 7",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉϥϭⲓϫ ⲉⲩⲉⲉⲓⲛⲉ ⲛⲛⲉϭⲗⲓⲗ ⲙⲡϫⲟⲉⲓⲥ ⲡⲱⲧ ⲉⲧϩⲓϫⲙⲡⲉⲥⲧⲏⲑⲩⲛⲓⲟⲛ ⲁⲩⲱ ⲡⲗⲟⲃⲟⲥ ⲉⲧϩⲓϫⲙⲡϩⲏⲡⲁⲣ ⲉϥⲉ**ⲡⲣⲟⲥⲫⲉⲣⲉⲓ** ⲙⲙⲟⲟⲩ ϩⲱⲥⲧⲉ ⲉⲧⲁⲗⲟⲟⲩ ⲉϩⲣⲁⲓ ⲛⲧⲁⲉⲓⲟ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ",
+      "english": "His hands shall bring the burnt-offerings to the Lord; the fat which is on the breast and the lobe of the liver, he shall bring them, so as to set them for a gift before the Lord.",
+      "source": "Leviticus 7",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲁ**ⲡⲣⲟⲥⲫⲉⲣⲉⲓ** ⲙⲡⲉⲥⲛⲟϥ ⲙⲡⲟⲩϫⲁⲓ ⲙⲛⲡⲱⲧ ⲉⲃⲟⲗ ϩⲛⲛϣⲏⲣⲉ ⲛⲁⲁⲣⲱⲛ ⲡⲉϭⲃⲟⲓ ⲛⲟⲩⲛⲁⲙ ⲉϥⲉϣⲱⲡⲉ ⲛⲁϥ ⲙⲙⲉⲣⲓⲥ",
+      "english": "He that offers the blood of the peace-offering, and the fat, of the sons of Aaron, his shall be the right shoulder for a portion.",
+      "source": "Leviticus 7",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲏⲡⲁⲣ",
+        1,
+        14.621
+      ],
+      [
+        "ϩⲱⲥⲧⲉ",
+        1,
+        10.742
+      ],
+      [
+        "ⲥⲛⲟϥ",
+        1,
+        9.98
+      ],
+      [
+        "ⲟⲩϫⲁⲓ",
+        1,
+        9.629
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        9.419
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        9.204
+      ],
+      [
+        "ⲙ",
+        3,
+        8.521
+      ],
+      [
+        "ⲙⲙⲟ",
+        2,
+        8.396
+      ],
+      [
+        "ⲡ",
+        3,
+        7.667
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.653
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.231
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.103
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.923
+      ],
+      [
+        "ⲥ",
+        1,
+        4.689
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲟⲡⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲥⲛⲟϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ_0_node",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ⲛ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          "ⲛⲉⲩ_3_post_ⲟⲡⲥ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲥⲫⲉⲣⲉⲓ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲥⲫⲉⲣⲉⲓ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲥⲛⲟϥ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲛⲟϥ_3_post_ⲡⲉ",
+          "ⲙ_4_post_ⲥⲛⲟϥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6140,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "1871",
+    "grl_lemma": "προσφέρω",
+    "grl_meaning": "to bring to or upon, apply to",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1529b; Preisigke 2:417"
+  }
+}

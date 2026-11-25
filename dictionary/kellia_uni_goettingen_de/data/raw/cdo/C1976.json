@@ -1,0 +1,45 @@
+{
+  "id": "C1976",
+  "forms": [
+    {
+      "id": "CF5610",
+      "orth": "ⲙⲛⲧⲙⲡⲟ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2294",
+      "bibliography": "CD 178b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1975",
+      "label": "ⲏⲙⲡⲱ",
+      "pos": "N",
+      "gloss": "dumb person"
+    },
+    {
+      "target": "C1974",
+      "label": "ⲙⲡⲟ",
+      "pos": "N",
+      "gloss": "dumb person"
+    },
+    {
+      "target": "C1977",
+      "label": "ⲣⲙⲡⲟ",
+      "pos": "V",
+      "gloss": "become, be dumb"
+    }
+  ]
+}

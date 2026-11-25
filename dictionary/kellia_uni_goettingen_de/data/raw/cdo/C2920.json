@@ -1,0 +1,192 @@
+{
+  "id": "C2920",
+  "forms": [
+    {
+      "id": "CF7703",
+      "orth": "ⲯⲓⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.19,
+        "rank": 1998,
+        "count": 30
+      }
+    },
+    {
+      "id": "CF7704",
+      "orth": "ⲯⲓⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5646,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3342",
+      "bibliography": "CD 273b; KoptHWb 153; DELC 248; ChLCS 38b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲓⲛⲉⲡⲛⲁⲩ ⲇⲉ ⲛϫⲡⲥⲟ ⲙⲡⲉϩⲟⲟⲩ ⲟⲩⲕⲁⲕⲉ ⲁϥϣⲱⲡⲉ ⲉϩⲣⲁⲓ ϩⲓϫⲙⲡⲕⲁϩ ⲧⲏⲣϥ ϣⲁⲡⲛⲁⲩ ⲛϫⲡ**ⲯⲓⲧⲉ** .",
+      "english": "Now from the sixth hour",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉ ⲡⲛⲁⲩ ⲇⲉ ⲛϫⲡ ⲡⲥⲟ ⲡⲉ . ⲁⲟⲩⲕⲁⲕⲉ ϣⲱⲡⲉ ⲉϫⲙⲡⲕⲁϩ ⲧⲏⲣϥ ϣⲁϫⲡ **ⲯⲓⲧⲉ** .",
+      "english": "It was now about the sixth hour",
+      "source": "42_Luke_23",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲛⲁⲩ ⲛϫⲡ**ⲯⲓⲧⲉ** ⲁϥⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ϩⲛⲟⲩⲛⲟϭ ⲛϩⲣⲟⲟⲩ ϫⲉⲉⲗⲱⲉⲓ ⲉⲗⲱⲉⲓ ⲗⲁⲙⲁ ⲥⲁⲭⲑⲁⲛⲉⲓ . ⲉⲧⲉⲡⲁⲓ ⲡⲉ ϣⲁⲩϩⲉⲣⲙⲉⲛⲉⲩⲉ ⲙⲙⲟϥ ϫⲉⲡⲁⲛⲟⲩⲧⲉ ⲡⲁⲛⲟⲩⲧⲉ ⲉⲧⲃⲉⲟⲩ ⲁⲕⲕⲁⲁⲧ ⲛⲥⲱⲕ .",
+      "english": "At the ninth hour Jesus cried with a loud voice, saying, &apos;Eloi, Eloi, lama sabachthani?&apos; which is, being interpreted, &apos;My God, my God, why have you forsaken me?&apos;",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲡ",
+        15,
+        21.579
+      ],
+      [
+        "ⲛⲁⲫⲟⲣⲙⲉ",
+        1,
+        15.691
+      ],
+      [
+        "ⲛϫ",
+        1,
+        15.691
+      ],
+      [
+        "ϫϭⲓϫ",
+        1,
+        15.691
+      ],
+      [
+        "ⲥⲱⲣⲁⲓⲑ",
+        1,
+        15.691
+      ],
+      [
+        "ⲙⲛⲧϩⲣⲟⲩⲱ",
+        1,
+        14.691
+      ],
+      [
+        "ⲛⲁⲩ",
+        12,
+        14.665
+      ],
+      [
+        "ⲣⲟⲙⲡⲉ",
+        7,
+        14.532
+      ],
+      [
+        "ⲥⲟⲩⲙⲛⲧⲥⲛⲟⲟⲩⲥ",
+        2,
+        14.443
+      ],
+      [
+        "ⲛ",
+        34,
+        14.164
+      ],
+      [
+        "ⲑⲁⲙⲛⲁ",
+        1,
+        14.106
+      ],
+      [
+        "ⲧⲙⲉϩⲙⲁⲁⲃ",
+        1,
+        14.106
+      ],
+      [
+        "ⲯⲓⲧⲉ",
+        2,
+        13.784
+      ],
+      [
+        "ϩⲣⲁⲅⲁⲩ",
+        1,
+        13.369
+      ],
+      [
+        "ⲫⲩⲗⲏ",
+        3,
+        12.576
+      ],
+      [
+        "ⲛⲁⲍⲁⲣⲓⲁⲥ",
+        1,
+        12.369
+      ],
+      [
+        "ⲛⲁⲭⲱⲣ",
+        1,
+        12.106
+      ],
+      [
+        "ⲁⲑⲱⲣ",
+        1,
+        11.991
+      ],
+      [
+        "ⲅⲁⲃⲁⲁ",
+        1,
+        11.884
+      ],
+      [
+        "ϥ",
+        16,
+        11.615
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.19,
+      "rank": 1758,
+      "count": 30
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2921",
+      "label": "ⲡⲥⲧⲁⲓⲟⲩ",
+      "pos": "NUM",
+      "gloss": "ninety"
+    },
+    {
+      "target": "C2919",
+      "label": "ⲯⲓⲥ",
+      "pos": "NUM",
+      "gloss": "nine"
+    }
+  ],
+  "etym": {
+    "egy_num": "62450",
+    "egy_lemma": "psḏ",
+    "english": "nine",
+    "german": "neun",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62450"
+  }
+}

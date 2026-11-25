@@ -1,0 +1,400 @@
+{
+  "id": "C10310",
+  "forms": [
+    {
+      "id": "CF27412",
+      "orth": "ⲡⲣⲟⲛⲟⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27416",
+      "orth": "ⲡⲣⲟⲛⲟⲓⲁ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF27414",
+      "orth": "ⲡⲣⲟⲛⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4481,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF27415",
+      "orth": "ⲡⲣⲟⲛⲟⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27413",
+      "orth": "ⲡⲣⲟⲛⲓⲁ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13845",
+      "bibliography": "DDGLC",
+      "cu_ID": "1551"
+    },
+    {
+      "id": "CS13846",
+      "bibliography": "DDGLC",
+      "cu_ID": "1585"
+    },
+    {
+      "id": "CS13847",
+      "bibliography": "DDGLC",
+      "cu_ID": "1414"
+    },
+    {
+      "id": "CS13848",
+      "bibliography": "DDGLC",
+      "cu_ID": "1568"
+    },
+    {
+      "id": "CS13849",
+      "bibliography": "DDGLC",
+      "cu_ID": "7646"
+    },
+    {
+      "id": "CS13850",
+      "bibliography": "DDGLC",
+      "cu_ID": "1471"
+    },
+    {
+      "id": "CS13851",
+      "bibliography": "DDGLC",
+      "cu_ID": "6386"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲣⲉⲩⲥⲟⲩⲱⲛϥ · ⲉⲃⲟⲗ ϩⲓⲧⲛⲣⲱⲙⲉ ⲛⲓⲙ ⲛⲗⲟⲅⲓⲕⲟⲛ ⲙⲛⲍⲱⲟⲛ ⲛⲓⲙ · ⲉⲩⲇⲓⲁⲕⲟⲛⲉⲓ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲉϥ**ⲡⲣⲟⲛⲟⲓⲁ** ·",
+      "english": "Who hast made Thyself to be apprehended by every man of reason, unto Whom every living thing ministereth through His foreknowledge.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏⲡⲉⲧⲥⲁⲛϣ ⲛⲛϩⲁⲗⲁⲁⲧⲉ ⲙⲛⲛⲧⲃⲛⲟⲟⲩⲉ ⲛϥⲛⲁⲥⲁⲛⲟⲩϣⲕ ⲁⲛ ⲛⲧⲟⲕ ϩⲛⲧⲉϥ**ⲡⲣⲟⲛⲟⲓⲁ** ⲙⲛⲡⲕⲁⲣⲡⲟⲥ ⲛⲛⲉⲕϭⲓϫ ·",
+      "english": "shall not He Who feedeth the birds and the beasts feed thee by His forethought and by the fruit of thy hands?",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉϥϭⲙϭⲟⲙ ⲡⲉ ⲡⲁⲣⲁ ⲛⲧⲃⲛⲟⲟⲩⲉ ⲉⲧϥⲙⲟⲟϣⲉ ⲛⲙⲙⲁⲩ ⲛⲁⲓ ⲙⲉⲛ ⲁⲩⲥⲟⲩⲱⲛϥ ⲛⲧϩⲉ ⲛⲟⲩϣⲃⲏⲣ ⲁⲩⲱ ⲟⲛ ⲛⲉⲩⲙⲉ ⲙⲙⲟϥ ⲛⲧϩⲉ ⲛⲟⲩϣⲱⲥ ⲉⲩϯⲙⲧⲟⲛ ⲛⲁϥ ⲉⲙⲁⲧⲉ ⲛⲧϩⲉ ⲛϩⲉⲛⲣⲱⲙⲉ ⲛⲗⲟⲅⲓⲕⲟⲥ ϩⲱⲥ ⲛⲧⲁⲩⲧⲟϣⲟⲩ ⲛⲁϥ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲉ**ⲡⲣⲟⲛⲟⲓⲁ** ⲉⲧⲟⲩⲁⲁⲃ ⲉⲃⲟⲗ ϫⲉⲁⲩⲛⲁⲩ ⲉⲡⲙⲁⲉⲓⲛ ⲙⲡⲉⲩϫⲟⲉⲓⲥ ⲉϥⲧⲟ ϩⲓⲱⲱϥ",
+      "english": "And he was mighty among the animals, walking among them. These, though, knew him as a companion, and also loved him like a shepherd, giving him great comfort like rational people, thus it was by divine providence that they were destined for him as they saw the sign of their lord placed upon him.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲱⲗⲉⲓ",
+        1,
+        16.276
+      ],
+      [
+        "ⲣⲁⲧⲓⲥⲧⲟⲥ",
+        1,
+        15.691
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        6,
+        15.03
+      ],
+      [
+        "ⲫⲏⲗⲓⲝ",
+        1,
+        14.106
+      ],
+      [
+        "ⲧϭⲁⲓⲏⲩ",
+        1,
+        13.954
+      ],
+      [
+        "ⲣϩⲙⲙⲉ",
+        1,
+        11.85
+      ],
+      [
+        "ⲧⲉϥ",
+        4,
+        11.642
+      ],
+      [
+        "ⲡ",
+        9,
+        10.685
+      ],
+      [
+        "ⲧⲉ",
+        4,
+        10.481
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        10.109
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        9.548
+      ],
+      [
+        "ⲕⲁⲣⲡⲟⲥ",
+        1,
+        9.111
+      ],
+      [
+        "ⲧⲏⲣϥ",
+        1,
+        8.867
+      ],
+      [
+        ".",
+        3,
+        7.99
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        7.871
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        7.671
+      ],
+      [
+        "ϩⲉⲑⲛⲟⲥ",
+        1,
+        7.629
+      ],
+      [
+        "ϫⲉ",
+        3,
+        7.579
+      ],
+      [
+        "ⲧ",
+        3,
+        7.504
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        7.359
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          3
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          8
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          2
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          2
+        ],
+        [
+          "ⲕⲱⲗⲉⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          "ⲉⲧ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲕⲱⲗⲉⲓ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲕⲱⲗⲉⲓ_2_post_ⲉⲧ",
+          "ⲙⲙⲟ_3_post_ⲕⲱⲗⲉⲓ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_3_post_ⲕⲱⲗⲉⲓ",
+          "ⲟⲩ_4_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          "ⲙⲛ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲡ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          "ⲕⲁⲣⲡⲟⲥ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲕⲁⲣⲡⲟⲥ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲛ_2_post_ⲕⲁⲣⲡⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲕ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲇⲉ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲡⲉⲛ_2_pre_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_2_pre_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲧⲉⲕ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲛⲟⲓⲁ_0_node",
+          "ⲙ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲣⲟⲛⲟⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3088,
+      "count": 10
+    }
+  },
+  "etym": {
+    "grl_ID": "1844",
+    "grl_lemma": "πρόνοια",
+    "grl_meaning": "foresight, forethought, (divine) providence",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1491a; Preisigke 2:380"
+  }
+}

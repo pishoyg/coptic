@@ -1,0 +1,51 @@
+{
+  "id": "C6192",
+  "forms": [
+    {
+      "id": "CF14393",
+      "orth": "ϣⲱⲱϥⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6879",
+      "bibliography": "CD 610a; KoptHWb 340; DELC 276b-277a; ChLCS 84a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6191",
+      "label": "ϣⲁϥⲉ",
+      "pos": "N",
+      "gloss": "desert"
+    },
+    {
+      "target": "C6189",
+      "label": "ϣⲱϥ",
+      "pos": "V",
+      "gloss": "lay waste, destroy; be desert, laid waste, destroyed"
+    },
+    {
+      "target": "C6190",
+      "label": "ϣⲱϥ",
+      "pos": "N",
+      "gloss": "devastation, destruction"
+    }
+  ],
+  "etym": {
+    "demo_num": "d5979",
+    "demo_lemma": "šfꜥ",
+    "english": "[to fight]",
+    "german": "verarmen, elend sein",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5979"
+  }
+}

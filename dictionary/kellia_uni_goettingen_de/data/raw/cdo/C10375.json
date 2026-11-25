@@ -1,0 +1,99 @@
+{
+  "id": "C10375",
+  "forms": [
+    {
+      "id": "CF27698",
+      "orth": "ⲡⲣⲟⲧⲣⲟⲡⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27699",
+      "orth": "ⲡⲣⲟⲧⲣⲟⲡⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10130,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14000",
+      "bibliography": "DDGLC",
+      "cu_ID": "2964"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲓⲕⲉϩⲱⲃ ⲡⲁⲓ ⲡⲁⲧⲥⲟⲫⲓⲁ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲉ · ⲉⲁϥⲟⲓⲕⲟⲛⲟⲙⲉⲓ ⲉⲧⲣⲉ ⲛⲕⲉⲉⲥ ⲛⲛⲓⲁⲥⲕⲏⲧⲏⲥ ϣⲱⲡⲉ ϩⲁⲧⲉⲛⲛⲁⲡⲙⲁⲣⲧⲩⲣⲟⲥ ϫⲉⲕⲁⲥ ⲉⲣⲉⲧⲉⲩϩⲩⲡⲟⲑⲉⲥⲓⲥ ⲛⲁϣⲱⲡⲉ · ⲙ**ⲡⲣⲟⲧⲣⲟⲡⲏ** ⲛⲟⲩⲟⲛ ⲛⲓⲙ ·",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        10.618
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲟⲧⲣⲟⲡⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9706,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5327",
+    "grl_lemma": "προτροπή",
+    "grl_meaning": "exhortation, encouragement; impulse, force",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1537a; Preisigke 2:425"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "C7478",
+  "forms": [
+    {
+      "id": "CF17015",
+      "orth": "ϫⲟⲩϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19919,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲟⲩⲓ",
+      "dialect": "B",
+      "id": "2491.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8280",
+      "bibliography": "CD 797b; CED 323; KoptHWb 440; DELC 333a; ChLCS 105a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲉⲧⲛⲧⲁⲙⲓⲉ ϩⲉⲛϩⲓⲟⲟⲩⲉ ⲉⲩⲥⲟⲩⲧⲱⲛ ⲛⲛⲉⲧⲛⲟⲩⲉⲣⲏⲧⲉ . ϫⲉⲕⲁⲁⲥ ⲛⲛⲉ ⲡⲉⲧ**ϫⲟⲩϩⲉ** ⲡⲱϣⲥ . ⲁⲗⲗⲁ ⲉϥⲉⲗⲟ .",
+      "english": "and make straight paths for your feet, so that which is lame may not be dislocated, but rather be healed.",
+      "source": "58_Hebrews_12",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲱϣ",
+        1,
+        13.778
+      ],
+      [
+        "ϫⲉⲕⲁⲁⲥ",
+        1,
+        11.341
+      ],
+      [
+        "ⲛⲛⲉ",
+        1,
+        10.414
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        9.304
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19531,
+      "count": 1
+    }
+  }
+}

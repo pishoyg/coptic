@@ -1,0 +1,51 @@
+{
+  "id": "C3111",
+  "forms": [
+    {
+      "id": "CF8098",
+      "orth": "ⲧⲛⲣⲟⲙⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS3561",
+      "bibliography": "CD 297a; CED 137; KoptHWb 164; DELC 175; ChLCS 42a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4334",
+      "type": "cf",
+      "label": "every"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3109",
+      "label": "ⲣⲟⲙⲡⲉ",
+      "pos": "N",
+      "gloss": "year"
+    },
+    {
+      "target": "C3112",
+      "label": "ⲣⲣⲟⲙⲡⲉ",
+      "pos": "V",
+      "gloss": "reach year (of age), spend year"
+    },
+    {
+      "target": "C3110",
+      "label": "ⲧⲣⲟⲙⲡⲉ",
+      "pos": "ADV",
+      "gloss": "this year"
+    }
+  ]
+}

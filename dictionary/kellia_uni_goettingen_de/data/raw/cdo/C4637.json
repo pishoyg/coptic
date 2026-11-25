@@ -1,0 +1,214 @@
+{
+  "id": "C4637",
+  "forms": [
+    {
+      "id": "CF11237",
+      "orth": "ⲕⲁⲡⲧⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8165,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5238",
+      "bibliography": "CD 440a; KoptHWb 252; ChLCS 62b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲁⲏⲗ ⲧϩⲓⲙⲉ ⲛⲭⲁⲃⲉⲣ ⲡⲕⲓⲛⲛⲁⲓⲟⲥ ⲁⲥϫⲓ ⲛⲧⲉϣⲙⲟⲩ ⲛⲧⲉⲥⲕⲏⲛⲏ ⲁⲥⲕⲁⲡϩⲁⲧⲏⲣ ϩⲛⲧⲉⲥϭⲓϫ ⲁⲥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲛⲁϥ ⲛϩⲱⲡ ⲁⲥⲧⲣⲧⲣⲧⲉϣⲙⲟⲩ ϩⲙⲡⲉϥⲥⲙⲁⲩ ⲁϥϩⲉ ⲉϩⲣⲁⲓ ⲉϫⲙⲡⲕⲁϩ ⲁⲩⲱ ⲛⲧⲟϥ ⲁϥⲥⲃⲗⲧⲉ ϩⲓⲡⲉⲥⲏⲧ ϩⲁⲛⲉⲥⲟⲩⲉⲣⲏⲧⲉ ⲁϥ**ⲕⲁⲡⲧⲏⲩ** ⲁϥⲙⲟⲩ",
+      "english": "And Jael the wife of Chaber took a pin of the tent, and took a hammer in her hand, and went secretly to him, and fastened the pin in his temple, and it went through to the earth, and he fainted away, and darkness fell upon him and he died.",
+      "source": "Judges 4",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲉⲥⲛⲁ**ⲕⲁⲡⲧⲏⲩ** ⲛⲉⲥⲙⲟⲩ ⲅⲁⲣ ⲡⲉ ⲁⲥⲙⲟⲩⲧⲉ ⲉⲡⲉϥⲣⲁⲛ ϫⲉⲡϣⲏⲣⲉ ⲙⲡⲁϩⲓⲥⲉ ⲁⲡⲉϥⲉⲓⲱⲧ ⲇⲉ ⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲃⲉⲛⲓⲁⲙⲓⲛ",
+      "english": "And it came to pass in her giving up the ghost (for she was dying), that she called his name, The son of my pain; but his father called his name Benjamin.",
+      "source": "Genesis 35",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲩ",
+        2,
+        11.743
+      ],
+      [
+        "ⲟⲩⲉⲣⲏⲧⲉ",
+        1,
+        11.071
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        10.384
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        7.679
+      ],
+      [
+        "ⲁ",
+        2,
+        7.044
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        6.313
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7722,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1058",
+      "type": "cf",
+      "label": "place, appoint, set down, make"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4648",
+      "label": "ϩⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "whirlwind"
+    },
+    {
+      "target": "C4647",
+      "label": "ϩⲏ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "breeze"
+    },
+    {
+      "target": "C4639",
+      "label": "ϩⲓⲡⲑⲏⲟⲩ",
+      "pos": "V",
+      "gloss": "gasp, expire"
+    },
+    {
+      "target": "C4649",
+      "label": "ϫⲓⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "burning breath, drought"
+    },
+    {
+      "target": "C4640",
+      "label": "ⲁⲛϣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "take a breath"
+    },
+    {
+      "target": "C4636",
+      "label": "ⲙⲁ ⲛⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "place of breath, life"
+    },
+    {
+      "target": "C4643",
+      "label": "ⲛⲉϣⲡⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "fan"
+    },
+    {
+      "target": "C4638",
+      "label": "ⲛⲉϫⲧⲏⲩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "cast out breath, expire"
+    },
+    {
+      "target": "C4650",
+      "label": "ⲣϫⲛⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "(to) wither, singe"
+    },
+    {
+      "target": "C4644",
+      "label": "ⲣⲁⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "open-air space (on roof)"
+    },
+    {
+      "target": "C4642",
+      "label": "ⲣⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "make wind, be windy"
+    },
+    {
+      "target": "C4646",
+      "label": "ⲥⲁⲣⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "storm"
+    },
+    {
+      "target": "C4641",
+      "label": "ⲥⲉⲕⲧⲏⲩ",
+      "pos": "V",
+      "gloss": "draw breath, breathe stertorously"
+    },
+    {
+      "target": "C4635",
+      "label": "ⲧⲏⲩ",
+      "pos": "N",
+      "gloss": "wind, breath"
+    },
+    {
+      "target": "C4645",
+      "label": "ⲭⲁⲑⲏⲟⲩ",
+      "pos": "N",
+      "gloss": "window"
+    }
+  ]
+}

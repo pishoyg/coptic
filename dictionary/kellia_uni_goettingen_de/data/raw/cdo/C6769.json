@@ -1,0 +1,406 @@
+{
+  "id": "C6769",
+  "forms": [
+    {
+      "id": "CF15585",
+      "orth": "ⲉϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 32.01,
+        "rank": 43,
+        "count": 5051
+      }
+    },
+    {
+      "orth": "ⲉϩⲣⲏⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 16.9,
+        "rank": 81,
+        "count": 1433
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7483",
+      "bibliography": "CD 698a-b; CED 292; KoptHWb 386; DELC 308b; ChLCS 93b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲓⲡϣⲁϥⲉ ⲉⲩⲉϩⲉⲓ ⲛϫⲉⲛⲉⲧⲉⲛⲕⲉⲗⲓ ⲛⲉⲙⲧⲉⲧⲉⲛⲉⲡⲓⲥⲕⲟⲡⲏ ⲧⲏⲣⲥ ⲟⲩⲟϩ ⲛⲏ ⲉⲧⲁⲩϭⲓⲏⲡⲓ ⲙⲙⲱⲟⲩ ⲛⲧⲱⲧⲉⲛ ⲓⲥϫⲉⲛ ⲕ ⲛⲣⲟⲙⲡⲓ ⲛⲉⲙⲥⲁⲡϣⲱⲓ ⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧⲁⲩⲭⲣⲉⲙⲣⲉⲙ **ⲉϩⲣⲏⲓ** ⲉϫⲱⲓ",
+      "english": "Your carcases shall fall in this wilderness; and all those of you that were reviewed, and those of you that were numbered from twenty years old and upward, all that murmured against me,",
+      "source": "04_Numeri_14",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲕⲛⲁϭⲱ **ⲉϩⲣⲁⲓ** ⲛϩⲏⲧⲟⲩ ⲡⲉ",
+      "english": "you would stay among them,",
+      "source": "Apophthegmata Patrum Sahidic 006: anonymous Nau 196",
+      "urn": "urn:cts:copticLit:ap.6.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉϫⲉⲡⲓⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲛⲱⲟⲩ ϫⲉϯⲛⲁⲟⲩⲟⲣⲡϥ ⲛⲱⲧⲉⲛ **ⲉϩⲣⲏⲓ** ⲙⲙⲏⲛⲓ ⲙⲡⲁⲧⲉⲫⲣⲏ ϩⲱⲧⲡ .",
+      "english": "And the shepherd said to them: “I will send him up to you every day before the sun sets.”",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲓⲧϥ ϫⲉⲛϭⲓⲓⲱϩⲁⲛⲛⲏⲥ ⲁϥⲣⲁϣⲉ **ⲉϩⲣⲁⲓ** ⲉϫⲱϥ ·",
+      "english": "and John took it, and rejoiced over it,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲕⲧⲁⲗⲟ ⲛⲛⲉⲕϩⲑⲱⲣ **ⲉϩⲣⲏⲓ** ⲉϫⲉⲛⲫⲓⲟⲙ ⲉⲩⲉⲑⲱϩ ⲛⲟⲩⲙⲱⲟⲩ ⲉϥⲟϣ .",
+      "english": "And thou dost cause thine horses to enter the sea, disturbing much water.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲣⲱⲙⲉ ⲉⲧϩⲏⲩ **ⲉϩⲣⲁⲓ** ⲉϩⲉⲛⲛⲟϭ ⲙⲡⲉⲧϩⲟⲟⲩ .",
+      "english": "oh man who has fallen down to great evils.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲛⲁⲩ:",
+        1,
+        16.695
+      ],
+      [
+        "ⲫⲏⲉⲑⲛⲁϯ",
+        1,
+        16.695
+      ],
+      [
+        "ⲉⲣϩⲓⲣⲏⲛⲏ",
+        1,
+        15.11
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        6,
+        13.669
+      ],
+      [
+        "ⲙⲡⲓ",
+        1,
+        12.525
+      ],
+      [
+        ".",
+        9,
+        12.126
+      ],
+      [
+        "ⲓ",
+        6,
+        11.33
+      ],
+      [
+        "ⲟⲩⲉⲙ",
+        1,
+        10.203
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        1,
+        10.11
+      ],
+      [
+        "ⲱⲣⲕ",
+        1,
+        9.566
+      ],
+      [
+        "ⲁϣⲁⲓ",
+        1,
+        9.133
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        8.329
+      ],
+      [
+        "ⲥ",
+        3,
+        8.183
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        7.92
+      ],
+      [
+        "ⲛⲁ",
+        3,
+        7.709
+      ],
+      [
+        "ⲙⲏ",
+        1,
+        7.706
+      ],
+      [
+        "ⲙⲱⲓⲧ",
+        1,
+        7.146
+      ],
+      [
+        "ⲕ",
+        2,
+        7.128
+      ],
+      [
+        "ⲛⲑⲟⲕ",
+        1,
+        6.957
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        6.835
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        419,
+        34.428
+      ],
+      [
+        "ⲉϫⲱ",
+        1727,
+        29.706
+      ],
+      [
+        "ⲉ",
+        4725,
+        29.133
+      ],
+      [
+        "ⲡ",
+        2752,
+        26.473
+      ],
+      [
+        "ⲉϫⲛ",
+        866,
+        26.397
+      ],
+      [
+        "ⲁ",
+        2074,
+        25.796
+      ],
+      [
+        "ⲛ",
+        2740,
+        25.766
+      ],
+      [
+        "ⲉϫⲙ",
+        601,
+        25.598
+      ],
+      [
+        "ϥ",
+        2124,
+        25.377
+      ],
+      [
+        "ⲧ",
+        1193,
+        24.429
+      ],
+      [
+        "ⲉⲓ",
+        687,
+        24.378
+      ],
+      [
+        "ⲙ",
+        1313,
+        24.124
+      ],
+      [
+        "ⲩ",
+        1060,
+        23.657
+      ],
+      [
+        "ⲃⲱⲕ",
+        478,
+        23.344
+      ],
+      [
+        "ⲟⲩ",
+        1074,
+        23.124
+      ],
+      [
+        "ⲁⲩⲱ",
+        922,
+        22.99
+      ],
+      [
+        "ⲕⲁϩ",
+        440,
+        22.968
+      ],
+      [
+        "ⲧⲁⲗⲟ",
+        202,
+        22.762
+      ],
+      [
+        "ⲓ",
+        624,
+        22.404
+      ],
+      [
+        "ⲉⲧⲟⲟⲧ",
+        247,
+        22.311
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲉϩⲣⲁⲓ_0_node",
+          8
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲥ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲙⲱⲓⲧ_2_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉϩⲣⲁⲓ_0_node",
+          "ⲛϧⲏⲧ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛϧⲏⲧ_1_post_ⲉϩⲣⲁⲓ",
+          "ⲥ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲉϩⲣⲁⲓ_0_node",
+          "ϩⲓ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ⲉϩⲣⲁⲓ",
+          "ⲡⲓ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_post_ⲉϩⲣⲁⲓ",
+          "ⲙⲱⲓⲧ_2_post_ⲡⲓ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉϩⲣⲁⲓ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉϩⲣⲁⲓ_0_node",
+          "ⲉ_1_post_ⲉϩⲣⲁⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 31.83,
+      "rank": 42,
+      "count": 5052
+    },
+    "B": {
+      "rate": 0.09,
+      "rank": 2436,
+      "count": 8
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6772",
+      "label": "ϣⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C6773",
+      "label": "ϩⲓϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C6768",
+      "label": "ϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "upper part"
+    },
+    {
+      "target": "C6770",
+      "label": "ⲛϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "above, upward"
+    },
+    {
+      "target": "C6771",
+      "label": "ⲥⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "on upper side, above"
+    }
+  ]
+}

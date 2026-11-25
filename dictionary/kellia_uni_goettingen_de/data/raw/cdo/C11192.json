@@ -1,0 +1,234 @@
+{
+  "id": "C11192",
+  "forms": [
+    {
+      "id": "CF31051",
+      "orth": "ϩⲣⲏⲧⲱⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF31052",
+      "orth": "ϩⲣⲏⲧⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4889,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15747",
+      "bibliography": "DDGLC",
+      "cu_ID": "3580"
+    },
+    {
+      "id": "CS15748",
+      "bibliography": "DDGLC",
+      "cu_ID": "10609"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉ**ϩⲣⲏⲧⲱⲣ** ⲛⲧⲙⲛⲧⲉⲩⲥⲉⲃⲏⲥ ·",
+      "english": "the orator of piety,",
+      "source": "On Penitence and Abstinence, part 1",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:1-119",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲛⲉⲥⲕⲉⲡⲧⲱⲣ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉ**ϩⲣⲏⲧⲱⲣ** · ⲛⲁⲃⲱⲕ ⲛⲥⲉⲁⲣⲓⲥⲧⲁ ϩⲙⲡϫⲱⲕ ⲙⲡⲁϣⲙⲟⲩⲛ · ⲛⲧⲉⲡⲏⲓ ⲉⲛⲉⲩ ⲛϩⲏⲧϥ ϩⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ · ⲛⲥⲉⲙⲟⲩ ⲧⲏⲣⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": "And again, all the wise men and all the orators shall go and eat their midday meal together at the end of the eighth year after my death, and the house wherein they are shall fall upon them, and they shall all die together.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲱ ⲡϥⲁⲓⲕⲗⲟⲙ ⲛⲁⲙⲉ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ · ⲡϣⲏⲣⲉ ϣⲏⲙ ⲛⲧⲁⲧⲉϥⲥⲟⲫⲓⲁ ϫⲣⲟ ⲉⲛⲉ**ϩⲣⲏⲧⲱⲣ** ·",
+      "english": "O thou veritable crown-bearer of the Christ, thou youth whose wisdom vanquished that of the trained orator!",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲣⲧⲩⲗⲗⲟⲥ",
+        1,
+        17.276
+      ],
+      [
+        "ⲙⲛⲧⲉⲩⲥⲉⲃⲏⲥ",
+        1,
+        13.753
+      ],
+      [
+        "ⲭⲣⲏⲙⲁ",
+        1,
+        11.456
+      ],
+      [
+        "ϫⲣⲟ",
+        1,
+        10.927
+      ],
+      [
+        "ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ",
+        1,
+        10.431
+      ],
+      [
+        "ⲉⲕⲕⲗⲏⲥⲓⲁ",
+        1,
+        9.995
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.077
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        9.062
+      ],
+      [
+        "ⲱ",
+        1,
+        8.24
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.991
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        1,
+        7.954
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.962
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.622
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        6.425
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲙⲁ",
+        1,
+        6.265
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        5.871
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲣⲏⲧⲱⲣ_0_node",
+          4
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲭⲣⲏⲙⲁ_1_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲣⲏⲧⲱⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲣⲏⲧⲱⲣ_0_node",
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_2_post_ⲭⲣⲏⲙⲁ",
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲭⲣⲏⲙⲁ",
+          "ⲭⲣⲏⲙⲁ_1_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲣⲏⲧⲱⲣ",
+          "ⲛⲉ_1_pre_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_pre_ϩⲣⲏⲧⲱⲣ",
+          "ϩⲣⲏⲧⲱⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4472,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "1911",
+    "grl_lemma": "ῥήτωρ",
+    "grl_meaning": "public speaker, advocate",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1570a; Preisigke 2:442"
+  }
+}

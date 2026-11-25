@@ -1,0 +1,231 @@
+{
+  "id": "C11078",
+  "forms": [
+    {
+      "id": "CF30526",
+      "orth": "ϩⲉⲑⲛⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30527",
+      "orth": "ϩⲉⲑⲛⲓⲕⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30528",
+      "orth": "ϩⲉⲑⲛⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4065,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF30529",
+      "orth": "ⲉⲑⲛⲓⲕⲟⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15484",
+      "bibliography": "DDGLC",
+      "cu_ID": "522"
+    },
+    {
+      "id": "CS15485",
+      "bibliography": "DDGLC",
+      "cu_ID": "3449"
+    },
+    {
+      "id": "CS15486",
+      "bibliography": "DDGLC",
+      "cu_ID": "5897"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛⲧⲁϥϫⲟⲟⲥ ϫⲉⲙⲁⲣⲉⲡⲉⲕⲥⲟⲛ ϣⲱⲡⲉ ⲛⲁⲕ ⲛⲟⲩ**ϩⲉⲑⲛⲓⲕⲟⲥ** ⲙⲛⲟⲩⲧⲉⲗⲱⲛⲏⲥ ⲉⲧⲃⲉⲡⲛⲟⲩⲧⲉ ϩⲟⲧⲁⲛ ⲉϥϣⲁⲛⲣⲛⲟⲃⲉ ⲙⲡⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ·",
+      "english": "This is what He meant by 'Let your brother be for you a gentile and tax collector for the sake of God if he sins before the Lord.'",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ϩⲱⲱϥ ⲁϥϫⲟⲟⲥ ϫⲉⲉⲣϣⲁⲛⲧⲙⲡⲉⲕⲥⲟⲛ ⲥⲱⲧⲙ ⲛⲥⲱⲕ ⲙⲁⲣⲉϥϣⲱⲡⲉ ⲛⲁⲕ ⲛⲧϩⲉ ⲛⲟⲩ**ϩⲉⲑⲛⲓⲕⲟⲥ** ⲙⲛⲟⲩⲧⲉⲗⲱⲛⲏⲥ ·",
+      "english": "Why too did He say: 'If your brother does not listen to you, let him be a gentile and tax collector to you'?",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲉϥϣⲁⲛⲧⲙⲥⲱⲧⲙ ⲛⲥⲱⲟⲩ . ⲁϫⲓⲥ ⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ . ⲉϣⲱⲡⲉ ⲇⲉ ⲉϥϣⲁⲛⲣⲁⲧⲥⲱⲧⲙ ⲛⲥⲁⲧⲕⲉⲉⲕⲕⲗⲏⲥⲓⲁ ⲙⲁⲣⲉϥϣⲱⲡⲉ ⲛⲁⲕ ⲛⲧϩⲉ ⲛⲟⲩ**ϩⲉⲑⲛⲓⲕⲟⲥ** ⲙⲛⲟⲩⲧⲉⲗⲱⲛⲏⲥ .",
+      "english": "If he refuses to listen to them, tell it to the assembly. If he refuses to hear the assembly also, let him be to you as a Gentile or a tax collector.",
+      "source": "40_Matthew_18",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲉⲗⲱⲛⲏⲥ",
+        5,
+        19.171
+      ],
+      [
+        "ⲟⲩ",
+        11,
+        12.791
+      ],
+      [
+        "ϩⲉ",
+        4,
+        10.92
+      ],
+      [
+        "ⲙⲛ",
+        5,
+        10.803
+      ],
+      [
+        "ⲕⲱϩ",
+        1,
+        10.104
+      ],
+      [
+        "ⲛ",
+        7,
+        9.424
+      ],
+      [
+        "ⲧ",
+        4,
+        9.264
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        2,
+        8.973
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        8.834
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        1,
+        7.415
+      ],
+      [
+        "ⲕ",
+        2,
+        7.045
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        5.881
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.872
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.506
+      ],
+      [
+        ".",
+        1,
+        3.75
+      ],
+      [
+        "ϩⲛ",
+        1,
+        3.672
+      ],
+      [
+        "ⲩ",
+        1,
+        3.002
+      ],
+      [
+        "ⲁ",
+        1,
+        2.237
+      ],
+      [
+        "ⲉ",
+        1,
+        2.01
+      ],
+      [
+        "ⲡ",
+        1,
+        1.69
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲑⲛⲓⲕⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          2
+        ],
+        [
+          "ⲧⲉⲗⲱⲛⲏⲥ_1_post_ϩⲉⲑⲛⲓⲕⲟⲥ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲑⲛⲓⲕⲟⲥ_0_node",
+          "ⲙⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          "ⲟⲩ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲉⲗⲱⲛⲏⲥ",
+          "ⲧⲉⲗⲱⲛⲏⲥ_1_post_ϩⲉⲑⲛⲓⲕⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3676,
+      "count": 7
+    }
+  },
+  "etym": {
+    "grl_ID": "2687",
+    "grl_lemma": "ἐθνικός",
+    "grl_meaning": "national, foreign, gentile",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 480a; Preisigke 1:418"
+  }
+}

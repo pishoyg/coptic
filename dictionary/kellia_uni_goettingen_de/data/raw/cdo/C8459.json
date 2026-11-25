@@ -1,0 +1,51 @@
+{
+  "id": "C8459",
+  "forms": [
+    {
+      "id": "CF19793",
+      "orth": "ⲁⲣⲭⲏⲁⲧⲣⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19795",
+      "orth": "ⲁⲣⲭⲏⲁⲧⲣⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19794",
+      "orth": "ⲁⲣⲭⲏϩⲓⲁⲧⲣⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7599,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF19796",
+      "orth": "ⲁⲣⲭⲏⲁⲧⲣⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9844",
+      "bibliography": "DDGLC",
+      "cu_ID": "8828"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "291",
+    "grl_lemma": "ἀρχιατρός",
+    "grl_meaning": "official physician",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 252b; Preisigke 1:220"
+  }
+}

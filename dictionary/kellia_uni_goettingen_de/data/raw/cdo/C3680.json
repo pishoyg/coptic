@@ -1,0 +1,64 @@
+{
+  "id": "C3680",
+  "forms": [
+    {
+      "id": "CF9270",
+      "orth": "ϫⲓⲥⲟⲡⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4184",
+      "bibliography": "CD 352b; ChLCS 49b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3681",
+      "label": "ⲣⲉϥⲥⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "intercessor, petitioner"
+    },
+    {
+      "target": "C3682",
+      "label": "ⲣⲉϥⲥⲟⲡⲥⲉⲡ",
+      "pos": "N",
+      "gloss": "seducer"
+    },
+    {
+      "target": "C3679",
+      "label": "ⲣⲥⲟⲡⲥ",
+      "pos": "V",
+      "gloss": "make prayer"
+    },
+    {
+      "target": "C3677",
+      "label": "ⲥⲟⲡⲥ",
+      "pos": "V",
+      "gloss": "pray, entreat, comfort"
+    },
+    {
+      "target": "C3678",
+      "label": "ⲥⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "prayer, entreaty, consolation"
+    }
+  ]
+}

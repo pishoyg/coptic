@@ -1,0 +1,357 @@
+{
+  "id": "C10255",
+  "forms": [
+    {
+      "id": "CF27194",
+      "orth": "ⲡⲟⲣⲫⲩⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27196",
+      "orth": "ⲡⲟⲣⲫⲩⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4798,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF27195",
+      "orth": "ⲡⲟⲣⲫⲏⲣⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10548,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27197",
+      "orth": "ⲡⲱⲣⲫⲱⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13734",
+      "bibliography": "DDGLC",
+      "cu_ID": "3988"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲛⲁϩⲣⲙⲡⲛⲟⲩⲧⲉ ⲇⲉ ⲥⲧⲁⲓⲏⲩ ⲛϩⲟⲩⲟ ⲉ**ⲡⲟⲣⲫⲩⲣⲁ** ⲛⲓⲙ ⲛⲣⲣⲟ ⲛⲧⲉⲡⲉⲓⲕⲟⲥⲙⲟⲥ ·",
+      "english": "And before God it is more precious than all the purple of the kings of this world.'",
+      "source": "Life of Cyrus in Budge ed. part 1",
+      "urn": "urn:cts:copticLit:lives.cyrus.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥϭⲟⲗⲉ ⲛⲟⲩ**ⲡⲟⲣⲫⲩⲣⲁ** ⲉⲛⲁⲛⲟⲩⲥ · ⲉϥⲙⲏⲣ ⲛⲟⲩⲙⲟⲩⲥ ⲛⲛⲟⲩⲃ ·",
+      "english": "and he was wearing rich purple garments, and he was girded with a girdle of gold,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲉⲓ ϣⲁⲣⲟⲥ ϩⲛⲟⲩϩⲟⲣⲟⲙⲁ · ⲉϥⲫⲟⲣⲉⲓ ⲛⲟⲩ**ⲡⲟⲣⲫⲩⲣⲁ** · ⲉϥⲛⲉϫⲁⲕⲧⲓⲛ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲃⲟⲗ · ⲉⲣⲉⲟⲩϩⲣⲁⲃⲇⲟⲥ ⲛⲟⲩⲟⲉⲓⲛ ϩⲛⲧⲉϥϭⲓϫ ·",
+      "english": "And Saint Victor came unto her in a vision, and he was clad in. purple, and he emitted rays of light, and there was a staff of light in his hand.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϩⲓⲱⲧ",
+        1,
+        11.678
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.754
+      ],
+      [
+        "ϥ",
+        2,
+        7.424
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ],
+    "S": [
+      [
+        "ϭⲟⲗⲉ",
+        1,
+        18.276
+      ],
+      [
+        "ⲧⲁⲓⲏⲩ",
+        2,
+        13.901
+      ],
+      [
+        "ⲣⲣⲟ",
+        3,
+        11.89
+      ],
+      [
+        "ⲫⲟⲣⲉⲓ",
+        1,
+        11.867
+      ],
+      [
+        "ϩⲟⲩⲟ",
+        2,
+        11.792
+      ],
+      [
+        "ⲛⲉϫ",
+        1,
+        10.721
+      ],
+      [
+        "ⲛ",
+        8,
+        10.487
+      ],
+      [
+        "ⲡⲱϩ",
+        1,
+        10.232
+      ],
+      [
+        "ⲛⲧⲉ",
+        2,
+        10.05
+      ],
+      [
+        "ⲛⲓⲙ",
+        2,
+        8.965
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        8.654
+      ],
+      [
+        "ⲉ",
+        4,
+        8.495
+      ],
+      [
+        "ϥ",
+        4,
+        8.2
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.642
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ⲥ",
+        1,
+        3.952
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.425
+      ],
+      [
+        "ⲁ",
+        1,
+        2.722
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ϣⲉⲛⲥ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲟⲩⲛⲟϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          "ⲛⲉⲙ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ϣⲉⲛⲥ",
+          "ⲟⲩ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϣⲉⲛⲥ",
+          "ϣⲉⲛⲥ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          1
+        ],
+        [
+          "ϣⲉⲛⲥ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          "ⲉ_2_post_ϣⲉⲛⲥ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ϣⲉⲛⲥ",
+          "ϥ_4_post_ⲟⲩⲛⲟϥ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲟⲥⲙⲟⲥ_5_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲟⲣⲫⲩⲣⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          "ⲛ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          "ⲣⲣⲟ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_2_post_ⲛ",
+          "ⲛⲧⲉ_3_post_ⲣⲣⲟ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_3_post_ⲣⲣⲟ",
+          "ⲡⲉⲓ_4_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_4_post_ⲛⲧⲉ",
+          "ⲕⲟⲥⲙⲟⲥ_5_post_ⲡⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲡⲟⲣⲫⲩⲣⲁ",
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟⲣⲫⲩⲣⲁ_0_node",
+          "ⲉ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲡⲟⲣⲫⲩⲣⲁ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ⲥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4383,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "3040",
+    "grl_lemma": "πορφύρα",
+    "grl_meaning": "purple cloth or robe",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1451b; Preisigke 2:343; Sophocles 911b"
+  }
+}

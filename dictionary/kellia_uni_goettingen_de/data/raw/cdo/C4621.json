@@ -1,0 +1,82 @@
+{
+  "id": "C4621",
+  "forms": [
+    {
+      "id": "CF11202",
+      "orth": "ⲉⲧⲟⲩⲛ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF11203",
+      "orth": "ⲉⲧⲟⲩⲱ⸗",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5217",
+      "bibliography": "CD 444b; CED 200; KoptHWb 251; ChLCS 62a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣϥⲉϭⲛⲉⲧⲛⲉⲣⲏⲩ ⲉⲓⲙⲏⲧⲓ ϩⲛⲟⲩϣⲱⲛⲃ ⲡⲣⲟⲥⲟⲩⲟⲉⲓϣ ϫⲉⲉⲧⲉⲧⲛⲉⲥⲣϥⲉ ⲉⲡⲉϣⲗⲏⲗ . ⲁⲩⲱ ⲟⲛ ⲛⲧⲉⲧⲛⲉⲓ **ⲉⲧⲟⲩⲉⲛ**ⲛⲉⲧⲛⲉⲣⲏⲩ ϫⲉⲛⲛⲉⲡⲥⲁⲧⲁⲛⲁⲥ ⲡⲉⲓⲣⲁⲍⲉ ⲙⲙⲱⲧⲛ ⲉⲧⲃⲉⲧⲉⲧⲛⲙⲛⲧⲁⲧⲁⲙⲁϩⲧⲉ .",
+      "english": "Don&apos;t deprive one another, unless it is by consent for a season, that you may give yourselves to fasting and prayer, and may be together again, that Satan doesn&apos;t tempt you because of your lack of self-control.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C615",
+      "type": "cf",
+      "label": "preposition"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4622",
+      "label": "ϩⲁⲧⲟⲩⲱ⸗",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4623",
+      "label": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, next"
+    },
+    {
+      "target": "C4620",
+      "label": "ϯⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "turn away, move out?"
+    },
+    {
+      "target": "C4619",
+      "label": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "sit (to eat)"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    },
+    {
+      "target": "C4618",
+      "label": "ⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "bosom"
+    }
+  ]
+}

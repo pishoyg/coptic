@@ -1,0 +1,118 @@
+{
+  "id": "C6582",
+  "forms": [
+    {
+      "id": "CF15207",
+      "orth": "ϩⲟⲗϩⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF15208",
+      "orth": "ϧⲉⲗϧⲱⲗ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1242,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ϩⲉⲗϩⲱⲗ⸗",
+      "dialect": "S",
+      "id": "2179.1"
+    },
+    {
+      "orth": "ϧⲟⲗϧⲉⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.83,
+        "rank": 815,
+        "count": 70
+      }
+    },
+    {
+      "orth": "ϧⲉⲗϧⲱⲗ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1242,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ϧⲉⲗϧⲟⲗ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 4015,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ϧⲉⲗϧⲱⲗ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1242,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ϩⲁⲗϩⲗ",
+      "dialect": "L",
+      "id": "2179.6"
+    },
+    {
+      "orth": "ϩⲗϩⲁⲗⲧ†",
+      "dialect": "L",
+      "id": "2179.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7294",
+      "bibliography": "CD 672a-b; KoptHWb 368; DELC 298b; ChLCS 90b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲟⲃϯ ⲛⲛⲉⲕϣⲏⲣⲓ ⲉⲡ**ϧⲉⲗϧⲱⲗ**ⲟⲩ ϧⲉⲛⲛⲓⲛⲟⲃⲓ ⲛⲧⲉⲡⲉⲕⲓⲱⲧ ϩⲓⲛⲁ ϫⲉⲛⲛⲟⲩⲧⲱⲟⲩⲛⲟⲩ ⲛⲧⲟⲩⲉⲣⲕⲗⲏⲣⲟⲛⲟⲙⲓⲛ ⲙⲡⲓⲕⲁϩⲓ ⲟⲩⲟϩ ⲛⲧⲟⲩⲙⲁϩ ⲡⲓⲕⲁϩⲓ ⲙⲃⲱⲧⲥ .",
+      "english": "Prepare thy children to be slain for the sins of their father; that they arise not, and inherit the earth, nor fill the earth with wars.",
+      "source": "23_Isaias_14",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧⲁ ⲛⲏⲉⲧⲁⲩϫⲫⲱⲟⲩ **ϧⲉⲗϧⲱⲗ**ⲟⲩ ⲟⲩⲟϩ ⲛⲁⲩⲟⲩⲱⲙ ⲛϩⲑⲏⲟⲩ ⲁⲛ ⲡⲉ ⲟⲩⲟϩ ⲛⲏⲉⲛⲁⲩϯ ⲙⲙⲱⲟⲩ ⲉⲃⲟⲗ ⲛⲁⲩϫⲱ ⲙⲙⲟⲥ ϫⲉϥⲥⲙⲁⲣⲱⲟⲩⲧ ⲛϫⲉⲡϭⲥ ⲟⲩⲟϩ ⲁⲛⲉⲣⲣⲁⲙⲁⲟ ⲟⲩⲟϩ ⲛⲟⲩⲙⲁⲛⲉⲥⲱⲟⲩ ⲛⲁⲩϣⲉⲡⲙⲕⲁϩ ⲛϩⲗⲓ ⲁⲛ ⲡⲉ ⲉϩⲣⲏⲓ ⲉϫⲱⲟⲩ .",
+      "english": "which their possessors have slain, and have not repented: and they that sold them said, Blessed be the Lord; for we have become rich: and their shepherds have suffered no sorrow for them.",
+      "source": "38_Zacharias_11",
+      "urn": "urn:cts:copticLit:ot.zach.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6583",
+      "label": "ϧⲉⲗϧⲱⲗ",
+      "pos": "N",
+      "gloss": "slaughter"
+    }
+  ],
+  "etym": {
+    "egy_num": "123810",
+    "egy_lemma": "ẖnẖn",
+    "demo_num": "d4898",
+    "demo_lemma": "ẖlẖl",
+    "english": "to approach",
+    "german": "herantreten (an)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/123810",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4898"
+  }
+}

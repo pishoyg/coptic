@@ -1,0 +1,112 @@
+{
+  "id": "C6793",
+  "forms": [
+    {
+      "id": "CF15633",
+      "orth": "ϩⲣⲏⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11418,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲣⲉⲃⲉ",
+      "dialect": "S",
+      "id": "3283.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7507",
+      "bibliography": "CD 702a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥⲡⲁⲡⲛⲟⲩⲧⲉ ⲡⲉⲡⲓⲥⲕⲡⲡⲟⲥ ⲛⲁⲧ**ϩⲣⲏⲃⲉ** ⲁⲓⲧⲛⲛⲟⲟⲩϥ ϣⲁⲡⲉⲕⲕⲗⲁⲧⲟⲥ ⲡⲁⲓ ⲟⲩⲛϭⲟⲙⲙⲟϥ ⲉⲧⲁⲙⲟⲕ ⲉⲡⲉⲧⲕϣⲓⲛⲉ ⲛⲥⲱϥ .",
+      "english": "...",
+      "source": "History of the Emperor's Daughter Fragment 4 (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.empdaughter.giron_ed:210-211",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲡⲓⲥⲕⲡⲡⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲛⲛⲟⲟⲩ",
+        1,
+        12.036
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ϩⲣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲏⲃⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ϩⲣⲏⲃⲉ",
+          "ϩⲣⲏⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11004,
+      "count": 1
+    }
+  }
+}

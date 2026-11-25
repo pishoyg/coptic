@@ -1,0 +1,115 @@
+{
+  "id": "C2636",
+  "forms": [
+    {
+      "id": "CF7075",
+      "orth": "ⲙⲛⲧⲁⲧⲛⲟϥⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19903,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3022",
+      "bibliography": "CD 240a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲥϥ ⲅⲁⲣ ϣⲱⲡⲉ ⲛⲧϣⲟⲣⲡ ⲛⲉⲛⲧⲟⲗⲏ ⲉⲧⲃⲉⲧⲉⲥⲙⲛⲧⲁⲧϭⲟⲙ . ⲁⲩⲱ ⲧⲉⲥ**ⲙⲛⲧⲁⲧⲛⲟϥⲣⲉ** .",
+      "english": "For there is an annulling of a foregoing commandment because of its weakness and uselessness",
+      "source": "58_Hebrews_7",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁⲧϭⲟⲙ",
+        1,
+        17.013
+      ],
+      [
+        "ⲛⲟⲙⲟⲥ",
+        1,
+        11.632
+      ],
+      [
+        "ⲧⲉⲥ",
+        1,
+        11.529
+      ],
+      [
+        "ⲙⲡⲉ",
+        1,
+        10.101
+      ],
+      [
+        ".",
+        2,
+        9.557
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19513,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2632",
+      "label": "*ⲛⲟⲩϥⲣ",
+      "pos": "VBD",
+      "gloss": "be good, profitable"
+    },
+    {
+      "target": "C2635",
+      "label": "ⲙⲉⲧⲛⲟϥⲣⲓ",
+      "pos": "N",
+      "gloss": "good things"
+    },
+    {
+      "target": "C2633",
+      "label": "ⲛⲟϥⲣⲉ",
+      "pos": "N",
+      "gloss": "good, profit, advantage"
+    },
+    {
+      "target": "C2637",
+      "label": "ⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good"
+    },
+    {
+      "target": "C2634",
+      "label": "ⲣⲛⲟϥⲣⲉ",
+      "pos": "V",
+      "gloss": "be profitable"
+    }
+  ]
+}

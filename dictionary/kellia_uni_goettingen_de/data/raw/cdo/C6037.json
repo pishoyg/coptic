@@ -1,0 +1,175 @@
+{
+  "id": "C6037",
+  "forms": [
+    {
+      "id": "CF31969",
+      "orth": "ϣⲛⲟⲩⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14831,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31968",
+      "orth": "ϣⲉⲛⲟⲩⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6722",
+      "bibliography": "CD 585a; KoptHWb 325; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϣⲱⲡⲉ ⲛϭⲓⲑⲉⲣⲥⲁ ⲙⲛⲁⲓⲥⲗⲁ ⲙⲛⲙⲉⲗⲭⲁ ⲙⲛⲟⲩⲁ ⲙⲛⲙⲁⲁⲗⲁ ⲛϣⲉⲉⲣⲉ ⲛⲥⲁⲗⲡⲁⲁⲇ ⲛⲛⲉⲩ**ϣⲛⲟⲩⲁ** ⲉϩⲉⲛⲥϩⲓⲙⲉ",
+      "english": "So Thersa, and Egla, and Melcha, and Nua, and Malaa, the daughters of Salpaad, married their cousins;",
+      "source": "Numbers 36",
+      "urn": "urn:cts:copticLit:ot.num.coptot:36",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲥⲁⲗⲡⲁⲁⲇ",
+        1,
+        17.598
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        1,
+        11.065
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        10.255
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.465
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲛⲟⲩⲁ",
+          1
+        ],
+        [
+          "ϣⲛⲟⲩⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲛⲟⲩⲁ",
+          "ϣⲛⲟⲩⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14430,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6033",
+      "label": "ϣⲉⲉⲣⲉ",
+      "pos": "N",
+      "gloss": "daughter, child"
+    },
+    {
+      "target": "C6035",
+      "label": "ϣⲉⲉⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small child, baby girl"
+    },
+    {
+      "target": "C6041",
+      "label": "ϣⲉⲣϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "male child"
+    },
+    {
+      "target": "C6032",
+      "label": "ϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "son, child"
+    },
+    {
+      "target": "C6034",
+      "label": "ϣⲏⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small child, baby boy"
+    },
+    {
+      "target": "C6038",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6040",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6039",
+      "label": "ϣⲛⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "cousin"
+    },
+    {
+      "target": "C6042",
+      "label": "ⲁⲧϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "without child"
+    },
+    {
+      "target": "C6036",
+      "label": "ⲙⲛⲧϣⲏⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "youthfulness"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C314",
+  "forms": [
+    {
+      "id": "CF1353",
+      "orth": "ⲙⲛⲧⲁϭⲣⲏⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13407,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS347",
+      "bibliography": "CD 27a; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲧⲁⲗϭⲉⲥⲁⲣⲣⲁ ⲧϣⲉⲉⲣⲉ ⲛϩⲣⲁⲅⲟⲩⲏⲗ ϩⲙⲡϣⲱⲛⲉ ⲉⲧⲛⲁϣⲧⲛ ⲧ**ⲙⲛⲧⲁϭⲣⲏⲛ** · ⲁⲩⲱ ⲁϥⲧⲟⲩϫⲟⲥ ⲉⲛⲛⲟϭⲛⲉϭ ⲛⲛϩⲙϩⲁⲗ ⲙⲡⲉⲥⲉⲓⲱⲧ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲡϩⲓⲉⲣⲟⲥ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲡⲁⲩⲗⲟⲥ ϫⲉⲙⲏ ⲛϩⲉⲛⲗⲩⲧⲟⲩⲣⲅⲓⲕⲟⲛ ⲁⲛ ⲛⲉ ⲙⲡⲛⲉⲩⲙⲁ ⲧⲏⲣⲟⲩ ⲛⲉ · ⲉⲩⲧⲛⲛⲟⲟⲩ ⲙⲙⲟⲟⲩ ⲉϩⲉⲛⲇⲓⲁⲕⲟⲛⲓⲁ · ⲉⲧⲃⲉⲛⲉⲧⲛⲁⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲟⲩⲟⲩϫⲁⲓ .",
+      "english": "...",
+      "source": "Encomium on Raphael the Archangel (Budge ed.)",
+      "urn": "urn:cts:copticLit:pschrysostom.raphael.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣ",
+        1,
+        11.661
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        8.164
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁϭⲣⲏⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁϭⲣⲏⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁϭⲣⲏⲛ",
+          "ⲙⲛⲧⲁϭⲣⲏⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13002,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C313",
+      "label": "ⲁϭⲣⲏⲛ",
+      "pos": "N",
+      "gloss": "barren female"
+    },
+    {
+      "target": "C315",
+      "label": "ⲣⲁϭⲣⲏⲛ",
+      "pos": "V",
+      "gloss": "be barren"
+    }
+  ]
+}

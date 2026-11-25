@@ -1,0 +1,467 @@
+{
+  "id": "C2922",
+  "forms": [
+    {
+      "id": "CF7708",
+      "orth": "ⲡⲁⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1848,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ⲫⲁⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.64,
+        "rank": 953,
+        "count": 54
+      }
+    },
+    {
+      "orth": "ⲡⲉⲧ",
+      "dialect": "A",
+      "id": "716.2"
+    },
+    {
+      "orth": "ⲡⲉⲧ",
+      "dialect": "F",
+      "id": "716.3"
+    },
+    {
+      "orth": "ⲡⲉⲧ",
+      "dialect": "L",
+      "id": "716.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3344",
+      "bibliography": "CD 273b; CED 129; KoptHWb 154; DELC 165; ChLCS 38b"
+    },
+    {
+      "id": "CS3345",
+      "bibliography": "CD 273b; CED 129; KoptHWb 154; DELC 165; ChLCS 38b"
+    },
+    {
+      "id": "CS3346",
+      "bibliography": "CD 273b; KoptHWb 154; DELC 165; ChLCS 38b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϭⲱⲗϫ ⲛⲛⲉⲩ**ⲡⲁⲧ** ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": "And they knelt down together on their knees,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϭⲙϭⲟⲙ ⲛϭⲓϫ ⲉⲧⲥⲏϭ ⲙⲛⲙ**ⲡⲁⲧ** ⲉⲧⲃⲏⲗ ⲉⲃⲟⲗ",
+      "english": "Be strong, ye relaxed hands and palsied knees.",
+      "source": "Isaiah 35",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϩⲓⲟⲩⲉ ⲙⲡⲕⲁϣ ⲉϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲛⲉϫⲧⲁϥ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ . ⲁⲩⲱ ⲁⲩⲕⲗϫⲛⲉⲩ**ⲡⲁⲧ** ϩⲓϩⲏ ⲙⲙⲟϥ ⲁⲩⲟⲩⲱϣⲧ ⲛⲁϥ .",
+      "english": "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲱⲗϫ",
+        9,
+        20.335
+      ],
+      [
+        "ⲕⲟⲗϫ",
+        3,
+        18.639
+      ],
+      [
+        "ⲕⲉⲗϫ",
+        3,
+        18.639
+      ],
+      [
+        "ⲕⲗϫ",
+        3,
+        16.902
+      ],
+      [
+        "ϭⲱⲗϫ",
+        2,
+        16.147
+      ],
+      [
+        "ⲟⲩⲧⲱⲛ.",
+        1,
+        15.469
+      ],
+      [
+        "ϯⲁⲛⲧⲓⲗⲉⲅⲉⲓ",
+        1,
+        15.469
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.469
+      ],
+      [
+        "ⲁ",
+        31,
+        14.778
+      ],
+      [
+        "ⲥⲧⲣⲧⲣ",
+        1,
+        14.469
+      ],
+      [
+        "ⲃⲏⲗ",
+        2,
+        13.945
+      ],
+      [
+        "ⲟⲩⲧ",
+        1,
+        13.469
+      ],
+      [
+        "ϩⲁⲙⲏⲣ",
+        1,
+        13.147
+      ],
+      [
+        "ϯⲧⲱⲕ",
+        1,
+        12.884
+      ],
+      [
+        "ⲕⲗⲗⲉ",
+        1,
+        12.884
+      ],
+      [
+        "ⲛⲉϥ",
+        8,
+        12.668
+      ],
+      [
+        "ϣⲁⲣ",
+        1,
+        12.469
+      ],
+      [
+        "ⲛ",
+        24,
+        12.435
+      ],
+      [
+        "ϥ",
+        19,
+        12.136
+      ],
+      [
+        "ⲟⲩⲱϣⲧ",
+        3,
+        11.764
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁⲧ_0_node",
+          26
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲡⲁⲧ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲡⲁⲧ",
+          3
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲡⲁⲧ",
+          3
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ϣⲱⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲱⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲃⲏⲗ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_3_post_ⲃⲏⲗ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲟⲩⲱϣⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_0_node",
+          "ⲙ_1_post_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲡⲁⲧ",
+          "ⲡⲟⲩ_3_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_0_node",
+          "ⲛ_1_post_ⲡⲁⲧ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲧ",
+          "ϣⲱⲣⲡ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲁⲧ",
+          "ⲛⲟⲩ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲧ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϭⲱⲃ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲁⲧ",
+          "ⲙ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_0_node",
+          "ⲉⲧ_1_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲁⲧ",
+          "ⲃⲏⲗ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲃⲏⲗ_2_post_ⲉⲧ",
+          "ⲉⲃⲟⲗ_3_post_ⲃⲏⲗ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲧ",
+          "ϣⲁ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲡⲁⲧ",
+          "ϥ_1_pre_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲡⲁⲧ",
+          "ⲡⲁⲧ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲧ_0_node",
+          "ϥ_1_post_ⲡⲁⲧ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲡⲁⲧ",
+          "ⲛ_2_post_ⲟⲩⲱϣⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.22,
+      "rank": 1612,
+      "count": 35
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2923",
+      "label": "ϥⲧⲉⲫⲁⲧ",
+      "pos": "N",
+      "gloss": "quadruped"
+    },
+    {
+      "target": "C2924",
+      "label": "ⲣⲁⲧⲫⲁⲧ",
+      "pos": "N",
+      "gloss": "hare (\"with well covered foot\")"
+    }
+  ],
+  "etym": {
+    "egy_num": "59460",
+    "egy_lemma": "pꜣḏ",
+    "demo_num": "d2179",
+    "demo_lemma": "pd",
+    "english": "knee; kneecap",
+    "german": "Knie; Kniescheibe",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/59460",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2179"
+  }
+}

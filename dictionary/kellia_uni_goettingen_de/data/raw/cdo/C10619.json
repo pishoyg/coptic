@@ -1,0 +1,243 @@
+{
+  "id": "C10619",
+  "forms": [
+    {
+      "id": "CF28710",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF28715",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5491,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF28711",
+      "orth": "ⲥⲉⲛⲉⲩⲇⲟⲕⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28712",
+      "orth": "ⲥⲉⲛⲉⲩⲇⲱⲅⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28714",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟϭⲓ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF28713",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟϭⲉⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28716",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF28717",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲟⲕⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF28718",
+      "orth": "ⲥⲩⲛⲉⲩⲇⲱⲕⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS14475",
+      "bibliography": "DDGLC",
+      "cu_ID": "5770"
+    },
+    {
+      "id": "CS14476",
+      "bibliography": "DDGLC",
+      "cu_ID": "1035"
+    },
+    {
+      "id": "CS14477",
+      "bibliography": "DDGLC",
+      "cu_ID": "5772"
+    },
+    {
+      "id": "CS14478",
+      "bibliography": "DDGLC",
+      "cu_ID": "6508"
+    },
+    {
+      "id": "CS14479",
+      "bibliography": "DDGLC",
+      "cu_ID": "5771"
+    },
+    {
+      "id": "CS14480",
+      "bibliography": "DDGLC",
+      "cu_ID": "10854"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲗⲟⲓⲡⲟⲛ ⲡⲁⲉⲓⲱⲧ · ⲡⲉⲧⲉⲓⲣⲉ ⲙⲡⲛⲟⲃⲉ · ⲙⲛⲡⲉⲧ**ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ** ⲙⲛⲡⲉⲧⲉⲓⲣⲉ ⲙⲙⲟϥ · ⲡⲉⲓϣⲱϣ ⲛⲟⲩⲱⲧ ⲡⲉⲧϣⲟⲟⲡ ⲙⲙⲟⲟⲩ ⲙⲡⲉⲥⲛⲁⲩ",
+      "english": "Moreover, O my father, the man who committeth sin, and the man who is of the same opinion as the man who committeth it, the same disgrace appertaineth to both alike.",
+      "source": "Martyrdom of Victor part 2",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:7-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁⲩⲗⲟⲥ ⲇⲉ ⲛⲉϥ**ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ** ⲡⲉ ⲉⲡⲉϥϩⲱⲧⲃ . ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓⲟⲩⲑⲗⲓⲯⲓⲥ ⲙⲛⲟⲩⲛⲟϭ ⲛⲇⲓⲱⲅⲙⲟⲥ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲉⲕⲕⲗⲏⲥⲓⲁ ⲉⲧϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ . ⲟⲩⲟⲛ ⲇⲉ ⲛⲓⲙ ⲁⲩϫⲱⲱⲣⲉ ⲉⲃⲟⲗ ⲉⲛⲉⲭⲱⲣⲁ ⲛⲧⲓⲟⲩⲇⲁⲓⲁ ⲙⲛⲧⲥⲁⲙⲁⲣⲓⲁ ϣⲁⲧⲛ ⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ⲙⲁⲩⲁⲁⲩ ⲉⲁⲩϭⲱ ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ .",
+      "english": "Saul was consenting to his death. A great persecution arose against the assembly which was in Jerusalem in that day. They were all scattered abroad throughout the regions of Judea and Samaria, except for the apostles.",
+      "source": "44_Acts of the Apostles_8",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:8",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧⲥⲟⲟⲩⲛ ⲙⲡⲇⲓⲕⲁⲓⲱⲙⲁ ⲙⲡⲛⲟⲩⲧⲉ ϫⲉⲛⲉⲧⲉⲓⲣⲉ ⲛⲛⲁⲓ ⲥⲉⲙⲡϣⲁ ⲙⲡⲙⲟⲩ . ⲟⲩ ⲙⲟⲛⲟⲛ ⲥⲉⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ ⲁⲗⲗⲁ ⲥⲉ**ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ** ⲟⲛ ⲙⲛⲛⲉⲧⲉⲓⲣⲉ ⲙⲙⲟⲟⲩ .",
+      "english": "who, knowing the ordinance of God, that those who practice such things are worthy of death, not only do the same, but also approve of those who practice them.",
+      "source": "45_Romans_1",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲩⲗⲟⲥ",
+        1,
+        14.598
+      ],
+      [
+        "ϩⲱⲧⲃ",
+        1,
+        11.418
+      ],
+      [
+        "ⲉ",
+        5,
+        9.783
+      ],
+      [
+        "ϩⲁⲣⲉϩ",
+        1,
+        9.11
+      ],
+      [
+        "ⲣⲁⲧ",
+        1,
+        8.673
+      ],
+      [
+        "ⲁϩⲉ",
+        1,
+        8.647
+      ],
+      [
+        "ⲓ",
+        2,
+        7.85
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        7.808
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.644
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        1,
+        7.304
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.238
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.096
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.986
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        4.981
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.22
+      ],
+      [
+        "ϥ",
+        1,
+        2.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲩⲛⲉⲩⲇⲟⲕⲉⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5055,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "2105",
+    "grl_lemma": "συνευδοκέω",
+    "grl_meaning": "to join in approving, give one's consent",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1713a; Preisigke 2:536"
+  }
+}

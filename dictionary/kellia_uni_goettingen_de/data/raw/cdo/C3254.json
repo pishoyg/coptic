@@ -1,0 +1,230 @@
+{
+  "id": "C3254",
+  "forms": [
+    {
+      "id": "CF8394",
+      "orth": "ⲣⲁϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6665,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲣⲟϩⲧⲉ",
+      "dialect": "S",
+      "id": "1359.1"
+    },
+    {
+      "orth": "ⲗⲟϩⲧⲉ",
+      "dialect": "S",
+      "id": "1359.2"
+    },
+    {
+      "orth": "ⲣⲱϩⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20343,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲣⲁϩⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.61,
+        "rank": 995,
+        "count": 96
+      }
+    },
+    {
+      "orth": "ⲗⲁϩϯ",
+      "dialect": "F",
+      "id": "1359.5"
+    },
+    {
+      "orth": "ⲣⲉϩⲧⲉ",
+      "dialect": "F",
+      "id": "1359.6"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3717",
+      "bibliography": "CD 312ab; CED 143; KoptHWb 172; DELC 180; ChLCS 44a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲥϣⲱⲡⲉ ⲛⲧⲉⲣϥⲟⲩⲱ ⲛϭⲓⲓⲏⲥⲟⲩⲥ ⲙⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲉⲩϩⲱⲧⲡ ⲙⲙⲟⲟⲩ ϩⲛⲟⲩⲛⲟϭ ⲛ**ⲣⲁϩⲧⲉ** ⲉⲙⲁⲧⲉ ⲉⲡⲧⲏⲣϥ ⲁⲩⲱ ⲛⲉⲛⲧⲁⲩⲣⲃⲟⲗ ⲁⲩⲟⲩϫⲁⲓ ⲉϩⲣⲁⲓ ⲉⲙⲡⲟⲗⲓⲥ ⲉⲧⲟⲣϫ",
+      "english": "And it came to pass when Joshua and all Israel ceased destroying them utterly with a very great slaughter, that they that escaped took refuge in the strong cities.",
+      "source": "Joshua 10",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲥⲉ**ⲣⲁϩⲧⲉ** ⲉⲡⲕⲁϩ ⲁⲩⲱ ⲛⲟⲩϣⲏⲣⲉ ⲛϩⲏⲧⲉ . ⲛⲥⲉⲧⲙⲕⲁ ⲟⲩⲱⲛⲉ ϩⲓϫⲛⲟⲩⲱⲛⲉ ⲛϩⲏⲧⲉ ⲉⲃⲟⲗ ϫⲉⲙⲡⲉⲥⲟⲩⲛ ⲡⲉⲟⲩⲟⲉⲓϣ ⲙⲡⲟⲩϭⲙ ⲡϣⲓⲛⲉ .",
+      "english": "and will dash you and your children within you to the ground. They will not leave in you one stone on another, because you didn't know the time of your visitation.'",
+      "source": "42_Luke_19",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲥⲉⲛⲁⲣϩⲏⲃⲉ ⲛϭⲓⲛⲧⲏⲏⲃⲉ ⲙⲡⲉⲧⲛⲕⲟⲥⲙⲟⲥ ⲛⲥⲉⲕⲁⲁⲧⲉ ⲙⲁⲩⲁⲁⲧⲉ ⲁⲩⲱ ⲛⲥⲉ**ⲣⲁϩⲧⲉ** ⲉϫⲙⲡⲕⲁϩ",
+      "english": "...",
+      "source": "Isaiah 3",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲏⲣϥ",
+        1,
+        10.604
+      ],
+      [
+        "ⲥⲁ",
+        1,
+        9.673
+      ],
+      [
+        "ⲉⲙⲁⲧⲉ",
+        1,
+        9.38
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        7.713
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        7.342
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        6.702
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.498
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ⲛ",
+        2,
+        5.224
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲁϩⲧⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲁϩⲧⲉ",
+          "ⲛ_1_pre_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲁϩⲧⲉ",
+          "ⲥⲉ_1_pre_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲁϩⲧⲉ",
+          "ⲣⲁϩⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲁϩⲧⲉ_0_node",
+          "ⲉϫⲙ_1_post_ⲣⲁϩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲣⲁϩⲧⲉ",
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6227,
+      "count": 3
+    }
+  },
+  "etym": {
+    "egy_num": "95500",
+    "egy_lemma": "rhd.t",
+    "demo_num": "d3538",
+    "demo_lemma": "rht",
+    "english": "caldron (of metal)",
+    "german": "Kessel (aus Metall)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3538"
+  }
+}

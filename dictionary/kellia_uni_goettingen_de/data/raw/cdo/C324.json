@@ -1,0 +1,346 @@
+{
+  "id": "C324",
+  "forms": [
+    {
+      "id": "CF1412",
+      "orth": "ⲃⲁⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3858,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF1413",
+      "orth": "ⲃⲁⲁⲃⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1414",
+      "orth": "ⲃⲁⲃⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1415",
+      "orth": "ⲃⲁⲃⲱ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1416",
+      "orth": "ⲃⲁⲃⲱⲱ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7789,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF1417",
+      "orth": "ⲃⲁⲃⲱ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1418",
+      "orth": "ⲃⲁⲃⲟⲧ†",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲃⲁⲃⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7576,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲃⲁⲃⲱ-",
+      "dialect": "A",
+      "id": "566.2"
+    },
+    {
+      "orth": "ⲃⲁⲃⲱⲱ⸗",
+      "dialect": "A",
+      "id": "566.3"
+    },
+    {
+      "orth": "ⲃⲁⲃⲟⲧ†",
+      "dialect": "A",
+      "id": "566.4"
+    },
+    {
+      "orth": "ⲃⲁⲃⲱ†",
+      "dialect": "A",
+      "id": "566.5"
+    },
+    {
+      "orth": "ⲃⲁⲃⲉ-",
+      "dialect": "A",
+      "id": "566.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Status nominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS357",
+      "bibliography": "CD 28b; CED 20; KoptHWb 20; DELC 24-25; ChLCS 7a"
+    },
+    {
+      "id": "CS358",
+      "bibliography": "CD 28b; KoptHWb 20; DELC 24-25; ChLCS 7a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲛⲟⲩⲡⲉϩⲙⲟⲩ ⲉⲣϣⲁⲛⲡⲉϩⲙⲟⲩ ⲇⲉ **ⲃⲁⲁⲃⲉ** ⲉⲧⲉⲧⲛⲛⲁϫⲟⲕⲣⲉϥ ϩⲛ ⲟⲩ . ⲕⲁϩⲙⲟⲩ ϩⲣⲁⲓ ⲛϩⲏⲧⲧⲏⲩⲧⲛ . ⲛⲧⲉⲧⲛⲣⲉⲓⲣⲏⲛⲏ ⲙⲛⲛⲉⲧⲛⲉⲣⲏⲩ .",
+      "english": "Salt is good, but if the salt has lost its saltiness, with what will you season it? Have salt in yourselves, and be at peace with one another.&apos;",
+      "source": "41_Mark_9",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲉϩⲙⲟⲩ **ⲃⲁⲁⲃⲉ** ⲉⲩⲛⲁⲙⲟⲗϩϥ ϩⲛⲟⲩ ⲙⲉϥⲣϣⲁⲩ ⲉⲧⲕⲟⲡⲣⲓⲁ · ⲟⲩⲇⲉ ⲉⲡⲕⲁϩ · ⲁⲗⲗⲁ ⲉϣⲁⲩⲛⲟϫϥ ⲉⲃⲟⲗ · ⲉⲧⲉⲡⲁⲓ ⲡⲉ ϫⲉⲟⲩⲙⲁⲕⲁⲣⲓⲟⲥ ⲡⲉ ⲯⲩⲭⲏ ⲛⲓⲙ' ⲉⲧⲛⲁϫⲓ ϩⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ · ⲁⲗⲗⲁ ⲉⲩϣⲁⲛⲡⲁⲣⲁⲃⲁ ⲛⲟⲩⲥⲟⲡ'ⲙⲉⲩⲣϣⲁⲩⲛⲕⲟⲧⲟⲩ ⲉⲡⲥⲱⲙⲁ ϫⲓⲛⲡⲉⲓⲛⲁⲩ · ⲟⲩⲇⲉ ⲉⲗⲁⲁⲩ ⲛϩⲱⲃ · ⲁⲗⲗⲁ ⲉϣⲁⲩⲛⲟϫⲟⲩ ⲉⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ'ⲛⲥⲉⲁⲛϩⲁⲗⲓⲥⲕⲉ ⲙⲙⲟⲟⲩ · ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ·",
+      "english": "“but if the salt becometh sterile, with what are they to salt it? It is fit neither for the dunghill nor for the earth; but they throw it away,'--that is: Blessed are all the souls which shall receive of the mysteries of the Ineffable; but if they once transgress, they are not fit to return to the body henceforth from this hour onwards nor for anything at all, but they are cast into the outer darkness and perish in that region.”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲕϯⲥⲟ ⲉⲧⲁϩⲓⲕⲱⲛ · ⲁⲕⲥⲱϣⲧ · ⲁⲕ**ⲃⲁⲃⲱⲱ**ⲧ · ⲁⲕϯϣⲓⲡⲉ ⲛⲁⲓ ·",
+      "english": "Thou didst not shew compassion upon My image, thou didst treat Me with contempt, thou didst hold Me in scorn, thou didst inflict disgrace upon Me",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲙⲟⲩ",
+        8,
+        20.299
+      ],
+      [
+        "ⲙⲟⲗϩ",
+        4,
+        20.106
+      ],
+      [
+        "ϫⲟⲕⲣ",
+        3,
+        18.446
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        6,
+        15.725
+      ],
+      [
+        "ⲡⲉ",
+        7,
+        11.608
+      ],
+      [
+        "ⲇⲉ",
+        6,
+        11.419
+      ],
+      [
+        "ⲛⲁ",
+        7,
+        10.788
+      ],
+      [
+        "ⲉ",
+        7,
+        9.917
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        3,
+        9.881
+      ],
+      [
+        "ⲩ",
+        4,
+        8.488
+      ],
+      [
+        "ⲛⲟϫ",
+        1,
+        8.091
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        7.701
+      ],
+      [
+        "ⲧⲙ",
+        1,
+        6.616
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        6.204
+      ],
+      [
+        "ϫⲉ",
+        2,
+        5.824
+      ],
+      [
+        "ϥ",
+        1,
+        1.2
+      ],
+      [
+        "ⲡ",
+        1,
+        1.175
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲃⲁⲁⲃⲉ",
+          4
+        ],
+        [
+          "ⲡⲉ_2_pre_ϩⲙⲟⲩ",
+          5
+        ],
+        [
+          "ϩⲙⲟⲩ_1_pre_ⲃⲁⲁⲃⲉ",
+          5
+        ],
+        [
+          "ⲃⲁⲁⲃⲉ_0_node",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_post_ⲙⲟⲗϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲃⲁⲁⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲣϣⲁⲛ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲡⲉ_2_pre_ϩⲙⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉ_2_pre_ϩⲙⲟⲩ",
+          "ϩⲙⲟⲩ_1_pre_ⲃⲁⲁⲃⲉ",
+          3
+        ],
+        [
+          "ϩⲙⲟⲩ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲃⲁⲁⲃⲉ_0_node",
+          2
+        ],
+        [
+          "ⲃⲁⲁⲃⲉ_0_node",
+          "ⲉ_1_post_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲁⲁⲃⲉ",
+          "ⲩ_3_post_ⲙⲟⲗϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲧⲙ_1_pre_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲧⲙ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲡⲉ_2_pre_ϩⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲙⲟⲩ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲇⲉ_1_pre_ⲃⲁⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_pre_ⲃⲁⲁⲃⲉ",
+          "ⲃⲁⲁⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3110,
+      "count": 10
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C11272",
+      "label": "ⲃⲁⲃⲉ-",
+      "pos": "N",
+      "gloss": "insipid, foolish"
+    },
+    {
+      "target": "C325",
+      "label": "ⲃⲁⲃⲉⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "boaster"
+    },
+    {
+      "target": "C328",
+      "label": "ⲃⲟⲟⲃⲉ",
+      "pos": "N",
+      "gloss": "bad"
+    },
+    {
+      "target": "C327",
+      "label": "ⲃⲱⲱⲃⲉ",
+      "pos": "N",
+      "gloss": "bad"
+    },
+    {
+      "target": "C326",
+      "label": "ⲙⲛⲧⲃⲁⲃⲉⲣⲱⲙⲉ",
+      "pos": "N",
+      "gloss": "boastfulness"
+    }
+  ],
+  "etym": {
+    "egy_num": "36660",
+    "egy_lemma": "ꜥbꜥb",
+    "english": "to boast; to become excited",
+    "german": "prahlen; aufgeregt sein",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/36660"
+  }
+}

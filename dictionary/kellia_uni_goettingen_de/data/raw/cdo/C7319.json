@@ -1,0 +1,129 @@
+{
+  "id": "C7319",
+  "forms": [
+    {
+      "id": "CF16697",
+      "orth": "ⲣⲉϥϫⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9331,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8086",
+      "bibliography": "CD 781b; KoptHWb 432; ChLCS 103b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲣϩⲁⲗ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        12.954
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        9.56
+      ],
+      [
+        "ⲟⲩⲟⲉⲓϣ",
+        1,
+        9.532
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        9.236
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        9.209
+      ],
+      [
+        "ⲏ",
+        1,
+        8.479
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        6.819
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8900,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7318",
+      "label": "ϫⲏⲣ",
+      "pos": "N",
+      "gloss": "examiner, spy"
+    },
+    {
+      "target": "C7316",
+      "label": "ϫⲱⲣ",
+      "pos": "V",
+      "gloss": "examine, study"
+    },
+    {
+      "target": "C7317",
+      "label": "ϫⲱⲣ",
+      "pos": "N",
+      "gloss": "examiner, spy"
+    }
+  ]
+}

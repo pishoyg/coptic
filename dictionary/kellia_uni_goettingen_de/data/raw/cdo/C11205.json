@@ -1,0 +1,144 @@
+{
+  "id": "C11205",
+  "forms": [
+    {
+      "id": "CF31099",
+      "orth": "ϩⲩⲗⲓⲕⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF31104",
+      "orth": "ϩⲩⲗⲓⲕⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7245,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31100",
+      "orth": "ϩⲏⲗⲓⲕⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31101",
+      "orth": "ϩⲩⲗⲓⲕⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7815,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31103",
+      "orth": "ϩⲩⲗⲓⲕⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31102",
+      "orth": "ϩⲩⲗⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2180,
+        "count": 26
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15769",
+      "bibliography": "DDGLC",
+      "cu_ID": "5950"
+    },
+    {
+      "id": "CS15770",
+      "bibliography": "DDGLC",
+      "cu_ID": "1515"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲟⲩⲉⲩⲫⲣⲟⲥⲩⲛⲏ ⲛⲛⲣⲱⲙⲉ ⲡⲉ ⲡⲏⲣⲡ ⲛ**ϩⲩⲗⲓⲕⲟⲥ** ⲡⲁⲓ ⲉⲩϣⲁⲛⲣϩⲟⲩⲟ ⲥⲱ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ϣⲁⲩϯϩⲉ · ⲁⲩⲱ ϣⲁⲣⲉⲟⲩⲙⲛⲧϣⲛⲁ ϣⲱⲡⲉ ⲛϩⲏⲧϥ · ⲉⲓⲉ ⲟⲩⲏⲣ ⲧⲉ ⲧⲉⲩⲫⲣⲟⲥⲩⲛⲏ ⲙⲛⲡⲣⲁϣⲉ ⲛⲛⲣⲱⲙⲉ ⲛⲧⲁⲩⲥⲱ ⲉⲃⲟⲗ ϩⲛⲧⲡⲏⲅⲏ ⲙⲙⲟⲟⲩ ⲛⲱⲛϩ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ ·",
+      "english": "If material wine be the joy of men, the which when they drink it to excess causeth them to become drunk, and there is arrogance therein, how very much more joy and gladness will those men have who have drunk of the Fountain of living water, the Christ!",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣϩⲟⲩⲟ",
+        2,
+        15.983
+      ],
+      [
+        "ⲏⲣⲡ",
+        2,
+        14.403
+      ],
+      [
+        "ⲥⲱ",
+        2,
+        14.147
+      ],
+      [
+        "ⲉⲩϣⲁⲛ",
+        2,
+        14.063
+      ],
+      [
+        "ⲡⲁⲓ",
+        2,
+        10.577
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        8.508
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲩⲗⲓⲕⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6791,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "3339",
+    "grl_lemma": "ὑλικός",
+    "grl_meaning": "of or belonging to matter, material",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1848a"
+  }
+}

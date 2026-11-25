@@ -1,0 +1,115 @@
+{
+  "id": "C3688",
+  "forms": [
+    {
+      "id": "CF9290",
+      "orth": "ⲥⲓⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "note": "Genus fraglich",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4192",
+      "bibliography": "CD 353b; KoptHWb 194; ChLCS 50a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲓⲏⲥⲟⲩⲥ ϫⲉⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲉⲓⲱⲧ ⲉⲥⲧⲛⲧⲱⲛ ⲉⲩⲥϩⲓⲙⲉ ⲁⲥϫⲓ ⲛⲟⲩⲕⲟⲩⲓ ⲛ**ⲥⲁⲓⲣ** ⲁⲥϩⲟⲡϥ ϩⲛⲟⲩϣⲱⲧⲉ ⲁⲥⲁⲁϥ ⲛϩⲛⲛⲟϭ ⲛⲛⲟⲉⲓⲕ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲉϩⲟⲟⲩ ⲉⲣⲉⲛⲁϩⲓⲟⲟⲩⲉ ϩⲁⲧⲉ ⲛ**ⲥⲁⲓⲣⲉ** ⲁⲩⲱ ⲉⲣⲉⲛⲁⲧⲟⲟⲩⲉ ⲥⲱⲕ ⲙⲡⲉⲣⲱⲧⲉ",
+      "english": "when my ways were moistened with butter, and the mountains flowed for me with milk.",
+      "source": "Job 29",
+      "urn": "urn:cts:copticLit:ot.job.coptot:29",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲛⲁⲟⲩⲉⲙ**ⲥⲁⲓⲣⲉ** ϩⲓⲉⲃⲓⲱ ⲙⲡⲁⲧϥⲉⲓⲙⲉ ⲉⲡⲉⲣϫⲡⲡⲉⲧϩⲟⲟⲩ ⲉⲥⲉⲧⲡⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+      "english": "Butter and honey shall he eat, before he knows either to prefer evil or choose the good.",
+      "source": "Isaiah 7",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲏⲥ",
+        1,
+        13.718
+      ],
+      [
+        "ϩⲉⲓ",
+        1,
+        11.179
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        10.384
+      ],
+      [
+        "ⲉϧⲣⲏⲓ",
+        1,
+        10.099
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲓⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3189,
+      "count": 10
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "854835",
+    "egy_lemma": "zr",
+    "english": "[a disease]",
+    "german": "[eine Krankheit]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854835"
+  }
+}

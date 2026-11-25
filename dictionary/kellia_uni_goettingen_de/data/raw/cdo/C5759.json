@@ -1,0 +1,88 @@
+{
+  "id": "C5759",
+  "forms": [
+    {
+      "id": "CF13505",
+      "orth": "ⲇⲓϣⲃⲉⲓⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6437",
+      "bibliography": "CD 552b-553a; ChLCS 75b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5756",
+      "label": "ϣⲃⲓⲱ",
+      "pos": "N",
+      "gloss": "change, exchange, requital"
+    },
+    {
+      "target": "C5755",
+      "label": "ϣⲃⲧⲥ",
+      "pos": "N",
+      "gloss": "change"
+    },
+    {
+      "target": "C12101",
+      "label": "ϣⲉⲃⲓⲟ",
+      "pos": "V",
+      "gloss": "change"
+    },
+    {
+      "target": "C5751",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "V",
+      "gloss": "change, be changed, separate"
+    },
+    {
+      "target": "C5752",
+      "label": "ϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "change, difference"
+    },
+    {
+      "target": "C5754",
+      "label": "ϣⲟⲃⲓ",
+      "pos": "N",
+      "gloss": "changed, disguised person, hypocrite, actor"
+    },
+    {
+      "target": "C5758",
+      "label": "ϯϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "reward, requite"
+    },
+    {
+      "target": "C5753",
+      "label": "ⲁⲧϣⲓⲃⲉ",
+      "pos": "N",
+      "gloss": "unchanging, unaltered"
+    },
+    {
+      "target": "C5757",
+      "label": "ⲣϣⲃⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "be instead, replace"
+    }
+  ]
+}

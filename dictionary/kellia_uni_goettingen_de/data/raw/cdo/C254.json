@@ -1,0 +1,108 @@
+{
+  "id": "C254",
+  "forms": [
+    {
+      "id": "CF1058",
+      "orth": "ⲁϣⲉⲃⲉⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10290,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1059",
+      "orth": "ⲁϣⲉⲩⲃⲉⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS286",
+      "bibliography": "CD 23α; CED 15-16; KoptHWb 15; DELC 20"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲇⲉ **ⲁϣⲉⲃⲉⲛ** ⲟⲩⲇⲉ ⲉϥⲙⲟⲩϯ ⲉⲃⲟⲗ ϧⲉⲛⲧⲛⲉϫⲓ ⲟⲩⲇⲉ ⲉϥϫⲟⲩϣⲧ ⲉϩⲁⲛⲙⲏⲓⲛⲓ ⲟⲩⲇⲉ ⲉϥϣⲓⲛⲓ ⲛⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ",
+      "english": "a sorcerer employing incantation, one who has in him a divining spirit, and observer of signs, questioning the dead.",
+      "source": "05_Deuteronomium_18",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:18",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ϩⲓⲕ",
+        1,
+        17.373
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        2,
+        12.76
+      ],
+      [
+        "ⲙⲟⲩϯ",
+        1,
+        10.473
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁϣⲉⲃⲉⲛ",
+          1
+        ],
+        [
+          "ⲁϣⲉⲃⲉⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲁϣⲉⲃⲉⲛ",
+          "ⲁϣⲉⲃⲉⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9747,
+      "count": 1
+    }
+  },
+  "type": "foreign"
+}

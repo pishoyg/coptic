@@ -1,0 +1,148 @@
+{
+  "id": "C289",
+  "forms": [
+    {
+      "id": "CF1209",
+      "orth": "ⲙⲛⲧϣⲁⲣⲁϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17180,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1210",
+      "orth": "ⲙⲉⲧϣⲁⲣⲁϩⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS321",
+      "bibliography": "CD 24b; ChLCS 6b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲛⲟⲩϣⲏⲛ ⲛⲱⲛϩ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁⲣⲡⲟⲥ ⲛⲧⲇⲓⲕⲁⲓⲟⲥⲩⲛⲏ ⲥⲉⲛⲁⲙⲟⲟⲩⲧ ⲇⲉ ⲛⲛⲉⲯⲩⲭⲏ ⲛⲙⲡⲁⲣⲁⲛⲟⲙⲟⲥ ϩⲛⲟⲩ**ⲙⲛⲧϣⲁⲣⲁϩⲉ**",
+      "english": "Out of the fruit of righteousness grows a tree of life; but the souls of transgressors are cut off before their time.",
+      "source": "Proverbs 11",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲅⲓⲥ",
+        1,
+        15.691
+      ],
+      [
+        "ⲡⲁⲣⲁⲛⲟⲙⲟⲥ",
+        1,
+        14.74
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        10.896
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧϣⲁⲣⲁϩⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16785,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C288",
+      "label": "ϣⲁⲣⲁϩⲉ",
+      "pos": "N",
+      "gloss": "short-lived, ephemeral"
+    },
+    {
+      "target": "C284",
+      "label": "ⲁϩⲉ",
+      "pos": "N",
+      "gloss": "length, limit of life"
+    },
+    {
+      "target": "C287",
+      "label": "ⲉⲣⲛⲉⲃⲁϩⲓ",
+      "pos": "V",
+      "gloss": "live a long life, be long-lived"
+    },
+    {
+      "target": "C286",
+      "label": "ⲙⲉⲧⲛⲉⲃⲁϩⲓ",
+      "pos": "N",
+      "gloss": "longevity"
+    },
+    {
+      "target": "C290",
+      "label": "ⲣϣⲁⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "be short-lived"
+    },
+    {
+      "target": "C285",
+      "label": "ⲣⲁϩⲉ",
+      "pos": "V",
+      "gloss": "pass/spend one's life"
+    }
+  ]
+}

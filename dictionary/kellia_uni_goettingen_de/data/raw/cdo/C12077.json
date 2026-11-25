@@ -1,0 +1,43 @@
+{
+  "id": "C12077",
+  "forms": [
+    {
+      "id": "CF33084",
+      "orth": "ϣⲱⲗϩⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17078",
+      "bibliography": "CD 562a; KoptHWB 312"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5856",
+      "label": "ϣⲱⲗϩ",
+      "pos": "V",
+      "gloss": "set mark, trace line"
+    },
+    {
+      "target": "C5857",
+      "label": "ϣⲱⲗϩ",
+      "pos": "N",
+      "gloss": "mark, impression"
+    },
+    {
+      "target": "C5858",
+      "label": "ϯϣⲱⲗϩ",
+      "pos": "V",
+      "gloss": "set mark, boundary"
+    }
+  ]
+}

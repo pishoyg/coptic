@@ -1,0 +1,56 @@
+{
+  "id": "C330",
+  "forms": [
+    {
+      "id": "CF1439",
+      "orth": "ⲣⲉϥⲃⲉⲃⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1440",
+      "orth": "ⲣⲉϥⲃⲉⲃⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS366",
+      "bibliography": "CD 29a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C332",
+      "label": "ϫⲓⲛⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "pronouncing (of a name)"
+    },
+    {
+      "target": "C329",
+      "label": "ⲃⲉⲉⲃⲉ",
+      "pos": "V",
+      "gloss": "bubble, well up; pour forth, bring forth, rain down"
+    },
+    {
+      "target": "C331",
+      "label": "ⲙⲉⲧⲣⲉϥⲃⲉⲃⲓ",
+      "pos": "N",
+      "gloss": "outpouring"
+    }
+  ]
+}

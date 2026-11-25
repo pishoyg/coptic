@@ -1,0 +1,118 @@
+{
+  "id": "C11098",
+  "forms": [
+    {
+      "id": "CF30618",
+      "orth": "ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30619",
+      "orth": "ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9710,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15526",
+      "bibliography": "DDGLC",
+      "cu_ID": "3767"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱ ⲧⲁⲥⲱⲛⲉ ⲙⲁⲣⲓⲁ ϫⲉⲁⲓⲛⲁⲩ ⲉⲡⲉⲧⲣⲟⲥ ⲙⲙⲁⲩ ⲡⲛⲟϭ ⲛ**ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ** ⲛⲓⲏⲥⲟⲩⲥ ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 1 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:3-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        1,
+        9.544
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        8.973
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ_0_node",
+          "ⲛ_1_post_ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲉⲣⲙⲉⲛⲉⲩⲧⲏⲥ",
+          "ⲓⲏⲥⲟⲩⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 9279,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3089",
+    "grl_lemma": "ἑρμηνευτής",
+    "grl_meaning": "interpreter",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 690b"
+  }
+}

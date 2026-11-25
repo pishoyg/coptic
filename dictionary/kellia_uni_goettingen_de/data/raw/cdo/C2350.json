@@ -1,0 +1,133 @@
+{
+  "id": "C2350",
+  "forms": [
+    {
+      "id": "CF6441",
+      "orth": "ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    },
+    {
+      "id": "CF6442",
+      "orth": "ⲛⲁ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 195.09,
+        "rank": 8,
+        "count": 30780
+      }
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 415.36,
+        "rank": 2,
+        "count": 35227
+      }
+    },
+    {
+      "orth": "ⲛⲁ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 161.39,
+        "rank": 12,
+        "count": 13688
+      }
+    },
+    {
+      "orth": "ⲛⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 30.96,
+        "rank": 46,
+        "count": 2626
+      }
+    },
+    {
+      "orth": "ⲛⲏ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 9.42,
+        "rank": 129,
+        "count": 1487
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Status nominalis",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS2715",
+      "bibliography": "CD 216ab; CED 102-103; KoptHWb 115; DELC 134"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲏⲧⲥ ⲛϯϩⲟ ⲉⲣⲟϥ ϫⲉⲛⲧⲉϥϣⲉ **ⲛⲁ**ϥ ⲉⲃⲟⲗ ϧⲉⲛⲛⲟⲩⲑⲟϣ",
+      "english": "They began to beg him to depart from their region.",
+      "source": "Bohairic Gospel of Mark 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲁⲁⲩ **ⲛ**ⲛϩⲏⲕⲉ ·",
+      "english": "he gave them to the poor.",
+      "source": "Apophthegmata Patrum Sahidic 026: Cassian 7 (68)",
+      "urn": "urn:cts:copticLit:ap.26.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ **ⲛⲁ**ϥ ⲛⲟⲩⲁⲓ ⲉϥϣⲏⲗ ⲉⲃⲟⲗ ⲉⲩϥⲁⲓ ⲙⲙⲟϥ ⲛϫⲉⲇ ⲛⲣⲱⲙⲓ",
+      "english": "Four people came, carrying a paralytic to him.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲁⲙⲟⲟϣⲉ ⲉⲡϫⲓⲥⲉ **ⲙⲙⲟ**ⲓ",
+      "english": "to move toward my exultation.",
+      "source": "Apophthegmata Patrum Sahidic 136",
+      "urn": "urn:cts:copticLit:ap.136.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲑⲟⲩⲁⲃ ⲇⲉ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲡⲉϫⲁϥ ϫⲉⲁⲛⲓⲧϥ **ⲛⲏ**ⲓ ⲉϧⲟⲩⲛ .",
+      "english": "Then Apa Shenoute said, ‘Bring him to me.’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲥⲟⲛ **ⲛⲁ**ϥ ϫⲉⲉⲧⲃⲉⲟⲩ ·",
+      "english": "The brother said to him, 'Why?'",
+      "source": "Apophthegmata Patrum Sahidic 133: N 303",
+      "urn": "urn:cts:copticLit:ap.133.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "etym": {
+    "egy_num": "78870",
+    "egy_lemma": "n",
+    "demo_num": "d2870",
+    "demo_lemma": "n",
+    "english": "[preposition]",
+    "german": "[Präposition]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/78870",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2870"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "id": "C3748",
+  "forms": [
+    {
+      "id": "CF9416",
+      "orth": "ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5690,
+        "count": 4
+      }
+    },
+    {
+      "orth": "ⲥⲁⲣⲁϭⲱϣ",
+      "dialect": "S",
+      "id": "1480.1"
+    },
+    {
+      "orth": "ⲥⲁⲣⲁⲛϭⲱϣ",
+      "dialect": "S",
+      "id": "1480.2"
+    },
+    {
+      "orth": "ⲥⲁⲗⲁϭⲱⲱϣ",
+      "dialect": "S",
+      "id": "1480.3"
+    },
+    {
+      "orth": "ϭⲁⲗⲁⲛϭⲱϣ",
+      "dialect": "S",
+      "id": "1480.4"
+    },
+    {
+      "orth": "ⲥⲁⲣⲁϫⲱϥ",
+      "dialect": "B",
+      "id": "1480.5"
+    },
+    {
+      "orth": "ϧⲁⲣⲁϭⲱⲟⲩⲧⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11350,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϭⲁⲗⲁⲛϭⲱϣ",
+      "dialect": "F",
+      "id": "1480.7"
+    },
+    {
+      "orth": "ϭⲁⲛϭⲱϣ",
+      "dialect": "F",
+      "id": "1480.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4258",
+      "bibliography": "CD 358a; CED 163; KoptHWb 196, 540; DELC 197; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲡ**ⲥⲁⲣⲁϭⲱⲟⲩϣ** ϫⲉⲡⲁⲓ ⲙⲉⲛ ⲥⲁⲧⲃⲉ ⲉϩⲣⲁⲓ ⲣⲁⲧϥ ⲇⲉ ⲡⲟⲧⲥ ⲁⲛ ⲡⲁⲓ ⲟⲩⲁⲕⲁⲑⲁⲣⲧⲟⲛ ⲛⲏⲧⲛ ⲡⲉ",
+      "english": "And the hare, because it does not chew the cud, and does not divide the hoof, this is unclean to you.",
+      "source": "Leviticus 11",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:11",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛ**ⲥⲁⲣⲁϭⲱⲟⲩϣ** ⲉⲩϩⲉⲑⲛⲟⲥ ⲡⲉ ⲛϭⲱⲃ ⲛⲁⲓ ⲛⲧⲁⲩⲧⲁⲙⲓⲉⲛⲉⲩⲏⲓ ϩⲛⲙⲡⲉⲧⲣⲁ",
+      "english": "the rabbits also are a feeble race, who make their houses in the rocks.",
+      "source": "Proverbs 30",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕϯ ⲛⲧⲟⲟⲩ ⲉⲧϫⲟⲥⲉ ⲛⲛⲓⲉⲉⲓⲟⲩⲗ ⲙⲡⲉⲧⲣⲁ ⲙⲙⲁ ⲙⲡⲱⲧ ⲛⲛ**ⲥⲁⲣⲁϭⲱⲟⲩϣ**",
+      "english": "The high mountains are a refuge for the stags, and the rock for the rabbits.",
+      "source": "Psalms 103",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲃⲉ",
+        2,
+        18.139
+      ],
+      [
+        "ⲡⲇⲁⲥⲩⲡⲟⲩⲥ",
+        1,
+        17.598
+      ],
+      [
+        "ϣⲱⲙ",
+        1,
+        12.898
+      ],
+      [
+        "ⲁⲩⲱ",
+        5,
+        10.713
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        9.756
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        9.036
+      ],
+      [
+        "ϩⲉⲑⲛⲟⲥ",
+        1,
+        8.951
+      ],
+      [
+        "ⲕⲁ",
+        1,
+        8.843
+      ],
+      [
+        "ⲡ",
+        4,
+        8.497
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.508
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.146
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.577
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.164
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.083
+      ],
+      [
+        "ⲕ",
+        1,
+        4.853
+      ],
+      [
+        "ⲩ",
+        1,
+        3.81
+      ],
+      [
+        "ⲙ",
+        1,
+        3.351
+      ],
+      [
+        "ⲁ",
+        1,
+        3.044
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲣⲁϭⲱⲟⲩϣ_0_node",
+          4
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          2
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          "ⲡ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          "ⲥⲁⲣⲁϭⲱⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲁⲣⲁϭⲱⲟⲩϣ",
+          "ⲥⲁⲣⲁϭⲱⲟⲩϣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5253,
+      "count": 4
+    }
+  },
+  "type": "foreign"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "C987",
+  "forms": [
+    {
+      "id": "CF3323",
+      "orth": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 2.69,
+        "rank": 371,
+        "count": 228
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1147",
+      "bibliography": "CD 86a; KoptHWb 52"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ **ϩⲏⲡⲡⲉ **ⲓⲥ**** ⲟⲩⲙⲟⲕⲓ ⲛⲧⲉⲟⲩϫⲉⲣⲏϫ .",
+      "english": "And behold a fowler's basket.",
+      "source": "30_Amos_08",
+      "urn": "urn:cts:copticLit:ot.amos.bohairic_ed:08",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ϫⲉϩⲏⲡⲡⲉ **ⲓⲥ**** ⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ ⲁⲩϭⲱⲗⲕ ⲛⲛⲟⲩⲫⲓϯ ⲁⲩⲥⲟⲃϯ ⲛϩⲁⲛⲥⲟⲑⲛⲉϥ ⲉϧⲣⲏⲓ ⲉⲛⲟⲩⲙⲟⲕⲓ ⲉⲡϫⲓⲛϭⲟⲗⲕⲟⲩ ϧⲉⲛⲡⲉⲧϩⲏⲡ ⲛⲛⲏⲉⲧⲥⲟⲩⲧⲱⲛ ϧⲉⲛⲡⲟⲩϩⲏⲧ .",
+      "english": "Flee to the mountains as a sparrow?",
+      "source": "19_Psalmi_10",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁϥⲧⲱⲛϥ ⲁϥϣⲉ ⲛⲁϥ ⲟⲩⲟϩ **ϩⲏⲡⲡⲉ **ⲓⲥ**** ⲟⲩⲣⲱⲙⲓ ⲛⲉⲑⲱϣ ⲛⲥⲓⲟⲩⲣ ⲛⲣⲉⲙⲛϫⲟⲙ ⲛⲕⲁⲛⲇⲁⲕⲏⲥ ⲛⲧⲉϯⲟⲩⲣⲱ ⲛⲧⲉⲛⲓⲉⲑⲁⲩϣ ⲫⲁⲓ ⲛⲁϥⲭⲏ ϩⲓϫⲉⲛⲧⲉⲥⲅⲁⲍⲁ ⲧⲏⲣⲥ ⲛⲉⲁϥⲓ ⲡⲉ ⲉⲟⲩⲱϣⲧ ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ .",
+      "english": "He arose and went; and behold, there was a man of Ethiopia, a eunuch of great authority under Candace, queen of the Ethiopians, who was over all her treasure, who had come to Jerusalem to worship.",
+      "source": "05_Acts_08",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:08",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 2.69,
+      "rank": 318,
+      "count": 228
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12184",
+      "label": "ϩⲉⲓ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C982",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before pl. nouns or pronouns)"
+    },
+    {
+      "target": "C983",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C980",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C981",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before nouns)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "C4542",
+  "forms": [
+    {
+      "id": "CF11041",
+      "orth": "ⲧⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18380,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj.?"
+  },
+  "senses": [
+    {
+      "id": "CS5130",
+      "bibliography": "CD 433a; KoptHWb 246; ChLCS 61a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϣⲱⲡⲉ ⲇⲉ ⲛϭⲓⲟⲩⲛⲟϭⲟⲩⲟⲩ ⲛⲣⲓⲙⲉ ϩⲛⲧⲙⲏⲧⲉ ⲛ**ⲧⲥ**ⲥⲟⲟⲩϩⲥ ⲧⲏⲣⲥ ϩⲓⲟⲩⲥⲟⲡ ⲁⲩⲱ ⲁⲩϫⲓϣⲕⲁⲕ ⲉϩⲣⲁⲓ ⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲩⲛⲟⲩⲧⲉ ϩⲛⲟⲩⲛⲟϭ ⲛⲥⲙⲏ",
+      "english": "Then there was great weeping with one consent in the midst of the assembly; and they cried unto the Lord God with a loud voice.",
+      "source": "Judith 7",
+      "urn": "urn:cts:copticLit:ot.jdt.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲟⲟⲩϩⲥ",
+        1,
+        14.87
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        10.72
+      ],
+      [
+        "ϩⲓ",
+        1,
+        9.231
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17998,
+      "count": 1
+    }
+  }
+}

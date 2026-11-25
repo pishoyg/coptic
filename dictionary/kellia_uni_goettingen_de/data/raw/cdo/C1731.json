@@ -1,0 +1,315 @@
+{
+  "id": "C1731",
+  "forms": [
+    {
+      "id": "CF5010",
+      "orth": "ⲗⲟϥⲗϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8077,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF5011",
+      "orth": "ⲗⲟϥⲗⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4589,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF5012",
+      "orth": "ⲗⲟⲃⲗⲉϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16864,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF5013",
+      "orth": "ⲗⲟϥⲗⲃ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲱϥ⸗",
+      "dialect": "S",
+      "id": "1012.1"
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲱϥ†",
+      "dialect": "S",
+      "id": "1012.2"
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲟϥⲧ†",
+      "dialect": "S",
+      "id": "1012.3"
+    },
+    {
+      "orth": "ⲗⲟϥⲗⲉϥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6480,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲱϥ⸗",
+      "dialect": "B",
+      "id": "1012.5"
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲱϥ†",
+      "dialect": "B",
+      "id": "1012.6"
+    },
+    {
+      "orth": "ⲗⲉϥⲗⲱϥⲧ†",
+      "dialect": "B",
+      "id": "1012.7"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2007",
+      "bibliography": "CD 148b; ChLCS 22b"
+    },
+    {
+      "id": "CS2008",
+      "bibliography": "CD 148b; ChLCS 22b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲥⲁⲣⲝ ⲛⲓⲙ ⲛⲣⲱⲙⲉ ⲛⲧⲁⲩϣⲱⲡⲉ ⲉⲃⲟⲗ ϩⲙⲡⲕⲁϩ · ⲛⲉⲛⲧⲁⲩ**ⲗⲟϥⲗϥ** ⲉⲃⲟⲗ ⲧⲏⲣⲟⲩ ⲥⲉⲛⲁⲥⲱⲧⲙ ⲉⲡⲉϩⲣⲟⲟⲩ ⲛⲧⲥⲁⲗⲡⲓⲅⲝ ⲛⲥⲉⲱⲛϩ ⲧⲏⲣⲟⲩ ·",
+      "english": "Then all the flesh of men who have come into being from the earth, and who have all turned to corruption, shall hear the sound of the trumpet, and they all shall come to life.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ⲇⲉ ⲙⲡϫⲏϭⲉ ⲉϣⲁϥ**ⲗⲟϥⲗϥ** ⲉⲃⲟⲗ ⲙⲛⲡⲙⲁⲣⲙⲁⲣⲟⲛ ⲉϣⲁⲩⲧⲁⲕⲟ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ ⲉⲧⲃⲉⲡⲁⲓ ⲧⲉⲧⲛⲁⲉⲓⲙⲉ ⲉⲣⲟⲟⲩ ϫⲉϩⲉⲛⲛⲟⲩⲧⲉ ⲁⲛ ⲛⲉ ⲛⲧⲟⲟⲩ ⲇⲉ ⲥⲉⲛⲁⲟⲩⲟⲙⲟⲩ ⲁⲩⲱ ⲙⲛⲛⲥⲁⲛⲁⲓ ⲥⲉⲛⲁϣⲱⲡⲉ ⲛⲟⲩⲛⲟϭⲛⲉϭ ϩⲛⲧⲉⲭⲱⲣⲁ",
+      "english": "And ye shall know them to be no gods by the bright purple that rotteth upon them: and they themselves afterward shall be eaten, and shall be a reproach in the country.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲛⲧⲉⲛⲉϥⲥⲁⲣⲝ **ⲗⲟⲃⲗⲉϥ** ⲁϥⲟⲩⲉⲛϩⲛⲉϥⲕⲉⲉⲥ ⲉⲃⲟⲗ ⲉⲩϣⲟⲩⲉⲓⲧ",
+      "english": "until his flesh shall be consumed, and he shall shew his bones bare.",
+      "source": "Job 33",
+      "urn": "urn:cts:copticLit:ot.job.coptot:33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲁⲣⲙⲁⲣⲟⲛ",
+        1,
+        19.013
+      ],
+      [
+        "ϫⲏϭⲉ",
+        1,
+        13.926
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        7.88
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.761
+      ],
+      [
+        "ⲉⲛⲧ",
+        1,
+        6.608
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.498
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        6.279
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.059
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ϥ",
+        1,
+        2.937
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲗⲟϥⲗϥ_0_node",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲗⲟϥⲗϥ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲗⲟϥⲗϥ",
+          "ⲩ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲗⲟϥⲗϥ",
+          "ⲗⲟϥⲗϥ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟϥⲗϥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲗⲟϥⲗϥ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲗⲟϥⲗϥ",
+          "ⲧⲏⲣ_1_post_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲗⲟϥⲗϥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ⲗⲟϥⲗϥ",
+          "ϥ_1_pre_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲗⲟϥⲗϥ",
+          "ⲗⲟϥⲗϥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲗⲟϥⲗϥ",
+          "ⲙⲛ_1_post_ⲗⲟϥⲗϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ⲗⲟϥⲗϥ",
+          "ⲡ_2_post_ⲙⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6048,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1734",
+      "label": "ⲗⲉϥⲗⲓϥⲉ",
+      "pos": "N",
+      "gloss": "what drops off"
+    },
+    {
+      "target": "C1732",
+      "label": "ⲗⲟϥⲗϥ",
+      "pos": "N",
+      "gloss": "corruption"
+    },
+    {
+      "target": "C1733",
+      "label": "ⲗⲟϥⲗϥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "mortify, become rotten, perish; destroy"
+    }
+  ]
+}

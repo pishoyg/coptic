@@ -1,0 +1,106 @@
+{
+  "id": "C2838",
+  "forms": [
+    {
+      "id": "CF7524",
+      "orth": "ⲡⲱⲱⲛⲉ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3246",
+      "bibliography": "CD 264ab"
+    },
+    {
+      "id": "CS3247",
+      "bibliography": "CD 264b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ **ⲛⲧⲁⲩⲡⲱⲱⲛⲉ **ⲉ**ⲡⲕⲉⲁⲓⲱⲛ** ϩⲓⲧⲙⲡⲟⲩⲣⲟⲧ ⲛⲧⲁⲩⲛⲁⲩ ⲉⲣⲟϥ · ⲙⲉⲩⲣⲡⲙⲉⲉⲩⲉ ⲣⲱ ϫⲉⲟⲩⲛⲕⲟⲥⲙⲟⲥ · ϣⲟⲟⲡ ·",
+      "english": "And if they are transferred to another world through the joy which they have seen they do not even remember that the world existeth.''",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲣⲉⲡⲡⲟⲣⲛⲓⲟⲛ ⲛϩⲣⲁⲁⲃ **ⲡⲱⲱⲛⲉ **ⲉ**ⲩⲑⲩⲥⲓⲁⲥⲧⲏⲣⲓⲟⲛ** ϩⲛⲧⲙⲛⲧⲙⲁⲓϣⲙⲙⲟ ·",
+      "english": "He made the brothel of Rahab (Joshua 2:1) to be changed into an orderly hospital for the reception of strangers.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲓⲙ ⲛⲣⲉϥⲧⲱⲣⲡ ⲏ ⲛϫⲁⲥⲓϩⲏⲧ ⲡⲉⲧⲛⲁⲛⲁⲩ ⲉⲧⲙⲛⲧⲥⲉⲙⲛⲟⲥ ⲙⲡⲉⲩⲃⲓⲟⲥ **ⲉⲙⲉϥⲡⲱⲱⲛⲉ **ⲉ**ⲡⲉⲧⲥⲟⲩⲧⲱⲛ** ·",
+      "english": "What plunderer, or what arrogant man is there, who, in contemplating the holiness of their lives, will not betake himself to what is excellent?",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2845",
+      "label": "ϭⲓⲛⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "changing, alteration"
+    },
+    {
+      "target": "C2841",
+      "label": "ⲁⲧⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "immovable, unchangeable"
+    },
+    {
+      "target": "C2842",
+      "label": "ⲙⲛⲧⲁⲧⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "unchangeableness"
+    },
+    {
+      "target": "C2844",
+      "label": "ⲙⲛⲧⲣⲉϥⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "changeableness"
+    },
+    {
+      "target": "C2837",
+      "label": "ⲡⲱⲱⲛⲉ",
+      "pos": "V",
+      "gloss": "change, turn; turn, alter, adapt, copy, transfer"
+    },
+    {
+      "target": "C2840",
+      "label": "ⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "removal, change, death"
+    },
+    {
+      "target": "C2839",
+      "label": "ⲡⲱⲱⲛⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "move out, go forth; carry out, remove"
+    },
+    {
+      "target": "C2846",
+      "label": "ⲡⲱⲱⲛⲉⲥ",
+      "pos": "N",
+      "gloss": "movement"
+    },
+    {
+      "target": "C2843",
+      "label": "ⲣⲉϥⲡⲱⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "changeable person"
+    }
+  ]
+}

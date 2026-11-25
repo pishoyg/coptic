@@ -1,0 +1,202 @@
+{
+  "id": "C4402",
+  "forms": [
+    {
+      "id": "CF10755",
+      "orth": "ϩⲓⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14865,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF10756",
+      "orth": "ϩⲓⲧⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4985",
+      "bibliography": "CD 259b; ChLCS 59b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲣⲟ",
+        1,
+        13.448
+      ],
+      [
+        "ⲓⲟⲣⲇⲁⲛⲏⲥ",
+        1,
+        12.969
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        10.976
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲣⲟ_1_post_ϩⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲕⲣⲟ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲓⲟⲣⲇⲁⲛⲏⲥ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲓ_6_post_ⲧⲟⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓⲡⲉ_0_node",
+          "ⲕⲣⲟ_1_post_ϩⲓⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲣⲟ_1_post_ϩⲓⲡⲉ",
+          "ⲙ_2_post_ⲕⲣⲟ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ⲕⲣⲟ",
+          "ⲡ_3_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲙ",
+          "ⲓⲟⲣⲇⲁⲛⲏⲥ_4_post_ⲡ",
+          1
+        ],
+        [
+          "ⲓⲟⲣⲇⲁⲛⲏⲥ_4_post_ⲡ",
+          "ⲡⲉⲓ_6_post_ⲧⲟⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14463,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4400",
+      "label": "ϩⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4396",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C4398",
+      "label": "ⲙⲁ ⲛⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "upper part of the house"
+    },
+    {
+      "target": "C4399",
+      "label": "ⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4397",
+      "label": "ⲡⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "the top"
+    },
+    {
+      "target": "C4395",
+      "label": "ⲣϩⲓⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4394",
+      "label": "ⲣⲥⲁⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4393",
+      "label": "ⲣⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4401",
+      "label": "ⲥⲁⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4392",
+      "label": "ⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "what is above, upper part"
+    }
+  ]
+}

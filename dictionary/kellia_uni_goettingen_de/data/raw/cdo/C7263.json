@@ -1,0 +1,118 @@
+{
+  "id": "C7263",
+  "forms": [
+    {
+      "id": "CF32130",
+      "orth": "ⲙⲛⲧⲣⲉϥϫⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20199,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF32129",
+      "orth": "ⲙⲛⲧⲣⲉϥϫⲛⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3909,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8018",
+      "bibliography": "CD 776ab"
+    },
+    {
+      "id": "CS8019",
+      "bibliography": "CD 776ab"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲩϫϩ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        9.372
+      ],
+      [
+        "ⲙ",
+        2,
+        8.351
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        1,
+        7.779
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛⲧⲣⲉϥϫⲛⲁⲩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C7259",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "delay, hesitate; laze, be sluggish"
+    },
+    {
+      "target": "C7260",
+      "label": "ϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sloth"
+    },
+    {
+      "target": "C7264",
+      "label": "ϭⲉⲛⲛⲉ",
+      "pos": "N",
+      "gloss": "sluggard, delayer"
+    },
+    {
+      "target": "C7261",
+      "label": "ⲁⲧϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "without delay, immediate"
+    },
+    {
+      "target": "C7262",
+      "label": "ⲣⲉϥϫⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "sluggard"
+    }
+  ]
+}

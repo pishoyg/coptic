@@ -1,0 +1,115 @@
+{
+  "id": "C500",
+  "forms": [
+    {
+      "id": "CF1996",
+      "orth": "ⲃⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11251,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF1997",
+      "orth": "ⲃⲁⲓⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS603",
+      "bibliography": "CD 41b-42a; CED 25; KoptHWb 26, 495; ChLCS 9a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟϥ ⲇⲉ ⲡϣⲱⲥ ⲉⲧⲙⲙⲁⲩ ⲁϥⲉⲓⲛⲉ ⲛϩⲉⲛϩⲁⲗⲱⲙ ϩⲛⲟⲩ**ⲃⲓⲣⲉ** · ⲡⲉϫⲁϥ ⲛⲁⲓ ϫⲉϯⲡⲁⲣⲁⲕⲁⲗⲉⲓ ⲙⲙⲟⲕ ϫⲓ ⲛⲛⲉⲓⲕⲟⲩⲓ ⲛϩⲁⲗⲱⲙ ⲛⲧⲟⲟⲧ ⲛⲅϫⲟⲟⲩ ⲉⲃⲟⲗ ⲉⲛⲉⲓⲣⲱⲙⲉ ⲉⲧϩⲁϩⲧⲏⲕ · ⲉⲡⲟⲥⲟⲛ · ⲁⲓⲛⲧⲟⲩ ⲙⲡⲣⲗⲩⲡⲏ ⲙⲙⲟⲓ ·",
+      "english": "Then that shepherd brought several cheeses in wicker baskets, and he said unto me, ' I entreat thee to take these few cheeses from my hands, and to send them to these men who are with thee in thy house ; since I have brought them, be not grieved at me.'",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲗⲱⲙ",
+        1,
+        17.276
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        8.745
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲓⲣⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10838,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C499",
+      "label": "ⲃⲓⲣ",
+      "pos": "N",
+      "gloss": "basket (of palme leaf)"
+    }
+  ],
+  "etym": {
+    "egy_num": "56380",
+    "egy_lemma": "br",
+    "demo_num": "d1662",
+    "demo_lemma": "bjr",
+    "english": "basket",
+    "german": "Korb",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/56380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1662"
+  }
+}

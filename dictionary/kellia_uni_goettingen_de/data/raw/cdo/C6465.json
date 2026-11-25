@@ -1,0 +1,128 @@
+{
+  "id": "C6465",
+  "forms": [
+    {
+      "id": "CF14958",
+      "orth": "ϩⲟⲃⲥⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17060,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7175",
+      "bibliography": "CD 660b; KoptHWb 356; ChLCS 88b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩϩⲟⲧⲉ ⲙⲛⲟⲩⲥⲧⲱⲧ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲁⲩⲱ ⲁⲟⲩⲕⲁⲕⲉ **ϩⲟⲃⲥⲧ**",
+      "english": "Fear and trembling came upon me, and darkness covered me.",
+      "source": "Psalms 54",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲕⲉ",
+        1,
+        11.601
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        9.116
+      ],
+      [
+        "ⲁ",
+        2,
+        8.044
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲃⲥⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲟⲃⲥⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲕⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲉ_1_pre_ϩⲟⲃⲥⲧ",
+          1
+        ],
+        [
+          "ϩⲟⲃⲥⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲟⲃⲥⲧ",
+          "ⲁ_1_pre_ϩⲟⲃⲥⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲟⲃⲥⲧ",
+          "ⲟⲩ_2_pre_ⲕⲁⲕⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲕⲁⲕⲉ",
+          "ⲕⲁⲕⲉ_1_pre_ϩⲟⲃⲥⲧ",
+          1
+        ],
+        [
+          "ⲕⲁⲕⲉ_1_pre_ϩⲟⲃⲥⲧ",
+          "ϩⲟⲃⲥⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16664,
+      "count": 1
+    }
+  }
+}

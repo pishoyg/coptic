@@ -1,0 +1,47 @@
+{
+  "id": "C3963",
+  "forms": [
+    {
+      "id": "CF9863",
+      "orth": "ⲥⲱϩ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲱⳉ",
+      "dialect": "A",
+      "id": "1533.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4499",
+      "bibliography": "CD 379b; CED 172; KoptHWb 210; DELC 204; ChLCS 53b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3964",
+      "label": "ⲣⲥⲱϩ",
+      "pos": "V",
+      "gloss": "be deaf"
+    }
+  ],
+  "etym": {
+    "egy_num": "143410",
+    "egy_lemma": "zẖ.y",
+    "demo_num": "dm3125",
+    "demo_lemma": "sh̭",
+    "english": "deaf person",
+    "german": "Tauber (Gehörloser)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/143410",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3125"
+  }
+}

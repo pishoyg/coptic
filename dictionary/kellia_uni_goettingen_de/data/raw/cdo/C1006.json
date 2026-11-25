@@ -1,0 +1,155 @@
+{
+  "id": "C1006",
+  "forms": [
+    {
+      "id": "CF31651",
+      "orth": "ⲉⲓⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7970,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31650",
+      "orth": "ⲉⲓⲟⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2729,
+        "count": 16
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1167",
+      "bibliography": "CD 88a; CED 49; KoptHWb 53, 505; ChLCS 15a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲁⲇⲁⲙ ⲡⲉⲛⲧⲁϥϯⲣⲁⲛ ⲉⲛⲧⲃⲛⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉⲑⲩⲣⲓⲟⲛ ⲙⲛⲛϩⲁⲗⲁⲁⲧⲉ ⲙⲛⲍⲱⲟⲛ ⲛⲓⲙ ⲉⲧⲕⲓⲙ ϩⲣⲁⲓ ϩⲓϫⲙⲡⲕⲁϩ ϣⲁϩⲣⲁⲓ ⲉⲛⲉⲧ ϩⲛⲙⲙⲟⲟⲩ ⲛ**ⲉⲓⲟⲩⲉ**· ⲁⲇⲁⲙ ⲡⲉ ⲛⲧⲁϥϯⲣⲁⲛ ⲉⲣⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲕⲁⲧⲁⲡⲟⲩⲉϩⲥⲁϩⲛⲉ ⲙⲡⲁⲉⲓⲱⲧ ⲛⲁⲅⲁⲑⲟⲥ ·",
+      "english": "Now it was Adam who gave names to all the cattle, and to the wild beasts and to the birds, and to every living creature which moveth upon the earth, and even to those which are in the waters; unto all of them did Adam give names, according to the command of My Good Father.",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲟⲩ",
+        2,
+        14.074
+      ],
+      [
+        "ⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ",
+        1,
+        13.114
+      ],
+      [
+        "ⲁⲇⲁⲙ",
+        1,
+        13.051
+      ],
+      [
+        "ϩⲓⲧⲛ",
+        1,
+        10.597
+      ],
+      [
+        "ⲙ",
+        3,
+        10.106
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲟⲩⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲟⲩⲉ_0_node",
+          "ⲙ_1_post_ⲉⲓⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲓⲟⲩⲉ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13231,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "22270",
+    "egy_lemma": "jwy",
+    "demo_num": "d776",
+    "demo_lemma": "jrwj",
+    "english": "to irrigate",
+    "german": "bewässern; ausgießen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/22270",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d776"
+  }
+}

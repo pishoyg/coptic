@@ -1,0 +1,164 @@
+{
+  "id": "C7726",
+  "forms": [
+    {
+      "id": "CF17517",
+      "orth": "ϭⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7927,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8591",
+      "bibliography": "CD 818a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲉϥⲥⲕⲁⲓ",
+        1,
+        18.013
+      ],
+      [
+        "ϣⲟⲙⲧⲉ",
+        1,
+        12.587
+      ],
+      [
+        "ⲛⲛⲁϩⲣⲙ",
+        1,
+        12.051
+      ],
+      [
+        "ⲛⲧⲱⲧⲛ",
+        1,
+        10.331
+      ],
+      [
+        "ⲉⲓⲥ",
+        1,
+        9.046
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        7.745
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.986
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲙⲉ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲙⲉ",
+          "ⲛ_1_pre_ϭⲙⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϭⲙⲉ",
+          "ϭⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7476,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C7725",
+      "label": "ϭⲙⲉ",
+      "pos": "N",
+      "gloss": "gardener, vine dresser, wine grower"
+    },
+    {
+      "target": "C7724",
+      "label": "ϭⲱⲙ",
+      "pos": "N",
+      "gloss": "garden; vineyard; property"
+    },
+    {
+      "target": "C7727",
+      "label": "ⲁⲧϭⲙⲉ",
+      "pos": "N",
+      "gloss": "untilled (soil, land)"
+    },
+    {
+      "target": "C7728",
+      "label": "ⲙⲛⲧϭⲙⲉ",
+      "pos": "N",
+      "gloss": "vinedressing, winegrowing, viniculture"
+    }
+  ]
+}

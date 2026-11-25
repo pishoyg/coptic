@@ -1,0 +1,82 @@
+{
+  "id": "C3253",
+  "forms": [
+    {
+      "id": "CF8392",
+      "orth": "ϭⲓ ⲉⲣϧⲟⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3716",
+      "bibliography": "CD 312a; KoptHWb 172"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3248",
+      "label": "ϫⲓⲛⲣⲱϧⲧ",
+      "pos": "N",
+      "gloss": "casting down"
+    },
+    {
+      "target": "C3252",
+      "label": "ϯ ⲛⲟⲩⲉⲣϧⲟⲧ",
+      "pos": "V",
+      "gloss": "inflict a wound, wound"
+    },
+    {
+      "target": "C3250",
+      "label": "ⲉⲣϧⲟⲧ",
+      "pos": "N",
+      "gloss": "blow, wound"
+    },
+    {
+      "target": "C3251",
+      "label": "ⲉⲣⲉⲣϧⲟⲧ",
+      "pos": "V",
+      "gloss": "be, become wound"
+    },
+    {
+      "target": "C3249",
+      "label": "ⲣⲁϩⲧⲥ",
+      "pos": "N",
+      "gloss": "striking, slaughter"
+    },
+    {
+      "target": "C3247",
+      "label": "ⲣⲉϥⲣⲱϧⲧ",
+      "pos": "N",
+      "gloss": "epileptic"
+    },
+    {
+      "target": "C3245",
+      "label": "ⲣⲱϩⲧ",
+      "pos": "V",
+      "gloss": "strike, be struck, fall; strike, cast, throw"
+    },
+    {
+      "target": "C3246",
+      "label": "ⲣⲱϩⲧ",
+      "pos": "N",
+      "gloss": "stroke, blow; epilepsy"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "id": "C4917",
+  "forms": [
+    {
+      "id": "CF11799",
+      "orth": "ϩⲗⲟⲩⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6648,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5542",
+      "bibliography": "CD 475a; KoptHWb 266, 364; ChLCS 66a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲟⲩϣⲁϫⲉ ⲇⲉ ⲣⲁⲧϭⲟⲙ ⲛⲛⲁϩⲣⲁⲕ ⲡⲁⲣⲁⲧⲉⲕϭⲟⲙ ϩⲛⲧⲙⲏⲧⲉ ⲛⲟⲩⲥⲛⲟϥ ⲙⲛⲟⲩⲥⲛⲟϥ ⲁⲩⲱ ϩⲛⲧⲙⲏⲧⲉ ⲛⲟⲩϩⲁⲡ ⲙⲛⲟⲩϩⲁⲡ ⲙⲛⲧⲙⲏⲧⲉ ⲛⲟⲩⲙⲛⲧⲗⲁ ⲙⲛⲟⲩⲗⲁ ⲏ ⲛⲧⲙⲏⲧⲉ ⲛⲟⲩ**ϩⲗⲟⲩⲱ** ⲙⲛⲟⲩϩⲗⲟⲩⲱ ϩⲉⲛϣⲁϫⲉ ⲛϩⲁⲡ ϩⲛⲛⲉⲕⲡⲟⲗⲓⲥ ⲉⲕⲉⲧⲱⲟⲩⲛ ⲛⲅⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡⲙⲁ ⲉⲧⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲡⲉⲕⲛⲟⲩⲧⲉ ⲛⲁⲥⲟⲧⲡϥ ⲛⲁϥ ⲉⲧⲣⲉⲩⲉⲡⲓⲕⲁⲗⲓ ⲙⲡⲉϥⲣⲁⲛ ⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ",
+      "english": "And if a matter shall be too hard for thee in judgment, between blood and blood, and between cause and cause, and between stroke and stroke, and between contradiction and contradiction, matters of judgment in your cities;",
+      "source": "Deuteronomy 17",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉϣⲁⲛⲟⲩ**ϩⲗⲟⲩⲱ** ⲇⲉ ϣⲱⲡⲉ ⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲣⲱⲙⲉ ⲛⲥⲉⲉⲓ ⲉϫⲓϩⲁⲡ ⲁⲩⲱ ⲛⲥⲉϯϩⲁⲡ ⲉⲣⲟⲟⲩ ⲛⲥⲉⲧⲙⲁⲓⲉⲡⲁⲥⲉⲃⲏⲥ ⲙⲛⲡⲇⲓⲕⲁⲓⲟⲥ ⲛⲥⲉⲧϭⲁⲓⲟϥ",
+      "english": "And if there should be a dispute between men, and they should come forward to judgment, and the judges judge, and justify the righteous, and condemn the wicked:",
+      "source": "Deuteronomy 25",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:25",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲗⲟⲩⲱ",
+        2,
+        20.428
+      ],
+      [
+        "ϣⲁⲛⲟⲩ",
+        1,
+        17.428
+      ],
+      [
+        "ϩⲁⲡ",
+        1,
+        10.05
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        9.814
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        9.635
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        9.489
+      ],
+      [
+        "ⲙⲏⲧⲉ",
+        1,
+        9.135
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲧ",
+        2,
+        7.486
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        6.886
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.439
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.401
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_2_pre_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲩⲱ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲩⲱ_1_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲗⲟⲩⲱ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϣⲁⲛⲟⲩ_1_pre_ϩⲗⲟⲩⲱ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_2_pre_ϩⲗⲟⲩⲱ",
+          "ϩⲗⲟⲩⲱ_0_node",
+          1
+        ],
+        [
+          "ϩⲗⲟⲩⲱ_0_node",
+          "ⲙⲛ_2_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲗⲟⲩⲱ",
+          "ⲟⲩ_2_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲗⲟⲩⲱ",
+          "ϩⲗⲟⲩⲱ_1_post_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ϩⲗⲟⲩⲱ_1_post_ϩⲗⲟⲩⲱ",
+          "ϩⲉⲛ_2_post_ϣⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲗⲟⲩⲱ",
+          "ⲙⲛ_1_pre_ϩⲗⲟⲩⲱ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲗⲟⲩⲱ_b",
+          "ⲟⲩ_1_pre_ϩⲗⲟⲩⲱ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲗⲟⲩⲱ",
+          "ϩⲗⲟⲩⲱ_0_node",
+          1
+        ],
+        [
+          "ϣⲁⲛⲟⲩ_1_pre_ϩⲗⲟⲩⲱ",
+          "ϩⲗⲟⲩⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6209,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6519",
+      "type": "cf",
+      "label": "throw, bring"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4915",
+      "label": "ϥⲓⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "news bearer, messenger"
+    },
+    {
+      "target": "C4916",
+      "label": "ϩⲉⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "enquire, investigate"
+    },
+    {
+      "target": "C4918",
+      "label": "ϫⲓⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4919",
+      "label": "ϫⲓⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news, announce"
+    },
+    {
+      "target": "C4920",
+      "label": "ϭⲙⲡⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "find news, inquire"
+    },
+    {
+      "target": "C4914",
+      "label": "ϯⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "give news"
+    },
+    {
+      "target": "C4912",
+      "label": "ⲛⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "bring news"
+    },
+    {
+      "target": "C4910",
+      "label": "ⲟⲩⲱ",
+      "pos": "N",
+      "gloss": "news, report, message, matter"
+    },
+    {
+      "target": "C4911",
+      "label": "ⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "reply, speak"
+    },
+    {
+      "target": "C4913",
+      "label": "ⲣⲟⲩⲱ",
+      "pos": "V",
+      "gloss": "make reply, speak, answer"
+    }
+  ]
+}

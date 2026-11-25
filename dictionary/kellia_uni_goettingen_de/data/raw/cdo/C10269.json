@@ -1,0 +1,137 @@
+{
+  "id": "C10269",
+  "forms": [
+    {
+      "id": "CF27240",
+      "orth": "ⲡⲣⲁⲕⲧⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF27241",
+      "orth": "ⲡⲣⲁⲕⲧⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10685,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13754",
+      "bibliography": "DDGLC",
+      "cu_ID": "8672"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲛⲟϭⲛⲉϥ ⲁϥϫⲟⲟⲩϥ ⲉⲧⲉϥⲡⲟⲗⲓⲥ ⲛⲧⲉⲣⲉϥⲁⲣⲭⲉⲓ ⲇⲉ ⲉⲧⲙⲛⲧⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲁϥⲁⲣⲭⲉⲓ ⲟⲛ ⲉⲕⲉ**ⲡⲣⲁⲕⲧⲓⲕⲟⲛ** ⲛⲧⲓⲙⲓⲛⲉ",
+      "english": "And he [unclear] him. He sent him to his city. When he had begun (his) episcopate, he also began the following practice:",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲓ",
+        1,
+        19.013
+      ],
+      [
+        "ⲁⲣⲭⲉⲓ",
+        1,
+        12.933
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        12.139
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        9.526
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲣⲁⲕⲧⲓⲕⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲁⲕⲧⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲧⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲣⲁⲕⲧⲓⲕⲟⲛ_0_node",
+          "ⲛ_1_post_ⲡⲣⲁⲕⲧⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲣⲁⲕⲧⲓⲕⲟⲛ",
+          "ⲧⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10275,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6031",
+    "grl_lemma": "πρακτικός",
+    "grl_meaning": "practical; active, strong",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1458b; Preisigke 2:351"
+  }
+}

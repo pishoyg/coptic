@@ -1,0 +1,45 @@
+{
+  "id": "C3865",
+  "forms": [
+    {
+      "id": "CF9659",
+      "orth": "ⲡⲥⲟⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4384",
+      "bibliography": "CD 368b; KoptHWb 203; ChLCS 52a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3864",
+      "label": "ⲥⲉ",
+      "pos": "NUM",
+      "gloss": "sixty"
+    },
+    {
+      "target": "C3863",
+      "label": "ⲥⲟ",
+      "pos": "NUM",
+      "gloss": "six"
+    },
+    {
+      "target": "C3862",
+      "label": "ⲥⲟⲟⲩ",
+      "pos": "NUM",
+      "gloss": "six"
+    }
+  ]
+}

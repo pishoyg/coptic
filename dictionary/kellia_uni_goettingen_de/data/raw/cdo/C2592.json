@@ -1,0 +1,50 @@
+{
+  "id": "C2592",
+  "forms": [
+    {
+      "id": "CF6976",
+      "orth": "ⲛⲧⲛⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF6977",
+      "orth": "ⲧⲛⲛⲁⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "subc": "Frageadverb",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS2973",
+      "bibliography": "CD 235b; KoptHWb 130; ChLCS 33b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2591",
+      "label": "ⲙⲡⲉⲓⲛⲁⲩ",
+      "pos": "ADV",
+      "gloss": "just now, meanwhile, forthwith"
+    },
+    {
+      "target": "C2589",
+      "label": "ⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "hour, time"
+    },
+    {
+      "target": "C2590",
+      "label": "ⲛⲛⲁⲩ ⲛⲓⲙ",
+      "pos": "ADV",
+      "gloss": "every hour, always"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "C2517",
+  "forms": [
+    {
+      "id": "CF6824",
+      "orth": "ⲉⲧⲛⲉⲥⲱϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19461,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF6825",
+      "orth": "ⲉⲛⲉⲥⲱϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6333,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS2896",
+      "bibliography": "CD 228b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲩⲛ ⲟⲩⲣⲱⲙⲉ ⲛϭⲁⲗⲉ ϫⲓⲛⲉϥⲛϩⲏⲧⲥ ⲛⲧⲉϥⲙⲁⲁⲩ ⲉϣⲁⲩϥⲓⲧϥ . ⲡⲁⲓ ⲉⲛⲉⲩⲕⲱ ⲙⲙⲟϥ ϩⲓⲣⲙⲡⲣⲟ ⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡ**ⲉⲧⲛⲉⲥⲱϥ** ⲛⲧⲉⲡⲣⲡⲉ . ⲉⲧⲣⲉϥϣⲉⲧ ⲙⲛⲧⲛⲁ ⲉⲃⲟⲗ ϩⲓⲧⲛⲛⲉⲧⲃⲏⲕ ⲉϩⲟⲩⲛ ⲉⲡⲉⲣⲡⲉ .",
+      "english": "A certain man who was lame from his mother's womb was being carried, whom they laid daily at the door of the temple which is called Beautiful, to ask gifts for the needy of those who entered into the temple.",
+      "source": "44_Acts of the Apostles_3",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲙⲙⲁⲩ ⲁⲩϫⲡⲉ ⲙⲱⲩⲥⲏⲥ . ⲁⲩⲱ ⲛ**ⲉⲛⲉⲥⲱϥ** ⲡⲉ ϩⲙⲡⲛⲟⲩⲧⲉ . ⲁⲩⲥⲁⲛⲟⲩϣϥ ⲇⲉ ⲛϣⲟⲙⲛⲧ ⲛⲉⲃⲟⲧ ϩⲙⲡⲏⲓ ⲙⲡⲉϥⲉⲓⲱⲧ .",
+      "english": "At that time Moses was born, and was exceedingly handsome. He was nourished three months in his father's house.",
+      "source": "44_Acts of the Apostles_7",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲡⲉ",
+        1,
+        11.505
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        8.372
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        ".",
+        1,
+        5.557
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8818,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2516",
+      "label": "ⲛⲉⲥⲉ-",
+      "pos": "VBD",
+      "gloss": "be beautiful"
+    },
+    {
+      "target": "C2518",
+      "label": "ⲡⲉⲧⲛⲉⲥⲱϥ",
+      "pos": "N",
+      "gloss": "that which is beautiful"
+    }
+  ]
+}

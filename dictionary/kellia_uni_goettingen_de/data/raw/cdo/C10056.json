@@ -1,0 +1,160 @@
+{
+  "id": "C10056",
+  "forms": [
+    {
+      "id": "CF26360",
+      "orth": "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF26361",
+      "orth": "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12482,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF26362",
+      "orth": "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13216",
+      "bibliography": "DDGLC",
+      "cu_ID": "7358"
+    },
+    {
+      "id": "CS13217",
+      "bibliography": "DDGLC",
+      "cu_ID": "7832"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲥϥⲟϭⲥ ⲉⲃⲟⲗ ⲛϭⲓⲙⲁⲣⲓⲁ ⲧⲙⲁⲅⲇⲁⲗⲏⲛⲏ ⲡⲉϫⲁⲥ · ϫⲉⲡⲁϫⲟⲉⲓⲥ · ⲟⲩⲛⲙⲁⲁϫⲉ ⲙⲙⲁⲣⲙⲛⲟⲩⲟⲉⲓⲛ · ⲁⲩⲱ ϯ**ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ** ⲛϣⲁϫⲉ ⲛⲓⲙ ⲉⲧⲕϫⲱ ⲙⲙⲟⲟⲩ ·",
+      "english": "“that Mary Magdalene started forward and said: My Lord, my indweller of light hath ears and I comprehend every word which thou sayest.”",
+      "source": "Pistis Sophia Book 2 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:49-58",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲉⲓⲛ",
+        1,
+        9.865
+      ],
+      [
+        "ϣⲁϫⲉ",
+        1,
+        8.471
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ϯ",
+        1,
+        7.516
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          "ϯ_1_pre_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ_0_node",
+          "ⲛ_1_post_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲁⲣⲁⲗⲁⲙⲃⲁⲛⲉ",
+          "ϣⲁϫⲉ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϣⲁϫⲉ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12055,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3317",
+    "grl_lemma": "παραλαμβάνω",
+    "grl_meaning": "to receive (from another)",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1315a; Preisigke 2:249"
+  }
+}

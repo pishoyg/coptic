@@ -1,0 +1,147 @@
+{
+  "id": "C1030",
+  "forms": [
+    {
+      "id": "CF3416",
+      "orth": "ϣⲓⲉⲓⲱϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17499,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1191",
+      "bibliography": "CD 90a; ChLCS 15a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛϩⲁⲗⲁⲧⲉ ⲛⲁⲟⲩⲱϩ ⲛϩⲏⲧⲥ ⲙⲛⲛⲉϩⲃⲱ ⲙⲛⲛⲉϩⲓⲃⲱⲓ ⲙⲛⲛⲁⲃⲟⲟⲕⲉ ⲁⲩⲱ ⲥⲉⲛⲁⲥⲱⲣ ⲉϫⲱⲥ ⲛⲟⲩⲛⲟⲩϩ ⲛ**ϣⲓⲉⲓⲱϩⲉ** ⲛϫⲁⲓⲉ ⲁⲩⲱ ⲛϩⲟⲛⲟⲕⲉⲛⲧⲁⲩⲣⲟⲥ ⲛⲁⲟⲩⲱϩ ⲛϩⲏⲧⲥ",
+      "english": "and for a long time birds and hedgehogs, and ibises and ravens shall dwell in it: and the measuring line of desolation shall be cast over it, and satyrs shall dwell in it.",
+      "source": "Isaiah 34",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲟⲩϩ",
+        1,
+        15.276
+      ],
+      [
+        "ϫⲁⲓⲉ",
+        1,
+        12.299
+      ],
+      [
+        "ⲛ",
+        4,
+        9.809
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲓⲉⲓⲱϩⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲉⲓⲱϩⲉ",
+          1
+        ],
+        [
+          "ϫⲁⲓⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲟⲛⲟⲕⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲛⲟⲕⲉⲛ_1_post_ϣⲓⲉⲓⲱϩⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲓⲉⲓⲱϩⲉ_0_node",
+          "ⲛ_1_post_ϣⲓⲉⲓⲱϩⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲓⲉⲓⲱϩⲉ",
+          "ϫⲁⲓⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲁⲓⲉ_2_post_ⲛ",
+          "ⲛ_2_post_ϩⲟⲛⲟⲕⲉⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲟⲛⲟⲕⲉⲛ",
+          "ϩⲟⲛⲟⲕⲉⲛ_1_post_ϣⲓⲉⲓⲱϩⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17110,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C5713",
+      "type": "cf",
+      "label": "measure, weigh"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1031",
+      "label": "ⲉⲓⲉϩϣⲏⲛ",
+      "pos": "N",
+      "gloss": "grove, thicket, copse"
+    },
+    {
+      "target": "C1029",
+      "label": "ⲉⲓⲱϩⲉ",
+      "pos": "N",
+      "gloss": "field"
+    },
+    {
+      "target": "C1032",
+      "label": "ⲥⲧⲉⲓⲱϩⲉ",
+      "pos": "N",
+      "gloss": "aroura (a measure of tilled land)"
+    }
+  ]
+}

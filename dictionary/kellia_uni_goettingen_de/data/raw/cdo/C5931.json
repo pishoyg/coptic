@@ -1,0 +1,109 @@
+{
+  "id": "C5931",
+  "forms": [
+    {
+      "id": "CF13865",
+      "orth": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13866",
+      "orth": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF13867",
+      "orth": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6615",
+      "bibliography": "CD 570a-b; KoptHWb 317; ChLCS 79a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5922",
+      "label": "ϣⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "seek, ask"
+    },
+    {
+      "target": "C5926",
+      "label": "ϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquiry; news, report"
+    },
+    {
+      "target": "C5923",
+      "label": "ϣⲓⲛⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "visit, greet"
+    },
+    {
+      "target": "C5924",
+      "label": "ϣⲓⲛⲉ ⲉⲧⲃⲉ-",
+      "pos": "V",
+      "gloss": "concerning"
+    },
+    {
+      "target": "C5925",
+      "label": "ϣⲓⲛⲉ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "inquire for, seek after"
+    },
+    {
+      "target": "C5927",
+      "label": "ϣⲙⲛⲟⲩϥⲉ",
+      "pos": "N",
+      "gloss": "good news"
+    },
+    {
+      "target": "C5933",
+      "label": "ϥⲁⲓϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "messenger"
+    },
+    {
+      "target": "C5930",
+      "label": "ϫⲓ ⲙⲡϣⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "get, bring news, visit"
+    },
+    {
+      "target": "C5934",
+      "label": "ϭⲓⲛϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquiry"
+    },
+    {
+      "target": "C5932",
+      "label": "ϭⲓⲛⲉ ⲙⲡϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "visitation"
+    },
+    {
+      "target": "C5928",
+      "label": "ⲙⲁ ⲛϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "place of enquiry, oracle"
+    },
+    {
+      "target": "C5929",
+      "label": "ⲣⲉϥϣⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "enquirer, wizard"
+    }
+  ]
+}

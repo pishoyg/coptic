@@ -1,0 +1,71 @@
+{
+  "id": "C9688",
+  "forms": [
+    {
+      "id": "CF24870",
+      "orth": "ⲙⲁⲕⲁⲣⲓⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24874",
+      "orth": "ⲙⲁⲕⲁⲣⲓⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24872",
+      "orth": "ⲙⲁⲕⲁⲣⲓⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24873",
+      "orth": "ⲙⲁⲕⲁⲣⲓⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF24871",
+      "orth": "ⲙⲁⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6335,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF24875",
+      "orth": "ⲙⲁⲕⲁⲣⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.21,
+        "rank": 630,
+        "count": 191
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12476",
+      "bibliography": "DDGLC",
+      "cu_ID": "5808"
+    },
+    {
+      "id": "CS12477",
+      "bibliography": "DDGLC",
+      "cu_ID": "2737"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1336",
+    "grl_lemma": "μακάριος",
+    "grl_meaning": "blessed, happy",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1073b; Preisigke 2:46"
+  }
+}

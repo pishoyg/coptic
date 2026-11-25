@@ -1,0 +1,243 @@
+{
+  "id": "C2472",
+  "forms": [
+    {
+      "id": "CF6726",
+      "orth": "ϭⲓⲛⲛⲕⲟⲧⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7517,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2848",
+      "bibliography": "CD 225a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲛⲧⲟ ⲁⲣⲉⲡⲁⲣⲁⲃⲁ ⲉⲩⲛⲧⲉⲡⲟⲩϩⲁⲓ ⲙⲙⲁⲩ ⲏ ⲁⲣⲉⲥⲟⲟⲩⲉ ⲁⲩⲱ ⲁⲟⲩⲁ ϯ ⲛⲧⲉϥ**ϭⲓⲛⲛⲕⲟⲧⲕ** ϩⲣⲁⲓ ⲛϩⲏⲧⲉ ⲛⲃⲗⲡⲟⲩϩⲁⲓ",
+      "english": "But if being a married woman thou hast transgressed, or been polluted, and any one has lain with thee, beside thy husband:",
+      "source": "Numbers 5",
+      "urn": "urn:cts:copticLit:ot.num.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲡⲕⲁⲛⲱⲛ ⲛⲧⲉⲛⲯⲁⲗⲙⲱⲇⲓⲁ ⲟⲩⲛⲟϭ ⲡⲉ ⲁⲩⲱ ⲧⲉⲛϭⲓⲛⲟⲩⲱⲙ ⲙⲛⲧⲉⲛ**ϭⲓⲛⲛⲕⲟⲧⲕ** ⲙⲛⲡⲥⲉⲉⲡⲉ ⲛⲛⲉϩⲃⲏⲩⲉ ⲥⲉϩⲛⲟⲩⲛⲟϭ ⲙⲙⲟⲕϩⲥ ⲙⲛⲟⲩϩⲓⲥⲉ , ⲙⲛⲗⲁⲁⲩ ⲛⲥⲟⲗⲥⲗ ⲛϩⲏⲧⲟⲩ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 2",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:10-16",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲃⲗ",
+        1,
+        19.598
+      ],
+      [
+        "ϭⲓⲛⲟⲩⲱⲙ",
+        1,
+        14.511
+      ],
+      [
+        "ⲧⲉⲛ",
+        2,
+        13.587
+      ],
+      [
+        "ⲥⲉⲉⲡⲉ",
+        1,
+        11.843
+      ],
+      [
+        "ϩⲣⲁⲓ",
+        1,
+        9.022
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.644
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        8.329
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        1,
+        7.84
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ϭⲓⲛⲛⲕⲟⲧⲕ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          "ϭⲓⲛⲛⲕⲟⲧⲕ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ϭⲓⲛⲛⲕⲟⲧⲕ",
+          "ϭⲓⲛⲛⲕⲟⲧⲕ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7059,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2469",
+      "label": "ⲁⲧⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C2470",
+      "label": "ⲙⲁ ⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "place of lying, couch; (sexual) cohabitation, intercourse; sleeping room"
+    },
+    {
+      "target": "C2458",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "V",
+      "gloss": "sleep; lie down; die"
+    },
+    {
+      "target": "C2459",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleep; sexual intercourse; death"
+    },
+    {
+      "target": "C2465",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "lie below"
+    },
+    {
+      "target": "C2466",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "lie, stay by, with"
+    },
+    {
+      "target": "C2463",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2464",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "lie in, on"
+    },
+    {
+      "target": "C2460",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉ-)",
+      "pos": "V",
+      "gloss": "sleep, lie upon"
+    },
+    {
+      "target": "C2461",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2462",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉⲃⲟⲗ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2468",
+      "label": "ⲛⲕⲟⲧⲕ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "lie with"
+    },
+    {
+      "target": "C2467",
+      "label": "ⲛⲕⲟⲧⲕ (ⲛ-)",
+      "pos": "V",
+      "gloss": "lie in"
+    },
+    {
+      "target": "C2471",
+      "label": "ⲣⲉϥⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "one who lies"
+    }
+  ]
+}

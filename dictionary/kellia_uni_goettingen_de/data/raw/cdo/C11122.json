@@ -1,0 +1,413 @@
+{
+  "id": "C11122",
+  "forms": [
+    {
+      "id": "CF30720",
+      "orth": "ϩⲓⲇⲓⲱⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30721",
+      "orth": "ϩⲓⲇⲓⲱⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3158,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF30722",
+      "orth": "ϩⲓⲇⲓⲱⲧⲏⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30723",
+      "orth": "ϩⲩⲇⲓⲟⲧⲏⲥ",
+      "dialect": "F"
+    },
+    {
+      "orth": "ⲓⲇⲓⲱⲧⲏⲥ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2419,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15569",
+      "bibliography": "DDGLC",
+      "cu_ID": "952"
+    },
+    {
+      "id": "CS15570",
+      "bibliography": "DDGLC",
+      "cu_ID": "7462"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲛ ⲅⲁⲣ ⲁⲛⲟⲛ ϩⲁⲛ**ⲓⲇⲓⲱⲧⲏⲥ** ⲛⲣⲱⲙⲓ ⲙⲡⲉⲛϭⲓⲥⲃⲱ ⲛⲧⲉⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲟⲩⲇⲉ ⲛⲛⲉⲥϣⲱⲡⲓ ⲙⲙⲟⲛ",
+      "english": "For we are simple people and have not received the wisdom of this world (and so much the better for us).",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲇⲉ ⲉⲩϣⲁⲛⲡⲣⲟⲫⲏⲧⲉⲩⲉ ⲧⲏⲣⲟⲩ ⲛⲧⲉ ⲟⲩⲁⲡⲓⲥⲧⲟⲥ ⲇⲉ ⲉⲓ ⲉϩⲟⲩⲛ ⲏ ⲟⲩ**ϩⲓⲇⲓⲱⲧⲏⲥ** ⲥⲉⲛⲁϫⲡⲓⲟϥ ϩⲓⲧⲛⲟⲩⲟⲛ ⲛⲓⲙ ⲥⲉⲛⲁⲁⲛⲁⲕⲣⲓⲛⲉ ⲙⲙⲟϥ ϩⲓⲧⲛⲟⲩⲟⲛ ⲛⲓⲙ .",
+      "english": "But if all prophesy, and someone unbelieving or unlearned comes in, he is reproved by all, and he is judged by all.",
+      "source": "1 Corinthians 14",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲓⲉ ⲙⲙⲟⲛ ⲁⲕϣⲁⲛⲥⲙⲟⲩ ϧⲉⲛⲡⲓⲡⲛⲉⲩⲙⲁ ⲡⲉⲧϫⲱⲕ ⲙⲫⲙⲁ ⲙⲡⲓ**ⲓⲇⲓⲱⲧⲏⲥ** ⲉⲃⲟⲗ ⲡⲱⲥ ϥⲛⲁϫⲉⲡⲓⲁⲙⲏⲛ ⲉϩⲣⲏⲓ ⲉϫⲉⲛⲡⲉⲕϣⲉⲡϩⲙⲟⲧ ⲉⲡⲓⲇⲏ ⲡⲉⲧⲉⲕϫⲱ ⲙⲙⲟϥ ϥⲉⲙⲓ ⲉⲣⲟϥ ⲁⲛ .",
+      "english": "Otherwise if you bless with the spirit, how will he who fills the place of the unlearned say the 'Amen' at your giving of thanks, seeing he doesn't know what you say?",
+      "source": "Bohairic 1 Corinthians 14 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:14",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉϫⲁϥ ϫⲉⲕⲱ ⲛⲁⲓ ⲉⲃⲟⲗ ⲁⲛⲅⲟⲩⲣⲱⲙⲉ ⲛ**ϩⲓⲇⲓⲱⲧⲏⲥ** · ⲁⲗⲗⲁ ⲁⲓⲃⲱⲕ ϣⲁⲁⲡⲁ ϩⲱⲣ · ⲙⲛⲁⲡⲁ ϩⲁⲧⲣⲏ ·",
+      "english": "And he said: 'Forgive me. I am an unlearned man, but I went to Apa Or and Apa Hatre.'",
+      "source": "Apophthegmata Patrum Sahidic 115: Pistus 1",
+      "urn": "urn:cts:copticLit:ap.115.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲩⲛⲁⲩ ⲇⲉ ⲉⲧⲡⲁⲣⲣⲏⲥⲓⲁ ⲙⲡⲉⲧⲣⲟⲥ ⲛⲉⲙⲓⲱⲁⲛⲛⲏⲥ ⲟⲩⲟϩ ⲉⲧⲁⲩⲉⲙⲓ ϫⲉϩⲁⲛⲣⲱⲙⲓ ⲛⲉⲛⲥⲉⲥⲱⲟⲩⲛ ⲛⲥϧⲁⲓ ⲁⲛ ⲟⲩⲟϩ ϩⲁⲛ**ⲓⲇⲓⲱⲧⲏⲥ** ⲛⲉⲛⲁⲩⲉⲣϣⲫⲏⲣⲓ ⲡⲉ ⲛⲁⲩⲥⲱⲟⲩⲛ ⲇⲉ ⲙⲙⲱⲟⲩ ϫⲉⲛⲁⲩⲭⲏ ⲛⲉⲛⲓⲏⲥⲟⲩⲥ ⲡⲉ .",
+      "english": "Now when they saw the boldness of Peter and John, and had perceived that they were unlearned and ignorant men, they marveled. They recognized that they had been with Jesus.",
+      "source": "05_Acts_04",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛⲛⲥⲁⲛⲁⲓ ⲇⲉ ⲁϥⲧⲁⲣⲕⲉⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲙⲁⲧⲁⲙⲟⲓ ϫⲉⲟⲩ ⲡⲉ ⲡⲉⲕⲃⲓⲟⲥ ⲁⲩⲱ ⲛⲧⲕⲟⲩⲣⲙⲧⲱⲛ ϩⲙⲡⲉⲕⲅⲉⲛⲟⲥ ϯⲛⲁⲩ ⲅⲁⲣ ⲉⲡⲉⲕⲥⲙⲟⲧ ⲛⲧϩⲉ ⲛⲛⲓ**ϩⲓⲇⲓⲱⲧⲏⲥ**",
+      "english": "Afterwards, he beseeched the blessed one: tell me, what has been your life and where are you from, of which people. For I see your appearance (which is) like that of a crazy person,",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁⲥⲑⲉⲛⲏⲥ",
+        2,
+        18.695
+      ],
+      [
+        "ⲙⲏⲡⲱⲥ",
+        2,
+        15.252
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        2,
+        10.284
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.763
+      ],
+      [
+        "ⲡ",
+        2,
+        7.619
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        7.08
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛ",
+        2,
+        6.591
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲟⲙⲟⲑⲉⲥⲓⲁ",
+        1,
+        15.428
+      ],
+      [
+        "ⲁⲡⲓⲥⲧⲟⲥ",
+        2,
+        14.13
+      ],
+      [
+        "ⲏ",
+        6,
+        13.649
+      ],
+      [
+        "ϫⲡⲓⲟ",
+        2,
+        12.621
+      ],
+      [
+        "ⲁⲛⲅ",
+        2,
+        11.651
+      ],
+      [
+        "ϩⲉⲛ",
+        5,
+        11.455
+      ],
+      [
+        "ⲇⲉ",
+        6,
+        11.156
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        4,
+        11.093
+      ],
+      [
+        "ⲁϣ",
+        2,
+        10.466
+      ],
+      [
+        "ⲉϣϫⲉ",
+        2,
+        10.311
+      ],
+      [
+        "ⲛ",
+        10,
+        10.19
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        9.889
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        3,
+        9.483
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.39
+      ],
+      [
+        "ⲥⲉ",
+        3,
+        9.252
+      ],
+      [
+        "ϩⲉ",
+        3,
+        8.897
+      ],
+      [
+        "ⲡ",
+        6,
+        8.667
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        8.056
+      ],
+      [
+        "ⲙⲁ",
+        2,
+        8.002
+      ],
+      [
+        "ⲉⲓ",
+        2,
+        7.823
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲥⲁϫⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          "ϧⲉⲛ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          "ⲡ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϧⲉⲛ",
+          "ⲥⲁϫⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          10
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲓⲥⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲡⲓⲥⲧⲟⲥ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          "ⲟⲩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          "ⲏ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲏ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          "ϩⲉⲛ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_3_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          "ⲁⲡⲓⲥⲧⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲡⲓⲥⲧⲟⲥ_2_post_ⲛ",
+          "ⲛ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          "ⲟⲩ_1_pre_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ],
+        [
+          "ϩⲓⲇⲓⲱⲧⲏⲥ_0_node",
+          "ⲏ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          "ϩⲉⲛ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲁⲡⲓⲥⲧⲟⲥ",
+          "ⲁⲡⲓⲥⲧⲟⲥ_1_post_ϩⲓⲇⲓⲱⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2806,
+      "count": 12
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 4842,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "944",
+    "grl_lemma": "ἰδιώτης",
+    "grl_meaning": "peculiar nature, specific character, amateur",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 819a; Preisigke 1:689"
+  }
+}

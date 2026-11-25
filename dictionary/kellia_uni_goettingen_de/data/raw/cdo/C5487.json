@@ -1,0 +1,604 @@
+{
+  "id": "C5487",
+  "forms": [
+    {
+      "id": "CF12947",
+      "orth": "ϭⲓⲱⲙⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.54,
+        "rank": 1053,
+        "count": 46
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6147",
+      "bibliography": "CD 524a; KoptHWb 292; DELC 249b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲛⲏⲟⲩ ⲉⲃⲟⲗ ϩⲁⲣⲟϥ ⲛϫⲉⲛⲁϯⲓⲟⲩⲇⲉⲁ ⲧⲏⲣⲥ ⲛⲭⲱⲣⲁ ⲛⲉⲙⲛⲁⲓⲉⲣⲟⲥⲁⲗⲏⲙ ⲧⲏⲣⲟⲩ ⲟⲩⲟϩ ⲛⲁⲩ**ϭⲓⲱⲙⲥ** ⲛⲧⲟⲧϥ ϧⲉⲛⲡⲓⲓⲟⲣⲇⲁⲛⲏⲥ ⲛⲓⲁⲣⲟ ⲉⲩⲟⲩⲱⲛϩ ⲛⲛⲟⲩⲛⲟⲃⲓ ⲉⲃⲟⲗ .",
+      "english": "All the country of Judea and all those of Jerusalem went out to him. They were baptized by him in the Jordan river, confessing their sins.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϩⲓⲛⲁ ⲛⲧⲉϣⲧⲉⲙⲟⲩⲁⲓ ϫⲟⲥ ϫⲉⲁⲣⲉⲧⲉⲛ**ϭⲓⲱⲙⲥ** ⲉⲡⲁⲣⲁⲛ .",
+      "english": "so that no one should say that I had baptized you into my own name.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲁϥⲛⲁϩϯ ⲟⲩⲟϩ ⲉⲧⲁϥ**ϭⲓⲱⲙⲥ** ⲉϥⲉⲛⲟϩⲉⲙ ⲫⲏ ⲇⲉ ⲉⲧⲁϥⲉⲣⲁⲑⲛⲁϩϯ ⲥⲉⲛⲁϯϩⲁⲡ ⲉⲣⲟϥ .",
+      "english": "He who believes and is baptized will be saved; but he who disbelieves will be condemned.",
+      "source": "Bohairic Gospel of Mark 16 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:16",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϥ",
+        37,
+        14.529
+      ],
+      [
+        "ⲉ",
+        31,
+        14.356
+      ],
+      [
+        "ⲉⲣⲡⲕⲉ",
+        2,
+        14.172
+      ],
+      [
+        ".",
+        24,
+        13.848
+      ],
+      [
+        "ⲛⲧⲟⲧ",
+        7,
+        13.514
+      ],
+      [
+        "ϫⲟⲕⲙⲉ",
+        1,
+        13.172
+      ],
+      [
+        "ⲁ",
+        23,
+        13.037
+      ],
+      [
+        "ⲣⲁⲛ",
+        7,
+        12.77
+      ],
+      [
+        "ⲉⲧ",
+        16,
+        12.728
+      ],
+      [
+        "ⲥⲛⲧⲟⲧ",
+        1,
+        12.587
+      ],
+      [
+        "ⲅⲁⲗⲓⲗⲉⲁ",
+        3,
+        12.534
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        20,
+        12.522
+      ],
+      [
+        "ⲇⲉ",
+        11,
+        11.903
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲛⲟⲩⲱⲧ",
+        1,
+        11.85
+      ],
+      [
+        "ⲟⲩ",
+        18,
+        11.74
+      ],
+      [
+        "ⲩ",
+        13,
+        11.699
+      ],
+      [
+        "ⲁⲣⲉ",
+        5,
+        11.666
+      ],
+      [
+        "ⲓⲟⲣⲇⲁⲛⲏ",
+        1,
+        11.587
+      ],
+      [
+        "ⲉⲣϧⲱⲧ",
+        1,
+        10.85
+      ],
+      [
+        "ⲓⲟⲣⲇⲁⲛⲏⲥ",
+        2,
+        10.762
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          27
+        ],
+        [
+          "ⲓⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ϭⲓⲱⲙⲥ",
+          4
+        ],
+        [
+          "ⲫ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲣⲁⲛ_3_post_ⲫ",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲓⲱⲙⲥ",
+          9
+        ],
+        [
+          "ⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          9
+        ],
+        [
+          "ⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          8
+        ],
+        [
+          "ⲓⲉ_3_pre_ⲟⲩ",
+          2
+        ],
+        [
+          "ⲉⲑⲃⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲑⲃⲉ",
+          2
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲉⲣⲡⲕⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_pre_ϭⲓⲱⲙⲥ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ϭⲓⲱⲙⲥ",
+          6
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ϩⲓⲧⲟⲧ_2_post_ⲉⲃⲟⲗ",
+          3
+        ],
+        [
+          "ϥ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲛⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          5
+        ],
+        [
+          "ⲡⲁ_3_post_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲣⲁⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲧ_1_post_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ϥ_2_post_ⲛⲧⲟⲧ",
+          2
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          3
+        ],
+        [
+          "ⲛⲓⲁⲣⲟ_1_post_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲓⲁⲣⲟ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ",
+          1
+        ],
+        [
+          "ⲱⲙⲥ_3_post_ⲡⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲓⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲧⲉⲛ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϭⲓⲱⲙⲥ_0_node",
+          2
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲉ_1_post_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϭⲓⲱⲙⲥ",
+          "ⲫ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲫ_2_post_ⲉ",
+          "ⲣⲁⲛ_3_post_ⲫ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϭⲓⲱⲙⲥ_0_node",
+          6
+        ],
+        [
+          "ⲓⲉ_3_pre_ⲟⲩ",
+          "ⲉⲑⲃⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲉⲑⲃⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲟⲩ_2_pre_ⲉⲑⲃⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_pre_ⲉⲑⲃⲉ",
+          "ⲥⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲉⲣⲡⲕⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲉⲣⲡⲕⲉ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϭⲓⲱⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϥ_1_pre_ϭⲓⲱⲙⲥ",
+          5
+        ],
+        [
+          "ϥ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϭⲓⲱⲙⲥ_0_node",
+          5
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϭⲓⲱⲙⲥ",
+          "ϩⲓⲧⲟⲧ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲓⲧⲟⲧ_2_post_ⲉⲃⲟⲗ",
+          "ϥ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲛⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          4
+        ],
+        [
+          "ⲉ_1_post_ϭⲓⲱⲙⲥ",
+          "ⲡⲁ_3_post_ⲣⲁⲛ",
+          1
+        ],
+        [
+          "ⲡⲁ_3_post_ⲣⲁⲛ",
+          "ⲣⲁⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲛⲧⲟⲧ_1_post_ϭⲓⲱⲙⲥ",
+          2
+        ],
+        [
+          "ⲛⲧⲟⲧ_1_post_ϭⲓⲱⲙⲥ",
+          "ϥ_2_post_ⲛⲧⲟⲧ",
+          2
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ϧⲉⲛ_1_post_ϭⲓⲱⲙⲥ",
+          3
+        ],
+        [
+          "ϧⲉⲛ_1_post_ϭⲓⲱⲙⲥ",
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          3
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲛⲓⲁⲣⲟ_1_post_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲛⲓⲁⲣⲟ_1_post_ϭⲓⲱⲙⲥ",
+          "ⲉ_2_post_ⲛⲓⲁⲣⲟ",
+          1
+        ],
+        [
+          "ϩⲓⲧⲟⲧ_2_post_ⲉⲃⲟⲗ",
+          "ⲕ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_pre_ϭⲓⲱⲙⲥ",
+          "ⲟⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϭⲓⲱⲙⲥ",
+          "ϭⲓⲱⲙⲥ_0_node",
+          1
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲛϫⲉ_1_post_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲛϫⲉ_1_post_ϭⲓⲱⲙⲥ",
+          "ⲡⲓ_2_post_ⲛϫⲉ",
+          1
+        ],
+        [
+          "ϭⲓⲱⲙⲥ_0_node",
+          "ⲟⲩⲟϩ_3_post_ⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_3_post_ⲉⲣⲡⲣⲟⲥⲉⲩⲭⲉⲥⲑⲉ",
+          "ⲉ_1_post_ϭⲓⲱⲙⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ϧⲉⲛ",
+          "ⲱⲙⲥ_3_post_ⲡⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.54,
+      "rank": 926,
+      "count": 46
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    },
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5492",
+      "label": "ϫⲓⲙⲥⲉ ⲙⲙⲟ⸗",
+      "pos": "V",
+      "gloss": "immerse someone (as a punishment)"
+    },
+    {
+      "target": "C5489",
+      "label": "ϫⲓⲛϭⲓⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5490",
+      "label": "ϫⲓⲛⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5479",
+      "label": "ϫⲓⲛⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "immersion"
+    },
+    {
+      "target": "C5488",
+      "label": "ϭⲓⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptism"
+    },
+    {
+      "target": "C5485",
+      "label": "ϯⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "give baptism, baptize"
+    },
+    {
+      "target": "C5491",
+      "label": "ⲙⲥⲉ",
+      "pos": "N",
+      "gloss": "diving, immersion"
+    },
+    {
+      "target": "C5486",
+      "label": "ⲣⲉϥϯⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "baptist"
+    },
+    {
+      "target": "C5484",
+      "label": "ⲣⲉϥⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "diver"
+    },
+    {
+      "target": "C5476",
+      "label": "ⲱⲙⲥ",
+      "pos": "V",
+      "gloss": "be sunk, be submerged; sink, dip"
+    },
+    {
+      "target": "C5483",
+      "label": "ⲱⲙⲥ",
+      "pos": "N",
+      "gloss": "sinking, dipping, baptism"
+    },
+    {
+      "target": "C5482",
+      "label": "ⲱⲙⲥ ⲉϧⲣⲏⲓ",
+      "pos": "N",
+      "gloss": "sinking"
+    },
+    {
+      "target": "C5481",
+      "label": "ⲱⲙⲥ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "sink down"
+    },
+    {
+      "target": "C5477",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "sink, dip"
+    },
+    {
+      "target": "C5478",
+      "label": "ⲱⲙⲥ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "weakness of sight"
+    },
+    {
+      "target": "C5480",
+      "label": "ⲱⲙⲥ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "sink down"
+    }
+  ]
+}

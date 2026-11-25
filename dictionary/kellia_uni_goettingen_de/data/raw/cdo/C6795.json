@@ -1,0 +1,237 @@
+{
+  "id": "C6795",
+  "forms": [
+    {
+      "id": "CF15637",
+      "orth": "ϩⲱⲣⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8952,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϩⲟⲣⲕ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3743,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7509",
+      "bibliography": "CD 702a-b; KoptHWb 386; ChLCS 94a"
+    },
+    {
+      "id": "CS7510",
+      "bibliography": "CD 702a-b; KoptHWb 386; ChLCS 94a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲁϥϥⲱϭⲉ ⲉⲣⲟⲟⲩ ⲛϭⲓⲟⲩⲙⲟⲩⲓ ⲉⲃⲟⲗ ϩⲙⲡⲙⲁ ⲛϣⲏⲛ ⲁⲩⲱ ⲟⲩⲟⲩⲱⲛϣ ⲁϥϥⲟⲧⲟⲩ ⲉⲃⲟⲗ ϣⲁϩⲣⲁⲓ ⲉⲛⲉⲩⲏⲓ ⲁⲩⲱ ⲟⲩⲡⲁⲗⲇⲁⲗⲓⲥ ⲁⲥ**ϩⲱⲣⲕ** ϩⲓⲣⲛ ⲛⲉⲩⲡⲟⲗⲓⲥ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲛⲏⲩ ⲉⲃⲟⲗ ⲛϩⲏⲧⲟⲩ ⲥⲉⲛⲁϭⲟⲡⲟⲩ ϫⲉⲁⲩⲧⲁϣⲟ ⲛⲛⲉⲩⲙⲛⲧϣⲁϥⲧⲉ ⲁⲩϭⲙϭⲟⲙ ϩⲛⲛⲉⲩⲕⲧⲟ ⲉⲃⲟⲗ",
+      "english": "Therefore has a lion out of the forest smitten them, and a wolf has destroyed them even to their houses, and a leopard has watched against their cities: all that go forth from them shall be hunted: for they have multiplied their ungodliness, they have strengthened themselves in their revoltings.",
+      "source": "Jeremiah 5",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲁϩⲕ ⲛⲥⲱⲥ ⲛⲧϩⲉ ⲛⲟⲩⲣⲉϥϭⲱⲣϭ ⲛⲅ**ϩⲱⲣⲕ** ⲉⲣⲟⲥ ϩⲓⲛⲉⲥϩⲓⲟⲟⲩⲉ",
+      "english": "Go after her as one that traceth, and lie in wait in her ways.",
+      "source": "Sirach 14",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲗⲇⲁⲗⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲣⲉϥϭⲱⲣϭ",
+        1,
+        19.598
+      ],
+      [
+        "ϩⲓⲣⲛ",
+        1,
+        13.598
+      ],
+      [
+        "ⲛⲉⲥ",
+        1,
+        10.384
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        1,
+        9.618
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        1,
+        9.13
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ],
+      [
+        "ⲅ",
+        1,
+        8.239
+      ],
+      [
+        "ϩⲓ",
+        1,
+        8.231
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        7.816
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        6.484
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ϩⲱⲣⲕ_0_node",
+          2
+        ],
+        [
+          "ϩⲓⲣⲛ_1_post_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ϩⲓ_1_post_ϩⲱⲣⲕ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲣⲕ",
+          "ⲁ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱⲣⲕ",
+          "ⲥ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϩⲱⲣⲕ",
+          "ϩⲱⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲣⲕ_0_node",
+          "ϩⲓⲣⲛ_1_post_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ϩⲓⲣⲛ_1_post_ϩⲱⲣⲕ",
+          "ⲛⲉⲩ_3_post_ⲡⲟⲗⲓⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ϩⲱⲣⲕ",
+          "ⲅ_1_pre_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲅ_1_pre_ϩⲱⲣⲕ",
+          "ϩⲱⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲣⲕ_0_node",
+          "ⲉⲣⲟ_1_post_ϩⲱⲣⲕ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ϩⲱⲣⲕ",
+          "ⲥ_2_post_ⲉⲣⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲉⲣⲟ",
+          "ϩⲓ_1_post_ϩⲱⲣⲕ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8500,
+      "count": 2
+    }
+  }
+}

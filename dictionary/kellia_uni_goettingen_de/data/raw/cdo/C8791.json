@@ -1,0 +1,51 @@
+{
+  "id": "C8791",
+  "forms": [
+    {
+      "id": "CF21126",
+      "orth": "ⲇⲓⲙⲓⲟⲩⲣⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21128",
+      "orth": "ⲇⲓⲙⲓⲟⲩⲣⲅⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF21127",
+      "orth": "ⲇⲏⲙⲓⲟⲩⲣⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13159,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10535",
+      "bibliography": "DDGLC",
+      "cu_ID": "9743"
+    },
+    {
+      "id": "CS10536",
+      "bibliography": "DDGLC",
+      "cu_ID": "2834"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "5715",
+    "grl_lemma": "δημιουργία",
+    "grl_meaning": "workmanship, handicraft; making, creating",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 386a"
+  }
+}

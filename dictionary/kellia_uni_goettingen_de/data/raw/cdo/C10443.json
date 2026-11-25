@@ -1,0 +1,124 @@
+{
+  "id": "C10443",
+  "forms": [
+    {
+      "id": "CF27961",
+      "orth": "ⲥⲓⲅⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27962",
+      "orth": "ⲥⲓⲅⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12210,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14118",
+      "bibliography": "DDGLC",
+      "cu_ID": "1966"
+    },
+    {
+      "id": "CS14119",
+      "bibliography": "DDGLC",
+      "cu_ID": "7648"
+    },
+    {
+      "id": "CS14120",
+      "bibliography": "DDGLC",
+      "cu_ID": "7921"
+    },
+    {
+      "id": "CS14121",
+      "bibliography": "DDGLC",
+      "cu_ID": "4360"
+    },
+    {
+      "id": "CS14122",
+      "bibliography": "DDGLC",
+      "cu_ID": "7635"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲉⲩϣⲟⲟⲡ ⲧⲏⲣⲟⲩ ϩⲛⲟⲩⲛⲟϭ ⲛ**ⲥⲓⲅⲏ** ·",
+      "english": "but they all kept in deep silence.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲉ",
+        1,
+        9.45
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        9.298
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲛⲧ",
+        1,
+        8.23
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲓⲅⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11785,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3326",
+    "grl_lemma": "σιγή",
+    "grl_meaning": "silence",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1596b"
+  }
+}

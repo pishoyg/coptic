@@ -1,0 +1,327 @@
+{
+  "id": "C1803",
+  "forms": [
+    {
+      "id": "CF5199",
+      "orth": "ⲣⲙⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3306,
+        "count": 11
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2104",
+      "bibliography": "CD 158ab; ChLCS 24b"
+    },
+    {
+      "id": "CS2105",
+      "bibliography": "CD 158b; KoptHWb 86"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲣⲙⲏ** ⲉϩⲣⲁⲓ ⲉⲩⲃⲁⲩⲕⲁⲗⲓⲟⲛ ⲏ ⲉϩⲣⲁⲓ ⲉⲩϣⲟϣⲟⲩ ⲉϩⲣⲁⲓ ⲉϭⲉⲗⲁⲁⲩ ⲛϩⲛⲁⲁⲩ ⲉϥⲧⲛⲧⲱⲛ ⲉⲛⲁⲓ ⲉⲙⲡⲟⲩⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁϥ ϩⲓⲧⲙⲡϩⲗⲗⲱ ⲉⲓⲙⲏⲧⲓ ⲡⲙⲁ ⲛⲛⲣⲱⲙⲉ ⲉⲧϣⲱⲛⲉ ⲙⲙⲁⲧⲉ ⲙⲛⲛϩⲗⲗⲟ ⲁⲩⲣϩⲁϩ ⲛⲣⲟⲙⲡⲉ ⲁⲩⲱ ⲛⲉⲓⲕⲟⲟⲩⲉ ⲉⲧⲣⲉⲩϣⲓⲛⲉ ⲛⲧⲟⲟⲧϥ ⲙⲡϩⲗⲗⲟ",
+      "english": "... if one urinates into a vessel with a narrow neck or jar, into any other vessel like these, without having been ordered by the elder, except for the place of those who are very ill and the elders of advanced years and these others, he is to ask the elder.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϥⲟⲛϩ ⲛϭⲓⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲡⲁⲓ ⲛⲧⲁϥⲕⲱⲗⲩⲉ ⲙⲙⲟⲓ ⲙⲡϩⲟⲟⲩ ⲉⲧⲙⲉⲓⲣⲉ ⲟⲩⲡⲉⲧϩⲟⲟⲩ ⲛⲉ ϫⲉⲉⲛⲉⲙⲡⲉⲧⲱⲟⲩⲛ ⲧⲁⲭⲏ ⲉⲉⲓ ⲉⲣⲁⲧⲉⲛⲉⲙⲛⲗⲁⲁⲩ ⲉⲛⲉⲧⲏⲡ ⲧⲏⲣⲟⲩ ⲉⲛⲁⲃⲁⲗ ⲛⲁⲥⲉⲉⲡⲉ ϣⲁⲡⲛⲁⲩ ⲛϩⲧⲟⲟⲩⲉ ⲉϥ**ⲣⲙⲏ** ⲉϩⲟⲩⲛ ⲉⲧϫⲟ",
+      "english": "But surely as the Lord God of Israel lives, who hindered me this day from doing thee harm, if thou hadst not hasted and come to meet me, then I said, There shall surely not be left to Nabal till the morning one male.",
+      "source": "I Samuel 25",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϯⲛⲁϥⲱⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲏⲓ ⲛⲁⲭⲁⲃ ⲙⲡⲉⲧ**ⲣⲙⲏ** ⲉϩⲟⲩⲛ ⲉⲟⲩϫⲟ ⲁⲩⲱ ⲡⲉⲧϩⲏϣ ⲉϩⲟⲩⲛ ⲙⲛⲡⲉⲛⲧⲁⲩⲕⲁⲁϥ ⲛⲥⲱⲟⲩ ϩⲙⲡⲓⲥⲣⲁⲏⲗ",
+      "english": "and at the hand of the whole house of Achaab: and thou shalt utterly cut off from the house of Achaab every male, and him that is shut up and left in Israel.",
+      "source": "II Kings 9",
+      "urn": "urn:cts:copticLit:ot.2kgs.coptot:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲃⲁⲩⲕⲁⲗⲓⲟⲛ",
+        2,
+        19.791
+      ],
+      [
+        "ⲡⲁⲧⲣⲟⲃⲁ",
+        1,
+        17.791
+      ],
+      [
+        "ⲫⲗⲉⲅⲱⲛ",
+        1,
+        17.791
+      ],
+      [
+        "ⲕⲁⲑⲁⲣⲓⲍⲉ",
+        3,
+        16.376
+      ],
+      [
+        "ϩⲉⲣⲙⲁ",
+        1,
+        15.469
+      ],
+      [
+        "ⲉ",
+        21,
+        15.187
+      ],
+      [
+        "ϫⲟ",
+        3,
+        14.074
+      ],
+      [
+        "ⲁⲭⲁⲃ",
+        1,
+        13.543
+      ],
+      [
+        "ϩⲧⲟⲟⲩⲉ",
+        2,
+        12.779
+      ],
+      [
+        "ⲙⲁ",
+        5,
+        12.745
+      ],
+      [
+        "ⲛ",
+        10,
+        10.967
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        3,
+        10.626
+      ],
+      [
+        "ϥ",
+        7,
+        10.136
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.837
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        1,
+        9.236
+      ],
+      [
+        "ⲡ",
+        5,
+        8.655
+      ],
+      [
+        "ⲉϩⲣⲁⲓ",
+        2,
+        8.488
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        7.982
+      ],
+      [
+        "ⲛⲏⲩ",
+        1,
+        7.753
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.506
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲙⲏ_0_node",
+          7
+        ],
+        [
+          "ⲛⲉ_1_pre_ⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲣⲟⲟⲩ_1_post_ⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲙⲏ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲣⲙⲏ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ϫⲟ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣⲙⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϫⲟ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲣⲙⲏ",
+          "ⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲣⲙⲏ_0_node",
+          "ⲡⲉ_2_post_ϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲣⲟⲟⲩ",
+          "ϩⲣⲟⲟⲩ_1_post_ⲣⲙⲏ",
+          1
+        ],
+        [
+          "ϩⲣⲟⲟⲩ_1_post_ⲣⲙⲏ",
+          "ⲛ_2_post_ϩⲣⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϩⲣⲟⲟⲩ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉϥⲉ_1_pre_ⲣⲙⲏ",
+          "ⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲣⲙⲏ_0_node",
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲙⲏ",
+          3
+        ],
+        [
+          "ⲉϩⲟⲩⲛ_1_post_ⲣⲙⲏ",
+          "ⲉ_1_post_ⲣⲙⲏ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲣⲙⲏ",
+          "ⲧ_2_post_ⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          "ϫⲟ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣⲙⲏ",
+          "ⲣⲙⲏ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲙⲏ",
+          "ⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲉ",
+          "ϫⲟ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3671,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1804",
+      "label": "ϯⲙⲉ",
+      "pos": "N",
+      "gloss": "penis(?)"
+    },
+    {
+      "target": "C1805",
+      "label": "ⲙⲁ ⲛⲣⲙⲏ",
+      "pos": "N",
+      "gloss": "anus; place of evacuation, latrine"
+    },
+    {
+      "target": "C1801",
+      "label": "ⲙⲏ",
+      "pos": "N",
+      "gloss": "urine"
+    },
+    {
+      "target": "C1802",
+      "label": "ⲙⲏ ⲟⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "\"urine of bread\" (food), excrement"
+    }
+  ]
+}

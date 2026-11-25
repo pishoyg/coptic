@@ -1,0 +1,49 @@
+{
+  "id": "C4270",
+  "forms": [
+    {
+      "id": "CF10491",
+      "orth": "ⲧⲁⲗⲧⲉⲗ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4841",
+      "bibliography": "CD 411b; KoptHWb 230"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4268",
+      "label": "ⲧⲗϯⲗⲉ",
+      "pos": "N",
+      "gloss": "drop"
+    },
+    {
+      "target": "C4269",
+      "label": "ⲧⲗϯⲗⲉ",
+      "pos": "N",
+      "gloss": "drop"
+    },
+    {
+      "target": "C4266",
+      "label": "ⲧⲗⲧⲗ",
+      "pos": "V",
+      "gloss": "drip, let drop"
+    },
+    {
+      "target": "C4267",
+      "label": "ⲧⲗⲧⲗ",
+      "pos": "N",
+      "gloss": "dripping"
+    }
+  ]
+}

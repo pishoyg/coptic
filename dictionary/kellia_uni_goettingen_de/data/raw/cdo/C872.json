@@ -1,0 +1,90 @@
+{
+  "id": "C872",
+  "forms": [
+    {
+      "id": "CF3086",
+      "orth": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3214,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1024",
+      "bibliography": "CD 75b; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣϣⲉ ⲉⲣⲟⲛ ϩⲱⲱⲛ ⲉⲣⲓⲙⲉ ϩⲙⲡⲉⲓⲥⲙⲟⲧ **ⲛⲧⲛⲉⲓⲱ **ⲉⲃⲟⲗ**** ⲛⲛⲉⲛⲃⲁⲗ ⲉⲛⲧⲁⲩϭⲱϣⲧ ⲕⲁⲕⲱⲥ ·",
+      "english": "Now it is seemly that we ourselves should weep in such a manner that we may wash out our eyes which have been seeing badly ;",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲡϫⲟⲉⲓⲥ **ⲛⲁⲉⲓⲱ **ⲉⲃⲟⲗ**** ⲙⲡⲧⲱⲗⲙ ⲛⲛϣⲏⲣⲉ ⲙⲛⲛϣⲉⲉⲣⲉ ⲛⲥⲓⲱⲛ ⲁⲩⲱ ϥⲛⲁⲧⲃⲃⲟ ⲙⲡⲉⲥⲛⲟϥ ⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ϩⲛⲧⲉⲥⲙⲏⲧⲉ ϩⲛⲡⲉⲡⲛⲉⲩⲙⲁ ⲛϩⲁⲡ ⲙⲛⲟⲩⲡⲛⲉⲩⲙⲁ ⲛⲣⲱⲕϩ",
+      "english": "For the Lord shall wash away the filth of the sons and daughters of Sion, and shall purge out the blood from the midst of them, with the spirit of judgment, and the spirit of burning.",
+      "source": "Isaiah 4",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡϩⲓⲉⲣⲉⲩⲥ ⲉϥⲉⲟⲩⲉϩⲥⲁϩⲛⲉ ⲁⲩⲱ **ⲉϥⲉⲉⲓⲱ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲧⲉⲣⲉⲡϩⲣⲃ ϩⲓⲱⲱϥ ⲁⲩⲱ ⲉⲣⲉⲡϩⲓⲉⲣⲉⲩⲥ ⲡⲱⲣϫ ⲉⲃⲟⲗ ⲙⲡϩⲣⲃ ⲉⲧⲙⲙⲁⲩ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ ⲛⲥⲡⲥⲛⲁⲩ",
+      "english": "then the priest shall give directions, and one shall wash that on which there may have been the plague, and the priest shall set it aside a second time for seven days.",
+      "source": "Leviticus 13",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2860,
+      "count": 12
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C12117",
+      "label": "ⲁⲑⲓⲱⲟⲩ",
+      "pos": "VSTAT",
+      "gloss": "be unwashed, filthy, dirty"
+    },
+    {
+      "target": "C875",
+      "label": "ⲉⲓⲁⲧⲟⲟⲧ⸗ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "be desperate, renounce"
+    },
+    {
+      "target": "C871",
+      "label": "ⲉⲓⲱ",
+      "pos": "V",
+      "gloss": "wash"
+    },
+    {
+      "target": "C873",
+      "label": "ⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "washing"
+    },
+    {
+      "target": "C874",
+      "label": "ⲣⲉϥⲉⲓⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "washer (in baths)"
+    }
+  ]
+}

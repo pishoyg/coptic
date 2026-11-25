@@ -1,0 +1,79 @@
+{
+  "id": "C3961",
+  "forms": [
+    {
+      "id": "CF31733",
+      "orth": "ⲣⲉϥⲥⲟϩⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31732",
+      "orth": "ⲣⲉϥⲥⲟⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17937,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4497",
+      "bibliography": "CD 381a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3962",
+      "label": "ϫⲓⲛⲥⲟϩⲓ",
+      "pos": "N",
+      "gloss": "reproval"
+    },
+    {
+      "target": "C3959",
+      "label": "ⲥⲟϩⲉ",
+      "pos": "V",
+      "gloss": "reprove, correct, blame"
+    },
+    {
+      "target": "C3960",
+      "label": "ⲥⲟϩⲉ",
+      "pos": "N",
+      "gloss": "reproof, correction"
+    },
+    {
+      "target": "C3957",
+      "label": "ⲥⲟⲟϩⲉ",
+      "pos": "V",
+      "gloss": "be set up, upright; set up, upright"
+    },
+    {
+      "target": "C3958",
+      "label": "ⲥⲟⲟϩⲉ",
+      "pos": "N",
+      "gloss": "setting up, uprightness"
+    },
+    {
+      "target": "C12160",
+      "label": "ⲥⲟⲟϩⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "set up"
+    },
+    {
+      "target": "C12159",
+      "label": "ⲥⲟⲟϩⲉ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "set up(right)"
+    }
+  ]
+}

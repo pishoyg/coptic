@@ -1,0 +1,55 @@
+{
+  "id": "C7640",
+  "forms": [
+    {
+      "id": "CF17341",
+      "orth": "ⲁⲡϭⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF17342",
+      "orth": "ⲁⲡϭⲗⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF17343",
+      "orth": "ⲁⲡϭⲗⲁ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8481",
+      "bibliography": "CD 810a; KoptHWb 449; DELC 337a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7638",
+      "label": "ϭⲗⲟ",
+      "pos": "N",
+      "gloss": "futility, vanity; delusion, illusion"
+    },
+    {
+      "target": "C7639",
+      "label": "ⲉⲡⲉϭⲗⲟ",
+      "pos": "ADV",
+      "gloss": "in vain"
+    },
+    {
+      "target": "C7641",
+      "label": "ⲙⲛⲧⲁⲡϭⲗⲁ",
+      "pos": "N",
+      "gloss": "deception, slander"
+    }
+  ]
+}

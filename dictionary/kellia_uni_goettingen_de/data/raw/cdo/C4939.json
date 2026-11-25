@@ -1,0 +1,164 @@
+{
+  "id": "C4939",
+  "forms": [
+    {
+      "id": "CF11843",
+      "orth": "ⲛⲟⲩⲟⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7231,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5564",
+      "bibliography": "CD 472b; KoptHWb 268; ChLCS 66b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲛⲁϣϯ ⲙⲡⲉϥ**ⲛⲟⲩⲟⲉⲓ** ⲉⲣⲟϥ ⲁⲛ ⲉⲙⲓϣⲉ ⲛⲙⲙⲁϥ ·",
+      "english": "the mighty Devil would not be able to go against Him to fight with Him.",
+      "source": "Proclus Homily 13 on Easter in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily13.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣ",
+        2,
+        13.661
+      ],
+      [
+        "ⲁⲛ",
+        2,
+        10.128
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        10.096
+      ],
+      [
+        "ϯ",
+        2,
+        9.516
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        9.484
+      ],
+      [
+        "ⲙ",
+        2,
+        7.351
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ϥ",
+        2,
+        6.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲟⲩⲟⲉⲓ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲟⲉⲓ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲛⲟⲩⲟⲉⲓ",
+          "ⲛⲟⲩⲟⲉⲓ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6779,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C4946",
+      "label": "ϫⲓ ⲙⲡⲟⲩⲟⲉⲓ",
+      "pos": "V",
+      "gloss": "take way, go"
+    },
+    {
+      "target": "C4945",
+      "label": "ϫⲓⲛϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "onrush, attack"
+    },
+    {
+      "target": "C4947",
+      "label": "ϭⲓⲛϯⲡⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "act of going"
+    },
+    {
+      "target": "C4943",
+      "label": "ϯ ⲙⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4940",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "walk around, seek, proceed"
+    },
+    {
+      "target": "C4941",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "progress, impetuosity"
+    },
+    {
+      "target": "C4944",
+      "label": "ϯⲡⲉϥⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4942",
+      "label": "ϯⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4938",
+      "label": "ⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    }
+  ]
+}

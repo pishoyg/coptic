@@ -1,0 +1,69 @@
+{
+  "id": "C4103",
+  "forms": [
+    {
+      "id": "CF10151",
+      "orth": "ⲙⲉⲧⲧⲃⲃⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4662",
+      "bibliography": "CD 400a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C5096",
+      "type": "cf",
+      "label": "be pure, be innocent"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4101",
+      "label": "ϩⲛⲟⲩⲧⲃⲃⲟ",
+      "pos": "ADV",
+      "gloss": "purely"
+    },
+    {
+      "target": "C4104",
+      "label": "ϭⲓⲛⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purification"
+    },
+    {
+      "target": "C4102",
+      "label": "ⲁⲧⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "impure"
+    },
+    {
+      "target": "C4099",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "V",
+      "gloss": "become pure, be pure; make pure, purify"
+    },
+    {
+      "target": "C4100",
+      "label": "ⲧⲃⲃⲟ",
+      "pos": "N",
+      "gloss": "purity, purification"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "C1511",
+  "forms": [
+    {
+      "id": "CF4455",
+      "orth": "ϩⲓⲭⲟϩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7319,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1767",
+      "bibliography": "CD 132b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲁϥⲉⲣϩⲏⲧⲥ ⲛ**ϩⲓⲭⲟϩ** ⲉϧⲟⲩⲛ ⲉⲛⲓⲃⲁⲕⲓ ⲛⲏ ⲉⲧⲁ ⲡϩⲟⲩⲟ ⲛⲛⲉϥϫⲟⲙ ϣⲱⲡⲓ ⲛϧⲏⲧⲟⲩ ⲟⲩⲟϩ ⲙⲡⲟⲩⲉⲣⲙⲉⲧⲁⲛⲟⲓⲛ .",
+      "english": "Then he began to denounce the cities in which most of his mighty works had been done, because they didn't repent.",
+      "source": "01_Matthew_11",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲃⲁⲕⲓ",
+        1,
+        10.23
+      ],
+      [
+        "ⲉⲣ",
+        1,
+        9.658
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        9.371
+      ],
+      [
+        "ⲉϧⲟⲩⲛ",
+        1,
+        8.915
+      ],
+      [
+        "ⲥ",
+        1,
+        6.428
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        6.218
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲓⲭⲟϩ_0_node",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_1_post_ϩⲓⲭⲟϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲭⲟϩ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲛⲏ_4_post_ⲃⲁⲕⲓ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲓⲭⲟϩ_0_node",
+          "ⲉϧⲟⲩⲛ_1_post_ϩⲓⲭⲟϩ",
+          1
+        ],
+        [
+          "ⲉϧⲟⲩⲛ_1_post_ϩⲓⲭⲟϩ",
+          "ⲉ_1_post_ϩⲓⲭⲟϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϩⲓⲭⲟϩ",
+          "ⲛⲓ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉ",
+          "ⲃⲁⲕⲓ_3_post_ⲛⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_3_post_ⲛⲓ",
+          "ⲛⲏ_4_post_ⲃⲁⲕⲓ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 6790,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6977",
+      "type": "cf",
+      "label": "strike, cast, lay"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1510",
+      "label": "ϯⲕⲱϩ",
+      "pos": "V",
+      "gloss": "cause envy, make zealous"
+    },
+    {
+      "target": "C1512",
+      "label": "ⲕⲟⲓϩⲉ",
+      "pos": "N",
+      "gloss": "rival (woman)"
+    },
+    {
+      "target": "C1507",
+      "label": "ⲕⲱϩ",
+      "pos": "V",
+      "gloss": "be envious, zealous, emulate"
+    },
+    {
+      "target": "C1509",
+      "label": "ⲕⲱϩ",
+      "pos": "N",
+      "gloss": "envy, zeal"
+    },
+    {
+      "target": "C1508",
+      "label": "ⲣⲉϥⲕⲱϩ",
+      "pos": "N",
+      "gloss": "zealous person, rival, imitator"
+    },
+    {
+      "target": "C1513",
+      "label": "ⲭⲟϩⲭⲉϩ",
+      "pos": "V",
+      "gloss": "make zealous"
+    }
+  ]
+}

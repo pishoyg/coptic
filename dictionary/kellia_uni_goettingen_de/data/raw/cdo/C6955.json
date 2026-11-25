@@ -1,0 +1,167 @@
+{
+  "id": "C6955",
+  "forms": [
+    {
+      "id": "CF15961",
+      "orth": "ϩⲁⲑⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11803,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲑⲱⲣ",
+      "dialect": "S",
+      "id": "2316.1"
+    },
+    {
+      "orth": "ⲁⲑⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3105,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ⲁⲑⲱⲣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7180,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲑⲱⲗ",
+      "dialect": "F",
+      "id": "2316.4"
+    },
+    {
+      "orth": "ϩⲉⲑⲱⲗ",
+      "dialect": "F",
+      "id": "2316.5"
+    },
+    {
+      "orth": "ϩⲁⲑⲟⲗ",
+      "dialect": "F",
+      "id": "2316.6"
+    },
+    {
+      "orth": "ϩⲁⲧⲟⲗ",
+      "dialect": "F",
+      "id": "2316.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "subc": "Name einer Sache oder Institution",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7675",
+      "bibliography": "CD 728a; CED 303; KoptHWb 401; DELC 317a-b; ChLCS 97b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϫⲉⲛⲁⲓ ⲁⲩϥⲓ ⲛⲧⲉϥⲁⲡⲉ ⲁϥϫⲱⲕ ⲉⲃⲟⲗ · ⲛⲧϩⲟⲙⲟⲗⲟⲅⲓⲁ ⲉⲧⲛⲁⲛⲟⲩⲥ ⲙⲡⲉⲛⲥⲱⲧⲏⲣ ⲛⲥⲟⲩ · ϫⲟⲩⲧⲏ ⲙⲡⲉⲃⲟⲧ ⲛⲟⲉⲃⲣⲓⲟⲥ ⲉⲧⲉ**ϩⲁⲑⲱⲣ** ⲡⲉ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲉⲃⲣⲓⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.508
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉ_1_pre_ϩⲁⲑⲱⲣ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϩⲁⲑⲱⲣ",
+          1
+        ],
+        [
+          "ϩⲁⲑⲱⲣ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉ_1_pre_ϩⲁⲑⲱⲣ",
+          "ⲧⲉ_1_pre_ϩⲁⲑⲱⲣ",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ϩⲁⲑⲱⲣ",
+          "ϩⲁⲑⲱⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11374,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.95,
+      "rank": 651,
+      "count": 81
+    }
+  },
+  "etym": {
+    "egy_num": "600240",
+    "egy_lemma": "Ḥw.t-Ḥr.w",
+    "english": "Hathor (a month); Hathor (a festival)",
+    "german": "Hathor (Fest); Hathor (Monatsname); Hathor (3. Monat der Achet-Jahreszeit)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600240"
+  }
+}

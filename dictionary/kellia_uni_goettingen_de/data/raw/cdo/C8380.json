@@ -1,0 +1,280 @@
+{
+  "id": "C8380",
+  "forms": [
+    {
+      "id": "CF19502",
+      "orth": "ⲁⲡⲟⲛⲟⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF19505",
+      "orth": "ⲁⲡⲟⲛⲟⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 4853,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF19504",
+      "orth": "ⲁⲡⲟⲛⲟⲓⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF19503",
+      "orth": "ⲁⲡⲟⲛⲉⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9665",
+      "bibliography": "DDGLC",
+      "cu_ID": "704"
+    },
+    {
+      "id": "CS9666",
+      "bibliography": "DDGLC",
+      "cu_ID": "1462"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣⲙⲟⲟϣⲉ ⲙⲡϩⲟⲟⲩ ⲉⲕⲑⲃⲃⲓⲏⲩ ⲉⲕⲟ ⲛⲣⲙⲣⲁϣ ⲣⲁⲥⲧⲉ ϩⲱⲱϥ ϩⲛⲟⲩ**ⲁⲡⲟⲛⲟⲓⲁ** ⲙⲛⲟⲩⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ⁛—",
+      "english": "Walk not to-day humbly and in lowlymindedness, or to-morrow thou wilt walk conceitedly and arrogantly.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲧⲁϣⲉϣⲁϫⲉ ⲙⲛⲟⲩⲥⲟϭ ⲁⲩⲱ ⲙⲡⲣⲃⲱⲕ ⲉⲣⲁⲧϥ ⲛⲟⲩⲁⲧϩⲏⲧ ⲁⲣⲉϩ ⲉⲣⲟⲕ ⲉⲣⲟϥ ϫⲉⲕⲁⲥ ⲛⲛⲉⲕϣⲡϩⲓⲥⲉ ⲁⲩⲱ ⲛⲛⲉⲕⲧⲱⲗⲙ ⲉϥϣⲁⲛⲛⲉϩϥ ⲉⲃⲟⲗ ⲥⲁϩⲱⲕ ⲉⲃⲟⲗ ⲙⲙⲟϥ ⲧⲁⲣⲉⲕϩⲉ ⲉⲩⲙⲧⲟⲛ ⲁⲩⲱ ⲛⲛⲉⲕⲙⲕⲁϩ ⲛϩⲏⲧ ϩⲛⲧⲉϥ**ⲁⲡⲟⲛⲟⲓⲁ**",
+      "english": "Talk not much with a fool, and go not to him that hath no understanding: beware of him, lest thou have trouble, and thou shalt never be defiled with his fooleries: depart from him, and thou shalt find rest, and never be disquieted with madness.",
+      "source": "Sirach 22",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁϫⲱ ⲙⲡϭⲱⲛⲧ ⲙⲛⲧ**ⲁⲡⲟⲛⲟⲓⲁ** ⲙⲡⲧⲩⲣⲁⲛⲟⲥ ϫⲉⲙⲙⲟⲛ ⲑⲩⲡⲟⲙⲟⲡⲏ ⲙⲡⲉⲓⲙⲁⲣⲧⲩⲣⲟⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲡⲁⲓ ⲙⲉⲛ ⲛⲉϥⲟ ⲛⲧϩⲉ ⲛϩⲉⲛⲉⲥⲟⲟⲩ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲟⲩⲱⲛϣ ⲛⲉϥⲟ ⲛⲧϩⲉ ⲛϩⲛⲕⲣⲓⲛⲟⲛ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲛϣⲟⲛⲧⲉ .",
+      "english": "...",
+      "source": "Encomium of Helias",
+      "urn": "urn:cts:copticLit:helias.encomium.sobhy_ed:0-11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲩⲣⲁⲛⲟⲥ",
+        1,
+        18.276
+      ],
+      [
+        "ϥⲛⲟⲩ",
+        1,
+        18.276
+      ],
+      [
+        "ⲉⲛⲧⲁⲣⲉ",
+        1,
+        17.276
+      ],
+      [
+        "ϩⲟⲣϣ",
+        1,
+        12.299
+      ],
+      [
+        "ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+        1,
+        11.647
+      ],
+      [
+        "ⲁⲡⲟⲧⲁⲥⲥⲉ",
+        1,
+        11.535
+      ],
+      [
+        "⁛—",
+        1,
+        10.431
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        9.829
+      ],
+      [
+        "ϫⲉ",
+        4,
+        9.824
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        9.17
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        8.898
+      ],
+      [
+        "ⲡ",
+        4,
+        8.175
+      ],
+      [
+        "ϩⲱⲱ",
+        1,
+        8.138
+      ],
+      [
+        "ⲛ",
+        4,
+        7.487
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.322
+      ],
+      [
+        "ϩⲛ",
+        2,
+        7.157
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.642
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        6.625
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.126
+      ],
+      [
+        "ϯ",
+        1,
+        5.194
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲛⲟⲓⲁ_0_node",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧⲩⲣⲁⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ_1_post_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          "ⲧ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          "ⲁⲡⲟⲛⲟⲓⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲛⲟⲓⲁ_0_node",
+          "ⲙ_1_post_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲟⲛⲟⲓⲁ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲩⲣⲁⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲡⲟⲛⲟⲓⲁ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          "ⲟⲩ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ",
+          "ⲙⲛⲧϫⲁⲥⲓϩⲏⲧ_1_post_ⲁⲡⲟⲛⲟⲓⲁ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲟⲛⲟⲓⲁ",
+          "ⲁⲡⲟⲛⲟⲓⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4437,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "2461",
+    "grl_lemma": "ἀπόνοια",
+    "grl_meaning": "loss of all sense, desperation, madness",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 211a; Preisigke 1:190"
+  }
+}

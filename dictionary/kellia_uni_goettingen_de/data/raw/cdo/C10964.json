@@ -1,0 +1,298 @@
+{
+  "id": "C10964",
+  "forms": [
+    {
+      "id": "CF30002",
+      "orth": "ⲭⲗⲁⲙⲩⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30003",
+      "orth": "ⲕⲗⲁⲙⲓⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF30006",
+      "orth": "ⲭⲗⲁⲙⲩⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF30005",
+      "orth": "ⲭⲗⲁⲙⲉⲩⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20510,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30004",
+      "orth": "ⲕⲭⲗⲁⲙⲩⲥ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15193",
+      "bibliography": "DDGLC",
+      "cu_ID": "610"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲕⲱ ⲙⲙⲟϥ ⲕⲁϩⲏⲩ ⲁⲩϯ ϩⲓⲱⲱϥ ⲛⲟⲩ**ⲭⲗⲁⲙⲩⲥ** ⲛⲕⲟⲕⲕⲟⲥ .",
+      "english": "They stripped him, and put a scarlet robe on him.",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲟⲩⲱ ⲇⲉ ⲉⲩⲥⲱⲃⲉ ⲙⲙⲟϥ ⲁⲩⲕⲁⲁϥ ⲕⲁϩⲏⲩ ⲛⲧⲉ**ⲭⲗⲁⲙⲩⲥ** ⲛϫⲏϭⲉ . ⲁⲩϯⲛⲉϥϩⲟⲉⲓⲧⲉ ϩⲓⲱⲱϥ ⲁⲩⲱ ⲁⲩⲛⲧϥ ⲉⲃⲟⲗ ϫⲉⲉⲩⲉⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ .",
+      "english": "When they had mocked him, they took the purple off of him, and put his own garments on him. They led him out to crucify him.",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩϯ ϩⲓⲱⲱϥ ⲛⲟⲩ**ⲭⲗⲁⲙⲩⲥ** ⲛϫⲏϭⲉ ⲁⲩⲱ ⲁⲩϣⲛⲧⲟⲩⲕⲗⲟⲙ ⲛϣⲟⲛⲧⲉ ⲁⲩⲕⲁⲁϥ ϩⲓϫⲱϥ",
+      "english": "They clothed him with purple, and weaving a crown of thorns, they put it on him.",
+      "source": "41_Mark_15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲏϭⲉ",
+        4,
+        18.051
+      ],
+      [
+        "ⲕⲁϩⲏⲩ",
+        4,
+        16.91
+      ],
+      [
+        "ⲕⲟⲕⲕⲟⲥ",
+        2,
+        15.817
+      ],
+      [
+        "ϩⲓⲱⲱ",
+        5,
+        15.645
+      ],
+      [
+        "ⲧⲁⲡ",
+        2,
+        14.554
+      ],
+      [
+        "ϣⲟⲗⲥ",
+        1,
+        12.615
+      ],
+      [
+        "ⲛ",
+        16,
+        12.35
+      ],
+      [
+        "ϥ",
+        10,
+        11.028
+      ],
+      [
+        "ⲧⲉ",
+        4,
+        10.344
+      ],
+      [
+        "ⲁ",
+        7,
+        10.007
+      ],
+      [
+        ".",
+        4,
+        9.098
+      ],
+      [
+        "ⲥⲁⲟⲩⲗ",
+        1,
+        8.561
+      ],
+      [
+        "ⲃⲟⲗ",
+        1,
+        8.075
+      ],
+      [
+        "ⲟⲩ",
+        4,
+        7.761
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        7.517
+      ],
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        7.307
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.043
+      ],
+      [
+        "ⲡⲉϫⲉ",
+        1,
+        6.555
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        6.515
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        6.411
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲭⲗⲁⲙⲩⲥ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          6
+        ],
+        [
+          "ϫⲏϭⲉ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲕⲟⲕⲕⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ_b",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲥⲁⲟⲩⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲭⲗⲁⲙⲩⲥ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲭⲗⲁⲙⲩⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲭⲗⲁⲙⲩⲥ_0_node",
+          "ⲛ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          "ϫⲏϭⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          "ⲕⲟⲕⲕⲟⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲭⲗⲁⲙⲩⲥ_0_node",
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ⲥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ_b",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲭⲗⲁⲙⲩⲥ_b",
+          "ⲥ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲭⲗⲁⲙⲩⲥ",
+          "ⲥⲁⲟⲩⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲭⲗⲁⲙⲩⲥ",
+          "ⲭⲗⲁⲙⲩⲥ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲭⲗⲁⲙⲩⲥ",
+          "ⲭⲗⲁⲙⲩⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.07,
+      "rank": 3005,
+      "count": 11
+    }
+  },
+  "etym": {
+    "grl_ID": "2648",
+    "grl_lemma": "χλαμύς",
+    "grl_meaning": "short mantle, cloak",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1993b; Preisigke 2:737"
+  }
+}

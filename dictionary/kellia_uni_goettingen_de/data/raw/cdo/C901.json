@@ -1,0 +1,74 @@
+{
+  "id": "C901",
+  "forms": [
+    {
+      "id": "CF3144",
+      "orth": "ⲣⲉϥⲉⲙⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF3145",
+      "orth": "ⲣⲉϥⲉⲙⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1057",
+      "bibliography": "CD 78a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C902",
+      "label": "ϭⲓⲛⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C899",
+      "label": "ⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorant, innocent"
+    },
+    {
+      "target": "C897",
+      "label": "ⲉⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "know, understand"
+    },
+    {
+      "target": "C898",
+      "label": "ⲉⲙⲓ",
+      "pos": "N",
+      "gloss": "knowledge"
+    },
+    {
+      "target": "C900",
+      "label": "ⲙⲛⲧⲁⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "ignorance, innocence"
+    },
+    {
+      "target": "C904",
+      "label": "ⲙⲛⲧⲛⲁϣⲧⲙⲙⲉ",
+      "pos": "N",
+      "gloss": "presumption, stubbornness"
+    },
+    {
+      "target": "C903",
+      "label": "ⲛⲁϣⲧⲉⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "presumptuous, impudent, obdurate"
+    }
+  ]
+}

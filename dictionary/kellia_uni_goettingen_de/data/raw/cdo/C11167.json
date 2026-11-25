@@ -1,0 +1,99 @@
+{
+  "id": "C11167",
+  "forms": [
+    {
+      "id": "CF30941",
+      "orth": "ϩⲟⲙⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF30942",
+      "orth": "ϩⲟⲙⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10630,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF30943",
+      "orth": "ϩⲟⲙⲱⲥ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS15685",
+      "bibliography": "DDGLC",
+      "cu_ID": "725"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛⲁⲛⲟⲩⲥ ⲉⲛⲁⲛⲁⲥⲧⲣⲉⲫⲉ ⲛⲟⲩⲟⲉⲓϣ ⲛⲓⲙ · ⲕⲁⲛ ⲉⲙⲛⲡⲓⲣⲁⲥⲙⲟⲥ ϩⲓϫⲱⲛ · **ϩⲟⲙⲱⲥ** ⲧⲕⲩⲙⲛⲁⲥⲓⲁ ⲛⲁⲡⲗⲁⲡⲧⲉⲓ ⲙⲙⲟⲕ ⲗⲁⲁⲩ ⲁⲛ · ⲁⲗⲗⲁ ⲛⲉⲕⲛⲁϯϩⲏⲩ ⲉⲡⲉϩⲟⲩⲟ ·",
+      "english": "or this reason is it good that we should continue to exercise ourselves in our work at all times, and even if no temptations come upon us, the exercise will certainly do thee no harm whatsoever, nay, on the contrary, thou wilt benefit thyself exceedingly.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲩⲙⲛⲁⲥⲓⲁ",
+        1,
+        20.598
+      ],
+      [
+        "ⲡⲓⲣⲁⲥⲙⲟⲥ",
+        1,
+        20.598
+      ],
+      [
+        "ⲡⲗⲁⲡⲧⲉⲓ",
+        1,
+        17.791
+      ],
+      [
+        "ϩⲓϫⲱ",
+        1,
+        11.81
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10219,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1550",
+    "grl_lemma": "ὅμως",
+    "grl_meaning": "equally, likewise, alike",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1230a; Preisigke 2:181"
+  }
+}

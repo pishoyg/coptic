@@ -1,0 +1,71 @@
+{
+  "id": "C3927",
+  "forms": [
+    {
+      "id": "CF9785",
+      "orth": "ⲥϣⲟⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31727",
+      "orth": "ⲥϩⲁⲁⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9786",
+      "orth": "ⲥϩⲁⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9787",
+      "orth": "ⲥⲭⲟⲧ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9789",
+      "orth": "ϣⲭⲁⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4456",
+      "bibliography": "CD 387a; CED 149; KoptHWb 207; ChLCS 53a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C3928",
+      "type": "cf",
+      "label": "stop, impede, hinder, withhold"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12231",
+      "label": "ϫⲓ ⲥⲭⲁⲧ",
+      "pos": "V",
+      "gloss": "receive marriage gift"
+    },
+    {
+      "target": "C12237",
+      "label": "ⲣⲙⲛⲥⲭⲁⲧ",
+      "pos": "N",
+      "gloss": "partaker in marriage gift (?)"
+    },
+    {
+      "target": "C12172",
+      "label": "ⲥⲟϣⲧ",
+      "pos": "V",
+      "gloss": "betroth"
+    }
+  ]
+}

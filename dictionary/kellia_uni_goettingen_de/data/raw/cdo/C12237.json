@@ -1,0 +1,43 @@
+{
+  "id": "C12237",
+  "forms": [
+    {
+      "id": "CF33254",
+      "orth": "ⲣⲙⲛⲥⲭⲁⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS17241",
+      "bibliography": "CD 387a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12231",
+      "label": "ϫⲓ ⲥⲭⲁⲧ",
+      "pos": "V",
+      "gloss": "receive marriage gift"
+    },
+    {
+      "target": "C3927",
+      "label": "ⲥϣⲟⲧ",
+      "pos": "N",
+      "gloss": "marriage gift (from bridegroom)"
+    },
+    {
+      "target": "C12172",
+      "label": "ⲥⲟϣⲧ",
+      "pos": "V",
+      "gloss": "betroth"
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "id": "C24",
+  "forms": [
+    {
+      "id": "CF99",
+      "orth": "ⲁⲉⲓⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5123,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF100",
+      "orth": "ⲁⲉⲓⲕ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF101",
+      "orth": "ⲁⲓⲕ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.17,
+        "rank": 2076,
+        "count": 14
+      }
+    },
+    {
+      "id": "CF102",
+      "orth": "ⲁⲓⲕ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF103",
+      "orth": "ⲁⲓⲕ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS24",
+      "bibliography": "CD 3a; CED 3; KoptHWb 2, 484; DELC 6; ChLCS 3a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥϣⲱⲡⲓ ⲙⲡⲓⲥⲏⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲛϫⲉⲟⲩ**ⲁⲓⲕ** ϧⲉⲛⲓⲉⲣⲟⲥⲁⲗⲏⲙ ⲛⲉⲧⲫⲣⲱ ⲧⲉ .",
+      "english": "It was the Feast of the Dedication at Jerusalem.",
+      "source": "04_John_10",
+      "urn": "urn:cts:copticLit:nt.john.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϣⲱⲡⲉ ⲇⲉ ϩⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲧⲙⲙⲁⲩ ⲛϭⲓⲡϫⲓ **ⲁⲉⲓⲕ** ϩⲛⲧϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ ⲛⲉ ⲧⲉⲡⲣⲱ ⲧⲉ .",
+      "english": "It was the Feast of the Dedication at Jerusalem.",
+      "source": "43_John_10",
+      "urn": "urn:cts:copticLit:nt.john.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉⲥⲁϫⲓ ⲛϫⲉⲛⲓⲥⲁϧ ⲛⲉⲙⲡⲓⲗⲁⲟⲥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲓⲙ ⲡⲉ ⲡⲓⲣⲱⲙⲓ ⲉⲧⲁϥⲕⲱⲧ ⲛⲟⲩⲏⲓ ⲙⲃⲉⲣⲓ ⲟⲩⲟϩ ⲙⲡⲉϥϭⲓ ⲙⲡⲉϥ**ⲁⲓⲕ** ⲙⲁⲣⲉϥϣⲉⲛⲁϥ ⲉⲡⲉϥⲏⲓ ⲙⲏⲡⲱⲥ ⲛⲧⲉϥⲙⲟⲩ ϧⲉⲛⲡⲓⲡⲟⲗⲉⲙⲟⲥ ⲟⲩⲟϩ ⲛⲧⲉⲕⲉⲣⲙⲓ ϭⲓ ⲙⲡⲉϥⲁⲓⲕ",
+      "english": "And the scribes shall speak to the people, saying, What man is he that has built a new house, and has not dedicated it? let him go and return to his house, lest he die in the war, and another man dedicate it.",
+      "source": "05_Deuteronomium_20",
+      "urn": "urn:cts:copticLit:ot.deut.bohairic_ed:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲉⲩⲉϣⲁϫⲉ ⲙⲛⲡⲗⲁⲟⲥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲓⲙ ⲡⲉ ⲡⲣⲱⲙⲉ ⲉⲛⲧⲁϥⲕⲱⲧ ⲛⲟⲩⲏⲓ ⲛⲃⲣⲣⲉ ⲁⲩⲱ ⲉⲙⲡϥϫⲓⲡⲉϥ**ⲁⲉⲓⲕ** ⲉⲃⲟⲗ ⲙⲁⲣⲉϥⲙⲟⲟϣⲉ ⲛϥⲕⲟⲧϥ ⲉϩⲣⲁⲓ ⲉⲡⲉϥⲏⲓ ⲙⲡⲣⲧⲣⲉϥⲙⲟⲩ ϩⲙⲡⲡⲟⲗⲉⲙⲟⲥ ⲛⲧⲉⲕⲉⲣⲱⲙⲉ ϫⲓⲡⲉϥⲁⲉⲓⲕ ⲉⲃⲟⲗ",
+      "english": "And the scribes shall speak to the people, saying, What man is he that has built a new house, and has not dedicated it? let him go and return to his house, lest he die in the war, and another man dedicate it.",
+      "source": "Deuteronomy 20",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:20",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲓϣⲟⲩϣⲱⲟⲩϣⲓ ⲛⲛⲟϩⲉⲙ ⲕⲇ ⲙⲃⲁϩⲥⲓ ⲛⲉⲙⲝ ⲛⲱⲓⲗⲓ ⲛⲉⲙⲝ ⲙⲃⲁⲣⲏⲓⲧ ⲛⲉⲙⲝ ⲛϩⲓⲉⲃⲓ ⲉⲁⲩⲉⲣⲟⲩⲣⲟⲙⲡⲓ ⲉⲩⲟⲓ ⲛⲁⲧⲁϭⲛⲓ ⲫⲁⲓ ⲡⲉ ⲡⲓ**ⲁⲓⲕ** ⲛⲧⲉⲡⲓⲙⲁⲛⲉⲣϣⲱⲟⲩϣⲓ ⲙⲉⲛⲉⲛⲥⲁⲑⲣⲉϥϫⲱⲕ ⲛⲛⲉϥϫⲓϫ ⲟⲩⲟϩ ⲙⲉⲛⲉⲛⲥⲁⲑⲣⲉϥⲑⲁϩⲥϥ",
+      "english": "All the cattle for a sacrifice of peace-offering, twenty-four heifers, sixty rams, sixty he-goats of a year old, sixty ewe-lambs of a year old without blemish: this is the dedication of the altar, after that Moses consecrated Aaron, and after he anointed him.",
+      "source": "04_Numeri_07",
+      "urn": "urn:cts:copticLit:ot.num.bohairic_ed:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲧⲕⲉϣⲟⲣⲡ ⲙⲡⲟⲩϫⲓ ⲡⲉⲥ**ⲁⲉⲓⲕ** ⲉⲃⲟⲗ ⲛⲟⲩⲉϣ ⲛⲥⲛⲟϥ .",
+      "english": "Therefore even the first covenant has not been dedicated without blood.",
+      "source": "58_Hebrews_9",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲟⲕⲙ",
+        1,
+        18.276
+      ],
+      [
+        "ϫⲓ",
+        4,
+        12.842
+      ],
+      [
+        "ⲡⲱϣⲥ",
+        1,
+        12.322
+      ],
+      [
+        "ⲟⲩⲉϣ",
+        1,
+        10.194
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        4,
+        10.143
+      ],
+      [
+        "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+        1,
+        9.424
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        9.307
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        8.774
+      ],
+      [
+        "ⲡⲉⲥ",
+        1,
+        8.409
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.359
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        7.914
+      ],
+      [
+        "ⲙ",
+        3,
+        7.784
+      ],
+      [
+        "ⲙⲡ",
+        1,
+        7.41
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.204
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.651
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        6.458
+      ],
+      [
+        "ⲛ",
+        3,
+        6.242
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.126
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        5.991
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        5.965
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲁⲉⲓⲕ_0_node",
+          3
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲁⲉⲓⲕ",
+          "ⲁⲉⲓⲕ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4701,
+      "count": 5
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5438",
+      "type": "cf",
+      "label": "go in"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C26",
+      "label": "ϫⲓⲁⲉⲓⲕ",
+      "pos": "V",
+      "gloss": "consecrate"
+    },
+    {
+      "target": "C27",
+      "label": "ϫⲓⲁⲉⲓⲕ",
+      "pos": "N",
+      "gloss": "consecration"
+    },
+    {
+      "target": "C25",
+      "label": "ⲉⲣⲁⲓⲕ",
+      "pos": "V",
+      "gloss": "consecrate"
+    }
+  ],
+  "etym": {
+    "egy_num": "41430",
+    "egy_lemma": "ꜥq.y",
+    "demo_num": "d875",
+    "demo_lemma": "ꜥjq",
+    "english": "ceremonial entrance (of the king)",
+    "german": "feierlicher Einzug (des Königs)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/41430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d875"
+  }
+}

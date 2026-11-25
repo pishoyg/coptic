@@ -1,0 +1,111 @@
+{
+  "id": "C133",
+  "forms": [
+    {
+      "id": "CF483",
+      "orth": "ⲁⲛⲑⲟⲩⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9742,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS153",
+      "bibliography": "CD 11b; CED 8; KoptHWb 9; DELC 12"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲙⲡⲓⲁⲗⲓⲗ ⲛⲉⲙⲡⲓⲭⲁⲙⲏⲗⲉⲟⲛ ⲛⲉⲙⲡⲓ**ⲁⲛⲑⲟⲩⲥ** ⲛⲉⲙϯⲁϥⲗⲉⲗⲓ ⲛⲉⲙⲡⲓⲥⲡⲁⲗⲁⲝ",
+      "english": "the ferret, and the chameleon, and the evet, and the newt, and the mole.",
+      "source": "03_Leviticus_11",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:11",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲁϥⲗⲉⲗⲓ",
+        1,
+        19.695
+      ],
+      [
+        "ⲭⲁⲙⲏⲗⲉⲟⲛ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲉⲙ",
+        3,
+        10.997
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        8.771
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲛⲑⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲛⲑⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲁⲛⲑⲟⲩⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲙ_1_pre_ⲁⲛⲑⲟⲩⲥ",
+          "ⲡⲓ_1_pre_ⲁⲛⲑⲟⲩⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲁⲛⲑⲟⲩⲥ",
+          "ⲁⲛⲑⲟⲩⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 9201,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "107380",
+    "egy_lemma": "ḥntꜣsw",
+    "demo_num": "dm1410",
+    "demo_lemma": "ḥnṱs",
+    "english": "lizard (med.)",
+    "german": "Eidechse",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/107380",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1410"
+  }
+}

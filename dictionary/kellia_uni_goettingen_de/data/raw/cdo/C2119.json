@@ -1,0 +1,57 @@
+{
+  "id": "C2119",
+  "forms": [
+    {
+      "id": "CF31659",
+      "orth": "ⲃⲱⲕ ⲛⲙⲧⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31658",
+      "orth": "ⲃⲱⲕ ⲛⲧⲙⲧⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2454",
+      "bibliography": "CD 193ab; KoptHWb 103; ChLCS 28a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C370",
+      "type": "cf",
+      "label": "go, depart"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2120",
+      "label": "ϭⲓⲛⲃⲱⲕ ⲛⲙⲧⲱ",
+      "pos": "N",
+      "gloss": "shipwreck"
+    },
+    {
+      "target": "C2117",
+      "label": "ⲙⲧⲱ",
+      "pos": "N",
+      "gloss": "depth (of sea)"
+    },
+    {
+      "target": "C2118",
+      "label": "ⲙⲧⲱ",
+      "pos": "N",
+      "gloss": "depth (of sea)"
+    }
+  ]
+}

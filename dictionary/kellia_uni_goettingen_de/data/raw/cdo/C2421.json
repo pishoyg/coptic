@@ -1,0 +1,196 @@
+{
+  "id": "C2421",
+  "forms": [
+    {
+      "id": "CF6617",
+      "orth": "ⲉⲣⲛⲏⲃ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8555,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2787",
+      "bibliography": "CD 221a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϯⲟⲩⲱϣ ⲟⲩⲛ ⲛⲧⲉⲛⲓⲁⲗⲱⲟⲩⲓ ⲛϩⲓⲟⲙⲓ ϭⲓϩⲁⲓ ⲛⲥⲉϫⲫⲉ ϣⲏⲣⲓ ⲛⲥⲉ**ⲉⲣⲛⲏⲃ** ⲉⲡⲟⲩⲏⲓ ⲉϣⲧⲉⲙϯ ϩⲗⲓ ⲛⲗⲱⲓϫⲓ ⲙⲡⲓⲁⲛⲧⲓⲕⲓⲙⲉⲛⲟⲥ ⲉⲑⲃⲉⲟⲩϩⲱⲟⲩϣ .",
+      "english": "I desire therefore that the younger widows marry, bear children, rule the household, and give no occasion to the adversary for reviling.",
+      "source": "15_I Timothy_05",
+      "urn": "urn:cts:copticLit:nt.1tim.bohairic:05",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲫⲉ",
+        1,
+        13.066
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        9.692
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        8.736
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.609
+      ],
+      [
+        "ϣⲏⲣⲓ",
+        1,
+        8.297
+      ],
+      [
+        "ⲉ",
+        2,
+        8.017
+      ],
+      [
+        "ⲛ",
+        1,
+        4.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲉⲣⲛⲏⲃ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲣⲛⲏⲃ",
+          1
+        ],
+        [
+          "ⲉⲣⲛⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲣⲛⲏⲃ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲏⲓ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲣⲛⲏⲃ",
+          "ⲥⲉ_1_pre_ⲉⲣⲛⲏⲃ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲉⲣⲛⲏⲃ",
+          "ⲉⲣⲛⲏⲃ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲛⲏⲃ_0_node",
+          "ⲉ_1_post_ⲉⲣⲛⲏⲃ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲣⲛⲏⲃ",
+          "ⲡⲟⲩ_3_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲏⲓ",
+          "ⲏⲓ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 8024,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2419",
+      "label": "ⲁⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordless"
+    },
+    {
+      "target": "C2420",
+      "label": "ⲙⲉⲧⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lordship"
+    },
+    {
+      "target": "C2425",
+      "label": "ⲛⲉⲃϩⲏⲧ",
+      "pos": "N",
+      "gloss": "lord of mind, man of sense"
+    },
+    {
+      "target": "C2422",
+      "label": "ⲛⲉⲃⲁϩⲓ",
+      "pos": "N",
+      "gloss": "longlived"
+    },
+    {
+      "target": "C2423",
+      "label": "ⲛⲉⲃⲏⲓ",
+      "pos": "N",
+      "gloss": "lord of house, householder"
+    },
+    {
+      "target": "C2424",
+      "label": "ⲛⲉⲃⲓⲟϩⲓ",
+      "pos": "N",
+      "gloss": "lord of the field, landowner"
+    },
+    {
+      "target": "C2417",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "lord, master, owner"
+    },
+    {
+      "target": "C2418",
+      "label": "ⲛⲏⲃ",
+      "pos": "N",
+      "gloss": "mistress, lady"
+    }
+  ]
+}

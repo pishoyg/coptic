@@ -1,0 +1,57 @@
+{
+  "id": "C3764",
+  "forms": [
+    {
+      "id": "CF9448",
+      "orth": "ⲥⲁⲧⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF9449",
+      "orth": "ⲥⲁⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14022,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4275",
+      "bibliography": "CD 360a; KoptHWb 198; DELC 198; ChLCS 50b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲁⲓⲥⲱⲧⲙ ⲅⲁⲣ ⲉⲣⲟⲟⲩ ϫⲉⲙⲁⲣⲉⲛⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲇⲱⲑⲁⲉⲓⲙ ⲁⲓⲱⲥⲏⲫ ⲙⲟⲟϣⲉ ⲛ**ⲥⲁⲧⲟ** ⲧϩⲉ ⲛⲛⲉϥⲥⲛⲏⲩ ⲁϥϩⲉ ⲉⲣⲟⲟⲩ ϩⲣⲁⲓ ϩⲛⲇⲱⲑⲁⲉⲓⲙ",
+      "english": "And the man said to him, They have departed hence, for I heard them saying, Let us go to Dothaim; and Joseph went after his brethren, and found them in Dothaim.",
+      "source": "Genesis 37",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:37",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13619,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3763",
+      "label": "ⲥⲁⲧⲉ",
+      "pos": "V",
+      "gloss": "fan"
+    }
+  ]
+}

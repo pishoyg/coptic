@@ -1,0 +1,114 @@
+{
+  "id": "C10654",
+  "forms": [
+    {
+      "id": "CF28826",
+      "orth": "ⲥⲫⲟⲛⲅⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28827",
+      "orth": "ⲥⲫⲟⲛⲅⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12077,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14551",
+      "bibliography": "DDGLC",
+      "cu_ID": "4362"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲟⲩ**ⲥⲫⲟⲛⲅⲟⲥ** ϩⲛⲧⲉϥϭⲓϫ ⲁϥⲱⲗ ⲛⲛⲣⲙⲉⲓⲟⲟⲩⲉ ⲧⲏⲣⲟⲩ ⲙⲡⲁⲅⲅⲉⲗⲟⲥ ⲛⲧⲟⲣⲅⲏ ·",
+      "english": "There was a sponge in his hand, wherewith he wiped away all the tears of the angel of wrath,",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲡⲉ",
+        1,
+        14.554
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        9.974
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲫⲟⲛⲅⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲫⲟⲛⲅⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ⲥⲫⲟⲛⲅⲟⲥ",
+          "ⲥⲫⲟⲛⲅⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11651,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "5456",
+    "grl_lemma": "σφόγγος",
+    "grl_meaning": "sponge; any spongy substance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1741b; Preisigke 2:559"
+  }
+}

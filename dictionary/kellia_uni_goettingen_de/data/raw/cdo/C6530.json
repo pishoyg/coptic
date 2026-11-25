@@ -1,0 +1,56 @@
+{
+  "id": "C6530",
+  "forms": [
+    {
+      "id": "CF15088",
+      "orth": "ⲁⲧⲣϩⲟⲟⲗⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7241",
+      "bibliography": "CD 667a; ChLCS 89b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6527",
+      "label": "ϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "moth"
+    },
+    {
+      "target": "C6528",
+      "label": "ϩⲟⲟⲗⲉ",
+      "pos": "N",
+      "gloss": "moth"
+    },
+    {
+      "target": "C6529",
+      "label": "ⲣϩⲟⲟⲗⲉ",
+      "pos": "V",
+      "gloss": "be moth-eaten, perished"
+    }
+  ]
+}

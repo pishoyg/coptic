@@ -1,0 +1,85 @@
+{
+  "id": "C879",
+  "forms": [
+    {
+      "id": "CF3100",
+      "orth": "ⲉⲓⲁ ⲛⲧⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4554,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1031",
+      "bibliography": "CD 76a; ChLCS 13a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲁⲛⲟⲕ ϩⲱ ⲁⲗⲏⲑⲱⲥ · ⲁⲩϯ ⲛⲙⲙⲁⲓ ϩⲙⲡⲟⲩⲛⲁⲙ ⲁⲩⲉⲓⲛⲉ ⲛⲁⲓ · ⲙⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲉϥⲥⲟⲛϩ ⲛⲧϩⲉ **ⲛⲟⲩⲉⲓⲁ **ⲛⲧⲟⲟⲩ**** · ⲁⲗⲗⲁ ⲁⲡϫⲟⲉⲓⲥ ϯⲧⲟⲟⲧ",
+      "english": "For in very truth, in my own case, they fought against me on the right-hand side, and they brought unto me the Devil, being bound in the form of a wild ass, but the Lord helped me.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲁⲟⲩⲗ ⲇⲉ ⲙⲛⲛⲣⲱⲙⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ **ⲉⲡⲉⲓⲁ **ⲛⲧⲟⲟⲩ**** ⲁⲩⲁϩⲉⲣⲁⲧⲟⲩ ⲉⲡⲡⲟⲗⲉⲙⲟⲥ ⲙⲡϩⲟⲧ ⲉⲃⲟⲗ ⲛⲛⲁⲗⲗⲟⲫⲩⲗⲟⲥ",
+      "english": "And Saul and the men of Israel gather together, and they encamp in the valley, and set the battle in array against the Philistines.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲁⲣⲉⲟⲩ ⲅⲁⲣ ϣⲱⲡⲉ ⲙⲏ **ϣⲁⲣⲉⲟⲩⲉⲓⲁ **ⲛⲧⲟⲟⲩ**** ⲱϣ ⲉⲃⲟⲗ ⲉⲡϫⲓⲛϫⲏ ⲛⲥⲁⲃⲏⲗ ϫⲉⲉϥϣⲓⲛⲉ ⲛⲥⲁⲧⲉϥϩⲣⲉ ⲙⲏ ϣⲁⲣⲉⲙⲁⲥⲉ ⲱϣ ⲉⲃⲟⲗ ⲉⲩⲛϩⲣⲉ ϩⲙⲡⲉϥⲟⲩⲟⲙϥ",
+      "english": "What then? will the wild ass bray for nothing, if he is not seeking food? or again, will the ox low at the manger, when he has a fodder?",
+      "source": "Job 6",
+      "urn": "urn:cts:copticLit:ot.job.coptot:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2626,
+      "count": 14
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C878",
+      "label": "ⲉⲓⲁϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "wild ass"
+    },
+    {
+      "target": "C880",
+      "label": "ⲉⲓⲁⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "she ass"
+    },
+    {
+      "target": "C876",
+      "label": "ⲉⲓⲱ",
+      "pos": "N",
+      "gloss": "ass"
+    },
+    {
+      "target": "C877",
+      "label": "ⲉⲓⲱ",
+      "pos": "N",
+      "gloss": "ass"
+    }
+  ]
+}

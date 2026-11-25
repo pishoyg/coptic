@@ -1,0 +1,78 @@
+{
+  "id": "C6332",
+  "forms": [
+    {
+      "id": "CF14676",
+      "orth": "ϩⲁⲣⲓϩⲁⲣⲟ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4117,
+        "count": 7
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "subc": "Reflexivpronomen",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS7027",
+      "bibliography": "CD 634a-b; KoptHWb 347; ChLCS 86a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲛⲉ ⲛⲧⲕⲟⲩⲉⲛⲧⲏϭ ⲛⲧⲉⲓϩⲉ ⲉⲕⲣⲏⲧ **ϩⲁⲣⲓϩⲁⲣⲟ**ⲕ ⲛⲉⲡⲉⲧϣϣⲉ ⲡⲉ ⲉⲁⲛⲉⲭⲉ ⲙⲙⲟⲕ ϣⲁⲡⲉⲟⲩⲟⲉⲓϣ ⲙⲡⲱϩⲥ ⲕⲁⲧⲁⲡϣⲁϫⲉ ⲙⲡϫⲟⲉⲓⲥ ⲉⲛⲧⲁⲕϫⲓⲟⲩⲁ ⲉⲣⲟϥ .",
+      "english": "If you were a weed like this growing by yourself then it would be right to tolerate you until the harvest of the field according to the word of the Lord that you blasphemed.",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲛϩⲓⲙⲏ ⲃⲱⲗ ⲉⲃⲟⲗ **ϩⲁⲣⲓϩⲁⲣⲟ**ⲟⲩ ·",
+      "english": "The waves break over her and have no effect upon her,",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲧⲉⲯⲩⲭⲏ ϭⲱ **ϩⲁⲣⲓϩⲁⲣⲟ**ⲥ ⲉⲥⲟⲩⲟϫ ⲉϯⲟⲥⲉ ·",
+      "english": "it remaineth alone, and suffereth no injury whatsoever.",
+      "source": "On Susanna",
+      "urn": "urn:cts:copticLit:pschrysostom.susanna.budge:1-63",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6328",
+      "label": "ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, in, at; from; by reason of; for, in respect of, on behalf of; for (of price); against"
+    },
+    {
+      "target": "C6330",
+      "label": "ⲉϩⲟⲩⲛ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "in beneath"
+    },
+    {
+      "target": "C6331",
+      "label": "ⲉϩⲣⲁⲓ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "under, up to"
+    },
+    {
+      "target": "C6329",
+      "label": "ⲉⲃⲟⲗ ϩⲁ-",
+      "pos": "PREP",
+      "gloss": "away from"
+    }
+  ]
+}

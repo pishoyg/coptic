@@ -1,0 +1,56 @@
+{
+  "id": "C9827",
+  "forms": [
+    {
+      "id": "CF25449",
+      "orth": "ⲙⲟⲣⲥⲏⲛⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF25450",
+      "orth": "ⲙⲟⲣⲥⲏⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25451",
+      "orth": "ⲙⲟⲣⲥⲏⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25452",
+      "orth": "ⲙⲟⲣⲥⲩⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25453",
+      "orth": "ⲙⲟⲣⲥⲩⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17566,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12761",
+      "bibliography": "DDGLC",
+      "cu_ID": "8399"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "3230",
+    "grl_lemma": "μυρσίνη",
+    "grl_meaning": "myrtle (Myrtus communis)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1155a"
+  }
+}

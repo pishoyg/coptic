@@ -1,0 +1,266 @@
+{
+  "id": "C620",
+  "forms": [
+    {
+      "id": "CF2360",
+      "orth": "ⲉⲃⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18196,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF2361",
+      "orth": "ⲉⲃⲏ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲉⲃⲉⲓ",
+      "dialect": "S",
+      "id": "633.1"
+    },
+    {
+      "orth": "ⲉⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2748,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϩⲉⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2488,
+        "count": 10
+      }
+    },
+    {
+      "orth": "ⲉⲃⲓ",
+      "dialect": "A",
+      "id": "633.4"
+    },
+    {
+      "orth": "ⲉⲃⲉⲓ",
+      "dialect": "A",
+      "id": "633.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS755",
+      "bibliography": "CED 32; KoptHWb 32; DELC 38; ChLCS 10b"
+    },
+    {
+      "id": "CS756",
+      "bibliography": "CD 52b; CED 32; KoptHWb 32; DELC 38; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲣⲏ ⲙⲛⲡⲟⲟϩ ⲥⲛⲁⲣ **ⲉⲃⲏ** ⲁⲩⲱ ⲛⲥⲓⲟⲩ ⲛⲥⲉⲛⲁϯ ⲁⲛ ⲙⲡⲉⲩⲟⲩⲟⲉⲓⲛ",
+      "english": "The sun and the moon shall be darkened, and the stars shall withdraw their light.",
+      "source": "Joel 4",
+      "urn": "urn:cts:copticLit:ot.joel.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲕⲟⲛⲇⲣⲁⲛⲧⲏⲥ",
+        2,
+        21.695
+      ],
+      [
+        "ⲙⲉⲛⲁ",
+        1,
+        19.695
+      ],
+      [
+        "ⲛⲓϣⲁⲙⲓⲥⲓ",
+        1,
+        18.695
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        3,
+        17.792
+      ],
+      [
+        "ⲧ",
+        10,
+        17.491
+      ],
+      [
+        "ⲛⲕ",
+        1,
+        17.11
+      ],
+      [
+        "ⲡⲓⲥⲓⲕⲗⲟⲥ",
+        1,
+        15.608
+      ],
+      [
+        "ⲕⲓϯ",
+        1,
+        15.525
+      ],
+      [
+        "ϧⲁⲏ",
+        1,
+        15.303
+      ],
+      [
+        "ⲥⲉⲣ",
+        1,
+        14.94
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        2,
+        14.571
+      ],
+      [
+        "ⲡⲗⲏⲛ",
+        1,
+        13.11
+      ],
+      [
+        "ⲛ",
+        7,
+        13.013
+      ],
+      [
+        "ϧⲁ",
+        2,
+        12.853
+      ],
+      [
+        "ⲕ",
+        3,
+        11.883
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        11.72
+      ],
+      [
+        "ϯ",
+        3,
+        11.045
+      ],
+      [
+        "ⲉⲧⲉ",
+        2,
+        10.934
+      ],
+      [
+        "ⲉⲥⲉ",
+        1,
+        10.5
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        9.835
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲟϩ",
+        1,
+        14.511
+      ],
+      [
+        "ⲥⲓⲟⲩ",
+        1,
+        13.954
+      ],
+      [
+        "ⲣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲃⲏ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17817,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C622",
+      "label": "ⲙⲉⲧⲉⲃⲏ",
+      "pos": "N",
+      "gloss": "astonishment"
+    },
+    {
+      "target": "C623",
+      "label": "ⲙⲛⲧⲉⲃⲃⲉ",
+      "pos": "N",
+      "gloss": "darkening, blindness"
+    },
+    {
+      "target": "C621",
+      "label": "ⲣⲉⲃⲏ",
+      "pos": "V",
+      "gloss": "to darken, be dark"
+    }
+  ],
+  "etym": {
+    "egy_num": "54480",
+    "egy_lemma": "bjꜣ.yt",
+    "demo_num": "d67",
+    "demo_lemma": "ꜣb.t",
+    "english": "wonders; marvels",
+    "german": "Staunenswertes; Wunder; Orakel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/54480",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d67"
+  }
+}

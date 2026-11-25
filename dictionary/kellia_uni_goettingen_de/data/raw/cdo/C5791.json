@@ -1,0 +1,63 @@
+{
+  "id": "C5791",
+  "forms": [
+    {
+      "id": "CF31959",
+      "orth": "ϣⲕⲗⲕⲓⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31958",
+      "orth": "ϣⲕⲉⲗⲕⲓⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13578",
+      "orth": "ϣⲕⲉⲗⲕⲉⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF13579",
+      "orth": "ϣϭⲗϭⲓⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18861,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6469",
+      "bibliography": "CD 556b; CED 239"
+    },
+    {
+      "id": "CS6470",
+      "bibliography": "CD 556b; CED 239; KoptHWb 308; DELC 259b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5790",
+      "label": "ϣⲕⲓⲗ",
+      "pos": "N",
+      "gloss": "curl, lock of hair"
+    }
+  ],
+  "etym": {
+    "demo_num": "d6171",
+    "demo_lemma": "šqlql",
+    "english": "[bell]",
+    "german": "Glocke",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6171"
+  }
+}

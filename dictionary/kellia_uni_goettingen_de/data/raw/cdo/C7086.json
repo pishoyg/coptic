@@ -1,0 +1,44 @@
+{
+  "id": "C7086",
+  "forms": [
+    {
+      "id": "CF32088",
+      "orth": "ϫⲉⲛⲧⲙⲏⲧⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32087",
+      "orth": "ϫⲉⲛⲉⲧⲙⲏⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7818",
+      "bibliography": "CD 753b-754a; KoptHWb 412; DELC 323b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7084",
+      "label": "ϫⲟ",
+      "pos": "N",
+      "gloss": "wall"
+    },
+    {
+      "target": "C7085",
+      "label": "ⲙⲁ ⲛϫⲟ",
+      "pos": "N",
+      "gloss": "piece of wall"
+    }
+  ]
+}

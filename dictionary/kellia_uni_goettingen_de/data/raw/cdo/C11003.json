@@ -1,0 +1,119 @@
+{
+  "id": "C11003",
+  "forms": [
+    {
+      "id": "CF30193",
+      "orth": "ⲭⲣⲱⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF30194",
+      "orth": "ⲭⲣⲱⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10690,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15293",
+      "bibliography": "DDGLC",
+      "cu_ID": "7608"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲉⲣⲉⲡⲉⲩ**ⲭⲣⲱⲙⲁ** ⲡⲣⲉⲓⲱⲟⲩ ⲉⲩⲟ ⲛⲗⲁⲙⲡⲣⲟⲛ",
+      "english": "nor with bright or shiny colors.",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲉⲓⲱ",
+        1,
+        20.598
+      ],
+      [
+        "ⲡⲉⲩ",
+        1,
+        9.689
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲭⲣⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲭⲣⲱⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲩ_1_pre_ⲭⲣⲱⲙⲁ",
+          "ⲭⲣⲱⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10280,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6000",
+    "grl_lemma": "χρῶμα",
+    "grl_meaning": "skin, colour",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 2012a; Preisigke 2:762"
+  }
+}

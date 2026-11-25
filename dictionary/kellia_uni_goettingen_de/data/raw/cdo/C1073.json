@@ -1,0 +1,315 @@
+{
+  "id": "C1073",
+  "forms": [
+    {
+      "id": "CF3505",
+      "orth": "ⲕⲱ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲭⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.49,
+        "rank": 169,
+        "count": 635
+      }
+    },
+    {
+      "orth": "ⲕⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 8.34,
+        "rank": 145,
+        "count": 1316
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1242",
+      "bibliography": "CD 96b; KoptHWb 56; ChLCS 15a"
+    },
+    {
+      "id": "CS1243",
+      "bibliography": "CD 97a; ChLCS 15a"
+    },
+    {
+      "id": "CS1244",
+      "bibliography": "CD 97a; ChLCS 15a"
+    },
+    {
+      "id": "CS1245",
+      "bibliography": "CD 97a"
+    },
+    {
+      "id": "CS1246",
+      "bibliography": "CD 97a"
+    },
+    {
+      "id": "CS1247",
+      "bibliography": "CD 97a"
+    },
+    {
+      "id": "CS1248",
+      "bibliography": "CD 97a"
+    },
+    {
+      "id": "CS1249",
+      "bibliography": "CD 97ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ϩⲟⲧⲁⲛ ⲛⲧⲉⲧⲉⲛϣⲧⲉⲙ**ⲭⲱ** ⲉⲃⲟⲗ ⲟⲩⲇⲉ ⲡⲉⲧⲉⲛⲓⲱⲧ ⲉⲧϧⲉⲛⲛⲓⲫⲏⲟⲩⲓ ⲛⲛⲉϥⲭⲱ ⲛⲱⲧⲉⲛ ⲉⲃⲟⲗ ⲁⲛ ⲙⲡⲉⲧⲉⲛⲡⲁⲣⲁⲡⲧⲱⲙⲁ",
+      "english": "But if you do not forgive, neither will your Father in heaven forgive your transgressions.'",
+      "source": "Bohairic Gospel of Mark 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲕⲱ **ⲉⲃⲟⲗ**** ⲧⲁⲣⲟⲩⲕⲱ ⲛⲏⲧⲛ ⲉⲃⲟⲗ ·",
+      "english": "Forgive, that ye may be forgiven.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲧⲁⲡϣⲁⲓ ⲇⲉ ⲛⲁϥ**ⲭⲱ** ⲛⲟⲩⲁⲓ ⲉϥⲥⲟⲛϩ ⲛⲱⲟⲩ ⲉⲃⲟⲗ ⲫⲏ ⲉϣⲁⲩⲉⲣⲉⲧⲓⲛ ⲙⲙⲟϥ .",
+      "english": "Now at the feast he used to release to them one prisoner, whom they asked of him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ϯⲛⲁϫⲱ ⲉⲣⲱⲧⲛ ⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲁⲁⲙⲁϩⲧⲉ ϣⲁⲣⲟϥ · ϩⲣⲁⲓ ϩⲙⲡⲥⲱⲣ ⲉⲃⲟⲗ ⲙⲡⲧⲏⲣϥ · ⲁⲩⲱ ⲟⲛ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲙⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲓⲁⲧϣⲁϫⲉ ⲉⲣⲟϥ **ⲉϣⲁⲩⲕⲱ **ⲉⲃⲟⲗ**** ⲛⲧⲉⲯⲩⲭⲏ ϩⲛⲛⲧⲟⲡⲟⲥ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲛⲁⲣⲭⲱⲛ · ⲛⲟⲃⲉ ⲛⲓⲙ' ⲙⲛⲁⲛⲟⲙⲓⲁ ⲛⲓⲙ' ⲛⲧⲁⲥⲁⲁⲩ ⲛϭⲓⲧⲉⲯⲩⲭⲏ · ⲁⲩⲱ ⲟⲛ ϫⲉϣⲁⲩⲕⲁⲁⲩ ⲧⲏⲣⲟⲩ ⲛⲁⲥ ⲉⲃⲟⲗ · ⲁⲗⲗⲁ ⲙⲉⲉⲩⲉⲡⲛⲟⲃⲉ ⲉⲣⲟⲥ ϫⲓⲛⲡⲉⲓⲛⲁⲩ ϩⲉⲱⲥ ϣⲁⲉⲛⲉϩ ⲛⲉⲛⲉϩ · ⲉⲧⲃⲉⲧⲇⲱⲣⲉⲁ ⲙⲡⲛⲟϭ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ · ⲙⲛⲡⲉⲩⲉⲟⲟⲩ ⲉⲧⲛⲁϣⲱϥ ⲉⲙⲁϣⲟ ⲉⲙⲁϣⲟ ·",
+      "english": "“--the time up to which every one of the mysteries shall be effective I will tell you at the expansion of the universe. And moreover the mystery of the First Mystery and the mysteries of the Ineffable forgive the soul in all the regions of the rulers all the sins and all the iniquities which the soul hath committed; and [not only] do they forgive it all, but they impute unto it no sin from this hour unto all eternity, because of the gift of that great mystery and its prodigiously great glory.”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲭⲁ**ⲩ ⲉⲃⲟⲗ ϩⲓⲛⲁ ⲛⲧⲟⲩϣⲉ ⲛⲱⲟⲩ ⲉⲛⲓⲓⲟϩⲓ ⲉⲧⲕⲱϯ ⲛⲉⲙⲛⲓϯⲙⲓ ⲛⲧⲟⲩϣⲱⲡ ⲛⲱⲟⲩ ⲙⲡⲉⲧⲟⲩⲛⲁⲟⲩⲟⲙϥ .",
+      "english": "Send them away, that they may go into the surrounding country and villages, and buy themselves bread, for they have nothing to eat.'",
+      "source": "Bohairic Gospel of Mark 6 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:6",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲁⲓ ⲙⲙⲁⲧⲉ ⲛⲉⲧⲛⲁϫⲓ ⲛⲧⲙⲉⲧⲁⲛⲟⲓⲁ ⲙⲡⲣⲱⲙⲉ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟⲟⲧϥ **ⲛⲥⲉⲕⲱ **ⲉⲃⲟⲗ**** ⲛⲛⲉϥⲛⲟⲃⲉ ·",
+      "english": "It is these alone which will receive the repentance of that man and forgive his sins;",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C1060",
+      "label": "ϫⲓⲛⲭⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1089",
+      "label": "ϫⲓⲛⲭⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1080",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1081",
+      "label": "ϫⲓⲛⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1061",
+      "label": "ϭⲓⲛⲕⲱ",
+      "pos": "N",
+      "gloss": "placing, laying down"
+    },
+    {
+      "target": "C1085",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "entrance"
+    },
+    {
+      "target": "C1088",
+      "label": "ϭⲓⲛⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, what is laid down, nature, fashion"
+    },
+    {
+      "target": "C1079",
+      "label": "ϭⲓⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1075",
+      "label": "ⲁⲧⲭⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "without forgiveness"
+    },
+    {
+      "target": "C1059",
+      "label": "ⲕⲏ",
+      "pos": "VSTAT",
+      "gloss": "be loose, unrestrained; permitted; limp; be, exist, lie"
+    },
+    {
+      "target": "C1058",
+      "label": "ⲕⲱ",
+      "pos": "V",
+      "gloss": "place, appoint, set down, make; esteem; have, get, keep; preserve; permit, set free, let loose; admit, concede, suppose that; bequeath; quit, abandon, fail; leave, omit; go to, reach, enter"
+    },
+    {
+      "target": "C1062",
+      "label": "ⲕⲱ",
+      "pos": "N",
+      "gloss": "loosening, slackness"
+    },
+    {
+      "target": "C1068",
+      "label": "ⲕⲱ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "place under, on behalf of, renounce for"
+    },
+    {
+      "target": "C1071",
+      "label": "ⲕⲱ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "place before, commit to"
+    },
+    {
+      "target": "C1070",
+      "label": "ⲕⲱ (ϩⲁⲣⲁⲧ-)",
+      "pos": "V",
+      "gloss": "place at feet of, before"
+    },
+    {
+      "target": "C1069",
+      "label": "ⲕⲱ (ϩⲁⲣⲛ-)",
+      "pos": "V",
+      "gloss": "place before (of food)"
+    },
+    {
+      "target": "C1072",
+      "label": "ⲕⲱ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "place, let loose upon"
+    },
+    {
+      "target": "C1091",
+      "label": "ⲕⲱ (ϩⲓⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude, excommunicate; lay out, distribute"
+    },
+    {
+      "target": "C1063",
+      "label": "ⲕⲱ (ⲉ-)",
+      "pos": "V",
+      "gloss": "rely upon"
+    },
+    {
+      "target": "C1084",
+      "label": "ⲕⲱ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "put in, admit"
+    },
+    {
+      "target": "C1086",
+      "label": "ⲕⲱ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "put, lay down, aside; lay down, publish; expose, set forth; leave behind; lay down, abandon"
+    },
+    {
+      "target": "C1064",
+      "label": "ⲕⲱ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "put, lay upon"
+    },
+    {
+      "target": "C1083",
+      "label": "ⲕⲱ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "leave behind, over"
+    },
+    {
+      "target": "C1082",
+      "label": "ⲕⲱ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "put, let down"
+    },
+    {
+      "target": "C1065",
+      "label": "ⲕⲱ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "put, leave behind, renounce"
+    },
+    {
+      "target": "C1067",
+      "label": "ⲕⲱ (ⲛⲧⲛ-)",
+      "pos": "V",
+      "gloss": "put, keep in hand, have, entrust to, esteem"
+    },
+    {
+      "target": "C1087",
+      "label": "ⲕⲱ ⲉϩⲣⲁⲓ",
+      "pos": "N",
+      "gloss": "laying down, provision"
+    },
+    {
+      "target": "C1074",
+      "label": "ⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "freedom, remission, forgiveness"
+    },
+    {
+      "target": "C1066",
+      "label": "ⲕⲱ ⲛⲥⲁ-",
+      "pos": "N",
+      "gloss": "leaving behind"
+    },
+    {
+      "target": "C1076",
+      "label": "ⲙⲁ ⲛⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "place of forgiveness, mercy-seat"
+    },
+    {
+      "target": "C1078",
+      "label": "ⲙⲛⲧⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiveness"
+    },
+    {
+      "target": "C1077",
+      "label": "ⲣⲉϥⲕⲱ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "forgiver"
+    },
+    {
+      "target": "C1090",
+      "label": "ⲭⲱ (ⲥⲁⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "put outside, exclude"
+    }
+  ]
+}

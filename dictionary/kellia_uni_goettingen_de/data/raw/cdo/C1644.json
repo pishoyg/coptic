@@ -1,0 +1,89 @@
+{
+  "id": "C1644",
+  "forms": [
+    {
+      "id": "CF4764",
+      "orth": "ⲛⲉϫⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18018,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1908",
+      "bibliography": "CD 141b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲱϣ ⲉⲃⲟⲗ ⲁⲩⲱ **ⲛⲕⲛⲉϫⲗⲟⲩⲗⲁⲓ **ⲉⲃⲟⲗ**** ⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ϫⲉⲁⲧⲁⲓ ϣⲱⲡⲉ ϩⲙⲡⲁⲗⲁⲟⲥ ⲁⲥϣⲱⲡⲉ ϩⲛⲛϩⲩⲅⲟⲩⲙⲉⲛⲟⲥ ⲧⲏⲣⲟⲩ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲉⲃⲟⲗ ϫⲉⲧⲥⲏϥⲉ ⲁⲥϣⲱⲡⲉ ⲙⲡⲁⲗⲁⲟⲥ ⲉⲧⲃⲉⲡⲁⲓ ϫⲁⲕ ⲛⲛⲉⲕϭⲓϫ",
+      "english": "Cry out and howl, son of man: for this sword is come upon my people, this sword is come upon all the princes of Israel: they shall be as strangers: judgment with the sword is come upon my people: therefore clap thine hands, for sentence has been passed:",
+      "source": "Ezekiel 21",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17638,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2691",
+      "type": "cf",
+      "label": "throw, cast"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1646",
+      "label": "ϯⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "give shout"
+    },
+    {
+      "target": "C1645",
+      "label": "ϯⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "utter shout"
+    },
+    {
+      "target": "C1643",
+      "label": "ⲉϣⲗⲟⲩⲗⲁⲓ ⲛⲥⲁ-",
+      "pos": "V",
+      "gloss": "cry against"
+    },
+    {
+      "target": "C1640",
+      "label": "ⲗⲟⲩⲗⲁⲓ",
+      "pos": "N",
+      "gloss": "shout"
+    },
+    {
+      "target": "C1641",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    },
+    {
+      "target": "C1642",
+      "label": "ⲱϣⲗⲟⲩⲗⲁⲓ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "shout aloud"
+    }
+  ]
+}

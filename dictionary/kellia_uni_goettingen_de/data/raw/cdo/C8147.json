@@ -1,0 +1,104 @@
+{
+  "id": "C8147",
+  "forms": [
+    {
+      "id": "CF18646",
+      "orth": "ⲁⲕⲁⲣⲡⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18647",
+      "orth": "ⲁⲕⲁⲣⲡⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14718,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9197",
+      "bibliography": "DDGLC",
+      "cu_ID": "9684"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉϩⲱⲛ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲛⲅϫⲟⲟⲥ ⲛⲁⲩ ⲉⲕϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲁⲇⲱⲣⲟⲛ ⲛⲁⲧⲁⲉⲓⲟ ⲛ**ⲁⲕⲁⲣⲡⲟⲥ** ⲉⲩⲥⲧⲟⲓ ⲛⲥϯⲛⲟⲩϥⲉ ⲉⲧⲉⲧⲛⲉⲧⲁⲗⲟⲟⲩ ⲛⲁⲓ ⲉϩⲣⲁⲓ ϩⲛⲛⲁϣⲁ",
+      "english": "Charge the children of Israel, and thou shalt speak to them, saying, Ye shall observe to offer to me in my feasts my gifts, my presents, my burnt-offerings for a sweet-smelling savour.",
+      "source": "Numbers 28",
+      "urn": "urn:cts:copticLit:ot.num.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲧⲟⲓ",
+        1,
+        14.954
+      ],
+      [
+        "ⲇⲱⲣⲟⲛ",
+        1,
+        12.863
+      ],
+      [
+        "ⲧⲁⲉⲓⲟ",
+        1,
+        12.621
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲕⲁⲣⲡⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14316,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6732",
+    "grl_lemma": "ἄκαρπος",
+    "grl_meaning": "without fruit, barren",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 47b"
+  }
+}

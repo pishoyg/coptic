@@ -1,0 +1,82 @@
+{
+  "id": "C5130",
+  "forms": [
+    {
+      "id": "CF12225",
+      "orth": "ϭⲓⲛⲟⲩⲱⲣⲡ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5761",
+      "bibliography": "CD 489b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5122",
+      "label": "ⲟⲩⲱⲣⲡ",
+      "pos": "V",
+      "gloss": "send"
+    },
+    {
+      "target": "C5127",
+      "label": "ⲟⲩⲱⲣⲡ ⲉϧⲟⲩⲛ",
+      "pos": "V",
+      "gloss": "send in"
+    },
+    {
+      "target": "C5123",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "send forth"
+    },
+    {
+      "target": "C5124",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "sending"
+    },
+    {
+      "target": "C5126",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡϣⲏⲓ",
+      "pos": "V",
+      "gloss": "send up"
+    },
+    {
+      "target": "C5125",
+      "label": "ⲟⲩⲱⲣⲡ ⲉⲡⲉⲥⲏⲧ",
+      "pos": "V",
+      "gloss": "send down"
+    },
+    {
+      "target": "C5129",
+      "label": "ⲣⲉϥⲟⲩⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "man sent, messenger"
+    },
+    {
+      "target": "C5128",
+      "label": "ⲣⲉⲙⲛⲃⲱⲣⲡ",
+      "pos": "N",
+      "gloss": "messenger"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "C1685",
+  "forms": [
+    {
+      "id": "CF4886",
+      "orth": "ⲙⲛⲧⲗⲁⲥ ⲥⲛⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13300,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1951",
+      "bibliography": "CD 144b; KoptHWb 80"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲡⲣϣⲱⲡⲉ ⲛⲗⲁⲥⲥⲛⲁⲩ · ϫⲉⲟⲩⲥⲏϥⲉ ⲛϩⲟ ⲥⲛⲁⲩ ⲧⲉ **ⲧⲙⲛⲧⲗⲁⲥ **ⲥⲛⲁⲩ**** ·",
+      "english": "Be not a man with a double tongue, for double-tonguedness is like unto a twoedged sword.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12890,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1684",
+      "label": "ⲗⲁⲥ",
+      "pos": "N",
+      "gloss": "tongue; language"
+    },
+    {
+      "target": "C1694",
+      "label": "ⲗⲁⲥ ⲉⲧϭⲁⲁϫⲉ",
+      "pos": "N",
+      "gloss": "stammering"
+    },
+    {
+      "target": "C1690",
+      "label": "ⲗⲁⲥ ⲛϣⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "uvula"
+    },
+    {
+      "target": "C1687",
+      "label": "ⲗⲁⲥ ⲛⲉⲓⲟⲙ",
+      "pos": "N",
+      "gloss": "sea-tongue"
+    },
+    {
+      "target": "C1688",
+      "label": "ⲗⲁⲥ ⲛⲕⲁⲙ",
+      "pos": "N",
+      "gloss": "splinter, needle of reed"
+    },
+    {
+      "target": "C1691",
+      "label": "ⲗⲁⲥ ⲛⲙⲥⲁϩ",
+      "pos": "N",
+      "gloss": "crocodile's tongue"
+    },
+    {
+      "target": "C1689",
+      "label": "ⲗⲁⲥ ⲛⲛⲟⲩⲃ",
+      "pos": "N",
+      "gloss": "wedge of gold"
+    },
+    {
+      "target": "C1692",
+      "label": "ⲗⲁⲥ ⲛⲟⲩϩⲟⲟⲣ",
+      "pos": "N",
+      "gloss": "dog's tongue"
+    },
+    {
+      "target": "C1686",
+      "label": "ⲣⲗⲁⲥ ⲥⲛⲁⲩ",
+      "pos": "V",
+      "gloss": "be double-tongued"
+    },
+    {
+      "target": "C1693",
+      "label": "ⲫⲁⲡⲓⲗⲁⲥ",
+      "pos": "N",
+      "gloss": "the tongued (among weaver's tools)"
+    }
+  ]
+}

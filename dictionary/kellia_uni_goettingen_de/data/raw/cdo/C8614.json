@@ -1,0 +1,51 @@
+{
+  "id": "C8614",
+  "forms": [
+    {
+      "id": "CF20330",
+      "orth": "ⲃⲓⲕⲁⲣⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20332",
+      "orth": "ⲃⲓⲕⲁⲣⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20331",
+      "orth": "ⲃⲓⲕ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20333",
+      "orth": "ⲃⲓⲕⲁⲣⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10158",
+      "bibliography": "DDGLC",
+      "cu_ID": "3156"
+    },
+    {
+      "id": "CS10159",
+      "bibliography": "DDGLC",
+      "cu_ID": "8243"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "385",
+    "grl_lemma": "βικάριος",
+    "grl_meaning": "deputy, vicar",
+    "grl_pos": "noun",
+    "grl_ref": "Sophocles 824a"
+  }
+}

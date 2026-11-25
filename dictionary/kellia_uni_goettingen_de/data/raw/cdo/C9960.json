@@ -1,0 +1,73 @@
+{
+  "id": "C9960",
+  "forms": [
+    {
+      "id": "CF25982",
+      "orth": "ⲟⲩⲉⲓⲉⲛⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF25983",
+      "orth": "ⲟⲩⲉⲓⲉⲛⲓⲛ",
+      "dialect": "?"
+    },
+    {
+      "id": "CF25984",
+      "orth": "ⲟⲩⲁⲉⲓⲁⲛⲓⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25985",
+      "orth": "ⲟⲩⲉⲓⲛⲓⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.52,
+        "rank": 1085,
+        "count": 44
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13009",
+      "bibliography": "DDGLC",
+      "cu_ID": "895"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲡⲓⲇⲏ ⲛⲓⲓⲟⲩⲇⲁⲓ ⲥⲉⲉⲣⲉⲧⲓⲛ ⲛϩⲁⲛⲙⲏⲓⲛⲓ ⲟⲩⲟϩ ⲛⲓ**ⲟⲩⲉⲓⲛⲓⲛ** ⲥⲉⲕⲱϯ ⲛⲥⲁϯⲥⲟⲫⲓⲁ .",
+      "english": "For Jews ask for signs, Greeks seek after wisdom,",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϯⲥϩⲓⲙⲓ ⲇⲉ ⲛⲉ**ⲟⲩⲉⲓⲛⲓⲛ** ⲛⲧⲉⲛⲥⲩⲣⲓⲁ ⲡⲉⲥⲅⲉⲛⲟⲥ ⲟⲩⲉⲃⲟⲗ ϧⲉⲛϯⲫⲟⲓⲛⲓⲕⲏ ⲡⲉ ⲟⲩⲟϩ ⲛⲁⲥϯϩⲟ ⲉⲣⲟϥ ϩⲓⲛⲁ ⲛⲧⲉϥϩⲓⲇⲉⲙⲱⲛ ⲉⲃⲟⲗ ⲛⲧⲉⲥϣⲉⲣⲓ",
+      "english": "Now the woman was a Greek, a Syrophoenician by race. She begged him that he would cast the demon out of her daughter.",
+      "source": "Bohairic Gospel of Mark 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ϣⲱⲡⲓ ⲉⲣⲉⲧⲉⲛⲟⲓ ⲛⲁⲧϭⲣⲟⲡ ⲛⲛⲓⲓⲟⲩⲇⲁⲓ ⲛⲉⲙⲛⲓ**ⲟⲩⲉⲓⲛⲓⲛ** ⲛⲉⲙϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "Give no occasions for stumbling, either to Jews, or to Greeks, or to the assembly of God;",
+      "source": "Bohairic 1 Corinthians 10 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:10",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "4698",
+    "grl_lemma": "Ἴων",
+    "grl_meaning": "Ionian",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 847a"
+  }
+}

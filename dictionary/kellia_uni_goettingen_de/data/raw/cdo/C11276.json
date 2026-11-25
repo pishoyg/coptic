@@ -1,0 +1,645 @@
+{
+  "id": "C11276",
+  "forms": [
+    {
+      "id": "CF31474",
+      "orth": "ⲁⲡⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.28,
+        "rank": 316,
+        "count": 518
+      }
+    },
+    {
+      "id": "CF627",
+      "orth": "ⲁⲡⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31475",
+      "orth": "ⲁⲡⲏⲟⲩⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31476",
+      "orth": "ⲁⲡⲏⲩⲉ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF31477",
+      "orth": "ⲁⲡⲏⲟⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9114,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF31478",
+      "orth": "ⲁⲡⲏⲩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.27,
+        "rank": 1657,
+        "count": 42
+      }
+    },
+    {
+      "orth": "ⲁⲫⲉ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 3.77,
+        "rank": 289,
+        "count": 320
+      }
+    },
+    {
+      "orth": "ⲁⲫⲏⲟⲩⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.29,
+        "rank": 1497,
+        "count": 25
+      }
+    },
+    {
+      "orth": "ⲁⲡⲏ",
+      "dialect": "F",
+      "id": "522.2"
+    },
+    {
+      "orth": "ⲁⲡⲏⲟⲩ",
+      "dialect": "F",
+      "id": "522.3"
+    },
+    {
+      "orth": "ⲁⲡⲉ",
+      "dialect": "L",
+      "id": "522.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS188",
+      "bibliography": "CD 13b; CED 11; KoptHWb 10, 487; DELC 14; ChLCS 4b"
+    },
+    {
+      "id": "CS189",
+      "bibliography": "CD 13b-14a; KoptHWb 10; DELC 14; ChLCS 4b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲥϫⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲉⲙⲙⲁⲩ ⲁⲡⲓⲁⲣⲭⲱⲛ ⲁⲓϥ ⲛ**ⲁⲫⲉ** ⲉϫⲉⲛⲛⲓⲛⲟⲧⲁⲣⲓⲟⲥ ⲧⲏⲣⲩ ⲟⲩⲟϩ ⲛⲁⲩⲙⲉⲓ ⲙⲙⲟϥ ⲧⲏⲣⲟⲩ ⲡⲉ ⲉⲩⲉⲣⲁⲅⲁⲡⲁⲛ ⲙⲙⲟϥ ⲛϫⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲧϧⲉⲛⲡⲓⲡⲣⲁⲓⲧⲱⲣⲓⲟⲛ ⲉⲩⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲉⲑⲃⲉϯⲥⲟⲫⲓⲁ ⲉⲧⲉⲛϧⲏⲧϥ .",
+      "english": "And from that day the prefect put him at the head of all the notaries, and everyone cherished him: all those who were in the praetorium loved him; he was called the saint because of the wisdom that was in him.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ϣⲁⲡ**ⲁⲡⲉ** ⲛⲧⲥⲟⲟⲩϩⲥ ·",
+      "english": "and he went to the head of the congregation.",
+      "source": "Apophthegmata Patrum Sahidic 126: N 123 E",
+      "urn": "urn:cts:copticLit:ap.126.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩϩⲓⲟⲩⲓ ϧⲉⲛⲧⲉϥ**ⲁⲫⲉ** ⲛⲟⲩⲕⲁϣ ⲟⲩⲟϩ ⲛⲁⲩϩⲓⲑⲁϥ ϧⲉⲛⲡⲉϥϩⲟ ⲟⲩⲟϩ ⲉⲩϩⲓⲟⲩⲓ ⲙⲙⲱⲟⲩ ⲉϫⲉⲛⲛⲟⲩⲕⲉⲗⲓ ⲉⲟⲩⲱϣⲧ ⲙⲙⲟϥ .",
+      "english": "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲧⲱⲗϭ ⲛⲥⲁⲡϥⲱ ⲛⲧⲉϥ**ⲁⲡⲉ** ·",
+      "english": "he tore out the hair of his head,",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲑⲱⲧⲉⲛ ⲇⲉ ⲛⲓⲕⲉϥⲱⲓ ⲛⲧⲉⲧⲉⲛ**ⲁⲫⲉ** ⲥⲉⲏⲡ ⲧⲏⲣⲟⲩ .",
+      "english": "but the very hairs of your head are all numbered.",
+      "source": "01_Matthew_10",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:10",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ ⲁⲛⲕⲁⲛⲱⲛ ⲉⲧⲟⲩⲁⲁⲃ ⲛⲛⲁⲡⲟⲥⲧⲟⲗⲟⲥ ϫⲟⲟⲥ ⲛϯϩⲉ ϫⲉⲉϣⲱⲡⲉ ⲟⲩ**ⲁⲡⲉ** ⲉⲟⲩⲛⲧⲁϥ ⲥϩⲓⲙⲉ ⲙⲙⲁⲩ ϩⲁⲧϩⲏ ⲙⲡⲁⲧϥⲣⲉⲡⲓⲥⲕⲟⲡⲟⲥ · ⲙⲛⲛⲥⲱⲥ ⲉϥϣⲁⲛⲣⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲛϥⲉϣⲛⲟϫⲥ ⲉⲃⲟⲗ ⲁⲗⲗⲁ ⲙⲁⲣϥϭⲱ ⲛⲙⲙⲁⲥ ·",
+      "english": "for the holy Canons of the Apostles speak thus: 'If a head hath a wife who was married to him before he became a bishop, he shall not put her away after he hath become a bishop, but let him remain with her.'",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉϫⲉⲛ",
+        100,
+        28.346
+      ],
+      [
+        "ⲛ",
+        239,
+        28.293
+      ],
+      [
+        "ⲧⲉϥ",
+        82,
+        28.063
+      ],
+      [
+        "ⲧ",
+        112,
+        27.947
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        191,
+        27.812
+      ],
+      [
+        "ϥⲱⲓ",
+        23,
+        27.178
+      ],
+      [
+        "ϩⲱⲟⲩⲧ",
+        27,
+        27.127
+      ],
+      [
+        "ⲡⲓ",
+        122,
+        26.563
+      ],
+      [
+        "ⲙ",
+        111,
+        25.966
+      ],
+      [
+        "ϥ",
+        136,
+        25.687
+      ],
+      [
+        "ⲥⲟⲙⲟⲣⲱ",
+        5,
+        25.661
+      ],
+      [
+        ".",
+        96,
+        25.371
+      ],
+      [
+        "ⲛⲓ",
+        82,
+        25.291
+      ],
+      [
+        "ⲁ",
+        107,
+        25.214
+      ],
+      [
+        "ϩⲓϫⲉⲛ",
+        37,
+        25.099
+      ],
+      [
+        "ⲛⲉⲙ",
+        61,
+        24.035
+      ],
+      [
+        "ⲛⲟⲩ",
+        32,
+        23.903
+      ],
+      [
+        "ⲙⲉⲧⲕⲉⲣϩⲉ",
+        5,
+        23.854
+      ],
+      [
+        "ϯ",
+        57,
+        23.789
+      ],
+      [
+        "ⲧⲁ",
+        28,
+        23.693
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲉϥ",
+        156,
+        21.686
+      ],
+      [
+        "ⲉϫⲛ",
+        139,
+        21.647
+      ],
+      [
+        "ⲛ",
+        419,
+        20.807
+      ],
+      [
+        "ⲧ",
+        216,
+        20.201
+      ],
+      [
+        "ⲁ",
+        247,
+        19.755
+      ],
+      [
+        "ⲁⲩⲱ",
+        169,
+        18.815
+      ],
+      [
+        "ϥⲱ",
+        21,
+        18.319
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        32,
+        18.279
+      ],
+      [
+        "ϥ",
+        180,
+        17.863
+      ],
+      [
+        "ⲙ",
+        147,
+        17.816
+      ],
+      [
+        "ⲧⲉⲩ",
+        44,
+        17.682
+      ],
+      [
+        "ϩⲓϫⲛ",
+        34,
+        17.541
+      ],
+      [
+        "ⲧⲉⲥ",
+        33,
+        17.528
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        17.464
+      ],
+      [
+        "ϫⲟⲩⲱⲧⲉ",
+        13,
+        17.243
+      ],
+      [
+        "ϥⲓ",
+        41,
+        17.149
+      ],
+      [
+        "ⲩ",
+        112,
+        17.097
+      ],
+      [
+        ".",
+        89,
+        16.85
+      ],
+      [
+        "ⲟⲩ",
+        115,
+        16.622
+      ],
+      [
+        "ⲧⲁ",
+        48,
+        16.571
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲉ",
+          122
+        ],
+        [
+          "ⲁⲡⲉ_0_node",
+          320
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲁⲡⲉ",
+          34
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲁⲡⲉ",
+          39
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲁⲡⲉ",
+          25
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲡⲉ",
+          19
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_1_post_ⲁⲡⲉ",
+          12
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲟⲟⲩⲧ",
+          12
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲉ",
+          13
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          7
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲁⲡⲉ",
+          6
+        ],
+        [
+          "ⲥⲁϣϥⲉ_1_pre_ⲁⲡⲉ",
+          5
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲡⲉ",
+          3
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲡⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲉ",
+          10
+        ],
+        [
+          "ⲕⲟⲟϩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲟⲗⲟⲫⲉⲣⲛⲏⲥ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲡⲉ",
+          2
+        ],
+        [
+          "ⲓⲱⲛⲁ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲉⲫⲣⲁⲓⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲇⲱⲣⲟⲛ",
+          2
+        ],
+        [
+          "ⲇⲱⲣⲟⲛ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲙⲁⲥⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲟⲉⲓⲗⲉ_3_post_ⲡ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_0_node",
+          "ϩⲟⲟⲩⲧ_1_post_ⲁⲡⲉ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩⲧ_1_post_ⲁⲡⲉ",
+          "ⲛⲓⲙ_2_post_ϩⲟⲟⲩⲧ",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_0_node",
+          "ⲙ_1_post_ⲁⲡⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲧⲟⲟⲩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲁϣϥⲉ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁⲡⲉ_0_node",
+          "ⲛ_1_post_ⲁⲡⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲉ",
+          "ⲕⲟⲟϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲉ",
+          "ⲟⲗⲟⲫⲉⲣⲛⲏⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲡⲉ",
+          "ⲁⲡⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲉ",
+          "ⲓⲱⲛⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲉ",
+          "ⲉⲫⲣⲁⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲁⲡⲉ",
+          "ⲡⲉϥ_3_post_ⲇⲱⲣⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_3_post_ⲇⲱⲣⲟⲛ",
+          "ⲇⲱⲣⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲁⲥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲟⲉⲓⲗⲉ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.54,
+      "rank": 253,
+      "count": 562
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C172",
+      "label": "ϥⲓ ⲛⲧⲁⲡⲉ",
+      "pos": "V",
+      "gloss": "behead"
+    },
+    {
+      "target": "C173",
+      "label": "ϥⲓⲁⲡⲉ",
+      "pos": "V",
+      "gloss": "behead"
+    },
+    {
+      "target": "C165",
+      "label": "ⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "head; magistrate, chief; capital of money, total, poll tax"
+    },
+    {
+      "target": "C168",
+      "label": "ⲁⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headless"
+    },
+    {
+      "target": "C169",
+      "label": "ⲙⲉⲧⲁⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headlessness"
+    },
+    {
+      "target": "C167",
+      "label": "ⲙⲛⲧⲁⲡⲉ",
+      "pos": "N",
+      "gloss": "headship"
+    },
+    {
+      "target": "C170",
+      "label": "ⲣⲁⲡⲉ",
+      "pos": "V",
+      "gloss": "be at head of, lead"
+    },
+    {
+      "target": "C171",
+      "label": "ⲣⲁⲡⲉ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "rule over"
+    }
+  ],
+  "etym": {
+    "egy_num": "170920",
+    "egy_lemma": "tp.t",
+    "demo_num": "d930",
+    "demo_lemma": "ꜥp(e.t)",
+    "english": "head (as a part of the body)",
+    "german": "Kopf (als Körperteil)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/170920",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d930"
+  }
+}

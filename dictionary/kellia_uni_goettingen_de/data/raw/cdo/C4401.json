@@ -1,0 +1,93 @@
+{
+  "id": "C4401",
+  "forms": [
+    {
+      "id": "CF10754",
+      "orth": "ⲥⲁⲧⲡⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS4984",
+      "bibliography": "CD 259b; ChLCS 59b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3263",
+      "type": "cf",
+      "label": "side, part"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4402",
+      "label": "ϩⲓⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4400",
+      "label": "ϩⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4396",
+      "label": "ⲉⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "upward"
+    },
+    {
+      "target": "C4398",
+      "label": "ⲙⲁ ⲛⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "upper part of the house"
+    },
+    {
+      "target": "C4399",
+      "label": "ⲛⲧⲡⲉ",
+      "pos": "ADV",
+      "gloss": "above"
+    },
+    {
+      "target": "C4397",
+      "label": "ⲡⲉⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "the top"
+    },
+    {
+      "target": "C4395",
+      "label": "ⲣϩⲓⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4394",
+      "label": "ⲣⲥⲁⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4393",
+      "label": "ⲣⲧⲡⲉ",
+      "pos": "V",
+      "gloss": "be above, surmount"
+    },
+    {
+      "target": "C4392",
+      "label": "ⲧⲡⲉ",
+      "pos": "N",
+      "gloss": "what is above, upper part"
+    }
+  ]
+}

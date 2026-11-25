@@ -1,0 +1,499 @@
+{
+  "id": "C10804",
+  "forms": [
+    {
+      "id": "CF29436",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF29437",
+      "orth": "ⲧⲣⲟⲫⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF29438",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.21,
+        "rank": 1916,
+        "count": 33
+      }
+    },
+    {
+      "id": "CF29439",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF29440",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF29441",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF29442",
+      "orth": "ⲧⲣⲩⲫⲏ",
+      "dialect": "V"
+    },
+    {
+      "id": "CF29443",
+      "orth": "ⲧⲣⲩⲫⲩ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14878",
+      "bibliography": "DDGLC",
+      "cu_ID": "135"
+    },
+    {
+      "id": "CS14879",
+      "bibliography": "DDGLC",
+      "cu_ID": "7508"
+    },
+    {
+      "id": "CS14880",
+      "bibliography": "DDGLC",
+      "cu_ID": "3646"
+    },
+    {
+      "id": "CS14881",
+      "bibliography": "DDGLC",
+      "cu_ID": "1537"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲇⲁⲙ ⲇⲉ ⲛⲧⲉⲣⲉϥϣⲱⲡⲉ ϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲙⲁⲩⲁⲁϥ ⲛϣⲉ ⲛⲣⲟⲙⲡⲉ ϩⲙⲡⲧⲣⲉϥϫⲱⲕ ⲇⲉ ⲉⲃⲟⲗ ⲛⲧϣⲉ ⲛⲣⲟⲙⲡⲉ · ⲉⲣⲉⲁⲇⲁⲙ ϣⲟⲟⲡ ϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲛⲧⲉ**ⲧⲣⲩⲫⲏ** ⲉϥϭⲉⲉⲧ ⲙⲁⲩⲁⲁϥ ⲉⲣⲉⲛⲁⲅⲅⲉⲗⲟⲥ ⲛⲏⲩ ϣⲁⲣⲟϥ ⲙⲙⲏⲛⲉ · ⲡⲉϫⲁϥ ⲛϭⲓⲡⲁⲉⲓⲱⲧ ϫⲉⲛⲁⲛⲟⲩⲥ ⲁⲛ ⲉⲧⲣⲉⲡⲣⲱⲙⲉ ϭⲱ ⲙⲁⲩⲁⲁϥ · ⲁⲗⲗⲁ ⲙⲁⲣⲛⲧⲁⲙⲓⲟ ⲛⲁϥ ⲛⲟⲩⲃⲟⲏⲑⲟⲥ ⲕⲁⲧⲁⲣⲟϥ ·",
+      "english": "And Adam lived alone in Paradise for one hundred years. And when he had completed the period of one hundred years--now Adam lived in the Paradise of Delight, and remained there alone, and the angels used to come to him every day—My Father said, 'It is not good to allow the man to live by himself, but let Us make for him a helper like unto himself.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲛⲧⲟⲕ ϩⲱⲱⲕ ϩⲱⲥ ⲉⲕϩⲉⲗⲡⲓⲍⲉ ⲉⲁⲡⲟⲗⲁⲩⲉ ⲛⲟⲩ**ⲧⲣⲩⲫⲏ** ⲛⲧⲉⲓⲙⲓⲛⲉ ⲙⲡⲣⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ·",
+      "english": "For this reason, since thou thyself hast the hope of enjoying such great delights as these, do not thou treat the matter (of thy life) with contempt.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲇⲉ ⲁϥⲧⲱⲙⲛⲧ ⲉⲁⲇⲁⲙ · ⲙⲡⲃⲟⲗ ⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ · ⲡⲉϫⲁϥ ⲛⲁϥ ϫⲉⲉⲓⲥϩⲏⲏⲧⲉ ⲱ ⲁⲇⲁⲙ ⲛⲧⲁⲩⲛⲟϫⲧ ⲉⲃⲟⲗ ϩⲙⲡⲁⲉⲟⲟⲩ ⲛⲧⲉⲕⲗⲟⲓϭⲉ ⁛— ⲉⲓⲥϩⲏⲏⲧⲉ ϩⲱ ⲁⲓⲧⲣⲉⲩⲛⲟϫⲕ ⲉⲃⲟⲗ ϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲛⲧⲉ**ⲧⲣⲩⲫⲏ** ⲉⲧⲃⲉϫⲉⲁⲕⲁⲁⲧ ⲛϣⲙⲙⲟ ⲉⲡⲁⲙⲁ ⲛϣⲱⲡⲉ ϩⲛⲧⲡⲉ ⁛—",
+      "english": "And the Devil went to meet Adam outside Paradise, and he said unto him, 'Behold, O Adam, I was cast forth from my glory through thee, and behold, I have made thee to be expelled from the Paradise of Delight because thou hast caused me to become a stranger to my dwelling-place in heaven.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲁⲣⲁⲇⲉⲓⲥⲟⲥ",
+        5,
+        17.876
+      ],
+      [
+        "ⲁⲕⲁⲁ",
+        1,
+        15.554
+      ],
+      [
+        "ⲕⲣⲡ",
+        1,
+        15.554
+      ],
+      [
+        "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ",
+        4,
+        15.094
+      ],
+      [
+        "ⲉⲧⲑⲟⲟⲩ",
+        1,
+        14.554
+      ],
+      [
+        "ϩⲙⲡⲉ",
+        1,
+        14.554
+      ],
+      [
+        "ⲛ",
+        37,
+        14.393
+      ],
+      [
+        "ⲧⲉ",
+        12,
+        13.513
+      ],
+      [
+        "ⲉⲩϩⲁ",
+        2,
+        13.344
+      ],
+      [
+        "ⲱⲡ",
+        2,
+        11.785
+      ],
+      [
+        "ⲙⲛ",
+        10,
+        11.565
+      ],
+      [
+        "ϭⲓⲛⲟⲩⲟⲟⲙ",
+        1,
+        11.554
+      ],
+      [
+        "ϩⲛ",
+        10,
+        11.401
+      ],
+      [
+        "[..]",
+        1,
+        11.384
+      ],
+      [
+        "ⲕⲗⲟⲙ",
+        2,
+        11.354
+      ],
+      [
+        "ⲁⲡⲟⲗⲁⲩⲉ",
+        1,
+        11.232
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        2,
+        10.867
+      ],
+      [
+        "ⲩ",
+        10,
+        10.731
+      ],
+      [
+        "ⲟⲩ",
+        11,
+        10.554
+      ],
+      [
+        "ⲙⲟⲧⲛⲉⲥ",
+        1,
+        10.509
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          28
+        ],
+        [
+          "ⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ϥ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_4_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          "ⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          "ⲛ_1_post_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          "ⲙⲓⲛⲉ_3_post_ⲧⲉⲓ",
+          1
+        ],
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          "ⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          "ϥ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϭⲉⲉⲧ",
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϭⲉⲉⲧ_2_post_ⲉ",
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲁⲩⲁⲁ_3_post_ϭⲉⲉⲧ",
+          "ϥ_4_post_ⲙⲁⲩⲁⲁ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲧⲣⲩⲫⲏ",
+          "ⲧⲣⲩⲫⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲧⲣⲩⲫⲏ",
+          "ⲧⲣⲩⲫⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_3_post_ⲯⲩⲭⲏ",
+          "ⲯⲩⲭⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲛ_2_post_ϣⲏⲣⲉ_b",
+          1
+        ],
+        [
+          "ⲛ_2_post_ϣⲏⲣⲉ_b",
+          "ⲛ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ϣⲱⲡⲉ",
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϣⲱⲡⲉ",
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϣⲱⲡⲉ_2_post_ⲉ",
+          "ⲉ_3_post_ϣⲱⲡⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲧⲣⲩⲫⲏ",
+          "ⲧⲣⲩⲫⲏ_0_node",
+          2
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲧⲣⲩⲫⲏ",
+          "ⲧⲣⲩⲫⲏ_0_node",
+          1
+        ],
+        [
+          "ⲧⲣⲩⲫⲏ_0_node",
+          "ⲉⲧ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲧⲣⲩⲫⲏ",
+          "ϩⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲧⲣⲩⲫⲏ",
+          "ⲡⲉ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.21,
+      "rank": 1678,
+      "count": 33
+    }
+  },
+  "etym": {
+    "grl_ID": "2229",
+    "grl_lemma": "τρυφή",
+    "grl_meaning": "softness, delicacy, luxuriousness",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1831a; Lampe 1417f."
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "id": "C8633",
+  "forms": [
+    {
+      "id": "CF20408",
+      "orth": "ⲃⲟⲧⲁⲛⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF20412",
+      "orth": "ⲃⲟⲧⲁⲛⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5458,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF20409",
+      "orth": "ϥⲟⲧⲁⲛⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20411",
+      "orth": "ⲃⲟⲧⲁⲛⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF20410",
+      "orth": "ⲃⲟⲧⲁⲛⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10200",
+      "bibliography": "DDGLC",
+      "cu_ID": "857"
+    },
+    {
+      "id": "CS10201",
+      "bibliography": "DDGLC",
+      "cu_ID": "7687"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲩϣⲁⲛϩⲕⲟ · ⲇⲉ ⲟⲛ ϣⲁϥⲧⲣⲉⲛ**ⲃⲟⲧⲁⲛⲏ** ⲉⲧϩⲛⲧⲥⲱϣⲉ · ϩⲗⲟϭ ϩⲛⲧⲉⲩⲧⲁⲡⲣⲟ · ⲛⲧϩⲉ ⲛⲟⲩⲉⲃⲓⲱ · ⲉϥϩⲟⲗϭ",
+      "english": "When they suffer hunger He will make the grass which is in the field to be sweet to their mouths, even as honey is sweet.",
+      "source": "Life of Onnophrius part 2",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:9-16",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲛⲧⲙⲓⲛⲉ ⲛⲛ**ⲃⲟⲧⲁⲛⲏ** ⲉϣⲁⲩⲧⲁⲁⲩ ⲉⲛϣⲱⲛⲉ ⲛⲥⲉⲗⲟ ·",
+      "english": "and the various kinds of herbs which must be used in relieving pains,",
+      "source": "Mysteries of John the Evangelist part 2",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:13-28",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲧⲃⲉⲟⲩ ⲁⲥϣⲱⲡⲉ ⲛⲧϩⲏⲗⲏ ⲙⲡⲕⲏⲣⲓⲛⲟⲛ · ⲁⲩⲱ ⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲙⲙⲁⲩ ⲛⲧⲟϥ ⲡⲉ ⲉⲧⲥⲟⲟⲩⲛ ϫⲉⲉⲧⲃⲉⲟⲩ ⲁⲩϣⲱⲡⲉ ⲛϭⲓⲛ**ⲃⲟⲧⲁⲛⲏ** ⲉⲧⲉⲛⲉ ⲛⲧⲏϭ ⲛⲉ ·",
+      "english": "“and why the matter of wax hath arisen. And that mystery knoweth why herbs, that is the vegetables, have arisen”",
+      "source": "Pistis Sophia Book 2 Part 6",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:59-65",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲧⲏϭ",
+        1,
+        14.35
+      ],
+      [
+        "ⲣⲏⲧ",
+        1,
+        13.389
+      ],
+      [
+        "ⲙⲓⲛⲉ",
+        1,
+        10.139
+      ],
+      [
+        "ⲥⲱϣⲉ",
+        1,
+        9.958
+      ],
+      [
+        "ϣⲁ",
+        2,
+        9.346
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        8.993
+      ],
+      [
+        "ⲧ",
+        3,
+        8.826
+      ],
+      [
+        "ⲛ",
+        5,
+        8.775
+      ],
+      [
+        "ⲩ",
+        3,
+        8.565
+      ],
+      [
+        "ⲧⲁⲁ",
+        1,
+        8.175
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.526
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.231
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        7.227
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        6.664
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        6.024
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        5.819
+      ],
+      [
+        "ⲉ",
+        2,
+        5.817
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        5.313
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.479
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          2
+        ],
+        [
+          "ⲃⲟⲧⲁⲛⲏ_0_node",
+          4
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          3
+        ],
+        [
+          "ϩⲛ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲣⲏⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϩⲓ_3_post_ⲣⲏⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲛⲧⲏϭ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          "ⲃⲟⲧⲁⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲃⲟⲧⲁⲛⲏ_0_node",
+          "ⲉⲧ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          3
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          "ϩⲛ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          "ⲧ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ϩⲛ",
+          "ⲥⲱϣⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          "ⲕⲉ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲃⲟⲧⲁⲛⲏ",
+          "ⲃⲟⲧⲁⲛⲏ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          "ⲣⲏⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲣⲏⲧ_2_post_ⲉⲧ",
+          "ϩⲓ_3_post_ⲣⲏⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          "ⲉ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          "ⲛⲉ_3_post_ⲛⲧⲏϭ",
+          1
+        ],
+        [
+          "ⲛⲉ_3_post_ⲛⲧⲏϭ",
+          "ⲛⲧⲏϭ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲏϭ_2_post_ⲛⲉ",
+          "ⲛⲉ_1_post_ⲃⲟⲧⲁⲛⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5027,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "395",
+    "grl_lemma": "βοτάνη",
+    "grl_meaning": "pasture, herb, plant",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 323a; Preisigke 1:274"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "C6016",
+  "forms": [
+    {
+      "id": "CF14037",
+      "orth": "ⲣⲙⲛϣⲁⲁⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6701",
+      "bibliography": "CD 582b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6015",
+      "label": "ϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "skin, leather; parchment(?)"
+    },
+    {
+      "target": "C6017",
+      "label": "ⲃⲁⲕϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "tanner"
+    },
+    {
+      "target": "C6018",
+      "label": "ⲟⲩⲁⲙϣⲁⲁⲣ",
+      "pos": "N",
+      "gloss": "skin-eater, ulcer"
+    }
+  ]
+}

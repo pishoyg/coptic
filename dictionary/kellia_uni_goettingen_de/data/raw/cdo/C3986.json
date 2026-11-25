@@ -1,0 +1,710 @@
+{
+  "id": "C3986",
+  "forms": [
+    {
+      "id": "CF9912",
+      "orth": "ⲥϩⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 8.23,
+        "rank": 148,
+        "count": 1299
+      }
+    },
+    {
+      "orth": "ⲥϩⲓⲙⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 7.61,
+        "rank": 166,
+        "count": 645
+      }
+    },
+    {
+      "orth": "ⲥⲉⲓⲙⲉ",
+      "dialect": "S",
+      "id": "143.1"
+    },
+    {
+      "orth": "ⲥϩⲉ",
+      "dialect": "S",
+      "id": "143.2"
+    },
+    {
+      "orth": "ϩⲓⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.43,
+        "rank": 1250,
+        "count": 68
+      }
+    },
+    {
+      "orth": "ϩⲓⲙ",
+      "dialect": "S",
+      "id": "143.4"
+    },
+    {
+      "orth": "ϩⲓⲟⲙⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.36,
+        "rank": 582,
+        "count": 214
+      }
+    },
+    {
+      "orth": "ϩⲓⲟⲙⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.75,
+        "rank": 513,
+        "count": 148
+      }
+    },
+    {
+      "orth": "ⲥϩⲓⲙⲉ",
+      "dialect": "A",
+      "id": "143.7"
+    },
+    {
+      "orth": "ϩⲓⲙⲉ",
+      "dialect": "A",
+      "id": "143.8"
+    },
+    {
+      "orth": "ϩⲓⲁⲙⲉ",
+      "dialect": "A",
+      "id": "143.9"
+    },
+    {
+      "orth": "ϩⲓⲁⲁⲙⲉ",
+      "dialect": "A",
+      "id": "143.10"
+    },
+    {
+      "orth": "ⲥϩⲓⲁⲙⲉ",
+      "dialect": "A",
+      "id": "143.11"
+    },
+    {
+      "orth": "ⲥϩⲓⲙⲓ",
+      "dialect": "F",
+      "id": "143.12"
+    },
+    {
+      "orth": "ⲥⲓⲙⲓ",
+      "dialect": "F",
+      "id": "143.13"
+    },
+    {
+      "orth": "ⲥⲓⲙⲉⲓ",
+      "dialect": "F",
+      "id": "143.14"
+    },
+    {
+      "orth": "ϩⲏⲙ",
+      "dialect": "F",
+      "id": "143.15"
+    },
+    {
+      "orth": "ϩⲓⲁⲙⲓ",
+      "dialect": "F",
+      "id": "143.16"
+    },
+    {
+      "orth": "ⲥϩⲓⲙⲉ",
+      "dialect": "L",
+      "id": "143.17"
+    },
+    {
+      "orth": "ϩⲓⲙⲉ",
+      "dialect": "L",
+      "id": "143.18"
+    },
+    {
+      "orth": "ϩⲓⲁⲙⲉ",
+      "dialect": "L",
+      "id": "143.19"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4526",
+      "bibliography": "CD 385a; CED 173-174; KoptHWb 211-212; DELC 205; ChLCS 54a"
+    },
+    {
+      "id": "CS4527",
+      "bibliography": "CD 385a; CED 173-174; KoptHWb 211-212; DELC 205; ChLCS 54a"
+    },
+    {
+      "id": "CS4528",
+      "bibliography": "CD 385a; KoptHWb 211-212; DELC 205-206; ChLCS 54a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲉⲧⲁⲩⲉⲛⲡⲓⲣⲱⲙⲓ ⲅⲁⲣ ⲁⲛ ⲉⲃⲟⲗ ϧⲉⲛϯ**ⲥϩⲓⲙⲓ** ⲁⲗⲗⲁ ϯⲥϩⲓⲙⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲓⲣⲱⲙⲓ .",
+      "english": "For man is not from woman, but woman from man;",
+      "source": "Bohairic 1 Corinthians 11 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉ**ⲥϩⲓⲙⲉ** ⲉⲧⲉⲧⲛⲛⲁⲩ ⲉⲣⲟⲥ ⲧⲁϣⲛ ⲟⲩⲁ ⲧⲉ ·",
+      "english": "and the woman whom ye see is more than fifty-one.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲗⲱⲥ ⲥⲉⲥⲱⲧⲉⲙ ⲉⲟⲩⲡⲟⲣⲛⲓⲁ ϧⲉⲛⲑⲏⲛⲟⲩ ⲟⲩⲟϩ ⲟⲩⲡⲟⲣⲛⲓⲁ ⲙⲡⲁⲓⲣⲏϯ ⲑⲁⲓ ⲉⲧⲉⲛⲥϣⲟⲡ ⲁⲛ ϧⲉⲛⲛⲓⲕⲉⲉⲑⲛⲟⲥ ϩⲱⲥⲧⲉ ⲛⲧⲉⲟⲩⲁⲓ ϭⲓ ⲧ**ⲥϩⲓⲙⲓ** ⲙⲡⲉϥⲓⲱⲧ .",
+      "english": "It is actually reported that there is sexual immorality among you, and such sexual immorality as is not even named among the Gentiles, that one has his father's wife.",
+      "source": "Bohairic 1 Corinthians 5 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:5",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲡⲱⲧ ⲉϩⲟⲩⲛ ⲉ**ⲥϩⲓⲙⲉ** ·",
+      "english": "Go not after a woman.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲟⲩⲟⲛ ϩⲁⲛⲕⲉ**ϩⲓⲟⲙⲓ** ⲇⲉ ⲡⲉ ⲉⲩⲛⲁⲩ ϩⲓⲫⲟⲩⲉⲓ ⲛⲉ ⲉⲛⲁⲣⲉⲙⲁⲣⲓⲁ ⲛϧⲏⲧⲟⲩ ⲡⲉ ϯⲙⲁⲅⲇⲁⲗⲓⲛⲏ ⲛⲉⲙⲙⲁⲣⲓⲁ ⲛⲧⲉⲓⲁⲕⲱⲃⲟⲥ ⲡⲓⲕⲟⲩϫⲓ ⲛⲉⲙⲧⲙⲁⲩ ⲛⲓⲱⲥⲏⲧⲟⲥ ⲛⲉⲙⲥⲁⲗⲱⲙⲏ .",
+      "english": "There were also women watching from afar, among whom were both Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲁⲩ ⲉⲧⲙⲛⲧⲥⲁⲃⲏ ⲛⲧⲉⲓ**ⲥϩⲓⲙⲉ** ·",
+      "english": "Consider the wisdom of this woman!",
+      "source": "On the Canaanite Woman",
+      "urn": "urn:cts:copticLit:pschrysostom.canaanite.budge:1-51",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲥ",
+        248,
+        30.29
+      ],
+      [
+        "ϯ",
+        220,
+        29.634
+      ],
+      [
+        "ⲟⲩ",
+        292,
+        29.323
+      ],
+      [
+        "ⲛ",
+        290,
+        29.13
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        251,
+        28.995
+      ],
+      [
+        "ⲁ",
+        245,
+        28.799
+      ],
+      [
+        "ⲧⲉϥ",
+        94,
+        28.654
+      ],
+      [
+        "ⲛⲉⲙ",
+        150,
+        27.929
+      ],
+      [
+        "ⲙ",
+        172,
+        27.862
+      ],
+      [
+        "ⲉ",
+        188,
+        27.681
+      ],
+      [
+        "ϥ",
+        199,
+        27.334
+      ],
+      [
+        "ⲥⲟⲛ",
+        43,
+        27.243
+      ],
+      [
+        ".",
+        147,
+        27.215
+      ],
+      [
+        "ⲇⲉ",
+        103,
+        27.108
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        108,
+        26.568
+      ],
+      [
+        "ϭⲓ",
+        54,
+        26.531
+      ],
+      [
+        "ϩⲁⲓ",
+        25,
+        26.407
+      ],
+      [
+        "ⲧ",
+        78,
+        26.381
+      ],
+      [
+        "ⲛⲁ",
+        110,
+        26.299
+      ],
+      [
+        "ⲧⲉ",
+        43,
+        26.265
+      ]
+    ],
+    "S": [
+      [
+        "ⲧⲉ",
+        448,
+        23.618
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        20,
+        22.956
+      ],
+      [
+        "ⲥ",
+        529,
+        22.808
+      ],
+      [
+        "ⲉ",
+        704,
+        22.588
+      ],
+      [
+        "ⲛ",
+        875,
+        22.521
+      ],
+      [
+        "ⲧⲉϥ",
+        246,
+        22.184
+      ],
+      [
+        "ⲟⲩ",
+        571,
+        22.085
+      ],
+      [
+        "ϩⲟⲟⲩⲧ",
+        96,
+        21.561
+      ],
+      [
+        "ϥ",
+        504,
+        20.846
+      ],
+      [
+        "ⲙⲛ",
+        277,
+        20.378
+      ],
+      [
+        "ⲁⲩⲱ",
+        326,
+        20.186
+      ],
+      [
+        "ⲇⲉ",
+        241,
+        20.117
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        74,
+        19.95
+      ],
+      [
+        "ⲩ",
+        251,
+        19.117
+      ],
+      [
+        "ϫⲉ",
+        228,
+        19.038
+      ],
+      [
+        "ϣⲏⲣⲉ",
+        137,
+        18.976
+      ],
+      [
+        ".",
+        204,
+        18.967
+      ],
+      [
+        "ⲡ",
+        302,
+        18.605
+      ],
+      [
+        "ⲁ",
+        264,
+        18.57
+      ],
+      [
+        "ⲙ",
+        230,
+        18.28
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          704
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥϩⲓⲙⲉ",
+          159
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          84
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          25
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲥϩⲓⲙⲉ",
+          25
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          54
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥϩⲓⲙⲉ",
+          36
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥϩⲓⲙⲉ",
+          19
+        ],
+        [
+          "ⲏ_1_pre_ⲥϩⲓⲙⲉ",
+          16
+        ],
+        [
+          "ϩⲓ_1_pre_ⲥϩⲓⲙⲉ",
+          10
+        ],
+        [
+          "ⲙ_1_post_ⲥϩⲓⲙⲉ",
+          7
+        ],
+        [
+          "ⲡⲟⲣⲛⲏ_2_post_ⲙ",
+          7
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          6
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϣⲏⲣⲉ",
+          6
+        ],
+        [
+          "ϣⲏⲣⲉ_1_post_ⲥϩⲓⲙⲉ",
+          6
+        ],
+        [
+          "ⲱ_1_pre_ⲥϩⲓⲙⲉ",
+          6
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥϩⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲥϩⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲥ_3_post_ϩⲟⲟⲩ",
+          5
+        ],
+        [
+          "ϩⲟⲟⲩ_2_post_ⲉ",
+          5
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲥϩⲓⲙⲉ",
+          5
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲥϩⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥϩⲓⲙⲉ",
+          5
+        ],
+        [
+          "ⲛ_2_post_ⲛϩⲏⲧ",
+          5
+        ],
+        [
+          "ⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          4
+        ],
+        [
+          "ⲧ_1_pre_ⲥϩⲓⲙⲉ",
+          4
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          4
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲧⲉϥ_1_pre_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲟⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲟⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          "ⲙ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥϩⲓⲙⲉ",
+          "ⲡⲟⲣⲛⲏ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲏⲣⲉ",
+          "ⲛⲉϥ_2_post_ϣⲏⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϣⲏⲣⲉ",
+          "ϣⲏⲣⲉ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲧⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          "ⲉⲧ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥϩⲓⲙⲉ",
+          "ⲙⲙⲁⲩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          "ⲉ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲥϩⲓⲙⲉ",
+          "ⲥ_3_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥϩⲓⲙⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ⲥϩⲓⲙⲉ",
+          "ⲛϩⲏⲧ_1_post_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲥϩⲓⲙⲉ",
+          "ⲛ_2_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲕⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥϩⲓⲙⲉ",
+          "ⲥϩⲓⲙⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 9.83,
+      "rank": 108,
+      "count": 1560
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3991",
+      "label": "ϫⲓⲥϩⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "take wife"
+    },
+    {
+      "target": "C3987",
+      "label": "ⲁⲧⲥϩⲓⲙⲓ",
+      "pos": "N",
+      "gloss": "wifeless"
+    },
+    {
+      "target": "C3988",
+      "label": "ⲙⲛⲧⲁⲧⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "wifelessness"
+    },
+    {
+      "target": "C3989",
+      "label": "ⲙⲛⲧⲥϩⲓⲙⲉ",
+      "pos": "N",
+      "gloss": "womanhood"
+    },
+    {
+      "target": "C3990",
+      "label": "ⲣⲥϩⲓⲙⲉ",
+      "pos": "V",
+      "gloss": "become, be wife"
+    }
+  ],
+  "etym": {
+    "egy_num": "125370",
+    "egy_lemma": "z.t-ḥm.t",
+    "demo_num": "d5458",
+    "demo_lemma": "sḥm.t",
+    "english": "woman",
+    "german": "Frau; weibliche Person",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/125370",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5458"
+  }
+}

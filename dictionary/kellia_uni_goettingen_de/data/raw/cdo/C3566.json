@@ -1,0 +1,450 @@
+{
+  "id": "C3566",
+  "forms": [
+    {
+      "id": "CF9037",
+      "orth": "ⲥⲙⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4496,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲙⲁⲁⲩ",
+      "dialect": "S",
+      "id": "1431.1"
+    },
+    {
+      "orth": "ⲥⲙⲁⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3167,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲙⲁⲩ",
+      "dialect": "F",
+      "id": "1431.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "number": "pl.",
+    "note": "Dual",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4060",
+      "bibliography": "CD 342a; CED 154; KoptHWb 187; DELC 190; ChLCS 48b"
+    },
+    {
+      "id": "CS4061",
+      "bibliography": "CD 342a; CED 154; KoptHWb 187; DELC 190; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉⲥϭⲓϫ ⲛϩⲃⲟⲩⲣ ⲁⲥⲥⲟⲩⲧⲱⲛⲥ ⲉⲃⲟⲗ ⲉⲧⲉϣⲙⲟⲩ ⲁⲩⲱ ⲧⲉⲥϭⲓϫ ⲛⲟⲩⲛⲁⲙ ⲁⲥⲥⲟⲩⲧⲱⲛⲥ ⲉⲃⲟⲗ ⲉⲡϩⲁⲧⲏⲣ ⲛⲛⲉⲧϩⲟⲥⲉ ⲁⲩⲱ ⲁⲥⲧⲣⲧⲱⲣⲥ ⲉⲡⲉⲥⲙⲁⲩ ⲛⲥⲓⲥⲁⲣⲁ ⲁⲥⲱϥⲧ ⲛⲧⲉϥⲁⲡⲉ ⲁⲥⲣⲁϩⲧϥ ⲁⲥⲱϥⲧ ⲙⲡⲉϥ**ⲥⲙⲁⲩ**",
+      "english": "She stretched forth her left hand to the nail, and her right to the hand workman's hammer, and she smote Sisara with it, she nailed through his head and smote him; she nailed through his temples.",
+      "source": "Judges 5",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲛⲁϯϩⲓⲛⲏⲃ ⲛⲛⲁⲃⲁⲗ ⲣⲉⲕⲣⲓⲕⲉ ⲛⲛⲁⲃⲟⲩϩⲉ ⲙⲧⲟⲛ ⲛⲛⲁ**ⲥⲙⲁⲩ**",
+      "english": "I will not give sleep to mine eyes, nor slumber to mine eyelids, nor rest to my temples,",
+      "source": "Psalms 131",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:131",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ⲃⲁⲣⲁⲕ ⲁϥⲉⲓ ⲉϥⲡⲏⲧ ⲛⲥⲁⲥⲓⲥⲁⲣⲁ ⲁⲩⲱ ⲓⲁⲏⲗ ⲁⲥⲉⲓ ⲉⲃⲟⲗ ϩⲏⲧϥ ⲡⲉϫⲁⲥ ⲛⲁϥ ϫⲉⲁⲙⲟⲩ ⲧⲁⲧⲥⲁⲃⲟⲕ ⲉⲡⲣⲱⲙⲉ ⲉⲧⲕϣⲓⲛⲉ ⲛⲥⲱϥ ⲁϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲛⲁⲥ ⲁⲩⲱ ⲉⲓⲥ ⲥⲓⲥⲁⲣⲁ ⲉϥⲛⲏϫ ϩⲓⲡⲉⲥⲏⲧ ⲉϥⲙⲟⲟⲩⲧ ⲉⲣⲉⲧⲉϣⲙⲟⲩ ⲧⲣⲧⲱⲣ ϩⲙⲡⲉϥ**ⲥⲙⲁⲩ**",
+      "english": "And, behold, Barac was pursuing Sisara: and Jael went out to meet him, and he said to him, Come, and I will shew thee the man whom thou seekest: and he went in to her; and, behold, Sisara was fallen dead, and the pin was in his temple.",
+      "source": "Judges 4",
+      "urn": "urn:cts:copticLit:ot.judg.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ",
+        1,
+        17.11
+      ],
+      [
+        "ϣⲉⲗⲉⲧ",
+        2,
+        15.525
+      ],
+      [
+        "ⲧⲉ",
+        4,
+        13.401
+      ],
+      [
+        "ⲧⲥⲁⲃⲟ",
+        1,
+        12.203
+      ],
+      [
+        "ϧⲁϯ",
+        1,
+        11.981
+      ],
+      [
+        "ⲛⲑⲟ",
+        1,
+        11.618
+      ],
+      [
+        "ϣⲉⲣⲓ",
+        2,
+        11.536
+      ],
+      [
+        "ⲛⲑⲟⲥ",
+        1,
+        10.825
+      ],
+      [
+        "ⲥ",
+        5,
+        10.809
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        1,
+        9.92
+      ],
+      [
+        "ϫⲓⲙⲓ",
+        1,
+        9.495
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        9.135
+      ],
+      [
+        "ⲧⲉⲥ",
+        1,
+        8.971
+      ],
+      [
+        "ⲉϫⲉⲛ",
+        2,
+        8.829
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        8.744
+      ],
+      [
+        "ⲛⲏⲉⲧ",
+        1,
+        8.506
+      ],
+      [
+        "ⲧⲱⲛ",
+        1,
+        8.335
+      ],
+      [
+        "ⲛ",
+        4,
+        8.006
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.25
+      ],
+      [
+        "ⲡⲉϫⲁ",
+        1,
+        6.631
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲱϥⲧ",
+        3,
+        21.768
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        18.013
+      ],
+      [
+        "ⲥⲧⲣⲧⲣⲧⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ϣⲙⲟⲩ",
+        2,
+        17.106
+      ],
+      [
+        "ⲧⲣⲧⲱⲣⲥ",
+        1,
+        17.013
+      ],
+      [
+        "ⲧⲣⲧⲱⲣ",
+        1,
+        15.428
+      ],
+      [
+        "ⲃⲟⲩϩⲉ",
+        1,
+        14.428
+      ],
+      [
+        "ⲥⲓⲥⲁⲣⲁ",
+        1,
+        13.765
+      ],
+      [
+        "_warn:empty_norm_",
+        1,
+        13.013
+      ],
+      [
+        "ⲙⲧⲟⲛ",
+        2,
+        12.7
+      ],
+      [
+        ",",
+        2,
+        12.282
+      ],
+      [
+        "ϩⲁⲣⲁⲧ",
+        1,
+        11.013
+      ],
+      [
+        "ϭⲛ",
+        1,
+        10.894
+      ],
+      [
+        "ⲁ",
+        7,
+        10.881
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        10.266
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        9.079
+      ],
+      [
+        "ϣⲁⲛⲧ",
+        1,
+        9.024
+      ],
+      [
+        "ϩⲉ",
+        2,
+        8.142
+      ],
+      [
+        "ϩⲙ",
+        2,
+        7.828
+      ],
+      [
+        "ⲛ",
+        4,
+        7.224
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉ_1_pre_ⲥⲙⲁⲩ",
+          4
+        ],
+        [
+          "ⲥⲙⲁⲩ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲑⲟ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_3_post_ϣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ϣⲱⲙⲓ_2_post_ⲉϫⲉⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉ_1_pre_ⲥⲙⲁⲩ",
+          "ⲥⲙⲁⲩ_0_node",
+          3
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲙⲁⲩ",
+          "ⲥⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲙⲁⲩ",
+          "ⲥⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲥⲙⲁⲩ_0_node",
+          "ⲛⲑⲟ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛⲑⲟ_1_post_ⲥⲙⲁⲩ",
+          "ⲡ_2_post_ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ",
+          "ⲉⲧⲉⲣⲁⲛⲉⲥⲛⲏⲟⲩ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲥⲙⲁⲩ_0_node",
+          "ⲉϫⲉⲛ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲉϫⲉⲛ_1_post_ⲥⲙⲁⲩ",
+          "ⲧⲉⲥ_3_post_ϣⲱⲙⲓ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_3_post_ϣⲱⲙⲓ",
+          "ϣⲱⲙⲓ_2_post_ⲉϫⲉⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲙⲁⲩ",
+          3
+        ],
+        [
+          "ⲥⲙⲁⲩ_0_node",
+          6
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲙⲁⲩ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲥⲓⲥⲁⲣⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲙⲁⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲥⲙⲁⲩ",
+          "ⲥⲙⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲥⲙⲁⲩ",
+          "ⲥⲙⲁⲩ_0_node",
+          2
+        ],
+        [
+          "ⲥⲙⲁⲩ_0_node",
+          "ⲛ_1_post_ⲥⲙⲁⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲙⲁⲩ",
+          "ⲥⲓⲥⲁⲣⲁ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲙⲁⲩ",
+          "ⲛⲁ_1_pre_ⲥⲙⲁⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4096,
+      "count": 6
+    },
+    "B": {
+      "rate": 0.07,
+      "rank": 2785,
+      "count": 6
+    }
+  },
+  "etym": {
+    "egy_num": "134360",
+    "egy_lemma": "smꜣ",
+    "demo_num": "d5280",
+    "demo_lemma": "sme",
+    "english": "scalp; temple (of the head)",
+    "german": "Schläfenhaare; Schläfe; Seite des Kopfes",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/134360",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5280"
+  }
+}

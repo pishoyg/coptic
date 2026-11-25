@@ -1,0 +1,206 @@
+{
+  "id": "C1637",
+  "forms": [
+    {
+      "id": "CF4746",
+      "orth": "ⲗⲉⲗⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7095,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲗⲉⲗⲁⲩⲉ",
+      "dialect": "S",
+      "id": "966.1"
+    },
+    {
+      "orth": "ⲗⲁⲩⲉ",
+      "dialect": "S",
+      "id": "966.2"
+    },
+    {
+      "orth": "ⲗⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": "966.3"
+    },
+    {
+      "orth": "ⲗⲁⲁⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.27,
+        "rank": 115,
+        "count": 1621
+      }
+    },
+    {
+      "orth": "ⲗⲉⲓⲗⲟⲩ",
+      "dialect": "A",
+      "id": "966.5"
+    },
+    {
+      "orth": "ⲗⲓⲗⲟⲩ",
+      "dialect": "A",
+      "id": "966.6"
+    },
+    {
+      "orth": "ⲗⲓⲗⲁⲩⲉ",
+      "dialect": "A",
+      "id": "966.7"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1901",
+      "bibliography": "CD 141b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲣϯϣⲟⲟⲩ , ⲁⲩⲱ ⲙⲉⲥⲟⲩⲁⲫⲓ ⲛⲟⲩ**ⲗⲉⲗⲟⲩ** ⲉⲥϩⲙⲡⲏⲓ ⲛⲙⲙⲉ",
+      "english": "because you gave perfume and mesouaphi to a maiden while she was in the house with you",
+      "source": "To Aphthonia",
+      "urn": "urn:cts:copticLit:besa.aphthonia.monbba",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲥⲟⲩⲁⲫⲓ",
+        2,
+        21.598
+      ],
+      [
+        "ϩⲙ",
+        2,
+        9.413
+      ],
+      [
+        "ⲥ",
+        2,
+        8.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        7.22
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲗⲉⲗⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲗⲉⲗⲟⲩ_0_node",
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲗⲉⲗⲟⲩ",
+          "ⲥ_4_post_ⲏⲓ",
+          1
+        ],
+        [
+          "ⲥ_4_post_ⲏⲓ",
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲉⲗⲟⲩ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6644,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1638",
+      "label": "ⲗⲉⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "youth, young man"
+    },
+    {
+      "target": "C1639",
+      "label": "ⲙⲛⲧⲗⲉⲗⲟⲩ",
+      "pos": "N",
+      "gloss": "youth, childhood"
+    }
+  ],
+  "etym": {
+    "egy_num": "84560",
+    "egy_lemma": "nn.w",
+    "demo_num": "d3190",
+    "demo_lemma": "nn",
+    "english": "child",
+    "german": "Kind (u. Ä.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/84560",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3190"
+  }
+}

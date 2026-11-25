@@ -1,0 +1,46 @@
+{
+  "id": "C1903",
+  "forms": [
+    {
+      "id": "CF5454",
+      "orth": "ⲙⲛ-",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF5455",
+      "orth": "ⲙⲛ-",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "NEG",
+    "subc": "Negierter Imperativ ⲙⲡⲣ-",
+    "tlapos": "Verbalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS2214",
+      "bibliography": "CD 170b; KoptHWb 93; DELC 113"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C1979",
+      "type": "cf",
+      "label": "prefix of neg. imperative"
+    }
+  ],
+  "etym": {
+    "egy_num": "55500",
+    "egy_lemma": "bn",
+    "demo_num": "d1705",
+    "demo_lemma": "bn",
+    "english": "[negative particle]",
+    "german": "[Negationspartikel]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/55500",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1705"
+  }
+}

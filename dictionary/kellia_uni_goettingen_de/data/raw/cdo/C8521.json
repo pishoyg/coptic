@@ -1,0 +1,166 @@
+{
+  "id": "C8521",
+  "forms": [
+    {
+      "id": "CF20036",
+      "orth": "ⲁⲥⲫⲁⲗⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF20037",
+      "orth": "ⲁⲥⲫⲁⲗⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12785,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS9980",
+      "bibliography": "DDGLC",
+      "cu_ID": "1353"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲛⲉⲓⲙⲉ ⲉⲣⲟϥ **ⲁⲥⲫⲁⲗⲱⲥ** ϫⲉⲁϥⲣⲛⲟⲃⲉ ⲉϥⲙⲡϣⲁ ⲙⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ ⲉⲓⲉ ⲟⲩ ⲡⲉⲧⲛⲛⲁⲁⲁϥ ϣⲁⲛⲧⲛⲛⲟⲩϩⲙ ⲙⲙⲟϥ ⲉⲛⲕⲟⲗⲁⲥⲓⲥ · ⲙⲡⲉⲇⲣⲁⲕⲱⲛ ⲙⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ ⲁⲩⲱ ⲛⲥⲉⲡⲟⲟⲛⲉϥ ⲉⲩⲥⲱⲙⲁ ⲛⲇⲓⲕⲁⲓⲟⲥ ⲉϥⲛⲁϩⲉ ⲉⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲟⲩⲟⲉⲓⲛ · ⲁⲩⲱ ⲛϥⲣⲁⲅⲁⲑⲟⲥ ⲛϥⲃⲱⲕ ⲉⲡϫⲓⲥⲉ · ⲛϥⲕⲗⲏⲣⲟⲛⲟⲙⲉⲓ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“and we have known certainly of him, that he hath sinned | and is deserving of the outer darkness,--what are we to do with him, to save him from the chastisements of the dragon of the outer darkness, and that he may be removed into a righteous body which shall find the mysteries of the Light-kingdom, in order that it may be good and go on high and inherit the Light-kingdom?”",
+      "source": "Pistis Sophia Book 3 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:100-108",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲓⲧ",
+        2,
+        13.071
+      ],
+      [
+        "ϭⲁⲗⲁⲩϫ",
+        1,
+        10.626
+      ],
+      [
+        "ϥ",
+        6,
+        10.594
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        9.495
+      ],
+      [
+        "ⲟⲩⲛ",
+        1,
+        8.874
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.862
+      ],
+      [
+        ".",
+        3,
+        8.786
+      ],
+      [
+        "ⲉⲙⲓ",
+        1,
+        8.181
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        8.031
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.667
+      ],
+      [
+        "ⲁ",
+        2,
+        6.405
+      ],
+      [
+        "ⲛ",
+        1,
+        3.006
+      ]
+    ],
+    "S": [
+      [
+        "ⲣⲛⲟⲃⲉ",
+        1,
+        11.804
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        10.441
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲥⲫⲁⲗⲱⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12361,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3094",
+    "grl_lemma": "ἀσφαλῶς",
+    "grl_meaning": "firmly, steadily; certainly",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 266a; BDAG 147b"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "C4622",
+  "forms": [
+    {
+      "id": "CF11205",
+      "orth": "ϩⲁⲧⲟⲩⲱ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF11206",
+      "orth": "ϧⲁⲑⲟⲩⲉⲛ-",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS5218",
+      "bibliography": "CD 444b; CED 200; KoptHWb 251; ChLCS 62a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6328",
+      "type": "cf",
+      "label": "under"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4623",
+      "label": "ϩⲓⲧⲟⲩⲱⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, next"
+    },
+    {
+      "target": "C4620",
+      "label": "ϯⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "turn away, move out?"
+    },
+    {
+      "target": "C4621",
+      "label": "ⲉⲧⲟⲩⲛ-",
+      "pos": "PREP",
+      "gloss": "beside, at, with"
+    },
+    {
+      "target": "C4619",
+      "label": "ⲛⲟⲩϩ ⲛⲧⲟⲩⲱ⸗",
+      "pos": "V",
+      "gloss": "sit (to eat)"
+    },
+    {
+      "target": "C4624",
+      "label": "ⲡⲉⲧϩⲓⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "the neighbour"
+    },
+    {
+      "target": "C4618",
+      "label": "ⲧⲟⲩⲱ⸗",
+      "pos": "N",
+      "gloss": "bosom"
+    }
+  ],
+  "etym": {
+    "demo_num": "d4829",
+    "demo_lemma": "ẖr-tw(ꜣ)=",
+    "english": "at, beside",
+    "german": "bei, neben",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4829"
+  }
+}

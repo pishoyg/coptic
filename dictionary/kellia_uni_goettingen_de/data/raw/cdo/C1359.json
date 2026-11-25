@@ -1,0 +1,57 @@
+{
+  "id": "C1359",
+  "forms": [
+    {
+      "id": "CF4127",
+      "orth": "ⲙⲁⲣⲕⲁⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1571",
+      "bibliography": "CD 119b; ChLCS 19a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C1358",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "bone"
+    },
+    {
+      "target": "C1363",
+      "label": "ⲕⲁⲥ",
+      "pos": "N",
+      "gloss": "stone, pit (of fruit)"
+    },
+    {
+      "target": "C1361",
+      "label": "ⲕⲁⲥⲃⲏⲧ",
+      "pos": "N",
+      "gloss": "rib-bones"
+    },
+    {
+      "target": "C1362",
+      "label": "ⲕⲁⲥⲣⲟ",
+      "pos": "N",
+      "gloss": "jaw-bone"
+    },
+    {
+      "target": "C1360",
+      "label": "ⲣⲕⲁⲥ",
+      "pos": "V",
+      "gloss": "become bony"
+    }
+  ]
+}

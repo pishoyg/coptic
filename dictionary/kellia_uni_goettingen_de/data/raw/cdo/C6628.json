@@ -1,0 +1,39 @@
+{
+  "id": "C6628",
+  "forms": [
+    {
+      "id": "CF15300",
+      "orth": "ⲙⲁ ⲛⲉϩⲙⲟⲩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7341",
+      "bibliography": "CD 677a; KoptHWb 370; ChLCS 90b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6627",
+      "label": "ϩⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "salt"
+    },
+    {
+      "target": "C6629",
+      "label": "ⲥⲁ ⲛϩⲙⲟⲩ",
+      "pos": "N",
+      "gloss": "salt dealer"
+    }
+  ]
+}

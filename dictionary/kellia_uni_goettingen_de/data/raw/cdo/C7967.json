@@ -1,0 +1,68 @@
+{
+  "id": "C7967",
+  "forms": [
+    {
+      "id": "CF32226",
+      "orth": "ⲣϭⲁⲩⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32225",
+      "orth": "ⲣϭⲁⲟⲩⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18912,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8853",
+      "bibliography": "CD 835b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7964",
+      "label": "ϭⲁⲩⲟⲛ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C7965",
+      "label": "ϭⲁⲩⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "servant, slave"
+    },
+    {
+      "target": "C7966",
+      "label": "ⲙⲛⲧϭⲁⲩⲟⲛ",
+      "pos": "N",
+      "gloss": "servitude, slavery"
+    },
+    {
+      "target": "C13019",
+      "label": "ⲙⲛⲧⲉⲓⲁⲛϭⲁⲩⲟⲛ",
+      "pos": "N",
+      "gloss": "eye-service"
+    }
+  ]
+}

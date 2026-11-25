@@ -1,0 +1,198 @@
+{
+  "id": "C8596",
+  "forms": [
+    {
+      "id": "CF20272",
+      "orth": "ⲃⲁⲥⲓⲗⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF20275",
+      "orth": "ⲃⲁⲥⲓⲗⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3925,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF20273",
+      "orth": "ⲃⲁⲥⲓⲗⲉⲓⲕⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF20274",
+      "orth": "ⲃⲁⲥⲓⲗⲉⲕⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10132",
+      "bibliography": "DDGLC",
+      "cu_ID": "9295"
+    },
+    {
+      "id": "CS10133",
+      "bibliography": "DDGLC",
+      "cu_ID": "10511"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲓ ⲇⲉ ⲉⲓⲡⲏⲧ ⲉⲡⲉⲥⲏⲧ · ⲉⲓⲥ ⲟⲩⲣⲱⲙⲉ ⲛⲟⲩⲟⲉⲓⲛ ⲉϥⲫⲟⲣⲉⲓ ⲛⲟⲩⲥⲭⲏⲙⲁ ⲛ**ⲃⲁⲥⲓⲗⲓⲕⲟⲛ** · ⲉⲣⲉⲡⲉϥϩⲟ ⲟⲩⲟⲉⲓⲛ ⲛⲧϩⲉ ⲙⲡⲣⲏ ·",
+      "english": "And whilst I was falling down, behold a man of light who was wearing the apparel worn by men of royal rank, and whose face was shining like the sun,",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲛⲛⲉϩⲟⲟⲩ ⲉⲛⲧⲁⲁⲣⲇⲁⲝⲉⲣⲝⲏⲥ ϩⲙⲟⲟⲥ ϩⲓϫⲙⲡⲉϥⲑⲣⲟⲛⲟⲥ ⲙ**ⲃⲁⲥⲓⲗⲓⲕⲟⲛ** ⲉⲧϩⲛⲥⲟⲩⲥⲟⲥ ⲧⲡⲟⲗⲓⲥ",
+      "english": "in those days, when king Artaxerxes was on the throne in the city of Susa,",
+      "source": "Esther 1",
+      "urn": "urn:cts:copticLit:ot.esth.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϫⲉⲉϣϫⲉ ⲟⲩⲁⲣⲓⲥⲧⲱⲛ ⲛ**ⲃⲁⲥⲓⲗⲓⲕⲟⲛ** ⲡⲉ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲉⲛⲧⲁⲅⲓⲟⲛ",
+        1,
+        17.598
+      ],
+      [
+        "ⲟⲩⲁⲣⲓⲥⲧⲱⲛ",
+        1,
+        16.598
+      ],
+      [
+        "ⲥⲟⲩⲥⲟⲥ",
+        1,
+        13.511
+      ],
+      [
+        "ⲁⲝⲓⲱⲙⲁ",
+        1,
+        12.898
+      ],
+      [
+        "ⲧⲁⲝⲓⲥ",
+        2,
+        12.81
+      ],
+      [
+        "ⲁⲣⲓⲥⲧⲟⲛ",
+        1,
+        12.206
+      ],
+      [
+        "ⲉϣϣⲉ",
+        1,
+        11.469
+      ],
+      [
+        "ⲥⲭⲏⲙⲁ",
+        1,
+        11.35
+      ],
+      [
+        "ⲛ",
+        10,
+        10.775
+      ],
+      [
+        "ⲡⲉ",
+        5,
+        10.474
+      ],
+      [
+        "ⲛⲉⲓ",
+        2,
+        10.467
+      ],
+      [
+        "ⲡⲉϥ",
+        3,
+        9.851
+      ],
+      [
+        "ⲑⲣⲟⲛⲟⲥ",
+        1,
+        9.638
+      ],
+      [
+        "ⲙⲓⲭⲁⲏⲗ",
+        1,
+        8.537
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        8.492
+      ],
+      [
+        "ϩⲛ",
+        3,
+        8.234
+      ],
+      [
+        "ϩⲓϫⲙ",
+        1,
+        8.004
+      ],
+      [
+        "ⲉⲧ",
+        3,
+        7.993
+      ],
+      [
+        "ⲉϣϫⲉ",
+        1,
+        7.896
+      ],
+      [
+        "ϩⲟ",
+        1,
+        7.831
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲃⲁⲥⲓⲗⲓⲕⲟⲛ_0_node",
+          8
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3536,
+      "count": 8
+    }
+  },
+  "etym": {
+    "grl_ID": "371",
+    "grl_lemma": "βασιλικός",
+    "grl_meaning": "royal, kingly",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 309b; Preisigke 1:258"
+  }
+}

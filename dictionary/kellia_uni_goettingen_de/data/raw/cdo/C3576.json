@@ -1,0 +1,83 @@
+{
+  "id": "C3576",
+  "forms": [
+    {
+      "id": "CF9057",
+      "orth": "ⲥⲓⲛⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4073",
+      "bibliography": "CD 344a; KoptHWb 188"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧϩⲉ ⲅⲁⲣ ⲉⲛⲧⲁⲡⲉⲧⲛϩⲏⲧ ⲙⲉⲉⲩⲉ **ⲉⲥⲓⲛⲉ **ⲉⲃⲟⲗ**** ⲙⲡⲛⲟⲩⲧⲉ ⲧⲁϣⲉⲧⲏⲩⲧⲛ ⲙⲙⲏⲧ ⲛⲕⲱⲃ ⲉⲧⲣⲉⲧⲛⲕⲧⲉⲧⲏⲩⲧⲛ ⲉⲣⲟϥ ⲛⲧⲉⲧⲛϣⲓⲛⲉ ⲛⲥⲱϥ",
+      "english": "For as it was your mind to go astray from God: so, being returned, seek him ten times more.",
+      "source": "Baruch 4",
+      "urn": "urn:cts:copticLit:ot.bar.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲛⲉⲕⲗⲟⲟⲗⲉ **ⲥⲓⲛⲉ **ⲉⲃⲟⲗ**** ϩⲙⲡⲙⲁ ⲉⲧⲙⲙⲁⲩ ⲉⲧⲉⲣⲉⲛⲟⲉⲓⲕ ⲛϩⲏⲧϥ ⲙⲡⲉⲟⲩⲧⲗϯⲗⲉ ⲛⲟⲩⲱⲧ ϩⲉ ⲉϫⲛ ⲛⲟⲉⲓⲕ , ⲉⲁⲡⲉϥϣⲗⲏⲗ ⲣⲧϩⲉ ⲛⲟⲩⲥⲕⲏⲡⲉ ϩⲙⲡⲙⲁ ⲉⲧⲉⲣⲉⲛⲟⲉⲓⲕ ⲛϩⲏⲧϥ ⲙⲡⲉⲟⲩⲧⲗϯⲗⲉ ⲛⲟⲩⲱⲧ ϩⲉ ⲉϫⲛ ⲛⲟⲉⲓⲕ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 4",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:24-29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3581",
+      "label": "ϫⲓⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passing by, crossing; passing away, death"
+    },
+    {
+      "target": "C3578",
+      "label": "ⲁⲧⲥⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "impassable, not passing"
+    },
+    {
+      "target": "C3580",
+      "label": "ⲙⲁ ⲛⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passage, path crossing"
+    },
+    {
+      "target": "C3579",
+      "label": "ⲣⲉϥⲥⲓⲛⲉ",
+      "pos": "N",
+      "gloss": "one that passes"
+    },
+    {
+      "target": "C3575",
+      "label": "ⲥⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "pass by, through, beyond, across; pass over, omit"
+    },
+    {
+      "target": "C3577",
+      "label": "ⲥⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "passing, decline (of day), afternoon"
+    },
+    {
+      "target": "C3582",
+      "label": "ⲥⲟⲛⲉ",
+      "pos": "N",
+      "gloss": "robber (originally perhaps \"vagrant\")"
+    }
+  ]
+}

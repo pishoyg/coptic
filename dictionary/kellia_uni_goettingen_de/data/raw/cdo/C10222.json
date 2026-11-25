@@ -1,0 +1,509 @@
+{
+  "id": "C10222",
+  "forms": [
+    {
+      "id": "CF27035",
+      "orth": "ⲡⲛⲟⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF27036",
+      "orth": "ⲛⲟⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27037",
+      "orth": "ⲡⲛⲟⲏ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF27038",
+      "orth": "ⲡⲛⲟⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2826,
+        "count": 15
+      }
+    },
+    {
+      "id": "CF27039",
+      "orth": "ⲡⲛⲟⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9037,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF27040",
+      "orth": "ⲡⲛⲱⲏ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF27041",
+      "orth": "ⲡⲛⲟⲏⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF27042",
+      "orth": "ⲡⲛⲱⲏ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13653",
+      "bibliography": "DDGLC",
+      "cu_ID": "7625"
+    },
+    {
+      "id": "CS13654",
+      "bibliography": "DDGLC",
+      "cu_ID": "101"
+    },
+    {
+      "id": "CS13655",
+      "bibliography": "DDGLC",
+      "cu_ID": "6899"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ ⲫⲛⲟⲩϯ ⲙⲟⲩⲛⲕ ⲙⲡⲓⲣⲱⲙⲓ ⲁϥϫⲓ ⲛⲟⲩⲕⲁϩⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲕⲁϩⲓ ⲟⲩⲟϩ ⲁϥⲛⲓϥⲓ ⲉϧⲟⲩⲛ ϧⲉⲛⲡⲉϥϩⲟ ⲛⲟⲩ**ⲡⲛⲟⲏ** ⲛⲱⲛϧ ⲟⲩⲟϩ ⲁϥϣⲱⲡⲓ ⲛϫⲉⲡⲓⲣⲱⲙⲓ ⲉⲩⲯⲩⲭⲏ ⲉⲥⲟⲛϧ .",
+      "english": "And God formed the man dust of the earth, and breathed upon his face the breath of life, and the man became a living soul.",
+      "source": "01_Genesis_02",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:02",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲛⲓϥⲉ ⲉϩⲟⲩⲛ ⲉϩⲣⲁϥ ⲛⲟⲩ**ⲡⲛⲟⲏ** ⲛⲱⲛϩ ·",
+      "english": "God breathed into him a breath of life.",
+      "source": "Abraham Our Father: YA 535-40",
+      "urn": "urn:cts:copticLit:shenoute.abraham.monbya:21-27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛ ⲧⲉⲓϩⲉ ⲁϥϯⲡⲛⲉⲩⲙⲁ ⲛⲱⲛϩ ⲉⲣⲟϥ · ⲁϥⲛⲓϥⲉ ⲉϩⲟⲩⲛ ϩⲙⲡⲉϥϩⲟ ⲛⲟⲩ**ⲡⲛⲟⲏ** ⲛⲱⲛϩ ⲛϣⲟⲙⲛⲧ ⲛⲥⲟⲡ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲱⲛϩ · ⲱⲛϩ · ⲱⲛϩ · ⲕⲁⲧⲁⲧⲩⲡⲟⲥ ⲛⲧⲁⲙⲛⲧⲛⲟⲩⲧⲉ ⁛—",
+      "english": "And He put breath into him in this way; He breathed into his nostrils the breath of life three times, saying, 'Live! Live! Live! according to the type of My Divinity.'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲁⲕϫⲉⲛⲉⲕϣⲁϫⲉ ⲇⲉ ⲉⲛⲓⲙ ⲧⲉ**ⲡⲛⲟⲏ** ⲇⲉ ⲛⲛⲓⲙ ⲧⲉⲛⲧⲁⲥⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧⲕ",
+      "english": "To whom hast thou uttered words? and whose breath is it that has come forth from thee?",
+      "source": "Job 26",
+      "urn": "urn:cts:copticLit:ot.job.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲱⲛϧ",
+        1,
+        10.624
+      ],
+      [
+        "ϩⲟ",
+        1,
+        10.396
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.04
+      ],
+      [
+        "ⲛ",
+        2,
+        7.591
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        5.08
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.691
+      ],
+      [
+        "ⲱⲛϩ",
+        7,
+        15.232
+      ],
+      [
+        "ⲧⲥⲁⲃⲱ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛ",
+        21,
+        13.079
+      ],
+      [
+        "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ",
+        2,
+        12.784
+      ],
+      [
+        "ⲡ",
+        15,
+        12.311
+      ],
+      [
+        "ϩⲟ",
+        3,
+        11.679
+      ],
+      [
+        "ⲛϩⲣⲁⲓ",
+        1,
+        11.647
+      ],
+      [
+        "ⲧⲉ",
+        5,
+        10.862
+      ],
+      [
+        "ⲛⲓⲙ",
+        4,
+        10.38
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        10.313
+      ],
+      [
+        "ⲉϩⲣⲁ",
+        1,
+        10.248
+      ],
+      [
+        "ⲁϩⲟ",
+        1,
+        10.121
+      ],
+      [
+        "ⲇⲉ",
+        4,
+        9.079
+      ],
+      [
+        "ϯ",
+        3,
+        8.364
+      ],
+      [
+        "ⲧⲏⲣϥ",
+        1,
+        8.282
+      ],
+      [
+        "ⲉ",
+        5,
+        7.876
+      ],
+      [
+        "ϣⲟⲙⲛⲧ",
+        1,
+        7.796
+      ],
+      [
+        "ⲧⲁⲙⲓⲟ",
+        1,
+        7.546
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        2,
+        7.406
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲱⲛϧ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          "ⲱⲛϧ_2_post_ⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          13
+        ],
+        [
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          5
+        ],
+        [
+          "ⲱⲛϩ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲛ_2_post_ⲱⲛϩ",
+          3
+        ],
+        [
+          "ⲱⲛϩ_1_post_ⲡⲛⲟⲏ",
+          3
+        ],
+        [
+          "ⲛ_3_post_ⲱⲛϩ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_5_post_ⲥⲟⲡ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲱⲛϩ_b",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲛⲟⲏ",
+          4
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲛⲟⲏ",
+          3
+        ],
+        [
+          "ⲛ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲛⲟⲏ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_pre_ⲡ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ϩⲓϫⲱ_4_post_ⲗⲁⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲡⲛⲟⲏ",
+          "ⲱⲛϩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          "ⲛ_2_post_ⲱⲛϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲱⲛϩ",
+          "ⲱⲛϩ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲱⲛϩ_2_post_ⲛ",
+          "ⲛ_3_post_ⲱⲛϩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲱⲛϩ",
+          "ϣⲟⲙⲛⲧ_5_post_ⲥⲟⲡ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲛⲧ_5_post_ⲥⲟⲡ",
+          "ⲛ_3_post_ⲱⲛϩ_b",
+          1
+        ],
+        [
+          "ⲧⲉ_1_pre_ⲡⲛⲟⲏ",
+          "ⲡⲛⲟⲏ_0_node",
+          4
+        ],
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          "ⲇⲉ_1_post_ⲡⲛⲟⲏ",
+          3
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲛⲟⲏ",
+          "ⲛ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲧ",
+          "ⲧ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲡⲛⲟⲏ",
+          "ⲙ_1_post_ⲡⲛⲟⲏ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲛⲟⲏ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲡⲛⲟⲏ",
+          "ⲡⲛⲟⲏ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_pre_ⲡⲛⲟⲏ",
+          "ⲡ_2_pre_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_pre_ⲡ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_pre_ⲡ",
+          "ⲧⲉ_1_pre_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲡⲛⲟⲏ_0_node",
+          "ⲙ_1_post_ⲡⲛⲟⲏ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲗⲁⲟⲥ_3_post_ⲡ",
+          "ⲉⲧ_4_post_ⲗⲁⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_4_post_ⲗⲁⲟⲥ",
+          "ϩⲓϫⲱ_4_post_ⲗⲁⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.09,
+      "rank": 2502,
+      "count": 15
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 8504,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2567",
+    "grl_lemma": "πνοή",
+    "grl_meaning": "blowing, blast, breath",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1425b"
+  }
+}

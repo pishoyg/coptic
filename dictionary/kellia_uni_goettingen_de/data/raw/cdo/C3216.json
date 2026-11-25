@@ -1,0 +1,252 @@
+{
+  "id": "C3216",
+  "forms": [
+    {
+      "id": "CF8317",
+      "orth": "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7404,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3673",
+      "bibliography": "CD 308a; ChLCS 43b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϥⲟⲩⲱϣ ⲉⲡⲱⲛⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ⲛϥⲃⲱⲕ ⲉⲡⲙⲁ ⲉⲧⲟⲩⲛϩⲏⲧϥ ⲛϭⲓϯⲣⲏⲛⲏ ⲙⲛⲡⲣⲁϣⲉ ⲙⲛⲧⲁⲅⲁⲡⲏ ⲙⲛⲧⲙⲛⲧⲗⲁⲙⲡⲣⲟⲥ · ⲙⲛⲧ**ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ** ⲙⲛⲡⲕⲉⲥⲉ ⲉⲡⲉⲧⲏⲣϥ ⲛⲁⲅⲁⲑⲟⲛ ⲛⲁⲓ ⲉⲙⲛⲗⲁⲁⲩ ⲛϣⲁϫⲉ ⲛⲁϣ ⲡⲁⲣϩⲓⲥⲧⲁ ⲙⲙⲟⲟⲩ ·",
+      "english": "He wished to depart from this place (i. e., world), and to enter into the place (or, world) wherein are peace, and gladness, and love, and splendour, and freedom from care, and all the good things which no words can possibly present to the mind.",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲥⲉⲁⲡⲟⲗⲁⲩⲉ ⲙⲙⲟⲟⲩ ϩⲛⲧ**ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ** ⲛⲛⲁⲅⲅⲉⲗⲟⲥ ⲙⲛⲡⲟⲩⲛⲟϥ ⲙⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲉⲁϥϯ ⲉⲧⲟⲟⲧⲟⲩ ⲛⲟⲩⲉⲛⲧⲟⲗⲏ ⲉⲥⲟⲩⲁⲁⲃ ⲉϥϫⲱ ⲙⲙⲟⲥ ⲛⲁⲩ ϫⲉⲉⲃⲟⲗ ϩⲛϣⲏⲛ ⲛⲓⲙ ⲉⲧϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ϩⲛⲟⲩⲱⲙ ⲁⲧⲉⲧⲛⲟⲩⲱⲙ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ",
+      "english": "...",
+      "source": "Dialogue of Eve and the Serpent (Giron)",
+      "urn": "urn:cts:copticLit:litfrg.eve_serpent.giron_ed:100-101",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲗⲁⲙⲡⲣⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ⲕⲉⲥⲉ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        10.399
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        10.019
+      ],
+      [
+        "ⲧ",
+        2,
+        8.071
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          "ⲧ_1_pre_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ_0_node",
+          "ⲛ_1_post_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲛⲧⲁⲧⲣⲟⲟⲩϣ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲅⲅⲉⲗⲟⲥ_3_post_ⲛ",
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲟⲩⲛⲟϥ",
+          "ⲡ_2_post_ⲟⲩⲛⲟϥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6951,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1961",
+      "type": "cf",
+      "label": "prefix to nouns or adj. forming abstracts"
+    },
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3213",
+      "label": "ϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-taker, guardian"
+    },
+    {
+      "target": "C3211",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "take care, thought"
+    },
+    {
+      "target": "C3212",
+      "label": "ϥⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, anxiety"
+    },
+    {
+      "target": "C3215",
+      "label": "ⲁⲧⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care-free, not liable"
+    },
+    {
+      "target": "C3209",
+      "label": "ⲕⲁⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "set as a care, be careful, intent"
+    },
+    {
+      "target": "C3214",
+      "label": "ⲙⲛⲧϥⲁⲓⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, providence"
+    },
+    {
+      "target": "C3207",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "have care for, be intent on"
+    },
+    {
+      "target": "C3208",
+      "label": "ⲣⲟⲟⲩϣ",
+      "pos": "N",
+      "gloss": "care, concern; cause of anxiety"
+    },
+    {
+      "target": "C3210",
+      "label": "ⲣⲣⲟⲟⲩϣ",
+      "pos": "V",
+      "gloss": "make care, be anxious, take care of, give heed to"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "C886",
+  "forms": [
+    {
+      "id": "CF31643",
+      "orth": "ⲉⲓⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13119,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31642",
+      "orth": "ⲉⲓⲁⲁⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6468,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲓⲁⲁⲃⲉ",
+      "dialect": "S",
+      "id": "2797.1"
+    },
+    {
+      "orth": "ⲓⲁⲓⲃⲉ",
+      "dialect": "S",
+      "id": "2797.2"
+    },
+    {
+      "orth": "ⲓⲁⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.13,
+        "rank": 2311,
+        "count": 11
+      }
+    },
+    {
+      "orth": "ⲓⲉⲃⲓ",
+      "dialect": "F",
+      "id": "2797.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1041",
+      "bibliography": "CD 76b; KoptHWb 49; ChLCS 13b"
+    },
+    {
+      "id": "CS1042",
+      "bibliography": "CD 76b; KoptHWb 49; ChLCS 13b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲩϩ",
+        1,
+        12.389
+      ],
+      [
+        "ⲙⲟⲟⲩⲧ",
+        1,
+        11.513
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        8.287
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲁⲃⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩⲧ_4_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲁⲃⲉ_0_node",
+          "ⲛ_1_post_ⲉⲓⲁⲃⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲓⲁⲃⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲙⲟⲟⲩⲧ_4_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "etym": {
+    "egy_num": "20520",
+    "egy_lemma": "jꜣb",
+    "demo_num": "d755",
+    "demo_lemma": "jꜥb(j.t)",
+    "english": "[of smell (stinking?)]",
+    "german": "[vom Geruch (übelriechend?)]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/20520",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d755"
+  }
+}

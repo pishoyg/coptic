@@ -1,0 +1,753 @@
+{
+  "id": "C6925",
+  "forms": [
+    {
+      "id": "CF15901",
+      "orth": "ϩⲱⲧⲃ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.92,
+        "rank": 752,
+        "count": 145
+      }
+    },
+    {
+      "orth": "ϧⲟⲑⲃ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.79,
+        "rank": 500,
+        "count": 152
+      }
+    },
+    {
+      "orth": "ϩⲟⲧⲃ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 3020,
+        "count": 14
+      }
+    },
+    {
+      "orth": "ϧⲱⲧⲉⲃ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.41,
+        "rank": 401,
+        "count": 204
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7645",
+      "bibliography": "CD 723b-724a; KoptHWb 397; DELC 316a; ChLCS 97a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲏ ⲇⲉ ⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟϥ ϫⲉⲃⲁⲣⲁⲃⲃⲁⲥ ⲛⲁϥⲥⲟⲛϩ ⲡⲉ ⲛⲉⲙⲛⲏ ⲉⲧⲁⲩⲓⲣⲓ ⲛⲟⲩϣⲑⲟⲣⲧⲉⲣ ⲛⲏ ⲉⲛⲁⲩⲓⲣⲓ ⲛⲟⲩ**ϧⲱⲧⲉⲃ** ϧⲉⲛⲡϣⲑⲟⲣⲧⲉⲣ .",
+      "english": "There was one called Barabbas, bound with those who had made insurrection, men who in the insurrection had committed murder.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩϫⲏⲕ ⲉⲃⲟⲗ ⲛϫⲓⲛϭⲟⲛⲥ ⲛⲓⲙ · ϩⲓⲕⲁⲕⲓⲁ · ϩⲓⲡⲟⲛⲏⲣⲓⲁ ϩⲓⲙⲁⲓⲧⲟⲉ ⲛϩⲟⲩⲟ · ⲉⲩⲙⲉϩ ⲛⲗⲁ ϩⲓ**ϩⲱⲧⲃ** · ϩⲓϯⲧⲱⲛ ϩⲓⲕⲣⲟϥ ⲛϩⲏⲧ ⲉϥϩⲟⲟⲩ ⲛⲣⲉϥⲕⲁⲥⲕⲥ ⲛⲣⲉϥⲕⲁⲧⲁⲗⲁⲗⲉⲓ · ⲙⲙⲁⲥⲧⲛⲟⲩⲧⲉ ⲛⲣⲉϥϣⲱⲥ ·",
+      "english": "And they worked injustice of every kind; and wickedness, and evil, and deeds of avarice; and they were filled with calumnies and murder, and with contention, and the cunningness of the evil heart of the informer and of the tale-bearer; and with the works of the debaucher, which are hateful to God;",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲥⲁϩⲟⲩⲓ ⲛⲉⲙⲟⲩⲙⲉⲑⲛⲟⲩϫ ⲛⲉⲙⲟⲩ**ϧⲱⲧⲉⲃ** ⲛⲉⲙⲟⲩⲙⲉⲧⲛⲱⲓⲕ ⲁⲩⲫⲱⲛ ⲉⲃⲟⲗϩⲓϫⲉⲛ ⲡⲕⲁϩⲓ ⲟⲩⲟϩ ϩⲁⲛⲥⲛⲟϥ ⲥⲉⲙⲟϫⲧ ⲙⲙⲱⲟⲩ ⲉϫⲉⲛϩⲁⲛⲥⲛⲟϥ .",
+      "english": "Cursing, and lying, and murder, and theft, and adultery abound in the land, and they mingle blood with blood.",
+      "source": "28_Osee_04",
+      "urn": "urn:cts:copticLit:ot.hos.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲉⲥϣⲁⲛϣⲱⲡⲉ ⲛⲧⲉⲧⲛⲛⲁⲩ ⲉⲃⲟⲗ ϩⲛⲛⲃⲁⲗ ⲙⲡⲥⲱⲙⲁ ⲧⲉⲧⲛⲁⲛⲁⲩ ⲉⲛⲉϩⲃⲏⲩⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ ⲉⲧϣⲟⲩⲉⲓⲧ · ⲟⲩⲡⲟⲣⲛⲉⲓⲁ ⲙⲛⲟⲩⲕⲁⲧⲁⲗⲁⲗⲓⲁ · ⲙⲛⲟⲩ**ϩⲱⲧⲃ** ⲙⲛⲟⲩϩⲓⲗⲁ · ⲙⲛⲟⲩⲙⲛⲧϫⲁⲥⲓϩⲏⲧ ⲛⲁⲓ ⲉⲧⲉⲣⲉⲧⲟⲣⲅⲏ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲏⲩ ⲉⲧⲃⲏⲧⲟⲩ ·",
+      "english": "If it be that ye see with the eyes of the body, ye shall see the works of the world, which are vain, that is to say, fornication, and slandering, and murder, and calumny, and pride, because of which things the wrath of God cometh.'",
+      "source": "Martyrdom of Victor part 7",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:67-85",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁ ⲓⲏⲥⲟⲩ ϧⲱⲧⲉⲃ ⲙⲡⲓⲁⲙⲁⲗⲏⲕ ⲛⲉⲙⲡⲉϥⲙⲏϣ ⲧⲏⲣϥ ϧⲉⲛⲟⲩ**ϧⲱⲧⲉⲃ** ⲛⲧⲥⲏϥⲓ",
+      "english": "And Joshua routed Amalec and all his people with the slaughter of the sword.",
+      "source": "02_Exodus_17",
+      "urn": "urn:cts:copticLit:ot.exod.bohairic_ed:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲓ**ϩⲱⲧⲃ** ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲡⲓⲁⲣⲭⲱⲛ ⲛϩⲁⲛⲙⲥⲁϩ ⲡⲁⲓ ⲉⲧϩⲙⲡϫⲁϥ ⲡⲉ ⲡϣⲟⲣⲡ ⲛⲧⲁⲙⲓⲟ · ⲉⲧϩⲙⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ ·",
+      "english": "“Say unto them: Renounce murder, that ye may be worthy of the mysteries of the Light and be saved from the crocodile-faced ruler,--this one who is in the cold, | is the first chamber of the outer darkness.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛ",
+        215,
+        27.835
+      ],
+      [
+        "ⲥⲏϥⲓ",
+        18,
+        23.915
+      ],
+      [
+        "ⲙⲉⲧⲛⲱⲓⲕ",
+        5,
+        23.854
+      ],
+      [
+        "ϧⲉⲛ",
+        60,
+        23.484
+      ],
+      [
+        ".",
+        60,
+        23.337
+      ],
+      [
+        "ⲉⲧ",
+        50,
+        23.183
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        65,
+        23.147
+      ],
+      [
+        "ⲛⲓ",
+        48,
+        22.973
+      ],
+      [
+        "ⲁ",
+        62,
+        22.852
+      ],
+      [
+        "ⲙ",
+        54,
+        22.848
+      ],
+      [
+        "ϭⲓⲟⲩⲓ",
+        7,
+        22.832
+      ],
+      [
+        "ⲟⲩ",
+        58,
+        22.328
+      ],
+      [
+        "ϥ",
+        62,
+        22.287
+      ],
+      [
+        "ⲥⲁⲃⲉⲩ",
+        7,
+        22.117
+      ],
+      [
+        "ⲛⲧⲉ",
+        40,
+        22.032
+      ],
+      [
+        "ⲫⲏ",
+        23,
+        21.929
+      ],
+      [
+        "ⲛⲉⲙ",
+        36,
+        21.752
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        13,
+        21.677
+      ],
+      [
+        "ⲛⲁ",
+        37,
+        21.583
+      ],
+      [
+        "ⲉ",
+        43,
+        21.296
+      ]
+    ],
+    "S": [
+      [
+        "ⲃⲉⲍⲉⲕ",
+        3,
+        16.798
+      ],
+      [
+        "ⲣⲛⲟⲉⲓⲕ",
+        6,
+        16.339
+      ],
+      [
+        "ⲛ",
+        101,
+        16.229
+      ],
+      [
+        "ϥ",
+        85,
+        16.195
+      ],
+      [
+        "ⲥⲏϥⲉ",
+        15,
+        16.095
+      ],
+      [
+        "ⲙⲙⲟ",
+        42,
+        15.603
+      ],
+      [
+        "ⲡ",
+        73,
+        15.512
+      ],
+      [
+        "ⲙ",
+        59,
+        15.444
+      ],
+      [
+        "ϫⲓⲟⲩⲉ",
+        9,
+        15.373
+      ],
+      [
+        "ⲙⲛⲧⲛⲟⲉⲓⲕ",
+        4,
+        15.137
+      ],
+      [
+        "ⲗⲁ",
+        3,
+        14.991
+      ],
+      [
+        "ⲁⲩⲱ",
+        44,
+        14.571
+      ],
+      [
+        "ⲁ",
+        51,
+        14.507
+      ],
+      [
+        ".",
+        35,
+        14.391
+      ],
+      [
+        "ϩⲉⲛ",
+        23,
+        14.09
+      ],
+      [
+        "ⲓⲥⲙⲁⲏⲗ",
+        4,
+        14.089
+      ],
+      [
+        "ϩⲛ",
+        32,
+        13.925
+      ],
+      [
+        "ⲙⲡⲣ",
+        13,
+        13.582
+      ],
+      [
+        "ⲟⲩ",
+        36,
+        13.175
+      ],
+      [
+        "ϩⲱⲱⲙⲉ",
+        1,
+        13.043
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲱⲧⲃ_0_node",
+          41
+        ],
+        [
+          "ⲁ_1_pre_ϩⲱⲧⲃ",
+          4
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲧⲃ",
+          4
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱⲧⲃ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ",
+          4
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲛⲟⲉⲓⲕ_1_post_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟ",
+          2
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲓⲧⲟ_1_post_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟ",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲩ_4_post_ϩⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲉⲉⲡⲉ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ⲙⲱⲩⲥⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧⲃ",
+          3
+        ],
+        [
+          "ⲥⲏⲫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲏϥⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲃⲱⲱⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ_b",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲕⲟ_1_post_ϩⲱⲧⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ϩⲱⲧⲃ",
+          "ϥ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϩⲱⲧⲃ",
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲛⲟⲉⲓⲕ",
+          "ⲙⲛⲧⲛⲟⲉⲓⲕ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲛⲟⲉⲓⲕ_1_post_ϩⲱⲧⲃ",
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟ",
+          "ⲙⲛⲧⲙⲁⲓⲧⲟ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲁⲓⲧⲟ_1_post_ϩⲱⲧⲃ",
+          "ⲛ_2_post_ⲙⲛⲧⲙⲁⲓⲧⲟ",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲛⲟⲃⲉ",
+          "ϩⲉⲛ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛⲟⲃⲉ",
+          "ⲛⲟⲃⲉ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲛⲟⲃⲉ_1_post_ϩⲱⲧⲃ",
+          "ⲉ_2_post_ⲛⲟⲃⲉ",
+          1
+        ],
+        [
+          "ⲉ_2_post_ⲛⲟⲃⲉ",
+          "ⲩ_4_post_ϩⲟⲣϣ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲓ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲥⲉⲉⲡⲉ",
+          "ⲡ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲥⲉⲉⲡⲉ",
+          "ⲕⲉ_2_post_ⲥⲉⲉⲡⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲥⲉⲉⲡⲉ",
+          "ⲥⲉⲉⲡⲉ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲙ_1_post_ϩⲱⲧⲃ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧⲃ",
+          "ⲙⲱⲩⲥⲏⲥ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲛⲁ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϩⲱⲧⲃ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          "ⲁⲛ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ϩⲱⲧⲃ",
+          "ⲡ_1_pre_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲱⲧⲃ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲏⲓ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲛ_1_post_ϩⲱⲧⲃ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧⲃ",
+          "ⲥⲏⲫⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϩⲱⲧⲃ",
+          "ⲥⲏϥⲉ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲏϥⲉ_2_post_ⲛ",
+          "ⲁⲩⲱ_4_post_ⲃⲱⲱⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_4_post_ⲃⲱⲱⲧⲉ",
+          "ϩⲛ_1_post_ϩⲱⲧⲃ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ϩⲱⲧⲃ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ",
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ_b",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϩⲱⲧⲃ_b",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϩⲱⲧⲃ",
+          "ϩⲱⲧⲃ_0_node",
+          1
+        ],
+        [
+          "ϩⲱⲧⲃ_0_node",
+          "ⲙⲛ_2_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲧⲁⲕⲟ",
+          "ⲟⲩ_2_post_ⲧⲁⲕⲟ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲁⲕⲟ",
+          "ⲧⲁⲕⲟ_1_post_ϩⲱⲧⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.18,
+      "rank": 563,
+      "count": 188
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6927",
+      "label": "ϩⲁⲧⲃⲉⲥ",
+      "pos": "N",
+      "gloss": "slaughter"
+    },
+    {
+      "target": "C12046",
+      "label": "ϩⲉⲧⲃⲉ",
+      "pos": "N",
+      "gloss": "slaughter; burial"
+    },
+    {
+      "target": "C6924",
+      "label": "ϩⲱⲧⲃ",
+      "pos": "V",
+      "gloss": "kill"
+    },
+    {
+      "target": "C6926",
+      "label": "ⲣⲉϥϩⲱⲧⲃ",
+      "pos": "N",
+      "gloss": "slayer, murderer"
+    }
+  ]
+}

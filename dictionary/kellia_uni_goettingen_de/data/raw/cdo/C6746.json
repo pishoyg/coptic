@@ -1,0 +1,130 @@
+{
+  "id": "C6746",
+  "forms": [
+    {
+      "id": "CF15539",
+      "orth": "ϩⲁⲡⲟⲣⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13929,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲁⲡⲟⲣⲧ",
+      "dialect": "S",
+      "id": "2232.1"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7460",
+      "bibliography": "CD 696a; CED 290; KoptHWb 382; ChLCS 93a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲣⲁⲭⲏⲗ ⲇⲉ ⲁⲥϫⲓ ⲛⲛⲉⲓⲇⲱⲗⲟⲛ ⲁⲥⲕⲁⲁⲩ ϩⲁⲧ**ϩⲁⲡⲟⲣⲕ** ⲙⲡϭⲁⲙⲟⲩⲗ ⲁⲥϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ",
+      "english": "And Rachel took the idols, and cast them among the camel's packs, and sat upon them.",
+      "source": "Genesis 31",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲁⲙⲟⲩⲗ",
+        1,
+        14.644
+      ],
+      [
+        "ⲕⲁⲁ",
+        1,
+        10.606
+      ],
+      [
+        "ϩⲁ",
+        1,
+        9.865
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲁⲡⲟⲣⲕ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϭⲁⲙⲟⲩⲗ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϩⲁⲡⲟⲣⲕ_0_node",
+          "ⲙ_1_post_ϩⲁⲡⲟⲣⲕ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϩⲁⲡⲟⲣⲕ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϭⲁⲙⲟⲩⲗ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13526,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "id": "C4415",
+  "forms": [
+    {
+      "id": "CF31766",
+      "orth": "ⲧⲱⲡ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4730,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF31765",
+      "orth": "ⲧⲱⲱⲡ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲉⲡ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3965,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲧⲟⲡ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1855,
+        "count": 35
+      }
+    },
+    {
+      "orth": "ⲧⲏⲡ†",
+      "dialect": "S",
+      "id": "1616.3"
+    },
+    {
+      "orth": "ⲧⲏⲏⲡ†",
+      "dialect": "S",
+      "id": "1616.4"
+    },
+    {
+      "orth": "ⲧⲁⲡⲏⲩ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18705,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲧⲱⲡ",
+      "dialect": "F",
+      "id": "1616.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5000",
+      "bibliography": "CD 422b; CDC 66b; CED 191; KoptHWb 240; DELC 218b-219a; ChLCS 60a"
+    },
+    {
+      "id": "CS5001",
+      "bibliography": "CD 422b; CED 191; KoptHWb 240; DELC 218b-219a; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲙⲟⲧⲛ ⲅⲁⲣ ⲉⲧⲣⲉⲟⲩϭⲁⲙⲟⲩⲗ ⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲛⲧⲟⲩⲁⲧϥⲉ ⲛⲟⲩϩⲁⲙ ⲛ**ⲧⲱⲡ** ⲉϩⲟⲩⲉ ⲟⲩⲣⲙⲙⲁⲟ ⲛϥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "For it is easier for a camel to enter in through a needle's eye, than for a rich man to enter into the Kingdom of God.'",
+      "source": "42_Luke_18",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:18",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲁⲙ",
+        3,
+        19.961
+      ],
+      [
+        "ⲉϩⲟⲩⲉⲉⲧⲣⲉ",
+        1,
+        18.013
+      ],
+      [
+        "ϩⲁⲙⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ⲣⲙⲙⲁⲟ",
+        4,
+        16.647
+      ],
+      [
+        "ⲟⲩⲁⲧϥⲉ",
+        1,
+        16.013
+      ],
+      [
+        "ϩⲟⲩⲉ",
+        2,
+        15.232
+      ],
+      [
+        "ⲉⲓⲇⲱⲗⲟⲛ",
+        2,
+        14.036
+      ],
+      [
+        "ϩⲟⲓⲛⲉ",
+        2,
+        12.952
+      ],
+      [
+        "ⲟⲩ",
+        8,
+        11.635
+      ],
+      [
+        "ⲛ",
+        8,
+        10.224
+      ],
+      [
+        "ⲉϩⲟⲩⲉ",
+        1,
+        9.974
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        9.094
+      ],
+      [
+        "ϣⲁ",
+        2,
+        8.761
+      ],
+      [
+        "ⲡ",
+        4,
+        7.912
+      ],
+      [
+        "ϩⲙ",
+        2,
+        7.828
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        6.359
+      ],
+      [
+        "ⲙ",
+        2,
+        5.766
+      ],
+      [
+        "ⲉ",
+        2,
+        5.232
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱⲡ_0_node",
+          4
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲧⲱⲡ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲧⲱⲡ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲉⲓⲇⲱⲗⲟⲛ_3_post_ⲡ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲅⲁⲣ_1_pre_ⲧⲱⲡ",
+          "ⲧⲱⲡ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲡ_0_node",
+          "ⲙ_1_post_ⲧⲱⲡ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲧⲱⲡ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲓⲇⲱⲗⲟⲛ_3_post_ⲡ",
+          2
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4313,
+      "count": 6
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4417",
+      "label": "ⲧⲟⲡⲥ",
+      "pos": "N",
+      "gloss": "custom, habit"
+    },
+    {
+      "target": "C4416",
+      "label": "ⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "usage, custom"
+    }
+  ],
+  "etym": {
+    "demo_num": "d7231",
+    "demo_lemma": "tp",
+    "english": "[to exchange]",
+    "german": "gewöhnen",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7231"
+  }
+}

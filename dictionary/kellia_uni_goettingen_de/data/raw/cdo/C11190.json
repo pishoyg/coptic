@@ -1,0 +1,114 @@
+{
+  "id": "C11190",
+  "forms": [
+    {
+      "id": "CF31045",
+      "orth": "ϩⲣⲉⲩⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF31046",
+      "orth": "ϩⲣⲉⲩⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11491,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31047",
+      "orth": "ϩⲣⲉⲩⲙⲁⲩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31048",
+      "orth": "ⲣⲉⲩⲙⲟⲏ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15744",
+      "bibliography": "DDGLC",
+      "cu_ID": "7690"
+    },
+    {
+      "id": "CS15745",
+      "bibliography": "DDGLC",
+      "cu_ID": "9060"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲅⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱϥ ⲛⲟⲩϩⲓⲥⲉ ⲙⲛⲟⲩϣⲱⲛⲉ ⲙⲉⲛⲟⲩⲗⲟϭⲗⲉϭ ⲙⲛⲟⲩ**ϩⲣⲉⲩⲙⲁ** ⲙⲛⲟⲩⲁⲥⲓⲕ ⲙⲛⲟⲩⲧⲕⲁⲥ ⲙⲛⲟⲩϩⲗⲟⲡⲗⲉⲡ ⲙⲛⲟⲩⲙⲉⲧⲕⲟⲩⲓ ⲛϩⲏⲧ ⲙⲛⲟⲩⲉⲣⲙⲟⲉⲧ ⲙⲛⲟⲩϣⲉⲃⲉ ⲙⲛⲟⲩⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲛⲗⲓⲃⲉ ⲙⲛϣⲃⲉ ⲛϭⲓⲛϣⲱⲛⲉ ⲉⲣⲉⲛⲁⲓ ϣⲟⲃⲉ ⲉⲩⲉⲓ",
+      "english": "and you have brought upon him suffering and disease and sickness and a discharge and a fever and a pain and a weariness and a dejection and a shivering and a swelling and a demon of madness and seventy diseases, each one being different,",
+      "source": "Curse to bring suffering, pain, and disease",
+      "urn": "urn:cts:copticMag:kyprianos.tm99993.kypt483",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲁⲥⲓⲕ",
+        1,
+        20.598
+      ],
+      [
+        "ⲗⲟϭⲗⲉϭ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲛ",
+        3,
+        11.399
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        9.975
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩ_1_pre_ϩⲣⲉⲩⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲣⲉⲩⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩ_1_pre_ϩⲣⲉⲩⲙⲁ",
+          "ϩⲣⲉⲩⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11061,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "4831",
+    "grl_lemma": "ῥεῦμα",
+    "grl_meaning": "that which flows, current, stream",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1567b; Preisigke 2:441"
+  }
+}

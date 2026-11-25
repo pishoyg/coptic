@@ -1,0 +1,156 @@
+{
+  "id": "C9230",
+  "forms": [
+    {
+      "id": "CF23086",
+      "orth": "ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF23087",
+      "orth": "ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8288,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11501",
+      "bibliography": "DDGLC",
+      "cu_ID": "3644"
+    },
+    {
+      "id": "CS11502",
+      "bibliography": "DDGLC",
+      "cu_ID": "8690"
+    },
+    {
+      "id": "CS11503",
+      "bibliography": "DDGLC",
+      "cu_ID": "8901"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲡⲉ ⲡⲛⲟⲙⲟⲥ ⲙⲡⲉⲧⲉⲣⲉⲡϩⲣⲃ ⲛⲥⲱⲃϩ ϩⲓⲱⲱϥ ⲁⲩⲱ ⲡⲉⲧⲉⲣⲉⲧⲟⲟⲧϥ ⲛⲁⲧⲁϩⲟϥ ⲁⲛ ⲉⲡⲉϥ**ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ**",
+      "english": "This is the law for him in whom is the plague of leprosy, and who cannot afford the offerings for his purification.",
+      "source": "Leviticus 14",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣϣⲁⲛⲡⲅⲟⲛⲟϩⲣⲩⲏⲥ ⲇⲉ ⲕⲁⲑⲁⲣⲓⲍⲉ ⲉⲃⲟⲗ ϩⲛⲧⲉϩⲣⲩⲥⲓⲥ ⲙⲡⲉϥⲥⲱⲙⲁ ⲉϥⲉⲱⲡ ⲛⲁϥ ⲛⲥⲁϣϥ ⲛϩⲟⲟⲩ ⲉⲡⲉϥ**ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ** ⲉϥⲉϣⲱⲙ ⲛⲛⲉϥϩⲟⲓⲧⲉ ⲁⲩⲱ ⲉϥⲉϫⲉⲕⲙⲡⲉϥⲥⲱⲙⲁ ϩⲛⲟⲩⲙⲟⲟⲩ",
+      "english": "and if he that has the issue should be cleansed of his issue, then shall he number to himself seven days for his purification; and he shall wash his garments, and bathe his body in water, and shall be clean.",
+      "source": "Leviticus 15",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ϥⲉ",
+        1,
+        13.926
+      ],
+      [
+        "ϣⲱⲙ",
+        1,
+        13.898
+      ],
+      [
+        "ⲡⲉϥ",
+        2,
+        10.096
+      ],
+      [
+        "ⲉ",
+        3,
+        8.572
+      ],
+      [
+        "ϫⲟⲟ",
+        1,
+        8.116
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        7.516
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        7.128
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ",
+          "ⲕⲁⲑⲁⲣⲓⲥⲙⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7844,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "4877",
+    "grl_lemma": "καθαρισμός",
+    "grl_meaning": "cleansing, purification, purificatory offering",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 850a; Preisigke 1:708"
+  }
+}

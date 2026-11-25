@@ -1,0 +1,121 @@
+{
+  "id": "C6035",
+  "forms": [
+    {
+      "id": "CF14075",
+      "orth": "ϣⲉⲉⲣⲉ ϣⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.87,
+        "rank": 796,
+        "count": 137
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6720",
+      "bibliography": "CD 585a; ChLCS 80b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣϫⲉ ⲉⲛⲟ ⲛϫⲟⲉⲓⲥ ⲉⲩϣⲏⲣⲉ ϣⲏⲙ ⲏ **ⲉⲩϣⲉⲉⲣⲉ **ϣⲏⲙ**** ϩⲛⲟⲩϩⲧⲟⲣ ϩⲣⲁⲓ ⲛϩⲏⲧⲛ · ⲙⲁⲗⲓⲥⲧⲁ ⲇⲉ ⲟⲩⲛⲟϭ ⲛⲣⲱⲙⲉ ⲙⲛⲟⲩⲛⲟϭ ⲛⲥϩⲓⲙⲉ ·",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲉⲛⲛⲟϭ ⲛⲥϩⲓⲙⲉ ϩⲁⲧⲛⲧⲏⲩⲧⲛ · ⲏ **ϩⲉⲛϣⲉⲉⲣⲉ **ϣⲏⲙ**** ⲉⲁⲩⲣⲛⲟϭ",
+      "english": "…",
+      "source": "Acephelous 22 YB 307-20",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:801-825",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ϣⲁⲧⲛⲟⲩϣⲉⲉⲣⲉ **ϣⲏⲙ**** ⲙⲙⲁⲧⲉ ⲛⲧⲁϥ .",
+      "english": "except for only a young girl belonging to him.",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.86,
+      "rank": 692,
+      "count": 137
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6033",
+      "label": "ϣⲉⲉⲣⲉ",
+      "pos": "N",
+      "gloss": "daughter, child"
+    },
+    {
+      "target": "C6041",
+      "label": "ϣⲉⲣϩⲟⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "male child"
+    },
+    {
+      "target": "C6032",
+      "label": "ϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "son, child"
+    },
+    {
+      "target": "C6034",
+      "label": "ϣⲏⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small child, baby boy"
+    },
+    {
+      "target": "C6038",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6040",
+      "label": "ϣⲏⲣⲉ ⲛⲟⲩⲱⲧ",
+      "pos": "N",
+      "gloss": "only child"
+    },
+    {
+      "target": "C6037",
+      "label": "ϣⲛⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "cousin"
+    },
+    {
+      "target": "C6039",
+      "label": "ϣⲛⲟⲩⲁ",
+      "pos": "N",
+      "gloss": "cousin"
+    },
+    {
+      "target": "C6042",
+      "label": "ⲁⲧϣⲏⲣⲉ",
+      "pos": "N",
+      "gloss": "without child"
+    },
+    {
+      "target": "C6036",
+      "label": "ⲙⲛⲧϣⲏⲣⲉ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "youthfulness"
+    }
+  ]
+}

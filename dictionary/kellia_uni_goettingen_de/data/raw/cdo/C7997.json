@@ -1,0 +1,82 @@
+{
+  "id": "C7997",
+  "forms": [
+    {
+      "id": "CF18060",
+      "orth": "ϯϭⲓϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8893",
+      "bibliography": "CD 840a; KoptHWb 472; DELC 350a; ChLCS 110b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7998",
+      "label": "ϫⲓϭⲓϫ",
+      "pos": "V",
+      "gloss": "embrace"
+    },
+    {
+      "target": "C7995",
+      "label": "ϭⲓϫ",
+      "pos": "N",
+      "gloss": "hand; forefoot (of animals); handful (as measure); handwriting; handiwork, handicraft, activity"
+    },
+    {
+      "target": "C7999",
+      "label": "ϭⲓϫ",
+      "pos": "N",
+      "gloss": "by hand"
+    },
+    {
+      "target": "C8001",
+      "label": "ϭⲓϫ ⲛⲥϩⲁⲓ",
+      "pos": "N",
+      "gloss": "letter, document"
+    },
+    {
+      "target": "C7996",
+      "label": "ⲣⲛⲟϭ ⲛϭⲓϫ",
+      "pos": "V",
+      "gloss": "be free-handed, generous"
+    },
+    {
+      "target": "C8000",
+      "label": "ⲥϧⲓ ⲛϫⲓϫ",
+      "pos": "N",
+      "gloss": "document, recording, list"
+    },
+    {
+      "target": "C8002",
+      "label": "ⲧⲕⲟⲩⲓ ⲛϭⲓϫ",
+      "pos": "N",
+      "gloss": "minuscule"
+    },
+    {
+      "target": "C8003",
+      "label": "ⲧⲛⲟϭ ⲛϭⲓϫ",
+      "pos": "N",
+      "gloss": "majuscule"
+    }
+  ]
+}

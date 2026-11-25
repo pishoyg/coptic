@@ -1,0 +1,80 @@
+{
+  "id": "C5195",
+  "forms": [
+    {
+      "id": "CF31901",
+      "orth": "ⲟⲩⲱⲧⲉ ⲉ-",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31900",
+      "orth": "ⲟⲩⲱⲱⲧⲉ ⲉ-",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5837",
+      "bibliography": "CD 495ab; KoptHWb 279; ChLCS 69b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5198",
+      "label": "ϫⲓⲛⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5202",
+      "label": "ⲟⲩⲉⲧ ... ⲟⲩⲉⲧ ...",
+      "pos": "V",
+      "gloss": "one thing is ..., another is ..."
+    },
+    {
+      "target": "C5197",
+      "label": "ⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5199",
+      "label": "ⲟⲩⲱϯ ⲟⲩⲧⲉ-",
+      "pos": "V",
+      "gloss": "separate between"
+    },
+    {
+      "target": "C5201",
+      "label": "ⲟⲩⲱⲧ-",
+      "pos": "V",
+      "gloss": "it is different"
+    },
+    {
+      "target": "C5194",
+      "label": "ⲟⲩⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "send; separated (qual.)"
+    },
+    {
+      "target": "C5196",
+      "label": "ⲟⲩⲱⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "separate out; send forth"
+    },
+    {
+      "target": "C5200",
+      "label": "ⲣⲙⲟⲩⲱⲧⲉ",
+      "pos": "N",
+      "gloss": "messenger?"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "C5248",
+  "forms": [
+    {
+      "id": "CF12465",
+      "orth": "ⲟⲩⲟⲧϩⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "Genus fraglich",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5892",
+      "bibliography": "CD 499a; CED 220; KoptHWb 281; DELC 239b; ChLCS 69b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C5246",
+      "label": "ϣⲉ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "ladle"
+    },
+    {
+      "target": "C5252",
+      "label": "ϫⲓⲛⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5244",
+      "label": "ⲙⲁ ⲛⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "melting pot"
+    },
+    {
+      "target": "C5249",
+      "label": "ⲟⲑⲉ",
+      "pos": "N",
+      "gloss": "footprint/trace (of water), channel, outlet"
+    },
+    {
+      "target": "C5247",
+      "label": "ⲟⲩⲟⲧϩ",
+      "pos": "N",
+      "gloss": "pouring thing, cup, bowl"
+    },
+    {
+      "target": "C5242",
+      "label": "ⲟⲩⲧⲱϩ",
+      "pos": "N",
+      "gloss": "molten thing"
+    },
+    {
+      "target": "C5243",
+      "label": "ⲟⲩⲧⲱϩ",
+      "pos": "N",
+      "gloss": "molten"
+    },
+    {
+      "target": "C5241",
+      "label": "ⲟⲩⲱⲧϩ",
+      "pos": "V",
+      "gloss": "pour (liquid), cast (in mould), draw (water)"
+    },
+    {
+      "target": "C5250",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C5251",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5245",
+      "label": "ⲣⲉϥⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "he that pours, cup-bearer, water-drawer"
+    }
+  ],
+  "etym": {
+    "egy_num": "51900",
+    "egy_lemma": "wdḥ.w",
+    "demo_num": "d1585",
+    "demo_lemma": "wtḥ",
+    "english": "offering jug",
+    "german": "Opferkrug",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/51900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1585"
+  }
+}

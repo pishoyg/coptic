@@ -1,0 +1,131 @@
+{
+  "id": "C3025",
+  "forms": [
+    {
+      "id": "CF7916",
+      "orth": "ⲡⲟϭⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20204,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3462",
+      "bibliography": "CD 286b; CDC 47b; CED 133; KoptHWb 159; DELC 168; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲗⲓⲥⲧⲁ ⲇⲉ ϩⲛⲧⲉϩⲣⲉ ⲙⲛⲧϩⲃⲥⲱ ⲏ ϩⲙⲡⲉⲩϣⲱⲛⲉ · ⲏ ⲛⲧⲟϥ ⲉⲛⲥⲉϣⲱⲛⲉ ⲁⲛ · ⲁⲩⲱ ⲡⲉⲧⲛⲁϣⲃⲧⲟⲩ ⲉϩⲉⲛⲕⲁⲧⲁⲥⲁⲣⲝ ⲛⲧⲁϥ ϩⲁϩⲧⲏⲛ ⲏ ϩⲁⲧⲛⲧⲩⲏⲧⲛ ⲛⲧⲱⲧⲛ ϩⲛⲗⲁⲁⲩ ⲛϩⲱⲃ ϫⲓⲛⲟⲩϭⲟⲡ ⲉⲕⲟⲩⲓ ⲙⲙⲟⲟⲩ ϣⲁⲟⲩⲉⲗⲁϫⲓⲥⲧⲟⲛ ⲙⲛⲕⲁ ⲉϥⲥⲟϣϥ · ⲉⲓⲧⲉ ϩⲉⲛⲕⲁⲣⲡⲟⲥ ⲛϣⲏⲛ · ⲉⲓⲧⲉ ϩⲉⲛ**ⲡⲟϭⲗⲉ** ⲛⲟⲩⲟⲧⲉ ·",
+      "english": "...",
+      "source": "Acephelous Work 22 YB 67-80",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:180-197",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲟⲧⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲙⲁⲗⲓⲥⲧⲁ",
+        1,
+        13.87
+      ],
+      [
+        "ϣⲏⲛ",
+        1,
+        12.272
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        1,
+        11.929
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        8.074
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲡⲟϭⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲡⲟϭⲗⲉ",
+          1
+        ],
+        [
+          "ⲡⲟϭⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲟⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲡⲟϭⲗⲉ",
+          "ϩⲉⲛ_1_pre_ⲡⲟϭⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲡⲟϭⲗⲉ",
+          "ⲡⲟϭⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲡⲟϭⲗⲉ_0_node",
+          "ⲛ_1_post_ⲡⲟϭⲗⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲟϭⲗⲉ",
+          "ⲟⲩⲟⲧⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19811,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "62720",
+    "egy_lemma": "pqr",
+    "english": "[an ingredient in kyphi]",
+    "german": "[wohlriechender Stoff bei Kyphibereitung]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/62720"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "id": "C3307",
+  "forms": [
+    {
+      "id": "CF8502",
+      "orth": "ⲣⲉϥⲥⲱ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4292,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3774",
+      "bibliography": "CD 318b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲓ ⲛϫⲉⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ ⲉϥⲟⲩⲱⲙ ⲟⲩⲟϩ ⲉϥⲥⲱ ⲡⲉϫⲱⲧⲉⲛ ϫⲉⲓⲥ ⲟⲩⲣⲱⲙⲓ ⲛⲣⲉϥⲟⲩⲱⲙ ⲟⲩⲟϩ ⲛ**ⲣⲉϥⲥⲱ** ⲉϥⲟⲓ ⲛϣⲫⲏⲣ ⲉⲛⲓⲧⲉⲗⲱⲛⲏⲥ ⲛⲉⲙⲛⲓⲣⲉϥⲉⲣⲛⲟⲃⲓ",
+      "english": "The Son of Man came eating and drinking, and you say, ‘Behold a man who eats and drinks, who is a friend of publicans and sinners.’”",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲓⲉ ⲟⲩⲏⲣ ⲡⲉ ⲡⲓⲣⲱⲙⲓ ⲉⲧⲟⲣⲉⲃ ⲟⲩⲟϩ ⲉⲧϭⲁϧⲉⲙ: ⲉϥⲥⲉ ϭⲓⲛϫⲟⲛⲥ ⲙⲫⲣⲏϯ ⲛⲟⲩ**ⲣⲉϥⲥⲱ** .",
+      "english": "Alas then, abominable and unclean is man, drinking unrighteousness as a draught.",
+      "source": "18_Iob_15",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲣⲉϥⲟⲩⲱⲙ",
+        2,
+        19.11
+      ],
+      [
+        "ⲛ",
+        7,
+        11.428
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.998
+      ],
+      [
+        "ⲧⲁⲙⲟ",
+        1,
+        10.133
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        2,
+        6.495
+      ],
+      [
+        "ⲉ",
+        2,
+        6.432
+      ],
+      [
+        "ⲣⲏϯ",
+        1,
+        6.293
+      ],
+      [
+        "ϥ",
+        2,
+        5.839
+      ],
+      [
+        "ⲫ",
+        1,
+        4.979
+      ],
+      [
+        "ϯ",
+        1,
+        4.705
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.369
+      ],
+      [
+        ".",
+        1,
+        4.031
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲉϥⲥⲱ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲥⲱ_0_node",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲣⲉϥⲥⲱ",
+          "ⲣⲉϥⲥⲱ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3829,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3309",
+      "label": "ϭⲓⲛⲥⲱ",
+      "pos": "N",
+      "gloss": "drink"
+    },
+    {
+      "target": "C3308",
+      "label": "ⲁⲧⲥⲱ",
+      "pos": "N",
+      "gloss": "without drinking"
+    },
+    {
+      "target": "C3306",
+      "label": "ⲙⲁ ⲛⲥⲱ",
+      "pos": "N",
+      "gloss": "drinking place, bout"
+    },
+    {
+      "target": "C3304",
+      "label": "ⲥⲱ",
+      "pos": "V",
+      "gloss": "drink"
+    },
+    {
+      "target": "C3305",
+      "label": "ⲥⲱ",
+      "pos": "N",
+      "gloss": "drinking, potation"
+    },
+    {
+      "target": "C3310",
+      "label": "ⲥⲱⲱϥ",
+      "pos": "N",
+      "gloss": "drinking bout, carousal"
+    }
+  ]
+}

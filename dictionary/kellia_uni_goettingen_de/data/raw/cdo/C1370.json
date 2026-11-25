@@ -1,0 +1,258 @@
+{
+  "id": "C1370",
+  "forms": [
+    {
+      "id": "CF4155",
+      "orth": "ⲣⲕⲱⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5981,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1582",
+      "bibliography": "CD 91b-92a; KoptHWb 55; ChLCS 19a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲁϣ ⲛϩⲉ ⲥⲁϥ ⲙⲉⲛ ⲁϥ**ⲣⲕⲱⲱⲥ** · ⲙⲡϩⲟⲟⲩ ϩⲱⲱϥ ϥⲁϩⲉⲣⲁⲧϥ ⲁϥⲟⲩⲟϫ ·",
+      "english": "...",
+      "source": "Martyrdom of Mercurius (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom.budge_ed:0-26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲛⲧⲁⲩⲧⲁϣⲟⲩ ⲇⲉ ⲉⲧⲣⲉⲩϥⲓⲧϥ · ⲁⲩϥⲓ ϩⲁⲣⲟϥ ⲁⲩⲧⲁⲗⲟϥ ⲉⲩⲧⲃⲛⲏ · ⲁⲩⲙⲟⲣϥ ⲉϩⲣⲁⲓ ⲉϫⲱϥ · ϫⲉⲛⲉⲓ ⲁⲡⲥⲱⲙⲁ ⲙⲡⲙⲁⲣⲧⲩⲣⲟⲥ · ⲃⲱⲗ ⲉⲃⲟⲗ ⲛⲥⲁⲥⲁ ⲛⲓⲙ · ⲁϥ**ⲣⲕⲱⲱⲥ** ·",
+      "english": "...",
+      "source": "Encomium on Mercurius the Martyr (Budge ed.)",
+      "urn": "urn:cts:copticLit:mercurius.encomium.budge_ed:0-18",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲕϭⲟⲙ ⲛⲁⲁϣⲁⲓ ϩⲱⲥⲧⲉ ⲛⲧⲉⲧⲉⲕϩⲁⲓⲃⲉⲥ ⲧⲁϩⲉⲟⲩⲙⲏϣⲉ.. ⲧ ⲁⲩ**ⲣⲕⲱⲱⲥ** ·",
+      "english": "...",
+      "source": "Book of Bartholomew - Part 2 (Budge ed. Book of the Resurrection of Jesus Christ)",
+      "urn": "urn:cts:copticLit:misc.blbartholomew.budge_ed:12-19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲙⲏϣⲉ..",
+        1,
+        19.013
+      ],
+      [
+        "ⲥⲁϥ",
+        1,
+        13.18
+      ],
+      [
+        "ⲙⲉⲛ",
+        1,
+        10.171
+      ],
+      [
+        "ⲩⲛⲟⲩ",
+        1,
+        9.907
+      ],
+      [
+        "ⲁ",
+        4,
+        9.459
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        8.651
+      ],
+      [
+        "ⲩ",
+        2,
+        7.225
+      ],
+      [
+        "ϩⲟⲟⲩ",
+        1,
+        6.931
+      ],
+      [
+        "ⲛⲓⲙ",
+        1,
+        6.702
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.218
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲣⲕⲱⲱⲥ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲣⲕⲱⲱⲥ_0_node",
+          3
+        ],
+        [
+          "ϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲥⲁϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲩ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲣⲕⲱⲱⲥ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲣⲕⲱⲱⲥ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲥⲁϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲥⲁϥ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲙⲉⲛ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲛ_1_pre_ⲣⲕⲱⲱⲥ",
+          "ⲁ_1_pre_ⲣⲕⲱⲱⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5545,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C1372",
+      "label": "ϫⲓⲛⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial"
+    },
+    {
+      "target": "C1373",
+      "label": "ⲕⲁⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "preparation for burial, embalming; grave-clothes, shroud; corpse"
+    },
+    {
+      "target": "C1368",
+      "label": "ⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "burial, funeral"
+    },
+    {
+      "target": "C1366",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "V",
+      "gloss": "dress, prepare corpse for burial, bury"
+    },
+    {
+      "target": "C1367",
+      "label": "ⲕⲱⲱⲥ",
+      "pos": "N",
+      "gloss": "corpse"
+    },
+    {
+      "target": "C1371",
+      "label": "ⲣⲉϥⲕⲱⲥ",
+      "pos": "N",
+      "gloss": "embalmer"
+    },
+    {
+      "target": "C1369",
+      "label": "ⲣⲉϥⲛⲕⲱⲱⲥ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "invoker, producer of dead"
+    }
+  ]
+}

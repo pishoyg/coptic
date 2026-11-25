@@ -1,0 +1,122 @@
+{
+  "id": "C3163",
+  "forms": [
+    {
+      "id": "CF31673",
+      "orth": "ⲣⲙⲣⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲣⲙ ⲣⲁⲧ⸗",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5786,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF31672",
+      "orth": "ⲣⲙⲛⲣⲁⲧ⸗",
+      "dialect": "S",
+      "oRef": "ⲣⲙ ⲛ ⲣⲁⲧ⸗",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8229,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3616",
+      "bibliography": "CD 302b; KoptHWb 167; DELC 178; ChLCS 43a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3174",
+      "label": "ϩⲁⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "under foot, beneath"
+    },
+    {
+      "target": "C3175",
+      "label": "ϩⲓⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "toward"
+    },
+    {
+      "target": "C3170",
+      "label": "ϫⲓⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "hold foot, impede"
+    },
+    {
+      "target": "C3171",
+      "label": "ϭⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "find foot, base, search"
+    },
+    {
+      "target": "C3169",
+      "label": "ϯ ⲉⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "put on foot, shoe"
+    },
+    {
+      "target": "C3172",
+      "label": "ⲁⲧϭⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable, unattainable"
+    },
+    {
+      "target": "C3167",
+      "label": "ⲁⲧⲛⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "untraceable"
+    },
+    {
+      "target": "C3173",
+      "label": "ⲉⲣⲁⲧ⸗",
+      "pos": "PREP",
+      "gloss": "to foot of, to (mostly of persons)"
+    },
+    {
+      "target": "C3164",
+      "label": "ⲕⲁⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "lay, set foot"
+    },
+    {
+      "target": "C3165",
+      "label": "ⲕⲁⲣⲁⲧ⸗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "step, set forth"
+    },
+    {
+      "target": "C3166",
+      "label": "ⲛⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "bring, follow foot, trace"
+    },
+    {
+      "target": "C3162",
+      "label": "ⲣⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "foot; lowest part, bottom; limit; trace"
+    },
+    {
+      "target": "C3168",
+      "label": "ⲥⲣⲣⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "spread feet (pee)"
+    }
+  ]
+}

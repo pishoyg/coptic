@@ -1,0 +1,147 @@
+{
+  "id": "C9812",
+  "forms": [
+    {
+      "id": "CF25377",
+      "orth": "ⲙⲟⲗⲟⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF25379",
+      "orth": "ⲙⲟⲗⲟⲭⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16814,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25378",
+      "orth": "ⲙⲟⲗⲟⲭ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19479,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12728",
+      "bibliography": "DDGLC",
+      "cu_ID": "7712"
+    },
+    {
+      "id": "CS12729",
+      "bibliography": "DDGLC",
+      "cu_ID": "15367"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲡⲉϥϫⲓⲥⲉ ⲅⲁⲣ ⲧⲁⲕⲉ ϩⲁϩ ⲁϥϩⲱϭⲃ ⲇⲉ ⲛⲧϩⲉ ⲛⲟⲩ**ⲙⲟⲗⲟⲭⲏ** ϩⲛⲟⲩⲕⲁⲩⲙⲁ ⲏ ⲛⲧϩⲉ ⲛⲟⲩϩⲙⲥ ⲉⲁϥϩⲉ ⲙⲁⲩⲁⲁϥ ϩⲛⲧⲉϥⲥⲃⲣⲟⲟⲩⲉ",
+      "english": "For his exaltation has hurt many; but he has withered as mallows in the heat, or as an ear of corn falling off of itself from the stalk.",
+      "source": "Job 24",
+      "urn": "urn:cts:copticLit:ot.job.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲁⲩⲙⲁ",
+        1,
+        15.898
+      ],
+      [
+        "ⲏ",
+        1,
+        9.479
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ϩⲉ",
+        1,
+        7.727
+      ],
+      [
+        "ϩⲛ",
+        1,
+        6.479
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲟⲗⲟⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲟⲗⲟⲭⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲕⲁⲩⲙⲁ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲟⲗⲟⲭⲏ_0_node",
+          "ϩⲛ_1_post_ⲙⲟⲗⲟⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲙⲟⲗⲟⲭⲏ",
+          "ⲟⲩ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ϩⲛ",
+          "ⲕⲁⲩⲙⲁ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16416,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6537",
+    "grl_lemma": "μαλάχη",
+    "grl_meaning": "mallow, Malva silvestris",
+    "grl_pos": "Noun",
+    "grl_ref": "LSJ 1077b"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "C5200",
+  "forms": [
+    {
+      "id": "CF31905",
+      "orth": "ⲣⲙⲟⲩⲱⲧⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31904",
+      "orth": "ⲣⲙⲟⲩⲱⲱⲧⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5843",
+      "bibliography": "CD 495b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5198",
+      "label": "ϫⲓⲛⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5202",
+      "label": "ⲟⲩⲉⲧ ... ⲟⲩⲉⲧ ...",
+      "pos": "V",
+      "gloss": "one thing is ..., another is ..."
+    },
+    {
+      "target": "C5197",
+      "label": "ⲟⲩⲱϯ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "separation"
+    },
+    {
+      "target": "C5199",
+      "label": "ⲟⲩⲱϯ ⲟⲩⲧⲉ-",
+      "pos": "V",
+      "gloss": "separate between"
+    },
+    {
+      "target": "C5201",
+      "label": "ⲟⲩⲱⲧ-",
+      "pos": "V",
+      "gloss": "it is different"
+    },
+    {
+      "target": "C5194",
+      "label": "ⲟⲩⲱⲧⲉ",
+      "pos": "V",
+      "gloss": "send; separated (qual.)"
+    },
+    {
+      "target": "C5195",
+      "label": "ⲟⲩⲱⲧⲉ ⲉ-",
+      "pos": "V",
+      "gloss": "be different from, surpass"
+    },
+    {
+      "target": "C5196",
+      "label": "ⲟⲩⲱⲧⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "separate out; send forth"
+    }
+  ]
+}

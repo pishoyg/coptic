@@ -1,0 +1,177 @@
+{
+  "id": "C10593",
+  "forms": [
+    {
+      "id": "CF28600",
+      "orth": "ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28601",
+      "orth": "ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5995,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14417",
+      "bibliography": "DDGLC",
+      "cu_ID": "1748"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓⲱϩⲁⲛⲛⲏⲥ ⲁⲣⲭⲉⲓ ⲛϣⲁϫⲉ ⲛⲙⲙⲁⲩ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲛⲁⲥⲛⲏⲩ · ⲁⲩⲱ ⲛⲁϣⲃⲣⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ · ⲁⲩⲱ ⲛ**ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ** ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲛϫⲟⲉⲓⲥ · ⲉⲓⲙⲉ ϭⲉ ⲛⲏⲧⲛ ϫⲉⲁⲡϫⲟⲉⲓⲥ ϯ ⲛⲏⲧⲛ ⲛⲟⲩϭⲟⲙ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ",
+      "english": "and John began to speak to them, saying, 'My brethren, my fellow heirs, and my partners in the Christ Jesus, our Lord, know ye that unto you hath the Lord given from His hand power",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲣⲉⲛϩⲉⲑⲛⲟⲥ ϣⲱⲡⲉ ⲛⲥⲩⲛⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ ⲙⲛⲟⲩⲥⲱⲙⲁ ⲛⲟⲩⲱⲧ . ⲁⲩⲱ ⲛ**ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ** ⲙⲡⲉⲣⲏⲧ ⲙⲡⲉⲭⲣⲓⲥⲧⲟⲥ ⲓⲏⲥⲟⲩⲥ ϩⲓⲧⲙⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ .",
+      "english": "that the Gentiles are fellow heirs, and fellow members of the body, and fellow partakers of his promise in Christ Jesus through the Good News,",
+      "source": "49_Ephesians_3",
+      "urn": "urn:cts:copticLit:nt.eph.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲃⲣⲕⲗⲏⲣⲟⲛⲟⲙⲟⲥ",
+        2,
+        20.013
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        2,
+        11.733
+      ],
+      [
+        "ⲉⲣⲏⲧ",
+        1,
+        11.007
+      ],
+      [
+        "ⲓⲏⲥⲟⲩⲥ",
+        2,
+        10.959
+      ],
+      [
+        "ⲙ",
+        4,
+        9.766
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        9.451
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        8.917
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        7.923
+      ],
+      [
+        "ⲛ",
+        3,
+        6.979
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲭⲣⲓⲥⲧⲟⲥ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          "ⲛ_1_pre_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          "ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ_0_node",
+          "ⲙ_1_post_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲩⲙⲙⲉⲧⲟⲭⲟⲥ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲭⲣⲓⲥⲧⲟⲥ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5558,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3068",
+    "grl_lemma": "συμμέτοχος",
+    "grl_meaning": "partaking with another in a thing, joint owner",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1679a; Preisigke 2:511"
+  }
+}

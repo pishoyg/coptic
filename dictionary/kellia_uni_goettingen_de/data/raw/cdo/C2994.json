@@ -1,0 +1,93 @@
+{
+  "id": "C2994",
+  "forms": [
+    {
+      "id": "CF7854",
+      "orth": "ⲙⲁ ⲛϫⲓⲡⲁϩⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3428",
+      "bibliography": "CD 283a; KoptHWb 157; ChLCS 39b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2993",
+      "label": "ϫⲓⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "take drugs, be healed; take colour, be dyed"
+    },
+    {
+      "target": "C2990",
+      "label": "ϯⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "give drugs, heal"
+    },
+    {
+      "target": "C2992",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2989",
+      "label": "ⲙⲛⲧⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "magic, wizardry"
+    },
+    {
+      "target": "C2985",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2986",
+      "label": "ⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug, medicament; paint, colour"
+    },
+    {
+      "target": "C2983",
+      "label": "ⲡⲱϩⲣⲉ",
+      "pos": "V",
+      "gloss": "charm, bewitch"
+    },
+    {
+      "target": "C2991",
+      "label": "ⲣⲉϥϯⲫⲁϧⲣⲓ",
+      "pos": "N",
+      "gloss": "drug-giver, magician"
+    },
+    {
+      "target": "C2988",
+      "label": "ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+      "pos": "N",
+      "gloss": "drug-maker, magician"
+    },
+    {
+      "target": "C2987",
+      "label": "ⲣⲡⲁϩⲣⲉ",
+      "pos": "V",
+      "gloss": "use drugs, heal"
+    },
+    {
+      "target": "C2984",
+      "label": "ⲫⲁϧⲉⲣ",
+      "pos": "VSTAT",
+      "gloss": "cure, heal"
+    }
+  ]
+}

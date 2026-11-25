@@ -1,0 +1,44 @@
+{
+  "id": "C3032",
+  "forms": [
+    {
+      "id": "CF7932",
+      "orth": "ϩⲁⲡⲣⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS3471",
+      "bibliography": "CD 287b; KoptHWb 160; DELC 170; ChLCS 40b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3031",
+      "label": "ϣⲁⲡⲣⲁ",
+      "pos": "PREP",
+      "gloss": "to the extent, as far as (with nn), until, even (with vb)"
+    },
+    {
+      "target": "C3029",
+      "label": "ⲣⲁ",
+      "pos": "N",
+      "gloss": "state, condition; position; point in time, end"
+    },
+    {
+      "target": "C3030",
+      "label": "ⲣⲁ-",
+      "pos": "N",
+      "gloss": "with following nn or inf giving local or generic sense"
+    }
+  ]
+}

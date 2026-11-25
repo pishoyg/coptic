@@ -1,0 +1,59 @@
+{
+  "id": "C3341",
+  "forms": [
+    {
+      "id": "CF8573",
+      "orth": "ⲥⲏⲃⲉ ⲛⲣⲁⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14976,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3811",
+      "bibliography": "CD 320b; KoptHWb 176; DELC 183; ChLCS 46a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲉⲓⲛⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲕ ⲛⲟⲩⲥⲁϣ ⲉϥϩⲟⲟⲩ ⲉϫⲛⲛⲉⲕⲡⲁⲧ ⲁⲩⲱ **ⲉϫⲛⲛⲥⲏⲃⲉ **ⲛⲣⲁⲧ**ⲕ** ⲛⲅⲧⲙⲉϣϭⲙϭⲟⲙ ⲉⲗⲟ ϫⲓⲛⲉⲓⲉⲃⲏ ⲛⲣⲁⲧⲕ ϣⲁⲧⲥⲟⲟⲩϩⲉ ⲛϫⲱⲕ",
+      "english": "The Lord smite thee with an evil sore, on the knees and the legs, so that thou shalt not be able to be healed from the sole of thy foot to the crown of thy head.",
+      "source": "Deuteronomy 28",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:28",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3162",
+      "type": "cf",
+      "label": "foot"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3340",
+      "label": "ⲥⲏⲃⲉ",
+      "pos": "N",
+      "gloss": "reed; greave, shin-bone; flute"
+    },
+    {
+      "target": "C3342",
+      "label": "ⲥⲏⲃⲉ ⲛϫⲱ",
+      "pos": "N",
+      "gloss": "reed for singing, flute"
+    }
+  ]
+}

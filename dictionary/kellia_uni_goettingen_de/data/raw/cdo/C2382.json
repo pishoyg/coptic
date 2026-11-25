@@ -1,0 +1,58 @@
+{
+  "id": "C2382",
+  "forms": [
+    {
+      "id": "CF6523",
+      "orth": "ⲛⲁⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.24,
+        "rank": 1756,
+        "count": 38
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VBD",
+    "subc": "Adjektivverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2748",
+      "bibliography": "CD 218b; CED 104; KoptHWb 117; DELC 136; ChLCS 31b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲡⲓⲥⲧⲟⲥ ⲡⲉ ⲡⲉⲛⲧⲁϥⲧⲁϩⲙⲉⲛ . ⲡⲁⲓ ⲟⲛ ⲉⲧ**ⲛⲁⲁ**ⲥ",
+      "english": "He who calls you is faithful, who will also do it.",
+      "source": "52_1 Thessalonians_5",
+      "urn": "urn:cts:copticLit:nt.1thess.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉⲓⲥ ⲡⲙⲁ · ⲁϥⲙⲟⲩϩ ⲛⲱⲛϣ · ϫⲉⲁⲩⲛⲉϫⲡⲥⲟⲃⲧ ⲉϩⲟⲩⲛ ⲡⲟⲩⲁ ⲡⲟⲩⲁ **ⲛⲁⲁ**ⲥ ⲛⲧϩⲉ ⲉⲧϥⲟⲩⲁϣⲥ ·",
+      "english": "And behold, a place full of wolves, but they will throw a wall about [me], each one working at it according to his good pleasure.",
+      "source": "Life of Pisentius part 3",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:58-84",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲙⲡⲓⲧⲁⲙⲟⲕ ⲉⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲙⲡⲏⲩⲉ · ϫⲉⲉⲓ**ⲛⲁⲁ**ⲕ ⲛⲁⲓ ⲛⲥⲟⲛ ϩⲓϣⲃⲏⲣ ·",
+      "english": "Did I not make thee acquainted with the mystery of heaven, and make thee My brother and companion?",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 2",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:35-69",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C20",
+      "type": "cf",
+      "label": "be great, goodly, honoured"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "id": "C6365",
+  "forms": [
+    {
+      "id": "CF14745",
+      "orth": "ⲣⲑⲉ",
+      "dialect": "S",
+      "oRef": "ⲣ ⲧ ϩⲉ",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19710,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7061",
+      "bibliography": "CD 639b-640a; KoptHWb 349; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲓ ⲇⲉ ⲉⲓϫⲱ ⲙⲙⲟϥ ⲛⲁⲥⲛⲏⲩ ϫⲉⲡⲉⲩⲟⲉⲓϣ ⲛⲟⲗⲕ ⲡⲉ . ϫⲉⲕⲁⲁⲥ ϭⲉ ⲛⲕⲟⲟⲩⲉ ⲉⲧⲉⲩⲛⲧⲟⲩⲥϩⲓⲙⲉ ⲙⲙⲁⲩ ⲛⲥⲉ**ⲣⲑⲉ** ⲛⲛⲉⲧⲉⲙⲛⲧⲁⲩ .",
+      "english": "But I say this, brothers: the time is short, that from now on, both those who have wives may be as though they had none;",
+      "source": "46_1 Corinthians_7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:7",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲁⲣⲓⲑⲉ** ⲛⲁⲩ ⲉⲛⲧⲁⲕⲁⲁⲥ ⲙⲙⲁⲇⲓϩⲁⲙ ⲙⲛⲥⲓⲥⲁⲣⲁ ⲁⲩⲱ ⲛⲧϩⲉ ⲛⲓⲁⲃⲉⲓⲛ ϩⲙⲡⲉⲭⲉⲓⲙⲁⲣⲣⲟⲥ ⲛⲕⲉⲓⲥⲱⲛ",
+      "english": "Do thou to them as to Madiam, and to Sisera; as to Jabin at the brook of Kison.",
+      "source": "Psalms 82",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:82",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲉⲁⲩⲁⲁⲕ ⲛⲛⲟϭ ⲉⲩⲙⲏⲏϣⲉ ⲙⲡⲣϫⲓⲥⲉ ⲙⲙⲟⲕ ⲉϫⲱϥ: **ⲁⲣⲓⲑⲉ** ⲛⲟⲩⲁ ⲙⲙⲟⲟⲩ ⲛϩⲏⲧⲟⲩ ⲛⲅϥⲓⲡⲉⲩⲣⲟⲟⲩϣ ⲛⲅϩⲙⲟⲟⲥ",
+      "english": "He that keepeth the law bringeth offerings enough: he that taketh heed to the commandment offereth a peace offering.",
+      "source": "Sirach 35",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:35",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲁ",
+        1,
+        11.912
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        8.255
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        7.284
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        1,
+        6.973
+      ],
+      [
+        "ⲛ",
+        3,
+        6.564
+      ],
+      [
+        "ⲥⲉ",
+        1,
+        6.083
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ⲣⲑⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲑⲉ",
+          1
+        ],
+        [
+          "ⲣⲑⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲑⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲣⲑⲉ",
+          "ⲥⲉ_1_pre_ⲣⲑⲉ",
+          1
+        ],
+        [
+          "ⲥⲉ_1_pre_ⲣⲑⲉ",
+          "ⲣⲑⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲑⲉ_0_node",
+          "ⲛ_1_post_ⲣⲑⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲑⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧⲉ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 5377,
+      "count": 4
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6360",
+      "label": "ϩⲉ",
+      "pos": "N",
+      "gloss": "manner"
+    },
+    {
+      "target": "C6368",
+      "label": "ϫⲓ ⲛⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "from when, since"
+    },
+    {
+      "target": "C6367",
+      "label": "ϭⲛⲑⲉ",
+      "pos": "V",
+      "gloss": "find means"
+    },
+    {
+      "target": "C6366",
+      "label": "ϯⲑⲉ",
+      "pos": "V",
+      "gloss": "give means"
+    },
+    {
+      "target": "C6363",
+      "label": "ⲁϣ ⲛϩⲉ",
+      "pos": "ADV",
+      "gloss": "of what sort"
+    },
+    {
+      "target": "C6364",
+      "label": "ⲕⲁⲧⲁ ⲑⲉ",
+      "pos": "CONJ",
+      "gloss": "even as, like"
+    },
+    {
+      "target": "C6361",
+      "label": "ⲛⲑⲉ (ⲛ-)",
+      "pos": "ADV",
+      "gloss": "in manner of, even as"
+    },
+    {
+      "target": "C6362",
+      "label": "ⲛⲧⲉⲓϩⲉ",
+      "pos": "ADV",
+      "gloss": "in this way, thus"
+    }
+  ]
+}

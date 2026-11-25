@@ -1,0 +1,381 @@
+{
+  "id": "C9657",
+  "forms": [
+    {
+      "id": "CF24740",
+      "orth": "ⲗⲟⲓⲡⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24746",
+      "orth": "ⲗⲟⲓⲡⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.65,
+        "rank": 960,
+        "count": 102
+      }
+    },
+    {
+      "id": "CF24741",
+      "orth": "ⲗⲉⲡⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24742",
+      "orth": "ⲗⲉⲡⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24744",
+      "orth": "ⲗⲟⲓⲡⲟⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1327,
+        "count": 31
+      }
+    },
+    {
+      "id": "CF24745",
+      "orth": "ⲗⲟⲓⲡⲟⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24743",
+      "orth": "ⲗⲓⲡⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24747",
+      "orth": "ⲗⲟⲓⲡⲟⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF24748",
+      "orth": "ⲗⲟⲓⲡⲱⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS12405",
+      "bibliography": "DDGLC",
+      "cu_ID": "2597"
+    },
+    {
+      "id": "CS12406",
+      "bibliography": "DDGLC",
+      "cu_ID": "2797"
+    },
+    {
+      "id": "CS12407",
+      "bibliography": "DDGLC",
+      "cu_ID": "2958"
+    },
+    {
+      "id": "CS12408",
+      "bibliography": "DDGLC",
+      "cu_ID": "3754"
+    },
+    {
+      "id": "CS12409",
+      "bibliography": "DDGLC",
+      "cu_ID": "4030"
+    },
+    {
+      "id": "CS12410",
+      "bibliography": "DDGLC",
+      "cu_ID": "10872"
+    },
+    {
+      "id": "CS12411",
+      "bibliography": "DDGLC",
+      "cu_ID": "11406"
+    },
+    {
+      "id": "CS12412",
+      "bibliography": "DDGLC",
+      "cu_ID": "4481"
+    },
+    {
+      "id": "CS12413",
+      "bibliography": "DDGLC",
+      "cu_ID": "15192"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲓϯⲱⲙⲥ ⲇⲉ ⲙⲡⲕⲉⲏⲓ ⲛⲥⲧⲉⲫⲁⲛⲁ **ⲗⲟⲓⲡⲟⲛ** ⲛϯⲉⲙⲓ ⲁⲛ ϫⲉⲁⲛ ⲁⲓϯⲱⲙⲥ ⲛⲕⲉⲟⲩⲁⲓ .",
+      "english": "(I also baptized the household of Stephanas; besides them, I don't know whether I baptized any other.)",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲩⲥⲟⲟⲩⲛ ⲧⲏⲣⲟⲩ ⲛⲁⲡⲁ ⲗⲟⲩⲕⲓⲟⲥ ⲁⲩⲱ ⲉⲩϭⲱϣⲧ ⲛⲥⲱϥ ⲧⲏⲣⲟⲩ ϩⲱⲥ ⲛⲧⲟϥ ⲡⲉⲧⲛⲁⲡⲣⲟϩⲓⲥⲧⲁ ⲙⲙⲟⲟⲩ ⲙⲛⲛⲥⲁⲡⲉⲛⲧⲁϥⲛⲕⲟⲧⲕ · **ⲗⲟⲓⲡⲟⲛ** ⲛⲧⲉⲣⲉⲡⲡⲉⲧⲟⲩⲁⲁⲃ ⲕⲁⲧⲁⲗⲁⲙⲃⲁⲛⲉ ⲙⲙⲟϥ ⲙⲡⲉϣⲧⲟⲣⲧⲣ ⲉⲧⲧⲏϣ ⲉϣⲱⲡⲉ ⲛⲧⲉϥⲁⲫⲟⲣⲙⲏ ,",
+      "english": "They all knew Apa Lucius, and they all anticipated him to be the one who'd preside as abbot over them after whoever passed away. At any rate, when the saint comprehended the disorder that was destined to happen because of him,",
+      "source": "Life of Longinus and Lucius part 1",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:0-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲗⲟⲓⲡⲟⲛ** ⲙⲡⲉⲛⲑⲣⲉⲛⲓⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ ⲧⲁⲕⲟ ⲛⲛⲓϣⲁⲉⲛⲉϩ ⲛⲧⲟⲧⲑⲏⲛⲟⲩ",
+      "english": "Moreover, let not ephemeral things cause us to lose eternity.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "**ⲗⲟⲓⲡⲟⲛ** ϩⲙⲡⲉⲓⲙⲁ · ⲧⲉⲛⲟⲩ ⲙⲁⲣⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲉⲝⲉⲧⲁⲍⲉ ⲙⲙⲟϥ ·",
+      "english": "Finally, let each one of us now in this place (i.e., world) examine himself.",
+      "source": "On Mercy and Judgment",
+      "urn": "urn:cts:copticLit:psathanasius.mercy_judgment.budge:1-41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲗⲟⲓⲡⲟⲛ** ⲥⲉⲕⲱϯ ⲙⲡⲁⲓⲙⲁ ϧⲉⲛⲛⲓⲟⲓⲕⲟⲛⲟⲙⲟⲥ ϩⲓⲛⲁ ⲛⲥⲉϫⲉⲙⲟⲩⲁⲓ ⲉϥⲉⲛϩⲟⲧ .",
+      "english": "Here, moreover, it is required of stewards, that they be found faithful.",
+      "source": "Bohairic 1 Corinthians 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲣⲡⲙⲉⲉⲩⲉ **ⲗⲟⲓⲡⲟⲛ** ⲙⲡϣⲁϫⲉ · ⲛⲧⲁⲡϫⲟⲉⲓⲥ ϫⲟⲟϥ ⲙⲡⲉⲧⲣⲟⲥ ϫⲉⲉⲓϣⲁⲛⲟⲩⲱϣ ⲉⲧⲣⲉϥϭⲱ ϣⲁⲛϯⲉⲓ · ⲛⲧⲕ ⲛⲓⲙ ⲛⲧⲟⲕ ⲟⲩⲁϩⲕ ⲛⲥⲱⲓ ·",
+      "english": "Finally they remembered the word which the Lord had spoken to Peter, saying, 'If I will to make him remain until I come, what [is that] to thee? Follow thou Me.'",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲟ",
+        4,
+        18.419
+      ],
+      [
+        "ⲥⲧⲉⲫⲁⲛⲁ",
+        3,
+        16.688
+      ],
+      [
+        "ⲡⲣⲟⲥⲟⲩⲥⲏⲟⲩ",
+        2,
+        15.741
+      ],
+      [
+        "ⲉⲣⲁⲧⲛⲁϩⲧ",
+        1,
+        14.741
+      ],
+      [
+        "ⲩϣⲟⲣϣⲉⲣ",
+        1,
+        14.741
+      ],
+      [
+        "ⲁⲣⲭⲏⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        2,
+        13.741
+      ],
+      [
+        "ⲁ",
+        22,
+        13.414
+      ],
+      [
+        ".",
+        19,
+        13.406
+      ],
+      [
+        "ϥ",
+        22,
+        12.848
+      ],
+      [
+        "ⲥⲛⲏⲟⲩ",
+        5,
+        12.833
+      ],
+      [
+        "ⲣⲁϣⲓ",
+        4,
+        12.752
+      ],
+      [
+        "ⲉⲡⲁⲣⲭⲟⲥ",
+        1,
+        12.156
+      ],
+      [
+        "ϩⲱⲧⲡ",
+        2,
+        11.986
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        8,
+        11.68
+      ],
+      [
+        "ϣⲟⲡ",
+        5,
+        11.551
+      ],
+      [
+        "ⲁⲛ",
+        7,
+        11.483
+      ],
+      [
+        "ⲕⲱⲗⲡ",
+        1,
+        11.281
+      ],
+      [
+        "ⲉⲙⲁϣⲱ",
+        3,
+        11.174
+      ],
+      [
+        "ϫⲟⲩϣⲧ",
+        3,
+        11.165
+      ],
+      [
+        "ⲧⲟⲧⲉ",
+        3,
+        11.138
+      ]
+    ],
+    "S": [
+      [
+        "ⲁ",
+        102,
+        18.389
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        16.926
+      ],
+      [
+        "ⲉ",
+        57,
+        15.643
+      ],
+      [
+        "ⲓ",
+        27,
+        14.443
+      ],
+      [
+        "ϥ",
+        46,
+        14.42
+      ],
+      [
+        "⁖ⲻ",
+        4,
+        14.253
+      ],
+      [
+        "ⲡϣⲟⲣⲛ",
+        1,
+        13.926
+      ],
+      [
+        "ⲩⲥⲩⲛϯⲭⲓⲁ",
+        1,
+        13.926
+      ],
+      [
+        "ⲕⲁⲃⲱⲗ",
+        1,
+        13.926
+      ],
+      [
+        "ⲥⲙⲛⲉⲑⲓⲣⲏⲛⲏ",
+        1,
+        13.926
+      ],
+      [
+        "ⲛⲑⲉⲱⲡⲓⲥⲧⲏ",
+        1,
+        13.926
+      ],
+      [
+        ".....ⲟϭ...ϣⲁ",
+        1,
+        13.926
+      ],
+      [
+        "ⲕⲁⲓⲣⲟⲥ",
+        4,
+        13.926
+      ],
+      [
+        "ⲥⲩⲡⲏⲑⲓⲁ",
+        1,
+        13.926
+      ],
+      [
+        "ⲛⲁⲉⲣⲃⲟⲟⲛ",
+        1,
+        13.926
+      ],
+      [
+        " ⲥⲟⲩⲱⲛ",
+        1,
+        13.926
+      ],
+      [
+        "ⲃⲁⲍⲁⲛⲟⲥ",
+        1,
+        13.926
+      ],
+      [
+        "ⲛⲕⲓⲛⲃⲏⲗ",
+        1,
+        13.926
+      ],
+      [
+        "ⲡⲁⲛⲁⲅⲓⲥ",
+        1,
+        13.926
+      ],
+      [
+        "ⲙⲛⲧⲉⲩⲥⲉⲃⲏⲥ·",
+        1,
+        13.926
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.64,
+      "rank": 831,
+      "count": 102
+    },
+    "B": {
+      "rate": 0.37,
+      "rank": 1163,
+      "count": 31
+    }
+  },
+  "etym": {
+    "grl_ID": "1312",
+    "grl_lemma": "λοιπόν",
+    "grl_meaning": "then, well then, finally",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1060b"
+  }
+}

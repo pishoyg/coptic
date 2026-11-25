@@ -1,0 +1,659 @@
+{
+  "id": "C714",
+  "forms": [
+    {
+      "id": "CF2694",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.65,
+        "rank": 240,
+        "count": 733
+      }
+    },
+    {
+      "id": "CF2695",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF2696",
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "L"
+    },
+    {
+      "orth": "ⲉⲣⲏⲩ",
+      "dialect": "B",
+      "id": null
+    },
+    {
+      "orth": "ⲉⲣⲏⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.52,
+        "rank": 388,
+        "count": 214
+      }
+    },
+    {
+      "orth": "ⲁⲣⲏⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.53,
+        "rank": 1056,
+        "count": 45
+      }
+    },
+    {
+      "orth": "ⲉⲣⲏⲟⲩ",
+      "dialect": "A",
+      "id": "373.2"
+    },
+    {
+      "orth": "ⲁⲗⲏⲟⲩ",
+      "dialect": "F",
+      "id": "373.3"
+    },
+    {
+      "orth": "ⲁⲣⲏⲩ",
+      "dialect": "F",
+      "id": "373.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS852",
+      "bibliography": "CD 59a; CED 38; KoptHWb 39-40, 500; DELC 46; ChLCS 11b"
+    },
+    {
+      "id": "CS853",
+      "bibliography": "CD 59a; KoptHWb 39-40, 500; DELC 46; ChLCS 11b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲙⲡⲟⲩⲟⲩⲟⲛϩϥ ⲉⲣⲱⲟⲩ ⲛϫⲉⲛⲓϧⲉⲗⲗⲟ ⲉⲑⲟⲩⲁⲃ ⲉⲡⲉⲓⲇⲏ ⲧⲟⲩⲥⲩⲛⲏⲑⲉⲓⲁ ⲧⲉ ⲑⲁⲓ ⲉⲩϣⲉⲡϧⲓⲥⲓ ⲉϫⲉⲛⲛⲟⲩ**ⲉⲣⲏⲟⲩ** ⲉⲑⲣⲟⲩⲛⲁϩⲙⲟⲩ ⲉⲃⲟⲗ ϩⲗⲓ ⲛⲉⲡⲓⲑⲩⲙⲓⲁ ⲛⲧⲉⲡⲓⲕⲟⲥⲙⲟⲥ ⲉⲩⲓⲣⲓ ⲛⲧⲟⲩⲥⲡⲟⲩⲇⲏ ⲧⲏⲣⲥ ⲉⲑⲣⲟⲩϫⲱⲕ ⲙⲡⲥⲁϫⲓ ⲙⲡⲓⲥⲱⲧⲏⲣ ⲉⲃⲟⲗ ϫⲉⲙⲙⲟⲛ ⲡⲉⲑⲛⲁⲁⲥ ⲉⲧⲁⲓⲁⲅⲁⲡⲏ ⲛⲧⲉⲟⲩⲁⲓ ⲭⲱ ⲛⲧⲉϥⲯⲩⲭⲏ ⲉϫⲉⲛⲡⲉϥϣⲫⲏⲣ .",
+      "english": "And the holy elders did not reveal it, for it is their custom to suffer for one another, to deliver themselves from all the desires of the world, to put all their cares into fulfilling the word of the Lord who said: ‘There is no greater charity than for one to give their soul for a companion.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲩⲱⲙ ⲙⲛⲛⲉⲛ**ⲉⲣⲏⲩ**",
+      "english": "and we ate them together,",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲛⲉⲛⲥⲁϩⲁⲛⲕⲟⲩϫⲓ ⲇⲉ ⲛⲉϩⲟⲟⲩ ⲉⲩϣⲟⲡ ⲛⲉⲙⲛⲟⲩⲉⲣⲏⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ⲛϫⲉⲫⲏ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ⲡϫⲱⲗ ⲛⲉⲙⲡⲓϧⲉⲗϣⲓⲣⲓ ϣⲉⲛⲟⲩϯ ⲁⲩⲓ ⲉⲃⲟⲗ ⲉⲩⲙⲟϣⲓ ⲛⲉⲙⲛⲟⲩ**ⲉⲣⲏⲟⲩ** ⲟⲩⲟϩ ⲛⲁⲣⲉⲡⲓⲕⲉⲁⲡⲁ ⲡϣⲟⲓ ⲙⲟϣⲓ ⲛⲉⲙⲱⲟⲩ ⲡⲉ ⲫⲁⲡⲧⲱⲟⲩ ⲙⲡⲥⲱⲟⲩ",
+      "english": "But after Apa Pjol and the boy Shenoute had been together with each other for a few days, they went out walking together, and Apa Pshoi from the monutain of Psoou was walking with them too.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲣⲉⲡⲟⲩⲟⲉⲓⲛ ⲧⲏⲣϥ ϩⲓⲛⲉϥ**ⲉⲣⲏⲩ** ⲡⲉ ·",
+      "english": "and the whole light consisted together.",
+      "source": "Pistis Sophia Book 1 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:1-13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲉⲣϥⲉϫⲛⲉⲧⲉⲛ**ⲉⲣⲏⲟⲩ** ⲉⲃⲏⲗ ⲁⲣⲏⲟⲩ ϧⲉⲛⲟⲩϯⲙⲁϯ ⲡⲣⲟⲥ ⲟⲩⲥⲏⲟⲩ ϩⲓⲛⲁ ⲛⲧⲉⲧⲉⲛⲥⲣⲟϥⲧ ⲉϯⲡⲣⲟⲥⲉⲩⲭⲏ ⲟⲩⲟϩ ⲡⲁⲗⲓⲛ ⲛⲧⲉⲧⲉⲛⲓ ⲉⲩⲙⲁ ϩⲓⲛⲁ ⲛⲧⲉ ⲛⲧⲉϣⲧⲉⲙⲡⲥⲁⲧⲁⲛⲁⲥ ⲉⲣⲡⲓⲣⲁⲍⲓⲛ ⲙⲙⲱⲧⲉⲛ ⲉⲑⲃⲉⲧⲉⲧⲉⲛⲙⲉⲧⲁⲧⲑⲱⲧ .",
+      "english": "Don't deprive one another, unless it is by consent for a season, that you may give yourselves to fasting and prayer, and may be together again, that Satan doesn't tempt you because of your lack of self-control.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛϩⲙⲟⲟⲥ ⲇⲉ ⲁⲛⲟⲩⲱⲙ ⲙⲛⲛⲉⲛ**ⲉⲣⲏⲩ** ·",
+      "english": "and we sat down and ate together.",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲛⲟⲩ",
+        130,
+        29.97
+      ],
+      [
+        "ⲛⲉⲧⲉⲛ",
+        45,
+        26.539
+      ],
+      [
+        "ⲛ",
+        145,
+        26.13
+      ],
+      [
+        "ⲉ",
+        128,
+        26.017
+      ],
+      [
+        "ⲛⲉⲙ",
+        84,
+        25.42
+      ],
+      [
+        "ⲩ",
+        86,
+        25.4
+      ],
+      [
+        "ⲟⲩ",
+        108,
+        25.019
+      ],
+      [
+        ".",
+        80,
+        24.582
+      ],
+      [
+        "ⲙⲙⲟ",
+        50,
+        24.3
+      ],
+      [
+        "ⲙⲉⲛⲣⲉ",
+        13,
+        24.167
+      ],
+      [
+        "ⲁⲣⲓⲁⲥⲡⲁⲍⲉⲥⲑⲉ",
+        5,
+        24.076
+      ],
+      [
+        "ϫⲉ",
+        59,
+        23.785
+      ],
+      [
+        "ϧⲉⲛ",
+        51,
+        22.78
+      ],
+      [
+        "ⲫⲓ",
+        5,
+        22.661
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        55,
+        22.424
+      ],
+      [
+        "ⲡⲓ",
+        42,
+        21.948
+      ],
+      [
+        "ⲥⲩⲛⲫⲱⲛⲓⲛ",
+        2,
+        21.695
+      ],
+      [
+        "ϣⲉⲡⲧⲟⲧⲟⲩ",
+        2,
+        21.695
+      ],
+      [
+        "ⲁ",
+        47,
+        21.653
+      ],
+      [
+        "ϥⲉϫ",
+        3,
+        21.643
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲉⲩ",
+        421,
+        25.451
+      ],
+      [
+        "ⲛⲉⲛ",
+        184,
+        23.626
+      ],
+      [
+        "ⲉ",
+        438,
+        21.624
+      ],
+      [
+        "ⲛ",
+        515,
+        21.317
+      ],
+      [
+        "ⲙⲛ",
+        220,
+        20.47
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        92,
+        20.383
+      ],
+      [
+        "ⲩ",
+        217,
+        19.577
+      ],
+      [
+        "ⲟⲩ",
+        248,
+        19.565
+      ],
+      [
+        ".",
+        174,
+        19.368
+      ],
+      [
+        "ⲡ",
+        270,
+        19.21
+      ],
+      [
+        "ⲁ",
+        231,
+        19.082
+      ],
+      [
+        "ϩⲛ",
+        142,
+        18.411
+      ],
+      [
+        "ⲁⲩⲱ",
+        151,
+        17.945
+      ],
+      [
+        "ⲧ",
+        124,
+        17.416
+      ],
+      [
+        "ⲁⲥⲡⲁⲍⲉ",
+        19,
+        17.27
+      ],
+      [
+        "ϩⲓ",
+        57,
+        17.212
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        60,
+        16.881
+      ],
+      [
+        "ⲙ",
+        116,
+        16.407
+      ],
+      [
+        "ⲡⲉ",
+        87,
+        16.319
+      ],
+      [
+        "ϫⲱ",
+        51,
+        15.904
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          331
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          542
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          128
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          29
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲉⲣⲏⲩ",
+          7
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          9
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲣⲏⲩ",
+          5
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲉⲣⲏⲩ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲏⲩ",
+          5
+        ],
+        [
+          "ⲁⲛ_1_pre_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱϩ",
+          1
+        ],
+        [
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ϣⲡⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          10
+        ],
+        [
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲉⲣⲏⲩ",
+          "ⲉⲣⲏⲩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          4
+        ],
+        [
+          "ⲁⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲧⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲛ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          2
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          "ⲉ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          "ⲡ_2_post_ϩⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲥⲱⲙⲁ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲉⲣⲏⲩ",
+          "ϩⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲣⲏⲩ",
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲁⲩ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ",
+          "ⲛ_2_post_ⲕⲱϩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲕⲱϩ",
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲕⲱϩ_1_post_ⲉⲣⲏⲩ",
+          "ⲙⲛ_2_post_ⲙⲟⲥⲧⲉ_b",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲣⲏⲩ",
+          "ⲟ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲟ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲟ",
+          "ϣⲡⲏⲣⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲣⲏⲩ",
+          "ⲛⲉⲩ_1_pre_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲉⲣⲏⲩ_0_node",
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲉⲣⲏⲩ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ϩⲟⲟⲩ_3_post_ⲡⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 4.62,
+      "rank": 205,
+      "count": 733
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C793",
+      "type": "cf",
+      "label": "friend, companion (B)"
+    }
+  ],
+  "etym": {
+    "egy_num": "28510",
+    "egy_lemma": "jr.j",
+    "demo_num": "d632",
+    "demo_lemma": "ı ͗rj",
+    "english": "fellow; companion",
+    "german": "Zugehöriger; Genosse",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/28510",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d632"
+  }
+}

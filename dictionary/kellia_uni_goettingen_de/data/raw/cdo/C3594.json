@@ -1,0 +1,88 @@
+{
+  "id": "C3594",
+  "forms": [
+    {
+      "id": "CF9093",
+      "orth": "ⲥⲱⲛⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲥⲱⲛⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6791,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲥⲱⲙⲕ",
+      "dialect": "S",
+      "id": "1439.2"
+    },
+    {
+      "orth": "ⲥⲱⲙⲅ",
+      "dialect": "S",
+      "id": "1439.3"
+    },
+    {
+      "orth": "ⲥⲱⲛⲕ",
+      "dialect": "B",
+      "id": "1439.4"
+    },
+    {
+      "orth": "ⲥⲉⲛⲕ-",
+      "dialect": "B",
+      "id": "1439.5"
+    },
+    {
+      "orth": "ⲥⲟⲛⲕ⸗",
+      "dialect": "B",
+      "id": "1439.6"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4092",
+      "bibliography": "CD 344b-345a; CED 155; KoptHWb 189; DELC 191; ChLCS 48b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C4578",
+      "type": "cf",
+      "label": "give suck, breast-feed, suckle"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3596",
+      "label": "ϭⲓⲛⲥⲱⲙⲕ",
+      "pos": "N",
+      "gloss": "sucking"
+    },
+    {
+      "target": "C3595",
+      "label": "ⲥⲱⲛⲕ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "snap at sth (fish)"
+    }
+  ],
+  "etym": {
+    "egy_num": "138280",
+    "egy_lemma": "snq",
+    "demo_num": "d5359",
+    "demo_lemma": "snqj",
+    "english": "to suckle",
+    "german": "säugen; saugen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138280",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5359"
+  }
+}

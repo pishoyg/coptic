@@ -1,0 +1,220 @@
+{
+  "id": "C10347",
+  "forms": [
+    {
+      "id": "CF27579",
+      "orth": "ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF27580",
+      "orth": "ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5217,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13939",
+      "bibliography": "DDGLC",
+      "cu_ID": "3647"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲛⲛⲥⲱⲕ ⲁⲛⲟⲕ ⲡⲉ ϩⲙⲡⲉⲟⲟⲩ · ϫⲉⲁⲛⲅⲟⲩ**ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ** · ⲉⲓⲛⲁⲉⲓ ⲧⲉⲛⲟⲩ ⲛⲧⲁⲟⲩⲱϣⲧ ⲛⲟⲩⲕⲁϩ ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AL) Part 1",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_al_ed:9-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥⲙⲙⲁⲩ ⲇⲉ ... ⲉⲧⲙⲙⲁⲩ · ⲉϥⲟ ⲙ**ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:9-30",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲕⲁⲓ ⲅⲁⲣ · ⲁⲛⲟⲛ ϩⲉⲛⲡⲛⲉⲩⲙⲁ · ⲡⲁⲓ ⲇⲉ ⲟⲩ ⲡⲉ · ⲛⲧⲛⲛⲁⲟⲩⲱϣⲧ ⲁⲛ ⲛⲁϥ · ⲡⲉϫⲁϥ ⲛⲁϥ ⲟⲛ · ⲛϭⲓⲡⲛⲟⲩⲧⲉ · ⲙⲡⲙⲉϩϣⲟⲙⲛⲧ ⲛⲥⲟⲡ ϫⲉⲡⲁ**ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ** ·",
+      "english": "...",
+      "source": "Encomium on Michael the Archangel (Budge ed. MERC.AI) Part 2",
+      "urn": "urn:cts:copticLit:theodosiusalex.michael.budge_ai_ed:9-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲁⲧⲁⲛⲁⲏⲗ",
+        1,
+        15.691
+      ],
+      [
+        "ⲁⲛⲟⲕ",
+        5,
+        14.156
+      ],
+      [
+        "ⲙⲏ",
+        2,
+        11.782
+      ],
+      [
+        "ⲥⲟⲡ",
+        2,
+        11.488
+      ],
+      [
+        "ⲁⲛⲅ",
+        1,
+        9.914
+      ],
+      [
+        "ⲉⲓⲉ",
+        1,
+        9.254
+      ],
+      [
+        "ⲡⲁ",
+        2,
+        9.054
+      ],
+      [
+        "ϫⲉ",
+        3,
+        8.579
+      ],
+      [
+        "ⲛ",
+        4,
+        7.487
+      ],
+      [
+        "ⲟ",
+        1,
+        7.483
+      ],
+      [
+        "ⲉ",
+        3,
+        7.25
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.962
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.366
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.086
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        5.898
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        5.806
+      ],
+      [
+        "ⲓ",
+        1,
+        4.529
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.186
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        3.425
+      ],
+      [
+        "ⲙ",
+        1,
+        3.029
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲁ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ_0_node",
+          5
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲁⲛⲅ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          "ⲟⲩ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲁⲛⲟⲕ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          "ⲟⲩ_1_pre_ⲡⲣⲟⲧⲟⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4796,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "1886",
+    "grl_lemma": "πρωτόπλασμα",
+    "grl_meaning": "archetype, prototype, first creation",
+    "grl_pos": "noun",
+    "grl_ref": "LBG 1474a"
+  }
+}

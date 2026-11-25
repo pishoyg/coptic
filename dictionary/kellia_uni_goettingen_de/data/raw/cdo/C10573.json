@@ -1,0 +1,119 @@
+{
+  "id": "C10573",
+  "forms": [
+    {
+      "id": "CF28517",
+      "orth": "ⲥⲧⲣⲱⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF28518",
+      "orth": "ⲥⲧⲣⲱⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20320,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14383",
+      "bibliography": "DDGLC",
+      "cu_ID": "4384"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲙⲏⲣ ⲅⲁⲣ ⲛⲥⲁⲥⲁ ⲛⲓⲙ ϫⲓⲛⲛⲉⲩⲕⲟⲟϩ ϣⲁⲛⲉⲩⲥⲛⲧⲉ ⲁⲩⲱ ⲛⲉⲩϫⲟ ⲉⲩⲕⲱⲧⲉ ⲉⲣⲉⲛⲉⲩ**ⲥⲧⲣⲱⲙⲁ** ϩⲱⲕ ⲙⲙⲟⲟⲩ ⲉϩⲟⲩⲛ ⲉⲛⲉⲩⲉⲣⲏⲩ ⲛⲁ ⲛϣⲉ ⲁⲩⲱ ⲛⲱⲛⲉ ⲙⲛⲡⲉⲩⲥⲟⲃⲧⲉ ⲧⲏⲣϥ ⲁⲩⲱ ⲭⲱⲣⲓⲥⲁⲣⲛⲁⲧⲙⲉ ⲏ ⲉϯⲧⲱⲛ ⲟⲩⲃⲉⲡⲥⲟⲟⲩⲧⲛ",
+      "english": "...",
+      "source": "This Great House MONB.XU 418-423 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:450-460",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲱⲕ",
+        1,
+        15.139
+      ],
+      [
+        "ⲕⲱⲧⲉ",
+        1,
+        11.157
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        9.102
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲧⲣⲱⲙⲁ",
+          1
+        ],
+        [
+          "ⲥⲧⲣⲱⲙⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲧⲣⲱⲙⲁ",
+          "ⲥⲧⲣⲱⲙⲁ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19939,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "2050",
+    "grl_lemma": "στρῶμα",
+    "grl_meaning": "bed, couch, mattress, bedding",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1656b; Preisigke 2:493"
+  }
+}

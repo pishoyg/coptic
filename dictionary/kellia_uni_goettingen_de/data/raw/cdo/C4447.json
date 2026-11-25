@@ -1,0 +1,58 @@
+{
+  "id": "C4447",
+  "forms": [
+    {
+      "id": "CF10847",
+      "orth": "ⲛⲓⲡⲧⲏⲣϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5035",
+      "bibliography": "CD 424ab"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2352",
+      "type": "cf",
+      "label": "pl. definite article"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4448",
+      "label": "ⲉⲡⲧⲏⲣϥ",
+      "pos": "ADV",
+      "gloss": "wholly, at all"
+    },
+    {
+      "target": "C4449",
+      "label": "ⲡⲓⲉⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole"
+    },
+    {
+      "target": "C4446",
+      "label": "ⲡⲧⲏⲣϥ",
+      "pos": "N",
+      "gloss": "the whole, the creation, the world"
+    },
+    {
+      "target": "C4445",
+      "label": "ⲧⲏⲣ⸗",
+      "pos": "IMOD",
+      "gloss": "all, whole, every"
+    }
+  ]
+}

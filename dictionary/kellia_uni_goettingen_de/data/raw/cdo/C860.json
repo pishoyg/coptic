@@ -1,0 +1,94 @@
+{
+  "id": "C860",
+  "forms": [
+    {
+      "id": "CF3062",
+      "orth": "ⲧⲥⲁⲃⲟ ⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1012",
+      "bibliography": "CD 73b; KoptHWb 52; ChLCS 14a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4561",
+      "type": "cf",
+      "label": "make wise, teach, show"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C862",
+      "label": "ϥⲓ ⲛⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ",
+      "pos": "V",
+      "gloss": "raise eye"
+    },
+    {
+      "target": "C859",
+      "label": "ϯ ⲛⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "see, observe"
+    },
+    {
+      "target": "C855",
+      "label": "ⲉⲓⲁ",
+      "pos": "N",
+      "gloss": "eye and its sight"
+    },
+    {
+      "target": "C856",
+      "label": "ⲕⲧⲉⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look round, turn eye"
+    },
+    {
+      "target": "C863",
+      "label": "ⲕⲱ ϩⲁⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "intend to do"
+    },
+    {
+      "target": "C865",
+      "label": "ⲙⲛⲧⲛⲁⲓⲁⲧ⸗",
+      "pos": "N",
+      "gloss": "blessedness"
+    },
+    {
+      "target": "C857",
+      "label": "ⲙⲟⲩϩ ⲛⲉⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "look intensely"
+    },
+    {
+      "target": "C864",
+      "label": "ⲛⲁⲓⲁⲧ⸗",
+      "pos": "V",
+      "gloss": "blessed is . . ., (great is the eye of . . .)"
+    },
+    {
+      "target": "C858",
+      "label": "ⲥⲙⲛⲉⲓⲁⲧ⸗ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "fix eyes upon"
+    },
+    {
+      "target": "C861",
+      "label": "ⲧⲟⲩⲛⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "instruct, inform"
+    }
+  ]
+}

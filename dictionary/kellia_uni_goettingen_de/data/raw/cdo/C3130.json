@@ -1,0 +1,53 @@
+{
+  "id": "C3130",
+  "forms": [
+    {
+      "id": "CF8138",
+      "orth": "*ⲣⲡⲱ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF8136",
+      "orth": "*ⲣⲡⲱ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF8137",
+      "orth": "ⲉⲣⲡⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17498,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF8139",
+      "orth": "ⲉⲣⲡⲱ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3580",
+      "bibliography": "CD 298b-299a; CED 138; KoptHWb 165, 534; ChLCS 42a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "95030",
+    "egy_lemma": "rnp.wt",
+    "demo_num": "d3473",
+    "demo_lemma": "rpj(.t)",
+    "english": "fresh things (plants and fruit)",
+    "german": "Frisches (Pflanzen und Früchte)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/95030",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3473"
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "id": "C749",
+  "forms": [
+    {
+      "id": "CF2800",
+      "orth": "ⲉⲟⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 5.95,
+        "rank": 187,
+        "count": 938
+      }
+    },
+    {
+      "id": "CF2801",
+      "orth": "ⲉⲟⲟⲩ",
+      "dialect": "Ak"
+    },
+    {
+      "orth": "ⲱⲟⲩ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 5.82,
+        "rank": 210,
+        "count": 494
+      }
+    },
+    {
+      "orth": "ⲉⲁⲩ",
+      "dialect": "A",
+      "id": "35.1"
+    },
+    {
+      "orth": "ⲉⲁⲩ",
+      "dialect": "F",
+      "id": "35.2"
+    },
+    {
+      "orth": "ⲉⲁⲩ",
+      "dialect": "L",
+      "id": "35.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS891",
+      "bibliography": "CD 62a; CED 39; KoptHWb 42, 501; DELC 48; ChLCS 12a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲉⲛⲧⲁⲥⲑⲟ ⲡⲓⲥⲁϫⲓ ⲉϫⲉⲛⲡⲓⲉϩⲟⲟⲩ ⲉⲧⲁⲡⲓⲁⲗⲟⲩ ⲓⲥⲁⲁⲕ ⲓ ⲉⲃⲟⲗ ϧⲉⲛⲡⲉϥⲏⲓ ⲧⲉⲛⲛⲁⲧⲁⲙⲱⲧⲉⲛ ⲉⲡⲓϫⲱⲕ ⲉⲟⲩ**ⲱⲟⲩ** ⲙⲫⲛⲟⲩϯ .",
+      "english": "Let us now bring back the discourse on the day when the young boy Isaac left his house: we will tell you everything for the glory of God.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ϯⲥⲟⲟⲩⲛ ϫⲉⲉⲕⲙⲟⲥⲧⲉ ⲙⲡ**ⲉⲟⲟⲩ** ⲉⲧϣⲟⲩⲉⲓⲧ ⲛⲛⲣⲱⲙⲉ ·",
+      "english": "Now I know that thou hatest the vainglory of men.",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲇⲉ ⲅⲁⲣ ⲟⲩϩⲱⲃ ⲛⲇⲓⲕⲉⲟⲛ ⲁⲛ ⲡⲉ ⲉⲥⲟⲗⲥⲉⲗ ⲛϯⲥⲃⲱ ⲉⲑⲟⲩⲁⲃ ⲛⲧⲉϯⲙⲉⲑⲛⲟⲩϯ ⲛⲁⲧϣⲧⲁϩⲟⲥ ⲟⲩⲟϩ ⲛⲁⲧϣⲉⲛⲁⲩⲣⲏϫϥ ⲙⲡⲉⲥ**ⲱⲟⲩ** ϧⲉⲛⲟⲩⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲛⲧⲉⲟⲩⲥⲃⲱ ⲛⲧⲉⲡⲁⲓⲕⲟⲥⲙⲟⲥ ⲉⲥϭⲁϧⲉⲙ ⲑⲏ ⲉⲑⲙⲉϩ ⲛϣⲓⲡⲓ ⲛⲉⲙⲡⲉⲧϩⲱⲟⲩ ⲛⲓⲃⲉⲛ",
+      "english": "It is not right to adorn the holy knowledge of incomprehensible divinity and infinite glory with the polluted philosophy of the wisdom of this world, which is full of baseness and all evil.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡ**ⲉⲟⲟⲩ** ⲛⲁϥ ϣⲁⲛⲁⲓⲱⲛ ⲧⲏⲣⲟⲩ ⲛⲁⲓⲱⲛ ϩⲁⲙⲏⲛ · — — — — — — — — — —",
+      "english": "Glory be unto Him for all ages of ages. Amen.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲥⲱ ⲛⲟⲩϣⲱϣ ⲉϥⲟϣ ⲉⲃⲟⲗ ϧⲉⲛⲟⲩⲙⲱⲟⲩ ⲟⲩⲟϩ ⲛⲑⲟⲕ ϩⲱⲕ ⲡⲓϩⲏⲧ ⲕⲓⲙ ⲟⲩⲟϩ ⲙⲟⲛⲙⲉⲛ ϫⲉⲁϥⲕⲱϯ ⲉⲣⲟⲕ ⲛϫⲉⲡⲓⲁⲫⲟⲧ ⲛⲧⲉⲑⲟⲩⲓⲛⲁⲙ ⲙⲡϭⲟⲉⲓⲥ ⲟⲩⲟϩ ⲁϥⲑⲱⲟⲩϯ ⲛϫⲉⲟⲩϣⲱϣ ⲉϫⲉⲛⲡⲉⲕ**ⲱⲟⲩ** .",
+      "english": "Drink thou also thy fill of disgrace instead of glory: shake, O heart, and quake, the cup of the right hand of the Lord has come round upon thee, and dishonour has gathered upon thy glory.",
+      "source": "Bohairic Habakkuk 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥⲃⲱⲕ ⲙⲡⲏⲩⲉ ϩⲛⲟⲩ**ⲉⲟⲟⲩ** ·",
+      "english": "and went up into the heavens in great glory.",
+      "source": "Life of Onnophrius part 4",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:25-33",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        72,
+        29.234
+      ],
+      [
+        "ⲡ",
+        867,
+        23.903
+      ],
+      [
+        "ⲛ",
+        699,
+        22.283
+      ],
+      [
+        "ⲙ",
+        472,
+        22.126
+      ],
+      [
+        "ⲛⲁ",
+        352,
+        21.193
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        194,
+        20.705
+      ],
+      [
+        "ϥ",
+        407,
+        20.655
+      ],
+      [
+        "ⲡⲉϥ",
+        148,
+        19.851
+      ],
+      [
+        "ⲧⲁⲉⲓⲟ",
+        48,
+        19.502
+      ],
+      [
+        "ⲙⲛ",
+        186,
+        19.388
+      ],
+      [
+        "ⲁⲩⲱ",
+        224,
+        19.296
+      ],
+      [
+        ".",
+        175,
+        19.037
+      ],
+      [
+        "ⲟⲩ",
+        236,
+        18.995
+      ],
+      [
+        "ⲉ",
+        252,
+        18.876
+      ],
+      [
+        "ⲁ",
+        217,
+        18.455
+      ],
+      [
+        "ⲧ",
+        169,
+        18.4
+      ],
+      [
+        "ⲡⲉ",
+        133,
+        17.8
+      ],
+      [
+        "ϣⲁ",
+        80,
+        17.438
+      ],
+      [
+        "ϩⲛ",
+        118,
+        17.254
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        113,
+        17.052
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲟⲟⲩ_0_node",
+          374
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲟⲟⲩ",
+          45
+        ],
+        [
+          "ⲙ_1_post_ⲉⲟⲟⲩ",
+          62
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          62
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          34
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲟⲟⲩ",
+          17
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲟⲟⲩ",
+          16
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲟⲟⲩ",
+          51
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          23
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲟⲟⲩ",
+          16
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲟⲟⲩ",
+          16
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲟⲟⲩ",
+          9
+        ],
+        [
+          "ⲓⲏⲥⲟⲩⲥ_1_post_ⲉⲟⲟⲩ",
+          8
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲟⲟⲩ",
+          7
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲟⲟⲩ",
+          5
+        ],
+        [
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉⲧ",
+          5
+        ],
+        [
+          "ⲛ_3_post_ϣⲟⲩⲉⲓⲧ",
+          5
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          5
+        ],
+        [
+          "ⲣⲱⲙⲉ_5_post_ⲛ",
+          5
+        ],
+        [
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          5
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ϥ_2_post_ⲛⲁ",
+          4
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲉⲟⲟⲩ",
+          4
+        ],
+        [
+          "ⲙ_4_post_ⲛⲟⲩⲧⲉ",
+          4
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲟⲟⲩ_0_node",
+          "ⲙ_1_post_ⲉⲟⲟⲩ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲉⲟⲟⲩ",
+          "ⲡ_2_post_ⲙ",
+          6
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲡ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          7
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲟⲟⲩ",
+          "ⲟⲩ_1_pre_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲟⲟⲩ_0_node",
+          "ⲓⲏⲥⲟⲩⲥ_1_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲉⲟⲟⲩ_0_node",
+          "ⲉⲧ_1_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲉⲟⲟⲩ",
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϣⲟⲩⲉⲓⲧ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ϣⲟⲩⲉⲓⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲟⲩⲉⲓⲧ",
+          "ⲛ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲛ",
+          "ⲣⲱⲙⲉ_5_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲓⲱⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲟⲟⲩ",
+          "ⲡ_1_pre_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲟⲟⲩ_0_node",
+          "ⲛⲁ_1_post_ⲉⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲉⲟⲟⲩ",
+          "ϥ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_1_pre_ⲉⲟⲟⲩ",
+          "ⲉⲟⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          "ⲙ_4_post_ⲛⲟⲩⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 5.91,
+      "rank": 157,
+      "count": 938
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C750",
+      "label": "ϩⲁⲉⲟⲟⲩ",
+      "pos": "ADV",
+      "gloss": "honourable, glorious"
+    },
+    {
+      "target": "C754",
+      "label": "ϫⲓⲉⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "be glorified"
+    },
+    {
+      "target": "C753",
+      "label": "ϫⲓⲛϯⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "act of glorifying"
+    },
+    {
+      "target": "C751",
+      "label": "ϯⲉⲟⲟⲩ",
+      "pos": "V",
+      "gloss": "give glory, glorify"
+    },
+    {
+      "target": "C752",
+      "label": "ⲙⲛⲧⲣⲉϥϯⲉⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "glorification"
+    },
+    {
+      "target": "C12202",
+      "label": "ⲡⲁ ⲡⲉⲁⲩ",
+      "pos": "N",
+      "gloss": "glorious one"
+    }
+  ],
+  "etym": {
+    "egy_num": "20360",
+    "egy_lemma": "jꜣ.w",
+    "demo_num": "d45",
+    "demo_lemma": "ꜣwj",
+    "english": "praise",
+    "german": "Lobpreis",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/20360",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d45"
+  }
+}

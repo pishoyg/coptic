@@ -1,0 +1,58 @@
+{
+  "id": "C4375",
+  "forms": [
+    {
+      "id": "CF10702",
+      "orth": "ϯⲧⲉⲛϣⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4956",
+      "bibliography": "CD 421a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4373",
+      "label": "*ⲧⲱⲛϣ",
+      "pos": "V",
+      "gloss": "threaten"
+    },
+    {
+      "target": "C4376",
+      "label": "ⲣⲉϥϯⲧⲱⲛϣ",
+      "pos": "N",
+      "gloss": "striker"
+    },
+    {
+      "target": "C4377",
+      "label": "ⲣⲉϥϯⲧⲱⲛϣ",
+      "pos": "N",
+      "gloss": "striker"
+    },
+    {
+      "target": "C4374",
+      "label": "ⲧⲉⲛϣⲓ",
+      "pos": "N",
+      "gloss": "blow"
+    }
+  ]
+}

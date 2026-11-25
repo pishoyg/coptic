@@ -1,0 +1,414 @@
+{
+  "id": "C6304",
+  "forms": [
+    {
+      "id": "CF14618",
+      "orth": "ϧⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 10.82,
+        "rank": 123,
+        "count": 918
+      }
+    },
+    {
+      "orth": "ϩⲁ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 10.79,
+        "rank": 110,
+        "count": 1702
+      }
+    },
+    {
+      "orth": "ϩⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 13.49,
+        "rank": 97,
+        "count": 1144
+      }
+    },
+    {
+      "orth": "ϣⲁ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 24.64,
+        "rank": 61,
+        "count": 2090
+      }
+    },
+    {
+      "orth": "ⲭⲉ-",
+      "dialect": "B",
+      "id": "2073.4"
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS6993",
+      "bibliography": "CD 629ab; KoptHWb 347; DELC 282ab; ChLCS 86a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲕⲱϯ ⲛⲥⲁⲁⲙⲟⲛⲓ ⲙⲙⲟϥ ⲡⲉ ⲟⲩⲟϩ ⲁⲩⲉⲣϩⲟϯ **ϧⲁ**ⲧϩⲏ ⲙⲡⲓⲙⲏϣ ⲁⲩⲉⲙⲓ ⲅⲁⲣ ϫⲉⲉⲧⲁϥϫⲉⲧⲁⲓⲡⲁⲣⲁⲃⲟⲗⲏ ⲉⲑⲃⲏⲧⲟⲩ ⲟⲩⲟϩ ⲉⲧⲁⲩⲭⲁϥ ⲁⲩϣⲉ ⲛⲱⲟⲩ",
+      "english": "They tried to seize him, but they feared the multitude; for they perceived that he spoke the parable against them. They left him, and went away.",
+      "source": "Bohairic Gospel of Mark 12 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:12",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲇⲉ ⲉⲩⲉⲣⲙⲉⲑⲣⲉ **ϧⲁⲣⲟ**ϥ ⲛϫⲉⲟⲩⲟⲛ ⲛⲓⲃⲉⲛ ⲉⲑⲃⲉ ⲛⲉϥⲁⲣⲉⲧⲏ .",
+      "english": "Everyone testified to his virtues.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲛⲁⲩⲉⲣⲕⲁⲧⲏⲅⲟⲣⲓⲛ ⲛϩⲁⲛⲙⲏϣ **ϧⲁⲣⲟ**ϥ ⲛϫⲉⲛⲓⲁⲣⲭⲓⲉⲣⲉⲩⲥ .",
+      "english": "The chief priests accused him of many things.",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϧⲁ_0_node",
+          250
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲏ",
+          38
+        ],
+        [
+          "ϩⲏ_1_post_ϧⲁ",
+          67
+        ],
+        [
+          "ⲧ_1_post_ϧⲁ",
+          79
+        ],
+        [
+          "ϩⲏ_2_post_ⲧ",
+          79
+        ],
+        [
+          "ⲙ_3_post_ϩⲏ",
+          63
+        ],
+        [
+          "ⲡⲉⲕ_5_post_ϩⲟ",
+          18
+        ],
+        [
+          "ϩⲟ_4_post_ⲙ",
+          18
+        ],
+        [
+          "ϩⲁⲧ_1_post_ϧⲁ",
+          15
+        ],
+        [
+          "ⲫ_4_post_ⲙ",
+          12
+        ],
+        [
+          "ⲛⲟⲩϯ_5_post_ⲫ",
+          12
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ϩⲏ",
+          12
+        ],
+        [
+          "ⲫ_1_post_ϧⲁ",
+          10
+        ],
+        [
+          "ⲛⲟⲙⲟⲥ_2_post_ⲫ",
+          10
+        ],
+        [
+          "ⲣⲱ_1_post_ϧⲁ",
+          10
+        ],
+        [
+          "ⲧⲉⲛ_2_post_ⲣⲱ",
+          10
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ϩⲏ",
+          10
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          26
+        ],
+        [
+          "ϭⲟⲓⲥ_5_post_ⲡ",
+          10
+        ],
+        [
+          "ⲟⲩϩⲟ_5_post_ⲡ",
+          9
+        ],
+        [
+          "ϭⲟⲉⲓⲥ_5_post_ⲡ",
+          7
+        ],
+        [
+          "ⲡⲓ_4_post_ⲙ",
+          7
+        ],
+        [
+          "ⲙⲏϣ_5_post_ⲡⲓ",
+          7
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲁⲗⲱⲟⲩⲓ",
+          7
+        ],
+        [
+          "ⲁⲗⲱⲟⲩⲓ_1_post_ϧⲁ",
+          7
+        ],
+        [
+          "ⲧⲁ_2_post_ϩⲏ",
+          7
+        ],
+        [
+          "ⲡⲓ_1_post_ϧⲁ",
+          7
+        ],
+        [
+          "ⲥⲛⲟϥ_2_post_ⲡⲓ",
+          7
+        ],
+        [
+          "ⲣⲓ_1_post_ϧⲁ",
+          6
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲁⲗⲁⲩϫ",
+          6
+        ],
+        [
+          "ϭⲁⲗⲁⲩϫ_1_post_ϧⲁ",
+          6
+        ],
+        [
+          "ⲛⲉ_4_post_ϩⲟⲟⲩ",
+          6
+        ],
+        [
+          "ϩⲟⲟⲩ_3_post_ϩⲏ",
+          6
+        ]
+      ],
+      "edges": [
+        [
+          "ϧⲁ_0_node",
+          "ⲧⲉϥ_2_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_2_post_ϩⲏ",
+          "ϩⲏ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲧ_1_post_ϧⲁ",
+          8
+        ],
+        [
+          "ⲧ_1_post_ϧⲁ",
+          "ϩⲏ_2_post_ⲧ",
+          8
+        ],
+        [
+          "ϩⲏ_2_post_ⲧ",
+          "ⲙ_3_post_ϩⲏ",
+          6
+        ],
+        [
+          "ⲙ_3_post_ϩⲏ",
+          "ⲡⲉⲕ_5_post_ϩⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_5_post_ϩⲟ",
+          "ϩⲟ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ϩⲁⲧ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϩⲏ",
+          "ⲫ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲫ_4_post_ⲙ",
+          "ⲛⲟⲩϯ_5_post_ⲫ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲧⲟⲩ_2_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_2_post_ϩⲏ",
+          "ϩⲏ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲫ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲫ_1_post_ϧⲁ",
+          "ⲛⲟⲙⲟⲥ_2_post_ⲫ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲣⲱ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲣⲱ_1_post_ϧⲁ",
+          "ⲧⲉⲛ_2_post_ⲣⲱ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲧⲉⲕ_2_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲧⲉⲕ_2_post_ϩⲏ",
+          "ϩⲏ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϩⲏ",
+          "ⲡ_4_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ϭⲟⲓⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ⲟⲩϩⲟ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          "ϭⲟⲉⲓⲥ_5_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϩⲏ",
+          "ⲡⲓ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲓ_4_post_ⲙ",
+          "ⲙⲏϣ_5_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲛⲉⲕ_2_post_ⲁⲗⲱⲟⲩⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_2_post_ⲁⲗⲱⲟⲩⲓ",
+          "ⲁⲗⲱⲟⲩⲓ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲧⲁ_2_post_ϩⲏ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϩⲏ",
+          "ϩⲏ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲡⲓ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_post_ϧⲁ",
+          "ⲥⲛⲟϥ_2_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲣⲓ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϧⲁ_0_node",
+          "ⲛⲉϥ_2_post_ϭⲁⲗⲁⲩϫ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ϭⲁⲗⲁⲩϫ",
+          "ϭⲁⲗⲁⲩϫ_1_post_ϧⲁ",
+          1
+        ],
+        [
+          "ϩⲏ_2_post_ⲧ",
+          "ⲛⲉ_4_post_ϩⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛⲉ_4_post_ϩⲟⲟⲩ",
+          "ϩⲟⲟⲩ_3_post_ϩⲏ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 12.84,
+      "rank": 92,
+      "count": 1090
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "850795",
+    "egy_lemma": "ḫr",
+    "demo_num": "dm3108",
+    "demo_lemma": "h̭ꜣ",
+    "english": "with",
+    "german": "[Präposition]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850795",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3108"
+  }
+}

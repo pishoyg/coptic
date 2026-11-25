@@ -1,0 +1,94 @@
+{
+  "id": "C9758",
+  "forms": [
+    {
+      "id": "CF25183",
+      "orth": "ⲙⲉⲣⲣⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF25184",
+      "orth": "ⲙⲉⲣⲣⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25185",
+      "orth": "ⲙⲏⲣⲁ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12641",
+      "bibliography": "DDGLC",
+      "cu_ID": "9122"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛϣⲁϣⲓ",
+        1,
+        16.236
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.59
+      ],
+      [
+        "ⲁⲛ",
+        1,
+        8.015
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        7.238
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        6.304
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.954
+      ],
+      [
+        "ϧⲉⲛ",
+        1,
+        5.763
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲣⲣⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "1433",
+    "grl_lemma": "μοῖρα",
+    "grl_meaning": "portion, lot, destiny",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1140b; Preisigke 2:113"
+  }
+}

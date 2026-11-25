@@ -1,0 +1,205 @@
+{
+  "id": "C10836",
+  "forms": [
+    {
+      "id": "CF29551",
+      "orth": "ⲫⲁⲣⲙⲁⲅⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF29552",
+      "orth": "ⲫⲁⲣⲙⲁⲅⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12620,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14951",
+      "bibliography": "DDGLC",
+      "cu_ID": "9279"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ⲉⲣⲟⲟⲩ ϫⲉⲁⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲉ**ⲫⲁⲣⲙⲁⲅⲓⲁ** ⲛⲧⲉⲧⲛⲙⲡϣⲁ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲛⲟⲩϩⲙ ⲉⲡⲛⲟϭ ⲛϫⲁϥ ⲙⲛⲛⲉⲭⲁⲗⲁⲍⲁ ⲙⲡⲕⲁⲕⲉ ⲉⲧϩⲓⲃⲟⲗ ·",
+      "english": "“Say unto them: Renounce [magic] potions, that ye may be worthy of the mysteries of the Light and be saved from the great cold and the hail of the outer darkness.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲑⲱⲙⲥ",
+        2,
+        17.11
+      ],
+      [
+        "ϣⲁⲣⲉ",
+        2,
+        14.355
+      ],
+      [
+        "ϫⲱⲙ",
+        1,
+        10.94
+      ],
+      [
+        "ⲛⲧⲱ",
+        1,
+        10.815
+      ],
+      [
+        "ⲟⲩⲱⲛϩ",
+        1,
+        9.748
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        7.644
+      ],
+      [
+        "ⲛⲓ",
+        2,
+        7.633
+      ],
+      [
+        "ⲩ",
+        2,
+        7.536
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        1,
+        7.519
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        7.318
+      ],
+      [
+        "ⲛ",
+        2,
+        6.006
+      ],
+      [
+        "ϩⲁⲛ",
+        1,
+        5.728
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.009
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        4.719
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        3.495
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ],
+      [
+        "ϥ",
+        1,
+        2.839
+      ]
+    ],
+    "S": [
+      [
+        "ⲁⲡⲟⲧⲁⲥⲥⲉ",
+        1,
+        13.857
+      ],
+      [
+        "ⲙⲡϣⲁ",
+        1,
+        12.151
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        8.448
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲫⲁⲣⲙⲁⲅⲓⲁ_0_node",
+          3
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲫⲁⲣⲙⲁⲅⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12194,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "3340",
+    "grl_lemma": "φαρμακεία",
+    "grl_meaning": "use of drugs (esp. of purgatives); witchcraft",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1917a; Preisigke 2:686"
+  }
+}

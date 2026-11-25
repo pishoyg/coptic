@@ -1,0 +1,466 @@
+{
+  "id": "C2025",
+  "forms": [
+    {
+      "id": "CF5725",
+      "orth": "ⲙⲉⲣⲉϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2171,
+        "count": 26
+      }
+    },
+    {
+      "id": "CF5726",
+      "orth": "ⲙⲉⲣⲉϩ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF5727",
+      "orth": "ⲙⲉⲣϩ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5728",
+      "orth": "ⲙⲉⲣⲏϩ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2348",
+      "bibliography": "CD 184a; CED 90; KoptHWb 101; DELC 121; ChLCS 27b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛⲧⲉⲣⲉϥⲡⲁⲧⲁⲥⲥⲉ ⲙⲙⲟϥ ⲭⲱⲣⲓⲥϩⲟⲡⲗⲟⲛ ϩⲓ**ⲙⲉⲣⲉϩ** ⲛⲧϩⲉ ⲛⲧϩⲉ ⲛⲛⲉⲛⲧⲁⲩⲙⲟⲩ ⲧⲏⲣⲟⲩ · ⲙⲛⲛⲉⲡⲓⲛⲓⲕⲓⲟⲛ ⲉⲧⲉⲛⲉⲧϫⲣⲁⲉⲓⲧ ⲛⲉ ·",
+      "english": "But now, when once David had destroyed him, without armour and without spear, Goliath was dead once and for all, even as every other person who dieth, and [he obtained] the prize which belongeth to the victors.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲉⲓⲥⲟⲟⲩϩⲥ ⲧⲏⲣⲥ ⲛⲁⲉⲓⲙⲉ ϫⲉⲛⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲛⲁⲧⲟⲩϫⲉⲡⲣⲱⲙⲉ ⲁⲛ ϩⲛⲟⲩⲥⲏϥⲉ ⲟⲩⲇⲉ ϩⲛⲟⲩ**ⲙⲉⲣⲉϩ** ϫⲉⲡⲡⲟⲗⲉⲙⲟⲥ ⲣⲱ ⲡⲁⲡϫⲟⲉⲓⲥ ⲡⲉ ⲁⲩⲱ ϥⲛⲁⲡⲁⲣⲁⲇⲓⲇⲟⲩ ⲙⲙⲱⲧⲛ ⲉϩⲣⲁⲓ ⲉⲧⲟⲟⲧⲛ",
+      "english": "And all this assembly shall know that the Lord delivers not by sword or spear, for the battle is the Lord's, and the Lord will deliver you into our hands.",
+      "source": "I Samuel 17",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲟϥ ⲡⲉⲛⲧⲁϥⲡⲁⲧⲁⲥⲥⲉⲓ ⲙⲡⲣⲙⲛⲕⲏⲙⲉ ⲟⲩⲣⲱⲙⲉ ⲉϥⲟ ⲛϣⲡⲏⲣⲉ ⲉⲛⲁⲩ ⲉⲣⲟϥ ⲉⲣⲉⲟⲩ**ⲙⲉⲣⲉϩ** ⲇⲉ ϩⲛⲧϭⲓϫ ⲙⲡⲣⲙⲛⲕⲏⲙⲉ ⲉϥⲟ ⲛⲧϩⲉ ⲛⲟⲩϣⲉ ⲛϩⲱⲧ ⲛⲇⲓⲁⲃⲁⲑⲣⲁ ⲁⲩⲱ ⲃⲁⲛⲉⲁⲥ ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲉⲣⲟϥ ϩⲙⲡⲙⲉⲣⲉϩ ⲉⲧⲉⲛⲧⲟⲟⲧϥ ⲁⲩⲱ ⲁϥϩⲁⲣⲡⲁⲍⲉ ⲙⲡⲙⲉⲣⲉϩ ⲉⲃⲟⲗ ϩⲛⲧϭⲓϫ ⲙⲡⲣⲙⲛⲕⲏⲙⲉ ⲁϥⲙⲟⲩⲟⲩⲧ ⲙⲙⲟϥ ϩⲙⲡⲉϥⲙⲉⲣⲉϩ",
+      "english": "He smote an Egyptian, a wonderful man, and in the hand of the Egyptian was a spear as the side of a ladder; and he went down to him with a staff, and snatched the spear from the Egyptian's hand, and slew him with his own spear.",
+      "source": "II Samuel 23",
+      "urn": "urn:cts:copticLit:ot.2sam.coptot:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲏϥⲉ",
+        6,
+        14.984
+      ],
+      [
+        "ϩⲟⲡⲗⲟⲛ",
+        3,
+        14.82
+      ],
+      [
+        "ⲧⲟⲕⲥ",
+        1,
+        14.313
+      ],
+      [
+        "ⲟϩⲥ",
+        2,
+        14.197
+      ],
+      [
+        "ⲭⲱⲣⲓⲥ",
+        2,
+        12.728
+      ],
+      [
+        "ⲛ",
+        22,
+        12.487
+      ],
+      [
+        "ⲡⲉϥ",
+        8,
+        12.396
+      ],
+      [
+        "ⲥⲟⲧⲃⲉϥ",
+        1,
+        12.09
+      ],
+      [
+        "ⲛⲉϫⲥⲟⲧⲉ",
+        1,
+        11.505
+      ],
+      [
+        "ϩⲁⲣⲡⲁⲍⲉ",
+        1,
+        11.438
+      ],
+      [
+        "ⲥⲕⲁⲓ",
+        1,
+        11.438
+      ],
+      [
+        "ⲧⲱⲕⲙ",
+        1,
+        11.313
+      ],
+      [
+        "ⲟⲩ",
+        12,
+        11.274
+      ],
+      [
+        "ϩⲉⲛ",
+        6,
+        11.129
+      ],
+      [
+        "ϩⲓⲱⲧ",
+        1,
+        11.09
+      ],
+      [
+        "ⲁⲩⲱ",
+        10,
+        11.012
+      ],
+      [
+        "ϥ",
+        13,
+        10.923
+      ],
+      [
+        "ϩⲉⲃⲣⲁⲓⲟⲥ",
+        1,
+        10.898
+      ],
+      [
+        "ⲧ",
+        9,
+        10.88
+      ],
+      [
+        "ⲡⲩⲣⲅⲟⲥ",
+        1,
+        10.728
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲉⲣⲉϩ",
+          7
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          25
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲉⲣⲉϩ",
+          3
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          4
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲉⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_4_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_4_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲉⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟϩⲥ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ϫⲓⲥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲥⲟⲧⲃⲉϥ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲟⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          2
+        ],
+        [
+          "ϩⲓ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          "ⲉⲧⲉ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ⲙⲉⲣⲉϩ",
+          "ⲛⲧⲟⲟⲧ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲧⲟⲟⲧ_1_post_ⲙⲉⲣⲉϩ",
+          "ϥ_2_post_ⲛⲧⲟⲟⲧ",
+          1
+        ],
+        [
+          "ⲧⲉⲛ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          "ⲡ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲡ_1_post_ⲙⲉⲣⲉϩ",
+          "ⲉⲧⲉ_2_post_ⲡ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_2_post_ⲡ",
+          "ⲙⲛ_3_post_ⲉⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲉⲧⲉ",
+          "ϭⲟⲙ_4_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ϭⲟⲙ_4_post_ⲙⲛ",
+          "ⲙⲙⲟ_4_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲛⲉⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          2
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          "ⲉ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲉⲣⲉϩ",
+          "ϩⲉⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲉ",
+          "ⲟϩⲥ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          "ⲁⲗⲗⲁ_4_post_ϫⲓⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_4_post_ϫⲓⲥⲉ",
+          "ⲉϫⲙ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲉϫⲙ_1_post_ⲙⲉⲣⲉϩ",
+          "ⲡ_2_post_ⲉϫⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉϫⲙ",
+          "ϫⲓⲥⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲉⲣⲉϩ",
+          "ⲙⲉⲣⲉϩ_0_node",
+          1
+        ],
+        [
+          "ⲙⲉⲣⲉϩ_0_node",
+          "ⲁⲛ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ],
+        [
+          "ⲁⲛ_1_post_ⲙⲉⲣⲉϩ",
+          "ⲏ_2_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲏ_2_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲕⲉ_2_post_ⲥⲟⲧⲃⲉϥ",
+          1
+        ],
+        [
+          "ⲕⲉ_2_post_ⲥⲟⲧⲃⲉϥ",
+          "ⲥⲟⲧⲃⲉϥ_1_post_ⲙⲉⲣⲉϩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.16,
+      "rank": 1909,
+      "count": 26
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C2026",
+      "label": "ϥⲁⲓⲙⲉⲣⲉϩ",
+      "pos": "N",
+      "gloss": "spear-bearer"
+    },
+    {
+      "target": "C2027",
+      "label": "ⲙⲣⲏϩ",
+      "pos": "N",
+      "gloss": "pole (of waggon)"
+    }
+  ],
+  "etym": {
+    "egy_num": "72830",
+    "egy_lemma": "mrḥ",
+    "english": "lance (Sem. loan word)",
+    "german": "Lanze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72830"
+  }
+}

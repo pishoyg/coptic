@@ -1,0 +1,277 @@
+{
+  "id": "C6702",
+  "forms": [
+    {
+      "id": "CF15449",
+      "orth": "ϩⲓⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5032,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϩⲓⲛⲓ",
+      "dialect": "B",
+      "id": "2216.1"
+    },
+    {
+      "orth": "ϩⲓⲛⲓ",
+      "dialect": "F",
+      "id": "2216.2"
+    },
+    {
+      "orth": "ϩⲓⲛⲉ",
+      "dialect": "L",
+      "id": "2216.3"
+    },
+    {
+      "orth": "ϩⲛⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3650,
+        "count": 9
+      }
+    },
+    {
+      "orth": "ϩⲉⲛ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.8,
+        "rank": 828,
+        "count": 68
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7416",
+      "bibliography": "CD 689a; CED 287; KoptHWb 377; DELC 304a; ChLCS 92a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲣⲉⲡⲟⲩⲟⲥⲣ ⲥⲛⲁⲩ ϩⲓⲱⲱϥ · ⲉⲩ**ϩⲓⲛⲉ** ⲙⲙⲟϥ · ⲉⲧⲉⲛⲁⲓ ⲛⲉ ⲧⲇⲓⲁⲑⲏⲕⲏ ⲥⲛⲧⲉ ⲉⲕⲙⲉⲗⲉⲧⲁ ⲙⲙⲟⲟⲩ · ⲛⲁⲓ ⲛⲉⲧⲛⲁϫⲓⲧⲕ ⲉⲡⲙⲁ ⲙⲙⲟⲟⲛⲉ ⲉⲧⲛⲁⲛⲟⲩϥ ·",
+      "english": "It hath two steering oars, wherewith it is guided, and these are the Testaments, whereon if thou shalt meditate they will bring thee unto a good place for tying up thy boat.",
+      "source": "Homily on Matthew 20",
+      "urn": "urn:cts:copticLit:psathanasius.matthew20.budge:1-56",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲉϣⲱⲡⲉ ⲛⲧⲁⲛⲕⲱⲧ ⲛⲁⲛ ⲛⲟⲩϣⲏⲩⲉ ⲉⲥⲁϩⲱⲛ ⲉⲃⲟⲗ ⲙⲡⲉⲛⲛⲟⲩⲧⲉ ⲏ ⲉⲧⲁⲗⲉⲑⲩⲥⲓⲁ ⲉϩⲣⲁⲓ ϩⲓϫⲱⲥ ⲛϭⲓⲗⲓⲗ ⲏ ϣⲟⲩ**ϩⲓⲛⲉ** ⲏ ⲉⲉⲓⲣⲉ ⲉϫⲱⲥ ⲛⲟⲩⲑⲩⲥⲓⲁ ⲛⲟⲩϫⲁⲓ ⲡϫⲟⲉⲓⲥ ⲉϥⲉϣⲓⲛⲉ ⲛⲥⲁⲛⲁⲓ",
+      "english": "And if we have built to ourselves an altar, so as to apostatize from the Lord our God, so as to offer upon it a sacrifice of whole-burnt-offerings, so as to offer upon it a sacrifice of peace-offering, the Lord shall require it.",
+      "source": "Joshua 22",
+      "urn": "urn:cts:copticLit:ot.josh.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲥⲱⲧⲙ ⲇⲉ ⲉⲛⲁⲓ ⲛϭⲓⲙⲙⲁⲑⲏⲧⲏⲥ ⲁⲩⲡⲁϩⲧⲟⲩ ⲁⲩⲟⲩⲱϣⲧ ⲛⲓⲏⲥⲟⲩⲥ ⲡⲉϫⲁⲩ · ϫⲉⲛⲁⲓⲁⲧⲛ ⲁⲛⲟⲛ ⲡⲁⲣⲁⲣⲱⲙⲉ ⲛⲓⲙ ϫⲉⲁⲕϭⲱⲗⲡ ⲛⲁⲛ ⲉⲃⲟⲗ ⲛⲛⲉⲓⲛⲟϭ ⲛϣⲡⲏⲣⲉ · ⲁⲩⲟⲩⲱϩ ⲟⲛ ⲉⲧⲟⲟⲧⲟⲩ * ⲁⲩⲧⲱⲃϩ ⲙⲙⲟϥ ⲉⲩϫⲱ ⲙⲙⲟⲥ · ϫⲉⲧⲛⲧⲱⲃϩ ⲙⲙⲟⲕ ϭⲱⲗⲡ ⲛⲁⲛ ⲉⲃⲟⲗ ϫⲉϩⲉⲛⲟⲩ ϩⲱⲱϥ ⲛⲉ ⲛⲉⲓϩⲓⲟⲟⲩⲉ · ⲁⲩⲱ ⲁⲥ**ϩⲛⲧ**ⲥ ⲉϩⲟⲩⲛ ⲉⲣⲟϥ ⲛϭⲓⲙⲁⲣⲓϩⲁⲙ ⲁⲥⲡⲁϩⲧⲥ ⲁⲥⲟⲩⲱϣⲧ ⲉⲛⲉϥⲟⲩⲉⲣⲏⲧⲉ ⲁⲩⲱ ⲁⲥϯⲡⲓ ⲉⲛⲉϥϭⲓϫ ·",
+      "english": "“And when the disciples had heard this, they fell down, adored Jesus and said Blessed are we beyond all men, because thou hast revealed unto us these great wonders.” They continued, besought him and said: “We beseech thee, reveal unto us: What are then these ways?” And Mary drew nigh unto him, fell down, adored his feet and kissed his hands”",
+      "source": "Pistis Sophia Book 4 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:120-128",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲓⲗ",
+        1,
+        17.791
+      ],
+      [
+        "ϫⲟⲩⲧⲏ",
+        1,
+        12.836
+      ],
+      [
+        "ϣⲟⲩ",
+        1,
+        12.543
+      ],
+      [
+        "ⲕⲣⲟ",
+        1,
+        10.641
+      ],
+      [
+        "ⲏ",
+        2,
+        9.672
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.027
+      ],
+      [
+        "ⲉ",
+        4,
+        8.01
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        7.464
+      ],
+      [
+        "ⲙⲟⲟϣⲉ",
+        1,
+        7.429
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.168
+      ],
+      [
+        "ⲉⲓⲣⲉ",
+        1,
+        7.001
+      ],
+      [
+        "ⲉϫⲱ",
+        1,
+        6.939
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.701
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.658
+      ],
+      [
+        "ϭⲉ",
+        1,
+        6.643
+      ],
+      [
+        "ⲛⲟϭ",
+        1,
+        6.491
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.477
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        5.872
+      ],
+      [
+        "ⲧⲣⲉ",
+        1,
+        5.857
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϩⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲛⲉ_0_node",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲓⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲓⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϩⲓⲛⲉ",
+          "ϩⲓⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ϩⲓⲛⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ϩⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ϩⲓⲛⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          "ⲉⲧⲉ_1_post_ϩⲓⲛⲉ",
+          1
+        ],
+        [
+          "ⲉⲧⲉ_1_post_ϩⲓⲛⲉ",
+          "ⲛⲁⲓ_2_post_ⲛⲉ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϩⲓⲛⲉ",
+          "ϩⲓⲛⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3829,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6703",
+      "label": "ϩⲓⲛⲓⲉ",
+      "pos": "N",
+      "gloss": "steering-oar, rudder"
+    }
+  ],
+  "etym": {
+    "egy_num": "123230",
+    "egy_lemma": "ẖni̯",
+    "demo_num": "dm1031",
+    "demo_lemma": "ẖn",
+    "english": "to convey by water; to row",
+    "german": "(jmdn.) fahren; rudern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/123230",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm1031"
+  }
+}

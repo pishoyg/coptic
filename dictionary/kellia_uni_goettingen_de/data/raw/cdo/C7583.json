@@ -1,0 +1,207 @@
+{
+  "id": "C7583",
+  "forms": [
+    {
+      "id": "CF17225",
+      "orth": "ϭⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8966,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲁⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6162,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8410",
+      "bibliography": "CD 806a; CED 326; KoptHWb 448, 573; DELC 337a; ChLCS 106b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲓ ⲛⲏⲧⲛ ⲛϩⲉⲛϩⲟⲡⲗⲟⲛ ⲙⲛϩⲉⲛ**ϭⲗ** ⲛⲧⲉⲧⲉⲛⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲉⲡⲡⲟⲗⲉⲙⲟⲥ",
+      "english": "Take up arms and spears, and draw nigh to battle;",
+      "source": "Jeremiah 26",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:26",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϣⲁⲣⲉⲡⲉⲙϩⲓⲧ ⲥⲱⲕ ⲛⲟⲩⲧⲏⲩ ⲉϥⲕⲏⲃ ϣⲁⲣⲉⲡⲉⲕⲣⲩⲥⲧⲁⲗⲗⲟⲥ ⲱϭⲣ ϩⲓϫⲛⲙⲙⲟⲟⲩ ⲁⲩⲱ ⲉϥⲛⲏⲩ ⲉϫⲛⲥⲟⲟⲩϩⲥ ⲛⲓⲙ ⲙⲙⲟⲟⲩ ⲁⲩⲱ ϣⲁϥ**ϭⲗ**ⲡⲙⲟⲟⲩ ⲛⲧϩⲉ ⲛⲟⲩϩⲱⲕ",
+      "english": "When the cold north wind bloweth, and the water is congealed into ice, it abideth upon every gathering together of water, and clotheth the water as with a breastplate.",
+      "source": "Sirach 43",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:43",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲟⲡⲗⲟⲛ",
+        1,
+        13.765
+      ],
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        10.074
+      ],
+      [
+        "ϩⲉⲛ",
+        2,
+        10.074
+      ],
+      [
+        "ⲧⲉ",
+        2,
+        9.803
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ϥ",
+        1,
+        3.522
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲛ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϭⲗ_0_node",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_1_post_ϭⲗ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲛ_1_pre_ϭⲗ",
+          "ϩⲉⲛ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ϭⲗ",
+          "ϭⲗ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ϭⲗ",
+          "ϣⲁ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϣⲁ_1_pre_ϭⲗ",
+          "ϥ_1_pre_ϭⲗ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϭⲗ",
+          "ϭⲗ_0_node",
+          1
+        ],
+        [
+          "ϭⲗ_0_node",
+          "ⲡ_2_post_ⲙⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙⲟⲟⲩ",
+          "ⲙⲟⲟⲩ_1_post_ϭⲗ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 8512,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "161670",
+    "egy_lemma": "qrꜥ.w",
+    "demo_num": "d6891",
+    "demo_lemma": "glꜥ",
+    "english": "shield (Sem. loan word)",
+    "german": "Schild",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/161670",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6891"
+  }
+}

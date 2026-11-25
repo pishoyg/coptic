@@ -1,0 +1,135 @@
+{
+  "id": "C352",
+  "forms": [
+    {
+      "id": "CF1528",
+      "orth": "ⲧⲁⲓⲃⲉⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19912,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS390",
+      "bibliography": "CD 30b; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲛⲡⲓⲥⲧⲓⲥ ⲇⲉ ⲟⲩⲁⲧϭⲟⲙ ⲡⲉ ⲉⲣⲁⲛⲁϥ . ϣϣⲉ ⲅⲁⲣ ⲉⲡⲉⲧⲛⲁϯ ⲡⲉϥⲟⲩⲟⲉⲓ ⲉⲡⲛⲟⲩⲧⲉ ⲉⲡⲓⲥⲧⲉⲩⲉ ϫⲉϥϣⲟⲟⲡ ⲁⲩⲱ ϫⲉϥⲛⲁϣⲱⲡⲉ ⲛ**ⲧⲁⲓⲃⲉⲕⲉ** ⲛⲛⲉⲧϣⲓⲛⲉ ⲛⲥⲱϥ .",
+      "english": "Without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.",
+      "source": "58_Hebrews_11",
+      "urn": "urn:cts:copticLit:nt.heb.sahidica:11",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲓⲛⲉ",
+        1,
+        10.455
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        8.024
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19523,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C356",
+      "label": "ϫⲁⲓⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-taker, hireling"
+    },
+    {
+      "target": "C355",
+      "label": "ϫⲓ ⲉⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "take at a wage, hire"
+    },
+    {
+      "target": "C354",
+      "label": "ϫⲓ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "receive wage"
+    },
+    {
+      "target": "C351",
+      "label": "ϯ ⲙⲡⲃⲉⲕⲉ",
+      "pos": "V",
+      "gloss": "pay wage, reward"
+    },
+    {
+      "target": "C358",
+      "label": "ⲁⲧⲃⲉⲭⲉ",
+      "pos": "N",
+      "gloss": "wageless"
+    },
+    {
+      "target": "C350",
+      "label": "ⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage"
+    },
+    {
+      "target": "C353",
+      "label": "ⲣⲉϥϯⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage giver, hirer"
+    },
+    {
+      "target": "C357",
+      "label": "ⲣⲙⲃⲉⲕⲉ",
+      "pos": "N",
+      "gloss": "wage-man, hireling"
+    }
+  ]
+}

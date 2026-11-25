@@ -1,0 +1,58 @@
+{
+  "id": "C7275",
+  "forms": [
+    {
+      "id": "CF16609",
+      "orth": "ⲙⲟⲩⲣϫⲛⲁϩ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8037",
+      "bibliography": "CD 777b; KoptHWb 428; DELC 329a; ChLCS 103a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C1991",
+      "type": "cf",
+      "label": "bind, gird, tie"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7273",
+      "label": "ϫⲓ ⲛϫⲛⲁϩ",
+      "pos": "V",
+      "gloss": "use violence, force, compel"
+    },
+    {
+      "target": "C7274",
+      "label": "ϫⲓ ⲛϫⲛⲁϩ",
+      "pos": "N",
+      "gloss": "violence, compulsion"
+    },
+    {
+      "target": "C7271",
+      "label": "ϫⲛⲁϩ",
+      "pos": "N",
+      "gloss": "forearm, wing; strength, violence"
+    },
+    {
+      "target": "C7272",
+      "label": "ⲛϫⲛⲁϩ",
+      "pos": "ADV",
+      "gloss": "violently, forcibly"
+    }
+  ]
+}

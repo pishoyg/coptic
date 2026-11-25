@@ -1,0 +1,150 @@
+{
+  "id": "C10474",
+  "forms": [
+    {
+      "id": "CF28056",
+      "orth": "ⲥⲕⲉⲡⲧⲱⲣ",
+      "dialect": null
+    },
+    {
+      "id": "CF28057",
+      "orth": "ⲥⲕⲉⲡⲧⲱⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11587,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF28058",
+      "orth": "ⲥⲕⲩⲡⲧⲱⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14178",
+      "bibliography": "DDGLC",
+      "cu_ID": "10054"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲛ ⲛⲉ**ⲥⲕⲉⲡⲧⲱⲣ** ⲧⲏⲣⲟⲩ ⲙⲛⲛⲉϩⲣⲏⲧⲱⲣ · ⲛⲁⲃⲱⲕ ⲛⲥⲉⲁⲣⲓⲥⲧⲁ ϩⲙⲡϫⲱⲕ ⲙⲡⲁϣⲙⲟⲩⲛ · ⲛⲧⲉⲡⲏⲓ ⲉⲛⲉⲩ ⲛϩⲏⲧϥ ϩⲉ ⲉϩⲣⲁⲓ ⲉϫⲱⲟⲩ · ⲛⲥⲉⲙⲟⲩ ⲧⲏⲣⲟⲩ ϩⲓⲟⲩⲥⲟⲡ ·",
+      "english": "And again, all the wise men and all the orators shall go and eat their midday meal together at the end of the eighth year after my death, and the house wherein they are shall fall upon them, and they shall all die together.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲉ",
+        2,
+        10.313
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        9.227
+      ],
+      [
+        "ⲧⲏⲣ",
+        1,
+        7.864
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉ_1_pre_ⲥⲕⲉⲡⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲡⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲕⲉⲡⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉ_1_pre_ⲥⲕⲉⲡⲧⲱⲣ",
+          "ⲥⲕⲉⲡⲧⲱⲣ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲉⲡⲧⲱⲣ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲕⲉⲡⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲕⲉⲡⲧⲱⲣ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙⲛ_2_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲣⲏⲧⲱⲣ",
+          "ⲛⲉ_2_post_ϩⲣⲏⲧⲱⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11155,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "6754",
+    "grl_lemma": "σκέπτωρ",
+    "grl_meaning": "scribe",
+    "grl_pos": "noun",
+    "grl_ref": "cf. du Cange 347a, s.v. ἐκσκέπτωρ"
+  }
+}

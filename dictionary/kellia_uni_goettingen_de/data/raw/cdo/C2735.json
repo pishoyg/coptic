@@ -1,0 +1,109 @@
+{
+  "id": "C2735",
+  "forms": [
+    {
+      "id": "CF7287",
+      "orth": "ⲟⲃ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3129",
+      "bibliography": "CD 254a; KoptHWb 139, 528"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉⲗⲟⲥ",
+        1,
+        15.525
+      ],
+      [
+        "ⲉϩⲉⲩ",
+        1,
+        15.373
+      ],
+      [
+        "ⲗ",
+        1,
+        14.172
+      ],
+      [
+        "ϣⲟ",
+        2,
+        14.058
+      ],
+      [
+        "ⲉϩⲱⲟⲩ",
+        1,
+        12.187
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        9.973
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        8.835
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        1,
+        6.897
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲡ",
+        1,
+        4.619
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲃ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2736",
+      "label": "ϯⲟⲃ",
+      "pos": "V",
+      "gloss": "reject, to be wroth with"
+    }
+  ],
+  "etym": {
+    "egy_num": "36300",
+    "egy_lemma": "ꜥb.w",
+    "demo_num": "d9243",
+    "demo_lemma": "ꜥb.w",
+    "english": "impurity; taint",
+    "german": "Unheil; Sündhaftes; Schmutz; Infektion",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/36300",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d9243"
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "id": "C5869",
+  "forms": [
+    {
+      "id": "CF13736",
+      "orth": "ϣⲏⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.94,
+        "rank": 273,
+        "count": 621
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6551",
+      "bibliography": "CD 563b; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϣⲁⲧⲛⲟⲩϣⲉⲉⲣⲉ **ϣⲏⲙ** ⲙⲙⲁⲧⲉ ⲛⲧⲁϥ .",
+      "english": "except for only a young girl belonging to him.",
+      "source": "Apophthegmata Patrum Sahidic 099: Anonymous N 293",
+      "urn": "urn:cts:copticLit:ap.99.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲃⲟⲗ ϫⲉⲁⲛⲅⲟⲩϣⲏⲣⲉ **ϣⲏⲙ** ⲉⲓϩⲛϫⲟⲩⲱⲧⲉ ⲛⲣⲟⲙⲡⲉ ·",
+      "english": "I am a young man twenty years of age.",
+      "source": "Martyrdom of Victor part 8",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:86-90",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲡϩⲱⲃ ⲙⲟⲧⲛ ⲙⲡⲣⲛⲕⲟⲧⲕ ϩⲓⲧⲙⲏ · ⲉⲕⲣⲥⲛⲁⲩ ⲛⲧⲕⲟⲩϣⲏⲣⲉ **ϣⲏⲙ** ·",
+      "english": "When it becomes quiet, do not sleep upon a mat two of you together for thou art a young man.",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲏⲣⲉ",
+        347,
+        24.328
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        154,
+        23.587
+      ],
+      [
+        "ⲛ",
+        423,
+        20.704
+      ],
+      [
+        "ⲁ",
+        276,
+        20.091
+      ],
+      [
+        "ϥ",
+        295,
+        19.857
+      ],
+      [
+        "ⲡ",
+        289,
+        19.743
+      ],
+      [
+        "ⲙⲛⲧϣⲏⲣⲉ",
+        20,
+        19.331
+      ],
+      [
+        "ⲉ",
+        190,
+        18.248
+      ],
+      [
+        "ⲟⲩ",
+        164,
+        18.014
+      ],
+      [
+        "ϣⲏⲙ",
+        40,
+        18.007
+      ],
+      [
+        "ⲙ",
+        138,
+        17.398
+      ],
+      [
+        "ⲙⲛ",
+        102,
+        17.383
+      ],
+      [
+        "ⲧ",
+        116,
+        17.366
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        17.32
+      ],
+      [
+        "ⲥ",
+        109,
+        17.3
+      ],
+      [
+        "ⲁⲩⲱ",
+        122,
+        17.261
+      ],
+      [
+        ".",
+        80,
+        16.245
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        23,
+        15.885
+      ],
+      [
+        "ϫⲉ",
+        77,
+        15.668
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        33,
+        15.48
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲏⲙ_0_node",
+          506
+        ],
+        [
+          "ϣⲏⲙ_1_post_ϣⲏⲙ",
+          14
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          9
+        ],
+        [
+          "ⲛⲉϩ_2_post_ⲛ",
+          3
+        ],
+        [
+          "ⲧⲃⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲏⲙ",
+          5
+        ],
+        [
+          "ⲕⲉ_1_pre_ϣⲏⲙ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲧⲃⲧ",
+          2
+        ],
+        [
+          "ⲧⲃⲧ_1_post_ϣⲏⲙ",
+          2
+        ],
+        [
+          "ⲉ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲛⲁⲩ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲧⲣⲟⲫⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲏⲙ",
+          2
+        ],
+        [
+          "ⲡ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲧⲟϣ_2_post_ⲛⲁⲑⲗⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_pre_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_1_pre_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲉⲓϣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲁⲇⲉⲓⲥⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧϣⲉⲉⲣⲉ_1_pre_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲥⲁⲙⲟⲩⲏⲗ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϣⲏⲙ_0_node",
+          "ϣⲏⲙ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲛ_1_post_ϣⲏⲙ",
+          6
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ⲛⲉϩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ⲧⲃⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ϣⲏⲙ",
+          "ϣⲏⲙ_0_node",
+          4
+        ],
+        [
+          "ⲕⲉ_1_pre_ϣⲏⲙ",
+          "ϣⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲛ_2_post_ⲧⲃⲧ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲧⲃⲧ",
+          "ⲧⲃⲧ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲉ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ϣⲏⲙ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲉⲙⲁⲧⲉ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲙ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲏⲙ",
+          "ⲙⲟⲟⲩ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲥⲛⲁⲩ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ⲧⲣⲟⲫⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲉ_1_pre_ϣⲏⲙ",
+          "ⲟⲩ_1_pre_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ϩⲙ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲏⲙ",
+          "ⲡ_3_post_ⲧⲟϣ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ⲧⲟϣ",
+          "ⲧⲟϣ_2_post_ⲛⲁⲑⲗⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_pre_ϯⲟⲩ",
+          "ⲡ_2_pre_ϯⲟⲩ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϯⲟⲩ",
+          "ϯⲟⲩ_1_pre_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϯⲟⲩ_1_pre_ϣⲏⲙ",
+          "ϣⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          "ⲟⲉⲓϣ_3_post_ⲟⲩ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ϥ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲉⲧ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϣⲏⲙ",
+          "ϩⲙ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ϣⲏⲙ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲡⲁⲣⲁⲇⲉⲓⲥⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲧϣⲉⲉⲣⲉ_1_pre_ϣⲏⲙ",
+          "ϣⲏⲙ_0_node",
+          1
+        ],
+        [
+          "ϣⲏⲙ_0_node",
+          "ⲥⲁⲙⲟⲩⲏⲗ_1_post_ϣⲏⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ϣⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲏⲙ",
+          "ϩⲓⲥⲉ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 3.91,
+      "rank": 232,
+      "count": 621
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5867",
+      "label": "ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "small person, thing, quantity"
+    },
+    {
+      "target": "C5872",
+      "label": "ϣⲏⲙ ϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "little by little, gradually"
+    },
+    {
+      "target": "C5871",
+      "label": "ⲕⲟⲩⲓ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "little child"
+    },
+    {
+      "target": "C5874",
+      "label": "ⲙⲛⲧⳉⲏⲙ",
+      "pos": "N",
+      "gloss": "smallness, childhood"
+    },
+    {
+      "target": "C5868",
+      "label": "ⲛⲟⲩϣⲏⲙ",
+      "pos": "ADV",
+      "gloss": "a little"
+    },
+    {
+      "target": "C5873",
+      "label": "ⲣϣⲏⲙ ϣⲏⲙ",
+      "pos": "V",
+      "gloss": "make little"
+    },
+    {
+      "target": "C5870",
+      "label": "ⲥⲁⲃⲃⲁⲧ ϣⲏⲙ",
+      "pos": "N",
+      "gloss": "Saturday before Passion week"
+    }
+  ],
+  "etym": {
+    "egy_num": "116910",
+    "egy_lemma": "ḫm",
+    "demo_num": "d4499",
+    "demo_lemma": "ḫm",
+    "english": "to not know; to be ignorant of",
+    "german": "nicht wissen; negieren",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/116910",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4499"
+  }
+}

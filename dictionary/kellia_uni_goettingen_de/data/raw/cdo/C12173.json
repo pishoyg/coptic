@@ -1,0 +1,485 @@
+{
+  "id": "C12173",
+  "forms": [
+    {
+      "id": "CF33185",
+      "orth": "ⲧⲱⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3457,
+        "count": 10
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17177",
+      "bibliography": "CD 425a; KoptHWB 242"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲟⲧⲉ ⲡⲉϫⲁϥ ⲛⲃⲓⲃⲣⲟⲥ ϫⲉϫⲓ ⲛⲙⲙⲁⲕ ⲛⲥⲟⲛ ⲥⲛⲁⲩ · ⲉⲟⲩⲛϩⲉⲛⲃⲓⲣ ⲛⲧⲟⲟⲧⲟⲩ · ⲙⲛϩⲉⲛ**ⲧⲱⲣⲉ** · ⲛⲧⲉⲧⲛⲟⲩⲉϩⲧⲏⲩⲧⲛ ⲛⲥⲱⲓ ·",
+      "english": "Then he said to Birros, 'Take with thee two brethren, and let them have baskets in their hands, and digging tools, and follow ye me.'",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁϥⲥⲉⲡⲥⲱⲡϥ ⲉⲙⲁⲧⲉ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲧⲁϣⲉⲉⲣⲉ ⲙⲟⲕϩ ⲛϣⲱⲛⲉ ϫⲉⲕⲁⲁⲥ ϭⲉ ⲉⲕⲉⲉⲓ ⲛⲅⲕⲁ**ⲧⲟⲟⲧ**ⲕ ϩⲓϫⲱⲥ ϫⲉⲉⲥⲉⲗⲟ ⲛⲥⲱⲛϩ",
+      "english": "and begged him much, saying, 'My little daughter is at the point of death. Please come and lay your hands on her, that she may be made healthy, and live.'",
+      "source": "Mark Chapter 5",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲛϣⲁⲛⲣⲁⲧϭⲟⲙ ϣⲁⲩϯ**ⲧⲟⲟⲧ**ⲛ · ϩⲓⲧⲛⲛⲉⲛⲥⲛⲏⲩ ·",
+      "english": "When we are weak our brethren reach out their hands to help us,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲱⲣϭ",
+        1,
+        12.067
+      ],
+      [
+        "ϣⲏⲧⲥ",
+        1,
+        11.067
+      ],
+      [
+        "ⲟⲩⲉϩ",
+        2,
+        8.607
+      ],
+      [
+        "ⲉⲅⲗⲱⲙ",
+        1,
+        8.607
+      ],
+      [
+        "ⲛ",
+        18,
+        7.787
+      ],
+      [
+        "ⲧⲉⲥ",
+        3,
+        7.753
+      ],
+      [
+        "ⲃⲱ",
+        2,
+        7.504
+      ],
+      [
+        "ⲟⲙⲥ",
+        1,
+        7.482
+      ],
+      [
+        "ⲛⲟⲩϩⲉ",
+        1,
+        7.112
+      ],
+      [
+        "ⲕⲗⲁⲇⲟⲥ",
+        1,
+        6.857
+      ],
+      [
+        "ⲥⲏϥⲉ",
+        2,
+        6.398
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        1,
+        5.482
+      ],
+      [
+        "ⲥⲟⲧⲉ",
+        1,
+        5.352
+      ],
+      [
+        "ⲧ",
+        6,
+        5.294
+      ],
+      [
+        "ⲧⲱϭⲉ",
+        1,
+        5.055
+      ],
+      [
+        "ⲥⲃⲱ",
+        1,
+        4.078
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        3.654
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        2,
+        3.147
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        2,
+        2.917
+      ],
+      [
+        "ϩⲓϫⲛ",
+        1,
+        2.882
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          9
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲧⲱⲣⲉ",
+          "ⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲥⲏϥⲉ_3_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲧⲱⲣⲉ",
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲧⲱⲣⲉ",
+          "ⲧⲱⲣⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲱⲣⲉ_0_node",
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲱⲃ",
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          1
+        ],
+        [
+          "ϩⲱⲃ_1_post_ⲧⲱⲣⲉ",
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ϩⲱⲃ",
+          "ⲙ_2_post_ϩⲱⲃ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.33,
+      "rank": 339,
+      "count": 370
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4480",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "grasp hand, greet, promise, engage"
+    },
+    {
+      "target": "C4481",
+      "label": "ϣⲡⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "engagement gift"
+    },
+    {
+      "target": "C4455",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4456",
+      "label": "ϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4463",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee, undertake"
+    },
+    {
+      "target": "C4464",
+      "label": "ϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4487",
+      "label": "ϩⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "under the hand of, beside, with"
+    },
+    {
+      "target": "C4488",
+      "label": "ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4459",
+      "label": "ϫⲓϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4467",
+      "label": "ϫⲓϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "take as a guarantee"
+    },
+    {
+      "target": "C4482",
+      "label": "ϫⲓⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "receive a promise"
+    },
+    {
+      "target": "C4475",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "give a hand, help"
+    },
+    {
+      "target": "C4476",
+      "label": "ϯ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "hand, assistance, help"
+    },
+    {
+      "target": "C4458",
+      "label": "ϯϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4466",
+      "label": "ϯϣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "give a guarantee"
+    },
+    {
+      "target": "C4474",
+      "label": "ⲁⲧⲕⲁ ⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "continuous, incessant"
+    },
+    {
+      "target": "C4465",
+      "label": "ⲃⲱⲗϣⲧⲱⲣⲉ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "dissolve a guarantee"
+    },
+    {
+      "target": "C4489",
+      "label": "ⲉⲃⲟⲗ ϩⲓⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "by the hand of, through, by, from"
+    },
+    {
+      "target": "C4486",
+      "label": "ⲉⲃⲟⲗ ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "from"
+    },
+    {
+      "target": "C4472",
+      "label": "ⲉⲓⲛⲉ ⲛⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "put a hand on"
+    },
+    {
+      "target": "C4471",
+      "label": "ⲉⲓⲣⲉ ⲛⲁⲧⲟⲟⲧ⸗",
+      "pos": "V",
+      "gloss": "endeavour"
+    },
+    {
+      "target": "C4457",
+      "label": "ⲉⲣⲡϣⲡⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "guarantee"
+    },
+    {
+      "target": "C4484",
+      "label": "ⲉⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "to hand of, to"
+    },
+    {
+      "target": "C4473",
+      "label": "ⲕⲱ ⲛⲧⲟⲟⲧ⸗ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "\"loosen hand\", cease, despair, renounce"
+    },
+    {
+      "target": "C4468",
+      "label": "ⲙⲉⲧϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4479",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "help"
+    },
+    {
+      "target": "C4462",
+      "label": "ⲙⲛⲧⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "surety, guarantee"
+    },
+    {
+      "target": "C4483",
+      "label": "ⲛⲥⲁⲧⲟⲟⲧ⸗",
+      "pos": "ADV",
+      "gloss": "immediately"
+    },
+    {
+      "target": "C4485",
+      "label": "ⲛⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "in, by the hand of, by, with, beside, from"
+    },
+    {
+      "target": "C4460",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4461",
+      "label": "ⲣⲉϥϣⲡⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4477",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4478",
+      "label": "ⲣⲉϥϯⲧⲟⲟⲧ⸗",
+      "pos": "N",
+      "gloss": "helper"
+    },
+    {
+      "target": "C4469",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4470",
+      "label": "ⲣⲙϣⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "guarantor"
+    },
+    {
+      "target": "C4454",
+      "label": "ⲣⲧⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "clap hands, beat time, stamp, make music"
+    },
+    {
+      "target": "C4453",
+      "label": "ⲧⲱⲣⲉ",
+      "pos": "N",
+      "gloss": "hand"
+    }
+  ]
+}

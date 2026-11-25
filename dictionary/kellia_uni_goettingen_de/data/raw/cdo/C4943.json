@@ -1,0 +1,88 @@
+{
+  "id": "C4943",
+  "forms": [
+    {
+      "id": "CF11851",
+      "orth": "ϯ ⲙⲡⲟⲩⲟⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5568",
+      "bibliography": "CD 472ab; KoptHWb 268; ChLCS 66b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4946",
+      "label": "ϫⲓ ⲙⲡⲟⲩⲟⲉⲓ",
+      "pos": "V",
+      "gloss": "take way, go"
+    },
+    {
+      "target": "C4945",
+      "label": "ϫⲓⲛϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "onrush, attack"
+    },
+    {
+      "target": "C4947",
+      "label": "ϭⲓⲛϯⲡⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "act of going"
+    },
+    {
+      "target": "C4940",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "walk around, seek, proceed"
+    },
+    {
+      "target": "C4941",
+      "label": "ϯⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "progress, impetuosity"
+    },
+    {
+      "target": "C4944",
+      "label": "ϯⲡⲉϥⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4942",
+      "label": "ϯⲡⲟⲩⲟⲓ",
+      "pos": "V",
+      "gloss": "go forward"
+    },
+    {
+      "target": "C4939",
+      "label": "ⲛⲟⲩⲟⲉⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    },
+    {
+      "target": "C4938",
+      "label": "ⲟⲩⲟⲓ",
+      "pos": "N",
+      "gloss": "rush, course"
+    }
+  ]
+}

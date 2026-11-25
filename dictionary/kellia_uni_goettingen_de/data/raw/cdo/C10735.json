@@ -1,0 +1,66 @@
+{
+  "id": "C10735",
+  "forms": [
+    {
+      "id": "CF29159",
+      "orth": "ⲧⲏⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF29162",
+      "orth": "ⲧⲏⲙⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29160",
+      "orth": "ⲇⲩⲙⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF29161",
+      "orth": "ⲇⲩⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6205,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14753",
+      "bibliography": "DDGLC",
+      "cu_ID": "4498"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲧⲉⲭⲛⲓⲧⲏⲥ ⲇⲉ ⲛⲧⲉⲣⲉⲡⲉϥϩⲏⲧ ϣⲱⲡⲉ ⲙⲙⲟϥ ⲉⲃⲟⲗ ⲛⲧϩⲟⲧⲉ ⲛⲧⲁⲥⲧⲁϩⲟϥ · ⲁϥⲁⲡⲁⲅⲕⲉⲓⲗⲉ ⲉⲡⲣⲣⲟ ⲙⲛⲡ**ⲇⲏⲙⲟⲥ** ⲧⲏⲣϥ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉⲁⲓⲛⲁⲩ ⲉⲩⲛⲟϭ ⲛⲉϭⲱϣ ·",
+      "english": "And when the workman had recovered from the attack of terror which had come upon him, he proclaimed to the Emperor and to all the people, saying, 'I saw a huge creature",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12792,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "480",
+    "grl_lemma": "δῆμος",
+    "grl_meaning": "district, country, people",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 386b; Preisigke 1:336"
+  }
+}

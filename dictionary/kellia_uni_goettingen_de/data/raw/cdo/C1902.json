@@ -1,0 +1,105 @@
+{
+  "id": "C1902",
+  "forms": [
+    {
+      "id": "CF5451",
+      "orth": "ⲙⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 100.58,
+        "rank": 19,
+        "count": 15869
+      }
+    },
+    {
+      "id": "CF5452",
+      "orth": "ⲛⲙ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.64,
+        "rank": 366,
+        "count": 416
+      }
+    },
+    {
+      "orth": "ⲛⲉⲙⲏ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.23,
+        "rank": 427,
+        "count": 189
+      }
+    },
+    {
+      "orth": "ⲛⲙⲙⲁ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 14.18,
+        "rank": 90,
+        "count": 2238
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS2213",
+      "bibliography": "CD 170a; KoptHWb 93"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩϫⲟⲟⲥ ⲉⲧⲃⲉⲁⲡⲁ ⲑⲉⲱⲇⲱⲣⲟⲥ · **ⲙⲛ** ⲁⲡⲁ ⲗⲟⲩⲕⲓⲁⲛⲟⲥ ⲛⲁⲡϩⲉⲛⲁⲧⲟⲛ . ϫⲉⲁⲩⲣⲧⲁⲓⲟⲩ ⲛⲣⲟⲙⲡⲉ ⲉⲩⲣϩⲁⲗ ⲙⲡⲉⲩⲙⲉⲉⲩⲉ ⲙⲙⲓⲛⲙⲙⲟⲟⲩ , ϫⲉⲉⲣϣⲁⲛⲧⲉⲡⲣⲱ ⲟⲩⲉⲓⲛⲉ ⲧⲛⲛⲁⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ϩⲙⲡⲉⲓⲙⲁ ·",
+      "english": "They said about Apa Theodoros and Apa Lucius of Enaton that they spent fifty years tricking their thoughts,saying, 'When winter has passed, we will flee this place.'",
+      "source": "Apophthegmata Patrum Sahidic 036",
+      "urn": "urn:cts:copticLit:ap.36.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲓϣⲁⲛϣⲁϫⲉ ⲛⲛⲁⲥⲡⲉ ⲛⲛⲣⲱⲙⲉ**ⲙⲛ**ⲧⲁ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲙⲛⲧⲁⲓⲁⲅⲁⲡⲏ ⲇⲉ ⲙⲙⲁⲩ ⲛⲧⲁⲓⲣⲧϩⲉ ⲛⲟⲩϩⲟⲙⲛⲧ ⲉϥϯϩⲣⲟⲟⲩ ⲏ ⲟⲩⲕⲩⲙⲃⲁⲗⲟⲛ ⲉϥⲱϣ ⲉⲃⲟⲗ .",
+      "english": "If I speak with the languages of men and of angels, but don&apos;t have love, I have become sounding brass, or a clanging cymbal.",
+      "source": "46_1 Corinthians_13",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲉⲥⲣⲁϣⲉ ⲉϫⲙⲡϫⲓ ⲛϭⲟⲛⲥ . ϣⲁⲥⲣⲁϣⲉ ⲛⲧⲟϥ **ⲙⲛ**ⲧⲙⲉ .",
+      "english": "doesn&apos;t rejoice in unrighteousness, but rejoices with the truth;",
+      "source": "46_1 Corinthians_13",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:13",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C1901",
+      "label": "ⲙⲛ-",
+      "pos": "PREP",
+      "gloss": "with"
+    },
+    {
+      "target": "C12036",
+      "label": "ⲱ ⲛⲉⲙ-",
+      "pos": "PREP",
+      "gloss": "O!,and O! (exclamatory)"
+    }
+  ],
+  "etym": {
+    "egy_num": "29840",
+    "egy_lemma": "jrm",
+    "demo_num": "d646",
+    "demo_lemma": "ı ͗rm",
+    "english": "together with",
+    "german": "zusammen mit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/29840",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d646"
+  }
+}

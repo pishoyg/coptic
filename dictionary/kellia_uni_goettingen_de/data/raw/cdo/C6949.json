@@ -1,0 +1,147 @@
+{
+  "id": "C6949",
+  "forms": [
+    {
+      "id": "CF15949",
+      "orth": "ⲣϩⲧⲟⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14596,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7669",
+      "bibliography": "CD 727a; KoptHWb 399; ChLCS 97b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲃⲁⲗⲁϩⲁⲙ ⲛⲃⲁⲣⲁⲕ ϫⲉⲟⲩ ⲡⲉⲛⲧⲁⲓⲁⲁϥ ⲛⲁⲕ ⲙⲏ ⲛⲧⲁⲓϫⲟⲟⲥ ⲛⲁⲕ ⲁⲛ ϫⲉⲡⲉⲧⲉⲣⲉⲡⲛⲟⲩⲧⲉ ⲛⲁⲧⲁⲁϥ ⲉⲧⲁⲧⲁⲡⲣⲟ ⲛⲁⲓ ⲛⲉ ⲉⲧⲛⲁ**ⲣϩⲧⲟⲣ** ⲉⲣⲟⲓ ⲉⲧⲣⲁϫⲟⲟⲩ",
+      "english": "And Balaam said to Balac, Whatsoever the Lord shall put into my mouth, shall I not take heed to speak this?",
+      "source": "Numbers 23",
+      "urn": "urn:cts:copticLit:ot.num.coptot:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲣ",
+        1,
+        12.032
+      ],
+      [
+        "ⲛⲁⲓ",
+        1,
+        8.91
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲛⲉ",
+        1,
+        7.313
+      ],
+      [
+        "ⲓ",
+        1,
+        6.85
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲁ_1_pre_ⲣϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲣϩⲧⲟⲣ_0_node",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲁ_1_pre_ⲣϩⲧⲟⲣ",
+          "ⲣϩⲧⲟⲣ_0_node",
+          1
+        ],
+        [
+          "ⲣϩⲧⲟⲣ_0_node",
+          "ⲉⲣⲟ_1_post_ⲣϩⲧⲟⲣ",
+          1
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣϩⲧⲟⲣ",
+          "ⲓ_2_post_ⲉⲣⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 14194,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6948",
+      "label": "ϩⲧⲟⲣ",
+      "pos": "N",
+      "gloss": "necessity, constraint"
+    },
+    {
+      "target": "C6950",
+      "label": "ϯϩⲧⲟⲣ",
+      "pos": "V",
+      "gloss": "put constraint, compel"
+    }
+  ]
+}

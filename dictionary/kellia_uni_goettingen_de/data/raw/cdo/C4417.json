@@ -1,0 +1,118 @@
+{
+  "id": "C4417",
+  "forms": [
+    {
+      "id": "CF10786",
+      "orth": "ⲧⲟⲡⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18703,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5003",
+      "bibliography": "CD 423a; KoptHWb 240; DELC 219a; ChLCS 60a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲙⲡⲉⲕⲉⲓⲱⲧ ⲙⲛⲧⲉⲕⲙⲁⲁⲩ ⲉⲕⲛⲁⲥⲱⲟⲩϩ ⲅⲁⲣ ⲉϩⲟⲩⲛ ϩⲛⲧⲙⲏⲧⲉ ⲛϩⲉⲛⲛⲟϭ ⲙⲏⲡⲟⲧⲉ ⲛⲅⲣⲡⲱⲃϣ ⲙⲡⲉⲩⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲅⲣⲥⲟϭ ⲛⲧⲉⲕ**ⲧⲟⲡⲥ** ⲛⲅⲟⲩⲱϣ ⲉⲛⲉⲙⲡⲟⲩϫⲡⲟⲕ ⲛⲅⲥϩⲟⲩⲣⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲩⲙⲁⲥⲧⲕ",
+      "english": "Remember thy father and thy mother, when thou sittest among great men. Be not forgetful before them, and so thou by thy custom become a fool, and wish that thou hadst not been born, and curse they day of thy nativity.",
+      "source": "Sirach 23",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲟⲩϩⲗⲗⲟ· ϫⲉϣⲁⲣⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ ⲟⲩⲱϩ ⲉϫⲛⲛϣⲱⲱⲧ ⲙⲡⲙⲟⲛⲁⲭⲟⲥ ⲉⲣϣⲁⲛⲟⲩ**ⲧⲁⲁⲡⲥ** ⲱⲥⲕ ⲛⲙⲙⲁϥ ·",
+      "english": "A monk said, 'The devil dwells in failings of the monk, if a habit endures within him.",
+      "source": "Apophthegmata Patrum Sahidic 020: Failings",
+      "urn": "urn:cts:copticLit:ap.20.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲣⲥⲟϭ",
+        1,
+        15.691
+      ],
+      [
+        "ⲅ",
+        2,
+        11.239
+      ],
+      [
+        "ⲉⲛⲉ",
+        1,
+        10.965
+      ],
+      [
+        "ⲟⲩⲱϣ",
+        1,
+        9.413
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.87
+      ],
+      [
+        "ⲛ",
+        2,
+        5.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲧⲟⲡⲥ",
+          1
+        ],
+        [
+          "ⲧⲟⲡⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲕ_1_pre_ⲧⲟⲡⲥ",
+          "ⲧⲟⲡⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6581,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C4415",
+      "label": "ⲧⲱⲡ",
+      "pos": "V",
+      "gloss": "be accustomed, be familiar; accustom"
+    },
+    {
+      "target": "C4416",
+      "label": "ⲧⲱⲡ",
+      "pos": "N",
+      "gloss": "usage, custom"
+    }
+  ]
+}

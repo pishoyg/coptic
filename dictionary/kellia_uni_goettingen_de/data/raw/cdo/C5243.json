@@ -1,0 +1,157 @@
+{
+  "id": "C5243",
+  "forms": [
+    {
+      "id": "CF12455",
+      "orth": "ⲟⲩⲧⲱϩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14192,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS5887",
+      "bibliography": "CD 499a; KoptHWb 281"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲟⲥⲙ",
+        1,
+        15.644
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        11.08
+      ],
+      [
+        "ⲛⲉⲩ",
+        1,
+        8.816
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        6.644
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲧⲱϩ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13791,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5246",
+      "label": "ϣⲉ ⲛⲟⲩⲱϩ",
+      "pos": "N",
+      "gloss": "ladle"
+    },
+    {
+      "target": "C5252",
+      "label": "ϫⲓⲛⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5244",
+      "label": "ⲙⲁ ⲛⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "melting pot"
+    },
+    {
+      "target": "C5249",
+      "label": "ⲟⲑⲉ",
+      "pos": "N",
+      "gloss": "footprint/trace (of water), channel, outlet"
+    },
+    {
+      "target": "C5247",
+      "label": "ⲟⲩⲟⲧϩ",
+      "pos": "N",
+      "gloss": "pouring thing, cup, bowl"
+    },
+    {
+      "target": "C5248",
+      "label": "ⲟⲩⲟⲧϩⲉ",
+      "pos": "N",
+      "gloss": "pouring thing, cup, bowl"
+    },
+    {
+      "target": "C5242",
+      "label": "ⲟⲩⲧⲱϩ",
+      "pos": "N",
+      "gloss": "molten thing"
+    },
+    {
+      "target": "C5241",
+      "label": "ⲟⲩⲱⲧϩ",
+      "pos": "V",
+      "gloss": "pour (liquid), cast (in mould), draw (water)"
+    },
+    {
+      "target": "C5250",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "pour"
+    },
+    {
+      "target": "C5251",
+      "label": "ⲟⲩⲱⲧϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "act of pouring"
+    },
+    {
+      "target": "C5245",
+      "label": "ⲣⲉϥⲟⲩⲱⲧϩ",
+      "pos": "N",
+      "gloss": "he that pours, cup-bearer, water-drawer"
+    }
+  ]
+}

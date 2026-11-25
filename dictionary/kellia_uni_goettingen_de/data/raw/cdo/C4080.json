@@ -1,0 +1,177 @@
+{
+  "id": "C4080",
+  "forms": [
+    {
+      "id": "CF10103",
+      "orth": "ⲧⲉⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5222,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲧⲉⲡⲓ",
+      "dialect": "B",
+      "id": "1567.1"
+    },
+    {
+      "orth": "ⲧⲉⲡⲉ",
+      "dialect": "B",
+      "id": "1567.2"
+    },
+    {
+      "orth": "ⲧⲏⲃⲓ",
+      "dialect": "F",
+      "id": "1567.3"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4634",
+      "bibliography": "CD 397a; CED 181; KoptHWb 220"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲛϧⲏ",
+        1,
+        16.11
+      ],
+      [
+        "ⲭⲏⲣⲁ",
+        1,
+        12.391
+      ],
+      [
+        "ⲥⲛⲟⲩϯ",
+        1,
+        12.037
+      ],
+      [
+        "ϧⲁ",
+        1,
+        8.853
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        8.304
+      ],
+      [
+        "ϯ",
+        2,
+        8.29
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        1,
+        8.071
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.117
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.754
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        1,
+        4.08
+      ],
+      [
+        "ⲛ",
+        1,
+        3.591
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲃⲓ_0_node",
+          2
+        ],
+        [
+          "ⲥⲛⲟⲩϯ_1_post_ⲧⲉⲃⲓ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲥⲛⲟⲩϯ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲭⲏⲣⲁ_4_post_ϯ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲃⲓ_0_node",
+          "ⲥⲛⲟⲩϯ_1_post_ⲧⲉⲃⲓ",
+          1
+        ],
+        [
+          "ⲥⲛⲟⲩϯ_1_post_ⲧⲉⲃⲓ",
+          "ⲛⲧⲉ_2_post_ⲥⲛⲟⲩϯ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ⲥⲛⲟⲩϯ",
+          "ϯ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϯ_3_post_ⲛⲧⲉ",
+          "ⲭⲏⲣⲁ_4_post_ϯ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.02,
+      "rank": 4733,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "etym": {
+    "egy_num": "183240",
+    "egy_lemma": "ḏbꜣ",
+    "demo_num": "d7094",
+    "demo_lemma": "tjb",
+    "english": "[a multi-colored kilt]",
+    "german": "[ein Schurz mit Tierschwanz]",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/183240",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7094"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "C3907",
+  "forms": [
+    {
+      "id": "CF9745",
+      "orth": "ⲣⲥⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4434",
+      "bibliography": "CD 375a; KoptHWb 206; ChLCS 52b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3909",
+      "label": "ϫⲓⲥⲁϣ",
+      "pos": "V",
+      "gloss": "receive wound, be wounded"
+    },
+    {
+      "target": "C3908",
+      "label": "ϯⲥⲁϣ",
+      "pos": "V",
+      "gloss": "give a blow"
+    },
+    {
+      "target": "C3904",
+      "label": "ⲣⲉϥⲥⲉϣⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "parricide"
+    },
+    {
+      "target": "C3905",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3906",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3903",
+      "label": "ⲥⲱϣ",
+      "pos": "V",
+      "gloss": "strike"
+    }
+  ]
+}

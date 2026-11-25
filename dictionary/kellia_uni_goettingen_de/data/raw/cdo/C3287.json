@@ -1,0 +1,59 @@
+{
+  "id": "C3287",
+  "forms": [
+    {
+      "id": "CF8462",
+      "orth": "ⲥⲉ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 37.11,
+        "rank": 35,
+        "count": 5855
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "note": "zur Bildung von Nomina loci agentis",
+    "tlapos": "Nominalpräfix"
+  },
+  "senses": [
+    {
+      "id": "CS3754",
+      "bibliography": "CD 316b; CED 145; KoptHWb 174; DELC 182; ChLCS 45a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ · ⲙⲡ**ⲥⲉ**ϣϭⲙϭⲟⲙ ⲉⲃⲟⲏⲑⲉⲓ ⲉⲡⲉⲥⲥⲱⲙⲁ ⲙⲙⲓⲛ ⲙⲙⲟⲥ ⲉⲧⲙⲧⲣⲉϥⲧⲁⲕⲟ ϩⲙⲡⲕⲁϩ ·",
+      "english": "For this reason it hath not the power to give help to its own body, and to prevent it from decaying in the earth.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓⲧⲱⲃϩ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲙⲡⲙⲉϩⲥⲉⲡⲥⲛⲁⲩ ⲛⲧϩⲉ ⲟⲛ ⲛⲧⲉϩⲟⲩⲉⲓⲧⲉ ⲛϩⲙⲉ ⲛϩⲟⲟⲩ ⲙⲛϩⲙⲉ ⲛⲟⲩϣⲏ ⲉⲙⲡⲓⲟⲩⲉⲙⲟⲉⲓⲕ ⲁⲩⲱ ⲉⲙⲡⲓ**ⲥⲉ**ⲙⲟⲟⲩ ⲁⲩⲱ ⲉⲓⲧⲱⲃϩ ⲉϫⲛⲛⲉⲧⲛⲛⲟⲃⲉ ⲧⲏⲣⲟⲩ ⲉⲛⲧⲁⲧⲉⲧⲛⲁⲁⲩ ⲉⲁⲧⲉⲧⲛⲉⲓⲣⲉ ⲙⲡⲡⲟⲛⲏⲣⲟⲛ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲡⲉⲧⲛⲛⲟⲩⲧⲉ ⲉϯϭⲱⲛⲧ ⲛⲁϥ",
+      "english": "And I made my petition before the Lord as also at the first forty days and forty nights: I ate no bread and drank no water, on account of all your sins which ye sinned in doing evil before the Lord God to provoke him.",
+      "source": "Deuteronomy 9",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲡⲓⲥⲧⲟⲥ ⲇⲉ ⲡⲉ ⲡⲛⲟⲩⲧⲉ . ϫⲉⲡⲉⲛϣⲁϫⲉ ⲉⲛⲧⲁϥⲡⲱϩ ϣⲁⲣⲱⲧⲛ ⲛⲟⲩ**ⲥⲉ** ⲁⲛ ⲡⲉ . ⲙⲛⲟⲩⲙⲙⲟⲛ .",
+      "english": "But as God is faithful, our word toward you was not 'Yes and no.'",
+      "source": "47_2 Corinthians_1",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3286",
+      "label": "ⲥⲉ",
+      "pos": "N",
+      "gloss": "seat, place"
+    }
+  ]
+}

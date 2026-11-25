@@ -1,0 +1,59 @@
+{
+  "id": "C6537",
+  "forms": [
+    {
+      "id": "CF32000",
+      "orth": "ϧⲉⲗⲗⲉⲃϣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF32001",
+      "orth": "ϧⲉⲗⲉⲃϣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF32002",
+      "orth": "ϧⲉⲗⲗⲓⲃϣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF32003",
+      "orth": "ϧⲉⲗⲓⲃϣ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2800,
+        "count": 8
+      }
+    },
+    {
+      "id": "CF15112",
+      "orth": "ϩⲁⲗⲃϣⲉ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7249",
+      "bibliography": "CD 668a; CED 288; KoptHWb 365; DELC 297a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "94010",
+    "egy_lemma": "rbš",
+    "demo_num": "d3662",
+    "demo_lemma": "lbš",
+    "english": "cuirass (of leather) (Sem. loan word)",
+    "german": "Panzer (aus Leder)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/94010",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d3662"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "C4855",
+  "forms": [
+    {
+      "id": "CF11675",
+      "orth": "ϯϭⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲧⲓϭⲉ",
+      "dialect": "S",
+      "id": "1698.1"
+    },
+    {
+      "orth": "ϫⲓϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2846,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5476",
+      "bibliography": "CD 464a; CDC 72a; CED 207; KoptHWb 262; DELC 227a; ChLCS 65a"
+    },
+    {
+      "id": "CS5477",
+      "bibliography": "CD 464a; CED 207; KoptHWb 262; DELC 227a; ChLCS 65a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4856",
+      "label": "ⲙⲁ ⲛϩⲁⲣⲉϩ ⲛϯϭⲉ",
+      "pos": "N",
+      "gloss": "hut of a garden watchman"
+    }
+  ],
+  "etym": {
+    "egy_num": "180950",
+    "egy_lemma": "dqr",
+    "demo_num": "d7499",
+    "demo_lemma": "tgj",
+    "english": "fruit (gen.)",
+    "german": "Frucht (allg.)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/180950",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7499"
+  }
+}

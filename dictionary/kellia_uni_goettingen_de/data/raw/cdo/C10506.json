@@ -1,0 +1,262 @@
+{
+  "id": "C10506",
+  "forms": [
+    {
+      "id": "CF28182",
+      "orth": "ⲥⲟⲫⲓⲥⲧⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF28183",
+      "orth": "ⲥⲟⲫⲓⲥⲧⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6279,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS14237",
+      "bibliography": "DDGLC",
+      "cu_ID": "7362"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲣϣⲡⲏⲣⲉ · ⲛⲧⲉⲕⲥⲟⲫⲓⲁ ⲛϭⲓⲛ**ⲥⲟⲫⲓⲥⲧⲏⲥ** ⲧⲏⲣⲟⲩ ⲙⲡⲕⲁϩ · ⲁⲩⲱ ⲁⲩⲁⲁⲡⲟⲣⲉⲓ ϩⲛⲛⲉⲕⲁⲡⲟⲗⲟⲅⲓⲁ ⲛⲧⲉⲡⲉⲓⲁⲓⲱⲛ ·",
+      "english": "All the wise folk that were in the land marvelled at thy wisdom, and they had need of thy advocacy in this world.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϩⲧⲟⲟⲩⲉ ⲇⲉ ϣⲱⲡⲉ ⲁⲥϣⲧⲟⲣⲧⲣ ⲛϭⲓⲧⲉϥⲯⲩⲭⲏ ⲁϥϫⲟⲟⲩ ⲁϥⲙⲟⲩⲧⲉ ⲉⲛⲣⲉϥⲟⲩⲉϩⲣⲁⲥⲟⲩ ⲧⲏⲣⲟⲩ ⲛⲕⲏⲙⲉ ⲙⲛⲛⲉϥ**ⲥⲟⲫⲓⲥⲧⲏⲥ** ⲧⲏⲣⲟⲩ ⲁⲫⲁⲣⲁⲱ ϫⲱ ⲉⲣⲟⲟⲩ ⲛⲧⲉϥⲣⲁⲥⲟⲩ ⲁⲩⲱ ⲙⲡⲟⲩϩⲉ ⲉⲡⲉⲧⲛⲁⲃⲟⲗⲥ ⲉⲫⲁⲣⲁⲱ",
+      "english": "And it was morning, and his soul was troubled; and he sent and called all the interpreters of Egypt, and all her wise men; and Pharao related to them his dream, and there was no one to interpret it to Pharao.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲙⲟⲩⲧⲉ ⲇⲉ ⲛϭⲓⲫⲁⲣⲁⲱ ⲉⲛ**ⲥⲟⲫⲓⲥⲧⲏⲥ** ⲛⲕⲏⲙⲉ ⲙⲛⲛⲣⲉϥⲣⲡⲁϩⲣⲉ ⲁⲩⲉⲓⲣⲉ ϩⲱⲟⲩ ϩⲓⲛⲁⲓ ⲛϭⲓⲛⲣⲉϥⲙⲟⲩⲧⲉ ⲛⲕⲏⲙⲉ ϩⲣⲁⲓ ϩⲛⲛⲉⲩⲙⲟⲩⲧⲉ",
+      "english": "But Pharao called together the wise men of Egypt, and the sorcerers, and the charmers also of the Egyptians did likewise with their sorceries.",
+      "source": "Exodus 7",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲁⲣⲁⲱ",
+        3,
+        15.922
+      ],
+      [
+        "ⲕⲏⲙⲉ",
+        2,
+        13.03
+      ],
+      [
+        "ⲥⲟⲫⲓⲁ",
+        1,
+        9.799
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.279
+      ],
+      [
+        "ⲛϭⲓ",
+        2,
+        9.234
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲧⲉⲕ",
+        1,
+        8.285
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        8.059
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.212
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.635
+      ],
+      [
+        "ⲙ",
+        1,
+        3.766
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ],
+      [
+        "ⲉ",
+        1,
+        3.232
+      ],
+      [
+        "ⲡ",
+        1,
+        2.912
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲟⲫⲓⲥⲧⲏⲥ_0_node",
+          3
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲣⲉϥⲣⲡⲁϩⲣⲉ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲟⲫⲓⲥⲧⲏⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲧⲏⲣ",
+          "ⲙ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          "ⲛⲉϥ_1_pre_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          "ⲥⲟⲫⲓⲥⲧⲏⲥ_0_node",
+          1
+        ],
+        [
+          "ⲥⲟⲫⲓⲥⲧⲏⲥ_0_node",
+          "ⲛ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲕⲏⲙⲉ_2_post_ⲛ",
+          "ⲙⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          "ⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲣⲉϥⲣⲡⲁϩⲣⲉ",
+          "ⲣⲉϥⲣⲡⲁϩⲣⲉ_1_post_ⲥⲟⲫⲓⲥⲧⲏⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5840,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "3115",
+    "grl_lemma": "σοφιστής",
+    "grl_meaning": "adept, expert, wise man; Sophist",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1622a; Preisigke 2:474"
+  }
+}

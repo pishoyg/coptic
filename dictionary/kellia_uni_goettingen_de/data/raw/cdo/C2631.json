@@ -1,0 +1,64 @@
+{
+  "id": "C2631",
+  "forms": [
+    {
+      "id": "CF7064",
+      "orth": "ⲛⲉϥⲟ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3017",
+      "bibliography": "KoptHWb 133; DELC 149"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2734",
+      "type": "cf",
+      "label": "great"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12090",
+      "label": "ϩⲙⲛⲓϥⲉ",
+      "pos": "N",
+      "gloss": "difficult breathing"
+    },
+    {
+      "target": "C2630",
+      "label": "ϫⲓⲛⲛⲓϥⲓ",
+      "pos": "N",
+      "gloss": "blowing (of wind)"
+    },
+    {
+      "target": "C2627",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "V",
+      "gloss": "blow, breathe (of wind, breath)"
+    },
+    {
+      "target": "C2628",
+      "label": "ⲛⲓϥⲉ",
+      "pos": "N",
+      "gloss": "breath, mist"
+    },
+    {
+      "target": "C2629",
+      "label": "ⲣⲉϥⲛⲓϥⲓ",
+      "pos": "N",
+      "gloss": "wind player, blow-pipe"
+    }
+  ]
+}

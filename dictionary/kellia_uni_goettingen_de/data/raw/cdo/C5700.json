@@ -1,0 +1,58 @@
+{
+  "id": "C5700",
+  "forms": [
+    {
+      "id": "CF13378",
+      "orth": "ϣⲉ ⲛⲛⲟϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6378",
+      "bibliography": "CD 546b; CED 235; KoptHWb 301; DELC 254b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C2644",
+      "type": "cf",
+      "label": "rope, cord"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5699",
+      "label": "ϣⲉ",
+      "pos": "N",
+      "gloss": "wood"
+    },
+    {
+      "target": "C5701",
+      "label": "ϩⲁⲙϣⲉ",
+      "pos": "N",
+      "gloss": "carpenter"
+    },
+    {
+      "target": "C5702",
+      "label": "ⲉⲣϩⲁⲙϣⲉ",
+      "pos": "V",
+      "gloss": "be carpenter"
+    },
+    {
+      "target": "C5703",
+      "label": "ⲙⲛⲧϩⲁⲙϣⲉ",
+      "pos": "N",
+      "gloss": "carpenter's craft"
+    }
+  ]
+}

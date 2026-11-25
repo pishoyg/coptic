@@ -1,0 +1,83 @@
+{
+  "id": "C2455",
+  "forms": [
+    {
+      "id": "CF6692",
+      "orth": "ⲛⲟⲕⲛⲉⲕ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19673,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2825",
+      "bibliography": "CD 224a; KoptHWb 121; ChLCS 32a"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲙⲁⲓⲥⲟⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        11.08
+      ],
+      [
+        "ⲛⲉⲧⲛ",
+        1,
+        10.33
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        8.678
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19288,
+      "count": 1
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2454",
+      "label": "ⲛⲟⲕⲛⲉⲕ",
+      "pos": "V",
+      "gloss": "have affection, inclination"
+    }
+  ]
+}

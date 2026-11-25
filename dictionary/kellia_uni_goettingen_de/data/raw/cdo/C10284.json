@@ -1,0 +1,516 @@
+{
+  "id": "C10284",
+  "forms": [
+    {
+      "id": "CF27331",
+      "orth": "ⲡⲣⲟⲃⲁⲗⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF27335",
+      "orth": "ⲡⲣⲟⲃⲁⲗⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2808,
+        "count": 16
+      }
+    },
+    {
+      "id": "CF27332",
+      "orth": "ⲡⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27333",
+      "orth": "ⲡⲣⲗⲉ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27334",
+      "orth": "ⲡⲣⲟⲃⲁⲗ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF27336",
+      "orth": "ⲡⲣⲟⲃⲟⲗⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.18,
+        "rank": 2101,
+        "count": 28
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13798",
+      "bibliography": "DDGLC",
+      "cu_ID": "10635"
+    },
+    {
+      "id": "CS13799",
+      "bibliography": "DDGLC",
+      "cu_ID": "4272"
+    },
+    {
+      "id": "CS13800",
+      "bibliography": "DDGLC",
+      "cu_ID": "10633"
+    },
+    {
+      "id": "CS13801",
+      "bibliography": "DDGLC",
+      "cu_ID": "11192"
+    },
+    {
+      "id": "CS13802",
+      "bibliography": "DDGLC",
+      "cu_ID": "11173"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲟⲟⲩ ⲙⲛⲡⲕⲉϫⲟⲩⲧⲥⲛⲟⲟⲩⲥ ⲙⲡⲣⲟⲃⲟⲗⲏ ϣⲁⲩⲣϫⲟⲩⲧⲁϥⲧⲉ ⲙⲡⲣⲟⲃⲟⲗⲏ ⲛⲁⲓ ⲉⲛⲧⲁϥ**ⲡⲣⲟⲃⲁⲗⲉ** ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ⲛϭⲓⲡⲛⲟϭ ⲙⲡⲣⲟⲡⲁⲧⲱⲣ ⲛⲁϩⲟⲣⲁⲧⲟⲥ ·",
+      "english": "they and the other two-and-twenty emanations make up four-and-twenty emanations, which the great invisible Forefather",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥϭⲱϣⲧ ⲉⲡⲉⲥⲏⲧ ⲉⲛⲧⲟⲡⲟⲥ ⲙⲡⲉⲭⲁⲟⲥ ⲁϥⲛⲁⲩ ⲉⲧⲉϥϭⲟⲙ ⲛⲇⲁⲓⲙⲟⲛⲓⲟⲛ ⲉⲧϩⲙⲡⲉⲭⲁⲟⲥ ⲉⲙⲛⲟⲩⲟⲉⲓⲛ ⲛϩⲏⲧⲥ ⲉⲡⲧⲏⲣϥ ϫⲉⲛⲉ ⲁⲓϥⲓⲡⲉⲥⲟⲩⲟⲉⲓⲛ ϩⲣⲁⲓ ⲛϩⲏⲧⲥ ⲁⲩⲱ ⲁϥⲛⲁⲩ ⲉⲣⲟⲥ ⲉⲥⲟ ⲛⲕⲁⲕⲉ · ⲁⲩⲱ ⲉⲙⲡⲥⲉϣϭⲙϭⲟⲙ ⲉⲉⲓ ⲉⲡⲉϥⲧⲟⲡⲟⲥ · ⲉⲧⲉⲡⲙⲛⲧⲥⲛⲟⲟⲩⲥ ⲡⲉ ⲛⲁⲓⲱⲛ · ⲁϥⲣⲡⲙⲉⲉⲩⲉ ⲟⲛ ⲛϭⲓⲡⲁⲇⲁⲙⲁⲥ ⲛⲧⲡⲓⲥⲧⲓⲥ ⲥⲟⲫⲓⲁ ⲁⲩⲱ ⲁϥϭⲱⲛⲧ ⲉⲣⲟⲥ ⲉⲙⲁϣⲟ ⲉⲙⲁϣⲟ · ⲉϥⲙⲉⲉⲩⲉ ϫⲉⲛⲧⲟⲥ ⲧⲉⲛⲧⲁⲥⲕⲁⲧⲉⲭⲉ ⲛⲧⲉϥϭⲟⲙ ϩⲣⲁⲓ ϩⲙⲡⲉⲭⲁⲟⲥ ⲁⲩⲱ ⲉϥⲙⲉⲉⲩⲉ ϫⲉⲛⲧⲟⲥ ⲧⲉ ⲛⲧⲁⲥϥⲓⲡⲉⲥⲟⲩⲟⲉⲓⲛ ⲛϩⲏⲧⲥ ⲁⲩⲱ ⲁϥⲛⲟⲩϭⲥ ⲉⲙⲁⲧⲉ ⲁⲩⲱ ⲁϥⲟⲩⲉϩϭⲱⲛⲧ ⲉϫⲛϭⲱⲛⲧ ⲁϥ**ⲡⲣⲟⲃⲁⲗⲉ** ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⲛⲟⲩⲡⲣⲟⲃⲟⲗⲏ ⲛⲕⲁⲕⲉ ·",
+      "english": "and looked down at the regions of the chaos and saw his demon power which is in the chaos, that no light at all was in it, because I had taken its light from it; and he saw it, that it was dark and could not go to his region, that is to the twelve moons. Thereon Adamas again remembered Pistis Sophia and became most exceedingly wroth against her, thinking that it was she who had imprisoned his power in the chaos, and thinking that it was she who had taken its light from it. And he was exceedingly embittered; he piled wrath on wrath and emanated out of himself a dark emanation",
+      "source": "Pistis Sophia Book 2 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:20-36",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓϩⲩⲙⲛⲉⲩⲉ ⲉϩⲣⲁⲓ ⲉⲣⲟⲕ ⲡⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲧⲁⲙⲉⲧⲁⲛⲟⲓⲁ ⲛⲁⲧⲁϩⲟⲕ ⲉϩⲣⲁⲓ ⲉⲡϫⲓⲥⲉ · ⲙⲁⲣⲉⲡⲉⲕⲟⲩⲟⲉⲓⲛ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ . ϫⲉⲁⲩϥⲓ ⲡⲁⲟⲩⲟⲉⲓⲛ ϩⲣⲁⲓ ⲛϩⲏⲧ · ⲁⲩⲱ ϯϣⲟⲟⲡ ϩⲛϩⲉⲛϩⲓⲥⲉ ⲉⲧⲃⲉ ⲡⲟⲩⲟⲉⲓⲛ · ϫⲓⲛⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲉⲛⲧⲁⲩ**ⲡⲣⲟⲃⲁⲗⲉ** ⲙⲙⲟⲓ ⲉⲃⲟⲗ · ⲁⲩⲱ ⲛⲧⲉⲣⲓϭⲱϣⲧ ⲉⲡϫⲓⲥⲉ ⲉⲡⲟⲩⲟⲉⲓⲛ ⲁⲩⲱ ⲁⲓϭⲱϣⲧ ⲉⲡⲉⲥⲏⲧ ⲉϯϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ⲉⲧϩⲙⲡⲉⲭⲁⲟⲥ . ⲁⲓⲧⲱⲟⲩⲛ ⲁⲓⲉⲓ ⲉⲡⲉⲥⲏⲧ . ⲁⲡⲉⲕⲧⲱϣ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱⲓ ⲁⲩⲱ ⲛϩⲟⲧⲉ ⲉⲛⲧⲁⲕⲧⲟϣⲟⲩ ⲉⲉⲣⲟⲓ ⲁⲩϣⲧⲣⲧⲱⲣⲧ · ⲁⲩⲱ ⲁⲩⲕⲱⲧⲉ ⲉⲣⲟⲓ ⲉⲩⲟϣ ⲛⲧϩⲉ ⲛⲟⲩ ⲙⲙⲟⲟⲩ ⲁⲩⲁⲙⲁϩⲧⲉ ⲙⲙⲟⲓ ϩⲓⲟⲩⲥⲟⲡ ⲙⲡⲁⲟⲩⲟⲉⲓϣ ⲧⲏⲣϥ · ⲁⲩⲱ ϩⲓⲧⲙⲡⲉⲕⲧⲱϣ ⲙⲡⲕⲕⲁ ⲛⲁϣⲃⲣⲡⲣⲟⲃⲟⲗⲏ ⲉⲃⲟⲏⲑⲉⲓ ⲉⲣⲟⲓ · ⲁⲩⲱ ⲙⲡⲕⲕⲁⲡⲁⲥⲩⲛⲍⲩⲅⲟⲥ ⲉⲛⲁϩⲙⲉⲧ ⲉⲃⲟⲗ ϩⲛⲛⲁⲑⲗⲓⲯⲓⲥ ·",
+      "english": "“13. But I have sung praises unto thee, O Light, and my repentance will reach unto thee | in the height. “14. Let thy light come upon me, “15. For they have taken my light, and I am in pain on account of the Light from the time when I was emanated. And when I had looked into the height to the Light, then I looked down below at the light-power in the chaos; I rose up and went down. “16. Thy commandment came upon me, and the terrors, which thou didst decree for me, have brought me into delusion. 17. And they have surrounded me, in numbers as water, they have laid hold on me together all my time. 18. And by thy commandment thou hast not suffered my fellow-emanations to help me, nor hast thou suffered my pair to save me out of my afflictions.”",
+      "source": "Pistis Sophia Book 1 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:50-66",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲃⲟⲗ",
+        31,
+        17.328
+      ],
+      [
+        "ⲕⲧⲣⲉⲩ",
+        1,
+        15.598
+      ],
+      [
+        "ⲉⲛⲧ",
+        8,
+        13.193
+      ],
+      [
+        "ⲁ",
+        13,
+        12.146
+      ],
+      [
+        "ⲙⲙⲟ",
+        8,
+        11.981
+      ],
+      [
+        "ϥ",
+        14,
+        11.944
+      ],
+      [
+        "ⲉⲩⲛⲟⲩ",
+        1,
+        11.898
+      ],
+      [
+        "ⲡⲣⲟⲃⲟⲗⲏ",
+        1,
+        11.791
+      ],
+      [
+        "ⲡⲣⲟⲉⲗⲑⲉ",
+        1,
+        11.428
+      ],
+      [
+        "ⲕⲉⲗⲉⲩⲥⲓⲥ",
+        1,
+        11.35
+      ],
+      [
+        ".",
+        7,
+        10.979
+      ],
+      [
+        "ⲛⲁⲓ",
+        4,
+        10.91
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        3,
+        9.595
+      ],
+      [
+        "ⲟⲩⲉⲓ",
+        1,
+        9.36
+      ],
+      [
+        "ⲓ",
+        4,
+        8.85
+      ],
+      [
+        "ⲛϭⲓ",
+        3,
+        8.574
+      ],
+      [
+        "ⲕⲉ",
+        2,
+        8.526
+      ],
+      [
+        "ⲥ",
+        4,
+        8.274
+      ],
+      [
+        "ⲁⲩⲱ",
+        4,
+        7.747
+      ],
+      [
+        "ϭⲱⲛⲧ",
+        1,
+        7.492
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          13
+        ],
+        [
+          "ϥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          10
+        ],
+        [
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          16
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          8
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          4
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          15
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          3
+        ],
+        [
+          "ⲛϩⲏⲧ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϫⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ϫⲟⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ⲧⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲃⲟⲗⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_4_post_ⲡⲣⲟⲃⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲕⲧⲣⲉⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲡⲣⲟⲉⲗⲑⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲉⲗⲑⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲛ_3_post_ⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ϥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          9
+        ],
+        [
+          "ϥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          9
+        ],
+        [
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          7
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲓ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲓ_2_post_ⲙⲙⲟ",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          3
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          3
+        ],
+        [
+          "ⲟⲩ_2_post_ⲙⲙⲟ",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          3
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          7
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲛϩⲏⲧ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          2
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲁⲩⲱ_2_post_ϫⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϫⲟⲟⲩ",
+          "ⲁ_2_post_ϫⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          2
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧⲉ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲉⲃⲟⲗ",
+          "ⲡⲣⲟⲃⲟⲗⲏ_3_post_ⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲃⲟⲗⲏ_3_post_ⲧⲉ",
+          "ⲛ_4_post_ⲡⲣⲟⲃⲟⲗⲏ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲕⲧⲣⲉⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲕⲧⲣⲉⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲡ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲥ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ϩⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲥ_2_post_ⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲙⲙⲟ",
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲛϩⲏⲧ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ⲉⲃⲟⲗ",
+          "ϥ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲟⲛ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲟⲛ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲁ_1_pre_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲃⲁⲗⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ⲡⲣⲟⲉⲗⲑⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲡⲣⲟⲉⲗⲑⲉ",
+          "ⲉⲧ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲡⲣⲟⲃⲁⲗⲉ",
+          "ⲡⲣⲟⲉⲗⲑⲉ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲡⲣⲟⲉⲗⲑⲉ_2_post_ⲉⲧ",
+          "ⲁⲩⲱ_5_post_ⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_5_post_ⲃⲟⲗ",
+          "ⲙⲛ_3_post_ⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.1,
+      "rank": 2488,
+      "count": 16
+    }
+  },
+  "etym": {
+    "grl_ID": "3322",
+    "grl_lemma": "προβάλλω",
+    "grl_meaning": "to throw or lay before",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1470b; Preisigke 2:362"
+  }
+}

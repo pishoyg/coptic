@@ -1,0 +1,231 @@
+{
+  "id": "C5885",
+  "forms": [
+    {
+      "id": "CF13768",
+      "orth": "ϯϣⲱⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6650,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6568",
+      "bibliography": "CD 564b; ChLCS 77b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲅⲁⲣ ⲧⲉⲧⲛ**ϯϣⲱⲙ** . ϩⲉⲛⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ ⲅⲁⲣ ⲛⲧⲉⲡⲛⲟⲩⲧⲉ ⲛⲉ ⲉⲩⲡⲣⲟⲥⲕⲁⲣⲧⲉⲣⲉⲓ ⲉⲡⲉⲓϩⲱⲃ",
+      "english": "For this reason you also pay taxes, for they are servants of God's service, attending continually on this very thing.",
+      "source": "45_Romans_13",
+      "urn": "urn:cts:copticLit:nt.rom.sahidica:13",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲙⲛⲛⲥⲁⲧⲣⲉⲩⲁⲓⲭⲙⲁⲗⲱⲧⲓⲍⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲁⲩⲱ ⲛⲧⲉⲧϩⲓⲏⲙ ⲣϫⲁⲉⲓⲉ ⲁϥϩⲙⲟⲟⲥ ⲉϩⲣⲁⲓ ⲛϭⲓⲓⲉⲣⲉⲙⲓⲁⲥ ⲁϥⲣⲓⲙⲉ ⲁϥⲧⲟⲉⲓⲧ ⲙⲡⲉⲓⲧⲟⲉⲓⲧ ⲉϫⲛⲧϩⲓⲏⲙ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲁϣ ⲛϩⲉ ⲁⲥϩⲙⲟⲟⲥ ⲙⲁⲩⲁⲁⲥ ⲛϭⲓⲧⲡⲟⲗⲓⲥ ⲉⲧⲟϣ ⲙⲙⲏⲏϣⲉ ⲁⲥϣⲱⲡⲉ ⲛⲧϩⲉ ⲛⲟⲩⲭⲏⲣⲁ ⲧⲉⲧⲛⲛⲁϣⲱⲥ ϩⲛⲛϩⲉⲑⲛⲟⲥ ⲧⲉⲧⲟ ⲛⲁⲣⲭⲱⲛ ϩⲛⲛⲉⲭⲱⲣⲁ ⲁⲥϣⲱⲡⲉ ⲉⲥ**ϯϣⲱⲙ**",
+      "english": "And it came to pass, after Israel was taken captive, and Jerusalem made desolate, that Jeremias sat weeping, and lamented with this lamentation over Jerusalem, and said, ALEPH. How does the city that was filled with people sit solitary! she is become as a widow: she that was magnified among the nations, and princess among the provinces, has become tributary.",
+      "source": "Lamentations 1",
+      "urn": "urn:cts:copticLit:ot.lam.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩϣⲁⲛⲣⲟⲩⲱ ⲙⲉⲛ ϩⲁⲣⲱⲕ ⲛϩⲉⲛϣⲁϫⲉ ⲛⲉⲓⲣⲏⲛⲓⲕⲟⲛ ⲁⲩⲱ ⲛⲥⲉⲟⲩⲱⲛ ⲛⲁⲕ ⲡⲙⲏⲏϣⲉ ⲧⲏⲣϥ ⲉⲧⲟⲩⲛⲁϩⲉ ⲉⲣⲟϥ ϩⲛⲧⲡⲟⲗⲓⲥ ⲉⲧⲙⲙⲁⲩ ⲉⲩⲉϣⲱⲡⲉ ⲉⲩ**ϯϣⲱⲙ** ⲛⲁⲕ ⲁⲩⲱ ⲉⲩⲉⲥⲱⲧⲙ ⲛⲥⲱⲕ",
+      "english": "If then they should answer peaceably to thee, and open to thee, it shall be that all the people found in it shall be tributary and subject to thee.",
+      "source": "Deuteronomy 20",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:20",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲗⲉⲓⲧⲟⲩⲣⲅⲟⲥ",
+        1,
+        13.369
+      ],
+      [
+        "ⲉⲩⲉ",
+        2,
+        12.438
+      ],
+      [
+        "ⲣⲓⲙⲉ",
+        1,
+        10.228
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        10.094
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        2,
+        9.439
+      ],
+      [
+        "ⲥ",
+        2,
+        7.689
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.195
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.863
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        6.489
+      ],
+      [
+        "ⲉ",
+        2,
+        6.232
+      ],
+      [
+        "ⲕ",
+        1,
+        5.268
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ϩⲛ",
+        1,
+        4.894
+      ],
+      [
+        "ⲩ",
+        1,
+        4.225
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.162
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.103
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.635
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲩ_1_pre_ϯϣⲱⲙ",
+          1
+        ],
+        [
+          "ϯϣⲱⲙ_0_node",
+          2
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϣⲱⲙ",
+          1
+        ],
+        [
+          "ⲕ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯϣⲱⲙ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲩ_1_pre_ϯϣⲱⲙ",
+          "ϯϣⲱⲙ_0_node",
+          1
+        ],
+        [
+          "ϯϣⲱⲙ_0_node",
+          "ⲛⲁ_1_post_ϯϣⲱⲙ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯϣⲱⲙ",
+          "ⲕ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ϯϣⲱⲙ",
+          "ϯϣⲱⲙ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6211,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C12177",
+      "label": "ϣⲁⲙⲏ",
+      "pos": "N",
+      "gloss": "summer"
+    },
+    {
+      "target": "C5883",
+      "label": "ϣⲱⲙ",
+      "pos": "N",
+      "gloss": "summer; tribute, tax"
+    },
+    {
+      "target": "C5884",
+      "label": "ϩⲛϣⲱⲙ",
+      "pos": "N",
+      "gloss": "spring"
+    }
+  ]
+}

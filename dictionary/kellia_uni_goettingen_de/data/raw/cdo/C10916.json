@@ -1,0 +1,183 @@
+{
+  "id": "C10916",
+  "forms": [
+    {
+      "id": "CF29797",
+      "orth": "ⲭⲁⲓⲣⲉ",
+      "dialect": null
+    },
+    {
+      "id": "CF29798",
+      "orth": "ⲭⲁⲓⲣⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1292,
+        "count": 64
+      }
+    },
+    {
+      "id": "CF29799",
+      "orth": "ⲭⲉⲣⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15096",
+      "bibliography": "DDGLC",
+      "cu_ID": "4434"
+    },
+    {
+      "id": "CS15097",
+      "bibliography": "DDGLC",
+      "cu_ID": "3411"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲁⲣⲭⲉⲓ ⲛⲁⲥⲡⲁⲍⲉ ⲙⲙⲟϥ . ϫⲉ**ⲭⲁⲓⲣⲉ** ⲡⲣⲣⲟ ⲛⲓⲟⲩⲇⲁⲓ .",
+      "english": "They began to salute him, &apos;Hail, King of the Jews!&apos;",
+      "source": "Mark Chapter 15",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧⲉⲥⲧⲣⲁⲧⲓⲁ ⲧⲏⲣⲥ ⲛⲧⲡⲉ ⲉⲓ ⲁⲩⲟⲩⲱϣⲧ ⲙⲡⲛⲟⲩⲧⲉ ⲛϣⲟⲣⲡ ⲙⲛⲛⲥⲱⲥ ⲁⲩⲟⲩⲱϣⲧ ⲛⲁⲇⲁⲙ · ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉ**ⲭⲁⲓⲣⲉ** ⲡⲉⲓⲛⲉ ⲁⲩⲱ ⲧϩⲉⲓⲕⲱⲛ ⲙⲡⲛⲟⲩⲧⲉ ⁛—",
+      "english": "And all the hosts of heaven worshipped God first of all, and then they worshipped Adam, saying, 'Hail, thou image and likeness of God!'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲟⲩⲡⲱϩ ⲇⲉ ⲉⲣⲟⲓ ⲡⲉϫⲁⲩ ⲛⲁⲓ ϫⲉ**ⲭⲁⲓⲣⲉ** ⲡⲁⲡⲛⲟⲩⲧⲉ ⲡⲉⲛⲙⲉⲣⲓⲧ ⲛⲥⲟⲛ ·",
+      "english": "And when they had come up to me they said unto me, ``Hail, thou man of God, O our beloved brother!''",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲩⲣⲓⲟⲥ",
+        8,
+        20.276
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        3,
+        19.353
+      ],
+      [
+        "ⲡⲁⲙⲃⲱ",
+        6,
+        16.738
+      ],
+      [
+        "ⲡⲁ",
+        26,
+        16.477
+      ],
+      [
+        "ϫⲉ",
+        38,
+        15.89
+      ],
+      [
+        "--",
+        2,
+        15.598
+      ],
+      [
+        "ϩⲛⲧⲟⲩ",
+        2,
+        15.276
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        9,
+        15.102
+      ],
+      [
+        "ϩⲣⲁⲃⲃⲉⲓ",
+        3,
+        14.961
+      ],
+      [
+        "ⲥ",
+        29,
+        14.848
+      ],
+      [
+        "ϩⲓⲉⲣⲁⲝ",
+        2,
+        14.791
+      ],
+      [
+        "ⲧⲁ",
+        15,
+        14.671
+      ],
+      [
+        "ⲧⲁⲥⲧⲟⲗⲏ",
+        1,
+        14.598
+      ],
+      [
+        "ϣⲃⲣ..",
+        1,
+        14.598
+      ],
+      [
+        "ⲡⲁⲗⲗⲁⲇⲓⲟⲛ",
+        1,
+        14.598
+      ],
+      [
+        "ⲉⲣⲅⲁⲥⲧⲏⲣⲓⲟⲛ",
+        1,
+        14.598
+      ],
+      [
+        "ⲧⲁⲓⲑⲓⲟⲡⲓⲁ",
+        1,
+        14.598
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        12,
+        14.349
+      ],
+      [
+        "ⲁⲡⲁ",
+        7,
+        13.77
+      ],
+      [
+        "ⲙⲙⲟ",
+        19,
+        13.724
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.4,
+      "rank": 1116,
+      "count": 64
+    }
+  },
+  "etym": {
+    "grl_ID": "2339",
+    "grl_lemma": "χαίρω",
+    "grl_meaning": "to rejoice, be glad, greet",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1969b; Preisigke 2:713"
+  }
+}

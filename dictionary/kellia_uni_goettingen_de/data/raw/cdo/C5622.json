@@ -1,0 +1,114 @@
+{
+  "id": "C5622",
+  "forms": [
+    {
+      "id": "CF13220",
+      "orth": "ⲣⲉϥⲱϣⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 18570,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6292",
+      "bibliography": "CD 535b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲕⲱϩⲧ ⲇⲉ ⲁϥϭⲙϭⲟⲙ ϩⲙⲡⲙⲟⲟⲩ ⲧϭⲟⲙ ⲉϣⲁⲥⲟⲙⲉϥ ⲁⲩⲱ ⲡⲙⲟⲟⲩ ⲁϥⲡⲱⲃϣ ⲛⲧⲉϥⲫⲩⲥⲓⲥ ⲛ**ⲣⲉϥⲱϣⲙ**",
+      "english": "For earthly things were turned into watery, and the things, that before swam in the water, now went upon the ground.",
+      "source": "Wisdom 19",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲫⲩⲥⲓⲥ",
+        1,
+        14.276
+      ],
+      [
+        "ϣⲁϩ",
+        1,
+        14.223
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲛ",
+        3,
+        8.564
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲱϣⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 18188,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5623",
+      "label": "ⲁϣⲙⲓ",
+      "pos": "N",
+      "gloss": "soot; wick"
+    },
+    {
+      "target": "C5621",
+      "label": "ⲁⲧⲱϣⲙ",
+      "pos": "N",
+      "gloss": "unquenched, unquenchable, unslaked"
+    },
+    {
+      "target": "C5624",
+      "label": "ⲟϣⲙϥ",
+      "pos": "N",
+      "gloss": "dipping, tempering, quenching (of metal)"
+    },
+    {
+      "target": "C5620",
+      "label": "ⲱϣⲙ",
+      "pos": "V",
+      "gloss": "be quenched, be dried up; quench, slake (one's thirst)"
+    }
+  ]
+}

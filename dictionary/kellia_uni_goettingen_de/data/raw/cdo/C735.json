@@ -1,0 +1,48 @@
+{
+  "id": "C735",
+  "forms": [
+    {
+      "id": "CF2748",
+      "orth": "ⲉⲥⲱ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS876",
+      "bibliography": "CD 61a; KoptHWb 40"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C734",
+      "label": "ⲉⲥⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "sheep"
+    },
+    {
+      "target": "C736",
+      "label": "ⲙⲁⲛⲉⲥⲟⲟⲩ",
+      "pos": "N",
+      "gloss": "shepherd"
+    }
+  ],
+  "etym": {
+    "egy_num": "138900",
+    "egy_lemma": "zr.t",
+    "demo_num": "d700",
+    "demo_lemma": "ı ͗sw",
+    "english": "sheep; ewe",
+    "german": "Schaf",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138900",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d700"
+  }
+}

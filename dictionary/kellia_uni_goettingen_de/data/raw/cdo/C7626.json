@@ -1,0 +1,56 @@
+{
+  "id": "C7626",
+  "forms": [
+    {
+      "id": "CF32172",
+      "orth": "ϭⲗϭⲓϫ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32171",
+      "orth": "ϭⲉⲗϭⲓϫ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "number": "pl.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8465",
+      "bibliography": "CD 809b; KoptHWb 450; ChLCS 107a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7627",
+      "label": "ϭⲟⲗⲉⲥ",
+      "pos": "N",
+      "gloss": "covering, garment"
+    },
+    {
+      "target": "C7623",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "V",
+      "gloss": "swathe, clothe, cover"
+    },
+    {
+      "target": "C7624",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "covering, cloak"
+    },
+    {
+      "target": "C7625",
+      "label": "ϭⲱⲱⲗⲉ",
+      "pos": "N",
+      "gloss": "covered"
+    }
+  ]
+}

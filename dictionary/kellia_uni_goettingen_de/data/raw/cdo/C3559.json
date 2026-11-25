@@ -1,0 +1,147 @@
+{
+  "id": "C3559",
+  "forms": [
+    {
+      "id": "CF9023",
+      "orth": "ⲁⲧⲥⲙⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13042,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS4052",
+      "bibliography": "CD 341b; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲉϥⲟⲓⲕⲟⲛⲟⲙⲓⲁ ⲅⲁⲣ ⲟⲩ**ⲁⲧⲥⲙⲟⲧ** ⲧⲉ · ⲁⲩⲱ ⲟⲩⲁⲧϣⲓⲃⲉ ⲧⲉ ⲧⲉⲫⲩⲥⲓⲥ ·",
+      "english": "For His administration (or, economy) is beyond compare, and His Nature is unchangeable.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ",
+        1,
+        15.043
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        8.964
+      ],
+      [
+        "ⲅⲁⲣ",
+        1,
+        8.679
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        7.803
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_2_pre_ⲟⲓⲕⲟⲛⲟⲙⲓⲁ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲁⲧⲥⲙⲟⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_2_pre_ⲟⲓⲕⲟⲛⲟⲙⲓⲁ",
+          "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲛⲟⲙⲓⲁ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          1
+        ],
+        [
+          "ⲅⲁⲣ_1_pre_ⲁⲧⲥⲙⲟⲧ",
+          "ⲁⲧⲥⲙⲟⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 12625,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3562",
+      "label": "ϫⲓⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "become, be like"
+    },
+    {
+      "target": "C3561",
+      "label": "ϯⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "give form"
+    },
+    {
+      "target": "C3560",
+      "label": "ⲉⲓⲣⲉ ⲛⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "have appearance, be like, be pattern"
+    },
+    {
+      "target": "C3557",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    },
+    {
+      "target": "C3558",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    }
+  ]
+}

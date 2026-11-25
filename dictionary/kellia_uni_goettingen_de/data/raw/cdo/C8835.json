@@ -1,0 +1,533 @@
+{
+  "id": "C8835",
+  "forms": [
+    {
+      "id": "CF21307",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF21308",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF21309",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF21310",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3044,
+        "count": 13
+      }
+    },
+    {
+      "id": "CF21311",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF21312",
+      "orth": "ⲇⲣⲟⲙⲟⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4592,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF21313",
+      "orth": "ⲧⲣⲟⲙⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5597,
+        "count": 4
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10635",
+      "bibliography": "DDGLC",
+      "cu_ID": "987"
+    },
+    {
+      "id": "CS10636",
+      "bibliography": "DDGLC",
+      "cu_ID": "2662"
+    },
+    {
+      "id": "CS10637",
+      "bibliography": "DDGLC",
+      "cu_ID": "2289"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲓⲁⲅⲱⲛ ⲉⲑⲛⲁⲛⲉϥ ⲁⲓⲉⲣⲁⲅⲱⲛⲓⲍⲉⲥⲑⲉ ⲙⲙⲟϥ ⲡⲓ**ⲇⲣⲟⲙⲟⲥ** ⲁⲓϫⲟⲕϥ ⲉⲃⲟⲗ ⲡⲓⲛⲁϩϯ ⲁⲓⲁⲣⲉϩ ⲉⲣⲟϥ",
+      "english": "I have fought the good fight. I have finished the course. I have kept the faith.",
+      "source": "16_II Timothy_04",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲥⲁⲃⲏⲗ ϭⲉ ϫⲉⲁⲓⲡⲱⲱⲛⲉ ⲛⲛⲉⲩ**ⲇⲣⲟⲙⲟⲥ** ·",
+      "english": "For had I not changed their courses,",
+      "source": "Pistis Sophia Book 1 Part 3",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:25-35",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲧⲁⲯⲩⲭⲏ ϯⲭⲱ ⲙⲙⲟⲥ ⲁⲛ ϫⲉⲥⲧⲁⲓⲏⲟⲩⲧ ⲛⲧⲟⲧϧⲉⲛϩⲗⲓ ⲛⲥⲁϫⲓ ϣⲁϯϫⲱⲕ ⲙⲡⲁ**ⲇⲣⲟⲙⲟⲥ** ⲉⲃⲟⲗ ⲛⲉⲙϯⲇⲓⲁⲕⲟⲛⲓⲁ ⲑⲏ ⲉⲧⲁⲓϭⲓⲧⲥ ⲛⲧⲉⲛⲡϭⲟⲓⲥ ⲓⲏⲥⲟⲩⲥ ⲉⲉⲣⲙⲉⲑⲣⲉ ⲙⲡⲓⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲧⲉⲡⲓϩⲙⲟⲧ ⲛⲧⲉⲫⲛⲟⲩϯ .",
+      "english": "But these things don't count; nor do I hold my life dear to myself, so that I may finish my race with joy, and the ministry which I received from the Lord Jesus, to fully testify to the Good News of the grace of God.",
+      "source": "05_Acts_20",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:20",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ϩⲛⲟⲩϩⲃⲁ ⲁⲕⲧⲣⲉⲩⲣϩⲃⲁ ϩⲛⲧⲉⲩϭⲓⲛⲙⲟⲟϣⲉ ⲁⲩⲱ ⲁⲩⲡⲗⲁⲛⲁ ϩⲙⲡⲉⲩ**ⲇⲣⲟⲙⲟⲥ** ·",
+      "english": "and made them confounded in confusion on their path and deluded in their course?",
+      "source": "Pistis Sophia Book 1 Part 2",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:13-25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲁ ⲓⲱⲁⲛⲛⲏⲥ ⲇⲉ ϫⲱⲕ ⲙⲡⲉϥ**ⲇⲣⲟⲙⲟⲥ** ⲉⲃⲟⲗ ⲛⲁϥⲭⲱ ⲙⲙⲟⲥ ϫⲉⲁⲣⲉⲧⲉⲛⲙⲉⲩⲓ ϫⲉⲁⲛⲟⲕ ⲛⲓⲙ ⲁⲛⲟⲕ ⲅⲁⲣ ⲁⲛ ⲡⲉ ⲁⲗⲗⲁ ϩⲏⲡⲡⲉ ⲉϥⲛⲏⲟⲩ ⲙⲉⲛⲉⲛⲥⲱⲓ ⲛϫⲉⲫⲏ ⲉⲧⲉⲛϯⲙⲡϣⲁ ⲁⲛ ⲉϯⲟⲩⲱ ⲙⲡⲓⲑⲱⲟⲩⲓ ⲛⲧⲉⲛⲉϥϭⲁⲗⲁⲩϫ .",
+      "english": "As John was fulfilling his course, he said, 'What do you suppose that I am? I am not he. But behold, one comes after me the sandals of whose feet I am not worthy to untie.'",
+      "source": "05_Acts_13",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:13",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲛϯⲧⲙⲁⲓⲟ ⲁⲛ ⲛⲧⲁⲯⲩⲭⲏ ϩⲛⲗⲁⲁⲩ ⲛϣⲁϫⲉ ⲛⲧϩⲉ ⲛϫⲱⲕ ⲉⲃⲟⲗ ⲙⲡⲁ**ⲇⲣⲟⲙⲟⲥ** ·",
+      "english": "but I do not value my soul in the very least so that I may complete my course.",
+      "source": "Instructions of Apa Pachomius in MERC.AR in Budge ed. - part 1",
+      "urn": "urn:cts:copticLit:pachomius.instructions.budge:1-34",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲁⲅⲱⲛⲓⲍⲉⲥⲑⲉ",
+        1,
+        14.203
+      ],
+      [
+        "ⲇⲓⲁⲕⲟⲛⲓⲁ",
+        1,
+        13.651
+      ],
+      [
+        "ϫⲟⲕ",
+        1,
+        13.587
+      ],
+      [
+        "ϫⲱⲕ",
+        2,
+        12.571
+      ],
+      [
+        "ϥ",
+        5,
+        9.805
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        8.799
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        7.719
+      ],
+      [
+        "ϯ",
+        2,
+        7.705
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        7.018
+      ],
+      [
+        "ⲙ",
+        2,
+        6.998
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.455
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.783
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        5.464
+      ],
+      [
+        "ⲓ",
+        1,
+        4.991
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        4.658
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.369
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ]
+    ],
+    "S": [
+      [
+        "ϭⲓⲛⲙⲟⲟϣⲉ",
+        2,
+        15.197
+      ],
+      [
+        "ϫⲱⲕ",
+        5,
+        14.194
+      ],
+      [
+        "ⲡⲉⲩ",
+        5,
+        12.954
+      ],
+      [
+        "ⲥⲱⲧϥ",
+        1,
+        11.438
+      ],
+      [
+        "ⲛⲥⲁⲃⲏⲗ",
+        1,
+        11.406
+      ],
+      [
+        "ϫⲉⲕ",
+        1,
+        11.225
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        7,
+        11.187
+      ],
+      [
+        "ⲇⲓⲁⲕⲟⲛⲓⲁ",
+        1,
+        10.967
+      ],
+      [
+        "ⲕ",
+        6,
+        10.907
+      ],
+      [
+        "ϩⲙ",
+        5,
+        10.678
+      ],
+      [
+        "ⲛⲉⲩ",
+        3,
+        9.87
+      ],
+      [
+        "ⲡⲗⲁⲛⲁ",
+        1,
+        9.842
+      ],
+      [
+        "ⲁ",
+        7,
+        9.766
+      ],
+      [
+        "ⲛ",
+        9,
+        9.618
+      ],
+      [
+        "ⲡⲱⲱⲛⲉ",
+        1,
+        9.43
+      ],
+      [
+        "ⲙ",
+        6,
+        9.406
+      ],
+      [
+        "ⲧ",
+        5,
+        9.336
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        2,
+        8.609
+      ],
+      [
+        "ϫⲉ",
+        4,
+        8.446
+      ],
+      [
+        "ⲁⲓⲱⲛ",
+        1,
+        8.313
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲇⲓⲁⲕⲟⲛⲓⲁ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          "ⲛⲉⲙ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          "ϯ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          1
+        ],
+        [
+          "ϯ_2_post_ⲇⲓⲁⲕⲟⲛⲓⲁ",
+          "ⲇⲓⲁⲕⲟⲛⲓⲁ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          10
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          3
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲓⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          "ⲛ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          "ⲛⲉⲩ_3_post_ⲁⲓⲱⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ⲁⲓⲱⲛ",
+          "ⲁⲓⲱⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲡⲉⲩ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          "ⲧⲏⲣ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲇⲣⲟⲙⲟⲥ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲇⲣⲟⲙⲟⲥ",
+          "ⲇⲣⲟⲙⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2703,
+      "count": 13
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4114,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "580",
+    "grl_lemma": "δρόμος",
+    "grl_meaning": "race, course",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 450a; Preisigke 1:400"
+  }
+}

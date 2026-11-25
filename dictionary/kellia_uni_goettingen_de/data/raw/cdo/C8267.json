@@ -1,0 +1,61 @@
+{
+  "id": "C8267",
+  "forms": [
+    {
+      "id": "CF19085",
+      "orth": "ⲁⲛⲁⲭⲱⲣⲓⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF19087",
+      "orth": "ⲁⲛⲁⲭⲱⲣⲓⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19086",
+      "orth": "ⲁⲛⲁⲭⲱⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF19088",
+      "orth": "ⲁⲛⲁⲭⲱⲣⲓⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF19089",
+      "orth": "ⲁⲛⲁⲭⲱⲣⲓ",
+      "dialect": "M"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS9411",
+      "bibliography": "DDGLC",
+      "cu_ID": "5020"
+    },
+    {
+      "id": "CS9412",
+      "bibliography": "DDGLC",
+      "cu_ID": "11643"
+    },
+    {
+      "id": "CS9413",
+      "bibliography": "DDGLC",
+      "cu_ID": "7139"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "149",
+    "grl_lemma": "ἀναχωρέω",
+    "grl_meaning": "to go back",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 127a; Preisigke 1:112"
+  }
+}

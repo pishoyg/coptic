@@ -1,0 +1,177 @@
+{
+  "id": "C8327",
+  "forms": [
+    {
+      "id": "CF19299",
+      "orth": "ⲁⲡⲁⲑⲏⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF19300",
+      "orth": "ⲁⲡⲁⲑⲏⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7430,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9539",
+      "bibliography": "DDGLC",
+      "cu_ID": "9010"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲉⲡⲁⲣⲭⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ϫⲉϯⲣϩⲟⲧⲉ ⲉϫⲟⲟⲥ ⲉⲩⲣⲱⲙⲉ ⲛⲣⲉϥϣⲱⲛⲉ ⲛⲣⲉϥϣⲡϩⲓⲥⲉ ϫⲉⲉϥⲫⲟⲣⲉⲓ ⲛⲧϩⲓⲕⲱⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲛ**ⲁⲡⲁⲑⲏⲥ** ⲛⲉⲩⲧⲏⲗⲉⲥ ⲉϣⲁϥϩⲙⲟⲟⲥ ϩⲓⲃⲟⲗ ⲛϥⲡⲁⲣⲁⲥⲕⲉⲩⲁⲍⲉ ⲛⲁϣⲛϩⲉ ⲕⲛⲁⲙⲉⲉⲩⲉ ⲉⲣⲟϥ ⲙⲛⲡⲟⲩⲟⲉⲓⲛ ⲙⲙⲉ ⲉⲧⲉⲙⲉⲣⲉⲗⲁⲁⲩ ϫⲟⲟⲃⲉϥ",
+      "english": "The archbishop said: I am afraid to tell a sick man or a suffering man that he carries the image of God, the one unaffected by the vulgar, who stands (lit.: sits) beyond and commands - how can you think of him and the light of Truth which no-one can surpass?",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲗⲟⲅⲓⲥⲙⲟⲥ ⲛⲁⲁⲡⲟⲣⲉⲓ ⲉϥϣⲓⲛⲉ ϫⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ϣⲱⲡⲉ ⲛⲣⲱⲙⲉ ⲛⲁϣ ⲛϩⲉ · ⲁⲩⲱ ϫⲉⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲛ**ⲁⲡⲁⲑⲏⲥ** ⲣⲟⲩⲁ ⲛⲟⲩⲱⲧ ⲙⲛⲡⲟⲙⲉ · ⲉⲁϥϫⲓ ⲙⲟⲣⲫⲏ ϩⲛⲧⲥⲁⲣⲝ ⲛⲁϣ ⲛϩⲉ ·",
+      "english": "Now the intellect of man hath not the ability to discover by enquiry by what means God became man, and in what way God, Who is impassible, and is One, and is, moreover, not of the earth, took form to Himself in the flesh.",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲉⲩⲧⲏⲗⲉⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲩⲱⲧ",
+        1,
+        10.036
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        2,
+        9.779
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ⲣ",
+        1,
+        8.413
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        8.329
+      ],
+      [
+        "ϣⲁ",
+        1,
+        7.346
+      ],
+      [
+        "ⲡ",
+        2,
+        6.497
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲡⲁⲑⲏⲥ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          1
+        ],
+        [
+          "ⲉⲩⲧⲏⲗⲉⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ϩⲙⲟⲟⲥ",
+          1
+        ],
+        [
+          "ϥ_3_post_ϩⲙⲟⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲡⲁⲑⲏⲥ_0_node",
+          "ⲛ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          "ⲉⲩⲧⲏⲗⲉⲥ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲩⲧⲏⲗⲉⲥ_2_post_ⲛ",
+          "ⲉ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲁⲡⲁⲑⲏⲥ",
+          "ϣⲁ_3_post_ϩⲙⲟⲟⲥ",
+          1
+        ],
+        [
+          "ϣⲁ_3_post_ϩⲙⲟⲟⲥ",
+          "ϥ_3_post_ϩⲙⲟⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6976,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "6667",
+    "grl_lemma": "ἀπαθής",
+    "grl_meaning": "not suffering",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 174 b"
+  }
+}

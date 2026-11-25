@@ -1,0 +1,339 @@
+{
+  "id": "C6774",
+  "forms": [
+    {
+      "id": "CF15595",
+      "orth": "ϩⲣⲁⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.68,
+        "rank": 125,
+        "count": 1527
+      }
+    },
+    {
+      "orth": "ϧⲣⲏⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.72,
+        "rank": 890,
+        "count": 61
+      }
+    },
+    {
+      "orth": "ⳉⲣⲏⲓ",
+      "dialect": "A",
+      "id": "3281.2"
+    },
+    {
+      "orth": "ϩⲗⲏⲓ",
+      "dialect": "F",
+      "id": "3281.3"
+    },
+    {
+      "orth": "ϩⲣⲏⲓ",
+      "dialect": "L",
+      "id": "3281.4"
+    },
+    {
+      "orth": "ϩⲣⲏⲉⲓ",
+      "dialect": "L",
+      "id": "3281.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7488",
+      "bibliography": "CD 700a-701a; CED 292; KoptHWb 386; DELC 309a; ChLCS 94a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲛⲁⲣⲣⲣⲟ ϩⲱⲟⲩ ⲛⲥⲉϭⲱ ϩⲱⲟⲩ ⲙⲛⲛⲥⲁⲛⲉⲧϫⲓ ϩⲱⲟⲩ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲛⲧⲉⲡⲓϣⲟⲣⲡ ⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ · ⲉⲩⲥⲱⲧⲏⲣ ⲉⲃⲟⲗ ⲕⲁⲧⲁⲡⲉⲟⲟⲩ ⲙⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲙⲙⲟⲟⲩ · ϩⲱⲥⲧⲉ ⲛⲉⲧϫⲓ ⲙⲡⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲟⲩⲟⲧⲃ ⲥⲉⲛⲁϭⲱ ϩⲛⲛⲧⲟⲡⲟⲥ ⲉⲧⲟⲩⲟⲧⲃ · ⲛⲉⲧϫⲓ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲧⲥⲟⲃⲕ · ⲥⲉⲛⲁϭⲱ ϩⲛⲛⲧⲟⲡⲟⲥ ⲉⲧⲥⲟⲃⲕ ⲉⲩⲟ ⲛⲣⲣⲟ ⲉⲩⲟ ⲛⲣⲣⲟ **ϩⲣⲁⲓ** ϩⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲁⲙⲛⲧⲣⲣⲟ :",
+      "english": "will also be kings and abide before those who receive the mystery of the First Mystery, expanded according to the glory of every one of them, so that those who receive the higher mysteries, will abide in the higher regions, and those who receive the lower mysteries, will abide in the lower regions, being kings in the light of my kingdom.",
+      "source": "Pistis Sophia Book 2 Part 8",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:70-73",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓ ⲉⲛⲧⲁϥϫⲡⲟⲛ **ϩⲣⲁⲓ** ϩⲙⲡⲉϥⲥⲛⲟϥ ⲉⲧⲟⲩⲁⲁⲃ",
+      "english": "The One who gave birth to us with His holy blood [",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲙⲛϣⲁϫⲉ ⲉϥⲛⲁϯ ⲛϩⲏⲧϥ ⲛⲧⲟⲟⲧⲟⲩ ⲛⲛⲉⲧⲉⲓⲣⲉ ⲧⲁⲭⲏ ⲙⲡⲡⲟⲛⲉⲣⲟⲛ ⲉⲧⲃⲉⲡⲁⲓ ⲁⲡϩⲏⲧ ⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ ⲧⲱⲧ ⲉⲣⲟⲟⲩ ⲉⲧⲣⲉⲩⲉⲓⲣⲉ **ϩⲣⲁⲓ** ⲛϩⲏⲧⲟⲩ ⲙⲡⲡⲟⲛⲏⲣⲟⲛ",
+      "english": "Because there is no contradiction made on the part of those who do evil quickly, therefore the heart of the children of men is fully determined in them to do evil.",
+      "source": "Ecclesiastes 8",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϧⲉⲛ",
+        161,
+        27.756
+      ],
+      [
+        "ⲛ",
+        126,
+        25.523
+      ],
+      [
+        "ϧⲉⲛ",
+        79,
+        24.674
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        27,
+        23.368
+      ],
+      [
+        "ⲡⲓ",
+        55,
+        23.115
+      ],
+      [
+        "ⲛ",
+        63,
+        22.523
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        21,
+        22.306
+      ],
+      [
+        "ⲛϧⲏⲧ",
+        15,
+        20.824
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        38,
+        20.824
+      ],
+      [
+        "ⲑⲣⲓⲣ",
+        3,
+        20.643
+      ],
+      [
+        "ⲫⲉ",
+        10,
+        20.432
+      ],
+      [
+        "ⲟⲩ",
+        37,
+        20.382
+      ],
+      [
+        "ϣⲁϥⲉ",
+        8,
+        20.369
+      ],
+      [
+        "ⲟⲩⲱϣⲉⲙ",
+        3,
+        20.362
+      ],
+      [
+        "ϫⲉ",
+        25,
+        20.068
+      ],
+      [
+        "ϫⲉ",
+        25,
+        20.068
+      ],
+      [
+        "ⲡ",
+        28,
+        20.041
+      ],
+      [
+        "ⲙ",
+        27,
+        19.848
+      ],
+      [
+        "ϣⲗⲱⲗ",
+        3,
+        19.75
+      ],
+      [
+        ".",
+        26,
+        19.718
+      ]
+    ],
+    "S": [
+      [
+        "ⲛϩⲏⲧ",
+        1012,
+        28.213
+      ],
+      [
+        "ϩⲛ",
+        1129,
+        26.326
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        36,
+        25.532
+      ],
+      [
+        "ϩⲙ",
+        672,
+        25.014
+      ],
+      [
+        "ⲛ",
+        1403,
+        24.596
+      ],
+      [
+        "ϥ",
+        666,
+        22.084
+      ],
+      [
+        "ⲉ",
+        547,
+        21.528
+      ],
+      [
+        "ⲁⲩⲱ",
+        417,
+        21.283
+      ],
+      [
+        "ⲟⲩ",
+        389,
+        20.455
+      ],
+      [
+        "ⲡ",
+        442,
+        20.285
+      ],
+      [
+        "ϩⲏⲧ",
+        140,
+        19.759
+      ],
+      [
+        "ⲥⲩⲛⲁⲅⲱⲅⲏ",
+        63,
+        19.61
+      ],
+      [
+        "ⲉⲧ",
+        205,
+        18.701
+      ],
+      [
+        "ⲙ",
+        247,
+        18.621
+      ],
+      [
+        "ⲩ",
+        214,
+        18.459
+      ],
+      [
+        "ⲛⲓⲙ",
+        115,
+        18.248
+      ],
+      [
+        "ⲛⲉⲩ",
+        101,
+        18.215
+      ],
+      [
+        "ⲧⲉ",
+        126,
+        18.159
+      ],
+      [
+        "ⲛⲉ",
+        140,
+        18.125
+      ],
+      [
+        "ⲧ",
+        184,
+        18.066
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲣⲁⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 9.61,
+      "rank": 111,
+      "count": 1526
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6778",
+      "label": "ϣⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "down to"
+    },
+    {
+      "target": "C6775",
+      "label": "ⲉϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "to below, downward"
+    },
+    {
+      "target": "C6776",
+      "label": "ⲛϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "below"
+    },
+    {
+      "target": "C6777",
+      "label": "ⲥⲁϩⲣⲁⲓ",
+      "pos": "ADV",
+      "gloss": "downward, below"
+    }
+  ],
+  "etym": {
+    "egy_num": "124420",
+    "egy_lemma": "ẖr.w",
+    "demo_num": "d4799",
+    "demo_lemma": "ẖr",
+    "english": "base; bottom; under-side",
+    "german": "Unterseite",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/124420",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4799"
+  }
+}

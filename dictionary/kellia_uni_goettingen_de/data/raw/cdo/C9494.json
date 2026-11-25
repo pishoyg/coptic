@@ -1,0 +1,290 @@
+{
+  "id": "C9494",
+  "forms": [
+    {
+      "id": "CF24135",
+      "orth": "ⲕⲟⲙⲉⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24136",
+      "orth": "ⲕⲟⲙⲉⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.12,
+        "rank": 2512,
+        "count": 19
+      }
+    },
+    {
+      "id": "CF24137",
+      "orth": "ⲕⲟⲙⲏⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24138",
+      "orth": "ⲕⲟⲙⲓⲥ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24139",
+      "orth": "ⲕⲟⲙⲓⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24140",
+      "orth": "ⲕⲱⲙⲏⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24141",
+      "orth": "ⲕⲱⲙⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12064",
+      "bibliography": "DDGLC",
+      "cu_ID": "1280"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϫⲉⲁⲁⲧ ⲛ**ⲕⲟⲙⲉⲥ** ⲉⲣⲁⲕⲟⲧⲉ ·",
+      "english": "Make me Count of Rakote.",
+      "source": "Martyrdom of Victor part 4",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:23-32",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲣⲙⲉⲛⲓⲟⲥ ⲇⲉ ⲡⲓ**ⲕⲟⲙⲉⲥ** ⲡⲉϫⲁϥ ·",
+      "english": "And Armenius the Count said unto him,",
+      "source": "Martyrdom of Victor part 5",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:33-48",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲓⲟⲕⲗⲏϯⲁⲛⲟⲥ ⲡⲣⲣⲟ · ϯⲕⲉⲗⲉⲩⲉ ϫⲓⲛⲧⲉϩⲣⲱⲙⲁⲛⲓⲁ ϣⲁⲣⲏⲥ ⲉⲡⲉⲗⲁⲕ · ϫⲉⲉⲓⲧⲉ ⲉⲡⲁⲣⲭⲟⲥ · ⲉⲓⲧⲉ ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ · ⲉⲓⲧⲉ **ⲕⲟⲙⲉⲥ** · ⲉⲓⲧⲉ ⲉⲡⲓⲥⲕⲟⲡⲟⲥ · ⲉⲓⲧⲉ ⲡⲣⲉⲥⲃⲩⲧⲉⲣⲟⲥ · ⲉⲓⲧⲉ ⲇⲓⲁⲕⲟⲛⲟⲥ · ⲉⲓⲧⲉ ⲁⲛⲁⲅⲛⲱⲥⲧⲏⲥ · ⲉⲓⲧⲉ ϩⲙϩⲁⲗ · ⲉⲓⲧⲉ ⲣⲙϩⲉ · ⲉⲓⲧⲉ ⲙⲁⲧⲟⲓ · ⲉⲓⲧⲉ ⲡⲁⲅⲁⲛⲱⲥ ⲉⲩⲉϣⲙϣⲉ ⲧⲏⲣⲟⲩ ⲛⲛⲁⲛⲟⲩⲧⲉ ·",
+      "english": "I, the Emperor Diocletian, [hereby] command that from Romania [in the north] to Pelak (Philac) in the south, every man, whether he be eparch, or general, or count, or bishop, or elder, or deacon, or reader, or servant, or free man, or soldier, or countryman, shall worship my gods.",
+      "source": "Martyrdom of Victor part 1",
+      "urn": "urn:cts:copticLit:martyrdoms.victor.budge:1-6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲡⲣⲟ",
+        1,
+        16.35
+      ],
+      [
+        "ⲃⲏⲙⲁⲧⲟⲥ",
+        1,
+        16.35
+      ],
+      [
+        "ⲥⲟⲧⲏⲣⲓⲭⲟⲥ",
+        1,
+        16.35
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        16.35
+      ],
+      [
+        "ⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ",
+        2,
+        15.891
+      ],
+      [
+        "ⲉⲓⲧⲉ",
+        6,
+        15.436
+      ],
+      [
+        "ϩⲁⲣⲙⲉⲛⲓⲟⲥ",
+        1,
+        14.35
+      ],
+      [
+        "ⲥⲧⲣⲁⲧⲏⲗⲁⲧⲏⲥ",
+        2,
+        13.328
+      ],
+      [
+        "ⲣⲁⲕⲟⲧⲉ",
+        2,
+        13.306
+      ],
+      [
+        "ⲑⲏⲃⲁⲓⲥ",
+        1,
+        13.028
+      ],
+      [
+        "ⲉⲡⲓⲥⲕⲟⲡⲟⲥ",
+        2,
+        12.924
+      ],
+      [
+        "ⲕⲁⲥⲧⲣⲟⲛ",
+        1,
+        12.263
+      ],
+      [
+        "ⲁⲣ",
+        2,
+        11.842
+      ],
+      [
+        "ⲁⲁ",
+        4,
+        11.775
+      ],
+      [
+        "ⲙⲉϩϥⲧⲟⲟⲩ",
+        1,
+        11.028
+      ],
+      [
+        "ⲡ",
+        12,
+        11.004
+      ],
+      [
+        "ⲡⲁⲗⲗⲁϯⲟⲛ",
+        1,
+        10.706
+      ],
+      [
+        "ⲕⲁⲑⲓⲥⲧⲁ",
+        1,
+        10.373
+      ],
+      [
+        "ϣⲉⲉⲣⲉ",
+        2,
+        9.817
+      ],
+      [
+        "ϥ",
+        9,
+        9.783
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲟⲙⲉⲥ_0_node",
+          17
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲟⲙⲉⲥ",
+          4
+        ],
+        [
+          "ⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ_1_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲙⲉⲥ",
+          2
+        ],
+        [
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲑⲏⲃⲁⲓⲥ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲟⲙⲉⲥ",
+          "ⲕⲟⲙⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲙⲉⲥ_0_node",
+          "ⲁⲗⲉⲝⲁⲛⲇⲣⲟⲥ_1_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_1_pre_ⲕⲟⲙⲉⲥ",
+          "ⲕⲟⲙⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲙⲉⲥ_0_node",
+          "ⲉ_1_post_ⲕⲟⲙⲉⲥ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲟⲙⲉⲥ",
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲕⲟⲙⲉⲥ",
+          "ⲕⲟⲙⲉⲥ_0_node",
+          1
+        ],
+        [
+          "ⲕⲟⲙⲉⲥ_0_node",
+          "ⲛ_1_post_ⲕⲟⲙⲉⲥ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲙⲉⲥ",
+          "ⲣⲁⲕⲟⲧⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲕⲟⲙⲉⲥ",
+          "ⲑⲏⲃⲁⲓⲥ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.12,
+      "rank": 2220,
+      "count": 19
+    }
+  },
+  "etym": {
+    "grl_ID": "1171",
+    "grl_lemma": "κόμης",
+    "grl_meaning": "count",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 975a; Preisigke 1:821"
+  }
+}

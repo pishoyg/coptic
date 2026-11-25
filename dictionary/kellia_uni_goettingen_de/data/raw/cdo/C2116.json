@@ -1,0 +1,533 @@
+{
+  "id": "C2116",
+  "forms": [
+    {
+      "id": "CF5935",
+      "orth": "ⲙⲧⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 9.7,
+        "rank": 124,
+        "count": 1530
+      }
+    },
+    {
+      "orth": "ⲙⲑⲟ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 11.1,
+        "rank": 121,
+        "count": 941
+      }
+    },
+    {
+      "orth": "ⲉⲙⲑⲟ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 1.82,
+        "rank": 497,
+        "count": 154
+      }
+    },
+    {
+      "orth": "ⲙⲧⲟ",
+      "dialect": "A",
+      "id": "70.2"
+    },
+    {
+      "orth": "ⲙⲧⲁ",
+      "dialect": "F",
+      "id": "70.3"
+    },
+    {
+      "orth": "ⲉⲙⲧⲁ",
+      "dialect": "F",
+      "id": "70.4"
+    },
+    {
+      "orth": "ⲙⲧⲟ",
+      "dialect": "L",
+      "id": "70.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2451",
+      "bibliography": "CD 193a; KoptHWb 103; ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϩⲟⲡⲱⲥ ⲛⲧⲉϣⲧⲉⲙⲥⲁⲣⲝ ⲛⲓⲃⲉⲛ ϣⲟⲩϣⲟⲩ ⲙⲙⲱⲟⲩ ⲙⲡⲉ**ⲙⲑⲟ** ⲙⲫⲛⲟⲩϯ .",
+      "english": "that no flesh should boast before God.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲛⲉⲗⲁⲁⲩ ⲛⲥⲁⲣⲝ ϣⲟⲩϣⲟⲩ ⲙⲙⲟϥ ⲙⲡⲉ**ⲙⲧⲟ** ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ .",
+      "english": "that no flesh should boast before God.",
+      "source": "1 Corinthians 1",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲛⲁϣⲱⲡⲓ ⲉϥⲟⲓ ⲛⲛⲓϣϯ ⲙⲡⲉ**ⲙⲑⲟ** ⲙⲡϭⲟⲉⲓⲥ ⲟⲩⲟϩ ⲛⲉϥⲥⲁϫⲓ ⲛⲁⲫⲟϩ ϣⲁⲁⲩⲣⲏϫⲥ ⲛϯⲟⲓⲕⲟⲩⲙⲉⲛⲏ .",
+      "english": "he will be great before God, and his words will reach the limits of the inhabited earth.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲥⲉⲡⲁϩⲧⲟⲩ ⲙⲡⲉϥ**ⲙⲧⲟ** ⲉⲃⲟⲗ ⲉⲙⲉⲩⲧⲱⲟⲩⲛ ·",
+      "english": "and they cast themselves down before Him,",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲟⲩ ⲁⲕⲧⲁⲙⲟⲓ ⲉϩⲁⲛϧⲓⲥⲓ ⲛⲉⲙϩⲁⲛⲙⲕⲁⲩϩ ⲉⲑⲣⲓϫⲟⲩϣⲧ ⲉϫⲉⲛⲟⲩⲧⲁⲗⲉⲡⲱⲣⲓⲁ ⲛⲉⲙⲟⲩⲙⲉⲧⲁⲥⲉⲃⲏⲥ ⲁϥϣⲱⲡⲓ ⲛϫⲉⲟⲩϩⲁⲡ ⲙⲡⲁ**ⲙⲑⲟ** ⲟⲩⲟϩ ⲡⲓⲣⲉϥϯϩⲁⲡ ϥϭⲓϩⲟ .",
+      "english": "Wherefore hast thou shown me troubles and griefs to look upon, misery and ungodliness? judgment is before me, and the judge receives a reward.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲏ ⲉⲧⲣⲉⲧⲉⲧⲛϫⲱ ⲙⲡⲉⲧⲉ..ϣⲟⲟⲡ ⲁⲛ ⲉⲧⲉⲧⲛϫⲓϭⲟⲗ ⲙⲡⲉ**ⲙⲧⲟ** ⲉⲃⲟⲗ ⲙⲡⲛⲟⲩⲧⲉ",
+      "english": ". . .",
+      "source": "Acephelous Work 22 YB 83-96",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbyb:220-240",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙ",
+        1332,
+        36.721
+      ],
+      [
+        "ⲡⲉ",
+        566,
+        34.672
+      ],
+      [
+        "ⲡ",
+        545,
+        32.89
+      ],
+      [
+        "ϭⲟⲓⲥ",
+        317,
+        32.822
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        378,
+        31.99
+      ],
+      [
+        "ⲛ",
+        518,
+        31.641
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        434,
+        31.365
+      ],
+      [
+        "ⲡⲉⲕ",
+        133,
+        29.902
+      ],
+      [
+        "ⲡⲓ",
+        212,
+        28.954
+      ],
+      [
+        "ⲫ",
+        170,
+        28.792
+      ],
+      [
+        ".",
+        209,
+        28.738
+      ],
+      [
+        "ⲡⲉϥ",
+        118,
+        28.688
+      ],
+      [
+        "ⲡⲁ",
+        103,
+        28.662
+      ],
+      [
+        "ⲛⲟⲩϯ",
+        124,
+        28.611
+      ],
+      [
+        "ϥ",
+        226,
+        27.885
+      ],
+      [
+        "ϯ",
+        142,
+        27.74
+      ],
+      [
+        "ϭⲟⲉⲓⲥ",
+        69,
+        27.613
+      ],
+      [
+        "ⲡⲟⲩ",
+        62,
+        27.555
+      ],
+      [
+        "ⲭⲏ",
+        58,
+        27.452
+      ],
+      [
+        "ⲉⲣⲁⲧ",
+        52,
+        27.391
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        731,
+        38.56
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3021,
+        30.568
+      ],
+      [
+        "ⲙ",
+        2143,
+        27.968
+      ],
+      [
+        "ⲡ",
+        1545,
+        25.698
+      ],
+      [
+        "ⲡⲉ",
+        948,
+        25.595
+      ],
+      [
+        "ⲛ",
+        698,
+        21.571
+      ],
+      [
+        "ⲛⲟⲩⲧⲉ",
+        215,
+        20.444
+      ],
+      [
+        "ⲡⲉϥ",
+        176,
+        19.895
+      ],
+      [
+        "ⲡⲉⲕ",
+        128,
+        19.289
+      ],
+      [
+        "ⲃⲁⲗ",
+        77,
+        19.257
+      ],
+      [
+        "ⲁⲩⲱ",
+        258,
+        19.202
+      ],
+      [
+        "ⲫⲁⲣⲁⲱ",
+        49,
+        19.017
+      ],
+      [
+        "ⲣⲁⲧ",
+        72,
+        18.604
+      ],
+      [
+        "ⲡⲉⲩ",
+        90,
+        18.585
+      ],
+      [
+        "ⲟⲩ",
+        237,
+        18.307
+      ],
+      [
+        "ⲡⲁ",
+        114,
+        18.295
+      ],
+      [
+        "ⲧ",
+        191,
+        18.224
+      ],
+      [
+        "ϥ",
+        247,
+        17.787
+      ],
+      [
+        "ⲁ",
+        208,
+        17.566
+      ],
+      [
+        "ⲣⲛⲟⲃⲉ",
+        40,
+        17.19
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲧⲟ_0_node",
+          716
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲙⲧⲟ",
+          639
+        ],
+        [
+          "ⲙ_1_post_ⲙⲧⲟ",
+          317
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          307
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          261
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲧⲟ",
+          105
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲧⲟ",
+          92
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲧⲟ",
+          65
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲧⲟ",
+          58
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          37
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲙⲧⲟ",
+          22
+        ],
+        [
+          "ⲡⲉⲕ_5_post_ⲛⲟⲩⲧⲉ",
+          19
+        ],
+        [
+          "ⲛ_1_post_ⲙⲧⲟ",
+          29
+        ],
+        [
+          "ϩⲓⲉⲣⲓⲭⲱ_2_post_ⲛ",
+          12
+        ],
+        [
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          10
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲃⲁⲗ",
+          9
+        ],
+        [
+          "ⲃⲁⲗ_2_post_ⲛ",
+          9
+        ],
+        [
+          "ⲡⲉⲧⲛ_5_post_ⲛⲟⲩⲧⲉ",
+          9
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          9
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲧⲟ",
+          8
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          8
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_3_post_ⲛ",
+          8
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲧⲟ_0_node",
+          "ⲉⲃⲟⲗ_1_post_ⲙⲧⲟ",
+          16
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲙⲧⲟ",
+          "ⲙ_1_post_ⲙⲧⲟ",
+          6
+        ],
+        [
+          "ⲙ_1_post_ⲙⲧⲟ",
+          "ⲡ_2_post_ⲙ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲩ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲧⲛ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲡⲉⲕ_5_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲙⲧⲟ",
+          "ⲛ_1_post_ⲙⲧⲟ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲧⲟ",
+          "ϩⲓⲉⲣⲓⲭⲱ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲧⲟ",
+          "ⲫⲁⲣⲁⲱ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲧⲟ",
+          "ⲛⲉⲕ_3_post_ⲃⲁⲗ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_3_post_ⲃⲁⲗ",
+          "ⲃⲁⲗ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲡⲉⲧⲛ_5_post_ⲛⲟⲩⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲙⲧⲟ",
+          "ⲙⲧⲟ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲧⲟ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϩⲉⲑⲛⲟⲥ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 9.64,
+      "rank": 110,
+      "count": 1530
+    }
+  },
+  "etym": {
+    "egy_num": "77650",
+    "egy_lemma": "mtr",
+    "demo_num": "dm4524",
+    "demo_lemma": "mtr",
+    "english": "presence; vicinity",
+    "german": "Gegenwart, Nähe",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/77650",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm4524"
+  }
+}

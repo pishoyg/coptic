@@ -1,0 +1,187 @@
+{
+  "id": "C410",
+  "forms": [
+    {
+      "id": "CF1720",
+      "orth": "ⲃⲱⲗ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.84,
+        "rank": 476,
+        "count": 291
+      }
+    },
+    {
+      "id": "CF1721",
+      "orth": "ⲃⲱⲗ ⲉⲃⲟⲗ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.88,
+        "rank": 774,
+        "count": 75
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS486",
+      "bibliography": "CD 33b; ChLCS 8a"
+    },
+    {
+      "id": "CS487",
+      "bibliography": "CD 33b"
+    },
+    {
+      "id": "CS488",
+      "bibliography": "CD 33b"
+    },
+    {
+      "id": "CS489",
+      "bibliography": "CD 33b; ChLCS 8a"
+    },
+    {
+      "id": "CS490",
+      "bibliography": "CD 33b"
+    },
+    {
+      "id": "CS491",
+      "bibliography": "CD 33b"
+    },
+    {
+      "id": "CS492",
+      "bibliography": "CD 33b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲅⲁⲣ ϩⲏⲇⲏ ⲥⲉⲛⲁⲟⲩⲟⲑⲃⲉⲧ ⲉⲃⲟⲗ ⲟⲩⲟϩ ⲡⲥⲏⲟⲩ **ⲛⲧⲉⲡⲁⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲁϥϧⲱⲛⲧ .",
+      "english": "For I am already being offered, and the time of my departure has come.",
+      "source": "16_II Timothy_04",
+      "urn": "urn:cts:copticLit:nt.2tim.bohairic:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲓⲥ ⲡⲁⲓ ⲡⲁϫⲟⲉⲓⲥ ⲡⲉ **ⲡⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲙⲡϣⲁϫⲉ ·",
+      "english": "“Lo, my Lord, this is the solution of the word.”",
+      "source": "Pistis Sophia Book 3 Part 4",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:89-99",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲑⲃⲉⲫⲁⲓ ⲁⲥⲙⲟϩ ⲛϫⲉⲧⲁϯⲡⲓ **ⲙⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲟⲩⲟϩ ϩⲁⲛⲛⲁⲕϩⲓ ⲁⲩϭⲓⲧ ⲙⲫⲣⲏϯ ⲛⲑⲏⲉⲑⲛⲁⲙⲓⲥⲓ ⲁⲩϭⲓⲧ ⲛϫⲟⲛⲥ ⲉϣⲧⲉⲙⲥⲱⲧⲉⲙ ⲁⲓⲓⲏⲥⲟⲩⲥ ⲉϣⲧⲉⲙⲛⲁⲩ .",
+      "english": "Therefore are my loins filled with feebleness, and pangs have seized me as a travailing woman: I dealt wrongfully that I might not hear; I hasted that I might not see.",
+      "source": "23_Isaias_21",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:21",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲡⲛⲁⲩ ⲇⲉ ϩⲱⲱϥ ⲉⲧϥⲛⲁⲧⲁⲕⲟⲟⲩ ⲧⲉⲕⲧⲏⲥⲓⲥ ⲧⲏⲣⲥ ⲛⲁϣⲧⲟⲣⲧⲣ · ϣⲁⲁⲧϩⲁⲏ ⲛⲟⲩⲛⲟⲩ ⲁⲩⲱ **ⲡⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲛⲧⲡⲉ ⲙⲛⲡⲕⲁϩ · ⲉⲛⲉⲙⲛⲗⲁⲁⲩ ⲥⲟⲟⲩⲛ ⲙⲙⲟⲟⲩ ⲟⲩⲇⲉ ⲛⲁⲅⲅⲉⲗⲟⲥ ϩⲛⲙⲡⲏⲩⲉ · ⲉⲙⲏⲧⲧⲉⲓ ⲉⲣⲟϥ ⲙⲛⲡⲉϥϣⲏⲣⲉ ⲙⲙⲉⲣⲓⲧ ⲕⲁⲧⲁⲧϩⲉ ⲉⲛⲧⲁⲛϣⲣⲡϫⲟⲟⲥ ·",
+      "english": "Concerning that hour wherein He shall destroy all created things, when everything shall be overthrown, concerning that last hour, I say, and the destruction of the heavens and the earth, no one whatsoever shall know, not even the angels in the heavens, except Himself and His beloved Son, even as we have said before.",
+      "source": "On the End of the World and on Temple of Solomon",
+      "urn": "urn:cts:copticLit:psbasil.temple.budge:1-47",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲙⲉⲃⲟⲗϩⲁ ⲡⲙⲟⲛⲙⲉⲛ ⲛⲧⲉⲛⲉϥϩⲁⲣⲙⲁ ⲛⲉⲙⲧⲥⲙⲏ ⲛⲧⲉⲛⲉϥⲧⲣⲟⲭⲟⲥ ϫⲉⲙⲡⲟⲩⲫⲟⲛϩⲟⲩ ⲛϫⲉϩⲁⲛⲓⲟϯ ⲉϫⲉⲛⲛⲟⲩϣⲏⲣⲓ **ⲛⲧⲉⲛⲡⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲛⲧⲉⲛⲟⲩϫⲓϫ .",
+      "english": "at the sound of his rushing, at the sound of his hoofs, and at the rattling of his chariots, at the noise of his wheels: the fathers turned not to their children because of the weakness of their hands,",
+      "source": "24_Ieremias_29",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:29",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϩⲓⲛⲏⲃ ⲇⲉ ϩⲱⲱϥ · **ⲡⲃⲱⲗ **ⲉⲃⲟⲗ**** ⲉⲡⲉϩⲟⲩⲟ ϩⲛⲟⲩϩⲓⲛⲏⲃ ⲉϥϩⲟⲣϣ ·",
+      "english": "In the matter of sleep [there is] great destruction [of the body] if the sleep be too heavy.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.96,
+      "rank": 390,
+      "count": 311
+    },
+    "B": {
+      "rate": 1.05,
+      "rank": 615,
+      "count": 89
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C414",
+      "label": "ϫⲓⲛⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "interpretation; loosening, freeing"
+    },
+    {
+      "target": "C411",
+      "label": "ⲁⲧⲃⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "indissoluble, unending"
+    },
+    {
+      "target": "C11275",
+      "label": "ⲃⲁⲗ-",
+      "pos": "N",
+      "gloss": "loosened, melting"
+    },
+    {
+      "target": "C404",
+      "label": "ⲃⲱⲗ",
+      "pos": "V",
+      "gloss": "loosen, untie (of chains, cords etc.); melt; unstring (sinews); interpret, explain (scriptures, dreams); be softened, persuaded; weaken, make faint; nullify (order, deed); dissolve, destroy"
+    },
+    {
+      "target": "C409",
+      "label": "ⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "solution, interpretation; loosening, weakness"
+    },
+    {
+      "target": "C408",
+      "label": "ⲃⲱⲗ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "become loose, detached (of man's hair)"
+    },
+    {
+      "target": "C407",
+      "label": "ⲃⲱⲗ (ⲉⲃⲟⲗ ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "be open, free with"
+    },
+    {
+      "target": "C406",
+      "label": "ⲃⲱⲗ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "loosen (chains, cords), break (seal); unclose (womb); unfold (book); be melted; release, terminate (fast); be dispersed, scattered (of dust); dissolve, nullify (drugs, magic); be loose (hair, sand); relax, annul (laws, legal deeds); absolve (sins); destroy; resolve (difficulties), come to terms; pay (penalty); go to pieces, perish; slacken, grow weak, faint; be wearied; be loosened, paralysed; be released, die; upset, unhinge (morally); be dissolute, loose (in conduct, doctrine)"
+    },
+    {
+      "target": "C405",
+      "label": "ⲃⲱⲗ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "agree, come to terms with"
+    },
+    {
+      "target": "C412",
+      "label": "ⲙⲉⲧⲁⲧⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "indissolubility"
+    },
+    {
+      "target": "C413",
+      "label": "ⲣⲉϥⲃⲱⲗ",
+      "pos": "N",
+      "gloss": "exegete, interpreter"
+    }
+  ]
+}

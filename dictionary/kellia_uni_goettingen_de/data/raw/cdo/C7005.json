@@ -1,0 +1,48 @@
+{
+  "id": "C7005",
+  "forms": [
+    {
+      "id": "CF16064",
+      "orth": "ϩⲁϣⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF16065",
+      "orth": "ϩⲁϣⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF16066",
+      "orth": "ϩⲁϣⲥ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7726",
+      "bibliography": "CD 740b; KoptHWb 405"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7003",
+      "label": "ϩⲱϣ",
+      "pos": "V",
+      "gloss": "be in distress"
+    },
+    {
+      "target": "C7004",
+      "label": "ϩⲱϣ",
+      "pos": "N",
+      "gloss": "distress, straits"
+    }
+  ]
+}

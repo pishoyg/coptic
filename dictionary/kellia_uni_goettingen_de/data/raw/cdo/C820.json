@@ -1,0 +1,49 @@
+{
+  "id": "C820",
+  "forms": [
+    {
+      "id": "CF2978",
+      "orth": "ⲑⲁϥ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 2949,
+        "count": 7
+      }
+    },
+    {
+      "id": "CF2980",
+      "orth": "ⲑⲁϥ⸗",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31628",
+      "orth": "*ⲑⲓϥⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Status pronominalis",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS970",
+      "bibliography": "CD 69b; CED 43; DELC 58"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "171780",
+    "egy_lemma": "tfi̯",
+    "demo_num": "d7263",
+    "demo_lemma": "tfj",
+    "english": "to remove forcefully; to repulse",
+    "german": "(gewaltsam) entfernen; zurückdrängen; aufspringen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/171780",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7263"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "C3641",
+  "forms": [
+    {
+      "id": "CF9187",
+      "orth": "ϫⲓⲥⲛⲟϥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4143",
+      "bibliography": "CD 348b; KoptHWb 191; ChLCS 49a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7058",
+      "type": "cf",
+      "label": "receive, take"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3640",
+      "label": "ϯⲥⲛⲟϥ",
+      "pos": "V",
+      "gloss": "give blood, bleed"
+    },
+    {
+      "target": "C3638",
+      "label": "ⲁⲧⲥⲛⲟϥ",
+      "pos": "N",
+      "gloss": "bloodless"
+    },
+    {
+      "target": "C3639",
+      "label": "ⲣⲥⲛⲟϥ",
+      "pos": "V",
+      "gloss": "become blood"
+    },
+    {
+      "target": "C3637",
+      "label": "ⲥⲛⲟϥ",
+      "pos": "N",
+      "gloss": "blood"
+    }
+  ]
+}

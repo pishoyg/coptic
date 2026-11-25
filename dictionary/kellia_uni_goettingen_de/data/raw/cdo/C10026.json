@@ -1,0 +1,46 @@
+{
+  "id": "C10026",
+  "forms": [
+    {
+      "id": "CF26213",
+      "orth": "ⲡⲁⲣⲁⲃⲁⲥⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26214",
+      "orth": "ⲡⲁⲣⲁⲃⲁⲥⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26215",
+      "orth": "ⲡⲁⲣⲁⲃⲁⲥⲓⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1777,
+        "count": 37
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13117",
+      "bibliography": "DDGLC",
+      "cu_ID": "8880"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1636",
+    "grl_lemma": "παραβασία",
+    "grl_meaning": "going aside, escape, transition, transgression",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1304b; Preisigke 2:234"
+  }
+}

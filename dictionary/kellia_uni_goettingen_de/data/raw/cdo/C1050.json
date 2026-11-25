@@ -1,0 +1,194 @@
+{
+  "id": "C1050",
+  "forms": [
+    {
+      "id": "CF3459",
+      "orth": "ⲕⲟⲓⲉ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲟⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.91,
+        "rank": 482,
+        "count": 162
+      }
+    },
+    {
+      "orth": "ⲕⲁⲓⲉ",
+      "dialect": "S",
+      "id": "760.1"
+    },
+    {
+      "orth": "ⲕⲁⲉⲓⲉ",
+      "dialect": "S",
+      "id": "760.2"
+    },
+    {
+      "orth": "ⲕⲟⲓ",
+      "dialect": "S",
+      "id": "760.3"
+    },
+    {
+      "orth": "ⲕⲁⲓⲉ",
+      "dialect": "A",
+      "id": "760.4"
+    },
+    {
+      "orth": "ⲕⲁⲉⲓⲉ",
+      "dialect": "A",
+      "id": "760.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1209",
+      "bibliography": "CD 92b; KoptHWb 58; ChLCS 16a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲫⲓⲱⲧ ⲇⲉ ⲛⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲛⲉⲟⲩⲟⲩⲱⲓ ⲡⲉ ϧⲉⲛⲡⲓⲕⲁϩⲓ ⲟⲩⲟϩ ⲛⲁⲩϣⲟⲡ ⲛⲁϥ ⲡⲉ ⲛϫⲉϩⲁⲛⲕⲟⲩϫⲓ ⲛⲉⲥⲱⲟⲩ ⲟⲩⲟϩ ⲁϥⲧⲏⲓⲧⲟⲩ ⲉⲧⲟⲧϥ ⲛⲟⲩⲙⲁ ⲛⲉⲥⲱⲟⲩ ⲉⲑⲣⲉϥⲁⲙⲟⲛⲓ ⲙⲙⲱⲟⲩ ϧⲉⲛⲧ**ⲕⲟⲓ** .",
+      "english": "And Apa Shenoute's father was a farmer in that land, he had a few sheep and he gave them to a shepherd to be responsible for them in the field.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲓⲱⲁⲛⲛⲏⲥ ⲇⲉ ⲛⲁⲣⲉϩⲁⲛϥⲱⲓ ⲛϭⲁⲙⲟⲩⲗ ⲧⲟⲓ ϩⲓⲱⲧϥ ⲟⲩⲟϩ ⲉϥⲙⲏⲣ ⲛⲟⲩⲙⲟϫϧ ⲛϣⲁⲣ ⲉϫⲉⲛⲧⲉϥϯⲡⲓ ⲟⲩⲟϩ ⲛⲁϥⲟⲩⲉⲙϣϫⲉ ⲛⲉⲙⲉⲃⲓⲱ ⲛⲧⲉⲧ**ⲕⲟⲓ** .",
+      "english": "John was clothed with camel&apos;s hair and a leather belt around his waist. He ate locusts and wild honey.",
+      "source": "Bohairic Gospel of Mark 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲧⲁⲡⲁⲓⲁⲗⲟⲩ ⲇⲉ ⲓ ⲉⲧⲉⲣⲉⲛⲟⲩϯ ⲁϥϣⲉ ⲉϧⲟⲩⲛ ⲉⲡⲏⲓ ⲙⲡⲓⲣⲱⲙⲓ ⲁⲩϫⲟⲥ ⲛⲁϥ ⲛϫⲉⲛⲉⲛϣⲏⲣⲓ ⲙⲡⲓⲣⲱⲙⲓ ϫⲉⲁⲡⲉⲛⲓⲱⲧ ϩⲱⲗ ⲉⲧ**ⲕⲟⲓ**",
+      "english": "But when this young boy had arrived at Terenuti and entered the man's house, the man's children said to him, ‘Our father is in the field.’",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲧ",
+        155,
+        29.353
+      ],
+      [
+        "ϧⲉⲛ",
+        86,
+        25.042
+      ],
+      [
+        "ⲛⲧⲉ",
+        67,
+        24.264
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        69,
+        23.406
+      ],
+      [
+        "ϥ",
+        71,
+        22.874
+      ],
+      [
+        "ⲛ",
+        66,
+        22.724
+      ],
+      [
+        "ⲩ",
+        46,
+        22.692
+      ],
+      [
+        "ⲟⲩ",
+        51,
+        21.771
+      ],
+      [
+        "ⲧⲏⲣ",
+        24,
+        21.726
+      ],
+      [
+        "ⲉ",
+        45,
+        21.493
+      ],
+      [
+        "ⲛⲓ",
+        32,
+        21.218
+      ],
+      [
+        "ⲁ",
+        42,
+        21.166
+      ],
+      [
+        "ⲑⲏⲣⲓⲟⲛ",
+        7,
+        20.725
+      ],
+      [
+        "ⲓ",
+        25,
+        20.507
+      ],
+      [
+        "ⲡⲓ",
+        30,
+        20.491
+      ],
+      [
+        "ⲟⲗ",
+        7,
+        20.362
+      ],
+      [
+        "ϩⲁⲛ",
+        19,
+        20.057
+      ],
+      [
+        "ⲛⲁ",
+        26,
+        20.056
+      ],
+      [
+        "ⲉⲩⲉ",
+        15,
+        20.055
+      ],
+      [
+        "ⲉⲃⲓⲱ",
+        4,
+        20.023
+      ]
+    ]
+  },
+  "network": {},
+  "etym": {
+    "egy_num": "159160",
+    "egy_lemma": "qꜣ.yt",
+    "demo_num": "d6259",
+    "demo_lemma": "qj(.t)",
+    "english": "high field; high-lying land; height",
+    "german": "Hochfeld; hochgelegenes Land; Hohes",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/159160",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6259"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "C137",
+  "forms": [
+    {
+      "id": "CF505",
+      "orth": "ⲁⲛⲓⲕⲁⲙ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF506",
+      "orth": "ⲁⲛⲓⲕⲁⲙ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS157",
+      "bibliography": "CD 12a; CED 9; KoptHWb 8, 487; ChLCS 4b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "crossReferences": [
+    {
+      "target": "C12417",
+      "type": "cf",
+      "label": "stone"
+    },
+    {
+      "target": "C12283",
+      "type": "cf",
+      "label": "black"
+    }
+  ],
+  "etym": {
+    "egy_num": "27660",
+    "egy_lemma": "jnr-km",
+    "demo_num": "dm3080",
+    "demo_lemma": "ı ͗nj-km",
+    "english": "black granite (lit. black stone)",
+    "german": "schwarzer Granit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/27660",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3080"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "C4524",
+  "forms": [
+    {
+      "id": "CF11003",
+      "orth": "ⲁⲛⲧⲱⲧⲉⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF11004",
+      "orth": "ⲁⲛⲧⲱⲧⲉⲣ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF11005",
+      "orth": "ⲁⲛⲧⲱⲧⲉⲣ",
+      "dialect": "L"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5112",
+      "bibliography": "CD 432a; KoptHWb 244; DELC 221a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12142",
+      "label": "ⲁⲛⲉⲧⲱⲣⲧ",
+      "pos": "N",
+      "gloss": "step, stairs (?)"
+    },
+    {
+      "target": "C4522",
+      "label": "ⲧⲱⲣⲧ",
+      "pos": "N",
+      "gloss": "staircase"
+    },
+    {
+      "target": "C4523",
+      "label": "ⲧⲱⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "ladder, step, stair, degree (of sundial)"
+    }
+  ]
+}

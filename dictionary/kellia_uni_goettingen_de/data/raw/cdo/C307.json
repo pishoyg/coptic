@@ -1,0 +1,189 @@
+{
+  "id": "C307",
+  "forms": [
+    {
+      "id": "CF1330",
+      "orth": "ⲁⲧⲁϭⲛⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1331",
+      "orth": "ⲁⲧⲁϭⲛⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4282,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS340",
+      "bibliography": "CD 26b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲉⲧϯ ⲛⲟⲩⲑⲱⲗⲉⲃ ⲛⲥⲁϯⲛⲁⲓⲁⲧⲥ ⲉⲑⲟⲩⲁⲃ ⲛⲕⲁⲑⲟⲗⲓⲕⲏ ⲛⲛⲉⲕⲕⲗⲏⲥⲓⲁ ⲑⲏ ⲉⲧⲟⲓ ⲛ**ⲁⲧⲁϭⲛⲓ** ϧⲉⲛⲡⲉⲥϫⲓⲛⲱⲛϧ ⲧⲏⲣϥ ⲉⲩⲥⲓϯ ⲛϩⲁⲛⲥⲁϫⲓ ⲉⲩϩⲱⲟⲩ ⲙⲙⲉⲧⲫⲓⲗⲟⲥⲟⲫⲟⲥ ⲉⲡϩⲏⲧ ⲛⲛⲓⲣⲱⲙⲓ ⲛⲁⲧⲕⲁϯ ϫⲉϩⲓⲛⲁ ⲛⲧⲟⲩⲧⲁⲕⲟ ⲙⲡⲟⲩϫⲓⲛⲱⲛϧ ⲉⲃⲟⲗ ϩⲁϯⲙⲉⲧⲥⲉⲙⲛⲟⲥ .",
+      "english": "All those who have stained the happy and catholic Church, which remains free from blemish throughout its entire life, by injecting evil words of philosophy into the hearts of men without understanding, so that their lives might be destroyed far from purity.",
+      "source": "Bohairic Lausiac History - Part 1",
+      "urn": "urn:cts:copticLit:lausiac.boh_lausiac.amelineau_ed:0",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲱⲩⲛⲓⲁⲧⲟⲩ ⲛⲛⲓ**ⲁⲧⲁϭⲛⲓ** ϩⲓⲡⲓⲙⲱⲓⲧ ⲛⲏ ⲉⲑⲙⲟϣⲓ ϧⲉⲛⲫⲛⲟⲙⲟⲥ ⲙⲡϭⲟⲓⲥ",
+      "english": "Blessed are the blameless in the way, who walk in the law of the Lord.",
+      "source": "19_Psalmi_118",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:118",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϫⲓⲛⲱⲛϧ",
+        2,
+        16.11
+      ],
+      [
+        "ⲑⲏ",
+        2,
+        12.82
+      ],
+      [
+        "ⲡⲉⲥ",
+        2,
+        12.284
+      ],
+      [
+        "ⲟⲱⲩⲛⲓⲁⲧ",
+        1,
+        12.252
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.998
+      ],
+      [
+        "ⲧⲏⲣ",
+        2,
+        9.386
+      ],
+      [
+        "ⲙⲱⲓⲧ",
+        1,
+        8.561
+      ],
+      [
+        "ϩⲓ",
+        1,
+        7.953
+      ],
+      [
+        "ⲛ",
+        3,
+        7.761
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        7.667
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        7.178
+      ],
+      [
+        "ⲛⲏ",
+        1,
+        6.472
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        4.633
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲁⲧⲁϭⲛⲓ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 3817,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C311",
+      "label": "ϩⲓⲁϭⲛⲓ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "stain sb"
+    },
+    {
+      "target": "C305",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C306",
+      "label": "ⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "blemish, stain"
+    },
+    {
+      "target": "C310",
+      "label": "ⲉⲣⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stained"
+    },
+    {
+      "target": "C309",
+      "label": "ⲉⲣⲁⲧⲁϭⲛⲓ",
+      "pos": "V",
+      "gloss": "be stainless"
+    },
+    {
+      "target": "C308",
+      "label": "ⲙⲉⲧⲁⲧⲁϭⲛⲓ",
+      "pos": "N",
+      "gloss": "stainlessness"
+    }
+  ]
+}

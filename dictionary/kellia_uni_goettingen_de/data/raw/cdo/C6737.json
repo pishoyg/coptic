@@ -1,0 +1,72 @@
+{
+  "id": "C6737",
+  "forms": [
+    {
+      "id": "CF15519",
+      "orth": "ϩⲓⲟⲩⲓ ⲉⲡϩⲁⲡ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF15520",
+      "orth": "ϩⲓⲟⲩⲓ ⲉⲡϩⲁⲡ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF15521",
+      "orth": "ϩⲓⲟⲩⲓ ⲉⲡϩⲁⲡ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7451",
+      "bibliography": "CD 694b; KoptHWb 381"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6732",
+      "label": "ϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judgement, inquest"
+    },
+    {
+      "target": "C6738",
+      "label": "ϫⲓϩⲁⲡ",
+      "pos": "V",
+      "gloss": "receive judgement"
+    },
+    {
+      "target": "C6734",
+      "label": "ϯϩⲁⲡ",
+      "pos": "V",
+      "gloss": "give judgement"
+    },
+    {
+      "target": "C6735",
+      "label": "ⲙⲁ ⲛϯϩⲁⲡ",
+      "pos": "N",
+      "gloss": "place of judgement"
+    },
+    {
+      "target": "C6733",
+      "label": "ⲣϩⲁⲡ",
+      "pos": "V",
+      "gloss": "give judgement, avenge, go to law"
+    },
+    {
+      "target": "C6736",
+      "label": "ⲣⲉϥϯϩⲁⲡ",
+      "pos": "N",
+      "gloss": "judge"
+    }
+  ]
+}

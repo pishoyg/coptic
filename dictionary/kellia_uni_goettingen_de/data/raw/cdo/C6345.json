@@ -1,0 +1,88 @@
+{
+  "id": "C6345",
+  "forms": [
+    {
+      "id": "CF14705",
+      "orth": "ⲉⲓⲣⲉ ⲛϩⲁⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7040",
+      "bibliography": "CD 636a-b; KoptHWb 348; DELC 284b; ChLCS 86a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C6343",
+      "label": "ϣⲁϩⲁⲉ",
+      "pos": "ADV",
+      "gloss": "till, lastly"
+    },
+    {
+      "target": "C6346",
+      "label": "ϣⲱⲡⲉ ⲛϩⲁⲓⲉ",
+      "pos": "V",
+      "gloss": "be lacking"
+    },
+    {
+      "target": "C6338",
+      "label": "ϩⲁⲉ",
+      "pos": "N",
+      "gloss": "last thing, end"
+    },
+    {
+      "target": "C6339",
+      "label": "ϩⲁⲉ",
+      "pos": "N",
+      "gloss": "last thing, end"
+    },
+    {
+      "target": "C6340",
+      "label": "ϩⲁⲉ",
+      "pos": "N",
+      "gloss": "last"
+    },
+    {
+      "target": "C6344",
+      "label": "ϩⲛⲑⲁⲏ",
+      "pos": "ADV",
+      "gloss": "in the end, at last"
+    },
+    {
+      "target": "C6347",
+      "label": "ϫⲓϩⲁⲉ",
+      "pos": "V",
+      "gloss": "take last (place), stay behind"
+    },
+    {
+      "target": "C6341",
+      "label": "ⲉⲡϩⲁⲉ",
+      "pos": "ADV",
+      "gloss": "at the end"
+    },
+    {
+      "target": "C6342",
+      "label": "ⲙⲫⲁⲉ",
+      "pos": "ADV",
+      "gloss": "at last, finally"
+    }
+  ]
+}

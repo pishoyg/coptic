@@ -1,0 +1,712 @@
+{
+  "id": "C5950",
+  "forms": [
+    {
+      "id": "CF13905",
+      "orth": "ϣⲱⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3835,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϣⲱⲱⲛⲧ",
+      "dialect": "S",
+      "id": "1934.1"
+    },
+    {
+      "orth": "ϣⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.1,
+        "rank": 2882,
+        "count": 15
+      }
+    },
+    {
+      "orth": "ϣⲉⲛⲧ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8071,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϣⲟⲛⲧ⸗",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4384,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϣⲟⲛⲧ†",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4384,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ϣⲱⲛⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2749,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ϣⲉⲛⲧ-",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3499,
+        "count": 5
+      }
+    },
+    {
+      "orth": "ϣⲟⲛⲧ⸗",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2162,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϣⲟⲛⲧ†",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.15,
+        "rank": 2162,
+        "count": 13
+      }
+    },
+    {
+      "orth": "ϣⲱⲛⲧ",
+      "dialect": "F",
+      "id": "1934.10"
+    },
+    {
+      "orth": "ϣⲱⲱⲛⲧ",
+      "dialect": "L",
+      "id": "1934.11"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6634",
+      "bibliography": "CD 572b; CED 246; KoptHWb 319; DELC 267a; ChLCS 79a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϫⲉⲛⲁⲓ · ⲁϥϣⲗⲏⲗ ⲉϥϫⲱ ⲙⲙⲟⲥ · ϫⲉ · ⲓⲏⲥⲟⲩⲥ ⲡⲉⲛⲧⲁϥ**ϣⲱⲛⲧ** ⲙⲡⲉⲕⲗⲟⲙ ⲡⲁⲓ ⲉⲧϩⲙⲡⲉⲕϣⲱⲛⲧ ⲡⲱⲕ ·",
+      "english": "And having said these things, [Saint John] prayed, saying: 'Jesus, Who didst weave the crown which was in Thine own garland (?).",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩ**ϣⲱⲛⲧ** ⲛⲟⲩⲕⲗⲟⲙ ⲉⲃⲟⲗ ϩⲛⲛϣⲟⲛⲧⲉ ⲁⲩⲧⲁⲗⲟ ⲙⲙⲟϥ ⲉϩⲣⲁⲓ ⲉϫⲛⲧⲉϥⲁⲡⲉ . ⲁⲩⲱ ⲟⲩⲕⲁϣ ϩⲛⲧⲉϥϭⲓϫ ⲛⲟⲩⲛⲁⲙ . ⲁⲩⲡⲁϩⲧⲟⲩ ⲇⲉ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲉⲩⲥⲱⲃⲉ ⲙⲙⲟϥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ϫⲉⲭⲁⲓⲣⲉ ⲡⲣⲣⲟ ⲛⲛⲓⲟⲩⲇⲁⲓ .",
+      "english": "They braided a crown of thorns and put it on his head, and a reed in his right hand; and they kneeled down before him, and mocked him, saying, 'Hail, King of the Jews!'",
+      "source": "40_Matthew_27",
+      "urn": "urn:cts:copticLit:nt.matt.sahidica:27",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲧⲉⲕϭⲟⲙ ⲛⲟⲩⲟⲉⲓⲛ ⲡⲣⲟⲫⲏⲧⲉⲩⲉ ϩⲁⲛⲉⲓϣⲁϫⲉ ⲙⲡⲓⲟⲩⲟⲉⲓϣ ϩⲓⲧⲛⲥⲟⲗⲟⲙⲱⲛ ϩⲛⲧⲉϥⲙⲉϩⲙⲛⲧⲯⲓⲧⲉ ⲛⲱⲇⲏ ⲁⲩⲱ ⲡⲉϫⲁⲥ ϫⲉⲡϫⲟⲉⲓⲥ ϩⲓϫⲛⲧⲁⲁⲡⲉ ⲛⲧϩⲉ ⲛⲟⲩⲕⲗⲟⲙ · ⲁⲩⲱ ⲛϯⲛⲁⲣ ⲡⲉϥⲃⲟⲗ ⲁⲛ ⲁⲩ**ϣⲱⲛⲧ** ⲛⲁⲓ ⲙⲡⲉⲕⲗⲟⲙ ⲛⲧⲁⲗⲏⲑⲉⲓⲁ · ⲁⲩⲱ ⲁϥⲧⲣⲉⲛⲉⲕⲕⲗⲁⲇⲟⲥ ϯⲟⲩⲱ ϩⲣⲁⲓ ⲛϩⲏⲧ · ϫⲉⲉϥⲉⲓⲛⲉ ⲁⲛ ⲛⲟⲩⲕⲗⲟⲙ ⲉϥϣⲟⲩⲱⲟⲩ ⲉⲙⲉϥϯⲟⲩⲱ · ⲁⲗⲗⲁ ⲕⲟⲛϩ ϩⲓϫⲛⲧⲁⲁⲡⲉ · ⲁⲩⲱ ⲁⲕϯⲟⲩⲱ ϩⲣⲁⲓ ϩⲓϫⲱⲓ ⲛⲉⲕⲕⲁⲣⲡⲟⲥ ⲥⲉⲙⲉϩ . ⲁⲩⲱ ⲥⲉϫⲏⲕ · ⲉⲩⲙⲉϩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲕⲟⲩϫⲁⲓ .",
+      "english": "“thy light-power hath prophesied aforetime concerning these words through Solomon in the nineteenth Ode and said: “1. The Lord is on my head as a wreath, and I shall not depart from him. “2. The wreath in truth |117. is woven for me; and it hath caused thy twigs to sprout in me. 3. For it is not like unto a wreath withered that sprouteth not. But thou art alive on my head and thou hast sprouted upon me. 4. Thy fruits are full and perfect, filled with thy salvation.”",
+      "source": "Pistis Sophia Book 1 Part 8",
+      "urn": "urn:cts:copticLit:pistissophia.1.petermann:84-96",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲗⲟⲙ",
+        4,
+        15.39
+      ],
+      [
+        "ⲥⲏϧⲓ",
+        1,
+        14.172
+      ],
+      [
+        "ϭⲏϫⲓ",
+        2,
+        12.712
+      ],
+      [
+        "ⲛ",
+        11,
+        10.445
+      ],
+      [
+        "ⲙⲁⲧⲟⲓ",
+        1,
+        9.814
+      ],
+      [
+        "ⲩ",
+        6,
+        9.352
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        5,
+        8.746
+      ],
+      [
+        "ϫⲫⲉ",
+        1,
+        8.542
+      ],
+      [
+        "ϩⲱⲃ",
+        2,
+        8.531
+      ],
+      [
+        "ⲥⲁϧⲟⲩⲛ",
+        1,
+        8.485
+      ],
+      [
+        "ⲥⲱⲃⲓ",
+        1,
+        8.403
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        7.985
+      ],
+      [
+        "ϩⲁⲛ",
+        3,
+        7.544
+      ],
+      [
+        "ⲃⲱⲕ",
+        1,
+        7.149
+      ],
+      [
+        "ϩⲟϯ",
+        1,
+        7.012
+      ],
+      [
+        "ⲁ",
+        4,
+        6.466
+      ],
+      [
+        "ⲛⲓ",
+        3,
+        6.45
+      ],
+      [
+        "ⲥⲁⲃⲟⲗ",
+        1,
+        6.361
+      ],
+      [
+        "ⲭⲱ",
+        1,
+        5.861
+      ],
+      [
+        ".",
+        3,
+        5.848
+      ]
+    ],
+    "S": [
+      [
+        "ⲛⲉⲩⲯⲉⲗⲉⲟⲛ",
+        1,
+        17.598
+      ],
+      [
+        "ⲡⲱⲕ",
+        2,
+        15.511
+      ],
+      [
+        "ⲕⲗⲟⲙ",
+        3,
+        15.153
+      ],
+      [
+        "ⲝⲟⲩⲣ",
+        1,
+        13.691
+      ],
+      [
+        "ⲡⲁⲓ",
+        6,
+        13.332
+      ],
+      [
+        "ⲱ",
+        2,
+        10.562
+      ],
+      [
+        "ⲙⲛ",
+        4,
+        9.644
+      ],
+      [
+        "ⲥⲁϣϥ",
+        1,
+        9.258
+      ],
+      [
+        "ⲡⲉⲕ",
+        2,
+        8.868
+      ],
+      [
+        "ⲛⲉⲩ",
+        2,
+        8.816
+      ],
+      [
+        "ⲃⲟⲗ",
+        1,
+        8.535
+      ],
+      [
+        "ⲡ",
+        5,
+        8.463
+      ],
+      [
+        "ⲙ",
+        4,
+        8.351
+      ],
+      [
+        "ⲉⲣϣⲁⲛ",
+        1,
+        8.292
+      ],
+      [
+        "ⲡⲉ",
+        3,
+        8.263
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        8.193
+      ],
+      [
+        "ⲁ",
+        4,
+        8.044
+      ],
+      [
+        "ϩⲙ",
+        2,
+        7.413
+      ],
+      [
+        "ⲉⲧ",
+        2,
+        6.238
+      ],
+      [
+        "ϫⲓ",
+        1,
+        6.164
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲱⲛⲧ",
+          4
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          4
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          4
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          8
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲛⲧ",
+          2
+        ],
+        [
+          "ⲟⲩ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲥⲁϧⲟⲩⲛ_2_post_ϩⲟϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ϩⲟϯ",
+          1
+        ],
+        [
+          "ϩⲟϯ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲃ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲏⲓ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲧⲏⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_pre_ⲙⲁⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲟⲓ_1_pre_ϣⲱⲛⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲱⲛⲧ",
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          2
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          3
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          3
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲛ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϣⲱⲛⲧ",
+          "ⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲥⲁϧⲟⲩⲛ_2_post_ϩⲟϯ",
+          1
+        ],
+        [
+          "ⲥⲁϧⲟⲩⲛ_2_post_ϩⲟϯ",
+          "ϩⲁⲛ_2_post_ϩⲟϯ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_2_post_ϩⲟϯ",
+          "ϩⲟϯ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϩⲁⲛ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_post_ⲉⲃⲟⲗ",
+          "ⲉⲃⲟⲗ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ϣⲱⲛⲧ",
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_2_post_ⲉⲃⲟⲗ",
+          "ⲡⲓ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲉⲃⲟⲗ",
+          "ⲛⲟⲩⲃ_3_post_ⲡⲓ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲁ_2_post_ⲧⲏⲓ",
+          1
+        ],
+        [
+          "ⲁ_2_post_ⲧⲏⲓ",
+          "ⲩ_2_post_ⲧⲏⲓ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ϣⲱⲛⲧ",
+          "ⲛⲓ_2_pre_ⲙⲁⲧⲟⲓ",
+          1
+        ],
+        [
+          "ⲛⲓ_2_pre_ⲙⲁⲧⲟⲓ",
+          "ⲙⲁⲧⲟⲓ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲙⲁⲧⲟⲓ_1_pre_ϣⲱⲛⲧ",
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          5
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲛⲧ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_4_post_ⲗⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲗⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          2
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲗⲟⲙ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲕ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲙ_1_post_ϣⲱⲛⲧ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲛⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲥⲁϣϥ_4_post_ⲗⲟⲟⲩ",
+          1
+        ],
+        [
+          "ⲥⲁϣϥ_4_post_ⲗⲟⲟⲩ",
+          "ⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲙ",
+          "ⲗⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ϣⲱⲛⲧ",
+          "ⲛⲉⲩ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          "ϥ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϣⲱⲛⲧ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ⲕⲗⲟⲙ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲱⲛⲧ",
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲩ_1_pre_ϣⲱⲛⲧ",
+          "ϣⲱⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ϣⲱⲛⲧ_0_node",
+          "ⲛⲁ_1_post_ϣⲱⲛⲧ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϣⲱⲛⲧ",
+          "ⲓ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲓ_2_post_ⲛⲁ",
+          "ⲙ_1_post_ϣⲱⲛⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.05,
+      "rank": 3450,
+      "count": 8
+    },
+    "B": {
+      "rate": 0.27,
+      "rank": 1366,
+      "count": 23
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5951",
+      "label": "ϣⲟⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "plaited work"
+    },
+    {
+      "target": "C5952",
+      "label": "ⲉⲓⲉⲡϣⲟⲛⲧⲉ",
+      "pos": "N",
+      "gloss": "embroidery"
+    }
+  ],
+  "etym": {
+    "egy_num": "119430",
+    "egy_lemma": "ḫnd",
+    "demo_num": "d8443",
+    "demo_lemma": "ḫnd",
+    "english": "to tread",
+    "german": "treten; gehen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/119430",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d8443"
+  }
+}

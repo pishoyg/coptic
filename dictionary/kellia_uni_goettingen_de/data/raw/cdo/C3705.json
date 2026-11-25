@@ -1,0 +1,95 @@
+{
+  "id": "C3705",
+  "forms": [
+    {
+      "id": "CF9324",
+      "orth": "ⲥⲱⲣⲙ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4211",
+      "bibliography": "CD 355ab"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲧⲁ ⲙⲡϥⲣⲱϣⲉ ⲛⲁⲩ **ⲉⲥⲱⲣⲙ **ⲉⲃⲟⲗ**** ϩⲙⲡϣⲟϫⲛⲉ ⲙⲡⲛⲟⲩⲧⲉ ⲁⲗⲗⲁ ⲁⲩⲣⲡⲕⲉⲱⲛϩ ϩⲛⲟⲩⲛⲟϭ ⲙⲡⲟⲗⲉⲙⲟⲥ ⲙⲙⲛⲧⲁⲧⲥⲟⲟⲩⲛ ⲛⲉⲓⲡⲉⲧϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲥⲉⲙⲟⲩⲧⲉ ⲉⲣⲟⲟⲩ ϫⲉⲧⲉⲓⲣⲏⲛⲏ",
+      "english": "Moreover this was not enough for them, that they erred in the knowledge of God; but whereas they lived in the great war of ignorance, those so great plagues called they peace.",
+      "source": "Wisdom 14",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:14",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲟⲩϩⲟⲟⲩ ⲡⲉ ⲛϣⲧⲟⲣⲧⲣ ϩⲓⲧⲁⲕⲟ ⲁⲩⲱ ⲛϩⲱⲙ ⲁⲩⲱ **ⲛⲥⲱⲣⲙ **ⲉⲃⲟⲗ**** ϩⲓⲧⲙⲡϫⲟⲉⲓⲥ ⲥⲁⲃⲁⲱⲑ ϩⲙⲡⲉⲓⲁ ⲛⲥⲓⲱⲛ ⲥⲉⲥⲟⲣⲙ ϫⲓⲛⲙⲡⲉⲩⲕⲟⲩⲓ ϣⲁⲡⲉⲩⲛⲟϭ ⲥⲉⲥⲟⲣⲙ ϩⲓϫⲛⲛⲧⲟⲟⲩ",
+      "english": "For it is a day of trouble, and of destruction, and of treading down, and there is perplexity sent from the Lord of hosts: they wander in the valley of Sion; they wander from the least to the greatest on the mountains.",
+      "source": "Isaiah 22",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:22",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C3708",
+      "label": "ⲁⲧⲥⲱⲣⲉⲙ",
+      "pos": "N",
+      "gloss": "clear, unerring"
+    },
+    {
+      "target": "C3711",
+      "label": "ⲙⲛⲧⲥⲣⲙⲉ",
+      "pos": "N",
+      "gloss": "roving, vagrancy"
+    },
+    {
+      "target": "C3707",
+      "label": "ⲙⲟⲩ ⲛⲥⲱⲣⲉⲙ",
+      "pos": "N",
+      "gloss": "torrent"
+    },
+    {
+      "target": "C3709",
+      "label": "ⲣⲉϥⲥⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "one who leads astray"
+    },
+    {
+      "target": "C3712",
+      "label": "ⲥⲟⲣⲙⲉⲥ",
+      "pos": "N",
+      "gloss": "error, wandering"
+    },
+    {
+      "target": "C3710",
+      "label": "ⲥⲣⲙⲉ",
+      "pos": "N",
+      "gloss": "wanderer, vagrant"
+    },
+    {
+      "target": "C3713",
+      "label": "ⲥⲣⲟⲙ",
+      "pos": "N",
+      "gloss": "unconsciousness (moment of sleep)"
+    },
+    {
+      "target": "C3704",
+      "label": "ⲥⲱⲣⲙ",
+      "pos": "V",
+      "gloss": "go astray, be lost, wander around; lead astray, lose"
+    },
+    {
+      "target": "C3706",
+      "label": "ⲥⲱⲣⲙ",
+      "pos": "N",
+      "gloss": "error"
+    }
+  ]
+}

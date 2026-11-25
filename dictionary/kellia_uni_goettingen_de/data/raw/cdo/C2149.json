@@ -1,0 +1,159 @@
+{
+  "id": "C2149",
+  "forms": [
+    {
+      "id": "CF6006",
+      "orth": "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11844,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2488",
+      "bibliography": "CD 196a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟϩⲓ ⲉⲣⲁϯ ϯⲛⲟⲩ ϧⲉⲛⲟⲩ**ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ** ⲛⲉⲙϧⲉⲛⲧⲉⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ ⲉⲧⲟϣ ⲛⲏⲉⲛⲁⲣⲉϭⲓⲥⲃⲱ ⲉⲣⲱⲟⲩ ⲓⲥϫⲉⲛ ⲧⲉⲙⲉⲧⲁⲗⲟⲩ ⲓⲥϫⲉ ⲧⲉⲣⲁϣϫⲉⲙϫⲟⲙ ⲛϫⲉⲙϩⲏⲟⲩ .",
+      "english": "Stand now with thine enchantments, and with the abundance of thy sorcery, which thou hast learned from thy youth; if thou canst be profited.",
+      "source": "23_Isaias_47",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:47",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+        1,
+        17.11
+      ],
+      [
+        "ϯⲛⲟⲩ",
+        1,
+        10.788
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        9.986
+      ],
+      [
+        "ϧⲉⲛ",
+        2,
+        8.763
+      ],
+      [
+        "ϯ",
+        1,
+        6.29
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        6.243
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.754
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+          1
+        ],
+        [
+          "ⲧⲉ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ_0_node",
+          "ⲛⲉⲙ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+          1
+        ],
+        [
+          "ϧⲉⲛ_1_post_ⲙⲉⲧⲣⲉϥϫⲉⲙⲧⲁⲩ",
+          "ⲧⲉ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ],
+        [
+          "ⲧⲉ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          "ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ_2_post_ϧⲉⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ_2_post_ϧⲉⲛ",
+          "ⲉⲧ_3_post_ⲙⲉⲧⲫⲁⲣⲙⲁⲕⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.01,
+      "rank": 11283,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2147",
+      "label": "ϫⲉⲙⲧⲁⲩ",
+      "pos": "V",
+      "gloss": "say magic"
+    },
+    {
+      "target": "C2146",
+      "label": "ⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "wizardry, magic (words)"
+    },
+    {
+      "target": "C2148",
+      "label": "ⲣⲉϥϫⲉⲙⲧⲁⲩ",
+      "pos": "N",
+      "gloss": "magician"
+    }
+  ]
+}

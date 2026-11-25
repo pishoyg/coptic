@@ -1,0 +1,52 @@
+{
+  "id": "C6714",
+  "forms": [
+    {
+      "id": "CF15473",
+      "orth": "ϩⲱⲛⲕ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲱⲛⲅ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14924,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϩⲉⲛⲅ-",
+      "dialect": "S",
+      "id": "2220.2"
+    },
+    {
+      "orth": "ϩⲁⲛⲕ⸗",
+      "dialect": "L",
+      "id": "2220.3"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS7428",
+      "bibliography": "CD 691a; CED 288; KoptHWb 379; DELC 305b; ChLCS 92b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "107110",
+    "egy_lemma": "ḥnk",
+    "demo_num": "d4145",
+    "demo_lemma": "ḥnk",
+    "english": "to present (a gift); to offer",
+    "german": "schenken; beschenken",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/107110",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4145"
+  }
+}

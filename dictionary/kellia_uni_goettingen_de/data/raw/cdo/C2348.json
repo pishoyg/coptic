@@ -1,0 +1,111 @@
+{
+  "id": "C2348",
+  "forms": [
+    {
+      "id": "CF6436",
+      "orth": "ⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 717.75,
+        "rank": 1,
+        "count": 113243
+      }
+    },
+    {
+      "orth": "ⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 415.36,
+        "rank": 2,
+        "count": 35227
+      }
+    },
+    {
+      "orth": "ⲙⲙⲟ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 60.58,
+        "rank": 29,
+        "count": 5138
+      }
+    },
+    {
+      "orth": "ⲙⲙⲟ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 79.66,
+        "rank": 22,
+        "count": 12568
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Partikel"
+  },
+  "senses": [
+    {
+      "id": "CS2708",
+      "bibliography": "CD 215a; CED 102; KoptHWb 115; DELC 134; ChLCS 31a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲩⲓⲛⲓ ⲛⲁϥ ⲛⲟⲩⲁⲓ ⲉϥϣⲏⲗ ⲉⲃⲟⲗ ⲉⲩϥⲁⲓ ⲙⲙⲟϥ ⲛϫⲉⲇ **ⲛ**ⲣⲱⲙⲓ",
+      "english": "Four people came, carrying a paralytic to him.",
+      "source": "Bohairic Gospel of Mark 2 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:2",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲣⲓⲙⲉ ⲁⲩⲱ ⲟⲩⲟⲉⲓϣ ⲡⲉ **ⲛ**ⲥⲱⲃⲉ ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲛⲉϩⲡⲉ ⲁⲩⲱ ⲟⲩⲟⲉⲓϣ ⲡⲉ ⲛⲟⲣⲭⲉⲓ",
+      "english": "a time to weep, and a time to laugh; a time to lament, and a time to dance;",
+      "source": "Ecclesiastes 3",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲏ ⲉⲧⲥⲓϯ ⲁϥⲥⲓϯ **ⲙ**ⲡⲓⲥⲁϫⲓ .",
+      "english": "The farmer sows the word.",
+      "source": "Bohairic Gospel of Mark 4 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:4",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲧⲛⲛⲁⲩ ⲉⲓⲏⲥⲟⲩ ⲡϣⲏⲣⲉ **ⲛ**ⲛⲁⲩⲏ",
+      "english": "We see that Joshua, the son of Nun",
+      "source": "Apophthegmata Patrum Sahidic 131: N 301",
+      "urn": "urn:cts:copticLit:ap.131.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲟⲡⲱⲥ ⲛⲧⲉϣⲧⲉⲙⲥⲁⲣⲝ ⲛⲓⲃⲉⲛ ϣⲟⲩϣⲟⲩ **ⲙⲙⲱ**ⲟⲩ ⲙⲡⲉⲙⲑⲟ ⲙⲫⲛⲟⲩϯ .",
+      "english": "that no flesh should boast before God.",
+      "source": "Bohairic 1 Corinthians 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϥϩⲓⲥⲉ ⲛⲁⲕⲟⲧϥ ⲉϫⲛⲧⲉϥⲁⲡⲉ ⲁⲩⲱ ⲡⲉϥϫⲓⲛϭⲟⲛⲥ ⲛⲏⲩ ⲉϫⲛⲧⲙⲏⲧⲉ **ⲛ**ϫⲱϥ",
+      "english": "His trouble shall return on his own head, and his unrighteousness shall come down on his own crown.",
+      "source": "Psalms 7",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "850787",
+    "egy_lemma": "n.j",
+    "demo_num": "d2869",
+    "demo_lemma": "n",
+    "english": "belonging to",
+    "german": "gehörig zu",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/850787",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2869"
+  }
+}

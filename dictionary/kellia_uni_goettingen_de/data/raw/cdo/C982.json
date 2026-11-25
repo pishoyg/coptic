@@ -1,0 +1,120 @@
+{
+  "id": "C982",
+  "forms": [
+    {
+      "id": "CF3313",
+      "orth": "ⲉⲓⲥ ϩⲏⲏⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.05,
+        "rank": 3832,
+        "count": 8
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PTC",
+    "tlapos": "Interjektion"
+  },
+  "senses": [
+    {
+      "id": "CS1142",
+      "bibliography": "CD 85b; KoptHWb 52; ChLCS 14b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲕⲟⲟⲩⲉ ⲇⲉ ⲧⲏⲣⲟⲩ ⲉⲧⲉϣϣⲉ ⲉⲥⲁϩⲟⲩ ⲉϩⲣⲁⲓ ⲉⲧⲉⲓⲉⲡⲓⲥⲧⲟⲗⲏ · ⲁⲩⲱ ⲙⲡⲛⲥⲁϩⲟⲩ · **ⲉⲓⲥϩⲏⲏⲛⲉ** ⲥⲉⲥⲏϩ ⲧⲏⲣⲟⲩ ϩⲛⲛⲉⲭⲁⲣⲧⲏⲥ ⲉⲧⲥⲏϩ ϫⲓⲛⲛϣⲟⲣⲡ ·",
+      "english": "All the things that it is fitting to write in this letter and which we have not written, they are all written on the papers written from the beginning.",
+      "source": "Acephalous 22: YA 421-28",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1251-1258",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲉⲛⲧⲁϥϫⲟⲟⲥ ⲛϭⲓⲡϫⲟⲉⲓⲥ ⲡⲛⲟⲩⲧⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ϫⲉⲛⲧⲱⲧⲛ ⲁⲧⲉⲧⲛⲛⲁⲩ ⲉⲛⲡⲉⲧϩⲟⲟⲩ ⲧⲏⲣⲟⲩ ⲉⲛⲧⲁⲓⲛⲧⲟⲩ ⲉϫⲛⲧϩⲓⲏⲙ ⲙⲛⲙⲡⲟⲗⲓⲥ ⲛⲓⲟⲩⲇⲁ ⲁⲩⲱ **ⲉⲓⲥ **ϩⲏⲏⲛⲉ**** ⲥⲉϣⲏϥ ⲙⲡϩⲟⲟⲩ ϫⲉⲙⲛⲡⲉⲧϣⲟⲟⲡ ⲛϩⲏⲧⲟⲩ",
+      "english": "Thus has the Lord God of Israel said; Ye have seen all the evils which I have brought upon Jerusalem, and upon the cities of Juda; and, behold, they are desolate without inhabitants,",
+      "source": "Jeremiah 51",
+      "urn": "urn:cts:copticLit:ot.jer.coptot:51",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲓⲕⲧⲟⲓ ⲟⲛ ⲁⲛⲟⲕ ϩⲛⲛⲁϩⲃⲏⲩⲉ ⲧⲏⲣⲟⲩ ⲛⲁⲓ ⲁⲛⲟⲕ ⲛⲧⲁⲛⲁϭⲓϫ ⲧⲁⲙⲓⲟⲟⲩ ⲁⲩⲱ ϩⲙⲡⲁϩⲓⲥⲉ ⲛⲧⲁⲓⲙⲟⲕϩⲧ ⲛϩⲏⲧϥ ⲉⲧⲣⲁⲁⲩ ⲛⲁⲓ ⲁⲩⲱ **ⲉⲓⲥ **ϩⲏⲏⲛⲉ**** ⲧⲏⲣⲟⲩ ⲟⲩⲡⲉⲧϣⲟⲩⲉⲓⲧ ⲡⲉ ⲁⲩⲱ ⲟⲩⲱϣ ⲙⲡⲛⲉⲩⲙⲁ ⲡⲉ ⲙⲙⲛⲟⲩϩⲱⲃ ⲛϩⲟⲩⲟ ϣⲟⲟⲡ ϩⲁⲡⲣⲏ",
+      "english": "And I looked on all my works which my hands had wrought, and on my labour which I laboured to perform: and behold, all was vanity and waywardness of spirit, and there is no advantage under the sun.",
+      "source": "Ecclesiastes 2",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:2",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3673,
+      "count": 7
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12184",
+      "label": "ϩⲉⲓ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C986",
+      "label": "ϩⲏⲡⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns mostly\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C987",
+      "label": "ϩⲏⲡⲡⲉ ⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, lo, here is (before pronouns and verbs mostly = ⲉⲓⲥ ϩⲏⲏⲧⲉ S; before nouns\n              = ⲉⲓⲥ S)"
+    },
+    {
+      "target": "C978",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (used properly before noun)"
+    },
+    {
+      "target": "C979",
+      "label": "ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "since, ago"
+    },
+    {
+      "target": "C983",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C980",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs)"
+    },
+    {
+      "target": "C981",
+      "label": "ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉⲓⲥ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (before nouns)"
+    },
+    {
+      "target": "C985",
+      "label": "ⲉⲓⲥⲡⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲡⲉ"
+    },
+    {
+      "target": "C984",
+      "label": "ⲉⲓⲥⲧⲉ",
+      "pos": "PTC",
+      "gloss": "behold, look, here is (properly before pronouns and verbs) for ⲉⲓⲥ ϩⲏⲏⲧⲉ"
+    }
+  ]
+}

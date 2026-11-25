@@ -1,0 +1,120 @@
+{
+  "id": "C3967",
+  "forms": [
+    {
+      "id": "CF9873",
+      "orth": "ⲣⲉϥⲥⲟⲟϩⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 17937,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4503",
+      "bibliography": "CD 381a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϯⲛⲁⲙⲟⲩⲣ ⲙⲡⲉⲕⲗⲁⲥ ⲛⲅⲣⲙⲡⲟ ⲁⲩⲱ ⲛⲅⲛⲁϣⲱⲡⲉ ⲛⲁⲩ ⲁⲛ ⲛⲟⲩⲣⲱⲙⲉ ⲛ**ⲣⲉϥⲥⲟⲟϩⲉ** ⲉⲧⲃⲉϫⲉⲟⲩⲏⲓ ⲛⲣⲉϥϯϭⲱⲛⲧ ⲡⲉ",
+      "english": "Also I will bind thy tongue, and thou shalt be dumb, and shalt not be to them a reprover: because it is a provoking house.",
+      "source": "Ezekiel 3",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲏⲓ",
+        1,
+        9.735
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        8.78
+      ],
+      [
+        "ⲣⲱⲙⲉ",
+        1,
+        8.313
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        8.22
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲣⲉϥⲥⲟⲟϩⲉ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 17556,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C3969",
+      "label": "ϭⲓⲛⲥⲱϩⲉ",
+      "pos": "N",
+      "gloss": "weaving"
+    },
+    {
+      "target": "C3968",
+      "label": "ⲙⲉⲧⲣⲉϥⲥⲱϧⲓ",
+      "pos": "N",
+      "gloss": "weaving"
+    },
+    {
+      "target": "C3970",
+      "label": "ⲥⲁϩⲧ",
+      "pos": "N",
+      "gloss": "weaver"
+    },
+    {
+      "target": "C3965",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "V",
+      "gloss": "weave"
+    },
+    {
+      "target": "C3966",
+      "label": "ⲥⲱϩⲉ",
+      "pos": "N",
+      "gloss": "weaving, weaver's craft, weaver"
+    }
+  ]
+}

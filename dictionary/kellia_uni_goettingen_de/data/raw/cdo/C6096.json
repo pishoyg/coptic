@@ -1,0 +1,258 @@
+{
+  "id": "C6096",
+  "forms": [
+    {
+      "id": "CF14197",
+      "orth": "ϣⲧⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7385,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6783",
+      "bibliography": "CD 593b-594a; KoptHWb 330; DELC 271b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲙⲡⲛⲥⲱⲧⲙ ϣⲁϩⲟⲩⲛ ⲉⲧⲉⲛⲟⲩ ⲁⲗⲗⲁ ⲁⲛⲣⲧϩⲉ ⲛⲟⲩϩⲟϥ ⲛⲁⲗ ⲉϥ**ϣⲧⲁ** ⲙⲛⲛⲉϥⲙⲁⲁϫⲉ ⲉⲙⲉϥⲥⲱⲧⲙ ⲉⲡⲉϩⲣⲟⲟⲩ ⲛⲛⲉⲧⲙⲟⲩⲧⲉ ⲉⲣⲟϥ · ⲁⲩⲱ ⲟⲩⲡⲁϩⲣⲉ ⲉⲩⲉⲓⲣⲉ ⲙⲙⲟϥ ϩⲓⲧⲛⲟⲩⲥⲟⲫⲟⲥ ⲕⲁⲧⲁⲛⲉⲅⲣⲁⲫⲏ ·",
+      "english": "...",
+      "source": "Apa Johannes Canons: FA65-80",
+      "urn": "urn:cts:copticLit:johannes.canons.monbfa:97-122",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲣⲉϥϫⲱⲕ ⲇⲉ ⲉⲃⲟⲗ ⲙⲡⲉⲥⲭⲟⲗⲁⲕⲓⲛ ⲁϥⲁⲙⲁϩⲧⲉ ⲛⲧⲉϥϭⲓϫ ⲁϥ**ϣⲧⲁ**ϥ ⲉϫⲛⲧⲉⲧⲙⲏ ⲁϥⲕⲧⲉⲡⲉϥϩⲟ ⲉⲡⲥⲁ ⲛⲧⲁⲛⲁⲧⲟⲗⲏ ⲁⲩⲱ ⲛⲧⲉⲩⲛⲟⲩ ⲁⲡⲙⲁⲑⲏⲧⲏⲥ ϯ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲁ ⲉⲛⲉϭⲓϫ ⲙⲡⲛⲟⲩⲧⲉ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ ·",
+      "english": "...",
+      "source": "Life of Longinus and Lucius part 4",
+      "urn": "urn:cts:copticLit:lives.longinus_lucius.paths_ed:24-29",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲙⲏ",
+        1,
+        17.013
+      ],
+      [
+        "ⲁⲗ",
+        1,
+        14.043
+      ],
+      [
+        "ⲙⲁⲁϫⲉ",
+        1,
+        11.355
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        8.974
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        8.425
+      ],
+      [
+        "ϥ",
+        3,
+        8.277
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        7.964
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        7.797
+      ],
+      [
+        "ⲉ",
+        2,
+        6.817
+      ],
+      [
+        "ⲧⲉ",
+        1,
+        6.803
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲛ",
+        1,
+        2.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϥ_1_pre_ϣⲧⲁ",
+          2
+        ],
+        [
+          "ϣⲧⲁ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ⲧⲉ_2_post_ⲉϫⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϥ_1_pre_ϣⲧⲁ",
+          "ϣⲧⲁ_0_node",
+          2
+        ],
+        [
+          "ϣⲧⲁ_0_node",
+          "ⲙⲛ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_post_ϣⲧⲁ",
+          "ⲛⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_3_post_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_2_post_ⲙⲛ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ϣⲧⲁ",
+          "ϥ_1_pre_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ϣⲧⲁ_0_node",
+          "ϥ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ϥ_1_post_ϣⲧⲁ",
+          "ⲉϫⲛ_1_post_ϣⲧⲁ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_1_post_ϣⲧⲁ",
+          "ⲧⲉ_2_post_ⲉϫⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6931,
+      "count": 2
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C6094",
+      "label": "ϣⲁⲁⲧⲉ",
+      "pos": "N",
+      "gloss": "part cut off, portion"
+    },
+    {
+      "target": "C12032",
+      "label": "ϣⲁⲁⲧⲛ-",
+      "pos": "PREP",
+      "gloss": "short of, excepting, minus"
+    },
+    {
+      "target": "C6095",
+      "label": "ϣⲁⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "cutting, notch; stub"
+    },
+    {
+      "target": "C6097",
+      "label": "ϣⲧⲁ",
+      "pos": "N",
+      "gloss": "defect, fault"
+    },
+    {
+      "target": "C6089",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "V",
+      "gloss": "cut, take apart; be cut short, want, lack"
+    },
+    {
+      "target": "C6091",
+      "label": "ϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "thing cut (sacrifice); need, shortage"
+    },
+    {
+      "target": "C6090",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "decide, be severe, exclude"
+    },
+    {
+      "target": "C6092",
+      "label": "ϣⲱⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "cutting out, excommunication"
+    },
+    {
+      "target": "C6093",
+      "label": "ⲣⲉϥϣⲱⲱⲧ",
+      "pos": "N",
+      "gloss": "cutter, sacrificer"
+    }
+  ]
+}

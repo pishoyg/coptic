@@ -1,0 +1,437 @@
+{
+  "id": "C1999",
+  "forms": [
+    {
+      "id": "CF5657",
+      "orth": "ⲙⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 4.18,
+        "rank": 262,
+        "count": 660
+      }
+    },
+    {
+      "id": "CF5658",
+      "orth": "ⲙⲁⲁⲣ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF5659",
+      "orth": "ⲙⲏⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.0,
+        "rank": 721,
+        "count": 157
+      }
+    },
+    {
+      "id": "CF5660",
+      "orth": "ⲙⲉⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2221,
+        "count": 25
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2320",
+      "bibliography": "CD 182a; KoptHWb 99; ChLCS 27a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲟⲩⲱϣⲃ ⲛϭⲓⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲁⲫⲟⲩ ϫⲉⲉⲕϣⲁⲛⲧⲁⲩⲉ ⲛⲁⲓ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲉⲕⲛⲁϣⲱⲡⲉ ⲉⲕϯⲧⲱⲛ ⲙⲛⲡⲉⲛⲧⲁϥϫⲟⲟⲥ ϫⲉ**ⲙⲁⲣ**ⲛⲧⲁⲙⲓⲟ ⲛⲟⲩⲣⲱⲙⲉ ⲕⲁⲧⲁⲡⲉⲛⲉⲓⲛⲉ ⲙⲛⲧⲉⲛϩⲓⲕⲱⲛ",
+      "english": "The blessed Apa Aphou answered: If you put this forth as is, you will be at odds with His word: let us create man in our likeness and image.",
+      "source": "Life of Apa Aphou part 1",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:0-61",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲩⲧⲱⲛ ⲛⲣⲣⲱⲟⲩ ⲛⲁ**ⲙⲁⲣ** ⲉⲥⲧⲱⲛ ⲁⲣⲫⲁⲇ ⲁⲩⲱ ⲉⲥⲧⲱⲛ ⲁⲛⲁⲅ ⲟⲩⲅⲁⲟⲩⲁ ⲛⲧⲉⲥⲉⲡⲫⲁⲣⲓⲙ ⲧⲡⲟⲗⲓⲥ",
+      "english": "Where are the kings of Emath? and where is the king of Arphath? and where is the king of the city of Eppharuaim, and of Anagugana?",
+      "source": "Isaiah 37",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:37",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "**ⲙⲁⲣ**ⲟⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲛⲛⲉϥⲛⲁ ⲁⲩⲱ ⲛⲉϥϣⲡⲏⲣⲉ ⲛⲛϣⲏⲣⲉ ⲛⲛⲣⲱⲙⲉ",
+      "english": "Let them acknowledge to the Lord his mercies, and his wonderful works to the children of men.",
+      "source": "Psalms 106",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:106",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩ",
+        834,
+        30.165
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        157,
+        23.263
+      ],
+      [
+        "ⲛ",
+        150,
+        22.577
+      ],
+      [
+        "ⲛϫⲉ",
+        91,
+        22.417
+      ],
+      [
+        "ϭⲓϣⲓⲡⲓ",
+        19,
+        21.984
+      ],
+      [
+        "ⲛⲓ",
+        81,
+        21.537
+      ],
+      [
+        "ϣⲱⲡⲓ",
+        58,
+        21.508
+      ],
+      [
+        ".",
+        83,
+        21.041
+      ],
+      [
+        "ⲙⲁⲣ",
+        22,
+        21.007
+      ],
+      [
+        "ϧⲉⲛ",
+        77,
+        20.863
+      ],
+      [
+        "ⲛⲏⲉⲧϯϣⲑⲟⲩⲓⲧ",
+        3,
+        20.75
+      ],
+      [
+        "ⲑⲉⲗⲏⲗ",
+        14,
+        20.534
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        54,
+        19.868
+      ],
+      [
+        "ⲟⲩⲛⲟϥ",
+        14,
+        19.534
+      ],
+      [
+        "ⲉⲣⲉⲅⲕⲣⲁⲧⲉⲩⲉⲥⲑⲉ",
+        3,
+        19.165
+      ],
+      [
+        "ϧⲱⲛⲧ",
+        11,
+        19.135
+      ],
+      [
+        "ⲉⲣⲟ",
+        29,
+        18.99
+      ],
+      [
+        "ⲉ",
+        59,
+        18.965
+      ],
+      [
+        "ⲉⲣ\\'ⲁⲗⲓⲛ",
+        5,
+        18.96
+      ],
+      [
+        "ϭⲓϣⲱϣ",
+        5,
+        18.96
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        1276,
+        31.061
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        19,
+        29.641
+      ],
+      [
+        "ⲟⲩ",
+        464,
+        28.094
+      ],
+      [
+        "ⲡ",
+        240,
+        24.517
+      ],
+      [
+        "ⲉ",
+        198,
+        24.005
+      ],
+      [
+        "ⲙ",
+        159,
+        23.589
+      ],
+      [
+        "ϫⲉ",
+        108,
+        22.711
+      ],
+      [
+        "ⲛⲁ",
+        119,
+        22.672
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        65,
+        22.391
+      ],
+      [
+        "ⲙⲉⲉⲩⲉ",
+        37,
+        22.15
+      ],
+      [
+        "ⲛⲉⲛ",
+        34,
+        22.135
+      ],
+      [
+        "ⲣ",
+        44,
+        22.091
+      ],
+      [
+        "ⲣϣⲁ",
+        15,
+        22.004
+      ],
+      [
+        "ϭⲉ",
+        41,
+        21.822
+      ],
+      [
+        "ⲃⲱⲕ",
+        45,
+        21.719
+      ],
+      [
+        "ϥ",
+        122,
+        21.613
+      ],
+      [
+        "ⲕⲟⲧ",
+        23,
+        21.526
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        74,
+        21.393
+      ],
+      [
+        "ϩⲛ",
+        71,
+        21.228
+      ],
+      [
+        "ⲛⲥⲁ",
+        32,
+        21.06
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲙⲁⲣ_0_node",
+          5
+        ]
+      ],
+      "edges": []
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩ_1_post_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲁⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲁⲣ",
+          "ϥ_1_pre_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲙⲁⲣ",
+          "ⲛⲁ_1_pre_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲙⲁⲣ",
+          "ⲙⲁⲣ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁⲣ_0_node",
+          "ⲟⲩ_1_post_ⲙⲁⲣ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_post_ⲙⲁⲣ",
+          "ⲛ_1_post_ⲙⲁⲣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.08,
+      "rank": 2744,
+      "count": 13
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1997",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1998",
+      "label": "ϭⲓⲛⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "binding, that what binds"
+    },
+    {
+      "target": "C1996",
+      "label": "ⲙⲁ ⲙⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "\"place of binding\", prison"
+    },
+    {
+      "target": "C2000",
+      "label": "ⲙⲁⲓⲣⲉ",
+      "pos": "N",
+      "gloss": "bundle"
+    },
+    {
+      "target": "C2001",
+      "label": "ⲙⲁⲣⲙⲁⲣ",
+      "pos": "N",
+      "gloss": "bandage(?)"
+    },
+    {
+      "target": "C2003",
+      "label": "ⲙⲟⲣⲥ",
+      "pos": "N",
+      "gloss": "binding, restriction (of fast); bundle, girdle (used as) purse"
+    },
+    {
+      "target": "C1991",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "V",
+      "gloss": "bind, gird, tie; bind, oblige (by oath), adjure; bind"
+    },
+    {
+      "target": "C1992",
+      "label": "ⲙⲟⲩⲣ",
+      "pos": "N",
+      "gloss": "band, girth, strap"
+    },
+    {
+      "target": "C1993",
+      "label": "ⲙⲟⲩⲣ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bind, join to, of fast which binds"
+    },
+    {
+      "target": "C1995",
+      "label": "ⲙⲟⲩⲣ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "to be spoiling for a fight, be at enmity with"
+    },
+    {
+      "target": "C1994",
+      "label": "ⲙⲟⲩⲣ ⲉϩⲟⲩⲛ",
+      "pos": "N",
+      "gloss": "obligation, fast"
+    },
+    {
+      "target": "C2002",
+      "label": "ⲙⲣⲣⲉ",
+      "pos": "N",
+      "gloss": "chain, bond, joint"
+    }
+  ],
+  "etym": {
+    "egy_num": "72120",
+    "egy_lemma": "mr.w",
+    "demo_num": "dm47",
+    "demo_lemma": "mre.t",
+    "english": "strips of cloth; bundle; bunch (as a measure of vegetables)",
+    "german": "Binde; Bündel; Bund (Maß für Gemüse)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/72120",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm47"
+  }
+}

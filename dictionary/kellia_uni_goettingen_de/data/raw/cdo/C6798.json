@@ -1,0 +1,155 @@
+{
+  "id": "C6798",
+  "forms": [
+    {
+      "id": "CF15643",
+      "orth": "ϩⲟⲣⲕϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7898,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS7513",
+      "bibliography": "CD 703a; KoptHWb 386; DELC 309a; ChLCS 94a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϫⲓⲥ ϩⲱⲱϥ ⲟⲛ ⲉⲛⲣⲱⲙⲉ ⲛⲧⲉⲡⲕⲟⲥⲙⲟⲥ ϫⲉϣⲱⲡⲉ ⲛ**ϩⲟⲣⲕϥ** ⲛⲧⲉⲧⲛϫⲓ ⲛⲙⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲙⲡⲟⲩⲟⲉⲓⲛ ⲛⲧⲉⲧⲛⲃⲱⲕ ⲉⲡϫⲓⲥⲉ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲙⲡⲟⲩⲟⲉⲓⲛ ·",
+      "english": "“Say rather to the men of the world: Be calm, that ye may receive the mysteries of the Light and go on high into the Light-kingdom.”",
+      "source": "Pistis Sophia Book 3 Part 1",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:77-81",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩϯ ϩⲓⲧⲛⲡϫⲟⲉⲓⲥ ⲡⲉ ⲟⲩⲥϩⲓⲙⲉ ⲛ**ϩⲟⲣⲕϥ** ⲁⲩⲱ ⲙⲛϣⲃⲉⲓⲱ ⲛⲧⲉⲥⲯⲩⲭⲏ ⲉⲧⲥⲁⲃⲏⲩ",
+      "english": "A silent and loving woman is a gift of the Lord; and there is nothing so much worth as a mind well instructed.",
+      "source": "Sirach 26",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲃⲉⲓⲱ",
+        1,
+        16.276
+      ],
+      [
+        "ⲛⲧⲉⲧⲛ",
+        1,
+        12.139
+      ],
+      [
+        "ⲕⲟⲥⲙⲟⲥ",
+        1,
+        9.853
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        1,
+        9.255
+      ],
+      [
+        "ⲛ",
+        4,
+        8.809
+      ],
+      [
+        "ϫⲓ",
+        1,
+        8.164
+      ],
+      [
+        "ϣⲱⲡⲉ",
+        1,
+        7.024
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        5.508
+      ],
+      [
+        "ϫⲉ",
+        1,
+        5.146
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        4.747
+      ],
+      [
+        "ⲙ",
+        1,
+        4.351
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϩⲟⲣⲕϥ_0_node",
+          2
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7448,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C12181",
+      "label": "ϩⲣⲏϭ",
+      "pos": "V",
+      "gloss": "be still"
+    },
+    {
+      "target": "C12207",
+      "label": "ϩⲣⲕⲏⲧ",
+      "pos": "N",
+      "gloss": "calm, quiet, peaceful"
+    },
+    {
+      "target": "C6796",
+      "label": "ϩⲣⲟⲕ",
+      "pos": "V",
+      "gloss": "be still, cease, be quiet"
+    },
+    {
+      "target": "C6797",
+      "label": "ϩⲣⲟⲕ",
+      "pos": "N",
+      "gloss": "quietness"
+    }
+  ]
+}

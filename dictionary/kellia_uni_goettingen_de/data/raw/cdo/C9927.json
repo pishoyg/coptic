@@ -1,0 +1,293 @@
+{
+  "id": "C9927",
+  "forms": [
+    {
+      "id": "CF25840",
+      "orth": "ⲟⲙⲟⲓⲱⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25841",
+      "orth": "ϩⲉⲙⲉⲟⲥ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF25862",
+      "orth": "ⲟⲙⲟⲓⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20424,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25842",
+      "orth": "ϩⲟⲙⲁⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10257,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25843",
+      "orth": "ϩⲟⲙⲁⲓⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5869,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF25844",
+      "orth": "ϩⲟⲙⲉⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25845",
+      "orth": "ϩⲟⲙⲉⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25846",
+      "orth": "ϩⲟⲙⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25847",
+      "orth": "ϩⲟⲙⲟⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25849",
+      "orth": "ϩⲟⲙⲟⲓⲱⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF25848",
+      "orth": "ϩⲟⲙⲟⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11758,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25851",
+      "orth": "ϩⲟⲙⲟⲓⲱⲥ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF25850",
+      "orth": "ϩⲟⲙⲟⲓⲱⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.37,
+        "rank": 1370,
+        "count": 59
+      }
+    },
+    {
+      "id": "CF25852",
+      "orth": "ϩⲱⲙⲉⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25853",
+      "orth": "ⲟⲙⲁⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25854",
+      "orth": "ⲟⲙⲁⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25855",
+      "orth": "ⲟⲙⲁⲓⲱⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25856",
+      "orth": "ⲟⲙⲉⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25857",
+      "orth": "ⲟⲙⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25858",
+      "orth": "ⲟⲙⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25859",
+      "orth": "ⲟⲙⲟ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25860",
+      "orth": "ⲟⲙⲟⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25861",
+      "orth": "ⲟⲙⲟⲓⲟⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF25863",
+      "orth": "ⲟⲙⲟⲓⲱⲥ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7256,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF25864",
+      "orth": "ⲱⲙⲁⲓⲟⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "CONJ",
+    "tlapos": "Konj."
+  },
+  "senses": [
+    {
+      "id": "CS12946",
+      "bibliography": "DDGLC",
+      "cu_ID": "5522"
+    },
+    {
+      "id": "CS12947",
+      "bibliography": "DDGLC",
+      "cu_ID": "1294"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "**ⲟⲙⲟⲓⲱⲥ** ⲟⲛ ⲁⲩⲟⲩⲁϩⲉⲙ ⲉⲣⲉⲧⲓⲛ ⲙⲙⲟϥ ϧⲉⲛⲧⲟⲩⲙⲉⲧⲁⲧⲥⲓ",
+      "english": "...",
+      "source": "Life of Shenoute - part 3",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:59-88",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉϫⲁⲥ ϭⲉ ⲧⲉⲛⲟⲩ ⲉⲧⲃⲏⲏⲧⲟⲩ · ϫⲉ**ⲟⲙⲟⲓⲱⲥ** ⲛⲉⲓⲕⲟⲟⲩⲉ ⲉⲩⲡⲉⲣⲉⲣⲁⲥⲟⲩ · ⲛⲥⲁⲣⲝ ⲙⲉⲛ ⲥⲉϫⲱϩⲙ ⲙⲙⲟⲟⲩ · ⲙⲙⲛⲧϫⲟⲉⲓⲥ ⲇⲉ ⲥⲉⲁⲑⲉⲧⲉⲓ ⲙⲙⲟⲟⲩ · ⲛⲉⲟⲟⲩ ⲇⲉ ⲥⲉϫⲓⲟⲩⲁ ⲉⲣⲟⲟⲩ ·",
+      "english": "...",
+      "source": "God Says Through Those Who Are His: GF 307-310",
+      "urn": "urn:cts:copticLit:shenoute.those.monbgf:55-60",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲟⲩⲁϩⲉⲙ",
+        1,
+        15.995
+      ],
+      [
+        "ⲣⲁϣⲓ",
+        1,
+        11.706
+      ],
+      [
+        "ⲟⲛ",
+        1,
+        10.424
+      ],
+      [
+        "ⲩ",
+        1,
+        6.121
+      ],
+      [
+        ".",
+        1,
+        5.616
+      ],
+      [
+        "ⲉ",
+        1,
+        5.017
+      ],
+      [
+        "ⲁ",
+        1,
+        4.989
+      ],
+      [
+        "ϥ",
+        1,
+        4.424
+      ]
+    ],
+    "S": [
+      [
+        "ⲕⲟⲟⲩⲉ",
+        1,
+        12.055
+      ],
+      [
+        "ⲉⲧⲃⲏⲏⲧ",
+        1,
+        11.556
+      ],
+      [
+        "ⲛⲉⲓ",
+        1,
+        10.467
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20035,
+      "count": 1
+    },
+    "B": {
+      "rate": 0.01,
+      "rank": 6724,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1541",
+    "grl_lemma": "ὁμοίως",
+    "grl_meaning": "in like manner with, alike, equally",
+    "grl_pos": "adverb",
+    "grl_ref": "LSJ 1225a; Preisigke 2:176"
+  }
+}

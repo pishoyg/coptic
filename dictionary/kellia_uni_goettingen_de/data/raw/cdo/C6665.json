@@ -1,0 +1,45 @@
+{
+  "id": "C6665",
+  "forms": [
+    {
+      "id": "CF15374",
+      "orth": "ϩⲁⲛ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ϩⲁⲛ-",
+      "dialect": "A",
+      "id": "2203.1"
+    },
+    {
+      "orth": "ϩⲁⲛ-",
+      "dialect": "L",
+      "id": "2203.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7378",
+      "bibliography": "CD 683a; KoptHWb 376; ChLCS 92a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ϩⲁⲛ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "type": "hom"
+}

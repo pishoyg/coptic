@@ -1,0 +1,192 @@
+{
+  "id": "C764",
+  "forms": [
+    {
+      "id": "CF2834",
+      "orth": "ⲉⲫⲱⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4863,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF2835",
+      "orth": "ⲁⲫⲱⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS906",
+      "bibliography": "CD 63a; CED 40; KoptHWb 38, 499; DELC 49"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "B": [
+      [
+        "ⲧⲉⲛ",
+        5,
+        12.782
+      ],
+      [
+        "ⲉⲣⲉ",
+        3,
+        12.061
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        1,
+        10.342
+      ],
+      [
+        "ϭⲟϫⲓ",
+        1,
+        10.104
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        9.495
+      ],
+      [
+        "ⲃⲁⲕⲓ",
+        1,
+        8.645
+      ],
+      [
+        "ⲁⲣⲉ",
+        1,
+        8.638
+      ],
+      [
+        "ⲛⲉⲧⲉⲛ",
+        1,
+        8.479
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        8.229
+      ],
+      [
+        "ϫⲟ",
+        1,
+        8.017
+      ],
+      [
+        "ⲉⲑⲃⲉ",
+        1,
+        7.272
+      ],
+      [
+        "ⲫⲁⲓ",
+        1,
+        7.073
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        4.667
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        "ⲉ",
+        1,
+        3.432
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲫⲱⲧ",
+          3
+        ],
+        [
+          "ⲉⲫⲱⲧ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲫⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲫⲱⲧ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_3_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲃⲁⲕⲓ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲫⲱⲧ",
+          "ⲉⲫⲱⲧ_0_node",
+          2
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲫⲱⲧ",
+          "ⲧⲉⲛ_1_pre_ⲉⲫⲱⲧ",
+          1
+        ],
+        [
+          "ⲉⲫⲱⲧ_0_node",
+          "ⲉ_1_post_ⲉⲫⲱⲧ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲉⲫⲱⲧ",
+          "ⲛⲉⲧⲉⲛ_3_post_ⲃⲁⲕⲓ",
+          1
+        ],
+        [
+          "ⲛⲉⲧⲉⲛ_3_post_ⲃⲁⲕⲓ",
+          "ⲃⲁⲕⲓ_2_post_ⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.04,
+      "rank": 4382,
+      "count": 3
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C2067",
+      "type": "cf",
+      "label": "crocodile"
+    }
+  ],
+  "etym": {
+    "egy_num": "550400",
+    "egy_lemma": "nfr-ḥtp",
+    "demo_num": "dm3178",
+    "demo_lemma": "Nfr-ḥtp",
+    "english": "the completely merciful one (Chons and other gods)",
+    "german": "der vollkommen Gnädige (Chons u.a. Götter)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/550400",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm3178"
+  }
+}

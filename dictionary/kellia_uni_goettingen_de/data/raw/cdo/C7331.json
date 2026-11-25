@@ -1,0 +1,61 @@
+{
+  "id": "C7331",
+  "forms": [
+    {
+      "id": "CF16721",
+      "orth": "ϫⲓⲛϫⲱⲣ (ⲉⲃⲟⲗ)",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8103",
+      "bibliography": "CD 783a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲁⲓⲃⲟⲣⲃⲉⲣ ⲙⲡⲓϣⲃⲱⲧ ⲙⲙⲁϩⲃ ⲉⲧⲉⲡⲓⲛⲟϩ ⲛⲣⲱϣ ⲡⲉ **ⲉⲡϫⲓⲛϫⲱⲣ **ⲉⲃⲟⲗ**** ⲙⲡⲓⲁⲙⲁϩⲓ ϧⲉⲛⲧⲙⲏϯ ⲛⲓⲟⲩⲇⲁ ⲛⲉⲙϧⲉⲛⲑⲙⲏϯ ⲙⲡⲓⲥⲗ .",
+      "english": "And I cast away my second rod, even Line, that I might break the possession between Juda and Israel.",
+      "source": "38_Zacharias_11",
+      "urn": "urn:cts:copticLit:ot.zach.bohairic_ed:11",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲓⲥⲟϫ ⲅⲁⲣ ⲉϥⲉⲥⲁϫⲓ ⲛϩⲁⲛⲙⲉⲧⲥⲟϫ ⲟⲩⲟϩ ⲡⲉϥϩⲏⲧ ⲉϥⲉⲙⲉⲩⲓ ⲉϩⲁⲛⲙⲉⲧⲉⲫⲗⲏⲟⲩ ⲉⲡϫⲓⲛϫⲱⲕ ⲉⲃⲟⲗ ⲉϩⲁⲛⲁⲛⲟⲙⲓⲁ ⲟⲩⲟϩ ⲉⲥⲁϫⲓ ⲟⲩⲃⲉ ⲡϭⲟⲉⲓⲥ ⲛⲟⲩⲡⲗⲁⲛⲏ **ⲉⲡϫⲓⲛϫⲱⲣ **ⲉⲃⲟⲗ**** ⲛϩⲁⲛⲯⲩⲭⲏ ⲉⲩϩⲟⲕⲉⲣ ⲟⲩⲟϩ ⲛⲓⲯⲩⲭⲏ ⲉⲧⲟⲃⲓ ⲉⲑⲣⲟⲩϣⲱⲡⲓ ⲉⲩϣⲟⲩⲓⲧ .",
+      "english": "For the fool shall speak foolish words, and his heart shall meditate vanities, and to perform lawless deeds and to speak error against the Lord, to scatter hungry souls, and he will cause the thirsty souls to be empty.",
+      "source": "23_Isaias_32",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:32",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7328",
+      "label": "ϫⲱⲱⲣⲉ",
+      "pos": "V",
+      "gloss": "scatter, disperse"
+    },
+    {
+      "target": "C7329",
+      "label": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "scatter, disperse; bring to naught, hinder"
+    },
+    {
+      "target": "C7330",
+      "label": "ϫⲱⲱⲣⲉ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "scattering, dissolution"
+    }
+  ]
+}

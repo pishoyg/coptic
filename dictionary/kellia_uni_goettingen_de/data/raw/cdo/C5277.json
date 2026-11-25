@@ -1,0 +1,46 @@
+{
+  "id": "C5277",
+  "forms": [
+    {
+      "id": "CF12523",
+      "orth": "ϯ ⲉⲡⲟⲩϣⲁⲡ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5923",
+      "bibliography": "CD 503b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5278",
+      "label": "ϫⲓ ⲉⲡⲉⲟⲩϣⲁⲡ",
+      "pos": "V",
+      "gloss": "take, get on loan, borrow"
+    },
+    {
+      "target": "C5276",
+      "label": "ⲟⲩϣⲁⲡ",
+      "pos": "N",
+      "gloss": "loan"
+    }
+  ]
+}

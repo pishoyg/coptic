@@ -1,0 +1,153 @@
+{
+  "id": "C396",
+  "forms": [
+    {
+      "id": "CF1649",
+      "orth": "ⲃⲁⲕϣⲁⲁⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6957,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF1650",
+      "orth": "ⲃⲁⲕϣⲁⲣ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS444",
+      "bibliography": "CD 31a; KoptHWb 22; DELC 27; ChLCS 7b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁϫⲟⲟⲩ ϭⲉ ⲉⲓⲟⲡⲡⲏ ⲛⲅⲧⲛⲟⲟⲩ ⲛⲥⲁⲥⲓⲙⲱⲛ ⲡⲉⲧⲟⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϫⲉⲡⲉⲧⲣⲟⲥ . ⲡⲁⲓ ⲉϥⲟⲩⲏϩ ϩⲙⲡⲏⲓ ⲛⲥⲓⲙⲱⲛ ⲡ**ⲃⲁⲕϣⲁⲁⲣ** ϩⲁⲧⲛⲧⲑⲁⲗⲁⲥⲥⲁ . ⲡⲁⲓ ⲉϥⲛⲏⲩ ⲛϥϫⲱ ⲛⲁⲕ ⲛϩⲉⲛϣⲁϫⲉ ⲉⲕⲛⲁⲟⲩϫⲁⲓ ⲛϩⲏⲧⲟⲩ .",
+      "english": "Send therefore to Joppa, and summon Simon, who is surnamed Peter. He lodges in the house of Simon a tanner, by the seaside. When he comes, he will speak to you.'",
+      "source": "44_Acts of the Apostles_10",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲉⲧⲣⲉϥϭⲱ ⲛϩⲁϩ ⲛϩⲟⲟⲩ ϩⲛⲓⲟⲡⲡⲏ ϩⲁⲧⲛⲟⲩⲁ ϫⲉⲥⲓⲙⲱⲛ ⲡ**ⲃⲁⲕϣⲁⲁⲣ** .",
+      "english": "It happened, that he stayed many days in Joppa with one Simon, a tanner.",
+      "source": "44_Acts of the Apostles_9",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϥⲟⲩⲏϩ ϩⲁϩⲧⲛ ⲟⲩⲁ ϫⲉⲥⲓⲙⲱⲛ ⲡ**ⲃⲁⲕϣⲁⲁⲣ** . ⲡⲁⲓ ⲉⲣⲉⲡⲉϥⲏⲓ ϩⲓϫⲛⲧϩⲁⲗⲁⲥⲥⲁ .",
+      "english": "He lodges with one Simon, a tanner, whose house is by the seaside.'",
+      "source": "44_Acts of the Apostles_10",
+      "urn": "urn:cts:copticLit:nt.acts.sahidica:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲓⲙⲱⲛ",
+        2,
+        15.327
+      ],
+      [
+        "ϩⲁⲧⲛ",
+        1,
+        11.746
+      ],
+      [
+        "ⲑⲁⲗⲁⲥⲥⲁ",
+        1,
+        10.355
+      ],
+      [
+        "ⲏⲓ",
+        1,
+        8.15
+      ],
+      [
+        ".",
+        2,
+        7.972
+      ],
+      [
+        "ⲟⲩⲁ",
+        1,
+        7.744
+      ],
+      [
+        "ⲉⲣⲉ",
+        1,
+        7.517
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.992
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        6.511
+      ],
+      [
+        "ⲡ",
+        2,
+        5.912
+      ],
+      [
+        "ϫⲉ",
+        1,
+        4.561
+      ],
+      [
+        "ⲧ",
+        1,
+        4.486
+      ],
+      [
+        "ⲛ",
+        1,
+        2.224
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 6518,
+      "count": 3
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6015",
+      "type": "cf",
+      "label": "skin, leather"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C11274",
+      "label": "ⲃⲁⲕ-",
+      "pos": "N",
+      "gloss": "tanner"
+    },
+    {
+      "target": "C395",
+      "label": "ⲃⲱⲕⲉ",
+      "pos": "V",
+      "gloss": "tan"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "C5058",
+  "forms": [
+    {
+      "id": "CF12081",
+      "orth": "ⲕⲉⲟⲩⲟⲛ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "PINT",
+    "subc": "Indefinitpronomen",
+    "tlapos": "Pron."
+  },
+  "senses": [
+    {
+      "id": "CS5689",
+      "bibliography": "CD 482a; KoptHWb 273; ChLCS 67b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5059",
+      "label": "ⲗⲁⲁⲩ ⲛⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "any one"
+    },
+    {
+      "target": "C5062",
+      "label": "ⲙⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is not one, any"
+    },
+    {
+      "target": "C5061",
+      "label": "ⲟⲩⲛ ⲟⲩⲟⲛ",
+      "pos": "V",
+      "gloss": "there is someone"
+    },
+    {
+      "target": "C5057",
+      "label": "ⲟⲩⲟⲛ",
+      "pos": "PINT",
+      "gloss": "someone, something"
+    },
+    {
+      "target": "C5060",
+      "label": "ⲟⲩⲟⲛ ⲛⲓⲙ",
+      "pos": "PINT",
+      "gloss": "every one"
+    },
+    {
+      "target": "C5063",
+      "label": "ⲟⲩⲟⲛ ⲛⲥⲁⲟⲩⲟⲛ",
+      "pos": "EXIST",
+      "gloss": "one after another"
+    }
+  ]
+}

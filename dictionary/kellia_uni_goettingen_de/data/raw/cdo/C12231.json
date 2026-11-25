@@ -1,0 +1,44 @@
+{
+  "id": "C12231",
+  "forms": [
+    {
+      "id": "CF33248",
+      "orth": "ϫⲓ ⲥⲭⲁⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS17235",
+      "bibliography": "CD 387a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C12237",
+      "label": "ⲣⲙⲛⲥⲭⲁⲧ",
+      "pos": "N",
+      "gloss": "partaker in marriage gift (?)"
+    },
+    {
+      "target": "C3927",
+      "label": "ⲥϣⲟⲧ",
+      "pos": "N",
+      "gloss": "marriage gift (from bridegroom)"
+    },
+    {
+      "target": "C12172",
+      "label": "ⲥⲟϣⲧ",
+      "pos": "V",
+      "gloss": "betroth"
+    }
+  ]
+}

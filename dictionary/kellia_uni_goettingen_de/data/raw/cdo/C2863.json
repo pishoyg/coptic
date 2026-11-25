@@ -1,0 +1,66 @@
+{
+  "id": "C2863",
+  "forms": [
+    {
+      "id": "CF7581",
+      "orth": "ⲡⲉⲣ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.11,
+        "rank": 2611,
+        "count": 18
+      }
+    },
+    {
+      "id": "CF7582",
+      "orth": "-ⲡⲱⲣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3274",
+      "bibliography": "CD 267a; CED 127; KoptHWb 150, 531; DELC 162; ChLCS 37b-38a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙ**ⲡⲉⲣ**ⲁϣⲁϩⲟⲙ ⲉⲛⲉⲧⲛⲉⲣⲏⲩ ⲛⲁⲥⲛⲏⲩ ϫⲉⲕⲁⲁⲥ ⲛⲛⲉⲩⲕⲣⲓⲛⲉ ⲙⲙⲱⲧⲛ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲡⲉⲕⲣⲓⲧⲏⲥ ⲁϩⲉ ⲣⲁⲧϥ ϩⲓⲣⲉⲙ ⲡⲣⲟ",
+      "english": "Don't grumble, brothers, against one another, so that you won't be judged. Behold, the judge stands at the door.",
+      "source": "59_James_5",
+      "urn": "urn:cts:copticLit:nt.jas.sahidica:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲏⲩ ϣⲁⲣⲱⲧⲛ ⲛϥⲧⲙⲉⲓⲛⲉ ⲛⲏⲧⲛ ⲛⲧⲉⲓⲥⲃⲱ ⲙ**ⲡⲉⲣ**ϫⲓⲧϥ ⲉϩⲟⲩⲛ ⲉⲡⲉⲧⲉⲛⲏⲓ ⲁⲩⲱ ⲙⲡⲣϫⲟⲟⲥ ⲛⲁϥ ϫⲉⲭⲁⲓⲣⲉ",
+      "english": "If anyone comes to you, and doesn't bring this teaching, don't receive him into your house, and don't welcome him,",
+      "source": "63_2 John_1",
+      "urn": "urn:cts:copticLit:nt.2john.sahidica:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϯϫⲱ ⲇⲉ ⲙⲙⲟⲥ ϫⲉⲟⲩⲇⲓⲕⲁⲓⲟⲛ ⲉⲡϩⲟⲥⲟⲛ ⲉⲓϩⲙ ⲡⲉⲓⲙⲁ ⲛϣⲱⲡⲉ ⲉⲧⲟⲩⲛⲉⲥ ⲧⲏⲩⲧⲛ ϩⲙ**ⲡⲉⲣ** ⲡⲙⲉⲉⲩⲉ",
+      "english": "I think it right, as long as I am in this tent, to stir you up by reminding you;",
+      "source": "61_2 Peter_1",
+      "urn": "urn:cts:copticLit:nt.2pet.sahidica:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "egy_num": "60220",
+    "egy_lemma": "pr",
+    "demo_num": "d1985",
+    "demo_lemma": "pr",
+    "english": "house (gen.); temple; tomb; container",
+    "german": "Haus; Palast; Tempel; Grab; Verwaltung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/60220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1985"
+  }
+}

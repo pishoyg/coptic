@@ -1,0 +1,177 @@
+{
+  "id": "C3827",
+  "forms": [
+    {
+      "id": "CF9579",
+      "orth": "ⲣⲥⲧⲙⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 19877,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4342",
+      "bibliography": "CD 364b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲁⲣⲟⲩⲣⲡⲙⲉⲉⲩⲉ ⲉϩⲩⲡⲟⲧⲁⲥⲥⲉ ⲛⲛⲓⲁⲣⲭⲏ . ⲙⲛⲛⲓⲉⲝⲟⲩⲥⲓⲁ . ⲉ**ⲣⲥⲧⲙⲏⲧ** ⲉⲩⲥⲃⲧⲱⲧ ⲉϩⲱⲃ ⲛⲓⲙ ⲛⲁⲅⲁⲑⲟⲛ .",
+      "english": "Remind them to be in subjection to rulers and to authorities, to be obedient, to be ready for every good work,",
+      "source": "56_Titus_3",
+      "urn": "urn:cts:copticLit:nt.titus.sahidica:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲃⲧⲱⲧ",
+        1,
+        12.728
+      ],
+      [
+        "ⲉⲝⲟⲩⲥⲓⲁ",
+        1,
+        12.527
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        11.641
+      ],
+      [
+        "ⲉ",
+        3,
+        9.572
+      ],
+      [
+        ".",
+        1,
+        6.557
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19487,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3823",
+      "label": "ϭⲓⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, report"
+    },
+    {
+      "target": "C3825",
+      "label": "ⲁⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "disobedient"
+    },
+    {
+      "target": "C3816",
+      "label": "ⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "unhearing, disobedient"
+    },
+    {
+      "target": "C3819",
+      "label": "ⲙⲁⲓⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "loving to hear, to obey"
+    },
+    {
+      "target": "C3817",
+      "label": "ⲙⲛⲧⲁⲧⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "disobedience"
+    },
+    {
+      "target": "C3822",
+      "label": "ⲙⲛⲧⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3826",
+      "label": "ⲙⲛⲧⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedience"
+    },
+    {
+      "target": "C3820",
+      "label": "ⲛⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "place of hearing, music room"
+    },
+    {
+      "target": "C3818",
+      "label": "ⲣⲁⲧⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "be disobedient"
+    },
+    {
+      "target": "C3821",
+      "label": "ⲣⲉϥⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearer"
+    },
+    {
+      "target": "C3824",
+      "label": "ⲥⲧⲙⲏⲧ",
+      "pos": "N",
+      "gloss": "obedient"
+    },
+    {
+      "target": "C3812",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "V",
+      "gloss": "hear"
+    },
+    {
+      "target": "C3815",
+      "label": "ⲥⲱⲧⲙ",
+      "pos": "N",
+      "gloss": "hearing, obedience"
+    },
+    {
+      "target": "C3813",
+      "label": "ⲥⲱⲧⲙ (ⲛ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    },
+    {
+      "target": "C3814",
+      "label": "ⲥⲱⲧⲙ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "listen to, obey"
+    }
+  ]
+}

@@ -1,0 +1,665 @@
+{
+  "id": "C9652",
+  "forms": [
+    {
+      "id": "CF24720",
+      "orth": "ⲗⲟⲅⲭⲏ",
+      "dialect": null
+    },
+    {
+      "id": "CF24722",
+      "orth": "ⲗⲟⲅⲭⲏ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3502,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF24721",
+      "orth": "ⲗⲟⲅⲕⲏ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF24723",
+      "orth": "ⲗⲟⲅⲭⲏ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF24724",
+      "orth": "ⲗⲟⲅⲭⲏ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF24725",
+      "orth": "ⲗⲟⲅⲭⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.22,
+        "rank": 1849,
+        "count": 35
+      }
+    },
+    {
+      "id": "CF24726",
+      "orth": "ⲗⲟⲛⲭⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24727",
+      "orth": "ⲗⲱⲅⲭⲓ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12394",
+      "bibliography": "DDGLC",
+      "cu_ID": "618"
+    },
+    {
+      "id": "CS12395",
+      "bibliography": "DDGLC",
+      "cu_ID": "8971"
+    },
+    {
+      "id": "CS12396",
+      "bibliography": "DDGLC",
+      "cu_ID": "8972"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲕⲱϯ ⲉⲣⲟⲓ ⲛϩⲁⲛ**ⲗⲟⲅⲭⲏ** ⲁⲩϩⲓⲟⲩⲓ ⲙⲙⲱⲟⲩ ⲛⲛⲁϭⲗⲱⲧ ⲛⲥⲉϯⲁⲥⲟ ⲁⲛ : ⲁⲩⲫⲱⲛ ⲙⲡⲁϣⲁϣⲓ ϩⲓϫⲉⲛⲡⲓⲕⲁϩⲓ .",
+      "english": "They surrounded me with spears, aiming at my reins: without sparing me they poured out my gall upon the ground.",
+      "source": "18_Iob_16",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:16",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲥⲧⲁⲩⲣⲟⲩ ⲙⲙⲟϥ · ⲁⲩⲕⲟⲛⲥϥ ϩⲛⲟⲩ**ⲗⲟⲅⲭⲏ** · ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓⲡⲉⲛⲟⲩϫⲁⲓ ·",
+      "english": "They crucified Him. They pierced Him with a spear. There came out our salvation,",
+      "source": "Letter of pseudo-Ephrem MERC.AT 126-134",
+      "urn": "urn:cts:copticLit:psephrem.letter.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲫⲏⲉⲑⲛⲁϧⲱⲧⲉⲃ ⲛⲛⲉϣⲉⲣⲓ ⲛⲏⲉⲧϧⲉⲛ ⲧⲕⲟⲓ ϧⲉⲛⲧⲥⲏϥⲓ ⲉϥⲉϣⲱⲡⲓ ⲉϥⲣⲱⲓⲥ ⲉϥⲉⲧⲁⲥⲑⲟ ⲛⲛⲉⲥⲟⲃⲧ ⲉⲣⲟⲉϥⲉⲥⲉⲙⲛⲏ ⲛϩⲁⲛϩⲟⲡⲗⲟⲛ ⲟⲩⲟϩ ⲛⲉϥ**ⲗⲟⲅⲭⲏ** ⲙⲡⲟⲩⲙⲑⲟ ⲉⲃⲟⲗ .",
+      "english": "He shall slay thy daughters that are in the field with the sword, and shall set a watch against thee, and build forts around thee, and carry a rampart round against thee, and set up warlike works, and array his spears against thee.",
+      "source": "26_Ezechiel_26",
+      "urn": "urn:cts:copticLit:ot.ezek.bohairic_ed:26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϥⲛⲁϯ ⲙⲡⲉϥⲡⲛⲉⲩⲙⲁ ϩⲓⲡⲉⲥⲧⲁⲩⲣⲟⲥ · ⲛⲥⲉⲕⲉⲛⲥ ⲡⲉϥⲥⲡⲓⲣ ⲛⲟⲩ**ⲗⲟⲅⲭⲏ** ⲛⲧⲉⲟⲩⲙⲟⲟⲩ ⲙⲛⲟⲩⲥⲛⲟϥ ⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧϥ ⁛— ⲛⲁⲓ ⲉⲧⲛⲁⲧⲃⲃⲟ ⲛⲛⲛⲟⲃⲉ ⲙⲡⲕⲟⲥⲙⲟⲥ",
+      "english": "He shall yield up His Spirit on the Cross. They shall pierce His side with a spear so that water and blood shall flow forth therefrom, and it is these which shall cleanse the sins of the world.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩϣⲁⲛⲑⲟⲛⲧⲉⲛ ⲛϩⲁⲛ**ⲗⲟⲅⲭⲏ** ⲉⲣⲟϥ ⲙⲡⲁⲩⲉⲣ ϩⲗⲓ ⲛⲁϥ: ⲟⲩⲛⲁϩⲃⲓ ⲉϥⲧⲁⲓⲏⲟⲩⲧ ⲉⲣⲁⲧϥ ⲛⲉⲙⲟⲩϧⲉⲗⲓⲃϣ .",
+      "english": "If spears should come against him, men will effect nothing, either with the spear or the breast-plate.",
+      "source": "18_Iob_41",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:41",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲉⲛⲧⲁⲣⲉⲓ ⲉⲣⲁⲧϥ ⲙⲡⲛⲁⲩ ⲛⲧⲁⲣⲡⲱⲧⲥ ⲛⲧⲟⲩⲉⲕⲓⲃⲉ ⲛⲟⲩⲛⲁⲙ · ⲉⲁⲣϯ ⲙⲡⲉⲥⲛⲟϥ ⲉⲧⲉϩⲛⲉ ⲛⲛⲟⲩϣⲏⲣⲉ ⁛ ⲡⲉⲛⲧⲁⲩⲣⲉϩⲧⲡⲉϥⲥⲡⲓⲣ ⲛⲟⲩ**ⲗⲟⲅⲭⲏ** ϩⲓⲡⲉⲥⲧⲁⲩⲣⲟⲥ",
+      "english": "And He to Whom thou didst come when thou didst pierce thy right breast, and didst put the blood on the foreheads of thy sons, was He Whose side was pierced by the spear on the Cross.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 2",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:24-42",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ϭⲉⲣⲱ",
+        1,
+        16.373
+      ],
+      [
+        "ⲑⲟⲛⲧⲉⲛ",
+        1,
+        14.203
+      ],
+      [
+        "ϩⲟⲡⲗⲟⲛ",
+        1,
+        12.164
+      ],
+      [
+        "ⲥⲫⲓⲣ",
+        1,
+        11.144
+      ],
+      [
+        "ϣⲃⲱⲧ",
+        1,
+        10.715
+      ],
+      [
+        "ⲁⲩϣⲁⲛ",
+        1,
+        10.183
+      ],
+      [
+        "ϩⲁⲛ",
+        3,
+        9.746
+      ],
+      [
+        "ⲥⲁⲧⲟⲧ",
+        1,
+        9.68
+      ],
+      [
+        "ⲙⲡⲁ",
+        1,
+        9.528
+      ],
+      [
+        "ϩⲓⲟⲩⲓ",
+        1,
+        9.249
+      ],
+      [
+        "ⲉⲣⲟ",
+        2,
+        8.795
+      ],
+      [
+        "ⲛ",
+        4,
+        8.269
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        3,
+        7.513
+      ],
+      [
+        "ⲙⲑⲟ",
+        1,
+        7.495
+      ],
+      [
+        "ⲡⲟⲩ",
+        1,
+        7.37
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.187
+      ],
+      [
+        "ⲩ",
+        2,
+        6.799
+      ],
+      [
+        "ⲧⲉϥ",
+        1,
+        6.668
+      ],
+      [
+        "ⲙⲙⲱ",
+        1,
+        6.484
+      ],
+      [
+        "ⲛⲉϥ",
+        1,
+        6.345
+      ]
+    ],
+    "S": [
+      [
+        "ⲥⲡⲓⲣ",
+        7,
+        17.605
+      ],
+      [
+        "ⲧⲱⲝ",
+        1,
+        15.469
+      ],
+      [
+        "ϩⲁϫⲱϥ",
+        1,
+        15.469
+      ],
+      [
+        "ⲗⲁⲙⲡⲏⲛⲏ",
+        1,
+        15.469
+      ],
+      [
+        "ⲧⲉϥ",
+        14,
+        15.257
+      ],
+      [
+        "ⲣⲁⲙⲁ",
+        1,
+        14.469
+      ],
+      [
+        "ϣⲥ",
+        2,
+        14.381
+      ],
+      [
+        "ⲣⲁϩⲧ",
+        3,
+        13.639
+      ],
+      [
+        "ⲧⲟⲕⲙⲉⲥ",
+        1,
+        13.469
+      ],
+      [
+        "ϫⲁⲧ",
+        1,
+        13.469
+      ],
+      [
+        "ϩⲛ",
+        16,
+        13.35
+      ],
+      [
+        "ⲕⲟⲛⲥ",
+        2,
+        13.147
+      ],
+      [
+        "ⲧⲣⲧⲱⲣ",
+        1,
+        12.884
+      ],
+      [
+        "ϫⲟⲧ",
+        1,
+        12.469
+      ],
+      [
+        "ⲛ",
+        21,
+        11.857
+      ],
+      [
+        "ϭⲗⲟⲟⲧⲉ",
+        1,
+        11.768
+      ],
+      [
+        "ⲧ",
+        12,
+        11.697
+      ],
+      [
+        "ϥ",
+        17,
+        11.655
+      ],
+      [
+        "ⲱϩⲉ",
+        1,
+        10.768
+      ],
+      [
+        "ⲥ",
+        9,
+        10.655
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲛⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          "ⲡⲟⲩ_3_post_ⲙⲑⲟ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲑⲟ",
+          "ⲙⲑⲟ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲛⲉⲙ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          11
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          33
+        ],
+        [
+          "ⲧ_1_pre_ⲗⲟⲅⲭⲏ",
+          6
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          3
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲙⲉ_4_post_ϣⲟ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲟⲅⲭⲏ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ϭⲓϫ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲁϫⲱϥ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ϩⲛⲁⲁⲩ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          2
+        ],
+        [
+          "ⲧ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          4
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲧ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲟⲩ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          "ϩⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          "ⲡⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲛ",
+          "ϩⲙⲉ_4_post_ϣⲟ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          "ⲉⲧ_1_post_ⲗⲟⲅⲭⲏ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲟⲅⲭⲏ",
+          "ϩⲛ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲛ_1_post_ⲗⲟⲅⲭⲏ",
+          "ⲧⲉϥ_3_post_ϭⲓϫ",
+          1
+        ],
+        [
+          "ⲧⲉϥ_3_post_ϭⲓϫ",
+          "ϭⲓϫ_2_post_ϩⲛ",
+          1
+        ],
+        [
+          "ⲧⲁ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲟⲅⲭⲏ",
+          "ϩⲁϫⲱϥ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          "ⲙⲛ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϩⲛⲁⲁⲩ",
+          "ⲡⲉ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ϩⲛⲁⲁⲩ",
+          "ϩⲛⲁⲁⲩ_1_post_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ϩⲛⲁⲁⲩ_1_post_ⲗⲟⲅⲭⲏ",
+          "ⲙⲙⲟ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲗⲟⲅⲭⲏ_0_node",
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲗⲟⲅⲭⲏ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲣⲣⲟ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲣⲣⲟ_3_post_ⲡ",
+          "ⲁⲩⲱ_2_post_ϩⲛⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲉⲓⲥ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲧ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲗⲟⲅⲭⲏ",
+          "ⲗⲟⲅⲭⲏ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.06,
+      "rank": 3089,
+      "count": 5
+    },
+    "S": {
+      "rate": 0.22,
+      "rank": 1613,
+      "count": 35
+    }
+  },
+  "etym": {
+    "grl_ID": "1309",
+    "grl_lemma": "λόγχη",
+    "grl_meaning": "spear-head, spear, lance",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1059b; Preisigke 2:37"
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "id": "C1038",
+  "forms": [
+    {
+      "id": "CF3434",
+      "orth": "ⲕⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 13.65,
+        "rank": 93,
+        "count": 2153
+      }
+    },
+    {
+      "orth": "ⲭⲱⲟⲩⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.6,
+        "rank": 544,
+        "count": 136
+      }
+    },
+    {
+      "orth": "ⲕⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.36,
+        "rank": 396,
+        "count": 373
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS1199",
+      "bibliography": "CD 90b; KoptHWb 54-55; ChLCS 15a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϥⲣⲁⲥϯ ⲇⲉ ⲁϥⲟⲩⲟⲛϩϥ ⲉϩⲁⲛⲕⲉ**ⲭⲱⲟⲩⲛⲓ** ⲉⲩⲙⲗⲁϧ ⲟⲩⲟϩ ⲛⲁϥϩⲱⲧⲡ ⲙⲙⲱⲟⲩ ⲡⲉ ⲉⲟⲩϩⲓⲣⲏⲛⲏ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲛⲑⲱⲧⲉⲛ ϩⲁⲛⲣⲱⲙⲓ ⲛⲥⲛⲏⲟⲩ ⲉⲑⲃⲉⲟⲩ ⲧⲉⲧⲉⲛϭⲓ ⲛⲛⲉⲧⲉⲛⲉⲣⲏⲩ ⲛϫⲟⲛⲥ .",
+      "english": "'The day following, he appeared to them as they fought, and urged them to be at peace again, saying, 'Sirs, you are brothers. Why do you wrong one another?'",
+      "source": "05_Acts_07",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:07",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ ⲛϩⲉⲛⲉⲛⲉⲣⲅⲏⲙⲁ ⲛϭⲟⲙ **ⲕⲉ**ⲟⲩⲁ ⲛⲟⲩⲡⲣⲟⲫⲏⲧⲓⲁ ⲕⲉⲟⲩⲁ ⲛⲟⲩⲇⲓⲁⲕⲣⲓⲥⲓⲥ ⲙⲡⲛⲉⲩⲙⲁ ⲕⲉⲟⲩⲁ ⲛϩⲉⲛⲅⲉⲛⲟⲥ ⲛⲁⲥⲡⲉ ⲕⲉⲟⲩⲁ ⲛⲟⲩϩⲉⲣⲙⲏⲛⲉⲓⲁ ⲛⲁⲥⲡⲉ .",
+      "english": "and to another workings of miracles; and to another prophecy; and to another discerning of spirits; to another different kinds of languages; and to another the interpretation of languages.",
+      "source": "1 Corinthians 12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲁⲛⲕⲉ**ⲭⲱⲟⲩⲛⲓ** ⲙⲉⲛ ⲟⲩⲛ ⲛⲁⲩⲱϣ ⲉⲃⲟⲗ ⲉⲩϫⲱ ⲛⲕⲉϩⲱⲃ ⲛⲉⲁ ϯⲉⲕⲕⲗⲏⲥⲓⲁ ⲅⲁⲣ ϣⲑⲟⲣⲧⲉⲣ ⲡⲉ ⲟⲩⲟϩ ⲛⲁⲣⲉⲡⲟⲩϩⲟⲩⲟ ⲥⲱⲟⲩⲛ ⲁⲛ ϫⲉⲉⲧⲁⲩⲑⲱⲟⲩϯ ⲉⲑⲃⲉⲟⲩ .",
+      "english": "Some therefore cried one thing, and some another, for the assembly was in confusion. Most of them didn't know why they had come together.",
+      "source": "05_Acts_19",
+      "urn": "urn:cts:copticLit:nt.acts.bohairic:19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲕⲉⲟⲩⲁ ⲇⲉ ⲛⲟⲩⲡⲓⲥⲧⲓⲥ ϩⲙⲡⲓⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ . **ⲕⲉ**ⲟⲩⲁ ⲇⲉ ⲛϩⲉⲛϩⲙⲟⲧ ⲛⲧⲁⲗϭⲟ ⲕⲁⲧⲁⲡⲓⲡⲛⲉⲩⲙⲁ ⲛⲟⲩⲱⲧ .",
+      "english": "to another faith, by the same Spirit; and to another gifts of healings, by the same Spirit;",
+      "source": "1 Corinthians 12",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:12",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲏⲉⲧϫⲱ ⲙⲙⲟⲥ ⲛⲛⲓⲡⲣⲟⲫⲏⲧⲏⲥ ϫⲉⲙⲡⲉⲣⲧⲁⲙⲟⲛ ⲛⲉⲙⲛⲏⲉⲧⲛⲁⲩ ⲉⲛⲓϩⲟⲣⲁⲙⲁ ϫⲉⲙⲡⲉⲣⲥⲁϫⲓ ⲙⲙⲱⲟⲩ ⲛⲉⲙⲁⲛ ⲁⲗⲗⲁ ⲥⲁϫⲓ ⲛϩⲁⲛⲕⲉ**ⲭⲱⲟⲩⲛⲓ** ⲛⲉⲙⲁⲛ ⲟⲩⲟϩ ⲙⲁⲧⲁⲙⲟⲛ ⲉⲕⲉⲡⲗⲁⲛⲏ .",
+      "english": "who say to the prophets, Report not to us; and to them that see visions, Speak them not to us, but speak and report to us another error;",
+      "source": "23_Isaias_30",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:30",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲁⲩⲉⲓ ⲁⲩϥⲓ ⲛⲙⲙⲉⲣⲁⲧⲉ ⲛⲧⲉⲭⲏⲣⲁ ⲙⲛⲛⲉⲥ**ⲕⲉ**ϣⲉⲉⲣⲉ ⲛⲧⲟⲥ ⲙⲁⲩⲁⲁⲥ ⲁⲩⲁⲁⲥ ⲛϫⲁⲓⲉ",
+      "english": "These have carried away the dear beloved children of the widow, and left her that was alone desolate without daughters.",
+      "source": "Baruch 4",
+      "urn": "urn:cts:copticLit:ot.bar.coptot:4",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲭⲱⲟⲩⲛⲓ",
+        270,
+        26.603
+      ],
+      [
+        "ⲟⲩⲁⲓ",
+        360,
+        24.312
+      ],
+      [
+        "ⲛ",
+        761,
+        23.071
+      ],
+      [
+        "ⲇⲉ",
+        278,
+        21.171
+      ],
+      [
+        "ⲅⲁⲣ",
+        194,
+        21.155
+      ],
+      [
+        "ϩⲁⲛ",
+        256,
+        21.078
+      ],
+      [
+        "ⲁ",
+        435,
+        21.049
+      ],
+      [
+        "ⲕⲟⲩϫⲓ",
+        90,
+        20.132
+      ],
+      [
+        "ⲟⲛ",
+        98,
+        20.033
+      ],
+      [
+        "ϥ",
+        365,
+        19.725
+      ],
+      [
+        ".",
+        259,
+        19.432
+      ],
+      [
+        "ⲟⲩ",
+        314,
+        19.403
+      ],
+      [
+        "ⲉ",
+        280,
+        19.17
+      ],
+      [
+        "ⲥⲟⲡ",
+        67,
+        19.135
+      ],
+      [
+        "ⲛⲁ",
+        216,
+        18.984
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        255,
+        18.828
+      ],
+      [
+        "ⲛⲉⲙ",
+        180,
+        18.483
+      ],
+      [
+        "ⲛⲓ",
+        176,
+        18.362
+      ],
+      [
+        "ⲩ",
+        179,
+        18.337
+      ],
+      [
+        "ⲡⲓ",
+        176,
+        17.914
+      ]
+    ],
+    "S": [
+      [
+        "ⲟⲩⲁ",
+        523,
+        24.991
+      ],
+      [
+        "ⲛ",
+        1582,
+        24.262
+      ],
+      [
+        "ⲥⲟⲡ",
+        301,
+        24.082
+      ],
+      [
+        "ⲉ",
+        898,
+        22.819
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        22,
+        22.547
+      ],
+      [
+        "ⲥⲉⲉⲡⲉ",
+        110,
+        21.758
+      ],
+      [
+        "ⲙⲛ",
+        447,
+        21.627
+      ],
+      [
+        ".",
+        422,
+        21.291
+      ],
+      [
+        "ⲡ",
+        679,
+        21.289
+      ],
+      [
+        "ⲟⲩ",
+        555,
+        21.14
+      ],
+      [
+        "ⲁⲩⲱ",
+        458,
+        20.835
+      ],
+      [
+        "ϥ",
+        567,
+        20.534
+      ],
+      [
+        "ⲩ",
+        396,
+        20.268
+      ],
+      [
+        "ⲧⲏⲣ",
+        237,
+        20.101
+      ],
+      [
+        "ⲉⲧ",
+        344,
+        20.088
+      ],
+      [
+        "ⲧ",
+        331,
+        19.754
+      ],
+      [
+        "ⲁ",
+        395,
+        19.492
+      ],
+      [
+        "ⲙ",
+        366,
+        19.469
+      ],
+      [
+        "ⲕⲟⲩⲓ",
+        98,
+        19.449
+      ],
+      [
+        "ϩⲉⲛ",
+        187,
+        19.285
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲕⲉ_0_node",
+          26
+        ],
+        [
+          "ⲥⲱⲧⲡ_1_post_ⲕⲉ",
+          3
+        ],
+        [
+          "ⲣⲟⲙⲡⲓ_1_post_ⲕⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲙ_3_post_ⲥⲁⲡϣⲱⲓ",
+          3
+        ],
+        [
+          "ⲥⲁⲡϣⲱⲓ_2_post_ⲣⲟⲙⲡⲓ",
+          3
+        ],
+        [
+          "ϭⲱⲣⲡ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ϭⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ϭⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_4_post_ⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲱⲟⲩ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲗⲱⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_2_post_ⲗⲱⲧ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲁ_2_post_ⲣⲟⲙⲡⲓ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ϣⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲉ_0_node",
+          "ⲥⲱⲧⲡ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ⲣⲟⲙⲡⲓ_1_post_ⲕⲉ",
+          2
+        ],
+        [
+          "ⲣⲟⲙⲡⲓ_1_post_ⲕⲉ",
+          "ⲛⲉⲙ_3_post_ⲥⲁⲡϣⲱⲓ",
+          2
+        ],
+        [
+          "ⲛⲉⲙ_3_post_ⲥⲁⲡϣⲱⲓ",
+          "ⲥⲁⲡϣⲱⲓ_2_post_ⲣⲟⲙⲡⲓ",
+          2
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ϭⲱⲣⲡ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ϭⲱⲣⲡ_1_post_ⲕⲉ",
+          "ⲉⲃⲟⲗ_2_post_ϭⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_2_post_ϭⲱⲣⲡ",
+          "ⲛⲧⲉ_2_post_ϭⲱⲣⲡ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_2_post_ϭⲱⲣⲡ",
+          "ⲡⲉϥ_4_post_ⲱⲟⲩ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_4_post_ⲱⲟⲩ",
+          "ⲱⲟⲩ_3_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ⲗⲱⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲗⲱⲧ_1_post_ⲕⲉ",
+          "ⲡ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲡ_3_post_ϣⲏⲣⲓ",
+          "ϣⲏⲣⲓ_2_post_ⲗⲱⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲣⲓ_2_post_ⲗⲱⲧ",
+          "ⲙ_3_post_ϣⲏⲣⲓ",
+          1
+        ],
+        [
+          "ⲙ_3_post_ϣⲏⲣⲓ",
+          "ⲡ_4_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲁⲡϣⲱⲓ_2_post_ⲣⲟⲙⲡⲓ",
+          "ϣⲁ_2_post_ⲣⲟⲙⲡⲓ",
+          1
+        ],
+        [
+          "ϣⲁ_2_post_ⲣⲟⲙⲡⲓ",
+          "ⲛ_3_post_ϣⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲉ_0_node",
+          8
+        ],
+        [
+          "ⲡ_1_pre_ⲕⲉ",
+          2
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲁⲁϫⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲧⲏⲛⲟⲩ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲏⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲟⲩⲱϩⲙ_4_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡ_1_pre_ⲕⲉ",
+          "ⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲡⲉ_1_pre_ⲕⲉ",
+          "ⲥ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲥ_1_pre_ⲕⲉ",
+          "ⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ⲣⲁⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲣⲁⲧ_1_post_ⲕⲉ",
+          "ⲥ_2_post_ⲣⲁⲧ",
+          1
+        ],
+        [
+          "ⲥ_2_post_ⲣⲁⲧ",
+          "ⲉⲃⲟⲗ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲉⲣ_1_pre_ⲕⲉ",
+          "ⲓ_1_pre_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲓ_1_pre_ⲕⲉ",
+          "ⲕⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ⲙ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲕⲉ",
+          "ⲡⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ⲙⲁⲁϫⲉ",
+          "ⲙⲁⲁϫⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲕⲉ_0_node",
+          "ⲧ_1_post_ⲕⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_post_ⲕⲉ",
+          "ⲧⲏⲛⲟⲩ_2_post_ⲧ",
+          1
+        ],
+        [
+          "ⲧⲏⲛⲟⲩ_2_post_ⲧ",
+          "ⲛ_3_post_ⲧⲏⲛⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲧⲏⲛⲟⲩ",
+          "ⲟⲩⲱϩⲙ_4_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 17.38,
+      "rank": 67,
+      "count": 2758
+    },
+    "B": {
+      "rate": 14.2,
+      "rank": 84,
+      "count": 1205
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1037",
+      "label": "ⲕⲉ",
+      "pos": "N",
+      "gloss": "another"
+    },
+    {
+      "target": "C1039",
+      "label": "ⲕⲉ-",
+      "pos": "N",
+      "gloss": "(the) other . . ., different, any other"
+    },
+    {
+      "target": "C1042",
+      "label": "ⲕⲉ-",
+      "pos": "N",
+      "gloss": "(with def. art.) also, even"
+    },
+    {
+      "target": "C1040",
+      "label": "ⲕⲉⲟⲩⲁ",
+      "pos": "PINT",
+      "gloss": "another, (with def. art.) the other"
+    },
+    {
+      "target": "C1041",
+      "label": "ⲕⲉⲟⲩⲉⲓ",
+      "pos": "PINT",
+      "gloss": "another, (with def. art.) the other"
+    },
+    {
+      "target": "C1043",
+      "label": "ⲣⲡⲕⲉ-",
+      "pos": "V",
+      "gloss": "be, do also"
+    }
+  ],
+  "etym": {
+    "egy_num": "163760",
+    "egy_lemma": "ky",
+    "demo_num": "d6525",
+    "demo_lemma": "kj",
+    "english": "another",
+    "german": "anderer",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/163760",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d6525"
+  }
+}

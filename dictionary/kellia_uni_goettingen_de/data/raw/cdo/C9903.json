@@ -1,0 +1,84 @@
+{
+  "id": "C9903",
+  "forms": [
+    {
+      "id": "CF25730",
+      "orth": "ⲝⲉⲛⲉⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25731",
+      "orth": "ⲝⲉⲛⲉⲓⲟⲥ",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12898",
+      "bibliography": "DDGLC",
+      "cu_ID": "735"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲍⲉⲩⲥ",
+        1,
+        16.598
+      ],
+      [
+        "ⲟⲩⲟⲡ",
+        1,
+        15.644
+      ],
+      [
+        "ⲕⲁⲧⲁ",
+        1,
+        9.31
+      ],
+      [
+        "ⲡⲁ",
+        1,
+        8.376
+      ],
+      [
+        "ⲛ",
+        2,
+        6.809
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲝⲉⲛⲉⲓⲟⲥ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "etym": {
+    "grl_ID": "3808",
+    "grl_lemma": "ξένιος",
+    "grl_meaning": "hospitable",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 1188b; Preisigke 2:144"
+  }
+}

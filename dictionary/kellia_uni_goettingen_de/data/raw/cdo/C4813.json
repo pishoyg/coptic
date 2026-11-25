@@ -1,0 +1,52 @@
+{
+  "id": "C4813",
+  "forms": [
+    {
+      "id": "CF11591",
+      "orth": "ϫⲓⲛⲧⲁϩⲛⲟ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5432",
+      "bibliography": "CD 460b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4812",
+      "label": "ⲁⲧⲧⲁϩⲛⲟ",
+      "pos": "N",
+      "gloss": "unhindered"
+    },
+    {
+      "target": "C4810",
+      "label": "ⲧⲁϩⲛⲟ",
+      "pos": "V",
+      "gloss": "hinder"
+    },
+    {
+      "target": "C4811",
+      "label": "ⲧⲁϩⲛⲟ",
+      "pos": "N",
+      "gloss": "hindrance (only with ⲁⲧϭⲛⲉ-, \"without hindrance\")"
+    }
+  ]
+}

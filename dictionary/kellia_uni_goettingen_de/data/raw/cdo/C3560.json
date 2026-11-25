@@ -1,0 +1,64 @@
+{
+  "id": "C3560",
+  "forms": [
+    {
+      "id": "CF9025",
+      "orth": "ⲉⲓⲣⲉ ⲛⲥⲙⲟⲧ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4053",
+      "bibliography": "CD 341b-342a; KoptHWb 187; ChLCS 48a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3562",
+      "label": "ϫⲓⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "become, be like"
+    },
+    {
+      "target": "C3561",
+      "label": "ϯⲥⲙⲟⲧ",
+      "pos": "V",
+      "gloss": "give form"
+    },
+    {
+      "target": "C3559",
+      "label": "ⲁⲧⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "without form"
+    },
+    {
+      "target": "C3557",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    },
+    {
+      "target": "C3558",
+      "label": "ⲥⲙⲟⲧ",
+      "pos": "N",
+      "gloss": "form, character, likeness, pattern"
+    }
+  ]
+}

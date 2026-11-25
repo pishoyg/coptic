@@ -1,0 +1,738 @@
+{
+  "id": "C3613",
+  "forms": [
+    {
+      "id": "CF9131",
+      "orth": "ⲥⲛⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.96,
+        "rank": 460,
+        "count": 310
+      }
+    },
+    {
+      "orth": "ⲥⲉⲛϯ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 0.81,
+        "rank": 818,
+        "count": 69
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4113",
+      "bibliography": "CD 345b-346a; CED 156; KoptHWb 189; DELC 191; ChLCS 49a"
+    },
+    {
+      "id": "CS4114",
+      "bibliography": "KoptHWb 189; DELC 191; ChLCS 49a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲓⲥϫⲉⲟⲩⲟⲛ ⲡⲉⲧⲕⲱⲧ ⲉϫⲉⲛⲧⲁⲓ**ⲥⲉⲛϯ** ⲛⲟⲩⲃ ϩⲁⲧ ⲁⲛⲁⲙⲏⲓ ⲣⲱⲕϩ ⲥⲱⲟⲩⲃⲉⲛ ⲣⲱⲟⲩⲓ .",
+      "english": "But if anyone builds on the foundation with gold, silver, costly stones, wood, hay, or stubble;",
+      "source": "Bohairic 1 Corinthians 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁϥϫⲟⲟⲥ ⲛϭⲓⲁⲡⲁ ϩⲱⲣⲥⲓⲏⲥⲓ . ϫⲉⲟⲩⲧⲱⲱⲃⲉ ⲛⲟⲙⲉ ⲉⲩϣⲁⲛⲛⲟϫⲥ ⲉⲩ**ⲥⲛⲧⲉ** ϩⲁⲧⲙⲡⲓⲉⲣⲟ . ⲛⲥⲛⲁϩⲩⲡⲟⲙⲓⲛⲉ ⲁⲛ ⲛⲟⲩϩⲟⲟⲩ ⲛⲟⲩⲱⲧ .",
+      "english": "Apa Orsisius said, 'A mud brick that is laid as a foundation by the river will not last a single day.",
+      "source": "Apophthegmata Patrum Sahidic 124: Orsisius 1",
+      "urn": "urn:cts:copticLit:ap.124.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲕⲓ ⲉⲃⲟⲗ ⲉⲩⲟⲩϫⲁⲓ ⲙⲡⲉⲕⲗⲁⲟⲥ ⲉⲑⲣⲉⲕⲧⲟⲩϫⲟ ⲛⲛⲏ ⲉⲧⲁⲕⲑⲁϩⲥⲟⲩ ⲁⲕϩⲓⲟⲩⲓ ⲛⲟⲩⲙⲟⲩ ⲉϫⲉⲛⲧⲁⲫⲉ ⲛⲛⲓⲁⲛⲟⲙⲟⲥ ⲁⲕⲭⲱ ⲛϯ**ⲥⲉⲛϯ** ⲉⲥϣⲟⲩⲓⲧ ⲁⲕⲧⲟⲩⲛⲟⲥⲛⲉⲕⲥⲛⲁⲩϩ ϣⲁⲛⲙⲟϯ ⲇⲓⲁⲯⲁⲗⲙⲁ .",
+      "english": "Thou wentest forth for the salvation of thy people, to save thine anointed: thou shalt bring death on the heads of transgressors; thou has brought bands upon their neck. Pause.",
+      "source": "Bohairic Habakkuk 3 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:3",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲛϭⲟⲙ ⲅⲁⲣ ⲛⲗⲁⲁⲩ ⲉⲕⲁⲕⲉ**ⲥⲛⲧⲉ** ⲉϩⲣⲁⲓ ⲡⲁⲣⲁⲧⲉⲧⲕⲏ ⲉϩⲣⲁⲓ ⲉⲧⲉⲡⲁⲓ ⲡⲉ ⲓⲏⲥⲟⲩⲥ ⲡⲉⲭⲣⲓⲥⲧⲟⲥ .",
+      "english": "For no one can lay any other foundation than that which has been laid, which is Jesus Christ.",
+      "source": "46_1 Corinthians_3",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉϥ**ⲥⲉⲛϯ** ϧⲉⲛⲛⲓⲧⲱⲟⲩ ⲉⲑⲟⲩⲁⲃ ⲡϭⲟⲓⲥ ⲙⲉⲓ ⲛⲛⲓⲡⲩⲗⲏ ⲛⲧⲉⲥⲓⲱⲛ ⲉϩⲟⲧⲉ ⲛⲓⲙⲁⲛϣⲱⲡⲓ ⲧⲏⲣⲟⲩ ⲛⲧⲉⲓⲁⲕⲱⲃ",
+      "english": "His foundations are in the holy mountains.",
+      "source": "19_Psalmi_86",
+      "urn": "urn:cts:copticLit:ot.pss.bohairic_ed:86",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉⲟⲩⲛⲟⲩⲁ ⲇⲉ ⲛⲁⲕⲱⲧ ⲉϫⲛⲧⲉⲓ**ⲥⲛⲧⲉ** ⲟⲩⲛⲟⲩⲃ ⲟⲩϩⲁⲧ ϩⲉⲛⲉⲛⲉ ⲙⲙⲉ ϩⲉⲛϣⲉ ⲟⲩⲭⲟⲣⲧⲟⲥ ⲟⲩⲣⲟⲟⲩⲉ .",
+      "english": "But if anyone builds on the foundation with gold, silver, costly stones, wood, hay, or stubble;",
+      "source": "1 Corinthians 3",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:3",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲙⲡⲁⲣⲁⲃⲁⲧⲏ",
+        1,
+        18.11
+      ],
+      [
+        "ⲙⲙⲉⲥⲓⲧⲏ",
+        1,
+        18.11
+      ],
+      [
+        "ⲙⲉⲧⲉⲡⲓ",
+        1,
+        17.11
+      ],
+      [
+        "ⲕⲏ",
+        1,
+        13.862
+      ],
+      [
+        "ⲟⲓ",
+        2,
+        10.998
+      ],
+      [
+        "ⲇⲓⲁⲑⲏⲕⲏ",
+        1,
+        10.342
+      ],
+      [
+        "ϩⲱⲥ",
+        1,
+        9.571
+      ],
+      [
+        "ⲛⲟⲙⲟⲥ",
+        1,
+        9.477
+      ],
+      [
+        "ⲭⲣⲓⲥⲧⲟⲥ",
+        1,
+        8.521
+      ],
+      [
+        "ⲉ",
+        3,
+        8.187
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        7.151
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.349
+      ],
+      [
+        "ⲕ",
+        1,
+        5.543
+      ],
+      [
+        "ⲥ",
+        1,
+        4.843
+      ],
+      [
+        "ϯ",
+        1,
+        4.705
+      ],
+      [
+        "ⲛⲉⲙ",
+        1,
+        4.658
+      ],
+      [
+        "ⲡⲓ",
+        1,
+        4.186
+      ],
+      [
+        "ⲡ",
+        1,
+        4.034
+      ],
+      [
+        "ⲁ",
+        1,
+        3.405
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        3.169
+      ]
+    ],
+    "S": [
+      [
+        "ⲛ",
+        396,
+        23.053
+      ],
+      [
+        "ⲡⲗⲁⲝ",
+        19,
+        21.528
+      ],
+      [
+        "ⲥⲙ",
+        16,
+        20.867
+      ],
+      [
+        "ⲃⲁϩⲥⲉ",
+        13,
+        20.011
+      ],
+      [
+        "ϯⲟⲩ",
+        24,
+        19.968
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        4,
+        19.954
+      ],
+      [
+        "ⲁⲩⲱ",
+        118,
+        19.751
+      ],
+      [
+        "ⲡ",
+        134,
+        19.051
+      ],
+      [
+        "ⲧ",
+        92,
+        18.998
+      ],
+      [
+        "ⲥⲙⲛ",
+        12,
+        18.981
+      ],
+      [
+        "ⲁ",
+        114,
+        18.899
+      ],
+      [
+        "ⲟⲩ",
+        93,
+        18.194
+      ],
+      [
+        "ⲕⲁϩ",
+        39,
+        18.139
+      ],
+      [
+        "ⲟⲉⲓⲗⲉ",
+        11,
+        17.378
+      ],
+      [
+        "ⲙ",
+        65,
+        16.774
+      ],
+      [
+        "ⲉ",
+        72,
+        16.683
+      ],
+      [
+        "ⲙⲙⲟ",
+        42,
+        16.514
+      ],
+      [
+        "ⲟⲩⲉϭⲣⲟ",
+        4,
+        16.369
+      ],
+      [
+        "ϣⲉⲗⲉⲉⲧ",
+        9,
+        16.245
+      ],
+      [
+        "ⲛⲉ",
+        36,
+        16.179
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲟⲙⲟⲥ_1_post_ⲥⲛⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲡⲓ_2_post_ⲛⲟⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲛⲟⲙⲟⲥ",
+          "ⲛⲟⲙⲟⲥ_1_post_ⲥⲛⲧⲉ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          61
+        ],
+        [
+          "ⲙ_1_post_ⲥⲛⲧⲉ",
+          12
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          11
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          11
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲛⲧⲉ",
+          5
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲛⲧⲉ",
+          4
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲛⲧⲉ",
+          5
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲥⲛⲧⲉ",
+          3
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲛⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          8
+        ],
+        [
+          "ⲁⲣⲉⲧⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲧⲉⲕⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟⲙⲧⲉ",
+          1
+        ],
+        [
+          "ϣⲟⲙⲧⲉ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲧⲟⲩⲉⲓⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲡⲁϣⲉ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_4_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲕⲛⲧⲏ_2_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲙ_1_post_ⲥⲛⲧⲉ",
+          4
+        ],
+        [
+          "ⲙ_1_post_ⲥⲛⲧⲉ",
+          "ⲡ_2_post_ⲙ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲛⲉⲥ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲉⲧ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲥⲛⲧⲉ",
+          "ϩⲙ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲥⲛⲧⲉ",
+          "ⲡ_2_post_ϩⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϩⲙ",
+          "ⲉⲥⲏⲧ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          8
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          "ⲁⲣⲉⲧⲏ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲁⲣⲉⲧⲏ_2_post_ⲛ",
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁⲣⲑⲉⲛⲓⲁ",
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲁⲣⲑⲉⲛⲓⲁ_1_post_ⲥⲛⲧⲉ",
+          "ⲁⲩⲱ_3_post_ⲅⲁⲙⲟⲥ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲛⲧⲉ",
+          "ⲡⲉ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_2_post_ⲙ",
+          "ϣⲧⲉⲕⲟ_3_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲙⲛ_2_post_ϣⲟⲙⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϣⲟⲙⲧⲉ",
+          "ϣⲟⲙⲧⲉ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          "ⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲧⲟⲩⲉⲓⲏ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲥⲛⲧⲉ_0_node",
+          "ⲁⲩⲱ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_2_post_ⲡⲁϣⲉ",
+          "ⲧ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_post_ⲡⲁϣⲉ",
+          "ⲡⲁϣⲉ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲁϣⲉ_1_post_ⲥⲛⲧⲉ",
+          "ⲛ_2_post_ⲡⲁϣⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲡⲁϣⲉ",
+          "ⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          "ⲧ_2_post_ⲛ",
+          4
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲡⲉ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲧ_2_post_ⲛ",
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲧⲟⲟⲩ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲓⲕⲟⲩⲙⲉⲛⲏ_3_post_ⲧ",
+          "ⲉⲃⲟⲗ_1_post_ⲥⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲟⲗ_1_post_ⲥⲛⲧⲉ",
+          "ⲛ_2_post_ⲉⲃⲟⲗ",
+          1
+        ],
+        [
+          "ⲡⲉ_3_post_ⲧ",
+          "ⲡ_5_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲡ_5_post_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_4_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲛⲧⲉ",
+          "ⲥⲛⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲛⲧⲉ",
+          "ⲕⲛⲧⲏ_2_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.63,
+      "rank": 840,
+      "count": 100
+    },
+    "B": {
+      "rate": 0.04,
+      "rank": 4142,
+      "count": 3
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3612",
+      "label": "ϭⲓⲛⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C3608",
+      "label": "ⲁⲧⲥⲟⲛⲧ⸗",
+      "pos": "N",
+      "gloss": "uncreated"
+    },
+    {
+      "target": "C3610",
+      "label": "ⲟⲩⲁϩⲙⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "re-creation"
+    },
+    {
+      "target": "C3611",
+      "label": "ⲟⲩⲁϩⲙⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "first creation"
+    },
+    {
+      "target": "C3609",
+      "label": "ⲣⲉϥⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creator"
+    },
+    {
+      "target": "C3606",
+      "label": "ⲥⲱⲛⲧ",
+      "pos": "V",
+      "gloss": "be created; found, create"
+    },
+    {
+      "target": "C3607",
+      "label": "ⲥⲱⲛⲧ",
+      "pos": "N",
+      "gloss": "creature, creation; custom"
+    }
+  ],
+  "etym": {
+    "egy_num": "138580",
+    "egy_lemma": "snṯ.t",
+    "demo_num": "dm468",
+    "demo_lemma": "sntj.t",
+    "english": "foundation; plan (for a building)",
+    "german": "Grundmauerwerk; Bauplan",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/138580",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm468"
+  }
+}

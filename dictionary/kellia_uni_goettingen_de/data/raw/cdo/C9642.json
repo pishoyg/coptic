@@ -1,0 +1,142 @@
+{
+  "id": "C9642",
+  "forms": [
+    {
+      "id": "CF24678",
+      "orth": "ⲗⲓⲯⲁⲛⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF24680",
+      "orth": "ⲗⲓⲯⲁⲛⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11980,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF24679",
+      "orth": "ⲗⲉⲓⲯⲁⲛⲟⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF24681",
+      "orth": "ⲗⲩⲙⲫⲁⲛⲟⲛ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12345",
+      "bibliography": "DDGLC",
+      "cu_ID": "9155"
+    },
+    {
+      "id": "CS12346",
+      "bibliography": "DDGLC",
+      "cu_ID": "9906"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲟⲩⲛⲟϭ ⲙⲙⲏⲏϣⲉ · ⲉⲩⲛⲏⲩ ⲉⲡⲉϥ**ⲗⲓⲯⲁⲛⲟⲛ** ⲉⲧⲟⲩⲁⲁⲃ · ⲉⲩⲟⲩⲱϣⲧ ⲉϫⲱϥ · ⲁⲩⲱ ⲛⲉⲧϣⲱⲛⲉ ⲉⲩⲁⲙⲁⲧⲉ ⲙⲡⲧⲁⲗϭⲟ · ⲉⲩⲃⲏⲕ ⲉⲛⲉⲩⲏⲓ ·",
+      "english": "...",
+      "source": "Miracles of Mercurius (Budge ed.) - Part 2",
+      "urn": "urn:cts:copticLit:mercurius.martyrdom_miracles.budge_ed:32-46",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲏⲩ",
+        1,
+        10.56
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        9.594
+      ],
+      [
+        "ⲡⲉϥ",
+        1,
+        8.096
+      ],
+      [
+        "ⲉ",
+        2,
+        7.817
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲓⲯⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲗⲓⲯⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲯⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉϥ_1_pre_ⲗⲓⲯⲁⲛⲟⲛ",
+          "ⲗⲓⲯⲁⲛⲟⲛ_0_node",
+          1
+        ],
+        [
+          "ⲗⲓⲯⲁⲛⲟⲛ_0_node",
+          "ⲉⲧ_1_post_ⲗⲓⲯⲁⲛⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲗⲓⲯⲁⲛⲟⲛ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11554,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1281",
+    "grl_lemma": "λείψανον",
+    "grl_meaning": "piece left, remnant, remains of the dead",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1037a; Preisigke 2:13"
+  }
+}

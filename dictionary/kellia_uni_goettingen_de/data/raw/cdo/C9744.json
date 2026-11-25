@@ -1,0 +1,132 @@
+{
+  "id": "C9744",
+  "forms": [
+    {
+      "id": "CF25123",
+      "orth": "ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF25124",
+      "orth": "ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 13616,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12595",
+      "bibliography": "DDGLC",
+      "cu_ID": "3880"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ϥϫⲱ ⲟⲛ ⲙⲙⲟⲥ · ⲛϭⲓⲡ**ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ** ⲉⲧⲟⲩⲁⲁⲃ ⲇⲁⲩⲉⲓⲇ ϫⲉⲛⲁⲓⲁⲧⲟⲩ ⲛⲛⲉⲧⲟⲩⲁⲁⲃ ϩⲓⲧⲉϩⲓⲏ ⲙⲛⲛⲉⲧⲙⲟⲟϣⲉ ϩⲙⲡⲛⲟⲙⲟⲥ ⲙⲡϫⲟⲉⲓⲥ ·",
+      "english": "And the holy song-writer David saith, 'Blessed are they who are righteous in the way, and who walk in the law of the Lord'",
+      "source": "Discourse on Abbaton part 1",
+      "urn": "urn:cts:copticLit:pstimothy.abbaton.budge:1-21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲇⲁⲩⲉⲓⲇ",
+        1,
+        10.767
+      ],
+      [
+        "ⲟⲩⲁⲁⲃ",
+        1,
+        9.594
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲥ",
+        1,
+        6.274
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ϫⲉ",
+        1,
+        6.146
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲇⲁⲩⲉⲓⲇ_1_post_ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ_0_node",
+          "ⲉⲧ_1_post_ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲁⲃ_2_post_ⲉⲧ",
+          "ⲇⲁⲩⲉⲓⲇ_1_post_ⲙⲉⲗⲟⲅⲣⲁⲫⲟⲥ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13214,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "1379",
+    "grl_lemma": "μελογράφος",
+    "grl_meaning": "song-writer",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1099b"
+  }
+}

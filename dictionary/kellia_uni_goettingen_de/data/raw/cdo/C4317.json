@@ -1,0 +1,163 @@
+{
+  "id": "C4317",
+  "forms": [
+    {
+      "id": "CF10585",
+      "orth": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 12067,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4891",
+      "bibliography": "CD 413b"
+    }
+  ],
+  "examples": [],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲟⲟⲩ",
+        1,
+        11.074
+      ],
+      [
+        "ⲥⲟⲟⲩⲛ",
+        1,
+        9.951
+      ],
+      [
+        "ⲗⲁⲁⲩ",
+        1,
+        9.935
+      ],
+      [
+        "ⲛⲥⲁ",
+        1,
+        9.76
+      ],
+      [
+        "ⲧ",
+        1,
+        6.071
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ],
+      [
+        "ⲛ",
+        1,
+        3.809
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϭⲓⲛⲧⲁⲙⲓⲟ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ϭⲓⲛⲧⲁⲙⲓⲟ_0_node",
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ϭⲓⲛⲧⲁⲙⲓⲟ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲙⲟⲟⲩ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11641,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4316",
+      "label": "ϭⲓⲛⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "creation"
+    },
+    {
+      "target": "C4315",
+      "label": "ⲙⲛⲧⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "act of making, act of creating"
+    },
+    {
+      "target": "C4314",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲉ-",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4313",
+      "label": "ⲣⲉϥⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "maker, creator"
+    },
+    {
+      "target": "C4311",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "V",
+      "gloss": "make, create"
+    },
+    {
+      "target": "C4312",
+      "label": "ⲧⲁⲙⲓⲟ",
+      "pos": "N",
+      "gloss": "thing made, creation"
+    }
+  ]
+}

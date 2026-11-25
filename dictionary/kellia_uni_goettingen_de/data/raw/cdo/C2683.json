@@ -1,0 +1,75 @@
+{
+  "id": "C2683",
+  "forms": [
+    {
+      "id": "CF7172",
+      "orth": "ⲣⲉϥⲛⲁϩⲧⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3075",
+      "bibliography": "CD 246b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C2684",
+      "label": "ϣⲟⲩⲛⲁϩϯ",
+      "pos": "N",
+      "gloss": "worthy of belief, trustworthy"
+    },
+    {
+      "target": "C2680",
+      "label": "ⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unbelieving"
+    },
+    {
+      "target": "C2679",
+      "label": "ⲙⲉⲧⲛⲁϩϯ",
+      "pos": "N",
+      "gloss": "faith"
+    },
+    {
+      "target": "C2681",
+      "label": "ⲙⲛⲧⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "unbelief"
+    },
+    {
+      "target": "C2676",
+      "label": "ⲛⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "trust, believe"
+    },
+    {
+      "target": "C2677",
+      "label": "ⲛⲁϩⲧⲉ",
+      "pos": "VSTAT",
+      "gloss": "trustworthy, faithful"
+    },
+    {
+      "target": "C2678",
+      "label": "ⲛⲁϩⲧⲉ",
+      "pos": "N",
+      "gloss": "trust, faith"
+    },
+    {
+      "target": "C2682",
+      "label": "ⲣⲁⲧⲛⲁϩⲧⲉ",
+      "pos": "V",
+      "gloss": "be unbelieving, mistrustful"
+    }
+  ]
+}

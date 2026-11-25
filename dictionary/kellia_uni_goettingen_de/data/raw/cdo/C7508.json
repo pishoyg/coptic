@@ -1,0 +1,224 @@
+{
+  "id": "C7508",
+  "forms": [
+    {
+      "id": "CF17075",
+      "orth": "ϩⲓϫⲛ-",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 3.69,
+        "rank": 289,
+        "count": 582
+      }
+    },
+    {
+      "orth": "ϩⲓϫⲉⲛ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 14.1,
+        "rank": 93,
+        "count": 1196
+      }
+    },
+    {
+      "orth": "ϩⲓϫⲱ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 2.57,
+        "rank": 380,
+        "count": 218
+      }
+    },
+    {
+      "orth": "ϩⲓϫⲱ",
+      "dialect": "S",
+      "id": null,
+      "freq_form": {
+        "rate": 2.8,
+        "rank": 354,
+        "count": 442
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "PREP",
+    "tlapos": "Präp."
+  },
+  "senses": [
+    {
+      "id": "CS8320",
+      "bibliography": "CD 758b; CED 311; KoptHWb 443; ChLCS 105b"
+    },
+    {
+      "id": "CS8321",
+      "bibliography": "CD 758b; KoptHWb 443; ChLCS 105b"
+    },
+    {
+      "id": "CS8322",
+      "bibliography": "CD 758b-759a; KoptHWb 443; ChLCS 105b"
+    },
+    {
+      "id": "CS8323",
+      "bibliography": "CD 759a; KoptHWb 443"
+    },
+    {
+      "id": "CS8324",
+      "bibliography": "CD 759a; KoptHWb 443"
+    },
+    {
+      "id": "CS8325",
+      "bibliography": "CD 759a; KoptHWb 443"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲧⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲋ ϣⲱⲡⲓ ⲁ ⲟⲩⲭⲁⲕⲓ ϣⲱⲡⲓ **ϩⲓϫⲉⲛ**ⲡⲓⲕⲁϩⲓ ⲧⲏⲣϥ ϣⲁⲫⲛⲁⲩ ⲛⲁϫⲡⲑ .",
+      "english": "When the sixth hour",
+      "source": "Bohairic Gospel of Mark 15 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.mark.bohairic_ed:15",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲏ ⲁⲣⲁ ⲉⲓⲟⲩⲏϩ ⲟⲛ **ϩⲓϫⲛ**ⲧⲙⲏⲧⲉ ⲛϫⲱⲕ ,",
+      "english": "Do I still sit upon the middle of your head?",
+      "source": "Not Because a Fox Barks: XH 204-216",
+      "urn": "urn:cts:copticLit:shenoute.fox.monbxh_204_216",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲩⲉϭⲓⲫⲉⲓ ⲛϫⲉⲛⲉϥϩⲑⲱⲣ ⲉϩⲟⲧⲉ ⲛⲓⲡⲁⲣⲇⲁⲗⲓⲥ ⲥⲉⲁⲥⲓⲱⲟⲩ ⲉϩⲟⲧⲉ ⲛⲓⲟⲩⲱⲛϣ ⲛⲧⲉϯⲁⲣⲁⲃⲓⲁ ⲟⲩⲟϩ ⲉⲩⲉⲫⲱⲧ ⲛϫⲉⲛⲓϭⲁⲥⲓϩⲑⲟ **ϩⲓϫⲉⲛ**ⲛⲓϩⲑⲱⲣ ⲟⲩⲟϩ ⲉⲩⲉϯ ⲙⲡⲟⲩⲟⲩⲟⲓ ϩⲓⲫⲟⲩⲉⲓ ⲟⲩⲟϩ ⲉⲩⲉϩⲁⲗⲁⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩⲁϧⲱⲙ ⲉϥⲥⲉⲃⲧⲱⲧ ⲉⲟⲩⲱⲙ .",
+      "english": "And his horses shall bound more swiftly than leopards, and they are fiercer than the wolves of Arabia: and his horsemen shall ride forth, and shall rush from far; and they shall fly as an eagle hasting to eat.",
+      "source": "Bohairic Habakkuk 1 (Digital Edition)",
+      "urn": "urn:cts:copticLit:ot.hab.bohairic_ed:1",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲙⲉⲩⲉϣϫⲟⲟⲥ **ϩⲓϫⲙ**ⲡⲕⲁϩ ·",
+      "english": "the dwellers upon the earth cannot declare it",
+      "source": "Proclus Homily 23 On the Nativity in Budge ed.",
+      "urn": "urn:cts:copticLit:proclus.homily23.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲓⲱⲧ ⲇⲉ ⲉⲑⲟⲩⲁⲃ ⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲁϥϯ ⲙⲡⲉϥⲟⲩⲟⲓ ⲉⲡⲓⲱⲛⲓ ⲛⲥⲓⲕⲓ ⲁϥⲭⲱ ⲙⲡⲉϥⲃⲁⲓ **ϩⲓϫⲱ**ϥ ⲟⲩⲟϩ ⲡⲉϫⲁϥ ϫⲉⲁⲓϫⲉⲣⲟⲕ ⲱ ⲡⲓⲱⲛⲓ ⲛⲥⲓⲕⲓ ⲟϩⲓ ⲛⲁⲕ ϫⲉ .",
+      "english": "My holy father apa Shenoute then approached the millstone, placed his palm branch upon it, and declared, ‘Millstone, I command you—stop!’",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉⲙⲕⲁϩ ⲛⲓⲙ ⲉϥϩⲣⲁⲓ **ϩⲓϫⲱ**ⲓ ·",
+      "english": "to every pain which is down upon me.",
+      "source": "Acephalous 22: YA 517-518",
+      "urn": "urn:cts:copticLit:shenoute.a22.monbya:1451-1453",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7498",
+      "label": "ϣⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "headache"
+    },
+    {
+      "target": "C7506",
+      "label": "ϩⲁϫⲛ-",
+      "pos": "PREP",
+      "gloss": "before (local); before (temporal)"
+    },
+    {
+      "target": "C7512",
+      "label": "ϩⲓϫⲱⲟⲩ",
+      "pos": "N",
+      "gloss": "meaning obscure"
+    },
+    {
+      "target": "C7500",
+      "label": "ϫⲁϫⲃⲱⲛ",
+      "pos": "N",
+      "gloss": "wrongdoer"
+    },
+    {
+      "target": "C7497",
+      "label": "ϫⲱϫ",
+      "pos": "N",
+      "gloss": "head, capital; leader"
+    },
+    {
+      "target": "C7501",
+      "label": "ϫⲱϫ ⲛⲗⲁⲕϩ",
+      "pos": "N",
+      "gloss": "cornerstone"
+    },
+    {
+      "target": "C7499",
+      "label": "ⲁⲛϫⲱϫ",
+      "pos": "N",
+      "gloss": "leader, commander"
+    },
+    {
+      "target": "C7504",
+      "label": "ⲉϫⲛ-",
+      "pos": "PREP",
+      "gloss": "upon, over; for, on account of; against; to; in addition to, after"
+    },
+    {
+      "target": "C7510",
+      "label": "ⲉⲃⲟⲗ ϩⲓϫⲛ-",
+      "pos": "PREP",
+      "gloss": "from upon"
+    },
+    {
+      "target": "C7503",
+      "label": "ⲛⲥⲁϫⲱ⸗",
+      "pos": "ADV",
+      "gloss": "behind head, backward, head down"
+    },
+    {
+      "target": "C7509",
+      "label": "ⲡⲉⲧϩⲓϫⲛ-",
+      "pos": "N",
+      "gloss": "who is in command, commander"
+    },
+    {
+      "target": "C7507",
+      "label": "ⲣ ϩⲁϫⲱ⸗",
+      "pos": "V",
+      "gloss": "go toward"
+    },
+    {
+      "target": "C7511",
+      "label": "ⲣ ϩⲓϫⲛ-",
+      "pos": "V",
+      "gloss": "be over"
+    },
+    {
+      "target": "C7505",
+      "label": "ⲣ ⲉϫⲛ-",
+      "pos": "V",
+      "gloss": "be over(?)"
+    },
+    {
+      "target": "C7502",
+      "label": "ⲣϫⲱϫ",
+      "pos": "V",
+      "gloss": "head, lead, make head"
+    }
+  ],
+  "etym": {
+    "egy_num": "600345",
+    "egy_lemma": "ḥr-ḏꜣḏꜣ",
+    "demo_num": "d4203",
+    "demo_lemma": "ḥr-ḏꜣḏꜣ",
+    "english": "on",
+    "german": "auf",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/600345",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d4203"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "C7909",
+  "forms": [
+    {
+      "id": "CF32212",
+      "orth": "ⲁⲧϭⲣⲟϭ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF32211",
+      "orth": "ⲁⲧϭⲣⲟⲟϭ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS8789",
+      "bibliography": "CD 832a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C7912",
+      "label": "ϫⲓϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "become pregnant, conceive (child)"
+    },
+    {
+      "target": "C7907",
+      "label": "ϫⲣⲟϫ",
+      "pos": "N",
+      "gloss": "seed, semen (of a man)"
+    },
+    {
+      "target": "C7906",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "seed (of plants)"
+    },
+    {
+      "target": "C7908",
+      "label": "ϭⲣⲟϭ",
+      "pos": "N",
+      "gloss": "sown, fertilized"
+    },
+    {
+      "target": "C7911",
+      "label": "ϯϫⲣⲟϫ",
+      "pos": "V",
+      "gloss": "copulate"
+    },
+    {
+      "target": "C7910",
+      "label": "ⲉⲓⲣⲉ ⲛⲟⲩϭⲣⲟϭ",
+      "pos": "V",
+      "gloss": "produce seed, semen, sperm"
+    }
+  ]
+}

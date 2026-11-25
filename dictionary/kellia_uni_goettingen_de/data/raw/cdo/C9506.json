@@ -1,0 +1,148 @@
+{
+  "id": "C9506",
+  "forms": [
+    {
+      "id": "CF24174",
+      "orth": "ⲕⲟⲣⲓⲛⲑⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF24175",
+      "orth": "ⲕⲟⲣⲓⲛⲑⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6254,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12079",
+      "bibliography": "DDGLC",
+      "cu_ID": "9205"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ⲛⲁⲓ ⲛϭⲓⲡⲁⲥⲱⲧⲏⲣ ϫⲉⲡⲉⲓϣⲁϫⲉ ⲛⲧⲁⲡⲁⲩⲗⲟⲥ · ϫⲟⲟϥ ⲉϥⲥϩⲁⲓ ⲛⲛ**ⲕⲟⲣⲓⲛⲑⲓⲟⲥ** ·",
+      "english": "My savior said to me, ‘This word which Paul said, written to the Corinthians:",
+      "source": "Life of Apa Phib part 1",
+      "urn": "urn:cts:copticLit:lives.phib.paths_ed:0-10",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲁⲩⲗⲟⲥ ϩⲱⲱϥ ⲡⲗⲁⲥ ⲙⲡⲉⲥϯⲛⲟⲩϥⲉ ϫⲱ ⲙⲙⲟⲥ ϩⲛⲧⲉϥⲉⲡⲓⲥⲧⲟⲗⲏ ⲉϥⲥϩⲁⲓ ⲛⲛ**ⲕⲟⲣⲓⲛⲑⲓⲟⲥ** ϫⲉⲁⲓⲥϩⲁⲓ ⲛⲏⲧⲛ ϩⲛϯⲉⲡⲓⲥⲧⲟⲗⲏ · ϫⲉⲙⲡⲣⲧⲱϩⲙⲛⲡⲟⲣⲛⲟⲥ ⲁⲩⲱ ⲟⲛ ϫⲉⲡⲁⲓ ⲛϯⲙⲉⲓ ⲛⲉ · ⲉϣⲱⲡⲉ ⲟⲩⲡⲟⲣⲛⲟⲥ ⲡⲉ · ⲙⲡⲣⲟⲩⲱⲙ ⲛⲙⲙⲁϥ ·",
+      "english": "It was Paul himself, the sweet-smelling tongue who spake in the Epistle which he wrote unto the Corinthians saying, I have written to you in the Epistle: Hold no converse with whoremongers, and not even with thy familiar friend, if he be a whoremonger; have no friendship with him.",
+      "source": "Life of Pisentius part 2",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:32-58",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲧⲉⲛⲧⲁⲡⲣⲟ ⲟⲩⲏⲛ ⲉⲣⲱⲧⲛ ⲛ**ⲕⲟⲣⲓⲛⲑⲓⲟⲥ** . ⲡⲉⲛϩⲏⲧ ⲟⲩⲟϣⲥ .",
+      "english": "Our mouth is open to you, Corinthians. Our heart is enlarged.",
+      "source": "47_2 Corinthians_6",
+      "urn": "urn:cts:copticLit:nt.2cor.sahidica:6",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥϩⲁⲓ",
+        3,
+        14.945
+      ],
+      [
+        "ⲟⲩⲟϣⲥ",
+        1,
+        14.691
+      ],
+      [
+        "ⲟⲩⲏⲛ",
+        1,
+        13.969
+      ],
+      [
+        "ⲁⲡⲟⲗⲗⲱ",
+        1,
+        13.926
+      ],
+      [
+        "ⲉⲣⲱ",
+        1,
+        9.627
+      ],
+      [
+        "ⲛ",
+        5,
+        9.19
+      ],
+      [
+        "ⲡⲉⲛ",
+        1,
+        8.496
+      ],
+      [
+        "ϫⲉ",
+        2,
+        7.561
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        7.362
+      ],
+      [
+        "ⲉⲧⲃⲉ",
+        1,
+        7.195
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.579
+      ],
+      [
+        "ϥ",
+        2,
+        5.937
+      ],
+      [
+        "ⲓ",
+        1,
+        5.265
+      ],
+      [
+        ".",
+        1,
+        4.972
+      ],
+      [
+        "ⲁ",
+        1,
+        3.459
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.02,
+      "rank": 5814,
+      "count": 3
+    }
+  },
+  "etym": {
+    "grl_ID": "2526",
+    "grl_lemma": "Κορίνθιος",
+    "grl_meaning": "Corinthian",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 981a; Preisigke 1:826"
+  }
+}

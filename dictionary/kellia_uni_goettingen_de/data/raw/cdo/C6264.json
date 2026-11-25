@@ -1,0 +1,109 @@
+{
+  "id": "C6264",
+  "forms": [
+    {
+      "id": "CF14538",
+      "orth": "ϥⲓ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.41,
+        "rank": 1281,
+        "count": 64
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS6952",
+      "bibliography": "CD 621b-622a; ChLCS 85a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉϫⲁϥ ϫⲉ **ϥⲓ **ⲉⲃⲟⲗ**** ⲙⲙⲟⲓ ⲙⲡⲓⲙⲟⲩ .",
+      "english": "He said, “Take from me this death!”",
+      "source": "Apophthegmata Patrum Sahidic 016",
+      "urn": "urn:cts:copticLit:ap.16.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲡⲛⲟⲩⲧⲉ ⲇⲉ ⲛⲁⲩ ⲉⲧⲉϥϩⲩⲡⲟⲙⲟⲛⲏ **ⲁϥϥⲓ **ⲉⲃⲟⲗ**** ⲙⲙⲟϥ",
+      "english": "And when God saw his patience, he took it away (i.e. the temptation).",
+      "source": "Apophthegmata Patrum Sahidic 045",
+      "urn": "urn:cts:copticLit:ap.45.monbeg",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲁϥⲧⲱⲃⲁϩ ⲅⲁⲣ ⲙⲡϫⲟⲉⲓⲥ **ⲉⲧⲣⲉϥϥⲓ **ⲉⲃⲟⲗ**** ⲙⲙⲟϥ ⲛⲧⲙⲛⲧϭⲁⲃϩⲏⲧ .",
+      "english": "For he had entreated the Lord to take fear away from him.",
+      "source": "Apophthegmata Patrum Sahidic 035",
+      "urn": "urn:cts:copticLit:ap.35.monbeg",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.41,
+      "rank": 1101,
+      "count": 65
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C13017",
+      "label": "ϥⲁⲓ-",
+      "pos": "N",
+      "gloss": "carrier"
+    },
+    {
+      "target": "C6260",
+      "label": "ϥⲓ",
+      "pos": "V",
+      "gloss": "bear, carry, take"
+    },
+    {
+      "target": "C6263",
+      "label": "ϥⲓ ϩⲁ-",
+      "pos": "V",
+      "gloss": "support, tolerate; rise up/above"
+    },
+    {
+      "target": "C6265",
+      "label": "ϥⲓ ⲙⲙⲁⲩ",
+      "pos": "V",
+      "gloss": "be carried off, disappear"
+    },
+    {
+      "target": "C6262",
+      "label": "ϥⲓ ⲙⲛ",
+      "pos": "V",
+      "gloss": "agree with"
+    },
+    {
+      "target": "C6261",
+      "label": "ϥⲓⲧⲟⲟⲧ",
+      "pos": "V",
+      "gloss": "raise (hand), begin"
+    },
+    {
+      "target": "C6267",
+      "label": "ⲃⲁⲓⲥⲛⲁⲩ",
+      "pos": "N",
+      "gloss": "wine measure(?)"
+    },
+    {
+      "target": "C6266",
+      "label": "ⲙⲛⲧϥⲓ",
+      "pos": "N",
+      "gloss": "patience"
+    }
+  ]
+}

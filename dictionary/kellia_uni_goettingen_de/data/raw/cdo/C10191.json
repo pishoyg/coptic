@@ -1,0 +1,679 @@
+{
+  "id": "C10191",
+  "forms": [
+    {
+      "id": "CF26894",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF26895",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF26896",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.3,
+        "rank": 1545,
+        "count": 48
+      }
+    },
+    {
+      "id": "CF26897",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF26898",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF26899",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6494,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF26900",
+      "orth": "ⲡⲗⲁⲥⲙⲁ",
+      "dialect": "F"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS13537",
+      "bibliography": "DDGLC",
+      "cu_ID": "995"
+    },
+    {
+      "id": "CS13538",
+      "bibliography": "DDGLC",
+      "cu_ID": "1354"
+    },
+    {
+      "id": "CS13539",
+      "bibliography": "DDGLC",
+      "cu_ID": "9791"
+    },
+    {
+      "id": "CS13540",
+      "bibliography": "DDGLC",
+      "cu_ID": "1314"
+    },
+    {
+      "id": "CS13541",
+      "bibliography": "DDGLC",
+      "cu_ID": "9951"
+    },
+    {
+      "id": "CS13542",
+      "bibliography": "DDGLC",
+      "cu_ID": "6830"
+    },
+    {
+      "id": "CS13543",
+      "bibliography": "DDGLC",
+      "cu_ID": "6892"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲏ ⲁⲩⲛⲁⲉⲡ ⲑⲏⲛⲟⲩ ⲁⲛ ⲙⲫⲣⲏϯ ⲙⲡⲓⲟⲙⲓ ⲛⲧⲉⲡⲓⲕⲉⲣⲁⲙⲉⲩⲥ ⲙⲏ ϥⲛⲁϫⲟⲥ ⲛϫⲉⲡⲓ**ⲡⲗⲁⲥⲙⲁ** ⲙⲫⲏⲉⲧⲁϥⲉⲣⲡⲗⲁⲍⲓⲛ ⲙⲙⲟϥ ϫⲉⲛⲑⲟⲕ ⲁⲛ ⲁⲕⲉⲣⲡⲗⲁⲍⲓⲛ ⲙⲙⲟⲓ ⲓⲉ ⲡⲓⲙⲟⲩⲛⲕ ⲙⲫⲏⲉⲧⲁϥϫⲉ ⲙⲡⲉⲕⲙⲟⲛⲕⲧ ϧⲉⲛⲟⲩⲕⲁϯ .",
+      "english": "Shall ye not be counted as clay of the potter? Shall the thing formed say to him that formed it, Thou didst not form me? or the work to the maker, Thou hast not made me wisely?",
+      "source": "23_Isaias_29",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:29",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϫⲉⲛⲧⲟϥ ⲁϥⲉⲓⲙⲉ ⲉⲡⲉⲛ**ⲡⲗⲁⲥⲙⲁ** ⲁⲣⲓⲡⲙⲉⲉⲩⲉ ⲡϫⲟⲉⲓⲥ ϫⲉⲁⲛⲟⲛ ⲟⲩⲕⲁϩ",
+      "english": "For he knows our frame: remember that we are dust.",
+      "source": "Psalms 102",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:102",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲫⲁⲓ ⲡⲉ ⲡⲓϩⲟⲩⲓⲧ ⲙ**ⲡⲗⲁⲥⲙⲁ** ⲛⲧⲉⲡϭⲥ : ⲉⲁϥⲑⲁⲙⲓⲟϥ ⲉⲑⲣⲟⲩⲥⲱⲃⲓ ⲙⲙⲟϥ ⲛϫⲉⲛⲉϥⲁⲅⲅⲉⲗⲟⲥ .",
+      "english": "Yet one shall take him in his sight; one shall catch him with a cord, and pierce his nose.",
+      "source": "18_Iob_40",
+      "urn": "urn:cts:copticLit:ot.job.bohairic_ed:40",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲡϩⲁⲅⲓⲟⲥ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲡⲁⲣⲑⲉⲛⲟⲥ ⲟⲩⲱϣⲃ ⲉϥϫⲱ ⲙⲙⲟⲥ ϫⲉⲡⲁϫⲟⲉⲓⲥ ⲁⲩⲱ ⲡⲁⲛⲟⲩⲧⲉ ⲡⲛⲧⲁϥⲧⲃⲃⲟⲓ ⲛⲁϥ · ⲁϥⲕⲁ ⲛⲁⲙⲉⲉⲩⲉ ⲧⲏⲣⲟⲩ ⲉⲩⲧⲏϭ ⲉⲣⲟϥ · ⲡⲉⲛⲧⲁϥϩⲁⲣⲉϩ ⲉⲣⲟⲓ ⲉⲧⲙϫⲓⲥϩⲓⲙⲉ ϩⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲉⲕⲁⲛⲁⲥⲧⲁⲥⲓⲥ · ⲉⲕⲛⲁⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲙⲡⲉⲕ**ⲡⲗⲁⲥⲙⲁ** ⲧⲏⲣϥ ⲉⲡⲉⲓⲁ ⲛⲓⲱⲥⲁⲫⲁⲧ ⲛⲧⲉⲡⲟⲩⲁ ⲡⲟⲩⲁ ϫⲓ ⲡⲣⲟⲥⲛⲉⲛⲧⲁϥⲁⲁⲩ · ⲉⲓⲧⲉ ⲁⲅⲁⲑⲟⲛ ⲉⲓⲧⲉ ⲡⲉⲧϩⲟⲟⲩ ⲉⲣⲉⲁⲃⲃⲁⲧⲱⲛ ⲡⲁⲅⲅⲉⲗⲟⲥ ⲙⲡⲙⲟⲩ ⲛⲁⲉⲓ ⲟⲛ ϩⲙⲡⲉϩⲟⲟⲩ ⲉⲧⲙⲙⲁⲩ ⲉϥϣⲟⲟⲡ ϩⲛⲛⲓⲙⲟⲣⲫⲏ ⲛⲧⲉⲓⲙⲓⲛⲉ · ⲉϣⲱⲡⲉ ⲉϩⲉⲡⲁϫⲟⲉⲓⲥ ⲙⲛⲟⲩⲯⲩⲭⲏ ⲛⲟⲩⲱⲧ ⲛⲁⲁϩⲉⲣⲁⲧⲥ ϩⲙⲡⲉⲕⲃⲏⲙⲁ ⲉⲧϩⲁϩⲟⲧⲉ ·",
+      "english": "And Saint John, the virgin, answered and spake [unto Him], saying, 'My Lord and my God, Who hast sanctified me unto Thyself, Who hast made all my thoughts to cling unto Thee, Who didst guard me and didst not permit me to take unto myself a wife; when Thou shalt gather all Thy clay into the Vally of Jehosaphat, in order that each one may receive according to what he hath done, whether it be good or whether it be evil, if Abbaton, the Angel of Death, shall come on that day, being in forms of his own person,--if this be so, I say, my Lord, there is not one soul that shall be able to stand before Thy awful throne.",
+      "source": "Discourse on Abbaton, part 2",
+      "urn": "urn:cts:copticLit:timothy.discourses.on_abbaton:22-54",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉⲁⲡⲛⲟⲩⲧⲉ ⲕⲁⲧⲁⲝⲓⲟⲩ ⲙⲙⲟϥ · ⲁϥⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲡⲕⲟⲥⲙⲟⲥ · ⲁϥϣⲁϫⲉ ⲙⲛⲡⲉϥ**ⲡⲗⲁⲥⲙⲁ** ⲉⲧⲃⲉⲡⲧⲁϩⲟ ⲉⲣⲁⲧϥ · ⲙⲡⲟⲩϫⲁⲓ ⲛⲧⲉⲩⲯⲩⲭⲏ ⲡⲟⲥⲟ ⲙⲁⲗⲗⲟⲛ ⲛϥⲛⲁⲧⲛⲛⲟⲟⲩ ⲁⲛ · ⲛⲛⲉϥⲡⲉⲧⲟⲩⲁⲁⲃ ⲛϥⲥⲗⲥⲱⲗⲟⲩ ϩⲛⲛⲉⲩϩⲓⲥⲉ ·",
+      "english": "If God deemed him worthy thereof, and came down into the world, and spake unto the creature which He had fashioned concerning his restoration with salvation of soul, how very much more will He not send His saints to comfort (His servants) in their sufferings?",
+      "source": "Life of Pisentius part 1",
+      "urn": "urn:cts:copticLit:lives.pisentius.budge:1-31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲡⲗⲁⲍⲓⲛ",
+        1,
+        15.888
+      ],
+      [
+        "ⲙⲫⲏ",
+        1,
+        13.14
+      ],
+      [
+        "ⲉⲧⲁ",
+        1,
+        12.525
+      ],
+      [
+        "ϩⲟⲩⲓⲧ",
+        1,
+        12.203
+      ],
+      [
+        ":",
+        1,
+        9.116
+      ],
+      [
+        "ⲡϭⲥ",
+        1,
+        8.667
+      ],
+      [
+        "ϫⲟ",
+        1,
+        8.602
+      ],
+      [
+        "ⲡⲓ",
+        2,
+        7.771
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        6.238
+      ],
+      [
+        "ⲛϫⲉ",
+        1,
+        5.594
+      ],
+      [
+        "ⲥ",
+        1,
+        5.428
+      ],
+      [
+        "ⲛⲧⲉ",
+        1,
+        5.066
+      ],
+      [
+        "ⲙ",
+        1,
+        4.583
+      ],
+      [
+        "ⲉ",
+        1,
+        4.017
+      ],
+      [
+        "ϥ",
+        1,
+        3.424
+      ]
+    ],
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.013
+      ],
+      [
+        "ⲣⲉϥⲧⲟⲩϫⲟ",
+        1,
+        15.013
+      ],
+      [
+        "ⲙⲁⲓⲡⲉⲧⲛⲁⲛⲟⲩϥ",
+        1,
+        15.013
+      ],
+      [
+        "ϩⲟⲩⲧ",
+        1,
+        15.013
+      ],
+      [
+        "ⲡⲁ",
+        16,
+        14.791
+      ],
+      [
+        "ϫⲱϥ",
+        2,
+        14.313
+      ],
+      [
+        "ⲡⲉ",
+        22,
+        14.301
+      ],
+      [
+        "ⲧⲏⲡⲥ",
+        1,
+        14.013
+      ],
+      [
+        "ⲙⲛⲧⲣⲉϥⲙⲓϣⲉ",
+        1,
+        14.013
+      ],
+      [
+        "ⲡⲉϩⲟⲩⲉⲓⲧ",
+        1,
+        14.013
+      ],
+      [
+        "ⲁⲩⲱ",
+        23,
+        13.733
+      ],
+      [
+        "ⲡ",
+        27,
+        13.177
+      ],
+      [
+        "ⲙ",
+        22,
+        13.144
+      ],
+      [
+        "ⲙⲓⲭⲁⲏⲗ",
+        5,
+        12.918
+      ],
+      [
+        "ⲁⲛⲁϩⲱⲣ",
+        1,
+        12.691
+      ],
+      [
+        "ⲉ",
+        22,
+        12.61
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        9,
+        12.603
+      ],
+      [
+        "ⲟⲩⲱϣⲧ",
+        4,
+        12.554
+      ],
+      [
+        "ϥ",
+        21,
+        12.114
+      ],
+      [
+        "ⲕⲣⲁⲛⲓⲟⲛ",
+        1,
+        11.843
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡϭⲥ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲙⲫⲏ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲧⲉ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡϭⲥ_2_post_ⲛⲧⲉ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲙⲫⲏ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          47
+        ],
+        [
+          "ⲡⲁ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          16
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          6
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          5
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          6
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          5
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          5
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲧⲁⲙⲓⲟ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          3
+        ],
+        [
+          "ⲁⲇⲁⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          3
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲙⲓⲛⲙⲙⲟ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲓⲛⲙⲙⲟ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲁⲅⲁⲑⲟⲛ",
+          1
+        ],
+        [
+          "ⲁⲅⲁⲑⲟⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲧ_4_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲁ_6_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲁ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          5
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲁ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲧⲏⲣ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          4
+        ],
+        [
+          "ⲧⲏⲣ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ϥ_2_post_ⲧⲏⲣ",
+          4
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲛⲧ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁⲙⲓⲟ",
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲧⲁⲙⲓⲟ",
+          "ⲧⲁⲙⲓⲟ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲁⲇⲁⲙ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲱ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲉ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          2
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲙ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          3
+        ],
+        [
+          "ⲙ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲕⲁϩ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲙⲙⲓⲛⲙⲙⲟ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲙⲓⲛⲙⲙⲟ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ϥ_2_post_ⲙⲙⲓⲛⲙⲙⲟ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲓⲛⲙⲙⲟ",
+          "ⲡⲁⲓ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡⲁⲓ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲉⲛⲧ_2_post_ⲡⲁⲓ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          "ⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲧⲏⲣ",
+          "ⲉⲓⲧⲉ_2_post_ⲁⲅⲁⲑⲟⲛ",
+          1
+        ],
+        [
+          "ⲉⲓⲧⲉ_2_post_ⲁⲅⲁⲑⲟⲛ",
+          "ⲁⲅⲁⲑⲟⲛ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_3_post_ⲡ",
+          "ⲛⲧ_4_post_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ⲛⲧ_4_post_ϫⲟⲉⲓⲥ",
+          "ⲁ_6_post_ⲧⲁⲙⲓⲟ",
+          1
+        ],
+        [
+          "ⲡⲉⲛ_1_pre_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲡⲟⲩ_3_post_ϩⲏⲧ",
+          "ϩⲏⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡⲗⲁⲥⲙⲁ_0_node",
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          1
+        ],
+        [
+          "ⲱ_2_post_ⲙⲓⲭⲁⲏⲗ",
+          "ⲙⲓⲭⲁⲏⲗ_1_post_ⲡⲗⲁⲥⲙⲁ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.3,
+      "rank": 1339,
+      "count": 48
+    },
+    "B": {
+      "rate": 0.02,
+      "rank": 5975,
+      "count": 2
+    }
+  },
+  "etym": {
+    "grl_ID": "1755",
+    "grl_lemma": "πλάσμα",
+    "grl_meaning": "anything formed or modified, image, figure",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1412a; Preisigke 2:312"
+  }
+}

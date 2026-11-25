@@ -1,0 +1,70 @@
+{
+  "id": "C3908",
+  "forms": [
+    {
+      "id": "CF9747",
+      "orth": "ϯⲥⲁϣ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4435",
+      "bibliography": "CD 375a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C3909",
+      "label": "ϫⲓⲥⲁϣ",
+      "pos": "V",
+      "gloss": "receive wound, be wounded"
+    },
+    {
+      "target": "C3904",
+      "label": "ⲣⲉϥⲥⲉϣⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "parricide"
+    },
+    {
+      "target": "C3907",
+      "label": "ⲣⲥⲁϣ",
+      "pos": "V",
+      "gloss": "cover with wounds, sores"
+    },
+    {
+      "target": "C3905",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3906",
+      "label": "ⲥⲁϣ",
+      "pos": "N",
+      "gloss": "stroke, blow, sore"
+    },
+    {
+      "target": "C3903",
+      "label": "ⲥⲱϣ",
+      "pos": "V",
+      "gloss": "strike"
+    }
+  ]
+}

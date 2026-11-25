@@ -1,0 +1,89 @@
+{
+  "id": "C7630",
+  "forms": [
+    {
+      "id": "CF17322",
+      "orth": "ϭⲗⲁ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲕⲗⲁ",
+      "dialect": "S",
+      "id": "2526.1"
+    },
+    {
+      "orth": "ϭⲗⲟ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7730,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ϭⲗⲁ",
+      "dialect": "B",
+      "id": "2526.3"
+    },
+    {
+      "orth": "ϭⲗⲁϩ",
+      "dialect": "B",
+      "id": "2526.4"
+    },
+    {
+      "orth": "ϭⲗⲁ",
+      "dialect": "L",
+      "id": "2526.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8469",
+      "bibliography": "CD 810a; KoptHWb 448; DELC 337a; ChLCS 106b"
+    },
+    {
+      "id": "CS8470",
+      "bibliography": "KoptHWb 448; DELC 337a; ChLCS 106b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7632",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "sway, stagger"
+    },
+    {
+      "target": "C7633",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "push"
+    },
+    {
+      "target": "C7635",
+      "label": "ϩⲓϭⲗⲁ",
+      "pos": "N",
+      "gloss": "push"
+    },
+    {
+      "target": "C7634",
+      "label": "ϭⲓϭⲗⲁ",
+      "pos": "V",
+      "gloss": "throng, press upon"
+    },
+    {
+      "target": "C7631",
+      "label": "ϯϭⲗⲁ",
+      "pos": "V",
+      "gloss": "sway, stagger"
+    }
+  ]
+}

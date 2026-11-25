@@ -1,0 +1,509 @@
+{
+  "id": "C2621",
+  "forms": [
+    {
+      "id": "CF7043",
+      "orth": "ⲣⲛⲁϣⲧⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3785,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS3007",
+      "bibliography": "CD 238a; KoptHWb 132; DELC 148"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ϣⲁϥⲥⲉⲩϩⲃⲟⲏⲑⲓⲁ ⲉϩⲟⲩⲛ ⲛⲛⲇⲓⲕⲁⲓⲟⲥ ⲉϥ**ⲣⲛⲁϣⲧⲉ** ⲉⲛⲉⲩϩⲓⲟⲟⲩⲉ",
+      "english": "and he treasures up salvation for them that walk uprightly: he will protect their way;",
+      "source": "Proverbs 2",
+      "urn": "urn:cts:copticLit:ot.prov.coptot:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ⲥⲉⲛⲁϫⲓ ⲙⲡⲥⲁ ⲛⲧⲙⲛⲧⲣⲣⲟ ⲁⲩⲱ ⲟⲩϭⲣⲏⲡⲉ ⲉⲛⲉⲥⲱⲥ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ ⲙⲡϫⲟⲉⲓⲥ ϫⲉϥⲛⲁⲣϩⲁⲓⲃⲉⲥ ⲉⲣⲟⲟⲩ ϩⲛⲧⲉϥⲟⲩⲛⲁⲙ ⲛϥ**ⲣⲛⲁϣⲧⲉ** ⲛⲁⲩ ϩⲙⲡⲉϥϭⲃⲟⲓ",
+      "english": "He shall take to him his jealousy for complete armour, and make the creature his weapon for the revenge of his enemies.",
+      "source": "Wisdom 5",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:5",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲣⲉⲡϫⲟⲉⲓⲥ ⲥⲱⲧⲙ ⲉⲣⲟⲕ ϩⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲉⲕⲑⲗⲓⲯⲓⲥ ⲉϥⲉ**ⲣⲛⲁϣⲧⲉ** ⲉⲣⲟⲕ ⲛϭⲓⲡⲣⲁⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲛⲓⲁⲕⲱⲃ",
+      "english": "The Lord hear thee in the day of trouble; the name of the God of Jacob defend thee.",
+      "source": "Psalms 19",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:19",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        17.428
+      ],
+      [
+        "ⲛⲃⲗⲗⲁ",
+        1,
+        12.219
+      ],
+      [
+        "ⲁⲥⲥⲩⲣⲓⲟⲥ",
+        1,
+        11.199
+      ],
+      [
+        "ⲉ",
+        7,
+        10.069
+      ],
+      [
+        "ⲧⲉⲓ",
+        2,
+        9.974
+      ],
+      [
+        "ⲡⲟⲗⲓⲥ",
+        2,
+        9.96
+      ],
+      [
+        "ⲧⲉⲕ",
+        2,
+        9.7
+      ],
+      [
+        "ⲑⲗⲓⲯⲓⲥ",
+        1,
+        9.515
+      ],
+      [
+        "ⲟⲩⲛⲁⲙ",
+        1,
+        9.027
+      ],
+      [
+        "ϩⲓⲟⲟⲩⲉ",
+        1,
+        9.002
+      ],
+      [
+        "ϩⲓⲉⲣⲟⲩⲥⲁⲗⲏⲙ",
+        1,
+        8.576
+      ],
+      [
+        "ⲛⲁ",
+        4,
+        8.518
+      ],
+      [
+        "ϣ",
+        1,
+        8.491
+      ],
+      [
+        "ⲁⲡⲉ",
+        1,
+        8.411
+      ],
+      [
+        "ⲛ",
+        6,
+        8.394
+      ],
+      [
+        "ϥ",
+        5,
+        8.317
+      ],
+      [
+        "ⲇⲓⲕⲁⲓⲟⲥ",
+        1,
+        8.286
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        7.619
+      ],
+      [
+        "ϯ",
+        2,
+        7.346
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        7.332
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉϥⲉ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          9
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          5
+        ],
+        [
+          "ⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          3
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϩⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϩⲓⲟⲟⲩⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ϩⲛ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲧⲟϥ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          3
+        ],
+        [
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲅⲉⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲙ_4_post_ⲅⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ϩⲙ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉϥⲉ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          1
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          "ⲉⲣⲟ_1_post_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ⲉⲣⲟ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲕ_2_post_ⲉⲣⲟ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          "ⲛϭⲓ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛϭⲓ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲡ_2_post_ⲛϭⲓ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          5
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          "ⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲛⲉⲩ_3_post_ϩⲓⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϩⲓⲟⲟⲩⲉ",
+          "ϩⲓⲟⲟⲩⲉ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ϥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ⲕ_2_post_ⲉⲣⲟ",
+          "ϩⲛ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ϣ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ϣ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ϥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          "ⲇⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲛⲧⲟϥ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_pre_ϫⲟⲉⲓⲥ",
+          "ϫⲟⲉⲓⲥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓⲥ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ⲛⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲧ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ϯ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ⲛⲁ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          "ϯ_1_pre_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          "ⲛ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲧⲉⲓ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲡ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲉ",
+          "ⲅⲉⲛⲟⲥ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲅⲉⲛⲟⲥ_3_post_ⲡ",
+          "ⲙ_4_post_ⲅⲉⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲣⲛⲁϣⲧⲉ_0_node",
+          "ⲛⲁ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ⲣⲛⲁϣⲧⲉ",
+          "ⲩ_2_post_ⲛⲁ",
+          1
+        ],
+        [
+          "ⲩ_2_post_ⲛⲁ",
+          "ϩⲙ_1_post_ⲣⲛⲁϣⲧⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3410,
+      "count": 9
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C2615",
+      "label": "ϩⲛⲟⲩⲛϣⲟⲧ",
+      "pos": "ADV",
+      "gloss": "roughly, hardly"
+    },
+    {
+      "target": "C2618",
+      "label": "ϯⲛϣⲟⲧ",
+      "pos": "V",
+      "gloss": "make hard, encourage"
+    },
+    {
+      "target": "C2613",
+      "label": "ⲛϣⲟⲧ",
+      "pos": "V",
+      "gloss": "be hard, strong, difficult"
+    },
+    {
+      "target": "C2614",
+      "label": "ⲛϣⲟⲧ",
+      "pos": "N",
+      "gloss": "hardness, boldness"
+    },
+    {
+      "target": "C2617",
+      "label": "ⲛⲁϣⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "strong, hart of heart"
+    },
+    {
+      "target": "C2616",
+      "label": "ⲛⲁϣⲧϩⲣⲁ⸗",
+      "pos": "N",
+      "gloss": "\"hard of face\", impudent, stubborn"
+    },
+    {
+      "target": "C2619",
+      "label": "ⲛⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "strength; strengthener, protector"
+    },
+    {
+      "target": "C2620",
+      "label": "ⲛⲁϣⲧⲉ",
+      "pos": "N",
+      "gloss": "strength; strengthener, protector"
+    },
+    {
+      "target": "C2622",
+      "label": "ⲛⲉϣⲧⲉ",
+      "pos": "N",
+      "gloss": "hard, rough person"
+    },
+    {
+      "target": "C2611",
+      "label": "ⲛⲟⲩϣⲧ",
+      "pos": "V",
+      "gloss": "become heavy, hard; make hard, oppress, do violence"
+    },
+    {
+      "target": "C2612",
+      "label": "ⲛⲟⲩϣⲧ",
+      "pos": "N",
+      "gloss": "strength, violence"
+    }
+  ]
+}

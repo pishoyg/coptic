@@ -1,0 +1,132 @@
+{
+  "id": "C2460",
+  "forms": [
+    {
+      "id": "CF6702",
+      "orth": "ⲛⲕⲟⲧⲕ (ⲉ-)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocPrep": "ⲉ-",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS2834",
+      "bibliography": "CD 224a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲙⲛⲛⲥⲱⲥ **ⲁϥⲛⲕⲟⲧⲕ **ⲉ**ⲡⲕⲁϩ** ·",
+      "english": "and afterwards he laid himself upon the ground,",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲉϥϫⲉⲛⲁⲓ **ⲁϥⲛⲕⲟⲧⲕ **ⲉ**ⲣⲟⲩϩⲉ** ·",
+      "english": "And when he had said these things he lay down until the evening.",
+      "source": "Encomium on Victor part 2",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:32-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϩⲙⲡⲉⲇⲣⲩⲙⲟⲥ **ϥⲛⲁⲛⲕⲟⲧⲕ **ⲉ**ⲣⲟⲩϩⲉ** ϩⲛⲇⲁⲓⲇⲁⲛ",
+      "english": "Thou mayest lodge in the forest in the evening, or in the way of Daedan.",
+      "source": "Isaiah 21",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:21",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C2472",
+      "label": "ϭⲓⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "act of lying, sleeping"
+    },
+    {
+      "target": "C2469",
+      "label": "ⲁⲧⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleepless"
+    },
+    {
+      "target": "C2470",
+      "label": "ⲙⲁ ⲛⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "place of lying, couch; (sexual) cohabitation, intercourse; sleeping room"
+    },
+    {
+      "target": "C2458",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "V",
+      "gloss": "sleep; lie down; die"
+    },
+    {
+      "target": "C2459",
+      "label": "ⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "sleep; sexual intercourse; death"
+    },
+    {
+      "target": "C2465",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "lie below"
+    },
+    {
+      "target": "C2466",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲁϩⲧⲛ-)",
+      "pos": "V",
+      "gloss": "lie, stay by, with"
+    },
+    {
+      "target": "C2463",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲓ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2464",
+      "label": "ⲛⲕⲟⲧⲕ (ϩⲛ-)",
+      "pos": "V",
+      "gloss": "lie in, on"
+    },
+    {
+      "target": "C2461",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉϩⲣⲁⲓ ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2462",
+      "label": "ⲛⲕⲟⲧⲕ (ⲉⲃⲟⲗ ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "lie upon"
+    },
+    {
+      "target": "C2468",
+      "label": "ⲛⲕⲟⲧⲕ (ⲙⲛ-)",
+      "pos": "V",
+      "gloss": "lie with"
+    },
+    {
+      "target": "C2467",
+      "label": "ⲛⲕⲟⲧⲕ (ⲛ-)",
+      "pos": "V",
+      "gloss": "lie in"
+    },
+    {
+      "target": "C2471",
+      "label": "ⲣⲉϥⲛⲕⲟⲧⲕ",
+      "pos": "N",
+      "gloss": "one who lies"
+    }
+  ]
+}

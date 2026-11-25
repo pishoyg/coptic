@@ -1,0 +1,364 @@
+{
+  "id": "C11033",
+  "forms": [
+    {
+      "id": "CF30321",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲛ",
+      "dialect": null
+    },
+    {
+      "id": "CF30322",
+      "orth": "ⲯⲩⲭⲓⲕⲟⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3736,
+        "count": 9
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS15387",
+      "bibliography": "DDGLC",
+      "cu_ID": "15182"
+    },
+    {
+      "id": "CS15388",
+      "bibliography": "DDGLC",
+      "cu_ID": "2010"
+    },
+    {
+      "id": "CS15389",
+      "bibliography": "DDGLC",
+      "cu_ID": "7722"
+    },
+    {
+      "id": "CS15390",
+      "bibliography": "DDGLC",
+      "cu_ID": "3618"
+    },
+    {
+      "id": "CS15391",
+      "bibliography": "DDGLC",
+      "cu_ID": "11617"
+    },
+    {
+      "id": "CS15392",
+      "bibliography": "DDGLC",
+      "cu_ID": "9289"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲥⲉⲛⲁϫⲟϥ ⲛⲥⲱⲙⲁ ⲙⲯⲩⲭⲓⲕⲟⲛ ⲛϥⲧⲱⲟⲩⲛ ⲛⲥⲱⲙⲁ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ ⲉϣϫⲉⲟⲩⲛⲥⲱⲙⲁ ⲙ**ⲯⲩⲭⲓⲕⲟⲛ** ⲟⲩⲛⲥⲱⲙⲁ ⲟⲛ ⲙⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ .",
+      "english": "It is sown a natural body; it is raised a spiritual body. There is a natural body and there is also a spiritual body.",
+      "source": "1 Corinthians 15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:15",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲛϣⲱⲛⲉ ⲛⲥⲱⲙⲁⲧⲓⲕⲟⲛ ⲕⲑⲉⲣⲁⲡⲉⲩⲉ ⲙⲙⲟⲟⲩ · ϩⲓⲧⲛⲧⲉⲭⲁⲣⲓⲥ ⲛⲧⲁⲡⲛⲟⲩⲧⲉ ⲧⲁⲁⲥ ⲛⲁⲕ · ⲛϣⲱⲛⲉ ⲇⲉ ⲟⲛ ⲙ**ⲯⲩⲭⲓⲕⲟⲛ** ⲉⲧⲉⲛⲛⲟⲃⲉ ⲛⲉ · ⲕⲧⲃⲃⲟ ⲙⲙⲟⲟⲩ ϩⲓⲧⲛⲙⲙⲁⲉⲓⲛ ⲙⲛⲛⲉϣⲡⲏⲣⲉ ⲉⲧⲕⲟⲩⲱⲛϩ ⲙⲙⲟⲟⲩ ⲉⲃⲟⲗ ϩⲙⲡⲉⲕⲙⲁⲣⲧⲏⲣⲓⲟⲛ ϩⲙⲡⲉϥⲧⲟⲩⲥⲁ ⲙⲡⲕⲟⲥⲙⲟⲥ ·",
+      "english": "Although thou healest the diseases of the body by means of the grace which God hath given unto thee, yet thou dost also cleanse the diseases of the soul, which are sins, through the signs I and the miracles which thou dost make manifest in thy martyrium in the four quarters of the world.",
+      "source": "Encomium on Victor part 1",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:1-31",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲙⲡϣⲟⲣⲡ ⲁⲛ ⲡⲉ ⲡⲉⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ ⲁⲗⲗⲁ ⲡⲉ**ⲯⲩⲭⲓⲕⲟⲛ** . ⲙⲛⲛⲥⲱⲥ ⲡⲉⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ .",
+      "english": "However that which is spiritual isn&apos;t first, but that which is natural, then that which is spiritual.",
+      "source": "46_1 Corinthians_15",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica:15",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲡⲓⲡⲛⲁⲧⲓⲕⲟⲛ",
+        1,
+        17.11
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        6,
+        16.521
+      ],
+      [
+        "ⲙⲉⲛⲉⲛⲥⲱ",
+        2,
+        13.651
+      ],
+      [
+        "ⲟⲩⲟⲛ",
+        4,
+        12.215
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+        1,
+        12.156
+      ],
+      [
+        "ϣⲟⲣⲡ",
+        2,
+        11.477
+      ],
+      [
+        "ⲧⲱⲛ",
+        2,
+        11.335
+      ],
+      [
+        "ⲡⲓ",
+        5,
+        10.152
+      ],
+      [
+        "ⲓⲉ",
+        2,
+        10.121
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        9.925
+      ],
+      [
+        "ⲟⲩ",
+        6,
+        9.924
+      ],
+      [
+        "ϥ",
+        6,
+        9.594
+      ],
+      [
+        "ⲙ",
+        4,
+        8.998
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        6.369
+      ],
+      [
+        "ⲛ",
+        2,
+        5.006
+      ],
+      [
+        ".",
+        1,
+        3.031
+      ]
+    ],
+    "S": [
+      [
+        "ⲙⲛⲧⲣⲉϥϣⲟⲟⲣ",
+        1,
+        17.428
+      ],
+      [
+        "ⲕⲁⲍⲟⲫⲩⲗⲁⲕⲓⲟⲛ",
+        1,
+        15.428
+      ],
+      [
+        "ⲥⲱⲙⲁ",
+        6,
+        15.209
+      ],
+      [
+        "ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+        2,
+        14.002
+      ],
+      [
+        "ⲟⲩⲛ",
+        4,
+        13.039
+      ],
+      [
+        "ⲙ",
+        10,
+        12.147
+      ],
+      [
+        "ⲙⲛⲛⲥⲱ",
+        2,
+        12.129
+      ],
+      [
+        "ⲛ",
+        14,
+        12.061
+      ],
+      [
+        "ⲡⲉ",
+        6,
+        11.093
+      ],
+      [
+        "ⲟⲛ",
+        3,
+        10.812
+      ],
+      [
+        "ⲉϣϫⲉ",
+        2,
+        10.726
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        2,
+        10.102
+      ],
+      [
+        "ⲁⲗⲗⲁ",
+        2,
+        9.134
+      ],
+      [
+        "ϣⲱⲛⲉ",
+        1,
+        8.928
+      ],
+      [
+        "ϥ",
+        4,
+        7.352
+      ],
+      [
+        "ⲛⲟⲃⲉ",
+        1,
+        7.117
+      ],
+      [
+        ".",
+        2,
+        6.387
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        6.114
+      ],
+      [
+        "ⲥ",
+        2,
+        6.104
+      ],
+      [
+        "ⲕⲁϩ",
+        1,
+        5.757
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲯⲩⲭⲓⲕⲟⲛ_0_node",
+          6
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          2
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ⲯⲩⲭⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          1
+        ],
+        [
+          "ⲡⲓ_2_post_ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          "ⲡⲓ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲓ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          "ⲯⲩⲭⲓⲕⲟⲛ_0_node",
+          2
+        ],
+        [
+          "ⲯⲩⲭⲓⲕⲟⲛ_0_node",
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ⲯⲩⲭⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲙⲉⲛⲉⲛⲥⲱ_1_post_ⲯⲩⲭⲓⲕⲟⲛ",
+          "ϥ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲉⲛⲉⲛⲥⲱ",
+          "ⲡⲓ_2_post_ⲡⲛⲉⲩⲙⲁⲧⲓⲕⲟⲛ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲯⲩⲭⲓⲕⲟⲛ_0_node",
+          8
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          2
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          "ⲡⲉ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲯⲩⲭⲓⲕⲟⲛ",
+          "ⲯⲩⲭⲓⲕⲟⲛ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.06,
+      "rank": 3360,
+      "count": 9
+    }
+  },
+  "etym": {
+    "grl_ID": "2665",
+    "grl_lemma": "ψυχικός",
+    "grl_meaning": "of the soul or life, spiritual, animate",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 2027b"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "id": "C8079",
+  "forms": [
+    {
+      "id": "CF18344",
+      "orth": "ⲁⲅⲣⲓⲟⲥ",
+      "dialect": null
+    },
+    {
+      "id": "CF18345",
+      "orth": "ⲁⲅⲣⲓⲟⲥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5284,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF18346",
+      "orth": "ⲁⲅⲣⲓⲟⲥ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF18347",
+      "orth": "ⲁⲅⲣⲓⲟⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS9038",
+      "bibliography": "DDGLC",
+      "cu_ID": "2372"
+    },
+    {
+      "id": "CS9039",
+      "bibliography": "DDGLC",
+      "cu_ID": "7831"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲧⲛⲟ ⲛ**ⲁⲅⲣⲓⲟⲥ** ⲉϩⲟⲩⲛ ⲉⲛⲉⲛⲉⲣⲏⲩ ·",
+      "english": "And we all act savagely towards each other.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲉⲛⲧⲁϥⲧⲣⲉⲧⲉⲛⲯⲩⲭⲏ ⲣϩⲩⲙⲉⲣⲟⲥ · ⲉⲁϥⲧⲣⲉⲥϩⲣⲟⲕ · ⲉⲥⲟ ⲛϫⲁⲉⲓⲉ · ⲁⲩⲱ ⲛ**ⲁⲅⲣⲓⲟⲥ** ·",
+      "english": "Who didst make our soul to have longings, and dost make it to be tranquil, or solitary and savage.",
+      "source": "Dormition of John MERC.AD in Budge ed.",
+      "urn": "urn:cts:copticLit:misc.dormition_john.budge",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲛⲁⲩⲕⲗⲏⲣⲟⲥ ⲇⲉ ⲙⲡϫⲟⲉⲓ ⲛⲉ ⲟⲩⲃⲁⲣⲃⲁⲣⲟⲥ ⲡⲉ ⲛ**ⲁⲅⲣⲓⲟⲥ** ⁛—",
+      "english": "And the captain of the ship was a savage and brutal man.",
+      "source": "History of Eustathius and Theopiste part 1",
+      "urn": "urn:cts:copticLit:lives.eustathius.budge:1-30",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲁⲉⲓⲉ",
+        2,
+        20.598
+      ],
+      [
+        "ⲃⲁⲣⲃⲁⲣⲟⲥ",
+        1,
+        12.667
+      ],
+      [
+        "ⲁⲗⲉ",
+        1,
+        11.632
+      ],
+      [
+        "⁛—",
+        1,
+        10.753
+      ],
+      [
+        "ⲉⲛⲧ",
+        2,
+        9.193
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        9.08
+      ],
+      [
+        "ⲛⲧⲉⲣ",
+        1,
+        8.835
+      ],
+      [
+        "ⲛⲉⲛ",
+        1,
+        8.573
+      ],
+      [
+        "ⲁⲩⲱ",
+        3,
+        8.502
+      ],
+      [
+        "ⲛ",
+        4,
+        7.809
+      ],
+      [
+        "ⲟ",
+        1,
+        7.805
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.678
+      ],
+      [
+        "ⲟⲩ",
+        2,
+        6.22
+      ],
+      [
+        "ⲧⲛ",
+        1,
+        6.164
+      ],
+      [
+        "ⲁ",
+        2,
+        6.044
+      ],
+      [
+        "ⲡ",
+        2,
+        5.497
+      ],
+      [
+        "ⲡⲉ",
+        1,
+        4.508
+      ],
+      [
+        "ⲉ",
+        1,
+        2.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲅⲣⲓⲟⲥ",
+          1
+        ],
+        [
+          "ⲁⲅⲣⲓⲟⲥ_0_node",
+          3
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲅⲣⲓⲟⲥ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲅⲣⲓⲟⲥ",
+          "ⲁⲅⲣⲓⲟⲥ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲅⲣⲓⲟⲥ",
+          "ⲁⲅⲣⲓⲟⲥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4864,
+      "count": 4
+    }
+  },
+  "etym": {
+    "grl_ID": "28",
+    "grl_lemma": "ἄγριος",
+    "grl_meaning": "belonging to the field, wild",
+    "grl_pos": "adjective",
+    "grl_ref": "LSJ 15a; Preisigke 1:12"
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "id": "C3587",
+  "forms": [
+    {
+      "id": "CF9079",
+      "orth": "ⲥⲱⲛⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.08,
+        "rank": 684,
+        "count": 170
+      }
+    },
+    {
+      "orth": "ⲥⲱⲛⲓ",
+      "dialect": "B",
+      "id": null,
+      "freq_form": {
+        "rate": 1.18,
+        "rank": 663,
+        "count": 100
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS4085",
+      "bibliography": "CD 343a; CED 154; KoptHWb 188; DELC 190; ChLCS 48b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲁⲗⲓⲛ ϫⲉⲫⲏ ⲉⲧⲁϥⲭⲁⲓⲱⲧ ⲛⲥⲱϥ ⲓⲉ ⲙⲁⲩ ⲓⲉ ⲥϩⲓⲙⲓ ⲓⲉ **ⲥⲱⲛⲓ** ⲓⲉ ⲥⲟⲛ ⲓⲉ ⲏⲓ ⲓⲉ ⲟϩⲓ ⲓⲉ ϣⲏⲣⲓ ⲉⲑⲃⲉⲧⲙⲉⲧⲟⲩⲣⲟ ⲛⲧⲉⲫⲛⲟⲩϯ ϥⲛⲁϭⲓⲧⲟⲩ ⲛⲣ ⲛⲕⲱⲡ ⲛⲥⲟⲡ ϧⲉⲛⲡⲁⲓⲉⲛⲉϩ ⲟⲩⲟϩ ϧⲉⲛⲡⲉⲑⲛⲏⲟⲩ ⲟⲩⲱⲛϧ ⲛⲉⲛⲉϩ .",
+      "english": "and also: ‘He who leaves his father, or his mother, or his wife, or his sister, or his brother, or his house, or his flock, or his children for the kingdom of God, shall receive them a hundredfold in this world, and eternal life in the world to come’;",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲉⲧⲛⲁⲉⲓⲣⲉ ⲅⲁⲣ ⲙⲡⲟⲩⲱϣ ⲙⲡⲛⲟⲩⲧⲉ . ⲡⲁⲓⲡⲉ ⲡⲁⲥⲟⲛ ⲁⲩⲱ ⲧⲁ**ⲥⲱⲛⲉ** ⲁⲩⲱ ⲧⲁⲙⲁⲁⲩ .",
+      "english": "For whoever does the will of God, the same is my brother, and my sister, and mother.'",
+      "source": "41_Mark_3",
+      "urn": "urn:cts:copticLit:nt.mark.sahidica:3",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲡⲉⲓⲇⲏ ⲅⲁⲣ ⲧⲙⲁⲩ ⲛⲁⲡⲁ ϣⲉⲛⲟⲩϯ ⲧ**ⲥⲱⲛⲓ** ⲛⲁⲡⲁ ⲡϫⲱⲗ ⲧⲉ ⲛϣⲉ ⲛⲓⲱⲧ ϩⲓⲙⲁⲩ ⲟⲩⲟϩ ⲁϥⲭⲁϥ ϧⲁⲧⲟⲧϥ .",
+      "english": "For the mother of Apa Shenoute was the sister of Apa Pjol, children of (the same) father and mother, and he left him with him.",
+      "source": "Life of Shenoute - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_shenoute.leipoldt_ed:1-26",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲡⲉϫⲁⲓ ⲛⲁⲥ ϫⲉⲉⲣϣⲁⲛⲥⲱⲧⲙ ⲛⲥⲱⲓ ⲧⲁ**ⲥⲱⲛⲉ** · ⲧⲛⲛⲁϣⲱⲡⲉ ϩⲙⲡⲙⲁ ⲉⲧⲉⲙⲉⲩⲡⲟⲣϫⲛ ⲉⲛⲉⲛⲉⲣⲏⲩ ⲛϩⲏⲧϥ ϣⲁⲉⲛⲉϩ ·",
+      "english": "And I said unto her, ‘If thou wilt hearken unto me, O my sister, we shall live in a world where they shall never separate us, the one from the other.",
+      "source": "Encomium on Demetrius Archbishop of Alexandria part 1",
+      "urn": "urn:cts:copticLit:psflavianus.encomium.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲓⲥϫⲉ ⲡⲓⲁⲑⲛⲁϩϯ ⲛⲁⲫⲱⲣϫ ⲙⲁⲣⲉϥⲫⲱⲣϫ ⲛϥⲟⲓ ⲙⲃⲱⲕ ⲁⲛ ⲛϫⲉⲡⲓⲥⲟⲛ ⲓⲉ ϯ**ⲥⲱⲛⲓ** ϧⲉⲛⲛⲁⲓ ⲙⲡⲁⲓⲣⲏϯ ⲫⲛⲟⲩϯ ⲁϥⲑⲁϩⲉⲙⲑⲏⲛⲟⲩ ϧⲉⲛⲟⲩϩⲓⲣⲏⲛⲏ .",
+      "english": "Yet if the unbeliever departs, let there be separation. The brother or the sister is not under bondage in such cases, but God has called us in peace.",
+      "source": "Bohairic 1 Corinthians 7 (Digital Edition)",
+      "urn": "urn:cts:copticLit:nt.1cor.bohairic_ed:7",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ⲡⲁⲡⲓⲥⲧⲟⲥ ⲇⲉ ⲛⲁⲡⲱⲣϫ ⲙⲁⲣⲉϥⲡⲱⲣϫ ⲉⲛϥⲟ ⲁⲛ ⲛϩⲙϩⲁⲗ ⲛϭⲓⲡⲥⲟⲛ ⲏ ⲧ**ⲥⲱⲛⲉ** ϩⲛⲛⲉⲓϩⲱⲃ ⲛⲧⲉⲓⲙⲓⲛⲉ ⲛⲧⲁⲡϫⲟⲉⲓⲥ ⲅⲁⲣ ⲧⲁϩⲙⲛ ϩⲛⲟⲩⲉⲓⲣⲏⲛⲏ .",
+      "english": "Yet if the unbeliever departs, let there be separation. The brother or the sister is not under bondage in such cases, but God has called us in peace.",
+      "source": "1 Corinthians 7",
+      "urn": "urn:cts:copticLit:nt.1cor.sahidica_ed:7",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁ",
+        56,
+        18.963
+      ],
+      [
+        "ⲙⲁⲁⲩ",
+        23,
+        17.754
+      ],
+      [
+        "ϣⲛⲉⲓⲱⲧ",
+        4,
+        16.867
+      ],
+      [
+        "ⲧⲉⲥ",
+        19,
+        16.864
+      ],
+      [
+        "ⲛ",
+        105,
+        16.542
+      ],
+      [
+        "ⲥ",
+        56,
+        16.287
+      ],
+      [
+        "ⲥⲟⲛ",
+        18,
+        15.833
+      ],
+      [
+        "ⲏ",
+        24,
+        15.825
+      ],
+      [
+        "ⲙⲁⲣⲓⲁ",
+        12,
+        15.672
+      ],
+      [
+        "ⲧⲉϥ",
+        26,
+        15.656
+      ],
+      [
+        "ⲉ",
+        67,
+        15.606
+      ],
+      [
+        "ⲧ",
+        48,
+        15.416
+      ],
+      [
+        "ⲧⲉ",
+        31,
+        15.256
+      ],
+      [
+        "ⲛⲙ",
+        12,
+        15.243
+      ],
+      [
+        "ⲙⲁⲣⲉⲑⲁⲙⲁⲣ",
+        2,
+        15.189
+      ],
+      [
+        "ⲑⲁⲙⲁⲣ",
+        4,
+        15.019
+      ],
+      [
+        "ⲁⲥⲭⲏⲙⲟⲥⲩⲛⲏ",
+        5,
+        14.832
+      ],
+      [
+        "ⲇⲉ",
+        31,
+        14.439
+      ],
+      [
+        "ⲉⲓⲱⲧ",
+        16,
+        14.216
+      ],
+      [
+        "ⲧⲟⲩ",
+        9,
+        14.117
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁ_1_pre_ⲥⲱⲛⲉ",
+          41
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          98
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲥⲱⲛⲉ",
+          10
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲱⲛⲉ",
+          11
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲥⲱⲛⲉ",
+          6
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲥⲱⲛⲉ",
+          4
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲱⲛⲉ",
+          5
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲱⲛⲉ",
+          7
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲱⲛⲉ",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲉⲓⲱⲧ",
+          2
+        ],
+        [
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲛⲉ",
+          3
+        ],
+        [
+          "ϣⲛⲉⲓⲱⲧ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ⲏ_4_post_ϣⲛⲙⲁⲁⲩ",
+          2
+        ],
+        [
+          "ⲛ_4_post_ϣⲛⲙⲁⲁⲩ",
+          2
+        ],
+        [
+          "ⲧⲁ_2_post_ϣⲉⲗⲉⲉⲧ",
+          2
+        ],
+        [
+          "ϣⲉⲗⲉⲉⲧ_1_post_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲛⲧ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲧⲁϩⲟ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲙⲁⲣⲓⲁ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲱⲛⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          5
+        ],
+        [
+          "ⲧⲉⲥ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          4
+        ],
+        [
+          "ⲛⲉϥ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲥⲱⲛⲉ",
+          "ⲛⲉϥ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲱⲛⲉ",
+          "ⲧⲁ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲙ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲥⲱⲛⲉ",
+          "ⲡⲉⲕ_3_post_ⲉⲓⲱⲧ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲉⲓⲱⲧ",
+          "ⲉⲓⲱⲧ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲛ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲱⲛⲉ",
+          "ϣⲛⲉⲓⲱⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϣⲛⲉⲓⲱⲧ_2_post_ⲛ",
+          "ⲏ_4_post_ϣⲛⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲏ_4_post_ϣⲛⲙⲁⲁⲩ",
+          "ⲛ_4_post_ϣⲛⲙⲁⲁⲩ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲧⲁ_2_post_ϣⲉⲗⲉⲉⲧ",
+          1
+        ],
+        [
+          "ⲧⲁ_2_post_ϣⲉⲗⲉⲉⲧ",
+          "ϣⲉⲗⲉⲉⲧ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲥⲱⲛⲉ",
+          "ⲥⲱⲛⲉ_0_node",
+          1
+        ],
+        [
+          "ⲏ_1_pre_ⲥⲱⲛⲉ",
+          "ⲧ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲛⲧ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲛⲧ_1_post_ⲥⲱⲛⲉ",
+          "ⲁ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲁ_3_post_ⲧⲁϩⲟ",
+          "ⲧⲉⲧⲛ_3_post_ⲧⲁϩⲟ",
+          1
+        ],
+        [
+          "ⲧⲉⲧⲛ_3_post_ⲧⲁϩⲟ",
+          "ⲧⲁϩⲟ_2_post_ⲛⲧ",
+          1
+        ],
+        [
+          "ⲱ_1_pre_ⲥⲱⲛⲉ",
+          "ⲧⲁ_1_pre_ⲥⲱⲛⲉ",
+          2
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲙⲁⲣⲓⲁ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲧ_2_pre_ⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ",
+          "ⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲙⲟⲛⲁⲭⲟⲥ_1_pre_ⲥⲱⲛⲉ",
+          "ⲧ_1_pre_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲥⲱⲛⲉ_0_node",
+          "ⲇⲉ_1_post_ⲥⲱⲛⲉ",
+          1
+        ],
+        [
+          "ⲇⲉ_1_post_ⲥⲱⲛⲉ",
+          "ⲛ_1_post_ⲥⲱⲛⲉ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 1.07,
+      "rank": 593,
+      "count": 170
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3586",
+      "label": "ϣⲛⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "nephew"
+    },
+    {
+      "target": "C3590",
+      "label": "ⲙⲛⲧⲙⲁⲓⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherly love"
+    },
+    {
+      "target": "C3589",
+      "label": "ⲙⲛⲧⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brotherhood, brotherliness"
+    },
+    {
+      "target": "C3583",
+      "label": "ⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brother"
+    },
+    {
+      "target": "C3584",
+      "label": "ⲥⲟⲛ",
+      "pos": "N",
+      "gloss": "brother (monk)"
+    },
+    {
+      "target": "C3585",
+      "label": "ⲥⲟⲛ ⲛⲉⲓⲱⲧ",
+      "pos": "N",
+      "gloss": "uncle"
+    },
+    {
+      "target": "C3588",
+      "label": "ⲥⲱⲛⲉ",
+      "pos": "N",
+      "gloss": "sister (nun)"
+    }
+  ],
+  "etym": {
+    "egy_num": "136260",
+    "egy_lemma": "sn.t",
+    "demo_num": "d5330",
+    "demo_lemma": "sn(.t)",
+    "english": "sister; beloved",
+    "german": "Schwester; Geliebte",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/136260",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d5330"
+  }
+}

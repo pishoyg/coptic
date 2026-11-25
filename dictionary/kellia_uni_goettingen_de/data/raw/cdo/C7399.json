@@ -1,0 +1,107 @@
+{
+  "id": "C7399",
+  "forms": [
+    {
+      "id": "CF16857",
+      "orth": "ϫⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 14044,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "VSTAT",
+    "subc": "Qualitativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8185",
+      "bibliography": "CD 790b; KoptHWb 436; ChLCS 104b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲟⲩⲱⲙⲕ ⲛϭⲓⲡⲥⲁϣϥ ⲛϩⲏⲙⲥ ⲉⲧϩⲟⲟⲙⲉ ⲁⲩⲱ ⲉⲧⲟ ⲛϫⲛⲧⲏⲩ ⲙⲡⲥⲁϣϥ ⲛϩⲙⲥ ⲉⲧⲛⲁⲛⲟⲩⲟⲩ ⲁⲩⲱ ⲉⲧ**ϫⲏⲧ** ⲁϥⲧⲱⲟⲩⲛ ⲛϭⲓⲫⲁⲣⲁⲱ ⲁⲩⲱ ⲛⲉⲩⲣⲁⲥⲟⲩ ⲧⲉ",
+      "english": "And the seven thin ears and blasted with the wind devoured the seven choice and full ears; and Pharao awoke, and it was a dream.",
+      "source": "Genesis 41",
+      "urn": "urn:cts:copticLit:ot.gen.coptot:41",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲁⲛⲟⲩ",
+        1,
+        10.976
+      ],
+      [
+        "ⲧⲱⲟⲩⲛ",
+        1,
+        10.272
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲁⲩⲱ",
+        1,
+        5.747
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        5.22
+      ],
+      [
+        "ⲁ",
+        1,
+        5.044
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲏⲧ",
+          1
+        ],
+        [
+          "ϫⲏⲧ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ϫⲏⲧ",
+          "ϫⲏⲧ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 13641,
+      "count": 1
+    }
+  }
+}

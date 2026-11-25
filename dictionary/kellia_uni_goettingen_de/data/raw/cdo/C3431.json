@@ -1,0 +1,283 @@
+{
+  "id": "C3431",
+  "forms": [
+    {
+      "id": "CF8761",
+      "orth": "ⲥⲕⲓⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4578,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥϭⲓⲙ",
+      "dialect": "S",
+      "id": "1389.1"
+    },
+    {
+      "orth": "ⲥⲭⲓⲙ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3092,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲥⲕⲓⲙ",
+      "dialect": "A",
+      "id": "1389.3"
+    },
+    {
+      "orth": "ⲥⲕⲓⲙ",
+      "dialect": "F",
+      "id": "1389.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3909",
+      "bibliography": "CD 328b-329a; CED 150; KoptHWb 182; DELC 187; ChLCS 47a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲗⲗⲁ ⲧⲙⲛⲧⲣⲙⲛϩⲏⲧ ⲡⲉ ⲡⲉ**ⲥⲕⲓⲙ** ⲛⲛⲣⲱⲙⲉ ⲁⲩⲱ ⲧⲙⲛⲧϩⲗⲗⲟ ⲡⲉ ⲟⲩⲁϩⲉ ⲛⲁⲧⲛⲟⲃⲉ",
+      "english": "But wisdom is the gray hair unto men, and an unspotted life is old age.",
+      "source": "Wisdom 4",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:4",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣⲁⲣⲉⲡϩⲁⲙϣⲉ ⲅⲁⲣ ⲥⲗⲡⲟⲩϣⲉ ⲉⲙⲉϥⲣϫⲟⲟⲗⲉⲥ ⲁⲩⲱ ϣⲁϥϣⲓⲛⲉ ⲛⲥⲁⲧⲁϩⲟϥ ⲉⲣⲁⲧϥ ϩⲛⲟⲩⲙⲛⲧⲣⲙⲛⲧϩⲏⲧ ⲟⲩϩⲓⲕⲱⲛ ⲁⲩⲱ ϫⲉⲕⲁⲥ ⲛⲛⲉ**ⲥⲕⲓⲙ**",
+      "english": "For the artificer chooses out a wood that will not rot, and will wisely enquire how he shall set up his image, and that so that it should not be moved.",
+      "source": "Isaiah 40",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:40",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲓ ⲛⲉ ⲛⲟⲩⲱⲛⲉ ⲛⲛⲟⲩⲧⲉ ⲛⲧⲉⲛⲟⲩⲧⲉ ⲛϩⲉⲛⲛⲟⲉⲓⲧ ϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛⲧⲟⲩϭⲟⲟⲗⲉⲥ ϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛⲛⲟⲩ**ⲥⲕⲓⲙ** ϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛⲛⲥⲏⲃⲉ ⲛⲣⲁⲧⲉ ϫⲓⲟⲟⲣ ⲛϩⲉⲛⲓⲉⲣⲟ",
+      "english": "Take a millstone, grind meal: remove thy veil, uncover thy white hairs, make bare the leg, pass through the rivers.",
+      "source": "Isaiah 47",
+      "urn": "urn:cts:copticLit:ot.isa.coptot:47",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϭⲱⲗⲡ",
+        2,
+        13.451
+      ],
+      [
+        "ϭⲱⲃⲉ",
+        1,
+        13.106
+      ],
+      [
+        "ⲛ",
+        12,
+        11.979
+      ],
+      [
+        "ϩⲓϩⲟⲩⲛ",
+        1,
+        11.884
+      ],
+      [
+        "ⲙⲛⲧⲣⲙⲛϩⲏⲧ",
+        1,
+        11.299
+      ],
+      [
+        "ϩⲗⲗⲟ",
+        1,
+        9.718
+      ],
+      [
+        "ⲟⲩ",
+        5,
+        9.601
+      ],
+      [
+        "ϩⲣⲟⲟⲩ",
+        1,
+        9.458
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        9.079
+      ],
+      [
+        "ϫⲉⲕⲁⲥ",
+        1,
+        8.541
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        8.451
+      ],
+      [
+        "ⲉⲓⲙⲉ",
+        1,
+        7.856
+      ],
+      [
+        "ⲛⲉ",
+        2,
+        7.728
+      ],
+      [
+        "ⲛⲥⲱ",
+        1,
+        7.541
+      ],
+      [
+        "ⲯⲩⲭⲏ",
+        1,
+        7.384
+      ],
+      [
+        "ϭⲟⲙ",
+        1,
+        7.254
+      ],
+      [
+        "ⲉ",
+        3,
+        6.987
+      ],
+      [
+        "ⲡⲉ",
+        2,
+        6.923
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        2,
+        6.88
+      ],
+      [
+        "ϩⲏⲧ",
+        1,
+        6.362
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲥⲕⲓⲙ_0_node",
+          5
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲥⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲥⲕⲓⲙ",
+          "ⲥⲕⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲛⲟⲩ_1_pre_ⲥⲕⲓⲙ",
+          "ⲥⲕⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲡⲉ_1_pre_ⲥⲕⲓⲙ",
+          "ⲥⲕⲓⲙ_0_node",
+          1
+        ],
+        [
+          "ⲥⲕⲓⲙ_0_node",
+          "ⲛ_1_post_ⲥⲕⲓⲙ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲥⲕⲓⲙ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲣⲱⲙⲉ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 4169,
+      "count": 6
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C3434",
+      "label": "ⲣⲙⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "grey-haired man"
+    },
+    {
+      "target": "C3433",
+      "label": "ⲣⲥⲕⲓⲙ",
+      "pos": "V",
+      "gloss": "become grey-haired and old"
+    },
+    {
+      "target": "C3432",
+      "label": "ⲥⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "grey-haired"
+    },
+    {
+      "target": "C3435",
+      "label": "ⲥⲕⲙⲕⲓⲙ",
+      "pos": "N",
+      "gloss": "spotted(?) with bald spots(?)"
+    }
+  ],
+  "etym": {
+    "egy_num": "146790",
+    "egy_lemma": "skm",
+    "english": "balding; greying (of the hair)",
+    "german": "Ergrauen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/146790"
+  }
+}

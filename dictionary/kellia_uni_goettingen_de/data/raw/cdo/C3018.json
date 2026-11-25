@@ -1,0 +1,143 @@
+{
+  "id": "C3018",
+  "forms": [
+    {
+      "id": "CF7902",
+      "orth": "ⲡϫⲱ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11451,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3453",
+      "bibliography": "CD 285b; KoptHWb 158; ChLCS 40a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲧⲁⲕ ⲇⲉ **ⲡϫⲱ**ϥ ⲙⲡϣⲗϭⲟⲙ ⲉⲕⲛⲁϯ ⲡϫⲱϥ ⲙⲛⲡⲣⲱⲕϩ ⲉⲡⲟⲩϩⲏⲧ ϣⲁⲛⲟⲩⲉⲣⲏⲩ",
+      "english": "And you, O scorching of the mustard, may you put scorching and burning in their hearts towards one another!",
+      "source": "Separation spell",
+      "urn": "urn:cts:copticMag:kyprianos_papyri.tm107301.pcm_I_1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϣⲗϭⲟⲙ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲧⲁⲕ",
+        1,
+        19.598
+      ],
+      [
+        "ⲛⲟⲩ",
+        1,
+        11.664
+      ],
+      [
+        "ⲉⲣⲏⲩ",
+        1,
+        11.08
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        6.986
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ϥ",
+        1,
+        4.522
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲇⲉ_1_pre_ⲡϫⲱ",
+          1
+        ],
+        [
+          "ⲡϫⲱ_0_node",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲡϫⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡϫⲱ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϣⲗϭⲟⲙ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲇⲉ_1_pre_ⲡϫⲱ",
+          "ⲡϫⲱ_0_node",
+          1
+        ],
+        [
+          "ⲡϫⲱ_0_node",
+          "ϥ_1_post_ⲡϫⲱ",
+          1
+        ],
+        [
+          "ϥ_1_post_ⲡϫⲱ",
+          "ⲙ_1_post_ⲡϫⲱ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲡϫⲱ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϣⲗϭⲟⲙ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 11033,
+      "count": 1
+    }
+  }
+}

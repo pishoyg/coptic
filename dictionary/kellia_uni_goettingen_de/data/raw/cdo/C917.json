@@ -1,0 +1,180 @@
+{
+  "id": "C917",
+  "forms": [
+    {
+      "id": "CF3177",
+      "orth": "ⲉⲓⲛⲉ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS1074",
+      "bibliography": "CD 79b; KoptHWb 50; ChLCS 13b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲥⲟⲃⲧⲛ ⲛⲧⲉϥϭⲓϫ ⲉⲃⲟⲗ ⲉⲣⲟⲓ ⲉⲣⲉⲛⲉϥⲧⲏⲏⲃⲉ ⲧⲁⲗⲏⲩ ⲉϫⲛⲛⲉⲩⲉⲣⲏⲩ ⲁϥⲡⲉϩⲡⲁⲥⲡⲓⲣ ⲛⲧϩⲉ ⲛⲟⲩⲥⲏϥⲉ · ⲁⲩⲱ **ⲁϥⲉⲓⲛⲉ **ⲉⲃⲟⲗ**** ⲙⲡⲁϩⲏⲡⲁⲣ ⲁϥⲧⲥⲁⲃⲟⲓ ⲉⲛⲉⲡⲗⲩⲅⲏ · ⲉⲩϩⲓⲱⲱϥ ·",
+      "english": "And he stretched out his hand upon me, and his fingers rested upon each other, and he made an opening between mⲩ ribs as with a sword (or, knife), and he brought forth my liver, and he shewed me the wounds that were in it,",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲥϥⲓⲧⲟⲩ ⲁⲥⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉⲧⲡⲟⲗⲓⲥ ⲁⲩⲱ ⲧⲉⲥϣⲱⲙⲉ ⲁⲥⲛⲁⲩ ⲉⲛⲉⲛⲧⲁⲥⲕⲟⲧϥⲟⲩ ⲁⲩⲱ ϩⲣⲟⲩⲑ **ⲁⲥⲉⲓⲛⲉ **ⲉⲃⲟⲗ**** ϩⲛⲛⲉⲛⲧⲁⲩⲥⲉⲉⲡⲉ ⲉⲣⲟⲥ ϩⲛⲛⲉⲛⲧⲁⲥⲥⲉⲓ ⲛϩⲏⲧⲟⲩ ⲁⲥⲧⲁⲁⲩ ⲛⲁⲥ",
+      "english": "And she took it up, and went into the city: and her mother-in-law saw what she had gleaned, and Ruth brought forth and gave to her the food which she had left from what she had been satisfied with.",
+      "source": "Ruth Chapter 2",
+      "urn": "urn:cts:copticLit:ot.ruth.coptot_ed:2",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧⲉⲩⲛⲟⲩ ⲇⲉ **ⲁϥⲉⲓⲛⲉ **ⲉⲃⲟⲗ**** ⲙⲡϣⲉ ⲛϩⲟⲗⲟⲕⲟⲧⲧⲓⲛⲟⲥ ⲛⲧⲟⲟⲧϥ ⲉϥⲣⲁϣⲉ ⲉⲙⲁⲧⲉ ·",
+      "english": "And straightway he brought out the hundred oboli in his hand, rejoicing greatly,",
+      "source": "The Life of John the Kalybites part 1",
+      "urn": "urn:cts:copticLit:lives.john_kalybites.budge:1-45",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C927",
+      "label": "ϫⲓⲛⲓⲛⲓ",
+      "pos": "N",
+      "gloss": "bringing"
+    },
+    {
+      "target": "C905",
+      "label": "ⲉⲓⲛⲉ",
+      "pos": "V",
+      "gloss": "bring, bear"
+    },
+    {
+      "target": "C914",
+      "label": "ⲉⲓⲛⲉ (ϣⲁ-)",
+      "pos": "V",
+      "gloss": "bring to"
+    },
+    {
+      "target": "C915",
+      "label": "ⲉⲓⲛⲉ (ϩⲁ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C916",
+      "label": "ⲉⲓⲛⲉ (ϩⲓϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring, carry upon"
+    },
+    {
+      "target": "C906",
+      "label": "ⲉⲓⲛⲉ (ⲉ-)",
+      "pos": "V",
+      "gloss": "bring to, for"
+    },
+    {
+      "target": "C923",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "V",
+      "gloss": "bring, put in; insert"
+    },
+    {
+      "target": "C924",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲟⲩⲛ)",
+      "pos": "N",
+      "gloss": "reception, receipt"
+    },
+    {
+      "target": "C925",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring up"
+    },
+    {
+      "target": "C926",
+      "label": "ⲉⲓⲛⲉ (ⲉϩⲣⲁⲓ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C910",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ- ⲧⲟⲟⲧ⸗)",
+      "pos": "V",
+      "gloss": "lay hands on, seize"
+    },
+    {
+      "target": "C909",
+      "label": "ⲉⲓⲛⲉ (ⲉϫⲛ-)",
+      "pos": "V",
+      "gloss": "bring upon; liken to, compare with"
+    },
+    {
+      "target": "C922",
+      "label": "ⲉⲓⲛⲉ (ⲉⲑⲏ)",
+      "pos": "V",
+      "gloss": "bring forward"
+    },
+    {
+      "target": "C920",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲁϩⲟⲩ)",
+      "pos": "V",
+      "gloss": "bring back"
+    },
+    {
+      "target": "C918",
+      "label": "ⲉⲓⲛⲉ (ⲉⲡⲉⲥⲏⲧ)",
+      "pos": "V",
+      "gloss": "bring down"
+    },
+    {
+      "target": "C908",
+      "label": "ⲉⲓⲛⲉ (ⲉⲣⲁⲧ⸗)",
+      "pos": "V",
+      "gloss": "bring to, before"
+    },
+    {
+      "target": "C921",
+      "label": "ⲉⲓⲛⲉ (ⲉⲧⲙⲏⲧⲉ)",
+      "pos": "V",
+      "gloss": "bring into midst, recall"
+    },
+    {
+      "target": "C911",
+      "label": "ⲉⲓⲛⲉ (ⲛ-)",
+      "pos": "V",
+      "gloss": "bring to (of persons)"
+    },
+    {
+      "target": "C913",
+      "label": "ⲉⲓⲛⲉ (ⲛⲁϩⲣⲛ-)",
+      "pos": "V",
+      "gloss": "bring before"
+    },
+    {
+      "target": "C912",
+      "label": "ⲉⲓⲛⲉ (ⲛⲥⲁ-)",
+      "pos": "V",
+      "gloss": "bring sth against sb, accuse sb of"
+    },
+    {
+      "target": "C907",
+      "label": "ⲉⲓⲛⲉ (ⲛⲧⲟⲟⲧ⸗ ⲉ-)",
+      "pos": "V",
+      "gloss": "set free, release, withdraw"
+    },
+    {
+      "target": "C919",
+      "label": "ⲓⲛⲓ (ⲉⲡϣⲱⲓ)",
+      "pos": "V",
+      "gloss": "bring, raise up"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "C8947",
+  "forms": [
+    {
+      "id": "CF21901",
+      "orth": "ⲉⲛⲛⲟⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF21902",
+      "orth": "ⲉⲛⲛⲟⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 10678,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF21903",
+      "orth": "ⲉⲛⲟⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS10898",
+      "bibliography": "DDGLC",
+      "cu_ID": "1169"
+    },
+    {
+      "id": "CS10899",
+      "bibliography": "DDGLC",
+      "cu_ID": "1514"
+    },
+    {
+      "id": "CS10900",
+      "bibliography": "DDGLC",
+      "cu_ID": "6897"
+    },
+    {
+      "id": "CS10901",
+      "bibliography": "DDGLC",
+      "cu_ID": "2943"
+    },
+    {
+      "id": "CS10902",
+      "bibliography": "DDGLC",
+      "cu_ID": "1356"
+    },
+    {
+      "id": "CS10903",
+      "bibliography": "DDGLC",
+      "cu_ID": "6520"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲗⲏⲛ ⲉⲧⲃⲉⲡⲙⲉ ⲉⲧϣⲟⲟⲡ ⲛϩⲏⲧⲕ ⲉϩⲟⲩⲛ ⲉⲡⲛⲟⲩⲧⲉ ⲉⲓⲥϩⲏⲏⲧⲉ ⲁⲕϫⲣⲟ ⲉⲥⲙⲟⲧ ⲛⲓⲙ ⲛⲕⲟⲧⲥ ⲛⲧⲉⲡⲇⲓⲁⲃⲟⲗⲟⲥ ϩⲙⲡⲧⲣⲉⲕⲥⲱⲧⲙ ⲉⲡϣⲁϫⲉ ⲛⲧⲁⲙⲛⲧⲉⲗⲁⲭⲓⲥⲧⲟⲥ ⲙⲡϥϭⲙϭⲟⲙ ⲅⲁⲣ ⲉϫⲁⲥⲧⲕ ⲉⲩ**ⲉⲛⲛⲟⲓⲁ** ⲛϭⲓⲡⲙⲉⲅⲉⲑⲟⲥ ⲉⲧⲛϩⲏⲧⲕ ϩⲱⲥⲧⲉ ⲉⲧⲣⲉⲕⲁⲙⲁϩⲧⲉ ⲉϫⲙⲡⲉⲕⲟⲩⲱϣ ⲙⲙⲓⲛ ⲙⲙⲟⲕ",
+      "english": "But through the love for God which is in your heart, see, you have vanquished any crafty form of the devil in listening to the words of my humble self. // For the greatness which is inside you was not able to raise you to an understanding so that you would dominate yourself,",
+      "source": "Life of Apa Aphou part 2",
+      "urn": "urn:cts:copticLit:lives.aphou.paths_ed:62-132",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲉⲅⲉⲑⲟⲥ",
+        1,
+        18.598
+      ],
+      [
+        "ϫⲁⲥⲧ",
+        1,
+        15.172
+      ],
+      [
+        "ⲛϭⲓ",
+        1,
+        7.819
+      ],
+      [
+        "ⲕ",
+        1,
+        6.853
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲛⲛⲟⲓⲁ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10267,
+      "count": 1
+    }
+  },
+  "etym": {
+    "grl_ID": "687",
+    "grl_lemma": "ἔννοια",
+    "grl_meaning": "act of thinking, reflection, cogitation; insight",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 570a; Preisigke 1:492"
+  }
+}

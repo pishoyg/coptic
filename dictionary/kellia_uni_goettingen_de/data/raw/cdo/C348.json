@@ -1,0 +1,51 @@
+{
+  "id": "C348",
+  "forms": [
+    {
+      "id": "CF1499",
+      "orth": "ⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1500",
+      "orth": "ⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS386",
+      "bibliography": "CD 30b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C12347",
+      "type": "cf",
+      "label": "human being"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C347",
+      "label": "ⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "city, town"
+    },
+    {
+      "target": "C349",
+      "label": "ⲙⲉⲧⲣⲉⲙⲛⲃⲁⲕⲓ",
+      "pos": "N",
+      "gloss": "citizenship"
+    }
+  ]
+}

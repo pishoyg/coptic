@@ -1,0 +1,92 @@
+{
+  "id": "C4605",
+  "forms": [
+    {
+      "id": "CF11168",
+      "orth": "ⲉⲣ ⲛⲁⲧⲑⲱⲧ ⲛϩⲏⲧ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5199",
+      "bibliography": "CD 439a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C951",
+      "type": "cf",
+      "label": "act; become, befall; do"
+    },
+    {
+      "target": "C233",
+      "type": "cf",
+      "label": "negative prefix"
+    },
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C4607",
+      "label": "ϫⲓⲛⲑⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "agreement, union"
+    },
+    {
+      "target": "C4604",
+      "label": "ⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "unconvinced, disagreeing"
+    },
+    {
+      "target": "C4606",
+      "label": "ⲙⲉⲧⲁⲧⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "N",
+      "gloss": "refusal"
+    },
+    {
+      "target": "C4603",
+      "label": "ⲙⲉⲧⲑⲁⲧϩⲏⲧ",
+      "pos": "N",
+      "gloss": "confirmation"
+    },
+    {
+      "target": "C4599",
+      "label": "ⲧⲱⲧ",
+      "pos": "V",
+      "gloss": "be joined, be persuaded, be agreeable to; conjoin, mingle"
+    },
+    {
+      "target": "C4601",
+      "label": "ⲧⲱⲧ",
+      "pos": "N",
+      "gloss": "agreement, mingling"
+    },
+    {
+      "target": "C4600",
+      "label": "ⲧⲱⲧ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be even, be level"
+    },
+    {
+      "target": "C4602",
+      "label": "ⲧⲱⲧ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "content heart, persuade, satisfy; have a contented heart, be persuaded, be satisfied; consent, agree"
+    }
+  ]
+}

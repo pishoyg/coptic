@@ -1,0 +1,148 @@
+{
+  "id": "C2331",
+  "forms": [
+    {
+      "id": "CF6400",
+      "orth": "ⲙⲁϫⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 20857,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁϫⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11282,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲙⲁϣⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.28,
+        "rank": 1534,
+        "count": 24
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2689",
+      "bibliography": "CD 213a; CED 100; KoptHWb 113; DELC 132; ChLCS 30b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲧⲉⲟⲩⲙ**ⲙⲁϫⲉ** ⲙⲙⲟϥ ⲙⲁⲣⲉϥⲥⲱⲧⲙ",
+      "english": "...",
+      "source": "Gospel of Thomas",
+      "urn": "urn:cts:copticLit:nh.thomas.NHAM02:0-114",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲟⲩⲙ",
+        1,
+        18.598
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        10.681
+      ],
+      [
+        "ⲙⲟⲩ",
+        1,
+        9.743
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        6.981
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲟⲩⲙ_1_pre_ⲙⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲙⲁϫⲉ",
+          1
+        ],
+        [
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲟⲩⲙ_1_pre_ⲙⲁϫⲉ",
+          "ⲙⲁϫⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲁϫⲉ_0_node",
+          "ⲙⲙⲟ_1_post_ⲙⲁϫⲉ",
+          1
+        ],
+        [
+          "ⲙⲙⲟ_1_post_ⲙⲁϫⲉ",
+          "ϥ_2_post_ⲙⲙⲟ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 20455,
+      "count": 1
+    }
+  },
+  "etym": {
+    "egy_num": "78480",
+    "egy_lemma": "mḏꜣ.t",
+    "demo_num": "d2847",
+    "demo_lemma": "mḏj",
+    "english": "chisel",
+    "german": "Meißel",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/78480",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2847"
+  }
+}

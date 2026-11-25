@@ -1,0 +1,124 @@
+{
+  "id": "C2978",
+  "forms": [
+    {
+      "id": "CF7821",
+      "orth": "ⲡⲁϩϥ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 16848,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS3409",
+      "bibliography": "CD 281a; KoptHWb 157; ChLCS 39b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲧⲁ**ⲡⲁϩϥ** ⲧⲁⲧⲁⲁϥ ⲛⲁϥ ⲉⲙⲉⲓϫⲉⲗⲁⲁⲩ ⲛⲧⲙⲡⲉⲧⲉ ⲟⲩⲛⲧⲁⲓ ⲉⲣⲟϥ",
+      "english": "And if I did not read it and return it, having taken nothing from the debtor:",
+      "source": "Job 31",
+      "urn": "urn:cts:copticLit:ot.job.coptot:31",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲧⲁ",
+        3,
+        13.705
+      ],
+      [
+        "ⲁϥ",
+        1,
+        13.511
+      ],
+      [
+        "ϥ",
+        2,
+        7.522
+      ],
+      [
+        "ⲉⲣⲟ",
+        1,
+        7.484
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        5.688
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲧⲁ_1_pre_ⲡⲁϩϥ",
+          1
+        ],
+        [
+          "ⲡⲁϩϥ_0_node",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲁ_1_pre_ⲡⲁϩϥ",
+          "ⲡⲁϩϥ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 16450,
+      "count": 1
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C2976",
+      "label": "ⲡⲁϩⲉ",
+      "pos": "N",
+      "gloss": "fragment"
+    },
+    {
+      "target": "C2977",
+      "label": "ⲡⲁϩⲥ",
+      "pos": "N",
+      "gloss": "thing torn, prey"
+    },
+    {
+      "target": "C2973",
+      "label": "ⲡⲱϩ",
+      "pos": "V",
+      "gloss": "break, burst, tear, divide; break, burst, tear, divide"
+    },
+    {
+      "target": "C2974",
+      "label": "ⲡⲱϩ",
+      "pos": "N",
+      "gloss": "division, piece"
+    },
+    {
+      "target": "C2975",
+      "label": "ⲣⲉϥⲡⲉϩ-",
+      "pos": "N",
+      "gloss": "divider, splitter"
+    }
+  ]
+}

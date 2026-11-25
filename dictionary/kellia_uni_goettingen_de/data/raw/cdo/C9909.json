@@ -1,0 +1,41 @@
+{
+  "id": "C9909",
+  "forms": [
+    {
+      "id": "CF25750",
+      "orth": "ⲝ(ⲉⲥⲧⲏⲥ)",
+      "dialect": null
+    },
+    {
+      "id": "CF25751",
+      "orth": "ⲝ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7252,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12905",
+      "bibliography": "DDGLC",
+      "cu_ID": "8795"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1495",
+    "grl_lemma": "ξέστης",
+    "grl_meaning": "a measure (pint)",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1189b; Preisigke 2:145"
+  }
+}

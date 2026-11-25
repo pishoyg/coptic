@@ -1,0 +1,99 @@
+{
+  "id": "C5238",
+  "forms": [
+    {
+      "id": "CF12445",
+      "orth": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5882",
+      "bibliography": "CD 498b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C7746",
+      "type": "cf",
+      "label": "act of, manner of (nominal prefix)"
+    },
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5239",
+      "label": "ϥⲁⲓⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-carrier"
+    },
+    {
+      "target": "C5237",
+      "label": "ϫⲓⲛϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "act of giving fruits"
+    },
+    {
+      "target": "C5234",
+      "label": "ϯⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "give fruit"
+    },
+    {
+      "target": "C5230",
+      "label": "ⲁⲧⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruitless"
+    },
+    {
+      "target": "C5232",
+      "label": "ⲉⲛⲟⲩⲧⲁϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "bring forth fruit"
+    },
+    {
+      "target": "C5231",
+      "label": "ⲉⲣⲟⲩⲧⲁϩ",
+      "pos": "V",
+      "gloss": "bear fruits"
+    },
+    {
+      "target": "C5233",
+      "label": "ⲙⲁⲥⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-bearer"
+    },
+    {
+      "target": "C5236",
+      "label": "ⲙⲉⲧⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "quality of the fruit-giver"
+    },
+    {
+      "target": "C5229",
+      "label": "ⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit"
+    },
+    {
+      "target": "C5235",
+      "label": "ⲣⲉϥϯⲟⲩⲧⲁϩ",
+      "pos": "N",
+      "gloss": "fruit-giver"
+    }
+  ]
+}

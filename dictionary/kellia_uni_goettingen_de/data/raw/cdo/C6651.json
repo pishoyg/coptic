@@ -1,0 +1,38 @@
+{
+  "id": "C6651",
+  "forms": [
+    {
+      "id": "CF15346",
+      "orth": "ϩⲙⲁⲓⲥ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS7364",
+      "bibliography": "CD 681a; KoptHWb 373; DELC 302a; ChLCS 91b"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C6649",
+      "label": "ϩⲙⲟⲟⲥ",
+      "pos": "V",
+      "gloss": "sit, remain, dwell"
+    },
+    {
+      "target": "C6650",
+      "label": "ⲙⲁ ⲛϩⲙⲟⲟⲥ",
+      "pos": "N",
+      "gloss": "seat, privy, anus"
+    }
+  ]
+}

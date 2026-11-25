@@ -1,0 +1,413 @@
+{
+  "id": "C636",
+  "forms": [
+    {
+      "id": "CF2415",
+      "orth": "ⲉⲃⲣⲏϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.16,
+        "rank": 2215,
+        "count": 25
+      }
+    },
+    {
+      "id": "CF2416",
+      "orth": "ⲃⲃⲣⲏϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8810,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF2417",
+      "orth": "ⲃⲃⲣⲏϭⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2418",
+      "orth": "ⲃⲃⲣⲉϭⲉ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF2419",
+      "orth": "ⲉⲃⲣⲏϫ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.09,
+        "rank": 2718,
+        "count": 8
+      }
+    },
+    {
+      "orth": "ⲉⲃⲣⲏⲏϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11162,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ⲉϥⲣⲏϭⲉ",
+      "dialect": "S",
+      "id": "257.2"
+    },
+    {
+      "orth": "ⲃⲣⲏϭⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6656,
+        "count": 3
+      }
+    },
+    {
+      "orth": "ⲧⲉⲣⲃⲏϭ",
+      "dialect": "S",
+      "id": "257.4"
+    },
+    {
+      "orth": "ⲉⲃⲣⲏϭⲉ",
+      "dialect": "A",
+      "id": "257.5"
+    },
+    {
+      "orth": "ϩⲃⲣⲏϭⲉ",
+      "dialect": "A",
+      "id": "257.6"
+    },
+    {
+      "orth": "ⲉϥⲣⲏϫ",
+      "dialect": "F",
+      "id": "257.7"
+    },
+    {
+      "orth": "ⲧⲉⲃⲣⲏϭ",
+      "dialect": "F",
+      "id": "257.8"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS772",
+      "bibliography": "CD 53b; CED 33; KoptHWb 33, 497; DELC 39; ChLCS 10b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲡⲓϣⲟⲗ ⲛⲥⲱⲟⲩⲃⲉⲛ ⲫⲏ ⲉⲧⲧⲁⲗⲏⲟⲩⲧ ⲉⲡⲓⲁⲗⲟⲩ ⲉⲣⲉⲡⲧⲩⲡⲟⲥ ⲛⲟⲩⲥⲧⲁⲩⲣⲟⲥ ⲛⲟⲩⲱⲓⲛⲓ ⲭⲏ ϩⲓϫⲱϥ ⲉϥϩⲓ **ⲉⲃⲣⲏϫ** ⲛⲟⲩⲱⲓⲛⲓ ⲉⲃⲟⲗ .",
+      "english": "He saw the bundle placed on the young boy having the shape of luminous crosses, throwing flashes of light.",
+      "source": "Life of Isaac of Alexandria - part 1",
+      "urn": "urn:cts:copticLit:lives.boh_isaac.amelineau_ed:1-19",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡⲕⲁϩ ⲅⲁⲣ ⲛⲁⲛⲟⲉⲓⲛ ⲛϥⲕⲱ ϩⲁⲣⲱⲟⲩ · ⲛⲉϩⲣⲟⲩⲃⲃⲁⲓ ⲛⲁϯϩⲟⲧⲉ ⲛⲁⲩ · ⲛ**ⲉⲃⲣⲏϭⲉ** ⲛⲕⲱϩⲧ ⲛⲁϣⲧⲣⲧⲱⲣⲟⲩ · ⲛⲧⲏⲩⲛⲁⲣⲁϩⲧⲟⲩ ⲉⲩⲛⲟⲉⲓⲛ ⲉⲣⲟⲟⲩ ·",
+      "english": "For the earth shall shake under them, the thunders shall strike terror into them, the lightnings of fire shall alarm them, and the winds shall buffet them and shake them violently.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲙⲡⲓⲥⲉⲧ**ⲉⲃⲣⲏϫ** ⲉϣⲁϥⲟⲩⲟⲛϩϥ ⲉⲃⲟⲗ ϧⲉⲛⲧⲫⲉ ⲟⲩⲟϩ ⲛⲧⲉϥⲉⲣⲟⲩⲱⲓⲛⲓ ⲥⲁⲡⲉⲥⲏⲧ ⲛⲧⲫⲉ ⲫⲁⲓ ⲡⲉ ⲙⲫⲣⲏϯ ⲉⲧⲉⲡϣⲏ ⲣⲓ ⲙⲫⲣⲱⲙⲓ ⲛⲁϣⲱⲡⲓ ⲙⲙⲟϥ ⲛϩⲣⲏⲓ ϧⲉⲛⲡⲉϥⲉϩⲟⲟⲩ .",
+      "english": "for as the lightning, when it flashes out of the one part under the sky, shines to the other part under the sky; so will the Son of Man be in his day.",
+      "source": "03_Luke_17",
+      "urn": "urn:cts:copticLit:nt.luke.bohairic:17",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲉⲥϣⲱⲡⲉ ϩⲓϫⲱⲛ ⲛϭⲓⲟⲩⲕⲗⲟⲟⲗⲉ · ⲛⲕⲁⲕⲉ ⲙⲛⲟⲩⲕⲙⲧⲱ ⲙⲛϩⲉⲛϩⲣⲟⲩⲃⲁⲓ · ⲙⲛϩⲉⲛϩⲣⲟⲩⲙⲡⲉ ⲙⲛϩⲉⲛ**ⲉⲃⲣⲏϭⲉ** · ⲙⲛϩⲉⲛⲑⲗⲓⲯⲓⲥ ⲛⲥⲁⲥⲁ ⲛⲓⲙ · ⲛⲧⲉⲧⲛⲧⲙⲧϩⲉ ϣⲱⲡⲉ ⲛⲁⲛ ⲉⲃⲱⲕ ⲉⲗⲁⲁⲩ ⲛⲥⲁ ·",
+      "english": "and there come upon us a black cloud, and earthquake, and thunders, and thunderbolts (?), and lightnings, and tribulations on every side of us, and we shall have no place whither to make our escape.",
+      "source": "The Asceticon of Apa Ephrem part 1",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:1-23",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲫⲣⲏϯ ⲅⲁⲣ ⲙⲡⲓⲥⲉⲧ**ⲉⲃⲣⲏϫ** ⲉϣⲁϥⲓ ⲉⲃⲟⲗ ⲥⲁⲡⲉⲓⲉⲃⲧ ⲟⲩⲟϩ ⲛⲧⲉϥⲟⲩⲟⲛϩϥ ⲥⲁⲡⲉⲙⲉⲛⲧ ⲫⲁⲓ ⲡⲉ ⲙⲫⲣⲏϯ ⲙⲡϫⲓⲛⲓ ⲙⲡϣⲏⲣⲓ ⲙⲫⲣⲱⲙⲓ .",
+      "english": "For as the lightning flashes from the east, and is seen even to the west, so will be the coming of the Son of Man.",
+      "source": "01_Matthew_24",
+      "urn": "urn:cts:copticLit:nt.matt.bohairic:24",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲉⲣⲉⲡⲉϥⲥⲱⲙⲁ ⲧⲏⲣϥ ⲙⲉϩ ⲛⲃⲁⲗ ⲉϥⲛⲏⲩ **ⲉⲃⲣⲏϭⲉ** ⲛⲟⲩⲟⲉⲓⲛ ⲉⲃⲟⲗ ·",
+      "english": "and the whole of his body was full of eyes, and flashes of lightning shot out from him.",
+      "source": "Mysteries of John the Evangelist part 1",
+      "urn": "urn:cts:copticLit:misc.mysteries_john.budge:1-12",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϫⲟⲉⲓⲥ",
+        1,
+        15.843
+      ],
+      [
+        "ϩⲣⲟⲩⲃⲁⲓⲙⲛ",
+        1,
+        15.843
+      ],
+      [
+        "ϫⲉⲣⲙ",
+        1,
+        15.843
+      ],
+      [
+        "ϩⲣⲟⲩⲙⲡⲉ",
+        1,
+        14.258
+      ],
+      [
+        "ϩⲉⲛ",
+        12,
+        14.074
+      ],
+      [
+        "ⲛ",
+        31,
+        13.917
+      ],
+      [
+        "ϥⲱϭⲉ",
+        2,
+        13.228
+      ],
+      [
+        "ⲙⲛ",
+        13,
+        12.991
+      ],
+      [
+        "ⲟⲩ",
+        17,
+        12.728
+      ],
+      [
+        "ⲣⲟⲩⲟⲓⲛ",
+        1,
+        12.384
+      ],
+      [
+        "ϣⲧⲣⲧⲱⲣ",
+        2,
+        12.062
+      ],
+      [
+        "ⲥⲙⲏ",
+        3,
+        11.926
+      ],
+      [
+        "ϩⲃⲥⲱ",
+        2,
+        11.745
+      ],
+      [
+        "ϯϩⲟⲧⲉ",
+        1,
+        11.673
+      ],
+      [
+        "ⲧⲣⲟⲭⲟⲥ",
+        1,
+        11.595
+      ],
+      [
+        "ⲓⲛⲉ",
+        1,
+        11.521
+      ],
+      [
+        "ⲕⲗⲟⲟⲗⲉ",
+        2,
+        11.451
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        9,
+        11.22
+      ],
+      [
+        "ϩⲛⲟ",
+        1,
+        11.088
+      ],
+      [
+        "ⲕⲙⲧⲟ",
+        1,
+        10.486
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          20
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          5
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          3
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          3
+        ],
+        [
+          "ⲉ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_pre_ϯϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ϯϩⲟⲧⲉ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲕⲱϩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲕⲗⲟⲟⲗⲉ_1_post_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          3
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ϩⲉⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          2
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          2
+        ],
+        [
+          "ⲉ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲩ_3_pre_ϯϩⲟⲧⲉ",
+          1
+        ],
+        [
+          "ⲩ_3_pre_ϯϩⲟⲧⲉ",
+          "ϯϩⲟⲧⲉ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ϯϩⲟⲧⲉ_2_pre_ⲉ",
+          "ⲙⲛ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          "ⲛ_1_post_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲃⲣⲏϭⲉ",
+          "ⲕⲱϩⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲉⲕ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          1
+        ],
+        [
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          "ⲙⲛ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          "ⲛⲉ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          1
+        ],
+        [
+          "ⲛⲉ_2_post_ⲕⲗⲟⲟⲗⲉ",
+          "ⲕⲗⲟⲟⲗⲉ_1_post_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲕⲉ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲃⲣⲏϭⲉ",
+          "ⲉⲃⲣⲏϭⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.17,
+      "rank": 1878,
+      "count": 27
+    }
+  },
+  "type": "foreign",
+  "superEntryReferences": [
+    {
+      "target": "C637",
+      "label": "ϩⲓⲉⲃⲣⲏϫ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "hurl lightnings"
+    }
+  ],
+  "etym": {
+    "egy_num": "56530",
+    "egy_lemma": "brq",
+    "english": "to sparkle (Sem. loan word)",
+    "german": "glitzern",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/56530"
+  }
+}

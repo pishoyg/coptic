@@ -1,0 +1,45 @@
+{
+  "id": "C4330",
+  "forms": [
+    {
+      "id": "CF10612",
+      "orth": "ⲧⲙⲧⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS4904",
+      "bibliography": "CD 417a; CED 189; KoptHWb 234; DELC 216a; ChLCS 59a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C4329",
+      "label": "ⲧⲙⲧⲙ",
+      "pos": "V",
+      "gloss": "be heavy, be oppressed"
+    },
+    {
+      "target": "C4331",
+      "label": "ⲧⲙⲧⲙ",
+      "pos": "V",
+      "gloss": "fog, smoke, darkness"
+    }
+  ],
+  "etym": {
+    "egy_num": "172340",
+    "egy_lemma": "tmtm",
+    "english": "to pulverize (med.)",
+    "german": "(Medikamente) zerquetschen",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/172340"
+  }
+}

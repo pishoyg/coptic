@@ -1,0 +1,183 @@
+{
+  "id": "C5138",
+  "forms": [
+    {
+      "id": "CF12241",
+      "orth": "ϯⲟⲩⲣⲟⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7351,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "subc": "Kompositverb",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5769",
+      "bibliography": "CD 490b-491a; KoptHWb 276; ChLCS 68b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲁⲧⲣⲛⲟⲃⲉ ϣⲁϥⲧⲟⲃⲥϥ ⲉⲧⲣⲉϥⲙⲉⲧⲁⲛⲟⲉⲓ ⲛϥⲕⲱ ⲛⲁϥ ⲉⲃⲟⲗ ⲛϥ**ϯⲟⲩⲣⲟⲧ** ⲛϩⲏⲧ ⲛⲁϥ ⲉϩⲟⲩⲛ ⲉⲧⲁⲣⲉⲧⲏ ϩⲛⲟⲩⲣⲓⲙⲉ ⲙⲛⲟⲩⲑⲃⲃⲓⲟ ·",
+      "english": "The sinner He hath urged to repent, and He hath forgiven him, and given him joy of heart in virtue by means of weeping and humility.",
+      "source": "The Asceticon of Apa Ephrem part 2",
+      "urn": "urn:cts:copticLit:psephrem.asceticon.budge:24-55",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁϥⲛⲁⲩ ⲉⲛⲉⲧⲟⲩⲁⲁⲃ ⲧⲏⲣⲟⲩ ⲁϥⲁⲥⲡⲁⲍⲉ ⲙⲙⲟⲟⲩ ⲉⲩ**ϯⲟⲩⲣⲟⲧ** ⲛϩⲏⲧ ⲛⲁϥ ⲁϥϫⲓⲧϥ ⲉϩⲣⲁⲓ ⲉⲧⲙⲉϩ ϣⲟⲙⲧⲉ ⲙⲡⲉ",
+      "english": "...",
+      "source": "Martyrdom of Helias (Sobhy ed.) Part 5",
+      "urn": "urn:cts:copticLit:helias.martyrdom.sobhy_ed:32-49",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϥ",
+        6,
+        11.277
+      ],
+      [
+        "ϩⲏⲧ",
+        2,
+        10.947
+      ],
+      [
+        "ⲛ",
+        5,
+        9.775
+      ],
+      [
+        "ⲛⲁ",
+        2,
+        7.688
+      ],
+      [
+        "ⲙⲙⲟ",
+        1,
+        5.981
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        1,
+        5.465
+      ],
+      [
+        "ⲩ",
+        1,
+        4.81
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛ_1_pre_ϯⲟⲩⲣⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲟⲩⲣⲟⲧ",
+          1
+        ],
+        [
+          "ϯⲟⲩⲣⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲟⲩⲣⲟⲧ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛⲁ_1_post_ϯⲟⲩⲣⲟⲧ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛ_1_pre_ϯⲟⲩⲣⲟⲧ",
+          "ϥ_1_pre_ϯⲟⲩⲣⲟⲧ",
+          1
+        ],
+        [
+          "ϥ_1_pre_ϯⲟⲩⲣⲟⲧ",
+          "ϯⲟⲩⲣⲟⲧ_0_node",
+          1
+        ],
+        [
+          "ϯⲟⲩⲣⲟⲧ_0_node",
+          "ⲛ_1_post_ϯⲟⲩⲣⲟⲧ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ϯⲟⲩⲣⲟⲧ",
+          "ϩⲏⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲏⲧ_2_post_ⲛ",
+          "ⲛⲁ_1_post_ϯⲟⲩⲣⲟⲧ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6899,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C4020",
+      "type": "cf",
+      "label": "give, pay, sell"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C5136",
+      "label": "ⲟⲩⲣⲟⲧ",
+      "pos": "V",
+      "gloss": "be glad, be eager, be ready, rejoice"
+    },
+    {
+      "target": "C5137",
+      "label": "ⲟⲩⲣⲟⲧ",
+      "pos": "N",
+      "gloss": "gladness, abundance, zeal"
+    },
+    {
+      "target": "C12021",
+      "label": "ⲣⲱⲟⲩⲧ",
+      "pos": "N",
+      "gloss": "gladness, zeal, abundance"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "C9219",
+  "forms": [
+    {
+      "id": "CF23051",
+      "orth": "ⲓⲥⲧⲟⲣⲓⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF23056",
+      "orth": "ⲓⲥⲧⲟⲣⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23052",
+      "orth": "ϣⲓⲥⲧⲟⲣⲓⲁ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF23053",
+      "orth": "ϩⲓⲥⲧⲟⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4420,
+        "count": 6
+      }
+    },
+    {
+      "id": "CF23054",
+      "orth": "ϩⲓⲥⲧⲱⲣⲓⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5359,
+        "count": 4
+      }
+    },
+    {
+      "id": "CF23055",
+      "orth": "ⲑⲓⲥⲧⲱⲣⲓⲁ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS11474",
+      "bibliography": "DDGLC",
+      "cu_ID": "2052"
+    },
+    {
+      "id": "CS11475",
+      "bibliography": "DDGLC",
+      "cu_ID": "2347"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "965",
+    "grl_lemma": "ἱστορία",
+    "grl_meaning": "inquiry, information, story, account, history",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 842a"
+  }
+}

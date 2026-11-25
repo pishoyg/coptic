@@ -1,0 +1,99 @@
+{
+  "id": "C7390",
+  "forms": [
+    {
+      "id": "CF16839",
+      "orth": "ϫⲓⲥⲉ ⲛϩⲏⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6381,
+        "count": 3
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS8175",
+      "bibliography": "CD 790a; ChLCS 104a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C6869",
+      "type": "cf",
+      "label": "heart, mind"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C7383",
+      "label": "ϫⲁⲥⲓ-",
+      "pos": "N",
+      "gloss": "who raises, mounts"
+    },
+    {
+      "target": "C7384",
+      "label": "ϫⲁⲥⲓϩⲏⲧ",
+      "pos": "N",
+      "gloss": "arrogant, vain"
+    },
+    {
+      "target": "C7382",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "become, be high; exalt, raise"
+    },
+    {
+      "target": "C7385",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "high, upraised"
+    },
+    {
+      "target": "C7387",
+      "label": "ϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "height, top"
+    },
+    {
+      "target": "C7389",
+      "label": "ϫⲓⲥⲉ ⲛϩⲏⲧ",
+      "pos": "V",
+      "gloss": "\"high-hearted\", arrogant, vain"
+    },
+    {
+      "target": "C7391",
+      "label": "ϫⲟⲥⲉ",
+      "pos": "N",
+      "gloss": "exalted person, place"
+    },
+    {
+      "target": "C7392",
+      "label": "ϫⲟⲥⲉ",
+      "pos": "N",
+      "gloss": "exalted person, place"
+    },
+    {
+      "target": "C7388",
+      "label": "ⲙⲁⲓϭⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "loving a high rank"
+    },
+    {
+      "target": "C7386",
+      "label": "ⲙⲛⲧϫⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "height; arrogance"
+    }
+  ]
+}

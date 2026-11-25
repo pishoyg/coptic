@@ -1,0 +1,717 @@
+{
+  "id": "C2047",
+  "forms": [
+    {
+      "id": "CF5780",
+      "orth": "ⲙⲏⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.23,
+        "rank": 1801,
+        "count": 37
+      }
+    },
+    {
+      "id": "CF5781",
+      "orth": "ⲙⲏⲏⲥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5048,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2375",
+      "bibliography": "CD 186a; KoptHWb 101; DELC ChLCS 28a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲡⲉⲕϩⲁⲧ ⲛⲛⲉⲕⲧⲁⲁϥ ⲛⲁϥ ϩⲓ**ⲙⲏⲥⲉ** ⲁⲩⲱ ⲛⲛⲉⲕϯ ⲛⲁϥ ⲛⲛⲉⲕⲃⲣⲏⲩⲉ ⲉϫⲛⲟⲩϩⲟⲩⲟ",
+      "english": "Thou shalt not lend thy money to him at interest, and thou shalt not lend thy meat to him to be returned with increase.",
+      "source": "Leviticus 25",
+      "urn": "urn:cts:copticLit:ot.lev.coptot:25",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲧⲃⲉⲟⲩ ⲙⲡⲕϯ ⲙⲡⲁϩⲁⲧ ⲉⲧⲉⲧⲣⲁⲡⲉⲍⲁ ⲧⲁⲉⲓ ⲧⲁϫⲓⲧϥ ⲛⲙⲧⲉϥ**ⲙⲏⲥⲉ** .",
+      "english": "Then why didn't you deposit my money in the bank, and at my coming, I might have earned interest on it?'",
+      "source": "42_Luke_19",
+      "urn": "urn:cts:copticLit:nt.luke.sahidica:19",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡϥϯ ⲙⲡⲉϥϩⲁⲧ ⲉ**ⲙⲏⲥⲉ** ⲙⲡϥϫⲓⲇⲱⲣⲟⲛ ⲉϫⲛⲛⲉⲧⲟⲩⲁⲁⲃ ⲡⲉⲧⲉⲓⲣⲉ ⲛⲛⲁⲓ ⲛϥⲛⲁⲕⲓⲙ ⲁⲛ ϣⲁⲉⲛⲉϩ",
+      "english": "He has not lent his money on usury, and has not received bribes against the innocent. He that does these things shall never be moved.",
+      "source": "Psalms 14",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:14",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲛⲃⲣⲁ",
+        3,
+        19.961
+      ],
+      [
+        "ⲕⲉⲣⲁⲣⲭⲱⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ⲉⲕⲉⲣⲁⲣⲭⲱⲛ",
+        1,
+        15.206
+      ],
+      [
+        "ⲧⲉⲧⲟ",
+        1,
+        15.206
+      ],
+      [
+        "ϯ",
+        17,
+        14.386
+      ],
+      [
+        "ϫⲓ",
+        10,
+        13.738
+      ],
+      [
+        "ⲣⲁⲡⲉ",
+        1,
+        13.621
+      ],
+      [
+        "ⲉ",
+        26,
+        13.526
+      ],
+      [
+        "ϥ",
+        27,
+        13.394
+      ],
+      [
+        "ⲛ",
+        30,
+        13.137
+      ],
+      [
+        "ϫⲓⲇⲱⲣⲟⲛ",
+        1,
+        12.884
+      ],
+      [
+        "ⲛⲧⲟⲟⲧ",
+        5,
+        12.638
+      ],
+      [
+        "ϩⲟⲙⲧ",
+        1,
+        12.621
+      ],
+      [
+        "ⲛⲁ",
+        17,
+        12.558
+      ],
+      [
+        "ⲉⲧ",
+        14,
+        12.268
+      ],
+      [
+        "ⲙ",
+        16,
+        11.959
+      ],
+      [
+        "ⲟⲩⲇⲉ",
+        5,
+        11.85
+      ],
+      [
+        "ⲛⲧⲛ",
+        1,
+        11.746
+      ],
+      [
+        "ⲡ",
+        17,
+        11.367
+      ],
+      [
+        "ⲟⲩⲟϣ",
+        1,
+        11.299
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          34
+        ],
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲏⲥⲉ",
+          3
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          6
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          2
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_3_post_ϩⲉⲛ",
+          2
+        ],
+        [
+          "ⲉ_4_post_ϩⲉⲑⲛⲟⲥ",
+          2
+        ],
+        [
+          "ⲛⲁϣⲱ_5_post_ⲉ",
+          2
+        ],
+        [
+          "ⲛ_2_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲕⲉⲣⲁⲣⲭⲱⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲟⲩ_4_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲏⲥⲉ",
+          5
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ϥ_5_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ⲛⲁ_5_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ⲁϩⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲏⲥⲉ",
+          2
+        ],
+        [
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲛⲃⲣⲁ",
+          1
+        ],
+        [
+          "ⲛⲃⲣⲁ_3_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ϩⲛⲁⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲥⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ϫⲓⲛϭⲟⲛⲥ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϫⲓⲥⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ϫⲓⲥⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϫⲱⲱⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲓ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲁⲓ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϣ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_5_post_ⲟⲩⲟϣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉϥ_1_pre_ⲙⲏⲥⲉ",
+          "ⲙⲏⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          5
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          "ϩⲉⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_2_post_ⲛ",
+          "ϩⲉⲑⲛⲟⲥ_3_post_ϩⲉⲛ",
+          1
+        ],
+        [
+          "ϩⲉⲑⲛⲟⲥ_3_post_ϩⲉⲛ",
+          "ⲉ_4_post_ϩⲉⲑⲛⲟⲥ",
+          1
+        ],
+        [
+          "ⲉ_4_post_ϩⲉⲑⲛⲟⲥ",
+          "ⲛⲁϣⲱ_5_post_ⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲛ_2_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲁⲩⲱ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          "ⲉ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲙⲏⲥⲉ",
+          "ⲕⲉⲣⲁⲣⲭⲱⲛ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲕⲉⲣⲁⲣⲭⲱⲛ_2_post_ⲉ",
+          "ⲉϫⲛ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          1
+        ],
+        [
+          "ⲉϫⲛ_3_post_ⲕⲉⲣⲁⲣⲭⲱⲛ",
+          "ⲟⲩ_4_post_ⲉϫⲛ",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲙ_1_post_ⲙⲏⲥⲉ",
+          5
+        ],
+        [
+          "ⲙ_1_post_ⲙⲏⲥⲉ",
+          "ⲡ_2_post_ⲙ",
+          4
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲉⲧ_3_post_ⲡ",
+          2
+        ],
+        [
+          "ⲉⲧ_3_post_ⲡ",
+          "ϥ_5_post_ⲁϩⲉ",
+          2
+        ],
+        [
+          "ϥ_5_post_ⲁϩⲉ",
+          "ⲛⲁ_5_post_ⲁϩⲉ",
+          1
+        ],
+        [
+          "ϥ_5_post_ⲁϩⲉ",
+          "ⲁϩⲉ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲙⲏⲥⲉ",
+          "ⲙⲏⲥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϩⲟⲙⲛⲧ_2_post_ⲛ",
+          "ⲟⲩⲇⲉ_4_post_ⲛⲃⲣⲁ",
+          1
+        ],
+        [
+          "ⲟⲩⲇⲉ_4_post_ⲛⲃⲣⲁ",
+          "ⲛⲃⲣⲁ_3_post_ϩⲟⲙⲛⲧ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲙⲏⲥⲉ",
+          "ⲟⲩ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          "ϩⲛⲁⲁⲩ_3_post_ⲛⲓⲙ",
+          1
+        ],
+        [
+          "ϩⲛⲁⲁⲩ_3_post_ⲛⲓⲙ",
+          "ⲛⲓⲙ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲙⲏⲥⲉ",
+          "ⲡⲉⲕ_3_post_ⲥⲟⲛ",
+          1
+        ],
+        [
+          "ⲡⲉⲕ_3_post_ⲥⲟⲛ",
+          "ⲥⲟⲛ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲙⲛ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          "ⲡ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ϫⲓⲛϭⲟⲛⲥ",
+          "ϫⲓⲛϭⲟⲛⲥ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ⲛⲟⲩⲧⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          "ⲛⲉⲩ_3_post_ϫⲓⲥⲟⲟⲩⲉ",
+          1
+        ],
+        [
+          "ⲛⲉⲩ_3_post_ϫⲓⲥⲟⲟⲩⲉ",
+          "ϫⲓⲥⲟⲟⲩⲉ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲱⲱⲣⲉ_3_post_ⲡ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲙⲏⲥⲉ",
+          "ⲙⲏⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲛⲁⲓ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲁⲗⲗⲁ_1_pre_ⲙⲏⲥⲉ",
+          "ⲧ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲙⲏⲥⲉ",
+          "ⲙⲏⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲙⲏⲥⲉ_0_node",
+          "ⲧⲁⲓ_1_post_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲙⲏⲥⲉ",
+          "ⲧⲉⲩ_1_pre_ⲙⲏⲥⲉ",
+          1
+        ],
+        [
+          "ⲧⲉⲩ_1_pre_ⲙⲏⲥⲉ",
+          "ⲙⲏⲥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲙⲏⲥⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ⲉⲧ_3_post_ⲛ",
+          1
+        ],
+        [
+          "ⲉⲧ_3_post_ⲛ",
+          "ⲟⲩⲟϣ_4_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲟϣ_4_post_ⲉⲧ",
+          "ⲟⲩ_5_post_ⲟⲩⲟϣ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.26,
+      "rank": 1452,
+      "count": 42
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C2042",
+      "label": "ϭⲓⲛⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "birth, generation"
+    },
+    {
+      "target": "C2048",
+      "label": "ⲁⲧⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "without interest"
+    },
+    {
+      "target": "C2040",
+      "label": "ⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "unborn"
+    },
+    {
+      "target": "C2045",
+      "label": "ⲙⲁⲥ",
+      "pos": "N",
+      "gloss": "young (mostly of animal or bird), child"
+    },
+    {
+      "target": "C2037",
+      "label": "ⲙⲁⲥ-",
+      "pos": "V",
+      "gloss": "bearing, producing"
+    },
+    {
+      "target": "C2046",
+      "label": "ⲙⲁⲥⲉ",
+      "pos": "N",
+      "gloss": "young animal, esp. calf, bull"
+    },
+    {
+      "target": "C2043",
+      "label": "ⲙⲉⲥⲓⲉ",
+      "pos": "V",
+      "gloss": "whom . . . bore"
+    },
+    {
+      "target": "C2052",
+      "label": "ⲙⲉⲥⲓⲟ",
+      "pos": "V",
+      "gloss": "bring to birth, deliver sb (midwife)"
+    },
+    {
+      "target": "C2053",
+      "label": "ⲙⲉⲥⲓⲱ",
+      "pos": "N",
+      "gloss": "midwife, nurse"
+    },
+    {
+      "target": "C2049",
+      "label": "ⲙⲉⲥⲓⲱϯ",
+      "pos": "N",
+      "gloss": "womb"
+    },
+    {
+      "target": "C2050",
+      "label": "ⲙⲉⲥⲟⲣⲏ",
+      "pos": "N",
+      "gloss": "name of the 12th month: \"Birth of Re\""
+    },
+    {
+      "target": "C2041",
+      "label": "ⲙⲉⲧⲁⲧⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "barrenness"
+    },
+    {
+      "target": "C2044",
+      "label": "ⲙⲏⲥⲉ",
+      "pos": "N",
+      "gloss": "one with child; child-birth"
+    },
+    {
+      "target": "C2035",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "V",
+      "gloss": "bear, bring forth; bear young; beget; be newly delivered, give suck"
+    },
+    {
+      "target": "C2036",
+      "label": "ⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "offspring, generation"
+    },
+    {
+      "target": "C2039",
+      "label": "ⲙⲛⲧⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "bearing, birth"
+    },
+    {
+      "target": "C2038",
+      "label": "ⲣⲉϥⲙⲓⲥⲉ",
+      "pos": "N",
+      "gloss": "one who bears"
+    },
+    {
+      "target": "C2051",
+      "label": "ⲥⲉⲙⲓⲥⲓ",
+      "pos": "N",
+      "gloss": "birth-place, seat, childbirth, parturition"
+    }
+  ],
+  "etym": {
+    "egy_num": "74780",
+    "egy_lemma": "ms",
+    "demo_num": "d2677",
+    "demo_lemma": "ms(.t)",
+    "english": "grain (as levy)",
+    "german": "Getreide (als Zins)",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/74780",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2677"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "C1962",
+  "forms": [
+    {
+      "id": "CF5579",
+      "orth": "ⲙⲛⲟⲧ",
+      "dialect": "B"
+    },
+    {
+      "orth": "ⲙⲛⲟϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3017,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ⲉⲙⲛⲟϯ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.07,
+        "rank": 3191,
+        "count": 6
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS2279",
+      "bibliography": "CD 176b; KoptHWb 96; DELC 117"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲓⲉⲧⲏⲓϥ ⲉϧⲣⲏⲓ ⲉⲛⲉⲛϫⲓϫ ⲛⲛⲏⲉⲧⲁⲩϭⲓϯ ⲛϫⲟⲛⲥ ⲛⲉⲙⲛⲏⲉⲧⲁⲩⲑⲉⲃⲓⲟ ⲛⲏⲉⲧⲁⲩϫⲟⲥ ⲛⲧⲉⲯⲩⲭⲏ ϫⲉⲕⲟⲗϫϯ ⲉϧⲣⲏⲓ ϩⲓⲛⲁ ⲛⲧⲉⲛⲥⲓⲛⲓ ⲁⲣⲉⲭⲱ ⲛⲛ**ⲉⲙⲛⲟϯ** ⲉⲩϣⲏϣ ⲛⲉⲙⲡⲓⲕⲁϩⲓ ⲉⲃⲟⲗϧⲁⲧⲉⲛ ⲛⲏⲉⲧⲥⲓⲛⲓ .",
+      "english": "And I will give it into the hands of them that injured thee, and them that afflicted thee; who said to thy soul, Bow down, that we may pass over: and thou didst level thy body with the ground to them passing by without.",
+      "source": "23_Isaias_51",
+      "urn": "urn:cts:copticLit:ot.isa.bohairic_ed:51",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲅⲓⲙⲁ . ⲛⲓⲇⲣⲁⲕⲱⲛ ⲛⲁⲩⲃⲱϣ ⲛⲛⲟⲩ**ⲙⲛⲟϯ** ⲉⲃⲟⲗ ⲁⲩϯϭⲓ ⲛⲛⲟⲩⲙⲁⲥ ⲛⲓϣⲉⲣⲓ ⲛⲧⲉⲡⲁⲗⲁⲟⲥ ⲁⲩϣⲱⲡⲓ ϧⲉⲛⲟⲩⲙⲉⲧⲁⲧⲟⲩϫⲁⲓ ⲙⲫⲣⲏϯ ⲛⲟⲩϭⲁϫ ϩⲓⲡϣⲁϥⲉ .",
+      "english": "GIMEL. Nay, serpents have drawn out the breasts, they give suck to their young, the daughters of my people are incurably cruel, as an ostrich in a desert.",
+      "source": "25_Lamentationes_04",
+      "urn": "urn:cts:copticLit:ot.lam.bohairic_ed:04",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ϭⲓϩⲁⲡ ⲛⲉⲙⲧⲉⲧⲉⲛⲙⲁⲩ ϭⲓϩⲁⲡ ⲛⲉⲙⲁⲥ ϫⲉⲧⲁⲥϩⲓⲙⲓ ⲁⲛ ⲧⲉ ⲟⲩⲟϩ ⲁⲛⲟⲕ ⲁⲛⲟⲕ ⲡⲉⲥϩⲁⲓ ⲁⲛ ⲟⲩⲟϩ ϯⲛⲁϥⲱϯ ⲛⲧⲉⲥⲡⲟⲣⲛⲉⲓⲁ ⲉⲃⲟⲗϩⲁ ⲡⲉⲥϩⲟ ⲛⲉⲙⲧⲉⲥⲙⲉⲧⲛⲱⲓⲕ ⲉⲃⲟⲗϧⲉⲛ ⲧⲙⲏϯ ⲛⲛⲉⲥ**ⲙⲛⲟϯ** .",
+      "english": "Plead with your mother, plead: for she is not my wife, and I am not her husband: and I will remove her fornication out of my presence, and her adultery from between her breasts:",
+      "source": "28_Osee_02",
+      "urn": "urn:cts:copticLit:ot.hos.bohairic_ed:02",
+      "dialect": "bohairic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "B": {
+      "rate": 0.15,
+      "rank": 1858,
+      "count": 13
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C1963",
+      "label": "ϭⲓⲙⲛⲟⲧ",
+      "pos": "V",
+      "gloss": "suck the breast"
+    }
+  ],
+  "etym": {
+    "egy_num": "71720",
+    "egy_lemma": "mnḏ",
+    "demo_num": "dm4210",
+    "demo_lemma": "mnt",
+    "english": "chest (of a man or woman)",
+    "german": "Brust; Euter",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/71720",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/dm4210"
+  }
+}

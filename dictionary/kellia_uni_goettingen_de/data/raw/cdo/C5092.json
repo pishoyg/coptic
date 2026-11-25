@@ -1,0 +1,110 @@
+{
+  "id": "C5092",
+  "forms": [
+    {
+      "id": "CF12149",
+      "orth": "ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 2.25,
+        "rank": 411,
+        "count": 355
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5723",
+      "bibliography": "CD 487b; ChLCS 68a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡⲃⲁⲡϯⲥⲧⲏⲥ · ⲡⲉⲧⲉⲙⲡϥⲧⲱⲟⲩⲛ ϩⲙⲡⲉϫⲡⲟ ⲛⲛⲉϩⲓⲟⲟⲙⲉ · ⲛϭⲓⲡⲉⲧⲟ ⲛⲛⲟϭ ⲉⲣⲟϥ · ⲉϥϣⲟⲟⲡ ϩⲛⲛϫⲁⲓⲉ · ϣⲁⲡⲉϩⲟⲟⲩ **ⲙⲡⲉϥⲟⲩⲱⲛϩ **ⲉⲃⲟⲗ**** ϩⲙⲡⲓⲥⲣⲁⲏⲗ ·",
+      "english": "ؤ",
+      "source": "Life of Onnophrius part 1",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:1-9",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲟⲟϩ ⟨ϩⲛ⟩(?) ϩⲱⲃ ⲛⲓⲙ ⲙⲡⲉϥⲟⲩⲟⲉⲓϣ **ⲡⲟⲩⲱⲛϩ **ⲉⲃⲟⲗ**** ⲛⲛⲉϥⲟⲩⲟⲉⲓϣ ⲡⲉ ⲁⲩⲱ ⲡⲙⲁⲉⲓⲛ ⲛϣⲁⲉⲛⲉϩ ⲡⲉ",
+      "english": "He made the moon also to serve in her season for a declaration of times, and a sign of the world.",
+      "source": "Sirach 43",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:43",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲛϥⲛⲁⲁϩⲉⲣⲁⲧϥ ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲛⲉⲗⲉⲁⲍⲁⲣ ⲡⲟⲩⲏⲏⲃ ⲁⲩⲱ ⲉⲩⲉϫⲛⲟⲩϥ ⲉⲡϩⲁⲡ **ⲛⲟⲩⲱⲛϩ **ⲉⲃⲟⲗ**** ⲙⲡⲉⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡϫⲟⲉⲓⲥ ⲉⲩⲛⲁⲉⲓ ⲉⲃⲟⲗ ϩⲙⲡϣⲁϫⲉ ⲛⲧⲉϥⲧⲁⲡⲣⲟ ⲛⲥⲉⲃⲱⲕ ⲉϩⲟⲩⲛ ⲟⲛ ϩⲓⲡϣⲁϫⲉ ⲛⲧⲉϥⲧⲁⲡⲣⲟ ⲛⲧⲟϥ ⲙⲛⲛϣⲏⲣⲉ ⲙⲡⲓⲥⲣⲁⲏⲗ ⲙⲛⲧⲥⲩⲛⲁⲅⲱⲅⲏ ⲧⲏⲣⲥ",
+      "english": "And he shall stand before Eleazar the priest, and they shall ask of him before the Lord the judgment of the Urim: they shall go forth at his word, and at his word they shall come in, he and the children of Israel with one accord, and all the congregation.",
+      "source": "Numbers 27",
+      "urn": "urn:cts:copticLit:ot.num.coptot:27",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 2.92,
+      "rank": 285,
+      "count": 464
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5093",
+      "label": "ϩⲛ ⲟⲩⲟⲩⲱⲛϩ ⲉⲃⲟⲗ",
+      "pos": "ADV",
+      "gloss": "in openness, openly"
+    },
+    {
+      "target": "C5090",
+      "label": "ϭⲓⲛⲟⲩⲱⲛϩ",
+      "pos": "N",
+      "gloss": "appearance"
+    },
+    {
+      "target": "C5089",
+      "label": "ⲁⲑⲟⲩⲱⲛϩ",
+      "pos": "N",
+      "gloss": "unshown, invisible"
+    },
+    {
+      "target": "C5094",
+      "label": "ⲁⲧⲟⲩⲱⲛϩ ⲉⲃⲟⲗ",
+      "pos": "N",
+      "gloss": "unshown, invisible"
+    },
+    {
+      "target": "C5087",
+      "label": "ⲟⲩⲱⲛϩ",
+      "pos": "V",
+      "gloss": "reveal, be revealed, appear"
+    },
+    {
+      "target": "C5088",
+      "label": "ⲟⲩⲱⲛϩ",
+      "pos": "N",
+      "gloss": "revelation, declaration"
+    },
+    {
+      "target": "C5091",
+      "label": "ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "show forth, appear"
+    },
+    {
+      "target": "C5095",
+      "label": "ⲣⲁⲧⲟⲩⲱⲛϩ ⲉⲃⲟⲗ",
+      "pos": "V",
+      "gloss": "be invisible, inconspicuous"
+    }
+  ]
+}

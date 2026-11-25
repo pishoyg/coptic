@@ -1,0 +1,479 @@
+{
+  "id": "C667",
+  "forms": [
+    {
+      "id": "CF2499",
+      "orth": "ⲉⲙⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5023,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF2500",
+      "orth": "ⲉⲙⲟⲩ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.06,
+        "rank": 3603,
+        "count": 5
+      }
+    },
+    {
+      "id": "CF2501",
+      "orth": "ⲉⲙⲟⲩ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF2502",
+      "orth": "ⲁⲙⲟⲩ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 1.1,
+        "rank": 678,
+        "count": 173
+      }
+    },
+    {
+      "orth": "ⲉⲙⲟⲟⲩⲉ",
+      "dialect": "S",
+      "id": "658.1"
+    },
+    {
+      "orth": "ⲉⲙⲱⲟⲩⲓ",
+      "dialect": "B",
+      "id": "658.2"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS804",
+      "bibliography": "CD 55b; CED 35; KoptHWb 35, 498; DELC 42-43; ChLCS 11a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲟⲩⲟϩ ⲡⲉⲧⲉⲛⲕⲟⲩϫⲓ ⲛⲥⲟⲛ ⲁⲛⲓⲧϥ ϩⲁⲣⲟⲓ ⲟⲩⲟϩ ⲉⲩⲉⲧⲉⲛϩⲉⲧ ⲛⲉⲧⲉⲛⲥⲁϫⲓ ⲙⲙⲟⲛ ⲉⲣⲉⲧⲉⲛ**ⲉⲙⲟⲩ** ⲁⲩⲓⲣⲓ ⲇⲉ ⲙⲡⲁⲓⲣⲏϯ",
+      "english": "And bring your younger brother to me, and your words shall be believed; but, if not, ye shall die. And they did so.",
+      "source": "01_Genesis_42",
+      "urn": "urn:cts:copticLit:ot.gen.bohairic_ed:42",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲡϣⲏⲣⲉ ⲙⲡⲣⲱⲙⲉ ⲁϫⲓⲥ ⲛⲁⲥ ϫⲉⲛⲧⲟ ⲡⲉ ⲡⲕⲁϩ ⲉⲧⲉⲙⲡϥϫⲓⲙⲟⲟⲩ ⲟⲩⲧⲉ ⲙⲡ**ⲉⲙⲟⲩ** ⲛϩⲱⲟⲩ ⲉⲓ ⲉϩⲣⲁⲓ ⲉϫⲱ ϩⲙⲡⲉϩⲟⲟⲩ ⲛⲧⲁⲟⲣⲅⲏ",
+      "english": "Son of man, say to her, Thou art the land that is not rained upon, neither has rain come upon thee in the day of wrath;",
+      "source": "Ezekiel 22",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:22",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉⲥⲉϣⲱⲡⲓ ϯⲥⲏϥⲓ ⲑⲏ ⲛⲑⲱⲧⲉⲛ ⲉⲧⲉⲧⲉⲛⲉⲣϩⲟϯ ϧⲁⲧϩⲏ ⲙⲡⲉⲥϩⲟ ⲉⲥⲉϫⲉⲙ ⲑⲏⲛⲟⲩ ϧⲉⲛⲡⲕⲁϩⲓ ⲛⲭⲏⲙⲓ ⲟⲩⲟϩ ⲡⲓϩⲕⲟ ⲉⲧⲉⲧⲉⲛⲉⲣϩⲟϯ ϧⲁⲧⲉϥϩⲏ ⲉϥⲉⲧⲁϩⲟⲧⲉⲛ ϩⲓⲫⲁϩⲟⲩ ⲙⲙⲱⲧⲉⲛ ϧⲉⲛⲭⲏⲙⲓ ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛ**ⲉⲙⲟⲩ** ⲙⲙⲁⲩ .",
+      "english": "If ye set your face toward Egypt, and go in there to dwell; then it shall be, that the sword which ye fear shall find you in the land of Egypt, and the famine to which ye have regard, shall overtake you, coming after you in Egypt; and there ye shall die.",
+      "source": "24_Ieremias_49",
+      "urn": "urn:cts:copticLit:ot.jer.bohairic_ed:49",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲁⲩⲱ ⲡⲁⲣⲭⲱⲛ ⲉⲧϣⲟⲟⲡ ϩⲙⲡⲙⲉϩⲥⲛⲁⲩ ⲛⲧⲁⲙⲉⲓⲟⲛ ⲟⲩ ϩⲟ ⲛ**ⲉⲙⲟⲩ** ⲡⲉ ⲡⲉϥⲁⲩⲑⲉⲛⲧⲓⲕⲟⲛ ⲛϩⲟ · ⲡⲁⲓ ⲉϣⲁⲩⲙⲟⲩⲧⲉ ⲉⲣⲟϥ ϩⲙⲡⲉⲩⲧⲟⲡⲟⲥ ϫⲉⲭⲁⲣⲁⲭⲁⲣ ·",
+      "english": "“And the ruler who is in the second dungeon,--a cat's face is his authentic face. This [is] he who is called in his region 'Charachar.”",
+      "source": "Pistis Sophia Book 3 Part 5",
+      "urn": "urn:cts:copticLit:pistissophia.2.petermann:100-108",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲟⲩⲟϩ ⲉⲣⲉⲧⲉⲛ**ⲉⲙⲟⲩ**ϯ ⲉⲡⲁⲓⲉϩⲟⲟⲩ ⲫⲁⲓ ϫⲉⲡⲉⲧⲟⲩⲙⲟⲩϯ ⲉⲣⲟϥ ⲉϥⲉϣⲱⲡⲓ ⲛⲱⲧⲉⲛ ⲉϥⲟⲩⲁⲃ ϩⲱⲃ ⲛⲓⲃⲉⲛ ⲛϣⲉⲙϣⲓ ⲛⲛⲉⲧⲉⲛⲉⲛⲁⲓⲧⲟⲩ ⲛϧⲏⲧϥ ⲛⲟⲩⲛⲟⲙⲓⲙⲟⲛ ⲛⲉⲛⲉϩ ϧⲉⲛⲛⲉⲧⲉⲛϫⲱⲟⲩ ⲉϩⲣⲏⲓ ϧⲉⲛⲙⲁⲛϣⲱⲡⲓ ⲛⲓⲃⲉⲛ ⲛⲧⲱⲧⲉⲛ",
+      "english": "And ye shall call this day a convocation: it shall be holy to you; ye shall do no servile work on it: it is a perpetual ordinance throughout your generations in all your habitations.",
+      "source": "03_Leviticus_23",
+      "urn": "urn:cts:copticLit:ot.lev.bohairic_ed:23",
+      "dialect": "bohairic"
+    },
+    {
+      "coptic": "ⲛⲕⲉϭⲓⲛϭⲗⲱ ⲙⲛⲛⲃⲏⲛⲉ ⲙⲛⲛϩⲁⲗⲁⲧⲉ ⲙⲛⲛⲕⲉ**ⲉⲙⲟⲩ** ⲉϣⲁⲩⲟⲩⲱϩ ⲉϫⲙⲡⲉⲩⲥⲱⲙⲁ ⲙⲛⲡⲉⲩⲁⲡⲉ",
+      "english": "Upon their bodies and heads sit bats, swallows, and birds, and the cats also.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "B": [
+      [
+        "ⲉⲣⲉ",
+        5,
+        13.535
+      ],
+      [
+        "ⲥⲁⲗⲡⲓⲅⲝ",
+        1,
+        12.618
+      ],
+      [
+        "ⲧⲉⲛ",
+        5,
+        12.045
+      ],
+      [
+        "ⲟⲩⲃⲉ",
+        1,
+        9.781
+      ],
+      [
+        "ⲙⲙⲁⲩ",
+        2,
+        9.732
+      ],
+      [
+        "ⲟⲩⲟϩ",
+        4,
+        8.758
+      ],
+      [
+        "ⲭⲏⲙⲓ",
+        1,
+        8.321
+      ],
+      [
+        "ⲙⲙⲟⲛ",
+        1,
+        7.492
+      ],
+      [
+        "ⲓⲣⲓ",
+        1,
+        7.363
+      ],
+      [
+        "ⲑⲏⲛⲟⲩ",
+        1,
+        7.029
+      ],
+      [
+        "ϯ",
+        2,
+        6.968
+      ],
+      [
+        "ⲉϩⲟⲟⲩ",
+        1,
+        6.807
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.311
+      ],
+      [
+        ".",
+        2,
+        6.294
+      ],
+      [
+        "ⲉⲩⲉ",
+        1,
+        6.013
+      ],
+      [
+        "ⲥⲁϫⲓ",
+        1,
+        5.962
+      ],
+      [
+        "ⲉ",
+        2,
+        5.695
+      ],
+      [
+        "ϥ",
+        2,
+        5.102
+      ],
+      [
+        "ⲇⲉ",
+        1,
+        4.727
+      ],
+      [
+        "ⲛⲓ",
+        1,
+        3.896
+      ]
+    ],
+    "S": [
+      [
+        "ⲣϩⲟⲩⲉⲥϩⲟⲩⲉ",
+        1,
+        18.276
+      ],
+      [
+        "ϫⲓⲙⲟⲟⲩ",
+        1,
+        16.691
+      ],
+      [
+        "ⲁⲩⲑⲉⲛⲧⲓⲕⲟⲛ",
+        1,
+        16.276
+      ],
+      [
+        "ϩⲱⲟⲩ",
+        1,
+        11.867
+      ],
+      [
+        "ⲧⲁⲙⲉⲓⲟⲛ",
+        1,
+        11.85
+      ],
+      [
+        "ϩⲁⲗⲁⲧⲉ",
+        1,
+        11.753
+      ],
+      [
+        "ⲥϩⲟⲩⲟⲣⲧ",
+        1,
+        11.137
+      ],
+      [
+        "ⲟⲩⲧⲉ",
+        1,
+        10.475
+      ],
+      [
+        "ⲛ",
+        6,
+        9.242
+      ],
+      [
+        "ⲟⲩⲱϩ",
+        1,
+        8.945
+      ],
+      [
+        "ϩⲱⲛ",
+        1,
+        8.833
+      ],
+      [
+        "ϩⲟ",
+        1,
+        8.51
+      ],
+      [
+        "ⲥⲟⲛ",
+        1,
+        8.41
+      ],
+      [
+        "ⲕⲉ",
+        1,
+        7.204
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        7.005
+      ],
+      [
+        "ⲡⲉⲕ",
+        1,
+        6.546
+      ],
+      [
+        "ⲡⲁⲓ",
+        1,
+        6.255
+      ],
+      [
+        "ⲧⲉⲧⲛ",
+        1,
+        6.126
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.086
+      ],
+      [
+        "ϣⲁ",
+        1,
+        6.024
+      ]
+    ]
+  },
+  "network": {
+    "B": {
+      "nodes": [
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲟⲩ",
+          5
+        ],
+        [
+          "ⲉⲙⲟⲩ_0_node",
+          5
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲙⲟⲩ",
+          2
+        ],
+        [
+          "ⲙⲙⲁⲩ_1_post_ⲉⲙⲟⲩ",
+          2
+        ],
+        [
+          "ⲙⲙⲟⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲟⲩ",
+          "ⲉⲙⲟⲩ_0_node",
+          3
+        ],
+        [
+          "ⲟⲩⲟϩ_1_pre_ⲉⲙⲟⲩ",
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲉⲙⲟⲩ_0_node",
+          "ⲙⲙⲁⲩ_1_post_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲙⲟⲛ_1_pre_ⲉⲙⲟⲩ",
+          "ⲧⲉⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ]
+      ]
+    },
+    "S": {
+      "nodes": [
+        [
+          "ⲉⲙⲟⲩ_0_node",
+          4
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ϩⲱⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b_1",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉⲙⲟⲩ_0_node",
+          "ⲛ_1_post_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲉⲙⲟⲩ",
+          "ϩⲱⲟⲩ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ",
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b",
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b_1",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲉⲙⲟⲩ_b_1",
+          "ⲛ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲉⲙⲟⲩ",
+          "ⲕⲉ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲕⲉ_1_pre_ⲉⲙⲟⲩ",
+          "ⲉⲙⲟⲩ_0_node",
+          1
+        ],
+        [
+          "ⲁⲩⲱ_1_pre_ⲉⲙⲟⲩ",
+          "ⲧ_1_pre_ⲉⲙⲟⲩ",
+          1
+        ],
+        [
+          "ⲧ_1_pre_ⲉⲙⲟⲩ",
+          "ⲉⲙⲟⲩ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4603,
+      "count": 5
+    },
+    "B": {
+      "rate": 0.06,
+      "rank": 3182,
+      "count": 5
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C13011",
+      "type": "cf",
+      "label": "cat (F)"
+    }
+  ],
+  "etym": {
+    "egy_num": "854443",
+    "egy_lemma": "mjw.t",
+    "demo_num": "d2326",
+    "demo_lemma": "mj(.t)",
+    "english": "Cat",
+    "german": "Katze",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/854443",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d2326"
+  }
+}

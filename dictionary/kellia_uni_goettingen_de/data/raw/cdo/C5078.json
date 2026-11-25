@@ -1,0 +1,265 @@
+{
+  "id": "C5078",
+  "forms": [
+    {
+      "id": "CF31882",
+      "orth": "ⲟⲩⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.81,
+        "rank": 845,
+        "count": 128
+      }
+    },
+    {
+      "id": "CF31881",
+      "orth": "ⲟⲩⲉⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4535,
+        "count": 6
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲛⲧ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 9373,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲩⲟⲛⲧⲟⲩ",
+      "dialect": "S",
+      "id": "1731.2"
+    },
+    {
+      "orth": "ⲟⲩⲉⲛⲧ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 5129,
+        "count": 2
+      }
+    },
+    {
+      "orth": "ⲟⲩⲉⲛⲧ",
+      "dialect": "A",
+      "id": "1731.4"
+    },
+    {
+      "orth": "ⲟⲩⲉⲛⲧⲉ",
+      "dialect": "A",
+      "id": "1731.5"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5709",
+      "bibliography": "CD 484ab; CED 213-214; KoptHWb 274; DELC 235a; ChLCS 68a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲛⲉⲉϥ ⲣϩⲟⲧⲉ ϩⲛⲟⲩⲛⲟϭ ⲛϩⲟⲧⲉ ⲁⲩⲱ ⲁⲩⲱϣ ⲉⲃⲟⲗ ⲛϭⲓⲡⲟⲩⲁ ⲡⲟⲩⲁ ⲉϩⲣⲁⲓ ⲉⲡⲉϥⲛⲟⲩⲧⲉ : ⲁⲩⲱ ⲁⲩⲛⲟⲩϫⲉ ⲉⲃⲟⲗ ϩⲛⲛⲉⲥⲕⲉⲩⲏ ⲉⲧϩⲛⲡϫⲟⲉⲓ ⲉⲧⲉⲑⲁⲗⲁⲥⲥⲁ : ⲉⲧⲣⲉⲡϫⲟⲉⲓ ⲁⲥⲁⲓ ⲉⲣⲟⲟⲩ : ⲓⲱⲛⲁⲥ ⲇⲉ ⲁϥⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉⲡ**ⲟⲩⲛⲧ** ⲙⲡϫⲟⲉⲓ ⲁϥⲛⲕⲟⲧⲕ ⲁϥϩⲣϩⲣ :",
+      "english": "And the sailors were alarmed, and cried every one to his god, and cast out the wares that were in the ship into the sea, that it might be lightened of them. But Jonas was gone down into the hold of the ship, and was asleep, and snored.",
+      "source": "Jonah Chapter 1 (Sahidic)",
+      "urn": "urn:cts:copticLit:ot.jonah.coptot_ed:1",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲙⲁⲩ",
+        95,
+        27.682
+      ],
+      [
+        "ⲟⲩ",
+        143,
+        25.7
+      ],
+      [
+        "ϥ",
+        140,
+        24.909
+      ],
+      [
+        "ⲥⲓϭⲉ",
+        3,
+        24.353
+      ],
+      [
+        "ⲉⲧⲉ",
+        37,
+        23.912
+      ],
+      [
+        "ϫⲟⲉⲓⲥ",
+        2,
+        22.598
+      ],
+      [
+        "ⲉⲝⲟⲩⲥⲓⲁ",
+        12,
+        22.281
+      ],
+      [
+        "ⲟⲩⲥⲡⲉⲣⲙⲁ",
+        2,
+        21.598
+      ],
+      [
+        "ⲉ",
+        57,
+        21.316
+      ],
+      [
+        "ⲙⲙⲛⲧⲉ",
+        2,
+        20.598
+      ],
+      [
+        "ⲥ",
+        33,
+        20.407
+      ],
+      [
+        "ⲥϩⲓⲙⲉ",
+        12,
+        20.01
+      ],
+      [
+        "ⲭⲣⲏⲙⲁ",
+        5,
+        19.744
+      ],
+      [
+        "ϩⲧⲟⲣ",
+        3,
+        19.709
+      ],
+      [
+        "ⲡ",
+        42,
+        19.674
+      ],
+      [
+        "ⲛ",
+        49,
+        19.653
+      ],
+      [
+        "ⲟⲩⲁϩⲙⲉⲥ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲩⲥⲓϭⲉ",
+        1,
+        19.598
+      ],
+      [
+        "ⲟⲩϣⲏⲓ",
+        1,
+        19.598
+      ],
+      [
+        "...(?)",
+        1,
+        19.598
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲉ_1_pre_ⲟⲩⲛⲧ",
+          1
+        ],
+        [
+          "ⲕ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲧ_0_node",
+          2
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛⲧ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲉ_1_pre_ⲟⲩⲛⲧ",
+          "ⲕ_2_pre_ⲉ",
+          1
+        ],
+        [
+          "ⲕ_2_pre_ⲉ",
+          "ⲟⲩ_1_pre_ⲟⲩⲛⲧ",
+          1
+        ],
+        [
+          "ⲟⲩ_1_pre_ⲟⲩⲛⲧ",
+          "ⲟⲩⲛⲧ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲛⲧ_0_node",
+          "ⲙ_1_post_ⲟⲩⲛⲧ",
+          1
+        ],
+        [
+          "ⲙ_1_post_ⲟⲩⲛⲧ",
+          "ⲡ_2_post_ⲙ",
+          1
+        ],
+        [
+          "ⲡ_2_post_ⲙ",
+          "ϫⲟⲉⲓ_3_post_ⲡ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6704,
+      "count": 2
+    }
+  },
+  "etym": {
+    "egy_num": "47220",
+    "egy_lemma": "wnḏ.wt",
+    "demo_num": "d1404",
+    "demo_lemma": "wnṱ",
+    "english": "hold (of a ship); cavity",
+    "german": "Schiffsbauch; Höhlung",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/47220",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1404"
+  }
+}

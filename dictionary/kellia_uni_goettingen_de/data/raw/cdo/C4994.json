@@ -1,0 +1,46 @@
+{
+  "id": "C4994",
+  "forms": [
+    {
+      "id": "CF11953",
+      "orth": "ⲟⲩⲱⲗⲡ",
+      "dialect": "S"
+    },
+    {
+      "orth": "ⲟⲩⲟⲗⲡ⸗",
+      "dialect": "S",
+      "id": "3144.1"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS5620",
+      "bibliography": "CD 477b; CED 211; KoptHWb 270; DELC 232a; ChLCS 67a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C4995",
+      "label": "ⲟⲩⲗⲡⲉ",
+      "pos": "N",
+      "gloss": "hollow place, cave; insensitive place (on skin)"
+    }
+  ],
+  "etym": {
+    "egy_num": "46600",
+    "egy_lemma": "wnp",
+    "demo_num": "d1431",
+    "demo_lemma": "wrp",
+    "english": "to stab",
+    "german": "erstechen; fesseln",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/46600",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d1431"
+  }
+}

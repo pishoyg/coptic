@@ -1,0 +1,53 @@
+{
+  "id": "C7322",
+  "forms": [
+    {
+      "id": "CF16703",
+      "orth": "ϫⲉⲣⲟ (ⲉⲃⲟⲗ)",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "collocAdv": "ⲉⲃⲟⲗ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS8090",
+      "bibliography": "CD 782a; KoptHWb 431"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲕⲁⲡⲛⲟⲥ ⲉⲓ ⲉϩⲣⲁⲓ ϩⲛⲧⲉϥⲟⲣⲅⲏ ⲁⲩⲕⲱϩⲧ ⲙⲟⲩϩ ⲙⲡⲉϥⲙⲧⲟ ⲉⲃⲟⲗ ⲁϩⲉⲛϫⲃⲃⲉⲥ **ϫⲉⲣⲟ **ⲉⲃⲟⲗ**** ⲙⲙⲟϥ",
+      "english": "And he bowed the heaven, and came down: and thick darkness was under his feet.",
+      "source": "Psalms 17",
+      "urn": "urn:cts:copticLit:ot.pss.coptot:17",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ϫⲉⲁⲩⲕⲱϩⲧ **ϫⲉⲣⲟ **ⲉⲃⲟⲗ**** ϩⲙⲡⲁϭⲱⲛⲧ ϥⲛⲁⲣⲱⲕϩ ϣⲁⲡⲉⲥⲏⲧ ⲉⲁⲙⲛⲧⲉ ϥⲛⲁⲟⲩⲱⲙ ⲛⲥⲁⲡⲕⲁϩ ⲙⲛⲛⲉϥⲅⲉⲛⲏⲙⲁ ϥⲛⲁϫⲟ ⲉⲃⲟⲗ ⲛⲛⲥⲛⲧⲉ ⲛⲛⲧⲟⲩⲉⲓⲏ",
+      "english": "For a fire has been kindled out of my wrath, it shall burn to hell below; it shall devour the land, and the fruits of it; it shall set on fire the foundations of the mountains.",
+      "source": "Deuteronomy 32",
+      "urn": "urn:cts:copticLit:ot.deut.coptot:32",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "superEntryReferences": [
+    {
+      "target": "C7321",
+      "label": "ϫⲉⲣⲟ",
+      "pos": "V",
+      "gloss": "blaze, burn; kindle"
+    },
+    {
+      "target": "C7323",
+      "label": "ⲁⲧϭⲉⲣⲟ",
+      "pos": "N",
+      "gloss": "unlit"
+    }
+  ]
+}

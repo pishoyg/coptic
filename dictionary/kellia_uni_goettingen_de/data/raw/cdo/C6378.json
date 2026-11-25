@@ -1,0 +1,137 @@
+{
+  "id": "C6378",
+  "forms": [
+    {
+      "id": "CF14771",
+      "orth": "ϩⲓⲑⲏ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 11053,
+        "count": 1
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS7074",
+      "bibliography": "CD 642a; CED 270; KoptHWb 350; ChLCS 86b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲛⲟⲕ ⲇⲉ ⲁⲓⲥⲱⲧⲙ ⲉϩⲉⲛⲫⲱⲛⲏ ⲛⲁⲅⲅⲉⲗⲟⲥ ⲉⲩϩⲩⲙⲛⲉⲩⲉ **ϩⲓⲑⲏ** ⲙⲡⲙⲁⲕⲁⲣⲓⲟⲥ ⲁⲡⲁ ⲟⲛⲛⲟϥⲣⲓⲟⲥ · ⲁⲩⲱ ⲛⲉⲣⲉⲟⲩⲛⲟϭ ⲛⲟⲩⲣⲟⲧ ϣⲟⲟⲡ ϩⲛⲧⲉϥϭⲓⲛⲁⲡⲁⲛⲧⲁ ⲉⲡⲛⲟⲩⲧⲉ ·",
+      "english": "And I heard the voices of the angels singing hymns before the blessed Apa Onnofrios, and there was great joy at his meeting God.",
+      "source": "Life of Onnophrius part 3",
+      "urn": "urn:cts:copticLit:lives.onnophrius.budge:17-24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϩⲩⲙⲛⲉⲩⲉ",
+        1,
+        14.223
+      ],
+      [
+        "ⲙⲁⲕⲁⲣⲓⲟⲥ",
+        1,
+        13.021
+      ],
+      [
+        "ⲁⲡⲁ",
+        1,
+        11.348
+      ],
+      [
+        "ⲁⲅⲅⲉⲗⲟⲥ",
+        1,
+        11.019
+      ],
+      [
+        "ⲩ",
+        1,
+        5.81
+      ],
+      [
+        "ⲙ",
+        1,
+        5.351
+      ],
+      [
+        "ⲉ",
+        1,
+        4.817
+      ],
+      [
+        "ⲡ",
+        1,
+        4.497
+      ]
+    ]
+  },
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 10643,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6377",
+      "label": "ϩⲁⲑⲏ",
+      "pos": "ADV",
+      "gloss": "in front of, before"
+    },
+    {
+      "target": "C6372",
+      "label": "ϩⲏ",
+      "pos": "N",
+      "gloss": "front part, beginning"
+    },
+    {
+      "target": "C6373",
+      "label": "ϩⲏⲧ⸗",
+      "pos": "ADV",
+      "gloss": "forward, before"
+    },
+    {
+      "target": "C6379",
+      "label": "ϩⲓϩⲏ",
+      "pos": "ADV",
+      "gloss": "to, in front, forward"
+    },
+    {
+      "target": "C6380",
+      "label": "ϫⲓⲛⲛϩⲏ",
+      "pos": "ADV",
+      "gloss": "from beginning"
+    },
+    {
+      "target": "C6375",
+      "label": "ⲉⲑⲏ",
+      "pos": "ADV",
+      "gloss": "to the front, forwards"
+    },
+    {
+      "target": "C6376",
+      "label": "ⲛⲥⲁⲑⲏ",
+      "pos": "ADV",
+      "gloss": "before, formerly"
+    },
+    {
+      "target": "C6374",
+      "label": "ⲣϩⲏⲧⲥ",
+      "pos": "V",
+      "gloss": "make beginning"
+    }
+  ]
+}

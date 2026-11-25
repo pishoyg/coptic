@@ -1,0 +1,93 @@
+{
+  "id": "C569",
+  "forms": [
+    {
+      "id": "CF2168",
+      "orth": "ⲣⲉϥⲃⲱⲧⲥ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF2169",
+      "orth": "ⲣⲉϥⲃⲱⲧⲥ",
+      "dialect": "B"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS680",
+      "bibliography": "CD 46a"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "type": "compound",
+  "crossReferences": [
+    {
+      "target": "C3102",
+      "type": "cf",
+      "label": "man who . . . (nominal prefix)"
+    }
+  ],
+  "superEntryReferences": [
+    {
+      "target": "C568",
+      "label": "ⲁⲧⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "unconquerable, incontestable"
+    },
+    {
+      "target": "C572",
+      "label": "ⲃⲁⲧⲥ",
+      "pos": "N",
+      "gloss": "combat, quarrel"
+    },
+    {
+      "target": "C571",
+      "label": "ⲃⲉⲧⲥ",
+      "pos": "N",
+      "gloss": "war"
+    },
+    {
+      "target": "C573",
+      "label": "ⲃⲏⲧⲥⲏ",
+      "pos": "N",
+      "gloss": "female warrior"
+    },
+    {
+      "target": "C567",
+      "label": "ⲃⲱⲧⲥ",
+      "pos": "N",
+      "gloss": "(battle) array, war"
+    },
+    {
+      "target": "C566",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ ⲉ-)",
+      "pos": "V",
+      "gloss": "be drawn up (for battle), fight"
+    },
+    {
+      "target": "C564",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "V",
+      "gloss": "draw up, set out, assess(?)"
+    },
+    {
+      "target": "C565",
+      "label": "ⲃⲱⲧⲥ (ⲉⲃⲟⲗ)",
+      "pos": "N",
+      "gloss": "tax assessment"
+    },
+    {
+      "target": "C570",
+      "label": "ⲉⲣⲃⲱⲧⲥ (ⲛⲉⲙ-)",
+      "pos": "V",
+      "gloss": "array against, make war with"
+    }
+  ]
+}

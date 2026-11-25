@@ -1,0 +1,185 @@
+{
+  "id": "C6122",
+  "forms": [
+    {
+      "id": "CF14249",
+      "orth": "ⲁⲧϣⲧⲟⲣⲧⲣ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 7411,
+        "count": 2
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Adj."
+  },
+  "senses": [
+    {
+      "id": "CS6809",
+      "bibliography": "CD 598a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲧⲃⲉⲡⲁⲓ ϩⲱⲥ ⲉⲁⲛⲥⲱⲧⲡ ⲛⲁⲛⲟⲩ ⲛⲟⲩⲃⲓⲟⲥ ⲛⲁⲧⲣⲟⲟⲩϣ · ⲁⲩⲱ ⲛ**ⲁⲧϣⲧⲟⲣⲧⲣ** ·",
+      "english": "Therefore, as we would choose for ourselves a life free from care, and free from disturbance,",
+      "source": "On Penitence and Abstinence, part 2",
+      "urn": "urn:cts:copticLit:johnconst.penitence.budge:120-241",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲧϩⲉ ⲛⲟⲩⲥⲧⲩⲗⲟⲥ ⲛⲛⲟⲩⲃ ⲉϫⲛⲟⲩⲃⲁⲥⲓⲥ ⲛϩⲁⲧ ⲧⲁⲓ ⲧⲉ ⲧϩⲉ ⲛϩⲉⲛⲟⲩⲣⲏⲧⲉ ⲉⲛⲉⲥⲱⲟⲩ ⲉϫⲛϩⲛ... ⲛ**ⲁⲧϣⲧⲟⲣⲧⲣ**",
+      "english": "As the golden pillars are upon the sockets of silver; so are the fair feet with a constant heart.",
+      "source": "Sirach 26",
+      "urn": "urn:cts:copticLit:ot.sir.coptot:26",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "...ϩⲛ...............",
+        1,
+        19.598
+      ],
+      [
+        "ϩⲛ...",
+        1,
+        18.598
+      ],
+      [
+        "ⲁⲧⲣⲟⲟⲩϣ",
+        1,
+        16.139
+      ],
+      [
+        "ⲙⲁⲣ",
+        1,
+        10.232
+      ],
+      [
+        "ⲡⲱⲧ",
+        1,
+        10.036
+      ],
+      [
+        "ⲉϫⲛ",
+        1,
+        8.425
+      ],
+      [
+        "ⲁⲩⲱ",
+        2,
+        7.747
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ⲟⲩ",
+        1,
+        4.22
+      ],
+      [
+        "ⲁ",
+        1,
+        4.044
+      ],
+      [
+        "ⲡ",
+        1,
+        3.497
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲁⲧϣⲧⲟⲣⲧⲣ_0_node",
+          2
+        ],
+        [
+          "ϩⲛ..._1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲁⲩⲱ_1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          "ⲛ_1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          1
+        ],
+        [
+          "ⲛ_1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          "ⲁⲧϣⲧⲟⲣⲧⲣ_0_node",
+          1
+        ],
+        [
+          "ϩⲛ..._1_pre_ⲁⲧϣⲧⲟⲣⲧⲣ",
+          "ⲁⲧϣⲧⲟⲣⲧⲣ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 6957,
+      "count": 2
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C6120",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "V",
+      "gloss": "be disturbed, in haste, disturb"
+    },
+    {
+      "target": "C6121",
+      "label": "ϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "disturbance, trouble, haste"
+    },
+    {
+      "target": "C6126",
+      "label": "ϣⲧⲣⲧⲓⲣ",
+      "pos": "N",
+      "gloss": "hasty, rash person"
+    },
+    {
+      "target": "C6125",
+      "label": "ϯϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "make disturbance"
+    },
+    {
+      "target": "C6123",
+      "label": "ⲙⲛⲧϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "tranquillity"
+    },
+    {
+      "target": "C6124",
+      "label": "ⲣϣⲧⲟⲣⲧⲣ",
+      "pos": "N",
+      "gloss": "make disturbance"
+    }
+  ]
+}

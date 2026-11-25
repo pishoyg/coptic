@@ -1,0 +1,56 @@
+{
+  "id": "C10076",
+  "forms": [
+    {
+      "id": "CF26428",
+      "orth": "ⲡⲁⲣⲁⲧⲏⲣⲓ",
+      "dialect": null
+    },
+    {
+      "id": "CF26430",
+      "orth": "ⲡⲁⲣⲁⲧⲏⲣⲓ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF26429",
+      "orth": "ⲡⲁⲣⲁⲧⲏⲣⲉⲓ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.08,
+        "rank": 3182,
+        "count": 12
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "V",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS13247",
+      "bibliography": "DDGLC",
+      "cu_ID": "4170"
+    },
+    {
+      "id": "CS13248",
+      "bibliography": "DDGLC",
+      "cu_ID": "7450"
+    },
+    {
+      "id": "CS13249",
+      "bibliography": "DDGLC",
+      "cu_ID": "7049"
+    }
+  ],
+  "examples": [],
+  "collocations": {},
+  "network": {},
+  "etym": {
+    "grl_ID": "1669",
+    "grl_lemma": "παρατηρέω",
+    "grl_meaning": "to watch closely, take care",
+    "grl_pos": "verb",
+    "grl_ref": "LSJ 1327a; Preisigke 2:258"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "id": "C5748",
+  "forms": [
+    {
+      "id": "CF13480",
+      "orth": "ϣⲏⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.04,
+        "rank": 4309,
+        "count": 7
+      }
+    },
+    {
+      "orth": "ϣⲓⲃⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.8,
+        "rank": 852,
+        "count": 126
+      }
+    },
+    {
+      "orth": "ϣⲏⲓⲃⲓ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8783,
+        "count": 1
+      }
+    },
+    {
+      "orth": "ϣⲓⲃⲉ",
+      "dialect": "A",
+      "id": "1863.3"
+    },
+    {
+      "orth": "ϣⲓⲃⲓ",
+      "dialect": "F",
+      "id": "1863.4"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "m.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS6426",
+      "bibliography": "CD 551a; CED 237; KoptHWb 303; DELC 256a; ChLCS 75b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲁⲓ ⲇⲉ ⲙⲉⲩⲣⲃⲟⲗ ⲉ**ϣⲏⲃⲉ** ϩⲓϫⲟⲟⲗⲉⲥ ⲉϣⲁⲩϭⲟⲗⲟⲩ ⲇⲉ ⲛϩⲉⲛϩⲟⲉⲓⲧⲉ ⲛϫⲏϭⲉ",
+      "english": "Yet cannot these gods save themselves from rust and moth, though they be covered with purple raiment.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲡⲛⲟⲩⲃ ⲅⲁⲣ ⲉⲧⲟⲩϭⲟⲟⲗⲉ ⲙⲙⲟϥ ⲉⲩⲥⲁ ⲛⲁⲩ ⲉⲩⲧⲙϥⲱⲧⲉ ⲉⲃⲟⲗ ⲙⲡⲉϥ**ϣⲏⲃⲉ** ⲉⲙⲉⲩϯⲥⲁ ϩⲁⲣⲟⲟⲩ ⲙⲡⲉⲟⲩⲟⲉⲓϣ ⲅⲁⲣ ⲉⲩⲟⲩⲱⲧϩ ⲙⲙⲟⲟⲩ ⲙⲉⲩⲁⲓⲥⲑⲁⲛⲉ",
+      "english": "Notwithstanding the gold that is about them to make them beautiful, except they wipe off the rust, they will not shine: for neither when they were molten did they feel it.",
+      "source": "Epistle of Jeremiah 1",
+      "urn": "urn:cts:copticLit:ot.epjer.coptot:1",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛϥⲧⲙⲉⲓ ⲉⲃⲟⲗ ⲛϩⲏⲧⲥ ⲛϭⲓⲡⲉⲥ**ϣⲏⲃⲉ** ⲉⲧⲛⲁϣⲱϥ ⲛϥϫⲓϣⲓⲡⲉ ⲛϭⲓⲡⲉⲥϣⲏⲃⲉ",
+      "english": "and her abundant scum may not come forth of her.",
+      "source": "Ezekiel 24",
+      "urn": "urn:cts:copticLit:ot.ezek.coptot:24",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ϯⲥⲁ",
+        1,
+        16.791
+      ],
+      [
+        "ⲙⲉⲩ",
+        1,
+        14.621
+      ],
+      [
+        "ϫⲟⲟⲗⲉⲥ",
+        1,
+        14.331
+      ],
+      [
+        "ⲭⲁⲗⲕⲓⲟⲛ",
+        1,
+        13.398
+      ],
+      [
+        "ⲡⲉⲥ",
+        3,
+        12.678
+      ],
+      [
+        "ⲣⲃⲟⲗ",
+        1,
+        11.283
+      ],
+      [
+        "ⲛϩⲏⲧ",
+        3,
+        10.787
+      ],
+      [
+        "ϥⲱⲧⲉ",
+        1,
+        10.757
+      ],
+      [
+        "ϫⲓϣⲓⲡⲉ",
+        1,
+        10.725
+      ],
+      [
+        "ⲁⲣ",
+        1,
+        10.283
+      ],
+      [
+        "ϫⲱϩⲙ",
+        1,
+        9.939
+      ],
+      [
+        "ⲛϭⲓ",
+        3,
+        9.766
+      ],
+      [
+        "ⲱϫⲛ",
+        1,
+        9.752
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        9.291
+      ],
+      [
+        "ⲉϥϣⲁⲛ",
+        1,
+        8.942
+      ],
+      [
+        "ⲅⲁⲣ",
+        2,
+        8.872
+      ],
+      [
+        "ϥ",
+        5,
+        8.68
+      ],
+      [
+        "ϩⲁⲣⲟ",
+        1,
+        8.638
+      ],
+      [
+        "ϣⲁ",
+        2,
+        8.538
+      ],
+      [
+        "ⲉⲃⲟⲗ",
+        3,
+        8.413
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ϣⲏⲃⲉ_0_node",
+          7
+        ],
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲏⲃⲉ",
+          3
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲥ_3_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ϫⲟⲟⲗⲉⲥ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲏⲃⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲡⲉⲥ_1_pre_ϣⲏⲃⲉ",
+          "ϣⲏⲃⲉ_0_node",
+          3
+        ],
+        [
+          "ϣⲏⲃⲉ_0_node",
+          "ϩⲣⲁⲓ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ϩⲣⲁⲓ_1_post_ϣⲏⲃⲉ",
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          1
+        ],
+        [
+          "ⲛϩⲏⲧ_2_post_ϩⲣⲁⲓ",
+          "ⲥ_3_post_ⲛϩⲏⲧ",
+          1
+        ],
+        [
+          "ϣⲏⲃⲉ_0_node",
+          "ⲉⲧ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ϣⲏⲃⲉ",
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉⲧ",
+          "ϥ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ϣⲏⲃⲉ_0_node",
+          "ϩⲓ_2_post_ϫⲟⲟⲗⲉⲥ",
+          1
+        ],
+        [
+          "ϩⲓ_2_post_ϫⲟⲟⲗⲉⲥ",
+          "ϫⲟⲟⲗⲉⲥ_1_post_ϣⲏⲃⲉ",
+          1
+        ],
+        [
+          "ⲡⲉϥ_1_pre_ϣⲏⲃⲉ",
+          "ϣⲏⲃⲉ_0_node",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.04,
+      "rank": 3909,
+      "count": 7
+    }
+  },
+  "type": "hom",
+  "superEntryReferences": [
+    {
+      "target": "C5749",
+      "label": "ϣⲃⲉ",
+      "pos": "N",
+      "gloss": "refuse, filth"
+    },
+    {
+      "target": "C5750",
+      "label": "ϣⲏⲃⲉ",
+      "pos": "N",
+      "gloss": "scale"
+    }
+  ],
+  "etym": {
+    "egy_num": "182660",
+    "egy_lemma": "ḏꜥb.t",
+    "demo_num": "d7725",
+    "demo_lemma": "ḏb(e)(.t)",
+    "english": "charcoal",
+    "german": "Holzkohle; schwarzes Pigment",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/182660",
+    "tla_link_d": "https://thesaurus-linguae-aegyptiae.de/lemma/d7725"
+  }
+}

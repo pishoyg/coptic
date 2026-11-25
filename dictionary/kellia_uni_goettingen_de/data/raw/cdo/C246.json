@@ -1,0 +1,131 @@
+{
+  "id": "C246",
+  "forms": [
+    {
+      "id": "CF31517",
+      "orth": "ⲁⲩⲟⲩⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31518",
+      "orth": "ⲁⲟⲩⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF31520",
+      "orth": "ⲁⲩⲱⲛ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31519",
+      "orth": "ⲁⲟⲩⲱⲛ",
+      "dialect": "Ak"
+    },
+    {
+      "id": "CF31522",
+      "orth": "ⲁⲩⲱⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31521",
+      "orth": "ⲁⲟⲩⲱⲛ",
+      "dialect": "F"
+    },
+    {
+      "id": "CF31524",
+      "orth": "ⲁⲩⲱⲛ",
+      "dialect": "B"
+    },
+    {
+      "id": "CF31523",
+      "orth": "ⲁⲟⲩⲱⲛ",
+      "dialect": "B",
+      "freq_form": {
+        "rate": 0.14,
+        "rank": 2186,
+        "count": 12
+      }
+    },
+    {
+      "id": "CF31526",
+      "orth": "ⲁⲩⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF31525",
+      "orth": "ⲁⲟⲩⲱⲛ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.02,
+        "rank": 6475,
+        "count": 3
+      }
+    },
+    {
+      "id": "CF1008",
+      "orth": "ⲉⲩⲉⲛ",
+      "dialect": "A"
+    },
+    {
+      "id": "CF1009",
+      "orth": "ⲁⲩⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1010",
+      "orth": "ⲉⲟⲩⲉⲛ",
+      "dialect": "L"
+    },
+    {
+      "id": "CF1011",
+      "orth": "ⲁⲩⲟⲩⲱⲛ",
+      "dialect": "S"
+    },
+    {
+      "id": "CF1013",
+      "orth": "ⲁⲟⲩⲟⲛ",
+      "dialect": "M"
+    },
+    {
+      "id": "CF1014",
+      "orth": "ⲁⲟⲩⲛ-",
+      "dialect": "A"
+    }
+  ],
+  "grammar": {
+    "pos": "VIMP",
+    "subc": "Imperativ",
+    "tlapos": "Vb."
+  },
+  "senses": [
+    {
+      "id": "CS277",
+      "bibliography": "KoptHWb 15, 490; DELC 19"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉⲓⲥ**ⲁⲟⲩⲱⲛ** ⲛⲁⲛ ⲁⲩⲱ ⲉⲓⲉ ⲁⲩⲟⲩⲱⲛ ⲏ ⲛⲧⲁⲩⲥⲱⲧⲙ ⲁⲛ ⲉⲡⲁⲓ ϫⲉⲛϯⲥⲟⲟⲩⲛ ⲙⲙⲱⲧⲛ ⲁⲛ .",
+      "english": "...",
+      "source": "This Great House MONB.XU 418-423 (Amélineau edition)",
+      "urn": "urn:cts:copticLit:shenoute.house.amelineau:450-460",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {},
+  "network": {},
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 19932,
+      "count": 1
+    }
+  },
+  "crossReferences": [
+    {
+      "target": "C5064",
+      "type": "cf",
+      "label": "open, be open"
+    }
+  ]
+}

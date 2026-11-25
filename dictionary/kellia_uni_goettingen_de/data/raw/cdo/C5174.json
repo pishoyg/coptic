@@ -1,0 +1,231 @@
+{
+  "id": "C5174",
+  "forms": [
+    {
+      "id": "CF12314",
+      "orth": "ⲟⲩⲁⲥϥⲉ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 8241,
+        "count": 2
+      }
+    },
+    {
+      "id": "CF12315",
+      "orth": "ⲟⲩⲁⲥⲃⲉ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "gen": "f.",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS5812",
+      "bibliography": "CD 493a; KoptHWb 278; DELC 238a; ChLCS 69a"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲉϣⲱⲡⲉ ⲙⲉⲛ ⲉϥϣⲁⲛⲧⲱⲟⲩⲛ ⲛϭⲓⲡⲣⲱⲙⲉ ⲛϥⲙⲟⲟϣⲉ ⲉⲃⲟⲗ ϩⲓⲟⲩϭⲉⲣⲱⲃ ⲉϥⲉⲣⲃⲟⲗ ⲛϭⲓⲡⲉⲛⲧⲁϥⲣⲁϩⲧϥ ⲡⲗⲏⲛ ⲉϥⲉϯ ⲛⲛⲉϥ**ⲟⲩⲁⲥϥⲉ** ⲙⲛⲛⲉϥⲙⲛⲧⲥⲁⲉⲓⲛ",
+      "english": "if the man arise and walk abroad on his staff, he that smote him shall be clear; only he shall pay for his loss of time, and for his healing.",
+      "source": "Exodus 21",
+      "urn": "urn:cts:copticLit:ot.exod.coptot:21",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲛⲉⲧϩⲛ ϩⲉⲛⲙⲛⲧⲣⲉϥϫⲛⲁⲁⲩ ⲥⲉⲛⲁⲑⲃⲃⲓⲟ ⲁⲩⲱ ⲡⲏⲓ ⲛⲁⲁϣⲁϩⲟⲙ ϩⲛⲧ**ⲟⲩⲁⲥϥⲉ** ⲛⲛϭⲓϫ",
+      "english": "By slothful neglect a building will be brought low: and by idleness of the hands the house will fall to pieces.",
+      "source": "Ecclesiastes 10",
+      "urn": "urn:cts:copticLit:ot.eccl.coptot:10",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲙⲛⲧⲥⲁⲉⲓⲛ",
+        1,
+        18.013
+      ],
+      [
+        "ⲁϣⲁϩⲟⲙ",
+        1,
+        12.644
+      ],
+      [
+        "ⲛⲉϥ",
+        2,
+        10.797
+      ],
+      [
+        "ⲉϣⲱⲡⲉ",
+        1,
+        9.894
+      ],
+      [
+        "ⲉϥⲉ",
+        1,
+        9.789
+      ],
+      [
+        "ϭⲓϫ",
+        1,
+        8.974
+      ],
+      [
+        "ⲛ",
+        3,
+        7.564
+      ],
+      [
+        "ϯ",
+        1,
+        6.516
+      ],
+      [
+        "ⲙⲛ",
+        1,
+        5.644
+      ],
+      [
+        "ϩⲛ",
+        1,
+        5.479
+      ],
+      [
+        "ⲧ",
+        1,
+        5.071
+      ],
+      [
+        "ⲛⲁ",
+        1,
+        4.688
+      ],
+      [
+        "ⲉ",
+        1,
+        3.817
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲩⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲥϥⲉ_0_node",
+          2
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛⲧⲥⲁⲉⲓⲛ_1_post_ⲟⲩⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ϭⲓϫ_3_post_ⲛ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲛⲉϥ_1_pre_ⲟⲩⲁⲥϥⲉ",
+          "ⲟⲩⲁⲥϥⲉ_0_node",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲥϥⲉ_0_node",
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          "ⲛⲉϥ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          1
+        ],
+        [
+          "ⲛⲉϥ_2_post_ⲙⲛⲧⲥⲁⲉⲓⲛ",
+          "ⲙⲛⲧⲥⲁⲉⲓⲛ_1_post_ⲟⲩⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲟⲩⲁⲥϥⲉ_0_node",
+          "ⲛ_1_post_ⲟⲩⲁⲥϥⲉ",
+          1
+        ],
+        [
+          "ⲛ_1_post_ⲟⲩⲁⲥϥⲉ",
+          "ⲛ_2_post_ⲛ",
+          1
+        ],
+        [
+          "ⲛ_2_post_ⲛ",
+          "ϭⲓϫ_3_post_ⲛ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 7799,
+      "count": 2
+    }
+  },
+  "superEntryReferences": [
+    {
+      "target": "C5172",
+      "label": "ⲟⲩⲁⲥϥ-",
+      "pos": "N",
+      "gloss": "deserter, destroyer?"
+    },
+    {
+      "target": "C5170",
+      "label": "ⲟⲩⲱⲥϥ",
+      "pos": "V",
+      "gloss": "be idle, be lazy, be brought to naught; leave idle, leave barren, annul"
+    },
+    {
+      "target": "C5173",
+      "label": "ⲟⲩⲱⲥϥ",
+      "pos": "N",
+      "gloss": "idleness, ceasing"
+    },
+    {
+      "target": "C5171",
+      "label": "ⲟⲩⲱⲥϥ ⲉ-",
+      "pos": "V",
+      "gloss": "wait upon, for; busy oneself"
+    }
+  ],
+  "etym": {
+    "egy_num": "650064",
+    "egy_lemma": "wzf.t",
+    "english": "neglect; sloth",
+    "german": "Nachlässigkeit; Trägheit",
+    "tla_link": "https://thesaurus-linguae-aegyptiae.de/lemma/650064"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "C5075",
+  "forms": [
+    {
+      "id": "CF31880",
+      "orth": "ⲥⲁⲟⲩⲛⲁⲙ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.01,
+        "rank": 15982,
+        "count": 1
+      }
+    },
+    {
+      "id": "CF31879",
+      "orth": "ⲛⲥⲁⲟⲩⲛⲁⲙ",
+      "dialect": "S"
+    }
+  ],
+  "grammar": {
+    "pos": "ADV",
+    "collocPrep": "ⲥⲁ-",
+    "tlapos": "Adv."
+  },
+  "senses": [
+    {
+      "id": "CS5706",
+      "bibliography": "CD 484a; ChLCS 67b"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲛⲣⲱⲙⲉ ⲇⲉ ⲛⲥⲓⲫ ⲁⲩⲉⲓ ⲉϩⲣⲁⲓ ϩⲙⲡⲕⲁϩ ⲉⲧⲛⲁϣⲧ ⲉⲣⲁⲧϥ ⲛⲥⲁⲟⲩⲗ ⲉⲡⲃⲟⲩⲛⲟⲥ ⲉⲩϫⲱ ⲙⲙⲟⲥ ⲛⲁϥ ϫⲉⲉⲓⲥⲇⲁⲩⲉⲓⲇ ⲕⲏⲡ ϩⲁⲧⲛϩⲙⲙⲁⲥⲥⲁⲣⲁ ϩⲙⲡⲙⲁ ⲉⲧϩⲉϫϩⲱϫ ϩⲛⲧⲕⲁⲓⲛⲏ ϩⲙⲡⲃⲟⲩⲛⲟⲥ ⲛⲓⲉⲭⲉⲗⲗⲁⲇ ⲡⲉⲧ**ⲥⲁⲟⲩⲛⲁⲙ** ⲛⲓⲉⲥⲥⲉⲙⲟⲩ ⲉⲧⲉⲡⲧⲟⲟⲩ ⲡⲉ",
+      "english": "And the Ziphites came up out of the dry country to Saul to the hill, saying, Behold, is not David hidden with us in Messara, in the narrows in Caene in the hill of Echela, which is on the right of Jessaemon?",
+      "source": "I Samuel 23",
+      "urn": "urn:cts:copticLit:ot.1sam.coptot:23",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲥⲉⲙⲟⲩ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲓⲉⲭⲉⲗⲗⲁⲇ",
+        1,
+        20.598
+      ],
+      [
+        "ⲛⲓⲉⲥ",
+        1,
+        19.013
+      ],
+      [
+        "ⲃⲟⲩⲛⲟⲥ",
+        1,
+        15.35
+      ],
+      [
+        "ⲉⲧⲉ",
+        1,
+        9.284
+      ],
+      [
+        "ⲡ",
+        2,
+        7.497
+      ],
+      [
+        "ⲉⲧ",
+        1,
+        6.238
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲥⲁⲟⲩⲛⲁⲙ_0_node",
+          1
+        ]
+      ],
+      "edges": []
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.01,
+      "rank": 15582,
+      "count": 1
+    }
+  },
+  "type": "compound",
+  "superEntryReferences": [
+    {
+      "target": "C5076",
+      "label": "ϩⲓⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, at the right"
+    },
+    {
+      "target": "C5077",
+      "label": "ϩⲛⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "by the right, on the right"
+    },
+    {
+      "target": "C5074",
+      "label": "ⲉⲟⲩⲛⲁⲙ",
+      "pos": "ADV",
+      "gloss": "on the right, to the right"
+    },
+    {
+      "target": "C5073",
+      "label": "ⲟⲩⲛⲁⲙ",
+      "pos": "N",
+      "gloss": "right hand"
+    }
+  ]
+}

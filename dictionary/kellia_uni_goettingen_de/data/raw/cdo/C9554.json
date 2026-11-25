@@ -1,0 +1,320 @@
+{
+  "id": "C9554",
+  "forms": [
+    {
+      "id": "CF24347",
+      "orth": "ⲕⲧⲏⲙⲁ",
+      "dialect": null
+    },
+    {
+      "id": "CF24348",
+      "orth": "ⲕⲧⲏⲙⲁ",
+      "dialect": "S",
+      "freq_form": {
+        "rate": 0.03,
+        "rank": 5035,
+        "count": 5
+      }
+    }
+  ],
+  "grammar": {
+    "pos": "N",
+    "tlapos": "Subst."
+  },
+  "senses": [
+    {
+      "id": "CS12190",
+      "bibliography": "DDGLC",
+      "cu_ID": "1795"
+    },
+    {
+      "id": "CS12191",
+      "bibliography": "DDGLC",
+      "cu_ID": "11616"
+    }
+  ],
+  "examples": [
+    {
+      "coptic": "ⲁⲩⲱ ⲛⲧⲉⲣⲟⲩⲛⲟϫϥ ⲉⲃⲟⲗ ϩⲙⲡⲡⲁⲣⲁⲇⲓⲥⲟⲥ ⲁϥⲉⲓ ⲉⲃⲟⲗ ⲉⲡⲉⲓ**ⲕⲧⲏⲙⲁ** ⲉⲧⲙⲏϩ ⲛϩⲓⲥⲉ ·",
+      "english": "And having been driven forth from the Paradise he came out into this world which is full of sufferings.",
+      "source": "On the Soul and Body",
+      "urn": "urn:cts:copticLit:psathanasius.soul_body.budge:1-91",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲙⲡⲣⲕⲁⲧⲁⲫⲣⲟⲛⲉⲓ ⲙⲙⲟⲥ · ⲁⲗⲗⲁ ⲉⲕⲛⲁⲟⲩⲱϩ ⲉϩⲣⲁⲓ ⲉϫⲱⲥ · ϫⲉⲛⲧⲟϥ ⲡⲉⲛⲧⲁϥⲥⲙⲟⲩ ⲉⲣⲟⲛ · ⲁⲩⲱ ⲁϥⲭⲁⲣⲓⲍⲉ ⲛⲁⲛ ⲛⲧⲉⲓⲁϣⲏ ⲙⲛⲧⲣⲙⲙⲁⲟ · ⲙⲛⲧⲉⲓⲁϣⲏ ⲛ**ⲕⲧⲏⲙⲁ** ·",
+      "english": "Thou shalt not diminish aught therefrom, nay, thou shaft add to it; for it is he who hath blessed us, and hath given to us these great riches, and this multitude of possessions.",
+      "source": "Encomium on Victor part 3",
+      "urn": "urn:cts:copticLit:pscelestinus.encomium.budge:56-103",
+      "dialect": "sahidic"
+    },
+    {
+      "coptic": "ⲉϣϫⲉ ⲟⲩⲥⲱⲟⲩϩ ⲉϩⲟⲩⲛ ⲛⲧⲟⲩ**ⲕⲧⲏⲙⲁ** ⲉⲛⲁⲛⲟⲩϥ ⲡⲉ ⲧⲙⲛⲧⲣⲙⲙⲁⲟ ϩⲙⲡⲁϩⲉ ⲟⲩ ⲡⲉⲧⲟ ⲛⲣⲙⲙⲁⲟ ⲉⲧⲥⲟⲫⲓⲁ ⲧⲁⲓ ⲉⲧⲣϩⲱⲃ ⲉⲛⲕⲁ ⲛⲓⲙ",
+      "english": "If riches be a possession to be desired in this life; what is richer than wisdom, that worketh all things?",
+      "source": "Wisdom 8",
+      "urn": "urn:cts:copticLit:ot.wis.coptot:8",
+      "dialect": "sahidic"
+    }
+  ],
+  "collocations": {
+    "S": [
+      [
+        "ⲕⲧⲏⲥⲓⲥ",
+        1,
+        13.632
+      ],
+      [
+        "ⲙⲏϩ",
+        1,
+        12.521
+      ],
+      [
+        "ⲁϣⲏ",
+        1,
+        11.753
+      ],
+      [
+        "ⲛⲁⲛⲟⲩ",
+        2,
+        11.654
+      ],
+      [
+        "ⲛⲁϣⲱ",
+        1,
+        9.776
+      ],
+      [
+        "ⲧⲟⲩ",
+        1,
+        9.695
+      ],
+      [
+        "ⲥⲱⲟⲩϩ",
+        1,
+        9.569
+      ],
+      [
+        "ϩⲓⲥⲉ",
+        1,
+        9.232
+      ],
+      [
+        "ⲉ",
+        4,
+        8.495
+      ],
+      [
+        "ⲛ",
+        5,
+        8.453
+      ],
+      [
+        "ⲙⲁⲣⲉ",
+        1,
+        8.359
+      ],
+      [
+        "ⲧⲉⲓ",
+        1,
+        7.822
+      ],
+      [
+        "ⲟⲩ",
+        3,
+        7.653
+      ],
+      [
+        "ⲛⲉⲕ",
+        1,
+        7.465
+      ],
+      [
+        "ⲙⲛ",
+        2,
+        7.322
+      ],
+      [
+        "ⲡⲉⲓ",
+        1,
+        7.005
+      ],
+      [
+        "ⲉϩⲟⲩⲛ",
+        1,
+        6.356
+      ],
+      [
+        "ⲉⲓ",
+        1,
+        6.086
+      ],
+      [
+        "ϩⲉⲛ",
+        1,
+        5.752
+      ],
+      [
+        "ϥ",
+        2,
+        5.2
+      ]
+    ]
+  },
+  "network": {
+    "S": {
+      "nodes": [
+        [
+          "ⲕⲧⲏⲙⲁ_0_node",
+          5
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲙⲏϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ϩⲓⲥⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          2
+        ],
+        [
+          "ⲡⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ]
+      ],
+      "edges": [
+        [
+          "ⲕⲧⲏⲙⲁ_0_node",
+          "ⲉⲧ_1_post_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉⲧ_1_post_ⲕⲧⲏⲙⲁ",
+          "ⲙⲏϩ_2_post_ⲉⲧ",
+          1
+        ],
+        [
+          "ⲙⲏϩ_2_post_ⲉⲧ",
+          "ⲛ_3_post_ⲙⲏϩ",
+          1
+        ],
+        [
+          "ⲛ_3_post_ⲙⲏϩ",
+          "ϩⲓⲥⲉ_4_post_ⲛ",
+          1
+        ],
+        [
+          "ⲙⲛ_1_pre_ⲕⲧⲏⲙⲁ",
+          "ϩⲉⲛ_1_pre_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ϩⲉⲛ_1_pre_ⲕⲧⲏⲙⲁ",
+          "ⲕⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲕⲧⲏⲙⲁ_0_node",
+          "ⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          3
+        ],
+        [
+          "ⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁϣⲱ_2_post_ⲉ",
+          "ⲟⲩ_3_post_ⲛⲁϣⲱ",
+          1
+        ],
+        [
+          "ⲧⲟⲩ_1_pre_ⲕⲧⲏⲙⲁ",
+          "ⲕⲧⲏⲙⲁ_0_node",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲡⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲡⲉ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ],
+        [
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          "ⲡⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          1
+        ],
+        [
+          "ⲉ_1_post_ⲕⲧⲏⲙⲁ",
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          1
+        ],
+        [
+          "ⲛⲁⲛⲟⲩ_2_post_ⲉ",
+          "ϥ_3_post_ⲛⲁⲛⲟⲩ",
+          1
+        ]
+      ]
+    }
+  },
+  "lemma_freqs": {
+    "S": {
+      "rate": 0.03,
+      "rank": 4614,
+      "count": 5
+    }
+  },
+  "etym": {
+    "grl_ID": "1231",
+    "grl_lemma": "κτῆμα",
+    "grl_meaning": "property, possession",
+    "grl_pos": "noun",
+    "grl_ref": "LSJ 1002a; Preisigke 1:842"
+  }
+}
